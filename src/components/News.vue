@@ -1,3 +1,3 @@
 <template>
-  <div>Unit Page</div>
+  <div>News Page</div>
 </template>

@@ -4,7 +4,11 @@
     <ul>
       <li><router-link to="/Hello">Hello World</router-link></li>
       <li><router-link to="/">Home</router-link></li>
+      <li><router-link to="/news">News</router-link></li>
       <li><router-link to="/units">Units</router-link></li>
+      <li><router-link to="/items">Items</router-link></li>
+      <li><router-link to="/squad">Squad</router-link></li>
+      <li><router-link to="/summoner">Summoner</router-link></li>
     </ul>
     <router-view/>
   </div>

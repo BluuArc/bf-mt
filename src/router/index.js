@@ -3,7 +3,11 @@ import Router from 'vue-router';
 import HelloWorld from '@/components/HelloWorld';
 
 import Home from '@/components/Home';
-import Unit from '@/components/Unit';
+import News from '@/components/News';
+import Units from '@/components/Units';
+import Items from '@/components/Items';
+import Squad from '@/components/Squad';
+import Summoner from '@/components/Summoner';
 
 Vue.use(Router);
 
@@ -20,9 +24,29 @@ export default new Router({
       component: Home,
     },
     {
+      path: '/news',
+      name: 'News',
+      component: News,
+    },
+    {
       path: '/units',
       name: 'Units',
-      component: Unit,
+      component: Units,
+    },
+    {
+      path: '/items',
+      name: 'Items',
+      component: Items,
+    },
+    {
+      path: '/squad',
+      name: 'Squad',
+      component: Squad,
+    },
+    {
+      path: '/summoner',
+      name: 'Summoner',
+      component: Summoner,
     },
   ],
 });
