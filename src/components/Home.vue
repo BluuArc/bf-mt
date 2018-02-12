@@ -16,11 +16,12 @@
         </ul>
       </div>
     </div>
-    
+
     <div class="ui segments">
       <div class="ui gray inverted segment left aligned">Rights</div>
       <div class="ui segment left aligned">
-        All Brave Frontier images are owned by Gumi/Alim. This tool is not affiliated with Gumi/Alim in any way.
+        All Brave Frontier images are owned by Gumi/Alim.
+        This tool is not affiliated with Gumi/Alim in any way.
       </div>
     </div>
   </div>

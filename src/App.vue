@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view/>
     <navbar></navbar>
   </div>
@@ -22,6 +21,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  height: calc(100% - 42px);
 }
 
 .fixed.menu.bottom {
