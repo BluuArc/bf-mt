@@ -1,5 +1,5 @@
 <template>
-  <div class="ui fixed menu bottom center aligned">
+  <div class="ui fixed menu bottom">
     <div class="ui secondary menu">
       <router-link class="item" to="/">Home</router-link>
       <router-link class="item" to="/news">News</router-link>
