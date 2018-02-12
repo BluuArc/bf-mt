@@ -32,6 +32,7 @@ export default new Router({
       path: '/units',
       name: 'Units',
       component: Units,
+      props: true,
     },
     {
       path: '/items',
