@@ -2,6 +2,7 @@
   <div id="units-container">
     <div v-show="fullUnitData === undefined">Loading unit data</div>
     <div v-show="fullUnitData !== undefined" class="ui container">
+      <large-unit-card :unitData="selectedUnit"></large-unit-card>
       <div class='ui buttons'>
         <button :class="{ui: true, button: true, positive: doSortByUnitID}"
           @click="doSortByUnitID = true"
@@ -19,7 +20,8 @@
         <small-unit-card
           v-for="id in unitIDs"
           :key="id"
-          :unitData='getUnit(id)'></small-unit-card>
+          :unitData='getUnit(id)'
+          v-on:unit-select="setSelectedUnit"></small-unit-card>
       </div>
     </div>
   </div>
@@ -27,11 +29,13 @@
 
 <script>
 import SmallUnitCard from '@/components/UnitsComponents/SmallUnitCard';
+import LargeUnitCard from '@/components/UnitsComponents/LargeUnitCard';
 
 export default {
   props: ['fullUnitData'],
   components: {
     'small-unit-card': SmallUnitCard,
+    'large-unit-card': LargeUnitCard,
   },
   watch: {
     fullUnitData(newData) {
@@ -53,6 +57,7 @@ export default {
     return {
       unitIDs: [],
       doSortByUnitID: true,
+      selectedUnit: {},
     };
   },
   methods: {
@@ -64,6 +69,13 @@ export default {
     },
     getUnit(id) {
       return this.fullUnitData[id];
+    },
+    setSelectedUnit(id) {
+      if (this.selectedUnit && this.selectedUnit.id === id) {
+        this.selectedUnit = {};
+      }
+
+      setTimeout(() => { this.selectedUnit = this.getUnit(id); }, 100);
     },
   },
 };

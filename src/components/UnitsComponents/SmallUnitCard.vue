@@ -1,5 +1,7 @@
 <template>
-  <div :class='getCardClass(unitData.element)'>
+  <div :class='getCardClass(unitData.element)'
+    @click="emitUnitID(unitData.id)"
+  >
       <div class="content left aligned">
         <img class="floated mini ui image" :src='getImageURL(unitData.id)'>
         <div class="header">{{ unitData.guide_id }}: {{ unitData.name }}</div>
@@ -35,11 +37,14 @@ export default {
     },
     /* eslint-disable */
     getImageURL(id) {
-      return `http://dlc.bfglobal.gumi.sg/content/unit/img/unit_ills_thum_${id}.png`;
-      // return '';
+      // return `http://dlc.bfglobal.gumi.sg/content/unit/img/unit_ills_thum_${id}.png`;
+      return '';
     },
     getRarity(rarity) {
       return (+rarity === 8) ? 'OE' : `${rarity}*`;
+    },
+    emitUnitID(id) {
+      this.$emit('unit-select', id);
     },
   },
 };
