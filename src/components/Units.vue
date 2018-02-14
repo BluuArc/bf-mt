@@ -3,7 +3,7 @@
     <div v-show="fullUnitData === undefined">Loading unit data</div>
     <div v-show="fullUnitData !== undefined" class="ui container">
       <large-unit-card :unitData="selectedUnit"></large-unit-card>
-      <button class='ui button' id='sort-filter-button' data-position="bottom center">
+      <button class='ui left floated button' id='sort-filter-button' data-position="bottom center">
         Sort Options
       </button>
       <div class='ui popup hidden' id='sort-filter-popup'>
@@ -35,7 +35,7 @@
           </div>
         </div>
       </div>
-      <div class="ui cards" id="unit-list">
+      <div class="ui three stackable cards" id="unit-list">
         <small-unit-card
           v-for="id in unitIDs"
           :key="id"
@@ -171,7 +171,17 @@ export default {
   min-width: 45%;
 }
 
+@media only screen and (max-width: 767px ){
+  #units-container #sort-filter-popup {
+    min-width: 75%;
+  }
+}
+
 #units-container #sort-filter-popup .four.wide.column {
   padding-bottom: 1rem;
+}
+
+#units-container .ui.cards#unit-list {
+  display: inline-flex !important;
 }
 </style>
