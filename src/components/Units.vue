@@ -4,13 +4,23 @@
     <div v-show="fullUnitData !== undefined" class="ui container">
       <large-unit-card :unitData="selectedUnit"></large-unit-card>
       <button class='ui button' id='sort-filter-button' data-position="bottom center">
-        Sort and Filter Options
+        Sort Options
       </button>
       <div class='ui popup hidden' id='sort-filter-popup'>
         <div class="ui stackable grid container">
           <div class="row">
             <div class="sixteen wide column">
-              Sorting Options:
+              <div class="ui buttons">
+                <button @click="doSortDescending = false"
+                  :class="ascendingClass">
+                  Ascending
+                </button>
+                <div class="or"></div>
+                <button @click="doSortDescending = true"
+                  :class="descendingClass">
+                  Descending
+                </button>
+              </div>
             </div>
           </div>
           <div class="row">
@@ -71,6 +81,17 @@ export default {
     currentSortOption(newKey) {
       this.sortUnitsBy(newKey);
     },
+    doSortDescending() {
+      this.sortUnitsBy(this.currentSortOption);
+    },
+  },
+  computed: {
+    ascendingClass() {
+      return { 'ui button': true, positive: !this.doSortDescending };
+    },
+    descendingClass() {
+      return { 'ui button': true, positive: this.doSortDescending };
+    },
   },
   data() {
     return {
@@ -78,19 +99,32 @@ export default {
       elements: ['fire', 'water', 'earth', 'thunder', 'light', 'dark'],
       currentSortOption: 'Unit ID',
       selectedUnit: {},
+      doSortDescending: false,
       sortingOptions: {
-        'Unit ID': () => { this.unitIDs.sort((idA, idB) => +idA - +idB); },
-        'Guide ID': () => { this.unitIDs.sort((idA, idB) => +this.getUnit(idA).guide_id - +this.getUnit(idB).guide_id); },
+        'Unit ID': () => {
+          this.unitIDs.sort((idA, idB) => {
+            const result = (+idA - +idB);
+            return !this.doSortDescending ? result : -result;
+          });
+        },
+        'Guide ID': () => {
+          this.unitIDs.sort((idA, idB) => {
+            const result = +this.getUnit(idA).guide_id - +this.getUnit(idB).guide_id;
+            return !this.doSortDescending ? result : -result;
+          });
+        },
         Alphabetical: () => {
           this.unitIDs.sort((idA, idB) => {
             const [nameA, nameB] = [this.getUnit(idA).name, this.getUnit(idB).name];
-            return (nameA > nameB) ? 1 : -1;
+            const result = (nameA > nameB) ? 1 : -1;
+            return !this.doSortDescending ? result : -result;
           });
         },
         Rarity: () => {
           this.unitIDs.sort((idA, idB) => {
             const [rarityA, rarityB] = [+this.getUnit(idA).rarity, +this.getUnit(idB).rarity];
-            return rarityA === rarityB ? (+idA - +idB) : (rarityA - rarityB);
+            const result = rarityA === rarityB ? (+idA - +idB) : (rarityA - rarityB);
+            return !this.doSortDescending ? result : -result;
           });
         },
         Element: () => {
@@ -98,7 +132,8 @@ export default {
             const [elementA, elementB] = [this.getUnit(idA).element, this.getUnit(idB).element];
             const indexA = this.elements.indexOf(elementA);
             const indexB = this.elements.indexOf(elementB);
-            return indexA === indexB ? (+idA - +idB) : (indexA - indexB);
+            const result = indexA === indexB ? (+idA - +idB) : (indexA - indexB);
+            return !this.doSortDescending ? result : -result;
           });
         },
       },
@@ -112,12 +147,6 @@ export default {
     },
     getSortButtonClass(key) {
       return { 'ui fluid padded button': true, positive: key === this.currentSortOption };
-    },
-    sorUnitsByGuideID() {
-      this.unitIDs.sort((idA, idB) => +this.getUnit(idA).guide_id - +this.getUnit(idB).guide_id);
-    },
-    sortUnitsByUnitID() {
-      this.unitIDs.sort((idA, idB) => +idA - +idB);
     },
     getUnit(id) {
       return this.fullUnitData[id];
