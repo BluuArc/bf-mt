@@ -8,20 +8,26 @@
             <img class="ui centered medium image" :src="getImageURL(unitData.id)">
           </div>
           <div class="column">
-            <div v-if="unitData['leader skill']">
-              LS Data goes here.
+            <div class="ui raised segments" v-if="unitData['leader skill']">
+              <div class="ui inverted segment">
+                <b>LS: </b>{{ unitData['leader skill'].name }}
+              </div>
+              <div class="ui segment">{{ unitData['leader skill'].desc }}</div>
             </div>
-            <div v-if="unitData['extra skill']">
-              ES Data goes here.
+            <div class="ui raised segments" v-if="unitData['extra skill']">
+              <div class="ui orange inverted segment">
+                <b>ES: </b>{{ unitData['extra skill'].name }}
+              </div>
+              <div class="ui segment">{{ unitData['extra skill'].desc }}</div>
             </div>
             <brave-burst-segment v-if="unitData.bb"
-              :burstData="unitData.bb" burstType="Brave Burst">
+              :burstData="unitData.bb" burstType="BB">
             </brave-burst-segment>
             <brave-burst-segment v-if="unitData.sbb"
-              :burstData="unitData.bb" burstType="Super Brave Burst">
+              :burstData="unitData.sbb" burstType="SBB">
             </brave-burst-segment>
             <brave-burst-segment v-if="unitData.ubb"
-              :burstData="unitData.bb" burstType="Ultimate Brave Burst">
+              :burstData="unitData.ubb" burstType="UBB">
             </brave-burst-segment>
           </div>
         </div>

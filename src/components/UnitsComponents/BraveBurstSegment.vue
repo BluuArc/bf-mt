@@ -1,6 +1,6 @@
 <template>
   <div class="ui raised segments" v-if="burstData && !burstData.error">
-    <div :class="getHeaderClass()">{{ burstType }}</div>
+    <div :class="getHeaderClass()"><b>{{ burstType }}: </b>{{ burstData.name }}</div>
     <div class="ui segment">{{ burstData.desc }}</div>
   </div>
 </template>
@@ -11,9 +11,9 @@ export default {
   data() {
     return {
       typeColorMapping: {
-        'Brave Burst': 'grey',
-        'Super Brave Burst': 'yellow',
-        'Ultimate Brave Burst': 'red',
+        BB: 'grey',
+        SBB: 'yellow',
+        UBB: 'red',
       },
     };
   },
