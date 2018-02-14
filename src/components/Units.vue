@@ -62,13 +62,16 @@ export default {
       popup: $(this.$el).find('#sort-filter-popup'),
       on: 'click',
     });
+
+    if (this.fullUnitData !== undefined) {
+      this.unitIDs = Object.keys(this.fullUnitData);
+      this.sortUnitsBy(this.currentSortOption);
+    }
   },
   watch: {
     fullUnitData(newData) {
       if (newData !== undefined) {
         this.unitIDs = Object.keys(newData);
-        // eslint-disable-next-line
-        console.log(this.unitIDs);
       }
     },
     doSortByUnitID(newValue) {
