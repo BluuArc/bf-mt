@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld';
 
 import Home from '@/components/Home';
 import News from '@/components/News';
+import Multidex from '@/components/Multidex';
 import Units from '@/components/Units';
 import Items from '@/components/Items';
 import Squad from '@/components/Squad';
@@ -29,13 +30,18 @@ export default new Router({
       component: News,
     },
     {
-      path: '/units',
+      path: '/multidex',
+      name: 'Multidex',
+      component: Multidex,
+    },
+    {
+      path: '/multidex/units',
       name: 'Units',
       component: Units,
       props: true,
     },
     {
-      path: '/items',
+      path: '/multidex/items',
       name: 'Items',
       component: Items,
     },
