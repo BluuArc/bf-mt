@@ -198,6 +198,6 @@ export default {
 
 #units-container .ui.cards#unit-list {
   display: inline-flex !important;
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 </style>
