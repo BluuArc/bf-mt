@@ -21,7 +21,6 @@
           any of the entities named below.</span>
         <ul>
           <li>Brave Frontier assets by Gumi/Alim</li>
-          <li><a href="https://fontawesome.com/">FontAwesome icons</a> by FontAwesome</li>
           <li><a href="https://github.com/cheahjs/bravefrontier_data">Brave Frontier Datamine</a> by Deathmax</li>
           <li><a href="https://semantic-ui.com/">Semantic UI</a></li>
           <li><a href="https://vuejs.org/">Vue.js</a> by Evan You</li>
