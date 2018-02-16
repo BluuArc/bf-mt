@@ -3,39 +3,50 @@
     <div v-show="fullUnitData === undefined">Loading unit data</div>
     <div v-show="fullUnitData !== undefined" class="ui container">
       <large-unit-card :unitData="selectedUnit"></large-unit-card>
-      <div class='ui top menu' id="options">
-        <button class='ui left floated button item'
-          id='sort-filter-button' data-position="bottom center">
-          Sort Options
-        </button>
-      </div>
-      <div class='ui popup hidden' id='sort-filter-popup'>
-        <div class="ui stackable grid container">
-          <div class="row">
-            <div class="sixteen wide column">
-              <div class="ui buttons">
-                <button @click="doSortDescending = false"
-                  :class="ascendingClass">
-                  Ascending
-                </button>
-                <div class="or"></div>
-                <button @click="doSortDescending = true"
-                  :class="descendingClass">
-                  Descending
-                </button>
+      <div id="options-section">
+        <div class='ui attached menu' id="options">
+          <button class='ui left floated button item'
+            id='sort-button' data-position="bottom left">
+            Sort Options
+          </button>
+          <button class='ui right floated button item'
+            @click="showFilterPanel = !showFilterPanel"
+            id='filter-button'>
+            Filter Options
+          </button>
+        </div>
+        <div class='ui popup hidden' id='sort-popup'>
+          <div class="ui stackable grid container">
+            <div class="row">
+              <div class="sixteen wide column">
+                <div class="ui buttons">
+                  <button @click="doSortDescending = false"
+                    :class="ascendingClass">
+                    Ascending
+                  </button>
+                  <div class="or"></div>
+                  <button @click="doSortDescending = true"
+                    :class="descendingClass">
+                    Descending
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="four wide column"
+                v-for="(value, key) in sortingOptions"
+                :key="key">
+                <div :class="getSortButtonClass(key)"
+                  @click="currentSortOption = key">
+                  {{ key }}
+                </div>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="four wide column"
-              v-for="(value, key) in sortingOptions"
-              :key="key">
-              <div :class="getSortButtonClass(key)"
-                @click="currentSortOption = key">
-                {{ key }}
-              </div>
-            </div>
-          </div>
+        </div>
+        <div :class="{ 'ui attached segment': true, hidden: !showFilterPanel }"
+          id="filter-panel">
+          Filter options go here
         </div>
       </div>
       <div class="ui three stackable cards" id="unit-list">
@@ -61,8 +72,8 @@ export default {
     'large-unit-card': LargeUnitCard,
   },
   mounted() {
-    $(this.$el).find('#sort-filter-button').popup({
-      popup: $(this.$el).find('#sort-filter-popup'),
+    $(this.$el).find('#sort-button').popup({
+      popup: $(this.$el).find('#sort-popup'),
       on: 'click',
     });
 
@@ -106,6 +117,7 @@ export default {
       currentSortOption: 'Unit ID',
       selectedUnit: {},
       doSortDescending: false,
+      showFilterPanel: false,
       sortingOptions: {
         'Unit ID': () => {
           this.unitIDs.sort((idA, idB) => {
@@ -173,31 +185,35 @@ export default {
   margin: 0 auto;
 }
 
-#units-container #options {
+#units-container #options-section {
   position: fixed;
   left: 5rem;
   right: 5rem;
-  top: 2rem;
+  top: 3rem;
   z-index: 50;
 }
 
 @media only screen and (max-width: 767px) {
-  #units-container #sort-filter-popup {
+  #units-container #sort-popup {
     min-width: 75%;
   }
 
-  #units-container #options {
+  #units-container #options-section {
     left: 1.5rem;
     right: 1.5rem;
   }
 }
 
-#units-container #sort-filter-popup .four.wide.column {
+#units-container #sort-popup .four.wide.column {
   padding-bottom: 1rem;
 }
 
 #units-container .ui.cards#unit-list {
   display: inline-flex !important;
   margin-top: 4rem;
+}
+
+#units-container .hidden {
+  display: none;
 }
 </style>
