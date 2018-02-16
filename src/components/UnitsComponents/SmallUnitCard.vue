@@ -1,17 +1,17 @@
 <template>
   <div :class='getCardClass(unitData.element)'
-    @click="emitUnitID(unitData.id)"
+    @click="emitUnitID(unitData.id)" id="small-unit-card"
   >
-      <div class="content left aligned">
-        <img class="floated mini ui image" :src='getImageURL(unitData.id)'>
-        <div class="header">{{ unitData.guide_id }}: {{ unitData.name }}</div>
-        <div class="meta">
-          {{ getRarity(unitData.rarity) }},
-          {{ unitData.element }},
-          {{ unitData.gender }}
-        </div>
+    <div class="content left aligned">
+      <img class="floated mini ui image" :src='getImageURL(unitData.id)'>
+      <div class="header">{{ unitData.guide_id }}: {{ unitData.name }}</div>
+      <div class="meta">
+        {{ getRarity(unitData.rarity) }},
+        {{ unitData.element }},
+        {{ unitData.gender }}
       </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -49,3 +49,13 @@ export default {
   },
 };
 </script>
+
+<style>
+#small-unit-card {
+  user-select: none;
+}
+
+#small-unit-card:hover {
+  background: lightgray;
+}
+</style>

@@ -71,7 +71,7 @@ export default {
   watch: {
     fullUnitData(newData) {
       if (newData !== undefined) {
-        this.unitIDs = Object.keys(newData);
+        this.unitIDs = Object.keys(newData).filter(id => id !== '1');
       }
     },
     doSortByUnitID(newValue) {
@@ -168,10 +168,6 @@ export default {
 <style>
 #units-container #unit-list {
   margin: 0 auto;
-}
-
-#units-container #sort-filter-popup {
-  min-width: 45%;
 }
 
 @media only screen and (max-width: 767px ){
