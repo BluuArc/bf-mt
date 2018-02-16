@@ -3,9 +3,12 @@
     <div v-show="fullUnitData === undefined">Loading unit data</div>
     <div v-show="fullUnitData !== undefined" class="ui container">
       <large-unit-card :unitData="selectedUnit"></large-unit-card>
-      <button class='ui left floated button' id='sort-filter-button' data-position="bottom center">
-        Sort Options
-      </button>
+      <div class='ui top menu' id="options">
+        <button class='ui left floated button item'
+          id='sort-filter-button' data-position="bottom center">
+          Sort Options
+        </button>
+      </div>
       <div class='ui popup hidden' id='sort-filter-popup'>
         <div class="ui stackable grid container">
           <div class="row">
@@ -64,7 +67,7 @@ export default {
     });
 
     if (this.fullUnitData !== undefined) {
-      this.unitIDs = Object.keys(this.fullUnitData);
+      this.unitIDs = Object.keys(this.fullUnitData).filter(id => id !== '1');
       this.sortUnitsBy(this.currentSortOption);
     }
   },
@@ -170,9 +173,22 @@ export default {
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 767px ){
+#units-container #options {
+  position: fixed;
+  left: 5rem;
+  right: 5rem;
+  top: 2rem;
+  z-index: 50;
+}
+
+@media only screen and (max-width: 767px) {
   #units-container #sort-filter-popup {
     min-width: 75%;
+  }
+
+  #units-container #options {
+    left: 1.5rem;
+    right: 1.5rem;
   }
 }
 
@@ -182,5 +198,6 @@ export default {
 
 #units-container .ui.cards#unit-list {
   display: inline-flex !important;
+  margin-top: 5rem;
 }
 </style>
