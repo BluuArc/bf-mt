@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <header-bar></header-bar>
     <dynamic-router :fullUnitData='this.fullUnitData'></dynamic-router>
     <navbar></navbar>
   </div>
@@ -8,6 +9,7 @@
 <script>
 import Navbar from '@/components/Navbar';
 import DynamicRouter from '@/components/DynamicRouter';
+import HeaderBar from '@/components/Headerbar';
 
 /* global $ */
 
@@ -16,6 +18,7 @@ export default {
   components: {
     navbar: Navbar,
     'dynamic-router': DynamicRouter,
+    'header-bar': HeaderBar,
   },
   data() {
     return {
@@ -46,7 +49,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   height: calc(100% - 42px);
-  overflow: auto;
+  overflow: hidden;
 }
 
 .fixed.menu.bottom {
