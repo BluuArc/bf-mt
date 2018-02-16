@@ -1,12 +1,20 @@
 <template>
   <div id="router-view" class="container fluid">
-    <router-view :fullUnitData='fullUnitData' class='router-view-child'/>
+    <router-view
+      :fullUnitData='fullUnitData'
+      class='router-view-child'
+      v-on:updateheader="passHeaderUpdate"/>
   </div>
 </template>
 
 <script>
 export default {
   props: ['fullUnitData'],
+  methods: {
+    passHeaderUpdate(data) {
+      this.$emit('updateheader', data);
+    },
+  },
 };
 </script>
 

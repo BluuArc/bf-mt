@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <header-bar></header-bar>
-    <dynamic-router :fullUnitData='this.fullUnitData'></dynamic-router>
-    <navbar></navbar>
+    <header-bar :href="headerHref" :content="headerContent"></header-bar>
+    <dynamic-router :fullUnitData='this.fullUnitData' v-on:updateheader="updateHeader">
+    </dynamic-router>
+    <navbar v-on:updateheader="updateHeader"></navbar>
   </div>
 </template>
 
@@ -23,6 +24,8 @@ export default {
   data() {
     return {
       fullUnitData: undefined,
+      headerHref: undefined,
+      headerContent: undefined,
     };
   },
   mounted() {
@@ -38,6 +41,12 @@ export default {
     },
     async loadUnitData() {
       this.fullUnitData = await this.getData('http://127.0.0.1/bf-data/info-gl.json');
+    },
+    updateHeader(newContent = {}) {
+      // eslint-disable-next-line
+      console.log("new header content", newContent);
+      this.headerHref = newContent.href;
+      this.headerContent = newContent.content;
     },
   },
 };

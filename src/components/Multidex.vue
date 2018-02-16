@@ -93,9 +93,18 @@
 <script>
 import StatisticsItem from '@/components/MultidexComponents/StatisticsItem';
 
+/* global $ */
 export default {
   components: {
     'statistics-item': StatisticsItem,
+  },
+  mounted() {
+    this.$emit('updateheader');
+
+    const backHeaderData = { content: 'Back', href: '/multidex' };
+
+    $(this.$el).find('.ui.button.attached.bottom')
+      .on('click', () => { this.$emit('updateheader', backHeaderData); });
   },
 };
 </script>
