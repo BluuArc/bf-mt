@@ -1,10 +1,5 @@
 <template>
   <div class="ui container center aligned">
-    <div class="ui segment" id="top-banner">
-      <h1 class="ui header">Brave Frontier Multi-Tool</h1>
-      <h2 class="ui sub header">[LAST UPDATE DATE HERE]</h2>
-    </div>
-
     <div class="ui segments">
       <div class="ui blue inverted segment left aligned">Description</div>
       <div class="ui segment left aligned">
@@ -18,10 +13,19 @@
     </div>
 
     <div class="ui segments">
-      <div class="ui gray inverted segment left aligned">Rights</div>
+      <div class="ui gray inverted segment left aligned">Rights/Credits</div>
       <div class="ui segment left aligned">
-        All Brave Frontier images are owned by Gumi/Alim.
-        This tool is not affiliated with Gumi/Alim in any way.
+        <span>Thanks to the following for providing parts used in this tool.
+          All images and code belong to their respective owners.
+          Unless otherwise specified, this tool is not directly affiliated with
+          any of the entities named below.</span>
+        <ul>
+          <li>Brave Frontier assets by Gumi/Alim</li>
+          <li><a href="https://fontawesome.com/">FontAwesome icons</a> by FontAwesome</li>
+          <li><a href="https://github.com/cheahjs/bravefrontier_data">Brave Frontier Datamine</a> by Deathmax</li>
+          <li><a href="https://semantic-ui.com/">Semantic UI</a></li>
+          <li><a href="https://vuejs.org/">Vue.js</a> by Evan You</li>
+        </ul>
       </div>
     </div>
   </div>
