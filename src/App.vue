@@ -9,7 +9,7 @@
 <script>
 import Navbar from '@/components/Navbar';
 import DynamicRouter from '@/components/DynamicRouter';
-import HeaderBar from '@/components/Headerbar';
+import HeaderBar from '@/components/HeaderBar';
 
 /* global $ */
 
