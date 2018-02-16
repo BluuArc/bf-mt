@@ -1,9 +1,11 @@
 <template>
   <div id="router-view" class="container fluid">
-    <router-view
-      :fullUnitData='fullUnitData'
-      class='router-view-child'
-      v-on:updateheader="passHeaderUpdate"/>
+    <transition name="component-fade" mode="out-in">
+      <router-view
+        :fullUnitData='fullUnitData'
+        class='router-view-child'
+        v-on:updateheader="passHeaderUpdate"/>
+    </transition>
   </div>
 </template>
 
@@ -29,5 +31,13 @@ export default {
   height: calc(100% - 42px);
   margin-top: 42px;
   margin-bottom: -42px;
+}
+
+/* based off of "Transitioning Between Components section in https://vuejs.org/v2/guide/transitions.html */
+.component-fade-enter-active, .component-fade-leave-active {
+  transition: opacity .2s ease;
+}
+.component-fade-enter, .component-fade-leave-to {
+  opacity: 0;
 }
 </style>
