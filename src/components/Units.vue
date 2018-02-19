@@ -47,6 +47,7 @@
         </div>
         <div :class="{ 'ui attached segment': true, hidden: !showFilterPanel }"
           id="filter-panel">
+          <div class='header'><b>Showing {{ unitIDs.length }} units</b></div>
           <div class='ui segments' v-if="filterOptions !== null">
             <div class='ui segment'>
               <div class='header'><b>Rarity</b></div>
