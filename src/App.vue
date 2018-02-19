@@ -36,11 +36,15 @@ export default {
       return new Promise((fulfill, reject) => {
         $.get(url)
           .done(data => fulfill(data))
-          .fail(() => reject('Error getting data'));
+          .fail(() => reject({ error: 'Error getting data' }));
       });
     },
     async loadUnitData() {
-      this.fullUnitData = await this.getData('http://127.0.0.1/bf-data/info-gl.json');
+      try {
+        this.fullUnitData = await this.getData('http://127.0.0.1/bf-data/info-gl.json');
+      } catch (err) {
+        this.fullUnitData = err;
+      }
     },
     updateHeader(newContent = {}) {
       // eslint-disable-next-line

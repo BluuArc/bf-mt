@@ -1,7 +1,8 @@
 <template>
   <div id="units-container">
     <div v-show="fullUnitData === undefined">Loading unit data</div>
-    <div v-show="fullUnitData !== undefined" class="ui container">
+    <div v-if="fullUnitData !== undefined && fullUnitData.error === undefined"
+      class="ui container">
       <large-unit-card :unitData="selectedUnit"></large-unit-card>
       <div id="options-section">
         <div class='ui attached menu' id="options">
@@ -56,6 +57,9 @@
           :unitData='getUnit(id)'
           v-on:unit-select="setSelectedUnit"></small-unit-card>
       </div>
+    </div>
+    <div v-else-if="fullUnitData !== undefined">
+      Error loading unit data.
     </div>
   </div>
 </template>
