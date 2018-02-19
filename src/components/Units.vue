@@ -51,7 +51,8 @@
             <div class='ui segment'>
               <div class='header'><b>Rarity</b></div>
               <div class='ui eight compact buttons'>
-                <button v-for="value in defaultFilters.rarity" :key="value"
+                <button v-for="value in getDefaultFilters().rarity" :key="value"
+                  @click="toggleRarity(value)"
                   :class="{ 'ui button': true, green: filterOptions.rarity.indexOf(value) > -1 }">
                   <span v-if="value !== 8">{{ value }}*</span>
                   <span v-else>OE</span>
@@ -92,7 +93,7 @@ export default {
       on: 'click',
     });
 
-    this.filterOptions = this.defaultFilters;
+    this.filterOptions = this.getDefaultFilters();
 
     if (this.fullUnitData !== undefined) {
       this.unitIDs = Object.keys(this.fullUnitData).filter(id => id !== '1');
@@ -125,14 +126,6 @@ export default {
     },
     descendingClass() {
       return { 'ui button': true, positive: this.doSortDescending };
-    },
-    defaultFilters() {
-      return {
-        elements: ['fire', 'water', 'earth', 'thunder', 'light', 'dark'],
-        rarity: [1, 2, 3, 4, 5, 6, 7, 8],
-        gender: ['male', 'female', 'other'],
-        hasGeneralSkill: ['ls', 'es', 'bb', 'sbb', 'ubb'],
-      };
     },
   },
   data() {
@@ -184,6 +177,14 @@ export default {
     };
   },
   methods: {
+    getDefaultFilters() {
+      return {
+        elements: ['fire', 'water', 'earth', 'thunder', 'light', 'dark'],
+        rarity: [1, 2, 3, 4, 5, 6, 7, 8],
+        gender: ['male', 'female', 'other'],
+        hasGeneralSkill: ['ls', 'es', 'bb', 'sbb', 'ubb'],
+      };
+    },
     sortUnitsBy(type) {
       if (this.sortingOptions[type]) {
         this.sortingOptions[type]();
@@ -201,6 +202,37 @@ export default {
       }
 
       setTimeout(() => { this.selectedUnit = this.getUnit(id); }, 100);
+    },
+    toggleRarity(rarity) {
+      const rarityIndex = this.filterOptions.rarity.indexOf(rarity);
+      const currentFilter = this.filterOptions.rarity.slice();
+      if (rarityIndex === -1) { // add rarity
+        currentFilter.push(rarity);
+        this.filterOptions.rarity = currentFilter.sort();
+      } else {
+        this.filterOptions.rarity = [
+          ...(currentFilter.slice(0, rarityIndex)),
+          ...(currentFilter.slice(rarityIndex + 1)),
+        ];
+      }
+      this.updateUnitList();
+    },
+    doesUnitFitFilter(id) {
+      const unit = this.getUnit(id);
+      if (this.filterOptions.elements.indexOf(unit.element) === -1) {
+        return false;
+      } else if (this.filterOptions.rarity.indexOf(+unit.rarity) === -1) {
+        return false;
+      }
+
+      return true;
+    },
+    updateUnitList() {
+      // eslint-disable-next-line
+      console.log("Current Filters", this.filterOptions);
+      this.unitIDs = Object.keys(this.fullUnitData)
+        .filter(id => id !== '1').filter(this.doesUnitFitFilter);
+      this.sortUnitsBy(this.currentSortOption);
     },
   },
 };
