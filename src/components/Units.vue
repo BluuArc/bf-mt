@@ -49,7 +49,17 @@
           id="filter-panel">
           <div class='header'><b>Showing {{ unitIDs.length }} units</b></div>
           <div class='ui segments' v-if="filterOptions !== null">
-            <div class='ui segment'>
+            <div class='ui segment' id="elements">
+              <div class='header'><b>Element</b></div>
+              <div class='ui six compact buttons'>
+                <button v-for="value in getDefaultFilters().elements" :key="value"
+                  @click="toggleElement(value)"
+                  :class="{ 'ui button': true, green: filterOptions.elements.indexOf(value) > -1 }">
+                    {{ value }}
+                  </button>
+              </div>
+            </div>
+            <div class='ui segment' id="rarity">
               <div class='header'><b>Rarity</b></div>
               <div class='ui eight compact buttons'>
                 <button v-for="value in getDefaultFilters().rarity" :key="value"
@@ -204,6 +214,12 @@ export default {
 
       setTimeout(() => { this.selectedUnit = this.getUnit(id); }, 100);
     },
+    removeIndex(targetArray = [], index) {
+      return [
+        ...(targetArray.slice(0, index)),
+        ...(targetArray.slice(index + 1)),
+      ];
+    },
     toggleRarity(rarity) {
       const rarityIndex = this.filterOptions.rarity.indexOf(rarity);
       const currentFilter = this.filterOptions.rarity.slice();
@@ -211,10 +227,23 @@ export default {
         currentFilter.push(rarity);
         this.filterOptions.rarity = currentFilter.sort();
       } else {
-        this.filterOptions.rarity = [
-          ...(currentFilter.slice(0, rarityIndex)),
-          ...(currentFilter.slice(rarityIndex + 1)),
-        ];
+        this.filterOptions.rarity = this.removeIndex(currentFilter, rarityIndex);
+      }
+      this.updateUnitList();
+    },
+    toggleElement(element) {
+      const elementIndex = this.filterOptions.elements.indexOf(element);
+      const currentFilter = this.filterOptions.elements.slice();
+      if (elementIndex === -1) {
+        currentFilter.push(element);
+        this.filterOptions.elements = currentFilter.sort((a, b) => {
+          const indexA = this.elements.indexOf(a);
+          const indexB = this.elements.indexOf(b);
+          const result = indexA - indexB;
+          return result;
+        });
+      } else {
+        this.filterOptions.elements = this.removeIndex(currentFilter, elementIndex);
       }
       this.updateUnitList();
     },
@@ -274,5 +303,9 @@ export default {
 
 #units-container .hidden {
   display: none;
+}
+
+#units-container #filter-panel #elements .ui.button {
+  text-transform: capitalize;
 }
 </style>
