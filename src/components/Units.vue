@@ -47,7 +47,18 @@
         </div>
         <div :class="{ 'ui attached segment': true, hidden: !showFilterPanel }"
           id="filter-panel">
-          Filter options go here
+          <div class='ui segments' v-if="filterOptions !== null">
+            <div class='ui segment'>
+              <div class='header'><b>Rarity</b></div>
+              <div class='ui eight compact buttons'>
+                <button v-for="value in defaultFilters.rarity" :key="value"
+                  :class="{ 'ui button': true, green: filterOptions.rarity.indexOf(value) > -1 }">
+                  <span v-if="value !== 8">{{ value }}*</span>
+                  <span v-else>OE</span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="ui three stackable cards" id="unit-list">
@@ -81,6 +92,8 @@ export default {
       on: 'click',
     });
 
+    this.filterOptions = this.defaultFilters;
+
     if (this.fullUnitData !== undefined) {
       this.unitIDs = Object.keys(this.fullUnitData).filter(id => id !== '1');
       this.sortUnitsBy(this.currentSortOption);
@@ -112,6 +125,14 @@ export default {
     },
     descendingClass() {
       return { 'ui button': true, positive: this.doSortDescending };
+    },
+    defaultFilters() {
+      return {
+        elements: ['fire', 'water', 'earth', 'thunder', 'light', 'dark'],
+        rarity: [1, 2, 3, 4, 5, 6, 7, 8],
+        gender: ['male', 'female', 'other'],
+        hasGeneralSkill: ['ls', 'es', 'bb', 'sbb', 'ubb'],
+      };
     },
   },
   data() {
@@ -159,6 +180,7 @@ export default {
           });
         },
       },
+      filterOptions: null,
     };
   },
   methods: {
