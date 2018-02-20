@@ -80,6 +80,19 @@
                   </button>
               </div>
             </div>
+            <div class='ui segment' id="generalSkill">
+              <div class='header'><b>General Skills</b></div>
+              <div class='ui six compact buttons'>
+                <button v-for="value in getDefaultFilters().generalSkill" :key="value"
+                  @click="toggleGeneralSkill(value)"
+                  :class="{
+                      'ui button': true,
+                      green: filterOptions.generalSkill.indexOf(value) > -1
+                    }">
+                    {{ value }}
+                  </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -203,7 +216,7 @@ export default {
         elements: ['fire', 'water', 'earth', 'thunder', 'light', 'dark'],
         rarity: [1, 2, 3, 4, 5, 6, 7, 8],
         gender: ['male', 'female', 'other'],
-        hasGeneralSkill: ['ls', 'es', 'bb', 'sbb', 'ubb'],
+        generalSkill: ['ls', 'es', 'bb', 'sbb', 'ubb'],
       };
     },
     sortUnitsBy(type) {
@@ -273,13 +286,51 @@ export default {
       }
       this.updateUnitList();
     },
+    toggleGeneralSkill(skill) {
+      const skillIndex = this.filterOptions.generalSkill.indexOf(skill);
+      const currentFilter = this.filterOptions.generalSkill.slice();
+      const defaultOrder = this.getDefaultFilters().generalSkill;
+      if (skillIndex === -1) {
+        currentFilter.push(skill);
+        this.filterOptions.generalSkill = currentFilter.sort(this.sortByArrayOrder(defaultOrder));
+      } else {
+        this.filterOptions.generalSkill = this.removeIndex(currentFilter, skillIndex);
+      }
+      this.updateUnitList();
+    },
+    /* eslint-disable */
     doesUnitFitFilter(id) {
       const unit = this.getUnit(id);
+      const filterSkills = this.filterOptions.generalSkill;
+      const allSkills = this.getDefaultFilters().generalSkill;
+
+      let skillBoolean;
+      if (filterSkills.length > 0) { //check for a specific skill
+        filterSkills.forEach((skill) => {
+          if (unit[skill] !== undefined) {
+            skillBoolean = true;
+          }
+        });
+      } else { // check for units with no skill
+        let hasSomeSkill = false;
+        allSkills.forEach((skill) => {
+          if (unit[skill] !== undefined) {
+            hasSomeSkill = true;
+          }
+        });
+
+        skillBoolean = !hasSomeSkill;
+      }
+
+      
+
       if (this.filterOptions.elements.indexOf(unit.element) === -1) {
         return false;
       } else if (this.filterOptions.rarity.indexOf(+unit.rarity) === -1) {
         return false;
       } else if (this.filterOptions.gender.indexOf(unit.gender) === -1) {
+        return false;
+      } else if (!skillBoolean) {
         return false;
       }
 
@@ -336,5 +387,9 @@ export default {
 #units-container #filter-panel #elements .ui.button,
 #units-container #filter-panel #gender .ui.button {
   text-transform: capitalize;
+}
+
+#units-container #filter-panel #generalSkill .ui.button {
+  text-transform: uppercase;
 }
 </style>
