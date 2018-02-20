@@ -14,6 +14,12 @@
               </div>
               <div class="ui segment">{{ unitData['leader skill'].desc }}</div>
             </div>
+            <div class="ui raised segments" v-else>
+              <div class="ui inverted segment">
+                <b>LS: </b>None
+              </div>
+              <div class="ui segment">No leader skill data found.</div>
+            </div>
             <div class="ui raised segments" v-if="unitData['extra skill']">
               <div class="ui orange inverted segment">
                 <b>ES: </b>{{ unitData['extra skill'].name }}
@@ -23,6 +29,10 @@
             <brave-burst-segment v-if="unitData.bb"
               :burstData="unitData.bb" burstType="BB">
             </brave-burst-segment>
+            <div class="ui raised segments" v-else>
+              <div class="ui inverted segment grey"><b>BB: </b>None</div>
+              <div class="ui segment">No brave burst data found.</div>
+            </div>
             <brave-burst-segment v-if="unitData.sbb"
               :burstData="unitData.sbb" burstType="SBB">
             </brave-burst-segment>
