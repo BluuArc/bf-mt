@@ -49,6 +49,17 @@
           id="filter-panel">
           <div class='header'><b>Showing {{ unitIDs.length }} units</b></div>
           <div class='ui segments' v-if="filterOptions !== null">
+            <div class='ui segment' id="filterOptions">
+              <div class='header'><b>General Filter</b></div>
+              <div class='ui six compact buttons'>
+                <button  @click="resetFilter()" class="ui button">
+                    Enable All
+                </button>
+                <button  @click="disableAllFilters()" class="ui button">
+                    Disable All
+                </button>
+              </div>
+            </div>
             <div class='ui segment' id="elements">
               <div class='header'><b>Element</b></div>
               <div class='ui six compact buttons'>
@@ -343,6 +354,17 @@ export default {
         .filter(id => id !== '1').filter(this.doesUnitFitFilter);
       this.sortUnitsBy(this.currentSortOption);
     },
+    resetFilter() {
+      this.filterOptions = this.getDefaultFilters();
+      this.updateUnitList();
+    },
+    disableAllFilters() {
+      Object.keys(this.filterOptions).forEach((key) => {
+        this.filterOptions[key] = [];
+      });
+
+      this.updateUnitList();
+    }
   },
 };
 </script>
@@ -350,6 +372,7 @@ export default {
 <style>
 #units-container #unit-list {
   margin: 0 auto;
+  width: 100%;
 }
 
 #units-container #options-section {
