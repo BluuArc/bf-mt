@@ -230,6 +230,14 @@ export default {
         ...(targetArray.slice(index + 1)),
       ];
     },
+    sortByArrayOrder(defaultOrder = []) {
+      return (a, b) => {
+        const indexA = defaultOrder.indexOf(a);
+        const indexB = defaultOrder.indexOf(b);
+        const result = indexA - indexB;
+        return result;
+      };
+    },
     toggleRarity(rarity) {
       const rarityIndex = this.filterOptions.rarity.indexOf(rarity);
       const currentFilter = this.filterOptions.rarity.slice();
@@ -247,12 +255,7 @@ export default {
       const defaultOrder = this.getDefaultFilters().elements;
       if (elementIndex === -1) {
         currentFilter.push(element);
-        this.filterOptions.elements = currentFilter.sort((a, b) => {
-          const indexA = defaultOrder.indexOf(a);
-          const indexB = defaultOrder.indexOf(b);
-          const result = indexA - indexB;
-          return result;
-        });
+        this.filterOptions.elements = currentFilter.sort(this.sortByArrayOrder(defaultOrder));
       } else {
         this.filterOptions.elements = this.removeIndex(currentFilter, elementIndex);
       }
@@ -264,12 +267,7 @@ export default {
       const defaultOrder = this.getDefaultFilters().gender;
       if (genderIndex === -1) {
         currentFilter.push(gender);
-        this.filterOptions.gender = currentFilter.sort((a, b) => {
-          const indexA = defaultOrder.indexOf(a);
-          const indexB = defaultOrder.indexOf(b);
-          const result = indexA - indexB;
-          return result;
-        });
+        this.filterOptions.gender = currentFilter.sort(this.sortByArrayOrder(defaultOrder));
       } else {
         this.filterOptions.gender = this.removeIndex(currentFilter, genderIndex);
       }
