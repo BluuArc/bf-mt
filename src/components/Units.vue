@@ -70,6 +70,16 @@
                 </button>
               </div>
             </div>
+            <div class='ui segment' id="gender">
+              <div class='header'><b>Gender</b></div>
+              <div class='ui six compact buttons'>
+                <button v-for="value in getDefaultFilters().gender" :key="value"
+                  @click="toggleGender(value)"
+                  :class="{ 'ui button': true, green: filterOptions.gender.indexOf(value) > -1 }">
+                    {{ value }}
+                  </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -234,11 +244,12 @@ export default {
     toggleElement(element) {
       const elementIndex = this.filterOptions.elements.indexOf(element);
       const currentFilter = this.filterOptions.elements.slice();
+      const defaultOrder = this.getDefaultFilters().elements;
       if (elementIndex === -1) {
         currentFilter.push(element);
         this.filterOptions.elements = currentFilter.sort((a, b) => {
-          const indexA = this.elements.indexOf(a);
-          const indexB = this.elements.indexOf(b);
+          const indexA = defaultOrder.indexOf(a);
+          const indexB = defaultOrder.indexOf(b);
           const result = indexA - indexB;
           return result;
         });
@@ -247,11 +258,30 @@ export default {
       }
       this.updateUnitList();
     },
+    toggleGender(gender) {
+      const genderIndex = this.filterOptions.gender.indexOf(gender);
+      const currentFilter = this.filterOptions.gender.slice();
+      const defaultOrder = this.getDefaultFilters().gender;
+      if (genderIndex === -1) {
+        currentFilter.push(gender);
+        this.filterOptions.gender = currentFilter.sort((a, b) => {
+          const indexA = defaultOrder.indexOf(a);
+          const indexB = defaultOrder.indexOf(b);
+          const result = indexA - indexB;
+          return result;
+        });
+      } else {
+        this.filterOptions.gender = this.removeIndex(currentFilter, genderIndex);
+      }
+      this.updateUnitList();
+    },
     doesUnitFitFilter(id) {
       const unit = this.getUnit(id);
       if (this.filterOptions.elements.indexOf(unit.element) === -1) {
         return false;
       } else if (this.filterOptions.rarity.indexOf(+unit.rarity) === -1) {
+        return false;
+      } else if (this.filterOptions.gender.indexOf(unit.gender) === -1) {
         return false;
       }
 
@@ -305,7 +335,8 @@ export default {
   display: none;
 }
 
-#units-container #filter-panel #elements .ui.button {
+#units-container #filter-panel #elements .ui.button,
+#units-container #filter-panel #gender .ui.button {
   text-transform: capitalize;
 }
 </style>
