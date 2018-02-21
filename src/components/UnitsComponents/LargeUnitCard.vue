@@ -39,6 +39,24 @@
             <brave-burst-segment v-if="unitData.ubb"
               :burstData="unitData.ubb" burstType="UBB">
             </brave-burst-segment>
+            <div class="ui raised segments">
+              <div class="ui blue inverted segment">
+                Things to Eventually Add
+              </div>
+              <div class="ui segment">
+                <ul>
+                  <li>SP enhancements (if applicable)</li>
+                  <li>buff translations for LS/ES/BB/SBB/UBB/SP</li>
+                  <ul><li>Buff viewer (overall and specific skills)</li></ul>
+                  <li>some way to show hit distributions for NAtk/BB/SBB/UBB</li>
+                  <li>Lore?</li>
+                  <li>Server Switch for Server-Specific variants</li>
+                  <li>Animation viewer</li>
+                  <li>Arena AI</li>
+                  <li>Stat viewer (star plot?)</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>

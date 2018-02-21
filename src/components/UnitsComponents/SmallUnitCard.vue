@@ -37,8 +37,12 @@ export default {
     },
     /* eslint-disable */
     getImageURL(id) {
-      // return `http://dlc.bfglobal.gumi.sg/content/unit/img/unit_ills_thum_${id}.png`;
-      return '';
+      if (location.hostname === 'localhost') {
+        // return `http://dlc.bfglobal.gumi.sg/content/unit/img/unit_ills_thum_${id}.png`;
+        return '';
+      } else {
+        return `http://dlc.bfglobal.gumi.sg/content/unit/img/unit_ills_thum_${id}.png`;
+      }
     },
     getRarity(rarity) {
       return (+rarity === 8) ? 'OE' : `${rarity}*`;

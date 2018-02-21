@@ -377,6 +377,8 @@ export default {
         rarity: [1, 2, 3, 4, 5, 6, 7, 8],
         gender: ['male', 'female', 'other'],
         generalSkill: ['ls', 'es', 'bb', 'sbb', 'ubb'],
+        sharedPresence: ['gl', 'eu', 'jp'],
+        exclusivePresence: ['gl', 'eu', 'jp'],
       };
     },
     sortUnitsBy(type) {

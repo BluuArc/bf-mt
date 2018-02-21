@@ -61,15 +61,15 @@ export default {
       url += 'info-gl.json';
       try {
         this.fullUnitData = await this.getData(url);
-        // eslint-disable-next-line
-        console.log(location.hostname, debugMode, url, this.fullUnitData);
+        if (debugMode) {
+          // eslint-disable-next-line
+          console.log(location.hostname, debugMode, url, this.fullUnitData);
+        }
       } catch (err) {
         this.fullUnitData = err;
       }
     },
     updateHeader(newContent = {}) {
-      // eslint-disable-next-line
-      console.log("new header content", newContent);
       this.headerHref = newContent.href;
       this.headerContent = newContent.content;
     },
