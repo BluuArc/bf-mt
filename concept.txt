@@ -11,13 +11,14 @@ Multidex
 			sort options - unit id, guide id, rarity, element
 			filter options - rarity, element, gender, has BB/SBB/UBB/ES, name, server presence, LS/ES/BB/SBB/UBB/SP buff search
 			unit modal
-				LS,ES,BB,SBB,UBB,SP
+				LS,ES,BB,SBB,UBB,
+				SP
 				dropchecks (normal and bursts)
 				hit distributions -> visualization?
 					line chart - burn-down, burn-up, or raw values?
-				buff analysis (overall and specific types)
+				buff analysis (overall and specific types) -> Buff viewer (overall and specific skills)
 				lore?
-				server switch
+				server switch (show on small unit card?)
 				Arena AI
 				animations
 				stats -> kiviat?

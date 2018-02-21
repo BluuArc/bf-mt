@@ -8,6 +8,14 @@
     <div class='left menu' id="title">
       <div class='header item'>Brave Frontier Multi Tool</div>
     </div>
+    <div class='right menu'>
+      <a class='right item' target="_blank"
+        href="joshuacastor.me">JCCC</a>
+      <a class='right item' target="_blank"
+        href="https://github.com/BluuArc/bf-mt">
+        <img src='../assets/GitHub-Mark-32px.png'>
+      </a>
+    </div>
   </div>
 </template>
 
@@ -48,5 +56,10 @@ export default {
 
 #header-bar #action-button {
   width: 5rem;
+ }
+
+ #header-bar img {
+   max-height: 1.5rem;
+   max-width: 1.5rem;
  }
 </style>
