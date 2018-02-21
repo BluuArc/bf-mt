@@ -110,14 +110,40 @@
 
       <div id="unit-list">
         <div class="ui secondary menu">
-          <button @click="goToPrevPage()"
-            :class="{'ui button item': true, disabled: currentPage === 1}">
-            Previous {{ amountToList }} units
-          </button>
-          <button @click="goToNextPage()"
-            :class="{'ui button item': true, disabled: currentPage === totalPages}">
-            Next {{ amountToList }} units
-          </button>
+          <div class='ui green icon buttons left floated'>
+            <button @click="indexStart = 0"
+              :class="{
+                'ui button': true,
+                disabled: currentPage === 1,
+                green: currentPage !== 1
+              }">
+              <i class='icon angle double left'/>
+            </button>
+            <button @click="indexStart -= amountToList"
+              :class="{
+                'ui button': true,
+                disabled: currentPage === 1,
+                green: currentPage !== 1
+              }">
+              <i class='icon angle left'/>
+            </button>
+            <button @click="indexStart += amountToList"
+              :class="{
+                'ui button': true,
+                disabled: currentPage === totalPages,
+                green: currentPage !== totalPages
+              }">
+              <i class='icon angle right'/>
+            </button>
+            <button @click="indexStart = unitIDs.length"
+              :class="{
+                'ui button': true,
+                disabled: currentPage === totalPages,
+                green: currentPage !== totalPages
+              }">
+              <i class='icon angle double right'/>
+            </button>
+          </div>
           <button class='ui right floated button item'
             data-position="bottom right" id="page-button">
             Page {{ currentPage }} of {{ totalPages }}
@@ -148,14 +174,40 @@
         </transition-group>
         <div class="ui secondary menu"
           v-show="pagedIDs.length > 0">
-          <button @click="goToPrevPage()"
-            :class="{'ui button item': true, disabled: currentPage === 1}">
-            Previous {{ amountToList }} units
-          </button>
-          <button @click="goToNextPage()"
-            :class="{'ui button item': true, disabled: currentPage === totalPages}">
-            Next {{ amountToList }} units
-          </button>
+          <div class='ui fluid green icon buttons'>
+            <button @click="indexStart = 0"
+              :class="{
+                'ui button': true,
+                disabled: currentPage === 1,
+                green: currentPage !== 1
+              }">
+              <i class='icon angle double left'/>
+            </button>
+            <button @click="indexStart -= amountToList"
+              :class="{
+                'ui button': true,
+                disabled: currentPage === 1,
+                green: currentPage !== 1
+              }">
+              <i class='icon angle left'/>
+            </button>
+            <button @click="indexStart += amountToList"
+              :class="{
+                'ui button': true,
+                disabled: currentPage === totalPages,
+                green: currentPage !== totalPages
+              }">
+              <i class='icon angle right'/>
+            </button>
+            <button @click="indexStart = unitIDs.length"
+              :class="{
+                'ui button': true,
+                disabled: currentPage === totalPages,
+                green: currentPage !== totalPages
+              }">
+              <i class='icon angle double right'/>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -444,12 +496,6 @@ export default {
 
       this.updateUnitList();
     },
-    goToPrevPage() {
-      this.indexStart -= this.amountToList;
-    },
-    goToNextPage() {
-      this.indexStart += this.amountToList;
-    },
     updatePagedUnitIDs: _.debounce(
       function () {
         this.pagedIDs = this.unitIDs.slice(this.indexStart, this.indexStart + this.amountToList);
@@ -524,5 +570,9 @@ export default {
 }
 .fade-enter, .fade-leave-to {
   opacity: 0;
+}
+
+#units-container i.icon.angle {
+  font-size: 1.5rem;
 }
 </style>
