@@ -107,12 +107,56 @@
           </div>
         </div>
       </div>
-      <div class="ui three stackable cards" id="unit-list">
-        <small-unit-card
-          v-for="id in unitIDs"
-          :key="id"
-          :unitData='getUnit(id)'
-          v-on:unit-select="setSelectedUnit"></small-unit-card>
+
+      <div id="unit-list">
+        <div class="ui secondary menu">
+          <button @click="goToPrevPage()"
+            :class="{'ui button item': true, disabled: currentPage === 1}">
+            Previous {{ amountToList }} units
+          </button>
+          <button @click="goToNextPage()"
+            :class="{'ui button item': true, disabled: currentPage === totalPages}">
+            Next {{ amountToList }} units
+          </button>
+          <button class='ui right floated button item'
+            data-position="bottom right" id="page-button">
+            Page {{ currentPage }} of {{ totalPages }}
+            <i class="caret down icon"/>
+          </button>
+          <div class='ui popup hidden' id='page-list-popup'>
+            <div>
+              Show
+              <span class='ui input'>
+                <input type="text" v-model="amountToList">
+              </span>
+              units per page
+            </div>
+            <button class='ui fluid button'
+              @click="amountToList = 25">
+              Reset
+            </button>
+          </div>
+        </div>
+        <transition-group name="fade" mode="out-in">
+          <div class="ui three stackable cards" :key="pagedIDs[0]">
+            <small-unit-card
+              v-for="id in pagedIDs"
+              :key="id"
+              :unitData='getUnit(id)'
+              v-on:unit-select="setSelectedUnit"></small-unit-card>
+          </div>
+        </transition-group>
+        <div class="ui secondary menu"
+          v-show="pagedIDs.length > 0">
+          <button @click="goToPrevPage()"
+            :class="{'ui button item': true, disabled: currentPage === 1}">
+            Previous {{ amountToList }} units
+          </button>
+          <button @click="goToNextPage()"
+            :class="{'ui button item': true, disabled: currentPage === totalPages}">
+            Next {{ amountToList }} units
+          </button>
+        </div>
       </div>
     </div>
     <div v-else-if="fullUnitData !== undefined">
@@ -138,6 +182,11 @@ export default {
       on: 'click',
     });
 
+    $(this.$el).find('#page-button').popup({
+      popup: $(this.$el).find('#page-list-popup'),
+      on: 'click',
+    });
+
     this.filterOptions = this.getDefaultFilters();
 
     if (this.fullUnitData !== undefined) {
@@ -151,11 +200,12 @@ export default {
         this.unitIDs = Object.keys(newData).filter(id => id !== '1');
       }
     },
-    doSortByUnitID(newValue) {
-      if (newValue) {
-        this.sortUnitsByUnitID();
-      } else {
-        this.sorUnitsByGuideID();
+    unitIDs() {
+      this.updatePagedUnitIDs();
+    },
+    pagedIDs(newValue) {
+      if (newValue.length > this.amountToList) {
+        this.updatePagedUnitIDs();
       }
     },
     currentSortOption(newKey) {
@@ -163,6 +213,28 @@ export default {
     },
     doSortDescending() {
       this.sortUnitsBy(this.currentSortOption);
+    },
+    indexStart(newValue) {
+      if (newValue >= this.unitIDs.length) {
+        this.indexStart = this.amountToList * (this.totalPages - 1);
+      } else if (newValue < 0) {
+        this.indexStart = 0;
+      }
+      this.scrollToTop();
+      this.updatePagedUnitIDs();
+    },
+    amountToList(newValue) {
+      if (typeof newValue === 'string') {
+        this.amountToList = +newValue;
+        return;
+      }
+      if (newValue < 0) {
+        this.amountToList = 0;
+      } else if (newValue >= this.unitIDs.length) {
+        this.amountToList = this.unitIDs.length;
+      }
+      this.indexStart = 0;
+      this.updatePagedUnitIDs();
     },
   },
   computed: {
@@ -172,10 +244,17 @@ export default {
     descendingClass() {
       return { 'ui button': true, positive: this.doSortDescending };
     },
+    currentPage() {
+      return Math.floor(this.indexStart / this.amountToList) + 1;
+    },
+    totalPages() {
+      return Math.ceil(this.unitIDs.length / this.amountToList);
+    },
   },
   data() {
     return {
       unitIDs: [],
+      pagedIDs: [],
       elements: ['fire', 'water', 'earth', 'thunder', 'light', 'dark'],
       currentSortOption: 'Unit ID',
       selectedUnit: {},
@@ -219,6 +298,8 @@ export default {
         },
       },
       filterOptions: null,
+      indexStart: 0,
+      amountToList: 100,
     };
   },
   methods: {
@@ -348,8 +429,6 @@ export default {
       return true;
     },
     updateUnitList() {
-      // eslint-disable-next-line
-      console.log("Current Filters", this.filterOptions);
       this.unitIDs = Object.keys(this.fullUnitData)
         .filter(id => id !== '1').filter(this.doesUnitFitFilter);
       this.sortUnitsBy(this.currentSortOption);
@@ -364,7 +443,23 @@ export default {
       });
 
       this.updateUnitList();
-    }
+    },
+    goToPrevPage() {
+      this.indexStart -= this.amountToList;
+    },
+    goToNextPage() {
+      this.indexStart += this.amountToList;
+    },
+    updatePagedUnitIDs: _.debounce(
+      function () {
+        this.pagedIDs = this.unitIDs.slice(this.indexStart, this.indexStart + this.amountToList);
+      },
+      250
+    ),
+    scrollToTop() {
+      const $el = $(this.$el);
+      $el.animate({ scrollTop: 0 }, 1000);
+    },
   },
 };
 </script>
@@ -398,9 +493,12 @@ export default {
   padding-bottom: 1rem;
 }
 
-#units-container .ui.cards#unit-list {
-  display: inline-flex !important;
+#units-container #unit-list {
   margin-top: 4rem;
+}
+
+#units-container #unit-list .ui.card {
+  display: inline-flex !important;
 }
 
 #units-container .hidden {
@@ -414,5 +512,17 @@ export default {
 
 #units-container #filter-panel #generalSkill .ui.button {
   text-transform: uppercase;
+}
+
+#units-container #page-list-popup .ui.input {
+  width: 5rem;
+}
+
+/* based off of https://vuejs.org/v2/guide/transitions.html#Transitioning-Single-Elements-Components */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .25s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
 </style>
