@@ -1,9 +1,11 @@
 <template>
   <div id="news-content">
-    <div class="fluid ui button" @click="updateNews">
-      Refresh News
+    <div class='ui text container'>
+      <div class="fluid ui inverted button" @click="updateNews">
+        Refresh News
+      </div>
+      <iframe id="news-frame" src="http://api.bravefrontier.gumi.sg/bf/web/notice/indexCtrl.php"></iframe>
     </div>
-    <iframe id="news-frame" src="http://api.bravefrontier.gumi.sg/bf/web/notice/indexCtrl.php"></iframe>
   </div>
 </template>
 
@@ -19,9 +21,11 @@ export default {
 </script>
 
 <style>
-#news-content {
+#news-content, #news-content .container {
   height: inherit;
+  background: black;
 }
+
 #news-content iframe {
   width: 100%;
   height: calc(100% - 42px);
