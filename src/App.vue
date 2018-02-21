@@ -25,7 +25,7 @@ import Navbar from '@/components/Navbar';
 import DynamicRouter from '@/components/DynamicRouter';
 import HeaderBar from '@/components/HeaderBar';
 
-/* global $ */
+/* global $ PromiseWorker */
 
 export default {
   name: 'App',
@@ -42,10 +42,16 @@ export default {
       fullBurstData: undefined,
       headerHref: undefined,
       headerContent: undefined,
+      worker: undefined,
+      debugMode: undefined,
+      baseUrl: undefined,
     };
   },
   mounted() {
+    this.debugMode = location.hostname === 'localhost';
+    this.baseUrl = `${location.origin}${location.pathname}`;
     this.loadTracker();
+    this.loadWorker();
     this.loadAllData();
   },
   methods: {
@@ -65,22 +71,37 @@ export default {
       this.fullBurstData = defaultObject;
     },
     async loadUnitData() {
-      const debugMode = location.hostname === 'localhost';
-      let url = (debugMode) ? 'http://127.0.0.1/bf-data/' : './bf-data/';
-      url += 'info-gl.json';
+      const url = `${this.baseUrl}static/bf-data/info-gl.json`;
       try {
         this.fullUnitData = await this.getData(url);
-        if (debugMode) {
+        if (this.debugMode) {
           // eslint-disable-next-line
-          console.log(location.hostname, debugMode, url, this.fullUnitData);
+          console.log(location.hostname, url, this.fullUnitData);
         }
       } catch (err) {
+        // eslint-disable-next-line
+        console.error(err);
         this.fullUnitData = err;
       }
     },
     updateHeader(newContent = {}) {
       this.headerHref = newContent.href;
       this.headerContent = newContent.content;
+    },
+    async loadWorker() {
+      const url = `${this.baseUrl}static/js/data-load-worker.js`;
+      const regularWorker = new Worker(url);
+      this.worker = new PromiseWorker(regularWorker);
+
+      return this.worker.postMessage('register')
+        .then((response) => {
+          // eslint-disable-next-line
+          console.debug('[App] Received response:', response);
+        }).catch((error) => {
+          // eslint-disable-next-line
+          console.error('[App] Received error:', error);
+          this.worker = null;
+        });
     },
     /* eslint-disable */
     loadTracker() {
