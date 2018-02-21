@@ -1,0 +1,26 @@
+{
+  "name": "bf-mt",
+  "version": "1.0.0",
+  "description": "Brave Frontier - Multi-Tool",
+  "author": "Joshua Castor",
+  "private": true,
+  "scripts": {
+    "start": "node web_deployment.js"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "yargs": "^11.0.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
