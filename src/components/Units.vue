@@ -300,6 +300,7 @@ export default {
     nameQuery: _.debounce(
       function onChange() {
         this.updateUnitList();
+        this.indexStart = 0;
       },
       250,
     ),

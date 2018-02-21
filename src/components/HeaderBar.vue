@@ -10,7 +10,7 @@
     </div>
     <div class='right menu'>
       <a class='right item' target="_blank"
-        href="joshuacastor.me">JCCC</a>
+        href="http://joshuacastor.me">JCCC</a>
       <a class='right item' target="_blank"
         href="https://github.com/BluuArc/bf-mt">
         <img src='../assets/GitHub-Mark-32px.png'>
