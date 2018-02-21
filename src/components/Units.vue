@@ -173,7 +173,7 @@
           </div>
         </div>
         <transition-group name="fade" mode="out-in">
-          <div class="ui three stackable cards" :key="pagedIDs[0]">
+          <div class="ui three stackable cards" :key="pagedIDs[0] || 'none'">
             <small-unit-card
               v-for="id in pagedIDs"
               :key="id"

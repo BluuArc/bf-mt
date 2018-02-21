@@ -40,8 +40,13 @@ export default {
       });
     },
     async loadUnitData() {
+      const debugMode = location.hostname === 'localhost';
+      let url = (debugMode) ? 'http://127.0.0.1/bf-data/' : './bf-data/';
+      url += 'info-gl.json';
       try {
-        this.fullUnitData = await this.getData('http://127.0.0.1/bf-data/info-gl.json');
+        this.fullUnitData = await this.getData(url);
+        // eslint-disable-next-line
+        console.log(location.hostname, debugMode, url, this.fullUnitData);
       } catch (err) {
         this.fullUnitData = err;
       }
