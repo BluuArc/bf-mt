@@ -9,6 +9,14 @@
       v-on:updateheader="updateHeader">
     </dynamic-router>
     <navbar v-on:updateheader="updateHeader"></navbar>
+    <noscript>
+      <div class="statcounter">
+        <a title="shopify site analytics" target="_blank" href="http://statcounter.com/shopify/">
+          <img class="statcounter" alt="shopify site analytics"
+            src="//c.statcounter.com/11034084/0/3e7dba9f/1/">
+        </a>
+      </div>
+    </noscript>
   </div>
 </template>
 
@@ -37,6 +45,7 @@ export default {
     };
   },
   mounted() {
+    this.loadTracker();
     this.loadAllData();
   },
   methods: {
@@ -73,6 +82,28 @@ export default {
       this.headerHref = newContent.href;
       this.headerContent = newContent.content;
     },
+    /* eslint-disable */
+    loadTracker() {
+      //globals for statcounter tracker
+      window.sc_project = 11034084;
+      window.sc_invisible = 1;
+      window.sc_security = '3e7dba9f';
+      window.scJsHost = (('https:' == document.location.protocol) ? 'https://secure.' : 'http://www.');
+
+      //pure javascript version of appending a script
+      //based off of https://howchoo.com/g/mmu0nguznjg/learn-the-slow-and-fast-way-to-append-elements-to-the-dom
+      function appendScript(url) {
+        return new Promise(function (fulfill, reject) {
+          let e = document.createElement('script');
+          e.src = url;
+          e.onload = () => { fulfill(); };
+          e.onerror = reject;
+          document.body.appendChild(e);
+        });
+      }
+
+      appendScript(`${scJsHost}statcounter.com/counter/counter.js`);
+    }
   },
 };
 </script>
