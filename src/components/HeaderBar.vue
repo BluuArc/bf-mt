@@ -1,5 +1,5 @@
 <template>
-  <div class='ui top fixed menu' id="header-bar" @click="testLog">
+  <div class='ui top fixed menu' id="header-bar">
     <router-link
       :to="href || (defaultValues.href)"
       class='item text center aligned' id="action-button">
@@ -25,11 +25,11 @@ export default {
   watch: {
     href(newValue) {
       // eslint-disable-next-line
-      console.log("new href", newValue);
+      console.debug("new href", newValue);
     },
     content(newValue) {
       // eslint-disable-next-line
-      console.log("new content", newValue);
+      console.debug("new content", newValue);
     },
   },
   data() {
@@ -39,12 +39,6 @@ export default {
         content: 'Home',
       },
     };
-  },
-  methods: {
-    testLog() {
-      // eslint-disable-next-line
-      console.log(this.href, this.content);
-    },
   },
 };
 </script>

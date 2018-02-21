@@ -16,7 +16,7 @@ export default {
     resetHeader() {
       const defaultHeader = { content: 'Home', href: '/' };
       // eslint-disable-next-line
-      console.log("emitting new header", defaultHeader);
+      console.debug("emitting new header", defaultHeader);
       this.$emit('updateheader', defaultHeader);
     },
   },
