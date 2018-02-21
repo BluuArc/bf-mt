@@ -6,15 +6,24 @@
       <large-unit-card :unitData="selectedUnit"></large-unit-card>
       <div id="options-section">
         <div class='ui attached menu' id="options">
-          <button class='ui left floated button item'
+          <a class='ui left floated button item'
             id='sort-button' data-position="bottom left">
             Sort Options
-          </button>
-          <button class='ui right floated button item'
+          </a>
+          <a class='ui floated item'
             @click="showFilterPanel = !showFilterPanel"
             id='filter-button'>
-            Filter Options
-          </button>
+            <i class='icon filter'/>
+          </a>
+          <div class="item">
+            <div class='ui transparent icon input'>
+              <input type="text" v-model="nameQuery"
+                placeholder="Enter Unit Name...">
+              <i class='link icon plus'
+                v-show="nameQuery.length > 0"
+                @click="nameQuery = ''"/>
+            </div>
+          </div>
         </div>
         <div class='ui popup hidden' id='sort-popup'>
           <div class="ui stackable grid container">
@@ -221,7 +230,7 @@
 import SmallUnitCard from '@/components/UnitsComponents/SmallUnitCard';
 import LargeUnitCard from '@/components/UnitsComponents/LargeUnitCard';
 
-/* global $ */
+/* global $ _ */
 export default {
   props: ['fullUnitData'],
   components: {
@@ -288,6 +297,12 @@ export default {
       this.indexStart = 0;
       this.updatePagedUnitIDs();
     },
+    nameQuery: _.debounce(
+      function onChange() {
+        this.updateUnitList();
+      },
+      250,
+    ),
   },
   computed: {
     ascendingClass() {
@@ -310,6 +325,7 @@ export default {
       elements: ['fire', 'water', 'earth', 'thunder', 'light', 'dark'],
       currentSortOption: 'Unit ID',
       selectedUnit: {},
+      nameQuery: '',
       doSortDescending: false,
       showFilterPanel: false,
       sortingOptions: {
@@ -447,6 +463,7 @@ export default {
       const unit = this.getUnit(id);
       const filterSkills = this.filterOptions.generalSkill;
       const allSkills = this.getDefaultFilters().generalSkill;
+      const hasName = unit.name.toLowerCase().indexOf(this.nameQuery) > -1;
 
       let skillBoolean;
       if (filterSkills.length > 0) { //check for a specific skill
@@ -466,8 +483,6 @@ export default {
         skillBoolean = !hasSomeSkill;
       }
 
-      
-
       if (this.filterOptions.elements.indexOf(unit.element) === -1) {
         return false;
       } else if (this.filterOptions.rarity.indexOf(+unit.rarity) === -1) {
@@ -475,6 +490,8 @@ export default {
       } else if (this.filterOptions.gender.indexOf(unit.gender) === -1) {
         return false;
       } else if (!skillBoolean) {
+        return false;
+      } else if (this.nameQuery.length > 0 && !hasName) {
         return false;
       }
 
@@ -574,5 +591,9 @@ export default {
 
 #units-container i.icon.angle {
   font-size: 1.5rem;
+}
+
+#units-container i.icon.plus {
+  transform: rotate(45deg);
 }
 </style>
