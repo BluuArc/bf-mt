@@ -299,7 +299,7 @@ export default {
       },
       filterOptions: null,
       indexStart: 0,
-      amountToList: 100,
+      amountToList: 25,
     };
   },
   methods: {
