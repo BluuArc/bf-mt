@@ -1,7 +1,12 @@
 <template>
   <div id="app">
     <header-bar :href="headerHref" :content="headerContent"></header-bar>
-    <dynamic-router :fullUnitData='this.fullUnitData' v-on:updateheader="updateHeader">
+    <dynamic-router
+      :fullUnitData="fullUnitData"
+      :fullItemData="fullItemData"
+      :fullExtraSkillData="fullExtraSkillData"
+      :fullBurstData="fullBurstData"
+      v-on:updateheader="updateHeader">
     </dynamic-router>
     <navbar v-on:updateheader="updateHeader"></navbar>
   </div>
@@ -24,12 +29,15 @@ export default {
   data() {
     return {
       fullUnitData: undefined,
+      fullItemData: undefined,
+      fullExtraSkillData: undefined,
+      fullBurstData: undefined,
       headerHref: undefined,
       headerContent: undefined,
     };
   },
   mounted() {
-    this.loadUnitData();
+    this.loadAllData();
   },
   methods: {
     getData(url) {
@@ -38,6 +46,14 @@ export default {
           .done(data => fulfill(data))
           .fail(() => reject({ error: 'Error getting data' }));
       });
+    },
+    async loadAllData() {
+      const defaultObject = { error: 'Not implemented yet' };
+      await this.loadUnitData();
+
+      this.fullItemData = defaultObject;
+      this.fullExtraSkillData = defaultObject;
+      this.fullBurstData = defaultObject;
     },
     async loadUnitData() {
       const debugMode = location.hostname === 'localhost';

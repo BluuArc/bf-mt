@@ -10,6 +10,8 @@ import Items from '@/components/Items';
 import Squad from '@/components/Squad';
 import Summoner from '@/components/Summoner';
 
+import Settings from '@/components/Settings';
+
 Vue.use(Router);
 
 export default new Router({
@@ -23,6 +25,11 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home,
+    },
+    {
+      path: '/settings',
+      name: 'Settings',
+      component: Settings,
     },
     {
       path: '/news',

@@ -2,7 +2,10 @@
   <div id="router-view" class="container fluid">
     <transition name="component-fade" mode="out-in">
       <router-view
-        :fullUnitData='fullUnitData'
+        :fullUnitData="fullUnitData"
+        :fullItemData="fullItemData"
+        :fullExtraSkillData="fullExtraSkillData"
+        :fullBurstData="fullBurstData"
         class='router-view-child'
         v-on:updateheader="passHeaderUpdate"/>
     </transition>
@@ -11,7 +14,7 @@
 
 <script>
 export default {
-  props: ['fullUnitData'],
+  props: ['fullUnitData', 'fullItemData', 'fullExtraSkillData', 'fullBurstData'],
   methods: {
     passHeaderUpdate(data) {
       this.$emit('updateheader', data);

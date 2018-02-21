@@ -12,6 +12,12 @@
       </div>
     </div>
 
+    <load-status-card
+      :fullUnitData="fullUnitData"
+      :fullItemData="fullItemData"
+      :fullExtraSkillData="fullExtraSkillData"
+      :fullBurstData="fullBurstData"/>
+
     <div class="ui segments">
       <div class="ui gray inverted segment left aligned">Rights/Credits</div>
       <div class="ui segment left aligned">
@@ -29,6 +35,20 @@
     </div>
   </div>
 </template>
+
+<script>
+import LoadStatusCard from '@/components/HomeComponents/LoadStatusCard';
+
+export default {
+  props: ['fullUnitData', 'fullItemData', 'fullExtraSkillData', 'fullBurstData'],
+  components: {
+    'load-status-card': LoadStatusCard,
+  },
+  mounted() {
+    this.$emit('updateheader', { content: 'Settings', href: '/settings' });
+  },
+};
+</script>
 
 <style>
 .center.aligned * {

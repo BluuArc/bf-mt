@@ -18,8 +18,25 @@
                 </div>
               </div>
             </div>
-            <router-link to="/multidex/units" class='ui button attached bottom'>
-              Go to Unit Dex
+            <router-link
+              to="/multidex/units"
+              :class="{
+                'ui button attached bottom': true,
+                disabled: !fullUnitData || (fullUnitData && fullUnitData.error),
+                red: fullUnitData && fullUnitData.error,
+                green: fullUnitData && !fullUnitData.error
+              }">
+                <span v-if="fullUnitData !== undefined">
+                  <span v-show="fullUnitData.error === undefined">
+                    Go to Unit Dex
+                  </span>
+                  <span v-show="fullUnitData.error !== undefined">
+                    [ERROR] {{ fullUnitData.error }}
+                  </span>
+                </span>
+                <span v-else>
+                  Loading data...
+                </span>
             </router-link>
           </div>
         </div>
@@ -39,8 +56,25 @@
                 </div>
               </div>
             </div>
-            <router-link to="/multidex/items" class='ui button attached bottom'>
-              Go to Item Dex
+            <router-link
+              to="/multidex/items"
+              :class="{
+                'ui button attached bottom': true,
+                disabled: !fullItemData || (fullItemData && fullItemData.error),
+                red: fullItemData && fullItemData.error,
+                green: fullItemData && !fullItemData.error
+              }">
+                <span v-if="fullItemData !== undefined">
+                  <span v-show="fullItemData.error === undefined">
+                    Go to Item Dex
+                  </span>
+                  <span v-show="fullItemData.error !== undefined">
+                    [ERROR] {{ fullItemData.error }}
+                  </span>
+                </span>
+                <span v-else>
+                  Loading data...
+                </span>
             </router-link>
           </div>
         </div>
@@ -59,8 +93,25 @@
                 </div>
               </div>
             </div>
-            <router-link to="/multidex/extraskills" class='ui button attached bottom'>
-              Go to Extra Skill Dex
+            <router-link
+              to="/multidex/extraskills"
+              :class="{
+                'ui button attached bottom': true,
+                disabled: !fullExtraSkillData || (fullExtraSkillData && fullExtraSkillData.error),
+                red: fullExtraSkillData && fullExtraSkillData.error,
+                green: fullExtraSkillData && !fullExtraSkillData.error
+              }">
+              <span v-if="fullExtraSkillData !== undefined">
+                  <span v-show="fullExtraSkillData.error === undefined">
+                    Go to Extra Skill Dex
+                  </span>
+                  <span v-show="fullExtraSkillData.error !== undefined">
+                    [ERROR] {{ fullExtraSkillData.error }}
+                  </span>
+                </span>
+                <span v-else>
+                  Loading data...
+                </span>
             </router-link>
           </div>
         </div>
@@ -79,8 +130,26 @@
                 </div>
               </div>
             </div>
-            <router-link to="/multidex/bursts" class='ui button attached bottom'>
-              Go to Burst Dex
+            <router-link
+              to="/multidex/bursts"
+              :class="{
+                'ui button attached bottom': true,
+                disabled: false,
+                disabled: !fullBurstData || (fullBurstData && fullBurstData.error),
+                red: fullBurstData && fullBurstData.error,
+                green: fullBurstData && !fullBurstData.error
+              }">
+                <span v-if="fullBurstData !== undefined">
+                  <span v-show="fullBurstData.error === undefined">
+                    Go to Burst Dex
+                  </span>
+                  <span v-show="fullBurstData.error !== undefined">
+                    [ERROR] {{ fullBurstData.error }}
+                  </span>
+                </span>
+                <span v-else>
+                  Loading data...
+                </span>
             </router-link>
           </div>
         </div>
@@ -95,6 +164,7 @@ import StatisticsItem from '@/components/MultidexComponents/StatisticsItem';
 
 /* global $ */
 export default {
+  props: ['fullUnitData', 'fullItemData', 'fullExtraSkillData', 'fullBurstData'],
   components: {
     'statistics-item': StatisticsItem,
   },
