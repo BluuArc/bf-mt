@@ -30,7 +30,7 @@ const ajaxWrapper = {
 
       request.onprogress = function(e) {
         if (e.lengthComputable) {
-          console.debug(`[PROGRESS] ${url}: ${(e.loaded / e.total) * 100}%`);
+          console.debug(`[PROGRESS] ${url}: ${((e.loaded / e.total) * 100).toFixed(2)}%`);
         }
       };
 
