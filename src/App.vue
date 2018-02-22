@@ -47,20 +47,43 @@ export default {
       baseUrl: undefined,
     };
   },
-  mounted() {
+  async mounted() {
     this.debugMode = location.hostname === 'localhost';
     this.baseUrl = `${location.origin}${location.pathname}`;
     this.loadTracker();
-    this.loadWorker();
-    this.loadAllData();
+    try {
+      await this.loadWorker();
+    } catch (err) {
+      // eslint-disable-next-line
+      console.error(err);
+    }
+    await this.loadAllData();
   },
   methods: {
     getData(url) {
+      if (this.worker) {
+        return this.worker.postMessage({
+          command: 'getfile',
+          url,
+        });
+      }
+      return this.getDataLegacy(url);
+    },
+    getDataLegacy(url) { // blocking, but doesn't need a worker
       return new Promise((fulfill, reject) => {
         $.get(url)
           .done(data => fulfill(data))
           .fail(() => reject({ error: 'Error getting data' }));
       });
+    },
+    getJSON(url) {
+      if (this.worker) {
+        return this.worker.postMessage({
+          command: 'getjson',
+          url,
+        });
+      }
+      return this.getDataLegacy(url);
     },
     async loadAllData() {
       const defaultObject = { error: 'Not implemented yet' };
@@ -73,7 +96,7 @@ export default {
     async loadUnitData() {
       const url = `${this.baseUrl}static/bf-data/info-gl.json`;
       try {
-        this.fullUnitData = await this.getData(url);
+        this.fullUnitData = await this.getJSON(url);
         if (this.debugMode) {
           // eslint-disable-next-line
           console.log(location.hostname, url, this.fullUnitData);
