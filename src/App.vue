@@ -95,8 +95,21 @@ export default {
     },
     async loadUnitData() {
       const url = `${this.baseUrl}static/bf-data/info-gl.json`;
+      const unitUrl = `${this.baseUrl}static/bf-data`;
+      const servers = ['gl'];
       try {
-        this.fullUnitData = await this.getJSON(url);
+        const unitDb = {};
+        servers.forEach(async (server) => {
+          for (let i = 1; i <= 6; i += 1) {
+            // eslint-disable-next-line
+            const tempData = await this.getJSON(`${unitUrl}/units-${server}-${i}.json`);
+            Object.keys(tempData)
+              .forEach((id) => {
+                unitDb[id] = tempData[id];
+              });
+          }
+        });
+        this.fullUnitData = unitDb;
         if (this.debugMode) {
           // eslint-disable-next-line
           console.log(location.hostname, url, this.fullUnitData);
