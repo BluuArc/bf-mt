@@ -587,12 +587,13 @@ export default {
   width: 5rem;
 }
 
-/* based off of https://vuejs.org/v2/guide/transitions.html#Transitioning-Single-Elements-Components */
+/* based off of https://vuejs.org/v2/guide/transitions.html */
 .fade-enter-active, .fade-leave-active {
-  transition: opacity .25s;
+  transition: all .125s;
 }
 .fade-enter, .fade-leave-to {
   opacity: 0;
+  height: 0;
 }
 
 #units-container i.icon.angle {
