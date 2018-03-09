@@ -1,11 +1,15 @@
 <template>
   <div id="unit-card-container">
     <div class="ui longer modal">
-      <div class="header">{{ unitData.guide_id }}: {{ unitData.name }} ({{ unitData.id }})</div>
+      <i class="close icon"></i>
+      <div class="header">
+        <img class="ui avatar image" :src="getImageURL(unitData.id).ills_battle">
+        <span>{{ unitData.guide_id }}: {{ unitData.name }} ({{ unitData.id }})</span>
+      </div>
       <div class="scrolling content">
         <div class="ui stackable two column grid">
           <div class="column image content">
-            <img class="ui centered medium image" :src="getImageURL(unitData.id)">
+            <img class="ui centered medium image" :src="getImageURL(unitData.id).ills_full || ''">
           </div>
           <div class="column">
             <div class="ui raised segments" v-if="unitData['leader skill']">
@@ -66,6 +70,7 @@
 
 <script>
 import BraveBurstSegment from '@/components/UnitsComponents/BraveBurstSegment';
+import { storeMethods } from '@/store';
 
 /* global $ */
 export default {
@@ -92,7 +97,7 @@ export default {
   },
   methods: {
     getImageURL(id) {
-      return id ? `http://dlc.bfglobal.gumi.sg/content/unit/img/unit_ills_full_${id}.png` : '';
+      return id ? storeMethods.getUnitImageURLs(this.$store.state, id) : {};
     },
   },
 };

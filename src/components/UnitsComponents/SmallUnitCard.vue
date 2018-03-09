@@ -15,6 +15,8 @@
 </template>
 
 <script>
+import { storeMethods } from '@/store';
+
 export default {
   props: ['unitData'],
   data() {
@@ -38,10 +40,9 @@ export default {
     /* eslint-disable */
     getImageURL(id) {
       if (location.hostname === 'localhost') {
-        // return `http://dlc.bfglobal.gumi.sg/content/unit/img/unit_ills_thum_${id}.png`;
         return '';
       } else {
-        return `http://dlc.bfglobal.gumi.sg/content/unit/img/unit_ills_thum_${id}.png`;
+        return storeMethods.getUnitImageURLs(this.$store.state, id).ills_thum;
       }
     },
     getRarity(rarity) {
