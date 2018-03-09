@@ -1,5 +1,5 @@
 <template>
-  <div id="unit-card-container">
+  <div>
     <div class="ui longer modal">
       <i class="close icon"></i>
       <div class="header">
@@ -7,11 +7,10 @@
         <span>{{ unitData.guide_id }}: {{ unitData.name }} ({{ unitData.id }})</span>
       </div>
       <div class="scrolling content">
-        <div class="ui stackable two column grid">
-          <div class="column image content">
-            <img class="ui centered medium image" :src="getImageURL(unitData.id).ills_full || ''">
-          </div>
-          <div class="column">
+        <div class="ui container fluid" id="full-art-container">
+          <img class="ui centered image" :src="getImageURL(unitData.id).ills_full || ''">
+        </div>
+        <div class="ui container fluid" id="content-container">
             <div class="ui raised segments" v-if="unitData['leader skill']">
               <div class="ui inverted segment">
                 <b>LS: </b>{{ unitData['leader skill'].name }}
@@ -62,7 +61,6 @@
               </div>
             </div>
           </div>
-        </div>
       </div>
     </div>
   </div>
@@ -104,6 +102,15 @@ export default {
 </script>
 
 <style>
+#full-art-container {
+  max-height: 300px;
+}
+
+#full-art-container img {
+  max-height: 300px;
+  width: auto;
+}
+
 .ui.modal>.scrolling.content {
   max-height: calc(70vh);
   overflow: auto;
