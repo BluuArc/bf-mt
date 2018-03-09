@@ -5,12 +5,12 @@
         <ul>
           <li>
             <b>Unit Data:</b>
-            <span v-if="fullUnitData !== undefined">
-              <span v-show="fullUnitData.error === undefined">
+            <span v-if="unitDataLoaded($store.state)">
+              <span v-show="unitData.error === undefined">
                 Loaded
               </span>
-              <span v-show="fullUnitData.error !== undefined">
-                [ERROR] {{ fullUnitData.error }}
+              <span v-show="unitData.error !== undefined">
+                [ERROR] {{ unitData.error }}
               </span>
             </span>
             <span v-else>
@@ -19,12 +19,12 @@
           </li>
           <li>
             <b>Item Data:</b>
-            <span v-if="fullItemData !== undefined">
-              <span v-show="fullItemData.error === undefined">
+            <span v-if="itemDataLoaded($store.state)">
+              <span v-show="itemData.error === undefined">
                 Loaded
               </span>
-              <span v-show="fullItemData.error !== undefined">
-                [ERROR] {{ fullItemData.error }}
+              <span v-show="itemData.error !== undefined">
+                [ERROR] {{ itemData.error }}
               </span>
             </span>
             <span v-else>
@@ -33,12 +33,12 @@
           </li>
           <li>
             <b>Extra Skill Data:</b>
-            <span v-if="fullExtraSkillData !== undefined">
-              <span v-show="fullExtraSkillData.error === undefined">
+            <span v-if="extraSkillDataLoaded($store.state)">
+              <span v-show="extraSkillData.error === undefined">
                 Loaded
               </span>
-              <span v-show="fullExtraSkillData.error !== undefined">
-                [ERROR] {{ fullExtraSkillData.error }}
+              <span v-show="extraSkillData.error !== undefined">
+                [ERROR] {{ extraSkillData.error }}
               </span>
             </span>
             <span v-else>
@@ -47,12 +47,12 @@
           </li>
           <li>
             <b>Brave Burst Data:</b>
-            <span v-if="fullBurstData !== undefined">
-              <span v-show="fullBurstData.error === undefined">
+            <span v-if="burstDataLoaded($store.state)">
+              <span v-show="burstData.error === undefined">
                 Loaded
               </span>
-              <span v-show="fullBurstData.error !== undefined">
-                [ERROR] {{ fullBurstData.error }}
+              <span v-show="burstData.error !== undefined">
+                [ERROR] {{ burstData.error }}
               </span>
             </span>
             <span v-else>
@@ -65,7 +65,20 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+import { storeMethods } from '@/store';
+
 export default {
-  props: ['fullUnitData', 'fullItemData', 'fullExtraSkillData', 'fullBurstData'],
+  computed: {
+    ...mapState([
+      'unitData',
+      'itemData',
+      'burstData',
+      'extraSkillData',
+    ]),
+  },
+  methods: {
+    ...storeMethods,
+  },
 };
 </script>

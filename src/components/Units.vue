@@ -1,7 +1,7 @@
 <template>
   <div id="units-container">
-    <div v-show="fullUnitData === undefined">Loading unit data</div>
-    <div v-if="fullUnitData !== undefined && fullUnitData.error === undefined"
+    <div v-show="!unitDataLoaded($store.state)">Loading unit data</div>
+    <div v-if="unitDataLoaded($store.state) && unitData.error === undefined"
       class="ui container">
       <large-unit-card :unitData="selectedUnit"></large-unit-card>
       <div id="options-section">
@@ -220,7 +220,7 @@
         </div>
       </div>
     </div>
-    <div v-else-if="fullUnitData !== undefined">
+    <div v-else-if="unitDataLoaded($store.state)">
       Error loading unit data.
     </div>
   </div>
@@ -229,10 +229,11 @@
 <script>
 import SmallUnitCard from '@/components/UnitsComponents/SmallUnitCard';
 import LargeUnitCard from '@/components/UnitsComponents/LargeUnitCard';
+import { mapState } from 'vuex';
+import { storeMethods } from '@/store';
 
 /* global $ _ */
 export default {
-  props: ['fullUnitData'],
   components: {
     'small-unit-card': SmallUnitCard,
     'large-unit-card': LargeUnitCard,
@@ -250,15 +251,15 @@ export default {
 
     this.filterOptions = this.getDefaultFilters();
 
-    if (this.fullUnitData !== undefined) {
-      this.unitIDs = Object.keys(this.fullUnitData).filter(id => id !== '1');
+    if (this.unitDataLoaded(this.$store.state)) {
+      this.unitIDs = Object.keys(this.unitData[this.currentServer]).filter(id => id !== '1');
       this.sortUnitsBy(this.currentSortOption);
     }
   },
   watch: {
-    fullUnitData(newData) {
+    unitData(newData) {
       if (newData !== undefined) {
-        this.unitIDs = Object.keys(newData).filter(id => id !== '1');
+        this.unitIDs = Object.keys(newData[this.currentServer]).filter(id => id !== '1');
       }
     },
     unitIDs() {
@@ -318,6 +319,7 @@ export default {
     totalPages() {
       return Math.ceil(this.unitIDs.length / this.amountToList);
     },
+    ...mapState(['unitData', 'currentServer']),
   },
   data() {
     return {
@@ -372,6 +374,7 @@ export default {
     };
   },
   methods: {
+    unitDataLoaded: storeMethods.unitDataLoaded,
     getDefaultFilters() {
       return {
         elements: ['fire', 'water', 'earth', 'thunder', 'light', 'dark'],
@@ -391,7 +394,7 @@ export default {
       return { 'ui fluid padded button': true, positive: key === this.currentSortOption };
     },
     getUnit(id) {
-      return this.fullUnitData[id];
+      return storeMethods.getUnit(this.$store.state, id);
     },
     setSelectedUnit(id) {
       if (this.selectedUnit && this.selectedUnit.id === id) {
@@ -501,7 +504,7 @@ export default {
       return true;
     },
     updateUnitList() {
-      this.unitIDs = Object.keys(this.fullUnitData)
+      this.unitIDs = Object.keys(this.unitData[this.currentServer])
         .filter(id => id !== '1').filter(this.doesUnitFitFilter);
       this.sortUnitsBy(this.currentSortOption);
     },

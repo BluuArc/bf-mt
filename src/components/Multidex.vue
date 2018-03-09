@@ -22,16 +22,17 @@
               to="/multidex/units"
               :class="{
                 'ui button attached bottom': true,
-                disabled: !fullUnitData || (fullUnitData && fullUnitData.error),
-                red: fullUnitData && fullUnitData.error,
-                green: fullUnitData && !fullUnitData.error
+                /* eslint-disable-next-line */
+                disabled: !unitDataLoaded($store.state) || (unitDataLoaded($store.state) && unitData.error),
+                red: unitDataLoaded($store.state) && unitData.error,
+                green: unitDataLoaded($store.state) && !unitData.error
               }">
-                <span v-if="fullUnitData !== undefined">
-                  <span v-show="fullUnitData.error === undefined">
+                <span v-if="unitDataLoaded($store.state)">
+                  <span v-show="unitData.error === undefined">
                     Go to Unit Dex
                   </span>
-                  <span v-show="fullUnitData.error !== undefined">
-                    [ERROR] {{ fullUnitData.error }}
+                  <span v-show="unitData.error !== undefined">
+                    [ERROR] {{ unitData.error }}
                   </span>
                 </span>
                 <span v-else>
@@ -60,16 +61,17 @@
               to="/multidex/items"
               :class="{
                 'ui button attached bottom': true,
-                disabled: !fullItemData || (fullItemData && fullItemData.error),
-                red: fullItemData && fullItemData.error,
-                green: fullItemData && !fullItemData.error
+                /* eslint-disable-next-line */
+                disabled: !itemDataLoaded($store.state) || (itemDataLoaded($store.state) && itemData.error),
+                red: itemDataLoaded($store.state) && itemData.error,
+                green: itemDataLoaded($store.state) && !itemData.error
               }">
-                <span v-if="fullItemData !== undefined">
-                  <span v-show="fullItemData.error === undefined">
+                <span v-if="itemDataLoaded($store.state)">
+                  <span v-show="itemData.error === undefined">
                     Go to Item Dex
                   </span>
-                  <span v-show="fullItemData.error !== undefined">
-                    [ERROR] {{ fullItemData.error }}
+                  <span v-show="itemData.error !== undefined">
+                    [ERROR] {{ itemData.error }}
                   </span>
                 </span>
                 <span v-else>
@@ -97,16 +99,17 @@
               to="/multidex/extraskills"
               :class="{
                 'ui button attached bottom': true,
-                disabled: !fullExtraSkillData || (fullExtraSkillData && fullExtraSkillData.error),
-                red: fullExtraSkillData && fullExtraSkillData.error,
-                green: fullExtraSkillData && !fullExtraSkillData.error
+                /* eslint-disable-next-line */
+                disabled: !extraSkillDataLoaded($store.state) || (extraSkillDataLoaded($store.state) && extraSkillData.error),
+                red: extraSkillDataLoaded($store.state) && extraSkillData.error,
+                green: extraSkillDataLoaded($store.state) && !extraSkillData.error
               }">
-              <span v-if="fullExtraSkillData !== undefined">
-                  <span v-show="fullExtraSkillData.error === undefined">
+              <span v-if="extraSkillDataLoaded($store.state)">
+                  <span v-show="extraSkillData.error === undefined">
                     Go to Extra Skill Dex
                   </span>
-                  <span v-show="fullExtraSkillData.error !== undefined">
-                    [ERROR] {{ fullExtraSkillData.error }}
+                  <span v-show="extraSkillData.error !== undefined">
+                    [ERROR] {{ extraSkillData.error }}
                   </span>
                 </span>
                 <span v-else>
@@ -134,17 +137,17 @@
               to="/multidex/bursts"
               :class="{
                 'ui button attached bottom': true,
-                disabled: false,
-                disabled: !fullBurstData || (fullBurstData && fullBurstData.error),
-                red: fullBurstData && fullBurstData.error,
-                green: fullBurstData && !fullBurstData.error
+                /* eslint-disable-next-line */
+                disabled: !burstDataLoaded($store.state) || (burstDataLoaded($store.state) && burstData.error),
+                red: burstDataLoaded($store.state) && burstData.error,
+                green: burstDataLoaded($store.state) && !burstData.error
               }">
-                <span v-if="fullBurstData !== undefined">
-                  <span v-show="fullBurstData.error === undefined">
+                <span v-if="burstDataLoaded($store.state)">
+                  <span v-show="burstData.error === undefined">
                     Go to Burst Dex
                   </span>
-                  <span v-show="fullBurstData.error !== undefined">
-                    [ERROR] {{ fullBurstData.error }}
+                  <span v-show="burstData.error !== undefined">
+                    [ERROR] {{ burstData.error }}
                   </span>
                 </span>
                 <span v-else>
@@ -161,12 +164,24 @@
 
 <script>
 import StatisticsItem from '@/components/MultidexComponents/StatisticsItem';
+import { mapState } from 'vuex';
+import { storeMethods } from '@/store';
 
 /* global $ */
 export default {
-  props: ['fullUnitData', 'fullItemData', 'fullExtraSkillData', 'fullBurstData'],
   components: {
     'statistics-item': StatisticsItem,
+  },
+  computed: {
+    ...mapState([
+      'unitData',
+      'itemData',
+      'burstData',
+      'extraSkillData',
+    ]),
+  },
+  methods: {
+    ...storeMethods,
   },
   mounted() {
     this.$emit('updateheader');

@@ -12,11 +12,7 @@
       </div>
     </div>
 
-    <load-status-card
-      :fullUnitData="fullUnitData"
-      :fullItemData="fullItemData"
-      :fullExtraSkillData="fullExtraSkillData"
-      :fullBurstData="fullBurstData"/>
+    <load-status-card/>
 
     <div class="ui segments">
       <div class="ui gray inverted segment left aligned">Rights/Credits</div>
@@ -40,7 +36,6 @@
 import LoadStatusCard from '@/components/HomeComponents/LoadStatusCard';
 
 export default {
-  props: ['fullUnitData', 'fullItemData', 'fullExtraSkillData', 'fullBurstData'],
   components: {
     'load-status-card': LoadStatusCard,
   },

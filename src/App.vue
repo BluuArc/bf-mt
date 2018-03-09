@@ -1,12 +1,7 @@
 <template>
   <div id="app">
     <header-bar :href="headerHref" :content="headerContent"></header-bar>
-    <dynamic-router
-      :fullUnitData="fullUnitData"
-      :fullItemData="fullItemData"
-      :fullExtraSkillData="fullExtraSkillData"
-      :fullBurstData="fullBurstData"
-      v-on:updateheader="updateHeader">
+    <dynamic-router v-on:updateheader="updateHeader">
     </dynamic-router>
     <navbar v-on:updateheader="updateHeader"></navbar>
     <noscript>
@@ -24,6 +19,7 @@
 import Navbar from '@/components/Navbar';
 import DynamicRouter from '@/components/DynamicRouter';
 import HeaderBar from '@/components/HeaderBar';
+import { mapMutations } from 'vuex';
 
 /* global $ PromiseWorker */
 
@@ -36,10 +32,6 @@ export default {
   },
   data() {
     return {
-      fullUnitData: undefined,
-      fullItemData: undefined,
-      fullExtraSkillData: undefined,
-      fullBurstData: undefined,
       headerHref: undefined,
       headerContent: undefined,
       worker: undefined,
@@ -86,20 +78,20 @@ export default {
       return this.getDataLegacy(url);
     },
     async loadAllData() {
-      const defaultObject = { error: 'Not implemented yet' };
+      const defaultObject = { server: 'error', data: 'Not implemented yet' };
       await this.loadUnitData();
 
-      this.fullItemData = defaultObject;
-      this.fullExtraSkillData = defaultObject;
-      this.fullBurstData = defaultObject;
+      this.setItemData(defaultObject);
+      this.setBraveBurstData(defaultObject);
+      this.setExtraSkillData(defaultObject);
     },
     async loadUnitData() {
-      const url = `${this.baseUrl}static/bf-data/info-gl.json`;
       const unitUrl = `${this.baseUrl}static/bf-data`;
       const servers = ['gl'];
       try {
-        const unitDb = {};
         servers.forEach(async (server) => {
+          const unitDb = {};
+          // for every element 1 - 6
           for (let i = 1; i <= 6; i += 1) {
             // eslint-disable-next-line
             const tempData = await this.getJSON(`${unitUrl}/units-${server}-${i}.json`);
@@ -108,16 +100,12 @@ export default {
                 unitDb[id] = tempData[id];
               });
           }
+          this.setUnitData({ server, data: unitDb });
         });
-        this.fullUnitData = unitDb;
-        if (this.debugMode) {
-          // eslint-disable-next-line
-          console.log(location.hostname, url, this.fullUnitData);
-        }
       } catch (err) {
         // eslint-disable-next-line
         console.error(err);
-        this.fullUnitData = err;
+        this.setUnitData({ server: 'error', data: 'Error loading data' });
       }
     },
     updateHeader(newContent = {}) {
@@ -139,6 +127,12 @@ export default {
           this.worker = null;
         });
     },
+    ...mapMutations([
+      'setUnitData',
+      'setItemData',
+      'setBraveBurstData',
+      'setExtraSkillData',
+    ]),
     /* eslint-disable */
     loadTracker() {
       //globals for statcounter tracker
