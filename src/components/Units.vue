@@ -326,7 +326,7 @@ export default {
       unitIDs: [],
       pagedIDs: [],
       elements: ['fire', 'water', 'earth', 'thunder', 'light', 'dark'],
-      currentSortOption: 'Unit ID',
+      currentSortOption: 'Guide ID',
       selectedUnit: {},
       nameQuery: '',
       doSortDescending: false,
