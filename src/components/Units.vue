@@ -469,7 +469,7 @@ export default {
       const unit = this.getUnit(id);
       const filterSkills = this.filterOptions.generalSkill;
       const allSkills = this.getDefaultFilters().generalSkill;
-      const hasName = unit.name.toLowerCase().indexOf(this.nameQuery) > -1;
+      const hasName = unit.name.toLowerCase().indexOf(this.nameQuery.toLowerCase()) > -1;
 
       let skillBoolean;
       if (filterSkills.length > 0) { //check for a specific skill
