@@ -3,13 +3,69 @@
     <div :class="getHeaderClass()"><b>{{ burstType }}: </b>{{ burstData.name }}</div>
     <div class="ui segment" id="burst-content">
       <div class="ui top attached tabular menu">
-        <div class="active item" :data-tab="descriptionTabId">Description</div>
-        <div class="item" :data-tab="jsonTabId">JSON</div>
+        <a class="active item"
+          :data-tab="descriptionTabId">
+          Description
+        </a>
+        <a
+          class="item"
+          :data-tab="hitcountTabId"
+          v-if="hasHitCounts">
+          Hitcounts
+        </a>
+        <a
+          class="item"
+          :data-tab="jsonTabId">
+          JSON
+        </a>
       </div>
-      <div class="ui bottom attached active tab segment" :data-tab="descriptionTabId">
+      <div
+        class="ui bottom attached active tab segment"
+        :data-tab="descriptionTabId">
         {{ burstData.desc }}
       </div>
-      <div class="ui bottom attached tab segment" :data-tab="jsonTabId">
+      <div
+        class="ui bottom attached tab segment"
+        v-if="hasHitCounts"
+        :data-tab="hitcountTabId">
+        <div
+          v-for="(attack, attackIndex) in hitCountData"
+          :key="attackIndex">
+          <h3 v-if="hitCountData.length > 1">Attack #{{ attackIndex + 1 }}</h3>
+          <table class="ui striped compact unstackable table">
+            <thead>
+              <tr>
+                <th class="center aligned">Hit #</th>
+                <th class="center aligned">Frame #</th>
+                <th class="center aligned">DMG%/hit</th>
+                <th class="center aligned">Time Diff</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                v-for="(frame, frameIndex) in attack['frame times']"
+                :key="frameIndex">
+                <td class="center aligned">
+                  {{ frameIndex }}
+                </td>
+                <td class="center aligned">
+                  {{ frame }}
+                </td>
+                <td class="center aligned">
+                  {{ attack['hit dmg% distribution'][frameIndex] }}
+                </td>
+                <td class="center aligned" v-if="frameIndex === 0">0</td>
+                <td class="center aligned" v-else>
+                  {{ frame - attack['frame times'][frameIndex - 1] }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div
+        class="ui bottom attached tab segment"
+        :data-tab="jsonTabId">
         <pre><code>{{ jsonData }}</code></pre>
       </div>
     </div>
@@ -37,11 +93,24 @@ export default {
     descriptionTabId() {
       return `desc-${this.burstType}`;
     },
+    hitcountTabId() {
+      return `hitcount-${this.burstType}`;
+    },
     jsonTabId() {
       return `json-${this.burstType}`;
     },
     jsonData() {
       return JSON.stringify(this.burstData, null, 2);
+    },
+    hitCountData() {
+      const attackingProcs = ['1', '13', '14', '27', '28', '29', '47', '61', '64', '75', '11000'].concat(['46', '48', '97']);
+      const attackData = this.burstData['damage frames']
+        .filter(f => attackingProcs.indexOf(f['proc id']) > -1);
+
+      return attackData;
+    },
+    hasHitCounts() {
+      return this.hitCountData.length > 0;
     },
   },
   methods: {
@@ -55,7 +124,8 @@ export default {
 </script>
 
 <style>
-#burst-content pre {
+#burst-content .bottom.attached.tab.segment {
   max-height: 50vh;
+  overflow: auto;
 }
 </style>

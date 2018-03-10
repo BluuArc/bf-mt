@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="ui longer modal unit">
+    <div class="ui large modal unit">
       <i class="close icon"></i>
       <div class="header">
         <img class="ui avatar image" :src="getImageURL(unitData.id).ills_battle">
@@ -50,7 +50,9 @@
                 </span>
               </div>
               <div class="ui segment">
-                <table class="ui very basic green celled compact striped table" id="enhancements">
+                <table
+                  class="ui very basic green celled compact striped unstackable table"
+                  id="enhancements">
                   <thead>
                     <tr>
                       <th>Cost</th>
