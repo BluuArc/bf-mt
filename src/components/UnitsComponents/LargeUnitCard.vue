@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="ui longer modal">
+    <div class="ui longer modal unit">
       <i class="close icon"></i>
       <div class="header">
         <img class="ui avatar image" :src="getImageURL(unitData.id).ills_battle">
@@ -42,13 +42,52 @@
             <brave-burst-segment v-if="unitData.ubb"
               :burstData="unitData.ubb" burstType="UBB">
             </brave-burst-segment>
+            <div class="ui raised segments" v-if="unitData.feskills">
+              <div class="ui green inverted segment">
+                <b>SP Enhancements</b>
+                <span class="ui small label">
+                  {{ feskillSum }} SP
+                </span>
+              </div>
+              <div class="ui segment">
+                <table class="ui very basic green celled compact striped table" id="enhancements">
+                  <thead>
+                    <tr>
+                      <th>Cost</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="skill in unitData.feskills" :key="skill.id">
+                      <td class="collapsing">
+                        {{ skill.skill.bp }} SP
+                      </td>
+                      <td>
+                          <h4 class="ui header">
+                            <div class="content">
+                              <sp-icon :category="skill.category"></sp-icon>
+                              <span id="sp-desc">
+                                <div class="header">
+                                  {{ skill.skill.desc }}
+                                </div>
+                                <div class="sub header" v-if="skill['dependency comment']">
+                                  {{ getDependencyText(skill) }}
+                                </div>
+                              </span>
+                          </div>
+                        </h4>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
             <div class="ui raised segments">
               <div class="ui blue inverted segment">
                 Things to Eventually Add
               </div>
               <div class="ui segment">
                 <ul>
-                  <li>SP enhancements (if applicable)</li>
                   <li>buff translations for LS/ES/BB/SBB/UBB/SP</li>
                   <ul><li>Buff viewer (overall and specific skills)</li></ul>
                   <li>some way to show hit distributions for NAtk/BB/SBB/UBB</li>
@@ -68,6 +107,7 @@
 
 <script>
 import BraveBurstSegment from '@/components/UnitsComponents/BraveBurstSegment';
+import SPIcon from '@/components/UnitsComponents/SPIcon';
 import { storeMethods } from '@/store';
 
 /* global $ */
@@ -75,6 +115,7 @@ export default {
   props: ['unitData'],
   components: {
     'brave-burst-segment': BraveBurstSegment,
+    'sp-icon': SPIcon,
   },
   data() {
     return {
@@ -83,6 +124,7 @@ export default {
   },
   mounted() {
     this.unitModal = $(this.$el).find('.ui.modal').modal();
+    this.scrollToTop();
   },
   watch: {
     unitData(newValue) {
@@ -93,9 +135,38 @@ export default {
       }
     },
   },
+  computed: {
+    feskillSum() {
+      if (!this.unitData.feskills) {
+        return 0;
+      }
+      return this.unitData.feskills
+        .map(s => s.skill.bp)
+        .reduce((acc, val) => acc + val, 0);
+    },
+  },
   methods: {
     getImageURL(id) {
       return id ? storeMethods.getUnitImageURLs(this.$store.state, id) : {};
+    },
+    getSPSkillWithID(id) {
+      const result = this.unitData.feskills
+        .filter(s => id.indexOf(s.id.toString()) > -1);
+
+      return result[0];
+    },
+    getDependencyText(skill) {
+      const spSkill = this.getSPSkillWithID(skill.dependency);
+
+      if (spSkill) {
+        return `Unlock "${spSkill.skill.desc}"`;
+      }
+
+      return skill['dependency comment'] || 'Requires another enhancement';
+    },
+    scrollToTop() {
+      const $el = $('.modal.unit .scrolling.content');
+      $el.get(0).scrollTop = 0;
     },
   },
 };
@@ -104,11 +175,16 @@ export default {
 <style>
 #full-art-container {
   max-height: 300px;
+  min-height: 150px;
 }
 
 #full-art-container img {
   max-height: 300px;
   width: auto;
+}
+
+#enhancements #sp-desc {
+  display: inline-table;
 }
 
 .ui.modal>.scrolling.content {
