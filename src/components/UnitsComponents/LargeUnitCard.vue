@@ -12,6 +12,7 @@
           <a class="item" data-tab="unit-art"><b>Art</b></a>
         </div>
         <div class="ui container active tab fluid" id="content-container" data-tab="unit-info">
+          <div id="unit-info-bg"></div>
           <div class="ui raised segments" v-if="unitData['leader skill']">
             <div class="ui inverted segment">
               <b>LS: </b>{{ unitData['leader skill'].name }}
@@ -135,7 +136,7 @@ export default {
       .tab({
         context: '.ui.modal.unit',
       }).tab('change tab', 'unit-info');
-    $('#content-container')
+    $('#content-container #unit-info-bg')
       .css('background-image', `url(${this.getImageURL(this.unitData.id).ills_full})`);
     this.scrollToTop();
   },
@@ -144,7 +145,8 @@ export default {
       // eslint-disable-next-line
       console.log(newValue);
       if (this.unitModal) {
-        $('#content-container').css('background-image', `url(${this.getImageURL(this.unitData.id).ills_full})`);
+        $('#content-container #unit-info-bg')
+          .css('background-image', `url(${this.getImageURL(this.unitData.id).ills_full})`);
         setTimeout(() => { this.unitModal.modal('refresh').modal(newValue ? 'show' : 'hide'); }, 75);
       }
     },
@@ -192,17 +194,27 @@ export default {
 }
 
 #content-container {
+  position: relative;
+}
+
+#content-container #unit-info-bg{
   background-color: inherit;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
 }
 
 #enhancements #sp-desc {
   display: inline-table;
 }
 
-.ui.modal>.scrolling.content {
+.ui.modal.unit>.scrolling.content {
   max-height: calc(70vh);
   overflow: auto;
 }
