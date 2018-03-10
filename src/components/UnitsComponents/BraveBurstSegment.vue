@@ -77,7 +77,10 @@
 export default {
   props: ['burstData', 'burstType'],
   mounted() {
-    $(this.$el).find('.menu .item').tab()
+    $(this.$el).find('.menu .item')
+      .tab({
+        context: $(this.$el),
+      })
       .tab('change tab', this.descriptionTabId);
   },
   data() {
