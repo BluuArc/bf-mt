@@ -143,8 +143,10 @@ export default {
   watch: {
     unitData(newValue) {
       // eslint-disable-next-line
-      console.log(newValue);
+      console.debug(newValue);
       if (this.unitModal) {
+        this.cardMenu.tab('change tab', 'unit-info');
+        this.scrollToTop();
         $('#content-container #unit-info-bg')
           .css('background-image', `url(${this.getImageURL(this.unitData.id).ills_full})`);
         setTimeout(() => { this.unitModal.modal('refresh').modal(newValue ? 'show' : 'hide'); }, 75);
@@ -201,13 +203,13 @@ export default {
   background-color: inherit;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.5;
+  opacity: 0.25;
 }
 
 #enhancements #sp-desc {
