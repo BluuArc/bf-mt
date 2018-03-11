@@ -6,7 +6,7 @@
         <img class="ui avatar image" :src="getImageURL(unitData.id).ills_battle">
         <span>{{ unitData.guide_id }}: {{ unitData.name }} ({{ unitData.id }})</span>
       </div>
-      <div class="scrolling content">
+      <div class="scrolling content" id="unit-card-content">
         <div class="ui two item menu top" id="unit-card-menu">
           <a class="active item" data-tab="unit-info"><b>Info</b></a>
           <a class="item" data-tab="unit-art"><b>Art</b></a>
@@ -118,8 +118,10 @@ export default {
       return id ? storeMethods.getUnitImageURLs(this.$store.state, id) : {};
     },
     scrollToTop() {
-      const $el = $('.modal.unit .scrolling.content');
-      $el.get(0).scrollTop = 0;
+      const $el = $('.scrolling.content#unit-card-content');
+      setTimeout(() => {
+        $el.get(0).scrollTop = 0;
+      }, 250);
     },
   },
 };

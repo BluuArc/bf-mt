@@ -17,13 +17,24 @@
           id="enhancements">
           <thead>
             <tr>
-              <th>Cost</th>
+              <th class="collapsing" :style="sumHeaderStyle">
+                <div class="ui checkbox" id="sp-main">
+                  <input type="checkbox" :value="-1">
+                  <label>{{ activeSkillSum }} SP</label>
+                </div>
+              </th>
+              <th id="cost-column">Cost</th>
               <th>Description</th>
             </tr>
           </thead>
           <tbody>
-            <tr v-for="skill in feskillData" :key="skill.id">
-              <td class="collapsing">
+            <tr v-for="(skill, index) in feskillData" :key="skill.id">
+              <td class="collapsing" id="checkbox-column">
+                <div class="ui fitted checkbox">
+                  <input type="checkbox" :value="index" v-model="activeSkills[index]">
+                </div>
+              </td>
+              <td class="collapsing" id="cost-column">
                 {{ skill.skill.bp }} SP
               </td>
               <td>
@@ -61,10 +72,26 @@ export default {
   components: {
     'sp-icon': SPIcon,
   },
+  data() {
+    return {
+      activeSkills: {},
+    };
+  },
+  watch: {
+    feskillData() {
+      this.activeSkills = {};
+      setTimeout(() => {
+        this.initCheckboxes();
+        this.scrollToTop();
+      }, 100);
+    },
+  },
   mounted() {
     $(this.$el).find('.menu .item')
       .tab({ context: $(this.$el) })
       .tab('change tab', 'table-sp');
+    this.initCheckboxes();
+    this.scrollToTop();
   },
   computed: {
     feskillSum() {
@@ -75,11 +102,36 @@ export default {
         .map(s => s.skill.bp)
         .reduce((acc, val) => acc + val, 0);
     },
+    activeSkillSum() {
+      return Object.keys(this.activeSkills)
+        .filter(key => this.activeSkills[key])
+        .map(key => this.feskillData[key].skill.bp)
+        .reduce((acc, val) => acc + val, 0);
+    },
     jsonData() {
       return JSON.stringify(this.feskillData, null, 2);
     },
+    sumHeaderStyle() {
+      const style = { width: '6em', 'max-width': '6em' };
+      if (this.activeSkillSum <= 100) {
+        return style;
+      } else if (this.activeSkillSum <= 120) {
+        style['background-color'] = 'lightgoldenrodyellow';
+      } else {
+        style['background-color'] = 'lightpink';
+      }
+      return style;
+    },
   },
   methods: {
+    scrollToTop() {
+      const $el = $('.scrolling.content#unit-card-content');
+      setTimeout(() => {
+        if ($el.get(0).scrollTop > 50) {
+          $el.get(0).scrollTop = 0;
+        }
+      }, 750);
+    },
     getSPSkillWithID(id) {
       const result = this.feskillData
         .filter(s => id.indexOf(s.id.toString()) > -1);
@@ -95,13 +147,67 @@ export default {
 
       return skill['dependency comment'] || 'Requires another enhancement';
     },
+    initCheckboxes() {
+      const mainCheckbox = $(this.$el).find('#sp-main');
+      const indivCheckboxes = $(this.$el).find('tbody .checkbox');
+
+      mainCheckbox
+        .checkbox({
+          onChecked() { indivCheckboxes.checkbox('check'); },
+          onUnchecked() { indivCheckboxes.checkbox('uncheck'); },
+        });
+
+      indivCheckboxes
+        .checkbox({
+          fireOnInit: true,
+          onChange: () => {
+            let allChecked = true;
+            let allUnchecked = true;
+            indivCheckboxes.each(function checkCheckbox() {
+              if ($(this).checkbox('is checked')) {
+                allUnchecked = false;
+              } else {
+                allChecked = false;
+              }
+            });
+
+            if (allChecked) {
+              mainCheckbox.checkbox('set checked');
+            } else if (allUnchecked) {
+              mainCheckbox.checkbox('set unchecked');
+            } else {
+              mainCheckbox.checkbox('set indeterminate');
+            }
+          },
+        });
+    },
   },
 };
 </script>
 
 <style>
-#sp-content .bottom.attached.tab.segment {
+#sp-content .bottom.attached.tab.segment pre {
   max-height: 50vh;
   overflow: auto;
+}
+
+#sp-content tr {
+  display: block;
+}
+
+#sp-content tbody {
+  display: block;
+  overflow: auto;
+  max-height: 45vh;
+}
+
+#sp-content #checkbox-column {
+  width: 6em;
+  max-width: 6em;
+}
+
+#sp-content #cost-column {
+  width: 4em;
+  max-width: 4em;
 }
 </style>
