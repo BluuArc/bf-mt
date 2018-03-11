@@ -45,7 +45,7 @@
                         <div class="header">
                           {{ skill.skill.desc }}
                         </div>
-                        <div class="sub header" v-if="skill['dependency comment']">
+                        <div class="sub header" v-if="skill.dependency">
                           {{ getDependencyText(skill) }}
                         </div>
                       </span>
