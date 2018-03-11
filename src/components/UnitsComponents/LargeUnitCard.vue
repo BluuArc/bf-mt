@@ -38,48 +38,9 @@
           <brave-burst-segment v-if="unitData.ubb"
             :burstData="unitData.ubb" burstType="UBB">
           </brave-burst-segment>
-          <div class="ui raised segments" v-if="unitData.feskills">
-            <div class="ui green inverted segment">
-              <b>SP Enhancements</b>
-              <span class="ui small label">
-                {{ feskillSum }} SP
-              </span>
-            </div>
-            <div class="ui segment">
-              <table
-                class="ui very basic green celled compact striped unstackable table"
-                id="enhancements">
-                <thead>
-                  <tr>
-                    <th>Cost</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr v-for="skill in unitData.feskills" :key="skill.id">
-                    <td class="collapsing">
-                      {{ skill.skill.bp }} SP
-                    </td>
-                    <td>
-                        <h4 class="ui header">
-                          <div class="content">
-                            <sp-icon :category="skill.category"></sp-icon>
-                            <span id="sp-desc">
-                              <div class="header">
-                                {{ skill.skill.desc }}
-                              </div>
-                              <div class="sub header" v-if="skill['dependency comment']">
-                                {{ getDependencyText(skill) }}
-                              </div>
-                            </span>
-                        </div>
-                      </h4>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+          <enhancements-segment
+            :feskillData="unitData.feskills"
+            v-if="unitData.feskills"/>
           <div class="ui raised segments">
             <div class="ui blue inverted segment">
               Things to Eventually Add
@@ -111,7 +72,7 @@
 import BraveBurstSegment from '@/components/UnitsComponents/BraveBurstSegment';
 import LeaderSkillSegment from '@/components/UnitsComponents/LeaderSkillSegment';
 import ExtraSkillSegment from '@/components/UnitsComponents/ExtraSkillSegment';
-import SPIcon from '@/components/UnitsComponents/SPIcon';
+import EnhancementsSegment from '@/components/UnitsComponents/EnhancementsSegment';
 import { storeMethods } from '@/store';
 
 /* global $ */
@@ -121,7 +82,7 @@ export default {
     'brave-burst-segment': BraveBurstSegment,
     'leader-skill-segment': LeaderSkillSegment,
     'extra-skill-segment': ExtraSkillSegment,
-    'sp-icon': SPIcon,
+    'enhancements-segment': EnhancementsSegment,
   },
   data() {
     return {
@@ -152,34 +113,9 @@ export default {
       }
     },
   },
-  computed: {
-    feskillSum() {
-      if (!this.unitData.feskills) {
-        return 0;
-      }
-      return this.unitData.feskills
-        .map(s => s.skill.bp)
-        .reduce((acc, val) => acc + val, 0);
-    },
-  },
   methods: {
     getImageURL(id) {
       return id ? storeMethods.getUnitImageURLs(this.$store.state, id) : {};
-    },
-    getSPSkillWithID(id) {
-      const result = this.unitData.feskills
-        .filter(s => id.indexOf(s.id.toString()) > -1);
-
-      return result[0];
-    },
-    getDependencyText(skill) {
-      const spSkill = this.getSPSkillWithID(skill.dependency);
-
-      if (spSkill) {
-        return `Unlock "${spSkill.skill.desc}"`;
-      }
-
-      return skill['dependency comment'] || 'Requires another enhancement';
     },
     scrollToTop() {
       const $el = $('.modal.unit .scrolling.content');
