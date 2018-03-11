@@ -43,7 +43,7 @@
                       <sp-icon :category="skill.category"></sp-icon>
                       <span id="sp-desc">
                         <div class="header">
-                          {{ skill.skill.desc }}
+                          {{ skill.skill.desc || skill.skill.name }}
                         </div>
                         <div class="sub header" v-if="skill.dependency">
                           {{ getDependencyText(skill) }}
