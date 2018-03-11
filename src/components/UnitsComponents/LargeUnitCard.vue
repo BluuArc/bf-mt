@@ -13,24 +13,18 @@
         </div>
         <div class="ui container active tab fluid" id="content-container" data-tab="unit-info">
           <div id="unit-info-bg"></div>
-          <div class="ui raised segments" v-if="unitData['leader skill']">
-            <div class="ui inverted segment">
-              <b>LS: </b>{{ unitData['leader skill'].name }}
-            </div>
-            <div class="ui segment">{{ unitData['leader skill'].desc }}</div>
-          </div>
+          <leader-skill-segment
+            :lsData="unitData['leader skill']"
+            v-if="unitData['leader skill']"/>
           <div class="ui raised segments" v-else>
             <div class="ui inverted segment">
               <b>LS: </b>None
             </div>
             <div class="ui segment">No leader skill data found.</div>
           </div>
-          <div class="ui raised segments" v-if="unitData['extra skill']">
-            <div class="ui orange inverted segment">
-              <b>ES: </b>{{ unitData['extra skill'].name }}
-            </div>
-            <div class="ui segment">{{ unitData['extra skill'].desc }}</div>
-          </div>
+          <extra-skill-segment
+            :esData="unitData['extra skill']"
+            v-if="unitData['extra skill']"/>
           <brave-burst-segment v-if="unitData.bb"
             :burstData="unitData.bb" burstType="BB">
           </brave-burst-segment>
@@ -92,6 +86,7 @@
             </div>
             <div class="ui segment">
               <ul>
+                <li>JSON Viewer for all parts of data</li>
                 <li>buff translations for LS/ES/BB/SBB/UBB/SP</li>
                 <ul><li>Buff viewer (overall and specific skills)</li></ul>
                 <li>some way to show hit distributions for NAtk/BB/SBB/UBB</li>
@@ -114,6 +109,8 @@
 
 <script>
 import BraveBurstSegment from '@/components/UnitsComponents/BraveBurstSegment';
+import LeaderSkillSegment from '@/components/UnitsComponents/LeaderSkillSegment';
+import ExtraSkillSegment from '@/components/UnitsComponents/ExtraSkillSegment';
 import SPIcon from '@/components/UnitsComponents/SPIcon';
 import { storeMethods } from '@/store';
 
@@ -122,6 +119,8 @@ export default {
   props: ['unitData'],
   components: {
     'brave-burst-segment': BraveBurstSegment,
+    'leader-skill-segment': LeaderSkillSegment,
+    'extra-skill-segment': ExtraSkillSegment,
     'sp-icon': SPIcon,
   },
   data() {
