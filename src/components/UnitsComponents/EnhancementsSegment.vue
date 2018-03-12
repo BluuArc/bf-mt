@@ -10,6 +10,7 @@
       <div class="ui top attached tabular menu">
         <a class="active item" data-tab="table-sp">Table</a>
         <a class="item" data-tab="json-sp">JSON</a>
+        <a class="item" data-tab="share-sp">Share Build</a>
       </div>
       <div class="ui bottom attached active tab segment" data-tab="table-sp">
         <table
@@ -59,6 +60,18 @@
       <div class="ui bottom attached tab segment" data-tab="json-sp">
         <pre><code>{{ jsonData }}</code></pre>
       </div>
+      <div class="ui bottom attached tab segment" data-tab="share-sp">
+        <button
+          @click="copyToClipboard"
+          :class="{
+            'ui button fluid': true,
+            disabled: activeSkillSum === 0,
+            green: copyButtonText !== 'Copy Text'
+          }">
+          {{ copyButtonText }}
+        </button>
+        <textarea readonly v-model="sharedText"></textarea>
+      </div>
     </div>
   </div>
 </template>
@@ -75,6 +88,8 @@ export default {
   data() {
     return {
       activeSkills: {},
+      textarea: null,
+      copyButtonText: 'Copy Text',
     };
   },
   watch: {
@@ -85,11 +100,15 @@ export default {
         this.scrollToTop();
       }, 100);
     },
+    activeSkillSum() {
+      this.copyButtonText = 'Copy Text';
+    },
   },
   mounted() {
     $(this.$el).find('.menu .item')
       .tab({ context: $(this.$el) })
       .tab('change tab', 'table-sp');
+    this.textarea = $(this.$el).find('textarea');
     this.initCheckboxes();
     this.scrollToTop();
   },
@@ -122,6 +141,21 @@ export default {
       }
       return style;
     },
+    sharedText() {
+      const activeSkills = Object.keys(this.activeSkills)
+        .filter(key => this.activeSkills[key]);
+      if (activeSkills.length > 0) {
+        return activeSkills.map(key => this.feskillData[key])
+          .map((skill) => {
+            const cost = skill.skill.bp;
+            const desc = skill.skill.desc || skill.skill.name;
+            return `[${cost} SP] - ${desc}`;
+          })
+          .join('\n')
+          .concat([`\n\n[Total: ${this.activeSkillSum} SP]`]);
+      }
+      return 'No SP enhancements selected';
+    },
   },
   methods: {
     scrollToTop() {
@@ -146,6 +180,13 @@ export default {
       }
 
       return skill['dependency comment'] || 'Requires another enhancement';
+    },
+    copyToClipboard() {
+      const textarea = this.textarea.get(0);
+      textarea.select();
+      document.execCommand('Copy');
+      textarea.selectionEnd = 0;
+      this.copyButtonText = 'Copied text';
     },
     initCheckboxes() {
       const mainCheckbox = $(this.$el).find('#sp-main');
@@ -189,6 +230,11 @@ export default {
 #sp-content .bottom.attached.tab.segment pre {
   max-height: 50vh;
   overflow: auto;
+}
+
+#sp-content textarea {
+  width: 100%;
+  height: 30vh;
 }
 
 #sp-content tr {
