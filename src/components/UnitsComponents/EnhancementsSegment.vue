@@ -186,7 +186,34 @@ export default {
       textarea.select();
       document.execCommand('Copy');
       textarea.selectionEnd = 0;
-      this.copyButtonText = 'Copied text';
+      this.copyButtonText = 'Copied build';
+    },
+    // check all boxes current skill requires
+    checkSkillDependenciesBoxes(skill) {
+      const dependentSkill = this.getSPSkillWithID(skill.dependency);
+      this.feskillData.forEach((s, i) => {
+        if (s.id === dependentSkill.id) {
+          this.activeSkills[i] = true;
+          if (s.dependency) {
+            this.checkSkillDependenciesBoxes(s);
+          }
+        }
+      });
+    },
+    // uncheck all boxes requires current skill
+    uncheckSkillDependencyBoxes(skill) {
+      const activeDependencySkills = Object.keys(this.activeSkills)
+        .filter(key => this.activeSkills[key])
+        .map(key => this.feskillData[key])
+        .filter(s => s.dependency && s.dependency.indexOf(skill.id) > -1);
+
+      const activeDependencySkillIDs = activeDependencySkills.map(s => s.id);
+      this.feskillData.forEach((s, i) => {
+        if (activeDependencySkillIDs.indexOf(s.id) > -1) {
+          this.activeSkills[i] = false;
+        }
+      });
+      activeDependencySkills.forEach(this.uncheckSkillDependencyBoxes);
     },
     initCheckboxes() {
       const mainCheckbox = $(this.$el).find('#sp-main');
@@ -198,28 +225,49 @@ export default {
           onUnchecked() { indivCheckboxes.checkbox('uncheck'); },
         });
 
+      const setMainCheckbox = () => {
+        let allChecked = true;
+        let allUnchecked = true;
+        indivCheckboxes.each(function checkCheckbox() {
+          if ($(this).checkbox('is checked')) {
+            allUnchecked = false;
+          } else {
+            allChecked = false;
+          }
+        });
+
+        if (allChecked) {
+          mainCheckbox.checkbox('set checked');
+        } else if (allUnchecked) {
+          mainCheckbox.checkbox('set unchecked');
+        } else {
+          mainCheckbox.checkbox('set indeterminate');
+        }
+      };
+
+      // save as local variables to fix scope issues
+      const feskillData = this.feskillData;
+      const uncheckSkillDependencyBoxes = this.uncheckSkillDependencyBoxes;
+
       indivCheckboxes
         .checkbox({
           fireOnInit: true,
-          onChange: () => {
-            let allChecked = true;
-            let allUnchecked = true;
-            indivCheckboxes.each(function checkCheckbox() {
-              if ($(this).checkbox('is checked')) {
-                allUnchecked = false;
-              } else {
-                allChecked = false;
-              }
-            });
-
-            if (allChecked) {
-              mainCheckbox.checkbox('set checked');
-            } else if (allUnchecked) {
-              mainCheckbox.checkbox('set unchecked');
-            } else {
-              mainCheckbox.checkbox('set indeterminate');
-            }
+          onChecked: () => {
+            Object.keys(this.activeSkills)
+              .filter(key => this.activeSkills[key])
+              .map(key => this.feskillData[key])
+              .forEach((skill) => {
+                if (skill.dependency) {
+                  this.checkSkillDependenciesBoxes(skill);
+                }
+              });
           },
+          beforeUnchecked() {
+            const skill = feskillData[$(this).val()];
+            uncheckSkillDependencyBoxes(skill);
+          },
+          onUnchecked: () => setTimeout(setMainCheckbox, 75),
+          onChange: setMainCheckbox,
         });
     },
   },
