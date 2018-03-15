@@ -10,7 +10,10 @@
         <div
           v-for="(evolution, index) in evolutions"
           :key="index"
-          class="ui center aligned segment">
+          :class="{
+            'ui center aligned segment': true,
+            secondary: +evolution.current !== +unitData.id && +evolution.next !== +unitData.id,
+            }">
           <h3 class="header">
             <img
               :src="getUnitImage(evolution.current)"
@@ -85,6 +88,10 @@ export default {
     getUnitImage(id) {
       return storeMethods.getUnitImageURLs(this.$store.state, id).ills_thum;
     },
+  },
+  mounted() {
+    // eslint-disable-next-line
+    console.warn('TODO: Add support for Item Evolution Materials in Unit Card');
   },
 };
 </script>

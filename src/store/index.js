@@ -66,9 +66,9 @@ export const storeMethods = {
   getUnit: (state, id, server = state.currentServer) => state.unitData[server][id],
   getUnitImageURLs: (state, id, server = state.currentServer) => {
     const cdnUrls = {
-      eu: 'http://static-bravefrontier.gumi-europe.net/content/',
-      gl: 'http://dlc.bfglobal.gumi.sg/content/',
-      jp: 'http://cdn.android.brave.a-lim.jp/',
+      eu: 'http://static-bravefrontier.gumi-europe.net/content',
+      gl: 'http://dlc.bfglobal.gumi.sg/content',
+      jp: 'http://cdn.android.brave.a-lim.jp',
     };
 
     const baseUrl = `${cdnUrls[server]}/unit/img`;
