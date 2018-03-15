@@ -18,6 +18,7 @@
           <div id="unit-info-bg"></div>
           <stats-segment :stats="unitData.stats" :imps="unitData.imp"/>
           <evolution-segment :unit-data="unitData"/>
+          <arena-segment :arena="unitData.ai"/>
         </div>
 
         <div class="ui container active tab fluid" id="content-container" data-tab="unit-skillset">
@@ -85,6 +86,7 @@ import ExtraSkillSegment from '@/components/UnitsComponents/ExtraSkillSegment';
 import EnhancementsSegment from '@/components/UnitsComponents/EnhancementsSegment';
 import StatsSegment from '@/components/UnitsComponents/StatsSegment';
 import EvolutionSegment from '@/components/UnitsComponents/EvolutionSegment';
+import ArenaSegment from '@/components/UnitsComponents/ArenaSegment';
 import { storeMethods } from '@/store';
 
 /* global $ */
@@ -97,6 +99,7 @@ export default {
     'enhancements-segment': EnhancementsSegment,
     'stats-segment': StatsSegment,
     'evolution-segment': EvolutionSegment,
+    'arena-segment': ArenaSegment,
   },
   data() {
     return {
