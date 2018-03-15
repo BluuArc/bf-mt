@@ -7,11 +7,16 @@
         <span>{{ unitData.guide_id }}: {{ unitData.name }} ({{ unitData.id }})</span>
       </div>
       <div class="scrolling content" id="unit-card-content">
-        <div class="ui two item menu top" id="unit-card-menu">
-          <a class="active item" data-tab="unit-info"><b>Info</b></a>
+        <div class="ui three item menu top" id="unit-card-menu">
+          <a class="item" data-tab="unit-info"><b>General Info</b></a>
+          <a class="active item" data-tab="unit-skillset"><b>Skill Set</b></a>
           <a class="item" data-tab="unit-art"><b>Art</b></a>
         </div>
-        <div class="ui container active tab fluid" id="content-container" data-tab="unit-info">
+        <div class="ui container tab fluid" id="content-container" data-tab="unit-info">
+          <div id="unit-info-bg"></div>
+          <stats-segment :stats="unitData.stats" :imps="unitData.imp"/>
+        </div>
+        <div class="ui container active tab fluid" id="content-container" data-tab="unit-skillset">
           <div id="unit-info-bg"></div>
           <leader-skill-segment
             :lsData="unitData['leader skill']"
@@ -73,6 +78,7 @@ import BraveBurstSegment from '@/components/UnitsComponents/BraveBurstSegment';
 import LeaderSkillSegment from '@/components/UnitsComponents/LeaderSkillSegment';
 import ExtraSkillSegment from '@/components/UnitsComponents/ExtraSkillSegment';
 import EnhancementsSegment from '@/components/UnitsComponents/EnhancementsSegment';
+import StatsSegment from '@/components/UnitsComponents/StatsSegment';
 import { storeMethods } from '@/store';
 
 /* global $ */
@@ -83,6 +89,7 @@ export default {
     'leader-skill-segment': LeaderSkillSegment,
     'extra-skill-segment': ExtraSkillSegment,
     'enhancements-segment': EnhancementsSegment,
+    'stats-segment': StatsSegment,
   },
   data() {
     return {
@@ -105,7 +112,7 @@ export default {
       // eslint-disable-next-line
       console.debug(newValue);
       if (this.unitModal) {
-        this.cardMenu.tab('change tab', 'unit-info');
+        this.cardMenu.tab('change tab', 'unit-skillset');
         this.scrollToTop();
         $('#content-container #unit-info-bg')
           .css('background-image', `url(${this.getImageURL(this.unitData.id).ills_full})`);

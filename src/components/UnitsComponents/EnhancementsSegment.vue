@@ -2,7 +2,7 @@
   <div class="ui raised segments" v-if="feskillData">
     <div class="ui green inverted segment">
       <b>SP Enhancements</b>
-      <span class="ui small label">
+      <span class="ui small left pointing label">
         {{ feskillSum }} SP
       </span>
     </div>
