@@ -3,9 +3,24 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-import store from './store';
+import { store, storeMethods } from './store';
 
 Vue.config.productionTip = false;
+
+router.beforeEach((to, from, next) => {
+  const loadFields = ['unit', 'item'];
+  let nextPath;
+  if (to.path.indexOf('multidex') > -1) {
+    loadFields.forEach((field) => {
+      if (to.path === `/multidex/${field}s`
+        && !storeMethods[`${field}DataLoaded`](store.state)) {
+        nextPath = '/multidex';
+      }
+    });
+  }
+
+  next(nextPath);
+});
 
 /* eslint-disable no-new */
 new Vue({

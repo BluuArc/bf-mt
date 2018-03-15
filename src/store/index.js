@@ -42,7 +42,7 @@ export const storeMutations = {
   },
 };
 
-export default new Vuex.Store({
+export const store = new Vuex.Store({
   state: {
     unitData: undefined,
     itemData: undefined,
@@ -54,6 +54,8 @@ export default new Vuex.Store({
   getters: storeGetters,
   mutations: storeMutations,
 });
+
+export default store;
 
 /* eslint-disable */
 export const storeMethods = {
