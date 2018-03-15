@@ -6,16 +6,20 @@
         <img class="ui avatar image" :src="getImageURL(unitData.id).ills_battle">
         <span>{{ unitData.guide_id }}: {{ unitData.name }} ({{ unitData.id }})</span>
       </div>
+
       <div class="scrolling content" id="unit-card-content">
         <div class="ui three item menu top" id="unit-card-menu">
           <a class="item" data-tab="unit-info"><b>General Info</b></a>
           <a class="active item" data-tab="unit-skillset"><b>Skill Set</b></a>
           <a class="item" data-tab="unit-art"><b>Art</b></a>
         </div>
+
         <div class="ui container tab fluid" id="content-container" data-tab="unit-info">
           <div id="unit-info-bg"></div>
           <stats-segment :stats="unitData.stats" :imps="unitData.imp"/>
+          <evolution-segment :unit-data="unitData"/>
         </div>
+
         <div class="ui container active tab fluid" id="content-container" data-tab="unit-skillset">
           <div id="unit-info-bg"></div>
           <leader-skill-segment
@@ -65,6 +69,7 @@
             </div>
           </div>
         </div>
+
         <div class="ui container tab fluid" id="full-art-container" data-tab="unit-art">
           <img class="ui centered image" :src="getImageURL(unitData.id).ills_full || ''">
         </div>
@@ -79,6 +84,7 @@ import LeaderSkillSegment from '@/components/UnitsComponents/LeaderSkillSegment'
 import ExtraSkillSegment from '@/components/UnitsComponents/ExtraSkillSegment';
 import EnhancementsSegment from '@/components/UnitsComponents/EnhancementsSegment';
 import StatsSegment from '@/components/UnitsComponents/StatsSegment';
+import EvolutionSegment from '@/components/UnitsComponents/EvolutionSegment';
 import { storeMethods } from '@/store';
 
 /* global $ */
@@ -90,6 +96,7 @@ export default {
     'extra-skill-segment': ExtraSkillSegment,
     'enhancements-segment': EnhancementsSegment,
     'stats-segment': StatsSegment,
+    'evolution-segment': EvolutionSegment,
   },
   data() {
     return {
