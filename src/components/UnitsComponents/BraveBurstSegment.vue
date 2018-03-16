@@ -32,35 +32,7 @@
           v-for="(attack, attackIndex) in hitCountData"
           :key="attackIndex">
           <h3 v-if="hitCountData.length > 1">Attack #{{ attackIndex + 1 }}</h3>
-          <table class="ui striped compact unstackable table">
-            <thead>
-              <tr>
-                <th class="center aligned">Hit #</th>
-                <th class="center aligned">Frame #</th>
-                <th class="center aligned">DMG%/hit</th>
-                <th class="center aligned">Time Diff</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr
-                v-for="(frame, frameIndex) in attack['frame times']"
-                :key="frameIndex">
-                <td class="center aligned">
-                  {{ frameIndex + 1 }}
-                </td>
-                <td class="center aligned">
-                  {{ frame }}
-                </td>
-                <td class="center aligned">
-                  {{ attack['hit dmg% distribution'][frameIndex] }}
-                </td>
-                <td class="center aligned" v-if="frameIndex === 0">0</td>
-                <td class="center aligned" v-else>
-                  {{ frame - attack['frame times'][frameIndex - 1] }}
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <hitcount-table :attack="attack"/>
         </div>
       </div>
       <div
@@ -74,12 +46,14 @@
 
 <script>
 import JsonViewer from '@/components/JsonViewer';
+import HitCountTable from '@/components/UnitsComponents/HitCountTable';
 
 /* global $ */
 export default {
   props: ['burstData', 'burstType'],
   components: {
     'json-viewer': JsonViewer,
+    'hitcount-table': HitCountTable,
   },
   mounted() {
     $(this.$el).find('.menu .item')
