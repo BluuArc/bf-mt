@@ -66,16 +66,21 @@
       <div
         class="ui bottom attached tab segment"
         :data-tab="jsonTabId">
-        <pre><code>{{ jsonData }}</code></pre>
+        <json-viewer :json="burstData"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import JsonViewer from '@/components/JsonViewer';
+
 /* global $ */
 export default {
   props: ['burstData', 'burstType'],
+  components: {
+    'json-viewer': JsonViewer,
+  },
   mounted() {
     $(this.$el).find('.menu .item')
       .tab({
@@ -128,7 +133,7 @@ export default {
 
 <style>
 #burst-content .bottom.attached.tab.segment {
-  max-height: 50vh;
+  max-height: 60vh;
   overflow: auto;
 }
 </style>
