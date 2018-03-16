@@ -10,9 +10,7 @@
       id="json-text-area"
       readonly
       v-model="jsonData"></textarea>
-    <pre class="ui bottom attached">
-      <code>{{ jsonData }}</code>
-    </pre>
+    <pre class="ui bottom attached"><code>{{ jsonData }}</code></pre>
   </div>
 </template>
 

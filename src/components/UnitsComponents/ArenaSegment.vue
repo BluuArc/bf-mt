@@ -18,16 +18,21 @@
         </ul>
       </div>
       <div class="ui bottom attached tab segment" data-tab="json-arena">
-        <pre><code>{{ jsonData }}</code></pre>
+        <json-viewer :json="arena"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import JsonViewer from '@/components/JsonViewer';
+
 /* global $ */
 export default {
   props: ['arena'],
+  components: {
+    'json-viewer': JsonViewer,
+  },
   watch: {
     arena() {
       setTimeout(() => {
@@ -60,9 +65,6 @@ export default {
         enemy: 'on an enemy that',
       };
     },
-    jsonData() {
-      return JSON.stringify(this.arena, null, 2);
-    },
   },
   methods: {
     generateArenaText(data = {}) {
@@ -83,10 +85,3 @@ export default {
   },
 };
 </script>
-
-<style>
-#arena-content .bottom.attached.tab.segment pre {
-  max-height: 50vh;
-  overflow: auto;
-}
-</style>

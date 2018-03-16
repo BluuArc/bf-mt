@@ -58,7 +58,7 @@
         </table>
       </div>
       <div class="ui bottom attached tab segment" data-tab="json-sp">
-        <pre><code>{{ jsonData }}</code></pre>
+        <json-viewer :json="feskillData"/>
       </div>
       <div class="ui bottom attached tab segment" data-tab="share-sp">
         <div class="ui two column centered grid">
@@ -92,12 +92,14 @@
 
 <script>
 import SPIcon from '@/components/UnitsComponents/SPIcon';
+import JsonViewer from '@/components/JsonViewer';
 
 /* global $ */
 export default {
   props: ['feskillData', 'name'],
   components: {
     'sp-icon': SPIcon,
+    'json-viewer': JsonViewer,
   },
   data() {
     return {
@@ -142,9 +144,6 @@ export default {
         .filter(key => this.activeSkills[key])
         .map(key => this.feskillData[key].skill.bp)
         .reduce((acc, val) => acc + val, 0);
-    },
-    jsonData() {
-      return JSON.stringify(this.feskillData, null, 2);
     },
     sumHeaderStyle() {
       const style = { width: '6em', 'max-width': '6em' };
@@ -297,11 +296,6 @@ export default {
 </script>
 
 <style>
-#sp-content .bottom.attached.tab.segment pre {
-  max-height: 50vh;
-  overflow: auto;
-}
-
 #sp-content textarea {
   width: 100%;
   height: 30vh;

@@ -12,20 +12,21 @@
         {{ lsData.desc }}
       </div>
       <div class="ui bottom attached tab segment" data-tab="json-ls">
-        <pre><code>{{ jsonData }}</code></pre>
+        <json-viewer :json="lsData"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import JsonViewer from '@/components/JsonViewer';
 /* global $ */
 export default {
   props: ['lsData'],
+  components: {
+    'json-viewer': JsonViewer,
+  },
   computed: {
-    jsonData() {
-      return JSON.stringify(this.lsData, null, 2);
-    },
   },
   mounted() {
     $(this.$el).find('.menu .item')
@@ -34,10 +35,3 @@ export default {
   },
 };
 </script>
-
-<style>
-#ls-content .bottom.attached.tab.segment {
-  max-height: 50vh;
-  overflow: auto;
-}
-</style>

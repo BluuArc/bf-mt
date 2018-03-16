@@ -46,7 +46,7 @@
                 v-for="(frame, frameIndex) in attack['frame times']"
                 :key="frameIndex">
                 <td class="center aligned">
-                  {{ frameIndex }}
+                  {{ frameIndex + 1 }}
                 </td>
                 <td class="center aligned">
                   {{ frame }}
@@ -106,9 +106,6 @@ export default {
     },
     jsonTabId() {
       return `json-${this.burstType}`;
-    },
-    jsonData() {
-      return JSON.stringify(this.burstData, null, 2);
     },
     hitCountData() {
       const attackingProcs = ['1', '13', '14', '27', '28', '29', '47', '61', '64', '75', '11000'].concat(['46', '48', '97']);

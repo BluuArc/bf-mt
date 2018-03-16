@@ -12,20 +12,20 @@
         {{ esData.desc }}
       </div>
       <div class="ui bottom attached tab segment" data-tab="json-es">
-        <pre><code>{{ jsonData }}</code></pre>
+        <json-viewer :json="esData"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import JsonViewer from '@/components/JsonViewer';
+
 /* global $ */
 export default {
   props: ['esData'],
-  computed: {
-    jsonData() {
-      return JSON.stringify(this.esData, null, 2);
-    },
+  components: {
+    'json-viewer': JsonViewer,
   },
   mounted() {
     $(this.$el).find('.menu .item')
@@ -34,10 +34,3 @@ export default {
   },
 };
 </script>
-
-<style>
-#es-content .bottom.attached.tab.segment {
-  max-height: 50vh;
-  overflow: auto;
-}
-</style>
