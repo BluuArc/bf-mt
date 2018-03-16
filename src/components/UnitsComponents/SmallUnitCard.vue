@@ -9,8 +9,9 @@
         :src='getImageURL(unitData.id)'/>
       <div class="header">{{ unitData.guide_id }}: {{ unitData.name }}</div>
       <div class="meta">
-        {{ getRarity(unitData.rarity) }},
-        {{ unitData.element }},
+        <span v-html="getRarity(unitData.rarity)"></span>
+        <element-icon
+          :element="unitData.element"/>
         {{ unitData.gender }}
       </div>
     </div>
@@ -20,11 +21,13 @@
 <script>
 import { storeMethods } from '@/store';
 import LazyLoadThumbnail from '@/components/UnitsComponents/LazyLoadThumbnail';
+import ElementIcon from '@/components/UnitsComponents/ElementIcon';
 
 export default {
   props: ['unitData'],
   components: {
     'lazy-load-thumbnail': LazyLoadThumbnail,
+    'element-icon': ElementIcon,
   },
   data() {
     return {
@@ -53,7 +56,7 @@ export default {
       }
     },
     getRarity(rarity) {
-      return (+rarity === 8) ? 'OE' : `${rarity}*`;
+      return (+rarity === 8) ? 'OE' : `${rarity}<i class="star icon"></i>`;
     },
     emitUnitID(id) {
       this.$emit('unit-select', id);
