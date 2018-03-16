@@ -34,4 +34,8 @@ export default {
   transform: scale(0.4);
   display: inline-block;
 }
+
+.icon.bf.element img {
+  margin-left: 0.7em;
+}
 </style>

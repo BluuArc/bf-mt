@@ -9,10 +9,9 @@
         :src='getImageURL(unitData.id)'/>
       <div class="header">{{ unitData.guide_id }}: {{ unitData.name }}</div>
       <div class="meta">
-        <span v-html="getRarity(unitData.rarity)"></span>
-        <element-icon
-          :element="unitData.element"/>
-        {{ unitData.gender }}
+        <span v-html="getRarity(unitData.rarity)"/>
+        <element-icon :element="unitData.element"/>
+        <span v-html="getGenderIcon(unitData.gender)"/>
       </div>
     </div>
   </div>
@@ -61,6 +60,14 @@ export default {
     emitUnitID(id) {
       this.$emit('unit-select', id);
     },
+    getGenderIcon(gender) {
+      const iconMapping = {
+        male: 'mars',
+        female: 'venus',
+        other: 'genderless',
+      };
+      return `<i class="${iconMapping[gender]} large icon"></i>`;
+    }
   },
 };
 </script>
