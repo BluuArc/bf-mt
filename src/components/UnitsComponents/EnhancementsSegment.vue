@@ -61,6 +61,20 @@
         <pre><code>{{ jsonData }}</code></pre>
       </div>
       <div class="ui bottom attached tab segment" data-tab="share-sp">
+        <div class="ui two column centered grid">
+          <div class="center aligned column">
+            <div class="ui checkbox">
+              <input type="checkbox" value="copy-name" v-model="copyName">
+              <label>Add unit name</label>
+            </div>
+          </div>
+          <div class="center aligned column">
+            <div class="ui checkbox">
+              <input type="checkbox" value="copy-bullets" v-model="copyBullets">
+              <label>Add bullet points</label>
+            </div>
+          </div>
+        </div>
         <button
           @click="copyToClipboard"
           :class="{
@@ -81,7 +95,7 @@ import SPIcon from '@/components/UnitsComponents/SPIcon';
 
 /* global $ */
 export default {
-  props: ['feskillData'],
+  props: ['feskillData', 'name'],
   components: {
     'sp-icon': SPIcon,
   },
@@ -90,6 +104,8 @@ export default {
       activeSkills: {},
       textarea: null,
       copyButtonText: 'Copy Text',
+      copyName: false,
+      copyBullets: false,
     };
   },
   watch: {
@@ -145,14 +161,20 @@ export default {
       const activeSkills = Object.keys(this.activeSkills)
         .filter(key => this.activeSkills[key]);
       if (activeSkills.length > 0) {
-        return activeSkills.map(key => this.feskillData[key])
+        const skills = activeSkills.map(key => this.feskillData[key])
           .map((skill) => {
             const cost = skill.skill.bp;
             const desc = skill.skill.desc || skill.skill.name;
-            return `[${cost} SP] - ${desc}`;
+            const bullet = this.copyBullets ? '* ' : '';
+            return `${bullet}[${cost} SP] - ${desc}`;
           })
           .join('\n')
-          .concat([`\n\n[Total: ${this.activeSkillSum} SP]`]);
+          .concat(`\n\nTotal: ${this.activeSkillSum} SP`);
+
+        if (this.copyName) {
+          return `${this.name}\n\n`.concat(skills);
+        }
+        return skills;
       }
       return 'No SP enhancements selected';
     },

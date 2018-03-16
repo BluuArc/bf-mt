@@ -50,6 +50,7 @@
           </brave-burst-segment>
           <enhancements-segment
             :feskillData="unitData.feskills"
+            :name="unitData.name"
             v-if="unitData.feskills"/>
           <div class="ui raised segments">
             <div class="ui blue inverted segment">
