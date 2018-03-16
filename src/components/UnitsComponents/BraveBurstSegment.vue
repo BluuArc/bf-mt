@@ -1,6 +1,13 @@
 <template>
   <div class="ui raised segments" v-if="burstData && !burstData.error">
-    <div :class="getHeaderClass()"><b>{{ burstType }}: </b>{{ burstData.name }}</div>
+    <div :class="getHeaderClass()">
+      <div class="ui grid two column">
+        <div class="column">
+          <b>{{ burstType }}: </b>{{ burstData.name }}
+        </div>
+        <div class="column right aligned" v-html="bcdcInfo"/>
+      </div>
+    </div>
     <div class="ui segment" id="burst-content">
       <div class="ui top attached tabular menu">
         <a class="active item"
@@ -22,7 +29,7 @@
       <div
         class="ui bottom attached active tab segment"
         :data-tab="descriptionTabId">
-        {{ burstData.desc }}
+        <p>{{ burstData.desc }}</p>
       </div>
       <div
         class="ui bottom attached tab segment"
@@ -81,15 +88,32 @@ export default {
     jsonTabId() {
       return `json-${this.burstType}`;
     },
+    attackingProcs: () => ['1', '13', '14', '27', '28', '29', '47', '61', '64', '75', '11000'].concat(['46', '48', '97']),
     hitCountData() {
-      const attackingProcs = ['1', '13', '14', '27', '28', '29', '47', '61', '64', '75', '11000'].concat(['46', '48', '97']);
       const attackData = this.burstData['damage frames']
-        .filter(f => attackingProcs.indexOf(f['proc id']) > -1);
+        .filter(f => this.attackingProcs.indexOf(f['proc id'].toString()) > -1);
 
       return attackData;
     },
     hasHitCounts() {
       return this.hitCountData.length > 0;
+    },
+    bcdcInfo() {
+      const endLevel = this.burstData.levels[this.burstData.levels.length - 1];
+
+      const attacks = endLevel.effects
+        .map((e, i) => ({
+          'proc id': e['proc id'],
+          hits: e.hits || this.burstData['damage frames'][i].hits || 0,
+        })).filter(e => this.attackingProcs.indexOf(e['proc id']) > -1);
+      const numHits = attacks.reduce((acc, val) => (acc + +val.hits), 0);
+
+      const dropChecks = numHits * +this.burstData['drop check count'];
+
+      return [
+        `<abbr title="BC required to fill BB gauge">${endLevel['bc cost']} BC</abbr>`,
+        `<abbr title="total BC dropchecks">${dropChecks} DC</abbr>`,
+      ].join('/');
     },
   },
   methods: {
