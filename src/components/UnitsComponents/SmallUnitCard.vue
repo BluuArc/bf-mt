@@ -3,7 +3,10 @@
     @click="emitUnitID(unitData.id)" id="small-unit-card"
   >
     <div class="content left aligned">
-      <img class="floated mini ui image" :src='getImageURL(unitData.id)'>
+      <lazy-load-thumbnail
+        :rarity="unitData.rarity"
+        :imgClass="{ 'floated mini ui image': true }"
+        :src='getImageURL(unitData.id)'/>
       <div class="header">{{ unitData.guide_id }}: {{ unitData.name }}</div>
       <div class="meta">
         {{ getRarity(unitData.rarity) }},
@@ -16,9 +19,13 @@
 
 <script>
 import { storeMethods } from '@/store';
+import LazyLoadThumbnail from '@/components/UnitsComponents/LazyLoadThumbnail';
 
 export default {
   props: ['unitData'],
+  components: {
+    'lazy-load-thumbnail': LazyLoadThumbnail,
+  },
   data() {
     return {
       elementColor: {
