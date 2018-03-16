@@ -28,6 +28,13 @@
 /* global $ */
 export default {
   props: ['arena'],
+  watch: {
+    arena() {
+      setTimeout(() => {
+        this.initTabs();
+      }, 100);
+    },
+  },
   computed: {
     conditionMapping() {
       return {
@@ -65,11 +72,14 @@ export default {
       const condition = this.conditionMapping[data['target conditions']] || data['target conditions'];
       return `${chance} to ${action} ${target} ${condition}`;
     },
+    initTabs() {
+      $(this.$el).find('.menu .item')
+        .tab({ context: $(this.$el) })
+        .tab('change tab', 'translation-arena');
+    },
   },
   mounted() {
-    $(this.$el).find('.menu .item')
-      .tab({ context: $(this.$el) })
-      .tab('change tab', 'translation-arena');
+    this.initTabs();
   },
 };
 </script>
