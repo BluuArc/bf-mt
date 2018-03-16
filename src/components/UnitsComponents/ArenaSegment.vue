@@ -1,7 +1,7 @@
 <template>
   <div class="ui segments" v-if="arena">
     <div class="ui segment yellow inverted">
-      Arena
+      <b>Arena</b>
     </div>
     <div class="ui segment" id="arena-content">
       <div class="ui top attached tabular menu">
