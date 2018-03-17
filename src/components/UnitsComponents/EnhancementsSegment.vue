@@ -77,14 +77,14 @@
         </div>
         <button
           @click="copyToClipboard"
+          id="share-build"
           :class="{
             'ui button fluid': true,
             disabled: activeSkillSum === 0,
-            green: copyButtonText !== 'Copy Text'
           }">
           {{ copyButtonText }}
         </button>
-        <textarea readonly v-model="sharedText"></textarea>
+        <textarea id="share-build" readonly v-model="sharedText"></textarea>
       </div>
     </div>
   </div>
@@ -118,7 +118,7 @@ export default {
         this.scrollToTop();
       }, 100);
     },
-    activeSkillSum() {
+    sharedText() {
       this.copyButtonText = 'Copy Text';
     },
   },
@@ -126,7 +126,7 @@ export default {
     $(this.$el).find('.menu .item')
       .tab({ context: $(this.$el) })
       .tab('change tab', 'table-sp');
-    this.textarea = $(this.$el).find('textarea');
+    this.textarea = $(this.$el).find('textarea#share-build');
     this.initCheckboxes();
     this.scrollToTop();
   },
@@ -319,5 +319,19 @@ export default {
 #sp-content #cost-column {
   width: 4em;
   max-width: 4em;
+}
+
+#sp-content button#share-build:active {
+  animation-name: buttonanimation;
+  animation-duration: 0.25s;
+  animation-iteration-count: 1;
+}
+
+@keyframes buttonanimation {
+  /* semantic button green */
+  from { background-color: #21BA45; }
+
+  /* semantic button default */
+  to { background-color: #E0E1E2; }
 }
 </style>

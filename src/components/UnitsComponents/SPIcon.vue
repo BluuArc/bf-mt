@@ -1,5 +1,5 @@
 <template>
-  <span class="icon bf sp">
+  <i class="icon bf sp">
     <img
       src="@/assets/sphere_icon_hexa.png"
       :title="getSPCategory(category)"
@@ -9,7 +9,7 @@
         left: `${-xClip}px`,
         top: `${-yClip}px`
       }">
-  </span>
+  </i>
 </template>
 
 <script>
@@ -50,7 +50,7 @@ export default {
 .icon.bf.sp {
   position: relative;
   width: calc(32px * 0.75);
-  height: 3vh;
+  height: 1.5rem;
   transform: scale(0.75);
   display: inline-block;
   margin: 0 0.25em;
