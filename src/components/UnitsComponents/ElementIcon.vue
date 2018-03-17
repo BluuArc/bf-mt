@@ -30,12 +30,14 @@ export default {
 .icon.bf.element {
   position: relative;
   width: calc(52px * 0.25);
-  height: 3vh;
-  transform: scale(0.4);
+  height: 1.5rem;
+  transform: scale(0.35);
   display: inline-block;
+  margin-right: 0.1em;
 }
 
 .icon.bf.element img {
-  margin-left: 0.7em;
+  margin-left: 0.55em;
+  margin-top: -0.5em;
 }
 </style>
