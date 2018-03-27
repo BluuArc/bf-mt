@@ -17,6 +17,9 @@
         <div class="ui container tab fluid" id="content-container" data-tab="unit-info">
           <div id="unit-info-bg"></div>
           <stats-segment :stats="unitData.stats" :imps="unitData.imp"/>
+          <movement-info-segment
+            :movement-data="unitData.movement"
+            :damage-frames="unitData['damage frames']"/>
           <evolution-segment :unit-data="unitData"/>
           <arena-segment :arena="unitData.ai"/>
         </div>
@@ -88,6 +91,7 @@ import EnhancementsSegment from '@/components/UnitsComponents/EnhancementsSegmen
 import StatsSegment from '@/components/UnitsComponents/StatsSegment';
 import EvolutionSegment from '@/components/UnitsComponents/EvolutionSegment';
 import ArenaSegment from '@/components/UnitsComponents/ArenaSegment';
+import MovementInfoSegment from '@/components/UnitsComponents/MovementInfoSegment';
 import { storeMethods } from '@/store';
 
 /* global $ */
@@ -101,6 +105,7 @@ export default {
     'stats-segment': StatsSegment,
     'evolution-segment': EvolutionSegment,
     'arena-segment': ArenaSegment,
+    'movement-info-segment': MovementInfoSegment,
   },
   data() {
     return {
