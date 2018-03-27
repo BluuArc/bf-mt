@@ -1,6 +1,6 @@
 <template>
   <div class="ui raised segments" v-if="movementData || damageFrames">
-    <div class="ui olive inverted segment">
+    <div class="ui green inverted segment">
       <div class="ui grid two column">
         <div class="column"><b>Movement Info</b></div>
         <div class="column right aligned" v-html="dcInfo"/>

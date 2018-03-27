@@ -2,7 +2,7 @@
   <div
     v-if="hasEvolution"
     class="ui raised segments">
-    <div class="ui inverted segment">
+    <div class="ui inverted violet segment">
       <b>Evolutions</b>
     </div>
     <div class="ui segment">

@@ -1,6 +1,6 @@
 <template>
   <div class="ui raised segments" v-if="stats">
-    <div class="ui inverted segment">
+    <div class="ui inverted grey segment">
       <b>Stats</b>
       <span class="ui small left pointing label">
         {{ impCount }} imps to max
