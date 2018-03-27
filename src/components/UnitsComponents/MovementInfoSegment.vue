@@ -1,7 +1,10 @@
 <template>
   <div class="ui raised segments" v-if="movementData || damageFrames">
     <div class="ui olive inverted segment">
-      <b>Movement Info</b>
+      <div class="ui grid two column">
+        <div class="column"><b>Movement Info</b></div>
+        <div class="column right aligned" v-html="dcInfo"/>
+      </div>
     </div>
 
     <div class="ui segment" id="movement-content">
@@ -59,7 +62,7 @@ import HitCountTable from '@/components/UnitsComponents/HitCountTable';
 
 /* global $ */
 export default {
-  props: ['movementData', 'damageFrames'],
+  props: ['movementData', 'damageFrames', 'dropChecks'],
   components: {
     'hitcount-table': HitCountTable,
   },
@@ -78,6 +81,14 @@ export default {
   computed: {
     hasHitCounts() {
       return this.damageFrames && this.damageFrames.hits > 0;
+    },
+    dcInfo() {
+      let dropChecks = 0;
+      if (this.hasHitCounts) {
+        const numHits = +this.damageFrames.hits;
+        dropChecks = this.dropChecks * numHits;
+      }
+      return `<abbr title="total BC dropchecks">${dropChecks} DC</abbr>`;
     },
   },
   mounted() {

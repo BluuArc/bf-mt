@@ -18,6 +18,7 @@
           <div id="unit-info-bg"></div>
           <stats-segment :stats="unitData.stats" :imps="unitData.imp"/>
           <movement-info-segment
+            :drop-checks="unitData['drop check count']"
             :movement-data="unitData.movement"
             :damage-frames="unitData['damage frames']"/>
           <evolution-segment :unit-data="unitData"/>
