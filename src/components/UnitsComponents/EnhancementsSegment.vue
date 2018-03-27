@@ -38,7 +38,7 @@
               <td class="collapsing" id="cost-column">
                 {{ skill.skill.bp }} SP
               </td>
-              <td>
+              <td id="desc-column">
                   <h4 class="ui header">
                     <div class="content">
                       <sp-icon :category="skill.category"></sp-icon>
@@ -319,6 +319,10 @@ export default {
 #sp-content #cost-column {
   width: 4em;
   max-width: 4em;
+}
+
+#sp-content #desc-column .content {
+  width: max-content;
 }
 
 #sp-content button#share-build:active {
