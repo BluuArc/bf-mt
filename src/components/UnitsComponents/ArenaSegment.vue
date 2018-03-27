@@ -1,5 +1,5 @@
 <template>
-  <div class="ui segments" v-if="arena">
+  <div class="ui raised segments" v-if="arena">
     <div class="ui segment yellow inverted">
       <b>Arena</b>
     </div>
