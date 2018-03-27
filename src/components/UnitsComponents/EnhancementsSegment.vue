@@ -188,8 +188,12 @@ export default {
       }, 750);
     },
     getSPSkillWithID(id) {
+      let skillId = id;
+      if (skillId.indexOf('@') > -1) {
+        skillId = skillId.split('@')[1];
+      }
       const result = this.feskillData
-        .filter(s => id.indexOf(s.id.toString()) > -1);
+        .filter(s => s.id.toString() === skillId);
 
       return result[0];
     },
