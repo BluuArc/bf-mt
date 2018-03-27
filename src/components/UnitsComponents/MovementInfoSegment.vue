@@ -83,12 +83,16 @@ export default {
       return this.damageFrames && this.damageFrames.hits > 0;
     },
     dcInfo() {
+      let numHits = 0;
       let dropChecks = 0;
       if (this.hasHitCounts) {
-        const numHits = +this.damageFrames.hits;
+        numHits = +this.damageFrames.hits;
         dropChecks = this.dropChecks * numHits;
       }
-      return `<abbr title="total BC dropchecks">${dropChecks} DC</abbr>`;
+      return [
+        `<abbr title="Hits on Normal Attack">${numHits} ${numHits === 1 ? 'Hit' : 'Hits'}</abbr>`,
+        `<abbr title="total BC dropchecks">${dropChecks} DC</abbr>`,
+      ].join('/');
     },
   },
   mounted() {

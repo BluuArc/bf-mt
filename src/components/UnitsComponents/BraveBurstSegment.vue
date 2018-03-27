@@ -112,6 +112,7 @@ export default {
 
       return [
         `<abbr title="BC required to fill BB gauge">${endLevel['bc cost']} BC</abbr>`,
+        `<abbr title="Hits on ${this.burstType}">${numHits} ${numHits === 1 ? 'Hit' : 'Hits'}</abbr>`,
         `<abbr title="total BC dropchecks">${dropChecks} DC</abbr>`,
       ].join('/');
     },
