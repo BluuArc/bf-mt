@@ -3,8 +3,40 @@
     <div class="ui large modal unit">
       <i class="close icon"></i>
       <div class="header">
-        <img class="ui avatar image" :src="getImageURL(unitData.id).ills_battle">
-        <span>{{ unitData.guide_id }}: {{ unitData.name }} ({{ unitData.id }})</span>
+        <div id="top-header">
+          <img class="ui avatar image" :src="getImageURL(unitData.id).ills_battle">
+          <span>{{ unitData.guide_id }}: {{ unitData.name }} ({{ unitData.id }})</span>
+        </div>
+        <h3 id="bottom-header" class="ui four column grid container">
+          <div class="column">
+            <span
+              v-if="unitData.rarity"
+              :class="rarityLabelClass">
+              {{ unitData.rarity === 8 ? 'OMNI-EVOLUTION' : `${unitData.rarity} STARS` }}
+            </span>
+          </div>
+          <div
+            v-if="unitData.element"
+            class="column">
+            <span :class="elementLabelClass">
+              {{ unitData.element.toUpperCase() }}
+            </span>
+          </div>
+          <div
+            v-if="unitData.cost"
+            class="column">
+            <span class="ui black label">
+              {{ unitData.cost }} COST
+            </span>
+          </div>
+          <div class="column">
+            <span
+              v-if="unitData.gender"
+              :class="genderLabelClass">
+              {{ unitData.gender.toUpperCase() }}
+            </span>
+          </div>
+        </h3>
       </div>
 
       <div class="scrolling content" id="unit-card-content">
@@ -69,8 +101,6 @@
                 <li>Lore?</li>
                 <li>Server Switch for Server-Specific variants</li>
                 <li>Animation viewer</li>
-                <li>Arena AI</li>
-                <li>Stat viewer (star plot?)</li>
               </ul>
             </div>
           </div>
@@ -113,6 +143,62 @@ export default {
       unitModal: null,
       cardMenu: null,
     };
+  },
+  computed: {
+    elementLabelClass() {
+      const colors = {
+        fire: 'red',
+        water: 'blue',
+        earth: 'green',
+        thunder: 'yellow',
+        light: 'gray',
+        dark: 'purple',
+      };
+
+      const labelClass = { 'ui label': true };
+
+      const color = colors[this.unitData.element];
+
+      if (color) {
+        labelClass[color] = true;
+      }
+
+      return labelClass;
+    },
+    genderLabelClass() {
+      const colors = {
+        male: 'blue',
+        female: 'pink',
+        other: 'grey',
+      };
+
+      const labelClass = { 'ui label': true };
+
+      const color = colors[this.unitData.gender];
+
+      if (color) {
+        labelClass[color] = true;
+      }
+
+      return labelClass;
+    },
+    rarityLabelClass() {
+      const labelClass = { 'ui label': true };
+
+      const rarity = this.unitData.rarity;
+
+      if (rarity < 3) {
+        labelClass.grey = true;
+      } else if (rarity === 3) {
+        labelClass.yellow = true;
+      } else if (rarity === 4) {
+        labelClass.red = true;
+      } else {
+        labelClass.rainbow = true;
+      }
+
+      return labelClass;
+    },
   },
   mounted() {
     this.unitModal = $(this.$el).find('.ui.modal').modal();
@@ -180,5 +266,11 @@ export default {
 .ui.modal.unit>.scrolling.content {
   max-height: calc(70vh);
   overflow: auto;
+}
+
+.ui.label.rainbow {
+  background: linear-gradient(to right, #d32e28, orange, green, #4254da, #b85cfc);
+  color: white;
+  stroke: black 1px solid;
 }
 </style>
