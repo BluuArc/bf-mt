@@ -1,9 +1,8 @@
 <template>
   <div id="app">
-    <header-bar :href="headerHref" :content="headerContent"></header-bar>
-    <dynamic-router v-on:updateheader="updateHeader">
-    </dynamic-router>
-    <navbar v-on:updateheader="updateHeader"></navbar>
+    <header-bar :href="headerHref" :content="headerContent"/>
+    <dynamic-router v-on:updateheader="updateHeader"/>
+    <navbar v-on:updateheader="updateHeader"/>
     <noscript>
       <div class="statcounter">
         <a title="shopify site analytics" target="_blank" href="http://statcounter.com/shopify/">

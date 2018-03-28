@@ -26,6 +26,7 @@
           <li><a href="https://github.com/cheahjs/bravefrontier_data">Brave Frontier Datamine</a> by Deathmax</li>
           <li><a href="https://semantic-ui.com/">Semantic UI</a></li>
           <li><a href="https://vuejs.org/">Vue.js</a> by Evan You</li>
+          <li><a href="http://dexie.org/">Dexie.js</a> by David Fahlander</li>
         </ul>
       </div>
     </div>
