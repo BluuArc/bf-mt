@@ -20,6 +20,7 @@ import Navbar from '@/components/Navbar';
 import DynamicRouter from '@/components/DynamicRouter';
 import HeaderBar from '@/components/HeaderBar';
 import { mapMutations } from 'vuex';
+import Dexie from 'dexie';
 
 /* global $ PromiseWorker */
 
@@ -37,6 +38,7 @@ export default {
       worker: undefined,
       debugMode: undefined,
       baseUrl: undefined,
+      db: undefined,
     };
   },
   async mounted() {
@@ -44,14 +46,57 @@ export default {
     this.baseUrl = `${location.origin}${location.pathname}`;
     this.loadTracker();
     try {
+      await this.initDexieDb();
+      // eslint-disable-next-line no-console
+      console.debug('Successfully initialized Dexie');
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.error(err);
+      this.db = undefined;
+    }
+    try {
       await this.loadWorker();
     } catch (err) {
-      // eslint-disable-next-line
+      // eslint-disable-next-line no-console
       console.error(err);
     }
     await this.loadAllData();
   },
   methods: {
+    async initDexieDb() {
+      const schema = '&server,data,update';
+      const db = new Dexie('bfmt_db');
+      db.version(1).stores({
+        items: schema,
+        units: schema,
+        bursts: schema,
+        extraSkills: schema,
+      });
+
+      this.db = db;
+
+      // read data from cache
+      const servers = ['gl', 'eu', 'jp'];
+      const dataTypes = {
+        unit: 'setUnitData',
+        item: 'setItemData',
+        burst: 'setBraveBurstData',
+        extraSkill: 'setExtraSkillData',
+      };
+
+      const cachePromises = servers.map(s => Object.keys(dataTypes)
+        .map(d => db[`${d}s`]
+          .where('server').equals(s)
+          .toArray().then((result) => {
+            // console.debug(s, d, { result });
+            if (result.length > 0) {
+              this[dataTypes[d]]({ server: s, data: result[0].data });
+            }
+            return result;
+          }))).reduce((acc, val) => acc.concat(val), []);
+
+      await Promise.all(cachePromises);
+    },
     getData(url) {
       if (this.worker) {
         return this.worker.postMessage({
@@ -100,6 +145,13 @@ export default {
                 unitDb[id] = tempData[id];
               });
           }
+
+          // update entry in Dexie
+          if (this.db) {
+            await this.db.units.where('server').equals('gl').delete();
+            await this.db.units.add({ server: 'gl', data: unitDb, update: new Date().toUTCString() });
+          }
+
           this.setUnitData({ server, data: unitDb });
         });
       } catch (err) {
