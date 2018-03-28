@@ -3,40 +3,34 @@
     <div class="ui large modal unit">
       <i class="close icon"></i>
       <div class="header">
-        <div id="top-header">
+        <div class="ui header">
           <img class="ui avatar image" :src="getImageURL(unitData.id).ills_battle">
-          <span>{{ unitData.guide_id }}: {{ unitData.name }} ({{ unitData.id }})</span>
+          <div class="content">
+            <span>{{ unitData.guide_id }}: {{ unitData.name }} ({{ unitData.id }})</span>
+            <div class="sub header">
+              <span
+                v-if="unitData.rarity"
+                :class="rarityLabelClass">
+                {{ unitData.rarity === 8 ? 'OMNI-EVOLUTION' : `${unitData.rarity} STARS` }}
+              </span>
+              <span
+                v-if="unitData.element"
+                :class="elementLabelClass">
+                {{ unitData.element.toUpperCase() }}
+              </span>
+              <span
+                v-if="unitData.cost"
+                class="ui black label">
+                {{ unitData.cost }} COST
+              </span>
+              <span
+                v-if="unitData.gender"
+                :class="genderLabelClass">
+                {{ unitData.gender.toUpperCase() }}
+              </span>
+            </div>
+          </div>
         </div>
-        <h3 id="bottom-header" class="ui four column grid container">
-          <div class="column">
-            <span
-              v-if="unitData.rarity"
-              :class="rarityLabelClass">
-              {{ unitData.rarity === 8 ? 'OMNI-EVOLUTION' : `${unitData.rarity} STARS` }}
-            </span>
-          </div>
-          <div
-            v-if="unitData.element"
-            class="column">
-            <span :class="elementLabelClass">
-              {{ unitData.element.toUpperCase() }}
-            </span>
-          </div>
-          <div
-            v-if="unitData.cost"
-            class="column">
-            <span class="ui black label">
-              {{ unitData.cost }} COST
-            </span>
-          </div>
-          <div class="column">
-            <span
-              v-if="unitData.gender"
-              :class="genderLabelClass">
-              {{ unitData.gender.toUpperCase() }}
-            </span>
-          </div>
-        </h3>
       </div>
 
       <div class="scrolling content" id="unit-card-content">
