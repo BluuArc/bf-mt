@@ -62,12 +62,15 @@ export default {
     'json-viewer': JsonViewer,
     'hitcount-table': HitCountTable,
   },
+  watch: {
+    burstData() {
+      setTimeout(() => {
+        this.initTabs();
+      }, 50);
+    },
+  },
   mounted() {
-    $(this.$el).find('.menu .item')
-      .tab({
-        context: $(this.$el),
-      })
-      .tab('change tab', this.descriptionTabId);
+    this.initTabs();
   },
   data() {
     return {
@@ -122,6 +125,13 @@ export default {
       const classObject = { ui: true, inverted: true, segment: true };
       classObject[this.typeColorMapping[this.burstType]] = true;
       return classObject;
+    },
+    initTabs() {
+      $(this.$el).find('.menu .item')
+        .tab({
+          context: $(this.$el),
+        })
+        .tab('change tab', this.descriptionTabId);
     },
   },
 };
