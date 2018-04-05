@@ -57,7 +57,7 @@ export const store = new Vuex.Store({
 
 export default store;
 
-/* eslint-disable */
+/* eslint-disable max-len */
 export const storeMethods = {
   unitDataLoaded: state => state.unitData && Object.keys(state.unitData).length > 0,
   itemDataLoaded: state => state.itemData && Object.keys(state.itemData).length > 0,

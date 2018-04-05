@@ -3,6 +3,7 @@
     <transition name="component-fade" mode="out-in">
       <router-view
         class='router-view-child'
+        :load-progress="progress"
         v-on:updateheader="passHeaderUpdate"/>
     </transition>
   </div>
@@ -10,6 +11,7 @@
 
 <script>
 export default {
+  props: ['progress'],
   methods: {
     passHeaderUpdate(data) {
       this.$emit('updateheader', data);

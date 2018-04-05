@@ -12,7 +12,7 @@
       </div>
     </div>
 
-    <load-status-card/>
+    <load-status-card :load-progress="loadProgress"/>
 
     <div class="ui segments">
       <div class="ui gray inverted segment left aligned">Rights/Credits</div>
@@ -37,6 +37,7 @@
 import LoadStatusCard from '@/components/HomeComponents/LoadStatusCard';
 
 export default {
+  props: ['loadProgress'],
   components: {
     'load-status-card': LoadStatusCard,
   },
