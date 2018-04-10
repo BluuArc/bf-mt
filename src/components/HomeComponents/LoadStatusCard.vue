@@ -18,12 +18,12 @@
                 </li>
               </ul>
             </span>
-            <span v-else>
+            <!-- <span v-else>
               Loading...
-            </span>
+            </span> -->
           </li>
         </ul>
-        {{ loadProgress }}
+        <!-- {{ loadProgress }} -->
       </div>
     </div>
 </template>
