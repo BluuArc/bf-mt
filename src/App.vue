@@ -222,7 +222,7 @@ export default {
         });
       }
 
-      appendScript(`${scJsHost}statcounter.com/counter/counter.js`);
+      appendScript(`${window.scJsHost}statcounter.com/counter/counter.js`);
     }
   },
 };
