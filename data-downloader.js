@@ -143,4 +143,4 @@ async function getUnitData(servers = ['gl', 'eu', 'jp']) {
 
 }
 
-getUnitData(['gl']);
+getUnitData();
