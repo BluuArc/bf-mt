@@ -1,91 +1,118 @@
 <template>
-  <v-app>
+  <v-app :dark="isDarkMode">
     <v-navigation-drawer
       persistent
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      v-model="drawer"
+      v-model="showDrawer"
       enable-resize-watcher
       fixed
-      app
-    >
-      <v-list>
+      app>
+      <v-list v-for="(group, i) in menuItems" :key="i" subheader>
+        <v-subheader v-text="group.subheader"/>
         <v-list-tile
-          value="true"
-          v-for="(item, i) in items"
-          :key="i"
-        >
+          v-for="(subItem, j) in group.items"
+          :key="`${i}-${j}`"
+          exact
+          :value="currentPage === subItem.link"
+          :to="subItem.link">
           <v-list-tile-action>
-            <v-icon v-html="item.icon"></v-icon>
+            <v-icon v-html="subItem.icon"/>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title v-text="item.title"></v-list-tile-title>
+            <v-list-tile-title v-text="subItem.title"/>
           </v-list-tile-content>
         </v-list-tile>
+        <v-divider/>
       </v-list>
+      <v-footer class="text-xs-center">
+        <span class="mx-auto">&copy; {{ new Date().getUTCFullYear() }}</span>
+      </v-footer>
     </v-navigation-drawer>
-    <v-toolbar
-      app
-      :clipped-left="clipped"
-    >
-      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-btn icon @click.stop="miniVariant = !miniVariant">
-        <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
-      </v-btn>
-      <v-btn icon @click.stop="clipped = !clipped">
-        <v-icon>web</v-icon>
-      </v-btn>
-      <v-btn icon @click.stop="fixed = !fixed">
-        <v-icon>remove</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title"></v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn icon @click.stop="rightDrawer = !rightDrawer">
-        <v-icon>menu</v-icon>
+    <v-toolbar app>
+      <v-toolbar-side-icon @click.stop="showDrawer = !showDrawer"/>
+      <v-toolbar-title v-text="title"/>
+      <v-spacer/>
+      <v-btn flat icon @click.stop="isDarkMode = !isDarkMode">
+        <v-icon>invert_colors</v-icon>
       </v-btn>
     </v-toolbar>
     <v-content>
       <router-view/>
     </v-content>
-    <v-navigation-drawer
-      temporary
-      :right="right"
-      v-model="rightDrawer"
-      fixed
-      app
-    >
-      <v-list>
-        <v-list-tile @click="right = !right">
-          <v-list-tile-action>
-            <v-icon>compare_arrows</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>Switch drawer (click me)</v-list-tile-title>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
-    <v-footer :fixed="fixed" app>
-      <span>&copy; 2017</span>
-    </v-footer>
   </v-app>
 </template>
 
 <script>
 export default {
+  computed: {
+    currentPage () {
+      return this.$route.path;
+    },
+  },
   data () {
     return {
-      clipped: false,
-      drawer: true,
-      fixed: false,
-      items: [{
-        icon: 'bubble_chart',
-        title: 'Inspire'
-      }],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js'
-    }
+      showDrawer: true,
+      isDarkMode: false,
+      menuItems: [
+        {
+          subheader: 'General',
+          items: [
+            {
+              icon: 'home',
+              title: 'Home',
+              link: '/',
+            },
+            {
+              icon: 'calendar_today',
+              title: 'News & Events',
+              link: '/news',
+            },
+            {
+              icon: 'settings',
+              title: 'Settings',
+              link: '/settings',
+            },
+          ],
+        },
+        {
+          subheader: 'Multidex',
+          items: [
+            {
+              icon: 'local_library',
+              title: 'Overview',
+              link: '/multidex',
+            },
+            {
+              icon: 'people',
+              title: 'Units',
+              link: '/multidex/units',
+            },
+            {
+              icon: 'group_work',
+              title: 'Items',
+              link: '/multidex/items',
+            },
+            {
+              icon: 'gavel',
+              title: 'Brave Bursts',
+              link: '/multidex/bursts',
+            },
+            {
+              icon: 'extension',
+              title: 'Extra Skills',
+              link: '/multidex/extraskills',
+            },
+          ],
+        },
+      ],
+      title: 'BF-MT',
+    };
   },
-  name: 'App'
-}
+  name: 'App',
+};
 </script>
+
+<style>
+html {
+  overflow-y: auto;
+}
+</style>
