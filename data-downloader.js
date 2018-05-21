@@ -250,13 +250,89 @@ async function getExtraSkillDataForServer(server = 'gl', unitData = {}) {
   return esData;
 }
 
+async function getItemDataForServer(server = 'gl') {
+  const itemData = {};
+  logger.info(`${server}: getting files`);
+  const downloadResult = await downloadMultipleFiles([getUrl(server, 'items.json')]);
+  downloadResult.map(r => {
+    if (typeof r.data === "string") {
+      r.data = JSON.parse(r.data);
+    }
+    return r;
+  }).forEach(r => {
+    const { data } = r;
+    Object.keys(data)
+      .forEach(key => {
+        itemData[key] = data[key];
+      })
+  });
+  logger.debug('itemData', Object.keys(itemData));
+
+  logger.info(`${server}: setting recipe names`);
+  Object.values(itemData)
+    .forEach(item => {
+      if (item.recipe) {
+        for (const mat of item.recipe.materials) {
+          if (!itemData[mat.id]) {
+            logger.warn(`no entry found for item ${mat.id} in recipe of ${item.id}`);
+            mat.name = mat.id.toString();
+          } else {
+            mat.name = itemData[mat.id].name;
+          }
+
+        }
+      }
+    });
+
+  logger.info(`${server}: creating usage lists`);
+  //for every item
+  Object.values(itemData)
+    .forEach(item => {
+      item.usage = [];
+      //for every other item with a recipe
+      Object.values(itemData)
+        .forEach(otherItem => {
+          if (otherItem.recipe !== undefined && otherItem.id !== item.id) {
+            //for every material in the other item
+            for (const mat of otherItem.recipe.materials) {
+              if (mat.id === item.id) {
+                item.usage.push({
+                  id: otherItem.id,
+                  name: otherItem.name
+                });
+              }
+            }
+          }
+        });
+    });
+
+  // split data into files based on first number of id
+  logger.info(`${server}: saving files`);
+  for (let i = 0; i <= 9; ++i) {
+    const fileData = {};
+    Object.keys(itemData)
+      .filter(id => +id[0] === i)
+      .forEach(id => {
+        fileData[id] = itemData[id];
+      });
+
+    logger.debug(`fileData ${i}`, Object.keys(fileData).length);
+    const filename = `items-${server}-${i}.json`;
+    fs.writeFileSync(`${outputFolder}/${filename}`, JSON.stringify(fileData, null, 2), 'utf8');
+    logger.info(`${server}: saved ${filename}`);
+  }
+
+  return itemData;
+}
+
 async function getData(servers = ['gl', 'eu', 'jp']) {
   for (const s of servers) {
     const unitData = await getUnitDataForServer(s);
     await getBurstDataForServer(s, unitData);
     await getExtraSkillDataForServer(s, unitData);
+    await getItemDataForServer(s);
   }
 }
 
 // getUnitData();
-getData(['gl']);
+getData();

@@ -1,0 +1,3431 @@
+{
+  "20000": {
+    "desc": "Slightly replenishes one ally's HP.",
+    "effect": {
+      "effect": [
+        {
+          "heal high": 500,
+          "heal low": 500,
+          "proc id": "2",
+          "rec added% (from healer)": 10
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 20000,
+    "max equipped": 10,
+    "max_stack": 99,
+    "name": "Cure",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10000,
+          "name": "Green Grass"
+        },
+        {
+          "count": 1,
+          "id": 10300,
+          "name": "Green Drop"
+        }
+      ]
+    },
+    "sell_price": 30,
+    "thumbnail": "item_thum_20000.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20001,
+        "name": "High Cure"
+      },
+      {
+        "id": 22400,
+        "name": "Revive"
+      },
+      {
+        "id": 70300,
+        "name": "God Crystal"
+      }
+    ]
+  },
+  "20001": {
+    "desc": "Replenishes one ally's HP.",
+    "effect": {
+      "effect": [
+        {
+          "heal high": 1000,
+          "heal low": 1000,
+          "proc id": "2",
+          "rec added% (from healer)": 10
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 20001,
+    "max equipped": 7,
+    "max_stack": 99,
+    "name": "High Cure",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10001,
+          "name": "Blue Grass"
+        },
+        {
+          "count": 1,
+          "id": 10302,
+          "name": "Red Drop"
+        },
+        {
+          "count": 1,
+          "id": 20000,
+          "name": "Cure"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20001.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20002,
+        "name": "Mega Cure"
+      },
+      {
+        "id": 20100,
+        "name": "Divine Light"
+      },
+      {
+        "id": 22410,
+        "name": "Revive Light"
+      }
+    ]
+  },
+  "20002": {
+    "desc": "Greatly replenishes one ally's HP.",
+    "effect": {
+      "effect": [
+        {
+          "heal high": 2000,
+          "heal low": 2000,
+          "proc id": "2",
+          "rec added% (from healer)": 10
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 20002,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "Mega Cure",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10002,
+          "name": "Yellow Grass"
+        },
+        {
+          "count": 1,
+          "id": 10303,
+          "name": "Gold Drop"
+        },
+        {
+          "count": 1,
+          "id": 20001,
+          "name": "High Cure"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_20002.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20101,
+        "name": "Holy Light"
+      }
+    ]
+  },
+  "20100": {
+    "desc": "Slightly replenishes all allies' HP.",
+    "effect": {
+      "effect": [
+        {
+          "heal high": 500,
+          "heal low": 500,
+          "proc id": "2",
+          "rec added% (from healer)": 10
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20100,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "Divine Light",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 5,
+          "id": 20001,
+          "name": "High Cure"
+        },
+        {
+          "count": 1,
+          "id": 10304,
+          "name": "Purple Drop"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20100.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20101,
+        "name": "Holy Light"
+      }
+    ]
+  },
+  "20101": {
+    "desc": "Recovers HP for all allies.",
+    "effect": {
+      "effect": [
+        {
+          "heal high": 1000,
+          "heal low": 1000,
+          "proc id": "2",
+          "rec added% (from healer)": 10
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20101,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "Holy Light",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 2,
+          "id": 20100,
+          "name": "Divine Light"
+        },
+        {
+          "count": 5,
+          "id": 20002,
+          "name": "Mega Cure"
+        },
+        {
+          "count": 1,
+          "id": 10305,
+          "name": "Silver Drop"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_20101.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20102,
+        "name": "Sacred Light"
+      }
+    ]
+  },
+  "20102": {
+    "desc": "Gradually recovers HP for all allies for 3 turns",
+    "effect": {
+      "effect": [
+        {
+          "gradual heal high": 1000,
+          "gradual heal low": 800,
+          "gradual heal turns (8)": 3,
+          "proc id": "3",
+          "rec added% (from target)": 10
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20102,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "Sacred Light",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 20101,
+          "name": "Holy Light"
+        },
+        {
+          "count": 5,
+          "id": 10304,
+          "name": "Purple Drop"
+        },
+        {
+          "count": 2,
+          "id": 10305,
+          "name": "Silver Drop"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_20102.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "20200": {
+    "desc": "Removes Poison from one ally.",
+    "effect": {
+      "effect": [
+        {
+          "remove poison": true
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 20200,
+    "max equipped": 10,
+    "max_stack": 99,
+    "name": "Antidote",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10301,
+          "name": "Blue Drop"
+        },
+        {
+          "count": 1,
+          "id": 10200,
+          "name": "Don Nut"
+        }
+      ]
+    },
+    "sell_price": 20,
+    "thumbnail": "item_thum_20200.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20250,
+        "name": "Nullifier"
+      }
+    ]
+  },
+  "20210": {
+    "desc": "Removes Weak, Sick or Injury from one ally.",
+    "effect": {
+      "effect": [
+        {
+          "remove injury": true,
+          "remove sick": true,
+          "remove weaken": true
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 20210,
+    "max equipped": 10,
+    "max_stack": 99,
+    "name": "Tonic",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10301,
+          "name": "Blue Drop"
+        },
+        {
+          "count": 1,
+          "id": 10202,
+          "name": "Buru Nut"
+        }
+      ]
+    },
+    "sell_price": 20,
+    "thumbnail": "item_thum_20210.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20240,
+        "name": "Remedy"
+      }
+    ]
+  },
+  "20220": {
+    "desc": "Removes Curse from one ally.",
+    "effect": {
+      "effect": [
+        {
+          "remove curse": true
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 20220,
+    "max equipped": 10,
+    "max_stack": 99,
+    "name": "Holy Water",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10301,
+          "name": "Blue Drop"
+        },
+        {
+          "count": 1,
+          "id": 10204,
+          "name": "Suzu Nut"
+        }
+      ]
+    },
+    "sell_price": 20,
+    "thumbnail": "item_thum_20220.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20250,
+        "name": "Nullifier"
+      }
+    ]
+  },
+  "20230": {
+    "desc": "Removes Paralysis from one ally.",
+    "effect": {
+      "effect": [
+        {
+          "remove paralysis": true
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 20230,
+    "max equipped": 10,
+    "max_stack": 99,
+    "name": "Stimulant",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10301,
+          "name": "Blue Drop"
+        },
+        {
+          "count": 1,
+          "id": 10205,
+          "name": "Bara Nut"
+        }
+      ]
+    },
+    "sell_price": 20,
+    "thumbnail": "item_thum_20230.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20250,
+        "name": "Nullifier"
+      }
+    ]
+  },
+  "20240": {
+    "desc": "Removes all Debuffs from one ally.",
+    "effect": {
+      "effect": [
+        {
+          "ailments cured": [
+            "atk down",
+            "def down",
+            "rec down"
+          ],
+          "proc id": "38"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 20240,
+    "max equipped": 10,
+    "max_stack": 99,
+    "name": "Remedy",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 3,
+          "id": 20210,
+          "name": "Tonic"
+        },
+        {
+          "count": 2,
+          "id": 10301,
+          "name": "Blue Drop"
+        }
+      ]
+    },
+    "sell_price": 20,
+    "thumbnail": "item_thum_20240.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "20250": {
+    "desc": "Negates status ailments for all allies for 3 turns",
+    "effect": {
+      "effect": [
+        {
+          "proc id": "17",
+          "resist curse% (34)": 100,
+          "resist injury% (33)": 100,
+          "resist paralysis% (35)": 100,
+          "resist poison% (30)": 100,
+          "resist sick% (32)": 100,
+          "resist status ails turns": 3,
+          "resist weaken% (31)": 100
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20250,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "Nullifier",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 3,
+          "id": 20200,
+          "name": "Antidote"
+        },
+        {
+          "count": 3,
+          "id": 20220,
+          "name": "Holy Water"
+        },
+        {
+          "count": 3,
+          "id": 20230,
+          "name": "Stimulant"
+        },
+        {
+          "count": 10,
+          "id": 10308,
+          "name": "Honor Drop"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_20250.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "20400": {
+    "desc": "Increases the Atk Power of one ally by 30% for one turn.",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (1)": 30,
+          "buff turns": 1,
+          "element buffed": "all",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 20400,
+    "max equipped": 10,
+    "max_stack": 99,
+    "name": "Atk Potion",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10003,
+          "name": "Red Grass"
+        },
+        {
+          "count": 2,
+          "id": 10201,
+          "name": "Koka Nut"
+        }
+      ]
+    },
+    "sell_price": 40,
+    "thumbnail": "item_thum_20400.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20401,
+        "name": "Brute Elixir"
+      },
+      {
+        "id": 70400,
+        "name": "Atk Crystal"
+      }
+    ]
+  },
+  "20401": {
+    "desc": "Increases the Atk power of one ally by 50% for 3 turns",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (1)": 50,
+          "buff turns": 3,
+          "element buffed": "all",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 20401,
+    "max equipped": 10,
+    "max_stack": 99,
+    "name": "Brute Elixir",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 2,
+          "id": 20400,
+          "name": "Atk Potion"
+        },
+        {
+          "count": 2,
+          "id": 10201,
+          "name": "Koka Nut"
+        },
+        {
+          "count": 1,
+          "id": 10303,
+          "name": "Gold Drop"
+        }
+      ]
+    },
+    "sell_price": 40,
+    "thumbnail": "item_thum_20401.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20700,
+        "name": "Ares' Elixir"
+      },
+      {
+        "id": 21010,
+        "name": "Fujin Tonic"
+      }
+    ]
+  },
+  "20600": {
+    "desc": "Increases the Def Power of one ally by 30% for one turn.",
+    "effect": {
+      "effect": [
+        {
+          "buff turns": 2,
+          "def% buff (3)": 30,
+          "element buffed": "all",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 20600,
+    "max equipped": 10,
+    "max_stack": 99,
+    "name": "Def Potion",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10003,
+          "name": "Red Grass"
+        },
+        {
+          "count": 2,
+          "id": 10203,
+          "name": "Hoku Nut"
+        }
+      ]
+    },
+    "sell_price": 40,
+    "thumbnail": "item_thum_20600.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20601,
+        "name": "Titan Elixir"
+      },
+      {
+        "id": 70500,
+        "name": "Def Crystal"
+      }
+    ]
+  },
+  "20601": {
+    "desc": "Increases the Def power of one ally by 50% for 3 turns",
+    "effect": {
+      "effect": [
+        {
+          "buff turns": 3,
+          "def% buff (3)": 50,
+          "element buffed": "all",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 20601,
+    "max equipped": 10,
+    "max_stack": 99,
+    "name": "Titan Elixir",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 2,
+          "id": 20600,
+          "name": "Def Potion"
+        },
+        {
+          "count": 2,
+          "id": 10203,
+          "name": "Hoku Nut"
+        },
+        {
+          "count": 1,
+          "id": 10303,
+          "name": "Gold Drop"
+        }
+      ]
+    },
+    "sell_price": 40,
+    "thumbnail": "item_thum_20601.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20700,
+        "name": "Ares' Elixir"
+      },
+      {
+        "id": 22210,
+        "name": "Goddess Idol"
+      }
+    ]
+  },
+  "20700": {
+    "desc": "Increases the Atk and Def power of one ally by 30% for 3 turns",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (1)": 30,
+          "buff turns": 3,
+          "def% buff (3)": 30,
+          "element buffed": "all",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 20700,
+    "max equipped": 6,
+    "max_stack": 99,
+    "name": "Ares' Elixir",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 20401,
+          "name": "Brute Elixir"
+        },
+        {
+          "count": 1,
+          "id": 20601,
+          "name": "Titan Elixir"
+        },
+        {
+          "count": 1,
+          "id": 11000,
+          "name": "Fate Stone"
+        },
+        {
+          "count": 1,
+          "id": 11001,
+          "name": "Paladin Stone"
+        }
+      ]
+    },
+    "sell_price": 40,
+    "thumbnail": "item_thum_20700.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "20800": {
+    "desc": "Raises the Atk Power of all Fire types by 50% for 3 turns.",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (13)": 50,
+          "buff turns": 3,
+          "element buffed": "fire",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20800,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "Fire Ore",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10600,
+          "name": "Fire Eye"
+        },
+        {
+          "count": 1,
+          "id": 11000,
+          "name": "Fate Stone"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20800.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20960,
+        "name": "Blaze Stone"
+      }
+    ]
+  },
+  "20810": {
+    "desc": "Raises the Atk Power of all Water types by 50% for 3 turns.",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (13)": 50,
+          "buff turns": 3,
+          "element buffed": "water",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20810,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "Water Ore",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10601,
+          "name": "Water Eye"
+        },
+        {
+          "count": 1,
+          "id": 11000,
+          "name": "Fate Stone"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20810.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20961,
+        "name": "Wave Stone"
+      }
+    ]
+  },
+  "20820": {
+    "desc": "Raises the Atk Power of all Earth types by 50% for 3 turns.",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (13)": 50,
+          "buff turns": 3,
+          "element buffed": "earth",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20820,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "Earth Ore",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10602,
+          "name": "Earth Eye"
+        },
+        {
+          "count": 1,
+          "id": 11000,
+          "name": "Fate Stone"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20820.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20962,
+        "name": "Flora Stone"
+      }
+    ]
+  },
+  "20830": {
+    "desc": "Raises the Atk Power of all Thunder types by 50% for 3 turns.",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (13)": 50,
+          "buff turns": 3,
+          "element buffed": "thunder",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20830,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "Thunder Ore",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10603,
+          "name": "Thunder Eye"
+        },
+        {
+          "count": 1,
+          "id": 11000,
+          "name": "Fate Stone"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20830.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20963,
+        "name": "Bolt Stone"
+      }
+    ]
+  },
+  "20840": {
+    "desc": "Raises the Atk Power of all Light types by 50% for 3 turns.",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (13)": 50,
+          "buff turns": 3,
+          "element buffed": "light",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20840,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "Light Ore",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10604,
+          "name": "Light Eye"
+        },
+        {
+          "count": 1,
+          "id": 11000,
+          "name": "Fate Stone"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20840.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20964,
+        "name": "Gleam Stone"
+      }
+    ]
+  },
+  "20850": {
+    "desc": "Raises the Atk Power of all Dark types by 50% for 3 turns.",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (13)": 50,
+          "buff turns": 3,
+          "element buffed": "dark",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20850,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "Dark Ore",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10605,
+          "name": "Dark Eye"
+        },
+        {
+          "count": 1,
+          "id": 11000,
+          "name": "Fate Stone"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20850.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20965,
+        "name": "Shade Stone"
+      }
+    ]
+  },
+  "20900": {
+    "desc": "Raises the Def Power of all Fire types by 50% for 3 turns.",
+    "effect": {
+      "effect": [
+        {
+          "buff turns": 4,
+          "def% buff (14)": 50,
+          "element buffed": "fire",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20900,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "Fire Seal",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10600,
+          "name": "Fire Eye"
+        },
+        {
+          "count": 1,
+          "id": 11001,
+          "name": "Paladin Stone"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20900.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20960,
+        "name": "Blaze Stone"
+      }
+    ]
+  },
+  "20910": {
+    "desc": "Raises the Def Power of all Water types by 50% for 3 turns.",
+    "effect": {
+      "effect": [
+        {
+          "buff turns": 4,
+          "def% buff (14)": 50,
+          "element buffed": "water",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20910,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "Water Seal",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10601,
+          "name": "Water Eye"
+        },
+        {
+          "count": 1,
+          "id": 11001,
+          "name": "Paladin Stone"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20910.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20961,
+        "name": "Wave Stone"
+      }
+    ]
+  },
+  "20920": {
+    "desc": "Raises the Def Power of all Earth types by 50% for 3 turns.",
+    "effect": {
+      "effect": [
+        {
+          "buff turns": 4,
+          "def% buff (14)": 50,
+          "element buffed": "earth",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20920,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "Earth Seal",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10602,
+          "name": "Earth Eye"
+        },
+        {
+          "count": 1,
+          "id": 11001,
+          "name": "Paladin Stone"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20920.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20962,
+        "name": "Flora Stone"
+      }
+    ]
+  },
+  "20930": {
+    "desc": "Raises the Def Power of all Thunder types by 50% for 3 turns.",
+    "effect": {
+      "effect": [
+        {
+          "buff turns": 4,
+          "def% buff (14)": 50,
+          "element buffed": "thunder",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20930,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "Thunder Seal",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10603,
+          "name": "Thunder Eye"
+        },
+        {
+          "count": 1,
+          "id": 11001,
+          "name": "Paladin Stone"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20930.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20963,
+        "name": "Bolt Stone"
+      }
+    ]
+  },
+  "20940": {
+    "desc": "Raises the Def Power of all Light types by 50% for 3 turns.",
+    "effect": {
+      "effect": [
+        {
+          "buff turns": 4,
+          "def% buff (14)": 50,
+          "element buffed": "light",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20940,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "Light Seal",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10604,
+          "name": "Light Eye"
+        },
+        {
+          "count": 1,
+          "id": 11001,
+          "name": "Paladin Stone"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20940.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20964,
+        "name": "Gleam Stone"
+      }
+    ]
+  },
+  "20950": {
+    "desc": "Raises the Def Power of all Dark types by 50% for 3 turns.",
+    "effect": {
+      "effect": [
+        {
+          "buff turns": 4,
+          "def% buff (14)": 50,
+          "element buffed": "dark",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20950,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "Dark Seal",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10605,
+          "name": "Dark Eye"
+        },
+        {
+          "count": 1,
+          "id": 11001,
+          "name": "Paladin Stone"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20950.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20965,
+        "name": "Shade Stone"
+      }
+    ]
+  },
+  "20960": {
+    "desc": "Raises the Atk & Def of all Fire types by 50% for 3 turns.",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (13)": 50,
+          "buff turns": 3,
+          "def% buff (14)": 50,
+          "element buffed": "fire",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20960,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "Blaze Stone",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 2,
+          "id": 20800,
+          "name": "Fire Ore"
+        },
+        {
+          "count": 2,
+          "id": 20900,
+          "name": "Fire Seal"
+        },
+        {
+          "count": 3,
+          "id": 10600,
+          "name": "Fire Eye"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_20960.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "20961": {
+    "desc": "Raises the Atk & Def of all Water types by 50% for 3 turns.",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (13)": 50,
+          "buff turns": 3,
+          "def% buff (14)": 50,
+          "element buffed": "water",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20961,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "Wave Stone",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 2,
+          "id": 20810,
+          "name": "Water Ore"
+        },
+        {
+          "count": 2,
+          "id": 20910,
+          "name": "Water Seal"
+        },
+        {
+          "count": 3,
+          "id": 10601,
+          "name": "Water Eye"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_20961.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "20962": {
+    "desc": "Raises the Atk & Def of all Earth types by 50% for 3 turns.",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (13)": 50,
+          "buff turns": 3,
+          "def% buff (14)": 50,
+          "element buffed": "earth",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20962,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "Flora Stone",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 2,
+          "id": 20820,
+          "name": "Earth Ore"
+        },
+        {
+          "count": 2,
+          "id": 20920,
+          "name": "Earth Seal"
+        },
+        {
+          "count": 3,
+          "id": 10602,
+          "name": "Earth Eye"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_20962.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "20963": {
+    "desc": "Raises the Atk & Def of all Thunder types by 50% for 3 turns.",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (13)": 50,
+          "buff turns": 3,
+          "def% buff (14)": 50,
+          "element buffed": "thunder",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20963,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "Bolt Stone",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 2,
+          "id": 20830,
+          "name": "Thunder Ore"
+        },
+        {
+          "count": 2,
+          "id": 20930,
+          "name": "Thunder Seal"
+        },
+        {
+          "count": 3,
+          "id": 10603,
+          "name": "Thunder Eye"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_20963.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "20964": {
+    "desc": "Raises the Atk & Def of all Light types by 50% for 3 turns.",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (13)": 50,
+          "buff turns": 3,
+          "def% buff (14)": 50,
+          "element buffed": "light",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20964,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "Gleam Stone",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 2,
+          "id": 20840,
+          "name": "Light Ore"
+        },
+        {
+          "count": 2,
+          "id": 20940,
+          "name": "Light Seal"
+        },
+        {
+          "count": 3,
+          "id": 10604,
+          "name": "Light Eye"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_20964.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "20965": {
+    "desc": "Raises the Atk & Def of all Dark types by 50% for 3 turns.",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (13)": 50,
+          "buff turns": 3,
+          "def% buff (14)": 50,
+          "element buffed": "dark",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20965,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "Shade Stone",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 2,
+          "id": 20850,
+          "name": "Dark Ore"
+        },
+        {
+          "count": 2,
+          "id": 20950,
+          "name": "Dark Seal"
+        },
+        {
+          "count": 3,
+          "id": 10605,
+          "name": "Dark Eye"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_20965.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "21000": {
+    "desc": "Completely fills the BB Gauge of one ally.",
+    "effect": {
+      "effect": [
+        {
+          "bb bc fill%": 100,
+          "proc id": "4"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 21000,
+    "max equipped": 2,
+    "max_stack": 99,
+    "name": "Fujin Potion",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10606,
+          "name": "Fujin's Eye"
+        },
+        {
+          "count": 1,
+          "id": 11003,
+          "name": "God Stone"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_21000.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 21010,
+        "name": "Fujin Tonic"
+      },
+      {
+        "id": 22310,
+        "name": "Holy Flute"
+      }
+    ]
+  },
+  "21010": {
+    "desc": "Completely fills the BB Gauge of one ally. More can be carried.",
+    "effect": {
+      "effect": [
+        {
+          "bb bc fill%": 100,
+          "proc id": "4"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 21010,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "Fujin Tonic",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 2,
+          "id": 21000,
+          "name": "Fujin Potion"
+        },
+        {
+          "count": 1,
+          "id": 20401,
+          "name": "Brute Elixir"
+        },
+        {
+          "count": 1,
+          "id": 10405,
+          "name": "Honor Claw"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_21001.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 22420,
+        "name": "Hero Crystal"
+      }
+    ]
+  },
+  "21100": {
+    "desc": "Increases one ally's Max HP by 50%.",
+    "effect": {
+      "effect": [
+        {
+          "max hp% increase": 50,
+          "proc id": "8"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 21100,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "Genie Tonic",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 100,
+    "thumbnail": "item_thum_21100.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "22200": {
+    "desc": "Gives one ally the power to withstand an attack which would normally knock them out.",
+    "effect": {
+      "effect": [
+        {
+          "angel idol buff (12)": true,
+          "proc id": "7"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 22200,
+    "max equipped": 1,
+    "max_stack": 99,
+    "name": "Angel Idol",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10307,
+          "name": "Angel Tear"
+        },
+        {
+          "count": 1,
+          "id": 11004,
+          "name": "Gospel Stone"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_22200.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 22210,
+        "name": "Goddess Idol"
+      }
+    ]
+  },
+  "22210": {
+    "desc": "Gives one ally the power to withstand an attack which would normally knock them out. More can be carried.",
+    "effect": {
+      "effect": [
+        {
+          "angel idol buff (12)": true,
+          "proc id": "7"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 22210,
+    "max equipped": 2,
+    "max_stack": 99,
+    "name": "Goddess Idol",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 2,
+          "id": 22200,
+          "name": "Angel Idol"
+        },
+        {
+          "count": 1,
+          "id": 20601,
+          "name": "Titan Elixir"
+        },
+        {
+          "count": 1,
+          "id": 10806,
+          "name": "Honor Bone"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_22210.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "22300": {
+    "desc": "Increases the drop rate of BC for 3 turns.",
+    "effect": {
+      "effect": [
+        {
+          "bc drop rate% buff (10)": 20,
+          "drop rate buff turns": 3,
+          "proc id": "6"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 22300,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "Ares' Flute",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10805,
+          "name": "Hard Bone"
+        },
+        {
+          "count": 1,
+          "id": 11005,
+          "name": "Spirit Stone"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_22300.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 22310,
+        "name": "Holy Flute"
+      }
+    ]
+  },
+  "22310": {
+    "desc": "Greatly increases drop rate of BC for 3 turns.",
+    "effect": {
+      "effect": [
+        {
+          "bc drop rate% buff (10)": 25,
+          "drop rate buff turns": 3,
+          "proc id": "6"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 22310,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "Holy Flute",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 2,
+          "id": 22300,
+          "name": "Ares' Flute"
+        },
+        {
+          "count": 1,
+          "id": 21000,
+          "name": "Fujin Potion"
+        },
+        {
+          "count": 1,
+          "id": 10506,
+          "name": "Honor Fang"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_22301.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 22420,
+        "name": "Hero Crystal"
+      }
+    ]
+  },
+  "22400": {
+    "desc": "Revives one ally from KO status.",
+    "effect": {
+      "effect": [
+        {
+          "proc id": "12",
+          "revive to hp%": 1
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 22400,
+    "max equipped": 1,
+    "max_stack": 99,
+    "name": "Revive",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 10,
+          "id": 20000,
+          "name": "Cure"
+        },
+        {
+          "count": 3,
+          "id": 10308,
+          "name": "Honor Drop"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_21100.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 22410,
+        "name": "Revive Light"
+      }
+    ]
+  },
+  "22410": {
+    "desc": "Revives one ally from KO status. More can be carried.",
+    "effect": {
+      "effect": [
+        {
+          "proc id": "12",
+          "revive to hp%": 1
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 22410,
+    "max equipped": 2,
+    "max_stack": 99,
+    "name": "Revive Light",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 22400,
+          "name": "Revive"
+        },
+        {
+          "count": 10,
+          "id": 20001,
+          "name": "High Cure"
+        },
+        {
+          "count": 3,
+          "id": 10308,
+          "name": "Honor Drop"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_21110.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "22420": {
+    "desc": "Completely fills the Overdrive Gauge of one ally.",
+    "effect": {
+      "effect": [
+        {
+          "increase od gauge%": 100,
+          "proc id": "43"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 22420,
+    "max equipped": 1,
+    "max_stack": 99,
+    "name": "Hero Crystal",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 2,
+          "id": 21010,
+          "name": "Fujin Tonic"
+        },
+        {
+          "count": 2,
+          "id": 22310,
+          "name": "Holy Flute"
+        },
+        {
+          "count": 1,
+          "id": 10405,
+          "name": "Honor Claw"
+        },
+        {
+          "count": 1,
+          "id": 10506,
+          "name": "Honor Fang"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_22500.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "230003": {
+    "desc": "20% boost Rec and max HP",
+    "effect": [
+      {
+        "hp% buff": 20,
+        "passive id": "1",
+        "rec% buff": 20
+      }
+    ],
+    "id": 230003,
+    "max_stack": 1,
+    "name": "Shining Stone",
+    "raid": false,
+    "rarity": 1,
+    "recipe": {
+      "karma": "100000",
+      "materials": [
+        {
+          "count": 2,
+          "id": 30203,
+          "name": "Sky Staff"
+        },
+        {
+          "count": 2,
+          "id": 30303,
+          "name": "Shiny Armor"
+        },
+        {
+          "count": 2,
+          "id": 10736,
+          "name": "Metal Armor"
+        },
+        {
+          "count": 2,
+          "id": 10423,
+          "name": "Sharp Claw"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_7_2.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 230004,
+        "name": "Noble Blood Gem"
+      }
+    ]
+  },
+  "230004": {
+    "desc": "25% boost to Rec, max HP & probability of slight HP absorption",
+    "effect": [
+      {
+        "hp% buff": 25,
+        "passive id": "1",
+        "rec% buff": 25
+      },
+      {
+        "hp drain chance%": 25,
+        "hp drain% high": 10,
+        "hp drain% low": 5,
+        "passive id": "17"
+      }
+    ],
+    "id": 230004,
+    "max_stack": 1,
+    "name": "Noble Blood Gem",
+    "raid": false,
+    "rarity": 2,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 230003,
+          "name": "Shining Stone"
+        },
+        {
+          "count": 1,
+          "id": 35600,
+          "name": "Vampire Spear"
+        },
+        {
+          "count": 10,
+          "id": 10912,
+          "name": "Midnight Bug"
+        },
+        {
+          "count": 10,
+          "id": 10313,
+          "name": "Northstar Water"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_7_1.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 230005,
+        "name": "Worship Charm"
+      }
+    ]
+  },
+  "230005": {
+    "desc": "30% boost to Rec and max HP, restores HP each turn & damage taken may slightly restore HP",
+    "effect": [
+      {
+        "hp% buff": 30,
+        "passive id": "1",
+        "rec% buff": 30
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 700,
+        "turn heal low": 700
+      },
+      {
+        "dmg% to hp% when attacked chance%": 25,
+        "dmg% to hp% when attacked high": 15,
+        "dmg% to hp% when attacked low": 15,
+        "passive id": "24"
+      }
+    ],
+    "id": 230005,
+    "max_stack": 1,
+    "name": "Worship Charm",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "200000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 230004,
+          "name": "Noble Blood Gem"
+        },
+        {
+          "count": 1,
+          "id": 230304,
+          "name": "Affection Charm"
+        },
+        {
+          "count": 1,
+          "id": 41900,
+          "name": "Comet Helmet"
+        },
+        {
+          "count": 5,
+          "id": 10119,
+          "name": "Benizuru Feather"
+        },
+        {
+          "count": 10,
+          "id": 10314,
+          "name": "Aroma Water"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_7_8.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 230006,
+        "name": "Spirit Band"
+      }
+    ]
+  },
+  "230006": {
+    "desc": "40% boost to Rec, max HP, considerably restores HP each turn, damage taken may slightly restore HP & boosts Rec when HP is under 50%",
+    "effect": [
+      {
+        "hp% buff": 40,
+        "passive id": "1",
+        "rec% buff": 40
+      },
+      {
+        "hp below % buff requirement": 50,
+        "passive id": "11",
+        "rec% buff": 60
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 1000,
+        "turn heal low": 1000
+      },
+      {
+        "dmg% to hp% when attacked chance%": 25,
+        "dmg% to hp% when attacked high": 15,
+        "dmg% to hp% when attacked low": 15,
+        "passive id": "24"
+      }
+    ],
+    "id": 230006,
+    "max_stack": 1,
+    "name": "Spirit Band",
+    "raid": false,
+    "rarity": 4,
+    "recipe": {
+      "karma": "250000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 230005,
+          "name": "Worship Charm"
+        },
+        {
+          "count": 1,
+          "id": 30306,
+          "name": "Dark Armor"
+        },
+        {
+          "count": 1,
+          "id": 31300,
+          "name": "Gilded Pearl"
+        },
+        {
+          "count": 5,
+          "id": 10008,
+          "name": "10008"
+        },
+        {
+          "count": 10,
+          "id": 10913,
+          "name": "10913"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_7_5.png",
+    "type": "ls_sphere",
+    "usage": []
+  },
+  "230103": {
+    "desc": "20% boost to Atk & boosts BB gauge each turn",
+    "effect": [
+      {
+        "atk% buff": 20,
+        "passive id": "1"
+      },
+      {
+        "bc fill per turn": 3,
+        "passive id": "9"
+      }
+    ],
+    "id": 230103,
+    "max_stack": 1,
+    "name": "Sacred Flag",
+    "raid": false,
+    "rarity": 1,
+    "recipe": {
+      "karma": "100000",
+      "materials": [
+        {
+          "count": 2,
+          "id": 30003,
+          "name": "Dragon Blade"
+        },
+        {
+          "count": 1,
+          "id": 38000,
+          "name": "Demon Shard"
+        },
+        {
+          "count": 2,
+          "id": 10736,
+          "name": "Metal Armor"
+        },
+        {
+          "count": 2,
+          "id": 10423,
+          "name": "Sharp Claw"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_9_2.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 230104,
+        "name": "Power Girdle"
+      }
+    ]
+  },
+  "230104": {
+    "desc": "25% boost to Atk, boosts BB gauge each turn & 50% boost to Spark damage",
+    "effect": [
+      {
+        "atk% buff": 25,
+        "passive id": "1"
+      },
+      {
+        "bc fill per turn": 3,
+        "passive id": "9"
+      },
+      {
+        "damage% for spark": 50,
+        "passive id": "31"
+      }
+    ],
+    "id": 230104,
+    "max_stack": 1,
+    "name": "Power Girdle",
+    "raid": false,
+    "rarity": 2,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 230103,
+          "name": "Sacred Flag"
+        },
+        {
+          "count": 2,
+          "id": 34805,
+          "name": "Royal Bud"
+        },
+        {
+          "count": 10,
+          "id": 11046,
+          "name": "Frost Stone"
+        },
+        {
+          "count": 10,
+          "id": 10911,
+          "name": "Iceblade Bug"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_9_5.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 230105,
+        "name": "Forbidden Blade"
+      }
+    ]
+  },
+  "230105": {
+    "desc": "30% boost to Atk, considerably boosts BB gauge each turn & 75% boost to Spark damage",
+    "effect": [
+      {
+        "atk% buff": 30,
+        "passive id": "1"
+      },
+      {
+        "bc fill per turn": 4,
+        "passive id": "9"
+      },
+      {
+        "damage% for spark": 75,
+        "passive id": "31"
+      }
+    ],
+    "id": 230105,
+    "max_stack": 1,
+    "name": "Forbidden Blade",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "200000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 230104,
+          "name": "Power Girdle"
+        },
+        {
+          "count": 1,
+          "id": 38001,
+          "name": "Mock Crystal"
+        },
+        {
+          "count": 2,
+          "id": 34805,
+          "name": "Royal Bud"
+        },
+        {
+          "count": 5,
+          "id": 10314,
+          "name": "Aroma Water"
+        },
+        {
+          "count": 10,
+          "id": 10823,
+          "name": "Scalding Bone"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_9_3.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 230106,
+        "name": "Wrathful Needle"
+      }
+    ]
+  },
+  "230106": {
+    "desc": "40% boost to Atk, Def, considerably boosts BB gauge each turn, 100% boost to Spark damage & slightly boosts critical hit rate",
+    "effect": [
+      {
+        "atk% buff": 40,
+        "crit% buff": 15,
+        "def% buff": 40,
+        "passive id": "1"
+      },
+      {
+        "bc fill per turn": 4,
+        "passive id": "9"
+      },
+      {
+        "damage% for spark": 100,
+        "passive id": "31"
+      }
+    ],
+    "id": 230106,
+    "max_stack": 1,
+    "name": "Wrathful Needle",
+    "raid": false,
+    "rarity": 4,
+    "recipe": {
+      "karma": "250000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 230105,
+          "name": "Forbidden Blade"
+        },
+        {
+          "count": 1,
+          "id": 30107,
+          "name": "Ruler Shield"
+        },
+        {
+          "count": 1,
+          "id": 30401,
+          "name": "Magical Axe"
+        },
+        {
+          "count": 5,
+          "id": 10211,
+          "name": "10211"
+        },
+        {
+          "count": 10,
+          "id": 10008,
+          "name": "10008"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_9_1.png",
+    "type": "ls_sphere",
+    "usage": []
+  },
+  "230203": {
+    "desc": "20% boost to Def & deters status ailments",
+    "effect": [
+      {
+        "def% buff": 20,
+        "passive id": "1"
+      },
+      {
+        "curse resist%": 50,
+        "injury resist%": 50,
+        "paralysis resist%": 50,
+        "passive id": "4",
+        "poison resist%": 50,
+        "sick resist%": 50,
+        "weaken resist%": 50
+      }
+    ],
+    "id": 230203,
+    "max_stack": 1,
+    "name": "Guarding Light",
+    "raid": false,
+    "rarity": 1,
+    "recipe": {
+      "karma": "100000",
+      "materials": [
+        {
+          "count": 2,
+          "id": 30103,
+          "name": "Star Shield"
+        },
+        {
+          "count": 1,
+          "id": 37700,
+          "name": "Health Charm"
+        },
+        {
+          "count": 2,
+          "id": 10910,
+          "name": "Allurifly"
+        },
+        {
+          "count": 2,
+          "id": 10821,
+          "name": "Molten Bones"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_6_2.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 230204,
+        "name": "Ogre Gauntlets"
+      }
+    ]
+  },
+  "230204": {
+    "desc": "25% boost to Def, increases resistance to all status ailments & slightly reduces elemental damage",
+    "effect": [
+      {
+        "def% buff": 25,
+        "passive id": "1"
+      },
+      {
+        "curse resist%": 50,
+        "injury resist%": 50,
+        "paralysis resist%": 50,
+        "passive id": "4",
+        "poison resist%": 50,
+        "sick resist%": 50,
+        "weaken resist%": 50
+      },
+      {
+        "passive id": "53",
+        "strong base element damage resist%": 20,
+        "strong buffed element damage resist%": 20
+      }
+    ],
+    "id": 230204,
+    "max_stack": 1,
+    "name": "Ogre Gauntlets",
+    "raid": false,
+    "rarity": 2,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 230203,
+          "name": "Guarding Light"
+        },
+        {
+          "count": 2,
+          "id": 32200,
+          "name": "Monster Robe"
+        },
+        {
+          "count": 10,
+          "id": 11046,
+          "name": "Frost Stone"
+        },
+        {
+          "count": 10,
+          "id": 10911,
+          "name": "Iceblade Bug"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_6_5.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 230205,
+        "name": "Myrmidon Helm"
+      }
+    ]
+  },
+  "230205": {
+    "desc": "30% boost to Def, negates all status ailments & reduces elemental damage",
+    "effect": [
+      {
+        "def% buff": 30,
+        "passive id": "1"
+      },
+      {
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "passive id": "53",
+        "strong base element damage resist%": 30,
+        "strong buffed element damage resist%": 30
+      }
+    ],
+    "id": 230205,
+    "max_stack": 1,
+    "name": "Myrmidon Helm",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "200000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 230204,
+          "name": "Ogre Gauntlets"
+        },
+        {
+          "count": 1,
+          "id": 37700,
+          "name": "Health Charm"
+        },
+        {
+          "count": 1,
+          "id": 30105,
+          "name": "Dogma Shield"
+        },
+        {
+          "count": 5,
+          "id": 10823,
+          "name": "Scalding Bone"
+        },
+        {
+          "count": 10,
+          "id": 10119,
+          "name": "Benizuru Feather"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_6_6.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 230206,
+        "name": "Warding Scepter"
+      }
+    ]
+  },
+  "230206": {
+    "desc": "40% boost to Def, negates all status ailments, reduces elemental damage & probable slight damage reduction",
+    "effect": [
+      {
+        "def% buff": 40,
+        "passive id": "1"
+      },
+      {
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "passive id": "53",
+        "strong base element damage resist%": 30,
+        "strong buffed element damage resist%": 30
+      },
+      {
+        "dmg reduction chance%": 25,
+        "dmg reduction%": 20,
+        "passive id": "14"
+      }
+    ],
+    "id": 230206,
+    "max_stack": 1,
+    "name": "Warding Scepter",
+    "raid": false,
+    "rarity": 4,
+    "recipe": {
+      "karma": "250000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 230205,
+          "name": "Myrmidon Helm"
+        },
+        {
+          "count": 1,
+          "id": 30106,
+          "name": "Grand Shield"
+        },
+        {
+          "count": 1,
+          "id": 32200,
+          "name": "Monster Robe"
+        },
+        {
+          "count": 5,
+          "id": 10008,
+          "name": "10008"
+        },
+        {
+          "count": 10,
+          "id": 10211,
+          "name": "10211"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_6_3.png",
+    "type": "ls_sphere",
+    "usage": []
+  },
+  "230303": {
+    "desc": "Restores HP each turn & damage taken may restore HP",
+    "effect": [
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 500,
+        "turn heal low": 500
+      },
+      {
+        "dmg% to hp% when attacked chance%": 25,
+        "dmg% to hp% when attacked high": 15,
+        "dmg% to hp% when attacked low": 15,
+        "passive id": "24"
+      }
+    ],
+    "id": 230303,
+    "max_stack": 1,
+    "name": "General's Gem",
+    "raid": false,
+    "rarity": 1,
+    "recipe": {
+      "karma": "100000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 34300,
+          "name": "Light Helm"
+        },
+        {
+          "count": 1,
+          "id": 34808,
+          "name": "Phoenix Eye"
+        },
+        {
+          "count": 2,
+          "id": 10910,
+          "name": "Allurifly"
+        },
+        {
+          "count": 2,
+          "id": 10821,
+          "name": "Molten Bones"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_8_2.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 230304,
+        "name": "Affection Charm"
+      }
+    ]
+  },
+  "230304": {
+    "desc": "Restores HP each turn, damage taken may slightly restore HP & boosts BC, HC drop rates",
+    "effect": [
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 500,
+        "turn heal low": 500
+      },
+      {
+        "dmg% to hp% when attacked chance%": 25,
+        "dmg% to hp% when attacked high": 15,
+        "dmg% to hp% when attacked low": 15,
+        "passive id": "24"
+      },
+      {
+        "bc drop rate% buff": 10,
+        "hc drop rate% buff": 10,
+        "passive id": "19"
+      }
+    ],
+    "id": 230304,
+    "max_stack": 1,
+    "name": "Affection Charm",
+    "raid": false,
+    "rarity": 2,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 230303,
+          "name": "General's Gem"
+        },
+        {
+          "count": 1,
+          "id": 34803,
+          "name": "Tech Gizmo 2"
+        },
+        {
+          "count": 1,
+          "id": 34804,
+          "name": "Cure Gizmo 2"
+        },
+        {
+          "count": 10,
+          "id": 10912,
+          "name": "Midnight Bug"
+        },
+        {
+          "count": 10,
+          "id": 10313,
+          "name": "Northstar Water"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_8_8.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 230005,
+        "name": "Worship Charm"
+      }
+    ]
+  },
+  "234000": {
+    "desc": "30% boost to Atk & probable random status ailment infliction",
+    "effect": [
+      {
+        "atk% buff": 30,
+        "passive id": "1"
+      },
+      {
+        "curse%": 5,
+        "passive id": "20",
+        "poison%": 5,
+        "sick%": 7
+      },
+      {
+        "injury%": 7,
+        "paralysis%": 5,
+        "passive id": "20",
+        "weaken%": 7
+      }
+    ],
+    "id": 234000,
+    "max_stack": 1,
+    "name": "Taboo Grimoire",
+    "raid": false,
+    "rarity": 2,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 2,
+          "id": 30005,
+          "name": "God Sword"
+        },
+        {
+          "count": 1,
+          "id": 38100,
+          "name": "Bright Shard"
+        },
+        {
+          "count": 1,
+          "id": 38200,
+          "name": "Royal Shard"
+        },
+        {
+          "count": 10,
+          "id": 10912,
+          "name": "Midnight Bug"
+        },
+        {
+          "count": 10,
+          "id": 10313,
+          "name": "Northstar Water"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_5_6.png",
+    "type": "ls_sphere",
+    "usage": []
+  },
+  "235000": {
+    "desc": "25% boost to all parameters, damage taken may slightly boost BB gauge & probable boost to BB gauge when attacking normally",
+    "effect": [
+      {
+        "atk% buff": 25,
+        "def% buff": 25,
+        "hp% buff": 25,
+        "passive id": "1",
+        "rec% buff": 25
+      },
+      {
+        "bc fill when attacked high": 2,
+        "bc fill when attacked low": 1,
+        "bc fill when attacked%": 50,
+        "passive id": "25"
+      },
+      {
+        "bc fill when attacking high": 3,
+        "bc fill when attacking low": 2,
+        "bc fill when attacking%": 50,
+        "passive id": "35"
+      }
+    ],
+    "id": 235000,
+    "max_stack": 1,
+    "name": "Lupine Mantle",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "200000",
+      "materials": [
+        {
+          "count": 2,
+          "id": 30004,
+          "name": "Divine Sword"
+        },
+        {
+          "count": 2,
+          "id": 30104,
+          "name": "King Shield"
+        },
+        {
+          "count": 2,
+          "id": 30204,
+          "name": "Godly Staff"
+        },
+        {
+          "count": 2,
+          "id": 30304,
+          "name": "God Armor"
+        },
+        {
+          "count": 1,
+          "id": 10519,
+          "name": "Frozen Fang"
+        }
+      ]
+    },
+    "sell_price": 10000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_8_4.png",
+    "type": "ls_sphere",
+    "usage": []
+  },
+  "235001": {
+    "desc": "35% boost to all parameters, hugely boosts critical damage & reduces BB gauge required for BB",
+    "effect": [
+      {
+        "atk% buff": 35,
+        "def% buff": 35,
+        "hp% buff": 35,
+        "passive id": "1",
+        "rec% buff": 35
+      },
+      {
+        "crit multiplier%": 150,
+        "passive id": "34"
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 15
+      }
+    ],
+    "id": 235001,
+    "max_stack": 1,
+    "name": "Automated Warrior",
+    "raid": false,
+    "rarity": 4,
+    "recipe": {
+      "karma": "300000",
+      "materials": [
+        {
+          "count": 2,
+          "id": 34809,
+          "name": "Limbo Stone"
+        },
+        {
+          "count": 1,
+          "id": 30006,
+          "name": "Chosen Blade"
+        },
+        {
+          "count": 1,
+          "id": 30402,
+          "name": "Havoc Axe"
+        },
+        {
+          "count": 1,
+          "id": 39500,
+          "name": "Summoner Hat"
+        },
+        {
+          "count": 1,
+          "id": 11048,
+          "name": "Mechanical Gear"
+        }
+      ]
+    },
+    "sell_price": 10000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_5_1.png",
+    "type": "ls_sphere",
+    "usage": []
+  },
+  "235002": {
+    "desc": "45% boost to all parameters, Spark damage slightly restores HP & slightly boosts BB gauge when damage taken has exceeded certain amount",
+    "effect": [
+      {
+        "atk% buff": 45,
+        "def% buff": 45,
+        "hp% buff": 45,
+        "passive id": "1",
+        "rec% buff": 45
+      },
+      {
+        "heal on spark high": 100,
+        "heal on spark low": 100,
+        "heal on spark%": 100,
+        "passive id": "101"
+      },
+      {
+        "damage threshold activation": 2500,
+        "increase bb gauge": 3,
+        "passive id": "79"
+      }
+    ],
+    "id": 235002,
+    "max_stack": 1,
+    "name": "Armored Soul",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "350000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 35501,
+          "name": "Dragon Sword"
+        },
+        {
+          "count": 1,
+          "id": 47906,
+          "name": "Fal Nerga Gem"
+        },
+        {
+          "count": 2,
+          "id": 33500,
+          "name": "Cursed Robe"
+        },
+        {
+          "count": 10,
+          "id": 10737,
+          "name": "10737"
+        },
+        {
+          "count": 1,
+          "id": 11049,
+          "name": "11049"
+        }
+      ]
+    },
+    "sell_price": 10000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_4_8.png",
+    "type": "ls_sphere",
+    "usage": []
+  },
+  "236000": {
+    "desc": "30% boost to Atk and Def & considerably boosts BC drop rate and slightly boosts BB gauge during Spark",
+    "effect": [
+      {
+        "atk% buff": 30,
+        "def% buff": 30,
+        "passive id": "1"
+      },
+      {
+        "bc drop% for spark": 50,
+        "passive id": "31"
+      },
+      {
+        "bc fill on spark high": 1,
+        "bc fill on spark low": 1,
+        "bc fill on spark%": 100,
+        "passive id": "47"
+      }
+    ],
+    "id": 236000,
+    "max_stack": 1,
+    "name": "Ambrosia Wine",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "200000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 44000,
+          "name": "Bariura Gem"
+        },
+        {
+          "count": 1,
+          "id": 41700,
+          "name": "Wyvern Studs"
+        },
+        {
+          "count": 2,
+          "id": 40000,
+          "name": "Sol Creator"
+        },
+        {
+          "count": 10,
+          "id": 10424,
+          "name": "Plague Claw"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_9_8.png",
+    "type": "ls_sphere",
+    "usage": []
+  },
+  "237000": {
+    "desc": "25% boost to max HP & 10% damage reduction from Fire, Water, Earth, Thunder types",
+    "effect": [
+      {
+        "hp% buff": 25,
+        "passive id": "1"
+      },
+      {
+        "dmg% mitigation for elemental attacks": 10,
+        "mitigate earth attacks": true,
+        "mitigate fire attacks": true,
+        "mitigate thunder attacks": true,
+        "mitigate water attacks": true,
+        "passive id": "62"
+      }
+    ],
+    "id": 237000,
+    "max_stack": 1,
+    "name": "Holy Beacon",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "200000",
+      "materials": [
+        {
+          "count": 2,
+          "id": 41400,
+          "name": "Fire Mail"
+        },
+        {
+          "count": 2,
+          "id": 41401,
+          "name": "Water Mail"
+        },
+        {
+          "count": 2,
+          "id": 41402,
+          "name": "Earth Mail"
+        },
+        {
+          "count": 2,
+          "id": 41403,
+          "name": "Thunder Mail"
+        },
+        {
+          "count": 10,
+          "id": 10424,
+          "name": "Plague Claw"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_6_1.png",
+    "type": "ls_sphere",
+    "usage": []
+  },
+  "238000": {
+    "desc": "Boosts Atk, Def, Rec when HP is over 50%, 10% reduction to damage from Light, Dark types & boosts HC efficacy",
+    "effect": [
+      {
+        "atk% buff": 70,
+        "def% buff": 70,
+        "hp above % buff requirement": 50,
+        "passive id": "11",
+        "rec% buff": 70
+      },
+      {
+        "hc effectiveness%": 25,
+        "passive id": "10"
+      },
+      {
+        "dmg% mitigation for elemental attacks": 10,
+        "mitigate dark attacks": true,
+        "mitigate light attacks": true,
+        "passive id": "62"
+      }
+    ],
+    "id": 238000,
+    "max_stack": 1,
+    "name": "Rainbow Regalia",
+    "raid": false,
+    "rarity": 4,
+    "recipe": {
+      "karma": "250000",
+      "materials": [
+        {
+          "count": 2,
+          "id": 35500,
+          "name": "Alter Blade"
+        },
+        {
+          "count": 1,
+          "id": 40100,
+          "name": "Luna Creator"
+        },
+        {
+          "count": 2,
+          "id": 41404,
+          "name": "Light Mail"
+        },
+        {
+          "count": 2,
+          "id": 41405,
+          "name": "Dark Mail"
+        },
+        {
+          "count": 10,
+          "id": 10913,
+          "name": "10913"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_6_4.png",
+    "type": "ls_sphere",
+    "usage": []
+  },
+  "239000": {
+    "desc": "100% boost to Atk, Def for first 3 turns, boosts BC efficacy & damage dealt boosts BB gauge",
+    "effect": [
+      {
+        "first x turns": 3,
+        "first x turns atk% (1)": 100,
+        "first x turns def% (3)": 100,
+        "passive id": "21"
+      },
+      {
+        "bc fill on enemy defeat high": 5,
+        "bc fill on enemy defeat low": 3,
+        "bc fill on enemy defeat%": 100,
+        "passive id": "13"
+      },
+      {
+        "bb gauge fill rate%": 30,
+        "passive id": "32"
+      }
+    ],
+    "id": 239000,
+    "max_stack": 1,
+    "name": "Sunblade",
+    "raid": false,
+    "rarity": 4,
+    "recipe": {
+      "karma": "250000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 31001,
+          "name": "Angelic Foil"
+        },
+        {
+          "count": 1,
+          "id": 31101,
+          "name": "Exyl Shield"
+        },
+        {
+          "count": 2,
+          "id": 41600,
+          "name": "Starry Blade"
+        },
+        {
+          "count": 5,
+          "id": 10211,
+          "name": "10211"
+        },
+        {
+          "count": 5,
+          "id": 10737,
+          "name": "10737"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_9_6.png",
+    "type": "ls_sphere",
+    "usage": []
+  }
+}

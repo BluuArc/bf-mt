@@ -1,0 +1,4363 @@
+{
+  "20000": {
+    "desc": "味方単体のＨＰを少し回復する",
+    "effect": {
+      "effect": [
+        {
+          "heal high": 120,
+          "heal low": 100,
+          "proc id": "2",
+          "rec added% (from healer)": 10
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 20000,
+    "max equipped": 10,
+    "max_stack": 99,
+    "name": "回復薬",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10000,
+          "name": "緑壮草"
+        },
+        {
+          "count": 1,
+          "id": 10300,
+          "name": "清翠の雫"
+        }
+      ]
+    },
+    "sell_price": 30,
+    "thumbnail": "item_thum_20000.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20001,
+        "name": "強回復薬"
+      },
+      {
+        "id": 22400,
+        "name": "蘇生薬"
+      },
+      {
+        "id": 70300,
+        "name": "神香晶"
+      }
+    ]
+  },
+  "20001": {
+    "desc": "味方単体のＨＰを回復する",
+    "effect": {
+      "effect": [
+        {
+          "heal high": 1000,
+          "heal low": 1000,
+          "proc id": "2",
+          "rec added% (from healer)": 10
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 20001,
+    "max equipped": 7,
+    "max_stack": 99,
+    "name": "強回復薬",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10001,
+          "name": "青胆草"
+        },
+        {
+          "count": 1,
+          "id": 10302,
+          "name": "滅朱の雫"
+        },
+        {
+          "count": 1,
+          "id": 20000,
+          "name": "回復薬"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20001.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20002,
+        "name": "超回復薬"
+      },
+      {
+        "id": 20100,
+        "name": "祝福の光"
+      },
+      {
+        "id": 22410,
+        "name": "蘇生薬改"
+      }
+    ]
+  },
+  "20002": {
+    "desc": "味方単体のＨＰをかなり回復する",
+    "effect": {
+      "effect": [
+        {
+          "heal high": 2000,
+          "heal low": 2000,
+          "proc id": "2",
+          "rec added% (from healer)": 10
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 20002,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "超回復薬",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10002,
+          "name": "黄心草"
+        },
+        {
+          "count": 1,
+          "id": 10303,
+          "name": "浄金の雫"
+        },
+        {
+          "count": 1,
+          "id": 20001,
+          "name": "強回復薬"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_20002.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20101,
+        "name": "聖者の光"
+      }
+    ]
+  },
+  "20100": {
+    "desc": "味方全体のＨＰを少し回復する",
+    "effect": {
+      "effect": [
+        {
+          "heal high": 500,
+          "heal low": 500,
+          "proc id": "2",
+          "rec added% (from healer)": 10
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20100,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "祝福の光",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 5,
+          "id": 20001,
+          "name": "強回復薬"
+        },
+        {
+          "count": 1,
+          "id": 10304,
+          "name": "麗紫の雫"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20100.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20101,
+        "name": "聖者の光"
+      }
+    ]
+  },
+  "20101": {
+    "desc": "味方全体のＨＰを回復する",
+    "effect": {
+      "effect": [
+        {
+          "heal high": 1000,
+          "heal low": 1000,
+          "proc id": "2",
+          "rec added% (from healer)": 10
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20101,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "聖者の光",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 2,
+          "id": 20100,
+          "name": "祝福の光"
+        },
+        {
+          "count": 5,
+          "id": 20002,
+          "name": "超回復薬"
+        },
+        {
+          "count": 1,
+          "id": 10305,
+          "name": "磨銀の雫"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_20101.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20102,
+        "name": "継復光"
+      }
+    ]
+  },
+  "20102": {
+    "desc": "３ターンの間、味方全体のＨＰを徐々に回復",
+    "effect": {
+      "effect": [
+        {
+          "gradual heal high": 1000,
+          "gradual heal low": 800,
+          "gradual heal turns (8)": 3,
+          "proc id": "3",
+          "rec added% (from target)": 10
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20102,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "継復光",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 20101,
+          "name": "聖者の光"
+        },
+        {
+          "count": 5,
+          "id": 10304,
+          "name": "麗紫の雫"
+        },
+        {
+          "count": 2,
+          "id": 10305,
+          "name": "磨銀の雫"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_20102.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "20200": {
+    "desc": "味方単体の毒を治療する",
+    "effect": {
+      "effect": [
+        {
+          "remove poison": true
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 20200,
+    "max equipped": 10,
+    "max_stack": 99,
+    "name": "解毒薬",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10301,
+          "name": "純藍の雫"
+        },
+        {
+          "count": 1,
+          "id": 10200,
+          "name": "ドンの実"
+        }
+      ]
+    },
+    "sell_price": 20,
+    "thumbnail": "item_thum_20200.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20250,
+        "name": "抗疫薬"
+      }
+    ]
+  },
+  "20210": {
+    "desc": "味方単体の弱体・病気・怪我を<br>治療する",
+    "effect": {
+      "effect": [
+        {
+          "remove injury": true,
+          "remove sick": true,
+          "remove weaken": true
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 20210,
+    "max equipped": 10,
+    "max_stack": 99,
+    "name": "元気薬",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10301,
+          "name": "純藍の雫"
+        },
+        {
+          "count": 1,
+          "id": 10202,
+          "name": "ビウの実"
+        }
+      ]
+    },
+    "sell_price": 20,
+    "thumbnail": "item_thum_20210.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20240,
+        "name": "快気薬"
+      }
+    ]
+  },
+  "20220": {
+    "desc": "味方単体の呪いを治療する",
+    "effect": {
+      "effect": [
+        {
+          "remove curse": true
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 20220,
+    "max equipped": 10,
+    "max_stack": 99,
+    "name": "聖水",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10301,
+          "name": "純藍の雫"
+        },
+        {
+          "count": 1,
+          "id": 10204,
+          "name": "スズの実"
+        }
+      ]
+    },
+    "sell_price": 20,
+    "thumbnail": "item_thum_20220.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20250,
+        "name": "抗疫薬"
+      }
+    ]
+  },
+  "20230": {
+    "desc": "味方単体の麻痺を治療する",
+    "effect": {
+      "effect": [
+        {
+          "remove paralysis": true
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 20230,
+    "max equipped": 10,
+    "max_stack": 99,
+    "name": "気付け薬",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10301,
+          "name": "純藍の雫"
+        },
+        {
+          "count": 1,
+          "id": 10205,
+          "name": "パラの実"
+        }
+      ]
+    },
+    "sell_price": 20,
+    "thumbnail": "item_thum_20230.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20250,
+        "name": "抗疫薬"
+      }
+    ]
+  },
+  "20240": {
+    "desc": "味方単体の、敵から受けたステータスダウン効果を治療する",
+    "effect": {
+      "effect": [
+        {
+          "ailments cured": [
+            "atk down",
+            "def down",
+            "rec down"
+          ],
+          "proc id": "38"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 20240,
+    "max equipped": 10,
+    "max_stack": 99,
+    "name": "快気薬",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 3,
+          "id": 20210,
+          "name": "元気薬"
+        },
+        {
+          "count": 2,
+          "id": 10301,
+          "name": "純藍の雫"
+        }
+      ]
+    },
+    "sell_price": 20,
+    "thumbnail": "item_thum_20240.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "20250": {
+    "desc": "３ターンの間、味方全体の状態異常を無効化する",
+    "effect": {
+      "effect": [
+        {
+          "proc id": "17",
+          "resist curse% (34)": 100,
+          "resist injury% (33)": 100,
+          "resist paralysis% (35)": 100,
+          "resist poison% (30)": 100,
+          "resist sick% (32)": 100,
+          "resist status ails turns": 3,
+          "resist weaken% (31)": 100
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20250,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "抗疫薬",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 3,
+          "id": 20200,
+          "name": "解毒薬"
+        },
+        {
+          "count": 3,
+          "id": 20220,
+          "name": "聖水"
+        },
+        {
+          "count": 3,
+          "id": 20230,
+          "name": "気付け薬"
+        },
+        {
+          "count": 10,
+          "id": 10308,
+          "name": "絆の雫"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_20250.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "20400": {
+    "desc": "３ターンの間、味方単体の攻撃力を<br>３０％アップ",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (1)": 30,
+          "buff turns": 3,
+          "element buffed": "all",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 20400,
+    "max equipped": 10,
+    "max_stack": 99,
+    "name": "強化薬",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10003,
+          "name": "紅鍛草"
+        },
+        {
+          "count": 2,
+          "id": 10201,
+          "name": "コクの実"
+        }
+      ]
+    },
+    "sell_price": 40,
+    "thumbnail": "item_thum_20400.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20401,
+        "name": "強靭薬"
+      },
+      {
+        "id": 70400,
+        "name": "攻化晶"
+      }
+    ]
+  },
+  "20401": {
+    "desc": "３ターンの間、味方単体の攻撃力を<br>５０％アップ",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (1)": 50,
+          "buff turns": 3,
+          "element buffed": "all",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 20401,
+    "max equipped": 10,
+    "max_stack": 99,
+    "name": "強靭薬",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 2,
+          "id": 20400,
+          "name": "強化薬"
+        },
+        {
+          "count": 2,
+          "id": 10201,
+          "name": "コクの実"
+        },
+        {
+          "count": 1,
+          "id": 10303,
+          "name": "浄金の雫"
+        }
+      ]
+    },
+    "sell_price": 40,
+    "thumbnail": "item_thum_20401.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20700,
+        "name": "戦神の薬"
+      },
+      {
+        "id": 21010,
+        "name": "武神薬改"
+      }
+    ]
+  },
+  "20600": {
+    "desc": "３ターンの間、味方単体の防御力を<br>３０％アップ",
+    "effect": {
+      "effect": [
+        {
+          "buff turns": 3,
+          "def% buff (3)": 30,
+          "element buffed": "all",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 20600,
+    "max equipped": 10,
+    "max_stack": 99,
+    "name": "硬化薬",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10003,
+          "name": "紅鍛草"
+        },
+        {
+          "count": 2,
+          "id": 10203,
+          "name": "ホクの実"
+        }
+      ]
+    },
+    "sell_price": 40,
+    "thumbnail": "item_thum_20600.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20601,
+        "name": "堅牢薬"
+      },
+      {
+        "id": 70500,
+        "name": "防化晶"
+      }
+    ]
+  },
+  "20601": {
+    "desc": "３ターンの間、味方単体の防御力を<br>５０％アップ",
+    "effect": {
+      "effect": [
+        {
+          "buff turns": 3,
+          "def% buff (3)": 50,
+          "element buffed": "all",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 20601,
+    "max equipped": 10,
+    "max_stack": 99,
+    "name": "堅牢薬",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 2,
+          "id": 20600,
+          "name": "硬化薬"
+        },
+        {
+          "count": 2,
+          "id": 10203,
+          "name": "ホクの実"
+        },
+        {
+          "count": 1,
+          "id": 10303,
+          "name": "浄金の雫"
+        }
+      ]
+    },
+    "sell_price": 40,
+    "thumbnail": "item_thum_20601.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20700,
+        "name": "戦神の薬"
+      },
+      {
+        "id": 22210,
+        "name": "女神の像"
+      }
+    ]
+  },
+  "20700": {
+    "desc": "３ターンの間、味方単体の攻撃力、防御力を３０％アップ",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (1)": 30,
+          "buff turns": 3,
+          "def% buff (3)": 30,
+          "element buffed": "all",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 20700,
+    "max equipped": 6,
+    "max_stack": 99,
+    "name": "戦神の薬",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 20401,
+          "name": "強靭薬"
+        },
+        {
+          "count": 1,
+          "id": 20601,
+          "name": "堅牢薬"
+        },
+        {
+          "count": 1,
+          "id": 11000,
+          "name": "壮命石"
+        },
+        {
+          "count": 1,
+          "id": 11001,
+          "name": "守護石"
+        }
+      ]
+    },
+    "sell_price": 40,
+    "thumbnail": "item_thum_20700.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "20800": {
+    "desc": "３ターンの間、炎属性の味方ユニット全員の攻撃力を５０％アップ",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (13)": 50,
+          "buff turns": 3,
+          "element buffed": "fire",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20800,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "炎撃石",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10600,
+          "name": "炎神の眼"
+        },
+        {
+          "count": 1,
+          "id": 11000,
+          "name": "壮命石"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20800.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20960,
+        "name": "炎帝石"
+      }
+    ]
+  },
+  "20810": {
+    "desc": "３ターンの間、水属性の味方ユニット全員の攻撃力を５０％アップ",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (13)": 50,
+          "buff turns": 3,
+          "element buffed": "water",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20810,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "水撃石",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10601,
+          "name": "水神の眼"
+        },
+        {
+          "count": 1,
+          "id": 11000,
+          "name": "壮命石"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20810.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20961,
+        "name": "水帝石"
+      }
+    ]
+  },
+  "20820": {
+    "desc": "３ターンの間、樹属性の味方ユニット全員の攻撃力を５０％アップ",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (13)": 50,
+          "buff turns": 3,
+          "element buffed": "earth",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20820,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "樹撃石",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10602,
+          "name": "樹神の眼"
+        },
+        {
+          "count": 1,
+          "id": 11000,
+          "name": "壮命石"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20820.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20962,
+        "name": "樹帝石"
+      }
+    ]
+  },
+  "20830": {
+    "desc": "３ターンの間、雷属性の味方ユニット全員の攻撃力を５０％アップ",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (13)": 50,
+          "buff turns": 3,
+          "element buffed": "thunder",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20830,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "雷撃石",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10603,
+          "name": "雷神の眼"
+        },
+        {
+          "count": 1,
+          "id": 11000,
+          "name": "壮命石"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20830.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20963,
+        "name": "雷帝石"
+      }
+    ]
+  },
+  "20840": {
+    "desc": "３ターンの間、光属性の味方ユニット全員の攻撃力を５０％アップ",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (13)": 50,
+          "buff turns": 3,
+          "element buffed": "light",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20840,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "光撃石",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10604,
+          "name": "光神の眼"
+        },
+        {
+          "count": 1,
+          "id": 11000,
+          "name": "壮命石"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20840.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20964,
+        "name": "光帝石"
+      }
+    ]
+  },
+  "20850": {
+    "desc": "３ターンの間、闇属性の味方ユニット全員の攻撃力を５０％アップ",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (13)": 50,
+          "buff turns": 3,
+          "element buffed": "dark",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20850,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "闇撃石",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10605,
+          "name": "闇神の眼"
+        },
+        {
+          "count": 1,
+          "id": 11000,
+          "name": "壮命石"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20850.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20965,
+        "name": "闇帝石"
+      }
+    ]
+  },
+  "20900": {
+    "desc": "３ターンの間、炎属性の味方ユニット全員の防御力を５０％アップ",
+    "effect": {
+      "effect": [
+        {
+          "buff turns": 3,
+          "def% buff (14)": 50,
+          "element buffed": "fire",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20900,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "炎護石",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10600,
+          "name": "炎神の眼"
+        },
+        {
+          "count": 1,
+          "id": 11001,
+          "name": "守護石"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20900.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20960,
+        "name": "炎帝石"
+      }
+    ]
+  },
+  "20910": {
+    "desc": "３ターンの間、水属性の味方ユニット全員の防御力を５０％アップ",
+    "effect": {
+      "effect": [
+        {
+          "buff turns": 3,
+          "def% buff (14)": 50,
+          "element buffed": "water",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20910,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "水護石",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10601,
+          "name": "水神の眼"
+        },
+        {
+          "count": 1,
+          "id": 11001,
+          "name": "守護石"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20910.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20961,
+        "name": "水帝石"
+      }
+    ]
+  },
+  "20920": {
+    "desc": "３ターンの間、樹属性の味方ユニット全員の防御力を５０％アップ",
+    "effect": {
+      "effect": [
+        {
+          "buff turns": 3,
+          "def% buff (14)": 50,
+          "element buffed": "earth",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20920,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "樹護石",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10602,
+          "name": "樹神の眼"
+        },
+        {
+          "count": 1,
+          "id": 11001,
+          "name": "守護石"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20920.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20962,
+        "name": "樹帝石"
+      }
+    ]
+  },
+  "20930": {
+    "desc": "３ターンの間、雷属性の味方ユニット全員の防御力を５０％アップ",
+    "effect": {
+      "effect": [
+        {
+          "buff turns": 3,
+          "def% buff (14)": 50,
+          "element buffed": "thunder",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20930,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "雷護石",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10603,
+          "name": "雷神の眼"
+        },
+        {
+          "count": 1,
+          "id": 11001,
+          "name": "守護石"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20930.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20963,
+        "name": "雷帝石"
+      }
+    ]
+  },
+  "20940": {
+    "desc": "３ターンの間、光属性の味方ユニット全員の防御力を５０％アップ",
+    "effect": {
+      "effect": [
+        {
+          "buff turns": 3,
+          "def% buff (14)": 50,
+          "element buffed": "light",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20940,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "光護石",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10604,
+          "name": "光神の眼"
+        },
+        {
+          "count": 1,
+          "id": 11001,
+          "name": "守護石"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20940.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20964,
+        "name": "光帝石"
+      }
+    ]
+  },
+  "20950": {
+    "desc": "３ターンの間、闇属性の味方ユニット全員の防御力を５０％アップ",
+    "effect": {
+      "effect": [
+        {
+          "buff turns": 3,
+          "def% buff (14)": 50,
+          "element buffed": "dark",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20950,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "闇護石",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10605,
+          "name": "闇神の眼"
+        },
+        {
+          "count": 1,
+          "id": 11001,
+          "name": "守護石"
+        }
+      ]
+    },
+    "sell_price": 50,
+    "thumbnail": "item_thum_20950.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 20965,
+        "name": "闇帝石"
+      }
+    ]
+  },
+  "20960": {
+    "desc": "３ターンの間、炎属性の味方ユニット全員の攻撃力と防御力を５０％アップ",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (13)": 50,
+          "buff turns": 3,
+          "def% buff (14)": 50,
+          "element buffed": "fire",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20960,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "炎帝石",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 2,
+          "id": 20800,
+          "name": "炎撃石"
+        },
+        {
+          "count": 2,
+          "id": 20900,
+          "name": "炎護石"
+        },
+        {
+          "count": 3,
+          "id": 10600,
+          "name": "炎神の眼"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_20960.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "20961": {
+    "desc": "３ターンの間、水属性の味方ユニット全員の攻撃力と防御力を５０％アップ",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (13)": 50,
+          "buff turns": 3,
+          "def% buff (14)": 50,
+          "element buffed": "water",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20961,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "水帝石",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 2,
+          "id": 20810,
+          "name": "水撃石"
+        },
+        {
+          "count": 2,
+          "id": 20910,
+          "name": "水護石"
+        },
+        {
+          "count": 3,
+          "id": 10601,
+          "name": "水神の眼"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_20961.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "20962": {
+    "desc": "３ターンの間、樹属性の味方ユニット全員の攻撃力と防御力を５０％アップ",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (13)": 50,
+          "buff turns": 3,
+          "def% buff (14)": 50,
+          "element buffed": "earth",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20962,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "樹帝石",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 2,
+          "id": 20820,
+          "name": "樹撃石"
+        },
+        {
+          "count": 2,
+          "id": 20920,
+          "name": "樹護石"
+        },
+        {
+          "count": 3,
+          "id": 10602,
+          "name": "樹神の眼"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_20962.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "20963": {
+    "desc": "３ターンの間、雷属性の味方ユニット全員の攻撃力と防御力を５０％アップ",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (13)": 50,
+          "buff turns": 3,
+          "def% buff (14)": 50,
+          "element buffed": "thunder",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20963,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "雷帝石",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 2,
+          "id": 20830,
+          "name": "雷撃石"
+        },
+        {
+          "count": 2,
+          "id": 20930,
+          "name": "雷護石"
+        },
+        {
+          "count": 3,
+          "id": 10603,
+          "name": "雷神の眼"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_20963.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "20964": {
+    "desc": "３ターンの間、光属性の味方ユニット全員の攻撃力と防御力を５０％アップ",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (13)": 50,
+          "buff turns": 3,
+          "def% buff (14)": 50,
+          "element buffed": "light",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20964,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "光帝石",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 2,
+          "id": 20840,
+          "name": "光撃石"
+        },
+        {
+          "count": 2,
+          "id": 20940,
+          "name": "光護石"
+        },
+        {
+          "count": 3,
+          "id": 10604,
+          "name": "光神の眼"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_20964.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "20965": {
+    "desc": "３ターンの間、闇属性の味方ユニット全員の攻撃力と防御力を５０％アップ",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (13)": 50,
+          "buff turns": 3,
+          "def% buff (14)": 50,
+          "element buffed": "dark",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 20965,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "闇帝石",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 2,
+          "id": 20850,
+          "name": "闇撃石"
+        },
+        {
+          "count": 2,
+          "id": 20950,
+          "name": "闇護石"
+        },
+        {
+          "count": 3,
+          "id": 10605,
+          "name": "闇神の眼"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_20965.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "21000": {
+    "desc": "味方単体のＢＢゲージを最大にする",
+    "effect": {
+      "effect": [
+        {
+          "bb bc fill%": 100,
+          "proc id": "4"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 21000,
+    "max equipped": 2,
+    "max_stack": 99,
+    "name": "武神薬",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10606,
+          "name": "武神の眼"
+        },
+        {
+          "count": 1,
+          "id": 11003,
+          "name": "神厳御石"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_21000.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 21010,
+        "name": "武神薬改"
+      },
+      {
+        "id": 22310,
+        "name": "覇神の笛"
+      }
+    ]
+  },
+  "21010": {
+    "desc": "味方単体のＢＢゲージを最大にする。携帯可能数が多い",
+    "effect": {
+      "effect": [
+        {
+          "bb bc fill%": 100,
+          "proc id": "4"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 21010,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "武神薬改",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 2,
+          "id": 21000,
+          "name": "武神薬"
+        },
+        {
+          "count": 1,
+          "id": 20401,
+          "name": "強靭薬"
+        },
+        {
+          "count": 1,
+          "id": 10405,
+          "name": "絆の爪"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_21001.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 22420,
+        "name": "英雄幻晶"
+      }
+    ]
+  },
+  "21100": {
+    "desc": "３ターンの間、味方全体のＢＢゲージを徐々に増加する",
+    "effect": {
+      "effect": [
+        {
+          "increase bb gauge gradual": 5,
+          "increase bb gauge gradual turns (37)": 3,
+          "proc id": "19"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 21100,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "神仙珠琴",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 22300,
+          "name": "闘神の笛"
+        },
+        {
+          "count": 1,
+          "id": 10305,
+          "name": "磨銀の雫"
+        },
+        {
+          "count": 1,
+          "id": 10707,
+          "name": "絆の皮"
+        }
+      ]
+    },
+    "sell_price": 150,
+    "thumbnail": "item_thum_21500.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "22200": {
+    "desc": "味方単体に一度だけ戦闘不能を耐える効果を与える",
+    "effect": {
+      "effect": [
+        {
+          "angel idol buff (12)": true,
+          "proc id": "7"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 22200,
+    "max equipped": 1,
+    "max_stack": 99,
+    "name": "天使の像",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10307,
+          "name": "女神の涙"
+        },
+        {
+          "count": 1,
+          "id": 11004,
+          "name": "福音御石"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_22200.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 22210,
+        "name": "女神の像"
+      }
+    ]
+  },
+  "22210": {
+    "desc": "味方単体に一度だけ戦闘不能を耐える効果を与える。携帯可能数が多い",
+    "effect": {
+      "effect": [
+        {
+          "angel idol buff (12)": true,
+          "proc id": "7"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 22210,
+    "max equipped": 2,
+    "max_stack": 99,
+    "name": "女神の像",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 2,
+          "id": 22200,
+          "name": "天使の像"
+        },
+        {
+          "count": 1,
+          "id": 20601,
+          "name": "堅牢薬"
+        },
+        {
+          "count": 1,
+          "id": 10806,
+          "name": "絆の骨"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_22210.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "22300": {
+    "desc": "３ターンの間、ＢＣのドロップ率アップ",
+    "effect": {
+      "effect": [
+        {
+          "bc drop rate% buff (10)": 20,
+          "drop rate buff turns": 3,
+          "proc id": "6"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 22300,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "闘神の笛",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 10805,
+          "name": "硬岩獣骨"
+        },
+        {
+          "count": 1,
+          "id": 11005,
+          "name": "創魂御石"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_22300.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 21100,
+        "name": "神仙珠琴"
+      },
+      {
+        "id": 22310,
+        "name": "覇神の笛"
+      }
+    ]
+  },
+  "22310": {
+    "desc": "３ターンの間、ＢＣのドロップ率をかなりアップ",
+    "effect": {
+      "effect": [
+        {
+          "bc drop rate% buff (10)": 25,
+          "drop rate buff turns": 3,
+          "proc id": "6"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 22310,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "覇神の笛",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 2,
+          "id": 22300,
+          "name": "闘神の笛"
+        },
+        {
+          "count": 1,
+          "id": 21000,
+          "name": "武神薬"
+        },
+        {
+          "count": 1,
+          "id": 10506,
+          "name": "絆の牙"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_22301.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 22420,
+        "name": "英雄幻晶"
+      }
+    ]
+  },
+  "22400": {
+    "desc": "味方単体の戦闘不能を回復する",
+    "effect": {
+      "effect": [
+        {
+          "proc id": "12",
+          "revive to hp%": 1
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 22400,
+    "max equipped": 1,
+    "max_stack": 99,
+    "name": "蘇生薬",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 10,
+          "id": 20000,
+          "name": "回復薬"
+        },
+        {
+          "count": 3,
+          "id": 10308,
+          "name": "絆の雫"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_21100.png",
+    "type": "consumable",
+    "usage": [
+      {
+        "id": 22410,
+        "name": "蘇生薬改"
+      }
+    ]
+  },
+  "22410": {
+    "desc": "味方単体の戦闘不能を回復する。携帯可能数が多い",
+    "effect": {
+      "effect": [
+        {
+          "proc id": "12",
+          "revive to hp%": 1
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 22410,
+    "max equipped": 2,
+    "max_stack": 99,
+    "name": "蘇生薬改",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 22400,
+          "name": "蘇生薬"
+        },
+        {
+          "count": 10,
+          "id": 20001,
+          "name": "強回復薬"
+        },
+        {
+          "count": 3,
+          "id": 10308,
+          "name": "絆の雫"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_21110.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "22420": {
+    "desc": "オーバードライブゲージを最大にする",
+    "effect": {
+      "effect": [
+        {
+          "increase od gauge%": 100,
+          "proc id": "43"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 22420,
+    "max equipped": 1,
+    "max_stack": 99,
+    "name": "英雄幻晶",
+    "raid": false,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 2,
+          "id": 21010,
+          "name": "武神薬改"
+        },
+        {
+          "count": 2,
+          "id": 22310,
+          "name": "覇神の笛"
+        },
+        {
+          "count": 1,
+          "id": 10405,
+          "name": "絆の爪"
+        },
+        {
+          "count": 1,
+          "id": 10506,
+          "name": "絆の牙"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_22500.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "230003": {
+    "desc": "全てのユニットの回復力・最大ＨＰを２０％アップ",
+    "effect": [
+      {
+        "hp% buff": 20,
+        "passive id": "1",
+        "rec% buff": 20
+      }
+    ],
+    "id": 230003,
+    "max_stack": 1,
+    "name": "光浄石ルピテクト",
+    "raid": false,
+    "rarity": 1,
+    "recipe": {
+      "karma": "100000",
+      "materials": [
+        {
+          "count": 2,
+          "id": 30203,
+          "name": "天杖ロベル・アダン"
+        },
+        {
+          "count": 2,
+          "id": 30303,
+          "name": "輝鎧ルディバ・マクス"
+        },
+        {
+          "count": 2,
+          "id": 10736,
+          "name": "幽機装甲"
+        },
+        {
+          "count": 2,
+          "id": 10423,
+          "name": "機巧の鋼爪"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_7_2.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 230004,
+        "name": "尊血玉ディメーテ"
+      }
+    ]
+  },
+  "230004": {
+    "desc": "全てのユニットの回復力・最大ＨＰを２５％アップ＆確率でＨＰを少し吸収",
+    "effect": [
+      {
+        "hp% buff": 25,
+        "passive id": "1",
+        "rec% buff": 25
+      },
+      {
+        "hp drain chance%": 25,
+        "hp drain% high": 10,
+        "hp drain% low": 5,
+        "passive id": "17"
+      }
+    ],
+    "id": 230004,
+    "max_stack": 1,
+    "name": "尊血玉ディメーテ",
+    "raid": false,
+    "rarity": 2,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 230003,
+          "name": "光浄石ルピテクト"
+        },
+        {
+          "count": 1,
+          "id": 35600,
+          "name": "血を奪う槍『グルムス』"
+        },
+        {
+          "count": 10,
+          "id": 10912,
+          "name": "白夜蝕虫"
+        },
+        {
+          "count": 10,
+          "id": 10313,
+          "name": "極星水"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_7_1.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 230005,
+        "name": "讃崇符ドラシオン"
+      }
+    ]
+  },
+  "230005": {
+    "desc": "全てのユニットの回復力・最大ＨＰを３０％アップ＆ターン毎にＨＰを回復＆被ダメージ時、確率でＨＰを少し回復",
+    "effect": [
+      {
+        "hp% buff": 30,
+        "passive id": "1",
+        "rec% buff": 30
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 700,
+        "turn heal low": 700
+      },
+      {
+        "dmg% to hp% when attacked chance%": 25,
+        "dmg% to hp% when attacked high": 15,
+        "dmg% to hp% when attacked low": 15,
+        "passive id": "24"
+      }
+    ],
+    "id": 230005,
+    "max_stack": 1,
+    "name": "讃崇符ドラシオン",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "200000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 230004,
+          "name": "尊血玉ディメーテ"
+        },
+        {
+          "count": 1,
+          "id": 230304,
+          "name": "栄慈符ポリアフ"
+        },
+        {
+          "count": 1,
+          "id": 41900,
+          "name": "彗兜クロエサクリス"
+        },
+        {
+          "count": 5,
+          "id": 10119,
+          "name": "紅鶴の尾羽"
+        },
+        {
+          "count": 10,
+          "id": 10314,
+          "name": "香泉霊水"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_7_8.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 230006,
+        "name": "霊祀環セル・ナリア"
+      }
+    ]
+  },
+  "230006": {
+    "desc": "全てのユニットの回復力・最大ＨＰを４０％アップ＆ターン毎にＨＰをかなり回復＆被ダメージ時、確率でＨＰを少し回復＆ＨＰが半分以下の時、回復力をアップ",
+    "effect": [
+      {
+        "hp% buff": 40,
+        "passive id": "1",
+        "rec% buff": 40
+      },
+      {
+        "hp below % buff requirement": 50,
+        "passive id": "11",
+        "rec% buff": 60
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 1000,
+        "turn heal low": 1000
+      },
+      {
+        "dmg% to hp% when attacked chance%": 25,
+        "dmg% to hp% when attacked high": 15,
+        "dmg% to hp% when attacked low": 15,
+        "passive id": "24"
+      }
+    ],
+    "id": 230006,
+    "max_stack": 1,
+    "name": "霊祀環セル・ナリア",
+    "raid": false,
+    "rarity": 4,
+    "recipe": {
+      "karma": "250000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 230005,
+          "name": "讃崇符ドラシオン"
+        },
+        {
+          "count": 1,
+          "id": 30306,
+          "name": "冥鎧クリプトデリア"
+        },
+        {
+          "count": 1,
+          "id": 31300,
+          "name": "宝珠エルゼット・コア"
+        },
+        {
+          "count": 5,
+          "id": 10008,
+          "name": "永世の霊草"
+        },
+        {
+          "count": 10,
+          "id": 10913,
+          "name": "蒼仄零虫"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_7_5.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 230007,
+        "name": "護魂死祓の指輪"
+      }
+    ]
+  },
+  "230007": {
+    "desc": "全ユニットの回復力・最大ＨＰ５０％アップ＆ターン毎にＨＰ大回復＆被ダメージ時、確率でＨＰ少し回復＆ＨＰ半分以下時、回復力アップ＆ＢＣ・ＨＣ出現率を大幅アップ＆ＢＣ獲得時の増加量アップ＆ＨＣ獲得時の回復量アップ",
+    "effect": [
+      {
+        "hp% buff": 50,
+        "passive id": "1",
+        "rec% buff": 50
+      },
+      {
+        "hp below % buff requirement": 50,
+        "passive id": "11",
+        "rec% buff": 70
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 1500,
+        "turn heal low": 1500
+      },
+      {
+        "bc drop rate% buff": 20,
+        "hc drop rate% buff": 20,
+        "passive id": "19"
+      },
+      {
+        "bb gauge fill rate%": 30,
+        "passive id": "32"
+      },
+      {
+        "hc effectiveness%": 30,
+        "passive id": "10"
+      },
+      {
+        "dmg% to hp% when attacked chance%": 25,
+        "dmg% to hp% when attacked high": 20,
+        "dmg% to hp% when attacked low": 15,
+        "passive id": "24"
+      }
+    ],
+    "id": 230007,
+    "max_stack": 1,
+    "name": "護魂死祓の指輪",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "300000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 230006,
+          "name": "霊祀環セル・ナリア"
+        },
+        {
+          "count": 1,
+          "id": 41500,
+          "name": "精霊の首飾り"
+        },
+        {
+          "count": 1,
+          "id": 47902,
+          "name": "魔封珠『ベイオルグ』"
+        },
+        {
+          "count": 5,
+          "id": 10425,
+          "name": "亜竜鳥の爪"
+        },
+        {
+          "count": 10,
+          "id": 10824,
+          "name": "永劫竜骨"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_7_6.png",
+    "type": "ls_sphere",
+    "usage": []
+  },
+  "230103": {
+    "desc": "全てのユニットの攻撃力を２０％アップ＆ターン毎にＢＢゲージを増加",
+    "effect": [
+      {
+        "atk% buff": 20,
+        "passive id": "1"
+      },
+      {
+        "bc fill per turn": 3,
+        "passive id": "9"
+      }
+    ],
+    "id": 230103,
+    "max_stack": 1,
+    "name": "聖光旗シェーステン",
+    "raid": false,
+    "rarity": 1,
+    "recipe": {
+      "karma": "100000",
+      "materials": [
+        {
+          "count": 2,
+          "id": 30003,
+          "name": "竜が鍛えし剣『マガ』"
+        },
+        {
+          "count": 1,
+          "id": 38000,
+          "name": "魔石の欠片"
+        },
+        {
+          "count": 2,
+          "id": 10736,
+          "name": "幽機装甲"
+        },
+        {
+          "count": 2,
+          "id": 10423,
+          "name": "機巧の鋼爪"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_9_2.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 230104,
+        "name": "力王帯バルギルア"
+      }
+    ]
+  },
+  "230104": {
+    "desc": "全てのユニットの攻撃力を２５％アップ＆ターン毎にＢＢゲージを増加＆スパークダメージを５０％アップ",
+    "effect": [
+      {
+        "atk% buff": 25,
+        "passive id": "1"
+      },
+      {
+        "bc fill per turn": 3,
+        "passive id": "9"
+      },
+      {
+        "damage% for spark": 50,
+        "passive id": "31"
+      }
+    ],
+    "id": 230104,
+    "max_stack": 1,
+    "name": "力王帯バルギルア",
+    "raid": false,
+    "rarity": 2,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 230103,
+          "name": "聖光旗シェーステン"
+        },
+        {
+          "count": 2,
+          "id": 34805,
+          "name": "王光の花"
+        },
+        {
+          "count": 10,
+          "id": 11046,
+          "name": "氷零石"
+        },
+        {
+          "count": 10,
+          "id": 10911,
+          "name": "氷刃甲虫"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_9_5.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 230105,
+        "name": "禁闘剣サフォルス"
+      }
+    ]
+  },
+  "230105": {
+    "desc": "全てのユニットの攻撃力を３０％アップ＆ターン毎にＢＢゲージをかなり増加＆スパークダメージを７５％アップ",
+    "effect": [
+      {
+        "atk% buff": 30,
+        "passive id": "1"
+      },
+      {
+        "bc fill per turn": 4,
+        "passive id": "9"
+      },
+      {
+        "damage% for spark": 75,
+        "passive id": "31"
+      }
+    ],
+    "id": 230105,
+    "max_stack": 1,
+    "name": "禁闘剣サフォルス",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "200000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 230104,
+          "name": "力王帯バルギルア"
+        },
+        {
+          "count": 1,
+          "id": 38001,
+          "name": "魔石の結晶"
+        },
+        {
+          "count": 2,
+          "id": 34805,
+          "name": "王光の花"
+        },
+        {
+          "count": 5,
+          "id": 10314,
+          "name": "香泉霊水"
+        },
+        {
+          "count": 10,
+          "id": 10823,
+          "name": "迦具神骨"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_9_3.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 230106,
+        "name": "邪罰針ドンデュール"
+      }
+    ]
+  },
+  "230106": {
+    "desc": "全てのユニットの攻撃力・防御力を４０％アップ＆ターン毎にＢＢゲージをかなり増加＆スパークダメージを１００％アップ＆クリティカル率を少しアップ",
+    "effect": [
+      {
+        "atk% buff": 40,
+        "crit% buff": 15,
+        "def% buff": 40,
+        "passive id": "1"
+      },
+      {
+        "bc fill per turn": 4,
+        "passive id": "9"
+      },
+      {
+        "damage% for spark": 100,
+        "passive id": "31"
+      }
+    ],
+    "id": 230106,
+    "max_stack": 1,
+    "name": "邪罰針ドンデュール",
+    "raid": false,
+    "rarity": 4,
+    "recipe": {
+      "karma": "250000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 230105,
+          "name": "禁闘剣サフォルス"
+        },
+        {
+          "count": 1,
+          "id": 30107,
+          "name": "界統盾オルデセクト"
+        },
+        {
+          "count": 1,
+          "id": 30401,
+          "name": "魔神斧ロード・マグレス"
+        },
+        {
+          "count": 5,
+          "id": 10211,
+          "name": "泡錯の実"
+        },
+        {
+          "count": 10,
+          "id": 10008,
+          "name": "永世の霊草"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_9_1.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 230107,
+        "name": "散華のセリデリク"
+      }
+    ]
+  },
+  "230107": {
+    "desc": "全ユニットの攻撃力・防御力５０％アップ＆ターン毎にＢＢゲージかなり増加＆スパークダメージ１００％アップ＆クリティカル率アップ＆確率でスパークダメージ耐性２ターン低下＆スパーク一定毎に１ターン攻撃ＢＢ威力アップ",
+    "effect": [
+      {
+        "atk% buff": 50,
+        "crit% buff": 20,
+        "def% buff": 50,
+        "passive id": "1"
+      },
+      {
+        "bc fill per turn": 5,
+        "passive id": "9"
+      },
+      {
+        "passive id": "75",
+        "spark debuff chance%": 25,
+        "spark debuff turns": 1,
+        "spark debuff%": 25
+      },
+      {
+        "buff": {
+          "bb atk% buff": 130,
+          "buff turns (72)": "2",
+          "sbb atk% buff": 130,
+          "ubb atk% buff": 130
+        },
+        "passive id": "86",
+        "spark count buff activation": 25
+      },
+      {
+        "damage% for spark": 100,
+        "passive id": "31"
+      }
+    ],
+    "id": 230107,
+    "max_stack": 1,
+    "name": "散華のセリデリク",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "300000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 230106,
+          "name": "邪罰針ドンデュール"
+        },
+        {
+          "count": 1,
+          "id": 43300,
+          "name": "獄槍ファーヴィ・オピス"
+        },
+        {
+          "count": 1,
+          "id": 39500,
+          "name": "召喚師の帽子"
+        },
+        {
+          "count": 5,
+          "id": 10824,
+          "name": "永劫竜骨"
+        },
+        {
+          "count": 10,
+          "id": 10520,
+          "name": "竜牙双晶"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_9_4.png",
+    "type": "ls_sphere",
+    "usage": []
+  },
+  "230203": {
+    "desc": "全てのユニットの防御力を２０％アップ＆全状態異常にかかりにくくなる",
+    "effect": [
+      {
+        "def% buff": 20,
+        "passive id": "1"
+      },
+      {
+        "curse resist%": 50,
+        "injury resist%": 50,
+        "paralysis resist%": 50,
+        "passive id": "4",
+        "poison resist%": 50,
+        "sick resist%": 50,
+        "weaken resist%": 50
+      }
+    ],
+    "id": 230203,
+    "max_stack": 1,
+    "name": "護界灯ネス・タリア",
+    "raid": false,
+    "rarity": 1,
+    "recipe": {
+      "karma": "100000",
+      "materials": [
+        {
+          "count": 2,
+          "id": 30103,
+          "name": "太陽と月の盾マリス"
+        },
+        {
+          "count": 1,
+          "id": 37700,
+          "name": "煉光ミグ・デリン"
+        },
+        {
+          "count": 2,
+          "id": 10910,
+          "name": "惑彩羽虫"
+        },
+        {
+          "count": 2,
+          "id": 10821,
+          "name": "剛融機骨"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_6_2.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 230204,
+        "name": "白鬼甲マク・マウ"
+      }
+    ]
+  },
+  "230204": {
+    "desc": "全てのユニットの防御力を２５％アップ＆全状態異常にかかりにくくなる＆弱点属性ダメージを少し軽減",
+    "effect": [
+      {
+        "def% buff": 25,
+        "passive id": "1"
+      },
+      {
+        "curse resist%": 50,
+        "injury resist%": 50,
+        "paralysis resist%": 50,
+        "passive id": "4",
+        "poison resist%": 50,
+        "sick resist%": 50,
+        "weaken resist%": 50
+      },
+      {
+        "passive id": "53",
+        "strong base element damage resist%": 20,
+        "strong buffed element damage resist%": 20
+      }
+    ],
+    "id": 230204,
+    "max_stack": 1,
+    "name": "白鬼甲マク・マウ",
+    "raid": false,
+    "rarity": 2,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 230203,
+          "name": "護界灯ネス・タリア"
+        },
+        {
+          "count": 2,
+          "id": 32200,
+          "name": "魔装メライドデウス"
+        },
+        {
+          "count": 10,
+          "id": 11046,
+          "name": "氷零石"
+        },
+        {
+          "count": 10,
+          "id": 10911,
+          "name": "氷刃甲虫"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_6_5.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 230205,
+        "name": "黒妖兜ヘル・クル"
+      }
+    ]
+  },
+  "230205": {
+    "desc": "全てのユニットの防御力を３０％アップ＆全状態異常を無効＆弱点属性ダメージを軽減",
+    "effect": [
+      {
+        "def% buff": 30,
+        "passive id": "1"
+      },
+      {
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "passive id": "53",
+        "strong base element damage resist%": 30,
+        "strong buffed element damage resist%": 30
+      }
+    ],
+    "id": 230205,
+    "max_stack": 1,
+    "name": "黒妖兜ヘル・クル",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "200000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 230204,
+          "name": "白鬼甲マク・マウ"
+        },
+        {
+          "count": 1,
+          "id": 37700,
+          "name": "煉光ミグ・デリン"
+        },
+        {
+          "count": 1,
+          "id": 30105,
+          "name": "断罪の盾『黒騎』"
+        },
+        {
+          "count": 5,
+          "id": 10823,
+          "name": "迦具神骨"
+        },
+        {
+          "count": 10,
+          "id": 10119,
+          "name": "紅鶴の尾羽"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_6_6.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 230206,
+        "name": "神護杖ラグファリータ"
+      }
+    ]
+  },
+  "230206": {
+    "desc": "全てのユニットの防御力を４０％アップ＆全状態異常を無効＆弱点属性ダメージを軽減＆確率で被ダメージを少し軽減",
+    "effect": [
+      {
+        "def% buff": 40,
+        "passive id": "1"
+      },
+      {
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "passive id": "53",
+        "strong base element damage resist%": 30,
+        "strong buffed element damage resist%": 30
+      },
+      {
+        "dmg reduction chance%": 25,
+        "dmg reduction%": 20,
+        "passive id": "14"
+      }
+    ],
+    "id": 230206,
+    "max_stack": 1,
+    "name": "神護杖ラグファリータ",
+    "raid": false,
+    "rarity": 4,
+    "recipe": {
+      "karma": "250000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 230205,
+          "name": "黒妖兜ヘル・クル"
+        },
+        {
+          "count": 1,
+          "id": 30106,
+          "name": "覇究盾アルトダイン"
+        },
+        {
+          "count": 1,
+          "id": 32200,
+          "name": "魔装メライドデウス"
+        },
+        {
+          "count": 5,
+          "id": 10008,
+          "name": "永世の霊草"
+        },
+        {
+          "count": 10,
+          "id": 10211,
+          "name": "泡錯の実"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_6_3.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 230207,
+        "name": "聖盾将冠アクブテカ"
+      }
+    ]
+  },
+  "230207": {
+    "desc": "全てのユニットの防御力・最大ＨＰを５０％アップ＆全状態異常を無効＆弱点属性ダメージを軽減＆確率で被ダメージを２０％軽減＆ガード時、ＢＢゲージをかなり増加・ダメージ軽減率をアップ",
+    "effect": [
+      {
+        "def% buff": 50,
+        "hp% buff": 50,
+        "passive id": "1"
+      },
+      {
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "passive id": "53",
+        "strong base element damage resist%": 30,
+        "strong buffed element damage resist%": 30
+      },
+      {
+        "dmg reduction chance%": 25,
+        "dmg reduction%": 20,
+        "passive id": "14"
+      },
+      {
+        "guard increase mitigation%": 10,
+        "passive id": "58"
+      },
+      {
+        "bc filled on guard": 4,
+        "passive id": "61"
+      }
+    ],
+    "id": 230207,
+    "max_stack": 1,
+    "name": "聖盾将冠アクブテカ",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "300000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 230206,
+          "name": "神護杖ラグファリータ"
+        },
+        {
+          "count": 1,
+          "id": 44100,
+          "name": "妖精の虹布"
+        },
+        {
+          "count": 1,
+          "id": 38001,
+          "name": "魔石の結晶"
+        },
+        {
+          "count": 5,
+          "id": 10520,
+          "name": "竜牙双晶"
+        },
+        {
+          "count": 10,
+          "id": 10824,
+          "name": "永劫竜骨"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_6_8.png",
+    "type": "ls_sphere",
+    "usage": []
+  },
+  "230303": {
+    "desc": "ターン毎にＨＰを回復＆被ダメージ時、確率でＨＰを回復",
+    "effect": [
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 500,
+        "turn heal low": 500
+      },
+      {
+        "dmg% to hp% when attacked chance%": 25,
+        "dmg% to hp% when attacked high": 15,
+        "dmg% to hp% when attacked low": 15,
+        "passive id": "24"
+      }
+    ],
+    "id": 230303,
+    "max_stack": 1,
+    "name": "義将宝ヴァドム",
+    "raid": false,
+    "rarity": 1,
+    "recipe": {
+      "karma": "100000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 34300,
+          "name": "光兜セルティオン"
+        },
+        {
+          "count": 1,
+          "id": 34808,
+          "name": "フェニックスの眼"
+        },
+        {
+          "count": 2,
+          "id": 10910,
+          "name": "惑彩羽虫"
+        },
+        {
+          "count": 2,
+          "id": 10821,
+          "name": "剛融機骨"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_8_2.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 230304,
+        "name": "栄慈符ポリアフ"
+      }
+    ]
+  },
+  "230304": {
+    "desc": "ターン毎にＨＰを回復＆被ダメージ時、確率でＨＰを少し回復＆ＢＣ・ＨＣ出現率をアップ",
+    "effect": [
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 500,
+        "turn heal low": 500
+      },
+      {
+        "dmg% to hp% when attacked chance%": 25,
+        "dmg% to hp% when attacked high": 15,
+        "dmg% to hp% when attacked low": 15,
+        "passive id": "24"
+      },
+      {
+        "bc drop rate% buff": 10,
+        "hc drop rate% buff": 10,
+        "passive id": "19"
+      }
+    ],
+    "id": 230304,
+    "max_stack": 1,
+    "name": "栄慈符ポリアフ",
+    "raid": false,
+    "rarity": 2,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 230303,
+          "name": "義将宝ヴァドム"
+        },
+        {
+          "count": 1,
+          "id": 34803,
+          "name": "技宝バトルブースター2"
+        },
+        {
+          "count": 1,
+          "id": 34804,
+          "name": "癒宝ハートブースター2"
+        },
+        {
+          "count": 10,
+          "id": 10912,
+          "name": "白夜蝕虫"
+        },
+        {
+          "count": 10,
+          "id": 10313,
+          "name": "極星水"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_8_8.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 230005,
+        "name": "讃崇符ドラシオン"
+      }
+    ]
+  },
+  "234000": {
+    "desc": "全てのユニットの攻撃力を３０％アップ＆確率で全状態異常をランダムに発生",
+    "effect": [
+      {
+        "atk% buff": 30,
+        "passive id": "1"
+      },
+      {
+        "curse%": 5,
+        "passive id": "20",
+        "poison%": 5,
+        "sick%": 7
+      },
+      {
+        "injury%": 7,
+        "paralysis%": 5,
+        "passive id": "20",
+        "weaken%": 7
+      }
+    ],
+    "id": 234000,
+    "max_stack": 1,
+    "name": "聖凶典レネイエ",
+    "raid": false,
+    "rarity": 2,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 2,
+          "id": 30005,
+          "name": "神帝剣マグナレイブ"
+        },
+        {
+          "count": 1,
+          "id": 38100,
+          "name": "覇彩晶ミラヴィス"
+        },
+        {
+          "count": 1,
+          "id": 38200,
+          "name": "王彩晶エルディオン"
+        },
+        {
+          "count": 10,
+          "id": 10912,
+          "name": "白夜蝕虫"
+        },
+        {
+          "count": 10,
+          "id": 10313,
+          "name": "極星水"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_5_6.png",
+    "type": "ls_sphere",
+    "usage": []
+  },
+  "235000": {
+    "desc": "全てのユニットの攻撃力・防御力・回復力・最大ＨＰを２５％アップ＆被ダメージ時、確率でＢＢゲージを少し増加＆通常攻撃時、確率でＢＢゲージを増加",
+    "effect": [
+      {
+        "atk% buff": 25,
+        "def% buff": 25,
+        "hp% buff": 25,
+        "passive id": "1",
+        "rec% buff": 25
+      },
+      {
+        "bc fill when attacked high": 2,
+        "bc fill when attacked low": 1,
+        "bc fill when attacked%": 50,
+        "passive id": "25"
+      },
+      {
+        "bc fill when attacking high": 3,
+        "bc fill when attacking low": 2,
+        "bc fill when attacking%": 50,
+        "passive id": "35"
+      }
+    ],
+    "id": 235000,
+    "max_stack": 1,
+    "name": "天狼套ゼフィーロ",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "200000",
+      "materials": [
+        {
+          "count": 2,
+          "id": 30004,
+          "name": "神剣アルトレイト"
+        },
+        {
+          "count": 2,
+          "id": 30104,
+          "name": "神王盾ディバディン"
+        },
+        {
+          "count": 2,
+          "id": 30204,
+          "name": "神杖アポカリプス"
+        },
+        {
+          "count": 2,
+          "id": 30304,
+          "name": "神鎧コキュートス"
+        },
+        {
+          "count": 1,
+          "id": 10519,
+          "name": "絶凍吼牙"
+        }
+      ]
+    },
+    "sell_price": 10000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_8_4.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 235004,
+        "name": "星導套アキテーク"
+      }
+    ]
+  },
+  "235001": {
+    "desc": "全てのユニットの攻撃力・防御力・回復力・最大ＨＰを３５％アップ＆クリティカルダメージを大幅にアップ＆ＢＢ発動に必要なＢＢゲージ量を軽減",
+    "effect": [
+      {
+        "atk% buff": 35,
+        "def% buff": 35,
+        "hp% buff": 35,
+        "passive id": "1",
+        "rec% buff": 35
+      },
+      {
+        "crit multiplier%": 150,
+        "passive id": "34"
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 15
+      }
+    ],
+    "id": 235001,
+    "max_stack": 1,
+    "name": "機兵石『イザヨイ』",
+    "raid": false,
+    "rarity": 4,
+    "recipe": {
+      "karma": "300000",
+      "materials": [
+        {
+          "count": 2,
+          "id": 34809,
+          "name": "秘宝『ルディ・メクアン』"
+        },
+        {
+          "count": 1,
+          "id": 30006,
+          "name": "神祇剣クランベルド"
+        },
+        {
+          "count": 1,
+          "id": 30402,
+          "name": "破壊斧デス=クリムゾン"
+        },
+        {
+          "count": 1,
+          "id": 39500,
+          "name": "召喚師の帽子"
+        },
+        {
+          "count": 1,
+          "id": 11048,
+          "name": "煉機車具"
+        }
+      ]
+    },
+    "sell_price": 10000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_5_1.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 235005,
+        "name": "機征甲『アカツキ』"
+      }
+    ]
+  },
+  "235002": {
+    "desc": "全てのユニットの攻撃力・防御力・回復力・最大ＨＰを４５％アップ＆スパーク時、ＨＰを少し回復＆被ダメージが一定数を超える度にＢＢゲージを少し増加",
+    "effect": [
+      {
+        "atk% buff": 45,
+        "def% buff": 45,
+        "hp% buff": 45,
+        "passive id": "1",
+        "rec% buff": 45
+      },
+      {
+        "heal on spark high": 100,
+        "heal on spark low": 100,
+        "heal on spark%": 100,
+        "passive id": "101"
+      },
+      {
+        "damage threshold activation": 2500,
+        "increase bb gauge": 3,
+        "passive id": "79"
+      }
+    ],
+    "id": 235002,
+    "max_stack": 1,
+    "name": "魂震鎧ガルヴァス",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "350000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 35501,
+          "name": "竜覇剣ザビュー・ゼスタ"
+        },
+        {
+          "count": 1,
+          "id": 47906,
+          "name": "魔封珠『ファル・ナーガ』"
+        },
+        {
+          "count": 2,
+          "id": 33500,
+          "name": "闇衣ダークエデュア"
+        },
+        {
+          "count": 10,
+          "id": 10737,
+          "name": "巨窟の壮壁"
+        },
+        {
+          "count": 1,
+          "id": 11049,
+          "name": "鎧鳴の結晶"
+        }
+      ]
+    },
+    "sell_price": 10000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_4_8.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 235006,
+        "name": "神衝鎧リヴァルブ"
+      }
+    ]
+  },
+  "235003": {
+    "desc": "全てのユニットの攻撃力・防御力・回復力・最大ＨＰを６０％アップ＆残りＨＰが多いほど、攻撃力をアップ＆残りＨＰが少ないほど、防御力・回復力をアップ＆全属性の弱点属性ダメージを大幅にアップ",
+    "effect": [
+      {
+        "atk% buff": 60,
+        "def% buff": 60,
+        "hp% buff": 60,
+        "passive id": "1",
+        "rec% buff": 60
+      },
+      {
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 50,
+        "buff proportional to hp": "remaining",
+        "passive id": "46"
+      },
+      {
+        "buff proportional to hp": "lost",
+        "def% base buff": 0,
+        "def% extra buff based on hp": 50,
+        "passive id": "46",
+        "rec% base buff": 0,
+        "rec% extra buff based on hp": 50
+      },
+      {
+        "dark units do extra elemental weakness dmg": true,
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 100,
+        "fire units do extra elemental weakness dmg": true,
+        "light units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "thunder units do extra elemental weakness dmg": true,
+        "water units do extra elemental weakness dmg": true
+      }
+    ],
+    "id": 235003,
+    "max_stack": 1,
+    "name": "奉神具トゥライエ",
+    "raid": false,
+    "rarity": 6,
+    "recipe": {
+      "karma": "400000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 30308,
+          "name": "真鎧『天壌無窮』"
+        },
+        {
+          "count": 3,
+          "id": 31001,
+          "name": "天叢雲剣"
+        },
+        {
+          "count": 1,
+          "id": 31301,
+          "name": "宝珠ミラビアス"
+        },
+        {
+          "count": 1,
+          "id": 47904,
+          "name": "魔封珠『ラクシュルト』"
+        },
+        {
+          "count": 1,
+          "id": 11050,
+          "name": "神飾の聖片"
+        }
+      ]
+    },
+    "sell_price": 10000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_8_3.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 235007,
+        "name": "讃神具ラカトゥルス"
+      }
+    ]
+  },
+  "235004": {
+    "desc": "全ユニットの攻撃力・防御力・回復力・最大ＨＰを６０％アップ＆被ダメージ時ＢＢゲージ大幅増加＆ＢＢゲージ半分以上時、攻撃力・防御力・回復力かなりアップ＆ターン毎ＢＢゲージ大幅増加＆ＢＣ獲得時の増加量かなりアップ",
+    "effect": [
+      {
+        "atk% buff": 60,
+        "def% buff": 60,
+        "hp% buff": 60,
+        "passive id": "1",
+        "rec% buff": 60
+      },
+      {
+        "bc fill when attacked high": 7,
+        "bc fill when attacked low": 4,
+        "bc fill when attacked%": 100,
+        "passive id": "25"
+      },
+      {
+        "bc fill per turn": 7,
+        "passive id": "9"
+      },
+      {
+        "bb gauge fill rate%": 50,
+        "passive id": "32"
+      },
+      {
+        "atk% buff": 80,
+        "bb gauge above % buff requirement": 50,
+        "def% buff": 80,
+        "passive id": "30",
+        "rec% buff": 80
+      }
+    ],
+    "id": 235004,
+    "max_stack": 1,
+    "name": "星導套アキテーク",
+    "raid": false,
+    "rarity": 7,
+    "recipe": {
+      "karma": "500000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 235000,
+          "name": "天狼套ゼフィーロ"
+        },
+        {
+          "count": 1,
+          "id": 30307,
+          "name": "異鎧ペルド・インティス"
+        },
+        {
+          "count": 1,
+          "id": 40000,
+          "name": "技宝ソルジェネレーター"
+        },
+        {
+          "count": 2,
+          "id": 37900,
+          "name": "神宝デュマル=ノクス"
+        },
+        {
+          "count": 10,
+          "id": 10739,
+          "name": "灰壊の樹皮"
+        }
+      ]
+    },
+    "sell_price": 10000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_8_4.png",
+    "type": "ls_sphere",
+    "usage": []
+  },
+  "235005": {
+    "desc": "全ユニットの攻撃力・防御力・回復力・最大ＨＰを６０％アップ＆クリティカルダメージ大幅アップ＆ＢＢ発動に必要なＢＢゲージ量を軽減＆攻撃ＢＢ威力を超絶アップ＆クリティカル時、３ターン、スパークダメージを超絶アップ",
+    "effect": [
+      {
+        "atk% buff": 60,
+        "def% buff": 60,
+        "hp% buff": 60,
+        "passive id": "1",
+        "rec% buff": 60
+      },
+      {
+        "crit multiplier%": 175,
+        "passive id": "34"
+      },
+      {
+        "bb atk% buff": 200,
+        "passive id": "64",
+        "sbb atk% buff": 200,
+        "ubb atk% buff": 200
+      },
+      {
+        "buff": {
+          "buff turns (40)": "3",
+          "spark dmg% buff": 120
+        },
+        "on crit activation chance%": 100,
+        "passive id": "89"
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 20
+      }
+    ],
+    "id": 235005,
+    "max_stack": 1,
+    "name": "機征甲『アカツキ』",
+    "raid": false,
+    "rarity": 7,
+    "recipe": {
+      "karma": "500000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 235001,
+          "name": "機兵石『イザヨイ』"
+        },
+        {
+          "count": 1,
+          "id": 30007,
+          "name": "殲神剣エクセベルグ"
+        },
+        {
+          "count": 1,
+          "id": 31002,
+          "name": "天羽々斬剣"
+        },
+        {
+          "count": 5,
+          "id": 10825,
+          "name": "澄水鳥の骨"
+        },
+        {
+          "count": 10,
+          "id": 10739,
+          "name": "灰壊の樹皮"
+        }
+      ]
+    },
+    "sell_price": 10000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_5_1.png",
+    "type": "ls_sphere",
+    "usage": []
+  },
+  "235006": {
+    "desc": "全ユニットの攻撃力・防御力・回復力・最大ＨＰを６０％アップ＆スパーク時、ＨＰを回復＆被ダメージが一定数を超える度にＢＢゲージを超絶増加・２ターン、被ダメージを少し軽減＆被ダメージ時、確率でＨＰを回復",
+    "effect": [
+      {
+        "atk% buff": 60,
+        "def% buff": 60,
+        "hp% buff": 60,
+        "passive id": "1",
+        "rec% buff": 60
+      },
+      {
+        "heal on spark high": 500,
+        "heal on spark low": 300,
+        "heal on spark%": 100,
+        "passive id": "101"
+      },
+      {
+        "buff": {
+          "buff turns (36)": "1",
+          "dmg reduction% buff": 20
+        },
+        "damage threshold buff activation": 5000,
+        "passive id": "78"
+      },
+      {
+        "dmg% to hp% when attacked chance%": 25,
+        "dmg% to hp% when attacked high": 25,
+        "dmg% to hp% when attacked low": 25,
+        "passive id": "24"
+      },
+      {
+        "damage threshold activation": 5000,
+        "increase bb gauge": 10,
+        "passive id": "79"
+      }
+    ],
+    "id": 235006,
+    "max_stack": 1,
+    "name": "神衝鎧リヴァルブ",
+    "raid": false,
+    "rarity": 7,
+    "recipe": {
+      "karma": "500000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 235002,
+          "name": "魂震鎧ガルヴァス"
+        },
+        {
+          "count": 1,
+          "id": 41900,
+          "name": "彗兜クロエサクリス"
+        },
+        {
+          "count": 1,
+          "id": 47905,
+          "name": "魔封珠『ザームブルグ』"
+        },
+        {
+          "count": 5,
+          "id": 10739,
+          "name": "灰壊の樹皮"
+        },
+        {
+          "count": 5,
+          "id": 10825,
+          "name": "澄水鳥の骨"
+        }
+      ]
+    },
+    "sell_price": 10000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_4_8.png",
+    "type": "ls_sphere",
+    "usage": []
+  },
+  "235007": {
+    "desc": "全ユニットの攻撃力・防御力・回復力・最大ＨＰを６０％アップ＆残りＨＰが多いほど攻撃力をかなりアップ＆残りＨＰが少ないほど防御力・回復力をかなりアップ＆全属性の弱点属性ダメージ大幅アップ＆弱点属性ダメージ無効",
+    "effect": [
+      {
+        "atk% buff": 60,
+        "def% buff": 60,
+        "hp% buff": 60,
+        "passive id": "1",
+        "rec% buff": 60
+      },
+      {
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 80,
+        "buff proportional to hp": "remaining",
+        "passive id": "46"
+      },
+      {
+        "buff proportional to hp": "lost",
+        "def% base buff": 0,
+        "def% extra buff based on hp": 80,
+        "passive id": "46",
+        "rec% base buff": 0,
+        "rec% extra buff based on hp": 80
+      },
+      {
+        "passive id": "53",
+        "strong base element damage resist%": 100,
+        "strong buffed element damage resist%": 100
+      },
+      {
+        "dark units do extra elemental weakness dmg": true,
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 125,
+        "fire units do extra elemental weakness dmg": true,
+        "light units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "thunder units do extra elemental weakness dmg": true,
+        "water units do extra elemental weakness dmg": true
+      }
+    ],
+    "id": 235007,
+    "max_stack": 1,
+    "name": "讃神具ラカトゥルス",
+    "raid": false,
+    "rarity": 7,
+    "recipe": {
+      "karma": "500000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 235003,
+          "name": "奉神具トゥライエ"
+        },
+        {
+          "count": 1,
+          "id": 30008,
+          "name": "煌神剣レイ・ファルク"
+        },
+        {
+          "count": 1,
+          "id": 30108,
+          "name": "覇天盾メルクード"
+        },
+        {
+          "count": 2,
+          "id": 33001,
+          "name": "聖皇后の旗幟"
+        },
+        {
+          "count": 5,
+          "id": 10825,
+          "name": "澄水鳥の骨"
+        }
+      ]
+    },
+    "sell_price": 10000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_8_3.png",
+    "type": "ls_sphere",
+    "usage": []
+  },
+  "235008": {
+    "desc": "全ユニットの攻撃力・防御力・回復力・最大ＨＰを６０％アップ＆スパークダメージを１２０％アップ＆全属性ユニットからの被ダメージを１５％軽減＆ターン毎にＨＰをかなり回復・ＢＢゲージを大幅に増加＆クリティカルを無効",
+    "effect": [
+      {
+        "atk% buff": 60,
+        "def% buff": 60,
+        "hp% buff": 60,
+        "passive id": "1",
+        "rec% buff": 60
+      },
+      {
+        "dmg% mitigation for elemental attacks": 15,
+        "mitigate dark attacks": true,
+        "mitigate earth attacks": true,
+        "mitigate fire attacks": true,
+        "mitigate light attacks": true,
+        "mitigate thunder attacks": true,
+        "mitigate water attacks": true,
+        "passive id": "62"
+      },
+      {
+        "bc fill per turn": 6,
+        "passive id": "9"
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 1200,
+        "turn heal low": 1000
+      },
+      {
+        "crit chance base resist%": 100,
+        "crit chance buffed resist%": 100,
+        "crit dmg base damage resist%": 100,
+        "crit dmg buffed damage resist%": 100,
+        "passive id": "53"
+      },
+      {
+        "damage% for spark": 120,
+        "passive id": "31"
+      }
+    ],
+    "id": 235008,
+    "max_stack": 1,
+    "name": "神脈の霊異薬",
+    "raid": false,
+    "rarity": 7,
+    "recipe": {
+      "karma": "500000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 238001,
+          "name": "誉望神杯ルファーレ"
+        },
+        {
+          "count": 2,
+          "id": 34805,
+          "name": "王光の花"
+        },
+        {
+          "count": 1,
+          "id": 47903,
+          "name": "魔封珠『ウルジ』"
+        },
+        {
+          "count": 1,
+          "id": 47901,
+          "name": "魔封珠『レーム』"
+        },
+        {
+          "count": 1,
+          "id": 11051,
+          "name": "異魔魄珠"
+        }
+      ]
+    },
+    "sell_price": 10000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_4_6.png",
+    "type": "ls_sphere",
+    "usage": []
+  },
+  "236000": {
+    "desc": "全てのユニットの攻撃力・防御力を３０％アップ＆スパーク時、ＢＣ出現率をかなりアップ＆スパーク時、ＢＢゲージを少し増加",
+    "effect": [
+      {
+        "atk% buff": 30,
+        "def% buff": 30,
+        "passive id": "1"
+      },
+      {
+        "bc drop% for spark": 50,
+        "passive id": "31"
+      },
+      {
+        "bc fill on spark high": 1,
+        "bc fill on spark low": 1,
+        "bc fill on spark%": 100,
+        "passive id": "47"
+      }
+    ],
+    "id": 236000,
+    "max_stack": 1,
+    "name": "栄神の御光酒",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "200000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 44000,
+          "name": "秘宝『バリウラ』"
+        },
+        {
+          "count": 1,
+          "id": 41700,
+          "name": "黒竜のイヤリング"
+        },
+        {
+          "count": 2,
+          "id": 40000,
+          "name": "技宝ソルジェネレーター"
+        },
+        {
+          "count": 10,
+          "id": 10424,
+          "name": "黒疫爪"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_9_8.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 236001,
+        "name": "託閃煌鏡フォリフォリ"
+      }
+    ]
+  },
+  "236001": {
+    "desc": "全てのユニットの攻撃力・防御力・最大ＨＰを５０％アップ＆スパーク時、ＢＣ出現率をかなりアップ・ＢＢゲージを増加＆与ダメージが一定数を超える度にＢＢゲージをかなり増加＆ＯＤゲージ上昇量をかなりアップ",
+    "effect": [
+      {
+        "atk% buff": 50,
+        "def% buff": 50,
+        "hp% buff": 50,
+        "passive id": "1"
+      },
+      {
+        "od fill rate%": 20,
+        "passive id": "70"
+      },
+      {
+        "damage dealt threshold activation": 10000,
+        "increase bb gauge": 6,
+        "passive id": "81"
+      },
+      {
+        "bc drop% for spark": 50,
+        "passive id": "31"
+      },
+      {
+        "bc fill on spark high": 3,
+        "bc fill on spark low": 2,
+        "bc fill on spark%": 100,
+        "passive id": "47"
+      }
+    ],
+    "id": 236001,
+    "max_stack": 1,
+    "name": "託閃煌鏡フォリフォリ",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "300000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 236000,
+          "name": "栄神の御光酒"
+        },
+        {
+          "count": 1,
+          "id": 47907,
+          "name": "魔封珠『エストリア』"
+        },
+        {
+          "count": 2,
+          "id": 41600,
+          "name": "星剣ルブアメティア"
+        },
+        {
+          "count": 5,
+          "id": 10425,
+          "name": "亜竜鳥の爪"
+        },
+        {
+          "count": 5,
+          "id": 10635,
+          "name": "瞳中幻竜"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_9_1.png",
+    "type": "ls_sphere",
+    "usage": []
+  },
+  "237000": {
+    "desc": "全てのユニットの最大ＨＰを２５％アップ＆炎・水・樹・雷属性ユニットからの被ダメージを１０％軽減",
+    "effect": [
+      {
+        "hp% buff": 25,
+        "passive id": "1"
+      },
+      {
+        "dmg% mitigation for elemental attacks": 10,
+        "mitigate earth attacks": true,
+        "mitigate fire attacks": true,
+        "mitigate thunder attacks": true,
+        "mitigate water attacks": true,
+        "passive id": "62"
+      }
+    ],
+    "id": 237000,
+    "max_stack": 1,
+    "name": "聖神霊の柴灯",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "200000",
+      "materials": [
+        {
+          "count": 2,
+          "id": 41400,
+          "name": "炎装グランフラム"
+        },
+        {
+          "count": 2,
+          "id": 41401,
+          "name": "水装『凍甲』"
+        },
+        {
+          "count": 2,
+          "id": 41402,
+          "name": "樹装エールアルタ"
+        },
+        {
+          "count": 2,
+          "id": 41403,
+          "name": "雷装レジ・ストラ"
+        },
+        {
+          "count": 10,
+          "id": 10424,
+          "name": "黒疫爪"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_6_1.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 238001,
+        "name": "誉望神杯ルファーレ"
+      }
+    ]
+  },
+  "238000": {
+    "desc": "ＨＰが半分以上の時、攻撃力・防御力・回復力をアップ＆光・闇属性からの被ダメージを１０％軽減＆ＨＣ獲得時の回復量アップ",
+    "effect": [
+      {
+        "atk% buff": 70,
+        "def% buff": 70,
+        "hp above % buff requirement": 50,
+        "passive id": "11",
+        "rec% buff": 70
+      },
+      {
+        "hc effectiveness%": 25,
+        "passive id": "10"
+      },
+      {
+        "dmg% mitigation for elemental attacks": 10,
+        "mitigate dark attacks": true,
+        "mitigate light attacks": true,
+        "passive id": "62"
+      }
+    ],
+    "id": 238000,
+    "max_stack": 1,
+    "name": "虹翼の祷霊装",
+    "raid": false,
+    "rarity": 4,
+    "recipe": {
+      "karma": "250000",
+      "materials": [
+        {
+          "count": 2,
+          "id": 35500,
+          "name": "異剣エル・ビュラー"
+        },
+        {
+          "count": 1,
+          "id": 40100,
+          "name": "癒宝ルナジェネレーター"
+        },
+        {
+          "count": 2,
+          "id": 41404,
+          "name": "光装キリエ・メイヴ"
+        },
+        {
+          "count": 2,
+          "id": 41405,
+          "name": "影装アルダ=ギール"
+        },
+        {
+          "count": 10,
+          "id": 10913,
+          "name": "蒼仄零虫"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_6_4.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 238001,
+        "name": "誉望神杯ルファーレ"
+      }
+    ]
+  },
+  "238001": {
+    "desc": "全てのユニットの最大ＨＰを５０％アップ＆ＨＰが半分以上の時、攻撃力・防御力・回復力をかなりアップ＆全属性ユニットからの被ダメージを１０％軽減＆ＨＰが半分以下になる度に、３ターン、ターン毎にＨＰをかなり回復",
+    "effect": [
+      {
+        "atk% buff": 80,
+        "def% buff": 80,
+        "hp above % buff requirement": 50,
+        "passive id": "11",
+        "rec% buff": 80
+      },
+      {
+        "dmg% mitigation for elemental attacks": 10,
+        "mitigate dark attacks": true,
+        "mitigate earth attacks": true,
+        "mitigate fire attacks": true,
+        "mitigate light attacks": true,
+        "mitigate thunder attacks": true,
+        "mitigate water attacks": true,
+        "passive id": "62"
+      },
+      {
+        "hp% buff": 50,
+        "passive id": "1"
+      },
+      {
+        "buff": {
+          "buff turns (8)": "3",
+          "gradual heal high": 2000,
+          "gradual heal low": 1500
+        },
+        "hp below % buff activation": 50,
+        "passive id": "55"
+      }
+    ],
+    "id": 238001,
+    "max_stack": 1,
+    "name": "誉望神杯ルファーレ",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "300000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 237000,
+          "name": "聖神霊の柴灯"
+        },
+        {
+          "count": 1,
+          "id": 238000,
+          "name": "虹翼の祷霊装"
+        },
+        {
+          "count": 1,
+          "id": 31102,
+          "name": "禍盾『エレクゼノア』"
+        },
+        {
+          "count": 5,
+          "id": 10635,
+          "name": "瞳中幻竜"
+        },
+        {
+          "count": 10,
+          "id": 10425,
+          "name": "亜竜鳥の爪"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_6_5.png",
+    "type": "ls_sphere",
+    "usage": [
+      {
+        "id": 235008,
+        "name": "神脈の霊異薬"
+      }
+    ]
+  },
+  "239000": {
+    "desc": "戦闘開始から３ターン、攻撃力・防御力を１００％アップ＆ＢＣ獲得時の増加量アップ＆敵撃破時、ＢＢゲージを増加",
+    "effect": [
+      {
+        "first x turns": 3,
+        "first x turns atk% (1)": 100,
+        "first x turns def% (3)": 100,
+        "passive id": "21"
+      },
+      {
+        "bc fill on enemy defeat high": 5,
+        "bc fill on enemy defeat low": 3,
+        "bc fill on enemy defeat%": 100,
+        "passive id": "13"
+      },
+      {
+        "bb gauge fill rate%": 30,
+        "passive id": "32"
+      }
+    ],
+    "id": 239000,
+    "max_stack": 1,
+    "name": "陽幻刃ルーグフレア",
+    "raid": false,
+    "rarity": 4,
+    "recipe": {
+      "karma": "250000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 31001,
+          "name": "天叢雲剣"
+        },
+        {
+          "count": 1,
+          "id": 31101,
+          "name": "英知の盾『エクセイル』"
+        },
+        {
+          "count": 2,
+          "id": 41600,
+          "name": "星剣ルブアメティア"
+        },
+        {
+          "count": 5,
+          "id": 10211,
+          "name": "泡錯の実"
+        },
+        {
+          "count": 5,
+          "id": 10737,
+          "name": "巨窟の壮壁"
+        }
+      ]
+    },
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "ls_sphere_thum_9_6.png",
+    "type": "ls_sphere",
+    "usage": []
+  }
+}

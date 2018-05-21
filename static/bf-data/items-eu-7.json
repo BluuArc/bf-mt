@@ -1,0 +1,5191 @@
+{
+  "70000": {
+    "desc": "Shows where the Boss is on the map for a short period of time.",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "903",
+          "unknown proc param": "1,480,0"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "enemy"
+    },
+    "id": 70000,
+    "max equipped": 10,
+    "max_stack": 99,
+    "name": "Beacon",
+    "raid": true,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 11016,
+          "name": "Smooth Stone"
+        },
+        {
+          "count": 1,
+          "id": 10610,
+          "name": "Acute Eye"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_70000.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "70100": {
+    "desc": "Guarantees escape from battle.",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "906",
+          "unknown proc param": ""
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "enemy"
+    },
+    "id": 70100,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "Smoke Bomb",
+    "raid": true,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 11016,
+          "name": "Smooth Stone"
+        },
+        {
+          "count": 1,
+          "id": 10309,
+          "name": "Smoky Drop"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_70100.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "70200": {
+    "desc": "Moves player to Camp.",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "905",
+          "unknown proc param": "1"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 70200,
+    "max equipped": 1,
+    "max_stack": 99,
+    "name": "Teleport",
+    "raid": true,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 11016,
+          "name": "Smooth Stone"
+        },
+        {
+          "count": 1,
+          "id": 10108,
+          "name": "Move Feather"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_70200.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "70300": {
+    "desc": "Replenishes the HP of all allies in the surrounding area.",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "901",
+          "unknown proc param": "100,120,0,0"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 70300,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "God Crystal",
+    "raid": true,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 11016,
+          "name": "Smooth Stone"
+        },
+        {
+          "count": 1,
+          "id": 20000,
+          "name": "Cure"
+        },
+        {
+          "count": 1,
+          "id": 10206,
+          "name": "Mow Nut"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_70300.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "70400": {
+    "desc": "Increases the Atk Power of all surrounding allies for some time.",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (100)": 10,
+          "buff timer (seconds)": 300,
+          "proc id": "902"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 70400,
+    "max equipped": 4,
+    "max_stack": 99,
+    "name": "Atk Crystal",
+    "raid": true,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 11016,
+          "name": "Smooth Stone"
+        },
+        {
+          "count": 1,
+          "id": 20400,
+          "name": "Atk Potion"
+        },
+        {
+          "count": 1,
+          "id": 10206,
+          "name": "Mow Nut"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_70400.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "70500": {
+    "desc": "Increases the Def Power of all surrounding allies for some time.",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "907",
+          "unknown proc param": "10,300,1"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 70500,
+    "max equipped": 4,
+    "max_stack": 99,
+    "name": "Def Crystal",
+    "raid": true,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 11016,
+          "name": "Smooth Stone"
+        },
+        {
+          "count": 1,
+          "id": 20600,
+          "name": "Def Potion"
+        },
+        {
+          "count": 1,
+          "id": 10206,
+          "name": "Mow Nut"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_70500.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "70600": {
+    "desc": "Identifies the location of undiscovered bosses for some time.",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "903",
+          "unknown proc param": "1,90,0"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "enemy"
+    },
+    "id": 70600,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "Detector",
+    "raid": true,
+    "rarity": 3,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 11016,
+          "name": "Smooth Stone"
+        },
+        {
+          "count": 1,
+          "id": 10610,
+          "name": "Acute Eye"
+        },
+        {
+          "count": 1,
+          "id": 10004,
+          "name": "Brown Grass"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_70600.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "700000": {
+    "desc": "Boosts Atk by 50% for first 3 turns",
+    "effect": [
+      {
+        "first x turns": 3,
+        "first x turns atk% (1)": 75,
+        "passive id": "21"
+      }
+    ],
+    "id": 700000,
+    "max_stack": 1,
+    "name": "Lovely Charm",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 5000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_4_8.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "700001": {
+    "desc": "Delicious orange confectionary. ",
+    "id": 700001,
+    "max_stack": 99,
+    "name": "Orange Treats",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_700001.png",
+    "type": "material",
+    "usage": []
+  },
+  "700002": {
+    "desc": "Delicious green confectionary. ",
+    "id": 700002,
+    "max_stack": 99,
+    "name": "Green Treats",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_700002.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 700032,
+        "name": "Ardent Coal"
+      }
+    ]
+  },
+  "700003": {
+    "desc": "Boost to all parameters (15%) & Boost to spark damage (50%) & Boost to critical damage (50%) & Boost to Crit rate (15%)\n",
+    "effect": [
+      {
+        "atk% buff": 15,
+        "crit% buff": 15,
+        "def% buff": 15,
+        "hp% buff": 15,
+        "passive id": "1",
+        "rec% buff": 15
+      },
+      {
+        "damage% for spark": 50,
+        "passive id": "31"
+      },
+      {
+        "crit multiplier%": 50,
+        "passive id": "34"
+      }
+    ],
+    "id": 700003,
+    "max_stack": 1,
+    "name": "Jack's Soul",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10000,
+    "sphere type": 2,
+    "sphere type text": "Critical",
+    "thumbnail": "sphere_thum_70_1.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "700004": {
+    "desc": "Boost to all parameters (15%) & Decrease in damage received from Fire & dark types (10%) & Boosts BB gauge fill rate (10%)",
+    "effect": [
+      {
+        "atk% buff": 15,
+        "def% buff": 15,
+        "hp% buff": 15,
+        "passive id": "1",
+        "rec% buff": 15
+      },
+      {
+        "dark resist%": 10,
+        "passive id": "5"
+      },
+      {
+        "fire resist%": 10,
+        "passive id": "5"
+      },
+      {
+        "bb gauge fill rate%": 10,
+        "passive id": "32"
+      }
+    ],
+    "id": 700004,
+    "max_stack": 1,
+    "name": "Skalmold's heart",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10000,
+    "sphere type": 10,
+    "sphere type text": "Damage Reducing",
+    "thumbnail": "sphere_thum_3_1.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "700005": {
+    "desc": "Green bauble for decorating a Christmas tree.",
+    "id": 700005,
+    "max_stack": 99,
+    "name": "Green Bauble",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_700005.png",
+    "type": "material",
+    "usage": []
+  },
+  "700006": {
+    "desc": "Red bauble for decorating a Christmas tree.",
+    "id": 700006,
+    "max_stack": 99,
+    "name": "Red Bauble",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_700006.png",
+    "type": "material",
+    "usage": []
+  },
+  "700007": {
+    "desc": "A fragment from a clay item. ",
+    "id": 700007,
+    "max_stack": 99,
+    "name": "Fragment",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 0,
+    "thumbnail": "item_thum_700007.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 700008,
+        "name": "The Grail"
+      }
+    ]
+  },
+  "700008": {
+    "desc": "Recovers HP when damaged (40% chance,  15% of DMG taken) & All status ailments invalid & Nullifies extra crit & Element based damage & +20% HP & +20% REC",
+    "effect": [
+      {
+        "dmg% to hp% when attacked chance%": 40,
+        "dmg% to hp% when attacked high": 15,
+        "dmg% to hp% when attacked low": 15,
+        "passive id": "24"
+      },
+      {
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "crit chance base resist%": 100,
+        "crit chance buffed resist%": 100,
+        "passive id": "53",
+        "strong base element damage resist%": 100,
+        "strong buffed element damage resist%": 100
+      },
+      {
+        "hp% buff": 20,
+        "passive id": "1",
+        "rec% buff": 20
+      }
+    ],
+    "id": 700008,
+    "max_stack": 1,
+    "name": "The Grail",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "2512",
+      "materials": [
+        {
+          "count": 5,
+          "id": 700007,
+          "name": "Fragment"
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 7,
+    "sphere type text": "HP Recovery",
+    "thumbnail": "sphere_thum_70_3.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "700009": {
+    "desc": "Boost to Atk (50%) & Boost to critical damage (50%) & boosts damage to weaker elements (40%) & Boost to Spark damage (30%)",
+    "effect": [
+      {
+        "atk% buff": 50,
+        "passive id": "1"
+      },
+      {
+        "crit multiplier%": 50,
+        "passive id": "34"
+      },
+      {
+        "dark units do extra elemental weakness dmg": true,
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 40,
+        "fire units do extra elemental weakness dmg": true,
+        "light units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "thunder units do extra elemental weakness dmg": true,
+        "water units do extra elemental weakness dmg": true
+      },
+      {
+        "damage% for spark": 30,
+        "passive id": "31"
+      }
+    ],
+    "id": 700009,
+    "max_stack": 1,
+    "name": "Excalibur",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20000,
+    "sphere type": 2,
+    "sphere type text": "Critical",
+    "thumbnail": "sphere_thum_70_4.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "700010": {
+    "desc": "Boosts Atk, Def, Rec, and max HP by 10%",
+    "effect": [
+      {
+        "atk% buff": 10,
+        "def% buff": 10,
+        "hp% buff": 10,
+        "passive id": "1",
+        "rec% buff": 10
+      }
+    ],
+    "id": 700010,
+    "max_stack": 1,
+    "name": "False Elgaia Emblem",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 30000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_4_5.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 700011,
+        "name": "True Elgaia Emblem"
+      }
+    ]
+  },
+  "700011": {
+    "desc": "Boosts DEF and REC by 10% & Reduction in BB gauge required for BB (20%) & Increases BB gauge after every turn (2-3BC)",
+    "effect": [
+      {
+        "def% buff": 10,
+        "passive id": "1",
+        "rec% buff": 10
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 20
+      },
+      {
+        "bc fill per turn": 2,
+        "passive id": "9"
+      }
+    ],
+    "id": 700011,
+    "max_stack": 1,
+    "name": "True Elgaia Emblem",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "70000",
+      "materials": [
+        {
+          "count": 6,
+          "id": 700010,
+          "name": "False Elgaia Emblem"
+        }
+      ]
+    },
+    "sell_price": 60000,
+    "sphere type": 6,
+    "sphere type text": "BB Gauge",
+    "thumbnail": "sphere_thum_4_4.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 700017,
+        "name": "Perfect Elgaia Emblem"
+      }
+    ]
+  },
+  "700012": {
+    "desc": "Boosts ATK and max HP by 10% & Spark damage boosts BB gauge (1BC) & Critical damage boosts BB gauge (2-3BC)",
+    "effect": [
+      {
+        "atk% buff": 10,
+        "hp% buff": 10,
+        "passive id": "1"
+      },
+      {
+        "bc fill on crit max": 3,
+        "bc fill on crit min": 2,
+        "bc fill on crit%": 100,
+        "passive id": "65"
+      },
+      {
+        "bc fill on spark high": 1,
+        "bc fill on spark low": 1,
+        "bc fill on spark%": 100,
+        "passive id": "47"
+      }
+    ],
+    "id": 700012,
+    "max_stack": 1,
+    "name": "Secret Elgaia Emblem",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 60000,
+    "sphere type": 6,
+    "sphere type text": "BB Gauge",
+    "thumbnail": "sphere_thum_4_4.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 700017,
+        "name": "Perfect Elgaia Emblem"
+      }
+    ]
+  },
+  "700013": {
+    "desc": "15% boost to max HP & recovers HP each turn (3,000~3,500 + 10% Rec) & Negates status ailments",
+    "effect": [
+      {
+        "hp% buff": 15,
+        "passive id": "1"
+      },
+      {
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 11,
+        "turn heal high": 3500,
+        "turn heal low": 3000
+      }
+    ],
+    "id": 700013,
+    "max_stack": 1,
+    "name": "Seed of Yggdrasil",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 0,
+    "sphere type": 5,
+    "sphere type text": "Status Ailments Resistant",
+    "thumbnail": "sphere_thum_2_5.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 700014,
+        "name": "Hope of Yggdrasil"
+      }
+    ]
+  },
+  "700014": {
+    "desc": "Boosts Atk, Def, Rec, and max HP (15%) & Nullifies all ailments and critical dmg & recovers HP each turn (3,000~3,500 + 10% Rec) & Boosts BB gauge when attacked (3-5BC)",
+    "effect": [
+      {
+        "atk% buff": 15,
+        "def% buff": 15,
+        "hp% buff": 15,
+        "passive id": "1",
+        "rec% buff": 15
+      },
+      {
+        "bc fill when attacked high": 5,
+        "bc fill when attacked low": 3,
+        "bc fill when attacked%": 100,
+        "passive id": "25"
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 11,
+        "turn heal high": 3500,
+        "turn heal low": 3000
+      },
+      {
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "unknown passive id": "52",
+        "unknown passive params": "1.5,999"
+      }
+    ],
+    "id": 700014,
+    "max_stack": 1,
+    "name": "Hope of Yggdrasil",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "70000",
+      "materials": [
+        {
+          "count": 3,
+          "id": 700013,
+          "name": "Seed of Yggdrasil"
+        }
+      ]
+    },
+    "sell_price": 0,
+    "sphere type": 5,
+    "sphere type text": "Status Ailments Resistant",
+    "thumbnail": "sphere_thum_70_5.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "700015": {
+    "desc": "The inert and vanquished Corruption. Your contact with it leaves you filled with a sensation of great purity.",
+    "id": 700015,
+    "max_stack": 99,
+    "name": "Corruption",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_700015.png",
+    "type": "material",
+    "usage": []
+  },
+  "700016": {
+    "desc": "Llewxam’s tears... at their touch, you feel great sadness overwhelming you.",
+    "id": 700016,
+    "max_stack": 99,
+    "name": "Tears",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_700016.png",
+    "type": "material",
+    "usage": []
+  },
+  "700017": {
+    "desc": "Boosts all stats by 15% & Reduce BB cost (20%) & Increases BB gauge every turn (2-3BC) & Spark (1BC) and Critical (2-3BC) damage boosts BB gauge",
+    "effect": [
+      {
+        "atk% buff": 15,
+        "def% buff": 15,
+        "hp% buff": 15,
+        "passive id": "1",
+        "rec% buff": 15
+      },
+      {
+        "bc fill on crit max": 3,
+        "bc fill on crit min": 2,
+        "bc fill on crit%": 100,
+        "passive id": "65"
+      },
+      {
+        "bc fill on spark high": 1,
+        "bc fill on spark low": 1,
+        "bc fill on spark%": 100,
+        "passive id": "47"
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 20
+      },
+      {
+        "bc fill per turn": 2,
+        "passive id": "9"
+      }
+    ],
+    "id": 700017,
+    "max_stack": 1,
+    "name": "Perfect Elgaia Emblem",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "70000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 700011,
+          "name": "True Elgaia Emblem"
+        },
+        {
+          "count": 1,
+          "id": 700012,
+          "name": "Secret Elgaia Emblem"
+        }
+      ]
+    },
+    "sell_price": 60000,
+    "sphere type": 6,
+    "sphere type text": "BB Gauge",
+    "thumbnail": "sphere_thum_4_4.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "700018": {
+    "desc": "Adds Chance of Ignoring Enemy's Def when attacking (25%) & Boost all parameters (15%) & Boosts BB gauge when attacking (7-8 BC)",
+    "effect": [
+      {
+        "atk% buff": 15,
+        "def% buff": 15,
+        "hp% buff": 15,
+        "passive id": "1",
+        "rec% buff": 15
+      },
+      {
+        "bc fill when attacking high": 8,
+        "bc fill when attacking low": 7,
+        "bc fill when attacking%": 100,
+        "passive id": "35"
+      },
+      {
+        "ignore def%": 25,
+        "passive id": "29"
+      }
+    ],
+    "id": 700018,
+    "max_stack": 1,
+    "name": "Blink's Glasses",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "70000",
+      "materials": [
+        {
+          "count": 3,
+          "id": 700019,
+          "name": "Glass Fragment"
+        }
+      ]
+    },
+    "sell_price": 0,
+    "sphere type": 12,
+    "sphere type text": "Defense Penetrating",
+    "thumbnail": "sphere_thum_3_4.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "700019": {
+    "desc": "Adds Chance of Ignoring Enemy's Defense when Attacking (10%) & Boost all parameters (10%)",
+    "effect": [
+      {
+        "atk% buff": 10,
+        "def% buff": 10,
+        "hp% buff": 10,
+        "passive id": "1",
+        "rec% buff": 10
+      },
+      {
+        "ignore def%": 10,
+        "passive id": "29"
+      }
+    ],
+    "id": 700019,
+    "max_stack": 1,
+    "name": "Glass Fragment",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 0,
+    "sphere type": 12,
+    "sphere type text": "Defense Penetrating",
+    "thumbnail": "sphere_thum_3_5.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 700018,
+        "name": "Blink's Glasses"
+      }
+    ]
+  },
+  "700021": {
+    "desc": "Boosts all stats (15%) & Boosts crit. dmg.(80%) & Boosts BB Atk (100%) & Chance of return 25% dmg. when attacked (25%)",
+    "effect": [
+      {
+        "atk% buff": 15,
+        "def% buff": 15,
+        "hp% buff": 15,
+        "passive id": "1",
+        "rec% buff": 15
+      },
+      {
+        "crit multiplier%": 80,
+        "passive id": "34"
+      },
+      {
+        "bb atk% buff": 100,
+        "passive id": "64",
+        "sbb atk% buff": 100,
+        "ubb atk% buff": 100
+      },
+      {
+        "dmg% reflect chance%": 25,
+        "dmg% reflect high": 25,
+        "dmg% reflect low": 25,
+        "passive id": "26"
+      }
+    ],
+    "id": 700021,
+    "max_stack": 1,
+    "name": "Immaculate",
+    "raid": false,
+    "rarity": 6,
+    "sell_price": 0,
+    "sphere type": 9,
+    "sphere type text": "Damage Reflecting",
+    "thumbnail": "sphere_thum_2_5.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "700023": {
+    "desc": "30% boost to Spark damage & 5% boost to ATK, DEF, REC, max HP",
+    "effect": [
+      {
+        "atk% buff": 5,
+        "crit% buff": 5,
+        "def% buff": 5,
+        "hp% buff": 5,
+        "passive id": "1",
+        "rec% buff": 5
+      },
+      {
+        "damage% for spark": 30,
+        "passive id": "31"
+      }
+    ],
+    "id": 700023,
+    "max_stack": 1,
+    "name": "Outsider's Badge",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 30000,
+    "sphere type": 11,
+    "sphere type text": "Spark",
+    "thumbnail": "sphere_thum_5_4.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 700024,
+        "name": "Challenger's Trophy"
+      }
+    ]
+  },
+  "700024": {
+    "desc": "50% boost to Spark damage & 10% boost to ATK, DEF, REC, max HP",
+    "effect": [
+      {
+        "atk% buff": 10,
+        "crit% buff": 10,
+        "def% buff": 10,
+        "hp% buff": 10,
+        "passive id": "1",
+        "rec% buff": 10
+      },
+      {
+        "damage% for spark": 50,
+        "passive id": "31"
+      }
+    ],
+    "id": 700024,
+    "max_stack": 1,
+    "name": "Challenger's Trophy",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "70000",
+      "materials": [
+        {
+          "count": 2,
+          "id": 700023,
+          "name": "Outsider's Badge"
+        }
+      ]
+    },
+    "sell_price": 60000,
+    "sphere type": 11,
+    "sphere type text": "Spark",
+    "thumbnail": "sphere_thum_5_5.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 700025,
+        "name": "The King of Fighters"
+      }
+    ]
+  },
+  "700025": {
+    "desc": "80% boost to Spark damage & boosts BC (15%), HC (20%) drop rate when spark & 15% boost to ATK, DEF, REC, max HP.",
+    "effect": [
+      {
+        "atk% buff": 15,
+        "def% buff": 15,
+        "hp% buff": 15,
+        "passive id": "1",
+        "rec% buff": 15
+      },
+      {
+        "bc drop% for spark": 15,
+        "damage% for spark": 80,
+        "hc drop% for spark": 20,
+        "passive id": "31"
+      }
+    ],
+    "id": 700025,
+    "max_stack": 1,
+    "name": "The King of Fighters",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "70000",
+      "materials": [
+        {
+          "count": 2,
+          "id": 700024,
+          "name": "Challenger's Trophy"
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 11,
+    "sphere type text": "Spark",
+    "thumbnail": "sphere_thum_5_6.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "700026": {
+    "desc": "A beautiful poem written on an flaming paper. The verses release serenity and power.",
+    "id": 700026,
+    "max_stack": 99,
+    "name": "Kyo's Poem",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_700026.png",
+    "type": "material",
+    "usage": []
+  },
+  "700027": {
+    "desc": "A statue representing a worthy fighter Rugal once defeated. You can feel Rugal's rage and inhumanity!",
+    "id": 700027,
+    "max_stack": 99,
+    "name": "Rugal's Trophy",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_700027.png",
+    "type": "material",
+    "usage": []
+  },
+  "700028": {
+    "desc": "A flask coming from a mysterious place...",
+    "id": 700028,
+    "max_stack": 99,
+    "name": "Destruction Essence",
+    "raid": false,
+    "rarity": 6,
+    "sell_price": 1,
+    "thumbnail": "item_thum_70600.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 700029,
+        "name": "Terrestrial Destroyer"
+      }
+    ]
+  },
+  "700029": {
+    "desc": "Boosts all stats (20%) & Boosts Spark damage (30%)",
+    "effect": [
+      {
+        "atk% buff": 20,
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "rec% buff": 20
+      },
+      {
+        "damage% for spark": 30,
+        "passive id": "31"
+      }
+    ],
+    "id": 700029,
+    "max_stack": 1,
+    "name": "Terrestrial Destroyer",
+    "raid": false,
+    "rarity": 4,
+    "recipe": {
+      "karma": "9999999",
+      "materials": [
+        {
+          "count": 1,
+          "id": 700028,
+          "name": "Destruction Essence"
+        }
+      ]
+    },
+    "sell_price": 50000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_4_7.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 700030,
+        "name": "Astral Destoyer"
+      }
+    ]
+  },
+  "700030": {
+    "desc": "Boosts all stats (35%) & Boosts Spark damage (50%) & Negates status ailments",
+    "effect": [
+      {
+        "atk% buff": 35,
+        "def% buff": 35,
+        "hp% buff": 35,
+        "passive id": "1",
+        "rec% buff": 35
+      },
+      {
+        "damage% for spark": 50,
+        "passive id": "31"
+      },
+      {
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      }
+    ],
+    "id": 700030,
+    "max_stack": 1,
+    "name": "Astral Destoyer",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "99999999",
+      "materials": [
+        {
+          "count": 1,
+          "id": 700029,
+          "name": "Terrestrial Destroyer"
+        }
+      ]
+    },
+    "sell_price": 100000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_4_5.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 700031,
+        "name": "Galactic Destroyer"
+      }
+    ]
+  },
+  "700031": {
+    "desc": "Boosts all stats (70%) & Boosts Spark damage (150%) & Negates status ailments & Boosts BB gauge on Spark (1-2BC)",
+    "effect": [
+      {
+        "atk% buff": 70,
+        "def% buff": 70,
+        "hp% buff": 70,
+        "passive id": "1",
+        "rec% buff": 70
+      },
+      {
+        "damage% for spark": 150,
+        "passive id": "31"
+      },
+      {
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "bc fill on spark high": 2,
+        "bc fill on spark low": 1,
+        "bc fill on spark%": 100,
+        "passive id": "47"
+      }
+    ],
+    "id": 700031,
+    "max_stack": 1,
+    "name": "Galactic Destroyer",
+    "raid": false,
+    "rarity": 6,
+    "recipe": {
+      "karma": "999999999",
+      "materials": [
+        {
+          "count": 1,
+          "id": 700030,
+          "name": "Astral Destoyer"
+        }
+      ]
+    },
+    "sell_price": 200000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_4_4.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "700032": {
+    "desc": "Boost to all stats (15%) & Boost to BB gauge fill rate (25%) and BC drop rate (10%) & Fill BB gauge when taking damage (2-3 BC)",
+    "effect": [
+      {
+        "atk% buff": 15,
+        "def% buff": 15,
+        "hp% buff": 15,
+        "passive id": "1",
+        "rec% buff": 15
+      },
+      {
+        "bb gauge fill rate%": 25,
+        "passive id": "32"
+      },
+      {
+        "bc drop rate% buff": 10,
+        "passive id": "19"
+      },
+      {
+        "bc fill when attacked high": 3,
+        "bc fill when attacked low": 2,
+        "bc fill when attacked%": 100,
+        "passive id": "25"
+      }
+    ],
+    "id": 700032,
+    "max_stack": 1,
+    "name": "Ardent Coal",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "66666",
+      "materials": [
+        {
+          "count": 99,
+          "id": 700002,
+          "name": "Green Treats"
+        },
+        {
+          "count": 1,
+          "id": 700033,
+          "name": "Pumpkin Seed"
+        },
+        {
+          "count": 1,
+          "id": 34803,
+          "name": "Tech Gizmo 2"
+        },
+        {
+          "count": 5,
+          "id": 10904,
+          "name": "Comet Bug"
+        },
+        {
+          "count": 5,
+          "id": 10408,
+          "name": "Hades Claw"
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 3,
+    "sphere type text": "Drop",
+    "thumbnail": "sphere_thum_700032.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "700033": {
+    "desc": "A strange pumpkin seed possessed by the soul of a warrior.",
+    "id": 700033,
+    "max_stack": 99,
+    "name": "Pumpkin Seed",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_306.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 700032,
+        "name": "Ardent Coal"
+      }
+    ]
+  },
+  "700034": {
+    "desc": "Collect these essences to craft the Soul of Krantz.",
+    "id": 700034,
+    "max_stack": 99,
+    "name": "Essence of Krantz",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_700034.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 700037,
+        "name": "Soul of Krantz"
+      }
+    ]
+  },
+  "700035": {
+    "desc": "Collect these essences to craft the Soul of Sirius.",
+    "id": 700035,
+    "max_stack": 99,
+    "name": "Essence of Sirius",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_700035.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 700038,
+        "name": "Soul of Sirius"
+      }
+    ]
+  },
+  "700036": {
+    "desc": "Collect these essences to craft the Soul of Avant.",
+    "id": 700036,
+    "max_stack": 99,
+    "name": "Essence of Avant",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_700036.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 700039,
+        "name": "Soul of Avant"
+      }
+    ]
+  },
+  "700037": {
+    "desc": "Boosts all stats (10%)",
+    "effect": [
+      {
+        "atk% buff": 10,
+        "def% buff": 10,
+        "hp% buff": 10,
+        "passive id": "1",
+        "rec% buff": 10
+      }
+    ],
+    "id": 700037,
+    "max_stack": 1,
+    "name": "Soul of Krantz",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "50000",
+      "materials": [
+        {
+          "count": 7,
+          "id": 700034,
+          "name": "Essence of Krantz"
+        },
+        {
+          "count": 5,
+          "id": 11015,
+          "name": "Dream Stone"
+        },
+        {
+          "count": 3,
+          "id": 10809,
+          "name": "Forever Bone"
+        }
+      ]
+    },
+    "sell_price": 50000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "item_thum_700037.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "700038": {
+    "desc": "Boosts all stats (10%)",
+    "effect": [
+      {
+        "atk% buff": 10,
+        "def% buff": 10,
+        "hp% buff": 10,
+        "passive id": "1",
+        "rec% buff": 10
+      }
+    ],
+    "id": 700038,
+    "max_stack": 1,
+    "name": "Soul of Sirius",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "50000",
+      "materials": [
+        {
+          "count": 7,
+          "id": 700035,
+          "name": "Essence of Sirius"
+        },
+        {
+          "count": 3,
+          "id": 10626,
+          "name": "Heavenly Eye"
+        },
+        {
+          "count": 10,
+          "id": 10514,
+          "name": "Phantom Fang"
+        }
+      ]
+    },
+    "sell_price": 50000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "item_thum_700038.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "700039": {
+    "desc": "Boosts all stats (10%)",
+    "effect": [
+      {
+        "atk% buff": 10,
+        "def% buff": 10,
+        "hp% buff": 10,
+        "passive id": "1",
+        "rec% buff": 10
+      }
+    ],
+    "id": 700039,
+    "max_stack": 1,
+    "name": "Soul of Avant",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "50000",
+      "materials": [
+        {
+          "count": 7,
+          "id": 700036,
+          "name": "Essence of Avant"
+        },
+        {
+          "count": 3,
+          "id": 10611,
+          "name": "Grief Eye"
+        },
+        {
+          "count": 10,
+          "id": 10510,
+          "name": "Purple Fang"
+        }
+      ]
+    },
+    "sell_price": 50000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "item_thum_700039.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "700040": {
+    "desc": "A seal offered to those who are worthy.",
+    "id": 700040,
+    "max_stack": 99,
+    "name": "Courage's Seal",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 500,
+    "thumbnail": "item_thum_70300.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 818990,
+        "name": "Courage Aegis"
+      }
+    ]
+  },
+  "700041": {
+    "desc": "The Chocolate that lovers offer each other during an ancient celebration.",
+    "id": 700041,
+    "max_stack": 99,
+    "name": "Lovers' Chocolate",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_700041.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 700043,
+        "name": "Sergio's Wedding Ring"
+      },
+      {
+        "id": 700044,
+        "name": "Julia's Wedding Ring"
+      },
+      {
+        "id": 700070,
+        "name": "Julia's vow"
+      },
+      {
+        "id": 700071,
+        "name": "Sergio's vow"
+      },
+      {
+        "id": 700073,
+        "name": "Wedding announcement"
+      }
+    ]
+  },
+  "700042": {
+    "desc": "Evolve Don Juan Sergio and spread love throughout Grand Gaia.",
+    "id": 700042,
+    "max_stack": 99,
+    "name": "Love Crystal",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_700042.png",
+    "type": "evomat",
+    "usage": []
+  },
+  "700043": {
+    "desc": "30% all parameters (male unit only) & boosts Spark damage (50%) and BB ATK (100%) 2 turns when Sparks have exceeded 20",
+    "effect": [
+      {
+        "atk% buff": 30,
+        "def% buff": 30,
+        "gender required": "male",
+        "hp% buff": 30,
+        "passive id": "42",
+        "rec% buff": 30
+      },
+      {
+        "buff": {
+          "buff turns (40)": "2",
+          "spark dmg% buff": 50
+        },
+        "passive id": "86",
+        "spark count buff activation": 20
+      },
+      {
+        "buff": {
+          "bb atk% buff": 100,
+          "buff turns (72)": "2",
+          "sbb atk% buff": 100,
+          "ubb atk% buff": 100
+        },
+        "passive id": "86",
+        "spark count buff activation": 20
+      }
+    ],
+    "id": 700043,
+    "max_stack": 1,
+    "name": "Sergio's Wedding Ring",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 50,
+          "id": 700041,
+          "name": "Lovers' Chocolate"
+        }
+      ]
+    },
+    "sell_price": 0,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_5_2.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 700071,
+        "name": "Sergio's vow"
+      }
+    ]
+  },
+  "700044": {
+    "desc": "30% boost to all parameters (female unit only) & boosts Spark damage (50%) and BB ATK (100%) when HP is full",
+    "effect": [
+      {
+        "atk% buff": 30,
+        "def% buff": 30,
+        "gender required": "female",
+        "hp% buff": 30,
+        "passive id": "42",
+        "rec% buff": 30
+      },
+      {
+        "bb atk% add": 100,
+        "hp threshold": 100,
+        "passive id": "103",
+        "sbb atk% add": 100,
+        "triggered when hp": "higher",
+        "ubb atk% add": 100
+      },
+      {
+        "damage% for spark": 50,
+        "hp above % buff requirement": 100,
+        "passive id": "104"
+      }
+    ],
+    "id": 700044,
+    "max_stack": 1,
+    "name": "Julia's Wedding Ring",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 50,
+          "id": 700041,
+          "name": "Lovers' Chocolate"
+        }
+      ]
+    },
+    "sell_price": 0,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_5_4.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 700070,
+        "name": "Julia's vow"
+      }
+    ]
+  },
+  "700045": {
+    "desc": "An orb filled with the essence of Power itself.",
+    "id": 700045,
+    "max_stack": 99,
+    "name": "Power Essence",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_22400.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 819007,
+        "name": "Orochi's Crest"
+      }
+    ]
+  },
+  "700046": {
+    "desc": "Old legends tell that this jewel holds the power of seas and oceans.",
+    "id": 700046,
+    "max_stack": 99,
+    "name": "Jewel of the Waves",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_20961.png",
+    "type": "evomat",
+    "usage": []
+  },
+  "700047": {
+    "desc": "Collect 40 feathers to craft the item required to evolve Migina.",
+    "id": 700047,
+    "max_stack": 99,
+    "name": "Feather of the Phoenix",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 100,
+    "thumbnail": "item_thum_700047.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 700048,
+        "name": "Phoenix Gem"
+      }
+    ]
+  },
+  "700048": {
+    "desc": "Allows Migina to evolve.",
+    "id": 700048,
+    "max_stack": 99,
+    "name": "Phoenix Gem",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 40,
+          "id": 700047,
+          "name": "Feather of the Phoenix"
+        }
+      ]
+    },
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110000.png",
+    "type": "evomat",
+    "usage": []
+  },
+  "700049": {
+    "desc": "Collect these pumpkins to craft the Spooky Lantern.",
+    "id": 700049,
+    "max_stack": 99,
+    "name": "Spooky Pumpkin",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_700049.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 700057,
+        "name": "Spooky Lantern"
+      }
+    ]
+  },
+  "700050": {
+    "desc": "Collect 8 emblems to craft the Perfect Ishgria Emblem.",
+    "id": 700050,
+    "max_stack": 99,
+    "name": "Ishgria Emblem",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 100,
+    "thumbnail": "item_thum_20950.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 700051,
+        "name": "Perfect Ishgria Emblem"
+      }
+    ]
+  },
+  "700051": {
+    "desc": "Boosts all parameters (50%) & damage reduction (5%) & boosts Spark damage (120%) & boosts BB gauge each turn (8 BC) & raises ATK parameters to 150000",
+    "effect": [
+      {
+        "atk% buff": 50,
+        "def% buff": 50,
+        "hp% buff": 50,
+        "passive id": "1",
+        "rec% buff": 50
+      },
+      {
+        "dmg% mitigation": 5,
+        "passive id": "8"
+      },
+      {
+        "damage% for spark": 120,
+        "passive id": "31"
+      },
+      {
+        "bc fill per turn": 8,
+        "passive id": "9"
+      },
+      {
+        "increase atk cap": 150000,
+        "passive id": "143"
+      }
+    ],
+    "id": 700051,
+    "max_stack": 99,
+    "name": "Perfect Ishgria Emblem",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 8,
+          "id": 700050,
+          "name": "Ishgria Emblem"
+        }
+      ]
+    },
+    "sell_price": 10000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_1_6.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "700052": {
+    "desc": "Boosts all parameters (30%) & boosts BB ATK (200%) when HP are full & negates elemental damage & reduce damage taken (5%)",
+    "effect": [
+      {
+        "atk% buff": 30,
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "rec% buff": 30
+      },
+      {
+        "bb atk% add": 200,
+        "hp threshold": 100,
+        "passive id": "103",
+        "sbb atk% add": 200,
+        "triggered when hp": "higher",
+        "ubb atk% add": 200
+      },
+      {
+        "passive id": "53",
+        "strong base element damage resist%": 100,
+        "strong buffed element damage resist%": 100
+      },
+      {
+        "dmg% mitigation": 5,
+        "passive id": "8"
+      }
+    ],
+    "id": 700052,
+    "max_stack": 1,
+    "name": "Super Spookfest Lantern",
+    "raid": false,
+    "rarity": 6,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 16,
+          "id": 700057,
+          "name": "Spooky Lantern"
+        },
+        {
+          "count": 1,
+          "id": 700056,
+          "name": "Super Spookfest Ticket"
+        }
+      ]
+    },
+    "sell_price": 300000,
+    "sphere type": 10,
+    "sphere type text": "Damage Reducing",
+    "thumbnail": "item_thum_700052.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "700053": {
+    "desc": "Revives one ally from KO status (at 75% HP).",
+    "effect": {
+      "effect": [
+        {
+          "proc id": "12",
+          "revive to hp%": 75
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 700053,
+    "max equipped": 2,
+    "max_stack": 99,
+    "name": "Grail's Elixir",
+    "raid": false,
+    "rarity": 4,
+    "sell_price": 300,
+    "thumbnail": "item_thum_700053.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "700054": {
+    "desc": "Use this item to craft Book of E.N.D.",
+    "id": 700054,
+    "max_stack": 99,
+    "name": "Dark Aqua",
+    "raid": false,
+    "rarity": 4,
+    "sell_price": 100,
+    "thumbnail": "item_thum_405.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 819123,
+        "name": "Book of E.N.D"
+      }
+    ]
+  },
+  "700055": {
+    "desc": "Use this item to craft Diamond Key",
+    "id": 700055,
+    "max_stack": 99,
+    "name": "Light Aqua",
+    "raid": false,
+    "rarity": 4,
+    "sell_price": 100,
+    "thumbnail": "item_thum_404.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 819122,
+        "name": "Diamond Key"
+      }
+    ]
+  },
+  "700056": {
+    "desc": "Gives you permission from Htilit to craft the Super Spookfest Lantern.",
+    "id": 700056,
+    "max_stack": 99,
+    "name": "Super Spookfest Ticket",
+    "raid": false,
+    "rarity": 5,
+    "sell_price": 50,
+    "thumbnail": "item_thum_700050.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 700052,
+        "name": "Super Spookfest Lantern"
+      }
+    ]
+  },
+  "700057": {
+    "desc": "Combine 16 Spooky Lantern Spheres with a Super Spookfest Ticket to obtain the Super Spookfest Lantern Sphere,",
+    "id": 700057,
+    "max_stack": 99,
+    "name": "Spooky Lantern",
+    "raid": false,
+    "rarity": 4,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 99,
+          "id": 700049,
+          "name": "Spooky Pumpkin"
+        }
+      ]
+    },
+    "sell_price": 150000,
+    "thumbnail": "item_thum_700051.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 700052,
+        "name": "Super Spookfest Lantern"
+      }
+    ]
+  },
+  "700058": {
+    "desc": "Use this material to make the \"Siegfried's Fanged Gun\".",
+    "id": 700058,
+    "max_stack": 99,
+    "name": "Dragon's tooth",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 250,
+    "thumbnail": "item_thum_700058.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 700061,
+        "name": "Siegfried's Fanged Gun"
+      }
+    ]
+  },
+  "700059": {
+    "desc": "Use this material to make the \"Siegfried's Propelled Shield\" sphere.",
+    "id": 700059,
+    "max_stack": 99,
+    "name": "Dragon's horn",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 250,
+    "thumbnail": "item_thum_700059.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 700062,
+        "name": "Siegfried's Propelled Shield"
+      }
+    ]
+  },
+  "700060": {
+    "desc": "Use this material to make the \"Siegfried's Doping Shoulder Blade\" sphere.",
+    "id": 700060,
+    "max_stack": 99,
+    "name": "Dragon's blood",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 250,
+    "thumbnail": "item_thum_700060.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 700063,
+        "name": "Siegfried's Doping Spaulder"
+      }
+    ]
+  },
+  "700061": {
+    "desc": "Boosts all parameters (15%) & boosts ATK (100%) when BB gauge is over 50% & boosts BB ATK (100%) & raises ATK parameter limits to 150000",
+    "effect": [
+      {
+        "atk% buff": 15,
+        "def% buff": 15,
+        "hp% buff": 15,
+        "passive id": "1",
+        "rec% buff": 15
+      },
+      {
+        "atk% buff": 100,
+        "bb gauge above % buff requirement": 50,
+        "passive id": "30"
+      },
+      {
+        "increase atk cap": 150000,
+        "passive id": "143"
+      },
+      {
+        "bb atk% buff": 100,
+        "passive id": "64",
+        "sbb atk% buff": 100,
+        "ubb atk% buff": 100
+      }
+    ],
+    "id": 700061,
+    "max_stack": 1,
+    "name": "Siegfried's Fanged Gun",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 3,
+          "id": 700065,
+          "name": "Siegfried's Hybrid Weapon"
+        },
+        {
+          "count": 5,
+          "id": 700058,
+          "name": "Dragon's tooth"
+        }
+      ]
+    },
+    "sell_price": 50000,
+    "sphere type": 13,
+    "sphere type text": "Atk Boosting",
+    "thumbnail": "sphere_thum_5_4.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "700062": {
+    "desc": "Boosts all parameters (15%) & boosts DEF relative to remaining HP (50-100%) & negates ATK, DEF, REC reducing effect & resistance against 1 KO attack after activating OD",
+    "effect": [
+      {
+        "atk% buff": 15,
+        "def% buff": 15,
+        "hp% buff": 15,
+        "passive id": "1",
+        "rec% buff": 15
+      },
+      {
+        "unknown passive id": "106",
+        "unknown passive params": "12,100,1,100,-1"
+      },
+      {
+        "atk down resist%": 100,
+        "def down resist%": 100,
+        "passive id": "73",
+        "rec down resist%": 100
+      },
+      {
+        "buff proportional to hp": "lost",
+        "def% base buff": 50,
+        "def% extra buff based on hp": 50,
+        "passive id": "46"
+      }
+    ],
+    "id": 700062,
+    "max_stack": 1,
+    "name": "Siegfried's Propelled Shield",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 3,
+          "id": 700065,
+          "name": "Siegfried's Hybrid Weapon"
+        },
+        {
+          "count": 5,
+          "id": 700059,
+          "name": "Dragon's horn"
+        }
+      ]
+    },
+    "sell_price": 50000,
+    "sphere type": 14,
+    "sphere type text": "Special",
+    "thumbnail": "sphere_thum_5_5.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "700063": {
+    "desc": "Boosts all parameters (15%) & negates all status ailments & boosts OD gauge fill rate (30%) & damage taken boosts BB gauge (3 BC) & adds status ailment removal effect to BB/SBB",
+    "effect": [
+      {
+        "atk% buff": 15,
+        "def% buff": 15,
+        "hp% buff": 15,
+        "passive id": "1",
+        "rec% buff": 15
+      },
+      {
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "bc fill when attacked high": 3,
+        "bc fill when attacked low": 3,
+        "bc fill when attacked%": 100,
+        "passive id": "25"
+      },
+      {
+        "od fill rate%": 30,
+        "passive id": "70"
+      },
+      {
+        "passive id": "66",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "10",
+            "remove all status ailments": true,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": 700063,
+    "max_stack": 1,
+    "name": "Siegfried's Doping Spaulder",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 3,
+          "id": 700065,
+          "name": "Siegfried's Hybrid Weapon"
+        },
+        {
+          "count": 5,
+          "id": 700060,
+          "name": "Dragon's blood"
+        }
+      ]
+    },
+    "sell_price": 50000,
+    "sphere type": 5,
+    "sphere type text": "Status Ailments Resistant",
+    "thumbnail": "sphere_thum_5_2.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "700064": {
+    "desc": "Use this material to make the ”Siegfried's Hybrid Weapon” sphere.",
+    "id": 700064,
+    "max_stack": 99,
+    "name": "Dragon's scale",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_700064.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 700065,
+        "name": "Siegfried's Hybrid Weapon"
+      }
+    ]
+  },
+  "700065": {
+    "desc": "Increases all statistics (15%)",
+    "effect": [
+      {
+        "atk% buff": 15,
+        "def% buff": 15,
+        "hp% buff": 15,
+        "passive id": "1",
+        "rec% buff": 15
+      }
+    ],
+    "id": 700065,
+    "max_stack": 1,
+    "name": "Siegfried's Hybrid Weapon",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "50000",
+      "materials": [
+        {
+          "count": 35,
+          "id": 700064,
+          "name": "Dragon's scale"
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_4_5.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 700061,
+        "name": "Siegfried's Fanged Gun"
+      },
+      {
+        "id": 700062,
+        "name": "Siegfried's Propelled Shield"
+      },
+      {
+        "id": 700063,
+        "name": "Siegfried's Doping Spaulder"
+      }
+    ]
+  },
+  "700066": {
+    "desc": "Obtain 6 copies of this item to craft a powerful Sphere.",
+    "id": 700066,
+    "max_stack": 99,
+    "name": "Omega Essence",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 0,
+    "thumbnail": "item_thum_70600.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 700067,
+        "name": "Siegfried Draconic Rage"
+      }
+    ]
+  },
+  "700067": {
+    "desc": "Boosts to all parameters (45%) & boosts ATK (50%) when BB gauge is full & boost BB ATK (150%) when HP are above 50% & boost elemental damage (100%)",
+    "effect": [
+      {
+        "atk% buff": 45,
+        "def% buff": 45,
+        "hp% buff": 45,
+        "passive id": "1",
+        "rec% buff": 45
+      },
+      {
+        "atk% buff": 50,
+        "bb gauge above % buff requirement": 100,
+        "passive id": "30"
+      },
+      {
+        "bb atk% add": 200,
+        "hp threshold": 100,
+        "passive id": "103",
+        "sbb atk% add": 200,
+        "triggered when hp": "higher",
+        "ubb atk% add": 200
+      },
+      {
+        "dark units do extra elemental weakness dmg": true,
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 100,
+        "fire units do extra elemental weakness dmg": true,
+        "light units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "thunder units do extra elemental weakness dmg": true,
+        "water units do extra elemental weakness dmg": true
+      }
+    ],
+    "id": 700067,
+    "max_stack": 1,
+    "name": "Siegfried Draconic Rage",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 6,
+          "id": 700066,
+          "name": "Omega Essence"
+        }
+      ]
+    },
+    "sell_price": 50000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_5_6.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "700068": {
+    "desc": "Premium Skin Material: Via Evolution, use on a \"Dark Path Arthur\" Unit to activate the following skin: \"Hope Champion\". (This permanently changes its name and art/pixel art)",
+    "id": 700068,
+    "max_stack": 99,
+    "name": "Mystical Stone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_20840.png",
+    "type": "evomat",
+    "usage": []
+  },
+  "700069": {
+    "desc": "This precious stone celebrates an amazing BFRPG year full of exciting releases! Distributed in the Special 2017 Parade, it grants exceptional rewards if you have enough of it!",
+    "id": 700069,
+    "max_stack": 99,
+    "name": "2017 Jewel of Remembrance",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1107.png",
+    "type": "material",
+    "usage": []
+  },
+  "700070": {
+    "desc": "Boosts all parameters (35%, female unit only) & boosts Spark damage (60%) & boosts BB ATK (120%) and BB gauge each turn (4 BC)",
+    "effect": [
+      {
+        "atk% buff": 35,
+        "def% buff": 35,
+        "gender required": "female",
+        "hp% buff": 35,
+        "passive id": "42",
+        "rec% buff": 35
+      },
+      {
+        "bb atk% add": 120,
+        "hp threshold": 50,
+        "passive id": "103",
+        "sbb atk% add": 120,
+        "triggered when hp": "higher",
+        "ubb atk% add": 120
+      },
+      {
+        "damage% for spark": 60,
+        "hp above % buff requirement": 50,
+        "passive id": "104"
+      },
+      {
+        "bc fill per turn": 4,
+        "passive id": "9"
+      }
+    ],
+    "id": 700070,
+    "max_stack": 1,
+    "name": "Julia's vow",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "50000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 700044,
+          "name": "Julia's Wedding Ring"
+        },
+        {
+          "count": 70,
+          "id": 700041,
+          "name": "Lovers' Chocolate"
+        }
+      ]
+    },
+    "sell_price": 0,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_4_8.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 700073,
+        "name": "Wedding announcement"
+      }
+    ]
+  },
+  "700071": {
+    "desc": "Boosts all parameters (35%, male unit only) & boosts Spark damage (60%) & boosts BB ATK (120%) and elemental damage (50%) for 2 turns when Sparks have exceeded 15",
+    "effect": [
+      {
+        "atk% buff": 35,
+        "def% buff": 35,
+        "gender required": "male",
+        "hp% buff": 35,
+        "passive id": "42",
+        "rec% buff": 35
+      },
+      {
+        "buff": {
+          "buff turns (40)": "2",
+          "spark dmg% buff": 60
+        },
+        "passive id": "86",
+        "spark count buff activation": 15
+      },
+      {
+        "buff": {
+          "bb atk% buff": 120,
+          "buff turns (72)": "2",
+          "sbb atk% buff": 120,
+          "ubb atk% buff": 120
+        },
+        "passive id": "86",
+        "spark count buff activation": 15
+      },
+      {
+        "buff": {
+          "buff turns (85)": "2",
+          "unknown buff id": "85",
+          "unknown buff params": "0.5"
+        },
+        "passive id": "86",
+        "spark count buff activation": 15
+      },
+      {
+        "buff": {
+          "buff turns (86)": "2",
+          "unknown buff id": "86",
+          "unknown buff params": "0.5"
+        },
+        "passive id": "86",
+        "spark count buff activation": 15
+      },
+      {
+        "buff": {
+          "buff turns (87)": "2",
+          "unknown buff id": "87",
+          "unknown buff params": "0.5"
+        },
+        "passive id": "86",
+        "spark count buff activation": 15
+      },
+      {
+        "buff": {
+          "buff turns (88)": "2",
+          "unknown buff id": "88",
+          "unknown buff params": "0.5"
+        },
+        "passive id": "86",
+        "spark count buff activation": 15
+      },
+      {
+        "buff": {
+          "buff turns (89)": "2",
+          "unknown buff id": "89",
+          "unknown buff params": "0.5"
+        },
+        "passive id": "86",
+        "spark count buff activation": 15
+      },
+      {
+        "buff": {
+          "buff turns (90)": "2",
+          "unknown buff id": "90",
+          "unknown buff params": "0.5"
+        },
+        "passive id": "86",
+        "spark count buff activation": 15
+      }
+    ],
+    "id": 700071,
+    "max_stack": 1,
+    "name": "Sergio's vow",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "50000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 700043,
+          "name": "Sergio's Wedding Ring"
+        },
+        {
+          "count": 70,
+          "id": 700041,
+          "name": "Lovers' Chocolate"
+        }
+      ]
+    },
+    "sell_price": 0,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_1_8.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 700073,
+        "name": "Wedding announcement"
+      }
+    ]
+  },
+  "700072": {
+    "desc": "The bouquet will allow you to craft the ultimate lovers' sphere!",
+    "id": 700072,
+    "max_stack": 99,
+    "name": "The bride's bouquet",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 0,
+    "thumbnail": "item_thum_700072.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 700073,
+        "name": "Wedding announcement"
+      }
+    ]
+  },
+  "700073": {
+    "desc": "Boosts all parameters (45%) & boosts Spark damage (80%), BB ATK (140%) and elemental damage (100%) & boosts BB gauge each turn (8 BC)",
+    "effect": [
+      {
+        "atk% buff": 45,
+        "def% buff": 45,
+        "hp% buff": 45,
+        "passive id": "1",
+        "rec% buff": 45
+      },
+      {
+        "bc fill per turn": 8,
+        "passive id": "9"
+      },
+      {
+        "damage% for spark": 80,
+        "passive id": "31"
+      },
+      {
+        "dark units do extra elemental weakness dmg": true,
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 100,
+        "fire units do extra elemental weakness dmg": true,
+        "light units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "thunder units do extra elemental weakness dmg": true,
+        "water units do extra elemental weakness dmg": true
+      },
+      {
+        "bb atk% buff": 140,
+        "passive id": "64",
+        "sbb atk% buff": 140,
+        "ubb atk% buff": 140
+      }
+    ],
+    "id": 700073,
+    "max_stack": 1,
+    "name": "Wedding announcement",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "50000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 700071,
+          "name": "Sergio's vow"
+        },
+        {
+          "count": 1,
+          "id": 700070,
+          "name": "Julia's vow"
+        },
+        {
+          "count": 99,
+          "id": 700041,
+          "name": "Lovers' Chocolate"
+        },
+        {
+          "count": 1,
+          "id": 700072,
+          "name": "The bride's bouquet"
+        }
+      ]
+    },
+    "sell_price": 0,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_3_8.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "700074": {
+    "desc": "Spring is here! The wind sweeps petals everywhere in Grand Gaia!",
+    "id": 700074,
+    "max_stack": 99,
+    "name": "Spring Petal",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 100,
+    "thumbnail": "item_thum_107.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 700075,
+        "name": "Spring Ladybug"
+      }
+    ]
+  },
+  "700075": {
+    "desc": "Ladybugs mean that spring has landed and symbolize happiness!",
+    "id": 700075,
+    "max_stack": 99,
+    "name": "Spring Ladybug",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 99,
+          "id": 700074,
+          "name": "Spring Petal"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_1000.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 700076,
+        "name": "Spring Shard"
+      }
+    ]
+  },
+  "700076": {
+    "desc": "Boosts all parameters (30%) & reduces BB gauge required for BB (20%) & boosts BB gauge each turn (4 BC) & Spark damage and damage taken boosts BB gauge (1 BC and 3-4 BC) & boosts elemental damage (50%)",
+    "effect": [
+      {
+        "atk% buff": 30,
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "rec% buff": 30
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 20
+      },
+      {
+        "bc fill per turn": 4,
+        "passive id": "9"
+      },
+      {
+        "bc fill on spark high": 1,
+        "bc fill on spark low": 1,
+        "bc fill on spark%": 100,
+        "passive id": "47"
+      },
+      {
+        "bc fill when attacked high": 4,
+        "bc fill when attacked low": 3,
+        "bc fill when attacked%": 100,
+        "passive id": "25"
+      },
+      {
+        "dark units do extra elemental weakness dmg": true,
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 50,
+        "fire units do extra elemental weakness dmg": true,
+        "light units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "thunder units do extra elemental weakness dmg": true,
+        "water units do extra elemental weakness dmg": true
+      }
+    ],
+    "id": 700076,
+    "max_stack": 1,
+    "name": "Spring Shard",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 16,
+          "id": 700075,
+          "name": "Spring Ladybug"
+        }
+      ]
+    },
+    "sell_price": 10000,
+    "sphere type": 6,
+    "sphere type text": "BB Gauge",
+    "thumbnail": "sphere_thum_5_2.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701000": {
+    "desc": "This is a part of a great shining spirit. It is a lighthouse for the dead.",
+    "id": 701000,
+    "max_stack": 99,
+    "name": "Valkyrie Spirit",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_701000.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 701001,
+        "name": "Valhalla Insignia"
+      }
+    ]
+  },
+  "701001": {
+    "desc": "Boosts all stats (10%)",
+    "effect": [
+      {
+        "atk% buff": 10,
+        "def% buff": 10,
+        "hp% buff": 10,
+        "passive id": "1",
+        "rec% buff": 10
+      }
+    ],
+    "id": 701001,
+    "max_stack": 1,
+    "name": "Valhalla Insignia",
+    "raid": false,
+    "rarity": 3,
+    "recipe": {
+      "karma": "50000",
+      "materials": [
+        {
+          "count": 35,
+          "id": 701000,
+          "name": "Valkyrie Spirit"
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_2_5.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 701002,
+        "name": "Odin's Ring"
+      },
+      {
+        "id": 701003,
+        "name": "Surt's Blade"
+      }
+    ]
+  },
+  "701002": {
+    "desc": "Boosts all stats (30%) & Boosts BB gauge each turn (5 BC) & Negates all status ailments",
+    "effect": [
+      {
+        "atk% buff": 30,
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "rec% buff": 30
+      },
+      {
+        "bc fill per turn": 4,
+        "passive id": "9"
+      },
+      {
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      }
+    ],
+    "id": 701002,
+    "max_stack": 1,
+    "name": "Odin's Ring",
+    "raid": true,
+    "rarity": 3,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 701001,
+          "name": "Valhalla Insignia"
+        },
+        {
+          "count": 1,
+          "id": 38001,
+          "name": "Mock Crystal"
+        },
+        {
+          "count": 10,
+          "id": 10207,
+          "name": "Timber Nut"
+        },
+        {
+          "count": 8,
+          "id": 10209,
+          "name": "Meru Nut"
+        }
+      ]
+    },
+    "sell_price": 60000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_2_4.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701003": {
+    "desc": "Boosts all stats (30%) & Chance of inflicting ailments when attacked (8-10%) & Boosts damages dealt to foes with ailments (50%)",
+    "effect": [
+      {
+        "atk% buff": 30,
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "rec% buff": 30
+      },
+      {
+        "counter inflict curse%": 8,
+        "counter inflict injury%": 8,
+        "counter inflict paralysis%": 8,
+        "counter inflict poison%": 10,
+        "counter inflict sick%": 10,
+        "counter inflict weaken%": 10,
+        "passive id": "71"
+      },
+      {
+        "atk% buff when enemy has ailment": 50,
+        "atk% buff when enemy has curse": true,
+        "atk% buff when enemy has injury": true,
+        "atk% buff when enemy has paralysis": true,
+        "atk% buff when enemy has poison": true,
+        "atk% buff when enemy has sick": true,
+        "atk% buff when enemy has weaken": true,
+        "passive id": "74"
+      }
+    ],
+    "id": 701003,
+    "max_stack": 1,
+    "name": "Surt's Blade",
+    "raid": true,
+    "rarity": 3,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 3,
+          "id": 701001,
+          "name": "Valhalla Insignia"
+        },
+        {
+          "count": 1,
+          "id": 32001,
+          "name": "Cursed Sword"
+        },
+        {
+          "count": 10,
+          "id": 10812,
+          "name": "Dark Bone"
+        },
+        {
+          "count": 10,
+          "id": 10209,
+          "name": "Meru Nut"
+        }
+      ]
+    },
+    "sell_price": 60000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_2_1.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701004": {
+    "desc": "A strange shard from the mirror world.",
+    "id": 701004,
+    "max_stack": 99,
+    "name": "Mirror Shard",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_701004.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 701005,
+        "name": "Explorer's Journal"
+      }
+    ]
+  },
+  "701005": {
+    "desc": "Boosts HP and DEF (10%) & negates defense ignoring, elemental and critical damage",
+    "effect": [
+      {
+        "def% buff": 10,
+        "hp% buff": 10,
+        "passive id": "1"
+      },
+      {
+        "ignore def resist chance%": 100,
+        "passive id": "92"
+      },
+      {
+        "crit chance base resist%": 100,
+        "crit chance buffed resist%": 100,
+        "crit dmg base damage resist%": 100,
+        "crit dmg buffed damage resist%": 100,
+        "passive id": "53",
+        "strong base element damage resist%": 100,
+        "strong buffed element damage resist%": 100
+      }
+    ],
+    "id": 701005,
+    "max_stack": 1,
+    "name": "Explorer's Journal",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "100000",
+      "materials": [
+        {
+          "count": 35,
+          "id": 701004,
+          "name": "Mirror Shard"
+        },
+        {
+          "count": 4,
+          "id": 11019,
+          "name": "Dark Stone"
+        },
+        {
+          "count": 5,
+          "id": 10714,
+          "name": "Scaly Pelt"
+        },
+        {
+          "count": 5,
+          "id": 10419,
+          "name": "Ruling Fist"
+        }
+      ]
+    },
+    "sell_price": 50000,
+    "sphere type": 10,
+    "sphere type text": "Damage Reducing",
+    "thumbnail": "sphere_thum_3_6.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701006": {
+    "desc": "Use this material to craft the Noblesse Title Sphere.",
+    "id": 701006,
+    "max_stack": 99,
+    "name": "Noblesse Emblem",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_701006.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 701009,
+        "name": "Noblesse Title"
+      }
+    ]
+  },
+  "701007": {
+    "desc": "Boosts critical damage (50%) & Critical damage boosts BB gauge (3-5 BC) & Boosts ATK (50%) for 2 turns on critical",
+    "effect": [
+      {
+        "crit multiplier%": 50,
+        "passive id": "34"
+      },
+      {
+        "bc fill on crit max": 5,
+        "bc fill on crit min": 3,
+        "bc fill on crit%": 100,
+        "passive id": "65"
+      },
+      {
+        "buff": {
+          "atk% buff (1)": 50,
+          "buff turns (1)": "2"
+        },
+        "on crit activation chance%": 100,
+        "passive id": "89"
+      }
+    ],
+    "id": 701007,
+    "max_stack": 1,
+    "name": "Noblesse’s Wedding Ring",
+    "raid": true,
+    "rarity": 5,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 2,
+          "id": 701009,
+          "name": "Noblesse Title"
+        },
+        {
+          "count": 1,
+          "id": 31200,
+          "name": "Death Scythe"
+        },
+        {
+          "count": 5,
+          "id": 10420,
+          "name": "Fiend Claw"
+        },
+        {
+          "count": 5,
+          "id": 10312,
+          "name": "Tragedy Drop"
+        }
+      ]
+    },
+    "sell_price": 50000,
+    "sphere type": 2,
+    "sphere type text": "Critical",
+    "thumbnail": "sphere_thum_4_3.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701008": {
+    "desc": "Boosts HP and ATK (30%) & Boosts ATK (50%) when BB gauge full & Boosts spark damage (50%) when HP full",
+    "effect": [
+      {
+        "atk% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1"
+      },
+      {
+        "atk% buff": 50,
+        "bb gauge above % buff requirement": 100,
+        "passive id": "30"
+      },
+      {
+        "damage% for spark": 50,
+        "hp above % buff requirement": 100,
+        "passive id": "104"
+      }
+    ],
+    "id": 701008,
+    "max_stack": 1,
+    "name": "Hunting Guide",
+    "raid": true,
+    "rarity": 5,
+    "recipe": {
+      "karma": "100000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 701009,
+          "name": "Noblesse Title"
+        },
+        {
+          "count": 1,
+          "id": 30005,
+          "name": "God Sword"
+        },
+        {
+          "count": 5,
+          "id": 10612,
+          "name": "Spirit Eye"
+        },
+        {
+          "count": 5,
+          "id": 10811,
+          "name": "Thunder Bone"
+        }
+      ]
+    },
+    "sell_price": 60000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_5_4.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701009": {
+    "desc": "Boosts all stats (10%)",
+    "effect": [
+      {
+        "atk% buff": 10,
+        "def% buff": 10,
+        "hp% buff": 10,
+        "passive id": "1",
+        "rec% buff": 10
+      }
+    ],
+    "id": 701009,
+    "max_stack": 1,
+    "name": "Noblesse Title",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "50000",
+      "materials": [
+        {
+          "count": 35,
+          "id": 701006,
+          "name": "Noblesse Emblem"
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_5_5.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 701007,
+        "name": "Noblesse’s Wedding Ring"
+      },
+      {
+        "id": 701008,
+        "name": "Hunting Guide"
+      },
+      {
+        "id": 701010,
+        "name": "Admiral's Hook"
+      },
+      {
+        "id": 701011,
+        "name": "Tracker's Crossbow"
+      },
+      {
+        "id": 701013,
+        "name": "Aries' Hammers"
+      },
+      {
+        "id": 701014,
+        "name": "Armor of the Fallen"
+      },
+      {
+        "id": 701015,
+        "name": "Propaganda Codex"
+      },
+      {
+        "id": 701045,
+        "name": "Hunter Title"
+      },
+      {
+        "id": 701047,
+        "name": "Pure Noblesse Title"
+      }
+    ]
+  },
+  "701010": {
+    "desc": "Boosts ATK (50%) & Boosts ATK (50%) when BB gauge full & Boosts damages to ailed ennemies (50%) & Chance to inflict weakness (15%)",
+    "effect": [
+      {
+        "atk% buff": 50,
+        "passive id": "1"
+      },
+      {
+        "atk% buff": 50,
+        "bb gauge above % buff requirement": 100,
+        "passive id": "30"
+      },
+      {
+        "atk% buff when enemy has ailment": 50,
+        "atk% buff when enemy has curse": true,
+        "atk% buff when enemy has injury": true,
+        "atk% buff when enemy has paralysis": true,
+        "atk% buff when enemy has poison": true,
+        "atk% buff when enemy has sick": true,
+        "atk% buff when enemy has weaken": true,
+        "passive id": "74"
+      },
+      {
+        "passive id": "20",
+        "weaken%": 15
+      }
+    ],
+    "id": 701010,
+    "max_stack": 1,
+    "name": "Admiral's Hook",
+    "raid": true,
+    "rarity": 5,
+    "recipe": {
+      "karma": "300000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 701009,
+          "name": "Noblesse Title"
+        },
+        {
+          "count": 1,
+          "id": 30006,
+          "name": "Chosen Blade"
+        },
+        {
+          "count": 8,
+          "id": 10207,
+          "name": "Timber Nut"
+        },
+        {
+          "count": 8,
+          "id": 10312,
+          "name": "Tragedy Drop"
+        }
+      ]
+    },
+    "sell_price": 50000,
+    "sphere type": 13,
+    "sphere type text": "Atk Boosting",
+    "thumbnail": "sphere_thum_5_2.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701011": {
+    "desc": "Boosts HP (30%) & Boosts ATK (80%) when HP is full & Boosts BB ATK (150%) & Negates elemental based damage",
+    "effect": [
+      {
+        "hp% buff": 30,
+        "passive id": "1"
+      },
+      {
+        "atk% buff": 80,
+        "hp above % buff requirement": 100,
+        "passive id": "11"
+      },
+      {
+        "passive id": "53",
+        "strong base element damage resist%": 100,
+        "strong buffed element damage resist%": 100
+      }
+    ],
+    "id": 701011,
+    "max_stack": 1,
+    "name": "Tracker's Crossbow",
+    "raid": true,
+    "rarity": 5,
+    "recipe": {
+      "karma": "300000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 701009,
+          "name": "Noblesse Title"
+        },
+        {
+          "count": 1,
+          "id": 30305,
+          "name": "Ember Armor"
+        },
+        {
+          "count": 8,
+          "id": 10713,
+          "name": "Blaze Pelt"
+        },
+        {
+          "count": 8,
+          "id": 10516,
+          "name": "Ruling Fang"
+        }
+      ]
+    },
+    "sell_price": 50000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_2_1.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701012": {
+    "desc": "Boosts DEF (40%) & Fills BB gauge when attacked (3-5BC) & Chance (10%) to reduce damage to 1 & Raises normal hit amount (+1)",
+    "effect": [
+      {
+        "def% buff": 40,
+        "passive id": "1"
+      },
+      {
+        "bc fill when attacked high": 5,
+        "bc fill when attacked low": 3,
+        "bc fill when attacked%": 100,
+        "passive id": "25"
+      },
+      {
+        "passive id": "43",
+        "take 1 dmg%": 10
+      },
+      {
+        "hit increase/hit": 1,
+        "passive id": "37"
+      }
+    ],
+    "id": 701012,
+    "max_stack": 1,
+    "name": "Gilgamesh Crown",
+    "raid": false,
+    "rarity": 5,
+    "sell_price": 50000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_2_2.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701013": {
+    "desc": "Boosts ATK / DEF (40%) & Boosts spark dmg (75%) for 2 turns when dmg taken exceed certain amount (5k) & Probable Spark crit. (30%)",
+    "effect": [
+      {
+        "atk% buff": 40,
+        "def% buff": 40,
+        "passive id": "1"
+      },
+      {
+        "buff": {
+          "buff turns (40)": "2",
+          "spark dmg% buff": 75
+        },
+        "damage threshold buff activation": 5000,
+        "passive id": "78"
+      },
+      {
+        "passive id": "100",
+        "spark crit dmg%": 30
+      }
+    ],
+    "id": 701013,
+    "max_stack": 1,
+    "name": "Aries' Hammers",
+    "raid": true,
+    "rarity": 5,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 701009,
+          "name": "Noblesse Title"
+        },
+        {
+          "count": 1,
+          "id": 34805,
+          "name": "Royal Bud"
+        },
+        {
+          "count": 1,
+          "id": 11028,
+          "name": "Shock Heart"
+        },
+        {
+          "count": 5,
+          "id": 10811,
+          "name": "Thunder Bone"
+        }
+      ]
+    },
+    "sell_price": 50000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_1_4.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701014": {
+    "desc": "Boosts HP (40%) & Fill BB gauge (7BC) when 15 HC received & Boost DEF relative to HP lost (0-100%) & Negates elemental damage",
+    "effect": [
+      {
+        "hp% buff": 40,
+        "passive id": "1"
+      },
+      {
+        "hc receive count activation": 15,
+        "increase bb gauge": 7,
+        "passive id": "85"
+      },
+      {
+        "buff proportional to hp": "lost",
+        "def% base buff": 0,
+        "def% extra buff based on hp": 100,
+        "passive id": "46"
+      },
+      {
+        "passive id": "53",
+        "strong base element damage resist%": 100,
+        "strong buffed element damage resist%": 100
+      }
+    ],
+    "id": 701014,
+    "max_stack": 1,
+    "name": "Armor of the Fallen",
+    "raid": true,
+    "rarity": 5,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 701009,
+          "name": "Noblesse Title"
+        },
+        {
+          "count": 1,
+          "id": 30307,
+          "name": "Odd Armor"
+        },
+        {
+          "count": 20,
+          "id": 10715,
+          "name": "Verdant Pelt"
+        },
+        {
+          "count": 1,
+          "id": 10629,
+          "name": "Feat Jewel"
+        }
+      ]
+    },
+    "sell_price": 50000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_1_3.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701015": {
+    "desc": "Boosts HP/ATK (30%) & Boosts OD fill (20%) & Boosts dmg. on ailed foes (50%) if dmg. dealt exceed 10K & 25% Chance to reflect dmg.",
+    "effect": [
+      {
+        "atk% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1"
+      },
+      {
+        "od fill rate%": 20,
+        "passive id": "70"
+      },
+      {
+        "buff": {
+          "buff turns (110)": "2",
+          "unknown buff id": "110",
+          "unknown buff params": "50"
+        },
+        "damage dealt threshold buff activation": 10000,
+        "passive id": "80"
+      },
+      {
+        "dmg% reflect chance%": 25,
+        "dmg% reflect high": 50,
+        "dmg% reflect low": 50,
+        "passive id": "26"
+      }
+    ],
+    "id": 701015,
+    "max_stack": 1,
+    "name": "Propaganda Codex",
+    "raid": true,
+    "rarity": 5,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 701009,
+          "name": "Noblesse Title"
+        },
+        {
+          "count": 1,
+          "id": 31602,
+          "name": "Venom Flower"
+        },
+        {
+          "count": 1,
+          "id": 10624,
+          "name": "Ghost Jewel"
+        },
+        {
+          "count": 5,
+          "id": 10410,
+          "name": "Dark Claw"
+        }
+      ]
+    },
+    "sell_price": 50000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_5_6.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701016": {
+    "desc": "A strange robot that came from a distant kingdom.",
+    "id": 701016,
+    "max_stack": 99,
+    "name": "Photon Bot",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_701016.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 701017,
+        "name": "Photon Sword"
+      }
+    ]
+  },
+  "701017": {
+    "desc": "Boosts all stats (10%)",
+    "effect": [
+      {
+        "atk% buff": 10,
+        "def% buff": 10,
+        "hp% buff": 10,
+        "passive id": "1",
+        "rec% buff": 10
+      }
+    ],
+    "id": 701017,
+    "max_stack": 1,
+    "name": "Photon Sword",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "50000",
+      "materials": [
+        {
+          "count": 35,
+          "id": 701016,
+          "name": "Photon Bot"
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_4_5.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 701018,
+        "name": "Cursed Photon Rod"
+      },
+      {
+        "id": 701019,
+        "name": "Photon Assault Spear"
+      },
+      {
+        "id": 701020,
+        "name": "Temporal Cybernetic Skin"
+      },
+      {
+        "id": 701021,
+        "name": "Photon Scepter of Summoning"
+      },
+      {
+        "id": 701022,
+        "name": "Arthur's Will"
+      },
+      {
+        "id": 701023,
+        "name": "Caliburn"
+      },
+      {
+        "id": 701024,
+        "name": "Arondight"
+      },
+      {
+        "id": 701026,
+        "name": "Ancient Cybernetic Crown"
+      }
+    ]
+  },
+  "701018": {
+    "desc": "Boosts HP and ATK (30%) & Boosts Spark damage (70%) for 2 turns when 20 sparks done,  & Spark fill BB gauge (1-2BC)",
+    "effect": [
+      {
+        "atk% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1"
+      },
+      {
+        "buff": {
+          "buff turns (40)": "2",
+          "spark dmg% buff": 70
+        },
+        "passive id": "86",
+        "spark count buff activation": 20
+      },
+      {
+        "bc fill on spark high": 2,
+        "bc fill on spark low": 1,
+        "bc fill on spark%": 100,
+        "passive id": "47"
+      }
+    ],
+    "id": 701018,
+    "max_stack": 1,
+    "name": "Cursed Photon Rod",
+    "raid": true,
+    "rarity": 5,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 701017,
+          "name": "Photon Sword"
+        },
+        {
+          "count": 1,
+          "id": 30005,
+          "name": "God Sword"
+        },
+        {
+          "count": 1,
+          "id": 10627,
+          "name": "Blaze Pearl"
+        },
+        {
+          "count": 10,
+          "id": 10713,
+          "name": "Blaze Pelt"
+        }
+      ]
+    },
+    "sell_price": 50000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_4_1.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701019": {
+    "desc": "Boosts ATK and DEF (70%) when BB gauge full & Boosts Spark dmg (70%) for 2 turns when dmg dealt > 10k & Negates DEF ignoring damage",
+    "effect": [
+      {
+        "atk% buff": 70,
+        "bb gauge above % buff requirement": 100,
+        "def% buff": 70,
+        "passive id": "30"
+      },
+      {
+        "buff": {
+          "buff turns (40)": "2",
+          "spark dmg% buff": 70
+        },
+        "damage dealt threshold buff activation": 10000,
+        "passive id": "80"
+      },
+      {
+        "ignore def resist chance%": 100,
+        "passive id": "92"
+      }
+    ],
+    "id": 701019,
+    "max_stack": 1,
+    "name": "Photon Assault Spear",
+    "raid": true,
+    "rarity": 5,
+    "recipe": {
+      "karma": "300000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 701017,
+          "name": "Photon Sword"
+        },
+        {
+          "count": 1,
+          "id": 37900,
+          "name": "Divine Gem"
+        },
+        {
+          "count": 1,
+          "id": 10621,
+          "name": "Calamity Eye"
+        },
+        {
+          "count": 10,
+          "id": 10418,
+          "name": "Shock Claw"
+        }
+      ]
+    },
+    "sell_price": 100000,
+    "sphere type": 13,
+    "sphere type text": "Atk Boosting",
+    "thumbnail": "sphere_thum_4_4.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701020": {
+    "desc": "Boosts HP (40%) & Fill BB gauge (7BC) when 10 HC received and OD fill rate (20%) for 2 turns when 20 HC received",
+    "effect": [
+      {
+        "hp% buff": 40,
+        "passive id": "1"
+      },
+      {
+        "hc receive count activation": 10,
+        "increase bb gauge": 7,
+        "passive id": "85"
+      },
+      {
+        "buff": {
+          "buff turns (132)": "2",
+          "unknown buff id": "132",
+          "unknown buff params": "20"
+        },
+        "hc receive count buff activation": 20,
+        "passive id": "84"
+      }
+    ],
+    "id": 701020,
+    "max_stack": 1,
+    "name": "Temporal Cybernetic Skin",
+    "raid": true,
+    "rarity": 5,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 701017,
+          "name": "Photon Sword"
+        },
+        {
+          "count": 1,
+          "id": 30306,
+          "name": "Dark Armor"
+        },
+        {
+          "count": 1,
+          "id": 11029,
+          "name": "Cataract Ore"
+        },
+        {
+          "count": 10,
+          "id": 10411,
+          "name": "Daze Claw"
+        }
+      ]
+    },
+    "sell_price": 50000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_3_2.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701021": {
+    "desc": "Boosts HP, DEF and REC (15%) & Reduce BB cost (15%) & Damage taken fills BB gauge (1-2 BC) & Negates status ailments ",
+    "effect": [
+      {
+        "def% buff": 15,
+        "hp% buff": 15,
+        "passive id": "1",
+        "rec% buff": 15
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 15
+      },
+      {
+        "bc fill when attacked high": 2,
+        "bc fill when attacked low": 1,
+        "bc fill when attacked%": 100,
+        "passive id": "25"
+      },
+      {
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      }
+    ],
+    "id": 701021,
+    "max_stack": 1,
+    "name": "Photon Scepter of Summoning",
+    "raid": true,
+    "rarity": 5,
+    "recipe": {
+      "karma": "300000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 701017,
+          "name": "Photon Sword"
+        },
+        {
+          "count": 1,
+          "id": 37700,
+          "name": "Health Charm"
+        },
+        {
+          "count": 1,
+          "id": 10623,
+          "name": "Phantom Eye"
+        },
+        {
+          "count": 10,
+          "id": 10105,
+          "name": "Heth Feather"
+        }
+      ]
+    },
+    "sell_price": 100000,
+    "sphere type": 5,
+    "sphere type text": "Status Ailments Resistant",
+    "thumbnail": "sphere_thum_5_6.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701022": {
+    "desc": "Boosts HP and ATK (40%) & Boosts DEF and REC (50%) for 2 turns when damage taken has exceeded certain amount (10 000) & boosts elemental weakness damage (50%)",
+    "effect": [
+      {
+        "atk% buff": 40,
+        "hp% buff": 40,
+        "passive id": "1"
+      },
+      {
+        "buff": {
+          "buff turns (3)": "2",
+          "def% buff (3)": 50
+        },
+        "damage threshold buff activation": 10000,
+        "passive id": "78"
+      },
+      {
+        "buff": {
+          "buff turns (5)": "2",
+          "rec% buff (5)": 50
+        },
+        "damage threshold buff activation": 10000,
+        "passive id": "78"
+      },
+      {
+        "dark units do extra elemental weakness dmg": true,
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 50,
+        "fire units do extra elemental weakness dmg": true,
+        "light units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "thunder units do extra elemental weakness dmg": true,
+        "water units do extra elemental weakness dmg": true
+      }
+    ],
+    "id": 701022,
+    "max_stack": 1,
+    "name": "Arthur's Will",
+    "raid": true,
+    "rarity": 5,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 701017,
+          "name": "Photon Sword"
+        },
+        {
+          "count": 1,
+          "id": 38501,
+          "name": "Life Shield"
+        },
+        {
+          "count": 1,
+          "id": 11034,
+          "name": "Azure Sphere"
+        },
+        {
+          "count": 10,
+          "id": 10817,
+          "name": "Fallen Screw"
+        }
+      ]
+    },
+    "sell_price": 50000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_5_5.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701023": {
+    "desc": "Boosts ATK, HP (30%) & Boosts BB Atk (100%) when Sparks have exceeded certain amount (20) & Boosts Spark damage (50%) when HP are full",
+    "effect": [
+      {
+        "atk% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1"
+      },
+      {
+        "buff": {
+          "bb atk% buff": 100,
+          "buff turns (72)": "3",
+          "sbb atk% buff": 100,
+          "ubb atk% buff": 100
+        },
+        "passive id": "86",
+        "spark count buff activation": 20
+      },
+      {
+        "damage% for spark": 50,
+        "hp above % buff requirement": 100,
+        "passive id": "104"
+      }
+    ],
+    "id": 701023,
+    "max_stack": 1,
+    "name": "Caliburn",
+    "raid": true,
+    "rarity": 5,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 701017,
+          "name": "Photon Sword"
+        },
+        {
+          "count": 2,
+          "id": 34805,
+          "name": "Royal Bud"
+        },
+        {
+          "count": 1,
+          "id": 11036,
+          "name": "Calamity Core"
+        },
+        {
+          "count": 10,
+          "id": 10005,
+          "name": "Sakura Leaf"
+        }
+      ]
+    },
+    "sell_price": 100000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_2_5.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701024": {
+    "desc": "Boosts HP (30%) & Boosts Atk relative to how high HP is (0-100%) & Boosts BB gauge each turn (6 BC) and when attacked (3-4 BC)",
+    "effect": [
+      {
+        "hp% buff": 30,
+        "passive id": "1"
+      },
+      {
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 100,
+        "buff proportional to hp": "remaining",
+        "passive id": "46"
+      },
+      {
+        "bc fill per turn": 6,
+        "passive id": "9"
+      },
+      {
+        "bc fill when attacked high": 4,
+        "bc fill when attacked low": 3,
+        "bc fill when attacked%": 100,
+        "passive id": "25"
+      }
+    ],
+    "id": 701024,
+    "max_stack": 1,
+    "name": "Arondight",
+    "raid": true,
+    "rarity": 5,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 701017,
+          "name": "Photon Sword"
+        },
+        {
+          "count": 1,
+          "id": 38000,
+          "name": "Demon Shard"
+        },
+        {
+          "count": 1,
+          "id": 11032,
+          "name": "Evil Eye"
+        },
+        {
+          "count": 10,
+          "id": 10412,
+          "name": "Lost Claw"
+        }
+      ]
+    },
+    "sell_price": 100000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_4_6.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701025": {
+    "desc": "Boosts HP (30%) & Boosts ATK, DEF, REC (60%) when BB gauge is full & Negates DEF ignoring damage",
+    "effect": [
+      {
+        "hp% buff": 30,
+        "passive id": "1"
+      },
+      {
+        "atk% buff": 60,
+        "bb gauge above % buff requirement": 100,
+        "def% buff": 60,
+        "passive id": "30",
+        "rec% buff": 60
+      },
+      {
+        "ignore def resist chance%": 100,
+        "passive id": "92"
+      }
+    ],
+    "id": 701025,
+    "max_stack": 1,
+    "name": "Winter's Bells",
+    "raid": true,
+    "rarity": 5,
+    "sell_price": 100000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_5_6.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701026": {
+    "desc": "Boosts all param. (30%) & boosts ATK, DEF, REC based on how low remaining HP is (10-80%) & reduces BB gauge required for BB (15%)",
+    "effect": [
+      {
+        "atk% buff": 30,
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "rec% buff": 30
+      },
+      {
+        "atk% base buff": 10,
+        "atk% extra buff based on hp": 70,
+        "buff proportional to hp": "lost",
+        "def% base buff": 10,
+        "def% extra buff based on hp": 70,
+        "passive id": "46",
+        "rec% base buff": 10,
+        "rec% extra buff based on hp": 70
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 15
+      }
+    ],
+    "id": 701026,
+    "max_stack": 1,
+    "name": "Ancient Cybernetic Crown",
+    "raid": true,
+    "rarity": 5,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 701017,
+          "name": "Photon Sword"
+        },
+        {
+          "count": 1,
+          "id": 39500,
+          "name": "Summoner Hat"
+        },
+        {
+          "count": 1,
+          "id": 10006,
+          "name": "Flower Core"
+        },
+        {
+          "count": 10,
+          "id": 10620,
+          "name": "Disaster Eye"
+        }
+      ]
+    },
+    "sell_price": 100000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_2_3.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701027": {
+    "desc": "Boosts all parameters (20%) & boosts DEF relative to remaining HP (0-40%) & chance to add Spark vulnerability (25% chance) for 1 turn",
+    "effect": [
+      {
+        "atk% buff": 20,
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "rec% buff": 20
+      },
+      {
+        "buff proportional to hp": "remaining",
+        "def% base buff": 0,
+        "def% extra buff based on hp": 40,
+        "passive id": "46"
+      },
+      {
+        "passive id": "75",
+        "spark debuff chance%": 25,
+        "spark debuff turns": 1,
+        "spark debuff%": 25
+      }
+    ],
+    "id": 701027,
+    "max_stack": 1,
+    "name": "Wastelands Sailor Hat",
+    "raid": true,
+    "rarity": 5,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 701029,
+          "name": "Tech Motor"
+        },
+        {
+          "count": 1,
+          "id": 30105,
+          "name": "Dogma Shield"
+        },
+        {
+          "count": 1,
+          "id": 11029,
+          "name": "Cataract Ore"
+        },
+        {
+          "count": 10,
+          "id": 10730,
+          "name": "Light Scale"
+        }
+      ]
+    },
+    "sell_price": 0,
+    "sphere type": 10,
+    "sphere type text": "Damage Reducing",
+    "thumbnail": "sphere_thum_5_2.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701028": {
+    "desc": "Produced by a long-forgotten technology, this object is much sought-after by the Apocalypse survivors.",
+    "id": 701028,
+    "max_stack": 99,
+    "name": "Damaged Tech",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_701028.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 701029,
+        "name": "Tech Motor"
+      }
+    ]
+  },
+  "701029": {
+    "desc": "Increase ATK and DEF (20%)",
+    "effect": [
+      {
+        "atk% buff": 20,
+        "def% buff": 20,
+        "passive id": "1"
+      }
+    ],
+    "id": 701029,
+    "max_stack": 1,
+    "name": "Tech Motor",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "50000",
+      "materials": [
+        {
+          "count": 45,
+          "id": 701028,
+          "name": "Damaged Tech"
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_2_4.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 701027,
+        "name": "Wastelands Sailor Hat"
+      },
+      {
+        "id": 701030,
+        "name": "Instable Flask"
+      },
+      {
+        "id": 701031,
+        "name": "Enhanced Bubble Generator"
+      },
+      {
+        "id": 701033,
+        "name": "Plumatachi's Glasses"
+      },
+      {
+        "id": 701035,
+        "name": "Deathbringer Bandana"
+      },
+      {
+        "id": 701037,
+        "name": "Customized Reactor"
+      },
+      {
+        "id": 701038,
+        "name": "Drill Sharpener"
+      }
+    ]
+  },
+  "701030": {
+    "desc": "Boosts ATK (30%) & boosts ATK (50%) when HP are full & boosts BB ATK (100%) and damage against status afflicted foes (50%)",
+    "effect": [
+      {
+        "atk% buff": 30,
+        "passive id": "1"
+      },
+      {
+        "atk% buff": 50,
+        "hp above % buff requirement": 100,
+        "passive id": "11"
+      },
+      {
+        "bb atk% buff": 100,
+        "passive id": "64",
+        "sbb atk% buff": 100,
+        "ubb atk% buff": 100
+      },
+      {
+        "atk% buff when enemy has ailment": 50,
+        "atk% buff when enemy has curse": true,
+        "atk% buff when enemy has injury": true,
+        "atk% buff when enemy has paralysis": true,
+        "atk% buff when enemy has poison": true,
+        "atk% buff when enemy has sick": true,
+        "atk% buff when enemy has weaken": true,
+        "passive id": "74"
+      }
+    ],
+    "id": 701030,
+    "max_stack": 1,
+    "name": "Instable Flask",
+    "raid": true,
+    "rarity": 5,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 701029,
+          "name": "Tech Motor"
+        },
+        {
+          "count": 1,
+          "id": 30004,
+          "name": "Divine Sword"
+        },
+        {
+          "count": 1,
+          "id": 11036,
+          "name": "Calamity Core"
+        },
+        {
+          "count": 10,
+          "id": 10420,
+          "name": "Fiend Claw"
+        }
+      ]
+    },
+    "sell_price": 0,
+    "sphere type": 13,
+    "sphere type text": "Atk Boosting",
+    "thumbnail": "sphere_thum_3_3.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701031": {
+    "desc": "Boosts all parameters (35%) & boosts BB gauge each turn (3 BC) & damage taken boosts BB gauge (2-3 BC) and may restore HP (20% chance 30% damage)",
+    "effect": [
+      {
+        "atk% buff": 35,
+        "def% buff": 35,
+        "hp% buff": 35,
+        "passive id": "1",
+        "rec% buff": 35
+      },
+      {
+        "bc fill per turn": 3,
+        "passive id": "9"
+      },
+      {
+        "bc fill when attacked high": 3,
+        "bc fill when attacked low": 2,
+        "bc fill when attacked%": 100,
+        "passive id": "25"
+      },
+      {
+        "dmg% to hp% when attacked chance%": 20,
+        "dmg% to hp% when attacked high": 30,
+        "dmg% to hp% when attacked low": 30,
+        "passive id": "24"
+      }
+    ],
+    "id": 701031,
+    "max_stack": 1,
+    "name": "Enhanced Bubble Generator",
+    "raid": true,
+    "rarity": 5,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 701029,
+          "name": "Tech Motor"
+        },
+        {
+          "count": 1,
+          "id": 40000,
+          "name": "Sol Creator"
+        },
+        {
+          "count": 1,
+          "id": 11032,
+          "name": "Evil Eye"
+        },
+        {
+          "count": 10,
+          "id": 10413,
+          "name": "Frozen Claw"
+        }
+      ]
+    },
+    "sell_price": 0,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_4_2.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701032": {
+    "desc": "Tech used onboard the ship of ancient times. Allows the creation of powerful devices.",
+    "id": 701032,
+    "max_stack": 99,
+    "name": "Hydro-Dynamo",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_701032.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 701033,
+        "name": "Plumatachi's Glasses"
+      },
+      {
+        "id": 701035,
+        "name": "Deathbringer Bandana"
+      },
+      {
+        "id": 701038,
+        "name": "Drill Sharpener"
+      }
+    ]
+  },
+  "701033": {
+    "desc": "Boosts HP (40%) & boosts ATK, DEF, REC (80%) for first 3 turns & negates all status ailments & boosts BC efficacy (30%)",
+    "effect": [
+      {
+        "hp% buff": 40,
+        "passive id": "1"
+      },
+      {
+        "first x turns": 3,
+        "first x turns atk% (1)": 80,
+        "first x turns def% (3)": 80,
+        "first x turns rec% (5)": 80,
+        "passive id": "21"
+      },
+      {
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "bb gauge fill rate%": 30,
+        "passive id": "32"
+      }
+    ],
+    "id": 701033,
+    "max_stack": 1,
+    "name": "Plumatachi's Glasses",
+    "raid": true,
+    "rarity": 5,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 2,
+          "id": 701029,
+          "name": "Tech Motor"
+        },
+        {
+          "count": 2,
+          "id": 701032,
+          "name": "Hydro-Dynamo"
+        },
+        {
+          "count": 8,
+          "id": 701034,
+          "name": "Recycled Generator"
+        },
+        {
+          "count": 1,
+          "id": 11034,
+          "name": "Azure Sphere"
+        }
+      ]
+    },
+    "sell_price": 0,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_4_5.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701034": {
+    "desc": "A generator created using anything and everything. At the moment, it doesn’t allow you to produce too much energy; however, it can surely be improved.",
+    "id": 701034,
+    "max_stack": 99,
+    "name": "Recycled Generator",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_701034.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 701033,
+        "name": "Plumatachi's Glasses"
+      },
+      {
+        "id": 701035,
+        "name": "Deathbringer Bandana"
+      },
+      {
+        "id": 701037,
+        "name": "Customized Reactor"
+      },
+      {
+        "id": 701038,
+        "name": "Drill Sharpener"
+      }
+    ]
+  },
+  "701035": {
+    "desc": "Boosts all parameters (35%) & boosts Spark damage (30%) & boosts BB ATK (80%) & reduces BB gauge required for BB (10%)",
+    "effect": [
+      {
+        "atk% buff": 35,
+        "def% buff": 35,
+        "hp% buff": 35,
+        "passive id": "1",
+        "rec% buff": 35
+      },
+      {
+        "damage% for spark": 30,
+        "passive id": "31"
+      },
+      {
+        "bb atk% buff": 80,
+        "passive id": "64",
+        "sbb atk% buff": 80,
+        "ubb atk% buff": 80
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 10
+      }
+    ],
+    "id": 701035,
+    "max_stack": 1,
+    "name": "Deathbringer Bandana",
+    "raid": true,
+    "rarity": 5,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 701029,
+          "name": "Tech Motor"
+        },
+        {
+          "count": 1,
+          "id": 701032,
+          "name": "Hydro-Dynamo"
+        },
+        {
+          "count": 6,
+          "id": 701034,
+          "name": "Recycled Generator"
+        },
+        {
+          "count": 1,
+          "id": 10615,
+          "name": "Flame Jewel"
+        }
+      ]
+    },
+    "sell_price": 0,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_5_1.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701036": {
+    "desc": "A powerful lens that allows light to converge, transforming it into a ray. By combining multiple lenses, one could produce a destructive ray of light.",
+    "id": 701036,
+    "max_stack": 99,
+    "name": "Converging Lens",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_701036.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 701037,
+        "name": "Customized Reactor"
+      }
+    ]
+  },
+  "701037": {
+    "desc": "Boosts ATK (50%) & boosts elemental damage (50%) & boosts BB ATK (100%) & Spark damage boosts BB gauge (1 BC)",
+    "effect": [
+      {
+        "atk% buff": 50,
+        "passive id": "1"
+      },
+      {
+        "dark units do extra elemental weakness dmg": true,
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 50,
+        "fire units do extra elemental weakness dmg": true,
+        "light units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "thunder units do extra elemental weakness dmg": true,
+        "water units do extra elemental weakness dmg": true
+      },
+      {
+        "bb atk% buff": 100,
+        "passive id": "64",
+        "sbb atk% buff": 100,
+        "ubb atk% buff": 100
+      },
+      {
+        "bc fill on spark high": 1,
+        "bc fill on spark low": 1,
+        "bc fill on spark%": 100,
+        "passive id": "47"
+      }
+    ],
+    "id": 701037,
+    "max_stack": 1,
+    "name": "Customized Reactor",
+    "raid": true,
+    "rarity": 5,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 2,
+          "id": 701029,
+          "name": "Tech Motor"
+        },
+        {
+          "count": 10,
+          "id": 701034,
+          "name": "Recycled Generator"
+        },
+        {
+          "count": 10,
+          "id": 701036,
+          "name": "Converging Lens"
+        },
+        {
+          "count": 2,
+          "id": 11033,
+          "name": "Shock Core"
+        }
+      ]
+    },
+    "sell_price": 0,
+    "sphere type": 13,
+    "sphere type text": "Atk Boosting",
+    "thumbnail": "sphere_thum_1_4.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701038": {
+    "desc": "Boosts HP (50%) & boosts ATK when BB gauge is full (50%) & boosts OD gauge fill rate (20%)",
+    "effect": [
+      {
+        "hp% buff": 50,
+        "passive id": "1"
+      },
+      {
+        "atk% buff": 50,
+        "bb gauge above % buff requirement": 100,
+        "passive id": "30"
+      },
+      {
+        "od fill rate%": 20,
+        "passive id": "70"
+      }
+    ],
+    "id": 701038,
+    "max_stack": 1,
+    "name": "Drill Sharpener",
+    "raid": true,
+    "rarity": 5,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 701029,
+          "name": "Tech Motor"
+        },
+        {
+          "count": 2,
+          "id": 701032,
+          "name": "Hydro-Dynamo"
+        },
+        {
+          "count": 10,
+          "id": 701034,
+          "name": "Recycled Generator"
+        },
+        {
+          "count": 1,
+          "id": 11030,
+          "name": "Doom Ring"
+        }
+      ]
+    },
+    "sell_price": 0,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_4_6.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701039": {
+    "desc": "Boosts all stats (20%) & boosts Spark damage (50%) and BB ATK (100%)",
+    "effect": [
+      {
+        "atk% buff": 20,
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "rec% buff": 20
+      },
+      {
+        "damage% for spark": 50,
+        "passive id": "31"
+      },
+      {
+        "bb atk% buff": 100,
+        "passive id": "64",
+        "sbb atk% buff": 100,
+        "ubb atk% buff": 100
+      }
+    ],
+    "id": 701039,
+    "max_stack": 1,
+    "name": "Apex Sword",
+    "raid": false,
+    "rarity": 5,
+    "sell_price": 0,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_70_6.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701040": {
+    "desc": "Boosts all stats (20%) & boosts BB gauge when attacked (3-4 BC) & reduces BB cost (15%)",
+    "effect": [
+      {
+        "atk% buff": 20,
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "rec% buff": 20
+      },
+      {
+        "bc fill when attacked high": 4,
+        "bc fill when attacked low": 3,
+        "bc fill when attacked%": 100,
+        "passive id": "25"
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 15
+      }
+    ],
+    "id": 701040,
+    "max_stack": 1,
+    "name": "Apex Ring",
+    "raid": false,
+    "rarity": 5,
+    "sell_price": 0,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_70_9.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701041": {
+    "desc": "Boosts all stats (20%) & Spark damage reduction (50%) & restores HP each turn",
+    "effect": [
+      {
+        "atk% buff": 20,
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "rec% buff": 20
+      },
+      {
+        "base spark dmg% resist": 50,
+        "buff spark dmg% resist": 0,
+        "passive id": "77"
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 12,
+        "turn heal high": 2500,
+        "turn heal low": 2000
+      }
+    ],
+    "id": 701041,
+    "max_stack": 1,
+    "name": "Apex Shield",
+    "raid": false,
+    "rarity": 5,
+    "sell_price": 0,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_70_8.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701042": {
+    "desc": "Boosts Zel (20%), Karma (15%), Item drop rates (5%) & Enhances Eyebrows (900%) & Removes chance of resisting temptation. I mean, be honest, those eyebrows are just the best.",
+    "effect": [
+      {
+        "item drop rate% buff": 5,
+        "karma drop rate% buff": 15,
+        "passive id": "19",
+        "zel drop rate% buff": 20
+      }
+    ],
+    "id": 701042,
+    "max_stack": 1,
+    "name": "Elie's Glassbrows",
+    "raid": false,
+    "rarity": 5,
+    "sell_price": 0,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_70_7.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701043": {
+    "desc": "Has no effect, can be sold. If you can read this, a real version of this Sphere will be distributed to you in early July. Sorry for the wait.",
+    "effect": [
+      {
+        "passive id": "1"
+      }
+    ],
+    "id": 701043,
+    "max_stack": 1,
+    "name": "Fake Apex Jewel",
+    "raid": false,
+    "rarity": 5,
+    "sell_price": 100000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_70_8.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701044": {
+    "desc": "Boosts all parameters (35%) & boosts BC efficacy (30%) & boosts BB ATK (100%) & damage reduction (5%)",
+    "effect": [
+      {
+        "atk% buff": 35,
+        "def% buff": 35,
+        "hp% buff": 35,
+        "passive id": "1",
+        "rec% buff": 35
+      },
+      {
+        "bb gauge fill rate%": 30,
+        "passive id": "32"
+      },
+      {
+        "bb atk% buff": 100,
+        "passive id": "64",
+        "sbb atk% buff": 100,
+        "ubb atk% buff": 100
+      },
+      {
+        "dmg% mitigation": 5,
+        "passive id": "8"
+      }
+    ],
+    "id": 701044,
+    "max_stack": 1,
+    "name": "Apex Jewel",
+    "raid": false,
+    "rarity": 5,
+    "sell_price": 100000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_70_8.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701045": {
+    "desc": "Boosts all parameters (20%) & boosts ATK (50%) when BB gauge is full & boosts BB ATK (150%) & boosts Spark damage (80%)",
+    "effect": [
+      {
+        "atk% buff": 20,
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "rec% buff": 20
+      },
+      {
+        "atk% buff": 50,
+        "bb gauge above % buff requirement": 100,
+        "passive id": "30"
+      },
+      {
+        "bb atk% buff": 150,
+        "passive id": "64",
+        "sbb atk% buff": 150,
+        "ubb atk% buff": 150
+      },
+      {
+        "damage% for spark": 80,
+        "passive id": "31"
+      }
+    ],
+    "id": 701045,
+    "max_stack": 1,
+    "name": "Hunter Title",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 701009,
+          "name": "Noblesse Title"
+        },
+        {
+          "count": 1,
+          "id": 701046,
+          "name": "Hunter Trophy"
+        }
+      ]
+    },
+    "sell_price": 100000,
+    "sphere type": 13,
+    "sphere type text": "Atk Boosting",
+    "thumbnail": "item_thum_701045.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701046": {
+    "desc": "Use this material to craft the Hunter Title.",
+    "id": 701046,
+    "max_stack": 99,
+    "name": "Hunter Trophy",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 100,
+    "thumbnail": "item_thum_701046.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 701045,
+        "name": "Hunter Title"
+      }
+    ]
+  },
+  "701047": {
+    "desc": "Boosts all parameters (20%) & reduces BB cost (15%) & damage taken fills BB gauge (1-2 BC) & boosts Spark damage (80%)",
+    "effect": [
+      {
+        "atk% buff": 20,
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "rec% buff": 20
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 15
+      },
+      {
+        "bc fill when attacked high": 2,
+        "bc fill when attacked low": 1,
+        "bc fill when attacked%": 100,
+        "passive id": "25"
+      },
+      {
+        "damage% for spark": 80,
+        "passive id": "31"
+      }
+    ],
+    "id": 701047,
+    "max_stack": 1,
+    "name": "Pure Noblesse Title",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "150000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 701009,
+          "name": "Noblesse Title"
+        },
+        {
+          "count": 1,
+          "id": 701048,
+          "name": "Shapeshifter Insignia"
+        }
+      ]
+    },
+    "sell_price": 100000,
+    "sphere type": 6,
+    "sphere type text": "BB Gauge",
+    "thumbnail": "item_thum_701045.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701048": {
+    "desc": "Use this material to craft the Pure Noblesse Title.",
+    "id": 701048,
+    "max_stack": 99,
+    "name": "Shapeshifter Insignia",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 500,
+    "thumbnail": "item_thum_701046.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 701047,
+        "name": "Pure Noblesse Title"
+      }
+    ]
+  },
+  "701049": {
+    "desc": "Use this material to evolve Enki to Dream Evolution.",
+    "id": 701049,
+    "max_stack": 99,
+    "name": "Primordial Stone",
+    "raid": false,
+    "rarity": 5,
+    "recipe": {
+      "karma": "100000",
+      "materials": [
+        {
+          "count": 10,
+          "id": 701050,
+          "name": "Bones of a Fallen"
+        }
+      ]
+    },
+    "sell_price": 10000,
+    "thumbnail": "item_thum_20820.png",
+    "type": "evomat",
+    "usage": []
+  },
+  "701050": {
+    "desc": "A gigantic skeleton found within an ancient desert.",
+    "id": 701050,
+    "max_stack": 99,
+    "name": "Bones of a Fallen",
+    "raid": false,
+    "rarity": 4,
+    "sell_price": 100,
+    "thumbnail": "item_thum_902.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 701049,
+        "name": "Primordial Stone"
+      }
+    ]
+  },
+  "701051": {
+    "desc": "Boosts all parameters (50%) & boosts Spark damage (100%) & boosts BB ATK (150%) & adds probability of resistance against 1 KO attack (70%) & negates elemental damage",
+    "effect": [
+      {
+        "atk% buff": 50,
+        "def% buff": 50,
+        "hp% buff": 50,
+        "passive id": "1",
+        "rec% buff": 50
+      },
+      {
+        "damage% for spark": 100,
+        "passive id": "31"
+      },
+      {
+        "bb atk% buff": 150,
+        "passive id": "64",
+        "sbb atk% buff": 150,
+        "ubb atk% buff": 150
+      },
+      {
+        "angel idol chance% condition": 0,
+        "angel idol recover chance% high": 70,
+        "angel idol recover chance% low": 70,
+        "angel idol recover counts": 1,
+        "passive id": "69"
+      },
+      {
+        "passive id": "53",
+        "strong base element damage resist%": 100,
+        "strong buffed element damage resist%": 100
+      }
+    ],
+    "id": 701051,
+    "max_stack": 1,
+    "name": "Armor of Superiority",
+    "raid": false,
+    "rarity": 5,
+    "sell_price": 100000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_1_3.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "701053": {
+    "desc": "Boosts ATK and REC (40%) & boosts elemental damage (50%) & boosts Spark damage (100%) & chance to add Spark vulnerability (25% chance) for 1 turn",
+    "effect": [
+      {
+        "atk% buff": 40,
+        "passive id": "1",
+        "rec% buff": 40
+      },
+      {
+        "damage% for spark": 100,
+        "passive id": "31"
+      },
+      {
+        "passive id": "75",
+        "spark debuff chance%": 25,
+        "spark debuff turns": 1,
+        "spark debuff%": 20
+      },
+      {
+        "dark units do extra elemental weakness dmg": true,
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 50,
+        "fire units do extra elemental weakness dmg": true,
+        "light units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "thunder units do extra elemental weakness dmg": true,
+        "water units do extra elemental weakness dmg": true
+      }
+    ],
+    "id": 701053,
+    "max_stack": 1,
+    "name": "Old Crown Fragment",
+    "raid": false,
+    "rarity": 5,
+    "sell_price": 100000,
+    "sphere type": 13,
+    "sphere type text": "Atk Boosting",
+    "thumbnail": "sphere_thum_4_6.png",
+    "type": "sphere",
+    "usage": []
+  }
+}

@@ -1,0 +1,6386 @@
+{
+  "10000": {
+    "desc": "エルガイアの各地で一般的に生息している回復薬の素材となる薬草",
+    "id": 10000,
+    "max_stack": 99,
+    "name": "緑壮草",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 3,
+    "thumbnail": "item_thum_102.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20000,
+        "name": "回復薬"
+      }
+    ]
+  },
+  "10001": {
+    "desc": "エルガイア北部に自生する回復効果の高い貴重な薬草",
+    "id": 10001,
+    "max_stack": 99,
+    "name": "青胆草",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_101.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20001,
+        "name": "強回復薬"
+      }
+    ]
+  },
+  "10002": {
+    "desc": "ルシアスの門の先にある草原に自生する霊草。",
+    "id": 10002,
+    "max_stack": 99,
+    "name": "黄心草",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 15,
+    "thumbnail": "item_thum_103.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20002,
+        "name": "超回復薬"
+      }
+    ]
+  },
+  "10003": {
+    "desc": "エルガイアでも一般的に自生する強壮効果の高い赤色の薬草",
+    "id": 10003,
+    "max_stack": 99,
+    "name": "紅鍛草",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 3,
+    "thumbnail": "item_thum_100.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20400,
+        "name": "強化薬"
+      },
+      {
+        "id": 20600,
+        "name": "硬化薬"
+      }
+    ]
+  },
+  "10004": {
+    "desc": "木となるはずが草に変じた木肌色の植物",
+    "id": 10004,
+    "max_stack": 99,
+    "name": "茶探草",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_106.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 70600,
+        "name": "探知薬"
+      }
+    ]
+  },
+  "10005": {
+    "desc": "仄耀神アルスタリエの足元より生えている葉",
+    "id": 10005,
+    "max_stack": 99,
+    "name": "桜養の葉",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_107.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38405,
+        "name": "神滅天剣ヴァルシデル"
+      },
+      {
+        "id": 38505,
+        "name": "天将盾エゼネレート"
+      }
+    ]
+  },
+  "10006": {
+    "desc": "食人植物として知られる怪樹クイーンシプラの花心",
+    "id": 10006,
+    "max_stack": 99,
+    "name": "吸命の花心",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_100.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38701,
+        "name": "神宝クルトファナ"
+      },
+      {
+        "id": 44501,
+        "name": "シ・オプス幻影機構"
+      },
+      {
+        "id": 47600,
+        "name": "終世の黙示録"
+      }
+    ]
+  },
+  "10007": {
+    "desc": "モルデリムを包んでいる滅紫の蔦蔓",
+    "id": 10007,
+    "max_stack": 99,
+    "name": "禁樹の虚蔓",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_105.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 49800,
+        "name": "魔蟲樹盾マガジュラ"
+      }
+    ]
+  },
+  "10008": {
+    "desc": "異界ロッカザルムに群生する魔力を含んだ霊草",
+    "id": 10008,
+    "max_stack": 99,
+    "name": "永世の霊草",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_104.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230006,
+        "name": "霊祀環セル・ナリア"
+      },
+      {
+        "id": 230106,
+        "name": "邪罰針ドンデュール"
+      },
+      {
+        "id": 230206,
+        "name": "神護杖ラグファリータ"
+      }
+    ]
+  },
+  "10100": {
+    "desc": "様々な地域を旅するテオという渡り鳥の羽が自然に抜け落ちたもの",
+    "id": 10100,
+    "max_stack": 99,
+    "name": "テオの羽",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 5,
+    "thumbnail": "item_thum_202.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 32300,
+        "name": "毒光ポズグラス"
+      },
+      {
+        "id": 32400,
+        "name": "脆光パリオン"
+      },
+      {
+        "id": 32500,
+        "name": "菌光レフロイド"
+      },
+      {
+        "id": 32600,
+        "name": "疵光ゼリオン"
+      },
+      {
+        "id": 32700,
+        "name": "呪光ラグジスト"
+      },
+      {
+        "id": 32800,
+        "name": "痺光パラストル"
+      }
+    ]
+  },
+  "10101": {
+    "desc": "すべての毒を内包するとエルガイアに伝えられる妖鳥リンの羽",
+    "id": 10101,
+    "max_stack": 99,
+    "name": "リンの羽",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_201.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 31600,
+        "name": "毒の短剣『ポズ』"
+      },
+      {
+        "id": 31700,
+        "name": "魔銃メク・アス"
+      },
+      {
+        "id": 31800,
+        "name": "菌の鉾マシェイド"
+      },
+      {
+        "id": 31900,
+        "name": "鬼槍『大黒』"
+      },
+      {
+        "id": 32000,
+        "name": "呪剣ラグ・ブレイズ"
+      },
+      {
+        "id": 32100,
+        "name": "雷弓ライジング・サン"
+      }
+    ]
+  },
+  "10102": {
+    "desc": "しなやかながら高い硬度を誇り武具や防具の素材となる巨鳥ラウの羽",
+    "id": 10102,
+    "max_stack": 99,
+    "name": "ラウの羽",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_200.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 31000,
+        "name": "千子村正"
+      },
+      {
+        "id": 31100,
+        "name": "王盾ダルバンシェル"
+      },
+      {
+        "id": 34500,
+        "name": "般若の面"
+      }
+    ]
+  },
+  "10104": {
+    "desc": "不吉の兆しと伝えられる魔鳥ヨミの羽が抜けたもので魔力を秘めている",
+    "id": 10104,
+    "max_stack": 99,
+    "name": "ヨミの羽",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_205.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 31000,
+        "name": "千子村正"
+      },
+      {
+        "id": 31100,
+        "name": "王盾ダルバンシェル"
+      },
+      {
+        "id": 31200,
+        "name": "魔刃鎌ハーヴェス"
+      },
+      {
+        "id": 31300,
+        "name": "宝珠エルゼット・コア"
+      },
+      {
+        "id": 34400,
+        "name": "透明のマント"
+      }
+    ]
+  },
+  "10105": {
+    "desc": "全ての鳥の始祖と言われる始祖鳥ヘスの羽",
+    "id": 10105,
+    "max_stack": 99,
+    "name": "ヘスの羽",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 25,
+    "thumbnail": "item_thum_206.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 32301,
+        "name": "毒晶光ポズグラス"
+      },
+      {
+        "id": 32401,
+        "name": "衰晶光パリオン"
+      },
+      {
+        "id": 32501,
+        "name": "菌晶光レフロイド"
+      },
+      {
+        "id": 32601,
+        "name": "疲晶光ゼリオン"
+      },
+      {
+        "id": 32701,
+        "name": "呪晶光ラグジスト"
+      },
+      {
+        "id": 32801,
+        "name": "痺晶光パラストル"
+      }
+    ]
+  },
+  "10106": {
+    "desc": "神が愛でた鳥と言われている霊鳥ムサの羽",
+    "id": 10106,
+    "max_stack": 99,
+    "name": "ムサの羽",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 30,
+    "thumbnail": "item_thum_207.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 31601,
+        "name": "毒双竜ポズ=ディリス"
+      },
+      {
+        "id": 31701,
+        "name": "魔装銃ルキュリアン"
+      },
+      {
+        "id": 31801,
+        "name": "幻地鉾グランロイド"
+      },
+      {
+        "id": 31901,
+        "name": "鬼皇槍『毘沙門』"
+      },
+      {
+        "id": 32001,
+        "name": "呪われた剣『魔怨』"
+      },
+      {
+        "id": 32101,
+        "name": "空神の弓『雷電』"
+      },
+      {
+        "id": 34805,
+        "name": "王光の花"
+      },
+      {
+        "id": 34806,
+        "name": "覇竜のイヤリング"
+      }
+    ]
+  },
+  "10107": {
+    "desc": "幸運を運ぶ鳥と呼ばれている神鳥ロアの羽",
+    "id": 10107,
+    "max_stack": 99,
+    "name": "ロアの羽",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_203.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 34001,
+        "name": "魔神魂の籠手"
+      },
+      {
+        "id": 34805,
+        "name": "王光の花"
+      },
+      {
+        "id": 47902,
+        "name": "魔封珠『ベイオルグ』"
+      }
+    ]
+  },
+  "10108": {
+    "desc": "強力な魔物の周囲を飛び回る黒い鳥から抜け落ちた羽",
+    "id": 10108,
+    "max_stack": 99,
+    "name": "ムヴの羽",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_204.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 70200,
+        "name": "転送薬"
+      }
+    ]
+  },
+  "10109": {
+    "desc": "アグニ地方に生息する瑞鳥から抜け落ちた羽",
+    "id": 10109,
+    "max_stack": 99,
+    "name": "セフの羽",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_205.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 39500,
+        "name": "召喚師の帽子"
+      }
+    ]
+  },
+  "10110": {
+    "desc": "現在ほとんど姿を見ることができない蝶の羽",
+    "id": 10110,
+    "max_stack": 99,
+    "name": "リフの羽",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_200.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 31301,
+        "name": "宝珠ミラビアス"
+      },
+      {
+        "id": 40000,
+        "name": "技宝ソルジェネレーター"
+      },
+      {
+        "id": 40100,
+        "name": "癒宝ルナジェネレーター"
+      },
+      {
+        "id": 47905,
+        "name": "魔封珠『ザームブルグ』"
+      }
+    ]
+  },
+  "10111": {
+    "desc": "闘鳥とも呼ばれている怪鳥ゼタの羽",
+    "id": 10111,
+    "max_stack": 99,
+    "name": "ゼタの羽",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_206.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 41500,
+        "name": "精霊の首飾り"
+      },
+      {
+        "id": 41600,
+        "name": "星剣ルブアメティア"
+      },
+      {
+        "id": 41700,
+        "name": "黒竜のイヤリング"
+      }
+    ]
+  },
+  "10112": {
+    "desc": "“災厄の鳥”と呼ばれるクウの羽",
+    "id": 10112,
+    "max_stack": 99,
+    "name": "クウの羽",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_203.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 31602,
+        "name": "毒華閃ポズ=ソフラ"
+      },
+      {
+        "id": 31702,
+        "name": "魔轟砲ミュステム"
+      },
+      {
+        "id": 31802,
+        "name": "碧殻矛ネイトアガロン"
+      },
+      {
+        "id": 31902,
+        "name": "冥槍『荒覇吐』"
+      },
+      {
+        "id": 32002,
+        "name": "呪機剣-ガヌ-"
+      },
+      {
+        "id": 32102,
+        "name": "雷帝弓トール・テンペスト"
+      }
+    ]
+  },
+  "10113": {
+    "desc": "瀑焔神の炎の翼の欠片",
+    "id": 10113,
+    "max_stack": 99,
+    "name": "凝固した炎",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_200.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44600,
+        "name": "創世の石板"
+      }
+    ]
+  },
+  "10114": {
+    "desc": "瀑焔神の燃え盛る翼",
+    "id": 10114,
+    "max_stack": 99,
+    "name": "業焔の翼",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_200.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44300,
+        "name": "魔石の荊冠"
+      },
+      {
+        "id": 44400,
+        "name": "焔珠『不死鳥』"
+      },
+      {
+        "id": 44600,
+        "name": "創世の石板"
+      }
+    ]
+  },
+  "10115": {
+    "desc": "仄耀神アルスタリエの真紅の翼の羽",
+    "id": 10115,
+    "max_stack": 99,
+    "name": "炎麟の羽",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_200.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38701,
+        "name": "神宝クルトファナ"
+      },
+      {
+        "id": 47600,
+        "name": "終世の黙示録"
+      },
+      {
+        "id": 60200,
+        "name": "宵闇の仙晶球"
+      }
+    ]
+  },
+  "10116": {
+    "desc": "煌竜覇神の翼の欠片",
+    "id": 10116,
+    "max_stack": 99,
+    "name": "竜覇の翼片",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_205.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 48900,
+        "name": "煌拳マハ・ナーガ"
+      }
+    ]
+  },
+  "10117": {
+    "desc": "メノンに生息するとされる謎の鳥ギュルズの羽",
+    "id": 10117,
+    "max_stack": 99,
+    "name": "幻鳥の聖邪羽",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_204.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 47908,
+        "name": "魔封珠『メノン』"
+      }
+    ]
+  },
+  "10118": {
+    "desc": "封魔導神カロンの全身を覆う翼の羽根",
+    "id": 10118,
+    "max_stack": 99,
+    "name": "深緋の導翼",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_200.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 46220,
+        "name": "封刻の魔聖鎧"
+      }
+    ]
+  },
+  "10119": {
+    "desc": "凰刃那原に生息する大型鳥類の尾羽",
+    "id": 10119,
+    "max_stack": 99,
+    "name": "紅鶴の尾羽",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_200.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230005,
+        "name": "讃崇符ドラシオン"
+      },
+      {
+        "id": 230205,
+        "name": "黒妖兜ヘル・クル"
+      }
+    ]
+  },
+  "10200": {
+    "desc": "エルガイアやグランガイアの広範囲で自生する解毒効果のある実",
+    "id": 10200,
+    "max_stack": 99,
+    "name": "ドンの実",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 5,
+    "thumbnail": "item_thum_305.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20200,
+        "name": "解毒薬"
+      },
+      {
+        "id": 32300,
+        "name": "毒光ポズグラス"
+      }
+    ]
+  },
+  "10201": {
+    "desc": "食べた者の攻撃性を増加させる効果を持つ多年草の実",
+    "id": 10201,
+    "max_stack": 99,
+    "name": "コクの実",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_300.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20400,
+        "name": "強化薬"
+      },
+      {
+        "id": 20401,
+        "name": "強靭薬"
+      }
+    ]
+  },
+  "10202": {
+    "desc": "エルガイアの広域で自生している多年草“ビウ”の果実",
+    "id": 10202,
+    "max_stack": 99,
+    "name": "ビウの実",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_302.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20210,
+        "name": "元気薬"
+      },
+      {
+        "id": 32400,
+        "name": "脆光パリオン"
+      },
+      {
+        "id": 32500,
+        "name": "菌光レフロイド"
+      },
+      {
+        "id": 32600,
+        "name": "疵光ゼリオン"
+      }
+    ]
+  },
+  "10203": {
+    "desc": "食べた者の自衛本能を増加させる効果を持つ一年草の実",
+    "id": 10203,
+    "max_stack": 99,
+    "name": "ホクの実",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 5,
+    "thumbnail": "item_thum_301.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20600,
+        "name": "硬化薬"
+      },
+      {
+        "id": 20601,
+        "name": "堅牢薬"
+      }
+    ]
+  },
+  "10204": {
+    "desc": "古来より精神安定効果があるとされ<br>お守り代わりに持つ者も多い実",
+    "id": 10204,
+    "max_stack": 99,
+    "name": "スズの実",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 5,
+    "thumbnail": "item_thum_304.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20220,
+        "name": "聖水"
+      },
+      {
+        "id": 32700,
+        "name": "呪光ラグジスト"
+      }
+    ]
+  },
+  "10205": {
+    "desc": "“パラ”の木になる麻痺状態の治癒効果がある非常に辛い実",
+    "id": 10205,
+    "max_stack": 99,
+    "name": "パラの実",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 5,
+    "thumbnail": "item_thum_303.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20230,
+        "name": "気付け薬"
+      },
+      {
+        "id": 32800,
+        "name": "痺光パラストル"
+      }
+    ]
+  },
+  "10206": {
+    "desc": "グランガイア各地に自生する強い毒性を持つ植物の実",
+    "id": 10206,
+    "max_stack": 99,
+    "name": "モウの実",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_307.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 70300,
+        "name": "神香晶"
+      },
+      {
+        "id": 70400,
+        "name": "攻化晶"
+      },
+      {
+        "id": 70500,
+        "name": "防化晶"
+      }
+    ]
+  },
+  "10207": {
+    "desc": "輝暴龍ラグナレクスの背びれに生じる果実状の球体",
+    "id": 10207,
+    "max_stack": 99,
+    "name": "背樹の実",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_300.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38501,
+        "name": "地霊の命盾ジャルバー"
+      },
+      {
+        "id": 38801,
+        "name": "界双鉾マリッドフワル"
+      },
+      {
+        "id": 39201,
+        "name": "金のバングル"
+      },
+      {
+        "id": 39600,
+        "name": "女神の旗印"
+      }
+    ]
+  },
+  "10208": {
+    "desc": "輝暴龍ラグナレクスの背びれに稀に生じる果実状の輝く球体",
+    "id": 10208,
+    "max_stack": 99,
+    "name": "輝暴の実",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_301.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 35800,
+        "name": "秘宝『レブ・マデュラ』"
+      },
+      {
+        "id": 39100,
+        "name": "魔導装マナラーグ"
+      }
+    ]
+  },
+  "10209": {
+    "desc": "尋常でない堅さの皮をもつ大妖樹の果実",
+    "id": 10209,
+    "max_stack": 99,
+    "name": "メルの実",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_302.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 35202,
+        "name": "秘宝『マルキュロディン』"
+      },
+      {
+        "id": 38600,
+        "name": "秘宝『ベルティオン』"
+      },
+      {
+        "id": 38800,
+        "name": "古の短剣『アリエル』"
+      },
+      {
+        "id": 38900,
+        "name": "霊壊銃バス=テス"
+      }
+    ]
+  },
+  "10210": {
+    "desc": "長い長い歳月をかけて熟した大妖樹の果実",
+    "id": 10210,
+    "max_stack": 99,
+    "name": "大妖樹果",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_305.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38501,
+        "name": "地霊の命盾ジャルバー"
+      },
+      {
+        "id": 39400,
+        "name": "ファルバナの像"
+      }
+    ]
+  },
+  "10211": {
+    "desc": "ロッカザルムで自生が確認されている木の実",
+    "id": 10211,
+    "max_stack": 99,
+    "name": "泡錯の実",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_303.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230106,
+        "name": "邪罰針ドンデュール"
+      },
+      {
+        "id": 230206,
+        "name": "神護杖ラグファリータ"
+      },
+      {
+        "id": 239000,
+        "name": "陽幻刃ルーグフレア"
+      }
+    ]
+  },
+  "10300": {
+    "desc": "エルガイアやグランガイアの各地で湧き出ている名水の雫",
+    "id": 10300,
+    "max_stack": 99,
+    "name": "清翠の雫",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 3,
+    "thumbnail": "item_thum_402.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20000,
+        "name": "回復薬"
+      }
+    ]
+  },
+  "10301": {
+    "desc": "エルガイアやグランガイアの各地で湧き出ている非常に甘い水の雫",
+    "id": 10301,
+    "max_stack": 99,
+    "name": "純藍の雫",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 5,
+    "thumbnail": "item_thum_401.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20200,
+        "name": "解毒薬"
+      },
+      {
+        "id": 20210,
+        "name": "元気薬"
+      },
+      {
+        "id": 20220,
+        "name": "聖水"
+      },
+      {
+        "id": 20230,
+        "name": "気付け薬"
+      },
+      {
+        "id": 20240,
+        "name": "快気薬"
+      }
+    ]
+  },
+  "10302": {
+    "desc": "わずかな赤みがあり非常に高い回復効果を持つ名水の雫",
+    "id": 10302,
+    "max_stack": 99,
+    "name": "滅朱の雫",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 8,
+    "thumbnail": "item_thum_400.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20001,
+        "name": "強回復薬"
+      }
+    ]
+  },
+  "10303": {
+    "desc": "エルガイア西部の岩の大地「クラスター渓谷」に湧き出る泉水。",
+    "id": 10303,
+    "max_stack": 99,
+    "name": "浄金の雫",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_403.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20002,
+        "name": "超回復薬"
+      },
+      {
+        "id": 20401,
+        "name": "強靭薬"
+      },
+      {
+        "id": 20601,
+        "name": "堅牢薬"
+      }
+    ]
+  },
+  "10304": {
+    "desc": "天界より降ってきたとの伝承も残る非常に貴重な雫",
+    "id": 10304,
+    "max_stack": 99,
+    "name": "麗紫の雫",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 15,
+    "thumbnail": "item_thum_405.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20100,
+        "name": "祝福の光"
+      },
+      {
+        "id": 20102,
+        "name": "継復光"
+      }
+    ]
+  },
+  "10305": {
+    "desc": "エルガイアの聖地「アーロン」にある聖廟にのみわずかに湧き出す泉水。",
+    "id": 10305,
+    "max_stack": 99,
+    "name": "磨銀の雫",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 13,
+    "thumbnail": "item_thum_401.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20101,
+        "name": "聖者の光"
+      },
+      {
+        "id": 20102,
+        "name": "継復光"
+      },
+      {
+        "id": 21100,
+        "name": "神仙珠琴"
+      }
+    ]
+  },
+  "10307": {
+    "desc": "女神の瞳からこぼれ落ちたと言われる奇跡の力を秘めた雫",
+    "id": 10307,
+    "max_stack": 99,
+    "name": "女神の涙",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_407.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 22200,
+        "name": "天使の像"
+      }
+    ]
+  },
+  "10308": {
+    "desc": "召喚院より配布される特殊な雫",
+    "id": 10308,
+    "max_stack": 99,
+    "name": "絆の雫",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_407.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20250,
+        "name": "抗疫薬"
+      },
+      {
+        "id": 22400,
+        "name": "蘇生薬"
+      },
+      {
+        "id": 22410,
+        "name": "蘇生薬改"
+      },
+      {
+        "id": 30203,
+        "name": "天杖ロベル・アダン"
+      },
+      {
+        "id": 30205,
+        "name": "戒杖ラクシュミ"
+      },
+      {
+        "id": 30208,
+        "name": "真導杖イキュロス"
+      },
+      {
+        "id": 30303,
+        "name": "輝鎧ルディバ・マクス"
+      },
+      {
+        "id": 31001,
+        "name": "天叢雲剣"
+      },
+      {
+        "id": 31101,
+        "name": "英知の盾『エクセイル』"
+      },
+      {
+        "id": 34809,
+        "name": "秘宝『ルディ・メクアン』"
+      },
+      {
+        "id": 38000,
+        "name": "魔石の欠片"
+      },
+      {
+        "id": 38001,
+        "name": "魔石の結晶"
+      },
+      {
+        "id": 38100,
+        "name": "覇彩晶ミラヴィス"
+      },
+      {
+        "id": 38200,
+        "name": "王彩晶エルディオン"
+      },
+      {
+        "id": 40000,
+        "name": "技宝ソルジェネレーター"
+      },
+      {
+        "id": 40100,
+        "name": "癒宝ルナジェネレーター"
+      },
+      {
+        "id": 41500,
+        "name": "精霊の首飾り"
+      }
+    ]
+  },
+  "10309": {
+    "desc": "特殊な菌類の群生地に溜まる強い臭気を放つ濁った雫",
+    "id": 10309,
+    "max_stack": 99,
+    "name": "炸煙の雫",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 15,
+    "thumbnail": "item_thum_404.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 70100,
+        "name": "煙玉"
+      }
+    ]
+  },
+  "10310": {
+    "desc": "堕神ヴァン・ルーシの頭部から漏れ出た魔力溢れる液体",
+    "id": 10310,
+    "max_stack": 99,
+    "name": "堕落の涙",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 15,
+    "thumbnail": "item_thum_400.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 39600,
+        "name": "女神の旗印"
+      }
+    ]
+  },
+  "10311": {
+    "desc": "邪神ヴァン・ナーダの頭部から漏れ出た魔力溢れる液体",
+    "id": 10311,
+    "max_stack": 99,
+    "name": "悪意の涙",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 15,
+    "thumbnail": "item_thum_401.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 39700,
+        "name": "魔神の旗印"
+      }
+    ]
+  },
+  "10312": {
+    "desc": "瀑焔神から流れ落ちる体液",
+    "id": 10312,
+    "max_stack": 99,
+    "name": "禍水の雫",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 15,
+    "thumbnail": "item_thum_401.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44600,
+        "name": "創世の石板"
+      }
+    ]
+  },
+  "10313": {
+    "desc": "異界ヴィランシルのオーロラが見える地域から採取できる水",
+    "id": 10313,
+    "max_stack": 99,
+    "name": "極星水",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_405.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230004,
+        "name": "尊血玉ディメーテ"
+      },
+      {
+        "id": 230304,
+        "name": "栄慈符ポリアフ"
+      },
+      {
+        "id": 234000,
+        "name": "聖凶典レネイエ"
+      }
+    ]
+  },
+  "10314": {
+    "desc": "凰刃那原の山奥の泉で汲むことができる泉水",
+    "id": 10314,
+    "max_stack": 99,
+    "name": "香泉霊水",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_405.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230005,
+        "name": "讃崇符ドラシオン"
+      },
+      {
+        "id": 230105,
+        "name": "禁闘剣サフォルス"
+      }
+    ]
+  },
+  "10400": {
+    "desc": "各地で入手可能な緑色をした巨獣の爪の化石",
+    "id": 10400,
+    "max_stack": 99,
+    "name": "緑獣の爪",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_502.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30000,
+        "name": "名剣ブレイブライド"
+      }
+    ]
+  },
+  "10401": {
+    "desc": "モルガン地方で発見された青い色をした巨獣の爪の化石",
+    "id": 10401,
+    "max_stack": 99,
+    "name": "青獣の爪",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 20,
+    "thumbnail": "item_thum_501.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30001,
+        "name": "聖剣エベリクス"
+      }
+    ]
+  },
+  "10402": {
+    "desc": "セントラミア地方で発見された赤い色をした巨獣の爪の化石",
+    "id": 10402,
+    "max_stack": 99,
+    "name": "赤獣の爪",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 30,
+    "thumbnail": "item_thum_500.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30002,
+        "name": "魔剣エデル・マゼル"
+      }
+    ]
+  },
+  "10405": {
+    "desc": "召喚院より配布される特殊な爪",
+    "id": 10405,
+    "max_stack": 99,
+    "name": "絆の爪",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 1,
+    "thumbnail": "item_thum_507.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 21010,
+        "name": "武神薬改"
+      },
+      {
+        "id": 22420,
+        "name": "英雄幻晶"
+      },
+      {
+        "id": 30003,
+        "name": "竜が鍛えし剣『マガ』"
+      },
+      {
+        "id": 30004,
+        "name": "神剣アルトレイト"
+      },
+      {
+        "id": 30005,
+        "name": "神帝剣マグナレイブ"
+      },
+      {
+        "id": 30006,
+        "name": "神祇剣クランベルド"
+      },
+      {
+        "id": 30007,
+        "name": "殲神剣エクセベルグ"
+      },
+      {
+        "id": 30008,
+        "name": "煌神剣レイ・ファルク"
+      },
+      {
+        "id": 31002,
+        "name": "天羽々斬剣"
+      },
+      {
+        "id": 31601,
+        "name": "毒双竜ポズ=ディリス"
+      },
+      {
+        "id": 31602,
+        "name": "毒華閃ポズ=ソフラ"
+      },
+      {
+        "id": 31801,
+        "name": "幻地鉾グランロイド"
+      },
+      {
+        "id": 31802,
+        "name": "碧殻矛ネイトアガロン"
+      },
+      {
+        "id": 32001,
+        "name": "呪われた剣『魔怨』"
+      },
+      {
+        "id": 32002,
+        "name": "呪機剣-ガヌ-"
+      },
+      {
+        "id": 33500,
+        "name": "闇衣ダークエデュア"
+      },
+      {
+        "id": 33700,
+        "name": "技宝バトルブースター"
+      },
+      {
+        "id": 33800,
+        "name": "癒宝ハートブースター"
+      },
+      {
+        "id": 34300,
+        "name": "光兜セルティオン"
+      },
+      {
+        "id": 34803,
+        "name": "技宝バトルブースター2"
+      },
+      {
+        "id": 34804,
+        "name": "癒宝ハートブースター2"
+      },
+      {
+        "id": 34806,
+        "name": "覇竜のイヤリング"
+      },
+      {
+        "id": 34807,
+        "name": "魔槍ゲイ・ボルグ"
+      },
+      {
+        "id": 35500,
+        "name": "異剣エル・ビュラー"
+      },
+      {
+        "id": 35501,
+        "name": "竜覇剣ザビュー・ゼスタ"
+      },
+      {
+        "id": 35600,
+        "name": "血を奪う槍『グルムス』"
+      },
+      {
+        "id": 37900,
+        "name": "神宝デュマル=ノクス"
+      },
+      {
+        "id": 38300,
+        "name": "大泥棒の手甲"
+      }
+    ]
+  },
+  "10406": {
+    "desc": "非常に巨大な獣の爪。通常の人間では剥がすことにも苦労する大きさ",
+    "id": 10406,
+    "max_stack": 99,
+    "name": "巨獣の爪",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 30,
+    "thumbnail": "item_thum_506.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 35400,
+        "name": "秘宝『コルデリカ』"
+      },
+      {
+        "id": 35600,
+        "name": "血を奪う槍『グルムス』"
+      }
+    ]
+  },
+  "10407": {
+    "desc": "巨大な二本角と牙を持つ魔獣の爪",
+    "id": 10407,
+    "max_stack": 99,
+    "name": "鬼獣の爪",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 40,
+    "thumbnail": "item_thum_503.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30003,
+        "name": "竜が鍛えし剣『マガ』"
+      }
+    ]
+  },
+  "10408": {
+    "desc": "冥界より這い出てくると伝えられている冥獣の爪",
+    "id": 10408,
+    "max_stack": 99,
+    "name": "冥獣の爪",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_504.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 31001,
+        "name": "天叢雲剣"
+      },
+      {
+        "id": 31101,
+        "name": "英知の盾『エクセイル』"
+      },
+      {
+        "id": 34807,
+        "name": "魔槍ゲイ・ボルグ"
+      }
+    ]
+  },
+  "10409": {
+    "desc": "アグニ地方に生息する非常に凶暴な獣の剛爪",
+    "id": 10409,
+    "max_stack": 99,
+    "name": "蛮獣の爪",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_506.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30004,
+        "name": "神剣アルトレイト"
+      },
+      {
+        "id": 30204,
+        "name": "神杖アポカリプス"
+      },
+      {
+        "id": 47904,
+        "name": "魔封珠『ラクシュルト』"
+      }
+    ]
+  },
+  "10410": {
+    "desc": "闇司神レデュハークの血に染まった爪",
+    "id": 10410,
+    "max_stack": 99,
+    "name": "闇夜の爪",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_500.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38901,
+        "name": "冥槍スリーメニアン"
+      },
+      {
+        "id": 39201,
+        "name": "金のバングル"
+      }
+    ]
+  },
+  "10411": {
+    "desc": "破壊神ミストゾーグの無数の手に存在する漆黒の爪",
+    "id": 10411,
+    "max_stack": 99,
+    "name": "幻惑の爪",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_505.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38403,
+        "name": "封神剣アルトレイブ"
+      }
+    ]
+  },
+  "10412": {
+    "desc": "破壊神ミストゾーグの上腕に生えている真紅の爪",
+    "id": 10412,
+    "max_stack": 99,
+    "name": "迷亡の爪",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_500.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38503,
+        "name": "魔盾ダグナス=シーラ"
+      }
+    ]
+  },
+  "10413": {
+    "desc": "氷河を登るのにも使われる氷堅獣の堅牢な爪",
+    "id": 10413,
+    "max_stack": 99,
+    "name": "氷堅の爪",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_505.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38501,
+        "name": "地霊の命盾ジャルバー"
+      },
+      {
+        "id": 39400,
+        "name": "ファルバナの像"
+      }
+    ]
+  },
+  "10414": {
+    "desc": "堕神ヴァン・ルーシの魔力に満ち溢れた白銅の腕",
+    "id": 10414,
+    "max_stack": 99,
+    "name": "堕落の腕",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_503.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 39900,
+        "name": "フェニックスの輝翼"
+      }
+    ]
+  },
+  "10415": {
+    "desc": "邪神ヴァン・ナーダの魔力に満ち溢れた黒鉄の腕",
+    "id": 10415,
+    "max_stack": 99,
+    "name": "悪意の腕",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_505.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 39800,
+        "name": "魔晶帝冠リリー・レイズ"
+      }
+    ]
+  },
+  "10416": {
+    "desc": "冥界に生息しているとされる魔獣の爪",
+    "id": 10416,
+    "max_stack": 99,
+    "name": "獄獣の爪",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_506.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 35501,
+        "name": "竜覇剣ザビュー・ゼスタ"
+      },
+      {
+        "id": 41600,
+        "name": "星剣ルブアメティア"
+      }
+    ]
+  },
+  "10417": {
+    "desc": "機械の身体を持つと言われる異界の獣の爪",
+    "id": 10417,
+    "max_stack": 99,
+    "name": "機獣の爪",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_504.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 43300,
+        "name": "獄槍ファーヴィ・オピス"
+      }
+    ]
+  },
+  "10418": {
+    "desc": "剛雷獣の強靭な爪",
+    "id": 10418,
+    "max_stack": 99,
+    "name": "剛雷強爪",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_501.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44500,
+        "name": "ラ・ミラ変換機構"
+      }
+    ]
+  },
+  "10419": {
+    "desc": "煉神ナルダ・デリアの岩塊のごとき拳骨",
+    "id": 10419,
+    "max_stack": 99,
+    "name": "断獄の拳",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_505.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38504,
+        "name": "魔将盾シルヴェラ"
+      }
+    ]
+  },
+  "10420": {
+    "desc": "鋼鉄すら容易に切り裂く合魔獣グルドギアの爪",
+    "id": 10420,
+    "max_stack": 99,
+    "name": "魔獣剛爪",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_505.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38802,
+        "name": "異禍鉾ゲイズオーマ"
+      }
+    ]
+  },
+  "10421": {
+    "desc": "透明化能力を持つ生物が落としたであろう爪",
+    "id": 10421,
+    "max_stack": 99,
+    "name": "透光爪",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_504.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 47901,
+        "name": "魔封珠『レーム』"
+      }
+    ]
+  },
+  "10422": {
+    "desc": "エストリアに生息している大型地竜の爪",
+    "id": 10422,
+    "max_stack": 99,
+    "name": "鉱竜熱爪",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_500.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 47907,
+        "name": "魔封珠『エストリア』"
+      }
+    ]
+  },
+  "10423": {
+    "desc": "ベクタスに存在する機械人形の爪",
+    "id": 10423,
+    "max_stack": 99,
+    "name": "機巧の鋼爪",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_502.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230003,
+        "name": "光浄石ルピテクト"
+      },
+      {
+        "id": 230103,
+        "name": "聖光旗シェーステン"
+      }
+    ]
+  },
+  "10424": {
+    "desc": "凰刃那原に生息する妖獣の爪",
+    "id": 10424,
+    "max_stack": 99,
+    "name": "黒疫爪",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_505.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 236000,
+        "name": "栄神の御光酒"
+      },
+      {
+        "id": 237000,
+        "name": "聖神霊の柴灯"
+      }
+    ]
+  },
+  "10425": {
+    "desc": "竜の爪よりも強靭な亜竜鳥の蹴爪",
+    "id": 10425,
+    "max_stack": 99,
+    "name": "亜竜鳥の爪",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_500.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230007,
+        "name": "護魂死祓の指輪"
+      },
+      {
+        "id": 236001,
+        "name": "託閃煌鏡フォリフォリ"
+      },
+      {
+        "id": 238001,
+        "name": "誉望神杯ルファーレ"
+      }
+    ]
+  },
+  "10500": {
+    "desc": "各地で入手可能な緑色をした巨獣の牙の化石",
+    "id": 10500,
+    "max_stack": 99,
+    "name": "緑獣の牙",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_602.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30400,
+        "name": "覇斧マリュデフス"
+      }
+    ]
+  },
+  "10502": {
+    "desc": "セントラミア地方で発見された赤色をした獣の牙の化石",
+    "id": 10502,
+    "max_stack": 99,
+    "name": "赤獣の牙",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 30,
+    "thumbnail": "item_thum_600.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30401,
+        "name": "魔神斧ロード・マグレス"
+      }
+    ]
+  },
+  "10505": {
+    "desc": "伝承に残された魔獣と同種とされる<br>強固な牙の化石",
+    "id": 10505,
+    "max_stack": 99,
+    "name": "蝕罪の牙",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 25,
+    "thumbnail": "item_thum_606.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 34300,
+        "name": "光兜セルティオン"
+      }
+    ]
+  },
+  "10506": {
+    "desc": "召喚院より配布される特殊な牙",
+    "id": 10506,
+    "max_stack": 99,
+    "name": "絆の牙",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 1,
+    "thumbnail": "item_thum_607.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 22310,
+        "name": "覇神の笛"
+      },
+      {
+        "id": 22420,
+        "name": "英雄幻晶"
+      },
+      {
+        "id": 30304,
+        "name": "神鎧コキュートス"
+      },
+      {
+        "id": 30305,
+        "name": "煉鎧ルナ・ラビュア"
+      },
+      {
+        "id": 30306,
+        "name": "冥鎧クリプトデリア"
+      },
+      {
+        "id": 30307,
+        "name": "異鎧ペルド・インティス"
+      },
+      {
+        "id": 33400,
+        "name": "戦神の旗幟"
+      },
+      {
+        "id": 35501,
+        "name": "竜覇剣ザビュー・ゼスタ"
+      },
+      {
+        "id": 37800,
+        "name": "秘宝『リゼリア』"
+      },
+      {
+        "id": 41600,
+        "name": "星剣ルブアメティア"
+      },
+      {
+        "id": 41900,
+        "name": "彗兜クロエサクリス"
+      },
+      {
+        "id": 43300,
+        "name": "獄槍ファーヴィ・オピス"
+      },
+      {
+        "id": 44000,
+        "name": "秘宝『バリウラ』"
+      }
+    ]
+  },
+  "10507": {
+    "desc": "黄金のたてがみを持つ全ての獣の中の王の牙",
+    "id": 10507,
+    "max_stack": 99,
+    "name": "黄帝の牙",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 25,
+    "thumbnail": "item_thum_603.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30402,
+        "name": "破壊斧デス=クリムゾン"
+      },
+      {
+        "id": 34001,
+        "name": "魔神魂の籠手"
+      },
+      {
+        "id": 34805,
+        "name": "王光の花"
+      },
+      {
+        "id": 34806,
+        "name": "覇竜のイヤリング"
+      }
+    ]
+  },
+  "10508": {
+    "desc": "深淵の牢獄に囚われている魔獣の牙。",
+    "id": 10508,
+    "max_stack": 99,
+    "name": "幽獄の牙",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_605.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 34806,
+        "name": "覇竜のイヤリング"
+      }
+    ]
+  },
+  "10509": {
+    "desc": "天空から墜落したと伝えられる太古の獣の牙",
+    "id": 10509,
+    "max_stack": 99,
+    "name": "蒼穹の牙",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_601.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 37700,
+        "name": "煉光ミグ・デリン"
+      },
+      {
+        "id": 37800,
+        "name": "秘宝『リゼリア』"
+      },
+      {
+        "id": 37900,
+        "name": "神宝デュマル=ノクス"
+      },
+      {
+        "id": 47903,
+        "name": "魔封珠『ウルジ』"
+      }
+    ]
+  },
+  "10510": {
+    "desc": "紫皇花と呼ばれる植物の、牙のように鋭利な種子",
+    "id": 10510,
+    "max_stack": 99,
+    "name": "紫皇の牙",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_605.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30005,
+        "name": "神帝剣マグナレイブ"
+      },
+      {
+        "id": 30205,
+        "name": "戒杖ラクシュミ"
+      }
+    ]
+  },
+  "10511": {
+    "desc": "炎を噛み千切る炎喰龍の牙",
+    "id": 10511,
+    "max_stack": 99,
+    "name": "炎喰の牙",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_604.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38401,
+        "name": "蒼竜剣ブレイブ・テラー"
+      },
+      {
+        "id": 39400,
+        "name": "ファルバナの像"
+      }
+    ]
+  },
+  "10512": {
+    "desc": "ヴリクシャ地方に生息する獰猛な肉食獣の牙",
+    "id": 10512,
+    "max_stack": 99,
+    "name": "破双の牙",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_606.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 35501,
+        "name": "竜覇剣ザビュー・ゼスタ"
+      },
+      {
+        "id": 41700,
+        "name": "黒竜のイヤリング"
+      }
+    ]
+  },
+  "10513": {
+    "desc": "常に僅かな雷を帯びている獣の牙",
+    "id": 10513,
+    "max_stack": 99,
+    "name": "招雷の牙",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_603.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38001,
+        "name": "魔石の結晶"
+      }
+    ]
+  },
+  "10514": {
+    "desc": "言い伝えにある姿の見えない獣のものと考えられる牙",
+    "id": 10514,
+    "max_stack": 99,
+    "name": "幻影の牙",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_603.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30008,
+        "name": "煌神剣レイ・ファルク"
+      },
+      {
+        "id": 30108,
+        "name": "覇天盾メルクード"
+      },
+      {
+        "id": 44000,
+        "name": "秘宝『バリウラ』"
+      },
+      {
+        "id": 44200,
+        "name": "盗賊神の指輪"
+      }
+    ]
+  },
+  "10515": {
+    "desc": "グラノモスが地中を掘り進むために使う牙",
+    "id": 10515,
+    "max_stack": 99,
+    "name": "翠旋の牙",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_602.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38404,
+        "name": "神斬剣ミスラテス"
+      },
+      {
+        "id": 38504,
+        "name": "魔将盾シルヴェラ"
+      }
+    ]
+  },
+  "10516": {
+    "desc": "白閻獣バルメディアの鋭い牙",
+    "id": 10516,
+    "max_stack": 99,
+    "name": "裁きの牙",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_600.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38404,
+        "name": "神斬剣ミスラテス"
+      }
+    ]
+  },
+  "10517": {
+    "desc": "魔神にも喰らいついた獰猛な冥狼の牙",
+    "id": 10517,
+    "max_stack": 99,
+    "name": "冥狼牙",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_604.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 47902,
+        "name": "魔封珠『ベイオルグ』"
+      }
+    ]
+  },
+  "10518": {
+    "desc": "黒覇竜が残した白銀の牙",
+    "id": 10518,
+    "max_stack": 99,
+    "name": "黒覇竜牙",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_604.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 47906,
+        "name": "魔封珠『ファル・ナーガ』"
+      }
+    ]
+  },
+  "10519": {
+    "desc": "異界ヴィランシルを統べる神狼が持つ宝牙",
+    "id": 10519,
+    "max_stack": 99,
+    "name": "絶凍吼牙",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_601.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 235000,
+        "name": "天狼套ゼフィーロ"
+      }
+    ]
+  },
+  "10520": {
+    "desc": "竜気が実体化した牙のごとく鋭い一対の結晶体",
+    "id": 10520,
+    "max_stack": 99,
+    "name": "竜牙双晶",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_606.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230107,
+        "name": "散華のセリデリク"
+      },
+      {
+        "id": 230207,
+        "name": "聖盾将冠アクブテカ"
+      }
+    ]
+  },
+  "10600": {
+    "desc": "炎の力を秘めた水晶",
+    "id": 10600,
+    "max_stack": 99,
+    "name": "炎神の眼",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 20,
+    "thumbnail": "item_thum_700.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20800,
+        "name": "炎撃石"
+      },
+      {
+        "id": 20900,
+        "name": "炎護石"
+      },
+      {
+        "id": 20960,
+        "name": "炎帝石"
+      },
+      {
+        "id": 41400,
+        "name": "炎装グランフラム"
+      }
+    ]
+  },
+  "10601": {
+    "desc": "水の力を秘めた水晶",
+    "id": 10601,
+    "max_stack": 99,
+    "name": "水神の眼",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 20,
+    "thumbnail": "item_thum_701.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20810,
+        "name": "水撃石"
+      },
+      {
+        "id": 20910,
+        "name": "水護石"
+      },
+      {
+        "id": 20961,
+        "name": "水帝石"
+      },
+      {
+        "id": 41401,
+        "name": "水装『凍甲』"
+      }
+    ]
+  },
+  "10602": {
+    "desc": "樹の力を秘めた水晶",
+    "id": 10602,
+    "max_stack": 99,
+    "name": "樹神の眼",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 20,
+    "thumbnail": "item_thum_702.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20820,
+        "name": "樹撃石"
+      },
+      {
+        "id": 20920,
+        "name": "樹護石"
+      },
+      {
+        "id": 20962,
+        "name": "樹帝石"
+      },
+      {
+        "id": 41402,
+        "name": "樹装エールアルタ"
+      }
+    ]
+  },
+  "10603": {
+    "desc": "雷の力を秘めた水晶",
+    "id": 10603,
+    "max_stack": 99,
+    "name": "雷神の眼",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 20,
+    "thumbnail": "item_thum_703.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20830,
+        "name": "雷撃石"
+      },
+      {
+        "id": 20930,
+        "name": "雷護石"
+      },
+      {
+        "id": 20963,
+        "name": "雷帝石"
+      },
+      {
+        "id": 41403,
+        "name": "雷装レジ・ストラ"
+      }
+    ]
+  },
+  "10604": {
+    "desc": "光の力を秘めた水晶",
+    "id": 10604,
+    "max_stack": 99,
+    "name": "光神の眼",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 20,
+    "thumbnail": "item_thum_704.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20840,
+        "name": "光撃石"
+      },
+      {
+        "id": 20940,
+        "name": "光護石"
+      },
+      {
+        "id": 20964,
+        "name": "光帝石"
+      },
+      {
+        "id": 41404,
+        "name": "光装キリエ・メイヴ"
+      }
+    ]
+  },
+  "10605": {
+    "desc": "闇の力を秘めた水晶",
+    "id": 10605,
+    "max_stack": 99,
+    "name": "闇神の眼",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 20,
+    "thumbnail": "item_thum_705.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20850,
+        "name": "闇撃石"
+      },
+      {
+        "id": 20950,
+        "name": "闇護石"
+      },
+      {
+        "id": 20965,
+        "name": "闇帝石"
+      },
+      {
+        "id": 41405,
+        "name": "影装アルダ=ギール"
+      }
+    ]
+  },
+  "10606": {
+    "desc": "生命が持つ精神力により輝きを増す不思議な水晶",
+    "id": 10606,
+    "max_stack": 99,
+    "name": "武神の眼",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 30,
+    "thumbnail": "item_thum_706.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 21000,
+        "name": "武神薬"
+      }
+    ]
+  },
+  "10607": {
+    "desc": "効果・用途ともに不明の黄金色に輝く謎の水晶",
+    "id": 10607,
+    "max_stack": 99,
+    "name": "波壁の眼",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 25,
+    "thumbnail": "item_thum_703.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 31000,
+        "name": "千子村正"
+      },
+      {
+        "id": 31100,
+        "name": "王盾ダルバンシェル"
+      },
+      {
+        "id": 32200,
+        "name": "魔装メライドデウス"
+      }
+    ]
+  },
+  "10608": {
+    "desc": "効果・用途ともに不明の黄金色に輝く謎の水晶",
+    "id": 10608,
+    "max_stack": 99,
+    "name": "波迅の魔眼",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 25,
+    "thumbnail": "item_thum_703.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 35500,
+        "name": "異剣エル・ビュラー"
+      },
+      {
+        "id": 47901,
+        "name": "魔封珠『レーム』"
+      }
+    ]
+  },
+  "10609": {
+    "desc": "銀色の輝きを放つ高い魔力を秘めた水晶",
+    "id": 10609,
+    "max_stack": 99,
+    "name": "魔銀の清眼",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_704.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 34807,
+        "name": "魔槍ゲイ・ボルグ"
+      }
+    ]
+  },
+  "10610": {
+    "desc": "独特な波長の魔力光を放射する水晶",
+    "id": 10610,
+    "max_stack": 99,
+    "name": "千里の眼",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_703.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 70000,
+        "name": "蛍光弾"
+      },
+      {
+        "id": 70600,
+        "name": "探知薬"
+      }
+    ]
+  },
+  "10611": {
+    "desc": "古戦場で発見することのできる漆黒の結晶",
+    "id": 10611,
+    "max_stack": 99,
+    "name": "亡怨の鋭眼",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_705.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30005,
+        "name": "神帝剣マグナレイブ"
+      },
+      {
+        "id": 30105,
+        "name": "断罪の盾『黒騎』"
+      },
+      {
+        "id": 30205,
+        "name": "戒杖ラクシュミ"
+      },
+      {
+        "id": 30305,
+        "name": "煉鎧ルナ・ラビュア"
+      },
+      {
+        "id": 39500,
+        "name": "召喚師の帽子"
+      },
+      {
+        "id": 47905,
+        "name": "魔封珠『ザームブルグ』"
+      }
+    ]
+  },
+  "10612": {
+    "desc": "覇妃霊メリオンの背後に輝く強い魔力を秘めた瞳",
+    "id": 10612,
+    "max_stack": 99,
+    "name": "覇霊の瞳",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_703.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38402,
+        "name": "大天使の剣『セリエル』"
+      },
+      {
+        "id": 39000,
+        "name": "凶戟ゲヘナベルム"
+      }
+    ]
+  },
+  "10613": {
+    "desc": "覇妃霊メリオンの力の源とも言われる宝珠",
+    "id": 10613,
+    "max_stack": 99,
+    "name": "覇妃霊珠",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_704.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38402,
+        "name": "大天使の剣『セリエル』"
+      },
+      {
+        "id": 38403,
+        "name": "封神剣アルトレイブ"
+      }
+    ]
+  },
+  "10614": {
+    "desc": "闇司神レデュハークが闇を凝縮して創った宝珠",
+    "id": 10614,
+    "max_stack": 99,
+    "name": "闇天宝珠",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_705.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38502,
+        "name": "創盾エデル=フォリオン"
+      },
+      {
+        "id": 38503,
+        "name": "魔盾ダグナス=シーラ"
+      }
+    ]
+  },
+  "10615": {
+    "desc": "炎纏竜の心臓が変じた灼熱の宝珠",
+    "id": 10615,
+    "max_stack": 99,
+    "name": "炎纏宝珠",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_700.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38403,
+        "name": "封神剣アルトレイブ"
+      },
+      {
+        "id": 39001,
+        "name": "魔弓エクスぺリオン"
+      }
+    ]
+  },
+  "10616": {
+    "desc": "輝暴龍ラグナレクスの体内に存在する光り輝く宝珠",
+    "id": 10616,
+    "max_stack": 99,
+    "name": "輝煌閃珠",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_704.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38503,
+        "name": "魔盾ダグナス=シーラ"
+      },
+      {
+        "id": 39001,
+        "name": "魔弓エクスぺリオン"
+      }
+    ]
+  },
+  "10617": {
+    "desc": "堕神ヴァン・ルーシの水晶のような眼球",
+    "id": 10617,
+    "max_stack": 99,
+    "name": "堕落の瞳",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_700.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 39600,
+        "name": "女神の旗印"
+      }
+    ]
+  },
+  "10618": {
+    "desc": "邪神ヴァン・ナーダの水晶のような眼球",
+    "id": 10618,
+    "max_stack": 99,
+    "name": "悪意の瞳",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_701.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 39700,
+        "name": "魔神の旗印"
+      }
+    ]
+  },
+  "10619": {
+    "desc": "煉神ナルダ・デリアの周囲に浮かぶ禍々しい瞳",
+    "id": 10619,
+    "max_stack": 99,
+    "name": "禍恨の瞳",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_706.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38700,
+        "name": "神宝エアルカディア"
+      },
+      {
+        "id": 39800,
+        "name": "魔晶帝冠リリー・レイズ"
+      }
+    ]
+  },
+  "10620": {
+    "desc": "煉神ナルダ・デリアの周囲に浮かぶ災いを呼ぶ瞳",
+    "id": 10620,
+    "max_stack": 99,
+    "name": "災厄の瞳",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_702.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38700,
+        "name": "神宝エアルカディア"
+      },
+      {
+        "id": 39900,
+        "name": "フェニックスの輝翼"
+      }
+    ]
+  },
+  "10621": {
+    "desc": "煉神ナルダ・デリアの胴体に存在する凄まじい魔力を秘めた瞳",
+    "id": 10621,
+    "max_stack": 99,
+    "name": "真禍の瞳",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_700.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 37400,
+        "name": "秘宝『オルト=リグオン』"
+      },
+      {
+        "id": 38700,
+        "name": "神宝エアルカディア"
+      },
+      {
+        "id": 39800,
+        "name": "魔晶帝冠リリー・レイズ"
+      },
+      {
+        "id": 39900,
+        "name": "フェニックスの輝翼"
+      }
+    ]
+  },
+  "10622": {
+    "desc": "煉神ナルダ・デリアの力の源と言われる宝珠",
+    "id": 10622,
+    "max_stack": 99,
+    "name": "大災厄珠",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_705.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 37400,
+        "name": "秘宝『オルト=リグオン』"
+      },
+      {
+        "id": 38504,
+        "name": "魔将盾シルヴェラ"
+      },
+      {
+        "id": 38700,
+        "name": "神宝エアルカディア"
+      }
+    ]
+  },
+  "10623": {
+    "desc": "破壊神ミストゾーグの体中に存在する眼球状の斑紋",
+    "id": 10623,
+    "max_stack": 99,
+    "name": "幻朧の瞳",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_705.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38601,
+        "name": "秘宝『グラン・セシウス』"
+      }
+    ]
+  },
+  "10624": {
+    "desc": "破壊神ミストゾーグの力の源と言われる宝珠",
+    "id": 10624,
+    "max_stack": 99,
+    "name": "迷妄幻珠",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_700.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38601,
+        "name": "秘宝『グラン・セシウス』"
+      },
+      {
+        "id": 46220,
+        "name": "封刻の魔聖鎧"
+      }
+    ]
+  },
+  "10625": {
+    "desc": "人々を魅了する強い魔力を秘めた宝石",
+    "id": 10625,
+    "max_stack": 99,
+    "name": "妄執の瞳",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_703.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 31002,
+        "name": "天羽々斬剣"
+      },
+      {
+        "id": 31102,
+        "name": "禍盾『エレクゼノア』"
+      },
+      {
+        "id": 47906,
+        "name": "魔封珠『ファル・ナーガ』"
+      }
+    ]
+  },
+  "10626": {
+    "desc": "知性ある者が持つ集中力により輝きを増す不思議な水晶",
+    "id": 10626,
+    "max_stack": 99,
+    "name": "統神の天眼",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_703.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44000,
+        "name": "秘宝『バリウラ』"
+      },
+      {
+        "id": 44100,
+        "name": "妖精の虹布"
+      },
+      {
+        "id": 44200,
+        "name": "盗賊神の指輪"
+      },
+      {
+        "id": 47908,
+        "name": "魔封珠『メノン』"
+      }
+    ]
+  },
+  "10627": {
+    "desc": "白閻獣バルメディアの尾に隠されていた宝珠",
+    "id": 10627,
+    "max_stack": 99,
+    "name": "裁火豪珠",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_700.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38701,
+        "name": "神宝クルトファナ"
+      },
+      {
+        "id": 42300,
+        "name": "秘宝『ケレス・グレイン』"
+      },
+      {
+        "id": 60300,
+        "name": "神魔崩魂メロード"
+      }
+    ]
+  },
+  "10628": {
+    "desc": "合魔獣グルドギアの身体内で作られる鉱石",
+    "id": 10628,
+    "max_stack": 99,
+    "name": "魔獣心珠",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_705.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38505,
+        "name": "天将盾エゼネレート"
+      },
+      {
+        "id": 39002,
+        "name": "魔怨弓ガルザペリオン"
+      },
+      {
+        "id": 49800,
+        "name": "魔蟲樹盾マガジュラ"
+      }
+    ]
+  },
+  "10629": {
+    "desc": "瀑焔神の真の力を引き出すとされる宝珠",
+    "id": 10629,
+    "max_stack": 99,
+    "name": "大業焔珠",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_705.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 45400,
+        "name": "至富霊冠マルディウス"
+      },
+      {
+        "id": 48900,
+        "name": "煌拳マハ・ナーガ"
+      }
+    ]
+  },
+  "10630": {
+    "desc": "魔神の瞳に埋め込まれている水晶",
+    "id": 10630,
+    "max_stack": 99,
+    "name": "漆黒の義眼",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_704.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 48300,
+        "name": "魔神器デストリカ"
+      }
+    ]
+  },
+  "10631": {
+    "desc": "魔神アム＝ユノスが持つ錫杖に嵌められた水晶",
+    "id": 10631,
+    "max_stack": 99,
+    "name": "冥幻の空眼",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_701.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 48301,
+        "name": "魔神器ネルヴァス"
+      }
+    ]
+  },
+  "10632": {
+    "desc": "ベイオルグの各所で輝いている透過性の部位",
+    "id": 10632,
+    "max_stack": 99,
+    "name": "雷鎧の煌核",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_703.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 46210,
+        "name": "雷輝豪鎧ベイオルグ"
+      }
+    ]
+  },
+  "10633": {
+    "desc": "戦斧ディアボリックファングの中央に嵌っている珠玉",
+    "id": 10633,
+    "max_stack": 99,
+    "name": "狂戦士の思念",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_705.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44802,
+        "name": "ディアボリックファング"
+      }
+    ]
+  },
+  "10634": {
+    "desc": "封魔導神カロンの魔力が結晶化したもの",
+    "id": 10634,
+    "max_stack": 99,
+    "name": "操命の天瞳",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_705.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 48302,
+        "name": "魔神器フェルケー"
+      }
+    ]
+  },
+  "10635": {
+    "desc": "ヴァルドロアで稀に見つかる神秘的な宝玉",
+    "id": 10635,
+    "max_stack": 99,
+    "name": "瞳中幻竜",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_704.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 236001,
+        "name": "託閃煌鏡フォリフォリ"
+      },
+      {
+        "id": 238001,
+        "name": "誉望神杯ルファーレ"
+      }
+    ]
+  },
+  "10700": {
+    "desc": "薄い緑色をしたありふれた獣の皮",
+    "id": 10700,
+    "max_stack": 99,
+    "name": "翠透の皮",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_802.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30100,
+        "name": "巨人盾エビオボ"
+      }
+    ]
+  },
+  "10701": {
+    "desc": "紺碧色をした丈夫な獣の皮",
+    "id": 10701,
+    "max_stack": 99,
+    "name": "紺碧の皮",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 20,
+    "thumbnail": "item_thum_801.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30101,
+        "name": "竜鱗盾バルゲイオス"
+      },
+      {
+        "id": 34400,
+        "name": "透明のマント"
+      }
+    ]
+  },
+  "10702": {
+    "desc": "緋色をした高い硬度と柔軟性を誇る希少な獣の皮",
+    "id": 10702,
+    "max_stack": 99,
+    "name": "緋粋の皮",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 30,
+    "thumbnail": "item_thum_800.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30102,
+        "name": "女神盾ラウ・レイク"
+      }
+    ]
+  },
+  "10705": {
+    "desc": "観賞用としての愛好家もいるほど美しい模様をした獣の皮",
+    "id": 10705,
+    "max_stack": 99,
+    "name": "豪朱の皮",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 25,
+    "thumbnail": "item_thum_800.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 31000,
+        "name": "千子村正"
+      },
+      {
+        "id": 31100,
+        "name": "王盾ダルバンシェル"
+      },
+      {
+        "id": 33000,
+        "name": "祝福の旗幟"
+      },
+      {
+        "id": 33400,
+        "name": "戦神の旗幟"
+      }
+    ]
+  },
+  "10706": {
+    "desc": "現在ではほとんど見ることのない美しい碧色をした獣の皮",
+    "id": 10706,
+    "max_stack": 99,
+    "name": "豪碧の皮",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 40,
+    "thumbnail": "item_thum_802.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 33001,
+        "name": "聖皇后の旗幟"
+      }
+    ]
+  },
+  "10707": {
+    "desc": "召喚院より配布される特殊な獣の皮",
+    "id": 10707,
+    "max_stack": 99,
+    "name": "絆の皮",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 1,
+    "thumbnail": "item_thum_807.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 21100,
+        "name": "神仙珠琴"
+      },
+      {
+        "id": 30103,
+        "name": "太陽と月の盾マリス"
+      },
+      {
+        "id": 30104,
+        "name": "神王盾ディバディン"
+      },
+      {
+        "id": 30108,
+        "name": "覇天盾メルクード"
+      },
+      {
+        "id": 30206,
+        "name": "祀杖カンビュセス"
+      },
+      {
+        "id": 30207,
+        "name": "宿杖ラクネシス"
+      },
+      {
+        "id": 31102,
+        "name": "禍盾『エレクゼノア』"
+      },
+      {
+        "id": 31701,
+        "name": "魔装銃ルキュリアン"
+      },
+      {
+        "id": 31702,
+        "name": "魔轟砲ミュステム"
+      },
+      {
+        "id": 31901,
+        "name": "鬼皇槍『毘沙門』"
+      },
+      {
+        "id": 31902,
+        "name": "冥槍『荒覇吐』"
+      },
+      {
+        "id": 32101,
+        "name": "空神の弓『雷電』"
+      },
+      {
+        "id": 32102,
+        "name": "雷帝弓トール・テンペスト"
+      },
+      {
+        "id": 33900,
+        "name": "ゼルナイトの指輪"
+      },
+      {
+        "id": 33901,
+        "name": "ゼルマスターの指輪"
+      },
+      {
+        "id": 34000,
+        "name": "闇魂の籠手"
+      },
+      {
+        "id": 34001,
+        "name": "魔神魂の籠手"
+      },
+      {
+        "id": 34400,
+        "name": "透明のマント"
+      },
+      {
+        "id": 35301,
+        "name": "王光メディアン"
+      },
+      {
+        "id": 35500,
+        "name": "異剣エル・ビュラー"
+      },
+      {
+        "id": 37700,
+        "name": "煉光ミグ・デリン"
+      },
+      {
+        "id": 39500,
+        "name": "召喚師の帽子"
+      },
+      {
+        "id": 41800,
+        "name": "煉兜オルビペイン"
+      }
+    ]
+  },
+  "10708": {
+    "desc": "非常に巨大な獣の皮。大きいだけでなく強度もある",
+    "id": 10708,
+    "max_stack": 99,
+    "name": "巨獣の皮",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 30,
+    "thumbnail": "item_thum_806.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 35400,
+        "name": "秘宝『コルデリカ』"
+      }
+    ]
+  },
+  "10709": {
+    "desc": "黄金色に輝く獣の中の王の皮",
+    "id": 10709,
+    "max_stack": 99,
+    "name": "輝黄の皮",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 40,
+    "thumbnail": "item_thum_803.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30103,
+        "name": "太陽と月の盾マリス"
+      }
+    ]
+  },
+  "10710": {
+    "desc": "数千年前に絶滅したと言われている銀狼の皮",
+    "id": 10710,
+    "max_stack": 99,
+    "name": "銀麗の皮",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_804.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 31001,
+        "name": "天叢雲剣"
+      },
+      {
+        "id": 31101,
+        "name": "英知の盾『エクセイル』"
+      },
+      {
+        "id": 47902,
+        "name": "魔封珠『ベイオルグ』"
+      }
+    ]
+  },
+  "10711": {
+    "desc": "アグニ地方に生息する非常に凶暴な獣の毛皮",
+    "id": 10711,
+    "max_stack": 99,
+    "name": "蛮獣の皮",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_806.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30104,
+        "name": "神王盾ディバディン"
+      },
+      {
+        "id": 30304,
+        "name": "神鎧コキュートス"
+      }
+    ]
+  },
+  "10712": {
+    "desc": "闇司神レデュハークの無傷の黒翅",
+    "id": 10712,
+    "max_stack": 99,
+    "name": "闇の皮膜",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_805.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 35800,
+        "name": "秘宝『レブ・マデュラ』"
+      },
+      {
+        "id": 39100,
+        "name": "魔導装マナラーグ"
+      }
+    ]
+  },
+  "10713": {
+    "desc": "炎纏竜クララダラスの冷めることなき灼熱の鱗皮",
+    "id": 10713,
+    "max_stack": 99,
+    "name": "炎纏の皮",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_800.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38402,
+        "name": "大天使の剣『セリエル』"
+      },
+      {
+        "id": 39001,
+        "name": "魔弓エクスぺリオン"
+      }
+    ]
+  },
+  "10714": {
+    "desc": "輝暴龍ラグナレクスの熱を遮断する鱗皮",
+    "id": 10714,
+    "max_stack": 99,
+    "name": "輝鱗の皮",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_801.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38502,
+        "name": "創盾エデル=フォリオン"
+      },
+      {
+        "id": 39001,
+        "name": "魔弓エクスぺリオン"
+      }
+    ]
+  },
+  "10715": {
+    "desc": "グラノモスの緑色の堅殻に覆われた皮",
+    "id": 10715,
+    "max_stack": 99,
+    "name": "翠殻の皮",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_802.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38600,
+        "name": "秘宝『ベルティオン』"
+      },
+      {
+        "id": 39200,
+        "name": "銀のバングル"
+      },
+      {
+        "id": 39300,
+        "name": "ミロクの珠"
+      }
+    ]
+  },
+  "10716": {
+    "desc": "メドロノモスの青色の堅殻に覆われた皮",
+    "id": 10716,
+    "max_stack": 99,
+    "name": "碧殻の皮",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_801.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 39000,
+        "name": "凶戟ゲヘナベルム"
+      },
+      {
+        "id": 39100,
+        "name": "魔導装マナラーグ"
+      },
+      {
+        "id": 39201,
+        "name": "金のバングル"
+      },
+      {
+        "id": 39400,
+        "name": "ファルバナの像"
+      }
+    ]
+  },
+  "10717": {
+    "desc": "決して燃えることのない炎喰龍の鱗皮",
+    "id": 10717,
+    "max_stack": 99,
+    "name": "不燃の皮",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_800.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38400,
+        "name": "バハムート・レイジ"
+      },
+      {
+        "id": 38600,
+        "name": "秘宝『ベルティオン』"
+      },
+      {
+        "id": 38900,
+        "name": "霊壊銃バス=テス"
+      },
+      {
+        "id": 39300,
+        "name": "ミロクの珠"
+      }
+    ]
+  },
+  "10718": {
+    "desc": "柔軟性と剛性に富んだ氷堅獣の皮",
+    "id": 10718,
+    "max_stack": 99,
+    "name": "氷堅の皮",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_806.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38500,
+        "name": "世界樹の大盾"
+      },
+      {
+        "id": 38600,
+        "name": "秘宝『ベルティオン』"
+      },
+      {
+        "id": 38800,
+        "name": "古の短剣『アリエル』"
+      },
+      {
+        "id": 39200,
+        "name": "銀のバングル"
+      }
+    ]
+  },
+  "10719": {
+    "desc": "蒼天鳥と呼ばれる大型の鳥の皮膚",
+    "id": 10719,
+    "max_stack": 99,
+    "name": "蒼天の皮",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_801.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30206,
+        "name": "祀杖カンビュセス"
+      },
+      {
+        "id": 30306,
+        "name": "冥鎧クリプトデリア"
+      }
+    ]
+  },
+  "10720": {
+    "desc": "属性に対し優れた耐性を持つ豪獣の皮",
+    "id": 10720,
+    "max_stack": 99,
+    "name": "豪獣の皮",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_801.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 41400,
+        "name": "炎装グランフラム"
+      },
+      {
+        "id": 41401,
+        "name": "水装『凍甲』"
+      },
+      {
+        "id": 41402,
+        "name": "樹装エールアルタ"
+      },
+      {
+        "id": 41403,
+        "name": "雷装レジ・ストラ"
+      },
+      {
+        "id": 41404,
+        "name": "光装キリエ・メイヴ"
+      },
+      {
+        "id": 41405,
+        "name": "影装アルダ=ギール"
+      }
+    ]
+  },
+  "10721": {
+    "desc": "呪術、祈祷、魔術用の人工皮",
+    "id": 10721,
+    "max_stack": 99,
+    "name": "祷呪の皮",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_804.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30207,
+        "name": "宿杖ラクネシス"
+      },
+      {
+        "id": 30307,
+        "name": "異鎧ペルド・インティス"
+      },
+      {
+        "id": 41900,
+        "name": "彗兜クロエサクリス"
+      }
+    ]
+  },
+  "10722": {
+    "desc": "言い伝えにある姿の見えない獣のものと考えられる皮",
+    "id": 10722,
+    "max_stack": 99,
+    "name": "幻影の皮",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_804.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30208,
+        "name": "真導杖イキュロス"
+      },
+      {
+        "id": 30308,
+        "name": "真鎧『天壌無窮』"
+      },
+      {
+        "id": 44000,
+        "name": "秘宝『バリウラ』"
+      },
+      {
+        "id": 44200,
+        "name": "盗賊神の指輪"
+      }
+    ]
+  },
+  "10723": {
+    "desc": "剛雷獣の強靭な皮",
+    "id": 10723,
+    "max_stack": 99,
+    "name": "剛雷豪皮",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_802.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44500,
+        "name": "ラ・ミラ変換機構"
+      }
+    ]
+  },
+  "10724": {
+    "desc": "白閻獣バルメディアの帯電した毛皮",
+    "id": 10724,
+    "max_stack": 99,
+    "name": "裁雷の鬣",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_804.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38404,
+        "name": "神斬剣ミスラテス"
+      }
+    ]
+  },
+  "10725": {
+    "desc": "合魔獣グルドギアの前面部の緋色毛",
+    "id": 10725,
+    "max_stack": 99,
+    "name": "魔獣緋毛",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_800.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38902,
+        "name": "冥破槍バスティマ"
+      }
+    ]
+  },
+  "10726": {
+    "desc": "通常とは異なる長い年月を経た大妖樹の樹皮",
+    "id": 10726,
+    "max_stack": 99,
+    "name": "悠久の樹皮",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_806.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 39002,
+        "name": "魔怨弓ガルザペリオン"
+      }
+    ]
+  },
+  "10727": {
+    "desc": "黒邪龍ジライエンの強靭な鱗皮",
+    "id": 10727,
+    "max_stack": 99,
+    "name": "黒邪豪鱗",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_805.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 45600,
+        "name": "覇導装ラミルード"
+      }
+    ]
+  },
+  "10728": {
+    "desc": "炎纏竜クララダラスの強力な個体に存在する輝く鱗",
+    "id": 10728,
+    "max_stack": 99,
+    "name": "炎纏極鱗",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_800.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44501,
+        "name": "シ・オプス幻影機構"
+      },
+      {
+        "id": 45600,
+        "name": "覇導装ラミルード"
+      },
+      {
+        "id": 48900,
+        "name": "煌拳マハ・ナーガ"
+      }
+    ]
+  },
+  "10729": {
+    "desc": "食人植物として知られる怪樹クイーンシプラの茎",
+    "id": 10729,
+    "max_stack": 99,
+    "name": "剛搦の茎",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_802.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38701,
+        "name": "神宝クルトファナ"
+      }
+    ]
+  },
+  "10730": {
+    "desc": "蒼惶龍エストレイトの浄化作用のある鱗。",
+    "id": 10730,
+    "max_stack": 99,
+    "name": "蒼龍の光鱗",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_801.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44501,
+        "name": "シ・オプス幻影機構"
+      },
+      {
+        "id": 47700,
+        "name": "魔鳳冠ヴァーミリオン"
+      }
+    ]
+  },
+  "10731": {
+    "desc": "闘魔武神シュスイの頭髪の一部",
+    "id": 10731,
+    "max_stack": 99,
+    "name": "武神の闘髪",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_800.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 47601,
+        "name": "武神刹刃『闘覇冥水』"
+      }
+    ]
+  },
+  "10732": {
+    "desc": "ザームブルグ地域に生息する大蛇の皮",
+    "id": 10732,
+    "max_stack": 99,
+    "name": "蛇竜銀皮",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_804.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 47905,
+        "name": "魔封珠『ザームブルグ』"
+      }
+    ]
+  },
+  "10733": {
+    "desc": "煌竜覇神の尾に存在する高魔力物質",
+    "id": 10733,
+    "max_stack": 99,
+    "name": "竜覇の煌鱗",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_805.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 48900,
+        "name": "煌拳マハ・ナーガ"
+      }
+    ]
+  },
+  "10734": {
+    "desc": "モルデリムに生息する魔蟲が創り出す紬糸",
+    "id": 10734,
+    "max_stack": 99,
+    "name": "魔蟲幻糸",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_802.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 49800,
+        "name": "魔蟲樹盾マガジュラ"
+      }
+    ]
+  },
+  "10735": {
+    "desc": "魔神モーラが身に纏っている衣服の切れ端",
+    "id": 10735,
+    "max_stack": 99,
+    "name": "幽玄麗衣",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_802.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 60200,
+        "name": "宵闇の仙晶球"
+      }
+    ]
+  },
+  "10736": {
+    "desc": "ベクタスに存在する機械人形の装甲",
+    "id": 10736,
+    "max_stack": 99,
+    "name": "幽機装甲",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_802.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230003,
+        "name": "光浄石ルピテクト"
+      },
+      {
+        "id": 230103,
+        "name": "聖光旗シェーステン"
+      }
+    ]
+  },
+  "10737": {
+    "desc": "ロッカザルムにある巨大洞窟の内壁の一部",
+    "id": 10737,
+    "max_stack": 99,
+    "name": "巨窟の壮壁",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_806.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 235002,
+        "name": "魂震鎧ガルヴァス"
+      },
+      {
+        "id": 239000,
+        "name": "陽幻刃ルーグフレア"
+      }
+    ]
+  },
+  "10738": {
+    "desc": "究極龍ビシャモンの巨大な翼",
+    "id": 10738,
+    "max_stack": 99,
+    "name": "深淵の翼",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_205.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 65040,
+        "name": "妖剣ダーインスレイヴ"
+      }
+    ]
+  },
+  "10739": {
+    "desc": "セントクリークに残された朽ちた木々の樹皮",
+    "id": 10739,
+    "max_stack": 99,
+    "name": "灰壊の樹皮",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_806.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 235004,
+        "name": "星導套アキテーク"
+      },
+      {
+        "id": 235005,
+        "name": "機征甲『アカツキ』"
+      },
+      {
+        "id": 235006,
+        "name": "神衝鎧リヴァルブ"
+      }
+    ]
+  },
+  "10800": {
+    "desc": "緑色をした巨獣の骨",
+    "id": 10800,
+    "max_stack": 99,
+    "name": "緑獣の骨",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_902.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30300,
+        "name": "鬼鎧ガヴァリアン"
+      }
+    ]
+  },
+  "10801": {
+    "desc": "青色をした巨獣の骨",
+    "id": 10801,
+    "max_stack": 99,
+    "name": "青獣の骨",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 20,
+    "thumbnail": "item_thum_901.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30301,
+        "name": "幻獣鎧『麒麟』"
+      },
+      {
+        "id": 34500,
+        "name": "般若の面"
+      }
+    ]
+  },
+  "10802": {
+    "desc": "赤色をした謎の獣の骨",
+    "id": 10802,
+    "max_stack": 99,
+    "name": "赤獣の骨",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 30,
+    "thumbnail": "item_thum_900.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30302,
+        "name": "聖衣エメルディア"
+      }
+    ]
+  },
+  "10805": {
+    "desc": "太古の魔獣の化石と言われる非常に硬い素材",
+    "id": 10805,
+    "max_stack": 99,
+    "name": "硬岩獣骨",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_906.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 22300,
+        "name": "闘神の笛"
+      }
+    ]
+  },
+  "10806": {
+    "desc": "召喚院より配布される特殊な獣の骨",
+    "id": 10806,
+    "max_stack": 99,
+    "name": "絆の骨",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 1,
+    "thumbnail": "item_thum_907.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 22210,
+        "name": "女神の像"
+      },
+      {
+        "id": 30105,
+        "name": "断罪の盾『黒騎』"
+      },
+      {
+        "id": 30106,
+        "name": "覇究盾アルトダイン"
+      },
+      {
+        "id": 30107,
+        "name": "界統盾オルデセクト"
+      },
+      {
+        "id": 30204,
+        "name": "神杖アポカリプス"
+      },
+      {
+        "id": 30308,
+        "name": "真鎧『天壌無窮』"
+      },
+      {
+        "id": 30402,
+        "name": "破壊斧デス=クリムゾン"
+      },
+      {
+        "id": 32200,
+        "name": "魔装メライドデウス"
+      },
+      {
+        "id": 33900,
+        "name": "ゼルナイトの指輪"
+      },
+      {
+        "id": 33901,
+        "name": "ゼルマスターの指輪"
+      },
+      {
+        "id": 34000,
+        "name": "闇魂の籠手"
+      },
+      {
+        "id": 34300,
+        "name": "光兜セルティオン"
+      },
+      {
+        "id": 34500,
+        "name": "般若の面"
+      },
+      {
+        "id": 34805,
+        "name": "王光の花"
+      },
+      {
+        "id": 35300,
+        "name": "覇光ルーヴァ"
+      },
+      {
+        "id": 35400,
+        "name": "秘宝『コルデリカ』"
+      },
+      {
+        "id": 38300,
+        "name": "大泥棒の手甲"
+      },
+      {
+        "id": 41400,
+        "name": "炎装グランフラム"
+      },
+      {
+        "id": 41401,
+        "name": "水装『凍甲』"
+      },
+      {
+        "id": 41402,
+        "name": "樹装エールアルタ"
+      },
+      {
+        "id": 41403,
+        "name": "雷装レジ・ストラ"
+      },
+      {
+        "id": 41404,
+        "name": "光装キリエ・メイヴ"
+      },
+      {
+        "id": 41405,
+        "name": "影装アルダ=ギール"
+      },
+      {
+        "id": 41500,
+        "name": "精霊の首飾り"
+      },
+      {
+        "id": 41700,
+        "name": "黒竜のイヤリング"
+      }
+    ]
+  },
+  "10807": {
+    "desc": "高い魔力を持つ人間には存在されるとされる特殊な骨",
+    "id": 10807,
+    "max_stack": 99,
+    "name": "血晶骨",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_900.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 35600,
+        "name": "血を奪う槍『グルムス』"
+      },
+      {
+        "id": 47901,
+        "name": "魔封珠『レーム』"
+      }
+    ]
+  },
+  "10808": {
+    "desc": "長い年月の果てに化石化し宝石となった魔獣の骨",
+    "id": 10808,
+    "max_stack": 99,
+    "name": "黄琥骨",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_903.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30303,
+        "name": "輝鎧ルディバ・マクス"
+      }
+    ]
+  },
+  "10809": {
+    "desc": "銀のように輝き続ける美しい骨",
+    "id": 10809,
+    "max_stack": 99,
+    "name": "久遠銀骨",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 40,
+    "thumbnail": "item_thum_904.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 37800,
+        "name": "秘宝『リゼリア』"
+      },
+      {
+        "id": 38000,
+        "name": "魔石の欠片"
+      },
+      {
+        "id": 47903,
+        "name": "魔封珠『ウルジ』"
+      }
+    ]
+  },
+  "10810": {
+    "desc": "闇女神の加護を受けた狼の骨",
+    "id": 10810,
+    "max_stack": 99,
+    "name": "紫夜骨",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_905.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30105,
+        "name": "断罪の盾『黒騎』"
+      },
+      {
+        "id": 30305,
+        "name": "煉鎧ルナ・ラビュア"
+      }
+    ]
+  },
+  "10811": {
+    "desc": "雷獣の背中から腹にかけて伸びる発電器官",
+    "id": 10811,
+    "max_stack": 99,
+    "name": "崩雷棘管",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_903.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38401,
+        "name": "蒼竜剣ブレイブ・テラー"
+      },
+      {
+        "id": 39400,
+        "name": "ファルバナの像"
+      }
+    ]
+  },
+  "10812": {
+    "desc": "闇司神レデュハークの黒翅の芯",
+    "id": 10812,
+    "max_stack": 99,
+    "name": "闇天翼骨",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_905.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38502,
+        "name": "創盾エデル=フォリオン"
+      },
+      {
+        "id": 39000,
+        "name": "凶戟ゲヘナベルム"
+      }
+    ]
+  },
+  "10813": {
+    "desc": "ミルヴァーナ各地に点在する謎の生物の骨",
+    "id": 10813,
+    "max_stack": 99,
+    "name": "荒砂峰骨",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_906.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30006,
+        "name": "神祇剣クランベルド"
+      },
+      {
+        "id": 30106,
+        "name": "覇究盾アルトダイン"
+      }
+    ]
+  },
+  "10814": {
+    "desc": "地中から発見された石に似た質感の骨",
+    "id": 10814,
+    "max_stack": 99,
+    "name": "暴爆の骨",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_906.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 41400,
+        "name": "炎装グランフラム"
+      },
+      {
+        "id": 41401,
+        "name": "水装『凍甲』"
+      },
+      {
+        "id": 41402,
+        "name": "樹装エールアルタ"
+      },
+      {
+        "id": 41403,
+        "name": "雷装レジ・ストラ"
+      },
+      {
+        "id": 41404,
+        "name": "光装キリエ・メイヴ"
+      },
+      {
+        "id": 41405,
+        "name": "影装アルダ=ギール"
+      }
+    ]
+  },
+  "10815": {
+    "desc": "わずかな熱と聖なる力を宿した骨",
+    "id": 10815,
+    "max_stack": 99,
+    "name": "聖熱骨",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_904.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30007,
+        "name": "殲神剣エクセベルグ"
+      },
+      {
+        "id": 30107,
+        "name": "界統盾オルデセクト"
+      },
+      {
+        "id": 41800,
+        "name": "煉兜オルビペイン"
+      }
+    ]
+  },
+  "10816": {
+    "desc": "地中から発見されることのある古代生物の骨",
+    "id": 10816,
+    "max_stack": 99,
+    "name": "古代骨",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_904.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44100,
+        "name": "妖精の虹布"
+      },
+      {
+        "id": 44200,
+        "name": "盗賊神の指輪"
+      }
+    ]
+  },
+  "10817": {
+    "desc": "まるで機械部品のような堕神ヴァン・ルーシの骨",
+    "id": 10817,
+    "max_stack": 99,
+    "name": "堕落の螺子",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_904.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44400,
+        "name": "焔珠『不死鳥』"
+      }
+    ]
+  },
+  "10818": {
+    "desc": "まるで機械部品のような邪神ヴァン・ナーダの骨",
+    "id": 10818,
+    "max_stack": 99,
+    "name": "悪意の螺子",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_905.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44300,
+        "name": "魔石の荊冠"
+      }
+    ]
+  },
+  "10819": {
+    "desc": "黒邪龍ジライエンの巨大な角",
+    "id": 10819,
+    "max_stack": 99,
+    "name": "黒邪豪角",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_905.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 45500,
+        "name": "ヴィハラの紫金珠"
+      }
+    ]
+  },
+  "10820": {
+    "desc": "美しい朱霊鳥が遺した鮮やかな骨",
+    "id": 10820,
+    "max_stack": 99,
+    "name": "破戒鳳骨",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_900.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 47904,
+        "name": "魔封珠『ラクシュルト』"
+      }
+    ]
+  },
+  "10821": {
+    "desc": "ベクタスに存在する機械人形の骨格の一部",
+    "id": 10821,
+    "max_stack": 99,
+    "name": "剛融機骨",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_902.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230203,
+        "name": "護界灯ネス・タリア"
+      },
+      {
+        "id": 230303,
+        "name": "義将宝ヴァドム"
+      }
+    ]
+  },
+  "10822": {
+    "desc": "究極龍ビシャモンの頭部に生えている禍々しき角",
+    "id": 10822,
+    "max_stack": 99,
+    "name": "鮮血の鋭角",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_904.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 65020,
+        "name": "ジークフリード"
+      },
+      {
+        "id": 65040,
+        "name": "妖剣ダーインスレイヴ"
+      }
+    ]
+  },
+  "10823": {
+    "desc": "凰刃那原の大社の前で発見された骨の化石",
+    "id": 10823,
+    "max_stack": 99,
+    "name": "迦具神骨",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_904.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230105,
+        "name": "禁闘剣サフォルス"
+      },
+      {
+        "id": 230205,
+        "name": "黒妖兜ヘル・クル"
+      }
+    ]
+  },
+  "10824": {
+    "desc": "歳月を経ても劣化することのない竜の骨",
+    "id": 10824,
+    "max_stack": 99,
+    "name": "永劫竜骨",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_906.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230007,
+        "name": "護魂死祓の指輪"
+      },
+      {
+        "id": 230107,
+        "name": "散華のセリデリク"
+      },
+      {
+        "id": 230207,
+        "name": "聖盾将冠アクブテカ"
+      }
+    ]
+  },
+  "10825": {
+    "desc": "セントクリークでかつて生息していた霊鳥の骨",
+    "id": 10825,
+    "max_stack": 99,
+    "name": "澄水鳥の骨",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_901.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 235005,
+        "name": "機征甲『アカツキ』"
+      },
+      {
+        "id": 235006,
+        "name": "神衝鎧リヴァルブ"
+      },
+      {
+        "id": 235007,
+        "name": "讃神具ラカトゥルス"
+      }
+    ]
+  },
+  "10900": {
+    "desc": "小型で緑色の瓢虫",
+    "id": 10900,
+    "max_stack": 99,
+    "name": "緑瓢虫",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_1002.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30200,
+        "name": "白杖ラクレスワンド"
+      }
+    ]
+  },
+  "10901": {
+    "desc": "小型で青色の瓢虫",
+    "id": 10901,
+    "max_stack": 99,
+    "name": "青瓢虫",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 20,
+    "thumbnail": "item_thum_1001.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30201,
+        "name": "護杖『光風』"
+      }
+    ]
+  },
+  "10902": {
+    "desc": "小型で赤色の瓢虫",
+    "id": 10902,
+    "max_stack": 99,
+    "name": "赤瓢虫",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 30,
+    "thumbnail": "item_thum_1000.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30202,
+        "name": "聖杖ラデルティア"
+      }
+    ]
+  },
+  "10903": {
+    "desc": "砂金を食べて体内に金を貯める性質のある甲虫",
+    "id": 10903,
+    "max_stack": 99,
+    "name": "金甲虫",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 40,
+    "thumbnail": "item_thum_1003.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30203,
+        "name": "天杖ロベル・アダン"
+      }
+    ]
+  },
+  "10904": {
+    "desc": "鉱山に現れ銀を素材に巣を作る性質のある甲虫",
+    "id": 10904,
+    "max_stack": 99,
+    "name": "銀彗甲虫",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1004.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 34808,
+        "name": "フェニックスの眼"
+      }
+    ]
+  },
+  "10905": {
+    "desc": "アグニ地方に生息するほのかに光る甲虫",
+    "id": 10905,
+    "max_stack": 99,
+    "name": "紫燐甲虫",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1005.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38100,
+        "name": "覇彩晶ミラヴィス"
+      },
+      {
+        "id": 38200,
+        "name": "王彩晶エルディオン"
+      }
+    ]
+  },
+  "10906": {
+    "desc": "どんな物にも同化して姿を隠す珍虫",
+    "id": 10906,
+    "max_stack": 99,
+    "name": "奇彩虫",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1004.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30006,
+        "name": "神祇剣クランベルド"
+      },
+      {
+        "id": 30106,
+        "name": "覇究盾アルトダイン"
+      },
+      {
+        "id": 30206,
+        "name": "祀杖カンビュセス"
+      },
+      {
+        "id": 30306,
+        "name": "冥鎧クリプトデリア"
+      },
+      {
+        "id": 31301,
+        "name": "宝珠ミラビアス"
+      }
+    ]
+  },
+  "10907": {
+    "desc": "体を鏡のように変化させる昆虫",
+    "id": 10907,
+    "max_stack": 99,
+    "name": "鏡響虫",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1004.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 41800,
+        "name": "煉兜オルビペイン"
+      },
+      {
+        "id": 41900,
+        "name": "彗兜クロエサクリス"
+      },
+      {
+        "id": 47907,
+        "name": "魔封珠『エストリア』"
+      }
+    ]
+  },
+  "10908": {
+    "desc": "獣に寄生し、能力を飛躍的に上げる虫",
+    "id": 10908,
+    "max_stack": 99,
+    "name": "獣奔虫",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1000.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38001,
+        "name": "魔石の結晶"
+      },
+      {
+        "id": 43300,
+        "name": "獄槍ファーヴィ・オピス"
+      }
+    ]
+  },
+  "10909": {
+    "desc": "青紫の瘴雨が降り注ぐと言われる夜に出現する魔虫",
+    "id": 10909,
+    "max_stack": 99,
+    "name": "瘴魔雷虫",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1005.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 47903,
+        "name": "魔封珠『ウルジ』"
+      }
+    ]
+  },
+  "10910": {
+    "desc": "ベクタスに棲息する虫型の機械人形",
+    "id": 10910,
+    "max_stack": 99,
+    "name": "惑彩羽虫",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_1002.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230203,
+        "name": "護界灯ネス・タリア"
+      },
+      {
+        "id": 230303,
+        "name": "義将宝ヴァドム"
+      }
+    ]
+  },
+  "10911": {
+    "desc": "異界ヴィランシルに棲息する小型肉食昆虫",
+    "id": 10911,
+    "max_stack": 99,
+    "name": "氷刃甲虫",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_1001.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230104,
+        "name": "力王帯バルギルア"
+      },
+      {
+        "id": 230204,
+        "name": "白鬼甲マク・マウ"
+      }
+    ]
+  },
+  "10912": {
+    "desc": "異界ヴィランシルの太陽の沈まない時期に大量発生する魔虫",
+    "id": 10912,
+    "max_stack": 99,
+    "name": "白夜蝕虫",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_1004.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230004,
+        "name": "尊血玉ディメーテ"
+      },
+      {
+        "id": 230304,
+        "name": "栄慈符ポリアフ"
+      },
+      {
+        "id": 234000,
+        "name": "聖凶典レネイエ"
+      }
+    ]
+  },
+  "10913": {
+    "desc": "ロッカザルムに生息する特殊な体液を持つ虫",
+    "id": 10913,
+    "max_stack": 99,
+    "name": "蒼仄零虫",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1001.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230006,
+        "name": "霊祀環セル・ナリア"
+      },
+      {
+        "id": 238000,
+        "name": "虹翼の祷霊装"
+      }
+    ]
+  },
+  "11000": {
+    "desc": "エレメントが持つ攻撃的な力を封じる特性を秘めた特殊な石",
+    "id": 11000,
+    "max_stack": 99,
+    "name": "壮命石",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 5,
+    "thumbnail": "item_thum_1102.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20700,
+        "name": "戦神の薬"
+      },
+      {
+        "id": 20800,
+        "name": "炎撃石"
+      },
+      {
+        "id": 20810,
+        "name": "水撃石"
+      },
+      {
+        "id": 20820,
+        "name": "樹撃石"
+      },
+      {
+        "id": 20830,
+        "name": "雷撃石"
+      },
+      {
+        "id": 20840,
+        "name": "光撃石"
+      },
+      {
+        "id": 20850,
+        "name": "闇撃石"
+      }
+    ]
+  },
+  "11001": {
+    "desc": "エレメントが持つ防御的な力を封じる特性を秘めた特殊な石",
+    "id": 11001,
+    "max_stack": 99,
+    "name": "守護石",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 5,
+    "thumbnail": "item_thum_1101.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20700,
+        "name": "戦神の薬"
+      },
+      {
+        "id": 20900,
+        "name": "炎護石"
+      },
+      {
+        "id": 20910,
+        "name": "水護石"
+      },
+      {
+        "id": 20920,
+        "name": "樹護石"
+      },
+      {
+        "id": 20930,
+        "name": "雷護石"
+      },
+      {
+        "id": 20940,
+        "name": "光護石"
+      },
+      {
+        "id": 20950,
+        "name": "闇護石"
+      }
+    ]
+  },
+  "11002": {
+    "desc": "破邪の力を秘めた特殊な貴石。王侯貴族の装飾品に使われることが多い",
+    "id": 11002,
+    "max_stack": 99,
+    "name": "破邪石",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_1100.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 35300,
+        "name": "覇光ルーヴァ"
+      },
+      {
+        "id": 35301,
+        "name": "王光メディアン"
+      }
+    ]
+  },
+  "11003": {
+    "desc": "神の様な威厳を感じられる霊石",
+    "id": 11003,
+    "max_stack": 99,
+    "name": "神厳御石",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 20,
+    "thumbnail": "item_thum_1103.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 21000,
+        "name": "武神薬"
+      }
+    ]
+  },
+  "11004": {
+    "desc": "神々の加護を受けたとされる霊石",
+    "id": 11004,
+    "max_stack": 99,
+    "name": "福音御石",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 30,
+    "thumbnail": "item_thum_1105.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 22200,
+        "name": "天使の像"
+      }
+    ]
+  },
+  "11005": {
+    "desc": "グランガイアで稀に発見される霊石",
+    "id": 11005,
+    "max_stack": 99,
+    "name": "創魂御石",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 40,
+    "thumbnail": "item_thum_1107.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 22300,
+        "name": "闘神の笛"
+      }
+    ]
+  },
+  "11006": {
+    "desc": "蒼い輝きを放ち高い霊力を秘めている貴重な宝石の原石",
+    "id": 11006,
+    "max_stack": 99,
+    "name": "蒼剛石",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 25,
+    "thumbnail": "item_thum_1101.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 33700,
+        "name": "技宝バトルブースター"
+      }
+    ]
+  },
+  "11007": {
+    "desc": "紅の輝きを放ち生命力を高める効果があるとされる宝石の原石",
+    "id": 11007,
+    "max_stack": 99,
+    "name": "紅愛石",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 40,
+    "thumbnail": "item_thum_1100.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 33800,
+        "name": "癒宝ハートブースター"
+      }
+    ]
+  },
+  "11008": {
+    "desc": "何人もの人が身を投げた火山の溶岩が固まったものとされる霊石",
+    "id": 11008,
+    "max_stack": 99,
+    "name": "蹟業石",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1105.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 34000,
+        "name": "闇魂の籠手"
+      },
+      {
+        "id": 47900,
+        "name": "魔封珠『セルグラード』"
+      }
+    ]
+  },
+  "11009": {
+    "desc": "セントラミア地方の霊峰クレイリアに伝承が残る最高級の宝石の原石",
+    "id": 11009,
+    "max_stack": 99,
+    "name": "至宝石",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1103.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 33900,
+        "name": "ゼルナイトの指輪"
+      },
+      {
+        "id": 47900,
+        "name": "魔封珠『セルグラード』"
+      }
+    ]
+  },
+  "11010": {
+    "desc": "世界を構成するエレメントの力をまったく秘めていない稀有な岩石",
+    "id": 11010,
+    "max_stack": 99,
+    "name": "虚空岩",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1101.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 33500,
+        "name": "闇衣ダークエデュア"
+      }
+    ]
+  },
+  "11011": {
+    "desc": "非常に透明度の高い泉水の中で発見された透明な石",
+    "id": 11011,
+    "max_stack": 99,
+    "name": "泉透石",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1101.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 34803,
+        "name": "技宝バトルブースター2"
+      }
+    ]
+  },
+  "11012": {
+    "desc": "内部に業火を閉じ込めている石",
+    "id": 11012,
+    "max_stack": 99,
+    "name": "業焔石",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1100.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 34804,
+        "name": "癒宝ハートブースター2"
+      }
+    ]
+  },
+  "11013": {
+    "desc": "数々の英雄が散っていった激戦の地で採取される石",
+    "id": 11013,
+    "max_stack": 99,
+    "name": "英散石",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1103.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 33901,
+        "name": "ゼルマスターの指輪"
+      }
+    ]
+  },
+  "11014": {
+    "desc": "光を反射せずすべて吸い込むような黒さを持った石",
+    "id": 11014,
+    "max_stack": 99,
+    "name": "闇珠石",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1105.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 34808,
+        "name": "フェニックスの眼"
+      }
+    ]
+  },
+  "11015": {
+    "desc": "握って眠ると夢の中に出入りできると言い伝えられている不思議な石",
+    "id": 11015,
+    "max_stack": 99,
+    "name": "夢廻石",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1107.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 37700,
+        "name": "煉光ミグ・デリン"
+      },
+      {
+        "id": 38000,
+        "name": "魔石の欠片"
+      }
+    ]
+  },
+  "11016": {
+    "desc": "特定の素材から必要な成分を精製するために必要な鉱物",
+    "id": 11016,
+    "max_stack": 99,
+    "name": "精製石",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1104.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 70000,
+        "name": "蛍光弾"
+      },
+      {
+        "id": 70100,
+        "name": "煙玉"
+      },
+      {
+        "id": 70200,
+        "name": "転送薬"
+      },
+      {
+        "id": 70300,
+        "name": "神香晶"
+      },
+      {
+        "id": 70400,
+        "name": "攻化晶"
+      },
+      {
+        "id": 70500,
+        "name": "防化晶"
+      },
+      {
+        "id": 70600,
+        "name": "探知薬"
+      }
+    ]
+  },
+  "11017": {
+    "desc": "アグニ地方の荒野に存在する赤い岩から切り出した鉱石",
+    "id": 11017,
+    "max_stack": 99,
+    "name": "紅楼石",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1100.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30004,
+        "name": "神剣アルトレイト"
+      },
+      {
+        "id": 30104,
+        "name": "神王盾ディバディン"
+      },
+      {
+        "id": 30204,
+        "name": "神杖アポカリプス"
+      },
+      {
+        "id": 30304,
+        "name": "神鎧コキュートス"
+      },
+      {
+        "id": 38100,
+        "name": "覇彩晶ミラヴィス"
+      },
+      {
+        "id": 38200,
+        "name": "王彩晶エルディオン"
+      },
+      {
+        "id": 38300,
+        "name": "大泥棒の手甲"
+      },
+      {
+        "id": 47904,
+        "name": "魔封珠『ラクシュルト』"
+      }
+    ]
+  },
+  "11018": {
+    "desc": "魔神アム=ユノスが持つ錫杖に付いている歯車の１つ",
+    "id": 11018,
+    "max_stack": 99,
+    "name": "刻環の歯車",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1101.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 49700,
+        "name": "刻識の神魔眼"
+      }
+    ]
+  },
+  "11019": {
+    "desc": "闇司神レデュハークの黒翅の欠片",
+    "id": 11019,
+    "max_stack": 99,
+    "name": "闇の欠片",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1105.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38401,
+        "name": "蒼竜剣ブレイブ・テラー"
+      },
+      {
+        "id": 39700,
+        "name": "魔神の旗印"
+      }
+    ]
+  },
+  "11020": {
+    "desc": "まるで機械部品のような堕神ヴァン・ルーシの体の一部",
+    "id": 11020,
+    "max_stack": 99,
+    "name": "神の歯車",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1104.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 39900,
+        "name": "フェニックスの輝翼"
+      },
+      {
+        "id": 44400,
+        "name": "焔珠『不死鳥』"
+      }
+    ]
+  },
+  "11021": {
+    "desc": "まるで機械部品のような邪神ヴァン・ナーダの体の一部",
+    "id": 11021,
+    "max_stack": 99,
+    "name": "神の回路",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1105.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 39800,
+        "name": "魔晶帝冠リリー・レイズ"
+      },
+      {
+        "id": 44300,
+        "name": "魔石の荊冠"
+      }
+    ]
+  },
+  "11022": {
+    "desc": "ほのかに緑色に光る美しい鉱石",
+    "id": 11022,
+    "max_stack": 99,
+    "name": "翠晶石",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1102.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 31301,
+        "name": "宝珠ミラビアス"
+      },
+      {
+        "id": 40000,
+        "name": "技宝ソルジェネレーター"
+      },
+      {
+        "id": 40100,
+        "name": "癒宝ルナジェネレーター"
+      }
+    ]
+  },
+  "11023": {
+    "desc": "古代の猛将の執念が宿るとされる石片",
+    "id": 11023,
+    "max_stack": 99,
+    "name": "覇鬼石",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1102.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 31002,
+        "name": "天羽々斬剣"
+      },
+      {
+        "id": 31102,
+        "name": "禍盾『エレクゼノア』"
+      },
+      {
+        "id": 47906,
+        "name": "魔封珠『ファル・ナーガ』"
+      }
+    ]
+  },
+  "11024": {
+    "desc": "アルダリアにわずかに残る幻の鉱物",
+    "id": 11024,
+    "max_stack": 99,
+    "name": "帝狩石",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1104.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30007,
+        "name": "殲神剣エクセベルグ"
+      },
+      {
+        "id": 30107,
+        "name": "界統盾オルデセクト"
+      },
+      {
+        "id": 30207,
+        "name": "宿杖ラクネシス"
+      },
+      {
+        "id": 30307,
+        "name": "異鎧ペルド・インティス"
+      },
+      {
+        "id": 47907,
+        "name": "魔封珠『エストリア』"
+      }
+    ]
+  },
+  "11025": {
+    "desc": "固形物を構成する成分を含まない虚空の結晶",
+    "id": 11025,
+    "max_stack": 99,
+    "name": "虚空玉",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1104.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30008,
+        "name": "煌神剣レイ・ファルク"
+      },
+      {
+        "id": 30108,
+        "name": "覇天盾メルクード"
+      },
+      {
+        "id": 30208,
+        "name": "真導杖イキュロス"
+      },
+      {
+        "id": 30308,
+        "name": "真鎧『天壌無窮』"
+      },
+      {
+        "id": 44100,
+        "name": "妖精の虹布"
+      },
+      {
+        "id": 47908,
+        "name": "魔封珠『メノン』"
+      }
+    ]
+  },
+  "11026": {
+    "desc": "まるで機械部品のようなヴァン・ルーシの心臓部",
+    "id": 11026,
+    "max_stack": 99,
+    "name": "神の炉心",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1104.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44400,
+        "name": "焔珠『不死鳥』"
+      },
+      {
+        "id": 49700,
+        "name": "刻識の神魔眼"
+      }
+    ]
+  },
+  "11027": {
+    "desc": "まるで機械部品のような邪神ヴァン・ナーダの心臓部",
+    "id": 11027,
+    "max_stack": 99,
+    "name": "神の信管",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1105.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44300,
+        "name": "魔石の荊冠"
+      }
+    ]
+  },
+  "11028": {
+    "desc": "死してなお脈動を続ける剛雷獣の心臓",
+    "id": 11028,
+    "max_stack": 99,
+    "name": "雷脈の心臓",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1100.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38405,
+        "name": "神滅天剣ヴァルシデル"
+      },
+      {
+        "id": 44500,
+        "name": "ラ・ミラ変換機構"
+      }
+    ]
+  },
+  "11029": {
+    "desc": "瀑焔神の体内に存在する結晶体",
+    "id": 11029,
+    "max_stack": 99,
+    "name": "大瀑布結晶",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1101.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38405,
+        "name": "神滅天剣ヴァルシデル"
+      },
+      {
+        "id": 38505,
+        "name": "天将盾エゼネレート"
+      },
+      {
+        "id": 44600,
+        "name": "創世の石板"
+      }
+    ]
+  },
+  "11030": {
+    "desc": "煉神ナルダ・デリアの身体を縛る謎の環",
+    "id": 11030,
+    "max_stack": 99,
+    "name": "災禍煉環",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1105.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 42300,
+        "name": "秘宝『ケレス・グレイン』"
+      },
+      {
+        "id": 60200,
+        "name": "宵闇の仙晶球"
+      }
+    ]
+  },
+  "11031": {
+    "desc": "破壊神ミストゾーグの核とされる結晶体",
+    "id": 11031,
+    "max_stack": 99,
+    "name": "欺瞞結晶",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1104.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 45400,
+        "name": "至富霊冠マルディウス"
+      },
+      {
+        "id": 49700,
+        "name": "刻識の神魔眼"
+      }
+    ]
+  },
+  "11032": {
+    "desc": "黒邪龍ジライエンの瞳が結晶化したもの",
+    "id": 11032,
+    "max_stack": 99,
+    "name": "黒邪瞳晶",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1105.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 45500,
+        "name": "ヴィハラの紫金珠"
+      },
+      {
+        "id": 45600,
+        "name": "覇導装ラミルード"
+      },
+      {
+        "id": 46200,
+        "name": "秘宝『マルク・アビネス』"
+      }
+    ]
+  },
+  "11033": {
+    "desc": "剛雷獣ゴルヴォーグの生命力の源とされる結晶",
+    "id": 11033,
+    "max_stack": 99,
+    "name": "雷の剛晶",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1103.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 45500,
+        "name": "ヴィハラの紫金珠"
+      },
+      {
+        "id": 47601,
+        "name": "武神刹刃『闘覇冥水』"
+      }
+    ]
+  },
+  "11034": {
+    "desc": "蒼惶龍エストレイトの強大な力が宿る蒼玉。",
+    "id": 11034,
+    "max_stack": 99,
+    "name": "如幻蒼玉",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1101.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 46210,
+        "name": "雷輝豪鎧ベイオルグ"
+      },
+      {
+        "id": 47700,
+        "name": "魔鳳冠ヴァーミリオン"
+      }
+    ]
+  },
+  "11035": {
+    "desc": "暗禍狂神アルケムの身体の一部である赤晶。",
+    "id": 11035,
+    "max_stack": 99,
+    "name": "狂神の赤晶",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1100.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 47600,
+        "name": "終世の黙示録"
+      },
+      {
+        "id": 47700,
+        "name": "魔鳳冠ヴァーミリオン"
+      }
+    ]
+  },
+  "11036": {
+    "desc": "暗禍狂神アルケムの身体の中心に存在する核。",
+    "id": 11036,
+    "max_stack": 99,
+    "name": "暗禍の神核",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1105.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 46200,
+        "name": "秘宝『マルク・アビネス』"
+      },
+      {
+        "id": 48900,
+        "name": "煌拳マハ・ナーガ"
+      }
+    ]
+  },
+  "11037": {
+    "desc": "内部に莫大な力を宿した６色に輝く石",
+    "id": 11037,
+    "max_stack": 99,
+    "name": "六輝石",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1104.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 47900,
+        "name": "魔封珠『セルグラード』"
+      }
+    ]
+  },
+  "11038": {
+    "desc": "闘魔武神シュスイが持つ武器がわずかに砕け、こぼれ落ちた欠片。",
+    "id": 11038,
+    "max_stack": 99,
+    "name": "武神の剛石",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1100.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 47601,
+        "name": "武神刹刃『闘覇冥水』"
+      }
+    ]
+  },
+  "11039": {
+    "desc": "ベイオルグの装甲の一部",
+    "id": 11039,
+    "max_stack": 99,
+    "name": "雷鎧の護甲",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1103.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 46210,
+        "name": "雷輝豪鎧ベイオルグ"
+      }
+    ]
+  },
+  "11040": {
+    "desc": "戦斧ディアボリックファングの刃の欠片",
+    "id": 11040,
+    "max_stack": 99,
+    "name": "暴斧の欠刃",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1104.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44802,
+        "name": "ディアボリックファング"
+      }
+    ]
+  },
+  "11041": {
+    "desc": "魔神アム=ユノスの周囲より採取される特殊な結晶",
+    "id": 11041,
+    "max_stack": 99,
+    "name": "転現粒晶",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1104.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 49700,
+        "name": "刻識の神魔眼"
+      }
+    ]
+  },
+  "11042": {
+    "desc": "魔神モーラが身に付けている装飾品の欠片",
+    "id": 11042,
+    "max_stack": 99,
+    "name": "闇魔霊晶",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1104.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 60200,
+        "name": "宵闇の仙晶球"
+      },
+      {
+        "id": 62130,
+        "name": "神喰の紅翔弓"
+      }
+    ]
+  },
+  "11043": {
+    "desc": "メロードの体内に流れる血液の凝塊",
+    "id": 11043,
+    "max_stack": 99,
+    "name": "神魔混血漿",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1101.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 60300,
+        "name": "神魔崩魂メロード"
+      }
+    ]
+  },
+  "11044": {
+    "desc": "メロードの体内で精製されている結晶",
+    "id": 11044,
+    "max_stack": 99,
+    "name": "神魔結晶塊",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1105.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 60300,
+        "name": "神魔崩魂メロード"
+      }
+    ]
+  },
+  "11045": {
+    "desc": "封魔導神カロンの剣に嵌めこまれた水晶",
+    "id": 11045,
+    "max_stack": 99,
+    "name": "導刻の封紋",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1105.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 46220,
+        "name": "封刻の魔聖鎧"
+      },
+      {
+        "id": 62130,
+        "name": "神喰の紅翔弓"
+      }
+    ]
+  },
+  "11046": {
+    "desc": "異界ヴィランシルの永久凍土層の調査時に発見された鉱石",
+    "id": 11046,
+    "max_stack": 99,
+    "name": "氷零石",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_1101.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230104,
+        "name": "力王帯バルギルア"
+      },
+      {
+        "id": 230204,
+        "name": "白鬼甲マク・マウ"
+      }
+    ]
+  },
+  "11047": {
+    "desc": "究極龍ビシャモンを討伐した者のみが入手できるとされる宝玉",
+    "id": 11047,
+    "max_stack": 99,
+    "name": "北方四神玉",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1104.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 65020,
+        "name": "ジークフリード"
+      },
+      {
+        "id": 65040,
+        "name": "妖剣ダーインスレイヴ"
+      }
+    ]
+  },
+  "11048": {
+    "desc": "凰刃那原のある廃寺に出現した機械人形の歯車",
+    "id": 11048,
+    "max_stack": 99,
+    "name": "煉機車具",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1104.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 235001,
+        "name": "機兵石『イザヨイ』"
+      }
+    ]
+  },
+  "11049": {
+    "desc": "魔動人形の残骸の中よりごく稀に発見される結晶",
+    "id": 11049,
+    "max_stack": 99,
+    "name": "鎧鳴の結晶",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1102.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 235002,
+        "name": "魂震鎧ガルヴァス"
+      }
+    ]
+  },
+  "11050": {
+    "desc": "二柱の神が纏っていた装身具の破片",
+    "id": 11050,
+    "max_stack": 99,
+    "name": "神飾の聖片",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_1105.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 235003,
+        "name": "奉神具トゥライエ"
+      }
+    ]
+  },
+  "11051": {
+    "desc": "セントクリークに封印されていた魔神の中心核",
+    "id": 11051,
+    "max_stack": 99,
+    "name": "異魔魄珠",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_1107.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 235008,
+        "name": "神脈の霊異薬"
+      }
+    ]
+  },
+  "110000": {
+    "desc": "セリアの擬似ユニットを進化させる結晶体",
+    "id": 110000,
+    "max_stack": 1,
+    "name": "紅魂晶",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110000.png",
+    "type": "evomat",
+    "usage": []
+  },
+  "110001": {
+    "desc": "セリアの擬似ユニットを進化させる稀少な結晶体",
+    "id": 110001,
+    "max_stack": 1,
+    "name": "紅輝英晶",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110100.png",
+    "type": "evomat",
+    "usage": []
+  },
+  "110010": {
+    "desc": "カルの擬似ユニットを進化させる結晶体",
+    "id": 110010,
+    "max_stack": 1,
+    "name": "蒼魂晶",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110010.png",
+    "type": "evomat",
+    "usage": []
+  },
+  "110011": {
+    "desc": "カルの擬似ユニットを進化させる稀少な結晶体",
+    "id": 110011,
+    "max_stack": 1,
+    "name": "蒼輝英晶",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110110.png",
+    "type": "evomat",
+    "usage": []
+  },
+  "110020": {
+    "desc": "ルジーナの擬似ユニットを進化させる結晶体",
+    "id": 110020,
+    "max_stack": 1,
+    "name": "翠魂晶",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110020.png",
+    "type": "evomat",
+    "usage": []
+  },
+  "110021": {
+    "desc": "ルジーナの擬似ユニットを進化させる稀少な結晶体",
+    "id": 110021,
+    "max_stack": 1,
+    "name": "翠輝英晶",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110120.png",
+    "type": "evomat",
+    "usage": []
+  },
+  "110030": {
+    "desc": "パリスの擬似ユニットを進化させる結晶体",
+    "id": 110030,
+    "max_stack": 1,
+    "name": "黄魂晶",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110030.png",
+    "type": "evomat",
+    "usage": []
+  },
+  "110031": {
+    "desc": "パリスの擬似ユニットを進化させる稀少な結晶体",
+    "id": 110031,
+    "max_stack": 1,
+    "name": "黄輝英晶",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110130.png",
+    "type": "evomat",
+    "usage": []
+  },
+  "110040": {
+    "desc": "ティリスの擬似ユニットを進化させる結晶体",
+    "id": 110040,
+    "max_stack": 1,
+    "name": "虹魂晶",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110040.png",
+    "type": "evomat",
+    "usage": []
+  },
+  "110041": {
+    "desc": "ティリスの擬似ユニットを進化させる稀少な結晶体",
+    "id": 110041,
+    "max_stack": 1,
+    "name": "虹輝英晶",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110140.png",
+    "type": "evomat",
+    "usage": []
+  },
+  "110050": {
+    "desc": "グラデンスの擬似ユニットを進化させる結晶体",
+    "id": 110050,
+    "max_stack": 1,
+    "name": "紫魂晶",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110050.png",
+    "type": "evomat",
+    "usage": []
+  },
+  "110051": {
+    "desc": "グラデンスの擬似ユニットを進化させる稀少な結晶体",
+    "id": 110051,
+    "max_stack": 1,
+    "name": "紫輝英晶",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110150.png",
+    "type": "evomat",
+    "usage": []
+  },
+  "110060": {
+    "desc": "オーンの擬似ユニットを進化させる稀少な結晶体",
+    "id": 110060,
+    "max_stack": 1,
+    "name": "煌輝英晶",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110160.png",
+    "type": "evomat",
+    "usage": []
+  },
+  "110070": {
+    "desc": "アークの擬似ユニットを進化させる稀少な結晶体",
+    "id": 110070,
+    "max_stack": 1,
+    "name": "幻翼双晶",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110190.png",
+    "type": "evomat",
+    "usage": []
+  },
+  "110080": {
+    "desc": "レダの擬似ユニットを進化させる稀少な結晶体",
+    "id": 110080,
+    "max_stack": 1,
+    "name": "幻憶緋晶",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110080.png",
+    "type": "evomat",
+    "usage": []
+  },
+  "110100": {
+    "desc": "神をも越える魂を創り出しユニットを進化させる不思議な石",
+    "id": 110100,
+    "max_stack": 99,
+    "name": "神越の魂石",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_111000.png",
+    "type": "evomat",
+    "usage": []
+  },
+  "120000": {
+    "desc": "クエストクリア時の獲得経験値が１.５倍になる",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "79",
+          "unknown proc param": "50"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 120000,
+    "max equipped": 1,
+    "max_stack": 99,
+    "name": "経験の証",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 500,
+    "thumbnail": "item_thum_90000.png",
+    "type": "summoner_consumable",
+    "usage": []
+  },
+  "120001": {
+    "desc": "クエストクリア時の獲得経験値が２倍になる",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "79",
+          "unknown proc param": "100"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 120001,
+    "max equipped": 1,
+    "max_stack": 99,
+    "name": "経験輝証",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 1000,
+    "thumbnail": "item_thum_90100.png",
+    "type": "summoner_consumable",
+    "usage": []
+  },
+  "120010": {
+    "desc": "マップ上で使用するとレイドバトルクリア時の素材ドロップ率が１.５倍になる",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "908",
+          "unknown proc param": "50"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 120010,
+    "max equipped": 1,
+    "max_stack": 99,
+    "name": "幸運の証",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 500,
+    "thumbnail": "item_thum_91000.png",
+    "type": "summoner_consumable",
+    "usage": []
+  },
+  "120011": {
+    "desc": "マップ上で使用するとレイドバトルクリア時の素材ドロップ率が２倍になる",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "908",
+          "unknown proc param": "100"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 120011,
+    "max equipped": 1,
+    "max_stack": 99,
+    "name": "幸運輝証",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 1000,
+    "thumbnail": "item_thum_91100.png",
+    "type": "summoner_consumable",
+    "usage": []
+  },
+  "130000": {
+    "desc": "使用後３０分間、クエストクリア時の獲得経験値が１.５倍になる",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "79",
+          "unknown proc param": "50,30"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 130000,
+    "max equipped": 1,
+    "max_stack": 99,
+    "name": "経験の水",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 500,
+    "thumbnail": "item_thum_92000.png",
+    "type": "summoner_consumable",
+    "usage": []
+  },
+  "130001": {
+    "desc": "使用後３０分間、クエストクリア時の獲得経験値が２倍になる",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "79",
+          "unknown proc param": "100,30"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 130001,
+    "max equipped": 1,
+    "max_stack": 99,
+    "name": "経験秘水",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 1000,
+    "thumbnail": "item_thum_92100.png",
+    "type": "summoner_consumable",
+    "usage": []
+  },
+  "130010": {
+    "desc": "クエストクリア時の獲得経験値が１.５倍になる",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "79",
+          "unknown proc param": "50"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 130010,
+    "max equipped": 1,
+    "max_stack": 99,
+    "name": "経験の丸薬",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 500,
+    "thumbnail": "item_thum_92200.png",
+    "type": "summoner_consumable",
+    "usage": []
+  },
+  "130011": {
+    "desc": "クエストクリア時の獲得経験値が２倍になる",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "79",
+          "unknown proc param": "100"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 130011,
+    "max equipped": 1,
+    "max_stack": 99,
+    "name": "経験霊薬",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 1000,
+    "thumbnail": "item_thum_92300.png",
+    "type": "summoner_consumable",
+    "usage": []
+  }
+}

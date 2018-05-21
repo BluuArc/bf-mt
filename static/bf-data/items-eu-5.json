@@ -1,0 +1,275 @@
+{
+  "50000": {
+    "desc": "Slightly replenishes one ally's HP.",
+    "effect": {
+      "effect": [
+        {
+          "heal high": 800,
+          "heal low": 800,
+          "proc id": "2",
+          "rec added% (from healer)": 10
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 50000,
+    "max equipped": 50,
+    "max_stack": 99,
+    "name": "Elixir",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 30,
+    "thumbnail": "item_thum_20000.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "50001": {
+    "desc": "Replenishes one ally's HP.",
+    "effect": {
+      "effect": [
+        {
+          "heal high": 1500,
+          "heal low": 1500,
+          "proc id": "2",
+          "rec added% (from healer)": 10
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 50001,
+    "max equipped": 50,
+    "max_stack": 99,
+    "name": "High Elixir",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_20001.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "50100": {
+    "desc": "Replenishes all allies' HP.",
+    "effect": {
+      "effect": [
+        {
+          "heal high": 1500,
+          "heal low": 1500,
+          "proc id": "2",
+          "rec added% (from healer)": 10
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 50100,
+    "max equipped": 50,
+    "max_stack": 99,
+    "name": "Hope's Light",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_20100.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "50200": {
+    "desc": "Heals all abnormalities of one ally",
+    "effect": {
+      "effect": [
+        {
+          "remove curse": true,
+          "remove injury": true,
+          "remove paralysis": true,
+          "remove poison": true,
+          "remove sick": true,
+          "remove weaken": true
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 50200,
+    "max equipped": 50,
+    "max_stack": 99,
+    "name": "Pure Elixir",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_20230.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "50400": {
+    "desc": "Increases the Atk Power of all allies by 50% for three turns.",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (1)": 50,
+          "buff turns": 3,
+          "element buffed": "all",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 50400,
+    "max equipped": 50,
+    "max_stack": 99,
+    "name": "Atk Elixir",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 40,
+    "thumbnail": "item_thum_20400.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "50401": {
+    "desc": "Doubles the Atk Power of one ally for 3 turns.",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (1)": 100,
+          "buff turns": 3,
+          "element buffed": "all",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 50401,
+    "max equipped": 50,
+    "max_stack": 99,
+    "name": "Brute Potion",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 40,
+    "thumbnail": "item_thum_20400.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "50600": {
+    "desc": "Increases the Def Power of all allies by 50% for four turns.",
+    "effect": {
+      "effect": [
+        {
+          "buff turns": 4,
+          "def% buff (3)": 50,
+          "element buffed": "all",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 50600,
+    "max equipped": 50,
+    "max_stack": 99,
+    "name": "Def Elixir",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 40,
+    "thumbnail": "item_thum_20600.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "50601": {
+    "desc": "Doubles the Def Power of one ally for 3 turns.",
+    "effect": {
+      "effect": [
+        {
+          "buff turns": 4,
+          "def% buff (3)": 100,
+          "element buffed": "all",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 50601,
+    "max equipped": 50,
+    "max_stack": 99,
+    "name": "Titan Potion",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 40,
+    "thumbnail": "item_thum_20600.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "51000": {
+    "desc": "Completely fills the BB Gauge of one ally.",
+    "effect": {
+      "effect": [
+        {
+          "bb bc fill%": 100,
+          "proc id": "4"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 51000,
+    "max equipped": 50,
+    "max_stack": 99,
+    "name": "Fujin Elixir",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 100,
+    "thumbnail": "item_thum_21000.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "52300": {
+    "desc": "Significantly increases the drop rate of HC & BC for 3 turns.",
+    "effect": {
+      "effect": [
+        {
+          "bc drop rate% buff (10)": 30,
+          "drop rate buff turns": 3,
+          "hc drop rate% buff (9)": 30,
+          "proc id": "6"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 52300,
+    "max equipped": 50,
+    "max_stack": 99,
+    "name": "Demon Flute",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 100,
+    "thumbnail": "item_thum_22300.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "52400": {
+    "desc": "Revives one ally from KO status to full HP.",
+    "effect": {
+      "effect": [
+        {
+          "proc id": "12",
+          "revive to hp%": 100
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 52400,
+    "max equipped": 50,
+    "max_stack": 99,
+    "name": "Full Revive",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 100,
+    "thumbnail": "item_thum_21100.png",
+    "type": "consumable",
+    "usage": []
+  }
+}

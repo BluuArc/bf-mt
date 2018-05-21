@@ -1,0 +1,289 @@
+{
+  "70000": {
+    "desc": "Shows where the Boss is on the map for a short period of time.",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "903",
+          "unknown proc param": "1,480,0"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "enemy"
+    },
+    "id": 70000,
+    "max equipped": 10,
+    "max_stack": 99,
+    "name": "Beacon",
+    "raid": true,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 11016,
+          "name": "Smooth Stone"
+        },
+        {
+          "count": 1,
+          "id": 10610,
+          "name": "Acute Eye"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_70000.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "70100": {
+    "desc": "Guarantees escape from battle.",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "906",
+          "unknown proc param": ""
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "enemy"
+    },
+    "id": 70100,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "Smoke Bomb",
+    "raid": true,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 11016,
+          "name": "Smooth Stone"
+        },
+        {
+          "count": 1,
+          "id": 10309,
+          "name": "Smoky Drop"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_70100.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "70200": {
+    "desc": "Moves player to Camp.",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "905",
+          "unknown proc param": "1"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 70200,
+    "max equipped": 1,
+    "max_stack": 99,
+    "name": "Teleport",
+    "raid": true,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 11016,
+          "name": "Smooth Stone"
+        },
+        {
+          "count": 1,
+          "id": 10108,
+          "name": "Move Feather"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_70200.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "70300": {
+    "desc": "Slightly replenishes the HP of all allies in the surrounding area.",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "901",
+          "unknown proc param": "100,120,0,0"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 70300,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "God Crystal",
+    "raid": true,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 11016,
+          "name": "Smooth Stone"
+        },
+        {
+          "count": 1,
+          "id": 20000,
+          "name": "Cure"
+        },
+        {
+          "count": 1,
+          "id": 10206,
+          "name": "Mow Nut"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_70300.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "70400": {
+    "desc": "10% boost to Atk for all allies on the map for 5 minutes. Up to 4 may be used simultaneously.",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (100)": 10,
+          "buff timer (seconds)": 300,
+          "proc id": "902"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 70400,
+    "max equipped": 4,
+    "max_stack": 99,
+    "name": "Atk Crystal",
+    "raid": true,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 11016,
+          "name": "Smooth Stone"
+        },
+        {
+          "count": 1,
+          "id": 20400,
+          "name": "Atk Potion"
+        },
+        {
+          "count": 1,
+          "id": 10206,
+          "name": "Mow Nut"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_70400.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "70500": {
+    "desc": "10% damage decrease for all allies on the map for 5 minutes. Up to 4 may be used simultaneously.",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "907",
+          "unknown proc param": "10,300,1"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 70500,
+    "max equipped": 4,
+    "max_stack": 99,
+    "name": "Def Crystal",
+    "raid": true,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 11016,
+          "name": "Smooth Stone"
+        },
+        {
+          "count": 1,
+          "id": 20600,
+          "name": "Def Potion"
+        },
+        {
+          "count": 1,
+          "id": 10206,
+          "name": "Mow Nut"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_70500.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "70600": {
+    "desc": "Identifies the location of undiscovered bosses for some time.",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "903",
+          "unknown proc param": "1,90,0"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "enemy"
+    },
+    "id": 70600,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "Detector",
+    "raid": true,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 11016,
+          "name": "Smooth Stone"
+        },
+        {
+          "count": 1,
+          "id": 10610,
+          "name": "Acute Eye"
+        },
+        {
+          "count": 1,
+          "id": 10004,
+          "name": "Brown Grass"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_70600.png",
+    "type": "consumable",
+    "usage": []
+  }
+}
