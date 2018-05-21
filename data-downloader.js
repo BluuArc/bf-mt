@@ -365,13 +365,34 @@ async function getLeaderSkillDataForServer(server = 'gl', unitData = {}) {
   return lsData;
 }
 
+async function getDictionaryForServer(server = 'gl') {
+  logger.info(`${server}: getting files`);
+  let dictionaryData = {};
+  const downloadResult = await downloadMultipleFiles([getUrl(server, 'dictionary.json')]);
+  downloadResult.map(r => {
+    if (typeof r.data === "string") {
+      r.data = JSON.parse(r.data);
+    }
+    return r;
+  }).forEach(r => {
+    const { data } = r;
+    Object.keys(data)
+      .forEach(key => {
+        dictionaryData[key] = data[key];
+      })
+  });
+  logger.debug('dictionaryData', Object.keys(dictionaryData));
+  return dictionaryData;
+}
+
 async function getData(servers = ['gl', 'eu', 'jp']) {
+  // TODO: implement use of dictionary data
   for (const s of servers) {
     const unitData = await getUnitDataForServer(s);
-    // await getBurstDataForServer(s, unitData);
-    // await getExtraSkillDataForServer(s, unitData);
+    await getBurstDataForServer(s, unitData);
+    await getExtraSkillDataForServer(s, unitData);
     await getLeaderSkillDataForServer(s, unitData);
-    // await getItemDataForServer(s);
+    await getItemDataForServer(s);
   }
 }
 
