@@ -239,7 +239,7 @@ async function getExtraSkillDataForServer(server = 'gl', unitData = {}) {
           }
           esData[esId].associated_units.push(unit.id.toString());
         } else {
-          logger.warn(`No ES ID ${esId} found in data from unit ${type} ${unit.id} (${unit.name})`);
+          logger.warn(`No ES ID ${esId} found in data from unit ${unit.id} (${unit.name})`);
         }
       }
     });
@@ -325,12 +325,53 @@ async function getItemDataForServer(server = 'gl') {
   return itemData;
 }
 
+async function getLeaderSkillDataForServer(server = 'gl', unitData = {}) {
+  const lsData = {};
+  logger.info(`${server}: getting files`);
+  const downloadResult = await downloadMultipleFiles([getUrl(server, 'ls.json')]);
+  downloadResult.map(r => {
+    if (typeof r.data === "string") {
+      r.data = JSON.parse(r.data);
+    }
+    return r;
+  }).forEach(r => {
+    const { data } = r;
+    Object.keys(data)
+      .forEach(key => {
+        lsData[key] = data[key];
+      })
+  });
+  logger.debug('lsData', Object.keys(lsData));
+
+  logger.info(`${server}: setting unit associations`);
+  Object.values(unitData)
+    .forEach(unit => {
+      if (unit['leader skill']) {
+        const lsId = unit['leader skill'].id;
+        if (lsData[lsId]) {
+          if (!lsData[lsId].associated_units) {
+            lsData[lsId].associated_units = [];
+          }
+          lsData[lsId].associated_units.push(unit.id.toString());
+        } else {
+          logger.warn(`No LS ID ${lsId} found in data from unit ${unit.id} (${unit.name})`);
+        }
+      }
+    });
+  logger.info(`${server}: saving files`);
+  const filename = `ls-${server}.json`;
+  fs.writeFileSync(`${outputFolder}/${filename}`, JSON.stringify(lsData, null, 2), 'utf8');
+  logger.info(`${server}: saved ${filename}`);
+  return lsData;
+}
+
 async function getData(servers = ['gl', 'eu', 'jp']) {
   for (const s of servers) {
     const unitData = await getUnitDataForServer(s);
-    await getBurstDataForServer(s, unitData);
-    await getExtraSkillDataForServer(s, unitData);
-    await getItemDataForServer(s);
+    // await getBurstDataForServer(s, unitData);
+    // await getExtraSkillDataForServer(s, unitData);
+    await getLeaderSkillDataForServer(s, unitData);
+    // await getItemDataForServer(s);
   }
 }
 

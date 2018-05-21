@@ -11,9 +11,12 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
-    "vuetify": "^1.0.0"
+    "vuetify": "^1.0.0",
+    "winston": "^2.4.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
