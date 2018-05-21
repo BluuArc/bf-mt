@@ -40,7 +40,9 @@
       </v-btn>
     </v-toolbar>
     <v-content>
-      <router-view/>
+      <v-slide-y-transition mode="in-out">
+        <router-view/>
+      </v-slide-y-transition>
     </v-content>
   </v-app>
 </template>
