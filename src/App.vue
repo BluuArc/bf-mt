@@ -23,8 +23,12 @@
         </v-list-tile>
         <v-divider/>
       </v-list>
-      <v-footer class="text-xs-center">
-        <span class="mx-auto">&copy; {{ new Date().getUTCFullYear() }}</span>
+      <v-footer>
+        <v-btn href="https://github.com/BluuArc/bf-mt" rel="noopener" target="_blank" icon>
+          <v-icon>fab fa-github</v-icon>
+        </v-btn>
+        <v-spacer/>
+        <span class="mx-auto pr-3">&copy; {{ new Date().getUTCFullYear() }}</span>
       </v-footer>
     </v-navigation-drawer>
     <v-toolbar app>
