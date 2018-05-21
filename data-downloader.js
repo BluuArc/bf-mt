@@ -210,10 +210,51 @@ async function getBurstDataForServer(server = 'gl', unitData = {}) {
   return bbData;
 }
 
+async function getExtraSkillDataForServer(server = 'gl', unitData = {}) {
+  const esData = {};
+  logger.info(`${server}: getting files`);
+  const downloadResult = await downloadMultipleFiles([getUrl(server, 'es.json')]);
+  downloadResult.map(r => {
+    if (typeof r.data === "string") {
+      r.data = JSON.parse(r.data);
+    }
+    return r;
+  }).forEach(r => {
+    const { data } = r;
+    Object.keys(data)
+      .forEach(key => {
+        esData[key] = data[key];
+      })
+  });
+  logger.debug('esData', Object.keys(esData));
+
+  logger.info(`${server}: setting unit associations`);
+  Object.values(unitData)
+    .forEach(unit => {
+      if (unit['extra skill']) {
+        const esId = unit['extra skill'].id;
+        if (esData[esId]) {
+          if (!esData[esId].associated_units) {
+            esData[esId].associated_units = [];
+          }
+          esData[esId].associated_units.push(unit.id.toString());
+        } else {
+          logger.warn(`No ES ID ${esId} found in data from unit ${type} ${unit.id} (${unit.name})`);
+        }
+      }
+    });
+  logger.info(`${server}: saving files`);
+  const filename = `es-${server}.json`;
+  fs.writeFileSync(`${outputFolder}/${filename}`, JSON.stringify(esData, null, 2), 'utf8');
+  logger.info(`${server}: saved ${filename}`);
+  return esData;
+}
+
 async function getData(servers = ['gl', 'eu', 'jp']) {
   for (const s of servers) {
     const unitData = await getUnitDataForServer(s);
     await getBurstDataForServer(s, unitData);
+    await getExtraSkillDataForServer(s, unitData);
   }
 }
 
