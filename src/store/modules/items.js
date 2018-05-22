@@ -1,9 +1,9 @@
-import { unitWorker } from '../instances/dexie-client';
+import { itemWorker } from '../instances/dexie-client';
 import downloadWorker from '../instances/download-worker';
 
 const isValidServer = server => ['gl', 'eu', 'jp'].includes(server);
 
-const unitsStore = {
+const itemStore = {
   namespaced: true,
   state: {
     numEntries: {
@@ -44,19 +44,19 @@ const unitsStore = {
     unitById: state => id => state.pageDb[id],
   },
   actions: {
-    async getMiniDb ({ state }, server = 'gl') {
+    getMiniDb ({ state }, server = 'gl') {
       // ensure server is valid
       if (!isValidServer(server)) {
         throw Error(`Invalid server "${server}"`);
       }
-      return unitWorker.getMiniDb(server);
+      return itemWorker.getMiniDb(server);
     },
     async getDbStatistics ({ state }, server = 'gl') {
       if (!isValidServer(server)) {
         throw Error(`Invalid server "${server}"`);
       }
-      const updateTime = await unitWorker.getFieldInEntry({ server }, 'updateTime').then(date => new Date(date));
-      const keyLength = await unitWorker.getFieldKeyLength({ server }, 'data');
+      const updateTime = await itemWorker.getFieldInEntry({ server }, 'updateTime').then(date => new Date(date));
+      const keyLength = await itemWorker.getFieldKeyLength({ server }, 'data');
       return { updateTime, keyLength };
     },
     async setActiveServer ({ commit, dispatch }, server = 'gl') {
@@ -70,7 +70,7 @@ const unitsStore = {
       commit('setLoadState', false);
     },
     async saveData ({ commit, dispatch, state }, { data = {}, server = 'gl', updateTime = new Date() }) {
-      await unitWorker.put({
+      await itemWorker.put({
         server,
         data,
         updateTime,
@@ -105,23 +105,23 @@ const unitsStore = {
       const baseUrl = `${location.origin}${location.pathname}static/bf-data`;
       for (const server of servers) {
         try {
-          const unitDb = {};
+          const itemDb = {};
           const loadPromises = [];
           let countFinished = 0;
-          for (let i = 1; i <= 6; ++i) {
+          for (let i = 0; i <= 9; ++i) {
             loadPromises.push(downloadWorker
-              .postMessage('getJson', [`${baseUrl}/units-${server}-${i}.json`])
+              .postMessage('getJson', [`${baseUrl}/items-${server}-${i}.json`])
               .then(tempData => {
                 Object.keys(tempData)
                   .forEach(id => {
-                    unitDb[id] = tempData[id];
+                    itemDb[id] = tempData[id];
                   });
-                console.debug(server, 6 - (++countFinished), 'unit files remaining');
+                console.debug(server, 10 - (++countFinished), 'unit files remaining');
               }));
           }
 
           await Promise.all(loadPromises);
-          await dispatch('saveData', { data: unitDb, server });
+          await dispatch('saveData', { data: itemDb, server });
           console.debug('finished updating unit data for', server);
         } catch (err) {
           console.error(server, err);
@@ -140,4 +140,4 @@ const unitsStore = {
   },
 };
 
-export default unitsStore;
+export default itemStore;

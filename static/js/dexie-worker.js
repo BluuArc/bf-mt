@@ -48,6 +48,23 @@ const dbWrapper = {
 
       return resultDb;
     }),
+  getMiniDbItems: (server, searchQuery = {}) => defaultGet('items', { server })
+    .then(results => {
+      if (results.length === 0 || !results[0].data || Object.keys(results[0].data).length === 0) {
+        return {};
+      }
+
+      const currentDb = results[0].data;
+      const resultDb = {};
+      Object.keys(currentDb)
+      .forEach(key => {
+        // TODO: search units based on search query
+        const { desc, id, name, rarity, thumbnail, type } = currentDb[key];
+        resultDb[key] = { desc, id, name, rarity, thumbnail, type };
+      });
+
+      return resultDb;
+    }),
 };
 
 registerPromiseWorker(async ({ command, args = [] }) => {

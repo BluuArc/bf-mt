@@ -141,6 +141,12 @@ export default {
       loadingUnits: 'isLoading',
       unitCacheTimes: 'cacheTimes',
     }),
+    ...mapState('items', {
+      itemData: 'pageDb',
+      itemNumEntries: 'numEntries',
+      loadingItems: 'isLoading',
+      itemCacheTimes: 'cacheTimes',
+    }),
     stateInfo () {
       return {
         unit: {
@@ -148,6 +154,12 @@ export default {
           numEntries: this.unitNumEntries,
           isLoading: this.loadingUnits,
           cacheTimes: this.unitCacheTimes,
+        },
+        item: {
+          data: this.itemData,
+          numEntries: this.itemNumEntries,
+          isLoading: this.loadingItems,
+          cacheTimes: this.itemCacheTimes,
         },
       };
     },
@@ -163,12 +175,12 @@ export default {
       return ['gl', 'eu', 'jp'];
     },
     dataIsLoading () {
-      return !!this.loadingUnits;
+      return Object.values(this.stateInfo).reduce((acc, val) => acc || val.isLoading, false);
     },
     dataSettingNameMapping () {
       return {
         unit: 'Units',
-        // item: 'Items',
+        item: 'Items',
         // braveBurst: 'Brave Bursts',
         // extraSkill: 'Extra Skills',
         // leaderSkill: 'Leader Skills',
@@ -227,6 +239,10 @@ export default {
     ...mapActions('units', {
       unitDataUpdate: 'updateData',
       unitDataDelete: 'deleteData',
+    }),
+    ...mapActions('items', {
+      itemDataUpdate: 'updateData',
+      itemDataDelete: 'deleteData',
     }),
     async generalFormSubmit () {
       if (this.general.darkMode !== this.darkMode) {
