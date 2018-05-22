@@ -2,16 +2,26 @@
     <v-container grid-list-lg>
       <v-layout row>
         <v-flex xs12>
-          <v-form ref="general-settings" v-model="general.valid" id="general-settings">
+          <v-form ref="general-settings" id="general-settings">
             <v-card raised>
               <v-card-title>
                 <h3 class="title">General Settings</h3>
               </v-card-title>
               <v-card-text>
-                <v-switch v-model="general.darkMode" label="Use Dark Mode" :rules="darkModeCheckboxRules"/>
+                <v-switch v-model="general.darkMode" label="Use Dark Mode"/>
+              </v-card-text>
+              <v-card-text>
+                <h3 class="subheading">Active Server</h3>
+                <v-radio-group v-model="general.activeServer" row>
+                  <v-radio
+                    v-for="server in servers"
+                    :key="server"
+                    :label="server.toUpperCase()"
+                    :value="server"/>
+                </v-radio-group>
               </v-card-text>
               <v-card-actions>
-                <v-btn :disabled="!general.valid" flat @click="generalFormSubmit">Apply Changes</v-btn>
+                <v-btn :disabled="!generalFormHasChanged" flat @click="generalFormSubmit">Apply Changes</v-btn>
                 <v-btn flat @click="generalFormReset">Cancel</v-btn>
               </v-card-actions>
             </v-card>
@@ -124,7 +134,7 @@ import { mapActions, mapState } from 'vuex';
 
 export default {
   computed: {
-    ...mapState('settings', ['darkMode']),
+    ...mapState('settings', ['darkMode', 'activeServer']),
     ...mapState('units', ['unitData', 'unitKeyLength', 'loadingUnits', 'cacheTimes']),
     darkModeCheckboxRules () {
       return [
@@ -154,12 +164,18 @@ export default {
       const hasDeletes = Object.values(this.dataDelete).reduce((acc, val) => acc || val.length > 0, false);
       return hasUpdates || hasDeletes;
     },
+    generalFormHasChanged () {
+      const changedDarkSetting = this.general.darkMode !== this.darkMode;
+      const changedActiveServer = this.general.activeServer !== this.activeServer;
+      return changedDarkSetting || changedActiveServer;
+    },
   },
   data () {
     return {
       general: {
         valid: false,
         darkMode: true,
+        activeServer: 'gl',
       },
       // each entry contains array of servers to re-download
       dataUpdate: {
@@ -180,21 +196,29 @@ export default {
   },
   mounted () {
     this.general.darkMode = this.darkMode;
+    this.general.activeServer = this.activeServer;
   },
   watch: {
     darkMode (newValue) {
       this.general.darkMode = newValue;
     },
+    activeServer (newValue) {
+      this.general.activeServer = newValue;
+    },
   },
   methods: {
-    ...mapActions('settings', ['setDarkMode']),
+    ...mapActions('settings', ['setDarkMode', 'setActiveServer']),
     ...mapActions('units', ['unitDataUpdate', 'unitDataDelete']),
     async generalFormSubmit () {
-      // valid only if settings are different
-      if (this.generalForm.validate()) {
+      if (this.general.darkMode !== this.darkMode) {
         await this.setDarkMode(this.general.darkMode);
-        this.generalFormReset();
       }
+
+      if (this.general.activeServer !== this.activeServer) {
+        await this.setActiveServer(this.general.activeServer);
+      }
+
+      this.generalFormReset();
     },
     generalFormReset () {
       this.generalForm.reset();
