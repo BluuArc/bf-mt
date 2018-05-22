@@ -35,9 +35,6 @@
       <v-toolbar-side-icon @click.stop="showDrawer = !showDrawer"/>
       <v-toolbar-title v-text="title"/>
       <v-spacer/>
-      <v-btn flat icon @click.stop="setDarkMode(!darkMode)">
-        <v-icon>invert_colors</v-icon>
-      </v-btn>
     </v-toolbar>
     <v-content>
       <v-slide-y-transition mode="out-in">
@@ -116,7 +113,6 @@ export default {
     };
   },
   methods: {
-    ...mapActions('settings', ['setDarkMode']),
     ...mapActions(['init']),
   },
   mounted () {
@@ -130,4 +126,19 @@ export default {
 html {
   overflow-y: auto;
 }
+
+* {
+  /* default color of v-divider */
+  --border-color-light: hsla(0, 0, 0, 0.12);
+  --border-color-dark: hsla(0, 0%, 100%, 0.12);
+}
+
+.theme--light {
+  --border-color: var(--border-color-light);
+}
+
+.theme--dark {
+  --border-color: var(--border-color-dark);
+}
+
 </style>

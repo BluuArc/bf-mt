@@ -8,6 +8,7 @@ const unitsStore = {
     'units-gl': {},
     'units-eu': {},
     'units-jp': {},
+    loadingUnits: true,
   },
   mutations: {
     setUnitData (state, {data = {}, server = 'gl'}) {
@@ -15,6 +16,9 @@ const unitsStore = {
         throw Error(`Unknown server ${server}`);
       }
       state[`units-${server}`] = data;
+    },
+    setLoadState (state, mode) {
+      state.loadingUnits = !!mode;
     },
   },
   getters: {
@@ -34,21 +38,31 @@ const unitsStore = {
         });
     },
     async setUnitData ({ commit, dispatch, state }, { data = {}, server = 'gl' }) {
-      const currentData = await dispatch('getUnitData', server);
-      console.debug('current data:', currentData, 'new data:', data);
-      await unitsDb.put({
-        server,
-        data,
-        updateTime: new Date(),
-      });
-      commit('setUnitData', data);
+      commit('setLoadState', true);
+      try {
+        const currentData = await dispatch('getUnitData', server);
+        console.debug('current data:', currentData, 'new data:', data);
+        await unitsDb.put({
+          server,
+          data,
+          updateTime: new Date(),
+        });
+        commit('setUnitData', data);
+        commit('setLoadState', false);
+      } catch (err) {
+        commit('setLoadState', false);
+        throw err;
+      }
     },
-    async unitsInit ({ commit, dispatch }) {
+    async unitsInit ({ commit, dispatch, state }) {
       const servers = ['gl', 'eu', 'jp'];
+      commit('setLoadState', true);
+
       for (const server of servers) {
         const currentData = await dispatch('getUnitData', server);
         await dispatch('setUnitData', { data: currentData.data || {}, server });
       }
+      commit('setLoadState', false);
     },
   },
 };
