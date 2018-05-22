@@ -77,8 +77,8 @@
                     <v-container fluid>
                       <v-layout row>
                         <v-flex xs12>
-                          <span v-if="Object.keys(unitData[server]).length > 0">
-                            <b>Cached:</b><br>{{ new Date().toLocaleString() }}
+                          <span v-if="unitKeyLength[server] > 0">
+                            <b>Cached:</b><br>{{ new Date(cacheTimes[server]).toLocaleString() }}
                           </span>
                           <span v-else>
                             No data cached.
@@ -125,14 +125,7 @@ import { mapActions, mapState } from 'vuex';
 export default {
   computed: {
     ...mapState('settings', ['darkMode']),
-    ...mapState('units', ['units-gl', 'units-eu', 'units-jp', 'loadingUnits']),
-    unitData () {
-      return {
-        gl: this['units-gl'],
-        eu: this['units-eu'],
-        jp: this['units-jp'],
-      };
-    },
+    ...mapState('units', ['unitData', 'unitKeyLength', 'loadingUnits', 'cacheTimes']),
     darkModeCheckboxRules () {
       return [
         v => v !== this.darkMode || 'Setting is the same as current',
@@ -188,9 +181,14 @@ export default {
   mounted () {
     this.general.darkMode = this.darkMode;
   },
+  watch: {
+    darkMode (newValue) {
+      this.general.darkMode = newValue;
+    },
+  },
   methods: {
     ...mapActions('settings', ['setDarkMode']),
-    ...mapActions('units', ['unitDataUpdate']),
+    ...mapActions('units', ['unitDataUpdate', 'unitDataDelete']),
     async generalFormSubmit () {
       // valid only if settings are different
       if (this.generalForm.validate()) {
@@ -229,7 +227,9 @@ export default {
     async dataFormSubmit () {
       for (const type of Object.keys(this.dataDelete)) {
         const servers = this.dataDelete[type];
-        if (this[`${type}DataDelete`]) {
+        if (servers.length === 0) {
+          continue;
+        } else if (this[`${type}DataDelete`]) {
           try {
             await this[`${type}DataDelete`](servers);
           } catch (err) {

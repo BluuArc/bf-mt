@@ -1,6 +1,5 @@
-import db from '../instances/dexie-instance';
-
-const { settings: settingsDb } = db;
+import dbWorker from '../instances/dexie-client';
+const settingsDb = dbWorker.setTable('settings');
 
 // user entry for dexie db
 const user = 'me';
@@ -9,10 +8,14 @@ const settingsStore = {
   namespaced: true,
   state: {
     darkMode: true,
+    activeServer: 'gl',
   },
   mutations: {
     setDarkMode (state, mode) {
       state.darkMode = !!mode;
+    },
+    setActiveServer (state, server = 'gl') {
+      state.activeServer = server;
     },
   },
   actions: {
@@ -21,6 +24,7 @@ const settingsStore = {
       const currentSettings = await dispatch('getCurrentSettings');
 
       await dispatch('setDarkMode', currentSettings.darkMode);
+      await dispatch('setActiveServer', currentSettings.activeServer);
     },
     async setDarkMode ({ commit, dispatch }, mode) {
       const data = await dispatch('getCurrentSettings');
@@ -36,9 +40,24 @@ const settingsStore = {
       );
       commit('setDarkMode', mode);
     },
+    async setActiveServer ({ commit, dispatch }, server = 'gl') {
+      if (!['gl', 'eu', 'jp'].includes(server)) {
+        throw Error(`Invalid server "${server}"`);
+      }
+
+      const data = await dispatch('getCurrentSettings');
+      console.debug('current settings:', data, 'new server:', server);
+      await settingsDb.put({
+        user,
+        data: {
+          ...data,
+          setActiveServer: server,
+        },
+      });
+      commit('setActiveServer', server);
+    },
     getCurrentSettings () {
-      return settingsDb.where({user})
-        .toArray()
+      return settingsDb.get({ user })
         .then(results => {
           return results.length === 0 ? {} : results[0].data;
         });
