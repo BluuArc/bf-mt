@@ -31,4 +31,10 @@ export const unitWorker = {
   getUnitsMini: (server, searchQuery = {}) => wrapper.worker.postMessage({ command: 'getUnitsMini', args: [server, searchQuery] }),
 };
 
+export const itemWorker = {
+  ...makeWorker('items'),
+  getById: (server, id) => wrapper.getById('items', { server }, 'data', id),
+  getItemsMini: (server, searchQuery = {}) => wrapper.worker.postMessage({ command: 'getItemsMini', args: [server, searchQuery] }),
+};
+
 export default wrapper;

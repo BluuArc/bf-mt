@@ -87,8 +87,8 @@
                     <v-container fluid>
                       <v-layout row>
                         <v-flex xs12>
-                          <span v-if="unitKeyLength[server] > 0">
-                            <b>Cached:</b><br>{{ new Date(cacheTimes[server]).toLocaleString() }}
+                          <span v-if="stateInfo[key].numEntries[server] > 0">
+                            <b>Cached:</b><br>{{ new Date(stateInfo[key].cacheTimes[server]).toLocaleString() }}
                           </span>
                           <span v-else>
                             No data cached.
@@ -135,7 +135,22 @@ import { mapActions, mapState } from 'vuex';
 export default {
   computed: {
     ...mapState('settings', ['darkMode', 'activeServer']),
-    ...mapState('units', ['unitData', 'unitKeyLength', 'loadingUnits', 'cacheTimes']),
+    ...mapState('units', {
+      unitData: 'unitData',
+      unitNumEntries: 'numEntries',
+      loadingUnits: 'loadingUnits',
+      unitCacheTimes: 'cacheTimes',
+    }),
+    stateInfo () {
+      return {
+        unit: {
+          data: this.unitData,
+          numEntries: this.unitNumEntries,
+          isLoading: this.loadingUnits,
+          cacheTimes: this.unitCacheTimes,
+        },
+      };
+    },
     darkModeCheckboxRules () {
       return [
         v => v !== this.darkMode || 'Setting is the same as current',

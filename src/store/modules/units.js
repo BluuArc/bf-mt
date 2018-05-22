@@ -6,7 +6,7 @@ const isValidServer = server => ['gl', 'eu', 'jp'].includes(server);
 const unitsStore = {
   namespaced: true,
   state: {
-    unitKeyLength: {
+    numEntries: {
       gl: 0,
       eu: 0,
       jp: 0,
@@ -27,7 +27,7 @@ const unitsStore = {
       }
       state.activeServer = server;
       state.unitData = data;
-      state.unitKeyLength[server] = Object.keys(data).length;
+      state.numEntries[server] = Object.keys(data).length;
     },
     setLoadState (state, mode) {
       state.loadingUnits = !!mode;
@@ -36,7 +36,7 @@ const unitsStore = {
       if (!isValidServer(server)) {
         throw Error(`Invalid server "${server}"`);
       }
-      state.unitKeyLength[server] = length;
+      state.numEntries[server] = length;
       state.cacheTimes[server] = updateTime;
     },
   },
