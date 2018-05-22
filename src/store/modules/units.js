@@ -12,8 +12,8 @@ const unitsStore = {
       jp: 0,
     },
     activeServer: 'gl',
-    unitData: {},
-    loadingUnits: true,
+    pageDb: {},
+    isLoading: true,
     cacheTimes: {
       gl: new Date('Jan 01 1969'),
       eu: new Date('Jan 01 1969'),
@@ -26,11 +26,11 @@ const unitsStore = {
         throw Error(`Invalid server "${server}"`);
       }
       state.activeServer = server;
-      state.unitData = data;
+      state.pageDb = data;
       state.numEntries[server] = Object.keys(data).length;
     },
     setLoadState (state, mode) {
-      state.loadingUnits = !!mode;
+      state.isLoading = !!mode;
     },
     updateStatisticsForServer (state, { length = 0, server = 'gl', updateTime = new Date() }) {
       if (!isValidServer(server)) {
@@ -41,17 +41,17 @@ const unitsStore = {
     },
   },
   getters: {
-    unitById: state => id => state.unitData[id],
+    unitById: state => id => state.pageDb[id],
   },
   actions: {
-    async getUnitData ({ state }, server = 'gl') {
+    async getMiniDb ({ state }, server = 'gl') {
       // ensure server is valid
       if (!isValidServer(server)) {
         throw Error(`Invalid server "${server}"`);
       }
-      return unitWorker.getUnitsMini(server);
+      return unitWorker.getMiniDb(server);
     },
-    async getUnitDataMini ({ state }, server = 'gl') {
+    async getDbStatistics ({ state }, server = 'gl') {
       if (!isValidServer(server)) {
         throw Error(`Invalid server "${server}"`);
       }
@@ -65,11 +65,11 @@ const unitsStore = {
       }
 
       commit('setLoadState', true);
-      const data = await dispatch('getUnitData', server);
+      const data = await dispatch('getMiniDb', server);
       commit('setActiveServer', { server, data });
       commit('setLoadState', false);
     },
-    async saveUnitData ({ commit, dispatch, state }, { data = {}, server = 'gl', updateTime = new Date() }) {
+    async saveData ({ commit, dispatch, state }, { data = {}, server = 'gl', updateTime = new Date() }) {
       await unitWorker.put({
         server,
         data,
@@ -77,17 +77,21 @@ const unitsStore = {
       });
       commit('updateStatisticsForServer', { server, updateTime, length: Object.keys(data).length });
       if (server === state.activeServer) {
+        const currentLoadState = state.isLoading;
         // update store with new data
         await dispatch('setActiveServer', server);
+        if (currentLoadState) {
+          commit('setLoadState', currentLoadState);
+        }
       }
     },
-    async unitsInit ({ commit, dispatch }) {
+    async init ({ commit, dispatch }) {
       const servers = ['gl', 'eu', 'jp'];
       commit('setLoadState', true);
 
       for (const server of servers) {
         try {
-          const currentData = await dispatch('getUnitDataMini', server);
+          const currentData = await dispatch('getDbStatistics', server);
           await commit('updateStatisticsForServer', { server, updateTime: currentData.updateTime, length: currentData.keyLength });
         } catch (err) {
           console.error(err);
@@ -96,7 +100,7 @@ const unitsStore = {
 
       commit('setLoadState', false);
     },
-    async unitDataUpdate ({ commit, dispatch }, servers = []) {
+    async updateData ({ commit, dispatch }, servers = []) {
       commit('setLoadState', true);
       const baseUrl = `${location.origin}${location.pathname}static/bf-data`;
       for (const server of servers) {
@@ -115,17 +119,19 @@ const unitsStore = {
           }
 
           await Promise.all(loadPromises);
-          await dispatch('saveUnitData', { data: unitDb, server });
+          await dispatch('saveData', { data: unitDb, server });
+          console.debug('finished updating unit data for', server);
         } catch (err) {
           console.error(server, err);
         }
       }
+      console.debug('finished updating data');
       commit('setLoadState', false);
     },
-    async unitDataDelete ({ commit, dispatch }, servers = []) {
+    async deleteData ({ commit, dispatch }, servers = []) {
       commit('setLoadState', true);
       for (const server of servers) {
-        await dispatch('saveUnitData', { data: {}, server });
+        await dispatch('saveData', { data: {}, server });
       }
       commit('setLoadState', false);
     },

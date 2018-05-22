@@ -13,7 +13,7 @@ const store = new Vuex.Store({
   actions: {
     async init ({ dispatch, state }) {
       await dispatch('settings/settingsInit');
-      await dispatch('units/unitsInit');
+      await dispatch('units/init');
 
       await dispatch('setActiveServer', state.settings.activeServer);
     },

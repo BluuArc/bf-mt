@@ -31,7 +31,7 @@ const dbWrapper = {
     .then(results => {
       return (results.length === 0) ? undefined : (results[0][field] ? results[0][field][id] : undefined);
     }),
-  getUnitsMini: (server, searchQuery = {}) => defaultGet('units', { server })
+  getMiniDbUnits: (server, searchQuery = {}) => defaultGet('units', { server })
     .then(results => {
       if (results.length === 0 || !results[0].data || Object.keys(results[0].data).length === 0) {
         return {};

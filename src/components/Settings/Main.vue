@@ -136,9 +136,9 @@ export default {
   computed: {
     ...mapState('settings', ['darkMode', 'activeServer']),
     ...mapState('units', {
-      unitData: 'unitData',
+      unitData: 'pageDb',
       unitNumEntries: 'numEntries',
-      loadingUnits: 'loadingUnits',
+      loadingUnits: 'isLoading',
       unitCacheTimes: 'cacheTimes',
     }),
     stateInfo () {
@@ -224,7 +224,10 @@ export default {
   methods: {
     ...mapActions(['setActiveServer']),
     ...mapActions('settings', ['setDarkMode']),
-    ...mapActions('units', ['unitDataUpdate', 'unitDataDelete']),
+    ...mapActions('units', {
+      unitDataUpdate: 'updateData',
+      unitDataDelete: 'deleteData',
+    }),
     async generalFormSubmit () {
       if (this.general.darkMode !== this.darkMode) {
         await this.setDarkMode(this.general.darkMode);
@@ -268,6 +271,7 @@ export default {
     async dataFormSubmit () {
       for (const type of Object.keys(this.dataDelete)) {
         const servers = this.dataDelete[type];
+        // skip empty entries
         if (servers.length === 0) {
           continue;
         } else if (this[`${type}DataDelete`]) {
@@ -283,7 +287,10 @@ export default {
 
       for (const type of Object.keys(this.dataUpdate)) {
         const servers = this.dataUpdate[type];
-        if (this[`${type}DataUpdate`]) {
+        // skip empty entries
+        if (servers.length === 0) {
+          continue;
+        } else if (this[`${type}DataUpdate`]) {
           try {
             await this[`${type}DataUpdate`](servers);
           } catch (err) {

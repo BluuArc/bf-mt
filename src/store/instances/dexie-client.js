@@ -28,7 +28,7 @@ function makeWorker (table) {
 export const unitWorker = {
   ...makeWorker('units'),
   getById: (server, id) => wrapper.getById('units', { server }, 'data', id),
-  getUnitsMini: (server, searchQuery = {}) => wrapper.worker.postMessage({ command: 'getUnitsMini', args: [server, searchQuery] }),
+  getMiniDb: (server, searchQuery = {}) => wrapper.worker.postMessage({ command: 'getMiniDbUnits', args: [server, searchQuery] }),
 };
 
 export const itemWorker = {
