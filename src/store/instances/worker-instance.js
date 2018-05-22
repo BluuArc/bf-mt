@@ -1,4 +1,4 @@
-import SWorker from 'simple-web-worker';
+import SWorker from '../../assets/sww.min';
 
 const actions = [
   {
@@ -10,7 +10,6 @@ const actions = [
         throw Error(res.statusText);
       }
     }).then(data => {
-      console.debug(url, 'has', Object.keys(data).length, 'keys');
       return data;
     }),
   },
