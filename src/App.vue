@@ -1,5 +1,5 @@
 <template>
-  <v-app :dark="isDarkMode">
+  <v-app :dark="darkMode">
     <v-navigation-drawer
       persistent
       v-model="showDrawer"
@@ -35,7 +35,7 @@
       <v-toolbar-side-icon @click.stop="showDrawer = !showDrawer"/>
       <v-toolbar-title v-text="title"/>
       <v-spacer/>
-      <v-btn flat icon @click.stop="isDarkMode = !isDarkMode">
+      <v-btn flat icon @click.stop="setDarkMode(!darkMode)">
         <v-icon>invert_colors</v-icon>
       </v-btn>
     </v-toolbar>
@@ -48,16 +48,18 @@
 </template>
 
 <script>
+import { mapActions, mapState } from 'vuex';
+
 export default {
   computed: {
     currentPage () {
       return this.$route.path;
     },
+    ...mapState('settings', ['darkMode']),
   },
   data () {
     return {
       showDrawer: true,
-      isDarkMode: false,
       menuItems: [
         {
           subheader: 'General',
@@ -112,6 +114,12 @@ export default {
       ],
       title: 'BF-MT',
     };
+  },
+  methods: {
+    ...mapActions('settings', ['setDarkMode', 'settingsInit']),
+  },
+  mounted () {
+    this.settingsInit();
   },
   name: 'App',
 };
