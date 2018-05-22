@@ -116,10 +116,11 @@ export default {
     };
   },
   methods: {
-    ...mapActions('settings', ['setDarkMode', 'settingsInit']),
+    ...mapActions('settings', ['setDarkMode']),
+    ...mapActions(['init']),
   },
   mounted () {
-    this.settingsInit();
+    this.init();
   },
   name: 'App',
 };
