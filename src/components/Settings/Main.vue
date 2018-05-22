@@ -207,7 +207,8 @@ export default {
     },
   },
   methods: {
-    ...mapActions('settings', ['setDarkMode', 'setActiveServer']),
+    ...mapActions(['setActiveServer']),
+    ...mapActions('settings', ['setDarkMode']),
     ...mapActions('units', ['unitDataUpdate', 'unitDataDelete']),
     async generalFormSubmit () {
       if (this.general.darkMode !== this.darkMode) {
@@ -223,6 +224,7 @@ export default {
     generalFormReset () {
       this.generalForm.reset();
       this.general.darkMode = this.darkMode;
+      this.general.activeServer = this.activeServer;
     },
     toggleDataUpdate (dataType, server) {
       const hasServer = this.dataUpdate[dataType].includes(server);

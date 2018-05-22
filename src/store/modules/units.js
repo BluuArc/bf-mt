@@ -1,6 +1,5 @@
-import dbWorker from '../instances/dexie-client';
+import { unitWorker } from '../instances/dexie-client';
 import downloadWorker from '../instances/download-worker';
-const unitsDb = dbWorker.setTable('units');
 
 const isValidServer = server => ['gl', 'eu', 'jp'].includes(server);
 
@@ -50,34 +49,37 @@ const unitsStore = {
       if (!isValidServer(server)) {
         throw Error(`Invalid server "${server}"`);
       }
-      return unitsDb.get({ server })
-        .then(results => {
-          return results.length === 0 ? {} : { data: results[0].data, updateTime: results[0].updateTime };
-        });
+      return unitWorker.getUnitsMini(server);
     },
     async getUnitDataMini ({ state }, server = 'gl') {
       if (!isValidServer(server)) {
         throw Error(`Invalid server "${server}"`);
       }
-      const updateTime = await unitsDb.getFieldInEntry({ server }, 'updateTime').then(date => new Date(date));
-      const keyLength = await unitsDb.getFieldKeyLength({ server }, 'data');
+      const updateTime = await unitWorker.getFieldInEntry({ server }, 'updateTime').then(date => new Date(date));
+      const keyLength = await unitWorker.getFieldKeyLength({ server }, 'data');
       return { updateTime, keyLength };
     },
-    async setActiveServer ({ commit, dispatch }, { server = 'gl' }) {
+    async setActiveServer ({ commit, dispatch }, server = 'gl') {
       if (!isValidServer(server)) {
         throw Error(`Invalid server "${server}"`);
       }
 
+      commit('setLoadState', true);
       const data = await dispatch('getUnitData', server);
-      commit('setUnitData', { server, ...data });
+      commit('setActiveServer', { server, data });
+      commit('setLoadState', false);
     },
-    async saveUnitData ({ commit, dispatch }, { data = {}, server = 'gl', updateTime = new Date() }) {
-      await unitsDb.put({
+    async saveUnitData ({ commit, dispatch, state }, { data = {}, server = 'gl', updateTime = new Date() }) {
+      await unitWorker.put({
         server,
         data,
         updateTime,
       });
       commit('updateStatisticsForServer', { server, updateTime, length: Object.keys(data).length });
+      if (server === state.activeServer) {
+        // update store with new data
+        await dispatch('setActiveServer', server);
+      }
     },
     async unitsInit ({ commit, dispatch }) {
       const servers = ['gl', 'eu', 'jp'];
@@ -91,6 +93,7 @@ const unitsStore = {
           console.error(err);
         }
       }
+
       commit('setLoadState', false);
     },
     async unitDataUpdate ({ commit, dispatch }, servers = []) {

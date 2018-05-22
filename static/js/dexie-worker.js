@@ -27,6 +27,27 @@ const dbWrapper = {
     .then(results => {
       return (results.length === 0) ? 0 : Object.keys(results[0][fieldName]).length;
     }),
+  getById: (table, query, field, id) => defaultGet(table, query)
+    .then(results => {
+      return (results.length === 0) ? undefined : (results[0][field] ? results[0][field][id] : undefined);
+    }),
+  getUnitsMini: (server, searchQuery = {}) => defaultGet('units', { server })
+    .then(results => {
+      if (results.length === 0 || !results[0].data || Object.keys(results[0].data).length === 0) {
+        return {};
+      }
+
+      const currentDb = results[0].data;
+      const resultDb = {};
+      Object.keys(currentDb)
+      .forEach(key => {
+        // TODO: search units based on search query
+        const { cost, element, gender, guide_id, id, name, rarity } = currentDb[key];
+        resultDb[key] = { cost, element, gender, guide_id, id, name, rarity };
+      });
+
+      return resultDb;
+    }),
 };
 
 registerPromiseWorker(async ({ command, args = [] }) => {

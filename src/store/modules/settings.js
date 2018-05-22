@@ -22,7 +22,7 @@ const settingsStore = {
     // load settings from cache
     async settingsInit ({ commit, dispatch }) {
       const currentSettings = await dispatch('getCurrentSettings');
-
+      console.debug(currentSettings);
       await dispatch('setDarkMode', currentSettings.darkMode);
       await dispatch('setActiveServer', currentSettings.activeServer);
     },
@@ -51,7 +51,7 @@ const settingsStore = {
         user,
         data: {
           ...data,
-          setActiveServer: server,
+          activeServer: server,
         },
       });
       commit('setActiveServer', server);
