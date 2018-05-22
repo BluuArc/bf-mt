@@ -106,7 +106,7 @@
               </v-container>
             </v-card-text>
             <v-card-actions>
-              <v-btn flat :disabled="!dataFormHasChanged">
+              <v-btn flat :disabled="!dataFormHasChanged || dataIsLoading" @click="dataFormSubmit">
                 Apply Changes
               </v-btn>
               <v-btn flat @click="dataFormReset">
@@ -149,11 +149,11 @@ export default {
     },
     dataSettingNameMapping () {
       return {
-        units: 'Units',
-        // items: 'Items',
-        // braveBursts: 'Brave Bursts',
-        // extraSkills: 'Extra Skills',
-        // leaderSkills: 'Leader Skills',
+        unit: 'Units',
+        // item: 'Items',
+        // braveBurst: 'Brave Bursts',
+        // extraSkill: 'Extra Skills',
+        // leaderSkill: 'Leader Skills',
       };
     },
     dataFormHasChanged () {
@@ -170,18 +170,18 @@ export default {
       },
       // each entry contains array of servers to re-download
       dataUpdate: {
-        units: [],
-        items: [],
-        braveBursts: [],
-        extraSkills: [],
-        leaderSkills: [],
+        unit: [],
+        item: [],
+        braveBurst: [],
+        extraSkill: [],
+        leaderSkill: [],
       },
       dataDelete: {
-        units: [],
-        items: [],
-        braveBursts: [],
-        extraSkills: [],
-        leaderSkills: [],
+        unit: [],
+        item: [],
+        braveBurst: [],
+        extraSkill: [],
+        leaderSkill: [],
       },
     };
   },
@@ -190,6 +190,7 @@ export default {
   },
   methods: {
     ...mapActions('settings', ['setDarkMode']),
+    ...mapActions('units', ['unitDataUpdate']),
     async generalFormSubmit () {
       // valid only if settings are different
       if (this.generalForm.validate()) {
@@ -224,6 +225,34 @@ export default {
           this.dataUpdate[dataType] = this.dataUpdate[dataType].filter(s => s !== server);
         }
       }
+    },
+    async dataFormSubmit () {
+      for (const type of Object.keys(this.dataDelete)) {
+        const servers = this.dataDelete[type];
+        if (this[`${type}DataDelete`]) {
+          try {
+            await this[`${type}DataDelete`](servers);
+          } catch (err) {
+            console.error(type, err);
+          }
+        } else {
+          console.warn('No delete function found for', type);
+        }
+      }
+
+      for (const type of Object.keys(this.dataUpdate)) {
+        const servers = this.dataUpdate[type];
+        if (this[`${type}DataUpdate`]) {
+          try {
+            await this[`${type}DataUpdate`](servers);
+          } catch (err) {
+            console.error(type, err);
+          }
+        } else {
+          console.warn('No update function found for', type);
+        }
+      }
+      this.dataFormReset();
     },
     dataFormReset () {
       Object.keys(this.dataUpdate)

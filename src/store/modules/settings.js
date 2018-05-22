@@ -1,4 +1,4 @@
-import db from '../dexie-instance';
+import db from '../instances/dexie-instance';
 
 const { settings: settingsDb } = db;
 

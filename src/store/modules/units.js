@@ -1,4 +1,5 @@
-import db from '../dexie-instance';
+import db from '../instances/dexie-instance';
+import worker from '../instances/worker-instance';
 
 const { units: unitsDb } = db;
 
@@ -57,6 +58,32 @@ const unitsStore = {
           await dispatch('setUnitData', { data: currentData.data || {}, server });
         } catch (err) {
           console.error(err);
+        }
+      }
+      commit('setLoadState', false);
+    },
+    async unitDataUpdate ({ commit, dispatch, state }, servers = []) {
+      commit('setLoadState', true);
+      const baseUrl = `${location.origin}${location.pathname}static/bf-data`;
+      for (const server of servers) {
+        try {
+          const unitDb = {};
+          const loadPromises = [];
+          for (let i = 1; i <= 6; ++i) {
+            loadPromises.push(worker
+              .postMessage('getJson', [`${baseUrl}/units-${server}-${i}.json`])
+              .then(tempData => {
+                Object.keys(tempData)
+                  .forEach(id => {
+                    unitDb[id] = tempData[id];
+                  });
+              }));
+          }
+
+          await Promise.all(loadPromises);
+          console.debug(server, unitDb);
+        } catch (err) {
+          console.error(server, err);
         }
       }
       commit('setLoadState', false);
