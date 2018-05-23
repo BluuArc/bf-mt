@@ -37,4 +37,10 @@ export const itemWorker = {
   getMiniDb: (server, searchQuery = {}) => wrapper.worker.postMessage({ command: 'getMiniDbItems', args: [server, searchQuery] }),
 };
 
+export const burstWorker = {
+  ...makeWorker('bursts'),
+  getById: (server, id) => wrapper.getById('bursts', { server }, 'data', id),
+  getMiniDb: (server, searchQuery = {}) => wrapper.worker.postMessage({ command: 'getMiniDbBursts', args: [server, searchQuery] }),
+};
+
 export default wrapper;

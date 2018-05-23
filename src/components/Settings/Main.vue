@@ -138,28 +138,40 @@ export default {
     ...mapState('units', {
       unitData: 'pageDb',
       unitNumEntries: 'numEntries',
-      loadingUnits: 'isLoading',
+      unitsLoading: 'isLoading',
       unitCacheTimes: 'cacheTimes',
     }),
     ...mapState('items', {
       itemData: 'pageDb',
       itemNumEntries: 'numEntries',
-      loadingItems: 'isLoading',
+      itemsLoading: 'isLoading',
       itemCacheTimes: 'cacheTimes',
+    }),
+    ...mapState('bursts', {
+      burstData: 'pageDb',
+      burstNumEntries: 'numEntries',
+      burstsLoading: 'isLoading',
+      burstCacheTimes: 'cacheTimes',
     }),
     stateInfo () {
       return {
         unit: {
           data: this.unitData,
           numEntries: this.unitNumEntries,
-          isLoading: this.loadingUnits,
+          isLoading: this.unitsLoading,
           cacheTimes: this.unitCacheTimes,
         },
         item: {
           data: this.itemData,
           numEntries: this.itemNumEntries,
-          isLoading: this.loadingItems,
+          isLoading: this.itemsLoading,
           cacheTimes: this.itemCacheTimes,
+        },
+        burst: {
+          data: this.burstData,
+          numEntries: this.burstNumEntries,
+          isLoading: this.burstsLoading,
+          cacheTimes: this.burstCacheTimes,
         },
       };
     },
@@ -181,7 +193,7 @@ export default {
       return {
         unit: 'Units',
         item: 'Items',
-        // braveBurst: 'Brave Bursts',
+        burst: 'Brave Bursts',
         // extraSkill: 'Extra Skills',
         // leaderSkill: 'Leader Skills',
       };
@@ -208,14 +220,14 @@ export default {
       dataUpdate: {
         unit: [],
         item: [],
-        braveBurst: [],
+        burst: [],
         extraSkill: [],
         leaderSkill: [],
       },
       dataDelete: {
         unit: [],
         item: [],
-        braveBurst: [],
+        burst: [],
         extraSkill: [],
         leaderSkill: [],
       },
@@ -243,6 +255,10 @@ export default {
     ...mapActions('items', {
       itemDataUpdate: 'updateData',
       itemDataDelete: 'deleteData',
+    }),
+    ...mapActions('bursts', {
+      burstDataUpdate: 'updateData',
+      burstDataDelete: 'deleteData',
     }),
     async generalFormSubmit () {
       if (this.general.darkMode !== this.darkMode) {
