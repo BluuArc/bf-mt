@@ -68,12 +68,11 @@
               v-for="key in unitsToShow"
               :key="key"
               xs12 sm6 md4>
-              <v-card>
+              <v-card :to="`/multidex/units/?unitId=${key}`">
                 <v-container fluid class="pa-1" grid-list-md>
                   <v-layout row>
                     <v-flex xs4>
                       <div class="card__media text-xs-center">
-                        <!-- <img :src="getImageUrls(key).ills_thum" class="mx-auto" style="height: 64px; width: 64px;"/> -->
                         <unit-thumbnail
                           :src="getImageUrls(key).ills_thum"
                           class="mx-auto"
@@ -82,7 +81,6 @@
                           :rarity="pageDb[key].rarity"
                           :title="pageDb[key].name"/>
                       </div>
-                      <!-- <v-card-media :src="getImageUrls(key).ills_thum" height="64px" contain/> -->
                     </v-flex>
                     <v-flex xs8>
                       {{ pageDb[key].name }}
@@ -95,16 +93,42 @@
         </v-container>
       </v-flex>
     </v-layout>
+    <v-layout row>
+      <v-dialog v-model="showUnitsDialog" fullscreen hide-overlay transition="dialog-bottom-transition">
+        <v-card>
+          <v-toolbar>
+            <v-btn icon to="/multidex/units">
+              <v-icon>close</v-icon>
+            </v-btn>
+            <v-toolbar-title>
+              Unit Info: 
+              <span v-if="pageDb[unitId]">
+                {{ pageDb[unitId].name }}
+              </span>
+              <span v-else>
+                (ID: {{ unitId }})
+              </span>
+            </v-toolbar-title>
+          </v-toolbar>
+          <v-card-text v-if="unitId">
+            <unit-info :unitId="unitId"/>
+          </v-card-text>
+        </v-card>
+      </v-dialog>
+    </v-layout>
   </v-container>
 </template>
 
 <script>
 import { mapState, mapGetters } from 'vuex';
 import LazyLoadThumbnail from '@/components/Multidex/Units/LazyLoadThumbnail';
+import UnitDialogContent from '@/components/Multidex/Units/UnitDialogContent';
 
 export default {
+  props: ['query', 'unitId'],
   components: {
     'unit-thumbnail': LazyLoadThumbnail,
+    'unit-info': UnitDialogContent,
   },
   computed: {
     ...mapState('units', ['pageDb', 'isLoading']),
@@ -129,6 +153,7 @@ export default {
         type: 'Element',
         isAscending: true,
       },
+      showUnitsDialog: false,
     };
   },
   watch: {
@@ -152,10 +177,21 @@ export default {
     pageIndex () {
       window.scrollTo(0, 0);
     },
+    isLoading (newValue) {
+      if (!newValue && this.unitId) {
+        this.showUnitsDialog = true;
+      }
+    },
+    unitId (newValue) {
+      this.showUnitsDialog = (!this.isLoading && !!newValue);
+
+      if (this.pageDb.hasOwnProperty(newValue)) {
+        document.title = `BF-MT - Units - ${this.pageDb[newValue].name}`;
+      }
+    },
   },
   methods: {
     decrementPage () {
-      console.debug(this.$vuetify.breakpoint);
       if (this.pageIndex <= 0) {
         this.pageIndex = 0;
       } else {

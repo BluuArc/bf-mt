@@ -35,6 +35,7 @@ export default new Router({
       path: '/multidex/units',
       name: 'Units',
       component: UnitsPage,
+      props: route => ({ query: route.query.q, unitId: route.query.unitId }),
     },
   ],
 });

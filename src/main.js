@@ -9,6 +9,11 @@ import 'vuetify/dist/vuetify.min.css';
 
 Vue.use(Vuetify);
 
+router.beforeEach((to, from, next) => {
+  document.title = `BF-MT - ${to.name}`;
+  next();
+});
+
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
