@@ -5,9 +5,10 @@ import UnitsModule from './modules/units';
 import ItemsModule from './modules/items';
 import BurstModule from './modules/bursts';
 import ExtraSkillModule from './modules/extra-skills';
+import LeaderSkillModule from './modules/leader-skills';
 
 Vue.use(Vuex);
-const modules = ['settings', 'units', 'items', 'bursts', 'extraSkills'];
+const modules = ['settings', 'units', 'items', 'bursts', 'extraSkills', 'leaderSkills'];
 const store = new Vuex.Store({
   modules: {
     settings: SettingsModule,
@@ -15,10 +16,12 @@ const store = new Vuex.Store({
     items: ItemsModule,
     bursts: BurstModule,
     extraSkills: ExtraSkillModule,
+    leaderSkills: LeaderSkillModule,
   },
   actions: {
     async init ({ dispatch, state }) {
       for (const m of modules) {
+        console.debug('initializing', m);
         await dispatch(`${m}/init`);
       }
 

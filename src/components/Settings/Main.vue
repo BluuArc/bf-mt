@@ -159,33 +159,24 @@ export default {
       extraSkillsLoading: 'isLoading',
       extraSkillCacheTimes: 'cacheTimes',
     }),
+    ...mapState('leaderSkills', {
+      leaderSkillData: 'pageDb',
+      leaderSkillNumEntries: 'numEntries',
+      leaderSkillsLoading: 'isLoading',
+      leaderSkillCacheTimes: 'cacheTimes',
+    }),
     stateInfo () {
-      return {
-        unit: {
-          data: this.unitData,
-          numEntries: this.unitNumEntries,
-          isLoading: this.unitsLoading,
-          cacheTimes: this.unitCacheTimes,
-        },
-        item: {
-          data: this.itemData,
-          numEntries: this.itemNumEntries,
-          isLoading: this.itemsLoading,
-          cacheTimes: this.itemCacheTimes,
-        },
-        burst: {
-          data: this.burstData,
-          numEntries: this.burstNumEntries,
-          isLoading: this.burstsLoading,
-          cacheTimes: this.burstCacheTimes,
-        },
-        extraSkill: {
-          data: this.extraSkillData,
-          numEntries: this.extraSkillNumEntries,
-          isLoading: this.extraSkillsLoading,
-          cacheTimes: this.extraSkillCacheTimes,
-        },
-      };
+      const info = {};
+      Object.keys(this.dataSettingNameMapping)
+        .forEach(type => {
+          info[type] = {
+            data: this[`${type}Data`],
+            numEntries: this[`${type}NumEntries`],
+            isLoading: this[`${type}sLoading`],
+            cacheTimes: this[`${type}CacheTimes`],
+          };
+        });
+      return info;
     },
     darkModeCheckboxRules () {
       return [
@@ -207,7 +198,7 @@ export default {
         item: 'Items',
         burst: 'Brave Bursts',
         extraSkill: 'Extra Skills',
-        // leaderSkill: 'Leader Skills',
+        leaderSkill: 'Leader Skills',
       };
     },
     dataFormHasChanged () {
@@ -275,6 +266,10 @@ export default {
     ...mapActions('extraSkills', {
       extraSkillDataUpdate: 'updateData',
       extraSkillDataDelete: 'deleteData',
+    }),
+    ...mapActions('leaderSkills', {
+      leaderSkillDataUpdate: 'updateData',
+      leaderSkillDataDelete: 'deleteData',
     }),
     async generalFormSubmit () {
       if (this.general.darkMode !== this.darkMode) {

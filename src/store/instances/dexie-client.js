@@ -49,4 +49,10 @@ export const extraSkillWorker = {
   getMiniDb: (server, searchQuery = {}) => wrapper.worker.postMessage({ command: 'getMiniDbExtraSkills', args: [server, searchQuery] }),
 };
 
+export const leaderSkillWorker = {
+  ...makeWorker('leaderSkills'),
+  getById: (server, id) => wrapper.getById('leaderSkills', { server }, 'data', id),
+  getMiniDb: (server, searchQuery = {}) => wrapper.worker.postMessage({ command: 'getMiniDbLeaderSkills', args: [server, searchQuery] }),
+};
+
 export default wrapper;
