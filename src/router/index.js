@@ -5,6 +5,8 @@ import NewsPage from '@/components/News/Main';
 import SettingsPage from '@/components/Settings/Main';
 import MultidexPage from '@/components/Multidex/Main';
 
+import UnitsPage from '@/components/Multidex/Units/Main';
+
 Vue.use(Router);
 
 export default new Router({
@@ -26,8 +28,13 @@ export default new Router({
     },
     {
       path: '/multidex',
-      name: 'Mulidex - Overview',
+      name: 'Multidex Overview',
       component: MultidexPage,
+    },
+    {
+      path: '/multidex/units',
+      name: 'Units',
+      component: UnitsPage,
     },
   ],
 });
