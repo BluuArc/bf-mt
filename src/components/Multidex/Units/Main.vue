@@ -77,21 +77,27 @@
     <v-layout row>
       <v-dialog v-model="showUnitsDialog" fullscreen hide-overlay transition="dialog-bottom-transition">
         <v-card>
-          <v-toolbar>
+          <v-toolbar fixed>
             <v-btn icon to="/multidex/units">
               <v-icon>close</v-icon>
             </v-btn>
             <v-toolbar-title>
-              Unit Info: 
-              <span v-if="pageDb[unitId]">
-                {{ pageDb[unitId].name }}
-              </span>
-              <span v-else-if="unitId">
-                (ID: {{ unitId }})
+              <img
+                v-if="unitId"
+                :src="getImageUrls(unitId).ills_battle"
+                align="top"
+                height="32px"/>
+              <span style="margin-top: auto; margin-bottom: auto;" class="pl-2">
+                <span v-if="pageDb[unitId]">
+                  {{ pageDb[unitId].guide_id }}: {{ pageDb[unitId].name }}
+                </span>
+                <span v-else-if="unitId">
+                  (ID: {{ unitId }})
+                </span>
               </span>
             </v-toolbar-title>
           </v-toolbar>
-          <v-card-text v-if="unitId">
+          <v-card-text v-if="unitId" class="pl-0 pr-0 pt-5">
             <unit-info :unitId="unitId"/>
           </v-card-text>
         </v-card>
@@ -101,7 +107,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
+import { mapState, mapActions, mapGetters } from 'vuex';
 import UnitCard from '@/components/Multidex/Units/UnitCard';
 import UnitDialogContent from '@/components/Multidex/Units/UnitDialogContent';
 import debounce from 'lodash/debounce';
@@ -114,6 +120,7 @@ export default {
   },
   computed: {
     ...mapState('units', ['pageDb', 'isLoading']),
+    ...mapGetters('units', ['getImageUrls']),
     allSortedUnits () {
       return this.filteredKeys;
     },

@@ -109,6 +109,13 @@ export const createActions = (worker) => {
       }
       commit('setLoadState', false);
     },
+    getById ({ dispatch, state }, id) {
+      if (!state.pageDb.hasOwnProperty(id)) {
+        return undefined;
+      }
+
+      return worker.getById(state.activeServer, id);
+    },
   };
 };
 
