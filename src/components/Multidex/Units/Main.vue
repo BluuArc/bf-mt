@@ -7,10 +7,13 @@
       </v-flex>
     </v-layout>
     <v-layout row wrap v-else>
-      <v-flex xs12>
+      <v-flex class="pl-3 pr-3" xs12>
         <v-text-field v-model="searchText" label="Search"/>
       </v-flex>
-      <v-flex xs12 class="text-xs-right">
+      <v-flex xs6 class="pl-3">
+        Showing {{ allSortedUnits.length }} Units
+      </v-flex>
+      <v-flex xs6 class="text-xs-right pr-3">
         <v-menu offset-y :close-on-content-click="false">
           <div slot="activator">
             <span>Page {{ pageIndex + 1 }} of {{ numPages }}</span>
@@ -65,7 +68,28 @@
               v-for="key in unitsToShow"
               :key="key"
               xs12 sm6 md4>
-              {{ pageDb[key].name }}
+              <v-card>
+                <v-container fluid class="pa-1" grid-list-md>
+                  <v-layout row>
+                    <v-flex xs4>
+                      <div class="card__media text-xs-center">
+                        <!-- <img :src="getImageUrls(key).ills_thum" class="mx-auto" style="height: 64px; width: 64px;"/> -->
+                        <unit-thumbnail
+                          :src="getImageUrls(key).ills_thum"
+                          class="mx-auto"
+                          style="height: 64px; width: 64px;"
+                          imgStyle="height: 64px; width: 64px;"
+                          :rarity="pageDb[key].rarity"
+                          :title="pageDb[key].name"/>
+                      </div>
+                      <!-- <v-card-media :src="getImageUrls(key).ills_thum" height="64px" contain/> -->
+                    </v-flex>
+                    <v-flex xs8>
+                      {{ pageDb[key].name }}
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-card>
             </v-flex>
           </v-layout>
         </v-container>
@@ -75,10 +99,16 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapGetters } from 'vuex';
+import LazyLoadThumbnail from '@/components/Multidex/Units/LazyLoadThumbnail';
+
 export default {
+  components: {
+    'unit-thumbnail': LazyLoadThumbnail,
+  },
   computed: {
     ...mapState('units', ['pageDb', 'isLoading']),
+    ...mapGetters('units', ['getImageUrls']),
     allSortedUnits () {
       return Object.keys(this.pageDb);
     },
@@ -95,6 +125,10 @@ export default {
       searchText: '',
       pageIndex: 0,
       amountPerPage: 27,
+      sortOptions: {
+        type: 'Element',
+        isAscending: true,
+      },
     };
   },
   watch: {

@@ -12,6 +12,22 @@ const unitsStore = {
   },
   getters: {
     unitById: state => id => state.pageDb[id],
+    getImageUrls: state => id => {
+      const cdnUrls = {
+        eu: 'http://static-bravefrontier.gumi-europe.net/content',
+        gl: 'http://dlc.bfglobal.gumi.sg/content',
+        jp: 'http://cdn.android.brave.a-lim.jp',
+      };
+
+      const baseUrl = `${cdnUrls[state.activeServer]}/unit/img`;
+
+      return {
+        ills_full: `${baseUrl}/unit_ills_full_${id}.png`,
+        ills_thum: `${baseUrl}/unit_ills_thum_${id}.png`,
+        anime: `${baseUrl}/unit_thum_${id}.png`,
+        ills_battle: `${baseUrl}/unit_ills_battle_${id}.png`,
+      };
+    },
   },
   actions: {
     ...createActions(unitWorker),
