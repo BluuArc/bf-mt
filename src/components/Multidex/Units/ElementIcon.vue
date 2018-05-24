@@ -36,6 +36,6 @@ export default {
 }
 
 .icon.bf.element img {
-  margin-top: -0.75em;
+  margin-top: -0.70em;
 }
 </style>
