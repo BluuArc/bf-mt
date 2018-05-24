@@ -18,22 +18,122 @@
           <v-icon v-if="tab.icon">{{ tab.icon }}</v-icon>
         </v-btn>
       </v-bottom-nav>
-      <v-container v-if="activeTab === 'general'">
+      <v-container v-if="activeTab === 'general'" grid-list-lg>
         <v-layout row wrap>
-          stats table
+          <v-flex xs12 sm6 md3>
+            <v-card raised style="border: 2px solid teal; margin: -2px;">
+              <v-card-title class="teal">
+                Miscellaneous Info
+              </v-card-title>
+              <v-card-text>
+                <v-list>
+                  <v-list-tile>
+                    <v-list-tile-content>
+                      <span><b>Element:</b> <span class="capitalize">{{ unit.element }}</span></span>
+                    </v-list-tile-content>
+                  </v-list-tile>
+                  <v-list-tile>
+                    <v-list-tile-content>
+                      <span><b>Gender:</b> <span class="capitalize">{{ unit.gender }}</span></span>
+                    </v-list-tile-content>
+                  </v-list-tile>
+                  <v-list-tile>
+                    <v-list-tile-content>
+                      <span><b>Cost:</b> {{ unit.cost }}</span>
+                    </v-list-tile-content>
+                  </v-list-tile>
+                  <v-list-tile>
+                    <v-list-tile-content>
+                      <span><b>Guide ID:</b> {{ unit.guide_id }}</span>
+                    </v-list-tile-content>
+                  </v-list-tile>
+                  <v-list-tile>
+                    <v-list-tile-content>
+                      <span><b>Unit ID:</b> {{ unit.id }}</span>
+                    </v-list-tile-content>
+                  </v-list-tile>
+                  <v-list-tile>
+                    <v-list-tile-content>
+                      <span><b>Rarity:</b> {{ (unit.rarity !== 8) ? `${unit.rarity} Stars` : 'Omni' }}</span>
+                    </v-list-tile-content>
+                  </v-list-tile>
+                </v-list>
+              </v-card-text>
+            </v-card>
+          </v-flex>
+          <v-flex xs12 sm6 md9>
+            <v-card color="blue-grey darken-3">
+              {{ unit.stats }}
+              {{ unit.imp }}
+            </v-card>
+          </v-flex>
+          <v-flex xs12>
+            <v-card color="purple">
+              {{ unit.prev }} to {{ unit.next }}
+            </v-card>
+          </v-flex>
         </v-layout>
         <v-layout row wrap>
           <v-flex xs12 sm6>
-            movement info table
+            <v-card color="light-green">
+              {{ unit.movement }}
+            </v-card>
           </v-flex>
           <v-flex xs12 sm6>
-            arena info
+            <v-card color="amber darken-3">
+              {{ unit.ai }}
+            </v-card>
           </v-flex>
         </v-layout>
       </v-container>
-      <v-container v-if="activeTab === 'skills'">
+      <v-container v-if="activeTab === 'skills'" grid-list-lg>
         <v-layout row wrap>
-          {{ unit }}
+          <v-flex xs12>
+            <v-card color="black">
+              LS
+              {{ unit['leader skill'] }}
+            </v-card>
+          </v-flex>
+        </v-layout>
+        <v-layout row wrap>
+          <v-flex xs12>
+            <v-card color="orange darken-4">
+              ES
+              {{ unit['extra skill'] }}
+            </v-card>
+          </v-flex>
+        </v-layout>
+        <v-layout row wrap>
+          <v-flex xs12>
+            <v-card color="blue-grey">
+              BB
+              {{ unit.bb }}
+            </v-card>
+          </v-flex>
+        </v-layout>
+        <v-layout row wrap>
+          <v-flex xs12>
+            <v-card color="yellow darken-3">
+              SBB
+              {{ unit.sbb }}
+            </v-card>
+          </v-flex>
+        </v-layout>
+        <v-layout row wrap>
+          <v-flex xs12>
+            <v-card color="red darken-3">
+              UBB
+              {{ unit.ubb }}
+            </v-card>
+          </v-flex>
+        </v-layout>
+        <v-layout row wrap>
+          <v-flex xs12>
+            <v-card color="green darken-3">
+              SP
+              {{ unit.feskills }}
+            </v-card>
+          </v-flex>
         </v-layout>
       </v-container>
       <v-container fluid v-if="activeTab === 'art'" class="text-xs-center">
@@ -117,5 +217,9 @@ export default {
 .unit-image {
   max-width: 100%;
   height: auto;
+}
+
+.capitalize {
+  text-transform: capitalize;
 }
 </style>
