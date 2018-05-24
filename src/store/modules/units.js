@@ -61,6 +61,20 @@ const unitsStore = {
       console.debug('finished updating data');
       commit('setLoadState', false);
     },
+    async getFilteredKeys ({ dispatch, state }, filters = {}) {
+      // TODO: add call for advanced filtering using dexie-client worker
+      console.debug(filters);
+      const keys = Object.keys(state.pageDb);
+      if (Object.keys(filters).length === 0) {
+        return keys;
+      }
+
+      return keys.filter(key => {
+        const entry = state.pageDb[key];
+        const fitsName = (!filters.name ? true : entry.name.toLowerCase().includes(filters.name.toLowerCase()));
+        return fitsName;
+      });
+    },
   },
 };
 

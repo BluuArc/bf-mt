@@ -8,7 +8,7 @@
     </v-layout>
     <v-layout row wrap v-else>
       <v-flex class="pl-3 pr-3" xs12>
-        <v-text-field v-model="searchText" label="Search"/>
+        <v-text-field v-model="filterOptions.name" label="Search"/>
       </v-flex>
       <v-flex xs6 class="pl-3">
         Showing {{ allSortedUnits.length }} Units
@@ -101,9 +101,10 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 import UnitCard from '@/components/Multidex/Units/UnitCard';
 import UnitDialogContent from '@/components/Multidex/Units/UnitDialogContent';
+import debounce from 'lodash/debounce';
 
 export default {
   props: ['query', 'unitId'],
@@ -114,7 +115,7 @@ export default {
   computed: {
     ...mapState('units', ['pageDb', 'isLoading']),
     allSortedUnits () {
-      return Object.keys(this.pageDb);
+      return this.filteredKeys;
     },
     numPages () {
       return Math.ceil(this.allSortedUnits.length / this.amountPerPage);
@@ -126,22 +127,23 @@ export default {
   },
   data () {
     return {
-      searchText: '',
       pageIndex: 0,
       amountPerPage: 27,
       sortOptions: {
         type: 'Element',
         isAscending: true,
       },
+      filterOptions: {
+        name: '',
+      },
       showUnitsDialog: false,
+      filteredKeys: [],
     };
   },
   watch: {
-    allSortedUnits () {
+    pageDb () {
       this.pageIndex = 0;
-    },
-    searchText () {
-      this.pageIndex = 0;
+      this.applyFilters();
     },
     amountPerPage (newValue) {
       this.pageIndex = 0;
@@ -161,6 +163,10 @@ export default {
       if (!newValue && this.unitId) {
         this.showUnitsDialog = true;
       }
+
+      if (!newValue) {
+        this.applyFilters();
+      }
     },
     unitId (newValue) {
       this.showUnitsDialog = (!this.isLoading && !!newValue);
@@ -169,8 +175,21 @@ export default {
         document.title = `BF-MT - Units - ${this.pageDb[newValue].name}`;
       }
     },
+    filterOptions: {
+      deep: true,
+      handler () {
+        this.pageIndex = 0;
+        this.applyFilters();
+      },
+    },
+  },
+  mounted () {
+    if (Object.keys(this.pageDb).length > 0) {
+      this.applyFilters();
+    }
   },
   methods: {
+    ...mapActions('units', ['getFilteredKeys']),
     decrementPage () {
       if (this.pageIndex <= 0) {
         this.pageIndex = 0;
@@ -185,6 +204,12 @@ export default {
         this.pageIndex += 1;
       }
     },
+    applyFilters: debounce(async function () {
+      if (Object.keys(this.pageDb).length === 0) {
+        return [];
+      }
+      this.filteredKeys = await this.getFilteredKeys(this.filterOptions);
+    }, 250),
   },
 };
 </script>
