@@ -153,6 +153,12 @@ export default {
       burstsLoading: 'isLoading',
       burstCacheTimes: 'cacheTimes',
     }),
+    ...mapState('extraSkills', {
+      extraSkillData: 'pageDb',
+      extraSkillNumEntries: 'numEntries',
+      extraSkillsLoading: 'isLoading',
+      extraSkillCacheTimes: 'cacheTimes',
+    }),
     stateInfo () {
       return {
         unit: {
@@ -172,6 +178,12 @@ export default {
           numEntries: this.burstNumEntries,
           isLoading: this.burstsLoading,
           cacheTimes: this.burstCacheTimes,
+        },
+        extraSkill: {
+          data: this.extraSkillData,
+          numEntries: this.extraSkillNumEntries,
+          isLoading: this.extraSkillsLoading,
+          cacheTimes: this.extraSkillCacheTimes,
         },
       };
     },
@@ -194,7 +206,7 @@ export default {
         unit: 'Units',
         item: 'Items',
         burst: 'Brave Bursts',
-        // extraSkill: 'Extra Skills',
+        extraSkill: 'Extra Skills',
         // leaderSkill: 'Leader Skills',
       };
     },
@@ -259,6 +271,10 @@ export default {
     ...mapActions('bursts', {
       burstDataUpdate: 'updateData',
       burstDataDelete: 'deleteData',
+    }),
+    ...mapActions('extraSkills', {
+      extraSkillDataUpdate: 'updateData',
+      extraSkillDataDelete: 'deleteData',
     }),
     async generalFormSubmit () {
       if (this.general.darkMode !== this.darkMode) {

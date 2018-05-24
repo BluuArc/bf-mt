@@ -4,30 +4,30 @@ import SettingsModule from './modules/settings';
 import UnitsModule from './modules/units';
 import ItemsModule from './modules/items';
 import BurstModule from './modules/bursts';
+import ExtraSkillModule from './modules/extra-skills';
 
 Vue.use(Vuex);
-
+const modules = ['settings', 'units', 'items', 'bursts', 'extraSkills'];
 const store = new Vuex.Store({
   modules: {
     settings: SettingsModule,
     units: UnitsModule,
     items: ItemsModule,
     bursts: BurstModule,
+    extraSkills: ExtraSkillModule,
   },
   actions: {
     async init ({ dispatch, state }) {
-      await dispatch('settings/settingsInit');
-      await dispatch('units/init');
-      await dispatch('items/init');
-      await dispatch('bursts/init');
+      for (const m of modules) {
+        await dispatch(`${m}/init`);
+      }
 
       await dispatch('setActiveServer', state.settings.activeServer);
     },
     async setActiveServer ({ dispatch }, server = 'gl') {
-      await dispatch('settings/setActiveServer', server);
-      await dispatch('units/setActiveServer', server);
-      await dispatch('items/setActiveServer', server);
-      await dispatch('bursts/setActiveServer', server);
+      for (const m of modules) {
+        await dispatch(`${m}/setActiveServer`, server);
+      }
     },
   },
   strict: true,

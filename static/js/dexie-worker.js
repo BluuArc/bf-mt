@@ -9,7 +9,7 @@ db.version(1).stores({
   units: defaultSchema,
   items: defaultSchema,
   bursts: defaultSchema,
-  extraSkiils: defaultSchema,
+  extraSkills: defaultSchema,
   leaderSkills: defaultSchema,
   settings: '&user,data',
 });
@@ -79,6 +79,24 @@ const dbWrapper = {
         // TODO: find a way to get buff lists/icons? (maybe not?)
         const { desc, id, name, associated_units } = currentDb[key];
         resultDb[key] = { desc, id, name, associated_units };
+      });
+
+      return resultDb;
+    }),
+  getMiniDbExtraSkills: (server, searchQuery = {}) => defaultGet('extraSkills', { server })
+    .then(results => {
+      if (results.length === 0 || !results[0].data || Object.keys(results[0].data).length === 0) {
+        return {};
+      }
+
+      const currentDb = results[0].data;
+      const resultDb = {};
+      Object.keys(currentDb)
+      .forEach(key => {
+        // TODO: search units based on search query
+        // TODO: find a way to get buff lists/icons? (maybe not?)
+        const { desc, id, name, associated_units, rarity } = currentDb[key];
+        resultDb[key] = { desc, id, name, associated_units, rarity };
       });
 
       return resultDb;

@@ -20,7 +20,7 @@ const settingsStore = {
   },
   actions: {
     // load settings from cache
-    async settingsInit ({ commit, dispatch }) {
+    async init ({ commit, dispatch }) {
       const currentSettings = await dispatch('getCurrentSettings');
       console.debug(currentSettings);
       await dispatch('setDarkMode', currentSettings.darkMode);
