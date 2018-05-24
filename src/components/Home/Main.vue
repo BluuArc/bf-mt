@@ -13,6 +13,7 @@
               <li>Offer tools to help users build squads</li>
               <li>Deliver data in a timely manner</li>
             </ul>
+            <p><b>Disclaimer:</b> This is an unofficial application and is not associated with Gumi/Alim.</p>
           </v-card-text>
         </v-card>
       </v-flex>

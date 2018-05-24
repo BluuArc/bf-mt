@@ -154,7 +154,7 @@ export default {
           ],
         },
       ],
-      title: 'Brave Frontier - Multi Tool',
+      title: 'Brave Frontier Multi Tool',
       pageActiveServer: '',
     };
   },
