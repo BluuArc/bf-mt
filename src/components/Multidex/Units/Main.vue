@@ -68,26 +68,7 @@
               v-for="key in unitsToShow"
               :key="key"
               xs12 sm6 md4>
-              <v-card :to="`/multidex/units/?unitId=${key}`">
-                <v-container fluid class="pa-1" grid-list-md>
-                  <v-layout row>
-                    <v-flex xs4>
-                      <div class="card__media text-xs-center">
-                        <unit-thumbnail
-                          :src="getImageUrls(key).ills_thum"
-                          class="mx-auto"
-                          style="height: 64px; width: 64px;"
-                          imgStyle="height: 64px; width: 64px;"
-                          :rarity="pageDb[key].rarity"
-                          :title="pageDb[key].name"/>
-                      </div>
-                    </v-flex>
-                    <v-flex xs8>
-                      {{ pageDb[key].name }}
-                    </v-flex>
-                  </v-layout>
-                </v-container>
-              </v-card>
+              <unit-card :to="`/multidex/units/?unitId=${key}`" :unit="pageDb[key]"/>
             </v-flex>
           </v-layout>
         </v-container>
@@ -105,7 +86,7 @@
               <span v-if="pageDb[unitId]">
                 {{ pageDb[unitId].name }}
               </span>
-              <span v-else>
+              <span v-else-if="unitId">
                 (ID: {{ unitId }})
               </span>
             </v-toolbar-title>
@@ -120,19 +101,18 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex';
-import LazyLoadThumbnail from '@/components/Multidex/Units/LazyLoadThumbnail';
+import { mapState } from 'vuex';
+import UnitCard from '@/components/Multidex/Units/UnitCard';
 import UnitDialogContent from '@/components/Multidex/Units/UnitDialogContent';
 
 export default {
   props: ['query', 'unitId'],
   components: {
-    'unit-thumbnail': LazyLoadThumbnail,
     'unit-info': UnitDialogContent,
+    'unit-card': UnitCard,
   },
   computed: {
     ...mapState('units', ['pageDb', 'isLoading']),
-    ...mapGetters('units', ['getImageUrls']),
     allSortedUnits () {
       return Object.keys(this.pageDb);
     },
