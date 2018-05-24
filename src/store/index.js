@@ -19,15 +19,26 @@ const store = new Vuex.Store({
     leaderSkills: LeaderSkillModule,
   },
   actions: {
-    async init ({ dispatch, state }) {
+    async init ({ dispatch, state, commit }) {
+      for (const m of modules.slice(1)) {
+        commit(`${m}/setLoadState`, true);
+      }
+
       for (const m of modules) {
         console.debug('initializing', m);
         await dispatch(`${m}/init`);
+        if (m !== 'settings') {
+          commit(`${m}/setLoadState`, true);
+        }
       }
 
       await dispatch('setActiveServer', state.settings.activeServer);
     },
-    async setActiveServer ({ dispatch }, server = 'gl') {
+    async setActiveServer ({ dispatch, commit }, server = 'gl') {
+      for (const m of modules.slice(1)) {
+        commit(`${m}/setLoadState`, true);
+      }
+
       for (const m of modules) {
         await dispatch(`${m}/setActiveServer`, server);
       }

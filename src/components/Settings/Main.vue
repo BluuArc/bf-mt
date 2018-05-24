@@ -34,11 +34,11 @@
             <v-card-title>
               <h3 class="title">Data Settings</h3>
             </v-card-title>
-            <v-card-text v-if="dataIsLoading" class="text-xs-center">
+            <!-- <v-card-text v-if="dataIsLoading" class="text-xs-center">
               <v-progress-circular indeterminate/>
               <h4 class="subheading">Waiting for data to finish loading.</h4>
-            </v-card-text>
-            <v-card-text v-else class="pt-5">
+            </v-card-text> -->
+            <v-card-text class="pt-5">
               <v-container fluid class="pa-0">
                 <v-layout row>
                   <v-flex
@@ -62,7 +62,7 @@
                       <v-layout row>
                         <v-flex xs12 v-text="value"/>
                       </v-layout>
-                      <v-layout row wrap>
+                      <v-layout row wrap v-show="!stateInfo[key].isLoading">
                         <v-flex xs12 sm6>
                           <v-btn
                             block
@@ -81,6 +81,7 @@
                     </v-container>
                   </v-flex>
                   <v-flex
+                    v-show="!stateInfo[key].isLoading"
                     xs3 class="text-xs-center pa-0"
                     v-for="server in servers"
                     :key="`${key}-${server}`">
@@ -108,6 +109,12 @@
                         </v-flex>
                       </v-layout>
                     </v-container>
+                  </v-flex>
+                  <v-flex
+                    v-show="stateInfo[key].isLoading"
+                    xs9 class="text-xs-center pa-0">
+                    <v-progress-circular indeterminate/>
+                    <h4 class="subheading">Waiting for data to finish loading.</h4>
                   </v-flex>
                   <v-flex xs12>
                     <v-divider/>
