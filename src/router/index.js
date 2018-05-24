@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import HomePage from '@/components/Home/Main';
 import NewsPage from '@/components/News/Main';
 import SettingsPage from '@/components/Settings/Main';
+import MultidexPage from '@/components/Multidex/Main';
 
 Vue.use(Router);
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/settings',
       name: 'Settings',
       component: SettingsPage,
+    },
+    {
+      path: '/multidex',
+      name: 'Mulidex - Overview',
+      component: MultidexPage,
     },
   ],
 });
