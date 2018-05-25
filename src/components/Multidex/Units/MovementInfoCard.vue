@@ -4,11 +4,16 @@
       <h3 class="title">Movement Info</h3>
     </v-card-title>
     <v-card-text class="pt-0">
-      <v-tabs>
-        <v-tab :key="0">
+      <v-tabs v-model="activeTab">
+        <v-tab key="general">
           General
         </v-tab>
-        <v-tab-item :key="0">
+        <v-tab key="table">
+          Hitcount Table
+        </v-tab>
+      </v-tabs>
+      <v-tabs-items v-model="activeTab">
+        <v-tab-item key="general">
           <v-container fluid>
             <v-layout row>
               <v-flex xs4 class="text-xs-center"><b>Attack Type</b></v-flex>
@@ -37,13 +42,10 @@
             </v-layout>
           </v-container>
         </v-tab-item>
-        <v-tab :key="1">
-          Hitcount Table
-        </v-tab>
-        <v-tab-item :key="1">
+        <v-tab-item key="table">
           <hit-count-table :attack="unit['damage frames']"/>
         </v-tab-item>
-      </v-tabs>
+      </v-tabs-items>
     </v-card-text>
   </v-card>
 </template>
@@ -84,7 +86,7 @@ export default {
   },
   data () {
     return {
-      activeTab: 0,
+      activeTab: '',
     };
   },
   methods: {

@@ -120,12 +120,10 @@
         </v-layout>
         <v-layout row wrap>
           <v-flex xs12 sm6>
-            <movement-info-card :unit="unit"/>
+            <movement-info-card :unit="unit" style="border-color: var(--movement-card-color);"/>
           </v-flex>
           <v-flex xs12 sm6>
-            <v-card color="amber darken-3">
-              {{ unit.ai }}
-            </v-card>
+            <arena-card :unit="unit" style="border-color: var(--arena-card-color)"/>
           </v-flex>
         </v-layout>
       </v-container>
@@ -193,12 +191,14 @@
 import { mapActions, mapGetters, mapState } from 'vuex';
 import StatCard from '@/components/Multidex/Units/StatCard';
 import MovementInfoCard from '@/components/Multidex/Units/MovementInfoCard';
+import ArenaCard from '@/components/Multidex/Units/ArenaCard';
 
 export default {
   props: ['unitId'],
   components: {
     'stat-card': StatCard,
     'movement-info-card': MovementInfoCard,
+    'arena-card': ArenaCard,
   },
   computed: {
     ...mapGetters('units', {
@@ -306,11 +306,12 @@ export default {
 .unit-dialog-tab .card {
   border: 2px solid transparent;
   margin: -2px;
-  --stat-card-color: #546E7A /* blue-grey darken-1 */
+  --stat-card-color: #546E7A; /* blue-grey darken-1 */
+  --movement-card-color: #8BC34A; /* light-green */
+  --arena-card-color: #ff8f00; /* amber darken-3 */
 }
 
 .unit-dialog-tab table.table thead th {
-  /* padding-top: 0; */
   padding-bottom: 0;
 }
 
