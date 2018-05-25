@@ -1,6 +1,6 @@
 <template>
   <v-card flat>
-    <v-card-text v-if="loadingUnitData" class="text-xs-center">
+    <v-card-text v-if="loadingUnitData" class="text-xs-center pt-5">
       <v-progress-circular indeterminate/>
       <h4 class="subheading">Loading unit data</h4>
     </v-card-text>
@@ -18,15 +18,20 @@
           <v-icon v-if="tab.icon">{{ tab.icon }}</v-icon>
         </v-btn>
       </v-bottom-nav>
-      <v-container v-if="activeTab === 'general'" grid-list-lg>
+      <v-container class="unit-dialog-tab" v-if="activeTab === 'general'" grid-list-lg>
         <v-layout row wrap>
           <v-flex xs12 sm6 md3>
-            <v-card raised style="border: 2px solid teal; margin: -2px;">
+            <v-card raised style="border-color: teal; height: 100%;">
               <v-card-title class="teal">
                 Miscellaneous Info
               </v-card-title>
               <v-card-text>
                 <v-list>
+                  <v-list-tile v-if="$vuetify.breakpoint.xsOnly">
+                    <v-list-tile-content>
+                      <span><b>Full Name:</b> <span class="capitalize">{{ unit.name }}</span></span>
+                    </v-list-tile-content>
+                  </v-list-tile>
                   <v-list-tile>
                     <v-list-tile-content>
                       <span><b>Element:</b> <span class="capitalize">{{ unit.element }}</span></span>
@@ -62,9 +67,24 @@
             </v-card>
           </v-flex>
           <v-flex xs12 sm6 md9>
-            <v-card color="blue-grey darken-3">
-              {{ unit.stats }}
-              {{ unit.imp }}
+            <v-card style="border-color: var(--stat-card-color)">
+              <v-card-title class="blue-grey darken-1">
+                Stats
+              </v-card-title>
+              <v-card-text class="pt-0">
+                <v-data-table
+                  :headers="statTableData.headers"
+                  :items="statTableData.items"
+                  hide-actions>
+                  <template slot="items" slot-scope="props">
+                    <tr>
+                      <template v-for="col in ['name', 'hp', 'atk', 'def', 'rec']">
+                        <td :key="col" class=" pt-0 pb-0 text-xs-center">{{ props.item[col] }}</td>
+                      </template>
+                    </tr>
+                  </template>
+                </v-data-table>
+              </v-card-text>
             </v-card>
           </v-flex>
           <v-flex xs12>
@@ -86,7 +106,7 @@
           </v-flex>
         </v-layout>
       </v-container>
-      <v-container v-if="activeTab === 'skills'" grid-list-lg>
+      <v-container class="unit-dialog-tab" v-if="activeTab === 'skills'" grid-list-lg>
         <v-layout row wrap>
           <v-flex xs12>
             <v-card color="black">
@@ -136,7 +156,7 @@
           </v-flex>
         </v-layout>
       </v-container>
-      <v-container fluid v-if="activeTab === 'art'" class="text-xs-center">
+      <v-container fluid v-if="activeTab === 'art'" class="text-xs-center unit-dialog-tab">
         <img class="unit-image" :src="images.ills_full"/>
         <div v-show="alternateImageLoaded">
           <img class="unit-image" :src="alternateImages.ills_full" @load="alternateImageLoaded = true"/>
@@ -168,6 +188,41 @@ export default {
         { text: 'Skill Set', value: 'skills', icon: 'category' },
         { text: 'Art', value: 'art', icon: 'insert_photo' },
       ];
+    },
+    statTableData () {
+      if (!this.unit) {
+        return {};
+      }
+
+      const stats = ['hp', 'atk', 'def', 'rec'];
+      const types = ['Anima', 'Breaker', 'Guardian', 'Oracle'];
+      return {
+        headers: [
+          { text: 'Type', sortable: false, value: 'name', align: 'center' },
+          ...stats.map(stat => ({ text: stat.toUpperCase(), sortable: false, value: stat, align: 'center' })),
+        ],
+        items: [
+          { name: 'Base', ...(this.getStats(this.unit.stats._base)) },
+          { name: 'Lord', ...(this.getStats(this.unit.stats._lord)) },
+          ...types.map(type => ({ name: type, ...(this.getStats(this.unit.stats[type.toLowerCase()])) })),
+          { name: `Imps (${this.impCounts.total})`, ...(this.getStats(this.unit.imp, true)) },
+        ],
+      };
+    },
+    impCounts () {
+      if (!this.unit) {
+        return {};
+      }
+
+      const counts = {};
+      let total = 0;
+      ['hp', 'atk', 'def', 'rec'].forEach(stat => {
+        const value = this.unit.imp[`max ${stat}`];
+        counts[stat] = (stat === 'hp') ? (value / 50) : (value / 20);
+        total += counts[stat];
+      });
+      counts.total = total;
+      return counts;
     },
   },
   data () {
@@ -209,17 +264,42 @@ export default {
     getUnit (id) {
       return this.getById(id);
     },
+    getStats (item, isImps = false) {
+      const result = {};
+      const stats = ['hp', 'atk', 'def', 'rec'];
+      stats.forEach(stat => {
+        if (item[`${stat} max`] || item[`${stat} min`]) {
+          result[stat] = `${item[`${stat} min`]}-${item[`${stat} max`]}`;
+        } else if (isImps) {
+          result[stat] = `${item[`max ${stat}`]} (${this.impCounts[stat]})`;
+        } else {
+          result[stat] = item[stat];
+        }
+      });
+      return result;
+    },
   },
 };
 </script>
 
-<style scoped>
-.unit-image {
+<style>
+.unit-dialog-tab .unit-image {
   max-width: 100%;
   height: auto;
 }
 
-.capitalize {
+.unit-dialog-tab .capitalize {
   text-transform: capitalize;
+}
+
+.unit-dialog-tab .card {
+  border: 2px solid transparent;
+  margin: -2px;
+  --stat-card-color: #546E7A /* blue-grey darken-1 */
+}
+
+.unit-dialog-tab table.table thead th {
+  /* padding-top: 0; */
+  padding-bottom: 0;
 }
 </style>
