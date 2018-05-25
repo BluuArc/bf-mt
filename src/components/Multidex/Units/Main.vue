@@ -1,7 +1,7 @@
 <template>
   <v-container grid-list-sm class="pb-5">
     <v-layout row v-if="isLoading">
-      <v-flex xs12 class="text-xs-center">
+      <v-flex xs12 class="text-xs-center pt-5">
         <v-progress-circular indeterminate/>
         <h4 class="subheading">Waiting for data to finish loading.</h4>
       </v-flex>

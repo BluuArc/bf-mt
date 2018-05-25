@@ -3,7 +3,7 @@
     <v-card-title class="amber darken-3">
       <h3 class="title">Arena AI</h3>
     </v-card-title>
-    <v-card-text>
+    <v-card-text class="pt-0">
       <v-tabs v-model="activeTab">
         <v-tab key="translation">
           Translation

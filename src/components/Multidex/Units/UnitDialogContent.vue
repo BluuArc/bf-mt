@@ -236,7 +236,7 @@ export default {
 
       while (tempUnit.next) {
         if (tempUnit.id === this.unit.id) {
-          this.currentEvolutionIndex = evolutions.length;
+          this.currentEvolutionIndex = evolutions.length + 1;
         }
         evolutions.push({
           current: tempUnit.id.toString(),
@@ -244,7 +244,9 @@ export default {
           mats: tempUnit.evo_mats,
         });
         tempUnit = this.pageDb[tempUnit.next.toString()];
-        console.debug('next', tempUnit.id);
+      }
+      if (tempUnit.id === this.unit.id) {
+        this.currentEvolutionIndex = evolutions.length;
       }
       return evolutions;
     },
