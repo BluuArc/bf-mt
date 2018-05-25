@@ -194,6 +194,10 @@ export default {
     if (Object.keys(this.pageDb).length > 0) {
       this.applyFilters();
     }
+
+    if (this.unitId && !this.isLoading) {
+      this.showUnitsDialog = true;
+    }
   },
   methods: {
     ...mapActions('units', ['getFilteredKeys']),

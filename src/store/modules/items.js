@@ -12,6 +12,15 @@ const itemStore = {
   },
   getters: {
     itemById: state => id => state.pageDb[id],
+    getImageUrl: state => id => {
+      const cdnUrls = {
+        eu: 'http://static-bravefrontier.gumi-europe.net/content',
+        gl: 'http://dlc.bfglobal.gumi.sg/content',
+        jp: 'http://cdn.android.brave.a-lim.jp',
+      };
+      const baseUrl = `${cdnUrls[state.activeServer]}/item`;
+      return `${baseUrl}/${state.pageDb[id].thumbnail}`;
+    },
   },
   actions: {
     ...createActions(itemWorker),

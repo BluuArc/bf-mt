@@ -88,8 +88,51 @@
             </v-card>
           </v-flex>
           <v-flex xs12>
-            <v-card color="purple">
-              {{ unit.prev }} to {{ unit.next }}
+            <v-card color="purple" v-if="unit.prev || unit.next">
+              <v-card-title>
+                Evolutions
+              </v-card-title>
+              <v-stepper vertical v-model="currentEvolutionIndex" class="text-xs-center">
+                <template v-for="(evo, i) in evolutions">
+                  <v-stepper-step :key="`step-${evo.current}`" edit-icon="" editable :step="i + 1">
+                    <img align="middle" height="32px" :src="getUnitImages(evo.current).ills_thum"/>
+                    <span>{{ pageDb[evo.current].name }} ({{ pageDb[evo.current].rarity === 8 ? 'OE' : `${pageDb[evo.current].rarity}*` }})</span>
+                    <v-icon>chevron_right</v-icon>
+                    <img align="middle" height="32px" :src="getUnitImages(evo.next).ills_thum"/>
+                    <span>{{ pageDb[evo.next].name }} ({{ pageDb[evo.next].rarity === 8 ? 'OE' : `${pageDb[evo.next].rarity}*` }})</span>
+                  </v-stepper-step>
+                  <v-stepper-content :key="`content-${evo.current}`" :step="i + 1" class="pr-5">
+                    <v-layout row style="overflow-x: auto">
+                      <v-flex xs3 style="margin: auto;">
+                        <router-link :to="`/multidex/units?unitId=${evo.current}`">
+                          <img align="middle" height="64px" :src="getUnitImages(evo.current).ills_thum"/>
+                        </router-link>
+                      </v-flex>
+                      <v-flex xs1 style="margin: auto;">
+                        <v-icon>chevron_right</v-icon>
+                      </v-flex>
+                      <v-flex xs4 style="margin: auto;">
+                        <template v-for="(mat, i) in evo.mats">
+                          <router-link v-if="mat.type === 'unit'" :to="`/multidex/units?unitId=${mat.id}`" :key="i">
+                            <img align="middle" height="64px" :src="getUnitImages(mat.id).ills_thum"/>
+                          </router-link>  
+                          <router-link v-else :to="`/multidex/items?itemId=${mat.id}`" :key="i">
+                            <img align="middle" height="64px" :src="getItemImage(mat.id)"/>
+                          </router-link>  
+                        </template>
+                      </v-flex>
+                      <v-flex xs1 style="margin: auto;">
+                        <v-icon>chevron_right</v-icon>
+                      </v-flex>
+                      <v-flex xs3 style="margin: auto;">
+                        <router-link :to="`/multidex/units?unitId=${evo.next}`">
+                          <img align="middle" height="64px" :src="getUnitImages(evo.next).ills_thum"/>
+                        </router-link>
+                      </v-flex>
+                    </v-layout>
+                  </v-stepper-content>
+                </template>
+              </v-stepper>
             </v-card>
           </v-flex>
         </v-layout>
@@ -175,6 +218,9 @@ export default {
     ...mapGetters('units', {
       getUnitImages: 'getImageUrls',
     }),
+    ...mapGetters('items', {
+      getItemImage: 'getImageUrl',
+    }),
     ...mapState('units', ['pageDb']),
     images () {
       return this.getUnitImages(this.unitId);
@@ -224,6 +270,33 @@ export default {
       counts.total = total;
       return counts;
     },
+    evolutions () {
+      this.currentEvolutionIndex = 0;
+      if (!this.unit || !(this.unit.next || this.unit.prev || this.unit.evo_mats)) {
+        return [];
+      }
+
+      const evolutions = [];
+      let tempUnit = this.unit;
+      // go to first in evo line
+      while (tempUnit.prev) {
+        tempUnit = this.pageDb[tempUnit.prev.toString()];
+      }
+
+      while (tempUnit.next) {
+        if (tempUnit.id === this.unit.id) {
+          this.currentEvolutionIndex = evolutions.length;
+        }
+        evolutions.push({
+          current: tempUnit.id.toString(),
+          next: tempUnit.next,
+          mats: tempUnit.evo_mats,
+        });
+        tempUnit = this.pageDb[tempUnit.next.toString()];
+        console.debug('next', tempUnit.id);
+      }
+      return evolutions;
+    },
   },
   data () {
     return {
@@ -231,6 +304,7 @@ export default {
       loadingUnitData: true,
       activeTab: 'skills',
       alternateImageLoaded: false,
+      currentEvolutionIndex: 0,
     };
   },
   watch: {
@@ -301,5 +375,11 @@ export default {
 .unit-dialog-tab table.table thead th {
   /* padding-top: 0; */
   padding-bottom: 0;
+}
+
+.unit-dialog-tab .stepper__label {
+  width: 100%;
+  display: inline;
+  text-align: center;
 }
 </style>
