@@ -8,12 +8,12 @@
       No unit data found.
     </v-card-text>
     <v-card-text v-else class="pl-0 pr-0 pb-5">
-      <v-bottom-nav :value="true" :active.sync="activeTab" fixed color="primary">
+      <v-bottom-nav :value="true" :active.sync="activeTab" fixed color="primary" id="unit-dialog-nav">
         <v-btn
           v-for="tab in tabs"
           :key="tab.value"
           :value="tab.value"
-          flat>
+          flat class="white--text">
           {{ tab.text }}
           <v-icon v-if="tab.icon">{{ tab.icon }}</v-icon>
         </v-btn>
@@ -311,8 +311,13 @@ export default {
   --arena-card-color: #ff8f00; /* amber darken-3 */
 }
 
+.unit-dialog-tab .card .card__title h3.title {
+  color: white;
+}
+
 .unit-dialog-tab table.table thead th {
   padding-bottom: 0;
+  font-weight: bold;
 }
 
 .unit-dialog-tab .stepper__label {

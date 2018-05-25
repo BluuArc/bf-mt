@@ -20,7 +20,7 @@
               <v-list-tile :key="index" class="pt-1 pb-1">
                 <v-list-tile-content>
                   <v-list-tile-sub-title>
-                    <h3 class="subheading white--text">{{ generateArenaText(stat) }}</h3>
+                    <h3 class="subheading">{{ generateArenaText(stat) }}</h3>
                   </v-list-tile-sub-title>
                 </v-list-tile-content>
               </v-list-tile>
@@ -90,5 +90,13 @@ export default {
 <style>
 #arena-list .list__tile {
   height: auto;
+}
+
+.theme--dark #arena-list h3.subheading {
+  color: white;
+}
+
+.theme--light #arena-list h3.subheading {
+  color: black;
 }
 </style>
