@@ -1,7 +1,7 @@
 <template>
   <v-card>
     <v-card-title class="blue-grey darken-1">
-      Stats
+      <h3 class="title">Stats</h3>
     </v-card-title>
     <v-card-text class="pt-0">
       <v-data-table
@@ -11,7 +11,7 @@
         <template slot="items" slot-scope="props">
           <tr>
             <template v-for="col in ['name', 'hp', 'atk', 'def', 'rec']">
-              <td :key="col" class=" pt-0 pb-0 text-xs-center">{{ props.item[col] }}</td>
+              <td :key="col" class="pt-0 pb-0 text-xs-center">{{ props.item[col] }}</td>
             </template>
           </tr>
         </template>

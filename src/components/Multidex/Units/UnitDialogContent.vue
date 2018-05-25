@@ -23,7 +23,7 @@
           <v-flex xs12 sm6 md3>
             <v-card raised style="border-color: teal; height: 100%;">
               <v-card-title class="teal">
-                Miscellaneous Info
+                <h3 class="title">Miscellaneous Info</h3>
               </v-card-title>
               <v-card-text>
                 <v-list>
@@ -72,7 +72,7 @@
           <v-flex xs12>
             <v-card color="purple" v-if="unit.prev || unit.next">
               <v-card-title>
-                Evolutions
+                <h3 class="title">Evolutions</h3>
               </v-card-title>
               <v-stepper vertical v-model="currentEvolutionIndex" class="text-xs-center">
                 <template v-for="(evo, i) in evolutions">
@@ -120,9 +120,7 @@
         </v-layout>
         <v-layout row wrap>
           <v-flex xs12 sm6>
-            <v-card color="light-green">
-              {{ unit.movement }}
-            </v-card>
+            <movement-info-card :unit="unit"/>
           </v-flex>
           <v-flex xs12 sm6>
             <v-card color="amber darken-3">
@@ -194,11 +192,13 @@
 <script>
 import { mapActions, mapGetters, mapState } from 'vuex';
 import StatCard from '@/components/Multidex/Units/StatCard';
+import MovementInfoCard from '@/components/Multidex/Units/MovementInfoCard';
 
 export default {
   props: ['unitId'],
   components: {
     'stat-card': StatCard,
+    'movement-info-card': MovementInfoCard,
   },
   computed: {
     ...mapGetters('units', {
