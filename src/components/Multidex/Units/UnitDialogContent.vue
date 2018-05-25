@@ -130,10 +130,7 @@
       <v-container class="unit-dialog-tab" v-if="activeTab === 'skills'" grid-list-lg>
         <v-layout row wrap>
           <v-flex xs12>
-            <v-card color="black">
-              LS
-              {{ unit['leader skill'] }}
-            </v-card>
+            <leader-skill-card :leader-skill="unit['leader skill']" style="border-color: black;"/>
           </v-flex>
         </v-layout>
         <v-layout row wrap>
@@ -192,6 +189,7 @@ import { mapActions, mapGetters, mapState } from 'vuex';
 import StatCard from '@/components/Multidex/Units/StatCard';
 import MovementInfoCard from '@/components/Multidex/Units/MovementInfoCard';
 import ArenaCard from '@/components/Multidex/Units/ArenaCard';
+import LeaderSkillCard from '@/components/Multidex/Units/LeaderSkillCard';
 
 export default {
   props: ['unitId'],
@@ -199,6 +197,7 @@ export default {
     'stat-card': StatCard,
     'movement-info-card': MovementInfoCard,
     'arena-card': ArenaCard,
+    'leader-skill-card': LeaderSkillCard,
   },
   computed: {
     ...mapGetters('units', {
@@ -235,6 +234,7 @@ export default {
       }
 
       while (tempUnit.next) {
+        // offset by 1 as steps start at 1
         if (tempUnit.id === this.unit.id) {
           this.currentEvolutionIndex = evolutions.length + 1;
         }
@@ -322,8 +322,12 @@ export default {
   font-weight: bold;
 }
 
+/* separate due to weird linting issue */
 .unit-dialog-tab .stepper__label {
   width: 100%;
+}
+
+.unit-dialog-tab .stepper__label {
   display: inline;
   text-align: center;
 }

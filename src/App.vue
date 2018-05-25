@@ -186,7 +186,7 @@ html {
 
 * {
   /* default color of v-divider */
-  --border-color-light: hsla(0, 0, 0, 0.12);
+  --border-color-light: rgba(0, 0, 0, 0.12);
   --border-color-dark: hsla(0, 0%, 100%, 0.12);
 }
 
