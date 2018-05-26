@@ -7,6 +7,7 @@
       v-if="rarity <= 2"
       :class="imgClass"
       :style="imgStyle"
+      :align="align"
       :title="title"
       :alt="alt"/>
     <img
@@ -15,6 +16,7 @@
       v-if="rarity === 3"
       :class="imgClass"
       :style="imgStyle"
+      :align="align"
       :title="title"
       :alt="alt"/>
     <img
@@ -23,6 +25,7 @@
       v-if="rarity === 4"
       :class="imgClass"
       :style="imgStyle"
+      :align="align"
       :title="title"
       :alt="alt"/>
     <img
@@ -31,12 +34,14 @@
       v-if="rarity >= 5"
       :class="imgClass"
       :style="imgStyle"
+      :align="align"
       :title="title"
       :alt="alt"/>
     <img
       id="actual"
       :class="imgClass"
       :style="imgStyle"
+      :align="align"
       :src="src"
       :title="title"
       :alt="alt"/>
@@ -45,7 +50,7 @@
 
 <script>
 export default {
-  props: ['imgClass', 'imgStyle', 'src', 'rarity', 'title', 'alt'],
+  props: ['imgClass', 'imgStyle', 'src', 'rarity', 'title', 'alt', 'align'],
   mounted () {
     const lazyLoadImage = this.$el.querySelector('img#lazy-load');
     const actualImage = this.$el.querySelector('img#actual');

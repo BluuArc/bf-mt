@@ -6,8 +6,8 @@
       </v-flex>
       <v-flex xs10 sm11 class="text-xs-center">
         <v-layout row>
-          <v-flex xs4><b>Buff Property</b></v-flex>
-          <v-flex xs8><b>Buff Value</b></v-flex>
+          <v-flex xs3><b>Buff Property</b></v-flex>
+          <v-flex xs9><b>Buff Value</b></v-flex>
         </v-layout>
       </v-flex>
       <v-flex xs12 class="pa-0">
@@ -16,13 +16,28 @@
     </v-layout>
     <template v-for="(effect, i) in effects">
       <v-layout row wrap class="buff-list-row" :key="i">
-        <v-flex xs2 sm1 class="text-xs-center id-column">
-          <span>{{ effect['passive id'] || effect['unknown passive id'] }}</span>
+        <v-flex xs2 sm1 class="text-xs-center id-column vertical-align-parent">
+          <span class="vertical-align-container">{{ getEffectId(effect) }}</span>
         </v-flex>
         <v-flex xs10 sm11 class="text-xs-center">
           <v-layout row v-for="(prop, j) in getSortedProps(effect).slice(1)" :key="j" class="buff-list-property-row">
-            <v-flex xs4>{{ prop }}</v-flex>
-            <v-flex xs8>{{ effect[prop] }}</v-flex>
+            <template v-if="isProcBuffList(effect, prop)">
+              <v-flex xs3 class="vertical-align-parent">
+                <span class="vertical-align-container">{{ prop }}</span>
+              </v-flex>
+            <v-flex xs9>
+              <proc-buff-list :effects="effect[prop]" :show-headers="false"/>
+            </v-flex>  
+            </template>
+            <template v-else>
+              <v-flex xs3>{{ prop }}</v-flex>
+              <v-flex xs9 class="vertical-align-parent">
+                <span :class="{ 'vertical-align-container': !Array.isArray(effect[prop]) || (Array.isArray(effect[prop]) && effect[prop].length === 0) }">
+                  {{ effect[prop] }}
+                  <span v-if="Array.isArray(effect[prop]) && effect[prop].length === 0">(None)</span>
+                </span>
+              </v-flex>
+            </template>
           </v-layout>
         </v-flex>
       </v-layout>
@@ -34,6 +49,8 @@
 </template>
 
 <script>
+import ProcBuffList from '@/components/Multidex/ProcBuffList';
+
 export default {
   props: {
     effects: {
@@ -46,6 +63,9 @@ export default {
       default: true,
     },
   },
+  components: {
+    'proc-buff-list': ProcBuffList,
+  },
   methods: {
     getSortedProps (effect) {
       return Object.keys(effect)
@@ -57,35 +77,40 @@ export default {
           }
         });
     },
-    isPassiveEffect (effect) {
-      return !!effect['passive id'] || !!effect['unknown passive id'];
+    getEffectId (effect) {
+      return effect['passive id'] || effect['unknown passive id'];
+    },
+    isProcBuffList (effect, prop) {
+      console.debug(effect['passive id'], prop, +effect['passive id'] === 66 && prop === 'triggered effect');
+      return +effect['passive id'] === 66 && prop === 'triggered effect';
     },
   },
 };
 </script>
 
 <style>
-.buff-list-row .id-column {
-  position: relative;
+.card .tabs__content .buff-list {
+  max-height: 35vh;
+  overflow-y: auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
-
-.buff-list-row .id-column span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
-
 .theme--dark .buff-list-row .id-column {
   border-right: 1px solid var(--border-color-dark);
+  border-left: 1px solid var(--border-color-dark);
 }
 
 .theme--dark .buff-list-row:hover {
   background-color: dimgrey;
 }
 
+.theme--dark .buff-list-row:first-child {
+  border-top: 1px solid var(--border-color-dark);
+}
+
 .theme--dark .buff-list-row .buff-list-property-row {
   border-bottom: 1px solid var(--border-color-dark);
+  border-right: 1px solid var(--border-color-dark);
 }
 
 .theme--dark .buff-list-row .buff-list-property-row:hover {
@@ -94,14 +119,20 @@ export default {
 
 .theme--light .buff-list-row .id-column {
   border-right: 1px solid var(--border-color-light);
+  border-left: 1px solid var(--border-color-light);
 }
 
 .theme--light .buff-list-row:hover {
   background-color: lightgrey;
 }
 
+.theme--light .buff-list-row:first-child {
+  border-top: 1px solid var(--border-color-light);
+}
+
 .theme--light .buff-list-row .buff-list-property-row {
   border-bottom: 1px solid var(--border-color-light);
+  border-right: 1px solid var(--border-color-light);
 }
 
 .theme--light .buff-list-row .buff-list-property-row:hover {

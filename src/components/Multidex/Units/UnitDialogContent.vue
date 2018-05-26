@@ -133,12 +133,9 @@
             <leader-skill-card :leader-skill="unit['leader skill']" style="border-color: black;"/>
           </v-flex>
         </v-layout>
-        <v-layout row wrap>
+        <v-layout row wrap v-if="unit['extra skill']">
           <v-flex xs12>
-            <v-card color="orange darken-4">
-              ES
-              {{ unit['extra skill'] }}
-            </v-card>
+            <extra-skill-card :extra-skill="unit['extra skill']" style="border-color: var(--extra-skill-card-color)"/>
           </v-flex>
         </v-layout>
         <v-layout row wrap>
@@ -190,6 +187,7 @@ import StatCard from '@/components/Multidex/Units/StatCard';
 import MovementInfoCard from '@/components/Multidex/Units/MovementInfoCard';
 import ArenaCard from '@/components/Multidex/Units/ArenaCard';
 import LeaderSkillCard from '@/components/Multidex/Units/LeaderSkillCard';
+import ExtraSkillCard from '@/components/Multidex/Units/ExtraSkillCard';
 
 export default {
   props: ['unitId'],
@@ -198,6 +196,7 @@ export default {
     'movement-info-card': MovementInfoCard,
     'arena-card': ArenaCard,
     'leader-skill-card': LeaderSkillCard,
+    'extra-skill-card': ExtraSkillCard,
   },
   computed: {
     ...mapGetters('units', {
@@ -311,6 +310,7 @@ export default {
   --stat-card-color: #546E7A; /* blue-grey darken-1 */
   --movement-card-color: #8BC34A; /* light-green */
   --arena-card-color: #ff8f00; /* amber darken-3 */
+  --extra-skill-card-color: #e65100;
 }
 
 .unit-dialog-tab .card .card__title h3.title {

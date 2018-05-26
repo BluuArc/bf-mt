@@ -2,13 +2,13 @@
   <v-card :to="to" class="unit-card">
     <v-container fluid class="pa-1" grid-list-md>
       <v-layout row>
-        <v-flex xs3>
-          <div class="card__media text-xs-center">
+        <v-flex xs3 class="vertical-align-parent">
+          <div class="card__media text-xs-center vertical-align-container">
             <unit-thumbnail
               :src="getImageUrls(unit.id).ills_thum"
               class="mx-auto"
-              style="height: 64px; width: 64px;"
-              imgStyle="height: 64px; width: 64px;"
+              style="height: 48px; width: 48px;"
+              imgStyle="height: 48px; width: 48px;"
               :rarity="unit.rarity"
               :title="unit.name"/>
           </div>

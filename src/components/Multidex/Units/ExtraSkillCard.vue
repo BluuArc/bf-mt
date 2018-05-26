@@ -1,27 +1,27 @@
 <template>
   <v-card>
-    <v-card-title class="black white--text">
-      <h3 class="title"><b>Leader Skill:</b> {{ name }}</h3>
+    <v-card-title class="orange darken-4 white--text">
+      <h3 class="title"><b>Extra Skill:</b> {{ name }}</h3>
     </v-card-title>
     <v-card-text class="pt-0">
       <v-tabs v-model="activeTab" class="pb-2">
         <v-tab>Description</v-tab>
-        <v-tab v-if="leaderSkill">JSON</v-tab>
+        <v-tab v-if="extraSkill">JSON</v-tab>
       </v-tabs>
       <v-tabs-items v-model="activeTab">
         <v-tab-item :key="getLabelIndex('Description')">
           <span>{{ description }}</span>
-          <template v-if="leaderSkill">
+          <template v-if="extraSkill">
             <v-card-actions class="pl-0 pr-0 pt-2 pb-0">
               <v-btn flat class="ma-0" @click="showBuffList = !showBuffList">{{ showBuffList ? 'Hide' : 'Show' }} Buff List</v-btn>
             </v-card-actions>
             <v-slide-y-transition>
-              <passive-buff-list :effects="leaderSkill.effects" class="pl-3 pr-3" v-show="showBuffList" style="max-height: 35vh; overflow-y: auto;"/>  
+              <passive-buff-list :effects="extraSkill.effects" v-show="showBuffList"/>  
             </v-slide-y-transition>
           </template>
         </v-tab-item>
-        <v-tab-item v-if="leaderSkill" :key="getLabelIndex('JSON')">
-          <json-viewer :json="leaderSkill"/>
+        <v-tab-item v-if="extraSkill" :key="getLabelIndex('JSON')">
+          <json-viewer :json="extraSkill"/>
         </v-tab-item>
       </v-tabs-items>
     </v-card-text>
@@ -33,23 +33,23 @@ import JsonViewer from '@/components/Multidex/JsonViewer';
 import PassiveBuffList from '@/components/Multidex/PassiveBuffList';
 
 export default {
-  props: ['leaderSkill'],
+  props: ['extraSkill'],
   components: {
     'json-viewer': JsonViewer,
     'passive-buff-list': PassiveBuffList,
   },
   computed: {
     name () {
-      return this.leaderSkill ? this.leaderSkill.name : 'None';
+      return this.extraSkill ? this.extraSkill.name : 'None';
     },
     description () {
-      return this.leaderSkill ? this.leaderSkill.desc : 'None';
+      return this.extraSkill ? this.extraSkill.desc : 'None';
     },
     effects () {
-      return this.leaderSkill ? this.leaderSkill.effects : [];
+      return this.extraSkill ? this.extraSkill.effects : [];
     },
     tabLabels () {
-      return this.leaderSkill ? ['Description', 'JSON'] : ['Description'];
+      return this.extraSkill ? ['Description', 'JSON'] : ['Description'];
     },
   },
   data () {
