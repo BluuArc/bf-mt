@@ -16,12 +16,15 @@
               <v-btn flat class="ma-0" @click="showBuffList = !showBuffList">{{ showBuffList ? 'Hide' : 'Show' }} Buff List</v-btn>
             </v-card-actions>
             <v-slide-y-transition>
-              <v-container fluid v-show="showBuffList">
+              <v-container fluid class="pl-0 pr-0" v-show="showBuffList">
+                <v-layout row>
+                  <v-divider/>
+                </v-layout>
                 <v-layout row v-if="numLevels > 1">
                   <v-flex xs4 md2 class="text-xs-center vertical-align-parent pa-0">
-                    <span class="vertical-align-container">Level: {{ levelIndex + 1 }}</span>
+                    <span style="width: 100%;" class="vertical-align-container">Level: {{ levelIndex + 1 }}</span>
                   </v-flex>
-                  <v-flex xs8 md10 cass="pa-0">
+                  <v-flex xs8 md10 class="pa-0">
                     <v-slider v-model="levelIndex" step="1" ticks min="0" :max="numLevels - 1"/>
                   </v-flex>
                 </v-layout>

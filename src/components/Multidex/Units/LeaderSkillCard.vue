@@ -12,7 +12,7 @@
         <v-tab-item :key="getLabelIndex('Description')">
           <span>{{ description }}</span>
           <template v-if="leaderSkill">
-            <v-card-actions class="pl-0 pr-0 pt-2 pb-0">
+            <v-card-actions class="pl-0 pr-0 pt-2 pb-2">
               <v-btn flat class="ma-0" @click="showBuffList = !showBuffList">{{ showBuffList ? 'Hide' : 'Show' }} Buff List</v-btn>
             </v-card-actions>
             <v-slide-y-transition>
