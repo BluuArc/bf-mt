@@ -1,7 +1,21 @@
 <template>
   <v-card>
-    <v-card-title class="light-green">
-      <h3 class="title">Movement Info</h3>
+    <v-card-title class="light-green white--text">
+      <v-layout row wrap>
+        <v-flex xs7 class="text-xs-left">
+          <h3 class="title">Movement Info</h3>
+        </v-flex>
+        <v-flex xs5 class="text-xs-right">
+          <v-tooltip bottom>
+            <span slot="activator" style="border-bottom: 1px dotted;">
+              {{ dcInfo.hits }} {{ dcInfo.hits === 1 ? 'Hit' : 'Hits' }}/ {{ dcInfo.dropchecks }} DC
+            </span>
+            <span>
+              Hits on Normal Attack / Total BC Dropchecks
+            </span>
+          </v-tooltip>
+        </v-flex>
+      </v-layout>
     </v-card-title>
     <v-card-text class="pt-0">
       <v-tabs v-model="activeTab">
@@ -62,10 +76,10 @@ export default {
     movementData () {
       return this.unit.movement;
     },
-    damageFrames () {
+    dropChecks () {
       return this.unit['drop check count'];
     },
-    dropChecks () {
+    damageFrames () {
       return this.unit['damage frames'];
     },
     hasHitCounts () {
@@ -78,10 +92,10 @@ export default {
         numHits = +this.damageFrames.hits;
         dropChecks = this.dropChecks * numHits;
       }
-      return [
-        `<abbr title="Hits on Normal Attack">${numHits} ${numHits === 1 ? 'Hit' : 'Hits'}</abbr>`,
-        `<abbr title="total BC dropchecks">${dropChecks} DC</abbr>`,
-      ].join('/');
+      return {
+        hits: numHits,
+        dropchecks: dropChecks,
+      };
     },
   },
   data () {

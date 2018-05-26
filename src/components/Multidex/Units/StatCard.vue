@@ -3,7 +3,7 @@
     <v-card-title class="blue-grey darken-1">
       <h3 class="title">Stats</h3>
     </v-card-title>
-    <v-card-text class="pt-0">
+    <v-card-text>
       <v-data-table
         :headers="statTableData.headers"
         :items="statTableData.items"

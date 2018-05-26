@@ -25,8 +25,8 @@
               <v-card-title class="teal">
                 <h3 class="title">Miscellaneous Info</h3>
               </v-card-title>
-              <v-card-text>
-                <v-list>
+              <v-card-text class="pt-0 pb-2">
+                <v-list class="pt-0">
                   <v-list-tile v-if="$vuetify.breakpoint.xsOnly">
                     <v-list-tile-content>
                       <span><b>Full Name:</b> <span class="capitalize">{{ unit.name }}</span></span>
@@ -62,12 +62,19 @@
                       <span><b>Rarity:</b> {{ (unit.rarity !== 8) ? `${unit.rarity} Stars` : 'Omni' }}</span>
                     </v-list-tile-content>
                   </v-list-tile>
+                  <template v-for="animType in ['Idle', 'Move', 'Attack']">
+                    <v-list-tile :key="animType" v-if="unit.animations && unit.animations[animType.toLowerCase()]">
+                      <v-list-tile-content>
+                      <span><b>{{ animType }} Frames:</b> {{ unit.animations[animType.toLowerCase()]['total number of frames'] }}</span>
+                    </v-list-tile-content>
+                    </v-list-tile>
+                  </template>
                 </v-list>
               </v-card-text>
             </v-card>
           </v-flex>
           <v-flex xs12 sm6 md9>
-            <stat-card style="border-color: var(--stat-card-color)" :unit="unit"/>
+            <stat-card style="border-color: var(--stat-card-color); height: 100%;" :unit="unit"/>
           </v-flex>
           <v-flex xs12>
             <v-card color="purple" v-if="unit.prev || unit.next">
