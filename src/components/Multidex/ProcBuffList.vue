@@ -42,7 +42,7 @@ export default {
   props: {
     effects: {
       type: Array,
-      default: [],
+      default: () => [],
     },
     showHeaders: {
       type: Boolean,

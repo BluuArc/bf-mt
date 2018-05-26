@@ -45,9 +45,6 @@ export default {
     description () {
       return this.leaderSkill ? this.leaderSkill.desc : 'None';
     },
-    effects () {
-      return this.leaderSkill ? this.leaderSkill.effects : [];
-    },
     tabLabels () {
       return this.leaderSkill ? ['Description', 'JSON'] : ['Description'];
     },

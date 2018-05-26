@@ -140,28 +140,16 @@
         </v-layout>
         <v-layout row wrap>
           <v-flex xs12>
-            <v-card color="blue-grey">
-              BB
-              {{ unit.bb }}
-            </v-card>
+            <burst-card :burst="unit.bb" burst-type="bb" style="border-color: var(--burst-card-color--bb)"/>
           </v-flex>
         </v-layout>
-        <v-layout row wrap>
-          <v-flex xs12>
-            <v-card color="yellow darken-3">
-              SBB
-              {{ unit.sbb }}
-            </v-card>
-          </v-flex>
-        </v-layout>
-        <v-layout row wrap>
-          <v-flex xs12>
-            <v-card color="red darken-3">
-              UBB
-              {{ unit.ubb }}
-            </v-card>
-          </v-flex>
-        </v-layout>
+        <template v-for="burstType in ['sbb', 'ubb']">
+          <v-layout v-if="unit[burstType]" row wrap :key="burstType">
+            <v-flex xs12>
+              <burst-card :burst="unit[burstType]" :burst-type="burstType" :style="`border-color: var(--burst-card-color--${burstType})`"/>
+            </v-flex>
+          </v-layout>
+        </template>
         <v-layout row wrap>
           <v-flex xs12>
             <v-card color="green darken-3">
@@ -188,6 +176,7 @@ import MovementInfoCard from '@/components/Multidex/Units/MovementInfoCard';
 import ArenaCard from '@/components/Multidex/Units/ArenaCard';
 import LeaderSkillCard from '@/components/Multidex/Units/LeaderSkillCard';
 import ExtraSkillCard from '@/components/Multidex/Units/ExtraSkillCard';
+import BurstCard from '@/components/Multidex/Units/BurstCard';
 
 export default {
   props: ['unitId'],
@@ -197,6 +186,7 @@ export default {
     'arena-card': ArenaCard,
     'leader-skill-card': LeaderSkillCard,
     'extra-skill-card': ExtraSkillCard,
+    'burst-card': BurstCard,
   },
   computed: {
     ...mapGetters('units', {
@@ -310,7 +300,10 @@ export default {
   --stat-card-color: #546E7A; /* blue-grey darken-1 */
   --movement-card-color: #8BC34A; /* light-green */
   --arena-card-color: #ff8f00; /* amber darken-3 */
-  --extra-skill-card-color: #e65100;
+  --extra-skill-card-color: #e65100; /* orange darken-4 */
+  --burst-card-color--bb: #607d8b; /* blue-grey */
+  --burst-card-color--sbb: #f9a825; /* yellow darken-3 */
+  --burst-card-color--ubb: #c62828; /* red darken-3 */
 }
 
 .unit-dialog-tab .card .card__title h3.title {

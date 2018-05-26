@@ -45,9 +45,6 @@ export default {
     description () {
       return this.extraSkill ? this.extraSkill.desc : 'None';
     },
-    effects () {
-      return this.extraSkill ? this.extraSkill.effects : [];
-    },
     tabLabels () {
       return this.extraSkill ? ['Description', 'JSON'] : ['Description'];
     },
