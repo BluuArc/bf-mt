@@ -12,7 +12,7 @@
           JSON
         </v-tab>
       </v-tabs>
-      <v-tabs-items v-model="activeTab">
+      <v-tabs-items v-model="activeTab" touchless>
         <v-tab-item key="translation">
           <v-list v-if="unit.ai" three-line id="arena-list">
             <template v-for="(stat, index) in unit.ai">

@@ -20,9 +20,10 @@
     <v-card-text class="pt-0">
       <v-tabs v-model="activeTab" class="pb-2">
         <v-tab>Description</v-tab>
+        <v-tab v-if="burst">Hitcounts</v-tab>
         <v-tab v-if="burst">JSON</v-tab>
       </v-tabs>
-      <v-tabs-items v-model="activeTab">
+      <v-tabs-items v-model="activeTab" touchless>
         <v-tab-item :key="getLabelIndex('Description')">
           <span>{{ description }}</span>
           <template v-if="burst">
@@ -47,6 +48,14 @@
             </v-slide-y-transition>
           </template>
         </v-tab-item>
+         <v-tab-item v-if="burst && hitCountData.length > 0" :key="getLabelIndex('Hitcounts')" style="max-height: 50vh; overflow-y: auto;">
+           <v-expansion-panel :expand="$vuetify.breakpoint.smAndUp">
+            <v-expansion-panel-content v-for="(d,i) in hitCountData" :key="i">
+              <h3 slot="header" class="title pl-3 pr-3">Attack {{ i + 1 }} ({{ d.target }})</h3>
+              <hit-count-table class="pl-3 pr-3" :attack="d.frames"/>
+            </v-expansion-panel-content>
+           </v-expansion-panel>
+        </v-tab-item>
         <v-tab-item v-if="burst" :key="getLabelIndex('JSON')">
           <json-viewer :json="burst"/>
         </v-tab-item>
@@ -58,12 +67,14 @@
 <script>
 import JsonViewer from '@/components/Multidex/JsonViewer';
 import ProcBuffList from '@/components/Multidex/ProcBuffList';
+import HitCountTable from '@/components/Multidex/Units/HitCountTable';
 
 export default {
   props: ['burst', 'burstType'],
   components: {
     'json-viewer': JsonViewer,
     'proc-buff-list': ProcBuffList,
+    'hit-count-table': HitCountTable,
   },
   computed: {
     name () {
@@ -73,7 +84,7 @@ export default {
       return this.burst ? this.burst.desc : 'None';
     },
     tabLabels () {
-      return this.burst ? ['Description', 'JSON'] : ['Description'];
+      return this.burst ? ['Description', 'Hitcounts', 'JSON'] : ['Description'];
     },
     burstLabel () {
       const types = {
@@ -115,6 +126,19 @@ export default {
         hits: numHits,
         dropchecks: dropChecks,
       };
+    },
+    hitCountData () {
+      const endLevel = this.burst.levels[this.numLevels - 1];
+      return this.burst['damage frames']
+        .map((f, i) => {
+          const effectData = endLevel.effects[i];
+          return {
+            target: (effectData['random attack'] ? 'random' : effectData['target area']),
+            id: (f['proc id'] || f['unknown proc id']).toString(),
+            frames: f,
+            effects: effectData,
+          };
+        }).filter(f => this.attackingProcs.includes(f.id));
     },
   },
   watch: {

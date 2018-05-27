@@ -26,7 +26,7 @@
           Hitcount Table
         </v-tab>
       </v-tabs>
-      <v-tabs-items v-model="activeTab">
+      <v-tabs-items v-model="activeTab" touchless>
         <v-tab-item key="general">
           <v-container fluid>
             <v-layout row>

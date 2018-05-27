@@ -8,7 +8,7 @@
         <v-tab>Description</v-tab>
         <v-tab v-if="extraSkill">JSON</v-tab>
       </v-tabs>
-      <v-tabs-items v-model="activeTab">
+      <v-tabs-items v-model="activeTab" touchless>
         <v-tab-item :key="getLabelIndex('Description')">
           <span>{{ description }}</span>
           <template v-if="extraSkill">
