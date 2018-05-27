@@ -56,7 +56,7 @@
           :disabled="pageIndex >= (numPages - 1)"
           :small="$vuetify.breakpoint.smAndDown"
           color="primary" @click="incrementPage">
-          <span v-show="pageIndex < numPages">
+          <span v-show="pageIndex + 1 < numPages">
             {{ pageIndex + 2 }}
           </span>
         </v-btn>

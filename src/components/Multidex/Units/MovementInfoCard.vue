@@ -23,7 +23,7 @@
           General
         </v-tab>
         <v-tab key="table">
-          Hitcount Table
+          Hitcounts
         </v-tab>
       </v-tabs>
       <v-tabs-items v-model="activeTab" touchless>
