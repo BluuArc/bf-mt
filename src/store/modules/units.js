@@ -45,7 +45,9 @@ const unitsStore = {
               .then(tempData => {
                 Object.keys(tempData)
                   .forEach(id => {
-                    unitDb[id] = tempData[id];
+                    if (+id !== 1) {
+                      unitDb[id] = tempData[id];
+                    }
                   });
                 console.debug(server, 6 - (++countFinished), 'unit files remaining');
               }));

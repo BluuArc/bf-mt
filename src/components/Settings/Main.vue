@@ -63,14 +63,14 @@
                         <v-flex xs12 v-text="value"/>
                       </v-layout>
                       <v-layout row wrap v-show="!stateInfo[key].isLoading">
-                        <v-flex xs12 sm6>
+                        <v-flex xs12 md6>
                           <v-btn
                             block
                             @click="() => { dataUpdate[key] = servers.slice(); dataDelete[key] = []; }">
                             Reload All
                           </v-btn>
                         </v-flex>
-                        <v-flex xs12 sm6>
+                        <v-flex xs12 md6>
                           <v-btn
                             block
                             @click="() => { dataDelete[key] = servers.slice(); dataUpdate[key] = []; }">
@@ -97,12 +97,12 @@
                         </v-flex>
                       </v-layout>
                       <v-layout row wrap>
-                        <v-flex xs12 sm6>
+                        <v-flex xs12 md6>
                           <v-btn block :outline="!dataUpdate[key].includes(server)" @click="toggleDataUpdate(key, server)">
                             <v-icon>cloud_download</v-icon>
                           </v-btn>
                         </v-flex>
-                        <v-flex xs12 sm6>
+                        <v-flex xs12 md6>
                           <v-btn block :outline="!dataDelete[key].includes(server)" @click="toggleDataDelete(key, server)">
                             <v-icon>cloud_off</v-icon>
                           </v-btn>
