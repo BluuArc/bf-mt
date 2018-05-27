@@ -157,12 +157,9 @@
             </v-flex>
           </v-layout>
         </template>
-        <v-layout row wrap>
+        <v-layout row wrap v-if="unit.feskills">
           <v-flex xs12>
-            <v-card color="green darken-3">
-              SP
-              {{ unit.feskills }}
-            </v-card>
+            <enhancements-card :unit="unit" style="border-color: var(--enhancements-card-color)"/>
           </v-flex>
         </v-layout>
       </v-container>
@@ -184,6 +181,7 @@ import ArenaCard from '@/components/Multidex/Units/ArenaCard';
 import LeaderSkillCard from '@/components/Multidex/Units/LeaderSkillCard';
 import ExtraSkillCard from '@/components/Multidex/Units/ExtraSkillCard';
 import BurstCard from '@/components/Multidex/Units/BurstCard';
+import EnhancementsCard from '@/components/Multidex/Units/EnhancementsCard';
 
 export default {
   props: ['unitId'],
@@ -194,6 +192,7 @@ export default {
     'leader-skill-card': LeaderSkillCard,
     'extra-skill-card': ExtraSkillCard,
     'burst-card': BurstCard,
+    'enhancements-card': EnhancementsCard,
   },
   computed: {
     ...mapGetters('units', {
@@ -311,6 +310,7 @@ export default {
   --burst-card-color--bb: #607d8b; /* blue-grey */
   --burst-card-color--sbb: #f9a825; /* yellow darken-3 */
   --burst-card-color--ubb: #c62828; /* red darken-3 */
+  --enhancements-card-color: #2e7d32;  /* green darken-3 */
 }
 
 .unit-dialog-tab .card .card__title h3.title {
