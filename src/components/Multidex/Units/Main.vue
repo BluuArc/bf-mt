@@ -41,7 +41,27 @@
                 </v-layout>
               </div>
               <v-card>
-                Sorting options go here
+                <v-card-text>
+                  <v-layout row wrap class="pl-3 pr-3">
+                    <v-flex xs12 sm6 md12>
+                      <h3 class="subheading">Sort Type</h3>
+                      <v-radio-group v-model="sortOptions.type" :row="$vuetify.breakpoint.mdAndUp">
+                        <v-radio
+                          v-for="(type, i) in Object.keys(sortTypes).sort()"
+                          :key="i"
+                          :value="type"
+                          :label="type"/>
+                      </v-radio-group>
+                    </v-flex>
+                    <v-flex xs12 sm6 md12>
+                      <h3 class="subheading">Sort Order</h3>
+                      <v-radio-group v-model="sortOptions.isAscending" :row="$vuetify.breakpoint.mdAndUp">
+                        <v-radio :value="true" label="Ascending"/>
+                        <v-radio :value="false" label="Descending"/>
+                      </v-radio-group>
+                    </v-flex>
+                  </v-layout>
+                </v-card-text>
               </v-card>
             </v-expansion-panel-content>
           </v-expansion-panel>
@@ -156,7 +176,7 @@ export default {
     ...mapState('units', ['pageDb', 'isLoading']),
     ...mapGetters('units', ['getImageUrls']),
     allSortedUnits () {
-      return this.filteredKeys;
+      return this.sortTypes[this.sortOptions.type](this.filteredKeys);
     },
     numPages () {
       return Math.ceil(this.allSortedUnits.length / this.amountPerPage);
@@ -164,6 +184,46 @@ export default {
     unitsToShow () {
       const startIndex = this.pageIndex * this.amountPerPage;
       return this.allSortedUnits.slice(startIndex, startIndex + this.amountPerPage);
+    },
+    elements: () => ['fire', 'water', 'earth', 'thunder', 'light', 'dark'],
+    sortTypes () {
+      return {
+        'Unit ID': (keys = []) => {
+          return keys.slice().sort((idA, idB) => {
+            const result = (+idA - +idB);
+            return this.sortOptions.isAscending ? result : -result;
+          });
+        },
+        'Guide ID': (keys = []) => {
+          return keys.slice().sort((idA, idB) => {
+            const result = +this.pageDb[idA].guide_id - +this.pageDb[idB].guide_id;
+            return this.sortOptions.isAscending ? result : -result;
+          });
+        },
+        Alphabetical: (keys = []) => {
+          return keys.slice().sort((idA, idB) => {
+            const [nameA, nameB] = [this.pageDb[idA].name, this.pageDb[idB].name];
+            const result = (nameA > nameB) ? 1 : -1;
+            return this.sortOptions.isAscending ? result : -result;
+          });
+        },
+        Rarity: (keys = []) => {
+          return keys.slice().sort((idA, idB) => {
+            const [rarityA, rarityB] = [+this.pageDb[idA].rarity, +this.pageDb[idB].rarity];
+            const result = rarityA === rarityB ? (+idA - +idB) : (rarityA - rarityB);
+            return this.sortOptions.isAscending ? result : -result;
+          });
+        },
+        Element: (keys = []) => {
+          return keys.slice().sort((idA, idB) => {
+            const [elementA, elementB] = [this.pageDb[idA].element, this.pageDb[idB].element];
+            const indexA = this.elements.indexOf(elementA);
+            const indexB = this.elements.indexOf(elementB);
+            const result = indexA === indexB ? (+idA - +idB) : (indexA - indexB);
+            return this.sortOptions.isAscending ? result : -result;
+          });
+        },
+      };
     },
   },
   data () {
@@ -221,6 +281,12 @@ export default {
       handler () {
         this.pageIndex = 0;
         this.applyFilters();
+      },
+    },
+    sortOptions: {
+      deep: true,
+      handler () {
+        this.pageIndex = 0;
       },
     },
   },
