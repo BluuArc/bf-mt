@@ -15,11 +15,11 @@
         <v-tab key="table">
           Table
         </v-tab>
-        <v-tab key="json">
-          JSON
-        </v-tab>
         <v-tab key="share">
           Share Build
+        </v-tab>
+        <v-tab key="json">
+          JSON
         </v-tab>
       </v-tabs>
       <v-tabs-items v-model="activeTab" touchless>
@@ -80,11 +80,11 @@
             </v-layout>
           </v-container>
         </v-tab-item>
-        <v-tab-item key="json">
-          <json-viewer :json="unit.feskills" :change-view="activeTab"/>
-        </v-tab-item>
         <v-tab-item key="share">
           share build here
+        </v-tab-item>
+        <v-tab-item key="json">
+          <json-viewer :json="unit.feskills" :change-view="activeTab"/>
         </v-tab-item>
       </v-tabs-items>
     </v-card-text>
@@ -144,14 +144,19 @@ export default {
             this.toggleSkill(i, true);
           });
       }
-      console.debug('toggleing state', this.activeSkills);
+      // console.debug('toggling state', this.activeSkills);
     },
     toggleSkill (index, value) {
       this.activeSkills[index] = (value === undefined) ? !this.activeSkills[index] : !!value;
+      const skill = this.unit.feskills[index];
+      if (this.activeSkills[index] && skill.dependency) {
+        this.checkSkillDependencyBoxes(skill);
+      } else if (!this.activeSkills[index]) {
+        this.uncheckSkillDependencyBoxes(skill);
+      }
       this.computeActiveSum();
     },
-    computeActiveSum: debounce(function (newValue) {
-      console.debug(newValue);
+    computeActiveSum: debounce(function () {
       this.activeSkillSum = Object.keys(this.activeSkills)
         .filter(key => this.activeSkills[key])
         .map(key => this.unit.feskills[key].skill.bp)
@@ -175,6 +180,33 @@ export default {
       }
 
       return skill['dependency comment'] || 'Requires another enhancement';
+    },
+    // check all boxes current skill requires
+    checkSkillDependencyBoxes (skill) {
+      const dependentSkill = this.getSPSkillWithID(skill.dependency);
+      // console.debug({ dependentSkill });
+      this.unit.feskills.forEach((s, i) => {
+        if (s.id === dependentSkill.id) {
+          this.toggleSkill(i, true);
+          if (s.dependency) {
+            this.checkSkillDependencyBoxes(s);
+          }
+        }
+      });
+    },
+    uncheckSkillDependencyBoxes (skill) {
+      const activeDependencySkills = Object.keys(this.activeSkills)
+        .filter(key => this.activeSkills[key])
+        .map(key => this.unit.feskills[key])
+        .filter(s => s.dependency && s.dependency.indexOf(skill.id) > -1);
+
+      const activeDependencySkillIDs = activeDependencySkills.map(s => s.id);
+      this.unit.feskills.forEach((s, i) => {
+        if (activeDependencySkillIDs.indexOf(s.id) > -1) {
+          this.toggleSkill(i, false);
+        }
+      });
+      activeDependencySkills.forEach(this.uncheckSkillDependencyBoxes);
     },
     getBuffList (skill) {
       const buffs = [];

@@ -81,7 +81,7 @@ export default {
       return effect['passive id'] || effect['unknown passive id'];
     },
     isProcBuffList (effect, prop) {
-      console.debug(effect['passive id'], prop, +effect['passive id'] === 66 && prop === 'triggered effect');
+      // console.debug(effect['passive id'], prop, +effect['passive id'] === 66 && prop === 'triggered effect');
       return +effect['passive id'] === 66 && prop === 'triggered effect';
     },
   },
