@@ -71,10 +71,20 @@ const unitsStore = {
         return keys;
       }
 
+      // get local filters
+      const { name = '', element = [], kind = [], gender = [], rarity = [] } = filters;
       return keys.filter(key => {
         const entry = state.pageDb[key];
-        const fitsName = (!filters.name ? true : entry.name.toLowerCase().includes(filters.name.toLowerCase()));
-        return fitsName;
+        const fitsName = (!name ? true : entry.name.toLowerCase().includes(name.toLowerCase()));
+        const fitsElement = element.includes(entry.element);
+        const fitsGender = gender.includes(entry.gender);
+        const fitsRarity = rarity.includes(entry.rarity);
+
+        // need to flip evo/enhancing as they're marked wrong in the data at time of writing
+        const kindEntry = (entry.kind === 'evo' ? 'enhancing' : entry.kind === 'enhancing' ? 'evolution' : entry.kind);
+        const fitsKind = kind.includes(kindEntry);
+
+        return fitsName && fitsElement && fitsKind && fitsGender && fitsRarity;
       });
     },
   },

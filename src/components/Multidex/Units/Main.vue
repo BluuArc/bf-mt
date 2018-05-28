@@ -30,8 +30,77 @@
                   Filters
                 </v-layout>
               </div>
-              <v-card>
-                Filters go here
+              <v-card class="filter-area">
+                <v-card-text>
+                  <v-layout row wrap class="pl-3 pr-3">
+                    <v-flex xs12>
+                      <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Element</h3>
+                      <v-btn outline class="mr-0" @click="filterOptions.element = defaultFilters.element.slice()">All</v-btn>
+                      <v-btn outline class="ml-0" @click="filterOptions.element = []">None</v-btn>
+                      <v-layout row wrap>
+                        <v-flex xs4 sm2 v-for="(element, i) in defaultFilters.element" :key="i">
+                          <v-checkbox :value="element" v-model="filterOptions.element">
+                            <div slot="label">
+                              <element-icon :element="element" class="ml-2"/>
+                            </div>
+                          </v-checkbox>
+                        </v-flex>
+                      </v-layout>
+                    </v-flex>
+                  </v-layout>
+                  <v-layout row wrap class="pl-3 pr-3">
+                    <v-flex xs12>
+                      <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Rarity</h3>
+                      <v-btn outline class="mr-0" @click="filterOptions.rarity = defaultFilters.rarity.slice()">All</v-btn>
+                      <v-btn outline class="ml-0" @click="filterOptions.rarity = []">None</v-btn>
+                      <v-layout row wrap>
+                        <v-flex xs4 sm2 v-for="(rarity, i) in defaultFilters.rarity" :key="i">
+                          <v-checkbox :value="rarity" v-model="filterOptions.rarity">
+                            <div slot="label">
+                              <span v-if="rarity < 8">
+                                <h3 class="subheading d-inline-block">{{ rarity }}</h3>
+                                <img class="icon bf" src="@/assets/star_rare.png" height="18px" style="margin-top: -0.25rem;"/>
+                              </span>
+                              <img v-else class="icon bf" src="@/assets/phantom_icon.png" height="18px"/>
+                            </div>
+                          </v-checkbox>
+                        </v-flex>
+                      </v-layout>
+                    </v-flex>
+                  </v-layout>
+                  <v-layout row wrap class="pl-3 pr-3">
+                    <v-flex xs12>
+                      <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Type</h3>
+                      <v-btn outline class="mr-0" @click="filterOptions.kind = defaultFilters.kind.slice()">All</v-btn>
+                      <v-btn outline class="ml-0" @click="filterOptions.kind = []">None</v-btn>
+                      <v-layout row wrap>
+                        <v-flex xs6 sm3 v-for="(kind, i) in defaultFilters.kind" :key="i">
+                          <v-checkbox :value="kind" v-model="filterOptions.kind">
+                            <div slot="label">
+                              <span style="text-transform: capitalize">{{ kind }}</span>
+                            </div>
+                          </v-checkbox>
+                        </v-flex>
+                      </v-layout>
+                    </v-flex>
+                  </v-layout>
+                  <v-layout row wrap class="pl-3 pr-3">
+                    <v-flex xs12>
+                      <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Gender</h3>
+                      <v-btn outline class="mr-0" @click="filterOptions.gender = defaultFilters.gender.slice()">All</v-btn>
+                      <v-btn outline class="ml-0" @click="filterOptions.gender = []">None</v-btn>
+                      <v-layout row wrap>
+                        <v-flex xs4 sm2 v-for="(gender, i) in defaultFilters.gender" :key="i">
+                          <v-checkbox :value="gender" v-model="filterOptions.gender">
+                            <div slot="label">
+                              <v-icon :color="getGenderInfo(gender).color">fas {{ getGenderInfo(gender).icon }}</v-icon>
+                            </div>
+                          </v-checkbox>
+                        </v-flex>
+                      </v-layout>
+                    </v-flex>
+                  </v-layout>
+                </v-card-text>
               </v-card>
             </v-expansion-panel-content>
             <v-expansion-panel-content>
@@ -164,6 +233,7 @@
 import { mapState, mapActions, mapGetters } from 'vuex';
 import UnitCard from '@/components/Multidex/Units/UnitCard';
 import UnitDialogContent from '@/components/Multidex/Units/UnitDialogContent';
+import ElementIcon from '@/components/Multidex/Units/ElementIcon';
 import debounce from 'lodash/debounce';
 
 export default {
@@ -171,6 +241,7 @@ export default {
   components: {
     'unit-info': UnitDialogContent,
     'unit-card': UnitCard,
+    'element-icon': ElementIcon,
   },
   computed: {
     ...mapState('units', ['pageDb', 'isLoading']),
@@ -225,6 +296,14 @@ export default {
         },
       };
     },
+    defaultFilters () {
+      return {
+        element: this.elements.slice(),
+        rarity: Object.keys(new Array(8).fill(0)).map(i => +i + 1),
+        gender: ['male', 'female', 'other'],
+        kind: ['normal', 'evolution', 'enhancing', 'sale'],
+      };
+    },
   },
   data () {
     return {
@@ -236,6 +315,10 @@ export default {
       },
       filterOptions: {
         name: '',
+        element: [],
+        rarity: [],
+        gender: [],
+        kind: [],
       },
       showUnitsDialog: false,
       filteredKeys: [],
@@ -291,9 +374,9 @@ export default {
     },
   },
   mounted () {
-    if (Object.keys(this.pageDb).length > 0) {
-      this.applyFilters();
-    }
+    Object.keys(this.defaultFilters).forEach(key => {
+      this.filterOptions[key] = this.defaultFilters[key].slice();
+    });
 
     if (this.unitId && !this.isLoading) {
       this.showUnitsDialog = true;
@@ -321,6 +404,22 @@ export default {
       }
       this.filteredKeys = await this.getFilteredKeys(this.filterOptions);
     }, 250),
+    getGenderInfo (gender) {
+      const icons = {
+        male: 'fa-mars',
+        female: 'fa-venus',
+        other: 'fa-genderless',
+      };
+      const colors = {
+        male: 'light-blue',
+        female: 'pink lighten-1',
+        other: 'grey',
+      };
+      return {
+        icon: icons[gender],
+        color: colors[gender],
+      };
+    },
   },
 };
 </script>
