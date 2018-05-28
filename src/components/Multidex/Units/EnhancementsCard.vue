@@ -51,8 +51,10 @@
               <v-flex xs2 md2 lg1 class="vertical-align-parent">
                 <v-checkbox class="vertical-align-container pl-1" hide-details :label="`${skill.skill.bp} SP`" :input-value="!!activeSkills[index]" @click="toggleSkill(index)"/>
               </v-flex>
-              <v-flex xs2 md2 lg1 class="text-xs-center vertical-align-parent">
-                <span class="vertical-align-container">{{ skill.category }}</span>
+              <v-flex xs2 md2 lg1 class="text-xs-center center-align-parent">
+                <span class="center-align-container">
+                  <sp-icon :category="skill.category"/>
+                </span>
               </v-flex>
               <v-flex xs8 md10 lg11 class="text-xs-left">
                 <v-layout row wrap>
@@ -69,9 +71,11 @@
                     <v-btn block v-else flat @click="showTables = showTables.filter(elem => elem !== index)">Hide Table</v-btn>
                   </v-flex>
                 </v-layout>
-                <div v-show="showTables.includes(index)">
-                  <buff-list :effects="getBuffList(skill)"/>
-                </div>
+                <v-slide-y-transition>
+                  <div v-show="showTables.includes(index)">
+                    <buff-list :effects="getBuffList(skill)"/>
+                  </div>
+                </v-slide-y-transition>
               </v-flex>
             </v-layout>
           </v-container>
@@ -90,6 +94,7 @@
 <script>
 import JsonViewer from '@/components/Multidex/JsonViewer';
 import BuffList from '@/components/Multidex/BuffList/MainTable';
+import SPIcon from '@/components/Multidex/Units/SPIcon';
 import debounce from 'lodash/debounce';
 
 export default {
@@ -97,6 +102,7 @@ export default {
   components: {
     'json-viewer': JsonViewer,
     'buff-list': BuffList,
+    'sp-icon': SPIcon,
   },
   computed: {
     feskillSum () {

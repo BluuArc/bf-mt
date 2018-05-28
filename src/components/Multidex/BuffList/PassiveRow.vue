@@ -10,7 +10,7 @@
             <span class="center-align-container">{{ prop }}</span>
           </v-flex>
         <v-flex xs9>
-          <buff-list :effects="effect[prop]" :show-headers="false"/>
+          <proc-buff-list :effects="effect[prop]" :show-headers="false"/>
         </v-flex>  
         </template>
         <template v-else>
@@ -28,12 +28,12 @@
 </template>
 
 <script>
-import BuffList from '@/components/Multidex/BuffList/MainTable';
+import ProcBuffList from '@/components/Multidex/ProcBuffList';
 
 export default {
   props: ['effect'],
   components: {
-    'buff-list': BuffList,
+    'proc-buff-list': ProcBuffList,
   },
   methods: {
     getSortedProps (effect) {

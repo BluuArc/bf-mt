@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  props: ['element', 'imgClass', 'imgStyle'],
+  props: ['element', 'imgClass'],
   computed: {
     elements: () => ['fire', 'water', 'earth', 'thunder', 'light', 'dark'],
     xClip () {
