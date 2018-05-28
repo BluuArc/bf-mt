@@ -16,14 +16,14 @@
     </v-layout>
     <template v-for="(effect, i) in effects">
       <v-layout row wrap class="buff-list-row" :key="i">
-        <v-flex xs2 sm1 class="text-xs-center id-column vertical-align-parent">
-          <span class="vertical-align-container">{{ getEffectId(effect) }}</span>
+        <v-flex xs2 sm1 class="text-xs-center id-column center-align-parent">
+          <span class="center-align-container">{{ getEffectId(effect) }}</span>
         </v-flex>
         <v-flex xs10 sm11 class="text-xs-center">
           <v-layout row v-for="(prop, j) in getSortedProps(effect).slice(1)" :key="j" class="buff-list-property-row">
             <v-flex xs3>{{ prop }}</v-flex>
-            <v-flex xs9 class="vertical-align-parent">
-              <span :class="{ 'vertical-align-container': !Array.isArray(effect[prop]) || (Array.isArray(effect[prop]) && effect[prop].length === 0) }">
+            <v-flex xs9 class="center-align-parent">
+              <span :class="{ 'center-align-container': !Array.isArray(effect[prop]) || (Array.isArray(effect[prop]) && effect[prop].length === 0) }">
                 {{ effect[prop] }}
               </span>
             </v-flex>

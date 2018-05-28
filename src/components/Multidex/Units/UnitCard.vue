@@ -2,8 +2,8 @@
   <v-card :to="to" class="unit-card">
     <v-container fluid class="pa-1" grid-list-md>
       <v-layout row>
-        <v-flex xs3 class="vertical-align-parent">
-          <div class="card__media text-xs-center vertical-align-container">
+        <v-flex xs3 class="center-align-parent">
+          <div class="card__media text-xs-center center-align-container">
             <unit-thumbnail
               :src="getImageUrls(unit.id).ills_thum"
               class="mx-auto"

@@ -198,14 +198,20 @@ html {
   --border-color: var(--border-color-dark);
 }
 
-.vertical-align-parent {
+.vertical-align-parent, .center-align-parent {
   position: relative;
 }
 
 .vertical-align-container {
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
+}
+
+.center-align-container {
+  position: absolute;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 </style>
