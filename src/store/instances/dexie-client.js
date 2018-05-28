@@ -8,6 +8,7 @@ const wrapper = {
   get: (table, query) => pw.postMessage({ command: 'get', args: [table, query] }),
   getFieldInEntry: (table, query, field) => pw.postMessage({ command: 'getFieldInEntry', args: [table, query, field] }),
   getFieldKeyLength: (table, query, field) => pw.postMessage({ command: 'getFieldKeyLength', args: [table, query, field] }),
+  getFieldKeys: (table, query, field) => pw.postMessage({ command: 'getFieldKeys', args: [table, query, field] }),
   getById: (table, query, field, id) => pw.postMessage({ command: 'getById', args: [table, query, field, id] }),
   setTable: makeWorker,
 };
@@ -19,6 +20,7 @@ function makeWorker (table) {
     get: query => wrapper.get(table, query),
     getFieldInEntry: (query, field) => wrapper.getFieldInEntry(table, query, field),
     getFieldKeyLength: (query, field) => wrapper.getFieldKeyLength(table, query, field),
+    getFieldKeys: (query, field) => wrapper.getFieldKeys(table, query, field),
     getById: (query, field, id) => wrapper.getById(table, query, field, id),
   };
 

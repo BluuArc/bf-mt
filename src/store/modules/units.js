@@ -1,6 +1,8 @@
 import { unitWorker } from '../instances/dexie-client';
 import downloadWorker from '../instances/download-worker';
 import { createState, createMutations, createActions } from './db.common';
+import union from 'lodash/union';
+import sortedIndexOf from 'lodash/sortedIndexOf';
 
 const unitsStore = {
   namespaced: true,
@@ -63,7 +65,7 @@ const unitsStore = {
       console.debug('finished updating data');
       commit('setLoadState', false);
     },
-    async getFilteredKeys ({ dispatch, state }, filters = {}) {
+    async getFilteredKeys ({ dispatch, state, commit }, filters = {}) {
       // TODO: add call for advanced filtering using dexie-client worker
       console.debug(filters);
       const keys = Object.keys(state.pageDb);
@@ -72,7 +74,23 @@ const unitsStore = {
       }
 
       // get local filters
-      const { name = '', element = [], kind = [], gender = [], rarity = [] } = filters;
+      const { name = '', element = [], kind = [], gender = [], rarity = [], exclusives = [] } = filters;
+      let otherKeys = [];
+      const filtersChanged = state.asyncFilters.exclusives !== exclusives.concat([state.activeServer]).join('-');
+      // possible values: exlusive, non-exclusive
+      // length or 2 or 0 => no need to retrieve
+      if (exclusives.length === 1 && filtersChanged) {
+        const servers = ['gl', 'eu', 'jp'].filter(s => s !== state.activeServer);
+        const serverKeys = await Promise.all(servers.map(server => unitWorker.getFieldKeys({ server }, 'data')));
+        otherKeys = union(...serverKeys).map(i => +i).sort((a, b) => a - b);
+      } else if (!filtersChanged) {
+        otherKeys = state.asyncFilters['exclusives-data'];
+      }
+      // console.debug({ otherKeys });
+      if (filtersChanged) {
+        commit('setAsyncFilter', { name: 'exclusives', data: exclusives.concat([state.activeServer]).join('-') });
+        commit('setAsyncFilter', { name: 'exclusives-data', data: otherKeys });
+      }
       return keys.filter(key => {
         const entry = state.pageDb[key];
         const fitsName = (!name ? true : entry.name.toLowerCase().includes(name.toLowerCase()));
@@ -84,7 +102,10 @@ const unitsStore = {
         const kindEntry = (entry.kind === 'evo' ? 'enhancing' : entry.kind === 'enhancing' ? 'evolution' : entry.kind);
         const fitsKind = kind.includes(kindEntry);
 
-        return fitsName && fitsElement && fitsKind && fitsGender && fitsRarity;
+        const isInOtherServer = sortedIndexOf(otherKeys, entry.id) > -1;
+        const fitsExclusive = (exclusives.length !== 1 ? exclusives.length === 2 : ((exclusives[0] === 'exclusive' && !isInOtherServer) || (exclusives[0] === 'non-exclusive' && isInOtherServer)));
+
+        return fitsName && fitsElement && fitsKind && fitsGender && fitsRarity && fitsExclusive;
       });
     },
   },

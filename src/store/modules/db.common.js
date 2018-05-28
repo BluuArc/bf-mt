@@ -10,6 +10,7 @@ export const createState = () => {
     activeServer: 'gl',
     pageDb: {},
     isLoading: true,
+    asyncFilters: {},
     cacheTimes: {
       gl: new Date('Jan 01 1969'),
       eu: new Date('Jan 01 1969'),
@@ -37,6 +38,9 @@ export const createMutations = () => {
       }
       state.numEntries[server] = length;
       state.cacheTimes[server] = updateTime;
+    },
+    setAsyncFilter (state, { name = '', data = {} }) {
+      state.asyncFilters[name] = data;
     },
   };
 };

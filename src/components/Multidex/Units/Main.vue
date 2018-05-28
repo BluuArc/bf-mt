@@ -73,6 +73,9 @@
                       <span v-if="filterOptions.gender.length === 1">Only</span>
                     </span>
                   </v-chip>
+                  <v-chip small v-show="filterOptions.exclusives.length < defaultFilters.exclusives.length" style="text-transform: capitalize">
+                    {{ filterOptions.exclusives[0] }}s Only
+                  </v-chip>
                 </v-layout>
               </div>
               <v-card class="filter-area">
@@ -142,6 +145,24 @@
                             </div>
                           </v-checkbox>
                         </v-flex>
+                      </v-layout>
+                    </v-flex>
+                  </v-layout>
+                  <v-layout row wrap class="pl-3 pr-3">
+                    <v-flex xs12>
+                      <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Server Exclusives</h3>
+                      <v-layout row>
+                        <v-radio-group v-model="filterOptions.exclusives" :row="$vuetify.breakpoint.mdAndUp">
+                          <v-radio
+                            :value="defaultFilters.exclusives"
+                            label="All"/>
+                          <v-radio
+                            :value="['exclusive']"
+                            label="Exclusives Only"/>
+                          <v-radio
+                            :value="['non-exclusive']"
+                            label="Non-Exclusives Only"/>
+                        </v-radio-group>
                       </v-layout>
                     </v-flex>
                   </v-layout>
@@ -234,7 +255,11 @@
           </span>
         </v-btn>
       </v-flex>
-      <v-flex xs12>
+      <v-flex xs12 class="text-xs-center pt-5" v-if="loadingFilters">
+        <v-progress-circular indeterminate/>
+        <h4 class="subheading">Searching for units with specified filters.</h4>
+      </v-flex>
+      <v-flex xs12 v-else>
         <v-container fluid grid-list-lg>
           <v-layout row wrap>
             <v-flex
@@ -297,7 +322,18 @@ export default {
     ...mapState('units', ['pageDb', 'isLoading']),
     ...mapGetters('units', ['getImageUrls']),
     allSortedUnits () {
-      return this.sortTypes[this.sortOptions.type](this.filteredKeys);
+      if (this.isLoading || this.loadingFilters) {
+        return [];
+      }
+      // console.warn('starting sort', this.filteredKeys);
+      try {
+        const result = this.sortTypes[this.sortOptions.type](this.filteredKeys);
+        // console.warn('finish sort');
+        return result;
+      } catch (err) {
+        console.error('error sorting', err);
+        return this.filteredKeys;
+      }
     },
     numPages () {
       return Math.ceil(this.allSortedUnits.length / this.amountPerPage);
@@ -340,7 +376,7 @@ export default {
             const [elementA, elementB] = [this.pageDb[idA].element, this.pageDb[idB].element];
             const indexA = this.elements.indexOf(elementA);
             const indexB = this.elements.indexOf(elementB);
-            const result = indexA === indexB ? (+idA - +idB) : (indexA - indexB);
+            const result = indexA === indexB ? (+this.pageDb[idA].guide_id - +this.pageDb[idB].guide_id) : (indexA - indexB);
             return this.sortOptions.isAscending ? result : -result;
           });
         },
@@ -352,6 +388,7 @@ export default {
         rarity: Object.keys(new Array(8).fill(0)).map(i => +i + 1),
         gender: ['male', 'female', 'other'],
         kind: ['normal', 'evolution', 'enhancing', 'sale'],
+        exclusives: ['exclusive', 'non-exclusive'],
       };
     },
     hasFilters () {
@@ -375,9 +412,11 @@ export default {
         rarity: [],
         gender: [],
         kind: [],
+        exclusives: [],
       },
       showUnitsDialog: false,
       filteredKeys: [],
+      loadingFilters: false,
     };
   },
   watch: {
@@ -451,12 +490,18 @@ export default {
         this.pageIndex += 1;
       }
     },
-    applyFilters: debounce(async function () {
-      if (Object.keys(this.pageDb).length === 0) {
-        return [];
-      }
-      this.filteredKeys = await this.getFilteredKeys(this.filterOptions);
-    }, 250),
+    applyFilters () {
+      this.filteredKeys = [];
+      debounce(async () => {
+        if (Object.keys(this.pageDb).length === 0) {
+          this.filteredKeys = [];
+          return;
+        }
+        this.loadingFilters = true;
+        this.filteredKeys = await this.getFilteredKeys(this.filterOptions);
+        this.loadingFilters = false;
+      }, 250)();
+    },
     getGenderInfo (gender) {
       const icons = {
         male: 'fa-mars',
@@ -477,6 +522,7 @@ export default {
       Object.keys(this.defaultFilters).forEach(key => {
         this.filterOptions[key] = this.defaultFilters[key].slice();
       });
+      this.filterOptions.exclusives = this.defaultFilters.exclusives;
       this.filterOptions.name = '';
     },
   },

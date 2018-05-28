@@ -27,6 +27,10 @@ const dbWrapper = {
     .then(results => {
       return (results.length === 0) ? 0 : Object.keys(results[0][fieldName]).length;
     }),
+  getFieldKeys: (table, whereQuery, fieldName) => defaultGet(table, whereQuery)
+    .then(results => {
+      return (results.length === 0) ? 0 : Object.keys(results[0][fieldName]);
+    }),
   getById: (table, query, field, id) => defaultGet(table, query)
     .then(results => {
       return (results.length === 0) ? undefined : (results[0][field] ? results[0][field][id] : undefined);
