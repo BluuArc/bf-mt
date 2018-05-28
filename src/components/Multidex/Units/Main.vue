@@ -327,7 +327,8 @@ export default {
       }
       // console.warn('starting sort', this.filteredKeys);
       try {
-        const result = this.sortTypes[this.sortOptions.type](this.filteredKeys);
+        // const result = this.sortTypes[this.sortOptions.type](this.filteredKeys);
+        const result = this.filteredKeys.slice().sort(this.sortTypes[this.sortOptions.type]);
         // console.warn('finish sort');
         return result;
       } catch (err) {
@@ -345,40 +346,30 @@ export default {
     elements: () => ['fire', 'water', 'earth', 'thunder', 'light', 'dark'],
     sortTypes () {
       return {
-        'Unit ID': (keys = []) => {
-          return keys.slice().sort((idA, idB) => {
-            const result = (+idA - +idB);
-            return this.sortOptions.isAscending ? result : -result;
-          });
+        'Unit ID': (idA, idB) => {
+          const result = (+idA - +idB);
+          return this.sortOptions.isAscending ? result : -result;
         },
-        'Guide ID': (keys = []) => {
-          return keys.slice().sort((idA, idB) => {
-            const result = +this.pageDb[idA].guide_id - +this.pageDb[idB].guide_id;
-            return this.sortOptions.isAscending ? result : -result;
-          });
+        'Guide ID': (idA, idB) => {
+          const result = +this.pageDb[idA].guide_id - +this.pageDb[idB].guide_id;
+          return this.sortOptions.isAscending ? result : -result;
         },
-        Alphabetical: (keys = []) => {
-          return keys.slice().sort((idA, idB) => {
-            const [nameA, nameB] = [this.pageDb[idA].name, this.pageDb[idB].name];
-            const result = (nameA > nameB) ? 1 : -1;
-            return this.sortOptions.isAscending ? result : -result;
-          });
+        Alphabetical: (idA, idB) => {
+          const [nameA, nameB] = [this.pageDb[idA].name, this.pageDb[idB].name];
+          const result = (nameA > nameB) ? 1 : -1;
+          return this.sortOptions.isAscending ? result : -result;
         },
-        Rarity: (keys = []) => {
-          return keys.slice().sort((idA, idB) => {
-            const [rarityA, rarityB] = [+this.pageDb[idA].rarity, +this.pageDb[idB].rarity];
-            const result = rarityA === rarityB ? (+idA - +idB) : (rarityA - rarityB);
-            return this.sortOptions.isAscending ? result : -result;
-          });
+        Rarity: (idA, idB) => {
+          const [rarityA, rarityB] = [+this.pageDb[idA].rarity, +this.pageDb[idB].rarity];
+          const result = rarityA === rarityB ? (+idA - +idB) : (rarityA - rarityB);
+          return this.sortOptions.isAscending ? result : -result;
         },
-        Element: (keys = []) => {
-          return keys.slice().sort((idA, idB) => {
-            const [elementA, elementB] = [this.pageDb[idA].element, this.pageDb[idB].element];
-            const indexA = this.elements.indexOf(elementA);
-            const indexB = this.elements.indexOf(elementB);
-            const result = indexA === indexB ? (+this.pageDb[idA].guide_id - +this.pageDb[idB].guide_id) : (indexA - indexB);
-            return this.sortOptions.isAscending ? result : -result;
-          });
+        Element: (idA, idB) => {
+          const [elementA, elementB] = [this.pageDb[idA].element, this.pageDb[idB].element];
+          const indexA = this.elements.indexOf(elementA);
+          const indexB = this.elements.indexOf(elementB);
+          const result = indexA === indexB ? (+idA - +idB) : (indexA - indexB);
+          return this.sortOptions.isAscending ? result : -result;
         },
       };
     },
