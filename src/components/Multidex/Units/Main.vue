@@ -26,8 +26,53 @@
           <v-expansion-panel>
             <v-expansion-panel-content>
               <div slot="header">
-                <v-layout row>
-                  Filters
+                <v-layout row wrap>
+                  <span style="align-self: center">Filters</span>
+                  <v-chip small v-show="filterOptions.element.length < defaultFilters.element.length" style="text-transform: capitalize">
+                    <span v-if="filterOptions.element.length === 0">
+                      No Elements
+                    </span>
+                    <span v-else>
+                      <element-icon v-for="element in filterOptions.element" :element="element" :key="element" class="ml-1"/>
+                      <span v-if="filterOptions.element.length === 1">Only</span>
+                    </span>
+                  </v-chip>
+                  <v-chip small v-show="filterOptions.rarity.length < defaultFilters.rarity.length" style="text-transform: capitalize">
+                    <span v-if="filterOptions.rarity.length === 1">
+                      <span v-if="filterOptions.rarity[0] < 8">
+                        <b>{{ filterOptions.rarity[0] }}</b>
+                        <img class="icon bf" src="@/assets/star_rare.png" height="18px" style="margin-top: -0.25rem;"/>
+                      </span>
+                      <img v-else class="icon bf" src="@/assets/phantom_icon.png" height="18px"/>
+                      Only
+                    </span>
+                    <span v-else-if="filterOptions.rarity.length === 0">
+                      No rarity
+                    </span>
+                    <span v-else>
+                      {{ filterOptions.rarity.length }} Different Rarities
+                    </span>
+                  </v-chip>
+                  <v-chip small v-show="filterOptions.kind.length < defaultFilters.kind.length" style="text-transform: capitalize">
+                    <span v-if="filterOptions.kind.length === 0">
+                      No Types
+                    </span>
+                    <span v-else-if="filterOptions.kind.length === 1">
+                      {{ filterOptions.kind[0] }} Only
+                    </span>
+                    <span v-else>
+                      {{ filterOptions.kind.length }} Types
+                    </span>
+                  </v-chip>
+                  <v-chip small v-show="filterOptions.gender.length < defaultFilters.gender.length" style="text-transform: capitalize">
+                    <span v-if="filterOptions.gender.length === 0">
+                      No Genders
+                    </span>
+                    <span v-else>
+                      <v-icon v-for="gender in filterOptions.gender" :key="gender" :color="getGenderInfo(gender).color">fas {{ getGenderInfo(gender).icon }}</v-icon>
+                      <span v-if="filterOptions.gender.length === 1">Only</span>
+                    </span>
+                  </v-chip>
                 </v-layout>
               </div>
               <v-card class="filter-area">
