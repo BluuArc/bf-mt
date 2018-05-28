@@ -150,8 +150,10 @@
             </v-expansion-panel-content>
             <v-expansion-panel-content>
               <div slot="header">
-                <v-layout row>
-                  Sort
+                <v-layout row wrap>
+                  <span style="align-self: center">Sort</span>
+                  <v-chip small>{{ sortOptions.type }}</v-chip>
+                  <v-chip small>{{ sortOptions.isAscending ? 'Ascending' : 'Descending' }}</v-chip>
                 </v-layout>
               </div>
               <v-card>
@@ -181,7 +183,10 @@
           </v-expansion-panel>
         </v-card>
       </v-flex>
-      <v-flex xs6 offset-xs6 class="text-xs-right mt-2 pr-3">
+      <v-flex xs6 class="pl-3">
+        <v-btn v-show="hasFilters" flat @click="resetFilters" small class="pa-0">Reset Filters</v-btn>
+      </v-flex>
+      <v-flex xs6 class="text-xs-right mt-2 pr-3">
         <v-menu offset-y :close-on-content-click="false">
           <div slot="activator">
             <span>Page {{ pageIndex + 1 }} of {{ numPages }}</span>
@@ -349,6 +354,12 @@ export default {
         kind: ['normal', 'evolution', 'enhancing', 'sale'],
       };
     },
+    hasFilters () {
+      return !!this.filterOptions.name ||
+        Object.keys(this.defaultFilters)
+        .map(key => this.filterOptions[key].length !== this.defaultFilters[key].length)
+        .reduce((acc, val) => acc || val, false);
+    },
   },
   data () {
     return {
@@ -419,10 +430,7 @@ export default {
     },
   },
   mounted () {
-    Object.keys(this.defaultFilters).forEach(key => {
-      this.filterOptions[key] = this.defaultFilters[key].slice();
-    });
-
+    this.resetFilters();
     if (this.unitId && !this.isLoading) {
       this.showUnitsDialog = true;
     }
@@ -464,6 +472,12 @@ export default {
         icon: icons[gender],
         color: colors[gender],
       };
+    },
+    resetFilters () {
+      Object.keys(this.defaultFilters).forEach(key => {
+        this.filterOptions[key] = this.defaultFilters[key].slice();
+      });
+      this.filterOptions.name = '';
     },
   },
 };
