@@ -7,13 +7,47 @@
       </v-flex>
     </v-layout>
     <v-layout row wrap v-else>
-      <v-flex class="pl-3 pr-3" xs12>
-        <v-text-field v-model="filterOptions.name" label="Search"/>
+      <v-flex xs12>
+        <v-card raised class="mr-3 ml-3">
+          <v-card-text>
+            <v-container fluid class="pa-0">
+              <v-layout row>
+                <v-flex xs8>
+                  <v-text-field v-model="filterOptions.name" label="Search"/>
+                </v-flex>
+                <v-flex xs4 class="center-align-parent text-xs-center">
+                  <span class="center-align-container">Showing {{ allSortedUnits.length }} Units</span>
+                </v-flex>
+              </v-layout>
+              <v-layout row>
+              </v-layout>
+            </v-container>
+          </v-card-text>
+          <v-expansion-panel>
+            <v-expansion-panel-content>
+              <div slot="header">
+                <v-layout row>
+                  Filters
+                </v-layout>
+              </div>
+              <v-card>
+                Filters go here
+              </v-card>
+            </v-expansion-panel-content>
+            <v-expansion-panel-content>
+              <div slot="header">
+                <v-layout row>
+                  Sort
+                </v-layout>
+              </div>
+              <v-card>
+                Sorting options go here
+              </v-card>
+            </v-expansion-panel-content>
+          </v-expansion-panel>
+        </v-card>
       </v-flex>
-      <v-flex xs6 class="pl-3">
-        Showing {{ allSortedUnits.length }} Units
-      </v-flex>
-      <v-flex xs6 class="text-xs-right pr-3">
+      <v-flex xs6 offset-xs6 class="text-xs-right mt-2 pr-3">
         <v-menu offset-y :close-on-content-click="false">
           <div slot="activator">
             <span>Page {{ pageIndex + 1 }} of {{ numPages }}</span>
@@ -32,10 +66,10 @@
                 </v-layout>
                 <v-layout row>
                   <v-flex xs6 class="text-xs-center">
-                    <v-btn block flat @click="pageIndex = 0">Go to First Page</v-btn>
+                    <v-btn block flat @click="pageIndex = 0">First Page</v-btn>
                   </v-flex>
                   <v-flex xs6 class="text-xs-center">
-                    <v-btn block flat @click="pageIndex = numPages - 1">Go to Last Page</v-btn>
+                    <v-btn block flat @click="pageIndex = numPages - 1">Last Page</v-btn>
                   </v-flex>
                 </v-layout>
               </v-container>
