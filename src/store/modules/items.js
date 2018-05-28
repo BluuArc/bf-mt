@@ -19,7 +19,11 @@ const itemStore = {
         jp: 'http://cdn.android.brave.a-lim.jp',
       };
       const baseUrl = `${cdnUrls[state.activeServer]}/item`;
-      return `${baseUrl}/${state.pageDb[id].thumbnail}`;
+      if (state.pageDb.hasOwnProperty(id)) {
+        return `${baseUrl}/${state.pageDb[id].thumbnail}`;
+      } else {
+        return baseUrl;
+      }
     },
   },
   actions: {

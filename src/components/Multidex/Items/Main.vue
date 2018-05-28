@@ -17,14 +17,31 @@
 
 <script>
 import { mapState, mapActions, mapGetters } from 'vuex';
+import debounce from 'lodash/debounce';
+
 export default {
   props: ['query', 'itemId'],
   computed: {
     ...mapState('items', ['pageDb', 'isLoading']),
     ...mapGetters('items', ['getImageUrl']),
   },
+  watch: {
+    isLoading (newValue) {
+      if (!newValue) {
+        this.initDb();
+      }
+    },
+  },
+  created () {
+    if (!this.isLoading) {
+      this.initDb();
+    }
+  },
   methods: {
-    ...mapActions('items', ['getFilteredKeys']),
+    ...mapActions('items', ['getFilteredKeys', 'ensurePageDbSyncWithServer']),
+    initDb: debounce(function () {
+      this.ensurePageDbSyncWithServer();
+    }, 50),
   },
 };
 </script>

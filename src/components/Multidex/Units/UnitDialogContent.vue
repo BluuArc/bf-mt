@@ -103,10 +103,10 @@
                       <v-flex xs4 style="margin: auto;">
                         <template v-for="(mat, i) in evo.mats">
                           <router-link v-if="mat.type === 'unit'" :to="`/multidex/units?unitId=${mat.id}`" :key="i">
-                            <img align="middle" height="64px" :src="getUnitImages(mat.id).ills_thum"/>
+                            <img align="middle" height="64px" :title="mat.name" :alt="mat.name" :src="getUnitImages(mat.id).ills_thum"/>
                           </router-link>  
                           <router-link v-else :to="`/multidex/items?itemId=${mat.id}`" :key="i">
-                            <img align="middle" height="64px" :src="getItemImage(mat.id)"/>
+                            <img align="middle" height="64px" :title="mat.name" :alt="mat.name" :src="getItemImage(mat.id)"/>
                           </router-link>  
                         </template>
                       </v-flex>

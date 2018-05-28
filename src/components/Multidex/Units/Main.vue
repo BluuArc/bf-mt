@@ -467,19 +467,22 @@ export default {
       },
     },
   },
+  created () {
+    if (!this.isLoading) {
+      this.initDb();
+    }
+  },
   mounted () {
     this.resetFilters();
     if (this.unitId && !this.isLoading) {
       this.showUnitsDialog = true;
     }
-
-    if (!this.isLoading) {
-      this.initDb();
-    }
   },
   methods: {
     ...mapActions('units', ['getFilteredKeys', 'ensurePageDbSyncWithServer']),
+    ...mapActions('items', { itemsDbSync: 'ensurePageDbSyncWithServer' }),
     initDb: debounce(function () {
+      this.itemsDbSync();
       this.ensurePageDbSyncWithServer();
     }, 50),
     decrementPage () {

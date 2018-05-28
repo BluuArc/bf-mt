@@ -17,13 +17,30 @@
 
 <script>
 import { mapState, mapActions } from 'vuex';
+import debounce from 'lodash/debounce';
+
 export default {
   props: ['query', 'leaderId'],
   computed: {
     ...mapState('leaderSkills', ['pageDb', 'isLoading']),
   },
+  watch: {
+    isLoading (newValue) {
+      if (!newValue) {
+        this.initDb();
+      }
+    },
+  },
+  created () {
+    if (!this.isLoading) {
+      this.initDb();
+    }
+  },
   methods: {
-    ...mapActions('leaderSkills', ['getFilteredKeys']),
+    ...mapActions('leaderSkills', ['getFilteredKeys', 'ensurePageDbSyncWithServer']),
+    initDb: debounce(function () {
+      this.ensurePageDbSyncWithServer();
+    }, 50),
   },
 };
 </script>

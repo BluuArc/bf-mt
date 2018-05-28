@@ -171,8 +171,10 @@ export default {
       }
     },
   },
-  mounted () {
+  created () {
     this.init();
+  },
+  mounted () {
     this.pageActiveServer = this.activeServer;
   },
   name: 'App',
