@@ -154,13 +154,13 @@
                       <v-layout row>
                         <v-radio-group v-model="filterOptions.exclusives" :row="$vuetify.breakpoint.mdAndUp">
                           <v-radio
-                            :value="defaultFilters.exclusives"
+                            :value="exclusiveFilterOptions.all"
                             label="All"/>
                           <v-radio
-                            :value="['exclusive']"
+                            :value="exclusiveFilterOptions.exclusive"
                             label="Exclusives Only"/>
                           <v-radio
-                            :value="['non-exclusive']"
+                            :value="exclusiveFilterOptions.nonExclusive"
                             label="Non-Exclusives Only"/>
                         </v-radio-group>
                       </v-layout>
@@ -388,7 +388,14 @@ export default {
         rarity: Object.keys(new Array(8).fill(0)).map(i => +i + 1),
         gender: ['male', 'female', 'other'],
         kind: ['normal', 'evolution', 'enhancing', 'sale'],
-        exclusives: ['exclusive', 'non-exclusive'],
+        exclusives: this.exclusiveFilterOptions.all,
+      };
+    },
+    exclusiveFilterOptions () {
+      return {
+        all: ['exclusive', 'non-exclusive'],
+        exclusive: ['exclusive'],
+        nonExclusive: ['non-exclusive'],
       };
     },
     hasFilters () {
