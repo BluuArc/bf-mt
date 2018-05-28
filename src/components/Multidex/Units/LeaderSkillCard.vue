@@ -21,7 +21,7 @@
           </template>
         </v-tab-item>
         <v-tab-item v-if="leaderSkill" :key="getLabelIndex('JSON')">
-          <json-viewer :json="leaderSkill"/>
+          <json-viewer :json="leaderSkill" :change-view="activeTab"/>
         </v-tab-item>
       </v-tabs-items>
     </v-card-text>

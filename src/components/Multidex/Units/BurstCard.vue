@@ -57,7 +57,7 @@
            </v-expansion-panel>
         </v-tab-item>
         <v-tab-item v-if="burst" :key="getLabelIndex('JSON')">
-          <json-viewer :json="burst"/>
+          <json-viewer :json="burst" :change-view="activeTab"/>
         </v-tab-item>
       </v-tabs-items>
     </v-card-text>
