@@ -16,18 +16,24 @@ export const createState = () => {
       eu: new Date('Jan 01 1969'),
       jp: new Date('Jan 01 1969'),
     },
+    activeServerSymbol: Symbol('activeServer'),
   };
 };
 
 export const createMutations = () => {
   return {
-    setActiveServer (state, { data = {}, server = 'gl' }) {
+    setActiveServer (state, { data = {}, server = 'gl', commitData = true, needsReload = false }) {
       if (!isValidServer(server)) {
         throw Error(`Invalid server "${server}"`);
       }
       state.activeServer = server;
-      state.pageDb = data;
-      state.numEntries[server] = Object.keys(data).length;
+      if (commitData) {
+        state.pageDb = data;
+        state.pageDb[state.activeServerSymbol] = server;
+        state.numEntries[server] = Object.keys(data).length;
+      } else if (needsReload) {
+        state.pageDb[state.activeServerSymbol] = '';
+      }
     },
     setLoadState (state, mode) {
       state.isLoading = !!mode;
@@ -68,9 +74,16 @@ export const createActions = (worker) => {
       }
 
       commit('setLoadState', true);
-      const data = await dispatch('getMiniDb', server);
-      commit('setActiveServer', { server, data });
+      commit('setActiveServer', { server, commitData: false, needsReload: true });
       commit('setLoadState', false);
+    },
+    async ensurePageDbSyncWithServer ({ commit, dispatch, state }) {
+      if (state.pageDb[state.activeServerSymbol] !== state.activeServer) {
+        commit('setLoadState', true);
+        const data = await dispatch('getMiniDb', state.activeServer);
+        commit('setActiveServer', { server: state.activeServer, data });
+        commit('setLoadState', false);
+      }
     },
     async saveData ({ commit, dispatch, state }, { data = {}, server = 'gl', updateTime = new Date() }) {
       await worker.put({

@@ -442,6 +442,7 @@ export default {
       }
 
       if (!newValue) {
+        this.initDb();
         this.applyFilters();
       }
     },
@@ -471,9 +472,16 @@ export default {
     if (this.unitId && !this.isLoading) {
       this.showUnitsDialog = true;
     }
+
+    if (!this.isLoading) {
+      this.initDb();
+    }
   },
   methods: {
-    ...mapActions('units', ['getFilteredKeys']),
+    ...mapActions('units', ['getFilteredKeys', 'ensurePageDbSyncWithServer']),
+    initDb: debounce(function () {
+      this.ensurePageDbSyncWithServer();
+    }, 50),
     decrementPage () {
       if (this.pageIndex <= 0) {
         this.pageIndex = 0;
