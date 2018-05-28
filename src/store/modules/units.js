@@ -1,8 +1,8 @@
 import { unitWorker } from '../instances/dexie-client';
 import downloadWorker from '../instances/download-worker';
+import SWorker from '../../assets/sww.min';
 import { createState, createMutations, createActions } from './db.common';
 import union from 'lodash/union';
-import sortedIndexOf from 'lodash/sortedIndexOf';
 
 const unitsStore = {
   namespaced: true,
@@ -74,7 +74,7 @@ const unitsStore = {
       }
 
       // get local filters
-      const { name = '', element = [], kind = [], gender = [], rarity = [], exclusives = [] } = filters;
+      const { exclusives = [] } = filters;
       let otherKeys = [];
       const filtersChanged = state.asyncFilters.exclusives !== exclusives.concat([state.activeServer]).join('-');
       // possible values: exlusive, non-exclusive
@@ -91,22 +91,28 @@ const unitsStore = {
         commit('setAsyncFilter', { name: 'exclusives', data: exclusives.concat([state.activeServer]).join('-') });
         commit('setAsyncFilter', { name: 'exclusives-data', data: otherKeys });
       }
-      return keys.filter(key => {
-        const entry = state.pageDb[key];
-        const fitsName = (!name ? true : entry.name.toLowerCase().includes(name.toLowerCase()));
-        const fitsElement = element.includes(entry.element);
-        const fitsGender = gender.includes(entry.gender);
-        const fitsRarity = rarity.includes(entry.rarity);
 
-        // need to flip evo/enhancing as they're marked wrong in the data at time of writing
-        const kindEntry = (entry.kind === 'evo' ? 'enhancing' : entry.kind === 'enhancing' ? 'evolution' : entry.kind);
-        const fitsKind = kind.includes(kindEntry);
+      const result = await SWorker.run((keys, filters, otherKeys, pageDb) => {
+        const { name = '', element = [], kind = [], gender = [], rarity = [], exclusives = [] } = filters;
+        return keys.filter(key => {
+          const entry = pageDb[key];
+          const fitsName = (!name ? true : entry.name.toLowerCase().includes(name.toLowerCase()));
+          const fitsElement = element.includes(entry.element);
+          const fitsGender = gender.includes(entry.gender);
+          const fitsRarity = rarity.includes(entry.rarity);
 
-        const isInOtherServer = sortedIndexOf(otherKeys, entry.id) > -1;
-        const fitsExclusive = (exclusives.length !== 1 ? exclusives.length === 2 : ((exclusives[0] === 'exclusive' && !isInOtherServer) || (exclusives[0] === 'non-exclusive' && isInOtherServer)));
+          // need to flip evo/enhancing as they're marked wrong in the data at time of writing
+          const kindEntry = (entry.kind === 'evo' ? 'enhancing' : entry.kind === 'enhancing' ? 'evolution' : entry.kind);
+          const fitsKind = kind.includes(kindEntry);
 
-        return fitsName && fitsElement && fitsKind && fitsGender && fitsRarity && fitsExclusive;
-      });
+          // const isInOtherServer = sortedIndexOf(otherKeys, entry.id) > -1;
+          const isInOtherServer = otherKeys.includes(entry.id);
+          const fitsExclusive = (exclusives.length !== 1 ? exclusives.length === 2 : ((exclusives[0] === 'exclusive' && !isInOtherServer) || (exclusives[0] === 'non-exclusive' && isInOtherServer)));
+
+          return fitsName && fitsElement && fitsKind && fitsGender && fitsRarity && fitsExclusive;
+        });
+      }, [keys, filters, otherKeys, state.pageDb]);
+      return result;
     },
   },
 };
