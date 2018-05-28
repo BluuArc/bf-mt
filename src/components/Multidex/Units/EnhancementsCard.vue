@@ -67,8 +67,8 @@
                     </div>
                   </v-flex>
                   <v-flex xs12 sm4 class="text-xs-right">
-                    <v-btn block v-if="!showTables.includes(index)" flat @click="showTables.push(index)">Show Table</v-btn>
-                    <v-btn block v-else flat @click="showTables = showTables.filter(elem => elem !== index)">Hide Table</v-btn>
+                    <v-btn block v-if="!showTables.includes(index)" flat @click="showTables.push(index)">Show Data</v-btn>
+                    <v-btn block v-else flat @click="showTables = showTables.filter(elem => elem !== index)">Hide Data</v-btn>
                   </v-flex>
                 </v-layout>
                 <v-slide-y-transition>
@@ -81,7 +81,19 @@
           </v-container>
         </v-tab-item>
         <v-tab-item key="share">
-          share build here
+          <v-container fluid>
+            <v-layout row wrap>
+              <v-flex xs12 md6>
+                <v-checkbox v-model="copyName" label="Add Unit Name" hide-details/>
+              </v-flex>
+              <v-flex xs12 md6>
+                <v-checkbox v-model="copyBullets" label="Add Bullet Points" hide-details/>
+              </v-flex>
+            </v-layout>
+            <v-layout row>
+              <text-viewer :input-text="sharedText" :change-view="`${activeTab}-${copyName}-${copyBullets}`"/>
+            </v-layout>
+          </v-container>
         </v-tab-item>
         <v-tab-item key="json">
           <json-viewer :json="unit.feskills" :change-view="activeTab"/>
@@ -93,6 +105,7 @@
 
 <script>
 import JsonViewer from '@/components/Multidex/JsonViewer';
+import TextViewer from '@/components/Multidex/TextViewer';
 import BuffList from '@/components/Multidex/BuffList/MainTable';
 import SPIcon from '@/components/Multidex/Units/SPIcon';
 import debounce from 'lodash/debounce';
@@ -101,6 +114,7 @@ export default {
   props: ['unit'],
   components: {
     'json-viewer': JsonViewer,
+    'text-viewer': TextViewer,
     'buff-list': BuffList,
     'sp-icon': SPIcon,
   },
@@ -129,7 +143,21 @@ export default {
       activeTab: '',
       activeSkillSum: 0,
       showTables: [],
+      sharedText: '',
+      copyName: false,
+      copyBullets: false,
     };
+  },
+  watch: {
+    copyName () {
+      this.computeSharedText();
+    },
+    copyBullets () {
+      this.computeSharedText();
+    },
+  },
+  mounted () {
+    this.toggleSkill(0, false);
   },
   methods: {
     toggleOverallState () {
@@ -155,7 +183,30 @@ export default {
         this.uncheckSkillDependencyBoxes(skill);
       }
       this.computeActiveSum();
+      this.computeSharedText();
     },
+    computeSharedText: debounce(function () {
+      const activeSkills = Object.keys(this.activeSkills)
+        .filter(key => this.activeSkills[key]);
+      if (activeSkills.length > 0) {
+        const skills = activeSkills.map(key => this.unit.feskills[key])
+          .map((skill) => {
+            const cost = skill.skill.bp;
+            const desc = skill.skill.desc || skill.skill.name;
+            const bullet = this.copyBullets ? '* ' : '';
+            return `${bullet}[${cost} SP] - ${desc}`;
+          }).join('\n')
+          .concat(`\n\nTotal: ${this.activeSkillSum} SP`);
+
+        if (this.copyName) {
+          this.sharedText = `${this.unit.name}\n\n`.concat(skills);
+        } else {
+          this.sharedText = skills;
+        }
+      } else {
+        this.sharedText = 'No SP enhancements selected';
+      }
+    }, 50),
     computeActiveSum: debounce(function () {
       this.activeSkillSum = Object.keys(this.activeSkills)
         .filter(key => this.activeSkills[key])
