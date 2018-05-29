@@ -8,7 +8,182 @@
     </v-layout>
     <v-layout row wrap v-else>
       <v-flex xs12>
-        <v-text-field v-model="filterOptions.name" label="Search"/>
+        <v-card raised class="mr-3 ml-3">
+          <v-card-text>
+            <v-container fluid class="pa-0">
+              <v-layout row>
+                <v-flex xs8>
+                  <v-text-field v-model="filterOptions.name" label="Search"/>
+                </v-flex>
+                <v-flex xs4 class="center-align-parent text-xs-center">
+                  <span class="center-align-container">Showing {{ allSortedItems.length }} Items</span>
+                </v-flex>
+              </v-layout>
+              <v-layout row>
+              </v-layout>
+            </v-container>
+          </v-card-text>
+          <v-expansion-panel>
+            <v-expansion-panel-content>
+              <div slot="header">
+                <v-layout row wrap>
+                  <span style="align-self: center">Filters</span>
+                  <v-chip small v-show="filterOptions.rarity.length < defaultFilters.rarity.length" style="text-transform: capitalize">
+                    <span v-if="filterOptions.rarity.length === 1">
+                      <span v-if="filterOptions.rarity[0] < 8">
+                        <b>{{ filterOptions.rarity[0] }}</b>
+                        <img class="icon bf" src="@/assets/star_rare.png" height="18px" style="margin-top: -0.25rem;"/>
+                      </span>
+                      <img v-else class="icon bf" src="@/assets/phantom_icon.png" height="18px"/>
+                      Only
+                    </span>
+                    <span v-else-if="filterOptions.rarity.length === 0">
+                      No rarity
+                    </span>
+                    <span v-else>
+                      {{ filterOptions.rarity.length }} Different Rarities
+                    </span>
+                  </v-chip>
+                  <v-chip small v-show="filterOptions.itemTypes.length < defaultFilters.itemTypes.length" style="text-transform: capitalize">
+                    <span v-if="filterOptions.itemTypes.length === 0">
+                      No Types
+                    </span>
+                    <span v-else-if="filterOptions.itemTypes.length === 1">
+                      {{ filterOptions.itemTypes[0] }}s Only
+                    </span>
+                    <span v-else>
+                      {{ filterOptions.itemTypes.length }} Item Types
+                    </span>
+                  </v-chip>
+                  <v-chip small v-show="filterOptions.sphereTypes.length < defaultFilters.sphereTypes.length" style="text-transform: capitalize">
+                    <span v-if="filterOptions.sphereTypes.length === 0">
+                      No Types
+                    </span>
+                    <span v-else-if="filterOptions.sphereTypes.length <= 5">
+                      <sphere-type-icon v-for="sphereType in filterOptions.sphereTypes" :category="sphereType" :key="sphereType" class="ml-0 mr-1" style="margin-bottom: 2px"/>
+                      <span v-if="filterOptions.sphereTypes.length === 1">
+                        Only
+                      </span>
+                    </span>
+                    <span v-else>
+                      {{ filterOptions.sphereTypes.length }} Sphere Types
+                    </span>
+                  </v-chip>
+                  <v-chip small v-show="filterOptions.exclusives.length < defaultFilters.exclusives.length" style="text-transform: capitalize">
+                    {{ filterOptions.exclusives[0] }}s Only
+                  </v-chip>
+                </v-layout>
+              </div>
+              <v-card class="filter-area">
+                <v-card-text>
+                  <v-layout row wrap class="pl-3 pr-3">
+                    <v-flex xs12>
+                      <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Rarity</h3>
+                      <v-btn outline class="mr-0" @click="filterOptions.rarity = defaultFilters.rarity.slice()">All</v-btn>
+                      <v-btn outline class="ml-0" @click="filterOptions.rarity = []">None</v-btn>
+                      <v-layout row wrap>
+                        <v-flex xs4 sm2 v-for="(rarity, i) in defaultFilters.rarity" :key="i">
+                          <v-checkbox :value="rarity" v-model="filterOptions.rarity">
+                            <div slot="label">
+                              <span v-if="rarity < 8">
+                                <h3 class="subheading d-inline-block">{{ rarity }}</h3>
+                                <img class="icon bf" src="@/assets/star_rare.png" height="18px" style="margin-top: -0.25rem;"/>
+                              </span>
+                              <img v-else class="icon bf" src="@/assets/phantom_icon.png" height="18px"/>
+                            </div>
+                          </v-checkbox>
+                        </v-flex>
+                      </v-layout>
+                    </v-flex>
+                  </v-layout>
+                  <v-layout row wrap class="pl-3 pr-3">
+                    <v-flex xs12>
+                      <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Item Type</h3>
+                      <v-btn outline class="mr-0" @click="filterOptions.itemTypes = defaultFilters.itemTypes.slice()">All</v-btn>
+                      <v-btn outline class="ml-0" @click="filterOptions.itemTypes = []">None</v-btn>
+                      <v-layout row wrap>
+                        <v-flex xs6 sm3 v-for="(type, i) in defaultFilters.itemTypes" :key="i">
+                          <v-checkbox :value="type" v-model="filterOptions.itemTypes">
+                            <div slot="label">
+                              <span style="text-transform: capitalize">{{ itemTypeMapping[type] }}</span>
+                            </div>
+                          </v-checkbox>
+                        </v-flex>
+                      </v-layout>
+                    </v-flex>
+                  </v-layout>
+                  <v-layout row wrap class="pl-3 pr-3">
+                    <v-flex xs12>
+                      <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Sphere Type</h3>
+                      <v-btn outline class="mr-0" @click="filterOptions.sphereTypes = defaultFilters.sphereTypes.slice()">All</v-btn>
+                      <v-btn outline class="ml-0" @click="filterOptions.sphereTypes = []">None</v-btn>
+                      <v-layout row wrap>
+                        <v-flex xs6 sm3 v-for="(type, i) in defaultFilters.sphereTypes" :key="i">
+                          <v-checkbox :value="type" v-model="filterOptions.sphereTypes">
+                            <div slot="label">
+                              <sphere-type-icon :category="type" class="ml-0 mr-1"/>
+                              <span style="text-transform: capitalize">{{ getSphereCategory(type) }}</span>
+                            </div>
+                          </v-checkbox>
+                        </v-flex>
+                      </v-layout>
+                    </v-flex>
+                  </v-layout>
+                  <v-layout row wrap class="pl-3 pr-3">
+                    <v-flex xs12>
+                      <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Server Exclusives</h3>
+                      <v-layout row>
+                        <v-radio-group v-model="filterOptions.exclusives" :row="$vuetify.breakpoint.mdAndUp">
+                          <v-radio
+                            :value="exclusiveFilterOptions.all"
+                            label="All"/>
+                          <v-radio
+                            :value="exclusiveFilterOptions.exclusive"
+                            label="Exclusives Only"/>
+                          <v-radio
+                            :value="exclusiveFilterOptions.nonExclusive"
+                            label="Non-Exclusives Only"/>
+                        </v-radio-group>
+                      </v-layout>
+                    </v-flex>
+                  </v-layout>
+                </v-card-text>
+              </v-card>
+            </v-expansion-panel-content>
+            <v-expansion-panel-content>
+              <div slot="header">
+                <v-layout row wrap>
+                  <span style="align-self: center">Sort</span>
+                  <v-chip small>{{ sortOptions.type }}</v-chip>
+                  <v-chip small>{{ sortOptions.isAscending ? 'Ascending' : 'Descending' }}</v-chip>
+                </v-layout>
+              </div>
+              <v-card>
+                <v-card-text>
+                  <v-layout row wrap class="pl-3 pr-3">
+                    <v-flex xs12 sm6 md12>
+                      <h3 class="subheading">Sort Type</h3>
+                      <v-radio-group v-model="sortOptions.type" :row="$vuetify.breakpoint.mdAndUp">
+                        <v-radio
+                          v-for="(type, i) in Object.keys(sortTypes).sort()"
+                          :key="i"
+                          :value="type"
+                          :label="type"/>
+                      </v-radio-group>
+                    </v-flex>
+                    <v-flex xs12 sm6 md12>
+                      <h3 class="subheading">Sort Order</h3>
+                      <v-radio-group v-model="sortOptions.isAscending" :row="$vuetify.breakpoint.mdAndUp">
+                        <v-radio :value="true" label="Ascending"/>
+                        <v-radio :value="false" label="Descending"/>
+                      </v-radio-group>
+                    </v-flex>
+                  </v-layout>
+                </v-card-text>
+              </v-card>
+            </v-expansion-panel-content>
+          </v-expansion-panel>
+        </v-card>
       </v-flex>
       <v-flex xs6 offset-xs6 class="text-xs-right mt-2 pr-3">
         <v-menu offset-y :close-on-content-click="false">
@@ -118,16 +293,18 @@ import { mapState, mapActions, mapGetters } from 'vuex';
 import debounce from 'lodash/debounce';
 import ItemCard from '@/components/Multidex/Items/ItemCard';
 import ItemInfo from '@/components/Multidex/Items/ItemDialogContent';
+import SphereTypeIcon from '@/components/Multidex/Items/SphereTypeIcon';
 
 export default {
   props: ['query', 'itemId'],
   components: {
     'item-card': ItemCard,
     'item-info': ItemInfo,
+    'sphere-type-icon': SphereTypeIcon,
   },
   computed: {
     ...mapState('items', ['pageDb', 'isLoading', 'numEntries', 'activeServer']),
-    ...mapGetters('items', ['getImageUrl']),
+    ...mapGetters('items', ['getImageUrl', 'getSphereCategory']),
     allSortedItems () {
       if (this.isLoading || this.loadingFilters) {
         return [];
@@ -164,12 +341,30 @@ export default {
           const result = rarityA === rarityB ? (+idA - +idB) : (rarityA - rarityB);
           return this.sortOptions.isAscending ? result : -result;
         },
+        'Sell Price': (idA, idB) => {
+          const [priceA, priceB] = [+this.pageDb[idA].sell_price, +this.pageDb[idB].sell_price];
+          const result = priceA === priceB ? (+idA - +idB) : (priceA - priceB);
+          return this.sortOptions.isAscending ? result : -result;
+        },
       };
     },
     defaultFilters () {
       return {
         rarity: Object.keys(new Array(8).fill(0)).map(i => +i),
+        sphereTypes: Object.keys(new Array(15).fill(0)).map(i => +i),
+        itemTypes: ['consumable', 'material', 'raid', 'sphere', 'evomat', 'summoner_consumable', 'ls_sphere'],
         exclusives: this.exclusiveFilterOptions.all,
+      };
+    },
+    itemTypeMapping () {
+      return {
+        consumable: 'Item',
+        material: 'Material',
+        sphere: 'Sphere',
+        evomat: 'Evolution Material',
+        summoner_consumable: 'Booster',
+        raid: 'Raid Item',
+        ls_sphere: 'LS Sphere',
       };
     },
     exclusiveFilterOptions () {
@@ -241,6 +436,8 @@ export default {
       filterOptions: {
         name: '',
         rarity: [],
+        sphereTypes: [],
+        itemTypes: [],
         exclusives: [],
       },
       showItemsDialog: false,

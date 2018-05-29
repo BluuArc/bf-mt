@@ -109,18 +109,21 @@ const itemStore = {
       }
 
       const result = await SWorker.run((keys, filters, otherKeys, pageDb) => {
-        const { name = '', rarity = [], exclusives = [] } = filters;
+        const { name = '', rarity = [], exclusives = [], itemTypes = [], sphereTypes = [] } = filters;
+        const includeNoneSphereType = sphereTypes.includes(0);
+        const includeAnySphereType = sphereTypes.length === 15;
         return keys.filter(key => {
           const entry = pageDb[key];
           const fitsName = (!name ? true : entry.name.toLowerCase().includes(name.toLowerCase()));
           const fitsRarity = rarity.includes(entry.rarity);
+          const fitsItemType = itemTypes.includes(entry.type);
+
+          const hasSphereType = entry['sphere type'] !== undefined || entry.type === 'sphere' || entry.type === 'ls_sphere';
+          const fitsSphereType = includeAnySphereType || (hasSphereType && (sphereTypes.includes(entry['sphere type']))) || (includeNoneSphereType && !entry['sphere type']);
 
           const isInOtherServer = otherKeys.includes(entry.id);
           const fitsExclusive = (exclusives.length !== 1 ? exclusives.length === 2 : ((exclusives[0] === 'exclusive' && !isInOtherServer) || (exclusives[0] === 'non-exclusive' && isInOtherServer)));
-          // if (!(fitsName && fitsRarity && fitsExclusive)) {
-          //   console.debug(entry.name, entry.rarity);
-          // }
-          return fitsName && fitsRarity && fitsExclusive;
+          return fitsName && fitsRarity && fitsExclusive && fitsItemType && fitsSphereType;
         });
       }, [keys, filters, otherKeys, state.pageDb]);
       return result;
