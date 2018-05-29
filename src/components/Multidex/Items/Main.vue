@@ -7,6 +7,9 @@
       </v-flex>
     </v-layout>
     <v-layout row wrap v-else>
+      <v-flex xs12>
+        <v-text-field v-model="filterOptions.name" label="Search"/>
+      </v-flex>
       <v-flex xs6 offset-xs6 class="text-xs-right mt-2 pr-3">
         <v-menu offset-y :close-on-content-click="false">
           <div slot="activator">
@@ -66,8 +69,7 @@
               v-for="key in itemsToShow"
               :key="key"
               xs12 sm6 md4>
-              {{ pageDb[key].name }}
-              <!-- <unit-card :to="`/multidex/units/?unitId=${key}`" v-if="pageDb.hasOwnProperty(key)" :unit="pageDb[key]"/> -->
+              <item-card :to="`/multidex/items/?itemId=${key}`" v-if="pageDb.hasOwnProperty(key)" :item="pageDb[key]"/>
             </v-flex>
           </v-layout>
           <v-layout row v-if="numEntries[activeServer] === 0">
@@ -79,15 +81,50 @@
         </v-container>
       </v-flex>
     </v-layout>
+    <v-layout row>
+      <v-dialog v-model="showItemsDialog" fullscreen hide-overlay transition="dialog-bottom-transition">
+        <v-card>
+          <v-toolbar fixed>
+            <v-btn icon to="/multidex/items">
+              <v-icon>close</v-icon>
+            </v-btn>
+            <v-toolbar-title>
+              <img
+                v-if="itemId"
+                :src="getImageUrl(itemId)"
+                align="top"
+                height="32px"/>
+              <span style="margin-top: auto; margin-bottom: auto;" class="pl-2">
+                <span v-if="pageDb[itemId]">
+                  {{ pageDb[itemId].name }}
+                </span>
+                <span v-else-if="itemId">
+                  (ID: {{ itemId }})
+                </span>
+              </span>
+            </v-toolbar-title>
+          </v-toolbar>
+          <v-card-text v-if="itemId" class="pl-0 pr-0 pt-5">
+            <item-info :itemId="itemId"/>
+          </v-card-text>
+        </v-card>
+      </v-dialog>
+    </v-layout>
   </v-container>
 </template>
 
 <script>
 import { mapState, mapActions, mapGetters } from 'vuex';
 import debounce from 'lodash/debounce';
+import ItemCard from '@/components/Multidex/Items/ItemCard';
+import ItemInfo from '@/components/Multidex/Items/ItemDialogContent';
 
 export default {
   props: ['query', 'itemId'],
+  components: {
+    'item-card': ItemCard,
+    'item-info': ItemInfo,
+  },
   computed: {
     ...mapState('items', ['pageDb', 'isLoading', 'numEntries', 'activeServer']),
     ...mapGetters('items', ['getImageUrl']),
@@ -131,7 +168,7 @@ export default {
     },
     defaultFilters () {
       return {
-        rarity: Object.keys(new Array(8).fill(0)).map(i => +i + 1),
+        rarity: Object.keys(new Array(8).fill(0)).map(i => +i),
         exclusives: this.exclusiveFilterOptions.all,
       };
     },
