@@ -1,0 +1,60 @@
+<template>
+  <v-card :to="to" class="burst-card">
+    <v-container fluid class="pa-1" grid-list-md>
+      <v-layout row wrap>
+        <v-flex xs12>
+          <v-card-title class="pb-0">
+            <h3 class="title">{{ burst.name }}</h3>
+          </v-card-title>
+        </v-flex>
+        <v-flex xs12>
+          <v-card-text class="pt-0" style="word-wrap: break-word;">
+            <h3 v-if="burst.desc && burst.desc !== 'None'" class="subheading">{{ burst.desc }}</h3>
+            <h3 class="subheading" v-else>No description.</h3>
+          </v-card-text>
+        </v-flex>
+      </v-layout>
+      <v-card-text class="pt-0" v-if="burst.associated_units">
+        <v-layout row wrap>
+          <v-flex xs4 class="pt-0 pb-0 text-xs-center">
+            <h3 class="subheading">Associated Units:</h3>
+          </v-flex>
+          <v-flex xs8 class="text-xs-left pt-0 pb-0" style="margin-top: auto; margin-bottom: auto;">
+            <unit-thumbnail
+              v-for="(unit, i) in burst.associated_units"
+              :key="i"
+              :src="getImageUrls(unit).ills_thum"
+              style="height: 36px; width: 36px;"
+              imgStyle="height: 36px; width: 36px;"
+              :rarity="unitById(unit).rarity"
+              :title="unitById(unit).name"/>
+          </v-flex>
+        </v-layout>
+      </v-card-text>
+    </v-container>
+  </v-card>
+</template>
+
+<script>
+import { mapGetters } from 'vuex';
+import LazyLoadThumbnail from '@/components/Multidex/Units/LazyLoadThumbnail';
+export default {
+  props: ['burst', 'to'],
+  components: {
+    'unit-thumbnail': LazyLoadThumbnail,
+  },
+  computed: {
+    ...mapGetters('units', ['getImageUrls', 'unitById']),
+  },
+};
+</script>
+
+<style>
+.theme--light .burst-card:hover {
+  background-color: lightgrey;
+}
+
+.theme--dark .burst-card:hover {
+  background-color: grey;
+}
+</style>

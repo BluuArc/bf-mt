@@ -219,13 +219,13 @@
             <v-flex
               v-for="key in burstsToShow"
               :key="key"
-              xs12 sm6 md4>
-              <router-link v-if="pageDb.hasOwnProperty(key)" :to="`/multidex/bursts/?burstId=${key}`">
-                <span>{{ pageDb[key].name || pageDb[key].desc }}</span>
-                <span v-if="pageDb[key].associated_units">
-                  ({{ pageDb[key].associated_units }})
-                </span>
-              </router-link>
+              xs12 sm6 md4
+              style="margin-top: auto; margin-bottom: auto;">
+              <burst-card
+                v-if="pageDb.hasOwnProperty(key)"
+                :to="`/multidex/bursts/?burstId=${key}`"
+                :burst="pageDb[key]"
+                style="min-height: 84px"/>
             </v-flex>
           </v-layout>
           <v-layout row v-if="numEntries[activeServer] === 0">
@@ -267,12 +267,14 @@
 <script>
 import { mapState, mapActions } from 'vuex';
 import BurstInfo from '@/components/Multidex/Bursts/BurstDialogContent';
+import BurstCard from '@/components/Multidex/Bursts/BurstCard';
 import debounce from 'lodash/debounce';
 
 export default {
   props: ['query', 'burstId'],
   components: {
     'burst-info': BurstInfo,
+    'burst-card': BurstCard,
   },
   computed: {
     ...mapState('bursts', ['pageDb', 'isLoading', 'numEntries', 'activeServer']),
@@ -390,7 +392,7 @@ export default {
   data () {
     return {
       pageIndex: 0,
-      amountPerPage: 10,
+      amountPerPage: 24,
       sortOptions: {
         type: 'Burst ID',
         isAscending: true,
@@ -419,7 +421,9 @@ export default {
   },
   methods: {
     ...mapActions('bursts', ['getFilteredKeys', 'ensurePageDbSyncWithServer']),
+    ...mapActions('units', { unitsDbSync: 'ensurePageDbSyncWithServer' }),
     initDb: debounce(function () {
+      this.unitsDbSync();
       this.ensurePageDbSyncWithServer();
     }, 50),
     decrementPage () {
