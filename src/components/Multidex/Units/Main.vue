@@ -507,16 +507,17 @@ export default {
     },
     applyFilters () {
       this.filteredKeys = [];
-      debounce(async () => {
-        if (Object.keys(this.pageDb).length === 0) {
-          this.filteredKeys = [];
-          return;
-        }
-        this.loadingFilters = true;
-        this.filteredKeys = await this.getFilteredKeys(this.filterOptions);
-        this.loadingFilters = false;
-      }, 250)();
+      this.applyFiltersHelper();
     },
+    applyFiltersHelper: debounce(async function () {
+      if (Object.keys(this.pageDb).length === 0) {
+        this.filteredKeys = [];
+        return;
+      }
+      this.loadingFilters = true;
+      this.filteredKeys = await this.getFilteredKeys(this.filterOptions);
+      this.loadingFilters = false;
+    }, 250),
     getGenderInfo (gender) {
       const icons = {
         male: 'fa-mars',

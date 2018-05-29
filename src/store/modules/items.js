@@ -1,6 +1,8 @@
 import { itemWorker } from '../instances/dexie-client';
 import downloadWorker from '../instances/download-worker';
 import { createState, createMutations, createActions } from './db.common';
+import SWorker from '../../assets/sww.min';
+import union from 'lodash/union';
 
 const itemStore = {
   namespaced: true,
@@ -57,6 +59,47 @@ const itemStore = {
       }
       console.debug('finished updating data');
       commit('setLoadState', false);
+    },
+    async getFilteredKeys ({ dispatch, state, commit }, filters = {}) {
+      // TODO: add call for advanced filtering using dexie-client worker
+      console.debug(filters);
+      const keys = Object.keys(state.pageDb);
+      if (Object.keys(filters).length === 0) {
+        return keys;
+      }
+
+      // get local filters
+      const { exclusives = [] } = filters;
+      let otherKeys = [];
+      const filtersChanged = state.asyncFilters.exclusives !== exclusives.concat([state.activeServer]).join('-');
+      // possible values: exlusive, non-exclusive
+      // length or 2 or 0 => no need to retrieve
+      if (exclusives.length === 1 && filtersChanged) {
+        const servers = ['gl', 'eu', 'jp'].filter(s => s !== state.activeServer);
+        const serverKeys = await Promise.all(servers.map(server => itemWorker.getFieldKeys({ server }, 'data')));
+        otherKeys = union(...serverKeys).map(i => +i).sort((a, b) => a - b);
+      } else if (!filtersChanged) {
+        otherKeys = state.asyncFilters['exclusives-data'];
+      }
+      // console.debug({ otherKeys });
+      if (filtersChanged) {
+        commit('setAsyncFilter', { name: 'exclusives', data: exclusives.concat([state.activeServer]).join('-') });
+        commit('setAsyncFilter', { name: 'exclusives-data', data: otherKeys });
+      }
+
+      const result = await SWorker.run((keys, filters, otherKeys, pageDb) => {
+        const { name = '', rarity = [], exclusives = [] } = filters;
+        return keys.filter(key => {
+          const entry = pageDb[key];
+          const fitsName = (!name ? true : entry.name.toLowerCase().includes(name.toLowerCase()));
+          const fitsRarity = rarity.includes(entry.rarity);
+
+          const isInOtherServer = otherKeys.includes(entry.id);
+          const fitsExclusive = (exclusives.length !== 1 ? exclusives.length === 2 : ((exclusives[0] === 'exclusive' && !isInOtherServer) || (exclusives[0] === 'non-exclusive' && isInOtherServer)));
+          return fitsName && fitsRarity && fitsExclusive;
+        });
+      }, [keys, filters, otherKeys, state.pageDb]);
+      return result;
     },
   },
 };
