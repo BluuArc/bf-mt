@@ -266,7 +266,13 @@
               v-for="key in unitsToShow"
               :key="key"
               xs12 sm6 md4>
-              <unit-card :to="`/multidex/units/?unitId=${key}`" :unit="pageDb[key]"/>
+              <unit-card :to="`/multidex/units/?unitId=${key}`" v-if="pageDb.hasOwnProperty(key)" :unit="pageDb[key]"/>
+            </v-flex>
+          </v-layout>
+          <v-layout row v-if="numEntries[activeServer] === 0">
+            <v-flex xs12 class="text-xs-center">
+              <p>Seems like you haven't loaded the data for this server yet. You can load the missing data at the settings page.</p>
+              <v-btn to="/settings">Go To Settings Page</v-btn>
             </v-flex>
           </v-layout>
         </v-container>
@@ -319,7 +325,7 @@ export default {
     'element-icon': ElementIcon,
   },
   computed: {
-    ...mapState('units', ['pageDb', 'isLoading']),
+    ...mapState('units', ['pageDb', 'isLoading', 'numEntries', 'activeServer']),
     ...mapGetters('units', ['getImageUrls']),
     allSortedUnits () {
       if (this.isLoading || this.loadingFilters) {
