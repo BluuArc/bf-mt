@@ -185,7 +185,10 @@
           </v-expansion-panel>
         </v-card>
       </v-flex>
-      <v-flex xs6 offset-xs6 class="text-xs-right mt-2 pr-3">
+      <v-flex xs6 class="pl-3">
+        <v-btn v-show="hasFilters" flat @click="resetFilters" small class="pa-0">Reset Filters</v-btn>
+      </v-flex>
+      <v-flex xs6 class="text-xs-right mt-2 pr-3">
         <v-menu offset-y :close-on-content-click="false">
           <div slot="activator">
             <span>Page {{ pageIndex + 1 }} of {{ numPages }}</span>
@@ -374,6 +377,12 @@ export default {
         nonExclusive: ['non-exclusive'],
       };
     },
+    hasFilters () {
+      return !!this.filterOptions.name ||
+        Object.keys(this.defaultFilters)
+        .map(key => this.filterOptions[key].length !== this.defaultFilters[key].length)
+        .reduce((acc, val) => acc || val, false);
+    },
   },
   watch: {
     pageDb () {
@@ -408,7 +417,7 @@ export default {
       this.showItemsDialog = (!this.isLoading && !!newValue);
 
       if (this.pageDb.hasOwnProperty(newValue)) {
-        document.title = `BF-MT - Item - ${this.pageDb[newValue].name}`;
+        document.title = `BF-MT - Items - ${this.pageDb[newValue].name}`;
       }
     },
     filterOptions: {
