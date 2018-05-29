@@ -4,7 +4,7 @@
       <v-layout row wrap>
         <v-flex xs12>
           <v-card-title class="pb-0">
-            <h3 class="title">{{ burst.name }}</h3>
+            <h3 class="title">{{ burst.name || 'No Name' }}</h3>
           </v-card-title>
         </v-flex>
         <v-flex xs12>

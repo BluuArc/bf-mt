@@ -24,39 +24,12 @@
             </v-container>
           </v-card-text>
           <v-expansion-panel>
-            <!-- <v-expansion-panel-content>
+            <v-expansion-panel-content>
               <div slot="header">
                 <v-layout row wrap>
                   <span style="align-self: center">Filters</span>
-                  <v-chip small v-show="filterOptions.rarity.length < defaultFilters.rarity.length" style="text-transform: capitalize">
-                    <span v-if="filterOptions.rarity.length === 1">
-                      <span v-if="filterOptions.rarity[0] < 8">
-                        <b>{{ filterOptions.rarity[0] }}</b>
-                        <img class="icon bf" src="@/assets/star_rare.png" height="18px" style="margin-top: -0.25rem;"/>
-                      </span>
-                      <img v-else class="icon bf" src="@/assets/phantom_icon.png" height="18px"/>
-                      Only
-                    </span>
-                    <span v-else-if="filterOptions.rarity.length === 0">
-                      No rarity
-                    </span>
-                    <span v-else>
-                      {{ filterOptions.rarity.length }} Different Rarities
-                    </span>
-                  </v-chip>
-                  <v-chip small v-show="filterOptions.sphereTypes.length < defaultFilters.sphereTypes.length" style="text-transform: capitalize">
-                    <span v-if="filterOptions.sphereTypes.length === 0">
-                      No Types
-                    </span>
-                    <span v-else-if="filterOptions.sphereTypes.length <= 5">
-                      <sphere-type-icon v-for="sphereType in filterOptions.sphereTypes" :category="sphereType" :key="sphereType" class="ml-0 mr-1" style="margin-bottom: 2px"/>
-                      <span v-if="filterOptions.sphereTypes.length === 1">
-                        Only
-                      </span>
-                    </span>
-                    <span v-else>
-                      {{ filterOptions.sphereTypes.length }} Sphere Types
-                    </span>
+                  <v-chip small v-show="filterOptions.associatedUnits.length < defaultFilters.associatedUnits.length" style="text-transform: capitalize">
+                    {{ filterOptions.associatedUnits[0] }} Associated Units Only
                   </v-chip>
                   <v-chip small v-show="filterOptions.exclusives.length < defaultFilters.exclusives.length" style="text-transform: capitalize">
                     {{ filterOptions.exclusives[0] }}s Only
@@ -67,38 +40,19 @@
                 <v-card-text>
                   <v-layout row wrap class="pl-3 pr-3">
                     <v-flex xs12>
-                      <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Rarity</h3>
-                      <v-btn outline class="mr-0" @click="filterOptions.rarity = defaultFilters.rarity.slice()">All</v-btn>
-                      <v-btn outline class="ml-0" @click="filterOptions.rarity = []">None</v-btn>
-                      <v-layout row wrap>
-                        <v-flex xs4 sm2 v-for="(rarity, i) in defaultFilters.rarity" :key="i">
-                          <v-checkbox :value="rarity" v-model="filterOptions.rarity">
-                            <div slot="label">
-                              <span v-if="rarity < 8">
-                                <h3 class="subheading d-inline-block">{{ rarity }}</h3>
-                                <img class="icon bf" src="@/assets/star_rare.png" height="18px" style="margin-top: -0.25rem;"/>
-                              </span>
-                              <img v-else class="icon bf" src="@/assets/phantom_icon.png" height="18px"/>
-                            </div>
-                          </v-checkbox>
-                        </v-flex>
-                      </v-layout>
-                    </v-flex>
-                  </v-layout>
-                  <v-layout row wrap class="pl-3 pr-3">
-                    <v-flex xs12>
-                      <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Sphere Type</h3>
-                      <v-btn outline class="mr-0" @click="filterOptions.sphereTypes = defaultFilters.sphereTypes.slice()">All</v-btn>
-                      <v-btn outline class="ml-0" @click="filterOptions.sphereTypes = []">None</v-btn>
-                      <v-layout row wrap>
-                        <v-flex xs6 sm3 v-for="(type, i) in defaultFilters.sphereTypes" :key="i">
-                          <v-checkbox :value="type" v-model="filterOptions.sphereTypes">
-                            <div slot="label">
-                              <sphere-type-icon :category="type" class="ml-0 mr-1"/>
-                              <span style="text-transform: capitalize">{{ getSphereCategory(type) }}</span>
-                            </div>
-                          </v-checkbox>
-                        </v-flex>
+                      <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Associated Units</h3>
+                      <v-layout row>
+                        <v-radio-group v-model="filterOptions.associatedUnits" :row="$vuetify.breakpoint.mdAndUp">
+                          <v-radio
+                            :value="associatedUnitOptions.all"
+                            label="All"/>
+                          <v-radio
+                            :value="associatedUnitOptions.with"
+                            label="With Associated Units Only"/>
+                          <v-radio
+                            :value="associatedUnitOptions.without"
+                            label="Without Associated Units"/>
+                        </v-radio-group>
                       </v-layout>
                     </v-flex>
                   </v-layout>
@@ -122,7 +76,7 @@
                   </v-layout>
                 </v-card-text>
               </v-card>
-            </v-expansion-panel-content> -->
+            </v-expansion-panel-content>
             <v-expansion-panel-content>
               <div slot="header">
                 <v-layout row wrap>
@@ -313,9 +267,8 @@ export default {
     },
     defaultFilters () {
       return {
-        rarity: Object.keys(new Array(8).fill(0)).map(i => +i),
-        exclusives: this.exclusiveFilterOptions.all,
         associatedUnits: this.associatedUnitOptions.all,
+        exclusives: this.exclusiveFilterOptions.all,
       };
     },
     exclusiveFilterOptions () {
@@ -399,7 +352,6 @@ export default {
       },
       filterOptions: {
         name: '',
-        rarity: [],
         exclusives: [],
         associatedUnits: [],
       },
@@ -458,6 +410,7 @@ export default {
         this.filterOptions[key] = this.defaultFilters[key].slice();
       });
       this.filterOptions.exclusives = this.defaultFilters.exclusives;
+      this.filterOptions.associatedUnits = this.defaultFilters.associatedUnits;
       this.filterOptions.name = '';
     },
   },
