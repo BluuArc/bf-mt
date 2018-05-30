@@ -13,7 +13,7 @@
     <img
       id="lazy-load"
       src="@/assets/question_frame_3.png"
-      v-if="rarity === 4"
+      v-else-if="rarity === 4"
       :class="imgClass"
       :style="imgStyle"
       :align="align"
@@ -22,7 +22,7 @@
     <img
       id="lazy-load"
       src="@/assets/question_frame_4.png"
-      v-if="rarity >= 5"
+      v-else-if="rarity >= 5"
       :class="imgClass"
       :style="imgStyle"
       :align="align"

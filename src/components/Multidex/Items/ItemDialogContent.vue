@@ -30,7 +30,6 @@ export default {
   },
   watch: {
     async itemId (newValue) {
-      this.alternateImageLoaded = false;
       if (!newValue) {
         this.item = undefined;
       } else {

@@ -29,7 +29,6 @@ export default {
   },
   watch: {
     async extraId (newValue) {
-      this.alternateImageLoaded = false;
       if (!newValue) {
         this.extraSkill = undefined;
       } else {

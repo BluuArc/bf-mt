@@ -29,7 +29,6 @@ export default {
   },
   watch: {
     async burstId (newValue) {
-      this.alternateImageLoaded = false;
       if (!newValue) {
         this.burst = undefined;
       } else {
