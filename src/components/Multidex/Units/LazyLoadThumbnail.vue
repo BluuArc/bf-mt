@@ -3,15 +3,6 @@
     <!-- need to hardcode all lazy elements to allow better webpack exporting -->
     <img
       id="lazy-load"
-      src="@/assets/question_frame_1.png"
-      v-if="rarity <= 2"
-      :class="imgClass"
-      :style="imgStyle"
-      :align="align"
-      :title="title"
-      :alt="alt"/>
-    <img
-      id="lazy-load"
       src="@/assets/question_frame_2.png"
       v-if="rarity === 3"
       :class="imgClass"
@@ -32,6 +23,15 @@
       id="lazy-load"
       src="@/assets/question_frame_4.png"
       v-if="rarity >= 5"
+      :class="imgClass"
+      :style="imgStyle"
+      :align="align"
+      :title="title"
+      :alt="alt"/>
+    <img
+      id="lazy-load"
+      src="@/assets/question_frame_1.png"
+      v-else
       :class="imgClass"
       :style="imgStyle"
       :align="align"

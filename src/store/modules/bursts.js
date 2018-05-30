@@ -64,7 +64,7 @@ const burstStore = {
       if (exclusives.length === 1 && filtersChanged) {
         const servers = ['gl', 'eu', 'jp'].filter(s => s !== state.activeServer);
         const serverKeys = await Promise.all(servers.map(server => burstWorker.getFieldKeys({ server }, 'data')));
-        otherKeys = union(...serverKeys).map(i => +i).sort((a, b) => a - b);
+        otherKeys = union(...serverKeys).sort((a, b) => +a - +b);
       } else if (!filtersChanged) {
         otherKeys = state.asyncFilters['exclusives-data'];
       }
@@ -80,7 +80,7 @@ const burstStore = {
           const entry = pageDb[key];
           const fitsName = (!name ? true : entry.name.toLowerCase().includes(name.toLowerCase()));
 
-          const isInOtherServer = otherKeys.includes(entry.id);
+          const isInOtherServer = otherKeys.includes(entry.id.toString());
           const fitsExclusive = (exclusives.length !== 1 ? exclusives.length === 2 : ((exclusives[0] === 'exclusive' && !isInOtherServer) || (exclusives[0] === 'non-exclusive' && isInOtherServer)));
 
           const hasAssociatedUnits = Array.isArray(entry.associated_units) && entry.associated_units.length > 0;

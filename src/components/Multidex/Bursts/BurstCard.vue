@@ -9,25 +9,25 @@
         </v-flex>
         <v-flex xs12>
           <v-card-text class="pt-0" style="word-wrap: break-word;">
-            <h3 v-if="burst.desc && burst.desc !== 'None'" class="subheading">{{ burst.desc }}</h3>
+            <h3 v-if="burst.desc && burst.desc !== 'None' && burst.desc !== '0'" class="subheading">{{ burst.desc }}</h3>
             <h3 class="subheading" v-else>No description.</h3>
           </v-card-text>
         </v-flex>
       </v-layout>
       <v-card-text class="pt-0" v-if="burst.associated_units">
         <v-layout row wrap>
-          <v-flex xs4 class="pt-0 pb-0 text-xs-center">
+          <v-flex xs6 sm5 class="pt-0 pb-0 text-xs-center">
             <h3 class="subheading">Associated Units:</h3>
           </v-flex>
-          <v-flex xs8 class="text-xs-left pt-0 pb-0" style="margin-top: auto; margin-bottom: auto;">
+          <v-flex xs6 sm7 class="text-xs-left pt-0 pb-0" style="margin-top: auto; margin-bottom: auto;">
             <unit-thumbnail
               v-for="(unit, i) in burst.associated_units"
               :key="i"
               :src="getImageUrls(unit).ills_thum"
               style="height: 36px; width: 36px;"
               imgStyle="height: 36px; width: 36px;"
-              :rarity="unitById(unit).rarity"
-              :title="unitById(unit).name"/>
+              :rarity="(unitById(unit) || {}).rarity"
+              :title="(unitById(unit) || {}).name"/>
           </v-flex>
         </v-layout>
       </v-card-text>
