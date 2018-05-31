@@ -86,10 +86,10 @@ export default {
 
 <style>
 .theme--light .item-card:hover {
-  background-color: lightgrey;
+  background-color: lightgrey!important;
 }
 
 .theme--dark .item-card:hover {
-  background-color: grey;
+  background-color: grey!important;
 }
 </style>

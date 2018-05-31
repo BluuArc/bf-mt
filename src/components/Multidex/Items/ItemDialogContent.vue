@@ -12,7 +12,7 @@
         <v-layout row wrap>
           <v-flex xs12 sm4>
             <v-card style="border-color: var(--description-card-color)">
-              <v-card-title class="orange darken-3">
+              <v-card-title class="orange darken-3 white--text">
                 <h3 class="title">{{ item.name }}</h3>
               </v-card-title>
               <v-card-text style="min-height: 55px;">
@@ -38,64 +38,56 @@
           </v-flex>
           <v-flex xs12 sm8>
             <v-card style="border-color: var(--miscellaneous-card-color)">
-              <v-card-title class="blue-grey">
+              <v-card-title class="blue-grey white--text">
                 <h3 class="title">Miscellaneous Info</h3>
               </v-card-title>
               <v-card-text>
                 <v-layout row wrap>
-                  <v-flex xs12 sm6 class="pb-0 pt-0">
-                    <v-list class="pb-0 pt-0">
-                      <template v-for="(item, i) in miscellaneousItems">
-                        <v-list-tile v-if="i < Math.ceil(miscellaneousItems.length / 2)" :key="i">
-                          <v-list-tile-content>
-                            <span>
-                              <b>{{ item.label }}</b>
-                              <span v-if="item.label.includes('Rarity')">
-                                <span v-if="item.value < 8">
-                                  <h3 class="subheading d-inline-block">{{ item.value }}</h3>
-                                  <img class="icon bf" src="@/assets/star_rare.png" height="18px" style="margin-top: -0.25rem;"/>
-                                </span>
-                                <img v-else class="icon bf" src="@/assets/phantom_icon.png" height="18px"/>
-                              </span>
-                              <span v-else-if="item.label.includes('Sphere Type')">
-                                <sphere-type-icon :category="item.value" class="ml-0 mr-1"/>
-                                <span style="text-transform: capitalize">{{ getSphereCategory(item.value) }}</span>
-                              </span>
-                              <span v-else>
-                                {{ item.value }}
-                              </span>
-                            </span>
-                          </v-list-tile-content>
-                        </v-list-tile>
-                      </template>
-                    </v-list>
+                  <v-flex xs12 sm6 md4 v-for="(item, i) in miscellaneousItems" :key="i">
+                    <v-layout row>
+                      <v-flex xs6 class="text-xs-center pl-0 pr-0">
+                        <b>{{ item.label }}</b>
+                      </v-flex>
+                      <v-flex xs6 class="text-xs-center pl-0 pr-0">
+                        <span v-if="item.label.includes('Rarity')">
+                          <span v-if="item.value < 8">
+                            <h3 class="subheading d-inline-block">{{ item.value }}</h3>
+                            <img class="icon bf" src="@/assets/star_rare.png" height="18px" style="margin-top: -0.25rem;"/>
+                          </span>
+                          <img v-else class="icon bf" src="@/assets/phantom_icon.png" height="18px"/>
+                        </span>
+                        <span v-else-if="item.label.includes('Sphere Type')">
+                          <sphere-type-icon :category="item.value" class="ml-0 mr-1"/>
+                          <span style="text-transform: capitalize">{{ getSphereCategory(item.value) }}</span>
+                        </span>
+                        <span v-else>
+                          {{ item.value }}
+                        </span>
+                      </v-flex>
+                    </v-layout>
                   </v-flex>
-                  <v-flex xs12 sm6 class="pb-0 pt-0">
-                    <v-list class="pb-0 pt-0">
-                      <template v-for="(item, i) in miscellaneousItems">
-                        <v-list-tile v-if="i >= Math.ceil(miscellaneousItems.length / 2)" :key="i">
-                          <v-list-tile-content>
-                            <span>
-                              <b>{{ item.label }}</b>
-                              <span v-if="item.label.includes('Rarity')">
-                                <span v-if="item.value < 8">
-                                  <h3 class="subheading d-inline-block">{{ item.value }}</h3>
-                                  <img class="icon bf" src="@/assets/star_rare.png" height="18px" style="margin-top: -0.25rem;"/>
-                                </span>
-                                <img v-else class="icon bf" src="@/assets/phantom_icon.png" height="18px"/>
-                              </span>
-                              <span v-else-if="item.label.includes('Sphere Type')">
-                                <sphere-type-icon :category="item.value" class="ml-0 mr-1"/>
-                                <span style="text-transform: capitalize">{{ getSphereCategory(item.value) }}</span>
-                              </span>
-                              <span v-else>
-                                {{ item.value }}
-                              </span>
-                            </span>
-                          </v-list-tile-content>
-                        </v-list-tile>
-                      </template>
-                    </v-list>
+                </v-layout>
+              </v-card-text>
+            </v-card>
+          </v-flex>
+          <v-flex xs12>
+            <v-card style="border-color: var(--usage-card-color)">
+              <v-card-title class="green white--text">
+                <h3 class="title">Usage</h3>
+              </v-card-title>
+              <v-card-text>
+                <span v-if="!item.usage" class="text-xs-center">
+                  This item isn't used to make anything.
+                </span>
+                <v-layout row wrap v-else>
+                  <v-flex xs12>
+                    This item is used to make the following items:
+                  </v-flex>
+                  <v-flex xs12 sm6 md4 v-for="(nextItem, j) in item.usage" :key="j">
+                      <item-card
+                        class="pa-1 card--raised"
+                        :to="`/multidex/items/?itemId=${nextItem.id}`"
+                        :item="pageDb[nextItem.id]"/>
                   </v-flex>
                 </v-layout>
               </v-card-text>
@@ -114,12 +106,14 @@
 import { mapActions, mapGetters, mapState } from 'vuex';
 import ItemThumbnail from '@/components/Multidex/Items/ItemThumbnail';
 import SphereTypeIcon from '@/components/Multidex/Items/SphereTypeIcon';
+import ItemCard from '@/components/Multidex/Items/ItemCard';
 
 export default {
   props: ['itemId'],
   components: {
     'item-thumbnail': ItemThumbnail,
     'sphere-type-icon': SphereTypeIcon,
+    'item-card': ItemCard,
   },
   computed: {
     ...mapGetters('items', { getItemImage: 'getImageUrl', getSphereCategory: 'getSphereCategory' }),
@@ -203,10 +197,19 @@ export default {
 </script>
 
 <style>
-.item-dialog-content .card {
+.item-dialog-content .card:not(.item-card) {
   border: 2px solid transparent;
   margin: -2px;
   --description-card-color: #ef6c00; /* orange darken-3 */
   --miscellaneous-card-color: #607d8b; /* blue-grey */
+  --usage-card-color: #4caf50; /* green */
+}
+
+.theme--light .item-dialog-content .item-card {
+  background-color: whitesmoke;
+}
+
+.theme--dark .item-dialog-content .item-card {
+  background-color: black;
 }
 </style>
