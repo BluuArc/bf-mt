@@ -76,7 +76,7 @@
                 <h3 class="title">Usage</h3>
               </v-card-title>
               <v-card-text>
-                <span v-if="!item.usage" class="text-xs-center">
+                <span v-if="!item.usage || item.usage.length === 0" class="text-xs-center">
                   This item isn't used to make anything.
                 </span>
                 <v-layout row wrap v-else>
@@ -93,6 +93,9 @@
               </v-card-text>
             </v-card>
           </v-flex>
+          <v-flex xs12 v-if="item.recipe">
+            <crafting-card :item="item" style="border-color: var(--recipe-card-color)"/>
+          </v-flex>
         </v-layout>
         <v-layout row>
           {{ item }}
@@ -107,6 +110,7 @@ import { mapActions, mapGetters, mapState } from 'vuex';
 import ItemThumbnail from '@/components/Multidex/Items/ItemThumbnail';
 import SphereTypeIcon from '@/components/Multidex/Items/SphereTypeIcon';
 import ItemCard from '@/components/Multidex/Items/ItemCard';
+import CraftingCard from '@/components/Multidex/Items/CraftingCard';
 
 export default {
   props: ['itemId'],
@@ -114,6 +118,7 @@ export default {
     'item-thumbnail': ItemThumbnail,
     'sphere-type-icon': SphereTypeIcon,
     'item-card': ItemCard,
+    'crafting-card': CraftingCard,
   },
   computed: {
     ...mapGetters('items', { getItemImage: 'getImageUrl', getSphereCategory: 'getSphereCategory' }),
@@ -203,6 +208,7 @@ export default {
   --description-card-color: #ef6c00; /* orange darken-3 */
   --miscellaneous-card-color: #607d8b; /* blue-grey */
   --usage-card-color: #4caf50; /* green */
+  --recipe-card-color: #1976d2; /* blue darken-2 */
 }
 
 .theme--light .item-dialog-content .item-card {
