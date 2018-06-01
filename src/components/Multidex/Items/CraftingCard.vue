@@ -5,8 +5,8 @@
     </v-card-title>
     <v-card-text class="pt-0">
       <v-tabs v-model="activeTab">
-        <v-tab>Basic</v-tab>
         <v-tab>Full</v-tab>
+        <v-tab>Base Materials Only</v-tab>
       </v-tabs>
       <v-tabs-items v-model="activeTab" class="pa-2" touchless>
         <v-tab-item class="pt-2 pb-0" style="overflow-x: auto;">
@@ -16,7 +16,7 @@
           </v-container>
         </v-tab-item>
         <v-tab-item>
-          Full List here
+          Basic Materials Only List here
         </v-tab-item>
       </v-tabs-items>
     </v-card-text>
