@@ -110,7 +110,6 @@ export default {
     currentlyHave: {
       deep: true,
       handler: debounce(function () {
-        console.debug(this.currentlyHave);
         if (!this.item) {
           if (Object.keys(this.currentlyHave).length !== 0) {
             this.currentlyHave = {};
@@ -152,7 +151,6 @@ export default {
           Object.keys(materialBaseRecipe.materials).forEach(baseMaterialId => {
             result.materials[baseMaterialId] = Math.max(0, result.materials[baseMaterialId] - (count * materialBaseRecipe.materials[baseMaterialId]));
           });
-          console.debug(result.karma, (count * +currentItem.recipe.karma));
           result.karma = Math.max(0, result.karma - (count * +currentItem.recipe.karma));
         } else if (result.materials[materialId] !== undefined) {
           result.materials[materialId] = Math.max(0, result.materials[materialId] - count);
