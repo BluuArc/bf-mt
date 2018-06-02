@@ -59,10 +59,10 @@
                         </v-layout>
                         <v-layout row wrap class="mb-2">
                           <v-flex xs12 sm6 md4 lg3>
-                            <item-input-card :item="itemById(mat.id)" v-model="currentlyHave[mat.id.toString()]" :need="mat.count"/>
+                            <item-input-card :item="itemById(mat.id)" v-model="currentlyHave[mat.id.toString()]" @input="updateNeeded" :need="mat.count"/>
                           </v-flex>
                           <v-flex xs12 sm6 md4 lg3 v-for="(item, i) in getRelevantCraftablesForMaterial(mat.id)" :key="i">
-                            <item-input-card :item="itemById(item.id)" v-model="currentlyHave[item.id.toString()]" :need="item.count"/>
+                            <item-input-card :item="itemById(item.id)" v-model="currentlyHave[item.id.toString()]" @input="updateNeeded" :need="item.count"/>
                           </v-flex>
                         </v-layout>
                       </template>
@@ -130,7 +130,7 @@ export default {
     },
   },
   methods: {
-    updateNeeded () {
+    updateNeeded: debounce(function () {
       console.debug('updating needed lists');
       const result = this.getBaseMaterialsOf(this.item);
       const craftables = {};
@@ -163,7 +163,7 @@ export default {
       this.baseMaterialsNeeded = this.convertMaterialsObjectToArray(result.materials);
       this.totalKarmaNeeded = result.karma;
       this.allCraftables = this.convertMaterialsObjectToArray(craftables);
-    },
+    }, 50),
     getBaseMaterialsOf (item) {
       const result = {
         materials: {},
@@ -225,7 +225,7 @@ export default {
       return Object.entries(input).map(([id, count]) => ({ count, id }));
     },
     getAllCraftables () {
-      this.allCraftables.forEach(({id, count}) => {
+      this.getCraftablesInRecipeOf(this.item).forEach(({id, count}) => {
         this.currentlyHave[id] = count;
       });
       this.updateNeeded();

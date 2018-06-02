@@ -105,9 +105,6 @@
             <crafting-card :item="item" style="border-color: var(--recipe-card-color)"/>
           </v-flex>
         </v-layout>
-        <v-layout row>
-          {{ item }}
-        </v-layout>
       </v-container>
     </v-card-text>
   </v-card>
@@ -193,7 +190,6 @@ export default {
     return {
       item: undefined,
       loadingItemData: true,
-      // activeTab: 'skills',
     };
   },
   watch: {
