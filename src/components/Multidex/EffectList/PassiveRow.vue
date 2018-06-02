@@ -1,6 +1,6 @@
 <template>
   <v-layout row wrap class="buff-list-row">
-    <v-flex xs2 sm1 class="text-xs-center id-column center-align-parent">
+    <v-flex xs2 sm1 class="text-xs-center id-column center-align-parent id-column">
       <span class="center-align-container">{{ getEffectId(effect) }}</span>
     </v-flex>
     <v-flex xs10 sm11 class="text-xs-center">

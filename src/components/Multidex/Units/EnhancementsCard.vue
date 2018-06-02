@@ -106,7 +106,7 @@
 <script>
 import JsonViewer from '@/components/Multidex/JsonViewer';
 import TextViewer from '@/components/Multidex/TextViewer';
-import BuffList from '@/components/Multidex/BuffList/MainTable';
+import BuffList from '@/components/Multidex/EffectList/MainTable';
 import SPIcon from '@/components/Multidex/Units/SPIcon';
 import debounce from 'lodash/debounce';
 

@@ -10,33 +10,41 @@
     <v-card-text v-else class="pl-0 pr-0 pb-5">
       <v-container class="item-dialog-content" grid-list-xl>
         <v-layout row wrap>
-          <v-flex xs12 sm4>
+          <v-flex xs12>
             <v-card style="border-color: var(--description-card-color)">
               <v-card-title class="orange darken-3 white--text">
                 <h3 class="title">{{ item.name }}</h3>
               </v-card-title>
-              <v-card-text style="min-height: 55px;">
-                <v-layout row wrap>
-                  <v-flex xs4 sm2 class="center-align-parent">
-                    <div class="card__media text-xs-center center-align-container">
-                      <item-thumbnail
-                        :src="getItemImage(item.id)"
-                        class="mx-auto"
-                        style="height: 48px; width: 48px;"
-                        imgStyle="height: 48px; width: 48px;"
-                        :rarity="item.rarity"
-                        :type="item.type"
-                        :raid="item.raid"/>
-                    </div>
-                  </v-flex>
-                  <v-flex xs8 sm10>
-                    {{ item.desc }}
-                  </v-flex>
-                </v-layout>
+              <v-card-text class="pt-0 pb-0">
+                <description-and-effects-section
+                  :description="item.desc"
+                  :effects="itemEffect"
+                  tab-items-style="min-height: 55px;"
+                  tab-items-class="pt-1">
+                  <div slot="description" class="pl-4 pt-1" style="min-height: 55px">
+                    <v-layout row wrap style="min-height: 55px">
+                      <v-flex xs2 sm1 class="center-align-parent">
+                        <div class="card__media text-xs-center center-align-container">
+                          <item-thumbnail
+                            :src="getItemImage(item.id)"
+                            class="mx-auto"
+                            style="height: 48px; width: 48px;"
+                            imgStyle="height: 48px; width: 48px;"
+                            :rarity="item.rarity"
+                            :type="item.type"
+                            :raid="item.raid"/>
+                        </div>
+                      </v-flex>
+                      <v-flex xs10 sm11>
+                        {{ item.desc }}
+                      </v-flex>
+                    </v-layout>
+                  </div>
+                </description-and-effects-section>
               </v-card-text>
             </v-card>
           </v-flex>
-          <v-flex xs12 sm8>
+          <v-flex xs12>
             <v-card style="border-color: var(--miscellaneous-card-color)">
               <v-card-title class="blue-grey white--text">
                 <h3 class="title">Miscellaneous Info</h3>
@@ -111,6 +119,7 @@ import ItemThumbnail from '@/components/Multidex/Items/ItemThumbnail';
 import SphereTypeIcon from '@/components/Multidex/Items/SphereTypeIcon';
 import ItemCard from '@/components/Multidex/Items/ItemCard';
 import CraftingCard from '@/components/Multidex/Items/CraftingCard';
+import DescriptionAndEffects from '@/components/Multidex/GenericEffectsSection';
 
 export default {
   props: ['itemId'],
@@ -119,6 +128,7 @@ export default {
     'sphere-type-icon': SphereTypeIcon,
     'item-card': ItemCard,
     'crafting-card': CraftingCard,
+    'description-and-effects-section': DescriptionAndEffects,
   },
   computed: {
     ...mapGetters('items', { getItemImage: 'getImageUrl', getSphereCategory: 'getSphereCategory' }),
@@ -160,6 +170,22 @@ export default {
       } else {
         console.warn('unknown item type', type);
         return type || 'Unknown Type';
+      }
+    },
+    itemEffect () {
+      if (!this.item || !this.item.effect) {
+        return;
+      }
+
+      if (this.item.effect.effect && this.item.effect.effect.length > 0) {
+        const { effect, ...extraParams } = this.item.effect;
+        console.debug('original effect value', this.item.effect);
+        return [
+          { ...effect[0], ...extraParams },
+          ...effect.slice(1),
+        ];
+      } else {
+        return this.item.effect;
       }
     },
   },

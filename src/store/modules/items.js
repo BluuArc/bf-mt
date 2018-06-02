@@ -116,7 +116,7 @@ const itemStore = {
           const entry = pageDb[key];
           const fitsName = (!name ? true : entry.name.toLowerCase().includes(name.toLowerCase()));
           const fitsRarity = rarity.includes(entry.rarity);
-          const fitsItemType = itemTypes.includes(entry.type);
+          const fitsItemType = itemTypes.includes(entry.type) || (itemTypes.includes('raid') && entry.raid);
 
           const hasSphereType = entry['sphere type'] !== undefined || entry.type === 'sphere' || entry.type === 'ls_sphere';
           const fitsSphereType = includeAnySphereType || (hasSphereType && (sphereTypes.includes(entry['sphere type']))) || (includeNoneSphereType && !entry['sphere type']);

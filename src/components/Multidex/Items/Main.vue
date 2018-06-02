@@ -344,6 +344,12 @@ export default {
           const result = rarityA === rarityB ? (+idA - +idB) : (rarityA - rarityB);
           return this.sortOptions.isAscending ? result : -result;
         },
+        Type: (idA, idB) => {
+          const [typeA, typeB] = [this.pageDb[idA].type, this.pageDb[idB].type];
+          const getIndex = (type) => this.defaultFilters.itemTypes.indexOf(type);
+          const result = typeA === typeB ? (+idA - +idB) : (getIndex(typeA) - getIndex(typeB));
+          return this.sortOptions.isAscending ? result : -result;
+        },
         'Sell Price': (idA, idB) => {
           const [priceA, priceB] = [+this.pageDb[idA].sell_price, +this.pageDb[idB].sell_price];
           const result = priceA === priceB ? (+idA - +idB) : (priceA - priceB);
