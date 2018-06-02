@@ -63,8 +63,8 @@ const dbWrapper = {
       Object.keys(currentDb)
       .forEach(key => {
         // TODO: search units based on search query
-        const { desc, id, name, rarity, thumbnail, type, raid, max_stack, sell_price, recipe } = currentDb[key];
-        resultDb[key] = { desc, id, name, rarity, thumbnail, type, raid, max_stack, sell_price, recipe, 'sphere type': currentDb[key]['sphere type'] };
+        const { desc, id, name, rarity, thumbnail, type, raid, max_stack, sell_price, recipe, usage } = currentDb[key];
+        resultDb[key] = { desc, id, name, rarity, thumbnail, type, raid, max_stack, sell_price, recipe, usage, 'sphere type': currentDb[key]['sphere type'] };
       });
 
       return resultDb;

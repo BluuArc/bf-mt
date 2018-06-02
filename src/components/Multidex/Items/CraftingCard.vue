@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card class="crafting-card">
     <v-card-title class="blue darken-2 white--text">
       <h3 class="title">Crafting Recipe</h3>
     </v-card-title>
@@ -8,15 +8,74 @@
         <v-tab>Full</v-tab>
         <v-tab>Base Materials Only</v-tab>
       </v-tabs>
-      <v-tabs-items v-model="activeTab" class="pa-2" touchless>
+      <v-tabs-items v-model="activeTab" touchless>
         <v-tab-item class="pt-2 pb-0" style="overflow-x: auto;">
           <v-container fluid class="pb-1">
             <material-row v-for="(mat, i) in item.recipe.materials" :key="i" :material="mat"/>
             <material-row v-if="item.recipe.karma" :karma="item.recipe.karma"/>
           </v-container>
         </v-tab-item>
-        <v-tab-item>
-          Basic Materials Only List here
+        <v-tab-item class="pt-2 pb-0" style="overflow-x: auto;">
+          <v-container fluid class="pb-1">
+            <v-expansion-panel>
+              <v-expansion-panel-content>
+                <div slot="header">Your Craftables </div>
+                <v-layout row class="pl-3">
+                  <v-flex xs12>
+                    <v-btn @click="getAllCraftables">Got it all</v-btn>
+                    <v-btn @click="resetAllCraftables">Reset</v-btn>
+                  </v-flex>
+                </v-layout>
+                <v-layout row wrap>
+                  <v-flex xs12 sm6 md4 lg3 v-for="(craftable, i) in allCraftables" :key="i">
+                    <item-input-card :item="itemById(craftable.id)" v-model="currentlyHave[craftable.id.toString()]" :need="craftable.count"/>
+                  </v-flex>
+                </v-layout>
+              </v-expansion-panel-content>
+              <v-expansion-panel-content>
+                <div slot="header">Needed Base Materials</div>
+                <template>
+                  <v-layout row class="ml-2">
+                    <v-flex xs9 sm10 md11 class="text-xs-left pr-0">
+                      <b>Item</b>
+                    </v-flex>
+                    <v-flex xs3 sm2 md1 class="text-xs-left pl-0">
+                      <b>Need</b>
+                    </v-flex>
+                  </v-layout>
+                  <v-container fluid class="pa-0">
+                    <material-row
+                      v-for="(mat, i) in baseMaterialsNeeded"
+                      :key="i"
+                      :material="mat"
+                      :show-button-condition="true"
+                      expanded-area-style="border: 1px solid grey; min-width: 20rem; overflow-x: auto;"
+                      expanded-area-class="ml-2 mr-2 mb-5 pb-1"
+                      button-text="Change"
+                      class="ml-4">
+                      <template slot="expanded-area">
+                        <v-layout row>
+                          How much of the following do you have?
+                        </v-layout>
+                        <v-layout row wrap class="mb-2">
+                          <v-flex xs12 sm6 md4 lg3>
+                            <item-input-card :item="itemById(mat.id)" v-model="currentlyHave[mat.id.toString()]" :need="mat.count"/>
+                          </v-flex>
+                          <v-flex xs12 sm6 md4 lg3 v-for="(item, i) in getRelevantCraftablesForMaterial(mat.id)" :key="i">
+                            <item-input-card :item="itemById(item.id)" v-model="currentlyHave[item.id.toString()]" :need="item.count"/>
+                          </v-flex>
+                        </v-layout>
+                      </template>
+                    </material-row>
+                    <material-row
+                      v-if="item.recipe.karma"
+                      :karma="totalKarmaNeeded"
+                      class="ml-4"/>
+                  </v-container>
+                </template>
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+          </v-container>
         </v-tab-item>
       </v-tabs-items>
     </v-card-text>
@@ -26,11 +85,14 @@
 <script>
 import { mapGetters } from 'vuex';
 import MaterialRow from '@/components/Multidex/Items/MaterialRow';
+import ItemInputCard from '@/components/Multidex/Items/ItemInputCard';
+import debounce from 'lodash/debounce';
 
 export default {
   props: ['item'],
   components: {
     'material-row': MaterialRow,
+    'item-input-card': ItemInputCard,
   },
   computed: {
     ...mapGetters('items', ['getImageUrl', 'itemById']),
@@ -38,7 +100,157 @@ export default {
   data () {
     return {
       activeTab: '',
+      baseMaterialsNeeded: [],
+      totalKarmaNeeded: 0,
+      currentlyHave: {},
+      allCraftables: [],
     };
+  },
+  watch: {
+    currentlyHave: {
+      deep: true,
+      handler: debounce(function () {
+        console.debug(this.currentlyHave);
+        if (!this.item) {
+          if (Object.keys(this.currentlyHave).length !== 0) {
+            this.currentlyHave = {};
+          }
+          return;
+        }
+        this.updateNeeded();
+      }, 50),
+    },
+    item () {
+      this.currentlyHave = {};
+      if (this.item) {
+        this.updateNeeded();
+      } else {
+        this.baseMaterialsNeeded = [];
+        this.totalKarmaNeeded = 0;
+      }
+    },
+  },
+  methods: {
+    updateNeeded () {
+      console.debug('updating needed lists');
+      const result = this.getBaseMaterialsOf(this.item);
+      const craftables = {};
+      this.getCraftablesInRecipeOf(this.item, craftables);
+
+      const { karma, ...materials } = this.currentlyHave;
+
+      if (!isNaN(karma)) {
+        result.karma = Math.max(0, result.karma - karma);
+      }
+
+      Object.keys(materials).forEach(materialId => {
+        const currentItem = this.itemById(materialId);
+        const count = materials[materialId];
+        if (currentItem.recipe) {
+          const materialBaseRecipe = this.getBaseMaterialsOf(this.itemById(materialId));
+          result.karma = Math.max(0, result.karma - (count * materialBaseRecipe.karma));
+          Object.keys(materialBaseRecipe.materials).forEach(baseMaterialId => {
+            result.materials[baseMaterialId] = Math.max(0, result.materials[baseMaterialId] - (count * materialBaseRecipe.materials[baseMaterialId]));
+          });
+          console.debug(result.karma, (count * +currentItem.recipe.karma));
+          result.karma = Math.max(0, result.karma - (count * +currentItem.recipe.karma));
+        } else if (result.materials[materialId] !== undefined) {
+          result.materials[materialId] = Math.max(0, result.materials[materialId] - count);
+        }
+
+        if (craftables[materialId]) {
+          craftables[materialId] = Math.max(0, craftables[materialId] - materials[materialId]);
+        }
+      });
+      this.baseMaterialsNeeded = this.convertMaterialsObjectToArray(result.materials);
+      this.totalKarmaNeeded = result.karma;
+      this.allCraftables = this.convertMaterialsObjectToArray(craftables);
+    },
+    getBaseMaterialsOf (item) {
+      const result = {
+        materials: {},
+        karma: 0,
+      };
+
+      if (!item.recipe) {
+        return result;
+      }
+
+      result.karma += +item.recipe.karma;
+      item.recipe.materials.forEach(material => {
+        const currentItem = this.itemById(material.id.toString());
+        const currentItemId = currentItem.id.toString();
+        const count = +material.count;
+        if (currentItem.recipe) {
+          const materialRecipe = this.getBaseMaterialsOf(currentItem);
+          Object.keys(materialRecipe.materials).forEach(baseMaterialId => {
+            if (isNaN(result.materials[baseMaterialId])) {
+              result.materials[baseMaterialId] = 0;
+            }
+
+            result.karma += (count * +currentItem.recipe.karma);
+            result.materials[baseMaterialId] += (count * materialRecipe.materials[baseMaterialId]);
+          });
+        } else {
+          if (!result.materials[currentItemId]) {
+            result.materials[currentItemId] = 0;
+          }
+          result.materials[currentItemId] += count;
+        }
+      });
+      return result;
+    },
+    getCraftablesInRecipeOf (item, currentCraftables = {}) {
+      item.recipe.materials.forEach(material => {
+        const currentItem = this.itemById(material.id.toString());
+        const currentItemId = currentItem.id.toString();
+        if (currentItem.recipe) {
+          if (!currentCraftables[currentItemId]) {
+            currentCraftables[currentItemId] = 0;
+          }
+          currentCraftables[currentItemId] += +material.count;
+          this.getCraftablesInRecipeOf(currentItem, currentCraftables);
+        }
+      });
+      return Object.entries(currentCraftables).map(([id, count]) => ({ id, count }));
+    },
+    getRelevantCraftablesForMaterial (materialId) {
+      const material = this.itemById((materialId || '').toString());
+      if (!material || !material.usage) {
+        return [];
+      }
+
+      const materialIdArray = material.usage.map(entry => entry.id.toString());
+      return this.allCraftables.filter(entry => materialIdArray.includes(entry.id));
+    },
+    convertMaterialsObjectToArray (input) {
+      return Object.entries(input).map(([id, count]) => ({ count, id }));
+    },
+    getAllCraftables () {
+      this.allCraftables.forEach(({id, count}) => {
+        this.currentlyHave[id] = count;
+      });
+      this.updateNeeded();
+    },
+    resetAllCraftables () {
+      Object.keys(this.currentlyHave)
+        .forEach(id => {
+          this.currentlyHave[id] = 0;
+        });
+      this.updateNeeded();
+    },
+  },
+  mounted () {
+    if (this.item) {
+      this.updateNeeded();
+    }
   },
 };
 </script>
+
+<style>
+.crafting-card .expansion-panel__header {
+  margin-left: 0;
+  margin-right: 0;
+}
+</style>

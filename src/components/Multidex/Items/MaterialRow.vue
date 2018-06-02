@@ -17,14 +17,14 @@
         </v-flex>
         <v-flex xs6 sm9 md10>
           <v-layout row wrap>
-            <v-flex xs12 :sm6="hasRecipe">
+            <v-flex xs12 :sm6="hasRecipe || showButtonCondition !== undefined">
               <router-link :to="to || multidexUrl" style="color: inherit; text-decoration: none;">
                 <b>{{ item.name }}</b>
                 <v-icon small class="pl-1">fas fa-external-link-alt</v-icon>
               </router-link>
             </v-flex>
-            <v-flex v-if="item.recipe" xs3 sm6 class="text-xs-right">
-              <v-btn @click="showRecipe = !showRecipe" small>Recipe</v-btn>
+            <v-flex v-if="(showButtonCondition !== undefined && !!showButtonCondition) || (showButtonCondition === undefined && item.recipe)" xs3 sm6 class="text-xs-right">
+              <v-btn @click="showRecipe = !showRecipe" small>{{ buttonText || 'Recipe' }}</v-btn>
             </v-flex>
           </v-layout>
         </v-flex>
@@ -32,13 +32,31 @@
           {{ materialCount }}
         </v-flex>
       </v-layout>
-      <template v-if="item && item.recipe">
+      <template v-if="showButtonCondition !== undefined">
         <v-layout row>
           <v-slide-y-transition mode="in-out">
-            <v-container fluid v-show="showRecipe" class="ml-2 mr-2 mb-5 pb-1 sub-recipe-container" style="min-width: 20rem; overflow-x: auto;">
-              <material-row v-for="(mat, i) in item.recipe.materials" :key="i" :material="mat"/>
-              <material-row v-if="item.recipe.karma && item.recipe.karma > 0" :karma="item.recipe.karma"/>
+            <v-container fluid v-show="showRecipe" :style="expandedAreaStyle" :class="expandedAreaClass">
+              <slot name="expanded-area" class="ml-2 mr-2 mb-5 pb-1" style="min-width: 20rem; overflow-x: auto;">
+                Put your stuff here.
+              </slot>
             </v-container>
+          </v-slide-y-transition>
+        </v-layout>
+      </template>
+      <template v-else-if="showButtonCondition === undefined && item && item.recipe">
+        <v-layout row>
+          <v-slide-y-transition mode="in-out">
+            <slot name="expanded-area">
+              <v-container fluid v-show="showRecipe" class="ml-2 mr-2 mb-5 pb-1 sub-recipe-container" style="min-width: 20rem; overflow-x: auto;">
+                <material-row
+                  v-for="(mat, i) in item.recipe.materials"
+                  :key="i"
+                  :material="mat"/>
+                <material-row
+                  v-if="item.recipe.karma && item.recipe.karma > 0"
+                  :karma="item.recipe.karma"/>
+              </v-container>
+            </slot>
           </v-slide-y-transition>
         </v-layout>
       </template>
@@ -61,7 +79,7 @@
 import { mapGetters } from 'vuex';
 import ItemThumbnail from '@/components/Multidex/Items/ItemThumbnail';
 export default {
-  props: ['material', 'karma', 'to'],
+  props: ['material', 'karma', 'to', 'buttonText', 'showButtonCondition', 'expandedAreaStyle', 'expandedAreaClass', 'parentObject'],
   components: {
     'item-thumbnail': ItemThumbnail,
   },
