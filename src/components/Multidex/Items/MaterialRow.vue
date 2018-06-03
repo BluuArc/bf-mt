@@ -19,6 +19,10 @@
           <v-layout row wrap>
             <v-flex xs12 :sm6="hasRecipe || showButtonCondition !== undefined">
               <router-link :to="to || multidexUrl" style="color: inherit; text-decoration: none;">
+                <sphere-type-icon
+                  v-if="item['sphere type'] !== undefined || item.type === 'sphere' || item.type === 'ls_sphere'"
+                  :category="item['sphere type']"
+                  class="ml-0 mr-0"/>
                 <b>{{ item.name }}</b>
                 <v-icon small class="pl-1">fas fa-external-link-alt</v-icon>
               </router-link>
@@ -78,10 +82,13 @@
 <script>
 import { mapGetters } from 'vuex';
 import ItemThumbnail from '@/components/Multidex/Items/ItemThumbnail';
+import SphereTypeIcon from '@/components/Multidex/Items/SphereTypeIcon';
+
 export default {
   props: ['material', 'karma', 'to', 'buttonText', 'showButtonCondition', 'expandedAreaStyle', 'expandedAreaClass', 'parentObject'],
   components: {
     'item-thumbnail': ItemThumbnail,
+    'sphere-type-icon': SphereTypeIcon,
   },
   computed: {
     ...mapGetters('items', ['getImageUrl', 'itemById']),

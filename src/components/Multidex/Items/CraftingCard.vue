@@ -18,8 +18,8 @@
         <v-tab-item class="pt-2 pb-0" style="overflow-x: auto;">
           <v-container fluid class="pb-1">
             <v-expansion-panel>
-              <v-expansion-panel-content>
-                <div slot="header">Your Craftables </div>
+              <v-expansion-panel-content v-show="allCraftables.length > 0">
+                <div slot="header">Your Craftables</div>
                 <v-layout row class="pl-3">
                   <v-flex xs12>
                     <v-btn @click="getAllCraftables">Got it all</v-btn>

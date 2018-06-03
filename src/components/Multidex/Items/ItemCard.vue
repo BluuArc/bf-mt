@@ -14,7 +14,7 @@
               :raid="item.raid"/>
           </div>
         </v-flex>
-        <v-flex xs9>
+        <v-flex xs9 class="pl-0">
           <v-container fluid class="pa-2">
             <v-layout row>
               <sphere-type-icon
@@ -22,6 +22,11 @@
                 :category="item['sphere type']"
                 class="ml-0"/>
               <h3 class="subheading d-inline-block"><b>{{ item.name }}</b></h3>
+            </v-layout>
+            <v-layout row>
+              <v-flex xs12 class="pa-0">
+                {{ item.desc }}
+              </v-flex>
             </v-layout>
             <v-layout row>
               <v-flex xs6 class="pl-0">

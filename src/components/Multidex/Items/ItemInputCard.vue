@@ -19,6 +19,10 @@
             </v-layout>
             <v-layout row>
               <v-flex xs12 class="text-xs-center">
+                <sphere-type-icon
+                v-if="item['sphere type'] !== undefined || item.type === 'sphere' || item.type === 'ls_sphere'"
+                :category="item['sphere type']"
+                class="ml-0 mr-0"/>
                 {{ item.name }}
               </v-flex>
             </v-layout>
@@ -39,10 +43,13 @@
 <script>
 import { mapGetters } from 'vuex';
 import ItemThumbnail from '@/components/Multidex/Items/ItemThumbnail';
+import SphereTypeIcon from '@/components/Multidex/Items/SphereTypeIcon';
+
 export default {
   props: ['item', 'value', 'need'],
   components: {
     'item-thumbnail': ItemThumbnail,
+    'sphere-type-icon': SphereTypeIcon,
   },
   computed: {
     ...mapGetters('items', ['getImageUrl']),
