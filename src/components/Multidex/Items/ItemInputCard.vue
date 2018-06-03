@@ -30,7 +30,7 @@
           <v-flex xs6 class="center-align-parent">
             <v-text-field v-model="amount" hide-details/>
             <small v-if="need !== undefined">
-              {{ need }} needed.
+              Need {{ Math.max(0, need - (have || 0)) }}
             </small>
           </v-flex>
         </v-layout>
@@ -39,14 +39,14 @@
   </v-card>
 </template>
 
-
 <script>
 import { mapGetters } from 'vuex';
 import ItemThumbnail from '@/components/Multidex/Items/ItemThumbnail';
 import SphereTypeIcon from '@/components/Multidex/Items/SphereTypeIcon';
+import debounce from 'lodash/debounce';
 
 export default {
-  props: ['item', 'value', 'need'],
+  props: ['item', 'value', 'need', 'have'],
   components: {
     'item-thumbnail': ItemThumbnail,
     'sphere-type-icon': SphereTypeIcon,
@@ -62,9 +62,12 @@ export default {
   watch: {
     amount (newValue) {
       if (this.need !== undefined && +newValue > this.need && +newValue !== this.value) {
-        this.$emit('input', this.need);
+        this.emitValue(this.need);
+        this.$nextTick(() => {
+          this.amount = this.need;
+        });
       } else {
-        this.$emit('input', +newValue);
+        this.emitValue(+newValue);
       }
     },
     value (newValue) {
@@ -75,6 +78,12 @@ export default {
     if (this.value !== undefined) {
       this.amount = this.value;
     }
+  },
+  methods: {
+    emitValue: debounce(function (value) {
+      console.debug('emitting', value);
+      this.$emit('input', value);
+    }, 50),
   },
 };
 </script>

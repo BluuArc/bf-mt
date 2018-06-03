@@ -95,7 +95,8 @@
                       <item-card
                         class="pa-1 card--raised"
                         :to="`/multidex/items/?itemId=${nextItem.id}`"
-                        :item="pageDb[nextItem.id]"/>
+                        :item="pageDb[nextItem.id]"
+                        style="height: 100%;"/>
                   </v-flex>
                 </v-layout>
               </v-card-text>

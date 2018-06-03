@@ -20,16 +20,30 @@
             <v-expansion-panel>
               <v-expansion-panel-content v-show="allCraftables.length > 0">
                 <div slot="header">Your Craftables</div>
-                <v-layout row class="pl-3">
+                <v-layout row wrap class="pl-3">
                   <v-flex xs12>
                     <v-btn @click="getAllCraftables">Got it all</v-btn>
                     <v-btn @click="resetAllCraftables">Reset</v-btn>
                   </v-flex>
+                  <!-- <v-flex xs3 sm2 class="pb-0">Filters:</v-flex>
+                  <v-flex class="pb-0" xs12 sm4 md3>
+                    <v-checkbox v-model="filters" value="Need 0" label="Need 0"/>
+                  </v-flex>
+                  <v-flex class="pb-0" xs12 sm4 md3>
+                    <v-checkbox v-model="filters" value="Need 1+" label="Need 1+"/>
+                  </v-flex> -->
                 </v-layout>
                 <v-layout row wrap>
-                  <v-flex xs12 sm6 md4 lg3 v-for="(craftable, i) in allCraftables" :key="i">
-                    <item-input-card :item="itemById(craftable.id)" v-model="currentlyHave[craftable.id.toString()]" :need="craftable.count"/>
-                  </v-flex>
+                  <template v-for="(craftable, i) in allCraftables" >
+                    <v-flex xs12 sm6 md4 lg3 :key="i">
+                      <item-input-card
+                        :item="itemById(craftable.id)"
+                        v-model="currentlyHave[craftable.id.toString()]"
+                        @input="updateNeeded"
+                        :need="craftable.total"
+                        :have="(currentlyHave[craftable.id.toString()] || 0) + (craftable.total - craftable.count)"/>
+                    </v-flex>
+                  </template>
                 </v-layout>
               </v-expansion-panel-content>
               <v-expansion-panel-content>
@@ -59,10 +73,20 @@
                         </v-layout>
                         <v-layout row wrap class="mb-2">
                           <v-flex xs12 sm6 md4 lg3>
-                            <item-input-card :item="itemById(mat.id)" v-model="currentlyHave[mat.id.toString()]" @input="updateNeeded" :need="mat.count"/>
+                            <item-input-card
+                              :item="itemById(mat.id)"
+                              v-model="currentlyHave[mat.id.toString()]"
+                              @input="updateNeeded"
+                              :need="mat.total"
+                              :have="(currentlyHave[mat.id.toString()] || 0) + (mat.total - mat.count)"/>
                           </v-flex>
                           <v-flex xs12 sm6 md4 lg3 v-for="(item, i) in getRelevantCraftablesForMaterial(mat.id)" :key="i">
-                            <item-input-card :item="itemById(item.id)" v-model="currentlyHave[item.id.toString()]" @input="updateNeeded" :need="item.count"/>
+                            <item-input-card
+                            :item="itemById(item.id)"
+                            v-model="currentlyHave[item.id.toString()]"
+                            @input="updateNeeded"
+                            :need="item.total"
+                            :have="(currentlyHave[mat.id.toString()] || 0) + (mat.total - mat.count)"/>
                           </v-flex>
                         </v-layout>
                       </template>
@@ -104,6 +128,7 @@ export default {
       totalKarmaNeeded: 0,
       currentlyHave: {},
       allCraftables: [],
+      filters: ['Need 0', 'Need 1+'],
     };
   },
   watch: {
@@ -133,8 +158,12 @@ export default {
     updateNeeded: debounce(function () {
       console.debug('updating needed lists');
       const result = this.getBaseMaterialsOf(this.item);
+      const totals = this.getBaseMaterialsOf(this.item);
       const craftables = {};
       this.getCraftablesInRecipeOf(this.item, craftables);
+      const totalCraftables = {};
+      this.getCraftablesInRecipeOf(this.item, totalCraftables);
+      console.debug(craftables);
 
       const { karma, ...materials } = this.currentlyHave;
 
@@ -145,24 +174,44 @@ export default {
       Object.keys(materials).forEach(materialId => {
         const currentItem = this.itemById(materialId);
         const count = materials[materialId];
+        if (craftables[materialId] !== undefined) {
+          craftables[materialId] = Math.max(0, craftables[materialId] - materials[materialId]);
+        }
+
         if (currentItem.recipe) {
+          // subtract base recipe items
           const materialBaseRecipe = this.getBaseMaterialsOf(this.itemById(materialId));
           result.karma = Math.max(0, result.karma - (count * materialBaseRecipe.karma));
           Object.keys(materialBaseRecipe.materials).forEach(baseMaterialId => {
-            result.materials[baseMaterialId] = Math.max(0, result.materials[baseMaterialId] - (count * materialBaseRecipe.materials[baseMaterialId]));
+            const baseMaterialCount = materialBaseRecipe.materials[baseMaterialId];
+            result.materials[baseMaterialId] = Math.max(0, result.materials[baseMaterialId] - (count * baseMaterialCount));
+
+            if (this.currentlyHave[baseMaterialId] !== undefined) {
+              this.currentlyHave[baseMaterialId] = Math.max(0, this.currentlyHave[baseMaterialId] - (count * baseMaterialCount));
+            }
           });
           result.karma = Math.max(0, result.karma - (count * +currentItem.recipe.karma));
+
+          // subtract craftable items
+          const materialCraftables = this.getCraftablesInRecipeOf(currentItem);
+          materialCraftables.forEach(({ id, count: craftableCount }) => {
+            if (craftables[id] !== undefined) {
+              craftables[id] = Math.max(0, craftables[id] - (count * craftableCount));
+            }
+
+            if (this.currentlyHave[id] !== undefined) {
+              this.currentlyHave[id] = Math.max(0, this.currentlyHave[id] - (count * craftableCount));
+            }
+          });
         } else if (result.materials[materialId] !== undefined) {
           result.materials[materialId] = Math.max(0, result.materials[materialId] - count);
         }
-
-        if (craftables[materialId]) {
-          craftables[materialId] = Math.max(0, craftables[materialId] - materials[materialId]);
-        }
       });
-      this.baseMaterialsNeeded = this.convertMaterialsObjectToArray(result.materials);
+      this.baseMaterialsNeeded = this.convertMaterialsObjectToArray(result.materials)
+        .map(entry => ({ total: totals.materials[entry.id], ...entry }));
       this.totalKarmaNeeded = result.karma;
-      this.allCraftables = this.convertMaterialsObjectToArray(craftables);
+      this.allCraftables = this.convertMaterialsObjectToArray(craftables)
+        .map(entry => ({ total: totalCraftables[entry.id], ...entry }));
     }, 50),
     getBaseMaterialsOf (item) {
       const result = {
