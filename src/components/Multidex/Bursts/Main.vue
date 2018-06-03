@@ -173,13 +173,12 @@
             <v-flex
               v-for="key in burstsToShow"
               :key="key"
-              xs12 sm6 md4
-              style="margin-top: auto; margin-bottom: auto;">
+              xs12 sm6 md4>
               <burst-card
                 v-if="pageDb.hasOwnProperty(key)"
                 :to="`/multidex/bursts/?burstId=${key}`"
                 :burst="pageDb[key]"
-                style="min-height: 84px"/>
+                style="min-height: 84px; height: 100%;"/>
             </v-flex>
           </v-layout>
           <v-layout row v-if="numEntries[activeServer] === 0">

@@ -247,7 +247,11 @@
               v-for="key in itemsToShow"
               :key="key"
               xs12 sm6 md4>
-              <item-card :to="`/multidex/items/?itemId=${key}`" v-if="pageDb.hasOwnProperty(key)" :item="pageDb[key]"/>
+              <item-card
+                :to="`/multidex/items/?itemId=${key}`"
+                v-if="pageDb.hasOwnProperty(key)"
+                :item="pageDb[key]"
+                style="height: 100%"/>
             </v-flex>
           </v-layout>
           <v-layout row v-if="numEntries[activeServer] === 0">

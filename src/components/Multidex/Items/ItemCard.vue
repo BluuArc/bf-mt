@@ -24,7 +24,7 @@
               <h3 class="subheading d-inline-block"><b>{{ item.name }}</b></h3>
             </v-layout>
             <v-layout row>
-              <v-flex xs12 class="pa-0">
+              <v-flex xs12 class="pa-0" style="word-wrap: break-word;">
                 {{ item.desc }}
               </v-flex>
             </v-layout>
