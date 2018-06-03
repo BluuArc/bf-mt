@@ -54,7 +54,7 @@ export default {
   },
   watch: {
     amount (newValue) {
-      if (this.need !== undefined && +newValue > this.need) {
+      if (this.need !== undefined && +newValue > this.need && +newValue !== this.value) {
         this.$emit('input', this.need);
       } else {
         this.$emit('input', +newValue);
