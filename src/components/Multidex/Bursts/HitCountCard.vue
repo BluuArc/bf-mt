@@ -2,10 +2,10 @@
   <v-card>
     <v-card-title class="green darken-2 white--text">
       <v-layout row wrap>
-        <v-flex xs12 sm8 md9 class="text-xs-left">
+        <v-flex xs6 sm8 md9 class="text-xs-left">
           <h3 class="title">Hit Count Info</h3>
         </v-flex>
-        <v-flex xs12 sm4 md3 class="text-xs-right">
+        <v-flex xs6 sm4 md3 class="text-xs-right">
           <v-tooltip bottom>
             <span slot="activator" style="border-bottom: 1px dotted;">
               {{ bcdcInfo.cost }} BC/{{ bcdcInfo.hits }} {{ bcdcInfo.hits === 1 ? 'Hit' : 'Hits' }}/ {{ bcdcInfo.dropchecks }} DC
@@ -55,7 +55,7 @@
               <v-layout row>
                 <v-flex xs12 class="text-xs-center">
                   <h3 class="subheading"><b>Hit Count Table</b></h3>
-                  <hit-count-table class="pl-3 pr-3" :attack="attack.frames"/>
+                  <hit-count-table class="pl-3 pr-3" :attack="attack.frames" style="max-height: 50vh; overflow-y: auto;"/>
                 </v-flex>
               </v-layout>
             </v-container>

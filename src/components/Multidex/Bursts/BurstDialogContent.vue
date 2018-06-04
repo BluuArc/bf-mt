@@ -11,7 +11,7 @@
       <v-container grid-list-xl class="burst-dialog-content">
         <v-layout row wrap>
           <v-flex xs12>
-            <description-card :class="descriptionCardClass" :burst="burst"/>
+            <description-card :class="descriptionCardClass" :burst="burst" :burst-type="descriptionCardClass"/>
           </v-flex>
         </v-layout>
         <v-layout row wrap>

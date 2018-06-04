@@ -24,7 +24,7 @@
             <v-flex xs12 sm6 md4 v-if="!!burst.associated_units">
               <v-layout row>
                 <v-flex xs12>
-                  <h3 class="subheading"><b>Associated Unit:</b></h3>
+                  <h3 class="subheading"><b>Associated Unit ({{ (burstType || '').toUpperCase() }}):</b></h3>
                 </v-flex>
               </v-layout>
               <v-layout row>
@@ -74,7 +74,7 @@ import EffectList from '@/components/Multidex/EffectList/MainTable';
 import UnitCard from '@/components/Multidex/Units/UnitCard';
 
 export default {
-  props: ['burst'],
+  props: ['burst', 'burstType'],
   components: {
     'json-viewer': JsonViewer,
     'effect-list': EffectList,
