@@ -18,7 +18,7 @@
       </v-layout>
     </v-card-title>
     <v-card-text class="pt-0">
-      <div v-if="hitCountData.length === 0">
+      <div v-if="hitCountData.length === 0" class="pt-2">
         <h3 class="subheading">No hitcount data.</h3>
       </div>
       <template v-else>

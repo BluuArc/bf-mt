@@ -19,9 +19,6 @@
             <hitcount-card style="border-color: var(--hitcount-card-color)" :burst="burst"/>
           </v-flex>
         </v-layout>
-        <v-layout row>
-          {{ burst }}
-        </v-layout>
       </v-container>
     </v-card-text>
   </v-card>
