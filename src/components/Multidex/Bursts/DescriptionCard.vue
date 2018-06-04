@@ -10,7 +10,33 @@
       </v-tabs>
       <v-tabs-items v-model="activeTab" touchless>
         <v-tab-item>
-          <span>{{ description }}</span>
+          <v-layout row wrap>
+            <v-flex xs12 :sm6="!!burst.associated_units" :md8="!!burst.associated_units">
+              <v-layout row>
+                <v-flex xs12>
+                  <h3 class="subheading"><b>Description:</b></h3>
+                </v-flex>
+              </v-layout>
+              <v-layout row>
+                <v-flex xs12>{{ description }}</v-flex>
+              </v-layout>
+            </v-flex>
+            <v-flex xs12 sm6 md4 v-if="!!burst.associated_units">
+              <v-layout row>
+                <v-flex xs12>
+                  <h3 class="subheading"><b>Associated Unit:</b></h3>
+                </v-flex>
+              </v-layout>
+              <v-layout row>
+                <v-flex
+                  v-for="key in burst.associated_units"
+                  :key="key"
+                  xs12>
+                  <unit-card :to="`/multidex/units/?unitId=${key}`" v-if="unitById(key)" :unit="unitById(key)" class="mr-2 card--flat"/>
+                </v-flex>
+              </v-layout>
+            </v-flex>
+          </v-layout>
           <template v-if="burst">
             <v-card-actions class="pl-0 pr-0 pt-2 pb-0">
               <v-btn flat class="ma-0" @click="showEffectList = !showEffectList">{{ showEffectList ? 'Hide' : 'Show' }} Buff List</v-btn>
@@ -42,16 +68,20 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import JsonViewer from '@/components/Multidex/JsonViewer';
 import EffectList from '@/components/Multidex/EffectList/MainTable';
+import UnitCard from '@/components/Multidex/Units/UnitCard';
 
 export default {
   props: ['burst'],
   components: {
     'json-viewer': JsonViewer,
     'effect-list': EffectList,
+    'unit-card': UnitCard,
   },
   computed: {
+    ...mapGetters('units', ['unitById']),
     name () {
       return this.burst ? this.burst.name : 'None';
     },
