@@ -28,7 +28,7 @@
                     <v-slider v-model="levelIndex" step="1" ticks min="0" :max="numLevels - 1"/>
                   </v-flex>
                 </v-layout>
-                <effect-list class="pt-0" :effects="burst.levels[levelIndex].effects"/>  
+                <effect-list class="pt-0" :effects="burst.levels[levelIndex].effects"/>
               </v-container>
             </v-slide-y-transition>
           </template>

@@ -14,6 +14,11 @@
             <description-card :class="descriptionCardClass" :burst="burst"/>
           </v-flex>
         </v-layout>
+        <v-layout row wrap>
+          <v-flex xs12>
+            <hitcount-card style="border-color: var(--hitcount-card-color)" :burst="burst"/>
+          </v-flex>
+        </v-layout>
         <v-layout row>
           {{ burst }}
         </v-layout>
@@ -25,11 +30,13 @@
 <script>
 import { mapActions, mapState, mapGetters } from 'vuex';
 import DescriptionCard from '@/components/Multidex/Bursts/DescriptionCard';
+import HitCountCard from '@/components/Multidex/Bursts/HitCountCard';
 
 export default {
   props: ['burstId'],
   components: {
     'description-card': DescriptionCard,
+    'hitcount-card': HitCountCard,
   },
   computed: {
     ...mapState('bursts', ['pageDb']),
@@ -95,7 +102,7 @@ export default {
 .burst-dialog-content .card {
   border: 2px solid transparent;
   margin: -2px;
-  --miscellaneous-card-color: #607d8b; /* blue-grey */
+  --hitcount-card-color: #388e3c; /* green darken-2 */
   --usage-card-color: #4caf50; /* green */
   --recipe-card-color: #1976d2; /* blue darken-2 */
 }
