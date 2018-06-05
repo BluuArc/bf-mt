@@ -416,9 +416,11 @@ export default {
   methods: {
     ...mapActions('extraSkills', ['getFilteredKeys', 'ensurePageDbSyncWithServer']),
     ...mapActions('units', { unitsDbSync: 'ensurePageDbSyncWithServer' }),
-    initDb: debounce(function () {
-      this.unitsDbSync();
-      this.ensurePageDbSyncWithServer();
+    ...mapActions('items', { itemsDbSync: 'ensurePageDbSyncWithServer' }),
+    initDb: debounce(async function () {
+      await this.unitsDbSync();
+      await this.itemsDbSync();
+      await this.ensurePageDbSyncWithServer();
     }, 50),
     decrementPage () {
       if (this.pageIndex <= 0) {
