@@ -1,7 +1,19 @@
 <template>
   <v-card>
     <v-card-title class="orange darken-4 white--text">
-      <h3 class="title"><b>Extra Skill:</b> {{ name }}</h3>
+      <h3 class="title">
+        <span v-if="!extraSkill">
+          <b>Extra Skill:</b> {{ name }}
+        </span>
+        <template v-else>
+          <router-link title="Click to view more details" :to="`/multidex/extra-skills/?extraId=${extraSkill.id}`" style="color: white">
+            <span><b>Extra Skill:</b> {{ name }}</span>
+          </router-link>
+          <router-link title="Click to view more details" :to="`/multidex/extra-skills/?extraId=${extraSkill.id}`" style="color: white">
+            <v-icon small class="pb-1">fas fa-external-link-alt</v-icon>
+          </router-link>
+        </template>
+      </h3>
     </v-card-title>
     <v-card-text class="pt-0">
       <v-tabs v-model="activeTab" class="pb-2">

@@ -1,7 +1,7 @@
 <template>
   <v-card class="description">
     <v-card-title class="white--text">
-      <h3 class="title">{{ burst.name }}</h3>
+      <h3 class="title">{{ name }}</h3>
     </v-card-title>
     <v-card-text class="pt-0">
       <v-tabs v-model="activeTab" class="pb-2">
@@ -91,9 +91,6 @@ export default {
         return this.burst.desc;
       }
       return 'No description.';
-    },
-    tabLabels () {
-      return this.burst ? ['Description', 'JSON'] : ['Description'];
     },
     numLevels () {
       return this.burst ? this.burst.levels.length : 0;
