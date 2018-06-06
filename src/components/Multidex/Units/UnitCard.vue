@@ -75,10 +75,10 @@ export default {
 
 <style>
 .theme--light .unit-card:hover {
-  background-color: lightgrey;
+  background-color: lightgrey!important;
 }
 
 .theme--dark .unit-card:hover {
-  background-color: grey;
+  background-color: grey!important;
 }
 </style>
