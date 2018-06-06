@@ -16,7 +16,7 @@
           </v-tab-item>
           <v-tab-item v-if="showSplitByConditionTab">
             <v-expansion-panel>
-              <condition-expansion-panel v-if="nonConditionalEffects.length > 0" :effects="nonConditionalEffects" condition="None"/>
+              <condition-expansion-panel v-if="nonConditionalEffects.length > 0" :effects="nonConditionalEffects" condition="No Condition"/>
               <condition-expansion-panel
                 v-for="(entry, i) in conditionalEffects"
                 :key="i"
