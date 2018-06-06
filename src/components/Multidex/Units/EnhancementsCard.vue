@@ -26,7 +26,7 @@
         <v-tab-item key="table">
           <v-container fluid class="sp-table pa-0">
             <v-layout row class="sp-table--headers">
-              <v-flex xs2 md2 lg1>
+              <v-flex xs2 lg1>
                 <v-checkbox
                   class="pl-1"
                   :label="`${activeSkillSum} SP`"
@@ -35,11 +35,11 @@
                   @click.native="toggleOverallState"
                   hide-details/>
               </v-flex>
-              <v-flex xs2 md2 lg1 class="center-align-parent">
+              <v-flex xs3 md1 class="center-align-parent">
                 <b class="center-align-container">Type</b>
               </v-flex>
-              <v-flex xs8 md10 lg11 class="vertical-align-parent">
-                <b class="vertical-align-container">Description</b>
+              <v-flex xs7 md9 lg10 class="vertical-align-parent">
+                <b class="vertical-align-container">Letter/Description</b>
               </v-flex>
             </v-layout>
             <v-layout row>
@@ -48,19 +48,22 @@
               </v-flex>
             </v-layout>
             <v-layout row v-for="(skill, index) in unit.feskills" :key="index" class="sp-table--row">
-              <v-flex xs2 md2 lg1 class="vertical-align-parent">
+              <v-flex xs2 lg1 class="vertical-align-parent">
                 <v-checkbox class="vertical-align-container pl-1" hide-details :label="`${skill.skill.bp} SP`" :input-value="!!activeSkills[index]" @click="toggleSkill(index)"/>
               </v-flex>
-              <v-flex xs2 md2 lg1 class="text-xs-center center-align-parent">
+              <v-flex xs3 md1 class="text-xs-center center-align-parent">
                 <span class="center-align-container">
                   <sp-icon :category="skill.category"/>
                 </span>
               </v-flex>
-              <v-flex xs8 md10 lg11 class="text-xs-left">
+              <v-flex xs7 md9 lg10 class="text-xs-left">
                 <v-layout row wrap>
                   <v-flex xs12 sm8 class="sp-table--row--description-col">
                     <div class="sp-table--row--description-col--desc-text">
-                      <p class="ma-0">{{ skill.skill.desc || skill.skill.name }}</p>
+                      <p class="ma-0">
+                        <b>{{ String.fromCharCode(65 + index) }}:</b>
+                        {{ skill.skill.desc || skill.skill.name }}
+                      </p>
                       <i v-if="skill.dependency">
                         {{ getDependencyText(skill) }}
                       </i>
@@ -227,7 +230,7 @@ export default {
       const spSkill = this.getSPSkillWithID(skill.dependency);
 
       if (spSkill) {
-        return `Requires  "${spSkill.skill.desc}"`;
+        return `Requires "${spSkill.skill.desc}"`;
       }
 
       return skill['dependency comment'] || 'Requires another enhancement';
