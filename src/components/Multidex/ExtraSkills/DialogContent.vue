@@ -19,9 +19,6 @@
             <effects-card :effects="extraSkill.effects" style="border-color: var(--effects-card-color);"/>
           </v-flex>
         </v-layout>
-        <v-layout row>
-          {{ extraSkill }}
-        </v-layout>
       </v-container>
     </v-card-text>
   </v-card>

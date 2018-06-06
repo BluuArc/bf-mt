@@ -20,7 +20,7 @@
         <v-flex xs12 sm4 md3 class="text-xs-right">
           <v-tooltip bottom>
             <span slot="activator" style="border-bottom: 1px dotted;">
-              {{ bcdcInfo.cost }} BC/{{ bcdcInfo.hits }} {{ bcdcInfo.hits === 1 ? 'Hit' : 'Hits' }}/ {{ bcdcInfo.dropchecks }} DC
+              {{ bcdcInfo.cost }} BC/{{ bcdcInfo.hits }} {{ bcdcInfo.hits === 1 ? 'Hit' : 'Hits' }}/{{ bcdcInfo.dropchecks }} DC
             </span>
             <span>
               BC required to fill {{ burstType.toUpperCase() }} gauge / Hits on {{ burstType.toUpperCase() }} / Total BC Dropchecks
@@ -128,7 +128,7 @@ export default {
       const attacks = endLevel.effects
         .map((e, i) => ({
           'proc id': e['proc id'] || e['unknown proc id'],
-          hits: e.hits || this.burst['damage frames'][i].hits || 0,
+          hits: e.hits || (this.burst['damage frames'][i] || {}).hits || 0,
         })).filter(e => this.attackingProcs.indexOf(e['proc id']) > -1);
       const numHits = attacks.reduce((acc, val) => (acc + +val.hits), 0);
       const dropChecks = numHits * +this.burst['drop check count'];

@@ -3,7 +3,7 @@
     <v-card-title class="purple lighten-1 white--text">
       <h3 class="title">Effects</h3>
     </v-card-title>
-    <v-card-text>
+    <v-card-text class="pt-0">
       <span v-if="!effects">No effects found</span>
       <template v-else>
         <v-tabs v-model="activeTab">
@@ -42,7 +42,7 @@ export default {
   },
   computed: {
     ...mapGetters('units', ['unitById']),
-    ...mapGetters('items', ['itemById']),
+    ...mapGetters('items', ['itemById', 'getSphereCategory']),
     localEffects () {
       if (!this.effects || !Array.isArray(this.effects)) {
         return [];
@@ -88,7 +88,8 @@ export default {
 
       effect.conditions.forEach(condition => {
         if (condition['sphere category required'] !== undefined) {
-          parsedConditions.sphereType.push(`${condition['sphere category required']} sphere`);
+          // parsedConditions.sphereType.push(`${condition['sphere category required']} sphere`);
+          parsedConditions.sphereType.push(condition['sphere category required (raw)']);
         } else if (condition['item required'] !== undefined) {
           if (Array.isArray(condition['item required']) && condition['item required'].length > 0) {
             condition['item required'].forEach(item => {
@@ -138,10 +139,11 @@ export default {
       }
 
       if (sphereType.length > 0) {
+        const names = sphereType.map(c => this.getSphereCategory(+c));
         if (sphereType.length === 1) {
-          conditions.push(`${sphereType[0]} is equipped`);
+          conditions.push(`${names[0]} sphere is equipped`);
         } else {
-          conditions.push(`${sphereType.join(' or ')} are equipped`);
+          conditions.push(`${names.join(' or ')} spheres are equipped`);
         }
       }
 

@@ -8,7 +8,7 @@
         <v-flex xs6 sm4 md3 class="text-xs-right">
           <v-tooltip bottom>
             <span slot="activator" style="border-bottom: 1px dotted;">
-              {{ bcdcInfo.cost }} BC/{{ bcdcInfo.hits }} {{ bcdcInfo.hits === 1 ? 'Hit' : 'Hits' }}/ {{ bcdcInfo.dropchecks }} DC
+              {{ bcdcInfo.cost }} BC/{{ bcdcInfo.hits }} {{ bcdcInfo.hits === 1 ? 'Hit' : 'Hits' }}/{{ bcdcInfo.dropchecks }} DC
             </span>
             <span>
               BC required to fill BC gauge / Hits on Burst / Total BC Dropchecks
