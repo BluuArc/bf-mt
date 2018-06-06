@@ -16,7 +16,7 @@
           </v-container>
         </v-tab-item>
         <v-tab-item class="pt-2 pb-0" style="overflow-x: auto;">
-          <v-container fluid class="pb-1">
+          <v-container fluid class="pb-1 pl-4 pr-4">
             <v-expansion-panel>
               <v-expansion-panel-content v-show="allCraftables.length > 0">
                 <div slot="header">Your Craftables</div>
@@ -80,13 +80,13 @@
                               :need="mat.total"
                               :have="(currentlyHave[mat.id.toString()] || 0) + (mat.total - mat.count)"/>
                           </v-flex>
-                          <v-flex xs12 sm6 md4 lg3 v-for="(item, i) in getRelevantCraftablesForMaterial(mat.id)" :key="i">
+                          <v-flex xs12 sm6 md4 lg3 v-for="(craftable, i) in getRelevantCraftablesForMaterial(mat.id)" :key="i">
                             <item-input-card
-                            :item="itemById(item.id)"
-                            v-model="currentlyHave[item.id.toString()]"
+                            :item="itemById(craftable.id)"
+                            v-model="currentlyHave[craftable.id.toString()]"
                             @input="updateNeeded"
-                            :need="item.total"
-                            :have="(currentlyHave[mat.id.toString()] || 0) + (mat.total - mat.count)"/>
+                            :need="craftable.total"
+                            :have="(currentlyHave[craftable.id.toString()] || 0) + (craftable.total - craftable.count)"/>
                           </v-flex>
                         </v-layout>
                       </template>
