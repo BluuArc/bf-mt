@@ -1,6 +1,6 @@
 <template>
   <v-card class="crafting-card">
-    <v-card-title class="blue darken-2 white--text">
+    <v-card-title class="green white--text">
       <h3 class="title">Crafting Recipe</h3>
     </v-card-title>
     <v-card-text class="pt-0">

@@ -8,15 +8,28 @@
       No skill data found.
     </v-card-text>
     <v-card-text v-else class="pl-0 pr-0 pb-5">
-      {{ leaderSkill }}
+      <v-container grid-list-xl class="leader-skill-dialog-content">
+        <v-layout row>
+          <v-flex xs12>
+            <description-card :skill="leaderSkill" style="border-color: var(--description-card-color)"/>
+          </v-flex>
+        </v-layout>
+        <v-layout row>
+          {{ leaderSkill }}
+        </v-layout>
+      </v-container>
     </v-card-text>
   </v-card>
 </template>
 
 <script>
 import { mapActions, mapState } from 'vuex';
+import DescriptionCard from '@/components/Multidex/LeaderSkills/DescriptionCard';
 export default {
   props: ['leaderId'],
+  components: {
+    'description-card': DescriptionCard,
+  },
   computed: {
     ...mapState('leaderSkills', ['pageDb']),
   },
@@ -32,28 +45,36 @@ export default {
       if (!newValue) {
         this.leaderSkill = undefined;
       } else {
-        this.loadingSkillData = true;
-        this.leaderSkill = await this.getLeaderSkill(newValue);
-        this.loadingSkillData = false;
+        this.skillDataChangeHandler();
       }
     },
     async pageDb () {
       if (this.leaderId && Object.keys(this.pageDb).length > 0) {
-        this.loadingSkillData = true;
-        this.leaderSkill = await this.getLeaderSkill(this.leaderId);
-        this.loadingSkillData = false;
+        this.skillDataChangeHandler();
       }
     },
   },
   async mounted () {
     if (this.leaderId) {
-      this.loadingSkillData = true;
-      this.leaderSkill = await this.getLeaderSkill(this.leaderId);
-      this.loadingSkillData = false;
+      this.skillDataChangeHandler();
     }
   },
   methods: {
     ...mapActions('leaderSkills', { getLeaderSkill: 'getById' }),
+    async skillDataChangeHandler () {
+      this.loadingSkillData = true;
+      this.leaderSkill = await this.getLeaderSkill(this.leaderId);
+      this.loadingSkillData = false;
+    },
   },
 };
 </script>
+
+<style>
+.leader-skill-dialog-content .card {
+  border: 2px solid transparent;
+  margin: -2px;
+  --description-card-color: #2e7d32;  /* green darken-3 */
+  --effects-card-color: #AB47BC; /* purple lighten-1 */
+}
+</style>

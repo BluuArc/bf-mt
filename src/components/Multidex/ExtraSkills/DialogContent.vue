@@ -26,14 +26,12 @@
 
 <script>
 import { mapActions, mapState } from 'vuex';
-import JsonViewer from '@/components/Multidex/JsonViewer';
 import DescriptionCard from '@/components/Multidex/ExtraSkills/DescriptionCard';
 import EffectsCard from '@/components/Multidex/ExtraSkills/EffectsCard';
 
 export default {
   props: ['extraId'],
   components: {
-    'json-viewer': JsonViewer,
     'description-card': DescriptionCard,
     'effects-card': EffectsCard,
   },

@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-card-title class="green darken-3 white--text">
+    <v-card-title class="light-green darken-2 white--text">
       <v-layout row wrap>
         <v-flex xs9 class="text-xs-left">
           <h3 class="title">SP Enhancements</h3>

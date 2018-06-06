@@ -77,7 +77,7 @@
             <stat-card style="border-color: var(--stat-card-color); height: 100%;" :unit="unit"/>
           </v-flex>
           <v-flex xs12>
-            <v-card color="purple" v-if="unit.prev || unit.next">
+            <v-card color="indigo" v-if="unit.prev || unit.next">
               <v-card-title>
                 <h3 class="title">Evolutions</h3>
               </v-card-title>
@@ -137,7 +137,7 @@
       <v-container class="unit-dialog-tab" v-if="activeTab === 'skills'" grid-list-lg>
         <v-layout row wrap>
           <v-flex xs12>
-            <leader-skill-card :leader-skill="unit['leader skill']" style="border-color: black;"/>
+            <leader-skill-card :leader-skill="unit['leader skill']" style="border-color: var(--leader-skill-card-color);"/>
           </v-flex>
         </v-layout>
         <v-layout row wrap v-if="unit['extra skill']">
@@ -306,11 +306,12 @@ export default {
   --stat-card-color: #546E7A; /* blue-grey darken-1 */
   --movement-card-color: #8BC34A; /* light-green */
   --arena-card-color: #ff8f00; /* amber darken-3 */
+  --leader-skill-card-color:  #2e7d32;  /* green darken-3 */
   --extra-skill-card-color: #e65100; /* orange darken-4 */
   --burst-card-color--bb: #607d8b; /* blue-grey */
   --burst-card-color--sbb: #f9a825; /* yellow darken-3 */
   --burst-card-color--ubb: #c62828; /* red darken-3 */
-  --enhancements-card-color: #2e7d32;  /* green darken-3 */
+  --enhancements-card-color: #689f38; /* light-green darken-2 */
 }
 
 .unit-dialog-tab .card .card__title h3.title {

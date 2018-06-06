@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-card-title class="black white--text">
+    <v-card-title class="green darken-3 white--text">
       <h3 class="title">
         <span v-if="!leaderSkill">
           <b>Leader Skill:</b> {{ name }}
@@ -14,7 +14,6 @@
           </router-link>
         </template>
       </h3>
-      </v-layout>
     </v-card-title>
     <v-card-text class="pt-0">
       <v-tabs v-model="activeTab" class="pb-2">

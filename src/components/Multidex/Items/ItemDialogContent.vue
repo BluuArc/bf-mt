@@ -80,7 +80,7 @@
           </v-flex>
           <v-flex xs12>
             <v-card style="border-color: var(--usage-card-color)">
-              <v-card-title class="green white--text">
+              <v-card-title class="indigo white--text">
                 <h3 class="title">Usage</h3>
               </v-card-title>
               <v-card-text>
@@ -230,8 +230,8 @@ export default {
   margin: -2px;
   --description-card-color: #ef6c00; /* orange darken-3 */
   --miscellaneous-card-color: #607d8b; /* blue-grey */
-  --usage-card-color: #4caf50; /* green */
-  --recipe-card-color: #1976d2; /* blue darken-2 */
+  --usage-card-color: #3f51b5; /* indigo */
+  --recipe-card-color: #4caf50; /* green */
 }
 
 .theme--light .item-dialog-content .item-card {
