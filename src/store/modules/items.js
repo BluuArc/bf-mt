@@ -47,7 +47,6 @@ const itemStore = {
       };
       return categories[+num];
     },
-
   },
   actions: {
     ...createActions(itemWorker),

@@ -6,7 +6,25 @@
     <v-card-text>
       <span v-if="!effects">No effects found</span>
       <template v-else>
-        <effect-list :effects="effects"/>
+        <v-tabs v-model="activeTab">
+          <v-tab>Unified</v-tab>
+          <v-tab v-if="showSplitByConditionTab">Split By Condition</v-tab>
+        </v-tabs>
+        <v-tabs-items v-model="activeTab">
+          <v-tab-item>
+            <effect-list :effects="effects"/>
+          </v-tab-item>
+          <v-tab-item v-if="showSplitByConditionTab">
+            <v-expansion-panel>
+              <condition-expansion-panel v-if="nonConditionalEffects.length > 0" :effects="nonConditionalEffects" condition="None"/>
+              <condition-expansion-panel
+                v-for="(entry, i) in conditionalEffects"
+                :key="i"
+                :condition="entry.condition"
+                :effects="entry.effects"/>
+            </v-expansion-panel>
+          </v-tab-item>
+        </v-tabs-items>
       </template>
     </v-card-text>
   </v-card>
@@ -15,10 +33,12 @@
 <script>
 import { mapGetters } from 'vuex';
 import EffectList from '@/components/Multidex/EffectList/MainTable';
+import ConditionExpansionPanel from '@/components/Multidex/ExtraSkills/ConditionExpansionPanel';
 export default {
   props: ['effects'],
   components: {
     'effect-list': EffectList,
+    'condition-expansion-panel': ConditionExpansionPanel,
   },
   computed: {
     ...mapGetters('units', ['unitById']),
@@ -31,7 +51,7 @@ export default {
       return this.effects;
     },
     nonConditionalEffects () {
-      return this.localEffects.filter(e => e.conditions.length === 0);
+      return this.localEffects.filter(e => e.conditions.length === 0).map(({ conditions, ...effect }) => effect);
     },
     conditionalEffects () {
       const conditionalEffects = this.localEffects.filter(e => e.conditions.length > 0);
@@ -44,22 +64,31 @@ export default {
           conditionDictionary[entry.message].push(entry.effect);
         });
 
-      return Object.entries(conditionDictionary).map(([condition, effects]) => ({ condition, effects }));
+      return Object.entries(conditionDictionary).map(([condition, effects]) => ({ condition, effects: effects.map(({ conditions, ...effect }) => effect) }));
     },
+    showSplitByConditionTab () {
+      return this.conditionalEffects.length > 0;
+    },
+  },
+  data () {
+    return {
+      activeTab: 0,
+      activeEntry: 0,
+    };
   },
   methods: {
     getConditionMessage (effect) {
       return this.convertParsedConditionsToMessage(this.parseConditions(effect));
     },
     parseConditions (effect) {
-      const parsedConditions = { unit: [], item: [] };
+      const parsedConditions = { unit: [], item: [], sphereType: [] };
       if (!effect.conditions || effect.conditions.length === 0) {
         return parsedConditions;
       }
 
       effect.conditions.forEach(condition => {
         if (condition['sphere category required'] !== undefined) {
-          parsedConditions.item.push(`${condition['sphere category required']} sphere`);
+          parsedConditions.sphereType.push(`${condition['sphere category required']} sphere`);
         } else if (condition['item required'] !== undefined) {
           if (Array.isArray(condition['item required']) && condition['item required'].length > 0) {
             condition['item required'].forEach(item => {
@@ -87,7 +116,7 @@ export default {
 
       return parsedConditions;
     },
-    convertParsedConditionsToMessage ({ unit = [], item = [] }) {
+    convertParsedConditionsToMessage ({ unit = [], item = [], sphereType = [] }) {
       const conditions = [];
 
       if (unit.length > 0) {
@@ -105,6 +134,14 @@ export default {
           conditions.push(`${names[0]} is equipped`);
         } else {
           conditions.push(`${names.join(' or ')} are equipped`);
+        }
+      }
+
+      if (sphereType.length > 0) {
+        if (sphereType.length === 1) {
+          conditions.push(`${sphereType[0]} is equipped`);
+        } else {
+          conditions.push(`${sphereType.join(' or ')} are equipped`);
         }
       }
 
