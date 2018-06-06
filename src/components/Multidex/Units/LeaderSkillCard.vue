@@ -1,7 +1,20 @@
 <template>
   <v-card>
     <v-card-title class="black white--text">
-      <h3 class="title"><b>Leader Skill:</b> {{ name }}</h3>
+      <h3 class="title">
+        <span v-if="!leaderSkill">
+          <b>Leader Skill:</b> {{ name }}
+        </span>
+        <template v-else>
+          <router-link title="Click to view more details" :to="`/multidex/leader-skills/?leaderId=${leaderSkill.id}`" style="color: white">
+            <span><b>Leader Skill:</b> {{ name }}</span>
+          </router-link>
+          <router-link title="Click to view more details" :to="`/multidex/leader-skills/?leaderId=${leaderSkill.id}`" style="color: white">
+            <v-icon small class="pb-1">fas fa-external-link-alt</v-icon>
+          </router-link>
+        </template>
+      </h3>
+      </v-layout>
     </v-card-title>
     <v-card-text class="pt-0">
       <v-tabs v-model="activeTab" class="pb-2">
