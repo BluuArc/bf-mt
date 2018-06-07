@@ -11,8 +11,8 @@
               <router-link title="Click to view more details" :to="`/multidex/bursts/?burstId=${burst.id}`" style="color: white">
                 <span><b>{{ burstLabel }}:</b> {{ name }}</span>
               </router-link>
-              <router-link title="Click to view more details" :to="`/multidex/bursts/?burstId=${burst.id}`" style="color: white">
-                <v-icon small class="pb-1">fas fa-external-link-alt</v-icon>
+              <router-link title="Click to view more details" :to="`/multidex/bursts/?burstId=${burst.id}`" style="color: white; text-decoration: none">
+                <v-icon small class="pb-1 white--text">fas fa-external-link-alt</v-icon>
               </router-link>
             </template>
           </h3>

@@ -5,13 +5,20 @@
     </v-card-title>
     <v-card-text>
       <v-data-table
+        class="unit-stats-table"
         :headers="statTableData.headers"
         :items="statTableData.items"
         hide-actions>
         <template slot="items" slot-scope="props">
           <tr>
             <template v-for="col in ['name', 'hp', 'atk', 'def', 'rec']">
-              <td :key="col" class="pt-0 pb-0 text-xs-center">{{ props.item[col] }}</td>
+              <td
+                :key="col"
+                :class="{
+                  'pt-0 pb-0 text-xs-center': true,
+                  'positive' : isPositive(props.item.name, col),
+                  'negative' : isNegative(props.item.name, col),
+                }">{{ props.item[col] }}</td>
             </template>
           </tr>
         </template>
@@ -75,6 +82,28 @@ export default {
       });
       return result;
     },
+    isPositive (name, col) {
+      return (name === 'Anima' && col === 'hp') ||
+        (name === 'Breaker' && col === 'atk') ||
+        (name === 'Guardian' && col === 'def') ||
+        (name === 'Oracle' && col === 'rec');
+    },
+    isNegative (name, col) {
+      return (name === 'Anima' && col === 'rec') ||
+        (name === 'Breaker' && col === 'def') ||
+        (name === 'Guardian' && col === 'rec') ||
+        (name === 'Oracle' && col === 'def');
+    },
   },
 };
 </script>
+
+<style>
+.unit-stats-table td.positive {
+  background-color: rgba(0, 255, 0, 0.2);
+}
+
+.unit-stats-table td.negative {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+</style>
