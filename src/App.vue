@@ -14,7 +14,8 @@
           :key="`${i}-${j}`"
           exact
           :value="currentPage === subItem.link"
-          :to="subItem.link">
+          :to="subItem.link"
+          @click="($vuetify.breakpoint.mdAndDown) ? (showDrawer = false) : (showDrawer = showDrawer)">
           <v-list-tile-action>
             <v-progress-circular v-if="subItem.module && loadingStates[subItem.module]" indeterminate/>
             <v-icon v-else v-html="subItem.icon"/>
