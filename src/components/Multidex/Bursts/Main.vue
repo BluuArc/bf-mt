@@ -191,7 +191,7 @@
       </v-flex>
     </v-layout>
     <v-layout row>
-      <v-dialog v-model="showBurstsDialog" fullscreen hide-overlay transition="dialog-bottom-transition">
+      <v-dialog v-model="showDialog" fullscreen hide-overlay transition="dialog-bottom-transition">
         <v-card>
           <v-toolbar fixed>
             <v-btn icon to="/multidex/bursts">
@@ -218,7 +218,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
+import { mapState, mapActions, mapMutations } from 'vuex';
 import BurstInfo from '@/components/Multidex/Bursts/BurstDialogContent';
 import BurstCard from '@/components/Multidex/Bursts/BurstCard';
 import debounce from 'lodash/debounce';
@@ -312,7 +312,7 @@ export default {
     },
     isLoading (newValue) {
       if (!newValue && this.burstId) {
-        this.showBurstsDialog = true;
+        this.showDialog = true;
       }
 
       if (!newValue) {
@@ -321,7 +321,7 @@ export default {
       }
     },
     burstId (newValue) {
-      this.showBurstsDialog = (!this.isLoading && !!newValue);
+      this.showDialog = (!this.isLoading && !!newValue);
 
       if (this.pageDb.hasOwnProperty(newValue)) {
         document.title = `BF-MT - Bursts - ${this.pageDb[newValue].name}`;
@@ -340,6 +340,9 @@ export default {
         this.pageIndex = 0;
       },
     },
+    showDialog (newValue) {
+      this.setHtmlOverflow(newValue);
+    },
   },
   data () {
     return {
@@ -354,7 +357,7 @@ export default {
         exclusives: [],
         associatedUnits: [],
       },
-      showBurstsDialog: false,
+      showDialog: false,
       filteredKeys: [],
       loadingFilters: false,
     };
@@ -367,10 +370,11 @@ export default {
   mounted () {
     this.resetFilters();
     if (this.burstId && !this.isLoading) {
-      this.showBurstsDialog = true;
+      this.showDialog = true;
     }
   },
   methods: {
+    ...mapMutations(['setHtmlOverflow']),
     ...mapActions('bursts', ['getFilteredKeys', 'ensurePageDbSyncWithServer']),
     ...mapActions('units', { unitsDbSync: 'ensurePageDbSyncWithServer' }),
     initDb: debounce(function () {

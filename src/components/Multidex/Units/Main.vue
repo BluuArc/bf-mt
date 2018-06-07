@@ -279,7 +279,7 @@
       </v-flex>
     </v-layout>
     <v-layout row>
-      <v-dialog v-model="showUnitsDialog" fullscreen hide-overlay transition="dialog-bottom-transition">
+      <v-dialog v-model="showDialog" fullscreen hide-overlay transition="dialog-bottom-transition">
         <v-card>
           <v-toolbar fixed>
             <v-btn icon to="/multidex/units">
@@ -311,7 +311,7 @@
 </template>
 
 <script>
-import { mapState, mapActions, mapGetters } from 'vuex';
+import { mapState, mapActions, mapGetters, mapMutations } from 'vuex';
 import UnitCard from '@/components/Multidex/Units/UnitCard';
 import UnitDialogContent from '@/components/Multidex/Units/UnitDialogContent';
 import ElementIcon from '@/components/Multidex/Units/ElementIcon';
@@ -418,7 +418,7 @@ export default {
         kind: [],
         exclusives: [],
       },
-      showUnitsDialog: false,
+      showDialog: false,
       filteredKeys: [],
       loadingFilters: false,
     };
@@ -444,7 +444,7 @@ export default {
     },
     isLoading (newValue) {
       if (!newValue && this.unitId) {
-        this.showUnitsDialog = true;
+        this.showDialog = true;
       }
 
       if (!newValue) {
@@ -453,7 +453,7 @@ export default {
       }
     },
     unitId (newValue) {
-      this.showUnitsDialog = (!this.isLoading && !!newValue);
+      this.showDialog = (!this.isLoading && !!newValue);
 
       if (this.pageDb.hasOwnProperty(newValue)) {
         document.title = `BF-MT - Units - ${this.pageDb[newValue].name}`;
@@ -472,6 +472,9 @@ export default {
         this.pageIndex = 0;
       },
     },
+    showDialog (newValue) {
+      this.setHtmlOverflow(newValue);
+    },
   },
   created () {
     if (!this.isLoading) {
@@ -481,10 +484,11 @@ export default {
   mounted () {
     this.resetFilters();
     if (this.unitId && !this.isLoading) {
-      this.showUnitsDialog = true;
+      this.showDialog = true;
     }
   },
   methods: {
+    ...mapMutations(['setHtmlOverflow']),
     ...mapActions('units', ['getFilteredKeys', 'ensurePageDbSyncWithServer']),
     ...mapActions('items', { itemsDbSync: 'ensurePageDbSyncWithServer' }),
     initDb: debounce(function () {

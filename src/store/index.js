@@ -18,6 +18,14 @@ const store = new Vuex.Store({
     extraSkills: ExtraSkillModule,
     leaderSkills: LeaderSkillModule,
   },
+  state: {
+    disableHtmlOverflow: false,
+  },
+  mutations: {
+    setHtmlOverflow (state, overflowState = false) {
+      state.disableHtmlOverflow = !!overflowState;
+    },
+  },
   actions: {
     async init ({ dispatch, state, commit }) {
       for (const m of modules.slice(1)) {

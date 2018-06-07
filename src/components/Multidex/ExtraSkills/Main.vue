@@ -254,7 +254,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
+import { mapState, mapActions, mapMutations } from 'vuex';
 import ExtraSkillInfo from '@/components/Multidex/ExtraSkills/DialogContent';
 import SkillCard from '@/components/Multidex/ExtraSkills/SkillCard';
 import debounce from 'lodash/debounce';
@@ -382,6 +382,9 @@ export default {
         this.pageIndex = 0;
       },
     },
+    showDialog (newValue) {
+      this.setHtmlOverflow(newValue);
+    },
   },
   data () {
     return {
@@ -414,6 +417,7 @@ export default {
     }
   },
   methods: {
+    ...mapMutations(['setHtmlOverflow']),
     ...mapActions('extraSkills', ['getFilteredKeys', 'ensurePageDbSyncWithServer']),
     ...mapActions('units', { unitsDbSync: 'ensurePageDbSyncWithServer' }),
     ...mapActions('items', { itemsDbSync: 'ensurePageDbSyncWithServer' }),

@@ -88,6 +88,7 @@ export default {
     ...mapState('bursts', { burstsLoading: 'isLoading' }),
     ...mapState('extraSkills', { extraSkillsLoading: 'isLoading' }),
     ...mapState('leaderSkills', { leaderSkillsLoading: 'isLoading' }),
+    ...mapState(['disableHtmlOverflow']),
   },
   data () {
     return {
@@ -160,6 +161,10 @@ export default {
   },
   methods: {
     ...mapActions(['init', 'setActiveServer']),
+    htmlOverflowChangeHandler () {
+      const page = document.getElementsByTagName('html')[0];
+      page.style.overflowY = (this.disableHtmlOverflow) ? 'hidden' : 'auto';
+    },
   },
   watch: {
     activeServer (newValue) {
@@ -170,12 +175,16 @@ export default {
         await this.setActiveServer(newValue);
       }
     },
+    disableHtmlOverflow () {
+      this.htmlOverflowChangeHandler();
+    },
   },
   created () {
     this.init();
   },
   mounted () {
     this.pageActiveServer = this.activeServer;
+    this.htmlOverflowChangeHandler();
   },
   name: 'App',
 };

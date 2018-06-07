@@ -264,7 +264,7 @@
       </v-flex>
     </v-layout>
     <v-layout row>
-      <v-dialog v-model="showItemsDialog" fullscreen hide-overlay transition="dialog-bottom-transition">
+      <v-dialog v-model="showDialog" fullscreen hide-overlay transition="dialog-bottom-transition">
         <v-card>
           <v-toolbar fixed>
             <v-btn icon to="/multidex/items">
@@ -296,7 +296,7 @@
 </template>
 
 <script>
-import { mapState, mapActions, mapGetters } from 'vuex';
+import { mapState, mapActions, mapGetters, mapMutations } from 'vuex';
 import debounce from 'lodash/debounce';
 import ItemCard from '@/components/Multidex/Items/ItemCard';
 import ItemInfo from '@/components/Multidex/Items/ItemDialogContent';
@@ -415,7 +415,7 @@ export default {
     },
     isLoading (newValue) {
       if (!newValue && this.itemId) {
-        this.showItemsDialog = true;
+        this.showDialog = true;
       }
 
       if (!newValue) {
@@ -424,7 +424,7 @@ export default {
       }
     },
     itemId (newValue) {
-      this.showItemsDialog = (!this.isLoading && !!newValue);
+      this.showDialog = (!this.isLoading && !!newValue);
 
       if (this.pageDb.hasOwnProperty(newValue)) {
         document.title = `BF-MT - Items - ${this.pageDb[newValue].name}`;
@@ -443,6 +443,9 @@ export default {
         this.pageIndex = 0;
       },
     },
+    showDialog (newValue) {
+      this.setHtmlOverflow(newValue);
+    },
   },
   data () {
     return {
@@ -459,7 +462,7 @@ export default {
         itemTypes: [],
         exclusives: [],
       },
-      showItemsDialog: false,
+      showDialog: false,
       filteredKeys: [],
       loadingFilters: false,
     };
@@ -472,10 +475,11 @@ export default {
   mounted () {
     this.resetFilters();
     if (this.itemId && !this.isLoading) {
-      this.showItemsDialog = true;
+      this.showDialog = true;
     }
   },
   methods: {
+    ...mapMutations(['setHtmlOverflow']),
     ...mapActions('items', ['getFilteredKeys', 'ensurePageDbSyncWithServer']),
     initDb: debounce(function () {
       this.ensurePageDbSyncWithServer();
