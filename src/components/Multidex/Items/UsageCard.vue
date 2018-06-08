@@ -15,7 +15,7 @@
           <v-flex xs12 sm6 md4 v-for="(nextItem, j) in item.usage" :key="j">
             <item-card
               class="pa-1 card--raised"
-              :to="`/multidex/items/?itemId=${nextItem.id}`"
+              :to="getMultidexPathTo(nextItem.id)"
               :item="itemById(nextItem.id)"
               style="height: 100%;"/>
           </v-flex>
@@ -36,7 +36,7 @@
                   <v-flex xs12 sm6 md4 v-for="(id, j) in usage" :key="j">
                     <item-card
                       class="pa-1 card--raised"
-                      :to="`/multidex/items/?itemId=${id}`"
+                      :to="getMultidexPathTo(id)"
                       :item="itemById(id)"
                       style="height: 100%;"/>
                   </v-flex>
@@ -61,7 +61,7 @@
                   <v-flex xs12 sm6 lg4 v-for="(id, j) in filteredUsageList" :key="j">
                     <item-card
                       class="pa-1 card--raised"
-                      :to="`/multidex/items/?itemId=${id}`"
+                      :to="getMultidexPathTo(id)"
                       :item="itemById(id)"
                       style="height: 100%;"/>
                   </v-flex>
@@ -84,7 +84,7 @@ export default {
     'item-card': ItemCard,
   },
   computed: {
-    ...mapGetters('items', ['itemById']),
+    ...mapGetters('items', ['itemById', 'getMultidexPathTo']),
     usage () {
       if (!this.item || !this.item.usage) {
         return [];

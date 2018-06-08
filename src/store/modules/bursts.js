@@ -1,6 +1,6 @@
 import { burstWorker } from '../instances/dexie-client';
 import downloadWorker from '../instances/download-worker';
-import { createState, createMutations, createActions } from './db.common';
+import { createState, createMutations, createActions, createGetters } from './db.common';
 import SWorker from '../../assets/sww.min';
 import union from 'lodash/union';
 
@@ -13,6 +13,7 @@ const burstStore = {
     ...createMutations(),
   },
   getters: {
+    ...createGetters('bursts'),
     burstById: state => id => state.pageDb[id],
   },
   actions: {

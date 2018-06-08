@@ -176,7 +176,7 @@
               xs12 sm6 md4>
               <ls-card
                 v-if="pageDb.hasOwnProperty(key)"
-                :to="`/multidex/leader-skills/?leaderId=${key}`"
+                :to="getMultidexPathTo(key)"
                 :leaderSkill="pageDb[key]"
                 style="min-height: 84px; height: 100%;"/>
             </v-flex>
@@ -218,19 +218,23 @@
 </template>
 
 <script>
-import { mapState, mapActions, mapMutations } from 'vuex';
+import { mapState, mapActions, mapMutations, mapGetters } from 'vuex';
 import SkillInfo from '@/components/Multidex/LeaderSkills/DialogContent';
 import SkillCard from '@/components/Multidex/LeaderSkills/SkillCard';
 import debounce from 'lodash/debounce';
 
 export default {
-  props: ['query', 'leaderId'],
+  props: ['query', 'viewId'],
   components: {
     'skill-info': SkillInfo,
     'ls-card': SkillCard,
   },
   computed: {
     ...mapState('leaderSkills', ['pageDb', 'isLoading', 'numEntries', 'activeServer']),
+    ...mapGetters('leaderSkills', ['getMultidexPathTo']),
+    leaderId () {
+      return this.viewId;
+    },
     allSortedEntries () {
       if (this.isLoading || this.loadingFilters) {
         return [];

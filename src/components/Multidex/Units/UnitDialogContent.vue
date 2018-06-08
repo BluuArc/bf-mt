@@ -93,7 +93,7 @@
                   <v-stepper-content :key="`content-${evo.current}`" :step="i + 1" class="pr-5">
                     <v-layout row style="overflow-x: auto">
                       <v-flex xs3 style="margin: auto;">
-                        <router-link :to="`/multidex/units?unitId=${evo.current}`">
+                        <router-link :to="getMultidexPathForUnit(evo.current)">
                           <img align="middle" height="64px" :src="getUnitImages(evo.current).ills_thum"/>
                         </router-link>
                       </v-flex>
@@ -102,10 +102,10 @@
                       </v-flex>
                       <v-flex xs4 style="margin: auto;">
                         <template v-for="(mat, i) in evo.mats">
-                          <router-link v-if="mat.type === 'unit'" :to="`/multidex/units?unitId=${mat.id}`" :key="i">
+                          <router-link v-if="mat.type === 'unit'" :to="getMultidexPathForUnit(mat.id)" :key="i">
                             <img align="middle" height="64px" :title="mat.name" :alt="mat.name" :src="getUnitImages(mat.id).ills_thum"/>
                           </router-link>  
-                          <router-link v-else :to="`/multidex/items?itemId=${mat.id}`" :key="i">
+                          <router-link v-else  :to="getMultidexPathForItem(mat.id)" :key="i">
                             <img align="middle" height="64px" :title="mat.name" :alt="mat.name" :src="getItemImage(mat.id)"/>
                           </router-link>  
                         </template>
@@ -114,7 +114,7 @@
                         <v-icon>chevron_right</v-icon>
                       </v-flex>
                       <v-flex xs3 style="margin: auto;">
-                        <router-link :to="`/multidex/units?unitId=${evo.next}`">
+                        <router-link :to="getMultidexPathForUnit(evo.next)">
                           <img align="middle" height="64px" :src="getUnitImages(evo.next).ills_thum"/>
                         </router-link>
                       </v-flex>
@@ -197,9 +197,11 @@ export default {
   computed: {
     ...mapGetters('units', {
       getUnitImages: 'getImageUrls',
+      getMultidexPathForUnit: 'getMultidexPathTo',
     }),
     ...mapGetters('items', {
       getItemImage: 'getImageUrl',
+      getMultidexPathForItem: 'getMultidexPathTo',
     }),
     ...mapState('units', ['pageDb']),
     images () {

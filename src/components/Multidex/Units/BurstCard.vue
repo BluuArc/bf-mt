@@ -8,10 +8,10 @@
               <b>{{ burstLabel }}:</b> {{ name }}
             </span>
             <template v-else>
-              <router-link title="Click to view more details" :to="`/multidex/bursts/?burstId=${burst.id}`" style="color: white">
+              <router-link title="Click to view more details" :to="getMultidexPathTo(burst.id)" style="color: white">
                 <span><b>{{ burstLabel }}:</b> {{ name }}</span>
               </router-link>
-              <router-link title="Click to view more details" :to="`/multidex/bursts/?burstId=${burst.id}`" style="color: white; text-decoration: none">
+              <router-link title="Click to view more details" :to="getMultidexPathTo(burst.id)" style="color: white; text-decoration: none">
                 <v-icon small class="pb-1 white--text">fas fa-external-link-alt</v-icon>
               </router-link>
             </template>
@@ -77,6 +77,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import JsonViewer from '@/components/Multidex/JsonViewer';
 import ProcBuffList from '@/components/Multidex/ProcBuffList';
 import HitCountTable from '@/components/Multidex/Units/HitCountTable';
@@ -89,6 +90,7 @@ export default {
     'hit-count-table': HitCountTable,
   },
   computed: {
+    ...mapGetters('bursts', ['getMultidexPathTo']),
     name () {
       return this.burst ? this.burst.name : 'None';
     },

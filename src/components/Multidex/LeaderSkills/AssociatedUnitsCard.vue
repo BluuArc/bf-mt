@@ -11,7 +11,7 @@
         <v-flex xs12 sm6 md4 v-for="(id, i) in units" :key="i">
             <unit-card
               class="pa-1 card--raised"
-              :to="`/multidex/units/?unitId=${id}`"
+              :to="getMultidexPathTo(id)"
               :unit="unitById(id)"
               style="height: 100%;"/>
         </v-flex>
@@ -29,7 +29,7 @@ export default {
     'unit-card': UnitCard,
   },
   computed: {
-    ...mapGetters('units', ['unitById']),
+    ...mapGetters('units', ['unitById', 'getMultidexPathTo']),
   },
 };
 </script>

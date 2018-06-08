@@ -6,10 +6,10 @@
           <b>Leader Skill:</b> {{ name }}
         </span>
         <template v-else>
-          <router-link title="Click to view more details" :to="`/multidex/leader-skills/?leaderId=${leaderSkill.id}`" style="color: white">
+          <router-link title="Click to view more details" :to="getMultidexPathTo(leaderSkill.id)" style="color: white">
             <span><b>Leader Skill:</b> {{ name }}</span>
           </router-link>
-          <router-link title="Click to view more details" :to="`/multidex/leader-skills/?leaderId=${leaderSkill.id}`" style="color: white; text-decoration: none">
+          <router-link title="Click to view more details" :to="getMultidexPathTo(leaderSkill.id)" style="color: white; text-decoration: none">
             <v-icon small class="pb-1 white--text">fas fa-external-link-alt</v-icon>
           </router-link>
         </template>
@@ -41,6 +41,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import JsonViewer from '@/components/Multidex/JsonViewer';
 import PassiveBuffList from '@/components/Multidex/PassiveBuffList';
 
@@ -51,6 +52,7 @@ export default {
     'passive-buff-list': PassiveBuffList,
   },
   computed: {
+    ...mapGetters('leaderSkills', ['getMultidexPathTo']),
     name () {
       return this.leaderSkill ? this.leaderSkill.name : 'None';
     },

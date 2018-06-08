@@ -266,7 +266,7 @@
               v-for="key in unitsToShow"
               :key="key"
               xs12 sm6 md4>
-              <unit-card :to="`/multidex/units/?unitId=${key}`" v-if="pageDb.hasOwnProperty(key)" :unit="pageDb[key]"/>
+              <unit-card :to="getMultidexPathTo(key)" v-if="pageDb.hasOwnProperty(key)" :unit="pageDb[key]"/>
             </v-flex>
           </v-layout>
           <v-layout row v-if="numEntries[activeServer] === 0">
@@ -318,7 +318,7 @@ import ElementIcon from '@/components/Multidex/Units/ElementIcon';
 import debounce from 'lodash/debounce';
 
 export default {
-  props: ['query', 'unitId'],
+  props: ['query', 'viewId'],
   components: {
     'unit-info': UnitDialogContent,
     'unit-card': UnitCard,
@@ -326,7 +326,10 @@ export default {
   },
   computed: {
     ...mapState('units', ['pageDb', 'isLoading', 'numEntries', 'activeServer']),
-    ...mapGetters('units', ['getImageUrls']),
+    ...mapGetters('units', ['getImageUrls', 'getMultidexPathTo']),
+    unitId () {
+      return this.viewId;
+    },
     allSortedUnits () {
       if (this.isLoading || this.loadingFilters) {
         return [];

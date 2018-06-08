@@ -1,7 +1,7 @@
 import { unitWorker } from '../instances/dexie-client';
 import downloadWorker from '../instances/download-worker';
 import SWorker from '../../assets/sww.min';
-import { createState, createMutations, createActions } from './db.common';
+import { createState, createMutations, createActions, createGetters } from './db.common';
 import union from 'lodash/union';
 
 const unitsStore = {
@@ -13,6 +13,7 @@ const unitsStore = {
     ...createMutations(),
   },
   getters: {
+    ...createGetters('units'),
     unitById: state => id => state.pageDb[id],
     getImageUrls: state => id => {
       const cdnUrls = {

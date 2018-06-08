@@ -20,6 +20,13 @@ export const createState = () => {
   };
 };
 
+export const createGetters = (multidexModuleName = 'units') => {
+  return {
+    getMultidexPathTo: state => id => `/multidex/${multidexModuleName}/?viewId=${id}`,
+    getById: state => id => state.pageDb[id.toString()],
+  };
+};
+
 export const createMutations = () => {
   return {
     setActiveServer (state, { data = {}, server = 'gl', commitData = true, needsReload = false }) {

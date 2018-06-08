@@ -91,7 +91,7 @@ export default {
     'sphere-type-icon': SphereTypeIcon,
   },
   computed: {
-    ...mapGetters('items', ['getImageUrl', 'itemById']),
+    ...mapGetters('items', ['getImageUrl', 'itemById', 'getMultidexPathTo']),
     item () {
       if (!this.material) {
         return;
@@ -122,7 +122,7 @@ export default {
       if (!this.material) {
         return;
       }
-      return `/multidex/items/?itemId=${this.materialId}`;
+      return this.getMultidexPathTo(this.materialId);
     },
   },
   data () {

@@ -176,7 +176,7 @@
               xs12 sm6 md4>
               <burst-card
                 v-if="pageDb.hasOwnProperty(key)"
-                :to="`/multidex/bursts/?burstId=${key}`"
+                :to="getMultidexPathTo(key)"
                 :burst="pageDb[key]"
                 style="min-height: 84px; height: 100%;"/>
             </v-flex>
@@ -218,19 +218,23 @@
 </template>
 
 <script>
-import { mapState, mapActions, mapMutations } from 'vuex';
+import { mapState, mapActions, mapMutations, mapGetters } from 'vuex';
 import BurstInfo from '@/components/Multidex/Bursts/BurstDialogContent';
 import BurstCard from '@/components/Multidex/Bursts/BurstCard';
 import debounce from 'lodash/debounce';
 
 export default {
-  props: ['query', 'burstId'],
+  props: ['query', 'viewId'],
   components: {
     'burst-info': BurstInfo,
     'burst-card': BurstCard,
   },
   computed: {
     ...mapState('bursts', ['pageDb', 'isLoading', 'numEntries', 'activeServer']),
+    ...mapGetters('bursts', ['getMultidexPathTo']),
+    burstId () {
+      return this.viewId;
+    },
     allSortedBursts () {
       if (this.isLoading || this.loadingFilters) {
         return [];

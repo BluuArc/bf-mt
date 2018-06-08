@@ -45,7 +45,7 @@
                   v-for="key in skill.associated_units"
                   :key="key"
                   xs12>
-                  <unit-card :to="`/multidex/units/?unitId=${key}`" v-if="unitById(key)" :unit="unitById(key)" class="mr-2 card--flat"/>
+                  <unit-card :to="getMultidexPathTo(key)" v-if="unitById(key)" :unit="unitById(key)" class="mr-2 card--flat"/>
                 </v-flex>
               </v-layout>
             </v-flex>
@@ -71,7 +71,7 @@ export default {
     'unit-card': UnitCard,
   },
   computed: {
-    ...mapGetters('units', ['unitById']),
+    ...mapGetters('units', ['unitById', 'getMultidexPathTo']),
     name () {
       return this.skill ? this.skill.name : 'None';
     },

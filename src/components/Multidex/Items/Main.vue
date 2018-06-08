@@ -248,7 +248,7 @@
               :key="key"
               xs12 sm6 md4>
               <item-card
-                :to="`/multidex/items/?itemId=${key}`"
+                :to="getMultidexPathTo(key)"
                 v-if="pageDb.hasOwnProperty(key)"
                 :item="pageDb[key]"
                 style="height: 100%"/>
@@ -303,7 +303,7 @@ import ItemInfo from '@/components/Multidex/Items/ItemDialogContent';
 import SphereTypeIcon from '@/components/Multidex/Items/SphereTypeIcon';
 
 export default {
-  props: ['query', 'itemId'],
+  props: ['query', 'viewId'],
   components: {
     'item-card': ItemCard,
     'item-info': ItemInfo,
@@ -311,7 +311,10 @@ export default {
   },
   computed: {
     ...mapState('items', ['pageDb', 'isLoading', 'numEntries', 'activeServer']),
-    ...mapGetters('items', ['getImageUrl', 'getSphereCategory']),
+    ...mapGetters('items', ['getImageUrl', 'getSphereCategory', 'getMultidexPathTo']),
+    itemId () {
+      return this.viewId;
+    },
     allSortedItems () {
       if (this.isLoading || this.loadingFilters) {
         return [];

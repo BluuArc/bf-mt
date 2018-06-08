@@ -212,7 +212,7 @@
               xs12 sm6 md4>
               <es-card
                 v-if="pageDb.hasOwnProperty(key)"
-                :to="`/multidex/extra-skills/??extraId=${key}`"
+                :to="getMultidexPathTo(key)"
                 :extra-skill="pageDb[key]"
                 style="min-height: 84px; height: 100%;"/>
             </v-flex>
@@ -254,19 +254,23 @@
 </template>
 
 <script>
-import { mapState, mapActions, mapMutations } from 'vuex';
+import { mapState, mapActions, mapMutations, mapGetters } from 'vuex';
 import ExtraSkillInfo from '@/components/Multidex/ExtraSkills/DialogContent';
 import SkillCard from '@/components/Multidex/ExtraSkills/SkillCard';
 import debounce from 'lodash/debounce';
 
 export default {
-  props: ['query', 'extraId'],
+  props: ['query', 'viewId'],
   components: {
     'skill-info': ExtraSkillInfo,
     'es-card': SkillCard,
   },
   computed: {
     ...mapState('extraSkills', ['pageDb', 'isLoading', 'numEntries', 'activeServer']),
+    ...mapGetters('extraSkills', ['getMultidexPathTo']),
+    extraId () {
+      return this.viewId;
+    },
     allSortedEntries () {
       if (this.isLoading || this.loadingFilters) {
         return [];
