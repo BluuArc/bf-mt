@@ -4,8 +4,8 @@
       <h3 class="title">Usage</h3>
     </v-card-title>
     <v-card-text>
-      <span v-if="!item.usage || item.usage.length === 0" class="text-xs-center">
-        This item isn't used to make anything.
+      <span v-if="!item.usage || item.usage.length === 0">
+        <p class="pb-0 mb-0">This item isn't used to make anything.</p>
       </span>
       <v-layout row wrap v-else>
         <template v-if="deepUsageList.length === item.usage.length">

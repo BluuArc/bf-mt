@@ -4,110 +4,115 @@
       <h3 class="title">Crafting Recipe</h3>
     </v-card-title>
     <v-card-text class="pt-0">
-      <v-tabs v-model="activeTab">
-        <v-tab>Full</v-tab>
-        <v-tab>Base Materials Only</v-tab>
-      </v-tabs>
-      <v-tabs-items v-model="activeTab" touchless>
-        <v-tab-item class="pt-2 pb-0" style="overflow-x: auto;">
-          <v-container fluid class="pb-1">
-            <material-row v-for="(mat, i) in item.recipe.materials" :key="i" :material="mat"/>
-            <material-row v-if="item.recipe.karma" :karma="item.recipe.karma"/>
-          </v-container>
-        </v-tab-item>
-        <v-tab-item class="pt-2 pb-0" style="overflow-x: auto;">
-          <v-container fluid class="pb-1 pl-2 pr-2 pt-0">
-            <v-expansion-panel>
-              <v-expansion-panel-content v-show="allCraftables.length > 0">
-                <div slot="header">
-                  <h3 class="subheading"><b>Your Craftables ({{ allCraftables.length }} {{ allCraftables.length === 1 ? 'item' : 'items' }})</b></h3>
-                </div>
-                <v-container fluid>
-                  <v-layout row wrap class="pl-3">
-                    <v-flex xs12>
-                      <v-btn @click="getAllCraftables">Got it all</v-btn>
-                      <v-btn @click="resetAllCraftables">Reset</v-btn>
-                    </v-flex>
-                    <!-- <v-flex xs3 sm2 class="pb-0">Filters:</v-flex>
-                    <v-flex class="pb-0" xs12 sm4 md3>
-                      <v-checkbox v-model="filters" value="Need 0" label="Need 0"/>
-                    </v-flex>
-                    <v-flex class="pb-0" xs12 sm4 md3>
-                      <v-checkbox v-model="filters" value="Need 1+" label="Need 1+"/>
-                    </v-flex> -->
-                  </v-layout>
-                  <v-layout row wrap>
-                    <template v-for="(craftable, i) in allCraftables" >
-                      <v-flex xs12 sm6 md4 lg3 :key="i">
-                        <item-input-card
-                          :item="itemById(craftable.id)"
-                          v-model="currentlyHave[craftable.id.toString()]"
-                          @input="updateNeeded"
-                          :need="craftable.total"
-                          :have="(currentlyHave[craftable.id.toString()] || 0) + (craftable.total - craftable.count)"/>
+      <span v-if="!item.recipe">
+        <p class="pt-3 pb-0 mb-0">This item cannot be crafted.</p>
+      </span>
+      <template v-else>
+        <v-tabs v-model="activeTab">
+          <v-tab>Full</v-tab>
+          <v-tab>Base Materials Only</v-tab>
+        </v-tabs>
+        <v-tabs-items v-model="activeTab" touchless>
+          <v-tab-item class="pt-2 pb-0" style="overflow-x: auto;">
+            <v-container fluid class="pb-1">
+              <material-row v-for="(mat, i) in item.recipe.materials" :key="i" :material="mat"/>
+              <material-row v-if="item.recipe.karma" :karma="item.recipe.karma"/>
+            </v-container>
+          </v-tab-item>
+          <v-tab-item class="pt-2 pb-0" style="overflow-x: auto;">
+            <v-container fluid class="pb-1 pl-2 pr-2 pt-0">
+              <v-expansion-panel>
+                <v-expansion-panel-content v-show="allCraftables.length > 0">
+                  <div slot="header">
+                    <h3 class="subheading"><b>Your Craftables ({{ allCraftables.length }} {{ allCraftables.length === 1 ? 'item' : 'items' }})</b></h3>
+                  </div>
+                  <v-container fluid>
+                    <v-layout row wrap class="pl-3">
+                      <v-flex xs12>
+                        <v-btn @click="getAllCraftables">Got it all</v-btn>
+                        <v-btn @click="resetAllCraftables">Reset</v-btn>
                       </v-flex>
-                    </template>
-                  </v-layout>
-                </v-container>
-              </v-expansion-panel-content>
-              <v-expansion-panel-content>
-                <div slot="header">
-                  <h3 class="subheading"><b>Needed Base Materials ({{ baseMaterialsNeeded.length }} {{ baseMaterialsNeeded.length === 1 ? 'item' : 'items' }})</b></h3>
-                </div>
-                <v-container fluid>
-                  <v-layout row class="ml-2">
-                    <v-flex xs9 sm10 md11 class="text-xs-left pr-0">
-                      <b>Item</b>
-                    </v-flex>
-                    <v-flex xs3 sm2 md1 class="text-xs-left pl-0">
-                      <b>Need</b>
-                    </v-flex>
-                  </v-layout>
-                  <v-container fluid class="pa-0">
-                    <material-row
-                      v-for="(mat, i) in baseMaterialsNeeded"
-                      :key="i"
-                      :material="mat"
-                      :show-button-condition="true"
-                      expanded-area-style="border: 1px solid grey; min-width: 20rem; overflow-x: auto;"
-                      expanded-area-class="ml-2 mr-2 mb-5 pb-1"
-                      button-text="Change"
-                      class="ml-4">
-                      <template slot="expanded-area">
-                        <v-layout row>
-                          How much of the following do you have?
-                        </v-layout>
-                        <v-layout row wrap class="mb-2">
-                          <v-flex xs12 sm6 md4 lg3>
-                            <item-input-card
-                              :item="itemById(mat.id)"
-                              v-model="currentlyHave[mat.id.toString()]"
-                              @input="updateNeeded"
-                              :need="mat.total"
-                              :have="(currentlyHave[mat.id.toString()] || 0) + (mat.total - mat.count)"/>
-                          </v-flex>
-                          <v-flex xs12 sm6 md4 lg3 v-for="(craftable, i) in getRelevantCraftablesForMaterial(mat.id)" :key="i">
-                            <item-input-card
+                      <!-- <v-flex xs3 sm2 class="pb-0">Filters:</v-flex>
+                      <v-flex class="pb-0" xs12 sm4 md3>
+                        <v-checkbox v-model="filters" value="Need 0" label="Need 0"/>
+                      </v-flex>
+                      <v-flex class="pb-0" xs12 sm4 md3>
+                        <v-checkbox v-model="filters" value="Need 1+" label="Need 1+"/>
+                      </v-flex> -->
+                    </v-layout>
+                    <v-layout row wrap>
+                      <template v-for="(craftable, i) in allCraftables" >
+                        <v-flex xs12 sm6 md4 lg3 :key="i">
+                          <item-input-card
                             :item="itemById(craftable.id)"
                             v-model="currentlyHave[craftable.id.toString()]"
                             @input="updateNeeded"
                             :need="craftable.total"
                             :have="(currentlyHave[craftable.id.toString()] || 0) + (craftable.total - craftable.count)"/>
-                          </v-flex>
-                        </v-layout>
+                        </v-flex>
                       </template>
-                    </material-row>
-                    <material-row
-                      v-if="item.recipe.karma"
-                      :karma="totalKarmaNeeded"
-                      class="ml-4"/>
+                    </v-layout>
                   </v-container>
-                </v-container>
-              </v-expansion-panel-content>
-            </v-expansion-panel>
-          </v-container>
-        </v-tab-item>
-      </v-tabs-items>
+                </v-expansion-panel-content>
+                <v-expansion-panel-content>
+                  <div slot="header">
+                    <h3 class="subheading"><b>Needed Base Materials ({{ baseMaterialsNeeded.length }} {{ baseMaterialsNeeded.length === 1 ? 'item' : 'items' }})</b></h3>
+                  </div>
+                  <v-container fluid>
+                    <v-layout row class="ml-2">
+                      <v-flex xs9 sm10 md11 class="text-xs-left pr-0">
+                        <b>Item</b>
+                      </v-flex>
+                      <v-flex xs3 sm2 md1 class="text-xs-left pl-0">
+                        <b>Need</b>
+                      </v-flex>
+                    </v-layout>
+                    <v-container fluid class="pa-0">
+                      <material-row
+                        v-for="(mat, i) in baseMaterialsNeeded"
+                        :key="i"
+                        :material="mat"
+                        :show-button-condition="true"
+                        expanded-area-style="border: 1px solid grey; min-width: 20rem; overflow-x: auto;"
+                        expanded-area-class="ml-2 mr-2 mb-5 pb-1"
+                        button-text="Change"
+                        class="ml-4">
+                        <template slot="expanded-area">
+                          <v-layout row>
+                            How much of the following do you have?
+                          </v-layout>
+                          <v-layout row wrap class="mb-2">
+                            <v-flex xs12 sm6 md4 lg3>
+                              <item-input-card
+                                :item="itemById(mat.id)"
+                                v-model="currentlyHave[mat.id.toString()]"
+                                @input="updateNeeded"
+                                :need="mat.total"
+                                :have="(currentlyHave[mat.id.toString()] || 0) + (mat.total - mat.count)"/>
+                            </v-flex>
+                            <v-flex xs12 sm6 md4 lg3 v-for="(craftable, i) in getRelevantCraftablesForMaterial(mat.id)" :key="i">
+                              <item-input-card
+                              :item="itemById(craftable.id)"
+                              v-model="currentlyHave[craftable.id.toString()]"
+                              @input="updateNeeded"
+                              :need="craftable.total"
+                              :have="(currentlyHave[craftable.id.toString()] || 0) + (craftable.total - craftable.count)"/>
+                            </v-flex>
+                          </v-layout>
+                        </template>
+                      </material-row>
+                      <material-row
+                        v-if="item.recipe.karma"
+                        :karma="totalKarmaNeeded"
+                        class="ml-4"/>
+                    </v-container>
+                  </v-container>
+                </v-expansion-panel-content>
+              </v-expansion-panel>
+            </v-container>
+          </v-tab-item>
+        </v-tabs-items>
+      </template>
     </v-card-text>
   </v-card>
 </template>
@@ -254,17 +259,19 @@ export default {
       return result;
     },
     getCraftablesInRecipeOf (item, currentCraftables = {}) {
-      item.recipe.materials.forEach(material => {
-        const currentItem = this.itemById(material.id.toString());
-        const currentItemId = currentItem.id.toString();
-        if (currentItem.recipe) {
-          if (!currentCraftables[currentItemId]) {
-            currentCraftables[currentItemId] = 0;
+      if (item.recipe) {
+        item.recipe.materials.forEach(material => {
+          const currentItem = this.itemById(material.id.toString());
+          const currentItemId = currentItem.id.toString();
+          if (currentItem.recipe) {
+            if (!currentCraftables[currentItemId]) {
+              currentCraftables[currentItemId] = 0;
+            }
+            currentCraftables[currentItemId] += +material.count;
+            this.getCraftablesInRecipeOf(currentItem, currentCraftables);
           }
-          currentCraftables[currentItemId] += +material.count;
-          this.getCraftablesInRecipeOf(currentItem, currentCraftables);
-        }
-      });
+        });
+      }
       return Object.entries(currentCraftables).map(([id, count]) => ({ id, count }));
     },
     getRelevantCraftablesForMaterial (materialId) {

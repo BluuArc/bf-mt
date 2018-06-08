@@ -81,7 +81,7 @@
           <v-flex xs12>
             <usage-card :item="item" style="border-color: var(--usage-card-color)"/>
           </v-flex>
-          <v-flex xs12 v-if="item.recipe">
+          <v-flex xs12>
             <crafting-card :item="item" style="border-color: var(--recipe-card-color)"/>
           </v-flex>
         </v-layout>
