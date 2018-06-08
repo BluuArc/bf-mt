@@ -19,7 +19,9 @@
           <v-container fluid class="pb-1 pl-2 pr-2 pt-0">
             <v-expansion-panel>
               <v-expansion-panel-content v-show="allCraftables.length > 0">
-                <div slot="header">Your Craftables</div>
+                <div slot="header">
+                  <h3 class="subheading"><b>Your Craftables ({{ allCraftables.length }} {{ allCraftables.length === 1 ? 'item' : 'items' }})</b></h3>
+                </div>
                 <v-container fluid>
                   <v-layout row wrap class="pl-3">
                     <v-flex xs12>
@@ -49,7 +51,9 @@
                 </v-container>
               </v-expansion-panel-content>
               <v-expansion-panel-content>
-                <div slot="header">Needed Base Materials</div>
+                <div slot="header">
+                  <h3 class="subheading"><b>Needed Base Materials ({{ baseMaterialsNeeded.length }} {{ baseMaterialsNeeded.length === 1 ? 'item' : 'items' }})</b></h3>
+                </div>
                 <v-container fluid>
                   <v-layout row class="ml-2">
                     <v-flex xs9 sm10 md11 class="text-xs-left pr-0">
@@ -165,7 +169,7 @@ export default {
       this.getCraftablesInRecipeOf(this.item, craftables);
       const totalCraftables = {};
       this.getCraftablesInRecipeOf(this.item, totalCraftables);
-      console.debug(craftables);
+      // console.debug(craftables);
 
       const { karma, ...materials } = this.currentlyHave;
 

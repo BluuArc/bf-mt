@@ -81,7 +81,6 @@ export default {
   },
   methods: {
     emitValue: debounce(function (value) {
-      console.debug('emitting', value);
       this.$emit('input', value);
     }, 50),
   },
