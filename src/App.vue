@@ -118,11 +118,11 @@ export default {
         {
           subheader: 'Multidex',
           items: [
-            {
-              icon: 'local_library',
-              title: 'Overview',
-              link: '/multidex',
-            },
+            // {
+            //   icon: 'local_library',
+            //   title: 'Overview',
+            //   link: '/multidex',
+            // },
             {
               icon: 'people',
               title: 'Units',
