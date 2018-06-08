@@ -79,28 +79,7 @@
             </v-card>
           </v-flex>
           <v-flex xs12>
-            <v-card style="border-color: var(--usage-card-color)">
-              <v-card-title class="indigo white--text">
-                <h3 class="title">Usage</h3>
-              </v-card-title>
-              <v-card-text>
-                <span v-if="!item.usage || item.usage.length === 0" class="text-xs-center">
-                  This item isn't used to make anything.
-                </span>
-                <v-layout row wrap v-else>
-                  <v-flex xs12>
-                    This item is used to make the following items:
-                  </v-flex>
-                  <v-flex xs12 sm6 md4 v-for="(nextItem, j) in item.usage" :key="j">
-                      <item-card
-                        class="pa-1 card--raised"
-                        :to="`/multidex/items/?itemId=${nextItem.id}`"
-                        :item="pageDb[nextItem.id]"
-                        style="height: 100%;"/>
-                  </v-flex>
-                </v-layout>
-              </v-card-text>
-            </v-card>
+            <usage-card :item="item" style="border-color: var(--usage-card-color)"/>
           </v-flex>
           <v-flex xs12 v-if="item.recipe">
             <crafting-card :item="item" style="border-color: var(--recipe-card-color)"/>
@@ -115,7 +94,7 @@
 import { mapActions, mapGetters, mapState } from 'vuex';
 import ItemThumbnail from '@/components/Multidex/Items/ItemThumbnail';
 import SphereTypeIcon from '@/components/Multidex/Items/SphereTypeIcon';
-import ItemCard from '@/components/Multidex/Items/ItemCard';
+import UsageCard from '@/components/Multidex/Items/UsageCard';
 import CraftingCard from '@/components/Multidex/Items/CraftingCard';
 import DescriptionAndEffects from '@/components/Multidex/GenericEffectsSection';
 
@@ -124,7 +103,7 @@ export default {
   components: {
     'item-thumbnail': ItemThumbnail,
     'sphere-type-icon': SphereTypeIcon,
-    'item-card': ItemCard,
+    'usage-card': UsageCard,
     'crafting-card': CraftingCard,
     'description-and-effects-section': DescriptionAndEffects,
   },
