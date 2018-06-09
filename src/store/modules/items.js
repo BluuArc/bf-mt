@@ -109,7 +109,7 @@ const itemStore = {
       }
 
       const result = await SWorker.run((keys, filters, otherKeys, pageDb) => {
-        const { name = '', rarity = [], exclusives = [], itemTypes = [], sphereTypes = [] } = filters;
+        const { name = '', rarity = [], exclusives = [], itemTypes = [], sphereTypes = [], craftables = [], usage = [] } = filters;
         const includeNoneSphereType = sphereTypes.includes(0);
         const includeAnySphereType = sphereTypes.length === 15;
         return keys.filter(key => {
@@ -123,7 +123,14 @@ const itemStore = {
 
           const isInOtherServer = otherKeys.includes(entry.id.toString());
           const fitsExclusive = (exclusives.length !== 1 ? exclusives.length === 2 : ((exclusives[0] === 'exclusive' && !isInOtherServer) || (exclusives[0] === 'non-exclusive' && isInOtherServer)));
-          return fitsName && fitsRarity && fitsExclusive && fitsItemType && fitsSphereType;
+
+          const isCraftable = !!entry.recipe;
+          const fitsCraftable = (craftables.length !== 1 ? craftables.length === 2 : ((craftables[0] === 'non-craftable' && !isCraftable) || (craftables[0] === 'craftable' && isCraftable)));
+
+          const isUsed = !!entry.usage && entry.usage.length > 0;
+          const fitsUsage = (usage.length !== 1 ? usage.length === 2 : ((usage[0] === 'unused' && !isUsed) || (usage[0] === 'used' && isUsed)));
+
+          return fitsName && fitsRarity && fitsExclusive && fitsItemType && fitsSphereType && fitsCraftable && fitsUsage;
         });
       }, [keys, filters, otherKeys, state.pageDb]);
       return result;

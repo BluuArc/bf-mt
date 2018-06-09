@@ -131,6 +131,42 @@
                   </v-layout>
                   <v-layout row wrap class="pl-3 pr-3">
                     <v-flex xs12>
+                      <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Craftables</h3>
+                      <v-layout row>
+                        <v-radio-group v-model="filterOptions.craftables" :row="$vuetify.breakpoint.mdAndUp">
+                          <v-radio
+                            :value="craftableFilterOptions.all"
+                            label="All"/>
+                          <v-radio
+                            :value="craftableFilterOptions.craftable"
+                            label="Craftables Only"/>
+                          <v-radio
+                            :value="craftableFilterOptions.nonCraftable"
+                            label="Non-Craftables Only"/>
+                        </v-radio-group>
+                      </v-layout>
+                    </v-flex>
+                  </v-layout>
+                  <v-layout row wrap class="pl-3 pr-3">
+                    <v-flex xs12>
+                      <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Usage</h3>
+                      <v-layout row>
+                        <v-radio-group v-model="filterOptions.usage" :row="$vuetify.breakpoint.mdAndUp">
+                          <v-radio
+                            :value="usageFilterOptions.all"
+                            label="All"/>
+                          <v-radio
+                            :value="usageFilterOptions.used"
+                            label="Used in Other Items Only"/>
+                          <v-radio
+                            :value="usageFilterOptions.unused"
+                            label="Not Used in Other Items Only"/>
+                        </v-radio-group>
+                      </v-layout>
+                    </v-flex>
+                  </v-layout>
+                  <v-layout row wrap class="pl-3 pr-3">
+                    <v-flex xs12>
                       <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Server Exclusives</h3>
                       <v-layout row>
                         <v-radio-group v-model="filterOptions.exclusives" :row="$vuetify.breakpoint.mdAndUp">
@@ -370,6 +406,8 @@ export default {
         sphereTypes: Object.keys(new Array(15).fill(0)).map(i => +i),
         itemTypes: ['consumable', 'material', 'raid', 'sphere', 'evomat', 'summoner_consumable', 'ls_sphere'],
         exclusives: this.exclusiveFilterOptions.all,
+        craftables: this.craftableFilterOptions.all,
+        usage: this.usageFilterOptions.all,
       };
     },
     itemTypeMapping () {
@@ -388,6 +426,20 @@ export default {
         all: ['exclusive', 'non-exclusive'],
         exclusive: ['exclusive'],
         nonExclusive: ['non-exclusive'],
+      };
+    },
+    craftableFilterOptions () {
+      return {
+        all: ['craftable', 'non-craftable'],
+        craftable: ['craftable'],
+        nonCraftable: ['non-craftable'],
+      };
+    },
+    usageFilterOptions () {
+      return {
+        all: ['used', 'unused'],
+        used: ['used'],
+        unused: ['unused'],
       };
     },
     hasFilters () {
@@ -464,6 +516,8 @@ export default {
         sphereTypes: [],
         itemTypes: [],
         exclusives: [],
+        craftables: [],
+        usage: [],
       },
       showDialog: false,
       filteredKeys: [],
@@ -519,6 +573,8 @@ export default {
         this.filterOptions[key] = this.defaultFilters[key].slice();
       });
       this.filterOptions.exclusives = this.defaultFilters.exclusives;
+      this.filterOptions.craftables = this.defaultFilters.craftables;
+      this.filterOptions.usage = this.defaultFilters.usage;
       this.filterOptions.name = '';
     },
   },
