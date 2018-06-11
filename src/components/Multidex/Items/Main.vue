@@ -1,6 +1,6 @@
 <template>
   <v-container grid-list-sm class="pb-5">
-    <v-layout row v-if="isLoading">
+    <v-layout row v-if="isDataLoading || !finishedInit">
       <v-flex xs12 class="text-xs-center pt-5">
         <v-progress-circular indeterminate/>
         <h4 class="subheading">Waiting for data to finish loading.</h4>
@@ -68,6 +68,12 @@
                     <span v-else>
                       {{ filterOptions.sphereTypes.length }} Sphere Types
                     </span>
+                  </v-chip>
+                  <v-chip small v-show="filterOptions.craftables.length < defaultFilters.craftables.length" style="text-transform: capitalize">
+                    {{ filterOptions.craftables[0] }}s Only
+                  </v-chip>
+                  <v-chip small v-show="filterOptions.usage.length < defaultFilters.usage.length" style="text-transform: capitalize">
+                    {{ filterOptions.usage[0] }} Items Only
                   </v-chip>
                   <v-chip small v-show="filterOptions.exclusives.length < defaultFilters.exclusives.length" style="text-transform: capitalize">
                     {{ filterOptions.exclusives[0] }}s Only
@@ -348,11 +354,15 @@ export default {
   computed: {
     ...mapState('items', ['pageDb', 'isLoading', 'numEntries', 'activeServer']),
     ...mapGetters('items', ['getImageUrl', 'getSphereCategory', 'getMultidexPathTo']),
+    ...mapState(['inInitState']),
+    isDataLoading () {
+      return this.inInitState || this.isLoading;
+    },
     itemId () {
       return this.viewId;
     },
     allSortedItems () {
-      if (this.isLoading || this.loadingFilters) {
+      if (this.isDataLoading || this.loadingFilters) {
         return [];
       }
 
@@ -468,10 +478,8 @@ export default {
     pageIndex () {
       window.scrollTo(0, 0);
     },
-    isLoading (newValue) {
-      if (!newValue && this.itemId) {
-        this.showDialog = true;
-      }
+    isDataLoading (newValue) {
+      this.setShowDialog();
 
       if (!newValue) {
         this.initDb();
@@ -479,7 +487,7 @@ export default {
       }
     },
     itemId (newValue) {
-      this.showDialog = (!this.isLoading && !!newValue);
+      this.setShowDialog();
 
       if (this.pageDb.hasOwnProperty(newValue)) {
         document.title = `BF-MT - Items - ${this.pageDb[newValue].name}`;
@@ -500,6 +508,9 @@ export default {
     },
     showDialog (newValue) {
       this.setHtmlOverflow(newValue);
+    },
+    finishedInit () {
+      this.setShowDialog();
     },
   },
   data () {
@@ -522,24 +533,27 @@ export default {
       showDialog: false,
       filteredKeys: [],
       loadingFilters: false,
+      finishedInit: false,
     };
   },
   created () {
-    if (!this.isLoading) {
+    if (!this.isDataLoading) {
       this.initDb();
     }
   },
   mounted () {
     this.resetFilters();
-    if (this.itemId && !this.isLoading) {
-      this.showDialog = true;
-    }
+    this.setShowDialog();
   },
   methods: {
     ...mapMutations(['setHtmlOverflow']),
     ...mapActions('items', ['getFilteredKeys', 'ensurePageDbSyncWithServer']),
-    initDb: debounce(function () {
-      this.ensurePageDbSyncWithServer();
+    setShowDialog () {
+      this.showDialog = !this.isDataLoading && !!this.viewId && this.finishedInit;
+    },
+    initDb: debounce(async function () {
+      await this.ensurePageDbSyncWithServer();
+      this.finishedInit = true;
     }, 50),
     decrementPage () {
       if (this.pageIndex <= 0) {

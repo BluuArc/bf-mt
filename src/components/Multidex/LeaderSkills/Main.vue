@@ -1,6 +1,6 @@
 <template>
   <v-container grid-list-sm class="pb-5">
-    <v-layout row v-if="isLoading">
+    <v-layout row v-if="isDataLoading || !finishedInit">
       <v-flex xs12 class="text-xs-center pt-5">
         <v-progress-circular indeterminate/>
         <h4 class="subheading">Waiting for data to finish loading.</h4>
@@ -232,11 +232,15 @@ export default {
   computed: {
     ...mapState('leaderSkills', ['pageDb', 'isLoading', 'numEntries', 'activeServer']),
     ...mapGetters('leaderSkills', ['getMultidexPathTo']),
+    ...mapState(['inInitState']),
+    isDataLoading () {
+      return this.inInitState || this.isLoading;
+    },
     leaderId () {
       return this.viewId;
     },
     allSortedEntries () {
-      if (this.isLoading || this.loadingFilters) {
+      if (this.isDataLoading || this.loadingFilters) {
         return [];
       }
 
@@ -314,10 +318,8 @@ export default {
     pageIndex () {
       window.scrollTo(0, 0);
     },
-    isLoading (newValue) {
-      if (!newValue && this.leaderId) {
-        this.showDialog = true;
-      }
+    isDataLoading (newValue) {
+      this.setShowDialog();
 
       if (!newValue) {
         this.initDb();
@@ -325,7 +327,7 @@ export default {
       }
     },
     leaderId (newValue) {
-      this.showDialog = (!this.isLoading && !!newValue);
+      this.setShowDialog();
 
       if (this.pageDb.hasOwnProperty(newValue)) {
         document.title = `BF-MT - Leader Skills - ${this.pageDb[newValue].name}`;
@@ -347,6 +349,9 @@ export default {
     showDialog (newValue) {
       this.setHtmlOverflow(newValue);
     },
+    finishedInit () {
+      this.setShowDialog();
+    },
   },
   data () {
     return {
@@ -364,26 +369,29 @@ export default {
       showDialog: false,
       filteredKeys: [],
       loadingFilters: false,
+      finishedInit: false,
     };
   },
   created () {
-    if (!this.isLoading) {
+    if (!this.isDataLoading) {
       this.initDb();
     }
   },
   mounted () {
     this.resetFilters();
-    if (this.leaderId && !this.isLoading) {
-      this.showDialog = true;
-    }
+    this.setShowDialog();
   },
   methods: {
     ...mapMutations(['setHtmlOverflow']),
     ...mapActions('leaderSkills', ['getFilteredKeys', 'ensurePageDbSyncWithServer']),
     ...mapActions('units', { unitsDbSync: 'ensurePageDbSyncWithServer' }),
-    initDb: debounce(function () {
-      this.unitsDbSync();
-      this.ensurePageDbSyncWithServer();
+    setShowDialog () {
+      this.showDialog = !this.isDataLoading && !!this.viewId && this.finishedInit;
+    },
+    initDb: debounce(async function () {
+      await this.unitsDbSync();
+      await this.ensurePageDbSyncWithServer();
+      this.finishedInit = true;
     }, 50),
     decrementPage () {
       if (this.pageIndex <= 0) {
