@@ -31,6 +31,7 @@ const store = new Vuex.Store({
   state: {
     disableHtmlOverflow: false,
     inInitState: false,
+    modules,
   },
   mutations: {
     setHtmlOverflow (state, overflowState = false) {

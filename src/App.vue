@@ -73,13 +73,11 @@ export default {
       return ['gl', 'eu', 'jp'];
     },
     dataIsLoading () {
-      const modules = ['units', 'items', 'bursts', 'extraSkills', 'leaderSkills'];
-      return modules.map(name => this[`${name}Loading`]).some(val => !!val);
+      return this.modules.map(name => this[`${name}Loading`]).some(val => !!val);
     },
     loadingStates () {
-      const modules = ['units', 'items', 'bursts', 'extraSkills', 'leaderSkills'];
       const state = {};
-      modules.forEach(name => {
+      this.modules.forEach(name => {
         state[name] = this[`${name}Loading`];
       });
       return state;
@@ -90,7 +88,7 @@ export default {
     ...mapState('bursts', { burstsLoading: 'isLoading' }),
     ...mapState('extraSkills', { extraSkillsLoading: 'isLoading' }),
     ...mapState('leaderSkills', { leaderSkillsLoading: 'isLoading' }),
-    ...mapState(['disableHtmlOverflow']),
+    ...mapState(['disableHtmlOverflow', 'modules']),
   },
   data () {
     return {

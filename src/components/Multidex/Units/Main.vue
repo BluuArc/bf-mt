@@ -260,7 +260,12 @@
         <h4 class="subheading">Searching for units with specified filters.</h4>
       </v-flex>
       <v-flex xs12 v-else>
-        <v-container fluid grid-list-lg>
+        <result-viewer
+          class="grid-list-lg"
+          :max-results="numEntries[activeServer]"
+          :num-results="allSortedUnits.length"
+          :required-modules="['units', 'items']"
+          :server-type="activeServer">
           <v-layout row wrap>
             <v-flex
               v-for="key in unitsToShow"
@@ -269,13 +274,7 @@
               <unit-card :to="getMultidexPathTo(key)" v-if="pageDb.hasOwnProperty(key)" :unit="pageDb[key]"/>
             </v-flex>
           </v-layout>
-          <v-layout row v-if="numEntries[activeServer] === 0">
-            <v-flex xs12 class="text-xs-center">
-              <p>Seems like you haven't loaded the data for this server yet. You can load the missing data at the settings page.</p>
-              <v-btn to="/settings">Go To Settings Page</v-btn>
-            </v-flex>
-          </v-layout>
-        </v-container>
+        </result-viewer>
       </v-flex>
     </v-layout>
     <v-layout row>
@@ -315,6 +314,7 @@ import { mapState, mapActions, mapGetters, mapMutations } from 'vuex';
 import UnitCard from '@/components/Multidex/Units/UnitCard';
 import UnitDialogContent from '@/components/Multidex/Units/UnitDialogContent';
 import ElementIcon from '@/components/Multidex/Units/ElementIcon';
+import ResultViewer from '@/components/Multidex/ResultViewer';
 import debounce from 'lodash/debounce';
 
 export default {
@@ -323,9 +323,11 @@ export default {
     'unit-info': UnitDialogContent,
     'unit-card': UnitCard,
     'element-icon': ElementIcon,
+    'result-viewer': ResultViewer,
   },
   computed: {
     ...mapState('units', ['pageDb', 'isLoading', 'numEntries', 'activeServer']),
+    ...mapState('items', { itemEntries: 'numEntries' }),
     ...mapGetters('units', ['getImageUrls', 'getMultidexPathTo']),
     ...mapState(['inInitState']),
     isDataLoading () {
@@ -408,6 +410,9 @@ export default {
         .map(key => this.filterOptions[key].length !== this.defaultFilters[key].length)
         .reduce((acc, val) => acc || val, false);
     },
+    hasRequiredModules () {
+      return this.numEntries[this.activeServer] > 0 && this.itemEntries[this.activeServer] > 0;
+    },
   },
   data () {
     return {
@@ -484,6 +489,12 @@ export default {
     finishedInit () {
       this.setShowDialog();
     },
+    hasRequiredModules (newValue) {
+      if (newValue) {
+        this.finishedInit = false;
+        this.initDb();
+      }
+    },
   },
   created () {
     if (!this.isDataLoading) {
@@ -499,7 +510,7 @@ export default {
     ...mapActions('units', ['getFilteredKeys', 'ensurePageDbSyncWithServer']),
     ...mapActions('items', { itemsDbSync: 'ensurePageDbSyncWithServer' }),
     setShowDialog () {
-      this.showDialog = !this.isDataLoading && !!this.viewId && this.finishedInit;
+      this.showDialog = !this.isDataLoading && !!this.viewId && this.finishedInit && this.hasRequiredModules;
     },
     initDb: debounce(async function () {
       await this.itemsDbSync();
