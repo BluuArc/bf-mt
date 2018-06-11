@@ -7,7 +7,7 @@
       </v-flex>
     </v-layout>
     <v-layout row wrap v-else>
-      <v-flex xs12>
+      <v-flex v-show="hasRequiredModules" xs12>
         <v-card raised class="mr-3 ml-3">
           <v-card-text>
             <v-container fluid class="pa-0">
@@ -112,10 +112,10 @@
           </v-expansion-panel>
         </v-card>
       </v-flex>
-      <v-flex xs6 class="pl-3">
+      <v-flex v-show="hasRequiredModules" xs6 class="pl-3">
         <v-btn v-show="hasFilters" flat @click="resetFilters" small class="pa-0">Reset Filters</v-btn>
       </v-flex>
-      <v-flex xs6 class="text-xs-right mt-2 pr-3">
+      <v-flex v-show="hasRequiredModules" xs6 class="text-xs-right mt-2 pr-3">
         <v-menu offset-y :close-on-content-click="false">
           <div slot="activator">
             <span>Page {{ pageIndex + 1 }} of {{ numPages }}</span>
@@ -168,7 +168,12 @@
         <h4 class="subheading">Searching for skills with specified filters.</h4>
       </v-flex>
       <v-flex xs12 v-else>
-        <v-container fluid grid-list-lg>
+        <result-viewer
+          class="grid-list-lg"
+          :max-results="numEntries[activeServer]"
+          :num-results="allSortedEntries.length"
+          :required-modules="['units', 'leaderSkills']"
+          :server-type="activeServer">
           <v-layout row wrap>
             <v-flex
               v-for="key in entriesToShow"
@@ -181,13 +186,7 @@
                 style="min-height: 84px; height: 100%;"/>
             </v-flex>
           </v-layout>
-          <v-layout row v-if="numEntries[activeServer] === 0">
-            <v-flex xs12 class="text-xs-center">
-              <p>Seems like you haven't loaded the data for this server yet. You can load the missing data at the settings page.</p>
-              <v-btn to="/settings">Go To Settings Page</v-btn>
-            </v-flex>
-          </v-layout>
-        </v-container>
+        </result-viewer>
       </v-flex>
     </v-layout>
     <v-layout row>
@@ -222,15 +221,18 @@ import { mapState, mapActions, mapMutations, mapGetters } from 'vuex';
 import SkillInfo from '@/components/Multidex/LeaderSkills/DialogContent';
 import SkillCard from '@/components/Multidex/LeaderSkills/SkillCard';
 import debounce from 'lodash/debounce';
+import ResultViewer from '@/components/Multidex/ResultViewer';
 
 export default {
   props: ['query', 'viewId'],
   components: {
     'skill-info': SkillInfo,
     'ls-card': SkillCard,
+    'result-viewer': ResultViewer,
   },
   computed: {
     ...mapState('leaderSkills', ['pageDb', 'isLoading', 'numEntries', 'activeServer']),
+    ...mapState('units', { unitEntries: 'numEntries' }),
     ...mapGetters('leaderSkills', ['getMultidexPathTo']),
     ...mapState(['inInitState']),
     isDataLoading () {
@@ -298,6 +300,9 @@ export default {
         .map(key => this.filterOptions[key].length !== this.defaultFilters[key].length)
         .reduce((acc, val) => acc || val, false);
     },
+    hasRequiredModules () {
+      return this.numEntries[this.activeServer] > 0 && this.unitEntries[this.activeServer] > 0;
+    },
   },
   watch: {
     pageDb () {
@@ -352,6 +357,12 @@ export default {
     finishedInit () {
       this.setShowDialog();
     },
+    hasRequiredModules (newValue) {
+      if (newValue && this.finishedInit) {
+        this.finishedInit = false;
+        this.initDb();
+      }
+    },
   },
   data () {
     return {
@@ -386,7 +397,7 @@ export default {
     ...mapActions('leaderSkills', ['getFilteredKeys', 'ensurePageDbSyncWithServer']),
     ...mapActions('units', { unitsDbSync: 'ensurePageDbSyncWithServer' }),
     setShowDialog () {
-      this.showDialog = !this.isDataLoading && !!this.viewId && this.finishedInit;
+      this.showDialog = !this.isDataLoading && !!this.viewId && this.finishedInit && this.hasRequiredModules;
     },
     initDb: debounce(async function () {
       await this.unitsDbSync();

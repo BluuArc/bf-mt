@@ -7,7 +7,7 @@
       </v-flex>
     </v-layout>
     <v-layout row wrap v-else>
-      <v-flex xs12>
+      <v-flex v-show="hasRequiredModules" xs12>
         <v-card raised class="mr-3 ml-3">
           <v-card-text>
             <v-container fluid class="pa-0">
@@ -204,10 +204,10 @@
           </v-expansion-panel>
         </v-card>
       </v-flex>
-      <v-flex xs6 class="pl-3">
+      <v-flex v-show="hasRequiredModules" xs6 class="pl-3">
         <v-btn v-show="hasFilters" flat @click="resetFilters" small class="pa-0">Reset Filters</v-btn>
       </v-flex>
-      <v-flex xs6 class="text-xs-right mt-2 pr-3">
+      <v-flex v-show="hasRequiredModules" xs6 class="text-xs-right mt-2 pr-3">
         <v-menu offset-y :close-on-content-click="false">
           <div slot="activator">
             <span>Page {{ pageIndex + 1 }} of {{ numPages }}</span>
@@ -490,7 +490,7 @@ export default {
       this.setShowDialog();
     },
     hasRequiredModules (newValue) {
-      if (newValue) {
+      if (newValue && this.finishedInit) {
         this.finishedInit = false;
         this.initDb();
       }
