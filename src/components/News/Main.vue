@@ -9,17 +9,28 @@
     </v-layout>
     <v-layout row id="iframe-container">
       <v-flex xs12>
-        <iframe src="https://api.bravefrontier.gumi.sg/bf/web/notice/indexCtrl.php"/>
+        <iframe :src="serverUrls[activeServer]"/>
       </v-flex>
     </v-layout>
   </v-container>
 </template>
 
 <script>
+import { mapState } from 'vuex';
 export default {
+  computed: {
+    ...mapState('settings', ['activeServer']),
+    serverUrls () {
+      return {
+        gl: 'https://api.bravefrontier.gumi.sg/bf/web/notice/indexCtrl.php',
+        eu: 'https://apiv2-bravefrontier.gumi-europe.net/web/notice/index.php',
+        jp: 'https://webnotice.ssl.brave.a-lim.jp/news/news.html',
+      };
+    },
+  },
   methods: {
     updateNews () {
-      const frame = Array.from(this.$el.getElementsByTagName('iframe'))[0];
+      const frame = this.$el.getElementsByTagName('iframe')[0];
       frame.src += '';
     },
   },
