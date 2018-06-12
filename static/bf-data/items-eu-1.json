@@ -159,6 +159,31 @@
       }
     ]
   },
+  "10008": {
+    "desc": "Spirit grass rich in magical energy, native to the world of Rokkzalm.",
+    "id": 10008,
+    "max_stack": 99,
+    "name": "Spirit Grass",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_104.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230006,
+        "name": "Spirit Band"
+      },
+      {
+        "id": 230106,
+        "name": "Wrathful Needle"
+      },
+      {
+        "id": 230206,
+        "name": "Warding Scepter"
+      }
+    ]
+  },
   "10100": {
     "desc": "The naturally molted feathers of a migratory bird called Theo.",
     "id": 10100,
@@ -950,6 +975,31 @@
       {
         "id": 39400,
         "name": "Godly Statue"
+      }
+    ]
+  },
+  "10211": {
+    "desc": "The fruit of a tree found growing wild in Rokkzalm.",
+    "id": 10211,
+    "max_stack": 99,
+    "name": "Bubblefruit",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_303.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230106,
+        "name": "Wrathful Needle"
+      },
+      {
+        "id": 230206,
+        "name": "Warding Scepter"
+      },
+      {
+        "id": 239000,
+        "name": "Sunblade"
       }
     ]
   },
@@ -4027,6 +4077,27 @@
       }
     ]
   },
+  "10737": {
+    "desc": "A fragment from the inner walls of one of the massive caverns of Rokkzalm.",
+    "id": 10737,
+    "max_stack": 99,
+    "name": "Cavern Fragment",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_806.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 235002,
+        "name": "Armored Soul"
+      },
+      {
+        "id": 239000,
+        "name": "Sunblade"
+      }
+    ]
+  },
   "10800": {
     "desc": "A giant green beast bone.",
     "id": 10800,
@@ -4842,6 +4913,27 @@
       {
         "id": 234000,
         "name": "Taboo Grimoire"
+      }
+    ]
+  },
+  "10913": {
+    "desc": "Insects native to Rokkzalm which contain unique bodily fluids.",
+    "id": 10913,
+    "max_stack": 99,
+    "name": "Magicatalyst Bug",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1001.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230006,
+        "name": "Spirit Band"
+      },
+      {
+        "id": 238000,
+        "name": "Rainbow Regalia"
       }
     ]
   },
@@ -5933,6 +6025,23 @@
       {
         "id": 235001,
         "name": "Automated Warrior"
+      }
+    ]
+  },
+  "11049": {
+    "desc": "Crystals found very rarely among the remains of enchanted puppets.",
+    "id": 11049,
+    "max_stack": 99,
+    "name": "Armor Shard",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1102.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 235002,
+        "name": "Armored Soul"
       }
     ]
   },

@@ -1,9 +1,19 @@
 const fs = require('fs');
 const rp = require('request-promise');
 const logger = require('winston');
+const GitHubScraper = require('./gh-scraper');
 logger.level = 'debug';
 
 const outputFolder = 'static/bf-data';
+
+let ghData;
+let updateData = {
+  units: {},
+  items: {},
+  bursts: {},
+  extraSkills: {},
+  leaderSkills: {},
+};
 
 function getUrl(server = '', file = '') {
   const baseUrl = `https://raw.githubusercontent.com/Deathmax/bravefrontier_data/master`;
@@ -69,6 +79,13 @@ async function getUnitDataForServer(server = 'gl') {
       data: {}
     },
   };
+
+  logger.info(`${server}: setting git data`);
+  let fileInfo = ghData[data.info.file];
+  if (server !== 'gl') {
+    fileInfo = ghData[server].contents[data.info.file];
+  }
+  updateData.units[server] = fileInfo.date;
 
   logger.info(`${server}: getting files`);
   const unitUrls = [];
@@ -141,6 +158,14 @@ async function getUnitDataForServer(server = 'gl') {
 }
 
 async function getBurstDataForServer(server = 'gl', unitData = {}) {
+  logger.info(`${server}: setting git data`);
+  let fileInfo = ((ghData[server] ? ghData[server].contents : undefined) || ghData)['bbs_0.json']
+
+  if (server === 'eu') {
+    fileInfo = ghData[server].contents['bbs.json'];
+  }
+  updateData.bursts[server] = fileInfo.date;
+
   let bbData = {};
   logger.info(`${server}: getting files`);
   if (server === 'eu') {
@@ -211,6 +236,13 @@ async function getBurstDataForServer(server = 'gl', unitData = {}) {
 }
 
 async function getExtraSkillDataForServer(server = 'gl', unitData = {}) {
+  logger.info(`${server}: setting git data`);
+  let fileInfo = ghData['es.json'];
+  if (server !== 'gl') {
+    fileInfo = ghData[server].contents['es.json'];
+  }
+  updateData.extraSkills[server] = fileInfo.date;
+
   const esData = {};
   logger.info(`${server}: getting files`);
   const downloadResult = await downloadMultipleFiles([getUrl(server, 'es.json')]);
@@ -251,6 +283,13 @@ async function getExtraSkillDataForServer(server = 'gl', unitData = {}) {
 }
 
 async function getItemDataForServer(server = 'gl') {
+  logger.info(`${server}: setting git data`);
+  let fileInfo = ghData['items.json'];
+  if (server !== 'gl') {
+    fileInfo = ghData[server].contents['items.json'];
+  }
+  updateData.items[server] = fileInfo.date;
+
   const itemData = {};
   logger.info(`${server}: getting files`);
   const downloadResult = await downloadMultipleFiles([getUrl(server, 'items.json')]);
@@ -326,6 +365,13 @@ async function getItemDataForServer(server = 'gl') {
 }
 
 async function getLeaderSkillDataForServer(server = 'gl', unitData = {}) {
+  logger.info(`${server}: setting git data`);
+  let fileInfo = ghData['ls.json'];
+  if (server !== 'gl') {
+    fileInfo = ghData[server].contents['ls.json'];
+  }
+  updateData.leaderSkills[server] = fileInfo.date;
+
   const lsData = {};
   logger.info(`${server}: getting files`);
   const downloadResult = await downloadMultipleFiles([getUrl(server, 'ls.json')]);
@@ -365,6 +411,7 @@ async function getLeaderSkillDataForServer(server = 'gl', unitData = {}) {
   return lsData;
 }
 
+// TODO: implement usage for this
 async function getDictionaryForServer(server = 'gl') {
   logger.info(`${server}: getting files`);
   let dictionaryData = {};
@@ -386,6 +433,7 @@ async function getDictionaryForServer(server = 'gl') {
 }
 
 async function getData(servers = ['gl', 'eu', 'jp']) {
+  await initializeGHData();
   // TODO: implement use of dictionary data
   for (const s of servers) {
     const unitData = await getUnitDataForServer(s);
@@ -394,7 +442,20 @@ async function getData(servers = ['gl', 'eu', 'jp']) {
     await getLeaderSkillDataForServer(s, unitData);
     await getItemDataForServer(s);
   }
+
+  logger.info(`saving update statistics file`);
+  const filename = `update-stats.json`;
+  fs.writeFileSync(`${outputFolder}/${filename}`, JSON.stringify(updateData, null, 2), 'utf8');
+  logger.info(`saved ${filename}`);
+}
+
+async function initializeGHData() {
+  logger.info('Initializing git file data');
+  const scraper = new GitHubScraper('https://github.com/cheahjs/bravefrontier_data');
+  ghData = await scraper.getFileTree();
+  // logger.debug('ghData', ghData);
 }
 
 // getUnitData();
 getData();
+// initializeGHData();

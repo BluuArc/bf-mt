@@ -5932,6 +5932,62 @@
     "id": "1958",
     "name": "Crimson Incinerator"
   },
+  "1959": {
+    "desc": "50% boost to Atk, max HP, hugely boosts BB Atk & hugely boosts Spark damage for 2 turns when damage dealt exceeds certain amount",
+    "effects": [
+      {
+        "atk% buff": 50,
+        "hp% buff": 50,
+        "passive id": "1"
+      },
+      {
+        "bb atk% buff": 200,
+        "passive id": "64",
+        "sbb atk% buff": 200,
+        "ubb atk% buff": 200
+      },
+      {
+        "buff": {
+          "buff turns (40)": "2",
+          "spark dmg% buff": 80
+        },
+        "damage dealt threshold buff activation": 5000,
+        "passive id": "80"
+      }
+    ],
+    "id": "1959",
+    "name": "Ferocious Resolve"
+  },
+  "1960": {
+    "desc": "60% boost to Atk, max HP, hugely boosts BB Atk, considerably boosts OD gauge fill rate & enormously boosts Spark damage for 2 turns when damage dealt exceeds certain amount",
+    "effects": [
+      {
+        "atk% buff": 60,
+        "hp% buff": 60,
+        "passive id": "1"
+      },
+      {
+        "bb atk% buff": 250,
+        "passive id": "64",
+        "sbb atk% buff": 250,
+        "ubb atk% buff": 250
+      },
+      {
+        "buff": {
+          "buff turns (40)": "2",
+          "spark dmg% buff": 100
+        },
+        "damage dealt threshold buff activation": 5000,
+        "passive id": "80"
+      },
+      {
+        "od fill rate%": 20,
+        "passive id": "70"
+      }
+    ],
+    "id": "1960",
+    "name": "Ferocious Commitment"
+  },
   "2000": {
     "desc": "BB gauge fills after each turn",
     "effects": [
@@ -11131,6 +11187,66 @@
     ],
     "id": "4387",
     "name": "Red Justice Obsession"
+  },
+  "4388": {
+    "desc": "50% boost to Def, max HP, greatly restores HP for 2 turns when HP is below 50% & damage taken boosts BB gauge",
+    "effects": [
+      {
+        "def% buff": 50,
+        "hp% buff": 50,
+        "passive id": "1"
+      },
+      {
+        "buff": {
+          "buff turns (8)": "2",
+          "gradual heal high": 2500,
+          "gradual heal low": 2000
+        },
+        "hp below % buff activation": 50,
+        "passive id": "55"
+      },
+      {
+        "bc fill when attacked high": 4,
+        "bc fill when attacked low": 2,
+        "bc fill when attacked%": 100,
+        "passive id": "25"
+      }
+    ],
+    "id": "4388",
+    "name": "Mighty Legacy"
+  },
+  "4389": {
+    "desc": "60% boost to Def, max HP, greatly restores HP for 2 turns when HP is below 50% & damage taken hugely boosts BB gauge and may restore HP",
+    "effects": [
+      {
+        "def% buff": 60,
+        "hp% buff": 60,
+        "passive id": "1"
+      },
+      {
+        "buff": {
+          "buff turns (8)": "2",
+          "gradual heal high": 3000,
+          "gradual heal low": 2000
+        },
+        "hp below % buff activation": 50,
+        "passive id": "55"
+      },
+      {
+        "bc fill when attacked high": 7,
+        "bc fill when attacked low": 4,
+        "bc fill when attacked%": 100,
+        "passive id": "25"
+      },
+      {
+        "dmg% to hp% when attacked chance%": 25,
+        "dmg% to hp% when attacked high": 25,
+        "dmg% to hp% when attacked low": 25,
+        "passive id": "24"
+      }
+    ],
+    "id": "4389",
+    "name": "Heir to Power"
   },
   "4400": {
     "desc": "Boosts resistence to status ailments & fills BB gauge after each turn",
@@ -17894,6 +18010,25 @@
     "id": "9710",
     "name": "Crimson Knowledge"
   },
+  "9711": {
+    "desc": "Hugely boosts BC, HC, Zel, Karma, and Item drop rates & boosts BC efficacy",
+    "effects": [
+      {
+        "bb gauge fill rate%": 40,
+        "passive id": "32"
+      },
+      {
+        "bc drop rate% buff": 18,
+        "hc drop rate% buff": 18,
+        "item drop rate% buff": 3,
+        "karma drop rate% buff": 10,
+        "passive id": "19",
+        "zel drop rate% buff": 15
+      }
+    ],
+    "id": "9711",
+    "name": "Burning Wisdom"
+  },
   "9730": {
     "desc": "すべてのユニットのクリティカル率がアップ＆クリティカル時、与えるダメージがアップし、確率でＢＢゲージがかなり増加",
     "effects": [
@@ -20108,6 +20243,36 @@
     "associated_units": [
       "20977"
     ]
+  },
+  "12504": {
+    "desc": "残りＨＰが多いほど、攻撃力を少しアップ",
+    "effects": [
+      {
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 30,
+        "buff proportional to hp": "remaining",
+        "passive id": "46"
+      }
+    ],
+    "id": "12504",
+    "name": "機兵の力"
+  },
+  "12505": {
+    "desc": "残りＨＰが多いほど、攻撃力をアップ＆防御貫通効果を無効",
+    "effects": [
+      {
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 50,
+        "buff proportional to hp": "remaining",
+        "passive id": "46"
+      },
+      {
+        "ignore def resist chance%": 100,
+        "passive id": "92"
+      }
+    ],
+    "id": "12505",
+    "name": "鋼機兵の核力"
   },
   "12512": {
     "desc": "50% boost to Def, Rec, max HP, restores HP each turn & damage taken may restore HP",
@@ -24184,6 +24349,46 @@
       "750176"
     ]
   },
+  "750177": {
+    "desc": "Boosts ATK and max HP (100%) of Female types & boosts ATK, DEF and REC (100%) when 5 elements or more are present & boosts BB ATK (250%) and damage against status afflicted foes (175%) & boosts BB gauge each turn (10 BC)",
+    "effects": [
+      {
+        "atk% buff": 100,
+        "gender required": "female",
+        "hp% buff": 100,
+        "passive id": "42"
+      },
+      {
+        "atk% buff": 100,
+        "def% buff": 100,
+        "passive id": "41",
+        "rec% buff": 100,
+        "unique elements required": 5
+      },
+      {
+        "bb atk% buff": 250,
+        "passive id": "64",
+        "sbb atk% buff": 250,
+        "ubb atk% buff": 250
+      },
+      {
+        "atk% buff when enemy has ailment": 175,
+        "atk% buff when enemy has curse": true,
+        "atk% buff when enemy has injury": true,
+        "atk% buff when enemy has paralysis": true,
+        "atk% buff when enemy has poison": true,
+        "atk% buff when enemy has sick": true,
+        "atk% buff when enemy has weaken": true,
+        "passive id": "74"
+      },
+      {
+        "bc fill per turn": 10,
+        "passive id": "9"
+      }
+    ],
+    "id": "750177",
+    "name": "Sisters of Desolation"
+  },
   "750186": {
     "desc": "Boost to drop rate (25%) and effectiveness of HC (75%) & Reduces damage taken (20%) when damage taken has exceeded certain amount for 2 turns (5000) & Boost HP of all allies (40%)",
     "effects": [
@@ -24635,6 +24840,77 @@
     ],
     "id": "750287",
     "name": "Own Destiny"
+  },
+  "750307": {
+    "desc": "Boosts all parameters of Female types (80%) & damage reduction from Light, Dark types (15%) & boosts Spark damage (130%) & negates elemental damage & Spark damage boosts BB gauge (2-3 BC)",
+    "effects": [
+      {
+        "atk% buff": 80,
+        "def% buff": 80,
+        "gender required": "female",
+        "hp% buff": 80,
+        "passive id": "42",
+        "rec% buff": 80
+      },
+      {
+        "dmg% mitigation for elemental attacks": 15,
+        "mitigate dark attacks": true,
+        "mitigate light attacks": true,
+        "passive id": "62"
+      },
+      {
+        "damage% for spark": 130,
+        "passive id": "31"
+      },
+      {
+        "passive id": "53",
+        "strong base element damage resist%": 100,
+        "strong buffed element damage resist%": 100
+      },
+      {
+        "bc fill on spark high": 3,
+        "bc fill on spark low": 2,
+        "bc fill on spark%": 100,
+        "passive id": "47"
+      }
+    ],
+    "id": "750307",
+    "name": "Prophecy of Valhalla"
+  },
+  "750317": {
+    "desc": "Boosts max HP (100%) & boosts ATK, DEF, REC when HP is over 50% (120%) & boosts Spark damage (160%) & adds probable Spark critical (30% chance 50%) & damage reduction from normal attack (10%) & boosts OD fill rate (30%)",
+    "effects": [
+      {
+        "hp% buff": 100,
+        "passive id": "1"
+      },
+      {
+        "atk% buff": 120,
+        "def% buff": 120,
+        "hp above % buff requirement": 50,
+        "passive id": "11",
+        "rec% buff": 120
+      },
+      {
+        "damage% for spark": 160,
+        "passive id": "31"
+      },
+      {
+        "passive id": "100",
+        "spark crit chance%": 30,
+        "spark crit dmg%": 50
+      },
+      {
+        "unknown passive id": "128",
+        "unknown passive params": "100,10,100,10"
+      },
+      {
+        "od fill rate%": 30,
+        "passive id": "70"
+      }
+    ],
+    "id": "750317",
+    "name": "Blessing of All-Father"
   },
   "760006": {
     "desc": "40% boost to max HP & Boosts OD gauge fill rate (20%) & Chance to resist 1 KO attack (chance proportional to lost HP) (10-40%)",
@@ -28634,12 +28910,12 @@
     ]
   },
   "830378": {
-    "desc": "60% boost to Atk, max HP, 30% boost to critical hit rate, hugely boosts critical damage, hugely boosts all elemental damage & boosts Atk relative to remaining HP",
+    "desc": "80% boost to Atk, max HP, 30% boost to critical hit rate, hugely boosts critical damage, hugely boosts all elemental damage & boosts Atk relative to remaining HP & considerably boosts OD gauge fill rate",
     "effects": [
       {
-        "atk% buff": 60,
+        "atk% buff": 80,
         "crit% buff": 30,
-        "hp% buff": 60,
+        "hp% buff": 80,
         "passive id": "1"
       },
       {
@@ -28649,7 +28925,7 @@
       {
         "dark units do extra elemental weakness dmg": true,
         "earth units do extra elemental weakness dmg": true,
-        "elemental weakness multiplier%": 150,
+        "elemental weakness multiplier%": 175,
         "fire units do extra elemental weakness dmg": true,
         "light units do extra elemental weakness dmg": true,
         "passive id": "50",
@@ -28661,6 +28937,10 @@
         "atk% extra buff based on hp": 80,
         "buff proportional to hp": "remaining",
         "passive id": "46"
+      },
+      {
+        "od fill rate%": 20,
+        "passive id": "70"
       }
     ],
     "id": "830378",
@@ -29516,21 +29796,21 @@
     ]
   },
   "860378": {
-    "desc": "100% boost to Atk, 60% boost to max HP, 130% boost toSpark damage, Spark damage hugely boosts BC drop rates & boosts Atk relative to remaining HP",
+    "desc": "150% boost to Atk, 80% boost to max HP, 130% boost to Spark damage, Spark damage hugely boosts BC drop rate & boosts Atk relative to remaining HP",
     "effects": [
       {
-        "atk% buff": 100,
-        "hp% buff": 60,
+        "atk% buff": 150,
+        "hp% buff": 80,
         "passive id": "1"
       },
       {
-        "bc drop% for spark": 80,
+        "bc drop% for spark": 100,
         "damage% for spark": 130,
         "passive id": "31"
       },
       {
         "atk% base buff": 0,
-        "atk% extra buff based on hp": 80,
+        "atk% extra buff based on hp": 100,
         "buff proportional to hp": "remaining",
         "passive id": "46"
       }

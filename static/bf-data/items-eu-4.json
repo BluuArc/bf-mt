@@ -5138,7 +5138,7 @@
     "usage": []
   },
   "48218": {
-    "desc": "Boosts critical damage, damage reduction for 1 turn when damage taken has exceeded certain amount & 30% boost to Atk and max HP",
+    "desc": "Boosts critical damage, damage reduction for 1 turn when damage dealt has exceeded certain amount & 30% boost to Atk and max HP",
     "effect": [
       {
         "crit multiplier%": 50,

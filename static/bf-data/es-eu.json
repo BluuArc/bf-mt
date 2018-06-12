@@ -2156,6 +2156,21 @@
       "60776"
     ]
   },
+  "6900": {
+    "desc": "Raises normal hit amount",
+    "effects": [
+      {
+        "conditions": [],
+        "hit increase/hit": 1,
+        "passive id": "37",
+        "passive target": "self"
+      }
+    ],
+    "id": "6900",
+    "name": "Scarlet Memories",
+    "rarity": "1",
+    "target": "self"
+  },
   "7100": {
     "desc": "Adds slight BB gauge boost effect to BB/SBB & negates critical, elemental damage",
     "effects": [
@@ -11348,6 +11363,120 @@
     "rarity": "1",
     "target": "self"
   },
+  "41700": {
+    "desc": "20% boost to all parameters when a Damage Reducing type Sphere is equipped & negates all status ailments",
+    "effects": [
+      {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "sphere category required": "Damage Reducing",
+            "sphere category required (raw)": "10"
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      },
+      {
+        "conditions": [],
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "passive target": "self",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      }
+    ],
+    "id": "41700",
+    "name": "Protector Blade's Heir",
+    "rarity": "1",
+    "target": "self"
+  },
+  "41800": {
+    "desc": "30% boost to all parameters when a Damage Reducing type Sphere is equipped & negates all status ailments",
+    "effects": [
+      {
+        "atk% buff": 30,
+        "conditions": [
+          {
+            "sphere category required": "Damage Reducing",
+            "sphere category required (raw)": "10"
+          }
+        ],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      },
+      {
+        "conditions": [],
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "passive target": "self",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      }
+    ],
+    "id": "41800",
+    "name": "True Protector Blade",
+    "rarity": "1",
+    "target": "self"
+  },
+  "41900": {
+    "desc": "Considerably boosts BB Atk & 70% boost to Spark damage",
+    "effects": [
+      {
+        "conditions": [],
+        "damage% for spark": 70,
+        "passive id": "31",
+        "passive target": "self"
+      },
+      {
+        "bb atk% buff": 100,
+        "conditions": [],
+        "passive id": "64",
+        "passive target": "self",
+        "sbb atk% buff": 100,
+        "ubb atk% buff": 100
+      }
+    ],
+    "id": "41900",
+    "name": "Heroic Loyalty",
+    "rarity": "1",
+    "target": "self"
+  },
+  "42000": {
+    "desc": "Hugely boosts BB Atk & 80% boost to Spark damage",
+    "effects": [
+      {
+        "conditions": [],
+        "damage% for spark": 80,
+        "passive id": "31",
+        "passive target": "self"
+      },
+      {
+        "bb atk% buff": 150,
+        "conditions": [],
+        "passive id": "64",
+        "passive target": "self",
+        "sbb atk% buff": 150,
+        "ubb atk% buff": 150
+      }
+    ],
+    "id": "42000",
+    "name": "Reverent Inheritor",
+    "rarity": "1",
+    "target": "self"
+  },
   "710016": {
     "desc": "If Jack's Soul equipped, boosts HP, ATK (15%) and critical dmg (100%) & adds Critical Rate to BB/SBB/UBB (60%) & If Ardent Coal equipped, boosts DEF, REC (15%) & boosts Spark dmg (50%) for 2 turns when 20 BC received & adds BC on Spark to BB/SBB (1-2 BC)",
     "effects": [
@@ -15479,6 +15608,73 @@
       "750176"
     ]
   },
+  "750177": {
+    "desc": "Boosts all parameters of Female types (15%, all) & boosts damage against afflicted foes (50%, all) & raises normal hit amount (+2, 100%) & adds resistance against 1 KO attack when HP below 20% & adds BB ATK boost for 3 turns (550%) effect to BB/SBB",
+    "effects": [
+      {
+        "atk% buff": 15,
+        "conditions": [],
+        "def% buff": 15,
+        "gender required": "female",
+        "hp% buff": 15,
+        "passive id": "42",
+        "passive target": "party",
+        "rec% buff": 15
+      },
+      {
+        "atk% buff when enemy has ailment": 50,
+        "atk% buff when enemy has curse": true,
+        "atk% buff when enemy has injury": true,
+        "atk% buff when enemy has paralysis": true,
+        "atk% buff when enemy has poison": true,
+        "atk% buff when enemy has sick": true,
+        "atk% buff when enemy has weaken": true,
+        "conditions": [],
+        "passive id": "74",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "hit increase/hit": 2,
+        "passive id": "37",
+        "passive target": "self"
+      },
+      {
+        "buff": {
+          "angel idol buff (12)": true,
+          "angel idol recover hp%": 100,
+          "buff turns (12)": "-1"
+        },
+        "conditions": [],
+        "hp below % buff activation": 20,
+        "passive id": "55",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb atk% buff": 550,
+            "buff turns (72)": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "45",
+            "sbb atk% buff": 550,
+            "target area": "aoe",
+            "target type": "party",
+            "ubb atk% buff": 550
+          }
+        ]
+      }
+    ],
+    "id": "750177",
+    "name": "Firefeathered Ravens",
+    "rarity": "1",
+    "target": "self"
+  },
   "750186": {
     "desc": "Negates enemies' critical and element based damage & Chance (25%) of slightly recovering HP when attacked (20%)",
     "effects": [
@@ -16212,6 +16408,216 @@
     ],
     "id": "750287",
     "name": "Unwavering Will",
+    "rarity": "0",
+    "target": "self"
+  },
+  "750307": {
+    "desc": "Reduces BB gauge required for BB (5%, all) & adds probability of activating BB/SBB/UBB twice (25%) and Light barrier (4000 HP) effects to BB/SBB & negates status ailments (all) & negates elemental damage",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "48",
+        "passive target": "party",
+        "reduced bb bc cost%": 5
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "70002",
+            "unknown proc param": "0.25,3,0,0,0,0,0,0,0"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "light",
+            "elemental barrier hp": 4000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "passive target": "party",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "conditions": [],
+        "passive id": "53",
+        "passive target": "self",
+        "strong base element damage resist%": 100,
+        "strong buffed element damage resist%": 100
+      }
+    ],
+    "id": "750307",
+    "name": "War and Peace",
+    "rarity": "0",
+    "target": "self"
+  },
+  "750317": {
+    "desc": "Boosts all parameters (20%, all) & damage reduction from normal attack (all, 5%) & adds REC of all element types boost for 3 turns (120%) effect and 5 combo Light attack on single foe to SBB",
+    "effects": [
+      {
+        "atk% buff": 20,
+        "conditions": [],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "party",
+        "rec% buff": 20
+      },
+      {
+        "conditions": [],
+        "passive target": "party",
+        "unknown passive id": "128",
+        "unknown passive params": "100,5,100,5"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "fire",
+            "proc id": "5",
+            "rec% buff (15)": 120,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "water",
+            "proc id": "5",
+            "rec% buff (15)": 120,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "earth",
+            "proc id": "5",
+            "rec% buff (15)": 120,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "thunder",
+            "proc id": "5",
+            "rec% buff (15)": 120,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "light",
+            "proc id": "5",
+            "rec% buff (15)": 120,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "dark",
+            "proc id": "5",
+            "rec% buff (15)": 120,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb atk%": 620,
+            "bb flat atk": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "1",
+            "target area": "single",
+            "target type": "enemy"
+          }
+        ]
+      }
+    ],
+    "id": "750317",
+    "name": "Ruler of Valhalla",
     "rarity": "0",
     "target": "self"
   },
@@ -18757,7 +19163,7 @@
     ]
   },
   "830378": {
-    "desc": "Negates elemental damage, raises Atk parameter limits to 130000, 50% boost to Spark damage & slightly boosts critical damage for all allies",
+    "desc": "Negates elemental damage, raises Atk parameter limits to 130000, 80% boost to Spark damage & slightly boosts critical damage for all allies",
     "effects": [
       {
         "conditions": [],
@@ -18768,7 +19174,7 @@
       },
       {
         "conditions": [],
-        "crit multiplier%": 20,
+        "crit multiplier%": 25,
         "passive id": "34",
         "passive target": "party"
       },
@@ -18780,7 +19186,7 @@
       },
       {
         "conditions": [],
-        "damage% for spark": 50,
+        "damage% for spark": 80,
         "passive id": "31",
         "passive target": "self"
       }
@@ -20785,7 +21191,7 @@
     "effects": [
       {
         "conditions": [],
-        "crit multiplier%": 50,
+        "crit multiplier%": 100,
         "passive id": "34",
         "passive target": "self"
       },
@@ -21435,6 +21841,22 @@
     "id": "1000603",
     "name": "Warrior's Authority Lv. 4",
     "rarity": "5",
+    "target": "self"
+  },
+  "1000605": {
+    "desc": "50% boost to Atk, Def",
+    "effects": [
+      {
+        "atk% buff": 50,
+        "conditions": [],
+        "def% buff": 50,
+        "passive id": "1",
+        "passive target": "self"
+      }
+    ],
+    "id": "1000605",
+    "name": "Warrior's Authority Lv. 6",
+    "rarity": "7",
     "target": "self"
   },
   "1000700": {
@@ -22580,6 +23002,32 @@
     "id": "1004000",
     "name": "Demigod Balance",
     "rarity": "5",
+    "target": "self"
+  },
+  "1004300": {
+    "desc": "Slightly boosts Atk, Def, Rec when BB gauge is over 50% & damage taken may slightly boost BB gauge",
+    "effects": [
+      {
+        "atk% buff": 30,
+        "bb gauge above % buff requirement": 50,
+        "conditions": [],
+        "def% buff": 30,
+        "passive id": "30",
+        "passive target": "self",
+        "rec% buff": 30
+      },
+      {
+        "bc fill when attacked high": 2,
+        "bc fill when attacked low": 1,
+        "bc fill when attacked%": 50,
+        "conditions": [],
+        "passive id": "25",
+        "passive target": "self"
+      }
+    ],
+    "id": "1004300",
+    "name": "Heavenly Drum",
+    "rarity": "6",
     "target": "self"
   },
   "1004400": {
@@ -26614,6 +27062,140 @@
     ],
     "id": "1019400",
     "name": "Divine Revolution",
+    "rarity": "7",
+    "target": "self"
+  },
+  "1019500": {
+    "desc": "40% boost to all parameters, damage taken boosts BB gauge & considerably boosts BB gauge when damage taken exceeds certain amount",
+    "effects": [
+      {
+        "atk% buff": 40,
+        "conditions": [],
+        "def% buff": 40,
+        "hp% buff": 40,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 40
+      },
+      {
+        "bc fill when attacked high": 3,
+        "bc fill when attacked low": 2,
+        "bc fill when attacked%": 100,
+        "conditions": [],
+        "passive id": "25",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "damage threshold activation": 5000,
+        "increase bb gauge": 7,
+        "passive id": "79",
+        "passive target": "self"
+      }
+    ],
+    "id": "1019500",
+    "name": "First God's Law",
+    "rarity": "7",
+    "target": "self"
+  },
+  "1019600": {
+    "desc": "Normal attack on all foes, probable BB gauge reduction & probable considerable 2 turn BB gauge fill rate reduction",
+    "effects": [
+      {
+        "aoe atk inc%": -50,
+        "chance to aoe": 100,
+        "conditions": [],
+        "passive id": "96",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "109",
+        "unknown passive params": "-50,20,1,0"
+      },
+      {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "110",
+        "unknown passive params": "0,0,30,30,30,0"
+      }
+    ],
+    "id": "1019600",
+    "name": "Wails of Lamentation",
+    "rarity": "7",
+    "target": "self"
+  },
+  "1019700": {
+    "desc": "50% boost to Atk, max HP, considerably increases normal hit amount, hugely boosts BC drop rate & enormously boosts OD gauge fill rate for 2 turns when BC collected exceeds certain amount",
+    "effects": [
+      {
+        "atk% buff": 50,
+        "conditions": [],
+        "hp% buff": 50,
+        "passive id": "1",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "hit increase/hit": 2,
+        "passive id": "37",
+        "passive target": "self"
+      },
+      {
+        "bc drop rate% buff": 20,
+        "conditions": [],
+        "passive id": "19",
+        "passive target": "self"
+      },
+      {
+        "bc receive count buff activation": 20,
+        "buff": {
+          "buff turns (132)": "2",
+          "unknown buff id": "132",
+          "unknown buff params": "50&2&0"
+        },
+        "conditions": [],
+        "passive id": "82",
+        "passive target": "self"
+      }
+    ],
+    "id": "1019700",
+    "name": "Kamikaze Bonds",
+    "rarity": "7",
+    "target": "self"
+  },
+  "1019800": {
+    "desc": "60% boost to max HP, damage taken considerably restores HP & adds resistance against 1 KO attack when HP is under 50%",
+    "effects": [
+      {
+        "conditions": [],
+        "hp% buff": 60,
+        "passive id": "1",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "dmg% to hp% when attacked chance%": 100,
+        "dmg% to hp% when attacked high": 40,
+        "dmg% to hp% when attacked low": 30,
+        "passive id": "24",
+        "passive target": "self"
+      },
+      {
+        "buff": {
+          "buff turns (91)": "-1",
+          "unknown buff id": "91",
+          "unknown buff params": "100&100"
+        },
+        "conditions": [],
+        "hp below % buff activation": 50,
+        "passive id": "55",
+        "passive target": "self"
+      }
+    ],
+    "id": "1019800",
+    "name": "Icy Battle Record",
     "rarity": "7",
     "target": "self"
   },

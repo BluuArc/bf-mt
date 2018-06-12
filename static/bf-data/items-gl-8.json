@@ -5022,31 +5022,35 @@
     "usage": []
   },
   "818936": {
-    "desc": "20% boost to all parameters, boosts critical hit rate, probable 20% reduction of damage taken & boosts critical hit damage",
+    "desc": "30% boost to all parameters, boosts critical hit rate, probable 30% damage reduction, boosts critical hit damage & 50% boost to Spark damage",
     "effect": [
       {
-        "atk% buff": 20,
+        "atk% buff": 30,
         "crit% buff": 20,
-        "def% buff": 20,
-        "hp% buff": 20,
+        "def% buff": 30,
+        "hp% buff": 30,
         "passive id": "1",
-        "rec% buff": 20
+        "rec% buff": 30
       },
       {
-        "dmg reduction chance%": 20,
-        "dmg reduction%": 20,
+        "dmg reduction chance%": 30,
+        "dmg reduction%": 30,
         "passive id": "14"
       },
       {
         "crit multiplier%": 50,
         "passive id": "34"
+      },
+      {
+        "damage% for spark": 50,
+        "passive id": "31"
       }
     ],
     "id": 818936,
     "max_stack": 1,
     "name": "Nyami's Bells",
     "raid": false,
-    "rarity": 6,
+    "rarity": 3,
     "recipe": {
       "karma": "100000",
       "materials": [
@@ -13147,6 +13151,97 @@
     "type": "sphere",
     "usage": []
   },
+  "819147": {
+    "desc": "45% boost to all parameters of Thunder types, adds probability of resistance against 1 KO attack, 75% boost to Spark damage & Spark damage slightly boosts BB gauge",
+    "effect": [
+      {
+        "atk% buff": 45,
+        "def% buff": 45,
+        "elements buffed": [
+          "thunder"
+        ],
+        "hp% buff": 45,
+        "passive id": "2",
+        "rec% buff": 45
+      },
+      {
+        "angel idol chance% condition": 0,
+        "angel idol recover chance% high": 50,
+        "angel idol recover chance% low": 50,
+        "angel idol recover counts": 1,
+        "passive id": "69"
+      },
+      {
+        "damage% for spark": 75,
+        "passive id": "31"
+      },
+      {
+        "bc fill on spark high": 2,
+        "bc fill on spark low": 2,
+        "bc fill on spark%": 100,
+        "passive id": "47"
+      }
+    ],
+    "id": 819147,
+    "max_stack": 1,
+    "name": "Wyola's Brand",
+    "raid": false,
+    "rarity": 6,
+    "sell_price": 30000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_819147.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "819148": {
+    "desc": "60% boost to all parameters of Thunder types, adds high probability of resistance against 1 KO attack, 75% boost to Spark damage, Spark damage slightly boosts BB gauge & fills BB gauge to max when damage dealt has exceeded certain amount",
+    "effect": [
+      {
+        "atk% buff": 60,
+        "def% buff": 60,
+        "elements buffed": [
+          "thunder"
+        ],
+        "hp% buff": 60,
+        "passive id": "2",
+        "rec% buff": 60
+      },
+      {
+        "angel idol chance% condition": 0,
+        "angel idol recover chance% high": 70,
+        "angel idol recover chance% low": 70,
+        "angel idol recover counts": 1,
+        "passive id": "69"
+      },
+      {
+        "damage% for spark": 75,
+        "passive id": "31"
+      },
+      {
+        "bc fill on spark high": 3,
+        "bc fill on spark low": 2,
+        "bc fill on spark%": 100,
+        "passive id": "47"
+      },
+      {
+        "damage dealt threshold activation": 50000,
+        "increase bb gauge": 0,
+        "passive id": "81"
+      }
+    ],
+    "id": 819148,
+    "max_stack": 1,
+    "name": "Wyola's Honor",
+    "raid": false,
+    "rarity": 7,
+    "sell_price": 30000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_819148.png",
+    "type": "sphere",
+    "usage": []
+  },
   "819153": {
     "desc": "30% boost to Atk, Rec and max HP of Female types, negates Atk, Def, Rec reducing effects, damage taken may restore HP, damage taken may greatly boost BB gauge, reduces BB gauge required for BB & adds resistance against 1 KO attack after activating OD",
     "effect": [
@@ -13376,6 +13471,41 @@
     "sphere type": 7,
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_819165.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "819166": {
+    "desc": "150% boost to Atk and boosts critical rate, hugely boosts critical damage, raises normal attack hits & normal attacks hit all foes",
+    "effect": [
+      {
+        "atk% buff": 150,
+        "crit% buff": 20,
+        "passive id": "1"
+      },
+      {
+        "crit multiplier%": 175,
+        "passive id": "34"
+      },
+      {
+        "extra hits dmg%": 50,
+        "hit increase/hit": 1,
+        "passive id": "37"
+      },
+      {
+        "aoe atk inc%": 0,
+        "chance to aoe": 100,
+        "passive id": "96"
+      }
+    ],
+    "id": 819166,
+    "max_stack": 1,
+    "name": "Wrath of Grandt",
+    "raid": false,
+    "rarity": 7,
+    "sell_price": 30000,
+    "sphere type": 13,
+    "sphere type text": "Atk Boosting",
+    "thumbnail": "sphere_thum_819155.png",
     "type": "sphere",
     "usage": []
   },
