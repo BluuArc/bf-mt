@@ -81,8 +81,9 @@ const itemStore = {
       console.debug('finished updating data');
       commit('setLoadState', false);
     },
-    async getFilteredKeys ({ dispatch, state, commit }, filters = {}) {
+    async getFilteredKeys ({ dispatch, state, commit }, inputFilters = {}) {
       // TODO: add call for advanced filtering using dexie-client worker
+      const { forceUpdate, ...filters } = inputFilters;
       console.debug(filters);
       const keys = Object.keys(state.pageDb);
       if (Object.keys(filters).length === 0) {
@@ -92,7 +93,7 @@ const itemStore = {
       // get local filters
       const { exclusives = [] } = filters;
       let otherKeys = [];
-      const filtersChanged = state.asyncFilters.exclusives !== exclusives.concat([state.activeServer]).join('-');
+      const filtersChanged = !!forceUpdate || state.asyncFilters.exclusives !== exclusives.concat([state.activeServer]).join('-');
       // possible values: exlusive, non-exclusive
       // length or 2 or 0 => no need to retrieve
       if (exclusives.length === 1 && filtersChanged) {

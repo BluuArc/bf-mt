@@ -32,6 +32,7 @@ const store = new Vuex.Store({
     disableHtmlOverflow: false,
     inInitState: false,
     modules,
+    sortAndFilterSettings: {},
   },
   mutations: {
     setHtmlOverflow (state, overflowState = false) {
@@ -39,6 +40,9 @@ const store = new Vuex.Store({
     },
     setInitState (state, newState = false) {
       state.inInitState = !!newState;
+    },
+    setSortAndFilterSettings (state, { key, filter, sort }) {
+      state.sortAndFilterSettings[key] = { filter, sort };
     },
   },
   actions: {

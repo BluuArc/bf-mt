@@ -329,7 +329,7 @@ export default {
     ...mapState('units', ['pageDb', 'isLoading', 'numEntries', 'activeServer']),
     ...mapState('items', { itemEntries: 'numEntries' }),
     ...mapGetters('units', ['getImageUrls', 'getMultidexPathTo']),
-    ...mapState(['inInitState']),
+    ...mapState(['inInitState', 'sortAndFilterSettings']),
     isDataLoading () {
       return this.inInitState || this.isLoading;
     },
@@ -413,6 +413,9 @@ export default {
     hasRequiredModules () {
       return this.numEntries[this.activeServer] > 0 && this.itemEntries[this.activeServer] > 0;
     },
+    routeKey () {
+      return `multidex-${this.$route.name}`;
+    },
   },
   data () {
     return {
@@ -481,6 +484,7 @@ export default {
       deep: true,
       handler () {
         this.pageIndex = 0;
+        this.storeSortAndFilterSettings();
       },
     },
     showDialog (newValue) {
@@ -503,12 +507,54 @@ export default {
   },
   mounted () {
     this.resetFilters();
+    if (this.sortAndFilterSettings[this.routeKey]) {
+      this.restoreSortAndFilterSettings();
+    }
     this.setShowDialog();
   },
   methods: {
-    ...mapMutations(['setHtmlOverflow']),
+    ...mapMutations(['setHtmlOverflow', 'setSortAndFilterSettings']),
     ...mapActions('units', ['getFilteredKeys', 'ensurePageDbSyncWithServer']),
     ...mapActions('items', { itemsDbSync: 'ensurePageDbSyncWithServer' }),
+    restoreSortAndFilterSettings () {
+      if (!this.sortAndFilterSettings[this.routeKey]) {
+        return;
+      }
+
+      try {
+        const { filter, sort } = this.sortAndFilterSettings[this.routeKey];
+        Object.keys(filter).forEach(key => {
+          this.filterOptions[key] = filter[key].slice();
+        });
+
+        if (this.filterOptions.exclusives.length === 2) {
+          this.filterOptions.exclusives = this.exclusiveFilterOptions.all;
+        } else {
+          const elem = this.filterOptions.exclusives[0];
+          this.filterOptions.exclusives = this.exclusiveFilterOptions[(elem === this.exclusiveFilterOptions.exclusive[0]) ? 'exclusive' : 'nonExclusive'];
+        }
+
+        this.filterOptions.forceUpdate = true;
+
+        ({ type: this.sortOptions.type, isAscending: this.sortOptions.isAscending } = sort);
+      } catch (err) {
+        console.error(err);
+        this.resetFilters();
+      } finally {
+        this.applyFilters();
+      }
+    },
+    storeSortAndFilterSettings () {
+      const filterCopy = {};
+      const { forceUpdate, ...filters } = this.filterOptions;
+      Object.keys(filters)
+        .forEach(key => {
+          filterCopy[key] = this.filterOptions[key].slice();
+        });
+
+      const { ...sortCopy } = this.sortOptions;
+      this.setSortAndFilterSettings({ key: this.routeKey, filter: filterCopy, sort: sortCopy });
+    },
     setShowDialog () {
       this.showDialog = !this.isDataLoading && !!this.viewId && this.finishedInit && this.hasRequiredModules;
     },
@@ -542,6 +588,8 @@ export default {
       }
       this.loadingFilters = true;
       this.filteredKeys = await this.getFilteredKeys(this.filterOptions);
+      delete this.filterOptions.forceUpdate;
+      this.storeSortAndFilterSettings();
       this.loadingFilters = false;
     }, 250),
     getGenderInfo (gender) {
