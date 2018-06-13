@@ -95,16 +95,20 @@
                   <v-layout row wrap class="pl-3 pr-3">
                     <v-flex xs12>
                       <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Server Exclusives</h3>
+                      <p class="mb-0" v-if="!hasOtherServers">Please download data from the <router-link to="/settings" style="color: inherit">Settings Page</router-link> for at least one other server to use this filter.</p>
                       <v-layout row>
                         <v-radio-group v-model="filterOptions.exclusives" :row="$vuetify.breakpoint.mdAndUp">
                           <v-radio
                             :value="exclusiveFilterOptions.all"
+                            :disabled="!hasOtherServers"
                             label="All"/>
                           <v-radio
                             :value="exclusiveFilterOptions.exclusive"
+                            :disabled="!hasOtherServers"
                             label="Exclusives Only"/>
                           <v-radio
                             :value="exclusiveFilterOptions.nonExclusive"
+                            :disabled="!hasOtherServers"
                             label="Non-Exclusives Only"/>
                         </v-radio-group>
                       </v-layout>
@@ -272,6 +276,10 @@ export default {
     ...mapState('items', { itemEntries: 'numEntries' }),
     ...mapGetters('extraSkills', ['getMultidexPathTo']),
     ...mapState(['inInitState', 'sortAndFilterSettings']),
+    hasOtherServers () {
+      return Object.keys(this.numEntries).filter(s => s !== this.activeServer)
+        .map(s => this.numEntries[s]).reduce((acc, val) => acc + val, 0) > 0;
+    },
     isDataLoading () {
       return this.inInitState || this.isLoading;
     },
