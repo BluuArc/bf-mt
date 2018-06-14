@@ -32,14 +32,23 @@
         <v-flex xs12>
           <v-card raised>
             <v-card-title>
-              <h3 class="title">Data Settings</h3>
+              <v-container fluid class="pa-0">
+                <v-layout row wrap>
+                  <v-flex class="pb-0" xs12 sm6 md8 lg9>
+                    <h3 class="title">Data Settings</h3>
+                  </v-flex>
+                  <v-flex class="pb-0" xs12 sm6 md4 lg3>
+                    <v-btn block :loading="checkingForUpdates" @click="checkForUpdates">Check for updates</v-btn>
+                  </v-flex>
+                </v-layout>
+              </v-container>
             </v-card-title>
             <!-- <v-card-text v-if="dataIsLoading" class="text-xs-center">
               <v-progress-circular indeterminate/>
               <h4 class="subheading">Waiting for data to finish loading.</h4>
             </v-card-text> -->
-            <v-card-text class="pt-5">
-              <v-container fluid class="pa-0">
+            <v-card-text class="pt-5" style="overflow-x: auto;">
+              <v-container fluid class="pa-0" style="min-width: 570px;">
                 <v-layout row>
                   <v-flex
                     xs3
@@ -96,6 +105,11 @@
                           <span v-else>
                             No data cached.
                           </span>
+                          <p v-if="stateInfo[key].updateTimes && stateInfo[key].updateTimes[server] && (stateInfo[key].numEntries[server] === 0 || stateInfo[key].updateTimes[server] > new Date(stateInfo[key].cacheTimes[server]))">
+                            <v-alert color="info" class="pt-2 pb-2 pl-2 pr-2" :value="true">
+                              Update available
+                            </v-alert>
+                          </p>
                         </v-flex>
                       </v-layout>
                       <v-layout row wrap>
@@ -143,6 +157,7 @@ import { mapActions, mapState } from 'vuex';
 
 export default {
   computed: {
+    ...mapState(['updateTimes']),
     ...mapState('settings', ['darkMode', 'activeServer']),
     ...mapState('units', {
       unitData: 'pageDb',
@@ -183,6 +198,7 @@ export default {
             numEntries: this[`${type}NumEntries`],
             isLoading: this[`${type}sLoading`],
             cacheTimes: this[`${type}CacheTimes`],
+            updateTimes: this.updateTimes[`${type}s`],
           };
         });
       return info;
@@ -243,6 +259,7 @@ export default {
         extraSkill: [],
         leaderSkill: [],
       },
+      checkingForUpdates: false,
     };
   },
   mounted () {
@@ -258,7 +275,7 @@ export default {
     },
   },
   methods: {
-    ...mapActions(['setActiveServer']),
+    ...mapActions(['setActiveServer', 'fetchUpdateTimes']),
     ...mapActions('settings', ['setDarkMode']),
     ...mapActions('units', {
       unitDataUpdate: 'updateData',
@@ -363,6 +380,16 @@ export default {
         .forEach(key => {
           this.dataDelete[key] = [];
         });
+    },
+    async checkForUpdates () {
+      this.checkingForUpdates = true;
+      try {
+        await this.fetchUpdateTimes();
+      } catch (err) {
+        console.error(err);
+      } finally {
+        this.checkingForUpdates = false;
+      }
     },
   },
 };

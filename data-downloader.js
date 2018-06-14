@@ -15,6 +15,8 @@ let updateData = {
   leaderSkills: {},
 };
 
+let statsOnly = false;
+
 function getUrl(server = '', file = '') {
   const baseUrl = `https://raw.githubusercontent.com/Deathmax/bravefrontier_data/master`;
 
@@ -86,6 +88,10 @@ async function getUnitDataForServer(server = 'gl') {
     fileInfo = ghData[server].contents[data.info.file];
   }
   updateData.units[server] = fileInfo.date;
+
+  if (statsOnly) {
+    return {};
+  }
 
   logger.info(`${server}: getting files`);
   const unitUrls = [];
@@ -165,6 +171,10 @@ async function getBurstDataForServer(server = 'gl', unitData = {}) {
     fileInfo = ghData[server].contents['bbs.json'];
   }
   updateData.bursts[server] = fileInfo.date;
+  if (statsOnly) {
+    return {};
+  }
+
 
   let bbData = {};
   logger.info(`${server}: getting files`);
@@ -242,6 +252,10 @@ async function getExtraSkillDataForServer(server = 'gl', unitData = {}) {
     fileInfo = ghData[server].contents['es.json'];
   }
   updateData.extraSkills[server] = fileInfo.date;
+  if (statsOnly) {
+    return {};
+  }
+
 
   const esData = {};
   logger.info(`${server}: getting files`);
@@ -289,6 +303,10 @@ async function getItemDataForServer(server = 'gl') {
     fileInfo = ghData[server].contents['items.json'];
   }
   updateData.items[server] = fileInfo.date;
+  if (statsOnly) {
+    return {};
+  }
+
 
   const itemData = {};
   logger.info(`${server}: getting files`);
@@ -371,6 +389,10 @@ async function getLeaderSkillDataForServer(server = 'gl', unitData = {}) {
     fileInfo = ghData[server].contents['ls.json'];
   }
   updateData.leaderSkills[server] = fileInfo.date;
+  if (statsOnly) {
+    return {};
+  }
+
 
   const lsData = {};
   logger.info(`${server}: getting files`);
@@ -433,6 +455,9 @@ async function getDictionaryForServer(server = 'gl') {
 }
 
 async function getData(servers = ['gl', 'eu', 'jp']) {
+  if (statsOnly) {
+    logger.info('Getting GH stats only');
+  }
   await initializeGHData();
   // TODO: implement use of dictionary data
   for (const s of servers) {
@@ -447,15 +472,19 @@ async function getData(servers = ['gl', 'eu', 'jp']) {
   const filename = `update-stats.json`;
   fs.writeFileSync(`${outputFolder}/${filename}`, JSON.stringify(updateData, null, 2), 'utf8');
   logger.info(`saved ${filename}`);
+  return;
 }
 
 async function initializeGHData() {
   logger.info('Initializing git file data');
-  const scraper = new GitHubScraper('https://github.com/cheahjs/bravefrontier_data');
-  ghData = await scraper.getFileTree();
+  const scraper = new GitHubScraper();
+  ghData = await scraper.getFileTree('https://github.com/cheahjs/bravefrontier_data');
+  await scraper.close();
+  fs.writeFileSync(`${outputFolder}/filetree.json`, JSON.stringify(ghData, null, 2), 'utf8');
   // logger.debug('ghData', ghData);
 }
 
+// statsOnly = true;
 // getUnitData();
 getData();
 // initializeGHData();

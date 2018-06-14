@@ -6,6 +6,7 @@ import ItemsModule from './modules/items';
 import BurstModule from './modules/bursts';
 import ExtraSkillModule from './modules/extra-skills';
 import LeaderSkillModule from './modules/leader-skills';
+import downloadWorker from './instances/download-worker';
 
 const statLogStart = (label, isCollapsed = true) => {
   console.time(label);
@@ -33,6 +34,7 @@ const store = new Vuex.Store({
     inInitState: false,
     modules,
     sortAndFilterSettings: {},
+    updateTimes: {},
   },
   mutations: {
     setHtmlOverflow (state, overflowState = false) {
@@ -43,6 +45,9 @@ const store = new Vuex.Store({
     },
     setSortAndFilterSettings (state, { key, filter, sort }) {
       state.sortAndFilterSettings[key] = { filter, sort };
+    },
+    setUpdateTimes (state, newTimes = {}) {
+      state.updateTimes = newTimes;
     },
   },
   actions: {
@@ -80,6 +85,19 @@ const store = new Vuex.Store({
         statLogEnd(`serverChange-${m}`);
       }
       statLogEnd('overallServerChange');
+    },
+    async fetchUpdateTimes ({ commit, state }) {
+      const url = `${location.origin}${location.pathname}static/bf-data/update-stats.json`;
+      const data = await downloadWorker.postMessage('getJson', [url]);
+      state.modules.forEach(m => {
+        if (data[m]) {
+          Object.keys(data[m]).forEach(server => {
+            data[m][server] = new Date(data[m][server]);
+          });
+        }
+      });
+      console.debug('update data', data);
+      commit('setUpdateTimes', data);
     },
   },
   strict: true,

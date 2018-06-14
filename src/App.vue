@@ -60,6 +60,7 @@
 
 <script>
 import { mapActions, mapState } from 'vuex';
+import debounce from 'lodash/debounce';
 
 export default {
   computed: {
@@ -160,11 +161,16 @@ export default {
     };
   },
   methods: {
-    ...mapActions(['init', 'setActiveServer']),
+    ...mapActions(['init', 'setActiveServer', 'fetchUpdateTimes']),
     htmlOverflowChangeHandler () {
       const page = document.getElementsByTagName('html')[0];
       page.style.overflowY = (this.disableHtmlOverflow) ? 'hidden' : 'auto';
     },
+    updateUpdateTimes: debounce(async function () {
+      if (!this.dataIsLoading) {
+        await this.fetchUpdateTimes();
+      }
+    }, 500),
   },
   watch: {
     activeServer (newValue) {
@@ -178,9 +184,15 @@ export default {
     disableHtmlOverflow () {
       this.htmlOverflowChangeHandler();
     },
+    dataIsLoading (newValue) {
+      if (!newValue) {
+        this.updateUpdateTimes();
+      }
+    },
   },
-  created () {
-    this.init();
+  async created () {
+    await this.init();
+    this.updateUpdateTimes();
   },
   mounted () {
     this.pageActiveServer = this.activeServer;
