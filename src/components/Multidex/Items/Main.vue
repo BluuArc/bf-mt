@@ -71,6 +71,9 @@
                   <v-chip small v-show="filterOptions.craftables.length < defaultFilters.craftables.length" style="text-transform: capitalize">
                     {{ filterOptions.craftables[0] }}s Only
                   </v-chip>
+                  <v-chip small v-show="filterOptions.associatedUnits.length < defaultFilters.associatedUnits.length" style="text-transform: capitalize">
+                    {{ filterOptions.associatedUnits[0] }} Associated Units Only
+                  </v-chip>
                   <v-chip small v-show="filterOptions.usage.length < defaultFilters.usage.length" style="text-transform: capitalize">
                     {{ filterOptions.usage[0] }} Items Only
                   </v-chip>
@@ -166,6 +169,24 @@
                           <v-radio
                             :value="usageFilterOptions.unused"
                             label="Not Used in Other Items Only"/>
+                        </v-radio-group>
+                      </v-layout>
+                    </v-flex>
+                  </v-layout>
+                  <v-layout row wrap class="pl-3 pr-3">
+                    <v-flex xs12>
+                      <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Associated Units</h3>
+                      <v-layout row>
+                        <v-radio-group v-model="filterOptions.associatedUnits" :row="$vuetify.breakpoint.mdAndUp">
+                          <v-radio
+                            :value="associatedUnitOptions.all"
+                            label="All"/>
+                          <v-radio
+                            :value="associatedUnitOptions.with"
+                            label="With Associated Units Only"/>
+                          <v-radio
+                            :value="associatedUnitOptions.without"
+                            label="Without Associated Units"/>
                         </v-radio-group>
                       </v-layout>
                     </v-flex>
@@ -433,6 +454,7 @@ export default {
         rarity: Object.keys(new Array(8).fill(0)).map(i => +i),
         sphereTypes: Object.keys(new Array(15).fill(0)).map(i => +i),
         itemTypes: ['consumable', 'material', 'raid', 'sphere', 'evomat', 'summoner_consumable', 'ls_sphere'],
+        associatedUnits: this.associatedUnitOptions.all,
         exclusives: this.exclusiveFilterOptions.all,
         craftables: this.craftableFilterOptions.all,
         usage: this.usageFilterOptions.all,
@@ -454,6 +476,13 @@ export default {
         all: ['exclusive', 'non-exclusive'],
         exclusive: ['exclusive'],
         nonExclusive: ['non-exclusive'],
+      };
+    },
+    associatedUnitOptions () {
+      return {
+        all: ['with', 'without'],
+        with: ['with'],
+        without: ['without'],
       };
     },
     craftableFilterOptions () {
@@ -558,6 +587,7 @@ export default {
         sphereTypes: [],
         itemTypes: [],
         exclusives: [],
+        associatedUnits: [],
         craftables: [],
         usage: [],
       },
@@ -599,6 +629,13 @@ export default {
         } else {
           const elem = this.filterOptions.exclusives[0];
           this.filterOptions.exclusives = this.exclusiveFilterOptions[(elem === this.exclusiveFilterOptions.exclusive[0]) ? 'exclusive' : 'nonExclusive'];
+        }
+
+        if (this.filterOptions.associatedUnits.length === 2) {
+          this.filterOptions.associatedUnits = this.associatedUnitOptions.all;
+        } else {
+          const elem = this.filterOptions.associatedUnits[0];
+          this.filterOptions.associatedUnits = this.associatedUnitOptions[(elem === this.associatedUnitOptions.with[0]) ? 'with' : 'without'];
         }
 
         if (this.filterOptions.craftables.length === 2) {
@@ -678,6 +715,7 @@ export default {
         this.filterOptions[key] = this.defaultFilters[key].slice();
       });
       this.filterOptions.exclusives = this.defaultFilters.exclusives;
+      this.filterOptions.associatedUnits = this.defaultFilters.associatedUnits;
       this.filterOptions.craftables = this.defaultFilters.craftables;
       this.filterOptions.usage = this.defaultFilters.usage;
       this.filterOptions.name = '';
