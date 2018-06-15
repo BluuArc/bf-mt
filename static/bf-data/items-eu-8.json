@@ -1089,7 +1089,10 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_818904.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "860128"
+    ]
   },
   "818912": {
     "desc": "BB gauge refills slightly faster, slightly reduces the consumption of BB gauge & chance of inflicting Poison, Weakness, Injury, Paralysis",
@@ -1194,7 +1197,10 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "810317"
+    ]
   },
   "818932": {
     "desc": "20% boost to all parameters, reduces gauge cost required for BB & boosts BB Atk",
@@ -1244,7 +1250,10 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "820317"
+    ]
   },
   "818933": {
     "desc": "50% boost to Atk, 50% boost to Spark damage & probable infliction of random status ailment",
@@ -1295,7 +1304,15 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_4_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "20916",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "830317"
+    ]
   },
   "818934": {
     "desc": "30% boost to Def, max HP, boosts BB gauge each turn, negates critical & element based damage",
@@ -1344,7 +1361,11 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "820388",
+      "840317"
+    ]
   },
   "818935": {
     "desc": "30% boost to Rec, max HP, boosts OD gauge fill rate & restores HP each turn",
@@ -1390,7 +1411,10 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850317"
+    ]
   },
   "818936": {
     "desc": "20% boost to all parameters, boosts critical hit rate, probable 20% reduction of damage taken & boosts critical hit damage",
@@ -1438,7 +1462,10 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "860317"
+    ]
   },
   "818937": {
     "desc": "Greatly boosts BB Atk & boosts elemental damage",
@@ -1500,7 +1527,14 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818937.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "20916",
+      "810547",
+      "810548",
+      "820397",
+      "820398"
+    ]
   },
   "818938": {
     "desc": "20% boost to all parameters, 5% damage reduction, boosts BB Atk & largely boosts Atk and Def when BB gauge is full",
@@ -1600,6 +1634,14 @@
         "id": 818989,
         "name": "Courage Shield"
       }
+    ],
+    "associated_units": [
+      "31006",
+      "31007",
+      "840547",
+      "840548",
+      "850507",
+      "850508"
     ]
   },
   "818989": {
@@ -1667,6 +1709,14 @@
         "id": 818990,
         "name": "Courage Aegis"
       }
+    ],
+    "associated_units": [
+      "31006",
+      "31007",
+      "840547",
+      "840548",
+      "850507",
+      "850508"
     ]
   },
   "818990": {
@@ -1741,7 +1791,15 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_2_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31006",
+      "31007",
+      "840547",
+      "840548",
+      "850507",
+      "850508"
+    ]
   },
   "819005": {
     "desc": "Boosts critical hit rate (20%) and damage (50%) & critical damage adds Fire, Water, Earth, Thunder elements to attack for 3 turns",
@@ -1836,6 +1894,9 @@
         "id": 819006,
         "name": "Orochi's Symbol"
       }
+    ],
+    "associated_units": [
+      "850198"
     ]
   },
   "819006": {
@@ -1940,6 +2001,9 @@
         "id": 819007,
         "name": "Orochi's Crest"
       }
+    ],
+    "associated_units": [
+      "850198"
     ]
   },
   "819007": {
@@ -2053,7 +2117,10 @@
     "sphere type text": "Critical",
     "thumbnail": "sphere_thum_819007.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850198"
+    ]
   },
   "819094": {
     "desc": "20% boost to Atk, max HP & normal attack boosts BB gauge",
@@ -2115,6 +2182,13 @@
         "id": 819095,
         "name": "Miss Travailler"
       }
+    ],
+    "associated_units": [
+      "20916",
+      "810547",
+      "810548",
+      "820397",
+      "820398"
     ]
   },
   "819095": {
@@ -2181,6 +2255,13 @@
         "id": 819096,
         "name": "Nougat P08"
       }
+    ],
+    "associated_units": [
+      "20916",
+      "810547",
+      "810548",
+      "820397",
+      "820398"
     ]
   },
   "819096": {
@@ -2248,7 +2329,14 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_819096.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "20916",
+      "810547",
+      "810548",
+      "820397",
+      "820398"
+    ]
   },
   "819097": {
     "desc": "30% boost to all parameters, raises normal hit amount, 30% boost to critical hit rate, 100% boost to critical damage, probable normal attack on all foes & raises Atk parameter limits to 150000",
@@ -2289,7 +2377,14 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_819097.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "20916",
+      "810547",
+      "810548",
+      "820397",
+      "820398"
+    ]
   },
   "819101": {
     "desc": "50% boost to Atk, 75% boost to Spark damage, critical damage boosts BB gauge & hugely boosts critical damage for 2 turns when damage dealt exceeds certain amount",
@@ -2328,7 +2423,14 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_819101.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "20916",
+      "810547",
+      "810548",
+      "820397",
+      "820398"
+    ]
   },
   "819102": {
     "desc": "15% boost to all parameters, boosts OD gauge fill rate, reduces BB gauge required for BB & considerably boosts drop rate of BC, HC when attacking",
@@ -2429,6 +2531,10 @@
         "id": 819121,
         "name": "Gold Key"
       }
+    ],
+    "associated_units": [
+      "850547",
+      "850548"
     ]
   },
   "819121": {
@@ -2504,6 +2610,10 @@
         "id": 819122,
         "name": "Diamond Key"
       }
+    ],
+    "associated_units": [
+      "850547",
+      "850548"
     ]
   },
   "819122": {
@@ -2585,7 +2695,11 @@
     "sphere type text": "Special",
     "thumbnail": "sphere_thum_819122.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850547",
+      "850548"
+    ]
   },
   "819123": {
     "desc": "45% boost to all parameters, negates critical and elemental damage, low probability of enormous damage reduction, reduces damage taken from Light, Dark types & activates Dark barrier after activating OD",
@@ -2651,7 +2765,11 @@
     "sphere type text": "Special",
     "thumbnail": "sphere_thum_819123.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "860547",
+      "860548"
+    ]
   },
   "819127": {
     "desc": "70% boost to Atk and max HP of Female types, boosts/lowers Atk relative to how high remaining HP is, boosts elemental damage, 100% boost to Atk, Def for first 4 turns & raises Atk parameter limits to 150000",
@@ -2787,7 +2905,10 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_819129.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546"
+    ]
   },
   "819130": {
     "desc": "100% boost to Atk, 50% boost to Atk when BB gauge is over 50%, boosts Atk when HP is over 50%, boosts critical damage & hugely boosts OD gauge fill rate",
@@ -2825,7 +2946,14 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_819130.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "20916",
+      "810547",
+      "810548",
+      "820397",
+      "820398"
+    ]
   },
   "819138": {
     "desc": "30% boost to Def, Rec and max HP, highly probable damage reduction, raises normal hit amount & 5% damage reduction from Light types",
@@ -2860,7 +2988,16 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_819138.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31006",
+      "31007",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "850978"
+    ]
   },
   "819139": {
     "desc": "25% boost to all parameters, greatly boosts critical hit rate, reduces BB gauge required for BB, spark damage boosts BB gauge, boosts Atk and Rec when BB gauge is over 50% & adds great OD gauge fill rate boost for 3 turns effect to BB/SBB",
@@ -2964,7 +3101,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_819153.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850298"
+    ]
   },
   "819163": {
     "desc": "30% boost to Atk, Def and Rec, negates status ailments, negates Def ignoring effect, negates critical and elemental damage & 50% Spark damage reduction",
@@ -3014,7 +3154,10 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_819163.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "830298"
+    ]
   },
   "819990": {
     "desc": "Boosts Atk, Def, Rec, and max HP by 10%",
@@ -3078,7 +3221,10 @@
     "sphere type text": "Critical",
     "thumbnail": "sphere_thum_4_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850198"
+    ]
   },
   "880001": {
     "desc": "A mysterious relic used to evolve the Unit Grandt",

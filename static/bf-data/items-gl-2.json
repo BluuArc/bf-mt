@@ -2121,6 +2121,14 @@
         "id": 230004,
         "name": "Noble Blood Gem"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "230004": {
@@ -2178,6 +2186,14 @@
         "id": 230005,
         "name": "Worship Charm"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "230005": {
@@ -2246,6 +2262,14 @@
         "id": 230006,
         "name": "Spirit Band"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "230006": {
@@ -2319,6 +2343,14 @@
         "id": 230007,
         "name": "Ring of Protection"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "230007": {
@@ -2400,7 +2432,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "ls_sphere_thum_7_6.png",
     "type": "ls_sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "230103": {
     "desc": "20% boost to Atk & boosts BB gauge each turn",
@@ -2454,6 +2494,14 @@
         "id": 230104,
         "name": "Power Girdle"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "230104": {
@@ -2512,6 +2560,14 @@
         "id": 230105,
         "name": "Forbidden Blade"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "230105": {
@@ -2575,6 +2631,14 @@
         "id": 230106,
         "name": "Wrathful Needle"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "230106": {
@@ -2640,6 +2704,14 @@
         "id": 230107,
         "name": "Heroic Serydelic"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "230107": {
@@ -2716,7 +2788,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "ls_sphere_thum_9_4.png",
     "type": "ls_sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "230203": {
     "desc": "20% boost to Def & deters status ailments",
@@ -2775,6 +2855,14 @@
         "id": 230204,
         "name": "Ogre Gauntlets"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "230204": {
@@ -2839,6 +2927,14 @@
         "id": 230205,
         "name": "Myrmidon Helm"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "230205": {
@@ -2908,6 +3004,14 @@
         "id": 230206,
         "name": "Warding Scepter"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "230206": {
@@ -2982,6 +3086,14 @@
         "id": 230207,
         "name": "Akbutecca Crown"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "230207": {
@@ -3060,7 +3172,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "ls_sphere_thum_6_8.png",
     "type": "ls_sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "230303": {
     "desc": "Restores HP each turn & damage taken may restore HP",
@@ -3118,6 +3238,14 @@
         "id": 230304,
         "name": "Affection Charm"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "230304": {
@@ -3186,6 +3314,14 @@
         "id": 230005,
         "name": "Worship Charm"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "234000": {
@@ -3248,7 +3384,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "ls_sphere_thum_5_6.png",
     "type": "ls_sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "235000": {
     "desc": "25% boost to all parameters, damage taken may slightly boost BB gauge & probable boost to BB gauge when attacking normally",
@@ -3318,6 +3462,14 @@
         "id": 235004,
         "name": "Star-Catcher"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "235001": {
@@ -3384,6 +3536,14 @@
         "id": 235005,
         "name": "Mechani-Shell"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "235002": {
@@ -3453,6 +3613,14 @@
         "id": 235006,
         "name": "Adamant Soul"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "235003": {
@@ -3535,6 +3703,14 @@
         "id": 235007,
         "name": "Ascendant Bangle"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "235004": {
@@ -3609,7 +3785,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "ls_sphere_thum_8_4.png",
     "type": "ls_sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "235005": {
     "desc": "60% boost to all parameters, hugely boosts critical damage, reduces BB gauge required for BB, enormously boosts BB Atk & critical damage enormously boosts Spark damage for 3 turns",
@@ -3684,7 +3868,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "ls_sphere_thum_5_1.png",
     "type": "ls_sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "235006": {
     "desc": "60% boost to all parameters, Spark damage restores HP, enormously boosts BB gauge and slight damage reduction for 2 turns when damage taken exceeds certain amount & damage taken may restore HP",
@@ -3762,7 +3954,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "ls_sphere_thum_4_8.png",
     "type": "ls_sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "235007": {
     "desc": "60% boost to all parameters, considerably boosts Atk relative to remaining HP, considerably boosts Def, Rec when HP is low, hugely boosts all elemental damage & negates elemental damage",
@@ -3844,7 +4044,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "ls_sphere_thum_8_3.png",
     "type": "ls_sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "235008": {
     "desc": "60% boost to all parameters, 120% boost to Spark damage, 15% damage reduction from all types, considerably restores HP and hugely boosts BB gauge each turn & negates critical damage",
@@ -3928,7 +4136,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "ls_sphere_thum_4_6.png",
     "type": "ls_sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "236000": {
     "desc": "30% boost to Atk and Def & considerably boosts BC drop rate and slightly boosts BB gauge during Spark",
@@ -3989,6 +4205,14 @@
         "id": 236001,
         "name": "Glittering Mirror"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "236001": {
@@ -4060,7 +4284,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "ls_sphere_thum_9_1.png",
     "type": "ls_sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "237000": {
     "desc": "25% boost to max HP & 10% damage reduction from Fire, Water, Earth, Thunder types",
@@ -4123,6 +4355,14 @@
         "id": 238001,
         "name": "Lefaire Chalice"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "238000": {
@@ -4191,6 +4431,14 @@
         "id": 238001,
         "name": "Lefaire Chalice"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "238001": {
@@ -4272,6 +4520,14 @@
         "id": 235008,
         "name": "Ultraboost Serum"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "239000": {
@@ -4334,6 +4590,14 @@
     "sphere type text": "Status Boost",
     "thumbnail": "ls_sphere_thum_9_6.png",
     "type": "ls_sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   }
 }

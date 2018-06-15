@@ -301,7 +301,7 @@ async function getExtraSkillDataForServer(server = 'gl', unitData = {}) {
   return esData;
 }
 
-async function getItemDataForServer(server = 'gl') {
+async function getItemDataForServer(server = 'gl', unitData = {}) {
   logger.info(`${server}: setting git data`);
   let fileInfo = ghData['items.json'];
   if (server !== 'gl') {
@@ -366,6 +366,50 @@ async function getItemDataForServer(server = 'gl') {
             }
           }
         });
+    });
+
+  // for every unit
+  const addUnitIdToItemId = (unitId, itemId, reason = 'evo') => {
+    logger.debug(reason, 'attempting to add unit', unitId, 'to item', itemId);
+    const item = itemData[itemId.toString()];
+    if (item) {
+      if (!item.associated_units) {
+        item.associated_units = [];
+      }
+      if (!item.associated_units.includes(unitId)) {
+        item.associated_units.push(unitId);
+      }
+    } else {
+      logger.warn(`Can't add unit ${unitId} because item ${itemId} is not found`);
+    }
+  }
+  logger.info(`${server}: cross referencing unit data for usage`);
+  Object.values(unitData)
+    .forEach(unit => {
+      const unitId = unit.id.toString();
+      if (unit.evo_mats) {
+        const itemMats = unit.evo_mats.filter(mat => mat.type === 'item').map(mat => mat.id);
+        itemMats.forEach(itemId => addUnitIdToItemId(unitId, itemId, 'evo'));
+      }
+
+      if (unit['extra skill']) {
+        const conditionSets = unit['extra skill'].effects.map(e => e.conditions).filter(arr => arr.length > 0).reduce((arr, val) => arr.concat(val), []);
+        conditionSets.forEach(conditionSet => {
+          if (conditionSet['item required']) {
+            if (Array.isArray(conditionSet['item required'])) {
+              conditionSet['item required'].forEach(itemId => addUnitIdToItemId(unitId, itemId, 'es'));
+            } else {
+              addUnitIdToItemId(unitId, (conditionSet['item required'] || '').toString(), 'es')
+            }
+          }
+
+          if (conditionSet['sphere category required (raw)']) {
+            Object.values(itemData)
+              .filter(item => item['sphere type'] && item['sphere type'] === +conditionSet['sphere category required (raw)'])
+              .forEach(item => addUnitIdToItemId(unitId, item.id.toString(), 'es'));
+          }
+        })
+      }
     });
 
   // split data into files based on first number of id
@@ -470,7 +514,7 @@ async function getData(servers = ['gl', 'eu', 'jp']) {
     await getBurstDataForServer(s, unitData);
     await getExtraSkillDataForServer(s, unitData);
     await getLeaderSkillDataForServer(s, unitData);
-    await getItemDataForServer(s);
+    await getItemDataForServer(s, unitData);
   }
 
   logger.info(`saving update statistics file`);

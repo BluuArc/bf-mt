@@ -63,6 +63,10 @@
         "id": 236000,
         "name": "Ambrosia Wine"
       }
+    ],
+    "associated_units": [
+      "30446",
+      "30447"
     ]
   },
   "40100": {
@@ -117,6 +121,10 @@
         "id": 238000,
         "name": "Rainbow Regalia"
       }
+    ],
+    "associated_units": [
+      "30446",
+      "30447"
     ]
   },
   "40200": {
@@ -142,6 +150,13 @@
         "id": 62040,
         "name": "Demonbone Gem"
       }
+    ],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
     ]
   },
   "40300": {
@@ -169,6 +184,11 @@
         "id": 62100,
         "name": "Regent Diadem"
       }
+    ],
+    "associated_units": [
+      "30546",
+      "840438",
+      "860167"
     ]
   },
   "40400": {
@@ -192,7 +212,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "50116",
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "40500": {
     "desc": "Greatly boosts BC, HC, Zel, Karma, and Item drop rate",
@@ -216,7 +245,11 @@
     "sphere type text": "Drop",
     "thumbnail": "sphere_thum_5_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30446",
+      "30447"
+    ]
   },
   "40600": {
     "desc": "Boosts HP, Atk, Def, Rec by 30% and Critical Rate by 20%",
@@ -240,7 +273,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "40601": {
     "desc": "30% boost to Atk, Def, Rec, max HP & nullifies element based damage",
@@ -268,7 +309,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "40602": {
     "desc": "30% boost to Atk, Def, Rec, max HP, probable HP recovery when hit & slight HP recovery each turn",
@@ -303,7 +352,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "40603": {
     "desc": "30% boost to Atk, Def, Rec, max HP & probable damage reduction while guarding",
@@ -330,7 +387,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_3_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "40604": {
     "desc": "30% boost to Atk, Def, Rec, max HP, boosts Spark BC, HC drop rate & reduces amount of BB gauge consumed",
@@ -364,7 +429,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_3_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "40605": {
     "desc": "30% boost to Atk, Def, Rec, max HP, probable BB gauge boost when attacked & boosts BB gauge when attacking normally",
@@ -404,6 +477,14 @@
         "id": 62000,
         "name": "Flower Crown"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "40700": {
@@ -426,7 +507,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "40800": {
     "desc": "Adds chance of BB gauge greatly filling when dealing Spark damage ",
@@ -453,6 +542,13 @@
         "id": 62000,
         "name": "Flower Crown"
       }
+    ],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
     ]
   },
   "40900": {
@@ -473,7 +569,14 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
   },
   "41000": {
     "desc": "Increases amount of hits",
@@ -498,6 +601,24 @@
         "id": 62030,
         "name": "Dragon's Amulet"
       }
+    ],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
     ]
   },
   "41100": {
@@ -520,7 +641,14 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
   },
   "41200": {
     "desc": "Renders all status ailments invalid, and increases BB gauge every turn",
@@ -581,6 +709,14 @@
         "id": 62160,
         "name": "Skull General"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "41400": {
@@ -636,6 +772,21 @@
         "id": 237000,
         "name": "Holy Beacon"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "41401": {
@@ -691,6 +842,21 @@
         "id": 237000,
         "name": "Holy Beacon"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "41402": {
@@ -746,6 +912,21 @@
         "id": 237000,
         "name": "Holy Beacon"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "41403": {
@@ -801,6 +982,21 @@
         "id": 237000,
         "name": "Holy Beacon"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "41404": {
@@ -856,6 +1052,21 @@
         "id": 238000,
         "name": "Rainbow Regalia"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "41405": {
@@ -911,6 +1122,21 @@
         "id": 238000,
         "name": "Rainbow Regalia"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "41500": {
@@ -968,6 +1194,10 @@
         "id": 230007,
         "name": "Ring of Protection"
       }
+    ],
+    "associated_units": [
+      "30446",
+      "30447"
     ]
   },
   "41600": {
@@ -1028,6 +1258,13 @@
         "id": 239000,
         "name": "Sunblade"
       }
+    ],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
     ]
   },
   "41700": {
@@ -1084,6 +1321,13 @@
         "id": 236000,
         "name": "Ambrosia Wine"
       }
+    ],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
     ]
   },
   "41800": {
@@ -1196,6 +1440,14 @@
         "id": 235006,
         "name": "Adamant Soul"
       }
+    ],
+    "associated_units": [
+      "31066",
+      "31067",
+      "51266",
+      "51267",
+      "850017",
+      "850018"
     ]
   },
   "42000": {
@@ -1257,6 +1509,13 @@
         "id": 62120,
         "name": "Blessed Charm"
       }
+    ],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
     ]
   },
   "42200": {
@@ -1283,6 +1542,21 @@
         "id": 62150,
         "name": "Daybreak Moon"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "42300": {
@@ -1341,6 +1615,14 @@
         "id": 46200,
         "name": "Occult Treasure"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "42400": {
@@ -1362,7 +1644,11 @@
     "sphere type text": "Drop",
     "thumbnail": "sphere_thum_4_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30446",
+      "30447"
+    ]
   },
   "42500": {
     "desc": "Greatly boosts BB gauge when attacking",
@@ -1384,7 +1670,14 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_7.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
   },
   "42600": {
     "desc": "Fairly reduces amount of BB gauge needed & fills it slightly each turn",
@@ -1413,6 +1706,13 @@
         "id": 62060,
         "name": "Health Codex"
       }
+    ],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
     ]
   },
   "42700": {
@@ -1440,6 +1740,13 @@
         "id": 62120,
         "name": "Blessed Charm"
       }
+    ],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
     ]
   },
   "42800": {
@@ -1467,6 +1774,14 @@
         "id": 62070,
         "name": "Variable Arsenal"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "42900": {
@@ -1487,7 +1802,12 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_5_7.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546",
+      "840438",
+      "860167"
+    ]
   },
   "43000": {
     "desc": "Massively boosts Def when HP is full",
@@ -1513,6 +1833,14 @@
         "id": 62010,
         "name": "Ethereal Wall"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "43100": {
@@ -1541,7 +1869,26 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_1_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "50116",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "43200": {
     "desc": "Boosts BB gauge when attacking, taking damage, slaying foes & victory",
@@ -1584,7 +1931,14 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
   },
   "43300": {
     "desc": "Adds slightly higher chance of ignoring enemy's Def when attacking",
@@ -1654,7 +2008,14 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
   },
   "43500": {
     "desc": "Boosts critical rate if HP full, probable infliction of random ailment",
@@ -1762,7 +2123,10 @@
     "sphere type text": "Critical",
     "thumbnail": "sphere_thum_2_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850198"
+    ]
   },
   "43900": {
     "desc": "スパークダメージを５０％アップ",
@@ -1782,7 +2146,12 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_1_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546",
+      "840438",
+      "860167"
+    ]
   },
   "44000": {
     "desc": "Boosts Atk and Def by 20%",
@@ -1838,6 +2207,14 @@
         "id": 236000,
         "name": "Ambrosia Wine"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "44100": {
@@ -1896,6 +2273,21 @@
         "id": 230207,
         "name": "Akbutecca Crown"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "44200": {
@@ -1952,6 +2344,10 @@
         "id": 45400,
         "name": "Fortune Cap"
       }
+    ],
+    "associated_units": [
+      "30446",
+      "30447"
     ]
   },
   "44300": {
@@ -2013,6 +2409,13 @@
         "id": 47700,
         "name": "Phoenix Crown"
       }
+    ],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
     ]
   },
   "44400": {
@@ -2080,6 +2483,14 @@
         "id": 47700,
         "name": "Phoenix Crown"
       }
+    ],
+    "associated_units": [
+      "31066",
+      "31067",
+      "51266",
+      "51267",
+      "850017",
+      "850018"
     ]
   },
   "44500": {
@@ -2139,6 +2550,21 @@
         "id": 44501,
         "name": "Illusion Gizmo"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "44501": {
@@ -2198,6 +2624,21 @@
         "id": 62090,
         "name": "Soul Armor"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "44600": {
@@ -2258,6 +2699,24 @@
         "id": 62140,
         "name": "Demolishing Plate"
       }
+    ],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
     ]
   },
   "44700": {
@@ -2285,7 +2744,14 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_1_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
   },
   "44701": {
     "desc": "Recovers HP each turn, adds chance of HP recovery when damaged & 15% boost to Atk, Def, Rec and max HP",
@@ -2320,7 +2786,15 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_1_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31066",
+      "31067",
+      "51266",
+      "51267",
+      "850017",
+      "850018"
+    ]
   },
   "44702": {
     "desc": "Negates all status ailments (including stronger element damage) & 15% boost to Atk, Def, Rec and max HP",
@@ -2384,7 +2858,12 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_1_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546",
+      "840438",
+      "860167"
+    ]
   },
   "44704": {
     "desc": "Probable 25% reduction of damage taken, greatly boosts BB gauge when attacked & 15% boost to all parameters",
@@ -2418,7 +2897,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_1_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "44705": {
     "desc": "Boosts BB gauge at start of each turn, considerably boosts BB gauge, hugely boosts BB Atk & 30% boost to all parameters",
@@ -2479,7 +2973,14 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
   },
   "44801": {
     "desc": "Restores HP each turn & considerably boosts HC efficacy",
@@ -2505,7 +3006,15 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_4_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31066",
+      "31067",
+      "51266",
+      "51267",
+      "850017",
+      "850018"
+    ]
   },
   "44802": {
     "desc": "Considerably boosts BB Atk & 20% boost to Atk",
@@ -2546,7 +3055,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "44803": {
     "desc": "Boosts Atk, critical hit rate when HP is over 50% & critical damage considerably boosts BB gauge",
@@ -2574,7 +3101,10 @@
     "sphere type text": "Critical",
     "thumbnail": "sphere_thum_4_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850198"
+    ]
   },
   "44900": {
     "desc": "Boosts Atk, Def, Rec with full BB gauge & largely boosts Spark damage",
@@ -2601,7 +3131,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "45000": {
     "desc": "Boosts Atk and max HP by 30% & greatly boosts BC and HC drop rate",
@@ -2627,7 +3165,17 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "60326",
+      "61157",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "45100": {
     "desc": "50% boost to max HP, boosts efficacy and drop rate of HC & recovers HP every turn",
@@ -2661,7 +3209,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_3_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "45200": {
     "desc": "Slightly boosts damage against weak elements & greatly boosts drop rate of HC",
@@ -2691,7 +3247,11 @@
     "sphere type text": "Drop",
     "thumbnail": "sphere_thum_3_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30446",
+      "30447"
+    ]
   },
   "45201": {
     "desc": "Boosts BB Atk & hugely boosts BC drop rate when attacking",
@@ -2717,7 +3277,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_3_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "45202": {
     "desc": "Negates all status ailments & restores HP and boosts BB gauge each turn",
@@ -2779,7 +3357,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "40236",
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "45310": {
     "desc": "30% boost to Atk and max HP & boosts Atk when HP high, lowers Atk when HP low",
@@ -2812,7 +3399,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30236",
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "45400": {
     "desc": "Great boost to BC, HC, Zel and Karma drop rate when attacking",
@@ -2865,7 +3461,11 @@
     "sphere type text": "Drop",
     "thumbnail": "sphere_thum_4_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30446",
+      "30447"
+    ]
   },
   "45500": {
     "desc": "Boosts effectiveness of BC & greatly boosts effectiveness of HC",
@@ -2924,6 +3524,13 @@
         "id": 62100,
         "name": "Regent Diadem"
       }
+    ],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
     ]
   },
   "45600": {
@@ -2974,6 +3581,21 @@
         "id": 62090,
         "name": "Soul Armor"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "45700": {
@@ -2994,7 +3616,14 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
   },
   "45800": {
     "desc": "Great boost to BB gauge when taking and inflicting damage each turn",
@@ -3026,7 +3655,14 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
   },
   "45900": {
     "desc": "Boosts Spark damage and BB gauge & boosts BC and HC drop rate",
@@ -3054,7 +3690,13 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_5_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546",
+      "50116",
+      "840438",
+      "860167"
+    ]
   },
   "46000": {
     "desc": "Increases damage dealt during Spark by 150%",
@@ -3079,6 +3721,11 @@
         "id": 62130,
         "name": "Scarlet Eventide"
       }
+    ],
+    "associated_units": [
+      "30546",
+      "840438",
+      "860167"
     ]
   },
   "46100": {
@@ -3108,6 +3755,10 @@
         "id": 62100,
         "name": "Regent Diadem"
       }
+    ],
+    "associated_units": [
+      "30446",
+      "30447"
     ]
   },
   "46200": {
@@ -3170,6 +3821,14 @@
         "id": 46220,
         "name": "Armor of Seals"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "46201": {
@@ -3193,7 +3852,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "46210": {
     "desc": "40% boost to all parameters, greatly restores HP each turn & probable HP recovery when attacked",
@@ -3258,7 +3925,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "46220": {
     "desc": "40% boost to Atk, Def, Rec, max HP, considerably boosts BB Atk & boosts BB gauge when damage dealt has exceeded certain amount",
@@ -3322,7 +3997,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "46300": {
     "desc": "BB gauge fills incredibly fast when obtaining BC",
@@ -3347,6 +4030,13 @@
         "id": 62040,
         "name": "Demonbone Gem"
       }
+    ],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
     ]
   },
   "46400": {
@@ -3387,6 +4077,14 @@
         "id": 62090,
         "name": "Soul Armor"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "46500": {
@@ -3414,6 +4112,14 @@
         "id": 62140,
         "name": "Demolishing Plate"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "46600": {
@@ -3443,6 +4149,9 @@
         "id": 62020,
         "name": "Dark Axe"
       }
+    ],
+    "associated_units": [
+      "850198"
     ]
   },
   "46700": {
@@ -3502,6 +4211,21 @@
         "id": 62050,
         "name": "Demontech Mail"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "46900": {
@@ -3529,6 +4253,13 @@
         "id": 62030,
         "name": "Dragon's Amulet"
       }
+    ],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
     ]
   },
   "47000": {
@@ -3554,7 +4285,12 @@
     "sphere type text": "Drop",
     "thumbnail": "sphere_thum_1_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30446",
+      "30447",
+      "50116"
+    ]
   },
   "47100": {
     "desc": "50% boost max HP, recovers HP each turn, probable HP absorption, Angel Idol effect when HP below 20%",
@@ -3595,7 +4331,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "50116",
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "47200": {
     "desc": "30% boost to Atk and Def & nullifies all status ailments and element based extra damage",
@@ -3630,7 +4375,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "50276",
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "47201": {
     "desc": "30% boost Atk & HP, boosts critical hit rate, probable Def ignore, criticals greatly boost BB gauge",
@@ -3662,7 +4416,17 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "10256",
+      "10257",
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "47202": {
     "desc": "30% boost to Atk and Def & boosts BB Atk",
@@ -3689,7 +4453,17 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "20276",
+      "30276",
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "47203": {
     "desc": "30% boost to Atk, max HP, greatly boosts BC drop rate & 50% Atk boost when BB gauge's over half-full",
@@ -3719,7 +4493,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "50386",
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "47204": {
     "desc": "30% boost to Def, max HP, greatly boosts HC drop rate & 100% Def boost when HP is over half-full",
@@ -3749,7 +4532,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "50386",
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "47205": {
     "desc": "30% boost to Def, max HP & adds resistance against 1 KO attack when damage received has exceeded 50,000 pts",
@@ -3779,7 +4571,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "50886",
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "47206": {
     "desc": "40% boost to max HP, damage taken boosts BB gauge & boosts Atk, Def, Rec when BB gauge is over 50% full",
@@ -3812,7 +4613,18 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "20286",
+      "50316",
+      "50317",
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "47207": {
     "desc": "30% boost to Atk, Def, Rec, boosts BC, HC efficacy & boosts OD gauge fill rate",
@@ -3846,7 +4658,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "60667",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "47208": {
     "desc": "30% boost to Atk, Rec, hugely boosts Atk when BB gauge is full, boosts Atk when HP is below 50% & boosts Spark dmg",
@@ -3881,7 +4702,17 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "10556",
+      "10557",
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "47209": {
     "desc": "40% boost to Atk, max HP, restores HP, BB gauge each turn & Spark damage slightly restores HP, BB gauge",
@@ -3924,7 +4755,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "50287",
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "47210": {
     "desc": "40% boost to Atk, max HP, considerably boosts critical hit rate, probable Spark vulnerability for 1 turn & probable Spark critical",
@@ -3957,7 +4797,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "10757",
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "47211": {
     "desc": "40% boost to max HP, BC collected hugely boosts Atk for 3 turns, HC collected hugely boosts Def for 3 turns & hugely boosts BC, HC, Zel, Karma, Item drop rates",
@@ -4001,7 +4850,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30447",
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "47212": {
     "desc": "40% boost to Def, max HP, hugely boosts Atk, Def relative to how high HP is & negates all status ailments and elemental damage ",
@@ -4044,7 +4902,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "47213": {
     "desc": "30% boost to Atk, max HP, hugely boosts BB Atk, considerably boosts BB Atk when HP is over 50%, damage taken may restore HP & activates at turn's end effects during turn's start instead",
@@ -4136,7 +5002,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "47300": {
     "desc": "10% boost to max HP and Rec & slightly boosts critical damage",
@@ -4161,7 +5042,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "10606",
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "47301": {
     "desc": "10% boost to Atk and Def & 50% boost to damage produced during Spark",
@@ -4186,7 +5076,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "20576",
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "47400": {
     "desc": "100% boost to Atk, Def, Rec and max HP, 50% boost to Spark damage & boosts critical damage",
@@ -4217,7 +5116,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "47410": {
     "desc": "Grants a myriad of abilities",
@@ -4299,7 +5206,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "47500": {
     "desc": "Probable 20% damage reduction, low probability of enormous damage reduction & restores HP each turn",
@@ -4330,7 +5245,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_2_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "47501": {
     "desc": "Slightly boosts critical hit rate, boosts critical damage & 15% boost to Spark damage",
@@ -4358,7 +5288,10 @@
     "sphere type text": "Critical",
     "thumbnail": "sphere_thum_5_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850198"
+    ]
   },
   "47502": {
     "desc": "Considerably boosts BC, HC drop rate & 15% boost to Atk, Def",
@@ -4384,7 +5317,11 @@
     "sphere type text": "Drop",
     "thumbnail": "sphere_thum_1_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30446",
+      "30447"
+    ]
   },
   "47600": {
     "desc": "50% boost to Spark damage & boosts damage to weaker elements",
@@ -4449,6 +5386,24 @@
         "id": 47601,
         "name": "War Demon's Blade"
       }
+    ],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
     ]
   },
   "47601": {
@@ -4519,6 +5474,24 @@
         "id": 62020,
         "name": "Dark Axe"
       }
+    ],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
     ]
   },
   "47700": {
@@ -4592,6 +5565,13 @@
         "id": 49800,
         "name": "Nature Shield"
       }
+    ],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
     ]
   },
   "47800": {
@@ -4612,7 +5592,15 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "50116",
+      "60497",
+      "840437",
+      "840438"
+    ]
   },
   "47900": {
     "desc": "Greatly boosts BC and HC drop rate when attacking",
@@ -4668,6 +5656,10 @@
         "id": 48300,
         "name": "Demon Striker"
       }
+    ],
+    "associated_units": [
+      "30446",
+      "30447"
     ]
   },
   "47901": {
@@ -4733,6 +5725,13 @@
         "id": 235008,
         "name": "Ultraboost Serum"
       }
+    ],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
     ]
   },
   "47902": {
@@ -4796,6 +5795,13 @@
         "id": 230007,
         "name": "Ring of Protection"
       }
+    ],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
     ]
   },
   "47903": {
@@ -4866,6 +5872,21 @@
         "id": 235008,
         "name": "Ultraboost Serum"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "47904": {
@@ -4934,6 +5955,21 @@
         "id": 235003,
         "name": "Tourayet Adornment"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "47905": {
@@ -4998,6 +6034,21 @@
         "id": 235006,
         "name": "Adamant Soul"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "47906": {
@@ -5059,6 +6110,13 @@
         "id": 235002,
         "name": "Armored Soul"
       }
+    ],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
     ]
   },
   "47907": {
@@ -5122,6 +6180,14 @@
         "id": 236001,
         "name": "Glittering Mirror"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "47908": {
@@ -5182,6 +6248,14 @@
         "id": 48302,
         "name": "Demon Igniter"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "48000": {
@@ -5209,7 +6283,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "40166",
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "48100": {
     "desc": "50% boost to Spark damage, reduces BB gauge amount needed for BB, negates stronger element damage & recovers HP each turn",
@@ -5244,7 +6327,12 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_3_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546",
+      "840438",
+      "860167"
+    ]
   },
   "48200": {
     "desc": "Negates all status ailments & probable BB boost produced during Spark",
@@ -5308,7 +6396,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "48205": {
     "desc": "100% boost to Atk, Def for first 2 turns & reduces damage taken by 50% for first 2 turns",
@@ -5341,7 +6437,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "48206": {
     "desc": "Boosts critical damage and elemental damage & 30% boost to Atk",
@@ -5375,7 +6479,10 @@
     "sphere type text": "Critical",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850198"
+    ]
   },
   "48207": {
     "desc": "Boosts BB gauge enormously when dealing normal attacks and when attacked",
@@ -5407,7 +6514,15 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "50116",
+      "60497",
+      "840437",
+      "840438"
+    ]
   },
   "48208": {
     "desc": "Probable 20% damage reduction, reduces damage taken when damage taken has exceeded certain amount & 20% boost to Def, max HP",
@@ -5441,7 +6556,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "48209": {
     "desc": "Boosts BB Atk, hugely boosts BB gauge when damage dealt has exceeded certain amount & 30% boost to Atk, Def",
@@ -5473,7 +6603,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "48210": {
     "desc": "Slightly probable status inflicting counterattack when attacked, boosts BB gauge & boosts BC efficacy",
@@ -5540,7 +6688,15 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31066",
+      "31067",
+      "51266",
+      "51267",
+      "850017",
+      "850018"
+    ]
   },
   "48212": {
     "desc": "Spark damage slightly boosts BB gauge and restores HP & 30% boost to Atk, max HP",
@@ -5573,7 +6729,12 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546",
+      "840438",
+      "860167"
+    ]
   },
   "48213": {
     "desc": "Boosts BB gauge each turn, reduces consumption of BB gauge & reduces BB gauge required for BB",
@@ -5603,7 +6764,14 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
   },
   "48214": {
     "desc": "HP and BB recovery effects trigger at turn's start, considerably restores HP, BB gauge after damage taken has exceeded certain amount for 3 turns & 30% boost to Rec, max HP",
@@ -5671,7 +6839,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "48216": {
     "desc": "Negates all status ailments, 20% boost to Def, max HP & probable random status infliction counter",
@@ -5746,7 +6932,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "48218": {
     "desc": "Boosts critical damage, damage reduction for 1 turn when damage dealt has exceeded certain amount & 30% boost to Atk and max HP",
@@ -5779,7 +6980,10 @@
     "sphere type text": "Critical",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850198"
+    ]
   },
   "48219": {
     "desc": "Slightly absorbs HP, damage taken may restore HP & 30% boost to Def and max HP",
@@ -5812,7 +7016,15 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31066",
+      "31067",
+      "51266",
+      "51267",
+      "850017",
+      "850018"
+    ]
   },
   "48220": {
     "desc": "Negates Def ignoring effect, 50% Spark damage reduction, low probability of enormous damage reduction & 30% boost to Def, max HP",
@@ -5846,7 +7058,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "48221": {
     "desc": "Adds probable Def ignoring effect, 30% boost to Atk, max HP, 100% boost to Spark damage & probable Spark critical",
@@ -5914,7 +7141,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "48223": {
     "desc": "Probable random status ailment infliction, 25% boost to Atk, Def, max HP, considerably boosts damage against status afflicted foes & normal attacks may hit all foes",
@@ -6004,7 +7249,15 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31066",
+      "31067",
+      "51266",
+      "51267",
+      "850017",
+      "850018"
+    ]
   },
   "48225": {
     "desc": "100% boost to Spark damage, 20% boost to Spark damage when HP is full, 30% boost to Atk, max HP & boosts Atk and BB Atk for 3 turns when Spark damage exceeds certain amount",
@@ -6052,7 +7305,12 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546",
+      "840438",
+      "860167"
+    ]
   },
   "48226": {
     "desc": "Negates all status ailments, negates Atk, Def, Rec reduction effects, 30% boost to all parameters & negates critical and elemental damage",
@@ -6160,7 +7418,14 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_4_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
   },
   "48301": {
     "desc": "Negates critical and elemental based damage, slightly boosts damage reduction probability when guarding & probable 25% damage reduction",
@@ -6219,7 +7484,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_4_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "48302": {
     "desc": "30% boost to Atk, max HP, raises normal hit amount, 50% boost to Spark damage & Spark damage slightly boosts BB gauge",
@@ -6279,7 +7559,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "48400": {
     "desc": "150% boost to Atk, Def for first 4 turns, enormously boosts critical hit rate & boosts critical dmg",
@@ -6309,7 +7597,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_7.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "48410": {
     "desc": "30% boost to max HP, Rec, greatly recovers HP each turn & probable great HP recovery when attacked",
@@ -6342,7 +7638,15 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_5_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31066",
+      "31067",
+      "51266",
+      "51267",
+      "850017",
+      "850018"
+    ]
   },
   "48420": {
     "desc": "Nullifies all ailments, critical & elemental based dmg, boosts BB gauge each turn & greatly heals HP",
@@ -6433,7 +7737,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "48500": {
     "desc": "Probable 25% dmg cut, 30% boost to Def, slight elemental dmg boost & boosts BB gauge, HP each turn",
@@ -6478,7 +7790,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_2_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "48600": {
     "desc": "Slight probable infliction of random status ailment when attacking & 20% boost to Atk, Def",
@@ -6538,7 +7865,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_2_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "48602": {
     "desc": "Boosts BB gauge when dealing normal, Spark, critical damage & 20% boost to Atk, Def",
@@ -6577,7 +7922,14 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
   },
   "48603": {
     "desc": "Greatly restores HP each turn, damage taken may restore HP, Spark damage slightly restores HP & 30% boost to Atk, Def",
@@ -6616,7 +7968,15 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_3_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31066",
+      "31067",
+      "51266",
+      "51267",
+      "850017",
+      "850018"
+    ]
   },
   "48700": {
     "desc": "Probable 20% damage reduction & 20% boost to Rec, max HP",
@@ -6642,7 +8002,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "48800": {
     "desc": "Hugely boosts Atk relative to how high remaining HP is & reduces own Atk relative to how low remaining HP is",
@@ -6664,7 +8039,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_1_9.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "48900": {
     "desc": "Enormously boosts crit rate, greatly boosts crit dmg & crits boost BB gauge and add Fire, Water, Earth, Thunder to next turn",
@@ -6760,7 +8153,10 @@
     "sphere type text": "Critical",
     "thumbnail": "sphere_thum_4_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850198"
+    ]
   },
   "49000": {
     "desc": "スパークダメージを５０％アップ＆ＨＰが満タン時、攻撃力・クリティカル率をアップ＆ＢＢゲージが満タン時、防御力・回復力をアップ",
@@ -6792,7 +8188,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_3_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "49100": {
     "desc": "Greatly restores BB gauge and HP each turn & damage taken slightly boosts BB gauge and may restore HP",
@@ -6830,7 +8244,15 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "50116",
+      "60497",
+      "840437",
+      "840438"
+    ]
   },
   "49200": {
     "desc": "30% boost to Atk, max HP, 50% boost to Spark dmg, boosts crit dmg & reduces BB gauge required for BB",
@@ -6863,7 +8285,18 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "20796",
+      "20797",
+      "30567",
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "49300": {
     "desc": "Enormously boosts BB Atk & 50% boost to Atk",
@@ -6889,7 +8322,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_1_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "49400": {
     "desc": "Damage taken and Spark damage dealt boost BB gauge & 200% Atk boost when BB gauge is full",
@@ -6922,7 +8373,14 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
   },
   "49500": {
     "desc": "50% dmg reduction, 200% Def boost, 40% max HP boost and prob slight HP recovery when attacked for first 4 turns",
@@ -6964,7 +8422,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_3_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "49600": {
     "desc": "40% boost to all parameters, hugely boosts normal hit amount & normal attacks enormously boosts BB gauge",
@@ -6997,7 +8470,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "49700": {
     "desc": "Negates all status ailments, greatly boosts BB gauge each turn & damage taken boosts BB gauge",
@@ -7139,6 +8620,21 @@
         "id": 62010,
         "name": "Ethereal Wall"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "49900": {
@@ -7170,7 +8666,14 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_4_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
   },
   "49910": {
     "desc": "攻撃ＢＢの威力をアップ＆スパークダメージを２５％アップ＆与ダメージが一定数を超える度にＢＢゲージを増加",
@@ -7201,7 +8704,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "49920": {
     "desc": "確率で被ダメージを２０％軽減＆防御力・最大ＨＰを２０％アップ",
@@ -7227,7 +8748,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_2_7.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "49930": {
     "desc": "敵撃破時、ＨＰを回復・ＢＢゲージをかなり増加＆攻撃力・防御力・回復力・最大ＨＰを１０％アップ",
@@ -7261,7 +8797,15 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_5_7.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31066",
+      "31067",
+      "51266",
+      "51267",
+      "850017",
+      "850018"
+    ]
   },
   "49940": {
     "desc": "Considerably boosts BB Atk, 50% boost to Spark damage, considerably boosts critical damage & 50% boost to Atk",
@@ -7295,7 +8839,27 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_1_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "10516",
+      "11087",
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "49950": {
     "desc": "被ダメージ時、確率でＨＰを回復＆回復力・最大ＨＰを２０％アップ",
@@ -7322,7 +8886,15 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_1_7.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31066",
+      "31067",
+      "51266",
+      "51267",
+      "850017",
+      "850018"
+    ]
   },
   "49960": {
     "desc": "Probable 1 turn Atk reduction when damage dealt has exceeded certain amount & 20% boost to Atk and max HP",
@@ -7408,7 +8980,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_4_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "49990": {
     "desc": "攻撃ＢＢの威力をかなりアップ＆攻撃力を３０％アップ＆スパークダメージを５０％アップ",
@@ -7438,6 +9028,24 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_1_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   }
 }

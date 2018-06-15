@@ -2620,7 +2620,15 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_818894.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31066",
+      "31067",
+      "51266",
+      "51267",
+      "850017",
+      "850018"
+    ]
   },
   "801002": {
     "desc": "MST_ITEMS_MATERIAL_801002_SHORTDESCRIPTION",
@@ -3070,6 +3078,14 @@
         "id": 818882,
         "name": "Aegis Cloak"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "818882": {
@@ -3125,7 +3141,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_819910_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "818883": {
     "desc": "Boost Atk, Def, Rec, and max HP by15% & slight critical rate up",
@@ -3169,7 +3193,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_800023.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "818884": {
     "desc": "Boost Atk by 25%, Def, Rec and max HP by 20% & adds high chance of reflecting partial enemy damage",
@@ -3198,7 +3230,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "818890": {
     "desc": "Greatly boosts drop rate of BC when attacking & deals extra normal attacks",
@@ -3248,6 +3288,24 @@
         "id": 818895,
         "name": "Demonic Skull"
       }
+    ],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
     ]
   },
   "818891": {
@@ -3300,6 +3358,24 @@
         "id": 818896,
         "name": "Ominous Orb"
       }
+    ],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
     ]
   },
   "818892": {
@@ -3329,7 +3405,14 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_818892.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
   },
   "818895": {
     "desc": "Greatly boosts BC drop rate when attacking, raises normal hit amount & 30% boost to Atk and Def",
@@ -3384,7 +3467,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818890.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "818896": {
     "desc": "Damage dealt boosts BB gauge, raises normal hit amount & boosts critical damage",
@@ -3439,7 +3540,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818891.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "818897": {
     "desc": "20% boost to Def, max HP, 5% damage reduction & negates status ailments",
@@ -3483,7 +3602,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_818897.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "820388",
+      "840438"
+    ]
   },
   "818898": {
     "desc": "Damage dealt enormously boosts Karma, Item drop rates & boosts BB gauge each turn ",
@@ -3508,7 +3636,11 @@
     "sphere type text": "Drop",
     "thumbnail": "sphere_thum_818987.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30446",
+      "30447"
+    ]
   },
   "818900": {
     "desc": "Boosts HP and Atk by 15%, Def and Rec by 20% & adds chance of slight HP recovery when damaged",
@@ -3571,6 +3703,14 @@
         "id": 818902,
         "name": "Advent Solace"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "818901": {
@@ -3635,6 +3775,14 @@
         "id": 818903,
         "name": "Frozen Fantasy"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "818902": {
@@ -3689,7 +3837,11 @@
     "sphere type text": "Drop",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30446",
+      "30447"
+    ]
   },
   "818903": {
     "desc": "30% boost to Atk and max HP, 40% boost to Def and Rec & probable BB gauge boost when attacked",
@@ -3748,7 +3900,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_818903.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "818904": {
     "desc": "20% boost to all parameters, damage taken may restore HP & reduces BB gauge required for BB\n",
@@ -3811,7 +3971,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_818904.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438",
+      "860128"
+    ]
   },
   "818905": {
     "desc": "20% boost to all parameters & boosts BC, HC, Karma drop rates",
@@ -3870,6 +4039,14 @@
         "id": 818906,
         "name": "Winter Donum"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "818906": {
@@ -3940,6 +4117,14 @@
         "id": 818907,
         "name": "Winter Memoria"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "818907": {
@@ -4012,7 +4197,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_818907.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "818910": {
     "desc": "Boosts max HP and Atk by 30%, Def by 15%, boosts BC drop rate & boosts Def against Dark elemental damage",
@@ -4042,7 +4235,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "818911": {
     "desc": "Boosts Atk by 100%, critical hit damage by 50%. Lowers Def & Rec by 20%",
@@ -4068,7 +4269,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_818891.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "818912": {
     "desc": "BB gauge refills slightly faster, slightly reduces the consumption of BB gauge & chance of<br>inflicting Poison, Weakness, Injury, Paralysis",
@@ -4131,7 +4340,14 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_818894.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
   },
   "818913": {
     "desc": "Boost to all stats by 20% & boosts BB gauge every turn",
@@ -4174,7 +4390,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840257",
+      "840438"
+    ]
   },
   "818914": {
     "desc": "Boost to Atk by 80% & chance of damage taken being decreased by 30%",
@@ -4214,7 +4439,17 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438",
+      "860257",
+      "860258"
+    ]
   },
   "818915": {
     "desc": "Boost Atk and Def by 30%, critical hit rate by 10% & boosts critical hit damage",
@@ -4255,7 +4490,17 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810147",
+      "810148",
+      "810338",
+      "840438"
+    ]
   },
   "818916": {
     "desc": "Boost HP and Rec by 30%, critical hit rate by 10% & large boost to BC and HC drop",
@@ -4297,7 +4542,17 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "820147",
+      "820148",
+      "840438"
+    ]
   },
   "818917": {
     "desc": "Absorbs HP when attacking, nullfies all status ailments, reduces BB gauge requirement & chance to refill BB gauge when attacking",
@@ -4355,7 +4610,16 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_4_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31066",
+      "31067",
+      "51266",
+      "51267",
+      "850017",
+      "850018",
+      "850147"
+    ]
   },
   "818918": {
     "desc": "Boost to Atk and Def relative to depleted HP, boost damage to weaker elements & grants immunity to critical hit damage",
@@ -4409,7 +4673,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438",
+      "860147"
+    ]
   },
   "818920": {
     "desc": "Boost Atk by 20%; max HP, Def and Rec by 15%, & boosts Spark damage",
@@ -4471,6 +4744,14 @@
         "id": 818924,
         "name": "Golden Lion Regalia"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "818921": {
@@ -4503,7 +4784,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_818921.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "818922": {
     "desc": "Boost Atk and HP by 30% & boosts BB Atk",
@@ -4545,7 +4841,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "830147",
+      "840438"
+    ]
   },
   "818923": {
     "desc": "Boost to all parameters by 20% & criticals greatly boost BB gauge",
@@ -4589,7 +4894,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840147",
+      "840438"
+    ]
   },
   "818924": {
     "desc": "40% boost to Atk, 30% boost to max HP, Def and Rec & boosts Spark damage",
@@ -4651,6 +4965,14 @@
         "id": 818925,
         "name": "Fortunate Phoenix Crest"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "818925": {
@@ -4722,6 +5044,14 @@
         "id": 818926,
         "name": "Prosperous Phoenix Emblem"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "818926": {
@@ -4794,7 +5124,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_818926.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "818931": {
     "desc": "30% boost to Atk, max HP,  boosts critical hit rate & boosts Atk when BB gauge is full",
@@ -4836,7 +5174,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810317",
+      "810338",
+      "840438"
+    ]
   },
   "818932": {
     "desc": "20% boost to all parameters, reduces gauge cost required for BB & boosts BB Atk",
@@ -4886,7 +5233,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "820317",
+      "840438"
+    ]
   },
   "818933": {
     "desc": "50% boost to Atk, 50% boost to Spark damage & probable infliction of random status ailment",
@@ -4937,7 +5293,26 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_4_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "830317",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "818934": {
     "desc": "30% boost to Def, max HP, boosts BB gauge each turn, negates critical & element based damage",
@@ -4986,7 +5361,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840317",
+      "840438"
+    ]
   },
   "818935": {
     "desc": "50% boost to Def, Rec, max HP, hugely boosts OD gauge fill rate, considerably restores HP each turn & greatly boosts BB gauge each turn",
@@ -5037,7 +5421,17 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438",
+      "850317",
+      "850318"
+    ]
   },
   "818936": {
     "desc": "30% boost to all parameters, boosts critical hit rate, probable 30% damage reduction, boosts critical hit damage & 50% boost to Spark damage",
@@ -5089,7 +5483,17 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438",
+      "860317",
+      "860318"
+    ]
   },
   "818937": {
     "desc": "Greatly boosts BB Atk & boosts elemental damage",
@@ -5151,7 +5555,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818937.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "818938": {
     "desc": "20% boost to all parameters, 5% damage reduction, boosts BB Atk & largely boosts Atk and Def when BB gauge is full",
@@ -5219,6 +5641,11 @@
         "id": 818940,
         "name": "Jeu'vrr's Battleheart"
       }
+    ],
+    "associated_units": [
+      "30546",
+      "840438",
+      "860167"
     ]
   },
   "818940": {
@@ -5278,6 +5705,11 @@
         "id": 818941,
         "name": "Jeu'vrr's Warsong"
       }
+    ],
+    "associated_units": [
+      "30546",
+      "840438",
+      "860167"
     ]
   },
   "818941": {
@@ -5337,7 +5769,12 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_818941.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546",
+      "840438",
+      "860167"
+    ]
   },
   "818942": {
     "desc": "20% boost to critical hit rate, 50% boost to critical damage & critical hits may inflict random status ailment<br>Guild Raid: 15% Atk, Def, Rec boost",
@@ -5375,6 +5812,9 @@
         "id": 818943,
         "name": "Dehn's Bladesong"
       }
+    ],
+    "associated_units": [
+      "850198"
     ]
   },
   "818943": {
@@ -5448,6 +5888,9 @@
         "id": 818944,
         "name": "Dehn's Swordmyth"
       }
+    ],
+    "associated_units": [
+      "850198"
     ]
   },
   "818944": {
@@ -5521,7 +5964,10 @@
     "sphere type text": "Critical",
     "thumbnail": "sphere_thum_818944.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850198"
+    ]
   },
   "818945": {
     "desc": "15% boost to Atk, Def, boosts critical hit rate and critical damage, 30% boost to Spark damage & boosts Spark BC, HC drop rate",
@@ -5553,7 +5999,10 @@
     "sphere type text": "Critical",
     "thumbnail": "sphere_thum_1_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850198"
+    ]
   },
   "818947": {
     "desc": "Normal attacks may hit all foes & adds all elements to attack<br>Guild Raid: 15% Atk, Def, Rec boost",
@@ -5590,6 +6039,24 @@
         "id": 818948,
         "name": "Ka-rzn's Coilwhip"
       }
+    ],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
     ]
   },
   "818948": {
@@ -5662,6 +6129,24 @@
         "id": 818949,
         "name": "Ka-rzn's Excruciation"
       }
+    ],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
     ]
   },
   "818949": {
@@ -5734,7 +6219,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818949.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "818951": {
     "desc": "Boosts BB Atk & boosts BB gauge each turn<br>Guild Raid: 15% Atk, Def, Rec boost",
@@ -5765,6 +6268,24 @@
         "id": 818952,
         "name": "Jeu'vrr's Oration"
       }
+    ],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
     ]
   },
   "818952": {
@@ -5839,6 +6360,24 @@
         "id": 818953,
         "name": "Jeu'vrr's Warcry"
       }
+    ],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
     ]
   },
   "818953": {
@@ -5913,7 +6452,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818953.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "818954": {
     "desc": "70% boost to Atk & lowers Def by 30%",
@@ -5972,6 +6529,24 @@
         "id": 818957,
         "name": "Blight's Curse"
       }
+    ],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
     ]
   },
   "818955": {
@@ -6032,6 +6607,24 @@
         "id": 818958,
         "name": "Blight's Oppression"
       }
+    ],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
     ]
   },
   "818956": {
@@ -6092,6 +6685,24 @@
         "id": 818959,
         "name": "Blight's Rage"
       }
+    ],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
     ]
   },
   "818957": {
@@ -6154,6 +6765,24 @@
         "id": 818960,
         "name": "Blight's Scourge"
       }
+    ],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
     ]
   },
   "818958": {
@@ -6220,6 +6849,24 @@
         "id": 818961,
         "name": "Blight's Torment"
       }
+    ],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
     ]
   },
   "818959": {
@@ -6284,6 +6931,24 @@
         "id": 818962,
         "name": "Blight's Wrath"
       }
+    ],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
     ]
   },
   "818960": {
@@ -6350,6 +7015,24 @@
         "id": 818963,
         "name": "Blight's Misfortune"
       }
+    ],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
     ]
   },
   "818961": {
@@ -6468,6 +7151,24 @@
         "id": 819975,
         "name": "Lustful Torment"
       }
+    ],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
     ]
   },
   "818962": {
@@ -6584,6 +7285,24 @@
         "id": 819976,
         "name": "Lustful Torment"
       }
+    ],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
     ]
   },
   "818963": {
@@ -6702,6 +7421,24 @@
         "id": 819977,
         "name": "Lustful Torment"
       }
+    ],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
     ]
   },
   "818964": {
@@ -6761,6 +7498,21 @@
         "id": 818967,
         "name": "Weaver's Pride"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "818965": {
@@ -6821,6 +7573,21 @@
         "id": 818968,
         "name": "Weaver's Wisdom"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "818966": {
@@ -6881,6 +7648,21 @@
         "id": 818969,
         "name": "Weaver's Guile"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "818967": {
@@ -6941,6 +7723,21 @@
         "id": 818970,
         "name": "Weaver's Conceit"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "818968": {
@@ -7005,6 +7802,21 @@
         "id": 818971,
         "name": "Weaver's Acumen"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "818969": {
@@ -7069,6 +7881,21 @@
         "id": 818972,
         "name": "Weaver's Artifice"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "818970": {
@@ -7133,6 +7960,21 @@
         "id": 818973,
         "name": "Weaver's Audacity"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "818971": {
@@ -7249,6 +8091,21 @@
         "id": 819984,
         "name": "Lustful Audacity"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "818972": {
@@ -7365,6 +8222,21 @@
         "id": 819985,
         "name": "Lustful Audacity"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "818973": {
@@ -7481,6 +8353,21 @@
         "id": 819986,
         "name": "Lustful Audacity"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "818974": {
@@ -8327,6 +9214,21 @@
         "id": 818985,
         "name": "Nhe'hed's Wish"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "818985": {
@@ -8392,6 +9294,21 @@
         "id": 818986,
         "name": "Nhe'hed's Will"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "818986": {
@@ -8457,7 +9374,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_818986.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "818988": {
     "desc": "15% boost to Def, Rec, boosts damage reduction when guarding  & restores HP each turn",
@@ -8518,6 +9450,21 @@
         "id": 818989,
         "name": "Courage Shield"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "818989": {
@@ -8585,6 +9532,21 @@
         "id": 818990,
         "name": "Courage Aegis"
       }
+    ],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
     ]
   },
   "818990": {
@@ -8654,7 +9616,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_2_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "818992": {
     "desc": "50% boost to Atk + 10% boost to crit hit rate when BB is over 50% & crit dmg considerably boosts BB<br>Guild Raid: Slightly boosts crit dmg",
@@ -8687,6 +9664,24 @@
         "id": 818993,
         "name": "Ke'hret's Disintegration"
       }
+    ],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
     ]
   },
   "818993": {
@@ -8751,6 +9746,24 @@
         "id": 818994,
         "name": "Ke'hret's Insanguination"
       }
+    ],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
     ]
   },
   "818994": {
@@ -8815,7 +9828,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818994.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819002": {
     "desc": "Boosts Spark damage & Spark damage may slightly boost BB gauge",
@@ -8866,6 +9897,11 @@
         "id": 819003,
         "name": "Bow of Devotion"
       }
+    ],
+    "associated_units": [
+      "30546",
+      "840438",
+      "860167"
     ]
   },
   "819003": {
@@ -8933,6 +9969,11 @@
         "id": 819004,
         "name": "Bow of Passion"
       }
+    ],
+    "associated_units": [
+      "30546",
+      "840438",
+      "860167"
     ]
   },
   "819004": {
@@ -9000,7 +10041,12 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_819004.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546",
+      "840438",
+      "860167"
+    ]
   },
   "819005": {
     "desc": "Boosts critical rate, boosts critical hit damage & critical damage adds Fire, Water, Earth, Thunder elements to attack for 3 turns",
@@ -9095,6 +10141,9 @@
         "id": 819006,
         "name": "Orochi's Symbol"
       }
+    ],
+    "associated_units": [
+      "850198"
     ]
   },
   "819006": {
@@ -9199,6 +10248,9 @@
         "id": 819007,
         "name": "Orochi's Crest"
       }
+    ],
+    "associated_units": [
+      "850198"
     ]
   },
   "819007": {
@@ -9312,7 +10364,10 @@
     "sphere type text": "Critical",
     "thumbnail": "sphere_thum_819007.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850198"
+    ]
   },
   "819008": {
     "desc": "30% boost to all parameters of Fire types & damage taken may boost BB gauge<br>Guild Raid: 5% damage reduction from Earth Element types",
@@ -9349,6 +10404,14 @@
         "id": 819009,
         "name": "Pyrespark Orb"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "819009": {
@@ -9411,6 +10474,14 @@
         "id": 819010,
         "name": "Pyre Essence Orb"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "819010": {
@@ -9479,7 +10550,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_819010.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819011": {
     "desc": "30% boost to all parameters of Water types & damage taken may boost BB gauge<br>Guild Raid: 5% damage reduction from Fire types",
@@ -9516,6 +10595,14 @@
         "id": 819012,
         "name": "Tidewater Orb"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "819012": {
@@ -9578,6 +10665,14 @@
         "id": 819013,
         "name": "Tidal Essence Orb"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "819013": {
@@ -9646,7 +10741,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_819013.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819014": {
     "desc": "30% boost to all parameters of Earth types & damage taken may boost BB gauge<br>Guild Raid: 5% damage reduction from Thunder types",
@@ -9683,6 +10786,14 @@
         "id": 819015,
         "name": "Forestseed Orb"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "819015": {
@@ -9745,6 +10856,14 @@
         "id": 819016,
         "name": "Forest Essence Orb"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "819016": {
@@ -9813,7 +10932,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_819016.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819017": {
     "desc": "30% boost to all parameters of Thunder types & damage taken may boost BB gauge<br>Guild Raid: 5% damage reduction from Water types",
@@ -9850,6 +10977,14 @@
         "id": 819018,
         "name": "Stormstrike Orb"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "819018": {
@@ -9912,6 +11047,14 @@
         "id": 819019,
         "name": "Storm Essence Orb"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "819019": {
@@ -9980,7 +11123,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_819019.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819020": {
     "desc": "30% boost to all parameters of Light types & damage taken may boost BB gauge<br>Guild Raid: 5% damage reduction from Dark types",
@@ -10017,6 +11168,14 @@
         "id": 819021,
         "name": "Solarflare Orb"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "819021": {
@@ -10079,6 +11238,14 @@
         "id": 819022,
         "name": "Solar Essence Orb"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "819022": {
@@ -10147,7 +11314,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_819022.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819023": {
     "desc": "30% boost to all parameters of Dark types & damage taken may boost BB gauge<br>Guild Raid: 5% damage reduction from Light types",
@@ -10184,6 +11359,14 @@
         "id": 819024,
         "name": "Lunarshadow Orb"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "819024": {
@@ -10246,6 +11429,14 @@
         "id": 819025,
         "name": "Lunar Essence Orb"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "819025": {
@@ -10314,7 +11505,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_819025.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819089": {
     "desc": "1% boost to all parameters",
@@ -10347,7 +11546,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "item_thum_401.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819090": {
     "desc": "Boosts drop rate of BC and HC when attacking & boosts Atk when BB gauge is full",
@@ -10398,6 +11605,13 @@
         "id": 819091,
         "name": "Patterned Egg"
       }
+    ],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
     ]
   },
   "819091": {
@@ -10463,6 +11677,13 @@
         "id": 819092,
         "name": "Dyed Masterpiece"
       }
+    ],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
     ]
   },
   "819092": {
@@ -10527,7 +11748,14 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_819092.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
   },
   "819093": {
     "desc": "20% boost to all parameters, 50% boost to Spark damage & boosts Water elemental damage",
@@ -10584,7 +11812,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_819093.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "820158",
+      "840438"
+    ]
   },
   "819094": {
     "desc": "20% boost to Atk, max HP & normal attacks boost BB gauge",
@@ -10646,6 +11883,24 @@
         "id": 819095,
         "name": "Miss Travailler"
       }
+    ],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
     ]
   },
   "819095": {
@@ -10712,6 +11967,24 @@
         "id": 819096,
         "name": "Nougat P08"
       }
+    ],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
     ]
   },
   "819096": {
@@ -10779,7 +12052,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_819096.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819097": {
     "desc": "30% boost to all parameters, raises normal hit amount, 30% boost to critical hit rate, 100% boost to critical damage, probable normal attack on all foes & raises Atk parameter limits to 150000",
@@ -10820,7 +12111,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_819097.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819099": {
     "desc": "60% boost to Rec, restores HP each turn, slightly reduces BB gauge required for BB & boosts OD gauge fill rate",
@@ -10854,7 +12163,15 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_818963.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31066",
+      "31067",
+      "51266",
+      "51267",
+      "850017",
+      "850018"
+    ]
   },
   "819100": {
     "desc": "50% boost to max HP, greatly boosts Atk and BB Atk when HP is above half, greatly boosts Def when HP is below half & negates Def ignoring effect",
@@ -10896,7 +12213,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_818961.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819101": {
     "desc": "50% boost to Atk, 75% boost to Spark damage, critical damage boosts BB gauge & hugely boosts critical damage for 2 turns when damage dealt exceeds certain amount",
@@ -10935,7 +12260,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_819101.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819102": {
     "desc": "15% boost to all parameters, boosts OD gauge fill rate, reduces BB gauge required for BB & considerably boosts drop rate of BC, HC when attacking",
@@ -10971,7 +12314,14 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_819102.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
   },
   "819103": {
     "desc": "Raises Atk parameter limits to 170000, 150% boost to Atk and greatly boosts critical hit rate of Fire types, hugely boosts critical damage, fills BB Gauge to full after dealing 50k damage & negates critical damage",
@@ -11015,7 +12365,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_819103.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819104": {
     "desc": "Raises Atk parameter limits to 170000, 150% boost to Atk and greatly boosts critical hit rate of Water types, boosts BB Atk, 50% reduction to additional damage received & negates all status ailments and Atk, Def, Rec reductions",
@@ -11065,7 +12433,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_819104.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819105": {
     "desc": "Raises Atk parameter limits to 170000, 150% boost to Atk and greatly boosts critical hit rate of Earth types, damage taken restores HP, 150% boost to Spark damage & adds max HP boost for all allies effect to BB/SBB",
@@ -11117,7 +12503,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_819105.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819106": {
     "desc": "Raises Atk parameter limits to 170000, 150% boost to Atk and greatly boosts critical hit rate of Thunder types, boosts Thunder elemental damage, negates elemental damage & 20% damage reduction from normal attacks",
@@ -11159,7 +12563,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_819106.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819107": {
     "desc": "Raises Atk parameter limits to 170000, 150% boost to Atk and greatly boosts critical hit rate of Light types, adds additional attack at turn's end for 3 turns effect to BB/SBB, boosts OD gauge fill rate & negates Def ignoring effect",
@@ -11213,7 +12635,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_819107.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819108": {
     "desc": "Raises Atk parameter limits to 170000, 150% boost to Atk and greatly boosts critical hit rate of Dark types, hugely boosts critical damage, raises normal hit amount & normal attacks enormously boost BB gauge",
@@ -11256,7 +12696,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_819108.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819109": {
     "desc": "Low probability of random status ailment counter & negates all status ailments",
@@ -11539,7 +12997,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438",
+      "850328"
+    ]
   },
   "819113": {
     "desc": "100% boost to normal attack hit amount, 100% boost to Spark damage, 100% boost to critical damage, 100% boost to BB Atk, 200% boost to SBB Atk, 300% boost to UBB Atk & 10% damage reduction",
@@ -11577,7 +13044,26 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_5_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850328",
+      "850367",
+      "850368"
+    ]
   },
   "819114": {
     "desc": "Raises Atk parameter limits to 150000, 100% boost to Atk and boosts critical hit rate of Fire types, greatly boosts critical damage & negates critical damage",
@@ -11616,7 +13102,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_828002.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819115": {
     "desc": "Raises Atk parameter limits to 150000, 100% boost to Atk and boosts critical hit rate of Water types, boosts BB Atk, 25% reduction to additional damage received & negates all status ailments",
@@ -11663,7 +13167,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_828002.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819116": {
     "desc": "Raises Atk parameter limits to 150000, 100% boost to Atk and boosts critical hit rate of Earth types, 100% boost to Spark damage & adds boosts own max HP effect to BB/SBB",
@@ -11709,7 +13231,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_828002.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819117": {
     "desc": "Raises Atk parameter limits to 150000, 100% boost to Atk and boosts critical hit rate of Thunder types, boosts Thunder elemental damage & negates elemental damage",
@@ -11747,7 +13287,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_828002.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819118": {
     "desc": "Raises Atk parameter limits to 150000, 100% boost to Atk and boosts critical hit rate of Light types, adds additional attack at turn's end for 3 turns effect to BB/SBB & negates Def ignoring effect",
@@ -11797,7 +13355,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_828002.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819119": {
     "desc": "Raises Atk parameter limits to 150000, 100% boost to Atk and boosts critical hit rate of Dark types, greatly boosts critical damage & raises normal hit amount",
@@ -11833,7 +13409,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_828002.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819120": {
     "desc": "Restores HP each turn, considerably boosts BB gauge each turn & activates at turn's end effects during turn's start instead",
@@ -11898,6 +13492,10 @@
         "id": 819121,
         "name": "Gold Key"
       }
+    ],
+    "associated_units": [
+      "850547",
+      "850548"
     ]
   },
   "819121": {
@@ -11973,6 +13571,10 @@
         "id": 819122,
         "name": "Diamond Key"
       }
+    ],
+    "associated_units": [
+      "850547",
+      "850548"
     ]
   },
   "819122": {
@@ -12054,7 +13656,11 @@
     "sphere type text": "Special",
     "thumbnail": "sphere_thum_819122.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850547",
+      "850548"
+    ]
   },
   "819123": {
     "desc": "45% boost to all parameters, negates critical and elemental damage, low probability of enormous damage reduction, reduces damage taken from Light, Dark types & activates Dark barrier after activating OD",
@@ -12115,7 +13721,11 @@
     "sphere type text": "Special",
     "thumbnail": "sphere_thum_819123.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "860547",
+      "860548"
+    ]
   },
   "819124": {
     "desc": "50% boost to Atk, Def, Rec when BB gauge is over 50%, 150% boost to Spark damage, Spark damage boosts BB gauge, boosts BB Atk & raises Atk parameter limits to 150000",
@@ -12183,7 +13793,12 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_819124.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546",
+      "840438",
+      "860167"
+    ]
   },
   "819125": {
     "desc": "50% boost to Atk, Def, hugely boosts BB gauge when attacking, raises normal hit amount, considerably boosts critical damage & adds considerable BC, HC drop rate boost for 3 turns effect to BB/SBB",
@@ -12340,7 +13955,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_819127.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819128": {
     "desc": "15% boost to all parameters, 50% Atk boost when BB gauge is full, greatly boosts BB gauge each turn & boosts BC drop rate",
@@ -12376,7 +13999,14 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_819128.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
   },
   "819129": {
     "desc": "100% boost to Spark damage, 50% boost to Atk and 50% boost to Spark damage when Sparks exceed certain amount, Spark damage boosts BB gauge & reduces BB gauge required for BB",
@@ -12422,7 +14052,12 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_819129.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546",
+      "840438",
+      "860167"
+    ]
   },
   "819130": {
     "desc": "100% boost to Atk, 50% boost to Atk when BB gauge is over 50%, boosts Atk when HP is over 50%, boosts critical damage & hugely boosts OD gauge fill rate",
@@ -12460,7 +14095,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_819130.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819131": {
     "desc": "10% boost to all parameters & boosts BC, HC, Item, Karma and Zel drop rates",
@@ -12506,6 +14159,10 @@
         "id": 819132,
         "name": "Fairy Fortune"
       }
+    ],
+    "associated_units": [
+      "30446",
+      "30447"
     ]
   },
   "819132": {
@@ -12571,6 +14228,10 @@
         "id": 819133,
         "name": "Fairy Fate"
       }
+    ],
+    "associated_units": [
+      "30446",
+      "30447"
     ]
   },
   "819133": {
@@ -12650,7 +14311,11 @@
     "sphere type text": "Drop",
     "thumbnail": "sphere_thum_819133.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30446",
+      "30447"
+    ]
   },
   "819136": {
     "desc": "40% boost to all parameters, greatly boosts Spark damage and BC, HC drop rate & greatly restores HP each turn<br>Guild Skill: Adds considerably reduces damage from all types for 1 turn effect to SBB & boosts Spark damage when HP is full",
@@ -12685,7 +14350,12 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_819136.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546",
+      "840438",
+      "860167"
+    ]
   },
   "819137": {
     "desc": "40% boost to all parameters, enormously boosts elemental damage, considerably boosts ATK relative to HP & raises Atk parameter limits to 170000<br>Guild Raid: Adds enormous all elemental damage boost for 3 turns effect to SBB & negates Atk, Def, Rec reduction effects",
@@ -12727,7 +14397,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_819137.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819138": {
     "desc": "30% boost to Def, Rec and max HP, highly probable damage reduction, raises normal hit amount & 5% damage reduction from Light types",
@@ -12762,7 +14450,23 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_819138.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "850978",
+      "860017",
+      "860018"
+    ]
   },
   "819139": {
     "desc": "25% boost to all parameters, greatly boosts critical hit rate, reduces BB gauge required for BB, spark damage boosts BB gauge, boosts Atk and Rec when BB gauge is over 50% & adds great OD gauge fill rate boost for 3 turns effect to BB/SBB",
@@ -12817,7 +14521,14 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_819139.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
   },
   "819140": {
     "desc": "60% boost to max HP, adds Stealth activation for self (hugely boosts own Def, Rec for 2 turns) effect to BB, probable random status ailment infliction counter, negates all status ailments & adds Def ignoring effect to attack for 3 turns effect to BB/SBB ",
@@ -12928,7 +14639,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_819141.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819142": {
     "desc": "60% boost to all parameters of Fire types, adds high probability of resistance against 1 KO attack, raises normal hit amount, normal attacks enormously boost BB gauge & probable normal attack on all foes",
@@ -12977,7 +14696,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_819142.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819143": {
     "desc": "45% boost to all parameters of Water types, adds high probability of resistance against 1 KO attack, boosts Water elemental damage & damage taken boosts BB gauge",
@@ -13021,7 +14748,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_819143.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819144": {
     "desc": "60% boost to all parameters of Water types, adds high probability of resistance against 1 KO attack, boosts Water elemental damage, damage taken boosts BB gauge & adds max HP boost for all allies effect to BB/SBB",
@@ -13079,7 +14814,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_819144.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819145": {
     "desc": "45% boost to all parameters of Earth types, adds high probability of resistance against 1 KO attack, boosts BB gauge each turn & 5% damage reduction",
@@ -13120,7 +14863,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_819145.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819146": {
     "desc": "60% boost to all parameters of Earth types, adds high probability of resistance against 1 KO attack, boosts BB gauge each turn, 10% damage reduction & damage taken may restore HP",
@@ -13167,7 +14918,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_819146.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819147": {
     "desc": "45% boost to all parameters of Thunder types, adds probability of resistance against 1 KO attack, 75% boost to Spark damage & Spark damage slightly boosts BB gauge",
@@ -13210,7 +14969,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_819147.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819148": {
     "desc": "60% boost to all parameters of Thunder types, adds high probability of resistance against 1 KO attack, 75% boost to Spark damage, Spark damage slightly boosts BB gauge & fills BB gauge to max when damage dealt has exceeded certain amount",
@@ -13258,7 +15025,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_819148.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819153": {
     "desc": "30% boost to Atk, Rec and max HP of Female types, negates Atk, Def, Rec reducing effects, damage taken may restore HP, damage taken may greatly boost BB gauge, reduces BB gauge required for BB & adds resistance against 1 KO attack after activating OD",
@@ -13307,7 +15082,15 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_819153.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438",
+      "850298"
+    ]
   },
   "819156": {
     "desc": "40% boost to all parameters, hugely boosts critical damage, critical damage restores HP for 3 turns & critical damage greatly boosts BB gauge<br>Guild Raid: Adds critical damage boost for all element types for 3 turns to SBB & greatly boosts all elemental damage",
@@ -13349,7 +15132,10 @@
     "sphere type text": "Critical",
     "thumbnail": "sphere_thum_819156.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850198"
+    ]
   },
   "819163": {
     "desc": "30% boost to Atk, Def and Rec, negates status ailments, negates Def ignoring effect, negates critical and elemental damage & 50% Spark damage reduction",
@@ -13399,7 +15185,10 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_819163.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "830298"
+    ]
   },
   "819164": {
     "desc": "Greatly restores HP each turn, enormously boosts HC drop rate, greatly boosts BB gauge when HC collected exceeds certain amount, considerably boosts Atk, Def, Rec relative to HP lost & 35% boost to max HP",
@@ -13444,7 +15233,15 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_819164.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31066",
+      "31067",
+      "51266",
+      "51267",
+      "850017",
+      "850018"
+    ]
   },
   "819165": {
     "desc": "Enormously boosts BB gauge each turn, enormously restores HP each turn, probable resistance against 1 KO attack, 50% reduction to additional damage received & boosts Atk, Def, Rec each turn for up to 10 turns",
@@ -13490,7 +15287,16 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_819165.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31066",
+      "31067",
+      "51266",
+      "51267",
+      "830528",
+      "850017",
+      "850018"
+    ]
   },
   "819166": {
     "desc": "150% boost to Atk and boosts critical rate, hugely boosts critical damage, raises normal attack hits & normal attacks hit all foes",
@@ -13525,7 +15331,26 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_819155.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810528",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819170": {
     "desc": "45% boost to all parameters, reduces BB gauge required for BB, damage taken considerably boosts BB gauge & adds powerful attack on single foe to BB/SBB",
@@ -13573,7 +15398,14 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_818892.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
   },
   "819901": {
     "desc": "Boosts Max HP and Def by 5% & boosts Atk for Fire types by 20%",
@@ -13601,7 +15433,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819902": {
     "desc": "Boosts Max HP and Def by 10% & boosts Atk for Fire types by 35%",
@@ -13629,7 +15469,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819903": {
     "desc": "Decreases Fire damage by 15%",
@@ -13649,7 +15497,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819904": {
     "desc": "Decreases Fire damage by 30%",
@@ -13669,7 +15525,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819905": {
     "desc": "Decreases Water damage by 15%",
@@ -13689,7 +15553,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819906": {
     "desc": "Decreases Water damage by 30%",
@@ -13709,7 +15581,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819910": {
     "desc": "Boosts Atk, Def, Rec and max HP by 10%",
@@ -13732,7 +15612,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_819910_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819923": {
     "desc": "Boosts Atk and Rec by 20%, HP & Def by 10%, and increases resistance to status ailments",
@@ -13764,7 +15652,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_fireemblem.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819924": {
     "desc": "150% boost to Atk, 100% boost to Spark damage, considerably boosts critical hit damage, greatly boosts BB Atk, boosts elemental damage & lowers Def by 50%",
@@ -13829,7 +15725,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818956.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819925": {
     "desc": "150% boost to Atk, 100% boost to Spark damage, considerably boosts critical hit damage, greatly boosts BB Atk, boosts elemental damage & lowers Def by 50%",
@@ -13894,7 +15808,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818956.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819926": {
     "desc": "150% boost to Atk, 100% boost to Spark damage, considerably boosts critical hit damage, greatly boosts BB Atk, boosts elemental damage & lowers Def by 50%",
@@ -13959,7 +15891,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818956.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819927": {
     "desc": "150% boost to Atk, 100% boost to Spark damage, boosts BB Atk, boosts BC efficacy, slight probability of reducing damage taken to 1, boosts damage reduced while guarding & lowers Def by 50%",
@@ -14022,7 +15972,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818956.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819928": {
     "desc": "150% boost to Atk, 100% boost to Spark damage, boosts BB Atk, boosts BC efficacy, slight probability of reducing damage taken to 1, boosts damage reduced while guarding & lowers Def by 50%",
@@ -14085,7 +16053,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818956.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819929": {
     "desc": "150% boost to Atk, 100% boost to Spark damage, boosts BB Atk, boosts BC efficacy, slight probability of reducing damage taken to 1, boosts damage reduced while guarding & lowers Def by 50%",
@@ -14148,7 +16134,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818956.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819930": {
     "desc": "150% boost to Atk, considerably boosts critical hit damage, 70% boost to Spark damage, boosts BC efficacy, slight probability of reducing damage taken to 1, boosts damage reduced while guarding & lowers Def by 50%",
@@ -14209,7 +16213,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818956.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819931": {
     "desc": "150% boost to Atk, considerably boosts critical hit damage, 70% boost to Spark damage, boosts BC efficacy, slight probability of reducing damage taken to 1, boosts damage reduced while guarding & lowers Def by 50%",
@@ -14270,7 +16292,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818956.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819932": {
     "desc": "150% boost to Atk, considerably boosts critical hit damage, 70% boost to Spark damage, boosts BC efficacy, slight probability of reducing damage taken to 1, boosts damage reduced while guarding & lowers Def by 50%",
@@ -14331,7 +16371,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818956.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819933": {
     "desc": "150% boost to Atk, greatly boosts BB Atk, boosts critical hit damage, boosts BC efficacy, slight probability of reducing damage taken to 1, boosts damage reduced while guarding & lowers Def by 50%",
@@ -14394,7 +16452,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818956.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819934": {
     "desc": "150% boost to Atk, greatly boosts BB Atk, boosts critical hit damage, boosts BC efficacy, slight probability of reducing damage taken to 1, boosts damage reduced while guarding & lowers Def by 50%",
@@ -14457,7 +16533,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818956.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819935": {
     "desc": "150% boost to Atk, greatly boosts BB Atk, boosts critical hit damage, boosts BC efficacy, slight probability of reducing damage taken to 1, boosts damage reduced while guarding & lowers Def by 50%",
@@ -14520,7 +16614,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818956.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819936": {
     "desc": "150% boost to Atk, 100% boost to Spark damage, boosts BB Atk, boosts OD gauge fill rate, probable damage reduction, boosts Atk and Def by 40% relative to max HP & lowers Def by 50%",
@@ -14588,7 +16700,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818956.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819937": {
     "desc": "150% boost to Atk, 100% boost to Spark damage, boosts BB Atk, boosts OD gauge fill rate, probable damage reduction, boosts Atk and Def by 40% relative to max HP & lowers Def by 50%",
@@ -14656,7 +16786,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818956.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819938": {
     "desc": "150% boost to Atk, 100% boost to Spark damage, boosts BB Atk, boosts OD gauge fill rate, probable damage reduction, boosts Atk and Def by 40% relative to max HP & lowers Def by 50%",
@@ -14724,7 +16872,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818956.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819939": {
     "desc": "150% boost to Atk, considerably boosts critical hit damage, 70% boost to Spark damage, boosts OD gauge fill rate, probable damage reduction, boosts Atk and Def by 40% relative to max HP & lowers Def by 50%",
@@ -14790,7 +16956,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818956.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819940": {
     "desc": "150% boost to Atk, considerably boosts critical hit damage, 70% boost to Spark damage, boosts OD gauge fill rate, probable damage reduction, boosts Atk and Def by 40% relative to max HP & lowers Def by 50%",
@@ -14856,7 +17040,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818956.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819941": {
     "desc": "150% boost to Atk, considerably boosts critical hit damage, 70% boost to Spark damage, boosts OD gauge fill rate, probable damage reduction, boosts Atk and Def by 40% relative to max HP & lowers Def by 50%",
@@ -14922,7 +17124,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818956.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819942": {
     "desc": "150% boost to Atk, greatly boosts BB Atk, boosts critical hit damage, boosts OD gauge fill rate, probable damage reduction, boosts Atk and Def by 40% relative to max HP & lowers Def by 50%",
@@ -14990,7 +17210,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818956.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819943": {
     "desc": "150% boost to Atk, greatly boosts BB Atk, boosts critical hit damage, boosts OD gauge fill rate, probable damage reduction, boosts Atk and Def by 40% relative to max HP & lowers Def by 50%",
@@ -15058,7 +17296,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818956.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819944": {
     "desc": "150% boost to Atk, greatly boosts BB Atk, boosts critical hit damage, boosts OD gauge fill rate, probable damage reduction, boosts Atk and Def by 40% relative to max HP & lowers Def by 50%",
@@ -15126,7 +17382,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_818956.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "819945": {
     "desc": "150% boost to Def, considerably boosts BC efficacy, slight probability of reducing damage taken to 1, considerably boosts damage reduced while guarding, 5% damage reduction & lowers Atk by 50%",
@@ -15183,7 +17457,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_818958.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "819946": {
     "desc": "150% boost to Def, considerably boosts BC efficacy, slight probability of reducing damage taken to 1, considerably boosts damage reduced while guarding, 5% damage reduction & lowers Atk by 50%",
@@ -15240,7 +17529,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_818958.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "819947": {
     "desc": "150% boost to Def, considerably boosts BC efficacy, slight probability of reducing damage taken to 1, considerably boosts damage reduced while guarding, 5% damage reduction & lowers Atk by 50%",
@@ -15297,7 +17601,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_818958.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "819948": {
     "desc": "150% boost to Def, considerably boosts BC efficacy, boosts damage reduced while guarding, 70% boost to Spark damage, boosts critical hit damage, boosts BB Atk & lowers Atk by 50%",
@@ -15360,7 +17679,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_818958.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "819949": {
     "desc": "150% boost to Def, considerably boosts BC efficacy, boosts damage reduced while guarding, 70% boost to Spark damage, boosts critical hit damage, boosts BB Atk & lowers Atk by 50%",
@@ -15423,7 +17757,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_818958.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "819950": {
     "desc": "150% boost to Def, considerably boosts BC efficacy, boosts damage reduced while guarding, 70% boost to Spark damage, boosts critical hit damage, boosts BB Atk & lowers Atk by 50%",
@@ -15486,7 +17835,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_818958.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "819951": {
     "desc": "150% boost to Def, slight probability of reducing damage taken to 1, boosts BC efficacy, 70% boost to Spark damage, boosts critical hit damage, boosts BB Atk & lowers Atk by 50%",
@@ -15549,7 +17913,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_818958.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "819952": {
     "desc": "150% boost to Def, slight probability of reducing damage taken to 1, boosts BC efficacy, 70% boost to Spark damage, boosts critical hit damage, boosts BB Atk & lowers Atk by 50%",
@@ -15612,7 +17991,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_818958.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "819953": {
     "desc": "150% boost to Def, slight probability of reducing damage taken to 1, boosts BC efficacy, 70% boost to Spark damage, boosts critical hit damage, boosts BB Atk & lowers Atk by 50%",
@@ -15675,7 +18069,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_818958.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "819954": {
     "desc": "150% boost to Def, considerably boosts damage reduced while guarding, slight probability of reducing damage taken to 1, 70% boost to Spark damage, boosts critical hit damage, boosts BB Atk & lowers Atk by 50%",
@@ -15738,7 +18147,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_818958.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "819955": {
     "desc": "150% boost to Def, considerably boosts damage reduced while guarding, slight probability of reducing damage taken to 1, 70% boost to Spark damage, boosts critical hit damage, boosts BB Atk & lowers Atk by 50%",
@@ -15801,7 +18225,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_818958.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "819956": {
     "desc": "150% boost to Def, considerably boosts damage reduced while guarding, slight probability of reducing damage taken to 1, 70% boost to Spark damage, boosts critical hit damage, boosts BB Atk & lowers Atk by 50%",
@@ -15864,7 +18303,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_818958.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "819957": {
     "desc": "150% boost to Def, considerably boosts BC efficacy, boosts damage reduced while guarding, boosts OD gauge fill rate, probable damage reduction, boosts Atk and Def by 40% relative to max HP & lowers Atk by 50%",
@@ -15930,7 +18384,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_818958.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "819958": {
     "desc": "150% boost to Def, considerably boosts BC efficacy, boosts damage reduced while guarding, boosts OD gauge fill rate, probable damage reduction, boosts Atk and Def by 40% relative to max HP & lowers Atk by 50%",
@@ -15996,7 +18465,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_818958.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "819959": {
     "desc": "150% boost to Def, considerably boosts BC efficacy, boosts damage reduced while guarding, boosts OD gauge fill rate, probable damage reduction, boosts Atk and Def by 40% relative to max HP & lowers Atk by 50%",
@@ -16062,7 +18546,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_818958.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "819960": {
     "desc": "150% boost to Def, slight probability of reducing damage taken to 1, boosts BC efficacy, boosts OD gauge fill rate, probable damage reduction, boosts Atk and Def by 40% relative to max HP & lowers Atk by 50%",
@@ -16128,7 +18627,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_818958.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "819961": {
     "desc": "150% boost to Def, slight probability of reducing damage taken to 1, boosts BC efficacy, boosts OD gauge fill rate, probable damage reduction, boosts Atk and Def by 40% relative to max HP & lowers Atk by 50%",
@@ -16194,7 +18708,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_818958.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "819962": {
     "desc": "150% boost to Def, slight probability of reducing damage taken to 1, boosts BC efficacy, boosts OD gauge fill rate, probable damage reduction, boosts Atk and Def by 40% relative to max HP & lowers Atk by 50%",
@@ -16260,7 +18789,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_818958.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "819963": {
     "desc": "150% boost to Def, considerably boosts damage reduced while guarding, slight probability of reducing damage taken to 1, boosts OD gauge fill rate, probable damage reduction, boosts Atk and Def by 40% relative to max HP & lowers Atk by 50%",
@@ -16326,7 +18870,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_818958.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "819964": {
     "desc": "150% boost to Def, considerably boosts damage reduced while guarding, slight probability of reducing damage taken to 1, boosts OD gauge fill rate, probable damage reduction, boosts Atk and Def by 40% relative to max HP & lowers Atk by 50%",
@@ -16392,7 +18951,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_818958.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "819965": {
     "desc": "150% boost to Def, considerably boosts damage reduced while guarding, slight probability of reducing damage taken to 1, boosts OD gauge fill rate, probable damage reduction, boosts Atk and Def by 40% relative to max HP & lowers Atk by 50%",
@@ -16458,7 +19032,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_818958.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "819966": {
     "desc": "100% boost to Atk, Def, considerably boosts OD gauge fill rate, probable slight damage reduction, boosts Atk and Def by 50% relative to max HP, adds slight probability of resistance against 1 KO attack & lowers max HP by 40%",
@@ -17873,7 +20462,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819991": {
     "desc": "Immensely strengthens the bearer, granting god-like abilities.",
@@ -17897,7 +20494,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819992": {
     "desc": "Boosts Atk and Def by 20% & absorbs HP from normal attacks",
@@ -17924,7 +20529,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_8_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819993": {
     "desc": "Boosts Atk and Def by 15% & absorbs HP from normal attacks",
@@ -17951,7 +20564,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_8_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819994": {
     "desc": "Adds possible Injury effect and absorbs HP from normal attacks",
@@ -17977,7 +20598,15 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_8_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31066",
+      "31067",
+      "51266",
+      "51267",
+      "850017",
+      "850018"
+    ]
   },
   "819995": {
     "desc": "Adds possible Injury effect and chance to absorb HP from normal attacks",
@@ -18003,7 +20632,15 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_8_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31066",
+      "31067",
+      "51266",
+      "51267",
+      "850017",
+      "850018"
+    ]
   },
   "819996": {
     "desc": "Boosts Atk by 10%, Def by 20% and Rec by 30%",
@@ -18025,7 +20662,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_8_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "819997": {
     "desc": "Boosts Atk by 5%, Def by 10% and Rec by 15%",
@@ -18047,7 +20692,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_8_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "828011": {
     "desc": "35% boost to all parameters & greatly reduces BB gauge requirement and consumption",
@@ -18080,7 +20733,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_828001.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "828012": {
     "desc": "30% boost to all parameters & reduces BB gauge requirement and consumption",
@@ -18113,7 +20774,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_828002.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "828013": {
     "desc": "100% boost to Atk, raises normal attack hits & boost to BB gauge during Spark",
@@ -18143,7 +20812,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_828001.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "828014": {
     "desc": "50% boost to Atk, raises normal attack hits & probable boost to BB gauge during Spark",
@@ -18173,7 +20860,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_828002.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "828017": {
     "desc": "Probable 30% reduction of damage taken, negates defense ignore, critical and elemental based damage & 25% boost to Def, max HP",
@@ -18212,7 +20917,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_828001.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "828018": {
     "desc": "Probable 25% reduction of damage taken, negates defense ignore damage & 20% boost to Def, max HP",
@@ -18242,7 +20962,22 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_828002.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018"
+    ]
   },
   "829901": {
     "desc": "Boosts max HP and Def by 5% & boosts Atk for Water types by 20%",
@@ -18270,7 +21005,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "829902": {
     "desc": "Boosts max HP and Def by 10% & boosts Atk for Water types by 35%",
@@ -18298,7 +21041,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "838001": {
     "desc": "10% boost to all parameters & greatly restores HP each turn",
@@ -18327,7 +21078,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810327",
+      "810338",
+      "840438"
+    ]
   },
   "838002": {
     "desc": "10% boost to all parameters & 70% boost to Spark damage",
@@ -18354,7 +21114,16 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840327",
+      "840438"
+    ]
   },
   "838003": {
     "desc": "Increases resistance to all status ailments, probable slight HP recovery when damaged & reduces damage taken from Dark elements by 5%",
@@ -18417,7 +21186,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "839902": {
     "desc": "Boosts max HP and Def by 10% & boosts Atk for Earth types by 35%",
@@ -18445,7 +21222,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "849901": {
     "desc": "Boosts max HP and Def by 5% & boosts Atk for Thunder types by 20%",
@@ -18473,7 +21258,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "849902": {
     "desc": "Boosts max HP and Def by 10% & boosts Atk for Thunder types by 35%",
@@ -18501,7 +21294,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "849903": {
     "desc": "Decreases Thunder damage by 15%",
@@ -18521,7 +21322,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "849904": {
     "desc": "Decreases Thunder damage by 30%",
@@ -18541,7 +21350,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "849905": {
     "desc": "Decreases Earth damage by 15%",
@@ -18561,7 +21378,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "849906": {
     "desc": "Decreases Earth damage by 30%",
@@ -18581,7 +21406,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
   },
   "849990": {
     "desc": "Boosts Rec by 10%, and Increased Critical Chance",
@@ -18602,7 +21435,10 @@
     "sphere type text": "Critical",
     "thumbnail": "sphere_thum_4_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850198"
+    ]
   },
   "858930": {
     "desc": "Greatly boosts Zel, Karma & Item drop rate",
@@ -18624,7 +21460,11 @@
     "sphere type text": "Drop",
     "thumbnail": "sphere_thum_858930.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30446",
+      "30447"
+    ]
   },
   "880001": {
     "desc": "A mysterious relic used to evolve the Unit Grandt",
@@ -20196,7 +23036,25 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_4_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "840437",
+      "840438",
+      "850367",
+      "850368"
+    ]
   },
   "899999": {
     "desc": "Increase all stats by -50%",
@@ -20235,6 +23093,14 @@
         "id": 899998,
         "name": "Most Bravest Blade"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "88700001": {
@@ -20288,7 +23154,17 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_70_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31066",
+      "31067",
+      "51266",
+      "51267",
+      "750166",
+      "750167",
+      "850017",
+      "850018"
+    ]
   },
   "88700002": {
     "desc": "10% boost to all parameters",
@@ -20343,6 +23219,14 @@
         "id": 88700009,
         "name": "Photon Spear"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
     ]
   },
   "88700003": {
@@ -20404,7 +23288,17 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_70_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "750167",
+      "810338",
+      "840438",
+      "840608"
+    ]
   },
   "88700004": {
     "desc": "30% boost to max HP, boosts Atk relative to how high remaining HP is, boosts BB gauge each turn & damage taken boosts BB gauge",
@@ -20465,7 +23359,17 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "760226",
+      "760227",
+      "810338",
+      "840438"
+    ]
   },
   "88700005": {
     "desc": "Fragments of elemental power crystallized into a brittle physical form.",
@@ -20576,7 +23480,17 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438",
+      "860607",
+      "860608"
+    ]
   },
   "88700008": {
     "desc": "30% boost to Atk, max HP, hugely boosts Spark damage for 2 turns when Sparks have exceeded certain amount, 100% boost to Spark damage & Spark damage boosts BB gauge",
@@ -20640,7 +23554,14 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_4_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546",
+      "710167",
+      "710168",
+      "840438",
+      "860167"
+    ]
   },
   "88700009": {
     "desc": "100% boost to Atk, Rec and 30% boost to critical hit rate when BB gauge is full, boosts Thunder elemental damage, enormously boosts OD gauge fill rate for 2 turns when HC collected has exceeded certain amount & adds Def ignoring effect to attack",
@@ -20706,6 +23627,10 @@
     "sphere type text": "Defense Penetrating",
     "thumbnail": "sphere_thum_4_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "840607",
+      "840608"
+    ]
   }
 }

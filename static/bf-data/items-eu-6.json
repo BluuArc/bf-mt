@@ -144,7 +144,10 @@
     "sphere type text": "Critical",
     "thumbnail": "sphere_thum_1_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850198"
+    ]
   },
   "60050": {
     "desc": "25% boost to all parameters, hugely boosts BC drop rate & slightly boosts BC efficacy",
@@ -200,7 +203,15 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_2_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31006",
+      "31007",
+      "840547",
+      "840548",
+      "850507",
+      "850508"
+    ]
   },
   "60070": {
     "desc": "50% boost to Spark damage & probable Spark vulnerability for 1 turn",
@@ -226,7 +237,10 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_2_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546"
+    ]
   },
   "60080": {
     "desc": "30% boost to all parameters & negates all status ailments",
@@ -291,7 +305,11 @@
     "sphere type text": "Drop",
     "thumbnail": "sphere_thum_2_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30446",
+      "30447"
+    ]
   },
   "60100": {
     "desc": "Boosts elemental and critical damage & 50% boost to Spark damage",
@@ -325,7 +343,14 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_3_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "20916",
+      "810547",
+      "810548",
+      "820397",
+      "820398"
+    ]
   },
   "60110": {
     "desc": "35% boost to all parameters, damage taken boosts BB gauge & boosts BB gauge each turn",
@@ -392,7 +417,10 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_3_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546"
+    ]
   },
   "60130": {
     "desc": "Negates elemental, critical dmg and Atk, Def,  Rec reducing effects & 10% damage reduction",
@@ -427,7 +455,15 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_3_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31006",
+      "31007",
+      "840547",
+      "840548",
+      "850507",
+      "850508"
+    ]
   },
   "60140": {
     "desc": "Hugely boosts OD gauge fill rate, enormously boosts BB Atk, reduces BB gauge req for BB & considerably reduces BB gauge consumption",
@@ -510,7 +546,14 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "20916",
+      "810547",
+      "810548",
+      "820397",
+      "820398"
+    ]
   },
   "60200": {
     "desc": "75% boost to Spark damage, Spark damage slightly restores HP and slightly boosts BB gauge & probable Spark critical",
@@ -577,7 +620,10 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_1_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546"
+    ]
   },
   "60300": {
     "desc": "Probable 20% counter of damage received, probable random status ailment counter & damage taken boosts BB gauge and may considerably restore HP",
@@ -690,7 +736,10 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "50757"
+    ]
   },
   "60500": {
     "desc": "120% boost to Spark damage, hugely boosts Atk when BB gauge is over 50% & probable Spark vulnerability for 1 turn",
@@ -721,7 +770,10 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_1_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546"
+    ]
   },
   "60510": {
     "desc": "45% boost to Atk, Def, Rec, max HP & negates critical and elemental based damage",
@@ -817,7 +869,15 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_5_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31006",
+      "31007",
+      "840547",
+      "840548",
+      "850507",
+      "850508"
+    ]
   },
   "62130": {
     "desc": "150% boost to Spark damage, probable Spark critical, considerably boosts BB Atk & probability of considerable HP absorption",
@@ -879,7 +939,10 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_2_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546"
+    ]
   },
   "62170": {
     "desc": "Negates elemental damage and Def ignoring effects, 10% damage reduction & hugely boosts Def when HP is low",
@@ -914,7 +977,15 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_3_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31006",
+      "31007",
+      "840547",
+      "840548",
+      "850507",
+      "850508"
+    ]
   },
   "62180": {
     "desc": "50% boost to all parameters, slight BB gauge reduction required for BB, damage taken boosts BB gauge & boosts BB gauge each turn",
@@ -1025,7 +1096,15 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31006",
+      "31007",
+      "840547",
+      "840548",
+      "850507",
+      "850508"
+    ]
   },
   "62220": {
     "desc": "45% boost to all parameters, enormously boosts BB Atk & fills BB gauge to max when damage dealt exceeds a certain amount",
@@ -1100,7 +1179,14 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_5_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "20916",
+      "810547",
+      "810548",
+      "820397",
+      "820398"
+    ]
   },
   "62240": {
     "desc": "Spark damage boost (150%) & Spark damage boosts BB gauge & Adds Fire, Water, Earth, Thunder to attack (3 turns) when Sparks exceed certain amount & prob. 20% damage reduction",
@@ -1167,7 +1253,10 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_4_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546"
+    ]
   },
   "62330": {
     "desc": "Probable 20% damage reduction, 30% boost to Def, max HP & enormously boosts BB gauge and greatly restores HP for 3 turns when guarding",
@@ -1206,7 +1295,15 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_3_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31006",
+      "31007",
+      "840547",
+      "840548",
+      "850507",
+      "850508"
+    ]
   },
   "62340": {
     "desc": "150% boost to Atk, Def for first 4 turns, considerably boosts critical hit rate & normal attack may hit all foes",
@@ -1271,7 +1368,10 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_2_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546"
+    ]
   },
   "62360": {
     "desc": "50% boost to max HP, boosts Atk, Def when BB gauge over 50% and BC,HC drop rates & boosts BB Atk and adds all elements to attack after 20 BC & fully restores HP after 15 HC",
@@ -1375,7 +1475,11 @@
     "sphere type text": "Drop",
     "thumbnail": "sphere_thum_3_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30446",
+      "30447"
+    ]
   },
   "62370": {
     "desc": "80% boost to Atk, max HP, boosts elemental damage and damage against status afflicted foes, boosts Spark damage for 2 turns when damage dealt exceeds certain amount",
@@ -1628,7 +1732,10 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_2_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546"
+    ]
   },
   "62410": {
     "desc": "60% boost to all parameters, 10% damage reduction & negates critical and elemental damage",
@@ -1709,7 +1816,14 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_5_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "20916",
+      "810547",
+      "810548",
+      "820397",
+      "820398"
+    ]
   },
   "63000": {
     "desc": "Considerably boosts critical hit rate, hugely boosts critical damage, 30% boost to all parameters & boosts elemental damage",
@@ -1747,6 +1861,9 @@
     "sphere type text": "Critical",
     "thumbnail": "sphere_thum_3_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850198"
+    ]
   }
 }

@@ -2014,6 +2014,9 @@
         "id": 33700,
         "name": "Skill Bracer"
       }
+    ],
+    "associated_units": [
+      "850198"
     ]
   },
   "30401": {
@@ -2066,6 +2069,9 @@
         "id": 230106,
         "name": "Wrathful Needle"
       }
+    ],
+    "associated_units": [
+      "850198"
     ]
   },
   "30402": {
@@ -2119,6 +2125,9 @@
         "id": 235001,
         "name": "Automated Warrior"
       }
+    ],
+    "associated_units": [
+      "850198"
     ]
   },
   "31000": {
@@ -2661,7 +2670,11 @@
     "sphere type text": "Drop",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30446",
+      "30447"
+    ]
   },
   "31401": {
     "desc": "Substantially Increases Drop Rate of BC and HC when Near Death",
@@ -2683,7 +2696,11 @@
     "sphere type text": "Drop",
     "thumbnail": "sphere_thum_5_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30446",
+      "30447"
+    ]
   },
   "31500": {
     "desc": "Boosts Critical Rate when HP is Full",
@@ -2704,7 +2721,10 @@
     "sphere type text": "Critical",
     "thumbnail": "sphere_thum_4_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850198"
+    ]
   },
   "31600": {
     "desc": "Adds Possible Poison Effect to Normal Attack",
@@ -3602,6 +3622,14 @@
         "id": 230206,
         "name": "Warding Scepter"
       }
+    ],
+    "associated_units": [
+      "31006",
+      "31007",
+      "840547",
+      "840548",
+      "850507",
+      "850508"
     ]
   },
   "32201": {
@@ -3623,7 +3651,15 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_2_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31006",
+      "31007",
+      "840547",
+      "840548",
+      "850507",
+      "850508"
+    ]
   },
   "32202": {
     "desc": "Adds Chance of Damage Taken being Decreased by 30%",
@@ -3644,7 +3680,15 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_2_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31006",
+      "31007",
+      "840547",
+      "840548",
+      "850507",
+      "850508"
+    ]
   },
   "32300": {
     "desc": "Increases Resistance to Poison",
@@ -4555,6 +4599,10 @@
         "id": 41500,
         "name": "Zombie Jabot"
       }
+    ],
+    "associated_units": [
+      "30446",
+      "30447"
     ]
   },
   "33800": {
@@ -4617,6 +4665,10 @@
         "id": 41500,
         "name": "Zombie Jabot"
       }
+    ],
+    "associated_units": [
+      "30446",
+      "30447"
     ]
   },
   "33900": {
@@ -4676,6 +4728,10 @@
         "id": 38300,
         "name": "Thief Guards"
       }
+    ],
+    "associated_units": [
+      "30446",
+      "30447"
     ]
   },
   "33901": {
@@ -4726,7 +4782,11 @@
     "sphere type text": "Drop",
     "thumbnail": "sphere_thum_4_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30446",
+      "30447"
+    ]
   },
   "34000": {
     "desc": "Boosts Drop Rate of Karma when Attacking",
@@ -4785,6 +4845,10 @@
         "id": 38300,
         "name": "Thief Guards"
       }
+    ],
+    "associated_units": [
+      "30446",
+      "30447"
     ]
   },
   "34001": {
@@ -4835,7 +4899,11 @@
     "sphere type text": "Drop",
     "thumbnail": "sphere_thum_4_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30446",
+      "30447"
+    ]
   },
   "34100": {
     "desc": "Boosts Drop Rate of Items when Attacking",
@@ -4855,7 +4923,11 @@
     "sphere type text": "Drop",
     "thumbnail": "sphere_thum_4_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30446",
+      "30447"
+    ]
   },
   "34300": {
     "desc": "Adds Chance of 10% of Damage Taken Being Recovered",
@@ -5259,6 +5331,10 @@
         "id": 700032,
         "name": "Ardent Coal"
       }
+    ],
+    "associated_units": [
+      "30446",
+      "30447"
     ]
   },
   "34804": {
@@ -5321,6 +5397,10 @@
         "id": 230304,
         "name": "Affection Charm"
       }
+    ],
+    "associated_units": [
+      "30446",
+      "30447"
     ]
   },
   "34805": {
@@ -5404,6 +5484,9 @@
         "id": 701023,
         "name": "Caliburn"
       }
+    ],
+    "associated_units": [
+      "30546"
     ]
   },
   "34806": {
@@ -5694,7 +5777,10 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_2_9.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546"
+    ]
   },
   "34813": {
     "desc": "Adds chance of BB gauge slightly filling when attacked",
@@ -5758,7 +5844,10 @@
     "sphere type text": "Critical",
     "thumbnail": "sphere_thum_2_9.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850198"
+    ]
   },
   "34816": {
     "desc": "Adds chance of ignoring enemy's Def when attacking",
@@ -6491,7 +6580,11 @@
     "sphere type text": "Drop",
     "thumbnail": "sphere_thum_4_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30446",
+      "30447"
+    ]
   },
   "36000": {
     "desc": "Increases drop rate of BC and HC when attacking",
@@ -6512,7 +6605,11 @@
     "sphere type text": "Drop",
     "thumbnail": "sphere_thum_4_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30446",
+      "30447"
+    ]
   },
   "36100": {
     "desc": "Adds chance of damage taken being decreased by 30%",
@@ -6533,7 +6630,15 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_2_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31006",
+      "31007",
+      "840547",
+      "840548",
+      "850507",
+      "850508"
+    ]
   },
   "36200": {
     "desc": "Greatly boosts all abilities when HP is full",
@@ -6596,7 +6701,10 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_5_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546"
+    ]
   },
   "36401": {
     "desc": "Increases damage dealt during Spark by 100%",
@@ -6616,7 +6724,10 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546"
+    ]
   },
   "36500": {
     "desc": "Adds chance of BB substantially filling when attacked",
@@ -6793,7 +6904,10 @@
     "sphere type text": "Critical",
     "thumbnail": "sphere_thum_4_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850198"
+    ]
   },
   "37100": {
     "desc": "Boosts Atk and Def by 75% for first 2 turns",
@@ -6971,7 +7085,12 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "10016",
+      "10017",
+      "10756"
+    ]
   },
   "37610": {
     "desc": "Boosts Def and max HP by 30% and negates all status ailments",
@@ -7001,7 +7120,11 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30016",
+      "30017"
+    ]
   },
   "37620": {
     "desc": "Boosts both Atk & Def by 30%, and damaged dealt by Spark by 50%",
@@ -7026,7 +7149,11 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "40016",
+      "40017"
+    ]
   },
   "37630": {
     "desc": "Boosts HP & Rec by 30%, heals HP gradually & raises normal attack hits",
@@ -7057,7 +7184,11 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "20016",
+      "20017"
+    ]
   },
   "37640": {
     "desc": "Boosts HP & Def by 30%, HP absorption & boosts BB gauge when attacking",
@@ -7090,7 +7221,11 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60016",
+      "60017"
+    ]
   },
   "37650": {
     "desc": "Boosts both Atk & Def by 30%, BB gauge fills faster when obtaining BC",
@@ -7115,7 +7250,11 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "50016",
+      "50017"
+    ]
   },
   "37660": {
     "desc": "Boosts Def by 50%, nullifies extra critical hit & element based damage",
@@ -7142,7 +7281,10 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30166"
+    ]
   },
   "37670": {
     "desc": "30% boost to Atk and Def & boosts critical hit damage",
@@ -7167,7 +7309,11 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "50166",
+      "710186"
+    ]
   },
   "37680": {
     "desc": "30% boost to Atk and max HP & boosts damage dealt to weaker elements",
@@ -7198,7 +7344,10 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60176"
+    ]
   },
   "37690": {
     "desc": "Boosts Atk, Def, Rec when HP is over 50% & slightly recovers HP and BB gauge when attacked",
@@ -7699,6 +7848,10 @@
         "id": 44200,
         "name": "Bandit Ring"
       }
+    ],
+    "associated_units": [
+      "30446",
+      "30447"
     ]
   },
   "38400": {
@@ -9175,6 +9328,14 @@
         "id": 49800,
         "name": "Nature Shield"
       }
+    ],
+    "associated_units": [
+      "31006",
+      "31007",
+      "840547",
+      "840548",
+      "850507",
+      "850508"
     ]
   },
   "39200": {
