@@ -485,6 +485,4 @@ async function initializeGHData() {
 }
 
 // statsOnly = true;
-// getUnitData();
 getData();
-// initializeGHData();

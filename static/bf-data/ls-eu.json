@@ -5489,7 +5489,10 @@
       }
     ],
     "id": "1940",
-    "name": "Conqueror Flash"
+    "name": "Conqueror Flash",
+    "associated_units": [
+      "10875"
+    ]
   },
   "1941": {
     "desc": "150% boost to Atk, 100% boost to Spark damage, probable Def ignoring effect & slightly absorbs HP",
@@ -5869,7 +5872,10 @@
       }
     ],
     "id": "1956",
-    "name": "Thunderous Devastation"
+    "name": "Thunderous Devastation",
+    "associated_units": [
+      "40916"
+    ]
   },
   "1957": {
     "desc": "100% boost to Atk, 50% boost to max HP, probable Spark critical for 2 turns when sparks exceeds certain amount, Spark damage boosts BB gauge & 130% boost to Spark damage",
@@ -5900,7 +5906,10 @@
       }
     ],
     "id": "1957",
-    "name": "Thunderous Annihilation"
+    "name": "Thunderous Annihilation",
+    "associated_units": [
+      "40917"
+    ]
   },
   "1958": {
     "desc": "100% boost to Atk, 30% boost to max HP, adds probable Def ignoring effect to attack, critical damage enormously boosts BB gauge & enormously boosts Spark damage for 2 turns when Spark damage exceeds certain amount",
@@ -5930,7 +5939,10 @@
       }
     ],
     "id": "1958",
-    "name": "Crimson Incinerator"
+    "name": "Crimson Incinerator",
+    "associated_units": [
+      "60257"
+    ]
   },
   "1959": {
     "desc": "50% boost to Atk, max HP, hugely boosts BB Atk & hugely boosts Spark damage for 2 turns when damage dealt exceeds certain amount",
@@ -5956,7 +5968,10 @@
       }
     ],
     "id": "1959",
-    "name": "Ferocious Resolve"
+    "name": "Ferocious Resolve",
+    "associated_units": [
+      "40986"
+    ]
   },
   "1960": {
     "desc": "60% boost to Atk, max HP, hugely boosts BB Atk, considerably boosts OD gauge fill rate & enormously boosts Spark damage for 2 turns when damage dealt exceeds certain amount",
@@ -5986,7 +6001,10 @@
       }
     ],
     "id": "1960",
-    "name": "Ferocious Commitment"
+    "name": "Ferocious Commitment",
+    "associated_units": [
+      "40987"
+    ]
   },
   "2000": {
     "desc": "BB gauge fills after each turn",
@@ -7250,7 +7268,10 @@
       }
     ],
     "id": "2228",
-    "name": "Mecha-Angel Blast"
+    "name": "Mecha-Angel Blast",
+    "associated_units": [
+      "50317"
+    ]
   },
   "2229": {
     "desc": "100% boost to Atk and 30% boost to max HP when 5 elements or more are present, 50% boost to Atk, 30% boost to max HP, hugely boosts critical damage & considerably boosts BC efficacy",
@@ -7276,7 +7297,10 @@
       }
     ],
     "id": "2229",
-    "name": "Vestal Radiance"
+    "name": "Vestal Radiance",
+    "associated_units": [
+      "10257"
+    ]
   },
   "2300": {
     "desc": "Boost in critical hit damage",
@@ -7856,7 +7880,10 @@
       }
     ],
     "id": "2513",
-    "name": "Heir to the Blade"
+    "name": "Heir to the Blade",
+    "associated_units": [
+      "20915"
+    ]
   },
   "2514": {
     "desc": "100% boost to Atk and Def for first 2 turns, probable 15% damage counter & critical damage hugely boosts BB gauge",
@@ -7881,7 +7908,10 @@
       }
     ],
     "id": "2514",
-    "name": "Devotion to Potential"
+    "name": "Devotion to Potential",
+    "associated_units": [
+      "20916"
+    ]
   },
   "2515": {
     "desc": "30% boost to max HP, 120% boost to Atk, Def for first 3 turns & probable normal attack on all foes",
@@ -10064,7 +10094,10 @@
       }
     ],
     "id": "4347",
-    "name": "Knight's Pride"
+    "name": "Knight's Pride",
+    "associated_units": [
+      "10985"
+    ]
   },
   "4348": {
     "desc": "30% boost to Def and max HP, negates all status ailments & considerably boosts BB Atk",
@@ -10091,7 +10124,10 @@
       }
     ],
     "id": "4348",
-    "name": "Blood's Awakening"
+    "name": "Blood's Awakening",
+    "associated_units": [
+      "10986"
+    ]
   },
   "4349": {
     "desc": "20% boost to Def and max HP, slightly restores HP each turn & damage taken may slightly restore HP",
@@ -10115,7 +10151,10 @@
       }
     ],
     "id": "4349",
-    "name": "Purely Innocent Heart"
+    "name": "Purely Innocent Heart",
+    "associated_units": [
+      "51075"
+    ]
   },
   "4350": {
     "desc": "30% boost to Def and max HP, adds Light element to attack, restores HP each turn & damage taken may slightly restore HP",
@@ -10145,7 +10184,10 @@
       }
     ],
     "id": "4350",
-    "name": "Unwavering Friendship"
+    "name": "Unwavering Friendship",
+    "associated_units": [
+      "51076"
+    ]
   },
   "4351": {
     "desc": "30% boost to Def, max HP, negates all status ailments & restores HP each turn",
@@ -10567,7 +10609,10 @@
       }
     ],
     "id": "4364",
-    "name": "Guardian of Fire"
+    "name": "Guardian of Fire",
+    "associated_units": [
+      "11036"
+    ]
   },
   "4365": {
     "desc": "60% boost to Def, max HP, boosts damage reduction when guarding, considerably restores HP each turn & damage taken hugely boosts BB gauge",
@@ -10595,7 +10640,10 @@
       }
     ],
     "id": "4365",
-    "name": "Guardian of Divine Flame"
+    "name": "Guardian of Divine Flame",
+    "associated_units": [
+      "11037"
+    ]
   },
   "4366": {
     "desc": "50% boost to Def, max HP, considerably boosts BC efficacy, probable 20% damage reduction & restores HP each turn",
@@ -10622,7 +10670,10 @@
       }
     ],
     "id": "4366",
-    "name": "Embers of Conquest"
+    "name": "Embers of Conquest",
+    "associated_units": [
+      "10737"
+    ]
   },
   "4367": {
     "desc": "50% boost to Def, max HP, damage taken boosts BB gauge & considerably boosts BB gauge each turn",
@@ -10706,7 +10757,10 @@
       }
     ],
     "id": "4369",
-    "name": "Divine Mandate"
+    "name": "Divine Mandate",
+    "associated_units": [
+      "61107"
+    ]
   },
   "4370": {
     "desc": "50% boost to Def, max HP, boosts damage reduction rate when guarding, probable 20% damage reduction & damage taken when guarding hugely boosts BB gauge",
@@ -10731,7 +10785,10 @@
       }
     ],
     "id": "4370",
-    "name": "Dark Divinity Barrier"
+    "name": "Dark Divinity Barrier",
+    "associated_units": [
+      "20637"
+    ]
   },
   "4371": {
     "desc": "50% boost to Def, max HP, negates all status ailments & boosts damage reduction when guarding",
@@ -10756,7 +10813,10 @@
       }
     ],
     "id": "4371",
-    "name": "Corrupter's Shell"
+    "name": "Corrupter's Shell",
+    "associated_units": [
+      "30946"
+    ]
   },
   "4372": {
     "desc": "60% boost to Def, max HP, negates all status ailments, boosts damage reduction when guarding & slight damage reduction for 2 turns when damage taken exceeds certain amount",
@@ -10789,7 +10849,10 @@
       }
     ],
     "id": "4372",
-    "name": "Mocking Shell"
+    "name": "Mocking Shell",
+    "associated_units": [
+      "30947"
+    ]
   },
   "4373": {
     "desc": "50% boost to Def, max HP, slightly boosts Atk, Def relative to remaining HP & 110% boost to Spark damage",
@@ -10813,7 +10876,10 @@
       }
     ],
     "id": "4373",
-    "name": "Searing Commandment"
+    "name": "Searing Commandment",
+    "associated_units": [
+      "11066"
+    ]
   },
   "4374": {
     "desc": "60% boost to Def, max HP, boosts Atk, Def relative to remaining HP, 130% boost to Spark damage & considerably restores HP each turn",
@@ -10843,7 +10909,10 @@
       }
     ],
     "id": "4374",
-    "name": "Incandescent Precept"
+    "name": "Incandescent Precept",
+    "associated_units": [
+      "11067"
+    ]
   },
   "4375": {
     "desc": "50% boost to Def, max HP, adds probable random status ailment counter & damage taken boosts BB gauge",
@@ -10870,7 +10939,10 @@
       }
     ],
     "id": "4375",
-    "name": "Deceiver's Ruse"
+    "name": "Deceiver's Ruse",
+    "associated_units": [
+      "61136"
+    ]
   },
   "4376": {
     "desc": "60% boost to Def, max HP, probable 25% damage counter, adds probable random status ailment counter & damage taken hugely boosts BB gauge",
@@ -10903,7 +10975,10 @@
       }
     ],
     "id": "4376",
-    "name": "Deceiver's Mockery"
+    "name": "Deceiver's Mockery",
+    "associated_units": [
+      "61137"
+    ]
   },
   "4377": {
     "desc": "50% boost to Def, max HP, reduces BB gauge required for BB & boosts BC efficacy",
@@ -10923,7 +10998,10 @@
       }
     ],
     "id": "4377",
-    "name": "Radiant Wisdom's Majesty"
+    "name": "Radiant Wisdom's Majesty",
+    "associated_units": [
+      "51216"
+    ]
   },
   "4378": {
     "desc": "60% boost to Def, max HP, reduces BB gauge required for BB, considerably boosts BC efficacy & reduces Spark damage",
@@ -10948,7 +11026,10 @@
       }
     ],
     "id": "4378",
-    "name": "Divine Wisdom's Glory"
+    "name": "Divine Wisdom's Glory",
+    "associated_units": [
+      "51217"
+    ]
   },
   "4379": {
     "desc": "50% boost to Def, max HP, negates Def ignoring effects, considerably boosts BB gauge each turn & probable Spark critical for 2 turns when BC collected exceeds certain amount",
@@ -10977,7 +11058,10 @@
       }
     ],
     "id": "4379",
-    "name": "Mechanical Order"
+    "name": "Mechanical Order",
+    "associated_units": [
+      "40946"
+    ]
   },
   "4380": {
     "desc": "60% boost to Def, max HP, negates Def ignoring effects, hugely boosts BB gauge each turn & probable Spark critical for 2 turns when BC collected exceeds certain amount",
@@ -11006,7 +11090,10 @@
       }
     ],
     "id": "4380",
-    "name": "God-Machine's Aura"
+    "name": "God-Machine's Aura",
+    "associated_units": [
+      "40947"
+    ]
   },
   "4381": {
     "desc": "50% boost to Def, max HP, boosts Atk, Def, Rec each turn for up to 3 turns, probable 15% damage reduction & damage taken boosts BB gauge",
@@ -11037,7 +11124,10 @@
       }
     ],
     "id": "4381",
-    "name": "Deflector Shield"
+    "name": "Deflector Shield",
+    "associated_units": [
+      "30986"
+    ]
   },
   "4382": {
     "desc": "60% boost to Def, max HP, boosts Atk, Def, Rec each turn for up to 3 turns, probable 20% damage reduction & damage taken hugely boosts BB gauge",
@@ -11068,7 +11158,10 @@
       }
     ],
     "id": "4382",
-    "name": "Ablative Armor"
+    "name": "Ablative Armor",
+    "associated_units": [
+      "30987"
+    ]
   },
   "4384": {
     "desc": "50% boost to Def, max HP, 5% damage reduction from Fire, Water, Earth, Thunder types & negates critical and elemental damage",
@@ -11097,7 +11190,10 @@
       }
     ],
     "id": "4384",
-    "name": "Frigid Oath"
+    "name": "Frigid Oath",
+    "associated_units": [
+      "30996"
+    ]
   },
   "4385": {
     "desc": "60% boost to Def, max HP, 10% damage reduction from Fire, Water, Earth, Thunder types, negates critical and elemental damage & considerably restores HP each turn",
@@ -11132,7 +11228,10 @@
       }
     ],
     "id": "4385",
-    "name": "Sacred Oath"
+    "name": "Sacred Oath",
+    "associated_units": [
+      "30997"
+    ]
   },
   "4386": {
     "desc": "50% boost to Def, max HP, slight damage reduction for 1 turn when damage dealt exceeds certain amount & probable 15% damage reduction",
@@ -11157,7 +11256,10 @@
       }
     ],
     "id": "4386",
-    "name": "Red Justice Oath"
+    "name": "Red Justice Oath",
+    "associated_units": [
+      "11116"
+    ]
   },
   "4387": {
     "desc": "60% boost to Def, max HP, slight damage reduction for 1 turn when damage dealt exceeds certain amount, probable 20% damage reduction & considerably boosts BC efficacy",
@@ -11186,7 +11288,10 @@
       }
     ],
     "id": "4387",
-    "name": "Red Justice Obsession"
+    "name": "Red Justice Obsession",
+    "associated_units": [
+      "11117"
+    ]
   },
   "4388": {
     "desc": "50% boost to Def, max HP, greatly restores HP for 2 turns when HP is below 50% & damage taken boosts BB gauge",
@@ -11213,7 +11318,10 @@
       }
     ],
     "id": "4388",
-    "name": "Mighty Legacy"
+    "name": "Mighty Legacy",
+    "associated_units": [
+      "31006"
+    ]
   },
   "4389": {
     "desc": "60% boost to Def, max HP, greatly restores HP for 2 turns when HP is below 50% & damage taken hugely boosts BB gauge and may restore HP",
@@ -11246,7 +11354,10 @@
       }
     ],
     "id": "4389",
-    "name": "Heir to Power"
+    "name": "Heir to Power",
+    "associated_units": [
+      "31007"
+    ]
   },
   "4400": {
     "desc": "Boosts resistence to status ailments & fills BB gauge after each turn",
@@ -12449,7 +12560,10 @@
       }
     ],
     "id": "5526",
-    "name": "聖騎士の証"
+    "name": "聖騎士の証",
+    "associated_units": [
+      "50975"
+    ]
   },
   "5527": {
     "desc": "全てのユニットの最大ＨＰを３０％アップ＆残りＨＰが多いほど、攻撃力をアップ＆残りＨＰが少ないほど、防御力・回復力をアップ",
@@ -12474,7 +12588,10 @@
       }
     ],
     "id": "5527",
-    "name": "誰ガ為の願い"
+    "name": "誰ガ為の願い",
+    "associated_units": [
+      "50976"
+    ]
   },
   "5528": {
     "desc": "50% boost to max HP, hugely boosts critical damage, 100% boost to Spark damage & enormously boosts BB Atk",
@@ -12752,7 +12869,10 @@
       }
     ],
     "id": "5545",
-    "name": "Sea God's Wrath"
+    "name": "Sea God's Wrath",
+    "associated_units": [
+      "21046"
+    ]
   },
   "5546": {
     "desc": "80% boost to max HP, considerably boosts Atk, Def, Rec relative to remaining HP, boosts Atk, Def, Rec each turn for up to 3 turns & 130% boost to Spark damage",
@@ -12785,7 +12905,10 @@
       }
     ],
     "id": "5546",
-    "name": "Sea God's Roar"
+    "name": "Sea God's Roar",
+    "associated_units": [
+      "21047"
+    ]
   },
   "5600": {
     "desc": "25% boost to Atk of all Light and Dark Units",
@@ -15775,7 +15898,10 @@
       }
     ],
     "id": "7496",
-    "name": "Omnibenevolence"
+    "name": "Omnibenevolence",
+    "associated_units": [
+      "20677"
+    ]
   },
   "7497": {
     "desc": "50% boost to Atk, max HP, slightly boosts Atk, Def, Rec when HP is over 50% & Spark damage slightly boosts BB gauge",
@@ -15980,7 +16106,10 @@
       }
     ],
     "id": "7505",
-    "name": "Breath of Life"
+    "name": "Breath of Life",
+    "associated_units": [
+      "51147"
+    ]
   },
   "7506": {
     "desc": "50% boost to Atk, max HP, Spark damage slightly boosts BB gauge & 110% boost to Spark damage",
@@ -16002,7 +16131,10 @@
       }
     ],
     "id": "7506",
-    "name": "Subtle Temptation"
+    "name": "Subtle Temptation",
+    "associated_units": [
+      "51166"
+    ]
   },
   "7507": {
     "desc": "60% boost to Atk, Max HP, Spark damage boosts BB gauge, 130% boost to Spark damage & probable Spark critical",
@@ -16029,7 +16161,10 @@
       }
     ],
     "id": "7507",
-    "name": "Seductive Request"
+    "name": "Seductive Request",
+    "associated_units": [
+      "51167"
+    ]
   },
   "7508": {
     "desc": "50% boost to Atk, max HP, critical damage enormously boosts BB gauge, hugely boosts critical damage & critical damage boosts Atk for 2 turns",
@@ -16059,7 +16194,10 @@
       }
     ],
     "id": "7508",
-    "name": "Conqueror Blade"
+    "name": "Conqueror Blade",
+    "associated_units": [
+      "10677"
+    ]
   },
   "7509": {
     "desc": "50% boost to Atk, max HP, boosts Atk, Def when HP is over 50%, hugely boosts critical damage & enormously boosts BB Atk",
@@ -16087,7 +16225,10 @@
       }
     ],
     "id": "7509",
-    "name": "Molten Wrath"
+    "name": "Molten Wrath",
+    "associated_units": [
+      "11056"
+    ]
   },
   "7510": {
     "desc": "60% boost to Atk, max HP, considerably boosts Atk, Def when HP is over 50%, hugely boosts critical damage & enormously boosts BB Atk",
@@ -16115,7 +16256,10 @@
       }
     ],
     "id": "7510",
-    "name": "Molten Annihilation"
+    "name": "Molten Annihilation",
+    "associated_units": [
+      "11057"
+    ]
   },
   "7511": {
     "desc": "50% boost to Atk, max HP, 110% boost to Spark damage & hugely boosts critical damage",
@@ -16135,7 +16279,10 @@
       }
     ],
     "id": "7511",
-    "name": "Savage Breakers"
+    "name": "Savage Breakers",
+    "associated_units": [
+      "20996"
+    ]
   },
   "7512": {
     "desc": "60% boost to Atk, max HP, 130% boost to Spark damage, hugely boosts critical damage & adds probable Def ignoring effect to attack",
@@ -16159,7 +16306,10 @@
       }
     ],
     "id": "7512",
-    "name": "Merciless Undertow"
+    "name": "Merciless Undertow",
+    "associated_units": [
+      "20997"
+    ]
   },
   "7513": {
     "desc": "35% boost to Atk, max HP, 60% boost to Spark damage & adds probable Def ignoring effect to attack",
@@ -16179,7 +16329,10 @@
       }
     ],
     "id": "7513",
-    "name": "Red Dragon Scales"
+    "name": "Red Dragon Scales",
+    "associated_units": [
+      "61125"
+    ]
   },
   "7514": {
     "desc": "45% boost to Atk, max HP, adds Fire element to attack, 80% boost to Spark damage & adds probable Def ignoring effect to attack",
@@ -16205,7 +16358,10 @@
       }
     ],
     "id": "7514",
-    "name": "Enchanted Dragon Scales"
+    "name": "Enchanted Dragon Scales",
+    "associated_units": [
+      "61126"
+    ]
   },
   "7515": {
     "desc": "50% boost to Atk, max HP, Spark damage boosts BB gauge, 100% boost to Spark damage & boosts Spark damage for 2 turns when Sparks exceed certain amount",
@@ -16235,7 +16391,10 @@
       }
     ],
     "id": "7515",
-    "name": "Mechanist's Soul"
+    "name": "Mechanist's Soul",
+    "associated_units": [
+      "40607"
+    ]
   },
   "7516": {
     "desc": "80% boost to Atk, 40% boost to max HP, probable random status ailment infliction & damage taken hugely boosts BB gauge",
@@ -16265,7 +16424,10 @@
       }
     ],
     "id": "7516",
-    "name": "Corrupted Legions"
+    "name": "Corrupted Legions",
+    "associated_units": [
+      "60767"
+    ]
   },
   "7517": {
     "desc": "50% boost to Atk, max HP, slight HP absorption & hugely boosts all elemental damage",
@@ -16293,7 +16455,10 @@
       }
     ],
     "id": "7517",
-    "name": "Forbidden Aberration"
+    "name": "Forbidden Aberration",
+    "associated_units": [
+      "61146"
+    ]
   },
   "7518": {
     "desc": "60% boost to Atk, max HP, slight HP absorption, hugely boosts all elemental damage & enormously boosts Spark damage for 2 turns when damage dealt exceeds certain amount",
@@ -16329,7 +16494,10 @@
       }
     ],
     "id": "7518",
-    "name": "Mockery of Life"
+    "name": "Mockery of Life",
+    "associated_units": [
+      "61147"
+    ]
   },
   "7519": {
     "desc": "80% boost to Atk, 30% boost to max HP, hugely boosts BB Atk, considerably boosts critical damage & considerably boosts OD gauge fill rate",
@@ -16386,7 +16554,10 @@
       }
     ],
     "id": "7520",
-    "name": "Hollow Shell's Impurity"
+    "name": "Hollow Shell's Impurity",
+    "associated_units": [
+      "40936"
+    ]
   },
   "7521": {
     "desc": "60% boost to Atk, max HP, probable random status ailment infliction & 130% boost to Spark damage",
@@ -16414,7 +16585,10 @@
       }
     ],
     "id": "7521",
-    "name": "Cadaver's Haunting Miasma"
+    "name": "Cadaver's Haunting Miasma",
+    "associated_units": [
+      "40937"
+    ]
   },
   "7523": {
     "desc": "50% boost to Atk, Rec, max HP, negates all status ailments, slight HP absorption & enormously boosts BB Atk when HP is over 50%",
@@ -16450,7 +16624,10 @@
       }
     ],
     "id": "7523",
-    "name": "Flames of Loathing"
+    "name": "Flames of Loathing",
+    "associated_units": [
+      "11096"
+    ]
   },
   "7524": {
     "desc": "60% boost to Atk, Rec, max HP, negates all status ailments, slight HP absorption & enormously boosts BB Atk when HP is over 50%",
@@ -16486,7 +16663,10 @@
       }
     ],
     "id": "7524",
-    "name": "Blistering Malice"
+    "name": "Blistering Malice",
+    "associated_units": [
+      "11097"
+    ]
   },
   "7525": {
     "desc": "50% boost to Atk, max HP, boosts Atk, Def when HP is over 50% & enormously boosts Spark damage and considerably boosts BB Atk for 2 turns when Spark damage exceeds certain amount",
@@ -16522,7 +16702,10 @@
       }
     ],
     "id": "7525",
-    "name": "Wintery Howl"
+    "name": "Wintery Howl",
+    "associated_units": [
+      "21006"
+    ]
   },
   "7526": {
     "desc": "60% boost to Atk, max HP, considerably boosts Atk, Def when HP is over 50% & enormously boosts Spark damage and considerably boosts BB Atk for 2 turns when Spark damage exceeds certain amount",
@@ -16558,7 +16741,10 @@
       }
     ],
     "id": "7526",
-    "name": "Frost-fanged Howl"
+    "name": "Frost-fanged Howl",
+    "associated_units": [
+      "21007"
+    ]
   },
   "7527": {
     "desc": "50% boost to Atk, max HP, slight damage reduction for 1 turn when Sparks exceed certain amount & enormously boosts Spark damage for 2 turns when Sparks exceed certain amount",
@@ -16586,7 +16772,10 @@
       }
     ],
     "id": "7527",
-    "name": "Glacial Rebuke Arrow"
+    "name": "Glacial Rebuke Arrow",
+    "associated_units": [
+      "21036"
+    ]
   },
   "7528": {
     "desc": "60% boost to Atk, max HP, slight damage reduction for 1 turn when Sparks exceed certain amount, enormously boosts Spark damage for 2 turns when Sparks exceed certain amount & Spark damage boosts BB gauge",
@@ -16620,7 +16809,10 @@
       }
     ],
     "id": "7528",
-    "name": "Glacial Judgment Arrow"
+    "name": "Glacial Judgment Arrow",
+    "associated_units": [
+      "21037"
+    ]
   },
   "7529": {
     "desc": "50% boost to Atk, max HP, enormously boosts BB Atk & adds probable random status ailment counter",
@@ -16647,7 +16839,10 @@
       }
     ],
     "id": "7529",
-    "name": "Accursed Soul"
+    "name": "Accursed Soul",
+    "associated_units": [
+      "61196"
+    ]
   },
   "7530": {
     "desc": "60% boost to Atk, max HP, enormously boosts BB Atk, considerably boosts BC efficacy & adds probable random status ailment counter",
@@ -16678,7 +16873,10 @@
       }
     ],
     "id": "7530",
-    "name": "Irredeemable Soul"
+    "name": "Irredeemable Soul",
+    "associated_units": [
+      "61197"
+    ]
   },
   "7533": {
     "desc": "50% boost to Atk, max HP, 110% boost to Spark damage & hugely boosts all elemental damage",
@@ -16704,7 +16902,10 @@
       }
     ],
     "id": "7533",
-    "name": "Bloodthirsty Reaper"
+    "name": "Bloodthirsty Reaper",
+    "associated_units": [
+      "61216"
+    ]
   },
   "7534": {
     "desc": "60% boost to Atk, max HP, 130% boost to Spark damage, hugely boosts all elemental damage & enormously boosts damage against status afflicted foes",
@@ -16740,7 +16941,10 @@
       }
     ],
     "id": "7534",
-    "name": "Murderous Bloodlust"
+    "name": "Murderous Bloodlust",
+    "associated_units": [
+      "61217"
+    ]
   },
   "7600": {
     "desc": "50% boost to Atk of Water & Light types",
@@ -18008,7 +18212,10 @@
       }
     ],
     "id": "9710",
-    "name": "Crimson Knowledge"
+    "name": "Crimson Knowledge",
+    "associated_units": [
+      "10715"
+    ]
   },
   "9711": {
     "desc": "Hugely boosts BC, HC, Zel, Karma, and Item drop rates & boosts BC efficacy",
@@ -18027,7 +18234,10 @@
       }
     ],
     "id": "9711",
-    "name": "Burning Wisdom"
+    "name": "Burning Wisdom",
+    "associated_units": [
+      "10716"
+    ]
   },
   "9730": {
     "desc": "すべてのユニットのクリティカル率がアップ＆クリティカル時、与えるダメージがアップし、確率でＢＢゲージがかなり増加",
@@ -19232,7 +19442,10 @@
       }
     ],
     "id": "10139",
-    "name": "Outsider's Distortion"
+    "name": "Outsider's Distortion",
+    "associated_units": [
+      "20986"
+    ]
   },
   "10140": {
     "desc": "50% boost to all parameters, hugely boosts all elemental damage, negates critical damage & considerably boosts BC efficacy",
@@ -19267,7 +19480,10 @@
       }
     ],
     "id": "10140",
-    "name": "Deeper Dimensions"
+    "name": "Deeper Dimensions",
+    "associated_units": [
+      "20987"
+    ]
   },
   "10141": {
     "desc": "45% boost to all parameters, slight Spark damage reduction & damage taken may restore HP",
@@ -19292,7 +19508,10 @@
       }
     ],
     "id": "10141",
-    "name": "Annihilation Zone"
+    "name": "Annihilation Zone",
+    "associated_units": [
+      "40906"
+    ]
   },
   "10142": {
     "desc": "50% boost to all parameters, Spark damage reduction, damage taken may restore HP & slight damage reduction when damage dealt exceeds certain amount for 1 turn",
@@ -19325,7 +19544,10 @@
       }
     ],
     "id": "10142",
-    "name": "Annihilation Sector"
+    "name": "Annihilation Sector",
+    "associated_units": [
+      "40907"
+    ]
   },
   "10143": {
     "desc": "40% boost to all parameters, enormously boosts BB Atk, considerably boosts BC efficacy & hugely boosts BC, HC drop rates",
@@ -19354,7 +19576,10 @@
       }
     ],
     "id": "10143",
-    "name": "Verdure Dance"
+    "name": "Verdure Dance",
+    "associated_units": [
+      "30627"
+    ]
   },
   "10144": {
     "desc": "50% boost to all parameters, hugely boosts all elemental damage, 5% damage reduction from all types & enormously boosts Spark damage for 2 turns when damage dealt exceeds certain amount",
@@ -19396,7 +19621,10 @@
       }
     ],
     "id": "10144",
-    "name": "Dark Sanctum"
+    "name": "Dark Sanctum",
+    "associated_units": [
+      "60097"
+    ]
   },
   "10148": {
     "desc": "50% boost to all parameters, 40% boost to Atk and 20% boost to max HP when 5 elements or more are present, 5% damage reduction from all types & 110% boost to Spark damage",
@@ -19430,7 +19658,10 @@
       }
     ],
     "id": "10148",
-    "name": "Blazing Inception"
+    "name": "Blazing Inception",
+    "associated_units": [
+      "51246"
+    ]
   },
   "10149": {
     "desc": "60% boost to all parameters, 50% boost to Atk and 30% boost to max HP when 5 elements or more are present, 10% damage reduction from all types & 130% boost to Spark damage",
@@ -19464,7 +19695,10 @@
       }
     ],
     "id": "10149",
-    "name": "Conquering Conflagration"
+    "name": "Conquering Conflagration",
+    "associated_units": [
+      "51247"
+    ]
   },
   "10150": {
     "desc": "50% boost to all parameters, raises normal hit amount & negates elemental damage",
@@ -19488,7 +19722,10 @@
       }
     ],
     "id": "10150",
-    "name": "Righteous Dance"
+    "name": "Righteous Dance",
+    "associated_units": [
+      "51256"
+    ]
   },
   "10151": {
     "desc": "60% boost to all parameters, raises normal hit amount, negates elemental damage & considerably boosts OD gauge fill rate",
@@ -19516,7 +19753,10 @@
       }
     ],
     "id": "10151",
-    "name": "Righteous Rule"
+    "name": "Righteous Rule",
+    "associated_units": [
+      "51257"
+    ]
   },
   "10153": {
     "desc": "50% boost to all parameters, slightly boosts Atk, Def, Rec relative to remaining HP & boosts damage reduction when guarding",
@@ -19544,7 +19784,10 @@
       }
     ],
     "id": "10153",
-    "name": "Bladelord's Defense"
+    "name": "Bladelord's Defense",
+    "associated_units": [
+      "51276"
+    ]
   },
   "10154": {
     "desc": "60% boost to all parameters, boosts Atk, Def, Rec relative to remaining HP, boosts damage reduction when guarding & negates Def ignoring effects",
@@ -19576,7 +19819,10 @@
       }
     ],
     "id": "10154",
-    "name": "Bladelord's Fortress"
+    "name": "Bladelord's Fortress",
+    "associated_units": [
+      "51277"
+    ]
   },
   "10200": {
     "desc": "Critical damage slightly boosts BB gauge",
@@ -19926,7 +20172,10 @@
       }
     ],
     "id": "11600",
-    "name": "Flamethrower"
+    "name": "Flamethrower",
+    "associated_units": [
+      "10922"
+    ]
   },
   "11601": {
     "desc": "Adds Fire element to attack & probable Def ignoring effect",
@@ -19943,7 +20192,10 @@
       }
     ],
     "id": "11601",
-    "name": "Flame Blaster"
+    "name": "Flame Blaster",
+    "associated_units": [
+      "10923"
+    ]
   },
   "11700": {
     "desc": "Adds Water element to attack",
@@ -19956,7 +20208,10 @@
       }
     ],
     "id": "11700",
-    "name": "Waterspout"
+    "name": "Waterspout",
+    "associated_units": [
+      "20862"
+    ]
   },
   "11701": {
     "desc": "Adds Water element to attack & slightly boosts BC efficacy",
@@ -19973,7 +20228,10 @@
       }
     ],
     "id": "11701",
-    "name": "Water Blaster"
+    "name": "Water Blaster",
+    "associated_units": [
+      "20863"
+    ]
   },
   "11800": {
     "desc": "Adds Earth element to attack",
@@ -19986,7 +20244,10 @@
       }
     ],
     "id": "11800",
-    "name": "Earth Hammer"
+    "name": "Earth Hammer",
+    "associated_units": [
+      "30822"
+    ]
   },
   "11801": {
     "desc": "Adds Earth element to attack & boosts Atk, Def, Rec each turn for up to 3 turns",
@@ -20007,7 +20268,10 @@
       }
     ],
     "id": "11801",
-    "name": "Earth Blaster"
+    "name": "Earth Blaster",
+    "associated_units": [
+      "30823"
+    ]
   },
   "11900": {
     "desc": "Adds Thunder element to attack",
@@ -20020,7 +20284,10 @@
       }
     ],
     "id": "11900",
-    "name": "Thunderstrike"
+    "name": "Thunderstrike",
+    "associated_units": [
+      "40802"
+    ]
   },
   "11901": {
     "desc": "Adds Thunder element to attack & probable 15% damage counter",
@@ -20039,7 +20306,10 @@
       }
     ],
     "id": "11901",
-    "name": "Thunder Blaster"
+    "name": "Thunder Blaster",
+    "associated_units": [
+      "40803"
+    ]
   },
   "12200": {
     "desc": "Slightly boosts Atk, Def, Rec when HP is over 50%",
@@ -20053,7 +20323,10 @@
       }
     ],
     "id": "12200",
-    "name": "Fenrir's Power"
+    "name": "Fenrir's Power",
+    "associated_units": [
+      "20892"
+    ]
   },
   "12201": {
     "desc": "Slightly boosts Atk, Def, Rec when HP is over 50%",
@@ -20067,7 +20340,10 @@
       }
     ],
     "id": "12201",
-    "name": "Fenrir's Majesty"
+    "name": "Fenrir's Majesty",
+    "associated_units": [
+      "20893"
+    ]
   },
   "12300": {
     "desc": "Probable normal attack on all enemies",
@@ -20079,7 +20355,10 @@
       }
     ],
     "id": "12300",
-    "name": "Tri-Tail"
+    "name": "Tri-Tail",
+    "associated_units": [
+      "51112"
+    ]
   },
   "12301": {
     "desc": "Probable normal attack on all enemies",
@@ -20091,7 +20370,10 @@
       }
     ],
     "id": "12301",
-    "name": "Nine-Tailed Light"
+    "name": "Nine-Tailed Light",
+    "associated_units": [
+      "51113"
+    ]
   },
   "12400": {
     "desc": "Probable 15% damage counter",
@@ -20104,7 +20386,10 @@
       }
     ],
     "id": "12400",
-    "name": "Wraith Power"
+    "name": "Wraith Power",
+    "associated_units": [
+      "61072"
+    ]
   },
   "12401": {
     "desc": "Probable 20% damage counter & probable slight reduction of foe's BB gauge",
@@ -20121,7 +20406,10 @@
       }
     ],
     "id": "12401",
-    "name": "Twisted Curse"
+    "name": "Twisted Curse",
+    "associated_units": [
+      "61073"
+    ]
   },
   "12500": {
     "desc": "50% boost to Atk, Def, max HP, considerably boosts Rec relative to remaining HP & enormously boosts BB Atk",
@@ -20255,7 +20543,10 @@
       }
     ],
     "id": "12504",
-    "name": "機兵の力"
+    "name": "機兵の力",
+    "associated_units": [
+      "30932"
+    ]
   },
   "12505": {
     "desc": "残りＨＰが多いほど、攻撃力をアップ＆防御貫通効果を無効",
@@ -20272,7 +20563,10 @@
       }
     ],
     "id": "12505",
-    "name": "鋼機兵の核力"
+    "name": "鋼機兵の核力",
+    "associated_units": [
+      "30933"
+    ]
   },
   "12512": {
     "desc": "50% boost to Def, Rec, max HP, restores HP each turn & damage taken may restore HP",
@@ -20297,7 +20591,10 @@
       }
     ],
     "id": "12512",
-    "name": "Healer's Moon"
+    "name": "Healer's Moon",
+    "associated_units": [
+      "51186"
+    ]
   },
   "12513": {
     "desc": "60% boost to Def, Rec, max HP, considerably restores HP each turn, Spark damage reduction & damage taken may restore HP",
@@ -20327,7 +20624,10 @@
       }
     ],
     "id": "12513",
-    "name": "Wings of Resurrection"
+    "name": "Wings of Resurrection",
+    "associated_units": [
+      "51187"
+    ]
   },
   "12514": {
     "desc": "50% boost to Atk, Def, max HP, enormously boosts BB Atk when HP is over 50% & slight damage reduction for 2 turns when HP is below 50%",
@@ -20356,7 +20656,10 @@
       }
     ],
     "id": "12514",
-    "name": "Earth Lord's Upheaval"
+    "name": "Earth Lord's Upheaval",
+    "associated_units": [
+      "30956"
+    ]
   },
   "12515": {
     "desc": "60% boost to Atk, Def, max HP, negates Def ignoring effects, enormously boosts BB Atk when HP is over 50% & slight damage reduction for 2 turns when HP is below 50%",
@@ -20389,7 +20692,10 @@
       }
     ],
     "id": "12515",
-    "name": "Verdant Lord's Calamity"
+    "name": "Verdant Lord's Calamity",
+    "associated_units": [
+      "30957"
+    ]
   },
   "12516": {
     "desc": "50% boost to Def, Rec, max HP & damage taken boosts BB gauge and may restore HP",
@@ -20414,7 +20720,10 @@
       }
     ],
     "id": "12516",
-    "name": "Emerald Endgame"
+    "name": "Emerald Endgame",
+    "associated_units": [
+      "30966"
+    ]
   },
   "12517": {
     "desc": "60% boost to Def, Rec, max HP, damage taken boosts BB gauge and may restore HP & slight damage reduction for 2 turns when damage taken exceeds certain amount",
@@ -20447,7 +20756,10 @@
       }
     ],
     "id": "12517",
-    "name": "Emerald Supremacy"
+    "name": "Emerald Supremacy",
+    "associated_units": [
+      "30967"
+    ]
   },
   "12518": {
     "desc": "40% boost to Def, Rec, max HP, negates all status ailments, restores HP each turn & HC collected boosts BB gauge once",
@@ -20532,7 +20844,10 @@
       }
     ],
     "id": "12531",
-    "name": "Murderer's Gouge"
+    "name": "Murderer's Gouge",
+    "associated_units": [
+      "40976"
+    ]
   },
   "12532": {
     "desc": "60% boost to Atk, Def, max HP, hugely boosts critical damage, considerably boosts BC efficacy & adds probable Def ignoring effect to attack",
@@ -20557,7 +20872,10 @@
       }
     ],
     "id": "12532",
-    "name": "Sadist's Strike"
+    "name": "Sadist's Strike",
+    "associated_units": [
+      "40977"
+    ]
   },
   "18830": {
     "desc": "25% boost to Atk Power of Fire Types",
@@ -20873,7 +21191,10 @@
       }
     ],
     "id": "710147",
-    "name": "Lycanthrope Leader"
+    "name": "Lycanthrope Leader",
+    "associated_units": [
+      "710147"
+    ]
   },
   "710153": {
     "desc": "Boosts max Atk (5%) & max Rec (15%) & Boosts to crit damage (75%)",
@@ -20930,6 +21251,45 @@
     "name": "An infernal presence",
     "associated_units": [
       "710155"
+    ]
+  },
+  "710157": {
+    "desc": "Boosts max HP, ATK and REC (80%) & boosts ATK relative to remaining HP (0-120%) & boosts critical damage (175%) & boosts Spark damage (120%) & raises ATK parameters limits to 130000 & Spark damage reduction (25%)",
+    "effects": [
+      {
+        "atk% buff": 80,
+        "hp% buff": 80,
+        "passive id": "1",
+        "rec% buff": 80
+      },
+      {
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 120,
+        "buff proportional to hp": "remaining",
+        "passive id": "46"
+      },
+      {
+        "crit multiplier%": 175,
+        "passive id": "34"
+      },
+      {
+        "damage% for spark": 120,
+        "passive id": "31"
+      },
+      {
+        "increase atk cap": 130000,
+        "passive id": "143"
+      },
+      {
+        "base spark dmg% resist": 25,
+        "buff spark dmg% resist": 0,
+        "passive id": "77"
+      }
+    ],
+    "id": "710157",
+    "name": "An infernal presence",
+    "associated_units": [
+      "710157"
     ]
   },
   "710164": {
@@ -21318,7 +21678,10 @@
       }
     ],
     "id": "710234",
-    "name": "Loving Family"
+    "name": "Loving Family",
+    "associated_units": [
+      "710234"
+    ]
   },
   "710237": {
     "desc": "Boosts all parameters (50%) & negates status ailments & Spark damage reduction (25%) & boosts EXP gained (10%)",
@@ -21350,7 +21713,10 @@
       }
     ],
     "id": "710237",
-    "name": "Protective Sister"
+    "name": "Protective Sister",
+    "associated_units": [
+      "710237"
+    ]
   },
   "710247": {
     "desc": "Boosts ATK, DEF and max HP of Fire types (100%) & damage reduction from Fire, Earth types (20%) & adds probable resistance against 1 KO attack (20%) & negates all status ailments and ATK, DEF, REC reduction effects & boosts Spark damage (160%)",
@@ -21395,7 +21761,10 @@
       }
     ],
     "id": "710247",
-    "name": "Genesis Survivor"
+    "name": "Genesis Survivor",
+    "associated_units": [
+      "710247"
+    ]
   },
   "710312": {
     "desc": "15% boost to HP, ATK, DEF, and REC",
@@ -21779,7 +22148,10 @@
       }
     ],
     "id": "720167",
-    "name": "Forced Happiness"
+    "name": "Forced Happiness",
+    "associated_units": [
+      "720167"
+    ]
   },
   "720176": {
     "desc": "Chance of inflicting a random status ailment when attacking (15% injury, sickness, weakness. 10% poison, curse, paralysis) & Boosts BB gauge when taking damage (100% chance to get 3-5) & Boosts damage dealt to foes with status ailments (100%) ",
@@ -22006,7 +22378,10 @@
       }
     ],
     "id": "720217",
-    "name": "Monarch Guidance"
+    "name": "Monarch Guidance",
+    "associated_units": [
+      "720217"
+    ]
   },
   "720226": {
     "desc": "Boosts HP, DEF (40%) & boosts Spark damage (80%) & adds probable DEF ignoring effect to attack (20% chance)",
@@ -22092,7 +22467,10 @@
       }
     ],
     "id": "720237",
-    "name": "Incorruptible Spirit"
+    "name": "Incorruptible Spirit",
+    "associated_units": [
+      "720237"
+    ]
   },
   "720244": {
     "desc": "Boosts ATK and HP (30%) & probable resistance against 1 KO attack (15%)",
@@ -22111,7 +22489,10 @@
       }
     ],
     "id": "720244",
-    "name": "Naval Force"
+    "name": "Naval Force",
+    "associated_units": [
+      "720244"
+    ]
   },
   "720247": {
     "desc": "Boosts ATK and HP (60%) & boosts ATK (100%) when BB gauge is over 50% & boosts ABP and CBP gain & boosts BB and SBB activation rates (25%) & probable resistance against 1 KO attack (20%)",
@@ -22144,7 +22525,10 @@
       }
     ],
     "id": "720247",
-    "name": "Merciless Admiral"
+    "name": "Merciless Admiral",
+    "associated_units": [
+      "720247"
+    ]
   },
   "720257": {
     "desc": "Boosts ATK (150%) & HP (80%) of Water types & damage reduction from Fire, Water types (20%) & boosts critical damage (175%) and Spark damage (150%) & Spark damage boosts BB gauge (2-3 BC)",
@@ -22181,7 +22565,10 @@
       }
     ],
     "id": "720257",
-    "name": "Trained Fists"
+    "name": "Trained Fists",
+    "associated_units": [
+      "720257"
+    ]
   },
   "730115": {
     "desc": "35% boost to Atk Power of Female Units. Additional 30% when 5 elements or more are present",
@@ -22733,7 +23120,10 @@
       }
     ],
     "id": "730217",
-    "name": "Primal Lord"
+    "name": "Primal Lord",
+    "associated_units": [
+      "730217"
+    ]
   },
   "730226": {
     "desc": "30% boost to all parameters & negates all Atk, Def, Rec reduction effects & reduces damage taken (15%) 2 turns when HP is below 50%",
@@ -22980,7 +23370,10 @@
       }
     ],
     "id": "730257",
-    "name": "Zodiacal Essence"
+    "name": "Zodiacal Essence",
+    "associated_units": [
+      "730257"
+    ]
   },
   "730264": {
     "desc": "Boosts DEF and HP (30%) & damage taken boosts BB gauge (2-5 BC)",
@@ -22998,7 +23391,10 @@
       }
     ],
     "id": "730264",
-    "name": "Devoted Historian"
+    "name": "Devoted Historian",
+    "associated_units": [
+      "730264"
+    ]
   },
   "730267": {
     "desc": "Boosts DEF and HP (60%) & negates elemental damage and DEF ignoring damage & damage taken boosts BB gauge (4-7 BC) & damage reduction (20%) for 2 turns when HP is below 50%",
@@ -23033,7 +23429,10 @@
       }
     ],
     "id": "730267",
-    "name": "Poetic Destiny"
+    "name": "Poetic Destiny",
+    "associated_units": [
+      "730267"
+    ]
   },
   "730277": {
     "desc": "Boosts all parameters of Earth types (85%) & damage reduction from Thunder, Earth types (20%) & boosts Earth elemental damage (250%) & boosts BB ATK (300%) when HP is over 50% & reduces BB gauge required for BB (25%)",
@@ -23075,7 +23474,10 @@
       }
     ],
     "id": "730277",
-    "name": "Anatomy Mastery"
+    "name": "Anatomy Mastery",
+    "associated_units": [
+      "730277"
+    ]
   },
   "730287": {
     "desc": "Boosts all parameters of Female types (100%) & damage taken and Spark damage boosts BB gauge (6-10 BC and 3-4 BC) & reduces damage taken (20%) for 2 turns when damage taken has exceeded certain amount (5000) & damage reduction (10%)",
@@ -23114,7 +23516,10 @@
       }
     ],
     "id": "730287",
-    "name": "Protectress of All Women"
+    "name": "Protectress of All Women",
+    "associated_units": [
+      "730287"
+    ]
   },
   "740115": {
     "desc": "35% boost to Atk Power of Female Units. Additional 30% when 5 elements or more are present",
@@ -23468,7 +23873,10 @@
       }
     ],
     "id": "740167",
-    "name": "Richest Son"
+    "name": "Richest Son",
+    "associated_units": [
+      "740167"
+    ]
   },
   "740176": {
     "desc": "Boosts all stats (30%) & Probable recovery of HP when attacked (40% Chance to heal 20% of DMG received) & Boost REC and DEF when damage taken has exceeded certain amount for 2 turns (70%, 5000 damage)",
@@ -23682,7 +24090,10 @@
       }
     ],
     "id": "740217",
-    "name": "Own Legacy"
+    "name": "Own Legacy",
+    "associated_units": [
+      "740217"
+    ]
   },
   "740226": {
     "desc": "40% boost to max HP & 80% boost to ATK, DEF for 2 turns when BC collected has exceeded certain amount (20) & boosts BB ATK (200%) for 2 turns when HC collected exceeded certain amount (20)",
@@ -23840,7 +24251,10 @@
       }
     ],
     "id": "740247",
-    "name": "Hierarchical Respect"
+    "name": "Hierarchical Respect",
+    "associated_units": [
+      "740247"
+    ]
   },
   "750014": {
     "desc": "Huge boost to drop rates during battle, especially during Christmas season",
@@ -23981,6 +24395,47 @@
       "750136"
     ]
   },
+  "750137": {
+    "desc": "Boosts all parameters (80%) & boosts critical damage (175%) & boosts Spark damage (150%) & boosts elemental damage (200%) & damage taken may restore HP (50% chance 30%)",
+    "effects": [
+      {
+        "atk% buff": 80,
+        "def% buff": 80,
+        "hp% buff": 80,
+        "passive id": "1",
+        "rec% buff": 80
+      },
+      {
+        "crit multiplier%": 175,
+        "passive id": "34"
+      },
+      {
+        "damage% for spark": 150,
+        "passive id": "31"
+      },
+      {
+        "dark units do extra elemental weakness dmg": true,
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 200,
+        "fire units do extra elemental weakness dmg": true,
+        "light units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "thunder units do extra elemental weakness dmg": true,
+        "water units do extra elemental weakness dmg": true
+      },
+      {
+        "dmg% to hp% when attacked chance%": 50,
+        "dmg% to hp% when attacked high": 30,
+        "dmg% to hp% when attacked low": 30,
+        "passive id": "24"
+      }
+    ],
+    "id": "750137",
+    "name": "Immaculate Apex",
+    "associated_units": [
+      "750137"
+    ]
+  },
   "750143": {
     "desc": "5% reduction in damage taken & +10% HP for all Units",
     "effects": [
@@ -24091,7 +24546,10 @@
       }
     ],
     "id": "750147",
-    "name": "Protective Wings"
+    "name": "Protective Wings",
+    "associated_units": [
+      "750147"
+    ]
   },
   "750153": {
     "desc": "Boosts max Rec (20%)",
@@ -24387,7 +24845,10 @@
       }
     ],
     "id": "750177",
-    "name": "Sisters of Desolation"
+    "name": "Sisters of Desolation",
+    "associated_units": [
+      "750177"
+    ]
   },
   "750186": {
     "desc": "Boost to drop rate (25%) and effectiveness of HC (75%) & Reduces damage taken (20%) when damage taken has exceeded certain amount for 2 turns (5000) & Boost HP of all allies (40%)",
@@ -24717,7 +25178,10 @@
       }
     ],
     "id": "750257",
-    "name": "Selfish Goddess's Wish"
+    "name": "Selfish Goddess's Wish",
+    "associated_units": [
+      "750257"
+    ]
   },
   "750264": {
     "desc": "Boosts ATK and HP (30%) & Spark damage boosts BB gauge (1-2 BC)",
@@ -24735,7 +25199,10 @@
       }
     ],
     "id": "750264",
-    "name": "Ancient Lineage"
+    "name": "Ancient Lineage",
+    "associated_units": [
+      "750264"
+    ]
   },
   "750267": {
     "desc": "Boosts ATK and HP (60%) & Spark damage boosts BB gauge (2-3 BC) and restores HP (300-500 HP) & boosts Spark damage (150%) & Spark damage boosts BC drop rate (80%)",
@@ -24764,7 +25231,10 @@
       }
     ],
     "id": "750267",
-    "name": "Forgotten Bloodline"
+    "name": "Forgotten Bloodline",
+    "associated_units": [
+      "750267"
+    ]
   },
   "750277": {
     "desc": "Boosts ATK (150%) & HP (80%) of Light types & boosts DEF and REC (80%) when BB gauge is full & damage reduction from Light, Dark types (20%) & boosts OD gauge fill rate (25%) & boosts Spark damage (150%)",
@@ -24801,7 +25271,10 @@
       }
     ],
     "id": "750277",
-    "name": "Unsuspected Leader"
+    "name": "Unsuspected Leader",
+    "associated_units": [
+      "750277"
+    ]
   },
   "750287": {
     "desc": "Boosts all parameters (60%) & boosts critical damage (175%) and Spark damage (100%) & critical damage boosts BB gauge (8-10 BC) and boosts BB ATK (200%) for 2 turns",
@@ -24839,7 +25312,10 @@
       }
     ],
     "id": "750287",
-    "name": "Own Destiny"
+    "name": "Own Destiny",
+    "associated_units": [
+      "750287"
+    ]
   },
   "750307": {
     "desc": "Boosts all parameters of Female types (80%) & damage reduction from Light, Dark types (15%) & boosts Spark damage (130%) & negates elemental damage & Spark damage boosts BB gauge (2-3 BC)",
@@ -24875,7 +25351,10 @@
       }
     ],
     "id": "750307",
-    "name": "Prophecy of Valhalla"
+    "name": "Prophecy of Valhalla",
+    "associated_units": [
+      "750307"
+    ]
   },
   "750317": {
     "desc": "Boosts max HP (100%) & boosts ATK, DEF, REC when HP is over 50% (120%) & boosts Spark damage (160%) & adds probable Spark critical (30% chance 50%) & damage reduction from normal attack (10%) & boosts OD fill rate (30%)",
@@ -24910,7 +25389,10 @@
       }
     ],
     "id": "750317",
-    "name": "Blessing of All-Father"
+    "name": "Blessing of All-Father",
+    "associated_units": [
+      "750317"
+    ]
   },
   "760006": {
     "desc": "40% boost to max HP & Boosts OD gauge fill rate (20%) & Chance to resist 1 KO attack (chance proportional to lost HP) (10-40%)",
@@ -25376,6 +25858,46 @@
       "760186"
     ]
   },
+  "760187": {
+    "desc": "Boosts max HP (80%) & boosts ATK, DEF relative to remaining HP (0-120%) & boosts BC, HC (35%), Zel (60%), Karma (50%) and Item (8%) drop rates & boosts critical damage (175%) & critical damage boosts BB gauge (8-10 BC)",
+    "effects": [
+      {
+        "hp% buff": 80,
+        "passive id": "1"
+      },
+      {
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 120,
+        "buff proportional to hp": "remaining",
+        "def% base buff": 0,
+        "def% extra buff based on hp": 120,
+        "passive id": "46"
+      },
+      {
+        "bc drop rate% buff": 35,
+        "hc drop rate% buff": 35,
+        "item drop rate% buff": 3,
+        "karma drop rate% buff": 50,
+        "passive id": "19",
+        "zel drop rate% buff": 60
+      },
+      {
+        "crit multiplier%": 175,
+        "passive id": "34"
+      },
+      {
+        "bc fill on crit max": 10,
+        "bc fill on crit min": 8,
+        "bc fill on crit%": 100,
+        "passive id": "65"
+      }
+    ],
+    "id": "760187",
+    "name": "Antique Art of the Shadows",
+    "associated_units": [
+      "760187"
+    ]
+  },
   "760195": {
     "desc": "Boosts ATK (80%) & Boosts BB ATK boost (100%) & Boosts BB gauge (5 BC) when damage dealt has exceeded certain amount (10 000)",
     "effects": [
@@ -25781,7 +26303,10 @@
       }
     ],
     "id": "760254",
-    "name": "Defender of the Humanity"
+    "name": "Defender of the Humanity",
+    "associated_units": [
+      "760254"
+    ]
   },
   "760257": {
     "desc": "Boosts ATK and HP (60%) & boosts Critical damage (175%) & boosts Spark damage (150%) & boosts BB ATK (250%)",
@@ -25807,7 +26332,10 @@
       }
     ],
     "id": "760257",
-    "name": "Defender of the Republic"
+    "name": "Defender of the Republic",
+    "associated_units": [
+      "760257"
+    ]
   },
   "760264": {
     "desc": "Boosts ATK and HP (30%) & boosts elemental damage (75%)",
@@ -25829,7 +26357,10 @@
       }
     ],
     "id": "760264",
-    "name": "Hidden Potential"
+    "name": "Hidden Potential",
+    "associated_units": [
+      "760264"
+    ]
   },
   "760267": {
     "desc": "Boosts HP (60%) & boosts ATK and REC based on remaining HP (0-100%) & boosts OD fill rate (25%) & boosts Spark damage (140%) & boosts elemental damage (150%)",
@@ -25866,7 +26397,10 @@
       }
     ],
     "id": "760267",
-    "name": "Mate Devourer"
+    "name": "Mate Devourer",
+    "associated_units": [
+      "760267"
+    ]
   },
   "760277": {
     "desc": "Boosts ATK (200%), HP (80%) and critical hit rate (30%) of Dark types & damage reduction from Light, Dark types (20%) & raises normal hit amount (+1, 75% damage) & damage taken boosts BB gauge (6-10 BC) & additional damage reduction (15%)",
@@ -25903,7 +26437,10 @@
       }
     ],
     "id": "760277",
-    "name": "Survival of the Fittest"
+    "name": "Survival of the Fittest",
+    "associated_units": [
+      "760277"
+    ]
   },
   "780086": {
     "desc": "30% boost to Atk Power of Female Units. Additional 30% when 5 elements or more are present",
@@ -26308,7 +26845,10 @@
       }
     ],
     "id": "801086",
-    "name": "Heavenly Assimilation"
+    "name": "Heavenly Assimilation",
+    "associated_units": [
+      "811016"
+    ]
   },
   "801088": {
     "desc": "20% boost to max HP, Atk & boost to critical damage",
@@ -26863,7 +27403,10 @@
       }
     ],
     "id": "801206",
-    "name": "Klutz!"
+    "name": "Klutz!",
+    "associated_units": [
+      "840325"
+    ]
   },
   "801207": {
     "desc": "Largely boosts Atk relative to amount of depleted HP & negates critical hits from foes",
@@ -26881,7 +27424,10 @@
       }
     ],
     "id": "801207",
-    "name": "Markswoman Aura"
+    "name": "Markswoman Aura",
+    "associated_units": [
+      "840326"
+    ]
   },
   "801209": {
     "desc": "Greatly boosts Atk, Def, Rec when BB gauge is more than half-full",
@@ -26895,7 +27441,10 @@
       }
     ],
     "id": "801209",
-    "name": "Lovestruck!"
+    "name": "Lovestruck!",
+    "associated_units": [
+      "810325"
+    ]
   },
   "801210": {
     "desc": "35% boost to max HP & hugely boosts Atk, Def, Rec when BB gauge is more than half-full",
@@ -26913,7 +27462,10 @@
       }
     ],
     "id": "801210",
-    "name": "Creed of the Witch Hunter"
+    "name": "Creed of the Witch Hunter",
+    "associated_units": [
+      "810326"
+    ]
   },
   "801212": {
     "desc": "20% boost to all parameters & negates elemental damage",
@@ -27616,7 +28168,10 @@
       }
     ],
     "id": "801269",
-    "name": "Malevolent Aspect"
+    "name": "Malevolent Aspect",
+    "associated_units": [
+      "810108"
+    ]
   },
   "801271": {
     "desc": "Boosts all parameters (50%) & boosts ATK and DEF (50%) when BB gauge is over 50% & probable damage reduction to 1 (15%) & probable resistance against 1 KO attack (20%) & damage taken boosts BB gauge (5-8 BC)",
@@ -27653,7 +28208,10 @@
       }
     ],
     "id": "801271",
-    "name": "March of the Wild Hunt"
+    "name": "March of the Wild Hunt",
+    "associated_units": [
+      "860428"
+    ]
   },
   "801276": {
     "desc": "Boosts ATK and HP (80%) & boosts ATK, DEF, REC (80%) when BB gauge is over 50% & boosts Spark damage (130%) & Spark damage boosts BB gauge (2-3 BC) & reduces damage taken (20%) for 2 turns when Sparks exceed certain amount (15)",
@@ -27690,7 +28248,10 @@
       }
     ],
     "id": "801276",
-    "name": "Prescient Guardian"
+    "name": "Prescient Guardian",
+    "associated_units": [
+      "840128"
+    ]
   },
   "801290": {
     "desc": "40% boost to all parameters, hugely boosts BC, HC drop rate, Spark damage hugely boosts BC, HC drop rates, 100% boost to Spark damage & slight damage reduction for 2 turns when BC collected has exceeded certain amount",
@@ -27723,7 +28284,10 @@
       }
     ],
     "id": "801290",
-    "name": "Boundless Love"
+    "name": "Boundless Love",
+    "associated_units": [
+      "830518"
+    ]
   },
   "801292": {
     "desc": "Boosts max HP (80%) & boosts ATK, DEF, REC relative to remaining HP (80%) & 15% reduction from Fire, Water, Earth, Thunder types & probable resistance against 1 KO attack (20%) & boosts BB ATK (250%)",
@@ -27765,7 +28329,10 @@
       }
     ],
     "id": "801292",
-    "name": "Heart of the Phoenix"
+    "name": "Heart of the Phoenix",
+    "associated_units": [
+      "810508"
+    ]
   },
   "810006": {
     "desc": "Boosts all stats (35%) & Reduce damage taken (20%) for 2 turns when damage taken have exceed 5000 & Negates DEF ignoring damage",
@@ -28129,7 +28696,10 @@
       }
     ],
     "id": "810016",
-    "name": "Sphragis of Mazzaroth"
+    "name": "Sphragis of Mazzaroth",
+    "associated_units": [
+      "830118"
+    ]
   },
   "810017": {
     "desc": "40% boost to Def, max HP, probable 15% damage reduction, greatly boosts BB gauge fill rate & restores HP each turn",
@@ -28156,7 +28726,10 @@
       }
     ],
     "id": "810017",
-    "name": "A Happy Tune"
+    "name": "A Happy Tune",
+    "associated_units": [
+      "860127"
+    ]
   },
   "810018": {
     "desc": "50% boost to Def, max HP, probable 20% damage reduction, hugely boosts BB gauge fill rate & restores HP each turn",
@@ -28183,7 +28756,10 @@
       }
     ],
     "id": "810018",
-    "name": "Wake Up Whistling"
+    "name": "Wake Up Whistling",
+    "associated_units": [
+      "860128"
+    ]
   },
   "810019": {
     "desc": "80% boost to Atk, Def and 50% boost to max HP of Fire types, greatly boosts Atk when HP is low & damage taken boosts BB gauge",
@@ -28211,7 +28787,10 @@
       }
     ],
     "id": "810019",
-    "name": "Strike Between Moments"
+    "name": "Strike Between Moments",
+    "associated_units": [
+      "810356"
+    ]
   },
   "810020": {
     "desc": "100% boost to Atk, Def and 65% boost to max HP of Fire types, hugely boosts Atk when HP is low, damage taken boosts BB gauge & negates critical damage",
@@ -28244,7 +28823,10 @@
       }
     ],
     "id": "810020",
-    "name": "Justice Beyond Death"
+    "name": "Justice Beyond Death",
+    "associated_units": [
+      "810357"
+    ]
   },
   "810327": {
     "desc": "Boosts max HP (100%) & boosts ATK, DEF, REC (150%) when BB gauge is over 50% & boosts BC efficacy (60%) & boosts critical damage (200%) & raises normal hit amount (+1, 75% damage) & damage taken boosts BB gauge (6-10 BC)",
@@ -28281,7 +28863,10 @@
       }
     ],
     "id": "810327",
-    "name": "Empowering Soul Howl"
+    "name": "Empowering Soul Howl",
+    "associated_units": [
+      "810327"
+    ]
   },
   "810377": {
     "desc": "80% boost to Atk, 40% boost to max HP, boosts damage against status afflicted foes, hugely boosts critical damage & probable damage reduction to 1",
@@ -28311,7 +28896,10 @@
       }
     ],
     "id": "810377",
-    "name": "Carefree Pirate Life"
+    "name": "Carefree Pirate Life",
+    "associated_units": [
+      "810377"
+    ]
   },
   "810378": {
     "desc": "100% boost to Atk, 60% boost to max HP, boosts damage against status afflicted foes, hugely boosts critical damage & probable damage reduction to 1",
@@ -28341,7 +28929,10 @@
       }
     ],
     "id": "810378",
-    "name": "Swashbuckling Iaido"
+    "name": "Swashbuckling Iaido",
+    "associated_units": [
+      "810378"
+    ]
   },
   "810418": {
     "desc": "Boosts ATK, DEF and max HP (100%) & boosts Spark damage (160%) and damage reduction (20%) for 2 turns when Spark damage have exceeded certain amount (15) & Spark damage boosts BB gauge (3-4 BC) & negates elemental damage",
@@ -28381,7 +28972,10 @@
       }
     ],
     "id": "810418",
-    "name": "Bloodflame Baptism"
+    "name": "Bloodflame Baptism",
+    "associated_units": [
+      "810418"
+    ]
   },
   "810547": {
     "desc": "150% boost to Atk, 60% boost to max HP and greatly boosts critical hit rate of Fire types, Spark damage slightly boosts BB gauge, greatly boosts critical damage & greatly boosts Fire elemental damage",
@@ -28412,7 +29006,10 @@
       }
     ],
     "id": "810547",
-    "name": "Fire Dragon Slayer Magic"
+    "name": "Fire Dragon Slayer Magic",
+    "associated_units": [
+      "810547"
+    ]
   },
   "810548": {
     "desc": "200% boost to Atk, 80% boost to max HP and greatly boosts critical hit rate of Fire types, Spark damage boosts BB gauge, hugely boosts critical damage, hugely boosts Fire elemental damage & 15% damage reduction from Fire, Earth, Dark types",
@@ -28450,7 +29047,10 @@
       }
     ],
     "id": "810548",
-    "name": "Fire Dragon King Mode"
+    "name": "Fire Dragon King Mode",
+    "associated_units": [
+      "810548"
+    ]
   },
   "820168": {
     "desc": "Boosts all parameters (65%) & boosts BB ATK (300%) & reduces BB gauge required for BB (30%) & negates elemental and critical damage & damage reduction (15%)",
@@ -28487,7 +29087,10 @@
       }
     ],
     "id": "820168",
-    "name": "Ebil Ingenuity"
+    "name": "Ebil Ingenuity",
+    "associated_units": [
+      "820168"
+    ]
   },
   "820297": {
     "desc": "80% boost to Atk, Def, max HP, greatly boosts BB Atk, enormously boosts BC efficacy & damage taken greatly boosts BB gauge",
@@ -28516,7 +29119,10 @@
       }
     ],
     "id": "820297",
-    "name": "Melodious Song"
+    "name": "Melodious Song",
+    "associated_units": [
+      "820297"
+    ]
   },
   "820298": {
     "desc": "100% boost to Atk, Def, max HP, greatly boosts BB Atk, enormously boosts BC efficacy, damage taken hugely boosts BB gauge & hugely boosts OD gauge fill rate",
@@ -28549,7 +29155,10 @@
       }
     ],
     "id": "820298",
-    "name": "A Joyful Aria"
+    "name": "A Joyful Aria",
+    "associated_units": [
+      "820298"
+    ]
   },
   "820377": {
     "desc": "60% boost to max HP, 100% boost to Atk, Def, Rec when BB gauge is over 50%, reduces BB gauge consumed during BB & greatly boosts Water elemental damage",
@@ -28576,7 +29185,10 @@
       }
     ],
     "id": "820377",
-    "name": "Thar She Blows!"
+    "name": "Thar She Blows!",
+    "associated_units": [
+      "820377"
+    ]
   },
   "820378": {
     "desc": "80% boost to max HP, 140% boost to Atk, Def, Rec when BB gauge is over 50%, greatly reduces BB gauge consumed during BB, hugely boosts Water elemental damage & negates critical damage",
@@ -28608,7 +29220,10 @@
       }
     ],
     "id": "820378",
-    "name": "Let's Go Together!"
+    "name": "Let's Go Together!",
+    "associated_units": [
+      "820378"
+    ]
   },
   "820507": {
     "desc": "60% boost to all parameters of Water types, damage taken boosts BB gauge. 15% damage reduction for 2 turns & adds probable 1 turn Atk reduction effect to attack for 2 turns when damage taken has exceeded certain amount",
@@ -28648,7 +29263,10 @@
       }
     ],
     "id": "820507",
-    "name": "Cryptic Revelation"
+    "name": "Cryptic Revelation",
+    "associated_units": [
+      "820507"
+    ]
   },
   "820508": {
     "desc": "85% boost to all parameters of Water types, damage taken boosts BB gauge, restores HP for 2 turns when HP is below 50%. 20% damage reduction & adds probable 1 turn Atk reduction effect to attack for 2 turns when damage taken has exceeded certain amount",
@@ -28697,7 +29315,10 @@
       }
     ],
     "id": "820508",
-    "name": "Cryptic Revelation"
+    "name": "Cryptic Revelation",
+    "associated_units": [
+      "820508"
+    ]
   },
   "820547": {
     "desc": "50% boost to all parameters of Water types, 120% boost to Spark damage, greatly boosts Water elemental damage & 10% damage reduction from Fire, Water types",
@@ -28729,7 +29350,10 @@
       }
     ],
     "id": "820547",
-    "name": "Ice Magic"
+    "name": "Ice Magic",
+    "associated_units": [
+      "820547"
+    ]
   },
   "820548": {
     "desc": "60% boost to all parameters of Water types, 130% boost to Spark damage, hugely boosts Water elemental damage & 15% damage reduction from Fire, Water types",
@@ -28761,7 +29385,10 @@
       }
     ],
     "id": "820548",
-    "name": "Ice-Make Magic"
+    "name": "Ice-Make Magic",
+    "associated_units": [
+      "820548"
+    ]
   },
   "830297": {
     "desc": "150% boost to Atk, 30% boost to critical hit rate and 70% boost to max HP of Earth types, 130% boost to Spark damage, Spark damage boosts BB gauge & boosts Earth elemental damage",
@@ -28792,7 +29419,10 @@
       }
     ],
     "id": "830297",
-    "name": "Martial Melody"
+    "name": "Martial Melody",
+    "associated_units": [
+      "830297"
+    ]
   },
   "830298": {
     "desc": "250% boost to Atk, 30% boost to critical hit rate and 100% boost to max HP of Earth types, 150% boost to Spark damage, Spark damage boosts BB gauge, boosts Earth elemental damage & reduces BB gauge required for BB",
@@ -28827,7 +29457,10 @@
       }
     ],
     "id": "830298",
-    "name": "Martial Flourish"
+    "name": "Martial Flourish",
+    "associated_units": [
+      "830298"
+    ]
   },
   "830358": {
     "desc": "Boosts ATK, DEF (120%) and max HP (80%) of Earth types & boosts Spark damage (140%) & Spark damage restores HP (500-600 HP) and boosts BB gauge (2-3 BC) & negates all status ailments and ATK, DEF, REC reduction effects",
@@ -28871,7 +29504,10 @@
       }
     ],
     "id": "830358",
-    "name": "What's Yours Is Mine"
+    "name": "What's Yours Is Mine",
+    "associated_units": [
+      "830358"
+    ]
   },
   "830377": {
     "desc": "50% boost to Atk, max HP, 30% boost to critical hit rate, hugely boosts critical damage, boosts all elemental damage & boosts Atk relative to remaining HP",
@@ -28974,7 +29610,10 @@
       }
     ],
     "id": "830387",
-    "name": "Lone Swordswoman"
+    "name": "Lone Swordswoman",
+    "associated_units": [
+      "830387"
+    ]
   },
   "830388": {
     "desc": "150% boost to Atk, 80% boost to max HP, boosts Atk relative to remaining HP, 140% boost to Spark damage, 150% boost to Def for first 3 turns & Spark damage boosts BB gauge",
@@ -29007,7 +29646,60 @@
       }
     ],
     "id": "830388",
-    "name": "Vengeful Samurai"
+    "name": "Vengeful Samurai",
+    "associated_units": [
+      "830388"
+    ]
+  },
+  "830418": {
+    "desc": "Boosts all parameters (80%) & boosts BB ATK (350%) & boosts damage against afflicted foes (175%) & negates all status ailments and ATK, DEF, REC reduction effets & damage reduction (15%)",
+    "effects": [
+      {
+        "atk% buff": 80,
+        "def% buff": 80,
+        "hp% buff": 80,
+        "passive id": "1",
+        "rec% buff": 80
+      },
+      {
+        "bb atk% buff": 350,
+        "passive id": "64",
+        "sbb atk% buff": 350,
+        "ubb atk% buff": 350
+      },
+      {
+        "atk% buff when enemy has ailment": 175,
+        "atk% buff when enemy has curse": true,
+        "atk% buff when enemy has injury": true,
+        "atk% buff when enemy has paralysis": true,
+        "atk% buff when enemy has poison": true,
+        "atk% buff when enemy has sick": true,
+        "atk% buff when enemy has weaken": true,
+        "passive id": "74"
+      },
+      {
+        "atk down resist%": 100,
+        "curse resist%": 100,
+        "def down resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "poison resist%": 100,
+        "rec down resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "dmg reduction chance%": 100,
+        "dmg reduction%": 15,
+        "passive id": "14"
+      }
+    ],
+    "id": "830418",
+    "name": "Chosen of the Forest",
+    "associated_units": [
+      "830418"
+    ]
   },
   "840327": {
     "desc": "Boosts max HP (85%) & boosts ATK relative to remaining HP (150-250%) & negates critical damage & boosts Thunder and Dark elemental damage (200%) & boosts BB ATK (300%) and Spark damage (150%)",
@@ -29047,7 +29739,10 @@
       }
     ],
     "id": "840327",
-    "name": "Silhouette of the Valkyrie"
+    "name": "Silhouette of the Valkyrie",
+    "associated_units": [
+      "840327"
+    ]
   },
   "840358": {
     "desc": "Boosts ATK, DEF and max HP of Thunder types (85%) & Spark damage boosts BB gauge (2-3 BC) & damage reduction (20%) for 1 turn when HP is below 50% & reduces BB gauge required for BB (25%) & boosts BB gauge each turn (10 BC)",
@@ -29085,7 +29780,10 @@
       }
     ],
     "id": "840358",
-    "name": "A Riddle of Heaven"
+    "name": "A Riddle of Heaven",
+    "associated_units": [
+      "840358"
+    ]
   },
   "840377": {
     "desc": "80% boost to Atk,40% boost to max HP, hugely boosts critical damage & probable normal attack on all foes",
@@ -29177,7 +29875,10 @@
       }
     ],
     "id": "840508",
-    "name": "Heaven-Hell Dragon Style"
+    "name": "Heaven-Hell Dragon Style",
+    "associated_units": [
+      "840508"
+    ]
   },
   "840547": {
     "desc": "60% boost to all parameters of Thunder types, negates critical and elemental damage, 10% additional damage reduction & 10% damage reduction from all elements",
@@ -29211,7 +29912,10 @@
       }
     ],
     "id": "840547",
-    "name": "Requip: The Knight"
+    "name": "Requip: The Knight",
+    "associated_units": [
+      "840547"
+    ]
   },
   "840548": {
     "desc": "85% boost to all parameters of Thunder types, negates critical and elemental damage, 15% additional damage reduction, enormously boosts Thunder elemental damage & 15% damage reduction from all elements",
@@ -29250,7 +29954,10 @@
       }
     ],
     "id": "840548",
-    "name": "Requip: Lightning Empress"
+    "name": "Requip: Lightning Empress",
+    "associated_units": [
+      "840548"
+    ]
   },
   "850158": {
     "desc": "Boosts all parameters (70%) & boosts BC, HC drop rate (30%) & reduces BB gauge required for BB (30%) & boosts BB gauge each turn (10 BC) & damage taken boosts BB gauge (5-8 BC)",
@@ -29283,7 +29990,10 @@
       }
     ],
     "id": "850158",
-    "name": "Overflowing Basket"
+    "name": "Overflowing Basket",
+    "associated_units": [
+      "850158"
+    ]
   },
   "850297": {
     "desc": "70% boost to Atk and max HP, considerably boosts Spark damage, greatly boosts critical and elemental damage",
@@ -29313,7 +30023,10 @@
       }
     ],
     "id": "850297",
-    "name": "Melodious Flight"
+    "name": "Melodious Flight",
+    "associated_units": [
+      "850297"
+    ]
   },
   "850298": {
     "desc": "80% boost to Atk and max HP, greatly boosts Spark damage, greatly boosts critical and elemental damage & raises Atk parameter limits to 130000",
@@ -29347,7 +30060,10 @@
       }
     ],
     "id": "850298",
-    "name": "A Wistful Aria"
+    "name": "A Wistful Aria",
+    "associated_units": [
+      "850298"
+    ]
   },
   "850377": {
     "desc": "50% boost to Def, max HP, 5% damage reduction, damage taken boosts BB gauge & negates Def ignoring effects",
@@ -29439,7 +30155,10 @@
       }
     ],
     "id": "850387",
-    "name": "The King Stands"
+    "name": "The King Stands",
+    "associated_units": [
+      "850387"
+    ]
   },
   "850388": {
     "desc": "60% boost to Atk, Def, max HP, considerably boosts Atk, Def when HP is over 50%, raises normal hit amount & slight damage reduction for 1 turn when damage dealt exceeds certain amount",
@@ -29471,7 +30190,10 @@
       }
     ],
     "id": "850388",
-    "name": "The King's Justice"
+    "name": "The King's Justice",
+    "associated_units": [
+      "850388"
+    ]
   },
   "850418": {
     "desc": "Boosts max HP (100%) & boosts ATK, DEF, REC relative to remaining HP (120%) & damage taken may restore HP (30% chance 25%) & reduces BB gauge required for BB (30%) & additional damage reduction (15%)",
@@ -29506,7 +30228,10 @@
       }
     ],
     "id": "850418",
-    "name": "Lucent Rhapsody"
+    "name": "Lucent Rhapsody",
+    "associated_units": [
+      "850418"
+    ]
   },
   "850507": {
     "desc": "150% boost to Atk, 60% boost to max HP and 30% boost to critical hit rate of Light types, negates critical and elemental damage, greatly boosts critical damage, greatly boosts Light elemental damage",
@@ -29540,7 +30265,10 @@
       }
     ],
     "id": "850507",
-    "name": "Cryptic Essence"
+    "name": "Cryptic Essence",
+    "associated_units": [
+      "850507"
+    ]
   },
   "850508": {
     "desc": "200% boost to Atk, 80% boost to max HP and 30% boost to critical hit rate of Light types, negates critical and elemental damage, hugely boosts critical damage, hugely boosts Light elemental damage & 15% damage reduction from Light, Dark types",
@@ -29580,7 +30308,10 @@
       }
     ],
     "id": "850508",
-    "name": "Cryptic Essence"
+    "name": "Cryptic Essence",
+    "associated_units": [
+      "850508"
+    ]
   },
   "850547": {
     "desc": "50% boost to all parameters of Light types, greatly boosts critical damage, greatly boosts Light elemental damage & 10% damage reduction from Light, Dark types",
@@ -29612,7 +30343,10 @@
       }
     ],
     "id": "850547",
-    "name": "Celestial Spirit Magic"
+    "name": "Celestial Spirit Magic",
+    "associated_units": [
+      "850547"
+    ]
   },
   "850548": {
     "desc": "60% boost to all parameters of Light types, hugely boosts critical damage, hugely boosts Light elemental damage & 15% damage reduction from Light, Dark types",
@@ -29644,7 +30378,10 @@
       }
     ],
     "id": "850548",
-    "name": "Recompense Summoning"
+    "name": "Recompense Summoning",
+    "associated_units": [
+      "850548"
+    ]
   },
   "850977": {
     "desc": "40% boost to max HP, boosts Atk relative to how high remaining HP is & boosts Def relative to how low remaining HP is",
@@ -29667,7 +30404,10 @@
       }
     ],
     "id": "850977",
-    "name": "Light of Dawn's Boon"
+    "name": "Light of Dawn's Boon",
+    "associated_units": [
+      "850977"
+    ]
   },
   "850978": {
     "desc": "50% boost to max HP, considerably boosts Atk relative to how high remaining HP is, considerably boosts Def relative to how low remaining HP is & 20% damage reduction for 2 turns when damage taken has exceeded certain amount",
@@ -29698,7 +30438,10 @@
       }
     ],
     "id": "850978",
-    "name": "Light of Dawn's Boon"
+    "name": "Light of Dawn's Boon",
+    "associated_units": [
+      "850978"
+    ]
   },
   "860356": {
     "desc": "50% boost to Def, Rec, max HP of Dark types, 5% all elemental damage reduction & enormously boosts BB Atk",
@@ -29730,7 +30473,10 @@
       }
     ],
     "id": "860356",
-    "name": "No Sin Unwitnessed"
+    "name": "No Sin Unwitnessed",
+    "associated_units": [
+      "860356"
+    ]
   },
   "860357": {
     "desc": "65% boost to Def, Rec, max HP of Dark types, 10% all elemental damage reduction, enormously boosts BB Atk & negates critical damage",
@@ -29767,7 +30513,10 @@
       }
     ],
     "id": "860357",
-    "name": "Kindness Beyond Death"
+    "name": "Kindness Beyond Death",
+    "associated_units": [
+      "860357"
+    ]
   },
   "860377": {
     "desc": "100% boost to Atk, 50% boost to max HP, 110% boost toSpark damage, Spark damage hugely boosts BC drop rates & boosts Atk relative to remaining HP",
@@ -29855,7 +30604,10 @@
       }
     ],
     "id": "860547",
-    "name": "Curse"
+    "name": "Curse",
+    "associated_units": [
+      "860547"
+    ]
   },
   "860548": {
     "desc": "60% boost to all parameters of Dark types, greatly boosts BB Atk when HP is above 25%, hugely boosts Dark elemental damage & 10% damage reduction from Light, Dark types",
@@ -29891,7 +30643,10 @@
       }
     ],
     "id": "860548",
-    "name": "Curse Magic Mastery"
+    "name": "Curse Magic Mastery",
+    "associated_units": [
+      "860548"
+    ]
   },
   "8100100": {
     "desc": "MST_PARADIGM_100_DESCRIPTION",

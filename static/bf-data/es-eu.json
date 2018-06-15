@@ -2169,7 +2169,10 @@
     "id": "6900",
     "name": "Scarlet Memories",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "10716"
+    ]
   },
   "7100": {
     "desc": "Adds slight BB gauge boost effect to BB/SBB & negates critical, elemental damage",
@@ -5039,7 +5042,10 @@
     "id": "16100",
     "name": "蒼炎騎士の誇り",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "50976"
+    ]
   },
   "16200": {
     "desc": "Spark damage boosts BB gauge, reduces damage taken for 2 turns when damage taken has exceeded certain amount & damage taken may restore HP",
@@ -7234,7 +7240,10 @@
     "id": "25200",
     "name": "Burning Soul",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "10986"
+    ]
   },
   "25300": {
     "desc": "20% boost to all parameters when an Atk Boosting Sphere is equipped & slightly boosts BC efficacy",
@@ -7263,7 +7272,10 @@
     "id": "25300",
     "name": "Tranquil Spirit",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "20916"
+    ]
   },
   "25400": {
     "desc": "Damage taken may slightly boost BB gauge and may slightly restore HP",
@@ -7288,7 +7300,10 @@
     "id": "25400",
     "name": "Hidden Emotions",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "51076"
+    ]
   },
   "25500": {
     "desc": "Slightly boosts Atk, Def when BB gauge is over 50% & boosts BB gauge each turn",
@@ -8453,7 +8468,10 @@
     "id": "29500",
     "name": "Relentless Chase",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "11036"
+    ]
   },
   "29600": {
     "desc": "Considerably boosts Def when HP is full & slight damage reduction for 2 turns when damage taken has exceeded certain amount",
@@ -8479,7 +8497,10 @@
     "id": "29600",
     "name": "Guardian Flame of the Nation",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "11037"
+    ]
   },
   "29700": {
     "desc": "Slightly boosts Atk, Def when HP is over 50% & low probability of enormous damage reduction",
@@ -9054,7 +9075,10 @@
     "id": "31700",
     "name": "Warped Justice",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "10737"
+    ]
   },
   "31800": {
     "desc": "50% boost to Spark damage & hugely boosts BB Atk",
@@ -9077,7 +9101,10 @@
     "id": "31800",
     "name": "Seeds of the Future",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "20677"
+    ]
   },
   "31900": {
     "desc": "Boosts Atk, Def, Rec each turn (for up to 5 turns) & damage taken slightly boosts BB gauge",
@@ -9312,7 +9339,10 @@
     "id": "32500",
     "name": "Heavenly Principles",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "61107"
+    ]
   },
   "33000": {
     "desc": "Boosts elemental and critical damage, adds resistance against 1 KO attack when HP is below 20% & raises Atk parameter limits to 130000",
@@ -9351,7 +9381,10 @@
     "id": "33000",
     "name": "Helical Creation",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "51147"
+    ]
   },
   "33100": {
     "desc": "Slightly boosts elemental damage & reduces BB gauge required for BB",
@@ -9373,7 +9406,10 @@
     "id": "33100",
     "name": "Eternal Sigil",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "20986"
+    ]
   },
   "33200": {
     "desc": "Boosts elemental damage & reduces BB gauge required for BB",
@@ -9395,7 +9431,10 @@
     "id": "33200",
     "name": "Transcendent Power",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "20987"
+    ]
   },
   "33300": {
     "desc": "Boosts Atk, Def, Rec each turn (for up to 5 turns) & probable resistance against 1 KO attack",
@@ -9423,7 +9462,10 @@
     "id": "33300",
     "name": "Self-Enhancement Function",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "40906"
+    ]
   },
   "33400": {
     "desc": "Boosts Atk, Def, Rec each turn (for up to 5 turns) & probable resistance against 2 KO attacks",
@@ -9451,7 +9493,10 @@
     "id": "33400",
     "name": "Rapid Evolution Mode",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "40907"
+    ]
   },
   "33500": {
     "desc": "Slightly boosts Atk, Def when BB gauge is over 50% & 30% boost to Spark damage",
@@ -9474,7 +9519,10 @@
     "id": "33500",
     "name": "Strategic Illumination",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "51166"
+    ]
   },
   "33600": {
     "desc": "Boosts Atk, Def when BB gauge is over 50% & 50% boost to Spark damage",
@@ -9497,7 +9545,10 @@
     "id": "33600",
     "name": "Wisdom-Tempered Ideals",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "51167"
+    ]
   },
   "33700": {
     "desc": "Adds enormous boost to critical hit rate for 3 turns effect to BB/SBB, critical damage enormously boosts BB gauge & boosts critical damage",
@@ -9538,7 +9589,10 @@
     "id": "33700",
     "name": "Skilled Leadership",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "10677"
+    ]
   },
   "33800": {
     "desc": "Boosts Atk, Def when BB gauge is over 50% & raises normal hit amount",
@@ -9561,7 +9615,10 @@
     "id": "33800",
     "name": "New Self, Old Ideals",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "20637"
+    ]
   },
   "33900": {
     "desc": "10% boost to all parameters of Fire types, boosts Atk when BB gauge is over 50% & 30% boost to Spark damage",
@@ -9595,7 +9652,10 @@
     "id": "33900",
     "name": "Draco-Phoenix",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "11056"
+    ]
   },
   "34000": {
     "desc": "10% boost to all parameters of Fire types, considerably boosts Atk when BB gauge is over 50% & 50% boost to Spark damage",
@@ -9629,7 +9689,10 @@
     "id": "34000",
     "name": "Conqueror's Mandate",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "11057"
+    ]
   },
   "34100": {
     "desc": "Negates all status ailments & damage taken slightly boosts BB gauge",
@@ -9657,7 +9720,10 @@
     "id": "34100",
     "name": "Wisdom Parasitosis",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "30946"
+    ]
   },
   "34200": {
     "desc": "Negates all status ailments and critical damage & damage taken boosts BB gauge",
@@ -9694,7 +9760,10 @@
     "id": "34200",
     "name": "Purifying Blossom",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "30947"
+    ]
   },
   "34300": {
     "desc": "Boosts Atk, Def relative to remaining HP & 30% boost to Spark damage",
@@ -9719,7 +9788,10 @@
     "id": "34300",
     "name": "Sea God's Savagery",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "20996"
+    ]
   },
   "34400": {
     "desc": "Considerably boosts Atk, Def relative to remaining HP & 50% boost to Spark damage",
@@ -9744,7 +9816,10 @@
     "id": "34400",
     "name": "Sea of Chaos",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "20997"
+    ]
   },
   "34500": {
     "desc": "30% boost to Spark damage & boosts critical damage",
@@ -9765,7 +9840,10 @@
     "id": "34500",
     "name": "Sky-Splitter",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "40916"
+    ]
   },
   "34600": {
     "desc": "Boosts critical damage, Spark damage enormously boosts BB gauge & 50% boost to Spark damage",
@@ -9794,7 +9872,10 @@
     "id": "34600",
     "name": "Thunder Hammer",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "40917"
+    ]
   },
   "34700": {
     "desc": "Probable resistance against 1 KO attack & damage taken may restore HP",
@@ -9820,7 +9901,10 @@
     "id": "34700",
     "name": "Rite of Rebirth",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "51186"
+    ]
   },
   "34800": {
     "desc": "Probable resistance against 1 KO attack & damage taken may restore HP",
@@ -9846,7 +9930,10 @@
     "id": "34800",
     "name": "Eternal Loyalty",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "51187"
+    ]
   },
   "34900": {
     "desc": "Spark damage enormously boosts BB gauge & 50% boost to Spark damage",
@@ -9869,7 +9956,10 @@
     "id": "34900",
     "name": "Draconic Devotion",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "61126"
+    ]
   },
   "35000": {
     "desc": "Damage taken may restore HP & restores HP each turn",
@@ -9894,7 +9984,10 @@
     "id": "35000",
     "name": "Jump for Joy",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "30627"
+    ]
   },
   "35100": {
     "desc": "Adds Def ignoring effect for 2 turns to BB/SBB, Spark damage boosts BB gauge & adds probable Spark critical",
@@ -9935,7 +10028,10 @@
     "id": "35100",
     "name": "Edifying Knowledge",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "40607"
+    ]
   },
   "35200": {
     "desc": "Boosts Atk, Def when BB gauge is over 50%, hugely boosts damage against status afflicted foes & damage taken boosts BB gauge",
@@ -9972,7 +10068,10 @@
     "id": "35200",
     "name": "Demon Tamer Gear",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "60767"
+    ]
   },
   "35300": {
     "desc": "Restores HP each turn & damage taken boosts BB gauge",
@@ -9997,7 +10096,10 @@
     "id": "35300",
     "name": "Scarlet Cataclysm",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "11066"
+    ]
   },
   "35400": {
     "desc": "Restores HP each turn & damage taken considerably boosts BB gauge",
@@ -10022,7 +10124,10 @@
     "id": "35400",
     "name": "Flawless Precepts",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "11067"
+    ]
   },
   "35500": {
     "desc": "Slightly boosts Atk, Def when BB gauge is over 50% & negates all status ailments",
@@ -10050,7 +10155,10 @@
     "id": "35500",
     "name": "Much Ado About Nothing",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "30956"
+    ]
   },
   "35600": {
     "desc": "Boosts Atk, Def when BB gauge is over 50% & negates all status ailments",
@@ -10078,7 +10186,10 @@
     "id": "35600",
     "name": "Fruitful Life",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "30957"
+    ]
   },
   "35700": {
     "desc": "Probable slight Spark vulnerability infliction for 2 turns & slightly reduces BB gauge required for BB",
@@ -10101,7 +10212,10 @@
     "id": "35700",
     "name": "Scheming Snake",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "61136"
+    ]
   },
   "35800": {
     "desc": "Probable Spark vulnerability infliction for 2 turns & reduces BB gauge required for BB",
@@ -10124,7 +10238,10 @@
     "id": "35800",
     "name": "Treacherous Serpent",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "61137"
+    ]
   },
   "35900": {
     "desc": "Damage taken slightly boosts BB gauge and may restore HP",
@@ -10149,7 +10266,10 @@
     "id": "35900",
     "name": "Anathemic Fascination",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "30966"
+    ]
   },
   "36000": {
     "desc": "Damage taken boosts BB gauge and may restore HP",
@@ -10174,7 +10294,10 @@
     "id": "36000",
     "name": "Critical Mission",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "30967"
+    ]
   },
   "36100": {
     "desc": "Boosts elemental and critical damage",
@@ -10196,7 +10319,10 @@
     "id": "36100",
     "name": "Suicidal Research",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "61146"
+    ]
   },
   "36200": {
     "desc": "Considerably boosts elemental and critical damage",
@@ -10218,7 +10344,10 @@
     "id": "36200",
     "name": "Ruinous Truth",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "61147"
+    ]
   },
   "36300": {
     "desc": "30% boost to all parameters when Reeze's Armor is equipped & adds huge BB gauge boost effect to BB/SBB",
@@ -10258,7 +10387,10 @@
     "id": "36300",
     "name": "Undying Devotion",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "50317"
+    ]
   },
   "36400": {
     "desc": "Boosts own elemental damage, enormously boosts OD gauge fill rate & probable random status ailment counter",
@@ -10291,7 +10423,10 @@
     "id": "36400",
     "name": "Dark Obsession",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "60097"
+    ]
   },
   "36700": {
     "desc": "Slightly boosts Atk, Def, Rec when HP is over 50% & boosts critical damage",
@@ -10398,7 +10533,10 @@
     "id": "37000",
     "name": "Animating Dark Arts",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "40936"
+    ]
   },
   "37100": {
     "desc": "Boosts Atk, Def when HP is over 50% & 60% boost to Spark damage",
@@ -10421,7 +10559,10 @@
     "id": "37100",
     "name": "Bewitching Taboo",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "40937"
+    ]
   },
   "37200": {
     "desc": "Slightly boosts Def, Rec when BB gauge is over 50% & damage taken boosts BB gauge",
@@ -10446,7 +10587,10 @@
     "id": "37200",
     "name": "Pure Soul of the Wise",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "51216"
+    ]
   },
   "37300": {
     "desc": "Boosts Def, Rec when BB gauge is over 50% & damage taken considerably boosts BB gauge",
@@ -10471,7 +10615,10 @@
     "id": "37300",
     "name": "Light in the Darkness",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "51217"
+    ]
   },
   "37600": {
     "desc": "Negates all status ailments, probable resistance against 1 KO attack & raises max Atk value from 99999 to 130000",
@@ -10506,7 +10653,10 @@
     "id": "37600",
     "name": "Phoenix Seal Axis",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "11096"
+    ]
   },
   "37700": {
     "desc": "Negates all status ailments, probable resistance against 1 KO attack & raises max Atk value from 99999 to 130000",
@@ -10541,7 +10691,10 @@
     "id": "37700",
     "name": "Souleater Sear",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "11097"
+    ]
   },
   "37800": {
     "desc": "Slightly boosts Atk, Def, Rec relative to remaining HP, 60% boost to Spark damage & raises max Atk value from 99999 to 130000",
@@ -10574,7 +10727,10 @@
     "id": "37800",
     "name": "Frost Seal Axis",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "21006"
+    ]
   },
   "37900": {
     "desc": "Boosts Atk, Def, Rec relative to remaining HP, 80% boost to Spark damage & raises max Atk value from 99999 to 130000",
@@ -10607,7 +10763,10 @@
     "id": "37900",
     "name": "Unshakable Devotion",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "21007"
+    ]
   },
   "38000": {
     "desc": "Slightly boosts Atk, Def when BB gauge is over 50%, boosts BB gauge each turn & raises max Atk value from 99999 to 130000",
@@ -10636,7 +10795,10 @@
     "id": "38000",
     "name": "Machine Seal Axis",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "40946"
+    ]
   },
   "38100": {
     "desc": "Boosts Atk, Def when BB gauge is over 50%, considerably boosts BB gauge each turn & raises max Atk value from 99999 to 130000",
@@ -10665,7 +10827,10 @@
     "id": "38100",
     "name": "Rhythm of Ecstase",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "40947"
+    ]
   },
   "38200": {
     "desc": "30% boost to Atk, Def, Rec, max HP when Duel Fragment is equipped, adds Dark element to attack for 3 turns effect to BB/SBB & 50% boost to Spark damage",
@@ -10714,7 +10879,10 @@
     "id": "38200",
     "name": "Will and Foresight",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "10257"
+    ]
   },
   "38300": {
     "desc": "Negates all status ailments, boosts critical damage & adds Fire element to attack for 3 turns effect to BB/SBB",
@@ -10759,7 +10927,10 @@
     "id": "38300",
     "name": "Loyal Machine",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "60257"
+    ]
   },
   "38400": {
     "desc": "Boosts Atk, Def, Rec each turn for up to 3 turns & raises max Atk value from 99999 to 130000",
@@ -10784,7 +10955,10 @@
     "id": "38400",
     "name": "Aberrant Armor",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "30986"
+    ]
   },
   "38500": {
     "desc": "Boosts Atk, Def, Rec each turn for up to 3 turns & raises max Atk value from 99999 to 130000",
@@ -10809,7 +10983,10 @@
     "id": "38500",
     "name": "Armor Seal Axis",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "30987"
+    ]
   },
   "38600": {
     "desc": "Boosts elemental damage, raises max Atk value from 99999 to 130000 & 5% boost to all parameters",
@@ -10840,7 +11017,10 @@
     "id": "38600",
     "name": "Dragon Seal Axis",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "51246"
+    ]
   },
   "38700": {
     "desc": "Considerably boosts elemental damage, raises max Atk value from 99999 to 130000 & 10% boost to all parameters",
@@ -10871,7 +11051,10 @@
     "id": "38700",
     "name": "Divine Torrent",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "51247"
+    ]
   },
   "38800": {
     "desc": "Slight damage reduction for 1 turn when Sparks exceed certain amount & 60% boost to Spark damage when HP is over 50%",
@@ -10897,7 +11080,10 @@
     "id": "38800",
     "name": "Pride of Savat",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "21036"
+    ]
   },
   "38900": {
     "desc": "Slight damage reduction for 1 turn when Sparks exceed certain amount & 80% boost to Spark damage when HP is over 50%",
@@ -10923,7 +11109,10 @@
     "id": "38900",
     "name": "Wise Aphorism",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "21037"
+    ]
   },
   "39000": {
     "desc": "Slightly boosts Atk, Def, Rec relative to remaining HP & raises normal hit amount",
@@ -10950,7 +11139,10 @@
     "id": "39000",
     "name": "Admirable Will",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "51256"
+    ]
   },
   "39100": {
     "desc": "Boosts Atk, Def, Rec relative to remaining HP & raises normal hit amount",
@@ -10977,7 +11169,10 @@
     "id": "39100",
     "name": "Harmonious Strength",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "51257"
+    ]
   },
   "39200": {
     "desc": "Considerably boosts BB Atk when HP is over 50% & probable considerable reduction of BB gauge fill rate for 2 turns",
@@ -11002,7 +11197,10 @@
     "id": "39200",
     "name": "Accursed Longing",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "61196"
+    ]
   },
   "39300": {
     "desc": "Hugely boosts BB Atk when HP is over 50% & probable considerable reduction of BB gauge fill rate for 2 turns",
@@ -11027,7 +11225,10 @@
     "id": "39300",
     "name": "Broken Trust",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "61197"
+    ]
   },
   "39700": {
     "desc": "50% boost to Spark damage and huge boost to BB Atk when HP is over 50%",
@@ -11053,7 +11254,10 @@
     "id": "39700",
     "name": "Sea Emperor's Bloodline",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "21046"
+    ]
   },
   "39800": {
     "desc": "80% boost to Spark damage and huge boost to BB Atk when HP is over 50% & raises max Atk value from 99999 to 150000",
@@ -11085,7 +11289,10 @@
     "id": "39800",
     "name": "Churning Seas",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "21047"
+    ]
   },
   "39900": {
     "desc": "Considerably reduces BB gauge required for BB & negates all status ailments",
@@ -11111,7 +11318,10 @@
     "id": "39900",
     "name": "Sea Shrine Maiden",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "30996"
+    ]
   },
   "40000": {
     "desc": "Hugely reduces BB gauge required for BB, considerably boosts BB gauge each turn & negates all status ailments",
@@ -11143,7 +11353,10 @@
     "id": "40000",
     "name": "Mother Ocean",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "30997"
+    ]
   },
   "40100": {
     "desc": "Damage taken boosts BB gauge & negates all status ailments",
@@ -11171,7 +11384,10 @@
     "id": "40100",
     "name": "Sealed God's Assassin",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "40976"
+    ]
   },
   "40200": {
     "desc": "Damage taken considerably boosts BB gauge, negates all status ailments & probable foe BB gauge reduction",
@@ -11205,7 +11421,10 @@
     "id": "40200",
     "name": "Nameless Executioner",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "40977"
+    ]
   },
   "40800": {
     "desc": "Slight damage reduction for 1 turn when damage taken exceeds certain amount & damage taken may restore HP",
@@ -11232,7 +11451,10 @@
     "id": "40800",
     "name": "Solitary Vengeance",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "11116"
+    ]
   },
   "40900": {
     "desc": "Slight damage reduction for 1 turn when damage taken exceeds certain amount & damage taken may restore HP",
@@ -11259,7 +11481,10 @@
     "id": "40900",
     "name": "Unified Body Enlightenment",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "11117"
+    ]
   },
   "41000": {
     "desc": "Boosts Def each turn for up to 5 turns & negates Def ignoring effects",
@@ -11282,7 +11507,10 @@
     "id": "41000",
     "name": "Protector's Sword",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "51276"
+    ]
   },
   "41100": {
     "desc": "Boosts Def each turn for up to 5 turns & negates Def ignoring effects",
@@ -11305,7 +11533,10 @@
     "id": "41100",
     "name": "Rescuer's Sword",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "51277"
+    ]
   },
   "41200": {
     "desc": "Boosts elemental damage & considerably boosts damage against status afflicted foes",
@@ -11333,7 +11564,10 @@
     "id": "41200",
     "name": "Forgotten Savagery",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "61216"
+    ]
   },
   "41300": {
     "desc": "Considerably boosts elemental damage & hugely boosts damage against status afflicted foes",
@@ -11361,7 +11595,10 @@
     "id": "41300",
     "name": "Dark Schemer",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "61217"
+    ]
   },
   "41700": {
     "desc": "20% boost to all parameters when a Damage Reducing type Sphere is equipped & negates all status ailments",
@@ -11395,7 +11632,10 @@
     "id": "41700",
     "name": "Protector Blade's Heir",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "31006"
+    ]
   },
   "41800": {
     "desc": "30% boost to all parameters when a Damage Reducing type Sphere is equipped & negates all status ailments",
@@ -11429,7 +11669,10 @@
     "id": "41800",
     "name": "True Protector Blade",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "31007"
+    ]
   },
   "41900": {
     "desc": "Considerably boosts BB Atk & 70% boost to Spark damage",
@@ -11452,7 +11695,10 @@
     "id": "41900",
     "name": "Heroic Loyalty",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "40986"
+    ]
   },
   "42000": {
     "desc": "Hugely boosts BB Atk & 80% boost to Spark damage",
@@ -11475,7 +11721,10 @@
     "id": "42000",
     "name": "Reverent Inheritor",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "40987"
+    ]
   },
   "710016": {
     "desc": "If Jack's Soul equipped, boosts HP, ATK (15%) and critical dmg (100%) & adds Critical Rate to BB/SBB/UBB (60%) & If Ardent Coal equipped, boosts DEF, REC (15%) & boosts Spark dmg (50%) for 2 turns when 20 BC received & adds BC on Spark to BB/SBB (1-2 BC)",
@@ -11750,7 +11999,83 @@
     "id": "710147",
     "name": "Omega Instinct",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "710147"
+    ]
+  },
+  "710157": {
+    "desc": "Negates Spark damage & boosts all parameters of Fire types (10%, all) & boosts Spark damage (25%, all) & adds ATK relative to HP boost (40%) for 3 turns and probable Spark critical (30% chance to 60%) for 3 turns effects to BB/SBB",
+    "effects": [
+      {
+        "base spark dmg% resist": 100,
+        "buff spark dmg% resist": 100,
+        "conditions": [],
+        "passive id": "77",
+        "passive target": "self"
+      },
+      {
+        "atk% buff": 10,
+        "conditions": [],
+        "def% buff": 10,
+        "elements buffed": [
+          "fire"
+        ],
+        "hp% buff": 10,
+        "passive id": "2",
+        "passive target": "party",
+        "rec% buff": 10
+      },
+      {
+        "conditions": [],
+        "damage% for spark": 25,
+        "passive id": "31",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "83",
+            "spark dmg inc buff turns (131)": 3,
+            "spark dmg inc chance%": 30,
+            "spark dmg inc% buff": 60,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "% converted turns": 3,
+            "atk% buff (46)": 40,
+            "converted attribute": "hp",
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "24",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "710157",
+    "name": "Infernal Leader",
+    "rarity": "0",
+    "target": "self",
+    "associated_units": [
+      "710157"
+    ]
   },
   "710166": {
     "desc": "Adds chance of inflicting Curse and Paralysis when attacking (10%) & absorbs HP when attacking (5-10%, SELF) & If Cursed Photon Rod is equipped, adds Boosts damage dealt to ailed enemies (160%) 3 turns to BB/SBB, and adds Heal on Spark effect 3 turns to B",
@@ -12217,7 +12542,10 @@
     "id": "710237",
     "name": "Defensive Wings",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "710237"
+    ]
   },
   "710247": {
     "desc": "Boosts all parameters of Female types (20%, all) & when Siegfried sphere is equipped, raises ATK parameter limits to 150000, boosts Spark damage (20%, all) and adds probability of resistance against 1 KO attack effect (15% chance) to BB/SBB",
@@ -12295,7 +12623,10 @@
     "id": "710247",
     "name": "Secret Identity",
     "rarity": "0",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "710247"
+    ]
   },
   "720107": {
     "desc": "10% boost to all parameters of Female units (all) & if Sergio sphere is equipped, boosts Spark damage (100%) and adds Spark vulnerability infliction for 2 turns effect (30% chance 30%) to BB/SBB",
@@ -12547,7 +12878,10 @@
     "id": "720167",
     "name": "Cute Robot Creator",
     "rarity": "0",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "720167"
+    ]
   },
   "720176": {
     "desc": "Provides immunity to all status ailments & Boosts damage dealt to foes with status ailments (100%) & Adds Boosts dmg dealt to foes with ailments for 3 turns (130%) to BB/SBB",
@@ -12947,7 +13281,10 @@
     "id": "720217",
     "name": "Kaiser to Become",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "720217"
+    ]
   },
   "720226": {
     "desc": "Boosts ATK, DEF (20%)",
@@ -13093,7 +13430,10 @@
     "id": "720237",
     "name": "Photon Expertise",
     "rarity": "0",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "720237"
+    ]
   },
   "720247": {
     "desc": "Damage taken considerably boosts BB gauge (3-4 BC) & when Hunter Title is equipped, adds resistance against 1 KO attack when HP is below 20% and adds probable evasion (self, 35%) for 1 turn to BB/SBB ",
@@ -13149,7 +13489,10 @@
     "id": "720247",
     "name": "Lack of Remorse",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "720247"
+    ]
   },
   "720257": {
     "desc": "Adds boost critical hit rate (60%) for 3 turns to BB/SBB/UBB & when one of the Siegfried spheres is equipped, raises ATK parameter limits to 130000 and boosts ATK of Water types (50%, all)",
@@ -13209,7 +13552,10 @@
     "id": "720257",
     "name": "Sparring Partner",
     "rarity": "0",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "720257"
+    ]
   },
   "730146": {
     "desc": "When Noblesse Title or Noble’s Wedding Ring is equiped adds boosts crit rate (60%) for 3 turns to BB/SBB & When Noble’s Wedding Ring is equipped adds probable (25%) enemy Spark vulnerability boost (+25% DMG) for 1 turn to BB/SBB",
@@ -13642,7 +13988,10 @@
     "id": "730217",
     "name": "Killer Instinct",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "730217"
+    ]
   },
   "730226": {
     "desc": "If Ancient Cybernetic Crown is equipped, adds Earth Barrier effect to BB/SBB (3000 HP)",
@@ -14067,7 +14416,10 @@
     "id": "730257",
     "name": "Constellation Spirit",
     "rarity": "0",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "730257"
+    ]
   },
   "730267": {
     "desc": "Adds probable evasion (15%) for 1 turn to BB/SBB & when Hunter Title is equipped, boosts DEF (20%, all) and adds Spark damage boosts BB gauge (2-3 BC) for 3 turns to BB/SBB",
@@ -14129,7 +14481,10 @@
     "id": "730267",
     "name": "Rhyme Mastery",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "730267"
+    ]
   },
   "730277": {
     "desc": "Adds chance to cast double BB/SBB/UBB (25%) for 3 turns effect to BB/SBB & when Siegfried sphere is equipped, raises ATK parameter limits to 130000 and boosts DEF and HP of Earth types (20%, all)",
@@ -14190,7 +14545,10 @@
     "id": "730277",
     "name": "Doctor Oath",
     "rarity": "0",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "730277"
+    ]
   },
   "730287": {
     "desc": "Boosts all parameters of Female types (15%, all) & probable damage reduction to 1 (10%, all) & adds probability of resistance against 1 KO attack (15%) effect to BB/SBB & damage reduction from normal attacks (20%)",
@@ -14239,7 +14597,10 @@
     "id": "730287",
     "name": "Goddess of Love",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "730287"
+    ]
   },
   "740146": {
     "desc": "If Aries' Hammers or Noblesse Title equipped, Boosts critical damage (150%) for 2 turns on critical & If Aries' Hammers equipped, Adds Boosts Spark dmg (100%) for 3 turns to BB/SBB and boosts DEF (120%) for 2 turns when HP are below 50%",
@@ -14567,7 +14928,10 @@
     "id": "740167",
     "name": "Spoiled Child",
     "rarity": "0",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "740167"
+    ]
   },
   "740176": {
     "desc": "Adds Removes status ailments to BB/SBB/UBB & Boosts BB gauge when attacked (3-5 BC)",
@@ -14866,7 +15230,10 @@
     "id": "740217",
     "name": "Looking for Truth",
     "rarity": "0",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "740217"
+    ]
   },
   "740226": {
     "desc": "Adds boost to BC, HC drop rate (30%) for 3 turns effect to BB/SBB & 10% boost to all parameters for Male units (all)",
@@ -15167,7 +15534,10 @@
     "id": "740247",
     "name": "Following Orders",
     "rarity": "0",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "740247"
+    ]
   },
   "750136": {
     "desc": "When Immaculate is equipped, boost critical damage (60%) and critical damage boosts BB gauge (2-3 BC and 1-2 BC to all)",
@@ -15219,6 +15589,78 @@
     "target": "self",
     "associated_units": [
       "750136"
+    ]
+  },
+  "750137": {
+    "desc": "Boosts critical damage (100%) & critical damage boosts BB gauge (4 BC, all) & damage reduction (5%, all) & adds elemental damage boost (175%) for 3 turns and probability of performing up to 2 extra actions within the same turn (15%) effects to SBB",
+    "effects": [
+      {
+        "conditions": [],
+        "crit multiplier%": 100,
+        "passive id": "34",
+        "passive target": "self"
+      },
+      {
+        "bc fill on crit max": 4,
+        "bc fill on crit min": 4,
+        "bc fill on crit%": 100,
+        "conditions": [],
+        "passive id": "65",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "dmg reduction chance%": 100,
+        "dmg reduction%": 5,
+        "passive id": "14",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "dark units do extra elemental weakness dmg": true,
+            "earth units do extra elemental weakness dmg": true,
+            "effect delay time(ms)/frame": "50.0/3",
+            "elemental weakness buff turns": 3,
+            "elemental weakness multiplier%": 175,
+            "fire units do extra elemental weakness dmg": true,
+            "light units do extra elemental weakness dmg": true,
+            "proc id": "55",
+            "target area": "aoe",
+            "target type": "party",
+            "thunder units do extra elemental weakness dmg": true,
+            "water units do extra elemental weakness dmg": true
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "chance% for extra action": 15,
+            "effect delay time(ms)/frame": "50.0/3",
+            "extra action buff turns (123)": 1,
+            "max number of extra actions": 2,
+            "proc id": "76",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "750137",
+    "name": "Rewritten Existence",
+    "rarity": "0",
+    "target": "self",
+    "associated_units": [
+      "750137"
     ]
   },
   "750146": {
@@ -15302,7 +15744,10 @@
     "id": "750147",
     "name": "Dear Sister",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "750147"
+    ]
   },
   "750156": {
     "desc": "Spark damage slightly boosts own BB gauge (1BC) & (Need Blink or Gazolina in the team or Blink's glasses) 30% Chance to Heal 20% when attacked (SELF) & Boosts Rec by 60% when BB gauge is full (ALL) ",
@@ -15673,7 +16118,10 @@
     "id": "750177",
     "name": "Firefeathered Ravens",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "750177"
+    ]
   },
   "750186": {
     "desc": "Negates enemies' critical and element based damage & Chance (25%) of slightly recovering HP when attacked (20%)",
@@ -16168,7 +16616,10 @@
     "id": "750257",
     "name": "Summoning Memories",
     "rarity": "0",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "750257"
+    ]
   },
   "750267": {
     "desc": "When Hunter Title is equipped, boosts ATK (50%) and Spark damage (60%) & Spark damage boosts BB gauge (2-3 BC)",
@@ -16215,7 +16666,10 @@
     "id": "750267",
     "name": "Natural Born Fencer",
     "rarity": "0",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "750267"
+    ]
   },
   "750277": {
     "desc": "Adds probable random status ailment infliction to attack (20%) for 3 turn to BB/SBB & when Siegfried sphere is equipped, raises ATK parameter limits to 130000, negates DEF ignoring effect (all) and boosts ATK of Light types (30%)",
@@ -16313,7 +16767,10 @@
     "id": "750277",
     "name": "Isolated Warrior",
     "rarity": "0",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "750277"
+    ]
   },
   "750287": {
     "desc": "If Caliburn is equipped, 20% to ATK, DEF (all) and adds OD gauge fill rate (20%) 3 turns to BB/SBB & If Grail is equipped, boosts ATK and HP (50%), critical damage (100%), Spark damage (100%) and BB ATK (100%)",
@@ -16409,7 +16866,10 @@
     "id": "750287",
     "name": "Unwavering Will",
     "rarity": "0",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "750287"
+    ]
   },
   "750307": {
     "desc": "Reduces BB gauge required for BB (5%, all) & adds probability of activating BB/SBB/UBB twice (25%) and Light barrier (4000 HP) effects to BB/SBB & negates status ailments (all) & negates elemental damage",
@@ -16477,7 +16937,10 @@
     "id": "750307",
     "name": "War and Peace",
     "rarity": "0",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "750307"
+    ]
   },
   "750317": {
     "desc": "Boosts all parameters (20%, all) & damage reduction from normal attack (all, 5%) & adds REC of all element types boost for 3 turns (120%) effect and 5 combo Light attack on single foe to SBB",
@@ -16619,7 +17082,10 @@
     "id": "750317",
     "name": "Ruler of Valhalla",
     "rarity": "0",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "750317"
+    ]
   },
   "760006": {
     "desc": "Renders self able to withstand 1 KO attack when HP is below 20% (When Hope of Yggdrasil or Seed of Yggdrasil is equipped) & Slightly recovers HP when attacked (5%) & Boosts all parameters (20%)",
@@ -16918,6 +17384,72 @@
     "target": "self",
     "associated_units": [
       "760186"
+    ]
+  },
+  "760187": {
+    "desc": "Adds critical hit rate boost (60%) for 3 turns effect to BB/SBB/UBB & chance to reduce damage taken to 1 (20%) & boosts critical damage (15%, all), BC, HC drop rates (10%, all) and BB ATK (100%) & damage taken may restore HP (30% chance 25-30%)",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "trigger on ubb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "passive id": "43",
+        "passive target": "self",
+        "take 1 dmg%": 20
+      },
+      {
+        "conditions": [],
+        "crit multiplier%": 15,
+        "passive id": "34",
+        "passive target": "party"
+      },
+      {
+        "bc drop rate% buff": 10,
+        "conditions": [],
+        "hc drop rate% buff": 10,
+        "passive id": "19",
+        "passive target": "party"
+      },
+      {
+        "bb atk% buff": 100,
+        "conditions": [],
+        "passive id": "64",
+        "passive target": "self",
+        "sbb atk% buff": 100,
+        "ubb atk% buff": 100
+      },
+      {
+        "conditions": [],
+        "dmg% to hp% when attacked chance%": 30,
+        "dmg% to hp% when attacked high": 30,
+        "dmg% to hp% when attacked low": 25,
+        "passive id": "24",
+        "passive target": "self"
+      }
+    ],
+    "id": "760187",
+    "name": "Invisible Presence",
+    "rarity": "0",
+    "target": "self",
+    "associated_units": [
+      "760187"
     ]
   },
   "760196": {
@@ -17474,7 +18006,10 @@
     "id": "760257",
     "name": "Politician and Warrior",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "760257"
+    ]
   },
   "760267": {
     "desc": "Boosts elemental damage (20%, all) and if Pure Noblesse Title or Old Crown Fragment is equipped, boosts ATK, DEF, REC (15%) each turn (6 turns max) and adds boosts OD gauge fill rate at turn's end (400 OD) for 3 turns to BB/SBB",
@@ -17536,7 +18071,10 @@
     "id": "760267",
     "name": "Consumed Genome",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "760267"
+    ]
   },
   "760277": {
     "desc": "Adds normal hit amount raise (+2, 120% damage) for 3 turns effect to BB/SBB & when a Siegfried sphere is equipped, boosts all parameters (30%) and reduces BB gauge required for BB (5%, all)",
@@ -17598,7 +18136,10 @@
     "id": "760277",
     "name": "Valedictorian",
     "rarity": "0",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "760277"
+    ]
   },
   "810108": {
     "desc": "Boosts all parameters (30%) & absorbs HP when attacking (5-10%) & adds DEF ignore effect to BB/SBB for 3 turns & boosts ATK, DEF when BB gauge is full (50%) & raises ATK parameter limits to 130000",
@@ -17655,7 +18196,10 @@
     "id": "810108",
     "name": "Queen of the Grimm",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "810108"
+    ]
   },
   "810317": {
     "desc": "Negates critical, elemental damage & boosts BB Atk when Vulcan Axe is equipped",
@@ -17751,7 +18295,10 @@
     "id": "810327",
     "name": "Shapeshifter",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "810327"
+    ]
   },
   "810337": {
     "desc": "Adds resistance against 1 KO attack when HP is below 20%",
@@ -17824,7 +18371,10 @@
     "id": "810356",
     "name": "Underworld Communion",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "810356"
+    ]
   },
   "810357": {
     "desc": "Hugely restores HP each turn, probable resistance against 1 KO attack",
@@ -17850,7 +18400,10 @@
     "id": "810357",
     "name": "Underworld Judgment",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "810357"
+    ]
   },
   "810377": {
     "desc": "Boosts damage against status afflicted foes for all allies & boosts critical damage",
@@ -17877,7 +18430,10 @@
     "id": "810377",
     "name": "Mist Finer",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "810377"
+    ]
   },
   "810378": {
     "desc": "Boosts damage against status afflicted foes for all allies, boosts critical damage & probable damage reduction to 1",
@@ -17910,7 +18466,10 @@
     "id": "810378",
     "name": "Mist Finer Mastery",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "810378"
+    ]
   },
   "810397": {
     "desc": "Negates elemental damage & Boosts all stats (10%) for Fire types",
@@ -18051,7 +18610,10 @@
     "id": "810418",
     "name": "Daemones Malleus Infinitium",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "810418"
+    ]
   },
   "810508": {
     "desc": "Damage taken may restore HP (25% chance 25-30%) & adds resistance against 1 KO attack when HP is below 20% & adds damage reduction (15%) from Fire, Water, Earth, Thunder types for 1 turn effect to BB/SBB",
@@ -18100,7 +18662,10 @@
     "id": "810508",
     "name": "Enkindling Soul",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "810508"
+    ]
   },
   "810547": {
     "desc": "25% damage reduction from Fire, Earth types & adds slight max HP boost effect for self to BB/SBB when Atk Boosting sphere is equipped",
@@ -18159,7 +18724,10 @@
     "id": "810547",
     "name": "Dragon Force",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "810547"
+    ]
   },
   "810548": {
     "desc": "25% damage reduction from Fire, Earth types, raises Atk parameter limits to 130000, 10% damage reduction & adds max HP boost effect for self to BB/SBB when Atk Boosting sphere is equipped",
@@ -18230,7 +18798,10 @@
     "id": "810548",
     "name": "True Dragon Force",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "810548"
+    ]
   },
   "820168": {
     "desc": "Raises ATK parameters limits to 150000 & boosts all parameters of Water types (25%, all) & boosts ATK relative to remaining HP (0-100%) & absorbs HP while attacking & adds ATK and DEF boost relative to REC (100%) for 3 turns effect to BB/SBB",
@@ -18292,7 +18863,10 @@
     "id": "820168",
     "name": "Shrewdly Diabolical",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "820168"
+    ]
   },
   "820297": {
     "desc": "Slightly boosts Atk, Def, Rec when BB gauge is over 50%, boosts BB gauge each turn for all allies & slightly boosts Spark damage for all allies",
@@ -18322,7 +18896,10 @@
     "id": "820297",
     "name": "Cool Consonance",
     "rarity": "7",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "820297"
+    ]
   },
   "820298": {
     "desc": "Boosts Atk, Def, Rec when BB gauge is over 50%, considerably boosts BB gauge each turn for all allies, slightly boosts Spark damage for all allies & raises Atk parameter limits to 160000",
@@ -18358,7 +18935,10 @@
     "id": "820298",
     "name": "Harmonious Concerto",
     "rarity": "7",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "820298"
+    ]
   },
   "820317": {
     "desc": "20% boost to all parameters & boosts BB gauge when attacking when Glacies Staff is equipped",
@@ -18423,7 +19003,10 @@
     "id": "820377",
     "name": "Keep On Smiling",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "820377"
+    ]
   },
   "820378": {
     "desc": "10% boost to all parameters and damage taken slightly boosts BB gauge for all allies, greatly boosts critical damage & raises Atk parameter limits to 130000",
@@ -18461,7 +19044,10 @@
     "id": "820378",
     "name": "No Trouble Too Big",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "820378"
+    ]
   },
   "820387": {
     "desc": "Nullify ailments",
@@ -18719,7 +19305,10 @@
     "id": "820507",
     "name": "Swift Charge",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "820507"
+    ]
   },
   "820508": {
     "desc": "Hugely reduces BB gauge required for BB, adds status ailment removal and negation effects for 3 turns to BB/SBB & 20% boost to all parameters of Water types",
@@ -18794,7 +19383,10 @@
     "id": "820508",
     "name": "Time Leap",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "820508"
+    ]
   },
   "820547": {
     "desc": "5% boost to all parameters for all allies & 25% damage reduction from Water types",
@@ -18819,7 +19411,10 @@
     "id": "820547",
     "name": "Cold Resistance",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "820547"
+    ]
   },
   "820548": {
     "desc": "10% boost to all parameters for all allies, 25% damage reduction from Water types & raises Atk parameter limits to 130000",
@@ -18850,7 +19445,10 @@
     "id": "820548",
     "name": "Sub-Zero Endurance",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "820548"
+    ]
   },
   "830118": {
     "desc": "Boosts all parameters (30%) & probable HP restoration when attacked (30% chance 25%) and damage reduction (25% chance 30%) & adds Earth Barrier effect (3500 HP) and boosts OD gauge fill rate at turn's end (400 OD) to BB/SBB",
@@ -18908,7 +19506,10 @@
     "id": "830118",
     "name": "Lore Savant",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "830118"
+    ]
   },
   "830178": {
     "desc": "Negates critical, elemental damage and Def ignoring damage",
@@ -18971,7 +19572,10 @@
     "id": "830297",
     "name": "Victorious Encore",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "830297"
+    ]
   },
   "830298": {
     "desc": "40% boost to all parameters when Sakura Onusa is equipped, resistance against 1 KO attack when HP is below 35%, Spark damage boosts BB gauge for all allies & 25% boost to Spark damage for all allies",
@@ -19020,7 +19624,10 @@
     "id": "830298",
     "name": "Thousand Cherry Encore",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "830298"
+    ]
   },
   "830317": {
     "desc": "Boosts damage dealt against status afflicted foes & raises normal hit amount when Vorpal Chainblades is equipped",
@@ -19135,7 +19742,10 @@
     "id": "830358",
     "name": "And What's Mine Is Mine",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "830358"
+    ]
   },
   "830377": {
     "desc": "Negates elemental damage & slightly boosts critical damage for all allies",
@@ -19218,7 +19828,10 @@
     "id": "830387",
     "name": "Chain Claw",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "830387"
+    ]
   },
   "830388": {
     "desc": "Adds Def ignoring effect for all allies, 80% boost to Spark damage, probable damage reduction to 1 & raises Atk parameter limits to 130000",
@@ -19251,7 +19864,85 @@
     "id": "830388",
     "name": "Hidden Chain Claw",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "830388"
+    ]
+  },
+  "830418": {
+    "desc": "Negates all status ailments & boosts damage against afflicted foes (100%) & adds OD gauge boost (10%) effect to BB/SBB & boosts all parameters of Water and Earth types (25%, all)",
+    "effects": [
+      {
+        "conditions": [],
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "passive target": "self",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "atk% buff when enemy has ailment": 100,
+        "atk% buff when enemy has curse": true,
+        "atk% buff when enemy has injury": true,
+        "atk% buff when enemy has paralysis": true,
+        "atk% buff when enemy has poison": true,
+        "atk% buff when enemy has sick": true,
+        "atk% buff when enemy has weaken": true,
+        "conditions": [],
+        "passive id": "74",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "increase od gauge%": 10,
+            "proc id": "43",
+            "target area": "single",
+            "target type": "4"
+          }
+        ]
+      },
+      {
+        "atk% buff": 25,
+        "conditions": [],
+        "def% buff": 25,
+        "elements buffed": [
+          "water"
+        ],
+        "hp% buff": 25,
+        "passive id": "2",
+        "passive target": "party",
+        "rec% buff": 25
+      },
+      {
+        "atk% buff": 25,
+        "conditions": [],
+        "def% buff": 25,
+        "elements buffed": [
+          "earth"
+        ],
+        "hp% buff": 25,
+        "passive id": "2",
+        "passive target": "party",
+        "rec% buff": 25
+      }
+    ],
+    "id": "830418",
+    "name": "Isengrim Champion",
+    "rarity": "1",
+    "target": "self",
+    "associated_units": [
+      "830418"
+    ]
   },
   "830518": {
     "desc": "Negates elemental damage, greatly boosts Spark damage for 2 turns when BC collected has exceeded certain amount & slight damage reduction for 2 turns when HC collected has exceeded certain amount",
@@ -19287,7 +19978,10 @@
     "id": "830518",
     "name": "One Heart One Soul",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "830518"
+    ]
   },
   "840117": {
     "desc": "Boosts Atk when BB gauge is full & boosts damage dealt against status afflicted foes",
@@ -19377,7 +20071,10 @@
     "id": "840128",
     "name": "Unyielding Huntress",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "840128"
+    ]
   },
   "840317": {
     "desc": "Boosts BB gauge fill rate, damage taken boosts BB gauge when Eremorn's Aegis is equipped & boosts Thunder elemental damage",
@@ -19505,7 +20202,10 @@
     "id": "840327",
     "name": "Unholy Awakening",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "840327"
+    ]
   },
   "840358": {
     "desc": "Boosts all parameters of Thunder types (20%, all) & adds resistance against 1 KO when HP is below 20% & negates all status ailments (all) & adds BB gauge boost (12 BC) for 3 turns effect to BB/SBB",
@@ -19565,7 +20265,10 @@
     "id": "840358",
     "name": "A Guardian Reborn",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "840358"
+    ]
   },
   "840377": {
     "desc": "Raises normal hit amount & boosts BB gauge each turn",
@@ -19797,7 +20500,10 @@
     "id": "840508",
     "name": "Three Worlds King Taolu",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "840508"
+    ]
   },
   "840547": {
     "desc": "15% damage reduction from normal attacks when Damage Reducing Sphere is equipped & 25% damage reduction from Water, Thunder types",
@@ -19825,7 +20531,10 @@
     "id": "840547",
     "name": "Master Swordswoman",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "840547"
+    ]
   },
   "840548": {
     "desc": "20% damage reduction from normal attack when Damage Reducing Sphere is equipped, negates Def ignoring effect for all allies, 15% additional damage reduction for all allies & 25% damage reduction from Water, Thunder types",
@@ -19865,7 +20574,10 @@
     "id": "840548",
     "name": "Titania",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "840548"
+    ]
   },
   "850157": {
     "desc": "Slightly boost BC, HC efficacy & adds status ailment removal effect to BB/SBB",
@@ -19997,7 +20709,10 @@
     "id": "850158",
     "name": "Sharing is Caring",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "850158"
+    ]
   },
   "850166": {
     "desc": "Adds Light barrier effect to BB/SBB for 3 turns & boosts Rec relative to how low HP is",
@@ -20227,7 +20942,10 @@
     "id": "850297",
     "name": "Pure Consonance",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "850297"
+    ]
   },
   "850298": {
     "desc": "40% boost to all parameters when Kagura Suzu is equipped, negates status ailments, adds status ailment removal effect to BB/SBB/UBB, hugely restores HP for 3 turns when guarding for all allies & 15% boost to all parameters for all allies",
@@ -20309,7 +21027,10 @@
     "id": "850298",
     "name": "Purifying Concerto",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "850298"
+    ]
   },
   "850317": {
     "desc": "Adds removal and negation of status ailments effects for 3 turns to BB/SBB when Ritus Staff is equipped",
@@ -20458,7 +21179,10 @@
     "id": "850387",
     "name": "Golden Lion's Roar",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "850387"
+    ]
   },
   "850388": {
     "desc": "Boosts Atk, Def when HP is over 50%, boosts critical damage & raises normal hit amount",
@@ -20487,7 +21211,10 @@
     "id": "850388",
     "name": "Golden Lion's Charge",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "850388"
+    ]
   },
   "850397": {
     "desc": "Nullify ailments & Boosts REC (0-100%) based on remaining HP",
@@ -20605,7 +21332,10 @@
     "id": "850418",
     "name": "Matriarch's Chagrin",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "850418"
+    ]
   },
   "850507": {
     "desc": "15% damage reduction from normal attacks when Damage Reducing Sphere is equipped & adds enormous critical hit rate boost effect to BB/SBB/UBB for 3 turns",
@@ -20644,7 +21374,10 @@
     "id": "850507",
     "name": "Guardian",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "850507"
+    ]
   },
   "850508": {
     "desc": "20% damage reduction from normal attacks when Damage Reducing Sphere is equipped, adds enormous critical hit rate boost effect to BB/SBB/UBB for 3 turns, boosts Def each turn for up to 4 turns & negates elemental damage for all allies",
@@ -20698,7 +21431,10 @@
     "id": "850508",
     "name": "Crystal Break",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "850508"
+    ]
   },
   "850547": {
     "desc": "Negates elemental damage for all allies & boosts all parameters accordingly: 10% when Silver Key is equipped, 15% when Gold Key is equipped, 20% when Diamond Key is equipped",
@@ -20759,7 +21495,10 @@
     "id": "850547",
     "name": "Celestial Mage",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "850547"
+    ]
   },
   "850548": {
     "desc": "Negates elemental damage for all allies, raises the normal hit amount [+1 to each hit], boosts all parameters accordingly: 10% with Silver Key, 15% with Gold Key, 20% & adds all elements to attack effect to BB/SBB/UBB for 3 turns when Diamond Key equipped",
@@ -20857,7 +21596,10 @@
     "id": "850548",
     "name": "Legendary Celestial Mage",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "850548"
+    ]
   },
   "850977": {
     "desc": "Negates critical damage & negates Def ignoring effects",
@@ -20879,7 +21621,10 @@
     "id": "850977",
     "name": "Blue Flame Guard's Pride",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "850977"
+    ]
   },
   "850978": {
     "desc": "30% boost to all parameters when Sacred Shield is equipped, negates critical damage and Def ignoring effects",
@@ -20916,7 +21661,10 @@
     "id": "850978",
     "name": "Divine Warrior's Prayer",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "850978"
+    ]
   },
   "860127": {
     "desc": "Hugely boosts BB gauge each turn",
@@ -20931,7 +21679,10 @@
     "id": "860127",
     "name": "Silent Soliloquy",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "860127"
+    ]
   },
   "860128": {
     "desc": "25% boost to all parameters when Golden Heart is equipped & considerably boosts BB gauge each turn",
@@ -20961,7 +21712,10 @@
     "id": "860128",
     "name": "One's Own Heart",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "860128"
+    ]
   },
   "860166": {
     "desc": "Adds huge damage boost against status afflicted foes for 3 turns effect to BB/SBB & greatly boosts Atk when HP is full",
@@ -21125,7 +21879,10 @@
     "id": "860356",
     "name": "Wedjat's Eternal Mercy",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "860356"
+    ]
   },
   "860357": {
     "desc": "10% boost to all parameters of Dark types & boosts Atk, Rec each turn for up to 5 turns",
@@ -21155,7 +21912,10 @@
     "id": "860357",
     "name": "Wedjat's Unyielding Gaze",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "860357"
+    ]
   },
   "860377": {
     "desc": "Boosts critical damage & negates all status ailments",
@@ -21268,7 +22028,10 @@
     "id": "860428",
     "name": "Mantle of Chaos",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "860428"
+    ]
   },
   "860547": {
     "desc": "5% boost to all parameters of Dark types for all allies & boosts BB Atk when Book of E.N.D. is equipped",
@@ -21303,7 +22066,10 @@
     "id": "860547",
     "name": "Underworld King",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "860547"
+    ]
   },
   "860548": {
     "desc": "10% boost to all parameters of Dark types for all allies, adds resistance against 1 KO attack when HP is below 20% & greatly boosts BB Atk when Book of E.N.D. is equipped",
@@ -21349,7 +22115,10 @@
     "id": "860548",
     "name": "Absolute Demon",
     "rarity": "1",
-    "target": "self"
+    "target": "self",
+    "associated_units": [
+      "860548"
+    ]
   },
   "1000000": {
     "desc": "10% boost to Atk",
