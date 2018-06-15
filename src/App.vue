@@ -1,5 +1,5 @@
 <template>
-  <v-app :dark="darkMode">
+  <v-app :dark="!lightMode">
     <v-navigation-drawer
       persistent
       v-model="showDrawer"
@@ -38,7 +38,7 @@
       </v-list>
       <v-btn flat block href="https://github.com/BluuArc/bf-mt/issues" rel="noopener" target="_blank">Report Issues</v-btn>
       <v-footer>
-        <v-btn class="pl-0" href="https://github.com/BluuArc/bf-mt" rel="noopener" target="_blank">
+        <v-btn flat class="pl-0" href="https://github.com/BluuArc/bf-mt" rel="noopener" target="_blank">
           <v-icon left class="pr-2">fab fa-github</v-icon>
           GitHub
         </v-btn>
@@ -98,7 +98,7 @@ export default {
       });
       return state;
     },
-    ...mapState('settings', ['darkMode', 'activeServer']),
+    ...mapState('settings', ['lightMode', 'activeServer']),
     ...mapState(['disableHtmlOverflow', 'modules', 'updateTimes']),
     ...mapState('units', {
       unitsNumEntries: 'numEntries',

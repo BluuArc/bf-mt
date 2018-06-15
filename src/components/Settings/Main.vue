@@ -8,7 +8,7 @@
                 <h3 class="title">General Settings</h3>
               </v-card-title>
               <v-card-text>
-                <v-switch v-model="general.darkMode" label="Use Dark Mode"/>
+                <v-switch v-model="general.lightMode" label="Use Light Theme"/>
               </v-card-text>
               <v-card-text>
                 <h3 class="subheading">Active Server</h3>
@@ -158,7 +158,7 @@ import { mapActions, mapState } from 'vuex';
 export default {
   computed: {
     ...mapState(['updateTimes']),
-    ...mapState('settings', ['darkMode', 'activeServer']),
+    ...mapState('settings', ['lightMode', 'activeServer']),
     ...mapState('units', {
       unitData: 'pageDb',
       unitNumEntries: 'numEntries',
@@ -214,9 +214,9 @@ export default {
         });
       return info;
     },
-    darkModeCheckboxRules () {
+    lightModeCheckboxRules () {
       return [
-        v => v !== this.darkMode || 'Setting is the same as current',
+        v => v !== this.lightMode || 'Setting is the same as current',
       ];
     },
     generalForm () {
@@ -243,7 +243,7 @@ export default {
       return hasUpdates || hasDeletes;
     },
     generalFormHasChanged () {
-      const changedDarkSetting = this.general.darkMode !== this.darkMode;
+      const changedDarkSetting = this.general.lightMode !== this.lightMode;
       const changedActiveServer = this.general.activeServer !== this.activeServer;
       return changedDarkSetting || changedActiveServer;
     },
@@ -252,7 +252,7 @@ export default {
     return {
       general: {
         valid: false,
-        darkMode: true,
+        lightMode: true,
         activeServer: 'gl',
       },
       // each entry contains array of servers to re-download
@@ -274,12 +274,12 @@ export default {
     };
   },
   mounted () {
-    this.general.darkMode = this.darkMode;
+    this.general.lightMode = this.lightMode;
     this.general.activeServer = this.activeServer;
   },
   watch: {
-    darkMode (newValue) {
-      this.general.darkMode = newValue;
+    lightMode (newValue) {
+      this.general.lightMode = newValue;
     },
     activeServer (newValue) {
       this.general.activeServer = newValue;
@@ -287,7 +287,7 @@ export default {
   },
   methods: {
     ...mapActions(['setActiveServer', 'fetchUpdateTimes']),
-    ...mapActions('settings', ['setDarkMode']),
+    ...mapActions('settings', ['setLightMode']),
     ...mapActions('units', {
       unitDataUpdate: 'updateData',
       unitDataDelete: 'deleteData',
@@ -309,8 +309,8 @@ export default {
       leaderSkillDataDelete: 'deleteData',
     }),
     async generalFormSubmit () {
-      if (this.general.darkMode !== this.darkMode) {
-        await this.setDarkMode(this.general.darkMode);
+      if (this.general.lightMode !== this.lightMode) {
+        await this.setLightMode(this.general.lightMode);
       }
 
       if (this.general.activeServer !== this.activeServer) {
@@ -321,7 +321,7 @@ export default {
     },
     generalFormReset () {
       this.generalForm.reset();
-      this.general.darkMode = this.darkMode;
+      this.general.lightMode = this.lightMode;
       this.general.activeServer = this.activeServer;
     },
     toggleDataUpdate (dataType, server) {

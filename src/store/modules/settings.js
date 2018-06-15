@@ -7,12 +7,12 @@ const user = 'me';
 const settingsStore = {
   namespaced: true,
   state: {
-    darkMode: true,
+    lightMode: false,
     activeServer: 'gl',
   },
   mutations: {
-    setDarkMode (state, mode) {
-      state.darkMode = !!mode;
+    setLightMode (state, mode) {
+      state.lightMode = !!mode;
     },
     setActiveServer (state, server = 'gl') {
       state.activeServer = server;
@@ -23,10 +23,10 @@ const settingsStore = {
     async init ({ commit, dispatch }) {
       const currentSettings = await dispatch('getCurrentSettings');
       console.debug(currentSettings);
-      await dispatch('setDarkMode', currentSettings.darkMode);
+      await dispatch('setLightMode', currentSettings.lightMode);
       await dispatch('setActiveServer', currentSettings.activeServer);
     },
-    async setDarkMode ({ commit, dispatch }, mode) {
+    async setLightMode ({ commit, dispatch }, mode) {
       const data = await dispatch('getCurrentSettings');
       console.debug('current settings:', data, 'new mode:', mode);
       await settingsDb.put(
@@ -34,11 +34,11 @@ const settingsStore = {
           user,
           data: {
             ...data,
-            darkMode: !!mode,
+            lightMode: !!mode,
           },
         }
       );
-      commit('setDarkMode', mode);
+      commit('setLightMode', mode);
     },
     async setActiveServer ({ commit, dispatch }, server = 'gl') {
       if (!['gl', 'eu', 'jp'].includes(server)) {
