@@ -20,7 +20,7 @@ async function getPageInstance(url) {
   }
 
   if (url) {
-    await instances.page.goto(url);
+    await instances.page.goto(url, { timeout: 60 * 1000 });
   }
 
   return instances.page;
@@ -28,6 +28,7 @@ async function getPageInstance(url) {
 
 class GitHubScraper {
   async getFileTree (url) {
+    console.log('fetching filetree for', url);
     const page = await getPageInstance(url);
     const fileTree = {};
     const pageResult = await page.evaluate(() => {
@@ -60,6 +61,7 @@ class GitHubScraper {
         fileTree[name].contents = tempResult;
       }
     }
+    console.log('fetched filetree for', url);
     return fileTree;
   }
 

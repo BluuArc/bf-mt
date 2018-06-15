@@ -50,7 +50,7 @@ const itemStore = {
     },
   },
   actions: {
-    ...createActions(itemWorker),
+    ...createActions(itemWorker, downloadWorker, 'items'),
     async updateData ({ commit, dispatch }, servers = []) {
       commit('setLoadState', true);
       const baseUrl = `${location.origin}${location.pathname}static/bf-data`;

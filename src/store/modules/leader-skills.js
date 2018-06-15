@@ -17,7 +17,7 @@ const leaderSkillStore = {
     leaderSkillById: state => id => state.pageDb[id],
   },
   actions: {
-    ...createActions(leaderSkillWorker),
+    ...createActions(leaderSkillWorker, downloadWorker, 'leaderSkills'),
     async updateData ({ commit, dispatch }, servers = []) {
       commit('setLoadState', true);
       const baseUrl = `${location.origin}${location.pathname}static/bf-data`;

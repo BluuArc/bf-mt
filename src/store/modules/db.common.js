@@ -16,6 +16,11 @@ export const createState = () => {
       eu: new Date('Jan 01 1969'),
       jp: new Date('Jan 01 1969'),
     },
+    updateTimes: {
+      gl: new Date('Jan 01 1969'),
+      eu: new Date('Jan 01 1969'),
+      jp: new Date('Jan 01 1969'),
+    },
     activeServerSymbol: Symbol('activeServer'),
   };
 };
@@ -45,12 +50,13 @@ export const createMutations = () => {
     setLoadState (state, mode) {
       state.isLoading = !!mode;
     },
-    updateStatisticsForServer (state, { length = 0, server = 'gl', updateTime = new Date() }) {
+    updateStatisticsForServer (state, { length = 0, server = 'gl', cacheTime = new Date(), updateTime = new Date() }) {
       if (!isValidServer(server)) {
         throw Error(`Invalid server "${server}"`);
       }
       state.numEntries[server] = length;
-      state.cacheTimes[server] = updateTime;
+      state.cacheTimes[server] = cacheTime;
+      state.updateTimes[server] = updateTime;
     },
     setAsyncFilter (state, { name = '', data = {} }) {
       state.asyncFilters[name] = data;
@@ -58,7 +64,7 @@ export const createMutations = () => {
   };
 };
 
-export const createActions = (worker) => {
+export const createActions = (worker, downloadWorker, dbEntryName = 'units') => {
   return {
     getMiniDb ({ state }, server = 'gl') {
       // ensure server is valid
@@ -71,9 +77,10 @@ export const createActions = (worker) => {
       if (!isValidServer(server)) {
         throw Error(`Invalid server "${server}"`);
       }
+      const cacheTime = await worker.getFieldInEntry({ server }, 'cacheTime').then(date => new Date(date));
       const updateTime = await worker.getFieldInEntry({ server }, 'updateTime').then(date => new Date(date));
       const keyLength = await worker.getFieldKeyLength({ server }, 'data');
-      return { updateTime, keyLength };
+      return { cacheTime, keyLength, updateTime };
     },
     async setActiveServer ({ commit, dispatch }, server = 'gl') {
       if (!isValidServer(server)) {
@@ -92,13 +99,31 @@ export const createActions = (worker) => {
         commit('setLoadState', false);
       }
     },
-    async saveData ({ commit, dispatch, state }, { data = {}, server = 'gl', updateTime = new Date() }) {
+    async fetchUpdateTimes ({ commit, state }) {
+      const url = `${location.origin}${location.pathname}static/bf-data/update-stats.json`;
+      const data = await downloadWorker.postMessage('getJson', [url]);
+      console.debug('update data', data);
+      if (data[dbEntryName]) {
+        Object.keys(data[dbEntryName]).forEach(server => {
+          data[dbEntryName][server] = new Date(data[dbEntryName][server]);
+        });
+        return data[dbEntryName];
+      }
+      return {};
+    },
+    async saveData ({ commit, dispatch, state }, { data = {}, server = 'gl', cacheTime = new Date() }) {
+      const updateTimes = await dispatch('fetchUpdateTimes');
+      const updateTime = updateTimes[server] || cacheTime;
+      if (updateTime === cacheTime) {
+        console.warn(`[${dbEntryName}]: using cacheTime as updateTime`);
+      }
       await worker.put({
         server,
         data,
+        cacheTime,
         updateTime,
       });
-      commit('updateStatisticsForServer', { server, updateTime, length: Object.keys(data).length });
+      commit('updateStatisticsForServer', { server, cacheTime, updateTime, length: Object.keys(data).length });
       if (server === state.activeServer) {
         const currentLoadState = state.isLoading;
         // update store with new data
@@ -115,7 +140,7 @@ export const createActions = (worker) => {
       for (const server of servers) {
         try {
           const currentData = await dispatch('getDbStatistics', server);
-          await commit('updateStatisticsForServer', { server, updateTime: currentData.updateTime, length: currentData.keyLength });
+          await commit('updateStatisticsForServer', { server, cacheTime: currentData.cacheTime, length: currentData.keyLength, updateTime: currentData.updateTime });
         } catch (err) {
           console.error(err);
         }

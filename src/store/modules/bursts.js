@@ -17,7 +17,7 @@ const burstStore = {
     burstById: state => id => state.pageDb[id],
   },
   actions: {
-    ...createActions(burstWorker),
+    ...createActions(burstWorker, downloadWorker, 'bursts'),
     async updateData ({ commit, dispatch }, servers = []) {
       commit('setLoadState', true);
       const baseUrl = `${location.origin}${location.pathname}static/bf-data`;

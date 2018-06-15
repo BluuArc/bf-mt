@@ -33,7 +33,7 @@ const unitsStore = {
     },
   },
   actions: {
-    ...createActions(unitWorker),
+    ...createActions(unitWorker, downloadWorker, 'units'),
     async updateData ({ commit, dispatch }, servers = []) {
       commit('setLoadState', true);
       const baseUrl = `${location.origin}${location.pathname}static/bf-data`;

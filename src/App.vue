@@ -19,6 +19,10 @@
           @click="($vuetify.breakpoint.mdAndDown) ? (showDrawer = false) : (showDrawer = showDrawer)">
           <v-list-tile-action>
             <v-progress-circular v-if="subItem.module && loadingStates[subItem.module]" indeterminate/>
+            <v-badge v-else-if="group.subheader === 'General' && subItem.title === 'Settings' && numUpdates > 0">
+              <span slot="badge">{{ numUpdates }}</span>
+              <v-icon v-html="subItem.icon"/>
+            </v-badge>
             <v-icon v-else v-html="subItem.icon"/>
           </v-list-tile-action>
           <v-list-tile-content>
@@ -37,7 +41,11 @@
     </v-navigation-drawer>
     <v-toolbar app>
       <v-toolbar-side-icon @click.stop="showDrawer = !showDrawer"/>
-      <v-toolbar-title v-text="currentPageName"/>
+      <v-badge left v-if="numUpdates > 0">
+        <span slot="badge">{{ numUpdates }}</span>
+        <v-toolbar-title v-text="currentPageName"/>
+      </v-badge>
+      <v-toolbar-title v-else v-text="currentPageName"/>
       <v-spacer/>
       <v-menu offset-y>
         <v-btn slot="activator" flat :loading="dataIsLoading" :disabled="dataIsLoading">
@@ -84,12 +92,37 @@ export default {
       return state;
     },
     ...mapState('settings', ['darkMode', 'activeServer']),
-    ...mapState('units', { unitsLoading: 'isLoading' }),
-    ...mapState('items', { itemsLoading: 'isLoading' }),
-    ...mapState('bursts', { burstsLoading: 'isLoading' }),
-    ...mapState('extraSkills', { extraSkillsLoading: 'isLoading' }),
-    ...mapState('leaderSkills', { leaderSkillsLoading: 'isLoading' }),
-    ...mapState(['disableHtmlOverflow', 'modules']),
+    ...mapState(['disableHtmlOverflow', 'modules', 'updateTimes']),
+    ...mapState('units', {
+      unitsNumEntries: 'numEntries',
+      unitsLoading: 'isLoading',
+      unitsCacheTimes: 'cacheTimes',
+      unitsUpdateTimes: 'updateTimes',
+    }),
+    ...mapState('items', {
+      itemsNumEntries: 'numEntries',
+      itemsLoading: 'isLoading',
+      itemsCacheTimes: 'cacheTimes',
+      itemsUpdateTimes: 'updateTimes',
+    }),
+    ...mapState('bursts', {
+      burstsNumEntries: 'numEntries',
+      burstsLoading: 'isLoading',
+      burstsCacheTimes: 'cacheTimes',
+      burstsUpdateTimes: 'updateTimes',
+    }),
+    ...mapState('extraSkills', {
+      extraSkillsNumEntries: 'numEntries',
+      extraSkillsLoading: 'isLoading',
+      extraSkillsCacheTimes: 'cacheTimes',
+      extraSkillsUpdateTimes: 'updateTimes',
+    }),
+    ...mapState('leaderSkills', {
+      leaderSkillsNumEntries: 'numEntries',
+      leaderSkillsLoading: 'isLoading',
+      leaderSkillsCacheTimes: 'cacheTimes',
+      leaderSkillsUpdateTimes: 'updateTimes',
+    }),
   },
   data () {
     return {
@@ -158,6 +191,7 @@ export default {
       ],
       title: 'Brave Frontier Multi Tool',
       pageActiveServer: '',
+      numUpdates: 0,
     };
   },
   methods: {
@@ -186,6 +220,24 @@ export default {
     },
     dataIsLoading (newValue) {
       if (!newValue) {
+        this.updateUpdateTimes();
+      }
+    },
+    updateTimes: {
+      deep: true,
+      handler (freshUpdateTimes) {
+        this.numUpdates = this.modules.map(moduleName => {
+          const updateTimes = this[`${moduleName}UpdateTimes`];
+          const numEntries = this[`${moduleName}NumEntries`];
+          return !(!!updateTimes && freshUpdateTimes[moduleName]) ? 0
+            : this.possibleServers
+              .map(s => updateTimes[s] && numEntries[s] > 0 && new Date(freshUpdateTimes[moduleName][s]) > new Date(updateTimes[s]))
+              .filter(val => !!val).length;
+        }).reduce((acc, val) => acc + val, 0);
+      },
+    },
+    currentPageName () {
+      if (!this.dataIsLoading) {
         this.updateUpdateTimes();
       }
     },

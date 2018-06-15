@@ -4,14 +4,29 @@ importScripts('./dexie.min-2.0.4.js');
 importScripts('./promise-worker.register.min-1.1.1.js');
 
 const db = new Dexie('bf-mt');
-const defaultSchema = '&server,data,updateTime';
+const defaultSchemas = {
+  1: '&server,data,updateTime',
+  2: '&server,data,updateTime,cacheTime',
+};
+
 db.version(1).stores({
-  units: defaultSchema,
-  items: defaultSchema,
-  bursts: defaultSchema,
-  extraSkills: defaultSchema,
-  leaderSkills: defaultSchema,
+  units: defaultSchemas[1],
+  items: defaultSchemas[1],
+  bursts: defaultSchemas[1],
+  extraSkills: defaultSchemas[1],
+  leaderSkills: defaultSchemas[1],
   settings: '&user,data',
+});
+
+db.version(2).stores({
+  units: defaultSchemas[2],
+  items: defaultSchemas[2],
+  bursts: defaultSchemas[2],
+  extraSkills: defaultSchemas[2],
+  leaderSkills: defaultSchemas[2],
+}).upgrade(transaction => {
+  console.debug('[PW-dexie] using schema version 2');
+  return transaction;
 });
 
 const defaultGet = (table, whereQuery) => db[table].where(whereQuery).toArray();

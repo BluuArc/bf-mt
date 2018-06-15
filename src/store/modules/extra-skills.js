@@ -17,7 +17,7 @@ const extraSkillStore = {
     extraSkillById: state => id => state.pageDb[id],
   },
   actions: {
-    ...createActions(extraSkillWorker),
+    ...createActions(extraSkillWorker, downloadWorker, 'extraSkills'),
     async updateData ({ commit, dispatch }, servers = []) {
       commit('setLoadState', true);
       const baseUrl = `${location.origin}${location.pathname}static/bf-data`;

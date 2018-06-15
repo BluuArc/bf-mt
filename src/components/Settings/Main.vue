@@ -105,7 +105,7 @@
                           <span v-else>
                             No data cached.
                           </span>
-                          <p v-if="stateInfo[key].updateTimes && stateInfo[key].updateTimes[server] && (stateInfo[key].numEntries[server] === 0 || stateInfo[key].updateTimes[server] > new Date(stateInfo[key].cacheTimes[server]))">
+                          <p v-if="stateInfo[key].updateTimes && updateTimes[`${key}s`] && stateInfo[key].updateTimes[server] && updateTimes[`${key}s`][server] && (stateInfo[key].numEntries[server] === 0 || new Date(updateTimes[`${key}s`][server]) > new Date(stateInfo[key].updateTimes[server]))">
                             <v-alert color="info" class="pt-2 pb-2 pl-2 pr-2" :value="true">
                               Update available
                             </v-alert>
@@ -164,30 +164,35 @@ export default {
       unitNumEntries: 'numEntries',
       unitsLoading: 'isLoading',
       unitCacheTimes: 'cacheTimes',
+      unitUpdateTimes: 'updateTimes',
     }),
     ...mapState('items', {
       itemData: 'pageDb',
       itemNumEntries: 'numEntries',
       itemsLoading: 'isLoading',
       itemCacheTimes: 'cacheTimes',
+      itemUpdateTimes: 'updateTimes',
     }),
     ...mapState('bursts', {
       burstData: 'pageDb',
       burstNumEntries: 'numEntries',
       burstsLoading: 'isLoading',
       burstCacheTimes: 'cacheTimes',
+      burstUpdateTimes: 'updateTimes',
     }),
     ...mapState('extraSkills', {
       extraSkillData: 'pageDb',
       extraSkillNumEntries: 'numEntries',
       extraSkillsLoading: 'isLoading',
       extraSkillCacheTimes: 'cacheTimes',
+      extraSkillUpdateTimes: 'updateTimes',
     }),
     ...mapState('leaderSkills', {
       leaderSkillData: 'pageDb',
       leaderSkillNumEntries: 'numEntries',
       leaderSkillsLoading: 'isLoading',
       leaderSkillCacheTimes: 'cacheTimes',
+      leaderSkillUpdateTimes: 'updateTimes',
     }),
     stateInfo () {
       const info = {};
@@ -198,7 +203,7 @@ export default {
             numEntries: this[`${type}NumEntries`],
             isLoading: this[`${type}sLoading`],
             cacheTimes: this[`${type}CacheTimes`],
-            updateTimes: this.updateTimes[`${type}s`],
+            updateTimes: this[`${type}UpdateTimes`],
           };
         });
       return info;
