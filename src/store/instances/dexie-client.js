@@ -22,6 +22,7 @@ function makeWorker (table) {
     getFieldKeyLength: (query, field) => wrapper.getFieldKeyLength(table, query, field),
     getFieldKeys: (query, field) => wrapper.getFieldKeys(table, query, field),
     getById: (query, field, id) => wrapper.getById(table, query, field, id),
+    getDbStats: (query) => pw.postMessage({ command: 'getDbStats', args: [table, query] }),
   };
 
   return baseWorker;

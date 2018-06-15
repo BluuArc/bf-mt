@@ -50,6 +50,20 @@ const dbWrapper = {
     .then(results => {
       return (results.length === 0) ? undefined : (results[0][field] ? results[0][field][id] : undefined);
     }),
+  getDbStats: (table, query) => defaultGet(table, query)
+    .then(results => {
+      if (results.length === 0) {
+        return undefined;
+      }
+
+      try {
+        const { data, updateTime, cacheTime } = results[0];
+        return { keyLength: Object.keys(data).length, updateTime, cacheTime };
+      } catch (err) {
+        console.error(err);
+        return undefined;
+      }
+    }),
   getMiniDbUnits: (server, searchQuery = {}) => defaultGet('units', { server })
     .then(results => {
       if (results.length === 0 || !results[0].data || Object.keys(results[0].data).length === 0) {

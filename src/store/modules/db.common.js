@@ -77,9 +77,11 @@ export const createActions = (worker, downloadWorker, dbEntryName = 'units') => 
       if (!isValidServer(server)) {
         throw Error(`Invalid server "${server}"`);
       }
-      const cacheTime = await worker.getFieldInEntry({ server }, 'cacheTime').then(date => new Date(date));
-      const updateTime = await worker.getFieldInEntry({ server }, 'updateTime').then(date => new Date(date));
-      const keyLength = await worker.getFieldKeyLength({ server }, 'data');
+      const result = await worker.getDbStats({ server });
+      const { cacheTime, keyLength, updateTime } = result;
+      // const cacheTime = await worker.getFieldInEntry({ server }, 'cacheTime').then(date => new Date(date));
+      // const updateTime = await worker.getFieldInEntry({ server }, 'updateTime').then(date => new Date(date));
+      // const keyLength = await worker.getFieldKeyLength({ server }, 'data');
       return { cacheTime, keyLength, updateTime };
     },
     async setActiveServer ({ commit, dispatch }, server = 'gl') {

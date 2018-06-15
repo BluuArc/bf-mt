@@ -165,12 +165,17 @@ async function getUnitDataForServer(server = 'gl') {
 
 async function getBurstDataForServer(server = 'gl', unitData = {}) {
   logger.info(`${server}: setting git data`);
-  let fileInfo = ((ghData[server] ? ghData[server].contents : undefined) || ghData)['bbs_0.json']
-
+  let fileDate = new Date('Jan 01 1969');
   if (server === 'eu') {
-    fileInfo = ghData[server].contents['bbs.json'];
+    fileDate = new Date(ghData[server].contents['bbs.json'].date);
+  } else {
+    const folderData = (ghData[server] ? ghData[server].contents : undefined) || ghData;
+    for (let i = 0; i <= 9; ++i) {
+      const fileName = `bbs_${i}.json`;
+      fileDate = folderData[fileName] ? Math.max(fileDate, new Date(folderData[fileName].date)) : fileDate;
+    }
   }
-  updateData.bursts[server] = fileInfo.date;
+  updateData.bursts[server] = new Date(fileDate).toISOString();
   if (statsOnly) {
     return {};
   }
