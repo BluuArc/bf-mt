@@ -70,14 +70,19 @@
         <router-view/>
       </v-slide-y-transition>
     </v-content>
+    <site-trackers/>
   </v-app>
 </template>
 
 <script>
 import { mapActions, mapState } from 'vuex';
 import debounce from 'lodash/debounce';
+import SiteTrackers from '@/components/SiteTrackers';
 
 export default {
+  components: {
+    'site-trackers': SiteTrackers,
+  },
   computed: {
     currentPage () {
       return this.$route.path;
