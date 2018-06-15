@@ -22,8 +22,11 @@ const extraSkillStore = {
       commit('setLoadState', true);
       const baseUrl = `${location.origin}${location.pathname}static/bf-data`;
       for (const server of servers) {
+        const logPrefix = `Downloading data for ${server.toUpperCase()} server`;
+        commit('setLoadingMessage', logPrefix);
         try {
           const extraSkillDb = await downloadWorker.postMessage('getJson', [`${baseUrl}/es-${server}.json`]);
+          commit('setLoadingMessage', `Storing data for ${server.toUpperCase()} server`);
           await dispatch('saveData', { data: extraSkillDb, server });
           console.debug('finished updating extraSkill data for', server);
         } catch (err) {

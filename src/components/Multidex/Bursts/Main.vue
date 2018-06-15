@@ -1,9 +1,8 @@
 <template>
   <v-container grid-list-sm class="pb-5">
     <v-layout row v-if="isDataLoading || !finishedInit">
-      <v-flex xs12 class="text-xs-center pt-5">
-        <v-progress-circular indeterminate/>
-        <h4 class="subheading">Waiting for data to finish loading.</h4>
+      <v-flex xs12 class="pt-5">
+        <loading-component :loading-message="pageLoadingMessage"/>
       </v-flex>
     </v-layout>
     <v-layout row wrap v-else>
@@ -226,6 +225,7 @@ import BurstInfo from '@/components/Multidex/Bursts/BurstDialogContent';
 import BurstCard from '@/components/Multidex/Bursts/BurstCard';
 import debounce from 'lodash/debounce';
 import ResultViewer from '@/components/Multidex/ResultViewer';
+import LoadingComponent from '@/components/Multidex/LoadingComponent';
 
 export default {
   props: ['query', 'viewId'],
@@ -233,12 +233,20 @@ export default {
     'burst-info': BurstInfo,
     'burst-card': BurstCard,
     'result-viewer': ResultViewer,
+    'loading-component': LoadingComponent,
   },
   computed: {
-    ...mapState('bursts', ['pageDb', 'isLoading', 'numEntries', 'activeServer']),
-    ...mapState('units', { unitEntries: 'numEntries' }),
+    ...mapState('bursts', ['pageDb', 'isLoading', 'numEntries', 'activeServer', 'loadingMessage']),
+    ...mapState('units', { unitEntries: 'numEntries', unitLoadingMessage: 'loadingMessage' }),
     ...mapGetters('bursts', ['getMultidexPathTo']),
     ...mapState(['inInitState', 'sortAndFilterSettings']),
+    pageLoadingMessage () {
+      if (this.loadingMessage) {
+        return `[${this.$route.name}] ${this.loadingMessage}`;
+      } else if (this.unitLoadingMessage) {
+        return `[Units] ${this.unitLoadingMessage}`;
+      }
+    },
     hasOtherServers () {
       return Object.keys(this.numEntries).filter(s => s !== this.activeServer)
         .map(s => this.numEntries[s]).reduce((acc, val) => acc + val, 0) > 0;

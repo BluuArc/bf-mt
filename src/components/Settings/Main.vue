@@ -130,7 +130,7 @@
                     v-show="stateInfo[key].isLoading"
                     xs9 class="text-xs-center pa-0">
                     <v-progress-circular indeterminate/>
-                    <h4 class="subheading">Waiting for data to finish loading.</h4>
+                    <h4 class="subheading" v-text="stateInfo[key].loadingMessage || 'Waiting for data to finish loading.'"/>
                   </v-flex>
                   <v-flex xs12>
                     <v-divider/>
@@ -165,6 +165,7 @@ export default {
       unitsLoading: 'isLoading',
       unitCacheTimes: 'cacheTimes',
       unitUpdateTimes: 'updateTimes',
+      unitLoadingMessage: 'loadingMessage',
     }),
     ...mapState('items', {
       itemData: 'pageDb',
@@ -172,6 +173,7 @@ export default {
       itemsLoading: 'isLoading',
       itemCacheTimes: 'cacheTimes',
       itemUpdateTimes: 'updateTimes',
+      itemLoadingMessage: 'loadingMessage',
     }),
     ...mapState('bursts', {
       burstData: 'pageDb',
@@ -179,6 +181,7 @@ export default {
       burstsLoading: 'isLoading',
       burstCacheTimes: 'cacheTimes',
       burstUpdateTimes: 'updateTimes',
+      burstLoadingMessage: 'loadingMessage',
     }),
     ...mapState('extraSkills', {
       extraSkillData: 'pageDb',
@@ -186,6 +189,7 @@ export default {
       extraSkillsLoading: 'isLoading',
       extraSkillCacheTimes: 'cacheTimes',
       extraSkillUpdateTimes: 'updateTimes',
+      extraSkillLoadingMessage: 'loadingMessage',
     }),
     ...mapState('leaderSkills', {
       leaderSkillData: 'pageDb',
@@ -193,6 +197,7 @@ export default {
       leaderSkillsLoading: 'isLoading',
       leaderSkillCacheTimes: 'cacheTimes',
       leaderSkillUpdateTimes: 'updateTimes',
+      leaderSkillLoadingMessage: 'loadingMessage',
     }),
     stateInfo () {
       const info = {};
@@ -204,6 +209,7 @@ export default {
             isLoading: this[`${type}sLoading`],
             cacheTimes: this[`${type}CacheTimes`],
             updateTimes: this[`${type}UpdateTimes`],
+            loadingMessage: this[`${type}LoadingMessage`],
           };
         });
       return info;

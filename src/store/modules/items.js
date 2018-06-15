@@ -55,6 +55,8 @@ const itemStore = {
       commit('setLoadState', true);
       const baseUrl = `${location.origin}${location.pathname}static/bf-data`;
       for (const server of servers) {
+        const logPrefix = `Downloading data for ${server.toUpperCase()} server`;
+        commit('setLoadingMessage', logPrefix);
         try {
           const itemDb = {};
           const loadPromises = [];
@@ -68,10 +70,12 @@ const itemStore = {
                     itemDb[id] = tempData[id];
                   });
                 console.debug(server, 10 - (++countFinished), 'item files remaining');
+                commit('setLoadingMessage', `${logPrefix} (${10 - countFinished} files remaining)`);
               }));
           }
 
           await Promise.all(loadPromises);
+          commit('setLoadingMessage', `Storing data for ${server.toUpperCase()} server`);
           await dispatch('saveData', { data: itemDb, server });
           console.debug('finished updating item data for', server);
         } catch (err) {

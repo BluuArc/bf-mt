@@ -1,9 +1,8 @@
 <template>
   <v-container grid-list-sm class="pb-5">
     <v-layout row v-if="isDataLoading || !finishedInit">
-      <v-flex xs12 class="text-xs-center pt-5">
-        <v-progress-circular indeterminate/>
-        <h4 class="subheading">Waiting for data to finish loading.</h4>
+      <v-flex xs12 class="pt-5">
+        <loading-component :loading-message="pageLoadingMessage"/>
       </v-flex>
     </v-layout>
     <v-layout row wrap v-else>
@@ -319,6 +318,7 @@ import UnitCard from '@/components/Multidex/Units/UnitCard';
 import UnitDialogContent from '@/components/Multidex/Units/UnitDialogContent';
 import ElementIcon from '@/components/Multidex/Units/ElementIcon';
 import ResultViewer from '@/components/Multidex/ResultViewer';
+import LoadingComponent from '@/components/Multidex/LoadingComponent';
 import debounce from 'lodash/debounce';
 
 export default {
@@ -328,12 +328,20 @@ export default {
     'unit-card': UnitCard,
     'element-icon': ElementIcon,
     'result-viewer': ResultViewer,
+    'loading-component': LoadingComponent,
   },
   computed: {
-    ...mapState('units', ['pageDb', 'isLoading', 'numEntries', 'activeServer']),
-    ...mapState('items', { itemEntries: 'numEntries' }),
+    ...mapState('units', ['pageDb', 'isLoading', 'numEntries', 'activeServer', 'loadingMessage']),
+    ...mapState('items', { itemEntries: 'numEntries', itemLoadingMessage: 'loadingMessage' }),
     ...mapGetters('units', ['getImageUrls', 'getMultidexPathTo']),
     ...mapState(['inInitState', 'sortAndFilterSettings']),
+    pageLoadingMessage () {
+      if (this.loadingMessage) {
+        return `[${this.$route.name}] ${this.loadingMessage}`;
+      } else if (this.itemLoadingMessage) {
+        return `[Items] ${this.itemLoadingMessage}`;
+      }
+    },
     hasOtherServers () {
       return Object.keys(this.numEntries).filter(s => s !== this.activeServer)
         .map(s => this.numEntries[s]).reduce((acc, val) => acc + val, 0) > 0;

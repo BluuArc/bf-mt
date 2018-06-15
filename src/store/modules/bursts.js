@@ -22,6 +22,8 @@ const burstStore = {
       commit('setLoadState', true);
       const baseUrl = `${location.origin}${location.pathname}static/bf-data`;
       for (const server of servers) {
+        const logPrefix = `Downloading data for ${server.toUpperCase()} server`;
+        commit('setLoadingMessage', logPrefix);
         try {
           const burstDb = {};
           const loadPromises = [];
@@ -35,10 +37,12 @@ const burstStore = {
                     burstDb[id] = tempData[id];
                   });
                 console.debug(server, 10 - (++countFinished), 'burst files remaining');
+                commit('setLoadingMessage', `${logPrefix} (${10 - countFinished} files remaining)`);
               }));
           }
 
           await Promise.all(loadPromises);
+          commit('setLoadingMessage', `Storing data for ${server.toUpperCase()} server`);
           await dispatch('saveData', { data: burstDb, server });
           console.debug('finished updating burst data for', server);
         } catch (err) {

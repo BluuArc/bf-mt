@@ -38,6 +38,8 @@ const unitsStore = {
       commit('setLoadState', true);
       const baseUrl = `${location.origin}${location.pathname}static/bf-data`;
       for (const server of servers) {
+        const logPrefix = `Downloading data for ${server.toUpperCase()} server`;
+        commit('setLoadingMessage', logPrefix);
         try {
           const unitDb = {};
           const loadPromises = [];
@@ -53,10 +55,12 @@ const unitsStore = {
                     }
                   });
                 console.debug(server, 6 - (++countFinished), 'unit files remaining');
+                commit('setLoadingMessage', `${logPrefix} (${6 - countFinished} files remaining)`);
               }));
           }
 
           await Promise.all(loadPromises);
+          commit('setLoadingMessage', `Storing data for ${server.toUpperCase()} server`);
           await dispatch('saveData', { data: unitDb, server });
           console.debug('finished updating unit data for', server);
         } catch (err) {

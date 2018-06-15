@@ -22,6 +22,7 @@ export const createState = () => {
       jp: new Date('Jan 01 1969'),
     },
     activeServerSymbol: Symbol('activeServer'),
+    loadingMessage: '',
   };
 };
 
@@ -48,7 +49,20 @@ export const createMutations = () => {
       }
     },
     setLoadState (state, mode) {
-      state.isLoading = !!mode;
+      if (typeof mode !== 'object') {
+        state.isLoading = !!mode;
+        // clear message if done loading
+        if (!mode) {
+          state.loadingMessage = '';
+        }
+      } else {
+        console.debug(mode);
+        const { loadState, message } = mode;
+        state.isLoading = !!loadState;
+        if (message !== undefined) {
+          state.loadingMessage = message;
+        }
+      }
     },
     updateStatisticsForServer (state, { length = 0, server = 'gl', cacheTime = new Date(), updateTime = new Date() }) {
       if (!isValidServer(server)) {
@@ -60,6 +74,9 @@ export const createMutations = () => {
     },
     setAsyncFilter (state, { name = '', data = {} }) {
       state.asyncFilters[name] = data;
+    },
+    setLoadingMessage (state, message = '') {
+      state.loadingMessage = message;
     },
   };
 };
@@ -79,9 +96,6 @@ export const createActions = (worker, downloadWorker, dbEntryName = 'units') => 
       }
       const result = await worker.getDbStats({ server });
       const { cacheTime, keyLength, updateTime } = result;
-      // const cacheTime = await worker.getFieldInEntry({ server }, 'cacheTime').then(date => new Date(date));
-      // const updateTime = await worker.getFieldInEntry({ server }, 'updateTime').then(date => new Date(date));
-      // const keyLength = await worker.getFieldKeyLength({ server }, 'data');
       return { cacheTime, keyLength, updateTime };
     },
     async setActiveServer ({ commit, dispatch }, server = 'gl') {
@@ -89,13 +103,13 @@ export const createActions = (worker, downloadWorker, dbEntryName = 'units') => 
         throw Error(`Invalid server "${server}"`);
       }
 
-      commit('setLoadState', true);
+      commit('setLoadState', { loadState: true, message: `Changing server to ${server}` });
       commit('setActiveServer', { server, commitData: false, needsReload: true });
       commit('setLoadState', false);
     },
     async ensurePageDbSyncWithServer ({ commit, dispatch, state }) {
       if (state.pageDb[state.activeServerSymbol] !== state.activeServer) {
-        commit('setLoadState', true);
+        commit('setLoadState', { loadState: true, message: 'Getting data for active server' });
         const data = await dispatch('getMiniDb', state.activeServer);
         commit('setActiveServer', { server: state.activeServer, data });
         commit('setLoadState', false);
@@ -128,10 +142,11 @@ export const createActions = (worker, downloadWorker, dbEntryName = 'units') => 
       commit('updateStatisticsForServer', { server, cacheTime, updateTime, length: Object.keys(data).length });
       if (server === state.activeServer) {
         const currentLoadState = state.isLoading;
+        const currentMessage = state.loadingMessage;
         // update store with new data
         await dispatch('setActiveServer', server);
         if (currentLoadState) {
-          commit('setLoadState', currentLoadState);
+          commit('setLoadState', { loadState: currentLoadState, message: currentMessage });
         }
       }
     },
@@ -140,6 +155,7 @@ export const createActions = (worker, downloadWorker, dbEntryName = 'units') => 
       commit('setLoadState', true);
 
       for (const server of servers) {
+        commit('setLoadingMessage', `Loading stored statistics for ${server.toUpperCase()} server`);
         try {
           const currentData = await dispatch('getDbStatistics', server);
           await commit('updateStatisticsForServer', { server, cacheTime: currentData.cacheTime, length: currentData.keyLength, updateTime: currentData.updateTime });
@@ -156,6 +172,7 @@ export const createActions = (worker, downloadWorker, dbEntryName = 'units') => 
     async deleteData ({ commit, dispatch }, servers = []) {
       commit('setLoadState', true);
       for (const server of servers) {
+        commit('setLoadingMessage', `Deleting stored data for ${server.toUpperCase()} server`);
         await dispatch('saveData', { data: {}, server });
       }
       commit('setLoadState', false);

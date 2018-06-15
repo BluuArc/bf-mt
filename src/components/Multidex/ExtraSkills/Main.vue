@@ -1,9 +1,8 @@
 <template>
   <v-container grid-list-sm class="pb-5">
     <v-layout row v-if="isDataLoading || !finishedInit">
-      <v-flex xs12 class="text-xs-center pt-5">
-        <v-progress-circular indeterminate/>
-        <h4 class="subheading">Waiting for data to finish loading.</h4>
+      <v-flex xs12 class="pt-5">
+        <loading-component :loading-message="pageLoadingMessage"/>
       </v-flex>
     </v-layout>
     <v-layout row wrap v-else>
@@ -262,6 +261,7 @@ import ExtraSkillInfo from '@/components/Multidex/ExtraSkills/DialogContent';
 import SkillCard from '@/components/Multidex/ExtraSkills/SkillCard';
 import debounce from 'lodash/debounce';
 import ResultViewer from '@/components/Multidex/ResultViewer';
+import LoadingComponent from '@/components/Multidex/LoadingComponent';
 
 export default {
   props: ['query', 'viewId'],
@@ -269,13 +269,23 @@ export default {
     'skill-info': ExtraSkillInfo,
     'es-card': SkillCard,
     'result-viewer': ResultViewer,
+    'loading-component': LoadingComponent,
   },
   computed: {
-    ...mapState('extraSkills', ['pageDb', 'isLoading', 'numEntries', 'activeServer']),
-    ...mapState('units', { unitEntries: 'numEntries' }),
-    ...mapState('items', { itemEntries: 'numEntries' }),
+    ...mapState('extraSkills', ['pageDb', 'isLoading', 'numEntries', 'activeServer', 'loadingMessage']),
+    ...mapState('units', { unitEntries: 'numEntries', unitLoadingMessage: 'loadingMessage' }),
+    ...mapState('items', { itemEntries: 'numEntries', itemLoadingMessage: 'loadingMessage' }),
     ...mapGetters('extraSkills', ['getMultidexPathTo']),
     ...mapState(['inInitState', 'sortAndFilterSettings']),
+    pageLoadingMessage () {
+      if (this.loadingMessage) {
+        return `[${this.$route.name}] ${this.loadingMessage}`;
+      } else if (this.unitLoadingMessage) {
+        return `[Units] ${this.unitLoadingMessage}`;
+      } else if (this.itemLoadingMessage) {
+        return `[Items] ${this.itemLoadingMessage}`;
+      }
+    },
     hasOtherServers () {
       return Object.keys(this.numEntries).filter(s => s !== this.activeServer)
         .map(s => this.numEntries[s]).reduce((acc, val) => acc + val, 0) > 0;

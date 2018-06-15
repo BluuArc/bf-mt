@@ -22,8 +22,11 @@ const leaderSkillStore = {
       commit('setLoadState', true);
       const baseUrl = `${location.origin}${location.pathname}static/bf-data`;
       for (const server of servers) {
+        const logPrefix = `Downloading data for ${server.toUpperCase()} server`;
+        commit('setLoadingMessage', logPrefix);
         try {
           const leaderSkillDb = await downloadWorker.postMessage('getJson', [`${baseUrl}/ls-${server}.json`]);
+          commit('setLoadingMessage', `Storing data for ${server.toUpperCase()} server`);
           await dispatch('saveData', { data: leaderSkillDb, server });
           console.debug('finished updating leaderSkill data for', server);
         } catch (err) {
