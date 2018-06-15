@@ -6,6 +6,11 @@
       enable-resize-watcher
       fixed
       app>
+      <v-btn v-if="$vuetify.breakpoint.xsOnly" block @click="showDrawer = false">
+        Close Sidebar
+        <v-spacer/>
+        <v-icon right>chevron_left</v-icon>
+      </v-btn>
       <h3 class="headline pl-3 pt-3" v-text="title"/>
       <h3 class="subheading pl-3">(UNOFFICIAL)</h3>
       <v-list v-for="(group, i) in menuItems" :key="i" subheader>
@@ -31,9 +36,11 @@
         </v-list-tile>
         <v-divider/>
       </v-list>
+      <v-btn flat block href="https://github.com/BluuArc/bf-mt/issues" rel="noopener" target="_blank">Report Issues</v-btn>
       <v-footer>
-        <v-btn href="https://github.com/BluuArc/bf-mt" rel="noopener" target="_blank" icon>
-          <v-icon>fab fa-github</v-icon>
+        <v-btn class="pl-0" href="https://github.com/BluuArc/bf-mt" rel="noopener" target="_blank">
+          <v-icon left class="pr-2">fab fa-github</v-icon>
+          GitHub
         </v-btn>
         <v-spacer/>
         <span class="mx-auto pr-3">&copy; {{ new Date().getUTCFullYear() }}</span>
