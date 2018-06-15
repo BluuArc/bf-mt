@@ -1564,7 +1564,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_700042.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "720105"
+    ]
   },
   "700043": {
     "desc": "30% all parameters (male unit only) & boosts Spark damage (50%) and BB ATK (100%) 2 turns when Sparks have exceeded 20",
@@ -1702,7 +1705,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_20961.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "720226"
+    ]
   },
   "700047": {
     "desc": "Collect 40 feathers to craft the item required to evolve Migina.",
@@ -1741,7 +1747,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_110000.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "710234"
+    ]
   },
   "700049": {
     "desc": "Collect these pumpkins to craft the Spooky Lantern.",
@@ -5083,7 +5092,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_20820.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "730216"
+    ]
   },
   "701050": {
     "desc": "A gigantic skeleton found within an ancient desert.",

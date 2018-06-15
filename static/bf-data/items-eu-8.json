@@ -79,7 +79,10 @@
     "sell_price": 500,
     "thumbnail": "item_thum_800104.png",
     "type": "consumable",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "820387"
+    ]
   },
   "800105": {
     "desc": "A scroll containing forbidden magic.",
@@ -101,7 +104,10 @@
     "sell_price": 500,
     "thumbnail": "item_thum_800105.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "860547"
+    ]
   },
   "800400": {
     "desc": "A pure white flower. Unique event crafting material.",
@@ -492,7 +498,10 @@
     "sell_price": 200,
     "thumbnail": "item_thum_800606.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "830516"
+    ]
   },
   "800701": {
     "desc": "An orb filled with the essence of Fire.",
@@ -832,7 +841,13 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_800907.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "710155",
+      "750176",
+      "750216",
+      "760186"
+    ]
   },
   "800908": {
     "desc": "This tome of greater elemental power unlocks a hero's potential within.",
@@ -994,7 +1009,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_801900.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850977"
+    ]
   },
   "818897": {
     "desc": "20% boost to Def, max HP, 5% damage reduction & negates status ailments.",
@@ -3131,7 +3149,10 @@
     "sell_price": 200,
     "thumbnail": "item_thum_880020.png",
     "type": "consumable",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "860127"
+    ]
   },
   "880201": {
     "desc": "A precious metal used to craft the Deva’s weapons and armor, as well as their grandest buildings.",

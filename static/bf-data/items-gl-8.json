@@ -503,7 +503,10 @@
     "sell_price": 500,
     "thumbnail": "item_thum_800104.png",
     "type": "consumable",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "820387"
+    ]
   },
   "800105": {
     "desc": "A scroll containing forbidden magic.",
@@ -536,7 +539,10 @@
     "sell_price": 500,
     "thumbnail": "item_thum_800105.png",
     "type": "consumable",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "860547"
+    ]
   },
   "800200": {
     "desc": "A pretty snow flake, cool to the touch. Unique event crafting material.",
@@ -1614,7 +1620,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_800409.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "820157"
+    ]
   },
   "800410": {
     "desc": "Casts Thunder shield on all allies for 2 turns.",
@@ -2156,7 +2165,10 @@
     "sell_price": 200,
     "thumbnail": "item_thum_800606.png",
     "type": "consumable",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "830516"
+    ]
   },
   "800607": {
     "desc": "Greatly boosts HC and BC drop rate for 3 turns.",
@@ -3010,7 +3022,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_801900.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850977"
+    ]
   },
   "801901": {
     "desc": "A brittle mineral rumored to be the solidified blood of fallen gods, it pulses with magical power.",
@@ -3022,7 +3037,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_801901.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "840437"
+    ]
   },
   "818881": {
     "desc": "Boosts Def by 360% when Unit's HP drops below 35% & slight boost to BC drop rate when attacking",
@@ -18618,7 +18636,10 @@
     "sell_price": 5000,
     "thumbnail": "item_thum_880001.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "810525"
+    ]
   },
   "880003": {
     "desc": "A mysterious relic used to evolve the Unit Elaina",
@@ -18630,7 +18651,10 @@
     "sell_price": 5000,
     "thumbnail": "item_thum_880003.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "830525"
+    ]
   },
   "880011": {
     "desc": "A mysterious relic used to transcend the Unit Mercenary Grandt",
@@ -18642,7 +18666,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_880011.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "810526"
+    ]
   },
   "880013": {
     "desc": "A mysterious relic used to transcend the Unit Mercenary Mage Elaina",
@@ -18654,7 +18681,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_880013.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "830526"
+    ]
   },
   "880020": {
     "desc": "A shiny medal for those who have stood the test of time.",
@@ -18687,7 +18717,10 @@
     "sell_price": 200,
     "thumbnail": "item_thum_880020.png",
     "type": "consumable",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "860127"
+    ]
   },
   "880100": {
     "desc": "A metal fragment of Forgebreaker",
@@ -19548,7 +19581,10 @@
     "sell_price": 20,
     "thumbnail": "item_thum_880244.png",
     "type": "material",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "750003"
+    ]
   },
   "880301": {
     "desc": "MST_ITEMS_MATERIAL_880301_SHORTDESCRIPTION",
