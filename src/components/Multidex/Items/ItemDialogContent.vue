@@ -213,11 +213,11 @@ export default {
   --recipe-card-color: #4caf50; /* green */
 }
 
-.theme--light .item-dialog-content .item-card {
+.theme--light .item-dialog-content .item-card, .theme--light .item-dialog-content .unit-card {
   background-color: whitesmoke;
 }
 
-.theme--dark .item-dialog-content .item-card {
+.theme--dark .item-dialog-content .item-card, .theme--dark .item-dialog-content .unit-card {
   background-color: black;
 }
 </style>
