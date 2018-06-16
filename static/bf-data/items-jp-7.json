@@ -1,0 +1,289 @@
+{
+  "70000": {
+    "desc": "少しの時間、ボスの姿をマップ上で確認できるようになる",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "903",
+          "unknown proc param": "1,480,0"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "enemy"
+    },
+    "id": 70000,
+    "max equipped": 10,
+    "max_stack": 99,
+    "name": "蛍光弾",
+    "raid": true,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 11016,
+          "name": "精製石"
+        },
+        {
+          "count": 1,
+          "id": 10610,
+          "name": "千里の眼"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_70000.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "70100": {
+    "desc": "敵からの攻撃を受けずにバトルから逃げることができる",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "906",
+          "unknown proc param": ""
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "enemy"
+    },
+    "id": 70100,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "煙玉",
+    "raid": true,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 11016,
+          "name": "精製石"
+        },
+        {
+          "count": 1,
+          "id": 10309,
+          "name": "炸煙の雫"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_70100.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "70200": {
+    "desc": "キャンプへ移動することができる",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "905",
+          "unknown proc param": "1"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 70200,
+    "max equipped": 1,
+    "max_stack": 99,
+    "name": "転送薬",
+    "raid": true,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 11016,
+          "name": "精製石"
+        },
+        {
+          "count": 1,
+          "id": 10108,
+          "name": "ムヴの羽"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_70200.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "70300": {
+    "desc": "マップ上の全ユニットのＨＰを少し回復する",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "901",
+          "unknown proc param": "100,120,0,0"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 70300,
+    "max equipped": 3,
+    "max_stack": 99,
+    "name": "神香晶",
+    "raid": true,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 11016,
+          "name": "精製石"
+        },
+        {
+          "count": 1,
+          "id": 20000,
+          "name": "回復薬"
+        },
+        {
+          "count": 1,
+          "id": 10206,
+          "name": "モウの実"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_70300.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "70400": {
+    "desc": "マップ上の全ユニットの攻撃力を５分間10％増加。４個まで同時使用可",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (100)": 10,
+          "buff timer (seconds)": 300,
+          "proc id": "902"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 70400,
+    "max equipped": 4,
+    "max_stack": 99,
+    "name": "攻化晶",
+    "raid": true,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 11016,
+          "name": "精製石"
+        },
+        {
+          "count": 1,
+          "id": 20400,
+          "name": "強化薬"
+        },
+        {
+          "count": 1,
+          "id": 10206,
+          "name": "モウの実"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_70400.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "70500": {
+    "desc": "マップ上の全ユニットの被ダメージを５分間10％軽減。４個まで同時使用可",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "907",
+          "unknown proc param": "10,300,1"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 70500,
+    "max equipped": 4,
+    "max_stack": 99,
+    "name": "防化晶",
+    "raid": true,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 11016,
+          "name": "精製石"
+        },
+        {
+          "count": 1,
+          "id": 20600,
+          "name": "硬化薬"
+        },
+        {
+          "count": 1,
+          "id": 10206,
+          "name": "モウの実"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_70500.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "70600": {
+    "desc": "未発見のボスの場所を一定時間表示する",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "903",
+          "unknown proc param": "1,90,0"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "enemy"
+    },
+    "id": 70600,
+    "max equipped": 5,
+    "max_stack": 99,
+    "name": "探知薬",
+    "raid": true,
+    "rarity": 0,
+    "recipe": {
+      "karma": "0",
+      "materials": [
+        {
+          "count": 1,
+          "id": 11016,
+          "name": "精製石"
+        },
+        {
+          "count": 1,
+          "id": 10610,
+          "name": "千里の眼"
+        },
+        {
+          "count": 1,
+          "id": 10004,
+          "name": "茶探草"
+        }
+      ]
+    },
+    "sell_price": 100,
+    "thumbnail": "item_thum_70600.png",
+    "type": "consumable",
+    "usage": []
+  }
+}

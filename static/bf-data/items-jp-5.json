@@ -1,0 +1,323 @@
+{
+  "50000": {
+    "desc": "味方単体のＨＰを少し回復する",
+    "effect": {
+      "effect": [
+        {
+          "heal high": 800,
+          "heal low": 800,
+          "proc id": "2",
+          "rec added% (from healer)": 10
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 50000,
+    "max equipped": 50,
+    "max_stack": 99,
+    "name": "生命薬",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 30,
+    "thumbnail": "item_thum_20000.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "50001": {
+    "desc": "味方単体のＨＰを回復する",
+    "effect": {
+      "effect": [
+        {
+          "heal high": 1500,
+          "heal low": 1500,
+          "proc id": "2",
+          "rec added% (from healer)": 10
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 50001,
+    "max equipped": 50,
+    "max_stack": 99,
+    "name": "強生命薬",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_20001.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "50100": {
+    "desc": "味方全体のＨＰを回復する",
+    "effect": {
+      "effect": [
+        {
+          "heal high": 1500,
+          "heal low": 1500,
+          "proc id": "2",
+          "rec added% (from healer)": 10
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 50100,
+    "max equipped": 50,
+    "max_stack": 99,
+    "name": "希望の光",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_20100.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "50200": {
+    "desc": "味方単体の状態異常をすべて治療する",
+    "effect": {
+      "effect": [
+        {
+          "remove curse": true,
+          "remove injury": true,
+          "remove paralysis": true,
+          "remove poison": true,
+          "remove sick": true,
+          "remove weaken": true
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 50200,
+    "max equipped": 50,
+    "max_stack": 99,
+    "name": "浄化薬",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 20,
+    "thumbnail": "item_thum_20230.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "50400": {
+    "desc": "３ターンの間、味方全体の攻撃力を<br>５０％アップ",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (1)": 50,
+          "buff turns": 3,
+          "element buffed": "all",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 50400,
+    "max equipped": 50,
+    "max_stack": 99,
+    "name": "総攻薬",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 40,
+    "thumbnail": "item_thum_20400.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "50401": {
+    "desc": "３ターンの間、味方単体の攻撃力を<br>２倍にする",
+    "effect": {
+      "effect": [
+        {
+          "atk% buff (1)": 100,
+          "buff turns": 3,
+          "element buffed": "all",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 50401,
+    "max equipped": 50,
+    "max_stack": 99,
+    "name": "強撃薬",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 40,
+    "thumbnail": "item_thum_20400.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "50600": {
+    "desc": "３ターンの間、味方全体の防御力を<br>５０％アップ",
+    "effect": {
+      "effect": [
+        {
+          "buff turns": 3,
+          "def% buff (3)": 50,
+          "element buffed": "all",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 50600,
+    "max equipped": 50,
+    "max_stack": 99,
+    "name": "総防薬",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 40,
+    "thumbnail": "item_thum_20600.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "50601": {
+    "desc": "３ターンの間、味方単体の防御力を<br>２倍にする",
+    "effect": {
+      "effect": [
+        {
+          "buff turns": 3,
+          "def% buff (3)": 100,
+          "element buffed": "all",
+          "proc id": "5"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 50601,
+    "max equipped": 50,
+    "max_stack": 99,
+    "name": "壁護薬",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 40,
+    "thumbnail": "item_thum_20600.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "51000": {
+    "desc": "味方単体のＢＢゲージを最大にする",
+    "effect": {
+      "effect": [
+        {
+          "bb bc fill%": 100,
+          "proc id": "4"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 51000,
+    "max equipped": 50,
+    "max_stack": 99,
+    "name": "真武神薬",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 100,
+    "thumbnail": "item_thum_21000.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "52300": {
+    "desc": "３ターンの間、ＢＣ・ＨＣのドロップ率をかなりアップ",
+    "effect": {
+      "effect": [
+        {
+          "bc drop rate% buff (10)": 30,
+          "drop rate buff turns": 3,
+          "hc drop rate% buff (9)": 30,
+          "proc id": "6"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 52300,
+    "max equipped": 50,
+    "max_stack": 99,
+    "name": "鬼神の笛",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 100,
+    "thumbnail": "item_thum_22300.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "52400": {
+    "desc": "味方単体の戦闘不能をＨＰ全快の状態で回復する。",
+    "effect": {
+      "effect": [
+        {
+          "proc id": "12",
+          "revive to hp%": 100
+        }
+      ],
+      "target_area": "single",
+      "target_type": "party"
+    },
+    "id": 52400,
+    "max equipped": 50,
+    "max_stack": 99,
+    "name": "復活薬",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 100,
+    "thumbnail": "item_thum_21100.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "52500": {
+    "desc": "１ターンの間、味方全体の被ダメージを１/４にする",
+    "effect": {
+      "effect": [
+        {
+          "dmg% reduction": 75,
+          "dmg% reduction turns (36)": 1,
+          "proc id": "18"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 52500,
+    "max equipped": 50,
+    "max_stack": 99,
+    "name": "結界薬",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 100,
+    "thumbnail": "item_thum_20600.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "52600": {
+    "desc": "３ターンの間、ＯＤゲージ上昇量を超絶アップ",
+    "effect": {
+      "effect": [
+        {
+          "od fill rate buff turns (132)": 3,
+          "od fill rate% buff": 200,
+          "proc id": "84"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 52600,
+    "max equipped": 50,
+    "max_stack": 99,
+    "name": "英雄神笛",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 100,
+    "thumbnail": "item_thum_22300.png",
+    "type": "consumable",
+    "usage": []
+  }
+}

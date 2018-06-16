@@ -1,0 +1,6598 @@
+{
+  "10000": {
+    "desc": "A plant used in cures that typically inhabits every area of Elgaia.",
+    "id": 10000,
+    "max_stack": 99,
+    "name": "Green Grass",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 3,
+    "thumbnail": "item_thum_102.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20000,
+        "name": "Cure"
+      }
+    ]
+  },
+  "10001": {
+    "desc": "An important medicinal plant that's highly effective for recovery.",
+    "id": 10001,
+    "max_stack": 99,
+    "name": "Blue Grass",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10,
+    "thumbnail": "item_thum_101.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20001,
+        "name": "High Cure"
+      }
+    ]
+  },
+  "10002": {
+    "desc": "A holy grass native to the grasslands in front of Lucius' Gate.",
+    "id": 10002,
+    "max_stack": 99,
+    "name": "Yellow Grass",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 15,
+    "thumbnail": "item_thum_103.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20002,
+        "name": "Mega Cure"
+      }
+    ]
+  },
+  "10003": {
+    "desc": "An important medicinal plant that's highly effective in fortification.",
+    "id": 10003,
+    "max_stack": 99,
+    "name": "Red Grass",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 3,
+    "thumbnail": "item_thum_100.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20400,
+        "name": "Atk Potion"
+      },
+      {
+        "id": 20600,
+        "name": "Def Potion"
+      }
+    ]
+  },
+  "10004": {
+    "desc": "Meant to grow into a tree, but turned into bark-colored grass.",
+    "id": 10004,
+    "max_stack": 99,
+    "name": "Brown Grass",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 10,
+    "thumbnail": "item_thum_106.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 70600,
+        "name": "Detector"
+      }
+    ]
+  },
+  "10005": {
+    "desc": "A leaf that grows from the feet of the sparkling demon Arstallie",
+    "id": 10005,
+    "max_stack": 99,
+    "name": "Sakura Leaf",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_107.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38405,
+        "name": "Sky Blade"
+      },
+      {
+        "id": 38505,
+        "name": "Sky Buckler"
+      },
+      {
+        "id": 701023,
+        "name": "Caliburn"
+      }
+    ]
+  },
+  "10006": {
+    "desc": "The core of the mysterious carnivorous plant known as the Queen Sipla",
+    "id": 10006,
+    "max_stack": 99,
+    "name": "Flower Core",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_100.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38701,
+        "name": "Sacred Treasure"
+      },
+      {
+        "id": 44501,
+        "name": "Illusion Gizmo"
+      },
+      {
+        "id": 47600,
+        "name": "Revelation Book"
+      },
+      {
+        "id": 701026,
+        "name": "Ancient Cybernetic Crown"
+      }
+    ]
+  },
+  "10007": {
+    "desc": "The dark purple vines that envelop Mordlim.",
+    "id": 10007,
+    "max_stack": 99,
+    "name": "Forbidden Vines",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_105.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 49800,
+        "name": "Nature Shield"
+      }
+    ]
+  },
+  "10008": {
+    "desc": "Spirit grass rich in magical energy, native to the world of Rokkzalm.",
+    "id": 10008,
+    "max_stack": 99,
+    "name": "Spirit Grass",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_104.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230006,
+        "name": "Spirit Band"
+      },
+      {
+        "id": 230106,
+        "name": "Wrathful Needle"
+      },
+      {
+        "id": 230206,
+        "name": "Warding Scepter"
+      }
+    ]
+  },
+  "10100": {
+    "desc": "The naturally molted feathers of a migratory bird called Theo.",
+    "id": 10100,
+    "max_stack": 99,
+    "name": "Theo Feather",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 5,
+    "thumbnail": "item_thum_202.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 32300,
+        "name": "Poison Light"
+      },
+      {
+        "id": 32400,
+        "name": "Faint Light"
+      },
+      {
+        "id": 32500,
+        "name": "Growth Light"
+      },
+      {
+        "id": 32600,
+        "name": "Broken Light"
+      },
+      {
+        "id": 32700,
+        "name": "Cursed Light"
+      },
+      {
+        "id": 32800,
+        "name": "Numb Light"
+      }
+    ]
+  },
+  "10101": {
+    "desc": "Harpy Feathers said to be wholly composed of poison.",
+    "id": 10101,
+    "max_stack": 99,
+    "name": "Lynn Feather",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10,
+    "thumbnail": "item_thum_201.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 31600,
+        "name": "Poison Shiv"
+      },
+      {
+        "id": 31700,
+        "name": "Demon Rifle"
+      },
+      {
+        "id": 31800,
+        "name": "Vine Lance"
+      },
+      {
+        "id": 31900,
+        "name": "Beast Spear"
+      },
+      {
+        "id": 32000,
+        "name": "Cursed Sabre"
+      },
+      {
+        "id": 32100,
+        "name": "Thunder Bow"
+      }
+    ]
+  },
+  "10102": {
+    "desc": "Feathers of the giant Rhau that are materials for weapons and armor.",
+    "id": 10102,
+    "max_stack": 99,
+    "name": "Rhau Feather",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10,
+    "thumbnail": "item_thum_200.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 31000,
+        "name": "Muramasa"
+      },
+      {
+        "id": 31100,
+        "name": "Royal Shield"
+      },
+      {
+        "id": 34500,
+        "name": "Wise Mask"
+      }
+    ]
+  },
+  "10103": {
+    "desc": "The golden feathers from a Saku bird.",
+    "id": 10103,
+    "max_stack": 99,
+    "name": "Saku Feather",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10,
+    "thumbnail": "item_thum_203.png",
+    "type": "material",
+    "usage": []
+  },
+  "10104": {
+    "desc": "The molted feathers of the magical Yomi bird that hold a hidden power.",
+    "id": 10104,
+    "max_stack": 99,
+    "name": "Yomi Feather",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10,
+    "thumbnail": "item_thum_205.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 31000,
+        "name": "Muramasa"
+      },
+      {
+        "id": 31100,
+        "name": "Royal Shield"
+      },
+      {
+        "id": 31200,
+        "name": "Death Scythe"
+      },
+      {
+        "id": 31300,
+        "name": "Gilded Pearl"
+      },
+      {
+        "id": 34400,
+        "name": "Clear Cloak"
+      }
+    ]
+  },
+  "10105": {
+    "desc": "A feather from the Hess, the mother of all birds.",
+    "id": 10105,
+    "max_stack": 99,
+    "name": "Heth Feather",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 25,
+    "thumbnail": "item_thum_206.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 32301,
+        "name": "Venom Shard"
+      },
+      {
+        "id": 32401,
+        "name": "Weak Shard"
+      },
+      {
+        "id": 32501,
+        "name": "Ill Shard"
+      },
+      {
+        "id": 32601,
+        "name": "Weary Shard"
+      },
+      {
+        "id": 32701,
+        "name": "Curse Shard"
+      },
+      {
+        "id": 32801,
+        "name": "Stupor Shard"
+      },
+      {
+        "id": 701021,
+        "name": "Photon Scepter of Summoning"
+      }
+    ]
+  },
+  "10106": {
+    "desc": "A feather from the Musa, a bird said to be loved by the gods.",
+    "id": 10106,
+    "max_stack": 99,
+    "name": "Musa Feather",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 30,
+    "thumbnail": "item_thum_207.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 31601,
+        "name": "Venom Knives"
+      },
+      {
+        "id": 31701,
+        "name": "Death Cannon"
+      },
+      {
+        "id": 31801,
+        "name": "Phantom Pike"
+      },
+      {
+        "id": 31901,
+        "name": "Ogre Lance"
+      },
+      {
+        "id": 32001,
+        "name": "Cursed Sword"
+      },
+      {
+        "id": 32101,
+        "name": "Zeus's Bow"
+      },
+      {
+        "id": 34805,
+        "name": "Royal Bud"
+      },
+      {
+        "id": 34806,
+        "name": "Dragon Ring"
+      }
+    ]
+  },
+  "10107": {
+    "desc": "A feather from the Rhoa, often called the bird of good fortune.",
+    "id": 10107,
+    "max_stack": 99,
+    "name": "Rhoa Feather",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_203.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 34001,
+        "name": "Beast Bracer"
+      },
+      {
+        "id": 34805,
+        "name": "Royal Bud"
+      },
+      {
+        "id": 47902,
+        "name": "Beiorg Gem"
+      }
+    ]
+  },
+  "10108": {
+    "desc": "The molted feathers of a black bird that soars among powerful monsters.",
+    "id": 10108,
+    "max_stack": 99,
+    "name": "Move Feather",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_204.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 70200,
+        "name": "Teleport"
+      }
+    ]
+  },
+  "10109": {
+    "desc": "A feather dropped from an auspicious bird in the Agni region.",
+    "id": 10109,
+    "max_stack": 99,
+    "name": "Seph Feather",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_205.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 39500,
+        "name": "Summoner Hat"
+      }
+    ]
+  },
+  "10110": {
+    "desc": "A red wing from a butterfly that is rarely seen nowadays.",
+    "id": 10110,
+    "max_stack": 99,
+    "name": "Riff Feather",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_200.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 31301,
+        "name": "Hope Stone"
+      },
+      {
+        "id": 40000,
+        "name": "Sol Creator"
+      },
+      {
+        "id": 40100,
+        "name": "Luna Creator"
+      },
+      {
+        "id": 47905,
+        "name": "Zamburg Gem"
+      }
+    ]
+  },
+  "10111": {
+    "desc": "The feather of the ominous fighting bird, Zeta",
+    "id": 10111,
+    "max_stack": 99,
+    "name": "Zeta Feather",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_206.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 41500,
+        "name": "Zombie Jabot"
+      },
+      {
+        "id": 41600,
+        "name": "Starry Blade"
+      },
+      {
+        "id": 41700,
+        "name": "Wyvern Studs"
+      }
+    ]
+  },
+  "10112": {
+    "desc": "A feather from the so called \"bird of calamity\"",
+    "id": 10112,
+    "max_stack": 99,
+    "name": "Kuu Feather",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_203.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 31602,
+        "name": "Venom Flower"
+      },
+      {
+        "id": 31702,
+        "name": "Demon Gun"
+      },
+      {
+        "id": 31802,
+        "name": "Emerald Pike"
+      },
+      {
+        "id": 31902,
+        "name": "Dark Spear"
+      },
+      {
+        "id": 32002,
+        "name": "Cursed Blade"
+      },
+      {
+        "id": 32102,
+        "name": "Bolt Bow"
+      }
+    ]
+  },
+  "10113": {
+    "desc": "A scorching fragment of Yugreia's wings",
+    "id": 10113,
+    "max_stack": 99,
+    "name": "Solid Flame",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_200.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44600,
+        "name": "Origin Slate"
+      }
+    ]
+  },
+  "10114": {
+    "desc": "A blazing feather from Yugreia's wings",
+    "id": 10114,
+    "max_stack": 99,
+    "name": "Fire Feather",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_200.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44300,
+        "name": "Thorn Crown"
+      },
+      {
+        "id": 44400,
+        "name": "Phoenix Orb"
+      },
+      {
+        "id": 44600,
+        "name": "Origin Slate"
+      }
+    ]
+  },
+  "10115": {
+    "desc": "A red feather from the wings of the sparkling demon Arstallie",
+    "id": 10115,
+    "max_stack": 99,
+    "name": "Red Feather",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_200.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38701,
+        "name": "Sacred Treasure"
+      },
+      {
+        "id": 47600,
+        "name": "Revelation Book"
+      },
+      {
+        "id": 60200,
+        "name": "Twilight Stone"
+      }
+    ]
+  },
+  "10116": {
+    "desc": "A wing fragment from the Dragon Demon.",
+    "id": 10116,
+    "max_stack": 99,
+    "name": "Dragonlord Wing",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_205.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 48900,
+        "name": "Blazing Fists"
+      }
+    ]
+  },
+  "10117": {
+    "desc": "A feather of a Grylus, an extraordinarily rare species of bird found only in Menon.",
+    "id": 10117,
+    "max_stack": 99,
+    "name": "Phantom Feather",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_204.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 47908,
+        "name": "Menon Gem"
+      }
+    ]
+  },
+  "10118": {
+    "desc": "A feather from one of Heresy Demon Kalon's wings.",
+    "id": 10118,
+    "max_stack": 99,
+    "name": "Scarlet Wing",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_200.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 46220,
+        "name": "Armor of Seals"
+      }
+    ]
+  },
+  "10119": {
+    "desc": "Tail feathers from a large avian native to Ohbanahara.",
+    "id": 10119,
+    "max_stack": 99,
+    "name": "Benizuru Feather",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_200.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230005,
+        "name": "Worship Charm"
+      },
+      {
+        "id": 230205,
+        "name": "Myrmidon Helm"
+      }
+    ]
+  },
+  "10200": {
+    "desc": "An anti-poison nut native to much of Elgaia and Grand Gaia.",
+    "id": 10200,
+    "max_stack": 99,
+    "name": "Don Nut",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 5,
+    "thumbnail": "item_thum_305.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20200,
+        "name": "Antidote"
+      },
+      {
+        "id": 32300,
+        "name": "Poison Light"
+      }
+    ]
+  },
+  "10201": {
+    "desc": "The nut of a perennial plant that increases aggression when eaten.",
+    "id": 10201,
+    "max_stack": 99,
+    "name": "Koka Nut",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10,
+    "thumbnail": "item_thum_300.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20400,
+        "name": "Atk Potion"
+      },
+      {
+        "id": 20401,
+        "name": "Brute Elixir"
+      }
+    ]
+  },
+  "10202": {
+    "desc": "The nut from a perennial Bue plant, native all over Elgaia.",
+    "id": 10202,
+    "max_stack": 99,
+    "name": "Buru Nut",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10,
+    "thumbnail": "item_thum_302.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20210,
+        "name": "Tonic"
+      },
+      {
+        "id": 32400,
+        "name": "Faint Light"
+      },
+      {
+        "id": 32500,
+        "name": "Growth Light"
+      },
+      {
+        "id": 32600,
+        "name": "Broken Light"
+      }
+    ]
+  },
+  "10203": {
+    "desc": "The nut of an annual plant that hightens the self-defense instinct.",
+    "id": 10203,
+    "max_stack": 99,
+    "name": "Hoku Nut",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 5,
+    "thumbnail": "item_thum_301.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20600,
+        "name": "Def Potion"
+      },
+      {
+        "id": 20601,
+        "name": "Titan Elixir"
+      }
+    ]
+  },
+  "10204": {
+    "desc": "A ancient nut cherished by many, said to have tranquilizing powers.",
+    "id": 10204,
+    "max_stack": 99,
+    "name": "Suzu Nut",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 5,
+    "thumbnail": "item_thum_304.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20220,
+        "name": "Holy Water"
+      },
+      {
+        "id": 32700,
+        "name": "Cursed Light"
+      }
+    ]
+  },
+  "10205": {
+    "desc": "A supremely pungent nut from the Bara tree that can heal paralysis.",
+    "id": 10205,
+    "max_stack": 99,
+    "name": "Bara Nut",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 5,
+    "thumbnail": "item_thum_303.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20230,
+        "name": "Stimulant"
+      },
+      {
+        "id": 32800,
+        "name": "Numb Light"
+      }
+    ]
+  },
+  "10206": {
+    "desc": "A very poisonous nut that grows everywhere in Grand Gaia.",
+    "id": 10206,
+    "max_stack": 99,
+    "name": "Mow Nut",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 10,
+    "thumbnail": "item_thum_307.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 70300,
+        "name": "God Crystal"
+      },
+      {
+        "id": 70400,
+        "name": "Atk Crystal"
+      },
+      {
+        "id": 70500,
+        "name": "Def Crystal"
+      }
+    ]
+  },
+  "10207": {
+    "desc": "A nut that grows on the back of Laguna Rex.",
+    "id": 10207,
+    "max_stack": 99,
+    "name": "Timber Nut",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 10,
+    "thumbnail": "item_thum_300.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38501,
+        "name": "Life Shield"
+      },
+      {
+        "id": 38801,
+        "name": "World Lance"
+      },
+      {
+        "id": 39201,
+        "name": "Gold Bangle"
+      },
+      {
+        "id": 39600,
+        "name": "Goddess Flag"
+      },
+      {
+        "id": 701002,
+        "name": "Odin's Ring"
+      },
+      {
+        "id": 701010,
+        "name": "Admiral's Hook"
+      }
+    ]
+  },
+  "10208": {
+    "desc": "A rare nut that grows on the back of Laguna Rex.",
+    "id": 10208,
+    "max_stack": 99,
+    "name": "Shiny Nut",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 10,
+    "thumbnail": "item_thum_301.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 35800,
+        "name": "Medulla Gem"
+      },
+      {
+        "id": 39100,
+        "name": "Demon Dress"
+      }
+    ]
+  },
+  "10209": {
+    "desc": "A nut from Meru-Meru that has an unusually hard shell.",
+    "id": 10209,
+    "max_stack": 99,
+    "name": "Meru Nut",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 10,
+    "thumbnail": "item_thum_302.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 35202,
+        "name": "Sacred Jewel"
+      },
+      {
+        "id": 38600,
+        "name": "Death Jewel"
+      },
+      {
+        "id": 38800,
+        "name": "Old Dagger"
+      },
+      {
+        "id": 38900,
+        "name": "Soul Gun"
+      },
+      {
+        "id": 701002,
+        "name": "Odin's Ring"
+      },
+      {
+        "id": 701003,
+        "name": "Surt's Blade"
+      }
+    ]
+  },
+  "10210": {
+    "desc": "A fruit from Meru-Meru that takes countless years to grow.",
+    "id": 10210,
+    "max_stack": 99,
+    "name": "Fairy Fruit",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 10,
+    "thumbnail": "item_thum_305.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38501,
+        "name": "Life Shield"
+      },
+      {
+        "id": 39400,
+        "name": "Godly Statue"
+      }
+    ]
+  },
+  "10211": {
+    "desc": "The fruit of a tree found growing wild in Rokkzalm.",
+    "id": 10211,
+    "max_stack": 99,
+    "name": "Bubblefruit",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_303.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230106,
+        "name": "Wrathful Needle"
+      },
+      {
+        "id": 230206,
+        "name": "Warding Scepter"
+      },
+      {
+        "id": 239000,
+        "name": "Sunblade"
+      }
+    ]
+  },
+  "10300": {
+    "desc": "Drops of water that gush forth all over Elgaia and Grand Gaia.",
+    "id": 10300,
+    "max_stack": 99,
+    "name": "Green Drop",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 3,
+    "thumbnail": "item_thum_402.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20000,
+        "name": "Cure"
+      }
+    ]
+  },
+  "10301": {
+    "desc": "Drops of extremely sweet water found all over Elgaia and Grand Gaia. ",
+    "id": 10301,
+    "max_stack": 99,
+    "name": "Blue Drop",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 5,
+    "thumbnail": "item_thum_401.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20200,
+        "name": "Antidote"
+      },
+      {
+        "id": 20210,
+        "name": "Tonic"
+      },
+      {
+        "id": 20220,
+        "name": "Holy Water"
+      },
+      {
+        "id": 20230,
+        "name": "Stimulant"
+      },
+      {
+        "id": 20240,
+        "name": "Remedy"
+      }
+    ]
+  },
+  "10302": {
+    "desc": "Slight red drops from famed springs with a powerful recovery effect.",
+    "id": 10302,
+    "max_stack": 99,
+    "name": "Red Drop",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 8,
+    "thumbnail": "item_thum_400.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20001,
+        "name": "High Cure"
+      }
+    ]
+  },
+  "10303": {
+    "desc": "A drop of water from Craster's Ravine, west of Elgaia.",
+    "id": 10303,
+    "max_stack": 99,
+    "name": "Gold Drop",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10,
+    "thumbnail": "item_thum_403.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20002,
+        "name": "Mega Cure"
+      },
+      {
+        "id": 20401,
+        "name": "Brute Elixir"
+      },
+      {
+        "id": 20601,
+        "name": "Titan Elixir"
+      }
+    ]
+  },
+  "10304": {
+    "desc": "Very valuable drops that are said to have fallen from the heavens.",
+    "id": 10304,
+    "max_stack": 99,
+    "name": "Purple Drop",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 15,
+    "thumbnail": "item_thum_405.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20100,
+        "name": "Divine Light"
+      },
+      {
+        "id": 20102,
+        "name": "Sacred Light"
+      }
+    ]
+  },
+  "10305": {
+    "desc": "A drop from the waters which flow around the temple Arlon.",
+    "id": 10305,
+    "max_stack": 99,
+    "name": "Silver Drop",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 13,
+    "thumbnail": "item_thum_401.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20101,
+        "name": "Holy Light"
+      },
+      {
+        "id": 20102,
+        "name": "Sacred Light"
+      }
+    ]
+  },
+  "10306": {
+    "desc": "Drops from a red fountain which gushes from around Dragon's Cape.",
+    "id": 10306,
+    "max_stack": 99,
+    "name": "Hero Blood",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_400.png",
+    "type": "material",
+    "usage": []
+  },
+  "10307": {
+    "desc": "Miraculous drops said to have fallen from the eyes of a goddess.",
+    "id": 10307,
+    "max_stack": 99,
+    "name": "Angel Tear",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10,
+    "thumbnail": "item_thum_407.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 22200,
+        "name": "Angel Idol"
+      }
+    ]
+  },
+  "10308": {
+    "desc": "Unique drops distributed by the Summoners' Council.",
+    "id": 10308,
+    "max_stack": 99,
+    "name": "Honor Drop",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10,
+    "thumbnail": "item_thum_407.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20250,
+        "name": "Nullifier"
+      },
+      {
+        "id": 22400,
+        "name": "Revive"
+      },
+      {
+        "id": 22410,
+        "name": "Revive Light"
+      },
+      {
+        "id": 30203,
+        "name": "Sky Staff"
+      },
+      {
+        "id": 30205,
+        "name": "Order Staff"
+      },
+      {
+        "id": 30208,
+        "name": "Ruler Staff"
+      },
+      {
+        "id": 30303,
+        "name": "Shiny Armor"
+      },
+      {
+        "id": 31001,
+        "name": "Angelic Foil"
+      },
+      {
+        "id": 31101,
+        "name": "Exyl Shield"
+      },
+      {
+        "id": 34809,
+        "name": "Limbo Stone"
+      },
+      {
+        "id": 38000,
+        "name": "Demon Shard"
+      },
+      {
+        "id": 38001,
+        "name": "Mock Crystal"
+      },
+      {
+        "id": 38100,
+        "name": "Bright Shard"
+      },
+      {
+        "id": 38200,
+        "name": "Royal Shard"
+      },
+      {
+        "id": 40000,
+        "name": "Sol Creator"
+      },
+      {
+        "id": 40100,
+        "name": "Luna Creator"
+      },
+      {
+        "id": 41500,
+        "name": "Zombie Jabot"
+      },
+      {
+        "id": 800507,
+        "name": "Lucky Potion"
+      },
+      {
+        "id": 818912,
+        "name": "Paskuan Enhancer"
+      },
+      {
+        "id": 818937,
+        "name": "Lop Blessing"
+      }
+    ]
+  },
+  "10309": {
+    "desc": "Smoky-looking drops that release a putrid gas, found among clusters of special fungi.",
+    "id": 10309,
+    "max_stack": 99,
+    "name": "Smoky Drop",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 15,
+    "thumbnail": "item_thum_404.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 70100,
+        "name": "Smoke Bomb"
+      }
+    ]
+  },
+  "10310": {
+    "desc": "A mysterious liquid that leaked out from the head of Van Lucy.",
+    "id": 10310,
+    "max_stack": 99,
+    "name": "Ruin Tear",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 15,
+    "thumbnail": "item_thum_400.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 39600,
+        "name": "Goddess Flag"
+      }
+    ]
+  },
+  "10311": {
+    "desc": "A mysterious liquid that leaked out from the head of Van Nader.",
+    "id": 10311,
+    "max_stack": 99,
+    "name": "Wicked Tear",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 15,
+    "thumbnail": "item_thum_401.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 39700,
+        "name": "Demon Flag"
+      }
+    ]
+  },
+  "10312": {
+    "desc": "Liquid that drops from Yugreia's body",
+    "id": 10312,
+    "max_stack": 99,
+    "name": "Tragedy Drop",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 15,
+    "thumbnail": "item_thum_401.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44600,
+        "name": "Origin Slate"
+      },
+      {
+        "id": 701007,
+        "name": "Noblesse’s Wedding Ring"
+      },
+      {
+        "id": 701010,
+        "name": "Admiral's Hook"
+      }
+    ]
+  },
+  "10313": {
+    "desc": "Water found in regions of the world of Vilanciel where the aurora is visible.",
+    "id": 10313,
+    "max_stack": 99,
+    "name": "Northstar Water",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_405.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230004,
+        "name": "Noble Blood Gem"
+      },
+      {
+        "id": 230304,
+        "name": "Affection Charm"
+      },
+      {
+        "id": 234000,
+        "name": "Taboo Grimoire"
+      }
+    ]
+  },
+  "10314": {
+    "desc": "Water from a mountain spring in Ohbanahara.",
+    "id": 10314,
+    "max_stack": 99,
+    "name": "Aroma Water",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_405.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230005,
+        "name": "Worship Charm"
+      },
+      {
+        "id": 230105,
+        "name": "Forbidden Blade"
+      }
+    ]
+  },
+  "10400": {
+    "desc": "The green fossil of a great beast's claw obtainable anywhere.",
+    "id": 10400,
+    "max_stack": 99,
+    "name": "Green Claw",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10,
+    "thumbnail": "item_thum_502.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30000,
+        "name": "Famous Blade"
+      }
+    ]
+  },
+  "10401": {
+    "desc": "The blue fossil of a great beast's claw found in the Morgan region.",
+    "id": 10401,
+    "max_stack": 99,
+    "name": "Blue Claw",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_501.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30001,
+        "name": "Holy Blade"
+      }
+    ]
+  },
+  "10402": {
+    "desc": "The red fossil of a great beast's claw found in the St. Lamia region.",
+    "id": 10402,
+    "max_stack": 99,
+    "name": "Red Claw",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 30,
+    "thumbnail": "item_thum_500.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30002,
+        "name": "Beast Blade"
+      }
+    ]
+  },
+  "10403": {
+    "desc": "A fossil found near the Bricio Volcano in north-eastern Elgaia.",
+    "id": 10403,
+    "max_stack": 99,
+    "name": "Yellow Claw",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 40,
+    "thumbnail": "item_thum_503.png",
+    "type": "material",
+    "usage": []
+  },
+  "10404": {
+    "desc": "A fossil of an Evil Beast Claw excavated from the Bariura Mines.",
+    "id": 10404,
+    "max_stack": 99,
+    "name": "Evil Claw",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_505.png",
+    "type": "material",
+    "usage": []
+  },
+  "10405": {
+    "desc": "Unique claws distributed by the Summoners' Council.",
+    "id": 10405,
+    "max_stack": 99,
+    "name": "Honor Claw",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 1,
+    "thumbnail": "item_thum_507.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 21010,
+        "name": "Fujin Tonic"
+      },
+      {
+        "id": 22420,
+        "name": "Hero Crystal"
+      },
+      {
+        "id": 30003,
+        "name": "Dragon Blade"
+      },
+      {
+        "id": 30004,
+        "name": "Divine Sword"
+      },
+      {
+        "id": 30005,
+        "name": "God Sword"
+      },
+      {
+        "id": 30006,
+        "name": "Chosen Blade"
+      },
+      {
+        "id": 30007,
+        "name": "Carnage Edge"
+      },
+      {
+        "id": 30008,
+        "name": "Sparkle Edge"
+      },
+      {
+        "id": 31002,
+        "name": "Amanohabaken"
+      },
+      {
+        "id": 31601,
+        "name": "Venom Knives"
+      },
+      {
+        "id": 31602,
+        "name": "Venom Flower"
+      },
+      {
+        "id": 31801,
+        "name": "Phantom Pike"
+      },
+      {
+        "id": 31802,
+        "name": "Emerald Pike"
+      },
+      {
+        "id": 32001,
+        "name": "Cursed Sword"
+      },
+      {
+        "id": 32002,
+        "name": "Cursed Blade"
+      },
+      {
+        "id": 33500,
+        "name": "Cursed Robe"
+      },
+      {
+        "id": 33700,
+        "name": "Skill Bracer"
+      },
+      {
+        "id": 33800,
+        "name": "Cure Bracer"
+      },
+      {
+        "id": 34300,
+        "name": "Light Helm"
+      },
+      {
+        "id": 34803,
+        "name": "Tech Gizmo 2"
+      },
+      {
+        "id": 34804,
+        "name": "Cure Gizmo 2"
+      },
+      {
+        "id": 34806,
+        "name": "Dragon Ring"
+      },
+      {
+        "id": 34807,
+        "name": "Demon Lance"
+      },
+      {
+        "id": 35500,
+        "name": "Alter Blade"
+      },
+      {
+        "id": 35501,
+        "name": "Dragon Sword"
+      },
+      {
+        "id": 35600,
+        "name": "Vampire Spear"
+      },
+      {
+        "id": 37900,
+        "name": "Divine Gem"
+      },
+      {
+        "id": 38300,
+        "name": "Thief Guards"
+      }
+    ]
+  },
+  "10406": {
+    "desc": "A monster claw so large it can’t be removed by any but the strongest of individuals.",
+    "id": 10406,
+    "max_stack": 99,
+    "name": "Giant Claw",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 30,
+    "thumbnail": "item_thum_506.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 35400,
+        "name": "Cordelicite"
+      },
+      {
+        "id": 35600,
+        "name": "Vampire Spear"
+      }
+    ]
+  },
+  "10407": {
+    "desc": "A claw from a fanged demon with two massive horns.",
+    "id": 10407,
+    "max_stack": 99,
+    "name": "Demon Claw",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 40,
+    "thumbnail": "item_thum_503.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30003,
+        "name": "Dragon Blade"
+      }
+    ]
+  },
+  "10408": {
+    "desc": "The claw of a beast said to have come from the underworld.",
+    "id": 10408,
+    "max_stack": 99,
+    "name": "Hades Claw",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_504.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 31001,
+        "name": "Angelic Foil"
+      },
+      {
+        "id": 31101,
+        "name": "Exyl Shield"
+      },
+      {
+        "id": 34807,
+        "name": "Demon Lance"
+      },
+      {
+        "id": 700032,
+        "name": "Ardent Coal"
+      }
+    ]
+  },
+  "10409": {
+    "desc": "The rigid claw of an extremely ferocious beast that resides in the lands of Agni.",
+    "id": 10409,
+    "max_stack": 99,
+    "name": "Brute Claw",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_506.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30004,
+        "name": "Divine Sword"
+      },
+      {
+        "id": 30204,
+        "name": "Godly Staff"
+      },
+      {
+        "id": 47904,
+        "name": "Rakshult Gem"
+      }
+    ]
+  },
+  "10410": {
+    "desc": "A claw dyed with the blood of Reduhark.",
+    "id": 10410,
+    "max_stack": 99,
+    "name": "Dark Claw",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_500.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38901,
+        "name": "Dark Lance"
+      },
+      {
+        "id": 39201,
+        "name": "Gold Bangle"
+      },
+      {
+        "id": 701015,
+        "name": "Propaganda Codex"
+      }
+    ]
+  },
+  "10411": {
+    "desc": "A jet-black claw from one of the many arms of Mistzug.",
+    "id": 10411,
+    "max_stack": 99,
+    "name": "Daze Claw",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_505.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38403,
+        "name": "Seal Sword"
+      },
+      {
+        "id": 701020,
+        "name": "Temporal Cybernetic Skin"
+      }
+    ]
+  },
+  "10412": {
+    "desc": "A bright red claw from one of the upper arms of Mistzug.",
+    "id": 10412,
+    "max_stack": 99,
+    "name": "Lost Claw",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_500.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38503,
+        "name": "Demon Shield"
+      },
+      {
+        "id": 701024,
+        "name": "Arondight"
+      }
+    ]
+  },
+  "10413": {
+    "desc": "A hard claw from an ice beast that can be used to climb glaciers.",
+    "id": 10413,
+    "max_stack": 99,
+    "name": "Frozen Claw",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_505.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38501,
+        "name": "Life Shield"
+      },
+      {
+        "id": 39400,
+        "name": "Godly Statue"
+      },
+      {
+        "id": 701031,
+        "name": "Enhanced Bubble Generator"
+      }
+    ]
+  },
+  "10414": {
+    "desc": "A white copper arm from Van Lucy infused with magic.",
+    "id": 10414,
+    "max_stack": 99,
+    "name": "Fallen Hand",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_503.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 39900,
+        "name": "Phoenix Wing"
+      }
+    ]
+  },
+  "10415": {
+    "desc": "A black iron arm from Van Nader infused with magic.",
+    "id": 10415,
+    "max_stack": 99,
+    "name": "Wicked Hand",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_505.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 39800,
+        "name": "Demon Crown"
+      }
+    ]
+  },
+  "10416": {
+    "desc": "The talon of a demon beast imprisoned in the underworld",
+    "id": 10416,
+    "max_stack": 99,
+    "name": "Prison Talon",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_506.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 35501,
+        "name": "Dragon Sword"
+      },
+      {
+        "id": 41600,
+        "name": "Starry Blade"
+      }
+    ]
+  },
+  "10417": {
+    "desc": "The talon of an otherworldly beast said to have a machine-like body",
+    "id": 10417,
+    "max_stack": 99,
+    "name": "Metal Talon",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_504.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 43300,
+        "name": "Hades Lance"
+      }
+    ]
+  },
+  "10418": {
+    "desc": "The durable claw of a thunder beast",
+    "id": 10418,
+    "max_stack": 99,
+    "name": "Shock Claw",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_501.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44500,
+        "name": "Guard Brace"
+      },
+      {
+        "id": 701019,
+        "name": "Photon Assault Spear"
+      }
+    ]
+  },
+  "10419": {
+    "desc": "Nalda Delia's rock-hard fist",
+    "id": 10419,
+    "max_stack": 99,
+    "name": "Ruling Fist",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_505.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38504,
+        "name": "Devil Shield"
+      },
+      {
+        "id": 701005,
+        "name": "Explorer's Journal"
+      }
+    ]
+  },
+  "10420": {
+    "desc": "Grudkia's claw, which can easily cut through steel.",
+    "id": 10420,
+    "max_stack": 99,
+    "name": "Fiend Claw",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_505.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38802,
+        "name": "Ruin Lance"
+      },
+      {
+        "id": 701007,
+        "name": "Noblesse’s Wedding Ring"
+      },
+      {
+        "id": 701030,
+        "name": "Instable Flask"
+      }
+    ]
+  },
+  "10421": {
+    "desc": "A claw belonging to a creature with the ability to turn transparent.",
+    "id": 10421,
+    "max_stack": 99,
+    "name": "Light Claw",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_504.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 47901,
+        "name": "Lem Gem"
+      }
+    ]
+  },
+  "10422": {
+    "desc": "The claw of a massive earth dragon native to Estria.",
+    "id": 10422,
+    "max_stack": 99,
+    "name": "Hot Iron Claw",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_500.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 47907,
+        "name": "Estria Gem"
+      }
+    ]
+  },
+  "10423": {
+    "desc": "The claw of an automaton found on Bectas.",
+    "id": 10423,
+    "max_stack": 99,
+    "name": "Sharp Claw",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_502.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230003,
+        "name": "Shining Stone"
+      },
+      {
+        "id": 230103,
+        "name": "Sacred Flag"
+      }
+    ]
+  },
+  "10424": {
+    "desc": "A claw from a fey beast native to Ohbanahara.",
+    "id": 10424,
+    "max_stack": 99,
+    "name": "Plague Claw",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_505.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 236000,
+        "name": "Ambrosia Wine"
+      },
+      {
+        "id": 237000,
+        "name": "Holy Beacon"
+      }
+    ]
+  },
+  "10500": {
+    "desc": "The easily obtainable green fossil of a great beast's fang.",
+    "id": 10500,
+    "max_stack": 99,
+    "name": "Green Fang",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10,
+    "thumbnail": "item_thum_602.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30400,
+        "name": "Champion Axe"
+      }
+    ]
+  },
+  "10501": {
+    "desc": "The easily obtainable blue fossil of a great beast's fang.",
+    "id": 10501,
+    "max_stack": 99,
+    "name": "Blue Fang",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_601.png",
+    "type": "material",
+    "usage": []
+  },
+  "10502": {
+    "desc": "The red fossil of a great beast's fang found in the St. Lamia region.",
+    "id": 10502,
+    "max_stack": 99,
+    "name": "Red Fang",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 30,
+    "thumbnail": "item_thum_600.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30401,
+        "name": "Magical Axe"
+      }
+    ]
+  },
+  "10503": {
+    "desc": "The yellow fossil of a great beast's fang.",
+    "id": 10503,
+    "max_stack": 99,
+    "name": "Yellow Fang",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 40,
+    "thumbnail": "item_thum_603.png",
+    "type": "material",
+    "usage": []
+  },
+  "10504": {
+    "desc": "The fossil of an evil beasts fang, found in the ruins of Vriksha.",
+    "id": 10504,
+    "max_stack": 99,
+    "name": "Evil Fang",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_602.png",
+    "type": "material",
+    "usage": []
+  },
+  "10505": {
+    "desc": "The fossil of a large fang from a legendary beast.",
+    "id": 10505,
+    "max_stack": 99,
+    "name": "Worn Fang",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 25,
+    "thumbnail": "item_thum_606.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 34300,
+        "name": "Light Helm"
+      }
+    ]
+  },
+  "10506": {
+    "desc": "Unique fangs distributed by the Summoners' Council.",
+    "id": 10506,
+    "max_stack": 99,
+    "name": "Honor Fang",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 1,
+    "thumbnail": "item_thum_607.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 22310,
+        "name": "Holy Flute"
+      },
+      {
+        "id": 22420,
+        "name": "Hero Crystal"
+      },
+      {
+        "id": 30304,
+        "name": "God Armor"
+      },
+      {
+        "id": 30305,
+        "name": "Ember Armor"
+      },
+      {
+        "id": 30306,
+        "name": "Dark Armor"
+      },
+      {
+        "id": 30307,
+        "name": "Odd Armor"
+      },
+      {
+        "id": 33400,
+        "name": "Ares' Crest"
+      },
+      {
+        "id": 35501,
+        "name": "Dragon Sword"
+      },
+      {
+        "id": 37800,
+        "name": "Lizeria Gem"
+      },
+      {
+        "id": 41600,
+        "name": "Starry Blade"
+      },
+      {
+        "id": 41900,
+        "name": "Comet Helmet"
+      },
+      {
+        "id": 43300,
+        "name": "Hades Lance"
+      },
+      {
+        "id": 44000,
+        "name": "Bariura Gem"
+      }
+    ]
+  },
+  "10507": {
+    "desc": "A fang from the king of all the long yellow haired beasts.",
+    "id": 10507,
+    "max_stack": 99,
+    "name": "Golden Fang",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 25,
+    "thumbnail": "item_thum_603.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30402,
+        "name": "Havoc Axe"
+      },
+      {
+        "id": 34001,
+        "name": "Beast Bracer"
+      },
+      {
+        "id": 34805,
+        "name": "Royal Bud"
+      },
+      {
+        "id": 34806,
+        "name": "Dragon Ring"
+      }
+    ]
+  },
+  "10508": {
+    "desc": "A fang from a demon locked away in a prison in the abyss.",
+    "id": 10508,
+    "max_stack": 99,
+    "name": "Crypt Fang",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_605.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 34806,
+        "name": "Dragon Ring"
+      }
+    ]
+  },
+  "10509": {
+    "desc": "The fang of an ancient beast, rumored to have fallen from the sky.",
+    "id": 10509,
+    "max_stack": 99,
+    "name": "Sky Fang",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_601.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 37700,
+        "name": "Health Charm"
+      },
+      {
+        "id": 37800,
+        "name": "Lizeria Gem"
+      },
+      {
+        "id": 37900,
+        "name": "Divine Gem"
+      },
+      {
+        "id": 47903,
+        "name": "Wulgee Gem"
+      }
+    ]
+  },
+  "10510": {
+    "desc": "A seed as sharp as a fang from the Purple Emperor flower.",
+    "id": 10510,
+    "max_stack": 99,
+    "name": "Purple Fang",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_605.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30005,
+        "name": "God Sword"
+      },
+      {
+        "id": 30205,
+        "name": "Order Staff"
+      },
+      {
+        "id": 700039,
+        "name": "Soul of Avant"
+      }
+    ]
+  },
+  "10511": {
+    "desc": "A fang from a fire eating dragon used to chew flames.",
+    "id": 10511,
+    "max_stack": 99,
+    "name": "Blaze Fang",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_604.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38401,
+        "name": "Blue Dragon"
+      },
+      {
+        "id": 39400,
+        "name": "Godly Statue"
+      }
+    ]
+  },
+  "10512": {
+    "desc": "The fang of a feral beast that inhabits the Principality of Vriksha",
+    "id": 10512,
+    "max_stack": 99,
+    "name": "Pair Fang",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_606.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 35501,
+        "name": "Dragon Sword"
+      },
+      {
+        "id": 41700,
+        "name": "Wyvern Studs"
+      }
+    ]
+  },
+  "10513": {
+    "desc": "A fang continuously surrounded by a bit of electricity",
+    "id": 10513,
+    "max_stack": 99,
+    "name": "Thunder Fang",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_603.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38001,
+        "name": "Mock Crystal"
+      }
+    ]
+  },
+  "10514": {
+    "desc": "A fang believed to belong to an invisible creature",
+    "id": 10514,
+    "max_stack": 99,
+    "name": "Phantom Fang",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_603.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30008,
+        "name": "Sparkle Edge"
+      },
+      {
+        "id": 30108,
+        "name": "Sky Shield"
+      },
+      {
+        "id": 44000,
+        "name": "Bariura Gem"
+      },
+      {
+        "id": 44200,
+        "name": "Bandit Ring"
+      },
+      {
+        "id": 700038,
+        "name": "Soul of Sirius"
+      }
+    ]
+  },
+  "10515": {
+    "desc": "A fang used by Granomos to dig underground",
+    "id": 10515,
+    "max_stack": 99,
+    "name": "Burrow Fang",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_602.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38404,
+        "name": "Hallow Sword"
+      },
+      {
+        "id": 38504,
+        "name": "Devil Shield"
+      }
+    ]
+  },
+  "10516": {
+    "desc": "Balmedia's sharp fang",
+    "id": 10516,
+    "max_stack": 99,
+    "name": "Ruling Fang",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_600.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38404,
+        "name": "Hallow Sword"
+      },
+      {
+        "id": 701011,
+        "name": "Tracker's Crossbow"
+      }
+    ]
+  },
+  "10517": {
+    "desc": "The ferocious fang of a dark wolf that can cut through demon flesh.",
+    "id": 10517,
+    "max_stack": 99,
+    "name": "Wolf Fang",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_604.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 47902,
+        "name": "Beiorg Gem"
+      }
+    ]
+  },
+  "10518": {
+    "desc": "A white-silver fang left by a black conqueror dragon.",
+    "id": 10518,
+    "max_stack": 99,
+    "name": "Black Dragon Fang",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_604.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 47906,
+        "name": "Fal Nerga Gem"
+      }
+    ]
+  },
+  "10519": {
+    "desc": "A fang from the Mystical Wolf that rules the world of Vilanciel.",
+    "id": 10519,
+    "max_stack": 99,
+    "name": "Frozen Fang",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_601.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 235000,
+        "name": "Lupine Mantle"
+      }
+    ]
+  },
+  "10600": {
+    "desc": "A crystal that holds the power of fire.",
+    "id": 10600,
+    "max_stack": 99,
+    "name": "Fire Eye",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_700.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20800,
+        "name": "Fire Ore"
+      },
+      {
+        "id": 20900,
+        "name": "Fire Seal"
+      },
+      {
+        "id": 20960,
+        "name": "Blaze Stone"
+      },
+      {
+        "id": 41400,
+        "name": "Fire Mail"
+      }
+    ]
+  },
+  "10601": {
+    "desc": "A crystal that holds the power of water.",
+    "id": 10601,
+    "max_stack": 99,
+    "name": "Water Eye",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_701.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20810,
+        "name": "Water Ore"
+      },
+      {
+        "id": 20910,
+        "name": "Water Seal"
+      },
+      {
+        "id": 20961,
+        "name": "Wave Stone"
+      },
+      {
+        "id": 41401,
+        "name": "Water Mail"
+      }
+    ]
+  },
+  "10602": {
+    "desc": "A crystal that holds the power of earth.",
+    "id": 10602,
+    "max_stack": 99,
+    "name": "Earth Eye",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_702.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20820,
+        "name": "Earth Ore"
+      },
+      {
+        "id": 20920,
+        "name": "Earth Seal"
+      },
+      {
+        "id": 20962,
+        "name": "Flora Stone"
+      },
+      {
+        "id": 41402,
+        "name": "Earth Mail"
+      }
+    ]
+  },
+  "10603": {
+    "desc": "A crystal that holds the power of thunder.",
+    "id": 10603,
+    "max_stack": 99,
+    "name": "Thunder Eye",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_703.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20830,
+        "name": "Thunder Ore"
+      },
+      {
+        "id": 20930,
+        "name": "Thunder Seal"
+      },
+      {
+        "id": 20963,
+        "name": "Bolt Stone"
+      },
+      {
+        "id": 41403,
+        "name": "Thunder Mail"
+      }
+    ]
+  },
+  "10604": {
+    "desc": "A crystal that holds the power of light.",
+    "id": 10604,
+    "max_stack": 99,
+    "name": "Light Eye",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_704.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20840,
+        "name": "Light Ore"
+      },
+      {
+        "id": 20940,
+        "name": "Light Seal"
+      },
+      {
+        "id": 20964,
+        "name": "Gleam Stone"
+      },
+      {
+        "id": 41404,
+        "name": "Light Mail"
+      }
+    ]
+  },
+  "10605": {
+    "desc": "A crystal that holds the power of dark.",
+    "id": 10605,
+    "max_stack": 99,
+    "name": "Dark Eye",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_705.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20850,
+        "name": "Dark Ore"
+      },
+      {
+        "id": 20950,
+        "name": "Dark Seal"
+      },
+      {
+        "id": 20965,
+        "name": "Shade Stone"
+      },
+      {
+        "id": 41405,
+        "name": "Dark Mail"
+      }
+    ]
+  },
+  "10606": {
+    "desc": "A crystal that sparkles based on the spiritual energy of its holder.",
+    "id": 10606,
+    "max_stack": 99,
+    "name": "Fujin's Eye",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 30,
+    "thumbnail": "item_thum_706.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 21000,
+        "name": "Fujin Potion"
+      }
+    ]
+  },
+  "10607": {
+    "desc": "A mysterious golden crystal that has unknown effects and uses.",
+    "id": 10607,
+    "max_stack": 99,
+    "name": "Guardian Eye",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 25,
+    "thumbnail": "item_thum_703.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 31000,
+        "name": "Muramasa"
+      },
+      {
+        "id": 31100,
+        "name": "Royal Shield"
+      },
+      {
+        "id": 32200,
+        "name": "Monster Robe"
+      }
+    ]
+  },
+  "10608": {
+    "desc": "A gold crystal whose effects and proper use are shrouded in mystery.",
+    "id": 10608,
+    "max_stack": 99,
+    "name": "Tidal Eye",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 25,
+    "thumbnail": "item_thum_703.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 35500,
+        "name": "Alter Blade"
+      },
+      {
+        "id": 47901,
+        "name": "Lem Gem"
+      }
+    ]
+  },
+  "10609": {
+    "desc": "A crystal with a silvery shine that holds immense magic.",
+    "id": 10609,
+    "max_stack": 99,
+    "name": "Demon Eye",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_704.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 34807,
+        "name": "Demon Lance"
+      }
+    ]
+  },
+  "10610": {
+    "desc": "Smoky-looking drops that release a putrid gas, found among clusters of special fungi.",
+    "id": 10610,
+    "max_stack": 99,
+    "name": "Acute Eye",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_703.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 70000,
+        "name": "Beacon"
+      },
+      {
+        "id": 70600,
+        "name": "Detector"
+      }
+    ]
+  },
+  "10611": {
+    "desc": "A black crystal that can be uncovered in old battlegrounds.",
+    "id": 10611,
+    "max_stack": 99,
+    "name": "Grief Eye",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_705.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30005,
+        "name": "God Sword"
+      },
+      {
+        "id": 30105,
+        "name": "Dogma Shield"
+      },
+      {
+        "id": 30205,
+        "name": "Order Staff"
+      },
+      {
+        "id": 30305,
+        "name": "Ember Armor"
+      },
+      {
+        "id": 39500,
+        "name": "Summoner Hat"
+      },
+      {
+        "id": 47905,
+        "name": "Zamburg Gem"
+      },
+      {
+        "id": 700039,
+        "name": "Soul of Avant"
+      }
+    ]
+  },
+  "10612": {
+    "desc": "Eyes on the back of Marian that hide strong magical powers.",
+    "id": 10612,
+    "max_stack": 99,
+    "name": "Spirit Eye",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_703.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38402,
+        "name": "Angel Sword"
+      },
+      {
+        "id": 39000,
+        "name": "Evil Halberd"
+      },
+      {
+        "id": 701008,
+        "name": "Hunting Guide"
+      }
+    ]
+  },
+  "10613": {
+    "desc": "The jewel rumored to be the origin of Marian's power.",
+    "id": 10613,
+    "max_stack": 99,
+    "name": "Queen Jewel",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_704.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38402,
+        "name": "Angel Sword"
+      },
+      {
+        "id": 38403,
+        "name": "Seal Sword"
+      }
+    ]
+  },
+  "10614": {
+    "desc": "A jewel Reduhark created from condensed darkness.",
+    "id": 10614,
+    "max_stack": 99,
+    "name": "Dark Jewel",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_705.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38502,
+        "name": "Alpha Shield"
+      },
+      {
+        "id": 38503,
+        "name": "Demon Shield"
+      }
+    ]
+  },
+  "10615": {
+    "desc": "A red hot jewel that was once the heart of Claudalus.",
+    "id": 10615,
+    "max_stack": 99,
+    "name": "Flame Jewel",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_700.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38403,
+        "name": "Seal Sword"
+      },
+      {
+        "id": 39001,
+        "name": "Demon Bow"
+      },
+      {
+        "id": 701035,
+        "name": "Deathbringer Bandana"
+      }
+    ]
+  },
+  "10616": {
+    "desc": "A bright jewel that exists within the body of Laguna Rex.",
+    "id": 10616,
+    "max_stack": 99,
+    "name": "Shiny Jewel",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_704.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38503,
+        "name": "Demon Shield"
+      },
+      {
+        "id": 39001,
+        "name": "Demon Bow"
+      }
+    ]
+  },
+  "10617": {
+    "desc": "A crystal from Van Lucy in the shape of an eyeball.",
+    "id": 10617,
+    "max_stack": 99,
+    "name": "Fallen Eye",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_700.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 39600,
+        "name": "Goddess Flag"
+      }
+    ]
+  },
+  "10618": {
+    "desc": "A crystal from Van Nader in the shape of an eyeball.",
+    "id": 10618,
+    "max_stack": 99,
+    "name": "Wicked Eye",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_701.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 39700,
+        "name": "Demon Flag"
+      }
+    ]
+  },
+  "10619": {
+    "desc": "An evil eye that floats around Nalda Delia.",
+    "id": 10619,
+    "max_stack": 99,
+    "name": "Ominous Eye",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_706.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38700,
+        "name": "Divine Jewel"
+      },
+      {
+        "id": 39800,
+        "name": "Demon Crown"
+      }
+    ]
+  },
+  "10620": {
+    "desc": "A disastrous eye that floats around Nalda Delia.",
+    "id": 10620,
+    "max_stack": 99,
+    "name": "Disaster Eye",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_702.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38700,
+        "name": "Divine Jewel"
+      },
+      {
+        "id": 39900,
+        "name": "Phoenix Wing"
+      },
+      {
+        "id": 701026,
+        "name": "Ancient Cybernetic Crown"
+      }
+    ]
+  },
+  "10621": {
+    "desc": "An eye within Nalda Delia's torso that hides terrible magic.",
+    "id": 10621,
+    "max_stack": 99,
+    "name": "Calamity Eye",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_700.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 37400,
+        "name": "Legwand Gem"
+      },
+      {
+        "id": 38700,
+        "name": "Divine Jewel"
+      },
+      {
+        "id": 39800,
+        "name": "Demon Crown"
+      },
+      {
+        "id": 39900,
+        "name": "Phoenix Wing"
+      },
+      {
+        "id": 701019,
+        "name": "Photon Assault Spear"
+      }
+    ]
+  },
+  "10622": {
+    "desc": "A jewel rumored to be the origin of Nalda Delia's power.",
+    "id": 10622,
+    "max_stack": 99,
+    "name": "Doom Jewel",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_705.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 37400,
+        "name": "Legwand Gem"
+      },
+      {
+        "id": 38504,
+        "name": "Devil Shield"
+      },
+      {
+        "id": 38700,
+        "name": "Divine Jewel"
+      }
+    ]
+  },
+  "10623": {
+    "desc": "An eye from one of the many speckles on Mistzug's body.",
+    "id": 10623,
+    "max_stack": 99,
+    "name": "Phantom Eye",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_705.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38601,
+        "name": "Malice Jewel"
+      },
+      {
+        "id": 701021,
+        "name": "Photon Scepter of Summoning"
+      }
+    ]
+  },
+  "10624": {
+    "desc": "A jewel rumored to give Mistzug his power.",
+    "id": 10624,
+    "max_stack": 99,
+    "name": "Ghost Jewel",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_700.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38601,
+        "name": "Malice Jewel"
+      },
+      {
+        "id": 46220,
+        "name": "Armor of Seals"
+      },
+      {
+        "id": 701015,
+        "name": "Propaganda Codex"
+      }
+    ]
+  },
+  "10625": {
+    "desc": "A precious stone that is particularly desired by humans.",
+    "id": 10625,
+    "max_stack": 99,
+    "name": "Zealot Eye",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_703.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 31002,
+        "name": "Amanohabaken"
+      },
+      {
+        "id": 31102,
+        "name": "Evil Shield"
+      },
+      {
+        "id": 47906,
+        "name": "Fal Nerga Gem"
+      }
+    ]
+  },
+  "10626": {
+    "desc": "A strange crystal that shines according to how wise its holder is",
+    "id": 10626,
+    "max_stack": 99,
+    "name": "Heavenly Eye",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_703.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44000,
+        "name": "Bariura Gem"
+      },
+      {
+        "id": 44100,
+        "name": "Fairy Robe"
+      },
+      {
+        "id": 44200,
+        "name": "Bandit Ring"
+      },
+      {
+        "id": 47908,
+        "name": "Menon Gem"
+      },
+      {
+        "id": 700038,
+        "name": "Soul of Sirius"
+      }
+    ]
+  },
+  "10627": {
+    "desc": "A pearl hidden in Balmedia's tail",
+    "id": 10627,
+    "max_stack": 99,
+    "name": "Blaze Pearl",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_700.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38701,
+        "name": "Sacred Treasure"
+      },
+      {
+        "id": 42300,
+        "name": "Buffer Jewel"
+      },
+      {
+        "id": 60300,
+        "name": "Melord's Core"
+      },
+      {
+        "id": 701018,
+        "name": "Cursed Photon Rod"
+      }
+    ]
+  },
+  "10628": {
+    "desc": "A jewel that develops within Grudkia's body.",
+    "id": 10628,
+    "max_stack": 99,
+    "name": "Fiend Jewel",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_705.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38505,
+        "name": "Sky Buckler"
+      },
+      {
+        "id": 39002,
+        "name": "Grudge Bow"
+      },
+      {
+        "id": 49800,
+        "name": "Nature Shield"
+      }
+    ]
+  },
+  "10629": {
+    "desc": "A jewel created when Yugreia unleashes its true power.",
+    "id": 10629,
+    "max_stack": 99,
+    "name": "Feat Jewel",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_705.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 45400,
+        "name": "Fortune Cap"
+      },
+      {
+        "id": 48900,
+        "name": "Blazing Fists"
+      },
+      {
+        "id": 701014,
+        "name": "Armor of the Fallen"
+      }
+    ]
+  },
+  "10630": {
+    "desc": "The crystallized eye of a demon.",
+    "id": 10630,
+    "max_stack": 99,
+    "name": "Black Eye",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_704.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 48300,
+        "name": "Demon Striker"
+      }
+    ]
+  },
+  "10631": {
+    "desc": "A crystal embedded in the demon Amu Yunos's staff.",
+    "id": 10631,
+    "max_stack": 99,
+    "name": "All-Seeing Eye",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_701.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 48301,
+        "name": "Demon Silk"
+      }
+    ]
+  },
+  "10632": {
+    "desc": "A transparent piece of Beiorg's body which shines.",
+    "id": 10632,
+    "max_stack": 99,
+    "name": "Beiorg's Bulb",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_703.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 46210,
+        "name": "Beiorg's Armor"
+      }
+    ]
+  },
+  "10634": {
+    "desc": "The crystalized magical energy of Heresy Demon Kalon.",
+    "id": 10634,
+    "max_stack": 99,
+    "name": "Eye of Fate",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_705.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 48302,
+        "name": "Demon Igniter"
+      }
+    ]
+  },
+  "10700": {
+    "desc": "The light-green pelt of a common beast.",
+    "id": 10700,
+    "max_stack": 99,
+    "name": "Green Pelt",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10,
+    "thumbnail": "item_thum_802.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30100,
+        "name": "Giant Shield"
+      }
+    ]
+  },
+  "10701": {
+    "desc": "The blue pelt of a tough beast.",
+    "id": 10701,
+    "max_stack": 99,
+    "name": "Blue Pelt",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_801.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30101,
+        "name": "Dragon Seal"
+      },
+      {
+        "id": 33001,
+        "name": "Royal Crest"
+      },
+      {
+        "id": 34400,
+        "name": "Clear Cloak"
+      }
+    ]
+  },
+  "10702": {
+    "desc": "A rare, red beast pelt with both high hardness and flexibility.",
+    "id": 10702,
+    "max_stack": 99,
+    "name": "Red Pelt",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 30,
+    "thumbnail": "item_thum_800.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30102,
+        "name": "Goddess Seal"
+      }
+    ]
+  },
+  "10705": {
+    "desc": "A beautifully patterned beast pelt often displayed by enthusiasts.",
+    "id": 10705,
+    "max_stack": 99,
+    "name": "Blood Pelt",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 25,
+    "thumbnail": "item_thum_800.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 31000,
+        "name": "Muramasa"
+      },
+      {
+        "id": 31100,
+        "name": "Royal Shield"
+      },
+      {
+        "id": 33000,
+        "name": "Divine Crest"
+      },
+      {
+        "id": 33400,
+        "name": "Ares' Crest"
+      }
+    ]
+  },
+  "10706": {
+    "desc": "A rarely seen blue beast pelt.",
+    "id": 10706,
+    "max_stack": 99,
+    "name": "Azure Pelt",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 40,
+    "thumbnail": "item_thum_802.png",
+    "type": "material",
+    "usage": []
+  },
+  "10707": {
+    "desc": "Unique pelts distributed by the Summoners' Council.",
+    "id": 10707,
+    "max_stack": 99,
+    "name": "Honor Pelt",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 1,
+    "thumbnail": "item_thum_807.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30103,
+        "name": "Star Shield"
+      },
+      {
+        "id": 30104,
+        "name": "King Shield"
+      },
+      {
+        "id": 30108,
+        "name": "Sky Shield"
+      },
+      {
+        "id": 30206,
+        "name": "Worship Cane"
+      },
+      {
+        "id": 30207,
+        "name": "Nature Staff"
+      },
+      {
+        "id": 31102,
+        "name": "Evil Shield"
+      },
+      {
+        "id": 31701,
+        "name": "Death Cannon"
+      },
+      {
+        "id": 31702,
+        "name": "Demon Gun"
+      },
+      {
+        "id": 31901,
+        "name": "Ogre Lance"
+      },
+      {
+        "id": 31902,
+        "name": "Dark Spear"
+      },
+      {
+        "id": 32101,
+        "name": "Zeus's Bow"
+      },
+      {
+        "id": 32102,
+        "name": "Bolt Bow"
+      },
+      {
+        "id": 33900,
+        "name": "Zelnite Ring"
+      },
+      {
+        "id": 33901,
+        "name": "Zel Ring"
+      },
+      {
+        "id": 34000,
+        "name": "Soul Bracer"
+      },
+      {
+        "id": 34001,
+        "name": "Beast Bracer"
+      },
+      {
+        "id": 34400,
+        "name": "Clear Cloak"
+      },
+      {
+        "id": 35301,
+        "name": "Royal Light"
+      },
+      {
+        "id": 35500,
+        "name": "Alter Blade"
+      },
+      {
+        "id": 37700,
+        "name": "Health Charm"
+      },
+      {
+        "id": 39500,
+        "name": "Summoner Hat"
+      },
+      {
+        "id": 41800,
+        "name": "Pure Crystal"
+      }
+    ]
+  },
+  "10708": {
+    "desc": "The pelt from a massive and immensely powerful beast.",
+    "id": 10708,
+    "max_stack": 99,
+    "name": "Giant Pelt",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 30,
+    "thumbnail": "item_thum_806.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 35400,
+        "name": "Cordelicite"
+      }
+    ]
+  },
+  "10709": {
+    "desc": "The pelt from the king of the golden beasts.",
+    "id": 10709,
+    "max_stack": 99,
+    "name": "Yellow Pelt",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 40,
+    "thumbnail": "item_thum_803.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30103,
+        "name": "Star Shield"
+      }
+    ]
+  },
+  "10710": {
+    "desc": "The pelt of a silver wolf rumored to have gone extinct millennia ago.",
+    "id": 10710,
+    "max_stack": 99,
+    "name": "Silver Pelt",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_804.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 31001,
+        "name": "Angelic Foil"
+      },
+      {
+        "id": 31101,
+        "name": "Exyl Shield"
+      },
+      {
+        "id": 47902,
+        "name": "Beiorg Gem"
+      }
+    ]
+  },
+  "10711": {
+    "desc": "The pelt of an extremely ferocious beast that resides in the lands of Agni.",
+    "id": 10711,
+    "max_stack": 99,
+    "name": "Brute Pelt",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_806.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30104,
+        "name": "King Shield"
+      },
+      {
+        "id": 30304,
+        "name": "God Armor"
+      }
+    ]
+  },
+  "10712": {
+    "desc": "A flawless black wing from Reduhark.",
+    "id": 10712,
+    "max_stack": 99,
+    "name": "Dark Pelt",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_805.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 35800,
+        "name": "Medulla Gem"
+      },
+      {
+        "id": 39100,
+        "name": "Demon Dress"
+      }
+    ]
+  },
+  "10713": {
+    "desc": "A scorching, uncooled scale from Claudalus.",
+    "id": 10713,
+    "max_stack": 99,
+    "name": "Blaze Pelt",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_800.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38402,
+        "name": "Angel Sword"
+      },
+      {
+        "id": 39001,
+        "name": "Demon Bow"
+      },
+      {
+        "id": 701011,
+        "name": "Tracker's Crossbow"
+      },
+      {
+        "id": 701018,
+        "name": "Cursed Photon Rod"
+      }
+    ]
+  },
+  "10714": {
+    "desc": "A scale of Laguna Rex that can deflect heat.",
+    "id": 10714,
+    "max_stack": 99,
+    "name": "Scaly Pelt",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_801.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38502,
+        "name": "Alpha Shield"
+      },
+      {
+        "id": 39001,
+        "name": "Demon Bow"
+      },
+      {
+        "id": 701005,
+        "name": "Explorer's Journal"
+      }
+    ]
+  },
+  "10715": {
+    "desc": "A hard green shell that covered Granomus.",
+    "id": 10715,
+    "max_stack": 99,
+    "name": "Verdant Pelt",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_802.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38600,
+        "name": "Death Jewel"
+      },
+      {
+        "id": 39200,
+        "name": "White Bangle"
+      },
+      {
+        "id": 39300,
+        "name": "Miroku Pearl"
+      },
+      {
+        "id": 701014,
+        "name": "Armor of the Fallen"
+      }
+    ]
+  },
+  "10716": {
+    "desc": "A hard blue shell that covered Medronomus.",
+    "id": 10716,
+    "max_stack": 99,
+    "name": "Cobalt Pelt",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_801.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 39000,
+        "name": "Evil Halberd"
+      },
+      {
+        "id": 39100,
+        "name": "Demon Dress"
+      },
+      {
+        "id": 39201,
+        "name": "Gold Bangle"
+      },
+      {
+        "id": 39400,
+        "name": "Godly Statue"
+      }
+    ]
+  },
+  "10717": {
+    "desc": "A scale from a fire eating dragon that can never burn.",
+    "id": 10717,
+    "max_stack": 99,
+    "name": "Solid Pelt",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_800.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38400,
+        "name": "Bahamut Rage"
+      },
+      {
+        "id": 38600,
+        "name": "Death Jewel"
+      },
+      {
+        "id": 38900,
+        "name": "Soul Gun"
+      },
+      {
+        "id": 39300,
+        "name": "Miroku Pearl"
+      }
+    ]
+  },
+  "10718": {
+    "desc": "An elastic pelt from an ice beast that is also very durable.",
+    "id": 10718,
+    "max_stack": 99,
+    "name": "Frozen Pelt",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_806.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38500,
+        "name": "Tree Shield"
+      },
+      {
+        "id": 38600,
+        "name": "Death Jewel"
+      },
+      {
+        "id": 38800,
+        "name": "Old Dagger"
+      },
+      {
+        "id": 39200,
+        "name": "White Bangle"
+      }
+    ]
+  },
+  "10719": {
+    "desc": "The pelt of a great bird called the \"Beryl Bird.\"",
+    "id": 10719,
+    "max_stack": 99,
+    "name": "Beryl Pelt",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_801.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30206,
+        "name": "Worship Cane"
+      },
+      {
+        "id": 30306,
+        "name": "Dark Armor"
+      }
+    ]
+  },
+  "10720": {
+    "desc": "The pelt of a huge beast that's resistant to the elements",
+    "id": 10720,
+    "max_stack": 99,
+    "name": "Mammoth Pelt",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_801.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 41400,
+        "name": "Fire Mail"
+      },
+      {
+        "id": 41401,
+        "name": "Water Mail"
+      },
+      {
+        "id": 41402,
+        "name": "Earth Mail"
+      },
+      {
+        "id": 41403,
+        "name": "Thunder Mail"
+      },
+      {
+        "id": 41404,
+        "name": "Light Mail"
+      },
+      {
+        "id": 41405,
+        "name": "Dark Mail"
+      }
+    ]
+  },
+  "10721": {
+    "desc": "A synthetic pelt used for incantations, exorcisms, and black magic",
+    "id": 10721,
+    "max_stack": 99,
+    "name": "Cursed Pelt",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_804.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30207,
+        "name": "Nature Staff"
+      },
+      {
+        "id": 30307,
+        "name": "Odd Armor"
+      },
+      {
+        "id": 41900,
+        "name": "Comet Helmet"
+      }
+    ]
+  },
+  "10722": {
+    "desc": "A pelt believed to belong to an invisible creature",
+    "id": 10722,
+    "max_stack": 99,
+    "name": "Phantom Pelt",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_804.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30208,
+        "name": "Ruler Staff"
+      },
+      {
+        "id": 30308,
+        "name": "Cosmos Armor"
+      },
+      {
+        "id": 44000,
+        "name": "Bariura Gem"
+      },
+      {
+        "id": 44200,
+        "name": "Bandit Ring"
+      }
+    ]
+  },
+  "10723": {
+    "desc": "The durable pelt of a thunder beast",
+    "id": 10723,
+    "max_stack": 99,
+    "name": "Shock Pelt",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_802.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44500,
+        "name": "Guard Brace"
+      }
+    ]
+  },
+  "10724": {
+    "desc": "Balmedia's electrified pelt",
+    "id": 10724,
+    "max_stack": 99,
+    "name": "Shock Mane",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_804.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38404,
+        "name": "Hallow Sword"
+      }
+    ]
+  },
+  "10725": {
+    "desc": "The scarlet pelt from the frontal part of Grudkia's body.",
+    "id": 10725,
+    "max_stack": 99,
+    "name": "Fiend Pelt",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_800.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38902,
+        "name": "Havoc Pike"
+      }
+    ]
+  },
+  "10726": {
+    "desc": "Bark from the Great Fairy Tree which has grown for countless years.",
+    "id": 10726,
+    "max_stack": 99,
+    "name": "Eternal Bark",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_806.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 39002,
+        "name": "Grudge Bow"
+      }
+    ]
+  },
+  "10727": {
+    "desc": "A sturdy scale shed by Jirayen.",
+    "id": 10727,
+    "max_stack": 99,
+    "name": "Evil Scale",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_805.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 45600,
+        "name": "Supreme Robe"
+      }
+    ]
+  },
+  "10728": {
+    "desc": "A bright scale shed by Claudalus which holds great power.",
+    "id": 10728,
+    "max_stack": 99,
+    "name": "Blaze Scale",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_800.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44501,
+        "name": "Illusion Gizmo"
+      },
+      {
+        "id": 45600,
+        "name": "Supreme Robe"
+      },
+      {
+        "id": 48900,
+        "name": "Blazing Fists"
+      }
+    ]
+  },
+  "10729": {
+    "desc": "A vine from the mysterious carnivorous plant known as the Queen Sipla",
+    "id": 10729,
+    "max_stack": 99,
+    "name": "Green Vine",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_802.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38701,
+        "name": "Sacred Treasure"
+      }
+    ]
+  },
+  "10730": {
+    "desc": "A scale from Estoreit with purifying properties.",
+    "id": 10730,
+    "max_stack": 99,
+    "name": "Light Scale",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_801.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44501,
+        "name": "Illusion Gizmo"
+      },
+      {
+        "id": 47700,
+        "name": "Phoenix Crown"
+      },
+      {
+        "id": 701027,
+        "name": "Wastelands Sailor Hat"
+      }
+    ]
+  },
+  "10731": {
+    "desc": "A lock of hair from the head of the War Demon Shusui",
+    "id": 10731,
+    "max_stack": 99,
+    "name": "War Demon's Hair",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_800.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 47601,
+        "name": "War Demon's Blade"
+      }
+    ]
+  },
+  "10732": {
+    "desc": "The hide of a great serpent that lives in the Zamburg region.",
+    "id": 10732,
+    "max_stack": 99,
+    "name": "Serpent Hide",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_804.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 47905,
+        "name": "Zamburg Gem"
+      }
+    ]
+  },
+  "10733": {
+    "desc": "A highly-magical substance found on the Dragon Demon's tail.",
+    "id": 10733,
+    "max_stack": 99,
+    "name": "Dragonlord's Scale",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_805.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 48900,
+        "name": "Blazing Fists"
+      }
+    ]
+  },
+  "10734": {
+    "desc": "Silk thread spun by the phantom spiders that inhabit Mordlim.",
+    "id": 10734,
+    "max_stack": 99,
+    "name": "Spider's Silk",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_802.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 49800,
+        "name": "Nature Shield"
+      }
+    ]
+  },
+  "10735": {
+    "desc": "A strip of cloth from the raiment worn by the demon Mora.",
+    "id": 10735,
+    "max_stack": 99,
+    "name": "Raiment of Grace",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_802.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 60200,
+        "name": "Twilight Stone"
+      }
+    ]
+  },
+  "10736": {
+    "desc": "The armor of an automaton found on Bectas.",
+    "id": 10736,
+    "max_stack": 99,
+    "name": "Metal Armor",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_802.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230003,
+        "name": "Shining Stone"
+      },
+      {
+        "id": 230103,
+        "name": "Sacred Flag"
+      }
+    ]
+  },
+  "10737": {
+    "desc": "A fragment from the inner walls of one of the massive caverns of Rokkzalm.",
+    "id": 10737,
+    "max_stack": 99,
+    "name": "Cavern Fragment",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_806.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 235002,
+        "name": "Armored Soul"
+      },
+      {
+        "id": 239000,
+        "name": "Sunblade"
+      }
+    ]
+  },
+  "10800": {
+    "desc": "A giant green beast bone.",
+    "id": 10800,
+    "max_stack": 99,
+    "name": "Green Bone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10,
+    "thumbnail": "item_thum_902.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30300,
+        "name": "Spirit Armor"
+      }
+    ]
+  },
+  "10801": {
+    "desc": "A blue bone from a giant beast.",
+    "id": 10801,
+    "max_stack": 99,
+    "name": "Blue Bone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_901.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30301,
+        "name": "Beast Armor"
+      },
+      {
+        "id": 34500,
+        "name": "Wise Mask"
+      }
+    ]
+  },
+  "10802": {
+    "desc": "A red bone from a mysterious beast.",
+    "id": 10802,
+    "max_stack": 99,
+    "name": "Red Bone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 30,
+    "thumbnail": "item_thum_900.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30302,
+        "name": "Holy Robe"
+      }
+    ]
+  },
+  "10805": {
+    "desc": "A very hard material said to be the fossil of an ancient demon.",
+    "id": 10805,
+    "max_stack": 99,
+    "name": "Hard Bone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10,
+    "thumbnail": "item_thum_906.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 22300,
+        "name": "Ares' Flute"
+      }
+    ]
+  },
+  "10806": {
+    "desc": "Unique bones distributed by the Summoners' Council.",
+    "id": 10806,
+    "max_stack": 99,
+    "name": "Honor Bone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 1,
+    "thumbnail": "item_thum_907.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 22210,
+        "name": "Goddess Idol"
+      },
+      {
+        "id": 30105,
+        "name": "Dogma Shield"
+      },
+      {
+        "id": 30106,
+        "name": "Grand Shield"
+      },
+      {
+        "id": 30107,
+        "name": "Ruler Shield"
+      },
+      {
+        "id": 30204,
+        "name": "Godly Staff"
+      },
+      {
+        "id": 30308,
+        "name": "Cosmos Armor"
+      },
+      {
+        "id": 30402,
+        "name": "Havoc Axe"
+      },
+      {
+        "id": 32200,
+        "name": "Monster Robe"
+      },
+      {
+        "id": 33900,
+        "name": "Zelnite Ring"
+      },
+      {
+        "id": 33901,
+        "name": "Zel Ring"
+      },
+      {
+        "id": 34000,
+        "name": "Soul Bracer"
+      },
+      {
+        "id": 34300,
+        "name": "Light Helm"
+      },
+      {
+        "id": 34500,
+        "name": "Wise Mask"
+      },
+      {
+        "id": 34805,
+        "name": "Royal Bud"
+      },
+      {
+        "id": 35300,
+        "name": "Crown Light"
+      },
+      {
+        "id": 35400,
+        "name": "Cordelicite"
+      },
+      {
+        "id": 38300,
+        "name": "Thief Guards"
+      },
+      {
+        "id": 41400,
+        "name": "Fire Mail"
+      },
+      {
+        "id": 41401,
+        "name": "Water Mail"
+      },
+      {
+        "id": 41402,
+        "name": "Earth Mail"
+      },
+      {
+        "id": 41403,
+        "name": "Thunder Mail"
+      },
+      {
+        "id": 41404,
+        "name": "Light Mail"
+      },
+      {
+        "id": 41405,
+        "name": "Dark Mail"
+      },
+      {
+        "id": 41500,
+        "name": "Zombie Jabot"
+      },
+      {
+        "id": 41700,
+        "name": "Wyvern Studs"
+      }
+    ]
+  },
+  "10807": {
+    "desc": "A special bone said to reside within people of extraordinary magic power.",
+    "id": 10807,
+    "max_stack": 99,
+    "name": "Blood Bone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10,
+    "thumbnail": "item_thum_906.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 35600,
+        "name": "Vampire Spear"
+      },
+      {
+        "id": 47901,
+        "name": "Lem Gem"
+      }
+    ]
+  },
+  "10808": {
+    "desc": "The bone of a beast fossilized after sitting for countless years.",
+    "id": 10808,
+    "max_stack": 99,
+    "name": "Yellow Bone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10,
+    "thumbnail": "item_thum_903.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30303,
+        "name": "Shiny Armor"
+      }
+    ]
+  },
+  "10809": {
+    "desc": "A beautiful bone that has an eternal shine like silver.",
+    "id": 10809,
+    "max_stack": 99,
+    "name": "Forever Bone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 40,
+    "thumbnail": "item_thum_904.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 37800,
+        "name": "Lizeria Gem"
+      },
+      {
+        "id": 38000,
+        "name": "Demon Shard"
+      },
+      {
+        "id": 47903,
+        "name": "Wulgee Gem"
+      },
+      {
+        "id": 700037,
+        "name": "Soul of Krantz"
+      }
+    ]
+  },
+  "10810": {
+    "desc": "The bone of a wolf that was protected by a dark goddess.",
+    "id": 10810,
+    "max_stack": 99,
+    "name": "Purple Bone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_905.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30105,
+        "name": "Dogma Shield"
+      },
+      {
+        "id": 30305,
+        "name": "Ember Armor"
+      }
+    ]
+  },
+  "10811": {
+    "desc": "A thunder beast's organ that extends from its back to its belly.",
+    "id": 10811,
+    "max_stack": 99,
+    "name": "Thunder Bone",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_903.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38401,
+        "name": "Blue Dragon"
+      },
+      {
+        "id": 39400,
+        "name": "Godly Statue"
+      },
+      {
+        "id": 701008,
+        "name": "Hunting Guide"
+      },
+      {
+        "id": 701013,
+        "name": "Aries' Hammers"
+      }
+    ]
+  },
+  "10812": {
+    "desc": "The marrow of a wing from Reduhark.",
+    "id": 10812,
+    "max_stack": 99,
+    "name": "Dark Bone",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_905.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38502,
+        "name": "Alpha Shield"
+      },
+      {
+        "id": 39000,
+        "name": "Evil Halberd"
+      },
+      {
+        "id": 701003,
+        "name": "Surt's Blade"
+      }
+    ]
+  },
+  "10813": {
+    "desc": "The bone of a strange dotted animal from the Mirvana region.",
+    "id": 10813,
+    "max_stack": 99,
+    "name": "Sand Bone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_906.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30006,
+        "name": "Chosen Blade"
+      },
+      {
+        "id": 30106,
+        "name": "Grand Shield"
+      }
+    ]
+  },
+  "10814": {
+    "desc": "A stone-like bone found underground.",
+    "id": 10814,
+    "max_stack": 99,
+    "name": "Burst Bone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_906.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 41400,
+        "name": "Fire Mail"
+      },
+      {
+        "id": 41401,
+        "name": "Water Mail"
+      },
+      {
+        "id": 41402,
+        "name": "Earth Mail"
+      },
+      {
+        "id": 41403,
+        "name": "Thunder Mail"
+      },
+      {
+        "id": 41404,
+        "name": "Light Mail"
+      },
+      {
+        "id": 41405,
+        "name": "Dark Mail"
+      }
+    ]
+  },
+  "10815": {
+    "desc": "A bone with some heat and sacred power residing within",
+    "id": 10815,
+    "max_stack": 99,
+    "name": "Sacred Bone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_904.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30007,
+        "name": "Carnage Edge"
+      },
+      {
+        "id": 30107,
+        "name": "Ruler Shield"
+      },
+      {
+        "id": 41800,
+        "name": "Pure Crystal"
+      }
+    ]
+  },
+  "10816": {
+    "desc": "The ancient bone of a creature discovered interred ",
+    "id": 10816,
+    "max_stack": 99,
+    "name": "Ancient Bone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_904.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44100,
+        "name": "Fairy Robe"
+      },
+      {
+        "id": 44200,
+        "name": "Bandit Ring"
+      }
+    ]
+  },
+  "10817": {
+    "desc": "A bone from Van Lucy that looks like a mechanical part ",
+    "id": 10817,
+    "max_stack": 99,
+    "name": "Fallen Screw",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_904.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44400,
+        "name": "Phoenix Orb"
+      },
+      {
+        "id": 701022,
+        "name": "Arthur's Will"
+      }
+    ]
+  },
+  "10818": {
+    "desc": "A bone from Van Nader that looks like a mechanical part",
+    "id": 10818,
+    "max_stack": 99,
+    "name": "Evil Screw",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_905.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44300,
+        "name": "Thorn Crown"
+      }
+    ]
+  },
+  "10819": {
+    "desc": "One of Jirayen's gigantic horns.",
+    "id": 10819,
+    "max_stack": 99,
+    "name": "Evil Horn",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_905.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 45500,
+        "name": "Violet Pearl"
+      }
+    ]
+  },
+  "10820": {
+    "desc": "The beautiful and vibrant remnants of a Phoenix",
+    "id": 10820,
+    "max_stack": 99,
+    "name": "Phoenix Bone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_900.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 47904,
+        "name": "Rakshult Gem"
+      }
+    ]
+  },
+  "10821": {
+    "desc": "The endoskeleton of an automaton found on Bectas.",
+    "id": 10821,
+    "max_stack": 99,
+    "name": "Molten Bones",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_902.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230203,
+        "name": "Guarding Light"
+      },
+      {
+        "id": 230303,
+        "name": "General's Gem"
+      }
+    ]
+  },
+  "10823": {
+    "desc": "A fossilized bone found outside a great shrine in Ohbanahara.",
+    "id": 10823,
+    "max_stack": 99,
+    "name": "Scalding Bone",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_904.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230105,
+        "name": "Forbidden Blade"
+      },
+      {
+        "id": 230205,
+        "name": "Myrmidon Helm"
+      }
+    ]
+  },
+  "10900": {
+    "desc": "A small green ladybug.",
+    "id": 10900,
+    "max_stack": 99,
+    "name": "Green Bug",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10,
+    "thumbnail": "item_thum_1002.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30200,
+        "name": "White Cane"
+      }
+    ]
+  },
+  "10901": {
+    "desc": "A small blue ladybug.",
+    "id": 10901,
+    "max_stack": 99,
+    "name": "Blue Bug",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_1001.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30201,
+        "name": "Sentry Cane"
+      }
+    ]
+  },
+  "10902": {
+    "desc": "A small red ladybug.",
+    "id": 10902,
+    "max_stack": 99,
+    "name": "Red Bug",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 30,
+    "thumbnail": "item_thum_1000.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30202,
+        "name": "Holy Cane"
+      }
+    ]
+  },
+  "10903": {
+    "desc": "A beetle that eats gold dust and stores it as gold in its body.",
+    "id": 10903,
+    "max_stack": 99,
+    "name": "Golden Bug",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 40,
+    "thumbnail": "item_thum_1003.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30203,
+        "name": "Sky Staff"
+      }
+    ]
+  },
+  "10904": {
+    "desc": "A bug found in the mineral mountains. It makes its nest with silver.",
+    "id": 10904,
+    "max_stack": 99,
+    "name": "Comet Bug",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1004.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 34808,
+        "name": "Phoenix Eye"
+      },
+      {
+        "id": 700032,
+        "name": "Ardent Coal"
+      }
+    ]
+  },
+  "10905": {
+    "desc": "A glowing bug native to the lands of Agni.",
+    "id": 10905,
+    "max_stack": 99,
+    "name": "Glowing Bug",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1005.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38100,
+        "name": "Bright Shard"
+      },
+      {
+        "id": 38200,
+        "name": "Royal Shard"
+      }
+    ]
+  },
+  "10906": {
+    "desc": "A bug that can camouflage itself, adapting to everything.",
+    "id": 10906,
+    "max_stack": 99,
+    "name": "Mimic Bug",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1004.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30006,
+        "name": "Chosen Blade"
+      },
+      {
+        "id": 30106,
+        "name": "Grand Shield"
+      },
+      {
+        "id": 30206,
+        "name": "Worship Cane"
+      },
+      {
+        "id": 30306,
+        "name": "Dark Armor"
+      },
+      {
+        "id": 31301,
+        "name": "Hope Stone"
+      }
+    ]
+  },
+  "10907": {
+    "desc": "An insect which can change its body like a mirror",
+    "id": 10907,
+    "max_stack": 99,
+    "name": "Mirror Bug",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1004.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 41800,
+        "name": "Pure Crystal"
+      },
+      {
+        "id": 41900,
+        "name": "Comet Helmet"
+      },
+      {
+        "id": 47907,
+        "name": "Estria Gem"
+      }
+    ]
+  },
+  "10908": {
+    "desc": "A parasite that infects beasts, quickly increasing their abilities ",
+    "id": 10908,
+    "max_stack": 99,
+    "name": "Parasite Bug",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1000.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38001,
+        "name": "Mock Crystal"
+      },
+      {
+        "id": 43300,
+        "name": "Hades Lance"
+      }
+    ]
+  },
+  "10909": {
+    "desc": "A nocturnal demon bug said to appear during downpours of miasma",
+    "id": 10909,
+    "max_stack": 99,
+    "name": "Miasma Bug",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1005.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 47903,
+        "name": "Wulgee Gem"
+      }
+    ]
+  },
+  "10910": {
+    "desc": "An insectoid automaton native to Bectas.",
+    "id": 10910,
+    "max_stack": 99,
+    "name": "Allurifly",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_1002.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230203,
+        "name": "Guarding Light"
+      },
+      {
+        "id": 230303,
+        "name": "General's Gem"
+      }
+    ]
+  },
+  "10911": {
+    "desc": "Small, carnivorous insects native to the world of Vilanciel.",
+    "id": 10911,
+    "max_stack": 99,
+    "name": "Iceblade Bug",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_1001.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230104,
+        "name": "Power Girdle"
+      },
+      {
+        "id": 230204,
+        "name": "Ogre Gauntlets"
+      }
+    ]
+  },
+  "10912": {
+    "desc": "Demonic insects that swarm when the sun doesn't set on the world of Vilanciel.",
+    "id": 10912,
+    "max_stack": 99,
+    "name": "Midnight Bug",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_1004.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230004,
+        "name": "Noble Blood Gem"
+      },
+      {
+        "id": 230304,
+        "name": "Affection Charm"
+      },
+      {
+        "id": 234000,
+        "name": "Taboo Grimoire"
+      }
+    ]
+  },
+  "10913": {
+    "desc": "Insects native to Rokkzalm which contain unique bodily fluids.",
+    "id": 10913,
+    "max_stack": 99,
+    "name": "Magicatalyst Bug",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1001.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230006,
+        "name": "Spirit Band"
+      },
+      {
+        "id": 238000,
+        "name": "Rainbow Regalia"
+      }
+    ]
+  },
+  "11000": {
+    "desc": "A stone that has special elemental attack powers.",
+    "id": 11000,
+    "max_stack": 99,
+    "name": "Fate Stone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 5,
+    "thumbnail": "item_thum_1102.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20700,
+        "name": "Ares' Elixir"
+      },
+      {
+        "id": 20800,
+        "name": "Fire Ore"
+      },
+      {
+        "id": 20810,
+        "name": "Water Ore"
+      },
+      {
+        "id": 20820,
+        "name": "Earth Ore"
+      },
+      {
+        "id": 20830,
+        "name": "Thunder Ore"
+      },
+      {
+        "id": 20840,
+        "name": "Light Ore"
+      },
+      {
+        "id": 20850,
+        "name": "Dark Ore"
+      }
+    ]
+  },
+  "11001": {
+    "desc": "A stone that has special elemental defense powers.",
+    "id": 11001,
+    "max_stack": 99,
+    "name": "Paladin Stone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 5,
+    "thumbnail": "item_thum_1101.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 20700,
+        "name": "Ares' Elixir"
+      },
+      {
+        "id": 20900,
+        "name": "Fire Seal"
+      },
+      {
+        "id": 20910,
+        "name": "Water Seal"
+      },
+      {
+        "id": 20920,
+        "name": "Earth Seal"
+      },
+      {
+        "id": 20930,
+        "name": "Thunder Seal"
+      },
+      {
+        "id": 20940,
+        "name": "Light Seal"
+      },
+      {
+        "id": 20950,
+        "name": "Dark Seal"
+      }
+    ]
+  },
+  "11002": {
+    "desc": "An evil stone often used as a decoration by nobles.",
+    "id": 11002,
+    "max_stack": 99,
+    "name": "Wicked Stone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10,
+    "thumbnail": "item_thum_1100.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 35300,
+        "name": "Crown Light"
+      },
+      {
+        "id": 35301,
+        "name": "Royal Light"
+      }
+    ]
+  },
+  "11003": {
+    "desc": "A magical stone that radiates god-like energy.",
+    "id": 11003,
+    "max_stack": 99,
+    "name": "God Stone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_1103.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 21000,
+        "name": "Fujin Potion"
+      }
+    ]
+  },
+  "11004": {
+    "desc": "A magical stone said to have the divine protection of the gods.",
+    "id": 11004,
+    "max_stack": 99,
+    "name": "Gospel Stone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 30,
+    "thumbnail": "item_thum_1105.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 22200,
+        "name": "Angel Idol"
+      }
+    ]
+  },
+  "11005": {
+    "desc": "A magical stone rarely discovered in Grand Gaia.",
+    "id": 11005,
+    "max_stack": 99,
+    "name": "Spirit Stone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 40,
+    "thumbnail": "item_thum_1107.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 22300,
+        "name": "Ares' Flute"
+      }
+    ]
+  },
+  "11006": {
+    "desc": "A precious stone that has a powerful spiritual magic.",
+    "id": 11006,
+    "max_stack": 99,
+    "name": "Blue Stone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 25,
+    "thumbnail": "item_thum_1101.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 33700,
+        "name": "Skill Bracer"
+      }
+    ]
+  },
+  "11007": {
+    "desc": "A stone said to increase vitality that emits a crimson glow.",
+    "id": 11007,
+    "max_stack": 99,
+    "name": "Red Stone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 40,
+    "thumbnail": "item_thum_1100.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 33800,
+        "name": "Cure Bracer"
+      }
+    ]
+  },
+  "11008": {
+    "desc": "Magical hardened lava from a volcano many threw themselves into.",
+    "id": 11008,
+    "max_stack": 99,
+    "name": "Karma Stone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1105.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 34000,
+        "name": "Soul Bracer"
+      },
+      {
+        "id": 47900,
+        "name": "Celgrad Gem"
+      }
+    ]
+  },
+  "11009": {
+    "desc": "The most valuable stone in existence, found in the Sacred Mt. Craylia.",
+    "id": 11009,
+    "max_stack": 99,
+    "name": "Prized Stone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1103.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 33900,
+        "name": "Zelnite Ring"
+      },
+      {
+        "id": 47900,
+        "name": "Celgrad Gem"
+      }
+    ]
+  },
+  "11010": {
+    "desc": "An uncommon stone with no elemental powers.",
+    "id": 11010,
+    "max_stack": 99,
+    "name": "Hollow Rock",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1101.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 33500,
+        "name": "Cursed Robe"
+      }
+    ]
+  },
+  "11011": {
+    "desc": "A transparent stone found in a particularly clear spring. ",
+    "id": 11011,
+    "max_stack": 99,
+    "name": "Spring Stone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1101.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 34803,
+        "name": "Tech Gizmo 2"
+      }
+    ]
+  },
+  "11012": {
+    "desc": "A stone containing the flames of hell itself.",
+    "id": 11012,
+    "max_stack": 99,
+    "name": "Forge Stone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1100.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 34804,
+        "name": "Cure Gizmo 2"
+      }
+    ]
+  },
+  "11013": {
+    "desc": "A stone collected from a battlefield where many heroes were lost.",
+    "id": 11013,
+    "max_stack": 99,
+    "name": "Memory Stone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1103.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 33901,
+        "name": "Zel Ring"
+      }
+    ]
+  },
+  "11014": {
+    "desc": "A stone that absorbs all light, like a dark abyss.",
+    "id": 11014,
+    "max_stack": 99,
+    "name": "Abyss Stone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1105.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 34808,
+        "name": "Phoenix Eye"
+      }
+    ]
+  },
+  "11015": {
+    "desc": "A fascinating stone said to enhance dreaming when held during sleep.",
+    "id": 11015,
+    "max_stack": 99,
+    "name": "Dream Stone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1107.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 37700,
+        "name": "Health Charm"
+      },
+      {
+        "id": 38000,
+        "name": "Demon Shard"
+      },
+      {
+        "id": 700037,
+        "name": "Soul of Krantz"
+      }
+    ]
+  },
+  "11016": {
+    "desc": "A mineral required for the refining of essential components in certain materials.",
+    "id": 11016,
+    "max_stack": 99,
+    "name": "Smooth Stone",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1104.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 70000,
+        "name": "Beacon"
+      },
+      {
+        "id": 70100,
+        "name": "Smoke Bomb"
+      },
+      {
+        "id": 70200,
+        "name": "Teleport"
+      },
+      {
+        "id": 70300,
+        "name": "God Crystal"
+      },
+      {
+        "id": 70400,
+        "name": "Atk Crystal"
+      },
+      {
+        "id": 70500,
+        "name": "Def Crystal"
+      },
+      {
+        "id": 70600,
+        "name": "Detector"
+      }
+    ]
+  },
+  "11017": {
+    "desc": "A mineral ore extracted from a red rock found in the wastelands of Agni.",
+    "id": 11017,
+    "max_stack": 99,
+    "name": "Rouge Stone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1100.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30004,
+        "name": "Divine Sword"
+      },
+      {
+        "id": 30104,
+        "name": "King Shield"
+      },
+      {
+        "id": 30204,
+        "name": "Godly Staff"
+      },
+      {
+        "id": 30304,
+        "name": "God Armor"
+      },
+      {
+        "id": 38100,
+        "name": "Bright Shard"
+      },
+      {
+        "id": 38200,
+        "name": "Royal Shard"
+      },
+      {
+        "id": 38300,
+        "name": "Thief Guards"
+      },
+      {
+        "id": 47904,
+        "name": "Rakshult Gem"
+      }
+    ]
+  },
+  "11018": {
+    "desc": "A piece of the thunder beast's Thunder Bone.",
+    "id": 11018,
+    "max_stack": 99,
+    "name": "Thunder Chip",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1103.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 49700,
+        "name": "All-Seeing Eyes"
+      }
+    ]
+  },
+  "11019": {
+    "desc": "A piece of Reduhark's black wings.",
+    "id": 11019,
+    "max_stack": 99,
+    "name": "Dark Stone",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1105.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38401,
+        "name": "Blue Dragon"
+      },
+      {
+        "id": 39700,
+        "name": "Demon Flag"
+      },
+      {
+        "id": 701005,
+        "name": "Explorer's Journal"
+      }
+    ]
+  },
+  "11020": {
+    "desc": "A piece of Van Lucy that closely resembles machinery.",
+    "id": 11020,
+    "max_stack": 99,
+    "name": "Holy Gear",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1104.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 39900,
+        "name": "Phoenix Wing"
+      },
+      {
+        "id": 44400,
+        "name": "Phoenix Orb"
+      }
+    ]
+  },
+  "11021": {
+    "desc": "A piece of Van Nader that closely resembles machinery.",
+    "id": 11021,
+    "max_stack": 99,
+    "name": "Holy Circuit",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1105.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 39800,
+        "name": "Demon Crown"
+      },
+      {
+        "id": 44300,
+        "name": "Thorn Crown"
+      }
+    ]
+  },
+  "11022": {
+    "desc": "A stone that flickers in a beautiful, faint green color.",
+    "id": 11022,
+    "max_stack": 99,
+    "name": "Jade Stone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1102.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 31301,
+        "name": "Hope Stone"
+      },
+      {
+        "id": 40000,
+        "name": "Sol Creator"
+      },
+      {
+        "id": 40100,
+        "name": "Luna Creator"
+      }
+    ]
+  },
+  "11023": {
+    "desc": "The shard of a stone said to hold an ancient general's will.",
+    "id": 11023,
+    "max_stack": 99,
+    "name": "Ogre Shard",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1102.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 31002,
+        "name": "Amanohabaken"
+      },
+      {
+        "id": 31102,
+        "name": "Evil Shield"
+      },
+      {
+        "id": 47906,
+        "name": "Fal Nerga Gem"
+      }
+    ]
+  },
+  "11024": {
+    "desc": "A rare and mythical mineral found in Aldahlia",
+    "id": 11024,
+    "max_stack": 99,
+    "name": "Royal Stone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1104.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30007,
+        "name": "Carnage Edge"
+      },
+      {
+        "id": 30107,
+        "name": "Ruler Shield"
+      },
+      {
+        "id": 30207,
+        "name": "Nature Staff"
+      },
+      {
+        "id": 30307,
+        "name": "Odd Armor"
+      },
+      {
+        "id": 47907,
+        "name": "Estria Gem"
+      }
+    ]
+  },
+  "11025": {
+    "desc": "An empty crystal which contains nothing solid within",
+    "id": 11025,
+    "max_stack": 99,
+    "name": "Empty Sphere",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1104.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 30008,
+        "name": "Sparkle Edge"
+      },
+      {
+        "id": 30108,
+        "name": "Sky Shield"
+      },
+      {
+        "id": 30208,
+        "name": "Ruler Staff"
+      },
+      {
+        "id": 30308,
+        "name": "Cosmos Armor"
+      },
+      {
+        "id": 44100,
+        "name": "Fairy Robe"
+      },
+      {
+        "id": 47908,
+        "name": "Menon Gem"
+      }
+    ]
+  },
+  "11026": {
+    "desc": "A part of Van Lucy's heart that looks like a mechanical part",
+    "id": 11026,
+    "max_stack": 99,
+    "name": "Divine Core",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1104.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44400,
+        "name": "Phoenix Orb"
+      },
+      {
+        "id": 49700,
+        "name": "All-Seeing Eyes"
+      }
+    ]
+  },
+  "11027": {
+    "desc": "A part of Van Nader's heart that looks like a mechanical part",
+    "id": 11027,
+    "max_stack": 99,
+    "name": "Divine Fuse",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1105.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 44300,
+        "name": "Thorn Crown"
+      }
+    ]
+  },
+  "11028": {
+    "desc": "The electrified heart of a thunder beast that still beats postmortem",
+    "id": 11028,
+    "max_stack": 99,
+    "name": "Shock Heart",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1100.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38405,
+        "name": "Sky Blade"
+      },
+      {
+        "id": 44500,
+        "name": "Guard Brace"
+      },
+      {
+        "id": 701013,
+        "name": "Aries' Hammers"
+      }
+    ]
+  },
+  "11029": {
+    "desc": "A mineral found inside Yugreia's body",
+    "id": 11029,
+    "max_stack": 99,
+    "name": "Cataract Ore",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1101.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 38405,
+        "name": "Sky Blade"
+      },
+      {
+        "id": 38505,
+        "name": "Sky Buckler"
+      },
+      {
+        "id": 44600,
+        "name": "Origin Slate"
+      },
+      {
+        "id": 701020,
+        "name": "Temporal Cybernetic Skin"
+      },
+      {
+        "id": 701027,
+        "name": "Wastelands Sailor Hat"
+      }
+    ]
+  },
+  "11030": {
+    "desc": "A mysterious ring that binds Nalda Delia's body",
+    "id": 11030,
+    "max_stack": 99,
+    "name": "Doom Ring",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1105.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 42300,
+        "name": "Buffer Jewel"
+      },
+      {
+        "id": 60200,
+        "name": "Twilight Stone"
+      },
+      {
+        "id": 701038,
+        "name": "Drill Sharpener"
+      }
+    ]
+  },
+  "11031": {
+    "desc": "Mistzug's crystallized core.",
+    "id": 11031,
+    "max_stack": 99,
+    "name": "Guile Stone",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1104.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 45400,
+        "name": "Fortune Cap"
+      },
+      {
+        "id": 49700,
+        "name": "All-Seeing Eyes"
+      }
+    ]
+  },
+  "11032": {
+    "desc": "Jirayen's crystallized eye.",
+    "id": 11032,
+    "max_stack": 99,
+    "name": "Evil Eye",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1105.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 45500,
+        "name": "Violet Pearl"
+      },
+      {
+        "id": 45600,
+        "name": "Supreme Robe"
+      },
+      {
+        "id": 46200,
+        "name": "Occult Treasure"
+      },
+      {
+        "id": 701024,
+        "name": "Arondight"
+      },
+      {
+        "id": 701031,
+        "name": "Enhanced Bubble Generator"
+      }
+    ]
+  },
+  "11033": {
+    "desc": "A crystal serving as Golvorg's source of vitality.",
+    "id": 11033,
+    "max_stack": 99,
+    "name": "Shock Core",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1103.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 45500,
+        "name": "Violet Pearl"
+      },
+      {
+        "id": 47601,
+        "name": "War Demon's Blade"
+      },
+      {
+        "id": 701037,
+        "name": "Customized Reactor"
+      }
+    ]
+  },
+  "11034": {
+    "desc": "A sphere of great power belonging to Estoreit.",
+    "id": 11034,
+    "max_stack": 99,
+    "name": "Azure Sphere",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1101.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 46210,
+        "name": "Beiorg's Armor"
+      },
+      {
+        "id": 47700,
+        "name": "Phoenix Crown"
+      },
+      {
+        "id": 701022,
+        "name": "Arthur's Will"
+      },
+      {
+        "id": 701033,
+        "name": "Plumatachi's Glasses"
+      }
+    ]
+  },
+  "11035": {
+    "desc": "A red crystal that is part of Arkem's body.",
+    "id": 11035,
+    "max_stack": 99,
+    "name": "Red Crystal",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1100.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 47600,
+        "name": "Revelation Book"
+      },
+      {
+        "id": 47700,
+        "name": "Phoenix Crown"
+      }
+    ]
+  },
+  "11036": {
+    "desc": "Arkem's core.",
+    "id": 11036,
+    "max_stack": 99,
+    "name": "Calamity Core",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1105.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 46200,
+        "name": "Occult Treasure"
+      },
+      {
+        "id": 48900,
+        "name": "Blazing Fists"
+      },
+      {
+        "id": 701023,
+        "name": "Caliburn"
+      },
+      {
+        "id": 701030,
+        "name": "Instable Flask"
+      }
+    ]
+  },
+  "11037": {
+    "desc": "A stone of immense power that shines in six different colors.",
+    "id": 11037,
+    "max_stack": 99,
+    "name": "Hexacolor Stone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1104.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 47900,
+        "name": "Celgrad Gem"
+      }
+    ]
+  },
+  "11038": {
+    "desc": "A fragment of the weapon belonging to the War Demon Shusui",
+    "id": 11038,
+    "max_stack": 99,
+    "name": "War Demon's Gem",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1100.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 47601,
+        "name": "War Demon's Blade"
+      }
+    ]
+  },
+  "11039": {
+    "desc": "A part of Beiorg's armor.",
+    "id": 11039,
+    "max_stack": 99,
+    "name": "Beiorg's Scrap",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1103.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 46210,
+        "name": "Beiorg's Armor"
+      }
+    ]
+  },
+  "11041": {
+    "desc": "A unique crystal gathered from the area surrounding the demon Amu Yunos.",
+    "id": 11041,
+    "max_stack": 99,
+    "name": "Spatial Crystal",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1104.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 49700,
+        "name": "All-Seeing Eyes"
+      }
+    ]
+  },
+  "11042": {
+    "desc": "A fragment of jewelry once worn by the demon Mora.",
+    "id": 11042,
+    "max_stack": 99,
+    "name": "Shadow Gem",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1104.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 60200,
+        "name": "Twilight Stone"
+      },
+      {
+        "id": 62130,
+        "name": "Scarlet Eventide"
+      }
+    ]
+  },
+  "11043": {
+    "desc": "Clotted blood taken from the body of Melord.",
+    "id": 11043,
+    "max_stack": 99,
+    "name": "Demonblood Clot",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1101.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 60300,
+        "name": "Melord's Core"
+      }
+    ]
+  },
+  "11044": {
+    "desc": "A crystal that was refined within the body of Melord.",
+    "id": 11044,
+    "max_stack": 99,
+    "name": "Crystal Soul",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1105.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 60300,
+        "name": "Melord's Core"
+      }
+    ]
+  },
+  "11045": {
+    "desc": "A crystal embedded in the sword of Heresy Demon Kalon.",
+    "id": 11045,
+    "max_stack": 99,
+    "name": "Crest Seal",
+    "raid": true,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1105.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 46220,
+        "name": "Armor of Seals"
+      },
+      {
+        "id": 62130,
+        "name": "Scarlet Eventide"
+      }
+    ]
+  },
+  "11046": {
+    "desc": "An icy ore from the permafrost layer of the world of Vilanciel.",
+    "id": 11046,
+    "max_stack": 99,
+    "name": "Frost Stone",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_1101.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230104,
+        "name": "Power Girdle"
+      },
+      {
+        "id": 230204,
+        "name": "Ogre Gauntlets"
+      }
+    ]
+  },
+  "11048": {
+    "desc": "A gear from the automatons found at the Abandoned Temple in Ohbanahara.",
+    "id": 11048,
+    "max_stack": 99,
+    "name": "Mechanical Gear",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1104.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 235001,
+        "name": "Automated Warrior"
+      }
+    ]
+  },
+  "11049": {
+    "desc": "Crystals found very rarely among the remains of enchanted puppets.",
+    "id": 11049,
+    "max_stack": 99,
+    "name": "Armor Shard",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1102.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 235002,
+        "name": "Armored Soul"
+      }
+    ]
+  },
+  "110000": {
+    "desc": "A crystal used to evolve the mock Unit based on Seria",
+    "id": 110000,
+    "max_stack": 1,
+    "name": "Ruby",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110000.png",
+    "type": "evomat",
+    "usage": [],
+    "associated_units": [
+      "10234"
+    ]
+  },
+  "110001": {
+    "desc": "A rare crystal used to evolve the mock Unit based on Seria",
+    "id": 110001,
+    "max_stack": 1,
+    "name": "Grand Ruby",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110100.png",
+    "type": "evomat",
+    "usage": [],
+    "associated_units": [
+      "10235"
+    ]
+  },
+  "110010": {
+    "desc": "A crystal used to evolve the mock Unit based on Karl",
+    "id": 110010,
+    "max_stack": 1,
+    "name": "Sapphire",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110010.png",
+    "type": "evomat",
+    "usage": [],
+    "associated_units": [
+      "20234"
+    ]
+  },
+  "110011": {
+    "desc": "A rare crystal used to evolve the mock Unit based on Karl",
+    "id": 110011,
+    "max_stack": 1,
+    "name": "Grand Sapphire",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110110.png",
+    "type": "evomat",
+    "usage": [],
+    "associated_units": [
+      "20235"
+    ]
+  },
+  "110020": {
+    "desc": "A crystal used to evolve the mock Unit based on Paris",
+    "id": 110020,
+    "max_stack": 1,
+    "name": "Emerald",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110020.png",
+    "type": "evomat",
+    "usage": [],
+    "associated_units": [
+      "30234"
+    ]
+  },
+  "110021": {
+    "desc": "A rare crystal used to evolve the mock Unit based on Lugina",
+    "id": 110021,
+    "max_stack": 1,
+    "name": "Grand Emerald",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110120.png",
+    "type": "evomat",
+    "usage": [],
+    "associated_units": [
+      "30235"
+    ]
+  },
+  "110030": {
+    "desc": "A crystal used to evolve the mock Unit based on Grahdens",
+    "id": 110030,
+    "max_stack": 1,
+    "name": "Topaz",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110030.png",
+    "type": "evomat",
+    "usage": [],
+    "associated_units": [
+      "40234"
+    ]
+  },
+  "110031": {
+    "desc": "A rare crystal used to evolve the mock Unit based on Paris",
+    "id": 110031,
+    "max_stack": 1,
+    "name": "Grand Topaz",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110130.png",
+    "type": "evomat",
+    "usage": [],
+    "associated_units": [
+      "40235"
+    ]
+  },
+  "110040": {
+    "desc": "A crystal used to evolve the mock Unit based on Tilith",
+    "id": 110040,
+    "max_stack": 1,
+    "name": "Opal",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110040.png",
+    "type": "evomat",
+    "usage": [],
+    "associated_units": [
+      "50254"
+    ]
+  },
+  "110041": {
+    "desc": "A rare crystal used to evolve the mock Unit based on Tilith",
+    "id": 110041,
+    "max_stack": 1,
+    "name": "Grand Opal",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110140.png",
+    "type": "evomat",
+    "usage": [],
+    "associated_units": [
+      "50255"
+    ]
+  },
+  "110050": {
+    "desc": "A mysterious stone that allows Units to surpass the gods' power",
+    "id": 110050,
+    "max_stack": 1,
+    "name": "Amethyst",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110050.png",
+    "type": "evomat",
+    "usage": [],
+    "associated_units": [
+      "60324"
+    ]
+  },
+  "110051": {
+    "desc": "A rare crystal used to evolve the mock Unit based on Grahdens",
+    "id": 110051,
+    "max_stack": 1,
+    "name": "Grand Amethyst",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110150.png",
+    "type": "evomat",
+    "usage": [],
+    "associated_units": [
+      "60325"
+    ]
+  },
+  "110060": {
+    "desc": "A rare crystal used to evolve the mock Unit based on Owen",
+    "id": 110060,
+    "max_stack": 1,
+    "name": "Grand Garnet",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110160.png",
+    "type": "evomat",
+    "usage": [],
+    "associated_units": [
+      "10515"
+    ]
+  },
+  "110070": {
+    "desc": "A rare crystal used to evolve the mock Unit based on Ark",
+    "id": 110070,
+    "max_stack": 1,
+    "name": "Twin Stones",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_110190.png",
+    "type": "evomat",
+    "usage": [],
+    "associated_units": [
+      "50286"
+    ]
+  },
+  "110100": {
+    "desc": "A mysterious relic used to evolve the Unit Grandt",
+    "id": 110100,
+    "max_stack": 99,
+    "name": "Legend Stone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_111000.png",
+    "type": "evomat",
+    "usage": [],
+    "associated_units": [
+      "10015",
+      "10016",
+      "10115",
+      "10125",
+      "10126",
+      "10255",
+      "10256",
+      "10285",
+      "10335",
+      "10365",
+      "10465",
+      "10555",
+      "10556",
+      "10676",
+      "10736",
+      "10756",
+      "20015",
+      "20016",
+      "20125",
+      "20155",
+      "20156",
+      "20275",
+      "20285",
+      "20325",
+      "20355",
+      "20365",
+      "20535",
+      "20566",
+      "20636",
+      "20676",
+      "30015",
+      "30016",
+      "30115",
+      "30165",
+      "30275",
+      "30315",
+      "30345",
+      "30445",
+      "30446",
+      "30515",
+      "30516",
+      "30545",
+      "30566",
+      "30626",
+      "40015",
+      "40016",
+      "40165",
+      "40275",
+      "40315",
+      "40345",
+      "40445",
+      "40495",
+      "40505",
+      "40506",
+      "40536",
+      "40576",
+      "40606",
+      "50015",
+      "50016",
+      "50105",
+      "50115",
+      "50165",
+      "50275",
+      "50285",
+      "50315",
+      "50316",
+      "50385",
+      "50405",
+      "50475",
+      "50656",
+      "50756",
+      "50916",
+      "60015",
+      "60016",
+      "60025",
+      "60095",
+      "60096",
+      "60115",
+      "60116",
+      "60175",
+      "60255",
+      "60285",
+      "60315",
+      "60355",
+      "60475",
+      "60525",
+      "60526",
+      "60535",
+      "60666",
+      "60766",
+      "710115",
+      "710146",
+      "710255",
+      "720105",
+      "720155",
+      "720166",
+      "720216",
+      "730145",
+      "730196",
+      "730216",
+      "740145",
+      "740155",
+      "740166",
+      "740216",
+      "750146",
+      "750155",
+      "750156",
+      "750166",
+      "750315",
+      "760145",
+      "760196",
+      "760216",
+      "810337",
+      "810356",
+      "810377",
+      "810397",
+      "810547",
+      "820297",
+      "820377",
+      "820397",
+      "820507",
+      "820547",
+      "830297",
+      "830377",
+      "830387",
+      "840377",
+      "840397",
+      "840547",
+      "850157",
+      "850165",
+      "850166",
+      "850197",
+      "850297",
+      "850377",
+      "850387",
+      "850397",
+      "850507",
+      "850547",
+      "860165",
+      "860166",
+      "860356",
+      "860377"
+    ]
+  },
+  "120000": {
+    "desc": "Multiplies experience by 1.5 after Quest is cleared ",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "79",
+          "unknown proc param": "50"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 120000,
+    "max equipped": 1,
+    "max_stack": 99,
+    "name": "Experience Token",
+    "raid": false,
+    "rarity": 2,
+    "sell_price": 500,
+    "thumbnail": "item_thum_90000.png",
+    "type": "summoner_consumable",
+    "usage": []
+  },
+  "120001": {
+    "desc": "Multiplies experience by 2 after Quest is cleared",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "79",
+          "unknown proc param": "100"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 120001,
+    "max equipped": 1,
+    "max_stack": 99,
+    "name": "Experience Badge",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 1000,
+    "thumbnail": "item_thum_90100.png",
+    "type": "summoner_consumable",
+    "usage": []
+  },
+  "120010": {
+    "desc": "Multiplies Item drop rate by 1.5 after Raid Quest is cleared when activated from map",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "908",
+          "unknown proc param": "50"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 120010,
+    "max equipped": 1,
+    "max_stack": 99,
+    "name": "Fortune Box",
+    "raid": true,
+    "rarity": 2,
+    "sell_price": 500,
+    "thumbnail": "item_thum_91000.png",
+    "type": "summoner_consumable",
+    "usage": []
+  },
+  "120011": {
+    "desc": "Multiplies Item drop rate by 2 after Raid Quest is cleared when activated from map",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "908",
+          "unknown proc param": "100"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 120011,
+    "max equipped": 1,
+    "max_stack": 99,
+    "name": "Fortune Coffer",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 1000,
+    "thumbnail": "item_thum_91100.png",
+    "type": "summoner_consumable",
+    "usage": []
+  },
+  "130000": {
+    "desc": "使用後３０分間、クエストクリア時の獲得経験値が１.５倍になる",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "79",
+          "unknown proc param": "50,30"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 130000,
+    "max equipped": 1,
+    "max_stack": 99,
+    "name": "経験の水",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 500,
+    "thumbnail": "item_thum_92000.png",
+    "type": "summoner_consumable",
+    "usage": []
+  },
+  "130001": {
+    "desc": "使用後３０分間、クエストクリア時の獲得経験値が２倍になる",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "79",
+          "unknown proc param": "100,30"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 130001,
+    "max equipped": 1,
+    "max_stack": 99,
+    "name": "経験秘水",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 1000,
+    "thumbnail": "item_thum_92100.png",
+    "type": "summoner_consumable",
+    "usage": []
+  },
+  "130010": {
+    "desc": "クエストクリア時の獲得経験値が１.５倍になる",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "79",
+          "unknown proc param": "50"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 130010,
+    "max equipped": 1,
+    "max_stack": 99,
+    "name": "経験の丸薬",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 500,
+    "thumbnail": "item_thum_92200.png",
+    "type": "summoner_consumable",
+    "usage": []
+  },
+  "130011": {
+    "desc": "クエストクリア時の獲得経験値が２倍になる",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "79",
+          "unknown proc param": "100"
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 130011,
+    "max equipped": 1,
+    "max_stack": 99,
+    "name": "経験霊薬",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 1000,
+    "thumbnail": "item_thum_92300.png",
+    "type": "summoner_consumable",
+    "usage": []
+  }
+}

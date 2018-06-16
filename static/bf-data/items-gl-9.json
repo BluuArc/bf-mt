@@ -1,0 +1,102 @@
+{
+  "90001": {
+    "desc": "10% boost to Def and Rec, 30% boost to max HP, negates Curse, Paralysis, Weak effects & boosts BB gauge fill rate",
+    "effect": [
+      {
+        "curse resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "weaken resist%": 100
+      },
+      {
+        "def% buff": 10,
+        "hp% buff": 30,
+        "passive id": "1",
+        "rec% buff": 10
+      },
+      {
+        "bb gauge fill rate%": 30,
+        "passive id": "32"
+      }
+    ],
+    "id": 90001,
+    "max_stack": 1,
+    "name": "Dreadnought Shell Aleph",
+    "raid": false,
+    "rarity": 6,
+    "sell_price": 10000,
+    "sphere type": 5,
+    "sphere type text": "Status Ailments Resistant",
+    "thumbnail": "sphere_thum_5_6.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "90101": {
+    "desc": "50% boost to Atk, 100% boost to Spark damage, Spark damage slightly boosts BB gauge & negates Curse, Paralysis, Injury effects",
+    "effect": [
+      {
+        "atk% buff": 50,
+        "passive id": "1"
+      },
+      {
+        "damage% for spark": 100,
+        "passive id": "31"
+      },
+      {
+        "bc fill on spark high": 1,
+        "bc fill on spark low": 1,
+        "bc fill on spark%": 100,
+        "passive id": "47"
+      },
+      {
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4"
+      }
+    ],
+    "id": 90101,
+    "max_stack": 1,
+    "name": "Mem Cache",
+    "raid": false,
+    "rarity": 5,
+    "sell_price": 10000,
+    "sphere type": 11,
+    "sphere type text": "Spark",
+    "thumbnail": "sphere_thum_5_6.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "30546",
+      "840438",
+      "860167"
+    ]
+  },
+  "90102": {
+    "desc": "Greatly boosts Spark damage and drop rate of BC and HC",
+    "effect": [
+      {
+        "bc drop% for spark": 75,
+        "damage% for spark": 125,
+        "hc drop% for spark": 60,
+        "passive id": "31"
+      }
+    ],
+    "id": 90102,
+    "max_stack": 1,
+    "name": "Buccaneer Banner",
+    "raid": false,
+    "rarity": 5,
+    "sell_price": 20000,
+    "sphere type": 11,
+    "sphere type text": "Spark",
+    "thumbnail": "sphere_thum_5_1.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "30546",
+      "840438",
+      "860167"
+    ]
+  }
+}
