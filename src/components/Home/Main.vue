@@ -46,7 +46,7 @@
             <p class="mb-0">Interested in seeing what the previous iteration of this tool looked like? If so, click the button below. The Semantic UI version of this tool was deprecated June 16, 2018, which is the day this version (using Vuetify UI) was first publicly released.</p>
           </v-card-text>
           <v-card-actions>
-            <v-btn flat rel="noopener" href="/semantic_build/" target="_blank">
+            <v-btn flat rel="noopener" href="https://bluuarc.github.io/bf-mt/semantic_build/" target="_blank">
               Semantic UI Version
             </v-btn>
           </v-card-actions>
