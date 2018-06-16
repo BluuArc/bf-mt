@@ -159,6 +159,31 @@
       }
     ]
   },
+  "10008": {
+    "desc": "Spirit grass rich in magical energy, native to the world of Rokkzalm.",
+    "id": 10008,
+    "max_stack": 99,
+    "name": "Spirit Grass",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_104.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230006,
+        "name": "Spirit Band"
+      },
+      {
+        "id": 230106,
+        "name": "Wrathful Needle"
+      },
+      {
+        "id": 230206,
+        "name": "Warding Scepter"
+      }
+    ]
+  },
   "10100": {
     "desc": "The naturally molted feathers of a migratory bird called Theo.",
     "id": 10100,
@@ -950,6 +975,31 @@
       {
         "id": 39400,
         "name": "Godly Statue"
+      }
+    ]
+  },
+  "10211": {
+    "desc": "The fruit of a tree found growing wild in Rokkzalm.",
+    "id": 10211,
+    "max_stack": 99,
+    "name": "Bubblefruit",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_303.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230106,
+        "name": "Wrathful Needle"
+      },
+      {
+        "id": 230206,
+        "name": "Warding Scepter"
+      },
+      {
+        "id": 239000,
+        "name": "Sunblade"
       }
     ]
   },
@@ -4027,6 +4077,27 @@
       }
     ]
   },
+  "10737": {
+    "desc": "A fragment from the inner walls of one of the massive caverns of Rokkzalm.",
+    "id": 10737,
+    "max_stack": 99,
+    "name": "Cavern Fragment",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_806.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 235002,
+        "name": "Armored Soul"
+      },
+      {
+        "id": 239000,
+        "name": "Sunblade"
+      }
+    ]
+  },
   "10800": {
     "desc": "A giant green beast bone.",
     "id": 10800,
@@ -4842,6 +4913,27 @@
       {
         "id": 234000,
         "name": "Taboo Grimoire"
+      }
+    ]
+  },
+  "10913": {
+    "desc": "Insects native to Rokkzalm which contain unique bodily fluids.",
+    "id": 10913,
+    "max_stack": 99,
+    "name": "Magicatalyst Bug",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1001.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230006,
+        "name": "Spirit Band"
+      },
+      {
+        "id": 238000,
+        "name": "Rainbow Regalia"
       }
     ]
   },
@@ -5936,6 +6028,23 @@
       }
     ]
   },
+  "11049": {
+    "desc": "Crystals found very rarely among the remains of enchanted puppets.",
+    "id": 11049,
+    "max_stack": 99,
+    "name": "Armor Shard",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_1102.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 235002,
+        "name": "Armored Soul"
+      }
+    ]
+  },
   "110000": {
     "desc": "A crystal used to evolve the mock Unit based on Seria",
     "id": 110000,
@@ -5946,7 +6055,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_110000.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "10234"
+    ]
   },
   "110001": {
     "desc": "A rare crystal used to evolve the mock Unit based on Seria",
@@ -5958,7 +6070,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_110100.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "10235"
+    ]
   },
   "110010": {
     "desc": "A crystal used to evolve the mock Unit based on Karl",
@@ -5970,7 +6085,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_110010.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "20234"
+    ]
   },
   "110011": {
     "desc": "A rare crystal used to evolve the mock Unit based on Karl",
@@ -5982,7 +6100,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_110110.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "20235"
+    ]
   },
   "110020": {
     "desc": "A crystal used to evolve the mock Unit based on Paris",
@@ -5994,7 +6115,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_110020.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30234"
+    ]
   },
   "110021": {
     "desc": "A rare crystal used to evolve the mock Unit based on Lugina",
@@ -6006,7 +6130,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_110120.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30235"
+    ]
   },
   "110030": {
     "desc": "A crystal used to evolve the mock Unit based on Grahdens",
@@ -6018,7 +6145,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_110030.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "40234"
+    ]
   },
   "110031": {
     "desc": "A rare crystal used to evolve the mock Unit based on Paris",
@@ -6030,7 +6160,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_110130.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "40235"
+    ]
   },
   "110040": {
     "desc": "A crystal used to evolve the mock Unit based on Tilith",
@@ -6042,7 +6175,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_110040.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "50254"
+    ]
   },
   "110041": {
     "desc": "A rare crystal used to evolve the mock Unit based on Tilith",
@@ -6054,7 +6190,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_110140.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "50255"
+    ]
   },
   "110050": {
     "desc": "A mysterious stone that allows Units to surpass the gods' power",
@@ -6066,7 +6205,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_110050.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60324"
+    ]
   },
   "110051": {
     "desc": "A rare crystal used to evolve the mock Unit based on Grahdens",
@@ -6078,7 +6220,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_110150.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60325"
+    ]
   },
   "110060": {
     "desc": "A rare crystal used to evolve the mock Unit based on Owen",
@@ -6090,7 +6235,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_110160.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "10515"
+    ]
   },
   "110070": {
     "desc": "A rare crystal used to evolve the mock Unit based on Ark",
@@ -6102,7 +6250,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_110190.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "50286"
+    ]
   },
   "110100": {
     "desc": "A mysterious relic used to evolve the Unit Grandt",
@@ -6114,7 +6265,151 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_111000.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "10015",
+      "10016",
+      "10115",
+      "10125",
+      "10126",
+      "10255",
+      "10256",
+      "10285",
+      "10335",
+      "10365",
+      "10465",
+      "10555",
+      "10556",
+      "10676",
+      "10736",
+      "10756",
+      "20015",
+      "20016",
+      "20125",
+      "20155",
+      "20156",
+      "20275",
+      "20285",
+      "20325",
+      "20355",
+      "20365",
+      "20535",
+      "20566",
+      "20636",
+      "20676",
+      "30015",
+      "30016",
+      "30115",
+      "30165",
+      "30275",
+      "30315",
+      "30345",
+      "30445",
+      "30446",
+      "30515",
+      "30516",
+      "30545",
+      "30566",
+      "30626",
+      "40015",
+      "40016",
+      "40165",
+      "40275",
+      "40315",
+      "40345",
+      "40445",
+      "40495",
+      "40505",
+      "40506",
+      "40536",
+      "40576",
+      "40606",
+      "50015",
+      "50016",
+      "50105",
+      "50115",
+      "50165",
+      "50275",
+      "50285",
+      "50315",
+      "50316",
+      "50385",
+      "50405",
+      "50475",
+      "50656",
+      "50756",
+      "50916",
+      "60015",
+      "60016",
+      "60025",
+      "60095",
+      "60096",
+      "60115",
+      "60116",
+      "60175",
+      "60255",
+      "60285",
+      "60315",
+      "60355",
+      "60475",
+      "60525",
+      "60526",
+      "60535",
+      "60666",
+      "60766",
+      "710115",
+      "710146",
+      "710255",
+      "720105",
+      "720155",
+      "720166",
+      "720216",
+      "730145",
+      "730196",
+      "730216",
+      "740145",
+      "740155",
+      "740166",
+      "740216",
+      "750146",
+      "750155",
+      "750156",
+      "750166",
+      "750315",
+      "760145",
+      "760196",
+      "760216",
+      "810337",
+      "810356",
+      "810377",
+      "810397",
+      "810547",
+      "820297",
+      "820377",
+      "820397",
+      "820507",
+      "820547",
+      "830297",
+      "830377",
+      "830387",
+      "840377",
+      "840397",
+      "840547",
+      "850157",
+      "850165",
+      "850166",
+      "850197",
+      "850297",
+      "850377",
+      "850387",
+      "850397",
+      "850507",
+      "850547",
+      "860165",
+      "860166",
+      "860356",
+      "860377"
+    ]
   },
   "120000": {
     "desc": "Multiplies experience by 1.5 after Quest is cleared ",

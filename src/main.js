@@ -3,24 +3,18 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-import { store, storeMethods } from './store';
+import store from './store';
+import Vuetify from 'vuetify';
+import 'vuetify/dist/vuetify.min.css';
 
-Vue.config.productionTip = false;
+Vue.use(Vuetify);
 
 router.beforeEach((to, from, next) => {
-  const loadFields = ['unit', 'item'];
-  let nextPath;
-  if (to.path.indexOf('multidex') > -1) {
-    loadFields.forEach((field) => {
-      if (to.path === `/multidex/${field}s`
-        && !storeMethods[`${field}DataLoaded`](store.state)) {
-        nextPath = '/multidex';
-      }
-    });
-  }
-
-  next(nextPath);
+  document.title = `BF-MT - ${to.name}`;
+  next();
 });
+
+Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({

@@ -1,244 +1,304 @@
 <template>
-  <div id="app">
-    <header-bar :href="headerHref" :content="headerContent"/>
-    <dynamic-router v-on:updateheader="updateHeader" :progress="progress"/>
-    <navbar v-on:updateheader="updateHeader"/>
-    <noscript>
-      <div class="statcounter">
-        <a title="shopify site analytics" target="_blank" href="http://statcounter.com/shopify/">
-          <img class="statcounter" alt="shopify site analytics"
-            src="//c.statcounter.com/11034084/0/3e7dba9f/1/">
-        </a>
-      </div>
-    </noscript>
-  </div>
+  <v-app :dark="!lightMode">
+    <v-navigation-drawer
+      persistent
+      v-model="showDrawer"
+      enable-resize-watcher
+      fixed
+      app>
+      <v-btn v-if="$vuetify.breakpoint.xsOnly" block @click="showDrawer = false">
+        Close Sidebar
+        <v-spacer/>
+        <v-icon right>chevron_left</v-icon>
+      </v-btn>
+      <h3 class="headline pl-3 pt-3" v-text="title"/>
+      <h3 class="subheading pl-3">(UNOFFICIAL)</h3>
+      <v-list v-for="(group, i) in menuItems" :key="i" subheader>
+        <v-subheader v-text="group.subheader"/>
+        <v-list-tile
+          v-for="(subItem, j) in group.items"
+          :key="`${i}-${j}`"
+          exact
+          :value="currentPage === subItem.link"
+          :to="subItem.link"
+          @click="($vuetify.breakpoint.mdAndDown) ? (showDrawer = false) : (showDrawer = showDrawer)">
+          <v-list-tile-action>
+            <v-progress-circular v-if="subItem.module && loadingStates[subItem.module]" indeterminate/>
+            <v-badge v-else-if="group.subheader === 'General' && subItem.title === 'Settings' && numUpdates > 0">
+              <span slot="badge">{{ numUpdates }}</span>
+              <v-icon v-html="subItem.icon"/>
+            </v-badge>
+            <v-icon v-else v-html="subItem.icon"/>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title v-text="subItem.title"/>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-divider/>
+      </v-list>
+      <v-btn flat block href="https://github.com/BluuArc/bf-mt/issues" rel="noopener" target="_blank">Report Issues</v-btn>
+      <v-footer>
+        <v-btn flat class="pl-0" href="https://github.com/BluuArc/bf-mt" rel="noopener" target="_blank">
+          <v-icon left class="pr-2">fab fa-github</v-icon>
+          GitHub
+        </v-btn>
+        <v-spacer/>
+        <span class="mx-auto pr-3">&copy; {{ new Date().getUTCFullYear() }}</span>
+      </v-footer>
+    </v-navigation-drawer>
+    <v-toolbar app>
+      <v-toolbar-side-icon @click.stop="showDrawer = !showDrawer"/>
+      <v-badge left v-if="numUpdates > 0">
+        <span slot="badge">{{ numUpdates }}</span>
+        <v-toolbar-title v-text="currentPageName"/>
+      </v-badge>
+      <v-toolbar-title v-else v-text="currentPageName"/>
+      <v-spacer/>
+      <v-menu offset-y>
+        <v-btn slot="activator" flat :loading="dataIsLoading" :disabled="dataIsLoading">
+          Server: {{ pageActiveServer }}
+        </v-btn>
+        <v-list>
+          <v-list-tile v-for="server in possibleServers" :key="server" @click="pageActiveServer = server">
+            <v-list-tile-title v-text="server.toUpperCase()"/>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+    <v-content>
+      <v-slide-y-transition mode="out-in">
+        <router-view/>
+      </v-slide-y-transition>
+    </v-content>
+    <site-trackers/>
+  </v-app>
 </template>
 
 <script>
-import Navbar from '@/components/Navbar';
-import DynamicRouter from '@/components/DynamicRouter';
-import HeaderBar from '@/components/HeaderBar';
-import { mapMutations } from 'vuex';
-import Dexie from 'dexie';
-
-/* global $ PromiseWorker */
+import { mapActions, mapState } from 'vuex';
+import debounce from 'lodash/debounce';
+import SiteTrackers from '@/components/SiteTrackers';
 
 export default {
-  name: 'App',
   components: {
-    navbar: Navbar,
-    'dynamic-router': DynamicRouter,
-    'header-bar': HeaderBar,
+    'site-trackers': SiteTrackers,
   },
-  data() {
+  computed: {
+    currentPage () {
+      return this.$route.path;
+    },
+    currentPageName () {
+      return this.$route.name;
+    },
+    possibleServers () {
+      return ['gl', 'eu', 'jp'];
+    },
+    dataIsLoading () {
+      return this.modules.map(name => this[`${name}Loading`]).some(val => !!val);
+    },
+    loadingStates () {
+      const state = {};
+      this.modules.forEach(name => {
+        state[name] = this[`${name}Loading`];
+      });
+      return state;
+    },
+    ...mapState('settings', ['lightMode', 'activeServer']),
+    ...mapState(['disableHtmlOverflow', 'modules', 'updateTimes']),
+    ...mapState('units', {
+      unitsNumEntries: 'numEntries',
+      unitsLoading: 'isLoading',
+      unitsCacheTimes: 'cacheTimes',
+      unitsUpdateTimes: 'updateTimes',
+    }),
+    ...mapState('items', {
+      itemsNumEntries: 'numEntries',
+      itemsLoading: 'isLoading',
+      itemsCacheTimes: 'cacheTimes',
+      itemsUpdateTimes: 'updateTimes',
+    }),
+    ...mapState('bursts', {
+      burstsNumEntries: 'numEntries',
+      burstsLoading: 'isLoading',
+      burstsCacheTimes: 'cacheTimes',
+      burstsUpdateTimes: 'updateTimes',
+    }),
+    ...mapState('extraSkills', {
+      extraSkillsNumEntries: 'numEntries',
+      extraSkillsLoading: 'isLoading',
+      extraSkillsCacheTimes: 'cacheTimes',
+      extraSkillsUpdateTimes: 'updateTimes',
+    }),
+    ...mapState('leaderSkills', {
+      leaderSkillsNumEntries: 'numEntries',
+      leaderSkillsLoading: 'isLoading',
+      leaderSkillsCacheTimes: 'cacheTimes',
+      leaderSkillsUpdateTimes: 'updateTimes',
+    }),
+  },
+  data () {
     return {
-      headerHref: undefined,
-      headerContent: undefined,
-      worker: undefined,
-      debugMode: undefined,
-      baseUrl: undefined,
-      db: undefined,
-      progress: {
-        units: '',
-        items: '',
-        bursts: '',
-        extraSkills: '',
-      },
+      showDrawer: false,
+      menuItems: [
+        {
+          subheader: 'General',
+          items: [
+            {
+              icon: 'home',
+              title: 'Home',
+              link: '/',
+            },
+            {
+              icon: 'calendar_today',
+              title: 'News & Events',
+              link: '/news',
+            },
+            {
+              icon: 'settings',
+              title: 'Settings',
+              link: '/settings',
+            },
+          ],
+        },
+        {
+          subheader: 'Multidex',
+          items: [
+            // {
+            //   icon: 'local_library',
+            //   title: 'Overview',
+            //   link: '/multidex',
+            // },
+            {
+              icon: 'people',
+              title: 'Units',
+              module: 'units',
+              link: '/multidex/units',
+            },
+            {
+              icon: 'group_work',
+              title: 'Items',
+              module: 'items',
+              link: '/multidex/items',
+            },
+            {
+              icon: 'gavel',
+              title: 'Brave Bursts',
+              module: 'bursts',
+              link: '/multidex/bursts',
+            },
+            {
+              icon: 'extension',
+              title: 'Extra Skills',
+              module: 'extraSkills',
+              link: '/multidex/extra-skills',
+            },
+            {
+              icon: 'extension',
+              title: 'Leader Skills',
+              module: 'leaderSkills',
+              link: '/multidex/leader-skills',
+            },
+          ],
+        },
+      ],
+      title: 'Brave Frontier Multi Tool',
+      pageActiveServer: '',
+      numUpdates: 0,
     };
   },
-  async mounted() {
-    this.debugMode = location.hostname === 'localhost';
-    this.baseUrl = `${location.origin}${location.pathname}`;
-    this.loadTracker();
-    try {
-      await this.initDexieDb();
-      // eslint-disable-next-line no-console
-      console.debug('Successfully initialized Dexie');
-    } catch (err) {
-      // eslint-disable-next-line no-console
-      console.error(err);
-      this.db = undefined;
-    }
-    try {
-      await this.loadWorker();
-    } catch (err) {
-      // eslint-disable-next-line no-console
-      console.error(err);
-    }
-    await this.loadAllData();
-  },
   methods: {
-    async initDexieDb() {
-      const schema = '&server,data,update';
-      const db = new Dexie('bfmt_db');
-      db.version(1).stores({
-        items: schema,
-        units: schema,
-        bursts: schema,
-        extraSkills: schema,
-      });
-
-      this.db = db;
-
-      // read data from cache
-      const servers = ['gl', 'eu', 'jp'];
-      const dataTypes = {
-        unit: 'setUnitData',
-        item: 'setItemData',
-        burst: 'setBraveBurstData',
-        extraSkill: 'setExtraSkillData',
-      };
-
-      const cachePromises = servers.map(s => Object.keys(dataTypes)
-        .map(d => db[`${d}s`]
-          .where('server').equals(s)
-          .toArray().then((result) => {
-            // console.debug(s, d, { result });
-            this.progress[`${d}s`] = `Finding and loading cached data for ${s.toUpperCase()}`;
-            if (result.length > 0) {
-              this[dataTypes[d]]({ server: s, data: result[0].data });
-            }
-            return result;
-          }))).reduce((acc, val) => acc.concat(val), []);
-
-      await Promise.all(cachePromises);
+    ...mapActions(['init', 'setActiveServer', 'fetchUpdateTimes']),
+    htmlOverflowChangeHandler () {
+      const page = document.getElementsByTagName('html')[0];
+      page.style.overflowY = (this.disableHtmlOverflow) ? 'hidden' : 'auto';
     },
-    getData(url) {
-      if (this.worker) {
-        return this.worker.postMessage({
-          command: 'getfile',
-          url,
-        });
+    updateUpdateTimes: debounce(async function () {
+      if (!this.dataIsLoading) {
+        await this.fetchUpdateTimes();
       }
-      return this.getDataLegacy(url);
-    },
-    getDataLegacy(url) { // blocking, but doesn't need a worker
-      return new Promise((fulfill, reject) => {
-        $.get(url)
-          .done(data => fulfill(data))
-          .fail(() => reject({ error: 'Error getting data' }));
-      });
-    },
-    getJSON(url) {
-      if (this.worker) {
-        return this.worker.postMessage({
-          command: 'getjson',
-          url,
-        });
-      }
-      return this.getDataLegacy(url);
-    },
-    async loadAllData() {
-      const defaultObject = { server: 'error', data: 'Not implemented yet' };
-      const defaultProgressMessage = `[ERROR] ${defaultObject.data}`;
-      await this.loadUnitData();
-
-      this.setItemData(defaultObject);
-      this.progress.items = defaultProgressMessage;
-      this.setBraveBurstData(defaultObject);
-      this.progress.bursts = defaultProgressMessage;
-      this.setExtraSkillData(defaultObject);
-      this.progress.extraSkills = defaultProgressMessage;
-    },
-    async loadUnitData() {
-      const unitUrl = `${this.baseUrl}static/bf-data`;
-      const servers = ['gl'];
-      try {
-        servers.forEach(async (server) => {
-          this.progress.units = `Loading unit data for ${server.toUpperCase()}`;
-          const unitDb = {};
-
-          const loadPromises = [];
-          // for every element 1 - 6
-          for (let i = 1; i <= 6; i += 1) {
-            loadPromises.push(this.getJSON(`${unitUrl}/units-${server}-${i}.json`)
-              .then((tempData) => {
-                Object.keys(tempData)
-                  .forEach((id) => {
-                    unitDb[id] = tempData[id];
-                  });
-              }));
-          }
-
-          await Promise.all(loadPromises);
-
-          // update entry in Dexie
-          if (this.db) {
-            await this.db.units.where('server').equals('gl').delete();
-            await this.db.units.add({ server: 'gl', data: unitDb, update: new Date().toUTCString() });
-          }
-
-          this.setUnitData({ server, data: unitDb });
-          this.progress.units = `Finished loading unit data for ${server.toUpperCase()}`;
-        });
-      } catch (err) {
-        // eslint-disable-next-line
-        console.error(err);
-        this.setUnitData({ server: 'error', data: 'Error loading data' });
-      }
-    },
-    updateHeader(newContent = {}) {
-      this.headerHref = newContent.href;
-      this.headerContent = newContent.content;
-    },
-    async loadWorker() {
-      const url = `${this.baseUrl}static/js/data-load-worker.js`;
-      const regularWorker = new Worker(url);
-      this.worker = new PromiseWorker(regularWorker);
-
-      return this.worker.postMessage('register')
-        .then((response) => {
-          // eslint-disable-next-line
-          console.debug('[App] Received response:', response);
-        }).catch((error) => {
-          // eslint-disable-next-line
-          console.error('[App] Received error:', error);
-          this.worker = null;
-        });
-    },
-    ...mapMutations([
-      'setUnitData',
-      'setItemData',
-      'setBraveBurstData',
-      'setExtraSkillData',
-    ]),
-    /* eslint-disable */
-    loadTracker() {
-      //globals for statcounter tracker
-      window.sc_project = 11034084;
-      window.sc_invisible = 1;
-      window.sc_security = '3e7dba9f';
-      window.scJsHost = (('https:' == document.location.protocol) ? 'https://secure.' : 'http://www.');
-
-      //pure javascript version of appending a script
-      //based off of https://howchoo.com/g/mmu0nguznjg/learn-the-slow-and-fast-way-to-append-elements-to-the-dom
-      function appendScript(url) {
-        return new Promise(function (fulfill, reject) {
-          let e = document.createElement('script');
-          e.src = url;
-          e.onload = () => { fulfill(); };
-          e.onerror = reject;
-          document.body.appendChild(e);
-        });
-      }
-
-      appendScript(`${window.scJsHost}statcounter.com/counter/counter.js`);
-    }
+    }, 500),
   },
+  watch: {
+    activeServer (newValue) {
+      this.pageActiveServer = newValue;
+    },
+    async pageActiveServer (newValue) {
+      if (newValue !== this.activeServer) {
+        await this.setActiveServer(newValue);
+      }
+    },
+    disableHtmlOverflow () {
+      this.htmlOverflowChangeHandler();
+    },
+    dataIsLoading (newValue) {
+      if (!newValue) {
+        this.updateUpdateTimes();
+      }
+    },
+    updateTimes: {
+      deep: true,
+      handler (freshUpdateTimes) {
+        this.numUpdates = this.modules.map(moduleName => {
+          const updateTimes = this[`${moduleName}UpdateTimes`];
+          const numEntries = this[`${moduleName}NumEntries`];
+          return !(!!updateTimes && freshUpdateTimes[moduleName]) ? 0
+            : this.possibleServers
+              .map(s => updateTimes[s] && numEntries[s] > 0 && new Date(freshUpdateTimes[moduleName][s]) > new Date(updateTimes[s]))
+              .filter(val => !!val).length;
+        }).reduce((acc, val) => acc + val, 0);
+      },
+    },
+    currentPageName () {
+      if (!this.dataIsLoading) {
+        this.updateUpdateTimes();
+      }
+    },
+  },
+  async created () {
+    await this.init();
+    this.updateUpdateTimes();
+  },
+  mounted () {
+    this.pageActiveServer = this.activeServer;
+    this.htmlOverflowChangeHandler();
+  },
+  name: 'App',
 };
 </script>
 
 <style>
-#app {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  height: calc(100% - 42px);
-  overflow: hidden;
+html {
+  overflow-y: auto;
 }
 
-.fixed.menu.bottom {
-  top: auto;
-  bottom: 0
+* {
+  /* default color of v-divider */
+  --border-color-light: rgba(0, 0, 0, 0.12);
+  --border-color-dark: hsla(0, 0%, 100%, 0.12);
+}
+
+.theme--light {
+  --border-color: var(--border-color-light);
+}
+
+.theme--dark {
+  --border-color: var(--border-color-dark);
+}
+
+.vertical-align-parent, .center-align-parent {
+  position: relative;
+}
+
+.vertical-align-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.center-align-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 </style>

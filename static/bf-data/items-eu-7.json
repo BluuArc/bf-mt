@@ -366,7 +366,11 @@
     "sphere type text": "Critical",
     "thumbnail": "sphere_thum_70_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "710016",
+      "850198"
+    ]
   },
   "700004": {
     "desc": "Boost to all parameters (15%) & Decrease in damage received from Fire & dark types (10%) & Boosts BB gauge fill rate (10%)",
@@ -401,7 +405,16 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_3_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31006",
+      "31007",
+      "750176",
+      "840547",
+      "840548",
+      "850507",
+      "850508"
+    ]
   },
   "700005": {
     "desc": "Green bauble for decorating a Christmas tree.",
@@ -495,7 +508,12 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_70_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "730166",
+      "750167",
+      "750287"
+    ]
   },
   "700009": {
     "desc": "Boost to Atk (50%) & Boost to critical damage (50%) & boosts damage to weaker elements (40%) & Boost to Spark damage (30%)",
@@ -533,7 +551,12 @@
     "sphere type text": "Critical",
     "thumbnail": "sphere_thum_70_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "740167",
+      "750166",
+      "850198"
+    ]
   },
   "700010": {
     "desc": "Boosts Atk, Def, Rec, and max HP by 10%",
@@ -683,6 +706,9 @@
         "id": 700014,
         "name": "Hope of Yggdrasil"
       }
+    ],
+    "associated_units": [
+      "760006"
     ]
   },
   "700014": {
@@ -741,7 +767,10 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_70_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "760006"
+    ]
   },
   "700015": {
     "desc": "The inert and vanquished Corruption. Your contact with it leaves you filled with a sensation of great purity.",
@@ -866,7 +895,11 @@
     "sphere type text": "Defense Penetrating",
     "thumbnail": "sphere_thum_3_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "750156",
+      "750237"
+    ]
   },
   "700019": {
     "desc": "Adds Chance of Ignoring Enemy's Defense when Attacking (10%) & Boost all parameters (10%)",
@@ -937,7 +970,10 @@
     "sphere type text": "Damage Reflecting",
     "thumbnail": "sphere_thum_2_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "750136"
+    ]
   },
   "700023": {
     "desc": "30% boost to Spark damage & 5% boost to ATK, DEF, REC, max HP",
@@ -970,6 +1006,9 @@
         "id": 700024,
         "name": "Challenger's Trophy"
       }
+    ],
+    "associated_units": [
+      "30546"
     ]
   },
   "700024": {
@@ -1013,6 +1052,9 @@
         "id": 700025,
         "name": "The King of Fighters"
       }
+    ],
+    "associated_units": [
+      "30546"
     ]
   },
   "700025": {
@@ -1052,7 +1094,10 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_5_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546"
+    ]
   },
   "700026": {
     "desc": "A beautiful poem written on an flaming paper. The verses release serenity and power.",
@@ -1305,7 +1350,12 @@
     "sphere type text": "Drop",
     "thumbnail": "sphere_thum_700032.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30446",
+      "30447",
+      "710016"
+    ]
   },
   "700033": {
     "desc": "A strange pumpkin seed possessed by the soul of a warrior.",
@@ -1564,7 +1614,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_700042.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "720105"
+    ]
   },
   "700043": {
     "desc": "30% all parameters (male unit only) & boosts Spark damage (50%) and BB ATK (100%) 2 turns when Sparks have exceeded 20",
@@ -1621,6 +1674,9 @@
         "id": 700071,
         "name": "Sergio's vow"
       }
+    ],
+    "associated_units": [
+      "720107"
     ]
   },
   "700044": {
@@ -1673,6 +1729,9 @@
         "id": 700070,
         "name": "Julia's vow"
       }
+    ],
+    "associated_units": [
+      "740227"
     ]
   },
   "700045": {
@@ -1702,7 +1761,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_20961.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "720226"
+    ]
   },
   "700047": {
     "desc": "Collect 40 feathers to craft the item required to evolve Migina.",
@@ -1741,7 +1803,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_110000.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "710234"
+    ]
   },
   "700049": {
     "desc": "Collect these pumpkins to craft the Spooky Lantern.",
@@ -1879,7 +1944,15 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "item_thum_700052.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31006",
+      "31007",
+      "840547",
+      "840548",
+      "850507",
+      "850508"
+    ]
   },
   "700053": {
     "desc": "Revives one ally from KO status (at 75% HP).",
@@ -2084,7 +2157,20 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_5_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "20916",
+      "710247",
+      "720257",
+      "730277",
+      "740247",
+      "750277",
+      "760277",
+      "810547",
+      "810548",
+      "820397",
+      "820398"
+    ]
   },
   "700062": {
     "desc": "Boosts all parameters (15%) & boosts DEF relative to remaining HP (50-100%) & negates ATK, DEF, REC reducing effect & resistance against 1 KO attack after activating OD",
@@ -2138,7 +2224,15 @@
     "sphere type text": "Special",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "710247",
+      "720257",
+      "730277",
+      "740247",
+      "750277",
+      "760277"
+    ]
   },
   "700063": {
     "desc": "Boosts all parameters (15%) & negates all status ailments & boosts OD gauge fill rate (30%) & damage taken boosts BB gauge (3 BC) & adds status ailment removal effect to BB/SBB",
@@ -2209,7 +2303,15 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "710247",
+      "720257",
+      "730277",
+      "740247",
+      "750277",
+      "760277"
+    ]
   },
   "700064": {
     "desc": "Use this material to make the ”Siegfried's Hybrid Weapon” sphere.",
@@ -2272,6 +2374,14 @@
         "id": 700063,
         "name": "Siegfried's Doping Spaulder"
       }
+    ],
+    "associated_units": [
+      "710247",
+      "720257",
+      "730277",
+      "740247",
+      "750277",
+      "760277"
     ]
   },
   "700066": {
@@ -2345,7 +2455,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "710247",
+      "720257",
+      "730277",
+      "740247",
+      "750277",
+      "760277"
+    ]
   },
   "700068": {
     "desc": "Premium Skin Material: Via Evolution, use on a \"Dark Path Arthur\" Unit to activate the following skin: \"Hope Champion\". (This permanently changes its name and art/pixel art)",
@@ -2430,6 +2548,9 @@
         "id": 700073,
         "name": "Wedding announcement"
       }
+    ],
+    "associated_units": [
+      "740227"
     ]
   },
   "700071": {
@@ -2546,6 +2667,9 @@
         "id": 700073,
         "name": "Wedding announcement"
       }
+    ],
+    "associated_units": [
+      "720107"
     ]
   },
   "700072": {
@@ -2635,7 +2759,11 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_3_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "720107",
+      "740227"
+    ]
   },
   "700074": {
     "desc": "Spring is here! The wind sweeps petals everywhere in Grand Gaia!",
@@ -2801,6 +2929,10 @@
         "id": 701003,
         "name": "Surt's Blade"
       }
+    ],
+    "associated_units": [
+      "710116",
+      "750216"
     ]
   },
   "701002": {
@@ -2862,7 +2994,10 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "750216"
+    ]
   },
   "701003": {
     "desc": "Boosts all stats (30%) & Chance of inflicting ailments when attacked (8-10%) & Boosts damages dealt to foes with ailments (50%)",
@@ -2929,7 +3064,10 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "710116"
+    ]
   },
   "701004": {
     "desc": "A strange shard from the mirror world.",
@@ -3005,7 +3143,17 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_3_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31006",
+      "31007",
+      "760216",
+      "760217",
+      "840547",
+      "840548",
+      "850507",
+      "850508"
+    ]
   },
   "701006": {
     "desc": "Use this material to craft the Noblesse Title Sphere.",
@@ -3022,6 +3170,10 @@
         "id": 701009,
         "name": "Noblesse Title"
       }
+    ],
+    "associated_units": [
+      "730146",
+      "740216"
     ]
   },
   "701007": {
@@ -3081,7 +3233,11 @@
     "sphere type text": "Critical",
     "thumbnail": "sphere_thum_4_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "730146",
+      "850198"
+    ]
   },
   "701008": {
     "desc": "Boosts HP and ATK (30%) & Boosts ATK (50%) when BB gauge full & Boosts spark damage (50%) when HP full",
@@ -3137,7 +3293,11 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "740216",
+      "740217"
+    ]
   },
   "701009": {
     "desc": "Boosts all stats (10%)",
@@ -3207,6 +3367,12 @@
         "id": 701047,
         "name": "Pure Noblesse Title"
       }
+    ],
+    "associated_units": [
+      "720216",
+      "730216",
+      "740146",
+      "760146"
     ]
   },
   "701010": {
@@ -3271,7 +3437,14 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "20916",
+      "810547",
+      "810548",
+      "820397",
+      "820398"
+    ]
   },
   "701011": {
     "desc": "Boosts HP (30%) & Boosts ATK (80%) when HP is full & Boosts BB ATK (150%) & Negates elemental based damage",
@@ -3326,7 +3499,10 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "710146"
+    ]
   },
   "701012": {
     "desc": "Boosts DEF (40%) & Fills BB gauge when attacked (3-5BC) & Chance (10%) to reduce damage to 1 & Raises normal hit amount (+1)",
@@ -3360,7 +3536,11 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "720216",
+      "720217"
+    ]
   },
   "701013": {
     "desc": "Boosts ATK / DEF (40%) & Boosts spark dmg (75%) for 2 turns when dmg taken exceed certain amount (5k) & Probable Spark crit. (30%)",
@@ -3418,7 +3598,10 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "740146"
+    ]
   },
   "701014": {
     "desc": "Boosts HP (40%) & Fill BB gauge (7BC) when 15 HC received & Boost DEF relative to HP lost (0-100%) & Negates elemental damage",
@@ -3479,7 +3662,11 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "730216",
+      "730217"
+    ]
   },
   "701015": {
     "desc": "Boosts HP/ATK (30%) & Boosts OD fill (20%) & Boosts dmg. on ailed foes (50%) if dmg. dealt exceed 10K & 25% Chance to reflect dmg.",
@@ -3544,7 +3731,10 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "760146"
+    ]
   },
   "701016": {
     "desc": "A strange robot that came from a distant kingdom.",
@@ -3687,7 +3877,10 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "710166"
+    ]
   },
   "701019": {
     "desc": "Boosts ATK and DEF (70%) when BB gauge full & Boosts Spark dmg (70%) for 2 turns when dmg dealt > 10k & Negates DEF ignoring damage",
@@ -3746,7 +3939,15 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_4_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "20916",
+      "740166",
+      "810547",
+      "810548",
+      "820397",
+      "820398"
+    ]
   },
   "701020": {
     "desc": "Boosts HP (40%) & Fill BB gauge (7BC) when 10 HC received and OD fill rate (20%) for 2 turns when 20 HC received",
@@ -3805,7 +4006,10 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_3_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "720166"
+    ]
   },
   "701021": {
     "desc": "Boosts HP, DEF and REC (15%) & Reduce BB cost (15%) & Damage taken fills BB gauge (1-2 BC) & Negates status ailments ",
@@ -3871,7 +4075,10 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_5_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "760166"
+    ]
   },
   "701022": {
     "desc": "Boosts HP and ATK (40%) & Boosts DEF and REC (50%) for 2 turns when damage taken has exceeded certain amount (10 000) & boosts elemental weakness damage (50%)",
@@ -3943,7 +4150,10 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "750226"
+    ]
   },
   "701023": {
     "desc": "Boosts ATK, HP (30%) & Boosts BB Atk (100%) when Sparks have exceeded certain amount (20) & Boosts Spark damage (50%) when HP are full",
@@ -4004,7 +4214,11 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "750167",
+      "750287"
+    ]
   },
   "701024": {
     "desc": "Boosts HP (30%) & Boosts Atk relative to how high HP is (0-100%) & Boosts BB gauge each turn (6 BC) and when attacked (3-4 BC)",
@@ -4065,7 +4279,11 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "760226",
+      "760227"
+    ]
   },
   "701025": {
     "desc": "Boosts HP (30%) & Boosts ATK, DEF, REC (60%) when BB gauge is full & Negates DEF ignoring damage",
@@ -4096,7 +4314,11 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "730226",
+      "760017"
+    ]
   },
   "701026": {
     "desc": "Boosts all param. (30%) & boosts ATK, DEF, REC based on how low remaining HP is (10-80%) & reduces BB gauge required for BB (15%)",
@@ -4218,7 +4440,16 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31006",
+      "31007",
+      "720227",
+      "840547",
+      "840548",
+      "850507",
+      "850508"
+    ]
   },
   "701028": {
     "desc": "Produced by a long-forgotten technology, this object is much sought-after by the Apocalypse survivors.",
@@ -4361,7 +4592,15 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_3_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "20916",
+      "730247",
+      "810547",
+      "810548",
+      "820397",
+      "820398"
+    ]
   },
   "701031": {
     "desc": "Boosts all parameters (35%) & boosts BB gauge each turn (3 BC) & damage taken boosts BB gauge (2-3 BC) and may restore HP (20% chance 30% damage)",
@@ -4425,7 +4664,10 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "720157"
+    ]
   },
   "701032": {
     "desc": "Tech used onboard the ship of ancient times. Allows the creation of powerful devices.",
@@ -4515,7 +4757,10 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "750157"
+    ]
   },
   "701034": {
     "desc": "A generator created using anything and everything. At the moment, it doesn’t allow you to produce too much energy; however, it can surely be improved.",
@@ -4606,7 +4851,10 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "710217"
+    ]
   },
   "701036": {
     "desc": "A powerful lens that allows light to converge, transforming it into a ray. By combining multiple lenses, one could produce a destructive ray of light.",
@@ -4690,7 +4938,15 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_1_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "20916",
+      "740157",
+      "810547",
+      "810548",
+      "820397",
+      "820398"
+    ]
   },
   "701038": {
     "desc": "Boosts HP (50%) & boosts ATK when BB gauge is full (50%) & boosts OD gauge fill rate (20%)",
@@ -4744,7 +5000,11 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "760236",
+      "760237"
+    ]
   },
   "701039": {
     "desc": "Boosts all stats (20%) & boosts Spark damage (50%) and BB ATK (100%)",
@@ -4777,7 +5037,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_70_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "710227",
+      "720237",
+      "730257",
+      "740237",
+      "750247",
+      "760247"
+    ]
   },
   "701040": {
     "desc": "Boosts all stats (20%) & boosts BB gauge when attacked (3-4 BC) & reduces BB cost (15%)",
@@ -4810,7 +5078,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_70_9.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "710227",
+      "720237",
+      "730257",
+      "740237",
+      "750247",
+      "760247"
+    ]
   },
   "701041": {
     "desc": "Boosts all stats (20%) & Spark damage reduction (50%) & restores HP each turn",
@@ -4844,7 +5120,15 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_70_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "710227",
+      "720237",
+      "730257",
+      "740237",
+      "750247",
+      "760247"
+    ]
   },
   "701042": {
     "desc": "Boosts Zel (20%), Karma (15%), Item drop rates (5%) & Enhances Eyebrows (900%) & Removes chance of resisting temptation. I mean, be honest, those eyebrows are just the best.",
@@ -4922,7 +5206,14 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_70_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "710227",
+      "720237",
+      "730257",
+      "740237",
+      "760247"
+    ]
   },
   "701045": {
     "desc": "Boosts all parameters (20%) & boosts ATK (50%) when BB gauge is full & boosts BB ATK (150%) & boosts Spark damage (80%)",
@@ -4975,7 +5266,18 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "item_thum_701045.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "20916",
+      "720247",
+      "730267",
+      "750267",
+      "760257",
+      "810547",
+      "810548",
+      "820397",
+      "820398"
+    ]
   },
   "701046": {
     "desc": "Use this material to craft the Hunter Title.",
@@ -5044,7 +5346,14 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "item_thum_701045.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "710237",
+      "720217",
+      "740217",
+      "750147",
+      "760267"
+    ]
   },
   "701048": {
     "desc": "Use this material to craft the Pure Noblesse Title.",
@@ -5083,7 +5392,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_20820.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "730216"
+    ]
   },
   "701050": {
     "desc": "A gigantic skeleton found within an ancient desert.",
@@ -5145,7 +5457,10 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "730217"
+    ]
   },
   "701053": {
     "desc": "Boosts ATK and REC (40%) & boosts elemental damage (50%) & boosts Spark damage (100%) & chance to add Spark vulnerability (25% chance) for 1 turn",
@@ -5186,6 +5501,14 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_4_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "20916",
+      "760267",
+      "810547",
+      "810548",
+      "820397",
+      "820398"
+    ]
   }
 }

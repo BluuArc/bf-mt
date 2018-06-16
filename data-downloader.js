@@ -1,9 +1,21 @@
 const fs = require('fs');
 const rp = require('request-promise');
 const logger = require('winston');
+const GitHubScraper = require('./gh-scraper');
 logger.level = 'debug';
 
 const outputFolder = 'static/bf-data';
+
+let ghData;
+let updateData = {
+  units: {},
+  items: {},
+  bursts: {},
+  extraSkills: {},
+  leaderSkills: {},
+};
+
+let statsOnly = false;
 
 function getUrl(server = '', file = '') {
   const baseUrl = `https://raw.githubusercontent.com/Deathmax/bravefrontier_data/master`;
@@ -69,6 +81,17 @@ async function getUnitDataForServer(server = 'gl') {
       data: {}
     },
   };
+
+  logger.info(`${server}: setting git data`);
+  let fileInfo = ghData[data.info.file];
+  if (server !== 'gl') {
+    fileInfo = ghData[server].contents[data.info.file];
+  }
+  updateData.units[server] = fileInfo.date;
+
+  if (statsOnly) {
+    return {};
+  }
 
   logger.info(`${server}: getting files`);
   const unitUrls = [];
@@ -141,6 +164,23 @@ async function getUnitDataForServer(server = 'gl') {
 }
 
 async function getBurstDataForServer(server = 'gl', unitData = {}) {
+  logger.info(`${server}: setting git data`);
+  let fileDate = new Date('Jan 01 1969');
+  if (server === 'eu') {
+    fileDate = new Date(ghData[server].contents['bbs.json'].date);
+  } else {
+    const folderData = (ghData[server] ? ghData[server].contents : undefined) || ghData;
+    for (let i = 0; i <= 9; ++i) {
+      const fileName = `bbs_${i}.json`;
+      fileDate = folderData[fileName] ? Math.max(fileDate, new Date(folderData[fileName].date)) : fileDate;
+    }
+  }
+  updateData.bursts[server] = new Date(fileDate).toISOString();
+  if (statsOnly) {
+    return {};
+  }
+
+
   let bbData = {};
   logger.info(`${server}: getting files`);
   if (server === 'eu') {
@@ -211,6 +251,17 @@ async function getBurstDataForServer(server = 'gl', unitData = {}) {
 }
 
 async function getExtraSkillDataForServer(server = 'gl', unitData = {}) {
+  logger.info(`${server}: setting git data`);
+  let fileInfo = ghData['es.json'];
+  if (server !== 'gl') {
+    fileInfo = ghData[server].contents['es.json'];
+  }
+  updateData.extraSkills[server] = fileInfo.date;
+  if (statsOnly) {
+    return {};
+  }
+
+
   const esData = {};
   logger.info(`${server}: getting files`);
   const downloadResult = await downloadMultipleFiles([getUrl(server, 'es.json')]);
@@ -239,7 +290,7 @@ async function getExtraSkillDataForServer(server = 'gl', unitData = {}) {
           }
           esData[esId].associated_units.push(unit.id.toString());
         } else {
-          logger.warn(`No ES ID ${esId} found in data from unit ${type} ${unit.id} (${unit.name})`);
+          logger.warn(`No ES ID ${esId} found in data from unit ${unit.id} (${unit.name})`);
         }
       }
     });
@@ -250,7 +301,18 @@ async function getExtraSkillDataForServer(server = 'gl', unitData = {}) {
   return esData;
 }
 
-async function getItemDataForServer(server = 'gl') {
+async function getItemDataForServer(server = 'gl', unitData = {}) {
+  logger.info(`${server}: setting git data`);
+  let fileInfo = ghData['items.json'];
+  if (server !== 'gl') {
+    fileInfo = ghData[server].contents['items.json'];
+  }
+  updateData.items[server] = fileInfo.date;
+  if (statsOnly) {
+    return {};
+  }
+
+
   const itemData = {};
   logger.info(`${server}: getting files`);
   const downloadResult = await downloadMultipleFiles([getUrl(server, 'items.json')]);
@@ -306,6 +368,50 @@ async function getItemDataForServer(server = 'gl') {
         });
     });
 
+  // for every unit
+  const addUnitIdToItemId = (unitId, itemId, reason = 'evo') => {
+    logger.debug(reason, 'attempting to add unit', unitId, 'to item', itemId);
+    const item = itemData[itemId.toString()];
+    if (item) {
+      if (!item.associated_units) {
+        item.associated_units = [];
+      }
+      if (!item.associated_units.includes(unitId)) {
+        item.associated_units.push(unitId);
+      }
+    } else {
+      logger.warn(`Can't add unit ${unitId} because item ${itemId} is not found`);
+    }
+  }
+  logger.info(`${server}: cross referencing unit data for usage`);
+  Object.values(unitData)
+    .forEach(unit => {
+      const unitId = unit.id.toString();
+      if (unit.evo_mats) {
+        const itemMats = unit.evo_mats.filter(mat => mat.type === 'item').map(mat => mat.id);
+        itemMats.forEach(itemId => addUnitIdToItemId(unitId, itemId, 'evo'));
+      }
+
+      if (unit['extra skill']) {
+        const conditionSets = unit['extra skill'].effects.map(e => e.conditions).filter(arr => arr.length > 0).reduce((arr, val) => arr.concat(val), []);
+        conditionSets.forEach(conditionSet => {
+          if (conditionSet['item required']) {
+            if (Array.isArray(conditionSet['item required'])) {
+              conditionSet['item required'].forEach(itemId => addUnitIdToItemId(unitId, itemId, 'es'));
+            } else {
+              addUnitIdToItemId(unitId, (conditionSet['item required'] || '').toString(), 'es')
+            }
+          }
+
+          if (conditionSet['sphere category required (raw)']) {
+            Object.values(itemData)
+              .filter(item => item['sphere type'] && item['sphere type'] === +conditionSet['sphere category required (raw)'])
+              .forEach(item => addUnitIdToItemId(unitId, item.id.toString(), 'es'));
+          }
+        })
+      }
+    });
+
   // split data into files based on first number of id
   logger.info(`${server}: saving files`);
   for (let i = 0; i <= 9; ++i) {
@@ -325,14 +431,107 @@ async function getItemDataForServer(server = 'gl') {
   return itemData;
 }
 
+async function getLeaderSkillDataForServer(server = 'gl', unitData = {}) {
+  logger.info(`${server}: setting git data`);
+  let fileInfo = ghData['ls.json'];
+  if (server !== 'gl') {
+    fileInfo = ghData[server].contents['ls.json'];
+  }
+  updateData.leaderSkills[server] = fileInfo.date;
+  if (statsOnly) {
+    return {};
+  }
+
+
+  const lsData = {};
+  logger.info(`${server}: getting files`);
+  const downloadResult = await downloadMultipleFiles([getUrl(server, 'ls.json')]);
+  downloadResult.map(r => {
+    if (typeof r.data === "string") {
+      r.data = JSON.parse(r.data);
+    }
+    return r;
+  }).forEach(r => {
+    const { data } = r;
+    Object.keys(data)
+      .forEach(key => {
+        lsData[key] = data[key];
+      })
+  });
+  logger.debug('lsData', Object.keys(lsData));
+
+  logger.info(`${server}: setting unit associations`);
+  Object.values(unitData)
+    .forEach(unit => {
+      if (unit['leader skill']) {
+        const lsId = unit['leader skill'].id;
+        if (lsData[lsId]) {
+          if (!lsData[lsId].associated_units) {
+            lsData[lsId].associated_units = [];
+          }
+          lsData[lsId].associated_units.push(unit.id.toString());
+        } else {
+          logger.warn(`No LS ID ${lsId} found in data from unit ${unit.id} (${unit.name})`);
+        }
+      }
+    });
+  logger.info(`${server}: saving files`);
+  const filename = `ls-${server}.json`;
+  fs.writeFileSync(`${outputFolder}/${filename}`, JSON.stringify(lsData, null, 2), 'utf8');
+  logger.info(`${server}: saved ${filename}`);
+  return lsData;
+}
+
+// TODO: implement usage for this
+async function getDictionaryForServer(server = 'gl') {
+  logger.info(`${server}: getting files`);
+  let dictionaryData = {};
+  const downloadResult = await downloadMultipleFiles([getUrl(server, 'dictionary.json')]);
+  downloadResult.map(r => {
+    if (typeof r.data === "string") {
+      r.data = JSON.parse(r.data);
+    }
+    return r;
+  }).forEach(r => {
+    const { data } = r;
+    Object.keys(data)
+      .forEach(key => {
+        dictionaryData[key] = data[key];
+      })
+  });
+  logger.debug('dictionaryData', Object.keys(dictionaryData));
+  return dictionaryData;
+}
+
 async function getData(servers = ['gl', 'eu', 'jp']) {
+  if (statsOnly) {
+    logger.info('Getting GH stats only');
+  }
+  await initializeGHData();
+  // TODO: implement use of dictionary data
   for (const s of servers) {
     const unitData = await getUnitDataForServer(s);
     await getBurstDataForServer(s, unitData);
     await getExtraSkillDataForServer(s, unitData);
-    await getItemDataForServer(s);
+    await getLeaderSkillDataForServer(s, unitData);
+    await getItemDataForServer(s, unitData);
   }
+
+  logger.info(`saving update statistics file`);
+  const filename = `update-stats.json`;
+  fs.writeFileSync(`${outputFolder}/${filename}`, JSON.stringify(updateData, null, 2), 'utf8');
+  logger.info(`saved ${filename}`);
+  return;
 }
 
-// getUnitData();
+async function initializeGHData() {
+  logger.info('Initializing git file data');
+  const scraper = new GitHubScraper();
+  ghData = await scraper.getFileTree('https://github.com/cheahjs/bravefrontier_data');
+  await scraper.close();
+  fs.writeFileSync(`${outputFolder}/filetree.json`, JSON.stringify(ghData, null, 2), 'utf8');
+  // logger.debug('ghData', ghData);
+}
+
+// statsOnly = true;
 getData();

@@ -65,7 +65,12 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_5_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546",
+      "840438",
+      "860167"
+    ]
   },
   "90102": {
     "desc": "Greatly boosts Spark damage and drop rate of BC and HC",
@@ -87,6 +92,11 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_5_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546",
+      "840438",
+      "860167"
+    ]
   }
 }

@@ -19,7 +19,18 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11176",
+      "21116",
+      "41056",
+      "51336",
+      "51337",
+      "51356",
+      "61286",
+      "61287",
+      "61296"
+    ]
   },
   "60010": {
     "desc": "ターン毎にＨＰを回復＆ＨＣ出現率をアップ＆ＨＣ獲得時の回復量を少しアップ",
@@ -49,7 +60,14 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_1_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31066",
+      "31067",
+      "31076",
+      "51266",
+      "51267"
+    ]
   },
   "60020": {
     "desc": "攻撃力・防御力・回復力・最大ＨＰを２０％アップ＆ＢＢ発動時のＢＢゲージ消費量を少し軽減",
@@ -78,7 +96,18 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11176",
+      "21116",
+      "41056",
+      "51336",
+      "51337",
+      "51356",
+      "61286",
+      "61287",
+      "61296"
+    ]
   },
   "60030": {
     "desc": "確率で全状態異常をランダムに発生＆状態異常の敵へのダメージをアップ",
@@ -175,7 +204,18 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11176",
+      "21116",
+      "41056",
+      "51336",
+      "51337",
+      "51356",
+      "61286",
+      "61287",
+      "61296"
+    ]
   },
   "60060": {
     "desc": "確率で被ダメージを２５％軽減＆防御貫通効果を無効",
@@ -200,7 +240,17 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_2_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "61276",
+      "61277"
+    ]
   },
   "60070": {
     "desc": "スパークダメージを５０％アップ＆確率でスパークダメージ耐性を１ターン低下",
@@ -226,7 +276,10 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_2_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546"
+    ]
   },
   "60080": {
     "desc": "攻撃力・防御力・回復力・最大ＨＰを３０％アップ＆全状態異常を無効",
@@ -258,7 +311,18 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11176",
+      "21116",
+      "41056",
+      "51336",
+      "51337",
+      "51356",
+      "61286",
+      "61287",
+      "61296"
+    ]
   },
   "60090": {
     "desc": "ＢＣ・ＨＣ・ゼル・カルマ・アイテム出現率を超絶アップ＆ＨＰ満タンの時、ＢＣ・ＨＣ・ゼル・カルマ・アイテム出現率を大幅にアップ",
@@ -291,7 +355,11 @@
     "sphere type text": "Drop",
     "thumbnail": "sphere_thum_2_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30446",
+      "30447"
+    ]
   },
   "60100": {
     "desc": "弱点属性ダメージをアップ＆クリティカルダメージをアップ＆スパークダメージを５０％アップ",
@@ -325,7 +393,19 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_3_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "10966",
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "40846",
+      "51317",
+      "61016",
+      "61017"
+    ]
   },
   "60110": {
     "desc": "攻撃力・防御力・回復力・最大ＨＰを３５％アップ＆被ダメージ時、ＢＢゲージを増加＆ターン毎にＢＢゲージを増加",
@@ -358,7 +438,18 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_3_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11176",
+      "21116",
+      "41056",
+      "51336",
+      "51337",
+      "51356",
+      "61286",
+      "61287",
+      "61296"
+    ]
   },
   "60120": {
     "desc": "スパーク時、ＢＣ・ＨＣ出現率をアップ＆スパークダメージを１００％アップ・スパーク時、ＨＰを少し回復・ＢＢゲージを少し増加",
@@ -392,7 +483,10 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_3_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546"
+    ]
   },
   "60130": {
     "desc": "弱点属性ダメージ・クリティカルを無効＆攻撃力・防御力・回復力を低下する効果を無効＆被ダメージを１０％軽減",
@@ -427,7 +521,17 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_3_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "61276",
+      "61277"
+    ]
   },
   "60140": {
     "desc": "ＯＤゲージの増加量を大幅にアップ＆攻撃ＢＢの威力を超絶アップ＆ＢＢ発動に必要なＢＢゲージ量を軽減＆ＢＢ発動時のＢＢゲージ消費量をかなり軽減",
@@ -463,7 +567,12 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_3_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497"
+    ]
   },
   "60150": {
     "desc": "攻撃に全属性を付与＆弱点属性ダメージを超絶アップ＆与ダメージが一定数を超える度に２ターン、攻撃ＢＢの威力をアップ",
@@ -510,7 +619,20 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "10966",
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "40846",
+      "50116",
+      "51317",
+      "61016",
+      "61017"
+    ]
   },
   "60200": {
     "desc": "スパークダメージを７５％アップ＆スパーク時、ＨＰを少し回復・ＢＢゲージを少し増加・確率でスパーククリティカルが発生",
@@ -577,7 +699,10 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_1_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546"
+    ]
   },
   "60300": {
     "desc": "確率で被ダメージの２０％を相手に反射する＆被ダメージ時、確率で全状態異常をランダムに発生・ＢＢゲージを増加・確率でＨＰをかなり回復",
@@ -655,6 +780,9 @@
         "id": 62050,
         "name": "凶魔天装ゲオラルド"
       }
+    ],
+    "associated_units": [
+      "51346"
     ]
   },
   "60400": {
@@ -695,7 +823,19 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11176",
+      "21116",
+      "41056",
+      "50757",
+      "51336",
+      "51337",
+      "51356",
+      "61286",
+      "61287",
+      "61296"
+    ]
   },
   "60410": {
     "desc": "防御力・最大ＨＰを４０％アップ＆防御貫通効果・クリティカルダメージを無効",
@@ -727,7 +867,18 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11176",
+      "21116",
+      "41056",
+      "51336",
+      "51337",
+      "51356",
+      "61286",
+      "61287",
+      "61296"
+    ]
   },
   "60500": {
     "desc": "スパークダメージを１２０％アップ＆ＢＢゲージが半分以上の時、攻撃力を大幅にアップ＆確率でスパークダメージ耐性を１ターン低下",
@@ -758,7 +909,10 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_1_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546"
+    ]
   },
   "60510": {
     "desc": "攻撃力・防御力・回復力・最大ＨＰを４５％アップ＆クリティカル・弱点属性ダメージを無効",
@@ -790,7 +944,18 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11176",
+      "21116",
+      "41056",
+      "51336",
+      "51337",
+      "51356",
+      "61286",
+      "61287",
+      "61296"
+    ]
   },
   "61000": {
     "desc": "攻撃ＢＢの威力を超絶アップ＆弱点属性ダメージを大幅にアップ＆クリティカルダメージをかなりアップ",
@@ -826,7 +991,19 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_4_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "10966",
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "40846",
+      "51317",
+      "61016",
+      "61017"
+    ]
   },
   "61010": {
     "desc": "スパークダメージを１５０％アップ＆残りＨＰが多いほど、攻撃力・防御力を超絶アップ＆防御貫通効果・弱点属性ダメージを無効",
@@ -863,7 +1040,10 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_5_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546"
+    ]
   },
   "61020": {
     "desc": "防御力・最大ＨＰを５０％アップ＆ターン毎にＨＰを大回復＆被ダメージ時、確率でＨＰをかなり回復＆高確率で１回まで戦闘不能を耐える",
@@ -903,7 +1083,18 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11176",
+      "21116",
+      "41056",
+      "51336",
+      "51337",
+      "51356",
+      "61286",
+      "61287",
+      "61296"
+    ]
   },
   "61030": {
     "desc": "確率で全状態異常をランダムに発生＆攻撃力の上限値（９９９９９）を１５００００まで解放する＆状態異常の敵へのダメージを超絶アップ＆攻撃ＢＢの威力を超絶アップ＆ＢＢ発動に必要なＢＢゲージ量を軽減",
@@ -1013,7 +1204,12 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497"
+    ]
   },
   "61050": {
     "desc": "攻撃に関するあらゆる能力が上昇",
@@ -1068,7 +1264,19 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_5_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "10966",
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "40846",
+      "51317",
+      "61016",
+      "61017"
+    ]
   },
   "61060": {
     "desc": "生存能力に関するあらゆる能力が上昇",
@@ -1125,7 +1333,14 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_5_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31066",
+      "31067",
+      "31076",
+      "51266",
+      "51267"
+    ]
   },
   "61070": {
     "desc": "ダメージ軽減に関するあらゆる能力が上昇",
@@ -1189,7 +1404,17 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_5_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "61276",
+      "61277"
+    ]
   },
   "61080": {
     "desc": "攻撃力・防御力・回復力・最大ＨＰを５０％アップ",
@@ -1271,7 +1496,18 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11176",
+      "21116",
+      "41056",
+      "51336",
+      "51337",
+      "51356",
+      "61286",
+      "61287",
+      "61296"
+    ]
   },
   "62010": {
     "desc": "クリティカル・弱点属性ダメージを無効＆低確率で被ダメージを超絶軽減＆ＨＰが満タン時、防御力を超絶アップ＆被ダメージ時、ＢＢゲージを少し増加・確率でＨＰを回復",
@@ -1345,7 +1581,17 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_3_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "61276",
+      "61277"
+    ]
   },
   "62020": {
     "desc": "クリティカル率をかなりアップ＆クリティカルダメージをかなりアップ＆ＢＢゲージが満タン時、攻撃力を大幅にアップ＆弱点属性ダメージをアップ＆スパークダメージを５０％アップ",
@@ -1462,7 +1708,12 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497"
+    ]
   },
   "62040": {
     "desc": "ＢＣ獲得時の増加量を超絶アップ＆ターン毎にＢＢゲージをかなり増加＆ＢＢゲージが半分以上の時、攻撃力・防御力・回復力をアップ＆ＢＣ出現率をかなりアップ",
@@ -1527,7 +1778,12 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497"
+    ]
   },
   "62050": {
     "desc": "確率で被ダメージを５０％軽減＆被ダメージ時、確率で全状態異常をランダムに発生・ＢＢゲージを増加・確率でＨＰをかなり回復＆確率で被ダメージの２０％を相手に反射する",
@@ -1590,7 +1846,17 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_3_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "61276",
+      "61277"
+    ]
   },
   "62060": {
     "desc": "ＢＢ発動に必要なＢＢゲージ量を軽減＆ターン毎にＢＢゲージをかなり増加＆攻撃力・防御力・回復力・最大ＨＰを１５％アップ＆全状態異常を無効",
@@ -1650,7 +1916,12 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497"
+    ]
   },
   "62070": {
     "desc": "戦闘開始から４ターン、攻撃力・防御力を１００％アップ＆確率で全状態異常をランダムに発生＆確率で被ダメージを２０％軽減",
@@ -1709,7 +1980,18 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11176",
+      "21116",
+      "41056",
+      "51336",
+      "51337",
+      "51356",
+      "61286",
+      "61287",
+      "61296"
+    ]
   },
   "62080": {
     "desc": "何かしらの能力が６上昇",
@@ -1751,7 +2033,18 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11176",
+      "21116",
+      "41056",
+      "51336",
+      "51337",
+      "51356",
+      "61286",
+      "61287",
+      "61296"
+    ]
   },
   "62090": {
     "desc": "ガード時のダメージ軽減率を大幅にアップ＆低確率で被ダメージを超絶軽減＆防御力・最大ＨＰを３０％アップ＆被ダメージ時、ＢＢゲージを少し増加＆ガード時、ＢＢゲージを超絶増加＆ガード成立時、ＢＢゲージを増加",
@@ -1814,7 +2107,17 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_4_7.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "61276",
+      "61277"
+    ]
   },
   "62100": {
     "desc": "ＢＣ・ＨＣ・ゼル・カルマ・アイテム出現率を超絶アップ＆ＢＣ獲得時の増加量を少しアップ＆ＨＣ獲得時の回復量をかなりアップ＆ スパーク時、ＢＣ・ＨＣ出現率をアップ ・ダメージを１００％アップ",
@@ -1872,7 +2175,11 @@
     "sphere type text": "Drop",
     "thumbnail": "sphere_thum_5_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30446",
+      "30447"
+    ]
   },
   "62110": {
     "desc": "確率で被ダメージの２０％を相手に反射する＆最大ＨＰを６０％アップ＆戦闘開始から３ターン、防御力を７５％アップ＆被ダメージ時、確率で全状態異常をランダムに発生・確率でＨＰを回復＆全状態異常を無効",
@@ -1957,7 +2264,10 @@
     "sphere type text": "Damage Reflecting",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51346"
+    ]
   },
   "62120": {
     "desc": "ＢＣ獲得時の増加量を大幅にアップ＆被ダメージ時、ＢＢゲージをかなり増加＆確率で被ダメージを３０％軽減＆弱点属性ダメージを無効",
@@ -2018,7 +2328,12 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497"
+    ]
   },
   "62130": {
     "desc": "スパークダメージを１５０％アップ＆確率でスパーククリティカルが発生＆攻撃ＢＢの威力をかなりアップ＆確率でＨＰをかなり吸収",
@@ -2080,7 +2395,10 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_2_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546"
+    ]
   },
   "62140": {
     "desc": "弱点属性ダメージをアップ＆戦闘開始から２ターン、攻撃力・防御力を２００％アップ＆敵撃破時、ＨＰを少し回復・ＢＢゲージをかなり増加＆確率で防御貫通効果を付与",
@@ -2157,7 +2475,19 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_1_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "10966",
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "40846",
+      "51317",
+      "61016",
+      "61017"
+    ]
   },
   "62150": {
     "desc": "確率で被ダメージを４０％軽減＆防御力を５０％アップ＆全状態異常・クリティカルを無効＆ターン毎にＨＰをかなり回復",
@@ -2234,7 +2564,17 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_3_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "61276",
+      "61277"
+    ]
   },
   "62160": {
     "desc": "ＨＰが満タン時、攻撃力・防御力・回復力を大幅にアップ・クリティカル率を超絶アップ＆残りＨＰが少ないほど、攻撃力・防御力・回復力を超絶アップ",
@@ -2293,7 +2633,18 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11176",
+      "21116",
+      "41056",
+      "51336",
+      "51337",
+      "51356",
+      "61286",
+      "61287",
+      "61296"
+    ]
   },
   "62170": {
     "desc": "弱点属性ダメージ・防御貫通効果を無効＆被ダメージを１０％軽減＆残りＨＰが少ないほど、防御力を大幅にアップ",
@@ -2328,7 +2679,17 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_3_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "61276",
+      "61277"
+    ]
   },
   "62180": {
     "desc": "攻撃力・防御力・回復力・最大ＨＰを５０％アップ＆ＢＢ発動に必要なＢＢゲージ量を少し軽減＆被ダメージ時、ＢＢゲージを増加＆ターン毎にＢＢゲージを増加",
@@ -2365,7 +2726,18 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11176",
+      "21116",
+      "41056",
+      "51336",
+      "51337",
+      "51356",
+      "61286",
+      "61287",
+      "61296"
+    ]
   },
   "62190": {
     "desc": "ＢＢ及びＳＢＢの発動率をアップ＆攻撃力を１００％アップ＆攻撃ＢＢの威力をアップ＆被ダメージ時、ＢＢゲージを増加",
@@ -2437,7 +2809,18 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_3_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11176",
+      "21116",
+      "41056",
+      "51336",
+      "51337",
+      "51356",
+      "61286",
+      "61287",
+      "61296"
+    ]
   },
   "62210": {
     "desc": "弱点属性ダメージを無効＆攻撃力・防御力・回復力を低下する効果を無効＆最大ＨＰを４０％アップ＆ＢＢゲージが半分以上の時、攻撃力・防御力・回復力をかなりアップ",
@@ -2475,7 +2858,17 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "61276",
+      "61277"
+    ]
   },
   "62220": {
     "desc": "攻撃力・防御力・回復力・最大ＨＰを４５％アップ＆攻撃ＢＢの威力を超絶アップ＆与ダメージが一定数を超える度にＢＢゲージを満タンにする",
@@ -2509,7 +2902,18 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11176",
+      "21116",
+      "41056",
+      "51336",
+      "51337",
+      "51356",
+      "61286",
+      "61287",
+      "61296"
+    ]
   },
   "62230": {
     "desc": "攻撃ＢＢの威力をかなりアップ＆弱点属性ダメージを大幅にアップ＆攻撃力を５０％アップ＆与ダメージが一定数を超える度にＢＢゲージを増加",
@@ -2550,7 +2954,19 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_5_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "10966",
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "40846",
+      "51317",
+      "61016",
+      "61017"
+    ]
   },
   "62240": {
     "desc": "スパーク時、ＢＢゲージを増加・ダメージを１５０％アップ＆スパークが一定数を超える度に３ターン、攻撃に炎・水・樹・雷属性を付与＆確率で被ダメージを２０％軽減",
@@ -2617,7 +3033,10 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_4_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546"
+    ]
   },
   "62250": {
     "desc": "ＢＢ発動に必要なＢＢゲージ量を軽減＆防御力を５０％アップ＆全状態異常を無効＆被ダメージ時、確率でＨＰを回復",
@@ -2656,7 +3075,12 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_3_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497"
+    ]
   },
   "62260": {
     "desc": "被ダメージを１０％軽減＆ＢＢゲージが多いほど、防御力・回復力をアップ＆被ダメージ時、ＢＢゲージをかなり増加",
@@ -2712,7 +3136,17 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_3_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "61276",
+      "61277"
+    ]
   },
   "62270": {
     "desc": "攻撃力・防御力・回復力・最大ＨＰを５０％アップ＆ガード時、ダメージ軽減率をアップ・３ターン、攻撃力・防御力・回復力をアップ＆弱点属性ダメージを無効＆ＨＰを少し吸収＆被ダメージ時、確率でＨＰをかなり回復",
@@ -2780,7 +3214,18 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11176",
+      "21116",
+      "41056",
+      "51336",
+      "51337",
+      "51356",
+      "61286",
+      "61287",
+      "61296"
+    ]
   },
   "62280": {
     "desc": "被ダメージ時、確率でＨＰをかなり回復＆ＢＣ獲得数が一定数を超える度に１ターン、ターン毎にＨＰを全回復＆残りＨＰが多いほど、攻撃力・防御力・回復力をかなりアップ＆低確率で被ダメージを超絶軽減",
@@ -2825,7 +3270,14 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_2_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "31066",
+      "31067",
+      "31076",
+      "51266",
+      "51267"
+    ]
   },
   "62290": {
     "desc": "攻撃ＢＢの威力を超絶アップ＆攻撃力・最大ＨＰを６０％アップ＆攻撃力の上限値（９９９９９）を１５００００まで解放する",
@@ -2856,7 +3308,19 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_1_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "10966",
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "40846",
+      "51317",
+      "61016",
+      "61017"
+    ]
   },
   "62300": {
     "desc": "ＢＣ・ＨＣ出現率超絶アップ＆全能力３０％アップ＆ＯＤゲージ増加量を大幅アップ＆ＯＤ発動時、一度だけ戦闘不能を耐える＆ＢＣ獲得数が一定数を超える度に２ターン、全属性ユニットからの被ダメージ少し軽減",
@@ -2946,7 +3410,11 @@
     "sphere type text": "Drop",
     "thumbnail": "sphere_thum_3_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30446",
+      "30447"
+    ]
   },
   "62310": {
     "desc": "スパークダメージ１５０％アップ＆全状態異常無効＆与ダメージが一定数を超える度に１ターン、攻撃ＢＢ威力アップ＆被ダメージが一定数を超える度に光属性バリア付与＆２ターン、クリティカル・弱点属性無効",
@@ -3012,7 +3480,10 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_4_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546"
+    ]
   },
   "62320": {
     "desc": "ＢＢゲージに関するあらゆる能力が上昇",
@@ -3065,7 +3536,12 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497"
+    ]
   },
   "62330": {
     "desc": "確率で被ダメージを２０％軽減＆防御力・最大ＨＰを３０％アップ＆ガード時、ＢＢゲージを超絶増加・３ターン、ターン毎にＨＰを大回復",
@@ -3104,7 +3580,17 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_3_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "61276",
+      "61277"
+    ]
   },
   "62340": {
     "desc": "戦闘開始から４ターン、攻撃力・防御力を１５０％アップ＆クリティカル率をかなりアップ＆確率で通常攻撃を全体攻撃化",
@@ -3135,7 +3621,18 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11176",
+      "21116",
+      "41056",
+      "51336",
+      "51337",
+      "51356",
+      "61286",
+      "61287",
+      "61296"
+    ]
   },
   "62350": {
     "desc": "スパークダメージを１５０％アップ＆攻撃力の上限値（９９９９９）を１５００００まで解放する＆弱点属性ダメージを大幅にアップ",
@@ -3169,7 +3666,10 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_2_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546"
+    ]
   },
   "62360": {
     "desc": "ＢＣ・ＨＣ出現率超絶アップ＆最大ＨＰ５０％アップ＆ＢＢゲージが半分以上時、攻撃・防御かなりアップ＆ＢＣ獲得一定毎に２ターン攻撃ＢＢ威力アップ・全属性付与＆ＨＣ獲得一定毎に１ターン、ターン毎にＨＰ全回復",
@@ -3273,7 +3773,11 @@
     "sphere type text": "Drop",
     "thumbnail": "sphere_thum_3_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30446",
+      "30447"
+    ]
   },
   "62370": {
     "desc": "攻撃力・最大ＨＰを８０％アップ＆弱点属性ダメージを大幅にアップ＆与ダメージが一定数を超える度に２ターン、スパークダメージを超絶アップ＆状態異常の敵へのダメージを超絶アップ",
@@ -3322,7 +3826,18 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11176",
+      "21116",
+      "41056",
+      "51336",
+      "51337",
+      "51356",
+      "61286",
+      "61287",
+      "61296"
+    ]
   },
   "62380": {
     "desc": "全状態異常を無効＆防御力・最大ＨＰを６０％アップ＆スパークダメージを半分に軽減＆追加ダメージを半分に軽減＆確率で１回まで戦闘不能を耐える",
@@ -3526,7 +4041,10 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_2_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546"
+    ]
   },
   "62410": {
     "desc": "攻撃力・防御力・回復力・最大ＨＰを６０％アップ＆被ダメージを１０％軽減＆クリティカル・弱点属性ダメージを無効",
@@ -3563,7 +4081,18 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11176",
+      "21116",
+      "41056",
+      "51336",
+      "51337",
+      "51356",
+      "61286",
+      "61287",
+      "61296"
+    ]
   },
   "62420": {
     "desc": "攻撃ＢＢの威力を超絶アップ＆弱点属性ダメージを大幅にアップ＆クリティカルダメージを大幅にアップ＆攻撃力を２００％アップ＆攻撃力の上限値（９９９９９）を２０００００まで解放する",
@@ -3607,7 +4136,19 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_5_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "10966",
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "40846",
+      "51317",
+      "61016",
+      "61017"
+    ]
   },
   "63000": {
     "desc": "クリティカル率をかなりアップ＆クリティカルダメージを大幅にアップ＆攻撃力・防御力・回復力・最大ＨＰを３０％アップ＆弱点属性ダメージをアップ",
@@ -3683,7 +4224,18 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11176",
+      "21116",
+      "41056",
+      "51336",
+      "51337",
+      "51356",
+      "61286",
+      "61287",
+      "61296"
+    ]
   },
   "64001": {
     "desc": "スパークダメージを１２０％アップ＆スパークが一定数を超える度に３ターン、スパークダメージを２０％アップ＆クリティカルダメージをかなりアップ",
@@ -3715,7 +4267,10 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_1_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546"
+    ]
   },
   "64002": {
     "desc": "攻撃力の上限値（９９９９９）を１５００００まで解放する＆攻撃ＢＢの威力をかなりアップ＆ＢＢゲージが半分以上の時、攻撃力・防御力・回復力をアップ",
@@ -3748,7 +4303,19 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_4_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "10966",
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "40846",
+      "51317",
+      "61016",
+      "61017"
+    ]
   },
   "65000": {
     "desc": "確率で麻痺状態にする＆攻撃力を３０％アップ＆状態異常の敵へのダメージをアップ",
@@ -3818,7 +4385,19 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11176",
+      "20956",
+      "21116",
+      "41056",
+      "51336",
+      "51337",
+      "51356",
+      "61286",
+      "61287",
+      "61296"
+    ]
   },
   "65020": {
     "desc": "ターン毎にＢＢゲージを増加＆攻撃力を２０％アップ＆ＢＣ・ＨＣ出現率をアップ",
@@ -3862,7 +4441,13 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_2_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "20956",
+      "41036",
+      "41037",
+      "60497"
+    ]
   },
   "65030": {
     "desc": "防御力・最大ＨＰを２０％アップ＆全状態異常を無効＆攻撃力・防御力・回復力を低下する効果を無効",
@@ -3895,7 +4480,18 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "11176",
+      "21116",
+      "41056",
+      "51336",
+      "51337",
+      "51356",
+      "61286",
+      "61287",
+      "61296"
+    ]
   },
   "65040": {
     "desc": "確率で全状態異常をランダムに発生＆攻撃力を２０％アップ＆ＢＣ獲得時の増加量を少しアップ",
@@ -3980,7 +4576,17 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_3_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "61276",
+      "61277"
+    ]
   },
   "65060": {
     "desc": "スパーク時、ＢＢゲージを少し増加・ダメージを５０％アップ＆スパークが一定数を超える度に３ターン、攻撃力を少しアップ",
@@ -4014,6 +4620,9 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "30546"
+    ]
   }
 }
