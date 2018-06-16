@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="pl-0 pr-0">
     <v-layout row>
       <v-flex xs12>
         <v-btn block @click="updateNews">

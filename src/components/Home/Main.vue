@@ -20,7 +20,7 @@
       <v-flex xs12>
         <v-card raised>
           <v-card-title>
-          <h3 class="headline">Rights/Credits</h3>
+            <h3 class="headline">Rights/Credits</h3>
           </v-card-title>
           <v-card-text>
             <p>Thanks to the following for providing parts used in this tool.
@@ -35,6 +35,21 @@
               <li><a rel="noopener" target="_blank" href="http://dexie.org/">Dexie.js</a> by David Fahlander</li>
             </ul>
           </v-card-text>
+        </v-card>
+      </v-flex>
+      <v-flex xs12>
+        <v-card raised>
+          <v-card-title>
+            <h3 class="headline">Old Version</h3>
+          </v-card-title>
+          <v-card-text>
+            <p class="mb-0">Interested in seeing what the previous iteration of this tool looked like? If so, click the button below. The Semantic UI version of this tool was deprecated June 16, 2018, which is the day this version (using Vuetify UI) was first publicly released.</p>
+          </v-card-text>
+          <v-card-actions>
+            <v-btn flat rel="noopener" href="/semantic_build/" target="_blank">
+              Semantic UI Version
+            </v-btn>
+          </v-card-actions>
         </v-card>
       </v-flex>
     </v-layout>
