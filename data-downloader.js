@@ -166,14 +166,10 @@ async function getUnitDataForServer(server = 'gl') {
 async function getBurstDataForServer(server = 'gl', unitData = {}) {
   logger.info(`${server}: setting git data`);
   let fileDate = new Date('Jan 01 1969');
-  if (server === 'eu') {
-    fileDate = new Date(ghData[server].contents['bbs.json'].date);
-  } else {
-    const folderData = (ghData[server] ? ghData[server].contents : undefined) || ghData;
-    for (let i = 0; i <= 9; ++i) {
-      const fileName = `bbs_${i}.json`;
-      fileDate = folderData[fileName] ? Math.max(fileDate, new Date(folderData[fileName].date)) : fileDate;
-    }
+  const folderData = (ghData[server] ? ghData[server].contents : undefined) || ghData;
+  for (let i = 0; i <= 9; ++i) {
+    const fileName = `bbs_${i}.json`;
+    fileDate = folderData[fileName] ? Math.max(fileDate, new Date(folderData[fileName].date)) : fileDate;
   }
   updateData.bursts[server] = new Date(fileDate).toISOString();
   if (statsOnly) {
@@ -183,33 +179,25 @@ async function getBurstDataForServer(server = 'gl', unitData = {}) {
 
   let bbData = {};
   logger.info(`${server}: getting files`);
-  if (server === 'eu') {
-    const downloadResult = await downloadMultipleFiles([getUrl(server, 'bbs.json')]);
-    bbData = downloadResult.map(r => {
-        if (typeof r.data === "string") {
-          r.data = JSON.parse(r.data);
-        }
-        return r;
-      })[0].data;
-  } else {
-    const files = [];
-    for (let i = 0; i <= 9; ++i) {
-      files.push(getUrl(server, `bbs_${i}.json`));
-    }
-    const downloadResult = await downloadMultipleFiles(files);
-    downloadResult.map(r => {
-      if (typeof r.data === "string") {
-        r.data = JSON.parse(r.data);
-      }
-      return r;
-    }).forEach(r => {
-      const { data } = r;
-      Object.keys(data)
-        .forEach(key => {
-          bbData[key] = data[key];
-        })
-    });
+  const files = [];
+  for (let i = 0; i <= 9; ++i) {
+    files.push(getUrl(server, `bbs_${i}.json`));
   }
+  const downloadResult = await downloadMultipleFiles(files);
+  downloadResult.map(r => {
+    if (typeof r.data === "string") {
+      r.data = JSON.parse(r.data);
+    }
+    return r;
+  }).forEach(r => {
+    const {
+      data
+    } = r;
+    Object.keys(data)
+      .forEach(key => {
+        bbData[key] = data[key];
+      })
+  });
   logger.debug('bbData', Object.keys(bbData));
 
   logger.info(`${server}: setting unit associations`);

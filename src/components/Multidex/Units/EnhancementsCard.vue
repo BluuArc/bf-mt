@@ -49,7 +49,7 @@
             </v-layout>
             <v-layout row v-for="(skill, index) in unit.feskills" :key="index" class="sp-table--row">
               <v-flex xs2 lg1 class="vertical-align-parent">
-                <v-checkbox class="vertical-align-container pl-1" hide-details :label="`${skill.skill.bp} SP`" :input-value="!!activeSkills[index]" @click="toggleSkill(index)"/>
+                <v-checkbox class="vertical-align-container pl-1" hide-details :label="`${skill.skill.bp} SP`" :input-value="!!activeSkills[index]" @click.native="toggleSkill(index)"/>
               </v-flex>
               <v-flex xs3 md1 class="text-xs-center center-align-parent">
                 <span class="center-align-container">
