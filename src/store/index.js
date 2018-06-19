@@ -19,7 +19,37 @@ const statLogStart = (label, isCollapsed = true) => {
 const statLogEnd = (label) => { console.timeEnd(label); console.groupEnd(); };
 
 Vue.use(Vuex);
-const modules = ['settings', 'units', 'items', 'bursts', 'extraSkills', 'leaderSkills'];
+export const modules = ['settings', 'units', 'items', 'bursts', 'extraSkills', 'leaderSkills'];
+export const moduleInfo = [
+  {
+    name: 'settings',
+  },
+  {
+    name: 'units',
+    fullName: 'Units',
+    type: 'multidex',
+  },
+  {
+    name: 'items',
+    fullName: 'Items',
+    type: 'multidex',
+  },
+  {
+    name: 'bursts',
+    fullName: 'Bursts',
+    type: 'multidex',
+  },
+  {
+    name: 'extraSkills',
+    fullName: 'Extra Skills',
+    type: 'multidex',
+  },
+  {
+    name: 'leaderSkills',
+    fullName: 'Leader Skills',
+    type: 'multidex',
+  },
+];
 const store = new Vuex.Store({
   modules: {
     settings: SettingsModule,

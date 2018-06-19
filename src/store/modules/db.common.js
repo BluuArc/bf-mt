@@ -187,6 +187,42 @@ export const createActions = (worker, downloadWorker, dbEntryName = 'units') => 
   };
 };
 
+export const knownConstants = {
+  elements: ['fire', 'water', 'earth', 'thunder', 'light', 'dark'],
+  gender: ['male', 'female', 'other'],
+  unitKind: ['normal', 'evolution', 'enhancing', 'sale'],
+  itemTypes: ['consumable', 'material', 'raid', 'sphere', 'evomat', 'summoner_consumable', 'ls_sphere'],
+  exclusiveFilterOptions: {
+    all: ['exclusive', 'non-exclusive'],
+    exclusive: ['exclusive'],
+    nonExclusive: ['non-exclusive'],
+  },
+  associatedUnitOptions: {
+    all: ['with', 'without'],
+    with: ['with'],
+    without: ['without'],
+  },
+  craftableFilterOptions: {
+    all: ['craftable', 'non-craftable'],
+    craftable: ['craftable'],
+    nonCraftable: ['non-craftable'],
+  },
+  usageFilterOptions: {
+    all: ['used', 'unused'],
+    used: ['used'],
+    unused: ['unused'],
+  },
+  itemTypeMapping: {
+    consumable: 'Item',
+    material: 'Material',
+    sphere: 'Sphere',
+    evomat: 'Evolution Material',
+    summoner_consumable: 'Booster',
+    raid: 'Raid Item',
+    ls_sphere: 'LS Sphere',
+  },
+};
+
 const commonFunctions = {
   createActions,
   createMutations,

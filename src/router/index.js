@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import HomePage from '@/components/Home/Main';
 import NewsPage from '@/components/News/Main';
 import SettingsPage from '@/components/Settings/Main';
+import DebugPage from '@/components/DebugPage';
 
 import MultidexPage from '@/components/Multidex/Main';
 import UnitsPage from '@/components/Multidex/Units/Main';
@@ -15,6 +16,11 @@ Vue.use(Router);
 
 export default new Router({
   routes: [
+    {
+      path: '/debug',
+      name: 'Debug',
+      component: DebugPage,
+    },
     {
       path: '/',
       name: 'Home',
