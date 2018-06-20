@@ -28,7 +28,7 @@
                 <div slot="header">
                   <v-layout row wrap>
                     <span style="align-self: center">Filters</span>
-                    <v-chip small v-show="filterOptions.element.length < defaultFilters.element.length" style="text-transform: capitalize">
+                    <v-chip small v-show="filterTypes.includes('elements') && filterOptions.element.length < defaultFilters.element.length" style="text-transform: capitalize">
                       <span v-if="filterOptions.element.length === 0">
                         No Elements
                       </span>
@@ -37,7 +37,7 @@
                         <span v-if="filterOptions.element.length === 1">Only</span>
                       </span>
                     </v-chip>
-                    <v-chip small v-show="filterOptions.rarity.length < defaultFilters.rarity.length" style="text-transform: capitalize">
+                    <v-chip small v-show="filterTypes.includes('rarity') && filterOptions.rarity.length < defaultFilters.rarity.length" style="text-transform: capitalize">
                       <span v-if="filterOptions.rarity.length === 1">
                         <span v-if="filterOptions.rarity[0] < 8">
                           <b>{{ filterOptions.rarity[0] }}</b>
@@ -53,7 +53,7 @@
                         {{ filterOptions.rarity.length }} Different Rarities
                       </span>
                     </v-chip>
-                    <v-chip small v-show="filterOptions.kind.length < defaultFilters.kind.length" style="text-transform: capitalize">
+                    <v-chip small v-show="filterTypes.includes('kind') && filterOptions.kind.length < defaultFilters.kind.length" style="text-transform: capitalize">
                       <span v-if="filterOptions.kind.length === 0">
                         No Types
                       </span>
@@ -64,7 +64,7 @@
                         {{ filterOptions.kind.length }} Types
                       </span>
                     </v-chip>
-                    <v-chip small v-show="filterOptions.gender.length < defaultFilters.gender.length" style="text-transform: capitalize">
+                    <v-chip small v-show="filterTypes.includes('gender') && filterOptions.gender.length < defaultFilters.gender.length" style="text-transform: capitalize">
                       <span v-if="filterOptions.gender.length === 0">
                         No Genders
                       </span>
@@ -73,10 +73,41 @@
                         <span v-if="filterOptions.gender.length === 1">Only</span>
                       </span>
                     </v-chip>
-                    <v-chip small v-show="filterOptions.associatedUnits.length < defaultFilters.associatedUnits.length" style="text-transform: capitalize">
+                    <v-chip small v-show="filterTypes.includes('itemTypes') && filterOptions.itemTypes.length < defaultFilters.itemTypes.length" style="text-transform: capitalize">
+                      <span v-if="filterOptions.itemTypes.length === 0">
+                        No Types
+                      </span>
+                      <span v-else-if="filterOptions.itemTypes.length === 1">
+                        {{ filterOptions.itemTypes[0] }}s Only
+                      </span>
+                      <span v-else>
+                        {{ filterOptions.itemTypes.length }} Item Types
+                      </span>
+                    </v-chip>
+                    <v-chip small v-show="filterTypes.includes('sphereTypes') && filterOptions.sphereTypes.length < defaultFilters.sphereTypes.length" style="text-transform: capitalize">
+                      <span v-if="filterOptions.sphereTypes.length === 0">
+                        No Types
+                      </span>
+                      <span v-else-if="filterOptions.sphereTypes.length <= 5">
+                        <sphere-type-icon v-for="sphereType in filterOptions.sphereTypes" :category="sphereType" :key="sphereType" class="ml-0 mr-1" style="margin-bottom: 2px"/>
+                        <span v-if="filterOptions.sphereTypes.length === 1">
+                          Only
+                        </span>
+                      </span>
+                      <span v-else>
+                        {{ filterOptions.sphereTypes.length }} Sphere Types
+                      </span>
+                    </v-chip>
+                    <v-chip small v-show="filterTypes.includes('craftables') && filterOptions.craftables.length < defaultFilters.craftables.length" style="text-transform: capitalize">
+                      {{ filterOptions.craftables[0] }}s Only
+                    </v-chip>
+                    <v-chip small v-show="filterTypes.includes('usage') && filterOptions.usage.length < defaultFilters.usage.length" style="text-transform: capitalize">
+                      {{ filterOptions.usage[0] }} Items Only
+                    </v-chip>
+                    <v-chip small v-show="filterTypes.includes('associatedUnits') && filterOptions.associatedUnits.length < defaultFilters.associatedUnits.length" style="text-transform: capitalize">
                       {{ filterOptions.associatedUnits[0] }} Associated Units Only
                     </v-chip>
-                    <v-chip small v-show="filterOptions.exclusives.length < defaultFilters.exclusives.length" style="text-transform: capitalize">
+                    <v-chip small v-show="filterTypes.includes('exclusives') && filterOptions.exclusives.length < defaultFilters.exclusives.length" style="text-transform: capitalize">
                       {{ filterOptions.exclusives[0] }}s Only
                     </v-chip>
                   </v-layout>
@@ -149,6 +180,75 @@
                                 </div>
                               </v-checkbox>
                             </v-flex>
+                          </v-layout>
+                        </v-flex>
+                      </v-layout>
+                      <v-layout row wrap>
+                        <v-flex xs12>
+                          <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Item Type</h3>
+                          <v-btn outline class="mr-0" @click="filterOptions.itemTypes = defaultFilters.itemTypes.slice()">All</v-btn>
+                          <v-btn outline class="ml-0" @click="filterOptions.itemTypes = []">None</v-btn>
+                          <v-layout row wrap>
+                            <v-flex xs6 sm3 v-for="(type, i) in defaultFilters.itemTypes" :key="i">
+                              <v-checkbox :value="type" v-model="filterOptions.itemTypes">
+                                <div slot="label">
+                                  <span style="text-transform: capitalize">{{ knownConstants.itemTypeMapping[type] }}</span>
+                                </div>
+                              </v-checkbox>
+                            </v-flex>
+                          </v-layout>
+                        </v-flex>
+                      </v-layout>
+                      <v-layout row wrap>
+                        <v-flex xs12>
+                          <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Sphere Type</h3>
+                          <v-btn outline class="mr-0" @click="filterOptions.sphereTypes = defaultFilters.sphereTypes.slice()">All</v-btn>
+                          <v-btn outline class="ml-0" @click="filterOptions.sphereTypes = []">None</v-btn>
+                          <v-layout row wrap>
+                            <v-flex xs6 sm3 v-for="(type, i) in defaultFilters.sphereTypes" :key="i">
+                              <v-checkbox :value="type" v-model="filterOptions.sphereTypes">
+                                <div slot="label">
+                                  <sphere-type-icon :category="type" class="ml-0 mr-1"/>
+                                  <span style="text-transform: capitalize">{{ getSphereCategory(type) }}</span>
+                                </div>
+                              </v-checkbox>
+                            </v-flex>
+                          </v-layout>
+                        </v-flex>
+                      </v-layout>
+                      <v-layout row wrap>
+                        <v-flex xs12>
+                          <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Craftables</h3>
+                          <v-layout row>
+                            <v-radio-group v-model="filterOptions.craftables" :row="$vuetify.breakpoint.mdAndUp">
+                              <v-radio
+                                :value="knownConstants.craftableFilterOptions.all"
+                                label="All"/>
+                              <v-radio
+                                :value="knownConstants.craftableFilterOptions.craftable"
+                                label="Craftables Only"/>
+                              <v-radio
+                                :value="knownConstants.craftableFilterOptions.nonCraftable"
+                                label="Non-Craftables Only"/>
+                            </v-radio-group>
+                          </v-layout>
+                        </v-flex>
+                      </v-layout>
+                      <v-layout row wrap>
+                        <v-flex xs12>
+                          <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Usage</h3>
+                          <v-layout row>
+                            <v-radio-group v-model="filterOptions.usage" :row="$vuetify.breakpoint.mdAndUp">
+                              <v-radio
+                                :value="knownConstants.usageFilterOptions.all"
+                                label="All"/>
+                              <v-radio
+                                :value="knownConstants.usageFilterOptions.used"
+                                label="Used in Other Items Only"/>
+                              <v-radio
+                                :value="knownConstants.usageFilterOptions.unused"
+                                label="Not Used in Other Items Only"/>
+                            </v-radio-group>
                           </v-layout>
                         </v-flex>
                       </v-layout>
@@ -388,6 +488,7 @@ import debounce from 'lodash/debounce';
 import ResultViewer from '@/components/Multidex/ResultViewer';
 import LoadingComponent from '@/components/Multidex/LoadingComponent';
 import ElementIcon from '@/components/Multidex/Units/ElementIcon';
+import SphereTypeIcon from '@/components/Multidex/Items/SphereTypeIcon';
 
 const multidexModules = moduleInfo.filter(m => m.type === 'multidex');
 export default {
@@ -429,7 +530,7 @@ export default {
     },
     filterTypes: {
       type: Array,
-      default: () => ['rarity', 'gender', 'kind', 'sphereTypes', 'itemTypes', 'associatedUnits', 'craftables', 'usage', 'exclusives'],
+      default: () => ['elements', 'rarity', 'gender', 'kind', 'sphereTypes', 'itemTypes', 'associatedUnits', 'craftables', 'usage', 'exclusives'],
     },
     dialogCloseLink: {
       type: String,
@@ -448,10 +549,12 @@ export default {
     'result-viewer': ResultViewer,
     'loading-component': LoadingComponent,
     'element-icon': ElementIcon,
+    'sphere-type-icon': SphereTypeIcon,
   },
   computed: {
     ...mapState('settings', ['activeServer']),
     ...mapState(['inInitState', 'sortAndFilterSettings']),
+    ...mapGetters('items', ['getSphereCategory']),
     ...(() => {
       // get state for each module
       let result = {};
@@ -571,6 +674,7 @@ export default {
       },
       filterOptions: {
         name: '',
+        element: [],
         rarity: [],
         gender: [],
         kind: [],
@@ -696,6 +800,10 @@ export default {
       return result;
     })(),
     async setServerBasedOnInputServer () {
+      if (!this.inputServer) {
+        return;
+      }
+
       if (!knownConstants.servers.includes(this.inputServer)) {
         console.error('Unknown server', this.inputServer, 'Auto rerouting to last known valid server', this.activeServer);
         this.$router.push(this.getMultidexPathTo(this.viewId, this.activeServer));
