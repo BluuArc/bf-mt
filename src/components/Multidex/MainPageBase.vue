@@ -115,7 +115,7 @@
                 <v-card class="filter-area">
                   <v-card-text>
                     <v-container fluid class="pa-0">
-                      <v-layout row wrap>
+                      <v-layout row wrap v-if="filterTypes.includes('elements')">
                         <v-flex xs12>
                           <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Element</h3>
                           <v-btn outline class="mr-0" @click="filterOptions.element = defaultFilters.element.slice()">All</v-btn>
@@ -131,7 +131,7 @@
                           </v-layout>
                         </v-flex>
                       </v-layout>
-                      <v-layout row wrap>
+                      <v-layout row wrap v-if="filterTypes.includes('rarity')">
                         <v-flex xs12>
                           <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Rarity</h3>
                           <v-btn outline class="mr-0" @click="filterOptions.rarity = defaultFilters.rarity.slice()">All</v-btn>
@@ -151,7 +151,7 @@
                           </v-layout>
                         </v-flex>
                       </v-layout>
-                      <v-layout row wrap>
+                      <v-layout row wrap v-if="filterTypes.includes('kind')">
                         <v-flex xs12>
                           <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Type</h3>
                           <v-btn outline class="mr-0" @click="filterOptions.kind = defaultFilters.kind.slice()">All</v-btn>
@@ -167,7 +167,7 @@
                           </v-layout>
                         </v-flex>
                       </v-layout>
-                      <v-layout row wrap>
+                      <v-layout row wrap v-if="filterTypes.includes('gender')">
                         <v-flex xs12>
                           <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Gender</h3>
                           <v-btn outline class="mr-0" @click="filterOptions.gender = defaultFilters.gender.slice()">All</v-btn>
@@ -183,7 +183,7 @@
                           </v-layout>
                         </v-flex>
                       </v-layout>
-                      <v-layout row wrap>
+                      <v-layout row wrap v-if="filterTypes.includes('itemTypes')">
                         <v-flex xs12>
                           <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Item Type</h3>
                           <v-btn outline class="mr-0" @click="filterOptions.itemTypes = defaultFilters.itemTypes.slice()">All</v-btn>
@@ -199,7 +199,7 @@
                           </v-layout>
                         </v-flex>
                       </v-layout>
-                      <v-layout row wrap>
+                      <v-layout row wrap v-if="filterTypes.includes('sphereTypes')">
                         <v-flex xs12>
                           <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Sphere Type</h3>
                           <v-btn outline class="mr-0" @click="filterOptions.sphereTypes = defaultFilters.sphereTypes.slice()">All</v-btn>
@@ -216,7 +216,7 @@
                           </v-layout>
                         </v-flex>
                       </v-layout>
-                      <v-layout row wrap>
+                      <v-layout row wrap v-if="filterTypes.includes('craftables')">
                         <v-flex xs12>
                           <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Craftables</h3>
                           <v-layout row>
@@ -234,7 +234,7 @@
                           </v-layout>
                         </v-flex>
                       </v-layout>
-                      <v-layout row wrap>
+                      <v-layout row wrap v-if="filterTypes.includes('usage')">
                         <v-flex xs12>
                           <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Usage</h3>
                           <v-layout row>
@@ -252,7 +252,7 @@
                           </v-layout>
                         </v-flex>
                       </v-layout>
-                      <v-layout row wrap>
+                      <v-layout row wrap v-if="filterTypes.includes('associatedUnits')">
                         <v-flex xs12>
                           <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Associated Units</h3>
                           <v-layout row>
@@ -270,7 +270,7 @@
                           </v-layout>
                         </v-flex>
                       </v-layout>
-                      <v-layout row wrap>
+                      <v-layout row wrap v-if="filterTypes.includes('exclusives')">
                         <v-flex xs12>
                           <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Server Exclusives</h3>
                           <p class="mb-0" v-if="!hasOtherServers">Please download data from the <router-link to="/settings" style="color: inherit">Settings Page</router-link> for at least one other server to use this filter.</p>

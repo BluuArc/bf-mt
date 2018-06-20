@@ -1,6 +1,7 @@
 <template>
   <main-page-base
     :required-modules="['units', 'items']"
+    :filterTypes="['elements', 'rarity', 'kind', 'gender', 'exclusives']"
     :page-db="pageDb"
     :view-id="viewId"
     :input-server="server"
