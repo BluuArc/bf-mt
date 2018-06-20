@@ -111,7 +111,15 @@ const store = new Vuex.Store({
       statLogStart('overallServerChange', false);
       for (const m of modules) {
         statLogStart(`serverChange-${m}`);
-        await dispatch(`${m}/setActiveServer`, server);
+        try {
+          await dispatch(`${m}/setActiveServer`, server);
+        } catch (err) {
+          console.error(err);
+        } finally {
+          if (m !== 'settings') {
+            commit(`${m}/setLoadState`, false);
+          }
+        }
         statLogEnd(`serverChange-${m}`);
       }
       statLogEnd('overallServerChange');

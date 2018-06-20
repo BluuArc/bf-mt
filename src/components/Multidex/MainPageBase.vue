@@ -350,7 +350,12 @@
                         :key="i"
                         xs12 sm4
                         class="text-xs-center">
-                        <v-btn :block="$vuetify.breakpoint.xsOnly" large v-text="server" :to="getMultidexPathTo(viewId, server)"/>
+                        <v-btn
+                          large
+                          :block="$vuetify.breakpoint.xsOnly"
+                          :disabled="server === activeServer"
+                          v-text="server"
+                          :to="getMultidexPathTo(viewId, server)"/>
                       </v-flex>
                     </v-layout>
                   </v-container>
@@ -611,11 +616,8 @@ export default {
       const entry = this.pageDb.hasOwnProperty(newValue) ? this.pageDb[newValue] : {};
       document.title = `BF-MT - ${this.mainModule.fullName} - ${entry.name || newValue}`;
     },
-    inputServer (newValue) {
-      if (newValue !== this.activeServer) {
-        this.finishedInit = false;
-        this.setActiveServer(newValue);
-      }
+    async inputServer (newValue) {
+      this.setServerBasedOnInputServer();
     },
     activeServer () {
       this.setShowDialog();
@@ -664,6 +666,10 @@ export default {
     }
   },
   mounted () {
+    if (!this.isDataLoading && !this.finishedInit) {
+      this.initDb();
+    }
+
     this.resetFilters();
     if (this.sortAndFilterSettings[this.routeKey]) {
       this.restoreSortAndFilterSettings();
@@ -689,17 +695,24 @@ export default {
       });
       return result;
     })(),
-    setShowDialog () {
-      this.showDialog = !this.isDataLoading && !!this.viewId && this.finishedInit && this.hasRequiredModules;
-    },
-    initDb: debounce(async function () {
-      if (!!this.inputServer && this.inputServer !== this.activeServer) {
+    async setServerBasedOnInputServer () {
+      if (!knownConstants.servers.includes(this.inputServer)) {
+        console.error('Unknown server', this.inputServer, 'Auto rerouting to last known valid server', this.activeServer);
+        this.$router.push(this.getMultidexPathTo(this.viewId, this.activeServer));
+      } else if (this.inputServer !== this.activeServer) {
+        this.finishedInit = false;
         try {
           await this.setActiveServer(this.inputServer);
         } catch (err) {
           console.error(err);
         }
       }
+    },
+    setShowDialog () {
+      this.showDialog = !this.isDataLoading && !!this.viewId && this.finishedInit && this.hasRequiredModules;
+    },
+    initDb: debounce(async function () {
+      await this.setServerBasedOnInputServer();
 
       for (const m of this.pageModules.map(m => m.name)) {
         await this[`${m}DbSync`]();
