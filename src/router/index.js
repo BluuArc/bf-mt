@@ -14,12 +14,19 @@ import LeaderSkillsPage from '@/components/Multidex/LeaderSkills/Main';
 
 Vue.use(Router);
 
+const defaultMultidexPropHandler = route => ({
+  query: route.query.q,
+  viewId: route.query.viewId,
+  server: route.query.server,
+});
+
 export default new Router({
   routes: [
     {
       path: '/debug',
       name: 'Debug',
       component: DebugPage,
+      props: defaultMultidexPropHandler,
     },
     {
       path: '/',
@@ -45,31 +52,31 @@ export default new Router({
       path: '/multidex/units',
       name: 'Units',
       component: UnitsPage,
-      props: route => ({ query: route.query.q, viewId: route.query.viewId }),
+      props: defaultMultidexPropHandler,
     },
     {
       path: '/multidex/items',
       name: 'Items',
       component: ItemsPage,
-      props: route => ({ query: route.query.q, viewId: route.query.viewId }),
+      props: defaultMultidexPropHandler,
     },
     {
       path: '/multidex/bursts',
       name: 'Bursts',
       component: BurstsPage,
-      props: route => ({ query: route.query.q, viewId: route.query.viewId }),
+      props: defaultMultidexPropHandler,
     },
     {
       path: '/multidex/extra-skills',
       name: 'Extra Skills',
       component: ExtraSkillsPage,
-      props: route => ({ query: route.query.q, viewId: route.query.viewId }),
+      props: defaultMultidexPropHandler,
     },
     {
       path: '/multidex/leader-skills',
       name: 'Leader Skills',
       component: LeaderSkillsPage,
-      props: route => ({ query: route.query.q, viewId: route.query.viewId }),
+      props: defaultMultidexPropHandler,
     },
   ],
 });

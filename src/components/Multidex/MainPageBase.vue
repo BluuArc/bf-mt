@@ -301,7 +301,7 @@
                 v-for="key in entriesToShow"
                 :key="key"
                 xs12 sm6 md4>
-                <v-card :to="moduleStateInfo[mainModule.name].getMultidexPathTo(key)" v-if="pageDb.hasOwnProperty(key)">
+                <v-card :to="getMultidexPathTo(key, activeServer)" v-if="pageDb.hasOwnProperty(key)">
                   <v-card-text>
                     {{ pageDb[key].name || pageDb[key].description || key }}
                   </v-card-text>
@@ -311,6 +311,66 @@
           </slot>
         </result-viewer>
       </v-flex>
+    </v-layout>
+    <v-layout row>
+      <v-dialog v-model="showDialog" fullscreen hide-overlay transition="dialog-bottom-transition">
+        <v-card>
+          <v-toolbar fixed>
+            <v-btn icon :to="dialogCloseLink || $route.path">
+              <v-icon>close</v-icon>
+            </v-btn>
+            <v-toolbar-title>
+              <slot name="dialog-toolbar-title">
+                <span style="margin-top: auto; margin-bottom: auto;" class="pl-2">
+                  <span v-if="pageDb[viewId]">
+                    {{ pageDb[viewId].name }}
+                  </span>
+                  <span v-else-if="viewId">
+                    (ID: {{ viewId }})
+                  </span>
+                </span>
+              </slot>
+            </v-toolbar-title>
+          </v-toolbar>
+          <template v-if="viewId">
+            <v-card-text v-if="!pageDb[viewId]" class="pl-0 pr-0 pt-5">
+              <v-card flat>
+                <v-card-text>
+                  <v-container>
+                    <v-layout row wrap>
+                      <v-flex xs12 class="text-xs-center">
+                        <h3 class="subheading">
+                          Entry with ID {{ viewId }} not found in current server ({{ activeServer.toUpperCase() }}). Would you like to try using a different server?
+                        </h3>
+                      </v-flex>
+                    </v-layout>
+                    <v-layout row wrap class="pt-2">
+                      <v-flex
+                        v-for="(server, i) in knownConstants.servers"
+                        :key="i"
+                        xs12 sm4
+                        class="text-xs-center">
+                        <v-btn :block="$vuetify.breakpoint.xsOnly" large v-text="server" :to="getMultidexPathTo(viewId, server)"/>
+                      </v-flex>
+                    </v-layout>
+                  </v-container>
+                </v-card-text>
+              </v-card>
+            </v-card-text>
+            <v-card-text v-else class="pl-0 pr-0 pt-5">
+              <slot name="dialog-content">
+                <v-card flat>
+                  <v-card-text>
+                    <p>Put your dialog content here.</p>
+
+                    {{ pageDb[viewId] }}
+                  </v-card-text>
+                </v-card>
+              </slot>
+            </v-card-text>
+          </template>
+        </v-card>
+      </v-dialog>
     </v-layout>
   </v-container>
 </template>
@@ -365,6 +425,18 @@ export default {
     filterTypes: {
       type: Array,
       default: () => ['rarity', 'gender', 'kind', 'sphereTypes', 'itemTypes', 'associatedUnits', 'craftables', 'usage', 'exclusives'],
+    },
+    dialogCloseLink: {
+      type: String,
+      default: '',
+    },
+    inputServer: {
+      type: String,
+      default: '',
+    },
+    getMultidexPathTo: {
+      type: Function,
+      required: true,
     },
   },
   components: {
@@ -539,6 +611,21 @@ export default {
       const entry = this.pageDb.hasOwnProperty(newValue) ? this.pageDb[newValue] : {};
       document.title = `BF-MT - ${this.mainModule.fullName} - ${entry.name || newValue}`;
     },
+    inputServer (newValue) {
+      if (newValue !== this.activeServer) {
+        this.finishedInit = false;
+        this.setActiveServer(newValue);
+      }
+    },
+    activeServer () {
+      this.setShowDialog();
+    },
+    moduleStateInfo: {
+      deep: true,
+      handler () {
+        this.setShowDialog();
+      },
+    },
     filterOptions: {
       deep: true,
       handler () {
@@ -587,6 +674,7 @@ export default {
   },
   methods: {
     ...mapMutations(['setHtmlOverflow', 'setSortAndFilterSettings']),
+    ...mapActions(['setActiveServer']),
     ...(() => {
       // get actions for each module
       let result = {};
@@ -605,6 +693,14 @@ export default {
       this.showDialog = !this.isDataLoading && !!this.viewId && this.finishedInit && this.hasRequiredModules;
     },
     initDb: debounce(async function () {
+      if (!!this.inputServer && this.inputServer !== this.activeServer) {
+        try {
+          await this.setActiveServer(this.inputServer);
+        } catch (err) {
+          console.error(err);
+        }
+      }
+
       for (const m of this.pageModules.map(m => m.name)) {
         await this[`${m}DbSync`]();
       }

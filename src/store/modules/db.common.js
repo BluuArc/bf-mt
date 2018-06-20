@@ -28,7 +28,7 @@ export const createState = () => {
 
 export const createGetters = (multidexModuleName = 'units') => {
   return {
-    getMultidexPathTo: state => id => `/multidex/${multidexModuleName}/?viewId=${id}`,
+    getMultidexPathTo: state => (id, server = state.activeServer) => `/multidex/${multidexModuleName}/?viewId=${id}&server=${server}`,
     getById: state => id => state.pageDb[id.toString()],
   };
 };
@@ -56,7 +56,7 @@ export const createMutations = () => {
           state.loadingMessage = '';
         }
       } else {
-        console.debug(mode);
+        // console.debug(mode);
         const { loadState, message } = mode;
         state.isLoading = !!loadState;
         if (message !== undefined) {
@@ -221,6 +221,7 @@ export const knownConstants = {
     raid: 'Raid Item',
     ls_sphere: 'LS Sphere',
   },
+  servers: ['gl', 'eu', 'jp'],
 };
 
 const commonFunctions = {
