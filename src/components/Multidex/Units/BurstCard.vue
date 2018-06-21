@@ -55,7 +55,7 @@
                     <v-slider v-model="levelIndex" step="1" ticks min="0" :max="numLevels - 1"/>
                   </v-flex>
                 </v-layout>
-                <proc-buff-list class="pt-0" :effects="burst.levels[levelIndex].effects"/>  
+                <effect-list class="pt-0" :effects="burst.levels[levelIndex].effects"/>
               </v-container>
             </v-slide-y-transition>
           </template>
@@ -79,14 +79,14 @@
 <script>
 import { mapGetters } from 'vuex';
 import JsonViewer from '@/components/Multidex/JsonViewer';
-import ProcBuffList from '@/components/Multidex/ProcBuffList';
+import EffectList from '@/components/Multidex/EffectList/MainTable';
 import HitCountTable from '@/components/Multidex/Units/HitCountTable';
 
 export default {
   props: ['burst', 'burstType'],
   components: {
     'json-viewer': JsonViewer,
-    'proc-buff-list': ProcBuffList,
+    'effect-list': EffectList,
     'hit-count-table': HitCountTable,
   },
   computed: {
