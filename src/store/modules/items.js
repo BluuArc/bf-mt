@@ -138,6 +138,16 @@ const itemStore = {
           const isUsed = !!entry.usage && entry.usage.length > 0;
           const fitsUsage = (usage.length !== 1 ? usage.length === 2 : ((usage[0] === 'unused' && !isUsed) || (usage[0] === 'used' && isUsed)));
 
+          // const result = { fitsName, fitsRarity, fitsExclusive, fitsAssociatedUnits, fitsItemType, fitsSphereType, fitsCraftable, fitsUsage };
+          // const failedResults = [];
+          // for (const key in result) {
+          //   if (!result[key]) {
+          //     failedResults.push(key);
+          //   }
+          // }
+          // if (failedResults.length > 0) {
+          //   console.log(entry.name, key, 'failed due to', failedResults.join(', '));
+          // }
           return fitsName && fitsRarity && fitsExclusive && fitsAssociatedUnits && fitsItemType && fitsSphereType && fitsCraftable && fitsUsage;
         });
       }, [keys, filters, otherKeys, state.pageDb]);

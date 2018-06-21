@@ -27,7 +27,7 @@
                   <h3 class="subheading"><b>Associated Unit ({{ (burstType || '').toUpperCase() }}):</b></h3>
                 </v-flex>
               </v-layout>
-              <v-layout row>
+              <v-layout row wrap>
                 <v-flex
                   v-for="key in burst.associated_units"
                   :key="key"

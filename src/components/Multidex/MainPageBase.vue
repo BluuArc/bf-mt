@@ -394,7 +394,7 @@
           :num-results="allSortedEntries.length"
           :required-modules="requiredModules"
           :server-type="activeServer">
-          <slot name="results-area">
+          <slot name="results-area" :results="entriesToShow">
             Put your result code here.
             <v-layout row wrap>
               <v-flex
@@ -513,6 +513,10 @@ export default {
       type: Object,
       default: () => {},
     },
+    minRarity: {
+      type: Number,
+      default: 0,
+    },
     maxRarity: {
       type: Number,
       default: 8,
@@ -583,7 +587,7 @@ export default {
       if (!this.pageModules.length === 0) {
         console.warn('No page modules specified. Defaulting to module at first index.', multidexModules[0]);
       }
-      return this.pageModules[0] || multidexModules[0];
+      return this.pageModules.filter(m => m.name === this.requiredModules[0])[0] || multidexModules[0];
     },
     hasOtherServers () {
       const numEntriesStatsForCurrentModule = this.moduleStateInfo[this.mainModule.name].numEntries;
@@ -642,7 +646,7 @@ export default {
     defaultFilters () {
       return {
         element: knownConstants.elements.slice(),
-        rarity: Object.keys(new Array(this.maxRarity).fill(0)).map(i => +i + 1),
+        rarity: Object.keys(new Array(this.maxRarity - this.minRarity + 1).fill(0)).map(i => +i + this.minRarity),
         gender: knownConstants.gender.slice(),
         kind: knownConstants.unitKind.slice(),
         sphereTypes: Object.keys(new Array(15).fill(0)).map(i => +i),
@@ -743,7 +747,15 @@ export default {
       deep: true,
       handler () {
         this.pageIndex = 0;
-        this.storeSortAndFilterSettings();
+        if (this.sortTypes[this.sortOptions.type]) {
+          this.storeSortAndFilterSettings();
+        } else {
+          const defaultType = Object.keys(this.sortTypes)[0];
+          if (this.finishedInit) {
+            console.warn('unknown sort type', this.sortOptions.type, 'defaulting to', defaultType);
+          }
+          this.sortOptions.type = defaultType;
+        }
       },
     },
     showDialog (newValue) {
