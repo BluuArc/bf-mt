@@ -28,7 +28,7 @@
               <v-btn flat class="ma-0" @click="showBuffList = !showBuffList">{{ showBuffList ? 'Hide' : 'Show' }} Buff List</v-btn>
             </v-card-actions>
             <v-slide-y-transition>
-              <passive-buff-list :effects="extraSkill.effects" v-show="showBuffList"/>  
+              <effect-list :effects="extraSkill.effects" v-show="showBuffList"/>
             </v-slide-y-transition>
           </template>
         </v-tab-item>
@@ -43,13 +43,13 @@
 <script>
 import { mapGetters } from 'vuex';
 import JsonViewer from '@/components/Multidex/JsonViewer';
-import PassiveBuffList from '@/components/Multidex/PassiveBuffList';
+import EffectList from '@/components/Multidex/EffectList/MainTable';
 
 export default {
   props: ['extraSkill'],
   components: {
     'json-viewer': JsonViewer,
-    'passive-buff-list': PassiveBuffList,
+    'effect-list': EffectList,
   },
   computed: {
     ...mapGetters('extraSkills', ['getMultidexPathTo']),
