@@ -13,6 +13,8 @@ let updateData = {
   bursts: {},
   extraSkills: {},
   leaderSkills: {},
+  missions: {},
+  dictionary: {},
 };
 
 let statsOnly = false;
@@ -470,8 +472,55 @@ async function getLeaderSkillDataForServer(server = 'gl', unitData = {}) {
   return lsData;
 }
 
+async function getMissionsForServer(server = 'gl') {
+   logger.info(`${server}: setting git data`);
+   let fileInfo = ghData['missions.json'];
+   if (server !== 'gl') {
+     fileInfo = ghData[server].contents['missions.json'];
+   }
+   updateData.missions[server] = fileInfo.date;
+   if (statsOnly) {
+     return {};
+   }
+
+
+   const missionData = {};
+   logger.info(`${server}: getting files`);
+   const downloadResult = await downloadMultipleFiles([getUrl(server, 'missions.json')]);
+   downloadResult.map(r => {
+     if (typeof r.data === "string") {
+       r.data = JSON.parse(r.data);
+     }
+     return r;
+   }).forEach(r => {
+     const {
+       data
+     } = r;
+     Object.keys(data)
+       .forEach(key => {
+         missionData[key] = data[key];
+       })
+   });
+   logger.debug('missionData', Object.keys(missionData));
+
+   logger.info(`${server}: saving files`);
+   const filename = `missions-${server}.json`;
+   fs.writeFileSync(`${outputFolder}/${filename}`, JSON.stringify(missionData, null, 2), 'utf8');
+   logger.info(`${server}: saved ${filename}`);
+   return missionData;
+}
+
 // TODO: implement usage for this
 async function getDictionaryForServer(server = 'gl') {
+  logger.info(`${server}: setting git data`);
+  let fileInfo = ghData['dictionary.json'];
+  if (server !== 'gl') {
+    fileInfo = ghData[server].contents['dictionary.json'];
+  }
+  updateData.dictionary[server] = fileInfo.date;
+  if (statsOnly) {
+    return {};
+  }
   logger.info(`${server}: getting files`);
   let dictionaryData = {};
   const downloadResult = await downloadMultipleFiles([getUrl(server, 'dictionary.json')]);
@@ -503,6 +552,7 @@ async function getData(servers = ['gl', 'eu', 'jp']) {
     await getExtraSkillDataForServer(s, unitData);
     await getLeaderSkillDataForServer(s, unitData);
     await getItemDataForServer(s, unitData);
+    await getMissionsForServer(s);
   }
 
   logger.info(`saving update statistics file`);
@@ -521,5 +571,5 @@ async function initializeGHData() {
   // logger.debug('ghData', ghData);
 }
 
-// statsOnly = true;
+statsOnly = true;
 getData();
