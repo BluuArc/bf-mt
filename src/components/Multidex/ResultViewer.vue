@@ -32,7 +32,9 @@
 
 <script>
 import { mapState, mapActions } from 'vuex';
+import { moduleInfo } from '@/store';
 
+const multidexModules = moduleInfo.filter(m => m.type === 'multidex');
 export default {
   props: {
     numResults: {
@@ -54,31 +56,22 @@ export default {
   },
   computed: {
     ...mapState('settings', ['activeServer']),
-    ...mapState('units', {
-      unitsNumEntries: 'numEntries',
-      unitssLoading: 'isLoading',
-      unitsCacheTimes: 'cacheTimes',
-    }),
-    ...mapState('items', {
-      itemsNumEntries: 'numEntries',
-      itemssLoading: 'isLoading',
-      itemsCacheTimes: 'cacheTimes',
-    }),
-    ...mapState('bursts', {
-      burstsNumEntries: 'numEntries',
-      burstssLoading: 'isLoading',
-      burstsCacheTimes: 'cacheTimes',
-    }),
-    ...mapState('extraSkills', {
-      extraSkillsNumEntries: 'numEntries',
-      extraSkillssLoading: 'isLoading',
-      extraSkillsCacheTimes: 'cacheTimes',
-    }),
-    ...mapState('leaderSkills', {
-      leaderSkillsNumEntries: 'numEntries',
-      leaderSkillssLoading: 'isLoading',
-      leaderSkillsCacheTimes: 'cacheTimes',
-    }),
+    ...(() => {
+      // get state for each module
+      let result = {};
+      multidexModules.map(m => m.name).forEach(m => {
+        const stateMapping = {};
+        stateMapping[`${m}IsLoading`] = 'isLoading';
+        stateMapping[`${m}CacheTimes`] = 'cacheTimes';
+        stateMapping[`${m}NumEntries`] = 'numEntries';
+
+        result = {
+          ...result,
+          ...mapState(m, stateMapping),
+        };
+      });
+      return result;
+    })(),
     actualServer () {
       return this.serverType || this.activeServer;
     },
@@ -90,51 +83,43 @@ export default {
       return this.requiredModules.filter(m => !this.modulesAlreadyPresent.includes(m));
     },
     stateInfo () {
-      const info = {};
-      Object.keys(this.dataSettingNameMapping)
-        .forEach(type => {
-          info[type] = {
-            numEntries: this[`${type}NumEntries`],
-            isLoading: this[`${type}sLoading`],
-            cacheTimes: this[`${type}CacheTimes`],
+      const result = {};
+      multidexModules.map(m => m.name)
+        .forEach(m => {
+          result[m] = {
+            isLoading: this[`${m}IsLoading`],
+            cacheTimes: this[`${m}CacheTimes`],
+            numEntries: this[`${m}NumEntries`],
           };
         });
-      return info;
+      return result;
     },
     dataSettingNameMapping () {
-      return {
-        units: 'Units',
-        items: 'Items',
-        bursts: 'Brave Bursts',
-        extraSkills: 'Extra Skills',
-        leaderSkills: 'Leader Skills',
-      };
+      const result = {};
+      multidexModules.forEach(({ name, fullName }) => {
+        result[name] = fullName;
+      });
+      return result;
     },
     dataIsLoading () {
       return Object.values(this.stateInfo).reduce((acc, val) => acc || val.isLoading, false);
     },
   },
   methods: {
-    ...mapActions('units', {
-      unitsDataUpdate: 'updateData',
-      unitsDataDelete: 'deleteData',
-    }),
-    ...mapActions('items', {
-      itemsDataUpdate: 'updateData',
-      itemsDataDelete: 'deleteData',
-    }),
-    ...mapActions('bursts', {
-      burstsDataUpdate: 'updateData',
-      burstsDataDelete: 'deleteData',
-    }),
-    ...mapActions('extraSkills', {
-      extraSkillsDataUpdate: 'updateData',
-      extraSkillsDataDelete: 'deleteData',
-    }),
-    ...mapActions('leaderSkills', {
-      leaderSkillsDataUpdate: 'updateData',
-      leaderSkillsDataDelete: 'deleteData',
-    }),
+     ...(() => {
+      // get actions for each module
+      let result = {};
+      multidexModules.map(m => m.name).forEach(m => {
+        const actionMapping = {};
+        actionMapping[`${m}DataUpdate`] = 'updateData';
+        // actionMapping[`${m}DataDelete`] = 'deleteData';
+        result = {
+          ...result,
+          ...mapActions(m, actionMapping),
+        };
+      });
+      return result;
+    })(),
     async downloadData () {
       console.debug('starting download for', this.toDownload);
       for (const type of this.toDownload) {

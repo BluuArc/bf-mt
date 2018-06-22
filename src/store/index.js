@@ -6,6 +6,7 @@ import ItemsModule from './modules/items';
 import BurstModule from './modules/bursts';
 import ExtraSkillModule from './modules/extra-skills';
 import LeaderSkillModule from './modules/leader-skills';
+import MissionModule from './modules/missions';
 import downloadWorker from './instances/download-worker';
 
 const statLogStart = (label, isCollapsed = true) => {
@@ -19,7 +20,7 @@ const statLogStart = (label, isCollapsed = true) => {
 const statLogEnd = (label) => { console.timeEnd(label); console.groupEnd(); };
 
 Vue.use(Vuex);
-export const modules = ['settings', 'units', 'items', 'bursts', 'extraSkills', 'leaderSkills'];
+export const modules = ['settings', 'units', 'items', 'bursts', 'extraSkills', 'leaderSkills', 'missions'];
 export const moduleInfo = [
   {
     name: 'settings',
@@ -49,6 +50,11 @@ export const moduleInfo = [
     fullName: 'Leader Skills',
     type: 'multidex',
   },
+  {
+    name: 'missions',
+    fullName: 'Missions',
+    type: 'multidex',
+  },
 ];
 const store = new Vuex.Store({
   modules: {
@@ -58,6 +64,7 @@ const store = new Vuex.Store({
     bursts: BurstModule,
     extraSkills: ExtraSkillModule,
     leaderSkills: LeaderSkillModule,
+    missions: MissionModule,
   },
   state: {
     disableHtmlOverflow: false,

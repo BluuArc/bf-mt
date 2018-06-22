@@ -6,7 +6,7 @@
       </v-flex>
     </v-layout>
     <v-layout row wrap v-else>
-      <template v-show="hasRequiredModules">
+      <template v-if="!!hasRequiredModules">
         <v-flex xs12>
           <v-card raised class="mr-3 ml-3">
             <v-card-text>
@@ -622,7 +622,11 @@ export default {
         .reduce((acc, val) => acc + val, 0);
     },
     hasRequiredModules () {
-      return this.totalEntries > 0;
+      return this.pageModules
+        .map(m => {
+          const numEntries = this.moduleStateInfo[m.name].numEntries[this.activeServer];
+          return numEntries === 0;
+        }).filter(hasNoEntries => !!hasNoEntries).length === 0;
     },
     allSortedEntries () {
       if (this.isDataLoading || this.loadingFilters) {

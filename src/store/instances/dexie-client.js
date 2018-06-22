@@ -58,4 +58,10 @@ export const leaderSkillWorker = {
   getMiniDb: (server, searchQuery = {}) => wrapper.worker.postMessage({ command: 'getMiniDbLeaderSkills', args: [server, searchQuery] }),
 };
 
+export const missionWorker = {
+  ...makeWorker('missions'),
+  getById: (server, id) => wrapper.getById('missions', { server }, 'data', id),
+  getMiniDb: (server, searchQuery = {}) => wrapper.worker.postMessage({ command: 'getMiniDbMissions', args: [server, searchQuery] }),
+};
+
 export default wrapper;
