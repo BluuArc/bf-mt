@@ -515,15 +515,18 @@ async function getDictionaryForServer(server = 'gl') {
   logger.info(`${server}: setting git data`);
   let fileInfo = ghData['dictionary.json'];
   if (server !== 'gl') {
-    fileInfo = ghData[server].contents['dictionary.json'];
+    logger.warn(`${server}: using GL dictionary data`);
+    // fileInfo = ghData[server].contents['dictionary.json'];
   }
   updateData.dictionary[server] = fileInfo.date;
   if (statsOnly) {
     return {};
   }
+
   logger.info(`${server}: getting files`);
   let dictionaryData = {};
-  const downloadResult = await downloadMultipleFiles([getUrl(server, 'dictionary.json')]);
+  // NOTE: only GL dictionary data exists for now
+  const downloadResult = await downloadMultipleFiles([getUrl('gl', 'dictionary.json')]);
   downloadResult.map(r => {
     if (typeof r.data === "string") {
       r.data = JSON.parse(r.data);
@@ -536,7 +539,30 @@ async function getDictionaryForServer(server = 'gl') {
         dictionaryData[key] = data[key];
       })
   });
-  logger.debug('dictionaryData', Object.keys(dictionaryData));
+  logger.debug('dictionaryData', Object.keys(dictionaryData).length);
+
+  // split data into 10 separate files
+  logger.info(`${server}: saving files`);
+  const maxLength = Math.floor(Object.keys(dictionaryData).length / 9);
+  let currentIndex = 0;
+  let keysAdded = 0;
+  for (let i = 0; i <= 9; ++i) {
+    const fileData = {};
+    Object.keys(dictionaryData)
+      .sort().slice(currentIndex, currentIndex + maxLength)
+      .forEach(id => {
+        fileData[id] = dictionaryData[id];
+        keysAdded++;
+      });
+    logger.debug(`fileData ${i}`, Object.keys(fileData).length);
+    logger.debug(`keys added so far`, keysAdded);
+    const filename = `dictionary-${server}-${i}.json`;
+    fs.writeFileSync(`${outputFolder}/${filename}`, JSON.stringify(fileData, null, 2), 'utf8');
+    logger.info(`${server}: saved ${filename}`);
+    currentIndex += maxLength;
+  }
+  logger.debug(`${server}: added all keys`, keysAdded === Object.keys(dictionaryData).length);
+
   return dictionaryData;
 }
 
@@ -553,6 +579,7 @@ async function getData(servers = ['gl', 'eu', 'jp']) {
     await getLeaderSkillDataForServer(s, unitData);
     await getItemDataForServer(s, unitData);
     await getMissionsForServer(s);
+    await getDictionaryForServer(s);
   }
 
   logger.info(`saving update statistics file`);
