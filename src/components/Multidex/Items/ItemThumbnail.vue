@@ -1,8 +1,31 @@
 <template>
   <span>
-    <span class="item-thumbnail-group" :style="imgStyle">
-      <img
-        src="@/assets/item_frame_1.png"
+    <svg
+      :width="width" :height="height"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      :style="imgStyle">
+      <image
+        xlink:href="@/assets/item_frame_bg2.png"
+        :width="width" :height="height"
+        :style="imgStyle"
+        :class="imgClass"
+        :align="align"
+        :title="title"
+        :alt="alt"
+        class="item-thumbnail-background"/>
+       <image
+        :xlink:href="src"
+        :width="width" :height="height"
+        :style="imgStyle"
+        :class="imgClass"
+        :align="align"
+        :title="title"
+        :alt="alt"
+        class="item-thumbnail"/>
+      <image
+        xlink:href="@/assets/item_frame_1.png"
+        :width="width" :height="height"
         v-if="type === 'consumable' && !raid"
         :style="imgStyle"
         :class="imgClass"
@@ -10,8 +33,9 @@
         :title="title"
         :alt="alt"
         class="item-thumbnail-frame"/>
-      <img
-        src="@/assets/item_frame_2.png"
+      <image
+        xlink:href="@/assets/item_frame_2.png"
+        :width="width" :height="height"
         v-else-if="type === 'material' && !raid"
         :style="imgStyle"
         :class="imgClass"
@@ -19,8 +43,9 @@
         :title="title"
         :alt="alt"
         class="item-thumbnail-frame"/>
-      <img
-        src="@/assets/item_frame_3.png"
+      <image
+        xlink:href="@/assets/item_frame_3.png"
+        :width="width" :height="height"
         v-else-if="type === 'sphere'"
         :style="imgStyle"
         :class="imgClass"
@@ -28,8 +53,9 @@
         :title="title"
         :alt="alt"
         class="item-thumbnail-frame"/>
-      <img
-        src="@/assets/item_frame_4.png"
+      <image
+        xlink:href="@/assets/item_frame_4.png"
+        :width="width" :height="height"
         v-else-if="type === 'evomat'"
         :style="imgStyle"
         :class="imgClass"
@@ -37,8 +63,9 @@
         :title="title"
         :alt="alt"
         class="item-thumbnail-frame"/>
-      <img
-        src="@/assets/item_frame_6.png"
+      <image
+        xlink:href="@/assets/item_frame_6.png"
+        :width="width" :height="height"
         v-else-if="type === 'summoner_consumable'"
         :style="imgStyle"
         :class="imgClass"
@@ -46,8 +73,9 @@
         :title="title"
         :alt="alt"
         class="item-thumbnail-frame"/>
-      <img
-        src="@/assets/item_frame_5.png"
+      <image
+        xlink:href="@/assets/item_frame_5.png"
+        :width="width" :height="height"
         v-else-if="raid"
         :style="imgStyle"
         :class="imgClass"
@@ -55,8 +83,9 @@
         :title="title"
         :alt="alt"
         class="item-thumbnail-frame"/>
-      <img
-        src="@/assets/item_frame_7.png"
+      <image
+        xlink:href="@/assets/item_frame_7.png"
+        :width="width" :height="height"
         v-else-if="type === 'ls_sphere'"
         :style="imgStyle"
         :class="imgClass"
@@ -64,8 +93,9 @@
         :title="title"
         :alt="alt"
         class="item-thumbnail-frame"/>
-      <img
-        src="@/assets/item_frame_0.png"
+      <image
+        xlink:href="@/assets/item_frame_0.png"
+        :width="width" :height="height"
         v-else
         :style="imgStyle"
         :class="imgClass"
@@ -73,6 +103,8 @@
         :title="title"
         :alt="alt"
         class="item-thumbnail-frame"/>
+    </svg>
+    <span class="item-thumbnail-group" style="display: none;">
       <img
         :src="src"
         :style="imgStyle"
@@ -81,14 +113,6 @@
         :title="title"
         :alt="alt"
         class="item-thumbnail"/>
-      <img
-        src="@/assets/item_frame_bg2.png"
-        :style="imgStyle"
-        :class="imgClass"
-        :align="align"
-        :title="title"
-        :alt="alt"
-        class="item-thumbnail-background"/>
     </span>
     <img
       src="@/assets/secret.png"
@@ -103,18 +127,18 @@
 
 <script>
 export default {
-  props: ['imgClass', 'imgStyle', 'src', 'rarity', 'title', 'alt', 'align', 'type', 'raid'],
+  props: ['imgClass', 'imgStyle', 'src', 'rarity', 'title', 'alt', 'align', 'type', 'raid', 'width', 'height'],
   mounted () {
     const placeholderImage = this.$el.querySelector('img.item-filler-thumbnail');
     const actualImage = this.$el.querySelector('img.item-thumbnail');
-    const imageGroup = this.$el.querySelector('.item-thumbnail-group');
+    const svg = this.$el.getElementsByTagName('svg')[0];
 
     placeholderImage.style.display = 'initial';
-    imageGroup.style.display = 'none';
+    svg.style.display = 'none';
 
     actualImage.onload = () => {
       placeholderImage.style.display = 'none';
-      imageGroup.style.display = '';
+      svg.style.display = '';
     };
   },
 };
