@@ -3,25 +3,29 @@
     <v-container fluid class="pa-1" grid-list-md>
       <v-card-title class="pb-0">
         <v-layout row wrap>
-          <v-flex xs9>
+          <v-flex xs8>
             <h3 class="title">{{ mission.name || 'No Name' }}</h3>
             <h3 class="body-1">
+              <span v-if="mission.land" v-text="mission.land"></span>
+              <span v-if="mission.land && mission.area" v-text="'/'"/>
               <span v-if="mission.area" v-text="mission.area"></span>
               <span v-if="mission.area && mission.dungeon" v-text="'/'"/>
               <span v-if="mission.dungeon" v-text="mission.dungeon"></span>
             </h3>
           </v-flex>
-          <v-flex xs3>
+          <v-flex xs4 class="text-xs-right">
             <h3 class="subheading">{{ mission.energy_use }} EN</h3>
             <h3 class="subheading">{{ mission.battle_count }} Battles</h3>
+            <h3 class="body-1">
+              {{ xpPerEnergy }} XP/EN
+            </h3>
           </v-flex>
         </v-layout>
       </v-card-title>
       <v-card-text>
         <v-layout row wrap>
           <v-flex xs12 md6>
-            <span><b>Base Rewards:</b></span>
-            <br>
+            <div><b>Base Rewards:</b></div>
             <template v-if="hasBaseRewards">
               <span v-if="mission.xp">{{ mission.xp }} XP{{ (mission.xp && (mission.zel || mission.karma)) ? ',' : '' }}</span>
               <span v-if="mission.zel">{{ mission.zel }} Zel{{ ((mission.xp || mission.zel) && mission.karma) ? ',' : '' }}</span>
@@ -32,14 +36,14 @@
             </template>
           </v-flex>
           <v-flex xs12 md6 v-if="hasClearBonus">
-            <span><b>Clear Rewards:</b></span>
+            <span><b>First Clear Rewards:</b></span>
             <br>
-            <span v-for="(reward, i) in mission.clear_bonus" :key="i" style="white-space: nowrap; min-width: 50px;">
-              <template v-if="reward.gem">
+            <span v-for="(reward, i) in mission.clear_bonus" :key="i">
+              <span v-if="reward.gem" style="white-space: nowrap;">
                 {{ reward.gem }}x
                 <gem-thumbnail/>
-              </template>
-              <template v-if="reward.unit">
+              </span>
+              <span v-if="reward.unit" style="white-space: nowrap;">
                 {{ reward.unit.count }}x
                 <unit-thumbnail
                     :src="getImageUrls(reward.unit.id.toString()).ills_thum"
@@ -47,8 +51,8 @@
                     imgStyle="height: 36px; width: 36px; vertical-align: middle;"
                     :rarity="(unitById(reward.unit.id.toString()) || {}).rarity"
                     :title="(unitById(reward.unit.id.toString()) || {}).name"/>
-              </template>
-              <template v-if="reward.item">
+              </span>
+              <span v-if="reward.item" style="white-space: nowrap;">
                 {{ reward.item.count }}x
                 <item-thumbnail
                   :src="getImageUrl(reward.item.id)"
@@ -58,7 +62,7 @@
                   :rarity="reward.item.rarity"
                   :type="reward.item.type"
                   :raid="reward.item.raid"/>
-              </template>
+              </span>
             </span>
           </v-flex>
         </v-layout>
@@ -90,6 +94,11 @@ export default {
     },
     hasMimics () {
       return this.mission.mimic_info && Object.keys(this.mission.mimic_info).length > 0;
+    },
+    xpPerEnergy () {
+      const result = (+this.mission.xp / (Math.max(1, +this.mission.energy_use))).toFixed(2);
+      const [whole, dec] = result.split('.');
+      return (+dec === 0) ? whole : result;
     },
   },
 };
