@@ -1,5 +1,5 @@
 <template>
-  <img src="@/assets/gem_thum.png" :style="imgStyle" title="gem"/>
+  <img src="@/assets/gem_thum.png" :style="imgStyle" title="Gem"/>
 </template>
 
 <script>

@@ -6,16 +6,16 @@
           <v-flex xs8>
             <h3 class="title">{{ mission.name || 'No Name' }}</h3>
             <h3 class="body-1">
-              <span v-if="mission.land" v-text="mission.land"></span>
+              <span v-if="mission.land" v-text="mission.land" title="Land"></span>
               <span v-if="mission.land && mission.area" v-text="'/'"/>
-              <span v-if="mission.area" v-text="mission.area"></span>
+              <span v-if="mission.area" v-text="mission.area" title="Area"></span>
               <span v-if="mission.area && mission.dungeon" v-text="'/'"/>
-              <span v-if="mission.dungeon" v-text="mission.dungeon"></span>
+              <span v-if="mission.dungeon" v-text="mission.dungeon" title="Dungeon"></span>
             </h3>
           </v-flex>
           <v-flex xs4 class="text-xs-right">
             <h3 class="subheading">{{ mission.energy_use }} EN</h3>
-            <h3 class="subheading">{{ mission.battle_count }} Battles</h3>
+            <h3 class="subheading">{{ mission.battle_count }} {{ +mission.battle_count === 1 ? 'Battle' : 'Battles' }}</h3>
             <h3 class="body-1">
               {{ xpPerEnergy }} XP/EN
             </h3>
@@ -59,6 +59,7 @@
                   class="mx-auto"
                   style="height: 36px; width: 36px;"
                   imgStyle="height: 36px; width: 36px; vertical-align: middle;"
+                  :title="(itemById(reward.item.id) || {}).name"
                   :rarity="reward.item.rarity"
                   :type="reward.item.type"
                   :raid="reward.item.raid"/>

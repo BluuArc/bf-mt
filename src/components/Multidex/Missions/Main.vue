@@ -49,12 +49,56 @@ export default {
     sortTypes () {
       return {
         'Mission ID': (idA, idB, isAscending) => {
-          const result = (+idA - +idB);
+          const result = this.getIdCompareResult({ idA, idB });
           return isAscending ? result : -result;
         },
         Alphabetical: (idA, idB, isAscending) => {
-          const [nameA, nameB] = [this.pageDb[idA].name, this.pageDb[idB].name];
-          const result = (nameA > nameB) ? 1 : -1;
+          const [strA, strB] = [this.pageDb[idA].name, this.pageDb[idB].name];
+          const result = this.getStringCompareResult({ strA, strB }, { idA, idB });
+          return isAscending ? result : -result;
+        },
+        Energy: (idA, idB, isAscending) => {
+          const [numA, numB] = [+this.pageDb[idA].energy_use, +this.pageDb[idB].energy_use];
+          const result = this.getNumberCompareResult({ numA, numB }, { idA, idB });
+          return isAscending ? result : -result;
+        },
+        'Battle Count': (idA, idB, isAscending) => {
+          const [numA, numB] = [+this.pageDb[idA].battle_count, +this.pageDb[idB].battle_count];
+          const result = this.getNumberCompareResult({ numA, numB }, { idA, idB });
+          return isAscending ? result : -result;
+        },
+        Map: (idA, idB, isAscending) => {
+          const getStringResult = (a, b) => (a > b) ? 1 : -1;
+          const [missionA, missionB] = [this.pageDb[idA], this.pageDb[idB]];
+          const { land: landA, area: areaA, dungeon: dungeonA } = missionA;
+          const { land: landB, area: areaB, dungeon: dungeonB } = missionB;
+          let result;
+          // missions are categorized as land/area/dungeon/name
+          if (landA === landB) {
+            if (areaA === areaB) {
+              if (dungeonA === dungeonB) {
+                result = (+idA - +idB);
+              } else {
+                result = getStringResult(dungeonA, dungeonB);
+              }
+            } else {
+              result = getStringResult(areaA, areaB);
+            }
+          } else {
+            result = getStringResult(landA, landB);
+          }
+          return isAscending ? result : -result;
+        },
+        XP: (idA, idB, isAscending) => {
+          const [numA, numB] = [+this.pageDb[idA].xp, this.pageDb[idB].xp];
+          const result = this.getNumberCompareResult({ numA, numB }, { idA, idB });
+          return isAscending ? result : -result;
+        },
+        'XP/EN': (idA, idB, isAscending) => {
+          const [xpA, xpB] = [+this.pageDb[idA].xp, this.pageDb[idB].xp];
+          const [energyA, energyB] = [+this.pageDb[idA].energy_use, +this.pageDb[idB].energy_use];
+          const [numA, numB] = [this.calculateXpPerEnergy(xpA, energyA), this.calculateXpPerEnergy(xpB, energyB)];
+          const result = this.getNumberCompareResult({ numA, numB }, { idA, idB });
           return isAscending ? result : -result;
         },
       };
@@ -63,5 +107,25 @@ export default {
       return `multidex-${this.$route.name}`;
     },
   },
+  methods: {
+    getIdCompareResult ({ idA, idB }) {
+      return +idA - +idB;
+    },
+    getStringCompareResult ({ strA, strB }, ids) {
+      if (strA === strB) {
+        return this.getIdCompareResult(ids);
+      }
+      return (strA > strB) ? 1 : -1;
+    },
+    getNumberCompareResult ({ numA, numB }, ids) {
+      if (numA === numB) {
+        return this.getIdCompareResult(ids);
+      }
+      return numA - numB;
+    },
+    calculateXpPerEnergy (xp = 0, en = 0) {
+      return xp / (Math.max(1, en));
+    },
+  }
 };
 </script>

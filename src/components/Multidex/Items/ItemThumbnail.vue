@@ -4,7 +4,9 @@
       :width="width" :height="height"
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
+      :title="title"
       :style="imgStyle">
+      <title v-if="title" v-text="title"/>
       <image
         xlink:href="@/assets/item_frame_bg2.png"
         :width="width" :height="height"
