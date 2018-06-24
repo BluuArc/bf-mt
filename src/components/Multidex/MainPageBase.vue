@@ -107,6 +107,15 @@
                     <v-chip small v-show="filterTypes.includes('associatedUnits') && filterOptions.associatedUnits.length < defaultFilters.associatedUnits.length" style="text-transform: capitalize">
                       {{ filterOptions.associatedUnits[0] }} Associated Units Only
                     </v-chip>
+                    <v-chip small v-show="filterTypes.includes('associatedItems') && filterOptions.associatedItems.length < defaultFilters.associatedItems.length" style="text-transform: capitalize">
+                      {{ filterOptions.associatedItems[0] }} Associated Items Only
+                    </v-chip>
+                    <v-chip small v-show="filterTypes.includes('gems') && filterOptions.gems.length < defaultFilters.gems.length" style="text-transform: capitalize">
+                      {{ filterOptions.gems[0] }} Gems Only
+                    </v-chip>
+                    <v-chip small v-show="filterTypes.includes('continues') && filterOptions.continues.length < defaultFilters.continues.length" style="text-transform: capitalize">
+                      {{ filterOptions.continues[0] }} Continues Only
+                    </v-chip>
                     <v-chip small v-show="filterTypes.includes('exclusives') && filterOptions.exclusives.length < defaultFilters.exclusives.length" style="text-transform: capitalize">
                       {{ filterOptions.exclusives[0] }}s Only
                     </v-chip>
@@ -266,6 +275,60 @@
                               <v-radio
                                 :value="knownConstants.associatedUnitOptions.without"
                                 label="Without Associated Units"/>
+                            </v-radio-group>
+                          </v-layout>
+                        </v-flex>
+                      </v-layout>
+                      <v-layout row wrap v-if="filterTypes.includes('associatedItems')">
+                        <v-flex xs12>
+                          <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Associated Items</h3>
+                          <v-layout row>
+                            <v-radio-group v-model="filterOptions.associatedItems" :row="$vuetify.breakpoint.mdAndUp">
+                              <v-radio
+                                :value="knownConstants.withWithoutTernaryOptions.all"
+                                label="All"/>
+                              <v-radio
+                                :value="knownConstants.withWithoutTernaryOptions.with"
+                                label="With Associated Items Only"/>
+                              <v-radio
+                                :value="knownConstants.withWithoutTernaryOptions.without"
+                                label="Without Associated Items"/>
+                            </v-radio-group>
+                          </v-layout>
+                        </v-flex>
+                      </v-layout>
+                      <v-layout row wrap v-if="filterTypes.includes('gems')">
+                        <v-flex xs12>
+                          <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Gems</h3>
+                          <v-layout row>
+                            <v-radio-group v-model="filterOptions.gems" :row="$vuetify.breakpoint.mdAndUp">
+                              <v-radio
+                                :value="knownConstants.withWithoutTernaryOptions.all"
+                                label="All"/>
+                              <v-radio
+                                :value="knownConstants.withWithoutTernaryOptions.with"
+                                label="With Gems Only"/>
+                              <v-radio
+                                :value="knownConstants.withWithoutTernaryOptions.without"
+                                label="Without Gems"/>
+                            </v-radio-group>
+                          </v-layout>
+                        </v-flex>
+                      </v-layout>
+                      <v-layout row wrap v-if="filterTypes.includes('continues')">
+                        <v-flex xs12>
+                          <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Quest Continues</h3>
+                          <v-layout row>
+                            <v-radio-group v-model="filterOptions.continues" :row="$vuetify.breakpoint.mdAndUp">
+                              <v-radio
+                                :value="knownConstants.withWithoutTernaryOptions.all"
+                                label="All"/>
+                              <v-radio
+                                :value="knownConstants.withWithoutTernaryOptions.with"
+                                label="Quest Continues Allowed"/>
+                              <v-radio
+                                :value="knownConstants.withWithoutTernaryOptions.without"
+                                label="No Quest Continues"/>
                             </v-radio-group>
                           </v-layout>
                         </v-flex>
@@ -534,7 +597,21 @@ export default {
     },
     filterTypes: {
       type: Array,
-      default: () => ['elements', 'rarity', 'gender', 'kind', 'sphereTypes', 'itemTypes', 'associatedUnits', 'craftables', 'usage', 'exclusives'],
+      default: () => [
+        'elements',
+        'rarity',
+        'gender',
+        'kind',
+        'sphereTypes',
+        'itemTypes',
+        'associatedUnits',
+        'associatedItems',
+        'craftables',
+        'usage',
+        'gems',
+        'continues',
+        'exclusives',
+      ],
     },
     dialogCloseLink: {
       type: String,
@@ -656,6 +733,9 @@ export default {
         sphereTypes: Object.keys(new Array(15).fill(0)).map(i => +i),
         itemTypes: knownConstants.itemTypes.slice(),
         associatedUnits: knownConstants.associatedUnitOptions.all,
+        associatedItems: knownConstants.withWithoutTernaryOptions.all,
+        gems: knownConstants.withWithoutTernaryOptions.all,
+        continues: knownConstants.withWithoutTernaryOptions.all,
         craftables: knownConstants.craftableFilterOptions.all,
         usage: knownConstants.usageFilterOptions.all,
         exclusives: knownConstants.exclusiveFilterOptions.all,
@@ -689,6 +769,9 @@ export default {
         sphereTypes: [],
         itemTypes: [],
         associatedUnits: [],
+        associatedItems: [],
+        gems: [],
+        continues: [],
         craftables: [],
         usage: [],
         exclusives: [],
@@ -883,33 +966,28 @@ export default {
           this.filterOptions[key] = filter[key].slice();
         });
 
-        if (this.filterOptions.exclusives.length === 2) {
-          this.filterOptions.exclusives = knownConstants.exclusiveFilterOptions.all;
-        } else {
-          const elem = this.filterOptions.exclusives[0];
-          this.filterOptions.exclusives = knownConstants.exclusiveFilterOptions[(elem === knownConstants.exclusiveFilterOptions.exclusive[0]) ? 'exclusive' : 'nonExclusive'];
-        }
+        const ternaryHandler = (ternaryFilterKey, constants = { all: [] }, trueValKey, falseValKey) => {
+          if (this.filterOptions[ternaryFilterKey].length === 2) {
+            this.filterOptions[ternaryFilterKey] = constants.all;
+          } else {
+            const elem = this.filterOptions[ternaryFilterKey][0];
+            this.filterOptions[ternaryFilterKey] = constants[(elem === constants[trueValKey][0]) ? trueValKey : falseValKey];
+          }
+        };
 
-        if (this.filterOptions.associatedUnits.length === 2) {
-          this.filterOptions.associatedUnits = knownConstants.associatedUnitOptions.all;
-        } else {
-          const elem = this.filterOptions.associatedUnits[0];
-          this.filterOptions.associatedUnits = knownConstants.associatedUnitOptions[(elem === knownConstants.associatedUnitOptions.with[0]) ? 'with' : 'without'];
-        }
+        const ternaries = [
+          ['exclusives', knownConstants.exclusiveFilterOptions, 'exclusive', 'nonExclusive'],
+          ['associatedUnits', knownConstants.associatedUnitOptions, 'with', 'without'],
+          ['associatedItems', knownConstants.withWithoutTernaryOptions, 'with', 'without'],
+          ['gems', knownConstants.withWithoutTernaryOptions, 'with', 'without'],
+          ['continues', knownConstants.withWithoutTernaryOptions, 'with', 'without'],
+          ['craftables', knownConstants.craftableFilterOptions, 'craftable', 'nonCraftable'],
+          ['usage', knownConstants.usageFilterOptions, 'used', 'unused'],
+        ];
 
-        if (this.filterOptions.craftables.length === 2) {
-          this.filterOptions.craftables = knownConstants.craftableFilterOptions.all;
-        } else {
-          const elem = this.filterOptions.craftables[0];
-          this.filterOptions.craftables = knownConstants.craftableFilterOptions[(elem === knownConstants.craftableFilterOptions.craftable[0]) ? 'craftable' : 'nonCraftable'];
-        }
-
-        if (this.filterOptions.usage.length === 2) {
-          this.filterOptions.usage = knownConstants.usageFilterOptions.all;
-        } else {
-          const elem = this.filterOptions.usage[0];
-          this.filterOptions.usage = knownConstants.usageFilterOptions[(elem === knownConstants.usageFilterOptions.used[0]) ? 'used' : 'unused'];
-        }
+        ternaries.forEach((args) => {
+          ternaryHandler(...args);
+        });
 
         this.filterOptions.forceUpdate = true;
 
@@ -927,6 +1005,9 @@ export default {
       });
       this.filterOptions.exclusives = this.defaultFilters.exclusives;
       this.filterOptions.associatedUnits = this.defaultFilters.associatedUnits;
+      this.filterOptions.associatedItems = this.defaultFilters.associatedItems;
+      this.filterOptions.gems = this.defaultFilters.gems;
+      this.filterOptions.continues = this.defaultFilters.continues;
       this.filterOptions.craftables = this.defaultFilters.craftables;
       this.filterOptions.usage = this.defaultFilters.usage;
       this.filterOptions.name = '';
@@ -972,7 +1053,3 @@ export default {
   },
 };
 </script>
-
-<style>
-
-</style>

@@ -197,6 +197,12 @@ export const knownConstants = {
     exclusive: ['exclusive'],
     nonExclusive: ['non-exclusive'],
   },
+  // default ternary options
+  withWithoutTernaryOptions: {
+    all: ['with', 'without'],
+    with: ['with'],
+    without: ['without'],
+  },
   associatedUnitOptions: {
     all: ['with', 'without'],
     with: ['with'],

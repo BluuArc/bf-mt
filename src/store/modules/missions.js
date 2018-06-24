@@ -68,10 +68,10 @@ const missionStore = {
         const fitsTernary = (entryIsTrue = false, filterValue = [], { trueVal = 'true', falseVal = 'false' }) => {
           return (filterValue.length !== 1
             ? filterValue.length === 2 // all or none
-            : ((filterValue[0] === trueVal && entryIsTrue) || (filterValue === falseVal && !entryIsTrue)) // entry is true matches filter
+            : ((filterValue[0] === trueVal && entryIsTrue) || (filterValue[0] === falseVal && !entryIsTrue)) // entry is true matches filter
           );
         };
-        const { name = '', exclusives = [], associatedUnits = [], associatedItems = [], difficulty = [], canContinue = [], area = [], dungeon = [], land = [], hasMimics = [], hasRequirements = [], hasGems = [] } = filters;
+        const { name = '', exclusives = [], associatedUnits = [], associatedItems = [], gems = [], continues = [], area = [], dungeon = [], land = [], difficulty = [], hasMimics = [], hasRequirements = [] } = filters;
         return keys.filter(key => {
           const entry = pageDb[key];
           const fitsName = (!name ? true : entry.name.toLowerCase().includes(name.toLowerCase()));
@@ -82,16 +82,18 @@ const missionStore = {
           const hasAssociatedUnits = Array.isArray(entry.clear_bonus) && entry.clear_bonus.filter(bonus => !!bonus.unit).length > 0;
           const fitsAssociatedUnits = fitsTernary(hasAssociatedUnits, associatedUnits, { trueVal: 'with', falseVal: 'without' });
 
-          // const hasAssociatedItems = Array.isArray(entry.clear_bonus) && entry.clear_bonus.filter(bonus => !!bonus.item).length > 0;
-          // const fitsAssociatedItems = fitsTernary(hasAssociatedItems, associatedItems, { trueVal: 'with', falseVal: 'without' });
+          const hasAssociatedItems = Array.isArray(entry.clear_bonus) && entry.clear_bonus.filter(bonus => !!bonus.item).length > 0;
+          const fitsAssociatedItems = fitsTernary(hasAssociatedItems, associatedItems, { trueVal: 'with', falseVal: 'without' });
 
-          // const doesHaveGems = Array.isArray(entry.clear_bonus) && entry.clear_bonus.filter(bonus => !!bonus.gem).length > 0;
-          // const fitsGemFilter = fitsTernary(doesHaveGems, hasGems, { trueVal: 'with', falseVal: 'without' });
+          const hasGems = Array.isArray(entry.clear_bonus) && entry.clear_bonus.filter(bonus => !!bonus.gem).length > 0;
+          const fitsGemFilter = fitsTernary(hasGems, gems, { trueVal: 'with', falseVal: 'without' });
+
+          const hasContinues = !!entry.continue;
+          const fitsContinueFilter = fitsTernary(hasContinues, continues, { trueVal: 'with', falseVal: 'without' });
 
           // const doesHaveMimics = entry.mimic_info && Object.keys(entry.mimic_info).length > 0;
           // const fitsMimicFilter = fitsTernary(doesHaveMimics, hasMimics, { trueVal: 'with', falseVal: 'without' });
-
-          return fitsName && fitsExclusive && fitsAssociatedUnits;
+          return [fitsName, fitsExclusive, fitsAssociatedUnits, fitsAssociatedItems, fitsGemFilter, fitsContinueFilter].reduce((acc, val) => acc && val, true);
         });
       }, [keys, filters, otherKeys, state.pageDb]);
       return result;

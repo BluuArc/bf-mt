@@ -12,6 +12,9 @@
               <span v-if="mission.area && mission.dungeon" v-text="'/'"/>
               <span v-if="mission.dungeon" v-text="mission.dungeon" title="Dungeon"></span>
             </h3>
+            <h3 class="body-2" v-if="!mission.continue">
+              <u><b>No Continues</b></u>
+            </h3>
           </v-flex>
           <v-flex xs4 class="text-xs-right">
             <h3 class="subheading">{{ mission.energy_use }} EN</h3>
@@ -27,9 +30,9 @@
           <v-flex xs12 md6>
             <div><b>Base Rewards:</b></div>
             <template v-if="hasBaseRewards">
-              <span v-if="mission.xp">{{ mission.xp }} XP{{ (mission.xp && (mission.zel || mission.karma)) ? ',' : '' }}</span>
-              <span v-if="mission.zel">{{ mission.zel }} Zel{{ ((mission.xp || mission.zel) && mission.karma) ? ',' : '' }}</span>
-              <span v-if="mission.karma">{{ mission.karma }} Karma</span>
+              <span style="white-space: nowrap;" v-if="mission.xp">{{ mission.xp }} XP{{ (mission.xp && (mission.zel || mission.karma)) ? ',' : '' }}</span>
+              <span style="white-space: nowrap;" v-if="mission.zel">{{ mission.zel }} Zel{{ ((mission.xp || mission.zel) && mission.karma) ? ',' : '' }}</span>
+              <span style="white-space: nowrap;" v-if="mission.karma">{{ mission.karma }} Karma</span>
             </template>
             <template v-else>
               None
