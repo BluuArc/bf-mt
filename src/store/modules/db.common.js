@@ -95,8 +95,12 @@ export const createActions = (worker, downloadWorker, dbEntryName = 'units') => 
         throw Error(`Invalid server "${server}"`);
       }
       const result = await worker.getDbStats({ server });
-      const { cacheTime, keyLength, updateTime } = result;
-      return { cacheTime, keyLength, updateTime };
+      if (result) {
+        const { cacheTime, keyLength, updateTime } = result;
+        return { cacheTime, keyLength, updateTime };
+      } else {
+        return { keyLength: 0 };
+      }
     },
     async setActiveServer ({ commit, dispatch }, server = 'gl') {
       if (!isValidServer(server)) {

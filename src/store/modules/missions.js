@@ -8,10 +8,13 @@ const missionStore = {
   namespaced: true,
   state: {
     ...createState(),
-    possible: {},
+    possibleValues: {},
   },
   mutations: {
     ...createMutations(),
+    setPossibleValues (state, values = {}) {
+      state.possibleValues = values;
+    },
   },
   getters: {
     ...createGetters('missions'),
@@ -19,6 +22,36 @@ const missionStore = {
   },
   actions: {
     ...createActions(missionWorker, downloadWorker, 'missions'),
+    async updatePossibleValues ({ commit, dispatch, state }) {
+      commit('setLoadingMessage', 'Getting land, area, and dungeon values for missions');
+      const result = await SWorker.run((keys, pageDb) => {
+        const possible = { land: [], area: [], dungeon: [] };
+        const locationTypes = ['land', 'area', 'dungeon'];
+        const addUnique = (arr = [], val = '') => {
+          if (!arr.includes(val)) {
+            arr.push(val);
+          }
+        };
+
+        keys.forEach(missionKey => {
+          const mission = pageDb[missionKey];
+          locationTypes.forEach(locationType => {
+            addUnique(possible[locationType], mission[locationType]);
+          });
+        });
+        return possible;
+      }, [Object.keys(state.pageDb), state.pageDb]);
+      commit('setPossibleValues', result);
+    },
+    async ensurePageDbSyncWithServer ({ commit, dispatch, state }) {
+      if (state.pageDb[state.activeServerSymbol] !== state.activeServer) {
+        commit('setLoadState', { loadState: true, message: 'Getting data for active server' });
+        const data = await dispatch('getMiniDb', state.activeServer);
+        commit('setActiveServer', { server: state.activeServer, data });
+        await dispatch('updatePossibleValues');
+        commit('setLoadState', false);
+      }
+    },
     async updateData ({ commit, dispatch }, servers = []) {
       commit('setLoadState', true);
       const baseUrl = `${location.origin}${location.pathname}static/bf-data`;

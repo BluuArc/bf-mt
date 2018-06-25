@@ -45,7 +45,7 @@ export default {
     ...mapState('missions', ['pageDb']),
     ...mapGetters('missions', ['getMultidexPathTo']),
     requiredModules: () => ['missions', 'units', 'items'],
-    filterTypes: () => ['associatedUnits', 'associatedItems', 'gems', 'exclusives', 'continues'],
+    filterTypes: () => ['associatedUnits', 'associatedItems', 'gems', 'exclusives', 'continues', 'land', 'area', 'dungeon'],
     sortTypes () {
       return {
         'Mission ID': (idA, idB, isAscending) => {

@@ -28,13 +28,13 @@
                 <div slot="header">
                   <v-layout row wrap>
                     <span style="align-self: center">Filters</span>
-                    <v-chip small v-show="filterTypes.includes('elements') && filterOptions.element.length < defaultFilters.element.length" style="text-transform: capitalize">
-                      <span v-if="filterOptions.element.length === 0">
+                    <v-chip small v-show="filterTypes.includes('elements') && filterOptions.elements.length < defaultFilters.elements.length" style="text-transform: capitalize">
+                      <span v-if="filterOptions.elements.length === 0">
                         No Elements
                       </span>
                       <span v-else>
-                        <element-icon v-for="element in filterOptions.element" :element="element" :key="element" class="ml-1"/>
-                        <span v-if="filterOptions.element.length === 1">Only</span>
+                        <element-icon v-for="element in filterOptions.elements" :element="element" :key="element" class="ml-1"/>
+                        <span v-if="filterOptions.elements.length === 1">Only</span>
                       </span>
                     </v-chip>
                     <v-chip small v-show="filterTypes.includes('rarity') && filterOptions.rarity.length < defaultFilters.rarity.length" style="text-transform: capitalize">
@@ -98,6 +98,38 @@
                         {{ filterOptions.sphereTypes.length }} Sphere Types
                       </span>
                     </v-chip>
+                    <v-chip small v-show="filterTypes.includes('land') && filterOptions.land.length > 0" style="text-transform: capitalize">
+                      <span v-if="filterOptions.land.length === 1">
+                        Land: {{ filterOptions.land[0] }}
+                      </span>
+                      <span v-else>
+                        {{ filterOptions.land.length }} Lands
+                      </span>
+                    </v-chip>
+                    <v-chip small v-show="filterTypes.includes('area') && filterOptions.area.length > 0" style="text-transform: capitalize">
+                      <span v-if="filterOptions.area.length === 1">
+                        Area: {{ filterOptions.area[0] }}
+                      </span>
+                      <span v-else>
+                        {{ filterOptions.area.length }} Areas
+                      </span>
+                    </v-chip>
+                    <v-chip small v-show="filterTypes.includes('dungeon') && filterOptions.dungeon.length > 0" style="text-transform: capitalize">
+                      <span v-if="filterOptions.dungeon.length === 1">
+                        Dungeon: {{ filterOptions.dungeon[0] }}
+                      </span>
+                      <span v-else>
+                        {{ filterOptions.dungeon.length }} Dungeons
+                      </span>
+                    </v-chip>
+                    <v-chip small v-show="filterTypes.includes('land') && filterOptions.land.length > 0" style="text-transform: capitalize">
+                      <span v-if="filterOptions.land.length === 1">
+                        Land: {{ filterOptions.land[0] }}
+                      </span>
+                      <span v-else>
+                        {{ filterOptions.land.length }} Lands
+                      </span>
+                    </v-chip>
                     <v-chip small v-show="filterTypes.includes('craftables') && filterOptions.craftables.length < defaultFilters.craftables.length" style="text-transform: capitalize">
                       {{ filterOptions.craftables[0] }}s Only
                     </v-chip>
@@ -127,11 +159,11 @@
                       <v-layout row wrap v-if="filterTypes.includes('elements')">
                         <v-flex xs12>
                           <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Element</h3>
-                          <v-btn outline class="mr-0" @click="filterOptions.element = defaultFilters.element.slice()">All</v-btn>
-                          <v-btn outline class="ml-0" @click="filterOptions.element = []">None</v-btn>
+                          <v-btn outline class="mr-0" @click="filterOptions.elements = defaultFilters.elements.slice()">All</v-btn>
+                          <v-btn outline class="ml-0" @click="filterOptions.elements = []">None</v-btn>
                           <v-layout row wrap>
-                            <v-flex xs4 sm2 v-for="(element, i) in defaultFilters.element" :key="i">
-                              <v-checkbox :value="element" v-model="filterOptions.element">
+                            <v-flex xs4 sm2 v-for="(element, i) in defaultFilters.elements" :key="i">
+                              <v-checkbox :value="element" v-model="filterOptions.elements">
                                 <div slot="label">
                                   <element-icon :element="element" class="ml-2"/>
                                 </div>
@@ -221,6 +253,63 @@
                                   <span style="text-transform: capitalize">{{ getSphereCategory(type) }}</span>
                                 </div>
                               </v-checkbox>
+                            </v-flex>
+                          </v-layout>
+                        </v-flex>
+                      </v-layout>
+                      <v-layout row wrap v-if="filterTypes.includes('land')">
+                        <v-flex xs12>
+                          <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Lands</h3>
+                          <v-btn outline class="mr-0" @click="filterOptions.land = []">Reset</v-btn>
+                          <v-layout row wrap>
+                            <v-flex xs12>
+                              <v-select
+                                :items="moduleStateInfo.missions.possibleValues.land || []"
+                                v-model="filterOptions.land"
+                                label="Select Lands"
+                                multiple
+                                chips
+                                autocomplete
+                                hint="Empty selection is equivalent to showing all."
+                                persistent-hint/>
+                            </v-flex>
+                          </v-layout>
+                        </v-flex>
+                      </v-layout>
+                      <v-layout row wrap v-if="filterTypes.includes('area')">
+                        <v-flex xs12>
+                          <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Areas</h3>
+                          <v-btn outline class="mr-0" @click="filterOptions.area = []">Reset</v-btn>
+                          <v-layout row wrap>
+                            <v-flex xs12>
+                              <v-select
+                                :items="moduleStateInfo.missions.possibleValues.area || []"
+                                v-model="filterOptions.area"
+                                label="Select Areas"
+                                multiple
+                                chips
+                                autocomplete
+                                hint="Empty selection is equivalent to showing all."
+                                persistent-hint/>
+                            </v-flex>
+                          </v-layout>
+                        </v-flex>
+                      </v-layout>
+                      <v-layout row wrap v-if="filterTypes.includes('dungeon')">
+                        <v-flex xs12>
+                          <h3 :class="{ subheading: true, 'd-inline': $vuetify.breakpoint.smAndUp }">Dungeons</h3>
+                          <v-btn outline class="mr-0" @click="filterOptions.dungeon = []">Reset</v-btn>
+                          <v-layout row wrap>
+                            <v-flex xs12>
+                              <v-select
+                                :items="moduleStateInfo.missions.possibleValues.dungeon || []"
+                                v-model="filterOptions.dungeon"
+                                label="Select Dungeons"
+                                multiple
+                                chips
+                                autocomplete
+                                hint="Empty selection is equivalent to showing all."
+                                persistent-hint/>
                             </v-flex>
                           </v-layout>
                         </v-flex>
@@ -554,6 +643,24 @@ import ElementIcon from '@/components/Multidex/Units/ElementIcon';
 import SphereTypeIcon from '@/components/Multidex/Items/SphereTypeIcon';
 
 const multidexModules = moduleInfo.filter(m => m.type === 'multidex');
+const arrayBasedFilters = [
+  'elements',
+  'rarity',
+  'gender',
+  'kind',
+  'sphereTypes',
+  'itemTypes',
+  'associatedUnits',
+  'associatedItems',
+  'craftables',
+  'usage',
+  'gems',
+  'continues',
+  'exclusives',
+  'land',
+  'area',
+  'dungeon',
+];
 export default {
   props: {
     requiredModules: {
@@ -597,21 +704,7 @@ export default {
     },
     filterTypes: {
       type: Array,
-      default: () => [
-        'elements',
-        'rarity',
-        'gender',
-        'kind',
-        'sphereTypes',
-        'itemTypes',
-        'associatedUnits',
-        'associatedItems',
-        'craftables',
-        'usage',
-        'gems',
-        'continues',
-        'exclusives',
-      ],
+      default: () => arrayBasedFilters.slice(),
     },
     dialogCloseLink: {
       type: String,
@@ -636,6 +729,7 @@ export default {
     ...mapState('settings', ['activeServer']),
     ...mapState(['inInitState', 'sortAndFilterSettings']),
     ...mapGetters('items', ['getSphereCategory']),
+    ...mapState('missions', ['possibleValues']),
     ...(() => {
       // get state for each module
       let result = {};
@@ -680,6 +774,7 @@ export default {
             loadingMessage: this[`${m}LoadingMessage`],
             numEntries: this[`${m}NumEntries`],
             getMultidexPathTo: this[`${m}GetMultidexPathTo`],
+            possibleValues: (m === 'missions') ? this.possibleValues : {},
           };
         });
       return result;
@@ -726,7 +821,7 @@ export default {
     },
     defaultFilters () {
       return {
-        element: knownConstants.elements.slice(),
+        elements: knownConstants.elements.slice(),
         rarity: Object.keys(new Array(this.maxRarity - this.minRarity + 1).fill(0)).map(i => +i + this.minRarity),
         gender: knownConstants.gender.slice(),
         kind: knownConstants.unitKind.slice(),
@@ -739,6 +834,9 @@ export default {
         craftables: knownConstants.craftableFilterOptions.all,
         usage: knownConstants.usageFilterOptions.all,
         exclusives: knownConstants.exclusiveFilterOptions.all,
+        land: [],
+        area: [],
+        dungeon: [],
       };
     },
     hasFilters () {
@@ -749,6 +847,10 @@ export default {
     },
   },
   data () {
+    const filterOptions = {};
+    arrayBasedFilters.forEach(filterType => {
+      filterOptions[filterType] = [];
+    });
     return {
       pageIndex: 0,
       amountPerPage: 27,
@@ -761,20 +863,8 @@ export default {
         isAscending: true,
       },
       filterOptions: {
+        ...filterOptions,
         name: '',
-        element: [],
-        rarity: [],
-        gender: [],
-        kind: [],
-        sphereTypes: [],
-        itemTypes: [],
-        associatedUnits: [],
-        associatedItems: [],
-        gems: [],
-        continues: [],
-        craftables: [],
-        usage: [],
-        exclusives: [],
       },
     };
   },

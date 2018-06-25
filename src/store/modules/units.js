@@ -99,11 +99,11 @@ const unitsStore = {
       }
 
       const result = await SWorker.run((keys, filters, otherKeys, pageDb) => {
-        const { name = '', element = [], kind = [], gender = [], rarity = [], exclusives = [] } = filters;
+        const { name = '', elements = [], kind = [], gender = [], rarity = [], exclusives = [] } = filters;
         return keys.filter(key => {
           const entry = pageDb[key];
           const fitsName = (!name ? true : entry.name.toLowerCase().includes(name.toLowerCase()));
-          const fitsElement = element.includes(entry.element);
+          const fitsElement = elements.includes(entry.element);
           const fitsGender = gender.includes(entry.gender);
           const fitsRarity = rarity.includes(entry.rarity);
 
