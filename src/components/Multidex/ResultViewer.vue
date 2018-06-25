@@ -106,7 +106,7 @@ export default {
     },
   },
   methods: {
-     ...(() => {
+    ...(() => {
       // get actions for each module
       let result = {};
       multidexModules.map(m => m.name).forEach(m => {

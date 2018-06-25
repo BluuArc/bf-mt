@@ -126,6 +126,6 @@ export default {
     calculateXpPerEnergy (xp = 0, en = 0) {
       return xp / (Math.max(1, en));
     },
-  }
+  },
 };
 </script>

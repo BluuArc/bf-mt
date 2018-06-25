@@ -8,6 +8,7 @@ const missionStore = {
   namespaced: true,
   state: {
     ...createState(),
+    possible: {},
   },
   mutations: {
     ...createMutations(),
@@ -71,7 +72,8 @@ const missionStore = {
             : ((filterValue[0] === trueVal && entryIsTrue) || (filterValue[0] === falseVal && !entryIsTrue)) // entry is true matches filter
           );
         };
-        const { name = '', exclusives = [], associatedUnits = [], associatedItems = [], gems = [], continues = [], area = [], dungeon = [], land = [], difficulty = [], hasMimics = [], hasRequirements = [] } = filters;
+        const { name = '', exclusives = [], associatedUnits = [], associatedItems = [], gems = [], continues = [] } = filters;
+        /*, difficulty = [], hasMimics = [], hasRequirements = [] */
         return keys.filter(key => {
           const entry = pageDb[key];
           const fitsName = (!name ? true : entry.name.toLowerCase().includes(name.toLowerCase()));
@@ -91,9 +93,14 @@ const missionStore = {
           const hasContinues = !!entry.continue;
           const fitsContinueFilter = fitsTernary(hasContinues, continues, { trueVal: 'with', falseVal: 'without' });
 
+          const fitsLocationFilters = ['land', 'area', 'dungeon'].map(locationType => {
+            const locationFilters = filters[locationType] || [];
+            return locationFilters.length === 0 || locationFilters.includes(entry[locationType]);
+          }).reduce((acc, val) => acc && val, true);
+
           // const doesHaveMimics = entry.mimic_info && Object.keys(entry.mimic_info).length > 0;
           // const fitsMimicFilter = fitsTernary(doesHaveMimics, hasMimics, { trueVal: 'with', falseVal: 'without' });
-          return [fitsName, fitsExclusive, fitsAssociatedUnits, fitsAssociatedItems, fitsGemFilter, fitsContinueFilter].reduce((acc, val) => acc && val, true);
+          return [fitsName, fitsExclusive, fitsAssociatedUnits, fitsAssociatedItems, fitsGemFilter, fitsContinueFilter, fitsLocationFilters].reduce((acc, val) => acc && val, true);
         });
       }, [keys, filters, otherKeys, state.pageDb]);
       return result;
