@@ -1,5 +1,381 @@
 <template>
-  <v-container grid-list-sm class="pb-5">
+  <v-container grid-list-sm class="pb-5 multidex-page">
+    <v-navigation-drawer
+      persistent
+      right
+      :value="showFilterSheet && !isDataLoading && hasRequiredModules"
+      enable-resize-watcher
+      :clipped="$vuetify.breakpoint.lgAndUp"
+      fixed
+      app>
+      <v-btn block @click="showFilterSheet = false">
+        Close Sidebar
+        <v-spacer/>
+        <v-icon right>chevron_right</v-icon>
+      </v-btn>
+      <h3 class="headline pl-3 pt-3">Filters</h3>
+      <v-card flat class="filter-area">
+        <v-card-text>
+          <v-container fluid class="pa-0">
+            <v-expansion-panel>
+              <v-expansion-panel-content v-if="filterTypes.includes('elements')">
+                <div slot="header">
+                  <h3 class="subheading">Element</h3>
+                </div>
+                <v-layout row wrap>
+                  <v-flex xs12>
+                    <v-btn outline class="mr-0" @click="filterOptions.elements = defaultFilters.elements.slice()">All</v-btn>
+                    <v-btn outline class="ml-0" @click="filterOptions.elements = []">None</v-btn>
+                    <v-layout row wrap>
+                      <v-flex xs4 v-for="(element, i) in defaultFilters.elements" :key="i">
+                        <v-checkbox :value="element" v-model="filterOptions.elements">
+                          <div slot="label">
+                            <element-icon :element="element" class="ml-2"/>
+                          </div>
+                        </v-checkbox>
+                      </v-flex>
+                    </v-layout>
+                  </v-flex>
+                </v-layout>
+              </v-expansion-panel-content>
+              <v-expansion-panel-content v-if="filterTypes.includes('rarity')">
+                <div slot="header">
+                  <h3 class="subheading">Rarity</h3>
+                </div>
+                <v-layout row wrap>
+                  <v-flex xs12>
+                    <v-btn outline class="mr-0" @click="filterOptions.rarity = defaultFilters.rarity.slice()">All</v-btn>
+                    <v-btn outline class="ml-0" @click="filterOptions.rarity = []">None</v-btn>
+                    <v-layout row wrap>
+                      <v-flex xs4 v-for="(rarity, i) in defaultFilters.rarity" :key="i">
+                        <v-checkbox :value="rarity" v-model="filterOptions.rarity">
+                          <div slot="label">
+                            <span v-if="rarity < 8">
+                              <h3 class="subheading d-inline-block">{{ rarity }}</h3>
+                              <img class="icon bf" src="@/assets/star_rare.png" height="18px" style="margin-top: -0.25rem;"/>
+                            </span>
+                            <img v-else class="icon bf" src="@/assets/phantom_icon.png" height="18px"/>
+                          </div>
+                        </v-checkbox>
+                      </v-flex>
+                    </v-layout>
+                  </v-flex>
+                </v-layout>
+              </v-expansion-panel-content>
+              <v-expansion-panel-content v-if="filterTypes.includes('kind')">
+                <div slot="header">
+                  <h3 class="subheading">Type</h3>
+                </div>
+                <v-layout row wrap>
+                  <v-flex xs12>
+                    <v-btn outline class="mr-0" @click="filterOptions.kind = defaultFilters.kind.slice()">All</v-btn>
+                    <v-btn outline class="ml-0" @click="filterOptions.kind = []">None</v-btn>
+                    <v-layout row wrap>
+                      <v-flex xs6 v-for="(kind, i) in defaultFilters.kind" :key="i">
+                        <v-checkbox :value="kind" v-model="filterOptions.kind">
+                          <div slot="label">
+                            <span style="text-transform: capitalize">{{ kind }}</span>
+                          </div>
+                        </v-checkbox>
+                      </v-flex>
+                    </v-layout>
+                  </v-flex>
+                </v-layout>
+              </v-expansion-panel-content>
+              <v-expansion-panel-content v-if="filterTypes.includes('gender')">
+                <div slot="header">
+                  <h3 class="subheading">Gender</h3>
+                </div>
+                <v-layout row wrap>
+                  <v-flex xs12>
+                    <v-btn outline class="mr-0" @click="filterOptions.gender = defaultFilters.gender.slice()">All</v-btn>
+                    <v-btn outline class="ml-0" @click="filterOptions.gender = []">None</v-btn>
+                    <v-layout row wrap>
+                      <v-flex xs4 v-for="(gender, i) in defaultFilters.gender" :key="i">
+                        <v-checkbox :value="gender" v-model="filterOptions.gender">
+                          <div slot="label">
+                            <v-icon :color="getGenderInfo(gender).color">fas {{ getGenderInfo(gender).icon }}</v-icon>
+                          </div>
+                        </v-checkbox>
+                      </v-flex>
+                    </v-layout>
+                  </v-flex>
+                </v-layout>
+              </v-expansion-panel-content>
+              <v-expansion-panel-content v-if="filterTypes.includes('itemTypes')">
+                <div slot="header">
+                  <h3 class="subheading">Item Type</h3>
+                </div>
+                <v-layout row wrap>
+                  <v-flex xs12>
+                    <v-btn outline dense class="mr-0" @click="filterOptions.itemTypes = defaultFilters.itemTypes.slice()">All</v-btn>
+                    <v-btn outline dense class="ml-0" @click="filterOptions.itemTypes = []">None</v-btn>
+                    <v-layout row wrap>
+                      <v-flex xs6 v-for="(type, i) in defaultFilters.itemTypes" :key="i">
+                        <v-checkbox :value="type" v-model="filterOptions.itemTypes">
+                          <div slot="label">
+                            <span style="text-transform: capitalize">{{ knownConstants.itemTypeMapping[type] }}</span>
+                          </div>
+                        </v-checkbox>
+                      </v-flex>
+                    </v-layout>
+                  </v-flex>
+                </v-layout>
+              </v-expansion-panel-content>
+              <v-expansion-panel-content v-if="filterTypes.includes('sphereTypes')">
+                <div slot="header">
+                  <h3 class="subheading">Sphere Type</h3>
+                </div>
+                <v-layout row wrap>
+                  <v-flex xs12>
+                    <br>
+                    <v-btn outline class="mr-0" @click="filterOptions.sphereTypes = defaultFilters.sphereTypes.slice()">All</v-btn>
+                    <v-btn outline class="ml-0" @click="filterOptions.sphereTypes = []">None</v-btn>
+                    <v-layout row wrap>
+                      <v-flex xs12 v-for="(type, i) in defaultFilters.sphereTypes" :key="i">
+                        <v-checkbox :value="type" v-model="filterOptions.sphereTypes">
+                          <div slot="label">
+                            <sphere-type-icon :category="type" class="ml-0 mr-1"/>
+                            <span style="text-transform: capitalize">{{ getSphereCategory(type) }}</span>
+                          </div>
+                        </v-checkbox>
+                      </v-flex>
+                    </v-layout>
+                  </v-flex>
+                </v-layout>
+              </v-expansion-panel-content>
+              <v-expansion-panel-content v-if="filterTypes.includes('land')">
+                <div slot="header">
+                  <h3 class="subheading">Lands</h3>
+                </div>
+                <v-layout row wrap>
+                  <v-flex xs12>
+                    <v-btn outline class="mr-0" @click="filterOptions.land = []">Reset</v-btn>
+                    <v-layout row wrap>
+                      <v-flex xs12>
+                        <v-select
+                          :items="moduleStateInfo.missions.possibleValues.land || []"
+                          v-model="filterOptions.land"
+                          label="Select Lands"
+                          multiple
+                          chips
+                          autocomplete
+                          hint="Empty selection is equivalent to showing all."
+                          persistent-hint/>
+                      </v-flex>
+                    </v-layout>
+                  </v-flex>
+                </v-layout>
+              </v-expansion-panel-content>
+              <v-expansion-panel-content v-if="filterTypes.includes('area')">
+                <div slot="header">
+                  <h3 class="subheading">Areas</h3>
+                </div>
+                <v-layout row wrap>
+                  <v-flex xs12>
+                    <v-btn outline class="mr-0" @click="filterOptions.area = []">Reset</v-btn>
+                    <v-layout row wrap>
+                      <v-flex xs12>
+                        <v-select
+                          :items="moduleStateInfo.missions.possibleValues.area || []"
+                          v-model="filterOptions.area"
+                          label="Select Areas"
+                          multiple
+                          chips
+                          autocomplete
+                          hint="Empty selection is equivalent to showing all."
+                          persistent-hint/>
+                      </v-flex>
+                    </v-layout>
+                  </v-flex>
+                </v-layout>
+              </v-expansion-panel-content>
+              <v-expansion-panel-content v-if="filterTypes.includes('dungeon')">
+                <div slot="header">
+                  <h3 class="subheading">Dungeons</h3>
+                </div>
+                <v-layout row wrap>
+                  <v-flex xs12>
+                    <v-btn outline class="mr-0" @click="filterOptions.dungeon = []">Reset</v-btn>
+                    <v-layout row wrap>
+                      <v-flex xs12>
+                        <v-select
+                          :items="moduleStateInfo.missions.possibleValues.dungeon || []"
+                          v-model="filterOptions.dungeon"
+                          label="Select Dungeons"
+                          multiple
+                          chips
+                          autocomplete
+                          hint="Empty selection is equivalent to showing all."
+                          persistent-hint/>
+                      </v-flex>
+                    </v-layout>
+                  </v-flex>
+                </v-layout>
+              </v-expansion-panel-content>
+              <v-expansion-panel-content v-if="filterTypes.includes('craftables')">
+                <div slot="header">
+                  <h3 class="subheading">Craftables</h3>
+                </div>
+                <v-layout row wrap>
+                  <v-flex xs12>
+                    <v-layout row>
+                      <v-radio-group v-model="filterOptions.craftables">
+                        <v-radio
+                          :value="knownConstants.craftableFilterOptions.all"
+                          label="All"/>
+                        <v-radio
+                          :value="knownConstants.craftableFilterOptions.craftable"
+                          label="Craftables Only"/>
+                        <v-radio
+                          :value="knownConstants.craftableFilterOptions.nonCraftable"
+                          label="Non-Craftables Only"/>
+                      </v-radio-group>
+                    </v-layout>
+                  </v-flex>
+                </v-layout>
+              </v-expansion-panel-content>
+              <v-expansion-panel-content v-if="filterTypes.includes('usage')">
+                <div slot="header">
+                  <h3 class="subheading">Usage</h3>
+                </div>
+                <v-layout row wrap>
+                  <v-flex xs12>
+                    <v-layout row>
+                      <v-radio-group v-model="filterOptions.usage">
+                        <v-radio
+                          :value="knownConstants.usageFilterOptions.all"
+                          label="All"/>
+                        <v-radio
+                          :value="knownConstants.usageFilterOptions.used"
+                          label="Used in Other Items Only"/>
+                        <v-radio
+                          :value="knownConstants.usageFilterOptions.unused"
+                          label="Not Used in Other Items"/>
+                      </v-radio-group>
+                    </v-layout>
+                  </v-flex>
+                </v-layout>
+              </v-expansion-panel-content>
+              <v-expansion-panel-content v-if="filterTypes.includes('associatedUnits')">
+                <div slot="header">
+                  <h3 class="subheading">Associated Units</h3>
+                </div>
+                <v-layout row wrap>
+                  <v-flex xs12>
+                    <v-layout row>
+                      <v-radio-group v-model="filterOptions.associatedUnits">
+                        <v-radio
+                          :value="knownConstants.associatedUnitOptions.all"
+                          label="All"/>
+                        <v-radio
+                          :value="knownConstants.associatedUnitOptions.with"
+                          label="With Associated Units"/>
+                        <v-radio
+                          :value="knownConstants.associatedUnitOptions.without"
+                          label="Without Associated Units"/>
+                      </v-radio-group>
+                    </v-layout>
+                  </v-flex>
+                </v-layout>
+              </v-expansion-panel-content>
+              <v-expansion-panel-content v-if="filterTypes.includes('associatedItems')">
+                <div slot="header">
+                  <h3 class="subheading">Associated Items</h3>
+                </div>
+                <v-layout row wrap>
+                  <v-flex xs12>
+                    <v-layout row>
+                      <v-radio-group v-model="filterOptions.associatedItems">
+                        <v-radio
+                          :value="knownConstants.withWithoutTernaryOptions.all"
+                          label="All"/>
+                        <v-radio
+                          :value="knownConstants.withWithoutTernaryOptions.with"
+                          label="With Associated Items"/>
+                        <v-radio
+                          :value="knownConstants.withWithoutTernaryOptions.without"
+                          label="Without Associated Items"/>
+                      </v-radio-group>
+                    </v-layout>
+                  </v-flex>
+                </v-layout>
+              </v-expansion-panel-content>
+              <v-expansion-panel-content v-if="filterTypes.includes('gems')">
+                <div slot="header">
+                  <h3 class="subheading">Gems</h3>
+                </div>
+                <v-layout row wrap>
+                  <v-flex xs12>
+                    <v-layout row>
+                      <v-radio-group v-model="filterOptions.gems">
+                        <v-radio
+                          :value="knownConstants.withWithoutTernaryOptions.all"
+                          label="All"/>
+                        <v-radio
+                          :value="knownConstants.withWithoutTernaryOptions.with"
+                          label="With Gems Only"/>
+                        <v-radio
+                          :value="knownConstants.withWithoutTernaryOptions.without"
+                          label="Without Gems"/>
+                      </v-radio-group>
+                    </v-layout>
+                  </v-flex>
+                </v-layout>
+              </v-expansion-panel-content>
+              <v-expansion-panel-content v-if="filterTypes.includes('continues')">
+                <div slot="header">
+                  <h3 class="subheading">Quest Continues</h3>
+                </div>
+                <v-layout row wrap>
+                  <v-flex xs12>
+                    <v-layout row>
+                      <v-radio-group v-model="filterOptions.continues">
+                        <v-radio
+                          :value="knownConstants.withWithoutTernaryOptions.all"
+                          label="All"/>
+                        <v-radio
+                          :value="knownConstants.withWithoutTernaryOptions.with"
+                          label="Quest Continues Allowed"/>
+                        <v-radio
+                          :value="knownConstants.withWithoutTernaryOptions.without"
+                          label="No Quest Continues"/>
+                      </v-radio-group>
+                    </v-layout>
+                  </v-flex>
+                </v-layout>
+              </v-expansion-panel-content>
+              <v-expansion-panel-content v-if="filterTypes.includes('exclusives')">
+                <div slot="header">
+                  <h3 class="subheading">Server Exclusives</h3>
+                </div>
+                <v-layout row wrap>
+                  <v-flex xs12>
+                    <p class="mb-0" v-if="!hasOtherServers">Please download data from the <router-link to="/settings" style="color: inherit">Settings Page</router-link> for at least one other server to use this filter.</p>
+                    <v-layout row>
+                      <v-radio-group v-model="filterOptions.exclusives">
+                        <v-radio
+                          :value="knownConstants.exclusiveFilterOptions.all"
+                          :disabled="!hasOtherServers"
+                          label="All"/>
+                        <v-radio
+                          :value="knownConstants.exclusiveFilterOptions.exclusive"
+                          :disabled="!hasOtherServers"
+                          label="Exclusives Only"/>
+                        <v-radio
+                          :value="knownConstants.exclusiveFilterOptions.nonExclusive"
+                          :disabled="!hasOtherServers"
+                          label="Non-Exclusives Only"/>
+                      </v-radio-group>
+                    </v-layout>
+                  </v-flex>
+                </v-layout>
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+          </v-container>
+        </v-card-text>
+      </v-card>
+    </v-navigation-drawer>
     <v-layout row v-if="isDataLoading || !finishedInit">
       <v-flex xs12 class="pt-5">
         <loading-component :loading-message="pageLoadingMessage"/>
@@ -19,12 +395,157 @@
                     <span class="center-align-container">Showing {{ allSortedEntries.length }}<br>{{ mainModule.fullName }}</span>
                   </v-flex>
                 </v-layout>
+                <!-- <v-layout row>
+                  <v-flex xs12>
+                    <v-divider/>
+                  </v-flex>
+                </v-layout> -->
                 <v-layout row>
+                  <v-flex xs12 class="text-xs-left">
+                    <span>Active Filters:</span>
+                  </v-flex>
+                </v-layout>
+                <v-layout row>
+                  <v-flex xs10 md11 class="vertical-align-parent">
+                    <template v-if="!hasFilters">
+                      <h3 class="subheading vertical-align-container">No filters applied.</h3>
+                    </template>
+                    <template v-else>
+                      <v-chip small v-show="filterTypes.includes('elements') && filterOptions.elements.length < defaultFilters.elements.length" style="text-transform: capitalize">
+                        <span v-if="filterOptions.elements.length === 0">
+                          No Elements
+                        </span>
+                        <span v-else>
+                          <element-icon v-for="element in filterOptions.elements" :element="element" :key="element" class="ml-1"/>
+                          <span v-if="filterOptions.elements.length === 1">Only</span>
+                        </span>
+                      </v-chip>
+                      <v-chip small v-show="filterTypes.includes('rarity') && filterOptions.rarity.length < defaultFilters.rarity.length" style="text-transform: capitalize">
+                        <span v-if="filterOptions.rarity.length === 1">
+                          <span v-if="filterOptions.rarity[0] < 8">
+                            <b>{{ filterOptions.rarity[0] }}</b>
+                            <img class="icon bf" src="@/assets/star_rare.png" height="18px" style="margin-top: -0.25rem;"/>
+                          </span>
+                          <img v-else class="icon bf" src="@/assets/phantom_icon.png" height="18px"/>
+                          Only
+                        </span>
+                        <span v-else-if="filterOptions.rarity.length === 0">
+                          No rarity
+                        </span>
+                        <span v-else>
+                          {{ filterOptions.rarity.length }} Different Rarities
+                        </span>
+                      </v-chip>
+                      <v-chip small v-show="filterTypes.includes('kind') && filterOptions.kind.length < defaultFilters.kind.length" style="text-transform: capitalize">
+                        <span v-if="filterOptions.kind.length === 0">
+                          No Types
+                        </span>
+                        <span v-else-if="filterOptions.kind.length === 1">
+                          {{ filterOptions.kind[0] }} Only
+                        </span>
+                        <span v-else>
+                          {{ filterOptions.kind.length }} Types
+                        </span>
+                      </v-chip>
+                      <v-chip small v-show="filterTypes.includes('gender') && filterOptions.gender.length < defaultFilters.gender.length" style="text-transform: capitalize">
+                        <span v-if="filterOptions.gender.length === 0">
+                          No Genders
+                        </span>
+                        <span v-else>
+                          <v-icon v-for="gender in filterOptions.gender" :key="gender" :color="getGenderInfo(gender).color">fas {{ getGenderInfo(gender).icon }}</v-icon>
+                          <span v-if="filterOptions.gender.length === 1">Only</span>
+                        </span>
+                      </v-chip>
+                      <v-chip small v-show="filterTypes.includes('itemTypes') && filterOptions.itemTypes.length < defaultFilters.itemTypes.length" style="text-transform: capitalize">
+                        <span v-if="filterOptions.itemTypes.length === 0">
+                          No Types
+                        </span>
+                        <span v-else-if="filterOptions.itemTypes.length === 1">
+                          {{ filterOptions.itemTypes[0] }}s Only
+                        </span>
+                        <span v-else>
+                          {{ filterOptions.itemTypes.length }} Item Types
+                        </span>
+                      </v-chip>
+                      <v-chip small v-show="filterTypes.includes('sphereTypes') && filterOptions.sphereTypes.length < defaultFilters.sphereTypes.length" style="text-transform: capitalize">
+                        <span v-if="filterOptions.sphereTypes.length === 0">
+                          No Types
+                        </span>
+                        <span v-else-if="filterOptions.sphereTypes.length <= 5">
+                          <sphere-type-icon v-for="sphereType in filterOptions.sphereTypes" :category="sphereType" :key="sphereType" class="ml-0 mr-1" style="margin-bottom: 2px"/>
+                          <span v-if="filterOptions.sphereTypes.length === 1">
+                            Only
+                          </span>
+                        </span>
+                        <span v-else>
+                          {{ filterOptions.sphereTypes.length }} Sphere Types
+                        </span>
+                      </v-chip>
+                      <v-chip small v-show="filterTypes.includes('land') && filterOptions.land.length > 0" style="text-transform: capitalize">
+                        <span v-if="filterOptions.land.length === 1">
+                          Land: {{ filterOptions.land[0] }}
+                        </span>
+                        <span v-else>
+                          {{ filterOptions.land.length }} Lands
+                        </span>
+                      </v-chip>
+                      <v-chip small v-show="filterTypes.includes('area') && filterOptions.area.length > 0" style="text-transform: capitalize">
+                        <span v-if="filterOptions.area.length === 1">
+                          Area: {{ filterOptions.area[0] }}
+                        </span>
+                        <span v-else>
+                          {{ filterOptions.area.length }} Areas
+                        </span>
+                      </v-chip>
+                      <v-chip small v-show="filterTypes.includes('dungeon') && filterOptions.dungeon.length > 0" style="text-transform: capitalize">
+                        <span v-if="filterOptions.dungeon.length === 1">
+                          Dungeon: {{ filterOptions.dungeon[0] }}
+                        </span>
+                        <span v-else>
+                          {{ filterOptions.dungeon.length }} Dungeons
+                        </span>
+                      </v-chip>
+                      <v-chip small v-show="filterTypes.includes('land') && filterOptions.land.length > 0" style="text-transform: capitalize">
+                        <span v-if="filterOptions.land.length === 1">
+                          Land: {{ filterOptions.land[0] }}
+                        </span>
+                        <span v-else>
+                          {{ filterOptions.land.length }} Lands
+                        </span>
+                      </v-chip>
+                      <v-chip small v-show="filterTypes.includes('craftables') && filterOptions.craftables.length < defaultFilters.craftables.length" style="text-transform: capitalize">
+                        {{ filterOptions.craftables[0] }}s Only
+                      </v-chip>
+                      <v-chip small v-show="filterTypes.includes('usage') && filterOptions.usage.length < defaultFilters.usage.length" style="text-transform: capitalize">
+                        {{ filterOptions.usage[0] }} Items Only
+                      </v-chip>
+                      <v-chip small v-show="filterTypes.includes('associatedUnits') && filterOptions.associatedUnits.length < defaultFilters.associatedUnits.length" style="text-transform: capitalize">
+                        {{ filterOptions.associatedUnits[0] }} Associated Units Only
+                      </v-chip>
+                      <v-chip small v-show="filterTypes.includes('associatedItems') && filterOptions.associatedItems.length < defaultFilters.associatedItems.length" style="text-transform: capitalize">
+                        {{ filterOptions.associatedItems[0] }} Associated Items Only
+                      </v-chip>
+                      <v-chip small v-show="filterTypes.includes('gems') && filterOptions.gems.length < defaultFilters.gems.length" style="text-transform: capitalize">
+                        {{ filterOptions.gems[0] }} Gems Only
+                      </v-chip>
+                      <v-chip small v-show="filterTypes.includes('continues') && filterOptions.continues.length < defaultFilters.continues.length" style="text-transform: capitalize">
+                        {{ filterOptions.continues[0] }} Continues Only
+                      </v-chip>
+                      <v-chip small v-show="filterTypes.includes('exclusives') && filterOptions.exclusives.length < defaultFilters.exclusives.length" style="text-transform: capitalize">
+                        {{ filterOptions.exclusives[0] }}s Only
+                      </v-chip>
+                    </template>
+                  </v-flex>
+                  <v-flex xs2 md1 class="text-xs-right">
+                    <v-btn flat icon class="mr-0 pr-1" @click="showFilterSheet = !showFilterSheet">
+                      <v-icon>filter_list</v-icon>
+                    </v-btn>
+                  </v-flex>
                 </v-layout>
               </v-container>
             </v-card-text>
             <v-expansion-panel>
-              <v-expansion-panel-content>
+              <!-- <v-expansion-panel-content>
                 <div slot="header">
                   <v-layout row wrap>
                     <span style="align-self: center">Filters</span>
@@ -447,7 +968,7 @@
                     </v-container>
                   </v-card-text>
                 </v-card>
-              </v-expansion-panel-content>
+              </v-expansion-panel-content> -->
               <v-expansion-panel-content>
                 <div slot="header">
                   <v-layout row wrap>
@@ -858,6 +1379,7 @@ export default {
       filteredKeys: [],
       loadingFilters: false,
       finishedInit: false,
+      showFilterSheet: false,
       sortOptions: {
         type: 'ID',
         isAscending: true,
@@ -1143,3 +1665,10 @@ export default {
   },
 };
 </script>
+
+<style>
+.multidex-page .filter-area .expansion-panel__header {
+  padding-left: 0;
+  padding-right: 0;
+}
+</style>

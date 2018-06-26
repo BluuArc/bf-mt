@@ -4,6 +4,7 @@
       persistent
       v-model="showDrawer"
       enable-resize-watcher
+      style="z-index: 5;"
       fixed
       app>
       <v-btn v-if="$vuetify.breakpoint.xsOnly" block @click="showDrawer = false">
@@ -46,7 +47,7 @@
         <span class="mx-auto pr-3">&copy; {{ new Date().getUTCFullYear() }}</span>
       </v-footer>
     </v-navigation-drawer>
-    <v-toolbar app>
+    <v-toolbar clipped-right app>
       <v-toolbar-side-icon @click.stop="showDrawer = !showDrawer"/>
       <v-badge left v-if="numUpdates > 0">
         <span slot="badge">{{ numUpdates }}</span>

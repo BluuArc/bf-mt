@@ -226,7 +226,7 @@ export const knownConstants = {
     consumable: 'Item',
     material: 'Material',
     sphere: 'Sphere',
-    evomat: 'Evolution Material',
+    evomat: 'Evo Material',
     summoner_consumable: 'Booster',
     raid: 'Raid Item',
     ls_sphere: 'LS Sphere',
