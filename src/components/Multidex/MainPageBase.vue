@@ -392,7 +392,10 @@
                     <v-text-field v-model="filterOptions.name" label="Search"/>
                   </v-flex>
                   <v-flex xs4 class="center-align-parent text-xs-center">
-                    <span class="center-align-container">Showing {{ allSortedEntries.length }}<br>{{ mainModule.fullName }}</span>
+                    <span class="center-align-container">
+                      <span>Showing {{ allSortedEntries.length }}</span>
+                      <span style="white-space: nowrap;">{{ mainModule.fullName }}</span>
+                    </span>
                   </v-flex>
                 </v-layout>
                 <v-layout row>
@@ -611,6 +614,7 @@
             fixed fab bottom left
             :disabled="pageIndex <= 0"
             :small="$vuetify.breakpoint.smAndDown"
+            style="z-index: 6;"
             color="primary" @click="decrementPage">
             <span v-show="pageIndex >= 1">
               {{ pageIndex }}

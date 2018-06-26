@@ -76,8 +76,8 @@
           <v-flex xs12 sm6 md9>
             <stat-card style="border-color: var(--stat-card-color); height: 100%;" :unit="unit"/>
           </v-flex>
-          <v-flex xs12>
-            <v-card color="indigo" v-if="unit.prev || unit.next">
+          <v-flex xs12 v-if="unit.prev || unit.next">
+            <v-card color="indigo">
               <v-card-title>
                 <h3 class="title">Evolutions</h3>
               </v-card-title>
@@ -123,6 +123,9 @@
                 </template>
               </v-stepper>
             </v-card>
+          </v-flex>
+          <v-flex xs12 v-if="unit.first_clear_missions">
+            <mission-card :entry="unit" style="border-color: var(--mission-card-color)"/>
           </v-flex>
         </v-layout>
         <v-layout row wrap>
@@ -182,6 +185,7 @@ import LeaderSkillCard from '@/components/Multidex/Units/LeaderSkillCard';
 import ExtraSkillCard from '@/components/Multidex/Units/ExtraSkillCard';
 import BurstCard from '@/components/Multidex/Units/BurstCard';
 import EnhancementsCard from '@/components/Multidex/Units/EnhancementsCard';
+import MissionCard from '@/components/Multidex/Items/MissionCard';
 
 export default {
   props: ['unitId'],
@@ -193,6 +197,7 @@ export default {
     'extra-skill-card': ExtraSkillCard,
     'burst-card': BurstCard,
     'enhancements-card': EnhancementsCard,
+    'mission-card': MissionCard,
   },
   computed: {
     ...mapGetters('units', {
@@ -314,6 +319,7 @@ export default {
   --burst-card-color--sbb: #f9a825; /* yellow darken-3 */
   --burst-card-color--ubb: #c62828; /* red darken-3 */
   --enhancements-card-color: #689f38; /* light-green darken-2 */
+  --mission-card-color: #009688; /* teal */
 }
 
 .unit-dialog-tab .card .card__title h3.title {
@@ -333,5 +339,13 @@ export default {
 .unit-dialog-tab .stepper__label {
   display: inline;
   text-align: center;
+}
+
+.theme--light .unit-dialog-tab .mission-card {
+  background-color: whitesmoke;
+}
+
+.theme--dark .unit-dialog-tab .mission-card {
+  background-color: black;
 }
 </style>

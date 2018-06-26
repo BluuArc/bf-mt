@@ -78,6 +78,9 @@
               </v-card-text>
             </v-card>
           </v-flex>
+          <v-flex xs12 v-if="item.first_clear_missions">
+            <mission-card :entry="item" style="border-color: var(--mission-card-color)"/>
+          </v-flex>
           <v-flex xs12>
             <usage-card :item="item" style="border-color: var(--usage-card-color)"/>
           </v-flex>
@@ -97,6 +100,7 @@ import SphereTypeIcon from '@/components/Multidex/Items/SphereTypeIcon';
 import UsageCard from '@/components/Multidex/Items/UsageCard';
 import CraftingCard from '@/components/Multidex/Items/CraftingCard';
 import DescriptionAndEffects from '@/components/Multidex/GenericEffectsSection';
+import MissionCard from '@/components/Multidex/Items/MissionCard';
 
 export default {
   props: ['itemId'],
@@ -106,6 +110,7 @@ export default {
     'usage-card': UsageCard,
     'crafting-card': CraftingCard,
     'description-and-effects-section': DescriptionAndEffects,
+    'mission-card': MissionCard,
   },
   computed: {
     ...mapGetters('items', { getItemImage: 'getImageUrl', getSphereCategory: 'getSphereCategory' }),
@@ -211,13 +216,18 @@ export default {
   --miscellaneous-card-color: #607d8b; /* blue-grey */
   --usage-card-color: #3f51b5; /* indigo */
   --recipe-card-color: #4caf50; /* green */
+  --mission-card-color: #009688; /* teal */
 }
 
-.theme--light .item-dialog-content .item-card, .theme--light .item-dialog-content .unit-card {
+.theme--light .item-dialog-content .item-card,
+.theme--light .item-dialog-content .unit-card,
+.theme--light .item-dialog-content .mission-card {
   background-color: whitesmoke;
 }
 
-.theme--dark .item-dialog-content .item-card, .theme--dark .item-dialog-content .unit-card {
+.theme--dark .item-dialog-content .item-card,
+.theme--dark .item-dialog-content .unit-card,
+.theme--dark .item-dialog-content .mission-card {
   background-color: black;
 }
 </style>

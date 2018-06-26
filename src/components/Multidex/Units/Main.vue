@@ -56,7 +56,7 @@ export default {
   computed: {
     ...mapState('units', ['pageDb']),
     ...mapGetters('units', ['getImageUrls', 'getMultidexPathTo']),
-    requiredModules: () => ['units', 'items'],
+    requiredModules: () => ['units', 'items', 'missions'],
     filterTypes: () => ['elements', 'rarity', 'kind', 'gender', 'exclusives'],
     sortTypes () {
       return {
