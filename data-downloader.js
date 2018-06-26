@@ -6,6 +6,12 @@ logger.level = 'debug';
 
 const outputFolder = 'static/bf-data';
 
+const config = {
+  getStats: true,
+  processData: true,
+  useLocal: false,
+};
+
 let ghData;
 const updateData = {
   units: {},
@@ -22,7 +28,7 @@ const rangeData = {
   items: [0, 9],
   bbs: [0, 9],
   dictionary: [0, 9],
-}
+};
 
 const handlers = {
   units: {
@@ -178,7 +184,6 @@ const handlers = {
               } else {
                 mat.name = itemData[mat.id].name;
               }
-
             }
           }
         });
@@ -563,12 +568,6 @@ const handlers = {
       return loadData('dictionary', server);
     },
   },
-}
-
-const config = {
-  getStats: false,
-  processData: true,
-  useLocal: true,
 };
 
 function getGitData (file, server = 'gl') {
@@ -600,7 +599,7 @@ function loadData (type = 'units', server = 'gl') {
       result[entryKey] = fileData[entryKey];
     });
   }
-  console.log(`loaded local files for ${type} ${server}`);
+  console.log(`loaded local files for ${type} ${server}`, Object.keys(result).length);
   return result;
 }
 
@@ -663,7 +662,9 @@ async function getUnitDataForServer(server = 'gl', missionData = {}, dictionaryD
   if (!config.useLocal) {
     unitData = await handlers.units.download(server);
   } else {
-    unitData = handlers.units.load(server);
+    unitData = {
+      info: handlers.units.load(server),
+    }
   }
   return handlers.units.process(server, unitData, missionData, dictionaryData);
 }
@@ -771,10 +772,10 @@ async function getData(servers = ['gl', 'eu', 'jp']) {
     const missionData = await getMissionsForServer(s);
     const unitData = await getUnitDataForServer(s, missionData);
     await getItemDataForServer(s, unitData, missionData);
-    // await getBurstDataForServer(s, unitData);
-    // await getExtraSkillDataForServer(s, unitData);
-    // await getLeaderSkillDataForServer(s, unitData);
-    // await getDictionaryForServer(s);
+    await getBurstDataForServer(s, unitData);
+    await getExtraSkillDataForServer(s, unitData);
+    await getLeaderSkillDataForServer(s, unitData);
+    await getDictionaryForServer(s);
   }
 
 
