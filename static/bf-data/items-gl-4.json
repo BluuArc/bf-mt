@@ -2751,6 +2751,9 @@
       "60497",
       "840437",
       "840438"
+    ],
+    "first_clear_missions": [
+      "2000004"
     ]
   },
   "44701": {
@@ -2794,6 +2797,9 @@
       "51267",
       "850017",
       "850018"
+    ],
+    "first_clear_missions": [
+      "2000006"
     ]
   },
   "44702": {
@@ -2831,7 +2837,10 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_1_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "first_clear_missions": [
+      "2000008"
+    ]
   },
   "44703": {
     "desc": "100% boost to Spark damage & 15% boost to Atk, Def, Rec, max HP",
@@ -2863,6 +2872,9 @@
       "30546",
       "840438",
       "860167"
+    ],
+    "first_clear_missions": [
+      "2000010"
     ]
   },
   "44704": {
@@ -2912,6 +2924,9 @@
       "850508",
       "860017",
       "860018"
+    ],
+    "first_clear_missions": [
+      "2000012"
     ]
   },
   "44705": {
@@ -2949,7 +2964,10 @@
     "sphere type text": "Special",
     "thumbnail": "sphere_thum_1_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "first_clear_missions": [
+      "2000015"
+    ]
   },
   "44800": {
     "desc": "Slightly boosts BC efficacy & boosts BB gauge each turn",
@@ -4384,6 +4402,9 @@
       "61287",
       "810338",
       "840438"
+    ],
+    "first_clear_missions": [
+      "150301"
     ]
   },
   "47201": {
@@ -4426,6 +4447,9 @@
       "61287",
       "810338",
       "840438"
+    ],
+    "first_clear_missions": [
+      "150302"
     ]
   },
   "47202": {
@@ -4463,6 +4487,9 @@
       "61287",
       "810338",
       "840438"
+    ],
+    "first_clear_missions": [
+      "150402"
     ]
   },
   "47203": {
@@ -4502,6 +4529,9 @@
       "61287",
       "810338",
       "840438"
+    ],
+    "first_clear_missions": [
+      "150502"
     ]
   },
   "47204": {
@@ -4541,6 +4571,9 @@
       "61287",
       "810338",
       "840438"
+    ],
+    "first_clear_missions": [
+      "150505"
     ]
   },
   "47205": {
@@ -4580,6 +4613,9 @@
       "61287",
       "810338",
       "840438"
+    ],
+    "first_clear_missions": [
+      "150602"
     ]
   },
   "47206": {
@@ -4624,6 +4660,9 @@
       "61287",
       "810338",
       "840438"
+    ],
+    "first_clear_missions": [
+      "150702"
     ]
   },
   "47207": {
@@ -4667,6 +4706,9 @@
       "61287",
       "810338",
       "840438"
+    ],
+    "first_clear_missions": [
+      "150802"
     ]
   },
   "47208": {
@@ -4712,6 +4754,9 @@
       "61287",
       "810338",
       "840438"
+    ],
+    "first_clear_missions": [
+      "150902"
     ]
   },
   "47209": {
@@ -4764,6 +4809,9 @@
       "61287",
       "810338",
       "840438"
+    ],
+    "first_clear_missions": [
+      "151002"
     ]
   },
   "47210": {
@@ -4806,6 +4854,9 @@
       "61287",
       "810338",
       "840438"
+    ],
+    "first_clear_missions": [
+      "151100"
     ]
   },
   "47211": {
@@ -4859,6 +4910,9 @@
       "61287",
       "810338",
       "840438"
+    ],
+    "first_clear_missions": [
+      "151200"
     ]
   },
   "47212": {
@@ -4910,6 +4964,9 @@
       "61287",
       "810338",
       "840438"
+    ],
+    "first_clear_missions": [
+      "151303"
     ]
   },
   "47213": {
@@ -4955,7 +5012,10 @@
     "sphere type text": "Special",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "first_clear_missions": [
+      "151402"
+    ]
   },
   "47214": {
     "desc": "When HP is below 50%: damage reduction for 1 turn, damage taken slightly restores HP, adds probable 2 turn Atk reduction counter & 30% boost to Def, max HP",
@@ -5017,6 +5077,9 @@
       "850508",
       "860017",
       "860018"
+    ],
+    "first_clear_missions": [
+      "151503"
     ]
   },
   "47300": {
@@ -8859,6 +8922,9 @@
       "840438",
       "850367",
       "850368"
+    ],
+    "first_clear_missions": [
+      "2000013"
     ]
   },
   "49950": {

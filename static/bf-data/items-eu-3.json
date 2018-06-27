@@ -3629,7 +3629,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "32201": {
@@ -3658,7 +3659,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "32202": {
@@ -3687,7 +3689,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "32300": {
@@ -4253,6 +4256,9 @@
         "id": 34808,
         "name": "Phoenix Eye"
       }
+    ],
+    "associated_units": [
+      "850018"
     ]
   },
   "33001": {
@@ -4298,6 +4304,9 @@
         "id": 39600,
         "name": "Goddess Flag"
       }
+    ],
+    "associated_units": [
+      "850018"
     ]
   },
   "33002": {
@@ -4319,7 +4328,10 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_3_7.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850018"
+    ]
   },
   "33400": {
     "desc": "Boosts BB Gauge when a Battle is Won",
@@ -4429,6 +4441,9 @@
         "id": 235002,
         "name": "Armored Soul"
       }
+    ],
+    "associated_units": [
+      "850018"
     ]
   },
   "33501": {
@@ -4450,7 +4465,10 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_3_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850018"
+    ]
   },
   "33502": {
     "desc": "Greatly Recovers HP when an Enemy is Defeated",
@@ -4471,7 +4489,10 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_3_7.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850018"
+    ]
   },
   "33600": {
     "desc": "Adds Chance of Absorbing HP when Attacking",
@@ -4493,7 +4514,10 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_3_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850018"
+    ]
   },
   "33601": {
     "desc": "Adds Chance of Absorbing HP when Attacking",
@@ -4515,7 +4539,10 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_3_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850018"
+    ]
   },
   "33602": {
     "desc": "Adds Chance of Absorbing a Great Deal of HP when Attacking",
@@ -4537,7 +4564,10 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_3_7.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850018"
+    ]
   },
   "33700": {
     "desc": "Boosts Drop Rate of BC when Attacking",
@@ -4988,6 +5018,9 @@
         "id": 230303,
         "name": "General's Gem"
       }
+    ],
+    "associated_units": [
+      "850018"
     ]
   },
   "34301": {
@@ -5010,7 +5043,10 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_3_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850018"
+    ]
   },
   "34302": {
     "desc": "Adds Chance of 30% of Damage Taken Being Recovered",
@@ -5032,7 +5068,10 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_3_7.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850018"
+    ]
   },
   "34400": {
     "desc": "Decreases Chance of Being Targeted",
@@ -5659,6 +5698,9 @@
         "id": 230303,
         "name": "General's Gem"
       }
+    ],
+    "associated_units": [
+      "850018"
     ]
   },
   "34809": {
@@ -5823,7 +5865,10 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_2_9.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850018"
+    ]
   },
   "34815": {
     "desc": "Boosts critical hit rate when HP is full",
@@ -6478,6 +6523,9 @@
         "id": 230004,
         "name": "Noble Blood Gem"
       }
+    ],
+    "associated_units": [
+      "850018"
     ]
   },
   "35700": {
@@ -6500,7 +6548,10 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_1_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850018"
+    ]
   },
   "35800": {
     "desc": "Boosts Atk, Def, Rec, and max HP by 20%",
@@ -6637,7 +6688,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "36200": {
@@ -6771,7 +6823,10 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_5_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850018"
+    ]
   },
   "36700": {
     "desc": "Increases Atk and Def by 10%",
@@ -7090,6 +7145,9 @@
       "10016",
       "10017",
       "10756"
+    ],
+    "first_clear_missions": [
+      "150002"
     ]
   },
   "37610": {
@@ -7124,6 +7182,9 @@
     "associated_units": [
       "30016",
       "30017"
+    ],
+    "first_clear_missions": [
+      "150022"
     ]
   },
   "37620": {
@@ -7153,6 +7214,9 @@
     "associated_units": [
       "40016",
       "40017"
+    ],
+    "first_clear_missions": [
+      "150032"
     ]
   },
   "37630": {
@@ -7188,6 +7252,9 @@
     "associated_units": [
       "20016",
       "20017"
+    ],
+    "first_clear_missions": [
+      "150012"
     ]
   },
   "37640": {
@@ -7225,6 +7292,9 @@
     "associated_units": [
       "60016",
       "60017"
+    ],
+    "first_clear_missions": [
+      "150052"
     ]
   },
   "37650": {
@@ -7254,6 +7324,9 @@
     "associated_units": [
       "50016",
       "50017"
+    ],
+    "first_clear_missions": [
+      "150042"
     ]
   },
   "37660": {
@@ -7284,6 +7357,9 @@
     "usage": [],
     "associated_units": [
       "30166"
+    ],
+    "first_clear_missions": [
+      "150102"
     ]
   },
   "37670": {
@@ -7313,6 +7389,9 @@
     "associated_units": [
       "50166",
       "710186"
+    ],
+    "first_clear_missions": [
+      "150200"
     ]
   },
   "37680": {
@@ -7347,6 +7426,9 @@
     "usage": [],
     "associated_units": [
       "60176"
+    ],
+    "first_clear_missions": [
+      "150201"
     ]
   },
   "37690": {
@@ -7382,7 +7464,10 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "first_clear_missions": [
+      "150202"
+    ]
   },
   "37700": {
     "desc": "Increases resistance to all status ailments",
@@ -9335,7 +9420,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "39200": {
@@ -9385,6 +9471,9 @@
         "id": 39600,
         "name": "Goddess Flag"
       }
+    ],
+    "associated_units": [
+      "850018"
     ]
   },
   "39201": {
@@ -9440,6 +9529,9 @@
         "id": 45500,
         "name": "Violet Pearl"
       }
+    ],
+    "associated_units": [
+      "850018"
     ]
   },
   "39300": {
@@ -9660,6 +9752,9 @@
         "id": 39900,
         "name": "Phoenix Wing"
       }
+    ],
+    "associated_units": [
+      "850018"
     ]
   },
   "39700": {
@@ -9846,6 +9941,9 @@
         "id": 44400,
         "name": "Phoenix Orb"
       }
+    ],
+    "associated_units": [
+      "850018"
     ]
   }
 }

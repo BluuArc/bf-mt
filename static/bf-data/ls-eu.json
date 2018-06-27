@@ -6006,6 +6006,132 @@
       "40987"
     ]
   },
+  "1964": {
+    "desc": "50% boost to Atk, Def, max HP, enormously boosts BB Atk & restores HP and considerably boosts BB gauge each turn",
+    "effects": [
+      {
+        "atk% buff": 50,
+        "def% buff": 50,
+        "hp% buff": 50,
+        "passive id": "1"
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 1000,
+        "turn heal low": 800
+      },
+      {
+        "bc fill per turn": 5,
+        "passive id": "9"
+      },
+      {
+        "bb atk% buff": 200,
+        "passive id": "64",
+        "sbb atk% buff": 200,
+        "ubb atk% buff": 200
+      }
+    ],
+    "id": "1964",
+    "name": "Burning Dragon Slayer",
+    "associated_units": [
+      "11146"
+    ]
+  },
+  "1965": {
+    "desc": "60% boost to Atk, Def, max HP, enormously boosts BB Atk & considerably restores HP and hugely boosts BB gauge each turn",
+    "effects": [
+      {
+        "atk% buff": 60,
+        "def% buff": 60,
+        "hp% buff": 60,
+        "passive id": "1"
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 1200,
+        "turn heal low": 1000
+      },
+      {
+        "bc fill per turn": 7,
+        "passive id": "9"
+      },
+      {
+        "bb atk% buff": 250,
+        "passive id": "64",
+        "sbb atk% buff": 250,
+        "ubb atk% buff": 250
+      }
+    ],
+    "id": "1965",
+    "name": "Blazing Dragon Slayer",
+    "associated_units": [
+      "11147"
+    ]
+  },
+  "1966": {
+    "desc": "140% boost to Atk, 50% boost to max HP, 110% boost to Spark damage, considerably boosts critical damage & critical damage boosts Atk for 2 turns",
+    "effects": [
+      {
+        "atk% buff": 140,
+        "hp% buff": 50,
+        "passive id": "1"
+      },
+      {
+        "damage% for spark": 110,
+        "passive id": "31"
+      },
+      {
+        "crit multiplier%": 125,
+        "passive id": "34"
+      },
+      {
+        "buff": {
+          "atk% buff (1)": 60,
+          "buff turns (1)": "2"
+        },
+        "on crit activation chance%": 100,
+        "passive id": "89"
+      }
+    ],
+    "id": "1966",
+    "name": "Holy Thunder Hammer",
+    "associated_units": [
+      "31036"
+    ]
+  },
+  "1967": {
+    "desc": "150% boost to Atk, 60% boost to max HP, 130% boost to Spark damage, hugely boosts critical damage & critical damage boosts Atk for 2 turns",
+    "effects": [
+      {
+        "atk% buff": 150,
+        "hp% buff": 60,
+        "passive id": "1"
+      },
+      {
+        "damage% for spark": 130,
+        "passive id": "31"
+      },
+      {
+        "crit multiplier%": 150,
+        "passive id": "34"
+      },
+      {
+        "buff": {
+          "atk% buff (1)": 80,
+          "buff turns (1)": "2"
+        },
+        "on crit activation chance%": 100,
+        "passive id": "89"
+      }
+    ],
+    "id": "1967",
+    "name": "Sacred Maul of Destruction",
+    "associated_units": [
+      "31037"
+    ]
+  },
   "2000": {
     "desc": "BB gauge fills after each turn",
     "effects": [
@@ -20533,7 +20659,7 @@
     ]
   },
   "12504": {
-    "desc": "残りＨＰが多いほど、攻撃力を少しアップ",
+    "desc": "Slight boost to Atk relative to remaining HP",
     "effects": [
       {
         "atk% base buff": 0,
@@ -20543,13 +20669,13 @@
       }
     ],
     "id": "12504",
-    "name": "機兵の力",
+    "name": "Mechanical Power",
     "associated_units": [
       "30932"
     ]
   },
   "12505": {
-    "desc": "残りＨＰが多いほど、攻撃力をアップ＆防御貫通効果を無効",
+    "desc": "Boosts Atk relative to remaining HP & negates Def ignoring effect",
     "effects": [
       {
         "atk% base buff": 0,
@@ -20563,7 +20689,7 @@
       }
     ],
     "id": "12505",
-    "name": "鋼機兵の核力",
+    "name": "Steely Strength",
     "associated_units": [
       "30933"
     ]
@@ -29225,6 +29351,47 @@
       "820378"
     ]
   },
+  "820418": {
+    "desc": "Boosts DEF, max HP (100%) & boosts ATK, DEF relative to remaining HP (80%) & damage taken boosts BB gauge (6-10 BC) and may restore HP (50% chance 25%) & boosts BB ATK (350%)",
+    "effects": [
+      {
+        "def% buff": 100,
+        "hp% buff": 100,
+        "passive id": "1"
+      },
+      {
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 80,
+        "buff proportional to hp": "remaining",
+        "def% base buff": 0,
+        "def% extra buff based on hp": 80,
+        "passive id": "46"
+      },
+      {
+        "dmg% to hp% when attacked chance%": 50,
+        "dmg% to hp% when attacked high": 25,
+        "dmg% to hp% when attacked low": 25,
+        "passive id": "24"
+      },
+      {
+        "bc fill when attacked high": 10,
+        "bc fill when attacked low": 6,
+        "bc fill when attacked%": 100,
+        "passive id": "25"
+      },
+      {
+        "bb atk% buff": 350,
+        "passive id": "64",
+        "sbb atk% buff": 350,
+        "ubb atk% buff": 350
+      }
+    ],
+    "id": "820418",
+    "name": "No True Destiny",
+    "associated_units": [
+      "820418"
+    ]
+  },
   "820507": {
     "desc": "60% boost to all parameters of Water types, damage taken boosts BB gauge. 15% damage reduction for 2 turns & adds probable 1 turn Atk reduction effect to attack for 2 turns when damage taken has exceeded certain amount",
     "effects": [
@@ -29959,6 +30126,44 @@
       "840548"
     ]
   },
+  "850018": {
+    "desc": "100% boost to Def, Rec, max HP, boosts Def, Rec relative to remaining HP, 15% damage reduction, restores HP each turn & considerably reduces BB gauge required for BB",
+    "effects": [
+      {
+        "def% buff": 100,
+        "hp% buff": 100,
+        "passive id": "1",
+        "rec% buff": 100
+      },
+      {
+        "buff proportional to hp": "remaining",
+        "def% base buff": 0,
+        "def% extra buff based on hp": 80,
+        "passive id": "46",
+        "rec% base buff": 0,
+        "rec% extra buff based on hp": 80
+      },
+      {
+        "dmg% mitigation": 15,
+        "passive id": "8"
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 25
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 2000,
+        "turn heal low": 1500
+      }
+    ],
+    "id": "850018",
+    "name": "8Estia_LS",
+    "associated_units": [
+      "850018"
+    ]
+  },
   "850158": {
     "desc": "Boosts all parameters (70%) & boosts BC, HC drop rate (30%) & reduces BB gauge required for BB (30%) & boosts BB gauge each turn (10 BC) & damage taken boosts BB gauge (5-8 BC)",
     "effects": [
@@ -30441,6 +30646,48 @@
     "name": "Light of Dawn's Boon",
     "associated_units": [
       "850978"
+    ]
+  },
+  "860018": {
+    "desc": "120% boost to Atk, Def, 100% boost to max HP of Light, Dark types, greatly boosts BB Atk, hugely boosts critical damage, damage taken hugely boosts BB gauge & 15% damage reduction from Light, Dark types",
+    "effects": [
+      {
+        "atk% buff": 120,
+        "def% buff": 120,
+        "elements buffed": [
+          "light",
+          "dark"
+        ],
+        "hp% buff": 100,
+        "passive id": "2"
+      },
+      {
+        "bb atk% buff": 350,
+        "passive id": "64",
+        "sbb atk% buff": 350,
+        "ubb atk% buff": 350
+      },
+      {
+        "crit multiplier%": 200,
+        "passive id": "34"
+      },
+      {
+        "bc fill when attacked high": 9,
+        "bc fill when attacked low": 5,
+        "bc fill when attacked%": 100,
+        "passive id": "25"
+      },
+      {
+        "dmg% mitigation for elemental attacks": 15,
+        "mitigate dark attacks": true,
+        "mitigate light attacks": true,
+        "passive id": "62"
+      }
+    ],
+    "id": "860018",
+    "name": "Blacklight Templar",
+    "associated_units": [
+      "860018"
     ]
   },
   "860356": {

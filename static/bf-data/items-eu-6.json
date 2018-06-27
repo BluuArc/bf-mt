@@ -49,7 +49,10 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_1_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850018"
+    ]
   },
   "60020": {
     "desc": "20% boost to all parameters & slightly reduces BB gauge consumption",
@@ -210,7 +213,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "60070": {
@@ -462,7 +466,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "60140": {
@@ -623,6 +628,9 @@
     "usage": [],
     "associated_units": [
       "30546"
+    ],
+    "first_clear_missions": [
+      "9104500"
     ]
   },
   "60300": {
@@ -696,7 +704,10 @@
     "sphere type text": "Damage Reflecting",
     "thumbnail": "sphere_thum_5_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "first_clear_missions": [
+      "9104700"
+    ]
   },
   "60400": {
     "desc": "50% boost to max HP, negates all status ailments and elemental damage & damage taken boosts BB gauge",
@@ -876,7 +887,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "62130": {
@@ -984,7 +996,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "62180": {
@@ -1103,7 +1116,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "62220": {
@@ -1302,7 +1316,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "62340": {
@@ -1864,6 +1879,9 @@
     "usage": [],
     "associated_units": [
       "850198"
+    ],
+    "first_clear_missions": [
+      "2100000"
     ]
   }
 }
