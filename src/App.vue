@@ -80,6 +80,8 @@ import { mapActions, mapState } from 'vuex';
 import debounce from 'lodash/debounce';
 import SiteTrackers from '@/components/SiteTrackers';
 
+import { moduleInfo } from '@/store';
+const multidexModules = moduleInfo.filter(m => m.type === 'multidex');
 export default {
   components: {
     'site-trackers': SiteTrackers,
@@ -106,38 +108,39 @@ export default {
     },
     ...mapState('settings', ['lightMode', 'activeServer']),
     ...mapState(['disableHtmlOverflow', 'modules', 'updateTimes']),
-    ...mapState('units', {
-      unitsNumEntries: 'numEntries',
-      unitsLoading: 'isLoading',
-      unitsCacheTimes: 'cacheTimes',
-      unitsUpdateTimes: 'updateTimes',
-    }),
-    ...mapState('items', {
-      itemsNumEntries: 'numEntries',
-      itemsLoading: 'isLoading',
-      itemsCacheTimes: 'cacheTimes',
-      itemsUpdateTimes: 'updateTimes',
-    }),
-    ...mapState('bursts', {
-      burstsNumEntries: 'numEntries',
-      burstsLoading: 'isLoading',
-      burstsCacheTimes: 'cacheTimes',
-      burstsUpdateTimes: 'updateTimes',
-    }),
-    ...mapState('extraSkills', {
-      extraSkillsNumEntries: 'numEntries',
-      extraSkillsLoading: 'isLoading',
-      extraSkillsCacheTimes: 'cacheTimes',
-      extraSkillsUpdateTimes: 'updateTimes',
-    }),
-    ...mapState('leaderSkills', {
-      leaderSkillsNumEntries: 'numEntries',
-      leaderSkillsLoading: 'isLoading',
-      leaderSkillsCacheTimes: 'cacheTimes',
-      leaderSkillsUpdateTimes: 'updateTimes',
-    }),
+    multidexModules: () => multidexModules.slice(),
+    ...(() => {
+      // get state for each module
+      let result = {};
+      multidexModules.map(m => m.name).forEach(m => {
+        const stateMapping = {};
+        stateMapping[`${m}NumEntries`] = 'numEntries';
+        stateMapping[`${m}Loading`] = 'isLoading';
+        stateMapping[`${m}CacheTimes`] = 'cacheTimes';
+        stateMapping[`${m}UpdateTimes`] = 'updateTimes';
+
+        result = {
+          ...result,
+          ...mapState(m, stateMapping),
+        };
+      });
+      return result;
+    })(),
   },
   data () {
+    const multidexIconMapping = {
+      units: {icon: 'people'},
+      items: {icon: 'group_work'},
+      bursts: {icon: 'gavel'},
+      default: {icon: 'extension'},
+    };
+    const generateMultidexEntry = (entry) => {
+      return {
+        ...entry,
+        title: entry.fullName,
+        ...(multidexIconMapping[entry.name] || multidexIconMapping.default),
+      };
+    };
     return {
       showDrawer: false,
       menuItems: [
@@ -163,43 +166,7 @@ export default {
         },
         {
           subheader: 'Multidex',
-          items: [
-            // {
-            //   icon: 'local_library',
-            //   title: 'Overview',
-            //   link: '/multidex',
-            // },
-            {
-              icon: 'people',
-              title: 'Units',
-              module: 'units',
-              link: '/multidex/units',
-            },
-            {
-              icon: 'group_work',
-              title: 'Items',
-              module: 'items',
-              link: '/multidex/items',
-            },
-            {
-              icon: 'gavel',
-              title: 'Brave Bursts',
-              module: 'bursts',
-              link: '/multidex/bursts',
-            },
-            {
-              icon: 'extension',
-              title: 'Extra Skills',
-              module: 'extraSkills',
-              link: '/multidex/extra-skills',
-            },
-            {
-              icon: 'extension',
-              title: 'Leader Skills',
-              module: 'leaderSkills',
-              link: '/multidex/leader-skills',
-            },
-          ],
+          items: multidexModules.map(generateMultidexEntry),
         },
       ],
       title: 'Brave Frontier Multi Tool',
