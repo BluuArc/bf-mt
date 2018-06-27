@@ -65,18 +65,18 @@
                     <v-divider/>
                   </v-flex>
                 </v-layout>
-                <v-layout row wrap v-for="(value, key) in dataSettingNameMapping" :key="key">
+                <v-layout row wrap v-for="multidexModule in multidexModules" :key="multidexModule.name">
                   <v-flex xs3 class="text-xs-center pa-0" style="margin: auto; border-right: var(--border-color) 1px solid;">
                     <v-container fluid>
                       <v-layout row>
-                        <v-flex xs12 v-text="value"/>
+                        <v-flex xs12 v-text="multidexModule.fullName"/>
                       </v-layout>
-                      <v-layout row wrap v-show="!stateInfo[key].isLoading">
+                      <v-layout row wrap v-show="!stateInfo[multidexModule.name].isLoading">
                         <v-flex xs12 md6>
                           <v-btn
                             block
                             :disabled="dataIsLoading"
-                            @click="() => { dataUpdate[key] = servers.slice(); dataDelete[key] = []; }">
+                            @click="() => { dataUpdate[multidexModule.name] = servers.slice(); dataDelete[multidexModule.name] = []; }">
                             Reload All
                           </v-btn>
                         </v-flex>
@@ -84,7 +84,7 @@
                           <v-btn
                             block
                             :disabled="dataIsLoading"
-                            @click="() => { dataDelete[key] = servers.slice(); dataUpdate[key] = []; }">
+                            @click="() => { dataDelete[multidexModule.name] = servers.slice(); dataUpdate[multidexModule.name] = []; }">
                             Delete All
                           </v-btn>
                         </v-flex>
@@ -92,20 +92,20 @@
                     </v-container>
                   </v-flex>
                   <v-flex
-                    v-show="!stateInfo[key].isLoading"
+                    v-show="!stateInfo[multidexModule.name].isLoading"
                     xs3 class="text-xs-center pa-0"
                     v-for="server in servers"
-                    :key="`${key}-${server}`">
+                    :key="`${multidexModule.name}-${server}`">
                     <v-container fluid>
                       <v-layout row>
                         <v-flex xs12>
-                          <span v-if="stateInfo[key].numEntries[server] > 0">
-                            <b>Cached:</b><br>{{ new Date(stateInfo[key].cacheTimes[server]).toLocaleString() }}
+                          <span v-if="stateInfo[multidexModule.name].numEntries[server] > 0">
+                            <b>Cached:</b><br>{{ new Date(stateInfo[multidexModule.name].cacheTimes[server]).toLocaleString() }}
                           </span>
                           <span v-else>
                             No data cached.
                           </span>
-                          <p v-if="stateInfo[key].updateTimes && updateTimes[`${key}s`] && stateInfo[key].updateTimes[server] && updateTimes[`${key}s`][server] && (stateInfo[key].numEntries[server] === 0 || new Date(updateTimes[`${key}s`][server]) > new Date(stateInfo[key].updateTimes[server]))">
+                          <p v-if="stateInfo[multidexModule.name].updateTimes && updateTimes[multidexModule.name] && stateInfo[multidexModule.name].updateTimes[server] && updateTimes[multidexModule.name][server] && (stateInfo[multidexModule.name].numEntries[server] === 0 || new Date(updateTimes[multidexModule.name][server]) > new Date(stateInfo[multidexModule.name].updateTimes[server]))">
                             <v-alert color="info" class="pt-2 pb-2 pl-2 pr-2" :value="true">
                               Update available
                             </v-alert>
@@ -114,12 +114,12 @@
                       </v-layout>
                       <v-layout row wrap>
                         <v-flex xs12 md6>
-                          <v-btn block :disabled="dataIsLoading" :outline="!dataUpdate[key].includes(server)" @click="toggleDataUpdate(key, server)">
+                          <v-btn block :disabled="dataIsLoading" :outline="!dataUpdate[multidexModule.name].includes(server)" @click="toggleDataUpdate(multidexModule.name, server)">
                             <v-icon>cloud_download</v-icon>
                           </v-btn>
                         </v-flex>
                         <v-flex xs12 md6>
-                          <v-btn block :disabled="dataIsLoading" :outline="!dataDelete[key].includes(server)" @click="toggleDataDelete(key, server)">
+                          <v-btn block :disabled="dataIsLoading" :outline="!dataDelete[multidexModule.name].includes(server)" @click="toggleDataDelete(multidexModule.name, server)">
                             <v-icon>cloud_off</v-icon>
                           </v-btn>
                         </v-flex>
@@ -127,10 +127,10 @@
                     </v-container>
                   </v-flex>
                   <v-flex
-                    v-show="stateInfo[key].isLoading"
+                    v-show="stateInfo[multidexModule.name].isLoading"
                     xs9 class="text-xs-center pa-0">
                     <v-progress-circular indeterminate/>
-                    <h4 class="subheading" v-text="stateInfo[key].loadingMessage || 'Waiting for data to finish loading.'"/>
+                    <h4 class="subheading" v-text="stateInfo[multidexModule.name].loadingMessage || 'Waiting for data to finish loading.'"/>
                   </v-flex>
                   <v-flex xs12>
                     <v-divider/>
@@ -154,64 +154,45 @@
 
 <script>
 import { mapActions, mapState } from 'vuex';
+import { moduleInfo } from '@/store';
 
+const multidexModules = moduleInfo.filter(m => m.type === 'multidex');
 export default {
   computed: {
     ...mapState(['updateTimes']),
     ...mapState('settings', ['lightMode', 'activeServer']),
-    ...mapState('units', {
-      unitData: 'pageDb',
-      unitNumEntries: 'numEntries',
-      unitsLoading: 'isLoading',
-      unitCacheTimes: 'cacheTimes',
-      unitUpdateTimes: 'updateTimes',
-      unitLoadingMessage: 'loadingMessage',
-    }),
-    ...mapState('items', {
-      itemData: 'pageDb',
-      itemNumEntries: 'numEntries',
-      itemsLoading: 'isLoading',
-      itemCacheTimes: 'cacheTimes',
-      itemUpdateTimes: 'updateTimes',
-      itemLoadingMessage: 'loadingMessage',
-    }),
-    ...mapState('bursts', {
-      burstData: 'pageDb',
-      burstNumEntries: 'numEntries',
-      burstsLoading: 'isLoading',
-      burstCacheTimes: 'cacheTimes',
-      burstUpdateTimes: 'updateTimes',
-      burstLoadingMessage: 'loadingMessage',
-    }),
-    ...mapState('extraSkills', {
-      extraSkillData: 'pageDb',
-      extraSkillNumEntries: 'numEntries',
-      extraSkillsLoading: 'isLoading',
-      extraSkillCacheTimes: 'cacheTimes',
-      extraSkillUpdateTimes: 'updateTimes',
-      extraSkillLoadingMessage: 'loadingMessage',
-    }),
-    ...mapState('leaderSkills', {
-      leaderSkillData: 'pageDb',
-      leaderSkillNumEntries: 'numEntries',
-      leaderSkillsLoading: 'isLoading',
-      leaderSkillCacheTimes: 'cacheTimes',
-      leaderSkillUpdateTimes: 'updateTimes',
-      leaderSkillLoadingMessage: 'loadingMessage',
-    }),
+    multidexModules: () => multidexModules.slice(),
+    ...(() => {
+      // get state for each module
+      let result = {};
+      multidexModules.map(m => m.name).forEach(m => {
+        const stateMapping = {};
+        stateMapping[`${m}Data`] = 'pageDb';
+        stateMapping[`${m}NumEntries`] = 'numEntries';
+        stateMapping[`${m}IsLoading`] = 'isLoading';
+        stateMapping[`${m}CacheTimes`] = 'cacheTimes';
+        stateMapping[`${m}UpdateTimes`] = 'updateTimes';
+        stateMapping[`${m}LoadingMessage`] = 'loadingMessage';
+
+        result = {
+          ...result,
+          ...mapState(m, stateMapping),
+        };
+      });
+      return result;
+    })(),
     stateInfo () {
       const info = {};
-      Object.keys(this.dataSettingNameMapping)
-        .forEach(type => {
-          info[type] = {
-            data: this[`${type}Data`],
-            numEntries: this[`${type}NumEntries`],
-            isLoading: this[`${type}sLoading`],
-            cacheTimes: this[`${type}CacheTimes`],
-            updateTimes: this[`${type}UpdateTimes`],
-            loadingMessage: this[`${type}LoadingMessage`],
-          };
-        });
+      multidexModules.map(m => m.name).forEach(type => {
+        info[type] = {
+          data: this[`${type}Data`],
+          numEntries: this[`${type}NumEntries`],
+          isLoading: this[`${type}IsLoading`],
+          cacheTimes: this[`${type}CacheTimes`],
+          updateTimes: this[`${type}UpdateTimes`],
+          loadingMessage: this[`${type}LoadingMessage`],
+        };
+      });
       return info;
     },
     lightModeCheckboxRules () {
@@ -228,15 +209,6 @@ export default {
     dataIsLoading () {
       return Object.values(this.stateInfo).reduce((acc, val) => acc || val.isLoading, false);
     },
-    dataSettingNameMapping () {
-      return {
-        unit: 'Units',
-        item: 'Items',
-        burst: 'Brave Bursts',
-        extraSkill: 'Extra Skills',
-        leaderSkill: 'Leader Skills',
-      };
-    },
     dataFormHasChanged () {
       const hasUpdates = Object.values(this.dataUpdate).reduce((acc, val) => acc || val.length > 0, false);
       const hasDeletes = Object.values(this.dataDelete).reduce((acc, val) => acc || val.length > 0, false);
@@ -249,27 +221,22 @@ export default {
     },
   },
   data () {
+    const dataUpdate = {};
+    const dataDelete = {};
+    multidexModules.map(m => m.name)
+      .forEach(m => {
+        // each entry contains array of servers to re-download
+        dataUpdate[m] = [];
+        dataDelete[m] = [];
+      });
     return {
       general: {
         valid: false,
         lightMode: true,
         activeServer: 'gl',
       },
-      // each entry contains array of servers to re-download
-      dataUpdate: {
-        unit: [],
-        item: [],
-        burst: [],
-        extraSkill: [],
-        leaderSkill: [],
-      },
-      dataDelete: {
-        unit: [],
-        item: [],
-        burst: [],
-        extraSkill: [],
-        leaderSkill: [],
-      },
+      dataUpdate,
+      dataDelete,
       checkingForUpdates: false,
     };
   },
@@ -288,26 +255,20 @@ export default {
   methods: {
     ...mapActions(['setActiveServer', 'fetchUpdateTimes']),
     ...mapActions('settings', ['setLightMode']),
-    ...mapActions('units', {
-      unitDataUpdate: 'updateData',
-      unitDataDelete: 'deleteData',
-    }),
-    ...mapActions('items', {
-      itemDataUpdate: 'updateData',
-      itemDataDelete: 'deleteData',
-    }),
-    ...mapActions('bursts', {
-      burstDataUpdate: 'updateData',
-      burstDataDelete: 'deleteData',
-    }),
-    ...mapActions('extraSkills', {
-      extraSkillDataUpdate: 'updateData',
-      extraSkillDataDelete: 'deleteData',
-    }),
-    ...mapActions('leaderSkills', {
-      leaderSkillDataUpdate: 'updateData',
-      leaderSkillDataDelete: 'deleteData',
-    }),
+    ...(() => {
+      // get actions for each module
+      let result = {};
+      multidexModules.map(m => m.name).forEach(m => {
+        const actionMapping = {};
+        actionMapping[`${m}DataUpdate`] = 'updateData';
+        actionMapping[`${m}DataDelete`] = 'deleteData';
+        result = {
+          ...result,
+          ...mapActions(m, actionMapping),
+        };
+      });
+      return result;
+    })(),
     async generalFormSubmit () {
       if (this.general.lightMode !== this.lightMode) {
         await this.setLightMode(this.general.lightMode);
