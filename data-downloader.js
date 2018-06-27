@@ -426,7 +426,7 @@ const handlers = {
     setGitData(server = 'gl') {
       logger.info(`${server}: setting git data`);
       const fileDate = getGitData('ls.json', server).date;
-      updateData.extraSkills[server] = new Date(fileDate).toISOString();
+      updateData.leaderSkills[server] = new Date(fileDate).toISOString();
     },
     async download(server = 'gl') {
       const lsData = {};
@@ -752,7 +752,7 @@ async function getMissionsForServer(server = 'gl') {
 // TODO: implement usage for this
 async function getDictionaryForServer(server = 'gl') {
   handlers.dictionary.setGitData(server);
-  if (statsOnly) {
+  if (!config.processData) {
     return {};
   }
 
