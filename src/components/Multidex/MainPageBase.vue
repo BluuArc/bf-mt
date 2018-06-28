@@ -405,7 +405,7 @@
                 </v-layout>
                 <v-layout row>
                   <v-flex xs10 md11 class="vertical-align-parent">
-                    <template v-if="!hasFilters">
+                    <template v-if="!hasNonNameFilters">
                       <h3 class="subheading vertical-align-container">No filters applied.</h3>
                     </template>
                     <template v-else>
@@ -935,11 +935,13 @@ export default {
         dungeon: [],
       };
     },
-    hasFilters () {
-      return !!this.filterOptions.name ||
-        Object.keys(this.defaultFilters)
+    hasNonNameFilters () {
+      return Object.keys(this.defaultFilters)
         .map(key => this.filterOptions[key].length !== this.defaultFilters[key].length)
         .reduce((acc, val) => acc || val, false);
+    },
+    hasFilters () {
+      return !!this.filterOptions.name || this.hasNonNameFilters;
     },
   },
   data () {

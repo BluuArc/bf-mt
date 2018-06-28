@@ -22,23 +22,23 @@
         </v-flex>
       </v-layout>
     </template>
-    <!-- <template slot="dialog-content">
-      <skill-info :leaderId="viewId"/>
-    </template> -->
+    <template slot="dialog-content">
+      <mission-info :missionId="viewId"/>
+    </template>
   </main-page-base>
 </template>
 
 <script>
 import { mapState, mapGetters } from 'vuex';
 import MainPageBase from '@/components/Multidex/MainPageBase';
-// import SkillInfo from '@/components/Multidex/LeaderSkills/DialogContent';
+import MissionInfo from '@/components/Multidex/Missions/DialogContent';
 import MissionCard from '@/components/Multidex/Missions/MissionCard';
 
 export default {
   props: ['query', 'viewId', 'server'],
   components: {
     'main-page-base': MainPageBase,
-    // 'skill-info': SkillInfo,
+    'mission-info': MissionInfo,
     'mission-card': MissionCard,
   },
   computed: {
