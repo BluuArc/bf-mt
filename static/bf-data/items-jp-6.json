@@ -4186,7 +4186,10 @@
     "sphere type text": "Critical",
     "thumbnail": "sphere_thum_3_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "first_clear_missions": [
+      "2100000"
+    ]
   },
   "64000": {
     "desc": "攻撃力・防御力・回復力・最大ＨＰを４５％アップ＆弱点属性ダメージをアップ＆ＢＣ・ＨＣ出現率を大幅にアップ",

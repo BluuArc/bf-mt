@@ -413,7 +413,11 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
+    ],
+    "first_clear_missions": [
+      "7000000"
     ]
   },
   "700005": {
@@ -455,6 +459,13 @@
         "id": 700008,
         "name": "The Grail"
       }
+    ],
+    "first_clear_missions": [
+      "701600",
+      "701601",
+      "701602",
+      "701700",
+      "701701"
     ]
   },
   "700008": {
@@ -512,7 +523,8 @@
     "associated_units": [
       "730166",
       "750167",
-      "750287"
+      "750287",
+      "850018"
     ]
   },
   "700009": {
@@ -584,6 +596,14 @@
         "id": 700011,
         "name": "True Elgaia Emblem"
       }
+    ],
+    "first_clear_missions": [
+      "9103001",
+      "9103101",
+      "9103201",
+      "9103301",
+      "9103401",
+      "9103501"
     ]
   },
   "700011": {
@@ -666,6 +686,9 @@
         "id": 700017,
         "name": "Perfect Elgaia Emblem"
       }
+    ],
+    "first_clear_missions": [
+      "9103601"
     ]
   },
   "700013": {
@@ -709,6 +732,11 @@
     ],
     "associated_units": [
       "760006"
+    ],
+    "first_clear_missions": [
+      "702407",
+      "7000001",
+      "9103700"
     ]
   },
   "700014": {
@@ -931,6 +959,11 @@
         "id": 700018,
         "name": "Blink's Glasses"
       }
+    ],
+    "first_clear_missions": [
+      "9103800",
+      "9103801",
+      "9103802"
     ]
   },
   "700021": {
@@ -1055,6 +1088,9 @@
     ],
     "associated_units": [
       "30546"
+    ],
+    "first_clear_missions": [
+      "9104002"
     ]
   },
   "700025": {
@@ -1840,6 +1876,16 @@
         "id": 700051,
         "name": "Perfect Ishgria Emblem"
       }
+    ],
+    "first_clear_missions": [
+      "9104400",
+      "9104500",
+      "9104600",
+      "9104700",
+      "9104800",
+      "9104900",
+      "9104910",
+      "9104950"
     ]
   },
   "700051": {
@@ -1951,7 +1997,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "700053": {
@@ -2026,6 +2073,9 @@
         "id": 700052,
         "name": "Super Spookfest Lantern"
       }
+    ],
+    "first_clear_missions": [
+      "707800"
     ]
   },
   "700057": {
@@ -2399,6 +2449,14 @@
         "id": 700067,
         "name": "Siegfried Draconic Rage"
       }
+    ],
+    "first_clear_missions": [
+      "9105000",
+      "9105100",
+      "9105200",
+      "9105300",
+      "9105400",
+      "9105500"
     ]
   },
   "700067": {
@@ -2687,6 +2745,9 @@
         "id": 700073,
         "name": "Wedding announcement"
       }
+    ],
+    "first_clear_missions": [
+      "9105600"
     ]
   },
   "700073": {
@@ -2872,6 +2933,65 @@
     "type": "sphere",
     "usage": []
   },
+  "700077": {
+    "desc": "Boosts all parameters (40%) & restores HP each turn & damage taken may restore HP (40% chance 30%) & additional damage reduction (50%) & adds status ailment removal effect to BB/SBB",
+    "effect": [
+      {
+        "atk% buff": 40,
+        "def% buff": 40,
+        "hp% buff": 40,
+        "passive id": "1",
+        "rec% buff": 40
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 11,
+        "turn heal high": 2500,
+        "turn heal low": 2000
+      },
+      {
+        "dmg% to hp% when attacked chance%": 40,
+        "dmg% to hp% when attacked high": 30,
+        "dmg% to hp% when attacked low": 30,
+        "passive id": "24"
+      },
+      {
+        "unknown passive id": "127",
+        "unknown passive params": "100,50"
+      },
+      {
+        "passive id": "66",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "10",
+            "remove all status ailments": true,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": 700077,
+    "max_stack": 1,
+    "name": "Divine Timeless Scepter",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 30000,
+    "sphere type": 7,
+    "sphere type text": "HP Recovery",
+    "thumbnail": "sphere_thum_4_3.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "850018"
+    ],
+    "first_clear_missions": [
+      "9108000"
+    ]
+  },
   "701000": {
     "desc": "This is a part of a great shining spirit. It is a lighthouse for the dead.",
     "id": 701000,
@@ -2997,6 +3117,9 @@
     "usage": [],
     "associated_units": [
       "750216"
+    ],
+    "first_clear_missions": [
+      "9103901"
     ]
   },
   "701003": {
@@ -3152,7 +3275,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "701006": {
@@ -3540,6 +3664,9 @@
     "associated_units": [
       "720216",
       "720217"
+    ],
+    "first_clear_missions": [
+      "703200"
     ]
   },
   "701013": {
@@ -3751,6 +3878,9 @@
         "id": 701017,
         "name": "Photon Sword"
       }
+    ],
+    "first_clear_missions": [
+      "9104200"
     ]
   },
   "701017": {
@@ -4318,6 +4448,9 @@
     "associated_units": [
       "730226",
       "760017"
+    ],
+    "first_clear_missions": [
+      "703400"
     ]
   },
   "701026": {
@@ -4448,7 +4581,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "701028": {
@@ -5045,6 +5179,10 @@
       "740237",
       "750247",
       "760247"
+    ],
+    "first_clear_missions": [
+      "706202",
+      "706302"
     ]
   },
   "701040": {
@@ -5086,6 +5224,10 @@
       "740237",
       "750247",
       "760247"
+    ],
+    "first_clear_missions": [
+      "706402",
+      "706502"
     ]
   },
   "701041": {
@@ -5128,6 +5270,10 @@
       "740237",
       "750247",
       "760247"
+    ],
+    "first_clear_missions": [
+      "706602",
+      "706702"
     ]
   },
   "701042": {
@@ -5294,6 +5440,11 @@
         "id": 701045,
         "name": "Hunter Title"
       }
+    ],
+    "first_clear_missions": [
+      "706903",
+      "707303",
+      "707503"
     ]
   },
   "701047": {
@@ -5370,6 +5521,11 @@
         "id": 701047,
         "name": "Pure Noblesse Title"
       }
+    ],
+    "first_clear_missions": [
+      "707103",
+      "707203",
+      "707403"
     ]
   },
   "701049": {
@@ -5460,6 +5616,9 @@
     "usage": [],
     "associated_units": [
       "730217"
+    ],
+    "first_clear_missions": [
+      "7100100"
     ]
   },
   "701053": {
@@ -5509,6 +5668,9 @@
       "810548",
       "820397",
       "820398"
+    ],
+    "first_clear_missions": [
+      "707601"
     ]
   }
 }

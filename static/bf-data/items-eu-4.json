@@ -521,7 +521,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "41401": {
@@ -584,7 +585,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "41402": {
@@ -647,7 +649,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "41403": {
@@ -710,7 +713,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "41404": {
@@ -773,7 +777,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "41405": {
@@ -836,7 +841,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "41500": {
@@ -1109,6 +1115,9 @@
         "id": 230005,
         "name": "Worship Charm"
       }
+    ],
+    "associated_units": [
+      "850018"
     ]
   },
   "42000": {
@@ -1140,7 +1149,10 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_5_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850018"
+    ]
   },
   "42100": {
     "desc": "Greatly increases BB gauge fill rate when obtaining BC",
@@ -1188,7 +1200,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "42300": {
@@ -1730,7 +1743,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "44200": {
@@ -1919,6 +1933,9 @@
         "id": 47700,
         "name": "Phoenix Crown"
       }
+    ],
+    "associated_units": [
+      "850018"
     ]
   },
   "44500": {
@@ -1985,7 +2002,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "44501": {
@@ -2047,7 +2065,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "44600": {
@@ -2138,7 +2157,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_1_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "first_clear_missions": [
+      "2000004"
+    ]
   },
   "44701": {
     "desc": "Recovers HP each turn, adds chance of HP recovery when damaged & 15% boost to Atk, Def, Rec and max HP",
@@ -2173,7 +2195,13 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_1_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850018"
+    ],
+    "first_clear_missions": [
+      "2000006"
+    ]
   },
   "44702": {
     "desc": "Negates all status ailments (including stronger element damage) & 15% boost to Atk, Def, Rec and max HP",
@@ -2210,7 +2238,10 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_1_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "first_clear_missions": [
+      "2000008"
+    ]
   },
   "44703": {
     "desc": "100% boost to Spark damage & 15% boost to Atk, Def, Rec, max HP",
@@ -2240,6 +2271,9 @@
     "usage": [],
     "associated_units": [
       "30546"
+    ],
+    "first_clear_missions": [
+      "2000010"
     ]
   },
   "44704": {
@@ -2281,7 +2315,11 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
+    ],
+    "first_clear_missions": [
+      "2000012"
     ]
   },
   "44705": {
@@ -2319,7 +2357,10 @@
     "sphere type text": "Special",
     "thumbnail": "sphere_thum_1_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "first_clear_missions": [
+      "2000015"
+    ]
   },
   "44900": {
     "desc": "Boosts Atk, Def, Rec with full BB gauge & largely boosts Spark damage",
@@ -2705,7 +2746,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "45700": {
@@ -2996,7 +3038,10 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "first_clear_missions": [
+      "9104600"
+    ]
   },
   "46220": {
     "desc": "40% boost to Atk, Def, Rec, max HP, considerably boosts BB Atk & boosts BB gauge when damage dealt has exceeded certain amount",
@@ -3060,7 +3105,10 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "first_clear_missions": [
+      "9104900"
+    ]
   },
   "46300": {
     "desc": "BB gauge fills incredibly fast when obtaining BC",
@@ -3220,7 +3268,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "46900": {
@@ -3355,6 +3404,9 @@
     "usage": [],
     "associated_units": [
       "50276"
+    ],
+    "first_clear_missions": [
+      "150301"
     ]
   },
   "47201": {
@@ -3392,6 +3444,9 @@
       "10256",
       "10257",
       "720186"
+    ],
+    "first_clear_missions": [
+      "150302"
     ]
   },
   "47202": {
@@ -3423,6 +3478,9 @@
     "associated_units": [
       "20276",
       "30276"
+    ],
+    "first_clear_missions": [
+      "150402"
     ]
   },
   "47203": {
@@ -3456,6 +3514,9 @@
     "usage": [],
     "associated_units": [
       "50386"
+    ],
+    "first_clear_missions": [
+      "150502"
     ]
   },
   "47204": {
@@ -3489,6 +3550,9 @@
     "usage": [],
     "associated_units": [
       "50386"
+    ],
+    "first_clear_missions": [
+      "150505"
     ]
   },
   "47205": {
@@ -3522,6 +3586,9 @@
     "usage": [],
     "associated_units": [
       "50886"
+    ],
+    "first_clear_missions": [
+      "150602"
     ]
   },
   "47206": {
@@ -3560,6 +3627,9 @@
       "20286",
       "50316",
       "50317"
+    ],
+    "first_clear_missions": [
+      "150702"
     ]
   },
   "47207": {
@@ -3597,6 +3667,9 @@
     "usage": [],
     "associated_units": [
       "60667"
+    ],
+    "first_clear_missions": [
+      "150802"
     ]
   },
   "47208": {
@@ -3636,6 +3709,9 @@
     "associated_units": [
       "10556",
       "10557"
+    ],
+    "first_clear_missions": [
+      "150902"
     ]
   },
   "47209": {
@@ -3682,6 +3758,9 @@
     "usage": [],
     "associated_units": [
       "50287"
+    ],
+    "first_clear_missions": [
+      "151002"
     ]
   },
   "47210": {
@@ -3718,6 +3797,9 @@
     "usage": [],
     "associated_units": [
       "10757"
+    ],
+    "first_clear_missions": [
+      "151100"
     ]
   },
   "47211": {
@@ -3765,6 +3847,9 @@
     "usage": [],
     "associated_units": [
       "30447"
+    ],
+    "first_clear_missions": [
+      "151200"
     ]
   },
   "47212": {
@@ -3808,7 +3893,10 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "first_clear_missions": [
+      "151303"
+    ]
   },
   "47213": {
     "desc": "30% boost to Atk, max HP, hugely boosts BB Atk, considerably boosts BB Atk when HP is over 50%, damage taken may restore HP & activates at turn's end effects during turn's start instead",
@@ -3853,7 +3941,10 @@
     "sphere type text": "Special",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "first_clear_missions": [
+      "151402"
+    ]
   },
   "47214": {
     "desc": "When HP is below 50%: damage reduction for 1 turn, damage taken slightly restores HP, adds probable 2 turn Atk reduction counter & 30% boost to Def, max HP",
@@ -3907,7 +3998,11 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
+    ],
+    "first_clear_missions": [
+      "151503"
     ]
   },
   "47300": {
@@ -4221,6 +4316,9 @@
       "810548",
       "820397",
       "820398"
+    ],
+    "first_clear_missions": [
+      "9104400"
     ]
   },
   "47700": {
@@ -4562,7 +4660,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "47904": {
@@ -4626,7 +4725,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "47905": {
@@ -4694,7 +4794,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "47906": {
@@ -5153,7 +5254,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "48209": {
@@ -5260,7 +5362,10 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850018"
+    ]
   },
   "48212": {
     "desc": "Spark damage slightly boosts BB gauge and restores HP & 30% boost to Atk, max HP",
@@ -5483,7 +5588,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "48218": {
@@ -5553,7 +5659,10 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850018"
+    ]
   },
   "48220": {
     "desc": "Negates Def ignoring effect, 50% Spark damage reduction, low probability of enormous damage reduction & 30% boost to Def, max HP",
@@ -5594,7 +5703,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "48221": {
@@ -5760,7 +5870,10 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850018"
+    ]
   },
   "48300": {
     "desc": "Hugely boosts attack's BC, HC drop rate, boosts BC, HC efficacy & recovers BB gauge, HP each turn",
@@ -5890,7 +6003,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "48302": {
@@ -6014,7 +6128,10 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_5_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850018"
+    ]
   },
   "48420": {
     "desc": "Nullifies all ailments, critical & elemental based dmg, boosts BB gauge each turn & greatly heals HP",
@@ -6157,7 +6274,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "48600": {
@@ -6303,7 +6421,10 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_3_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850018"
+    ]
   },
   "48800": {
     "desc": "Hugely boosts Atk relative to how high remaining HP is & reduces own Atk relative to how low remaining HP is",
@@ -6431,6 +6552,9 @@
     "usage": [],
     "associated_units": [
       "850198"
+    ],
+    "first_clear_missions": [
+      "9104950"
     ]
   },
   "49200": {
@@ -6584,7 +6708,8 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
     ]
   },
   "49600": {
@@ -6683,7 +6808,10 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_3_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "first_clear_missions": [
+      "9104910"
+    ]
   },
   "49800": {
     "desc": "Very slight probable dmg reduction to 1, restores BB and greatly restores HP each turn & dmg taken slightly boosts BB gauge and may restore HP",
@@ -6762,7 +6890,11 @@
       "840547",
       "840548",
       "850507",
-      "850508"
+      "850508",
+      "860018"
+    ],
+    "first_clear_missions": [
+      "9104800"
     ]
   },
   "49930": {
@@ -6797,7 +6929,10 @@
     "sphere type text": "HP Recovery",
     "thumbnail": "sphere_thum_5_7.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "850018"
+    ]
   },
   "49940": {
     "desc": "Considerably boosts BB Atk, 50% boost to Spark damage, considerably boosts critical damage & 50% boost to Atk",
@@ -6839,6 +6974,9 @@
       "810548",
       "820397",
       "820398"
+    ],
+    "first_clear_missions": [
+      "2000013"
     ]
   }
 }
