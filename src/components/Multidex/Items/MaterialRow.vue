@@ -72,7 +72,7 @@
           Karma
         </v-flex>
         <v-flex xs3 sm1 class="text-xs-center">
-          {{ karma }}
+          {{ formatNumber(karma) }}
         </v-flex>
       </v-layout>
     </v-container>
@@ -81,6 +81,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
+import numbro from 'numbro';
 import ItemThumbnail from '@/components/Multidex/Items/ItemThumbnail';
 import SphereTypeIcon from '@/components/Multidex/Items/SphereTypeIcon';
 
@@ -129,6 +130,11 @@ export default {
     return {
       showRecipe: false,
     };
+  },
+  methods: {
+    formatNumber (number) {
+      return +number < 1000 ? +number : numbro(+number).format({ average: true, mantissa: 3 });
+    },
   },
   name: 'material-row',
 };

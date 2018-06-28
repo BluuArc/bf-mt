@@ -95,6 +95,7 @@
 
 <script>
 import { mapActions, mapGetters, mapState } from 'vuex';
+import numbro from 'numbro';
 import ItemThumbnail from '@/components/Multidex/Items/ItemThumbnail';
 import SphereTypeIcon from '@/components/Multidex/Items/SphereTypeIcon';
 import UsageCard from '@/components/Multidex/Items/UsageCard';
@@ -119,7 +120,7 @@ export default {
       return !this.item ? [] : [
         { label: 'Item ID:', value: this.item.id },
         { label: 'Max Stack:', value: `x${this.item.max_stack}` },
-        { label: 'Sell Price:', value: `${this.item.sell_price} Zel` },
+        { label: 'Sell Price:', value: `${this.formatNumber(+this.item.sell_price)} Zel` },
         { label: 'Raid Item?', value: this.item.raid ? 'Yes' : 'No' },
         this.item.rarity !== undefined ? { label: 'Rarity:', value: this.item.rarity } : undefined,
         { label: 'Item Type:', value: this.itemType },
@@ -204,6 +205,9 @@ export default {
   },
   methods: {
     ...mapActions('items', { getItem: 'getById' }),
+    formatNumber (number) {
+      return +number < 1000 ? +number : numbro(+number).format({ average: true, mantissa: 2 });
+    },
   },
 };
 </script>
