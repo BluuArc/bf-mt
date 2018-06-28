@@ -30,44 +30,57 @@
           <v-flex xs12 md6>
             <div><b>Base Rewards:</b></div>
             <template v-if="hasBaseRewards">
-              <span style="white-space: nowrap;" v-if="mission.xp">{{ mission.xp }} XP{{ (mission.xp && (mission.zel || mission.karma)) ? ',' : '' }}</span>
-              <span style="white-space: nowrap;" v-if="mission.zel">{{ mission.zel }} Zel{{ ((mission.xp || mission.zel) && mission.karma) ? ',' : '' }}</span>
-              <span style="white-space: nowrap;" v-if="mission.karma">{{ mission.karma }} Karma</span>
+              <span style="white-space: nowrap;" v-if="mission.xp">{{ formatNumber(mission.xp) }} XP{{ (mission.xp && (mission.zel || mission.karma)) ? ',' : '' }}</span>
+              <span style="white-space: nowrap;" v-if="mission.zel">{{ formatNumber(mission.zel) }} Zel{{ ((mission.xp || mission.zel) && mission.karma) ? ',' : '' }}</span>
+              <span style="white-space: nowrap;" v-if="mission.karma">{{ formatNumber(mission.karma) }} Karma</span>
             </template>
             <template v-else>
               None
             </template>
           </v-flex>
           <v-flex xs12 md6 v-if="hasClearBonus">
-            <span><b>First Clear Rewards:</b></span>
-            <br>
-            <span v-for="(reward, i) in mission.clear_bonus" :key="i">
-              <span v-if="reward.gem" style="white-space: nowrap;">
-                {{ reward.gem }}x
-                <gem-thumbnail/>
-              </span>
-              <span v-if="reward.unit" style="white-space: nowrap;">
-                {{ reward.unit.count }}x
-                <unit-thumbnail
-                    :src="getImageUrls(reward.unit.id.toString()).ills_thum"
-                    style="height: 36px; width: 36px;"
-                    imgStyle="height: 36px; width: 36px; vertical-align: middle;"
-                    :rarity="(unitById(reward.unit.id.toString()) || {}).rarity"
-                    :title="(unitById(reward.unit.id.toString()) || {}).name"/>
-              </span>
-              <span v-if="reward.item" style="white-space: nowrap;">
-                {{ reward.item.count }}x
-                <item-thumbnail
-                  :src="getImageUrl(reward.item.id)"
-                  class="mx-auto"
-                  style="height: 36px; width: 36px;"
-                  imgStyle="height: 36px; width: 36px; vertical-align: middle;"
-                  :title="(itemById(reward.item.id) || {}).name"
-                  :rarity="reward.item.rarity"
-                  :type="reward.item.type"
-                  :raid="reward.item.raid"/>
-              </span>
-            </span>
+            <v-container fluid class="pa-0">
+              <v-layout row wrap>
+                <v-flex xs12 class="pa-0">
+                  <b>First Clear Rewards:</b>
+                </v-flex>
+                <v-flex xs6 class="pa-0 text-xs-center" v-for="(reward, i) in mission.clear_bonus" :key="i">
+                  <span v-if="reward.gem" style="white-space: nowrap;">
+                    {{ reward.gem }}x
+                    <gem-thumbnail/>
+                  </span>
+                  <span v-else-if="reward.zel" style="white-space: nowrap;">
+                    {{ formatNumber(reward.zel) }}
+                    <zel-thumbnail/>
+                  </span>
+                  <span v-else-if="reward.karma" style="white-space: nowrap;">
+                    {{ formatNumber(reward.karma) }}
+                    <karma-thumbnail/>
+                  </span>
+                  <span v-else-if="reward.unit" style="white-space: nowrap;">
+                    {{ reward.unit.count }}x
+                    <unit-thumbnail
+                        :src="getImageUrls(reward.unit.id.toString()).ills_thum"
+                        style="height: 36px; width: 36px;"
+                        imgStyle="height: 36px; width: 36px; vertical-align: middle;"
+                        :rarity="(unitById(reward.unit.id.toString()) || {}).rarity"
+                        :title="(unitById(reward.unit.id.toString()) || {}).name"/>
+                  </span>
+                  <span v-else-if="reward.item" style="white-space: nowrap;">
+                    {{ reward.item.count }}x
+                    <item-thumbnail
+                      :src="getImageUrl(reward.item.id)"
+                      class="mx-auto"
+                      style="height: 36px; width: 36px;"
+                      imgStyle="height: 36px; width: 36px; vertical-align: middle;"
+                      :title="(itemById(reward.item.id) || {}).name"
+                      :rarity="reward.item.rarity"
+                      :type="reward.item.type"
+                      :raid="reward.item.raid"/>
+                  </span>
+                </v-flex>
+              </v-layout>
+            </v-container>
           </v-flex>
         </v-layout>
       </v-card-text>
@@ -77,12 +90,17 @@
 
 <script>
 import { mapGetters } from 'vuex';
+import numbro from 'numbro';
 import LazyLoadThumbnail from '@/components/Multidex/Units/LazyLoadThumbnail';
+import ZelIcon from '@/components/Multidex/ZelThumbnail';
+import KarmaIcon from '@/components/Multidex/KarmaThumbnail';
 import ItemThumbnail from '@/components/Multidex/Items/ItemThumbnail';
 import GemThumbail from '@/components/Multidex/GemThumbnail';
 export default {
   props: ['mission', 'to'],
   components: {
+    'zel-thumbnail': ZelIcon,
+    'karma-thumbnail': KarmaIcon,
     'unit-thumbnail': LazyLoadThumbnail,
     'item-thumbnail': ItemThumbnail,
     'gem-thumbnail': GemThumbail,
@@ -105,15 +123,20 @@ export default {
       return (+dec === 0) ? whole : result;
     },
   },
+  methods: {
+    formatNumber (number) {
+      return +number < 1000 ? +number : numbro(+number).format({ average: true, mantissa: 1 });
+    },
+  },
 };
 </script>
 
 <style>
 .theme--light .mission-card:hover {
-  background-color: lightgrey;
+  background-color: lightgrey!important;
 }
 
 .theme--dark .mission-card:hover {
-  background-color: grey;
+  background-color: grey!important;
 }
 </style>
