@@ -13,15 +13,7 @@ const config = {
 };
 
 let ghData;
-const updateData = {
-  units: {},
-  items: {},
-  bursts: {},
-  extraSkills: {},
-  leaderSkills: {},
-  missions: {},
-  dictionary: {},
-};
+const updateData = initializeTimeData();
 
 const rangeData = {
   units: [1, 6],
@@ -34,10 +26,12 @@ const handlers = {
   units: {
     setGitData (server = 'gl') {
       logger.info(`${server}: setting git data`);
-      const fileDate = ['info.json', 'evo_list.json', 'feskills.json']
-        .map(f => getGitData(f, server).date)
-        .reduce((acc, val) => Math.max(acc, new Date(val)), new Date('Jan 01 1969'));
-      updateData.units[server] = new Date(fileDate).toISOString();
+      try {
+        const fileDate = ['info.json', 'evo_list.json', 'feskills.json']
+          .map(f => getGitData(f, server).date)
+          .reduce((acc, val) => Math.max(acc, new Date(val)), new Date('Jan 01 1969'));
+        updateData.units[server] = new Date(fileDate).toISOString();
+      } catch (err) { logger.error('error setting git data', err); }
     },
     async download (server = 'gl') {
       const data = {
@@ -150,8 +144,10 @@ const handlers = {
   items: {
     setGitData (server = 'gl') {
       logger.info(`${server}: setting git data`);
-      const fileDate = getGitData('items.json', server).date;
-      updateData.items[server] = new Date(fileDate).toISOString();
+      try {
+        const fileDate = getGitData('items.json', server).date;
+        updateData.items[server] = new Date(fileDate).toISOString();
+      } catch (err) { logger.error('error setting git data', err); }
     },
     async download (server = 'gl') {
       const itemData = {};
@@ -296,13 +292,15 @@ const handlers = {
   bursts: {
     setGitData(server = 'gl') {
       logger.info(`${server}: setting git data`);
-      let fileDate = new Date('Jan 01 1969');
-      const folderData = (ghData[server] ? ghData[server].contents : undefined) || ghData;
-      for (let i = 0; i <= 9; ++i) {
-        const fileName = `bbs_${i}.json`;
-        fileDate = folderData[fileName] ? Math.max(fileDate, new Date(folderData[fileName].date)) : fileDate;
-      }
-      updateData.bursts[server] = new Date(fileDate).toISOString();
+      try {
+        let fileDate = new Date('Jan 01 1969');
+        const folderData = (ghData[server] ? ghData[server].contents : undefined) || ghData;
+        for (let i = 0; i <= 9; ++i) {
+          const fileName = `bbs_${i}.json`;
+          fileDate = folderData[fileName] ? Math.max(fileDate, new Date(folderData[fileName].date)) : fileDate;
+        }
+        updateData.bursts[server] = new Date(fileDate).toISOString();
+      } catch (err) { logger.error('error setting git data', err); }
     },
     async download(server = 'gl') {
       const bbData = {};
@@ -374,8 +372,10 @@ const handlers = {
   extraSkills: {
     setGitData(server = 'gl') {
       logger.info(`${server}: setting git data`);
-      const fileDate = getGitData('es.json', server).date;
-      updateData.extraSkills[server] = new Date(fileDate).toISOString();
+      try {
+        const fileDate = getGitData('es.json', server).date;
+        updateData.extraSkills[server] = new Date(fileDate).toISOString();
+      } catch (err) { logger.error('error setting git data', err); }
     },
     async download(server = 'gl') {
       const esData = {};
@@ -425,8 +425,10 @@ const handlers = {
   leaderSkills: {
     setGitData(server = 'gl') {
       logger.info(`${server}: setting git data`);
-      const fileDate = getGitData('ls.json', server).date;
-      updateData.leaderSkills[server] = new Date(fileDate).toISOString();
+      try {
+        const fileDate = getGitData('ls.json', server).date;
+        updateData.leaderSkills[server] = new Date(fileDate).toISOString();
+      } catch (err) { logger.error('error setting git data', err); }
     },
     async download(server = 'gl') {
       const lsData = {};
@@ -476,8 +478,10 @@ const handlers = {
   missions: {
     setGitData(server = 'gl') {
       logger.info(`${server}: setting git data`);
-      const fileDate = getGitData('missions.json', server).date;
-      updateData.missions[server] = new Date(fileDate).toISOString();
+      try {
+        const fileDate = getGitData('missions.json', server).date;
+        updateData.missions[server] = new Date(fileDate).toISOString();
+      } catch (err) { logger.error('error setting git data', err); }
     },
     async download(server = 'gl') {
       const missionData = {};
@@ -512,12 +516,14 @@ const handlers = {
   dictionary: {
     setGitData(server = 'gl') {
       logger.info(`${server}: setting git data`);
-      let fileInfo = ghData['dictionary.json'];
-      if (server !== 'gl') {
-        logger.warn(`${server}: using GL dictionary data`);
-        // fileInfo = ghData[server].contents['dictionary.json'];
-      }
-      updateData.dictionary[server] = fileInfo.date;
+      try {
+        let fileInfo = ghData['dictionary.json'];
+        if (server !== 'gl') {
+          logger.warn(`${server}: using GL dictionary data`);
+          // fileInfo = ghData[server].contents['dictionary.json'];
+        }
+        updateData.dictionary[server] = fileInfo.date;
+      } catch (err) { logger.error('error setting git data', err); }
     },
     async download(server = 'gl') {
       logger.info(`${server}: getting files`);
@@ -569,6 +575,24 @@ const handlers = {
     },
   },
 };
+
+function initializeTimeData () {
+  try {
+    return JSON.parse(fs.readFileSync(`static/bf-data/update-stats.json`));
+  } catch (err) {
+    logger.error('error loading update-stats.json', err);
+    logger.info('creating new time data instance');
+    return {
+      units: {},
+      items: {},
+      bursts: {},
+      extraSkills: {},
+      leaderSkills: {},
+      missions: {},
+      dictionary: {},
+    }
+  }
+}
 
 function getGitData (file, server = 'gl') {
   let fileInfo = ghData[file];
