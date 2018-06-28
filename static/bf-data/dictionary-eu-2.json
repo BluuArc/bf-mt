@@ -1,4 +1,348 @@
 {
+  "MST_LEADERSKILLS_810288_DESCRIPTION": {
+    "en": "60% boost to Atk, max HP, damage taken boosts BB gauge, damage taken may restore HP & enormously boosts BB Atk when HP is above 50%",
+    "es": "60% boost to Atk, max HP, damage taken boosts BB gauge, damage taken may restore HP & enormously boosts BB Atk when HP is above 50%",
+    "id": "60% ekstra Serang, HP maks, kerusakan diderita menambah meteran BB, kerusakan diderita dapat pulihkan HP, ekstra jumbo BB Serang saat HP di atas 50%",
+    "pt": "60% boost to Atk, max HP, damage taken boosts BB gauge, damage taken may restore HP & enormously boosts BB Atk when HP is above 50%",
+    "th": "60% เพิ่มค่าให้ โจมตี, HP สูงสุด, ความเสียหายที่ได้รับ เพิ่มค่า เกจ BB, ความเสียหายที่ได้รับ อาจฟื้นคืน HP กับ เพิ่มค่ามหาศาลให้ BB โจมตี เมื่อ HP นั้นมากกว่า 50%",
+    "vi": "60% boost to Atk, max HP, damage taken boosts BB gauge, damage taken may restore HP & enormously boosts BB Atk when HP is above 50%"
+  },
+  "MST_LEADERSKILLS_810288_NAME": {
+    "en": "Ironclad Orders of Flame",
+    "es": "Ironclad Orders of Flame",
+    "id": "Ordo Api Baju Besi",
+    "pt": "Ironclad Orders of Flame",
+    "th": "ไอร่อน แคลด ออเดอร์ ออฟ เฟลม",
+    "vi": "Ironclad Orders of Flame"
+  },
+  "MST_LEADERSKILLS_8102_DESCRIPTION": {
+    "en": "20% boost to Def for all Units",
+    "es": "Aumenta un 20% la defensa de todas las unidades",
+    "id": "20% menambah Tahan semua Unit",
+    "pt": "Aumento de 20% na DEF de todas as unidades",
+    "th": "20% เพิ่มค่า ป้องกัน สำหรับทุกยูนิต",
+    "vi": "Tăng 20% sức mạnh Phòng thủ cho tất cả các Quái"
+  },
+  "MST_LEADERSKILLS_8102_NAME": {
+    "en": "High Ruler's Protection",
+    "es": "Protección del gran soberano",
+    "id": "Perlindungan Petinggi",
+    "pt": "Proteção do Grão-Rei",
+    "th": "ไฮ รูลเลอร์ส โพรเทคชั่น",
+    "vi": "Bảo vệ của thốg soái cấp cao"
+  },
+  "MST_LEADERSKILLS_810377_DESCRIPTION": {
+    "en": "80% boost to Atk, 40% boost to max HP, boosts damage against status afflicted foes, hugely boosts critical damage & probable damage reduction to 1",
+    "es": "80% boost to Atk, 40% boost to max HP, boosts damage against status afflicted foes, hugely boosts critical damage & probable damage reduction to 1",
+    "id": "80% boost to Atk, 40% boost to max HP, boosts damage against status afflicted foes, hugely boosts critical damage & probable damage reduction to 1",
+    "pt": "80% boost to Atk, 40% boost to max HP, boosts damage against status afflicted foes, hugely boosts critical damage & probable damage reduction to 1",
+    "th": "80% boost to Atk, 40% boost to max HP, boosts damage against status afflicted foes, hugely boosts critical damage & probable damage reduction to 1",
+    "vi": "80% boost to Atk, 40% boost to max HP, boosts damage against status afflicted foes, hugely boosts critical damage & probable damage reduction to 1"
+  },
+  "MST_LEADERSKILLS_810377_NAME": {
+    "en": "Carefree Pirate Life",
+    "es": "Carefree Pirate Life",
+    "id": "Carefree Pirate Life",
+    "pt": "Carefree Pirate Life",
+    "th": "Carefree Pirate Life",
+    "vi": "Carefree Pirate Life"
+  },
+  "MST_LEADERSKILLS_810378_DESCRIPTION": {
+    "en": "100% boost to Atk, 60% boost to max HP, boosts damage against status afflicted foes, hugely boosts critical damage & probable damage reduction to 1",
+    "es": "100% boost to Atk, 60% boost to max HP, boosts damage against status afflicted foes, hugely boosts critical damage & probable damage reduction to 1",
+    "id": "100% boost to Atk, 60% boost to max HP, boosts damage against status afflicted foes, hugely boosts critical damage & probable damage reduction to 1",
+    "pt": "100% boost to Atk, 60% boost to max HP, boosts damage against status afflicted foes, hugely boosts critical damage & probable damage reduction to 1",
+    "th": "100% boost to Atk, 60% boost to max HP, boosts damage against status afflicted foes, hugely boosts critical damage & probable damage reduction to 1",
+    "vi": "100% boost to Atk, 60% boost to max HP, boosts damage against status afflicted foes, hugely boosts critical damage & probable damage reduction to 1"
+  },
+  "MST_LEADERSKILLS_810378_NAME": {
+    "en": "Swashbuckling Iaido",
+    "es": "Swashbuckling Iaido",
+    "id": "Swashbuckling Iaido",
+    "pt": "Swashbuckling Iaido",
+    "th": "Swashbuckling Iaido",
+    "vi": "Swashbuckling Iaido"
+  },
+  "MST_LEADERSKILLS_8103_DESCRIPTION": {
+    "en": "40% boost to Def for all Units & adds chance of slightly reducing damage taken",
+    "es": "Aumenta un 40% la defensa de todas las unidades y agrega la posibilidad de reducir levemente el daño recibido",
+    "id": "40% menambah Tahan semua Unit & menambah kans agak mengurangi kerusakan",
+    "pt": "Aumento de 40% na DEF de todas as unidades e chance de reduzir um pouco o dano recebido",
+    "th": "40% เพิ่มค่า ป้องกัน สำหรับทุกยูนิต และ เพิ่มโอกาส ที่จะลดค่าความเสียหายที่ได้รับลงเล็กน้อย",
+    "vi": "Tăng 40% sức mạnh Phòng thủ cho tất cả các Quái"
+  },
+  "MST_LEADERSKILLS_8103_NAME": {
+    "en": "Supreme Ruler's Protection",
+    "es": "Protección del magno regidor",
+    "id": "Perlindungan Supremasi",
+    "pt": "Proteção do Imperador Supremo",
+    "th": "สุพรีม รูลเลอร์ส โพรเทคชั่น",
+    "vi": "Bảo vệ của thốg soái tối cao"
+  },
+  "MST_LEADERSKILLS_810408_DESCRIPTION": {
+    "en": "100% boost to Atk, Def and max HP, considerably boosts Def relative to how low remaining HP is, considerably boosts Atk and Def for 3 turns when guarding, 15% damage reduction & negates critical and elemental damage for all allies",
+    "es": "100% boost to Atk, Def and max HP, considerably boosts Def relative to how low remaining HP is, considerably boosts Atk and Def for 3 turns when guarding, 15% damage reduction & negates critical and elemental damage for all allies",
+    "id": "100% boost to Atk, Def and max HP, considerably boosts Def relative to how low remaining HP is, considerably boosts Atk and Def for 3 turns when guarding, 15% damage reduction & negates critical and elemental damage for all allies",
+    "pt": "100% boost to Atk, Def and max HP, considerably boosts Def relative to how low remaining HP is, considerably boosts Atk and Def for 3 turns when guarding, 15% damage reduction & negates critical and elemental damage for all allies",
+    "th": "100% boost to Atk, Def and max HP, considerably boosts Def relative to how low remaining HP is, considerably boosts Atk and Def for 3 turns when guarding, 15% damage reduction & negates critical and elemental damage for all allies",
+    "vi": "100% boost to Atk, Def and max HP, considerably boosts Def relative to how low remaining HP is, considerably boosts Atk and Def for 3 turns when guarding, 15% damage reduction & negates critical and elemental damage for all allies"
+  },
+  "MST_LEADERSKILLS_810408_NAME": {
+    "en": "Guardian of the Conquerors",
+    "es": "Guardian of the Conquerors",
+    "id": "Guardian of the Conquerors",
+    "pt": "Guardian of the Conquerors",
+    "th": "Guardian of the Conquerors",
+    "vi": "Guardian of the Conquerors"
+  },
+  "MST_LEADERSKILLS_810427_DESCRIPTION": {
+    "en": "150% boost to Atk and 75% boost to Def, Rec when BB gauge is over 50%, 80% boost to max HP, 140% boost to Spark damage & probable resistance against 1 KO attack",
+    "es": "150% boost to Atk and 75% boost to Def, Rec when BB gauge is over 50%, 80% boost to max HP, 140% boost to Spark damage & probable resistance against 1 KO attack",
+    "id": "150% boost to Atk and 75% boost to Def, Rec when BB gauge is over 50%, 80% boost to max HP, 140% boost to Spark damage & probable resistance against 1 KO attack",
+    "pt": "150% boost to Atk and 75% boost to Def, Rec when BB gauge is over 50%, 80% boost to max HP, 140% boost to Spark damage & probable resistance against 1 KO attack",
+    "th": "150% boost to Atk and 75% boost to Def, Rec when BB gauge is over 50%, 80% boost to max HP, 140% boost to Spark damage & probable resistance against 1 KO attack",
+    "vi": "150% boost to Atk and 75% boost to Def, Rec when BB gauge is over 50%, 80% boost to max HP, 140% boost to Spark damage & probable resistance against 1 KO attack"
+  },
+  "MST_LEADERSKILLS_810427_NAME": {
+    "en": "Delicate Protector",
+    "es": "Delicate Protector",
+    "id": "Delicate Protector",
+    "pt": "Delicate Protector",
+    "th": "Delicate Protector",
+    "vi": "Delicate Protector"
+  },
+  "MST_LEADERSKILLS_810428_DESCRIPTION": {
+    "en": "200% boost to Atk and 100% boost to Def, Rec when BB gauge is over 50%, 100% boost to max HP, 150% boost to Spark damage, probable resistance against 1 KO attack & negates Def ignoring effects",
+    "es": "200% boost to Atk and 100% boost to Def, Rec when BB gauge is over 50%, 100% boost to max HP, 150% boost to Spark damage, probable resistance against 1 KO attack & negates Def ignoring effects",
+    "id": "200% boost to Atk and 100% boost to Def, Rec when BB gauge is over 50%, 100% boost to max HP, 150% boost to Spark damage, probable resistance against 1 KO attack & negates Def ignoring effects",
+    "pt": "200% boost to Atk and 100% boost to Def, Rec when BB gauge is over 50%, 100% boost to max HP, 150% boost to Spark damage, probable resistance against 1 KO attack & negates Def ignoring effects",
+    "th": "200% boost to Atk and 100% boost to Def, Rec when BB gauge is over 50%, 100% boost to max HP, 150% boost to Spark damage, probable resistance against 1 KO attack & negates Def ignoring effects",
+    "vi": "200% boost to Atk and 100% boost to Def, Rec when BB gauge is over 50%, 100% boost to max HP, 150% boost to Spark damage, probable resistance against 1 KO attack & negates Def ignoring effects"
+  },
+  "MST_LEADERSKILLS_810428_NAME": {
+    "en": "Always Underestimated",
+    "es": "Always Underestimated",
+    "id": "Always Underestimated",
+    "pt": "Always Underestimated",
+    "th": "Always Underestimated",
+    "vi": "Always Underestimated"
+  },
+  "MST_LEADERSKILLS_810437_DESCRIPTION": {
+    "en": "50% boost to Atk, max HP, considerably boosts Atk, Def relative to remaining HP & 5% damage reduction from Fire, Earth, Dark elemental types",
+    "es": "50% boost to Atk, max HP, considerably boosts Atk, Def relative to remaining HP & 5% damage reduction from Fire, Earth, Dark elemental types",
+    "id": "50% ekstra Serang, HP maks, lumayan menambah Serang, Tahan sesuai sisa HP, kurangi 5% kerusakan dari tipe elemen Api, Bumi, Gelap",
+    "pt": "50% boost to Atk, max HP, considerably boosts Atk, Def relative to remaining HP & 5% damage reduction from Fire, Earth, Dark elemental types",
+    "th": "50% เพิ่มค่าให้ โจมตี, HP สูงสุด, เพิ่มค่าอย่างมากให้ โจมตี, ป้องกัน สัมพันธ์กับ HP ที่เหลืออยู่ และ 5% ลดค่าความเสียหายจากชนิดธาตุ ไฟ, ดิน, มืด",
+    "vi": "50% boost to Atk, max HP, considerably boosts Atk, Def relative to remaining HP & 5% damage reduction from Fire, Earth, Dark elemental types"
+  },
+  "MST_LEADERSKILLS_810437_NAME": {
+    "en": "A Desperate Move",
+    "es": "A Desperate Move",
+    "id": "Gerakan Putus Asa",
+    "pt": "A Desperate Move",
+    "th": "อะ เดสพาเรท มูฟ",
+    "vi": "A Desperate Move"
+  },
+  "MST_LEADERSKILLS_810438_DESCRIPTION": {
+    "en": "60% boost to Atk, max HP, considerably boosts Atk, Def relative to remaining HP, 10% damage reduction from Fire, Earth, Dark elemental types & enormously boosts BB Atk when HP is over 50%",
+    "es": "60% boost to Atk, max HP, considerably boosts Atk, Def relative to remaining HP, 10% damage reduction from Fire, Earth, Dark elemental types & enormously boosts BB Atk when HP is over 50%",
+    "id": "60% ekstra Serang, HP maks, lumayan menambah Serang, Tahan sesuai sisa HP, kurangi 10% kerusakan dari tipe elemen Api, Bumi, Gelap , ekstra jumbo BB Serang saat HP di atas 50%",
+    "pt": "60% boost to Atk, max HP, considerably boosts Atk, Def relative to remaining HP, 10% damage reduction from Fire, Earth, Dark elemental types & enormously boosts BB Atk when HP is over 50%",
+    "th": "60% เพิ่มค่าให้ โจมตี, HP สูงสุด, เพิ่มค่าอย่างมากให้ โจมตี, ป้องกัน สัมพันธ์กับ HP ที่เหลืออยู่, 10% ลดค่าความเสียหายจากชนิดธาตุ ไฟ, ดิน, มืด และ เพิ่มค่ามหาศาลให้ โจมตี BB เมื่อ HP นั้นมากกว่า 50%",
+    "vi": "60% boost to Atk, max HP, considerably boosts Atk, Def relative to remaining HP, 10% damage reduction from Fire, Earth, Dark elemental types & enormously boosts BB Atk when HP is over 50%"
+  },
+  "MST_LEADERSKILLS_810438_NAME": {
+    "en": "Hope Amidst Despair",
+    "es": "Hope Amidst Despair",
+    "id": "Harapan di Antara Putus Asa",
+    "pt": "Hope Amidst Despair",
+    "th": "โฮป อมิดส์ต เดสแพร์",
+    "vi": "Hope Amidst Despair"
+  },
+  "MST_LEADERSKILLS_8104_DESCRIPTION": {
+    "en": "40% boost to Def for all Units, probable slight reduction in damage taken & hugely boosts BB gauge every turn",
+    "es": "Aumenta un 40% la defensa de todas las unidades, puede reducir levemente el daño recibido y aumenta enormemente el indicador BB cada turno",
+    "id": "40% ekstra Tahan untuk semua Unit, kans sedikit mengurangi kerusakan diderita & tambahan besar meteran BB setiap giliran",
+    "pt": "Aumento de 40% na DEF de todas as unidades, provável redução no dano sofrido e grande reforço na barra BB a cada rodada",
+    "th": "40% เพิ่มค่าป้องกัน สำหรับทุกยูนิต, มีโอกาสลดความเสียหายที่ได้รับเล็กน้อย และ เพิ่ม BB เกจ ทุกเทิร์นอย่างสูง",
+    "vi": "40% boost to Def for all Units, probable slight reduction in damage taken & hugely boosts BB gauge every turn"
+  },
+  "MST_LEADERSKILLS_8104_NAME": {
+    "en": "Supreme Ruler's Inquisition",
+    "es": "Ejecución del magno regidor",
+    "id": "Inkuisisi Penguasa Tertinggi",
+    "pt": "Inquisição do Reino Supremo",
+    "th": "ซูพรีมรูเลอร์อินควิชชั่น",
+    "vi": "Supreme Ruler's Inquisition"
+  },
+  "MST_LEADERSKILLS_810528_DESCRIPTION": {
+    "en": "80% boost to Atk, Def, max HP, 30% boost to critical hit rate, boosts Atk for 2 turns when damage dealt has exceeded certain amount, hugely boosts critical damage, raises normal hit amount & probable normal attack on all foes",
+    "es": "80% boost to Atk, Def, max HP, 30% boost to critical hit rate, boosts Atk for 2 turns when damage dealt has exceeded certain amount, hugely boosts critical damage, raises normal hit amount & probable normal attack on all foes",
+    "id": "80% boost to Atk, Def, max HP, 30% boost to critical hit rate, boosts Atk for 2 turns when damage dealt has exceeded certain amount, hugely boosts critical damage, raises normal hit amount & probable normal attack on all foes",
+    "pt": "80% boost to Atk, Def, max HP, 30% boost to critical hit rate, boosts Atk for 2 turns when damage dealt has exceeded certain amount, hugely boosts critical damage, raises normal hit amount & probable normal attack on all foes",
+    "th": "80% boost to Atk, Def, max HP, 30% boost to critical hit rate, boosts Atk for 2 turns when damage dealt has exceeded certain amount, hugely boosts critical damage, raises normal hit amount & probable normal attack on all foes",
+    "vi": "80% boost to Atk, Def, max HP, 30% boost to critical hit rate, boosts Atk for 2 turns when damage dealt has exceeded certain amount, hugely boosts critical damage, raises normal hit amount & probable normal attack on all foes"
+  },
+  "MST_LEADERSKILLS_810528_NAME": {
+    "en": "Kill It With Fire",
+    "es": "Kill It With Fire",
+    "id": "Kill It With Fire",
+    "pt": "Kill It With Fire",
+    "th": "Kill It With Fire",
+    "vi": "Kill It With Fire"
+  },
+  "MST_LEADERSKILLS_810547_DESCRIPTION": {
+    "en": "150% boost to Atk, 60% boost to max HP and greatly boosts critical hit rate of Fire types, Spark damage slightly boosts BB gauge, greatly boosts critical damage & greatly boosts Fire elemental damage",
+    "es": "150% boost to Atk, 60% boost to max HP and greatly boosts critical hit rate of Fire types, Spark damage slightly boosts BB gauge, greatly boosts critical damage & greatly boosts Fire elemental damage",
+    "id": "150% boost to Atk, 60% boost to max HP and greatly boosts critical hit rate of Fire types, Spark damage slightly boosts BB gauge, greatly boosts critical damage & greatly boosts Fire elemental damage",
+    "pt": "150% boost to Atk, 60% boost to max HP and greatly boosts critical hit rate of Fire types, Spark damage slightly boosts BB gauge, greatly boosts critical damage & greatly boosts Fire elemental damage",
+    "th": "150% boost to Atk, 60% boost to max HP and greatly boosts critical hit rate of Fire types, Spark damage slightly boosts BB gauge, greatly boosts critical damage & greatly boosts Fire elemental damage",
+    "vi": "150% boost to Atk, 60% boost to max HP and greatly boosts critical hit rate of Fire types, Spark damage slightly boosts BB gauge, greatly boosts critical damage & greatly boosts Fire elemental damage"
+  },
+  "MST_LEADERSKILLS_810547_NAME": {
+    "en": "Fire Dragon Slayer Magic",
+    "es": "Fire Dragon Slayer Magic",
+    "id": "Fire Dragon Slayer Magic",
+    "pt": "Fire Dragon Slayer Magic",
+    "th": "Fire Dragon Slayer Magic",
+    "vi": "Fire Dragon Slayer Magic"
+  },
+  "MST_LEADERSKILLS_810548_DESCRIPTION": {
+    "en": "200% boost to Atk, 80% boost to max HP and greatly boosts critical hit rate of Fire types, Spark damage boosts BB gauge, hugely boosts critical damage, hugely boosts Fire elemental damage & 15% damage reduction from Fire, Earth, Dark types",
+    "es": "200% boost to Atk, 80% boost to max HP and greatly boosts critical hit rate of Fire types, Spark damage boosts BB gauge, hugely boosts critical damage, hugely boosts Fire elemental damage & 15% damage reduction from Fire, Earth, Dark types",
+    "id": "200% boost to Atk, 80% boost to max HP and greatly boosts critical hit rate of Fire types, Spark damage boosts BB gauge, hugely boosts critical damage, hugely boosts Fire elemental damage & 15% damage reduction from Fire, Earth, Dark types",
+    "pt": "200% boost to Atk, 80% boost to max HP and greatly boosts critical hit rate of Fire types, Spark damage boosts BB gauge, hugely boosts critical damage, hugely boosts Fire elemental damage & 15% damage reduction from Fire, Earth, Dark types",
+    "th": "200% boost to Atk, 80% boost to max HP and greatly boosts critical hit rate of Fire types, Spark damage boosts BB gauge, hugely boosts critical damage, hugely boosts Fire elemental damage & 15% damage reduction from Fire, Earth, Dark types",
+    "vi": "200% boost to Atk, 80% boost to max HP and greatly boosts critical hit rate of Fire types, Spark damage boosts BB gauge, hugely boosts critical damage, hugely boosts Fire elemental damage & 15% damage reduction from Fire, Earth, Dark types"
+  },
+  "MST_LEADERSKILLS_810548_NAME": {
+    "en": "Fire Dragon King Mode",
+    "es": "Fire Dragon King Mode",
+    "id": "Fire Dragon King Mode",
+    "pt": "Fire Dragon King Mode",
+    "th": "Fire Dragon King Mode",
+    "vi": "Fire Dragon King Mode"
+  },
+  "MST_LEADERSKILLS_810557_DESCRIPTION": {
+    "en": "60% boost to Atk, max HP, 100% boost to Def, Rec of Fire types, considerably restores HP each turn, hugely boosts BB gauge when damage dealt has exceeded certain amount & damage taken hugely boosts BB gauge",
+    "es": "60% boost to Atk, max HP, 100% boost to Def, Rec of Fire types, considerably restores HP each turn, hugely boosts BB gauge when damage dealt has exceeded certain amount & damage taken hugely boosts BB gauge",
+    "id": "60% boost to Atk, max HP, 100% boost to Def, Rec of Fire types, considerably restores HP each turn, hugely boosts BB gauge when damage dealt has exceeded certain amount & damage taken hugely boosts BB gauge",
+    "pt": "60% boost to Atk, max HP, 100% boost to Def, Rec of Fire types, considerably restores HP each turn, hugely boosts BB gauge when damage dealt has exceeded certain amount & damage taken hugely boosts BB gauge",
+    "th": "60% boost to Atk, max HP, 100% boost to Def, Rec of Fire types, considerably restores HP each turn, hugely boosts BB gauge when damage dealt has exceeded certain amount & damage taken hugely boosts BB gauge",
+    "vi": "60% boost to Atk, max HP, 100% boost to Def, Rec of Fire types, considerably restores HP each turn, hugely boosts BB gauge when damage dealt has exceeded certain amount & damage taken hugely boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_810557_NAME": {
+    "en": "Fiery Resistance",
+    "es": "Fiery Resistance",
+    "id": "Fiery Resistance",
+    "pt": "Fiery Resistance",
+    "th": "Fiery Resistance",
+    "vi": "Fiery Resistance"
+  },
+  "MST_LEADERSKILLS_810558_DESCRIPTION": {
+    "en": "80% boost to Atk, max HP, 120% boost to Def, Rec of Fire types, considerably restores HP each turn, hugely boosts BB gauge when damage dealt has exceeded certain amount & damage taken hugely boosts BB gauge",
+    "es": "80% boost to Atk, max HP, 120% boost to Def, Rec of Fire types, considerably restores HP each turn, hugely boosts BB gauge when damage dealt has exceeded certain amount & damage taken hugely boosts BB gauge",
+    "id": "80% boost to Atk, max HP, 120% boost to Def, Rec of Fire types, considerably restores HP each turn, hugely boosts BB gauge when damage dealt has exceeded certain amount & damage taken hugely boosts BB gauge",
+    "pt": "80% boost to Atk, max HP, 120% boost to Def, Rec of Fire types, considerably restores HP each turn, hugely boosts BB gauge when damage dealt has exceeded certain amount & damage taken hugely boosts BB gauge",
+    "th": "80% boost to Atk, max HP, 120% boost to Def, Rec of Fire types, considerably restores HP each turn, hugely boosts BB gauge when damage dealt has exceeded certain amount & damage taken hugely boosts BB gauge",
+    "vi": "80% boost to Atk, max HP, 120% boost to Def, Rec of Fire types, considerably restores HP each turn, hugely boosts BB gauge when damage dealt has exceeded certain amount & damage taken hugely boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_810558_NAME": {
+    "en": "Violent Retaliation",
+    "es": "Violent Retaliation",
+    "id": "Violent Retaliation",
+    "pt": "Violent Retaliation",
+    "th": "Violent Retaliation",
+    "vi": "Violent Retaliation"
+  },
+  "MST_LEADERSKILLS_8105_DESCRIPTION": {
+    "en": "20% boost to Def & probable 20% damage reduction",
+    "es": "20% boost to Def & probable 20% damage reduction",
+    "id": "20% ekstra Tahan & kans kurangi 20% kerusakan",
+    "pt": "20% boost to Def & probable 20% damage reduction",
+    "th": "20% เพิ่มค่าให้กับ ป้องกัน และ มีโอกาส 20% ลดความเสียหาย",
+    "vi": "20% boost to Def & probable 20% damage reduction"
+  },
+  "MST_LEADERSKILLS_8105_NAME": {
+    "en": "Steel God's Fortress",
+    "es": "Steel God's Fortress",
+    "id": "Benteng Dewa Baja",
+    "pt": "Steel God's Fortress",
+    "th": "สตีล ก็อดส์ ฟอร์เทรส",
+    "vi": "Steel God's Fortress"
+  },
+  "MST_LEADERSKILLS_8106_DESCRIPTION": {
+    "en": "30% boost to Def, negates Spark damage & probable 20% damage reduction",
+    "es": "30% boost to Def, negates Spark damage & probable 20% damage reduction",
+    "id": "30% ekstra Tahan, negasi kerusakan Percikan & kans kurangi 20% kerusakan",
+    "pt": "30% boost to Def, negates Spark damage & probable 20% damage reduction",
+    "th": "30% เพิ่มค่าให้กับ ป้องกัน, ลบล้าง ความเสียหายสปาร์ค และ มีโอกาส 20% ลดความเสียหาย",
+    "vi": "30% boost to Def, negates Spark damage & probable 20% damage reduction"
+  },
+  "MST_LEADERSKILLS_8106_NAME": {
+    "en": "Steel God's Shining Barrier",
+    "es": "Steel God's Shining Barrier",
+    "id": "Penghalang Bersinar Dewa Baja",
+    "pt": "Steel God's Shining Barrier",
+    "th": "สตีล ก็อดส์ ไชน์นิ่ง บาร์เรีย",
+    "vi": "Steel God's Shining Barrier"
+  },
+  "MST_LEADERSKILLS_811118_DESCRIPTION": {
+    "en": "60% boost to Atk, max HP, 100% boost to Spark damage, boosts Spark damage for 2 turns when Sparks have exceeded certain amount & hugely boosts Fire and Water elemental damage ",
+    "es": "60% boost to Atk, max HP, 100% boost to Spark damage, boosts Spark damage for 2 turns when Sparks have exceeded certain amount & hugely boosts Fire and Water elemental damage ",
+    "id": "60% boost to Atk, max HP, 100% boost to Spark damage, boosts Spark damage for 2 turns when Sparks have exceeded certain amount & hugely boosts Fire and Water elemental damage ",
+    "pt": "60% boost to Atk, max HP, 100% boost to Spark damage, boosts Spark damage for 2 turns when Sparks have exceeded certain amount & hugely boosts Fire and Water elemental damage ",
+    "th": "60% boost to Atk, max HP, 100% boost to Spark damage, boosts Spark damage for 2 turns when Sparks have exceeded certain amount & hugely boosts Fire and Water elemental damage ",
+    "vi": "60% boost to Atk, max HP, 100% boost to Spark damage, boosts Spark damage for 2 turns when Sparks have exceeded certain amount & hugely boosts Fire and Water elemental damage "
+  },
+  "MST_LEADERSKILLS_811118_NAME": {
+    "en": "Gunnhildr's Anathema",
+    "es": "Gunnhildr's Anathema",
+    "id": "Gunnhildr's Anathema",
+    "pt": "Gunnhildr's Anathema",
+    "th": "Gunnhildr's Anathema",
+    "vi": "Gunnhildr's Anathema"
+  },
+  "MST_LEADERSKILLS_820047_DESCRIPTION": {
+    "en": "100% boost to Atk, 60% boost to Def, max HP of Water types, 10% damage reduction from Fire, Water types, probable considerable reduction of BB gauge fill rate for 2 turns & adds probable resistance against 1 KO attack",
+    "es": "100% boost to Atk, 60% boost to Def, max HP of Water types, 10% damage reduction from Fire, Water types, probable considerable reduction of BB gauge fill rate for 2 turns & adds probable resistance against 1 KO attack",
+    "id": "100% ekstra Serang, 60% ekstra Tahan, HP maks tipe Air, kurangi 10% kerusakan tipe Api, Air, kans lumayan kurangi laju pengisian meteran BB 2 giliran, beri kans tahan atas 1 serangan KO",
+    "pt": "100% boost to Atk, 60% boost to Def, max HP of Water types, 10% damage reduction from Fire, Water types, probable considerable reduction of BB gauge fill rate for 2 turns & adds probable resistance against 1 KO attack",
+    "th": "100% เพิ่มค่าให้ โจมตี, 60% เพิ่มค่าให้ ป้องกัน, HP สูงสุด ของชนิด น้ำ, 10% ลดค่าความเสียหาย จากชนิด ไฟ, น้ำ, มีโอกาส ลดค่าของ อัตราเติม เกจ BB อย่างมาก นาน 2 เทิร์น กับ ให้โอกาสที่จะ ต้านทานต่อ 1 การโจมตี KO",
+    "vi": "100% boost to Atk, 60% boost to Def, max HP of Water types, 10% damage reduction from Fire, Water types, probable considerable reduction of BB gauge fill rate for 2 turns & adds probable resistance against 1 KO attack"
+  },
+  "MST_LEADERSKILLS_820047_NAME": {
+    "en": "Jellaparadium",
+    "es": "Jellaparadium",
+    "id": "Jellaparadium",
+    "pt": "Jellaparadium",
+    "th": "เจลลาพาราเดี้ยม",
+    "vi": "Jellaparadium"
+  },
+  "MST_LEADERSKILLS_820048_DESCRIPTION": {
+    "en": "150% boost to Atk, 80% boost to Def, max HP of Water types, 20% damage reduction from Fire, Water types, considerably boosts ABP and CBP gain, probable considerable reduction of BB gauge fill rate for 2 turns & adds probable resistance against 1 KO attack",
+    "es": "150% boost to Atk, 80% boost to Def, max HP of Water types, 20% damage reduction from Fire, Water types, considerably boosts ABP and CBP gain, probable considerable reduction of BB gauge fill rate for 2 turns & adds probable resistance against 1 KO attack",
+    "id": "150% ekstra Serang, 80% ekstra Tahan, HP maks tipe Air, kurangi 20% kerusakan tipe Api, Air, lumayan menambah perolehan ABP dan CBP, kans lumayan kurangi laju pengisian meteran BB 2 giliran, beri kans tahan atas 1 serangan KO",
+    "pt": "150% boost to Atk, 80% boost to Def, max HP of Water types, 20% damage reduction from Fire, Water types, considerably boosts ABP and CBP gain, probable considerable reduction of BB gauge fill rate for 2 turns & adds probable resistance against 1 KO attack",
+    "th": "150% เพิ่มค่าให้ โจมตี, 80% เพิ่มค่าให้ ป้องกัน, HP สูงสุด ของชนิด น้ำ, 20% ลดค่าความเสียหาย จากชนิด ไฟ, น้ำ, เพิ่มค่าอย่างมากให้ ABP และ CBP ที่ได้รับ, มีโอกาส ลดค่าของ อัตราเติม เกจ BB อย่างมาก นาน 2 เทิร์น กับ ให้โอกาสที่จะ ต้านทานต่อ 1 การโจมตี KO",
+    "vi": "150% boost to Atk, 80% boost to Def, max HP of Water types, 20% damage reduction from Fire, Water types, considerably boosts ABP and CBP gain, probable considerable reduction of BB gauge fill rate for 2 turns & adds probable resistance against 1 KO attack"
+  },
+  "MST_LEADERSKILLS_820048_NAME": {
+    "en": "Omniscient Jellyfish",
+    "es": "Omniscient Jellyfish",
+    "id": "Ubur-ubur Mahatahu",
+    "pt": "Omniscient Jellyfish",
+    "th": "ออมนิสเซนท์ เจลลี่ฟิช",
+    "vi": "Omniscient Jellyfish"
+  },
+  "MST_LEADERSKILLS_8200_DESCRIPTION": {
+    "en": "Boost to BB gauge and probable HP recovery when attacked",
+    "es": "Aumenta el indicador BB y puede recuperar PS al recibir un ataque",
+    "id": "Tambahan untuk meteran BB dan kemungkinan pemulihan HP saat diserang",
+    "pt": "Bônus na barra de BB e provável recuperação de HP no ataque",
+    "th": "เร่งบีบีเกจลีโอกาสฟื้นฟูพลังเมื่อถูกโจมตี",
+    "vi": "Tăng vạch BB và có thể phục hồi Thể lực khi bị tấn công"
+  },
   "MST_LEADERSKILLS_8200_NAME": {
     "en": "Divine Protection",
     "es": "Protección divina",
@@ -1671,6 +2015,38 @@
     "th": "Celestial Spirit Magic",
     "vi": "Celestial Spirit Magic"
   },
+  "MST_LEADERSKILLS_850557_DESCRIPTION": {
+    "en": "60% boost to Atk, max HP, 100% boost to Def, Rec of Light types, probable normal attack on all foes, probable damage reduction to 1 & adds Def ignoring effect to attack",
+    "es": "60% boost to Atk, max HP, 100% boost to Def, Rec of Light types, probable normal attack on all foes, probable damage reduction to 1 & adds Def ignoring effect to attack",
+    "id": "60% boost to Atk, max HP, 100% boost to Def, Rec of Light types, probable normal attack on all foes, probable damage reduction to 1 & adds Def ignoring effect to attack",
+    "pt": "60% boost to Atk, max HP, 100% boost to Def, Rec of Light types, probable normal attack on all foes, probable damage reduction to 1 & adds Def ignoring effect to attack",
+    "th": "60% boost to Atk, max HP, 100% boost to Def, Rec of Light types, probable normal attack on all foes, probable damage reduction to 1 & adds Def ignoring effect to attack",
+    "vi": "60% boost to Atk, max HP, 100% boost to Def, Rec of Light types, probable normal attack on all foes, probable damage reduction to 1 & adds Def ignoring effect to attack"
+  },
+  "MST_LEADERSKILLS_850557_NAME": {
+    "en": "Analytical Genius",
+    "es": "Analytical Genius",
+    "id": "Analytical Genius",
+    "pt": "Analytical Genius",
+    "th": "Analytical Genius",
+    "vi": "Analytical Genius"
+  },
+  "MST_LEADERSKILLS_850558_DESCRIPTION": {
+    "en": "80% boost to Atk, max HP, 120% boost to Def, Rec of Light types, probable normal attack on all foes, probable damage reduction to 1 & adds Def ignoring effect to attack",
+    "es": "80% boost to Atk, max HP, 120% boost to Def, Rec of Light types, probable normal attack on all foes, probable damage reduction to 1 & adds Def ignoring effect to attack",
+    "id": "80% boost to Atk, max HP, 120% boost to Def, Rec of Light types, probable normal attack on all foes, probable damage reduction to 1 & adds Def ignoring effect to attack",
+    "pt": "80% boost to Atk, max HP, 120% boost to Def, Rec of Light types, probable normal attack on all foes, probable damage reduction to 1 & adds Def ignoring effect to attack",
+    "th": "80% boost to Atk, max HP, 120% boost to Def, Rec of Light types, probable normal attack on all foes, probable damage reduction to 1 & adds Def ignoring effect to attack",
+    "vi": "80% boost to Atk, max HP, 120% boost to Def, Rec of Light types, probable normal attack on all foes, probable damage reduction to 1 & adds Def ignoring effect to attack"
+  },
+  "MST_LEADERSKILLS_850558_NAME": {
+    "en": "Thousand Moves Prodigy",
+    "es": "Thousand Moves Prodigy",
+    "id": "Thousand Moves Prodigy",
+    "pt": "Thousand Moves Prodigy",
+    "th": "Thousand Moves Prodigy",
+    "vi": "Thousand Moves Prodigy"
+  },
   "MST_LEADERSKILLS_850977_DESCRIPTION": {
     "en": "40% boost to max HP, boosts Atk relative to how high remaining HP is & boosts Def relative to how low remaining HP is",
     "es": "40% boost to max HP, boosts Atk relative to how high remaining HP is & boosts Def relative to how low remaining HP is",
@@ -1926,6 +2302,22 @@
     "pt": "Witch Hunters Nonpareil",
     "th": "Witch Hunters Nonpareil",
     "vi": "Witch Hunters Nonpareil"
+  },
+  "MST_LEADERSKILLS_860338_DESCRIPTION": {
+    "en": "120% boost to all parameters when 6 elements are present, hugely boosts elemental damage & negates critical and elemental damage",
+    "es": "120% boost to all parameters when 6 elements are present, hugely boosts elemental damage & negates critical and elemental damage",
+    "id": "120% boost to all parameters when 6 elements are present, hugely boosts elemental damage & negates critical and elemental damage",
+    "pt": "120% boost to all parameters when 6 elements are present, hugely boosts elemental damage & negates critical and elemental damage",
+    "th": "120% boost to all parameters when 6 elements are present, hugely boosts elemental damage & negates critical and elemental damage",
+    "vi": "120% boost to all parameters when 6 elements are present, hugely boosts elemental damage & negates critical and elemental damage"
+  },
+  "MST_LEADERSKILLS_860338_NAME": {
+    "en": "Reaper's Doom",
+    "es": "Reaper's Doom",
+    "id": "Reaper's Doom",
+    "pt": "Reaper's Doom",
+    "th": "Reaper's Doom",
+    "vi": "Reaper's Doom"
   },
   "MST_LEADERSKILLS_860356_DESCRIPTION": {
     "en": "50% boost to Def, Rec, max HP of Dark types, 5% all elemental damage reduction & enormously boosts BB Atk",
@@ -85942,285 +86334,5 @@
     "pt": "Imbued Tablet Elgif",
     "th": "อิมบิวด์ แทบเล็ต เอลกิฟ",
     "vi": "Imbued Tablet Elgif"
-  },
-  "MST_MONSTERS_57756_NAME": {
-    "en": "Imbued Tablet Elgif",
-    "es": "Imbued Tablet Elgif",
-    "id": "Tablet Berisi Elgif",
-    "pt": "Imbued Tablet Elgif",
-    "th": "อิมบูเอ็ด แท็บเล็ต เอลกิฟ",
-    "vi": "Imbued Tablet Elgif"
-  },
-  "MST_MONSTERS_57757_NAME": {
-    "en": "Elgif Enemy 1",
-    "es": "Elgif Enemy 1",
-    "id": "Musuh Elgif 1",
-    "pt": "Elgif Enemy 1",
-    "th": "เอลกิฟ เอ็นเนอมี่ 1",
-    "vi": "Elgif Enemy 1"
-  },
-  "MST_MONSTERS_57800_NAME": {
-    "en": "Milla Maxwell",
-    "es": "Milla Maxwell",
-    "id": "Milla Maxwell",
-    "pt": "Milla Maxwell",
-    "th": "มิลล่า แม็กซ์เวล",
-    "vi": "Milla Maxwell"
-  },
-  "MST_MONSTERS_57801_NAME": {
-    "en": "Milla Maxwell",
-    "es": "Milla Maxwell",
-    "id": "Milla Maxwell",
-    "pt": "Milla Maxwell",
-    "th": "มิลล่า แม็กซ์เวล",
-    "vi": "Milla Maxwell"
-  },
-  "MST_MONSTERS_57802_NAME": {
-    "en": "Milla Maxwell",
-    "es": "Milla Maxwell",
-    "id": "Milla Maxwell",
-    "pt": "Milla Maxwell",
-    "th": "มิลล่า แม็กซ์เวล",
-    "vi": "Milla Maxwell"
-  },
-  "MST_MONSTERS_57850_NAME": {
-    "en": "Milla Maxwell",
-    "es": "Milla Maxwell",
-    "id": "Milla Maxwell",
-    "pt": "Milla Maxwell",
-    "th": "มิลล่า แม็กซ์เวล",
-    "vi": "Milla Maxwell"
-  },
-  "MST_MONSTERS_57851_NAME": {
-    "en": "Milla Maxwell",
-    "es": "Milla Maxwell",
-    "id": "Milla Maxwell",
-    "pt": "Milla Maxwell",
-    "th": "มิลล่า แม็กซ์เวล",
-    "vi": "Milla Maxwell"
-  },
-  "MST_MONSTERS_57900_NAME": {
-    "en": "Wisp",
-    "es": "Wisp",
-    "id": "NA (Perang Tera)",
-    "pt": "Wisp",
-    "th": "วิสป์",
-    "vi": "Wisp"
-  },
-  "MST_MONSTERS_57901_NAME": {
-    "en": "Wisp",
-    "es": "Wisp",
-    "id": "NA (Perang Tera)",
-    "pt": "Wisp",
-    "th": "วิสป์",
-    "vi": "Wisp"
-  },
-  "MST_MONSTERS_57902_NAME": {
-    "en": "Wisp",
-    "es": "Wisp",
-    "id": "NA (Perang Tera)",
-    "pt": "Wisp",
-    "th": "วิสป์",
-    "vi": "Wisp"
-  },
-  "MST_MONSTERS_57903_NAME": {
-    "en": "Wisp",
-    "es": "Wisp",
-    "id": "Wisp",
-    "pt": "Wisp",
-    "th": "วิสป์",
-    "vi": "Wisp"
-  },
-  "MST_MONSTERS_57904_NAME": {
-    "en": "Wisp",
-    "es": "Wisp",
-    "id": "Wisp",
-    "pt": "Wisp",
-    "th": "วิสป์",
-    "vi": "Wisp"
-  },
-  "MST_MONSTERS_57950_NAME": {
-    "en": "Deemo and the Girl",
-    "es": "Deemo and the Girl",
-    "id": "Mora - Sandaran Lengan",
-    "pt": "Deemo and the Girl",
-    "th": "ดีโม่ แอนด์ เดอะ เกิร์ล",
-    "vi": "Deemo and the Girl"
-  },
-  "MST_MONSTERS_57951_NAME": {
-    "en": "Deemo and the Girl",
-    "es": "Deemo and the Girl",
-    "id": "Lord Tengkorak",
-    "pt": "Deemo and the Girl",
-    "th": "ดีโม่ แอนด์ เดอะ เกิร์ล",
-    "vi": "Deemo and the Girl"
-  },
-  "MST_MONSTERS_58000_NAME": {
-    "en": "Cyber Wings Exgear",
-    "es": "Cyber Wings Exgear",
-    "id": "Mora - Sandaran Lengan",
-    "pt": "Cyber Wings Exgear",
-    "th": "ไซเบอร์ วิงส์ เอ็กซ์เกียร์",
-    "vi": "Cyber Wings Exgear"
-  },
-  "MST_MONSTERS_58001_NAME": {
-    "en": "Cyber Wings Exgear",
-    "es": "Cyber Wings Exgear",
-    "id": "Mora - Sandaran Punggung",
-    "pt": "Cyber Wings Exgear",
-    "th": "ไซเบอร์ วิงส์ เอ็กซ์เกียร์",
-    "vi": "Cyber Wings Exgear"
-  },
-  "MST_MONSTERS_58002_NAME": {
-    "en": "Cyber Wings Exgear",
-    "es": "Cyber Wings Exgear",
-    "id": "Sayap Cyber Exgear",
-    "pt": "Cyber Wings Exgear",
-    "th": "ไซเบอร์ วิงส์ เอ็กส์เกียร์",
-    "vi": "Cyber Wings Exgear"
-  },
-  "MST_MONSTERS_58003_NAME": {
-    "en": "Cyber Wings Exgear",
-    "es": "Cyber Wings Exgear",
-    "id": "Sayap Maya Exgear",
-    "pt": "Cyber Wings Exgear",
-    "th": "ไซเบอร์ วิงส์ เอ็กซ์เกียร์",
-    "vi": "Cyber Wings Exgear"
-  },
-  "MST_MONSTERS_58050_NAME": {
-    "en": "Refulgent Savage Jed",
-    "es": "Refulgent Savage Jed",
-    "id": "Mora - Sandaran Punggung",
-    "pt": "Refulgent Savage Jed",
-    "th": "รีฟุลเจนท์ ซาเวจ เจด",
-    "vi": "Refulgent Savage Jed"
-  },
-  "MST_MONSTERS_58051_NAME": {
-    "en": "Refulgent Savage Jed",
-    "es": "Refulgent Savage Jed",
-    "id": "Setan Kerusakan Melord",
-    "pt": "Refulgent Savage Jed",
-    "th": "รีฟุลเจนท์ ซาเวจ เจด",
-    "vi": "Refulgent Savage Jed"
-  },
-  "MST_MONSTERS_58052_NAME": {
-    "en": "Refulgent Savage Jed",
-    "es": "Refulgent Savage Jed",
-    "id": "Orang Liar Berseri Jed",
-    "pt": "Refulgent Savage Jed",
-    "th": "รีฟุลเจน ซาเวจ เจด",
-    "vi": "Refulgent Savage Jed"
-  },
-  "MST_MONSTERS_58100_NAME": {
-    "en": "Angelic Champion Nadore",
-    "es": "Angelic Champion Nadore",
-    "id": "Setan Kerusakan Melord",
-    "pt": "Angelic Champion Nadore",
-    "th": "แองเจลิค แชมเปี้ยน นาโดเระ",
-    "vi": "Angelic Champion Nadore"
-  },
-  "MST_MONSTERS_58101_NAME": {
-    "en": "Angelic Champion Nadore",
-    "es": "Angelic Champion Nadore",
-    "id": "NA (ATM)",
-    "pt": "Angelic Champion Nadore",
-    "th": "แองเจลิค แชมเปี้ยน นาโดเระ",
-    "vi": "Angelic Champion Nadore"
-  },
-  "MST_MONSTERS_58102_NAME": {
-    "en": "Angelic Champion Nadore",
-    "es": "Angelic Champion Nadore",
-    "id": "Juara Malaikat Nadore",
-    "pt": "Angelic Champion Nadore",
-    "th": "แองเจลิค แชมเปี้ยน นาโดเร่",
-    "vi": "Angelic Champion Nadore"
-  },
-  "MST_MONSTERS_58150_NAME": {
-    "en": "Merciful Beacon Charla",
-    "es": "Merciful Beacon Charla",
-    "id": "NA (ATM)",
-    "pt": "Merciful Beacon Charla",
-    "th": "เมอซิฟูล บีคอน ชาล่า",
-    "vi": "Merciful Beacon Charla"
-  },
-  "MST_MONSTERS_58151_NAME": {
-    "en": "Merciful Beacon Charla",
-    "es": "Merciful Beacon Charla",
-    "id": "NA (ATM)",
-    "pt": "Merciful Beacon Charla",
-    "th": "เมอซิฟูล บีคอน ชาล่า",
-    "vi": "Merciful Beacon Charla"
-  },
-  "MST_MONSTERS_58200_NAME": {
-    "en": "Robotic Wings Sixgear",
-    "es": "Robotic Wings Sixgear",
-    "id": "Sayap Robotik Sixgear",
-    "pt": "Robotic Wings Sixgear",
-    "th": "โรบอติค วิงส์ ซิกซ์เกียร์",
-    "vi": "Robotic Wings Sixgear"
-  },
-  "MST_MONSTERS_58201_NAME": {
-    "en": "Robotic Wings Sixgear",
-    "es": "Robotic Wings Sixgear",
-    "id": "Sayap Robotik Sixgear",
-    "pt": "Robotic Wings Sixgear",
-    "th": "โรบอติค วิงส์ ซิกซ์เกียร์",
-    "vi": "Robotic Wings Sixgear"
-  },
-  "MST_MONSTERS_58250_NAME": {
-    "en": "Noble Cavalier Krantz",
-    "es": "Noble Cavalier Krantz",
-    "id": "Penunggang Kuda Mulia Krantz",
-    "pt": "Noble Cavalier Krantz",
-    "th": "โนเบิล คาวาเลีย แกรนท์",
-    "vi": "Noble Cavalier Krantz"
-  },
-  "MST_MONSTERS_58300_NAME": {
-    "en": "Honorable Knight Krantz",
-    "es": "Honorable Knight Krantz",
-    "id": "Ksatria Terhormat Krantz",
-    "pt": "Honorable Knight Krantz",
-    "th": "ฮอเนอราเบิล ไนท์ แกรนท์",
-    "vi": "Honorable Knight Krantz"
-  },
-  "MST_MONSTERS_58301_NAME": {
-    "en": "Honorable Knight Krantz",
-    "es": "Honorable Knight Krantz",
-    "id": "Ksatria Terhormat Krantz",
-    "pt": "Honorable Knight Krantz",
-    "th": "ฮอเนอราเบิล ไนท์ แกรนท์",
-    "vi": "Honorable Knight Krantz"
-  },
-  "MST_MONSTERS_58302_NAME": {
-    "en": "Honorable Knight Krantz",
-    "es": "Honorable Knight Krantz",
-    "id": "Honorable Knight Krantz",
-    "pt": "Honorable Knight Krantz",
-    "th": "Honorable Knight Krantz",
-    "vi": "Honorable Knight Krantz"
-  },
-  "MST_MONSTERS_58350_NAME": {
-    "en": "Virtuous Champion Krantz",
-    "es": "Virtuous Champion Krantz",
-    "id": "Juara Saleh Krantz",
-    "pt": "Virtuous Champion Krantz",
-    "th": "เวอทูอัส แชมเปี้ยน แกรนท์",
-    "vi": "Virtuous Champion Krantz"
-  },
-  "MST_MONSTERS_58351_NAME": {
-    "en": "Virtuous Champion Krantz",
-    "es": "Virtuous Champion Krantz",
-    "id": "Virtuous Champion Krantz",
-    "pt": "Virtuous Champion Krantz",
-    "th": "เวอชิวอัส แชมเปี้ยน ครานซ์",
-    "vi": "Virtuous Champion Krantz"
-  },
-  "MST_MONSTERS_58352_NAME": {
-    "en": "Virtuous Champion Krantz",
-    "es": "Virtuous Champion Krantz",
-    "id": "Juara Mulia Krantz",
-    "pt": "Virtuous Champion Krantz",
-    "th": "เวอชิวอัส แชมป์เปี้ยน ครานทซ์",
-    "vi": "Virtuous Champion Krantz"
   }
 }

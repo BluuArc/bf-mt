@@ -1,4 +1,220 @@
 {
+  "MST_SKILLS_2001247_NAME": {
+    "en": "Loch, stand back!",
+    "es": "¡Loch, atrás!",
+    "id": "Loch, mundur!",
+    "pt": "Loch, para trás!",
+    "th": "ล็อค ถอยไป!",
+    "vi": "Loch, lùi lại!"
+  },
+  "MST_SKILLS_2001250_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001250_NAME": {
+    "en": "Blazing Spirit",
+    "es": "Espíritu abrasador",
+    "id": "Roh Membara",
+    "pt": "Espírito Escaldante",
+    "th": "เบลซซิ่ง สปิริต",
+    "vi": "Linh hồn cháy sáng"
+  },
+  "MST_SKILLS_2001251_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001251_NAME": {
+    "en": "Dean, Loch! Follow my lead!",
+    "es": "¡Dean, Loch! ¡Síganme!",
+    "id": "Dean, Loch! Ikuti petunjukku!",
+    "pt": "Dean, Loch! Sigam-me!",
+    "th": "ศาสตราจารย์ ล็อค! ตามข้ามา!",
+    "vi": "Dean, Loch! Hãy theo chỉ dẫn của tôi!"
+  },
+  "MST_SKILLS_2001252_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001252_NAME": {
+    "en": "Don't assume that this is the extent of my power!",
+    "es": "¡No asumas que este es todo mi poder!",
+    "id": "Jangan berasumsi ini adalah batas kekuatanku!",
+    "pt": "Não ache que meu poder é só isso!",
+    "th": "อย่าคิดไปเองสิว่าพลังของข้ามีแค่นี้!",
+    "vi": "Đừng cho rằng đây là phạm vi quyền lực của tôi!"
+  },
+  "MST_SKILLS_2001253_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001253_NAME": {
+    "en": "Young man! Now's not the time for your chatter!",
+    "es": "¡Joven! ¡Ahora no es momento para hablar!",
+    "id": "Anak muda! Sekarang bukan saatnya ngobrol!",
+    "pt": "Jovem! Agora não é hora de papo-furado!",
+    "th": "เจ้าหนุ่ม! นี่ไม่ใช่เวลามามัวคุยเล่นนะ!",
+    "vi": "Các chàng trai trẻ! Giờ không phải lúc để nói chuyện!"
+  },
+  "MST_SKILLS_2001254_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001254_NAME": {
+    "en": "Lady Edea! Pushing yourself too hard is dangerous!",
+    "es": "¡Lady Edea! ¡No te esfuerces demasiado! ¡Es peligroso!",
+    "id": "Putri Edea! Bahaya kalau kamu terlalu memaksakan diri!",
+    "pt": "Lady Edea! Se esforçar demais é perigoso!",
+    "th": "ท่านอีเดีย! พาตัวเองเข้าไปสู่อันตราย!",
+    "vi": "Tiểu thư Edea! Bắt mình làm việc quá sức là nguy hiểm đấy!"
+  },
+  "MST_SKILLS_2001255_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001255_NAME": {
+    "en": "Loch, save your energy for the last attack!",
+    "es": "¡Loch, guarda tus energías para el último ataque!",
+    "id": "Loch, simpan tenagamu untuk serangan terakhir!",
+    "pt": "Loch, guarde sua energia para o último ataque!",
+    "th": "ล็อค เก็บพลังไว้ใช้ในการโจมตีครั้งสุดท้าย!",
+    "vi": "Loch, hãy tiết kiệm năng lượng cho lần tấn công cuối cùng!"
+  },
+  "MST_SKILLS_2001256_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001256_NAME": {
+    "en": "I will crush the enemy's defense!",
+    "es": "¡Aplastaré la defensa del enemigo!",
+    "id": "Aku akan menghancurkan pertahanan musuh!",
+    "pt": "Vou esmagar a defesa inimiga!",
+    "th": "ข้าจะทำลายการป้องกันของศัตรู!",
+    "vi": "Tôi sẽ nghiền nát hàng phòng ngự của kẻ thù!"
+  },
+  "MST_SKILLS_2001260_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001260_NAME": {
+    "en": "Absolute Zero",
+    "es": "Cero absoluto",
+    "id": "Nol Absolut",
+    "pt": "Zero Absoluto",
+    "th": "แอพโซลูท ซีโร่",
+    "vi": "Số không tuyệt đối"
+  },
+  "MST_SKILLS_2001261_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001261_NAME": {
+    "en": "Gramps! Loch! It's my turn!",
+    "es": "¡Abuelo! ¡Loch! ¡Es mi turno!",
+    "id": "Kakek! Loch! Sekarang giliranku!",
+    "pt": "Vovô! Loch! Minha vez!",
+    "th": "ตาแก่! ล็อค! ตาข้าแล้ว!",
+    "vi": "Gramps! Loch! Đến lượt tôi!"
+  },
+  "MST_SKILLS_2001262_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001262_NAME": {
+    "en": "Now you'll learn the real meaning of \"Absolute Zero\"!",
+    "es": "¡Ahora aprenderás el significado de \"Cero absoluto\"!",
+    "id": "Sekarang kamu akan belajar arti \"Nol Absolut\"!",
+    "pt": "Agora você vai conhecer o Zero Absoluto!",
+    "th": "ทีนี้เจ้าจะได้รู้ความหมายที่แท้จริงของ \"แอ็บโซลูท ซีโร่\"!",
+    "vi": "Giờ ta sẽ dạy ngươi ý nghĩa thực sự của \"Số không tuyệt đối\"!"
+  },
+  "MST_SKILLS_2001263_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001263_NAME": {
+    "en": "Gramps, you're being too reckless!",
+    "es": "¡Abuelo, no seas tan imprudente!",
+    "id": "Kakek, kamu terlalu sembrono!",
+    "pt": "Vovô, você está sendo imprudente!",
+    "th": "ตาแก่ เจ้าระมัดระวังเกินไปแล้ว!",
+    "vi": "Gramps, ngươi đang liều lĩnh quá đấy!"
+  },
+  "MST_SKILLS_2001264_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001264_NAME": {
+    "en": "Urgh... I have to get myself together...",
+    "es": "Ugh... Tengo que concentrarme...",
+    "id": "Urgh… Aku harus menata diri lagi…",
+    "pt": "Urgh... Preciso me organizar...",
+    "th": "อาห์...ข้าต้องรวมพลังของข้าเข้าด้วยกัน...",
+    "vi": "Urgh... Tôi phải tự cố gắng..."
+  },
+  "MST_SKILLS_2001265_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001265_NAME": {
+    "en": "I'll set things up for you guys, so just wait here!",
+    "es": "¡Arreglaré las cosas por ustedes, esperen un momento!",
+    "id": "Aku akan membuka jalan untuk kalian, jadi tunggu di sini!",
+    "pt": "Eu vou ajeitar as coisas para você, então espere aqui!",
+    "th": "ข้าจะเตรียมบางสิ่งไว้ให้พวกเจ้า เพราะงั้นจรออยู่ที่นี่!",
+    "vi": "Tôi sẽ thu xếp mọi thứ cho các bạn, hãy đợi ở đây!"
+  },
   "MST_SKILLS_2001266_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -86112,110 +86328,6 @@
     "vi": "M-Michele! Hang on!!"
   },
   "MST_SKILLS_212264_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_212264_NAME": {
-    "en": "But it's time to end it now.",
-    "es": "Es hora de ponerle fin a esto.",
-    "id": "Tapi inilah waktunya untuk mengakhirinya sekarang.",
-    "pt": "Mas agora é hora de encerrá-lo.",
-    "th": "แต่ได้เวลาจบกันแล้ว",
-    "vi": "But it's time to end it now."
-  },
-  "MST_SKILLS_21226500_NAME": {
-    "en": "My only option is victory.",
-    "es": "My only option is victory.",
-    "id": "Satu-satunya pilihanku adalah kemenangan.",
-    "pt": "My only option is victory.",
-    "th": "ทางเลือกเดียวของข้าคือชัยชนะ",
-    "vi": "My only option is victory."
-  },
-  "MST_SKILLS_2122650_DESCRIPTION": {
-    "en": "17 combo massive Thunder attack on single enemy & gradually recovers HP for 3 turns",
-    "es": "Combo individual de 17 devastadores ataques atronadores que recupera gradualmente el PS durante 3 turnos",
-    "id": "17 kombo serangan Guntur masif ke 1 musuh & perlahan memulihkan HP untuk 3 giliran",
-    "pt": "Combo massivo de 17 golpes de Trovão em um inimigo e recuperação gradual de HP por 3 rodadas",
-    "th": "17 คอมโบ โจมตีธาตุสายฟ้ารุนแรงมหาศาล ใส่ศัตรูเป้าหมาย และ ค่อยๆ ฟื้นฟู HP นาน 3 เทิร์น",
-    "vi": "17 combo massive Thunder attack on single enemy & gradually recovers HP for 3 turns"
-  },
-  "MST_SKILLS_2122650_NAME": {
-    "en": "Radia Velocity",
-    "es": "Velocidad de Radia",
-    "id": "Laju Radia",
-    "pt": "Tempestade de Radia",
-    "th": "เรเดีย เวโลซิตี้",
-    "vi": "Radia Velocity"
-  },
-  "MST_SKILLS_2122651_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122651_NAME": {
-    "en": "Reveila Familia",
-    "es": "Reveila Familia",
-    "id": "Reveila Familia",
-    "pt": "Reveila Familia",
-    "th": "เรเวล่า ฟามิลล่า",
-    "vi": "Reveila Familia"
-  },
-  "MST_SKILLS_2122652_DESCRIPTION": {
-    "en": "22 combo massive Thunder attack on all enemies (damage relative to remaining HP)",
-    "es": "Combo grupal de 22 poderosos ataque atronadores (daño correspondiente a los PS restantes)",
-    "id": "22 kombo serangan Guntur masif ke semua musuh (kerusakan sesuai sisa HP)",
-    "pt": "Combo massivo de 22 golpes de Trovão em todos os inimigos (dano relativo ao HP restante)",
-    "th": "22 คอมโบ โจมตีธาตุสายฟ้ารุนแรงมหาศาล ใส่ศัตรูทั้งหมด (ค่าความเสียหายขึ้นอยู่กับ HP ที่เหลือ)",
-    "vi": "22 combo massive Thunder attack on all enemies (damage relative to remaining HP)"
-  },
-  "MST_SKILLS_2122652_NAME": {
-    "en": "Vertex",
-    "es": "Vertex",
-    "id": "Pusaran",
-    "pt": "Vértex",
-    "th": "เวอร์เท็กซ์",
-    "vi": "Vertex"
-  },
-  "MST_SKILLS_2122653_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122653_NAME": {
-    "en": "A fight all of the sudden...?",
-    "es": "¿Una pelea, así de repente?",
-    "id": "Tiba-tiba bertarung?",
-    "pt": "Uma luta do nada...?",
-    "th": "การต่อสู้ทั้งหมดในทันที...?",
-    "vi": "A fight all of the sudden...?"
-  },
-  "MST_SKILLS_2122654_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122654_NAME": {
-    "en": "Don't push me into this.",
-    "es": "No me obligues a hacer esto.",
-    "id": "Jangan paksa aku untuk ini.",
-    "pt": "Não me force a isso.",
-    "th": "อย่าให้ข้าเข้าไปยุ่งด้วยนะ",
-    "vi": "Don't push me into this."
-  },
-  "MST_SKILLS_2122655_DESCRIPTION": {
     "en": "None",
     "es": "None",
     "id": "None",
