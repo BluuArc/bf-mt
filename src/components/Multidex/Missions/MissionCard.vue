@@ -82,6 +82,17 @@
               </v-layout>
             </v-container>
           </v-flex>
+          <v-flex xs12 :md6="!hasClearBonus" v-if="mimicData.length > 0">
+            <b :class="!hasClearBonus ? 'd-block' : undefined">Mimics:</b>
+            <unit-thumbnail
+              v-for="(entry, i) in mimicData"
+              :key="i"
+              :src="getImageUrls(entry.group.toString()).ills_thum"
+              style="height: 36px; width: 36px;"
+              imgStyle="height: 36px; width: 36px; vertical-align: middle;"
+              :rarity="(unitById(entry.group.toString()) || {}).rarity"
+              :title="(unitById(entry.group.toString()) || {}).name"/>
+          </v-flex>
         </v-layout>
       </v-card-text>
     </v-container>
@@ -114,8 +125,36 @@ export default {
     hasClearBonus () {
       return Array.isArray(this.mission.clear_bonus) && this.mission.clear_bonus.length > 0;
     },
-    hasMimics () {
-      return this.mission.mimic_info && Object.keys(this.mission.mimic_info).length > 0;
+    mimicData () {
+      if (!(this.mission && this.mission.mimic_info && Object.keys(this.mission.mimic_info).length > 0)) {
+        return [];
+      }
+
+      const mimicIds = {
+        mimic: '60142',
+        batMimic: '60143',
+        dragonMimic: '60144',
+        metalMimic: '60224',
+      };
+      const groupMapping = {
+        '1000': mimicIds.mimic,
+        '1100': mimicIds.batMimic,
+        '1101': mimicIds.batMimic,
+        '1200': mimicIds.dragonMimic,
+        '1300': mimicIds.metalMimic,
+      };
+      const { mimic_info: mimicInfo } = this.mission;
+
+      return [
+        {
+          group: groupMapping[mimicInfo.group_1_monster_group],
+          chance: +mimicInfo.group_1_chance,
+        },
+        {
+          group: groupMapping[mimicInfo.group_2_monster_group],
+          chance: +mimicInfo.group_2_chance,
+        },
+      ].filter(entry => !!entry.group && entry.chance > 0);
     },
     xpPerEnergy () {
       const result = (+this.mission.xp / (Math.max(1, +this.mission.energy_use))).toFixed(2);

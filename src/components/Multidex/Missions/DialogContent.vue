@@ -161,7 +161,7 @@
                                 </span>
                               </v-list-tile-title>
                             </v-list-tile-content>
-                        </v-list-tile>
+                          </v-list-tile>
                         </template>
                       </v-list>
                     </v-flex>
@@ -183,7 +183,7 @@
                     <v-flex xs12>
                       To access this mission, the following {{ requiredMissions.length === 1 ? 'mission' : 'missions' }} must be cleared.
                     </v-flex>
-                    <v-flex xs12 :sm6="!hasMimics" :md4="!hasMimics"x v-for="(missionId, i) in requiredMissions" :key="i">
+                    <v-flex xs12 :sm6="!hasMimics" :md4="!hasMimics" v-for="(missionId, i) in requiredMissions" :key="i">
                       <mission-list-card
                       :to="getMultidexPathTo(missionId)"
                       :mission="missionById(missionId)"
@@ -195,20 +195,7 @@
             </v-card>
           </v-flex>
           <v-flex xs12 :md6="requiredMissions.length > 0" v-if="hasMimics">
-            <v-card style="border-color: var(--mimic-card-color);">
-              <v-card-title class="deep-orange white--text">
-                <h3 class="title">Mimic Info</h3>
-              </v-card-title>
-              <v-card-text>
-                <v-container fluid class="pa-0">
-                  <v-layout row wrap>
-                    <v-flex xs12>
-                      {{ mission.mimic_info }}
-                    </v-flex>
-                  </v-layout>
-                </v-container>
-              </v-card-text>
-            </v-card>
+            <mimic-card style="border-color: var(--mimic-card-color);" :mission="mission"/>
           </v-flex>
         </v-layout>
         <v-layout row>
@@ -231,6 +218,7 @@ import GemIcon from '@/components/Multidex/GemThumbnail';
 import UnitIcon from '@/components/Multidex/Units/LazyLoadThumbnail';
 import ItemIcon from '@/components/Multidex/Items/ItemThumbnail';
 import MissionListCard from '@/components/Multidex/Missions/MissionCard';
+import MimicCard from '@/components/Multidex/Missions/MimicCard';
 
 export default {
   props: ['missionId'],
@@ -242,6 +230,7 @@ export default {
     'unit-icon': UnitIcon,
     'item-icon': ItemIcon,
     'mission-list-card': MissionListCard,
+    'mimic-card': MimicCard,
   },
   computed: {
     ...mapState('missions', ['pageDb']),
