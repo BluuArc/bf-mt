@@ -125,16 +125,16 @@
                                 v-else-if="reward.unit"
                                 :src="getUnitImageUrls(reward.unit.id).ills_thum"
                                 class="mx-auto"
-                                style="height: 48px; width: 48px;"
-                                imgStyle="height: 48px; width: 48px;"
+                                style="height: 40px; width: 40px;"
+                                imgStyle="height: 40px; width: 40px;"
                                 :rarity="unitById(reward.unit.id).rarity"
                                 :title="unitById(reward.unit.id).name"/>
                               <item-icon
                                 v-else-if="reward.item"
                                 :src="getItemImageUrl(reward.item.id)"
                                 class="mx-auto"
-                                style="height: 48px; width: 48px;"
-                                imgStyle="height: 48px; width: 48px;"
+                                style="height: 40px; width: 40px;"
+                                imgStyle="height: 40px; width: 40px;"
                                 :rarity="itemById(reward.item.id).rarity"
                                 :type="itemById(reward.item.id).type"
                                 :raid="itemById(reward.item.id).raid"/>
@@ -156,7 +156,7 @@
                                 <span v-else-if="reward.item">
                                   {{ reward.item.count }}x {{ (itemById(reward.item.id) || {}).name || reward.item.id }}
                                 </span>
-                                <span v-else-if="reward.unit || reward.item">
+                                <span v-if="reward.unit || reward.item">
                                   <v-icon small class="pb-1">fas fa-external-link-alt</v-icon>
                                 </span>
                               </v-list-tile-title>
@@ -183,7 +183,7 @@
                     <v-flex xs12>
                       To access this mission, the following {{ requiredMissions.length === 1 ? 'mission' : 'missions' }} must be cleared.
                     </v-flex>
-                    <v-flex xs12 :sm6="!hasMimics" :md4="!hasMimics" v-for="(missionId, i) in requiredMissions" :key="i">
+                    <v-flex xs12 :sm6="!hasMimics" :md4="!hasMimics"x v-for="(missionId, i) in requiredMissions" :key="i">
                       <mission-list-card
                       :to="getMultidexPathTo(missionId)"
                       :mission="missionById(missionId)"

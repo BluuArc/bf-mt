@@ -68,25 +68,21 @@ export default {
           return isAscending ? result : -result;
         },
         Map: (idA, idB, isAscending) => {
-          const getStringResult = (a, b) => (a > b) ? 1 : -1;
           const [missionA, missionB] = [this.pageDb[idA], this.pageDb[idB]];
           const { land: landA, area: areaA, dungeon: dungeonA } = missionA;
           const { land: landB, area: areaB, dungeon: dungeonB } = missionB;
-          let result;
+          let numA, numB;
           // missions are categorized as land/area/dungeon/name
           if (landA === landB) {
             if (areaA === areaB) {
-              if (dungeonA === dungeonB) {
-                result = (+idA - +idB);
-              } else {
-                result = this.getNumberCompareResult(this.possibleValues.dungeon.indexOf(dungeonA),this.possibleValues.dungeon.indexOf(dungeonB));
-              }
+              [numA, numB] = [this.possibleValues.dungeon.indexOf(dungeonA), this.possibleValues.dungeon.indexOf(dungeonB)];
             } else {
-              result = this.getNumberCompareResult(this.possibleValues.area.indexOf(areaA),this.possibleValues.area.indexOf(areaB));
+              [numA, numB] = [this.possibleValues.area.indexOf(areaA), this.possibleValues.area.indexOf(areaB)];
             }
           } else {
-            result = this.getNumberCompareResult(this.possibleValues.land.indexOf(landA),this.possibleValues.land.indexOf(landB));
+            [numA, numB] = [this.possibleValues.land.indexOf(landA), this.possibleValues.land.indexOf(landB)];
           }
+          const result = this.getNumberCompareResult({ numA, numB }, { idA, idB });
           return isAscending ? result : -result;
         },
         XP: (idA, idB, isAscending) => {

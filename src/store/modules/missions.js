@@ -44,7 +44,7 @@ const missionStore = {
           });
         });
         return possible;
-      }, [Object.keys(state.pageDb), state.pageDb]);
+      }, [Object.keys(state.pageDb).sort((a, b) => +a - +b), state.pageDb]);
       commit('setPossibleValues', result);
     },
     async ensurePageDbSyncWithServer ({ commit, dispatch, state }) {
