@@ -76,7 +76,7 @@
                           </v-list-tile-action>
                           <v-list-tile-content>
                             <v-list-tile-title class="ml-3">
-                              {{ baseRewards.XP }} XP
+                              {{ formatNumber(baseRewards.XP) }} XP
                             </v-list-tile-title>
                           </v-list-tile-content>
                         </v-list-tile>
@@ -86,7 +86,7 @@
                           </v-list-tile-action>
                           <v-list-tile-content>
                             <v-list-tile-title class="ml-3">
-                              {{ baseRewards.Zel }} Zel
+                              {{ formatNumber(baseRewards.Zel) }} Zel
                             </v-list-tile-title>
                           </v-list-tile-content>
                         </v-list-tile>
@@ -96,7 +96,7 @@
                           </v-list-tile-action>
                           <v-list-tile-content>
                             <v-list-tile-title class="ml-3">
-                              {{ baseRewards.Karma }} Karma
+                              {{ formatNumber(baseRewards.Karma) }} Karma
                             </v-list-tile-title>
                           </v-list-tile-content>
                         </v-list-tile>
@@ -119,6 +119,8 @@
                             :key="i">
                             <v-list-tile-action>
                               <gem-icon v-if="reward.gem" img-style="height: 52px; width: 52px; vertical-align: middle;"/>
+                              <zel-icon v-if="reward.zel" img-style="height: 52px; width: 52px; vertical-align: middle;"/>
+                              <karma-icon v-if="reward.karma" img-style="height: 52px; width: 52px; vertical-align: middle;"/>
                               <unit-icon
                                 v-else-if="reward.unit"
                                 :src="getUnitImageUrls(reward.unit.id).ills_thum"
@@ -142,13 +144,19 @@
                                 <span v-if="reward.gem">
                                   {{ reward.gem }}x {{ +reward.gem === 1 ? 'Gem' : 'Gems' }}
                                 </span>
+                                <span v-if="reward.zel">
+                                  {{ formatNumber(reward.zel) }} Zel
+                                </span>
+                                <span v-if="reward.karma">
+                                  {{ formatNumber(reward.karma) }} Karma
+                                </span>
                                 <span v-else-if="reward.unit">
                                   {{ reward.unit.count }}x {{ (unitById(reward.unit.id) || {}).name || reward.unit.id }}
                                 </span>
                                 <span v-else-if="reward.item">
                                   {{ reward.item.count }}x {{ (itemById(reward.item.id) || {}).name || reward.item.id }}
                                 </span>
-                                <span v-if="reward.unit || reward.item">
+                                <span v-else-if="reward.unit || reward.item">
                                   <v-icon small class="pb-1">fas fa-external-link-alt</v-icon>
                                 </span>
                               </v-list-tile-title>
@@ -157,9 +165,6 @@
                         </template>
                       </v-list>
                     </v-flex>
-                    <v-flex xs12 md6>
-                      {{ mission.clear_bonus }}
-                    </v-flex>
                   </v-layout>
                 </v-container>
               </v-card-text>
@@ -167,27 +172,29 @@
           </v-flex>
         </v-layout>
         <v-layout row wrap>
-          <v-flex xs12 :md6="hasMimics" v-if="mission.requires">
+          <v-flex xs12 :md6="hasMimics" v-if="requiredMissions.length > 0">
             <v-card style="border-color: var(--requirements-card-color);">
               <v-card-title class="purple white--text">
                 <h3 class="title">Requirements</h3>
               </v-card-title>
               <v-card-text>
-                <v-container fluid class="pa-0">
+                <v-container fluid style="max-height: 50vh; overflow-y: auto;">
                   <v-layout row wrap>
                     <v-flex xs12>
-                      To access this mission, the following missions must be cleared.
-                      <!-- TODO: full dependency list? -->
+                      To access this mission, the following {{ requiredMissions.length === 1 ? 'mission' : 'missions' }} must be cleared.
                     </v-flex>
-                    <v-flex xs12>
-                      {{ requiredMissions }}
+                    <v-flex xs12 :sm6="!hasMimics" :md4="!hasMimics" v-for="(missionId, i) in requiredMissions" :key="i">
+                      <mission-list-card
+                      :to="getMultidexPathTo(missionId)"
+                      :mission="missionById(missionId)"
+                      style="min-height: 84px; height: 100%;"/>
                     </v-flex>
                   </v-layout>
                 </v-container>
               </v-card-text>
             </v-card>
           </v-flex>
-          <v-flex xs12 :md6="mission.requires" v-if="hasMimics">
+          <v-flex xs12 :md6="requiredMissions.length > 0" v-if="hasMimics">
             <v-card style="border-color: var(--mimic-card-color);">
               <v-card-title class="deep-orange white--text">
                 <h3 class="title">Mimic Info</h3>
@@ -216,12 +223,14 @@
 
 <script>
 import { mapActions, mapState, mapGetters } from 'vuex';
+import numbro from 'numbro';
 import XPIcon from '@/components/Multidex/XPThumbnail';
 import ZelIcon from '@/components/Multidex/ZelThumbnail';
 import KarmaIcon from '@/components/Multidex/KarmaThumbnail';
 import GemIcon from '@/components/Multidex/GemThumbnail';
 import UnitIcon from '@/components/Multidex/Units/LazyLoadThumbnail';
 import ItemIcon from '@/components/Multidex/Items/ItemThumbnail';
+import MissionListCard from '@/components/Multidex/Missions/MissionCard';
 
 export default {
   props: ['missionId'],
@@ -232,9 +241,11 @@ export default {
     'gem-icon': GemIcon,
     'unit-icon': UnitIcon,
     'item-icon': ItemIcon,
+    'mission-list-card': MissionListCard,
   },
   computed: {
     ...mapState('missions', ['pageDb']),
+    ...mapGetters('missions', ['getMultidexPathTo', 'missionById']),
     ...mapGetters('units', {
       unitById: 'unitById',
       getUnitImageUrls: 'getImageUrls',
@@ -296,6 +307,7 @@ export default {
     return {
       mission: undefined,
       loadingMissionData: true,
+      extraDependencyMissions: [],
     };
   },
   watch: {
@@ -324,6 +336,12 @@ export default {
       this.mission = await this.getMission(this.missionId);
       this.loadingMissionData = false;
     },
+    formatNumber (number, mantissa = 1) {
+      return +number < 1000 ? +number : numbro(+number).format({ average: true, mantissa });
+    },
+    hasRequirements (missionId) {
+      return !!((this.missionById(missionId) || {}).requires);
+    },
   },
 };
 </script>
@@ -339,11 +357,13 @@ export default {
   --mimic-card-color: #ff5722; /* deep-orange */
 }
 
-.theme--light .mission-dialog-content .unit-card {
+.theme--light .mission-dialog-content .unit-card,
+.theme--light .mission-dialog-content .mission-card {
   background-color: whitesmoke;
 }
 
-.theme--dark .mission-dialog-content .unit-card {
+.theme--dark .mission-dialog-content .unit-card,
+.theme--dark .mission-dialog-content .mission-card {
   background-color: black;
 }
 </style>

@@ -8,11 +8,15 @@ const missionStore = {
   namespaced: true,
   state: {
     ...createState(),
-    possibleValues: {},
+    possibleValues: {
+      land: [],
+      area: [],
+      dungeon: [],
+    },
   },
   mutations: {
     ...createMutations(),
-    setPossibleValues (state, values = {}) {
+    setPossibleValues (state, values = { land: [], area: [], dungeon: [] }) {
       state.possibleValues = values;
     },
   },
@@ -22,7 +26,7 @@ const missionStore = {
   },
   actions: {
     ...createActions(missionWorker, downloadWorker, 'missions'),
-    async updatePossibleValues ({ commit, dispatch, state }) {
+    async updatePossibleValues ({ commit, state }) {
       commit('setLoadingMessage', 'Getting land, area, and dungeon values for missions');
       const result = await SWorker.run((keys, pageDb) => {
         const possible = { land: [], area: [], dungeon: [] };

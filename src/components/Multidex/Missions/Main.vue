@@ -42,7 +42,7 @@ export default {
     'mission-card': MissionCard,
   },
   computed: {
-    ...mapState('missions', ['pageDb']),
+    ...mapState('missions', ['pageDb', 'possibleValues']),
     ...mapGetters('missions', ['getMultidexPathTo']),
     requiredModules: () => ['missions', 'units', 'items'],
     filterTypes: () => ['associatedUnits', 'associatedItems', 'gems', 'exclusives', 'continues', 'land', 'area', 'dungeon'],
@@ -79,13 +79,13 @@ export default {
               if (dungeonA === dungeonB) {
                 result = (+idA - +idB);
               } else {
-                result = getStringResult(dungeonA, dungeonB);
+                result = this.getNumberCompareResult(this.possibleValues.dungeon.indexOf(dungeonA),this.possibleValues.dungeon.indexOf(dungeonB));
               }
             } else {
-              result = getStringResult(areaA, areaB);
+              result = this.getNumberCompareResult(this.possibleValues.area.indexOf(areaA),this.possibleValues.area.indexOf(areaB));
             }
           } else {
-            result = getStringResult(landA, landB);
+            result = this.getNumberCompareResult(this.possibleValues.land.indexOf(landA),this.possibleValues.land.indexOf(landB));
           }
           return isAscending ? result : -result;
         },
