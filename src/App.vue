@@ -76,7 +76,7 @@
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex';
+import { mapActions, mapState, mapMutations } from 'vuex';
 import debounce from 'lodash/debounce';
 import SiteTrackers from '@/components/SiteTrackers';
 
@@ -107,7 +107,7 @@ export default {
       return state;
     },
     ...mapState('settings', ['lightMode', 'activeServer']),
-    ...mapState(['disableHtmlOverflow', 'modules', 'updateTimes']),
+    ...mapState(['disableHtmlOverflow', 'modules', 'updateTimes', 'multidexModulesWithUpdates']),
     multidexModules: () => multidexModules.slice(),
     ...(() => {
       // get state for each module
@@ -126,6 +126,11 @@ export default {
       });
       return result;
     })(),
+    numUpdates () {
+      return this.possibleServers
+        .map(s => this.multidexModulesWithUpdates[s].length)
+        .reduce((acc, val) => acc + val, 0);
+    },
   },
   data () {
     const multidexIconMapping = {
@@ -171,11 +176,12 @@ export default {
       ],
       title: 'Brave Frontier Multi Tool',
       pageActiveServer: '',
-      numUpdates: 0,
+      // numUpdates: 0,
     };
   },
   methods: {
     ...mapActions(['init', 'setActiveServer', 'fetchUpdateTimes']),
+    ...mapMutations(['setMultidexModulesWithUpdates']),
     htmlOverflowChangeHandler () {
       const page = document.getElementsByTagName('html')[0];
       page.style.overflowY = (this.disableHtmlOverflow) ? 'hidden' : 'auto';
@@ -185,6 +191,25 @@ export default {
         await this.fetchUpdateTimes();
       }
     }, 500),
+    updateModulesWithUpdatesList (freshUpdateTimes) {
+      this.possibleServers.forEach(s => {
+        const modulesWithUpdates = this.modules.map(moduleName => {
+          const updateTimes = this[`${moduleName}UpdateTimes`];
+          const numEntries = this[`${moduleName}NumEntries`];
+          if (!(!!updateTimes && freshUpdateTimes[moduleName])) {
+            return { name: moduleName, hasUpdate: false };
+          }
+          // console.debug(s, moduleName, !!updateTimes[s], numEntries[s], !!freshUpdateTimes[moduleName][s], new Date(freshUpdateTimes[moduleName][s]) > new Date(updateTimes[s]));
+          return { name: moduleName, hasUpdate: updateTimes[s] && numEntries[s] > 0 && new Date(freshUpdateTimes[moduleName][s]) > new Date(updateTimes[s]) };
+        }).filter(val => !!val.hasUpdate)
+        .map(({ name }) => name);
+        const isDifferent = modulesWithUpdates.length !== this.multidexModulesWithUpdates[s] || modulesWithUpdates.filter(name => !this.multidexModulesWithUpdates[s].includes(name)).length > 0;
+        console.debug({ server: s, newUpdates: modulesWithUpdates }, isDifferent);
+        if (isDifferent) {
+          this.setMultidexModulesWithUpdates({ server: s, newUpdates: modulesWithUpdates });
+        }
+      });
+    },
   },
   watch: {
     activeServer (newValue) {
@@ -206,14 +231,7 @@ export default {
     updateTimes: {
       deep: true,
       handler (freshUpdateTimes) {
-        this.numUpdates = this.modules.map(moduleName => {
-          const updateTimes = this[`${moduleName}UpdateTimes`];
-          const numEntries = this[`${moduleName}NumEntries`];
-          return !(!!updateTimes && freshUpdateTimes[moduleName]) ? 0
-            : this.possibleServers
-              .map(s => updateTimes[s] && numEntries[s] > 0 && new Date(freshUpdateTimes[moduleName][s]) > new Date(updateTimes[s]))
-              .filter(val => !!val).length;
-        }).reduce((acc, val) => acc + val, 0);
+        this.updateModulesWithUpdatesList(freshUpdateTimes);
       },
     },
     currentPageName () {

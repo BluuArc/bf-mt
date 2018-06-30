@@ -388,7 +388,7 @@
             <v-card-text>
               <v-container fluid class="pa-0">
                 <v-layout row>
-                  <v-flex xs8>
+                  <v-flex :xs8="!hasUpdates" :xs6="hasUpdates" :sm7="hasUpdates">
                     <v-text-field v-model="filterOptions.name" label="Search"/>
                   </v-flex>
                   <v-flex xs4 class="center-align-parent text-xs-center">
@@ -396,6 +396,16 @@
                       <span>Showing {{ allSortedEntries.length }}</span>
                       <span style="white-space: nowrap;">{{ mainModule.fullName }}</span>
                     </span>
+                  </v-flex>
+                  <v-flex xs2 sm1 v-if="hasUpdates" class="center-align-parent text-xs-center">
+                    <div class="center-align-container">
+                      <v-tooltip left v-model="showUpdateTooltip">
+                        <v-btn flat icon color="info" slot="activator">
+                          <v-icon>info</v-icon>
+                        </v-btn>
+                        <span>Updates Available</span>
+                      </v-tooltip>
+                    </div>
                   </v-flex>
                 </v-layout>
                 <v-layout row>
@@ -697,13 +707,21 @@
                         v-for="(server, i) in knownConstants.servers"
                         :key="i"
                         xs12 sm4
-                        class="text-xs-center">
+                        class="text-xs-center pb-4">
                         <v-btn
                           large
                           :block="$vuetify.breakpoint.xsOnly"
                           :disabled="server === activeServer"
                           v-text="server"
                           :to="getMultidexPathTo(viewId, server)"/>
+                      </v-flex>
+                    </v-layout>
+                    <v-layout row wrap v-if="hasUpdates">
+                      <v-flex xs12 class="text-xs-center pt-4">
+                        <h3 class="subheading">
+                          Downloading available updates for this server may give you this missing entry. ({{ toUpdate.map(m => m.fullName).join(', ') }})
+                        </h3>
+                        <v-btn large @click="updateData">Update Data</v-btn>
                       </v-flex>
                     </v-layout>
                   </v-container>
@@ -826,6 +844,7 @@ export default {
     ...mapState(['inInitState', 'sortAndFilterSettings']),
     ...mapGetters('items', ['getSphereCategory']),
     ...mapState('missions', ['possibleValues']),
+    ...mapState(['multidexModulesWithUpdates']),
     ...(() => {
       // get state for each module
       let result = {};
@@ -847,6 +866,14 @@ export default {
       return result;
     })(),
     knownConstants: () => knownConstants,
+    toUpdate () {
+      const updatesForCurrentServer = (this.multidexModulesWithUpdates || {})[this.activeServer] || [];
+      // console.debug({ updatesForCurrentServer });
+      return this.pageModules.filter(m => updatesForCurrentServer.includes(m.name));
+    },
+    hasUpdates () {
+      return this.toUpdate.map(m => m.name).includes(this.mainModule.name);
+    },
     pageModules () {
       return multidexModules.filter(m => this.requiredModules.includes(m.name));
     },
@@ -953,6 +980,7 @@ export default {
       pageIndex: 0,
       amountPerPage: 27,
       showDialog: false,
+      showUpdateTooltip: true,
       filteredKeys: [],
       loadingFilters: false,
       finishedInit: false,
@@ -1046,6 +1074,9 @@ export default {
         this.initDb();
       }
     },
+    hasUpdates (newValue) {
+      this.showUpdateTooltip = !!newValue;
+    },
   },
   created () {
     if (!this.isDataLoading) {
@@ -1080,6 +1111,7 @@ export default {
         const actionMapping = {};
         actionMapping[`${m}DbSync`] = 'ensurePageDbSyncWithServer';
         actionMapping[`${m}GetFilteredKeys`] = 'getFilteredKeys';
+        actionMapping[`${m}DataUpdate`] = 'updateData';
         result = {
           ...result,
           ...mapActions(m, actionMapping),
@@ -1114,6 +1146,7 @@ export default {
         await this[`${m}DbSync`]();
       }
       this.finishedInit = true;
+      this.showUpdateTooltip = this.hasUpdates;
     }, 50),
     applyFilters () {
       this.filteredKeys = [];
@@ -1238,6 +1271,16 @@ export default {
         icon: icons[gender],
         color: colors[gender],
       };
+    },
+    async updateData () {
+      console.debug('starting download for', this.toUpdate);
+      for (const type of this.toUpdate) {
+        try {
+          await this[`${type.name}DataUpdate`]([this.activeServer]);
+        } catch (err) {
+          console.error(type, err);
+        }
+      }
     },
   },
 };

@@ -80,6 +80,11 @@ const store = new Vuex.Store({
     modules,
     sortAndFilterSettings: {},
     updateTimes: {},
+    multidexModulesWithUpdates: {
+      gl: [],
+      eu: [],
+      jp: [],
+    },
   },
   mutations: {
     setHtmlOverflow (state, overflowState = false) {
@@ -93,6 +98,9 @@ const store = new Vuex.Store({
     },
     setUpdateTimes (state, newTimes = {}) {
       state.updateTimes = newTimes;
+    },
+    setMultidexModulesWithUpdates (state, { newUpdates = [], server = 'gl' }) {
+      state.multidexModulesWithUpdates[server] = newUpdates.slice();
     },
   },
   actions: {

@@ -8,11 +8,14 @@
     </v-layout>
     <v-layout row v-else-if="maxResults === 0 || toDownload.length > 0">
       <v-flex xs12 class="text-xs-center">
-        <p>
+        <div class="body-1">
           <span>Seems like you haven't loaded the required data for this server yet.</span>
           <span v-if="toDownload.length > 0">({{ toDownload.map(d => dataSettingNameMapping[d]).join(', ') }})</span>
           <span v-else>You can load the missing data at the settings page.</span>
-        </p>
+          <p class="body-1">
+            (Once successfully downloaded, the data will be locally cached and will auto-load on future visits)
+          </p>
+        </div>
         <v-btn v-if="toDownload.length > 0" @click="downloadData">Download Missing Data</v-btn>
         <v-btn v-else to="/settings">Go To Settings Page</v-btn>
       </v-flex>
