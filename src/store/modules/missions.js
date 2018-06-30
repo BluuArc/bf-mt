@@ -115,7 +115,7 @@ const missionStore = {
           const entry = pageDb[key];
           const fitsName = (!name ? true : entry.name.toLowerCase().includes(name.toLowerCase()));
 
-          const isExclusive = !otherKeys.includes(entry.id.toString());
+          const isExclusive = !otherKeys.includes((entry.id || '').toString());
           const fitsExclusive = fitsTernary(isExclusive, exclusives, { trueVal: 'exclusive', falseVal: 'non-exclusive' });
 
           const hasAssociatedUnits = Array.isArray(entry.clear_bonus) && entry.clear_bonus.filter(bonus => !!bonus.unit).length > 0;
