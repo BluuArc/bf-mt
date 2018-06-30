@@ -117,7 +117,7 @@
                             exact
                             :to="(reward.unit ? getUnitMultidexPath(reward.unit.id) : (reward.item ? getItemMultidexPathTo(reward.item.id) : undefined))"
                             :key="i">
-                            <v-list-tile-action>
+                            <v-list-tile-action class="pa-0">
                               <gem-icon v-if="reward.gem" img-style="height: 52px; width: 52px; vertical-align: middle;"/>
                               <zel-icon v-if="reward.zel" img-style="height: 52px; width: 52px; vertical-align: middle;"/>
                               <karma-icon v-if="reward.karma" img-style="height: 52px; width: 52px; vertical-align: middle;"/>
@@ -172,7 +172,7 @@
           </v-flex>
         </v-layout>
         <v-layout row wrap>
-          <v-flex xs12 :md6="hasMimics" v-if="requiredMissions.length > 0">
+          <v-flex xs12 :md6="(hasMimics || relatedMissions.length > 0)" v-if="requiredMissions.length > 0">
             <v-card style="border-color: var(--requirements-card-color);">
               <v-card-title class="purple white--text">
                 <h3 class="title">Requirements</h3>
@@ -183,7 +183,7 @@
                     <v-flex xs12>
                       To access this mission, the following {{ requiredMissions.length === 1 ? 'mission' : 'missions' }} must be cleared.
                     </v-flex>
-                    <v-flex xs12 :sm6="!hasMimics" :md4="!hasMimics" v-for="(missionId, i) in requiredMissions" :key="i">
+                    <v-flex xs12 :sm6="!hasMimics && relatedMissions.length === 0" :md4="!hasMimics && relatedMissions.length === 0" v-for="(missionId, i) in requiredMissions" :key="i">
                       <mission-list-card
                       :to="getMultidexPathTo(missionId)"
                       :mission="missionById(missionId)"
@@ -194,20 +194,31 @@
               </v-card-text>
             </v-card>
           </v-flex>
-          <v-flex xs12 :md6="requiredMissions.length > 0" v-if="hasMimics">
+          <v-flex xs12 :md6="requiredMissions.length > 0 || relatedMissions.length > 0" v-if="hasMimics">
             <mimic-card style="border-color: var(--mimic-card-color);" :mission="mission"/>
           </v-flex>
-          <v-flex xs12>
-            <v-card style="border-style: var(--related-missions-card-color)">
-              <v-card-title class="purple white--text">
-                <h3 class="title">Related Missions</h3>
+          <v-flex xs12 :md6="(requiredMissions.length > 0 && !hasMimics) || (requiredMissions.length === 0 && hasMimics)" v-if="relatedMissions.length > 0">
+            <v-card style="border-color: var(--related-missions-card-color)">
+              <v-card-title class="indigo white--text">
+                <h3 class="title">Related Missions (In the Same {{ relatedMissionType }}) </h3>
               </v-card-title>
+              <v-card-text>
+                <v-container fluid style="max-height: 50vh; overflow-y: auto;">
+                  <v-layout row wrap>
+                    <v-flex
+                      v-for="(missionId, i) in relatedMissions" :key="i"
+                      xs12
+                      :sm6="!((requiredMissions.length > 0 && !hasMimics) || (requiredMissions.length === 0 && hasMimics))"
+                      :md4="!((requiredMissions.length > 0 && !hasMimics) || (requiredMissions.length === 0 && hasMimics))">
+                      <mission-list-card
+                      :to="getMultidexPathTo(missionId)"
+                      :mission="missionById(missionId)"
+                      style="min-height: 84px; height: 100%;"/>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-card-text>
             </v-card>
-          </v-flex>
-        </v-layout>
-        <v-layout row>
-          <v-flex xs12>
-            {{ mission }}
           </v-flex>
         </v-layout>
       </v-container>
@@ -226,6 +237,7 @@ import UnitIcon from '@/components/Multidex/Units/LazyLoadThumbnail';
 import ItemIcon from '@/components/Multidex/Items/ItemThumbnail';
 import MissionListCard from '@/components/Multidex/Missions/MissionCard';
 import MimicCard from '@/components/Multidex/Missions/MimicCard';
+import SWorker from '@/assets/sww.min.js';
 
 export default {
   props: ['missionId'],
@@ -303,7 +315,8 @@ export default {
     return {
       mission: undefined,
       loadingMissionData: true,
-      extraDependencyMissions: [],
+      relatedMissions: [],
+      relatedMissionType: 'Dungeon',
     };
   },
   watch: {
@@ -330,6 +343,7 @@ export default {
     async idDataChangeHandler () {
       this.loadingMissionData = true;
       this.mission = await this.getMission(this.missionId);
+      ({ relatedKeys: this.relatedMissions, type: this.relatedMissionType} = await this.getRelatedMissions());
       this.loadingMissionData = false;
     },
     formatNumber (number, mantissa = 1) {
@@ -337,6 +351,31 @@ export default {
     },
     hasRequirements (missionId) {
       return !!((this.missionById(missionId) || {}).requires);
+    },
+    async getRelatedMissions () {
+      if (!this.mission) {
+        return;
+      }
+
+      try {
+        return await SWorker.run((keys, pageDb, currentMission) => {
+          const { land, area, dungeon } = currentMission;
+          let type = 'Dungeon';
+          let relatedKeys = keys.filter(k => pageDb[k] && pageDb[k].dungeon === dungeon && k !== currentMission.id.toString());
+          if (relatedKeys.length === 0) {
+            type = 'Area';
+            relatedKeys = keys.filter(k => pageDb[k] && pageDb[k].area === area && k !== currentMission.id.toString());
+          }
+          if (relatedKeys.length === 0) {
+            type = 'Land';
+            relatedKeys = keys.filter(k => pageDb[k] && pageDb[k].land === land && k !== currentMission.id.toString());
+          }
+          return { relatedKeys, type };
+        }, [Object.keys(this.pageDb), this.pageDb, this.mission]);
+      } catch (err) {
+        console.error('error getting related missions', err);
+        return [];
+      }
     },
   },
 };
@@ -351,6 +390,7 @@ export default {
   --rewards-card-color: #2196f3; /* blue */
   --requirements-card-color: #9c27b0; /* purple */
   --mimic-card-color: #ff5722; /* deep-orange */
+  --related-missions-card-color: #3f51b5; /* indigo */
 }
 
 .theme--light .mission-dialog-content .unit-card,

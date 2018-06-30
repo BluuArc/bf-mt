@@ -176,7 +176,6 @@ export default {
       ],
       title: 'Brave Frontier Multi Tool',
       pageActiveServer: '',
-      // numUpdates: 0,
     };
   },
   methods: {
