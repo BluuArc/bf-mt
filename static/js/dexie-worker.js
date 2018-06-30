@@ -29,6 +29,11 @@ db.version(2).stores({
   return transaction;
 });
 
+db.version(3).stores({
+  missions: defaultSchemas[2],
+  dictionary: defaultSchemas[2],
+});
+
 const defaultGet = (table, whereQuery) => db[table].where(whereQuery).toArray();
 
 const dbWrapper = {
@@ -74,7 +79,7 @@ const dbWrapper = {
       const resultDb = {};
       Object.keys(currentDb)
       .forEach(key => {
-        // TODO: search units based on search query
+        // TODO: search based on search query
         const { cost, element, gender, guide_id, id, name, rarity, next, prev, evo_mats, kind } = currentDb[key];
         resultDb[key] = { cost, element, gender, guide_id, id, name, rarity, next, prev, evo_mats, kind };
       });
@@ -91,7 +96,7 @@ const dbWrapper = {
       const resultDb = {};
       Object.keys(currentDb)
       .forEach(key => {
-        // TODO: search units based on search query
+        // TODO: search based on search query
         const { desc, id, name, rarity, thumbnail, type, raid, max_stack, sell_price, recipe, usage, associated_units } = currentDb[key];
         resultDb[key] = { desc, id, name, rarity, thumbnail, type, raid, max_stack, sell_price, recipe, usage, associated_units, 'sphere type': currentDb[key]['sphere type'] };
       });
@@ -108,7 +113,7 @@ const dbWrapper = {
       const resultDb = {};
       Object.keys(currentDb)
       .forEach(key => {
-        // TODO: search units based on search query
+        // TODO: search based on search query
         // TODO: find a way to get buff lists/icons? (maybe not?)
         const { desc, id, name, associated_units } = currentDb[key];
         resultDb[key] = { desc, id, name, associated_units };
@@ -126,7 +131,7 @@ const dbWrapper = {
       const resultDb = {};
       Object.keys(currentDb)
       .forEach(key => {
-        // TODO: search units based on search query
+        // TODO: search based on search query
         // TODO: find a way to get buff lists/icons? (maybe not?)
         const { desc, id, name, associated_units, rarity } = currentDb[key];
         resultDb[key] = { desc, id, name, associated_units, rarity };
@@ -144,13 +149,25 @@ const dbWrapper = {
       const resultDb = {};
       Object.keys(currentDb)
       .forEach(key => {
-        // TODO: search units based on search query
+        // TODO: search based on search query
         // TODO: find a way to get buff lists/icons? (maybe not?)
         const { desc, id, name, associated_units } = currentDb[key];
         resultDb[key] = { desc, id, name, associated_units };
       });
 
       return resultDb;
+    }),
+  getMiniDbMissions: (server, searchQuery = {}) => defaultGet('missions', { server })
+    .then(results => {
+      if (results.length === 0 || !results[0].data || Object.keys(results[0].data).length === 0) {
+        return {};
+      }
+
+      const currentDb = results[0].data;
+      // const resultDb = {};
+      // TODO: search based on search query
+      // no need to create mini version
+      return currentDb;
     }),
 };
 
