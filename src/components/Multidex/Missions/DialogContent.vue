@@ -343,7 +343,7 @@ export default {
     async idDataChangeHandler () {
       this.loadingMissionData = true;
       this.mission = await this.getMission(this.missionId);
-      ({ relatedKeys: this.relatedMissions, type: this.relatedMissionType} = await this.getRelatedMissions());
+      ({ relatedKeys: this.relatedMissions, type: this.relatedMissionType } = await this.getRelatedMissions());
       this.loadingMissionData = false;
     },
     formatNumber (number, mantissa = 1) {

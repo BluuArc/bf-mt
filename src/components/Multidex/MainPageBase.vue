@@ -400,12 +400,25 @@
                   <v-flex xs2 sm1 v-if="hasUpdates" class="center-align-parent text-xs-center">
                     <div class="center-align-container">
                       <v-tooltip left v-model="showUpdateTooltip">
-                        <v-btn flat icon color="info" slot="activator">
+                        <v-btn flat icon color="info" slot="activator" @click="showUpdateDialog = true">
                           <v-icon>info</v-icon>
                         </v-btn>
                         <span>Updates Available</span>
                       </v-tooltip>
                     </div>
+                    <v-dialog v-model="showUpdateDialog" max-width="500px">
+                      <v-card>
+                        <v-card-text>
+                          <h3 class="subheading">
+                          Updates area available for this server. ({{ toUpdate.map(m => m.fullName).join(', ') }})
+                        </h3>
+                        </v-card-text>
+                        <v-card-actions>
+                          <v-btn flat color="primary" @click="updateData">Download Updates</v-btn>
+                          <v-btn color="primary" flat @click.stop="showUpdateDialog = false">Close</v-btn>
+                        </v-card-actions>
+                      </v-card>
+                    </v-dialog>
                   </v-flex>
                 </v-layout>
                 <v-layout row>
@@ -985,6 +998,7 @@ export default {
       loadingFilters: false,
       finishedInit: false,
       showFilterSheet: false,
+      showUpdateDialog: false,
       sortOptions: {
         type: 'ID',
         isAscending: true,
@@ -1273,6 +1287,7 @@ export default {
       };
     },
     async updateData () {
+      this.showUpdateDialog = false;
       console.debug('starting download for', this.toUpdate);
       for (const type of this.toUpdate) {
         try {
