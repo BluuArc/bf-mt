@@ -6,6 +6,7 @@
       :class="imgClass"
       :style="{
         'clip-path': `circle(16px at ${xClip + 16}px ${yClip + 16}px`,
+        '-webkit-clip-path': `circle(16px at ${xClip + 16}px ${yClip + 16}px`,
         position: 'absolute',
         left: `${-xClip}px`,
         top: `${-yClip}px`

@@ -7,6 +7,7 @@
             <item-thumbnail
               :src="getImageUrl(item.id)"
               class="mx-auto"
+              width="48" height="48"
               style="height: 48px; width: 48px;"
               imgStyle="height: 48px; width: 48px;"
               :rarity="item.rarity"

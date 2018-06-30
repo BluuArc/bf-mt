@@ -20,7 +20,7 @@
               <h3 class="subheading d-inline-block"><b>{{ unit.name }}</b></h3>
             </v-layout>
             <v-layout row>
-              <v-flex xs4 class="pl-0">
+              <v-flex xs4 class="pl-0" style="white-space: nowrap">
                 <h3 class="subheading"># {{ unit.guide_id }}</h3>
               </v-flex>
               <v-flex xs4 class="text-xs-center">

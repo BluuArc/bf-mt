@@ -197,6 +197,13 @@
           <v-flex xs12 :md6="requiredMissions.length > 0" v-if="hasMimics">
             <mimic-card style="border-color: var(--mimic-card-color);" :mission="mission"/>
           </v-flex>
+          <v-flex xs12>
+            <v-card style="border-style: var(--related-missions-card-color)">
+              <v-card-title class="purple white--text">
+                <h3 class="title">Related Missions</h3>
+              </v-card-title>
+            </v-card>
+          </v-flex>
         </v-layout>
         <v-layout row>
           <v-flex xs12>
