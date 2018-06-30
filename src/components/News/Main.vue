@@ -22,7 +22,7 @@ export default {
     ...mapState('settings', ['activeServer']),
     serverUrls () {
       return {
-        gl: 'https://ios1124.bravefrontier.gumi.sg//bf/web/notice/indexCtrl.php',
+        gl: 'https://ios1125.bravefrontier.gumi.sg//bf/web/notice/indexCtrl.php',
         eu: 'https://apiv2-bravefrontier.gumi-europe.net/web/notice/index.php',
         jp: 'https://webnotice.ssl.brave.a-lim.jp/news/news.html',
       };
