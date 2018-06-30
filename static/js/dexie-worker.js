@@ -32,6 +32,9 @@ db.version(2).stores({
 db.version(3).stores({
   missions: defaultSchemas[2],
   dictionary: defaultSchemas[2],
+}).upgrade(transaction => {
+  console.debug('[PW-dexie] using schema version 3');
+  return transaction;
 });
 
 const defaultGet = (table, whereQuery) => db[table].where(whereQuery).toArray();
