@@ -27,9 +27,13 @@
             <v-progress-circular v-if="subItem.module && loadingStates[subItem.module]" indeterminate/>
             <v-badge v-else-if="group.subheader === 'General' && subItem.title === 'Settings' && numUpdates > 0">
               <span slot="badge">{{ numUpdates }}</span>
-              <v-icon v-html="subItem.icon"/>
+              <img v-if="subItem.image" :src="subItem.image" style="width: 30px; vertical-align: middle"/>
+              <v-icon v-else v-html="subItem.icon"/>
             </v-badge>
-            <v-icon v-else v-html="subItem.icon"/>
+            <template v-else>
+              <img v-if="subItem.image" :src="subItem.image" style="width: 30px; vertical-align: middle"/>
+              <v-icon v-else v-html="subItem.icon"/>
+            </template>
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title v-text="subItem.title"/>
@@ -134,9 +138,15 @@ export default {
   },
   data () {
     const multidexIconMapping = {
-      units: {icon: 'people'},
-      items: {icon: 'group_work'},
-      bursts: {icon: 'gavel'},
+      // units: {icon: 'people'},
+      // items: {icon: 'group_work'},
+      // bursts: {icon: 'gavel'},
+      units: {image: require('@/assets/unit_thum.png')},
+      items: {image: require('@/assets/sphere_thum_5_5.png')},
+      bursts: {image: require('@/assets/battle_meter_current.png')},
+      extraSkills: {image: require('@/assets/unit_ills_full_50792_100x103.png')},
+      leaderSkills: {image: require('@/assets/battle_leader_skill_icon.png')},
+      missions: {image: require('@/assets/achievement_pt_icon.png')},
       default: {icon: 'extension'},
     };
     const generateMultidexEntry = (entry) => {

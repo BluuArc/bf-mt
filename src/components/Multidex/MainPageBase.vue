@@ -410,8 +410,8 @@
                       <v-card>
                         <v-card-text>
                           <h3 class="subheading">
-                          Updates area available for this server. ({{ toUpdate.map(m => m.fullName).join(', ') }})
-                        </h3>
+                            Updates are available for this server. ({{ toUpdate.map(m => m.fullName).join(', ') }})
+                          </h3>
                         </v-card-text>
                         <v-card-actions>
                           <v-btn flat color="primary" @click="updateData">Download Updates</v-btn>
