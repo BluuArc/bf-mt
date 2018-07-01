@@ -63,11 +63,21 @@
          <v-tab-item v-if="burst && hitCountData.length > 0" :key="getLabelIndex('Hitcounts')" style="max-height: 50vh; overflow-y: auto;">
            <v-expansion-panel :expand="$vuetify.breakpoint.smAndUp">
             <v-expansion-panel-content v-for="(d,i) in hitCountData" :key="i">
-              <h3 slot="header" class="title pl-3 pr-3">Attack {{ i + 1 }} ({{ d.target }})</h3>
+              <div slot="header" class="pl-3 pr-3">
+                <h3 :class="`title ${$vuetify.breakpoint.xsOnly ? '' : 'd-inline'}`">Attack {{ i + 1 }}</h3>
+                <v-chip small>{{ d.target }}</v-chip>
+                <v-chip small>{{ d.delay }} delay</v-chip>
+                <v-chip small>{{ getTotalDistribution(d.frames)}}% DMG Distribution</v-chip>
+              </div>
               <hit-count-table class="pl-3 pr-3" :attack="d.frames"/>
             </v-expansion-panel-content>
             <v-expansion-panel-content v-for="(d,j) in extraAttackHitCountData" :key="hitCountData.length + j">
-              <h3 slot="header" class="title pl-3 pr-3">Attack {{ hitCountData.length + j + 1 }} ({{ d.target }}) - ({{ d.source }})</h3>
+              <div slot="header" class="pl-3 pr-3">
+                <h3 :class="`title ${$vuetify.breakpoint.xsOnly ? '' : 'd-inline'}`">Attack {{ hitCountData.length + j + 1 }} - ({{ d.source }})</h3>
+                <v-chip small>{{ d.target }}</v-chip>
+                <v-chip small>{{ d.delay }} delay</v-chip>
+                <v-chip small>{{ getTotalDistribution(d.frames)}}% DMG Distribution</v-chip>
+              </div>
               <hit-count-table class="pl-3 pr-3" :attack="d.frames"/>
             </v-expansion-panel-content>
            </v-expansion-panel>
@@ -153,9 +163,10 @@ export default {
         .map((f, i) => {
           const effectData = endLevel.effects[i];
           return {
-            target: (effectData['random attack'] ? 'random' : effectData['target area']),
+            target: knownConstants.targetAreaMapping[effectData['random attack'] ? 'random' : effectData['target area']],
             id: (f['proc id'] || f['unknown proc id']).toString(),
             frames: f,
+            delay: effectData['effect delay time(ms)/frame'],
             effects: effectData,
           };
         }).filter(f => this.attackingProcs.includes(f.id));
@@ -166,9 +177,10 @@ export default {
         .map((f, i) => {
           const effectData = endLevel.effects[i];
           return {
-            target: (effectData['random attack'] ? 'random' : effectData['target area']),
+            target: knownConstants.targetAreaMapping[effectData['random attack'] ? 'random' : effectData['target area']],
             id: (f['proc id'] || f['unknown proc id']).toString(),
             frames: f,
+            delay: effectData['effect delay time(ms)/frame'],
             effects: effectData,
           };
         }).filter(f => f.id === '2');
@@ -210,15 +222,17 @@ export default {
         attacks.push({
           'target area': 'single',
           'proc id': '1',
+          'effect delay time(ms)/frame': '0.0/0',
           source: 'Wiles Sphere',
         });
       }
       return attacks.map((effectData, i) => {
         return {
-          target: effectData['target area'],
+          target: knownConstants.targetAreaMapping[effectData['random attack'] ? 'random' : effectData['target area']],
           id: (effectData['proc id'] || effectData['unknown proc id']).toString(),
           frames: this.extraAttackFrames,
           effects: effectData,
+          delay: effectData['effect delay time(ms)/frame'],
           source: effectData.source,
         };
       });
@@ -242,6 +256,9 @@ export default {
   methods: {
     getLabelIndex (label) {
       return this.tabLabels.indexOf(label);
+    },
+    getTotalDistribution (frames) {
+      return frames['hit dmg% distribution'].reduce((acc, val) => acc + val, 0);
     },
   },
 };
