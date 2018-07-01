@@ -150,13 +150,13 @@
         </v-layout>
         <v-layout row wrap>
           <v-flex xs12>
-            <burst-card :burst="unit.bb" burst-type="bb" style="border-color: var(--burst-card-color--bb)"/>
+            <burst-card :burst="unit.bb" burst-type="bb" :extra-attacks="extraAttacks.bb" style="border-color: var(--burst-card-color--bb)"/>
           </v-flex>
         </v-layout>
         <template v-for="burstType in ['sbb', 'ubb']">
           <v-layout v-if="unit[burstType]" row wrap :key="burstType">
             <v-flex xs12>
-              <burst-card :burst="unit[burstType]" :burst-type="burstType" :style="`border-color: var(--burst-card-color--${burstType})`"/>
+              <burst-card :burst="unit[burstType]" :burst-type="burstType" :extra-attacks="extraAttacks[burstType]" :style="`border-color: var(--burst-card-color--${burstType})`"/>
             </v-flex>
           </v-layout>
         </template>
@@ -178,6 +178,7 @@
 
 <script>
 import { mapActions, mapGetters, mapState } from 'vuex';
+import { knownConstants } from '@/store/modules/db.common';
 import StatCard from '@/components/Multidex/Units/StatCard';
 import MovementInfoCard from '@/components/Multidex/Units/MovementInfoCard';
 import ArenaCard from '@/components/Multidex/Units/ArenaCard';
@@ -251,6 +252,57 @@ export default {
         this.currentEvolutionIndex = evolutions.length;
       }
       return evolutions;
+    },
+    extraAttacks () {
+      const extraAttacks = {
+        bb: [],
+        sbb: [],
+        ubb: [],
+      };
+      if (!this.unit) {
+        return extraAttacks;
+      }
+
+      let possibleEffects = [];
+      const isAttackingPassive = e => e['passive id'] === '66' &&
+        e['triggered effect'].some(triggeredEffect => knownConstants.attackingProcs.includes(triggeredEffect['proc id'] || triggeredEffect['unknown proc id']));
+      const mapEffect = (effect, source) => {
+        effect['triggered effect']
+          .filter(triggeredEffect => knownConstants.attackingProcs.includes(triggeredEffect['proc id'] || triggeredEffect['unknown proc id']))
+          .forEach(triggeredEffect => {
+            possibleEffects.push({
+              ...triggeredEffect,
+              source,
+              'trigger on bb': effect['trigger on bb'],
+              'trigger on sbb': effect['trigger on sbb'],
+              'trigger on ubb': effect['trigger on ubb'],
+            });
+          });
+      };
+
+      if (this.unit['extra skill']) {
+        const { effects = [] } = this.unit['extra skill'];
+        effects.filter(isAttackingPassive).forEach(e => mapEffect(e, 'ES'));
+      }
+
+      if (this.unit.feskills) {
+        this.unit.feskills
+          .map(s => s.skill.effects)
+          .reduce((acc, val) => acc.concat(val), [])
+          .filter(s => s.passive && isAttackingPassive(s.passive))
+          .map(s => s.passive)
+          .forEach(e => mapEffect(e, 'SP'));
+      }
+
+      possibleEffects.forEach(effect => {
+        const burstTypes = Object.keys(extraAttacks);
+        burstTypes.forEach(type => {
+          if (effect[`trigger on ${type}`]) {
+            extraAttacks[type].push(effect);
+          }
+        });
+      });
+      return extraAttacks;
     },
   },
   data () {

@@ -232,6 +232,7 @@ export const knownConstants = {
     ls_sphere: 'LS Sphere',
   },
   servers: ['gl', 'eu', 'jp'],
+  attackingProcs: ['1', '13', '14', '27', '28', '29', '47', '61', '64', '75', '11000'].concat(['46', '48', '97']),
 };
 
 const commonFunctions = {

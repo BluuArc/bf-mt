@@ -66,6 +66,10 @@
               <h3 slot="header" class="title pl-3 pr-3">Attack {{ i + 1 }} ({{ d.target }})</h3>
               <hit-count-table class="pl-3 pr-3" :attack="d.frames"/>
             </v-expansion-panel-content>
+            <v-expansion-panel-content v-for="(d,j) in extraAttackHitCountData" :key="hitCountData.length + j">
+              <h3 slot="header" class="title pl-3 pr-3">Attack {{ hitCountData.length + j + 1 }} ({{ d.target }}) - ({{ d.source }})</h3>
+              <hit-count-table class="pl-3 pr-3" :attack="d.frames"/>
+            </v-expansion-panel-content>
            </v-expansion-panel>
         </v-tab-item>
         <v-tab-item v-if="burst" :key="getLabelIndex('JSON')">
@@ -77,13 +81,14 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapState } from 'vuex';
+import { knownConstants } from '@/store/modules/db.common';
 import JsonViewer from '@/components/Multidex/JsonViewer';
 import EffectList from '@/components/Multidex/EffectList/MainTable';
 import HitCountTable from '@/components/Multidex/Units/HitCountTable';
 
 export default {
-  props: ['burst', 'burstType'],
+  props: ['burst', 'burstType', 'extraAttacks'],
   components: {
     'json-viewer': JsonViewer,
     'effect-list': EffectList,
@@ -91,6 +96,7 @@ export default {
   },
   computed: {
     ...mapGetters('bursts', ['getMultidexPathTo']),
+    ...mapState('units', ['activeServer']),
     name () {
       return this.burst ? this.burst.name : 'None';
     },
@@ -119,7 +125,7 @@ export default {
     numLevels () {
       return this.burst ? this.burst.levels.length : 0;
     },
-    attackingProcs: () => ['1', '13', '14', '27', '28', '29', '47', '61', '64', '75', '11000'].concat(['46', '48', '97']),
+    attackingProcs: () => knownConstants.attackingProcs,
     bcdcInfo () {
       if (!this.burst) {
         return {};
@@ -153,6 +159,69 @@ export default {
             effects: effectData,
           };
         }).filter(f => this.attackingProcs.includes(f.id));
+    },
+    healFrameData () {
+      const endLevel = this.burst.levels[this.numLevels - 1];
+      return this.burst['damage frames']
+        .map((f, i) => {
+          const effectData = endLevel.effects[i];
+          return {
+            target: (effectData['random attack'] ? 'random' : effectData['target area']),
+            id: (f['proc id'] || f['unknown proc id']).toString(),
+            frames: f,
+            effects: effectData,
+          };
+        }).filter(f => f.id === '2');
+    },
+    extraAttackFrames () {
+      const frames = {
+        'frame times': [],
+        'hit dmg% distribution': [],
+      };
+
+      // gather frame data
+      this.hitCountData.map(d => d.frames).forEach((frameSet, i) => {
+        frames['frame times'] = frames['frame times'].concat(frameSet['frame times'].slice(i === 0 ? 0 : 1));
+        frames['hit dmg% distribution'] = frames['hit dmg% distribution'].concat(frameSet['hit dmg% distribution'].slice(i === 0 ? 0 : 1));
+      });
+
+      this.healFrameData.map(d => d.frames).forEach((frameSet, i) => {
+        frames['frame times'] = frames['frame times'].concat(frameSet['frame times'].slice(i === 0 && this.hitCountData.length === 0 ? 0 : 1));
+        frames['hit dmg% distribution'] = frames['hit dmg% distribution'].concat(frameSet['hit dmg% distribution'].slice(i === 0 && this.hitCountData.length === 0 ? 0 : 1));
+      });
+
+      // sort frames by frame time
+      const unifiedFrames = [];
+      frames['frame times'].forEach((time, i) => {
+        unifiedFrames.push({ time, dmg: frames['hit dmg% distribution'][i] });
+      });
+      frames['frame times'] = [];
+      frames['hit dmg% distribution'] = [];
+      unifiedFrames.sort((a, b) => a.time - b.time).forEach(({ time, dmg }) => {
+        frames['frame times'].push(time);
+        frames['hit dmg% distribution'].push(dmg);
+      });
+
+      return frames;
+    },
+    extraAttackHitCountData () {
+      const attacks = this.extraAttacks.slice();
+      if (this.activeServer === 'gl' && this.burstType !== 'ubb') {
+        attacks.push({
+          'target area': 'single',
+          'proc id': '1',
+          source: 'Wiles Sphere',
+        });
+      }
+      return attacks.map((effectData, i) => {
+        return {
+          target: effectData['target area'],
+          id: (effectData['proc id'] || effectData['unknown proc id']).toString(),
+          frames: this.extraAttackFrames,
+          effects: effectData,
+          source: effectData.source,
+        };
+      });
     },
   },
   watch: {
