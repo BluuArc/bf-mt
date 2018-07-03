@@ -67,18 +67,20 @@
                 <h3 :class="`title ${$vuetify.breakpoint.xsOnly ? '' : 'd-inline'}`">Attack {{ i + 1 }}</h3>
                 <v-chip small>{{ d.target }}</v-chip>
                 <v-chip small>{{ d.delay }} delay</v-chip>
+                <v-chip v-if="hasSelfSpark(d.frames, d.delay)" small>{{ getSelfSparkCount(d.frames, d.delay) }} Self Sparks</v-chip>
                 <v-chip small>{{ getTotalDistribution(d.frames)}}% DMG Distribution</v-chip>
               </div>
-              <hit-count-table class="pl-3 pr-3" :attack="d.frames"/>
+              <hit-count-table class="pl-3 pr-3" :attack="d.frames" :sparked-frames="sparkedFrames" :attack-index="i" attack-type="native" :delay="+(d.delay.split('/')[1])"/>
             </v-expansion-panel-content>
             <v-expansion-panel-content v-for="(d,j) in extraAttackHitCountData" :key="hitCountData.length + j">
               <div slot="header" class="pl-3 pr-3">
                 <h3 :class="`title ${$vuetify.breakpoint.xsOnly ? '' : 'd-inline'}`">Attack {{ hitCountData.length + j + 1 }} - ({{ d.source }})</h3>
                 <v-chip small>{{ d.target }}</v-chip>
                 <v-chip small>{{ d.delay }} delay</v-chip>
+                <v-chip v-if="hasSelfSpark(d.frames, d.delay)" small>{{ getSelfSparkCount(d.frames, d.delay) }} Self Sparks</v-chip>
                 <v-chip small>{{ getTotalDistribution(d.frames)}}% DMG Distribution</v-chip>
               </div>
-              <hit-count-table class="pl-3 pr-3" :attack="d.frames"/>
+              <hit-count-table class="pl-3 pr-3" :attack="d.frames" :sparked-frames="sparkedFrames" :attack-index="j" attack-type="extra" :delay="+(d.delay.split('/')[1])"/>
             </v-expansion-panel-content>
            </v-expansion-panel>
         </v-tab-item>
@@ -96,9 +98,10 @@ import { knownConstants } from '@/store/modules/db.common';
 import JsonViewer from '@/components/Multidex/JsonViewer';
 import EffectList from '@/components/Multidex/EffectList/MainTable';
 import HitCountTable from '@/components/Multidex/Units/HitCountTable';
+import SWorker from '@/assets/sww.min.js';
 
 export default {
-  props: ['burst', 'burstType', 'extraAttacks'],
+  props: ['burst', 'burstType', 'extraAttacks', 'unit'],
   components: {
     'json-viewer': JsonViewer,
     'effect-list': EffectList,
@@ -107,6 +110,12 @@ export default {
   computed: {
     ...mapGetters('bursts', ['getMultidexPathTo']),
     ...mapState('units', ['activeServer']),
+    isTeleporter () {
+      if (!this.unit || !this.unit.movement || !this.unit.movement.skill) {
+        return false;
+      }
+      return +this.unit.movement.skill['move type'] === 2;
+    },
     name () {
       return this.burst ? this.burst.name : 'None';
     },
@@ -242,16 +251,36 @@ export default {
     numLevels (newValue) {
       this.levelIndex = (newValue === 0) ? 0 : (newValue - 1);
     },
+    async extraAttackHitCountData () {
+      try {
+        await this.calculateSparkedFrames();
+      } catch (err) {
+        console.error('error calculating sparked frames', err);
+      }
+    },
+    async hitCountData () {
+      try {
+        await this.calculateSparkedFrames();
+      } catch (err) {
+        console.error('error calculating sparked frames', err);
+      }
+    },
   },
   data () {
     return {
       activeTab: 0,
       showBuffList: false,
       levelIndex: 0,
+      sparkedFrames: null,
     };
   },
-  mounted () {
+  async mounted () {
     this.levelIndex = (this.numLevels === 0) ? 0 : (this.numLevels - 1);
+    try {
+      await this.calculateSparkedFrames();
+    } catch (err) {
+      console.error('error calculating sparked frames', err);
+    }
   },
   methods: {
     getLabelIndex (label) {
@@ -259,6 +288,58 @@ export default {
     },
     getTotalDistribution (frames) {
       return frames['hit dmg% distribution'].reduce((acc, val) => acc + val, 0);
+    },
+    async calculateSparkedFrames () {
+      this.sparkedFrames = null;
+      const result = await SWorker.run((native, extra, isTeleporter) => {
+        const allFrames = {};
+        const addFrame = (time, index, type) => {
+          const timeKey = time.toString();
+          if (!allFrames[timeKey]) {
+            allFrames[timeKey] = [];
+          }
+          allFrames[timeKey].push({ index, type });
+        };
+        native.forEach((entry, index) => {
+          const delay = (!isTeleporter ? +(entry.delay.split('/')[1]) : 0);
+          const frames = entry.frames['frame times'];
+          // console.debug('native', index, delay);
+          frames.forEach(time => {
+            addFrame(+time + delay, index, 'native');
+          });
+        });
+        extra.forEach((entry, index) => {
+          const delay = (!isTeleporter ? +(entry.delay.split('/')[1]) : 0);
+          const frames = entry.frames['frame times'];
+          // console.debug('extra', index, delay);
+          frames.forEach(time => {
+            addFrame(+time + delay, index, 'extra');
+          });
+        });
+        const sparkedFrames = {};
+        for (const time in allFrames) {
+          const entry = allFrames[time];
+          if (entry.length > 1) {
+            sparkedFrames[time] = entry.slice();
+          }
+        }
+        return sparkedFrames;
+      }, [this.hitCountData, this.extraAttackHitCountData, this.isTeleporter]);
+      this.sparkedFrames = result;
+    },
+    hasSelfSpark (frames, inputDelay) {
+      const delay = (!this.isTeleporter ? +(inputDelay.split('/')[1]) : 0);
+      return this.sparkedFrames && frames['frame times'].some((time) => !!this.sparkedFrames[(+time + delay).toString()]);
+    },
+    getSelfSparkCount (frames, inputDelay) {
+      if (!this.sparkedFrames) {
+        return 0;
+      }
+
+      const delay = (!this.isTeleporter ? +(inputDelay.split('/')[1]) : 0);
+      return frames['frame times']
+        .filter(time => (this.sparkedFrames[(+time + delay)] || []).length > 0)
+        .length;
     },
   },
 };

@@ -1,5 +1,14 @@
 <template>
   <v-container fluid class="hitcount-table">
+    <v-layout row wrap v-if="hasSparks" class="pl-4 pr-4">
+      <v-flex xs12>
+        <b>Note:</b> No delays are added to these visible values, but sparked rows are calculated using unit delays.
+      </v-flex>
+      <v-flex xs12 sm6 md3 v-for="(entry, legendIndex) in legendColors" :key="legendIndex">
+        <b :class="entry.class">{{ entry.label }}:</b>
+        <span v-html="entry.desc"/>
+      </v-flex>
+    </v-layout>
     <v-layout row v-if="useVuetifyTable">
       <v-data-table :headers="headers" :items="items" hide-actions class="mx-auto">
         <template slot="items" slot-scope="props">
@@ -19,7 +28,15 @@
       </v-layout>
       <v-layout row>
         <v-flex xs12 :style="limitHeight ? ('max-height: 50vh; overflow-y: auto;') : ''">
-          <v-layout row v-for="(item, index) in items" :key="index" class="text-xs-center hitcount-table--row">
+          <v-layout
+            v-for="(item, index) in items" :key="index"
+            :class="{
+              'text-xs-center hitcount-table--row': true,
+              'blue--text': selfSparkType(item) === 'native',
+              'orange--text': selfSparkType(item) === 'extra',
+              'purple--text text--lighten-2': selfSparkType(item) === 'both',
+            }"
+            row>
             <v-flex xs4 v-for="(col, i) in headers" :key="i" class="text-xs-center">
               {{ item[col.value] }}
             </v-flex>
@@ -44,6 +61,23 @@ export default {
       type: Boolean,
       default: false,
     },
+    sparkedFrames: {
+      type: Object,
+      default: () => {},
+    },
+    attackIndex: {
+      type: Number,
+      default: 0,
+    },
+    // native or extra
+    attackType: {
+      type: String,
+      default: '',
+    },
+    delay: {
+      type: Number,
+      default: 0,
+    },
   },
   computed: {
     headers () {
@@ -63,6 +97,44 @@ export default {
           diff: (frameIndex === 0) ? 0 : (frame - this.attack['frame times'][frameIndex - 1]),
         }
       ));
+    },
+    legendColors () {
+      return [
+        { label: 'Default Color Text', desc: 'No sparks' },
+        { label: 'Blue Text', desc: 'Sparks with an attack that <u>is not</u> from ES/SP/Items (i.e. "native" attacks)', class: 'blue--text' },
+        { label: 'Orange Text', desc: 'Sparks with an attack that <u>is</u> from ES/SP/Items (i.e. "extra" attacks)', class: 'orange--text' },
+        { label: 'Purple Text', desc: 'Sparks with at least one native attack and one extra attack', class: 'purple--text text--lighten-2' },
+      ];
+    },
+  },
+  data () {
+    return {
+      hasSparks: false,
+    };
+  },
+  methods: {
+    selfSparkType (item) {
+      const sparkEntry = (this.sparkedFrames || {})[(item.frameNum + this.delay).toString()];
+      if (!sparkEntry) {
+        return '';
+      } else {
+        this.hasSparks = true;
+      }
+
+      const sparkTypes = sparkEntry
+        .filter(({ index, type }) => !(index === this.attackIndex && type === this.attackType))
+        .map(({ type }) => type);
+
+      const hasNativeAttacks = sparkTypes.some(t => t === 'native');
+      const hasExtraAttacks = sparkTypes.some(t => t === 'extra');
+      // console.debug(this.attackIndex, this.attackType, item.frameNum, this.delay, sparkEntry, sparkTypes, hasNativeAttacks, hasExtraAttacks);
+      if (hasNativeAttacks && hasExtraAttacks) {
+        return 'both';
+      } else if (hasNativeAttacks) {
+        return 'native';
+      } else {
+        return 'extra';
+      }
     },
   },
 };

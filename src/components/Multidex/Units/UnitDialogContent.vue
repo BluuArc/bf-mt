@@ -150,13 +150,13 @@
         </v-layout>
         <v-layout row wrap>
           <v-flex xs12>
-            <burst-card :burst="unit.bb" burst-type="bb" :extra-attacks="extraAttacks.bb" style="border-color: var(--burst-card-color--bb)"/>
+            <burst-card :unit="unit" :burst="unit.bb" burst-type="bb" :extra-attacks="extraAttacks.bb" style="border-color: var(--burst-card-color--bb)"/>
           </v-flex>
         </v-layout>
         <template v-for="burstType in ['sbb', 'ubb']">
           <v-layout v-if="unit[burstType]" row wrap :key="burstType">
             <v-flex xs12>
-              <burst-card :burst="unit[burstType]" :burst-type="burstType" :extra-attacks="extraAttacks[burstType]" :style="`border-color: var(--burst-card-color--${burstType})`"/>
+              <burst-card :unit="unit" :burst="unit[burstType]" :burst-type="burstType" :extra-attacks="extraAttacks[burstType]" :style="`border-color: var(--burst-card-color--${burstType})`"/>
             </v-flex>
           </v-layout>
         </template>
