@@ -110,12 +110,6 @@ export default {
   computed: {
     ...mapGetters('bursts', ['getMultidexPathTo']),
     ...mapState('units', ['activeServer']),
-    isTeleporter () {
-      if (!this.unit || !this.unit.movement || !this.unit.movement.skill) {
-        return false;
-      }
-      return +this.unit.movement.skill['move type'] === 2;
-    },
     name () {
       return this.burst ? this.burst.name : 'None';
     },
@@ -291,7 +285,7 @@ export default {
     },
     async calculateSparkedFrames () {
       this.sparkedFrames = null;
-      const result = await SWorker.run((native, extra, isTeleporter) => {
+      const result = await SWorker.run((native, extra) => {
         const allFrames = {};
         const addFrame = (time, index, type) => {
           const timeKey = time.toString();
@@ -301,7 +295,7 @@ export default {
           allFrames[timeKey].push({ index, type });
         };
         native.forEach((entry, index) => {
-          const delay = (!isTeleporter ? +(entry.delay.split('/')[1]) : 0);
+          const delay = +(entry.delay.split('/')[1]);
           const frames = entry.frames['frame times'];
           // console.debug('native', index, delay);
           frames.forEach(time => {
@@ -309,7 +303,7 @@ export default {
           });
         });
         extra.forEach((entry, index) => {
-          const delay = (!isTeleporter ? +(entry.delay.split('/')[1]) : 0);
+          const delay = +(entry.delay.split('/')[1]);
           const frames = entry.frames['frame times'];
           // console.debug('extra', index, delay);
           frames.forEach(time => {
@@ -324,11 +318,11 @@ export default {
           }
         }
         return sparkedFrames;
-      }, [this.hitCountData, this.extraAttackHitCountData, this.isTeleporter]);
+      }, [this.hitCountData, this.extraAttackHitCountData]);
       this.sparkedFrames = result;
     },
     hasSelfSpark (frames, inputDelay) {
-      const delay = (!this.isTeleporter ? +(inputDelay.split('/')[1]) : 0);
+      const delay = +(inputDelay.split('/')[1]);
       return this.sparkedFrames && frames['frame times'].some((time) => !!this.sparkedFrames[(+time + delay).toString()]);
     },
     getSelfSparkCount (frames, inputDelay) {
@@ -336,7 +330,7 @@ export default {
         return 0;
       }
 
-      const delay = (!this.isTeleporter ? +(inputDelay.split('/')[1]) : 0);
+      const delay = +(inputDelay.split('/')[1]);
       return frames['frame times']
         .filter(time => (this.sparkedFrames[(+time + delay)] || []).length > 0)
         .length;
