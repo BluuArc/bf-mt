@@ -263,9 +263,15 @@ export default {
         this.updateModulesWithUpdatesList(freshUpdateTimes);
       },
     },
-    currentPageName () {
+    currentPageName (name) {
       if (!this.dataIsLoading) {
         this.updateUpdateTimes();
+      }
+
+      if (name === 'Home') {
+        setTimeout(() => {
+          this.trySetCommitsAsRead();
+        }, 1000);
       }
     },
     currentPage: debounce(function () {

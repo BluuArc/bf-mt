@@ -161,6 +161,9 @@ export default {
       };
     },
     hitCountData () {
+      if (!this.burst) {
+        return [];
+      }
       const endLevel = this.burst.levels[this.numLevels - 1];
       return this.burst['damage frames']
         .map((f, i) => {
@@ -175,6 +178,9 @@ export default {
         }).filter(f => this.attackingProcs.includes(f.id));
     },
     healFrameData () {
+      if (!this.burst) {
+        return [];
+      }
       const endLevel = this.burst.levels[this.numLevels - 1];
       return this.burst['damage frames']
         .map((f, i) => {
@@ -220,6 +226,9 @@ export default {
       return frames;
     },
     extraAttackHitCountData () {
+      if (!this.burst) {
+        return [];
+      }
       const attacks = this.extraAttacks.slice();
       if (this.activeServer === 'gl' && this.burstType !== 'ubb') {
         attacks.push({

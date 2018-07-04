@@ -108,14 +108,19 @@ const unitsStore = {
           const fitsRarity = rarity.includes(entry.rarity);
 
           // need to flip evo/enhancing as they're marked wrong in the data at time of writing
-          const kindEntry = (entry.kind === 'evo' ? 'enhancing' : entry.kind === 'enhancing' ? 'evolution' : entry.kind);
+          // default to enhancing so that Omni Frog and Omni Emperor aren't hidden by default
+          const kindEntry = (entry.kind === 'evo' ? 'enhancing' : entry.kind === 'enhancing' ? 'evolution' : entry.kind) || 'enhancing';
           const fitsKind = kind.includes(kindEntry);
 
           // const isInOtherServer = sortedIndexOf(otherKeys, entry.id) > -1;
           const isInOtherServer = otherKeys.includes(entry.id.toString());
           const fitsExclusive = (exclusives.length !== 1 ? exclusives.length === 2 : ((exclusives[0] === 'exclusive' && !isInOtherServer) || (exclusives[0] === 'non-exclusive' && isInOtherServer)));
 
-          return fitsName && fitsElement && fitsKind && fitsGender && fitsRarity && fitsExclusive;
+          const fitsFilters = fitsName && fitsElement && fitsKind && fitsGender && fitsRarity && fitsExclusive;
+          if (!fitsFilters) {
+            console.debug(key, entry.name, {fitsName, fitsElement, fitsKind, fitsGender, fitsRarity, fitsExclusive});
+          }
+          return fitsFilters;
         });
       }, [keys, filters, otherKeys, state.pageDb]);
       return result;
