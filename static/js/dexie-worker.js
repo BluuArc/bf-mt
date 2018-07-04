@@ -172,6 +172,18 @@ const dbWrapper = {
       // no need to create mini version
       return currentDb;
     }),
+  getMiniDbDictionary: (server, searchQuery = {}) => defaultGet('dictionary', { server })
+    .then(results => {
+      if (results.length === 0 || !results[0].data || Object.keys(results[0].data).length === 0) {
+        return {};
+      }
+
+      const currentDb = results[0].data;
+      // const resultDb = {};
+      // TODO: search based on search query
+      // no need to create mini version
+      return currentDb;
+    }),
 };
 
 registerPromiseWorker(async ({ command, args = [] }) => {
