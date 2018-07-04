@@ -2,7 +2,11 @@
   <v-card raised class="github-commit-card">
     <v-card-title primary-title>
       <v-flex>
-        <h3 class="headline">GitHub Commits</h3>
+        <v-badge v-if="numNewCommits > 0">
+          <span slot="badge">{{ numNewCommits }}</span>
+          <h3 class="headline">GitHub Commits</h3>
+        </v-badge>
+        <h3 v-else class="headline">GitHub Commits</h3>
       </v-flex>
       <v-flex :class="{ 'text-xs-right': $vuetify.breakpoint.smAndUp }">
         <span :title="getFormattedDate(branches.master.updateTime).full">Updated {{ getFormattedDate(branches.master.updateTime).diff }}</span>
@@ -53,7 +57,7 @@ import relativeTime from 'dayjs/plugin/relativeTime';
 dayjs.extend(relativeTime);
 export default {
   computed: {
-    ...mapState('settings', ['branches']),
+    ...mapState('settings', ['branches', 'numNewCommits']),
   },
   methods: {
     getFormattedDate (inputDate) {
