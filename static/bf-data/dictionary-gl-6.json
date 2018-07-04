@@ -1,12 +1,4 @@
 {
-  "MST_SKILLS_2830177_NAME": {
-    "en": "DM: Power Geyser MAX",
-    "es": "DM: Power Geyser MAX",
-    "id": "DM: Gletser Kuat MAX",
-    "pt": "DM: Power Geyser MAX",
-    "th": "DM: พาวเวอร์ เกย์เซอร์ แม็กซ์",
-    "vi": "DM: Power Geyser MAX"
-  },
   "MST_SKILLS_2830178_DESCRIPTION": {
     "en": "5 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns",
     "es": "9 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns",
@@ -86342,5 +86334,13 @@
     "pt": "",
     "th": "",
     "vi": ""
+  },
+  "MST_SKILLS_8000551_NAME": {
+    "en": "Lagoon Blossom",
+    "es": "Lagoon Blossom",
+    "id": "Laguna Mekar",
+    "pt": "Lagoon Blossom",
+    "th": "ลากูน บลอสซั่ม",
+    "vi": "Lagoon Blossom"
   }
 }

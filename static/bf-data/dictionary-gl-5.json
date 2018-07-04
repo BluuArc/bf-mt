@@ -1,12 +1,4 @@
 {
-  "MST_SKILLS_21226500_NAME": {
-    "en": "My only option is victory.",
-    "es": "My only option is victory.",
-    "id": "Satu-satunya pilihanku adalah kemenangan.",
-    "pt": "My only option is victory.",
-    "th": "ทางเลือกเดียวของข้าคือชัยชนะ",
-    "vi": "My only option is victory."
-  },
   "MST_SKILLS_2122650_DESCRIPTION": {
     "en": "17 combo massive Thunder attack on single enemy & gradually recovers HP for 3 turns",
     "es": "Combo individual de 17 devastadores ataques atronadores que recupera gradualmente el PS durante 3 turnos",
@@ -86342,5 +86334,13 @@
     "pt": "9 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns",
     "th": "4 คอมโบ โจมตีธาตุ ไฟ, ดิน อย่างรุนแรงมหาศาล ใส่ศัตรูทั้งหมด, 100% ลดค่าความเสียหาย นาน 1 เทิร์น, เพิ่มค่าอย่างสูงให้ HP สูงสุด และ เพิ่มค่าอย่างมหาศาลให้ โจมตี, ป้องกัน, ฟื้นฟู นาน 3 เทิร์น",
     "vi": "7 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns"
+  },
+  "MST_SKILLS_2830177_NAME": {
+    "en": "DM: Power Geyser MAX",
+    "es": "DM: Power Geyser MAX",
+    "id": "DM: Gletser Kuat MAX",
+    "pt": "DM: Power Geyser MAX",
+    "th": "DM: พาวเวอร์ เกย์เซอร์ แม็กซ์",
+    "vi": "DM: Power Geyser MAX"
   }
 }
