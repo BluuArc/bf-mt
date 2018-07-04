@@ -1,12 +1,4 @@
 {
-  "MST_SKILLS_212264_NAME": {
-    "en": "But it's time to end it now.",
-    "es": "Es hora de ponerle fin a esto.",
-    "id": "Tapi inilah waktunya untuk mengakhirinya sekarang.",
-    "pt": "Mas agora é hora de encerrá-lo.",
-    "th": "แต่ได้เวลาจบกันแล้ว",
-    "vi": "But it's time to end it now."
-  },
   "MST_SKILLS_21226500_NAME": {
     "en": "My only option is victory.",
     "es": "My only option is victory.",
@@ -86334,5 +86326,21 @@
     "pt": "Combo poderoso de 35 golpes de Terra em todos os inimigos, remove e nega todos os efeitos negativos e grande recuperação de BB por 3 rodadas",
     "th": "35 คอมโบ โจมตีด้วยธาตุดินใส่ศัตรูทั้งหมด, ล้างทุกสถานะผิดปกติและกันไว้, ฟื้นบีบีเกจอย่างมากมายมหาศาล 3 เทิร์น",
     "vi": "35 combo massive Earth attack on all foes, all status ailments removed and negated & massively recovers BB gauge over 3 turns"
+  },
+  "MST_SKILLS_2830147_NAME": {
+    "en": "Amaranthine Fusillade",
+    "es": "Descarga imperecedera",
+    "id": "Amaranthine Fusillade",
+    "pt": "Fuzilaria Amarantina",
+    "th": "อะมาแรนไทน์ ฟัสซิลเลด",
+    "vi": "Amaranthine Fusillade"
+  },
+  "MST_SKILLS_2830177_DESCRIPTION": {
+    "en": "4 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns",
+    "es": "8 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns",
+    "id": "4 kombo serangan masif Api, Bumi ke semua musuh, pengurangan 100% kerusakan 1 giliran, tambahan besar HP maks, tambahan jumbo Serang, Tahan, Pulih 3 giliran",
+    "pt": "9 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns",
+    "th": "4 คอมโบ โจมตีธาตุ ไฟ, ดิน อย่างรุนแรงมหาศาล ใส่ศัตรูทั้งหมด, 100% ลดค่าความเสียหาย นาน 1 เทิร์น, เพิ่มค่าอย่างสูงให้ HP สูงสุด และ เพิ่มค่าอย่างมหาศาลให้ โจมตี, ป้องกัน, ฟื้นฟู นาน 3 เทิร์น",
+    "vi": "7 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns"
   }
 }
