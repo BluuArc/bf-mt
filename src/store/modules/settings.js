@@ -1,5 +1,6 @@
 import dbWorker from '../instances/dexie-client';
 import downloadWorker from '../instances/download-worker';
+import dayjs from 'dayjs';
 const settingsDb = dbWorker.setTable('settings');
 
 const fiveMinutes = 1000 * 60 * 5;
@@ -9,8 +10,10 @@ function timeDifferenceIsLessThanFiveMinutes (dateToCompare = new Date()) {
 
 function calculateNumberOfNewCommits (branches, lastSeenTime = new Date()) {
   return Object.values(branches)
-    .map(branch => branch.commits.filter(commit => new Date(commit.author.date) > new Date(lastSeenTime)).length)
-    .reduce((acc, val) => acc + val, 0);
+    .map(branch => {
+      const dates = branch.commits.map(entry => new Date(entry.commit.author.date));
+      return dates.filter(date => date > new Date(lastSeenTime)).length;
+    }).reduce((acc, val) => acc + val, 0);
 }
 
 // user entry for dexie db
@@ -61,6 +64,7 @@ const settingsStore = {
     },
     setLastSeenTime (state, newTime = new Date()) {
       state.lastSeenTime = newTime;
+      state.numNewCommits = calculateNumberOfNewCommits(state.branches, new Date(state.lastSeenTime));
     },
   },
   getters: {
@@ -77,6 +81,7 @@ const settingsStore = {
       for (const branch in state.branches) {
         await dispatch('setCommitsForBranch', { branch, newCommits: (commits[branch] || {}).commits, updateTime: (commits[branch] || {}).updateTime });
       }
+      await dispatch('setLastSeenTime', currentSettings.lastSeenTime);
     },
     async setLastSeenTime ({ commit, dispatch }, newTime = new Date('May 21, 2018')) {
       const data = await dispatch('getCurrentSettings');
@@ -157,7 +162,7 @@ const settingsStore = {
 
       console.debug('getting commits for branch', branch);
       if (state.branches[branch].commits.length > 0 && timeDifferenceIsLessThanFiveMinutes(state.branches[branch].updateTime)) {
-        console.warn('Please wait 5 minutes before updating.');
+        console.warn(`Please wait ${(60 * 5) - dayjs().diff(dayjs(state.branches[branch].updateTime), 'seconds')} seconds before updating.`);
         return;
       }
 

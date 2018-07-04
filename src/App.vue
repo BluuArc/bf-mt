@@ -228,16 +228,14 @@ export default {
     tryUpdateCommits: debounce(async function () {
       try {
         await this.updateCommitsForAllBranches();
-        if (this.currentPageName === 'Home') {
-          this.trySetCommitsAsRead();
-        }
+        this.trySetCommitsAsRead();
       } catch (err) {
         console.error(err);
       }
     }, 5000),
     async trySetCommitsAsRead () {
       if (this.currentPageName === 'Home') {
-        await this.setLastSeenTime();
+        await this.setLastSeenTime(new Date());
       }
     },
   },
