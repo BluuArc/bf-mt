@@ -48,10 +48,13 @@ const settingsStore = {
       state.branches[branch].commits = commits;
       state.branches[branch].updateTime = updateTime;
 
-      state.totalCommits = Object.values(state.branches).map(branch => branch.commits.length).reduce((acc, val) => acc + val, 0)
+      state.totalCommits = Object.values(state.branches).map(branch => branch.commits.length).reduce((acc, val) => acc + val, 0);
     },
     setLastSeenCount (state, newCount = 0) {
       state.lastSeenCount = newCount;
+    },
+    updateTotalCommits (state) {
+      state.totalCommits = Object.values(state.branches).map(branch => branch.commits.length).reduce((acc, val) => acc + val, 0);
     },
   },
   getters: {
@@ -143,6 +146,7 @@ const settingsStore = {
         },
       });
       commit('setCommits', { branch, commits: newCommits, updateTime });
+      commit('updateTotalCommits');
     },
     async updateCommitsForBranch ({ dispatch, state }, branch) {
       if (!state.branches[branch]) {

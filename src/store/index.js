@@ -85,6 +85,7 @@ const store = new Vuex.Store({
       eu: [],
       jp: [],
     },
+    loadingMessage: '',
   },
   mutations: {
     setHtmlOverflow (state, overflowState = false) {
@@ -102,6 +103,9 @@ const store = new Vuex.Store({
     setMultidexModulesWithUpdates (state, { newUpdates = [], server = 'gl' }) {
       state.multidexModulesWithUpdates[server] = newUpdates.slice();
     },
+    setLoadingMessage (state, message = '') {
+      state.loadingMessage = message;
+    },
   },
   actions: {
     async init ({ dispatch, state, commit }) {
@@ -110,6 +114,7 @@ const store = new Vuex.Store({
         commit(`${m}/setLoadState`, true);
       }
 
+      commit('setLoadingMessage', 'Initializing data');
       statLogStart('overallInit', false);
       statLogStart('initOnly', false);
       for (const m of modules) {
@@ -123,8 +128,10 @@ const store = new Vuex.Store({
       }
       statLogEnd('initOnly');
 
+      commit('setLoadingMessage', `Setting data to last set server (${(state.settings.activeServer || 'gl').toUpperCase()}`);
       await dispatch('setActiveServer', state.settings.activeServer);
       statLogEnd('overallInit');
+      commit('setLoadingMessage');
       commit('setInitState', false);
     },
     async setActiveServer ({ dispatch, commit }, server = 'gl') {

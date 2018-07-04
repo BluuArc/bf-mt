@@ -854,6 +854,7 @@ export default {
   },
   computed: {
     ...mapState('settings', ['activeServer']),
+    ...mapState(['loadingMessage']),
     ...mapState(['inInitState', 'sortAndFilterSettings']),
     ...mapGetters('items', ['getSphereCategory']),
     ...mapState('missions', ['possibleValues']),
@@ -922,7 +923,7 @@ export default {
       return this.pageModules
         .filter(m => this.moduleStateInfo[m.name].loadingMessage)
         .map(m => `[${m.fullName}] ${this.moduleStateInfo[m.name].loadingMessage}`)
-        .reduce((acc, val) => acc || val, '');
+        .reduce((acc, val) => acc || val, '') || this.loadingMessage;
     },
     totalEntries () {
       return this.pageModules
