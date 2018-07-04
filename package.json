@@ -11,6 +11,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "dayjs": "^1.7.1",
     "dexie": "^2.0.3",
     "lodash": "^4.17.10",
     "numbro": "^2.1.0",

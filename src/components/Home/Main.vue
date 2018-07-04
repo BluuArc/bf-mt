@@ -17,6 +17,9 @@
           </v-card-text>
         </v-card>
       </v-flex>
+      <v-flex xs12 v-if="hasCommits">
+        <github-card/>
+      </v-flex>
       <v-flex xs12>
         <v-card raised>
           <v-card-title>
@@ -55,3 +58,19 @@
     </v-layout>
   </v-container>
 </template>
+
+<script>
+import { mapState } from 'vuex';
+import GitHubCard from '@/components/Home/GitHubCard';
+export default {
+  components: {
+    'github-card': GitHubCard,
+  },
+  computed: {
+    ...mapState('settings', ['branches']),
+    hasCommits () {
+      return Object.values(this.branches).map(branch => branch.commits || []).some(commits => commits.length > 0);
+    },
+  },
+};
+</script>

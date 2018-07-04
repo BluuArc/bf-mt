@@ -191,6 +191,7 @@ export default {
   methods: {
     ...mapActions(['init', 'setActiveServer', 'fetchUpdateTimes']),
     ...mapMutations(['setMultidexModulesWithUpdates']),
+    ...mapActions('settings', ['updateCommitsForAllBranches']),
     htmlOverflowChangeHandler () {
       const page = document.getElementsByTagName('html')[0];
       page.style.overflowY = (this.disableHtmlOverflow) ? 'hidden' : 'auto';
@@ -219,6 +220,13 @@ export default {
         }
       });
     },
+    tryUpdateCommits: debounce(async function () {
+      try {
+        await this.updateCommitsForAllBranches();
+      } catch (err) {
+        console.error(err);
+      }
+    }, 5000),
   },
   watch: {
     activeServer (newValue) {
@@ -235,6 +243,7 @@ export default {
     dataIsLoading (newValue) {
       if (!newValue) {
         this.updateUpdateTimes();
+        this.tryUpdateCommits();
       }
     },
     updateTimes: {
@@ -246,6 +255,7 @@ export default {
     currentPageName () {
       if (!this.dataIsLoading) {
         this.updateUpdateTimes();
+        this.tryUpdateCommits();
       }
     },
   },
