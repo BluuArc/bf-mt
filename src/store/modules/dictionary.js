@@ -92,6 +92,24 @@ const dictionaryStore = {
       }, [keys, filters, otherKeys, state.pageDb]);
       return result;
     },
+    async getSortedKeys ({ state }, { type, isAscending, keys }) {
+      const result = await SWorker.run((keys, type, isAscending, pageDb) => {
+        const sortTypes = {
+          'Dictionary ID': (idA, idB, isAscending) => {
+            const result = (idA > idB) ? 1 : -1;
+            return isAscending ? result : -result;
+          },
+          Alphabetical: (idA, idB, isAscending) => {
+            const [nameA, nameB] = [pageDb[idA], pageDb[idB]];
+            const result = (nameA > nameB) ? 1 : -1;
+            return isAscending ? result : -result;
+          },
+        };
+
+        return keys.slice().sort((a, b) => sortTypes[type](a, b, isAscending));
+      }, [keys, type, isAscending, state.pageDb]);
+      return result;
+    },
   },
 };
 

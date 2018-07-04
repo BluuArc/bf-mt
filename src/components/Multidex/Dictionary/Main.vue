@@ -7,6 +7,7 @@
     :view-id="viewId"
     :input-server="server"
     :route-key="routeKey"
+    :use-async-sort="true"
     :get-multidex-path-to="getMultidexPathTo">
     <template slot="results-area" slot-scope="{ results }">
       <v-layout row wrap>
@@ -18,10 +19,10 @@
             <v-card class="dictionary-card" @click.native="logEntry(key)" style="height: 100%">
               <v-container fluid>
                 <v-layout row wrap>
-                  <v-flex xs12>
+                  <v-flex xs12 style="word-wrap: break-word;">
                     <b title="key">{{ key }}</b>
                   </v-flex>
-                  <v-flex xs12>
+                  <v-flex xs12 style="word-wrap: break-word;">
                     <span title="value">{{ pageDb[key] || '(Empty String)' }}</span>
                   </v-flex>
                 </v-layout>

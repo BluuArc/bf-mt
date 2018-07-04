@@ -395,6 +395,7 @@
                     <span class="center-align-container">
                       <span>Showing {{ allSortedEntries.length }}</span>
                       <span style="white-space: nowrap;">{{ mainModule.fullName }}</span>
+                      <span v-if="mainModule.fullName === 'Dictionary'">Entries</span>
                     </span>
                   </v-flex>
                   <v-flex xs2 sm1 v-if="hasUpdates" class="center-align-parent text-xs-center">
@@ -583,6 +584,7 @@
                           <v-radio
                             v-for="(type, i) in Object.keys(sortTypes).sort()"
                             :key="i"
+                            :disabled="loadingSorts"
                             :value="type"
                             :label="type"/>
                         </v-radio-group>
@@ -590,8 +592,8 @@
                       <v-flex xs12 sm6 md12>
                         <h3 class="subheading">Sort Order</h3>
                         <v-radio-group v-model="sortOptions.isAscending" :row="$vuetify.breakpoint.mdAndUp">
-                          <v-radio :value="true" label="Ascending"/>
-                          <v-radio :value="false" label="Descending"/>
+                          <v-radio :disabled="loadingSorts" :value="true" label="Ascending"/>
+                          <v-radio :disabled="loadingSorts" :value="false" label="Descending"/>
                         </v-radio-group>
                       </v-flex>
                     </v-layout>
@@ -657,8 +659,12 @@
           <v-progress-circular indeterminate/>
           <h4 class="subheading">Searching for entries with specified filters.</h4>
         </v-flex>
+        <v-flex xs12 class="text-xs-center pt-5" v-else-if="loadingSorts">
+          <v-progress-circular indeterminate/>
+          <h4 class="subheading">Sorting entries.</h4>
+        </v-flex>
       </template>
-      <v-flex xs12 v-if="!loadingFilters">
+      <v-flex xs12 v-if="!loadingFilters && !loadingSorts">
         <result-viewer
           class="grid-list-lg"
           :max-results="moduleStateInfo[mainModule.name].numEntries[activeServer]"
@@ -844,6 +850,10 @@ export default {
       type: Function,
       required: true,
     },
+    useAsyncSort: {
+      type: Boolean,
+      default: false,
+    },
   },
   components: {
     'result-viewer': ResultViewer,
@@ -936,18 +946,6 @@ export default {
           return numEntries === 0;
         }).filter(hasNoEntries => !!hasNoEntries).length === 0;
     },
-    allSortedEntries () {
-      if (this.isDataLoading || this.loadingFilters) {
-        return [];
-      }
-      try {
-        const result = this.filteredKeys.slice().sort((a, b) => this.sortTypes[this.sortOptions.type](a, b, this.sortOptions.isAscending));
-        return result;
-      } catch (err) {
-        console.error('error sorting', err);
-        return this.filteredKeys;
-      }
-    },
     numPages () {
       return Math.ceil(this.allSortedEntries.length / this.amountPerPage);
     },
@@ -995,7 +993,9 @@ export default {
       showDialog: false,
       showUpdateTooltip: true,
       filteredKeys: [],
+      allSortedEntries: [],
       loadingFilters: false,
+      loadingSorts: false,
       finishedInit: false,
       showFilterSheet: false,
       showUpdateDialog: false,
@@ -1074,6 +1074,7 @@ export default {
           }
           this.sortOptions.type = defaultType;
         }
+        this.applySorts();
       },
     },
     showDialog (newValue) {
@@ -1125,6 +1126,7 @@ export default {
         const actionMapping = {};
         actionMapping[`${m}DbSync`] = 'ensurePageDbSyncWithServer';
         actionMapping[`${m}GetFilteredKeys`] = 'getFilteredKeys';
+        actionMapping[`${m}GetSortedKeys`] = 'getSortedKeys';
         actionMapping[`${m}DataUpdate`] = 'updateData';
         result = {
           ...result,
@@ -1177,8 +1179,31 @@ export default {
       this.loadingFilters = true;
       this.filteredKeys = await this[`${this.mainModule.name}GetFilteredKeys`](this.filterOptions);
       delete this.filterOptions.forceUpdate;
+      await this.applySorts();
       this.storeSortAndFilterSettings();
       this.loadingFilters = false;
+    }, 250),
+    applySorts: debounce(async function () {
+      if (this.isDataLoading || this.loadingFilters) {
+        this.allSortedEntries = [];
+        return;
+      }
+      try {
+        this.loadingSorts = true;
+        let result;
+        if (this.useAsyncSort) {
+          result = await this[`${this.mainModule.name}GetSortedKeys`]({ ...(this.sortOptions), keys: this.filteredKeys });
+        } else {
+          result = this.filteredKeys.slice().sort((a, b) => this.sortTypes[this.sortOptions.type](a, b, this.sortOptions.isAscending));
+        }
+        this.allSortedEntries = result;
+        return result;
+      } catch (err) {
+        console.error('error sorting', err);
+        this.allSortedEntries = this.filteredKeys.slice();
+      } finally {
+        this.loadingSorts = false;
+      }
     }, 250),
     storeSortAndFilterSettings () {
       const filterCopy = {};
