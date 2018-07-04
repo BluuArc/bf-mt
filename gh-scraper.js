@@ -7,7 +7,7 @@ const instances = {
 
 async function getBrowserInstance() {
   if (!instances.browser) {
-    instances.browser = await puppeteer.launch();
+    instances.browser = await puppeteer.launch(/* { headless: false } */);
   }
 
   return instances.browser;
@@ -45,9 +45,25 @@ class GitHubScraper {
           }
         };
         if (document.readyState === 'complete') {
-          onReady();
+          waitForDatesToLoad(onReady);
+          // onReady();
         } else {
-          document.onreadystatechange = onReady;
+          document.onreadystatechange = () => waitForDatesToLoad(onReady);
+        }
+
+        function waitForDatesToLoad (callback) {
+          const hasUnresolvedDates = Array.from(document.querySelectorAll('tr.js-navigation-item'))
+            .map(elem => ({
+              name: (elem.querySelector('.content a') || {}).title,
+              date: elem.querySelector('.age time-ago') ? elem.querySelector('.age time-ago').attributes.datetime.value : undefined,
+            })).filter(elem => !!elem.name)
+            .some(elem => !elem.date);
+          if (hasUnresolvedDates) {
+            console.log('Waiting for dates to load');
+            requestAnimationFrame(() => waitForDatesToLoad(callback));
+          } else {
+            callback();
+          }
         }
       });
     });
