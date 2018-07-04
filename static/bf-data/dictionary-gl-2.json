@@ -1,12 +1,4 @@
 {
-  "MST_LEADERSKILLS_810287_DESCRIPTION": {
-    "en": "50% boost to Atk, max HP, damage taken boosts BB gauge & damage taken may restore HP",
-    "es": "50% boost to Atk, max HP, damage taken boosts BB gauge & damage taken may restore HP",
-    "id": "50% ekstra Serang, HP maks, kerusakan diderita menambah meteran BB, kerusakan diderita dapat pulihkan HP",
-    "pt": "50% boost to Atk, max HP, damage taken boosts BB gauge & damage taken may restore HP",
-    "th": "50% เพิ่มค่าให้ โจมตี, HP สูงสุด, ความเสียหายที่ได้รับ เพิ่มค่า เกจ BB กับ ความเสียหายที่ได้รับ อาจฟื้นคืน HP",
-    "vi": "50% boost to Atk, max HP, damage taken boosts BB gauge & damage taken may restore HP"
-  },
   "MST_LEADERSKILLS_810287_NAME": {
     "en": "Unflinching Under Fire",
     "es": "Unflinching Under Fire",
@@ -86341,6 +86333,14 @@
     "id": "Imbued Tablet Elgif",
     "pt": "Imbued Tablet Elgif",
     "th": "อิมบิวเอ็ด แท็บเล็ต เอลกิฟ",
+    "vi": "Imbued Tablet Elgif"
+  },
+  "MST_MONSTERS_57755_NAME": {
+    "en": "Imbued Tablet Elgif",
+    "es": "Imbued Tablet Elgif",
+    "id": "Tablet Berisi Elgif",
+    "pt": "Imbued Tablet Elgif",
+    "th": "อิมบิวด์ แทบเล็ต เอลกิฟ",
     "vi": "Imbued Tablet Elgif"
   }
 }

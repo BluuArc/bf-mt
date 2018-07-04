@@ -819,4 +819,4 @@ async function initializeGHData() {
   // logger.debug('ghData', ghData);
 }
 
-getData();
+getData(['gl']);
