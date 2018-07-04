@@ -1,20 +1,4 @@
 {
-  "MST_SKILLS_2830147_NAME": {
-    "en": "Amaranthine Fusillade",
-    "es": "Descarga imperecedera",
-    "id": "Amaranthine Fusillade",
-    "pt": "Fuzilaria Amarantina",
-    "th": "อะมาแรนไทน์ ฟัสซิลเลด",
-    "vi": "Amaranthine Fusillade"
-  },
-  "MST_SKILLS_2830177_DESCRIPTION": {
-    "en": "4 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns",
-    "es": "8 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns",
-    "id": "4 kombo serangan masif Api, Bumi ke semua musuh, pengurangan 100% kerusakan 1 giliran, tambahan besar HP maks, tambahan jumbo Serang, Tahan, Pulih 3 giliran",
-    "pt": "9 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns",
-    "th": "4 คอมโบ โจมตีธาตุ ไฟ, ดิน อย่างรุนแรงมหาศาล ใส่ศัตรูทั้งหมด, 100% ลดค่าความเสียหาย นาน 1 เทิร์น, เพิ่มค่าอย่างสูงให้ HP สูงสุด และ เพิ่มค่าอย่างมหาศาลให้ โจมตี, ป้องกัน, ฟื้นฟู นาน 3 เทิร์น",
-    "vi": "7 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns"
-  },
   "MST_SKILLS_2830177_NAME": {
     "en": "DM: Power Geyser MAX",
     "es": "DM: Power Geyser MAX",
@@ -86334,5 +86318,29 @@
     "pt": "Thunder Demon's Zenith",
     "th": "ธันเดอร์ เดม่อนส์ เซนิธ",
     "vi": "Thunder Demon's Zenith"
+  },
+  "MST_SKILLS_8000550_DESCRIPTION": {
+    "en": "",
+    "es": "",
+    "id": "",
+    "pt": "",
+    "th": "",
+    "vi": ""
+  },
+  "MST_SKILLS_8000550_NAME": {
+    "en": "Swirl Cour",
+    "es": "Swirl Cour",
+    "id": "Cour Berputar",
+    "pt": "Swirl Cour",
+    "th": "สเวิร์ล คู",
+    "vi": "Swirl Cour"
+  },
+  "MST_SKILLS_8000551_DESCRIPTION": {
+    "en": "",
+    "es": "",
+    "id": "",
+    "pt": "",
+    "th": "",
+    "vi": ""
   }
 }
