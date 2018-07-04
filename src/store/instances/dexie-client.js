@@ -64,4 +64,10 @@ export const missionWorker = {
   getMiniDb: (server, searchQuery = {}) => wrapper.worker.postMessage({ command: 'getMiniDbMissions', args: [server, searchQuery] }),
 };
 
+export const dictionaryWorker = {
+  ...makeWorker('dictionary'),
+  getById: (server, id) => wrapper.getById('dictionary', { server }, 'data', id),
+  getMiniDb: (server, searchQuery = {}) => wrapper.worker.postMessage({ command: 'getMiniDbDictionary', args: [server, searchQuery] }),
+};
+
 export default wrapper;

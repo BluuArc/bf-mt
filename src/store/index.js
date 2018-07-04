@@ -7,6 +7,7 @@ import BurstModule from './modules/bursts';
 import ExtraSkillModule from './modules/extra-skills';
 import LeaderSkillModule from './modules/leader-skills';
 import MissionModule from './modules/missions';
+import DictionaryModule from './modules/dictionary';
 import downloadWorker from './instances/download-worker';
 
 const statLogStart = (label, isCollapsed = true) => {
@@ -62,6 +63,12 @@ export const moduleInfo = [
     type: 'multidex',
     link: '/multidex/missions',
   },
+  {
+    name: 'dictionary',
+    fullName: 'Dictionary',
+    type: 'multidex',
+    link: '/multidex/dictionary',
+  },
 ];
 export const modules = moduleInfo.map(m => m.name);
 const store = new Vuex.Store({
@@ -73,6 +80,7 @@ const store = new Vuex.Store({
     extraSkills: ExtraSkillModule,
     leaderSkills: LeaderSkillModule,
     missions: MissionModule,
+    dictionary: DictionaryModule,
   },
   state: {
     disableHtmlOverflow: false,

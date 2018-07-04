@@ -12,6 +12,7 @@ import BurstsPage from '@/components/Multidex/Bursts/Main';
 import ExtraSkillsPage from '@/components/Multidex/ExtraSkills/Main';
 import LeaderSkillsPage from '@/components/Multidex/LeaderSkills/Main';
 import MissionsPage from '@/components/Multidex/Missions/Main';
+import DictionaryPage from '@/components/Multidex/Dictionary/Main';
 
 Vue.use(Router);
 
@@ -83,6 +84,12 @@ export default new Router({
       path: '/multidex/missions',
       name: 'Missions',
       component: MissionsPage,
+      props: defaultMultidexPropHandler,
+    },
+    {
+      path: '/multidex/dictionary',
+      name: 'Dictionary',
+      component: DictionaryPage,
       props: defaultMultidexPropHandler,
     },
   ],

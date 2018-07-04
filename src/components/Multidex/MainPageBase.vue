@@ -421,12 +421,12 @@
                     </v-dialog>
                   </v-flex>
                 </v-layout>
-                <v-layout row>
+                <v-layout row v-if="filterTypes.length > 0">
                   <v-flex xs12 class="text-xs-left">
                     <span>Active Filters:</span>
                   </v-flex>
                 </v-layout>
-                <v-layout row>
+                <v-layout row v-if="filterTypes.length > 0">
                   <v-flex xs10 md11 class="vertical-align-parent">
                     <template v-if="!hasNonNameFilters">
                       <h3 class="subheading vertical-align-container">No filters applied.</h3>
@@ -746,7 +746,6 @@
                 <v-card flat>
                   <v-card-text>
                     <p>Put your dialog content here.</p>
-
                     {{ pageDb[viewId] }}
                   </v-card-text>
                 </v-card>
