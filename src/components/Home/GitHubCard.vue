@@ -33,7 +33,7 @@
                   <p class="body-1 mb-0">
                     <b>{{ item.author.login }}</b>
                     <span>committed</span>
-                    <span style="white-space: nowrap;" :title="getFormattedDate(item.commit.author.data).full">{{ getFormattedDate(item.commit.author.date).diff }}</span>
+                    <span style="white-space: nowrap;" :title="getFormattedDate(item.commit.author.date).full">{{ getFormattedDate(item.commit.author.date).diff }}</span>
                     <a style="white-space: nowrap; color: inherit;" target="_blank" rel="noopener" :href="item.html_url">({{ item.sha.slice(0, 8) }})</a>
                   </p>
                 </v-flex>

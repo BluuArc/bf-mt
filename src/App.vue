@@ -115,7 +115,7 @@ export default {
       });
       return state;
     },
-    ...mapState('settings', ['lightMode', 'activeServer', 'lastSeenCount', 'branches', 'totalCommits']),
+    ...mapState('settings', ['lightMode', 'activeServer', 'numNewCommits', 'branches']),
     ...mapState(['disableHtmlOverflow', 'modules', 'updateTimes', 'multidexModulesWithUpdates']),
     multidexModules: () => multidexModules.slice(),
     ...(() => {
@@ -142,9 +142,6 @@ export default {
     },
     numUpdates () {
       return this.numSettingsUpdates + this.numNewCommits;
-    },
-    numNewCommits () {
-      return Math.abs(this.totalCommits - this.lastSeenCount);
     },
   },
   data () {
@@ -199,7 +196,7 @@ export default {
   methods: {
     ...mapActions(['init', 'setActiveServer', 'fetchUpdateTimes']),
     ...mapMutations(['setMultidexModulesWithUpdates']),
-    ...mapActions('settings', ['updateCommitsForAllBranches', 'updateLastSeenCount']),
+    ...mapActions('settings', ['updateCommitsForAllBranches', 'setLastSeenTime']),
     htmlOverflowChangeHandler () {
       const page = document.getElementsByTagName('html')[0];
       page.style.overflowY = (this.disableHtmlOverflow) ? 'hidden' : 'auto';
@@ -240,7 +237,7 @@ export default {
     }, 5000),
     async trySetCommitsAsRead () {
       if (this.currentPageName === 'Home') {
-        await this.updateLastSeenCount();
+        await this.setLastSeenTime();
       }
     },
   },

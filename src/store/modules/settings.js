@@ -7,6 +7,12 @@ function timeDifferenceIsLessThanFiveMinutes (dateToCompare = new Date()) {
   return (new Date() - new Date(dateToCompare)) < fiveMinutes;
 }
 
+function calculateNumberOfNewCommits (branches, lastSeenTime = new Date()) {
+  return Object.values(branches)
+    .map(branch => branch.commits.filter(commit => new Date(commit.author.date) > new Date(lastSeenTime)).length)
+    .reduce((acc, val) => acc + val, 0);
+}
+
 // user entry for dexie db
 const user = 'me';
 
@@ -16,8 +22,8 @@ const settingsStore = {
     lightMode: false,
     activeServer: 'gl',
     commitUrl: 'https://api.github.com/repos/BluuArc/bf-mt/commits',
-    lastSeenCount: 0,
-    totalCommits: 0,
+    numNewCommits: 0,
+    lastSeenTime: new Date('May 21, 2018'),
     branches: {
       master: {
         startDate: new Date('May 21, 2018'),
@@ -48,13 +54,13 @@ const settingsStore = {
       state.branches[branch].commits = commits;
       state.branches[branch].updateTime = updateTime;
 
-      state.totalCommits = Object.values(state.branches).map(branch => branch.commits.length).reduce((acc, val) => acc + val, 0);
+      state.numNewCommits = calculateNumberOfNewCommits(state.branches, new Date(state.lastSeenTime));
     },
-    setLastSeenCount (state, newCount = 0) {
-      state.lastSeenCount = newCount;
+    updateNewCommitCount (state) {
+      state.numNewCommits = calculateNumberOfNewCommits(state.branches, new Date(state.lastSeenTime));
     },
-    updateTotalCommits (state) {
-      state.totalCommits = Object.values(state.branches).map(branch => branch.commits.length).reduce((acc, val) => acc + val, 0);
+    setLastSeenTime (state, newTime = new Date()) {
+      state.lastSeenTime = newTime;
     },
   },
   getters: {
@@ -68,25 +74,21 @@ const settingsStore = {
       console.debug(currentSettings);
       await dispatch('setLightMode', currentSettings.lightMode);
       await dispatch('setActiveServer', currentSettings.activeServer);
-      await dispatch('setLastSeenCount', currentSettings.lastSeenCount);
       for (const branch in state.branches) {
         await dispatch('setCommitsForBranch', { branch, newCommits: (commits[branch] || {}).commits, updateTime: (commits[branch] || {}).updateTime });
       }
     },
-    async updateLastSeenCount ({ dispatch, state }) {
-      await dispatch('setLastSeenCount', Object.values(state.branches).map(branch => branch.commits.length).reduce((acc, val) => acc + val, 0));
-    },
-    async setLastSeenCount ({ commit, dispatch }, newCount = 0) {
+    async setLastSeenTime ({ commit, dispatch }, newTime = new Date('May 21, 2018')) {
       const data = await dispatch('getCurrentSettings');
-      console.debug('current settings:', data, 'new commit seen count:', newCount);
+      console.debug('current settings:', data, 'new commit seen time:', newTime);
       await settingsDb.put({
         user,
         data: {
           ...data,
-          lastSeenCount: newCount,
+          lastSeenTime: newTime,
         },
       });
-      commit('setLastSeenCount', newCount);
+      commit('setLastSeenTime', newTime);
     },
     async setLightMode ({ commit, dispatch }, mode) {
       const data = await dispatch('getCurrentSettings');
@@ -146,7 +148,7 @@ const settingsStore = {
         },
       });
       commit('setCommits', { branch, commits: newCommits, updateTime });
-      commit('updateTotalCommits');
+      commit('updateNewCommitCount');
     },
     async updateCommitsForBranch ({ dispatch, state }, branch) {
       if (!state.branches[branch]) {
