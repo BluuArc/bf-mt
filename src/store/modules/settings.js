@@ -16,6 +16,7 @@ const settingsStore = {
     lightMode: false,
     activeServer: 'gl',
     commitUrl: 'https://api.github.com/repos/BluuArc/bf-mt/commits',
+    lastSeenCount: 0,
     branches: {
       master: {
         startDate: new Date('May 21, 2018'),
@@ -46,6 +47,9 @@ const settingsStore = {
       state.branches[branch].commits = commits;
       state.branches[branch].updateTime = updateTime;
     },
+    setLastSeenCount (state, newCount = 0) {
+      state.lastSeenCount = newCount;
+    },
   },
   getters: {
     getBranchNames: state => Object.keys(state.branches),
@@ -58,9 +62,25 @@ const settingsStore = {
       console.debug(currentSettings);
       await dispatch('setLightMode', currentSettings.lightMode);
       await dispatch('setActiveServer', currentSettings.activeServer);
+      await dispatch('setLastSeenCount', currentSettings.lastSeenCount);
       for (const branch in state.branches) {
         await dispatch('setCommitsForBranch', { branch, newCommits: (commits[branch] || {}).commits, updateTime: (commits[branch] || {}).updateTime });
       }
+    },
+    async updateLastSeenCount ({ dispatch, state }) {
+      await dispatch('setLastSeenCount', Object.values(state.branches).map(branch => branch.commits.length).reduce((acc, val) => acc + val, 0));
+    },
+    async setLastSeenCount ({ commit, dispatch }, newCount = 0) {
+      const data = await dispatch('getCurrentSettings');
+      console.debug('current settings:', data, 'new commit seen count:', newCount);
+      await settingsDb.put({
+        user,
+        data: {
+          ...data,
+          lastSeenCount: newCount,
+        },
+      });
+      commit('setLastSeenCount', newCount);
     },
     async setLightMode ({ commit, dispatch }, mode) {
       const data = await dispatch('getCurrentSettings');

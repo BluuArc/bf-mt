@@ -15,6 +15,11 @@
             <h3 class="subheading"><b>{{ name }}</b></h3>
             <p class="body-1" v-text="branch.description"/>
             <v-container fluid class="pa-0">
+              <v-layout row v-if="branch.commits.length === 0">
+                <v-flex class="text-xs-center">
+                  <h3 class="title">No commits found.</h3>
+                </v-flex>
+              </v-layout>
               <v-layout row wrap v-for="item in branch.commits.slice(0, 10)" :key="item.sha">
                 <v-flex xs3 sm1 class="center-align-parent">
                   <div class="center-align-container">

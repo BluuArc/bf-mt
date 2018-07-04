@@ -17,7 +17,7 @@
           </v-card-text>
         </v-card>
       </v-flex>
-      <v-flex xs12 v-if="hasCommits">
+      <v-flex xs12>
         <github-card/>
       </v-flex>
       <v-flex xs12>
@@ -68,9 +68,6 @@ export default {
   },
   computed: {
     ...mapState('settings', ['branches']),
-    hasCommits () {
-      return Object.values(this.branches).map(branch => branch.commits || []).some(commits => commits.length > 0);
-    },
   },
 };
 </script>

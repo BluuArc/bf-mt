@@ -25,8 +25,13 @@
           @click="($vuetify.breakpoint.mdAndDown) ? (showDrawer = false) : (showDrawer = showDrawer)">
           <v-list-tile-action>
             <v-progress-circular v-if="subItem.module && loadingStates[subItem.module]" indeterminate/>
-            <v-badge v-else-if="group.subheader === 'General' && subItem.title === 'Settings' && numUpdates > 0">
-              <span slot="badge">{{ numUpdates }}</span>
+            <v-badge v-else-if="group.subheader === 'General' && subItem.title === 'Home' && numNewCommits > 0">
+              <span slot="badge">{{ numNewCommits > 10 ? '10+' : numNewCommits }}</span>
+              <img v-if="subItem.image" :src="subItem.image" style="width: 30px; vertical-align: middle"/>
+              <v-icon v-else v-html="subItem.icon"/>
+            </v-badge>
+            <v-badge v-else-if="group.subheader === 'General' && subItem.title === 'Settings' && numSettingsUpdates > 0">
+              <span slot="badge">{{ numSettingsUpdates }}</span>
               <img v-if="subItem.image" :src="subItem.image" style="width: 30px; vertical-align: middle"/>
               <v-icon v-else v-html="subItem.icon"/>
             </v-badge>
@@ -54,7 +59,7 @@
     <v-toolbar clipped-right app>
       <v-toolbar-side-icon @click.stop="showDrawer = !showDrawer"/>
       <v-badge left v-if="numUpdates > 0">
-        <span slot="badge">{{ numUpdates }}</span>
+        <span slot="badge">{{ numUpdates > 10 ? '10+' : numUpdates }}</span>
         <v-toolbar-title v-text="currentPageName"/>
       </v-badge>
       <v-toolbar-title v-else v-text="currentPageName"/>
@@ -110,7 +115,7 @@ export default {
       });
       return state;
     },
-    ...mapState('settings', ['lightMode', 'activeServer']),
+    ...mapState('settings', ['lightMode', 'activeServer', 'lastSeenCount', 'branches']),
     ...mapState(['disableHtmlOverflow', 'modules', 'updateTimes', 'multidexModulesWithUpdates']),
     multidexModules: () => multidexModules.slice(),
     ...(() => {
@@ -130,17 +135,21 @@ export default {
       });
       return result;
     })(),
-    numUpdates () {
+    numSettingsUpdates () {
       return this.possibleServers
         .map(s => this.multidexModulesWithUpdates[s].length)
         .reduce((acc, val) => acc + val, 0);
     },
+    numUpdates () {
+      return this.numSettingsUpdates + this.numNewCommits;
+    },
+    numNewCommits () {
+      const currentCommitCount = Object.values(this.branches).map(branch => branch.commits.length).reduce((acc, val) => acc + val, 0);
+      return Math.abs(currentCommitCount - this.lastSeenCount);
+    },
   },
   data () {
     const multidexIconMapping = {
-      // units: {icon: 'people'},
-      // items: {icon: 'group_work'},
-      // bursts: {icon: 'gavel'},
       units: {image: require('@/assets/unit_thum.png')},
       items: {image: require('@/assets/sphere_thum_5_5.png')},
       bursts: {image: require('@/assets/battle_meter_current.png')},
@@ -191,7 +200,7 @@ export default {
   methods: {
     ...mapActions(['init', 'setActiveServer', 'fetchUpdateTimes']),
     ...mapMutations(['setMultidexModulesWithUpdates']),
-    ...mapActions('settings', ['updateCommitsForAllBranches']),
+    ...mapActions('settings', ['updateCommitsForAllBranches', 'updateLastSeenCount']),
     htmlOverflowChangeHandler () {
       const page = document.getElementsByTagName('html')[0];
       page.style.overflowY = (this.disableHtmlOverflow) ? 'hidden' : 'auto';
@@ -223,10 +232,18 @@ export default {
     tryUpdateCommits: debounce(async function () {
       try {
         await this.updateCommitsForAllBranches();
+        if (this.currentPageName === 'Home') {
+          this.trySetCommitsAsRead();
+        }
       } catch (err) {
         console.error(err);
       }
     }, 5000),
+    async trySetCommitsAsRead () {
+      if (this.currentPageName === 'Home') {
+        await this.updateLastSeenCount();
+      }
+    },
   },
   watch: {
     activeServer (newValue) {
@@ -255,9 +272,13 @@ export default {
     currentPageName () {
       if (!this.dataIsLoading) {
         this.updateUpdateTimes();
-        this.tryUpdateCommits();
       }
     },
+    currentPage: debounce(function () {
+      if (!this.dataIsLoading) {
+        this.tryUpdateCommits();
+      }
+    }, 1000),
   },
   async created () {
     await this.init();
