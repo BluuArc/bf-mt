@@ -16,7 +16,10 @@
       <v-container fluid class="pt-0">
         <v-layout row wrap>
           <v-flex xs12 md6 v-for="(branch, name) in branches" :key="name">
-            <h3 class="subheading"><b>{{ name }}</b></h3>
+            <h3 class="subheading">
+              <b><a :href="`https://github.com/BluuArc/bf-mt/commits/${name}`" rel="noopener" target="_blank" style="color: inherit;">{{ name }}</a></b>
+              <v-icon small class="pl-1">fas fa-external-link-alt</v-icon>
+            </h3>
             <p class="body-1" v-text="branch.description"/>
             <v-container fluid class="pa-0">
               <v-layout row v-if="branch.commits.length === 0">
