@@ -115,7 +115,7 @@ export default {
       });
       return state;
     },
-    ...mapState('settings', ['lightMode', 'activeServer', 'lastSeenCount', 'branches']),
+    ...mapState('settings', ['lightMode', 'activeServer', 'lastSeenCount', 'branches', 'totalCommits']),
     ...mapState(['disableHtmlOverflow', 'modules', 'updateTimes', 'multidexModulesWithUpdates']),
     multidexModules: () => multidexModules.slice(),
     ...(() => {
@@ -144,8 +144,7 @@ export default {
       return this.numSettingsUpdates + this.numNewCommits;
     },
     numNewCommits () {
-      const currentCommitCount = Object.values(this.branches).map(branch => branch.commits.length).reduce((acc, val) => acc + val, 0);
-      return Math.abs(currentCommitCount - this.lastSeenCount);
+      return Math.abs(this.totalCommits - this.lastSeenCount);
     },
   },
   data () {

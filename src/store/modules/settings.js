@@ -17,6 +17,7 @@ const settingsStore = {
     activeServer: 'gl',
     commitUrl: 'https://api.github.com/repos/BluuArc/bf-mt/commits',
     lastSeenCount: 0,
+    totalCommits: 0,
     branches: {
       master: {
         startDate: new Date('May 21, 2018'),
@@ -46,6 +47,8 @@ const settingsStore = {
       console.debug('set commits', branch, commits, updateTime);
       state.branches[branch].commits = commits;
       state.branches[branch].updateTime = updateTime;
+
+      state.totalCommits = Object.values(state.branches).map(branch => branch.commits.length).reduce((acc, val) => acc + val, 0)
     },
     setLastSeenCount (state, newCount = 0) {
       state.lastSeenCount = newCount;
