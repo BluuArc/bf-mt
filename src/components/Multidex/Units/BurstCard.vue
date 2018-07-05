@@ -34,6 +34,7 @@
         <v-tab>Description</v-tab>
         <v-tab v-if="burst">Hitcounts</v-tab>
         <v-tab v-if="burst">JSON</v-tab>
+        <v-tab v-if="burst">Buff List (Alpha)</v-tab>
       </v-tabs>
       <v-tabs-items v-model="activeTab" touchless>
         <v-tab-item :key="getLabelIndex('Description')">
@@ -87,6 +88,21 @@
         <v-tab-item v-if="burst" :key="getLabelIndex('JSON')">
           <json-viewer :json="burst" :change-view="activeTab"/>
         </v-tab-item>
+        <v-tab-item v-if="burst" :key="getLabelIndex('Buff List')">
+          <v-container fluid>
+            <v-layout row v-if="numLevels > 1">
+              <v-flex xs4 md2 class="text-xs-center center-align-parent pa-0">
+                <span style="width: 100%;" class="center-align-container">Level: {{ levelIndex + 1 }}</span>
+              </v-flex>
+              <v-flex xs8 md10 class="pa-0">
+                <v-slider v-model="levelIndex" step="1" ticks min="0" :max="numLevels - 1"/>
+              </v-flex>
+            </v-layout>
+            <v-layout row wrap>
+              <buff-list :effects="burst.levels[levelIndex].effects"/>
+            </v-layout>
+          </v-container>
+        </v-tab-item>
       </v-tabs-items>
     </v-card-text>
   </v-card>
@@ -98,6 +114,7 @@ import { knownConstants } from '@/store/modules/db.common';
 import JsonViewer from '@/components/Multidex/JsonViewer';
 import EffectList from '@/components/Multidex/EffectList/MainTable';
 import HitCountTable from '@/components/Multidex/Units/HitCountTable';
+import BuffList from '@/components/Multidex/BuffList/BuffList';
 import SWorker from '@/assets/sww.min.js';
 
 export default {
@@ -106,6 +123,7 @@ export default {
     'json-viewer': JsonViewer,
     'effect-list': EffectList,
     'hit-count-table': HitCountTable,
+    'buff-list': BuffList,
   },
   computed: {
     ...mapGetters('bursts', ['getMultidexPathTo']),
@@ -117,7 +135,7 @@ export default {
       return this.burst ? this.burst.desc : 'None';
     },
     tabLabels () {
-      return this.burst ? ['Description', 'Hitcounts', 'JSON'] : ['Description'];
+      return this.burst ? ['Description', 'Hitcounts', 'JSON', 'Buff List'] : ['Description'];
     },
     burstLabel () {
       const types = {

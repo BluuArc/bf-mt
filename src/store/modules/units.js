@@ -117,9 +117,9 @@ const unitsStore = {
           const fitsExclusive = (exclusives.length !== 1 ? exclusives.length === 2 : ((exclusives[0] === 'exclusive' && !isInOtherServer) || (exclusives[0] === 'non-exclusive' && isInOtherServer)));
 
           const fitsFilters = fitsName && fitsElement && fitsKind && fitsGender && fitsRarity && fitsExclusive;
-          if (!fitsFilters) {
-            console.debug(key, entry.name, {fitsName, fitsElement, fitsKind, fitsGender, fitsRarity, fitsExclusive});
-          }
+          // if (!fitsFilters) {
+          //   console.debug(key, entry.name, {fitsName, fitsElement, fitsKind, fitsGender, fitsRarity, fitsExclusive});
+          // }
           return fitsFilters;
         });
       }, [keys, filters, otherKeys, state.pageDb]);
