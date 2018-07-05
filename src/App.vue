@@ -24,7 +24,7 @@
           :to="subItem.link"
           @click="($vuetify.breakpoint.mdAndDown) ? (showDrawer = false) : (showDrawer = showDrawer)">
           <v-list-tile-action>
-            <v-progress-circular v-if="subItem.module && loadingStates[subItem.module]" indeterminate/>
+            <v-progress-circular v-if="loadingStates[subItem.name]" indeterminate/>
             <v-badge v-else-if="group.subheader === 'General' && subItem.title === 'Home' && numNewCommits > 0">
               <span slot="badge">{{ numNewCommits > 10 ? '10+' : numNewCommits }}</span>
               <img v-if="subItem.image" :src="subItem.image" style="width: 30px; vertical-align: middle"/>
