@@ -7,9 +7,9 @@ logger.level = 'debug';
 const outputFolder = 'static/bf-data';
 
 const config = {
-  getStats: false,
+  getStats: true,
   processData: true,
-  useLocal: true,
+  useLocal: false,
 };
 
 let ghData;
@@ -819,11 +819,11 @@ async function getData(servers = ['gl', 'eu', 'jp']) {
   for (const s of servers) {
     const dictionaryData = await getDictionaryForServer(s);
     const missionData = await getMissionsForServer(s, dictionaryData);
-    // const unitData = await getUnitDataForServer(s, missionData);
-    // await getItemDataForServer(s, unitData, missionData);
-    // await getBurstDataForServer(s, unitData);
-    // await getExtraSkillDataForServer(s, unitData);
-    // await getLeaderSkillDataForServer(s, unitData);
+    const unitData = await getUnitDataForServer(s, missionData);
+    await getItemDataForServer(s, unitData, missionData);
+    await getBurstDataForServer(s, unitData);
+    await getExtraSkillDataForServer(s, unitData);
+    await getLeaderSkillDataForServer(s, unitData);
   }
 
 
