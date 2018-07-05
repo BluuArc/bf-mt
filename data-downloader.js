@@ -7,9 +7,9 @@ logger.level = 'debug';
 const outputFolder = 'static/bf-data';
 
 const config = {
-  getStats: true,
+  getStats: false,
   processData: true,
-  useLocal: false,
+  useLocal: true,
 };
 
 let ghData;
@@ -502,7 +502,24 @@ const handlers = {
       logger.debug('missionData', Object.keys(missionData));
       return missionData;
     },
-    process (server, missionData = {}) {
+    process(server, missionData = {}, dictionaryData = {}) {
+      logger.info(`${server}: translating missing land, area, and dungeon names`);
+      const translationField = {
+        land: 'MST_DUNGEONS_CONTINENT',
+        area: 'MST_DUNGEONS_AREA',
+        dungeon: 'MST_DUNGEONS_DUNGEON',
+      };
+      Object.values(missionData)
+        .forEach(mission => {
+          Object.keys(translationField)
+            .forEach(locationType => {
+              const dictionaryEntry = dictionaryData[`${translationField[locationType]}_${mission[locationType]}_NAME`];
+              if (dictionaryEntry && dictionaryEntry.en) {
+                mission[locationType] = dictionaryEntry.en;
+              }
+            })
+        });
+
       logger.info(`${server}: saving files`);
       const filename = `missions-${server}.json`;
       fs.writeFileSync(`${outputFolder}/${filename}`, JSON.stringify(missionData, null, 2), 'utf8');
@@ -757,7 +774,7 @@ async function getLeaderSkillDataForServer(server = 'gl', unitData = {}) {
   return handlers.leaderSkills.process(server, lsData, unitData);
 }
 
-async function getMissionsForServer(server = 'gl') {
+async function getMissionsForServer(server = 'gl', dictionaryData = {}) {
   if (config.getStats)  {
     handlers.missions.setGitData(server);
   }
@@ -770,17 +787,24 @@ async function getMissionsForServer(server = 'gl') {
    } else {
      missionData = handlers.missions.load(server);
    }
-   return handlers.missions.process(server, missionData);
+   return handlers.missions.process(server, missionData, dictionaryData);
 }
 
 // TODO: implement usage for this
 async function getDictionaryForServer(server = 'gl') {
-  handlers.dictionary.setGitData(server);
+  if (config.getStats) {
+    handlers.dictionary.setGitData(server);
+  }
   if (!config.processData) {
     return {};
   }
 
-  const dictionaryData = await handlers.dictionary.download(server);
+  let dictionaryData;
+  if (!config.useLocal) {
+    dictionaryData = await handlers.dictionary.download(server);
+  } else {
+    dictionaryData = handlers.dictionary.load(server);
+  }
   return handlers.dictionary.process(server, dictionaryData);
 }
 
@@ -793,13 +817,13 @@ async function getData(servers = ['gl', 'eu', 'jp']) {
   }
   // TODO: implement use of dictionary data
   for (const s of servers) {
-    const missionData = await getMissionsForServer(s);
-    const unitData = await getUnitDataForServer(s, missionData);
-    await getItemDataForServer(s, unitData, missionData);
-    await getBurstDataForServer(s, unitData);
-    await getExtraSkillDataForServer(s, unitData);
-    await getLeaderSkillDataForServer(s, unitData);
-    await getDictionaryForServer(s);
+    const dictionaryData = await getDictionaryForServer(s);
+    const missionData = await getMissionsForServer(s, dictionaryData);
+    // const unitData = await getUnitDataForServer(s, missionData);
+    // await getItemDataForServer(s, unitData, missionData);
+    // await getBurstDataForServer(s, unitData);
+    // await getExtraSkillDataForServer(s, unitData);
+    // await getLeaderSkillDataForServer(s, unitData);
   }
 
 
@@ -819,4 +843,4 @@ async function initializeGHData() {
   // logger.debug('ghData', ghData);
 }
 
-getData(['gl']);
+getData();

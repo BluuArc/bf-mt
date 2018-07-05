@@ -152,6 +152,7 @@ export default {
       extraSkills: {image: require('@/assets/unit_ills_full_50792_100x103.png')},
       leaderSkills: {image: require('@/assets/battle_leader_skill_icon.png')},
       missions: {image: require('@/assets/achievement_pt_icon.png')},
+      dictionary: {image: require('@/assets/challeng_hierarchy_mark_gold.png')},
       default: {icon: 'extension'},
     };
     const generateMultidexEntry = (entry) => {
