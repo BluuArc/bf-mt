@@ -53,6 +53,16 @@ const helper = {
 
     return !options.noParentheses ? `(${result})` : result;
   },
+  getTurns (effect) {
+    const value = !isNaN(effect) ? effect : effect['buff turns'];
+    return { value, text: `${value} turn` };
+  },
+  getIconKey (key = '') {
+    return (IconKeyMappings[key] || {}).name || key;
+  },
+  capitalize (str = '') {
+    return str[0].toUpperCase().concat(str.slice(1).toLowerCase());
+  },
 };
 
 const procs = {
@@ -66,24 +76,60 @@ const procs = {
         rec: 'rec% buff (5)',
         crit: 'crit% buff (7)',
       },
+      reduction: {
+        atk: 'atk% buff (2)',
+        def: 'def% buff (4)',
+        rec: 'rec% buff (6)',
+        crit: 'crit% buff (8)',
+      },
+      elemental: {
+        atk: 'atk% buff (13)',
+        def: 'def% buff (14)',
+        rec: 'rec% buff (15)',
+        crit: 'crit% buff (16)',
+      },
     },
     process (effect = {}, context) {
       const values = [];
       const targetData = helper.getTargetData(effect);
-      if (helper.containsAnyKey(effect, this.config.processOrder.map(key => this.config.regular[key]))) {
-        const buffs = helper.multiStatToObject(undefined, ...(this.config.processOrder.map(key => effect[this.config.regular[key]])));
-        console.debug(buffs);
-        this.config.processOrder.forEach(stat => {
-          if (buffs[stat]) {
-            const iconInfo = stat !== 'crit' ? IconKeyMappings[`BUFF_${stat.toUpperCase()}UP`] : IconKeyMappings.BUFF_CRTRATEUP;
-            const descLabel = stat !== 'crit' ? stat.toUpperCase() : 'Critical Hit Rate';
-            values.push({ iconKey: iconInfo.name, value: +buffs[stat], desc: `${helper.getNumberAsPolarizedPercent(+buffs[stat])} ${descLabel} ${targetData}` });
-          }
-        });
-      }
-      console.debug('proc 5', values);
+      const turns = helper.getTurns(effect);
+      const elementBuffed = (effect['element buffed'] || 'null').toUpperCase();
+      const getBuffsFor = (statTypes) => {
+        return helper.containsAnyKey(effect, this.config.processOrder.map(key => statTypes[key]))
+          ? helper.multiStatToObject(undefined, ...(this.config.processOrder.map(key => effect[statTypes[key]])))
+          : {};
+      };
+
+      const regularBuffs = getBuffsFor(this.config.regular);
+      this.config.processOrder.forEach(stat => {
+        if (regularBuffs[stat]) {
+          const iconKey = helper.getIconKey(stat !== 'crit' ? `BUFF_${stat.toUpperCase()}UP` : 'BUFF_CRTRATEUP');
+          const descLabel = stat !== 'crit' ? stat.toUpperCase() : 'Critical Hit Rate';
+          values.push({ iconKey, value: { value: +regularBuffs[stat], element: elementBuffed }, desc: `${turns.text} ${helper.getNumberAsPolarizedPercent(+regularBuffs[stat])} ${descLabel} ${targetData}` });
+        }
+      });
+
+      const reductionBuffs = getBuffsFor(this.config.reduction);
+      this.config.processOrder.forEach(stat => {
+        if (reductionBuffs[stat]) {
+          const iconKey = helper.getIconKey(stat !== 'crit' ? `BUFF_${stat.toUpperCase()}DOWN` : 'BUFF_CRTRATEDOWN');
+          const descLabel = stat !== 'crit' ? stat.toUpperCase() : 'Critical Hit Rate';
+          values.push({ iconKey, value: { value: +reductionBuffs[stat], element: elementBuffed }, desc: `${turns.text} ${helper.getNumberAsPolarizedPercent(+reductionBuffs[stat])} ${descLabel} ${targetData}` });
+        }
+      });
+
+      const elementalBuffs = getBuffsFor(this.config.elemental);
+      this.config.processOrder.forEach(stat => {
+        if (elementalBuffs[stat]) {
+          const iconKey = helper.getIconKey(stat !== 'crit' ? `BUFF_${elementBuffed}${stat.toUpperCase()}UP` : `BUFF_${elementBuffed}CRTRATEDOWN`);
+          const descLabel = stat !== 'crit' ? stat.toUpperCase() : 'Critical Hit Rate';
+          values.push({ iconKey, value: { value: +elementalBuffs[stat], element: elementBuffed }, desc: `${turns.text} ${helper.getNumberAsPolarizedPercent(+elementalBuffs[stat])} ${helper.capitalize(elementBuffed)} ${descLabel} ${targetData}` });
+        }
+      });
+
       return {
         type: EffectTypes.ACTIVE.name,
+        turnDuration: turns.value,
         originalEffect: effect,
         context,
         values,

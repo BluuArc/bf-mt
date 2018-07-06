@@ -10,7 +10,7 @@
     <v-layout row wrap>
       <template v-for="(effect, i) in processedEffects">
         <v-flex xs1 :key="`${i}-icon`" class="text-xs-center">
-          <buff-icon :icon-key="effect.iconKey"/>
+          <buff-icon @click.native="logBuff(effect)" :icon-key="effect.iconKey"/>
         </v-flex>
         <v-flex xs1 :key="`${i}-type`" class="text-xs-center">
           <p class="mb-0" :title="(effectTypes[effect.parent.type.toUpperCase()] || effectTypes.UNKNOWN).desc">{{ effect.parent.type }}</p>
@@ -57,6 +57,9 @@ export default {
   methods: {
     processEffect (effect) {
       return EffectProcessor.process(effect, this.context);
+    },
+    logBuff (buff) {
+      console.debug(buff);
     },
   },
 };

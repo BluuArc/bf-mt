@@ -220,7 +220,8 @@ export default {
     getBattleBuffIconCoordinates (key) {
       const index = this.battleBuffIconKeys.indexOf(key);
       const rowLength = 15;
-      const [y, x] = [Math.floor(index / rowLength), index < rowLength ? index : (rowLength - (rowLength % index))];
+      const y = Math.floor(index / rowLength);
+      const x = index - (y * rowLength);
       console.debug(key, index, x, y);
       return [x, y].map(coord => coord * -32).join(' ');
     },
