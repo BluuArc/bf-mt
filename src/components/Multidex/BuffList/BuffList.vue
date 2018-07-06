@@ -9,14 +9,14 @@
     </v-layout>
     <v-layout row wrap>
       <template v-for="(effect, i) in processedEffects">
-        <v-flex xs1 :key="`${i}-icon`">
-          {{ effect.iconKey }}
+        <v-flex xs1 :key="`${i}-icon`" class="text-xs-center">
+          <buff-icon :icon-key="effect.iconKey"/>
         </v-flex>
-        <v-flex xs1 :key="`${i}-type`">
-          {{ effect.parent.type }}
+        <v-flex xs1 :key="`${i}-type`" class="text-xs-center">
+          <p class="mb-0" :title="(effectTypes[effect.parent.type.toUpperCase()] || effectTypes.UNKNOWN).desc">{{ effect.parent.type }}</p>
         </v-flex>
-        <v-flex xs10 :key="i">
-          {{ effect.desc }}
+        <v-flex xs10 :key="i" class="text-xs-left">
+          <p class="mb-0">{{ effect.desc }}</p>
         </v-flex>
       </template>
     </v-layout>
@@ -24,7 +24,11 @@
 </template>
 
 <script>
-import {IconKeyMappings, EffectProcessor} from '@/store/instances/effect-processor';
+import {EffectProcessor} from '@/store/instances/EffectProcessor/effect-processor';
+import IconKeyMappings from '@/store/instances/EffectProcessor/icon-key-mappings';
+import EffectTypes from '@/store/instances/EffectProcessor/effect-types';
+import BuffIcon from '@/components/Multidex/BuffList/BuffIcon';
+
 export default {
   props: {
     effects: {
@@ -35,7 +39,11 @@ export default {
       default: () => undefined,
     },
   },
+  components: {
+    'buff-icon': BuffIcon,
+  },
   computed: {
+    effectTypes: () => EffectTypes,
     processedEffects () {
       return this.effects
         .map(this.processEffect)
