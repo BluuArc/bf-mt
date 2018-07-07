@@ -21,6 +21,9 @@
         <v-tab key="json">
           JSON
         </v-tab>
+        <v-tab key="buff-list">
+          Buff List (Alpha)
+        </v-tab>
       </v-tabs>
       <v-tabs-items v-model="activeTab" touchless>
         <v-tab-item key="table">
@@ -76,7 +79,7 @@
                 </v-layout>
                 <v-slide-y-transition>
                   <div v-show="showTables.includes(index)">
-                    <buff-list :effects="getBuffList(skill)"/>
+                    <effect-list :effects="getBuffList(skill)"/>
                   </div>
                 </v-slide-y-transition>
               </v-flex>
@@ -101,6 +104,9 @@
         <v-tab-item key="json">
           <json-viewer :json="unit.feskills" :change-view="activeTab"/>
         </v-tab-item>
+        <v-tab-item key="buff-list">
+          <buff-list :effects="unit.feskills.map(getBuffList).reduce((acc, val) => acc.concat(val), [])"/>
+        </v-tab-item>
       </v-tabs-items>
     </v-card-text>
   </v-card>
@@ -109,8 +115,9 @@
 <script>
 import JsonViewer from '@/components/Multidex/JsonViewer';
 import TextViewer from '@/components/Multidex/TextViewer';
-import BuffList from '@/components/Multidex/EffectList/MainTable';
+import EffectList from '@/components/Multidex/EffectList/MainTable';
 import SPIcon from '@/components/Multidex/Units/SPIcon';
+import BuffList from '@/components/Multidex/BuffList/BuffList';
 import debounce from 'lodash/debounce';
 
 export default {
@@ -118,6 +125,7 @@ export default {
   components: {
     'json-viewer': JsonViewer,
     'text-viewer': TextViewer,
+    'effect-list': EffectList,
     'buff-list': BuffList,
     'sp-icon': SPIcon,
   },

@@ -1,69 +1,5 @@
-import IconKeyMappings from './icon-key-mappings';
 import EffectTypes from './effect-types';
-
-const helper = {
-  multiStatToObject (hp, atk, def, rec, crit) {
-    return { hp, atk, def, rec, crit };
-  },
-  containsAnyKey (input = {}, keys = []) {
-    return Object.keys(input).some(key => keys.includes(key));
-  },
-  getNumberAsPolarizedPercent (number = 0) {
-    return `${(number < 0 ? number.toString() : `+${number}`)}%`;
-  },
-  getTargetData (inputArea, inputType, options = {}) {
-    const validTypes = ['party', 'self', 'enemy'];
-    let area, type;
-    let isPassive = options.isPassive || false;
-    if (typeof inputArea === 'object' && inputArea['target type'] && inputArea['target area']) {
-      type = inputArea['target type'];
-      area = inputArea['target area'];
-    } else if (typeof inputType === 'object' && inputType['target type'] && inputType['target area']) {
-      area = inputType['target area'];
-      type = inputType['target type'];
-    } else if (typeof inputArea === 'object' && inputArea['passive target']) {
-      type = inputArea['passive target'];
-      isPassive = true;
-    } else if (typeof inputType === 'object' && inputType['passive target']) {
-      type = inputType['passive target'];
-      isPassive = true;
-    } else {
-      area = inputArea;
-      type = inputType;
-    }
-
-    if (!validTypes.includes(type)) {
-      type = (options.isLS) ? 'party' : 'self';
-    }
-
-    let result;
-    if (type === 'self') {
-      result = 'self';
-    } else if ((area === 'aoe' || isPassive) && type === 'party') {
-      result = 'party';
-    } else if (area === 'aoe' && type === 'enemy') {
-      result = 'all enemies';
-    } else if (area === 'single' && type === 'enemy') {
-      result = 'one enemy';
-    } else if (area === 'single' && type === 'party') {
-      result = 'one ally';
-    } else {
-      result = `${area},${type}`;
-    }
-
-    return !options.noParentheses ? `(${result})` : result;
-  },
-  getTurns (effect) {
-    const value = !isNaN(effect) ? effect : effect['buff turns'];
-    return { value, text: `${value} turn` };
-  },
-  getIconKey (key = '') {
-    return (IconKeyMappings[key] || {}).name || key;
-  },
-  capitalize (str = '') {
-    return str[0].toUpperCase().concat(str.slice(1).toLowerCase());
-  },
-};
+import helper from './processor-helper';
 
 const procs = {
   '5': {
@@ -89,6 +25,7 @@ const procs = {
         crit: 'crit% buff (16)',
       },
     },
+    type: [EffectTypes.ACTIVE.name],
     process (effect = {}, context) {
       const values = [];
       const targetData = helper.getTargetData(effect);
@@ -105,7 +42,7 @@ const procs = {
         if (regularBuffs[stat]) {
           const iconKey = helper.getIconKey(stat !== 'crit' ? `BUFF_${stat.toUpperCase()}UP` : 'BUFF_CRTRATEUP');
           const descLabel = stat !== 'crit' ? stat.toUpperCase() : 'Critical Hit Rate';
-          values.push({ iconKey, value: { value: +regularBuffs[stat], element: elementBuffed }, desc: `${turns.text} ${helper.getNumberAsPolarizedPercent(+regularBuffs[stat])} ${descLabel} ${targetData}` });
+          values.push({ iconKey, value: { value: +regularBuffs[stat], element: elementBuffed, turns, targetData }, desc: `${helper.getNumberAsPolarizedPercent(+regularBuffs[stat])} ${descLabel} ${targetData}` });
         }
       });
 
@@ -114,7 +51,7 @@ const procs = {
         if (reductionBuffs[stat]) {
           const iconKey = helper.getIconKey(stat !== 'crit' ? `BUFF_${stat.toUpperCase()}DOWN` : 'BUFF_CRTRATEDOWN');
           const descLabel = stat !== 'crit' ? stat.toUpperCase() : 'Critical Hit Rate';
-          values.push({ iconKey, value: { value: +reductionBuffs[stat], element: elementBuffed }, desc: `${turns.text} ${helper.getNumberAsPolarizedPercent(+reductionBuffs[stat])} ${descLabel} ${targetData}` });
+          values.push({ iconKey, value: { value: +reductionBuffs[stat], element: elementBuffed, turns, targetData }, desc: `${helper.getNumberAsPolarizedPercent(+reductionBuffs[stat])} ${descLabel} ${targetData}` });
         }
       });
 
@@ -123,12 +60,12 @@ const procs = {
         if (elementalBuffs[stat]) {
           const iconKey = helper.getIconKey(stat !== 'crit' ? `BUFF_${elementBuffed}${stat.toUpperCase()}UP` : `BUFF_${elementBuffed}CRTRATEDOWN`);
           const descLabel = stat !== 'crit' ? stat.toUpperCase() : 'Critical Hit Rate';
-          values.push({ iconKey, value: { value: +elementalBuffs[stat], element: elementBuffed }, desc: `${turns.text} ${helper.getNumberAsPolarizedPercent(+elementalBuffs[stat])} ${helper.capitalize(elementBuffed)} ${descLabel} ${targetData}` });
+          values.push({ iconKey, value: { value: +elementalBuffs[stat], element: elementBuffed, turns, targetData }, desc: `${helper.getNumberAsPolarizedPercent(+elementalBuffs[stat])} ${helper.capitalize(elementBuffed)} ${descLabel} ${targetData}` });
         }
       });
 
       return {
-        type: EffectTypes.ACTIVE.name,
+        type: this.type,
         turnDuration: turns.value,
         originalEffect: effect,
         context,

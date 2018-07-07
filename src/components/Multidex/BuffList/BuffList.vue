@@ -13,10 +13,15 @@
           <buff-icon @click.native="logBuff(effect)" :icon-key="effect.iconKey"/>
         </v-flex>
         <v-flex xs1 :key="`${i}-type`" class="text-xs-center">
-          <p class="mb-0" :title="(effectTypes[effect.parent.type.toUpperCase()] || effectTypes.UNKNOWN).desc">{{ effect.parent.type }}</p>
+          <p class="mb-0" :title="getTypes(effect.parent.type, true)"
+            >{{ getTypes(effect.parent.type) }}</p>
         </v-flex>
         <v-flex xs10 :key="i" class="text-xs-left">
-          <p class="mb-0">{{ effect.desc }}</p>
+          <p class="mb-0">
+            <span v-if="effect.parent.originalEffect.sp_type">({{ handleSpType(effect.parent.originalEffect.sp_type) }})</span>
+            <span v-if="effect.value.turns && !effect.triggeredEffectContext">{{ effect.value.turns.text }}</span>
+            <span>{{ effect.desc }}</span>
+          </p>
         </v-flex>
       </template>
     </v-layout>
@@ -24,8 +29,9 @@
 </template>
 
 <script>
-import {EffectProcessor} from '@/store/instances/EffectProcessor/effect-processor';
+import EffectProcessor from '@/store/instances/EffectProcessor/effect-processor';
 import IconKeyMappings from '@/store/instances/EffectProcessor/icon-key-mappings';
+import ProcessorHelper from '@/store/instances/EffectProcessor/processor-helper';
 import EffectTypes from '@/store/instances/EffectProcessor/effect-types';
 import BuffIcon from '@/components/Multidex/BuffList/BuffIcon';
 
@@ -60,6 +66,17 @@ export default {
     },
     logBuff (buff) {
       console.debug(buff);
+    },
+    getTypes (types = [], doTranslate = false) {
+      if (!doTranslate) {
+        return types.join(', ');
+      }
+      return types
+        .map(type => `${type}: ${(EffectTypes[type.toUpperCase()] || EffectTypes.UNKNOWN).desc}`)
+        .join('\n');
+    },
+    handleSpType (text) {
+      return ProcessorHelper.capitalize(text).replace('sbb', 'SBB').replace('ubb', 'UBB').replace('bb', 'BB');
     },
   },
 };
