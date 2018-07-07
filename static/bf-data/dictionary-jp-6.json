@@ -1,28 +1,4 @@
 {
-  "MST_SKILLS_2830177_NAME": {
-    "en": "DM: Power Geyser MAX",
-    "es": "DM: Power Geyser MAX",
-    "id": "DM: Gletser Kuat MAX",
-    "pt": "DM: Power Geyser MAX",
-    "th": "DM: พาวเวอร์ เกย์เซอร์ แม็กซ์",
-    "vi": "DM: Power Geyser MAX"
-  },
-  "MST_SKILLS_2830178_DESCRIPTION": {
-    "en": "5 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns",
-    "es": "9 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns",
-    "id": "5 kombo serangan masif Api, Bumi ke semua musuh, pengurangan 100% kerusakan 1 giliran, tambahan besar HP maks, tambahan jumbo Serang, Tahan, Pulih 3 giliran",
-    "pt": "10 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns",
-    "th": "5 คอมโบ โจมตีธาตุ ไฟ, ดิน อย่างรุนแรงมหาศาล ใส่ศัตรูทั้งหมด, 100% ลดค่าความเสียหาย นาน 1 เทิร์น, เพิ่มค่าอย่างสูงให้ HP สูงสุด และ เพิ่มค่าอย่างมหาศาลให้ โจมตี, ป้องกัน, ฟื้นฟู นาน 3 เทิร์น",
-    "vi": "8 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns"
-  },
-  "MST_SKILLS_2830178_NAME": {
-    "en": "SDM: Power Geyser MAX",
-    "es": "SDM: Power Geyser MAX",
-    "id": "SDM: Gletser Kuat MAX",
-    "pt": "SDM: Power Geyser MAX",
-    "th": "SDM: พาวเวอร์ เกย์เซอร์ แม็กซ์",
-    "vi": "SDM: Power Geyser MAX"
-  },
   "MST_SKILLS_2830187_DESCRIPTION": {
     "en": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage & enormous 3 turn Atk, Def reduction",
     "es": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage & enormous 3 turn Atk, Def reduction",
@@ -1974,6 +1950,22 @@
     "pt": "Pandemônio Eterno",
     "th": "เอเธอนัล แพนเดอร์โมเนียม",
     "vi": "Eternal Pandemonium"
+  },
+  "MST_SKILLS_2860148_DESCRIPTION": {
+    "en": "17 combo massive Dark attack on all foes (damage relative to remaining HP), 7 combo massive Dark attack on single foe, enormously boosts own max HP, enormously boosts critical damage for 3 turns, enormously boosts Spark damage for 3 turns & resistance against 1 KO attack for self",
+    "es": "17 combo massive Dark attack on all foes (damage relative to remaining HP), 7 combo massive Dark attack on single foe, enormously boosts own max HP, enormously boosts critical damage for 3 turns, enormously boosts Spark damage for 3 turns & resistance against 1 KO attack for self",
+    "id": "17 combo massive Dark attack on all foes (damage relative to remaining HP), 7 combo massive Dark attack on single foe, enormously boosts own max HP, enormously boosts critical damage for 3 turns, enormously boosts Spark damage for 3 turns & resistance against 1 KO attack for self",
+    "pt": "17 combo massive Dark attack on all foes (damage relative to remaining HP), 7 combo massive Dark attack on single foe, enormously boosts own max HP, enormously boosts critical damage for 3 turns, enormously boosts Spark damage for 3 turns & resistance against 1 KO attack for self",
+    "th": "17 combo massive Dark attack on all foes (damage relative to remaining HP), 7 combo massive Dark attack on single foe, enormously boosts own max HP, enormously boosts critical damage for 3 turns, enormously boosts Spark damage for 3 turns & resistance against 1 KO attack for self",
+    "vi": "17 combo massive Dark attack on all foes (damage relative to remaining HP), 7 combo massive Dark attack on single foe, enormously boosts own max HP, enormously boosts critical damage for 3 turns, enormously boosts Spark damage for 3 turns & resistance against 1 KO attack for self"
+  },
+  "MST_SKILLS_2860148_NAME": {
+    "en": "Kronax Hungers",
+    "es": "Kronax Hungers",
+    "id": "Kronax Hungers",
+    "pt": "Kronax Hungers",
+    "th": "Kronax Hungers",
+    "vi": "Kronax Hungers"
   },
   "MST_SKILLS_2860158_DESCRIPTION": {
     "en": "45 combo massive Dark, Fire, Earth, Thunder attack on all foes, adds random status ailment infliction to attack for 3 turns, hugely boosts BC efficacy for 3 turns, enormously boosts all elemental damage for 3 turns & enormously boosts damage against status afflicted foes for 3 turns",
@@ -86336,6 +86328,38 @@
     "vi": "Swirl Cour"
   },
   "MST_SKILLS_8000551_DESCRIPTION": {
+    "en": "",
+    "es": "",
+    "id": "",
+    "pt": "",
+    "th": "",
+    "vi": ""
+  },
+  "MST_SKILLS_8000551_NAME": {
+    "en": "Lagoon Blossom",
+    "es": "Lagoon Blossom",
+    "id": "Laguna Mekar",
+    "pt": "Lagoon Blossom",
+    "th": "ลากูน บลอสซั่ม",
+    "vi": "Lagoon Blossom"
+  },
+  "MST_SKILLS_8000552_DESCRIPTION": {
+    "en": "",
+    "es": "",
+    "id": "",
+    "pt": "",
+    "th": "",
+    "vi": ""
+  },
+  "MST_SKILLS_8000552_NAME": {
+    "en": "Swirling Flower Aroma",
+    "es": "Swirling Flower Aroma",
+    "id": "Aroma Bunga Berputar",
+    "pt": "Swirling Flower Aroma",
+    "th": "สเวิร์ลลิ่ง ฟลาวเวอร์ อโรม่า",
+    "vi": "Swirling Flower Aroma"
+  },
+  "MST_SKILLS_8000560_DESCRIPTION": {
     "en": "",
     "es": "",
     "id": "",

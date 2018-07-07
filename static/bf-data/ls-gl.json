@@ -37355,7 +37355,7 @@
     ]
   },
   "860148": {
-    "desc": "MST_LEADERSKILLS_860148_DESCRIPTION",
+    "desc": "80% boost to Atk, max HP, 30% boost to critical hit rate, enormously boosts Atk, Def relative to lost HP, hugely boosts critical damage, 150% boost to Spark damage & adds probable Spark critical",
     "effects": [
       {
         "atk% buff": 80,
@@ -37386,7 +37386,7 @@
       }
     ],
     "id": "860148",
-    "name": "8Hadaron_LS",
+    "name": "Netherlord of Athensphere",
     "associated_units": [
       "860148"
     ]
