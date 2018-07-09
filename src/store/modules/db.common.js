@@ -1,3 +1,5 @@
+import Procs from '@/store/instances/EffectProcessor/procs';
+import Passives from '@/store/instances/EffectProcessor/passives';
 
 export const isValidServer = server => ['gl', 'eu', 'jp'].includes(server);
 export const createState = () => {
@@ -238,6 +240,9 @@ export const knownConstants = {
     single: 'ST',
     random: 'RT',
   },
+  buffSearchOptions: ['ls', 'es', 'sp', 'bb', 'sbb', 'ubb'],
+  procs: Object.keys(Procs).sort((a, b) => +a - +b).map(id => ({ value: id, text: `[${id}] ${Procs[id].desc}` })),
+  passives: Object.keys(Passives).sort((a, b) => +a - +b).map(id => ({ value: id, text: `[${id}] ${Passives[id].desc}` })),
 };
 
 const commonFunctions = {

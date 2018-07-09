@@ -8,6 +8,7 @@
     :input-server="server"
     :route-key="routeKey"
     :minRarity="1"
+    :is-unit="true"
     :get-multidex-path-to="getMultidexPathTo">
     <template slot="results-area" slot-scope="{ results }">
       <v-layout row wrap>
@@ -57,7 +58,7 @@ export default {
     ...mapState('units', ['pageDb']),
     ...mapGetters('units', ['getImageUrls', 'getMultidexPathTo']),
     requiredModules: () => ['units', 'items', 'missions'],
-    filterTypes: () => ['elements', 'rarity', 'kind', 'gender', 'exclusives'],
+    filterTypes: () => ['elements', 'rarity', 'kind', 'gender', 'exclusives', 'procs', 'passives'],
     sortTypes () {
       return {
         'Unit ID': (idA, idB, isAscending) => {

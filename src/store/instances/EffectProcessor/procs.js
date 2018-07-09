@@ -3,7 +3,7 @@ import helper from './processor-helper';
 
 const procs = {
   '5': {
-    desc: 'Regular and Elemental ATK/DEF/REC/Crit Rate',
+    desc: 'Regular/Elemental ATK/DEF/REC/Crit Rate',
     config: {
       processOrder: ['atk', 'def', 'rec', 'crit'],
       regular: {
@@ -25,6 +25,56 @@ const procs = {
         crit: 'crit% buff (16)',
       },
     },
+    // filterKeyMapping: {
+    //   'regular ATK boost': {
+    //     type: Number,
+    //     key: 'atk% buff (1)',
+    //   },
+    //   'regular DEF boost': {
+    //     type: Number,
+    //     key: 'def% buff (3)',
+    //   },
+    //   'regular REC boost': {
+    //     type: Number,
+    //     key: 'rec% buff (5)',
+    //   },
+    //   'regular CRIT rate boost': {
+    //     type: Number,
+    //     key: 'crit% buff (7)',
+    //   },
+    //   'regular ATK reduction': {
+    //     type: Number,
+    //     key: 'atk% buff (2)',
+    //   },
+    //   'regular DEF reduction': {
+    //     type: Number,
+    //     key: 'def% buff (4)',
+    //   },
+    //   'regular REC reduction': {
+    //     type: Number,
+    //     key: 'rec% buff (6)',
+    //   },
+    //   'regular CRIT rate reduction': {
+    //     type: Number,
+    //     key: 'crit% buff (8)',
+    //   },
+    //   'elemental ATK boost': {
+    //     type: Number,
+    //     key: 'atk% buff (13)',
+    //   },
+    //   'elemental DEF boost': {
+    //     type: Number,
+    //     key: 'def% buff (14)',
+    //   },
+    //   'elemental REC boost': {
+    //     type: Number,
+    //     key: 'rec% buff (15)',
+    //   },
+    //   'elemental CRIT rate boost': {
+    //     type: Number,
+    //     key: 'crit% buff (16)',
+    //   },
+    // },
     type: [EffectTypes.ACTIVE.name],
     process (effect = {}, context) {
       const values = [];

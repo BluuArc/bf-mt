@@ -8,6 +8,20 @@ const passives = {
     config: {
       burstTypes: ['bb', 'sbb', 'ubb'],
     },
+    // filterKeyMapping: {
+    //   'Add to BB': {
+    //     type: Boolean,
+    //     key: 'trigger on bb',
+    //   },
+    //   'Add to SBB': {
+    //     type: Boolean,
+    //     key: 'trigger on SBB',
+    //   },
+    //   'Add to UBB': {
+    //     type: Boolean,
+    //     key: 'trigger on UBB',
+    //   },
+    // },
     type: [EffectTypes.PASSIVE.name],
     process (effect = {}, context) {
       const addToLabel = this.config.burstTypes

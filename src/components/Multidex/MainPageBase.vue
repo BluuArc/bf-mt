@@ -371,6 +371,70 @@
                   </v-flex>
                 </v-layout>
               </v-expansion-panel-content>
+              <v-expansion-panel-content v-if="filterTypes.includes('procs')">
+                <div slot="header">
+                  <h3 class="subheading">Active (Proc) Buffs</h3>
+                </div>
+                <v-layout row wrap v-if="isUnit">
+                  <v-flex xs4 v-for="(option, i) in defaultFilters.procBuffSearchOptions" :key="i">
+                    <v-checkbox :value="option" v-model="filterOptions.procBuffSearchOptions">
+                      <div slot="label">
+                        {{ option.toUpperCase() }}
+                      </div>
+                    </v-checkbox>
+                  </v-flex>
+                </v-layout>
+                <v-layout row wrap>
+                  <v-flex xs12>
+                    <v-btn outline class="mr-0" @click="resetProcs">Reset</v-btn>
+                    <v-layout row wrap>
+                      <v-flex xs12>
+                        <v-select
+                          :items="knownConstants.procs || []"
+                          v-model="filterOptions.procs"
+                          label="Select Active Buffs"
+                          multiple
+                          chips
+                          autocomplete
+                          hint="Empty selection is equivalent to showing all."
+                          persistent-hint/>
+                      </v-flex>
+                    </v-layout>
+                  </v-flex>
+                </v-layout>
+              </v-expansion-panel-content>
+              <v-expansion-panel-content v-if="filterTypes.includes('passives')">
+                <div slot="header">
+                  <h3 class="subheading">Passive Buffs</h3>
+                </div>
+                <v-layout row wrap v-if="isUnit">
+                  <v-flex xs4 v-for="(option, i) in defaultFilters.passiveBuffSearchOptions" :key="i">
+                    <v-checkbox :value="option" v-model="filterOptions.passiveBuffSearchOptions">
+                      <div slot="label">
+                        {{ option.toUpperCase() }}
+                      </div>
+                    </v-checkbox>
+                  </v-flex>
+                </v-layout>
+                <v-layout row wrap>
+                  <v-flex xs12>
+                    <v-btn outline class="mr-0" @click="resetPassives">Reset</v-btn>
+                    <v-layout row wrap>
+                      <v-flex xs12>
+                        <v-select
+                          :items="knownConstants.passives || []"
+                          v-model="filterOptions.passives"
+                          label="Select Passive Buffs"
+                          multiple
+                          chips
+                          autocomplete
+                          hint="Empty selection is equivalent to showing all."
+                          persistent-hint/>
+                      </v-flex>
+                    </v-layout>
+                  </v-flex>
+                </v-layout>
+              </v-expansion-panel-content>
             </v-expansion-panel>
           </v-container>
         </v-card-text>
@@ -555,6 +619,12 @@
                       </v-chip>
                       <v-chip small v-show="filterTypes.includes('exclusives') && filterOptions.exclusives.length < defaultFilters.exclusives.length" style="text-transform: capitalize">
                         {{ filterOptions.exclusives[0] }}s Only
+                      </v-chip>
+                      <v-chip small v-show="filterTypes.includes('procs') && (filterOptions.procBuffSearchOptions.length < defaultFilters.procBuffSearchOptions.length || filterOptions.procs.length > 0)" style="text-transform: capitalize">
+                        {{ getFilterBuffText('Proc') }}
+                      </v-chip>
+                      <v-chip small v-show="filterTypes.includes('passives') && (filterOptions.passiveBuffSearchOptions.length < defaultFilters.passiveBuffSearchOptions.length || filterOptions.passives.length > 0)" style="text-transform: capitalize">
+                        {{ getFilterBuffText('Passive') }}
                       </v-chip>
                     </template>
                   </v-flex>
@@ -792,6 +862,10 @@ const arrayBasedFilters = [
   'land',
   'area',
   'dungeon',
+  'procs',
+  'procBuffSearchOptions',
+  'passives',
+  'passiveBuffSearchOptions',
 ];
 export default {
   props: {
@@ -851,6 +925,10 @@ export default {
       required: true,
     },
     useAsyncSort: {
+      type: Boolean,
+      default: false,
+    },
+    isUnit: {
       type: Boolean,
       default: false,
     },
@@ -971,6 +1049,10 @@ export default {
         land: [],
         area: [],
         dungeon: [],
+        passives: [],
+        procs: [],
+        procBuffSearchOptions: knownConstants.buffSearchOptions.slice(),
+        passiveBuffSearchOptions: knownConstants.buffSearchOptions.slice(),
       };
     },
     hasNonNameFilters () {
@@ -987,6 +1069,7 @@ export default {
     arrayBasedFilters.forEach(filterType => {
       filterOptions[filterType] = [];
     });
+
     return {
       pageIndex: 0,
       amountPerPage: 27,
@@ -1272,6 +1355,8 @@ export default {
       this.filterOptions.craftables = this.defaultFilters.craftables;
       this.filterOptions.usage = this.defaultFilters.usage;
       this.filterOptions.name = '';
+      this.resetProcs();
+      this.resetPassives();
     },
     decrementPage () {
       if (this.pageIndex <= 0) {
@@ -1321,6 +1406,33 @@ export default {
           console.error(type, err);
         }
       }
+    },
+    resetProcs () {
+      this.filterOptions.procs = [];
+      this.filterOptions.procBuffSearchOptions = this.defaultFilters.procBuffSearchOptions.slice();
+    },
+    resetPassives () {
+      this.filterOptions.passives = [];
+      this.filterOptions.passiveBuffSearchOptions = this.defaultFilters.passiveBuffSearchOptions.slice();
+    },
+    getFilterBuffText (type = 'Proc') {
+      const buffIds = this.filterOptions[`${type.toLowerCase()}s`];
+      const unitSearchArea = this.filterOptions[`${type.toLowerCase()}BuffSearchOptions`];
+
+      let countMessage;
+      if (buffIds.length === 0) {
+        countMessage = `All ${type}s`;
+      } else if (buffIds.length === 1) {
+        countMessage = `${type} [${buffIds[0]}]`;
+      } else {
+        countMessage = `${buffIds.length} ${type}s`;
+      }
+
+      const areaMessage = unitSearchArea.length === 0
+        ? 'on Nothing'
+        : `on ${unitSearchArea.map(type => type.toUpperCase()).join('/')}`;
+
+      return [countMessage, areaMessage].join(' ');
     },
   },
 };
