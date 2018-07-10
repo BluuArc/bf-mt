@@ -24,11 +24,11 @@
                 </div>
                 <v-layout row wrap>
                   <v-flex xs12>
-                    <v-btn outline class="mr-0" @click="filterOptions.elements = defaultFilters.elements.slice()">All</v-btn>
-                    <v-btn outline class="ml-0" @click="filterOptions.elements = []">None</v-btn>
+                    <v-btn outline class="mr-0" :disabled="loadingFilters" @click="filterOptions.elements = defaultFilters.elements.slice()">All</v-btn>
+                    <v-btn outline class="ml-0" :disabled="loadingFilters" @click="filterOptions.elements = []">None</v-btn>
                     <v-layout row wrap>
                       <v-flex xs4 v-for="(element, i) in defaultFilters.elements" :key="i">
-                        <v-checkbox :value="element" v-model="filterOptions.elements">
+                        <v-checkbox :disabled="loadingFilters" :value="element" v-model="filterOptions.elements">
                           <div slot="label">
                             <element-icon :element="element" class="ml-2"/>
                           </div>
@@ -44,11 +44,11 @@
                 </div>
                 <v-layout row wrap>
                   <v-flex xs12>
-                    <v-btn outline class="mr-0" @click="filterOptions.rarity = defaultFilters.rarity.slice()">All</v-btn>
-                    <v-btn outline class="ml-0" @click="filterOptions.rarity = []">None</v-btn>
+                    <v-btn outline class="mr-0" :disabled="loadingFilters" @click="filterOptions.rarity = defaultFilters.rarity.slice()">All</v-btn>
+                    <v-btn outline class="ml-0" :disabled="loadingFilters" @click="filterOptions.rarity = []">None</v-btn>
                     <v-layout row wrap>
                       <v-flex xs4 v-for="(rarity, i) in defaultFilters.rarity" :key="i">
-                        <v-checkbox :value="rarity" v-model="filterOptions.rarity">
+                        <v-checkbox :disabled="loadingFilters" :value="rarity" v-model="filterOptions.rarity">
                           <div slot="label">
                             <span v-if="rarity < 8">
                               <h3 class="subheading d-inline-block">{{ rarity }}</h3>
@@ -68,11 +68,11 @@
                 </div>
                 <v-layout row wrap>
                   <v-flex xs12>
-                    <v-btn outline class="mr-0" @click="filterOptions.kind = defaultFilters.kind.slice()">All</v-btn>
-                    <v-btn outline class="ml-0" @click="filterOptions.kind = []">None</v-btn>
+                    <v-btn outline class="mr-0" :disabled="loadingFilters" @click="filterOptions.kind = defaultFilters.kind.slice()">All</v-btn>
+                    <v-btn outline class="ml-0" :disabled="loadingFilters" @click="filterOptions.kind = []">None</v-btn>
                     <v-layout row wrap>
                       <v-flex xs6 v-for="(kind, i) in defaultFilters.kind" :key="i">
-                        <v-checkbox :value="kind" v-model="filterOptions.kind">
+                        <v-checkbox :disabled="loadingFilters" :value="kind" v-model="filterOptions.kind">
                           <div slot="label">
                             <span style="text-transform: capitalize">{{ kind }}</span>
                           </div>
@@ -88,11 +88,11 @@
                 </div>
                 <v-layout row wrap>
                   <v-flex xs12>
-                    <v-btn outline class="mr-0" @click="filterOptions.gender = defaultFilters.gender.slice()">All</v-btn>
-                    <v-btn outline class="ml-0" @click="filterOptions.gender = []">None</v-btn>
+                    <v-btn outline class="mr-0" :disabled="loadingFilters" @click="filterOptions.gender = defaultFilters.gender.slice()">All</v-btn>
+                    <v-btn outline class="ml-0" :disabled="loadingFilters" @click="filterOptions.gender = []">None</v-btn>
                     <v-layout row wrap>
                       <v-flex xs4 v-for="(gender, i) in defaultFilters.gender" :key="i">
-                        <v-checkbox :value="gender" v-model="filterOptions.gender">
+                        <v-checkbox :disabled="loadingFilters" :value="gender" v-model="filterOptions.gender">
                           <div slot="label">
                             <v-icon :color="getGenderInfo(gender).color">fas {{ getGenderInfo(gender).icon }}</v-icon>
                           </div>
@@ -108,11 +108,11 @@
                 </div>
                 <v-layout row wrap>
                   <v-flex xs12>
-                    <v-btn outline dense class="mr-0" @click="filterOptions.itemTypes = defaultFilters.itemTypes.slice()">All</v-btn>
-                    <v-btn outline dense class="ml-0" @click="filterOptions.itemTypes = []">None</v-btn>
+                    <v-btn outline dense class="mr-0" :disabled="loadingFilters" @click="filterOptions.itemTypes = defaultFilters.itemTypes.slice()">All</v-btn>
+                    <v-btn outline dense class="ml-0" :disabled="loadingFilters" @click="filterOptions.itemTypes = []">None</v-btn>
                     <v-layout row wrap>
                       <v-flex xs6 v-for="(type, i) in defaultFilters.itemTypes" :key="i">
-                        <v-checkbox :value="type" v-model="filterOptions.itemTypes">
+                        <v-checkbox :disabled="loadingFilters" :value="type" v-model="filterOptions.itemTypes">
                           <div slot="label">
                             <span style="text-transform: capitalize">{{ knownConstants.itemTypeMapping[type] }}</span>
                           </div>
@@ -129,11 +129,11 @@
                 <v-layout row wrap>
                   <v-flex xs12>
                     <br>
-                    <v-btn outline class="mr-0" @click="filterOptions.sphereTypes = defaultFilters.sphereTypes.slice()">All</v-btn>
-                    <v-btn outline class="ml-0" @click="filterOptions.sphereTypes = []">None</v-btn>
+                    <v-btn outline class="mr-0" :disabled="loadingFilters" @click="filterOptions.sphereTypes = defaultFilters.sphereTypes.slice()">All</v-btn>
+                    <v-btn outline class="ml-0" :disabled="loadingFilters" @click="filterOptions.sphereTypes = []">None</v-btn>
                     <v-layout row wrap>
                       <v-flex xs12 v-for="(type, i) in defaultFilters.sphereTypes" :key="i">
-                        <v-checkbox :value="type" v-model="filterOptions.sphereTypes">
+                        <v-checkbox :disabled="loadingFilters" :value="type" v-model="filterOptions.sphereTypes">
                           <div slot="label">
                             <sphere-type-icon :category="type" class="ml-0 mr-1"/>
                             <span style="text-transform: capitalize">{{ getSphereCategory(type) }}</span>
@@ -150,11 +150,12 @@
                 </div>
                 <v-layout row wrap>
                   <v-flex xs12>
-                    <v-btn outline class="mr-0" @click="filterOptions.land = []">Reset</v-btn>
+                    <v-btn outline class="mr-0" :disabled="loadingFilters" @click="filterOptions.land = []">Reset</v-btn>
                     <v-layout row wrap>
                       <v-flex xs12>
                         <v-select
                           :items="moduleStateInfo.missions.possibleValues.land || []"
+                          :disabled="loadingFilters"
                           v-model="filterOptions.land"
                           label="Select Lands"
                           multiple
@@ -173,11 +174,12 @@
                 </div>
                 <v-layout row wrap>
                   <v-flex xs12>
-                    <v-btn outline class="mr-0" @click="filterOptions.area = []">Reset</v-btn>
+                    <v-btn outline class="mr-0" :disabled="loadingFilters" @click="filterOptions.area = []">Reset</v-btn>
                     <v-layout row wrap>
                       <v-flex xs12>
                         <v-select
                           :items="moduleStateInfo.missions.possibleValues.area || []"
+                          :disabled="loadingFilters"
                           v-model="filterOptions.area"
                           label="Select Areas"
                           multiple
@@ -196,11 +198,12 @@
                 </div>
                 <v-layout row wrap>
                   <v-flex xs12>
-                    <v-btn outline class="mr-0" @click="filterOptions.dungeon = []">Reset</v-btn>
+                    <v-btn outline class="mr-0" :disabled="loadingFilters" @click="filterOptions.dungeon = []">Reset</v-btn>
                     <v-layout row wrap>
                       <v-flex xs12>
                         <v-select
                           :items="moduleStateInfo.missions.possibleValues.dungeon || []"
+                          :disabled="loadingFilters" 
                           v-model="filterOptions.dungeon"
                           label="Select Dungeons"
                           multiple
@@ -222,12 +225,15 @@
                     <v-layout row>
                       <v-radio-group v-model="filterOptions.craftables">
                         <v-radio
+                          :disabled="loadingFilters" 
                           :value="knownConstants.craftableFilterOptions.all"
                           label="All"/>
                         <v-radio
+                          :disabled="loadingFilters" 
                           :value="knownConstants.craftableFilterOptions.craftable"
                           label="Craftables Only"/>
                         <v-radio
+                          :disabled="loadingFilters" 
                           :value="knownConstants.craftableFilterOptions.nonCraftable"
                           label="Non-Craftables Only"/>
                       </v-radio-group>
@@ -244,12 +250,15 @@
                     <v-layout row>
                       <v-radio-group v-model="filterOptions.usage">
                         <v-radio
+                          :disabled="loadingFilters" 
                           :value="knownConstants.usageFilterOptions.all"
                           label="All"/>
                         <v-radio
+                          :disabled="loadingFilters" 
                           :value="knownConstants.usageFilterOptions.used"
                           label="Used in Other Items Only"/>
                         <v-radio
+                          :disabled="loadingFilters" 
                           :value="knownConstants.usageFilterOptions.unused"
                           label="Not Used in Other Items"/>
                       </v-radio-group>
@@ -266,12 +275,15 @@
                     <v-layout row>
                       <v-radio-group v-model="filterOptions.associatedUnits">
                         <v-radio
+                          :disabled="loadingFilters" 
                           :value="knownConstants.associatedUnitOptions.all"
                           label="All"/>
                         <v-radio
+                          :disabled="loadingFilters" 
                           :value="knownConstants.associatedUnitOptions.with"
                           label="With Associated Units"/>
                         <v-radio
+                          :disabled="loadingFilters" 
                           :value="knownConstants.associatedUnitOptions.without"
                           label="Without Associated Units"/>
                       </v-radio-group>
@@ -289,12 +301,15 @@
                       <v-radio-group v-model="filterOptions.associatedItems">
                         <v-radio
                           :value="knownConstants.withWithoutTernaryOptions.all"
+                          :disabled="loadingFilters" 
                           label="All"/>
                         <v-radio
                           :value="knownConstants.withWithoutTernaryOptions.with"
+                          :disabled="loadingFilters" 
                           label="With Associated Items"/>
                         <v-radio
                           :value="knownConstants.withWithoutTernaryOptions.without"
+                          :disabled="loadingFilters" 
                           label="Without Associated Items"/>
                       </v-radio-group>
                     </v-layout>
@@ -311,12 +326,15 @@
                       <v-radio-group v-model="filterOptions.gems">
                         <v-radio
                           :value="knownConstants.withWithoutTernaryOptions.all"
+                          :disabled="loadingFilters" 
                           label="All"/>
                         <v-radio
                           :value="knownConstants.withWithoutTernaryOptions.with"
+                          :disabled="loadingFilters" 
                           label="With Gems Only"/>
                         <v-radio
                           :value="knownConstants.withWithoutTernaryOptions.without"
+                          :disabled="loadingFilters" 
                           label="Without Gems"/>
                       </v-radio-group>
                     </v-layout>
@@ -333,12 +351,15 @@
                       <v-radio-group v-model="filterOptions.continues">
                         <v-radio
                           :value="knownConstants.withWithoutTernaryOptions.all"
+                          :disabled="loadingFilters" 
                           label="All"/>
                         <v-radio
                           :value="knownConstants.withWithoutTernaryOptions.with"
+                          :disabled="loadingFilters" 
                           label="Quest Continues Allowed"/>
                         <v-radio
                           :value="knownConstants.withWithoutTernaryOptions.without"
+                          :disabled="loadingFilters" 
                           label="No Quest Continues"/>
                       </v-radio-group>
                     </v-layout>
@@ -356,15 +377,15 @@
                       <v-radio-group v-model="filterOptions.exclusives">
                         <v-radio
                           :value="knownConstants.exclusiveFilterOptions.all"
-                          :disabled="!hasOtherServers"
+                          :disabled="!hasOtherServers || loadingFilters"
                           label="All"/>
                         <v-radio
                           :value="knownConstants.exclusiveFilterOptions.exclusive"
-                          :disabled="!hasOtherServers"
+                          :disabled="!hasOtherServers || loadingFilters"
                           label="Exclusives Only"/>
                         <v-radio
                           :value="knownConstants.exclusiveFilterOptions.nonExclusive"
-                          :disabled="!hasOtherServers"
+                          :disabled="!hasOtherServers || loadingFilters"
                           label="Non-Exclusives Only"/>
                       </v-radio-group>
                     </v-layout>
@@ -377,7 +398,7 @@
                 </div>
                 <v-layout row wrap v-if="isUnit">
                   <v-flex xs4 v-for="(option, i) in defaultFilters.procBuffSearchOptions" :key="i">
-                    <v-checkbox :value="option" v-model="filterOptions.procBuffSearchOptions">
+                    <v-checkbox :disabled="loadingFilters" :value="option" v-model="filterOptions.procBuffSearchOptions">
                       <div slot="label">
                         {{ option.toUpperCase() }}
                       </div>
@@ -386,15 +407,17 @@
                 </v-layout>
                 <v-layout row wrap>
                   <v-flex xs12>
-                    <v-btn outline class="mr-0" @click="resetProcs">Reset</v-btn>
+                    <v-btn outline :disabled="loadingFilters" class="mr-0" @click="resetProcs">Reset</v-btn>
                     <v-layout row wrap>
                       <v-flex xs12>
                         <v-select
                           :items="knownConstants.procs || []"
+                          :disabled="loadingFilters" 
                           v-model="filterOptions.procs"
                           label="Select Active Buffs"
                           multiple
                           chips
+                          tags
                           autocomplete
                           hint="Empty selection is equivalent to showing all."
                           persistent-hint/>
@@ -409,7 +432,7 @@
                 </div>
                 <v-layout row wrap v-if="isUnit">
                   <v-flex xs4 v-for="(option, i) in defaultFilters.passiveBuffSearchOptions" :key="i">
-                    <v-checkbox :value="option" v-model="filterOptions.passiveBuffSearchOptions">
+                    <v-checkbox :disabled="loadingFilters" :value="option" v-model="filterOptions.passiveBuffSearchOptions">
                       <div slot="label">
                         {{ option.toUpperCase() }}
                       </div>
@@ -418,15 +441,17 @@
                 </v-layout>
                 <v-layout row wrap>
                   <v-flex xs12>
-                    <v-btn outline class="mr-0" @click="resetPassives">Reset</v-btn>
+                    <v-btn outline :disabled="loadingFilters" class="mr-0" @click="resetPassives">Reset</v-btn>
                     <v-layout row wrap>
                       <v-flex xs12>
                         <v-select
                           :items="knownConstants.passives || []"
+                          :disabled="loadingFilters"
                           v-model="filterOptions.passives"
                           label="Select Passive Buffs"
                           multiple
                           chips
+                          tags
                           autocomplete
                           hint="Empty selection is equivalent to showing all."
                           persistent-hint/>
@@ -1265,7 +1290,7 @@ export default {
       await this.applySorts();
       this.storeSortAndFilterSettings();
       this.loadingFilters = false;
-    }, 250),
+    }, 750),
     applySorts: debounce(async function () {
       if (this.isDataLoading || this.loadingFilters) {
         this.allSortedEntries = [];

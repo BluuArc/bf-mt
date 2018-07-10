@@ -43,6 +43,7 @@
 
 <script>
 import { mapState, mapGetters } from 'vuex';
+import { knownConstants } from '@/store/modules/db.common';
 import MainPageBase from '@/components/Multidex/MainPageBase';
 import UnitCard from '@/components/Multidex/Units/UnitCard';
 import UnitDialogContent from '@/components/Multidex/Units/UnitDialogContent';
@@ -81,8 +82,8 @@ export default {
         },
         Element: (idA, idB, isAscending) => {
           const [elementA, elementB] = [this.pageDb[idA].element, this.pageDb[idB].element];
-          const indexA = this.elements.indexOf(elementA);
-          const indexB = this.elements.indexOf(elementB);
+          const indexA = knownConstants.elements.indexOf(elementA);
+          const indexB = knownConstants.elements.indexOf(elementB);
           const result = indexA === indexB ? (+idA - +idB) : (indexA - indexB);
           return isAscending ? result : -result;
         },

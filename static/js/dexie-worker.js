@@ -37,6 +37,64 @@ db.version(3).stores({
   return transaction;
 });
 
+const getExtraTriggeredEffects = (effect) => {
+  return effect['triggered effect'] || [];
+};
+
+const defaultGetEffects = (obj = {}) => {
+  const effects = obj.effects || [];
+  return effects.concat(effects.map(getExtraTriggeredEffects).reduce((acc, val) => Array.isArray(val) ? acc.concat(val) : acc.concat([val]), []));
+};
+
+const getBuffListFromSpSkill = (skill) => {
+  const buffs = [];
+  skill.skill.effects.forEach(entry => {
+    Object.keys(entry).forEach(type => {
+      buffs.push(entry[type]);
+    });
+  });
+  return buffs.concat(buffs.map(getExtraTriggeredEffects).reduce((acc, val) => Array.isArray(val) ? acc.concat(val) : acc.concat([val]), []));
+};
+
+const unitLocations = {
+  ls: (unit) => defaultGetEffects(unit['leader skill']),
+  es: (unit) => defaultGetEffects(unit['extra skill']),
+  sp: (unit) => {
+    if (!unit.feskills) {
+      return [];
+    }
+    const feskills = unit.feskills
+      .map(getBuffListFromSpSkill)
+      .reduce((acc, val) => acc.concat(val), []);
+    return feskills;
+  },
+  bb: (unit) => {
+    if (!unit.bb) {
+      return [];
+    }
+    const endLevelObject = unit.bb.levels[unit.bb.levels.length - 1];
+    return defaultGetEffects(endLevelObject);
+  },
+  sbb: (unit) => {
+    if (!unit.sbb) {
+      return [];
+    }
+    const endLevelObject = unit.sbb.levels[unit.sbb.levels.length - 1];
+    return defaultGetEffects(endLevelObject);
+  },
+  ubb: (unit) => {
+    if (!unit.ubb) {
+      return [];
+    }
+    const endLevelObject = unit.ubb.levels[unit.ubb.levels.length - 1];
+    return defaultGetEffects(endLevelObject);
+  },
+};
+
+function getEffectListInUnit (unit, location) {
+  return (unitLocations[location] || defaultGet)(unit);
+}
+
 const defaultGet = (table, whereQuery) => db[table].where(whereQuery).toArray();
 
 const dbWrapper = {
@@ -78,13 +136,42 @@ const dbWrapper = {
         return {};
       }
 
+      const { procAreas = ['ls', 'es', 'sp', 'bb', 'sbb', 'ubb'], passiveAreas = ['ls', 'es', 'sp', 'bb', 'sbb', 'ubb'], procs = [], passives = [] } = searchQuery;
+      // console.debug(procAreas, passiveAreas, procs, passives);
+      const unitFitsQuery = (unit) => {
+        if (procs.length === 0 && passives.length === 0) {
+          return true;
+        }
+
+        const hasProcAreas = procs.length === 0 || procAreas.map(area => getEffectListInUnit(unit, area))
+          .some(effectList => {
+            // console.debug('[PW-dexie]', unit.id, unit.name, effectList);
+            const procList = effectList.map(e => e['proc id'] || e['unknown proc id']);
+
+            return procList.some(id => procs.includes(id));
+          });
+
+        const hasPassiveAreas = passives.length === 0 || passiveAreas.map(area => getEffectListInUnit(unit, area))
+          .some(effectList => {
+            const passiveList = effectList.map(e => e['passive id'] || e['unknown passive id']);
+            // if (passiveList.some(id => passives.includes(id))) {
+            //   console.debug('[PW-dexie]', unit.id, unit.name, passiveList);
+            // }
+            return passiveList.some(id => passives.includes(id));
+          });
+
+        // console.debug('[PW-dexie]', unit.id, unit.name, hasProcAreas, hasPassiveAreas);
+        return hasProcAreas && hasPassiveAreas;
+      };
+
       const currentDb = results[0].data;
       const resultDb = {};
       Object.keys(currentDb)
       .forEach(key => {
-        // TODO: search based on search query
-        const { cost, element, gender, guide_id, id, name, rarity, next, prev, evo_mats, kind } = currentDb[key];
-        resultDb[key] = { cost, element, gender, guide_id, id, name, rarity, next, prev, evo_mats, kind };
+        if (unitFitsQuery(currentDb[key])) {
+          const { cost, element, gender, guide_id, id, name, rarity, next, prev, evo_mats, kind } = currentDb[key];
+          resultDb[key] = { cost, element, gender, guide_id, id, name, rarity, next, prev, evo_mats, kind };
+        }
       });
 
       return resultDb;

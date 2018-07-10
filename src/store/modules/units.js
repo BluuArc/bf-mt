@@ -74,7 +74,20 @@ const unitsStore = {
       // TODO: add call for advanced filtering using dexie-client worker
       const { forceUpdate, ...filters } = inputFilters;
       console.debug(filters);
-      const keys = Object.keys(state.pageDb);
+      let keys;
+      if (filters.procs.length === 0 && filters.passives.length === 0) {
+        keys = Object.keys(state.pageDb);
+      } else {
+        const searchQuery = {
+          procs: filters.procs,
+          passives: filters.passives,
+          procAreas: filters.procBuffSearchOptions,
+          passiveAreas: filters.passiveBuffSearchOptions,
+        };
+        const filteredDb = await unitWorker.getMiniDb(state.activeServer, searchQuery);
+        keys = Object.keys(filteredDb);
+      }
+      console.debug(keys);
       if (Object.keys(filters).length === 0) {
         return keys;
       }
