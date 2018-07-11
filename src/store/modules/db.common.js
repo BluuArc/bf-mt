@@ -193,6 +193,10 @@ export const createActions = (worker, downloadWorker, dbEntryName = 'units') => 
   };
 };
 
+const getSortVal = (item = '') => {
+  return !isNaN(item) ? +item : +Array.from(item).map(a => a.charCodeAt().toString()).reverse().join('');
+};
+
 export const knownConstants = {
   elements: ['fire', 'water', 'earth', 'thunder', 'light', 'dark'],
   gender: ['male', 'female', 'other'],
@@ -241,8 +245,8 @@ export const knownConstants = {
     random: 'RT',
   },
   buffSearchOptions: ['ls', 'es', 'sp', 'bb', 'sbb', 'ubb'],
-  procs: Object.keys(Procs).sort((a, b) => +a - +b).map(id => ({ value: id, text: `[${id}] ${Procs[id].desc}` })),
-  passives: Object.keys(Passives).sort((a, b) => +a - +b).map(id => ({ value: id, text: `[${id}] ${Passives[id].desc}` })),
+  procs: Object.keys(Procs).sort((a, b) => getSortVal(a) - getSortVal(b)).map(id => ({ value: id, text: `[${id}] ${Procs[id].desc}`, data: Procs[id] })),
+  passives: Object.keys(Passives).sort((a, b) => getSortVal(a) - getSortVal(b)).map(id => ({ value: id, text: `[${id}] ${Passives[id].desc}`, data: Passives[id] })),
 };
 
 const commonFunctions = {

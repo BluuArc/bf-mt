@@ -409,10 +409,10 @@
                   <v-flex xs12>
                     <v-btn outline :disabled="loadingFilters" class="mr-0" @click="resetProcs">Reset</v-btn>
                     <v-layout row wrap>
-                      <v-flex xs12>
+                      <v-flex xs12 @click="showProcSelector = true" style="cursor: pointer">
                         <v-select
                           :items="knownConstants.procs || []"
-                          :disabled="loadingFilters" 
+                          disabled
                           v-model="filterOptions.procs"
                           label="Select Active Buffs"
                           multiple
@@ -423,6 +423,52 @@
                           persistent-hint/>
                       </v-flex>
                     </v-layout>
+                  </v-flex>
+                </v-layout>
+                <v-layout row wrap>
+                  <v-flex xs12>
+                     <v-dialog v-model="showProcSelector" scrollable max-width="400px">
+                      <v-card>
+                        <v-card-title>
+                          <v-select
+                            :disabled="loadingFilters" 
+                            v-model="tempProcs"
+                            label="Select Active Buffs"
+                            multiple
+                            chips
+                            tags
+                            autocomplete
+                            hint="Empty selection is equivalent to showing all. You can input any IDs that aren't listed as well."
+                            persistent-hint/>
+                        </v-card-title>
+                        <v-divider></v-divider>
+                        <v-card-text style="height: 300px;">
+                          <v-container fluid class="buff-selector-list pa-0">
+                            <v-layout row v-for="(proc, index) in (knownConstants.procs || [])" :key="index" class="buff-selector-list--row">
+                              <v-flex xs2>
+                                <v-checkbox hide-details :disabled="loadingFilters" :value="proc.value" v-model="tempProcs"/>
+                              </v-flex>
+                              <v-flex xs10>
+                                <v-layout row wrap>
+                                  <v-flex xs12>
+                                    {{ proc.text }}
+                                  </v-flex>
+                                  <v-flex xs12 v-if="getFilteredIconsForBuffSelectorEntry(proc).length > 0">
+                                    <buff-icon :width="24" :height="24" v-for="(iconKey, i) in getFilteredIconsForBuffSelectorEntry(proc)" :key="i" :icon-key="iconKey"/>
+                                  </v-flex>
+                                </v-layout>
+                              </v-flex>
+                            </v-layout>
+                          </v-container>
+                        </v-card-text>
+                        <v-divider></v-divider>
+                        <v-card-actions>
+                          <v-btn flat @click.native="showProcSelector = false">Save</v-btn>
+                          <v-spacer/>
+                          <v-btn flat @click.native="tempProcs = []">Clear</v-btn>
+                        </v-card-actions>
+                      </v-card>
+                    </v-dialog>
                   </v-flex>
                 </v-layout>
               </v-expansion-panel-content>
@@ -443,20 +489,55 @@
                   <v-flex xs12>
                     <v-btn outline :disabled="loadingFilters" class="mr-0" @click="resetPassives">Reset</v-btn>
                     <v-layout row wrap>
-                      <v-flex xs12>
+                      <v-flex xs12 @click="showPassiveSelector = true" style="cursor: pointer">
                         <v-select
-                          :items="knownConstants.passives || []"
-                          :disabled="loadingFilters"
+                          disabled
                           v-model="filterOptions.passives"
                           label="Select Passive Buffs"
                           multiple
                           chips
                           tags
-                          autocomplete
                           hint="Empty selection is equivalent to showing all."
                           persistent-hint/>
                       </v-flex>
                     </v-layout>
+                  </v-flex>
+                </v-layout>
+                <v-layout row wrap>
+                  <v-flex xs12>
+                     <v-dialog v-model="showPassiveSelector" scrollable max-width="300px">
+                      <v-card>
+                        <v-card-title>
+                          <v-select
+                            :disabled="loadingFilters" 
+                            v-model="tempPassives"
+                            label="Select Passive Buffs"
+                            multiple
+                            chips
+                            tags
+                            autocomplete
+                            hint="Empty selection is equivalent to showing all. You can input any IDs that aren't listed as well."
+                            persistent-hint/>
+                        </v-card-title>
+                        <v-divider></v-divider>
+                        <v-card-text style="height: 300px;">
+                          <v-checkbox
+                            v-for="(passive, index) in (knownConstants.passives || [])"
+                            :key="index"
+                            :disabled="loadingFilters"
+                            :value="passive.value"
+                            v-model="tempPassives">
+                            <div slot="label" v-text="passive.text" :title="passive.text"/>
+                          </v-checkbox>
+                        </v-card-text>
+                        <v-divider/>
+                        <v-card-actions>
+                          <v-btn flat @click.native="showPassiveSelector = false">Save</v-btn>
+                          <v-spacer/>
+                          <v-btn flat @click.native="tempPassives = []">Clear</v-btn>
+                        </v-card-actions>
+                      </v-card>
+                    </v-dialog>
                   </v-flex>
                 </v-layout>
               </v-expansion-panel-content>
@@ -863,11 +944,13 @@
 import { moduleInfo } from '@/store';
 import { knownConstants } from '@/store/modules/db.common';
 import { mapState, mapActions, mapMutations, mapGetters } from 'vuex';
+import IconKeyMappings from '@/store/instances/EffectProcessor/icon-key-mappings';
 import debounce from 'lodash/debounce';
 import ResultViewer from '@/components/Multidex/ResultViewer';
 import LoadingComponent from '@/components/Multidex/LoadingComponent';
 import ElementIcon from '@/components/Multidex/Units/ElementIcon';
 import SphereTypeIcon from '@/components/Multidex/Items/SphereTypeIcon';
+import BuffIcon from '@/components/Multidex/BuffList/BuffIcon';
 
 const multidexModules = moduleInfo.filter(m => m.type === 'multidex');
 const arrayBasedFilters = [
@@ -963,6 +1046,7 @@ export default {
     'loading-component': LoadingComponent,
     'element-icon': ElementIcon,
     'sphere-type-icon': SphereTypeIcon,
+    'buff-icon': BuffIcon,
   },
   computed: {
     ...mapState('settings', ['activeServer']),
@@ -1107,6 +1191,10 @@ export default {
       finishedInit: false,
       showFilterSheet: false,
       showUpdateDialog: false,
+      showProcSelector: false,
+      showPassiveSelector: false,
+      tempProcs: [],
+      tempPassives: [],
       sortOptions: {
         type: 'ID',
         isAscending: true,
@@ -1199,6 +1287,20 @@ export default {
     },
     hasUpdates (newValue) {
       this.showUpdateTooltip = !!newValue;
+    },
+    showProcSelector (doShow) {
+      if (doShow) {
+        this.tempProcs = this.filterOptions.procs.slice();
+      } else {
+        this.filterOptions.procs = this.tempProcs.slice();
+      }
+    },
+    showPassiveSelector (doShow) {
+      if (doShow) {
+        this.tempPassives = this.filterOptions.passives.slice();
+      } else {
+        this.filterOptions.passives = this.tempPassives.slice();
+      }
     },
   },
   created () {
@@ -1459,6 +1561,12 @@ export default {
 
       return [countMessage, areaMessage].join(' ');
     },
+    getFilteredIconsForBuffSelectorEntry (entry) {
+      if (!entry || !entry.data || typeof (entry.data.possibleIcons) !== 'function') {
+        return [];
+      }
+      return entry.data.possibleIcons().filter(i => i !== IconKeyMappings.UNKNOWN.name && !!IconKeyMappings[i]);
+    },
   },
 };
 </script>
@@ -1467,5 +1575,13 @@ export default {
 .multidex-page .filter-area .expansion-panel__header {
   padding-left: 0;
   padding-right: 0;
+}
+
+.theme--dark .buff-selector-list .buff-selector-list--row:nth-child(even) {
+  background-color: var(--border-color-dark);
+}
+
+.theme--light .buff-selector-list .buff-selector-list--row:nth-child(even) {
+  background-color: var(--border-color-light);
 }
 </style>

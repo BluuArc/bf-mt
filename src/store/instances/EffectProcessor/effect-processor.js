@@ -9,7 +9,6 @@ class EffectProcessor {
   // mainly used for reference
   static sampleProcessResult (effect = {}, context) {
     return {
-      fullDescription: 'full description goes here',
       type: EffectTypes.UNKNOWN.name,
       originalEffect: effect,
       context,
@@ -25,7 +24,6 @@ class EffectProcessor {
 
   static defaultProcessResult (effect = {}, context) {
     return {
-      fullDescription: 'Unknown effect',
       type: [EffectTypes.UNKNOWN.name],
       originalEffect: effect,
       context,

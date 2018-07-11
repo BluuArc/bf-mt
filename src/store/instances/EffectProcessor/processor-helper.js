@@ -1,7 +1,10 @@
 
 import IconKeyMappings from './icon-key-mappings';
+import EffectTypes from './effect-types';
 
+const iconGeneratorSymbol = Symbol('iconGeneratorSymbol');
 const helper = {
+  iconGeneratorSymbol,
   multiStatToObject (hp, atk, def, rec, crit) {
     return {
       hp,
@@ -71,6 +74,23 @@ const helper = {
   },
   capitalize (str = '') {
     return str[0].toUpperCase().concat(str.slice(1).toLowerCase());
+  },
+  generateDefaultEntry (id = '0') {
+    return {
+      desc: `Untranslated buff ${id}`,
+      type: [EffectTypes.UNKNOWN.name],
+      possibleIcons: () => [IconKeyMappings.UNKNOWN.name],
+      process (effect = {}, context) {
+        return {
+          type: this.type,
+          originalEffect: effect,
+          context,
+          values: [
+            { iconKey: IconKeyMappings.UNKNOWN.name, value: effect, desc: `Unknown effect. Effect Keys: [${Object.keys(effect).join(', ')}]` },
+          ],
+        };
+      },
+    };
   },
 };
 
