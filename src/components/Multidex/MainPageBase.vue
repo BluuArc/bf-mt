@@ -445,10 +445,12 @@
                         <v-card-text style="height: 300px;">
                           <v-container fluid class="buff-selector-list pa-0">
                             <v-layout row v-for="(proc, index) in (knownConstants.procs || [])" :key="index" class="buff-selector-list--row">
-                              <v-flex xs2>
-                                <v-checkbox hide-details :disabled="loadingFilters" :value="proc.value" v-model="tempProcs"/>
+                              <v-flex xs2 class="center-align-parent">
+                                <div class="center-align-container">
+                                  <v-checkbox class="ml-2" hide-details :disabled="loadingFilters" :value="proc.value" v-model="tempProcs"/>
+                                </div>
                               </v-flex>
-                              <v-flex xs10>
+                              <v-flex xs10 class="pt-3 pb-3">
                                 <v-layout row wrap>
                                   <v-flex xs12>
                                     {{ proc.text }}
@@ -505,7 +507,7 @@
                 </v-layout>
                 <v-layout row wrap>
                   <v-flex xs12>
-                     <v-dialog v-model="showPassiveSelector" scrollable max-width="300px">
+                    <v-dialog v-model="showPassiveSelector" scrollable max-width="400px">
                       <v-card>
                         <v-card-title>
                           <v-select
@@ -521,16 +523,27 @@
                         </v-card-title>
                         <v-divider></v-divider>
                         <v-card-text style="height: 300px;">
-                          <v-checkbox
-                            v-for="(passive, index) in (knownConstants.passives || [])"
-                            :key="index"
-                            :disabled="loadingFilters"
-                            :value="passive.value"
-                            v-model="tempPassives">
-                            <div slot="label" v-text="passive.text" :title="passive.text"/>
-                          </v-checkbox>
+                          <v-container fluid class="buff-selector-list pa-0">
+                            <v-layout row v-for="(passive, index) in (knownConstants.passives || [])" :key="index" class="buff-selector-list--row">
+                              <v-flex xs2 class="center-align-parent">
+                                <div class="center-align-container">
+                                  <v-checkbox class="ml-2" hide-details :disabled="loadingFilters" :value="passive.value" v-model="tempPassives"/>
+                                </div>
+                              </v-flex>
+                              <v-flex xs10 class="pt-3 pb-3">
+                                <v-layout row wrap>
+                                  <v-flex xs12>
+                                    {{ passive.text }}
+                                  </v-flex>
+                                  <v-flex xs12 v-if="getFilteredIconsForBuffSelectorEntry(passive).length > 0">
+                                    <buff-icon :width="24" :height="24" v-for="(iconKey, i) in getFilteredIconsForBuffSelectorEntry(passive)" :key="i" :icon-key="iconKey"/>
+                                  </v-flex>
+                                </v-layout>
+                              </v-flex>
+                            </v-layout>
+                          </v-container>
                         </v-card-text>
-                        <v-divider/>
+                        <v-divider></v-divider>
                         <v-card-actions>
                           <v-btn flat @click.native="showPassiveSelector = false">Save</v-btn>
                           <v-spacer/>

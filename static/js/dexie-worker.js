@@ -143,24 +143,12 @@ const dbWrapper = {
           return true;
         }
 
-        const hasProcAreas = procs.length === 0 || procAreas.map(area => getEffectListInUnit(unit, area))
-          .some(effectList => {
-            // console.debug('[PW-dexie]', unit.id, unit.name, effectList);
-            const procList = effectList.map(e => e['proc id'] || e['unknown proc id']);
+        const allProcs = procAreas.map(area => getEffectListInUnit(unit, area).map(e => e['proc id'] || e['unknown proc id'])).reduce((acc, val) => acc.concat(val), []);
+        const hasProcAreas = procs.length === 0 || procs.every(id => allProcs.includes(id));
 
-            return procList.some(id => procs.includes(id));
-          });
+        const allPassives = passiveAreas.map(area => getEffectListInUnit(unit, area).map(e => e['passive id'] || e['unknown passive id'])).reduce((acc, val) => acc.concat(val), []);
+        const hasPassiveAreas = passives.length === 0 || passives.every(id => allPassives.includes(id));
 
-        const hasPassiveAreas = passives.length === 0 || passiveAreas.map(area => getEffectListInUnit(unit, area))
-          .some(effectList => {
-            const passiveList = effectList.map(e => e['passive id'] || e['unknown passive id']);
-            // if (passiveList.some(id => passives.includes(id))) {
-            //   console.debug('[PW-dexie]', unit.id, unit.name, passiveList);
-            // }
-            return passiveList.some(id => passives.includes(id));
-          });
-
-        // console.debug('[PW-dexie]', unit.id, unit.name, hasProcAreas, hasPassiveAreas);
         return hasProcAreas && hasPassiveAreas;
       };
 

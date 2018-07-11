@@ -1,8 +1,19 @@
 import EffectTypes from './effect-types';
-// import helper from './processor-helper';
+import helper from './processor-helper';
 import EffectProcessor from './effect-processor';
+// import { knownConstants } from '../../modules/db.common';
+const passiveTypes = require('@/assets/buff-translation/passives.json');
 
 const passives = {
+  ...(() => {
+    const entries = {};
+    Object.values(passiveTypes).forEach(type => {
+      Object.keys(type).forEach(id => {
+        entries[id] = helper.generateDefaultEntry(id);
+      });
+    });
+    return entries;
+  })(),
   '66': {
     desc: 'Add effect to BB/SBB/UBB',
     config: {
@@ -23,6 +34,7 @@ const passives = {
     //   },
     // },
     type: [EffectTypes.PASSIVE.name],
+    possibleIcons: () => [],
     process (effect = {}, context) {
       const addToLabel = this.config.burstTypes
         .filter(type => !!effect[`trigger on ${type}`])
