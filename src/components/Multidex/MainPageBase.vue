@@ -606,8 +606,13 @@
                   </v-flex>
                 </v-layout>
                 <v-layout row v-if="filterTypes.length > 0">
-                  <v-flex xs12 class="text-xs-left">
+                  <v-flex xs10 class="text-xs-left">
                     <span>Active Filters:</span>
+                  </v-flex>
+                  <v-flex xs2 class="text-xs-right">
+                    <v-btn v-if="$vuetify.breakpoint.xsOnly" flat icon class="mr-0 pr-1" @click="showFilterSheet = !showFilterSheet">
+                      <v-icon>filter_list</v-icon>
+                    </v-btn>
                   </v-flex>
                 </v-layout>
                 <v-layout row v-if="filterTypes.length > 0">
@@ -748,7 +753,7 @@
                     </template>
                   </v-flex>
                   <v-flex xs2 md1 class="text-xs-right">
-                    <v-btn flat icon class="mr-0 pr-1" @click="showFilterSheet = !showFilterSheet">
+                    <v-btn v-if="$vuetify.breakpoint.smAndUp" flat icon class="mr-0 pr-1" @click="showFilterSheet = !showFilterSheet">
                       <v-icon>filter_list</v-icon>
                     </v-btn>
                   </v-flex>
