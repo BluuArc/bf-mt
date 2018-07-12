@@ -71,7 +71,6 @@ const unitsStore = {
       commit('setLoadState', false);
     },
     async getFilteredKeys ({ dispatch, state, commit }, inputFilters = {}) {
-      // TODO: add call for advanced filtering using dexie-client worker
       const { forceUpdate, ...filters } = inputFilters;
       console.debug(filters);
       let keys;

@@ -60,7 +60,7 @@ export default {
     ...mapState('items', ['pageDb']),
     ...mapGetters('items', ['getImageUrl', 'getMultidexPathTo']),
     requiredModules: () => ['items', 'units', 'missions'],
-    filterTypes: () => ['rarity', 'itemTypes', 'sphereTypes', 'associatedUnits', 'craftables', 'usage', 'exclusives'],
+    filterTypes: () => ['rarity', 'itemTypes', 'sphereTypes', 'associatedUnits', 'craftables', 'usage', 'exclusives', 'procs', 'passives'],
     sortTypes () {
       return {
         'Item ID': (idA, idB, isAscending) => {

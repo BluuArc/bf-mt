@@ -42,7 +42,7 @@ const getExtraTriggeredEffects = (effect) => {
 };
 
 const defaultGetEffects = (obj = {}) => {
-  const effects = obj.effects || [];
+  const effects = obj.effects || (obj.effect && obj.effect.effect) || obj.effect || [];
   return effects.concat(effects.map(getExtraTriggeredEffects).reduce((acc, val) => Array.isArray(val) ? acc.concat(val) : acc.concat([val]), []));
 };
 
@@ -138,7 +138,7 @@ const dbWrapper = {
 
       const { procAreas = ['ls', 'es', 'sp', 'bb', 'sbb', 'ubb'], passiveAreas = ['ls', 'es', 'sp', 'bb', 'sbb', 'ubb'], procs = [], passives = [] } = searchQuery;
       // console.debug(procAreas, passiveAreas, procs, passives);
-      const unitFitsQuery = (unit) => {
+      const fitsQuery = (unit) => {
         if (procs.length === 0 && passives.length === 0) {
           return true;
         }
@@ -156,7 +156,7 @@ const dbWrapper = {
       const resultDb = {};
       Object.keys(currentDb)
       .forEach(key => {
-        if (unitFitsQuery(currentDb[key])) {
+        if (fitsQuery(currentDb[key])) {
           const { cost, element, gender, guide_id, id, name, rarity, next, prev, evo_mats, kind } = currentDb[key];
           resultDb[key] = { cost, element, gender, guide_id, id, name, rarity, next, prev, evo_mats, kind };
         }
@@ -170,13 +170,30 @@ const dbWrapper = {
         return {};
       }
 
+      const { procs = [], passives = [] } = searchQuery;
+      // console.debug(procAreas, passiveAreas, procs, passives);
+      const fitsQuery = (entry) => {
+        if (procs.length === 0 && passives.length === 0) {
+          return true;
+        }
+
+        const allProcs = defaultGetEffects(entry).map(e => e['proc id'] || e['unknown proc id']);
+        const hasProcAreas = procs.length === 0 || procs.every(id => allProcs.includes(id));
+
+        const allPassives = defaultGetEffects(entry).map(e => e['passive id'] || e['unknown passive id']);
+        const hasPassiveAreas = passives.length === 0 || passives.every(id => allPassives.includes(id));
+
+        return hasProcAreas && hasPassiveAreas;
+      };
+
       const currentDb = results[0].data;
       const resultDb = {};
       Object.keys(currentDb)
       .forEach(key => {
-        // TODO: search based on search query
-        const { desc, id, name, rarity, thumbnail, type, raid, max_stack, sell_price, recipe, usage, associated_units } = currentDb[key];
-        resultDb[key] = { desc, id, name, rarity, thumbnail, type, raid, max_stack, sell_price, recipe, usage, associated_units, 'sphere type': currentDb[key]['sphere type'] };
+        if (fitsQuery(currentDb[key])) {
+          const { desc, id, name, rarity, thumbnail, type, raid, max_stack, sell_price, recipe, usage, associated_units } = currentDb[key];
+          resultDb[key] = { desc, id, name, rarity, thumbnail, type, raid, max_stack, sell_price, recipe, usage, associated_units, 'sphere type': currentDb[key]['sphere type'] };
+        }
       });
 
       return resultDb;
