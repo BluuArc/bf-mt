@@ -40,9 +40,16 @@ const extraSkillStore = {
       // TODO: add call for advanced filtering using dexie-client worker
       const { forceUpdate, ...filters } = inputFilters;
       console.debug(filters);
-      const keys = Object.keys(state.pageDb);
-      if (Object.keys(filters).length === 0) {
-        return keys;
+      let keys;
+      if (filters.procs.length === 0 && filters.passives.length === 0) {
+        keys = Object.keys(state.pageDb);
+      } else {
+        const searchQuery = {
+          procs: filters.procs,
+          passives: filters.passives,
+        };
+        const filteredDb = await extraSkillWorker.getMiniDb(state.activeServer, searchQuery);
+        keys = Object.keys(filteredDb);
       }
 
       // get local filters

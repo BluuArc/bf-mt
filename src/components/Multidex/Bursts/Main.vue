@@ -47,7 +47,7 @@ export default {
     ...mapState('bursts', ['pageDb']),
     ...mapGetters('bursts', ['getMultidexPathTo']),
     requiredModules: () => ['bursts', 'units'],
-    filterTypes: () => ['associatedUnits', 'exclusives'],
+    filterTypes: () => ['associatedUnits', 'exclusives', 'procs'],
     sortTypes () {
       return {
         'Burst ID': (idA, idB, isAscending) => {

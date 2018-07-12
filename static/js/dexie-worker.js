@@ -37,6 +37,20 @@ db.version(3).stores({
   return transaction;
 });
 
+const defaultFitsQuery = (entry, procs, passives) => {
+  if (procs.length === 0 && passives.length === 0) {
+    return true;
+  }
+
+  const allProcs = defaultGetEffects(entry).map(e => e['proc id'] || e['unknown proc id']);
+  const hasProcAreas = procs.length === 0 || procs.every(id => allProcs.includes(id));
+
+  const allPassives = defaultGetEffects(entry).map(e => e['passive id'] || e['unknown passive id']);
+  const hasPassiveAreas = passives.length === 0 || passives.every(id => allPassives.includes(id));
+
+  return hasProcAreas && hasPassiveAreas;
+};
+
 const getExtraTriggeredEffects = (effect) => {
   return effect['triggered effect'] || [];
 };
@@ -56,6 +70,11 @@ const getBuffListFromSpSkill = (skill) => {
   return buffs.concat(buffs.map(getExtraTriggeredEffects).reduce((acc, val) => Array.isArray(val) ? acc.concat(val) : acc.concat([val]), []));
 };
 
+const getBurstEffects = (burst) => {
+  const endLevelObject = burst.levels[burst.levels.length - 1];
+  return defaultGetEffects(endLevelObject);
+};
+
 const unitLocations = {
   ls: (unit) => defaultGetEffects(unit['leader skill']),
   es: (unit) => defaultGetEffects(unit['extra skill']),
@@ -68,27 +87,9 @@ const unitLocations = {
       .reduce((acc, val) => acc.concat(val), []);
     return feskills;
   },
-  bb: (unit) => {
-    if (!unit.bb) {
-      return [];
-    }
-    const endLevelObject = unit.bb.levels[unit.bb.levels.length - 1];
-    return defaultGetEffects(endLevelObject);
-  },
-  sbb: (unit) => {
-    if (!unit.sbb) {
-      return [];
-    }
-    const endLevelObject = unit.sbb.levels[unit.sbb.levels.length - 1];
-    return defaultGetEffects(endLevelObject);
-  },
-  ubb: (unit) => {
-    if (!unit.ubb) {
-      return [];
-    }
-    const endLevelObject = unit.ubb.levels[unit.ubb.levels.length - 1];
-    return defaultGetEffects(endLevelObject);
-  },
+  bb: (unit) => !unit.bb ? [] : getBurstEffects(unit.bb),
+  sbb: (unit) => !unit.sbb ? [] : getBurstEffects(unit.sbb),
+  ubb: (unit) => !unit.ubb ? [] : getBurstEffects(unit.ubb),
 };
 
 function getEffectListInUnit (unit, location) {
@@ -138,7 +139,7 @@ const dbWrapper = {
 
       const { procAreas = ['ls', 'es', 'sp', 'bb', 'sbb', 'ubb'], passiveAreas = ['ls', 'es', 'sp', 'bb', 'sbb', 'ubb'], procs = [], passives = [] } = searchQuery;
       // console.debug(procAreas, passiveAreas, procs, passives);
-      const fitsQuery = (unit) => {
+      const fitsUnitQuery = (unit) => {
         if (procs.length === 0 && passives.length === 0) {
           return true;
         }
@@ -156,7 +157,7 @@ const dbWrapper = {
       const resultDb = {};
       Object.keys(currentDb)
       .forEach(key => {
-        if (fitsQuery(currentDb[key])) {
+        if (fitsUnitQuery(currentDb[key])) {
           const { cost, element, gender, guide_id, id, name, rarity, next, prev, evo_mats, kind } = currentDb[key];
           resultDb[key] = { cost, element, gender, guide_id, id, name, rarity, next, prev, evo_mats, kind };
         }
@@ -172,25 +173,12 @@ const dbWrapper = {
 
       const { procs = [], passives = [] } = searchQuery;
       // console.debug(procAreas, passiveAreas, procs, passives);
-      const fitsQuery = (entry) => {
-        if (procs.length === 0 && passives.length === 0) {
-          return true;
-        }
-
-        const allProcs = defaultGetEffects(entry).map(e => e['proc id'] || e['unknown proc id']);
-        const hasProcAreas = procs.length === 0 || procs.every(id => allProcs.includes(id));
-
-        const allPassives = defaultGetEffects(entry).map(e => e['passive id'] || e['unknown passive id']);
-        const hasPassiveAreas = passives.length === 0 || passives.every(id => allPassives.includes(id));
-
-        return hasProcAreas && hasPassiveAreas;
-      };
 
       const currentDb = results[0].data;
       const resultDb = {};
       Object.keys(currentDb)
       .forEach(key => {
-        if (fitsQuery(currentDb[key])) {
+        if (defaultFitsQuery(currentDb[key], procs, passives)) {
           const { desc, id, name, rarity, thumbnail, type, raid, max_stack, sell_price, recipe, usage, associated_units } = currentDb[key];
           resultDb[key] = { desc, id, name, rarity, thumbnail, type, raid, max_stack, sell_price, recipe, usage, associated_units, 'sphere type': currentDb[key]['sphere type'] };
         }
@@ -204,14 +192,30 @@ const dbWrapper = {
         return {};
       }
 
+      const { procs = [], passives = [] } = searchQuery;
+
+      const fitsQuery = (entry, procs, passives) => {
+        if (procs.length === 0 && passives.length === 0) {
+          return true;
+        }
+
+        const allProcs = getBurstEffects(entry).map(e => e['proc id'] || e['unknown proc id']);
+        const hasProcAreas = procs.length === 0 || procs.every(id => allProcs.includes(id));
+
+        const allPassives = getBurstEffects(entry).map(e => e['passive id'] || e['unknown passive id']);
+        const hasPassiveAreas = passives.length === 0 || passives.every(id => allPassives.includes(id));
+
+        return hasProcAreas && hasPassiveAreas;
+      };
+
       const currentDb = results[0].data;
       const resultDb = {};
       Object.keys(currentDb)
       .forEach(key => {
-        // TODO: search based on search query
-        // TODO: find a way to get buff lists/icons? (maybe not?)
-        const { desc, id, name, associated_units } = currentDb[key];
-        resultDb[key] = { desc, id, name, associated_units };
+        if (fitsQuery(currentDb[key], procs, passives)) {
+          const { desc, id, name, associated_units } = currentDb[key];
+          resultDb[key] = { desc, id, name, associated_units };
+        }
       });
 
       return resultDb;
@@ -221,15 +225,15 @@ const dbWrapper = {
       if (results.length === 0 || !results[0].data || Object.keys(results[0].data).length === 0) {
         return {};
       }
-
+      const { procs = [], passives = [] } = searchQuery;
       const currentDb = results[0].data;
       const resultDb = {};
       Object.keys(currentDb)
       .forEach(key => {
-        // TODO: search based on search query
-        // TODO: find a way to get buff lists/icons? (maybe not?)
-        const { desc, id, name, associated_units, rarity } = currentDb[key];
-        resultDb[key] = { desc, id, name, associated_units, rarity };
+        if (defaultFitsQuery(currentDb[key], procs, passives)) {
+          const { desc, id, name, associated_units, rarity } = currentDb[key];
+          resultDb[key] = { desc, id, name, associated_units, rarity };
+        }
       });
 
       return resultDb;
@@ -240,14 +244,15 @@ const dbWrapper = {
         return {};
       }
 
+      const { procs = [], passives = [] } = searchQuery;
       const currentDb = results[0].data;
       const resultDb = {};
       Object.keys(currentDb)
       .forEach(key => {
-        // TODO: search based on search query
-        // TODO: find a way to get buff lists/icons? (maybe not?)
-        const { desc, id, name, associated_units } = currentDb[key];
-        resultDb[key] = { desc, id, name, associated_units };
+        if (defaultFitsQuery(currentDb[key], procs, passives)) {
+          const { desc, id, name, associated_units } = currentDb[key];
+          resultDb[key] = { desc, id, name, associated_units };
+        }
       });
 
       return resultDb;

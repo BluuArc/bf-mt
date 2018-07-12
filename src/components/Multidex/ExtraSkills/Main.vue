@@ -45,7 +45,7 @@ export default {
     ...mapState('extraSkills', ['pageDb']),
     ...mapGetters('extraSkills', ['getMultidexPathTo']),
     requiredModules: () => ['extraSkills', 'units', 'items'],
-    filterTypes: () => ['rarity', 'associatedUnits', 'exclusives'],
+    filterTypes: () => ['rarity', 'associatedUnits', 'exclusives', 'procs', 'passives'],
     sortTypes () {
       return {
         'Skill ID': (idA, idB, isAscending) => {

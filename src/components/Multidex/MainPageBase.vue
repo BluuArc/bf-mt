@@ -1179,7 +1179,7 @@ export default {
         passives: [],
         procs: [],
         procBuffSearchOptions: knownConstants.buffSearchOptions.slice(),
-        passiveBuffSearchOptions: knownConstants.buffSearchOptions.slice(),
+        passiveBuffSearchOptions: knownConstants.buffSearchOptions.filter(opt => !['bb', 'sbb', 'ubb'].includes(opt)),
       };
     },
     hasNonNameFilters () {

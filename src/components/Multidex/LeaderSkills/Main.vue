@@ -45,7 +45,7 @@ export default {
     ...mapState('leaderSkills', ['pageDb']),
     ...mapGetters('leaderSkills', ['getMultidexPathTo']),
     requiredModules: () => ['leaderSkills', 'units'],
-    filterTypes: () => ['associatedUnits', 'exclusives'],
+    filterTypes: () => ['associatedUnits', 'exclusives', 'procs', 'passives'],
     sortTypes () {
       return {
         'Skill ID': (idA, idB, isAscending) => {
