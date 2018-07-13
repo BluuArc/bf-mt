@@ -61,7 +61,7 @@
             </v-slide-y-transition>
           </template>
         </v-tab-item>
-         <v-tab-item v-if="burst && hitCountData.length > 0" :key="getLabelIndex('Hitcounts')" style="max-height: 50vh; overflow-y: auto;">
+         <v-tab-item v-if="burst && hitCountData.length > 0" :key="getLabelIndex('Hitcounts')">
            <v-expansion-panel :expand="$vuetify.breakpoint.smAndUp">
             <v-expansion-panel-content v-for="(d,i) in hitCountData" :key="i">
               <div slot="header" class="pl-3 pr-3">

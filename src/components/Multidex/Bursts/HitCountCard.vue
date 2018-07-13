@@ -44,7 +44,7 @@
                 </v-flex>
                 <v-flex xs12 md6 class="text-xs-center">
                   <h3 class="subheading"><b>Effects Info</b></h3>
-                  <effect-list class="pt-0" :effects="[attack.effects]" style="max-height: 20vh;"/>
+                  <effect-list class="pt-0" :effects="[attack.effects]"/>
                 </v-flex>
               </v-layout>
               <v-layout row>
@@ -55,7 +55,7 @@
               <v-layout row>
                 <v-flex xs12 class="text-xs-center">
                   <h3 class="subheading"><b>Hit Count Table</b></h3>
-                  <hit-count-table class="pl-3 pr-3" :attack="attack.frames" style="max-height: 50vh; overflow-y: auto;"/>
+                  <hit-count-table class="pl-3 pr-3" :attack="attack.frames"/>
                 </v-flex>
               </v-layout>
             </v-container>
