@@ -99,7 +99,7 @@
               </v-flex>
             </v-layout>
             <v-layout row wrap>
-              <buff-list :effects="burst.levels[levelIndex].effects"/>
+              <buff-list :effects="burst.levels[levelIndex].effects" :context-handler="burstContextHandler"/>
             </v-layout>
           </v-container>
         </v-tab-item>
@@ -361,6 +361,11 @@ export default {
       return frames['frame times']
         .filter(time => (this.sparkedFrames[(+time + delay)] || []).length > 0)
         .length;
+    },
+    burstContextHandler (effect, index) {
+      return {
+        damageFrames: this.burst['damage frames'][index],
+      };
     },
   },
 };

@@ -1,5 +1,11 @@
+const atkIcon = require('@/assets/buff-translation/raid/raid_unit_name_icon_b.png');
+
 const IconKeyMappings = {
   UNKNOWN: { src: require('@/assets/secret.png'), name: 'UNKNOWN' },
+  ATK: { src: atkIcon, name: 'ATK' },
+  ST_ATK: { src: atkIcon, name: 'ST_ATK' },
+  AOE_ATK: { src: atkIcon, name: 'AOE_ATK' },
+  // most proc buffs
   BUFF_ATKUP: { name: 'BUFF_ATKUP' },
   BUFF_ATKDOWN: { name: 'BUFF_ATKDOWN' },
   BUFF_DEFUP: { name: 'BUFF_DEFUP' },

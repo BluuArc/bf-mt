@@ -34,10 +34,14 @@ class EffectProcessor {
   }
 
   static process (effect = {}, context) {
-    if (effect['proc id'] && ProcProcessor[effect['proc id']]) {
-      return ProcProcessor[effect['proc id']].process(effect, context);
-    } else if (effect['passive id'] && PassiveProcessor[effect['passive id']]) {
-      return PassiveProcessor[effect['passive id']].process(effect, context);
+    try {
+      if (effect['proc id'] && ProcProcessor[effect['proc id']]) {
+        return ProcProcessor[effect['proc id']].process(effect, context);
+      } else if (effect['passive id'] && PassiveProcessor[effect['passive id']]) {
+        return PassiveProcessor[effect['passive id']].process(effect, context);
+      }
+    } catch (err) {
+      console.error('Error parsing effect', { effect, context }, err);
     }
     return this.defaultProcessResult(effect, context);
   }

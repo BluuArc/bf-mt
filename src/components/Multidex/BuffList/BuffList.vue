@@ -45,6 +45,9 @@ export default {
     context: {
       default: () => undefined,
     },
+    contextHandler: {
+      type: Function,
+    },
   },
   components: {
     'buff-icon': BuffIcon,
@@ -62,8 +65,14 @@ export default {
     iconKeyMappings: () => IconKeyMappings,
   },
   methods: {
-    processEffect (effect) {
-      return EffectProcessor.process(effect, this.context);
+    processEffect (effect, index) {
+      let context;
+      if (typeof this.contextHandler === 'function') {
+        context = this.contextHandler(effect, index);
+      } else {
+        context = this.context;
+      }
+      return EffectProcessor.process(effect, context);
     },
     logBuff (buff) {
       console.debug(buff);

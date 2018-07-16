@@ -14,6 +14,54 @@ const procs = {
     });
     return entries;
   })(),
+  '1': {
+    desc: 'Regular Attack',
+    config: {},
+    possibleIcons: () => ['ST_ATK', 'AOE_ATK'].map(helper.getIconKey),
+    type: [EffectTypes.ATTACK.name],
+    process (effect = {}, context = {}) {
+      const values = [];
+      const targetData = (effect['target area'] || '').toUpperCase() === 'SINGLE' ? 'ST' : (effect['target area'] || '').toUpperCase();
+      const targetType = effect['target type'];
+      const damageFrames = context.damageFrames || {};
+
+      const iconKey = helper.getIconKey(`${targetData || 'ST'}_ATK`);
+      const hits = +(damageFrames.hits || 0);
+      const bbAtk = effect['bb atk%'] || 0;
+
+      const bbDmg = effect['bb dmg%'];
+      const flatAtk = effect['bb flat atk'];
+      const distribution = damageFrames['hit dmg% distribution (total)'];
+
+      const extraModifiers = [];
+      if (bbDmg) {
+        extraModifiers.push(`${bbDmg}% BB DMG`);
+      }
+      if (flatAtk) {
+        extraModifiers.push(`${helper.getNumberAsPolarizedNumber(flatAtk)} flat ATK`);
+      }
+      if (distribution !== undefined && +distribution !== 100) {
+        extraModifiers.push(`${distribution}% power`);
+      }
+
+      const innateModifiers = helper.getInnateAttackBoosts(effect);
+
+      const fullModifiers = extraModifiers.concat(innateModifiers);
+      let desc = [`${hits} hit ${bbAtk}%`, targetData || 'attack', fullModifiers.length > 0 ? `(${fullModifiers.join(', ')})` : ''].join(' ');
+      if (targetType && targetType !== 'enemy') {
+        desc += ` to ${targetType}`;
+      }
+
+      values.push({ iconKey, value: { hits, bbAtk, bbDmg, flatAtk, distribution }, desc });
+
+      return {
+        type: this.type,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
   '5': {
     desc: 'Regular/Elemental ATK/DEF/REC/Crit Rate',
     config: {

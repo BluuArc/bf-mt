@@ -17,8 +17,11 @@ const helper = {
   containsAnyKey (input = {}, keys = []) {
     return Object.keys(input).some(key => keys.includes(key));
   },
+  getNumberAsPolarizedNumber (number = 0) {
+    return `${(number < 0 ? number.toString() : `+${number}`)}`;
+  },
   getNumberAsPolarizedPercent (number = 0) {
-    return `${(number < 0 ? number.toString() : `+${number}`)}%`;
+    return `${this.getNumberAsPolarizedNumber(number)}%`;
   },
   getTargetData (inputArea, inputType, options = {}) {
     const validTypes = ['party', 'self', 'enemy'];
@@ -91,6 +94,24 @@ const helper = {
         };
       },
     };
+  },
+  getInnateAttackBoosts (effect) {
+    const innateBoosts = [];
+
+    const bc = effect['bb bc%'];
+    const crit = effect['bb crit%'];
+    const hc = effect['bb hc%'];
+    if (bc) {
+      innateBoosts.push(`innate ${this.getNumberAsPolarizedPercent(bc)} BC drop rate`);
+    }
+    if (crit) {
+      innateBoosts.push(`innate ${this.getNumberAsPolarizedPercent(crit)} Critical Hit rate`);
+    }
+    if (hc) {
+      innateBoosts.push(`innate ${this.getNumberAsPolarizedPercent(hc)} HC drop rate`);
+    }
+
+    return innateBoosts;
   },
 };
 

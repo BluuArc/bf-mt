@@ -11,6 +11,20 @@
       width="480" height="416"
       xlink:href="@/assets/buff-translation/battle/battle_buff_icon.png"
       :transform="`translate(${getBattleBuffIconCoordinates(iconKey)})`"/>
+    <image
+      v-else-if="iconKey === iconKeyMapping.ST_ATK.name || iconKey === iconKeyMapping.ATK.name"
+      width="30" height="32"
+      :xlink:href="iconKeyMapping.ATK.src"/>
+    <template v-else-if="iconKey === iconKeyMapping.AOE_ATK.name">
+      <image
+        width="30" height="32"
+        :xlink:href="iconKeyMapping.ATK.src"
+        transform="translate(-5 0)"/>
+      <image
+        width="30" height="32"
+        :xlink:href="iconKeyMapping.ATK.src"
+        transform="translate(35 0) scale(-1 1)"/>
+    </template>
     <template v-else>
       <image
         xlink:href="@/assets/item_frame_bg2.png"
@@ -25,7 +39,7 @@
 </template>
 
 <script>
-// import IconKeyMapping from '@/store/instances/EffectProcessor/icon-key-mappings';
+import IconKeyMapping from '@/store/instances/EffectProcessor/icon-key-mappings';
 
 export default {
   props: {
@@ -216,6 +230,7 @@ export default {
       'BUFF_CRITDMG_VUL',
       'BUFF_ELEDMG_VUL',
     ],
+    iconKeyMapping: () => IconKeyMapping,
   },
   methods: {
     getBattleBuffIconCoordinates (key) {
