@@ -21,6 +21,7 @@
             <span v-if="effect.parent.originalEffect.sp_type">({{ handleSpType(effect.parent.originalEffect.sp_type) }})</span>
             <span v-if="effect.value.turns && !effect.triggeredEffectContext">{{ effect.value.turns.text }}</span>
             <span>{{ effect.desc }}</span>
+            <span v-text="`[${getEffectId(effect.parent.originalEffect)}]`"/>
           </p>
         </v-flex>
       </template>
@@ -77,6 +78,10 @@ export default {
     },
     handleSpType (text) {
       return ProcessorHelper.capitalize(text).replace('sbb', 'SBB').replace('ubb', 'UBB').replace('bb', 'BB');
+    },
+    getEffectId (effect) {
+      return effect['proc id'] || effect['passive id'] || effect['buff id'] ||
+        effect['unknown proc id'] || effect['unknown passive id'] || effect['unknown buff id'] || -1;
     },
   },
 };

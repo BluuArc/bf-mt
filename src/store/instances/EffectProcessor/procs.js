@@ -1,6 +1,7 @@
 import EffectTypes from './effect-types';
 import helper from './processor-helper';
 import { knownConstants } from '../../modules/db.common';
+import IconKeyMappings from './icon-key-mappings';
 const procTypes = require('@/assets/buff-translation/procs.json');
 
 const procs = {
@@ -157,6 +158,54 @@ const procs = {
         }
       });
 
+      return {
+        type: this.type,
+        turnDuration: turns.value,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
+  '18': {
+    desc: 'Damage Reduction/Mitigation',
+    config: {},
+    possibleIcons: () => [IconKeyMappings.BUFF_DAMAGECUT.name],
+    type: [EffectTypes.ACTIVE.name],
+    process (effect = {}, context) {
+      const values = [];
+      const targetData = helper.getTargetData(effect);
+      const turns = helper.getTurns(effect['dmg% reduction turns (36)']);
+
+      const iconKey = IconKeyMappings.BUFF_DAMAGECUT.name;
+      const value = effect['dmg% reduction'];
+
+      values.push({ iconKey, value: { value, turns, targetData }, desc: `${helper.getNumberAsPolarizedPercent(+value)} mitigation ${targetData}` });
+
+      return {
+        type: this.type,
+        turnDuration: turns.value,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
+  '56': {
+    desc: 'Chance Angel Idol (AI)',
+    config: {},
+    possibleIcons: () => [IconKeyMappings.BUFF_KOBLOCK.name],
+    type: [EffectTypes.ACTIVE.name],
+    process (effect = {}, context) {
+      const values = [];
+      const targetData = helper.getTargetData(effect);
+      const turns = helper.getTurns(effect['angel idol buff turns (91)']);
+
+      const iconKey = IconKeyMappings.BUFF_KOBLOCK.name;
+      const recoverChance = effect['angel idol recover chance%'];
+      const recoverHp = effect['angel idol recover hp%'];
+
+      values.push({ iconKey, value: { value: recoverChance, hp: recoverHp, turns, targetData }, desc: `${recoverChance}% chance to prevent one knockout (recover ${recoverHp}% on use) ${targetData}` });
       return {
         type: this.type,
         turnDuration: turns.value,
