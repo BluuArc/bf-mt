@@ -113,6 +113,9 @@ const helper = {
 
     return innateBoosts;
   },
+  getFormattedMinMax (min = 0, max = 0) {
+    return (min !== max) ? [min.toString(), max > 0 ? '-' : ' to ', max.toString()].join('') : (min || max);
+  },
 };
 
 export default helper;

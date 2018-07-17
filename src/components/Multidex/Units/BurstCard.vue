@@ -32,7 +32,7 @@
     <v-card-text class="pt-0">
       <v-tabs v-model="activeTab" class="pb-2">
         <v-tab>Description</v-tab>
-        <v-tab v-if="burst">Hitcounts</v-tab>
+        <v-tab v-if="burst && hitCountData.length > 0">Hitcounts</v-tab>
         <v-tab v-if="burst">JSON</v-tab>
         <v-tab v-if="burst">Buff List (Alpha)</v-tab>
       </v-tabs>

@@ -23,7 +23,7 @@ const procs = {
       const values = [];
       const targetData = (effect['target area'] || '').toUpperCase() === 'SINGLE' ? 'ST' : (effect['target area'] || '').toUpperCase();
       const targetType = effect['target type'];
-      const damageFrames = context.damageFrames || {};
+      const { damageFrames = {} } = context;
 
       const iconKey = helper.getIconKey(`${targetData || 'ST'}_ATK`);
       const hits = +(damageFrames.hits || 0);
@@ -53,6 +53,37 @@ const procs = {
       }
 
       values.push({ iconKey, value: { hits, bbAtk, bbDmg, flatAtk, distribution }, desc });
+
+      return {
+        type: this.type,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
+  '2': {
+    desc: 'Burst Heal',
+    config: {},
+    possibleIcons: () => [IconKeyMappings.INSTANT_BUFF_HPREC.name],
+    type: [EffectTypes['INSTANT/BURST'].name],
+    process (effect = {}, context = {}) {
+      const values = [];
+      const targetData = helper.getTargetData(effect);
+      const { damageFrames = {} } = context;
+      const { hits = 1 } = damageFrames;
+
+      const healerRec = +effect['rec added% (from healer)'];
+      const healLow = +effect['heal low'];
+      const healHigh = +effect['heal high'];
+
+      let desc = `Recover ${helper.getFormattedMinMax(healLow, healHigh)} HP (${helper.getNumberAsPolarizedPercent(healerRec)} healer REC)`;
+      if (hits > 1) {
+        desc += ` over ${hits} hits`;
+      }
+
+      const iconKey = IconKeyMappings.INSTANT_BUFF_HPREC.name;
+      values.push({ iconKey, value: { healLow, healHigh, healerRec, targetData }, desc: [desc, targetData].join(' ') });
 
       return {
         type: this.type,

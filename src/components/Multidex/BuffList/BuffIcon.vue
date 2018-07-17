@@ -25,6 +25,13 @@
         :xlink:href="iconKeyMapping.ATK.src"
         transform="translate(35 0) scale(-1 1)"/>
     </template>
+    <template v-else-if="iconKey.startsWith('INSTANT') && battleBuffIconKeys.includes(getBattleBuffKeyFromInstantIconKey(iconKey))">
+      <image
+        width="480" height="416"
+        xlink:href="@/assets/buff-translation/battle/battle_buff_icon.png"
+        :transform="`translate(${getBattleBuffIconCoordinates(getBattleBuffKeyFromInstantIconKey(iconKey))})`"/>
+      <text x="4" y="18" font-size="25px" font-weight="bold" fill="white" stroke="black" stroke-width="2px">+</text>
+    </template>
     <template v-else>
       <image
         xlink:href="@/assets/item_frame_bg2.png"
@@ -240,6 +247,11 @@ export default {
       const x = index - (y * rowLength);
       console.debug(key, index, x, y);
       return [x, y].map(coord => coord * -32).join(' ');
+    },
+    getBattleBuffKeyFromInstantIconKey (instantKey = 'INSTANT_SOME_BUFF') {
+      // eslint-disable-next-line no-unused-vars
+      const [ instantPrefix, ...battleBuffIconKey ] = instantKey.split('_');
+      return battleBuffIconKey.join('_');
     },
   },
 };
