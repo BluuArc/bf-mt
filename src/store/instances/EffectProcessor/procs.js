@@ -119,6 +119,37 @@ const procs = {
       };
     },
   },
+  '4': {
+    desc: 'Instant BB Gauge Refill',
+    config: {},
+    possibleIcons: () => [IconKeyMappings.INSTANT_BUFF_BBREC.name],
+    type: [EffectTypes['INSTANT/BURST'].name],
+    process (effect = {}, context) {
+      const values = [];
+      const targetData = helper.getTargetData(effect);
+
+      const fillPercent = effect['bb bc fill%'] || 0;
+      const fillRaw = effect['bb bc fill'];
+
+      const iconKey = IconKeyMappings.INSTANT_BUFF_BBREC.name;
+      if ((fillPercent && fillPercent > 0) || (!fillPercent && !fillRaw)) {
+        const desc = (+fillPercent === 100 ? 'Fills BB gauge to max' : `${helper.getNumberAsPolarizedPercent(fillPercent)} BB gauge fill`);
+        values.push({ iconKey, value: { fillPercent, targetData }, desc: [desc, targetData].join(' ') });
+      }
+
+      if (fillRaw && fillRaw > 0) {
+        const desc = `${helper.getNumberAsPolarizedNumber(fillRaw)} BC fill ${targetData}`;
+        values.push({ iconKey, value: { fillRaw, targetData }, desc });
+      }
+
+      return {
+        type: this.type,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
   '5': {
     desc: 'Regular/Elemental ATK/DEF/REC/Crit Rate',
     config: {
