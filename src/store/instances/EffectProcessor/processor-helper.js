@@ -1,10 +1,14 @@
 
 import IconKeyMappings from './icon-key-mappings';
 import EffectTypes from './effect-types';
+import numbro from 'numbro';
 
 const iconGeneratorSymbol = Symbol('iconGeneratorSymbol');
 const helper = {
   iconGeneratorSymbol,
+  formatNumber (number, options = { thousandSeparated: true }, useMinThreshold = true) {
+    return (useMinThreshold && number < 1000) ? number : numbro(number).format(options);
+  },
   multiStatToObject (hp, atk, def, rec, crit) {
     return {
       hp,
@@ -114,7 +118,8 @@ const helper = {
     return innateBoosts;
   },
   getFormattedMinMax (min = 0, max = 0) {
-    return (min !== max) ? [min.toString(), max > 0 ? '-' : ' to ', max.toString()].join('') : (min || max);
+    const [formattedMin, formattedMax] = [this.formatNumber(min), this.formatNumber(max)];
+    return (min !== max) ? [formattedMin, max > 0 ? '-' : ' to ', formattedMax].join('') : (formattedMin || formattedMax);
   },
 };
 

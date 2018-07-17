@@ -93,6 +93,32 @@ const procs = {
       };
     },
   },
+  '3': {
+    desc: 'Heal over Time (HoT)',
+    config: {},
+    possibleIcons: () => [IconKeyMappings.BUFF_HPREC.name],
+    type: [EffectTypes.ACTIVE.name],
+    process (effect = {}, context) {
+      const values = [];
+      const targetData = helper.getTargetData(effect);
+      const turns = helper.getTurns(effect['gradual heal turns (8)']);
+
+      const targetRec = +effect['rec added% (from target)'];
+      const healLow = +effect['gradual heal low'] || 0;
+      const healHigh = +effect['gradual heal high'] || 0;
+
+      const iconKey = IconKeyMappings.BUFF_HPREC.name;
+      values.push({ iconKey, value: { healLow, healHigh, targetRec, turns, targetData }, desc: `${helper.getFormattedMinMax(healLow, healHigh)} HP Recovery (${helper.getNumberAsPolarizedPercent(targetRec)} target REC) ${targetData}` });
+
+      return {
+        type: this.type,
+        turnDuration: turns.value,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
   '5': {
     desc: 'Regular/Elemental ATK/DEF/REC/Crit Rate',
     config: {
