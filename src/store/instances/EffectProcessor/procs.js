@@ -108,7 +108,7 @@ const procs = {
       const healHigh = +effect['gradual heal high'] || 0;
 
       const iconKey = IconKeyMappings.BUFF_HPREC.name;
-      values.push({ iconKey, value: { healLow, healHigh, targetRec, turns, targetData }, desc: `${helper.getFormattedMinMax(healLow, healHigh)} HP Recovery (${helper.getNumberAsPolarizedPercent(targetRec)} target REC) ${targetData}` });
+      values.push({ iconKey, value: { healLow, healHigh, targetRec, turns, targetData }, desc: `${helper.getFormattedMinMax(healLow, healHigh)} HP/Turn (${helper.getNumberAsPolarizedPercent(targetRec)} target REC) ${targetData}` });
 
       return {
         type: this.type,
@@ -321,6 +321,51 @@ const procs = {
       return {
         type: this.type,
         turnDuration: turns.value,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
+  '19': {
+    desc: 'BC Fill per Turn',
+    config: {},
+    possibleIcons: () => [IconKeyMappings.BUFF_BBREC.name],
+    type: [EffectTypes.ACTIVE.name],
+    process (effect = {}, context) {
+      const values = [];
+      const targetData = helper.getTargetData(effect);
+      const turns = helper.getTurns(effect['increase bb gauge gradual turns (37)']);
+
+      const iconKey = IconKeyMappings.BUFF_BBREC.name;
+      const fillPerTurn = effect['increase bb gauge gradual'];
+      values.push({ iconKey, value: { fillPerTurn, turns, targetData }, desc: `${helper.getNumberAsPolarizedNumber(fillPerTurn)} BC/turn ${targetData}` });
+
+      return {
+        type: this.type,
+        turnDuration: turns.value,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
+  '31': {
+    desc: 'Instant BC fill/Flat BB Gauge Increase',
+    config: {},
+    possibleIcons: () => [IconKeyMappings.INSTANT_BUFF_BBREC.name],
+    type: [EffectTypes['INSTANT/BURST'].name],
+    process (effect = {}, context) {
+      const values = [];
+      const targetData = helper.getTargetData(effect);
+
+      const fillAmount = effect['increase bb gauge'];
+
+      const iconKey = IconKeyMappings.INSTANT_BUFF_BBREC.name;
+      values.push({ iconKey, value: { value: fillAmount, targetData }, desc: `${helper.getNumberAsPolarizedNumber(fillAmount)} BC fill ${targetData}` });
+
+      return {
+        type: this.type,
         originalEffect: effect,
         context,
         values,
