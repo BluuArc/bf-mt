@@ -20218,6 +20218,69 @@
       "830388"
     ]
   },
+  "830408": {
+    "desc": "20% increase to damage received for all allies, slightly boosts Spark, critical and all elemental damage for all allies when Atk Boosting Sphere is equipped & raises Atk parameter limits to 200000",
+    "effects": [
+      {
+        "conditions": [],
+        "passive target": "party",
+        "unknown passive id": "10008",
+        "unknown passive params": "-20,100,-20,100,-20,100,-20,100,0,0"
+      },
+      {
+        "conditions": [],
+        "increase atk cap": 200000,
+        "passive id": "143",
+        "passive target": "self"
+      },
+      {
+        "conditions": [
+          {
+            "sphere category required": "Atk Boosting",
+            "sphere category required (raw)": "13"
+          }
+        ],
+        "damage% for spark": 30,
+        "passive id": "31",
+        "passive target": "party"
+      },
+      {
+        "conditions": [
+          {
+            "sphere category required": "Atk Boosting",
+            "sphere category required (raw)": "13"
+          }
+        ],
+        "crit multiplier%": 30,
+        "passive id": "34",
+        "passive target": "party"
+      },
+      {
+        "conditions": [
+          {
+            "sphere category required": "Atk Boosting",
+            "sphere category required (raw)": "13"
+          }
+        ],
+        "dark units do extra elemental weakness dmg": true,
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 30,
+        "fire units do extra elemental weakness dmg": true,
+        "light units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "passive target": "party",
+        "thunder units do extra elemental weakness dmg": true,
+        "water units do extra elemental weakness dmg": true
+      }
+    ],
+    "id": "830408",
+    "name": "Path of Carnage",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "830408"
+    ]
+  },
   "830417": {
     "desc": "Negates all status ailments & considerably boosts damage against status afflicted foes",
     "effects": [
@@ -35346,8 +35409,14 @@
       },
       {
         "conditions": [],
+        "crit chance base resist%": 100,
+        "crit chance buffed resist%": 100,
+        "crit dmg base damage resist%": 100,
+        "crit dmg buffed damage resist%": 100,
         "passive id": "53",
-        "passive target": "self"
+        "passive target": "self",
+        "strong base element damage resist%": 100,
+        "strong buffed element damage resist%": 100
       },
       {
         "conditions": [],
