@@ -65,7 +65,7 @@
                     <div class="sp-table--row--description-col--desc-text">
                       <p class="ma-0">
                         <b>{{ String.fromCharCode(65 + index) }}:</b>
-                        {{ skill.skill.desc || skill.skill.name }}
+                        {{ getSkillDescription(skill) }}
                       </p>
                       <i v-if="skill.dependency">
                         {{ getDependencyText(skill) }}
@@ -279,6 +279,14 @@ export default {
         });
       });
       return buffs;
+    },
+    getSkillDescription (feskillEntry) {
+      const { desc = '', name = '' } = feskillEntry.skill;
+      if (desc === name) {
+        return desc || 'No Description';
+      } else {
+        return (desc.length > name.length) ? desc : `${name} (${desc})`;
+      }
     },
   },
 };
