@@ -10,7 +10,7 @@
       v-if="battleBuffIconKeys.includes(iconKey)"
       width="480" height="416"
       xlink:href="@/assets/buff-translation/battle/battle_buff_icon.png"
-      :transform="`translate(${getBattleBuffIconCoordinates(iconKey)})`"/>
+      :transform="`translate(${getBattleBuffIconCoordinates(battleBuffIconKeys.indexOf(iconKey))})`"/>
     <image
       v-else-if="iconKey === iconKeyMapping.ST_ATK.name || iconKey === iconKeyMapping.ATK.name"
       width="30" height="32"
@@ -29,7 +29,7 @@
       <image
         width="480" height="416"
         xlink:href="@/assets/buff-translation/battle/battle_buff_icon.png"
-        :transform="`translate(${getBattleBuffIconCoordinates(getBattleBuffKeyFromInstantIconKey(iconKey))})`"/>
+        :transform="`translate(${getBattleBuffIconCoordinates(battleBuffIconKeys.indexOf(getBattleBuffKeyFromInstantIconKey(iconKey)))})`"/>
       <g class="animate--pulse">
         <rect x="0" y="0" width="32" height="32" rx="8" ry="8" fill="grey" style="fill-opacity: 0.5"/>
         <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">B</text>
@@ -239,16 +239,51 @@ export default {
       'BUFF_PROB_RECREDUC',
       'BUFF_CRITDMG_VUL',
       'BUFF_ELEDMG_VUL',
+      'BUFF_NULLITEM',
+      'BUFF_NULLSWAP',
+      'BUFF_FIRESHIELDDOWN',
+      'BUFF_WATERSHIELDDOWN',
+      'BUFF_EARTHSHIELDDOWN',
+      'BUFF_THUNDERSHIELDDOWN',
+      'BUFF_LIGHTSHIELDDOWN',
+      'BUFF_DARKSHIELDDOWN',
+    ],
+    sgBattleBuffIconKeys: () => [
+      'SG_BUFF_TAUNT',
+      'SG_BUFF_STEALTH',
+      'SG_BUFF_ALL',
+      'SG_BUFF_FIRE',
+      'SG_BUFF_WATER',
+      'SG_BUFF_EARTH',
+      'SG_BUFF_THUNDER',
+      'SG_BUFF_LIGHT',
+      'SG_BUFF_DARK',
+      'SG_BUFF_SPHERE_DISABLE',
+      'SG_BUFF_DMG_IMMUNINTY',
+      'SG_BUFF_SKIP_TURN',
+      'SG_BUFF_TIME_STOP',
+      'SG_BUFF_EVASION',
+      'SG_BUFF_CRTRATEDOWN',
+      'SG_BUFF_FIRESHIELDDOWN',
+      'SG_BUFF_WATERSHIELDDOWN',
+      'SG_BUFF_EARTHSHIELDDOWN',
+      'SG_BUFF_THUNDERSHIELDDOWN',
+      'SG_BUFF_LIGHTSHIELDDOWN',
+      'SG_BUFF_DARKSHIELDDOWN',
+      'SG_BUFF_WEAKSHIELD',
+      'SG_BUFF_DAMAGECUTDOWN',
+      'SG_BUFF_ATK_EU',
+      'SG_BUFF_DBLBB_EU',
+      'SG_BUFF_REC_EU',
     ],
     iconKeyMapping: () => IconKeyMapping,
   },
   methods: {
-    getBattleBuffIconCoordinates (key) {
-      const index = this.battleBuffIconKeys.indexOf(key);
+    getBattleBuffIconCoordinates (index = 0) {
       const rowLength = 15;
       const y = Math.floor(index / rowLength);
       const x = index - (y * rowLength);
-      console.debug(key, index, x, y);
+      // console.debug(key, index, x, y);
       return [x, y].map(coord => coord * -32).join(' ');
     },
     getBattleBuffKeyFromInstantIconKey (instantKey = 'INSTANT_SOME_BUFF') {

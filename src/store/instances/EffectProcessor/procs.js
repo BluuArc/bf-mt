@@ -396,6 +396,30 @@ const procs = {
       };
     },
   },
+  '76': {
+    desc: 'Extra Action',
+    config: {},
+    possibleIcons: () => [IconKeyMappings.BUFF_DBLSTRIKE],
+    type: [EffectTypes.ACTIVE.name],
+    process (effect = {}, context) {
+      const values = [];
+      const targetData = helper.getTargetData(effect);
+      const turns = helper.getTurns(effect['extra action buff turns (123)']);
+
+      const iconKey = IconKeyMappings.BUFF_DBLSTRIKE.name;
+      const chance = +effect['chance% for extra action'] || 0;
+      const maxActions = +effect['max number of extra actions'] || 0;
+
+      values.push({ iconKey, value: { chance, maxActions, turns, targetData }, desc: `${helper.getNumberAsPolarizedPercent(chance)} chance to perform up to ${maxActions} extra ${maxActions === 1 ? 'action' : 'actions'}` });
+      return {
+        type: this.type,
+        turnDuration: turns.value,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
 };
 
 export default procs;
