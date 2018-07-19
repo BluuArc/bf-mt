@@ -30,7 +30,10 @@
         width="480" height="416"
         xlink:href="@/assets/buff-translation/battle/battle_buff_icon.png"
         :transform="`translate(${getBattleBuffIconCoordinates(getBattleBuffKeyFromInstantIconKey(iconKey))})`"/>
-      <text x="4" y="18" font-size="25px" font-weight="bold" fill="white" stroke="black" stroke-width="2px">+</text>
+      <g class="animate--pulse">
+        <rect x="0" y="0" width="32" height="32" rx="8" ry="8" fill="grey" style="fill-opacity: 0.5"/>
+        <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">B</text>
+      </g>
     </template>
     <template v-else>
       <image
@@ -264,6 +267,22 @@ export default {
 
 .buff-icon image:not(.buff-background) {
   z-index: 2;
+}
+
+.buff-icon .animate--pulse {
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 </style>
 
