@@ -4,6 +4,7 @@ import EffectTypes from './effect-types';
 import ProcProcessor from './procs';
 import UnknownProcProcessor from './unknown-procs';
 import PassiveProcessor from './passives';
+import UnknownPassiveProcessor from './unknown-passives';
 
 // TODO: import separate modules for handling procs, passives, and buffs
 class EffectProcessor {
@@ -42,6 +43,8 @@ class EffectProcessor {
         return UnknownProcProcessor[effect['unknown proc id']].process(effect, context);
       } else if (effect['passive id'] && PassiveProcessor[effect['passive id']]) {
         return PassiveProcessor[effect['passive id']].process(effect, context);
+      } else if (effect['unknown passive id'] && UnknownPassiveProcessor[effect['unknown passive id']]) {
+        return UnknownPassiveProcessor[effect['unknown passive id']].process(effect, context);
       }
     } catch (err) {
       console.error('Error parsing effect', { effect, context }, err);

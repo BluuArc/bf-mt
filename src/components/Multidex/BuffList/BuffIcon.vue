@@ -40,6 +40,28 @@
         <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">B</text>
       </g>
     </template>
+    <template v-else-if="iconKey === iconKeyMapping.PASSIVE_BUFF_HPRECTURNSTART.name">
+      <image
+        width="480" height="416"
+        xlink:href="@/assets/buff-translation/battle/battle_buff_icon.png"
+        :transform="`translate(${getBattleBuffIconCoordinates(battleBuffIconKeys.indexOf(iconKeyMapping.BUFF_HPREC.name))})`"/>
+      <image
+        width="36" height="36"
+        xlink:href="@/assets/buff-translation/raid/raid_room_time.png"
+        x="24" y="0"
+        transform="scale(0.55)"/>
+    </template>
+    <template v-else-if="iconKey === iconKeyMapping.PASSIVE_BUFF_BBRECTURNSTART.name">
+      <image
+        width="480" height="416"
+        xlink:href="@/assets/buff-translation/battle/battle_buff_icon.png"
+        :transform="`translate(${getBattleBuffIconCoordinates(battleBuffIconKeys.indexOf(iconKeyMapping.BUFF_BBREC.name))})`"/>
+      <image
+        width="36" height="36"
+        xlink:href="@/assets/buff-translation/raid/raid_room_time.png"
+        x="24" y="0"
+        transform="scale(0.55)"/>
+    </template>
     <template v-else>
       <image
         xlink:href="@/assets/item_frame_bg2.png"

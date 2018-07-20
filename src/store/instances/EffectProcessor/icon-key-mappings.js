@@ -5,9 +5,15 @@ const IconKeyMappings = {
   ATK: { src: atkIcon, name: 'ATK' },
   ST_ATK: { src: atkIcon, name: 'ST_ATK' },
   AOE_ATK: { src: atkIcon, name: 'AOE_ATK' },
+
+  // custom passives
+  PASSIVE_BUFF_HPRECTURNSTART: { name: 'PASSIVE_BUFF_HPRECTURNSTART' }, // based on BUFF_HPREC
+  PASSIVE_BUFF_BBRECTURNSTART: { name: 'PASSIVE_BUFF_BBRECTURNSTART' }, // based on BUFF_BBREC
+
   // instant buffs
   INSTANT_BUFF_HPREC: { name: 'INSTANT_BUFF_HPREC' }, // based off of BUFF_HPREC
   INSTANT_BUFF_BBREC: { name: 'INSTANT_BUFF_BBREC' },
+
   // most proc buffs
   BUFF_ATKUP: { name: 'BUFF_ATKUP' },
   BUFF_ATKDOWN: { name: 'BUFF_ATKDOWN' },

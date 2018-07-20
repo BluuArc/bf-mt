@@ -1,6 +1,7 @@
 import Procs from '@/store/instances/EffectProcessor/procs';
 import Passives from '@/store/instances/EffectProcessor/passives';
 import UnknownProcs from '@/store/instances/EffectProcessor/unknown-procs';
+import UnknownPassives from '@/store/instances/EffectProcessor/unknown-passives';
 
 export const isValidServer = server => ['gl', 'eu', 'jp'].includes(server);
 export const createState = () => {
@@ -201,7 +202,9 @@ const getSortVal = (item = '') => {
 
 const formattedUnknownProcs = Object.keys(UnknownProcs).sort((a, b) => getSortVal(a) - getSortVal(b)).map(id => ({ value: id, text: `[${id}] ${UnknownProcs[id].desc}`, data: UnknownProcs[id] }));
 const formattedProcs = Object.keys(Procs).filter(id => !UnknownProcs[id]).sort((a, b) => getSortVal(a) - getSortVal(b)).map(id => ({ value: id, text: `[${id}] ${Procs[id].desc}`, data: Procs[id] }));
-const formattedPassives = Object.keys(Passives).sort((a, b) => getSortVal(a) - getSortVal(b)).map(id => ({ value: id, text: `[${id}] ${Passives[id].desc}`, data: Passives[id] }));
+
+const formattedUnknownPassives = Object.keys(UnknownPassives).sort((a, b) => getSortVal(a) - getSortVal(b)).map(id => ({ value: id, text: `[${id}] ${UnknownPassives[id].desc}`, data: UnknownPassives[id] }));
+const formattedPassives = Object.keys(Passives).filter(id => !UnknownPassives[id]).sort((a, b) => getSortVal(a) - getSortVal(b)).map(id => ({ value: id, text: `[${id}] ${Passives[id].desc}`, data: Passives[id] }));
 export const knownConstants = {
   elements: ['fire', 'water', 'earth', 'thunder', 'light', 'dark'],
   gender: ['male', 'female', 'other'],
@@ -251,7 +254,7 @@ export const knownConstants = {
   },
   buffSearchOptions: ['ls', 'es', 'sp', 'bb', 'sbb', 'ubb'],
   procs: formattedProcs.concat(formattedUnknownProcs).sort((a, b) => getSortVal(a.value) - getSortVal(b.value)),
-  passives: formattedPassives,
+  passives: formattedPassives.concat(formattedUnknownPassives).sort((a, b) => getSortVal(a.value) - getSortVal(b.value)),
 };
 
 const commonFunctions = {

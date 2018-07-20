@@ -1,4 +1,3 @@
-
 import IconKeyMappings from './icon-key-mappings';
 import EffectTypes from './effect-types';
 import numbro from 'numbro';

@@ -7,10 +7,8 @@ const passiveTypes = require('@/assets/buff-translation/passives.json');
 const passives = {
   ...(() => {
     const entries = {};
-    Object.values(passiveTypes).forEach(type => {
-      Object.keys(type).forEach(id => {
-        entries[id] = helper.generateDefaultEntry(id);
-      });
+    Object.keys(passiveTypes.passive).forEach(id => {
+      entries[id] = helper.generateDefaultEntry(id);
     });
     return entries;
   })(),
