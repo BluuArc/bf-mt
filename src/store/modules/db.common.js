@@ -1,5 +1,6 @@
 import Procs from '@/store/instances/EffectProcessor/procs';
 import Passives from '@/store/instances/EffectProcessor/passives';
+import UnknownProcs from '@/store/instances/EffectProcessor/unknown-procs';
 
 export const isValidServer = server => ['gl', 'eu', 'jp'].includes(server);
 export const createState = () => {
@@ -194,9 +195,13 @@ export const createActions = (worker, downloadWorker, dbEntryName = 'units') => 
 };
 
 const getSortVal = (item = '') => {
+  // sort by number or the number from reverse order of concatenated char codes
   return !isNaN(item) ? +item : +Array.from(item).map(a => a.charCodeAt().toString()).reverse().join('');
 };
 
+const formattedUnknownProcs = Object.keys(UnknownProcs).sort((a, b) => getSortVal(a) - getSortVal(b)).map(id => ({ value: id, text: `[${id}] ${UnknownProcs[id].desc}`, data: UnknownProcs[id] }));
+const formattedProcs = Object.keys(Procs).filter(id => !UnknownProcs[id]).sort((a, b) => getSortVal(a) - getSortVal(b)).map(id => ({ value: id, text: `[${id}] ${Procs[id].desc}`, data: Procs[id] }));
+const formattedPassives = Object.keys(Passives).sort((a, b) => getSortVal(a) - getSortVal(b)).map(id => ({ value: id, text: `[${id}] ${Passives[id].desc}`, data: Passives[id] }));
 export const knownConstants = {
   elements: ['fire', 'water', 'earth', 'thunder', 'light', 'dark'],
   gender: ['male', 'female', 'other'],
@@ -245,8 +250,8 @@ export const knownConstants = {
     random: 'RT',
   },
   buffSearchOptions: ['ls', 'es', 'sp', 'bb', 'sbb', 'ubb'],
-  procs: Object.keys(Procs).sort((a, b) => getSortVal(a) - getSortVal(b)).map(id => ({ value: id, text: `[${id}] ${Procs[id].desc}`, data: Procs[id] })),
-  passives: Object.keys(Passives).sort((a, b) => getSortVal(a) - getSortVal(b)).map(id => ({ value: id, text: `[${id}] ${Passives[id].desc}`, data: Passives[id] })),
+  procs: formattedProcs.concat(formattedUnknownProcs).sort((a, b) => getSortVal(a.value) - getSortVal(b.value)),
+  passives: formattedPassives,
 };
 
 const commonFunctions = {

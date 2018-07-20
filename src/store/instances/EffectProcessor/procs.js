@@ -7,10 +7,8 @@ const procTypes = require('@/assets/buff-translation/procs.json');
 const procs = {
   ...(() => {
     const entries = {};
-    Object.values(procTypes).forEach(type => {
-      Object.keys(type).forEach(id => {
-        entries[id] = helper.generateDefaultEntry(id);
-      });
+    Object.keys(procTypes.proc).forEach(id => {
+      entries[id] = helper.generateDefaultEntry(id);
     });
     return entries;
   })(),
@@ -399,7 +397,7 @@ const procs = {
   '76': {
     desc: 'Extra Action',
     config: {},
-    possibleIcons: () => [IconKeyMappings.BUFF_DBLSTRIKE],
+    possibleIcons: () => [IconKeyMappings.BUFF_DBLSTRIKE.name],
     type: [EffectTypes.ACTIVE.name],
     process (effect = {}, context) {
       const values = [];
@@ -410,7 +408,7 @@ const procs = {
       const chance = +effect['chance% for extra action'] || 0;
       const maxActions = +effect['max number of extra actions'] || 0;
 
-      values.push({ iconKey, value: { chance, maxActions, turns, targetData }, desc: `${helper.getNumberAsPolarizedPercent(chance)} chance to perform up to ${maxActions} extra ${maxActions === 1 ? 'action' : 'actions'}` });
+      values.push({ iconKey, value: { chance, maxActions, turns, targetData }, desc: `${helper.getNumberAsPolarizedPercent(chance)} chance to perform up to ${maxActions} extra ${maxActions === 1 ? 'action' : 'actions'} ${targetData}` });
       return {
         type: this.type,
         turnDuration: turns.value,

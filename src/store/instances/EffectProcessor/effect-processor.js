@@ -2,6 +2,7 @@ import IconKeyMappings from './icon-key-mappings';
 import EffectTypes from './effect-types';
 
 import ProcProcessor from './procs';
+import UnknownProcProcessor from './unknown-procs';
 import PassiveProcessor from './passives';
 
 // TODO: import separate modules for handling procs, passives, and buffs
@@ -37,6 +38,8 @@ class EffectProcessor {
     try {
       if (effect['proc id'] && ProcProcessor[effect['proc id']]) {
         return ProcProcessor[effect['proc id']].process(effect, context);
+      } else if (effect['unknown proc id'] && UnknownProcProcessor[effect['unknown proc id']]) {
+        return UnknownProcProcessor[effect['unknown proc id']].process(effect, context);
       } else if (effect['passive id'] && PassiveProcessor[effect['passive id']]) {
         return PassiveProcessor[effect['passive id']].process(effect, context);
       }

@@ -12,6 +12,11 @@
       xlink:href="@/assets/buff-translation/battle/battle_buff_icon.png"
       :transform="`translate(${getBattleBuffIconCoordinates(battleBuffIconKeys.indexOf(iconKey))})`"/>
     <image
+      v-else-if="sgBattleBuffIconKeys.includes(iconKey)"
+      width="480" height="192"
+      xlink:href="@/assets/buff-translation/battle/battle_buff_icon_sg.png"
+      :transform="`translate(${getBattleBuffIconCoordinates(sgBattleBuffIconKeys.indexOf(iconKey), iconKey)})`"/>
+    <image
       v-else-if="iconKey === iconKeyMapping.ST_ATK.name || iconKey === iconKeyMapping.ATK.name"
       width="30" height="32"
       :xlink:href="iconKeyMapping.ATK.src"/>
@@ -279,11 +284,11 @@ export default {
     iconKeyMapping: () => IconKeyMapping,
   },
   methods: {
-    getBattleBuffIconCoordinates (index = 0) {
+    getBattleBuffIconCoordinates (index = 0, key) {
       const rowLength = 15;
       const y = Math.floor(index / rowLength);
       const x = index - (y * rowLength);
-      // console.debug(key, index, x, y);
+      console.debug(key, index, x, y);
       return [x, y].map(coord => coord * -32).join(' ');
     },
     getBattleBuffKeyFromInstantIconKey (instantKey = 'INSTANT_SOME_BUFF') {
