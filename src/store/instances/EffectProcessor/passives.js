@@ -4,6 +4,12 @@ import EffectProcessor from './effect-processor';
 // import { knownConstants } from '../../modules/db.common';
 const passiveTypes = require('@/assets/buff-translation/passives.json');
 
+const getConditionalData = (effect, context) => {
+  const value = helper.parseConditions(effect);
+  const text = helper.convertParsedConditionsToMessage(value, context);
+  return { value, text };
+};
+
 const passives = {
   ...(() => {
     const entries = {};
@@ -34,6 +40,7 @@ const passives = {
     type: [EffectTypes.PASSIVE.name],
     possibleIcons: () => [],
     process (effect = {}, context) {
+      const conditions = getConditionalData(effect, context);
       const addToLabel = this.config.burstTypes
         .filter(type => !!effect[`trigger on ${type}`])
         .map(type => type.toUpperCase())
@@ -54,12 +61,14 @@ const passives = {
         return values.map(v => ({
           ...v,
           triggeredEffectContext,
+          conditions,
           desc: `Add to ${addToLabel}: ${v.value.turns ? `${v.value.turns.text} ` : ''}${v.desc}`,
         }));
       }).reduce((acc, val) => acc.concat(val), []);
       return {
         type: this.type.concat(skillTypes),
         addToLabel,
+        conditions,
         originalEffect: effect,
         context,
         values,

@@ -19,6 +19,7 @@
       <v-tabs v-model="activeTab" class="pb-2">
         <v-tab>Description</v-tab>
         <v-tab v-if="extraSkill">JSON</v-tab>
+        <v-tab v-if="extraSkill">Buff List (Alpha)</v-tab>
       </v-tabs>
       <v-tabs-items v-model="activeTab" touchless>
         <v-tab-item :key="getLabelIndex('Description')">
@@ -35,6 +36,13 @@
         <v-tab-item v-if="extraSkill" :key="getLabelIndex('JSON')">
           <json-viewer :json="extraSkill" :change-view="activeTab"/>
         </v-tab-item>
+        <v-tab-item v-if="extraSkill">
+          <v-container fluid>
+            <v-layout row wrap>
+              <buff-list :effects="extraSkill.effects"/>
+            </v-layout>
+          </v-container>
+        </v-tab-item>
       </v-tabs-items>
     </v-card-text>
   </v-card>
@@ -44,12 +52,14 @@
 import { mapGetters } from 'vuex';
 import JsonViewer from '@/components/Multidex/JsonViewer';
 import EffectList from '@/components/Multidex/EffectList/MainTable';
+import BuffList from '@/components/Multidex/BuffList/BuffList';
 
 export default {
   props: ['extraSkill'],
   components: {
     'json-viewer': JsonViewer,
     'effect-list': EffectList,
+    'buff-list': BuffList,
   },
   computed: {
     ...mapGetters('extraSkills', ['getMultidexPathTo']),

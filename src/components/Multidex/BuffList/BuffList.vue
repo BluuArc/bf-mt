@@ -22,6 +22,7 @@
             <span v-if="effect.value.turns && !effect.triggeredEffectContext">{{ effect.value.turns.text }}</span>
             <span>{{ effect.desc }}</span>
             <span v-text="`[${getEffectId(effect.parent.originalEffect)}]`"/>
+            <span v-if="effect.conditions && effect.conditions.text" class="d-block"><i>Requirement:</i> {{ effect.conditions.text }}</span>
           </p>
         </v-flex>
       </template>
@@ -30,6 +31,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import EffectProcessor from '@/store/instances/EffectProcessor/effect-processor';
 import IconKeyMappings from '@/store/instances/EffectProcessor/icon-key-mappings';
 import ProcessorHelper from '@/store/instances/EffectProcessor/processor-helper';
@@ -53,6 +55,8 @@ export default {
     'buff-icon': BuffIcon,
   },
   computed: {
+    ...mapGetters('units', ['unitById']),
+    ...mapGetters('items', ['itemById']),
     effectTypes: () => EffectTypes,
     processedEffects () {
       return this.effects
@@ -63,6 +67,12 @@ export default {
         }).reduce((acc, val) => acc.concat(val), []);
     },
     iconKeyMappings: () => IconKeyMappings,
+    minimumContextFields () {
+      return {
+        unitById: this.unitById,
+        itemById: this.itemById,
+      };
+    },
   },
   methods: {
     processEffect (effect, index) {
@@ -70,9 +80,9 @@ export default {
       if (typeof this.contextHandler === 'function') {
         context = this.contextHandler(effect, index);
       } else {
-        context = this.context;
+        context = this.context || {};
       }
-      return EffectProcessor.process(effect, context);
+      return EffectProcessor.process(effect, { ...(this.minimumContextFields), ...context });
     },
     logBuff (buff) {
       console.debug(buff);

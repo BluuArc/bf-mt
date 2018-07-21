@@ -120,6 +120,131 @@ const helper = {
     const [formattedMin, formattedMax] = [this.formatNumber(min), this.formatNumber(max)];
     return (min !== max) ? [formattedMin, max > 0 ? '-' : ' to ', formattedMax].join('') : (formattedMin || formattedMax);
   },
+  getSphereCategory (num) {
+    const categories = {
+      0: 'None',
+      1: 'Status Enhancing',
+      2: 'Critical',
+      3: 'Drop',
+      4: 'Ailment Inducing',
+      5: 'Element Fusion',
+      6: 'BB Gauge',
+      7: 'HP Recovery',
+      8: 'Target Setting',
+      9: 'Damage Deflecting',
+      10: 'Damage Reducing',
+      11: 'Spark',
+      12: 'Defense Piercing',
+      13: 'Attack Boosting',
+      14: 'Special',
+    };
+    return categories[+num];
+  },
+  getHighestRarityUnit (category = 0, unitById = (id) => ({ name: id })) {
+    for (let i = 9; i >= 0; --i) {
+      const id = `${+category + i}`;
+      const unit = unitById(id);
+      if (unit) {
+        return unit;
+      }
+    }
+  },
+  conditionHelperGetUnitNames (units = [], unitById = (id) => ({ name: id, id })) {
+    return units.map(entry => {
+      const names = [];
+      if (entry.name) {
+        names.push(`${entry.name}${entry.id ? `(${entry.id})` : ''}`);
+      } else {
+        const id = (entry.id) ? entry.id.toString() : entry.toString();
+        if (+id % 10 === 0) {
+          const unit = this.getHighestRarityUnit(+id, unitById) || {};
+          names.push(`any evolution of ${unit.name || id}`);
+        } else {
+          // specify a specifc unit
+          const unit = unitById(id) || {};
+          names.push(unit.name || id);
+        }
+      }
+      return names;
+    }).reduce((acc, val) => acc.concat(val), []);
+  },
+  conditionalHelperGetItemNames (items = [], itemById = (id) => ({ name: id, id })) {
+    return items.map(id => {
+      const item = itemById(id.toString()) || {};
+      return item.name || id;
+    });
+  },
+  getConditionMessage (effect) {
+    return this.convertParsedConditionsToMessage(this.parseConditions(effect));
+  },
+  parseConditions (effect) {
+    const parsedConditions = { unit: [], item: [], sphereType: [] };
+    if (!effect.conditions || effect.conditions.length === 0) {
+      return parsedConditions;
+    }
+
+    effect.conditions.forEach(condition => {
+      if (condition['sphere category required'] !== undefined) {
+        parsedConditions.sphereType.push(condition['sphere category required (raw)']);
+      } else if (condition['item required'] !== undefined) {
+        if (Array.isArray(condition['item required']) && condition['item required'].length > 0) {
+          condition['item required'].forEach(item => {
+            if (!parsedConditions.item.includes(item)) {
+              parsedConditions.item.push(item);
+            }
+          });
+        } else {
+          parsedConditions.item.push(condition['item required']);
+        }
+      } else if (condition['unit required'] !== undefined) {
+        if (Array.isArray(condition['unit required']) && condition['unit required'].length > 0) {
+          condition['unit required'].forEach(unit => {
+            if (!parsedConditions.unit.includes(unit)) {
+              parsedConditions.unit.push(unit);
+            }
+          });
+        } else {
+          parsedConditions.unit.push(condition['unit required']);
+        }
+      } else if (condition.unknown !== undefined) {
+        parsedConditions.item.push(`unknown sphere type ${condition['unknown']}`);
+      }
+    });
+
+    return parsedConditions;
+  },
+  convertParsedConditionsToMessage ({ unit = [], item = [], sphereType = [] }, { unitById, itemById }) {
+    const conditions = [];
+
+    if (unit.length > 0) {
+      const names = this.conditionHelperGetUnitNames(unit, unitById);
+      if (unit.length === 1 && names.length === 1) {
+        conditions.push(`${names[0]} is in squad`);
+      } else {
+        conditions.push(`${names.join(' or ')} are in squad`);
+      }
+    }
+
+    if (item.length > 0) {
+      const names = this.conditionalHelperGetItemNames(item, itemById);
+      if (item.length === 1) {
+        conditions.push(`${names[0]} is equipped`);
+      } else {
+        conditions.push(`${names.join(' or ')} are equipped`);
+      }
+    }
+
+    if (sphereType.length > 0) {
+      const names = sphereType.map(c => this.getSphereCategory(+c));
+      if (sphereType.length === 1) {
+        conditions.push(`${names[0]} sphere is equipped`);
+      } else {
+        conditions.push(`${names.join(' or ')} spheres are equipped`);
+      }
+    }
+
+    return conditions.join(' or ');
+  },
 };
 
 export default helper;
