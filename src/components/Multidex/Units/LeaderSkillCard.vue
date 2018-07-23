@@ -39,7 +39,7 @@
         <v-tab-item v-if="leaderSkill">
           <v-container fluid>
             <v-layout row wrap>
-              <buff-list :effects="leaderSkill.effects"/>
+              <buff-list :effects="leaderSkill.effects" :context-handler="contextHandler"/>
             </v-layout>
           </v-container>
         </v-tab-item>
@@ -82,6 +82,11 @@ export default {
   methods: {
     getLabelIndex (label) {
       return this.tabLabels.indexOf(label);
+    },
+    contextHandler () {
+      return {
+        isLS: true,
+      };
     },
   },
 };

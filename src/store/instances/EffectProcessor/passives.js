@@ -10,7 +10,7 @@ const getConditionalData = (effect, context) => {
   return { value, text };
 };
 
-const getTargetData = (effect, isLS) => isLS ? (effect['passive target'] || 'self') : undefined;
+const getTargetData = (effect, isLS) => (!isLS && !(effect.sp_type === 'add to passive')) ? (`(${effect['passive target'] || 'self'})`) : undefined;
 
 const passives = {
   ...(() => {

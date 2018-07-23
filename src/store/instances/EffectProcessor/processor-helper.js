@@ -153,7 +153,8 @@ const helper = {
     return units.map(entry => {
       const names = [];
       if (entry.name) {
-        names.push(`${entry.name}${entry.id ? `(${entry.id})` : ''}`);
+        // names.push(`${entry.name}${entry.id ? ` (${entry.id})` : ''}`);
+        names.push(entry.name);
       } else {
         const id = (entry.id) ? entry.id.toString() : entry.toString();
         if (+id % 10 === 0) {
