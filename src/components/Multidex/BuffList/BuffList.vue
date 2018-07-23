@@ -22,7 +22,7 @@
             <span v-if="effect.value.turns && !effect.triggeredEffectContext">{{ effect.value.turns.text }}</span>
             <span>{{ effect.desc }}</span>
             <span v-text="`[${getEffectId(effect.parent.originalEffect)}]`"/>
-            <span v-if="effect.conditions && effect.conditions.text" class="d-block"><i>Requirement:</i> {{ effect.conditions.text }}</span>
+            <span v-if="effect.value && effect.value.conditions && effect.value.conditions.text" class="d-block"><i>Requirement:</i> {{ effect.value.conditions.text }}</span>
           </p>
         </v-flex>
       </template>

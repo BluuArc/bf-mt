@@ -30,11 +30,11 @@
         :xlink:href="iconKeyMapping.ATK.src"
         transform="translate(35 0) scale(-1 1)"/>
     </template>
-    <template v-else-if="iconKey.startsWith('INSTANT') && battleBuffIconKeys.includes(getBattleBuffKeyFromInstantIconKey(iconKey))">
+    <template v-else-if="iconKey.startsWith('INSTANT') && battleBuffIconKeys.includes(getBattleBuffKeyFromCustomKey(iconKey))">
       <image
         width="480" height="416"
         xlink:href="@/assets/buff-translation/battle/battle_buff_icon.png"
-        :transform="`translate(${getBattleBuffIconCoordinates(battleBuffIconKeys.indexOf(getBattleBuffKeyFromInstantIconKey(iconKey)))})`"/>
+        :transform="`translate(${getBattleBuffIconCoordinates(battleBuffIconKeys.indexOf(getBattleBuffKeyFromCustomKey(iconKey)))})`"/>
       <g class="animate--pulse">
         <rect x="0" y="0" width="32" height="32" rx="8" ry="8" fill="grey" style="fill-opacity: 0.5"/>
         <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">B</text>
@@ -61,6 +61,26 @@
         xlink:href="@/assets/buff-translation/raid/raid_room_time.png"
         x="24" y="0"
         transform="scale(0.55)"/>
+    </template>
+    <template v-else-if="iconKey.startsWith('PASSIVE') && battleBuffIconKeys.includes(getBattleBuffKeyFromCustomKey(iconKey))">
+      <image
+        width="480" height="416"
+        xlink:href="@/assets/buff-translation/battle/battle_buff_icon.png"
+        :transform="`translate(${getBattleBuffIconCoordinates(battleBuffIconKeys.indexOf(getBattleBuffKeyFromCustomKey(iconKey)))})`"/>
+      <g class="animate--pulse">
+        <rect x="0" y="0" width="32" height="32" rx="8" ry="8" fill="grey" style="fill-opacity: 0.5"/>
+        <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">P</text>
+      </g>
+    </template>
+    <template v-else-if="iconKey.startsWith('PASSIVE') && customBuffIconKeys.includes(getBattleBuffKeyFromCustomKey(iconKey))">
+      <image
+        width="480" height="416"
+        xlink:href="@/assets/buff-translation/battle/custom-icons.png"
+        :transform="`translate(${getBattleBuffIconCoordinates(customBuffIconKeys.indexOf(getBattleBuffKeyFromCustomKey(iconKey)), iconKey)})`"/>
+      <g class="animate--pulse">
+        <rect x="0" y="0" width="32" height="32" rx="8" ry="8" fill="grey" style="fill-opacity: 0.5"/>
+        <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">P</text>
+      </g>
     </template>
     <template v-else>
       <image
@@ -303,6 +323,11 @@ export default {
       'SG_BUFF_DBLBB_EU',
       'SG_BUFF_REC_EU',
     ],
+    customBuffIconKeys: () => [
+      'BUFF_RED',
+      'BUFF_RED_ARROW',
+      'BUFF_HPUP',
+    ],
     iconKeyMapping: () => IconKeyMapping,
   },
   methods: {
@@ -313,9 +338,9 @@ export default {
       console.debug(key, index, x, y);
       return [x, y].map(coord => coord * -32).join(' ');
     },
-    getBattleBuffKeyFromInstantIconKey (instantKey = 'INSTANT_SOME_BUFF') {
+    getBattleBuffKeyFromCustomKey (customKey = 'INSTANT_SOME_BUFF') {
       // eslint-disable-next-line no-unused-vars
-      const [ instantPrefix, ...battleBuffIconKey ] = instantKey.split('_');
+      const [ customPrefix, ...battleBuffIconKey ] = customKey.split('_');
       return battleBuffIconKey.join('_');
     },
   },

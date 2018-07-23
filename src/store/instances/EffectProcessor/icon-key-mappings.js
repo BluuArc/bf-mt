@@ -9,6 +9,7 @@ const IconKeyMappings = {
   // custom passives
   PASSIVE_BUFF_HPRECTURNSTART: { name: 'PASSIVE_BUFF_HPRECTURNSTART' }, // based on BUFF_HPREC
   PASSIVE_BUFF_BBRECTURNSTART: { name: 'PASSIVE_BUFF_BBRECTURNSTART' }, // based on BUFF_BBREC
+  PASSIVE_BUFF_HPUP: { name: 'PASSIVE_BUFF_HPUP' },
 
   // instant buffs
   INSTANT_BUFF_HPREC: { name: 'INSTANT_BUFF_HPREC' }, // based off of BUFF_HPREC
