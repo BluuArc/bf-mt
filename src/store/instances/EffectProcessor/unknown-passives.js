@@ -2,7 +2,7 @@ import EffectTypes from './effect-types';
 import helper from './processor-helper';
 // import EffectProcessor from './effect-processor';
 import IconKeyMappings from './icon-key-mappings';
-// import { knownConstants } from '../../modules/db.common';
+// import knownConstants from '../../modules/constants';
 const passiveTypes = require('@/assets/buff-translation/passives.json');
 
 const getUnknownParams = (effect) => effect['unknown passive params'].split(',').map(v => +v);

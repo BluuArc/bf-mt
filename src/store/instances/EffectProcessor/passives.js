@@ -1,7 +1,7 @@
 import EffectTypes from './effect-types';
 import helper from './processor-helper';
 import EffectProcessor from './effect-processor';
-import { knownConstants } from '../../modules/db.common';
+import knownConstants from '../../modules/constants';
 const passiveTypes = require('@/assets/buff-translation/passives.json');
 
 const getConditionalData = (effect, context) => {
@@ -98,6 +98,52 @@ const passives = {
             values.push({ iconKey, value: { value: +statBuffs[stat], targetData, conditions }, desc: [helper.getNumberAsPolarizedPercent(+statBuffs[stat]), helper.capitalize(element), descLabel, targetData || ''].join(' ') });
           }
         });
+      });
+
+      return {
+        type: this.type,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
+  '3': {
+    desc: 'Type Based HP/ATK/DEF/REC boost',
+    config: {
+      processOrder: ['hp', 'atk', 'def', 'rec', 'crit'],
+      typeOrder: knownConstants.unitTypes.slice(),
+      regular: {
+        hp: 'hp% buff',
+        atk: 'atk% buff',
+        def: 'def% buff',
+        rec: 'rec% buff',
+        [helper.iconGeneratorSymbol]: (stat, typeBuffed = 'LORD') => helper.getIconKey(`PASSIVE_BUFF_${typeBuffed}${stat.toUpperCase()}UP`),
+      },
+    },
+    possibleIcons () {
+      const iconKeys = [];
+      this.config.typeOrder.forEach(type => {
+        this.config.processOrder.forEach(stat => {
+          iconKeys.push(this.config.regular[helper.iconGeneratorSymbol](stat, type.toUpperCase()));
+        });
+      });
+      return iconKeys;
+    },
+    type: [EffectTypes.PASSIVE.name],
+    process (effect = {}, context = {}) {
+      const values = [];
+      const conditions = getConditionalData(effect, context);
+      const targetData = getTargetData(effect, context.isLS);
+
+      const typeBuffed = effect['unit type buffed'] || 'unknown';
+      const statBuffs = helper.multiStatToObject(...(this.config.processOrder.map(stat => effect[this.config.regular[stat]])));
+      this.config.processOrder.forEach(stat => {
+        if (statBuffs[stat]) {
+          const iconKey = this.config.regular[helper.iconGeneratorSymbol](stat, typeBuffed.toUpperCase());
+          const descLabel = stat.toUpperCase();
+          values.push({ iconKey, value: { value: +statBuffs[stat], targetData, conditions }, desc: [helper.getNumberAsPolarizedPercent(+statBuffs[stat]), helper.capitalize(typeBuffed), descLabel, targetData || ''].join(' ') });
+        }
       });
 
       return {

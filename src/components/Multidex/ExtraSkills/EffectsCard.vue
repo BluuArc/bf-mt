@@ -9,6 +9,7 @@
         <v-tabs v-model="activeTab">
           <v-tab>Unified</v-tab>
           <v-tab v-if="showSplitByConditionTab">Split By Condition</v-tab>
+          <v-tab>Buff List (Alpha)</v-tab>
         </v-tabs>
         <v-tabs-items v-model="activeTab">
           <v-tab-item>
@@ -24,6 +25,13 @@
                 :effects="entry.effects"/>
             </v-expansion-panel>
           </v-tab-item>
+          <v-tab-item>
+          <v-container fluid>
+            <v-layout row wrap>
+              <buff-list :effects="effects"/>
+            </v-layout>
+          </v-container>
+        </v-tab-item>
         </v-tabs-items>
       </template>
     </v-card-text>
@@ -34,11 +42,14 @@
 import { mapGetters } from 'vuex';
 import EffectList from '@/components/Multidex/EffectList/MainTable';
 import ConditionExpansionPanel from '@/components/Multidex/ExtraSkills/ConditionExpansionPanel';
+import BuffList from '@/components/Multidex/BuffList/BuffList';
+
 export default {
   props: ['effects'],
   components: {
     'effect-list': EffectList,
     'condition-expansion-panel': ConditionExpansionPanel,
+    'buff-list': BuffList,
   },
   computed: {
     ...mapGetters('units', ['unitById']),

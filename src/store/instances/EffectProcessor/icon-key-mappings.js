@@ -1,4 +1,4 @@
-const elements = ['fire', 'water', 'earth', 'thunder', 'light', 'dark'];
+import knownConstants from '../../modules/constants';
 
 const atkIcon = require('@/assets/buff-translation/raid/raid_unit_name_icon_b.png');
 
@@ -14,7 +14,7 @@ const IconKeyMappings = {
   PASSIVE_BUFF_HPUP: { name: 'PASSIVE_BUFF_HPUP' },
   ...(() => {
     const customElementalPassives = {};
-    elements.forEach(e => {
+    knownConstants.elements.forEach(e => {
       const hpKey = `PASSIVE_BUFF_${e.toUpperCase()}HPUP`;
       customElementalPassives[hpKey] = { name: hpKey };
 
@@ -22,6 +22,17 @@ const IconKeyMappings = {
       customElementalPassives[critRateKey] = { name: critRateKey };
     });
     return customElementalPassives;
+  })(),
+  ...(() => {
+    const customUnitTypePassives = {};
+    const statTypes = ['hp', 'atk', 'def', 'rec'];
+    knownConstants.unitTypes.forEach(u => {
+      statTypes.forEach(s => {
+        const statKey = `PASSIVE_BUFF_${u.toUpperCase()}${s.toUpperCase()}UP`;
+        customUnitTypePassives[statKey] = { name: statKey };
+      });
+    });
+    return customUnitTypePassives;
   })(),
 
   // instant buffs
