@@ -1,3 +1,5 @@
+const elements = ['fire', 'water', 'earth', 'thunder', 'light', 'dark'];
+
 const atkIcon = require('@/assets/buff-translation/raid/raid_unit_name_icon_b.png');
 
 const IconKeyMappings = {
@@ -10,6 +12,17 @@ const IconKeyMappings = {
   PASSIVE_BUFF_HPRECTURNSTART: { name: 'PASSIVE_BUFF_HPRECTURNSTART' }, // based on BUFF_HPREC
   PASSIVE_BUFF_BBRECTURNSTART: { name: 'PASSIVE_BUFF_BBRECTURNSTART' }, // based on BUFF_BBREC
   PASSIVE_BUFF_HPUP: { name: 'PASSIVE_BUFF_HPUP' },
+  ...(() => {
+    const customElementalPassives = {};
+    elements.forEach(e => {
+      const hpKey = `PASSIVE_BUFF_${e.toUpperCase()}HPUP`;
+      customElementalPassives[hpKey] = { name: hpKey };
+
+      const critRateKey = `PASSIVE_BUFF_${e.toUpperCase()}CRTRATEUP`;
+      customElementalPassives[critRateKey] = { name: critRateKey };
+    });
+    return customElementalPassives;
+  })(),
 
   // instant buffs
   INSTANT_BUFF_HPREC: { name: 'INSTANT_BUFF_HPREC' }, // based off of BUFF_HPREC
@@ -226,5 +239,4 @@ const IconKeyMappings = {
   SG_BUFF_DBLBB_EU: { name: 'SG_BUFF_DBLBB_EU' },
   SG_BUFF_REC_EU: { name: 'SG_BUFF_REC_EU' },
 };
-
 export default IconKeyMappings;

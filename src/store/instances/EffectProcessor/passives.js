@@ -1,7 +1,7 @@
 import EffectTypes from './effect-types';
 import helper from './processor-helper';
 import EffectProcessor from './effect-processor';
-// import { knownConstants } from '../../modules/db.common';
+import { knownConstants } from '../../modules/db.common';
 const passiveTypes = require('@/assets/buff-translation/passives.json');
 
 const getConditionalData = (effect, context) => {
@@ -49,6 +49,55 @@ const passives = {
           const descLabel = stat !== 'crit' ? stat.toUpperCase() : 'Critical Hit Rate';
           values.push({ iconKey, value: { value: +statBuffs[stat], targetData, conditions }, desc: [helper.getNumberAsPolarizedPercent(+statBuffs[stat]), descLabel, targetData || ''].join(' ') });
         }
+      });
+
+      return {
+        type: this.type,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
+  '2': {
+    desc: 'Elemental HP/ATK/DEF/REC/Crit Rate boost',
+    config: {
+      processOrder: ['hp', 'atk', 'def', 'rec', 'crit'],
+      regular: {
+        hp: 'hp% buff',
+        atk: 'atk% buff',
+        def: 'def% buff',
+        rec: 'rec% buff',
+        crit: 'crit% buff',
+        [helper.iconGeneratorSymbol]: (stat, elementBuffed = 'FIRE') => helper.getIconKey(stat !== 'crit' ? `PASSIVE_BUFF_${elementBuffed}${stat.toUpperCase()}UP` : `PASSIVE_BUFF_${elementBuffed}CRTRATEUP`),
+      },
+    },
+    possibleIcons () {
+      const iconKeys = [];
+      const { elements } = knownConstants;
+      elements.forEach(element => {
+        this.config.processOrder.forEach(stat => {
+          iconKeys.push(this.config.regular[helper.iconGeneratorSymbol](stat, element.toUpperCase()));
+        });
+      });
+      return iconKeys;
+    },
+    type: [EffectTypes.PASSIVE.name],
+    process (effect = {}, context = {}) {
+      const values = [];
+      const conditions = getConditionalData(effect, context);
+      const targetData = getTargetData(effect, context.isLS);
+
+      const elementsBuffed = effect['elements buffed'] && effect['elements buffed'].length > 0 ? effect['elements buffed'] : ['unknown'];
+      const statBuffs = helper.multiStatToObject(...(this.config.processOrder.map(stat => effect[this.config.regular[stat]])));
+      elementsBuffed.forEach(element => {
+        this.config.processOrder.forEach(stat => {
+          if (statBuffs[stat]) {
+            const iconKey = this.config.regular[helper.iconGeneratorSymbol](stat, element.toUpperCase());
+            const descLabel = stat !== 'crit' ? stat.toUpperCase() : 'Critical Hit Rate';
+            values.push({ iconKey, value: { value: +statBuffs[stat], targetData, conditions }, desc: [helper.getNumberAsPolarizedPercent(+statBuffs[stat]), helper.capitalize(element), descLabel, targetData || ''].join(' ') });
+          }
+        });
       });
 
       return {

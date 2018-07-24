@@ -171,7 +171,7 @@ const procs = {
         def: 'def% buff (14)',
         rec: 'rec% buff (15)',
         crit: 'crit% buff (16)',
-        [helper.iconGeneratorSymbol]: (stat, elementBuffed = 'FIRE') => helper.getIconKey(stat !== 'crit' ? `BUFF_${elementBuffed}${stat.toUpperCase()}UP` : `BUFF_${elementBuffed}CRTRATEDOWN`),
+        [helper.iconGeneratorSymbol]: (stat, elementBuffed = 'FIRE') => helper.getIconKey(stat !== 'crit' ? `BUFF_${elementBuffed}${stat.toUpperCase()}UP` : `BUFF_${elementBuffed}CRTRATEUP`),
       },
     },
     // filterKeyMapping: {
@@ -236,15 +236,17 @@ const procs = {
         const entry = this.config[configKey];
         if (entry[helper.iconGeneratorSymbol]) {
           const iconGenerator = entry[helper.iconGeneratorSymbol];
-          this.config.processOrder.forEach(stat => {
-            if (configKey === 'elemental') {
-              elements.forEach(e => {
+          if (configKey === 'elemental') {
+            elements.forEach(e => {
+              this.config.processOrder.forEach(stat => {
                 addToIconKeys(iconGenerator(stat, e.toUpperCase()));
               });
-            } else {
+            });
+          } else {
+            this.config.processOrder.forEach(stat => {
               addToIconKeys(iconGenerator(stat));
-            }
-          });
+            });
+          }
         }
       });
 

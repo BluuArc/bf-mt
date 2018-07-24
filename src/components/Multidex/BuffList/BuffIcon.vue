@@ -72,8 +72,25 @@
         <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">P</text>
       </g>
     </template>
-    <template v-else-if="iconKey.startsWith('PASSIVE') && customBuffIconKeys.includes(getBattleBuffKeyFromCustomKey(iconKey))">
+    <template v-else-if="iconKey.startsWith('PASSIVE') && (customBuffIconKeys.includes(getBattleBuffKeyFromCustomKey(iconKey)) || isPassiveElementHPIcon(iconKey) || isPassiveElementCritRateIcon(iconKey))">
+      <template v-if="isPassiveElementHPIcon(iconKey) || isPassiveElementCritRateIcon(iconKey)">
+        <image
+          width="156" height="26"
+          xlink:href="@/assets/buff-translation/common/attribute_mark.png"
+          :transform="`translate(${elements.indexOf((getElementFromPassiveElementHPKey(iconKey) || getElementFromPassiveElementCritRateKey(iconKey)).toLowerCase()) * -26} 0)`"/>
+        <image
+          v-if="isPassiveElementHPIcon(iconKey)"  
+          width="480" height="416"
+          xlink:href="@/assets/buff-translation/battle/custom-icons.png"
+          :transform="`translate(${getBattleBuffIconCoordinates(customBuffIconKeys.indexOf('BUFF_ELEMENTALHPUP'))})`"/>
+        <image
+          v-else-if="isPassiveElementCritRateIcon(iconKey)"  
+          width="480" height="416"
+          xlink:href="@/assets/buff-translation/battle/custom-icons.png"
+          :transform="`translate(${getBattleBuffIconCoordinates(customBuffIconKeys.indexOf('BUFF_ELEMENTALCRTRATEUP'))})`"/>
+      </template>
       <image
+        v-else
         width="480" height="416"
         xlink:href="@/assets/buff-translation/battle/custom-icons.png"
         :transform="`translate(${getBattleBuffIconCoordinates(customBuffIconKeys.indexOf(getBattleBuffKeyFromCustomKey(iconKey)), iconKey)})`"/>
@@ -97,6 +114,7 @@
 
 <script>
 import IconKeyMapping from '@/store/instances/EffectProcessor/icon-key-mappings';
+import { knownConstants } from '@/store/modules/db.common';
 
 export default {
   props: {
@@ -327,8 +345,11 @@ export default {
       'BUFF_RED',
       'BUFF_RED_ARROW',
       'BUFF_HPUP',
+      'BUFF_ELEMENTALHPUP',
+      'BUFF_ELEMENTALCRTRATEUP',
     ],
     iconKeyMapping: () => IconKeyMapping,
+    elements: () => knownConstants.elements.slice(),
   },
   methods: {
     getBattleBuffIconCoordinates (index = 0, key) {
@@ -342,6 +363,22 @@ export default {
       // eslint-disable-next-line no-unused-vars
       const [ customPrefix, ...battleBuffIconKey ] = customKey.split('_');
       return battleBuffIconKey.join('_');
+    },
+    getElementFromPassiveElementHPKey (iconKey = 'PASSIVE_BUFF_HPUP') {
+      const regexMatch = iconKey.match(/^PASSIVE_BUFF_(?<element>.*)HPUP$/);
+      console.debug(iconKey, regexMatch);
+      return regexMatch && regexMatch[1];
+    },
+    isPassiveElementHPIcon (iconKey) {
+      return !!this.getElementFromPassiveElementHPKey(iconKey);
+    },
+    getElementFromPassiveElementCritRateKey (iconKey = 'PASSIVE_BUFF_CRTRATEUP') {
+      const regexMatch = iconKey.match(/^PASSIVE_BUFF_(?<element>.*)CRTRATEUP$/);
+      console.debug(iconKey, regexMatch);
+      return regexMatch && regexMatch[1];
+    },
+    isPassiveElementCritRateIcon (iconKey) {
+      return !!this.getElementFromPassiveElementCritRateKey(iconKey);
     },
   },
 };

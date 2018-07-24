@@ -522,7 +522,7 @@
                             persistent-hint/>
                         </v-card-title>
                         <v-divider></v-divider>
-                        <v-card-text style="height: 300px;">
+                        <v-card-text style="height: 300px;" v-if="!isDataLoading && hasRequiredModules">
                           <v-container fluid class="buff-selector-list pa-0">
                             <v-layout row v-for="(passive, index) in (knownConstants.passives || [])" :key="index" class="buff-selector-list--row">
                               <v-flex xs2 class="center-align-parent">
@@ -1583,7 +1583,12 @@ export default {
       if (!entry || !entry.data || typeof (entry.data.possibleIcons) !== 'function') {
         return [];
       }
-      return entry.data.possibleIcons().filter(i => i !== IconKeyMappings.UNKNOWN.name && !!IconKeyMappings[i]);
+      return entry.data.possibleIcons().filter(i => {
+        // for cases of INSTANT_BUFFKEY or PASSIVE_BUFFKEY
+        // eslint-disable-next-line no-unused-vars
+        const [ prefix, ...buffKey ] = i.split('_');
+        return i !== IconKeyMappings.UNKNOWN.name && !!(IconKeyMappings[i] || IconKeyMappings[buffKey.join('_')]);
+      });
     },
   },
 };
