@@ -73,20 +73,30 @@
       </g>
     </template>
     <template v-else-if="iconKey.startsWith('PASSIVE') && (customBuffIconKeys.includes(getBattleBuffKeyFromCustomKey(iconKey)) || isPassiveTypeStatIcon(iconKey))">
-      <template v-if="elements.includes(getTypeInfoFromPassiveTypeStatKey(iconKey).type.toLowerCase())">
+      <g>
+        <template v-if="elements.includes(getTypeInfoFromPassiveTypeStatKey(iconKey).type.toLowerCase())">
+          <image
+            width="156" height="26"
+            xlink:href="@/assets/buff-translation/common/attribute_mark.png"
+            :transform="`translate(${elements.indexOf(getTypeInfoFromPassiveTypeStatKey(iconKey).type.toLowerCase()) * -26} 0)`"/>
+        </template>
+        <template v-else-if="isPassiveUnitTypeStatIcon(iconKey)">
+          <rect x="5" y="5" width="22" height="22" fill="white"/>
+          <text x="9.5" y="19" font-family="Consolas" font-size="1.20rem" font-weight="bold" fill="black">{{ (getTypeInfoFromPassiveTypeStatKey(iconKey).type[0] || '').toUpperCase() }}</text>
+        </template>
+      </g>
+      <g>
         <image
-          width="156" height="26"
-          xlink:href="@/assets/buff-translation/common/attribute_mark.png"
-          :transform="`translate(${elements.indexOf(getTypeInfoFromPassiveTypeStatKey(iconKey).type.toLowerCase()) * -26} 0)`"/>
-      </template>
-      <template v-else-if="isPassiveTypeStatIcon(iconKey)">
-        <rect x="5" y="5" width="22" height="22" fill="white"/>
-        <text x="9.5" y="19" font-family="Consolas" font-size="1.20rem" font-weight="bold" fill="black">{{ getTypeInfoFromPassiveTypeStatKey(iconKey).type[0].toUpperCase() }}</text>
-      </template>
-      <image
-        width="480" height="416"
-        xlink:href="@/assets/buff-translation/battle/custom-icons.png"
-        :transform="`translate(${getBattleBuffIconCoordinates(customBuffIconKeys.indexOf(`BUFF_ELEMENTAL${getTypeInfoFromPassiveTypeStatKey(iconKey).stat}UP`), `BUFF_ELEMENTAL${getTypeInfoFromPassiveTypeStatKey(iconKey).stat}UP`)})`"/>
+          v-if="iconKey !== 'PASSIVE_BUFF_HPUP' && isPassiveTypeStatIcon(iconKey)"
+          width="480" height="416"
+          xlink:href="@/assets/buff-translation/battle/custom-icons.png"
+          :transform="`translate(${getBattleBuffIconCoordinates(customBuffIconKeys.indexOf(`BUFF_ELEMENTAL${getTypeInfoFromPassiveTypeStatKey(iconKey).stat}UP`), `BUFF_ELEMENTAL${getTypeInfoFromPassiveTypeStatKey(iconKey).stat}UP`)})`"/>
+        <image
+          v-else
+          width="480" height="416"
+          xlink:href="@/assets/buff-translation/battle/custom-icons.png"
+          :transform="`translate(${getBattleBuffIconCoordinates(customBuffIconKeys.indexOf(getBattleBuffKeyFromCustomKey(iconKey)), iconKey)})`"/>
+      </g>
       <g class="animate--pulse">
         <rect x="0" y="0" width="32" height="32" rx="8" ry="8" fill="grey" style="fill-opacity: 0.5"/>
         <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">P</text>
@@ -176,7 +186,7 @@ export default {
       'BUFF_WATERDMGDOWN',
       'BUFF_EARTHDMGDOWN',
       'BUFF_THUNDERDMGDOWN',
-      'BUFF_LIGHDMGDOWN',
+      'BUFF_LIGHTDMGDOWN',
       'BUFF_DARKDMGDOWN',
       'BUFF_POISONBLK',
       'BUFF_WEAKBLK',
@@ -361,7 +371,7 @@ export default {
     },
     getTypeInfoFromPassiveTypeStatKey (iconKey = 'PASSIVE_BUFF_ELEMENTHPUP') {
       const regexMatch = iconKey.match(/^PASSIVE_BUFF_(?<element>.*)(CRTRATE|HP|ATK|DEF|REC)UP$/);
-      console.debug(iconKey, regexMatch);
+      // console.debug(iconKey, regexMatch);
       return regexMatch && {
         type: regexMatch[1],
         stat: regexMatch[2],
@@ -371,7 +381,9 @@ export default {
       return !!this.getTypeInfoFromPassiveTypeStatKey(iconKey);
     },
     isPassiveUnitTypeStatIcon (iconKey) {
-      return knownConstants.unitTypes.includes(this.getTypeInfoFromPassiveTypeStatKey(iconKey).type.toLowerCase());
+      const type = this.getTypeInfoFromPassiveTypeStatKey(iconKey).type;
+      const isPassiveType = !!type && knownConstants.unitTypes.includes(type.toLowerCase());
+      return isPassiveType;
     },
   },
 };

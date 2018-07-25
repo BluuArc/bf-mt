@@ -10,7 +10,7 @@ const getConditionalData = (effect, context) => {
   return { value, text };
 };
 
-const getTargetData = (effect, isLS) => (!isLS && !(effect.sp_type === 'add to passive')) ? (`(${effect['passive target'] || 'self'})`) : undefined;
+const getTargetData = (effect, isLS) => (!isLS && !(effect.sp_type === 'add to passive')) ? (`(${effect['passive target'] || 'self'})`) : '';
 
 const passives = {
   ...(() => {
@@ -154,6 +154,32 @@ const passives = {
       };
     },
   },
+  '5': {
+    desc: 'Elemental Mitigation',
+    config: {},
+    possibleIcons: () => knownConstants.elements.map(e => `PASSIVE_BUFF_${e.toUpperCase()}DMGDOWN`),
+    type: [EffectTypes.PASSIVE.name],
+    process (effect = {}, context = {}) {
+      const values = [];
+      const conditions = getConditionalData(effect, context);
+      const targetData = getTargetData(effect, context.isLS);
+
+      knownConstants.elements.forEach(e => {
+        if (effect[`${e} resist%`]) {
+          const value = +effect[`${e} resist%`];
+          const iconKey = `PASSIVE_BUFF_${e.toUpperCase()}DMGDOWN`;
+          values.push({ iconKey, value: { value, targetData, conditions }, desc: [helper.getNumberAsPolarizedPercent(value), helper.capitalize(e), 'mitigation', targetData].join(' ') });
+        }
+      });
+
+      return {
+        type: this.type,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
   '66': {
     desc: 'Add effect to BB/SBB/UBB',
     config: {
@@ -173,8 +199,8 @@ const passives = {
     //     key: 'trigger on UBB',
     //   },
     // },
-    type: [EffectTypes.PASSIVE.name],
     possibleIcons: () => [],
+    type: [EffectTypes.PASSIVE.name],
     process (effect = {}, context) {
       const conditions = getConditionalData(effect, context);
       const addToLabel = this.config.burstTypes

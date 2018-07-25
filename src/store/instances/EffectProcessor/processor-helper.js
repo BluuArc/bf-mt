@@ -69,7 +69,7 @@ const helper = {
     return !options.noParentheses ? `(${result})` : result;
   },
   getTurns (effect) {
-    const value = !isNaN(effect) ? effect : effect['buff turns'];
+    const value = !isNaN(effect) ? effect : ((effect && effect['buff turns']) || 0);
     return {
       value,
       text: `${value} turn`,

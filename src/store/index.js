@@ -136,7 +136,7 @@ const store = new Vuex.Store({
       }
       statLogEnd('initOnly');
 
-      commit('setLoadingMessage', `Setting data to last set server (${(state.settings.activeServer || 'gl').toUpperCase()}`);
+      commit('setLoadingMessage', `Setting data to last set server (${(state.settings.activeServer || 'gl').toUpperCase()})`);
       await dispatch('setActiveServer', state.settings.activeServer);
       statLogEnd('overallInit');
       commit('setLoadingMessage');

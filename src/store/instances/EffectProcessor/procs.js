@@ -383,8 +383,8 @@ const procs = {
       const turns = helper.getTurns(effect['angel idol buff turns (91)']);
 
       const iconKey = IconKeyMappings.BUFF_KOBLOCK.name;
-      const recoverChance = effect['angel idol recover chance%'];
-      const recoverHp = effect['angel idol recover hp%'];
+      const recoverChance = effect['angel idol recover chance%'] || 0;
+      const recoverHp = effect['angel idol recover hp%'] || 0;
 
       values.push({ iconKey, value: { value: recoverChance, hp: recoverHp, turns, targetData }, desc: `${recoverChance}% chance to prevent one knockout (recover ${recoverHp}% on use) ${targetData}` });
       return {
