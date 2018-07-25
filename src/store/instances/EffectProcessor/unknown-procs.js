@@ -4,6 +4,24 @@ import helper from './processor-helper';
 import IconKeyMappings from './icon-key-mappings';
 const procTypes = require('@/assets/buff-translation/procs.json');
 
+const generateUnknownEntry = (id) => ({
+  desc: `Unknown buff ${id}`,
+  type: [EffectTypes.UNKNOWN.name],
+  possibleIcons: () => [IconKeyMappings.UNKNOWN.name],
+  process (effect = {}, context) {
+    return {
+      type: [EffectTypes.UNKNOWN.name],
+      originalEffect: effect,
+      context,
+      values: [{
+        iconKey: IconKeyMappings.UNKNOWN.name,
+        value: effect,
+        desc: `Unknown effect. Effect Keys: [${Object.keys(effect).join(', ')}]`,
+      }],
+    };
+  },
+});
+
 const unknownProcs = {
   ...(() => {
     const entries = {};
@@ -12,6 +30,7 @@ const unknownProcs = {
     });
     return entries;
   })(),
+  '0': generateUnknownEntry('0'),
   '70002': {
     desc: 'Recast BB/SBB/UBB',
     config: {},
