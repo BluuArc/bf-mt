@@ -648,6 +648,9 @@
         "id": 700017,
         "name": "Perfect Elgaia Emblem"
       }
+    ],
+    "associated_units": [
+      "60497"
     ]
   },
   "700012": {
@@ -686,6 +689,9 @@
         "id": 700017,
         "name": "Perfect Elgaia Emblem"
       }
+    ],
+    "associated_units": [
+      "60497"
     ],
     "first_clear_missions": [
       "9103601"
@@ -880,7 +886,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_4_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "700018": {
     "desc": "Adds Chance of Ignoring Enemy's Def when attacking (25%) & Boost all parameters (15%) & Boosts BB gauge when attacking (7-8 BC)",
@@ -2931,7 +2940,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "700077": {
     "desc": "Boosts all parameters (40%) & restores HP each turn & damage taken may restore HP (40% chance 30%) & additional damage reduction (50%) & adds status ailment removal effect to BB/SBB",
@@ -5552,6 +5564,7 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "60497",
       "710237",
       "720217",
       "740217",
