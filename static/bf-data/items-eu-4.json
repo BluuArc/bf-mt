@@ -137,7 +137,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "40300": {
     "desc": "Greatly increases damage dealt during Spark, and drop rate of BC & HC",
@@ -339,7 +342,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "40900": {
     "desc": "Small reduction in BB gauge required for BB",
@@ -359,7 +365,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "41000": {
     "desc": "Increases amount of hits, and greatly boosts Atk",
@@ -408,7 +417,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "41200": {
     "desc": "Renders all status ailments invalid, and increases BB gauge every turn",
@@ -437,7 +449,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "41300": {
     "desc": "Boosts greatly Atk when HP is low",
@@ -951,6 +966,9 @@
         "id": 239000,
         "name": "Sunblade"
       }
+    ],
+    "associated_units": [
+      "60497"
     ]
   },
   "41700": {
@@ -1007,6 +1025,9 @@
         "id": 236000,
         "name": "Ambrosia Wine"
       }
+    ],
+    "associated_units": [
+      "60497"
     ]
   },
   "41800": {
@@ -1172,7 +1193,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "42200": {
     "desc": "Adds chance of damage taken being decreased by 40%",
@@ -1307,7 +1331,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_7.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "42600": {
     "desc": "Fairly reduces amount of BB gauge needed & fills it slightly each turn",
@@ -1331,7 +1358,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "42700": {
     "desc": "Boosts BB gauge when damage is received",
@@ -1353,7 +1383,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "42800": {
     "desc": "Boosts Atk & Def by 100% for first 4 turns",
@@ -1493,7 +1526,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "43300": {
     "desc": "Adds slightly higher chance of ignoring enemy's Def when attacking",
@@ -1558,7 +1594,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "43500": {
     "desc": "Boosts critical rate if HP full, probable infliction of random ailment",
@@ -1866,6 +1905,9 @@
         "id": 47700,
         "name": "Phoenix Crown"
       }
+    ],
+    "associated_units": [
+      "60497"
     ]
   },
   "44400": {
@@ -2158,6 +2200,9 @@
     "thumbnail": "sphere_thum_1_8.png",
     "type": "sphere",
     "usage": [],
+    "associated_units": [
+      "60497"
+    ],
     "first_clear_missions": [
       "2000004"
     ]
@@ -2694,7 +2739,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "45600": {
     "desc": "Adds slight chance of damage taken being reduced to 1",
@@ -2768,7 +2816,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "45800": {
     "desc": "Great boost to BB gauge when taking and inflicting damage each turn",
@@ -2800,7 +2851,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "45900": {
     "desc": "Boosts Spark damage, BB gauge, BC and HC drop rate while Sparking",
@@ -3128,7 +3182,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "46400": {
     "desc": "30% boost to max HP & Def, slightly boosts BB gauge when attacked, boosts BB gauge when guarding",
@@ -3292,7 +3349,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_7.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "47000": {
     "desc": "Greatly increases amount of hits & boosts BC and HC drop rate",
@@ -4392,6 +4452,9 @@
         "id": 49800,
         "name": "Nature Shield"
       }
+    ],
+    "associated_units": [
+      "60497"
     ]
   },
   "47800": {
@@ -4414,7 +4477,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
-      "50116"
+      "50116",
+      "60497"
     ]
   },
   "47900": {
@@ -4536,6 +4600,9 @@
         "id": 48300,
         "name": "Demon Striker"
       }
+    ],
+    "associated_units": [
+      "60497"
     ]
   },
   "47902": {
@@ -4595,6 +4662,9 @@
         "id": 48300,
         "name": "Demon Striker"
       }
+    ],
+    "associated_units": [
+      "60497"
     ]
   },
   "47903": {
@@ -4857,6 +4927,9 @@
         "id": 235002,
         "name": "Armored Soul"
       }
+    ],
+    "associated_units": [
+      "60497"
     ]
   },
   "47907": {
@@ -5212,7 +5285,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
-      "50116"
+      "50116",
+      "60497"
     ]
   },
   "48208": {
@@ -5431,7 +5505,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "48214": {
     "desc": "HP and BB recovery effects trigger at turn's start, considerably restores HP, BB gauge after damage taken has exceeded certain amount for 3 turns & 30% boost to Rec, max HP",
@@ -5937,7 +6014,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_4_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "48301": {
     "desc": "Negates critical and elemental based damage, slightly boosts damage reduction probability when guarding & probable 25% damage reduction",
@@ -6382,7 +6462,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "48603": {
     "desc": "Greatly restores HP each turn, damage taken may restore HP, Spark damage slightly restores HP & 30% boost to Atk, Def",
@@ -6659,7 +6742,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "49500": {
     "desc": "40% max HP boost and prob slight HP recovery when attacked. 50% dmg reduction, 200% Def boost for first 4 turns",

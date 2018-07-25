@@ -1173,7 +1173,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_818894.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "818931": {
     "desc": "30% boost to Atk, max HP, boosts critical hit rate & boosts Atk when BB gauge is full",
@@ -2487,7 +2490,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_819102.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "819120": {
     "desc": "Restores HP each turn, considerably boosts BB gauge each turn & activates at turn's end effects during turn's start instead",
@@ -2880,7 +2886,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_819128.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "819129": {
     "desc": "100% boost to Spark damage, 50% boost to Atk and 50% boost to Spark damage when Sparks exceed certain amount, Spark damage boosts BB gauge & reduces BB gauge required for BB",
@@ -3074,7 +3083,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_819139.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "819153": {
     "desc": "30% boost Atk, Rec, HP (Female only), negates Atk, Def, Rec reduc. effects, dmg taken may heal, boost BB gauge, reduces BB gauge req. for BB & resist. 1 KO after OD",
@@ -3125,6 +3137,7 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "60497",
       "850298"
     ]
   },

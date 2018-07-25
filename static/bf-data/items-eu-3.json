@@ -4211,7 +4211,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_3_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "33000": {
     "desc": "Recovers Some HP when a Battle is Won",
@@ -4381,6 +4384,9 @@
         "id": 41600,
         "name": "Starry Blade"
       }
+    ],
+    "associated_units": [
+      "60497"
     ]
   },
   "33500": {
@@ -5194,7 +5200,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "34701": {
     "desc": "Adds Chance of BB Gauge Filling when Attacked",
@@ -5216,7 +5225,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "34702": {
     "desc": "Adds Chance of BB Gauge Greatly Filling when Attacked",
@@ -5238,7 +5250,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "34800": {
     "desc": "Adds Chance of Returning 20% of Damage Taken to Enemy when Attacked",
@@ -5587,6 +5602,9 @@
         "id": 41700,
         "name": "Wyvern Studs"
       }
+    ],
+    "associated_units": [
+      "60497"
     ]
   },
   "34807": {
@@ -5844,7 +5862,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_2_9.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "34814": {
     "desc": "Recovers HP when an enemy is defeated",
@@ -6733,7 +6754,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "36400": {
     "desc": "Increases damage dealt during Spark by 50%",
@@ -6801,7 +6825,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "36600": {
     "desc": "HP recovers greatly after every turn",
@@ -6915,7 +6942,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "36900": {
     "desc": "BB gauge fills much faster when obtaining BC",
@@ -6935,7 +6965,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "37000": {
     "desc": "Massively boosts critical hit rate and add 50% critical hit damage",
@@ -7033,7 +7066,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "37400": {
     "desc": "Boosts Atk, Def, Rec, and HP by 25%",
@@ -7707,6 +7743,9 @@
         "id": 701024,
         "name": "Arondight"
       }
+    ],
+    "associated_units": [
+      "60497"
     ]
   },
   "38001": {
@@ -7773,6 +7812,9 @@
         "id": 701002,
         "name": "Odin's Ring"
       }
+    ],
+    "associated_units": [
+      "60497"
     ]
   },
   "38100": {
@@ -9581,6 +9623,9 @@
         "id": 45500,
         "name": "Violet Pearl"
       }
+    ],
+    "associated_units": [
+      "60497"
     ]
   },
   "39400": {
@@ -9633,7 +9678,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_5_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "39500": {
     "desc": "Slightly reduces the amount of BB gauge needed for its use",
@@ -9691,6 +9739,9 @@
         "id": 701026,
         "name": "Ancient Cybernetic Crown"
       }
+    ],
+    "associated_units": [
+      "60497"
     ]
   },
   "39600": {
@@ -9817,6 +9868,9 @@
         "id": 39800,
         "name": "Demon Crown"
       }
+    ],
+    "associated_units": [
+      "60497"
     ]
   },
   "39800": {
@@ -9878,6 +9932,9 @@
         "id": 44300,
         "name": "Thorn Crown"
       }
+    ],
+    "associated_units": [
+      "60497"
     ]
   },
   "39900": {

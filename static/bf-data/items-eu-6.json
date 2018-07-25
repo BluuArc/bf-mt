@@ -504,7 +504,10 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_3_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "60497"
+    ]
   },
   "60150": {
     "desc": "Adds all elements to Atk, enormously boosts elemental dmg & boosts BB Atk when dmg dealt exceeds set amount for 2 turns",
