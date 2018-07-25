@@ -126,6 +126,7 @@ const itemStore = {
         return keys.filter(key => {
           const entry = pageDb[key];
           const fitsName = (!name ? true : entry.name.toLowerCase().includes(name.toLowerCase()));
+          const fitsID = (!name ? true : key.toString().includes(name) || (entry.id || '').toString().includes(name));
           const fitsRarity = rarity.includes(entry.rarity);
           const fitsItemType = itemTypes.includes(entry.type) || (itemTypes.includes('raid') && entry.raid);
 
@@ -154,7 +155,7 @@ const itemStore = {
           // if (failedResults.length > 0) {
           //   console.log(entry.name, key, 'failed due to', failedResults.join(', '));
           // }
-          return fitsName && fitsRarity && fitsExclusive && fitsAssociatedUnits && fitsItemType && fitsSphereType && fitsCraftable && fitsUsage;
+          return (fitsName || fitsID) && fitsRarity && fitsExclusive && fitsAssociatedUnits && fitsItemType && fitsSphereType && fitsCraftable && fitsUsage;
         });
       }, [keys, filters, otherKeys, state.pageDb]);
       return result;

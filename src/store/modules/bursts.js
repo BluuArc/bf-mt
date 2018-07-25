@@ -92,6 +92,7 @@ const burstStore = {
         return keys.filter(key => {
           const entry = pageDb[key];
           const fitsName = (!name ? true : entry.name.toLowerCase().includes(name.toLowerCase()));
+          const fitsID = (!name ? true : key.toString().includes(name) || (entry.id || '').toString().includes(name));
 
           const isInOtherServer = otherKeys.includes(entry.id.toString());
           const fitsExclusive = (exclusives.length !== 1 ? exclusives.length === 2 : ((exclusives[0] === 'exclusive' && !isInOtherServer) || (exclusives[0] === 'non-exclusive' && isInOtherServer)));
@@ -99,7 +100,7 @@ const burstStore = {
           const hasAssociatedUnits = Array.isArray(entry.associated_units) && entry.associated_units.length > 0;
           const fitsAssociatedUnits = (associatedUnits.length !== 1 ? associatedUnits.length === 2 : ((associatedUnits[0] === 'with' && hasAssociatedUnits) || (associatedUnits[0] === 'without' && !hasAssociatedUnits)));
 
-          return fitsName && fitsExclusive && fitsAssociatedUnits;
+          return (fitsName || fitsID) && fitsExclusive && fitsAssociatedUnits;
         });
       }, [keys, filters, otherKeys, state.pageDb]);
       return result;

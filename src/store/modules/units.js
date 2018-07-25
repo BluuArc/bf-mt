@@ -115,6 +115,7 @@ const unitsStore = {
         return keys.filter(key => {
           const entry = pageDb[key];
           const fitsName = (!name ? true : entry.name.toLowerCase().includes(name.toLowerCase()));
+          const fitsID = (!name ? true : key.toString().includes(name) || (entry.id || '').toString().includes(name));
           const fitsElement = elements.includes(entry.element);
           const fitsGender = gender.includes(entry.gender);
           const fitsRarity = rarity.includes(entry.rarity);
@@ -128,7 +129,7 @@ const unitsStore = {
           const isInOtherServer = otherKeys.includes(entry.id.toString());
           const fitsExclusive = (exclusives.length !== 1 ? exclusives.length === 2 : ((exclusives[0] === 'exclusive' && !isInOtherServer) || (exclusives[0] === 'non-exclusive' && isInOtherServer)));
 
-          const fitsFilters = fitsName && fitsElement && fitsKind && fitsGender && fitsRarity && fitsExclusive;
+          const fitsFilters = (fitsName || fitsID) && fitsElement && fitsKind && fitsGender && fitsRarity && fitsExclusive;
           // if (!fitsFilters) {
           //   console.debug(key, entry.name, {fitsName, fitsElement, fitsKind, fitsGender, fitsRarity, fitsExclusive});
           // }

@@ -114,6 +114,7 @@ const missionStore = {
         return keys.filter(key => {
           const entry = pageDb[key];
           const fitsName = (!name ? true : entry.name.toLowerCase().includes(name.toLowerCase()));
+          const fitsID = (!name ? true : key.toString().includes(name) || (entry.id || '').toString().includes(name));
 
           const isExclusive = !otherKeys.includes((entry.id || '').toString());
           const fitsExclusive = fitsTernary(isExclusive, exclusives, { trueVal: 'exclusive', falseVal: 'non-exclusive' });
@@ -137,7 +138,7 @@ const missionStore = {
 
           // const doesHaveMimics = entry.mimic_info && Object.keys(entry.mimic_info).length > 0;
           // const fitsMimicFilter = fitsTernary(doesHaveMimics, hasMimics, { trueVal: 'with', falseVal: 'without' });
-          return [fitsName, fitsExclusive, fitsAssociatedUnits, fitsAssociatedItems, fitsGemFilter, fitsContinueFilter, fitsLocationFilters].reduce((acc, val) => acc && val, true);
+          return [fitsName || fitsID, fitsExclusive, fitsAssociatedUnits, fitsAssociatedItems, fitsGemFilter, fitsContinueFilter, fitsLocationFilters].reduce((acc, val) => acc && val, true);
         });
       }, [keys, filters, otherKeys, state.pageDb]);
       return result;
