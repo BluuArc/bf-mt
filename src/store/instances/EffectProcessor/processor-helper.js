@@ -194,7 +194,7 @@ const helper = {
               parsedConditions.item.push(item);
             }
           });
-        } else {
+        } else if (!Array.isArray(condition['item required'])) {
           parsedConditions.item.push(condition['item required']);
         }
       } else if (condition['unit required'] !== undefined) {
@@ -204,7 +204,7 @@ const helper = {
               parsedConditions.unit.push(unit);
             }
           });
-        } else {
+        } else if (!Array.isArray(condition['unit required'])) {
           parsedConditions.unit.push(condition['unit required']);
         }
       } else if (condition.unknown !== undefined) {
