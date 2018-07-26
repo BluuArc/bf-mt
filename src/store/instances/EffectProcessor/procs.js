@@ -303,6 +303,49 @@ const procs = {
       };
     },
   },
+  '6': {
+    desc: 'HC/BC/Item Drop Rate',
+    config: {
+      processOrder: ['hc', 'bc', 'item'],
+      [helper.iconGeneratorSymbol]: type => `BUFF_${type.toUpperCase()}DROP`,
+      keyMapping: {
+        hc: 'hc drop rate% buff (9)',
+        bc: 'bc drop rate% buff (10)',
+        item: 'item drop rate% buff (11)',
+      },
+      nameMapping: {
+        hc: 'HC',
+        bc: 'BC',
+        item: 'Item',
+      },
+    },
+    possibleIcons () {
+      return this.config.processOrder.map(type => this.config[helper.iconGeneratorSymbol](type));
+    },
+    type: [EffectTypes.ACTIVE.name],
+    process (effect = {}, context) {
+      const values = [];
+      const targetData = helper.getTargetData(effect);
+      const turns = helper.getTurns(effect['drop rate buff turns']);
+
+      this.config.processOrder.forEach(type => {
+        const value = effect[this.config.keyMapping[type]];
+        if (value) {
+          const iconKey = this.config[helper.iconGeneratorSymbol](type);
+          const desc = [helper.getNumberAsPolarizedPercent(+value), this.config.nameMapping[type], 'drop rate', targetData].join(' ');
+          values.push({ iconKey, value: { value, turns, targetData }, desc });
+        }
+      });
+
+      return {
+        type: this.type,
+        turnDuration: turns.value,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
   '18': {
     desc: 'Damage Reduction/Mitigation',
     config: {},
