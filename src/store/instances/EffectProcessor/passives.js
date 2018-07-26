@@ -221,17 +221,47 @@ const passives = {
   },
   '8': {
     desc: 'Damage Reduction/Mitigation',
-    config: {},
-    possibleIcons: () => ['PASSIVE_BUFF_DAMAGECUT'],
+    config: {
+      iconKey: 'PASSIVE_BUFF_DAMAGECUT',
+    },
+    possibleIcons () {
+      return [this.config.iconKey];
+    },
     type: [EffectTypes.PASSIVE.name],
     process (effect = {}, context = {}) {
       const values = [];
       const conditions = getConditionalData(effect, context);
       const targetData = getTargetData(effect, context.isLS);
 
-      const iconKey = 'PASSIVE_BUFF_DAMAGECUT';
-      const value = effect['dmg% mitigation'];
+      const iconKey = this.config.iconKey;
+      const value = +effect['dmg% mitigation'];
       values.push({ iconKey, value: { value, targetData, conditions }, desc: [helper.getNumberAsPolarizedPercent(value), 'mitigation', targetData].join(' ') });
+
+      return {
+        type: this.type,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
+  '9': {
+    desc: 'BC Fill per Turn',
+    config: {
+      iconKey: 'PASSIVE_BUFF_BBREC',
+    },
+    possibleIcons () {
+      return [this.config.iconKey];
+    },
+    type: [EffectTypes.PASSIVE.name],
+    process (effect = {}, context = {}) {
+      const values = [];
+      const conditions = getConditionalData(effect, context);
+      const targetData = getTargetData(effect, context.isLS);
+
+      const iconKey = this.config.iconKey;
+      const value = +effect['bc fill per turn'];
+      values.push({ iconKey, value: { value, targetData, conditions }, desc: `${helper.getNumberAsPolarizedNumber(value)} BC/turn ${targetData}` });
 
       return {
         type: this.type,
