@@ -271,6 +271,32 @@ const passives = {
       };
     },
   },
+  '10': {
+    desc: 'HC Efficacy',
+    config: {
+      iconKey: 'PASSIVE_BUFF_HCREC',
+    },
+    possibleIcons () {
+      return [this.config.iconKey];
+    },
+    type: [EffectTypes.PASSIVE.name],
+    process (effect = {}, context = {}) {
+      const values = [];
+      const conditions = getConditionalData(effect, context);
+      const targetData = getTargetData(effect, context.isLS);
+
+      const iconKey = this.config.iconKey;
+      const value = +effect['hc effectiveness%'];
+      values.push({ iconKey, value: { value, targetData, conditions }, desc: `${helper.getNumberAsPolarizedPercent(value)} HC efficacy ${targetData}` });
+
+      return {
+        type: this.type,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
   '66': {
     desc: 'Add effect to BB/SBB/UBB',
     config: {

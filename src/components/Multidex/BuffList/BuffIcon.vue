@@ -74,7 +74,7 @@
     </template>
     <template v-else-if="iconKey.startsWith('PASSIVE') && (customBuffIconKeys.includes(getBattleBuffKeyFromCustomKey(iconKey)) || isPassiveTypeStatIcon(iconKey))">
       <g>
-        <template v-if="elements.includes(getTypeInfoFromPassiveTypeStatKey(iconKey).type.toLowerCase())">
+        <template v-if="isPassiveTypeStatIcon(iconKey) && elements.includes(getTypeInfoFromPassiveTypeStatKey(iconKey).type.toLowerCase())">
           <image
             width="156" height="26"
             xlink:href="@/assets/buff-translation/common/attribute_mark.png"
@@ -352,9 +352,13 @@ export default {
       'BUFF_ELEMENTALATKUP',
       'BUFF_ELEMENTALDEFUP',
       'BUFF_ELEMENTALRECUP',
+      'BUFF_HCREC',
     ],
     iconKeyMapping: () => IconKeyMapping,
     elements: () => knownConstants.elements.slice(),
+    passiveTypeStatKeyBlacklist: () => [
+      'PASSIVE_BUFF_HCREC',
+    ],
   },
   methods: {
     getBattleBuffIconCoordinates (index = 0, key) {
@@ -372,7 +376,7 @@ export default {
     getTypeInfoFromPassiveTypeStatKey (iconKey = 'PASSIVE_BUFF_ELEMENTHPUP') {
       const regexMatch = iconKey.match(/^PASSIVE_BUFF_(?<element>.*)(CRTRATE|HP|ATK|DEF|REC)UP$/);
       // console.debug(iconKey, regexMatch);
-      return regexMatch && {
+      return regexMatch && !this.passiveTypeStatKeyBlacklist.includes(iconKey) && {
         type: regexMatch[1],
         stat: regexMatch[2],
       };
@@ -381,8 +385,8 @@ export default {
       return !!this.getTypeInfoFromPassiveTypeStatKey(iconKey);
     },
     isPassiveUnitTypeStatIcon (iconKey) {
-      const type = this.getTypeInfoFromPassiveTypeStatKey(iconKey).type;
-      const isPassiveType = !!type && knownConstants.unitTypes.includes(type.toLowerCase());
+      const match = this.getTypeInfoFromPassiveTypeStatKey(iconKey) || {};
+      const isPassiveType = !!match.type && knownConstants.unitTypes.includes(match.type.toLowerCase());
       return isPassiveType;
     },
   },

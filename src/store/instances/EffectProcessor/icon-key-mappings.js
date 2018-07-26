@@ -39,6 +39,9 @@ const IconKeyMappings = {
   INSTANT_BUFF_HPREC: { name: 'INSTANT_BUFF_HPREC' }, // based off of BUFF_HPREC
   INSTANT_BUFF_BBREC: { name: 'INSTANT_BUFF_BBREC' },
 
+  // custom procs
+  BUFF_HCREC: { name: 'BUFF_HCREC' },
+
   // most proc buffs
   BUFF_ATKUP: { name: 'BUFF_ATKUP' },
   BUFF_ATKDOWN: { name: 'BUFF_ATKDOWN' },
