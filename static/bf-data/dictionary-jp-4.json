@@ -1,4 +1,172 @@
 {
+  "MST_SKILLS_2001220_NAME": {
+    "en": "Pulsar Fall",
+    "es": "Caída púlsar",
+    "id": "Bintang Jatuh",
+    "pt": "Queda de Pulsar",
+    "th": "พัลซาร์ ฟอล",
+    "vi": "Sao xa"
+  },
+  "MST_SKILLS_2001221_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001221_NAME": {
+    "en": "Hmph. There's no way I'm training with you.",
+    "es": "Mmm. No hay manera de que yo entrene contigo.",
+    "id": "Hmph. Aku gak mungkin berlatih denganmu.",
+    "pt": "Humpf. Nunca que vou treinar com você.",
+    "th": "หืม ไม่มีทางที่ข้าจะฝึกกับเจ้า",
+    "vi": "Hừm. Tôi không đời nào tập luyện với anh."
+  },
+  "MST_SKILLS_2001222_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001222_NAME": {
+    "en": "Dean, get out of my way! I can't aim right!",
+    "es": "¡Dean, sal de mi camino! ¡No puedo apuntar bien!",
+    "id": "Dean, minggir! Aku tidak bisa membidik dengan benar!",
+    "pt": "Dean, sai do meu caminho! Não posso mirar direito!",
+    "th": "ท่าน อย่ามาขางทางข้า! ข้าเล็งไม่ได้!",
+    "vi": "Dean, tránh ra! Tôi không thể nhắm trúng!"
+  },
+  "MST_SKILLS_2001223_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001223_NAME": {
+    "en": "Dean, I have to admit, you are pretty strong.",
+    "es": "Dean, tengo que admitir que eres bastante fuerte.",
+    "id": "Dean, aku harus mengakui kamu lumayan kuat.",
+    "pt": "Dean, preciso admitir, você é bem forte.",
+    "th": "ขอขอยอมรับท่าน ท่านช่างแข็งแกร่งจริงๆ",
+    "vi": "Dean, tôi phải thừa nhận, anh khá mạnh."
+  },
+  "MST_SKILLS_2001224_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001224_NAME": {
+    "en": "You just got in the way. Tomorrow I'll fight by myself.",
+    "es": "Te metiste en mi camino. Mañana pelearé por mí mismo.",
+    "id": "Kamu hanya menghalangiku. Besok aku bertarung sendirian.",
+    "pt": "Você só atrapalhou. Amanhã vou lutar sozinho.",
+    "th": "เพราะเจ้าเข้ามายุ่ง พรุ่งนี้ข้าจะสู้เอง",
+    "vi": "Anh chỉ cản đường thôi. Ngày mai tôi sẽ tự chiến đấu."
+  },
+  "MST_SKILLS_2001230_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001230_NAME": {
+    "en": "Hidden Dimension",
+    "es": "Dimensión escondida",
+    "id": "Dimensi Tersembunyi",
+    "pt": "Dimensão Oculta",
+    "th": "ฮิดเดน ไดเมนชั่น",
+    "vi": "Chiều ẩn"
+  },
+  "MST_SKILLS_2001231_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001231_NAME": {
+    "en": "Foreign Light",
+    "es": "Luz foránea",
+    "id": "Cahaya Asing",
+    "pt": "Luz Desconhecida",
+    "th": "ฟอเรนจ์ ไลท์",
+    "vi": "Ánh sáng lạ"
+  },
+  "MST_SKILLS_2001232_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001232_NAME": {
+    "en": "Endless",
+    "es": "Infinito",
+    "id": "Tiada Akhir",
+    "pt": "Interminável",
+    "th": "เอนเลส",
+    "vi": "Vô tận"
+  },
+  "MST_SKILLS_2001233_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001233_NAME": {
+    "en": "Knowing you're no match for a god, you still defy me?",
+    "es": "Sabes que no eres rival para un dios y ¿osas desafiarme?",
+    "id": "Tahu kamu tidak bisa menyamai dewa, kamu masih melawanku?",
+    "pt": "Sabendo que você não é páreo para um deus, ainda me desafia?",
+    "th": "เมื่อเจ้ารู้ว่าไม่คู่ควรกับเทพ แล้วเจ้ายังจะปฏิเสธข้ารึ?",
+    "vi": "Biết ko phải đ.thủ của 1 vị thần mà ngươi vẫn thách ta sao?"
+  },
+  "MST_SKILLS_2001234_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001234_NAME": {
+    "en": "Humans are foolish creatures indeed...",
+    "es": "Los humanos sí que son criaturas torpes...",
+    "id": "Manusia memang adalah makhluk yang bodoh…",
+    "pt": "Humanos são criaturas tolas mesmo...",
+    "th": "มนุษย์เป็นสิ่งมีชีวิตที่โง่เง่าเสียจริง...",
+    "vi": "Con người quả là những sinh vật ngu ngốc thực sự..."
+  },
+  "MST_SKILLS_2001235_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001235_NAME": {
+    "en": "...thinking they can destroy us with their power.",
+    "es": "...piensan que pueden destruirnos con su poder.",
+    "id": "…berpikir mereka bisa melawan kita dengan kekuatan mereka.",
+    "pt": "...achando que podem nos destruir com seu poder.",
+    "th": "...คิดว่าจะกำจัดพวกเราได้ด้วยพลังของตัวเอง",
+    "vi": "...nghĩ chúng có thể t.diệt bọn ta với sức mạnh của chúng."
+  },
   "MST_SKILLS_2001236_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -86366,61 +86534,5 @@
     "pt": "Combo de 18 golpes poderosos de sombra em todos os inimigos, provável corte drástico por uma rodada e adiciona os elementos sombra e luz ao ataque por 3 rodadas ",
     "th": "18 คอมโบ โจมตีธาตุมืดอย่างรุนแรง ใส่ศัตรูทั้งหมด, อาจจะทำให้คิดสถานะ ลบความเสียหายอย่างรุนแรง นาน 1 เทิร์น และ เพิ่ม ธาตุมืด กับ แสง ให้กับการโจมตี นาน 3 เทิร์น ",
     "vi": "18 combo Dark powerful attack on all enemies, probable drastic damage cut for 1 turn & adds Dark and Light elements to attack for 3 turns "
-  },
-  "MST_SKILLS_2122633_NAME": {
-    "en": "I'll make you like me!",
-    "es": "¡Haré que me quieras!",
-    "id": "Akan kubuat kau menyukaiku!",
-    "pt": "Vou deixar você como eu!",
-    "th": "ข้าจะทำให้ท่านชอบข้าให้ได้!",
-    "vi": "I'll make you like me!"
-  },
-  "MST_SKILLS_2122634_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122634_NAME": {
-    "en": "Hmph, you're all talk.",
-    "es": "Hmph, tú eres de los que hablan mucho.",
-    "id": "Hmph, kau omong doang.",
-    "pt": "Hunf, puro papo.",
-    "th": "หืม พูดจบแล้วเรอะ",
-    "vi": "Hmph, you're all talk."
-  },
-  "MST_SKILLS_212263_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_212263_NAME": {
-    "en": "I've enjoyed this battle.",
-    "es": "He disfrutado esta batalla.",
-    "id": "Aku menikmati perang ini.",
-    "pt": "Eu gostei desse embate.",
-    "th": "ข้าสนุกกับการต่อสู้นี้",
-    "vi": "I've enjoyed this battle."
-  },
-  "MST_SKILLS_21226400_NAME": {
-    "en": "But it's time to end it now.",
-    "es": "But it's time to end it now.",
-    "id": "Tapi saatnya untuk diakhiri.",
-    "pt": "But it's time to end it now.",
-    "th": "แต่ตอนนี้ได้เวลาส่งท้ายแล้ว",
-    "vi": "But it's time to end it now."
-  },
-  "MST_SKILLS_2122640_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
   }
 }
