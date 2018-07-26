@@ -5,21 +5,8 @@ import IconKeyMappings from './icon-key-mappings';
 const procTypes = require('@/assets/buff-translation/procs.json');
 
 const generateUnknownEntry = (id) => ({
+  ...(helper.generateDefaultEntry(id)),
   desc: `Unknown buff ${id}`,
-  type: [EffectTypes.UNKNOWN.name],
-  possibleIcons: () => [IconKeyMappings.UNKNOWN.name],
-  process (effect = {}, context) {
-    return {
-      type: [EffectTypes.UNKNOWN.name],
-      originalEffect: effect,
-      context,
-      values: [{
-        iconKey: IconKeyMappings.UNKNOWN.name,
-        value: effect,
-        desc: `Unknown effect. Effect Keys: [${Object.keys(effect).join(', ')}]`,
-      }],
-    };
-  },
 });
 
 const unknownProcs = {

@@ -47,4 +47,5 @@ export default {
   },
   buffSearchOptions: ['ls', 'es', 'sp', 'bb', 'sbb', 'ubb'],
   unitTypes: ['lord', 'anima', 'breaker', 'guardian', 'oracle'],
+  ailments: ['poison', 'weak', 'sick', 'injury', 'curse', 'paralysis'],
 };

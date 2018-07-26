@@ -154,6 +154,45 @@ const passives = {
       };
     },
   },
+  '4': {
+    desc: 'Status Negation/Resistance',
+    config: {
+      processOrder: knownConstants.ailments.slice(),
+      [helper.iconGeneratorSymbol]: ailment => `PASSIVE_BUFF_${ailment.toUpperCase()}BLK`,
+      keyMapping: (() => {
+        const mapping = {};
+        knownConstants.ailments.forEach(ailment => {
+          mapping[ailment] = (ailment === 'weak') ? 'weaken resist%' : `${ailment} resist%`;
+        });
+        return mapping;
+      })(),
+    },
+    possibleIcons () {
+      return this.config.processOrder.map(ailment => this.config[helper.iconGeneratorSymbol](ailment));
+    },
+    type: [EffectTypes.PASSIVE.name],
+    process (effect = {}, context = {}) {
+      const values = [];
+      const conditions = getConditionalData(effect, context);
+      const targetData = getTargetData(effect, context.isLS);
+
+      this.config.processOrder.forEach(ailment => {
+        const value = effect[this.config.keyMapping[ailment]];
+        if (value) {
+          const iconKey = this.config[helper.iconGeneratorSymbol](ailment);
+          const desc = [+value === 100 ? 'Negates' : `${helper.getNumberAsPolarizedPercent(+value)} resistance to`, helper.capitalize(ailment), targetData].join(' ');
+          values.push({ iconKey, value: { value, conditions, targetData }, desc });
+        }
+      });
+
+      return {
+        type: this.type,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
   '5': {
     desc: 'Elemental Mitigation',
     config: {},
@@ -171,6 +210,28 @@ const passives = {
           values.push({ iconKey, value: { value, targetData, conditions }, desc: [helper.getNumberAsPolarizedPercent(value), helper.capitalize(e), 'mitigation', targetData].join(' ') });
         }
       });
+
+      return {
+        type: this.type,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
+  '8': {
+    desc: 'Damage Reduction/Mitigation',
+    config: {},
+    possibleIcons: () => ['PASSIVE_BUFF_DAMAGECUT'],
+    type: [EffectTypes.PASSIVE.name],
+    process (effect = {}, context = {}) {
+      const values = [];
+      const conditions = getConditionalData(effect, context);
+      const targetData = getTargetData(effect, context.isLS);
+
+      const iconKey = 'PASSIVE_BUFF_DAMAGECUT';
+      const value = effect['dmg% mitigation'];
+      values.push({ iconKey, value: { value, targetData, conditions }, desc: [helper.getNumberAsPolarizedPercent(value), 'mitigation', targetData].join(' ') });
 
       return {
         type: this.type,

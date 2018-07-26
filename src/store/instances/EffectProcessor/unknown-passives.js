@@ -7,6 +7,11 @@ const passiveTypes = require('@/assets/buff-translation/passives.json');
 
 const getUnknownParams = (effect) => effect['unknown passive params'].split(',').map(v => +v);
 
+const generateUnknownEntry = (id) => ({
+  ...(helper.generateDefaultEntry(id)),
+  desc: `Unknown buff ${id}`,
+});
+
 const unknownPassives = {
   ...(() => {
     const entries = {};
@@ -15,6 +20,8 @@ const unknownPassives = {
     });
     return entries;
   })(),
+  '6': generateUnknownEntry('6'),
+  '7': generateUnknownEntry('7'),
   '72': {
     desc: 'Turn End Effects Occur at Start of Turn',
     config: {},
