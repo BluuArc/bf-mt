@@ -843,4 +843,4 @@ async function initializeGHData() {
   // logger.debug('ghData', ghData);
 }
 
-getData(['gl', 'eu']);
+getData();

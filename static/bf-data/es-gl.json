@@ -22309,7 +22309,7 @@
     ]
   },
   "840588": {
-    "desc": "20% boost to all parameters when All Might is in the same Squad, adds Def ignoring effect to attack for all allies and 100% boost to Spark damage when Deku's Face Mask is equipped, greatly boosts critical damage, probable resistance against 2 KO attacks & boosts Atk, Def each turn (up to 4 turns)",
+    "desc": "20% boost to all parameters when All Might is in the same Squad, adds Def ignoring effect to attack for all allies and 100% boost to Spark damage when Deku's Face Mask is equipped, greatly boosts critical damage, probable resistance against 2 KO attacks & boosts Atk, Def each turn (up to 4 turns) for all allies",
     "effects": [
       {
         "atk% buff": 20,
@@ -22369,7 +22369,7 @@
         "def% max buff": 60,
         "increase from min to max": 1,
         "passive id": "105",
-        "passive target": "self",
+        "passive target": "party",
         "turn count": 4
       }
     ],

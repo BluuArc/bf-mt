@@ -1,4 +1,236 @@
 {
+  "MST_LEADERSKILLS_810003_DESCRIPTION": {
+    "en": "200% boost to Atk and 60% boost to max HP of Light types, 15% damage reduction from Dark types, probable normal attack on all foes & damage dealt boosts BB gauge",
+    "es": "200% boost to Atk and 60% boost to max HP of Light types, 15% damage reduction from Dark types, probable normal attack on all foes & damage dealt boosts BB gauge",
+    "id": "200% ekstra Serang, 60% ekstra HP maks tipe Terang, kurangi 15% kerusakan tipe Gelap, kans serangan normal ke semua musuh, kerusakan ditimbulkan menambah meteran BB",
+    "pt": "200% boost to Atk and 60% boost to max HP of Light types, 15% damage reduction from Dark types, probable normal attack on all foes & damage dealt boosts BB gauge",
+    "th": "200% เพิ่มพลังโจมตี, 60% เพิ่ม HP สูงสุดให้กับธาตุแสง, 15% ลดความเสียหายธาตุมืด, มีโอกาสโจมตีปกติใส่ศัตรูทั้งหมด, เพิ่มบีบีเกจจากความเสียหายที่ได้รับ",
+    "vi": "200% boost to Atk and 60% boost to max HP of Light types, 15% damage reduction from Dark types, probable normal attack on all foes & damage dealt boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_810003_NAME": {
+    "en": "Paradoxical Courage",
+    "es": "Paradoxical Courage",
+    "id": "Keberanian Paradoks",
+    "pt": "Paradoxical Courage",
+    "th": "พาราด็อกซิคัล คอเรจ",
+    "vi": "Paradoxical Courage"
+  },
+  "MST_LEADERSKILLS_810004_DESCRIPTION": {
+    "en": "150% boost to Atk and 50% boost to max HP of Dark types, 10% damage reduction from Light types & boosts Spark damage",
+    "es": "150% boost to Atk and 50% boost to max HP of Dark types, 10% damage reduction from Light types & boosts Spark damage",
+    "id": "150% ekstra Serang, 50% ekstra HP maks tipe Gelap, kurangi 10% kerusakan tipe Terang, menambah kerusakan Percikan",
+    "pt": "150% boost to Atk and 50% boost to max HP of Dark types, 10% damage reduction from Light types & boosts Spark damage",
+    "th": "150% เพิ่มพลังโจมตี, 50% เพิ่ม HP สูงสุดให้กับธาตุมืด, 10% ลดความเสียหายธาตุแสง, เพิ่มความเสียหายสปาร์ค",
+    "vi": "150% boost to Atk and 50% boost to max HP of Dark types, 10% damage reduction from Light types & boosts Spark damage"
+  },
+  "MST_LEADERSKILLS_810004_NAME": {
+    "en": "A Moment to Die",
+    "es": "A Moment to Die",
+    "id": "Momen untuk Mati",
+    "pt": "A Moment to Die",
+    "th": "อะ โมเมนต์ ทู ดาย",
+    "vi": "A Moment to Die"
+  },
+  "MST_LEADERSKILLS_810005_DESCRIPTION": {
+    "en": "200% boost to Atk and 60% boost to max HP of Dark types, 15% damage reduction from Light types, boosts Spark damage & boosts OD gauge fill rate",
+    "es": "200% boost to Atk and 60% boost to max HP of Dark types, 15% damage reduction from Light types, boosts Spark damage & boosts OD gauge fill rate",
+    "id": "200% ekstra Serang, 60% ekstra HP maks tipe Gelap, kurangi 15% kerusakan tipe Terang, menambah kerusakan Percikan & laju isi meteran OD",
+    "pt": "200% boost to Atk and 60% boost to max HP of Dark types, 15% damage reduction from Light types, boosts Spark damage & boosts OD gauge fill rate",
+    "th": "200% เพิ่มพลังโจมตี, 60% เพิ่ม HP สูงสุดให้กับธาตุมืด, 15% ลดความเสียหายธาตุแสง, เพิ่มความเสียหายสปาร์ค, เพิ่มอัตราการเติมโอดีเกจ",
+    "vi": "200% boost to Atk and 60% boost to max HP of Dark types, 15% damage reduction from Light types, boosts Spark damage & boosts OD gauge fill rate"
+  },
+  "MST_LEADERSKILLS_810005_NAME": {
+    "en": "Paradoxical Demise",
+    "es": "Paradoxical Demise",
+    "id": "Kematian Paradoks",
+    "pt": "Paradoxical Demise",
+    "th": "พาราด็อกซิคัล ดีไมซ์",
+    "vi": "Paradoxical Demise"
+  },
+  "MST_LEADERSKILLS_810006_DESCRIPTION": {
+    "en": "35% boost to all parameters, negates Def ignoring damage & slight damage reduction for 2 turns when damage taken has exceeded certain amount",
+    "es": "35% boost to all parameters, negates Def ignoring damage & slight damage reduction for 2 turns when damage taken has exceeded certain amount",
+    "id": "35% ekstra semua parameter, menegasi kerusakan abaikan Pertahanan, agak kurangi kerusakan 2 giliran saat kerusakan melampaui jumlah tertentu",
+    "pt": "35% boost to all parameters, negates Def ignoring damage & slight damage reduction for 2 turns when damage taken has exceeded certain amount",
+    "th": "35% เพิ่มค่า พารามิเตอร์ทั้งหมด, ลบล้าง ความเสียหายไม่สนค่า ป้องกัน และ ลดค่าความเสียหายเล็กน้อย นาน 2 เทิร์น เมื่อความเสียหายที่ได้รับ เกินกว่าปริมาณหนึ่ง",
+    "vi": "35% boost to all parameters, negates Def ignoring damage & slight damage reduction for 2 turns when damage taken has exceeded certain amount"
+  },
+  "MST_LEADERSKILLS_810006_NAME": {
+    "en": "Carefree Spirit",
+    "es": "Carefree Spirit",
+    "id": "Roh Merdeka",
+    "pt": "Carefree Spirit",
+    "th": "แคร์ปรี สปิริต",
+    "vi": "Carefree Spirit"
+  },
+  "MST_LEADERSKILLS_810007_DESCRIPTION": {
+    "en": "45% boost to all parameters, negates Def ignoring damage, slight damage reduction for 2 turns when damage taken has exceeded certain amount & adds probable 1 turn Atk reduction effect to attack for 2 turns when damage dealt has exceeded certain amount",
+    "es": "45% boost to all parameters, negates Def ignoring damage, slight damage reduction for 2 turns when damage taken has exceeded certain amount & adds probable 1 turn Atk reduction effect to attack for 2 turns when damage dealt has exceeded certain amount",
+    "id": "45% ekstra semua parameter, menegasi kerusakan abaikan Pertahanan, saat kerusakan melampaui jumlah tertentu untuk 2 giliran: agak mengurangi kerusakan , beri kans efek kurangi Serangan 1 giliran ke serangan",
+    "pt": "45% boost to all parameters, negates Def ignoring damage, slight damage reduction for 2 turns when damage taken has exceeded certain amount & adds probable 1 turn Atk reduction effect to attack for 2 turns when damage dealt has exceeded certain amount",
+    "th": "45% เพิ่มค่า พารามิเตอร์ทั้งหมด, ลบล้าง ความเสียหายไม่สนค่า ป้องกัน, ลดค่าความเสียหายเล็กน้อย นาน 2 เทิร์น เมื่อความเสียหายที่ได้รับ เกินกว่าปริมาณหนึ่ง และ เพิ่มผล มีโอกาส 1 เทิร์น ลดค่าโจมตี ให้กับการโจมตี นาน 2 เทิร์น เมื่อความเสียหายที่สร้าง เกินกว่าปริมาณหนึ่ง",
+    "vi": "45% boost to all parameters, negates Def ignoring damage, slight damage reduction for 2 turns when damage taken has exceeded certain amount & adds probable 1 turn Atk reduction effect to attack for 2 turns when damage dealt has exceeded certain amount"
+  },
+  "MST_LEADERSKILLS_810007_NAME": {
+    "en": "Courageous Knight",
+    "es": "Courageous Knight",
+    "id": "Ksatria Pemberani",
+    "pt": "Courageous Knight",
+    "th": "เคอเรจจัส ไนท์",
+    "vi": "Courageous Knight"
+  },
+  "MST_LEADERSKILLS_810008_DESCRIPTION": {
+    "en": "40% boost to max HP, Rec and 80% boost to Atk of all Units when 4 elements or more are present, boosts OD gauge fill rate, reduces BB gauge required for BB & negates all status ailments",
+    "es": "40% boost to max HP, Rec and 80% boost to Atk of all Units when 4 elements or more are present, boosts OD gauge fill rate, reduces BB gauge required for BB & negates all status ailments",
+    "id": "40% ekstra HP maks, Pulih, 80% ekstra Serang semua unit saat ada 4 elemen ke atas, menambah laju pengisian meteran OD, mengurangi meteran BB untuk BB, menegasi semua status penyakit",
+    "pt": "40% boost to max HP, Rec and 80% boost to Atk of all Units when 4 elements or more are present, boosts OD gauge fill rate, reduces BB gauge required for BB & negates all status ailments",
+    "th": "40% เพิ่มค่า HP สูงสุด, ฟื้นฟู กับ 80% เพิ่มค่า โจมตี ของยูนิตทั้งหมด เมื่อมี 4 ธาตุหรือมากกว่านั้นในทีม, เพิ่มอัตราเติมเกจ OD, ลด เกจ BB ที่ต้องการสำหรับใช้ BB และ ลบล้าง สถานะผิดปกติทั้งหมด",
+    "vi": "40% boost to max HP, Rec and 80% boost to Atk of all Units when 4 elements or more are present, boosts OD gauge fill rate, reduces BB gauge required for BB & negates all status ailments"
+  },
+  "MST_LEADERSKILLS_810008_NAME": {
+    "en": "Innocence is Bliss",
+    "es": "Innocence is Bliss",
+    "id": "Polos itu Bahagia",
+    "pt": "Innocence is Bliss",
+    "th": "อินโนเซนซ์ อีส บลิส",
+    "vi": "Innocence is Bliss"
+  },
+  "MST_LEADERSKILLS_810009_DESCRIPTION": {
+    "en": "50% boost to max HP, Rec and 100% boost to Atk of all Units when 4 elements or more are present, considerably boosts OD gauge fill rate, considerably reduces BB gauge required for BB & negates all status ailments",
+    "es": "50% boost to max HP, Rec and 100% boost to Atk of all Units when 4 elements or more are present, considerably boosts OD gauge fill rate, considerably reduces BB gauge required for BB & negates all status ailments",
+    "id": "50% ekstra HP maks, Pulih, 100% ekstra Serang semua unit saat ada 4 elemen ke atas, menambah laju pengisian meteran OD, lumayan mengurangi meteran BB untuk BB, menegasi semua status penyakit",
+    "pt": "50% boost to max HP, Rec and 100% boost to Atk of all Units when 4 elements or more are present, considerably boosts OD gauge fill rate, considerably reduces BB gauge required for BB & negates all status ailments",
+    "th": "50% เพิ่มค่า HP สูงสุด, ฟื้นฟู กับ 100% เพิ่มค่า โจมตี ของยูนิตทั้งหมด เมื่อมี 4 ธาตุหรือมากกว่านั้นในทีม, เพิ่มอัตราเติมเกจ OD อย่างมาก, ลด เกจ BB ที่ต้องการอย่างมากสำหรับใช้ BB และ ลบล้าง สถานะผิดปกติทั้งหมด",
+    "vi": "50% boost to max HP, Rec and 100% boost to Atk of all Units when 4 elements or more are present, considerably boosts OD gauge fill rate, considerably reduces BB gauge required for BB & negates all status ailments"
+  },
+  "MST_LEADERSKILLS_810009_NAME": {
+    "en": "Bonds of Friendship",
+    "es": "Bonds of Friendship",
+    "id": "Ikatan Persahabatan",
+    "pt": "Bonds of Friendship",
+    "th": "บอนด์ ออฟ เฟรนด์ชิบ",
+    "vi": "Bonds of Friendship"
+  },
+  "MST_LEADERSKILLS_810010_DESCRIPTION": {
+    "en": "50% boost to max HP, 100% boost to Atk, 120% boost to Spark damage, raises normal hit amount & 50% damage counter",
+    "es": "50% boost to max HP, 100% boost to Atk, 120% boost to Spark damage, raises normal hit amount & 50% damage counter",
+    "id": "50% ekstra HP maks, 100% ekstra Serang, 120% ekstra kerusakan Percikan, menambah jumlah pukulan normal & 50% melawan kerusakan",
+    "pt": "50% boost to max HP, 100% boost to Atk, 120% boost to Spark damage, raises normal hit amount & 50% damage counter",
+    "th": "50% เพิ่มค่า HP สูงสุด, 100% เพิ่มค่า โจมตี, 120% เพิ่มค่า ความเสียหายสปาร์ค, เพิ่มปริมาณโจมตีธรรมดา และ 50% สวนกลับค่าความเสียหาย",
+    "vi": "50% boost to max HP, 100% boost to Atk, 120% boost to Spark damage, raises normal hit amount & 50% damage counter"
+  },
+  "MST_LEADERSKILLS_810010_NAME": {
+    "en": "Icy Disposition",
+    "es": "Icy Disposition",
+    "id": "Pembawaan Dingin",
+    "pt": "Icy Disposition",
+    "th": "ไอซ์ซี่ ดิสโพสิชั่น",
+    "vi": "Icy Disposition"
+  },
+  "MST_LEADERSKILLS_810011_DESCRIPTION": {
+    "en": "50% boost to max HP, 100% boost to Atk, 130% boost to Spark damage, raises normal hit amount & 50-75% damage counter",
+    "es": "50% boost to max HP, 100% boost to Atk, 130% boost to Spark damage, raises normal hit amount & 50-75% damage counter",
+    "id": "50% ekstra HP maks, 100% ekstra Serang, 130% ekstra kerusakan Percikan, menambah jumlah pukulan normal & 50-75% melawan kerusakan",
+    "pt": "50% boost to max HP, 100% boost to Atk, 130% boost to Spark damage, raises normal hit amount & 50-75% damage counter",
+    "th": "50% เพิ่มค่า HP สูงสุด, 100% เพิ่มค่า โจมตี, 130% เพิ่มค่า ความเสียหายสปาร์ค, เพิ่มปริมาณโจมตีธรรมดา และ 50-75% สวนกลับค่าความเสียหาย",
+    "vi": "50% boost to max HP, 100% boost to Atk, 130% boost to Spark damage, raises normal hit amount & 50-75% damage counter"
+  },
+  "MST_LEADERSKILLS_810011_NAME": {
+    "en": "Loyal Knight",
+    "es": "Loyal Knight",
+    "id": "Ksatria Setia",
+    "pt": "Loyal Knight",
+    "th": "ลอยัล ไนท์",
+    "vi": "Loyal Knight"
+  },
+  "MST_LEADERSKILLS_810012_DESCRIPTION": {
+    "en": "50% boost to max HP and Atk, 30% boost to critical hit rate, considerably boosts BB Atk, hugely boosts critical damage & hugely boosts BC, HC, Zel, Karma, and Item drop rates",
+    "es": "50% boost to max HP and Atk, 30% boost to critical hit rate, considerably boosts BB Atk, hugely boosts critical damage & hugely boosts BC, HC, Zel, Karma, and Item drop rates",
+    "id": "50% ekstra HP maks dan Serangan, 30% ekstra pukulan ampuh, lumayan menambah BB Serang, amat menambah kerusakan ampuh, perolehan BC, HC, Zel, Karma, barang.",
+    "pt": "50% boost to max HP and Atk, 30% boost to critical hit rate, considerably boosts BB Atk, hugely boosts critical damage & hugely boosts BC, HC, Zel, Karma, and Item drop rates",
+    "th": "50% เพิ่มค่า HP สูงสุด กับ โจมตี, 30% เพิ่มค่า อัตราเกิดคริติคอล, เพิ่มค่าอย่างมากให้ BB โจมตี, เพิ่มค่าอย่างสูงให้ ความเสียหายคริติคอล และ เพิ่มค่าอย่างสูงให้ อัตราดรอป BC, HC, เซล, คาร์มา, กับ ไอเทม",
+    "vi": "50% boost to max HP and Atk, 30% boost to critical hit rate, considerably boosts BB Atk, hugely boosts critical damage & hugely boosts BC, HC, Zel, Karma, and Item drop rates"
+  },
+  "MST_LEADERSKILLS_810012_NAME": {
+    "en": "Master Mechanic",
+    "es": "Master Mechanic",
+    "id": "Jago Mekanik",
+    "pt": "Master Mechanic",
+    "th": "มาสเตอร์ แมคคานิค",
+    "vi": "Master Mechanic"
+  },
+  "MST_LEADERSKILLS_810013_DESCRIPTION": {
+    "en": "50% boost to max HP and Atk, 30% boost to critical hit rate, greatly boosts BB Atk, hugely boosts critical damage & enormously boosts BC, HC, Zel, Karma, and Item drop rates",
+    "es": "50% boost to max HP and Atk, 30% boost to critical hit rate, greatly boosts BB Atk, hugely boosts critical damage & enormously boosts BC, HC, Zel, Karma, and Item drop rates",
+    "id": "50% ekstra HP maks dan Serangan, 30% ekstra pukulan ampuh, amat menambah BB Serang, amat menambah kerusakan ampuh, ekstra jumbo perolehan BC, HC, Zel, Karma, barang.",
+    "pt": "50% boost to max HP and Atk, 30% boost to critical hit rate, greatly boosts BB Atk, hugely boosts critical damage & enormously boosts BC, HC, Zel, Karma, and Item drop rates",
+    "th": "50% เพิ่มค่า HP สูงสุด กับ โจมตี, 30% เพิ่มค่า อัตราเกิดคริติคอล, เพิ่มค่ามากมายให้ BB โจมตี, เพิ่มค่าอย่างสูงให้ ความเสียหายคริติคอล และ เพิ่มค่ามหาศาลให้ อัตราดรอป BC, HC, เซล, คาร์มา, กับ ไอเทม",
+    "vi": "50% boost to max HP and Atk, 30% boost to critical hit rate, greatly boosts BB Atk, hugely boosts critical damage & enormously boosts BC, HC, Zel, Karma, and Item drop rates"
+  },
+  "MST_LEADERSKILLS_810013_NAME": {
+    "en": "Genius Technician",
+    "es": "Genius Technician",
+    "id": "Teknisi Genius",
+    "pt": "Genius Technician",
+    "th": "จีเนียส เทคนิคเชี่ยน",
+    "vi": "Genius Technician"
+  },
+  "MST_LEADERSKILLS_810014_DESCRIPTION": {
+    "en": "50% boost to max HP, Def, 5% damage reduction, boosts damage reduced while guarding & restores HP each turn",
+    "es": "50% boost to max HP, Def, 5% damage reduction, boosts damage reduced while guarding & restores HP each turn",
+    "id": "50% ekstra HP maks, Tahan, kurangi 5% kerusakan, tambah kurangi kerusakan saat menjaga, pulihkan HP tiap giliran",
+    "pt": "50% boost to max HP, Def, 5% damage reduction, boosts damage reduced while guarding & restores HP each turn",
+    "th": "50% เพิ่มค่า HP สูงสุด, ป้องกัน, 5% ลดค่าความเสียหาย, เพิ่ม การลดความเสียหาย ขณะกำลังป้องกัน และ ฟื้นคืน HP แต่ละเทิร์น",
+    "vi": "50% boost to max HP, Def, 5% damage reduction, boosts damage reduced while guarding & restores HP each turn"
+  },
+  "MST_LEADERSKILLS_810014_NAME": {
+    "en": "Chivalrous Spirit",
+    "es": "Chivalrous Spirit",
+    "id": "Roh Ksatria",
+    "pt": "Chivalrous Spirit",
+    "th": "ชิฟวัลรัส สปิริต",
+    "vi": "Chivalrous Spirit"
+  },
+  "MST_LEADERSKILLS_810015_DESCRIPTION": {
+    "en": "50% boost to max HP, Def, 5% damage reduction, boosts damage reduced while guarding & restores HP each turn",
+    "es": "50% boost to max HP, Def, 5% damage reduction, boosts damage reduced while guarding & restores HP each turn",
+    "id": "50% ekstra HP maks, Tahan, kurangi 5% kerusakan, tambah kurangi kerusakan saat menjaga, pulihkan HP tiap giliran",
+    "pt": "50% boost to max HP, Def, 5% damage reduction, boosts damage reduced while guarding & restores HP each turn",
+    "th": "50% เพิ่มค่า HP สูงสุด, ป้องกัน, 5% ลดค่าความเสียหาย, เพิ่ม การลดความเสียหาย ขณะกำลังป้องกัน และ ฟื้นคืน HP แต่ละเทิร์น",
+    "vi": "50% boost to max HP, Def, 5% damage reduction, boosts damage reduced while guarding & restores HP each turn"
+  },
+  "MST_LEADERSKILLS_810015_NAME": {
+    "en": "Royal Guardian",
+    "es": "Royal Guardian",
+    "id": "Penjaga Ningrat",
+    "pt": "Royal Guardian",
+    "th": "รอยัล การ์เดี้ยน",
+    "vi": "Royal Guardian"
+  },
+  "MST_LEADERSKILLS_810016_DESCRIPTION": {
+    "en": "70% boost to Def, Rec, max HP, 20% boost to EXP gained, hugely boosts BC, HC, Zel, Karma, Item drop rates & greatly boosts BB gauge fill rate",
+    "es": "70% boost to Def, Rec, max HP, 20% boost to EXP gained, hugely boosts BC, HC, Zel, Karma, Item drop rates & greatly boosts BB gauge fill rate",
+    "id": "70% boost to Def, Rec, max HP, 20% boost to EXP gained, hugely boosts BC, HC, Zel, Karma, Item drop rates & greatly boosts BB gauge fill rate",
+    "pt": "70% boost to Def, Rec, max HP, 20% boost to EXP gained, hugely boosts BC, HC, Zel, Karma, Item drop rates & greatly boosts BB gauge fill rate",
+    "th": "70% boost to Def, Rec, max HP, 20% boost to EXP gained, hugely boosts BC, HC, Zel, Karma, Item drop rates & greatly boosts BB gauge fill rate",
+    "vi": "70% boost to Def, Rec, max HP, 20% boost to EXP gained, hugely boosts BC, HC, Zel, Karma, Item drop rates & greatly boosts BB gauge fill rate"
+  },
+  "MST_LEADERSKILLS_810016_NAME": {
+    "en": "Sphragis of Mazzaroth",
+    "es": "Sphragis of Mazzaroth",
+    "id": "Sphragis Mazzaroth",
+    "pt": "Sphragis of Mazzaroth",
+    "th": "สฟากิส ออฟ แมสซาโรห์",
+    "vi": "Sphragis of Mazzaroth"
+  },
+  "MST_LEADERSKILLS_810017_DESCRIPTION": {
+    "en": "40% boost to Def, max HP, probable 15% damage reduction, greatly boosts BB gauge fill rate & restores HP each turn",
+    "es": "40% boost to Def, max HP, probable 15% damage reduction, greatly boosts BB gauge fill rate & restores HP each turn",
+    "id": "40% ekstra Tahan, HP maks, kans kurangi 15% kerusakan, amat menambah laju pengisian meteran BB & HP pulih tiap giliran",
+    "pt": "40% boost to Def, max HP, probable 15% damage reduction, greatly boosts BB gauge fill rate & restores HP each turn",
+    "th": "40% เพิ่มค่า ป้องกัน, HP สูงสุด, อาจจะ 15% ลดค่าความเสียหาย, เพิ่มค่าอย่างมากให้ อัตราเติมเกจ BB และ ฟื้นคืน HP แต่ละเทิร์น",
+    "vi": "40% boost to Def, max HP, probable 15% damage reduction, greatly boosts BB gauge fill rate & restores HP each turn"
+  },
   "MST_LEADERSKILLS_810017_NAME": {
     "en": "A Happy Tune",
     "es": "A Happy Tune",
@@ -1303,6 +1535,22 @@
     "th": "เวนจ์ฟูล ซามูไร",
     "vi": "Vengeful Samurai"
   },
+  "MST_LEADERSKILLS_830408_DESCRIPTION": {
+    "en": "200% boost to Atk, 150% boost to max HP, raises Atk parameter limits to 150000, 200% boost to Spark damage, hugely boosts critical damage, enormously boosts all elemental damage & raises normal hit amount",
+    "es": "200% boost to Atk, 150% boost to max HP, raises Atk parameter limits to 150000, 200% boost to Spark damage, hugely boosts critical damage, enormously boosts all elemental damage & raises normal hit amount",
+    "id": "200% boost to Atk, 150% boost to max HP, raises Atk parameter limits to 150000, 200% boost to Spark damage, hugely boosts critical damage, enormously boosts all elemental damage & raises normal hit amount",
+    "pt": "200% boost to Atk, 150% boost to max HP, raises Atk parameter limits to 150000, 200% boost to Spark damage, hugely boosts critical damage, enormously boosts all elemental damage & raises normal hit amount",
+    "th": "200% boost to Atk, 150% boost to max HP, raises Atk parameter limits to 150000, 200% boost to Spark damage, hugely boosts critical damage, enormously boosts all elemental damage & raises normal hit amount",
+    "vi": "200% boost to Atk, 150% boost to max HP, raises Atk parameter limits to 150000, 200% boost to Spark damage, hugely boosts critical damage, enormously boosts all elemental damage & raises normal hit amount"
+  },
+  "MST_LEADERSKILLS_830408_NAME": {
+    "en": "Might of the Conquerors",
+    "es": "Might of the Conquerors",
+    "id": "Might of the Conquerors",
+    "pt": "Might of the Conquerors",
+    "th": "Might of the Conquerors",
+    "vi": "Might of the Conquerors"
+  },
   "MST_LEADERSKILLS_830437_DESCRIPTION": {
     "en": "50% boost to Atk, Rec, max HP, 10% damage reduction from Fire, Earth, Dark types, hugely boosts all elemental damage & Spark damage boosts BB gauge",
     "es": "50% boost to Atk, Rec, max HP, 10% damage reduction from Fire, Earth, Dark types, hugely boosts all elemental damage & Spark damage boosts BB gauge",
@@ -1414,6 +1662,38 @@
     "pt": "Pure Kotodama Mastery",
     "th": "Pure Kotodama Mastery",
     "vi": "Pure Kotodama Mastery"
+  },
+  "MST_LEADERSKILLS_830587_DESCRIPTION": {
+    "en": "80% boost to Def, max HP, 120% boost to Rec, damage taken hugely boosts BB gauge and may restore HP & probable damage reduction to 1",
+    "es": "80% boost to Def, max HP, 120% boost to Rec, damage taken hugely boosts BB gauge and may restore HP & probable damage reduction to 1",
+    "id": "80% boost to Def, max HP, 120% boost to Rec, damage taken hugely boosts BB gauge and may restore HP & probable damage reduction to 1",
+    "pt": "80% boost to Def, max HP, 120% boost to Rec, damage taken hugely boosts BB gauge and may restore HP & probable damage reduction to 1",
+    "th": "80% boost to Def, max HP, 120% boost to Rec, damage taken hugely boosts BB gauge and may restore HP & probable damage reduction to 1",
+    "vi": "80% boost to Def, max HP, 120% boost to Rec, damage taken hugely boosts BB gauge and may restore HP & probable damage reduction to 1"
+  },
+  "MST_LEADERSKILLS_830587_NAME": {
+    "en": "Everyone's Friend",
+    "es": "Everyone's Friend",
+    "id": "Everyone's Friend",
+    "pt": "Everyone's Friend",
+    "th": "Everyone's Friend",
+    "vi": "Everyone's Friend"
+  },
+  "MST_LEADERSKILLS_830588_DESCRIPTION": {
+    "en": "100% boost to Def, max HP, 200% boost to Rec, damage taken hugely boosts BB gauge and may restore HP, probable damage reduction to 1 & considerably reduces BB gauge required for BB",
+    "es": "100% boost to Def, max HP, 200% boost to Rec, damage taken hugely boosts BB gauge and may restore HP, probable damage reduction to 1 & considerably reduces BB gauge required for BB",
+    "id": "100% boost to Def, max HP, 200% boost to Rec, damage taken hugely boosts BB gauge and may restore HP, probable damage reduction to 1 & considerably reduces BB gauge required for BB",
+    "pt": "100% boost to Def, max HP, 200% boost to Rec, damage taken hugely boosts BB gauge and may restore HP, probable damage reduction to 1 & considerably reduces BB gauge required for BB",
+    "th": "100% boost to Def, max HP, 200% boost to Rec, damage taken hugely boosts BB gauge and may restore HP, probable damage reduction to 1 & considerably reduces BB gauge required for BB",
+    "vi": "100% boost to Def, max HP, 200% boost to Rec, damage taken hugely boosts BB gauge and may restore HP, probable damage reduction to 1 & considerably reduces BB gauge required for BB"
+  },
+  "MST_LEADERSKILLS_830588_NAME": {
+    "en": "Floating Hero",
+    "es": "Floating Hero",
+    "id": "Floating Hero",
+    "pt": "Floating Hero",
+    "th": "Floating Hero",
+    "vi": "Floating Hero"
   },
   "MST_LEADERSKILLS_840047_DESCRIPTION": {
     "en": "100% boost to Atk, 60% boost to Def, max HP of Thunder types, 10% damage reduction from Water, Thunder types, considerably reduces BB gauge required for BB & probable considerable reduction of BB gauge fill rate for 2 turns",
@@ -1830,6 +2110,38 @@
     "pt": "Cavalry of Athensphere",
     "th": "Cavalry of Athensphere",
     "vi": "Cavalry of Athensphere"
+  },
+  "MST_LEADERSKILLS_840587_DESCRIPTION": {
+    "en": "100% boost to Atk, max HP, 150% boost to Spark damage, greatly boosts BB Atk & Spark damage considerably boosts BB gauge",
+    "es": "100% boost to Atk, max HP, 150% boost to Spark damage, greatly boosts BB Atk & Spark damage considerably boosts BB gauge",
+    "id": "100% boost to Atk, max HP, 150% boost to Spark damage, greatly boosts BB Atk & Spark damage considerably boosts BB gauge",
+    "pt": "100% boost to Atk, max HP, 150% boost to Spark damage, greatly boosts BB Atk & Spark damage considerably boosts BB gauge",
+    "th": "100% boost to Atk, max HP, 150% boost to Spark damage, greatly boosts BB Atk & Spark damage considerably boosts BB gauge",
+    "vi": "100% boost to Atk, max HP, 150% boost to Spark damage, greatly boosts BB Atk & Spark damage considerably boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_840587_NAME": {
+    "en": "Hero's Heart",
+    "es": "Hero's Heart",
+    "id": "Hero's Heart",
+    "pt": "Hero's Heart",
+    "th": "Hero's Heart",
+    "vi": "Hero's Heart"
+  },
+  "MST_LEADERSKILLS_840588_DESCRIPTION": {
+    "en": "130% boost to Atk, max HP, 180% boost to Spark damage, greatly boosts BB Atk, Spark damage considerably boosts BB gauge & negates critical and elemental damage",
+    "es": "130% boost to Atk, max HP, 180% boost to Spark damage, greatly boosts BB Atk, Spark damage considerably boosts BB gauge & negates critical and elemental damage",
+    "id": "130% boost to Atk, max HP, 180% boost to Spark damage, greatly boosts BB Atk, Spark damage considerably boosts BB gauge & negates critical and elemental damage",
+    "pt": "130% boost to Atk, max HP, 180% boost to Spark damage, greatly boosts BB Atk, Spark damage considerably boosts BB gauge & negates critical and elemental damage",
+    "th": "130% boost to Atk, max HP, 180% boost to Spark damage, greatly boosts BB Atk, Spark damage considerably boosts BB gauge & negates critical and elemental damage",
+    "vi": "130% boost to Atk, max HP, 180% boost to Spark damage, greatly boosts BB Atk, Spark damage considerably boosts BB gauge & negates critical and elemental damage"
+  },
+  "MST_LEADERSKILLS_840588_NAME": {
+    "en": "Heroic Successor",
+    "es": "Heroic Successor",
+    "id": "Heroic Successor",
+    "pt": "Heroic Successor",
+    "th": "Heroic Successor",
+    "vi": "Heroic Successor"
   },
   "MST_LEADERSKILLS_840607_DESCRIPTION": {
     "en": "100% boost to Atk, max HP, boosts Atk relative to remaining HP, negates all status ailments and Atk, Def, Rec reduction effects & boosts Zel, Karma and Item drop rates",
@@ -86222,205 +86534,5 @@
     "pt": "Ark",
     "th": "อาร์ค",
     "vi": "Ark"
-  },
-  "MST_MONSTERS_57358_NAME": {
-    "en": "Ark",
-    "es": "Ark",
-    "id": "Ark",
-    "pt": "Ark",
-    "th": "อาร์ค",
-    "vi": "Ark"
-  },
-  "MST_MONSTERS_57359_NAME": {
-    "en": "Ark",
-    "es": "Ark",
-    "id": "Ark",
-    "pt": "Ark",
-    "th": "อาร์ค",
-    "vi": "Ark"
-  },
-  "MST_MONSTERS_57400_NAME": {
-    "en": "Oracle Knight Ark",
-    "es": "Caballero Oráculo Ark",
-    "id": "Ksatria Peramal Ark",
-    "pt": "Ark Cavaleiro Oráculo",
-    "th": "โอราเคิล ไนท์ อาร์ค",
-    "vi": "Oracle Knight Ark"
-  },
-  "MST_MONSTERS_57401_NAME": {
-    "en": "Oracle Knight Ark",
-    "es": "Caballero Oráculo Ark",
-    "id": "Ksatria Peramal Ark",
-    "pt": "Ark Cavaleiro Oráculo",
-    "th": "โอราเคิล ไนท์ อาร์ค",
-    "vi": "Oracle Knight Ark"
-  },
-  "MST_MONSTERS_57402_NAME": {
-    "en": "Oracle Knight Ark",
-    "es": "Oracle Knight Ark",
-    "id": "Oracle Knight Ark",
-    "pt": "Oracle Knight Ark",
-    "th": "ออราเคิล ไนท์ อาร์ค",
-    "vi": "Oracle Knight Ark"
-  },
-  "MST_MONSTERS_57403_NAME": {
-    "en": "Oracle Knight Ark",
-    "es": "Oracle Knight Ark",
-    "id": "Ksatria Peramal Ark",
-    "pt": "Oracle Knight Ark",
-    "th": "ออราเคิล ไนท์ อาร์ค",
-    "vi": "Oracle Knight Ark"
-  },
-  "MST_MONSTERS_57450_NAME": {
-    "en": "Winged Lord Eriole",
-    "es": "Señor Alado Eriole",
-    "id": "Lord Bersayap Eriole",
-    "pt": "Lorde Eriole Alado",
-    "th": "วิงเก็ด ลอร์ด เอริโอเล่",
-    "vi": "Winged Lord Eriole"
-  },
-  "MST_MONSTERS_57451_NAME": {
-    "en": "Winged Lord Eriole",
-    "es": "Señor Alado Eriole",
-    "id": "Lord Bersayap Eriole",
-    "pt": "Lorde Eriole Alado",
-    "th": "วิงเก็ด ลอร์ด เอริโอเล่",
-    "vi": "Winged Lord Eriole"
-  },
-  "MST_MONSTERS_57452_NAME": {
-    "en": "Winged Lord Eriole",
-    "es": "Winged Lord Eriole",
-    "id": "Lord Bersayap Eriole",
-    "pt": "Winged Lord Eriole",
-    "th": "วิงเก็ด ลอร์ด เอริโอเล่",
-    "vi": "Winged Lord Eriole"
-  },
-  "MST_MONSTERS_57500_NAME": {
-    "en": "Mireia",
-    "es": "Mireia",
-    "id": "Mireia",
-    "pt": "Mireia",
-    "th": "มิเรเอีย",
-    "vi": "Mireia"
-  },
-  "MST_MONSTERS_57501_NAME": {
-    "en": "Mireia",
-    "es": "Mireia",
-    "id": "Mireia",
-    "pt": "Mireia",
-    "th": "มิเรเอีย",
-    "vi": "Mireia"
-  },
-  "MST_MONSTERS_57502_NAME": {
-    "en": "Mireia",
-    "es": "Mireia",
-    "id": "Mireia",
-    "pt": "Mireia",
-    "th": "มิเรเอีย",
-    "vi": "Mireia"
-  },
-  "MST_MONSTERS_57503_NAME": {
-    "en": "Mireia",
-    "es": "Mireia",
-    "id": "Mireia",
-    "pt": "Mireia",
-    "th": "มิเรเอีย",
-    "vi": "Mireia"
-  },
-  "MST_MONSTERS_57504_NAME": {
-    "en": "Mireia",
-    "es": "Mireia",
-    "id": "Mireia",
-    "pt": "Mireia",
-    "th": "มิเรเอีย",
-    "vi": "Mireia"
-  },
-  "MST_MONSTERS_57505_NAME": {
-    "en": "Mireia",
-    "es": "Mireia",
-    "id": "Mireia",
-    "pt": "Mireia",
-    "th": "มิเรเอีย",
-    "vi": "Mireia"
-  },
-  "MST_MONSTERS_57506_NAME": {
-    "en": "Mireia",
-    "es": "Mireia",
-    "id": "Rognomus",
-    "pt": "Mireia",
-    "th": "มิเรเอีย",
-    "vi": "Mireia"
-  },
-  "MST_MONSTERS_57507_NAME": {
-    "en": "Mireia",
-    "es": "Mireia",
-    "id": "Bagura Nagia",
-    "pt": "Mireia",
-    "th": "มิเรเอีย",
-    "vi": "Mireia"
-  },
-  "MST_MONSTERS_57508_NAME": {
-    "en": "Mireia",
-    "es": "Mireia",
-    "id": "Bagura Nagia",
-    "pt": "Mireia",
-    "th": "มิเรเอีย",
-    "vi": "Mireia"
-  },
-  "MST_MONSTERS_57509_NAME": {
-    "en": "Mireia",
-    "es": "Mireia",
-    "id": "Mireia",
-    "pt": "Mireia",
-    "th": "มิเรเอีย",
-    "vi": "Mireia"
-  },
-  "MST_MONSTERS_57510_NAME": {
-    "en": "Mireia",
-    "es": "Mireia",
-    "id": "Mireia",
-    "pt": "Mireia",
-    "th": "มิเรเอีย",
-    "vi": "Mireia"
-  },
-  "MST_MONSTERS_57550_NAME": {
-    "en": "Gunner Maiden Mireia",
-    "es": "Doncella armera Mireia",
-    "id": "Gadis Penembak Mireia",
-    "pt": "Mireia Dama-Artilheira",
-    "th": "กันเนอร์ ไมเดน มิเรเอีย",
-    "vi": "Gunner Maiden Mireia"
-  },
-  "MST_MONSTERS_57551_NAME": {
-    "en": "Gunner Maiden Mireia",
-    "es": "Doncella armera Mireia",
-    "id": "Gadis Penembak Mireia",
-    "pt": "Mireia Dama-Artilheira",
-    "th": "กันเนอร์ ไมเดน มิเรเอีย",
-    "vi": "Gunner Maiden Mireia"
-  },
-  "MST_MONSTERS_57552_NAME": {
-    "en": "Gunner Maiden Mireia",
-    "es": "Doncella armera Mireia",
-    "id": "Gadis Penembak Mireia",
-    "pt": "Mireia Dama-Artilheira",
-    "th": "กันเนอร์ ไมเดน มิเรเอีย",
-    "vi": "Gunner Maiden Mireia"
-  },
-  "MST_MONSTERS_57553_NAME": {
-    "en": "Gunner Maiden Mireia",
-    "es": "Doncella armera Mireia",
-    "id": "Gadis Penembak Mireia",
-    "pt": "Mireia Dama-Artilheira",
-    "th": "กันเนอร์ ไมเดน มิเรเอีย",
-    "vi": "Gunner Maiden Mireia"
-  },
-  "MST_MONSTERS_57554_NAME": {
-    "en": "Gunner Maiden Mireia",
-    "es": "Gunner Maiden Mireia",
-    "id": "Pedang Gemuruh Diana",
-    "pt": "Gunner Maiden Mireia",
-    "th": "กันเนอร์ ไมเด้น มิเรเอีย",
-    "vi": "Gunner Maiden Mireia"
   }
 }
