@@ -96,7 +96,7 @@ export default {
         .join('\n');
     },
     handleSpType (text) {
-      return ProcessorHelper.capitalize(text).replace('sbb', 'SBB').replace('ubb', 'UBB').replace('bb', 'BB');
+      return ProcessorHelper.capitalize(text).replace('sbb', 'SBB').replace('ubb', 'UBB').replace('bb', 'BB').replace('passive', 'LS');
     },
     getEffectId (effect) {
       return effect['proc id'] || effect['passive id'] || effect['buff id'] ||

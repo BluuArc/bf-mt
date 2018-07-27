@@ -346,6 +346,34 @@ const procs = {
       };
     },
   },
+  '7': {
+    desc: 'Angel Idol (AI)',
+    config: {
+      iconKey: IconKeyMappings.BUFF_KOBLK.name,
+    },
+    possibleIcons () {
+      return [this.config.iconKey];
+    },
+    type: [EffectTypes.PERMANENT.name],
+    process (effect = {}, context) {
+      const values = [];
+      const targetData = helper.getTargetData(effect);
+
+      const recoverHp = +(effect['angel idol recover hp%'] || 100);
+      values.push({
+        iconKey: this.config.iconKey,
+        value: { recoverHp, targetData },
+        desc: `Prevent one knockout (recover ${recoverHp}% on use) ${targetData}`,
+      });
+
+      return {
+        type: this.type,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
   '18': {
     desc: 'Damage Reduction/Mitigation',
     config: {},

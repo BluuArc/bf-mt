@@ -19,6 +19,10 @@ const EffectTypes = {
     name: 'Active',
     desc: 'These are usually turn based; the source for these effects are from unit bursts (BB, SBB, UBB) or enemy skills. Newer active buffs of the same type will override the old buff (using the new value and duration).',
   },
+  PERMANENT: {
+    name: 'Permanent',
+    desc: 'These remain in effect for the entire battle. Depending on the buff, it may go away once used.',
+  },
   UNKNOWN: {
     name: 'Unknown',
     desc: 'These effects aren\'t supported by the effect processor yet.',
