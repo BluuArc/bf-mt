@@ -102,6 +102,11 @@
         <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">P</text>
       </g>
     </template>
+    <image
+      v-else-if="customBuffIconKeys.includes(iconKey)"
+      width="480" height="416"
+      xlink:href="@/assets/buff-translation/battle/custom-icons.png"
+      :transform="`translate(${getBattleBuffIconCoordinates(customBuffIconKeys.indexOf(iconKey))})`"/>
     <template v-else>
       <image
         xlink:href="@/assets/item_frame_bg2.png"

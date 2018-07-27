@@ -21,7 +21,7 @@
             <span v-if="effect.parent.originalEffect.sp_type">({{ handleSpType(effect.parent.originalEffect.sp_type) }})</span>
             <span v-if="effect.value.turns && !effect.triggeredEffectContext">{{ effect.value.turns.text }}</span>
             <span>{{ effect.desc }}</span>
-            <span v-text="`[${getEffectId(effect.parent.originalEffect)}]`"/>
+            <span v-text="`[${getEffectIds(effect)}]`"/>
             <span v-if="effect.value && effect.value.conditions && effect.value.conditions.text" class="d-block"><i>Requirement:</i> {{ effect.value.conditions.text }}</span>
           </p>
         </v-flex>
@@ -101,6 +101,11 @@ export default {
     getEffectId (effect) {
       return effect['proc id'] || effect['passive id'] || effect['buff id'] ||
         effect['unknown proc id'] || effect['unknown passive id'] || effect['unknown buff id'] || -1;
+    },
+    getEffectIds (translatedEffect) {
+      const mainId = this.getEffectId(translatedEffect.parent.originalEffect);
+      const subId = translatedEffect.triggeredEffectContext ? this.getEffectId(translatedEffect.triggeredEffectContext.originalEffect) : undefined;
+      return (subId !== undefined ? [mainId, subId] : [mainId]).join(', ');
     },
   },
 };

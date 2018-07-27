@@ -11,7 +11,6 @@ const IconKeyMappings = {
   // custom passives
   PASSIVE_BUFF_HPRECTURNSTART: { name: 'PASSIVE_BUFF_HPRECTURNSTART' }, // based on BUFF_HPREC
   PASSIVE_BUFF_BBRECTURNSTART: { name: 'PASSIVE_BUFF_BBRECTURNSTART' }, // based on BUFF_BBREC
-  PASSIVE_BUFF_HPUP: { name: 'PASSIVE_BUFF_HPUP' },
   ...(() => {
     const customElementalPassives = {};
     knownConstants.elements.forEach(e => {
@@ -40,6 +39,7 @@ const IconKeyMappings = {
   INSTANT_BUFF_BBREC: { name: 'INSTANT_BUFF_BBREC' },
 
   // custom procs
+  BUFF_HPUP: { name: 'BUFF_HPUP' },
   BUFF_HCREC: { name: 'BUFF_HCREC' },
 
   // most proc buffs

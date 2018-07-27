@@ -20,8 +20,8 @@ const helper = {
   containsAnyKey (input = {}, keys = []) {
     return Object.keys(input).some(key => keys.includes(key));
   },
-  getNumberAsPolarizedNumber (number = 0) {
-    return `${(number < 0 ? number.toString() : `+${number}`)}`;
+  getNumberAsPolarizedNumber (number = 0, formatNumber = false) {
+    return `${(number < 0 ? number.toString() : `+${formatNumber ? this.formatNumber(number) : number}`)}`;
   },
   getNumberAsPolarizedPercent (number = 0) {
     return `${this.getNumberAsPolarizedNumber(number)}%`;

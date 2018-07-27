@@ -374,9 +374,43 @@ const procs = {
       };
     },
   },
+  '8': {
+    desc: 'Increase Max HP',
+    config: {
+      iconKey: IconKeyMappings.BUFF_HPUP.name,
+    },
+    possibleIcons () {
+      return [this.config.iconKey];
+    },
+    type: [EffectTypes.PERMANENT.name],
+    process (effect = {}, context) {
+      const values = [];
+      const targetData = helper.getTargetData(effect);
+
+      const percentHp = +(effect['max hp% increase'] || 0);
+      const rawHp = +(effect['max hp increase'] || 0);
+      const iconKey = this.config.iconKey;
+      if (percentHp) {
+        values.push({ iconKey, value: { percentHp }, desc: `${helper.getNumberAsPolarizedPercent(percentHp)} HP increase ${targetData}` });
+      }
+
+      if (rawHp) {
+        values.push({ iconKey, value: { rawHp }, desc: `${helper.getNumberAsPolarizedNumber(rawHp, true)} HP increase ${targetData}` });
+      }
+
+      return {
+        type: this.type,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
   '18': {
     desc: 'Damage Reduction/Mitigation',
-    config: {},
+    config: {
+      iconKey: IconKeyMappings.BUFF_DAMAGECUT.name,
+    },
     possibleIcons: () => [IconKeyMappings.BUFF_DAMAGECUT.name],
     type: [EffectTypes.ACTIVE.name],
     process (effect = {}, context) {
@@ -384,7 +418,7 @@ const procs = {
       const targetData = helper.getTargetData(effect);
       const turns = helper.getTurns(effect['dmg% reduction turns (36)']);
 
-      const iconKey = IconKeyMappings.BUFF_DAMAGECUT.name;
+      const iconKey = this.config.iconKey;
       const value = effect['dmg% reduction'];
 
       values.push({ iconKey, value: { value, turns, targetData }, desc: `${helper.getNumberAsPolarizedPercent(+value)} mitigation ${targetData}` });
