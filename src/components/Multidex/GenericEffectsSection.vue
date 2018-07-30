@@ -3,6 +3,7 @@
     <v-tabs v-model="activeTab" class="pb-2">
       <v-tab>Description</v-tab>
       <v-tab v-if="effects">JSON</v-tab>
+      <v-tab v-if="effects">Buff List (Alpha)</v-tab>
     </v-tabs>
     <v-tabs-items v-model="activeTab" touchless :style="tabItemsStyle" :class="tabItemsClass">
       <v-tab-item>
@@ -14,20 +15,29 @@
             <v-btn flat class="ma-0" @click="showBuffList = !showBuffList">{{ showBuffList ? 'Hide' : 'Show' }} Buff List</v-btn>
           </v-card-actions>
           <v-slide-y-transition>
-            <buff-list :effects="effects" v-show="showBuffList" :show-headers="true"/>  
+            <effect-list :effects="effects" v-show="showBuffList" :show-headers="true"/>  
           </v-slide-y-transition>
         </template>
       </v-tab-item>
       <v-tab-item v-if="effects">
         <json-viewer :json="effects" :change-view="activeTab"/>
       </v-tab-item>
+      <v-tab-item v-if="effects">
+          <v-container fluid>
+            <v-layout row wrap>
+              <buff-list :effects="effects"/>
+            </v-layout>
+          </v-container>
+        </v-tab-item>
     </v-tabs-items>
   </v-container>
 </template>
 
 <script>
 import JsonViewer from '@/components/Multidex/JsonViewer';
-import BuffList from '@/components/Multidex/EffectList/MainTable';
+import EffectList from '@/components/Multidex/EffectList/MainTable';
+import BuffList from '@/components/Multidex/BuffList/BuffList';
+
 export default {
   props: {
     effects: {
@@ -45,6 +55,7 @@ export default {
   },
   components: {
     'json-viewer': JsonViewer,
+    'effect-list': EffectList,
     'buff-list': BuffList,
   },
   data () {

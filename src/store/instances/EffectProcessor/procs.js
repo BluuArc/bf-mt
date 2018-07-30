@@ -406,6 +406,85 @@ const procs = {
       };
     },
   },
+  '9': {
+    desc: 'ATK/DEF/REC Reduction to enemy',
+    config: {
+      processOrder: ['atk', 'def', 'rec'],
+      upMapping: { // uses the ADR up icons
+        atk: 'atk% buff (1)',
+        def: 'def% buff (3)',
+        rec: 'rec% buff (5)',
+        [helper.iconGeneratorSymbol]: stat => `BUFF_${stat.toUpperCase()}UP`,
+      },
+      downMapping: { // uses ADR down icons
+        atk: 'atk% buff (2)',
+        def: 'def% buff (4)',
+        rec: 'rec% buff (6)',
+        [helper.iconGeneratorSymbol]: stat => `BUFF_${stat.toUpperCase()}DOWN`,
+      },
+      // TODO: rest of elements? only one instance of this exists in 702400132-eu
+      fireMapping: {
+        atk: 'atk% buff (13)',
+        def: 'def% buff (14)',
+        rec: 'rec% buf (15)',
+        [helper.iconGeneratorSymbol]: stat => `BUFF_FIRE${stat.toUpperCase()}DOWN`,
+      },
+    },
+    possibleIcons () {
+      const iconKeys = [];
+      const { processOrder, upMapping, downMapping, fireMapping } = this.config;
+      const addKeys = (mapper) => {
+        processOrder.forEach(stat => {
+          iconKeys.push(mapper[helper.iconGeneratorSymbol](stat));
+        });
+      };
+
+      [upMapping, downMapping, fireMapping].forEach(addKeys);
+
+      return iconKeys;
+    },
+    type: [EffectTypes.ACTIVE.name],
+    process (effect = {}, context) {
+      const values = [];
+      const targetData = helper.getTargetData(effect);
+      const turns = helper.getTurns(effect);
+
+      const elementBuffed = effect['element buffed'] || 'all';
+      const buffNumbers = ['buff #1', 'buff #2'];
+      const { processOrder, ...mappings } = this.config;
+
+      const generateDescription = (value, stat, procChance) => `${helper.getNumberAsPolarizedPercent(value)} ${stat} reduction (${procChance}% chance)`;
+
+      buffNumbers.forEach(buffNumber => {
+        if (effect[buffNumber]) {
+          const procChance = effect[buffNumber]['proc chance%'];
+          Object.values(mappings).forEach(mapping => {
+            const statValues = helper.multiStatToObject(undefined, ...(processOrder.map(stat => effect[buffNumber][mapping[stat]])));
+            processOrder.forEach(stat => {
+              if (statValues[stat]) {
+                const iconKey = mapping[helper.iconGeneratorSymbol](stat);
+                values.push({ iconKey, value: { value: +statValues[stat], procChance, turns, targetData, elementBuffed }, desc: [generateDescription(+statValues[stat], stat.toUpperCase(), procChance), targetData].join(' ') });
+              }
+            });
+          });
+        }
+      });
+
+      // case when SP just adds an extra turn
+      if (values.length === 0) {
+        const procChance = buffNumbers.map(buffNumber => (effect[buffNumber] && effect[buffNumber]['proc chance%']) || 0).reduce((val, newVal) => val || newVal, 0);
+        values.push({ iconKey: this.config.downMapping[helper.iconGeneratorSymbol]('atk'), value: { value: 0, procChance, turns, targetData }, desc: [generateDescription(0, 'stat', procChance), targetData].join(' ') });
+      }
+
+      return {
+        type: this.type,
+        turnDuration: turns.value,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
   '18': {
     desc: 'Damage Reduction/Mitigation',
     config: {
