@@ -72,7 +72,7 @@
         <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">P</text>
       </g>
     </template>
-    <template v-else-if="iconKey.startsWith('PASSIVE') && (customBuffIconKeys.includes(getBattleBuffKeyFromCustomKey(iconKey)) || isPassiveTypeStatIcon(iconKey))">
+    <template v-else-if="(iconKey.startsWith('PASSIVE') || iconKey.startsWith('INSTANT')) && (customBuffIconKeys.includes(getBattleBuffKeyFromCustomKey(iconKey)) || isPassiveTypeStatIcon(iconKey))">
       <g>
         <template v-if="isPassiveTypeStatIcon(iconKey) && elements.includes(getTypeInfoFromPassiveTypeStatKey(iconKey).type.toLowerCase())">
           <image
@@ -99,7 +99,9 @@
       </g>
       <g class="animate--pulse">
         <rect x="0" y="0" width="32" height="32" rx="8" ry="8" fill="grey" style="fill-opacity: 0.5"/>
-        <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">P</text>
+        <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">
+          {{ iconKey.startsWith('PASSIVE') ? 'P' : 'B' }}
+        </text>
       </g>
     </template>
     <image
@@ -358,6 +360,7 @@ export default {
       'BUFF_ELEMENTALDEFUP',
       'BUFF_ELEMENTALRECUP',
       'BUFF_HCREC',
+      'BUFF_ALLAILNULL',
     ],
     iconKeyMapping: () => IconKeyMapping,
     elements: () => knownConstants.elements.slice(),

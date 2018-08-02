@@ -41,6 +41,7 @@ const IconKeyMappings = {
   // custom procs
   BUFF_HPUP: { name: 'BUFF_HPUP' },
   BUFF_HCREC: { name: 'BUFF_HCREC' },
+  BUFF_ALLAILNULL: { name: 'BUFF_ALLAILNULL' },
 
   // most proc buffs
   BUFF_ATKUP: { name: 'BUFF_ATKUP' },

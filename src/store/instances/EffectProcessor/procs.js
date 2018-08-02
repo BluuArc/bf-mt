@@ -485,6 +485,31 @@ const procs = {
       };
     },
   },
+  '10': {
+    desc: 'Status Ailment Cleanse/Removal (Old)',
+    config: {
+      iconKey: 'INSTANT_BUFF_ALLAILNULL',
+    },
+    possibleIcons () {
+      return [this.config.iconKey];
+    },
+    type: [EffectTypes['INSTANT/BURST'].name],
+    process (effect = {}, context) {
+      const values = [];
+      const targetData = helper.getTargetData(effect);
+
+      const iconKey = this.config.iconKey;
+      const value = effect['remove all status ailments'];
+      values.push({ iconKey, value: { value, targetData }, desc: `Removes all status ailments ${targetData}` });
+
+      return {
+        type: this.type,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
   '18': {
     desc: 'Damage Reduction/Mitigation',
     config: {
