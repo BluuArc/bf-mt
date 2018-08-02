@@ -253,5 +253,15 @@ const IconKeyMappings = {
   SG_BUFF_ATK_EU: { name: 'SG_BUFF_ATK_EU' },
   SG_BUFF_DBLBB_EU: { name: 'SG_BUFF_DBLBB_EU' },
   SG_BUFF_REC_EU: { name: 'SG_BUFF_REC_EU' },
+
+  // debuffs
+  ...(() => {
+    const ailments = {};
+    knownConstants.ailments.forEach(ail => {
+      const key = `DEBUFF_${ail.toUpperCase()}`;
+      ailments[key] = { name: key };
+    });
+    return ailments;
+  })(),
 };
 export default IconKeyMappings;

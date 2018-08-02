@@ -510,6 +510,43 @@ const procs = {
       };
     },
   },
+  '11': {
+    desc: 'Inflict Status Ailment',
+    config: {
+      processOrder: knownConstants.ailments.slice(),
+      [helper.iconGeneratorSymbol]: ailment => `DEBUFF_${ailment.toUpperCase()}`,
+    },
+    possibleIcons () {
+      return this.config.processOrder.map(this.config[helper.iconGeneratorSymbol]);
+    },
+    type: [EffectTypes.ACTIVE.name],
+    process (effect = {}, context) {
+      const values = [];
+      const targetData = helper.getTargetData(effect);
+
+      this.config.processOrder.forEach(ailment => {
+        const value = effect[`${ailment}%`];
+        if (value) {
+          const iconKey = this.config[helper.iconGeneratorSymbol](ailment);
+          values.push({ iconKey, value: { value, targetData }, desc: `${value}% chance to inflict ${helper.capitalize(ailment)} ${targetData}` });
+        }
+      });
+
+      if (values.length === 0) {
+        values.push({
+          iconKey: IconKeyMappings.UNKNOWN.name,
+          value: { value: 0, targetData },
+          desc: `0% chance to inflict null ${targetData}` });
+      }
+
+      return {
+        type: this.type,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
   '18': {
     desc: 'Damage Reduction/Mitigation',
     config: {

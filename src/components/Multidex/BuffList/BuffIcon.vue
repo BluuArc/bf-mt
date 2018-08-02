@@ -16,6 +16,10 @@
       width="480" height="192"
       xlink:href="@/assets/buff-translation/battle/battle_buff_icon_sg.png"
       :transform="`translate(${getBattleBuffIconCoordinates(sgBattleBuffIconKeys.indexOf(iconKey), iconKey)})`"/>
+    <image v-else-if="ailmentBuffKeys.includes(iconKey)"
+      width="192" height="32"
+      xlink:href="@/assets/buff-translation/battle/battle_bad_icon.png"
+      :transform="`translate(${getBattleBuffIconCoordinates(ailmentBuffKeys.indexOf(iconKey), iconKey)})`"/>
     <image
       v-else-if="iconKey === iconKeyMapping.ST_ATK.name || iconKey === iconKeyMapping.ATK.name"
       width="30" height="32"
@@ -73,7 +77,7 @@
       </g>
     </template>
     <template v-else-if="(iconKey.startsWith('PASSIVE') || iconKey.startsWith('INSTANT')) && (customBuffIconKeys.includes(getBattleBuffKeyFromCustomKey(iconKey)) || isPassiveTypeStatIcon(iconKey))">
-      <g>
+      <g v-if="iconKey.startsWith('PASSIVE')">
         <template v-if="isPassiveTypeStatIcon(iconKey) && elements.includes(getTypeInfoFromPassiveTypeStatKey(iconKey).type.toLowerCase())">
           <image
             width="156" height="26"
@@ -362,6 +366,7 @@ export default {
       'BUFF_HCREC',
       'BUFF_ALLAILNULL',
     ],
+    ailmentBuffKeys: () => knownConstants.ailments.map(ail => `DEBUFF_${ail.toUpperCase()}`),
     iconKeyMapping: () => IconKeyMapping,
     elements: () => knownConstants.elements.slice(),
     passiveTypeStatKeyBlacklist: () => [
