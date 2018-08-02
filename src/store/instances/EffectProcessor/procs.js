@@ -547,6 +547,31 @@ const procs = {
       };
     },
   },
+  '12': {
+    desc: 'Guaranteed Revive',
+    config: {
+      iconKey: 'INSTANT_BUFF_KOBLK',
+    },
+    possibleIcons () {
+      return [this.config.iconKey];
+    },
+    type: [EffectTypes['INSTANT/BURST'].name],
+    process (effect = {}, context) {
+      const values = [];
+      const targetData = helper.getTargetData(effect);
+
+      const reviveHp = +(effect['revive to hp%'] || 0);
+      const iconKey = this.config.iconKey;
+      values.push({ iconKey, value: { reviveHp, targetData }, desc: `Revive ${targetData.replace(/(\(|\))/g, '')} with ${reviveHp}% HP` });
+
+      return {
+        type: this.type,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
   '18': {
     desc: 'Damage Reduction/Mitigation',
     config: {
