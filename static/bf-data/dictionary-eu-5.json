@@ -1,60 +1,4 @@
 {
-  "MST_SKILLS_2122633_NAME": {
-    "en": "I'll make you like me!",
-    "es": "¡Haré que me quieras!",
-    "id": "Akan kubuat kau menyukaiku!",
-    "pt": "Vou deixar você como eu!",
-    "th": "ข้าจะทำให้ท่านชอบข้าให้ได้!",
-    "vi": "I'll make you like me!"
-  },
-  "MST_SKILLS_2122634_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122634_NAME": {
-    "en": "Hmph, you're all talk.",
-    "es": "Hmph, tú eres de los que hablan mucho.",
-    "id": "Hmph, kau omong doang.",
-    "pt": "Hunf, puro papo.",
-    "th": "หืม พูดจบแล้วเรอะ",
-    "vi": "Hmph, you're all talk."
-  },
-  "MST_SKILLS_212263_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_212263_NAME": {
-    "en": "I've enjoyed this battle.",
-    "es": "He disfrutado esta batalla.",
-    "id": "Aku menikmati perang ini.",
-    "pt": "Eu gostei desse embate.",
-    "th": "ข้าสนุกกับการต่อสู้นี้",
-    "vi": "I've enjoyed this battle."
-  },
-  "MST_SKILLS_21226400_NAME": {
-    "en": "But it's time to end it now.",
-    "es": "But it's time to end it now.",
-    "id": "Tapi saatnya untuk diakhiri.",
-    "pt": "But it's time to end it now.",
-    "th": "แต่ตอนนี้ได้เวลาส่งท้ายแล้ว",
-    "vi": "But it's time to end it now."
-  },
-  "MST_SKILLS_2122640_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
   "MST_SKILLS_2122640_NAME": {
     "en": "E-Entry number 3, Tiara!",
     "es": "¡Participante número 3, Tiara!",
@@ -86047,6 +85991,22 @@
     "th": "ไฮเวอนอล โซลสติซ",
     "vi": "Hivernal Solstice"
   },
+  "MST_SKILLS_2820318_DESCRIPTION": {
+    "en": "23 combo massive Water attack on all foes, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts BC, HC drop rates for 3 turns, enormously boosts BB gauge for 3 turns & enormous damage reduction from all elemental types for 3 turns",
+    "es": "23 combo massive Water attack on all foes, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts BC, HC drop rates for 3 turns, enormously boosts BB gauge for 3 turns & enormous damage reduction from all elemental types for 3 turns",
+    "id": "23 combo massive Water attack on all foes, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts BC, HC drop rates for 3 turns, enormously boosts BB gauge for 3 turns & enormous damage reduction from all elemental types for 3 turns",
+    "pt": "23 combo massive Water attack on all foes, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts BC, HC drop rates for 3 turns, enormously boosts BB gauge for 3 turns & enormous damage reduction from all elemental types for 3 turns",
+    "th": "23 combo massive Water attack on all foes, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts BC, HC drop rates for 3 turns, enormously boosts BB gauge for 3 turns & enormous damage reduction from all elemental types for 3 turns",
+    "vi": "23 combo massive Water attack on all foes, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts BC, HC drop rates for 3 turns, enormously boosts BB gauge for 3 turns & enormous damage reduction from all elemental types for 3 turns"
+  },
+  "MST_SKILLS_2820318_NAME": {
+    "en": "Crystal Solstice",
+    "es": "Crystal Solstice",
+    "id": "Crystal Solstice",
+    "pt": "Crystal Solstice",
+    "th": "Crystal Solstice",
+    "vi": "Crystal Solstice"
+  },
   "MST_SKILLS_2820357_DESCRIPTION": {
     "en": "18 combo massive Water attack on all foes, enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec relative to max HP for 3 turns, enormously boosts BB Atk for 3 turns & greatly boosts max HP",
     "es": "18 combo massive Water attack on all foes, enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec relative to max HP for 3 turns, enormously boosts BB Atk for 3 turns & greatly boosts max HP",
@@ -86534,5 +86494,101 @@
     "pt": "10 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns",
     "th": "5 คอมโบ โจมตีธาตุ ไฟ, ดิน อย่างรุนแรงมหาศาล ใส่ศัตรูทั้งหมด, 100% ลดค่าความเสียหาย นาน 1 เทิร์น, เพิ่มค่าอย่างสูงให้ HP สูงสุด และ เพิ่มค่าอย่างมหาศาลให้ โจมตี, ป้องกัน, ฟื้นฟู นาน 3 เทิร์น",
     "vi": "8 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns"
+  },
+  "MST_SKILLS_2830178_NAME": {
+    "en": "SDM: Power Geyser MAX",
+    "es": "SDM: Power Geyser MAX",
+    "id": "SDM: Gletser Kuat MAX",
+    "pt": "SDM: Power Geyser MAX",
+    "th": "SDM: พาวเวอร์ เกย์เซอร์ แม็กซ์",
+    "vi": "SDM: Power Geyser MAX"
+  },
+  "MST_SKILLS_2830187_DESCRIPTION": {
+    "en": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage & enormous 3 turn Atk, Def reduction",
+    "es": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage & enormous 3 turn Atk, Def reduction",
+    "id": "Serangan Bumi masif ke semua musuh (kerusakan sesuai sisa HP), serangan Bumi masif ke 1 musuh, 3 giliran: ekstra jumbo Serang, Tahan, Pulih, kerusakan pukulan ampuh & pengurangan jumbo Serang, Tahan",
+    "pt": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage & enormous 3 turn Atk, Def reduction",
+    "th": "โจมตีธาตุดินรุนแรงมหาศาล ใส่ศัตรูทั้งหมด (ความเสียหาย สัมพันธ์กับ HP ที่เหลืออยู่), โจมตีธาตุดินรุนแรงมหาศาล ใส่ศัตรูเป้าหมาย, เพิ่มค่ามหาศาลให้ โจมตี, ป้องกัน, ฟื้นฟู นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ ความเสียหายคริติคอล และ 3 เทิร์น ลดค่า โจมตี, ป้องกัน มหาศาล",
+    "vi": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage & enormous 3 turn Atk, Def reduction"
+  },
+  "MST_SKILLS_2830187_NAME": {
+    "en": "DM: V-Slasher MAX",
+    "es": "DM: V-Slasher MAX",
+    "id": "DM: V-Penyabet MAKS",
+    "pt": "DM: V-Slasher MAX",
+    "th": "ดีเอ็ม: วี-สแลชเชอร์ แม๊กซ์",
+    "vi": "DM: V-Slasher MAX"
+  },
+  "MST_SKILLS_2830188_DESCRIPTION": {
+    "en": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage for 3 turns, enormous 3 turn Atk, Def reduction & enormously boosts own Atk, boosts own critical hit rate and hugely reduces own Def for 3 turns",
+    "es": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage, enormous 3 turn Atk, Def reduction & enormously boosts own Atk, boosts own critical hit rate and hugely reduces own Def for 3 turns",
+    "id": "Serangan Bumi masif ke semua musuh (kerusakan sesuai sisa HP), serangan Bumi masif ke 1 musuh, 3 giliran: ekstra jumbo Serang, Tahan, Pulih, Serangan sendiri, dan kerusakan pukulan ampuh; pengurangan jumbo Serang, Tahan; amat kurangi Tahan sendiri & menambah pukulan ampuh sendiri ",
+    "pt": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage, enormous 3 turn Atk, Def reduction & enormously boosts own Atk, boosts own critical hit rate and hugely reduces own Def for 3 turns",
+    "th": "โจมตีธาตุดินรุนแรงมหาศาล ใส่ศัตรูทั้งหมด (ความเสียหาย สัมพันธ์กับ HP ที่เหลืออยู่), โจมตีธาตุดินรุนแรงมหาศาล ใส่ศัตรูเป้าหมาย, เพิ่มค่ามหาศาลให้ โจมตี, ป้องกัน, ฟื้นฟู นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ ความเสียหายคริติคอล นาน 3 เทิร์น, 3 เทิร์น ลดค่า โจมตี, ป้องกัน มหาศาล และ เพิ่มค่ามหาศาลให้ โจมตี ของตนเอง, เพิ่มค่า อัตราเกิดคริติคอลของตนเอง กับ ลดค่า ป้องกัน ของตนเองอย่างสูง นาน 3 เทิร์น",
+    "vi": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage, enormous 3 turn Atk, Def reduction & enormously boosts own Atk, boosts own critical hit rate and hugely reduces own Def for 3 turns"
+  },
+  "MST_SKILLS_2830188_NAME": {
+    "en": "SDM: V-Slasher MAX",
+    "es": "SDM: V-Slasher MAX",
+    "id": "SDM: V-Penyabet MAKS",
+    "pt": "SDM: V-Slasher MAX",
+    "th": "เอสเอ็มดี: วี-สแลชเชอร์ แม๊กซ์",
+    "vi": "SDM: V-Slasher MAX"
+  },
+  "MST_SKILLS_2830277_DESCRIPTION": {
+    "en": "24 combo massive Earth attack on all foes, normal attacks hit all foes for 3 turns & enormously boosts Atk for 3 turns & boosts Earth, Water, Light elemental damage for 3 turns",
+    "es": "24 combo massive Earth attack on all foes, normal attacks hit all foes for 3 turns & enormously boosts Atk for 3 turns & boosts Earth, Water, Light elemental damage for 3 turns",
+    "id": "24 kombo serangan Bumi masif ke semua musuh, 3 giliran: serangan normal terkena semua musuh, ekstra jumbo Serangan, menambah kerusakan elemen Bumi, Air, Terang",
+    "pt": "24 combo massive Earth attack on all foes, normal attacks hit all foes for 3 turns & enormously boosts Atk for 3 turns & boosts Earth, Water, Light elemental damage for 3 turns",
+    "th": "24 คอมโบ โจมตีธาตุดินรุนแรงมหาศาล ใส่ศัตรูทั้งหมด, การโจมตีธรรมดา ตีโดนศัตรูทั้งหมด นาน 3 เทิร์น และ เพิ่มค่ามหาศาลให้ โจมตี นาน 3 เทิร์น และ เพิ่ม ธาตุดิน , น้ำ, แสง ความเสียหาย นาน 3 เทิร์น",
+    "vi": "24 combo massive Earth attack on all foes, normal attacks hit all foes for 3 turns & enormously boosts Atk for 3 turns & boosts Earth, Water, Light elemental damage for 3 turns"
+  },
+  "MST_SKILLS_2830277_NAME": {
+    "en": "Plagueborne Blitzkrieg",
+    "es": "Plagueborne Blitzkrieg",
+    "id": "Serangan Kilat Wabah",
+    "pt": "Plagueborne Blitzkrieg",
+    "th": "เพลกบอร์น บลิทซ์คลีก",
+    "vi": "Plagueborne Blitzkrieg"
+  },
+  "MST_SKILLS_2830278_DESCRIPTION": {
+    "en": "26 combo massive Earth attack on all foes, normal attacks hit all foes for 3 turns, enormously boosts Atk for 3 turns, enormously boosts Earth elemental damage for 3 turns & additional massive attack at turn's end for 3 turns",
+    "es": "26 combo massive Earth attack on all foes, normal attacks hit all foes for 3 turns, enormously boosts Atk for 3 turns, enormously boosts Earth elemental damage for 3 turns & additional massive attack at turn's end for 3 turns",
+    "id": "26 kombo serangan Bumi masif ke semua musuh, 3 giliran: serangan normal terkena semua musuh, ekstra jumbo Serangan, kerusakan elemen Bumi, Air, Terang, tambahan serangan masif di akhir giliran",
+    "pt": "26 combo massive Earth attack on all foes, normal attacks hit all foes for 3 turns, enormously boosts Atk for 3 turns, enormously boosts Earth elemental damage for 3 turns & additional massive attack at turn's end for 3 turns",
+    "th": "26 คอมโบ โจมตีธาตุดินรุนแรงมหาศาล ใส่ศัตรูทั้งหมด, การโจมตีธรรมดา ตีโดนศัตรูทั้งหมด นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ โจมตี นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ ธาตุดิน , น้ำ, แสง ความเสียหาย นาน 3 เทิร์น และ เพิ่มโจมตีรุนแรงมหาศาล เมื่อตอนจบเทิร์น นาน 3 เทิร์น",
+    "vi": "26 combo massive Earth attack on all foes, normal attacks hit all foes for 3 turns, enormously boosts Atk for 3 turns, enormously boosts Earth elemental damage for 3 turns & additional massive attack at turn's end for 3 turns"
+  },
+  "MST_SKILLS_2830278_NAME": {
+    "en": "Pandemic Holocaust",
+    "es": "Pandemic Holocaust",
+    "id": "Bencana Pandemik",
+    "pt": "Pandemic Holocaust",
+    "th": "แพนเดมิค โฮโลคอส",
+    "vi": "Pandemic Holocaust"
+  },
+  "MST_SKILLS_2830287_DESCRIPTION": {
+    "en": "19 combo massive Earth attack on all foes, enormously boosts Atk relative to Def for 3 turns, raises normal hit amount for 3 turns & hugely boosts max HP",
+    "es": "19 combo massive Earth attack on all foes, enormously boosts Atk relative to Def for 3 turns, raises normal hit amount for 3 turns & hugely boosts max HP",
+    "id": "19 kombo serangan Bumi masif ke semua musuh, 3 giliran: ekstra jumbo Serang sesuai Tahan, menaikkan pukulan normal, amat menambah HP maks",
+    "pt": "19 combo massive Earth attack on all foes, enormously boosts Atk relative to Def for 3 turns, raises normal hit amount for 3 turns & hugely boosts max HP",
+    "th": "19 คอมโบ โจมตีธาตุดินรุนแรงมหาศาล ใส่ศัตรูทั้งหมด, เพิ่มค่ามหาศาลให้ โจมตี สัมพันธ์กับ ป้องกัน นาน 3 เทิร์น, เพิ่มปริมาณการโจมตีธรรมดา นาน 3 เทิร์น และ เพิ่มค่าอย่างสูงให้ HP สูงสุด",
+    "vi": "19 combo massive Earth attack on all foes, enormously boosts Atk relative to Def for 3 turns, raises normal hit amount for 3 turns & hugely boosts max HP"
+  },
+  "MST_SKILLS_2830287_NAME": {
+    "en": "Heaven-Breaking Drill",
+    "es": "Heaven-Breaking Drill",
+    "id": "Bor Pemecah Surga",
+    "pt": "Heaven-Breaking Drill",
+    "th": "เฮฟเว่น-เบรคกิ้ง ดริล",
+    "vi": "Heaven-Breaking Drill"
+  },
+  "MST_SKILLS_2830288_DESCRIPTION": {
+    "en": "22 combo massive Earth attack on all foes, enormously boosts Atk relative to Def for 3 turns, enormously boosts OD gauge fill rate at turn's end for 3 turns, hugely raises normal hit amount for 3 turns & hugely boosts max HP",
+    "es": "22 combo massive Earth attack on all foes, enormously boosts Atk relative to Def for 3 turns, enormously boosts OD gauge fill rate at turn's end for 3 turns, hugely raises normal hit amount for 3 turns & hugely boosts max HP",
+    "id": "22 kombo serangan Bumi masif ke semua musuh, 3 giliran: ekstra jumbo Serang sesuai Tahan dan laju pengisian meteran OD di akhir giliran, amat menaikkan pukulan normal dan HP maks",
+    "pt": "22 combo massive Earth attack on all foes, enormously boosts Atk relative to Def for 3 turns, enormously boosts OD gauge fill rate at turn's end for 3 turns, hugely raises normal hit amount for 3 turns & hugely boosts max HP",
+    "th": "22 คอมโบ โจมตีธาตุดินรุนแรงมหาศาล ใส่ศัตรูทั้งหมด, เพิ่มค่ามหาศาลให้ โจมตี สัมพันธ์กับ ป้องกัน นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ อัตราเติมเกจ OD เมื่อตอนจบเทิร์น นาน 3 เทิร์น,เพิ่มปริมาณการโจมตีธรรมดาอย่างสูง นาน 3 เทิร์น และ เพิ่มค่าอย่างสูงให้ HP สูงสุด",
+    "vi": "22 combo massive Earth attack on all foes, enormously boosts Atk relative to Def for 3 turns, enormously boosts OD gauge fill rate at turn's end for 3 turns, hugely raises normal hit amount for 3 turns & hugely boosts max HP"
   }
 }

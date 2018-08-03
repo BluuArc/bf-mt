@@ -1,4 +1,52 @@
 {
+  "MST_LEADERSKILLS_810000_DESCRIPTION": {
+    "en": "150% boost to Atk and 50% boost to max HP of Thunder types, 10% damage reduction from Earth types, considerably boosts BB Atk & negates Def ignoring effect",
+    "es": "150% boost to Atk and 50% boost to max HP of Thunder types, 10% damage reduction from Earth types, considerably boosts BB Atk & negates Def ignoring effect",
+    "id": "150% ekstra Serang, 50% ekstra HP maks tipe Guntur, kurangi 10% kerusakan tipe Bumi, lumayan menambah BB Serang & menegasi efek abaikan Pertahanan",
+    "pt": "150% boost to Atk and 50% boost to max HP of Thunder types, 10% damage reduction from Earth types, considerably boosts BB Atk & negates Def ignoring effect",
+    "th": "150% เพิ่มพลังโจมตี, 50% เพิ่ม HP สูงสุดให้กับธาตุสายฟ้า, 10% ลดความเสียหายธาตุดิน, เพิ่มบีบีโจมตี, กันการเจาะเกราะ",
+    "vi": "150% boost to Atk and 50% boost to max HP of Thunder types, 10% damage reduction from Earth types, considerably boosts BB Atk & negates Def ignoring effect"
+  },
+  "MST_LEADERSKILLS_810000_NAME": {
+    "en": "A Moment of Unity",
+    "es": "A Moment of Unity",
+    "id": "Momen Persatuan",
+    "pt": "A Moment of Unity",
+    "th": "อะ โมเมนต์ ออฟ ยูนิตี้",
+    "vi": "A Moment of Unity"
+  },
+  "MST_LEADERSKILLS_810001_DESCRIPTION": {
+    "en": "200% boost to Atk and 60% boost to max HP of Thunder types, 15% damage reduction from Earth types, greatly boosts BB Atk & negates Def ignoring effect",
+    "es": "200% boost to Atk and 60% boost to max HP of Thunder types, 15% damage reduction from Earth types, greatly boosts BB Atk & negates Def ignoring effect",
+    "id": "200% ekstra Serang, 60% ekstra HP maks tipe Guntur, kurangi 15% kerusakan tipe Bumi, amat menambah BB Serang & menegasi efek abaikan Pertahanan",
+    "pt": "200% boost to Atk and 60% boost to max HP of Thunder types, 15% damage reduction from Earth types, greatly boosts BB Atk & negates Def ignoring effect",
+    "th": "200% เพิ่มพลังโจมตี, 60% เพิ่ม HP สูงสุดให้กับธาตุสายฟ้า, 15% ลดความเสียหายธาตุดิน, เพิ่มบีบีโจมตีอย่างมาก, กันการเจาะเกราะ",
+    "vi": "200% boost to Atk and 60% boost to max HP of Thunder types, 15% damage reduction from Earth types, greatly boosts BB Atk & negates Def ignoring effect"
+  },
+  "MST_LEADERSKILLS_810001_NAME": {
+    "en": "Paradoxical Friendship",
+    "es": "Paradoxical Friendship",
+    "id": "Persahabatan Paradoks",
+    "pt": "Paradoxical Friendship",
+    "th": "พาราด็อกซิคัล เฟรนชิพ",
+    "vi": "Paradoxical Friendship"
+  },
+  "MST_LEADERSKILLS_810002_DESCRIPTION": {
+    "en": "150% boost to Atk and 50% boost to max HP of Light types, 10% damage reduction from Dark types & probable normal attack on all foes",
+    "es": "150% boost to Atk and 50% boost to max HP of Light types, 10% damage reduction from Dark types & probable normal attack on all foes",
+    "id": "150% ekstra Serang, 50% ekstra HP maks tipe Terang, kurangi 10% kerusakan tipe Gelap, kans serangan normal ke semua musuh",
+    "pt": "150% boost to Atk and 50% boost to max HP of Light types, 10% damage reduction from Dark types & probable normal attack on all foes",
+    "th": "150% เพิ่มพลังโจมตี, 50% เพิ่ม HP สูงสุดให้กับธาตุแสง, 10% ลดความเสียหายธาตุมืด, มีโอกาสโจมตีปกติใส่ศัตรูทั้งหมด",
+    "vi": "150% boost to Atk and 50% boost to max HP of Light types, 10% damage reduction from Dark types & probable normal attack on all foes"
+  },
+  "MST_LEADERSKILLS_810002_NAME": {
+    "en": "A Moment of Triumph",
+    "es": "A Moment of Triumph",
+    "id": "Momen Kemenangan",
+    "pt": "A Moment of Triumph",
+    "th": "อะ โมเมนต์ ออฟ ไทรอัมป์",
+    "vi": "A Moment of Triumph"
+  },
   "MST_LEADERSKILLS_810003_DESCRIPTION": {
     "en": "200% boost to Atk and 60% boost to max HP of Light types, 15% damage reduction from Dark types, probable normal attack on all foes & damage dealt boosts BB gauge",
     "es": "200% boost to Atk and 60% boost to max HP of Light types, 15% damage reduction from Dark types, probable normal attack on all foes & damage dealt boosts BB gauge",
@@ -1022,6 +1070,22 @@
     "pt": "A Joyful Aria",
     "th": "A Joyful Aria",
     "vi": "A Joyful Aria"
+  },
+  "MST_LEADERSKILLS_820318_DESCRIPTION": {
+    "en": "80% boost to all parameters, 150% boost to Spark damage, greatly boosts BC, HC drop rate, Spark damage considerably boosts BB gauge & reduces BB gauge required for BB",
+    "es": "80% boost to all parameters, 150% boost to Spark damage, greatly boosts BC, HC drop rate, Spark damage considerably boosts BB gauge & reduces BB gauge required for BB",
+    "id": "80% boost to all parameters, 150% boost to Spark damage, greatly boosts BC, HC drop rate, Spark damage considerably boosts BB gauge & reduces BB gauge required for BB",
+    "pt": "80% boost to all parameters, 150% boost to Spark damage, greatly boosts BC, HC drop rate, Spark damage considerably boosts BB gauge & reduces BB gauge required for BB",
+    "th": "80% boost to all parameters, 150% boost to Spark damage, greatly boosts BC, HC drop rate, Spark damage considerably boosts BB gauge & reduces BB gauge required for BB",
+    "vi": "80% boost to all parameters, 150% boost to Spark damage, greatly boosts BC, HC drop rate, Spark damage considerably boosts BB gauge & reduces BB gauge required for BB"
+  },
+  "MST_LEADERSKILLS_820318_NAME": {
+    "en": "Frigid Supremacy",
+    "es": "Frigid Supremacy",
+    "id": "Frigid Supremacy",
+    "pt": "Frigid Supremacy",
+    "th": "Frigid Supremacy",
+    "vi": "Frigid Supremacy"
   },
   "MST_LEADERSKILLS_820357_DESCRIPTION": {
     "en": "80% boost to Atk, Def and max HP of Water types, 5% damage reduction from normal attacks, reduces BB gauge required for BB & ",
@@ -2638,6 +2702,22 @@
     "pt": "Thousand Moves Prodigy",
     "th": "Thousand Moves Prodigy",
     "vi": "Thousand Moves Prodigy"
+  },
+  "MST_LEADERSKILLS_850588_DESCRIPTION": {
+    "en": "150% boost to Atk, 100% boost to max HP, 30% boost to critical hit rate, 20% damage reduction for 2 turn when damage taken has exceeded certain amount, hugely boost critical damage & 20% boost to EXP gained",
+    "es": "150% boost to Atk, 100% boost to max HP, 30% boost to critical hit rate, 20% damage reduction for 2 turn when damage taken has exceeded certain amount, hugely boost critical damage & 20% boost to EXP gained",
+    "id": "150% boost to Atk, 100% boost to max HP, 30% boost to critical hit rate, 20% damage reduction for 2 turn when damage taken has exceeded certain amount, hugely boost critical damage & 20% boost to EXP gained",
+    "pt": "150% boost to Atk, 100% boost to max HP, 30% boost to critical hit rate, 20% damage reduction for 2 turn when damage taken has exceeded certain amount, hugely boost critical damage & 20% boost to EXP gained",
+    "th": "150% boost to Atk, 100% boost to max HP, 30% boost to critical hit rate, 20% damage reduction for 2 turn when damage taken has exceeded certain amount, hugely boost critical damage & 20% boost to EXP gained",
+    "vi": "150% boost to Atk, 100% boost to max HP, 30% boost to critical hit rate, 20% damage reduction for 2 turn when damage taken has exceeded certain amount, hugely boost critical damage & 20% boost to EXP gained"
+  },
+  "MST_LEADERSKILLS_850588_NAME": {
+    "en": "Symbol of Peace",
+    "es": "Symbol of Peace",
+    "id": "Symbol of Peace",
+    "pt": "Symbol of Peace",
+    "th": "Symbol of Peace",
+    "vi": "Symbol of Peace"
   },
   "MST_LEADERSKILLS_850977_DESCRIPTION": {
     "en": "40% boost to max HP, boosts Atk relative to how high remaining HP is & boosts Def relative to how low remaining HP is",
@@ -86504,30 +86584,6 @@
     "vi": "Ark"
   },
   "MST_MONSTERS_57354_NAME": {
-    "en": "Ark",
-    "es": "Ark",
-    "id": "Ark",
-    "pt": "Ark",
-    "th": "อาร์ค",
-    "vi": "Ark"
-  },
-  "MST_MONSTERS_57355_NAME": {
-    "en": "Ark",
-    "es": "Ark",
-    "id": "Ark",
-    "pt": "Ark",
-    "th": "อาร์ค",
-    "vi": "Ark"
-  },
-  "MST_MONSTERS_57356_NAME": {
-    "en": "Ark",
-    "es": "Ark",
-    "id": "Ark",
-    "pt": "Ark",
-    "th": "อาร์ค",
-    "vi": "Ark"
-  },
-  "MST_MONSTERS_57357_NAME": {
     "en": "Ark",
     "es": "Ark",
     "id": "Ark",

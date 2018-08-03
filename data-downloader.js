@@ -230,7 +230,7 @@ const handlers = {
             itemMats.forEach(itemId => addUnitIdToItemId(unitId, itemId, 'evo'));
           }
 
-          if (unit['extra skill']) {
+          if (unit['extra skill'] && unit['extra skill'].effects) {
             const conditionSets = unit['extra skill'].effects.map(e => e.conditions).filter(arr => arr.length > 0).reduce((arr, val) => arr.concat(val), []);
             conditionSets.forEach(conditionSet => {
               if (conditionSet['item required']) {
