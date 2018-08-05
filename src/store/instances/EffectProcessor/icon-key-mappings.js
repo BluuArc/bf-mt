@@ -7,6 +7,7 @@ const IconKeyMappings = {
   ATK: { src: atkIcon, name: 'ATK' },
   ST_ATK: { src: atkIcon, name: 'ST_ATK' },
   AOE_ATK: { src: atkIcon, name: 'AOE_ATK' },
+  RT_ATK: { src: atkIcon, name: 'RT_ATK' },
 
   // custom passives
   PASSIVE_BUFF_HPRECTURNSTART: { name: 'PASSIVE_BUFF_HPRECTURNSTART' }, // based on BUFF_HPREC

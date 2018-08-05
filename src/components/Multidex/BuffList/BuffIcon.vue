@@ -34,6 +34,16 @@
         :xlink:href="iconKeyMapping.ATK.src"
         transform="translate(35 0) scale(-1 1)"/>
     </template>
+    <g v-else-if="iconKey === iconKeyMapping.RT_ATK.name" style="position: relative">
+        <image
+          width="30" height="32"
+          :xlink:href="iconKeyMapping.ATK.src"/>
+        <image
+          width="66" height="66"
+          xlink:href="@/assets/buff-translation/battle/battle_target_mark.png"
+          transform="scale(0.25)"
+          class="animate--random-target"/>
+    </g>
     <template v-else-if="iconKey.startsWith('INSTANT') && battleBuffIconKeys.includes(getBattleBuffKeyFromCustomKey(iconKey))">
       <image
         width="480" height="416"
@@ -422,12 +432,56 @@ export default {
   animation-direction: alternate;
 }
 
+.buff-icon .animate--random-attack {
+  animation-name: random-attack;
+  transform-origin: center center;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.buff-icon .animate--random-target {
+  /* position: absolute; */
+  animation-name: random-target;
+  /* transform-origin: center center; */
+  animation-timing-function: ease;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
 @keyframes pulse {
   0% {
     opacity: 1;
   }
   50%, 75% {
     opacity: 0;
+  }
+}
+
+@keyframes random-attack {
+  0% {
+    transform: rotateZ(0);
+  }
+
+  50% {
+    transform: rotateZ(90deg);
+  }
+}
+
+@keyframes random-target {
+  0%, 100% {
+    transform: translate(-100%,-100%) scale(0.25);
+  }
+  12.5%, 62.5% {
+    transform: translate(17.5%,17.5%) scale(0.35);
+  }
+  25% {
+    transform: translate(100%,100%) scale(0.25);
+  }
+  50% {
+    transform: translate(100%,-100%) scale(0.25);
+  }
+  75% {
+    transform: translate(-100%,100%) scale(0.25);
   }
 }
 </style>

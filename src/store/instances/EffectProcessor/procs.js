@@ -174,56 +174,6 @@ const procs = {
         [helper.iconGeneratorSymbol]: (stat, elementBuffed = 'FIRE') => helper.getIconKey(stat !== 'crit' ? `BUFF_${elementBuffed}${stat.toUpperCase()}UP` : `BUFF_${elementBuffed}CRTRATEUP`),
       },
     },
-    // filterKeyMapping: {
-    //   'regular ATK boost': {
-    //     type: Number,
-    //     key: 'atk% buff (1)',
-    //   },
-    //   'regular DEF boost': {
-    //     type: Number,
-    //     key: 'def% buff (3)',
-    //   },
-    //   'regular REC boost': {
-    //     type: Number,
-    //     key: 'rec% buff (5)',
-    //   },
-    //   'regular CRIT rate boost': {
-    //     type: Number,
-    //     key: 'crit% buff (7)',
-    //   },
-    //   'regular ATK reduction': {
-    //     type: Number,
-    //     key: 'atk% buff (2)',
-    //   },
-    //   'regular DEF reduction': {
-    //     type: Number,
-    //     key: 'def% buff (4)',
-    //   },
-    //   'regular REC reduction': {
-    //     type: Number,
-    //     key: 'rec% buff (6)',
-    //   },
-    //   'regular CRIT rate reduction': {
-    //     type: Number,
-    //     key: 'crit% buff (8)',
-    //   },
-    //   'elemental ATK boost': {
-    //     type: Number,
-    //     key: 'atk% buff (13)',
-    //   },
-    //   'elemental DEF boost': {
-    //     type: Number,
-    //     key: 'def% buff (14)',
-    //   },
-    //   'elemental REC boost': {
-    //     type: Number,
-    //     key: 'rec% buff (15)',
-    //   },
-    //   'elemental CRIT rate boost': {
-    //     type: Number,
-    //     key: 'crit% buff (16)',
-    //   },
-    // },
     possibleIcons () {
       const iconKeys = [];
       const { elements } = knownConstants;
@@ -563,6 +513,54 @@ const procs = {
       const reviveHp = +(effect['revive to hp%'] || 0);
       const iconKey = this.config.iconKey;
       values.push({ iconKey, value: { reviveHp, targetData }, desc: `Revive ${targetData.replace(/(\(|\))/g, '')} with ${reviveHp}% HP` });
+
+      return {
+        type: this.type,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
+  '13': {
+    desc: 'Random Target (RT) Attack',
+    config: {
+      iconKey: IconKeyMappings.RT_ATK.name,
+    },
+    possibleIcons () {
+      return [this.config.iconKey];
+    },
+    type: [EffectTypes.ATTACK.name],
+    process (effect = {}, context = {}) {
+      const values = [];
+      const targetType = effect['target type'];
+      const { damageFrames = {} } = context;
+
+      const iconKey = this.config.iconKey;
+      const hits = +(effect.hits || 0);
+      const bbAtk = effect['bb atk%'] || 0;
+
+      const flatAtk = effect['bb flat atk'];
+      const distribution = damageFrames['hit dmg% distribution (total)'];
+      const doRandomAttack = effect['random attack']; // seems to always be true?
+
+      const extraModifiers = [];
+      if (flatAtk) {
+        extraModifiers.push(`${helper.getNumberAsPolarizedNumber(flatAtk)} flat ATK`);
+      }
+      if (distribution !== undefined && +distribution !== 100) {
+        extraModifiers.push(`${distribution}% power`);
+      }
+
+      const innateModifiers = helper.getInnateAttackBoosts(effect);
+
+      const fullModifiers = extraModifiers.concat(innateModifiers);
+      let desc = [`${hits} hit ${bbAtk}% RT`, fullModifiers.length > 0 ? `(${fullModifiers.join(', ')})` : ''].join(' ');
+      if (targetType && targetType !== 'enemy') {
+        desc += ` to ${targetType}`;
+      }
+
+      values.push({ iconKey, value: { hits, bbAtk, doRandomAttack, flatAtk, distribution }, desc });
 
       return {
         type: this.type,

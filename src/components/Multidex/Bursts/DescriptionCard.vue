@@ -74,7 +74,7 @@
               </v-flex>
             </v-layout>
             <v-layout row wrap>
-              <buff-list :effects="burst.levels[levelIndex].effects"/>
+              <buff-list :effects="burst.levels[levelIndex].effects" :context-handler="burstContextHandler"/>
             </v-layout>
           </v-container>
         </v-tab-item>
@@ -132,6 +132,11 @@ export default {
   methods: {
     resetLevelIndex () {
       this.levelIndex = (this.numLevels === 0) ? 0 : (this.numLevels - 1);
+    },
+    burstContextHandler (effect, index) {
+      return {
+        damageFrames: this.burst['damage frames'][index],
+      };
     },
   },
 };
