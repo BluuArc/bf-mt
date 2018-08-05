@@ -60,13 +60,15 @@ const defaultGetEffects = (obj = {}) => {
   return effects.concat(effects.map(getExtraTriggeredEffects).reduce((acc, val) => Array.isArray(val) ? acc.concat(val) : acc.concat([val]), []));
 };
 
-const getBuffListFromSpSkill = (skill) => {
+const getBuffListFromSpSkill = (skill = {}) => {
   const buffs = [];
-  skill.skill.effects.forEach(entry => {
-    Object.keys(entry).forEach(type => {
-      buffs.push(entry[type]);
+  if (skill.skill && skill.skill.effects) {
+    skill.skill.effects.forEach(entry => {
+      Object.keys(entry).forEach(type => {
+        buffs.push(entry[type]);
+      });
     });
-  });
+  }
   return buffs.concat(buffs.map(getExtraTriggeredEffects).reduce((acc, val) => Array.isArray(val) ? acc.concat(val) : acc.concat([val]), []));
 };
 
