@@ -51,7 +51,7 @@ const defaultFitsQuery = (entry, procs, passives) => {
   return hasProcAreas && hasPassiveAreas;
 };
 
-const getExtraTriggeredEffects = (effect) => {
+const getExtraTriggeredEffects = (effect = {}) => {
   return effect['triggered effect'] || [];
 };
 
@@ -70,15 +70,15 @@ const getBuffListFromSpSkill = (skill) => {
   return buffs.concat(buffs.map(getExtraTriggeredEffects).reduce((acc, val) => Array.isArray(val) ? acc.concat(val) : acc.concat([val]), []));
 };
 
-const getBurstEffects = (burst) => {
-  const endLevelObject = burst.levels[burst.levels.length - 1];
+const getBurstEffects = (burst = {}) => {
+  const endLevelObject = burst && burst.levels && burst.levels[burst.levels.length - 1];
   return defaultGetEffects(endLevelObject);
 };
 
 const unitLocations = {
-  ls: (unit) => defaultGetEffects(unit['leader skill']),
-  es: (unit) => defaultGetEffects(unit['extra skill']),
-  sp: (unit) => {
+  ls: (unit = {}) => defaultGetEffects(unit['leader skill']),
+  es: (unit = {}) => defaultGetEffects(unit['extra skill']),
+  sp: (unit = {}) => {
     if (!unit.feskills) {
       return [];
     }
@@ -87,9 +87,9 @@ const unitLocations = {
       .reduce((acc, val) => acc.concat(val), []);
     return feskills;
   },
-  bb: (unit) => !unit.bb ? [] : getBurstEffects(unit.bb),
-  sbb: (unit) => !unit.sbb ? [] : getBurstEffects(unit.sbb),
-  ubb: (unit) => !unit.ubb ? [] : getBurstEffects(unit.ubb),
+  bb: (unit = {}) => !unit.bb ? [] : getBurstEffects(unit.bb),
+  sbb: (unit = {}) => !unit.sbb ? [] : getBurstEffects(unit.sbb),
+  ubb: (unit = {}) => !unit.ubb ? [] : getBurstEffects(unit.ubb),
 };
 
 function getEffectListInUnit (unit, location) {
