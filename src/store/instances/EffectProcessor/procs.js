@@ -570,6 +570,65 @@ const procs = {
       };
     },
   },
+  '14': {
+    desc: 'HP Draining Attack',
+    config: {
+      stIcon: IconKeyMappings.HPREC_ST_ATK.name,
+      aoeIcon: IconKeyMappings.HPREC_AOE_ATK.name,
+    },
+    possibleIcons () {
+      return [this.config.stIcon, this.config.aoeIcon];
+    },
+    type: [EffectTypes.ATTACK.name],
+    process (effect = {}, context = {}) {
+      const values = [];
+      const targetData = (effect['target area'] || '').toUpperCase() === 'SINGLE' ? 'ST' : (effect['target area'] || '').toUpperCase();
+      const targetType = effect['target type'];
+      const { damageFrames = {} } = context;
+
+      const iconKey = helper.getIconKey(`HPREC_${targetData || 'ST'}_ATK`);
+      const hits = +(damageFrames.hits || 0);
+      const bbAtk = effect['bb atk%'] || 0;
+
+      const bbDmg = effect['bb dmg%'];
+      const flatAtk = effect['bb flat atk'];
+      const distribution = damageFrames['hit dmg% distribution (total)'];
+
+      const drainLow = +(effect['hp drain% low'] || 0);
+      const drainHigh = +(effect['hp drain% high'] || 0);
+
+      const extraModifiers = [];
+      if (bbDmg) {
+        extraModifiers.push(`${bbDmg}% BB DMG`);
+      }
+      if (flatAtk) {
+        extraModifiers.push(`${helper.getNumberAsPolarizedNumber(flatAtk)} flat ATK`);
+      }
+      if (distribution !== undefined && +distribution !== 100) {
+        extraModifiers.push(`${distribution}% power`);
+      }
+      if (drainLow || drainHigh) {
+        extraModifiers.push(`heal ${helper.getFormattedMinMax(drainLow, drainHigh)}% of damage dealt`);
+      }
+
+      const innateModifiers = helper.getInnateAttackBoosts(effect);
+
+      const fullModifiers = extraModifiers.concat(innateModifiers);
+      let desc = [`${hits} hit ${bbAtk}%`, targetData || 'attack', fullModifiers.length > 0 ? `(${fullModifiers.join(', ')})` : ''].join(' ');
+      if (targetType && targetType !== 'enemy') {
+        desc += ` to ${targetType}`;
+      }
+
+      values.push({ iconKey, value: { hits, bbAtk, bbDmg, flatAtk, distribution }, desc });
+
+      return {
+        type: this.type,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
   '18': {
     desc: 'Damage Reduction/Mitigation',
     config: {

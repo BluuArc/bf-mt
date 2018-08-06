@@ -1,6 +1,7 @@
 import knownConstants from '../../modules/constants';
 
 const atkIcon = require('@/assets/buff-translation/raid/raid_unit_name_icon_b.png');
+const hpRecAtkIcon = require('@/assets/buff-translation/raid/hprec-attack-icon.png');
 
 const IconKeyMappings = {
   UNKNOWN: { src: require('@/assets/secret.png'), name: 'UNKNOWN' },
@@ -8,6 +9,8 @@ const IconKeyMappings = {
   ST_ATK: { src: atkIcon, name: 'ST_ATK' },
   AOE_ATK: { src: atkIcon, name: 'AOE_ATK' },
   RT_ATK: { src: atkIcon, name: 'RT_ATK' },
+  HPREC_ST_ATK: { src: hpRecAtkIcon, name: 'HPREC_ST_ATK' },
+  HPREC_AOE_ATK: { src: hpRecAtkIcon, name: 'HPREC_AOE_ATK' },
 
   // custom passives
   PASSIVE_BUFF_HPRECTURNSTART: { name: 'PASSIVE_BUFF_HPRECTURNSTART' }, // based on BUFF_HPREC

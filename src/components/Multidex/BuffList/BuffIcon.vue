@@ -21,18 +21,18 @@
       xlink:href="@/assets/buff-translation/battle/battle_bad_icon.png"
       :transform="`translate(${getBattleBuffIconCoordinates(ailmentBuffKeys.indexOf(iconKey), iconKey)})`"/>
     <image
-      v-else-if="iconKey === iconKeyMapping.ST_ATK.name || iconKey === iconKeyMapping.ATK.name"
+      v-else-if="iconKey.endsWith('ST_ATK') || iconKey === iconKeyMapping.ATK.name"
       width="30" height="32"
-      :xlink:href="iconKeyMapping.ATK.src"/>
-    <template v-else-if="iconKey === iconKeyMapping.AOE_ATK.name">
+      :xlink:href="(iconKeyMapping[iconKey] || iconKeyMapping.ATK).src"/>
+    <template v-else-if="iconKey.endsWith('AOE_ATK')">
       <image
         width="30" height="32"
-        :xlink:href="iconKeyMapping.ATK.src"
-        transform="translate(-5 0)"/>
+        :xlink:href="(iconKeyMapping[iconKey] || iconKeyMapping.ATK).src"
+        transform="translate(-4 0)"/>
       <image
         width="30" height="32"
-        :xlink:href="iconKeyMapping.ATK.src"
-        transform="translate(35 0) scale(-1 1)"/>
+        :xlink:href="(iconKeyMapping[iconKey] || iconKeyMapping.ATK).src"
+        transform="translate(34 0) scale(-1 1)"/>
     </template>
     <g v-else-if="iconKey === iconKeyMapping.RT_ATK.name" style="position: relative">
         <image
