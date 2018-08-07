@@ -28,12 +28,17 @@ const IconKeyMappings = {
   })(),
   ...(() => {
     const customUnitTypePassives = {};
+    const addStatKey = (statKey) => {
+      customUnitTypePassives[statKey] = { name: statKey };
+    };
     const statTypes = ['hp', 'atk', 'def', 'rec'];
     knownConstants.unitTypes.forEach(u => {
       statTypes.forEach(s => {
-        const statKey = `PASSIVE_BUFF_${u.toUpperCase()}${s.toUpperCase()}UP`;
-        customUnitTypePassives[statKey] = { name: statKey };
+        addStatKey(`PASSIVE_BUFF_${u.toUpperCase()}${s.toUpperCase()}UP`);
       });
+    });
+    statTypes.slice(1).forEach(s => {
+      addStatKey(`PASSIVE_BUFF_HPTHRESH${s.toUpperCase()}UP`);
     });
     return customUnitTypePassives;
   })(),

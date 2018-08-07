@@ -297,6 +297,59 @@ const passives = {
       };
     },
   },
+  '11': {
+    desc: 'HP Conditional ATK/DEF/REC/Crit Rate boost',
+    config: {
+      processOrder: ['atk', 'def', 'rec', 'crit'],
+      regular: {
+        atk: 'atk% buff',
+        def: 'def% buff',
+        rec: 'rec% buff',
+        crit: 'crit% buff',
+        [helper.iconGeneratorSymbol]: stat => helper.getIconKey(stat !== 'crit' ? `PASSIVE_BUFF_HPTHRESH${stat.toUpperCase()}UP` : 'PASSIVE_BUFF_HPTHRESHCRTRATEUP'),
+      },
+    },
+    possibleIcons () {
+      return this.config.processOrder.map(stat => this.config.regular[helper.iconGeneratorSymbol](stat));
+    },
+    type: [EffectTypes.PASSIVE.name],
+    process (effect = {}, context = {}) {
+      const values = [];
+      const conditions = getConditionalData(effect, context);
+      const targetData = getTargetData(effect, context.isLS);
+
+      const hpAbove = effect['hp above % buff requirement'];
+      const hpBelow = effect['hp below % buff requirement'];
+      const hpModifiers = [];
+      if (hpAbove) {
+        if (hpAbove === 100) {
+          hpModifiers.push(`when HP is full`);
+        } else {
+          hpModifiers.push(`when HP > ${hpAbove}%`);
+        }
+      }
+
+      if (hpBelow) {
+        hpModifiers.push(`when HP < ${hpBelow}%`);
+      }
+
+      const statBuffs = helper.multiStatToObject(undefined, ...(this.config.processOrder.map(stat => effect[this.config.regular[stat]])));
+      this.config.processOrder.forEach(stat => {
+        if (statBuffs[stat]) {
+          const iconKey = this.config.regular[helper.iconGeneratorSymbol](stat);
+          const descLabel = stat !== 'crit' ? stat.toUpperCase() : 'Critical Hit Rate';
+          values.push({ iconKey, value: { value: +statBuffs[stat], targetData, conditions }, desc: [helper.getNumberAsPolarizedPercent(+statBuffs[stat]), descLabel, hpModifiers.join(' & '), targetData || ''].join(' ') });
+        }
+      });
+
+      return {
+        type: this.type,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
   '66': {
     desc: 'Add effect to BB/SBB/UBB',
     config: {

@@ -21,6 +21,11 @@
       xlink:href="@/assets/buff-translation/battle/battle_bad_icon.png"
       :transform="`translate(${getBattleBuffIconCoordinates(ailmentBuffKeys.indexOf(iconKey), iconKey)})`"/>
     <image
+      v-else-if="customBuffIconKeys.includes(iconKey)"
+      width="480" height="416"
+      xlink:href="@/assets/buff-translation/battle/custom-icons.png"
+      :transform="`translate(${getBattleBuffIconCoordinates(customBuffIconKeys.indexOf(iconKey))})`"/>
+    <image
       v-else-if="iconKey.endsWith('ST_ATK') || iconKey === iconKeyMapping.ATK.name"
       width="30" height="32"
       :xlink:href="(iconKeyMapping[iconKey] || iconKeyMapping.ATK).src"/>
@@ -100,11 +105,23 @@
         </template>
       </g>
       <g>
-        <image
-          v-if="iconKey !== 'PASSIVE_BUFF_HPUP' && isPassiveTypeStatIcon(iconKey)"
-          width="480" height="416"
-          xlink:href="@/assets/buff-translation/battle/custom-icons.png"
-          :transform="`translate(${getBattleBuffIconCoordinates(customBuffIconKeys.indexOf(`BUFF_ELEMENTAL${getTypeInfoFromPassiveTypeStatKey(iconKey).stat}UP`), `BUFF_ELEMENTAL${getTypeInfoFromPassiveTypeStatKey(iconKey).stat}UP`)})`"/>
+        <template v-if="!['PASSIVE_BUFF_HPUP', 'PASSIVE_BUFF_HCREC'].includes(iconKey)">
+          <template v-if="iconKey.includes('HPTHRESH')">
+            <image
+            width="480" height="416"
+            xlink:href="@/assets/buff-translation/battle/battle_buff_icon.png"
+            :transform="`translate(${getBattleBuffIconCoordinates(battleBuffIconKeys.indexOf(`BUFF_${getTypeInfoFromPassiveTypeStatKey(iconKey).stat}UP`))})`"/>
+            <image
+              width="480" height="416"
+              xlink:href="@/assets/buff-translation/battle/custom-icons.png"
+              :transform="`translate(${getBattleBuffIconCoordinates(customBuffIconKeys.indexOf(`BUFF_HPTHRESHGENERIC`))})`"/>
+          </template>
+          <image
+            v-else-if="isPassiveTypeStatIcon(iconKey)"
+            width="480" height="416"
+            xlink:href="@/assets/buff-translation/battle/custom-icons.png"
+            :transform="`translate(${getBattleBuffIconCoordinates(customBuffIconKeys.indexOf(`BUFF_ELEMENTAL${getTypeInfoFromPassiveTypeStatKey(iconKey).stat}UP`), `BUFF_ELEMENTAL${getTypeInfoFromPassiveTypeStatKey(iconKey).stat}UP`)})`"/>
+        </template>
         <image
           v-else
           width="480" height="416"
@@ -118,11 +135,6 @@
         </text>
       </g>
     </template>
-    <image
-      v-else-if="customBuffIconKeys.includes(iconKey)"
-      width="480" height="416"
-      xlink:href="@/assets/buff-translation/battle/custom-icons.png"
-      :transform="`translate(${getBattleBuffIconCoordinates(customBuffIconKeys.indexOf(iconKey))})`"/>
     <template v-else>
       <image
         xlink:href="@/assets/item_frame_bg2.png"
@@ -375,6 +387,7 @@ export default {
       'BUFF_ELEMENTALRECUP',
       'BUFF_HCREC',
       'BUFF_ALLAILNULL',
+      'BUFF_HPTHRESHGENERIC',
     ],
     ailmentBuffKeys: () => knownConstants.ailments.map(ail => `DEBUFF_${ail.toUpperCase()}`),
     iconKeyMapping: () => IconKeyMapping,
