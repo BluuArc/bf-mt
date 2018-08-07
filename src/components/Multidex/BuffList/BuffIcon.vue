@@ -108,9 +108,9 @@
         <template v-if="!['PASSIVE_BUFF_HPUP', 'PASSIVE_BUFF_HCREC'].includes(iconKey)">
           <template v-if="iconKey.includes('HPTHRESH')">
             <image
-            width="480" height="416"
-            xlink:href="@/assets/buff-translation/battle/battle_buff_icon.png"
-            :transform="`translate(${getBattleBuffIconCoordinates(battleBuffIconKeys.indexOf(`BUFF_${getTypeInfoFromPassiveTypeStatKey(iconKey).stat}UP`))})`"/>
+              width="480" height="416"
+              xlink:href="@/assets/buff-translation/battle/battle_buff_icon.png"
+              :transform="`translate(${getBattleBuffIconCoordinates(battleBuffIconKeys.indexOf(`BUFF_${getTypeInfoFromPassiveTypeStatKey(iconKey).stat}UP`))})`"/>
             <image
               width="480" height="416"
               xlink:href="@/assets/buff-translation/battle/custom-icons.png"
@@ -133,6 +133,39 @@
         <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">
           {{ iconKey.startsWith('PASSIVE') ? 'P' : 'B' }}
         </text>
+      </g>
+    </template>
+    <template v-else-if="iconKey.startsWith('PASSIVE') && !!getDropType(iconKey)">
+      <template v-if="['zel', 'karma'].includes(getDropType(iconKey))">
+        <image
+          width="480" height="416"
+          xlink:href="@/assets/buff-translation/battle/custom-icons.png"
+          :transform="`translate(${getBattleBuffIconCoordinates(customBuffIconKeys.indexOf(`BUFF_GENERICDROP`))})`"/>
+        <image
+          v-if="getDropType(iconKey) === 'zel'"
+          width="102" height="102"
+          xlink:href="@/assets/zell_thum.png"
+          transform="scale(0.3)"/>
+        <image
+          v-else
+          width="102" height="102"
+          xlink:href="@/assets/karma_thum.png"
+          transform="scale(0.3)"/>
+      </template>
+      <image
+        v-else
+        width="480" height="416"
+        xlink:href="@/assets/buff-translation/battle/battle_buff_icon.png"
+        :transform="`translate(${getBattleBuffIconCoordinates(battleBuffIconKeys.indexOf(`BUFF_${getDropType(iconKey).toUpperCase()}DROP`))})`"/>
+      <template v-if="iconKey.includes('HPTHRESH')">
+        <image
+          width="480" height="416"
+          xlink:href="@/assets/buff-translation/battle/custom-icons.png"
+          :transform="`translate(${getBattleBuffIconCoordinates(customBuffIconKeys.indexOf(`BUFF_HPTHRESHGENERIC`))})`"/>
+      </template>
+      <g class="animate--pulse">
+        <rect x="0" y="0" width="32" height="32" rx="8" ry="8" fill="grey" style="fill-opacity: 0.5"/>
+        <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">P</text>
       </g>
     </template>
     <template v-else>
@@ -388,6 +421,8 @@ export default {
       'BUFF_HCREC',
       'BUFF_ALLAILNULL',
       'BUFF_HPTHRESHGENERIC',
+      'BUFF_BBTHRESHGENERIC',
+      'BUFF_GENERICDROP',
     ],
     ailmentBuffKeys: () => knownConstants.ailments.map(ail => `DEBUFF_${ail.toUpperCase()}`),
     iconKeyMapping: () => IconKeyMapping,
@@ -424,6 +459,11 @@ export default {
       const match = this.getTypeInfoFromPassiveTypeStatKey(iconKey) || {};
       const isPassiveType = !!match.type && knownConstants.unitTypes.includes(match.type.toLowerCase());
       return isPassiveType;
+    },
+    getDropType (iconKey) {
+      const result = knownConstants.dropTypes.filter(type => iconKey.endsWith(`${type.toUpperCase()}DROP`))[0];
+      console.debug(iconKey, result);
+      return result;
     },
   },
 };

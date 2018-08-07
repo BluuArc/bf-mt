@@ -350,25 +350,72 @@ const passives = {
       };
     },
   },
+  '12': {
+    desc: 'HP Conditional HC/BC/Item/Zel/Karma Drop RAte',
+    config: {
+      processOrder: ['hc', 'bc', 'item', 'zel', 'karma'],
+      [helper.iconGeneratorSymbol]: (dropType) => `PASSIVE_BUFF_HPTHRESH${dropType.toUpperCase()}DROP`,
+      keyMapping: {
+        hc: 'hc drop rate% buff',
+        bc: 'bc drop rate% buff',
+        item: 'item drop rate% buff',
+        zel: 'zel drop rate% buff',
+        karma: 'karma drop rate% buff',
+      },
+      nameMapping: {
+        hc: 'HC',
+        bc: 'BC',
+        item: 'Item',
+        zel: 'Zel',
+        karma: 'Karma',
+      },
+    },
+    possibleIcons () {
+      return this.config.processOrder.map(this.config[helper.iconGeneratorSymbol]);
+    },
+    type: [EffectTypes.PASSIVE.name],
+    process (effect = {}, context = {}) {
+      const values = [];
+      const conditions = getConditionalData(effect, context);
+      const targetData = getTargetData(effect, context.isLS);
+
+      const hpAbove = effect['hp above % buff requirement'];
+      const hpBelow = effect['hp below % buff requirement'];
+      const hpModifiers = [];
+      if (hpAbove) {
+        if (hpAbove === 100) {
+          hpModifiers.push(`when HP is full`);
+        } else {
+          hpModifiers.push(`when HP > ${hpAbove}%`);
+        }
+      }
+
+      if (hpBelow) {
+        hpModifiers.push(`when HP < ${hpBelow}%`);
+      }
+
+      this.config.processOrder.forEach(type => {
+        const value = effect[this.config.keyMapping[type]];
+        if (value) {
+          const iconKey = this.config[helper.iconGeneratorSymbol](type);
+          const desc = [helper.getNumberAsPolarizedPercent(+value), this.config.nameMapping[type], 'drop rate', hpModifiers.join(' & '), targetData || ''].join(' ');
+          values.push({ iconKey, value: { value, targetData, conditions }, desc });
+        }
+      });
+
+      return {
+        type: this.type,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
   '66': {
     desc: 'Add effect to BB/SBB/UBB',
     config: {
       burstTypes: ['bb', 'sbb', 'ubb'],
     },
-    // filterKeyMapping: {
-    //   'Add to BB': {
-    //     type: Boolean,
-    //     key: 'trigger on bb',
-    //   },
-    //   'Add to SBB': {
-    //     type: Boolean,
-    //     key: 'trigger on SBB',
-    //   },
-    //   'Add to UBB': {
-    //     type: Boolean,
-    //     key: 'trigger on UBB',
-    //   },
-    // },
     possibleIcons: () => [],
     type: [EffectTypes.PASSIVE.name],
     process (effect = {}, context) {

@@ -27,9 +27,9 @@ const IconKeyMappings = {
     return customElementalPassives;
   })(),
   ...(() => {
-    const customUnitTypePassives = {};
+    const customStatPassives = {};
     const addStatKey = (statKey) => {
-      customUnitTypePassives[statKey] = { name: statKey };
+      customStatPassives[statKey] = { name: statKey };
     };
     const statTypes = ['hp', 'atk', 'def', 'rec'];
     knownConstants.unitTypes.forEach(u => {
@@ -40,7 +40,15 @@ const IconKeyMappings = {
     statTypes.slice(1).forEach(s => {
       addStatKey(`PASSIVE_BUFF_HPTHRESH${s.toUpperCase()}UP`);
     });
-    return customUnitTypePassives;
+    return customStatPassives;
+  })(),
+  ...(() => {
+    const customDropPassives = {};
+    knownConstants.dropTypes.forEach(type => {
+      const iconKey = `PASSIVE_BUFF_HPTHRESH${type.toUpperCase()}DROP`;
+      customDropPassives[iconKey] = { name: iconKey };
+    });
+    return customDropPassives;
   })(),
 
   // instant buffs
@@ -51,6 +59,8 @@ const IconKeyMappings = {
   BUFF_HPUP: { name: 'BUFF_HPUP' },
   BUFF_HCREC: { name: 'BUFF_HCREC' },
   BUFF_ALLAILNULL: { name: 'BUFF_ALLAILNULL' },
+  BUFF_ZELDROP: { name: 'BUFF_ZELDROP' },
+  BUFF_KARMADROP: { name: 'BUFF_KARMADROP' },
 
   // most proc buffs
   BUFF_ATKUP: { name: 'BUFF_ATKUP' },
