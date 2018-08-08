@@ -524,6 +524,35 @@ const passives = {
       };
     },
   },
+  '17': {
+    desc: 'HP Drain',
+    config: {
+      iconKey: 'PASSIVE_BUFF_HPABS',
+    },
+    possibleIcons () {
+      return [this.config.iconKey];
+    },
+    type: [EffectTypes.PASSIVE.name],
+    process (effect = {}, context = {}) {
+      const values = [];
+      const conditions = getConditionalData(effect, context);
+      const targetData = getTargetData(effect, context.isLS);
+
+      const iconKey = this.config.iconKey;
+      const drainLow = +(effect['hp drain% low'] || 0);
+      const drainHigh = +(effect['hp drain% high'] || 0);
+      const chance = +(effect['hp drain chance%'] || 0);
+      const desc = [chance === 100 ? 'Recover' : `${chance}% chance to recover`, `${helper.getFormattedMinMax(drainLow, drainHigh)}% of damage dealt`, targetData].join(' ');
+      values.push({ iconKey, value: { drainLow, drainHigh, chance, targetData, conditions }, desc });
+
+      return {
+        type: this.type,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
   '66': {
     desc: 'Add effect to BB/SBB/UBB',
     config: {
