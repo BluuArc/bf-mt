@@ -254,7 +254,7 @@ const procs = {
     },
   },
   '6': {
-    desc: 'HC/BC/Item Drop Rate',
+    desc: 'HC/BC/Item Drop Rate Boost',
     config: {
       processOrder: ['hc', 'bc', 'item'],
       [helper.iconGeneratorSymbol]: type => `BUFF_${type.toUpperCase()}DROP`,

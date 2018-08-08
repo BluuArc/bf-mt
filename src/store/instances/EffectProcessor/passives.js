@@ -21,7 +21,7 @@ const passives = {
     return entries;
   })(),
   '1': {
-    desc: 'Regular HP/ATK/DEF/REC/Crit Rate boost',
+    desc: 'Regular HP/ATK/DEF/REC/Crit Rate Boost',
     config: {
       processOrder: ['hp', 'atk', 'def', 'rec', 'crit'],
       regular: {
@@ -60,7 +60,7 @@ const passives = {
     },
   },
   '2': {
-    desc: 'Elemental HP/ATK/DEF/REC/Crit Rate boost',
+    desc: 'Elemental HP/ATK/DEF/REC/Crit Rate Boost',
     config: {
       processOrder: ['hp', 'atk', 'def', 'rec', 'crit'],
       regular: {
@@ -109,7 +109,7 @@ const passives = {
     },
   },
   '3': {
-    desc: 'Type Based HP/ATK/DEF/REC boost',
+    desc: 'Type Based HP/ATK/DEF/REC Boost',
     config: {
       processOrder: ['hp', 'atk', 'def', 'rec', 'crit'],
       typeOrder: knownConstants.unitTypes.slice(),
@@ -298,7 +298,7 @@ const passives = {
     },
   },
   '11': {
-    desc: 'HP Conditional ATK/DEF/REC/Crit Rate boost',
+    desc: 'HP Conditional ATK/DEF/REC/Crit Rate Boost',
     config: {
       processOrder: ['atk', 'def', 'rec', 'crit'],
       regular: {
@@ -351,7 +351,7 @@ const passives = {
     },
   },
   '12': {
-    desc: 'HP Conditional HC/BC/Item/Zel/Karma Drop RAte',
+    desc: 'HP Conditional HC/BC/Item/Zel/Karma Drop Rate Boost',
     config: {
       processOrder: ['hc', 'bc', 'item', 'zel', 'karma'],
       [helper.iconGeneratorSymbol]: (dropType) => `PASSIVE_BUFF_HPTHRESH${dropType.toUpperCase()}DROP`,
@@ -544,6 +544,52 @@ const passives = {
       const chance = +(effect['hp drain chance%'] || 0);
       const desc = [chance === 100 ? 'Recover' : `${chance}% chance to recover`, `${helper.getFormattedMinMax(drainLow, drainHigh)}% of damage dealt`, targetData].join(' ');
       values.push({ iconKey, value: { drainLow, drainHigh, chance, targetData, conditions }, desc });
+
+      return {
+        type: this.type,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
+  '19': {
+    desc: 'HC/BC/Item/Zel/Karma Drop Rate Boost',
+    config: {
+      processOrder: ['hc', 'bc', 'item', 'zel', 'karma'],
+      [helper.iconGeneratorSymbol]: (dropType) => `PASSIVE_BUFF_${dropType.toUpperCase()}DROP`,
+      keyMapping: {
+        hc: 'hc drop rate% buff',
+        bc: 'bc drop rate% buff',
+        item: 'item drop rate% buff',
+        zel: 'zel drop rate% buff',
+        karma: 'karma drop rate% buff',
+      },
+      nameMapping: {
+        hc: 'HC',
+        bc: 'BC',
+        item: 'Item',
+        zel: 'Zel',
+        karma: 'Karma',
+      },
+    },
+    possibleIcons () {
+      return this.config.processOrder.map(this.config[helper.iconGeneratorSymbol]);
+    },
+    type: [EffectTypes.PASSIVE.name],
+    process (effect = {}, context = {}) {
+      const values = [];
+      const conditions = getConditionalData(effect, context);
+      const targetData = getTargetData(effect, context.isLS);
+
+      this.config.processOrder.forEach(type => {
+        const value = effect[this.config.keyMapping[type]];
+        if (value) {
+          const iconKey = this.config[helper.iconGeneratorSymbol](type);
+          const desc = [helper.getNumberAsPolarizedPercent(+value), this.config.nameMapping[type], 'drop rate', targetData || ''].join(' ');
+          values.push({ iconKey, value: { value, targetData, conditions }, desc });
+        }
+      });
 
       return {
         type: this.type,
