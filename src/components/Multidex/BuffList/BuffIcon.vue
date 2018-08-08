@@ -91,6 +91,16 @@
         <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">P</text>
       </g>
     </template>
+    <template v-else-if="iconKey.startsWith('PASSIVE') && ailmentBuffKeys.includes(getBattleBuffKeyFromCustomKey(iconKey))">
+      <image
+        width="192" height="32"
+        xlink:href="@/assets/buff-translation/battle/battle_bad_icon.png"
+        :transform="`translate(${getBattleBuffIconCoordinates(ailmentBuffKeys.indexOf(getBattleBuffKeyFromCustomKey(iconKey)))})`"/>
+      <g class="animate--pulse">
+        <rect x="0" y="0" width="32" height="32" rx="8" ry="8" fill="grey" style="fill-opacity: 0.5"/>
+        <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">P</text>
+      </g>
+    </template>
     <template v-else-if="(iconKey.startsWith('PASSIVE') || iconKey.startsWith('INSTANT')) && (customBuffIconKeys.includes(getBattleBuffKeyFromCustomKey(iconKey)) || isPassiveTypeStatIcon(iconKey))">
       <g v-if="iconKey.startsWith('PASSIVE')">
         <template v-if="isPassiveTypeStatIcon(iconKey) && elements.includes(getTypeInfoFromPassiveTypeStatKey(iconKey).type.toLowerCase())">

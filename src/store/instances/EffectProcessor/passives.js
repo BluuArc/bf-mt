@@ -2,6 +2,7 @@ import EffectTypes from './effect-types';
 import helper from './processor-helper';
 import EffectProcessor from './effect-processor';
 import knownConstants from '../../modules/constants';
+import IconKeyMappings from './icon-key-mappings';
 const passiveTypes = require('@/assets/buff-translation/passives.json');
 
 const getConditionalData = (effect, context) => {
@@ -590,6 +591,44 @@ const passives = {
           values.push({ iconKey, value: { value, targetData, conditions }, desc });
         }
       });
+
+      return {
+        type: this.type,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
+  '20': {
+    desc: 'Inflict Status Ailment',
+    config: {
+      processOrder: knownConstants.ailments.slice(),
+      [helper.iconGeneratorSymbol]: ailment => `PASSIVE_DEBUFF_${ailment.toUpperCase()}`,
+    },
+    possibleIcons () {
+      return this.config.processOrder.map(this.config[helper.iconGeneratorSymbol]);
+    },
+    type: [EffectTypes.PASSIVE.name],
+    process (effect = {}, context) {
+      const values = [];
+      const conditions = getConditionalData(effect, context);
+      const targetData = getTargetData(effect, context.isLS);
+
+      this.config.processOrder.forEach(ailment => {
+        const value = effect[`${ailment}%`];
+        if (value) {
+          const iconKey = this.config[helper.iconGeneratorSymbol](ailment);
+          values.push({ iconKey, value: { value, targetData, conditions }, desc: `${value}% chance to inflict ${helper.capitalize(ailment)} ${targetData}` });
+        }
+      });
+
+      if (values.length === 0) {
+        values.push({
+          iconKey: IconKeyMappings.UNKNOWN.name,
+          value: { value: 0, targetData, conditions },
+          desc: `0% chance to inflict null ${targetData}` });
+      }
 
       return {
         type: this.type,
