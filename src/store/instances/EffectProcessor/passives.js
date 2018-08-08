@@ -468,6 +468,62 @@ const passives = {
       };
     },
   },
+  '15': {
+    desc: 'HP Recovery on Enemy Defeat',
+    config: {
+      iconKey: 'PASSIVE_BUFF_HPREC',
+    },
+    possibleIcons () {
+      return [this.config.iconKey];
+    },
+    type: [EffectTypes.PASSIVE.name],
+    process (effect = {}, context = {}) {
+      const values = [];
+      const conditions = getConditionalData(effect, context);
+      const targetData = getTargetData(effect, context.isLS);
+
+      const iconKey = this.config.iconKey;
+      const fillLow = +(effect['hp% recover on enemy defeat low'] || 0);
+      const fillHigh = +(effect['hp% recover on enemy defeat high'] || 0);
+      const desc = `Recover ${helper.getFormattedMinMax(fillLow, fillHigh)}% HP on enemy defeat ${targetData}`;
+      values.push({ iconKey, value: { fillLow, fillHigh, targetData, conditions }, desc });
+
+      return {
+        type: this.type,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
+  '16': {
+    desc: 'HP Recovery on Battle Victory',
+    config: {
+      iconKey: 'PASSIVE_BUFF_HPREC',
+    },
+    possibleIcons () {
+      return [this.config.iconKey];
+    },
+    type: [EffectTypes.PASSIVE.name],
+    process (effect = {}, context = {}) {
+      const values = [];
+      const conditions = getConditionalData(effect, context);
+      const targetData = getTargetData(effect, context.isLS);
+
+      const iconKey = this.config.iconKey;
+      const fillLow = +(effect['hp% recover on battle win low'] || 0);
+      const fillHigh = +(effect['hp% recover on battle win high'] || 0);
+      const desc = `Recover ${helper.getFormattedMinMax(fillLow, fillHigh)}% HP on battle win ${targetData}`;
+      values.push({ iconKey, value: { fillLow, fillHigh, targetData, conditions }, desc });
+
+      return {
+        type: this.type,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
   '66': {
     desc: 'Add effect to BB/SBB/UBB',
     config: {
