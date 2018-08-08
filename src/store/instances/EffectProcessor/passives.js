@@ -411,6 +411,35 @@ const passives = {
       };
     },
   },
+  '13': {
+    desc: 'BC Fill on Enemy Defeat',
+    config: {
+      iconKey: 'PASSIVE_BUFF_BBREC',
+    },
+    possibleIcons () {
+      return [this.config.iconKey];
+    },
+    type: [EffectTypes.PASSIVE.name],
+    process (effect = {}, context = {}) {
+      const values = [];
+      const conditions = getConditionalData(effect, context);
+      const targetData = getTargetData(effect, context.isLS);
+
+      const iconKey = this.config.iconKey;
+      const fillLow = +(effect['bc fill on enemy defeat low'] || 0);
+      const fillHigh = +(effect['bc fill on enemy defeat high'] || 0);
+      const chance = +(effect['bc fill on enemy defeat%'] || 0);
+      const desc = [chance === 100 ? 'Fill' : `${chance}% chance to fill`, helper.getFormattedMinMax(fillLow, fillHigh), 'BC on enemy defeat', targetData].join(' ');
+      values.push({ iconKey, value: { fillLow, fillHigh, chance, targetData, conditions }, desc });
+
+      return {
+        type: this.type,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
   '66': {
     desc: 'Add effect to BB/SBB/UBB',
     config: {
