@@ -440,6 +440,34 @@ const passives = {
       };
     },
   },
+  '14': {
+    desc: 'Chance Damage Reduction/Mitigation',
+    config: {
+      iconKey: 'PASSIVE_BUFF_DAMAGECUT',
+    },
+    possibleIcons () {
+      return [this.config.iconKey];
+    },
+    type: [EffectTypes.PASSIVE.name],
+    process (effect = {}, context = {}) {
+      const values = [];
+      const conditions = getConditionalData(effect, context);
+      const targetData = getTargetData(effect, context.isLS);
+
+      const iconKey = this.config.iconKey;
+      const value = +(effect['dmg reduction%'] || 0);
+      const chance = +(effect['dmg reduction chance%'] || 0);
+      const desc = [chance === 100 ? '' : `${chance}% chance of`, helper.getNumberAsPolarizedPercent(value), 'mitigation', targetData].join(' ');
+      values.push({ iconKey, value: { value, chance, targetData, conditions }, desc });
+
+      return {
+        type: this.type,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
   '66': {
     desc: 'Add effect to BB/SBB/UBB',
     config: {
