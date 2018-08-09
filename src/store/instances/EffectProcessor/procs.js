@@ -629,6 +629,39 @@ const procs = {
       };
     },
   },
+  '16': {
+    desc: 'Elemental Mitigation',
+    config: {
+      processOrder: ['all'].concat(knownConstants.elements),
+      [helper.iconGeneratorSymbol]: element => helper.getIconKey(`BUFF_${element.toUpperCase()}DMGDOWN`),
+    },
+    possibleIcons () {
+      return this.config.processOrder.map(this.config[helper.iconGeneratorSymbol]);
+    },
+    type: [EffectTypes.ACTIVE.name],
+    process (effect = {}, context) {
+      const values = [];
+      const targetData = helper.getTargetData(effect);
+      const turns = helper.getTurns(effect);
+
+      this.config.processOrder.forEach((element, index) => {
+        const value = effect[`mitigate ${element} attacks (${20 + index})`];
+        if (value !== undefined) {
+          const iconKey = this.config[helper.iconGeneratorSymbol](element);
+          const desc = [helper.getNumberAsPolarizedPercent(value), helper.capitalize(element !== 'all' ? element : 'all element'), 'mitigation', targetData].join(' ');
+          values.push({ iconKey, value: { value, turns, targetData }, desc });
+        }
+      });
+
+      return {
+        type: this.type,
+        turnDuration: turns.value,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
   '18': {
     desc: 'Damage Reduction/Mitigation',
     config: {

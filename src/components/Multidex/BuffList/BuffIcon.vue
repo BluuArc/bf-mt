@@ -115,7 +115,7 @@
         </template>
       </g>
       <g>
-        <template v-if="!['PASSIVE_BUFF_HPUP', 'PASSIVE_BUFF_HCREC'].includes(iconKey)">
+        <template v-if="!['PASSIVE_BUFF_HPUP', 'PASSIVE_BUFF_HCREC', 'INSTANT_BUFF_ALLAILNULL'].includes(iconKey)">
           <template v-if="iconKey.includes('HPTHRESH')">
             <image
               width="480" height="416"
@@ -433,6 +433,7 @@ export default {
       'BUFF_HPTHRESHGENERIC',
       'BUFF_BBTHRESHGENERIC',
       'BUFF_GENERICDROP',
+      'BUFF_ALLDMGDOWN',
     ],
     ailmentBuffKeys: () => knownConstants.ailments.map(ail => `DEBUFF_${ail.toUpperCase()}`),
     iconKeyMapping: () => IconKeyMapping,

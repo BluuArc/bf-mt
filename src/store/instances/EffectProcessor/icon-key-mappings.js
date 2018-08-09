@@ -61,6 +61,7 @@ const IconKeyMappings = {
   BUFF_ALLAILNULL: { name: 'BUFF_ALLAILNULL' },
   BUFF_ZELDROP: { name: 'BUFF_ZELDROP' },
   BUFF_KARMADROP: { name: 'BUFF_KARMADROP' },
+  BUFF_ALLDMGDOWN: { name: 'BUFF_ALLDMGDOWN' },
 
   // most proc buffs
   BUFF_ATKUP: { name: 'BUFF_ATKUP' },
