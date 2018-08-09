@@ -1,4 +1,156 @@
 {
+  "MST_LEADERSKILLS_801292_NAME": {
+    "en": "Heart of the Phoenix",
+    "es": "Heart of the Phoenix",
+    "id": "Hati Phoenix",
+    "pt": "Heart of the Phoenix",
+    "th": "ฮาร์ท ออฟ เดอะ ฟีนิกซ์",
+    "vi": "Heart of the Phoenix"
+  },
+  "MST_LEADERSKILLS_801_DESCRIPTION": {
+    "en": "50% boost to Def Power of Lord Types",
+    "es": "Aumenta un 50 % la defensa de las unidades de tipo Noble.",
+    "id": "50% boost untuk Kekuatan Pertahanan Tipe Lord",
+    "pt": "Reforço de 50% na DEF do tipo Lorde",
+    "th": "50% เพิ่มพลังป้องกันของประเภท ลอร์ด",
+    "vi": "50% làm tăng quyền Def của các loại chúa tể "
+  },
+  "MST_LEADERSKILLS_801_NAME": {
+    "en": "Seeker's Protection",
+    "es": "Defensa feudal",
+    "id": "Proteksi Pencari",
+    "pt": "Proteção do Buscador",
+    "th": "ซีกเกอร์โพรเทคชั่น",
+    "vi": "Sự bảo vệ của kẻ tìm kiếm "
+  },
+  "MST_LEADERSKILLS_802_DESCRIPTION": {
+    "en": "25% boost to Def Power of Anima Types",
+    "es": "Aumenta un 25 % la defensa de las unidades de tipo Alma.",
+    "id": "25% boost untuk Kekuatan Pertahanan Tipe Anima",
+    "pt": "Reforço de 25% na DEF do tipo Anima",
+    "th": "25% เพิ่มพลังป้องกันของประเภท อานิม่า",
+    "vi": "25% làm tăng quyền Def của các loại bản ngã  "
+  },
+  "MST_LEADERSKILLS_802_NAME": {
+    "en": "Noble Defense",
+    "es": "Defensa noble",
+    "id": "Pertahanan Mulia",
+    "pt": "Defesa do Nobre",
+    "th": "โนเบลดีเฟนส์",
+    "vi": "Sự phòng thủ cao quý "
+  },
+  "MST_LEADERSKILLS_803_DESCRIPTION": {
+    "en": "50% boost to Def Power of Anima Types",
+    "es": "Aumenta un 50 % la defensa de las unidades de tipo Alma.",
+    "id": "50% boost untuk Kekuatan Pertahanan Tipe Anima",
+    "pt": "Reforço de 50% na DEF do tipo Anima",
+    "th": "50% เพิ่มพลังป้องกันของประเภท อานิม่า",
+    "vi": "50% làm tăng quyền Def của các loại bản ngã  "
+  },
+  "MST_LEADERSKILLS_803_NAME": {
+    "en": "Noble Protection",
+    "es": "Defensa noble",
+    "id": "Proteksi Mulia",
+    "pt": "Proteção do Nobre",
+    "th": "โนเบลโพรเทคชั่น",
+    "vi": "Sự bảo vệ cao quý "
+  },
+  "MST_LEADERSKILLS_804_DESCRIPTION": {
+    "en": "25% boost to Def Power of Breaker Types",
+    "es": "Aumenta un 25 % la defensa de las unidades de tipo Luchador.",
+    "id": "25% boost untuk Kekuatan Pertahanan Tipe Pemecah",
+    "pt": "Reforço de 25% na DEF do tipo Lutador",
+    "th": "25% เพิ่มพลังป้องกันของประเภท เบรกเกอร์",
+    "vi": "25% làm tăng quyền Def của các loại người vi phạm "
+  },
+  "MST_LEADERSKILLS_804_NAME": {
+    "en": "Force Defense",
+    "es": "Defensa enérgica",
+    "id": "Pertahanan Kuat",
+    "pt": "Defesa da Força",
+    "th": "ฟอร์ซ ดีเฟนส์",
+    "vi": "Sự phòng thủ của lực lượng "
+  },
+  "MST_LEADERSKILLS_805_DESCRIPTION": {
+    "en": "50% boost to Def Power of Breaker Types",
+    "es": "Aumenta un 50 % la defensa de las unidades de tipo Luchador.",
+    "id": "50% boost untuk Kekuatan Pertahanan Tipe Pemecah",
+    "pt": "Reforço de 50% na DEF do tipo Lutador",
+    "th": "50% เพิ่มพลังป้องกันของประเภท เบรกเกอร์",
+    "vi": "50% làm tăng quyền Def của các loại người vi phạm "
+  },
+  "MST_LEADERSKILLS_805_NAME": {
+    "en": "Force Protection",
+    "es": "Defensa enérgica",
+    "id": "Proteksi Kuat",
+    "pt": "Proteção da Força",
+    "th": "ฟอร์ซโพรเทคชั่น",
+    "vi": "Sự bảo vệ của lực lượng "
+  },
+  "MST_LEADERSKILLS_806_DESCRIPTION": {
+    "en": "25% boost to Def Power of Guardian Types",
+    "es": "Aumenta un 25 % la defensa de las unidades de tipo Protector.",
+    "id": "25% boost untuk Kekuatan Pertahanan Tipe Penjaga",
+    "pt": "Reforço de 25% na DEF do tipo Guardião",
+    "th": "25% เพิ่มพลังป้องกันของประเภท การ์เดียน",
+    "vi": "25% làm tăng quyền def của các loại bảo vệ "
+  },
+  "MST_LEADERSKILLS_806_NAME": {
+    "en": "Pride Defense",
+    "es": "Defensa honrosa",
+    "id": "Pertahanan Bangga",
+    "pt": "Defesa do Orgulho",
+    "th": "ไพรด์ ดีเฟนส์",
+    "vi": "Sự phòng thủ kiêu hãnh "
+  },
+  "MST_LEADERSKILLS_807_DESCRIPTION": {
+    "en": "50% boost to Def Power of Guardian Types",
+    "es": "Aumenta un 50 % la defensa de las unidades de tipo Protector.",
+    "id": "50% boost untuk Kekuatan Pertahanan Tipe Penjaga",
+    "pt": "Reforço de 50% na DEF do tipo Guardião",
+    "th": "50% เพิ่มพลังป้องกันของประเภท การ์เดียน",
+    "vi": "50% làm tăng quyền Def của các loại bảo vệ "
+  },
+  "MST_LEADERSKILLS_807_NAME": {
+    "en": "Pride Protection",
+    "es": "Defensa honrosa",
+    "id": "Proteksi Bangga",
+    "pt": "Proteção do Orgulho",
+    "th": "ไพรด์โพรเทคชั่น",
+    "vi": "Sự bảo vệ kiêu hãnh "
+  },
+  "MST_LEADERSKILLS_808_DESCRIPTION": {
+    "en": "25% boost to Def Power of Oracle Types",
+    "es": "Aumenta un 25 % la defensa de las unidades de tipo Augur.",
+    "id": "25% boost untuk Kekuatan Pertahanan Tipe Oracle",
+    "pt": "Reforço de 25% no DEF do tipo Oráculo",
+    "th": "25% เพิ่มพลังป้องกันของประเภท ออราเคิล",
+    "vi": "25% làm tăng quyền Def của các loại tiên tri "
+  },
+  "MST_LEADERSKILLS_808_NAME": {
+    "en": "Pure Defense",
+    "es": "Defensa pura",
+    "id": "Pertahanan Murni",
+    "pt": "Defesa da Pureza",
+    "th": "เพียว ดีเฟนส์",
+    "vi": "Sự phòng thủ thuần khiết "
+  },
+  "MST_LEADERSKILLS_809_DESCRIPTION": {
+    "en": "50% boost to Def Power of Oracle Types",
+    "es": "Aumenta un 50 % la defensa de las unidades de tipo Augur.",
+    "id": "50% boost untuk Kekuatan Pertahanan Tipe Oracle",
+    "pt": "Reforço de 50% no DEF do tipo Oráculo",
+    "th": "50% เพิ่มพลังป้องกันของประเภท ออราเคิล",
+    "vi": "50% làm tăng quyền Def của các loại tiên tri "
+  },
+  "MST_LEADERSKILLS_809_NAME": {
+    "en": "Pure Protection",
+    "es": "Defensa pura",
+    "id": "Proteksi Murni",
+    "pt": "Proteção da Pureza",
+    "th": "เพียวโพรเทคชั่น",
+    "vi": "Sự bảo vệ thuần khiết "
+  },
   "MST_LEADERSKILLS_810000_DESCRIPTION": {
     "en": "150% boost to Atk and 50% boost to max HP of Thunder types, 10% damage reduction from Earth types, considerably boosts BB Atk & negates Def ignoring effect",
     "es": "150% boost to Atk and 50% boost to max HP of Thunder types, 10% damage reduction from Earth types, considerably boosts BB Atk & negates Def ignoring effect",
@@ -783,6 +935,38 @@
     "th": "Violent Retaliation",
     "vi": "Violent Retaliation"
   },
+  "MST_LEADERSKILLS_810587_DESCRIPTION": {
+    "en": "100% boost to Atk, max HP, hugely boosts Fire elemental damage, hugely boosts critical damage & 10% damage reduction from Fire, Earth, Light, Dark types",
+    "es": "100% boost to Atk, max HP, hugely boosts Fire elemental damage, hugely boosts critical damage & 10% damage reduction from Fire, Earth, Light, Dark types",
+    "id": "100% boost to Atk, max HP, hugely boosts Fire elemental damage, hugely boosts critical damage & 10% damage reduction from Fire, Earth, Light, Dark types",
+    "pt": "100% boost to Atk, max HP, hugely boosts Fire elemental damage, hugely boosts critical damage & 10% damage reduction from Fire, Earth, Light, Dark types",
+    "th": "100% boost to Atk, max HP, hugely boosts Fire elemental damage, hugely boosts critical damage & 10% damage reduction from Fire, Earth, Light, Dark types",
+    "vi": "100% boost to Atk, max HP, hugely boosts Fire elemental damage, hugely boosts critical damage & 10% damage reduction from Fire, Earth, Light, Dark types"
+  },
+  "MST_LEADERSKILLS_810587_NAME": {
+    "en": "Almost Villainy",
+    "es": "Almost Villainy",
+    "id": "Almost Villainy",
+    "pt": "Almost Villainy",
+    "th": "Almost Villainy",
+    "vi": "Almost Villainy"
+  },
+  "MST_LEADERSKILLS_810588_DESCRIPTION": {
+    "en": "130% boost to Atk, max HP, enormously boosts Fire elemental damage, raises Atk parameter limits to 130000, hugely boosts critical damage & 15% damage reduction from Fire, Earth, Light, Dark types",
+    "es": "130% boost to Atk, max HP, enormously boosts Fire elemental damage, raises Atk parameter limits to 130000, hugely boosts critical damage & 15% damage reduction from Fire, Earth, Light, Dark types",
+    "id": "130% boost to Atk, max HP, enormously boosts Fire elemental damage, raises Atk parameter limits to 130000, hugely boosts critical damage & 15% damage reduction from Fire, Earth, Light, Dark types",
+    "pt": "130% boost to Atk, max HP, enormously boosts Fire elemental damage, raises Atk parameter limits to 130000, hugely boosts critical damage & 15% damage reduction from Fire, Earth, Light, Dark types",
+    "th": "130% boost to Atk, max HP, enormously boosts Fire elemental damage, raises Atk parameter limits to 130000, hugely boosts critical damage & 15% damage reduction from Fire, Earth, Light, Dark types",
+    "vi": "130% boost to Atk, max HP, enormously boosts Fire elemental damage, raises Atk parameter limits to 130000, hugely boosts critical damage & 15% damage reduction from Fire, Earth, Light, Dark types"
+  },
+  "MST_LEADERSKILLS_810588_NAME": {
+    "en": "Explosion",
+    "es": "Explosion",
+    "id": "Explosion",
+    "pt": "Explosion",
+    "th": "Explosion",
+    "vi": "Explosion"
+  },
   "MST_LEADERSKILLS_8105_DESCRIPTION": {
     "en": "20% boost to Def & probable 20% damage reduction",
     "es": "20% boost to Def & probable 20% damage reduction",
@@ -1326,6 +1510,38 @@
     "pt": "Offerings to the Abyss",
     "th": "Offerings to the Abyss",
     "vi": "Offerings to the Abyss"
+  },
+  "MST_LEADERSKILLS_820587_DESCRIPTION": {
+    "en": "150% boost to Def, 60% boost to Rec, max HP, adds probable 1 turn Atk reduction effect to attack for 2 turns when damage taken has exceeded certain amount, 15% damage reduction for 2 turns when damage taken has exceeded certain amount & enormously boosts BB gauge when guarding",
+    "es": "150% boost to Def, 60% boost to Rec, max HP, adds probable 1 turn Atk reduction effect to attack for 2 turns when damage taken has exceeded certain amount, 15% damage reduction for 2 turns when damage taken has exceeded certain amount & enormously boosts BB gauge when guarding",
+    "id": "150% boost to Def, 60% boost to Rec, max HP, adds probable 1 turn Atk reduction effect to attack for 2 turns when damage taken has exceeded certain amount, 15% damage reduction for 2 turns when damage taken has exceeded certain amount & enormously boosts BB gauge when guarding",
+    "pt": "150% boost to Def, 60% boost to Rec, max HP, adds probable 1 turn Atk reduction effect to attack for 2 turns when damage taken has exceeded certain amount, 15% damage reduction for 2 turns when damage taken has exceeded certain amount & enormously boosts BB gauge when guarding",
+    "th": "150% boost to Def, 60% boost to Rec, max HP, adds probable 1 turn Atk reduction effect to attack for 2 turns when damage taken has exceeded certain amount, 15% damage reduction for 2 turns when damage taken has exceeded certain amount & enormously boosts BB gauge when guarding",
+    "vi": "150% boost to Def, 60% boost to Rec, max HP, adds probable 1 turn Atk reduction effect to attack for 2 turns when damage taken has exceeded certain amount, 15% damage reduction for 2 turns when damage taken has exceeded certain amount & enormously boosts BB gauge when guarding"
+  },
+  "MST_LEADERSKILLS_820587_NAME": {
+    "en": "Keen Perception",
+    "es": "Keen Perception",
+    "id": "Keen Perception",
+    "pt": "Keen Perception",
+    "th": "Keen Perception",
+    "vi": "Keen Perception"
+  },
+  "MST_LEADERSKILLS_820588_DESCRIPTION": {
+    "en": "200% boost to Def, 80% boost to Rec, max HP, adds probable 1 turn Atk reduction effect to attack for 2 turns when damage taken has exceeded certain amount, 20% damage reduction for 2 turns when damage taken has exceeded certain amount & enormously boosts BB gauge and boosts damage reduction when guarding",
+    "es": "200% boost to Def, 80% boost to Rec, max HP, adds probable 1 turn Atk reduction effect to attack for 2 turns when damage taken has exceeded certain amount, 20% damage reduction for 2 turns when damage taken has exceeded certain amount & enormously boosts BB gauge and boosts damage reduction when guarding",
+    "id": "200% boost to Def, 80% boost to Rec, max HP, adds probable 1 turn Atk reduction effect to attack for 2 turns when damage taken has exceeded certain amount, 20% damage reduction for 2 turns when damage taken has exceeded certain amount & enormously boosts BB gauge and boosts damage reduction when guarding",
+    "pt": "200% boost to Def, 80% boost to Rec, max HP, adds probable 1 turn Atk reduction effect to attack for 2 turns when damage taken has exceeded certain amount, 20% damage reduction for 2 turns when damage taken has exceeded certain amount & enormously boosts BB gauge and boosts damage reduction when guarding",
+    "th": "200% boost to Def, 80% boost to Rec, max HP, adds probable 1 turn Atk reduction effect to attack for 2 turns when damage taken has exceeded certain amount, 20% damage reduction for 2 turns when damage taken has exceeded certain amount & enormously boosts BB gauge and boosts damage reduction when guarding",
+    "vi": "200% boost to Def, 80% boost to Rec, max HP, adds probable 1 turn Atk reduction effect to attack for 2 turns when damage taken has exceeded certain amount, 20% damage reduction for 2 turns when damage taken has exceeded certain amount & enormously boosts BB gauge and boosts damage reduction when guarding"
+  },
+  "MST_LEADERSKILLS_820588_NAME": {
+    "en": "Amphibian Hero",
+    "es": "Amphibian Hero",
+    "id": "Amphibian Hero",
+    "pt": "Amphibian Hero",
+    "th": "Amphibian Hero",
+    "vi": "Amphibian Hero"
   },
   "MST_LEADERSKILLS_830047_DESCRIPTION": {
     "en": "100% boost to Atk, 60% boost to Def, max HP of Earth types, 10% damage reduction from Earth, Thunder types, probable considerable reduction of foe's BB gauge & 50% damage counter",
@@ -86454,141 +86670,5 @@
     "pt": "Aem Lâmina Ultra",
     "th": "อัลตรา เบลด เอม",
     "vi": "Ultra Blade Aem"
-  },
-  "MST_MONSTERS_57200_NAME": {
-    "en": "Noble Sage Fadahl",
-    "es": "Fadahl Sabio Noble",
-    "id": "Si Bijak Mulia Fadahl",
-    "pt": "Fadahl Sálvia Nobre",
-    "th": "โนเบิล เสจ ฟาดาห์ล",
-    "vi": "Noble Sage Fadahl"
-  },
-  "MST_MONSTERS_57201_NAME": {
-    "en": "Noble Sage Fadahl",
-    "es": "Fadahl Sabio Noble",
-    "id": "Si Bijak Mulia Fadahl",
-    "pt": "Fadahl Sálvia Nobre",
-    "th": "โนเบิล เสจ ฟาดาห์ล",
-    "vi": "Noble Sage Fadahl"
-  },
-  "MST_MONSTERS_57202_NAME": {
-    "en": "Noble Sage Fadahl",
-    "es": "Noble Sage Fadahl",
-    "id": "Noble Sage Fadahl",
-    "pt": "Noble Sage Fadahl",
-    "th": "โนเบิล เซจ ฟาดาห์ล",
-    "vi": "Noble Sage Fadahl"
-  },
-  "MST_MONSTERS_57203_NAME": {
-    "en": "Noble Sage Fadahl",
-    "es": "Noble Sage Fadahl",
-    "id": "Bijak Mulia Fadahl",
-    "pt": "Noble Sage Fadahl",
-    "th": "โนเบิล เซจ ฟาดาห์ล",
-    "vi": "Noble Sage Fadahl"
-  },
-  "MST_MONSTERS_57250_NAME": {
-    "en": "Radiant Virtue Fadahl",
-    "es": "Fadahl Virtud Radiante",
-    "id": "Dilias Anak Neraka",
-    "pt": "Fadahl Virtude Radiante",
-    "th": "เรเดียนท เวอทู ฟาดาห์ล",
-    "vi": "Radiant Virtue Fadahl"
-  },
-  "MST_MONSTERS_57251_NAME": {
-    "en": "Radiant Virtue Fadahl",
-    "es": "Radiant Virtue Fadahl",
-    "id": "Radiant Virtue Fadahl",
-    "pt": "Radiant Virtue Fadahl",
-    "th": "เรเดียนท์ เวอร์ชิว ฟาดาห์ล",
-    "vi": "Radiant Virtue Fadahl"
-  },
-  "MST_MONSTERS_57252_NAME": {
-    "en": "Radiant Virtue Fadahl",
-    "es": "Radiant Virtue Fadahl",
-    "id": "Radiant Virtue Fadahl",
-    "pt": "Radiant Virtue Fadahl",
-    "th": "เรเดียนท์ เวอร์ชิว ฟาดาห์ล",
-    "vi": "Radiant Virtue Fadahl"
-  },
-  "MST_MONSTERS_57253_NAME": {
-    "en": "Radiant Virtue Fadahl",
-    "es": "Radiant Virtue Fadahl",
-    "id": "Radiant Virtue Fadahl",
-    "pt": "Radiant Virtue Fadahl",
-    "th": "เรเดียนท์ เวอร์ชิว ฟาดาห์ล",
-    "vi": "Radiant Virtue Fadahl"
-  },
-  "MST_MONSTERS_57254_NAME": {
-    "en": "Radiant Virtue Fadahl",
-    "es": "Radiant Virtue Fadahl",
-    "id": "Nilai Berkilau Fadahl",
-    "pt": "Radiant Virtue Fadahl",
-    "th": "เรเดี๊ยนท์ เวอชิว ฟาดาห์ล",
-    "vi": "Radiant Virtue Fadahl"
-  },
-  "MST_MONSTERS_57300_NAME": {
-    "en": "Sacred Advocate Rinon",
-    "es": "Celadora sagrada Rinon",
-    "id": "Advokat Suci Rinon",
-    "pt": "Fortaleza da Luz Rinon",
-    "th": "แซเคร็ด แอ็ดโวเคท ไรนอน",
-    "vi": "Sacred Advocate Rinon"
-  },
-  "MST_MONSTERS_57301_NAME": {
-    "en": "Sacred Advocate Rinon",
-    "es": "Celadora sagrada Rinon",
-    "id": "Advokat Suci Rinon",
-    "pt": "Fortaleza da Luz Rinon",
-    "th": "แซเคร็ด แอ็ดโวเคท ไรนอน",
-    "vi": "Sacred Advocate Rinon"
-  },
-  "MST_MONSTERS_57302_NAME": {
-    "en": "Sacred Advocate Rinon",
-    "es": "Celadora sagrada Rinon",
-    "id": "Advokat Suci Rinon",
-    "pt": "Fortaleza da Luz Rinon",
-    "th": "แซเคร็ด แอ็ดโวเคท ไรนอน",
-    "vi": "Sacred Advocate Rinon"
-  },
-  "MST_MONSTERS_57350_NAME": {
-    "en": "Ark",
-    "es": "Ark",
-    "id": "Ark",
-    "pt": "Ark",
-    "th": "อาร์ค",
-    "vi": "Ark"
-  },
-  "MST_MONSTERS_57351_NAME": {
-    "en": "Ark",
-    "es": "Ark",
-    "id": "Ark",
-    "pt": "Ark",
-    "th": "อาร์ค",
-    "vi": "Ark"
-  },
-  "MST_MONSTERS_57352_NAME": {
-    "en": "Ark",
-    "es": "Ark",
-    "id": "Ark",
-    "pt": "Ark",
-    "th": "อาร์ค",
-    "vi": "Ark"
-  },
-  "MST_MONSTERS_57353_NAME": {
-    "en": "Ark",
-    "es": "Ark",
-    "id": "Ark",
-    "pt": "Ark",
-    "th": "อาร์ค",
-    "vi": "Ark"
-  },
-  "MST_MONSTERS_57354_NAME": {
-    "en": "Ark",
-    "es": "Ark",
-    "id": "Ark",
-    "pt": "Ark",
-    "th": "อาร์ค",
-    "vi": "Ark"
   }
 }
