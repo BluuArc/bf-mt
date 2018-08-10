@@ -181,7 +181,7 @@ const passives = {
         const value = effect[this.config.keyMapping[ailment]];
         if (value) {
           const iconKey = this.config[helper.iconGeneratorSymbol](ailment);
-          const desc = [+value === 100 ? 'Negates' : `${helper.getNumberAsPolarizedPercent(+value)} resistance to`, helper.capitalize(ailment), targetData].join(' ');
+          const desc = [+value === 100 ? 'Negate' : `${helper.getNumberAsPolarizedPercent(+value)} resistance to`, helper.capitalize(ailment), targetData].join(' ');
           values.push({ iconKey, value: { value, conditions, targetData }, desc });
         }
       });

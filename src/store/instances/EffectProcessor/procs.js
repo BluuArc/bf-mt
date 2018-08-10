@@ -662,6 +662,47 @@ const procs = {
       };
     },
   },
+  '17': {
+    desc: 'Status Negation/Resistance',
+    config: {
+      processOrder: knownConstants.ailments.slice(),
+      [helper.iconGeneratorSymbol]: ailment => helper.getIconKey(`BUFF_${ailment.toUpperCase()}BLK`),
+      keyMapping: (() => {
+        const mapping = {};
+        knownConstants.ailments.forEach((ailment, index) => {
+          mapping[ailment] = [(ailment === 'weak') ? 'resist weaken%' : `resist ${ailment}%`, `(${index + 30})`].join(' ');
+        });
+        return mapping;
+      })(),
+    },
+    possibleIcons () {
+      return this.config.processOrder.map(ailment => this.config[helper.iconGeneratorSymbol](ailment));
+    },
+    type: [EffectTypes.PASSIVE.name],
+    process (effect = {}, context) {
+      const values = [];
+      const targetData = helper.getTargetData(effect);
+      const turns = helper.getTurns(effect['resist status ails turns']);
+
+      console.debug(this.config.keyMapping);
+      this.config.processOrder.forEach(ailment => {
+        const value = effect[this.config.keyMapping[ailment]];
+        if (value) {
+          const iconKey = this.config[helper.iconGeneratorSymbol](ailment);
+          const desc = [+value === 100 ? 'Negate' : `${helper.getNumberAsPolarizedPercent(+value)} resistance to`, helper.capitalize(ailment), targetData].join(' ');
+          values.push({ iconKey, value: { value, turns, targetData }, desc });
+        }
+      });
+
+      return {
+        type: this.type,
+        turnDuration: turns.value,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
   '18': {
     desc: 'Damage Reduction/Mitigation',
     config: {
