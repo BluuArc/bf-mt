@@ -57,8 +57,31 @@
                   <v-flex
                     xs3 class="text-xs-center subheading pa-0" style="font-weight: bold"
                     v-for="server in servers"
-                    :key="server"
-                    v-text="server.toUpperCase()"/>
+                    :key="server">
+                    <v-container fluid class="pt-0 pb-0">
+                      <v-layout row>
+                        <v-flex xs12 v-text="server.toUpperCase()"/>
+                      </v-layout>
+                    <v-layout row wrap>
+                      <v-flex class="text-xs-center" xs12 md6>
+                        <v-btn
+                          block
+                          :disabled="dataIsLoading"
+                          @click="() => { multidexModules.forEach(({name}) => toggleDataUpdate(name, server, true)); }">
+                          Reload All
+                        </v-btn>
+                      </v-flex>
+                      <v-flex class="text-xs-center" xs12 md6>
+                        <v-btn
+                          block
+                          :disabled="dataIsLoading"
+                          @click="() => { multidexModules.forEach(({name}) => toggleDataDelete(name, server, true)); }">
+                          Delete All
+                        </v-btn>
+                      </v-flex>
+                    </v-layout>
+                    </v-container>
+                  </v-flex>
                 </v-layout>
                 <v-layout row>
                   <v-flex xs12>
@@ -285,24 +308,28 @@ export default {
       this.general.lightMode = this.lightMode;
       this.general.activeServer = this.activeServer;
     },
-    toggleDataUpdate (dataType, server) {
+    toggleDataUpdate (dataType, server, forcedValue) {
       const hasServer = this.dataUpdate[dataType].includes(server);
-      if (hasServer) {
+      if (hasServer && (forcedValue === false || forcedValue === undefined)) {
         this.dataUpdate[dataType] = this.dataUpdate[dataType].filter(s => s !== server);
       } else {
-        this.dataUpdate[dataType].push(server);
+        if (!hasServer) {
+          this.dataUpdate[dataType].push(server);
+        }
         // remove from delete list
         if (this.dataDelete[dataType].includes(server)) {
           this.dataDelete[dataType] = this.dataDelete[dataType].filter(s => s !== server);
         }
       }
     },
-    toggleDataDelete (dataType, server) {
+    toggleDataDelete (dataType, server, forcedValue) {
       const hasServer = this.dataDelete[dataType].includes(server);
-      if (hasServer) {
+      if (hasServer && (forcedValue === false || forcedValue === undefined)) {
         this.dataDelete[dataType] = this.dataDelete[dataType].filter(s => s !== server);
       } else {
-        this.dataDelete[dataType].push(server);
+        if (!hasServer) {
+          this.dataDelete[dataType].push(server);
+        }
         // remove from update list
         if (this.dataUpdate[dataType].includes(server)) {
           this.dataUpdate[dataType] = this.dataUpdate[dataType].filter(s => s !== server);
