@@ -676,7 +676,7 @@ const procs = {
       })(),
     },
     possibleIcons () {
-      return this.config.processOrder.map(ailment => this.config[helper.iconGeneratorSymbol](ailment));
+      return this.config.processOrder.map(ailment => this.config[helper.iconGeneratorSymbol](ailment)).concat([IconKeyMappings.BUFF_ALLAILNULL.name]);
     },
     type: [EffectTypes.PASSIVE.name],
     process (effect = {}, context) {
@@ -693,6 +693,12 @@ const procs = {
           values.push({ iconKey, value: { value, turns, targetData }, desc });
         }
       });
+
+      if (values.length === 0) {
+        const iconKey = IconKeyMappings.BUFF_ALLAILNULL.name;
+        const desc = 'Ailment Resist';
+        values.push({ iconKey, value: { value: 0, turns, targetData }, desc });
+      }
 
       return {
         type: this.type,
@@ -742,6 +748,37 @@ const procs = {
       const iconKey = IconKeyMappings.BUFF_BBREC.name;
       const fillPerTurn = effect['increase bb gauge gradual'];
       values.push({ iconKey, value: { fillPerTurn, turns, targetData }, desc: `${helper.getNumberAsPolarizedNumber(fillPerTurn)} BC/turn ${targetData}` });
+
+      return {
+        type: this.type,
+        turnDuration: turns.value,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
+  '20': {
+    desc: 'BC Fill on Hit',
+    config: {
+      iconKey: IconKeyMappings.BUFF_DAMAGEBB.name,
+    },
+    possibleIcons () {
+      return [this.config.iconKey];
+    },
+    type: [EffectTypes.ACTIVE.name],
+    process (effect = {}, context) {
+      const values = [];
+      const targetData = helper.getTargetData(effect);
+      const turns = helper.getTurns(effect['bc fill when attacked turns (38)']);
+
+      const fillLow = +(effect['bc fill when attacked low'] || 0);
+      const fillHigh = +(effect['bc fill when attacked high'] || 0);
+      const chance = +(effect['bc fill when attacked%'] || 0);
+
+      const iconKey = this.config.iconKey;
+      const desc = [chance === 100 ? 'Fill' : `${chance}% chance to fill`, helper.getFormattedMinMax(fillLow, fillHigh), 'BC when hit', targetData].join(' ');
+      values.push({ iconKey, value: { fillLow, fillHigh, chance, turns, targetData }, desc });
 
       return {
         type: this.type,

@@ -12,11 +12,11 @@
         <v-flex xs1 :key="`${i}-icon`" class="text-xs-center">
           <buff-icon @click.native="logBuff(effect)" :icon-key="effect.iconKey"/>
         </v-flex>
-        <v-flex xs1 :key="`${i}-type`" class="text-xs-center">
+        <v-flex xs1 v-if="$vuetify.breakpoint.mdAndUp" :key="`${i}-type`" class="text-xs-center">
           <p class="mb-0" :title="getTypes(effect.parent.type, true)"
             >{{ getTypes(effect.parent.type) }}</p>
         </v-flex>
-        <v-flex xs10 :key="i" class="text-xs-left">
+        <v-flex :xs10="$vuetify.breakpoint.mdAndUp" :xs11="!$vuetify.breakpoint.mdAndUp" :key="i" class="text-xs-left">
           <p class="mb-0">
             <span v-if="effect.parent.originalEffect.sp_type">({{ handleSpType(effect.parent.originalEffect.sp_type) }})</span>
             <span v-if="effect.value.turns && !effect.triggeredEffectContext">{{ effect.value.turns.text }}</span>
