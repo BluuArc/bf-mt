@@ -789,6 +789,34 @@ const procs = {
       };
     },
   },
+  '22': {
+    desc: 'Defense Ignore',
+    config: {
+      iconKey: IconKeyMappings.BUFF_IGNOREDEF.name,
+    },
+    possibleIcons () {
+      return [this.config.iconKey];
+    },
+    type: [EffectTypes.ACTIVE.name],
+    process (effect = {}, context) {
+      const values = [];
+      const targetData = helper.getTargetData(effect);
+      const turns = helper.getTurns(effect['defense% ignore turns (39)']);
+
+      const chance = +(effect['defense% ignore'] || 0);
+      const iconKey = this.config.iconKey;
+      const desc = [(chance === 100) ? `DEF ignore` : `${helper.getNumberAsPolarizedPercent(chance)} chance of DEF ignore`, 'when attacking', targetData].join(' ');
+      values.push({ iconKey, value: { chance, turns, targetData }, desc });
+
+      return {
+        type: this.type,
+        turnDuration: turns.value,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
   '31': {
     desc: 'Instant BC fill/Flat BB Gauge Increase',
     config: {},
