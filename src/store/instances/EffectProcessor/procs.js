@@ -817,6 +817,34 @@ const procs = {
       };
     },
   },
+  '23': {
+    desc: 'Spark Damage Boost',
+    config: {
+      iconKey: IconKeyMappings.BUFF_SPARKUP.name,
+    },
+    possibleIcons () {
+      return [this.config.iconKey];
+    },
+    type: [EffectTypes.ACTIVE.name],
+    process (effect = {}, context) {
+      const values = [];
+      const targetData = helper.getTargetData(effect);
+      const turns = helper.getTurns(effect);
+
+      const value = +(effect['spark dmg% buff (40)'] || 0);
+      const iconKey = this.config.iconKey;
+      const desc = `${helper.getNumberAsPolarizedPercent(value)} Spark damage ${targetData}`;
+      values.push({ iconKey, value: { value, targetData, turns }, desc });
+
+      return {
+        type: this.type,
+        turnDuration: turns.value,
+        originalEffect: effect,
+        context,
+        values,
+      };
+    },
+  },
   '31': {
     desc: 'Instant BC fill/Flat BB Gauge Increase',
     config: {},
