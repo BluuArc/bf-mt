@@ -1,5 +1,5 @@
 const fs = require('fs');
-const rp = require('request-promise');
+const axios = require('axios');
 const logger = require('winston');
 const GitHubScraper = require('./gh-scraper');
 logger.level = 'debug';
@@ -669,7 +669,7 @@ function downloadMultipleFiles(urlArr = [], numConcurrent = 1) {
         const filename = url.slice(url.lastIndexOf("/") + 1);
         logger.debug(`downloading ${filename} from ${url}`);
         localPromises.push(
-          rp.get(url)
+          axios.get(url)
             .then(data => {
               logger.debug(`got ${filename}; ${--count} remaining`);
               result.push({
