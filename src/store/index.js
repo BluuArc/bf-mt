@@ -1,5 +1,6 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from 'vue';
+import Vuex from 'vuex';
+import settings from './settings';
 
 Vue.use(Vuex);
 export const moduleInfo = Object.freeze([{
@@ -52,13 +53,42 @@ export const moduleInfo = Object.freeze([{
 ]);
 
 export default new Vuex.Store({
+  modules: {
+    settings,
+  },
   state: {
-
+    disableHtmlOverflow: false,
+    inInitState: false,
+    loadingMessage: '',
   },
   mutations: {
-
+    setInitState (state, newState = false) {
+      state.inInitState = !!newState;
+    },
+    setLoadingMessage (state, message = '') {
+      state.loadingMessage = message;
+    },
   },
   actions: {
+    async init ({ dispatch, state, commit }) {
+      commit('setInitState', true);
+      // TODO: set load state of multidex modules
 
+      commit('setLoadingMessage', 'Initializing data');
+
+      // TODO: init multidex modules with settings
+      await dispatch('settings/init');
+
+      commit('setLoadingMessage', `Setting data to last set server (${(state.settings.activeServer || 'gl').toUpperCase()})`);
+      await dispatch('setActiveServer', state.settings.activeServer);
+      commit('setLoadingMessage');
+      commit('setInitState', false);
+    },
+    async setActiveServer ({ dispatch, commit }, server = 'gl') { // eslint-disable-line no-unused-vars
+      // TODO: set load state of multidex modules
+
+      // TODO: set multidex modules with settings
+      await dispatch('settings/setActiveServer', server);
+    },
   },
 });

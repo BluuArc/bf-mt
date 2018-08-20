@@ -1,6 +1,5 @@
 
 // centralized class for logging
-// TODO: special styling?
 export class Logger {
   constructor ({ prefix = '' }) {
     this.prefix = prefix;
@@ -12,23 +11,23 @@ export class Logger {
   }
 
   debug (...args) {
-    console.debug(this.prefix, ...args);
+    console.debug(this.prefix, 'debug:'.toUpperCase(), ...args);
   }
 
   error (...args) {
-    console.error(this.prefix, ...args);
+    console.error(this.prefix, 'error:'.toUpperCase(), ...args);
   }
 
   info (...args) {
-    console.info(this.prefix, ...args);
+    console.info(this.prefix, 'info:'.toUpperCase(), ...args);
   }
 
   log (...args) {
-    console.log(this.prefix, ...args);
+    console.log(this.prefix, 'log:'.toUpperCase(), ...args);
   }
 
   warn (...args) {
-    console.warn(this.prefix, ...args);
+    console.warn(this.prefix, 'warn:'.toUpperCase(), ...args);
   }
   /* eslint-enable no-console */
 }

@@ -87,12 +87,15 @@
 <script>
 import logger from '@/modules/logger';
 import { servers } from '@/modules/constants';
+import { mapActions, mapState } from 'vuex';
 
 import { moduleInfo } from '@/store';
 const multidexModules = moduleInfo.filter(m => m.type === 'multidex');
 export default {
   name: 'App',
   computed: {
+    ...mapState('settings', ['lightMode', 'activeServer']),
+    ...mapState(['disableHtmlOverflow']),
     loadingStates () {
       logger.warn('Using mock loading states');
       return {};
@@ -113,10 +116,6 @@ export default {
     },
     numUpdates () {
       return this.numSettingsUpdates + this.numNewCommits;
-    },
-    lightMode () {
-      logger.warn('Using mock light mode');
-      return false;
     },
     dataIsLoading () {
       logger.warn('Using mock data is loading');
@@ -176,8 +175,35 @@ export default {
       title: 'Brave Frontier Multi Tool',
       pageActiveServer: '',
     }
-  }
-}
+  },
+  methods: {
+    ...mapActions(['init', 'setActiveServer']),
+    htmlOverflowChangeHandler () {
+      const page = document.getElementsByTagName('html')[0];
+      page.style.overflowY = (this.disableHtmlOverflow) ? 'hidden' : 'auto';
+    },
+  },
+  watch: {
+    activeServer (newValue) {
+      this.pageActiveServer = newValue || 'gl';
+    },
+    async pageActiveServer (newValue) {
+      if (newValue !== this.activeServer && servers.includes(newValue)) {
+        await this.setActiveServer(newValue);
+      }
+    },
+    disableHtmlOverflow () {
+      this.htmlOverflowChangeHandler();
+    },
+  },
+  async created () {
+    await this.init();
+  },
+  mounted () {
+    this.pageActiveServer = this.activeServer;
+    this.htmlOverflowChangeHandler();
+  },
+};
 </script>
 
 <style lang="less">
