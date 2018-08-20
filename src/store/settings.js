@@ -32,13 +32,13 @@ export default {
     },
     async putCurrentSettings ({ state, dispatch }) {
       const currentSettings = await dispatch('getCurrentSettings');
-      return settingsDb.put({
-        user,
-        data: {
-          ...currentSettings,
-          ...state,
-        },
+      await dispatch('putSettings', {
+        ...currentSettings,
+        ...state,
       });
+    },
+    putSettings(stateHelpers, data) { // eslint-disable-line no-unused-vars
+      return settingsDb.put({ user, data });
     },
     async init ({ dispatch, commit }) {
       const currentSettings = await dispatch('getCurrentSettings');
@@ -50,12 +50,9 @@ export default {
     async setLightMode ({ commit, dispatch }, mode) {
       const data = await dispatch('getCurrentSettings');
       logger.info('setting light mode from', data && data.lightMode, 'to', !!mode);
-      await settingsDb.put({
-        user,
-        data: {
-          ...data,
-          lightMode: !!mode,
-        },
+      await dispatch('putSettings', {
+        ...data,
+        lightMode: !!mode,
       });
       commit('setLightMode', mode);
     },
@@ -66,15 +63,12 @@ export default {
 
       if (data.activeServer !== activeServer) {
         logger.info('setting server from', data && data.activeServer, 'to', activeServer);
-        await settingsDb.put({
-          user,
-          data: {
-            ...data,
-            activeServer: server,
-          },
+        await dispatch('putSettings', {
+          ...data,
+          activeServer: server,
         });
       } else {
-        logger.info('skipping updating DB due servers being same');
+        logger.debug('skipping updating DB due servers being same');
       }
 
       commit('setActiveServer', activeServer);

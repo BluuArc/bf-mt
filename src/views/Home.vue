@@ -4,7 +4,7 @@
       <v-flex>
         <v-card raised>
           <v-card-title primary-title>
-            <h3 class="headline">Description</h3>
+            <h1 class="title">Description</h1>
           </v-card-title>
           <v-card-text>
             <p class="mb-1">The Brave Frontier Multi Tool (BF-MT) is a web application whose goals are as follows:</p>
@@ -27,7 +27,7 @@
       <v-flex>
         <v-card raised>
           <v-card-title>
-            <h3 class="headline">Old Version</h3>
+            <h1 class="title">Old Version</h1>
           </v-card-title>
           <v-card-text>
             <p class="mb-0">Interested in seeing what the previous iteration of this tool looked like? If so, click the button below. The Semantic UI version of this tool was deprecated June 16, 2018, which is the day this version (using Vuetify UI) was first publicly released.</p>
