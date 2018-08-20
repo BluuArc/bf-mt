@@ -1,10 +1,11 @@
 module.exports = {
-  "presets": [
+  presets: [
     [
       "@vue/app",
       {
-        "useBuiltIns": "entry"
+        useBuiltIns: "entry"
       }
     ]
-  ]
+  ],
+  plugins: ["@babel/plugin-proposal-optional-catch-binding"]
 }

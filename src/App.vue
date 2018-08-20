@@ -60,11 +60,11 @@
       <v-toolbar-side-icon @click.stop="showDrawer = !showDrawer"/>
       <v-badge left v-if="numUpdates > 0">
         <span slot="badge">{{ numUpdates > 10 ? '10+' : numUpdates }}</span>
-        <v-toolbar-title v-text="currentPageName"/>
+        <v-toolbar-title v-text="currentPageName || 'Unknown Page'"/>
       </v-badge>
-      <v-toolbar-title v-else v-text="currentPageName"/>
+      <v-toolbar-title v-else v-text="currentPageName || 'Unknown Page'"/>
       <v-spacer/>
-      <!-- <v-menu offset-y>
+      <v-menu offset-y>
         <v-btn slot="activator" flat :loading="dataIsLoading" :disabled="dataIsLoading">
           Server: {{ pageActiveServer }}
         </v-btn>
@@ -73,7 +73,7 @@
             <v-list-tile-title v-text="server.toUpperCase()"/>
           </v-list-tile>
         </v-list>
-      </v-menu> -->
+      </v-menu>
     </v-toolbar>
     <v-content>
       <v-slide-y-transition mode="out-in">
@@ -86,7 +86,10 @@
 
 <script>
 import logger from '@/modules/logger';
+import { servers } from '@/modules/constants';
 
+import { moduleInfo } from '@/store';
+const multidexModules = moduleInfo.filter(m => m.type === 'multidex');
 export default {
   name: 'App',
   computed: {
@@ -115,8 +118,31 @@ export default {
       logger.warn('Using mock light mode');
       return false;
     },
+    dataIsLoading () {
+      logger.warn('Using mock data is loading');
+      return false;
+    },
+    possibleServers: () => servers,
+    multidexModules: () => multidexModules,
   },
   data () {
+    const multidexIconMapping = {
+      units: {image: require('@/assets/unit_thum.png')},
+      items: {image: require('@/assets/sphere_thum_5_5.png')},
+      bursts: {image: require('@/assets/battle_meter_current.png')},
+      extraSkills: {image: require('@/assets/unit_ills_full_50792_100x103.png')},
+      leaderSkills: {image: require('@/assets/battle_leader_skill_icon.png')},
+      missions: {image: require('@/assets/achievement_pt_icon.png')},
+      dictionary: {image: require('@/assets/challeng_hierarchy_mark_gold.png')},
+      default: {icon: 'extension'},
+    };
+    const generateMultidexEntry = (entry) => {
+      return {
+        ...entry,
+        title: entry.fullName,
+        ...(multidexIconMapping[entry.name] || multidexIconMapping.default),
+      };
+    };
     return {
       showDrawer: true,
        menuItems: [
@@ -142,10 +168,10 @@ export default {
             },
           ],
         },
-        // {
-        //   subheader: 'Multidex',
-        //   items: multidexModules.map(generateMultidexEntry),
-        // },
+        {
+          subheader: 'Multidex',
+          items: multidexModules.map(generateMultidexEntry),
+        },
       ],
       title: 'Brave Frontier Multi Tool',
       pageActiveServer: '',
@@ -153,3 +179,9 @@ export default {
   }
 }
 </script>
+
+<style lang="less">
+html {
+  overflow-y: auto;
+}
+</style>
