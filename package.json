@@ -1,7 +1,6 @@
 {
   "name": "bf-mt",
   "version": "1.1.0",
-  "description": "An unofficial companion app for the mobile game Brave Frontier",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -10,7 +9,9 @@
   },
   "dependencies": {
     "vue": "^2.5.17",
-    "vuetify": "^1.1.13"
+    "vue-router": "^3.0.1",
+    "vuetify": "^1.1.13",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@babel/polyfill": "^7.0.0-beta.49",
@@ -43,5 +44,6 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "description": "An unofficial companion app for the mobile game Brave Frontier"
 }
