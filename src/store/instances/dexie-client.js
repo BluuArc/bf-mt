@@ -26,46 +26,13 @@ export const makeWorker = (table) => Object.freeze({
   }),
 });
 
-export const unitWorker = Object.freeze({
-  ...makeWorker('units'),
-  getById: (server, id) => wrapper.getById('units', { server }, 'data', id),
-  getMiniDb: (server, searchQuery = {}) => wrapper.worker.postMessage({ command: 'getMiniDbUnits', args: [server, searchQuery] }),
-});
-
-export const itemWorker = Object.freeze({
-  ...makeWorker('items'),
-  getById: (server, id) => wrapper.getById('items', { server }, 'data', id),
-  getMiniDb: (server, searchQuery = {}) => wrapper.worker.postMessage({ command: 'getMiniDbItems', args: [server, searchQuery] }),
-});
-
-export const burstWorker = Object.freeze({
-  ...makeWorker('bursts'),
-  getById: (server, id) => wrapper.getById('bursts', { server }, 'data', id),
-  getMiniDb: (server, searchQuery = {}) => wrapper.worker.postMessage({ command: 'getMiniDbBursts', args: [server, searchQuery] }),
-});
-
-export const extraSkillWorker = Object.freeze({
-  ...makeWorker('extraSkills'),
-  getById: (server, id) => wrapper.getById('extraSkills', { server }, 'data', id),
-  getMiniDb: (server, searchQuery = {}) => wrapper.worker.postMessage({ command: 'getMiniDbExtraSkills', args: [server, searchQuery] }),
-});
-
-export const leaderSkillWorker = Object.freeze({
-  ...makeWorker('leaderSkills'),
-  getById: (server, id) => wrapper.getById('leaderSkills', { server }, 'data', id),
-  getMiniDb: (server, searchQuery = {}) => wrapper.worker.postMessage({ command: 'getMiniDbLeaderSkills', args: [server, searchQuery] }),
-});
-
-export const missionWorker = Object.freeze({
-  ...makeWorker('missions'),
-  getById: (server, id) => wrapper.getById('missions', { server }, 'data', id),
-  getMiniDb: (server, searchQuery = {}) => wrapper.worker.postMessage({ command: 'getMiniDbMissions', args: [server, searchQuery] }),
-});
-
-export const dictionaryWorker = Object.freeze({
-  ...makeWorker('dictionary'),
-  getById: (server, id) => wrapper.getById('dictionary', { server }, 'data', id),
-  getMiniDb: (server, searchQuery = {}) => wrapper.worker.postMessage({ command: 'getMiniDbDictionary', args: [server, searchQuery] }),
-});
+export function makeMultidexWorker (moduleName) {
+  const miniDbCommand = `getMiniDb${moduleName[0].toUpperCase().concat(moduleName.slice(1))}`;
+  return {
+    ...makeWorker(moduleName),
+    getById: (server, id) => wrapper.getById(moduleName, { server }, 'data', id),
+    getMiniDb: (server, searchQuery = {}) => wrapper.worker.postMessage({ command: miniDbCommand, args: [server, searchQuery] }),
+  }
+}
 
 export default wrapper;

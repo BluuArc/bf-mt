@@ -210,4 +210,8 @@ export default {
 html {
   overflow-y: auto;
 }
+
+.d-align-self-center {
+  align-self: center;
+}
 </style>

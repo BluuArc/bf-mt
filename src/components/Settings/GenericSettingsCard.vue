@@ -3,7 +3,7 @@
     <v-card-title>
       <slot name="title" class="title">Settings Title</slot>
     </v-card-title>
-    <v-card-text>
+    <v-card-text style="overflow-x: auto;">
       <slot name="body">
         Settings options go here
       </slot>

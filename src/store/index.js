@@ -1,6 +1,11 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import settings from './settings';
+import units from './multidex/units';
+import downloadWorker from './instances/download-worker';
+
+import { Logger } from '@/modules/logger';
+const logger = new Logger({ prefix: '[STORE]' });
 
 Vue.use(Vuex);
 export const moduleInfo = Object.freeze([{
@@ -14,51 +19,53 @@ export const moduleInfo = Object.freeze([{
     type: 'multidex',
     link: '/multidex/units',
   },
-  {
-    name: 'items',
-    fullName: 'Items',
-    type: 'multidex',
-    link: '/multidex/items',
-  },
-  {
-    name: 'bursts',
-    fullName: 'Bursts',
-    type: 'multidex',
-    link: '/multidex/bursts',
-  },
-  {
-    name: 'extraSkills',
-    fullName: 'Extra Skills',
-    type: 'multidex',
-    link: '/multidex/extra-skills',
-  },
-  {
-    name: 'leaderSkills',
-    fullName: 'Leader Skills',
-    type: 'multidex',
-    link: '/multidex/leader-skills',
-  },
-  {
-    name: 'missions',
-    fullName: 'Missions',
-    type: 'multidex',
-    link: '/multidex/missions',
-  },
-  {
-    name: 'dictionary',
-    fullName: 'Dictionary',
-    type: 'multidex',
-    link: '/multidex/dictionary',
-  },
+  // {
+  //   name: 'items',
+  //   fullName: 'Items',
+  //   type: 'multidex',
+  //   link: '/multidex/items',
+  // },
+  // {
+  //   name: 'bursts',
+  //   fullName: 'Bursts',
+  //   type: 'multidex',
+  //   link: '/multidex/bursts',
+  // },
+  // {
+  //   name: 'extraSkills',
+  //   fullName: 'Extra Skills',
+  //   type: 'multidex',
+  //   link: '/multidex/extra-skills',
+  // },
+  // {
+  //   name: 'leaderSkills',
+  //   fullName: 'Leader Skills',
+  //   type: 'multidex',
+  //   link: '/multidex/leader-skills',
+  // },
+  // {
+  //   name: 'missions',
+  //   fullName: 'Missions',
+  //   type: 'multidex',
+  //   link: '/multidex/missions',
+  // },
+  // {
+  //   name: 'dictionary',
+  //   fullName: 'Dictionary',
+  //   type: 'multidex',
+  //   link: '/multidex/dictionary',
+  // },
 ]);
 
 export default new Vuex.Store({
   modules: {
     settings,
+    units,
   },
   state: {
     disableHtmlOverflow: false,
     inInitState: false,
+    updateTimes: {},
     loadingMessage: '',
   },
   mutations: {
@@ -68,15 +75,26 @@ export default new Vuex.Store({
     setLoadingMessage (state, message = '') {
       state.loadingMessage = message;
     },
+    setUpdateTimes (state, newTimes = {}) {
+      state.updateTimes = newTimes;
+    },
   },
   actions: {
     async init ({ dispatch, state, commit }) {
       commit('setInitState', true);
-      // TODO: set load state of multidex modules
+      const modules = moduleInfo.map(({ name }) => name);
+      modules.slice(1).forEach(name => {
+        commit(`${name}/setLoadState`, true);
+      });
 
       commit('setLoadingMessage', 'Initializing data');
-
-      // TODO: init multidex modules with settings
+      for (const m of modules) {
+        logger.debug('initializing', m);
+        await dispatch(`${m}/init`);
+        if (m !== 'settings') {
+          commit(`${m}/setLoadState`, true);
+        }
+      }
       await dispatch('settings/init');
 
       commit('setLoadingMessage', `Setting data to last set server (${(state.settings.activeServer || 'gl').toUpperCase()})`);
@@ -85,10 +103,36 @@ export default new Vuex.Store({
       commit('setInitState', false);
     },
     async setActiveServer ({ dispatch, commit }, server = 'gl') { // eslint-disable-line no-unused-vars
-      // TODO: set load state of multidex modules
+      const modules = moduleInfo.map(({ name }) => name);
+      modules.slice(1).forEach(name => {
+        commit(`${name}/setLoadState`, true);
+      });
 
-      // TODO: set multidex modules with settings
-      await dispatch('settings/setActiveServer', server);
+      for (const m of modules) {
+        try {
+          await dispatch(`${m}/setActiveServer`, server);
+        } catch (err) {
+          logger.error(err);
+        } finally {
+          if (m !== 'settings') {
+            commit(`${m}/setLoadState`, false);
+          }
+        }
+      }
+    },
+    async fetchUpdateTimes ({ commit }) {
+      const url = `${location.origin}${location.pathname}static/bf-data/update-stats.json`;
+      const data = await downloadWorker.postMessage('getJson', [url]);
+      moduleInfo.forEach(({ name }) => {
+        if (data[name]) {
+          Object.keys(data[name]).forEach(server => {
+            data[name][server] = new Date(data[name][server]);
+          });
+        }
+      });
+      logger.debug('update data', data);
+      commit('setUpdateTimes', data);
     },
   },
+  strict: true,
 });

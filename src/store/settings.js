@@ -4,7 +4,7 @@ import { makeWorker } from './instances/dexie-client';
 
 const settingsDb = makeWorker('settings');
 const user = 'me'; // user entry for dexie db
-const logger = new Logger({ prefix: '[SETTINGS]' });
+const logger = new Logger({ prefix: '[STORE/SETTINGS]' });
 
 function isValidServer(server) {
   return servers.includes(server);
