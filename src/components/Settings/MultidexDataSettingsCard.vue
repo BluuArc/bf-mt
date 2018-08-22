@@ -120,7 +120,7 @@
 <script>
 /* eslint-disable no-unused-vars */
 import { mapActions, mapState } from 'vuex';
-import { Logger } from '@/modules/logger';
+import { Logger } from '@/modules/Logger';
 import { servers } from '@/modules/constants';
 import { moduleInfo } from '@/store';
 import { safelyExecute } from '@/modules/utils';

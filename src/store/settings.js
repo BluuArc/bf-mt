@@ -1,5 +1,5 @@
 import { servers } from '@/modules/constants';
-import { Logger } from '@/modules/logger';
+import { Logger } from '@/modules/Logger';
 import { makeWorker } from './instances/dexie-client';
 
 const settingsDb = makeWorker('settings');

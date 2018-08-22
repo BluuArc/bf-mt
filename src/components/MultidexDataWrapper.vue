@@ -10,7 +10,7 @@
 import { mapState, mapActions } from 'vuex';
 import { moduleInfo } from '@/store';
 import { servers } from '@/modules/constants';
-import { Logger } from '@/modules/logger';
+import { Logger } from '@/modules/Logger';
 
 const logger = new Logger({ prefix: '[MD-DATA-WRAPPER]' }); // eslint-disable-line no-unused-vars
 const multidexModules = moduleInfo.filter(m => m.type === 'multidex');

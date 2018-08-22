@@ -4,7 +4,7 @@ import settings from './settings';
 import units from './multidex/units';
 import getUpdateTimes from './instances/update-data-singleton';
 
-import { Logger } from '@/modules/logger';
+import { Logger } from '@/modules/Logger';
 const logger = new Logger({ prefix: '[STORE]' });
 
 Vue.use(Vuex);

@@ -92,7 +92,7 @@
 </template>
 
 <script>
-import logger from '@/modules/logger';
+import logger from '@/modules/Logger';
 import { servers } from '@/modules/constants';
 import { mapActions, mapState } from 'vuex';
 import MultidexDataWrapper from '@/components/MultidexDataWrapper';
@@ -182,7 +182,7 @@ export default {
     };
   },
   methods: {
-    ...mapActions(['init', 'setActiveServer']),
+    ...mapActions(['init', 'setActiveServer', 'fetchUpdateTimes']),
     htmlOverflowChangeHandler () {
       const page = document.getElementsByTagName('html')[0];
       page.style.overflowY = (this.disableHtmlOverflow) ? 'hidden' : 'auto';
@@ -213,13 +213,17 @@ export default {
     dataIsLoading (newValue) {
       logger.debug('dataIsLoading changed to', newValue);
     },
+    async currentPageName () {
+      await this.fetchUpdateTimes();
+    },
   },
   async created () {
     await this.init();
   },
-  mounted () {
+  async mounted () {
     this.pageActiveServer = this.activeServer;
     this.htmlOverflowChangeHandler();
+    await this.fetchUpdateTimes();
   },
 };
 </script>

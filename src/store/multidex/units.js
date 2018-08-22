@@ -1,4 +1,4 @@
-import { Logger } from '@/modules/logger';
+import { Logger } from '@/modules/Logger';
 import { makeMultidexWorker } from '../instances/dexie-client';
 import downloadWorker from '../instances/download-worker';
 import { createState, createMutations, createActions, createGetters } from './helper';

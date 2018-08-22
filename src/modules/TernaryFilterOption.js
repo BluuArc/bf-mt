@@ -1,4 +1,4 @@
-import logger from './logger';
+import logger from './Logger';
 
 // a ternary filter option can have the truthy value, the falsy value, or both
 export default class TernaryFilterOption {
