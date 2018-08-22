@@ -1,9 +1,10 @@
 <template>
   <multidex-data-wrapper>
     <generic-settings-card
-      slot-scope="{ stateInfo, actionInfo }"
+      slot-scope="{ stateInfo, actionInfo, aggregatedInfo }"
       :disable-submission="!formHasChanged"
-      :form-reset="resetForm">
+      :form-reset="resetForm"
+      :form-submit="() => applyChanges(actionInfo)">
       <v-layout slot="title">
         <v-flex class="pb-0 d-align-self-center" xs12 sm6 md8 lg9>
           <h1 class="title">Multidex Data Settings</h1>
@@ -27,7 +28,7 @@
                   <v-btn
                     block
                     @click="toggleAllModuleReload(server, true)"
-                    :disabled="dataIsLoading">
+                    :disabled="aggregatedInfo.isLoading">
                     Reload All
                   </v-btn>
                 </v-flex>
@@ -35,7 +36,7 @@
                   <v-btn
                     block
                     @click="toggleAllModuleDelete(server, true)"
-                    :disabled="dataIsLoading">
+                    :disabled="aggregatedInfo.isLoading">
                     Delete All
                   </v-btn>
                 </v-flex>
@@ -52,7 +53,7 @@
                   <v-btn
                     block
                     @click="toggleAllServerReload(mod.name, true)"
-                    :disabled="dataIsLoading">
+                    :disabled="aggregatedInfo.isLoading">
                     Reload All
                   </v-btn>
                 </v-flex>
@@ -60,7 +61,7 @@
                   <v-btn
                     block
                     @click="toggleAllServerDelete(mod.name, true)"
-                    :disabled="dataIsLoading">
+                    :disabled="aggregatedInfo.isLoading">
                     Delete All
                   </v-btn>
                 </v-flex>
@@ -88,7 +89,7 @@
               <template slot="bottom">
                 <v-flex xs12 md6>
                   <v-btn block
-                    :disabled="dataIsLoading"
+                    :disabled="aggregatedInfo.isLoading"
                     :outline="!dataUpdate[mod.name].includes(server)"
                     @click="toggleDataUpdate(mod.name, server)">
                     <v-icon>cloud_download</v-icon>
@@ -96,7 +97,7 @@
                 </v-flex>
                 <v-flex xs12 md6>
                   <v-btn block
-                    :disabled="dataIsLoading"
+                    :disabled="aggregatedInfo.isLoading"
                     :outline="!dataDelete[mod.name].includes(server)"
                     @click="toggleDataDelete(mod.name, server)">
                     <v-icon>cloud_off</v-icon>
@@ -104,6 +105,11 @@
                 </v-flex>
               </template>
             </dual-row-cell>
+          </v-flex>
+          <v-flex
+            v-show="(stateInfo[mod.name] && stateInfo[mod.name].isLoading)"
+            xs9>
+            <loading-indicator :loadingMessage="stateInfo[mod.name].loadingMessage"/>
           </v-flex>
         </v-layout>
       </v-container>
@@ -117,9 +123,11 @@ import { mapActions, mapState } from 'vuex';
 import { Logger } from '@/modules/logger';
 import { servers } from '@/modules/constants';
 import { moduleInfo } from '@/store';
+import { safelyExecute } from '@/modules/utils';
 import GenericSettingsCard from './GenericSettingsCard';
 import DualRowCell from './DualRowCell';
 import MultidexDataWrapper from '@/components/MultidexDataWrapper';
+import LoadingIndicator from '@/components/LoadingIndicator';
 
 const logger = new Logger({ prefix: '[MULTIDEX-DATA-SETTINGS]' });
 
@@ -129,18 +137,14 @@ export default {
     GenericSettingsCard,
     DualRowCell,
     MultidexDataWrapper,
+    LoadingIndicator,
   },
   computed: {
     multidexModules: () => multidexModules,
     formHasChanged () {
-      logger.warn('using mock form has changed');
-      return false;
+      return multidexModules.some(({ name }) => this.dataUpdate[name].length > 0 || this.dataDelete[name].length > 0);
     },
     servers: () => servers,
-    dataIsLoading () {
-      logger.warn('using mock data is loading');
-      return false;
-    },
   },
   data () {
     const dataUpdate = {};
@@ -208,6 +212,23 @@ export default {
         this.dataUpdate[name] = [];
         this.dataDelete[name] = [];
       });
+    },
+    async applyChanges (actionInfo) {
+      for (const type of Object.keys(this.dataDelete)) {
+        const serversToDeleteData = this.dataDelete[type];
+        if (serversToDeleteData.length > 0 && actionInfo[type] && actionInfo[type].delete) {
+          await safelyExecute(() => actionInfo[type].delete(serversToDeleteData), (err) => logger.error(type, err));
+        }
+      }
+
+      for (const type of Object.keys(this.dataUpdate)) {
+        const serversToUpdateData = this.dataUpdate[type];
+        if (serversToUpdateData.length > 0 && actionInfo[type] && actionInfo[type].update) {
+          await safelyExecute(() => actionInfo[type].update(serversToUpdateData), (err) => logger.error(type, err));
+        }
+      }
+
+      this.resetForm();
     },
   },
   watch: {

@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import settings from './settings';
 import units from './multidex/units';
-import downloadWorker from './instances/download-worker';
+import getUpdateTimes from './instances/update-data-singleton';
 
 import { Logger } from '@/modules/logger';
 const logger = new Logger({ prefix: '[STORE]' });
@@ -121,17 +121,8 @@ export default new Vuex.Store({
       }
     },
     async fetchUpdateTimes ({ commit }) {
-      const url = `${location.origin}${location.pathname}static/bf-data/update-stats.json`;
-      const data = await downloadWorker.postMessage('getJson', [url]);
-      moduleInfo.forEach(({ name }) => {
-        if (data[name]) {
-          Object.keys(data[name]).forEach(server => {
-            data[name][server] = new Date(data[name][server]);
-          });
-        }
-      });
-      logger.debug('update data', data);
-      commit('setUpdateTimes', data);
+      const updateTimes = await getUpdateTimes();
+      commit('setUpdateTimes', updateTimes);
     },
   },
   strict: true,

@@ -1,4 +1,5 @@
 import { servers } from '@/modules/constants';
+import getUpdateTimes from '@/store/instances/update-data-singleton';
 const defaultStartDate = new Date('Jan 01 1969');
 
 export const createState = () => {
@@ -31,7 +32,7 @@ export const createGetters = (multidexModuleName = 'units') => {
 };
 
 export const isValidServer = server => servers.includes(server);
-export const createMutations = () => {
+export const createMutations = (logger) => { // eslint-disable-line no-unused-vars
   return {
     setActiveServer (state, { data = {}, server = 'gl', commitData = true, needsReload = false }) {
       if (!isValidServer(server)) {
@@ -70,6 +71,7 @@ export const createMutations = () => {
       state.updateTimes[server] = updateTime;
     },
     setLoadingMessage (state, message = '') {
+      // logger.debug('LOADING MESSAGE:', message);
       state.loadingMessage = message;
     },
   };
@@ -113,17 +115,9 @@ export const createActions = (worker, downloadWorker, logger, dbEntryName = 'uni
         commit('setLoadState', false);
       }
     },
-    async fetchUpdateTimes ({ commit, state }) {
-      const url = `${location.origin}${location.pathname}static/bf-data/update-stats.json`;
-      const data = await downloadWorker.postMessage('getJson', [url]);
-      logger.debug('update data', data);
-      if (data[dbEntryName]) {
-        Object.keys(data[dbEntryName]).forEach(server => {
-          data[dbEntryName][server] = new Date(data[dbEntryName][server]);
-        });
-        return data[dbEntryName];
-      }
-      return {};
+    async fetchUpdateTimes () {
+      const data = await getUpdateTimes();
+      return data[dbEntryName] || {};
     },
     async saveData ({ commit, dispatch, state }, { data = {}, server = 'gl', cacheTime = new Date() }) {
       const updateTimes = await dispatch('fetchUpdateTimes');

@@ -10,7 +10,7 @@ const dbWorker = makeMultidexWorker('units');
 export default {
   namespaced: true,
   state: createState(),
-  mutations: createMutations(),
+  mutations: createMutations(logger),
   getters: {
     ...createGetters('units'),
     getImageUrls: state => id => {

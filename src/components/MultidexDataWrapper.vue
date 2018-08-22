@@ -1,6 +1,6 @@
 <template>
   <div>
-    <slot name="default" :stateInfo="stateInfo" :actionInfo="actionInfo">
+    <slot name="default" :stateInfo="stateInfo" :actionInfo="actionInfo" :aggregatedInfo="aggregatedInfo">
       Place your markup here to receive scoped data.
     </slot>
   </div>
@@ -12,7 +12,7 @@ import { moduleInfo } from '@/store';
 import { servers } from '@/modules/constants';
 import { Logger } from '@/modules/logger';
 
-const logger = new Logger({ prefix: '[MD-DATA-WRAPPER]' });
+const logger = new Logger({ prefix: '[MD-DATA-WRAPPER]' }); // eslint-disable-line no-unused-vars
 const multidexModules = moduleInfo.filter(m => m.type === 'multidex');
 export default {
   computed: {
@@ -61,6 +61,13 @@ export default {
       });
       return info;
     },
+    aggregatedInfo () {
+      const isLoading = Object.values(this.stateInfo).reduce((acc, val) => acc || val.isLoading, false);
+      const loadingMessage = multidexModules.filter(m => this.stateInfo[m.name].loadingMessage)
+        .map(m => `[${m.fullName}] ${this.stateInfo[m.name].loadingMessage}`)
+        .reduce((acc, val) => acc || val, '');
+      return { isLoading, loadingMessage };
+    },
   },
   methods: {
     ...(() => {
@@ -79,7 +86,7 @@ export default {
     })(),
     hasUpdates (moduleStateInfo, server, moduleName) {
       const updateTimes = this.updateTimes;
-      logger.debug(moduleStateInfo.updateTimes, server, moduleName, updateTimes);
+      // logger.debug(moduleStateInfo.updateTimes, server, moduleName, updateTimes);
       return !!(
         moduleStateInfo.updateTimes && updateTimes[moduleName] &&
         moduleStateInfo.updateTimes[server] && updateTimes[moduleName][server] &&
