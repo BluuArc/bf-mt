@@ -1,6 +1,6 @@
 <template>
   <multidex-data-wrapper>
-    <v-app :dark="!lightMode" slot-scope="{ stateInfo, aggregatedInfo }">
+    <v-app :dark="!lightMode" slot-scope="{ stateInfo, loadingState }">
       <v-navigation-drawer
         persistent
         v-model="showDrawer"
@@ -81,9 +81,9 @@
           <router-view/>
         </v-slide-y-transition>
       </v-content>
-      <!-- HACK: stateInfo and aggregatedInfo is computed by wrapper, saved to app state here on page update -->
+      <!-- HACK: stateInfo is computed by wrapper, saved to app state here on page update -->
       <span style="display: none;">
-        {{ setDataIsLoading(aggregatedInfo.isLoading) }}
+        {{ setDataIsLoading(loadingState) }}
         {{ calculateNewSettingsUpdateCount(stateInfo) }}
       </span>
       <!-- <site-trackers/> -->
@@ -107,10 +107,6 @@ export default {
   computed: {
     ...mapState('settings', ['lightMode', 'activeServer']),
     ...mapState(['disableHtmlOverflow', 'updateTimes']),
-    loadingStates () {
-      logger.warn('Using mock loading states');
-      return {};
-    },
     currentPage () {
       return this.$route.path;
     },

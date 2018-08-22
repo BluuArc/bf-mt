@@ -1,72 +1,34 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import settings from './settings';
-import units from './multidex/units';
+import debounce from 'lodash/debounce';
 import getUpdateTimes from './instances/update-data-singleton';
+import settings from './settings';
+import multidexModules, { moduleInfo as multidexModuleInfo } from './multidex';
 
 import { Logger } from '@/modules/Logger';
 const logger = new Logger({ prefix: '[STORE]' });
 
 Vue.use(Vuex);
-export const moduleInfo = Object.freeze([{
+export const moduleInfo = Object.freeze([
+  {
     name: 'settings',
     fullName: 'Settings',
     link: '/settings',
   },
-  {
-    name: 'units',
-    fullName: 'Units',
-    type: 'multidex',
-    link: '/multidex/units',
-  },
-  // {
-  //   name: 'items',
-  //   fullName: 'Items',
-  //   type: 'multidex',
-  //   link: '/multidex/items',
-  // },
-  // {
-  //   name: 'bursts',
-  //   fullName: 'Bursts',
-  //   type: 'multidex',
-  //   link: '/multidex/bursts',
-  // },
-  // {
-  //   name: 'extraSkills',
-  //   fullName: 'Extra Skills',
-  //   type: 'multidex',
-  //   link: '/multidex/extra-skills',
-  // },
-  // {
-  //   name: 'leaderSkills',
-  //   fullName: 'Leader Skills',
-  //   type: 'multidex',
-  //   link: '/multidex/leader-skills',
-  // },
-  // {
-  //   name: 'missions',
-  //   fullName: 'Missions',
-  //   type: 'multidex',
-  //   link: '/multidex/missions',
-  // },
-  // {
-  //   name: 'dictionary',
-  //   fullName: 'Dictionary',
-  //   type: 'multidex',
-  //   link: '/multidex/dictionary',
-  // },
+  ...multidexModuleInfo,
 ]);
 
 export default new Vuex.Store({
   modules: {
     settings,
-    units,
+    ...multidexModules,
   },
   state: {
     disableHtmlOverflow: false,
     inInitState: false,
     updateTimes: {},
     loadingMessage: '',
+    loadingState: false, // changed mostly by MultidexDataWrapper, accessed by all
   },
   mutations: {
     setInitState (state, newState = false) {
@@ -78,8 +40,17 @@ export default new Vuex.Store({
     setUpdateTimes (state, newTimes = {}) {
       state.updateTimes = newTimes;
     },
+    setLoadingState (state, value) {
+      state.loadingState = !!value;
+    },
   },
   actions: {
+    setLoadingStateDebounced: debounce(function({ commit, state }, valueGetter) {
+      const newValue = !!valueGetter();
+      if (state.loadingState !== newValue) {
+        commit('setLoadingState', newValue);
+      }
+    }, 500),
     async init ({ dispatch, state, commit }) {
       commit('setInitState', true);
       const modules = moduleInfo.map(({ name }) => name);
@@ -120,8 +91,8 @@ export default new Vuex.Store({
         }
       }
     },
-    async fetchUpdateTimes ({ commit }) {
-      const updateTimes = await getUpdateTimes();
+    async fetchUpdateTimes ({ commit }, forceRefresh) {
+      const updateTimes = await getUpdateTimes(forceRefresh);
       commit('setUpdateTimes', updateTimes);
     },
   },

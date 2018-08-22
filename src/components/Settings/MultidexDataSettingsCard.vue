@@ -1,7 +1,7 @@
 <template>
   <multidex-data-wrapper>
     <generic-settings-card
-      slot-scope="{ stateInfo, actionInfo, aggregatedInfo }"
+      slot-scope="{ stateInfo, actionInfo, loadingState }"
       :disable-submission="!formHasChanged"
       :form-reset="resetForm"
       :form-submit="() => applyChanges(actionInfo)">
@@ -28,7 +28,7 @@
                   <v-btn
                     block
                     @click="toggleAllModuleReload(server, true)"
-                    :disabled="aggregatedInfo.isLoading">
+                    :disabled="loadingState">
                     Reload All
                   </v-btn>
                 </v-flex>
@@ -36,7 +36,7 @@
                   <v-btn
                     block
                     @click="toggleAllModuleDelete(server, true)"
-                    :disabled="aggregatedInfo.isLoading">
+                    :disabled="loadingState">
                     Delete All
                   </v-btn>
                 </v-flex>
@@ -53,7 +53,7 @@
                   <v-btn
                     block
                     @click="toggleAllServerReload(mod.name, true)"
-                    :disabled="aggregatedInfo.isLoading">
+                    :disabled="loadingState">
                     Reload All
                   </v-btn>
                 </v-flex>
@@ -61,7 +61,7 @@
                   <v-btn
                     block
                     @click="toggleAllServerDelete(mod.name, true)"
-                    :disabled="aggregatedInfo.isLoading">
+                    :disabled="loadingState">
                     Delete All
                   </v-btn>
                 </v-flex>
@@ -89,7 +89,7 @@
               <template slot="bottom">
                 <v-flex xs12 md6>
                   <v-btn block
-                    :disabled="aggregatedInfo.isLoading"
+                    :disabled="loadingState"
                     :outline="!dataUpdate[mod.name].includes(server)"
                     @click="toggleDataUpdate(mod.name, server)">
                     <v-icon>cloud_download</v-icon>
@@ -97,7 +97,7 @@
                 </v-flex>
                 <v-flex xs12 md6>
                   <v-btn block
-                    :disabled="aggregatedInfo.isLoading"
+                    :disabled="loadingState"
                     :outline="!dataDelete[mod.name].includes(server)"
                     @click="toggleDataDelete(mod.name, server)">
                     <v-icon>cloud_off</v-icon>
@@ -164,7 +164,7 @@ export default {
     ...mapActions(['fetchUpdateTimes']),
     async checkForUpdates () {
       this.checkingForUpdates = true;
-      await this.fetchUpdateTimes();
+      await this.fetchUpdateTimes(true);
       this.checkingForUpdates = false;
     },
     toggleDataUpdate (moduleName, server, forcedValue) {

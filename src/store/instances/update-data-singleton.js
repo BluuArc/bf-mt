@@ -22,6 +22,6 @@ const updateDataSingleton = new CacheSingleton({
   defaultValue: {},
 });
 
-export default function getUpdateTimes () {
-  return updateDataSingleton.getValue();
+export default function getUpdateTimes (forceRefresh) {
+  return updateDataSingleton.getValue(forceRefresh);
 }

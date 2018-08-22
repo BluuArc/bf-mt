@@ -14,10 +14,11 @@ export default class CacheSingleton {
     this._getter = () => Promise.resolve(getter(this._logger));
   }
 
-  async getValue () {
+  async getValue (forceRefresh) {
     const currentDate = new Date();
     const diff = currentDate - this._updateTime;
-    if (diff > this._lifetime) {
+    if (diff > this._lifetime || !!forceRefresh) {
+      this._logger.debug('refreshing cache');
       try {
         this._value = await this._getter();
         this._updateTime = currentDate;

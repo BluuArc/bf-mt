@@ -5,57 +5,39 @@ import { createState, createMutations, createActions, createGetters } from './he
 // import SWorker from '@/assets/sww.min';
 // import union from 'lodash/union';
 
-const logger = new Logger({ prefix: '[STORE/UNITS]' });
-const dbWorker = makeMultidexWorker('units');
+const logger = new Logger({ prefix: '[STORE/BURSTS]' });
+const dbWorker = makeMultidexWorker('bursts');
 export default {
   namespaced: true,
   state: createState(),
   mutations: createMutations(logger),
   getters: {
-    ...createGetters('units'),
-    getImageUrls: state => id => {
-      const cdnUrls = {
-        eu: 'http://static-bravefrontier.gumi-europe.net/content',
-        gl: 'http://dlc.bfglobal.gumi.sg/content',
-        jp: 'http://cdn.android.brave.a-lim.jp',
-      };
-
-      const baseUrl = `${cdnUrls[state.activeServer]}/unit/img`;
-
-      return {
-        ills_full: `${baseUrl}/unit_ills_full_${id}.png`,
-        ills_thum: `${baseUrl}/unit_ills_thum_${id}.png`,
-        anime: `${baseUrl}/unit_thum_${id}.png`,
-        ills_battle: `${baseUrl}/unit_ills_battle_${id}.png`,
-      };
-    },
+    ...createGetters('bursts'),
   },
   actions: {
-    ...createActions(dbWorker, downloadWorker, logger, 'units'),
+    ...createActions(dbWorker, downloadWorker, logger, 'bursts'),
     async updateData ({ commit, dispatch }, servers = []) {
       commit('setLoadState', true);
       const baseUrl = `${location.origin}${location.pathname}static/bf-data`;
       for (const server of servers) {
         const logPrefix = `Downloading data for ${server.toUpperCase()} server`;
         commit('setLoadingMessage', logPrefix);
-        const tempLogger = new Logger({ prefix: `[STORE/UNITS-${server.toUpperCase()}]` });
+        const tempLogger = new Logger({ prefix: `[STORE/BURSTS-${server.toUpperCase()}]` });
         try {
           const pageDb = {};
           const loadPromises = [];
           let countFinished = 0;
-          for (let i = 1; i <= 6; ++i) {
-            const url = `${baseUrl}/units-${server}-${i}.json`;
+          for (let i = 1; i <= 9; ++i) {
+            const url = `${baseUrl}/bbs-${server}-${i}.json`;
             loadPromises.push(downloadWorker
               .postMessage('getJson', [url])
               .then(tempData => {
                 Object.keys(tempData)
                   .forEach(id => {
-                    if (+id !== 1) {
-                      pageDb[id] = tempData[id];
-                    }
+                    pageDb[id] = tempData[id];
                   });
-                tempLogger.debug('finished getting', url, 6 - (++countFinished), 'files remaining');
-                commit('setLoadingMessage', `${logPrefix} (${6 - countFinished} files remaining)`);
+                tempLogger.debug('finished getting', url, 10 - (++countFinished), 'files remaining');
+                commit('setLoadingMessage', `${logPrefix} (${10 - countFinished} files remaining)`);
               }));
           }
 

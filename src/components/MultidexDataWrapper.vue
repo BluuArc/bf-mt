@@ -1,13 +1,17 @@
 <template>
   <div>
-    <slot name="default" :stateInfo="stateInfo" :actionInfo="actionInfo" :aggregatedInfo="aggregatedInfo">
+    <slot name="default"
+      :stateInfo="stateInfo"
+      :actionInfo="actionInfo"
+      :aggregatedInfo="aggregatedInfo"
+      :loadingState="loadingState">
       Place your markup here to receive scoped data.
     </slot>
   </div>
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
+import { mapState, mapActions, mapMutations } from 'vuex';
 import { moduleInfo } from '@/store';
 import { servers } from '@/modules/constants';
 import { Logger } from '@/modules/Logger';
@@ -16,7 +20,7 @@ const logger = new Logger({ prefix: '[MD-DATA-WRAPPER]' }); // eslint-disable-li
 const multidexModules = moduleInfo.filter(m => m.type === 'multidex');
 export default {
   computed: {
-    ...mapState(['updateTimes']),
+    ...mapState(['updateTimes', 'loadingState']),
     ...(() => {
       // get state for each module
       let fullStateMapping = {};
@@ -69,6 +73,14 @@ export default {
       return { isLoading, loadingMessage };
     },
   },
+  watch: {
+    aggregatedInfo: {
+      deep: true,
+      handler () {
+        this.setLoadingStateInVuex();
+      },
+    },
+  },
   methods: {
     ...(() => {
       // get actions for each module
@@ -84,6 +96,8 @@ export default {
       });
       return result;
     })(),
+    ...mapMutations(['setLoadingState']),
+    ...mapActions(['setLoadingStateDebounced']),
     hasUpdates (moduleStateInfo, server, moduleName) {
       const updateTimes = this.updateTimes;
       // logger.debug(moduleStateInfo.updateTimes, server, moduleName, updateTimes);
@@ -101,6 +115,16 @@ export default {
           : false;
       });
       return entry;
+    },
+    setLoadingStateInVuex () {
+      // keep on true as long as possible
+      if (this.aggregatedInfo.isLoading) {
+        if (!this.loadingState) {
+          this.setLoadingState(true);
+        }
+      } else {
+        this.setLoadingStateDebounced(() => this.aggregatedInfo.isLoading);
+      }
     },
   },
 };
