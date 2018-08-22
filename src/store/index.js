@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import debounce from 'lodash/debounce';
+import { delay } from '@/modules/utils';
 import getUpdateTimes from './instances/update-data-singleton';
 import settings from './settings';
 import multidexModules, { moduleInfo as multidexModuleInfo } from './multidex';
@@ -45,9 +46,10 @@ export default new Vuex.Store({
     },
   },
   actions: {
-    setLoadingStateDebounced: debounce(function({ commit, state }, valueGetter) {
+    setLoadingStateDebounced: debounce(async function({ commit, state }, valueGetter) {
       const newValue = !!valueGetter();
       if (state.loadingState !== newValue) {
+        await delay(0);
         commit('setLoadingState', newValue);
       }
     }, 500),
