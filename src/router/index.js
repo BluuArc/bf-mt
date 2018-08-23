@@ -6,7 +6,9 @@ import Home from '@/views/Home.vue';
 import Settings from '@/views/Settings.vue';
 import News from '@/views/News.vue';
 
-Vue.use(Router)
+import multidexRoutes from './multidex-routes';
+
+Vue.use(Router);
 
 export default new Router({
   routes: [
@@ -33,6 +35,7 @@ export default new Router({
       name: 'News & Events',
       component: News,
     },
+    ...multidexRoutes,
     {
      path: '/not-found',
      name: 'Not Found',
