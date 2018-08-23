@@ -1,4 +1,36 @@
 {
+  "MST_LEADERSKILLS_801290_NAME": {
+    "en": "Boundless Love",
+    "es": "Boundless Love",
+    "id": "Cinta Tak Terbatas",
+    "pt": "Boundless Love",
+    "th": "บาวด์เลส เลิฟ",
+    "vi": "Boundless Love"
+  },
+  "MST_LEADERSKILLS_801291_DESCRIPTION": {
+    "en": "40% boost to max HP, boosts Atk, Def, Rec relative to remaining HP & 10% reduction to Fire, Water, Earth, Thunder elemental damage",
+    "es": "40% boost to max HP, boosts Atk, Def, Rec relative to remaining HP & 10% reduction to Fire, Water, Earth, Thunder elemental damage",
+    "id": "40% ekstra HP maks, menambah Serang, Tahan, Pulih sesuai sisa HP & 10% pengurangan kerusakan elemen Api, Air, Bumi, Guntur",
+    "pt": "40% boost to max HP, boosts Atk, Def, Rec relative to remaining HP & 10% reduction to Fire, Water, Earth, Thunder elemental damage",
+    "th": "40% เพิ่มค่า HP สูงสุด, เพิ่ม โจมตี, ป้องกัน, ฟื้นฟู สัมพันธ์กับ HP ที่เหลืออยู่ และ 10% ลดความเสียหายธาตุ ไฟ, น้ำ, ดิน, สายฟ้า",
+    "vi": "40% boost to max HP, boosts Atk, Def, Rec relative to remaining HP & 10% reduction to Fire, Water, Earth, Thunder elemental damage"
+  },
+  "MST_LEADERSKILLS_801291_NAME": {
+    "en": "Child of the Sun",
+    "es": "Child of the Sun",
+    "id": "Anak Matahari",
+    "pt": "Child of the Sun",
+    "th": "ชิลด์ ออฟ เดอะ ซัน",
+    "vi": "Child of the Sun"
+  },
+  "MST_LEADERSKILLS_801292_DESCRIPTION": {
+    "en": "60% boost to max HP, boosts Atk, Def, Rec relative to remaining HP, 15% reduction to Fire, Water, Earth, Thunder elemental damage & probable resistance against 1 KO attack",
+    "es": "60% boost to max HP, boosts Atk, Def, Rec relative to remaining HP, 15% reduction to Fire, Water, Earth, Thunder elemental damage & probable resistance against 1 KO attack",
+    "id": "60% ekstra HP maks, menambah Serang, Tahan, Pulih sesuai sisa HP, 15% pengurangan kerusakan elemen Api, Air, Bumi, Guntur & kans tahan atas 1 serangan KO",
+    "pt": "60% boost to max HP, boosts Atk, Def, Rec relative to remaining HP, 15% reduction to Fire, Water, Earth, Thunder elemental damage & probable resistance against 1 KO attack",
+    "th": "60% เพิ่มค่า HP สูงสุด, เพิ่ม โจมตี, ป้องกัน, ฟื้นฟู สัมพันธ์กับ HP ที่เหลืออยู่, 15% ลดความเสียหายธาตุ ไฟ, น้ำ, ดิน, สายฟ้า และ อาจจะ ต้านทาน 1 การโจมตีน็อคเอ๊าท์",
+    "vi": "60% boost to max HP, boosts Atk, Def, Rec relative to remaining HP, 15% reduction to Fire, Water, Earth, Thunder elemental damage & probable resistance against 1 KO attack"
+  },
   "MST_LEADERSKILLS_801292_NAME": {
     "en": "Heart of the Phoenix",
     "es": "Heart of the Phoenix",
@@ -3382,6 +3414,38 @@
     "pt": "Curse Magic Mastery",
     "th": "Curse Magic Mastery",
     "vi": "Curse Magic Mastery"
+  },
+  "MST_LEADERSKILLS_860557_DESCRIPTION": {
+    "en": "60% boost to Atk, max HP, 100% boost to Def, Rec of Dark types, 80% boost to Atk, Def for first 3 turns, 10% additional damage reduction & damage taken hugely boosts BB gauge",
+    "es": "60% boost to Atk, max HP, 100% boost to Def, Rec of Dark types, 80% boost to Atk, Def for first 3 turns, 10% additional damage reduction & damage taken hugely boosts BB gauge",
+    "id": "60% boost to Atk, max HP, 100% boost to Def, Rec of Dark types, 80% boost to Atk, Def for first 3 turns, 10% additional damage reduction & damage taken hugely boosts BB gauge",
+    "pt": "60% boost to Atk, max HP, 100% boost to Def, Rec of Dark types, 80% boost to Atk, Def for first 3 turns, 10% additional damage reduction & damage taken hugely boosts BB gauge",
+    "th": "60% boost to Atk, max HP, 100% boost to Def, Rec of Dark types, 80% boost to Atk, Def for first 3 turns, 10% additional damage reduction & damage taken hugely boosts BB gauge",
+    "vi": "60% boost to Atk, max HP, 100% boost to Def, Rec of Dark types, 80% boost to Atk, Def for first 3 turns, 10% additional damage reduction & damage taken hugely boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_860557_NAME": {
+    "en": "War's Handmaiden",
+    "es": "War's Handmaiden",
+    "id": "War's Handmaiden",
+    "pt": "War's Handmaiden",
+    "th": "War's Handmaiden",
+    "vi": "War's Handmaiden"
+  },
+  "MST_LEADERSKILLS_860558_DESCRIPTION": {
+    "en": "80% boost to Atk, max HP, 120% boost to Def, Rec of Dark types, 100% boost to Atk, Def for first 3 turns, 15% additional damage reduction & damage taken hugely boosts BB gauge",
+    "es": "80% boost to Atk, max HP, 120% boost to Def, Rec of Dark types, 100% boost to Atk, Def for first 3 turns, 15% additional damage reduction & damage taken hugely boosts BB gauge",
+    "id": "80% boost to Atk, max HP, 120% boost to Def, Rec of Dark types, 100% boost to Atk, Def for first 3 turns, 15% additional damage reduction & damage taken hugely boosts BB gauge",
+    "pt": "80% boost to Atk, max HP, 120% boost to Def, Rec of Dark types, 100% boost to Atk, Def for first 3 turns, 15% additional damage reduction & damage taken hugely boosts BB gauge",
+    "th": "80% boost to Atk, max HP, 120% boost to Def, Rec of Dark types, 100% boost to Atk, Def for first 3 turns, 15% additional damage reduction & damage taken hugely boosts BB gauge",
+    "vi": "80% boost to Atk, max HP, 120% boost to Def, Rec of Dark types, 100% boost to Atk, Def for first 3 turns, 15% additional damage reduction & damage taken hugely boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_860558_NAME": {
+    "en": "Black Devil Prodigy",
+    "es": "Black Devil Prodigy",
+    "id": "Black Devil Prodigy",
+    "pt": "Black Devil Prodigy",
+    "th": "Black Devil Prodigy",
+    "vi": "Black Devil Prodigy"
   },
   "MST_LEADERSKILLS_860607_DESCRIPTION": {
     "en": "60% boost to all parameters of Light, Dark, Fire types, negates elemental damage, damage taken considerably boosts BB gauge & considerably reduces BB gauge consumed during BB",
@@ -86654,21 +86718,5 @@
     "pt": "Demon Champion Raaga",
     "th": "เดม่อน แชมป์เปี้ยน ราอากะ",
     "vi": "Demon Champion Raaga"
-  },
-  "MST_MONSTERS_57150_NAME": {
-    "en": "Ultra Blade Aem",
-    "es": "Aem Ultrahojas",
-    "id": "Bilah Ultra Aem",
-    "pt": "Aem Lâmina Ultra",
-    "th": "อัลตรา เบลด เอม",
-    "vi": "Ultra Blade Aem"
-  },
-  "MST_MONSTERS_57151_NAME": {
-    "en": "Ultra Blade Aem",
-    "es": "Aem Ultrahojas",
-    "id": "Bilah Ultra Aem",
-    "pt": "Aem Lâmina Ultra",
-    "th": "อัลตรา เบลด เอม",
-    "vi": "Ultra Blade Aem"
   }
 }

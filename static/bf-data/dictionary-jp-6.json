@@ -1,100 +1,4 @@
 {
-  "MST_SKILLS_2830287_DESCRIPTION": {
-    "en": "19 combo massive Earth attack on all foes, enormously boosts Atk relative to Def for 3 turns, raises normal hit amount for 3 turns & hugely boosts max HP",
-    "es": "19 combo massive Earth attack on all foes, enormously boosts Atk relative to Def for 3 turns, raises normal hit amount for 3 turns & hugely boosts max HP",
-    "id": "19 kombo serangan Bumi masif ke semua musuh, 3 giliran: ekstra jumbo Serang sesuai Tahan, menaikkan pukulan normal, amat menambah HP maks",
-    "pt": "19 combo massive Earth attack on all foes, enormously boosts Atk relative to Def for 3 turns, raises normal hit amount for 3 turns & hugely boosts max HP",
-    "th": "19 คอมโบ โจมตีธาตุดินรุนแรงมหาศาล ใส่ศัตรูทั้งหมด, เพิ่มค่ามหาศาลให้ โจมตี สัมพันธ์กับ ป้องกัน นาน 3 เทิร์น, เพิ่มปริมาณการโจมตีธรรมดา นาน 3 เทิร์น และ เพิ่มค่าอย่างสูงให้ HP สูงสุด",
-    "vi": "19 combo massive Earth attack on all foes, enormously boosts Atk relative to Def for 3 turns, raises normal hit amount for 3 turns & hugely boosts max HP"
-  },
-  "MST_SKILLS_2830287_NAME": {
-    "en": "Heaven-Breaking Drill",
-    "es": "Heaven-Breaking Drill",
-    "id": "Bor Pemecah Surga",
-    "pt": "Heaven-Breaking Drill",
-    "th": "เฮฟเว่น-เบรคกิ้ง ดริล",
-    "vi": "Heaven-Breaking Drill"
-  },
-  "MST_SKILLS_2830288_DESCRIPTION": {
-    "en": "22 combo massive Earth attack on all foes, enormously boosts Atk relative to Def for 3 turns, enormously boosts OD gauge fill rate at turn's end for 3 turns, hugely raises normal hit amount for 3 turns & hugely boosts max HP",
-    "es": "22 combo massive Earth attack on all foes, enormously boosts Atk relative to Def for 3 turns, enormously boosts OD gauge fill rate at turn's end for 3 turns, hugely raises normal hit amount for 3 turns & hugely boosts max HP",
-    "id": "22 kombo serangan Bumi masif ke semua musuh, 3 giliran: ekstra jumbo Serang sesuai Tahan dan laju pengisian meteran OD di akhir giliran, amat menaikkan pukulan normal dan HP maks",
-    "pt": "22 combo massive Earth attack on all foes, enormously boosts Atk relative to Def for 3 turns, enormously boosts OD gauge fill rate at turn's end for 3 turns, hugely raises normal hit amount for 3 turns & hugely boosts max HP",
-    "th": "22 คอมโบ โจมตีธาตุดินรุนแรงมหาศาล ใส่ศัตรูทั้งหมด, เพิ่มค่ามหาศาลให้ โจมตี สัมพันธ์กับ ป้องกัน นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ อัตราเติมเกจ OD เมื่อตอนจบเทิร์น นาน 3 เทิร์น,เพิ่มปริมาณการโจมตีธรรมดาอย่างสูง นาน 3 เทิร์น และ เพิ่มค่าอย่างสูงให้ HP สูงสุด",
-    "vi": "22 combo massive Earth attack on all foes, enormously boosts Atk relative to Def for 3 turns, enormously boosts OD gauge fill rate at turn's end for 3 turns, hugely raises normal hit amount for 3 turns & hugely boosts max HP"
-  },
-  "MST_SKILLS_2830288_NAME": {
-    "en": "Universe-Shattering Drill",
-    "es": "Universe-Shattering Drill",
-    "id": "Bor Penghancur Semesta",
-    "pt": "Universe-Shattering Drill",
-    "th": "ยูนิเวิร์ส-แชตเทอริ่ง ดริล",
-    "vi": "Universe-Shattering Drill"
-  },
-  "MST_SKILLS_2830297_DESCRIPTION": {
-    "en": "22 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk and critical hit rate for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & 3 turn enormous Atk, Def reduction",
-    "es": "22 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk and critical hit rate for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & 3 turn enormous Atk, Def reduction",
-    "id": "22 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk and critical hit rate for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & 3 turn enormous Atk, Def reduction",
-    "pt": "22 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk and critical hit rate for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & 3 turn enormous Atk, Def reduction",
-    "th": "22 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk and critical hit rate for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & 3 turn enormous Atk, Def reduction",
-    "vi": "22 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk and critical hit rate for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & 3 turn enormous Atk, Def reduction"
-  },
-  "MST_SKILLS_2830297_NAME": {
-    "en": "Hanami Hymn",
-    "es": "Hanami Hymn",
-    "id": "Hanami Hymn",
-    "pt": "Hanami Hymn",
-    "th": "Hanami Hymn",
-    "vi": "Hanami Hymn"
-  },
-  "MST_SKILLS_2830298_DESCRIPTION": {
-    "en": "24 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk and critical hit rate for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts Earth elemental damage for 3 turns, 3 turn enormous Atk, Def reduction & activates BB/SBB/UBB twice for 1 turn",
-    "es": "24 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk and critical hit rate for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts Earth elemental damage for 3 turns, 3 turn enormous Atk, Def reduction & activates BB/SBB/UBB twice for 1 turn",
-    "id": "24 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk and critical hit rate for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts Earth elemental damage for 3 turns, 3 turn enormous Atk, Def reduction & activates BB/SBB/UBB twice for 1 turn",
-    "pt": "24 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk and critical hit rate for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts Earth elemental damage for 3 turns, 3 turn enormous Atk, Def reduction & activates BB/SBB/UBB twice for 1 turn",
-    "th": "24 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk and critical hit rate for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts Earth elemental damage for 3 turns, 3 turn enormous Atk, Def reduction & activates BB/SBB/UBB twice for 1 turn",
-    "vi": "24 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk and critical hit rate for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts Earth elemental damage for 3 turns, 3 turn enormous Atk, Def reduction & activates BB/SBB/UBB twice for 1 turn"
-  },
-  "MST_SKILLS_2830298_NAME": {
-    "en": "Raygun Aria",
-    "es": "Raygun Aria",
-    "id": "Raygun Aria",
-    "pt": "Raygun Aria",
-    "th": "Raygun Aria",
-    "vi": "Raygun Aria"
-  },
-  "MST_SKILLS_2830317_DESCRIPTION": {
-    "en": "40 combo massive Earth attack on all foes, boosts Spark damage and enemies' Spark vulnerability for 3 turns & raises normal hit amount for 3 turns",
-    "es": "40 combo massive Earth attack on all foes, boosts Spark damage and enemies' Spark vulnerability for 3 turns & raises normal hit amount for 3 turns",
-    "id": "40 kombo serangan Bumi kuat ke semua musuh, 3 giliran menambah: kerusakan Percikan dan kelemahan musuh akan Percikan & jumlah pukulan normal",
-    "pt": "40 combo massive Earth attack on all foes, boosts Spark damage and enemies' Spark vulnerability for 3 turns & raises normal hit amount for 3 turns",
-    "th": "40 คอมโบ โจมตีด้วยธาตุดินอย่างรุนแรงใส่ศัตรูทั้งหมด, ศัตรูแพ้ทางติดสปาร์ค 3 เทิร์น, เพิ่มฮิต 3 เทิร์น",
-    "vi": "40 combo massive Earth attack on all foes, boosts Spark damage and enemies' Spark vulnerability for 3 turns & raises normal hit amount for 3 turns"
-  },
-  "MST_SKILLS_2830317_NAME": {
-    "en": "Khabayth Al'iiesar ",
-    "es": "Khabayth Al'iiesar ",
-    "id": "Khabayth Al'iiesar ",
-    "pt": "Khabayth Al'iiesar ",
-    "th": "แคบเบย์ธ อัลลิซาร์",
-    "vi": "Khabayth Al'iiesar "
-  },
-  "MST_SKILLS_2830327_DESCRIPTION": {
-    "en": "15 combo massive Earth attack on all foes (damage relative to remaining HP), hugely boosts BB Atk, boosts Atk relative to Def for 3 turns, great 3 turn Atk reduction & massive additional attack on all foes at turn's end",
-    "es": "15 combo massive Earth attack on all foes (damage relative to remaining HP), hugely boosts BB Atk, boosts Atk relative to Def for 3 turns, great 3 turn Atk reduction & massive additional attack on all foes at turn's end",
-    "id": "15 kombo serangan Bumi kuat ke semua musuh (kerusakan sesuai sisa HP), amat menambah BB Serang, menambah Serang sesuai Tahan 3 giliran, pengurangan besar Serangan 3 giliran & tambahan serangan masif ke semua musuh di akhir giliran",
-    "pt": "15 combo massive Earth attack on all foes (damage relative to remaining HP), hugely boosts BB Atk, boosts Atk relative to Def for 3 turns, great 3 turn Atk reduction & massive additional attack on all foes at turn's end",
-    "th": "15 คอมโบ โจมตีธาตุดินรุนแรงมหาศาล ใส่ศัตรูทั้งหมด (ความเสียหายขึ้นอยู่กับ HP ที่เหลือ), เพิ่มค่าอย่างสูงให้ โจมตี BB, เพิ่มค่า โจมตี ขึ้นอยู่กับค่า ป้องกัน นาน 3 เทิร์น,  3 เทิร์น ลดค่า โจมตี อย่างมาก และ โจมตีรุนแรงมหาศาลอีกครั้งใส่ศัตรูทั้งหมด เมื่อจบเทิร์น",
-    "vi": "15 combo massive Earth attack on all foes (damage relative to remaining HP), hugely boosts BB Atk, boosts Atk relative to Def for 3 turns, great 3 turn Atk reduction & massive additional attack on all foes at turn's end"
-  },
-  "MST_SKILLS_2830327_NAME": {
-    "en": "Hysteria: Soul Shatter",
-    "es": "Hysteria: Soul Shatter",
-    "id": "Ledakan Jiwa Tigris",
-    "pt": "Hysteria: Soul Shatter",
-    "th": "ฮิสทีเรีย: โซล แชทเตอร์",
-    "vi": "Hysteria: Soul Shatter"
-  },
   "MST_SKILLS_2830328_DESCRIPTION": {
     "en": "Massive Earth attack on single foe, massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Earth, Dark elemental damage for 3 turns, enormous 3 turns Atk reduction & massive additional damage at turn's end for 2 turns",
     "es": "Massive Earth attack on single foe, massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Earth, Dark elemental damage for 3 turns, enormous 3 turns Atk reduction & massive additional damage at turn's end for 2 turns",
@@ -2510,6 +2414,38 @@
     "pt": "Memento Mori MAX",
     "th": "Memento Mori MAX",
     "vi": "Memento Mori MAX"
+  },
+  "MST_SKILLS_2860557_DESCRIPTION": {
+    "en": "22 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts BB gauge for 3 turns, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts Dark elemental damage for 3 turns",
+    "es": "22 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts BB gauge for 3 turns, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts Dark elemental damage for 3 turns",
+    "id": "22 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts BB gauge for 3 turns, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts Dark elemental damage for 3 turns",
+    "pt": "22 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts BB gauge for 3 turns, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts Dark elemental damage for 3 turns",
+    "th": "22 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts BB gauge for 3 turns, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts Dark elemental damage for 3 turns",
+    "vi": "22 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts BB gauge for 3 turns, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts Dark elemental damage for 3 turns"
+  },
+  "MST_SKILLS_2860557_NAME": {
+    "en": "Midnight Deviousness",
+    "es": "Midnight Deviousness",
+    "id": "Midnight Deviousness",
+    "pt": "Midnight Deviousness",
+    "th": "Midnight Deviousness",
+    "vi": "Midnight Deviousness"
+  },
+  "MST_SKILLS_2860558_DESCRIPTION": {
+    "en": "25 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts BB gauge for 3 turns, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Dark elemental damage for 3 turns & activates Dark shield for 3 turns",
+    "es": "25 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts BB gauge for 3 turns, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Dark elemental damage for 3 turns & activates Dark shield for 3 turns",
+    "id": "25 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts BB gauge for 3 turns, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Dark elemental damage for 3 turns & activates Dark shield for 3 turns",
+    "pt": "25 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts BB gauge for 3 turns, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Dark elemental damage for 3 turns & activates Dark shield for 3 turns",
+    "th": "25 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts BB gauge for 3 turns, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Dark elemental damage for 3 turns & activates Dark shield for 3 turns",
+    "vi": "25 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts BB gauge for 3 turns, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Dark elemental damage for 3 turns & activates Dark shield for 3 turns"
+  },
+  "MST_SKILLS_2860558_NAME": {
+    "en": "Cunning Finale",
+    "es": "Cunning Finale",
+    "id": "Cunning Finale",
+    "pt": "Cunning Finale",
+    "th": "Cunning Finale",
+    "vi": "Cunning Finale"
   },
   "MST_SKILLS_2860607_DESCRIPTION": {
     "en": "35 combo massive Light, Dark, Fire attack on all foes, massive additional attack at turn's end for 3 turns on all foes, considerably increases normal hit amount for 3 turns & activates Light barrier",
@@ -86664,6 +86600,118 @@
     "vi": "Hazard Sweep"
   },
   "MST_SKILLS_8000650_DESCRIPTION": {
+    "en": "",
+    "es": "",
+    "id": "",
+    "pt": "",
+    "th": "",
+    "vi": ""
+  },
+  "MST_SKILLS_8000650_NAME": {
+    "en": "Glace Isberg",
+    "es": "Glace Isberg",
+    "id": "Glace Isberg",
+    "pt": "Glace Isberg",
+    "th": "เกลซ ไอส์เบิร์ก",
+    "vi": "Glace Isberg"
+  },
+  "MST_SKILLS_8000651_DESCRIPTION": {
+    "en": "",
+    "es": "",
+    "id": "",
+    "pt": "",
+    "th": "",
+    "vi": ""
+  },
+  "MST_SKILLS_8000651_NAME": {
+    "en": "Heilcruseide",
+    "es": "Heilcruseide",
+    "id": "Heilcruseide",
+    "pt": "Heilcruseide",
+    "th": "เฮลครูไซด์",
+    "vi": "Heilcruseide"
+  },
+  "MST_SKILLS_8000652_DESCRIPTION": {
+    "en": "",
+    "es": "",
+    "id": "",
+    "pt": "",
+    "th": "",
+    "vi": ""
+  },
+  "MST_SKILLS_8000652_NAME": {
+    "en": "Luzgrake Ace",
+    "es": "Luzgrake Ace",
+    "id": "Luzgrake Ace",
+    "pt": "Luzgrake Ace",
+    "th": "ลุซเกรค เอซ",
+    "vi": "Luzgrake Ace"
+  },
+  "MST_SKILLS_8000660_DESCRIPTION": {
+    "en": "",
+    "es": "",
+    "id": "",
+    "pt": "",
+    "th": "",
+    "vi": ""
+  },
+  "MST_SKILLS_8000660_NAME": {
+    "en": "Destructive Jungle",
+    "es": "Destructive Jungle",
+    "id": "Hutan Destruktif",
+    "pt": "Destructive Jungle",
+    "th": "เดสทรัคทีฟ จังเกิล",
+    "vi": "Destructive Jungle"
+  },
+  "MST_SKILLS_8000661_DESCRIPTION": {
+    "en": "",
+    "es": "",
+    "id": "",
+    "pt": "",
+    "th": "",
+    "vi": ""
+  },
+  "MST_SKILLS_8000661_NAME": {
+    "en": "Divine Bindings",
+    "es": "Divine Bindings",
+    "id": "Ikatan Ilahi",
+    "pt": "Divine Bindings",
+    "th": "ดิไวน์ ไบน์ดิ้ง",
+    "vi": "Divine Bindings"
+  },
+  "MST_SKILLS_8000662_DESCRIPTION": {
+    "en": "",
+    "es": "",
+    "id": "",
+    "pt": "",
+    "th": "",
+    "vi": ""
+  },
+  "MST_SKILLS_8000662_NAME": {
+    "en": "Ignorant Reasoning",
+    "es": "Ignorant Reasoning",
+    "id": "Pemikiran Cerobih",
+    "pt": "Ignorant Reasoning",
+    "th": "อิกนอแรนท์ รีซันนิ่ง",
+    "vi": "Ignorant Reasoning"
+  },
+  "MST_SKILLS_8000670_DESCRIPTION": {
+    "en": "",
+    "es": "",
+    "id": "",
+    "pt": "",
+    "th": "",
+    "vi": ""
+  },
+  "MST_SKILLS_8000670_NAME": {
+    "en": "Morus Mysterica",
+    "es": "Morus Mysterica",
+    "id": "Morus Mysterica",
+    "pt": "Morus Mysterica",
+    "th": "มอรัส มิสเตอริก้า",
+    "vi": "Morus Mysterica"
+  },
+  "MST_SKILLS_8000671_DESCRIPTION": {
     "en": "",
     "es": "",
     "id": "",
