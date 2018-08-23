@@ -37,6 +37,21 @@ db.version(3).stores({
   return transaction;
 });
 
+db.version(4).stores({
+  commmits: '&branch,data',
+}).upgrade(transaction => {
+  console.debug('[PW-dexie] using schema version 4');
+  return transaction;
+});
+
+db.version(4.1).stores({
+  commmits: null, // delete old table
+  commits: '&user,data',
+}).upgrade(transaction => {
+  console.debug('[PW-dexie] using schema version 4.1');
+  return transaction;
+});
+
 const defaultFitsQuery = (entry, procs, passives) => {
   if (procs.length === 0 && passives.length === 0) {
     return true;

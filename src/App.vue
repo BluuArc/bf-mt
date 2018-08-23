@@ -85,6 +85,7 @@
       <span style="display: none;">
         {{ setDataIsLoading(loadingState) }}
         {{ calculateNewSettingsUpdateCount(stateInfo) }}
+        {{ () => numNewCommits = getNumberOfNewCommits(stateInfo) }}
       </span>
       <!-- <site-trackers/> -->
     </v-app>
@@ -94,7 +95,7 @@
 <script>
 import logger from '@/modules/Logger';
 import { servers } from '@/modules/constants';
-import { mapActions, mapState } from 'vuex';
+import { mapActions, mapState, mapGetters } from 'vuex';
 import MultidexDataWrapper from '@/components/MultidexDataWrapper';
 
 import { moduleInfo } from '@/store';
@@ -112,10 +113,6 @@ export default {
     },
     currentPageName () {
       return this.$route.name;
-    },
-    numNewCommits () {
-      logger.warn('Using mock num new commits');
-      return 1;
     },
     numUpdates () {
       return this.numSettingsUpdates + this.numNewCommits;
@@ -142,7 +139,7 @@ export default {
       };
     };
     return {
-      showDrawer: true,
+      showDrawer: false,
        menuItems: [
         {
           subheader: 'General',
@@ -175,10 +172,13 @@ export default {
       pageActiveServer: '',
       dataIsLoading: false,
       numSettingsUpdates: 0,
+      numNewCommits: 0,
     };
   },
   methods: {
     ...mapActions(['init', 'setActiveServer', 'fetchUpdateTimes']),
+    ...mapActions('github', ['updateCommits']),
+    ...mapGetters('github', ['getNumberOfNewCommits']),
     htmlOverflowChangeHandler () {
       const page = document.getElementsByTagName('html')[0];
       page.style.overflowY = (this.disableHtmlOverflow) ? 'hidden' : 'auto';
@@ -206,11 +206,17 @@ export default {
     disableHtmlOverflow () {
       this.htmlOverflowChangeHandler();
     },
-    dataIsLoading (newValue) {
+    async dataIsLoading (newValue) {
       logger.debug('dataIsLoading changed to', newValue);
+      if (!newValue) {
+        await this.updateCommits();
+      }
     },
     async currentPageName () {
       await this.fetchUpdateTimes();
+      if (!this.dataIsLoading) {
+        await this.updateCommits();
+      }
     },
   },
   async created () {

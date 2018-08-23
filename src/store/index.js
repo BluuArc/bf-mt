@@ -4,6 +4,7 @@ import debounce from 'lodash/debounce';
 import { delay } from '@/modules/utils';
 import getUpdateTimes from './instances/update-data-singleton';
 import settings from './settings';
+import github from './github';
 import multidexModules, { moduleInfo as multidexModuleInfo } from './multidex';
 
 import { Logger } from '@/modules/Logger';
@@ -16,12 +17,18 @@ export const moduleInfo = Object.freeze([
     fullName: 'Settings',
     link: '/settings',
   },
+  {
+    name: 'github',
+    fullName: 'GitHub Commits',
+    link: '/',
+  },
   ...multidexModuleInfo,
 ]);
 
 export default new Vuex.Store({
   modules: {
     settings,
+    github,
     ...multidexModules,
   },
   state: {
@@ -56,7 +63,7 @@ export default new Vuex.Store({
     async init ({ dispatch, state, commit }) {
       commit('setInitState', true);
       const modules = moduleInfo.map(({ name }) => name);
-      modules.slice(1).forEach(name => {
+      multidexModuleInfo.forEach(({ name }) => {
         commit(`${name}/setLoadState`, true);
       });
 
@@ -64,7 +71,7 @@ export default new Vuex.Store({
       for (const m of modules) {
         logger.debug('initializing', m);
         await dispatch(`${m}/init`);
-        if (m !== 'settings') {
+        if (m !== 'settings' && m !== 'github') {
           commit(`${m}/setLoadState`, true);
         }
       }
@@ -77,11 +84,11 @@ export default new Vuex.Store({
     },
     async setActiveServer ({ dispatch, commit }, server = 'gl') { // eslint-disable-line no-unused-vars
       const modules = moduleInfo.map(({ name }) => name);
-      modules.slice(1).forEach(name => {
+      multidexModuleInfo.forEach(({ name }) => {
         commit(`${name}/setLoadState`, true);
       });
 
-      for (const m of modules) {
+      for (const m of modules.filter(m => m !== 'github')) {
         try {
           await dispatch(`${m}/setActiveServer`, server);
         } catch (err) {
