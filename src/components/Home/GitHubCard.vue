@@ -2,11 +2,7 @@
   <v-card raised id="github-commit-card">
     <v-card-title primary-title>
       <v-flex>
-        <v-badge v-if="numNewCommits > 0">
-          <span slot="badge">{{ numNewCommits }}</span>
-          <h1 class="title">GitHub Commits</h1>
-        </v-badge>
-        <h1 v-else class="title">GitHub Commits</h1>
+        <h1 class="title">GitHub Commits</h1>
       </v-flex>
       <v-flex :class="{ 'text-xs-right': $vuetify.breakpoint.smAndUp }">
         <span :title="getFormattedDate(branches.master.updateTime).full">Updated {{ getFormattedDate(branches.master.updateTime).diff }}</span>
@@ -16,7 +12,18 @@
       <v-container fluid class="pt-0">
         <v-layout row wrap>
           <v-flex xs12 md6 v-for="(branch, name) in branches" :key="name">
-            <h2 class="subheading">
+            <v-badge v-if="branchCounts[name] && branchCounts[name] > 0" left>
+              <span slot="badge" v-text="branchCounts[name]"></span>
+              <h2 class="subheading">
+                <b>
+                  <a :href="`https://github.com/BluuArc/bf-mt/commits/${name}`"
+                    rel="noopener" target="_blank"
+                    style="color: inherit;" v-text="name"/>
+                </b>
+                <v-icon small class="pl-1">fas fa-external-link-alt</v-icon>
+              </h2>
+            </v-badge>
+            <h2 v-else class="subheading">
               <b>
                 <a :href="`https://github.com/BluuArc/bf-mt/commits/${name}`"
                   rel="noopener" target="_blank"
@@ -70,17 +77,19 @@ import { getFormattedDate } from '@/modules/utils';
 export default {
   computed: {
     ...mapState('github', ['lastSeenTime', 'branches']),
+    ...mapGetters('github', ['getNumberOfNewCommits']),
   },
   data () {
     return {
-      numNewCommits: 0,
+      branchCounts: {},
     };
   },
   methods: {
-    ...mapGetters('github', ['getNumberOfNewCommits', 'getBranchNames']),
     getFormattedDate,
     updateCommitCount () {
-      this.numNewCommits = this.getNumberOfNewCommits();
+      Object.keys(this.branches).forEach(branch => {
+        this.branchCounts[branch] = this.getNumberOfNewCommits([branch]);
+      });
     },
   },
   watch: {

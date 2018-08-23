@@ -84,8 +84,7 @@
       <!-- HACK: stateInfo is computed by wrapper, saved to app state here on page update -->
       <span style="display: none;">
         {{ setDataIsLoading(loadingState) }}
-        {{ calculateNewSettingsUpdateCount(stateInfo) }}
-        {{ () => numNewCommits = getNumberOfNewCommits(stateInfo) }}
+        {{ onStateUpdate(stateInfo) }}
       </span>
       <!-- <site-trackers/> -->
     </v-app>
@@ -108,6 +107,7 @@ export default {
   computed: {
     ...mapState('settings', ['lightMode', 'activeServer']),
     ...mapState(['disableHtmlOverflow', 'updateTimes']),
+    ...mapGetters('github', ['getNumberOfNewCommits']),
     currentPage () {
       return this.$route.path;
     },
@@ -177,8 +177,7 @@ export default {
   },
   methods: {
     ...mapActions(['init', 'setActiveServer', 'fetchUpdateTimes']),
-    ...mapActions('github', ['updateCommits']),
-    ...mapGetters('github', ['getNumberOfNewCommits']),
+    ...mapActions('github', ['updateCommits', 'setLastSeenTime']),
     htmlOverflowChangeHandler () {
       const page = document.getElementsByTagName('html')[0];
       page.style.overflowY = (this.disableHtmlOverflow) ? 'hidden' : 'auto';
@@ -192,6 +191,10 @@ export default {
         const serverCount = servers.filter(server => !!hasUpdates[server] && numEntries[server] && numEntries[server] > 0).length;
         return serverCount;
       }).reduce((acc, val) => acc + val, 0);
+    },
+    onStateUpdate (stateInfo) {
+      this.calculateNewSettingsUpdateCount(stateInfo);
+      this.numNewCommits = this.getNumberOfNewCommits();
     },
   },
   watch: {
@@ -212,10 +215,14 @@ export default {
         await this.updateCommits();
       }
     },
-    async currentPageName () {
+    async currentPageName (newValue) {
       await this.fetchUpdateTimes();
       if (!this.dataIsLoading) {
         await this.updateCommits();
+      }
+
+      if (newValue === 'Home') {
+        setTimeout(() => this.setLastSeenTime(new Date()), 10 * 1000);
       }
     },
   },

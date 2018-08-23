@@ -65,12 +65,12 @@ export default {
   },
   getters: {
     getBranchNames: state => Object.keys(state.branches),
-    getNumberOfNewCommits (state) {
-      return Object.values(state.branches)
-        .map(branch => {
-            const dates = branch.commits.map(entry => new Date(entry.commit.author.date));
-            return dates.filter(date => date > new Date(state.lastSeenTime)).length;
-          }).reduce((acc, val) => acc + val, 0);
+    getNumberOfNewCommits: state => (branches = Object.keys(state.branches)) => {
+      return branches.map(branchName => {
+        const branch = state.branches[branchName];
+        const dates = branch.commits.map(entry => new Date(entry.commit.author.date));
+        return dates.filter(date => date > new Date(state.lastSeenTime)).length;
+      }).reduce((acc, val) => acc + val, 0);
     },
   },
   actions: {
