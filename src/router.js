@@ -4,6 +4,7 @@ import Router from 'vue-router';
 import NotFound from '@/views/NotFound.vue';
 import Home from '@/views/Home.vue';
 import Settings from '@/views/Settings.vue';
+import News from '@/views/News.vue';
 
 Vue.use(Router)
 
@@ -26,6 +27,11 @@ export default new Router({
       path: '/settings',
       name: 'Settings',
       component: Settings,
+    },
+    {
+      path: '/news',
+      name: 'News & Events',
+      component: News,
     },
     {
      path: '/not-found',
