@@ -43,6 +43,7 @@ export default new Vuex.Store({
       state.inInitState = !!newState;
     },
     setLoadingMessage (state, message = '') {
+      logger.debug('LOADING MESSAGE:', message);
       state.loadingMessage = message;
     },
     setUpdateTimes (state, newTimes = {}) {
@@ -68,6 +69,7 @@ export default new Vuex.Store({
       });
 
       commit('setLoadingMessage', 'Initializing data');
+      await delay(0);
       for (const m of modules) {
         logger.debug('initializing', m);
         await dispatch(`${m}/init`);
@@ -88,6 +90,7 @@ export default new Vuex.Store({
         commit(`${name}/setLoadState`, true);
       });
 
+      await delay(0);
       for (const m of modules.filter(m => m !== 'github')) {
         try {
           await dispatch(`${m}/setActiveServer`, server);

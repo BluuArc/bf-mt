@@ -71,7 +71,7 @@ export const createMutations = (logger) => { // eslint-disable-line no-unused-va
       state.updateTimes[server] = updateTime;
     },
     setLoadingMessage (state, message = '') {
-      // logger.debug('LOADING MESSAGE:', message);
+      logger.debug('LOADING MESSAGE:', message);
       state.loadingMessage = message;
     },
   };

@@ -30,11 +30,11 @@ const branchCaches = (() => {
   return caches;
 })();
 
-
 export default {
   namespaced: true,
   state: {
     lastSeenTime: defaultDate,
+    countCache : {},
     branches: {
       master: {
         startDate: defaultDate,
@@ -58,20 +58,27 @@ export default {
       logger.debug('set commits', branch, commits, updateTime);
       state.branches[branch].commits = commits;
       state.branches[branch].updateTime = updateTime;
+
+      Object.keys(state.branches).forEach(branchName => {
+        const branch = state.branches[branchName];
+        const dates = branch.commits.map(entry => new Date(entry.commit.author.date));
+        state.countCache[branchName] = dates.filter(date => date > new Date(state.lastSeenTime)).length;
+      });
     },
     setLastSeenTime (state, newTime = new Date()) {
       state.lastSeenTime = newTime;
+
+      Object.keys(state.branches).forEach(branchName => {
+        const branch = state.branches[branchName];
+        const dates = branch.commits.map(entry => new Date(entry.commit.author.date));
+        state.countCache[branchName] = dates.filter(date => date > new Date(state.lastSeenTime)).length;
+      });
     },
   },
   getters: {
     getBranchNames: state => Object.keys(state.branches),
     getNumberOfNewCommits: state => (branches = Object.keys(state.branches)) => {
-      const count = branches.map(branchName => {
-        const branch = state.branches[branchName];
-        const dates = branch.commits.map(entry => new Date(entry.commit.author.date));
-        return dates.filter(date => date > new Date(state.lastSeenTime)).length;
-      }).reduce((acc, val) => acc + val, 0);
-    
+      const count = branches.map(branchName => state.countCache[branchName] || 0).reduce((acc, val) => acc + val, 0);
       logger.debug('num new commits for', branches, count);
       return count;
     },

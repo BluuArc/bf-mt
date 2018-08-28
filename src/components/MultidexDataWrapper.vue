@@ -61,6 +61,7 @@ export default {
         info[name] = {
           update: this[`${name}DataUpdate`],
           delete: this[`${name}DataDelete`],
+          dbSync: this[`${name}DbSync`],
         };
       });
       return info;
@@ -89,6 +90,7 @@ export default {
         const actionMapping = {};
         actionMapping[`${m}DataUpdate`] = 'updateData';
         actionMapping[`${m}DataDelete`] = 'deleteData';
+        actionMapping[`${m}DbSync`] = 'ensurePageDbSyncWithServer';
         result = {
           ...result,
           ...mapActions(m, actionMapping),
