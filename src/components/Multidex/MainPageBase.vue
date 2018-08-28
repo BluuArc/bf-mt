@@ -156,6 +156,28 @@
             </v-menu>
           </v-flex>
         </v-layout>
+        <template>
+          <v-btn
+            absolute fab bottom left
+            style="bottom: 16px;"
+            :disabled="pageIndex <= 0"
+            :small="$vuetify.breakpoint.smAndDown"
+            color="primary" @click="decrementPage">
+            <span v-show="pageIndex >= 1">
+              {{ pageIndex }}
+            </span>
+          </v-btn>
+          <v-btn
+            absolute fab bottom right
+            style="bottom: 16px;"
+            :disabled="pageIndex >= (numPages - 1)"
+            :small="$vuetify.breakpoint.smAndDown"
+            color="primary" @click="incrementPage">
+            <span v-show="pageIndex + 1 < numPages">
+              {{ pageIndex + 2 }}
+            </span>
+          </v-btn>
+        </template>
       </template>
       <!-- results area -->
       <v-layout row>
@@ -164,6 +186,7 @@
         </v-flex>
         <v-flex v-else>
           <result-container
+            class="pa-0"
             :dataIsLoading="loadingSorts || loadingFilters"
             :loadingMessage="`${loadingFilters ? 'Filtering' : 'Sorting'} data...`"
             :requiredModules="pageModules"
@@ -173,7 +196,18 @@
             :numResults="allSortedEntries.length"
             :logger="logger">
             <slot name="results">
-              Replace results slot for your data here
+              <v-layout row wrap>
+                <v-flex
+                  v-for="key in entriesToShow"
+                  :key="key"
+                  xs12 sm6 md4>
+                  <v-card :to="getMultidexPathTo(key, activeServer)" v-if="pageDb.hasOwnProperty(key)">
+                    <v-card-text>
+                      {{ (pageDb[key] && (pageDb[key].name || pageDb[key].description)) || key }}
+                    </v-card-text>
+                  </v-card>
+                </v-flex>
+              </v-layout>
             </slot>
           </result-container>
         </v-flex>
@@ -368,6 +402,20 @@ export default {
   },
   methods: {
     ...mapActions(['setActiveServer']),
+    decrementPage () {
+      if (this.pageIndex <= 0) {
+        this.pageIndex = 0;
+      } else {
+        this.pageIndex -= 1;
+      }
+    },
+    incrementPage () {
+      if (this.pageIndex >= (this.numPages - 1)) {
+        this.pageIndex = this.numPages;
+      } else {
+        this.pageIndex += 1;
+      }
+    },
     async setServerBasedOnInputServer () {
       if (!this.inputServer) {
         return;
