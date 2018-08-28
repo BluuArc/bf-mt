@@ -109,6 +109,7 @@ export default {
     ...mapState(['disableHtmlOverflow', 'updateTimes']),
     ...mapGetters('github', ['getNumberOfNewCommits']),
     currentPage () {
+      logger.debug('route info', this.$route);
       return this.$route.path;
     },
     currentPageName () {
@@ -203,6 +204,16 @@ export default {
     },
     async pageActiveServer (newValue) {
       if (newValue !== this.activeServer && servers.includes(newValue)) {
+        const routeQuery = this.$route.query;
+        if (routeQuery && routeQuery.server) {
+          this.$router.push({
+            path: this.$route.path,
+            query: {
+              ...routeQuery,
+              server: newValue,
+            },
+          });
+        }
         await this.setActiveServer(newValue);
       }
     },

@@ -65,8 +65,8 @@
                       <v-flex xs10 class="text-xs-left d-align-self-center">
                         <v-layout>
                           <h2 class="title d-inline-block d-align-self-center">Active Filters</h2>
-                          <v-btn icon small flat color="primary">
-                            <v-icon>clear</v-icon>
+                          <v-btn icon small flat>
+                            <v-icon>highlight_off</v-icon>
                           </v-btn>
                         </v-layout>
                       </v-flex>
@@ -211,6 +211,61 @@
             </slot>
           </result-container>
         </v-flex>
+        <v-dialog v-model="showEntryDialog" fullscreen hide-overlay transition="dialog-bottom-transition" class="entry-dialog">
+          <v-card>
+            <v-toolbar fixed class="entry-dialog-toolbar">
+              <v-btn icon :to="dialogCloseLink || $route.path">
+                <v-icon>close</v-icon>
+              </v-btn>
+              <v-toolbar title>
+                <slot name="dialog-toolbar-title">
+                  View {{ mainModule.fullName }} Entry
+                </slot>
+              </v-toolbar>
+            </v-toolbar>
+            <v-card-text class="pl-0 pr-0 entry-dialog-content">
+              <template v-if="!hasViewId">
+                <v-container>
+                  <v-layout row>
+                    <v-flex class="text-xs-center">
+                      <h2 class="subheading">
+                        Entry with ID {{ viewId }} not found in current server ({{ activeServer.toUpperCase() }}). Would you like to try using a different server?
+                      </h2>
+                    </v-flex>
+                  </v-layout>
+                  <v-layout row>
+                    <v-flex
+                        v-for="(server, i) in servers"
+                        :key="i"
+                        xs12 sm4
+                        class="text-xs-center">
+                        <v-btn
+                          large
+                          :block="$vuetify.breakpoint.xsOnly"
+                          :disabled="server === activeServer"
+                          v-text="server"
+                          :to="getMultidexPathTo(viewId, server)"/>
+                      </v-flex>
+                  </v-layout>
+                  <v-layout row v-if="hasUpdates">
+                    <v-flex class="text-xs-center pt-4">
+                      <h2 class="subheading">
+                        Downloading available updates for this server may give you this missing entry. ({{ toUpdate.map(m => m.fullName).join(', ') }})
+                      </h2>
+                      <v-btn large @click="updateData">Update Data</v-btn>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </template>
+              <template v-else>
+                <slot name="entry-dialog-content">
+                  <p>Put your dialog content here</p>
+                  {{ pageDb[viewId] }}
+                </slot>
+              </template>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
       </v-layout>
       <v-layout row>
         {{ activeServer }}
@@ -282,6 +337,10 @@ export default {
       type: Function,
       required: true,
     },
+    dialogCloseLink: {
+      type: String,
+      default: '',
+    },
   },
   components: {
     MultidexDataWrapper,
@@ -294,6 +353,7 @@ export default {
     ...mapState(['inInitState']),
     ...createPropertyMock('filterTypes', ['elements', 'rarity']),
     logger: () => logger,
+    servers: () => servers,
     isDataLoading () {
       return this.moduleLoadState || this.inInitState || !this.finishedInit;
     },
@@ -359,6 +419,9 @@ export default {
     hasFilters () {
       return !!this.filterOptions.name;
     },
+    hasViewId () {
+      return !!this.viewId && this.pageDb.hasOwnProperty(this.viewId);
+    },
   },
   data () {
     const showBooleans = {
@@ -366,12 +429,10 @@ export default {
       showUpdateDialog: false,
       showFilterSheet: false,
       showSortPanel: false,
+      showEntryDialog: false,
     };
-    const pseudoComputed = { // computed based on state
-      // toUpdate: [],
-      // dbSyncFunctions: null,
+    const pseudoComputed = { // manually computed based on current stateVars
       moduleLoadState: true,
-      // hasRequiredModules: false,
     };
     const stateVars = {
       stateInfo: null,
@@ -513,6 +574,9 @@ export default {
       }
       this.loadingSorts = false;
     },
+    setShowEntryDialog () {
+      this.showEntryDialog = !this.moduleLoadState && !!this.viewId && this.finishedInit && this.hasRequiredModules;
+    },
   },
   watch: {
     hasUpdates (newValue) {
@@ -528,6 +592,7 @@ export default {
         this.finishedInit = false;
       }
       this.conditionalInitDb();
+      this.setShowEntryDialog();
     },
     hasRequiredModules (newValue) {
       if (newValue && this.finishedInit) {
@@ -567,6 +632,29 @@ export default {
         this.amountPerPage = value;
       }
     },
+    viewId () {
+      this.setShowEntryDialog();
+    },
+    activeServer () {
+      this.setShowEntryDialog();
+    },
+    stateInfo: {
+      deep: true,
+      handler () {
+        this.setShowEntryDialog();
+      },
+    },
+    finishedInit () {
+      this.setShowEntryDialog();
+    },
+    async inputServer (newValue) {
+      if (newValue !== this.activeServer) {
+        this.finishedInit = false;
+        this.showEntryDialog = false;
+        await delay(0);
+        this.conditionalInitDb();
+      }
+    },
   },
   created () {
     logger = new Logger({ prefix: `[MULTIDEX/${this.$route.name}]` });
@@ -574,6 +662,7 @@ export default {
   mounted () {
     this.conditionalInitDb();
     this.forceSetPseudoComputedValues();
+    this.setShowEntryDialog();
 
     this.sortOptions.type = Object.keys(this.sortTypes)[0];
   },
@@ -588,5 +677,11 @@ export default {
   .v-input--radio-group .v-radio {
     flex: 1;
   }
+
+}
+
+.entry-dialog-content {
+  // height of top toolbar
+  padding-top: 64px;
 }
 </style>
