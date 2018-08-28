@@ -28,7 +28,7 @@
                 <v-container fluid class="pa-0">
                   <v-layout row>
                     <v-flex :xs8="!hasUpdates" :xs6="hasUpdates" :sm7="hasUpdates">
-                      <v-text-field v-model="filterOptions.name" label="Search"/>
+                      <v-text-field v-model="filterOptions.name" clearable label="Search"/>
                     </v-flex>
                     <v-flex xs4 class="text-xs-center d-align-self-center">
                       <span v-text="searchResultCountText"/>
@@ -63,7 +63,12 @@
                     </v-layout>
                     <v-layout row>
                       <v-flex xs10 class="text-xs-left d-align-self-center">
-                        <h2 class="title">Active Filters</h2>
+                        <v-layout>
+                          <h2 class="title d-inline-block d-align-self-center">Active Filters</h2>
+                          <v-btn icon small flat color="primary">
+                            <v-icon>clear</v-icon>
+                          </v-btn>
+                        </v-layout>
                       </v-flex>
                       <v-flex xs2 class="text-xs-right">
                         <v-btn v-if="$vuetify.breakpoint.xsOnly" flat icon class="mr-0 pr-1" @click="showFilterSheet = !showFilterSheet">
@@ -89,9 +94,11 @@
                   </v-layout>
                   <v-layout row>
                     <v-flex xs10 md11 class="d-align-self-center">
-                      <h2 class="title d-inline pr-2">Sort</h2>
-                      <v-chip small>{{ sortOptions.type }}</v-chip>
-                      <v-chip small>{{ sortOptions.isAscending ? 'Ascending' : 'Descending' }}</v-chip>
+                      <v-layout>
+                        <h2 class="title d-inline d-align-self-center pr-2">Sort</h2>
+                        <v-chip small>{{ sortOptions.type }}</v-chip>
+                        <v-chip small>{{ sortOptions.isAscending ? 'Ascending' : 'Descending' }}</v-chip>
+                      </v-layout>
                     </v-flex>
                     <v-flex xs2 md1 class="text-xs-right">
                       <v-btn v-if="$vuetify.breakpoint.smAndUp" flat icon class="mr-0 pr-1" @click="showSortPanel = !showSortPanel">
@@ -111,7 +118,42 @@
         </v-layout>
         <v-layout row>
           <v-flex xs6>
-            <v-btn v-show="hasFilters" flat small>Reset Filters</v-btn>
+            <v-btn flat small>Change View</v-btn>
+          </v-flex>
+          <v-flex xs6 class="text-xs-right">
+            <v-menu offset-y :close-on-content-click="false">
+              <div slot="activator">
+                <span>Page {{ pageIndex + 1 }} of {{ numPages }}</span>
+                <v-icon class="pl-1">fas fa-caret-down</v-icon>
+              </div>
+              <v-card>
+                <v-card-text>
+                  <v-container fluid class="pa-0">
+                    <v-layout row>
+                      <v-flex xs6 class="d-align-self-center text-xs-center">
+                        Entries Per Page:
+                      </v-flex>
+                      <v-flex xs6>
+                        <v-text-field
+                          v-model="amountPerPage"
+                          :hide-details="true"
+                          solo-inverted
+                          type="number"
+                          min="1"/>
+                      </v-flex>
+                    </v-layout>
+                    <v-layout row>
+                      <v-flex xs6>
+                        <v-btn block flat @click="pageIndex = 0">First Page</v-btn>
+                      </v-flex>
+                      <v-flex xs6>
+                        <v-btn block flat @click="pageIndex = numPages - 1">Last Page</v-btn>
+                      </v-flex>
+                    </v-layout>
+                  </v-container>
+                </v-card-text>
+              </v-card>
+            </v-menu>
           </v-flex>
         </v-layout>
       </template>
@@ -464,6 +506,17 @@ export default {
     async isDataLoading (newValue) {
       if (!newValue) {
         await this.applyFilters();
+      }
+    },
+    amountPerPage (newValue) {
+      this.pageIndex = 0;
+      const value = !isNaN(newValue) ? +newValue : 1;
+      if (value < 1) {
+        this.amountPerPage = 1;
+      } else if (value > this.allSortedEntries.length) {
+        this.amountPerPage = this.allSortedEntries.length;
+      } else {
+        this.amountPerPage = value;
       }
     },
   },
