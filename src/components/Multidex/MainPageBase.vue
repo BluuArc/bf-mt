@@ -7,20 +7,14 @@
       </span>
       <!-- search card -->
       <template v-if="!loadingState && finishedInit && hasRequiredModules">
-        <v-navigation-drawer
+        <filter-options-sidebar
           v-if="filterTypes.length > 0"
-          persistent right
-          enable-resize-watcher
-          :clipped="$vuetify.breakpoint.lgAndUp"
-          fixed app
-          :value="showFilterSheet">
-          <v-btn block @click="showFilterSheet = false">
-            Close Sidebar
-            <v-spacer/>
-            <v-icon right>chevron_right</v-icon>
-          </v-btn>
-          <h3 class="headline pl-3 pt-3">Filters</h3>
-        </v-navigation-drawer>
+          v-model="filterOptions"
+          :requiredFilters="filterTypes"
+          :disableFilters="loadingState || loadingFilters || loadingSorts"
+          :showFilterSheet="showFilterSheet"
+          @togglesheet="showFilterSheet = $event"
+        />
         <v-layout row>
           <v-flex>
             <v-card raised>
@@ -217,11 +211,11 @@
               <v-btn icon :to="dialogCloseLink || $route.path">
                 <v-icon>close</v-icon>
               </v-btn>
-              <v-toolbar title>
+              <v-toolbar-title>
                 <slot name="dialog-toolbar-title">
                   View {{ mainModule.fullName }} Entry
                 </slot>
-              </v-toolbar>
+              </v-toolbar-title>
             </v-toolbar>
             <v-card-text class="pl-0 pr-0 entry-dialog-content">
               <template v-if="!hasViewId">
@@ -284,12 +278,18 @@ import { servers } from '@/modules/constants';
 import { delay } from '@/modules/utils';
 import throttle from 'lodash/throttle';
 import debounce from 'lodash/debounce';
+import FilterOptionsHelper from '@/modules/FilterOptionsHelper';
 import MultidexDataWrapper from '@/components/MultidexDataWrapper';
 import LoadingIndicator from '@/components/LoadingIndicator';
 import SortOptionsContainer from '@/components/Multidex/SortOptionsContainer';
 import ResultContainer from '@/components/Multidex/ResultContainer';
+import FilterOptionsSidebar from '@/components/Multidex/Filters/FilterOptionsSidebar';
+
+// TODO: change based on min/max rarity input
+let filterHelper = new FilterOptionsHelper();
 
 let logger = new Logger({ prefix: '[MULTIDEX/default]' });
+// eslint-disable-next-line no-unused-vars
 function createPropertyMock (name, value) {
   return {
     [name]: () => {
@@ -341,17 +341,21 @@ export default {
       type: String,
       default: '',
     },
+    filterTypes: {
+      type: Array,
+      default: () => filterHelper.filterTypes,
+    },
   },
   components: {
     MultidexDataWrapper,
     LoadingIndicator,
     SortOptionsContainer,
     ResultContainer,
+    FilterOptionsSidebar,
   },
   computed: {
     ...mapState('settings', ['activeServer']),
     ...mapState(['inInitState']),
-    ...createPropertyMock('filterTypes', ['elements', 'rarity']),
     logger: () => logger,
     servers: () => servers,
     isDataLoading () {
@@ -442,6 +446,10 @@ export default {
       amountPerPage: 27,
       pageIndex: 0,
     };
+    const filterOptions = {
+      ...filterHelper.defaultValues,
+      name: '',
+    };
     return {
       finishedInit: false,
       ...resultViewConfig,
@@ -453,9 +461,7 @@ export default {
         isAscending: true,
       },
       loadingSorts: false,
-      filterOptions: {
-        name: '',
-      },
+      filterOptions,
       loadingFilters: false,
       allSortedEntries: [],
       filteredKeys: [],
@@ -577,6 +583,14 @@ export default {
     setShowEntryDialog () {
       this.showEntryDialog = !this.moduleLoadState && !!this.viewId && this.finishedInit && this.hasRequiredModules;
     },
+    resetFilters () {
+      const defaultFilterOptions = filterHelper.defaultValues;
+
+      this.filterOptions = {
+        ...defaultFilterOptions,
+        name: '',
+      };
+    },
   },
   watch: {
     hasUpdates (newValue) {
@@ -665,6 +679,7 @@ export default {
     this.setShowEntryDialog();
 
     this.sortOptions.type = Object.keys(this.sortTypes)[0];
+    logger.debug('filter types', this.filterTypes);
   },
   beforeDestroy () {
     this.setStateVars.cancel();
