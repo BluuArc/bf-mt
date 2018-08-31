@@ -1,4 +1,268 @@
 {
+  "MST_LEADERSKILLS_801258_DESCRIPTION": {
+    "en": "25% boost to Atk and 15% boost to max HP of Dark types, 75% boost to Atk, 15% boost to max HP & greatly boosts BB Atk",
+    "es": "25% boost to Atk and 15% boost to max HP of Dark types, 75% boost to Atk, 15% boost to max HP & greatly boosts BB Atk",
+    "id": "25% ekstra Serang, 15% ekstra HP maks tipe Gelap, 75% ekstra Serang, 15% ekstra HP maks & amat menambah BB Serang",
+    "pt": "25% boost to Atk and 15% boost to max HP of Dark types, 75% boost to Atk, 15% boost to max HP & greatly boosts BB Atk",
+    "th": "25% เพิ่มค่า โจมตี กับ 15% เพิ่มค่า HP สูงสุด ของยูนิต มืด, 75% เพิ่มค่า โจมตี, 15% เพิ่มค่า HP สูงสุด และ เพิ่มค่าอย่างมากให้กับ BB โจมตี",
+    "vi": "25% boost to Atk and 15% boost to max HP of Dark types, 75% boost to Atk, 15% boost to max HP & greatly boosts BB Atk"
+  },
+  "MST_LEADERSKILLS_801258_NAME": {
+    "en": "Ruthless Manipulator",
+    "es": "Ruthless Manipulator",
+    "id": "Manipulator Keji",
+    "pt": "Ruthless Manipulator",
+    "th": "รูธเลส แมนนิพิวเลเตอร์",
+    "vi": "Ruthless Manipulator"
+  },
+  "MST_LEADERSKILLS_801259_DESCRIPTION": {
+    "en": "50% boost to Atk and 30% boost to max HP of Dark types, 100% boost to Atk, 30% boost to max HP, greatly boosts BB Atk & considerably boosts BB gauge each turn",
+    "es": "50% boost to Atk and 30% boost to max HP of Dark types, 100% boost to Atk, 30% boost to max HP, greatly boosts BB Atk & considerably boosts BB gauge each turn",
+    "id": "50% ekstra Serang, 30% ekstra HP maks tipe Gelap, 100% ekstra Serang, 30% ekstra HP maks, amat menambah BB Serang, lumayan menambah meteran BB tiap giliran",
+    "pt": "50% boost to Atk and 30% boost to max HP of Dark types, 100% boost to Atk, 30% boost to max HP, greatly boosts BB Atk & considerably boosts BB gauge each turn",
+    "th": "50% เพิ่มค่า โจมตี กับ 30% เพิ่มค่า HP สูงสุด ของยูนิต มืด, 100% เพิ่มค่า โจมตี, 30% เพิ่มค่า HP สูงสุด, เพิ่มค่าอย่างมากให้กับ BB โจมตี และ เพิ่มค่าอย่างมากให้กับ เกจ BB แต่ละเทิร์น",
+    "vi": "50% boost to Atk and 30% boost to max HP of Dark types, 100% boost to Atk, 30% boost to max HP, greatly boosts BB Atk & considerably boosts BB gauge each turn"
+  },
+  "MST_LEADERSKILLS_801259_NAME": {
+    "en": "Black Noah Genocide",
+    "es": "Black Noah Genocide",
+    "id": "Genosida Nuh Hitam",
+    "pt": "Black Noah Genocide",
+    "th": "แบล็ค โนอาห์ จีโนไซด์",
+    "vi": "Black Noah Genocide"
+  },
+  "MST_LEADERSKILLS_801260_DESCRIPTION": {
+    "en": "150% boost to Atk and 50% boost to max HP of Earth types, raises normal hit amount & negates element based damage. 20% boosts all parameters of Earth Types in Guild Raid",
+    "es": "150% boost to Atk and 50% boost to max HP of Earth types, raises normal hit amount & negates element based damage. 20% boosts all parameters of Earth Types in Guild Raid",
+    "id": "150% ekstra Serang, 50% ekstra HP maks tipe Bumi, menambah jumlah pukulan normal, menegasi kerusakan berbasis elemen. 20% ekstra semua parameter Tipe Bumi di Perang Bersama Serikat",
+    "pt": "150% boost to Atk and 50% boost to max HP of Earth types, raises normal hit amount & negates element based damage. 20% boosts all parameters of Earth Types in Guild Raid",
+    "th": "150% เพิ่มค่า โจมตี กับ 50% เพิ่มค่า HP สูงสุด ของชนิดดิน, เพิ่มปริมาณโจมตีธรรมดา และ ต้านทานความเสียหายพื้นฐานจากธาตุ 20% เพิ่ม พารามิเตอร์ทั้งหมด ของชนิดดิน ในกิลด์เรด",
+    "vi": "150% boost to Atk and 50% boost to max HP of Earth types, raises normal hit amount & negates element based damage. 20% boosts all parameters of Earth Types in Guild Raid"
+  },
+  "MST_LEADERSKILLS_801260_NAME": {
+    "en": "Firestorm of Faith",
+    "es": "Firestorm of Faith",
+    "id": "Badai Api Iman",
+    "pt": "Firestorm of Faith",
+    "th": "ไฟเออร์สตอร์ม ออฟ เฟธ",
+    "vi": "Firestorm of Faith"
+  },
+  "MST_LEADERSKILLS_801261_DESCRIPTION": {
+    "en": "200% boost to Atk and 60% boost to max HP of Earth types, raises normal hit amount, hugely boosts Earth elemental damage & hugely boosts critical damage. 25% boost to all parameters of Earth Types & 15% damage reduction from Earth, Thunder types in Guild Raid",
+    "es": "200% boost to Atk and 60% boost to max HP of Earth types, raises normal hit amount, hugely boosts Earth elemental damage & hugely boosts critical damage. 25% boost to all parameters of Earth Types & 15% damage reduction from Earth, Thunder types in Guild Raid",
+    "id": "200% ekstra Serang, 60% ekstra HP maks tipe Bumi, menambah jumlah pukulan normal, menegasi kerusakan berbasis elemen, amat menambah kerusakan ampuh. 25% ekstra semua parameter Tipe Bumi & kurangi 15% kerusakan dari tipe Bumi, Guntur di Perang Bersama Serikat",
+    "pt": "200% boost to Atk and 60% boost to max HP of Earth types, raises normal hit amount, hugely boosts Earth elemental damage & hugely boosts critical damage. 25% boost to all parameters of Earth Types & 15% damage reduction from Earth, Thunder types in Guild Raid",
+    "th": "200% เพิ่มค่า โจมตี กับ 60% เพิ่มค่า HP สูงสุด ของชนิดดิน, เพิ่มปริมาณโจมตีธรรมดา, ต้านทานความเสียหายพื้นฐานจากธาตุ และ เพิ่มค่าอย่างสูงให้ ความเสียหายคริติคอล. 25% เพิ่มค่า พารามิเตอร์ทั้งหมด ของชนิดดิน และ 15% ลดค่าความเสียหายจาก ชนิด ดิน, สายฟ้า ในกิลด์เรด",
+    "vi": "200% boost to Atk and 60% boost to max HP of Earth types, raises normal hit amount, hugely boosts Earth elemental damage & hugely boosts critical damage. 25% boost to all parameters of Earth Types & 15% damage reduction from Earth, Thunder types in Guild Raid"
+  },
+  "MST_LEADERSKILLS_801261_NAME": {
+    "en": "God-Killing Conviction",
+    "es": "God-Killing Conviction",
+    "id": "Keyakinan Membunuh Dewa",
+    "pt": "God-Killing Conviction",
+    "th": "ก็อด คิลลิ่ง คอนวิคชั่น",
+    "vi": "God-Killing Conviction"
+  },
+  "MST_LEADERSKILLS_801262_DESCRIPTION": {
+    "en": "30% boost to Atk, max HP, Spark damage boosts BB gauge & negates elemental damage",
+    "es": "30% boost to Atk, max HP, Spark damage boosts BB gauge & negates elemental damage",
+    "id": "30% ekstra Serang, HP maks, kerusakan Percikan menambah meteran BB & menegasi kerusakan elemen",
+    "pt": "30% boost to Atk, max HP, Spark damage boosts BB gauge & negates elemental damage",
+    "th": "30% เพิ่มพลังโจมตีและ HP สูงสุด, เพิ่มบีบีเกจจากความเสียหายสปาร์ค, กันความเสียหายธาตุ ",
+    "vi": "30% boost to Atk, max HP, Spark damage boosts BB gauge & negates elemental damage"
+  },
+  "MST_LEADERSKILLS_801262_NAME": {
+    "en": "Scarlet Bloodletting",
+    "es": "Scarlet Bloodletting",
+    "id": "Pembekaman Merah",
+    "pt": "Scarlet Bloodletting",
+    "th": "สการ์เล็ต บลัดเล็ตติ้ง",
+    "vi": "Scarlet Bloodletting"
+  },
+  "MST_LEADERSKILLS_801266_DESCRIPTION": {
+    "en": "50% boost to Atk, max HP, hugely boosts Spark damage for 2 turns when Sparks have exceeded certain amount, Spark damage boosts BB gauge & negates elemental damage",
+    "es": "50% boost to Atk, max HP, hugely boosts Spark damage for 2 turns when Sparks have exceeded certain amount, Spark damage boosts BB gauge & negates elemental damage",
+    "id": "50% ekstra Serang, HP maks, amat menambah kerusakan Percikan 2 giliran saat melebihi jumlah tertentu, kerusakan Percikan menambah meteran BB & menegasi kerusakan elemen",
+    "pt": "50% boost to Atk, max HP, hugely boosts Spark damage for 2 turns when Sparks have exceeded certain amount, Spark damage boosts BB gauge & negates elemental damage",
+    "th": "50% เพิ่มพลังโจมตีและ HP สูงสุด, เพิ่มความเสียหายสปาร์คอย่างมากมาย 2 เทิร์นเมื่อสปาร์คถึงตามกำหนด,  เพิ่มบีบีเกจจากความเสียหายสปาร์ค, กันความเสียหายธาตุ ",
+    "vi": "50% boost to Atk, max HP, hugely boosts Spark damage for 2 turns when Sparks have exceeded certain amount, Spark damage boosts BB gauge & negates elemental damage"
+  },
+  "MST_LEADERSKILLS_801266_NAME": {
+    "en": "Bloodflame Baptism",
+    "es": "Bloodflame Baptism",
+    "id": "Baptis Api Darah",
+    "pt": "Bloodflame Baptism",
+    "th": "บลัดเฟลม แบพทิสซึ่ม",
+    "vi": "Bloodflame Baptism"
+  },
+  "MST_LEADERSKILLS_801267_DESCRIPTION": {
+    "en": "40% boost to max HP, slightly boosts Atk, Def, Rec relative to remaining HP & damage taken may restore HP",
+    "es": "40% boost to max HP, slightly boosts Atk, Def, Rec relative to remaining HP & damage taken may restore HP",
+    "id": "40% ekstra HP maks, agak menambah Serang, Tahan, Pulih sesuai sisa HP & kerusakan diderita bisa pulihkan HP",
+    "pt": "40% boost to max HP, slightly boosts Atk, Def, Rec relative to remaining HP & damage taken may restore HP",
+    "th": "40% เพิ่มค่า HP สูงสุด, เพิ่มค่าเล็กน้อยให้ โจมตี, ป้องกัน, ฟื้นฟู สัมพันธ์กับ HP ที่เหลืออยู่ และ ความเสียหายทีได้รับ อาจจะ ฟื้นคืน HP",
+    "vi": "40% boost to max HP, slightly boosts Atk, Def, Rec relative to remaining HP & damage taken may restore HP"
+  },
+  "MST_LEADERSKILLS_801267_NAME": {
+    "en": "Midnight Sonata",
+    "es": "Midnight Sonata",
+    "id": "Sonata Tengah Malam",
+    "pt": "Midnight Sonata",
+    "th": "มิดไนท์โซนาต้า",
+    "vi": "Midnight Sonata"
+  },
+  "MST_LEADERSKILLS_801268_DESCRIPTION": {
+    "en": "60% boost to max HP, boosts Atk, Def, Rec relative to remaining HP, damage taken may restore HP & considerably reduces BB gauge required for BB",
+    "es": "60% boost to max HP, boosts Atk, Def, Rec relative to remaining HP, damage taken may restore HP & considerably reduces BB gauge required for BB",
+    "id": "60% ekstra HP maks, menambah Serang, Tahan, Pulih sesuai sisa HP, kerusakan diderita bisa pulihkan HP & lumayan kurangi meteran BB untuk BB",
+    "pt": "60% boost to max HP, boosts Atk, Def, Rec relative to remaining HP, damage taken may restore HP & considerably reduces BB gauge required for BB",
+    "th": "60% เพิ่มค่า HP สูงสุด, เพิ่มค่า โจมตี, ป้องกัน, ฟื้นฟู สัมพันธ์กับ HP ที่เหลืออยู่, ความเสียหายทีได้รับ อาจจะ ฟื้นคืน HP และ ลดเกจ BB ที่จำเป็นสำหรับ BB อย่างมาก",
+    "vi": "60% boost to max HP, boosts Atk, Def, Rec relative to remaining HP, damage taken may restore HP & considerably reduces BB gauge required for BB"
+  },
+  "MST_LEADERSKILLS_801268_NAME": {
+    "en": "Lucent Rhapsody",
+    "es": "Lucent Rhapsody",
+    "id": "Rapsodi Lucent",
+    "pt": "Lucent Rhapsody",
+    "th": "ลูเซนท์ราฟโซดี้",
+    "vi": "Lucent Rhapsody"
+  },
+  "MST_LEADERSKILLS_801269_DESCRIPTION": {
+    "en": "50% boost to Atk and max HP, enormously boosts Atk relative to how high HP is & hugely boosts BB Atk and elemental damage",
+    "es": "50% boost to Atk and max HP, enormously boosts Atk relative to how high HP is & hugely boosts BB Atk and elemental damage",
+    "id": "50% ekstra Serang dan HP maks, ekstra jumbo Serang sesuai seberapa tinggi HP & amat menambah BB Serang dan kerusakan elemen",
+    "pt": "50% boost to Atk and max HP, enormously boosts Atk relative to how high HP is & hugely boosts BB Atk and elemental damage",
+    "th": "50% เพิ่มค่า โจมตี กับ HP สูงสุด, เพิ่มค่ามหาศาลให้ โจมตี สัมพันธ์กับ HP มีมากขนาดไหน และ เพิ่มค่าอย่างมากให้ BB โจมตี กับ ความเสียหายธาตุ",
+    "vi": "50% boost to Atk and max HP, enormously boosts Atk relative to how high HP is & hugely boosts BB Atk and elemental damage"
+  },
+  "MST_LEADERSKILLS_801269_NAME": {
+    "en": "Malevolent Aspect",
+    "es": "Malevolent Aspect",
+    "id": "Aspek Jahat",
+    "pt": "Malevolent Aspect",
+    "th": "เมลโวเลนท์แอสเปค",
+    "vi": "Malevolent Aspect"
+  },
+  "MST_LEADERSKILLS_801270_DESCRIPTION": {
+    "en": "35% boost to all parameters, boosts Atk and Def when BB gauge is over 50%, probable damage reduction to 1 & probable resistance against 1 KO attack",
+    "es": "35% boost to all parameters, boosts Atk and Def when BB gauge is over 50%, probable damage reduction to 1 & probable resistance against 1 KO attack",
+    "id": "35% ekstra semua parameter, menambah Serang dan Tahan saat meteran BB di atas 50%, kans kurangi kerusakan menjadi 1 & kans tahan atas 1 serangan KO",
+    "pt": "35% boost to all parameters, boosts Atk and Def when BB gauge is over 50%, probable damage reduction to 1 & probable resistance against 1 KO attack",
+    "th": "35% เพิ่มค่า พารามิเตอร์ทั้งหมด, เพิ่มค่า โจมตี กับ ป้องกัน เมื่อ เกจ BB นั้นมากกว่า 50%, มีโอกาสลดค่าความเสียหายเหลือ 1 และ มีโอกาส ต้านทานต่อ 1 การโจมตี KO",
+    "vi": "35% boost to all parameters, boosts Atk and Def when BB gauge is over 50%, probable damage reduction to 1 & probable resistance against 1 KO attack"
+  },
+  "MST_LEADERSKILLS_801270_NAME": {
+    "en": "Rise of the Despoiler",
+    "es": "Rise of the Despoiler",
+    "id": "Kebangkitan Penjarah",
+    "pt": "Rise of the Despoiler",
+    "th": "ไรซ์ออฟเดอะเดสปอยเลอร์",
+    "vi": "Rise of the Despoiler"
+  },
+  "MST_LEADERSKILLS_801271_DESCRIPTION": {
+    "en": "50% boost to all parameters, boosts Atk and Def when BB gauge is over 50%, probable damage reduction to 1, probable resistance against 1 KO attack & considerably boosts ABP and CBP gain<br>25% boost to all parameters of Dark types & 20% damage reduction from Dark, Light types in Guild Raid",
+    "es": "50% boost to all parameters, boosts Atk and Def when BB gauge is over 50%, probable damage reduction to 1, probable resistance against 1 KO attack & considerably boosts ABP and CBP gain<br>25% boost to all parameters of Dark types & 20% damage reduction from Dark, Light types in Guild Raid",
+    "id": "50% boost to all parameters, boosts Atk and Def when BB gauge is over 50%, probable damage reduction to 1, probable resistance against 1 KO attack & considerably boosts ABP and CBP gain<br>25% boost to all parameters of Dark types & 20% damage reduction from Dark, Light types in Guild Raid",
+    "pt": "50% boost to all parameters, boosts Atk and Def when BB gauge is over 50%, probable damage reduction to 1, probable resistance against 1 KO attack & considerably boosts ABP and CBP gain<br>25% boost to all parameters of Dark types & 20% damage reduction from Dark, Light types in Guild Raid",
+    "th": "50% boost to all parameters, boosts Atk and Def when BB gauge is over 50%, probable damage reduction to 1, probable resistance against 1 KO attack & considerably boosts ABP and CBP gain<br>25% boost to all parameters of Dark types & 20% damage reduction from Dark, Light types in Guild Raid",
+    "vi": "50% boost to all parameters, boosts Atk and Def when BB gauge is over 50%, probable damage reduction to 1, probable resistance against 1 KO attack & considerably boosts ABP and CBP gain<br>25% boost to all parameters of Dark types & 20% damage reduction from Dark, Light types in Guild Raid"
+  },
+  "MST_LEADERSKILLS_801271_NAME": {
+    "en": "March of the Wild Hunt",
+    "es": "March of the Wild Hunt",
+    "id": "Barisan Pemburu Liar",
+    "pt": "March of the Wild Hunt",
+    "th": "มาร์ชออฟเดอะไวด์ฮันท์",
+    "vi": "March of the Wild Hunt"
+  },
+  "MST_LEADERSKILLS_801272_DESCRIPTION": {
+    "en": "35% boost to all parameters, hugely boosts BB Atk when HP is above 50%, boosts damage against status afflicted foes & negates all status ailments",
+    "es": "35% boost to all parameters, hugely boosts BB Atk when HP is above 50%, boosts damage against status afflicted foes & negates all status ailments",
+    "id": "35% ekstra semua parameter, amat menambah BB Serang saat HP di bawah 50%, tambah merusak musuh yang terkena status, menegasi semua status penyakit",
+    "pt": "35% boost to all parameters, hugely boosts BB Atk when HP is above 50%, boosts damage against status afflicted foes & negates all status ailments",
+    "th": "35% เพิ่มค่า พารามิเตอร์ทั้งหมด, เพิ่มค่าอย่างสูงให้ BB โจมตี เมื่อ HP มากกว่า 50%, เพิ่มความเสียหายต่อศัตรูที่ติดสถานะผิดปกติ และ ลบล้าง สถานะผิดปกติทั้งหมด",
+    "vi": "35% boost to all parameters, hugely boosts BB Atk when HP is above 50%, boosts damage against status afflicted foes & negates all status ailments"
+  },
+  "MST_LEADERSKILLS_801272_NAME": {
+    "en": "Wrath of the Isengrim",
+    "es": "Wrath of the Isengrim",
+    "id": "Murka Isengrim",
+    "pt": "Wrath of the Isengrim",
+    "th": "วราธ ออฟ เดอะ ไอเซนกริม",
+    "vi": "Wrath of the Isengrim"
+  },
+  "MST_LEADERSKILLS_801273_DESCRIPTION": {
+    "en": "40% boost to all parameters, enormously boosts BB Atk when HP is above 50%, hugely boosts damage against status afflicted foes & negates all status ailments",
+    "es": "40% boost to all parameters, enormously boosts BB Atk when HP is above 50%, hugely boosts damage against status afflicted foes & negates all status ailments",
+    "id": "40% ekstra semua parameter, ekstra jumbo BB Serang saat HP di bawah 50%, amat tambah merusak musuh yang terkena status, menegasi semua status penyakit",
+    "pt": "40% boost to all parameters, enormously boosts BB Atk when HP is above 50%, hugely boosts damage against status afflicted foes & negates all status ailments",
+    "th": "40% เพิ่มค่า พารามิเตอร์ทั้งหมด, เพิ่มค่ามหาศาลให้ BB โจมตี เมื่อ HP มากกว่า 50%, เพิ่มค่าอย่างสูงให้ ความเสียหายต่อศัตรูที่ติดสถานะผิดปกติ และ ลบล้าง สถานะผิดปกติทั้งหมด",
+    "vi": "40% boost to all parameters, enormously boosts BB Atk when HP is above 50%, hugely boosts damage against status afflicted foes & negates all status ailments"
+  },
+  "MST_LEADERSKILLS_801273_NAME": {
+    "en": "Chosen of the Forest",
+    "es": "Chosen of the Forest",
+    "id": "Sang Terpilih di Hutan",
+    "pt": "Chosen of the Forest",
+    "th": "โชเซ่น ออฟ เดอะ ฟอเรสต์",
+    "vi": "Chosen of the Forest"
+  },
+  "MST_LEADERSKILLS_801274_DESCRIPTION": {
+    "en": "100% boost to Atk, 40% boost to max HP, raises normal hit amount, Spark damage boosts BB gauge & enormously boosts Spark damage for 2 turns when Sparks exceed certain amount",
+    "es": "100% boost to Atk, 40% boost to max HP, raises normal hit amount, Spark damage boosts BB gauge & enormously boosts Spark damage for 2 turns when Sparks exceed certain amount",
+    "id": "100% ekstra Serang, 40% ekstra HP maks, menambah jumlah pukulan normal, kerusakan Percikan menambah meteran BB & ekstra jumbo kerusakan Percikan 2 giliran saat Percikan melampaui jumlah tertentu",
+    "pt": "100% boost to Atk, 40% boost to max HP, raises normal hit amount, Spark damage boosts BB gauge & enormously boosts Spark damage for 2 turns when Sparks exceed certain amount",
+    "th": "100% เพิ่มค่า โจมตี, 40% เพิ่มค่า HP สูงสุด, เพิ่มปริมาณโจมตีธรรมดา, ความเสียหายสปาร์ค เพิ่ม เกจ BB และ เพิ่มค่ามหาศาลให้ ความเสียหายสปาร์ค นาน 2 เทิร์น เมื่อสปาร์คเกินกว่าปริมาณที่กำหนด",
+    "vi": "100% boost to Atk, 40% boost to max HP, raises normal hit amount, Spark damage boosts BB gauge & enormously boosts Spark damage for 2 turns when Sparks exceed certain amount"
+  },
+  "MST_LEADERSKILLS_801274_NAME": {
+    "en": "Warden of the Void",
+    "es": "Warden of the Void",
+    "id": "Sipir Hampa",
+    "pt": "Warden of the Void",
+    "th": "วอเดน ออฟ เดอะ วอยด์",
+    "vi": "Warden of the Void"
+  },
+  "MST_LEADERSKILLS_801275_DESCRIPTION": {
+    "en": "30% boost to Atk and max HP, boosts Atk, Def and Rec when BB gauge is over 50%, enormously boosts Spark damage & Spark damage slightly boosts BB gauge",
+    "es": "30% boost to Atk and max HP, boosts Atk, Def and Rec when BB gauge is over 50%, enormously boosts Spark damage & Spark damage slightly boosts BB gauge",
+    "id": "30% ekstra Serang, HP maks, menambah Serang, Tahan, Pulih saat meteran BB di atas 50%, ekstra jumbo kerusakan Percikan, kerusakan Percikan agak menambah meteran BB",
+    "pt": "30% boost to Atk and max HP, boosts Atk, Def and Rec when BB gauge is over 50%, enormously boosts Spark damage & Spark damage slightly boosts BB gauge",
+    "th": "30% เพิ่มค่า โจมตี กับ HP สูงสุด, เพิ่ม โจมตี, ป้องกัน กับ ฟื้นฟู เมื่อ เกจ BB นั้นมากกว่า 50%, เพิ่มค่ามหาศาลให้ ความเสียหายสปาร์ค และ ความเสียหายสปาร์ค เพิ่มค่าเล็กน้อยให้ เกจ BB",
+    "vi": "30% boost to Atk and max HP, boosts Atk, Def and Rec when BB gauge is over 50%, enormously boosts Spark damage & Spark damage slightly boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_801275_NAME": {
+    "en": "Watchful Eye",
+    "es": "Watchful Eye",
+    "id": "Mata Pengawas",
+    "pt": "Watchful Eye",
+    "th": "วอทช์ฟูล อาย",
+    "vi": "Watchful Eye"
+  },
+  "MST_LEADERSKILLS_801276_DESCRIPTION": {
+    "en": "70% boost to Atk, max HP, considerably boosts Atk, Def, Rec when BB gauge is over 50%, 150% boost to Spark damage & Spark damage slightly boosts BB gauge",
+    "es": "70% boost to Atk, max HP, considerably boosts Atk, Def, Rec when BB gauge is over 50%, 150% boost to Spark damage & Spark damage slightly boosts BB gauge",
+    "id": "70% boost to Atk, max HP, considerably boosts Atk, Def, Rec when BB gauge is over 50%, 150% boost to Spark damage & Spark damage slightly boosts BB gauge",
+    "pt": "70% boost to Atk, max HP, considerably boosts Atk, Def, Rec when BB gauge is over 50%, 150% boost to Spark damage & Spark damage slightly boosts BB gauge",
+    "th": "70% boost to Atk, max HP, considerably boosts Atk, Def, Rec when BB gauge is over 50%, 150% boost to Spark damage & Spark damage slightly boosts BB gauge",
+    "vi": "70% boost to Atk, max HP, considerably boosts Atk, Def, Rec when BB gauge is over 50%, 150% boost to Spark damage & Spark damage slightly boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_801276_NAME": {
+    "en": "Prescient Guardian",
+    "es": "Prescient Guardian",
+    "id": "Penjaga Peramal",
+    "pt": "Prescient Guardian",
+    "th": "เพรสเซียนท์ กอร์เดี้ยน",
+    "vi": "Prescient Guardian"
+  },
+  "MST_LEADERSKILLS_801290_DESCRIPTION": {
+    "en": "40% boost to all parameters, hugely boosts BC, HC drop rate, Spark damage hugely boosts BC, HC drop rates, 100% boost to Spark damage & slight damage reduction for 2 turns when BC collected has exceeded certain amount",
+    "es": "40% boost to all parameters, hugely boosts BC, HC drop rate, Spark damage hugely boosts BC, HC drop rates, 100% boost to Spark damage & slight damage reduction for 2 turns when BC collected has exceeded certain amount",
+    "id": "40% ekstra semua parameter, amat menambah perolehan BC,HC, kerusakan Percikan amat menambah perolehan BC, HC, 100% ekstra kerusakan Percikan, agak mengurangi kerusakan 2 giliran saat BC terkumpul melampaui jumlah tertentu",
+    "pt": "40% boost to all parameters, hugely boosts BC, HC drop rate, Spark damage hugely boosts BC, HC drop rates, 100% boost to Spark damage & slight damage reduction for 2 turns when BC collected has exceeded certain amount",
+    "th": "40% เพิ่มค่า พารามิเตอร์ทั้งหมด, เพิ่มค่าอย่างสูงให้ อัตราดรอป BC, HC, ความเสียหายสปาร์ค เพิ่มค่าอย่างสูงให้ อัตราดรอป BC, HC, 100% เพิ่มค่า ความเสียหายสปาร์ค และ ลดค่าความเสียหายเล็กน้อย นาน 2 เทิร์น เมื่อ BC ที่สะสม เกินกว่าปริมาณหนึ่ง",
+    "vi": "40% boost to all parameters, hugely boosts BC, HC drop rate, Spark damage hugely boosts BC, HC drop rates, 100% boost to Spark damage & slight damage reduction for 2 turns when BC collected has exceeded certain amount"
+  },
   "MST_LEADERSKILLS_801290_NAME": {
     "en": "Boundless Love",
     "es": "Boundless Love",
@@ -1398,6 +1662,38 @@
     "pt": "No True Destiny",
     "th": "โน ทรู เดสตินี้",
     "vi": "No True Destiny"
+  },
+  "MST_LEADERSKILLS_820437_DESCRIPTION": {
+    "en": "60% boost to all parameters, greatly boosts BB Atk, hugely boosts BB gauge each turn & restores HP each turn",
+    "es": "60% boost to all parameters, greatly boosts BB Atk, hugely boosts BB gauge each turn & restores HP each turn",
+    "id": "60% boost to all parameters, greatly boosts BB Atk, hugely boosts BB gauge each turn & restores HP each turn",
+    "pt": "60% boost to all parameters, greatly boosts BB Atk, hugely boosts BB gauge each turn & restores HP each turn",
+    "th": "60% boost to all parameters, greatly boosts BB Atk, hugely boosts BB gauge each turn & restores HP each turn",
+    "vi": "60% boost to all parameters, greatly boosts BB Atk, hugely boosts BB gauge each turn & restores HP each turn"
+  },
+  "MST_LEADERSKILLS_820437_NAME": {
+    "en": "One Thousand Spells",
+    "es": "One Thousand Spells",
+    "id": "One Thousand Spells",
+    "pt": "One Thousand Spells",
+    "th": "One Thousand Spells",
+    "vi": "One Thousand Spells"
+  },
+  "MST_LEADERSKILLS_820438_DESCRIPTION": {
+    "en": "80% boost to all parameters, greatly boosts BB Atk, hugely boosts BB gauge each turn, restores HP each turn & 10% decrease to damage received",
+    "es": "80% boost to all parameters, greatly boosts BB Atk, hugely boosts BB gauge each turn, restores HP each turn & 10% decrease to damage received",
+    "id": "80% boost to all parameters, greatly boosts BB Atk, hugely boosts BB gauge each turn, restores HP each turn & 10% decrease to damage received",
+    "pt": "80% boost to all parameters, greatly boosts BB Atk, hugely boosts BB gauge each turn, restores HP each turn & 10% decrease to damage received",
+    "th": "80% boost to all parameters, greatly boosts BB Atk, hugely boosts BB gauge each turn, restores HP each turn & 10% decrease to damage received",
+    "vi": "80% boost to all parameters, greatly boosts BB Atk, hugely boosts BB gauge each turn, restores HP each turn & 10% decrease to damage received"
+  },
+  "MST_LEADERSKILLS_820438_NAME": {
+    "en": "An Eternity of Magic",
+    "es": "An Eternity of Magic",
+    "id": "An Eternity of Magic",
+    "pt": "An Eternity of Magic",
+    "th": "An Eternity of Magic",
+    "vi": "An Eternity of Magic"
   },
   "MST_LEADERSKILLS_820507_DESCRIPTION": {
     "en": "60% boost to all parameters of Water types, damage taken greatly boosts BB gauge, 15% damage reduction for 2 turns when damage taken has exceeded certain amount & adds probable 1 turn Atk reduction effect to attack for 2 turns when damage taken has exceeded certain amount",
@@ -3350,6 +3646,38 @@
     "pt": "Mind-Scarring Goddess",
     "th": "ไมนด์-สการ์ริ่ง ก็อดเดส",
     "vi": "Mind-Scarring Goddess"
+  },
+  "MST_LEADERSKILLS_860437_DESCRIPTION": {
+    "en": "60% boost to all parameters, considerably boosts OD gauge fill rate, Spark damage boosts BB gauge and restores HP & probable resistance against 1 KO attack",
+    "es": "60% boost to all parameters, considerably boosts OD gauge fill rate, Spark damage boosts BB gauge and restores HP & probable resistance against 1 KO attack",
+    "id": "60% boost to all parameters, considerably boosts OD gauge fill rate, Spark damage boosts BB gauge and restores HP & probable resistance against 1 KO attack",
+    "pt": "60% boost to all parameters, considerably boosts OD gauge fill rate, Spark damage boosts BB gauge and restores HP & probable resistance against 1 KO attack",
+    "th": "60% boost to all parameters, considerably boosts OD gauge fill rate, Spark damage boosts BB gauge and restores HP & probable resistance against 1 KO attack",
+    "vi": "60% boost to all parameters, considerably boosts OD gauge fill rate, Spark damage boosts BB gauge and restores HP & probable resistance against 1 KO attack"
+  },
+  "MST_LEADERSKILLS_860437_NAME": {
+    "en": "Beacon of Faith",
+    "es": "Beacon of Faith",
+    "id": "Beacon of Faith",
+    "pt": "Beacon of Faith",
+    "th": "Beacon of Faith",
+    "vi": "Beacon of Faith"
+  },
+  "MST_LEADERSKILLS_860438_DESCRIPTION": {
+    "en": "100% boost to all parameters, greatly boosts OD gauge fill rate, Spark damage considerably boosts BB gauge and restores HP & probable resistance against 2 KO attacks",
+    "es": "100% boost to all parameters, greatly boosts OD gauge fill rate, Spark damage considerably boosts BB gauge and restores HP & probable resistance against 2 KO attacks",
+    "id": "100% boost to all parameters, greatly boosts OD gauge fill rate, Spark damage considerably boosts BB gauge and restores HP & probable resistance against 2 KO attacks",
+    "pt": "100% boost to all parameters, greatly boosts OD gauge fill rate, Spark damage considerably boosts BB gauge and restores HP & probable resistance against 2 KO attacks",
+    "th": "100% boost to all parameters, greatly boosts OD gauge fill rate, Spark damage considerably boosts BB gauge and restores HP & probable resistance against 2 KO attacks",
+    "vi": "100% boost to all parameters, greatly boosts OD gauge fill rate, Spark damage considerably boosts BB gauge and restores HP & probable resistance against 2 KO attacks"
+  },
+  "MST_LEADERSKILLS_860438_NAME": {
+    "en": "Unwavering Shield",
+    "es": "Unwavering Shield",
+    "id": "Unwavering Shield",
+    "pt": "Unwavering Shield",
+    "th": "Unwavering Shield",
+    "vi": "Unwavering Shield"
   },
   "MST_LEADERSKILLS_860517_DESCRIPTION": {
     "en": "60% boost to all parameters of Dark types, 5% all elemental damage reduction & negates all status ailments",
@@ -6390,6 +6718,30 @@
     "pt": "Come on then. We don't have all day.",
     "th": "มาสักทีสิ เราไม่มีเวลาทั้งวันหรอกนะ",
     "vi": "Come on then. We don't have all day."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_10023_MESSAGES": {
+    "en": "Mortals, your endeavors end here.<br>Behold the true power of the Raug!",
+    "es": "Mortals, your endeavors end here.<br>Behold the true power of the Raug!",
+    "id": "Mortals, your endeavors end here.<br>Behold the true power of the Raug!",
+    "pt": "Mortals, your endeavors end here.<br>Behold the true power of the Raug!",
+    "th": "Mortals, your endeavors end here.<br>Behold the true power of the Raug!",
+    "vi": "Mortals, your endeavors end here.<br>Behold the true power of the Raug!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_10024_MESSAGES": {
+    "en": "Our ascent will not be challenged-<br>Repent while you still can!",
+    "es": "Our ascent will not be challenged-<br>Repent while you still can!",
+    "id": "Our ascent will not be challenged-<br>Repent while you still can!",
+    "pt": "Our ascent will not be challenged-<br>Repent while you still can!",
+    "th": "Our ascent will not be challenged-<br>Repent while you still can!",
+    "vi": "Our ascent will not be challenged-<br>Repent while you still can!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_10025_MESSAGES": {
+    "en": "Wretched mortals, your end is nigh-<br>Bear witness as your souls dissipate into stardust.",
+    "es": "Wretched mortals, your end is nigh-<br>Bear witness as your souls dissipate into stardust.",
+    "id": "Wretched mortals, your end is nigh-<br>Bear witness as your souls dissipate into stardust.",
+    "pt": "Wretched mortals, your end is nigh-<br>Bear witness as your souls dissipate into stardust.",
+    "th": "Wretched mortals, your end is nigh-<br>Bear witness as your souls dissipate into stardust.",
+    "vi": "Wretched mortals, your end is nigh-<br>Bear witness as your souls dissipate into stardust."
   },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_100_MESSAGES": {
     "en": "Will I be defeated by a human again?!<br>I can see the true source<br>of your power now!",
@@ -11450,7 +11802,7 @@
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_670_MESSAGES": {
     "en": "I am the god amongst gods... I am Alza Masta, the Pious Emperor. Bow before me, the ruler of this world.",
     "es": "I am the god amongst gods... I am Alza Masta, the Pious Emperor. Bow before me, the ruler of this world.",
-    "id": "I am the god amongst gods... I am Alza Masta, the Pious Emperor. Bow before me, the ruler of this world.",
+    "id": "Aku dewa di antara dewa... Aku Alza Masta, Kaisar Saleh. Membungkuklah di hadapanku, penguasa dunia ini.",
     "pt": "I am the god amongst gods... I am Alza Masta, the Pious Emperor. Bow before me, the ruler of this world.",
     "th": "I am the god amongst gods... I am Alza Masta, the Pious Emperor. Bow before me, the ruler of this world.",
     "vi": "I am the god amongst gods... I am Alza Masta, the Pious Emperor. Bow before me, the ruler of this world."
@@ -11458,7 +11810,7 @@
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_671_MESSAGES": {
     "en": "I praise your courage to face me in battle. However, you are more foolish than you are brave.",
     "es": "I praise your courage to face me in battle. However, you are more foolish than you are brave.",
-    "id": "I praise your courage to face me in battle. However, you are more foolish than you are brave.",
+    "id": "Aku memuji keberanianmu menghadapiku dalam perang. Namun kau lebih tolol ketimbang berani.",
     "pt": "I praise your courage to face me in battle. However, you are more foolish than you are brave.",
     "th": "I praise your courage to face me in battle. However, you are more foolish than you are brave.",
     "vi": "I praise your courage to face me in battle. However, you are more foolish than you are brave."
@@ -11466,7 +11818,7 @@
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_672_MESSAGES": {
     "en": "Hmph... You are relentless for a puny human. Perhaps I can find some use for your kind under my rule.",
     "es": "Hmph... You are relentless for a puny human. Perhaps I can find some use for your kind under my rule.",
-    "id": "Hmph... You are relentless for a puny human. Perhaps I can find some use for your kind under my rule.",
+    "id": "Hmph... Untuk manusia kecil, kau tak kenal lelah. Mungkin aku bisa menemukan kegunaan untuk jenismu di bawah kuasaku.",
     "pt": "Hmph... You are relentless for a puny human. Perhaps I can find some use for your kind under my rule.",
     "th": "Hmph... You are relentless for a puny human. Perhaps I can find some use for your kind under my rule.",
     "vi": "Hmph... You are relentless for a puny human. Perhaps I can find some use for your kind under my rule."
@@ -11474,7 +11826,7 @@
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_673_MESSAGES": {
     "en": "To withstand my attacks thus... It cannot be by your power alone. Could this power be...?",
     "es": "To withstand my attacks thus... It cannot be by your power alone. Could this power be...?",
-    "id": "To withstand my attacks thus... It cannot be by your power alone. Could this power be...?",
+    "id": "Untuk menahan seranganku... Itu tidak bisa kekuatanmu sendiri. Mungkinkah kekuatan ini...?",
     "pt": "To withstand my attacks thus... It cannot be by your power alone. Could this power be...?",
     "th": "To withstand my attacks thus... It cannot be by your power alone. Could this power be...?",
     "vi": "To withstand my attacks thus... It cannot be by your power alone. Could this power be...?"
@@ -11482,7 +11834,7 @@
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_674_MESSAGES": {
     "en": "No more games. I shall never forgive those who use Karna's power... Now face your destruction!",
     "es": "No more games. I shall never forgive those who use Karna's power... Now face your destruction!",
-    "id": "No more games. I shall never forgive those who use Karna's power... Now face your destruction!",
+    "id": "Tak ada permainan lagi. Takkan pernah kumaafkan yang memakai kekuatan Karna... Kini hadapi kehancuranmu!",
     "pt": "No more games. I shall never forgive those who use Karna's power... Now face your destruction!",
     "th": "No more games. I shall never forgive those who use Karna's power... Now face your destruction!",
     "vi": "No more games. I shall never forgive those who use Karna's power... Now face your destruction!"
@@ -11490,7 +11842,7 @@
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_675_MESSAGES": {
     "en": "I am the one in control now. If you must curse someone, curse those who wield Karna's power!",
     "es": "I am the one in control now. If you must curse someone, curse those who wield Karna's power!",
-    "id": "I am the one in control now. If you must curse someone, curse those who wield Karna's power!",
+    "id": "Akulah yang memegang kendali sekarang. Jika kau harus mengutuk seseorang, kutuklah yang memegang kekuatan Karna!",
     "pt": "I am the one in control now. If you must curse someone, curse those who wield Karna's power!",
     "th": "I am the one in control now. If you must curse someone, curse those who wield Karna's power!",
     "vi": "I am the one in control now. If you must curse someone, curse those who wield Karna's power!"
@@ -11498,7 +11850,7 @@
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_676_MESSAGES": {
     "en": "So you too believe in Karna... Regardless of how much the world adores him, I will never forgive him! Never!",
     "es": "So you too believe in Karna... Regardless of how much the world adores him, I will never forgive him! Never!",
-    "id": "So you too believe in Karna... Regardless of how much the world adores him, I will never forgive him! Never!",
+    "id": "Jadi kau juga percaya pada Karna... Tak peduli seberapa banyak dunia mengaguminya, dia takkan pernah kumaafkan! Takkan pernah!",
     "pt": "So you too believe in Karna... Regardless of how much the world adores him, I will never forgive him! Never!",
     "th": "So you too believe in Karna... Regardless of how much the world adores him, I will never forgive him! Never!",
     "vi": "So you too believe in Karna... Regardless of how much the world adores him, I will never forgive him! Never!"
@@ -11506,7 +11858,7 @@
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_677_MESSAGES": {
     "en": "I am Alza Masta, the Pious Emperor! I will not bend to my brother's will, nor to his power!",
     "es": "I am Alza Masta, the Pious Emperor! I will not bend to my brother's will, nor to his power!",
-    "id": "I am Alza Masta, the Pious Emperor! I will not bend to my brother's will, nor to his power!",
+    "id": "Aku Alza Masta, Kaisar Saleh! Aku takkan menuruti kehendak saudaraku ataupun kekuatannya!",
     "pt": "I am Alza Masta, the Pious Emperor! I will not bend to my brother's will, nor to his power!",
     "th": "I am Alza Masta, the Pious Emperor! I will not bend to my brother's will, nor to his power!",
     "vi": "I am Alza Masta, the Pious Emperor! I will not bend to my brother's will, nor to his power!"
@@ -11514,7 +11866,7 @@
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_678_MESSAGES": {
     "en": "Your opponent is the Holy Emperor's younger brother, a pretty powerful god. A single mistake could prove fatal...",
     "es": "Your opponent is the Holy Emperor's younger brother, a pretty powerful god. A single mistake could prove fatal...",
-    "id": "Your opponent is the Holy Emperor's younger brother, a pretty powerful god. A single mistake could prove fatal...",
+    "id": "Lawanmu adalah adik Kaisar Suci, dewa yang lumayan kuat. Satu kesalahan saja bisa fatal...",
     "pt": "Your opponent is the Holy Emperor's younger brother, a pretty powerful god. A single mistake could prove fatal...",
     "th": "Your opponent is the Holy Emperor's younger brother, a pretty powerful god. A single mistake could prove fatal...",
     "vi": "Your opponent is the Holy Emperor's younger brother, a pretty powerful god. A single mistake could prove fatal..."
@@ -11522,7 +11874,7 @@
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_679_MESSAGES": {
     "en": "I sense something coming from this demon... What's it planning...?",
     "es": "I sense something coming from this demon... What's it planning...?",
-    "id": "I sense something coming from this demon... What's it planning...?",
+    "id": "Aku merasa sesuatu keluar dari setan ini... Apa yang direncanakannya...?",
     "pt": "I sense something coming from this demon... What's it planning...?",
     "th": "I sense something coming from this demon... What's it planning...?",
     "vi": "I sense something coming from this demon... What's it planning...?"
@@ -11538,7 +11890,7 @@
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_680_MESSAGES": {
     "en": "Tsch... Guess only my \"Limitless\" will do the trick...",
     "es": "Tsch... Guess only my \"Limitless\" will do the trick...",
-    "id": "Tsch... Guess only my \"Limitless\" will do the trick...",
+    "id": "Ckckck... Kurasa hanya \"Tanpa Batas\" milikku yang bisa berhasil...",
     "pt": "Tsch... Guess only my \"Limitless\" will do the trick...",
     "th": "Tsch... Guess only my \"Limitless\" will do the trick...",
     "vi": "Tsch... Guess only my \"Limitless\" will do the trick..."
@@ -11546,73 +11898,73 @@
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_681_MESSAGES": {
     "en": "Now we'll begin a great battle. I'm going to observe how well you do against Karna Masta, the highest among the Divine Ten.",
     "es": "Now we'll begin a great battle. I'm going to observe how well you do against Karna Masta, the highest among the Divine Ten.",
-    "id": "Now we'll begin a great battle. I'm going to observe how well you do against Karna Masta, the highest among the Divine Ten.",
+    "id": "Kini kita mulai perang besar. Aku akan mengamati seberapa bagus kamu melawan Karna Masta, yang tertinggi di antara 10 Ilahi.",
     "pt": "Now we'll begin a great battle. I'm going to observe how well you do against Karna Masta, the highest among the Divine Ten.",
-    "th": "Now we'll begin a great battle. I'm going to observe how well you do against Karna Masta, the highest among the Divine Ten.",
+    "th": "ตอนนี้เราจะเริ่มต้นการต่อสู้อันยิ่งใหญ่ ข้าจะคอยสังเกตว่าคุณทำได้ดีแค่ไหนกับ คาร์นา มาสตา ผู้ที่อยู่สูงที่สุดในบรรดา สิบศักดิ์สิทธิ์",
     "vi": "Now we'll begin a great battle. I'm going to observe how well you do against Karna Masta, the highest among the Divine Ten."
   },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_682_MESSAGES": {
     "en": "Know fear, and bow before me, human. You stand before the one true Holy Emperor, Karna Masta, supreme among all gods!",
     "es": "Know fear, and bow before me, human. You stand before the one true Holy Emperor, Karna Masta, supreme among all gods!",
-    "id": "Know fear, and bow before me, human. You stand before the one true Holy Emperor, Karna Masta, supreme among all gods!",
+    "id": "Takutlah dan menunduklah di hadapanku, manusia. Kau berdiri di hadapan satu Kaisar Suci sejati, Karna Masta, supremasi dari semua dewa!",
     "pt": "Know fear, and bow before me, human. You stand before the one true Holy Emperor, Karna Masta, supreme among all gods!",
-    "th": "Know fear, and bow before me, human. You stand before the one true Holy Emperor, Karna Masta, supreme among all gods!",
+    "th": "จงกลัว, แล้วก้มหัวลงให้ข้า เจ้ามนุษย์ เจ้ายืนอยู่ต่อหน้าจักรพรรดิศักดิ์สิทธิ์ที่แท้จริงเพียงหนึ่งเดียว, คาร์นา มาสตา, สูงสุดในหมู่พระเจ้าทั้งหมด!",
     "vi": "Know fear, and bow before me, human. You stand before the one true Holy Emperor, Karna Masta, supreme among all gods!"
   },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_683_MESSAGES": {
     "en": "Impressive... A mere human, wielding the power of Summoning that I wrought. I know not whence you gained your power, but I shall test it.",
     "es": "Impressive... A mere human, wielding the power of Summoning that I wrought. I know not whence you gained your power, but I shall test it.",
-    "id": "Impressive... A mere human, wielding the power of Summoning that I wrought. I know not whence you gained your power, but I shall test it.",
+    "id": "Impresif… Manusia biasa, memegang kekuatan Memanggil yang kubuat. Aku tak tahu mana kamu mendapatkan kekuatanmu, tapi akan kuuji.",
     "pt": "Impressive... A mere human, wielding the power of Summoning that I wrought. I know not whence you gained your power, but I shall test it.",
-    "th": "Impressive... A mere human, wielding the power of Summoning that I wrought. I know not whence you gained your power, but I shall test it.",
+    "th": "น่าประทับใจ... มนุษย์ธรรมดา, ใช้อำนาจการอัญเชิญซึ่งข้าได้สร้างขึ้น ข้าไม่รู้ว่าเจ้าได้อำนาจมาจากไหน แต่ข้าจะทดสอบ",
     "vi": "Impressive... A mere human, wielding the power of Summoning that I wrought. I know not whence you gained your power, but I shall test it."
   },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_684_MESSAGES": {
     "en": "Let us play a game... To me, my faithful servant! You will make a perfect foe...a human to face a human!",
     "es": "Let us play a game... To me, my faithful servant! You will make a perfect foe...a human to face a human!",
-    "id": "Let us play a game... To me, my faithful servant! You will make a perfect foe...a human to face a human!",
+    "id": "Mari kita main… Kepadaku, pelayanku yang setia! Kau akan menjadi musuh yang sempurna… manusia untuk menghadapi manusia!",
     "pt": "Let us play a game... To me, my faithful servant! You will make a perfect foe...a human to face a human!",
-    "th": "Let us play a game... To me, my faithful servant! You will make a perfect foe...a human to face a human!",
+    "th": "พวกเรามาเล่นเกมกัน... สำหรับข้า, ผู้รับใช้ที่ซื่อสัตย์ของข้า! เจ้าจะเป็นคู่ปรับที่สมบูรณ์แบบ...มนุษย์เผชิญหน้ากับมนุษย์!",
     "vi": "Let us play a game... To me, my faithful servant! You will make a perfect foe...a human to face a human!"
   },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_685_MESSAGES": {
     "en": "So even a mere human can mount some resistance against a god, with my power of Summoning... You are as irksome as you are shrewd.",
     "es": "So even a mere human can mount some resistance against a god, with my power of Summoning... You are as irksome as you are shrewd.",
-    "id": "So even a mere human can mount some resistance against a god, with my power of Summoning... You are as irksome as you are shrewd.",
+    "id": "Bahkan manusia biasa bisa tahan melawan dewa, tanpa kekuatan Memanggilku… Kau menjengkelkan karena licik.",
     "pt": "So even a mere human can mount some resistance against a god, with my power of Summoning... You are as irksome as you are shrewd.",
-    "th": "So even a mere human can mount some resistance against a god, with my power of Summoning... You are as irksome as you are shrewd.",
+    "th": "นี่แม้แต่มนุษย์เพียงคนเดียวก็สามารถต้านทานต่อพระเจ้าได้, ด้วยพลังการอัญเชิญของข้า... พวกเจ้าช่างน่ารำคสญมากพอๆ กับความฉลาดของพวกเจ้า",
     "vi": "So even a mere human can mount some resistance against a god, with my power of Summoning... You are as irksome as you are shrewd."
   },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_686_MESSAGES": {
     "en": "Enough games. Humanity has defied me. Their reasons matter not. It is their actions that have invited their demise!",
     "es": "Enough games. Humanity has defied me. Their reasons matter not. It is their actions that have invited their demise!",
-    "id": "Enough games. Humanity has defied me. Their reasons matter not. It is their actions that have invited their demise!",
+    "id": "Cukup permainan ini. Manusia menantangku. Alasan mereka tidak penting. Tindakan mereka yang mengundang tamatnya mereka!",
     "pt": "Enough games. Humanity has defied me. Their reasons matter not. It is their actions that have invited their demise!",
-    "th": "Enough games. Humanity has defied me. Their reasons matter not. It is their actions that have invited their demise!",
+    "th": "เลิกเล่นกันได้แล้ว มนุษยชาติได้ท้าทายข้า เหตุผลของพวกมันไม่สำคัญ การกระทำของพวกนั้นเป็นสิ่งที่เชื้อเชิญความตายเข้ามาหาเอง!",
     "vi": "Enough games. Humanity has defied me. Their reasons matter not. It is their actions that have invited their demise!"
   },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_687_MESSAGES": {
     "en": "So you still resist... Then in my mercy, I shall grant you despair. Know the foolishness of your defiance, and fall!",
     "es": "So you still resist... Then in my mercy, I shall grant you despair. Know the foolishness of your defiance, and fall!",
-    "id": "So you still resist... Then in my mercy, I shall grant you despair. Know the foolishness of your defiance, and fall!",
+    "id": "Jadi kau masih bertahan… Dengan belas kasihku, kau kuberi putus asa. Kenali ketololan pemberontakanmu, dan kalah!",
     "pt": "So you still resist... Then in my mercy, I shall grant you despair. Know the foolishness of your defiance, and fall!",
-    "th": "So you still resist... Then in my mercy, I shall grant you despair. Know the foolishness of your defiance, and fall!",
+    "th": "นี่เจ้ายังคงต่อต้านอยู่อีกรึ... เช่นนั้นข้าจะเมตตา, ข้าจะมอบความสิ้นหวังให้กับพวกเจ้า จงรับรู้ความโง่เขลาของการที่พวกเจ้าท้าทายข้าและล่มสลายไปซะ!",
     "vi": "So you still resist... Then in my mercy, I shall grant you despair. Know the foolishness of your defiance, and fall!"
   },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_688_MESSAGES": {
     "en": "I am the sole supreme being of this world...Holy Emperor Karna Masta.",
     "es": "I am the sole supreme being of this world...Holy Emperor Karna Masta.",
-    "id": "I am the sole supreme being of this world...Holy Emperor Karna Masta.",
+    "id": "Aku makhluk supremasi tunggal dunia ini… Kaisar Suci Karna Masta.",
     "pt": "I am the sole supreme being of this world...Holy Emperor Karna Masta.",
-    "th": "I am the sole supreme being of this world...Holy Emperor Karna Masta.",
+    "th": "ข้าคือสิ่งที่สูงส่งที่สุดเพียงหนึ่งเดียวของโลกนี้...จักรพรรดิศักดิ์สิทธิ์ คาร์นา มาสตา",
     "vi": "I am the sole supreme being of this world...Holy Emperor Karna Masta."
   },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_689_MESSAGES": {
     "en": "I will never fall, no matter the foes I face or the means they may resort to. It is inconceivable!",
     "es": "I will never fall, no matter the foes I face or the means they may resort to. It is inconceivable!",
-    "id": "I will never fall, no matter the foes I face or the means they may resort to. It is inconceivable!",
+    "id": "Aku takkan pernah kalah, tak peduli musuh yang kuhadapi atau taktik mereka! Itu tak terbayangkan!",
     "pt": "I will never fall, no matter the foes I face or the means they may resort to. It is inconceivable!",
-    "th": "I will never fall, no matter the foes I face or the means they may resort to. It is inconceivable!",
+    "th": "ข้าจะไม่มีวันล้ม, ไม่สำคัญว่าเป็นศัตรูที่ข้าเผชิญหน้าหรือวิธีการที่พวกมันจะใช้ มันไม่มีทางเป็นจริง!",
     "vi": "I will never fall, no matter the foes I face or the means they may resort to. It is inconceivable!"
   },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_68_MESSAGES": {
@@ -11626,25 +11978,25 @@
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_690_MESSAGES": {
     "en": "You really have to go all-in against the Holy Emperor. You'll need your Summoning Arts to win, but an iron will might be even better.",
     "es": "You really have to go all-in against the Holy Emperor. You'll need your Summoning Arts to win, but an iron will might be even better.",
-    "id": "You really have to go all-in against the Holy Emperor. You'll need your Summoning Arts to win, but an iron will might be even better.",
+    "id": "Kamu harus habis-habisan melawan Kaisar Suci. Perlu Seni Memanggil untuk menang, tapi tekad baja lebih baik lagi.",
     "pt": "You really have to go all-in against the Holy Emperor. You'll need your Summoning Arts to win, but an iron will might be even better.",
-    "th": "You really have to go all-in against the Holy Emperor. You'll need your Summoning Arts to win, but an iron will might be even better.",
+    "th": "เจ้าต้องทุ่มพลังทั้งหมดที่มีสู้กับจักรพรรดิศักดิ์สิทธิ์ เจ้าจะต้องการศาสตร์การอัญเชิญของเจ้าเพื่อเอาชนะ, แต่เจตจำนงที่แข็งกล้านั้นอาจจะดียิ่งกว่า",
     "vi": "You really have to go all-in against the Holy Emperor. You'll need your Summoning Arts to win, but an iron will might be even better."
   },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_691_MESSAGES": {
     "en": "You'll face the creator of the Summoning Arts himself this time. Honestly, you stand no chance. Try using your UBB as much as you can here.",
     "es": "You'll face the creator of the Summoning Arts himself this time. Honestly, you stand no chance. Try using your UBB as much as you can here.",
-    "id": "You'll face the creator of the Summoning Arts himself this time. Honestly, you stand no chance. Try using your UBB as much as you can here.",
+    "id": "Kau akan menghadapi pencipta Seni Memanggil kali ini. Jujur saja, kamu tak ada peluang. Coba gunakan UBB sebanyak yang kamu bisa.",
     "pt": "You'll face the creator of the Summoning Arts himself this time. Honestly, you stand no chance. Try using your UBB as much as you can here.",
-    "th": "You'll face the creator of the Summoning Arts himself this time. Honestly, you stand no chance. Try using your UBB as much as you can here.",
+    "th": "เจ้าจะต้องเจอกับผู้สร้างศาสตร์แห่งการอัญเชิญในครั้งนี้ บอกตามตรง, เจ้าไม่รอดแน่ พยายามใช้ UBB ของเจ้าให้มากที่สุดเท่าที่เจ้าจะทำได้",
     "vi": "You'll face the creator of the Summoning Arts himself this time. Honestly, you stand no chance. Try using your UBB as much as you can here."
   },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_692_MESSAGES": {
     "en": "The moment you feel you're in danger, swap your Units out right away. Karna Masta will not go easy on you if you miss your chance.",
     "es": "The moment you feel you're in danger, swap your Units out right away. Karna Masta will not go easy on you if you miss your chance.",
-    "id": "The moment you feel you're in danger, swap your Units out right away. Karna Masta will not go easy on you if you miss your chance.",
+    "id": "Saat kau merasakan bahaya, tukar Unitmu langsung. Karna Masta akan menghajarmu jika peluangmu terlewatkan.",
     "pt": "The moment you feel you're in danger, swap your Units out right away. Karna Masta will not go easy on you if you miss your chance.",
-    "th": "The moment you feel you're in danger, swap your Units out right away. Karna Masta will not go easy on you if you miss your chance.",
+    "th": "ในช่วงเวลาที่รู้สึกว่าเจ้าอยู่ในอันตราย, สลับยูนิตของเจ้าออกมาทันที คาร์นา มาสตา จะไม่ออมมือให้เจ้าหากเจ้าพลาดโอกาส",
     "vi": "The moment you feel you're in danger, swap your Units out right away. Karna Masta will not go easy on you if you miss your chance."
   },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_69_MESSAGES": {
@@ -86470,253 +86822,5 @@
     "pt": "La Guardo",
     "th": "ลา กวาโด้",
     "vi": "La Guardo"
-  },
-  "MST_MONSTERS_56910_NAME": {
-    "en": "La Guardo",
-    "es": "La Guardo",
-    "id": "Cockatrice",
-    "pt": "La Guardo",
-    "th": "ลา กวาโด้",
-    "vi": "La Guardo"
-  },
-  "MST_MONSTERS_56911_NAME": {
-    "en": "La Guardo",
-    "es": "La Guardo",
-    "id": "Catoblepas",
-    "pt": "La Guardo",
-    "th": "ลา กวาโด้",
-    "vi": "La Guardo"
-  },
-  "MST_MONSTERS_56912_NAME": {
-    "en": "La Guardo",
-    "es": "La Guardo",
-    "id": "La Guardo",
-    "pt": "La Guardo",
-    "th": "ลา กวาโด",
-    "vi": "La Guardo"
-  },
-  "MST_MONSTERS_56913_NAME": {
-    "en": "La Guardo",
-    "es": "La Guardo",
-    "id": "La Guardo",
-    "pt": "La Guardo",
-    "th": "ลา กวาโด",
-    "vi": "La Guardo"
-  },
-  "MST_MONSTERS_56950_NAME": {
-    "en": "Del Bardo",
-    "es": "Del Bardo",
-    "id": "Del Bardo",
-    "pt": "Del Bardo",
-    "th": "เดอ บาโด",
-    "vi": "Del Bardo"
-  },
-  "MST_MONSTERS_56951_NAME": {
-    "en": "Del Bardo",
-    "es": "Del Bardo",
-    "id": "Del Bardo",
-    "pt": "Del Bardo",
-    "th": "เดอ บาโด",
-    "vi": "Del Bardo"
-  },
-  "MST_MONSTERS_56952_NAME": {
-    "en": "Del Bardo",
-    "es": "Del Bardo",
-    "id": "Del Bardo",
-    "pt": "Del Bardo",
-    "th": "เดอ บาโด",
-    "vi": "Del Bardo"
-  },
-  "MST_MONSTERS_56953_NAME": {
-    "en": "Del Bardo",
-    "es": "Del Bardo",
-    "id": "Del Bardo",
-    "pt": "Del Bardo",
-    "th": "เดอ บาโด",
-    "vi": "Del Bardo"
-  },
-  "MST_MONSTERS_56954_NAME": {
-    "en": "Del Bardo",
-    "es": "Del Bardo",
-    "id": "Del Bardo",
-    "pt": "Del Bardo",
-    "th": "เดอ บาโด",
-    "vi": "Del Bardo"
-  },
-  "MST_MONSTERS_56955_NAME": {
-    "en": "Del Bardo",
-    "es": "Del Bardo",
-    "id": "Del Bardo",
-    "pt": "Del Bardo",
-    "th": "เดอ บาโด",
-    "vi": "Del Bardo"
-  },
-  "MST_MONSTERS_56956_NAME": {
-    "en": "Del Bardo",
-    "es": "Del Bardo",
-    "id": "Del Bardo",
-    "pt": "Del Bardo",
-    "th": "เดอ บาโด",
-    "vi": "Del Bardo"
-  },
-  "MST_MONSTERS_56957_NAME": {
-    "en": "Del Bardo",
-    "es": "Del Bardo",
-    "id": "Del Bardo",
-    "pt": "Del Bardo",
-    "th": "เดอ บาโด",
-    "vi": "Del Bardo"
-  },
-  "MST_MONSTERS_56958_NAME": {
-    "en": "Del Bardo",
-    "es": "Del Bardo",
-    "id": "Del Bardo",
-    "pt": "Del Bardo",
-    "th": "เดล บาร์โด",
-    "vi": "Del Bardo"
-  },
-  "MST_MONSTERS_56959_NAME": {
-    "en": "Del Bardo",
-    "es": "Del Bardo",
-    "id": "Del Bardo",
-    "pt": "Del Bardo",
-    "th": "เดล บาร์โด",
-    "vi": "Del Bardo"
-  },
-  "MST_MONSTERS_56960_NAME": {
-    "en": "Del Bardo",
-    "es": "Del Bardo",
-    "id": "Del Bardo",
-    "pt": "Del Bardo",
-    "th": "เดอ บาโด",
-    "vi": "Del Bardo"
-  },
-  "MST_MONSTERS_56961_NAME": {
-    "en": "Del Bardo",
-    "es": "Del Bardo",
-    "id": "Del Bardo",
-    "pt": "Del Bardo",
-    "th": "เดอ บาโด",
-    "vi": "Del Bardo"
-  },
-  "MST_MONSTERS_56962_NAME": {
-    "en": "Del Bardo",
-    "es": "Del Bardo",
-    "id": "Del Bardo",
-    "pt": "Del Bardo",
-    "th": "เดอ บาโด",
-    "vi": "Del Bardo"
-  },
-  "MST_MONSTERS_56963_NAME": {
-    "en": "Del Bardo",
-    "es": "Del Bardo",
-    "id": "Del Bardo",
-    "pt": "Del Bardo",
-    "th": "เดอ บาโด",
-    "vi": "Del Bardo"
-  },
-  "MST_MONSTERS_56964_NAME": {
-    "en": "Del Bardo",
-    "es": "Del Bardo",
-    "id": "Petir Mengiris Raiden",
-    "pt": "Del Bardo",
-    "th": "เดล บาโด้",
-    "vi": "Del Bardo"
-  },
-  "MST_MONSTERS_56965_NAME": {
-    "en": "Del Bardo",
-    "es": "Del Bardo",
-    "id": "Kepala Insinyur Garnan",
-    "pt": "Del Bardo",
-    "th": "เดล บาโด้",
-    "vi": "Del Bardo"
-  },
-  "MST_MONSTERS_56966_NAME": {
-    "en": "Del Bardo",
-    "es": "Del Bardo",
-    "id": "Gigas",
-    "pt": "Del Bardo",
-    "th": "เดล บาโด้",
-    "vi": "Del Bardo"
-  },
-  "MST_MONSTERS_56967_NAME": {
-    "en": "Del Bardo",
-    "es": "Del Bardo",
-    "id": "Del Bardo",
-    "pt": "Del Bardo",
-    "th": "เดล บาร์โด",
-    "vi": "Del Bardo"
-  },
-  "MST_MONSTERS_56968_NAME": {
-    "en": "Del Bardo",
-    "es": "Del Bardo",
-    "id": "Del Bardo",
-    "pt": "Del Bardo",
-    "th": "เดล บาร์โด",
-    "vi": "Del Bardo"
-  },
-  "MST_MONSTERS_57000_NAME": {
-    "en": "Spiritual Warrior Raaga",
-    "es": "Guerrero místico Raaga",
-    "id": "Ksatria Spiritual Raaga",
-    "pt": "Raaga Guerreiro Espiritual",
-    "th": "สปิริตชวล วอริเออร์ รากะ",
-    "vi": "Chiến Binh Tinh Thần Raaga"
-  },
-  "MST_MONSTERS_57050_NAME": {
-    "en": "Supreme Militant Raaga",
-    "es": "Militante magno Raaga",
-    "id": "Militan Supremasi Raaga",
-    "pt": "Raaga Lutador Supremo",
-    "th": "ซูพรีม มิลิแทนท์ รากะ",
-    "vi": "Raaga Chiến Binh Tối Thượng"
-  },
-  "MST_MONSTERS_57051_NAME": {
-    "en": "Supreme Militant Raaga",
-    "es": "Militante magno Raaga",
-    "id": "Militan Supremasi Raaga",
-    "pt": "Raaga Lutador Supremo",
-    "th": "ซูพรีม มิลิแทนท์ รากะ",
-    "vi": "Raaga Chiến Binh Tối Thượng"
-  },
-  "MST_MONSTERS_57100_NAME": {
-    "en": "Demon Champion Raaga",
-    "es": "Campeón maléfico Raaga",
-    "id": "Juara Setan Raaga",
-    "pt": "Raaga Campeão Demoníaco",
-    "th": "เดม่อน แชมเปี้ยน รากะ",
-    "vi": "Raaga Quỷ Vương"
-  },
-  "MST_MONSTERS_57101_NAME": {
-    "en": "Demon Champion Raaga",
-    "es": "Demon Champion Raaga",
-    "id": "Setan Tipu Daya Mora",
-    "pt": "Demon Champion Raaga",
-    "th": "เดม่อน แชมเปี้ยน ราห์กะ",
-    "vi": "Demon Champion Raaga"
-  },
-  "MST_MONSTERS_57102_NAME": {
-    "en": "Demon Champion Raaga",
-    "es": "Demon Champion Raaga",
-    "id": "Demon Champion Raaga",
-    "pt": "Demon Champion Raaga",
-    "th": "เดม่อน แชมเปี้ยน รากะ",
-    "vi": "Demon Champion Raaga"
-  },
-  "MST_MONSTERS_57103_NAME": {
-    "en": "Demon Champion Raaga",
-    "es": "Demon Champion Raaga",
-    "id": "Juara Setan Raaga",
-    "pt": "Demon Champion Raaga",
-    "th": "เดม่อน แชมเปี้ยน รากะ",
-    "vi": "Demon Champion Raaga"
-  },
-  "MST_MONSTERS_57104_NAME": {
-    "en": "Demon Champion Raaga",
-    "es": "Demon Champion Raaga",
-    "id": "Juara Setan Raaga",
-    "pt": "Demon Champion Raaga",
-    "th": "เดม่อน แชมป์เปี้ยน ราอากะ",
-    "vi": "Demon Champion Raaga"
   }
 }
