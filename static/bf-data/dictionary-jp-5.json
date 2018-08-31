@@ -1,4 +1,108 @@
 {
+  "MST_SKILLS_2122631_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122631_NAME": {
+    "en": "I'm strong. Please be my...",
+    "es": "Soy fuerte. Por favor, sé mi...",
+    "id": "Aku kuat. Jadilah...",
+    "pt": "Sou forte. Seja meu...",
+    "th": "ข้าแข็งแกร่งมาก ช่วยเป็น...",
+    "vi": "I'm strong. Please be my..."
+  },
+  "MST_SKILLS_2122632_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122632_NAME": {
+    "en": "You may become my friend!",
+    "es": "¡Puedes convertirte en mi amigo!",
+    "id": "Kau boleh menjadi temanku!",
+    "pt": "Você pode ser meu amigo!",
+    "th": "เจ้าอาจจะเป็นเพื่อนกับข้าได้นะ!",
+    "vi": "You may become my friend!"
+  },
+  "MST_SKILLS_2122633_DESCRIPTION": {
+    "en": "18 combo Dark powerful attack on all enemies, probable drastic damage cut for 1 turn & adds Dark and Light elements to attack for 3 turns ",
+    "es": "Combo grupal de 18 poderosos ataque oscuros. Puede reducir drásticamente el daño por 1 turno. Agrega luz y oscuridad al ataque por 3 turnos ",
+    "id": "18 kombo serangan Gelap kuat ke semua musuh, kemungkinan pengurangan kerusakan drastis untuk 1 giliran & menambahkan elemen Gelap dan Terang ke serangan semua sekutu untuk 3 giliran",
+    "pt": "Combo de 18 golpes poderosos de sombra em todos os inimigos, provável corte drástico por uma rodada e adiciona os elementos sombra e luz ao ataque por 3 rodadas ",
+    "th": "18 คอมโบ โจมตีธาตุมืดอย่างรุนแรง ใส่ศัตรูทั้งหมด, อาจจะทำให้คิดสถานะ ลบความเสียหายอย่างรุนแรง นาน 1 เทิร์น และ เพิ่ม ธาตุมืด กับ แสง ให้กับการโจมตี นาน 3 เทิร์น ",
+    "vi": "18 combo Dark powerful attack on all enemies, probable drastic damage cut for 1 turn & adds Dark and Light elements to attack for 3 turns "
+  },
+  "MST_SKILLS_2122633_NAME": {
+    "en": "I'll make you like me!",
+    "es": "¡Haré que me quieras!",
+    "id": "Akan kubuat kau menyukaiku!",
+    "pt": "Vou deixar você como eu!",
+    "th": "ข้าจะทำให้ท่านชอบข้าให้ได้!",
+    "vi": "I'll make you like me!"
+  },
+  "MST_SKILLS_2122634_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122634_NAME": {
+    "en": "Hmph, you're all talk.",
+    "es": "Hmph, tú eres de los que hablan mucho.",
+    "id": "Hmph, kau omong doang.",
+    "pt": "Hunf, puro papo.",
+    "th": "หืม พูดจบแล้วเรอะ",
+    "vi": "Hmph, you're all talk."
+  },
+  "MST_SKILLS_212263_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_212263_NAME": {
+    "en": "I've enjoyed this battle.",
+    "es": "He disfrutado esta batalla.",
+    "id": "Aku menikmati perang ini.",
+    "pt": "Eu gostei desse embate.",
+    "th": "ข้าสนุกกับการต่อสู้นี้",
+    "vi": "I've enjoyed this battle."
+  },
+  "MST_SKILLS_21226400_NAME": {
+    "en": "But it's time to end it now.",
+    "es": "But it's time to end it now.",
+    "id": "Tapi saatnya untuk diakhiri.",
+    "pt": "But it's time to end it now.",
+    "th": "แต่ตอนนี้ได้เวลาส่งท้ายแล้ว",
+    "vi": "But it's time to end it now."
+  },
+  "MST_SKILLS_2122640_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122640_NAME": {
+    "en": "E-Entry number 3, Tiara!",
+    "es": "¡Participante número 3, Tiara!",
+    "id": "Pin-Pintu masuk nomor",
+    "pt": "C-Candidato número 3, Tiara!",
+    "th": "ผู้แข่งขันหมายเลข 3: เทียร่า!",
+    "vi": "E-Entry number 3, Tiara!"
+  },
   "MST_SKILLS_2122641_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -86191,6 +86295,38 @@
     "th": "เฟท เซ็นเซอเรด",
     "vi": "Fate Censured"
   },
+  "MST_SKILLS_2820437_DESCRIPTION": {
+    "en": "20 combo massive Water attack on all foes (25% active Pierce to Fire, Water types), enormously boosts Atk, Def, Rec relative to max HP for 3 turns, hugely boosts max HP, fully restores HP for 3 turns & enormous additional damage reduction for 3 turns",
+    "es": "20 combo massive Water attack on all foes (25% active Pierce to Fire, Water types), enormously boosts Atk, Def, Rec relative to max HP for 3 turns, hugely boosts max HP, fully restores HP for 3 turns & enormous additional damage reduction for 3 turns",
+    "id": "20 combo massive Water attack on all foes (25% active Pierce to Fire, Water types), enormously boosts Atk, Def, Rec relative to max HP for 3 turns, hugely boosts max HP, fully restores HP for 3 turns & enormous additional damage reduction for 3 turns",
+    "pt": "20 combo massive Water attack on all foes (25% active Pierce to Fire, Water types), enormously boosts Atk, Def, Rec relative to max HP for 3 turns, hugely boosts max HP, fully restores HP for 3 turns & enormous additional damage reduction for 3 turns",
+    "th": "20 combo massive Water attack on all foes (25% active Pierce to Fire, Water types), enormously boosts Atk, Def, Rec relative to max HP for 3 turns, hugely boosts max HP, fully restores HP for 3 turns & enormous additional damage reduction for 3 turns",
+    "vi": "20 combo massive Water attack on all foes (25% active Pierce to Fire, Water types), enormously boosts Atk, Def, Rec relative to max HP for 3 turns, hugely boosts max HP, fully restores HP for 3 turns & enormous additional damage reduction for 3 turns"
+  },
+  "MST_SKILLS_2820437_NAME": {
+    "en": "Shatter them, Aeglun!",
+    "es": "Shatter them, Aeglun!",
+    "id": "Shatter them, Aeglun!",
+    "pt": "Shatter them, Aeglun!",
+    "th": "Shatter them, Aeglun!",
+    "vi": "Shatter them, Aeglun!"
+  },
+  "MST_SKILLS_2820438_DESCRIPTION": {
+    "en": "25 combo massive Water attack on all foes (25% active Pierce to Fire, Water types), enormously boosts Atk, Def, Rec relative to max HP for 3 turns, enormously boosts max HP, fully restores HP for 3 turns, enormous additional damage reduction for 3 turns & purges ES disable effect from all allies",
+    "es": "25 combo massive Water attack on all foes (25% active Pierce to Fire, Water types), enormously boosts Atk, Def, Rec relative to max HP for 3 turns, enormously boosts max HP, fully restores HP for 3 turns, enormous additional damage reduction for 3 turns & purges ES disable effect from all allies",
+    "id": "25 combo massive Water attack on all foes (25% active Pierce to Fire, Water types), enormously boosts Atk, Def, Rec relative to max HP for 3 turns, enormously boosts max HP, fully restores HP for 3 turns, enormous additional damage reduction for 3 turns & purges ES disable effect from all allies",
+    "pt": "25 combo massive Water attack on all foes (25% active Pierce to Fire, Water types), enormously boosts Atk, Def, Rec relative to max HP for 3 turns, enormously boosts max HP, fully restores HP for 3 turns, enormous additional damage reduction for 3 turns & purges ES disable effect from all allies",
+    "th": "25 combo massive Water attack on all foes (25% active Pierce to Fire, Water types), enormously boosts Atk, Def, Rec relative to max HP for 3 turns, enormously boosts max HP, fully restores HP for 3 turns, enormous additional damage reduction for 3 turns & purges ES disable effect from all allies",
+    "vi": "25 combo massive Water attack on all foes (25% active Pierce to Fire, Water types), enormously boosts Atk, Def, Rec relative to max HP for 3 turns, enormously boosts max HP, fully restores HP for 3 turns, enormous additional damage reduction for 3 turns & purges ES disable effect from all allies"
+  },
+  "MST_SKILLS_2820438_NAME": {
+    "en": "Sever their souls, Mascarun!",
+    "es": "Sever their souls, Mascarun!",
+    "id": "Sever their souls, Mascarun!",
+    "pt": "Sever their souls, Mascarun!",
+    "th": "Sever their souls, Mascarun!",
+    "vi": "Sever their souls, Mascarun!"
+  },
   "MST_SKILLS_2820507_DESCRIPTION": {
     "en": "31 combo massive Water attack on all foes, fully restores HP for 3 turns, enormously boosts Def for 3 turns & fills BB gauge to max",
     "es": "31 combo massive Water attack on all foes, fully restores HP for 3 turns, enormously boosts Def for 3 turns & fills BB gauge to max",
@@ -86686,37 +86822,5 @@
     "pt": "Raygun Aria",
     "th": "Raygun Aria",
     "vi": "Raygun Aria"
-  },
-  "MST_SKILLS_2830317_DESCRIPTION": {
-    "en": "40 combo massive Earth attack on all foes, boosts Spark damage and enemies' Spark vulnerability for 3 turns & raises normal hit amount for 3 turns",
-    "es": "40 combo massive Earth attack on all foes, boosts Spark damage and enemies' Spark vulnerability for 3 turns & raises normal hit amount for 3 turns",
-    "id": "40 kombo serangan Bumi kuat ke semua musuh, 3 giliran menambah: kerusakan Percikan dan kelemahan musuh akan Percikan & jumlah pukulan normal",
-    "pt": "40 combo massive Earth attack on all foes, boosts Spark damage and enemies' Spark vulnerability for 3 turns & raises normal hit amount for 3 turns",
-    "th": "40 คอมโบ โจมตีด้วยธาตุดินอย่างรุนแรงใส่ศัตรูทั้งหมด, ศัตรูแพ้ทางติดสปาร์ค 3 เทิร์น, เพิ่มฮิต 3 เทิร์น",
-    "vi": "40 combo massive Earth attack on all foes, boosts Spark damage and enemies' Spark vulnerability for 3 turns & raises normal hit amount for 3 turns"
-  },
-  "MST_SKILLS_2830317_NAME": {
-    "en": "Khabayth Al'iiesar ",
-    "es": "Khabayth Al'iiesar ",
-    "id": "Khabayth Al'iiesar ",
-    "pt": "Khabayth Al'iiesar ",
-    "th": "แคบเบย์ธ อัลลิซาร์",
-    "vi": "Khabayth Al'iiesar "
-  },
-  "MST_SKILLS_2830327_DESCRIPTION": {
-    "en": "15 combo massive Earth attack on all foes (damage relative to remaining HP), hugely boosts BB Atk, boosts Atk relative to Def for 3 turns, great 3 turn Atk reduction & massive additional attack on all foes at turn's end",
-    "es": "15 combo massive Earth attack on all foes (damage relative to remaining HP), hugely boosts BB Atk, boosts Atk relative to Def for 3 turns, great 3 turn Atk reduction & massive additional attack on all foes at turn's end",
-    "id": "15 kombo serangan Bumi kuat ke semua musuh (kerusakan sesuai sisa HP), amat menambah BB Serang, menambah Serang sesuai Tahan 3 giliran, pengurangan besar Serangan 3 giliran & tambahan serangan masif ke semua musuh di akhir giliran",
-    "pt": "15 combo massive Earth attack on all foes (damage relative to remaining HP), hugely boosts BB Atk, boosts Atk relative to Def for 3 turns, great 3 turn Atk reduction & massive additional attack on all foes at turn's end",
-    "th": "15 คอมโบ โจมตีธาตุดินรุนแรงมหาศาล ใส่ศัตรูทั้งหมด (ความเสียหายขึ้นอยู่กับ HP ที่เหลือ), เพิ่มค่าอย่างสูงให้ โจมตี BB, เพิ่มค่า โจมตี ขึ้นอยู่กับค่า ป้องกัน นาน 3 เทิร์น,  3 เทิร์น ลดค่า โจมตี อย่างมาก และ โจมตีรุนแรงมหาศาลอีกครั้งใส่ศัตรูทั้งหมด เมื่อจบเทิร์น",
-    "vi": "15 combo massive Earth attack on all foes (damage relative to remaining HP), hugely boosts BB Atk, boosts Atk relative to Def for 3 turns, great 3 turn Atk reduction & massive additional attack on all foes at turn's end"
-  },
-  "MST_SKILLS_2830327_NAME": {
-    "en": "Hysteria: Soul Shatter",
-    "es": "Hysteria: Soul Shatter",
-    "id": "Ledakan Jiwa Tigris",
-    "pt": "Hysteria: Soul Shatter",
-    "th": "ฮิสทีเรีย: โซล แชทเตอร์",
-    "vi": "Hysteria: Soul Shatter"
   }
 }
