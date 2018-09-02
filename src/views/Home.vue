@@ -20,6 +20,26 @@
     </v-layout>
     <v-layout row>
       <v-flex>
+        <v-card raised>
+          <v-card-title>
+            <h1 class="title">Data Disclaimer</h1>
+          </v-card-title>
+          <v-card-text>
+            <span>This tool uses StatCounter and Google Analytics for traffic analytics. You can find out more about them below.</span>
+          </v-card-text>
+          <v-card-actions>
+            <v-btn flat rel="noopener" href="https://statcounter.com/" target="_blank">
+              StatCounter
+            </v-btn>
+            <v-btn flat rel="noopener" href="https://marketingplatform.google.com/about/analytics/" target="_blank">
+              Google Analytics
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-flex>
+    </v-layout>
+    <v-layout row>
+      <v-flex>
         <GitHubCard/>
       </v-flex>
     </v-layout>
@@ -57,26 +77,6 @@
           <v-card-actions>
             <v-btn flat rel="noopener" href="https://bluuarc.github.io/bf-mt/semantic_build/" target="_blank">
               Semantic UI Version
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-flex>
-    </v-layout>
-    <v-layout row>
-      <v-flex>
-        <v-card raised>
-          <v-card-title>
-            <h1 class="title">Data Disclaimer</h1>
-          </v-card-title>
-          <v-card-text>
-            <span>This tool uses StatCounter and Google Analytics for traffic analytics. You can find out more about them below.</span>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn flat rel="noopener" href="https://statcounter.com/" target="_blank">
-              StatCounter
-            </v-btn>
-            <v-btn flat rel="noopener" href="https://marketingplatform.google.com/about/analytics/" target="_blank">
-              Google Analytics
             </v-btn>
           </v-card-actions>
         </v-card>

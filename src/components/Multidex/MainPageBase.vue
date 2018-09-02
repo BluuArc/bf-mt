@@ -217,7 +217,7 @@
                 </slot>
               </v-toolbar-title>
             </v-toolbar>
-            <v-card-text class="pl-0 pr-0 entry-dialog-content">
+            <v-card-text class="pl-0 pr-0 entry-dialog-content" v-if="!!viewId">
               <template v-if="!hasViewId">
                 <v-container>
                   <v-layout row>
@@ -662,7 +662,7 @@ export default {
       this.setShowEntryDialog();
     },
     async inputServer (newValue) {
-      if (newValue !== this.activeServer) {
+      if (!!newValue && newValue !== this.activeServer) {
         this.finishedInit = false;
         this.showEntryDialog = false;
         await delay(0);
