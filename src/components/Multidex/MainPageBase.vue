@@ -303,7 +303,7 @@ function createPropertyMock (name, value) {
   };
 }
 
-const defaultThrottleLength = 1000; // 1 second
+const defaultThrottleLength = 500; // milliseconds
 export default {
   props: {
     requiredModules: {
@@ -618,13 +618,15 @@ export default {
     setShowEntryDialog () {
       this.showEntryDialog = !this.moduleLoadState && !!this.viewId && this.finishedInit && this.hasRequiredModules;
     },
-    resetFilters () {
+    async resetFilters () {
       const defaultFilterOptions = filterHelper.defaultValues;
 
       this.filterOptions = {
         ...defaultFilterOptions,
         name: '',
       };
+      logger.debug('reset filter options', this.filterOptions, this.filterOptionsUrl);
+      this.syncLocalFiltersToUrlFilters(true);
     },
     syncPageSortsToCache () {
       logger.debug('storing sorts', this.sortOptions);
@@ -642,6 +644,7 @@ export default {
     },
     syncLocalFiltersToUrlFilters (forcePush = false) {
       if (forcePush || this.stateInfo[this.mainModule.name].filterUrl !== this.filterOptionsUrl) {
+        logger.debug('going to new filter options url', this.filterOptionsUrl || undefined);
         this.actionInfo[this.mainModule.name].updateFilterUrl(this.filterOptionsUrl);
         this.$router.replace({
           path: this.$route.path,
@@ -653,7 +656,12 @@ export default {
         });
       }
     },
-    syncUrlFiltersToLocalFilters () {
+    async syncUrlFiltersToLocalFilters (setFilterBool = false) {
+      await delay(defaultThrottleLength);
+      if (setFilterBool) {
+        this.loadingFilters = true;
+      }
+      await this.forceSetPseudoComputedValues();
       if (Object.keys(this.inputFilters).length > 0) {
         logger.debug('input filters', this.inputFilters);
         this.filterOptions = {
@@ -662,14 +670,16 @@ export default {
         };
       } else if (this.stateInfo) {
         const cachedFilters = filterHelper.stringToOptions(this.stateInfo[this.mainModule.name].filterUrl);
-        logger.debug('cached filters', this.cachedFilters);
         this.filterOptions = {
           ...this.filterOptions,
-          ...cachedFilters,
+          ...(cachedFilters || {}),
         };
         this.syncLocalFiltersToUrlFilters(true); // update URL
       } else {
         logger.debug('no filter cache found');
+        if (setFilterBool) {
+          this.loadingFilters = false;
+        }
       }
     },
     closeDialog () {
@@ -743,7 +753,7 @@ export default {
     },
     async isDataLoading (newValue) {
       if (!newValue) {
-        this.loadingFilters = true;
+        this.loadingFilters = true; // first time filtering data; set true to avoid flickering loading message
         await this.debounceApplyFilters();
       }
     },
@@ -790,7 +800,8 @@ export default {
     inputFilters (newValue, oldValue) {
       const hasChanged = filterHelper.optionsToString(newValue) !== filterHelper.optionsToString(oldValue);
       if (this.finishedInit && hasChanged) {
-        this.syncUrlFiltersToLocalFilters();
+        logger.debug('input filters changed to', newValue);
+        this.syncUrlFiltersToLocalFilters(true);
         this.syncSortCacheToPage();
       }
     },
