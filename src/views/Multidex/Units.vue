@@ -7,6 +7,8 @@
     :viewId="viewId"
     :pageDb="pageDb"
     :inputFilters="filters"
+    :filterTypes="filterTypes"
+    :minRarity="1"
   >
   </main-page-base>
 </template>
@@ -24,6 +26,7 @@ export default {
     ...mapState('units', ['pageDb']),
     ...mapGetters('units', ['getImageUrls', 'getMultidexPathTo', 'sortTypes']),
     requiredModules: () => ['units', 'items', 'missions'],
+    filterTypes: () => ['elements', 'rarity'],
   },
 };
 </script>

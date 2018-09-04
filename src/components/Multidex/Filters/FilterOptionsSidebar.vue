@@ -1,7 +1,7 @@
 <template>
   <v-navigation-drawer
     persistent right
-    enable-resize-watcher
+    disable-route-watcher
     :clipped="$vuetify.breakpoint.lgAndUp"
     fixed app
     :value="showFilterSheet">
@@ -14,6 +14,7 @@
     <v-container fluid class="pa-0">
       <v-expansion-panel focusable>
         <element-panel :requiredFilters="requiredFilters" v-model="value" :disableFilters="disableFilters"/>
+        <rarity-panel :requiredFilters="requiredFilters" v-model="value" :disableFilters="disableFilters" :minRarity="minRarity" :maxRarity="maxRarity"/>
       </v-expansion-panel>
     </v-container>
   </v-navigation-drawer>
@@ -21,6 +22,7 @@
 
 <script>
 import ElementPanel from './ElementPanel';
+import RarityPanel from './RarityPanel';
 
 export default {
   props: {
@@ -41,9 +43,18 @@ export default {
       type: Boolean,
       required: true,
     },
+    minRarity: {
+      type: Number,
+      default: 0,
+    },
+    maxRarity: {
+      type: Number,
+      default: 8,
+    },
   },
   components: {
     ElementPanel,
+    RarityPanel,
   },
   methods: {
     toggleFilterSheet (value) {

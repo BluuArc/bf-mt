@@ -77,14 +77,15 @@ export default {
       const keys = Object.keys(state.pageDb);
 
       const result = await SWorker.run((keys, filters, pageDb) => {
-        const { name = '', elements = [] } = filters;
+        const { name = '', elements = [], rarity = [] } = filters;
         return keys.filter(key => {
           const entry = pageDb[key];
           const fitsName = (!name ? true : entry.name.toLowerCase().includes(name.toLowerCase()));
           const fitsID = (!name ? true : key.toString().includes(name) || (entry.id || '').toString().includes(name));
           const fitsElement = elements.includes(entry.element);
+          const fitsRarity = rarity.includes(entry.rarity);
 
-          return [fitsName || fitsID, fitsElement].every(val => val);
+          return [fitsName || fitsID, fitsElement, fitsRarity].every(val => val);
         });
       }, [keys, inputFilters, state.pageDb]);
       return result;

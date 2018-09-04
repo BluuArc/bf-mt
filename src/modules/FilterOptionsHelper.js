@@ -20,6 +20,7 @@ export default class FilterOptionsHelper {
   get defaultValues () {
     return {
       elements: elements.slice(),
+      rarity: Object.keys(new Array(this._maxRarity - this._minRarity + 1).fill(0)).map(i => +i + this._minRarity),
       name: '',
     };
   }
@@ -69,7 +70,9 @@ export default class FilterOptionsHelper {
       Object.keys(inputOptions)
         .forEach(key => {
           if (Array.isArray(defaultFilters[key])) {
-            inputOptions[key] = inputOptions[key].split(this._arraySeparator).filter(val => val);
+            inputOptions[key] = inputOptions[key].split(this._arraySeparator)
+              .filter(val => val)
+              .map(val => !isNaN(val) ? +val : val);
           }
         });
       return {

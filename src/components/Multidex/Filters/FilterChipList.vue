@@ -1,12 +1,13 @@
 <template>
   <div id="filter-chips">
     <element-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
+    <rarity-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions" :minRarity="minRarity" :maxRarity="maxRarity"/>
   </div>
 </template>
 
 <script>
 import ElementChip from './ElementChip';
-
+import RarityChip from './RarityChip';
 
 export default {
   props: {
@@ -19,9 +20,18 @@ export default {
       type: Object,
       default: () => {},
     },
+    minRarity: {
+      type: Number,
+      default: 0,
+    },
+    maxRarity: {
+      type: Number,
+      default: 8,
+    },
   },
   components: {
     ElementChip,
+    RarityChip,
   },
   methods: {
     applyStylingToChips () {
@@ -53,7 +63,3 @@ export default {
   },
 };
 </script>
-
-<style lang="less">
-
-</style>

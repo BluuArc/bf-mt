@@ -14,6 +14,8 @@
           :disableFilters="loadingState || loadingFilters || loadingSorts"
           :showFilterSheet="showFilterSheet"
           @togglesheet="showFilterSheet = $event"
+          :minRarity="minRarity"
+          :maxRarity="maxRarity"
         />
         <v-layout row>
           <v-flex>
@@ -72,7 +74,11 @@
                     </v-layout>
                     <v-layout row>
                       <v-flex xs10 md11 class="d-align-self-center" v-show="hasNonNameFilters">
-                        <filter-chip-list :requiredFilters="filterTypes" :filterOptions="filterOptions"/>
+                        <filter-chip-list
+                          :requiredFilters="filterTypes"
+                          :filterOptions="filterOptions"
+                          :minRarity="minRarity"
+                          :maxRarity="maxRarity"/>
                       </v-flex>
                       <v-flex xs10 md11 class="d-align-self-center" v-show="!hasNonNameFilters">
                         No filters applied.
@@ -338,6 +344,14 @@ export default {
     inputFilters: {
       type: Object,
       default: () => {},
+    },
+    minRarity: {
+      type: Number,
+      default: 0,
+    },
+    maxRarity: {
+      type: Number,
+      default: 8,
     },
   },
   components: {
@@ -803,6 +817,7 @@ export default {
   },
   created () {
     logger = new Logger({ prefix: `[MULTIDEX/${this.$route.name}]` });
+    filterHelper = new FilterOptionsHelper(this.minRarity, this.maxRarity);
     this.syncUrlFiltersToLocalFilters();
     this.syncSortCacheToPage();
   },
