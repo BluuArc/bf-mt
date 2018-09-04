@@ -36,4 +36,8 @@ export default class TernaryFilterOption {
   isFalsy (input) {
     return this._falsyValue === input;
   }
+
+  get valuesArray () {
+    return [this.allValue, this.truthyValue, this.falsyValue];
+  }
 }

@@ -1,7 +1,7 @@
 <template>
   <v-expansion-panel-content v-if="showPanel">
     <div slot="header">
-      <h2 class="subheading">Rarity</h2>
+      <panel-header :hasFilters="hasFilters" title="Rarity"/>
     </div>
     <v-layout row>
       <v-flex class="text-xs-left">
@@ -44,11 +44,9 @@ export default {
     RarityIcon,
   },
   computed: {
+    filterKey: () => 'rarity',
     rarityRange () {
       return Object.keys(new Array(this.maxRarity - this.minRarity + 1).fill(0)).map(i => +i + this.minRarity);
-    },
-    showPanel () {
-      return this.requireFilter || this.requiredFilters.includes('rarity');
     },
   },
 };

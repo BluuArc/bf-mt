@@ -31,3 +31,20 @@ export function arraysAreDifferent (arr1 = [], arr2 = []) {
     arr1.some(val => !arr2.includes(val)) ||
     arr2.some(val => !arr1.includes(val));
 }
+
+export function getGenderInfo(gender) {
+  const icons = {
+    male: 'fa-mars',
+    female: 'fa-venus',
+    other: 'fa-genderless',
+  };
+  const colors = {
+    male: 'light-blue',
+    female: 'pink lighten-1',
+    other: 'grey',
+  };
+  return {
+    icon: icons[gender],
+    color: colors[gender],
+  };
+}

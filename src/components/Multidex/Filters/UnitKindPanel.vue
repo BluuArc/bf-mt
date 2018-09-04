@@ -1,7 +1,7 @@
 <template>
   <v-expansion-panel-content v-if="showPanel">
     <div slot="header">
-      <h2 class="subheading">Unit Type</h2>
+      <panel-header :hasFilters="hasFilters" title="Unit Type"/>
     </div>
     <v-layout row>
       <v-flex class="text-xs-left">
@@ -31,9 +31,7 @@ export default {
   mixins: [FilterPanelMixin],
   computed: {
     unitKinds: () => unitKinds.slice(),
-    showPanel () {
-      return this.requireFilter || this.requiredFilters.includes('unitKinds');
-    },
+    filterKey: () => 'unitKinds',
   },
 };
 </script>

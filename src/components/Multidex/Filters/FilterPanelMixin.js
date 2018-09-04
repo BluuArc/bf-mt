@@ -1,3 +1,5 @@
+import PanelHeader from './PanelHeader';
+
 export default {
   props: {
     // array of strings indicating filter name
@@ -17,6 +19,20 @@ export default {
     disableFilters: {
       type: Boolean,
       default: false,
+    },
+    filterHelper: {
+      required: true,
+    },
+  },
+  components: {
+    PanelHeader,
+  },
+  computed: {
+    showPanel() {
+      return this.requireFilter || this.requiredFilters.includes(this.filterKey);
+    },
+    hasFilters() {
+      return this.filterHelper.hasFilters(this.value, this.filterKey);
     },
   },
   methods: {

@@ -13,9 +13,10 @@
     <h3 class="headline pl-3 pt-3">Filters</h3>
     <v-container fluid class="pa-0">
       <v-expansion-panel focusable>
-        <element-panel :requiredFilters="requiredFilters" v-model="value" :disableFilters="disableFilters"/>
-        <rarity-panel :requiredFilters="requiredFilters" v-model="value" :disableFilters="disableFilters" :minRarity="minRarity" :maxRarity="maxRarity"/>
-        <unit-kind-panel :requiredFilters="requiredFilters" v-model="value" :disableFilters="disableFilters"/>
+        <element-panel :filterHelper="filterHelper" :requiredFilters="requiredFilters" v-model="value" :disableFilters="disableFilters"/>
+        <rarity-panel :filterHelper="filterHelper" :requiredFilters="requiredFilters" v-model="value" :disableFilters="disableFilters" :minRarity="minRarity" :maxRarity="maxRarity"/>
+        <unit-kind-panel :filterHelper="filterHelper" :requiredFilters="requiredFilters" v-model="value" :disableFilters="disableFilters"/>
+        <gender-panel :filterHelper="filterHelper" :requiredFilters="requiredFilters" v-model="value" :disableFilters="disableFilters"/>
       </v-expansion-panel>
     </v-container>
   </v-navigation-drawer>
@@ -25,6 +26,7 @@
 import ElementPanel from './ElementPanel';
 import RarityPanel from './RarityPanel';
 import UnitKindPanel from './UnitKindPanel';
+import GenderPanel from './GenderPanel';
 
 export default {
   props: {
@@ -53,11 +55,15 @@ export default {
       type: Number,
       default: 8,
     },
+    filterHelper: {
+      required: true,
+    },
   },
   components: {
     ElementPanel,
     RarityPanel,
     UnitKindPanel,
+    GenderPanel,
   },
   methods: {
     toggleFilterSheet (value) {

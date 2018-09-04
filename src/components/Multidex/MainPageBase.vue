@@ -16,6 +16,7 @@
           @togglesheet="showFilterSheet = $event"
           :minRarity="minRarity"
           :maxRarity="maxRarity"
+          :filterHelper="filterHelper"
         />
         <v-layout row>
           <v-flex>
@@ -464,6 +465,7 @@ export default {
       amountPerPage: 27,
       pageIndex: 0,
       paginationModel: 0,
+      filterHelper,
     };
     const filterOptions = {
       ...filterHelper.defaultValues,
@@ -827,6 +829,7 @@ export default {
       ...filterHelper.defaultValues,
       name: '',
     };
+    this.filterHelper = filterHelper;
     this.syncUrlFiltersToLocalFilters();
     this.syncSortCacheToPage();
   },

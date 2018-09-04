@@ -26,7 +26,7 @@ export default {
     ...mapState('units', ['pageDb']),
     ...mapGetters('units', ['getImageUrls', 'getMultidexPathTo', 'sortTypes']),
     requiredModules: () => ['units', 'items', 'missions'],
-    filterTypes: () => ['elements', 'rarity', 'unitKinds'],
+    filterTypes: () => ['elements', 'rarity', 'unitKinds', 'genders'],
   },
 };
 </script>

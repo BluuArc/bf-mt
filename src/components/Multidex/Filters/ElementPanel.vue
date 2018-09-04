@@ -1,7 +1,7 @@
 <template>
   <v-expansion-panel-content v-if="showPanel">
     <div slot="header">
-      <h2 class="subheading">Element</h2>
+      <panel-header :hasFilters="hasFilters" title="Element"/>
     </div>
     <v-layout row>
       <v-flex class="text-xs-left">
@@ -35,9 +35,7 @@ export default {
   },
   computed: {
     elements: () => elements,
-    showPanel () {
-      return this.requireFilter || this.requiredFilters.includes('elements');
-    },
+    filterKey: () => 'elements',
   },
 };
 </script>

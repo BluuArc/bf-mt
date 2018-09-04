@@ -2,7 +2,7 @@ import TernaryFilterOption from './TernaryFilterOption';
 
 export const servers = Object.freeze(['gl', 'eu', 'jp']);
 export const elements = Object.freeze(['fire', 'water', 'earth', 'thunder', 'light', 'dark']);
-export const gender = Object.freeze(['male', 'female', 'other']);
+export const genders = Object.freeze(['male', 'female', 'other']);
 export const unitKinds = Object.freeze(['normal', 'evolution', 'enhancing', 'sale']);
 export const itemTypes = Object.freeze(['consumable', 'material', 'raid', 'sphere', 'evomat', 'summoner_consumable', 'ls_sphere']);
 

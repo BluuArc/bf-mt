@@ -3,6 +3,7 @@
     <element-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
     <rarity-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions" :minRarity="minRarity" :maxRarity="maxRarity"/>
     <unit-kind-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
+    <gender-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import ElementChip from './ElementChip';
 import RarityChip from './RarityChip';
 import UnitKindChip from './UnitKindChip';
+import GenderChip from './GenderChip';
 
 export default {
   props: {
@@ -35,6 +37,7 @@ export default {
     ElementChip,
     RarityChip,
     UnitKindChip,
+    GenderChip,
   },
   methods: {
     applyStylingToChips () {
