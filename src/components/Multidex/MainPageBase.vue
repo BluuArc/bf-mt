@@ -750,8 +750,13 @@ export default {
       deep: true,
       handler () {
         this.pageIndex = 0;
-        this.syncLocalFiltersToUrlFilters();
-        this.debounceApplyFilters();
+        // filter out invalid rarity values
+        if (this.filterOptions.rarity && this.filterOptions.rarity.some(val => val < this.minRarity || val > this.maxRarity)) {
+          this.filterOptions.rarity = this.filterOptions.rarity.filter(val => val >= this.minRarity && val <= this.maxRarity);
+        } else {
+          this.syncLocalFiltersToUrlFilters();
+          this.debounceApplyFilters();
+        }
       },
     },
     sortOptions: {
@@ -818,6 +823,10 @@ export default {
   created () {
     logger = new Logger({ prefix: `[MULTIDEX/${this.$route.name}]` });
     filterHelper = new FilterOptionsHelper(this.minRarity, this.maxRarity);
+    this.filterOptions = {
+      ...filterHelper.defaultValues,
+      name: '',
+    };
     this.syncUrlFiltersToLocalFilters();
     this.syncSortCacheToPage();
   },

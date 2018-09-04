@@ -1,5 +1,6 @@
 import {
   elements,
+  unitKinds,
 } from '@/modules/constants';
 
 import {
@@ -21,6 +22,7 @@ export default class FilterOptionsHelper {
     return {
       elements: elements.slice(),
       rarity: Object.keys(new Array(this._maxRarity - this._minRarity + 1).fill(0)).map(i => +i + this._minRarity),
+      unitKinds: unitKinds.slice(),
       name: '',
     };
   }

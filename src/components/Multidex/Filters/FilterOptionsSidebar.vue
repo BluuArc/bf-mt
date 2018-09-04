@@ -15,6 +15,7 @@
       <v-expansion-panel focusable>
         <element-panel :requiredFilters="requiredFilters" v-model="value" :disableFilters="disableFilters"/>
         <rarity-panel :requiredFilters="requiredFilters" v-model="value" :disableFilters="disableFilters" :minRarity="minRarity" :maxRarity="maxRarity"/>
+        <unit-kind-panel :requiredFilters="requiredFilters" v-model="value" :disableFilters="disableFilters"/>
       </v-expansion-panel>
     </v-container>
   </v-navigation-drawer>
@@ -23,6 +24,7 @@
 <script>
 import ElementPanel from './ElementPanel';
 import RarityPanel from './RarityPanel';
+import UnitKindPanel from './UnitKindPanel';
 
 export default {
   props: {
@@ -55,6 +57,7 @@ export default {
   components: {
     ElementPanel,
     RarityPanel,
+    UnitKindPanel,
   },
   methods: {
     toggleFilterSheet (value) {

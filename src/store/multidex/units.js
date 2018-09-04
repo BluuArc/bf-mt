@@ -77,7 +77,7 @@ export default {
       const keys = Object.keys(state.pageDb);
 
       const result = await SWorker.run((keys, filters, pageDb) => {
-        const { name = '', elements = [], rarity = [] } = filters;
+        const { name = '', elements = [], rarity = [], unitKinds = [] } = filters;
         return keys.filter(key => {
           const entry = pageDb[key];
           const fitsName = (!name ? true : entry.name.toLowerCase().includes(name.toLowerCase()));
@@ -85,7 +85,12 @@ export default {
           const fitsElement = elements.includes(entry.element);
           const fitsRarity = rarity.includes(entry.rarity);
 
-          return [fitsName || fitsID, fitsElement, fitsRarity].every(val => val);
+          // need to flip evo/enhancing as they're marked wrong in the data at time of writing
+          // default to enhancing so that Omni Frog and Omni Emperor aren't hidden by default
+          const kindEntry = (entry.kind === 'evo' ? 'enhancing' : entry.kind === 'enhancing' ? 'evolution' : entry.kind) || 'enhancing';
+          const fitsKind = unitKinds.includes(kindEntry);
+
+          return [fitsName || fitsID, fitsElement, fitsRarity, fitsKind].every(val => val);
         });
       }, [keys, inputFilters, state.pageDb]);
       return result;
