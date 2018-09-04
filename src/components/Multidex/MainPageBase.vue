@@ -98,7 +98,7 @@
                       </v-layout>
                     </v-flex>
                     <v-flex xs2 md1 class="text-xs-right">
-                      <v-btn v-if="$vuetify.breakpoint.smAndUp" flat icon class="mr-0 pr-1" @click="showSortPanel = !showSortPanel">
+                      <v-btn flat icon class="mr-0 pr-1" @click="showSortPanel = !showSortPanel">
                         <v-icon>{{ showSortPanel ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</v-icon>
                       </v-btn>
                     </v-flex>
@@ -153,28 +153,15 @@
             </v-menu>
           </v-flex>
         </v-layout>
-        <template>
-          <v-btn
-            absolute fab bottom left
-            style="bottom: 16px;"
-            :disabled="pageIndex <= 0"
-            :small="$vuetify.breakpoint.smAndDown"
-            color="primary" @click="decrementPage">
-            <span v-show="pageIndex >= 1">
-              {{ pageIndex }}
-            </span>
-          </v-btn>
-          <v-btn
-            absolute fab bottom right
-            style="bottom: 16px;"
-            :disabled="pageIndex >= (numPages - 1)"
-            :small="$vuetify.breakpoint.smAndDown"
-            color="primary" @click="incrementPage">
-            <span v-show="pageIndex + 1 < numPages">
-              {{ pageIndex + 2 }}
-            </span>
-          </v-btn>
-        </template>
+        <v-bottom-nav
+          v-if="numPages > 1 && !(loadingFilters || loadingSorts)"
+          :value="true"
+          fixed app>
+          <v-pagination
+            v-model="paginationModel"
+            :total-visible="$vuetify.breakpoint.mdAndUp ? 20 : undefined"
+            :length="numPages"/>
+        </v-bottom-nav>
       </template>
       <!-- results area -->
       <v-layout row>
@@ -185,7 +172,7 @@
           <result-container
             class="pa-0"
             :dataIsLoading="loadingSorts || loadingFilters"
-            :loadingMessage="`${loadingFilters ? 'Filtering' : 'Sorting'} data...`"
+            :loadingMessage="`${loadingFilters ? 'Loading' : 'Sorting'} data...`"
             :requiredModules="pageModules"
             :stateInfo="stateInfo"
             :actionInfo="actionInfo"
@@ -462,6 +449,7 @@ export default {
     const resultViewConfig = {
       amountPerPage: 27,
       pageIndex: 0,
+      paginationModel: 0,
     };
     const filterOptions = {
       ...filterHelper.defaultValues,
@@ -704,11 +692,18 @@ export default {
         document.title = defaultTitle;
       }
     },
+    syncPageIndexToPaginationModel () {
+      this.paginationModel = this.pageIndex + 1;
+    }
   },
   watch: {
     pageIndex () {
       window.scrollTo(0, 0);
       this.delayedPageIndexChecker();
+      this.syncPageIndexToPaginationModel();
+    },
+    paginationModel (newValue) {
+      this.pageIndex = newValue - 1;
     },
     hasFilters () {
       this.setDocumentTitle();
@@ -816,6 +811,7 @@ export default {
     this.forceSetPseudoComputedValues();
     this.setShowEntryDialog();
     this.setDocumentTitle();
+    this.syncPageIndexToPaginationModel();
 
     this.sortOptions.type = this.useAsyncSort ? this.sortTypes[0] : Object.keys(this.sortTypes)[0];
     logger.debug('filter types', this.filterTypes);
