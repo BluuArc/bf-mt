@@ -8,7 +8,7 @@
               <h3 class="subheading">Sort Type</h3>
               <v-radio-group v-model="value.type" :row="$vuetify.breakpoint.mdAndUp">
                 <v-radio
-                  v-for="(type, i) in Object.keys(sortTypes).sort()"
+                  v-for="(type, i) in sortLabels"
                   :key="i"
                   :disabled="disableInput"
                   :value="type"
@@ -32,6 +32,11 @@
 <script>
 export default {
   props: ['value', 'disableInput', 'sortTypes'],
+  computed: {
+    sortLabels () {
+      return (Array.isArray(this.sortTypes) ? this.sortTypes.slice() : Object.keys(this.sortTypes)).sort();
+    },
+  },
   watch: {
     value: {
       deep: true,

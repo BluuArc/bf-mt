@@ -2,7 +2,8 @@ import { Logger } from '@/modules/Logger';
 import { makeMultidexWorker } from '../instances/dexie-client';
 import downloadWorker from '../instances/download-worker';
 import { createState, createMutations, createActions, createGetters } from './helper';
-// import SWorker from '@/assets/sww.min';
+import SWorker from '@/assets/sww.min';
+import { elements } from '@/modules/constants';
 // import union from 'lodash/union';
 
 const logger = new Logger({ prefix: '[STORE/UNITS]' });
@@ -29,6 +30,7 @@ export default {
         ills_battle: `${baseUrl}/unit_ills_battle_${id}.png`,
       };
     },
+    sortTypes: () => ['Unit ID', 'Guide ID', 'Alphabetical', 'Rarity', 'Element'],
   },
   actions: {
     ...createActions(dbWorker, downloadWorker, logger, 'units'),
@@ -69,6 +71,58 @@ export default {
       }
       logger.debug('finished updating data');
       commit('setLoadState', false);
+    },
+    async getFilteredKeys ({ state }, inputFilters = {}) {
+      logger.debug('filters', inputFilters);
+      const keys = Object.keys(state.pageDb);
+
+      const result = await SWorker.run((keys, filters, pageDb) => {
+        const { name = '', elements = [] } = filters;
+        return keys.filter(key => {
+          const entry = pageDb[key];
+          const fitsName = (!name ? true : entry.name.toLowerCase().includes(name.toLowerCase()));
+          const fitsID = (!name ? true : key.toString().includes(name) || (entry.id || '').toString().includes(name));
+          const fitsElement = elements.includes(entry.element);
+
+          return [fitsName || fitsID, fitsElement].every(val => val);
+        });
+      }, [keys, inputFilters, state.pageDb]);
+      return result;
+    },
+    async getSortedKeys ({ state }, { type, isAscending, keys }) {
+      logger.debug('sorts', { type, isAscending, keys });
+      const result = await SWorker.run((keys, type, isAscending, pageDb, elements) => {
+        const sortTypes = {
+          'Unit ID': (idA, idB, isAscending) => {
+            const result = (+idA - +idB);
+            return isAscending ? result : -result;
+          },
+          'Guide ID': (idA, idB, isAscending) => {
+            const result = +pageDb[idA].guide_id - +pageDb[idB].guide_id;
+            return isAscending ? result : -result;
+          },
+          Alphabetical: (idA, idB, isAscending) => {
+            const [nameA, nameB] = [pageDb[idA].name, pageDb[idB].name];
+            const result = (nameA > nameB) ? 1 : -1;
+            return isAscending ? result : -result;
+          },
+          Rarity: (idA, idB, isAscending) => {
+            const [rarityA, rarityB] = [+pageDb[idA].rarity, +pageDb[idB].rarity];
+            const result = rarityA === rarityB ? (+idA - +idB) : (rarityA - rarityB);
+            return isAscending ? result : -result;
+          },
+          Element: (idA, idB, isAscending) => {
+            const [elementA, elementB] = [pageDb[idA].element, pageDb[idB].element];
+            const indexA = elements.indexOf(elementA);
+            const indexB = elements.indexOf(elementB);
+            const result = indexA === indexB ? (+idA - +idB) : (indexA - indexB);
+            return isAscending ? result : -result;
+          },
+        };
+
+        return keys.slice().sort((a, b) => sortTypes[type](a, b, isAscending));
+      }, [keys, type, isAscending, state.pageDb, elements]);
+      return result;
     },
   },
 };

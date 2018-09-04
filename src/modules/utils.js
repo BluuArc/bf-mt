@@ -25,3 +25,9 @@ export function getFormattedDate (inputDate) {
     diff: date.fromNow(),
   };
 }
+
+export function arraysAreDifferent (arr1 = [], arr2 = []) {
+  return arr1.length !== arr2.length ||
+    arr1.some(val => !arr2.includes(val)) ||
+    arr2.some(val => !arr1.includes(val));
+}

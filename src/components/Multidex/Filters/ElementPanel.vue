@@ -26,7 +26,7 @@
 <script>
 import FilterPanelMixin from './FilterPanelMixin';
 import { elements } from '@/modules/constants';
-import ElementIcon from './ElementIcon';
+import ElementIcon from '@/components/Multidex/ElementIcon';
 
 export default {
   mixins: [FilterPanelMixin],

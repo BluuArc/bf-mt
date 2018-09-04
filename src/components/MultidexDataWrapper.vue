@@ -61,6 +61,8 @@ export default {
         info[name] = {
           update: this[`${name}DataUpdate`],
           delete: this[`${name}DataDelete`],
+          filter: this[`${name}DataFilter`],
+          sort: this[`${name}DataSort`],
           dbSync: this[`${name}DbSync`],
         };
       });
@@ -91,6 +93,8 @@ export default {
         actionMapping[`${m}DataUpdate`] = 'updateData';
         actionMapping[`${m}DataDelete`] = 'deleteData';
         actionMapping[`${m}DbSync`] = 'ensurePageDbSyncWithServer';
+        actionMapping[`${m}DataFilter`] = 'getFilteredKeys';
+        actionMapping[`${m}DataSort`] = 'getSortedKeys';
         result = {
           ...result,
           ...mapActions(m, actionMapping),

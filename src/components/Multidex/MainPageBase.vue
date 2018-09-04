@@ -59,7 +59,7 @@
                       <v-flex xs10 class="text-xs-left d-align-self-center">
                         <v-layout>
                           <h2 class="title d-inline-block d-align-self-center">Active Filters</h2>
-                          <v-btn icon small flat>
+                          <v-btn icon small flat @click="resetFilters" v-show="hasFilters">
                             <v-icon>highlight_off</v-icon>
                           </v-btn>
                         </v-layout>
@@ -71,8 +71,11 @@
                       </v-flex>
                     </v-layout>
                     <v-layout row>
-                      <v-flex xs10 md11 class="d-align-self-center">
-                        <v-chip small style="text-transform: capitalize">Example Filter Chip</v-chip>
+                      <v-flex xs10 md11 class="d-align-self-center" v-show="hasNonNameFilters">
+                        <filter-chip-list :requiredFilters="filterTypes" :filterOptions="filterOptions"/>
+                      </v-flex>
+                      <v-flex xs10 md11 class="d-align-self-center" v-show="!hasNonNameFilters">
+                        No filters applied.
                       </v-flex>
                       <v-flex xs2 md1 class="text-xs-right">
                         <v-btn v-if="$vuetify.breakpoint.smAndUp" flat icon class="mr-0 pr-1" @click="showFilterSheet = !showFilterSheet">
@@ -208,7 +211,7 @@
         <v-dialog v-model="showEntryDialog" fullscreen hide-overlay transition="dialog-bottom-transition" class="entry-dialog">
           <v-card>
             <v-toolbar fixed class="entry-dialog-toolbar">
-              <v-btn icon :to="dialogCloseLink || $route.path">
+              <v-btn icon @click="closeDialog">
                 <v-icon>close</v-icon>
               </v-btn>
               <v-toolbar-title>
@@ -284,6 +287,7 @@ import LoadingIndicator from '@/components/LoadingIndicator';
 import SortOptionsContainer from '@/components/Multidex/SortOptionsContainer';
 import ResultContainer from '@/components/Multidex/ResultContainer';
 import FilterOptionsSidebar from '@/components/Multidex/Filters/FilterOptionsSidebar';
+import FilterChipList from '@/components/Multidex/Filters/FilterChipList';
 
 // TODO: change based on min/max rarity input
 let filterHelper = new FilterOptionsHelper();
@@ -315,7 +319,6 @@ export default {
       default: 'multidex-default',
     },
     sortTypes: {
-      type: Object,
       default: () => {
         return {
           'Data ID': (idA, idB, isAscending) => {
@@ -345,6 +348,10 @@ export default {
       type: Array,
       default: () => filterHelper.filterTypes,
     },
+    inputFilters: {
+      type: Object,
+      default: () => {},
+    },
   },
   components: {
     MultidexDataWrapper,
@@ -352,6 +359,7 @@ export default {
     SortOptionsContainer,
     ResultContainer,
     FilterOptionsSidebar,
+    FilterChipList,
   },
   computed: {
     ...mapState('settings', ['activeServer']),
@@ -420,11 +428,20 @@ export default {
       const startIndex = this.pageIndex * this.amountPerPage;
       return this.allSortedEntries.slice(startIndex, startIndex + this.amountPerPage);
     },
+    hasNonNameFilters () {
+      return filterHelper.hasFilters(this.filterOptions);
+    },
     hasFilters () {
-      return !!this.filterOptions.name;
+      return !!this.filterOptions.name || this.hasNonNameFilters;
     },
     hasViewId () {
       return !!this.viewId && this.pageDb.hasOwnProperty(this.viewId);
+    },
+    useAsyncSort () {
+      return Array.isArray(this.sortTypes);
+    },
+    filterOptionsString () {
+      return filterHelper.optionsToString(this.filterOptions);
     },
   },
   data () {
@@ -555,7 +572,7 @@ export default {
       this.loadingFilters = true;
       await delay(0);
       try {
-        throw Error('filters not fully implemented');
+        this.filteredKeys = await this.actionInfo[this.mainModule.name].filter(this.filterOptions);
       } catch (err) {
         logger.error('FILTER', err);
         this.filteredKeys = Object.keys(this.pageDb);
@@ -573,7 +590,14 @@ export default {
       this.loadingSorts = true;
       await delay(0);
       try {
-        throw Error('sorts not fully implemented');
+        if (this.useAsyncSort) {
+          this.allSortedEntries = await this.actionInfo[this.mainModule.name].sort({
+            ...this.sortOptions,
+            keys: this.filteredKeys.slice(),
+          });
+        } else {
+          this.allSortedEntries = this.filteredKeys.slice().sort((a, b) => this.sortTypes[this.sortOptions.type](a, b, this.sortOptions.isAscending));
+        }
       } catch (err) {
         logger.error('SORT', err);
         this.allSortedEntries = this.filteredKeys.slice();
@@ -591,8 +615,50 @@ export default {
         name: '',
       };
     },
+    syncLocalFiltersToUrlFilters () {
+      this.$router.push({
+        path: this.$route.path,
+        query: {
+          viewId: this.viewId || undefined,
+          server: this.inputServer || undefined,
+          filters: this.filterOptionsString || undefined,
+        },
+      });
+    },
+    syncUrlFiltersToLocalFilters () {
+      logger.debug('url filters', this.inputFilters);
+      this.filterOptions = {
+        ...this.filterOptions,
+        ...this.inputFilters,
+      };
+    },
+    closeDialog () {
+      if (this.dialogCloseLink) {
+        this.$router.push(this.dialogCloseLink);
+      } else {
+        this.$router.push({
+          path: this.$route.path,
+          query: {
+            filters: this.filterOptionsString || undefined,
+          },
+        });
+      }
+    },
+    setDocumentTitle () {
+      const defaultTitle = `BF-MT - ${this.mainModule.fullName}`;
+      if (this.hasViewId) {
+        document.title = [defaultTitle, this.pageDb[this.viewId].name || this.viewId].join(' - ');
+      } else if (this.hasFilters) {
+        document.title = [defaultTitle, 'Search Results'].join(' - ');
+      } else {
+        document.title = defaultTitle;
+      }
+    },
   },
   watch: {
+    hasFilters () {
+      this.setDocumentTitle();
+    },
     hasUpdates (newValue) {
       this.showUpdateTooltip = !!newValue;
     },
@@ -622,6 +688,7 @@ export default {
       handler () {
         this.pageIndex = 0;
         this.debounceApplyFilters();
+        this.syncLocalFiltersToUrlFilters();
       },
     },
     sortOptions: {
@@ -648,6 +715,8 @@ export default {
     },
     viewId () {
       this.setShowEntryDialog();
+
+      this.setDocumentTitle();
     },
     activeServer () {
       this.setShowEntryDialog();
@@ -672,13 +741,15 @@ export default {
   },
   created () {
     logger = new Logger({ prefix: `[MULTIDEX/${this.$route.name}]` });
+    this.syncUrlFiltersToLocalFilters();
   },
   mounted () {
     this.conditionalInitDb();
     this.forceSetPseudoComputedValues();
     this.setShowEntryDialog();
+    this.setDocumentTitle();
 
-    this.sortOptions.type = Object.keys(this.sortTypes)[0];
+    this.sortOptions.type = this.useAsyncSort ? this.sortTypes[0] : Object.keys(this.sortTypes)[0];
     logger.debug('filter types', this.filterTypes);
   },
   beforeDestroy () {
