@@ -21,6 +21,8 @@ export const createState = () => {
     updateTimes,
     activeServerSymbol: Symbol('activeServer'),
     loadingMessage: '',
+    filterUrl: '',
+    sortOptions: null,
   };
 };
 
@@ -73,6 +75,12 @@ export const createMutations = (logger) => { // eslint-disable-line no-unused-va
     setLoadingMessage (state, message = '') {
       logger.debug('LOADING MESSAGE:', message);
       state.loadingMessage = message;
+    },
+    setFilterUrl (state, url = '') {
+      state.filterUrl = url;
+    },
+    setSortOptions (state, options = null) {
+      state.sortOptions = options;
     },
   };
 };

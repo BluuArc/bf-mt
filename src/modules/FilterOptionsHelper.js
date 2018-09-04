@@ -14,11 +14,13 @@ export default class FilterOptionsHelper {
   constructor (minRarity = 0, maxRarity = 8) {
     this._minRarity = minRarity;
     this._maxRarity = maxRarity;
+    this._arraySeparator = '@';
   }
 
   get defaultValues () {
     return {
       elements: elements.slice(),
+      name: '',
     };
   }
 
@@ -48,7 +50,9 @@ export default class FilterOptionsHelper {
     Object.keys(filterOptions)
       .forEach(key => {
         if (this.hasFilters(filterOptions, key)) {
-          result[key] = filterOptions[key];
+          const entry = filterOptions[key];
+          // turn to single string to shorten encoded version
+          result[key] = Array.isArray(entry) ? entry.join(this._arraySeparator) : entry;
         }
       });
 
@@ -61,6 +65,13 @@ export default class FilterOptionsHelper {
     }
     try {
       const inputOptions = JSON.parse(stringOptions);
+      const defaultFilters = this.defaultValues;
+      Object.keys(inputOptions)
+        .forEach(key => {
+          if (Array.isArray(defaultFilters[key])) {
+            inputOptions[key] = inputOptions[key].split(this._arraySeparator).filter(val => val);
+          }
+        });
       return {
         ...(this.defaultValues),
         ...inputOptions,

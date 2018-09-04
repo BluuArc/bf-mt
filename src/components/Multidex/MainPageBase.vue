@@ -440,7 +440,7 @@ export default {
     useAsyncSort () {
       return Array.isArray(this.sortTypes);
     },
-    filterOptionsString () {
+    filterOptionsUrl () {
       return filterHelper.optionsToString(this.filterOptions);
     },
   },
@@ -500,6 +500,14 @@ export default {
         this.pageIndex += 1;
       }
     },
+    delayedPageIndexChecker: debounce(function () {
+      // case for when the user clicks faster than the page can check
+      if (this.pageIndex <= 0) {
+        this.pageIndex = 0;
+      } else if (this.pageIndex >= (this.numPages - 1)) {
+        this.pageIndex = this.numPages - 1;
+      }
+    }, 50),
     async setServerBasedOnInputServer () {
       if (!this.inputServer) {
         return;
@@ -560,13 +568,16 @@ export default {
     },
     debounceApplyFilters: debounce(function () {
       this.applyFilters();
+      this.syncPageSortsToCache();
     }, 750),
     debounceApplySorts: debounce(function () {
       this.applySorts();
+      this.syncPageSortsToCache();
     }, 250),
     async applyFilters () {
       if (this.moduleLoadState || this.inInitState) {
         this.filteredKeys = [];
+        this.loadingFilters = false;
         return;
       }
       this.loadingFilters = true;
@@ -615,22 +626,51 @@ export default {
         name: '',
       };
     },
-    syncLocalFiltersToUrlFilters () {
-      this.$router.push({
-        path: this.$route.path,
-        query: {
-          viewId: this.viewId || undefined,
-          server: this.inputServer || undefined,
-          filters: this.filterOptionsString || undefined,
-        },
-      });
+    syncPageSortsToCache () {
+      logger.debug('storing sorts', this.sortOptions);
+      this.actionInfo[this.mainModule.name].updateSortOptions(JSON.stringify(this.sortOptions));
+    },
+    syncSortCacheToPage () {
+      const sortCache = this.stateInfo && this.stateInfo[this.mainModule.name] && this.stateInfo[this.mainModule.name].sortOptions;
+      logger.debug('setting sorts from cache', sortCache);
+      if (sortCache !== JSON.stringify(this.sortOptions)) {
+        this.sortOptions = {
+          ...this.sortOptions,
+          ...(JSON.parse(sortCache) || {}),
+        };
+      }
+    },
+    syncLocalFiltersToUrlFilters (forcePush = false) {
+      if (forcePush || this.stateInfo[this.mainModule.name].filterUrl !== this.filterOptionsUrl) {
+        this.actionInfo[this.mainModule.name].updateFilterUrl(this.filterOptionsUrl);
+        this.$router.replace({
+          path: this.$route.path,
+          query: {
+            viewId: this.viewId || undefined,
+            server: this.inputServer || undefined,
+            filters: this.filterOptionsUrl || undefined,
+          },
+        });
+      }
     },
     syncUrlFiltersToLocalFilters () {
-      logger.debug('url filters', this.inputFilters);
-      this.filterOptions = {
-        ...this.filterOptions,
-        ...this.inputFilters,
-      };
+      if (Object.keys(this.inputFilters).length > 0) {
+        logger.debug('input filters', this.inputFilters);
+        this.filterOptions = {
+          ...this.filterOptions,
+          ...this.inputFilters,
+        };
+      } else if (this.stateInfo) {
+        const cachedFilters = filterHelper.stringToOptions(this.stateInfo[this.mainModule.name].filterUrl);
+        logger.debug('cached filters', this.cachedFilters);
+        this.filterOptions = {
+          ...this.filterOptions,
+          ...cachedFilters,
+        };
+        this.syncLocalFiltersToUrlFilters(true); // update URL
+      } else {
+        logger.debug('no filter cache found');
+      }
     },
     closeDialog () {
       if (this.dialogCloseLink) {
@@ -639,7 +679,7 @@ export default {
         this.$router.push({
           path: this.$route.path,
           query: {
-            filters: this.filterOptionsString || undefined,
+            filters: this.filterOptionsUrl || undefined,
           },
         });
       }
@@ -656,6 +696,10 @@ export default {
     },
   },
   watch: {
+    pageIndex () {
+      window.scrollTo(0, 0);
+      this.delayedPageIndexChecker();
+    },
     hasFilters () {
       this.setDocumentTitle();
     },
@@ -687,8 +731,8 @@ export default {
       deep: true,
       handler () {
         this.pageIndex = 0;
-        this.debounceApplyFilters();
         this.syncLocalFiltersToUrlFilters();
+        this.debounceApplyFilters();
       },
     },
     sortOptions: {
@@ -699,7 +743,8 @@ export default {
     },
     async isDataLoading (newValue) {
       if (!newValue) {
-        await this.applyFilters();
+        this.loadingFilters = true;
+        await this.debounceApplyFilters();
       }
     },
     amountPerPage (newValue) {
@@ -723,8 +768,12 @@ export default {
     },
     stateInfo: {
       deep: true,
-      handler () {
+      handler (newValue, oldValue) {
         this.setShowEntryDialog();
+        if (!oldValue) { // first non-null instance; fires only once
+          this.syncUrlFiltersToLocalFilters();
+          this.syncSortCacheToPage();
+        }
       },
     },
     finishedInit () {
@@ -738,10 +787,18 @@ export default {
         this.conditionalInitDb();
       }
     },
+    inputFilters (newValue, oldValue) {
+      const hasChanged = filterHelper.optionsToString(newValue) !== filterHelper.optionsToString(oldValue);
+      if (this.finishedInit && hasChanged) {
+        this.syncUrlFiltersToLocalFilters();
+        this.syncSortCacheToPage();
+      }
+    },
   },
   created () {
     logger = new Logger({ prefix: `[MULTIDEX/${this.$route.name}]` });
     this.syncUrlFiltersToLocalFilters();
+    this.syncSortCacheToPage();
   },
   mounted () {
     this.conditionalInitDb();

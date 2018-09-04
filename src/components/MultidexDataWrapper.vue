@@ -32,6 +32,8 @@ export default {
         stateMapping[`${m}CacheTimes`] = 'cacheTimes';
         stateMapping[`${m}UpdateTimes`] = 'updateTimes';
         stateMapping[`${m}LoadingMessage`] = 'loadingMessage';
+        stateMapping[`${m}FilterUrl`] = 'filterUrl';
+        stateMapping[`${m}SortOptions`] = 'sortOptions';
 
         fullStateMapping = {
           ...fullStateMapping,
@@ -50,6 +52,8 @@ export default {
           cacheTimes: this[`${name}CacheTimes`],
           updateTimes: this[`${name}UpdateTimes`],
           loadingMessage: this[`${name}LoadingMessage`],
+          filterUrl: this[`${name}FilterUrl`],
+          sortOptions: this[`${name}SortOptions`],
         };
         info[name].hasUpdates = this.generateHasUpdatesEntry(info[name], name);
       });
@@ -64,6 +68,8 @@ export default {
           filter: this[`${name}DataFilter`],
           sort: this[`${name}DataSort`],
           dbSync: this[`${name}DbSync`],
+          updateFilterUrl: this[`${name}FilterUpdate`],
+          updateSortOptions: this[`${name}SortUpdate`],
         };
       });
       return info;
@@ -95,9 +101,15 @@ export default {
         actionMapping[`${m}DbSync`] = 'ensurePageDbSyncWithServer';
         actionMapping[`${m}DataFilter`] = 'getFilteredKeys';
         actionMapping[`${m}DataSort`] = 'getSortedKeys';
+
+        const mutationMapping = {};
+        mutationMapping[`${m}FilterUpdate`] = 'setFilterUrl';
+        mutationMapping[`${m}SortUpdate`] = 'setSortOptions';
+
         result = {
           ...result,
           ...mapActions(m, actionMapping),
+          ...mapMutations(m, mutationMapping),
         };
       });
       return result;

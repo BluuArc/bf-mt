@@ -244,6 +244,7 @@ export default {
     this.pageActiveServer = this.activeServer;
     this.htmlOverflowChangeHandler();
     await this.fetchUpdateTimes();
+    logger.warn('ensure analytics is enabled on deploy');
   },
 };
 </script>
