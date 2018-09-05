@@ -21,6 +21,7 @@ const multidexModules = moduleInfo.filter(m => m.type === 'multidex');
 export default {
   computed: {
     ...mapState(['updateTimes', 'loadingState']),
+    ...mapState('settings', ['activeServer']),
     ...(() => {
       // get state for each module
       let fullStateMapping = {};
@@ -56,6 +57,7 @@ export default {
           sortOptions: this[`${name}SortOptions`],
         };
         info[name].hasUpdates = this.generateHasUpdatesEntry(info[name], name);
+        info[name].otherServers = this.generateOtherServersEntry(info[name]);
       });
       return info;
     },
@@ -133,6 +135,11 @@ export default {
           : false;
       });
       return entry;
+    },
+    generateOtherServersEntry (moduleStateInfo) {
+      const currentModuleEntryCounts = moduleStateInfo.numEntries;
+      // check if any other server has non-zero entries
+      return servers.filter(s => s !== this.activeServer && currentModuleEntryCounts[s] !== undefined &&currentModuleEntryCounts[s] > 0);
     },
     setLoadingStateInVuex () {
       // keep on true as long as possible

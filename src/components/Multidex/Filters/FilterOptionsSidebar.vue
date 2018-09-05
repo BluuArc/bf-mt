@@ -17,6 +17,7 @@
         <rarity-panel :filterHelper="filterHelper" :requiredFilters="requiredFilters" v-model="value" :disableFilters="disableFilters" :minRarity="minRarity" :maxRarity="maxRarity"/>
         <unit-kind-panel :filterHelper="filterHelper" :requiredFilters="requiredFilters" v-model="value" :disableFilters="disableFilters"/>
         <gender-panel :filterHelper="filterHelper" :requiredFilters="requiredFilters" v-model="value" :disableFilters="disableFilters"/>
+        <server-exclusives-panel :filterHelper="filterHelper" :requiredFilters="requiredFilters" v-model="value" :disableFilters="disableFilters" :otherServers="otherServers"/>
       </v-expansion-panel>
     </v-container>
   </v-navigation-drawer>
@@ -27,6 +28,7 @@ import ElementPanel from './ElementPanel';
 import RarityPanel from './RarityPanel';
 import UnitKindPanel from './UnitKindPanel';
 import GenderPanel from './GenderPanel';
+import ServerExclusivesPanel from './ServerExclusivePanel';
 
 export default {
   props: {
@@ -58,12 +60,17 @@ export default {
     filterHelper: {
       required: true,
     },
+    otherServers: {
+      type: Array,
+      default: () => [],
+    },
   },
   components: {
     ElementPanel,
     RarityPanel,
     UnitKindPanel,
     GenderPanel,
+    ServerExclusivesPanel,
   },
   methods: {
     toggleFilterSheet (value) {

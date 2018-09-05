@@ -20,6 +20,19 @@ export default class TernaryFilterOption {
     return [this._truthyValue, this._falsyValue].join(',');
   }
 
+  // expected order: all, truthy, falsy
+  get valuesArray () {
+    return [this.allValue, this.truthyValue, this.falsyValue];
+  }
+
+  get values () {
+    return {
+      all: this.allValue,
+      truthy: this.truthyValue,
+      falsy: this.falsyValue,
+    };
+  }
+
   isAll (input) {
     try {
       const [truthy, falsy] = input.split(',');
@@ -35,9 +48,5 @@ export default class TernaryFilterOption {
 
   isFalsy (input) {
     return this._falsyValue === input;
-  }
-
-  get valuesArray () {
-    return [this.allValue, this.truthyValue, this.falsyValue];
   }
 }

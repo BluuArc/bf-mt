@@ -3,7 +3,11 @@ import { makeMultidexWorker } from '../instances/dexie-client';
 import downloadWorker from '../instances/download-worker';
 import { createState, createMutations, createActions, createGetters } from './helper';
 import SWorker from '@/assets/sww.min';
-import { elements } from '@/modules/constants';
+import {
+  servers,
+  elements,
+  exclusiveFilterOptions,
+} from '@/modules/constants';
 // import union from 'lodash/union';
 
 const logger = new Logger({ prefix: '[STORE/UNITS]' });
@@ -72,27 +76,69 @@ export default {
       logger.debug('finished updating data');
       commit('setLoadState', false);
     },
-    async getFilteredKeys ({ state }, inputFilters = {}) {
+    async getKeysForServer ({ state, commit }, server = 'gl') {
+      if (!state.keyLists[server]) {
+        logger.error('unknown server', server);
+        return [];
+      }
+      let keys = state.keyLists[server];
+      if (keys.length === 0) {
+        logger.debug('no cached key list found for', server, 'Getting new key list');
+        keys = await dbWorker.getFieldKeys({ server }, 'data');
+        commit('setKeyListForServer', { server, keys });
+      }
+      return keys;
+    },
+    async getFilteredKeys ({ state, dispatch }, inputFilters = {}) {
       logger.debug('filters', inputFilters);
       const keys = Object.keys(state.pageDb);
 
-      const result = await SWorker.run((keys, filters, pageDb) => {
-        const { name = '', elements = [], rarity = [], unitKinds = [] } = filters;
+      const { exclusives = exclusiveFilterOptions.allValue } = inputFilters;
+      let otherKeys = [];
+      if (!exclusiveFilterOptions.isAll(exclusives)) {
+        const otherServers = servers.filter(s => s !== state.activeServer);
+        const serverKeys = await Promise.all(otherServers.map(s => dispatch('getKeysForServer', s)));
+        otherKeys = await SWorker.run((keysA, keysB) => {
+          const unionResult = keysA.slice().concat(keysB.filter(b => !keysA.includes(b))).sort((a, b) => +a - +b);
+          return unionResult;
+        }, [...serverKeys]);
+      }
+
+      const ternaries = {
+        exclusives: exclusiveFilterOptions.values,
+      };
+
+      const result = await SWorker.run((keys, filters, pageDb, otherKeys, ternaries) => {
+        const {
+          name = '',
+          elements = [],
+          rarity = [],
+          unitKinds = [],
+          genders = [],
+          exclusives = ternaries.exclusives.all,
+        } = filters;
         return keys.filter(key => {
           const entry = pageDb[key];
           const fitsName = (!name ? true : entry.name.toLowerCase().includes(name.toLowerCase()));
           const fitsID = (!name ? true : key.toString().includes(name) || (entry.id || '').toString().includes(name));
           const fitsElement = elements.includes(entry.element);
           const fitsRarity = rarity.includes(entry.rarity);
+          const fitsGender = genders.includes(entry.gender);
 
           // need to flip evo/enhancing as they're marked wrong in the data at time of writing
           // default to enhancing so that Omni Frog and Omni Emperor aren't hidden by default
           const kindEntry = (entry.kind === 'evo' ? 'enhancing' : entry.kind === 'enhancing' ? 'evolution' : entry.kind) || 'enhancing';
           const fitsKind = unitKinds.includes(kindEntry);
 
-          return [fitsName || fitsID, fitsElement, fitsRarity, fitsKind].every(val => val);
+
+          const isExclusive = !otherKeys.includes((entry.id || '').toString());
+          const fitsExclusive = (
+            exclusives === ternaries.exclusives.all ||
+            (exclusives === ternaries.exclusives.truthy && isExclusive) ||
+            (exclusives === ternaries.exclusives.falsy && !isExclusive));
+          return [fitsName || fitsID, fitsElement, fitsRarity, fitsKind, fitsGender, fitsExclusive].every(val => val);
         });
-      }, [keys, inputFilters, state.pageDb]);
+      }, [keys, inputFilters, state.pageDb, otherKeys, ternaries]);
       return result;
     },
     async getSortedKeys ({ state }, { type, isAscending, keys }) {

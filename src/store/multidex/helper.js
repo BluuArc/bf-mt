@@ -6,11 +6,13 @@ export const createState = () => {
   const numEntries = {};
   const cacheTimes = {};
   const updateTimes = {};
+  const keyLists = {};
 
   servers.forEach(server => {
     numEntries[server] = 0;
     cacheTimes[server] = defaultStartDate;
     updateTimes[server] = defaultStartDate;
+    keyLists[server] = [];
   });
   return {
     numEntries,
@@ -23,6 +25,7 @@ export const createState = () => {
     loadingMessage: '',
     filterUrl: '',
     sortOptions: null,
+    keyLists,
   };
 };
 
@@ -71,6 +74,7 @@ export const createMutations = (logger) => { // eslint-disable-line no-unused-va
       state.numEntries[server] = length;
       state.cacheTimes[server] = cacheTime;
       state.updateTimes[server] = updateTime;
+      state.keyLists[server] = []; // reset cached keylist for server
     },
     setLoadingMessage (state, message = '') {
       logger.debug('LOADING MESSAGE:', message);
@@ -81,6 +85,9 @@ export const createMutations = (logger) => { // eslint-disable-line no-unused-va
     },
     setSortOptions (state, options = null) {
       state.sortOptions = options;
+    },
+    setKeyListForServer (state, { server = 'gl', keys = [] }) {
+      state.keyLists[server] = keys;
     },
   };
 };

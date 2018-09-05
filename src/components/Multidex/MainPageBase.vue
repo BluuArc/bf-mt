@@ -17,6 +17,7 @@
           :minRarity="minRarity"
           :maxRarity="maxRarity"
           :filterHelper="filterHelper"
+          :otherServers="stateInfo[mainModule.name].otherServers"
         />
         <v-layout row>
           <v-flex>
