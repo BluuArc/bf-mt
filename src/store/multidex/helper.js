@@ -1,5 +1,6 @@
-import { servers } from '@/modules/constants';
+import { servers, exclusiveFilterOptions } from '@/modules/constants';
 import getUpdateTimes from '@/store/instances/update-data-singleton';
+import SWorker from '@/assets/sww.min';
 const defaultStartDate = new Date('Jan 01 1969');
 
 export const createState = () => {
@@ -190,6 +191,42 @@ export const createActions = (worker, downloadWorker, logger, dbEntryName = 'uni
       }
 
       return worker.getById(state.activeServer, id);
+    },
+    async getKeysForServer ({ state, commit }, server = 'gl') {
+      if (!state.keyLists[server]) {
+        logger.error('unknown server', server);
+        return [];
+      }
+      let keys = state.keyLists[server];
+      if (keys.length === 0) {
+        logger.debug('no cached key list found for', server, 'Getting new key list');
+        keys = await worker.getFieldKeys({ server }, 'data');
+        commit('setKeyListForServer', { server, keys });
+      }
+      return keys;
+    },
+    async filterServerExclusiveKeys ({ dispatch, state }, { filter = exclusiveFilterOptions.allValue, keys = [] }) {
+      let otherKeys = [];
+      if (!exclusiveFilterOptions.isAll(filter)) {
+        const otherServers = servers.filter(s => s !== state.activeServer);
+        const serverKeys = await Promise.all(otherServers.map(s => dispatch('getKeysForServer', s)));
+        otherKeys = await SWorker.run((keysA, keysB) => {
+          const unionResult = keysA.slice().concat(keysB.filter(b => !keysA.includes(b))).sort((a, b) => +a - +b);
+          return unionResult;
+        }, [...serverKeys]);
+      }
+
+      const result = await SWorker.run((exclusivesFilter, otherKeys, ternaryValues, inputKeys, pageDb) => {
+        return inputKeys.filter(key => {
+          const entry = pageDb[key];
+          const isExclusive = !otherKeys.includes((entry.id || '').toString());
+          return (
+            exclusivesFilter === ternaryValues.all ||
+            (exclusivesFilter === ternaryValues.truthy && isExclusive) ||
+            (exclusivesFilter === ternaryValues.falsy && !isExclusive));
+        });
+      }, [filter, otherKeys, exclusiveFilterOptions.values, keys, state.pageDb]);
+      return result;
     },
   };
   /* eslint-enable no-unused-vars */
