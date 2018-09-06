@@ -5,6 +5,13 @@
         {{ setStateVars (stateInfo, actionInfo) }}
         {{ setModuleLoadingState(aggregatedInfo.isLoading) }}
       </span>
+      <proc-selector
+        :showSelector="showProcSelector"
+        @toggleview="showProcSelector = $event"
+        :isUnit="isUnit"
+        v-model="filterOptions"
+        :filterHelper="filterHelper"
+      />
       <!-- search card -->
       <template v-if="!loadingState && finishedInit && hasRequiredModules">
         <filter-options-sidebar
@@ -18,6 +25,8 @@
           :maxRarity="maxRarity"
           :filterHelper="filterHelper"
           :otherServers="stateInfo[mainModule.name].otherServers"
+          :isUnit="isUnit"
+          @toggleprocselector="toggleProcSelector"
         />
         <v-layout row>
           <v-flex>
@@ -271,7 +280,7 @@
 <script>
 import { Logger } from '@/modules/Logger';
 import { moduleInfo } from '@/store/multidex';
-import { mapState, mapActions } from 'vuex';
+import { mapState, mapActions, mapMutations } from 'vuex';
 import { servers } from '@/modules/constants';
 import { delay } from '@/modules/utils';
 import throttle from 'lodash/throttle';
@@ -283,6 +292,7 @@ import SortOptionsContainer from '@/components/Multidex/SortOptionsContainer';
 import ResultContainer from '@/components/Multidex/ResultContainer';
 import FilterOptionsSidebar from '@/components/Multidex/Filters/FilterOptionsSidebar';
 import FilterChipList from '@/components/Multidex/Filters/FilterChipList';
+import ProcSelector from '@/components/Multidex/Filters/BuffSelector/ProcSelector';
 
 // TODO: change based on min/max rarity input
 let filterHelper = new FilterOptionsHelper();
@@ -355,6 +365,10 @@ export default {
       type: Number,
       default: 8,
     },
+    isUnit: {
+      type: Boolean,
+      default: false,
+    },
   },
   components: {
     MultidexDataWrapper,
@@ -363,6 +377,7 @@ export default {
     ResultContainer,
     FilterOptionsSidebar,
     FilterChipList,
+    ProcSelector,
   },
   computed: {
     ...mapState('settings', ['activeServer']),
@@ -454,6 +469,7 @@ export default {
       showFilterSheet: false,
       showSortPanel: false,
       showEntryDialog: false,
+      showProcSelector: false,
     };
     const pseudoComputed = { // manually computed based on current stateVars
       moduleLoadState: true,
@@ -491,6 +507,7 @@ export default {
   },
   methods: {
     ...mapActions(['setActiveServer']),
+    ...mapMutations(['setHtmlOverflowDisableState']),
     decrementPage () {
       if (this.pageIndex <= 0) {
         this.pageIndex = 0;
@@ -711,7 +728,13 @@ export default {
     },
     syncPageIndexToPaginationModel () {
       this.paginationModel = this.pageIndex + 1;
-    }
+    },
+    toggleProcSelector (val) {
+      this.showProcSelector = !!val;
+    },
+    setHtmlOverflow () {
+      this.setHtmlOverflowDisableState(this.showProcSelector);
+    },
   },
   watch: {
     pageIndex () {
@@ -822,6 +845,9 @@ export default {
         this.syncSortCacheToPage();
       }
     },
+    showProcSelector () {
+      this.setHtmlOverflow();
+    },
   },
   created () {
     logger = new Logger({ prefix: `[MULTIDEX/${this.$route.name}]` });
@@ -855,7 +881,6 @@ export default {
   .v-input--radio-group .v-radio {
     flex: 1;
   }
-
 }
 
 .entry-dialog-content {

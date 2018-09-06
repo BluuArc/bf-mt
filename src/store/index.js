@@ -52,6 +52,9 @@ export default new Vuex.Store({
     setLoadingState (state, value) {
       state.loadingState = !!value;
     },
+    setHtmlOverflowDisableState (state, value) {
+      state.disableHtmlOverflow = !!value;
+    },
   },
   actions: {
     setLoadingStateDebounced: debounce(async function({ commit, state }, valueGetter) {

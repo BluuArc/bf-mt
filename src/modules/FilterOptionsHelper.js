@@ -3,6 +3,7 @@ import {
   unitKinds,
   genders,
   exclusiveFilterOptions,
+  buffSearchOptions,
 } from '@/modules/constants';
 
 import {
@@ -27,11 +28,16 @@ export default class FilterOptionsHelper {
   }
 
   get defaultValues () {
+    const nonPassiveFields = ['bb', 'sbb', 'ubb'];
     return {
       elements: elements.slice(),
       rarity: Object.keys(new Array(this._maxRarity - this._minRarity + 1).fill(0)).map(i => +i + this._minRarity),
       unitKinds: unitKinds.slice(),
       genders: genders.slice(),
+      procs: [],
+      procBuffSearchOptions: buffSearchOptions.slice(),
+      passives: [],
+      passiveBuffSearchOptions: buffSearchOptions.filter(field => !nonPassiveFields.includes(field)),
       ...(this.ternaryOptions),
       name: '',
     };

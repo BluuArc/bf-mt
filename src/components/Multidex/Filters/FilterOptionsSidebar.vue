@@ -13,11 +13,40 @@
     <h3 class="headline pl-3 pt-3">Filters</h3>
     <v-container fluid class="pa-0">
       <v-expansion-panel focusable>
-        <element-panel :filterHelper="filterHelper" :requiredFilters="requiredFilters" v-model="value" :disableFilters="disableFilters"/>
-        <rarity-panel :filterHelper="filterHelper" :requiredFilters="requiredFilters" v-model="value" :disableFilters="disableFilters" :minRarity="minRarity" :maxRarity="maxRarity"/>
-        <unit-kind-panel :filterHelper="filterHelper" :requiredFilters="requiredFilters" v-model="value" :disableFilters="disableFilters"/>
-        <gender-panel :filterHelper="filterHelper" :requiredFilters="requiredFilters" v-model="value" :disableFilters="disableFilters"/>
-        <server-exclusives-panel :filterHelper="filterHelper" :requiredFilters="requiredFilters" v-model="value" :disableFilters="disableFilters" :otherServers="otherServers"/>
+        <element-panel
+          :filterHelper="filterHelper"
+          :requiredFilters="requiredFilters"
+          v-model="value"
+          :disableFilters="disableFilters"/>
+        <rarity-panel
+          :filterHelper="filterHelper"
+          :requiredFilters="requiredFilters"
+          v-model="value"
+          :disableFilters="disableFilters"
+          :minRarity="minRarity" :maxRarity="maxRarity"/>
+        <unit-kind-panel
+          :filterHelper="filterHelper"
+          :requiredFilters="requiredFilters"
+          v-model="value"
+          :disableFilters="disableFilters"/>
+        <gender-panel
+          :filterHelper="filterHelper"
+          :requiredFilters="requiredFilters"
+          v-model="value"
+          :disableFilters="disableFilters"/>
+        <server-exclusive-panel
+          :filterHelper="filterHelper"
+          :requiredFilters="requiredFilters"
+          v-model="value"
+          :disableFilters="disableFilters"
+          :otherServers="otherServers"/>
+        <proc-panel
+          :filterHelper="filterHelper"
+          :requiredFilters="requiredFilters"
+          v-model="value"
+          :disableFilters="disableFilters"
+          :isUnit="isUnit"
+          @toggleprocselector="$emit('toggleprocselector', $event)"/>
       </v-expansion-panel>
     </v-container>
   </v-navigation-drawer>
@@ -28,7 +57,8 @@ import ElementPanel from './ElementPanel';
 import RarityPanel from './RarityPanel';
 import UnitKindPanel from './UnitKindPanel';
 import GenderPanel from './GenderPanel';
-import ServerExclusivesPanel from './ServerExclusivePanel';
+import ServerExclusivePanel from './ServerExclusivePanel';
+import ProcPanel from './ProcPanel';
 
 export default {
   props: {
@@ -64,13 +94,18 @@ export default {
       type: Array,
       default: () => [],
     },
+    isUnit: {
+      type: Boolean,
+      default: false,
+    },
   },
   components: {
     ElementPanel,
     RarityPanel,
     UnitKindPanel,
     GenderPanel,
-    ServerExclusivesPanel,
+    ServerExclusivePanel,
+    ProcPanel,
   },
   methods: {
     toggleFilterSheet (value) {

@@ -21,9 +21,6 @@ export const itemTypeMapping = Object.freeze({
   ls_sphere: 'LS Sphere',
 });
 
-// TODO: dynamically created from effect processor
-export const attackingProcs = Object.freeze(['1', '13', '14', '27', '28', '29', '47', '61', '64', '75', '11000'].concat(['46', '48', '97']));
-
 export const targetAreaMapping = Object.freeze({
   aoe: 'AOE',
   single: 'ST',
@@ -33,3 +30,38 @@ export const buffSearchOptions = Object.freeze(['ls', 'es', 'sp', 'bb', 'sbb', '
 export const unitTypes = Object.freeze(['lord', 'anima', 'breaker', 'guardian', 'oracle']);
 export const ailments = Object.freeze(['poison', 'weak', 'sick', 'injury', 'curse', 'paralysis']);
 export const dropTypes = Object.freeze(['hc', 'bc', 'item', 'zel', 'karma']);
+
+export const effectTypes = Object.freeze({
+  ATTACK: {
+    name: 'Attack',
+    desc: 'These types of effects directly inflict damage on targets.',
+  },
+  PASSIVE: {
+    name: 'Passive',
+    desc: 'These effects are always active unless nullified by an enemy skill or battle restriction. Passives from different sources usually stack.',
+  },
+  'INSTANT/BURST': {
+    name: 'Instant/Burst',
+    desc: 'These take effect as soon as they are cast and are usually stackable with other effects of the same type.',
+  },
+  TIMED: {
+    name: 'Timed',
+    desc: 'These conditionally occur (e.g. from the start of battle, after X damage is taken, etc.) and last for a set amount of turns. Timed buffs of the same effect do not stack, regardless of the source. Newer timed buffs of the same type will override the old buff.',
+  },
+  ACTIVE: {
+    name: 'Active',
+    desc: 'These are usually turn based; the source for these effects are from unit bursts (BB, SBB, UBB) or enemy skills. Newer active buffs of the same type will override the old buff (using the new value and duration).',
+  },
+  PERMANENT: {
+    name: 'Permanent',
+    desc: 'These remain in effect for the entire battle. Depending on the buff, it may go away once used.',
+  },
+  UNKNOWN: {
+    name: 'Unknown',
+    desc: 'These effects aren\'t fully understood yet.',
+  },
+  UNTRANSLATED: {
+    name: 'Untranslated',
+    desc: 'These effects aren\'t supported by the effect processor yet.',
+  },
+});
