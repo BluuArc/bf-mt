@@ -69,7 +69,7 @@
       <v-card-actions>
         <v-btn flat @click.native="toggleView(false)">Save</v-btn>
         <v-spacer/>
-        <v-btn flat @click.native="resetValues">Clear</v-btn>
+        <v-btn flat @click.native="resetValues">Reset</v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>

@@ -3,11 +3,11 @@
     <div slot="header">
       <panel-header :hasFilters="hasFilters" title="Active (Proc) Buffs"/>
     </div>
-    <v-layout row class="ml-2 mr-2">
+    <!-- <v-layout row class="ml-2 mr-2">
       <v-flex>
         <v-btn outline :disabled="disableFilters" class="mr-0" @click="resetProcs">Reset</v-btn>
       </v-flex>
-    </v-layout>
+    </v-layout> -->
     <v-layout row wrap class="ml-2 mr-2" v-if="isUnit">
       <v-flex xs4 class="pa-0" v-for="option in defaultSearchOptions" :key="option" @click="showProcSelector" style="cursor: pointer;">
         <v-checkbox :disabled="disableFilters" hide-details :value="option" v-model="value.procBuffSearchOptions" style="pointer-events: none">
@@ -18,9 +18,9 @@
     <v-layout row wrap class="ml-2 mr-2 pb-3">
       <v-flex @click="showProcSelector" style="cursor: pointer;">
         <v-combobox
-          v-model="value.procs"
+          :value="value.procs"
           disabled
-          label="Select Active Buffs"
+          label="Click to Select Active Buffs"
           hint="Empty selection is equivalent to showing all."
           multiple
           persistent-hint>
@@ -37,7 +37,6 @@
     </v-layout>
   </v-expansion-panel-content>
 </template>
-
 
 <script>
 import FilterPanelMixin from './FilterPanelMixin';

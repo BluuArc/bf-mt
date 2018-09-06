@@ -27,6 +27,7 @@ export const createState = () => {
     filterUrl: '',
     sortOptions: null,
     keyLists,
+    buffSearchCache: {},
   };
 };
 
@@ -76,6 +77,7 @@ export const createMutations = (logger) => { // eslint-disable-line no-unused-va
       state.cacheTimes[server] = cacheTime;
       state.updateTimes[server] = updateTime;
       state.keyLists[server] = []; // reset cached keylist for server
+      state.buffSearchCache = {}; // reset cached filtered keylist
     },
     setLoadingMessage (state, message = '') {
       logger.debug('LOADING MESSAGE:', message);
@@ -89,6 +91,9 @@ export const createMutations = (logger) => { // eslint-disable-line no-unused-va
     },
     setKeyListForServer (state, { server = 'gl', keys = [] }) {
       state.keyLists[server] = keys;
+    },
+    setBuffSearchCache (state, value) {
+      state.buffSearchCache = value;
     },
   };
 };
@@ -211,7 +216,9 @@ export const createActions = (worker, downloadWorker, logger, dbEntryName = 'uni
         const otherServers = servers.filter(s => s !== state.activeServer);
         const serverKeys = await Promise.all(otherServers.map(s => dispatch('getKeysForServer', s)));
         otherKeys = await SWorker.run((keysA, keysB) => {
-          const unionResult = keysA.slice().concat(keysB.filter(b => !keysA.includes(b))).sort((a, b) => +a - +b);
+          const unionResult = keysA.slice()
+            .concat(keysB.filter(b => !keysA.includes(b)))
+            .sort((a, b) => +a - +b);
           return unionResult;
         }, [...serverKeys]);
       }
@@ -227,6 +234,31 @@ export const createActions = (worker, downloadWorker, logger, dbEntryName = 'uni
         });
       }, [filter, otherKeys, exclusiveFilterOptions.values, keys, state.pageDb]);
       return result;
+    },
+    async filterProcsAndPassives ({ commit, state }, { procs = [], procAreas = [], passives = [], passiveAreas = [], keys = [] }) {
+      if (procs.length === 0 && passives.length === 0) {
+        return keys;
+      }
+
+      const searchQuery = {
+        procs: procs.slice().sort().map(val => typeof val !== 'string' ? val.toString() : val),
+        procAreas: procAreas.slice().sort(),
+        passives: passives.slice().sort().map(val => typeof val !== 'string' ? val.toString() : val),
+        passiveAreas: passiveAreas.slice().sort(),
+      };
+      const cacheKey = JSON.stringify(searchQuery);
+      let filteredKeys = state.buffSearchCache[cacheKey];
+      if (!filteredKeys) {
+        logger.debug('cache miss for current procs/passive filters', cacheKey);
+        const filteredDb = await worker.getMiniDb(state.activeServer, searchQuery);
+        filteredKeys = Object.keys(filteredDb);
+        commit('setBuffSearchCache', { [cacheKey]: filteredKeys });
+      } else {
+        logger.debug('cache hit for current procs/passive filters', filteredKeys.length);
+      }
+      return await SWorker.run((keys, cachedKeys) => {
+        return keys.filter(key => cachedKeys.includes(key));
+      }, [keys, filteredKeys]);
     },
   };
   /* eslint-enable no-unused-vars */

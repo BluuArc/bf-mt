@@ -503,6 +503,7 @@ export default {
       loadingFilters: false,
       allSortedEntries: [],
       filteredKeys: [],
+      lastKnownFilters: '',
     };
   },
   methods: {
@@ -589,6 +590,8 @@ export default {
       this.moduleLoadState = !!loadState;
     },
     debounceApplyFilters: debounce(function () {
+      logger.debug('debounce apply filters');
+      this.lastKnownFilters = filterHelper.optionsToString(this.filterOptions);
       this.applyFilters();
       this.syncPageSortsToCache();
     }, 750),
@@ -782,6 +785,8 @@ export default {
         } else {
           this.syncLocalFiltersToUrlFilters();
           this.debounceApplyFilters();
+          // if (filterHelper.optionsToString(this.filterOptions) !== this.lastKnownFilters) {
+          // }
         }
       },
     },
@@ -839,7 +844,7 @@ export default {
     },
     inputFilters (newValue, oldValue) {
       const hasChanged = filterHelper.optionsToString(newValue) !== filterHelper.optionsToString(oldValue);
-      if (this.finishedInit && hasChanged) {
+      if (this.finishedInit && hasChanged && !this.showEntryDialog) {
         logger.debug('input filters changed to', newValue);
         this.syncUrlFiltersToLocalFilters(true);
         this.syncSortCacheToPage();

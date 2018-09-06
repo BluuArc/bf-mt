@@ -79,7 +79,13 @@ export default {
       logger.debug('filters', inputFilters);
       let keys = Object.keys(state.pageDb);
 
-      const { exclusives = exclusiveFilterOptions.allValue } = inputFilters;
+      const {
+        exclusives = exclusiveFilterOptions.allValue,
+        procs = [],
+        procBuffSearchOptions = [],
+        passives = [],
+        passiveBuffSearchOptions = [],
+      } = inputFilters;
       if (!exclusiveFilterOptions.isAll(exclusives)) {
         keys = await dispatch('filterServerExclusiveKeys', { filter: exclusives, keys })
       }
@@ -108,7 +114,19 @@ export default {
           return [fitsName || fitsID, fitsElement, fitsRarity, fitsKind, fitsGender].every(val => val);
         });
       }, [keys, inputFilters, state.pageDb]);
-      return result;
+
+      if (procs.length > 0 || passives.length > 0) {
+        const filteredKeys = await dispatch('filterProcsAndPassives', {
+          procs,
+          procAreas: procBuffSearchOptions,
+          passives,
+          passiveAreas: passiveBuffSearchOptions,
+          keys: result,
+        });
+        return filteredKeys;
+      } else {
+        return result;
+      }
     },
     async getSortedKeys ({ state }, { type, isAscending, keys }) {
       logger.debug('sorts', { type, isAscending, keys });
