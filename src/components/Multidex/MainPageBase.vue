@@ -68,7 +68,7 @@
                         <v-divider/>
                       </v-flex>
                     </v-layout>
-                    <v-layout row>
+                    <v-layout row class="mt-3">
                       <v-flex xs10 class="text-xs-left d-align-self-center">
                         <v-layout>
                           <h2 class="title d-inline-block d-align-self-center">Active Filters</h2>
@@ -89,7 +89,8 @@
                           :requiredFilters="filterTypes"
                           :filterOptions="filterOptions"
                           :minRarity="minRarity"
-                          :maxRarity="maxRarity"/>
+                          :maxRarity="maxRarity"
+                          :isUnit="isUnit"/>
                       </v-flex>
                       <v-flex xs10 md11 class="d-align-self-center" v-show="!hasNonNameFilters">
                         No filters applied.
@@ -268,11 +269,6 @@
           </v-card>
         </v-dialog>
       </v-layout>
-      <v-layout row>
-        {{ activeServer }}
-        <br>
-        {{ Object.values(pageDb)[0] || 'no page db' }}
-      </v-layout>
     </v-container>
   </multidex-data-wrapper>
 </template>
@@ -294,7 +290,6 @@ import FilterOptionsSidebar from '@/components/Multidex/Filters/FilterOptionsSid
 import FilterChipList from '@/components/Multidex/Filters/FilterChipList';
 import ProcSelector from '@/components/Multidex/Filters/BuffSelector/ProcSelector';
 
-// TODO: change based on min/max rarity input
 let filterHelper = new FilterOptionsHelper();
 
 let logger = new Logger({ prefix: '[MULTIDEX/default]' });
@@ -785,8 +780,6 @@ export default {
         } else {
           this.syncLocalFiltersToUrlFilters();
           this.debounceApplyFilters();
-          // if (filterHelper.optionsToString(this.filterOptions) !== this.lastKnownFilters) {
-          // }
         }
       },
     },
@@ -874,6 +867,7 @@ export default {
 
     this.sortOptions.type = this.useAsyncSort ? this.sortTypes[0] : Object.keys(this.sortTypes)[0];
     logger.debug('filter types', this.filterTypes);
+    logger.todo('implement change view button');
   },
   beforeDestroy () {
     this.setStateVars.cancel();

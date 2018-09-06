@@ -5,6 +5,7 @@
     <unit-kind-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
     <gender-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
     <server-exclusive-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
+    <proc-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions" :isUnit="isUnit"/>
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import RarityChip from './RarityChip';
 import UnitKindChip from './UnitKindChip';
 import GenderChip from './GenderChip';
 import ServerExclusiveChip from './ServerExclusiveChip';
+import ProcChip from './ProcChip';
 
 export default {
   props: {
@@ -34,6 +36,10 @@ export default {
       type: Number,
       default: 8,
     },
+    isUnit: {
+      type: Boolean,
+      default: false,
+    },
   },
   components: {
     ElementChip,
@@ -41,6 +47,7 @@ export default {
     UnitKindChip,
     GenderChip,
     ServerExclusiveChip,
+    ProcChip,
   },
   methods: {
     applyStylingToChips () {

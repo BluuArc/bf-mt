@@ -109,6 +109,9 @@ export default {
       type: String,
       default: 'Select Buffs',
     },
+    logger: {
+      required: true,
+    },
   },
   data () {
     return {
@@ -120,9 +123,13 @@ export default {
   },
   methods: {
     emitChange () {
+      this.logger.debug('emitting change', {
+        searchOptions: this.localSearchOptions,
+        selectedIds: this.localSelectedIds,
+      });
       this.$emit('input', {
-        searchOptions: this.localSearchOptions.slice(),
-        selectedIds: this.localSelectedIds.slice(),
+        searchOptions: this.localSearchOptions,
+        selectedIds: this.localSelectedIds,
       });
     },
     async syncInputToLocal () {
@@ -171,6 +178,8 @@ export default {
     },
   },
   mounted () {
+    // eslint-disable-next-line no-console
+    console.warn('TODO: styling and icons');
     this.syncInputToLocal();
   },
 }

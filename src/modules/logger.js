@@ -29,6 +29,10 @@ export class Logger {
   warn (...args) {
     console.warn(this.prefix, 'warn:'.toUpperCase(), ...args);
   }
+
+  todo (...args) {
+    console.warn(this.prefix, 'todo:'.toUpperCase(), ...args);
+  }
   /* eslint-enable no-console */
 }
 

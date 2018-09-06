@@ -19,6 +19,12 @@ export default class FilterOptionsHelper {
     this._minRarity = minRarity;
     this._maxRarity = maxRarity;
     this._arraySeparator = '@';
+
+    this._hasFilterSpecialCases = {
+      // dependent on whether or not procs/passives have values
+      procBuffSearchOptions: ({ procs = [] }) => procs.length > 0,
+      passiveBuffSearchOptions: ({ passives = [] }) => passives.length > 0,
+    };
   }
 
   get ternaryOptions () {
@@ -53,6 +59,8 @@ export default class FilterOptionsHelper {
       const defaultFilter = this.defaultValues[field];
       if (defaultFilter === undefined) {
         return false;
+      } else if (this._hasFilterSpecialCases[field]) {
+        return this._hasFilterSpecialCases[field](filterOptions);
       } else if (Array.isArray(filter)) {
         return arraysAreDifferent(filter, defaultFilter);
       } else {

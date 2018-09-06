@@ -8,6 +8,7 @@
     :selectedIds="value.procs.slice()"
     :possibleIds="possibleIds"
     :isUnit="isUnit"
+    :logger="logger"
     selectLabel="Select Active (Proc) Buffs"
   />
 </template>
@@ -16,6 +17,9 @@
 import BaseSelector from './BaseSelector';
 import { arraysAreDifferent } from '@/modules/utils';
 import { procs } from '@/modules/EffectProcessor/constants';
+import { Logger } from '@/modules/Logger';
+
+const logger = new Logger({ prefix: '[MULTIDEX/ProcSelector]' });
 export default {
   props: {
     showSelector: {
@@ -42,12 +46,14 @@ export default {
       return this.filterHelper.defaultValues.procBuffSearchOptions;
     },
     possibleIds: () => procs,
+    logger: () => logger,
   },
   methods: {
     onBaseInput ({ searchOptions = [], selectedIds = [] }) {
       if (arraysAreDifferent(this.value.procBuffSearchOptions, searchOptions) || arraysAreDifferent(this.value.procs, selectedIds)) {
         this.value.procBuffSearchOptions = searchOptions;
         this.value.procs = selectedIds;
+        logger.debug('new value', this.value);
         this.$emit('input', this.value);
       }
     },
