@@ -4,22 +4,22 @@
     @toggleview="$emit('toggleview', $event)"
     @input="onBaseInput($event)"
     :defaultSearchOptions="defaultSearchOptions"
-    :searchOptions="value.procBuffSearchOptions.slice()"
-    :selectedIds="value.procs.slice()"
+    :searchOptions="value.passiveBuffSearchOptions.slice()"
+    :selectedIds="value.passives.slice()"
     :possibleIds="possibleIds"
     :isUnit="isUnit"
     :logger="logger"
-    selectLabel="Select Active (Proc) Buffs"
+    selectLabel="Select Passive Buffs"
   />
 </template>
 
 <script>
 import BaseSelector from './BaseSelector';
 import { arraysAreDifferent } from '@/modules/utils';
-import { procs } from '@/modules/EffectProcessor/constants';
+import { passives } from '@/modules/EffectProcessor/constants';
 import { Logger } from '@/modules/Logger';
 
-const logger = new Logger({ prefix: '[MULTIDEX/ProcSelector]' });
+const logger = new Logger({ prefix: '[MULTIDEX/PassiveSelector]' });
 export default {
   props: {
     showSelector: {
@@ -43,16 +43,16 @@ export default {
   },
   computed: {
     defaultSearchOptions () {
-      return this.filterHelper.defaultValues.procBuffSearchOptions;
+      return this.filterHelper.defaultValues.passiveBuffSearchOptions;
     },
-    possibleIds: () => procs,
+    possibleIds: () => passives,
     logger: () => logger,
   },
   methods: {
     onBaseInput ({ searchOptions = [], selectedIds = [] }) {
-      if (arraysAreDifferent(this.value.procBuffSearchOptions, searchOptions) || arraysAreDifferent(this.value.procs, selectedIds)) {
-        this.value.procBuffSearchOptions = searchOptions;
-        this.value.procs = selectedIds;
+      if (arraysAreDifferent(this.value.passiveBuffSearchOptions, searchOptions) || arraysAreDifferent(this.value.passives, selectedIds)) {
+        this.value.passiveBuffSearchOptions = searchOptions;
+        this.value.passives = selectedIds;
         this.$emit('input', this.value);
       }
     },

@@ -6,6 +6,7 @@
     <gender-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
     <server-exclusive-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
     <proc-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions" :isUnit="isUnit"/>
+    <passive-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions" :isUnit="isUnit"/>
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import UnitKindChip from './UnitKindChip';
 import GenderChip from './GenderChip';
 import ServerExclusiveChip from './ServerExclusiveChip';
 import ProcChip from './ProcChip';
+import PassiveChip from './PassiveChip';
 
 export default {
   props: {
@@ -48,6 +50,7 @@ export default {
     GenderChip,
     ServerExclusiveChip,
     ProcChip,
+    PassiveChip,
   },
   methods: {
     applyStylingToChips () {

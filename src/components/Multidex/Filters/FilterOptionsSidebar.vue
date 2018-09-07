@@ -4,7 +4,8 @@
     disable-route-watcher
     :clipped="$vuetify.breakpoint.lgAndUp"
     fixed app
-    :value="showFilterSheet">
+    :value="showFilterSheet"
+    @input="toggleFilterSheet">
     <v-btn block @click="toggleFilterSheet(false)">
       Close Sidebar
       <v-spacer/>
@@ -47,6 +48,13 @@
           :disableFilters="disableFilters"
           :isUnit="isUnit"
           @toggleprocselector="$emit('toggleprocselector', $event)"/>
+        <passive-panel
+          :filterHelper="filterHelper"
+          :requiredFilters="requiredFilters"
+          v-model="value"
+          :disableFilters="disableFilters"
+          :isUnit="isUnit"
+          @togglepassiveselector="$emit('togglepassiveselector', $event)"/>
       </v-expansion-panel>
     </v-container>
   </v-navigation-drawer>
@@ -59,6 +67,7 @@ import UnitKindPanel from './UnitKindPanel';
 import GenderPanel from './GenderPanel';
 import ServerExclusivePanel from './ServerExclusivePanel';
 import ProcPanel from './ProcPanel';
+import PassivePanel from './PassivePanel';
 
 export default {
   props: {
@@ -106,6 +115,7 @@ export default {
     GenderPanel,
     ServerExclusivePanel,
     ProcPanel,
+    PassivePanel,
   },
   methods: {
     toggleFilterSheet (value) {

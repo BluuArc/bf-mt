@@ -12,6 +12,13 @@
         v-model="filterOptions"
         :filterHelper="filterHelper"
       />
+      <passive-selector
+        :showSelector="showPassiveSelector"
+        @toggleview="showPassiveSelector = $event"
+        :isUnit="isUnit"
+        v-model="filterOptions"
+        :filterHelper="filterHelper"
+      />
       <!-- search card -->
       <template v-if="!loadingState && finishedInit && hasRequiredModules">
         <filter-options-sidebar
@@ -27,6 +34,7 @@
           :otherServers="stateInfo[mainModule.name].otherServers"
           :isUnit="isUnit"
           @toggleprocselector="toggleProcSelector"
+          @togglepassiveselector="togglePassiveSelector"
         />
         <v-layout row>
           <v-flex>
@@ -289,6 +297,7 @@ import ResultContainer from '@/components/Multidex/ResultContainer';
 import FilterOptionsSidebar from '@/components/Multidex/Filters/FilterOptionsSidebar';
 import FilterChipList from '@/components/Multidex/Filters/FilterChipList';
 import ProcSelector from '@/components/Multidex/Filters/BuffSelector/ProcSelector';
+import PassiveSelector from '@/components/Multidex/Filters/BuffSelector/PassiveSelector';
 
 let filterHelper = new FilterOptionsHelper();
 
@@ -373,6 +382,7 @@ export default {
     FilterOptionsSidebar,
     FilterChipList,
     ProcSelector,
+    PassiveSelector,
   },
   computed: {
     ...mapState('settings', ['activeServer']),
@@ -465,6 +475,7 @@ export default {
       showSortPanel: false,
       showEntryDialog: false,
       showProcSelector: false,
+      showPassiveSelector: false,
     };
     const pseudoComputed = { // manually computed based on current stateVars
       moduleLoadState: true,
@@ -729,6 +740,9 @@ export default {
     },
     toggleProcSelector (val) {
       this.showProcSelector = !!val;
+    },
+    togglePassiveSelector (val) {
+      this.showPassiveSelector = !!val;
     },
     setHtmlOverflow () {
       this.setHtmlOverflowDisableState(this.showProcSelector);
