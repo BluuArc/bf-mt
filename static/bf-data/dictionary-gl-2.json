@@ -1,4 +1,60 @@
 {
+  "MST_LEADERSKILLS_801254_NAME": {
+    "en": "Psionic Genius",
+    "es": "Psionic Genius",
+    "id": "Genius Psionik",
+    "pt": "Psionic Genius",
+    "th": "ไซโอนิค จีเนียส",
+    "vi": "Psionic Genius"
+  },
+  "MST_LEADERSKILLS_801255_DESCRIPTION": {
+    "en": "40% boost to Atk, max HP, damage taken may restore HP & considerably reflects damage when attacked",
+    "es": "40% boost to Atk, max HP, damage taken may restore HP & considerably reflects damage when attacked",
+    "id": "40% ekstra Serang, HP maks, kerusakan diderita dapat memulihkan HP & lumayan menolak kerusakan saat diserang",
+    "pt": "40% boost to Atk, max HP, damage taken may restore HP & considerably reflects damage when attacked",
+    "th": "40% เพิ่มค่า โจมตี, HP สูงสุด, ความเสียหายที่ได้รับ อาจจะ ฟื้นคืน HP และ ปัดป้องความเสียหายอย่างมาก เมื่อถูกโจมตี",
+    "vi": "40% boost to Atk, max HP, damage taken may restore HP & considerably reflects damage when attacked"
+  },
+  "MST_LEADERSKILLS_801255_NAME": {
+    "en": "Psycho Soldier",
+    "es": "Psycho Soldier",
+    "id": "Prajurit Psiko",
+    "pt": "Psycho Soldier",
+    "th": "ไซโค โซลเจอร์",
+    "vi": "Psycho Soldier"
+  },
+  "MST_LEADERSKILLS_801256_DESCRIPTION": {
+    "en": "80% boost to Atk, hugely boosts BB Atk & greatly boosts BB gauge when damage taken has exceeded certain amount",
+    "es": "80% boost to Atk, hugely boosts BB Atk & greatly boosts BB gauge when damage taken has exceeded certain amount",
+    "id": "80% ekstra Serang, amat menambah BB Serang dan meteran BB saat kerusakan diderita melampaui jumlah tertentu",
+    "pt": "80% boost to Atk, hugely boosts BB Atk & greatly boosts BB gauge when damage taken has exceeded certain amount",
+    "th": "80% เพิ่มค่า โจมตี, เพิ่มค่าอย่างสูงให้กับ BB โจมตี และ เพิ่มค่าอย่างมากให้กับ เกจ BB เมื่อ ความเสียหายที่ได้รับ เกินกว่าปริมาณหนึ่ง",
+    "vi": "80% boost to Atk, hugely boosts BB Atk & greatly boosts BB gauge when damage taken has exceeded certain amount"
+  },
+  "MST_LEADERSKILLS_801256_NAME": {
+    "en": "Curse of Orochi",
+    "es": "Curse of Orochi",
+    "id": "Kutukan Orochi",
+    "pt": "Curse of Orochi",
+    "th": "เคิร์ส ออฟ โอโรจิ",
+    "vi": "Curse of Orochi"
+  },
+  "MST_LEADERSKILLS_801257_DESCRIPTION": {
+    "en": "80% boost to Atk, 40% boost to max HP, hugely boosts BB Atk, enormously boosts Atk when HP is low & greatly boosts BB gauge when damage taken has exceeded certain amount",
+    "es": "80% boost to Atk, 40% boost to max HP, hugely boosts BB Atk, enormously boosts Atk when HP is low & greatly boosts BB gauge when damage taken has exceeded certain amount",
+    "id": "80% ekstra Serang, HP maks, amat menambah BB Serang dan tambahan jumbo Serang saat HP rendah, amat menambah meteran BB saat kerusakan diderita melampaui jumlah tertentu",
+    "pt": "80% boost to Atk, 40% boost to max HP, hugely boosts BB Atk, enormously boosts Atk when HP is low & greatly boosts BB gauge when damage taken has exceeded certain amount",
+    "th": "80% เพิ่มค่า โจมตี, HP สูงสุด, เพิ่มค่าอย่างสูงให้กับ BB โจมตี, เพิ่มค่ามหาศาลให้กับ โจมตี เมื่อ HP นั้นต่ำ และ เพิ่มค่าอย่างมากให้กับ เกจ BB เมื่อ ความเสียหายที่ได้รับ เกินกว่าปริมาณหนึ่ง",
+    "vi": "80% boost to Atk, 40% boost to max HP, hugely boosts BB Atk, enormously boosts Atk when HP is low & greatly boosts BB gauge when damage taken has exceeded certain amount"
+  },
+  "MST_LEADERSKILLS_801257_NAME": {
+    "en": "Unbridled Instinct",
+    "es": "Unbridled Instinct",
+    "id": "Insting Tak Terkendali",
+    "pt": "Unbridled Instinct",
+    "th": "อันบริดเลด อินสติ๊งค์",
+    "vi": "Unbridled Instinct"
+  },
   "MST_LEADERSKILLS_801258_DESCRIPTION": {
     "en": "25% boost to Atk and 15% boost to max HP of Dark types, 75% boost to Atk, 15% boost to max HP & greatly boosts BB Atk",
     "es": "25% boost to Atk and 15% boost to max HP of Dark types, 75% boost to Atk, 15% boost to max HP & greatly boosts BB Atk",
@@ -3246,6 +3302,38 @@
     "pt": "Thousand Moves Prodigy",
     "th": "Thousand Moves Prodigy",
     "vi": "Thousand Moves Prodigy"
+  },
+  "MST_LEADERSKILLS_850567_DESCRIPTION": {
+    "en": "80% boost to all parameters, damage taken hugely boosts BB gauge and may restore HP & 15% damage reduction for 1 turn when damage taken has exceeded certain amount",
+    "es": "80% boost to all parameters, damage taken hugely boosts BB gauge and may restore HP & 15% damage reduction for 1 turn when damage taken has exceeded certain amount",
+    "id": "80% boost to all parameters, damage taken hugely boosts BB gauge and may restore HP & 15% damage reduction for 1 turn when damage taken has exceeded certain amount",
+    "pt": "80% boost to all parameters, damage taken hugely boosts BB gauge and may restore HP & 15% damage reduction for 1 turn when damage taken has exceeded certain amount",
+    "th": "80% boost to all parameters, damage taken hugely boosts BB gauge and may restore HP & 15% damage reduction for 1 turn when damage taken has exceeded certain amount",
+    "vi": "80% boost to all parameters, damage taken hugely boosts BB gauge and may restore HP & 15% damage reduction for 1 turn when damage taken has exceeded certain amount"
+  },
+  "MST_LEADERSKILLS_850567_NAME": {
+    "en": "Horn of Plenty",
+    "es": "Horn of Plenty",
+    "id": "Horn of Plenty",
+    "pt": "Horn of Plenty",
+    "th": "Horn of Plenty",
+    "vi": "Horn of Plenty"
+  },
+  "MST_LEADERSKILLS_850568_DESCRIPTION": {
+    "en": "100% boost to all parameters, damage taken hugely boosts BB gauge and may restore HP, negates critical and elemental damage & 20% damage reduction for 1 turn when damage taken has exceeded certain amount",
+    "es": "100% boost to all parameters, damage taken hugely boosts BB gauge and may restore HP, negates critical and elemental damage & 20% damage reduction for 1 turn when damage taken has exceeded certain amount",
+    "id": "100% boost to all parameters, damage taken hugely boosts BB gauge and may restore HP, negates critical and elemental damage & 20% damage reduction for 1 turn when damage taken has exceeded certain amount",
+    "pt": "100% boost to all parameters, damage taken hugely boosts BB gauge and may restore HP, negates critical and elemental damage & 20% damage reduction for 1 turn when damage taken has exceeded certain amount",
+    "th": "100% boost to all parameters, damage taken hugely boosts BB gauge and may restore HP, negates critical and elemental damage & 20% damage reduction for 1 turn when damage taken has exceeded certain amount",
+    "vi": "100% boost to all parameters, damage taken hugely boosts BB gauge and may restore HP, negates critical and elemental damage & 20% damage reduction for 1 turn when damage taken has exceeded certain amount"
+  },
+  "MST_LEADERSKILLS_850568_NAME": {
+    "en": "Moonlight Blessing",
+    "es": "Moonlight Blessing",
+    "id": "Moonlight Blessing",
+    "pt": "Moonlight Blessing",
+    "th": "Moonlight Blessing",
+    "vi": "Moonlight Blessing"
   },
   "MST_LEADERSKILLS_850588_DESCRIPTION": {
     "en": "150% boost to Atk, 100% boost to max HP, 30% boost to critical hit rate, 20% damage reduction for 2 turn when damage taken has exceeded certain amount, hugely boost critical damage & 20% boost to EXP gained",
@@ -86789,38 +86877,6 @@
     "id": "La Guardo",
     "pt": "La Guardo",
     "th": "ลา การ์ดโด",
-    "vi": "La Guardo"
-  },
-  "MST_MONSTERS_56906_NAME": {
-    "en": "La Guardo",
-    "es": "La Guardo",
-    "id": "La Guardo",
-    "pt": "La Guardo",
-    "th": "ลา การ์ดโด",
-    "vi": "La Guardo"
-  },
-  "MST_MONSTERS_56907_NAME": {
-    "en": "La Guardo",
-    "es": "La Guardo",
-    "id": "La Guardo",
-    "pt": "La Guardo",
-    "th": "ลา กวาโด",
-    "vi": "La Guardo"
-  },
-  "MST_MONSTERS_56908_NAME": {
-    "en": "La Guardo",
-    "es": "La Guardo",
-    "id": "La Guardo",
-    "pt": "La Guardo",
-    "th": "ลา กวาโด",
-    "vi": "La Guardo"
-  },
-  "MST_MONSTERS_56909_NAME": {
-    "en": "La Guardo",
-    "es": "La Guardo",
-    "id": "Cockatrice",
-    "pt": "La Guardo",
-    "th": "ลา กวาโด้",
     "vi": "La Guardo"
   }
 }
