@@ -9,19 +9,27 @@
     :inputFilters="filters"
     :filterTypes="filterTypes"
     :minRarity="1"
-    :isUnit="true"
-  >
+    :isUnit="true">
+    <v-layout row wrap slot="results" slot-scope="{ keys, getMultidexPathTo }">
+      <v-flex
+        v-for="key in keys"
+        :key="key"
+        xs12 sm6 md4>
+        <entry-card :to="getMultidexPathTo(key)" :entry="pageDb[key]" v-if="pageDb.hasOwnProperty(key)"/>
+      </v-flex>
+    </v-layout>
   </main-page-base>
 </template>
 
 <script>
-import MainPageBase from '@/components/Multidex/MainPageBase';
+import MultidexPageMixin from '@/components/Multidex/MultidexPageMixin';
+import EntryCard from '@/components/Multidex/Units/EntryCard';
 import { mapState, mapGetters } from 'vuex';
 
 export default {
-  props: ['query', 'viewId', 'server', 'filters'],
+  mixins: [MultidexPageMixin],
   components: {
-    MainPageBase,
+    EntryCard,
   },
   computed: {
     ...mapState('units', ['pageDb']),

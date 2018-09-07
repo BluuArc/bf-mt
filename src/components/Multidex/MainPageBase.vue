@@ -205,17 +205,17 @@
             :maxResults="stateInfo[mainModule.name].numEntries[activeServer]"
             :numResults="allSortedEntries.length"
             :logger="logger">
-            <slot name="results">
+            <slot name="results" :keys="entriesToShow" :getMultidexPathTo="(key) => getMultidexPathTo(key, activeServer).resolved.fullPath">
               <v-layout row wrap>
                 <v-flex
                   v-for="key in entriesToShow"
                   :key="key"
                   xs12 sm6 md4>
-                  <v-card :to="getMultidexPathTo(key, activeServer).resolved.fullPath" v-if="pageDb.hasOwnProperty(key)">
+                  <base-entry-card :to="getMultidexPathTo(key, activeServer).resolved.fullPath" :entry="pageDb[key]" v-if="pageDb.hasOwnProperty(key)">
                     <v-card-text>
                       {{ (pageDb[key] && (pageDb[key].name || pageDb[key].description)) || key }}
                     </v-card-text>
-                  </v-card>
+                  </base-entry-card>
                 </v-flex>
               </v-layout>
             </slot>
@@ -298,6 +298,7 @@ import FilterOptionsSidebar from '@/components/Multidex/Filters/FilterOptionsSid
 import FilterChipList from '@/components/Multidex/Filters/FilterChipList';
 import ProcSelector from '@/components/Multidex/Filters/BuffSelector/ProcSelector';
 import PassiveSelector from '@/components/Multidex/Filters/BuffSelector/PassiveSelector';
+import BaseEntryCard from '@/components/Multidex/BaseEntryCard';
 
 let filterHelper = new FilterOptionsHelper();
 
@@ -383,6 +384,7 @@ export default {
     FilterChipList,
     ProcSelector,
     PassiveSelector,
+    BaseEntryCard,
   },
   computed: {
     ...mapState('settings', ['activeServer']),

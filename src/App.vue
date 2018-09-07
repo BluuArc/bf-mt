@@ -257,4 +257,27 @@ html {
 .d-align-self-center {
   align-self: center;
 }
+
+* {
+  .theme--light {
+    --background-color-alt--lighten-1: lightgrey;
+    --background-color-alt: rgba(0, 0, 0, 0.12); /* default color of v-divider */
+  }
+  
+  .theme--dark {
+    --background-color-alt--lighten-1: grey;
+    --background-color-alt: hsla(0, 0%, 100%, 0.12); /* default color of v-divider */
+  }
+}
+
+.d-flex-container {
+  display: flex;
+  &.items-center {
+    align-items: center;
+  }
+
+  &.content-flex-end {
+    justify-content: flex-end;
+  }
+}
 </style>

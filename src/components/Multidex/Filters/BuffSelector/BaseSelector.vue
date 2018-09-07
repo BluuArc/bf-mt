@@ -51,8 +51,8 @@
                   </v-flex>
                 </v-layout>
               </v-container>
-              <v-container fluid class="pb-0 pt-0" style="max-height: 200px; overflow-y: auto;">
-                <v-layout row v-for="(buff) in filteredIds" :key="buff.value">
+              <v-container fluid class="pb-0 pt-0 pl-0 pr-1 buff-selector-list">
+                <v-layout row v-for="(buff) in filteredIds" :key="buff.value" class="buff-selector-list--row">
                   <v-flex xs2>
                     <v-checkbox :value="buff.value.toString()" v-model="localSelectedIds"/>
                   </v-flex>
@@ -185,3 +185,19 @@ export default {
 }
 </script>
 
+<style lang="less">
+.buff-selector-list {
+  max-height: 200px;
+  overflow-y: auto;
+
+  & .buff-selector-list--row {
+    &:nth-child(even) {
+      background-color: var(--background-color-alt);
+    }
+
+    .v-input--selection-controls__input {
+      margin: auto;
+    }
+  }
+}
+</style>
