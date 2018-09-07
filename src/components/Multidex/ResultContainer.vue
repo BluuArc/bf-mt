@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <v-container fluid grid-list-md>
     <v-layout row v-if="dataIsLoading">
       <v-flex>
         <loading-indicator :loading-message="loadingMessage"/>

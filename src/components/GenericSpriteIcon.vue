@@ -8,6 +8,7 @@
     <image
       :width="sheetWidth" :height="sheetHeight"
       :xlink:href="src"
+      :href="src"
       :transform="customTransform || defaultTransform"
     />
   </svg>

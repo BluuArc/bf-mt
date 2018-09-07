@@ -14,7 +14,7 @@
       <v-flex
         v-for="key in keys"
         :key="key"
-        xs12 sm6 md4>
+        xs12 sm6 md4 xl3>
         <entry-card :to="getMultidexPathTo(key)" :entry="pageDb[key]" v-if="pageDb.hasOwnProperty(key)"/>
       </v-flex>
     </v-layout>

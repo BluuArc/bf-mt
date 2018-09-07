@@ -210,7 +210,7 @@
                 <v-flex
                   v-for="key in entriesToShow"
                   :key="key"
-                  xs12 sm6 md4>
+                  xs12 sm6 md4 xl3>
                   <base-entry-card :to="getMultidexPathTo(key, activeServer).resolved.fullPath" :entry="pageDb[key]" v-if="pageDb.hasOwnProperty(key)">
                     <v-card-text>
                       {{ (pageDb[key] && (pageDb[key].name || pageDb[key].description)) || key }}
@@ -487,7 +487,7 @@ export default {
       actionInfo: null,
     };
     const resultViewConfig = {
-      amountPerPage: 27,
+      amountPerPage: 36,
       pageIndex: 0,
       paginationModel: 0,
       filterHelper,
