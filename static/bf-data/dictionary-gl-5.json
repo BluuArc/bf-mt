@@ -1,52 +1,4 @@
 {
-  "MST_SKILLS_2122631_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122631_NAME": {
-    "en": "I'm strong. Please be my...",
-    "es": "Soy fuerte. Por favor, sé mi...",
-    "id": "Aku kuat. Jadilah...",
-    "pt": "Sou forte. Seja meu...",
-    "th": "ข้าแข็งแกร่งมาก ช่วยเป็น...",
-    "vi": "I'm strong. Please be my..."
-  },
-  "MST_SKILLS_2122632_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122632_NAME": {
-    "en": "You may become my friend!",
-    "es": "¡Puedes convertirte en mi amigo!",
-    "id": "Kau boleh menjadi temanku!",
-    "pt": "Você pode ser meu amigo!",
-    "th": "เจ้าอาจจะเป็นเพื่อนกับข้าได้นะ!",
-    "vi": "You may become my friend!"
-  },
-  "MST_SKILLS_2122633_DESCRIPTION": {
-    "en": "18 combo Dark powerful attack on all enemies, probable drastic damage cut for 1 turn & adds Dark and Light elements to attack for 3 turns ",
-    "es": "Combo grupal de 18 poderosos ataque oscuros. Puede reducir drásticamente el daño por 1 turno. Agrega luz y oscuridad al ataque por 3 turnos ",
-    "id": "18 kombo serangan Gelap kuat ke semua musuh, kemungkinan pengurangan kerusakan drastis untuk 1 giliran & menambahkan elemen Gelap dan Terang ke serangan semua sekutu untuk 3 giliran",
-    "pt": "Combo de 18 golpes poderosos de sombra em todos os inimigos, provável corte drástico por uma rodada e adiciona os elementos sombra e luz ao ataque por 3 rodadas ",
-    "th": "18 คอมโบ โจมตีธาตุมืดอย่างรุนแรง ใส่ศัตรูทั้งหมด, อาจจะทำให้คิดสถานะ ลบความเสียหายอย่างรุนแรง นาน 1 เทิร์น และ เพิ่ม ธาตุมืด กับ แสง ให้กับการโจมตี นาน 3 เทิร์น ",
-    "vi": "18 combo Dark powerful attack on all enemies, probable drastic damage cut for 1 turn & adds Dark and Light elements to attack for 3 turns "
-  },
-  "MST_SKILLS_2122633_NAME": {
-    "en": "I'll make you like me!",
-    "es": "¡Haré que me quieras!",
-    "id": "Akan kubuat kau menyukaiku!",
-    "pt": "Vou deixar você como eu!",
-    "th": "ข้าจะทำให้ท่านชอบข้าให้ได้!",
-    "vi": "I'll make you like me!"
-  },
   "MST_SKILLS_2122634_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -86822,5 +86774,109 @@
     "pt": "Raygun Aria",
     "th": "Raygun Aria",
     "vi": "Raygun Aria"
+  },
+  "MST_SKILLS_2830317_DESCRIPTION": {
+    "en": "40 combo massive Earth attack on all foes, boosts Spark damage and enemies' Spark vulnerability for 3 turns & raises normal hit amount for 3 turns",
+    "es": "40 combo massive Earth attack on all foes, boosts Spark damage and enemies' Spark vulnerability for 3 turns & raises normal hit amount for 3 turns",
+    "id": "40 kombo serangan Bumi kuat ke semua musuh, 3 giliran menambah: kerusakan Percikan dan kelemahan musuh akan Percikan & jumlah pukulan normal",
+    "pt": "40 combo massive Earth attack on all foes, boosts Spark damage and enemies' Spark vulnerability for 3 turns & raises normal hit amount for 3 turns",
+    "th": "40 คอมโบ โจมตีด้วยธาตุดินอย่างรุนแรงใส่ศัตรูทั้งหมด, ศัตรูแพ้ทางติดสปาร์ค 3 เทิร์น, เพิ่มฮิต 3 เทิร์น",
+    "vi": "40 combo massive Earth attack on all foes, boosts Spark damage and enemies' Spark vulnerability for 3 turns & raises normal hit amount for 3 turns"
+  },
+  "MST_SKILLS_2830317_NAME": {
+    "en": "Khabayth Al'iiesar ",
+    "es": "Khabayth Al'iiesar ",
+    "id": "Khabayth Al'iiesar ",
+    "pt": "Khabayth Al'iiesar ",
+    "th": "แคบเบย์ธ อัลลิซาร์",
+    "vi": "Khabayth Al'iiesar "
+  },
+  "MST_SKILLS_2830327_DESCRIPTION": {
+    "en": "15 combo massive Earth attack on all foes (damage relative to remaining HP), hugely boosts BB Atk, boosts Atk relative to Def for 3 turns, great 3 turn Atk reduction & massive additional attack on all foes at turn's end",
+    "es": "15 combo massive Earth attack on all foes (damage relative to remaining HP), hugely boosts BB Atk, boosts Atk relative to Def for 3 turns, great 3 turn Atk reduction & massive additional attack on all foes at turn's end",
+    "id": "15 kombo serangan Bumi kuat ke semua musuh (kerusakan sesuai sisa HP), amat menambah BB Serang, menambah Serang sesuai Tahan 3 giliran, pengurangan besar Serangan 3 giliran & tambahan serangan masif ke semua musuh di akhir giliran",
+    "pt": "15 combo massive Earth attack on all foes (damage relative to remaining HP), hugely boosts BB Atk, boosts Atk relative to Def for 3 turns, great 3 turn Atk reduction & massive additional attack on all foes at turn's end",
+    "th": "15 คอมโบ โจมตีธาตุดินรุนแรงมหาศาล ใส่ศัตรูทั้งหมด (ความเสียหายขึ้นอยู่กับ HP ที่เหลือ), เพิ่มค่าอย่างสูงให้ โจมตี BB, เพิ่มค่า โจมตี ขึ้นอยู่กับค่า ป้องกัน นาน 3 เทิร์น,  3 เทิร์น ลดค่า โจมตี อย่างมาก และ โจมตีรุนแรงมหาศาลอีกครั้งใส่ศัตรูทั้งหมด เมื่อจบเทิร์น",
+    "vi": "15 combo massive Earth attack on all foes (damage relative to remaining HP), hugely boosts BB Atk, boosts Atk relative to Def for 3 turns, great 3 turn Atk reduction & massive additional attack on all foes at turn's end"
+  },
+  "MST_SKILLS_2830327_NAME": {
+    "en": "Hysteria: Soul Shatter",
+    "es": "Hysteria: Soul Shatter",
+    "id": "Ledakan Jiwa Tigris",
+    "pt": "Hysteria: Soul Shatter",
+    "th": "ฮิสทีเรีย: โซล แชทเตอร์",
+    "vi": "Hysteria: Soul Shatter"
+  },
+  "MST_SKILLS_2830328_DESCRIPTION": {
+    "en": "Massive Earth attack on single foe, massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Earth, Dark elemental damage for 3 turns, enormous 3 turns Atk reduction & massive additional damage at turn's end for 2 turns",
+    "es": "Massive Earth attack on single foe, massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Earth, Dark elemental damage for 3 turns, enormous 3 turns Atk reduction & massive additional damage at turn's end for 2 turns",
+    "id": "Massive Earth attack on single foe, massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Earth, Dark elemental damage for 3 turns, enormous 3 turns Atk reduction & massive additional damage at turn's end for 2 turns",
+    "pt": "Massive Earth attack on single foe, massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Earth, Dark elemental damage for 3 turns, enormous 3 turns Atk reduction & massive additional damage at turn's end for 2 turns",
+    "th": "Massive Earth attack on single foe, massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Earth, Dark elemental damage for 3 turns, enormous 3 turns Atk reduction & massive additional damage at turn's end for 2 turns",
+    "vi": "Massive Earth attack on single foe, massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Earth, Dark elemental damage for 3 turns, enormous 3 turns Atk reduction & massive additional damage at turn's end for 2 turns"
+  },
+  "MST_SKILLS_2830328_NAME": {
+    "en": "Now, Suffer…",
+    "es": "Now, Suffer…",
+    "id": "Now, Suffer…",
+    "pt": "Now, Suffer…",
+    "th": "Now, Suffer…",
+    "vi": "Now, Suffer…"
+  },
+  "MST_SKILLS_2830357_DESCRIPTION": {
+    "en": "17 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormous damage reduction for 1 turn & activates Earth barrier",
+    "es": "17 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormous damage reduction for 1 turn & activates Earth barrier",
+    "id": "27 kombo serangan Bumi kuat ke semua musuh (kerusakan sesuai sisa HP), 3 giliran: ekstra jumbo kerusakan Percikan, Serang, Tahan, Pulih, pengurangan jumbo 1 giliran & mengaktifkan penghalang Bumi",
+    "pt": "17 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormous damage reduction for 1 turn & activates Earth barrier",
+    "th": "17 คอมโบ โจมตีธาตุดินอย่างแรง ใส่ศัตรูทั้งหมด (ค่าความเสียหาย สัมพันธ์กับ HP ที่เหลืออยู่), เพิ่มค่ามหาศาลให้ ความเสียหายสปาร์ค นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ โจมตี, ป้องกัน, ฟื้นฟู นาน 3 เทิร์น, ลดค่าความเสียหายมหาศาล นาน 1 เทิร์น และ ใช้งาน กำแพงดิน",
+    "vi": "17 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormous damage reduction for 1 turn & activates Earth barrier"
+  },
+  "MST_SKILLS_2830357_NAME": {
+    "en": "Asphyxiating Vise",
+    "es": "Asphyxiating Vise",
+    "id": "Ragum Sesak Nafas",
+    "pt": "Asphyxiating Vise",
+    "th": "แอสฟิสิเอติ้ง ไวส์",
+    "vi": "Asphyxiating Vise"
+  },
+  "MST_SKILLS_2830358_DESCRIPTION": {
+    "en": "22 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormous damage reduction for 2 turns & activates Earth barrier",
+    "es": "22 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormous damage reduction for 2 turns & activates Earth barrier",
+    "id": "22 kombo serangan Bumi kuat ke semua musuh (kerusakan sesuai sisa HP), 3 giliran: ekstra jumbo kerusakan Percikan, Serang, Tahan, Pulih, pengurangan jumbo kerusakan 2 giliran & mengaktifkan penghalang Bumi",
+    "pt": "22 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormous damage reduction for 2 turns & activates Earth barrier",
+    "th": "22 คอมโบ โจมตีธาตุดินอย่างแรง ใส่ศัตรูทั้งหมด (ค่าความเสียหาย สัมพันธ์กับ HP ที่เหลืออยู่), เพิ่มค่ามหาศาลให้ ความเสียหายสปาร์ค นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ โจมตี, ป้องกัน, ฟื้นฟู นาน 3 เทิร์น, ลดค่าความเสียหายมหาศาล นาน 2 เทิร์น และ ใช้งาน กำแพงดิน",
+    "vi": "22 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormous damage reduction for 2 turns & activates Earth barrier"
+  },
+  "MST_SKILLS_2830358_NAME": {
+    "en": "Thrice-Dead Guillotine",
+    "es": "Thrice-Dead Guillotine",
+    "id": "Guilotine 3x Mati",
+    "pt": "Thrice-Dead Guillotine",
+    "th": "ไทรซ์-เด้ด กิโยติน",
+    "vi": "Thrice-Dead Guillotine"
+  },
+  "MST_SKILLS_2830377_DESCRIPTION": {
+    "en": "12 combo massive Earth attack on all foes (damage relative to remaining HP), boosts all elemental damage for 3 turns, enormously boosts critical damage for 3 turns & fills own BB gauge to max",
+    "es": "12 combo massive Earth attack on all foes (damage relative to remaining HP), boosts all elemental damage for 3 turns, enormously boosts critical damage for 3 turns & fills own BB gauge to max",
+    "id": "12 kombo serangan Bumi masif ke semua musuh (kerusakan sesuai sisa HP), mengisi penuh meteran BB, 3 giliran: menambah kerusakan semua elemen, ekstra jumbo kerusakan ampuh",
+    "pt": "12 combo massive Earth attack on all foes (damage relative to remaining HP), boosts all elemental damage for 3 turns, enormously boosts critical damage for 3 turns & fills own BB gauge to max",
+    "th": "12 คอมโบ โจมตีธาตุดินรุนแรงมหาศาล ใส่ศัตรูทั้งหมด (ความเสียหายสัมพันธ์กับ HP ที่เหลืออยู่), เพิ่มค่า ความเสียหายธาตุทั้งหมด นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ ความเสียหายคริติคอล นาน 3 เทิร์น และ เติมเกจ BB ของตนเอง จนเต็ม",
+    "vi": "12 combo massive Earth attack on all foes (damage relative to remaining HP), boosts all elemental damage for 3 turns, enormously boosts critical damage for 3 turns & fills own BB gauge to max"
+  },
+  "MST_SKILLS_2830377_NAME": {
+    "en": "Imperial Ray",
+    "es": "Imperial Ray",
+    "id": "Sinar Kerajaan",
+    "pt": "Imperial Ray",
+    "th": "อิมพีเรียล เรย์",
+    "vi": "Imperial Ray"
+  },
+  "MST_SKILLS_2830378_DESCRIPTION": {
+    "en": "27 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts all elemental damage for 3 turns, enormously boosts critical damage for 3 turns, fills own BB gauge to max & hugely boosts max HP",
+    "es": "27 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts all elemental damage for 3 turns, enormously boosts critical damage for 3 turns, fills own BB gauge to max & hugely boosts max HP",
+    "id": "27 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts all elemental damage for 3 turns, enormously boosts critical damage for 3 turns, fills own BB gauge to max & hugely boosts max HP",
+    "pt": "27 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts all elemental damage for 3 turns, enormously boosts critical damage for 3 turns, fills own BB gauge to max & hugely boosts max HP",
+    "th": "27 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts all elemental damage for 3 turns, enormously boosts critical damage for 3 turns, fills own BB gauge to max & hugely boosts max HP",
+    "vi": "27 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts all elemental damage for 3 turns, enormously boosts critical damage for 3 turns, fills own BB gauge to max & hugely boosts max HP"
   }
 }
