@@ -33,8 +33,15 @@ export const createState = () => {
 
 export const createGetters = (multidexModuleName = 'units') => {
   return {
-    getMultidexPathTo: state => (id, server = state.activeServer) => `/multidex/${multidexModuleName}/?viewId=${id}&server=${server}`,
+    // getMultidexPathTo: state => (id, server = state.activeServer) => `/multidex/${multidexModuleName}/?viewId=${id}&server=${server}`,
     getById: state => id => state.pageDb[id.toString()],
+    getMultidexRouteParamsTo: state => (id, server = state.activeServer) => ({
+      path: `/multidex/${multidexModuleName}/`,
+      query: {
+        viewId: id,
+        server,
+      },
+    }),
   };
 };
 

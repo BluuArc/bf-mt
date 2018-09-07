@@ -76,7 +76,7 @@
                         <v-divider/>
                       </v-flex>
                     </v-layout>
-                    <v-layout row class="mt-3">
+                    <v-layout row>
                       <v-flex xs10 class="text-xs-left d-align-self-center">
                         <v-layout>
                           <h2 class="title d-inline-block d-align-self-center">Active Filters</h2>
@@ -211,7 +211,7 @@
                   v-for="key in entriesToShow"
                   :key="key"
                   xs12 sm6 md4>
-                  <v-card :to="getMultidexPathTo(key, activeServer)" v-if="pageDb.hasOwnProperty(key)">
+                  <v-card :to="getMultidexPathTo(key, activeServer).resolved.fullPath" v-if="pageDb.hasOwnProperty(key)">
                     <v-card-text>
                       {{ (pageDb[key] && (pageDb[key].name || pageDb[key].description)) || key }}
                     </v-card-text>
@@ -254,7 +254,7 @@
                           :block="$vuetify.breakpoint.xsOnly"
                           :disabled="server === activeServer"
                           v-text="server"
-                          :to="getMultidexPathTo(viewId, server)"/>
+                          :to="getMultidexPathTo(viewId, server).resolved.fullPath"/>
                       </v-flex>
                   </v-layout>
                   <v-layout row v-if="hasUpdates">
@@ -345,7 +345,7 @@ export default {
       type: Object,
       default: () => {},
     },
-    getMultidexPathTo: {
+    getMultidexRouteParamsTo: {
       type: Function,
       required: true,
     },
@@ -543,7 +543,7 @@ export default {
       }
       if (!servers.includes(this.inputServer)) {
         logger.warn(`unknown input server [${this.inputServer}]. Auto rerouting to last known valid server`, this.activeServer);
-        this.$router.push(this.getMultidexPathTo(this.viewId, this.activeServer));
+        this.$router.push(this.getMultidexPathTo(this.viewId, this.activeServer).location);
       } else if (this.inputServer !== this.activeServer) {
         this.finishedInit = false;
         try {
@@ -746,6 +746,19 @@ export default {
     },
     setHtmlOverflow () {
       this.setHtmlOverflowDisableState(this.showProcSelector);
+    },
+    getMultidexPathTo (id, server) {
+      const { path, query } = this.getMultidexRouteParamsTo(id, server);
+      const filters = (path === this.$route.path && this.filterOptionsUrl) ? this.filterOptionsUrl : undefined;
+      const resolvedPath = this.$router.resolve({
+        path,
+        query: {
+          ...query,
+          filters,
+        }
+      });
+      // logger.debug('resolved path', resolvedPath);
+      return resolvedPath;
     },
   },
   watch: {

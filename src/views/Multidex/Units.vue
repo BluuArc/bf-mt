@@ -2,7 +2,7 @@
   <main-page-base
     :requiredModules="requiredModules"
     :sortTypes="sortTypes"
-    :getMultidexPathTo="getMultidexPathTo"
+    :getMultidexRouteParamsTo="getMultidexRouteParamsTo"
     :inputServer="server"
     :viewId="viewId"
     :pageDb="pageDb"
@@ -25,7 +25,7 @@ export default {
   },
   computed: {
     ...mapState('units', ['pageDb']),
-    ...mapGetters('units', ['getImageUrls', 'getMultidexPathTo', 'sortTypes']),
+    ...mapGetters('units', ['getImageUrls', 'getMultidexRouteParamsTo', 'sortTypes']),
     requiredModules: () => ['units', 'items', 'missions'],
     filterTypes: () => ['elements', 'rarity', 'unitKinds', 'genders', 'exclusives', 'procs', 'passives'],
   },
