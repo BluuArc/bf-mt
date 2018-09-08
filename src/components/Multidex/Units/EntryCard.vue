@@ -2,9 +2,12 @@
   <base-entry-card :to="to">
     <v-container fluid class="pa-3">
       <v-layout row>
-        <v-flex xs3>
-          <!-- {{getImageUrls(entry.id).ills_full}} -->
-          unit image here
+        <v-flex xs3 class="text-xs-center d-align-self-center">
+          <unit-thumbnail
+            :src="getImageUrls(entry.id).ills_thum"
+            :rarity="rarity"
+            :imageTitle="entry.name"
+            :displayWidth="thumbnailSize" :displayHeight="thumbnailSize"/>
         </v-flex>
         <v-flex xs9>
           <v-container fluid class="pa-0">
@@ -45,12 +48,14 @@ import { getGenderInfo } from '@/modules/utils';
 import EntryCardMixin from '@/components/Multidex/BaseEntryCardMixin';
 import ElementIcon from '@/components/Multidex/ElementIcon';
 import RarityIcon from '@/components/Multidex/RarityIcon';
+import UnitThumbnail from '@/components/Multidex/Units/UnitThumbnail';
 
 export default {
   mixins: [EntryCardMixin],
   components: {
     ElementIcon,
     RarityIcon,
+    UnitThumbnail,
   },
   computed: {
     ...mapGetters('units', ['getImageUrls']),
@@ -59,7 +64,17 @@ export default {
     },
     rarity () {
       return this.entry.rarity;
-    }
+    },
+    thumbnailSize () {
+      const breakpoint = this.$vuetify.breakpoint;
+      if (breakpoint.xlOnly) {
+        return 64;
+      } else if (breakpoint.mdAndUp) {
+        return 56;
+      } else {
+        return 48;
+      }
+    },
   },
 };
 </script>
