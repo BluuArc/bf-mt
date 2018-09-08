@@ -2,14 +2,14 @@
   <base-entry-card :to="to">
     <v-container fluid class="pa-3">
       <v-layout row>
-        <v-flex xs3 class="text-xs-center d-align-self-center">
+        <v-flex xs3 class="text-xs-center d-align-self-center pb-0">
           <unit-thumbnail
             :src="getImageUrls(entry.id).ills_thum"
             :rarity="rarity"
             :imageTitle="entry.name"
             :displayWidth="thumbnailSize" :displayHeight="thumbnailSize"/>
         </v-flex>
-        <v-flex xs9>
+        <v-flex xs9 class="pb-0">
           <v-container fluid class="pa-0">
             <v-layout row>
               <v-flex>

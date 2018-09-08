@@ -279,5 +279,9 @@ html {
   &.content-flex-end {
     justify-content: flex-end;
   }
+
+  &.content-center {
+    justify-content: center;
+  }
 }
 </style>

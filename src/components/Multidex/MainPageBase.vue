@@ -49,7 +49,7 @@
                       <span v-text="searchResultCountText"/>
                     </v-flex>
                     <v-flex xs2 sm1 v-if="hasUpdates" class="text-xs-center">
-                      <v-tooltip left v-model="showUpdateTooltip">
+                      <v-tooltip left v-model="showUpdateTooltip" v-resize="onResize">
                         <v-btn flat icon color="info" slot="activator" @click="showUpdateDialog = true">
                           <v-icon>info</v-icon>
                         </v-btn>
@@ -141,7 +141,7 @@
         </v-layout>
         <v-layout row>
           <v-flex xs6>
-            <v-btn flat small>Change View</v-btn>
+            <v-btn flat small v-if="onChangeButtonClick" @click="onChangeButtonClick">Change View</v-btn>
           </v-flex>
           <v-flex xs6 class="text-xs-right">
             <v-menu offset-y :close-on-content-click="false">
@@ -373,6 +373,9 @@ export default {
     isUnit: {
       type: Boolean,
       default: false,
+    },
+    onChangeButtonClick: {
+      type: Function,
     },
   },
   components: {
@@ -762,6 +765,13 @@ export default {
       // logger.debug('resolved path', resolvedPath);
       return resolvedPath;
     },
+    onResize: debounce(async function () {
+      if (this.showUpdateTooltip) {
+        this.showUpdateTooltip = false;
+        await delay(150);
+        this.showUpdateTooltip = true;
+      }
+    }, 250),
   },
   watch: {
     pageIndex () {
