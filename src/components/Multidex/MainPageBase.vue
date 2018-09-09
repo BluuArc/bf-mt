@@ -228,7 +228,7 @@
                 <v-icon>close</v-icon>
               </v-btn>
               <v-toolbar-title>
-                <slot name="dialog-toolbar-title">
+                <slot name="dialog-toolbar-title" :viewId="viewId" :hasViewId="hasViewId" :entry="pageDb[viewId]">
                   View {{ mainModule.fullName }} Entry
                 </slot>
               </v-toolbar-title>
@@ -268,7 +268,7 @@
                 </v-container>
               </template>
               <template v-else>
-                <slot name="entry-dialog-content">
+                <slot name="entry-dialog-content" :viewId="viewId" :logger="logger">
                   <p>Put your dialog content here</p>
                   {{ pageDb[viewId] }}
                 </slot>
@@ -729,6 +729,7 @@ export default {
           },
         });
       }
+      this.showEntryDialog = false;
     },
     setDocumentTitle () {
       const defaultTitle = `BF-MT - ${this.mainModule.fullName}`;
@@ -750,7 +751,7 @@ export default {
       this.showPassiveSelector = !!val;
     },
     setHtmlOverflow () {
-      this.setHtmlOverflowDisableState(this.showProcSelector);
+      this.setHtmlOverflowDisableState(this.showProcSelector || this.showEntryDialog);
     },
     getMultidexPathTo (id, server) {
       const { path, query } = this.getMultidexRouteParamsTo(id, server);
@@ -885,6 +886,9 @@ export default {
     showProcSelector () {
       this.setHtmlOverflow();
     },
+    showEntryDialog () {
+      this.setHtmlOverflow();
+    },
   },
   created () {
     logger = new Logger({ prefix: `[MULTIDEX/${this.$route.name}]` });
@@ -906,7 +910,6 @@ export default {
 
     this.sortOptions.type = this.useAsyncSort ? this.sortTypes[0] : Object.keys(this.sortTypes)[0];
     logger.debug('filter types', this.filterTypes);
-    logger.todo('implement change view button');
   },
   beforeDestroy () {
     this.setStateVars.cancel();

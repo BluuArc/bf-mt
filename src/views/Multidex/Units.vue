@@ -29,20 +29,45 @@
         </v-flex>
       </template>
     </v-layout>
+    <template slot="dialog-toolbar-title" slot-scope="{ viewId, hasViewId, entry }">
+      <v-flex class="d-flex">
+        <unit-thumbnail
+          v-if="hasViewId"
+          :displayWidth="32"
+          :displayHeight="32"
+          :src="getImageUrls(viewId).ills_battle"
+          :rarity="(hasViewId && entry.rarity) || undefined"/>
+        <span class="d-align-self-center ml-1">
+          <span v-if="hasViewId">
+            {{ entry.name }}
+          </span>
+          <span v-else>
+            Units Entry: {{ viewId }}
+          </span>
+        </span>
+      </v-flex>
+    </template>
+    <template slot="entry-dialog-content" slot-scope="{ viewId, logger }">
+      <dialog-content :entryId="viewId" :logger="logger" :pageDb="pageDb"/>
+    </template>
   </main-page-base>
 </template>
 
 <script>
+import { mapState, mapGetters } from 'vuex';
 import MultidexPageMixin from '@/components/Multidex/MultidexPageMixin';
 import EntryCard from '@/components/Multidex/Units/EntryCard';
 import IconEntryCard from '@/components/Multidex/Units/IconEntryCard';
-import { mapState, mapGetters } from 'vuex';
+import UnitThumbnail from '@/components/Multidex/Units/UnitThumbnail';
+import DialogContent from '@/components/Multidex/Units/DialogContent';
 
 export default {
   mixins: [MultidexPageMixin],
   components: {
     EntryCard,
     IconEntryCard,
+    UnitThumbnail,
+    DialogContent,
   },
   computed: {
     ...mapState('units', ['pageDb']),
@@ -59,7 +84,7 @@ export default {
   methods: {
     switchViewMode () {
       const nextViewModeIndex = this.viewModes.indexOf(this.viewMode) + 1;
-      return this.viewModes[nextViewModeIndex] || this.viewModes[0];
+      this.viewMode = this.viewModes[nextViewModeIndex] || this.viewModes[0];
     },
   },
 };
