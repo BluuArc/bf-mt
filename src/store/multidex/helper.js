@@ -26,8 +26,9 @@ export const createState = () => {
     loadingMessage: '',
     filterUrl: '',
     sortOptions: null,
-    keyLists,
-    buffSearchCache: {},
+    keyLists, // for caching key lists of other servers
+    buffSearchCache: {}, // for caching searches related to procs/passives
+    entryCache: {}, // for caching entries
   };
 };
 
@@ -60,6 +61,10 @@ export const createMutations = (logger) => { // eslint-disable-line no-unused-va
       } else if (needsReload) {
         state.pageDb[state.activeServerSymbol] = '';
       }
+
+      // different server -> different entries
+      state.buffSearchCache = {};
+      state.entryCache = {};
     },
     setLoadState (state, mode) {
       if (typeof mode !== 'object') {
@@ -84,7 +89,8 @@ export const createMutations = (logger) => { // eslint-disable-line no-unused-va
       state.cacheTimes[server] = cacheTime;
       state.updateTimes[server] = updateTime;
       state.keyLists[server] = []; // reset cached keylist for server
-      state.buffSearchCache = {}; // reset cached filtered keylist
+      state.buffSearchCache = {};
+      state.entryCache = {};
     },
     setLoadingMessage (state, message = '') {
       logger.debug('LOADING MESSAGE:', message);
@@ -101,6 +107,11 @@ export const createMutations = (logger) => { // eslint-disable-line no-unused-va
     },
     setBuffSearchCache (state, value) {
       state.buffSearchCache = value;
+    },
+    setEntryForEntryCache (state, { key, value }) {
+      state.entryCache[key] = value;
+      // TODO: limit number of entries here?
+      // probably need to keep track of add order in another array to know which to remove first
     },
   };
 };
@@ -197,12 +208,20 @@ export const createActions = (worker, downloadWorker, logger, dbEntryName = 'uni
       }
       commit('setLoadState', false);
     },
-    getById ({ dispatch, state }, id) {
+    async getById ({ state, commit }, id) {
       if (!state.pageDb.hasOwnProperty(id)) {
         return undefined;
       }
 
-      return worker.getById(state.activeServer, id);
+      let entry = state.entryCache[id];
+      if (!entry) {
+        logger.debug('cache miss for id', id);
+        entry = await worker.getById(state.activeServer, id);
+        commit('setEntryForEntryCache', { key: id, value: entry });
+      } else {
+        logger.debug('cache hit for id', id, entry);
+      }
+      return entry;
     },
     async getKeysForServer ({ state, commit }, server = 'gl') {
       if (!state.keyLists[server]) {

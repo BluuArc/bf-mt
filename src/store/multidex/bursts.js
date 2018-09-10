@@ -2,6 +2,7 @@ import { Logger } from '@/modules/Logger';
 import { makeMultidexWorker } from '../instances/dexie-client';
 import downloadWorker from '../instances/download-worker';
 import { createState, createMutations, createActions, createGetters } from './helper';
+import { getCacheBustingUrlParam } from '@/modules/utils'
 // import SWorker from '@/assets/sww.min';
 // import union from 'lodash/union';
 
@@ -19,6 +20,7 @@ export default {
     async updateData ({ commit, dispatch }, servers = []) {
       commit('setLoadState', true);
       const baseUrl = `${location.origin}${location.pathname}static/bf-data`;
+      const cacheBustingParam = getCacheBustingUrlParam();
       for (const server of servers) {
         const logPrefix = `Downloading data for ${server.toUpperCase()} server`;
         commit('setLoadingMessage', logPrefix);
@@ -28,7 +30,7 @@ export default {
           const loadPromises = [];
           let countFinished = 0;
           for (let i = 1; i <= 9; ++i) {
-            const url = `${baseUrl}/bbs-${server}-${i}.json`;
+            const url = `${baseUrl}/bbs-${server}-${i}.json?${cacheBustingParam}`;
             loadPromises.push(downloadWorker
               .postMessage('getJson', [url])
               .then(tempData => {

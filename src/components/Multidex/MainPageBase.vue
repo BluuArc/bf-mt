@@ -221,7 +221,7 @@
             </slot>
           </result-container>
         </v-flex>
-        <v-dialog v-model="showEntryDialog" fullscreen hide-overlay transition="dialog-bottom-transition" class="entry-dialog">
+        <v-dialog v-model="showEntryDialog" fullscreen hide-overlay lazy transition="dialog-bottom-transition" class="entry-dialog">
           <v-card>
             <v-toolbar fixed class="entry-dialog-toolbar">
               <v-btn icon @click="closeDialog">
@@ -457,7 +457,9 @@ export default {
       return this.allSortedEntries.slice(startIndex, startIndex + this.amountPerPage);
     },
     hasNonNameFilters () {
-      return filterHelper.hasFilters(this.filterOptions);
+      // eslint-disable-next-line no-unused-vars
+      const { name, ...filterOptions } = this.filterOptions;
+      return filterHelper.hasFilters(filterOptions);
     },
     hasFilters () {
       return !!this.filterOptions.name || this.hasNonNameFilters;

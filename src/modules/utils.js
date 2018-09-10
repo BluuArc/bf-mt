@@ -48,3 +48,8 @@ export function getGenderInfo(gender) {
     color: colors[gender],
   };
 }
+
+// add an extra "useless" param to be added to a URL that forces a new GET from the server
+export function getCacheBustingUrlParam () {
+  return `cacheBuster=${new Date().valueOf()}`;
+}
