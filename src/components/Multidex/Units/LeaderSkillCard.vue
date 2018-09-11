@@ -5,38 +5,22 @@
         :multidexPath="(leaderSkill && getMultidexPathTo(leaderSkill.id) || '')"
         :titleHtml="`<b>Leader Skill: ${name}</b>`"/>
     </template>
-    <v-container fluid class="pt-0">
-      <v-layout row>
-        <v-flex>
-          <v-tabs v-model="activeTabIndex" class="mb-2">
-            <v-tab v-for="(tab, i) in tabs" :key="i">{{ tab }}</v-tab>
-          </v-tabs>
-        </v-flex>
-      </v-layout>
-      <v-layout row>
-        <v-flex>
-          <v-tabs-items v-model="activeTabIndex" touchless>
-            <v-tab-item :key="getTabIndexOf('Description')">
-              {{ description }}
-              <template v-if="leaderSkill">
-                <v-card-actions class="pl-0 pr-0 pb-0">
-                  <v-btn flat @click="showBuffTable = !showBuffTable">{{ showBuffTable ? 'Hide' : 'Show' }} Buff Table</v-btn>
-                </v-card-actions>
-                <v-slide-y-transition>
-                  <buff-table :effects="leaderSkill.effects" v-show="showBuffTable" :showHeaders="true"/>
-                </v-slide-y-transition>
-              </template>
-            </v-tab-item>
-            <v-tab-item v-if="leaderSkill" :key="getTabIndexOf('JSON')">
-              {{ leaderSkill }}
-            </v-tab-item>
-            <v-tab-item v-if="leaderSkill" :key="getTabIndexOf('Buff List')">
-              Buff List
-            </v-tab-item>
-          </v-tabs-items>
-        </v-flex>
-      </v-layout>
-    </v-container>
+    <card-tabs-container :tabs="tabConfig">
+      <section slot="description">
+        {{ description }}
+        <template v-if="leaderSkill">
+          <v-card-actions class="pl-0 pr-0 pb-0">
+            <v-btn flat @click="showBuffTable = !showBuffTable">{{ showBuffTable ? 'Hide' : 'Show' }} Buff Table</v-btn>
+          </v-card-actions>
+          <v-slide-y-transition>
+            <buff-table :effects="leaderSkill.effects" v-show="showBuffTable" :showHeaders="true"/>
+          </v-slide-y-transition>
+        </template>
+      </section>
+      <section slot="json">
+        {{ leaderSkill.effects }}
+      </section>
+    </card-tabs-container>
   </bordered-titled-card>
 </template>
 
@@ -45,6 +29,7 @@ import { mapGetters } from 'vuex';
 import BorderedTitledCard from '@/components/BorderedTitledCard';
 import CardTitleWithLink from '@/components/CardTitleWithLink';
 import BuffTable from '@/components/Multidex/BuffTable/MainTable.vue';
+import CardTabsContainer from '@/components/CardTabsContainer';
 
 export default {
   props: {
@@ -59,6 +44,7 @@ export default {
     BorderedTitledCard,
     CardTitleWithLink,
     BuffTable,
+    CardTabsContainer,
   },
   computed: {
     ...mapGetters('leaderSkills', ['getMultidexPathTo']),
@@ -71,26 +57,19 @@ export default {
     description () {
       return this.leaderSkill ? this.leaderSkill.desc : 'None';
     },
-    tabs () {
-      return ['Description', this.leaderSkill && 'JSON', this.leaderSkill && 'Buff List'].filter(val => val);
-    },
-    activeTabName () {
-      return this.tabs[this.activeTabIndex];
+    tabConfig () {
+      const tabs = ['Description', this.leaderSkill && 'JSON', this.leaderSkill && 'Buff List'].filter(val => val);
+      const nameToSlot = str => str.replace(/ /g, '-').toLowerCase();
+      return tabs.map(name => ({ name, slot: nameToSlot(name) }));
     },
   },
   data () {
     return {
-      activeTabIndex: 0,
       showBuffTable: false,
     };
   },
-  methods: {
-    getTabIndexOf (name) {
-      return this.tabs.indexOf(name);
-    },
-  },
   mounted () {
-    this.logger.todo('implement grabbing existing filters');
+    this.logger.todo('implement grabbing existing filters for LS');
   },
 };
 </script>
