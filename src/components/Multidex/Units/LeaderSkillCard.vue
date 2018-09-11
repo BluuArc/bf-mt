@@ -5,7 +5,7 @@
         :multidexPath="(leaderSkill && getMultidexPathTo(leaderSkill.id) || '')"
         :titleHtml="`<b>Leader Skill: ${name}</b>`"/>
     </template>
-    <card-tabs-container :tabs="tabConfig">
+    <card-tabs-container :tabs="tabConfig" v-model="activeTabIndex">
       <section slot="description">
         {{ description }}
         <template v-if="leaderSkill">
@@ -18,7 +18,7 @@
         </template>
       </section>
       <section slot="json">
-        {{ leaderSkill.effects }}
+        <json-viewer :json="leaderSkill.effects" :value="activeTabIndex"/>
       </section>
     </card-tabs-container>
   </bordered-titled-card>
@@ -30,6 +30,7 @@ import BorderedTitledCard from '@/components/BorderedTitledCard';
 import CardTitleWithLink from '@/components/CardTitleWithLink';
 import BuffTable from '@/components/Multidex/BuffTable/MainTable.vue';
 import CardTabsContainer from '@/components/CardTabsContainer';
+import JsonViewer from '@/components/JsonViewer';
 
 export default {
   props: {
@@ -45,6 +46,7 @@ export default {
     CardTitleWithLink,
     BuffTable,
     CardTabsContainer,
+    JsonViewer,
   },
   computed: {
     ...mapGetters('leaderSkills', ['getMultidexPathTo']),
@@ -65,6 +67,7 @@ export default {
   },
   data () {
     return {
+      activeTabIndex: 0,
       showBuffTable: false,
     };
   },

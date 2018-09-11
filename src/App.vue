@@ -290,4 +290,70 @@ html {
     justify-content: center;
   }
 }
+
+// tree view styling; based off of: https://jsfiddle.net/arvidkahl/kwo6vk9d/11/
+
+.tree-view-item {
+  font-family: monospace;
+  font-size: 14px;
+  margin-left: 18px;
+}
+
+.tree-view-wrapper {
+  background-color: #f5f5f5;
+  color: #bd4147;
+  overflow: auto;
+}
+
+/* Find the first nested node and override the indentation */
+.tree-view-item-root > .tree-view-item-leaf > .tree-view-item {
+  margin-left: 0;
+}
+
+/* Root node should not be indented */
+.tree-view-item-root {
+  margin-left: 0;
+}
+
+.tree-view-item-node {
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+}
+
+.tree-view-item-leaf {
+  white-space: nowrap;
+}
+
+.tree-view-item-key {
+  font-weight: bold;
+}
+
+.tree-view-item-key-with-chevron {
+  padding-left: 14px;
+}
+
+
+.tree-view-item-key-with-chevron.opened::before {
+    top:4px;
+    transform: rotate(90deg);  
+    -webkit-transform: rotate(90deg);
+}
+
+.tree-view-item-key-with-chevron::before {
+    color: #444;
+    content: '\25b6';
+    font-size: 10px;
+    left: 1px;
+    position: absolute;
+    top: 3px;
+    transition: -webkit-transform .1s ease;
+    transition: transform .1s ease;
+    transition: transform .1s ease, -webkit-transform .1s ease;
+    -webkit-transition: -webkit-transform .1s ease;
+}
+
+.tree-view-item-hint {
+  color: #555;
+}
 </style>

@@ -1,0 +1,54 @@
+<template>
+  <v-container fluid class="text-viewer pa-0">
+    <copy-button block :inputText="inputText" :value="value"/>
+    <textarea readonly :value="inputText"/>
+    <pre><code>{{ inputText }}</code></pre>
+  </v-container>
+</template>
+
+<script>
+import CopyButton from '@/components/CopyButton';
+export default {
+  props: {
+    inputText: {
+      type: String,
+      default: '',
+    },
+    // resets button text on change
+    value: {
+      default: undefined,
+    },
+  },
+  components: {
+    CopyButton,
+  },
+};
+</script>
+
+<style lang="less">
+.text-viewer {
+  position: relative;
+
+  pre {
+    overflow: auto;
+    max-height: 45vh;
+  }
+
+  code {
+    width: 100%;
+
+    &::before {
+      content: '';
+    }
+  }
+
+  textarea {
+    width: 1px;
+    height: 1px;
+    border: none;
+    position: absolute;
+    z-index: -1;
+  }
+}
+</style>
+
