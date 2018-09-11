@@ -258,6 +258,10 @@ html {
   align-self: center;
 }
 
+.d-align-items-center {
+  align-items: center;
+}
+
 * {
   .theme--light {
     --background-color-alt--lighten-1: lightgrey;

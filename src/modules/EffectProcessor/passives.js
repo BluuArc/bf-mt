@@ -1,5 +1,5 @@
 import { effectTypes, elements, unitTypes, ailments } from '../constants';
-import helper from './processor-helper';
+import * as helper from './processor-helper';
 import EffectProcessor from './effect-processor';
 import IconKeyMappings from './icon-key-mappings';
 const passiveTypes = require('@/assets/buff-translation/passives.json');

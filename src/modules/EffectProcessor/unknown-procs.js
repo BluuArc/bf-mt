@@ -1,5 +1,5 @@
 import { effectTypes } from '../constants';
-import helper from './processor-helper';
+import * as helper from './processor-helper';
 // import knownConstants from '../../modules/constants';
 import IconKeyMappings from './icon-key-mappings';
 const procTypes = require('@/assets/buff-translation/procs.json');

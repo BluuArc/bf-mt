@@ -1,17 +1,9 @@
 <template>
   <bordered-titled-card materialColor="green darken-3">
     <template slot="title">
-      <span v-if="!leaderSkill">
-        <b>Leader Skill:</b> {{ name }}
-      </span>
-      <template v-else>
-        <router-link title="Click to view more details" :to="getMultidexPathTo(leaderSkill.id)" style="color: white">
-          <span><b>Leader Skill:</b> {{ name }}</span>
-        </router-link>
-        <router-link class="d-inline-flex" title="Click to view more details" :to="getMultidexPathTo(leaderSkill.id)" style="color: white; text-decoration: none">
-          <v-icon small class="pb-1 pl-1 white--text d-align-self-center">fas fa-external-link-alt</v-icon>
-        </router-link>
-      </template>
+      <card-title-with-link
+        :multidexPath="(leaderSkill && getMultidexPathTo(leaderSkill.id) || '')"
+        :titleHtml="`<b>Leader Skill: ${name}</b>`"/>
     </template>
     <v-container fluid class="pt-0">
       <v-layout row>
@@ -25,12 +17,20 @@
         <v-flex>
           <v-tabs-items v-model="activeTabIndex">
             <v-tab-item :key="getTabIndexOf('Description')">
-                {{ description }}
+              {{ description }}
+              <template v-if="leaderSkill">
+                <v-card-actions>
+                  <v-btn flat @click="showBuffTable = !showBuffTable">{{ showBuffTable ? 'Hide' : 'Show' }} Buff Table</v-btn>
+                </v-card-actions>
+                <v-slide-y-transition>
+                  <buff-table :effects="leaderSkill.effects" v-show="showBuffTable" :showHeaders="true"/>
+                </v-slide-y-transition>
+              </template>
             </v-tab-item>
-            <v-tab-item :key="getTabIndexOf('JSON')">
+            <v-tab-item v-if="leaderSkill" :key="getTabIndexOf('JSON')">
               {{ leaderSkill }}
             </v-tab-item>
-            <v-tab-item :key="getTabIndexOf('Buff List')">
+            <v-tab-item v-if="leaderSkill" :key="getTabIndexOf('Buff List')">
               Buff List
             </v-tab-item>
           </v-tabs-items>
@@ -43,6 +43,8 @@
 <script>
 import { mapGetters } from 'vuex';
 import BorderedTitledCard from '@/components/BorderedTitledCard';
+import CardTitleWithLink from '@/components/CardTitleWithLink';
+import BuffTable from '@/components/Multidex/BuffTable/MainTable.vue';
 
 export default {
   props: {
@@ -55,6 +57,8 @@ export default {
   },
   components: {
     BorderedTitledCard,
+    CardTitleWithLink,
+    BuffTable,
   },
   computed: {
     ...mapGetters('leaderSkills', ['getMultidexPathTo']),
@@ -68,7 +72,7 @@ export default {
       return this.leaderSkill ? this.leaderSkill.desc : 'None';
     },
     tabs () {
-      return ['Description', 'JSON', 'Buff List'];
+      return ['Description', this.leaderSkill && 'JSON', this.leaderSkill && 'Buff List'].filter(val => val);
     },
     activeTabName () {
       return this.tabs[this.activeTabIndex];
@@ -77,6 +81,7 @@ export default {
   data () {
     return {
       activeTabIndex: 0,
+      showBuffTable: false,
     };
   },
   methods: {
