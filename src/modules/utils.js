@@ -1,3 +1,4 @@
+import logger from '@/modules/Logger';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 dayjs.extend(relativeTime);
@@ -52,4 +53,19 @@ export function getGenderInfo(gender) {
 // add an extra "useless" param to be added to a URL that forces a new GET from the server
 export function getCacheBustingUrlParam () {
   return `cacheBuster=${new Date().valueOf()}`;
+}
+
+export function safeGet (obj = {}, path = [], defaultVal = undefined) {
+  let result = obj;
+  const accessorPath = path.slice();
+  try {
+    while (accessorPath.length > 0) {
+      const currentProp = accessorPath.shift();
+      result = result[currentProp];
+    }
+    return result;
+  } catch (err) {
+    logger.error('error accessing prop', { obj, path, defaultVal }, err);
+    return defaultVal;
+  }
 }

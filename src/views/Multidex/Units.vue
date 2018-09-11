@@ -48,13 +48,17 @@
       </v-flex>
     </template>
     <template slot="entry-dialog-content" slot-scope="{ viewId, logger }">
-      <dialog-content :entryId="viewId" :logger="logger" :pageDb="pageDb"/>
+      <dialog-content
+        :entryId="viewId"
+        :logger="logger"
+        :pageDb="pageDb"
+        :asyncGetById="getById"/>
     </template>
   </main-page-base>
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex';
+import { mapState, mapGetters, mapActions } from 'vuex';
 import MultidexPageMixin from '@/components/Multidex/MultidexPageMixin';
 import EntryCard from '@/components/Multidex/Units/EntryCard';
 import IconEntryCard from '@/components/Multidex/Units/IconEntryCard';
@@ -82,6 +86,7 @@ export default {
     };
   },
   methods: {
+    ...mapActions('units', ['getById']),
     switchViewMode () {
       const nextViewModeIndex = this.viewModes.indexOf(this.viewMode) + 1;
       this.viewMode = this.viewModes[nextViewModeIndex] || this.viewModes[0];

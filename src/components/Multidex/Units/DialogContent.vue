@@ -1,76 +1,69 @@
 <template>
-  <v-container fluid>
-    <v-layout row v-if="loadingEntryData" class="text-xs-center">
-      <v-flex>
-        <loading-indicator loadingMessage="Loading Entry Data..."/>
-      </v-flex>
-    </v-layout>
-    <v-layout row v-else-if="!entry">
-      No entry data found.
-    </v-layout>
-    <v-layout row v-else>
-      {{ entry }}
-    </v-layout>
-  </v-container>
+  <dialog-content-base :entry="entry" :loadingEntryData="loadingEntryData">
+    <v-container class="mb-5 pb-3">
+      <v-layout row>
+        <v-flex v-if="activeMainTab === 'general'">
+          general tab
+        </v-flex>
+        <v-flex v-else-if="activeMainTab === 'skills'">
+          <leader-skill-card :unit="entry" :logger="logger"/>
+        </v-flex>
+        <v-flex v-else-if="activeMainTab === 'art'">
+          art tab
+          {{ entry }}
+        </v-flex>
+      </v-layout>
+    </v-container>
+    <v-bottom-nav :value="true" :active.sync="activeMainTab" app color="primary">
+      <v-btn
+        v-for="tab in mainTabs"
+        :key="tab.value"
+        :value="tab.value"
+        flat class="white--text">
+        {{ tab.text }}
+        <v-icon v-if="tab.icon">{{ tab.icon }}</v-icon>
+      </v-btn>
+    </v-bottom-nav>
+  </dialog-content-base>
 </template>
 
 <script>
-import { mapActions } from 'vuex';
-import LoadingIndicator from '@/components/LoadingIndicator';
+import DialogContentMixin from '@/components/Multidex/DialogContentMixin';
+import BorderedTitledCard from '@/components/BorderedTitledCard';
+import LeaderSkillCard from '@/components/Multidex/Units/LeaderSkillCard';
+
 export default {
-  props: {
-    entryId: {
-      type: String,
-      required: true,
-    },
-    logger: {
-      required: true,
-    },
-    pageDb: {
-      type: Object,
-      required: true,
-    },
-  },
+  mixins: [DialogContentMixin],
   components: {
-    LoadingIndicator,
+    BorderedTitledCard,
+    LeaderSkillCard,
+  },
+  computed: {
+    mainTabs: () => [
+      { text: 'General Info', value: 'general', icon: 'perm_identity' },
+      { text: 'Skill Set', value: 'skills', icon: 'category' },
+      { text: 'Art', value: 'art', icon: 'insert_photo' },
+    ],
+    mainTabValues () {
+      return this.mainTabs.map(({ value }) => value);
+    },
   },
   data () {
     return {
-      entry: undefined,
-      loadingEntryData: true,
+      alternateImageLoaded: false,
+      activeMainTab: 0,
     };
   },
   watch: {
-    async entryId (newValue) {
-      if (!newValue) {
-        this.entry = undefined;
-      } else {
-        await this.loadEntry();
-      }
-    },
-    async pageDb () {
-      if (this.entryId && Object.keys(this.pageDb).length > 0) {
-        await this.loadEntry();
+    activeMainTab (newValue) {
+      // default to middle tab if invalid
+      if (!this.mainTabValues.includes(newValue)) {
+        this.activeMainTab = this.mainTabValues[1];
       }
     },
   },
-  methods: {
-    ...mapActions('units', ['getById']),
-    async loadEntry () {
-      this.loadingEntryData = true;
-      try {
-        this.entry = await this.getById(this.entryId);
-      } catch (err) {
-        this.logger.error(err);
-      } finally {
-        this.loadingEntryData = false;
-      }
-    },
+  mounted () {
+    this.activeMainTab = this.mainTabValues[1];
   },
-  async mounted () {
-    if (this.entryId) {
-      await this.loadEntry();
-    }
-  }
-}
+};
 </script>

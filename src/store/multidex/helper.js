@@ -1,6 +1,7 @@
 import { servers, exclusiveFilterOptions } from '@/modules/constants';
 import getUpdateTimes from '@/store/instances/update-data-singleton';
 import SWorker from '@/assets/sww.min';
+import logger from '@/modules/Logger';
 const defaultStartDate = new Date('Jan 01 1969');
 
 export const createState = () => {
@@ -34,7 +35,10 @@ export const createState = () => {
 
 export const createGetters = (multidexModuleName = 'units') => {
   return {
-    // getMultidexPathTo: state => (id, server = state.activeServer) => `/multidex/${multidexModuleName}/?viewId=${id}&server=${server}`,
+    getMultidexPathTo: state => (id, server = state.activeServer) => {
+      logger.todo('deprecate?');
+      return `/multidex/${multidexModuleName}/?viewId=${id}&server=${server}`
+    },
     getById: state => id => state.pageDb[id.toString()],
     getMultidexRouteParamsTo: state => (id, server = state.activeServer) => ({
       path: `/multidex/${multidexModuleName}/`,
