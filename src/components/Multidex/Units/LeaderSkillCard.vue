@@ -8,18 +8,18 @@
     <v-container fluid class="pt-0">
       <v-layout row>
         <v-flex>
-          <v-tabs v-model="activeTabIndex">
+          <v-tabs v-model="activeTabIndex" class="mb-2">
             <v-tab v-for="(tab, i) in tabs" :key="i">{{ tab }}</v-tab>
           </v-tabs>
         </v-flex>
       </v-layout>
       <v-layout row>
         <v-flex>
-          <v-tabs-items v-model="activeTabIndex">
+          <v-tabs-items v-model="activeTabIndex" touchless>
             <v-tab-item :key="getTabIndexOf('Description')">
               {{ description }}
               <template v-if="leaderSkill">
-                <v-card-actions>
+                <v-card-actions class="pl-0 pr-0 pb-0">
                   <v-btn flat @click="showBuffTable = !showBuffTable">{{ showBuffTable ? 'Hide' : 'Show' }} Buff Table</v-btn>
                 </v-card-actions>
                 <v-slide-y-transition>

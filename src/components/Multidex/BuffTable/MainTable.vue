@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="buff-table">
+  <v-container fluid class="buff-table pa-0">
     <v-layout row v-if="showHeaders" class="buff-table--header">
       <v-flex xs2 sm1 class="text-xs-center">
         ID
@@ -16,7 +16,7 @@
         {{ effectEntry.id }}
       </v-flex>
       <v-flex xs10 sm11 class="text-xs-center">
-        <v-layout row v-for="(prop, j) in getSortedProps(effectEntry.effect)" :key="j" class="buff-table--property-columns">
+        <v-layout row v-for="(prop, j) in getSortedProps(effectEntry.effect)" :key="j" class="buff-table--property-row d-align-items-center">
           <v-flex xs3>
             {{ prop }}
           </v-flex>
@@ -71,8 +71,39 @@ export default {
 
 <style lang="less">
 .buff-table {
+  --table-border-color: var(--background-color-alt);
+  --table-background-color: var(--background-color-alt--lighten-1);
+  --table-hover-color: var(--background-color-alt--lighten-2);
+
   .buff-table--header {
     font-weight: bold;
+  }
+
+  .buff-table--row {
+    border-left: 1px solid var(--table-border-color);
+    border-right: 1px solid var(--table-border-color);
+    border-top: 1px solid var(--table-border-color);
+
+    &:hover {
+      background-color: var(--table-background-color);
+    }
+
+    &:last-child {
+      border-bottom: 1px solid var(--table-border-color);
+    }
+
+    .buff-table--property-row {
+      border-left: 1px solid var(--table-border-color);
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--table-border-color);
+      }
+      min-height: 36px;
+
+      &:hover {
+        background-color: var(--table-hover-color);
+      }
+    }
   }
 }
 </style>

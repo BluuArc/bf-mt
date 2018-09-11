@@ -264,12 +264,14 @@ html {
 
 * {
   .theme--light {
+    --background-color-alt--lighten-2: ghostwhite;
     --background-color-alt--lighten-1: lightgrey;
     --background-color-alt: rgba(0, 0, 0, 0.12); /* default color of v-divider */
   }
   
   .theme--dark {
-    --background-color-alt--lighten-1: grey;
+    --background-color-alt--lighten-2: grey;
+    --background-color-alt--lighten-1: dimgrey;
     --background-color-alt: hsla(0, 0%, 100%, 0.12); /* default color of v-divider */
   }
 }
