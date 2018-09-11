@@ -292,7 +292,6 @@ html {
 }
 
 // tree view styling; based off of: https://jsfiddle.net/arvidkahl/kwo6vk9d/11/
-
 .tree-view-item {
   font-family: monospace;
   font-size: 14px;
@@ -303,6 +302,7 @@ html {
   background-color: #f5f5f5;
   color: #bd4147;
   overflow: auto;
+  max-height: 45vh;
 }
 
 /* Find the first nested node and override the indentation */
@@ -318,11 +318,11 @@ html {
 .tree-view-item-node {
   cursor: pointer;
   position: relative;
-  white-space: nowrap;
+  white-space: unset!important;
 }
 
 .tree-view-item-leaf {
-  white-space: nowrap;
+  white-space: unset!important;
 }
 
 .tree-view-item-key {
@@ -335,22 +335,22 @@ html {
 
 
 .tree-view-item-key-with-chevron.opened::before {
-    top:4px;
-    transform: rotate(90deg);  
-    -webkit-transform: rotate(90deg);
+  top:4px;
+  transform: rotate(90deg);  
+  -webkit-transform: rotate(90deg);
 }
 
 .tree-view-item-key-with-chevron::before {
-    color: #444;
-    content: '\25b6';
-    font-size: 10px;
-    left: 1px;
-    position: absolute;
-    top: 3px;
-    transition: -webkit-transform .1s ease;
-    transition: transform .1s ease;
-    transition: transform .1s ease, -webkit-transform .1s ease;
-    -webkit-transition: -webkit-transform .1s ease;
+  color: #444;
+  content: '\25b6';
+  font-size: 10px;
+  left: 1px;
+  position: absolute;
+  top: 3px;
+  transition: -webkit-transform .1s ease;
+  transition: transform .1s ease;
+  transition: transform .1s ease, -webkit-transform .1s ease;
+  -webkit-transition: -webkit-transform .1s ease;
 }
 
 .tree-view-item-hint {

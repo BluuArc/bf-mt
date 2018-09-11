@@ -18,7 +18,7 @@
         </template>
       </section>
       <section slot="json">
-        <json-viewer :json="leaderSkill.effects" :value="activeTabIndex"/>
+        <json-viewer :json="leaderSkill" :value="activeTabIndex"/>
       </section>
     </card-tabs-container>
   </bordered-titled-card>
