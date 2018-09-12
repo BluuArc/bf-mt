@@ -296,6 +296,7 @@ html {
   font-family: monospace;
   font-size: 14px;
   margin-left: 18px;
+  
 }
 
 .tree-view-wrapper {
@@ -354,6 +355,6 @@ html {
 }
 
 .tree-view-item-hint {
-  color: #555;
+  color: #555!important;
 }
 </style>
