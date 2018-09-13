@@ -6,7 +6,21 @@
           general tab
         </v-flex>
         <v-flex v-else-if="activeMainTab === 'skills'">
-          <leader-skill-card :unit="entry" :logger="logger"/>
+          <v-container fluid class="pa-0">
+            <v-layout row wrap class="dialog-card-list">
+              <v-flex xs12>
+                <leader-skill-card :unit="entry" :logger="logger"/>
+              </v-flex>
+              <v-flex xs12>
+                <burst-card :unit="entry" :logger="logger" burstType="bb"/>
+              </v-flex>
+              <template v-for="type in ['sbb', 'ubb']">
+                <v-flex xs12 v-if="entry && entry[type]" :key="type">
+                  <burst-card :unit="entry" :logger="logger" :burstType="type"/>
+                </v-flex>
+              </template>
+            </v-layout>
+          </v-container>
         </v-flex>
         <v-flex v-else-if="activeMainTab === 'art'">
           art tab
@@ -31,12 +45,14 @@
 import DialogContentMixin from '@/components/Multidex/DialogContentMixin';
 import BorderedTitledCard from '@/components/BorderedTitledCard';
 import LeaderSkillCard from '@/components/Multidex/Units/LeaderSkillCard';
+import BurstCard from '@/components/Multidex/Units/BurstCard';
 
 export default {
   mixins: [DialogContentMixin],
   components: {
     BorderedTitledCard,
     LeaderSkillCard,
+    BurstCard,
   },
   computed: {
     mainTabs: () => [
@@ -67,3 +83,12 @@ export default {
   },
 };
 </script>
+
+<style lang="less">
+.dialog-card-list {
+  & > .flex {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}
+</style>

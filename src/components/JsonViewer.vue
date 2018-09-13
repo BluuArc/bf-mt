@@ -3,7 +3,7 @@
     <text-viewer v-if="showTextView" :inputText="jsonText" :value="value"/>
     <template v-else>
       <copy-button block :textToCopy="jsonText" :value="value"/>
-      <tree-view v-show="!showTextView" :data="json"/>
+      <tree-view v-show="!showTextView" :data="json" :options="treeOptions"/>
     </template>
     <v-btn @click="showTextView = !showTextView" block>Switch View</v-btn>
   </v-container>
@@ -18,6 +18,9 @@ export default {
       required: true,
     },
     value: {
+      default: undefined,
+    },
+    treeOptions: {
       default: undefined,
     },
   },

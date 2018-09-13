@@ -9,21 +9,21 @@
     </template>
     <card-tabs-container :tabs="tabConfig" v-model="activeTabIndex">
       <section slot="description">
-        <slot name="description">
+        <slot name="description" :toggleBuffTable="() => showBuffTable = !showBuffTable" :showBuffTable="showBuffTable">
           {{ descriptionGetter(entry) }}
-          <template v-if="entry">
+          <template v-if="entry && effectGetter(entry)">
             <v-card-actions class="pl-0 pr-0 pb-0">
               <v-btn flat @click="showBuffTable = !showBuffTable">{{ showBuffTable ? 'Hide' : 'Show' }} Buff Table</v-btn>
             </v-card-actions>
             <v-slide-y-transition>
-              <buff-table :effects="entry.effects" v-show="showBuffTable" :showHeaders="true"/>
+              <buff-table :effects="effectGetter(entry)" v-show="showBuffTable" :showHeaders="true"/>
             </v-slide-y-transition>
           </template>
         </slot>
       </section>
       <section slot="json">
         <slot name="json">
-          <json-viewer :json="entry" :value="activeTabIndex"/>
+          <json-viewer :json="entry" :value="activeTabIndex" :treeOptions="treeOptions"/>
         </slot>
       </section>
       <section slot="buff-list">
@@ -43,7 +43,7 @@
 <script>
 import BorderedTitledCard from '@/components/BorderedTitledCard';
 import CardTitleWithLink from '@/components/CardTitleWithLink';
-import BuffTable from '@/components/Multidex/BuffTable/MainTable.vue';
+import BuffTable from '@/components/Multidex/BuffTable/MainTable';
 import CardTabsContainer from '@/components/CardTabsContainer';
 import JsonViewer from '@/components/JsonViewer';
 
@@ -58,7 +58,7 @@ export default {
     },
     titleHtmlGenerator: {
       type: Function,
-      default: () => () => `<b>Entry: Name</b>`,
+      default: () => `<b>Entry: Name</b>`,
     },
     multidexPath: {
       type: String,
@@ -70,7 +70,14 @@ export default {
     },
     descriptionGetter: {
       type: Function,
-      default: () => entry => (entry ? (entry.desc || entry.description) : 'None'),
+      default: entry => (entry ? (entry.desc || entry.description) : 'None'),
+    },
+    effectGetter: {
+      type: Function,
+      default: entry => (entry.effects || []),
+    },
+    treeOptions: {
+      default: undefined,
     },
   },
   components: {

@@ -4,7 +4,8 @@
     materialColor="green darken-3"
     :titleHtmlGenerator="() => `<b>Leader Skill: ${name}</b>`"
     :multidexPath="leaderSkill && getMultidexPathTo(leaderSkill.id) || ''"
-    :descriptionGetter="() => description"/>
+    :descriptionGetter="() => description"
+    :treeOptions="{ maxDepth: 1 }"/>
 </template>
 
 <script>

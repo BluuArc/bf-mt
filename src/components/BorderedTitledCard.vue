@@ -33,7 +33,16 @@ export default {
   },
   computed: {
     hexColor () {
-      return safeGet(colors, this.materialColor.replace(/-/g, '').split(' '));
+      let [primaryColor, accent] = this.materialColor.split(' ');
+      if (primaryColor.includes('-')) {
+        const capitalize = str => [str[0].toUpperCase(), str.slice(1)].join('');
+        const colorSplit = primaryColor.split('-');
+        primaryColor = [colorSplit[0], colorSplit.slice(1).map(capitalize)].join('');
+      }
+      if (accent) {
+        accent = accent.replace(/-/g, '');
+      }
+      return safeGet(colors, [primaryColor, accent || 'base']);
     },
     style () {
       return this.hexColor ? `border-color: ${this.hexColor};` : undefined;
