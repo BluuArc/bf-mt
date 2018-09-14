@@ -12,11 +12,11 @@
                 <leader-skill-card :unit="entry" :logger="logger"/>
               </v-flex>
               <v-flex xs12>
-                <burst-card :unit="entry" :logger="logger" burstType="bb"/>
+                <burst-card :unit="entry" :logger="logger" burstType="bb" :extraAttacks="extraAttacks.bb"/>
               </v-flex>
               <template v-for="type in ['sbb', 'ubb']">
                 <v-flex xs12 v-if="entry && entry[type]" :key="type">
-                  <burst-card :unit="entry" :logger="logger" :burstType="type"/>
+                  <burst-card :unit="entry" :logger="logger" :burstType="type" :extraAttacks="extraAttacks[type]"/>
                 </v-flex>
               </template>
             </v-layout>
@@ -46,6 +46,7 @@ import DialogContentMixin from '@/components/Multidex/DialogContentMixin';
 import BorderedTitledCard from '@/components/BorderedTitledCard';
 import LeaderSkillCard from '@/components/Multidex/Units/LeaderSkillCard';
 import BurstCard from '@/components/Multidex/Units/BurstCard';
+import { getExtraAttacks } from '@/modules/core/units';
 
 export default {
   mixins: [DialogContentMixin],
@@ -62,6 +63,9 @@ export default {
     ],
     mainTabValues () {
       return this.mainTabs.map(({ value }) => value);
+    },
+    extraAttacks () {
+      return getExtraAttacks(this.entry);
     },
   },
   data () {

@@ -31,7 +31,7 @@
           {{ entry }}
         </slot>
       </section>
-      <section v-for="tab in extraTabConfig" :key="tab.slot">
+      <section v-for="tab in extraTabConfig" :key="tab.slot" :slot="tab.slot">
         <slot :name="tab.slot">
           {{ tab.name }}
         </slot>
@@ -89,7 +89,13 @@ export default {
   },
   computed: {
     tabConfig () {
-      const tabs = ['Description', this.entry && 'JSON', this.entry && 'Buff List'].filter(val => val);
+      const customConfig = {
+        JSON: () => this.entry && 'JSON',
+        'Buff List': () => this.entry && 'Buff List',
+      }
+      const tabs = this.tabNames
+        .map(name => customConfig[name] !== undefined ? customConfig[name]() : name)
+        .filter(val => val);
       return tabs.map(name => ({ name, slot: this.nameToSlot(name) }));
     },
     extraTabConfig () {

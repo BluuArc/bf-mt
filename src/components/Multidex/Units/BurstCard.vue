@@ -1,11 +1,32 @@
 <template>
   <description-card-base
+    class="burst-card"
     :entry="burst"
     :materialColor="titleColor"
     :titleHtmlGenerator="() => `<b>${burstLabel}: ${name}</b>`"
     :multidexPath="burst && getMultidexPathTo(burst.id) || ''"
     :descriptionGetter="() => description"
-    :treeOptions="{ maxDepth: 1 }">
+    :treeOptions="{ maxDepth: 1 }"
+    :tabNames="['Description', 'Hitcounts', 'JSON', 'Buff List']">
+    <template slot="title">
+      <v-layout row wrap>
+        <v-flex xs12 sm8 md9 class="text-xs-left">
+          <card-title-with-link
+              :multidexPath="burst && getMultidexPathTo(burst.id) || ''"
+              :titleHtml="`<b>${burstLabel}: ${name}</b>`"/>
+        </v-flex>
+        <v-flex xs12 sm4 md3 class="text-xs-right">
+          <v-tooltip bottom>
+            <span slot="activator" style="border-bottom: 1px dotted;" class="body-1">
+              {{ bcdcInfo.cost }} BC/{{ bcdcInfo.hits }} {{ bcdcInfo.hits === 1 ? 'Hit' : 'Hits' }}/{{ bcdcInfo.dropchecks }} DC
+            </span>
+            <span>
+              BC required to fill {{ burstType.toUpperCase() }} gauge / Hits on {{ burstType.toUpperCase() }} / Total BC Dropchecks
+            </span>
+          </v-tooltip>
+        </v-flex>
+      </v-layout>
+    </template>
     <template slot="description" slot-scope="{ toggleBuffTable, showBuffTable }">
       {{ description }}
       <template v-if="burst">
@@ -36,13 +57,49 @@
         </v-slide-y-transition>
       </template>
     </template>
+    <template slot="hitcounts">
+      <v-expansion-panel v-if="hitCountData">
+        <v-expansion-panel-content v-for="(d, i) in hitCountData" :key="i">
+          <div slot="header">
+            <h2 :class="`title ${$vuetify.breakpoint.xsOnly ? '' : 'd-inline'}`">Attack {{ i + 1 }}</h2>
+            <v-chip small>{{ d.target }}</v-chip>
+            <v-chip small>{{ d.delay }} delay</v-chip>
+            <v-chip v-if="hasSelfSpark(d.frames, d.delay)" small>{{ getSelfSparkCount(d.frames, d.delay) }} Self Sparks</v-chip>
+            <v-chip small>{{ getTotalDistribution(d.frames)}}% DMG Distribution</v-chip>
+          </div>
+          <hit-count-table
+            :attack="d.frames" :sparkedFrames="sparkedFrames"
+            :attackIndex="i" attackType="native"
+            :delay="+(d.delay.split('/')[1])"/>
+        </v-expansion-panel-content>
+        <v-expansion-panel-content v-for="(d, j) in (extraAttackHitCountData || [])" :key="hitCountData.length + j">
+          <div slot="header">
+            <h3 :class="`title ${$vuetify.breakpoint.xsOnly ? '' : 'd-inline'}`">Attack {{ hitCountData.length + j + 1 }} - ({{ d.source }})</h3>
+            <v-chip small>{{ d.target }}</v-chip>
+            <v-chip small>{{ d.delay }} delay</v-chip>
+            <v-chip v-if="hasSelfSpark(d.frames, d.delay)" small>{{ getSelfSparkCount(d.frames, d.delay) }} Self Sparks</v-chip>
+            <v-chip small>{{ getTotalDistribution(d.frames)}}% DMG Distribution</v-chip>
+          </div>
+          <hit-count-table
+            :attack="d.frames" :sparkedFrames="sparkedFrames"
+            :attackIndex="j" attackType="extra"
+            :delay="+(d.delay.split('/')[1])"/>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+      <div v-else>
+        No hitcount data found.
+      </div>
+    </template>
   </description-card-base>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
 import DescriptionCardBase from '@/components/Multidex/DescriptionCardBase';
+import CardTitleWithLink from '@/components/CardTitleWithLink';
 import BuffTable from '@/components/Multidex/BuffTable/MainTable';
+import HitCountTable from '@/components/Multidex/HitCountTable';
+import * as burstHelpers from '@/modules/core/bursts';
 
 export default {
   props: {
@@ -56,10 +113,15 @@ export default {
       type: String,
       default: 'bb',
     },
+    extraAttacks: {
+      default: () => [],
+    },
   },
   components: {
     DescriptionCardBase,
     BuffTable,
+    CardTitleWithLink,
+    HitCountTable,
   },
   computed: {
     ...mapGetters('bursts', ['getMultidexPathTo']),
@@ -94,15 +156,64 @@ export default {
     currentBurstEffect () {
       return this.burst ? this.burst.levels[this.levelIndex].effects : undefined;
     },
+    bcdcInfo () {
+      if (!this.burst) {
+        return { cost: 0, hits: 0, dropchecks: 0 };
+      }
+
+      return burstHelpers.getBcDcInfo(this.burst);
+    },
   },
   data () {
     return {
       levelIndex: 0,
+      hitCountData: null,
+      sparkedFrames: null,
+      extraAttackHitCountData: null,
     };
+  },
+  watch: {
+    burst: {
+      deep: true,
+      handler () {
+        this.calculateBurstData();
+      },
+    },
   },
   mounted () {
     this.levelIndex = (this.numLevels === 0) ? 0 : (this.numLevels - 1);
     this.logger.todo('implement grabbing existing filters for Burst');
+    if (this.burst) {
+      this.calculateBurstData();
+    }
+  },
+  methods: {
+    async calculateBurstData () {
+      this.hitCountData = null;
+
+      const hitCountData = burstHelpers.getHitCountData(this.burst);
+      this.extraAttackHitCountData = await burstHelpers.getExtraAttackHitCountData(this.burst, this.extraAttacks);
+      this.sparkedFrames = await burstHelpers.calculateSparkedFrames(hitCountData, this.extraAttackHitCountData);
+
+      this.hitCountData = hitCountData;
+    },
+    hasSelfSpark (frames, inputDelay) {
+      return burstHelpers.hasSelfSpark(frames, inputDelay, this.sparkedFrames);
+    },
+    getSelfSparkCount (frames, inputDelay) {
+      return burstHelpers.getSelfSparkCount(frames, inputDelay, this.sparkedFrames);
+    },
+    getTotalDistribution: burstHelpers.getTotalDistribution,
   },
 };
 </script>
+
+<style lang="less">
+.burst-card {
+  .v-expansion-panel__header {
+    height: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+</style>

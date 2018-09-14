@@ -1,7 +1,7 @@
 <template>
   <v-card class="bordered-card" :flat="flat" :style="style">
     <v-card-title :class="fullTitleClass">
-      <h1 class="title">
+      <h1 class="title" style="width: 100%;">
         <slot name="title">
           Your Title Here
         </slot>
