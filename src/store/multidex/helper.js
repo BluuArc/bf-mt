@@ -36,8 +36,10 @@ export const createState = () => {
 export const createGetters = (multidexModuleName = 'units') => {
   return {
     getMultidexPathTo: state => (id, server = state.activeServer) => {
-      logger.todo('deprecate?');
-      return `/multidex/${multidexModuleName}/?viewId=${id}&server=${server}`
+      logger.todo('check if filters are properly retrieved');
+      return [`/multidex/${multidexModuleName}/?viewId=${id}&server=${server}`, state.filterUrl]
+        .filter(val => val)
+        .join('&filters=');
     },
     getById: state => id => state.pageDb[id.toString()],
     getMultidexRouteParamsTo: state => (id, server = state.activeServer) => ({

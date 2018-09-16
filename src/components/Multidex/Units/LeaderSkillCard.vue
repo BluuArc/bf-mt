@@ -36,8 +36,5 @@ export default {
       return this.leaderSkill ? this.leaderSkill.desc : 'None';
     },
   },
-  mounted () {
-    this.logger.todo('implement grabbing existing filters for LS');
-  },
 };
 </script>

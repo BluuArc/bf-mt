@@ -62,7 +62,7 @@
         <v-expansion-panel-content v-for="(d, i) in hitCountData" :key="i">
           <div slot="header">
             <h2 :class="`title ${$vuetify.breakpoint.xsOnly ? '' : 'd-inline'}`">Attack {{ i + 1 }}</h2>
-            <v-chip small>{{ d.target }}</v-chip>
+            <v-chip small>{{ getNumHits(d) }} hit {{ d.target }}</v-chip>
             <v-chip small>{{ d.delay }} delay</v-chip>
             <v-chip v-if="hasSelfSpark(d.frames, d.delay)" small>{{ getSelfSparkCount(d.frames, d.delay) }} Self Sparks</v-chip>
             <v-chip small>{{ getTotalDistribution(d.frames)}}% DMG Distribution</v-chip>
@@ -75,7 +75,7 @@
         <v-expansion-panel-content v-for="(d, j) in (extraAttackHitCountData || [])" :key="hitCountData.length + j">
           <div slot="header">
             <h3 :class="`title ${$vuetify.breakpoint.xsOnly ? '' : 'd-inline'}`">Attack {{ hitCountData.length + j + 1 }} - ({{ d.source }})</h3>
-            <v-chip small>{{ d.target }}</v-chip>
+            <v-chip small>{{ getNumHits(d) }} hit {{ d.target }}</v-chip>
             <v-chip small>{{ d.delay }} delay</v-chip>
             <v-chip v-if="hasSelfSpark(d.frames, d.delay)" small>{{ getSelfSparkCount(d.frames, d.delay) }} Self Sparks</v-chip>
             <v-chip small>{{ getTotalDistribution(d.frames)}}% DMG Distribution</v-chip>
@@ -182,7 +182,6 @@ export default {
   },
   mounted () {
     this.levelIndex = (this.numLevels === 0) ? 0 : (this.numLevels - 1);
-    this.logger.todo('implement grabbing existing filters for Burst');
     if (this.burst) {
       this.calculateBurstData();
     }
@@ -204,6 +203,9 @@ export default {
       return burstHelpers.getSelfSparkCount(frames, inputDelay, this.sparkedFrames);
     },
     getTotalDistribution: burstHelpers.getTotalDistribution,
+    getNumHits (hitCountEntry) {
+      return (hitCountEntry.frames && (hitCountEntry.frames['frame times'] || hitCountEntry.frames['hit dmg% distribution'] || []).length) || 0;
+    }
   },
 };
 </script>
