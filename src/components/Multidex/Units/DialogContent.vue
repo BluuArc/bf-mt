@@ -12,6 +12,9 @@
                 <leader-skill-card :unit="entry" :logger="logger"/>
               </v-flex>
               <v-flex xs12>
+                <extra-skill-card :unit="entry" :logger="logger"/>
+              </v-flex>
+              <v-flex xs12>
                 <burst-card :unit="entry" :logger="logger" burstType="bb" :extraAttacks="extraAttacks.bb"/>
               </v-flex>
               <template v-for="type in ['sbb', 'ubb']">
@@ -45,6 +48,7 @@
 import DialogContentMixin from '@/components/Multidex/DialogContentMixin';
 import BorderedTitledCard from '@/components/BorderedTitledCard';
 import LeaderSkillCard from '@/components/Multidex/Units/LeaderSkillCard';
+import ExtraSkillCard from '@/components/Multidex/Units/ExtraSkillCard';
 import BurstCard from '@/components/Multidex/Units/BurstCard';
 import { getExtraAttacks } from '@/modules/core/units';
 
@@ -53,6 +57,7 @@ export default {
   components: {
     BorderedTitledCard,
     LeaderSkillCard,
+    ExtraSkillCard,
     BurstCard,
   },
   computed: {

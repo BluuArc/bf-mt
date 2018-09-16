@@ -24,13 +24,23 @@
       <v-flex xs8 lg11 :class="{ 'text-xs-center': true }">
         <template v-if="!hiddenIndices.includes(i)">
           <v-layout row v-for="(prop, j) in getSortedProps(effectEntry.effect)" :key="j" class="buff-table--property-row d-align-items-center">
-            <v-flex xs3>
-              {{ prop }}
-            </v-flex>
-            <v-flex xs9>
-              {{ effectEntry.effect[prop] }}
-              <span v-if="Array.isArray(effectEntry.effect[prop]) && effectEntry.effect[prop].length === 0">(None)</span>
-            </v-flex>
+            <template v-if="isProcBuffList(effectEntry, prop)">
+              <v-flex xs3>
+                {{ prop }}
+              </v-flex>
+              <v-flex xs9>
+                <buff-table :effects="effectEntry.effect[prop]" :showHeaders="false"/>
+              </v-flex>
+            </template>
+            <template v-else>
+              <v-flex xs3>
+                {{ prop }}
+              </v-flex>
+              <v-flex xs9>
+                {{ effectEntry.effect[prop] }}
+                <span v-if="Array.isArray(effectEntry.effect[prop]) && effectEntry.effect[prop].length === 0">(None)</span>
+              </v-flex>
+            </template>
           </v-layout>
         </template>
         <template v-else>
@@ -92,6 +102,9 @@ export default {
       } else {
         this.hiddenIndices = this.mappedEffects.map((val, i) => i);
       }
+    },
+    isProcBuffList (effectEntry, prop) {
+      return effectEntry.type === 'passive' && +effectEntry.id === 66 && prop === 'triggered effect';
     },
   },
   data () {

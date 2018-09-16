@@ -7,7 +7,7 @@
     :multidexPath="burst && getMultidexPathTo(burst.id) || ''"
     :descriptionGetter="() => description"
     :treeOptions="{ maxDepth: 1 }"
-    :tabNames="['Description', 'Hitcounts', 'JSON', 'Buff List']">
+    :tabNames="['Description', hasHitCountData && 'Hitcounts', 'JSON', 'Buff List'].filter(val => val)">
     <template slot="title">
       <v-layout row wrap>
         <v-flex xs12 sm8 md9 class="text-xs-left">
@@ -163,6 +163,10 @@ export default {
 
       return burstHelpers.getBcDcInfo(this.burst);
     },
+    hasHitCountData () {
+      return (Array.isArray(this.hitCountData) && this.hitCountData.length > 0) ||
+        (Array.isArray(this.extraAttackHitCountData) && this.extraAttackHitCountData.length > 0);
+    },
   },
   data () {
     return {
@@ -191,7 +195,7 @@ export default {
       this.hitCountData = null;
 
       const hitCountData = burstHelpers.getHitCountData(this.burst);
-      this.extraAttackHitCountData = await burstHelpers.getExtraAttackHitCountData(this.burst, this.extraAttacks);
+      this.extraAttackHitCountData = await burstHelpers.getExtraAttackHitCountData(this.burst, this.extraAttacks, this.burstType !== 'ubb');
       this.sparkedFrames = await burstHelpers.calculateSparkedFrames(hitCountData, this.extraAttackHitCountData);
 
       this.hitCountData = hitCountData;
