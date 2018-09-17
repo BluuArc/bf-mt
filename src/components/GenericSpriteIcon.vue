@@ -66,7 +66,7 @@ export default {
   },
   computed: {
     defaultTransform () {
-      const coords = [-this.iconX, this.iconY].join(' ');
+      const coords = [-this.iconX, -this.iconY].join(' ');
       return `translate(${coords})`;
     },
   },

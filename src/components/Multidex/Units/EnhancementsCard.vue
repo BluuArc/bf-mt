@@ -44,7 +44,7 @@
             />
           </v-flex>
           <v-flex xs3 md1 class="text-xs-center">
-            {{ skillEntry.category }}
+            <sp-icon :category="+skillEntry.category" :displaySize="24"/>
           </v-flex>
           <v-flex xs7 md9 lg10>
             <v-layout row wrap class="d-align-items-center">
@@ -72,6 +72,12 @@
                 </v-btn>
               </v-flex>
             </v-layout>
+            <v-slide-y-transition>
+              <div v-show="showTables.includes(index)">
+                <!-- lazily render buff table once -->
+                <buff-table v-if="showTables.includes(index) || effectCache[skillEntry.id]" :effects="getSkillEffects(skillEntry)" :showHeaders="true"/>
+              </div>
+            </v-slide-y-transition>
           </v-flex>
         </v-layout>
       </v-container>
@@ -83,6 +89,9 @@
 <script>
 import DescriptionCardBase from '@/components/Multidex/DescriptionCardBase';
 import CardTitleWithLink from '@/components/CardTitleWithLink';
+import SpIcon from '@/components/Multidex/Units/SpIcon';
+import BuffTable from '@/components/Multidex/BuffTable/MainTable';
+import { getSpSkillEffects } from '@/modules/core/units';
 
 export default {
   props: {
@@ -96,6 +105,8 @@ export default {
   components: {
     DescriptionCardBase,
     CardTitleWithLink,
+    SpIcon,
+    BuffTable,
   },
   computed: {
     feSkills () {
@@ -127,6 +138,7 @@ export default {
       sharedText: '',
       copyName: false,
       copyBullets: false,
+      effectCache: {},
     };
   },
   methods: {
@@ -155,7 +167,15 @@ export default {
 
       return skillEntry['dependency comment'] || 'Requires another enhancement';
     },
-  }
+    getSkillEffects (skillEntry) {
+      if (this.effectCache[skillEntry.id]) {
+        return this.effectCache[skillEntry.id];
+      }
+      const effects = getSpSkillEffects(skillEntry);
+      this.effectCache[skillEntry.id] = effects;
+      return effects;
+    },
+  },
 };
 </script>
 

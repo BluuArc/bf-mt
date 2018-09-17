@@ -1,4 +1,5 @@
 import { attackingProcs } from '@/modules/EffectProcessor/constants';
+import { spCategoryMapping } from '@/modules/constants';
 
 export function getExtraAttacks (unit) {
   const extraAttacks = {
@@ -50,4 +51,20 @@ export function getExtraAttacks (unit) {
     });
   });
   return extraAttacks;
+}
+
+export function getSpCategory (num) {
+  return spCategoryMapping[+num];
+}
+
+export function getSpSkillEffects (skillEntry) {
+  const effects = [];
+  skillEntry.skill.effects.forEach(e => {
+    // distinguish between passive and add to bb/sbb/ubb
+    Object.keys(e).forEach(type => {
+      const effect = e[type];
+      effects.push({ sp_type: type, ...effect });
+    });
+  });
+  return effects;
 }

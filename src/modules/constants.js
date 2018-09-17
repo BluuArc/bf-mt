@@ -31,6 +31,20 @@ export const unitTypes = Object.freeze(['lord', 'anima', 'breaker', 'guardian', 
 export const ailments = Object.freeze(['poison', 'weak', 'sick', 'injury', 'curse', 'paralysis']);
 export const dropTypes = Object.freeze(['hc', 'bc', 'item', 'zel', 'karma']);
 
+export const spCategoryMapping = Object.freeze({
+  1: 'Parameter Boost',
+  2: 'Spark',
+  3: 'Critical Hits',
+  4: 'Attack Boost',
+  5: 'BB Gauge',
+  6: 'HP Recovery',
+  7: 'Drops',
+  8: 'Ailment Resistance',
+  9: 'Ailment Infliction',
+  10: 'Damage Reduction',
+  11: 'Special',
+});
+
 export const effectTypes = Object.freeze({
   ATTACK: {
     name: 'Attack',
