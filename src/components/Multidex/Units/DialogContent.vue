@@ -11,7 +11,7 @@
               <v-flex xs12>
                 <leader-skill-card :unit="entry" :logger="logger"/>
               </v-flex>
-              <v-flex xs12>
+              <v-flex xs12 v-if="entry && entry['extra skill']">
                 <extra-skill-card :unit="entry" :logger="logger"/>
               </v-flex>
               <v-flex xs12>
@@ -22,6 +22,9 @@
                   <burst-card :unit="entry" :logger="logger" :burstType="type" :extraAttacks="extraAttacks[type]"/>
                 </v-flex>
               </template>
+              <v-flex v-if="entry && entry.feskills">
+                <enhancements-card :unit="entry" :logger="logger"/>
+              </v-flex>
             </v-layout>
           </v-container>
         </v-flex>
@@ -50,6 +53,7 @@ import BorderedTitledCard from '@/components/BorderedTitledCard';
 import LeaderSkillCard from '@/components/Multidex/Units/LeaderSkillCard';
 import ExtraSkillCard from '@/components/Multidex/Units/ExtraSkillCard';
 import BurstCard from '@/components/Multidex/Units/BurstCard';
+import EnhancementsCard from '@/components/Multidex/Units/EnhancementsCard';
 import { getExtraAttacks } from '@/modules/core/units';
 
 export default {
@@ -59,6 +63,7 @@ export default {
     LeaderSkillCard,
     ExtraSkillCard,
     BurstCard,
+    EnhancementsCard,
   },
   computed: {
     mainTabs: () => [

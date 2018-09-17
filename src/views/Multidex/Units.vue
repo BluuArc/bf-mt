@@ -30,9 +30,10 @@
       </template>
     </v-layout>
     <template slot="dialog-toolbar-title" slot-scope="{ viewId, hasViewId, entry }">
-      <v-flex class="d-flex">
+      <v-flex class="d-flex" style="overflow-x: auto;">
         <unit-thumbnail
           v-if="hasViewId"
+          style="min-width: 32px;"
           :displayWidth="32"
           :displayHeight="32"
           :src="getImageUrls(viewId).ills_battle"

@@ -28,7 +28,7 @@
       </section>
       <section slot="buff-list">
         <slot name="buff-list">
-          {{ entry }}
+          TODO: {{ entry }}
         </slot>
       </section>
       <section v-for="tab in extraTabConfig" :key="tab.slot" :slot="tab.slot">
