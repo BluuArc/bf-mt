@@ -2,13 +2,12 @@
   <description-card-base
     :entry="feSkills"
     materialColor="light-green darken-3"
-    :titleHtmlGenerator="() => `SP Enhancements`"
     :tabNames="['Table', 'Share Build', 'JSON', 'Buff List']"
     :treeOptions="{ maxDepth: 1 }">
     <template slot="title">
       <v-layout row wrap class="d-align-items-center">
         <v-flex xs9 class="text-xs-left">
-          <card-title-with-link titleHtml="SP Enhancements"/>
+          <card-title-with-link :titleHtml="titleHtml"/>
         </v-flex>
         <v-flex xs3 class="text-xs-right body-1">
           <span>{{ allEnhancementsSum }} SP</span>
@@ -85,6 +84,26 @@
       </v-container>
       <span v-else>No SP data found.</span>
     </template>
+    <template slot="share-build" slot-scope="{ activeTabIndex }">
+      <v-container fluid>
+        <v-layout row wrap>
+          <v-flex xs12 sm6 md4>
+            <v-checkbox v-model="copyName" label="Unit Name" hide-details/>
+          </v-flex>
+          <v-flex xs12 sm6 md4>
+            <v-checkbox v-model="copyBullets" label="Bullet Points" hide-details/>
+          </v-flex>
+          <v-flex xs12 sm6 md4>
+            <v-checkbox v-model="copyCode" label="Letter Code" hide-details/>
+          </v-flex>
+        </v-layout>
+        <v-layout row>
+          <v-flex>
+            <text-viewer :inputText="sharedText" :value="activeTabIndex"/>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </template>
   </description-card-base>
 </template>
 
@@ -93,6 +112,7 @@ import DescriptionCardBase from '@/components/Multidex/DescriptionCardBase';
 import CardTitleWithLink from '@/components/CardTitleWithLink';
 import SpIcon from '@/components/Multidex/Units/SpIcon';
 import BuffTable from '@/components/Multidex/BuffTable/MainTable';
+import TextViewer from '@/components/TextViewer';
 import { getSpSkillEffects, spIndexToCode, spCodeToIndex } from '@/modules/core/units';
 import debounce from 'lodash/debounce';
 
@@ -110,6 +130,7 @@ export default {
     CardTitleWithLink,
     SpIcon,
     BuffTable,
+    TextViewer,
   },
   computed: {
     feSkills () {
@@ -132,6 +153,10 @@ export default {
         return 'some';
       }
     },
+    titleHtml () {
+      const enhancements = this.$route.query.enhancements;
+      return ['SP Enhancments', enhancements ? `(${enhancements})` : ''].filter(val => val).join(' ');
+    },
   },
   data () {
     return {
@@ -141,6 +166,7 @@ export default {
       sharedText: '',
       copyName: false,
       copyBullets: false,
+      copyCode: false,
       effectCache: {},
     };
   },
@@ -208,17 +234,18 @@ export default {
       const activeSkills = Object.keys(this.activeSkills)
         .filter(key => this.activeSkills[key]);
       if (activeSkills.length > 0) {
-        const skills = activeSkills.map(key => this.feSkills[key])
-          .map((skillEntry) => {
+        const skills = activeSkills.map(key => ({ skillEntry: this.feSkills[key], index: +key }))
+          .map(({skillEntry, index }) => {
             const cost = skillEntry.skill.bp;
             const desc = this.getSkillDescription(skillEntry);
             const bullet = this.copyBullets ? '* ' : '';
-            return `${bullet}[${cost} SP] - ${desc}`;
+            const code = this.copyCode ? `${spIndexToCode(index)}: ` : '';
+            return `${bullet}[${cost} SP] - ${code}${desc}`;
           }).join('\n')
           .concat(`\n\nTotal: ${this.activeSkillSum} SP`);
 
         if (this.copyName) {
-          this.sharedText = `${this.entry.name}\n\n`.concat(skills);
+          this.sharedText = `${this.unit.name}\n\n`.concat(skills);
         } else {
           this.sharedText = skills;
         }
@@ -285,6 +312,17 @@ export default {
         }
       });
       activeDependencySkills.forEach(this.uncheckSkillDependencyBoxes);
+    },
+  },
+  watch: {
+    copyName () {
+      this.computeSharedText();
+    },
+    copyBullets () {
+      this.computeSharedText();
+    },
+    copyCode () {
+      this.computeSharedText();
     },
   },
   mounted () {

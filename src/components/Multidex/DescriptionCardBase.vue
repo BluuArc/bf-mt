@@ -9,7 +9,7 @@
     </template>
     <card-tabs-container :tabs="tabConfig" v-model="activeTabIndex">
       <section slot="description">
-        <slot name="description" :toggleBuffTable="() => showBuffTable = !showBuffTable" :showBuffTable="showBuffTable">
+        <slot name="description" :toggleBuffTable="() => showBuffTable = !showBuffTable" :showBuffTable="showBuffTable" :activeTabIndex="activeTabIndex">
           {{ descriptionGetter(entry) }}
           <template v-if="entry && effectGetter(entry)">
             <v-card-actions class="pl-0 pr-0 pb-0">
@@ -22,17 +22,17 @@
         </slot>
       </section>
       <section slot="json">
-        <slot name="json">
+        <slot name="json" :activeTabIndex="activeTabIndex">
           <json-viewer :json="entry" :value="activeTabIndex" :treeOptions="treeOptions"/>
         </slot>
       </section>
       <section slot="buff-list">
-        <slot name="buff-list">
+        <slot name="buff-list" :activeTabIndex="activeTabIndex">
           TODO: {{ entry }}
         </slot>
       </section>
       <section v-for="tab in extraTabConfig" :key="tab.slot" :slot="tab.slot">
-        <slot :name="tab.slot">
+        <slot :name="tab.slot" :activeTabIndex="activeTabIndex">
           {{ tab.name }}
         </slot>
       </section>
