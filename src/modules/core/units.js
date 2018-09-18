@@ -68,3 +68,11 @@ export function getSpSkillEffects (skillEntry) {
   });
   return effects;
 }
+
+export function spCodeToIndex (char) {
+  return char.charCodeAt(0) - ((char < 'a') ? 'A'.charCodeAt(0) : ('a'.charCodeAt(0))) + (char < 'a' ? 0 : 26);
+}
+
+export function spIndexToCode (index) {
+  return String.fromCharCode(index >= 26 ? (index - 26 + 'a'.charCodeAt(0)) : (index + 'A'.charCodeAt(0)));
+}

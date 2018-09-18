@@ -503,6 +503,7 @@ export default {
     };
     return {
       finishedInit: false,
+      runningInitDb: false,
       ...resultViewConfig,
       ...showBooleans,
       ...stateVars,
@@ -561,13 +562,14 @@ export default {
       }
     },
     conditionalInitDb () {
-      logger.debug('checking if can initDb', this.inInitState, this.moduleLoadState, this.finishedInit);
-      if (!this.inInitState && !this.moduleLoadState && !this.finishedInit) {
+      logger.debug('checking if can initDb', this.inInitState, this.moduleLoadState, this.finishedInit, this.runningInitDb);
+      if (!this.inInitState && !this.moduleLoadState && !this.finishedInit && !this.runningInitDb) {
         this.initDb();
       }
     },
     initDb: debounce(async function () {
       logger.debug('starting initDb');
+      this.runningInitDb = true;
       await this.setServerBasedOnInputServer();
       for (const m of this.pageModules.map(m => m.name)) {
         await this.dbSyncFunctions[m]();
@@ -576,6 +578,7 @@ export default {
       await this.forceSetPseudoComputedValues();
       this.finishedInit = true;
       this.showUpdateTooltip = this.hasUpdates;
+      this.runningInitDb = false;
     }, 50),
     async updateData () {
       this.logger.debug('starting download for', this.toUpdate);
@@ -687,6 +690,7 @@ export default {
         this.$router.replace({
           path: this.$route.path,
           query: {
+            ...this.$route.query,
             viewId: this.viewId || undefined,
             server: this.inputServer || undefined,
             filters: this.filterOptionsUrl || undefined,

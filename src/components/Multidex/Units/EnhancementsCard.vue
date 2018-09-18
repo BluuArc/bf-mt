@@ -23,6 +23,7 @@
               :label="`${activeSkillSum} SP`"
               :input-value="overallState === 'all'"
               :indeterminate="overallState === 'some'"
+              @click.native="toggleOverallState"
               hide-details
             />
           </v-flex>
@@ -41,6 +42,7 @@
             <v-checkbox
               :label="`${skillEntry.skill.bp} SP`"
               :input-value="!!activeSkills[index]"
+              @click.native="toggleSkill(index)"
             />
           </v-flex>
           <v-flex xs3 md1 class="text-xs-center">
@@ -50,7 +52,7 @@
             <v-layout row wrap class="d-align-items-center">
               <v-flex xs12 sm8>
                 <span class="d-block">
-                  <b>{{ String.fromCharCode(65 + index) }}: </b>
+                  <b>{{ spIndexToCode(index) }}: </b>
                   {{ getSkillDescription(skillEntry) }}
                 </span>
                 <i v-if="skillEntry.dependency">
@@ -91,7 +93,8 @@ import DescriptionCardBase from '@/components/Multidex/DescriptionCardBase';
 import CardTitleWithLink from '@/components/CardTitleWithLink';
 import SpIcon from '@/components/Multidex/Units/SpIcon';
 import BuffTable from '@/components/Multidex/BuffTable/MainTable';
-import { getSpSkillEffects } from '@/modules/core/units';
+import { getSpSkillEffects, spIndexToCode, spCodeToIndex } from '@/modules/core/units';
+import debounce from 'lodash/debounce';
 
 export default {
   props: {
@@ -142,6 +145,7 @@ export default {
     };
   },
   methods: {
+    spIndexToCode,
     getSPSkillWithID (id) {
       let skillId = id;
       if (skillId.indexOf('@') > -1) {
@@ -175,6 +179,116 @@ export default {
       this.effectCache[skillEntry.id] = effects;
       return effects;
     },
+    toggleOverallState () {
+      if (this.overallState === 'all') {
+        Object.keys(this.activeSkills)
+          .forEach(key => {
+            this.toggleSkill(key, false);
+          });
+      } else {
+        Object.keys(this.feSkills)
+          .forEach((s, i) => {
+            this.toggleSkill(i, true);
+          });
+      }
+    },
+    toggleSkill (index, value) {
+      this.activeSkills[index] = (value === undefined) ? !this.activeSkills[index] : !!value;
+      const skill = this.feSkills[index];
+      if (this.activeSkills[index] && skill.dependency) {
+        this.checkSkillDependencyBoxes(skill);
+      } else if (!this.activeSkills[index]) {
+        this.uncheckSkillDependencyBoxes(skill);
+      }
+      this.computeActiveSum();
+      this.computeSharedText();
+      this.syncLocalEnhancementsToUrl();
+    },
+    computeSharedText: debounce(function () {
+      const activeSkills = Object.keys(this.activeSkills)
+        .filter(key => this.activeSkills[key]);
+      if (activeSkills.length > 0) {
+        const skills = activeSkills.map(key => this.feSkills[key])
+          .map((skillEntry) => {
+            const cost = skillEntry.skill.bp;
+            const desc = this.getSkillDescription(skillEntry);
+            const bullet = this.copyBullets ? '* ' : '';
+            return `${bullet}[${cost} SP] - ${desc}`;
+          }).join('\n')
+          .concat(`\n\nTotal: ${this.activeSkillSum} SP`);
+
+        if (this.copyName) {
+          this.sharedText = `${this.entry.name}\n\n`.concat(skills);
+        } else {
+          this.sharedText = skills;
+        }
+      } else {
+        this.sharedText = 'No SP enhancements selected';
+      }
+    }, 50),
+    computeActiveSum: debounce(function () {
+      this.activeSkillSum = Object.keys(this.activeSkills)
+        .filter(key => this.activeSkills[key])
+        .map(key => this.feSkills[key].skill.bp)
+        .reduce((acc, val) => acc + val, 0);
+    }, 50),
+    syncLocalEnhancementsToUrl: debounce(function () {
+      const enhancements = Object.keys(this.activeSkills)
+        .filter(key => this.activeSkills[key])
+        .map(key => spIndexToCode(+key))
+        .join('');
+
+      this.$router.replace({
+        path: this.$route.path,
+        query: {
+          ...this.$route.query,
+          enhancements: enhancements || undefined,
+        },
+      });
+    }, 500),
+    syncUrlToLocalEnhancements () {
+      if (this.$route.query.enhancements) {
+        const enhancements = this.$route.query.enhancements.slice()
+          .split('').map(char => spCodeToIndex(char));
+        enhancements.forEach(index => {
+          if (index >= 0 && index < this.feSkills.length) {
+            this.toggleSkill(index, true);
+          } else {
+            this.logger.warn('ignoring invalid index', index);
+          }
+        });
+      }
+    },
+    // check all boxes current skill requires
+    checkSkillDependencyBoxes (skill) {
+      const dependentSkill = this.getSPSkillWithID(skill.dependency);
+      // console.debug({ dependentSkill });
+      this.feSkills.forEach((s, i) => {
+        if (s.id === dependentSkill.id) {
+          this.toggleSkill(i, true);
+          if (s.dependency) {
+            this.checkSkillDependencyBoxes(s);
+          }
+        }
+      });
+    },
+    uncheckSkillDependencyBoxes (skill) {
+      const activeDependencySkills = Object.keys(this.activeSkills)
+        .filter(key => this.activeSkills[key])
+        .map(key => this.feSkills[key])
+        .filter(s => s.dependency && s.dependency.indexOf(skill.id) > -1);
+
+      const activeDependencySkillIDs = activeDependencySkills.map(s => s.id);
+      this.feSkills.forEach((s, i) => {
+        if (activeDependencySkillIDs.indexOf(s.id) > -1) {
+          this.toggleSkill(i, false);
+        }
+      });
+      activeDependencySkills.forEach(this.uncheckSkillDependencyBoxes);
+    },
+  },
+  mounted () {
+    this.syncUrlToLocalEnhancements();
   },
 };
 </script>
@@ -187,7 +301,7 @@ export default {
 
   .v-input--checkbox {
     margin-top: 0;
-    padding-left: 8px;
+    padding-left: 4px;
 
     .v-input__slot {
       margin-bottom: 0;
