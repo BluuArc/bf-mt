@@ -36,7 +36,7 @@ export const createState = () => {
 export const createGetters = (multidexModuleName = 'units') => {
   return {
     getMultidexPathTo: state => (id, server = state.activeServer) => {
-      logger.todo('check if filters are properly retrieved');
+      logger.todo('check if filters are properly retrieved for', multidexModuleName);
       return [`/multidex/${multidexModuleName}/?viewId=${id}&server=${server}`, state.filterUrl]
         .filter(val => val)
         .join('&filters=');

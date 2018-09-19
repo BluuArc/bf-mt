@@ -7,6 +7,8 @@
     :multidexPath="burst && getMultidexPathTo(burst.id) || ''"
     :descriptionGetter="() => description"
     :treeOptions="{ maxDepth: 1 }"
+    :effectGetter="() => currentBurstEffect"
+    :contextHandler="contextHandler"
     :tabNames="['Description', hasHitCountData && 'Hitcounts', 'JSON', 'Buff List'].filter(val => val)">
     <template slot="title">
       <v-layout row wrap>
@@ -209,7 +211,12 @@ export default {
     getTotalDistribution: burstHelpers.getTotalDistribution,
     getNumHits (hitCountEntry) {
       return (hitCountEntry.frames && (hitCountEntry.frames['frame times'] || hitCountEntry.frames['hit dmg% distribution'] || []).length) || 0;
-    }
+    },
+    contextHandler (effect, index) {
+      return {
+        damageFrames: this.burst['damage frames'][index],
+      };
+    },
   },
 };
 </script>

@@ -11,12 +11,12 @@
       <section slot="description">
         <slot name="description" :toggleBuffTable="() => showBuffTable = !showBuffTable" :showBuffTable="showBuffTable" :activeTabIndex="activeTabIndex">
           {{ descriptionGetter(entry) }}
-          <template v-if="entry && effectGetter(entry)">
+          <template v-if="entry && effects">
             <v-card-actions class="pl-0 pr-0 pb-0">
               <v-btn flat @click="showBuffTable = !showBuffTable">{{ showBuffTable ? 'Hide' : 'Show' }} Buff Table</v-btn>
             </v-card-actions>
             <v-slide-y-transition>
-              <buff-table :effects="effectGetter(entry)" v-show="showBuffTable" :showHeaders="true"/>
+              <buff-table :effects="effects" v-show="showBuffTable" :showHeaders="true"/>
             </v-slide-y-transition>
           </template>
         </slot>
@@ -28,7 +28,11 @@
       </section>
       <section slot="buff-list">
         <slot name="buff-list" :activeTabIndex="activeTabIndex">
-          TODO: {{ entry }}
+          TODO: {{ effects }}
+          <span v-if="contextHandler">
+            <br>
+            Context: {{ contextHandler(effects[0], 0) }}
+          </span>
         </slot>
       </section>
       <section v-for="tab in extraTabConfig" :key="tab.slot" :slot="tab.slot">
@@ -72,9 +76,14 @@ export default {
       type: Function,
       default: entry => (entry ? (entry.desc || entry.description) : 'None'),
     },
+    // input: entry, output: array of effects
     effectGetter: {
       type: Function,
       default: entry => (entry.effects || []),
+    },
+    // input: entry & index, output: object with context options
+    contextHandler: {
+      type: Function,
     },
     treeOptions: {
       default: undefined,
@@ -101,6 +110,9 @@ export default {
     extraTabConfig () {
       const defaultTabs = ['Description', 'JSON', 'Buff List'];
       return this.tabConfig.filter(({ name }) => !defaultTabs.includes(name));
+    },
+    effects () {
+      return this.entry ? this.effectGetter(this.entry) : [];
     },
   },
   data () {

@@ -5,6 +5,7 @@
     :titleHtmlGenerator="() => `<b>Leader Skill: ${name}</b>`"
     :multidexPath="leaderSkill && getMultidexPathTo(leaderSkill.id) || ''"
     :descriptionGetter="() => description"
+    :contextHandler="() => ({ isLS: true })"
     :treeOptions="{ maxDepth: 1 }"/>
 </template>
 

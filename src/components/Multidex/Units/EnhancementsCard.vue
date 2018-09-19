@@ -3,10 +3,11 @@
     :entry="feSkills"
     materialColor="light-green darken-3"
     :tabNames="['Table', 'Share Build', 'JSON', 'Buff List']"
+    :effectGetter="() => allEffects"
     :treeOptions="{ maxDepth: 1 }">
     <template slot="title">
       <v-layout row wrap class="d-align-items-center">
-        <v-flex xs9 class="text-xs-left">
+        <v-flex xs9 class="text-xs-left" style="word-break: break-word;">
           <card-title-with-link :titleHtml="titleHtml"/>
         </v-flex>
         <v-flex xs3 class="text-xs-right body-1">
@@ -157,6 +158,11 @@ export default {
       const enhancements = this.$route.query.enhancements;
       return ['SP Enhancments', enhancements ? `(${enhancements})` : ''].filter(val => val).join(' ');
     },
+    allEffects () {
+      return !this.feSkills ? [] : this.feSkills
+        .map(s => this.getSkillEffects(s, false))
+        .reduce((acc, val) => acc.concat(val), []);
+    },
   },
   data () {
     return {
@@ -197,12 +203,15 @@ export default {
 
       return skillEntry['dependency comment'] || 'Requires another enhancement';
     },
-    getSkillEffects (skillEntry) {
+    getSkillEffects (skillEntry, cacheResult = true) {
       if (this.effectCache[skillEntry.id]) {
         return this.effectCache[skillEntry.id];
       }
       const effects = getSpSkillEffects(skillEntry);
-      this.effectCache[skillEntry.id] = effects;
+      // use cacheResult boolean to not prematurely render tables when getting allEffects data
+      if (cacheResult) {
+        this.effectCache[skillEntry.id] = effects;
+      }
       return effects;
     },
     toggleOverallState () {
