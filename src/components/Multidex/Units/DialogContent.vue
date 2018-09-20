@@ -3,7 +3,13 @@
     <v-container class="mb-5 pb-3">
       <v-layout row>
         <v-flex v-if="activeMainTab === 'general'">
-          general tab
+          <v-container fluid class="pa-0">
+            <v-layout row wrap>
+              <v-flex xs12 sm6 md3>
+                <miscellaneous-card :unit="entry" :logger="logger"/>
+              </v-flex>
+            </v-layout>
+          </v-container>
         </v-flex>
         <v-flex v-else-if="activeMainTab === 'skills'">
           <v-container fluid class="pa-0">
@@ -54,6 +60,7 @@ import LeaderSkillCard from '@/components/Multidex/Units/LeaderSkillCard';
 import ExtraSkillCard from '@/components/Multidex/Units/ExtraSkillCard';
 import BurstCard from '@/components/Multidex/Units/BurstCard';
 import EnhancementsCard from '@/components/Multidex/Units/EnhancementsCard';
+import MiscellaneousCard from '@/components/Multidex/Units/MiscellaneousCard';
 import { getExtraAttacks } from '@/modules/core/units';
 
 export default {
@@ -64,6 +71,7 @@ export default {
     ExtraSkillCard,
     BurstCard,
     EnhancementsCard,
+    MiscellaneousCard,
   },
   computed: {
     mainTabs: () => [

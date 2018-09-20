@@ -33,7 +33,7 @@ export function arraysAreDifferent (arr1 = [], arr2 = []) {
     arr2.some(val => !arr1.includes(val));
 }
 
-export function getGenderInfo(gender) {
+export function getGenderInfo (gender) {
   const icons = {
     male: 'fa-mars',
     female: 'fa-venus',
