@@ -63,18 +63,21 @@
                 </span>
               </span>
             </template>
-
           </v-stepper-step>
           <v-stepper-content :key="`content-${evo.current}`" :step="i + 1">
-            <v-layout row class="text-xs-center d-align-items-center">
+            <v-layout row class="text-xs-center d-align-items-center" style="overflow-x: auto">
               <v-flex xs3>
-                <router-link :to="getMultidexPathForUnit(evo.current)">
+                <router-link :to="getMultidexPathForUnit(evo.current)" class="d-block">
                   <unit-thumbnail
                     :src="getUnitImages(evo.current).ills_thum"
                     :rarity="getUnit(evo.current).rarity"
                     :imageTitle="getUnit(evo.current).name"
                     :displayWidth="64" :displayHeight="64"/>
                 </router-link>
+                <span class="d-flex-container items-center content-center">
+                  <span v-if="getUnit(evo.current).rarity < 8">{{ getUnit(evo.current).rarity }}</span>
+                  <rarity-icon :class="{ 'ml-1': getUnit(evo.current).rarity !== 8 }" :rarity="getUnit(evo.current).rarity" :displaySize="18"/>
+                </span>
               </v-flex>
               <v-flex xs1>
                 <v-icon>chevron_right</v-icon>
@@ -100,13 +103,17 @@
                 <v-icon>chevron_right</v-icon>
               </v-flex>
               <v-flex xs3>
-                <router-link :to="getMultidexPathForUnit(evo.next)">
+                <router-link :to="getMultidexPathForUnit(evo.next)" class="d-block">
                   <unit-thumbnail
                     :src="getUnitImages(evo.next).ills_thum"
                     :rarity="getUnit(evo.next).rarity"
                     :imageTitle="getUnit(evo.next).name"
                     :displayWidth="64" :displayHeight="64"/>
                 </router-link>
+                <span class="d-flex-container items-center content-center">
+                  <span v-if="getUnit(evo.next).rarity < 8">{{ getUnit(evo.next).rarity }}</span>
+                  <rarity-icon :class="{ 'ml-1': getUnit(evo.next).rarity !== 8 }" :rarity="getUnit(evo.next).rarity" :displaySize="18"/>
+                </span>
               </v-flex>
             </v-layout>
           </v-stepper-content>
@@ -123,6 +130,7 @@ import LoadingIndicator from '@/components/LoadingIndicator';
 import UnitThumbnail from '@/components/Multidex/Units/UnitThumbnail';
 import ArrowsRight from '@/components/Multidex/ArrowsRight';
 import ItemThumbnail from '@/components/Multidex/Items/ItemThumbnail';
+import RarityIcon from '@/components/Multidex/RarityIcon';
 import { getEvolutions } from '@/modules/core/units';
 import { delay } from '@/modules/utils';
 
@@ -145,6 +153,7 @@ export default {
     UnitThumbnail,
     ArrowsRight,
     ItemThumbnail,
+    RarityIcon,
   },
   computed: {
     ...mapGetters('units', {
