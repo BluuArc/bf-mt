@@ -3,10 +3,13 @@
     <v-container class="mb-5 pb-3">
       <v-layout row>
         <v-flex v-if="activeMainTab === 'general'">
-          <v-container fluid class="pa-0">
+          <v-container fluid class="pa-0" grid-list-lg>
             <v-layout row wrap>
               <v-flex xs12 sm6 md3>
-                <miscellaneous-card :unit="entry" :logger="logger"/>
+                <miscellaneous-card :unit="entry" :logger="logger" style="height: 100%;"/>
+              </v-flex>
+              <v-flex xs12 sm6 md9>
+                <stats-card :unit="entry" :logger="logger" style="height: 100%;"/>
               </v-flex>
             </v-layout>
           </v-container>
@@ -56,22 +59,28 @@
 <script>
 import DialogContentMixin from '@/components/Multidex/DialogContentMixin';
 import BorderedTitledCard from '@/components/BorderedTitledCard';
+
+import MiscellaneousCard from '@/components/Multidex/Units/MiscellaneousCard';
+import StatsCard from '@/components/Multidex/Units/StatsCard';
+
 import LeaderSkillCard from '@/components/Multidex/Units/LeaderSkillCard';
 import ExtraSkillCard from '@/components/Multidex/Units/ExtraSkillCard';
 import BurstCard from '@/components/Multidex/Units/BurstCard';
 import EnhancementsCard from '@/components/Multidex/Units/EnhancementsCard';
-import MiscellaneousCard from '@/components/Multidex/Units/MiscellaneousCard';
+
+
 import { getExtraAttacks } from '@/modules/core/units';
 
 export default {
   mixins: [DialogContentMixin],
   components: {
     BorderedTitledCard,
+    MiscellaneousCard,
+    StatsCard,
     LeaderSkillCard,
     ExtraSkillCard,
     BurstCard,
     EnhancementsCard,
-    MiscellaneousCard,
   },
   computed: {
     mainTabs: () => [

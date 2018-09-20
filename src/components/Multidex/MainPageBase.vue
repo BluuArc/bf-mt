@@ -578,6 +578,7 @@ export default {
       await this.forceSetPseudoComputedValues();
       this.finishedInit = true;
       this.showUpdateTooltip = this.hasUpdates;
+      this.setDocumentTitle();
       this.runningInitDb = false;
     }, 50),
     async updateData () {

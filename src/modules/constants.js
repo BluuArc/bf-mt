@@ -31,6 +31,8 @@ export const unitTypes = Object.freeze(['lord', 'anima', 'breaker', 'guardian', 
 export const ailments = Object.freeze(['poison', 'weak', 'sick', 'injury', 'curse', 'paralysis']);
 export const dropTypes = Object.freeze(['hc', 'bc', 'item', 'zel', 'karma']);
 
+export const unitStatFields = Object.freeze(['hp', 'atk', 'def', 'rec']);
+
 export const spCategoryMapping = Object.freeze({
   1: 'Parameter Boost',
   2: 'Spark',

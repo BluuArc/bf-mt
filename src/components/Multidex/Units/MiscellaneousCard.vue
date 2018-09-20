@@ -1,7 +1,7 @@
 <template>
   <bordered-titled-card materialColor="teal">
     <template slot="title">
-      <b>Miscellaneous Card</b>
+      <b>Miscellaneous Info</b>
     </template>
     <v-container fluid class="subheading text-xs-center miscellaneous-unit-list" grid-list-xl>
       <v-layout row>
