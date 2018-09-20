@@ -76,3 +76,30 @@ export function spCodeToIndex (char) {
 export function spIndexToCode (index) {
   return String.fromCharCode(index >= 26 ? (index - 26 + 'a'.charCodeAt(0)) : (index + 'A'.charCodeAt(0)));
 }
+
+export function hasEvolutions (unit) {
+  return unit && !!(unit.prev || unit.next || unit.evo_mats);
+}
+
+export async function getEvolutions (unit = {}, getUnit = (id) => ({ id })) {
+  if (!hasEvolutions(unit)) {
+    return [];
+  }
+
+  const evolutions = [];
+  let tempUnit = unit;
+  // go to first in evo line
+  while (tempUnit.prev) {
+    tempUnit = await Promise.resolve(getUnit(tempUnit.prev.toString()));
+  }
+
+  while (tempUnit.next) {
+    evolutions.push({
+      current: tempUnit.id.toString(),
+      next: tempUnit.next,
+      mats: tempUnit.evo_mats,
+    });
+    tempUnit = await Promise.resolve(getUnit(tempUnit.next.toString()));
+  }
+  return evolutions;
+}

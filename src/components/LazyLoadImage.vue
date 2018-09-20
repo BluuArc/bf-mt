@@ -5,13 +5,19 @@
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink">
     <title v-if="imageTitle" v-text="imageTitle"/>
-    <image
-      :width="imageWidth" :height="imageHeight"
-      :xlink:href="placeholderSrc"
-      :href="placeholderSrc"
+    <g
       class="lazy--placeholder"
       :style="placeholderImageStyle"
-    />
+      :imageWidth="imageWidth" :imageHeight="imageHeight">
+      <slot name="placeholder">
+        <image
+          :width="imageWidth" :height="imageHeight"
+          :xlink:href="placeholderSrc"
+          :href="placeholderSrc"
+          class="lazy--placeholder"
+        />
+      </slot>
+    </g>
     <image
       :width="imageWidth" :height="imageHeight"
       :xlink:href="src"
@@ -47,7 +53,6 @@ export default {
     },
     placeholderSrc: {
       type: String,
-      required: true,
     },
     src: {
       type: String,
@@ -73,7 +78,3 @@ export default {
   },
 };
 </script>
-
-<style>
-
-</style>

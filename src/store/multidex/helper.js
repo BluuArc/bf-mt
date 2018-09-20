@@ -1,6 +1,7 @@
 import { servers, exclusiveFilterOptions } from '@/modules/constants';
 import getUpdateTimes from '@/store/instances/update-data-singleton';
 import SWorker from '@/assets/sww.min';
+// eslint-disable-next-line no-unused-vars
 import logger from '@/modules/Logger';
 const defaultStartDate = new Date('Jan 01 1969');
 
@@ -36,7 +37,7 @@ export const createState = () => {
 export const createGetters = (multidexModuleName = 'units') => {
   return {
     getMultidexPathTo: state => (id, server = state.activeServer) => {
-      logger.todo('check if filters are properly retrieved for', multidexModuleName);
+      // logger.todo('check if filters are properly retrieved for', multidexModuleName);
       return [`/multidex/${multidexModuleName}/?viewId=${id}&server=${server}`, state.filterUrl]
         .filter(val => val)
         .join('&filters=');
