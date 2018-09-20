@@ -218,8 +218,10 @@ export default {
 <style lang="less">
 .evolution-card {
   .v-stepper {
+    padding-bottom: 24px;
     .v-stepper__step {
       padding-top: 16px;
+      border-bottom: 1px solid var(--background-color-alt);
 
       .v-stepper__label {
         width: 100%;

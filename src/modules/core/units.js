@@ -1,5 +1,6 @@
 import { attackingProcs } from '@/modules/EffectProcessor/constants';
-import { spCategoryMapping } from '@/modules/constants';
+import { spCategoryMapping, moveTypeMapping } from '@/modules/constants';
+import { safeGet } from '@/modules/utils';
 
 export function getExtraAttacks (unit) {
   const extraAttacks = {
@@ -102,4 +103,23 @@ export async function getEvolutions (unit = {}, getUnit = (id) => ({ id })) {
     tempUnit = await Promise.resolve(getUnit(tempUnit.next.toString()));
   }
   return evolutions;
+}
+
+export function getDropCheckInfo (unit) {
+  const hasHitCounts = unit && unit['damage frames'] && unit['damage frames'].hits > 0;
+  if (!hasHitCounts) {
+    return { hits: 0, dropchecks: 0 };
+  }
+
+  const hits = +unit['damage frames'].hits;
+  const dropCheckPerHit = +unit['drop check count'] || 0;
+  return {
+    hits,
+    dropchecks: dropCheckPerHit * hits,
+  };
+}
+
+export function getMoveType (unit, isNormalAttack = true) {
+  const moveTypeCode = safeGet(unit, ['movement', isNormalAttack ? 'attack' : 'skill', 'move type']);
+  return moveTypeMapping[+moveTypeCode];
 }

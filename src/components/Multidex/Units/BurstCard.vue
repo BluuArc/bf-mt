@@ -14,8 +14,8 @@
       <v-layout row wrap>
         <v-flex xs12 sm8 md9 class="text-xs-left">
           <card-title-with-link
-              :multidexPath="burst && getMultidexPathTo(burst.id) || ''"
-              :titleHtml="`<b>${burstLabel}: ${name}</b>`"/>
+            :multidexPath="burst && getMultidexPathTo(burst.id) || ''"
+            :titleHtml="`<b>${burstLabel}: ${name}</b>`"/>
         </v-flex>
         <v-flex xs12 sm4 md3 class="text-xs-right">
           <v-tooltip bottom>

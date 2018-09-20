@@ -32,6 +32,11 @@ export const ailments = Object.freeze(['poison', 'weak', 'sick', 'injury', 'curs
 export const dropTypes = Object.freeze(['hc', 'bc', 'item', 'zel', 'karma']);
 
 export const unitStatFields = Object.freeze(['hp', 'atk', 'def', 'rec']);
+export const moveTypeMapping = Object.freeze({
+  1: 'Moving',
+  2: 'Teleporting',
+  3: 'Non-Moving',
+});
 
 export const spCategoryMapping = Object.freeze({
   1: 'Parameter Boost',

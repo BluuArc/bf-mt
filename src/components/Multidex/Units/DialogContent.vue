@@ -17,6 +17,16 @@
                 <evolution-card :unit="entry" :logger="logger" :pageDb="pageDb"/>
               </v-flex>
             </v-layout>
+            <v-layout row>
+              <v-flex>
+                TODO: mission card
+              </v-flex>
+            </v-layout>
+            <v-layout row wrap>
+              <v-flex xs12 sm6>
+                <movement-card :unit="entry" :logger="logger"/>
+              </v-flex>
+            </v-layout>
           </v-container>
         </v-flex>
         <v-flex v-else-if="activeMainTab === 'skills'">
@@ -68,6 +78,7 @@ import BorderedTitledCard from '@/components/BorderedTitledCard';
 import MiscellaneousCard from '@/components/Multidex/Units/MiscellaneousCard';
 import StatsCard from '@/components/Multidex/Units/StatsCard';
 import EvolutionCard from '@/components/Multidex/Units/EvolutionCard';
+import MovementCard from '@/components/Multidex/Units/MovementCard';
 
 import LeaderSkillCard from '@/components/Multidex/Units/LeaderSkillCard';
 import ExtraSkillCard from '@/components/Multidex/Units/ExtraSkillCard';
@@ -88,6 +99,7 @@ export default {
     ExtraSkillCard,
     BurstCard,
     EnhancementsCard,
+    MovementCard,
   },
   computed: {
     mainTabs: () => [
