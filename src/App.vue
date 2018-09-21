@@ -267,12 +267,16 @@ html {
     --background-color-alt--lighten-2: ghostwhite;
     --background-color-alt--lighten-1: lightgrey;
     --background-color-alt: rgba(0, 0, 0, 0.12); /* default color of v-divider */
+    --background-color--card: #fff;
+    --background-color: #fafafa;
   }
   
   .theme--dark {
     --background-color-alt--lighten-2: grey;
     --background-color-alt--lighten-1: dimgrey;
     --background-color-alt: hsla(0, 0%, 100%, 0.12); /* default color of v-divider */
+    --background-color--card: #424242;
+    --background-color: #303030;
   }
 }
 
@@ -304,6 +308,11 @@ html {
   color: #bd4147;
   overflow: auto;
   max-height: 45vh;
+
+  .theme--dark & {
+    background-color: black;
+    color: lightgreen;
+  }
 }
 
 /* Find the first nested node and override the indentation */
@@ -352,9 +361,17 @@ html {
   transition: transform .1s ease;
   transition: transform .1s ease, -webkit-transform .1s ease;
   -webkit-transition: -webkit-transform .1s ease;
+
+  .theme--dark & {
+    color: #ccc!important;
+  }
 }
 
 .tree-view-item-hint {
   color: #555!important;
+
+  .theme--dark & {
+    color: #ddd!important;
+  }
 }
 </style>

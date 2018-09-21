@@ -1,5 +1,5 @@
 <template>
-  <bordered-titled-card :materialColor="materialColor">
+  <bordered-titled-card :materialColor="materialColor" class="multidex-dialog-content-card">
     <template slot="title">
       <slot name="title">
         <card-title-with-link

@@ -56,8 +56,16 @@
           </v-container>
         </v-flex>
         <v-flex v-else-if="activeMainTab === 'art'">
-          art tab
-          {{ entry }}
+          <v-container fluid class="text-xs-center">
+            <img class="unit-image" :src="images.ills_full"/>
+            <div v-show="alternateImageLoaded">
+              <img
+                class="unit-image"
+                :src="alternateImages.ills_full"
+                @load="alternateImageLoaded = true"
+                @error="alternateImageLoaded = false"/>
+            </div>
+          </v-container>
         </v-flex>
       </v-layout>
     </v-container>
@@ -91,6 +99,7 @@ import EnhancementsCard from '@/components/Multidex/Units/EnhancementsCard';
 
 
 import { getExtraAttacks } from '@/modules/core/units';
+import { mapGetters } from 'vuex';
 
 export default {
   mixins: [DialogContentMixin],
@@ -107,6 +116,13 @@ export default {
     EnhancementsCard,
   },
   computed: {
+    ...mapGetters('units', ['getImageUrls']),
+    images () {
+      return this.getImageUrls(this.entry && this.entry.id);
+    },
+    alternateImages () {
+      return this.getImageUrls(`${this.entry && this.entry.id}_2`);
+    },
     mainTabs: () => [
       { text: 'General Info', value: 'general', icon: 'perm_identity' },
       { text: 'Skill Set', value: 'skills', icon: 'category' },

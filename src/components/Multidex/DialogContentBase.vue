@@ -35,3 +35,21 @@ export default {
   },
 }
 </script>
+
+<style lang="less">
+.multidex-dialog-content-card {
+  background-color: var(--background-color)!important;
+
+  .v-tabs__bar {
+    background-color: var(--background-color)!important;
+  }
+
+  .v-expansion-panel__container {
+    background-color: var(--background-color)!important;
+  }
+
+  .v-table {
+    background-color: var(--background-color)!important;
+  }
+}
+</style>

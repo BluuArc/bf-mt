@@ -1,5 +1,5 @@
 <template>
-  <bordered-titled-card materialColor="teal">
+  <bordered-titled-card materialColor="teal" class="multidex-dialog-content-card">
     <template slot="title">
       <b>Miscellaneous Info</b>
     </template>

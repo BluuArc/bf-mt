@@ -169,7 +169,7 @@ export default {
       activeSkills: {},
       activeSkillSum: 0,
       showTables: [],
-      sharedText: '',
+      sharedText: 'No SP enhancements selected',
       copyName: false,
       copyBullets: false,
       copyCode: false,

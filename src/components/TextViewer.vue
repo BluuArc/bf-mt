@@ -1,6 +1,6 @@
 <template>
   <v-container fluid class="text-viewer pa-0">
-    <copy-button block :inputText="inputText" :value="value"/>
+    <copy-button block :inputText="inputText" :value="value" class="mb-0"/>
     <textarea readonly :value="inputText"/>
     <pre><code>{{ inputText }}</code></pre>
   </v-container>
@@ -39,6 +39,12 @@ export default {
 
     &::before {
       content: '';
+    }
+
+    .theme--dark & {
+      border: 1px solid var(--background-color);
+      background-color: black;
+      color: lightgreen;
     }
   }
 
