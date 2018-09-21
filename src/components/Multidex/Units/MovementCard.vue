@@ -57,7 +57,6 @@
 
 <script>
 import DescriptionCardBase from '@/components/Multidex/DescriptionCardBase';
-import CardTitleWithLink from '@/components/CardTitleWithLink';
 import HitCountTable from '@/components/Multidex/HitCountTable';
 import { getDropCheckInfo, getMoveType } from '@/modules/core/units';
 
@@ -72,7 +71,6 @@ export default {
   },
   components: {
     DescriptionCardBase,
-    CardTitleWithLink,
     HitCountTable,
   },
   computed: {

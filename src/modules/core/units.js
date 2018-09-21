@@ -123,3 +123,76 @@ export function getMoveType (unit, isNormalAttack = true) {
   const moveTypeCode = safeGet(unit, ['movement', isNormalAttack ? 'attack' : 'skill', 'move type']);
   return moveTypeMapping[+moveTypeCode];
 }
+
+export function evaluateSingleArenaCondition ({ condition = '', target = '' }) {
+  const isParty = target === 'party';
+  switch (condition) {
+    case 'hp_50pr_over':
+      return 'topHalf';
+    case 'hp_50pr_under':
+    case 'hp_75pr_under':
+      return !isParty ? 'middleAndBelow' : 'beforeHealers';
+    case 'hp_25pr_under':
+      return !isParty ? 'bottomHalf' : 'beforeHealers';
+    // other: hp_min, hp_max, atk_max, random
+    default:
+      break;
+    }
+
+    if (!isParty) {
+      return 'anywhere';
+    } else {
+      switch (condition) {
+        case 'hp_max':
+          return 'afterHealers';
+        case 'hp_min':
+          return 'beforeHealers';
+        default:
+          return 'anywhere';
+      }
+    }
+}
+
+export function arenaConditionCodeToText (code) {
+  const mapping = {
+    topHalf: 'Top Half',
+    anywhere: 'Anywhere',
+    middleAndBelow: 'Middle or Lower Half',
+    beforeHealers: 'Anywhere Before Healers',
+    bottomHalf: 'Bottom Half',
+    afterHealers: 'Anywhere After Healers',
+  };
+  return mapping[code];
+}
+
+export function getArenaPositionRecommendation (unit = {}) {
+  const defaultSuggestion = 'anywhere';
+  if (!Array.isArray(unit.ai)) {
+    return [defaultSuggestion];
+  }
+
+  const skillBasedProcs = unit.ai.filter(entry => entry.action === 'skill');
+  if (skillBasedProcs.length === 0) {
+    return [defaultSuggestion];
+  }
+
+  const chanceMapping = {};
+  skillBasedProcs.forEach(entry => {
+    const condition = entry['target conditions'];
+    const chance = entry['chance%'];
+    const target = entry['target type'];
+
+    if (!chanceMapping[chance]) {
+      chanceMapping[chance] = [];
+    }
+    chanceMapping[chance].push({ condition, target });
+  });
+
+  const highestChanceConditions = Object.keys(chanceMapping)
+    .sort((a, b) => +b - +a)
+    .map(key => chanceMapping[key])[0];
+
+  const positions = Array.from(new Set(highestChanceConditions.map(evaluateSingleArenaCondition)));
+
+  return positions;
+}

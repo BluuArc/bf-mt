@@ -26,7 +26,7 @@ export default {
   },
   computed: {
     iconSize () {
-      return 56;
+      return this.sheetSize[1] / 3;
     },
     sheetSize () {
       return [56, 162];

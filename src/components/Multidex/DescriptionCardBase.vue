@@ -7,7 +7,7 @@
           :titleHtml="titleHtmlGenerator(entry)"/>
       </slot>
     </template>
-    <card-tabs-container :tabs="tabConfig" v-model="activeTabIndex">
+    <card-tabs-container :tabs="tabConfig" v-model="activeTabIndex" :class="tabContainerClass">
       <section slot="description">
         <slot name="description" :toggleBuffTable="() => showBuffTable = !showBuffTable" :showBuffTable="showBuffTable" :activeTabIndex="activeTabIndex">
           {{ descriptionGetter(entry) }}
@@ -86,6 +86,9 @@ export default {
       type: Function,
     },
     treeOptions: {
+      default: undefined,
+    },
+    tabContainerClass: {
       default: undefined,
     },
   },

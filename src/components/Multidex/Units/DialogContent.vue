@@ -17,14 +17,17 @@
                 <evolution-card :unit="entry" :logger="logger" :pageDb="pageDb"/>
               </v-flex>
             </v-layout>
-            <v-layout row>
+            <v-layout row v-if="entry.first_clear_missions">
               <v-flex>
-                TODO: mission card
+                {{ logger.todo('mission card') || 'TODO: mission card' }}
               </v-flex>
             </v-layout>
             <v-layout row wrap>
               <v-flex xs12 sm6>
                 <movement-card :unit="entry" :logger="logger"/>
+              </v-flex>
+              <v-flex xs12 sm6>
+                <arena-card :unit="entry" :logger="logger"/>
               </v-flex>
             </v-layout>
           </v-container>
@@ -79,6 +82,7 @@ import MiscellaneousCard from '@/components/Multidex/Units/MiscellaneousCard';
 import StatsCard from '@/components/Multidex/Units/StatsCard';
 import EvolutionCard from '@/components/Multidex/Units/EvolutionCard';
 import MovementCard from '@/components/Multidex/Units/MovementCard';
+import ArenaCard from '@/components/Multidex/Units/ArenaCard';
 
 import LeaderSkillCard from '@/components/Multidex/Units/LeaderSkillCard';
 import ExtraSkillCard from '@/components/Multidex/Units/ExtraSkillCard';
@@ -95,11 +99,12 @@ export default {
     MiscellaneousCard,
     StatsCard,
     EvolutionCard,
+    ArenaCard,
+    MovementCard,
     LeaderSkillCard,
     ExtraSkillCard,
     BurstCard,
     EnhancementsCard,
-    MovementCard,
   },
   computed: {
     mainTabs: () => [

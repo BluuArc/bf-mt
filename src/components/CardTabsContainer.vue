@@ -1,14 +1,14 @@
 <template>
   <v-container fluid class="pt-0">
     <v-layout row>
-      <v-flex>
+      <v-flex class="pb-0">
         <v-tabs v-model="localValue" class="mb-2">
           <v-tab v-for="(tab, i) in tabs" :key="i">{{ tab.name }}</v-tab>
         </v-tabs>
       </v-flex>
     </v-layout>
     <v-layout row>
-      <v-flex>
+      <v-flex class="pa-0">
         <v-tabs-items v-model="localValue" touchless>
           <v-tab-item v-for="(tab, i) in tabs" :key="i">
             <slot :name="tab.slot">
