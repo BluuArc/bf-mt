@@ -65,8 +65,8 @@
             </template>
           </v-stepper-step>
           <v-stepper-content :key="`content-${evo.current}`" :step="i + 1">
-            <v-layout row class="text-xs-center d-align-items-center" style="overflow-x: auto">
-              <v-flex xs3>
+            <v-layout row :wrap="$vuetify.breakpoint.xsOnly" class="text-xs-center d-align-items-center" style="overflow-x: auto">
+              <v-flex xs12 sm3>
                 <router-link :to="getMultidexPathForUnit(evo.current)" class="d-block">
                   <unit-thumbnail
                     :src="getUnitImages(evo.current).ills_thum"
@@ -79,10 +79,10 @@
                   <rarity-icon :class="{ 'ml-1': getUnit(evo.current).rarity !== 8 }" :rarity="getUnit(evo.current).rarity" :displaySize="18"/>
                 </span>
               </v-flex>
-              <v-flex xs1>
-                <v-icon>chevron_right</v-icon>
+              <v-flex xs12 sm1>
+                <v-icon>{{ $vuetify.breakpoint.xsOnly ? 'keyboard_arrow_down' : 'chevron_right' }}</v-icon>
               </v-flex>
-              <v-flex xs4>
+              <v-flex xs12 sm4>
                 <template v-for="(mat, i) in evo.mats">
                   <router-link v-if="mat.type === 'unit'" :to="getMultidexPathForUnit(mat.id)" :key="i">
                     <unit-thumbnail
@@ -99,10 +99,10 @@
                   </router-link>  
                 </template>
               </v-flex>
-              <v-flex xs1>
-                <v-icon>chevron_right</v-icon>
+              <v-flex xs12 sm1>
+                <v-icon>{{ $vuetify.breakpoint.xsOnly ? 'keyboard_arrow_down' : 'chevron_right' }}</v-icon>
               </v-flex>
-              <v-flex xs3>
+              <v-flex xs12 sm3>
                 <router-link :to="getMultidexPathForUnit(evo.next)" class="d-block">
                   <unit-thumbnail
                     :src="getUnitImages(evo.next).ills_thum"
