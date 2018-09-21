@@ -3,7 +3,12 @@ import {
   unitKinds,
   genders,
   exclusiveFilterOptions,
+  defaultTernaryOptions,
   buffSearchOptions,
+  itemTypes,
+  sphereTypeMapping,
+  craftableFilterOptions,
+  usageFilterOptions,
 } from '@/modules/constants';
 
 import {
@@ -30,6 +35,9 @@ export default class FilterOptionsHelper {
   get ternaryOptions () {
     return {
       exclusives: exclusiveFilterOptions.allValue,
+      associatedUnits: defaultTernaryOptions.allValue,
+      craftables: craftableFilterOptions.allValue,
+      usage: usageFilterOptions.allValue,
     };
   }
 
@@ -40,10 +48,15 @@ export default class FilterOptionsHelper {
       rarity: Object.keys(new Array(this._maxRarity - this._minRarity + 1).fill(0)).map(i => +i + this._minRarity),
       unitKinds: unitKinds.slice(),
       genders: genders.slice(),
+
+      itemTypes: itemTypes.slice(),
+      sphereTypes: Object.values(sphereTypeMapping).slice(),
+
       procs: [],
       procBuffSearchOptions: buffSearchOptions.slice(),
       passives: [],
       passiveBuffSearchOptions: buffSearchOptions.filter(field => !nonPassiveFields.includes(field)),
+
       ...(this.ternaryOptions),
       name: '',
     };

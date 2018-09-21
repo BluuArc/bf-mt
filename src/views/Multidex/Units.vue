@@ -76,9 +76,7 @@ export default {
   },
   computed: {
     ...mapState('units', ['pageDb']),
-    ...mapGetters('units', ['getImageUrls', 'getMultidexRouteParamsTo', 'sortTypes']),
-    requiredModules: () => ['units', 'items', 'missions'],
-    filterTypes: () => ['elements', 'rarity', 'unitKinds', 'genders', 'exclusives', 'procs', 'passives'],
+    ...mapGetters('units', ['getImageUrls', 'getMultidexRouteParamsTo', 'sortTypes', 'filterTypes', 'requiredModules']),
     viewModes: () => ['card', 'icon'],
   },
   data () {

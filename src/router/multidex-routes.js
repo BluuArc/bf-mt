@@ -17,4 +17,10 @@ export default [
     component: MultidexPages.Units,
     props: defaultMultidexPropHandler,
   },
+  {
+    path: '/multidex/items',
+    name: 'Items',
+    component: MultidexPages.Items,
+    props: defaultMultidexPropHandler,
+  },
 ];

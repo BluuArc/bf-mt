@@ -21,6 +21,24 @@ export const itemTypeMapping = Object.freeze({
   ls_sphere: 'LS Sphere',
 });
 
+export const sphereTypeMapping = Object.freeze({
+  0: 'None',
+  1: 'Status Enhancing',
+  2: 'Critical',
+  3: 'Drop',
+  4: 'Ailment Inducing',
+  5: 'Element Fusion',
+  6: 'BB Gauge',
+  7: 'HP Recovery',
+  8: 'Target Setting',
+  9: 'Damage Deflecting',
+  10: 'Damage Reducing',
+  11: 'Spark',
+  12: 'Defense Piercing',
+  13: 'Attack Boosting',
+  14: 'Special',
+});
+
 export const targetAreaMapping = Object.freeze({
   aoe: 'AOE',
   single: 'ST',

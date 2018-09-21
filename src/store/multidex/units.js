@@ -34,6 +34,8 @@ export default {
       };
     },
     sortTypes: () => ['Unit ID', 'Guide ID', 'Alphabetical', 'Rarity', 'Element'],
+    filterTypes: () => ['elements', 'rarity', 'unitKinds', 'genders', 'exclusives', 'procs', 'passives'],
+    requiredModules: () => ['units', 'items', 'missions'],
   },
   actions: {
     ...createActions(dbWorker, downloadWorker, logger, 'units'),
