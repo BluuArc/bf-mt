@@ -40,6 +40,21 @@
           :requiredFilters="requiredFilters"
           v-model="value"
           :disableFilters="disableFilters"/>
+        <craftables-panel
+          :filterHelper="filterHelper"
+          :requiredFilters="requiredFilters"
+          v-model="value"
+          :disableFilters="disableFilters"/>
+        <usage-panel
+          :filterHelper="filterHelper"
+          :requiredFilters="requiredFilters"
+          v-model="value"
+          :disableFilters="disableFilters"/>
+        <associated-units-panel
+          :filterHelper="filterHelper"
+          :requiredFilters="requiredFilters"
+          v-model="value"
+          :disableFilters="disableFilters"/>
         <sphere-type-panel
           :filterHelper="filterHelper"
           :requiredFilters="requiredFilters"
@@ -77,6 +92,9 @@ import UnitKindPanel from './UnitKindPanel';
 import GenderPanel from './GenderPanel';
 import ItemTypePanel from './ItemTypePanel';
 import SphereTypePanel from './SphereTypePanel';
+import CraftablesPanel from './CraftablesPanel';
+import UsagePanel from './UsagePanel';
+import AssociatedUnitsPanel from './AssociatedUnitsPanel';
 import ServerExclusivePanel from './ServerExclusivePanel';
 import ProcPanel from './ProcPanel';
 import PassivePanel from './PassivePanel';
@@ -127,6 +145,9 @@ export default {
     GenderPanel,
     ItemTypePanel,
     SphereTypePanel,
+    CraftablesPanel,
+    UsagePanel,
+    AssociatedUnitsPanel,
     ServerExclusivePanel,
     ProcPanel,
     PassivePanel,

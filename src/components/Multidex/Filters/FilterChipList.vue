@@ -6,6 +6,9 @@
     <gender-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
     <item-type-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
     <sphere-type-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
+    <craftables-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
+    <usage-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
+    <associated-units-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
     <server-exclusive-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
     <proc-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions" :isUnit="isUnit"/>
     <passive-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions" :isUnit="isUnit"/>
@@ -19,6 +22,9 @@ import UnitKindChip from './UnitKindChip';
 import GenderChip from './GenderChip';
 import ItemTypeChip from './ItemTypeChip';
 import SphereTypeChip from './SphereTypeChip';
+import CraftablesChip from './CraftablesChip';
+import UsageChip from './UsageChip';
+import AssociatedUnitsChip from './AssociatedUnitsChip';
 import ServerExclusiveChip from './ServerExclusiveChip';
 import ProcChip from './ProcChip';
 import PassiveChip from './PassiveChip';
@@ -54,6 +60,9 @@ export default {
     GenderChip,
     ItemTypeChip,
     SphereTypeChip,
+    CraftablesChip,
+    UsageChip,
+    AssociatedUnitsChip,
     ServerExclusiveChip,
     ProcChip,
     PassiveChip,
