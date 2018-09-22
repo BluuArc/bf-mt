@@ -10,6 +10,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
+import { parseExtraSkillConditions } from '@/modules/core/extra-skills';
 import DescriptionCardBase from '@/components/Multidex/DescriptionCardBase';
 
 export default {
@@ -35,6 +36,17 @@ export default {
     description () {
       return this.extraSkill ? this.extraSkill.desc : 'None';
     },
+    hasConditions () {
+      return this.extraSkill && this.extraSkill.effects.some(effect => {
+        const conditions = parseExtraSkillConditions(effect);
+        return Object.values(conditions).some(arr => arr.length > 0);
+      });
+    }
+  },
+  mounted () {
+    if (this.hasConditions) {
+      this.logger.todo('link other units and items from here');
+    }
   },
 };
 </script>

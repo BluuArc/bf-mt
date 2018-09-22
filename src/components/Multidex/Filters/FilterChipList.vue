@@ -4,6 +4,8 @@
     <rarity-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions" :minRarity="minRarity" :maxRarity="maxRarity"/>
     <unit-kind-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
     <gender-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
+    <item-type-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
+    <sphere-type-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
     <server-exclusive-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
     <proc-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions" :isUnit="isUnit"/>
     <passive-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions" :isUnit="isUnit"/>
@@ -15,6 +17,8 @@ import ElementChip from './ElementChip';
 import RarityChip from './RarityChip';
 import UnitKindChip from './UnitKindChip';
 import GenderChip from './GenderChip';
+import ItemTypeChip from './ItemTypeChip';
+import SphereTypeChip from './SphereTypeChip';
 import ServerExclusiveChip from './ServerExclusiveChip';
 import ProcChip from './ProcChip';
 import PassiveChip from './PassiveChip';
@@ -48,6 +52,8 @@ export default {
     RarityChip,
     UnitKindChip,
     GenderChip,
+    ItemTypeChip,
+    SphereTypeChip,
     ServerExclusiveChip,
     ProcChip,
     PassiveChip,

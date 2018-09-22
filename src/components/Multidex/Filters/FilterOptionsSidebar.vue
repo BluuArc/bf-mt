@@ -35,6 +35,16 @@
           :requiredFilters="requiredFilters"
           v-model="value"
           :disableFilters="disableFilters"/>
+        <item-type-panel
+          :filterHelper="filterHelper"
+          :requiredFilters="requiredFilters"
+          v-model="value"
+          :disableFilters="disableFilters"/>
+        <sphere-type-panel
+          :filterHelper="filterHelper"
+          :requiredFilters="requiredFilters"
+          v-model="value"
+          :disableFilters="disableFilters"/>
         <server-exclusive-panel
           :filterHelper="filterHelper"
           :requiredFilters="requiredFilters"
@@ -65,6 +75,8 @@ import ElementPanel from './ElementPanel';
 import RarityPanel from './RarityPanel';
 import UnitKindPanel from './UnitKindPanel';
 import GenderPanel from './GenderPanel';
+import ItemTypePanel from './ItemTypePanel';
+import SphereTypePanel from './SphereTypePanel';
 import ServerExclusivePanel from './ServerExclusivePanel';
 import ProcPanel from './ProcPanel';
 import PassivePanel from './PassivePanel';
@@ -113,6 +125,8 @@ export default {
     RarityPanel,
     UnitKindPanel,
     GenderPanel,
+    ItemTypePanel,
+    SphereTypePanel,
     ServerExclusivePanel,
     ProcPanel,
     PassivePanel,

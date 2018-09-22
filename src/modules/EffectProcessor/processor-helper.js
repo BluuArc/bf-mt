@@ -198,7 +198,7 @@ export function conditionHelperGetUnitNames (units = [], unitById = (id) => ({ n
         const unit = getHighestRarityUnit(+id, unitById) || {};
         names.push(`any evolution of ${unit.name || id}`);
       } else {
-        // specify a specifc unit
+        // specify a specific unit
         const unit = unitById(id) || {};
         names.push(unit.name || id);
       }

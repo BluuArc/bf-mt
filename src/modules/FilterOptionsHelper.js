@@ -50,7 +50,7 @@ export default class FilterOptionsHelper {
       genders: genders.slice(),
 
       itemTypes: itemTypes.slice(),
-      sphereTypes: Object.values(sphereTypeMapping).slice(),
+      sphereTypes: Object.keys(sphereTypeMapping).map(key => +key),
 
       procs: [],
       procBuffSearchOptions: buffSearchOptions.slice(),
