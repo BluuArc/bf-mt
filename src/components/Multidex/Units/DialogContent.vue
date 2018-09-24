@@ -12,7 +12,7 @@
                 <stats-card :unit="entry" :logger="logger" style="height: 100%;"/>
               </v-flex>
             </v-layout>
-            <v-layout row>
+            <v-layout row v-if="hasUnitEvolutions">
               <v-flex>
                 <evolution-card :unit="entry" :logger="logger" :pageDb="pageDb"/>
               </v-flex>
@@ -97,8 +97,7 @@ import ExtraSkillCard from '@/components/Multidex/Units/ExtraSkillCard';
 import BurstCard from '@/components/Multidex/Units/BurstCard';
 import EnhancementsCard from '@/components/Multidex/Units/EnhancementsCard';
 
-
-import { getExtraAttacks } from '@/modules/core/units';
+import { getExtraAttacks, hasEvolutions } from '@/modules/core/units';
 import { mapGetters } from 'vuex';
 
 export default {
@@ -117,6 +116,9 @@ export default {
   },
   computed: {
     ...mapGetters('units', ['getImageUrls']),
+    hasUnitEvolutions () {
+      return this.entry && hasEvolutions(this.entry);
+    },
     images () {
       return this.getImageUrls(this.entry && this.entry.id);
     },

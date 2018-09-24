@@ -7,7 +7,63 @@
     <v-container fluid class="pa-0" slot="positioning">
       <v-layout row class="text-xs-center">
         <v-flex>
-          <h2 class="subheading">Squad Position {{ suggestions.length === 1 ? 'Suggestion' : 'Suggestions' }}</h2>
+          <h2 class="subheading">
+            <span>Squad Position {{ suggestions.length === 1 ? 'Suggestion' : 'Suggestions' }}</span>
+            <v-dialog
+              v-model="showHelperDialog"
+              max-width="768px">
+              <v-btn icon slot="activator">
+                <v-icon>help</v-icon>
+              </v-btn>
+            <v-card>
+              <v-card-title>
+                <h2 class="title">Arena Positioning Guide</h2>
+              </v-card-title>
+              <v-card-text>
+                <v-container fluid class="pa-0">
+                  <v-layout row wrap>
+                    <v-flex xs12>
+                      <img src="http://i.imgur.com/wEO3OU0.jpg" style="max-width: 100%;"/>
+                    </v-flex>
+                    <v-flex xs6 class="text-xs-left">
+                      <v-btn small flat href="http://i.imgur.com/wEO3OU0.jpg" rel="noopener" target="_blank">
+                        External Image Link
+                      </v-btn>
+                    </v-flex>
+                    <v-flex xs6 class="text-xs-right">
+                      <v-btn small flat href="https://www.reddit.com/comments/3q10nj" rel="noopener" target="_blank">
+                        Image Source
+                      </v-btn>
+                    </v-flex>
+                  </v-layout>
+                  <v-layout row>
+                    <v-flex>
+                      <v-divider/>
+                    </v-flex>
+                  </v-layout>
+                  <v-layout row>
+                    <v-flex>
+                      <span class="d-block">Postion Mapping from Squad Builder to Arena Position is as follows:</span>
+                      <ol>
+                        <li>Top Left (Squad) = Top Position (Arena)</li>
+                        <li>Top Right (Squad) = Second from Top Position (Arena)</li>
+                        <li>Middle (Squad) = Middle Position (Arena)</li>
+                        <li>Bottom Right (Squad) = Second from Bottom Position (Arena)</li>
+                        <li>Bottom Left (Squad) = Bottom Position (Arena)</li>
+                      </ol>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-card-text>
+              <v-card-actions>
+                <v-spacer/>
+                <v-btn flat @click="showHelperDialog = false">
+                  Close
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+            </v-dialog>
+          </h2>
         </v-flex>
       </v-layout>
       <v-layout row wrap>
@@ -28,12 +84,6 @@
         </v-flex>
       </v-layout>
       <template v-else>
-        <v-layout row>
-          <v-flex>
-
-          </v-flex>
-        </v-layout>
-
         <v-layout row wrap v-for="(stat, index) in aiData" :key="index">
           <v-flex>
             <span class="subheading">{{ generateArenaText(stat) }}</span>
@@ -92,6 +142,9 @@ export default {
       return getArenaPositionRecommendation(this.unit).map(arenaConditionCodeToText);
     },
   },
+  data: () => ({
+    showHelperDialog: false,
+  }),
   methods: {
     generateArenaText (data = {}) {
       const chance = `${data['chance%']}% chance`;
