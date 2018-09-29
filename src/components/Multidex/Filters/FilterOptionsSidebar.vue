@@ -40,6 +40,11 @@
           :requiredFilters="requiredFilters"
           v-model="value"
           :disableFilters="disableFilters"/>
+        <sphere-type-panel
+          :filterHelper="filterHelper"
+          :requiredFilters="requiredFilters"
+          v-model="value"
+          :disableFilters="disableFilters"/>
         <craftables-panel
           :filterHelper="filterHelper"
           :requiredFilters="requiredFilters"
@@ -51,11 +56,6 @@
           v-model="value"
           :disableFilters="disableFilters"/>
         <associated-units-panel
-          :filterHelper="filterHelper"
-          :requiredFilters="requiredFilters"
-          v-model="value"
-          :disableFilters="disableFilters"/>
-        <sphere-type-panel
           :filterHelper="filterHelper"
           :requiredFilters="requiredFilters"
           v-model="value"
