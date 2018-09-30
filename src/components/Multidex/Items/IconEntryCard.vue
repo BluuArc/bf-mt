@@ -15,7 +15,6 @@
             <span v-if="rarity < 8">{{ rarity }}</span>
             <rarity-icon :class="{ 'ml-1': rarity !== 8 }" :rarity="rarity" :displaySize="18"/>
           </div>
-          <!-- <h2 class="subheading" style="white-space: nowrap;"># {{ entry.guide_id }}</h2> -->
         </v-flex>
         <v-flex xs4 class="text-xs-right">
           x{{ entry.max_stack }}
@@ -23,24 +22,17 @@
       </v-layout>
       <v-layout row>
         <v-flex class="text-xs-center d-align-self-center">
-          <!-- <unit-thumbnail
-            :src="getImageUrls(entry.id).ills_thum"
-            :rarity="rarity"
-            :imageTitle="entry.name"
-            :displayWidth="thumbnailSize" :displayHeight="thumbnailSize"/> -->
           <item-thumbnail
             :src="getImageUrl(entry.id)"
             :rarity="rarity"
+            :type="entry.type"
+            :isRaidItem="!!entry.raid"
             :imageTitle="entry.name"
             :displayWidth="thumbnailSize" :displayHeight="thumbnailSize"/>
         </v-flex>
       </v-layout>
       <v-layout row style="margin-top: -16px">
         <v-flex class="text-xs-center d-align-self-center">
-          <!-- <div class="d-flex-container vertical-center content-center">
-            <span v-if="rarity < 8">{{ rarity }}</span>
-            <rarity-icon :class="{ 'ml-1': rarity !== 8 }" :rarity="rarity" :displaySize="18"/>
-          </div> -->
           <h1 class="subheading">
             {{ entry.name }}
           </h1>

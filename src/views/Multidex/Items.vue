@@ -22,7 +22,7 @@
         <v-flex
           v-for="key in keys"
           :key="key"
-          lg1 sm2 xs3>
+          xl1 md2 sm3 xs6>
           <icon-entry-card :to="getMultidexPathTo(key)" :entry="pageDb[key]" v-if="pageDb.hasOwnProperty(key)"/>
         </v-flex>
       </template>
