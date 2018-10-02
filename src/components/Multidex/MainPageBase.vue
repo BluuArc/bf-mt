@@ -740,8 +740,8 @@ export default {
     },
     setDocumentTitle () {
       const defaultTitle = `BF-MT - ${this.mainModule.fullName}`;
-      if (this.hasViewId) {
-        document.title = [defaultTitle, this.pageDb[this.viewId].name || this.viewId].join(' - ');
+      if (this.viewId) {
+        document.title = [defaultTitle, (this.pageDb[this.viewId] && this.pageDb[this.viewId].name) || this.viewId].join(' - ');
       } else if (this.hasFilters) {
         document.title = [defaultTitle, 'Search Results'].join(' - ');
       } else {
