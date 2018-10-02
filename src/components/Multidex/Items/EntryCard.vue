@@ -3,7 +3,7 @@
     <v-container fluid class="pa-3">
       <v-layout row>
         <v-flex>
-          <div class="d-flex-container vertical-center">
+          <div class="d-flex-container items-center">
             <sphere-type-icon
               v-if="hasSphereType"
               :category="entry['sphere type']"
@@ -25,7 +25,7 @@
             :imageTitle="entry.name"
             :displayWidth="thumbnailSize" :displayHeight="thumbnailSize"/>
         </v-flex>
-        <v-flex xs9 class="pb-0">
+        <v-flex xs9 class="pb-0" style="word-break: break-word;">
           {{ entry.desc }}
         </v-flex>
       </v-layout>
@@ -37,7 +37,7 @@
           x{{ entry.max_stack }}
         </v-flex>
         <v-flex xs3>
-          <div class="d-flex-container vertical-center content-flex-end">
+          <div class="d-flex-container items-center content-flex-end">
             <span v-if="rarity < 8">{{ rarity }}</span>
             <rarity-icon :class="{ 'ml-1': rarity !== 8 }" :rarity="rarity" :displaySize="18"/>
           </div>

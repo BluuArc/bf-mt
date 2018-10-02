@@ -17,7 +17,7 @@
       </v-layout>
       <v-layout row style="margin-top: -16px">
         <v-flex class="text-xs-center d-align-self-center">
-          <div class="d-flex-container vertical-center content-center">
+          <div class="d-flex-container items-center content-center">
             <span v-if="rarity < 8">{{ rarity }}</span>
             <rarity-icon :class="{ 'ml-1': rarity !== 8 }" :rarity="rarity" :displaySize="18"/>
           </div>

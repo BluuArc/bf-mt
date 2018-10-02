@@ -19,7 +19,7 @@
                 </span>
               </template>
               <template v-else-if="entry.label.includes('Sphere Type')">
-                <div class="d-flex-container vertical-center content-center">
+                <div class="d-flex-container items-center content-center">
                   <sphere-type-icon
                     class="mr-1"
                     :category="entry.value"

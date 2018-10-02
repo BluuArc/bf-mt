@@ -3,15 +3,15 @@
     <v-container fluid class="pl-2 pr-2 pt-1 pb-1">
       <v-layout row style="margin-bottom: -8px;" class="d-align-items-center">
         <v-flex xs4 class="text-xs-left">
-          <div class="d-flex-container vertical-center">
+          <div class="d-flex-container items-center">
             <sphere-type-icon
-            v-if="hasSphereType"
-            :category="entry['sphere type']"
-            :displaySize="22"/>
+              v-if="hasSphereType"
+              :category="entry['sphere type']"
+              :displaySize="22"/>
           </div>
         </v-flex>
         <v-flex xs4 class="text-xs-center">
-          <div class="d-flex-container vertical-center content-center">
+          <div class="d-flex-container items-center content-center">
             <span v-if="rarity < 8">{{ rarity }}</span>
             <rarity-icon :class="{ 'ml-1': rarity !== 8 }" :rarity="rarity" :displaySize="18"/>
           </div>

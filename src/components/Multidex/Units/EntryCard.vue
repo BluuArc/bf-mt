@@ -13,7 +13,7 @@
           <v-container fluid class="pa-0">
             <v-layout row>
               <v-flex>
-                <div class="d-flex-container vertical-center">
+                <div class="d-flex-container items-center">
                   <element-icon :element="entry.element" :displaySize="20" class="mr-1"/>
                   <h1 class="subheading d-inline-block" style="word-break: break-word;">
                     <b v-text="entry.name"/>
@@ -29,7 +29,7 @@
                 <v-icon :color="genderIconInfo.color">fas {{ genderIconInfo.icon }}</v-icon>
               </v-flex>
               <v-flex xs4 class="text-xs-right d-align-self-center">
-                <div class="d-flex-container vertical-center content-flex-end">
+                <div class="d-flex-container items-center content-flex-end">
                   <span v-if="rarity < 8">{{ rarity }}</span>
                   <rarity-icon :class="{ 'ml-1': rarity !== 8 }" :rarity="rarity" :displaySize="18"/>
                 </div>
