@@ -154,9 +154,6 @@ export default {
       return `${chance} to ${action} ${target} ${condition}`;
     },
   },
-  mounted () {
-    
-  },
 };
 </script>
 

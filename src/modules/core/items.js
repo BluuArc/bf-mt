@@ -1,4 +1,5 @@
 import { sphereTypeMapping } from '@/modules/constants';
+import SWorker from '@/assets/sww.min';
 
 export function getSphereCategory (item) {
   // can pass in number or item entry directly
@@ -46,4 +47,20 @@ export function getItemEffects (item = {}) {
   } else {
     return item.effect;
   }
+}
+
+export function getFullUsageList (item, pageDb = {}) {
+  return SWorker.run((item, pageDb) => {
+    const currentUsageTracker = {};
+    const getUsageList = (entry) => {
+      if (entry && entry.usage) {
+        entry.usage.forEach(usageEntry => {
+          currentUsageTracker[usageEntry.id] = true;
+          getUsageList(pageDb[usageEntry.id]);
+        });
+      }
+    };
+    getUsageList(item);
+    return Object.keys(currentUsageTracker);
+  }, [item, pageDb]);
 }
