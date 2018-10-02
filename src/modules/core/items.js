@@ -6,7 +6,11 @@ export function getSphereCategory (item) {
   return sphereTypeMapping[type || 0];
 }
 
-export function getItemType (item = {}) {
+export function getItemType (item) {
+  if (!item) {
+    return 'None';
+  }
+
   const { type, raid } = item;
   // items, raid items, booster, spheres, materials, evo materials, ls spheres
   if (type === 'consumable' && !raid) {
@@ -25,5 +29,21 @@ export function getItemType (item = {}) {
     return 'LS Sphere';
   } else {
     return type || 'Unknown Type';
+  }
+}
+
+export function getItemEffects (item = {}) {
+  if (!item || !item.effect) {
+    return [];
+  }
+
+  if (item.effect.effect && item.effect.effect.length > 0) {
+    const { effect, ...extraParams } = item.effect;
+    return [
+      { ...effect[0], ...extraParams },
+      ...effect.slice(1),
+    ];
+  } else {
+    return item.effect;
   }
 }
