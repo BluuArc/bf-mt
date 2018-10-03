@@ -53,7 +53,7 @@ import EntryCardMixin from '@/components/Multidex/BaseEntryCardMixin';
 import SphereTypeIcon from '@/components/Multidex/Items/SphereTypeIcon';
 import RarityIcon from '@/components/Multidex/RarityIcon';
 import ItemThumbnail from '@/components/Multidex/Items/ItemThumbnail';
-import { getItemType } from '@/modules/core/items';
+import { getItemType, isSphere } from '@/modules/core/items';
 
 export default {
   mixins: [EntryCardMixin],
@@ -68,7 +68,7 @@ export default {
       return this.entry.rarity;
     },
     hasSphereType () {
-      return this.entry['sphere type'] !== undefined || this.entry.type === 'sphere' || this.entry.type === 'ls_sphere';
+      return isSphere(this.entry);
     },
     itemType () {
       return getItemType(this.entry);

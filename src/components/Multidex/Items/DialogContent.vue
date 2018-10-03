@@ -21,6 +21,11 @@
           <usage-card :item="entry" :logger="logger"/>
         </v-flex>
       </v-layout>
+      <v-layout row>
+        <v-flex>
+          <crafting-card :item="entry" :logger="logger"/>
+        </v-flex>
+      </v-layout>
     </v-container>
   </dialog-content-base>
 </template>
@@ -30,6 +35,7 @@ import DialogContentMixin from '@/components/Multidex/DialogContentMixin';
 import GeneralInfoCard from '@/components/Multidex/Items/GeneralInfoCard';
 import MiscellaneousCard from '@/components/Multidex/Items/MiscellaneousCard';
 import UsageCard from '@/components/Multidex/Items/UsageCard';
+import CraftingCard from '@/components/Multidex/Items/CraftingCard';
 
 export default {
   mixins: [DialogContentMixin],
@@ -37,6 +43,7 @@ export default {
     GeneralInfoCard,
     MiscellaneousCard,
     UsageCard,
+    CraftingCard,
   },
 };
 </script>

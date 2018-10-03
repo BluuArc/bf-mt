@@ -6,7 +6,7 @@
     <v-container fluid class="subheading text-xs-center miscellaneous-item-list" grid-list-xl>
       <v-layout row wrap>
         <v-flex xs12 sm6 md4 v-for="(entry, i) in entries" :key="i" class="miscellaneous-item-list-entry">
-          <v-layout row>
+          <v-layout row class="d-align-items-center">
             <v-flex xs6 class="pl-0 pr-0">
               <b>{{ entry.label }}</b>
             </v-flex>
@@ -45,7 +45,7 @@ import BorderedTitledCard from '@/components/BorderedTitledCard';
 import SphereTypeIcon from '@/components/Multidex/Items/SphereTypeIcon';
 import RarityIcon from '@/components/Multidex/RarityIcon';
 import { safeGet } from '@/modules/utils';
-import { getItemType, getSphereCategory } from '@/modules/core/items';
+import { getItemType, getSphereCategory, isSphere as itemSphereCheck } from '@/modules/core/items';
 import numbro from 'numbro';
 
 export default {
@@ -78,7 +78,7 @@ export default {
       ].filter(i => i);
     },
     isSphere () {
-      return !!this.item && (this.item['sphere type'] !== undefined || this.item.type === 'sphere' || this.item.type === 'ls_sphere');
+      return itemSphereCheck(this.item);
     },
     itemType () {
       return getItemType(this.item);
@@ -110,8 +110,11 @@ export default {
 }
 
 .miscellaneous-item-list {
-  & .miscellaneous-item-list-entry:nth-child(odd) {
-    background-color: var(--background-color-alt);
+  // & .miscellaneous-item-list-entry:nth-child(odd) {
+  //   background-color: var(--background-color-alt);
+  // }
+  & > .layout.row {
+    align-items: center;
   }
 }
 </style>

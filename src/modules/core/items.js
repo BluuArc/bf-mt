@@ -7,6 +7,10 @@ export function getSphereCategory (item) {
   return sphereTypeMapping[type || 0];
 }
 
+export function isSphere (item) {
+  return item && (item['sphere type'] !== undefined || item.type === 'sphere' || item.type === 'ls_sphere');
+}
+
 export function getItemType (item) {
   if (!item) {
     return 'None';

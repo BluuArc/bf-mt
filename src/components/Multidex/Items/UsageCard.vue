@@ -76,7 +76,7 @@
             <v-container fluid>
               <v-layout row>
                 <v-flex>
-                  This item is used with the following units:
+                  This item can be used with the following units:
                 </v-flex>
               </v-layout>
               <v-layout row wrap>
