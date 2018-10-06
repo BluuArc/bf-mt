@@ -19,7 +19,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "60010": {
     "desc": "Restores HP each turn, boosts HC drop rate & slightly boosts HC efficacy",
@@ -51,6 +57,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "31066",
+      "31067",
       "850018"
     ]
   },
@@ -81,7 +89,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "60030": {
     "desc": "Probable random status ailment infliction & boosts damage against status afflicted foes",
@@ -181,7 +195,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "60060": {
     "desc": "Probable 25% damage reduction & negates Def ignoring damage",
@@ -208,6 +228,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "21106",
+      "21107",
       "31006",
       "31007",
       "840547",
@@ -276,7 +298,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "60090": {
     "desc": "Enormously boosts BC, HC, Zel, Karma, Item drop rate & hugely boosts BC, HC, Zel, Karma, Item drop rates when HP is full",
@@ -349,7 +377,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "11166",
+      "11167",
       "20916",
+      "61016",
       "810547",
       "810548",
       "820397",
@@ -387,7 +418,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_3_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "60120": {
     "desc": "Spark dmg boosts BC, HC drop rates, 100% boost to Spark dmg & Spark dmg slightly restores HP and BB gauge",
@@ -461,6 +498,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "21106",
+      "21107",
       "31006",
       "31007",
       "840547",
@@ -506,6 +545,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "41036",
+      "41037",
       "60497"
     ]
   },
@@ -556,7 +597,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "11166",
+      "11167",
       "20916",
+      "61016",
       "810547",
       "810548",
       "820397",
@@ -752,7 +796,11 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
-      "50757"
+      "50757",
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "60500": {
@@ -819,7 +867,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "61070": {
     "desc": "Boosts all damage reduction related abilities",
@@ -885,6 +939,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "21106",
+      "21107",
       "31006",
       "31007",
       "840547",
@@ -994,6 +1050,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "21106",
+      "21107",
       "31006",
       "31007",
       "840547",
@@ -1038,7 +1096,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "62190": {
     "desc": "Boosts BB and SBB activation rates, 100% boost to Atk, boosts BB Atk & damage taken boosts BB gauge",
@@ -1114,6 +1178,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "21106",
+      "21107",
       "31006",
       "31007",
       "840547",
@@ -1155,7 +1221,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "62230": {
     "desc": "Considerably boosts BB Atk, enormously boosts elemental damage, 50% boost to Atk & boosts BB gauge when damage dealt exceeds a certain amount",
@@ -1198,7 +1270,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "11166",
+      "11167",
       "20916",
+      "61016",
       "810547",
       "810548",
       "820397",
@@ -1314,6 +1389,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "21106",
+      "21107",
       "31006",
       "31007",
       "840547",
@@ -1352,7 +1429,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "62350": {
     "desc": "150% boost to Spark damage, raises max Atk value from 99999 to 150000 & hugely boosts elemental damage",
@@ -1546,7 +1629,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "62380": {
     "desc": "Negates all status ailments, 60% boost to Def, max HP, 50% Spark damage reduction, 50% additional damage reduction & probability of resistance against 1 KO attack",
@@ -1790,7 +1879,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "62420": {
     "desc": "Enormously boosts BB Atk, hugely boosts elemental damage, hugely boosts critical damage, 200% boost to Atk & raises max Atk value from 99999 to 200000",
@@ -1836,7 +1931,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "11166",
+      "11167",
       "20916",
+      "61016",
       "810547",
       "810548",
       "820397",

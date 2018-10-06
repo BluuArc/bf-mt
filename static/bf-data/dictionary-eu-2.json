@@ -1,4 +1,204 @@
 {
+  "MST_LEADERSKILLS_801206_DESCRIPTION": {
+    "en": "Negates critical hits from foes",
+    "es": "Negates critical hits from foes",
+    "id": "Menegasi pukulan ampuh dari musuh",
+    "pt": "Negates critical hits from foes",
+    "th": "กันค่าคริติคอลจากศัตรู",
+    "vi": "Negates critical hits from foes"
+  },
+  "MST_LEADERSKILLS_801206_NAME": {
+    "en": "Klutz!",
+    "es": "Klutz!",
+    "id": "Kikuk",
+    "pt": "Klutz!",
+    "th": "คลัทซ์!",
+    "vi": "Klutz!"
+  },
+  "MST_LEADERSKILLS_801207_DESCRIPTION": {
+    "en": "Largely boosts Atk relative to amount of depleted HP & negates critical hits from foes",
+    "es": "Largely boosts Atk relative to amount of depleted HP & negates critical hits from foes",
+    "id": "Amat menambah Serangan sesuai jumlah berkurangnya HP & menegasi pukulan ampuh dari musuh",
+    "pt": "Largely boosts Atk relative to amount of depleted HP & negates critical hits from foes",
+    "th": "เพิ่มพลังโจมตีอย่างมากมาย ",
+    "vi": "Largely boosts Atk relative to amount of depleted HP & negates critical hits from foes"
+  },
+  "MST_LEADERSKILLS_801207_NAME": {
+    "en": "Markswoman Aura",
+    "es": "Markswoman Aura",
+    "id": "Aura Wanita Jago Tembak",
+    "pt": "Markswoman Aura",
+    "th": "มาร์ควูแมน ออร่า",
+    "vi": "Markswoman Aura"
+  },
+  "MST_LEADERSKILLS_801208_DESCRIPTION": {
+    "en": "Boosts Thunder, Dark elemental damage, hugely boosts Atk relative to amount of depleted HP & negates critical hits from foes",
+    "es": "Boosts Thunder, Dark elemental damage, hugely boosts Atk relative to amount of depleted HP & negates critical hits from foes",
+    "id": "Menambah kerusakan elemen Guntur, Gelap, tambahan besar Serangan sesuai jumlah berkurangnya HP & menegasi pukulan ampuh dari musuh",
+    "pt": "Boosts Thunder, Dark elemental damage, hugely boosts Atk relative to amount of depleted HP & negates critical hits from foes",
+    "th": "เพิ่มดาเมจธาตุสายฟ้าและความมืด, ",
+    "vi": "Boosts Thunder, Dark elemental damage, hugely boosts Atk relative to amount of depleted HP & negates critical hits from foes"
+  },
+  "MST_LEADERSKILLS_801208_NAME": {
+    "en": "Silhouette of the Valkyrie",
+    "es": "Silhouette of the Valkyrie",
+    "id": "Siluet Valkyrie",
+    "pt": "Silhouette of the Valkyrie",
+    "th": "ชิลูเอท ออฟ เดอะ วาไครี่",
+    "vi": "Silhouette of the Valkyrie"
+  },
+  "MST_LEADERSKILLS_801209_DESCRIPTION": {
+    "en": "Greatly boosts Atk, Def, Rec when BB gauge is more than half-full",
+    "es": "Greatly boosts Atk, Def, Rec when BB gauge is more than half-full",
+    "id": "Amat menambah Serang, Tahan, Pulih saat meteran BB lebih dari 50% penuh",
+    "pt": "Greatly boosts Atk, Def, Rec when BB gauge is more than half-full",
+    "th": "เพิ่มพลังโจมตี พลังป้องกัน และ Rec อย่างมากเมื่อบีบีเกจมากกว่าครึ่งหนึ่ง",
+    "vi": "Greatly boosts Atk, Def, Rec when BB gauge is more than half-full"
+  },
+  "MST_LEADERSKILLS_801209_NAME": {
+    "en": "Lovestruck!",
+    "es": "Lovestruck!",
+    "id": "Jatuh Cinta!",
+    "pt": "Lovestruck!",
+    "th": "เลิฟสทรัค!",
+    "vi": "Lovestruck!"
+  },
+  "MST_LEADERSKILLS_801210_DESCRIPTION": {
+    "en": "35% boost to max HP & hugely boosts Atk, Def, Rec when BB gauge is more than half-full",
+    "es": "35% boost to max HP & hugely boosts Atk, Def, Rec when BB gauge is more than half-full",
+    "id": "35% ekstra HP maks & amat menambah Serang, Tahan, Pulih saat meteran BB lebih dari 50% penuh",
+    "pt": "35% boost to max HP & hugely boosts Atk, Def, Rec when BB gauge is more than half-full",
+    "th": "35% เพิ่ม HP สูงสุด, เพิ่มพลังโจมตี พลังป้องกัน และ Rec อย่างมากมายเมื่อบีบีเกจมากกว่าครึ่งหนึ่ง",
+    "vi": "35% boost to max HP & hugely boosts Atk, Def, Rec when BB gauge is more than half-full"
+  },
+  "MST_LEADERSKILLS_801210_NAME": {
+    "en": "Creed of the Witch Hunter",
+    "es": "Creed of the Witch Hunter",
+    "id": "Kredo Pemburu Penyihir",
+    "pt": "Creed of the Witch Hunter",
+    "th": "ครีดออฟเดอะวิชฮันเตอร์",
+    "vi": "Creed of the Witch Hunter"
+  },
+  "MST_LEADERSKILLS_801211_DESCRIPTION": {
+    "en": "50% boost to max HP, hugely boosts Atk, Def, Rec when BB gauge is more than half-full and boosts BB gauge fill rate",
+    "es": "50% boost to max HP, hugely boosts Atk, Def, Rec when BB gauge is more than half-full and boosts BB gauge fill rate",
+    "id": "50% ekstra HP maks, amat menambah Serang, Tahan, Pulih saat meteran BB lebih dari 50% penuh, menambah laju pengisian meteran BB",
+    "pt": "50% boost to max HP, hugely boosts Atk, Def, Rec when BB gauge is more than half-full and boosts BB gauge fill rate",
+    "th": "50% เพิ่ม HP สูงสุด, เพิ่มพลังโจมตี พลังป้องกัน และ Rec อย่างมากมายเมื่อบีบีเกจมากกว่าครึ่งหนึ่ง, เพิ่มอัตราการเติมบีบีเกจ",
+    "vi": "50% boost to max HP, hugely boosts Atk, Def, Rec when BB gauge is more than half-full and boosts BB gauge fill rate"
+  },
+  "MST_LEADERSKILLS_801211_NAME": {
+    "en": "Empowering Soul Howl",
+    "es": "Empowering Soul Howl",
+    "id": "Mendukung Lolongan Jiwa",
+    "pt": "Empowering Soul Howl",
+    "th": "เอ็มพาวเวอริ่ง โซล ฮาว์ล",
+    "vi": "Empowering Soul Howl"
+  },
+  "MST_LEADERSKILLS_801212_DESCRIPTION": {
+    "en": "20% boost to all parameters & negates elemental damage",
+    "es": "20% boost to all parameters & negates elemental damage",
+    "id": "20% ekstra semua parameter & menegasi kerusakan elemen",
+    "pt": "20% boost to all parameters & negates elemental damage",
+    "th": "20% เพิ่มค่าให้กับ พารามิเตอร์ทั้งหมด และ ลบล้าง ความเสียหายธาตุ",
+    "vi": "20% boost to all parameters & negates elemental damage"
+  },
+  "MST_LEADERSKILLS_801212_NAME": {
+    "en": "Insouciant Idealist",
+    "es": "Insouciant Idealist",
+    "id": "Idealis Santai",
+    "pt": "Insouciant Idealist",
+    "th": "อินซิวเซียน ไอดีลลิสต์",
+    "vi": "Insouciant Idealist"
+  },
+  "MST_LEADERSKILLS_801213_DESCRIPTION": {
+    "en": "25% boost to all parameters, negates elemental damage & boosts elemental damage",
+    "es": "25% boost to all parameters, negates elemental damage & boosts elemental damage",
+    "id": "25% ekstra semua parameter, menegasi kerusakan elemen & menambah kerusakan elemen",
+    "pt": "25% boost to all parameters, negates elemental damage & boosts elemental damage",
+    "th": "25% เพิ่มค่าให้กับ พารามิเตอร์ทั้งหมด, ลบล้าง ความเสียหายธาตุ และ เพิ่ม ความเสียหายธาตุ",
+    "vi": "25% boost to all parameters, negates elemental damage & boosts elemental damage"
+  },
+  "MST_LEADERSKILLS_801213_NAME": {
+    "en": "Passion of the Maverick",
+    "es": "Passion of the Maverick",
+    "id": "Gairah Non Konvensional",
+    "pt": "Passion of the Maverick",
+    "th": "แพชชั่น ออฟ เดอะ แมฟเวอริค",
+    "vi": "Passion of the Maverick"
+  },
+  "MST_LEADERSKILLS_801214_DESCRIPTION": {
+    "en": "30% boost to all parameters, negates elemental damage, boosts elemental damage & boosts OD gauge fill rate",
+    "es": "30% boost to all parameters, negates elemental damage, boosts elemental damage & boosts OD gauge fill rate",
+    "id": "30% ekstra semua parameter, menegasi kerusakan elemen, menambah kerusakan elemen & ;aju pengisian meteran OD",
+    "pt": "30% boost to all parameters, negates elemental damage, boosts elemental damage & boosts OD gauge fill rate",
+    "th": "30% เพิ่มค่าให้กับ พารามิเตอร์ทั้งหมด, ลบล้าง ความเสียหายธาตุ, เพิ่ม ความเสียหายธาตุ และ เพิ่ม อัตราเติม เกจ OD",
+    "vi": "30% boost to all parameters, negates elemental damage, boosts elemental damage & boosts OD gauge fill rate"
+  },
+  "MST_LEADERSKILLS_801214_NAME": {
+    "en": "Loremaster's Sermon",
+    "es": "Loremaster's Sermon",
+    "id": "Kotbah Loremaster",
+    "pt": "Loremaster's Sermon",
+    "th": "ลอร์มาสเตอร์ส เซอร์มอน",
+    "vi": "Loremaster's Sermon"
+  },
+  "MST_LEADERSKILLS_801215_DESCRIPTION": {
+    "en": "20% boost to Atk & boosts critical damage",
+    "es": "20% boost to Atk & boosts critical damage",
+    "id": "20% ekstra Serangan & menambah kerusakan ampuh",
+    "pt": "20% boost to Atk & boosts critical damage",
+    "th": "20% เพิ่มค่าให้กับ โจมตี และ เพิ่ม ความเสียหายคริติคอล",
+    "vi": "20% boost to Atk & boosts critical damage"
+  },
+  "MST_LEADERSKILLS_801215_NAME": {
+    "en": "Twinkle Pawz",
+    "es": "Twinkle Pawz",
+    "id": "Pawz Berkerlip",
+    "pt": "Twinkle Pawz",
+    "th": "ทวิงเคิล พอวส์",
+    "vi": "Twinkle Pawz"
+  },
+  "MST_LEADERSKILLS_801216_DESCRIPTION": {
+    "en": "40% boost to Atk, 10% boost to critical hit rate & largely boosts critical and Spark damage",
+    "es": "40% boost to Atk, 10% boost to critical hit rate & largely boosts critical and Spark damage",
+    "id": "40% ekstra Serangan, 10% ekstra pukulan ampuh & tambahan besar kerusakan ampuh dan Percikan",
+    "pt": "40% boost to Atk, 10% boost to critical hit rate & largely boosts critical and Spark damage",
+    "th": "40% เพิ่มค่าให้กับ โจมตี, 10% เพิ่มค่าให้กับ อัตราเกิดคริติคอล และ เพิ่มค่าอย่างมากให้กับ คริติคอล กับ ความเสียหายสปาร์ค",
+    "vi": "40% boost to Atk, 10% boost to critical hit rate & largely boosts critical and Spark damage"
+  },
+  "MST_LEADERSKILLS_801216_NAME": {
+    "en": "Double Twinkle Pawz",
+    "es": "Double Twinkle Pawz",
+    "id": "Pawz Berkerlip Ganda",
+    "pt": "Double Twinkle Pawz",
+    "th": "ดับเบิล ทวิงเคิล พอวส์",
+    "vi": "Double Twinkle Pawz"
+  },
+  "MST_LEADERSKILLS_801217_DESCRIPTION": {
+    "en": "80% boost to Atk, 20% boost to critical hit rate & hugely boosts critical and Spark damage",
+    "es": "80% boost to Atk, 20% boost to critical hit rate & hugely boosts critical and Spark damage",
+    "id": "80% ekstra Serangan, 20% ekstra pukulan ampuh & tambahan besar kerusakan ampuh dan Percikan",
+    "pt": "80% boost to Atk, 20% boost to critical hit rate & hugely boosts critical and Spark damage",
+    "th": "80% เพิ่มค่าให้กับ โจมตี, 20% เพิ่มค่าให้กับ อัตราเกิดคริติคอล และ เพิ่มค่าอย่างสูงให้กับ คริติคอล กับ ความเสียหายสปาร์ค",
+    "vi": "80% boost to Atk, 20% boost to critical hit rate & hugely boosts critical and Spark damage"
+  },
+  "MST_LEADERSKILLS_801217_NAME": {
+    "en": "Nyaight Prowler",
+    "es": "Nyaight Prowler",
+    "id": "Perampas Nyaight",
+    "pt": "Nyaight Prowler",
+    "th": "แง๊วว โพรวเลอร์",
+    "vi": "Nyaight Prowler"
+  },
+  "MST_LEADERSKILLS_801218_DESCRIPTION": {
+    "en": "Huge boost to BB gauge fill rate, large reduction in BB gauge required for BB & greatly boosts BB Atk",
+    "es": "Huge boost to BB gauge fill rate, large reduction in BB gauge required for BB & greatly boosts BB Atk",
+    "id": "Amat menambah laju pengisian meteran BB, pengurangan besar syarat BB untuk BB & amat menambah BB Serang",
+    "pt": "Huge boost to BB gauge fill rate, large reduction in BB gauge required for BB & greatly boosts BB Atk",
+    "th": "เพิ่มค่าให้กับ อัตราเติม เกจ BB อย่างสูง, ลดค่าเกจ BB ที่ต้องการสำหรับใช้ BB อย่างมาก และ เพิ่ม โจมตี BB อย่างมาก",
+    "vi": "Huge boost to BB gauge fill rate, large reduction in BB gauge required for BB & greatly boosts BB Atk"
+  },
   "MST_LEADERSKILLS_801218_NAME": {
     "en": "Spunky Pink Hare",
     "es": "Spunky Pink Hare",
@@ -2951,6 +3151,38 @@
     "th": "Floating Hero",
     "vi": "Floating Hero"
   },
+  "MST_LEADERSKILLS_830597_DESCRIPTION": {
+    "en": "100% boost to Atk, 80% boost to max HP of Earth types, greatly boosts critical damage, hugely boosts Earth elemental damage & considerably boosts BC, HC drop rate",
+    "es": "100% boost to Atk, 80% boost to max HP of Earth types, greatly boosts critical damage, hugely boosts Earth elemental damage & considerably boosts BC, HC drop rate",
+    "id": "100% boost to Atk, 80% boost to max HP of Earth types, greatly boosts critical damage, hugely boosts Earth elemental damage & considerably boosts BC, HC drop rate",
+    "pt": "100% boost to Atk, 80% boost to max HP of Earth types, greatly boosts critical damage, hugely boosts Earth elemental damage & considerably boosts BC, HC drop rate",
+    "th": "100% boost to Atk, 80% boost to max HP of Earth types, greatly boosts critical damage, hugely boosts Earth elemental damage & considerably boosts BC, HC drop rate",
+    "vi": "100% boost to Atk, 80% boost to max HP of Earth types, greatly boosts critical damage, hugely boosts Earth elemental damage & considerably boosts BC, HC drop rate"
+  },
+  "MST_LEADERSKILLS_830597_NAME": {
+    "en": "Wildheart Sigil",
+    "es": "Wildheart Sigil",
+    "id": "Wildheart Sigil",
+    "pt": "Wildheart Sigil",
+    "th": "Wildheart Sigil",
+    "vi": "Wildheart Sigil"
+  },
+  "MST_LEADERSKILLS_830598_DESCRIPTION": {
+    "en": "200% boost to Atk, 120% boost to max HP of Earth types, hugely boosts critical damage, enormously boosts Earth elemental damage, greatly boosts BC, HC drop rate & 15% damage reduction",
+    "es": "200% boost to Atk, 120% boost to max HP of Earth types, hugely boosts critical damage, enormously boosts Earth elemental damage, greatly boosts BC, HC drop rate & 15% damage reduction",
+    "id": "200% boost to Atk, 120% boost to max HP of Earth types, hugely boosts critical damage, enormously boosts Earth elemental damage, greatly boosts BC, HC drop rate & 15% damage reduction",
+    "pt": "200% boost to Atk, 120% boost to max HP of Earth types, hugely boosts critical damage, enormously boosts Earth elemental damage, greatly boosts BC, HC drop rate & 15% damage reduction",
+    "th": "200% boost to Atk, 120% boost to max HP of Earth types, hugely boosts critical damage, enormously boosts Earth elemental damage, greatly boosts BC, HC drop rate & 15% damage reduction",
+    "vi": "200% boost to Atk, 120% boost to max HP of Earth types, hugely boosts critical damage, enormously boosts Earth elemental damage, greatly boosts BC, HC drop rate & 15% damage reduction"
+  },
+  "MST_LEADERSKILLS_830598_NAME": {
+    "en": "Maverick Sigil",
+    "es": "Maverick Sigil",
+    "id": "Maverick Sigil",
+    "pt": "Maverick Sigil",
+    "th": "Maverick Sigil",
+    "vi": "Maverick Sigil"
+  },
   "MST_LEADERSKILLS_840047_DESCRIPTION": {
     "en": "100% boost to Atk, 60% boost to Def, max HP of Thunder types, 10% damage reduction from Water, Thunder types, considerably reduces BB gauge required for BB & probable considerable reduction of BB gauge fill rate for 2 turns",
     "es": "100% boost to Atk, 60% boost to Def, max HP of Thunder types, 10% damage reduction from Water, Thunder types, considerably reduces BB gauge required for BB & probable considerable reduction of BB gauge fill rate for 2 turns",
@@ -3510,6 +3742,22 @@
     "pt": "Great Dueler's Grit",
     "th": "เพิ่มค่า โจมตี ขึ้นอยู่กับ HP ที่เหลือ",
     "vi": "Great Dueler's Grit"
+  },
+  "MST_LEADERSKILLS_850148_DESCRIPTION": {
+    "en": "100% boost to Def, Rec, 120% boost to max HP, greatly boosts BB Atk, greatly boosts BC, HC drop rates, negates all status ailments and Atk, Def, Rec reduction effects & adds probable resistance against 1 KO attack",
+    "es": "100% boost to Def, Rec, 120% boost to max HP, greatly boosts BB Atk, greatly boosts BC, HC drop rates, negates all status ailments and Atk, Def, Rec reduction effects & adds probable resistance against 1 KO attack",
+    "id": "100% boost to Def, Rec, 120% boost to max HP, greatly boosts BB Atk, greatly boosts BC, HC drop rates, negates all status ailments and Atk, Def, Rec reduction effects & adds probable resistance against 1 KO attack",
+    "pt": "100% boost to Def, Rec, 120% boost to max HP, greatly boosts BB Atk, greatly boosts BC, HC drop rates, negates all status ailments and Atk, Def, Rec reduction effects & adds probable resistance against 1 KO attack",
+    "th": "100% boost to Def, Rec, 120% boost to max HP, greatly boosts BB Atk, greatly boosts BC, HC drop rates, negates all status ailments and Atk, Def, Rec reduction effects & adds probable resistance against 1 KO attack",
+    "vi": "100% boost to Def, Rec, 120% boost to max HP, greatly boosts BB Atk, greatly boosts BC, HC drop rates, negates all status ailments and Atk, Def, Rec reduction effects & adds probable resistance against 1 KO attack"
+  },
+  "MST_LEADERSKILLS_850148_NAME": {
+    "en": "Gentle Muse",
+    "es": "Gentle Muse",
+    "id": "Gentle Muse",
+    "pt": "Gentle Muse",
+    "th": "Gentle Muse",
+    "vi": "Gentle Muse"
   },
   "MST_LEADERSKILLS_850158_DESCRIPTION": {
     "en": "40% boost to all parameters, enormously boosts BC, HC drop rate, considerably reduces BB gauge required for BB & considerably boosts BB gauge each turn",
@@ -86854,149 +87102,5 @@
     "pt": "Cress",
     "th": "เครส",
     "vi": "Cress"
-  },
-  "MST_MONSTERS_55602_NAME": {
-    "en": "Cress",
-    "es": "Cress",
-    "id": "Cress",
-    "pt": "Cress",
-    "th": "เครส",
-    "vi": "Cress"
-  },
-  "MST_MONSTERS_55650_NAME": {
-    "en": "Cress",
-    "es": "Cress",
-    "id": "Cress",
-    "pt": "Cress",
-    "th": "เครส",
-    "vi": "Cress"
-  },
-  "MST_MONSTERS_55651_NAME": {
-    "en": "Cress",
-    "es": "Cress",
-    "id": "Cress",
-    "pt": "Cress",
-    "th": "เครส",
-    "vi": "Cress"
-  },
-  "MST_MONSTERS_55700_NAME": {
-    "en": "Sky Goddess Raquel",
-    "es": "Diosa astral Raquel",
-    "id": "Dewi Langit Raquel",
-    "pt": "Deusa Celeste Raquel",
-    "th": "สกายก็อดเดสราเควล",
-    "vi": "Sky Goddess Raquel"
-  },
-  "MST_MONSTERS_55701_NAME": {
-    "en": "Sky Goddess Raquel",
-    "es": "Diosa astral Raquel",
-    "id": "Dewi Langit Raquel",
-    "pt": "Deusa Celeste Raquel",
-    "th": "สกายก็อดเดสราเควล",
-    "vi": "Sky Goddess Raquel"
-  },
-  "MST_MONSTERS_55702_NAME": {
-    "en": "Sky Goddess Raquel",
-    "es": "Diosa astral Raquel",
-    "id": "Dewi Langit Raquel",
-    "pt": "Deusa Celeste Raquel",
-    "th": "สกายก็อดเดสราเควล",
-    "vi": "Sky Goddess Raquel"
-  },
-  "MST_MONSTERS_55703_NAME": {
-    "en": "Sky Goddess Raquel",
-    "es": "Sky Goddess Raquel",
-    "id": "Sky Goddess Raquel",
-    "pt": "Sky Goddess Raquel",
-    "th": "สกาย ก็อดเดส ราเควล",
-    "vi": "Sky Goddess Raquel"
-  },
-  "MST_MONSTERS_55704_NAME": {
-    "en": "Sky Goddess Raquel",
-    "es": "Sky Goddess Raquel",
-    "id": "Dewi Langit Raquel",
-    "pt": "Sky Goddess Raquel",
-    "th": "สกาย ก็อดเดส ราเควล",
-    "vi": "Sky Goddess Raquel"
-  },
-  "MST_MONSTERS_55705_NAME": {
-    "en": "Sky Goddess Raquel",
-    "es": "Sky Goddess Raquel",
-    "id": "Dewi Langit Raquel",
-    "pt": "Sky Goddess Raquel",
-    "th": "สกาย ก็อดเดส ราเควล",
-    "vi": "Sky Goddess Raquel"
-  },
-  "MST_MONSTERS_55750_NAME": {
-    "en": "Royal Edge Priscilla",
-    "es": "Filo real Priscilla",
-    "id": "Pedang Ningrat Priscilla",
-    "pt": "Priscilla Lâmina Real",
-    "th": "รอยัลเอดจ์พริสซิล่า",
-    "vi": "Royal Edge Priscilla"
-  },
-  "MST_MONSTERS_55751_NAME": {
-    "en": "Royal Edge Priscilla",
-    "es": "Royal Edge Priscilla",
-    "id": "Tepi Ningrat Priscilla",
-    "pt": "Royal Edge Priscilla",
-    "th": "รอยัล เอดจ์ ปริสซิลล่า",
-    "vi": "Royal Edge Priscilla"
-  },
-  "MST_MONSTERS_55800_NAME": {
-    "en": "Poinsettia Priscilla",
-    "es": "Poinsettia Priscilla",
-    "id": "Poinsettia Priscilla",
-    "pt": "Priscilla Poinsétia",
-    "th": "พอยเซทเทียพริสซิล่า",
-    "vi": "Poinsettia Priscilla"
-  },
-  "MST_MONSTERS_55850_NAME": {
-    "en": "Holy Night Priscilla",
-    "es": "Nochesacra Priscilla",
-    "id": "Malam Suci Priscilla",
-    "pt": "Priscilla Santa Noite",
-    "th": "โฮลี่ไนท์พริสซิล่า",
-    "vi": "Holy Night Priscilla"
-  },
-  "MST_MONSTERS_55851_NAME": {
-    "en": "Holy Night Priscilla",
-    "es": "Nochesacra Priscilla",
-    "id": "Malam Suci Priscilla",
-    "pt": "Priscilla Santa Noite",
-    "th": "โฮลี่ไนท์พริสซิล่า",
-    "vi": "Holy Night Priscilla"
-  },
-  "MST_MONSTERS_55852_NAME": {
-    "en": "Holy Night Priscilla",
-    "es": "Nochesacra Priscilla",
-    "id": "Malam Suci Priscila",
-    "pt": "Priscilla Santa Noite",
-    "th": "โฮลี่ ไนท์ พริสซิลล่า",
-    "vi": "Dạ Thánh Priscilla"
-  },
-  "MST_MONSTERS_55853_NAME": {
-    "en": "Holy Night Priscilla",
-    "es": "Holy Night Priscilla",
-    "id": "Malam Suci Priscilla",
-    "pt": "Holy Night Priscilla",
-    "th": "โฮลี่ ไนท์ ปริสซิลล่า",
-    "vi": "Holy Night Priscilla"
-  },
-  "MST_MONSTERS_55854_NAME": {
-    "en": "Holy Night Priscilla",
-    "es": "Holy Night Priscilla",
-    "id": "Malam Suci Priscilla",
-    "pt": "Holy Night Priscilla",
-    "th": "โฮลี่ ไนท์ ปริสซิลล่า",
-    "vi": "Holy Night Priscilla"
-  },
-  "MST_MONSTERS_55855_NAME": {
-    "en": "Holy Night Priscilla",
-    "es": "Holy Night Priscilla",
-    "id": "Malam Suci Priscilla",
-    "pt": "Holy Night Priscilla",
-    "th": "โฮลี่ ไนท์ พริสซิลล่า",
-    "vi": "Holy Night Priscilla"
   }
 }
