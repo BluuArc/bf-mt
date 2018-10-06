@@ -27177,6 +27177,45 @@
       "740157"
     ]
   },
+  "740237": {
+    "desc": "100% boost to max HP, 150% boost to Def and 30% boost to critical hit rate of Thunder types, hugely boosts critical damage, hugely boosts Thunder elemental damage, 15% damage reduction from Water, Thunder types & 50% Spark damage reduction",
+    "effects": [
+      {
+        "crit% buff": 30,
+        "def% buff": 150,
+        "elements buffed": [
+          "thunder"
+        ],
+        "hp% buff": 100,
+        "passive id": "2"
+      },
+      {
+        "crit multiplier%": 150,
+        "passive id": "34"
+      },
+      {
+        "dmg% mitigation for elemental attacks": 15,
+        "mitigate thunder attacks": true,
+        "mitigate water attacks": true,
+        "passive id": "62"
+      },
+      {
+        "elemental weakness multiplier%": 225,
+        "passive id": "50",
+        "thunder units do extra elemental weakness dmg": true
+      },
+      {
+        "base spark dmg% resist": 50,
+        "buff spark dmg% resist": 50,
+        "passive id": "77"
+      }
+    ],
+    "id": "740237",
+    "name": "Mighty Wanderer",
+    "associated_units": [
+      "740237"
+    ]
+  },
   "750166": {
     "desc": "40% boost to all parameters, critical damage greatly boosts BB gauge for 3 turns & hugely boosts critical damage",
     "effects": [
@@ -35837,6 +35876,75 @@
       "830588"
     ]
   },
+  "830597": {
+    "desc": "100% boost to Atk, 80% boost to max HP of Earth types, greatly boosts critical damage, hugely boosts Earth elemental damage & considerably boosts BC, HC drop rate",
+    "effects": [
+      {
+        "atk% buff": 100,
+        "elements buffed": [
+          "earth"
+        ],
+        "hp% buff": 80,
+        "passive id": "2"
+      },
+      {
+        "crit multiplier%": 125,
+        "passive id": "34"
+      },
+      {
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 150,
+        "passive id": "50"
+      },
+      {
+        "bc drop rate% buff": 35,
+        "hc drop rate% buff": 35,
+        "passive id": "19"
+      }
+    ],
+    "id": "830597",
+    "name": "Wildheart Sigil",
+    "associated_units": [
+      "830597"
+    ]
+  },
+  "830598": {
+    "desc": "200% boost to Atk, 120% boost to max HP of Earth types, hugely boosts critical damage, enormously boosts Earth elemental damage, greatly boosts BC, HC drop rate & 15% damage reduction",
+    "effects": [
+      {
+        "atk% buff": 200,
+        "elements buffed": [
+          "earth"
+        ],
+        "hp% buff": 120,
+        "passive id": "2"
+      },
+      {
+        "crit multiplier%": 150,
+        "passive id": "34"
+      },
+      {
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 225,
+        "passive id": "50"
+      },
+      {
+        "bc drop rate% buff": 40,
+        "hc drop rate% buff": 40,
+        "passive id": "19"
+      },
+      {
+        "dmg reduction chance%": 100,
+        "dmg reduction%": 15,
+        "passive id": "14"
+      }
+    ],
+    "id": "830598",
+    "name": "Maverick Sigil",
+    "associated_units": [
+      "830598"
+    ]
+  },
   "840047": {
     "desc": "100% boost to Atk, 60% boost to Def, max HP of Thunder types, 10% damage reduction from Water, Thunder types, considerably reduces BB gauge required for BB & probable considerable reduction of BB gauge fill rate for 2 turns",
     "effects": [
@@ -36928,6 +37036,52 @@
     "name": "Clara Ignis",
     "associated_units": [
       "850048"
+    ]
+  },
+  "850148": {
+    "desc": "100% boost to Def, Rec, 120% boost to max HP, greatly boosts BB Atk, greatly boosts BC, HC drop rates, negates all status ailments and Atk, Def, Rec reduction effects & adds probable resistance against 1 KO attack",
+    "effects": [
+      {
+        "def% buff": 100,
+        "hp% buff": 120,
+        "passive id": "1",
+        "rec% buff": 100
+      },
+      {
+        "bb atk% buff": 300,
+        "passive id": "64",
+        "sbb atk% buff": 300,
+        "ubb atk% buff": 300
+      },
+      {
+        "bc drop rate% buff": 45,
+        "hc drop rate% buff": 45,
+        "passive id": "19"
+      },
+      {
+        "atk down resist%": 100,
+        "curse resist%": 100,
+        "def down resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "poison resist%": 100,
+        "rec down resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "angel idol chance% condition": 0,
+        "angel idol recover chance% high": 25,
+        "angel idol recover chance% low": 25,
+        "angel idol recover counts": 1,
+        "passive id": "69"
+      }
+    ],
+    "id": "850148",
+    "name": "Gentle Muse",
+    "associated_units": [
+      "850148"
     ]
   },
   "850158": {

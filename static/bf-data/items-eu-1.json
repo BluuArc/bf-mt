@@ -1021,7 +1021,7 @@
     ]
   },
   "10301": {
-    "desc": "Drops of extremely sweet water found all over Elgaia and Grand Gaia. ",
+    "desc": "Drops of extremely sweet water found all over Elgaia and Grand Gaia.",
     "id": 10301,
     "max_stack": 99,
     "name": "Blue Drop",
@@ -1980,6 +1980,31 @@
       }
     ]
   },
+  "10425": {
+    "desc": "The tough fetlock of a dragonbird, stronger even than a dragon's claw.",
+    "id": 10425,
+    "max_stack": 199,
+    "name": "Dragonbird Claw",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_500.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230007,
+        "name": "Ring of Protection"
+      },
+      {
+        "id": 236001,
+        "name": "Glittering Mirror"
+      },
+      {
+        "id": 238001,
+        "name": "Lefaire Chalice"
+      }
+    ]
+  },
   "10500": {
     "desc": "The easily obtainable green fossil of a great beast's fang.",
     "id": 10500,
@@ -2418,6 +2443,27 @@
     ],
     "first_clear_missions": [
       "21090"
+    ]
+  },
+  "10520": {
+    "desc": "A pair of crystals sharp as fangs that physically embody dragon energy.",
+    "id": 10520,
+    "max_stack": 199,
+    "name": "Dragon Crystals",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_606.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230107,
+        "name": "Heroic Serydelic"
+      },
+      {
+        "id": 230207,
+        "name": "Akbutecca Crown"
+      }
     ]
   },
   "10600": {
@@ -3245,6 +3291,27 @@
     ],
     "first_clear_missions": [
       "10870"
+    ]
+  },
+  "10635": {
+    "desc": "A mysterious precious stone rarely found in Valdroar.",
+    "id": 10635,
+    "max_stack": 199,
+    "name": "Dragon Phantasm",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_704.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 236001,
+        "name": "Glittering Mirror"
+      },
+      {
+        "id": 238001,
+        "name": "Lefaire Chalice"
+      }
     ]
   },
   "10700": {
@@ -4652,6 +4719,31 @@
       {
         "id": 230205,
         "name": "Myrmidon Helm"
+      }
+    ]
+  },
+  "10824": {
+    "desc": "Dragon bones that never deteriorate over time.",
+    "id": 10824,
+    "max_stack": 199,
+    "name": "Dragon Bones",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 50,
+    "thumbnail": "item_thum_906.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 230007,
+        "name": "Ring of Protection"
+      },
+      {
+        "id": 230107,
+        "name": "Heroic Serydelic"
+      },
+      {
+        "id": 230207,
+        "name": "Akbutecca Crown"
       }
     ]
   },
@@ -6063,6 +6155,26 @@
       "23042"
     ]
   },
+  "11050": {
+    "desc": "A fragment of the accessories worn by two gods.",
+    "id": 11050,
+    "max_stack": 199,
+    "name": "Divine Adornment",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 10,
+    "thumbnail": "item_thum_1105.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 235003,
+        "name": "Tourayet Adornment"
+      }
+    ],
+    "first_clear_missions": [
+      "24080"
+    ]
+  },
   "110000": {
     "desc": "A crystal used to evolve the mock Unit based on Seria",
     "id": 110000,
@@ -6432,17 +6544,21 @@
       "810377",
       "810397",
       "810547",
+      "810587",
       "820297",
       "820377",
       "820397",
       "820507",
       "820547",
+      "820587",
       "830297",
       "830377",
       "830387",
+      "830587",
       "840377",
       "840397",
       "840547",
+      "840587",
       "850157",
       "850165",
       "850166",
