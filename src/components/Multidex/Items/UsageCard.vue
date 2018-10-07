@@ -11,14 +11,14 @@
             This item isn't used to make anything.
           </span>
           <template v-else>
-            <v-expansion-panel>
+            <v-expansion-panel v-model="activePanel">
               <v-expansion-panel-content>
                 <div slot="header">
                   <h2 class="subheading">
                     <b>Immediate Use ({{ itemUsage.length }} {{ itemUsage.length === 1 ? 'item' : 'items' }})</b>
                   </h2>
                 </div>
-                <v-container fluid>
+                <v-container fluid v-if="panelViewCache[activePanel]">
                   <v-layout row>
                     <v-flex>
                       This item is a direct material of the following items:
@@ -40,7 +40,7 @@
                     <b>Extended Use ({{ filteredUsageList.length }} {{ filteredUsageList.length === 1 ? 'item' : 'items' }})</b>
                   </h2>
                 </div>
-                <v-container fluid>
+                <v-container fluid v-if="panelViewCache[activePanel]">
                   <v-layout row>
                     <v-flex>
                       This item is a material for at least one of the craftables used to make the following items:
@@ -140,6 +140,8 @@ export default {
   },
   data: () => ({
     deepUsageList: [],
+    activePanel: null,
+    panelViewCache: {}, // used to lazily render panel contents
   }),
   async mounted () {
     await this.updateDeepUsageList();
@@ -153,6 +155,9 @@ export default {
     async item () {
       this.deepUsageList = [];
       await this.updateDeepUsageList();
+    },
+    activePanel (newValue) {
+      this.panelViewCache[newValue] = true;
     },
   },
 };
