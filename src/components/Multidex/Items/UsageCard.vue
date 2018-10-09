@@ -129,7 +129,7 @@ export default {
     ...mapState('units', { unitDb: 'pageDb' }),
     ...mapGetters('units', { unitMultidexPathTo: 'getMultidexPathTo' }),
     associatedUnits () {
-      if (!this.item || !this.item.associated_units) {
+      if (!this.item || !this.item.associated_units || this.item.type === 'ls_sphere') {
         return [];
       }
       return this.item.associated_units;
