@@ -11,9 +11,11 @@
       <v-flex class="pa-0">
         <v-tabs-items v-model="localValue" touchless>
           <v-tab-item v-for="(tab, i) in tabs" :key="i">
-            <slot :name="tab.slot">
-              {{ tab.name }}
-            </slot>
+            <template v-if="fullLoad || lazyCache[i]">
+              <slot :name="tab.slot">
+                {{ tab.name }}
+              </slot>
+            </template>
           </v-tab-item>
         </v-tabs-items>
       </v-flex>
@@ -37,10 +39,18 @@ export default {
       type: Number,
       default: 0,
     },
+    // load everything on mount
+    fullLoad: {
+      type: Boolean,
+      default: false,
+    },
   },
   data () {
     return {
       localValue: 0,
+      lazyCache: {
+        0: true, // first tab is always rendered
+      },
     };
   },
   methods: {
@@ -52,7 +62,8 @@ export default {
     value (newValue) {
       this.localValue = newValue;
     },
-    localValue () {
+    localValue (newValue) {
+      this.lazyCache[newValue] = true;
       this.emitValue();
     },
   },
