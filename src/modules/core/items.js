@@ -1,5 +1,6 @@
 import { sphereTypeMapping } from '@/modules/constants';
 import SWorker from '@/assets/sww.min';
+import cloneDeep from 'lodash/cloneDeep';
 
 export function getSphereCategory (item) {
   // can pass in number or item entry directly
@@ -67,4 +68,139 @@ export function getFullUsageList (item, pageDb = {}) {
     getUsageList(item);
     return Object.keys(currentUsageTracker);
   }, [item, pageDb]);
+}
+
+// given current items/karma, return "shopping list" of items/karma needed
+export async function getItemShoppingList (item, pageDb, currentlyHave = {}) {
+  const result = await getBaseMaterialsOfItem(item, pageDb);
+  const totals = cloneDeep(result);
+  const craftables = await getCraftablesInRecipeOfItem(item, pageDb);
+  const totalCraftables = cloneDeep(craftables);
+
+  // key = item id or karma, value = count
+  const { karma, ...myMaterials} = currentlyHave;
+
+  // get difference from current karma
+  if (!isNaN(karma)) {
+    result.karma = Math.max(0, result.karma - karma);
+  }
+
+  // for every item we currently have
+  for (const materialId in myMaterials) {
+    const currentItem = pageDb[materialId];
+    const count = myMaterials[materialId];
+    // get difference in craftable needed count from current material count
+    if (craftables[materialId] !== undefined) {
+      craftables[materialId] = Math.max(0, craftables[materialId] - myMaterials[materialId]);
+    }
+
+    if (currentItem.recipe) {
+      // subtract base recipe items
+      const baseRecipe = await getBaseMaterialsOfItem(currentItem, pageDb);
+      result.karma = Math.max(0, result.karma - (count * baseRecipe.karma));
+      Object.keys(baseRecipe.materials).forEach(subMaterialId => {
+        const subCount = baseRecipe.materials[subMaterialId];
+        result.materials[subMaterialId] = Math.max(0, result.materials[subMaterialId] - (count * subCount));
+
+        if (currentlyHave[subMaterialId] !== undefined) {
+          currentlyHave[subMaterialId] = Math.max(0, currentlyHave[subMaterialId] - (count * subCount));
+        }
+      });
+      result.karma = Math.max(0, result.karma - (count * +currentItem.recipe.karma));
+
+      // subtract craftable items
+      const materialCraftables = await getCraftablesInRecipeOfItem(currentItem, pageDb);
+      convertMaterialsObjectToArray(materialCraftables).forEach(({ id, count: craftableCount }) => {
+        if (craftables[id] !== undefined) {
+          craftables[id] = Math.max(0, craftables[id] - (count * craftableCount));
+        }
+
+        if (currentlyHave[id] !== undefined) {
+          currentlyHave[id] = Math.max(0, currentlyHave[id] - (count * craftableCount));
+        }
+      });
+    } else if (result.materials[materialId] !== undefined) {
+      // subtract base material count
+      result.materials[materialId] = Math.max(0, result.materials[materialId] - count);
+    }
+  }
+
+  return {
+    baseMaterialsNeeded: convertMaterialsObjectToArray(result.materials)
+      .map(entry => ({ total: totals.materials[entry.id], ...entry })),
+    totalKarmaNeeded: result.karma,
+    allCraftables: convertMaterialsObjectToArray(craftables)
+      .map(entry => ({ total: totalCraftables[entry.id], ...entry })),
+    currentlyHave
+  };
+}
+
+export async function getBaseMaterialsOfItem (item = {}, pageDb = {}) {
+  return SWorker.run((item, pageDb) => {
+    const getBaseMaterialsOf = (item) => {
+      const result = {
+        // key = item id, value = count needed
+        materials: {},
+        karma: 0,
+      };
+
+      if (!item.recipe) {
+        return result;
+      }
+
+      result.karma += +item.recipe.karma;
+      item.recipe.materials.forEach(material => {
+        const currentItem = pageDb[material.id.toString()];
+        const currentItemId = currentItem.id.toString();
+        const count = +material.count;
+        if (currentItem.recipe) {
+          // get base materials of current material
+          const materialRecipe = getBaseMaterialsOf(currentItem);
+          Object.keys(materialRecipe.materials).forEach(baseMaterialId => {
+            if (isNaN(result.materials[baseMaterialId])) {
+              result.materials[baseMaterialId] = 0;
+            }
+
+            // add count based on amount needed
+            result.karma += (count * +currentItem.recipe.karma);
+            result.materials[baseMaterialId] += (count * materialRecipe.materials[baseMaterialId]);
+          });
+        } else { // found a base material
+          if (!result.materials[currentItemId]) {
+            result.materials[currentItemId] = 0;
+          }
+          result.materials[currentItemId] += count;
+        }
+      });
+      return result;
+    };
+    return getBaseMaterialsOf(item);
+  }, [item, pageDb]);
+}
+
+export async function getCraftablesInRecipeOfItem (item = {}, pageDb = {}) {
+  return SWorker.run((item, pageDb) => {
+    const currentCraftables = {};
+    const getCraftablesInRecipeOf = (item) => {
+      if (item.recipe) {
+        item.recipe.materials.forEach(material => {
+          const currentItem = pageDb[material.id.toString()];
+          const currentItemId = currentItem.id.toString();
+          if (currentItem.recipe) {
+            if (!currentCraftables[currentItemId]) {
+              currentCraftables[currentItemId] = 0;
+            }
+            currentCraftables[currentItemId] += +material.count;
+            getCraftablesInRecipeOf(currentItem);
+          }
+        });
+      }
+      return currentCraftables;
+    };
+    return getCraftablesInRecipeOf(item);
+  }, [item, pageDb]);
+}
+
+export function convertMaterialsObjectToArray (input) {
+  return Object.entries(input).map(([id, count]) => ({ count, id }));
 }

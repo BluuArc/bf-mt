@@ -31,7 +31,7 @@
               <div slot="header">
                 <h2 class="subheading">
                   <!-- <b>Immediate Use ({{ itemUsage.length }} {{ itemUsage.length === 1 ? 'item' : 'items' }})</b> -->
-                  <b>Your Craftables (## items)</b>
+                  <b>Your Craftables ({{ allCraftables.length }} {{ allCraftables.length === 1 ? 'item' : 'items' }})</b>
                 </h2>
               </div>
               <v-container fluid>
@@ -52,7 +52,7 @@
               <div slot="header">
                 <h2 class="subheading">
                   <!-- <b>Extended Use ({{ filteredUsageList.length }} {{ filteredUsageList.length === 1 ? 'item' : 'items' }})</b> -->
-                  <b>Needed Base Materials (## items)</b>
+                  <b>Needed Base Materials ({{ baseMaterialsNeeded.length }} {{ baseMaterialsNeeded.length === 1 ? 'item' : 'items' }})</b>
                 </h2>
               </div>
               <v-container fluid>
@@ -82,7 +82,8 @@ import DescriptionCardBase from '@/components/Multidex/DescriptionCardBase';
 import MaterialRow from '@/components/Multidex/Items/MaterialRow';
 // import ItemEntryCard from '@/components/Multidex/Items/EntryCard';
 // import UnitEntryCard from '@/components/Multidex/Units/EntryCard';
-// import { getFullUsageList } from '@/modules/core/items';
+import debounce from 'lodash/debounce';
+import { getItemShoppingList, getCraftablesInRecipeOfItem } from '@/modules/core/items';
 
 export default {
   props: {
@@ -100,39 +101,83 @@ export default {
   computed: {
     ...mapState('items', ['pageDb']),
     ...mapGetters('items', ['getMultidexPathTo']),
-    // associatedUnits () {
-    //   if (!this.item || !this.item.associated_units) {
-    //     return [];
-    //   }
-    //   return this.item.associated_units;
-    // },
-    // itemUsage () {
-    //   if (!this.item || !this.item.usage) {
-    //     return [];
-    //   }
-
-    //   return this.item.usage.map(({ id }) => id.toString());
-    // },
-    // filteredUsageList () {
-    //   return this.deepUsageList.filter(id => !this.itemUsage.includes(id));
-    // },
   },
   data: () => ({
-    deepUsageList: [],
+    baseMaterialsNeeded: [],
+    totalKarmaNeeded: 0,
+    currentlyHave: {},
+    allCraftables: [],
+    relevantMaterialsCache: {},
   }),
   async mounted () {
-    // await this.updateDeepUsageList();
+    if (this.item) {
+      this.updateNeeded();
+    }
   },
   methods: {
-    // async updateDeepUsageList () {
-    //   this.deepUsageList = await getFullUsageList(this.item, this.pageDb);
-    // },
+    updateNeeded: debounce(async function () {
+      this.logger.debug('updating needed lists');
+      const result = await getItemShoppingList(this.item, this.pageDb, this.currentlyHave);
+      this.logger.debug(result);
+      this.currentlyHave = result.currentlyHave;
+      this.baseMaterialsNeeded = result.baseMaterialsNeeded;
+      this.totalKarmaNeeded = result.totalKarmaNeeded;
+
+      if (this.allCraftables.length !== result.allCraftables.length) {
+        this.relevantMaterialsCache = {};
+      }
+      this.allCraftables = result.allCraftables;
+    }, 50),
+    getRelevantCraftablesForMaterial (materialId = '') {
+      if (!this.relevantMaterialsCache[materialId]) {
+        const material = this.pageDb[materialId.toString()];
+        if (!material || !material.usage) {
+          this.relevantMaterialsCache[materialId] = [];
+        } else {
+          const usageArrays = material.usage.map(entry => entry.id.toString());
+          this.relevantMaterialsCache[materialId] = this.allCraftables.filter(entry => usageArrays.includes(usa))
+        }
+      }
+      return this.relevantMaterialsCache[materialId];
+    },
+    async getAllCraftables () {
+      const allCraftables = await getCraftablesInRecipeOfItem(this.item);
+      allCraftables.forEach(({ id, count }) => {
+        this.currentlyHave[id] = count;
+      });
+      this.updateNeeded();
+    },
+    resetAllCraftables () {
+      Object.keys(this.currentlyHave)
+        .forEach(id => {
+          this.currentlyHave[id] = 0;
+        });
+      this.updateNeeded();
+    },
   },
   watch: {
-    // async item () {
-    //   this.deepUsageList = [];
-    //   await this.updateDeepUsageList();
-    // },
+    item () {
+      this.currentlyHave = {};
+      if (this.item) {
+        this.updateNeeded();
+      } else {
+        this.baseMaterialsNeeded = [];
+        this.totalKarmaNeeded = 0;
+      }
+    },
+    currentlyHave: {
+      deep: true,
+      handler: debounce(function () {
+        if (!this.item) {
+          if (Object.keys(this.currentlyHave).length !== 0) {
+            this.currentlyHave = {};
+          }
+          return;
+        } else {
+          this.updateNeeded();
+        }
+      }, 50),
+    }
   },
 };
 </script>
