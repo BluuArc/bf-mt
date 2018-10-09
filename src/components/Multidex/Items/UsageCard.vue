@@ -40,22 +40,29 @@
                     <b>Extended Use ({{ filteredUsageList.length }} {{ filteredUsageList.length === 1 ? 'item' : 'items' }})</b>
                   </h2>
                 </div>
-                <v-container fluid v-if="panelViewCache[activePanel]">
-                  <v-layout row>
+                <v-container fluid v-if="panelViewCache[activePanel]" class="pb-1">
+                  <template v-if="filteredUsageList.length > 0">
+                    <v-layout row>
+                      <v-flex>
+                        This item is a material for at least one of the craftables used to make the following items:
+                        <br>
+                        <span><b>Note:</b> Does not include items listed in immediate section</span>
+                      </v-flex>
+                    </v-layout>
+                    <v-layout row wrap>
+                      <v-flex xs12 sm6 md4 v-for="(id, j) in filteredUsageList" :key="j">
+                        <item-entry-card
+                          :to="getMultidexPathTo(id)"
+                          :entry="pageDb[id]"
+                          style="height: 100%;"/>
+                      </v-flex>
+                    </v-layout>
+                  </template>
+                  <template v-else>
                     <v-flex>
-                      This item is a material for at least one of the craftables used to make the following items:
-                      <br>
-                      <span><b>Note:</b> Does not include items listed in immediate section</span>
+                      This item isn't used for anything else.
                     </v-flex>
-                  </v-layout>
-                  <v-layout row wrap>
-                    <v-flex xs12 sm6 md4 v-for="(id, j) in filteredUsageList" :key="j">
-                      <item-entry-card
-                        :to="getMultidexPathTo(id)"
-                        :entry="pageDb[id]"
-                        style="height: 100%;"/>
-                    </v-flex>
-                  </v-layout>
+                  </template>
                 </v-container>
               </v-expansion-panel-content>
             </v-expansion-panel>

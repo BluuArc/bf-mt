@@ -11,7 +11,7 @@
       <section slot="description">
         <slot name="description" :toggleBuffTable="() => showBuffTable = !showBuffTable" :showBuffTable="showBuffTable" :activeTabIndex="activeTabIndex">
           {{ descriptionGetter(entry) }}
-          <template v-if="entry && effects">
+          <template v-if="entry && hasEffects">
             <v-card-actions class="pl-0 pr-0 pb-0">
               <v-btn flat @click="showBuffTable = !showBuffTable">{{ showBuffTable ? 'Hide' : 'Show' }} Buff Table</v-btn>
             </v-card-actions>
@@ -103,7 +103,7 @@ export default {
     tabConfig () {
       const customConfig = {
         JSON: () => this.entry && 'JSON',
-        'Buff List': () => this.entry && 'Buff List',
+        'Buff List': () => this.hasEffects && 'Buff List',
       }
       const tabs = this.tabNames
         .map(name => customConfig[name] !== undefined ? customConfig[name]() : name)
@@ -113,6 +113,9 @@ export default {
     extraTabConfig () {
       const defaultTabs = ['Description', 'JSON', 'Buff List'];
       return this.tabConfig.filter(({ name }) => !defaultTabs.includes(name));
+    },
+    hasEffects () {
+      return Array.isArray(this.effects) && this.effects.length > 0;
     },
     effects () {
       return this.entry ? this.effectGetter(this.entry) : [];
