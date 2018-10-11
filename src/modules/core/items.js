@@ -72,8 +72,11 @@ export function getFullUsageList (item, pageDb = {}) {
 
 // given current items/karma, return "shopping list" of items/karma needed
 export async function getItemShoppingList (item, pageDb, currentlyHave = {}) {
+  // result contains number of base materials needed
   const result = await getBaseMaterialsOfItem(item, pageDb);
   const totals = cloneDeep(result);
+
+  // craftables contains number of craftable items needed
   const craftables = await getCraftablesInRecipeOfItem(item, pageDb);
   const totalCraftables = cloneDeep(craftables);
 

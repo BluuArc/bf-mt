@@ -36,8 +36,16 @@
               </div>
               <v-container fluid>
                 <v-layout row wrap>
-                  <v-flex>
-                    your craftables go here
+                  <v-flex
+                    xs12 sm6 md4 lg3
+                    v-for="(craftable, i) in allCraftables"
+                    :key="i">
+                    <material-input-card
+                      :entry="pageDb[craftable.id]"
+                      :value="getHaveValue(craftable.id)"
+                      @input="setHaveValue(craftable.id, $event)"
+                      :need="craftable.count"
+                      :total="craftable.total"/>
                   </v-flex>
                   <!-- <v-flex xs12 sm6 md4 v-for="(id, j) in itemUsage" :key="j">
                     <item-entry-card
@@ -80,8 +88,7 @@
 import { mapState, mapGetters } from 'vuex';
 import DescriptionCardBase from '@/components/Multidex/DescriptionCardBase';
 import MaterialRow from '@/components/Multidex/Items/MaterialRow';
-// import ItemEntryCard from '@/components/Multidex/Items/EntryCard';
-// import UnitEntryCard from '@/components/Multidex/Units/EntryCard';
+import MaterialInputCard from '@/components/Multidex/Items/MaterialInputCard';
 import debounce from 'lodash/debounce';
 import { getItemShoppingList, getCraftablesInRecipeOfItem } from '@/modules/core/items';
 
@@ -97,6 +104,7 @@ export default {
   components: {
     DescriptionCardBase,
     MaterialRow,
+    MaterialInputCard,
   },
   computed: {
     ...mapState('items', ['pageDb']),
@@ -127,7 +135,20 @@ export default {
         this.relevantMaterialsCache = {};
       }
       this.allCraftables = result.allCraftables;
-    }, 50),
+
+      // ensure entries exist in currentlyHave
+      // result.baseMaterialsNeeded.forEach(({ id }) => {
+      //   if (!this.currentlyHave[id]) {
+      //     this.currentlyHave[id] = 0;
+      //   }
+      // });
+
+      // result.allCraftables.forEach(({ id }) => {
+      //   if (!this.currentlyHave[id]) {
+      //     this.currentlyHave[id] = 0;
+      //   }
+      // });
+    }, 100),
     getRelevantCraftablesForMaterial (materialId = '') {
       if (!this.relevantMaterialsCache[materialId]) {
         const material = this.pageDb[materialId.toString()];
@@ -135,7 +156,7 @@ export default {
           this.relevantMaterialsCache[materialId] = [];
         } else {
           const usageArrays = material.usage.map(entry => entry.id.toString());
-          this.relevantMaterialsCache[materialId] = this.allCraftables.filter(entry => usageArrays.includes(usa))
+          this.relevantMaterialsCache[materialId] = this.allCraftables.filter(entry => usageArrays.includes(entry.id))
         }
       }
       return this.relevantMaterialsCache[materialId];
@@ -148,10 +169,14 @@ export default {
       this.updateNeeded();
     },
     resetAllCraftables () {
-      Object.keys(this.currentlyHave)
-        .forEach(id => {
-          this.currentlyHave[id] = 0;
-        });
+      this.currentlyHave = {};
+      this.updateNeeded();
+    },
+    getHaveValue(id) {
+      return this.currentlyHave[id] || 0;
+    },
+    setHaveValue(id, newValue) {
+      this.currentlyHave[id] = newValue;
       this.updateNeeded();
     },
   },
