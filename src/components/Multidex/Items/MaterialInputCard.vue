@@ -15,8 +15,8 @@
         <v-flex xs6>
           <v-text-field
             v-model="localValue"
-            :success="need === 0"
-            :disabled="need === 0 && localValue === 0"
+            :success="localValue === total"
+            :disabled="total === 0 && localValue === 0"
             type="number"
             :hint="inputHint"
             single-line
@@ -41,9 +41,6 @@ export default {
     value: {
       type: Number,
     },
-    need: {
-      type: Number,
-    },
     total: {
       type: Number,
     },
@@ -55,7 +52,7 @@ export default {
   computed: {
     ...mapGetters('items', ['getImageUrl']),
     inputHint () {
-      return `Need ${this.need}`;
+      return `Need ${Math.max(0, this.total - +this.localValue)}`;
     },
     rarity () {
       return this.entry.rarity;
@@ -80,23 +77,19 @@ export default {
   watch: {
     value: debounce(function () {
       this.syncValueToLocal();
-    }, 25),
+    }, 50),
     localValue () {
       this.syncLocalToValue();
     },
-    // need (newValue) {
-    //   if (newValue === 0 && this.localValue > this.total) {
-    //     this.localValue = this.total;
-    //   }
-    // },
+    total () {
+      this.syncValueToLocal();
+    },
   },
   methods: {
     getValidValue (input) {
-      const workingTotal = +input + this.need;
-      console.debug(this.entry.name, workingTotal, this.total);
       if (isNaN(input) || +input < 0) {
         return 0;
-      } else if (workingTotal > this.total) {
+      } else if (+input > this.total) {
         return this.total;
       } else {
         return +input;
@@ -110,14 +103,13 @@ export default {
     },
     emitValue: debounce(function (newValue) {
       this.emitChange(this.getValidValue(newValue));
-    }, 50),
+    }, 75),
     emitChange (newValue) {
-      // eslint-disable-next-line no-console
-      console.debug('emitting new value', newValue);
       if (newValue !== this.localValue) {
         this.localValue = newValue;
+      } else {
+        this.$emit('input', newValue);
       }
-      this.$emit('input', newValue);
     },
   },
   mounted () {

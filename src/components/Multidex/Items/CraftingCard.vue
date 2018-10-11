@@ -44,8 +44,7 @@
                       :entry="pageDb[craftable.id]"
                       :value="getHaveValue(craftable.id)"
                       @input="setHaveValue(craftable.id, $event)"
-                      :need="craftable.count"
-                      :total="craftable.total"/>
+                      :total="craftable.count"/>
                   </v-flex>
                   <!-- <v-flex xs12 sm6 md4 v-for="(id, j) in itemUsage" :key="j">
                     <item-entry-card
