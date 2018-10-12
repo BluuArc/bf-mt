@@ -26,15 +26,14 @@
     <v-container fluid class="pa-0" slot="base-materials-only">
       <v-layout row>
         <v-flex>
-          <v-expansion-panel>
+          <v-expansion-panel v-model="activePanel">
             <v-expansion-panel-content>
               <div slot="header">
                 <h2 class="subheading">
-                  <!-- <b>Immediate Use ({{ itemUsage.length }} {{ itemUsage.length === 1 ? 'item' : 'items' }})</b> -->
                   <b>Your Craftables ({{ allCraftables.length }} {{ allCraftables.length === 1 ? 'item' : 'items' }})</b>
                 </h2>
               </div>
-              <v-container fluid>
+              <v-container fluid v-if="panelLoadCache[activePanel]">
                 <v-layout row wrap>
                   <v-flex
                     xs12 sm6 md4 lg3
@@ -46,23 +45,16 @@
                       @input="setHaveValue(craftable.id, $event)"
                       :total="craftable.count"/>
                   </v-flex>
-                  <!-- <v-flex xs12 sm6 md4 v-for="(id, j) in itemUsage" :key="j">
-                    <item-entry-card
-                      :to="getMultidexPathTo(id)"
-                      :entry="pageDb[id]"
-                      style="height: 100%;"/>
-                  </v-flex> -->
                 </v-layout>
               </v-container>
             </v-expansion-panel-content>
             <v-expansion-panel-content>
               <div slot="header">
                 <h2 class="subheading">
-                  <!-- <b>Extended Use ({{ filteredUsageList.length }} {{ filteredUsageList.length === 1 ? 'item' : 'items' }})</b> -->
                   <b>Needed Base Materials ({{ baseMaterialsNeeded.length }} {{ baseMaterialsNeeded.length === 1 ? 'item' : 'items' }})</b>
                 </h2>
               </div>
-              <v-container fluid>
+              <v-container fluid v-if="panelLoadCache[activePanel]">
                 <v-layout row wrap>
                   <v-flex>
                     your base materials go here
@@ -115,6 +107,8 @@ export default {
     currentlyHave: {},
     allCraftables: [],
     relevantMaterialsCache: {},
+    panelLoadCache: {},
+    activePanel: null,
   }),
   async mounted () {
     if (this.item) {
@@ -134,19 +128,6 @@ export default {
         this.relevantMaterialsCache = {};
       }
       this.allCraftables = result.allCraftables;
-
-      // ensure entries exist in currentlyHave
-      // result.baseMaterialsNeeded.forEach(({ id }) => {
-      //   if (!this.currentlyHave[id]) {
-      //     this.currentlyHave[id] = 0;
-      //   }
-      // });
-
-      // result.allCraftables.forEach(({ id }) => {
-      //   if (!this.currentlyHave[id]) {
-      //     this.currentlyHave[id] = 0;
-      //   }
-      // });
     }, 100),
     getRelevantCraftablesForMaterial (materialId = '') {
       if (!this.relevantMaterialsCache[materialId]) {
@@ -201,7 +182,12 @@ export default {
           this.updateNeeded();
         }
       }, 50),
-    }
+    },
+    activePanel (newValue) {
+      if (newValue !== null) {
+        this.panelLoadCache[newValue] = true;
+      }
+    },
   },
 };
 </script>
