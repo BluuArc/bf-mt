@@ -22,7 +22,7 @@
             :key="`${i}-${j}`"
             exact
             :value="currentPage === subItem.link"
-            :to="subItem.link"
+            :to="typeof (subItem.link) === 'function' ? subItem.link() : subItem.link"
             @click="($vuetify.breakpoint.mdAndDown) ? (showDrawer = false) : (showDrawer = showDrawer)">
             <v-list-tile-action>
               <v-progress-circular v-if="stateInfo[subItem.name] && stateInfo[subItem.name].isLoading" indeterminate/>
@@ -136,6 +136,14 @@ export default {
       return {
         ...entry,
         title: entry.fullName,
+        link: () => {
+          // attempt to get url from state getter
+          const url = this.$store && this.$store.getters &&
+            this.$store.getters[`${entry.name}/getMultidexPathTo`] &&
+            this.$store.getters[`${entry.name}/getMultidexPathTo`]();
+          // logger.debug(url, this);
+          return url || entry.link;
+        },
         ...(multidexIconMapping[entry.name] || multidexIconMapping.default),
       };
     };

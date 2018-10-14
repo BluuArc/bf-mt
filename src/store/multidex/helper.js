@@ -38,9 +38,12 @@ export const createGetters = (multidexModuleName = 'units') => {
   return {
     getMultidexPathTo: state => (id, server = state.activeServer) => {
       // logger.todo('check if filters are properly retrieved for', multidexModuleName);
-      return [`/multidex/${multidexModuleName}/?viewId=${id}&server=${server}`, state.filterUrl]
-        .filter(val => val)
-        .join('&filters=');
+      const params = [
+          id && `viewId=${id}&server=${server}`,
+          state.filterUrl && `filters=${state.filterUrl}`,
+        ].filter(val => val)
+        .join('&');
+      return [`/multidex/${multidexModuleName}`, params].filter(val => val).join('/?');
     },
     getById: state => id => state.pageDb[id.toString()],
     getMultidexRouteParamsTo: state => (id, server = state.activeServer) => ({

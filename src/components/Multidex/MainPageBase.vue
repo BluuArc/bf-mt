@@ -684,7 +684,8 @@ export default {
         };
       }
     },
-    syncLocalFiltersToUrlFilters (forcePush = false) {
+    async syncLocalFiltersToUrlFilters (forcePush = false) {
+      await delay(defaultThrottleLength);
       if (forcePush || this.stateInfo[this.mainModule.name].filterUrl !== this.filterOptionsUrl) {
         logger.debug('going to new filter options url', this.filterOptionsUrl || undefined);
         this.actionInfo[this.mainModule.name].updateFilterUrl(this.filterOptionsUrl);
