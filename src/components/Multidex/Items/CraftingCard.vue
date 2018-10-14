@@ -120,7 +120,19 @@ export default {
       this.logger.debug('updating needed lists');
       const result = await getItemShoppingList(this.item, this.pageDb, this.currentlyHave);
       this.logger.debug(result);
-      this.currentlyHave = result.currentlyHave;
+
+      // copy currentlyHave from result
+      Object.keys(result.currentlyHave).forEach(key => {
+        if (this.currentlyHave[key] !== result.currentlyHave[key]) {
+          this.currentlyHave[key] = result.currentlyHave[key];
+        }
+      });
+      Object.keys(this.currentlyHave).forEach(key => {
+        if (!result.currentlyHave[key]) {
+          delete this.currentlyHave[key];
+        }
+      });
+      // this.currentlyHave = result.currentlyHave;
       this.baseMaterialsNeeded = result.baseMaterialsNeeded;
       this.totalKarmaNeeded = result.totalKarmaNeeded;
 
@@ -128,7 +140,7 @@ export default {
         this.relevantMaterialsCache = {};
       }
       this.allCraftables = result.allCraftables;
-    }, 100),
+    }, 500),
     getRelevantCraftablesForMaterial (materialId = '') {
       if (!this.relevantMaterialsCache[materialId]) {
         const material = this.pageDb[materialId.toString()];

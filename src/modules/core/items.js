@@ -82,6 +82,10 @@ export async function getItemShoppingList (item, pageDb, currentlyHave = {}) {
 
   // key = item id or karma, value = count
   const { karma, ...myMaterials} = currentlyHave;
+  const newCurrentlyHave = {
+    karma,
+    ...myMaterials
+  };
 
   // get difference from current karma
   if (!isNaN(karma)) {
@@ -101,8 +105,8 @@ export async function getItemShoppingList (item, pageDb, currentlyHave = {}) {
         const subCount = baseRecipe.materials[subMaterialId];
         result.materials[subMaterialId] = Math.max(0, result.materials[subMaterialId] - (count * subCount));
 
-        if (currentlyHave[subMaterialId] !== undefined) {
-          currentlyHave[subMaterialId] = Math.max(0, currentlyHave[subMaterialId] - (count * subCount));
+        if (newCurrentlyHave[subMaterialId] !== undefined) {
+          newCurrentlyHave[subMaterialId] = Math.min(result.materials[subMaterialId], newCurrentlyHave[subMaterialId]);
         }
       });
       result.karma = Math.max(0, result.karma - (count * +currentItem.recipe.karma));
@@ -114,8 +118,8 @@ export async function getItemShoppingList (item, pageDb, currentlyHave = {}) {
           craftables[id] = Math.max(0, craftables[id] - (count * craftableCount));
         }
 
-        if (currentlyHave[id] !== undefined) {
-          currentlyHave[id] = Math.max(0, currentlyHave[id] - (count * craftableCount));
+        if (newCurrentlyHave[id] !== undefined) {
+          newCurrentlyHave[id] = Math.min(craftables[id], newCurrentlyHave[id]);
         }
       });
     } else if (result.materials[materialId] !== undefined) {
@@ -130,7 +134,7 @@ export async function getItemShoppingList (item, pageDb, currentlyHave = {}) {
     totalKarmaNeeded: result.karma,
     allCraftables: convertMaterialsObjectToArray(craftables)
       .map(entry => ({ total: totalCraftables[entry.id], ...entry })),
-    currentlyHave
+    currentlyHave: newCurrentlyHave,
   };
 }
 

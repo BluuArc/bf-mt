@@ -52,7 +52,7 @@ export default {
   computed: {
     ...mapGetters('items', ['getImageUrl']),
     inputHint () {
-      return `Need ${Math.max(0, this.total - +this.localValue)}`;
+      return `Have ${this.value}/${this.total}`;
     },
     rarity () {
       return this.entry.rarity;
@@ -77,7 +77,7 @@ export default {
   watch: {
     value: debounce(function () {
       this.syncValueToLocal();
-    }, 50),
+    }, 0),
     localValue () {
       this.syncLocalToValue();
     },
@@ -101,15 +101,14 @@ export default {
     syncLocalToValue () {
       this.emitValue(this.localValue);
     },
-    emitValue: debounce(function (newValue) {
+    emitValue: debounce(async function (newValue) {
       this.emitChange(this.getValidValue(newValue));
-    }, 75),
+    }, 100),
     emitChange (newValue) {
       if (newValue !== this.localValue) {
         this.localValue = newValue;
-      } else {
-        this.$emit('input', newValue);
       }
+      this.$emit('input', newValue);
     },
   },
   mounted () {
