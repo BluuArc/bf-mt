@@ -37,6 +37,21 @@ db.version(3).stores({
   return transaction;
 });
 
+db.version(4).stores({
+  commmits: '&branch,data',
+}).upgrade(transaction => {
+  console.debug('[PW-dexie] using schema version 4');
+  return transaction;
+});
+
+db.version(4.1).stores({
+  commmits: null, // delete old table
+  commits: '&user,data',
+}).upgrade(transaction => {
+  console.debug('[PW-dexie] using schema version 4.1');
+  return transaction;
+});
+
 const defaultFitsQuery = (entry, procs, passives) => {
   if (procs.length === 0 && passives.length === 0) {
     return true;
@@ -139,7 +154,14 @@ const dbWrapper = {
         return {};
       }
 
-      const { procAreas = ['ls', 'es', 'sp', 'bb', 'sbb', 'ubb'], passiveAreas = ['ls', 'es', 'sp', 'bb', 'sbb', 'ubb'], procs = [], passives = [] } = searchQuery;
+      const currentDb = results[0].data;
+      const {
+        procAreas = ['ls', 'es', 'sp', 'bb', 'sbb', 'ubb'],
+        passiveAreas = ['ls', 'es', 'sp', 'bb', 'sbb', 'ubb'],
+        procs = [],
+        passives = [],
+        keys = Object.keys(currentDb),
+      } = searchQuery;
       // console.debug(procAreas, passiveAreas, procs, passives);
       const fitsUnitQuery = (unit) => {
         if (procs.length === 0 && passives.length === 0) {
@@ -155,11 +177,9 @@ const dbWrapper = {
         return hasProcAreas && hasPassiveAreas;
       };
 
-      const currentDb = results[0].data;
       const resultDb = {};
-      Object.keys(currentDb)
-      .forEach(key => {
-        if (fitsUnitQuery(currentDb[key])) {
+      keys.forEach(key => {
+        if (currentDb[key] && fitsUnitQuery(currentDb[key])) {
           const { cost, element, gender, guide_id, id, name, rarity, next, prev, evo_mats, kind } = currentDb[key];
           resultDb[key] = { cost, element, gender, guide_id, id, name, rarity, next, prev, evo_mats, kind };
         }
