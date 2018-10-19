@@ -127,6 +127,10 @@
       {
         "id": 800015,
         "name": "Lunar Treat"
+      },
+      {
+        "id": 819172,
+        "name": "Gibbous Trinket"
       }
     ]
   },
@@ -156,6 +160,10 @@
       {
         "id": 800404,
         "name": "Adorned Egg"
+      },
+      {
+        "id": 819172,
+        "name": "Gibbous Trinket"
       }
     ]
   },
@@ -173,6 +181,10 @@
       {
         "id": 800017,
         "name": "Crescent Dew"
+      },
+      {
+        "id": 819172,
+        "name": "Gibbous Trinket"
       }
     ]
   },
@@ -3090,6 +3102,87 @@
       "840437"
     ]
   },
+  "801902": {
+    "desc": "An obsidian shard that contains the spirit of Mannag. Resonates wtih Kielazar's soul.",
+    "id": 801902,
+    "max_stack": 1,
+    "name": "Mannag's Howl",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 10000,
+    "thumbnail": "item_thum_880101.png",
+    "type": "evomat",
+    "usage": [],
+    "associated_units": [
+      "860437"
+    ]
+  },
+  "802001": {
+    "desc": "Broken crystal pieces that radiates a warm power.",
+    "id": 802001,
+    "max_stack": 99,
+    "name": "Prismatic Crystallite",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_802001.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 819179,
+        "name": "Vellum of Salvation"
+      },
+      {
+        "id": 819180,
+        "name": "Vellum of Brilliance"
+      }
+    ],
+    "first_clear_missions": [
+      "8301271",
+      "8301272",
+      "8301273",
+      "8301274",
+      "8301275",
+      "8301276",
+      "8301291",
+      "8301292",
+      "8301293",
+      "8301301"
+    ]
+  },
+  "802002": {
+    "desc": "Luminous liquid in bottles radiating a warm power.",
+    "id": 802002,
+    "max_stack": 99,
+    "name": "Luminous Solvent",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_802002.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 819179,
+        "name": "Vellum of Salvation"
+      },
+      {
+        "id": 819180,
+        "name": "Vellum of Brilliance"
+      }
+    ],
+    "first_clear_missions": [
+      "8301271",
+      "8301272",
+      "8301273",
+      "8301274",
+      "8301275",
+      "8301276",
+      "8301291",
+      "8301292",
+      "8301293",
+      "8301301"
+    ]
+  },
   "818881": {
     "desc": "Boosts Def by 360% when Unit's HP drops below 35% & slight boost to BC drop rate when attacking",
     "effect": [
@@ -5201,25 +5294,35 @@
     ]
   },
   "818931": {
-    "desc": "30% boost to Atk, max HP,  boosts critical hit rate & boosts Atk when BB gauge is full",
+    "desc": "100% boost to Atk, 30% boot to max HP, 30% boost to critical hit rate, greatly boosts critical hit damage, greatly boosts Fire elemental damage & critical damage enormously boosts BB gauge",
     "effect": [
       {
-        "atk% buff": 30,
+        "atk% buff": 100,
         "crit% buff": 30,
         "hp% buff": 30,
         "passive id": "1"
       },
       {
-        "atk% buff": 50,
-        "bb gauge above % buff requirement": 100,
-        "passive id": "30"
+        "crit multiplier%": 100,
+        "passive id": "34"
+      },
+      {
+        "elemental weakness multiplier%": 100,
+        "fire units do extra elemental weakness dmg": true,
+        "passive id": "50"
+      },
+      {
+        "bc fill on crit max": 20,
+        "bc fill on crit min": 10,
+        "bc fill on crit%": 100,
+        "passive id": "65"
       }
     ],
     "id": 818931,
     "max_stack": 1,
     "name": "Vulcan Axe",
     "raid": true,
-    "rarity": 6,
+    "rarity": 3,
     "recipe": {
       "karma": "100000",
       "materials": [
@@ -5236,19 +5339,32 @@
       ]
     },
     "sell_price": 10000,
-    "sphere type": 1,
-    "sphere type text": "Status Boost",
+    "sphere type": 13,
+    "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_4_1.png",
     "type": "sphere",
     "usage": [],
     "associated_units": [
-      "51336",
-      "51337",
-      "61286",
-      "61287",
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
       "810317",
-      "810338",
-      "840438"
+      "810318",
+      "810547",
+      "810548",
+      "820397",
+      "820398",
+      "830408",
+      "840437",
+      "840438",
+      "850367",
+      "850368",
+      "860338"
     ]
   },
   "818932": {
@@ -5720,6 +5836,7 @@
     ],
     "associated_units": [
       "30546",
+      "810108",
       "840438",
       "860167"
     ]
@@ -5784,6 +5901,7 @@
     ],
     "associated_units": [
       "30546",
+      "810108",
       "840438",
       "860167"
     ]
@@ -5848,6 +5966,7 @@
     "usage": [],
     "associated_units": [
       "30546",
+      "810108",
       "840438",
       "860167"
     ]
@@ -5890,6 +6009,7 @@
       }
     ],
     "associated_units": [
+      "740237",
       "850198",
       "860338"
     ]
@@ -5967,6 +6087,7 @@
       }
     ],
     "associated_units": [
+      "740237",
       "850198",
       "860338"
     ]
@@ -6044,6 +6165,7 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "740237",
       "850198",
       "860338"
     ]
@@ -6080,6 +6202,7 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "740237",
       "850198",
       "860338"
     ]
@@ -10034,6 +10157,7 @@
     ],
     "associated_units": [
       "30546",
+      "810108",
       "840438",
       "860167"
     ]
@@ -10106,6 +10230,7 @@
     ],
     "associated_units": [
       "30546",
+      "810108",
       "840438",
       "860167"
     ]
@@ -10178,6 +10303,7 @@
     "usage": [],
     "associated_units": [
       "30546",
+      "810108",
       "840438",
       "860167"
     ]
@@ -10277,6 +10403,7 @@
       }
     ],
     "associated_units": [
+      "740237",
       "850198",
       "860338"
     ]
@@ -10385,6 +10512,7 @@
       }
     ],
     "associated_units": [
+      "740237",
       "850198",
       "860338"
     ]
@@ -10502,6 +10630,7 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "740237",
       "850198",
       "860338"
     ]
@@ -13970,6 +14099,7 @@
     "usage": [],
     "associated_units": [
       "30546",
+      "810108",
       "840438",
       "860167"
     ]
@@ -14229,6 +14359,7 @@
     "usage": [],
     "associated_units": [
       "30546",
+      "810108",
       "840438",
       "860167"
     ]
@@ -14529,6 +14660,7 @@
     "usage": [],
     "associated_units": [
       "30546",
+      "810108",
       "840438",
       "860167"
     ]
@@ -15322,6 +15454,108 @@
       "840438"
     ]
   },
+  "819151": {
+    "desc": "45% boost to all parameters of Dark types, adds probability of resistance against 1 KO attack, boosts critical damage & reduces BB gauge required for BB",
+    "effect": [
+      {
+        "atk% buff": 45,
+        "def% buff": 45,
+        "elements buffed": [
+          "dark"
+        ],
+        "hp% buff": 45,
+        "passive id": "2",
+        "rec% buff": 45
+      },
+      {
+        "angel idol chance% condition": 0,
+        "angel idol recover chance% high": 50,
+        "angel idol recover chance% low": 50,
+        "angel idol recover counts": 1,
+        "passive id": "69"
+      },
+      {
+        "crit multiplier%": 75,
+        "passive id": "34"
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 20
+      }
+    ],
+    "id": 819151,
+    "max_stack": 1,
+    "name": "Giselbert's Brand",
+    "raid": false,
+    "rarity": 6,
+    "sell_price": 30000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_819151.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
+  },
+  "819152": {
+    "desc": "60% boost to all parameters of Dark types, adds high probability of resistance against 1 KO attack, boosts critical damage, reduces BB gauge required for BB & 15% damage reduction from normal attacks",
+    "effect": [
+      {
+        "atk% buff": 60,
+        "def% buff": 60,
+        "elements buffed": [
+          "dark"
+        ],
+        "hp% buff": 60,
+        "passive id": "2",
+        "rec% buff": 60
+      },
+      {
+        "angel idol chance% condition": 0,
+        "angel idol recover chance% high": 70,
+        "angel idol recover chance% low": 70,
+        "angel idol recover counts": 1,
+        "passive id": "69"
+      },
+      {
+        "crit multiplier%": 75,
+        "passive id": "34"
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 25
+      },
+      {
+        "unknown passive id": "128",
+        "unknown passive params": "100,15,100,15"
+      }
+    ],
+    "id": 819152,
+    "max_stack": 1,
+    "name": "Giselbert's Honor",
+    "raid": false,
+    "rarity": 7,
+    "sell_price": 30000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_819152.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
+  },
   "819153": {
     "desc": "30% boost to Atk, Rec and max HP of Female types, negates Atk, Def, Rec reducing effects, damage taken may restore HP, damage taken may greatly boost BB gauge, reduces BB gauge required for BB & adds resistance against 1 KO attack after activating OD",
     "effect": [
@@ -15421,6 +15655,7 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "740237",
       "850198",
       "860338"
     ]
@@ -15650,6 +15885,92 @@
       "850368",
       "860338"
     ]
+  },
+  "819161": {
+    "desc": "55% boost to all parameters of Light, Dark types, enormously boosts Light, Dark elemental damage, enormously boosts OD gauge fill rate & 10% damage reduction from Light, Dark types \n",
+    "effect": [
+      {
+        "atk% buff": 55,
+        "def% buff": 55,
+        "elements buffed": [
+          "light",
+          "dark"
+        ],
+        "hp% buff": 55,
+        "passive id": "2",
+        "rec% buff": 55
+      },
+      {
+        "dark units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 300,
+        "light units do extra elemental weakness dmg": true,
+        "passive id": "50"
+      },
+      {
+        "od fill rate%": 200,
+        "passive id": "70"
+      },
+      {
+        "dmg% mitigation for elemental attacks": 10,
+        "mitigate dark attacks": true,
+        "mitigate light attacks": true,
+        "passive id": "62"
+      }
+    ],
+    "id": 819161,
+    "max_stack": 1,
+    "name": "Duskcrown Medal",
+    "raid": false,
+    "rarity": 7,
+    "sell_price": 30000,
+    "sphere type": 14,
+    "sphere type text": "Special",
+    "thumbnail": "sphere_thum_819161.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "819162": {
+    "desc": "50% boost to all parameters of Light, Dark types, enormously boosts Light, Dark elemental damage, enormously boosts OD gauge fill rate & 10% damage reduction from Light, Dark types \n",
+    "effect": [
+      {
+        "atk% buff": 50,
+        "def% buff": 50,
+        "elements buffed": [
+          "light",
+          "dark"
+        ],
+        "hp% buff": 50,
+        "passive id": "2",
+        "rec% buff": 50
+      },
+      {
+        "dark units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 250,
+        "light units do extra elemental weakness dmg": true,
+        "passive id": "50"
+      },
+      {
+        "od fill rate%": 200,
+        "passive id": "70"
+      },
+      {
+        "dmg% mitigation for elemental attacks": 10,
+        "mitigate dark attacks": true,
+        "mitigate light attacks": true,
+        "passive id": "62"
+      }
+    ],
+    "id": 819162,
+    "max_stack": 1,
+    "name": "Dusklight Medal",
+    "raid": false,
+    "rarity": 7,
+    "sell_price": 30000,
+    "sphere type": 14,
+    "sphere type text": "Special",
+    "thumbnail": "sphere_thum_819162.png",
+    "type": "sphere",
+    "usage": []
   },
   "819163": {
     "desc": "30% boost to Atk, Def and Rec, negates status ailments, negates Def ignoring effect, negates critical and elemental damage & 50% Spark damage reduction",
@@ -15925,6 +16246,7 @@
     "usage": [],
     "associated_units": [
       "30546",
+      "810108",
       "840438",
       "840587",
       "840588",
@@ -15982,6 +16304,7 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "740237",
       "810587",
       "810588",
       "850198",
@@ -16096,6 +16419,179 @@
       "860338"
     ]
   },
+  "819171": {
+    "desc": "25% boost to all parameters, boosts BC, HC, Item, Karma, and Zel drop rates, considerably boosts Spark damage & Spark damage boosts BC, HC drop rates",
+    "effect": [
+      {
+        "atk% buff": 25,
+        "def% buff": 25,
+        "hp% buff": 25,
+        "passive id": "1",
+        "rec% buff": 25
+      },
+      {
+        "bc drop rate% buff": 20,
+        "hc drop rate% buff": 20,
+        "item drop rate% buff": 5,
+        "karma drop rate% buff": 20,
+        "passive id": "19",
+        "zel drop rate% buff": 15
+      },
+      {
+        "bc drop% for spark": 40,
+        "damage% for spark": 80,
+        "hc drop% for spark": 25,
+        "passive id": "31"
+      }
+    ],
+    "id": 819171,
+    "max_stack": 1,
+    "name": "Lucky Crescent",
+    "raid": false,
+    "rarity": 6,
+    "sell_price": 30000,
+    "sphere type": 3,
+    "sphere type text": "Drop",
+    "thumbnail": "sphere_thum_819171.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 819173,
+        "name": "Yue'yuan"
+      }
+    ],
+    "associated_units": [
+      "30446",
+      "30447"
+    ]
+  },
+  "819172": {
+    "desc": "25% boost to all parameters, reduces BB gauge required for BB, damage taken boosts BB gauge",
+    "effect": [
+      {
+        "atk% buff": 25,
+        "def% buff": 25,
+        "hp% buff": 25,
+        "passive id": "1",
+        "rec% buff": 25
+      },
+      {
+        "bc fill when attacked high": 2,
+        "bc fill when attacked low": 1,
+        "bc fill when attacked%": 100,
+        "passive id": "25"
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 15
+      }
+    ],
+    "id": 819172,
+    "max_stack": 1,
+    "name": "Gibbous Trinket",
+    "raid": false,
+    "rarity": 6,
+    "recipe": {
+      "karma": "300000",
+      "materials": [
+        {
+          "count": 55,
+          "id": 800010,
+          "name": "Moonlit Essence"
+        },
+        {
+          "count": 55,
+          "id": 800011,
+          "name": "Spice Pouch"
+        },
+        {
+          "count": 55,
+          "id": 800012,
+          "name": "Moon Bug"
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 6,
+    "sphere type text": "BB Gauge",
+    "thumbnail": "sphere_thum_819172.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 819173,
+        "name": "Yue'yuan"
+      }
+    ],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
+  },
+  "819173": {
+    "desc": "45% boost to all parameters, reduces BB gauge required for BB, damage taken boosts BB gauge, greatly boosts BC, HC, Item, Karma, and Zel drop rates, considerably boosts Spark damage & Spark damage considerably boosts BC, HC drop rates",
+    "effect": [
+      {
+        "atk% buff": 45,
+        "def% buff": 45,
+        "hp% buff": 45,
+        "passive id": "1",
+        "rec% buff": 45
+      },
+      {
+        "bc fill when attacked high": 3,
+        "bc fill when attacked low": 2,
+        "bc fill when attacked%": 100,
+        "passive id": "25"
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 25
+      },
+      {
+        "bc drop rate% buff": 35,
+        "hc drop rate% buff": 35,
+        "item drop rate% buff": 5,
+        "karma drop rate% buff": 50,
+        "passive id": "19",
+        "zel drop rate% buff": 50
+      },
+      {
+        "bc drop% for spark": 50,
+        "damage% for spark": 100,
+        "hc drop% for spark": 35,
+        "passive id": "31"
+      }
+    ],
+    "id": 819173,
+    "max_stack": 1,
+    "name": "Yue'yuan",
+    "raid": false,
+    "rarity": 7,
+    "recipe": {
+      "karma": "300000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 819172,
+          "name": "Gibbous Trinket"
+        },
+        {
+          "count": 1,
+          "id": 819171,
+          "name": "Lucky Crescent"
+        }
+      ]
+    },
+    "sell_price": 50000,
+    "sphere type": 14,
+    "sphere type text": "Special",
+    "thumbnail": "sphere_thum_819173.png",
+    "type": "sphere",
+    "usage": []
+  },
   "819174": {
     "desc": "Enormously boosts Atk, Def relative to lost HP, hugely boosts critical damage, 150% boost to Spark damage, boosts damage against status afflicted foes & enormously boosts BB gauge each turn",
     "effect": [
@@ -16160,6 +16656,456 @@
       "850367",
       "850368",
       "860148",
+      "860338"
+    ]
+  },
+  "819175": {
+    "desc": "70% boost to all parameters, enormously boosts BB gauge fill rate, Spark damage restores HP, enormously boosts OD gauge fill rate & adds slight boost to OD gauge effect to BB/SBB",
+    "effect": [
+      {
+        "atk% buff": 70,
+        "def% buff": 70,
+        "hp% buff": 70,
+        "passive id": "1",
+        "rec% buff": 70
+      },
+      {
+        "bb gauge fill rate%": 100,
+        "passive id": "32"
+      },
+      {
+        "heal on spark high": 1500,
+        "heal on spark low": 1000,
+        "heal on spark%": 100,
+        "passive id": "101"
+      },
+      {
+        "od fill rate%": 100,
+        "passive id": "70"
+      },
+      {
+        "passive id": "66",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "increase od gauge%": 10,
+            "proc id": "43",
+            "target area": "single",
+            "target type": "self"
+          }
+        ]
+      }
+    ],
+    "id": 819175,
+    "max_stack": 1,
+    "name": "Vesper Argentum",
+    "raid": false,
+    "rarity": 7,
+    "sell_price": 30000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_818970.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438",
+      "860437",
+      "860438"
+    ]
+  },
+  "819178": {
+    "desc": "40% boost to all parameters, negates all status ailments and Atk, Def, Rec reductions, low probability of enormous damage reduction & restores HP each turn",
+    "effect": [
+      {
+        "atk% buff": 40,
+        "def% buff": 40,
+        "hp% buff": 40,
+        "passive id": "1",
+        "rec% buff": 40
+      },
+      {
+        "atk down resist%": 100,
+        "curse resist%": 100,
+        "def down resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "poison resist%": 100,
+        "rec down resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "passive id": "43",
+        "take 1 dmg%": 7
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 3000,
+        "turn heal low": 1500
+      }
+    ],
+    "id": 819178,
+    "max_stack": 1,
+    "name": "Vellum of Curses",
+    "raid": false,
+    "rarity": 5,
+    "sell_price": 30000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_819178.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 819179,
+        "name": "Vellum of Salvation"
+      }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "820577",
+      "820578",
+      "840438",
+      "860568"
+    ],
+    "first_clear_missions": [
+      "8301301"
+    ]
+  },
+  "819179": {
+    "desc": "45% boost to all parameters, considerably boosts BB Atk when HP is over 50%, negates all status ailments and Atk, Def, Rec reductions, low probability of enormous damage reduction & restores HP each turn",
+    "effect": [
+      {
+        "atk% buff": 45,
+        "def% buff": 45,
+        "hp% buff": 45,
+        "passive id": "1",
+        "rec% buff": 45
+      },
+      {
+        "bb atk% add": 200,
+        "hp threshold": 50,
+        "passive id": "103",
+        "sbb atk% add": 200,
+        "triggered when hp": "higher",
+        "ubb atk% add": 200
+      },
+      {
+        "atk down resist%": 100,
+        "curse resist%": 100,
+        "def down resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "poison resist%": 100,
+        "rec down resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "passive id": "43",
+        "take 1 dmg%": 10
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 3500,
+        "turn heal low": 2000
+      }
+    ],
+    "id": 819179,
+    "max_stack": 1,
+    "name": "Vellum of Salvation",
+    "raid": false,
+    "rarity": 6,
+    "recipe": {
+      "karma": "300000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 819178,
+          "name": "Vellum of Curses"
+        },
+        {
+          "count": 50,
+          "id": 802001,
+          "name": "Prismatic Crystallite"
+        },
+        {
+          "count": 50,
+          "id": 802002,
+          "name": "Luminous Solvent"
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_819179.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 819180,
+        "name": "Vellum of Brilliance"
+      }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "820577",
+      "820578",
+      "840438",
+      "860568"
+    ]
+  },
+  "819180": {
+    "desc": "50% boost to all parameters, boost all parameters when HP is full, hugely boosts BB Atk when HP is over 50%, negates all status ailments and Atk, Def, Rec reductions, low probability of enormous damage reduction & restores HP each turn",
+    "effect": [
+      {
+        "atk% buff": 50,
+        "def% buff": 50,
+        "hp% buff": 50,
+        "passive id": "1",
+        "rec% buff": 50
+      },
+      {
+        "atk% buff": 50,
+        "def% buff": 50,
+        "hp above % buff requirement": 100,
+        "passive id": "11",
+        "rec% buff": 50
+      },
+      {
+        "bb atk% add": 300,
+        "hp threshold": 50,
+        "passive id": "103",
+        "sbb atk% add": 300,
+        "triggered when hp": "higher",
+        "ubb atk% add": 300
+      },
+      {
+        "atk down resist%": 100,
+        "curse resist%": 100,
+        "def down resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "poison resist%": 100,
+        "rec down resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "passive id": "43",
+        "take 1 dmg%": 15
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 4000,
+        "turn heal low": 2500
+      }
+    ],
+    "id": 819180,
+    "max_stack": 1,
+    "name": "Vellum of Brilliance",
+    "raid": false,
+    "rarity": 7,
+    "recipe": {
+      "karma": "300000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 819179,
+          "name": "Vellum of Salvation"
+        },
+        {
+          "count": 70,
+          "id": 802001,
+          "name": "Prismatic Crystallite"
+        },
+        {
+          "count": 70,
+          "id": 802002,
+          "name": "Luminous Solvent"
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_819180.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "820577",
+      "820578",
+      "840438",
+      "860568"
+    ]
+  },
+  "819181": {
+    "desc": "35% boost to Atk and max HP, enormously boosts BB gauge each turn, considerably boosts BC drop rate & greatly restores HP each turn",
+    "effect": [
+      {
+        "atk% buff": 35,
+        "hp% buff": 35,
+        "passive id": "1"
+      },
+      {
+        "bc fill per turn": 10,
+        "passive id": "9"
+      },
+      {
+        "bc drop rate% buff": 30,
+        "passive id": "19"
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 4000,
+        "turn heal low": 3500
+      }
+    ],
+    "id": 819181,
+    "max_stack": 1,
+    "name": "Harvester Pickaxe",
+    "raid": false,
+    "rarity": 6,
+    "sell_price": 30000,
+    "sphere type": 6,
+    "sphere type text": "BB Gauge",
+    "thumbnail": "sphere_thum_819181.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
+  },
+  "819182": {
+    "desc": "35% boost to Def and max HP, boosts BB Atk, 5% damage reduction & considerably boosts OD gauge fill rate",
+    "effect": [
+      {
+        "def% buff": 35,
+        "hp% buff": 35,
+        "passive id": "1"
+      },
+      {
+        "bb atk% buff": 100,
+        "passive id": "64",
+        "sbb atk% buff": 100,
+        "ubb atk% buff": 100
+      },
+      {
+        "dmg% mitigation": 5,
+        "passive id": "8"
+      },
+      {
+        "od fill rate%": 20,
+        "passive id": "70"
+      }
+    ],
+    "id": 819182,
+    "max_stack": 1,
+    "name": "Mysterious Mask",
+    "raid": false,
+    "rarity": 6,
+    "sell_price": 30000,
+    "sphere type": 10,
+    "sphere type text": "Damage Reducing",
+    "thumbnail": "sphere_thum_819182.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018",
+      "860338"
+    ]
+  },
+  "819183": {
+    "desc": "50% boost to max HP, 10% damage reduction, enormously restores HP each turn, considerably reduces BB gauge required for BB & probable resistance against 1 KO attack",
+    "effect": [
+      {
+        "hp% buff": 50,
+        "passive id": "1"
+      },
+      {
+        "dmg% mitigation": 10,
+        "passive id": "8"
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 10000,
+        "turn heal low": 10000
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 25
+      },
+      {
+        "angel idol chance% condition": 0,
+        "angel idol recover chance% high": 70,
+        "angel idol recover chance% low": 70,
+        "angel idol recover counts": 1,
+        "angel idol recover hp%": 100,
+        "passive id": "69"
+      }
+    ],
+    "id": 819183,
+    "max_stack": 1,
+    "name": "Orphira",
+    "raid": false,
+    "rarity": 7,
+    "sell_price": 30000,
+    "sphere type": 7,
+    "sphere type text": "HP Recovery",
+    "thumbnail": "sphere_thum_818901.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "31066",
+      "31067",
+      "51266",
+      "51267",
+      "850017",
+      "850018",
+      "850148",
       "860338"
     ]
   },
@@ -22267,6 +23213,7 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "740237",
       "850198",
       "860338"
     ]
@@ -24400,6 +25347,7 @@
       "30546",
       "710167",
       "710168",
+      "810108",
       "840438",
       "860167"
     ]

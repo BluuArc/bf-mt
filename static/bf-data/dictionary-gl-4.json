@@ -1,4 +1,908 @@
 {
+  "MST_SKILLS_2001093_NAME": {
+    "en": "You moronic buffoons! Grrr!",
+    "es": "¡Bufones estúpidos! ¡Grrr!",
+    "id": "Kau kerbau moron! Grrr!",
+    "pt": "Seus idiotas! Grrrr!",
+    "th": "เจ้าคนโง่งั่ง! กรรรร!",
+    "vi": "Lũ đám hề chậm tiêu các ngươi! Grrrừ!"
+  },
+  "MST_SKILLS_2001094_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001094_NAME": {
+    "en": "Cornering me?! Bring it!",
+    "es": "¿Me arrinconas? ¡Vamos, vengan!",
+    "id": "Memojokkanku?! Ayo saja!",
+    "pt": "Está me encurralando?! Pode vir!",
+    "th": "กลัวข้ารึ?! เข้ามาเลย!",
+    "vi": "Dồn ép ta?! Xuất chiêu đi!"
+  },
+  "MST_SKILLS_2001100_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001100_NAME": {
+    "en": "Star Dust Fall",
+    "es": "Lluvia meteórica",
+    "id": "Debu Bintang Jatuh",
+    "pt": "Queda Estelar",
+    "th": "สตาร์ ดัสท์ ฟอล",
+    "vi": "Bụi sao băng"
+  },
+  "MST_SKILLS_2001101_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001101_NAME": {
+    "en": "I'll protect everyone!",
+    "es": "¡Protegeré a todos!",
+    "id": "Akan kulindungi semua orang!",
+    "pt": "Vou proteger todos!",
+    "th": "ข้าจะปกป้องทุกคน!",
+    "vi": "Ta sẽ bảo vệ mọi người!"
+  },
+  "MST_SKILLS_2001102_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001102_NAME": {
+    "en": "I can't lose either!",
+    "es": "¡Yo tampoco puedo perder!",
+    "id": "Aku juga tidak boleh kalah!",
+    "pt": "Não posso perder também!",
+    "th": "ข้าจะแพ้ไม่ได้!",
+    "vi": "Ta không thể thua được!"
+  },
+  "MST_SKILLS_2001103_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001103_NAME": {
+    "en": "Dad, trust me on this one!",
+    "es": "¡Papá, confía en mí!",
+    "id": "Ayah, percayai aku untuk yang ini!",
+    "pt": "Pai, confie em mim dessa vez!",
+    "th": "ท่านพ่อ รายนี้ให้ข้าจัดการเอง!",
+    "vi": "Cha, hãy tin con lần này!"
+  },
+  "MST_SKILLS_2001104_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001104_NAME": {
+    "en": "Light, give me power!",
+    "es": "¡Luz, dame el poder!",
+    "id": "Terang, beri aku kekuatan!",
+    "pt": "Luz, dê-me poder!",
+    "th": "แสง ขอพลังให้ข้าที!",
+    "vi": "Ánh sáng, hãy cho ta sức mạnh!"
+  },
+  "MST_SKILLS_2001110_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001110_NAME": {
+    "en": "Gravity Break",
+    "es": "Rompegravedad",
+    "id": "Gravitasi Pecah",
+    "pt": "Quebra Gravitacional",
+    "th": "กราวิตี้ เบรค",
+    "vi": "Phá vỡ trọng lực"
+  },
+  "MST_SKILLS_2001111_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001111_NAME": {
+    "en": "I must protect the world!",
+    "es": "¡Debo proteger el mundo!",
+    "id": "Aku harus melindungi dunia!",
+    "pt": "Preciso proteger o mundo!",
+    "th": "ข้าต้องปกป้องโลกใบนี้!",
+    "vi": "Ta phải bảo vệ thế giới này!"
+  },
+  "MST_SKILLS_2001112_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001112_NAME": {
+    "en": "Alma, take it easy!",
+    "es": "¡Alma, cuidado!",
+    "id": "Alma, santai saja!",
+    "pt": "Alma, pega leve!",
+    "th": "อัลม่า ใจเย็นสิ!",
+    "vi": "Alma, bình tĩnh đi!"
+  },
+  "MST_SKILLS_2001113_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001113_NAME": {
+    "en": "Alma, go to your mother!",
+    "es": "¡Alma, ve con tu madre!",
+    "id": "Alma, ke ibumu!",
+    "pt": "Alma, vá até sua mãe!",
+    "th": "อัลม่า ไปหาแม่ของเจ้าซะ!",
+    "vi": "Alma, về với mẹ đi!"
+  },
+  "MST_SKILLS_2001114_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001114_NAME": {
+    "en": "Gahaha! Leave it to me!",
+    "es": "¡Ja, ja, ja! ¡Déjamelo a mí!",
+    "id": "Gahaha! Serahkan padaku!",
+    "pt": "Hahaha! Deixa comigo!",
+    "th": "ฮ่าๆๆๆ! ให้ข้าจัดการเอง!",
+    "vi": "Hahaha! Hãy để đó cho ta!"
+  },
+  "MST_SKILLS_2001120_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001120_NAME": {
+    "en": "Messiah Hazard",
+    "es": "Profecía dolorosa",
+    "id": "Bahaya Mesias",
+    "pt": "Ameaça do Messias",
+    "th": "เมสไซอาห์ ฮาซาร์ด",
+    "vi": "Messiah nguy hiểm"
+  },
+  "MST_SKILLS_2001121_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001121_NAME": {
+    "en": "Did you burn the monastery?!",
+    "es": "¿Incendiaste el monasterio?",
+    "id": "Kau membakar kuil?!",
+    "pt": "Você queimou o monastério?!",
+    "th": "เจ้าเผาวิหารเหรอ?",
+    "vi": "Ngươi đã hỏa thiêu tu viện?!"
+  },
+  "MST_SKILLS_2001122_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001122_NAME": {
+    "en": "I'll destroy your world...",
+    "es": "Destruiré tu mundo...",
+    "id": "Akan kuhancurkan duniamu...",
+    "pt": "Vou destruir o seu mundo...",
+    "th": "ข้าจะทำลายโลกของเจ้า...",
+    "vi": "Ta sẽ hủy diệt thế giới của ngươi..."
+  },
+  "MST_SKILLS_2001123_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001123_NAME": {
+    "en": "I won't forgive the gods!",
+    "es": "¡No perdonaré a los dioses!",
+    "id": "Aku takkan memaafkan para dewa!",
+    "pt": "Não vou perdoar os deuses!",
+    "th": "ข้าไม่ยกโทษให้พวกเทพ!",
+    "vi": "Ta sẽ không tha cho các vị thần!"
+  },
+  "MST_SKILLS_2001124_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001124_NAME": {
+    "en": "Those children's pain...!",
+    "es": "¡El dolor de esos chicos!",
+    "id": "Kesakitan anak-anak itu...!",
+    "pt": "A dor daquelas crianças...!",
+    "th": "ความเจ็บปวดของเด็กพวกนั้น…!",
+    "vi": "Nỗi đau của lũ trẻ đó...!"
+  },
+  "MST_SKILLS_2001125_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001125_NAME": {
+    "en": "Urias...broke...",
+    "es": "Urias... está rota...",
+    "id": "Urias...patah...",
+    "pt": "A Urias... quebrou...",
+    "th": "อูเรียส...พัง...",
+    "vi": "Urias...tan vỡ..."
+  },
+  "MST_SKILLS_2001126_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001126_NAME": {
+    "en": "Is revenge the wrong path?",
+    "es": "¿La venganza está mal?",
+    "id": "Balas dendam itu jalan yang salah?",
+    "pt": "A vingança é o caminho errado?",
+    "th": "การแก้แค้นคือหนทางที่ผิดรึ?",
+    "vi": "Trả thù có phải là sai lầm?"
+  },
+  "MST_SKILLS_2001127_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001127_NAME": {
+    "en": "Urias! I can still do this!",
+    "es": "¡Urias! ¡Todavía puedo hacerlo!",
+    "id": "Urias! Aku masih bisa melakukan ini!",
+    "pt": "Urias! Ainda posso fazer isso!",
+    "th": "อูเรียส! ข้ายังทำได้!",
+    "vi": "Urias! Ta vẫn làm được chuyện này!"
+  },
+  "MST_SKILLS_2001130_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001130_NAME": {
+    "en": "Heaven's Gate",
+    "es": "Puerta del cielo",
+    "id": "Gerbang Surga",
+    "pt": "Portal do Céu",
+    "th": "เฮฟเว่นส์ เกท",
+    "vi": "Cổng thiên đàng"
+  },
+  "MST_SKILLS_2001131_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001131_NAME": {
+    "en": "Veritas Delta",
+    "es": "Delta veritas",
+    "id": "Veritas Delta",
+    "pt": "Veritas Delta",
+    "th": "เวอริทาส เดลต้า",
+    "vi": "Veritas Delta"
+  },
+  "MST_SKILLS_2001132_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001132_NAME": {
+    "en": "Urias, let's meet again!",
+    "es": "¡Urias, nos encontraremos!",
+    "id": "Urias, mari bertemu lagi!",
+    "pt": "Urias, nos vemos em breve!",
+    "th": "อูเรียส แล้วพบกันใหม่!",
+    "vi": "Urias, gặp lại nhé!"
+  },
+  "MST_SKILLS_2001133_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001133_NAME": {
+    "en": "Gods shouldn't hurt humans!",
+    "es": "¡Dioses, no los lastimen!",
+    "id": "Dewa tidak seharusnya melukai manusia!",
+    "pt": "Deuses não deviam machucar humanos!",
+    "th": "เทพไม่ควรทำร้ายมนุษย์!",
+    "vi": "Các vị thần không nên làm tổn thương con người!"
+  },
+  "MST_SKILLS_2001134_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001134_NAME": {
+    "en": "I shall save the people!",
+    "es": "¡Salvaré a la gente!",
+    "id": "Aku akan menyelamatkan rakyat!",
+    "pt": "Devo salvar as pessoas!",
+    "th": "ข้าจะปกป้องทุกคน!",
+    "vi": "Ta sẽ cứu mọi người!"
+  },
+  "MST_SKILLS_2001135_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001135_NAME": {
+    "en": "I will save the powerless!",
+    "es": "¡Salvaré a los desposeídos!",
+    "id": "Aku akan menyelamatkan yang lemah!",
+    "pt": "Eu vou salvar os indefesos!",
+    "th": "ข้าจะปกป้องผู้อ่อนแอ!",
+    "vi": "Ta sẽ cứu những kẻ yếu!"
+  },
+  "MST_SKILLS_2001136_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001136_NAME": {
+    "en": "Urias, I understand now...",
+    "es": "Urias, ahora lo comprendo...",
+    "id": "Urias, aku mengerti sekarang",
+    "pt": "Urias, agora entendo...",
+    "th": "อูเรียส ตอนนี้ข้าเข้าใจแล้ว...",
+    "vi": "Urias, giờ ta đã hiểu..."
+  },
+  "MST_SKILLS_2001137_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001137_NAME": {
+    "en": "I have only one duty!",
+    "es": "¡Solo tengo un objetivo!",
+    "id": "Aku hanya punya satu tugas!",
+    "pt": "Só tenho um dever!",
+    "th": "ข้ามีหน้าที่เพียงอย่างเดียว!",
+    "vi": "Ta chỉ có một trách nhiệm duy nhất!"
+  },
+  "MST_SKILLS_2001138_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001138_NAME": {
+    "en": "I won't give in! I'm needed!",
+    "es": "¡No me rendiré! ¡Me necesitan!",
+    "id": "Aku tidak akan menyerah! Aku diperlukan!",
+    "pt": "Não vou ceder! Precisam de mim!",
+    "th": "ข้าจะไม่ยอมแพ้! ข้าเป็นที่ต้องการ!",
+    "vi": "Ta sẽ không chống đối! Ta đang cần!"
+  },
+  "MST_SKILLS_2001139_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001139_NAME": {
+    "en": "La Veda fencing and Urias...",
+    "es": "Esgrima de La Veda y Urias.",
+    "id": "Pedang La Veda dan Urias…",
+    "pt": "A esgrima La Veda e Urias...",
+    "th": "วิชาดาบ ลา วิดา กับอูเรียส",
+    "vi": "Hàng rào La Veda và Urias..."
+  },
+  "MST_SKILLS_2001140_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001140_NAME": {
+    "en": "Face the last of my power!",
+    "es": "¡Este es mi último esfuerzo!",
+    "id": "Rasakan kekuatan terakhirku!",
+    "pt": "Encare o último dos meus poderes!",
+    "th": "เจอพลังเฮือกสุดท้ายของข้าดู!",
+    "vi": "Hãy đối mặt sức mạnh cuối cùng của ta!"
+  },
+  "MST_SKILLS_2001150_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001150_NAME": {
+    "en": "Grand Bash",
+    "es": "Golpe magistral",
+    "id": "Tamparan Besar",
+    "pt": "Golpe Grandioso",
+    "th": "แกรนด์ แบช",
+    "vi": "Đòn mạnh"
+  },
+  "MST_SKILLS_2001151_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001151_NAME": {
+    "en": "The God Army has made it here too?!",
+    "es": "¿El ejército de los dioses ha llegado hasta aquí también?",
+    "id": "Pasukan Dewa sudah sampai di sini juga?!",
+    "pt": "O Exército dos Deuses já chegou aqui??",
+    "th": "ทหารเทพก็ถูกสร้างขึ้นที่นี่ด้วยเหรอเนี่ย?!",
+    "vi": "Đội Quân Các Vị Thần cũng đã đến đây?!"
+  },
+  "MST_SKILLS_2001152_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001152_NAME": {
+    "en": "Lafdranya, protect me!",
+    "es": "¡Lafdranya, protégeme!",
+    "id": "Lafdranya, lindungi aku!",
+    "pt": "Lafdranya, proteja-me!",
+    "th": "ลาฟดรานย่า ปกป้องข้าด้วย!",
+    "vi": "Lafdranya, hãy bảo vệ ta!"
+  },
+  "MST_SKILLS_2001153_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001153_NAME": {
+    "en": "I can't fall here...",
+    "es": "No puedo caer aquí...",
+    "id": "Aku tidak boleh kalah di sini…",
+    "pt": "Não posso cair aqui...",
+    "th": "ข้าจะมาแพ้ที่นี่ไม่ได้...",
+    "vi": "Ta không thể ngã xuống ở đây..."
+  },
+  "MST_SKILLS_2001154_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001154_NAME": {
+    "en": "I'm sorry to have gotten you involved...",
+    "es": "Lamento haberte involucrado en esto...",
+    "id": "Maaf aku telah melibatkanmu…",
+    "pt": "Sinto por ter envolvido você...",
+    "th": "ข้าขอโทษที่ทำให้เจ้าต้องติดร่างแหไปด้วย...",
+    "vi": "Ta rất tiếc đã khiến ngươi bị liên lụy..."
+  },
+  "MST_SKILLS_2001160_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001160_NAME": {
+    "en": "Lightning Magnum",
+    "es": "Revólver del trueno",
+    "id": "Magnum Guntur",
+    "pt": "Magna-relâmpago",
+    "th": "ไลท์นิ่ง แมกนั่ม",
+    "vi": "Tia chớp khổng lồ"
+  },
+  "MST_SKILLS_2001161_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001161_NAME": {
+    "en": "Don't worry, pretty lady! I'll escort you!",
+    "es": "¡No te preocupes, bella dama! ¡Te escoltaré!",
+    "id": "Jangan khawatir, cewek cantik! Aku akan mengawalmu!",
+    "pt": "Não se preocupe, bela moça! Vou te escoltar.",
+    "th": "อย่ากังวลไป คนสวย! ข้าจะคุ้มกันเจ้าเอง!",
+    "vi": "Đừng lo lắng, tiểu thư xinh đẹp! Ta sẽ hộ tống nàng!"
+  },
+  "MST_SKILLS_2001162_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001162_NAME": {
+    "en": "Hey! Are you okay, pretty lady?!",
+    "es": "¡Ey! ¡¿Estás bien, bella dama?!",
+    "id": "Hey! Apa kamu baik-baik saja, cewek cantik?!",
+    "pt": "Ei! Você está bem, bela moça?",
+    "th": "เฮ้! เป็นอะไรรึเปล่า คนสวย?!",
+    "vi": "Này! Nàng ổn chứ, tiểu thư xinh đẹp?!"
+  },
+  "MST_SKILLS_2001170_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001170_NAME": {
+    "en": "Flash Stream",
+    "es": "Onda veloz",
+    "id": "Aliran Kilat",
+    "pt": "Tormenta Elétrica",
+    "th": "แฟลช สตรีม",
+    "vi": "Luồng sáng"
+  },
+  "MST_SKILLS_2001171_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001171_NAME": {
+    "en": "You dare lay your hand on a lady?!",
+    "es": "¿Te atreves a ponerle la mano encima a una dama?",
+    "id": "Kamu berani melukai seorang wanita?!",
+    "pt": "Se atreve a tocar em uma dama?",
+    "th": "เจ้ากล้าใช้มือเจ้าแตะต้องผู้หญิงงั้นรึ?!",
+    "vi": "Ngươi dám đặt tay lên một tiểu thư sao?!"
+  },
+  "MST_SKILLS_2001172_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001172_NAME": {
+    "en": "No! I must not fail in my duty to protect others!",
+    "es": "¡No! ¡No puedo fallar en mi deber de proteger a los demás!",
+    "id": "Tidak! Aku tak boleh gagal melindungi yang lain!",
+    "pt": "Não! Não devo falhar em meu dever de proteger os outros!",
+    "th": "ไม่! ข้าต้อไม่ทำงานคุ้มกันผู้อื่นล้มเหลวสิ!",
+    "vi": "Không! Ta ko đc thất bại trong nhiệm vụ bảo vệ những người khác!"
+  },
+  "MST_SKILLS_2001173_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001173_NAME": {
+    "en": "Friend! Leave this to me and focus on stirring the ship!",
+    "es": "¡Amigo! ¡Déjame esto a mí y concéntrate en el timón!",
+    "id": "Teman! Biar aku mengatasinya dan fokus mengemudikan kapal!",
+    "pt": "Amigo. Deixa isso comigo e preocupe-se com o navio!",
+    "th": "สหาย! มาให้ข้าจัดการและดูแลเรือนี้แทน!",
+    "vi": "Bạn bè! Để việc này cho ta và tập trung làm náo động con tàu đi!"
+  },
+  "MST_SKILLS_2001180_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001180_NAME": {
+    "en": "Burning Spirit",
+    "es": "Espíritu llameante",
+    "id": "Roh Membara",
+    "pt": "Espírito em Chamas",
+    "th": "เบิร์นนิ่ง สปิริต",
+    "vi": "Thiêu hồn"
+  },
+  "MST_SKILLS_2001181_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001181_NAME": {
+    "en": "You want my help? Hmph. Are you up for a test?",
+    "es": "¿Quieres mi ayuda? Mmm. ¿Te preparaste para esta prueba?",
+    "id": "Kau mau bantuanku? Hmph. Kau siap diuji?",
+    "pt": "Você quer minha ajuda? Humpf. Topa um teste?",
+    "th": "ต้องการให้ข้าช่วย? หืม เจ้าอยู่ในการทดสอบนี่?",
+    "vi": "Ngươi muốn ta giúp? Hừm. Ngươi đang thử làm gì vậy?"
+  },
+  "MST_SKILLS_2001182_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001182_NAME": {
+    "en": "You don't underestimate your enemies, do you?",
+    "es": "No subestimas a tus enemigos, ¿o sí?",
+    "id": "Kau tidak meremehkan musuhmu, kan?",
+    "pt": "Você não subestima seus inimigos, não é?",
+    "th": "เจ้าคงไม่ประเมินศัตรูต่ำเกินไปหรอกนะ?",
+    "vi": "Ngươi không đánh giá thấp kẻ thù của mình đó chứ?"
+  },
+  "MST_SKILLS_2001183_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001183_NAME": {
+    "en": "Well then. One strike will decide everything!",
+    "es": "Muy bien. ¡Un golpe decidirá todo!",
+    "id": "Baiklah. Satu serangan akan memutuskan segalanya!",
+    "pt": "Muito bem. Um golpe decidirá tudo!",
+    "th": "เอาล่ะ ในการโจมตีนี้จะตัดสินทุกอย่าง!",
+    "vi": "Được thôi Một đòn sẽ quyết định tất cả!"
+  },
+  "MST_SKILLS_2001184_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001184_NAME": {
+    "en": "You're weak! Don't forget to prepare against attacks!",
+    "es": "¡Eres débil! ¡No olvides prepararte para los ataques!",
+    "id": "Kau lemah! Jangan lupa bersiap melawan serangan!",
+    "pt": "Você é fraco! Não se esqueça de preparar suas defesas!",
+    "th": "เจ้าคนอ่อนแอ! อย่าลืมเตรียมตอบโต้กลับด้วยล่ะ!",
+    "vi": "Ngươi thật yếu ớt! Đừng quên chuẩn bị chống lại các đợt tấn công!"
+  },
+  "MST_SKILLS_2001190_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001190_NAME": {
+    "en": "Solid Ice",
+    "es": "Hielo sólido",
+    "id": "Es Solid",
+    "pt": "Gelo Sólido",
+    "th": "โซลิด ไอซ์",
+    "vi": "Băng rắn"
+  },
+  "MST_SKILLS_2001191_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001191_NAME": {
+    "en": "You want something from me?",
+    "es": "¿Quieres algo de mí?",
+    "id": "Kamu mau sesuatu dariku?",
+    "pt": "Você quer algo de mim?",
+    "th": "เจ้าต้องการบางอย่างจากข้าใช่มั้ย?",
+    "vi": "Ngươi muốn gì ở ta sao?"
+  },
+  "MST_SKILLS_2001192_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001192_NAME": {
+    "en": "So, you're trying your best now. Good job.",
+    "es": "Así que ahora estás dando todo de ti. Buen trabajo.",
+    "id": "Jadi, kamu mencoba sekuat tenaga sekarang. Bagus.",
+    "pt": "Então, está se esforçando agora. Bom trabalho.",
+    "th": "งั้น ตอนนี้ก็ทำดีที่สุดแล้ว เยี่ยม",
+    "vi": "Vậy, giờ ngươi hãy cố hết sức đi. Tốt lắm."
+  },
+  "MST_SKILLS_2001193_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001193_NAME": {
+    "en": "Wow, you're better than I thought.",
+    "es": "Guau, eres mejor de lo que esperaba.",
+    "id": "Wah, kamu lebih baik dari yang kupikir.",
+    "pt": "Nossa, você é melhor do que eu esperava.",
+    "th": "ว้าว เจ้าเก่งกว่าที่ข้าคิดไว้นะเนี่ย",
+    "vi": "Wow, ngươi khá hơn là ta nghĩ đấy."
+  },
+  "MST_SKILLS_2001194_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001194_NAME": {
+    "en": "What burdens do you carry on your shoulders?",
+    "es": "¿Qué carga llevas sobre los hombros?",
+    "id": "Beban apa yang kamu tanggung di pundakmu?",
+    "pt": "Que fardos carrega nesses ombros?",
+    "th": "อะไรที่เจ้าแบกไว้เป็นภาระ?",
+    "vi": "Ngươi đang mang gánh nặng gì trên vai mình vậy?"
+  },
+  "MST_SKILLS_20011_DESCRIPTION": {
+    "en": "4 combo Water elemental attack on all enemies",
+    "es": "Combo grupal de 4 ataques de agua.",
+    "id": "4 kombo serangan berelemen Air pada semua Musuh",
+    "pt": "Combo de 4 golpes com elemento Água em todos os inimigos",
+    "th": "4 คอมโบ ธาตุน้ำ โจมตีใส่ศัตรูทุกตัว",
+    "vi": "12 cú Hỏa công mạnh mẽ lên mọi kẻ thù, thêm cơ hội bỏ qua Phòng thủ của đối thủ khi tấn công cho mọi đồng minh trong 2 lượt & tăng thiệt hại do đòn trí mạng trong 3 lượt cho tất cả đồng minh"
+  },
+  "MST_SKILLS_20011_NAME": {
+    "en": "Ethereal Blade",
+    "es": "Filo etéreo",
+    "id": "Bilah Halus",
+    "pt": "Lâmina Etérea",
+    "th": "อีเธียเรียลเบลด",
+    "vi": "Thảm họa Apollonia"
+  },
+  "MST_SKILLS_2001200_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001200_NAME": {
+    "en": "Lightning Arrow",
+    "es": "Flecha de rayo",
+    "id": "Panah Kilat",
+    "pt": "Flecha Relâmpago",
+    "th": "ไลท์นิ่ง แอโร่ว",
+    "vi": "Lôi tên"
+  },
+  "MST_SKILLS_2001201_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001201_NAME": {
+    "en": "How dare you treat Lady Edea in such a manner!!",
+    "es": "¡¿Cómo te atreves a tratar a Lady Edea de esa manera?!",
+    "id": "Kamu lancang berani memperlakukan Putri Edea seperti itu!!",
+    "pt": "Como se atreve a tratar Lady Edea desse jeito!!",
+    "th": "เจ้ากล้าดูแลท่านอีเดียด้วยวิธีแบบนี้เรอะ!!",
+    "vi": "Sao ngươi dám đối xử với Tiểu thư Edea như vậy!!"
+  },
+  "MST_SKILLS_2001202_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2001202_NAME": {
+    "en": "Announce yourself!",
+    "es": "¡Preséntate!",
+    "id": "Umumkan dirimu!",
+    "pt": "Identifique-se!",
+    "th": "ประกาศตัวออกมา!",
+    "vi": "Hãy hiện nguyên hình!"
+  },
   "MST_SKILLS_2001203_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -86320,350 +87224,6 @@
     "vi": "I don't need such a weakling!"
   },
   "MST_SKILLS_2122607_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122607_NAME": {
-    "en": "Bring the next one! Next!",
-    "es": "¡Que pase el que sigue! ¡Siguiente!",
-    "id": "Yang berikutnya! Berikutnya!",
-    "pt": "Traga o próximo! Próximo!",
-    "th": "เอารายต่อไปมา! รายต่อไป!",
-    "vi": "Bring the next one! Next!"
-  },
-  "MST_SKILLS_2122608_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122608_NAME": {
-    "en": "Ew, gross. It's like that guy...",
-    "es": "Uhh, qué asco. Es como ese tipo...",
-    "id": "Ew, menjijikkan. Sepertinya cowok itu...",
-    "pt": "Eca, que nojo. É como aquele cara...",
-    "th": "อี๋ แหยะ เหมือนชายผู้นั้นเลย...",
-    "vi": "Ew, gross. It's like that guy..."
-  },
-  "MST_SKILLS_2122609_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122609_NAME": {
-    "en": "We only need one of you!",
-    "es": "¡Solo necesitamos uno como tú!",
-    "id": "Kami hanya butuh satu dari kalian!",
-    "pt": "Só precisamos de um!",
-    "th": "เราต้องการเพียงอย่างเดียวจากเจ้า!",
-    "vi": "We only need one of you!"
-  },
-  "MST_SKILLS_212260_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_212260_NAME": {
-    "en": "Prepare for the worst.",
-    "es": "Prepárate para lo peor.",
-    "id": "Bersiaplah untuk yang terburuk.",
-    "pt": "Prepare-se para o pior.",
-    "th": "เตรียมแพ้ได้เลย",
-    "vi": "Prepare for the worst."
-  },
-  "MST_SKILLS_21226100_NAME": {
-    "en": "There's no life in death!",
-    "es": "There's no life in death!",
-    "id": "Tidak ada hidup setelah kematian!",
-    "pt": "There's no life in death!",
-    "th": "ความตายจะไร้ซึ่งชีวิต!",
-    "vi": "There's no life in death!"
-  },
-  "MST_SKILLS_2122610_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122610_NAME": {
-    "en": "What are you talking about?",
-    "es": "¿De qué hablas?",
-    "id": "Apa yang kau bicarakan?",
-    "pt": "Do que você está falando?",
-    "th": "เจ้าพูดเรื่องอะไรน่ะ?",
-    "vi": "What are you talking about?"
-  },
-  "MST_SKILLS_2122611_DESCRIPTION": {
-    "en": "Attack on all enemies",
-    "es": "Ataque grupal",
-    "id": "Menyerang semua musuh",
-    "pt": "Ataque em todos os inimigos",
-    "th": "โจมตีศัตรูทั้งหมด",
-    "vi": "Attack on all enemies"
-  },
-  "MST_SKILLS_2122611_NAME": {
-    "en": "You're already my friend!",
-    "es": "¡Tú ya eres mi amigo!",
-    "id": "Kau sudah menjadi temanku!",
-    "pt": "Você já é meu amigo!",
-    "th": "เจ้าเป็นเพื่อนของข้าแล้วนะ!",
-    "vi": "You're already my friend!"
-  },
-  "MST_SKILLS_2122612_DESCRIPTION": {
-    "en": "18 combo Fire elemental attack on all enemies, boosts Atk & adds Fire element to attack for 3 turns",
-    "es": "Combo grupal de 18 ataque ígneos. Aumenta el ataque y agrega fuego al ataque durante 3 turnos",
-    "id": "18 kombo serangan Api ke semua musuh, menambah Serangan & menambahkan elemen Api ke serangan untuk 3 giliran",
-    "pt": "Combo de 18 golpes de Fogo em todos os inimigos, aumenta ATQ e adiciona o elemento Fogo ao ataque por 3 rodadas",
-    "th": "18 คอมโบ โจมตีธาตุไฟ ใส่ศัตรูทั้งหมด, เพิ่มค่า โจมตี และ เพิ่มธาตุไฟ ให้กับการโจมตี นาน 3 เทิร์น",
-    "vi": "18 combo Fire elemental attack on all enemies, boosts Atk & adds Fire element to attack for 3 turns"
-  },
-  "MST_SKILLS_2122612_NAME": {
-    "en": "If you're my friend, fight!",
-    "es": "¡Si eres mi amigo, lucha!",
-    "id": "Kalau kau temanku, bertarunglah!",
-    "pt": "Se você é meu amigo, lute!",
-    "th": "ถ้าเจ้าเป็นเพื่อนของข้าล่ะก็ สู้สิ!",
-    "vi": "If you're my friend, fight!"
-  },
-  "MST_SKILLS_2122613_DESCRIPTION": {
-    "en": "18 combo Fire elemental attack on all enemies, boosts Atk & adds Fire element to attack for 3 turns",
-    "es": "Combo grupal de 18 ataque ígneos. Aumenta el ataque y agrega fuego al ataque durante 3 turnos",
-    "id": "18 kombo serangan Api ke semua musuh, menambah Serangan & menambahkan elemen Api ke serangan untuk 3 giliran",
-    "pt": "Combo de 18 golpes de Fogo em todos os inimigos, aumenta ATQ e adiciona o elemento Fogo ao ataque por 3 rodadas",
-    "th": "18 คอมโบ โจมตีธาตุไฟ ใส่ศัตรูทั้งหมด, เพิ่มค่า โจมตี และ เพิ่มธาตุไฟ ให้กับการโจมตี นาน 3 เทิร์น",
-    "vi": "18 combo Fire elemental attack on all enemies, boosts Atk & adds Fire element to attack for 3 turns"
-  },
-  "MST_SKILLS_2122613_NAME": {
-    "en": "Ugh, you guys need lots of work!",
-    "es": "¡Ugh, ustedes necesitan trabajar mucho más!",
-    "id": "Ugh, kalian semua butuh banyak kerja!",
-    "pt": "Ah, vocês precisam de muito trabalho!",
-    "th": "อาห์ เจ้ายังต้องฝึกอีกเยอะนะ!",
-    "vi": "Ugh, you guys need lots of work!"
-  },
-  "MST_SKILLS_212261_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_212261_NAME": {
-    "en": "There's no life in death!",
-    "es": "¡No hay vida en la muerte!",
-    "id": "Tidak ada kehidupan dalam kematian!",
-    "pt": "Não há vida após a morte!",
-    "th": "ไม่มีชีวิตหลังความตายหรอกนะ!",
-    "vi": "There's no life in death!"
-  },
-  "MST_SKILLS_21226200_NAME": {
-    "en": "That is unforgivable.",
-    "es": "That is unforgivable.",
-    "id": "Ini tak bisa diampuni.",
-    "pt": "That is unforgivable.",
-    "th": "ยกโทษให้ไม่ได้",
-    "vi": "That is unforgivable."
-  },
-  "MST_SKILLS_2122620_DESCRIPTION": {
-    "en": "Boosts all allies' Atk for 3 turns",
-    "es": "Aumenta el ataque de los aliados durante 3 turnos.",
-    "id": "Menambah Serangan semua sekutu untuk 3 giliran",
-    "pt": "Reforço no ATQ dos Aliados por 3 rodadas",
-    "th": "เพิ่มค่าโจมตีของพันธมิตรทั้งหมด นาน 3 เทิร์น",
-    "vi": "Boosts all allies' Atk for 3 turns"
-  },
-  "MST_SKILLS_2122620_NAME": {
-    "en": "Power Intension",
-    "es": "Refuerzo potente",
-    "id": "Kehebatan Daya",
-    "pt": "Poder Intenso",
-    "th": "พาวเวอร์ อินเทนชั่น",
-    "vi": "Power Intension"
-  },
-  "MST_SKILLS_2122621_DESCRIPTION": {
-    "en": "Boosts all allies' Atk for 3 turns",
-    "es": "Aumenta el ataque de los aliados durante 3 turnos.",
-    "id": "Menambah Serangan semua sekutu untuk 3 giliran",
-    "pt": "Reforço no ATQ dos Aliados por 3 rodadas",
-    "th": "เพิ่มค่าโจมตีของพันธมิตรทั้งหมด นาน 3 เทิร์น",
-    "vi": "Boosts all allies' Atk for 3 turns"
-  },
-  "MST_SKILLS_2122621_NAME": {
-    "en": "Entry number 1, Polevik.",
-    "es": "Participante número 1, Polevik.",
-    "id": "Pintu masuk nomor 1, Polevik.",
-    "pt": "Candidato número 1, Polevik.",
-    "th": "ผู้แข่งขันหมายเลข 1: โพลวิค",
-    "vi": "Entry number 1, Polevik."
-  },
-  "MST_SKILLS_2122622_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122622_NAME": {
-    "en": "I'm just an old tree...",
-    "es": "Soy solo un árbol viejo...",
-    "id": "Aku hanyalah pohon tua...",
-    "pt": "Sou apenas uma velha árvore...",
-    "th": "ข้าเป็นแค่ต้นไม้ชรา...",
-    "vi": "I'm just an old tree..."
-  },
-  "MST_SKILLS_2122623_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122623_NAME": {
-    "en": "But won't you be my friend?",
-    "es": "¿Te gustaría ser amigo mío?",
-    "id": "Tapi kau tidak mau jadi temanku?",
-    "pt": "Não quer ser meu amigo?",
-    "th": "แต่เจ้าจะเป็นเพื่อนกับข้าได้มั้ย?",
-    "vi": "But won't you be my friend?"
-  },
-  "MST_SKILLS_2122624_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122624_NAME": {
-    "en": "Gyaaaaaahhh!",
-    "es": "¡Gyaaaaaahhh!",
-    "id": "Gyaaaaaahhh!",
-    "pt": "Gyaaaaaahhh!",
-    "th": "ว้ากกกกกกกก!",
-    "vi": "Gyaaaaaahhh!"
-  },
-  "MST_SKILLS_2122625_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122625_NAME": {
-    "en": "I guess the audition's over.",
-    "es": "Creo que la audición ha terminado.",
-    "id": "Kurasa audisinya sudah selesai.",
-    "pt": "Acho que o teste acabou.",
-    "th": "ข้าว่าจบการคัดเลือกเถอะ",
-    "vi": "I guess the audition's over."
-  },
-  "MST_SKILLS_212262_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_212262_NAME": {
-    "en": "That is unforgivable.",
-    "es": "Eso es imperdonable.",
-    "id": "Itu tak dapat dimaafkan.",
-    "pt": "Isso é imperdoável.",
-    "th": "ยกโทษให้ไม่ได้",
-    "vi": "That is unforgivable."
-  },
-  "MST_SKILLS_21226300_NAME": {
-    "en": "I've enjoyed this battle.",
-    "es": "I've enjoyed this battle.",
-    "id": "Aku menikmati pertarungan ini.",
-    "pt": "I've enjoyed this battle.",
-    "th": "ข้าสนุกกับการต่อสู้",
-    "vi": "I've enjoyed this battle."
-  },
-  "MST_SKILLS_2122630_DESCRIPTION": {
-    "en": "16 combo Dark powerful attack on all enemies & adds Dark and Light elements to attack for all allies for 3 turns ",
-    "es": "Combo grupal de 16 poderosos ataque oscuros. Agrega luz y oscuridad al ataque de los aliados durante 3 turnos ",
-    "id": "16 kombo serangan Gelap kuat ke semua musuh & menambahkan elemen Gelap dan Terang ke serangan semua sekutu untuk 3 giliran",
-    "pt": "Combo de 16 golpes poderosos de sombra em todos os inimigos e adiciona os elementos sombra e luz ao ataque para todos aliados por 3 rodadas ",
-    "th": "16 คอมโบ โจมตีธาตุมืดอย่างรุนแรง ใส่ศัตรูทั้งหมด และ เพิ่ม ธาตุมืด กับ แสง ให้กับการโจมตี สำหรับพันธมิตรทั้งหมด นาน 3 เทิร์น ",
-    "vi": "16 combo Dark powerful attack on all enemies & adds Dark and Light elements to attack for all allies for 3 turns "
-  },
-  "MST_SKILLS_2122630_NAME": {
-    "en": "Entry number 2, Ardin!",
-    "es": "¡Participante número 2, Ardin!",
-    "id": "Pintu masuk nomor 2, Ardin!",
-    "pt": "Candidato número 2, Ardin!",
-    "th": "ผู้แข่งขันหมายเลข 2: อาร์ดิน!",
-    "vi": "Entry number 2, Ardin!"
-  },
-  "MST_SKILLS_2122631_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122631_NAME": {
-    "en": "I'm strong. Please be my...",
-    "es": "Soy fuerte. Por favor, sé mi...",
-    "id": "Aku kuat. Jadilah...",
-    "pt": "Sou forte. Seja meu...",
-    "th": "ข้าแข็งแกร่งมาก ช่วยเป็น...",
-    "vi": "I'm strong. Please be my..."
-  },
-  "MST_SKILLS_2122632_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122632_NAME": {
-    "en": "You may become my friend!",
-    "es": "¡Puedes convertirte en mi amigo!",
-    "id": "Kau boleh menjadi temanku!",
-    "pt": "Você pode ser meu amigo!",
-    "th": "เจ้าอาจจะเป็นเพื่อนกับข้าได้นะ!",
-    "vi": "You may become my friend!"
-  },
-  "MST_SKILLS_2122633_DESCRIPTION": {
-    "en": "18 combo Dark powerful attack on all enemies, probable drastic damage cut for 1 turn & adds Dark and Light elements to attack for 3 turns ",
-    "es": "Combo grupal de 18 poderosos ataque oscuros. Puede reducir drásticamente el daño por 1 turno. Agrega luz y oscuridad al ataque por 3 turnos ",
-    "id": "18 kombo serangan Gelap kuat ke semua musuh, kemungkinan pengurangan kerusakan drastis untuk 1 giliran & menambahkan elemen Gelap dan Terang ke serangan semua sekutu untuk 3 giliran",
-    "pt": "Combo de 18 golpes poderosos de sombra em todos os inimigos, provável corte drástico por uma rodada e adiciona os elementos sombra e luz ao ataque por 3 rodadas ",
-    "th": "18 คอมโบ โจมตีธาตุมืดอย่างรุนแรง ใส่ศัตรูทั้งหมด, อาจจะทำให้คิดสถานะ ลบความเสียหายอย่างรุนแรง นาน 1 เทิร์น และ เพิ่ม ธาตุมืด กับ แสง ให้กับการโจมตี นาน 3 เทิร์น ",
-    "vi": "18 combo Dark powerful attack on all enemies, probable drastic damage cut for 1 turn & adds Dark and Light elements to attack for 3 turns "
-  },
-  "MST_SKILLS_2122633_NAME": {
-    "en": "I'll make you like me!",
-    "es": "¡Haré que me quieras!",
-    "id": "Akan kubuat kau menyukaiku!",
-    "pt": "Vou deixar você como eu!",
-    "th": "ข้าจะทำให้ท่านชอบข้าให้ได้!",
-    "vi": "I'll make you like me!"
-  },
-  "MST_SKILLS_2122634_DESCRIPTION": {
     "en": "None",
     "es": "None",
     "id": "None",

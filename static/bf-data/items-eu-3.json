@@ -36,6 +36,12 @@
         "id": 33700,
         "name": "Skill Bracer"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30001": {
@@ -96,6 +102,12 @@
         "id": 34300,
         "name": "Light Helm"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30002": {
@@ -168,6 +180,12 @@
         "id": 38400,
         "name": "Bahamut Rage"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30003": {
@@ -225,6 +243,12 @@
         "id": 230103,
         "name": "Sacred Flag"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30004": {
@@ -287,6 +311,12 @@
         "id": 701030,
         "name": "Instable Flask"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30005": {
@@ -357,6 +387,12 @@
         "id": 701018,
         "name": "Cursed Photon Rod"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30006": {
@@ -419,6 +455,12 @@
         "id": 701010,
         "name": "Admiral's Hook"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30007": {
@@ -473,6 +515,12 @@
         "id": 38405,
         "name": "Sky Blade"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30008": {
@@ -518,7 +566,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_7.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "30100": {
     "desc": "Boosts Def by 5%",
@@ -553,6 +607,12 @@
         "id": 30101,
         "name": "Dragon Seal"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30101": {
@@ -633,6 +693,12 @@
         "id": 41405,
         "name": "Dark Mail"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30102": {
@@ -693,6 +759,12 @@
         "id": 38500,
         "name": "Tree Shield"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30103": {
@@ -746,6 +818,12 @@
         "id": 230203,
         "name": "Guarding Light"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30104": {
@@ -804,6 +882,12 @@
         "id": 235000,
         "name": "Lupine Mantle"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30105": {
@@ -870,6 +954,12 @@
         "id": 701027,
         "name": "Wastelands Sailor Hat"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30106": {
@@ -928,6 +1018,12 @@
         "id": 230206,
         "name": "Warding Scepter"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30107": {
@@ -986,6 +1082,12 @@
         "id": 230106,
         "name": "Wrathful Needle"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30108": {
@@ -1036,6 +1138,12 @@
         "id": 47903,
         "name": "Wulgee Gem"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30200": {
@@ -1071,6 +1179,12 @@
         "id": 30201,
         "name": "Sentry Cane"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30201": {
@@ -1123,6 +1237,12 @@
         "id": 34809,
         "name": "Limbo Stone"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30202": {
@@ -1171,6 +1291,12 @@
         "id": 38500,
         "name": "Tree Shield"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30203": {
@@ -1228,6 +1354,12 @@
         "id": 230003,
         "name": "Shining Stone"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30204": {
@@ -1286,6 +1418,12 @@
         "id": 235000,
         "name": "Lupine Mantle"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30205": {
@@ -1340,6 +1478,12 @@
         "id": 38503,
         "name": "Demon Shield"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30206": {
@@ -1394,6 +1538,12 @@
         "id": 38504,
         "name": "Devil Shield"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30207": {
@@ -1448,6 +1598,12 @@
         "id": 38505,
         "name": "Sky Buckler"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30208": {
@@ -1498,6 +1654,12 @@
         "id": 47904,
         "name": "Rakshult Gem"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30300": {
@@ -1533,6 +1695,12 @@
         "id": 30301,
         "name": "Beast Armor"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30301": {
@@ -1585,6 +1753,12 @@
         "id": 34809,
         "name": "Limbo Stone"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30302": {
@@ -1637,6 +1811,12 @@
         "id": 38400,
         "name": "Bahamut Rage"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30303": {
@@ -1690,6 +1870,12 @@
         "id": 230003,
         "name": "Shining Stone"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30304": {
@@ -1748,6 +1934,12 @@
         "id": 235000,
         "name": "Lupine Mantle"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30305": {
@@ -1810,6 +2002,12 @@
         "id": 701011,
         "name": "Tracker's Crossbow"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30306": {
@@ -1872,6 +2070,12 @@
         "id": 701020,
         "name": "Temporal Cybernetic Skin"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30307": {
@@ -1930,6 +2134,12 @@
         "id": 701014,
         "name": "Armor of the Fallen"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "30308": {
@@ -1975,7 +2185,18 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_3_7.png",
     "type": "sphere",
-    "usage": []
+    "usage": [
+      {
+        "id": 235003,
+        "name": "Tourayet Adornment"
+      }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "30400": {
     "desc": "Boosts Critical Hit Rate",
@@ -2184,6 +2405,12 @@
         "id": 31001,
         "name": "Angelic Foil"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "31001": {
@@ -2241,9 +2468,19 @@
         "name": "Amanohabaken"
       },
       {
+        "id": 235003,
+        "name": "Tourayet Adornment"
+      },
+      {
         "id": 239000,
         "name": "Sunblade"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "31002": {
@@ -2301,6 +2538,12 @@
         "id": 47908,
         "name": "Menon Gem"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "31100": {
@@ -2357,6 +2600,12 @@
         "id": 31101,
         "name": "Exyl Shield"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "31101": {
@@ -2417,6 +2666,12 @@
         "id": 239000,
         "name": "Sunblade"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "31102": {
@@ -2469,7 +2724,18 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [
+      {
+        "id": 238001,
+        "name": "Lefaire Chalice"
+      }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "31200": {
     "desc": "Boosts Atk and Critical Hit Rate when HP is Below Half",
@@ -2515,6 +2781,12 @@
         "id": 701007,
         "name": "Noblesse’s Wedding Ring"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "31201": {
@@ -2537,7 +2809,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "31300": {
     "desc": "Boosts Def and Rec when HP is Below Half",
@@ -2587,6 +2865,12 @@
         "id": 230006,
         "name": "Spirit Band"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "31301": {
@@ -2647,7 +2931,17 @@
       {
         "id": 47905,
         "name": "Zamburg Gem"
+      },
+      {
+        "id": 235003,
+        "name": "Tourayet Adornment"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "31400": {
@@ -3624,6 +3918,8 @@
       }
     ],
     "associated_units": [
+      "21106",
+      "21107",
       "31006",
       "31007",
       "840547",
@@ -3654,6 +3950,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "21106",
+      "21107",
       "31006",
       "31007",
       "840547",
@@ -3684,6 +3982,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "21106",
+      "21107",
       "31006",
       "31007",
       "840547",
@@ -4213,6 +4513,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "41036",
+      "41037",
       "60497"
     ]
   },
@@ -4261,6 +4563,8 @@
       }
     ],
     "associated_units": [
+      "31066",
+      "31067",
       "850018"
     ]
   },
@@ -4309,6 +4613,8 @@
       }
     ],
     "associated_units": [
+      "31066",
+      "31067",
       "850018"
     ]
   },
@@ -4333,6 +4639,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "31066",
+      "31067",
       "850018"
     ]
   },
@@ -4386,6 +4694,8 @@
       }
     ],
     "associated_units": [
+      "41036",
+      "41037",
       "60497"
     ]
   },
@@ -4449,6 +4759,8 @@
       }
     ],
     "associated_units": [
+      "31066",
+      "31067",
       "850018"
     ]
   },
@@ -4473,6 +4785,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "31066",
+      "31067",
       "850018"
     ]
   },
@@ -4497,6 +4811,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "31066",
+      "31067",
       "850018"
     ]
   },
@@ -4522,6 +4838,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "31066",
+      "31067",
       "850018"
     ]
   },
@@ -4547,6 +4865,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "31066",
+      "31067",
       "850018"
     ]
   },
@@ -4572,6 +4892,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "31066",
+      "31067",
       "850018"
     ]
   },
@@ -5026,6 +5348,8 @@
       }
     ],
     "associated_units": [
+      "31066",
+      "31067",
       "850018"
     ]
   },
@@ -5051,6 +5375,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "31066",
+      "31067",
       "850018"
     ]
   },
@@ -5076,6 +5402,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "31066",
+      "31067",
       "850018"
     ]
   },
@@ -5202,6 +5530,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "41036",
+      "41037",
       "60497"
     ]
   },
@@ -5227,6 +5557,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "41036",
+      "41037",
       "60497"
     ]
   },
@@ -5252,6 +5584,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "41036",
+      "41037",
       "60497"
     ]
   },
@@ -5604,6 +5938,8 @@
       }
     ],
     "associated_units": [
+      "41036",
+      "41037",
       "60497"
     ]
   },
@@ -5718,6 +6054,8 @@
       }
     ],
     "associated_units": [
+      "31066",
+      "31067",
       "850018"
     ]
   },
@@ -5771,6 +6109,12 @@
         "id": 235001,
         "name": "Automated Warrior"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "34810": {
@@ -5794,7 +6138,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_9.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "34811": {
     "desc": "Boosts Atk, Def, Rec, and max HP by 20%",
@@ -5817,7 +6167,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_9.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "34812": {
     "desc": "Increases damage dealt during Spark by 50%",
@@ -5864,6 +6220,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "41036",
+      "41037",
       "60497"
     ]
   },
@@ -5888,6 +6246,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "31066",
+      "31067",
       "850018"
     ]
   },
@@ -5956,7 +6316,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_9.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "34818": {
     "desc": "Boosts all abilities when BB gauge is full",
@@ -5979,7 +6345,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_9.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "34900": {
     "desc": "Adds Chance of Ignoring Enemy's Defense when Attacking",
@@ -6022,7 +6394,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "35001": {
     "desc": "Boosts All Abilities when BB Gauge is Below Half",
@@ -6045,7 +6423,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "35002": {
     "desc": "Boosts All Abilities when BB Gauge is Full",
@@ -6068,7 +6452,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "35100": {
     "desc": "Invalidates All Status Ailments",
@@ -6116,7 +6506,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "35201": {
     "desc": "Boosts Def and Max HP by 10%",
@@ -6137,7 +6533,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "35202": {
     "desc": "Boosts Atk, Def, Rec, and Max HP by 15%",
@@ -6190,6 +6592,12 @@
         "id": 35800,
         "name": "Medulla Gem"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "35300": {
@@ -6368,6 +6776,12 @@
         "id": 37800,
         "name": "Lizeria Gem"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "35500": {
@@ -6430,6 +6844,12 @@
         "id": 238000,
         "name": "Rainbow Regalia"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "35501": {
@@ -6488,6 +6908,12 @@
         "id": 235002,
         "name": "Armored Soul"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "35600": {
@@ -6546,6 +6972,8 @@
       }
     ],
     "associated_units": [
+      "31066",
+      "31067",
       "850018"
     ]
   },
@@ -6571,6 +6999,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "31066",
+      "31067",
       "850018"
     ]
   },
@@ -6630,6 +7060,12 @@
         "id": 37400,
         "name": "Legwand Gem"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "35900": {
@@ -6704,6 +7140,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "21106",
+      "21107",
       "31006",
       "31007",
       "840547",
@@ -6734,7 +7172,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "36300": {
     "desc": "BB gauge increases after every turn",
@@ -6756,6 +7200,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "41036",
+      "41037",
       "60497"
     ]
   },
@@ -6827,6 +7273,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "41036",
+      "41037",
       "60497"
     ]
   },
@@ -6852,6 +7300,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "31066",
+      "31067",
       "850018"
     ]
   },
@@ -6874,7 +7324,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_9.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "36701": {
     "desc": "Boosts Atk, Def, Rec, and HP by 25%",
@@ -6897,7 +7353,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_9.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "36702": {
     "desc": "40% boost to Atk, Def, Rec, max HP",
@@ -6920,7 +7382,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_9.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "36800": {
     "desc": "Add chance of BB gauge greatly filling when attacking",
@@ -6944,6 +7412,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "41036",
+      "41037",
       "60497"
     ]
   },
@@ -6967,6 +7437,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "41036",
+      "41037",
       "60497"
     ]
   },
@@ -7017,7 +7489,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "37200": {
     "desc": "Negates all status ailments and increases HP by 20%",
@@ -7046,7 +7524,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_7.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "37300": {
     "desc": "BB gauge fills greatly after every turn",
@@ -7068,6 +7552,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "41036",
+      "41037",
       "60497"
     ]
   },
@@ -7127,6 +7613,12 @@
         "id": 38601,
         "name": "Malice Jewel"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "37500": {
@@ -7151,7 +7643,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_7.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "37600": {
     "desc": "Boosts Atk and max HP by 30% and increases BB gauge after every turn",
@@ -7180,7 +7678,11 @@
     "associated_units": [
       "10016",
       "10017",
-      "10756"
+      "10756",
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ],
     "first_clear_missions": [
       "150002"
@@ -7217,7 +7719,11 @@
     "usage": [],
     "associated_units": [
       "30016",
-      "30017"
+      "30017",
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ],
     "first_clear_missions": [
       "150022"
@@ -7249,7 +7755,11 @@
     "usage": [],
     "associated_units": [
       "40016",
-      "40017"
+      "40017",
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ],
     "first_clear_missions": [
       "150032"
@@ -7287,7 +7797,11 @@
     "usage": [],
     "associated_units": [
       "20016",
-      "20017"
+      "20017",
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ],
     "first_clear_missions": [
       "150012"
@@ -7326,8 +7840,12 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "51336",
+      "51337",
       "60016",
-      "60017"
+      "60017",
+      "61286",
+      "61287"
     ],
     "first_clear_missions": [
       "150052"
@@ -7359,7 +7877,11 @@
     "usage": [],
     "associated_units": [
       "50016",
-      "50017"
+      "50017",
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ],
     "first_clear_missions": [
       "150042"
@@ -7392,7 +7914,11 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
-      "30166"
+      "30166",
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ],
     "first_clear_missions": [
       "150102"
@@ -7424,6 +7950,10 @@
     "usage": [],
     "associated_units": [
       "50166",
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "710186"
     ],
     "first_clear_missions": [
@@ -7461,7 +7991,11 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
-      "60176"
+      "51336",
+      "51337",
+      "60176",
+      "61286",
+      "61287"
     ],
     "first_clear_missions": [
       "150201"
@@ -7501,6 +8035,12 @@
     "thumbnail": "sphere_thum_1_1.png",
     "type": "sphere",
     "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ],
     "first_clear_missions": [
       "150202"
     ]
@@ -7626,6 +8166,12 @@
         "id": 44000,
         "name": "Bariura Gem"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "37900": {
@@ -7681,6 +8227,12 @@
         "id": 701019,
         "name": "Photon Assault Spear"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "38000": {
@@ -7745,6 +8297,8 @@
       }
     ],
     "associated_units": [
+      "41036",
+      "41037",
       "60497"
     ]
   },
@@ -7809,11 +8363,17 @@
         "name": "Forbidden Blade"
       },
       {
+        "id": 230207,
+        "name": "Akbutecca Crown"
+      },
+      {
         "id": 701002,
         "name": "Odin's Ring"
       }
     ],
     "associated_units": [
+      "41036",
+      "41037",
       "60497"
     ]
   },
@@ -8025,6 +8585,12 @@
         "id": 35202,
         "name": "Sacred Jewel"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "38401": {
@@ -8081,6 +8647,12 @@
         "id": 35800,
         "name": "Medulla Gem"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "38402": {
@@ -8137,6 +8709,12 @@
         "id": 37400,
         "name": "Legwand Gem"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "38403": {
@@ -8193,6 +8771,12 @@
         "id": 38601,
         "name": "Malice Jewel"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "38404": {
@@ -8249,6 +8833,12 @@
         "id": 42300,
         "name": "Buffer Jewel"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "38405": {
@@ -8305,6 +8895,12 @@
         "id": 46200,
         "name": "Occult Treasure"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "38500": {
@@ -8351,6 +8947,12 @@
         "id": 35202,
         "name": "Sacred Jewel"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "38501": {
@@ -8411,6 +9013,12 @@
         "id": 701022,
         "name": "Arthur's Will"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "38502": {
@@ -8467,6 +9075,12 @@
         "id": 37400,
         "name": "Legwand Gem"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "38503": {
@@ -8523,6 +9137,12 @@
         "id": 38601,
         "name": "Malice Jewel"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "38504": {
@@ -8579,6 +9199,12 @@
         "id": 42300,
         "name": "Buffer Jewel"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "38505": {
@@ -8635,6 +9261,12 @@
         "id": 46200,
         "name": "Occult Treasure"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "38600": {
@@ -8688,6 +9320,12 @@
         "id": 35202,
         "name": "Sacred Jewel"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "38601": {
@@ -8746,6 +9384,12 @@
         "id": 42300,
         "name": "Buffer Jewel"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "38700": {
@@ -8806,6 +9450,12 @@
         "id": 47601,
         "name": "War Demon's Blade"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "38701": {
@@ -8862,6 +9512,12 @@
         "id": 46220,
         "name": "Armor of Seals"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "38800": {
@@ -9457,6 +10113,8 @@
       }
     ],
     "associated_units": [
+      "21106",
+      "21107",
       "31006",
       "31007",
       "840547",
@@ -9515,6 +10173,8 @@
       }
     ],
     "associated_units": [
+      "31066",
+      "31067",
       "850018"
     ]
   },
@@ -9573,6 +10233,8 @@
       }
     ],
     "associated_units": [
+      "31066",
+      "31067",
       "850018"
     ]
   },
@@ -9625,6 +10287,8 @@
       }
     ],
     "associated_units": [
+      "41036",
+      "41037",
       "60497"
     ]
   },
@@ -9680,6 +10344,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "41036",
+      "41037",
       "60497"
     ]
   },
@@ -9732,6 +10398,10 @@
         "name": "Beiorg Gem"
       },
       {
+        "id": 230107,
+        "name": "Heroic Serydelic"
+      },
+      {
         "id": 235001,
         "name": "Automated Warrior"
       },
@@ -9741,6 +10411,8 @@
       }
     ],
     "associated_units": [
+      "41036",
+      "41037",
       "60497"
     ]
   },
@@ -9805,6 +10477,8 @@
       }
     ],
     "associated_units": [
+      "31066",
+      "31067",
       "850018"
     ]
   },
@@ -9870,6 +10544,8 @@
       }
     ],
     "associated_units": [
+      "41036",
+      "41037",
       "60497"
     ]
   },
@@ -9934,6 +10610,8 @@
       }
     ],
     "associated_units": [
+      "41036",
+      "41037",
       "60497"
     ]
   },
@@ -10000,6 +10678,8 @@
       }
     ],
     "associated_units": [
+      "31066",
+      "31067",
       "850018"
     ]
   }
