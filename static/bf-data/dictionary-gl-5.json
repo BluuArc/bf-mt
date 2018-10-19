@@ -1,4 +1,20 @@
 {
+  "MST_SKILLS_2122607_NAME": {
+    "en": "Bring the next one! Next!",
+    "es": "¡Que pase el que sigue! ¡Siguiente!",
+    "id": "Yang berikutnya! Berikutnya!",
+    "pt": "Traga o próximo! Próximo!",
+    "th": "เอารายต่อไปมา! รายต่อไป!",
+    "vi": "Bring the next one! Next!"
+  },
+  "MST_SKILLS_2122608_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
   "MST_SKILLS_2122608_NAME": {
     "en": "Ew, gross. It's like that guy...",
     "es": "Uhh, qué asco. Es como ese tipo...",
@@ -85496,12 +85512,12 @@
     "vi": "Phantasmal Harvest"
   },
   "MST_SKILLS_2810108_DESCRIPTION": {
-    "en": "31 combo massive Fire, Dark attack on all foes & enormously boosts Atk, Def,  BB Atk, elemental damage and critical damage for 3 turns",
-    "es": "31 combo massive Fire, Dark attack on all foes & enormously boosts Atk, Def,  BB Atk, elemental damage and critical damage for 3 turns",
-    "id": "31 kombo serangan masif Api, Gelap ke semua musuh, ekstra jumbo Serang, Tahan, BB Serang, kerusakan elemen dan ampuh untuk 3 giliran",
-    "pt": "31 combo massive Fire, Dark attack on all foes & enormously boosts Atk, Def,  BB Atk, elemental damage and critical damage for 3 turns",
-    "th": "31 คอมโบ โจมตีธาตุไฟ, มืด รุนแรงมหาศาล ใส่ศัตรูทั้งหมด และ เพิ่มค่ามหาศาลให้ โจมตี, ป้องกัน,  โจมตี BB, ความเสียหายธาตุ กับ ความเสียหายคริติคอล นาน 3 เทิร์น",
-    "vi": "31 combo massive Fire, Dark attack on all foes & enormously boosts Atk, Def,  BB Atk, elemental damage and critical damage for 3 turns"
+    "en": "31 combo massive Fire, Dark attack on all foes, enormously boosts Atk, Def for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Fire elemental damage for 3 turns",
+    "es": "31 combo massive Fire, Dark attack on all foes, enormously boosts Atk, Def for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Fire elemental damage for 3 turns",
+    "id": "31 combo massive Fire, Dark attack on all foes, enormously boosts Atk, Def for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Fire elemental damage for 3 turns",
+    "pt": "31 combo massive Fire, Dark attack on all foes, enormously boosts Atk, Def for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Fire elemental damage for 3 turns",
+    "th": "31 combo massive Fire, Dark attack on all foes, enormously boosts Atk, Def for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Fire elemental damage for 3 turns",
+    "vi": "31 combo massive Fire, Dark attack on all foes, enormously boosts Atk, Def for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Fire elemental damage for 3 turns"
   },
   "MST_SKILLS_2810108_NAME": {
     "en": "Grimm Parade",
@@ -86102,6 +86118,38 @@
     "pt": "Howitzer Impact EX",
     "th": "Howitzer Impact EX",
     "vi": "Howitzer Impact EX"
+  },
+  "MST_SKILLS_2810627_DESCRIPTION": {
+    "en": "8 combo massive Fire attack on all foes, 3 combo massive Fire attack on single foe (damage relative to remaining HP), enormously boosts BB gauge for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & adds probable evasion for 3 turns",
+    "es": "8 combo massive Fire attack on all foes, 3 combo massive Fire attack on single foe (damage relative to remaining HP), enormously boosts BB gauge for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & adds probable evasion for 3 turns",
+    "id": "8 combo massive Fire attack on all foes, 3 combo massive Fire attack on single foe (damage relative to remaining HP), enormously boosts BB gauge for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & adds probable evasion for 3 turns",
+    "pt": "8 combo massive Fire attack on all foes, 3 combo massive Fire attack on single foe (damage relative to remaining HP), enormously boosts BB gauge for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & adds probable evasion for 3 turns",
+    "th": "8 combo massive Fire attack on all foes, 3 combo massive Fire attack on single foe (damage relative to remaining HP), enormously boosts BB gauge for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & adds probable evasion for 3 turns",
+    "vi": "8 combo massive Fire attack on all foes, 3 combo massive Fire attack on single foe (damage relative to remaining HP), enormously boosts BB gauge for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & adds probable evasion for 3 turns"
+  },
+  "MST_SKILLS_2810627_NAME": {
+    "en": "Darkflame Dance",
+    "es": "Darkflame Dance",
+    "id": "Darkflame Dance",
+    "pt": "Darkflame Dance",
+    "th": "Darkflame Dance",
+    "vi": "Darkflame Dance"
+  },
+  "MST_SKILLS_2810628_DESCRIPTION": {
+    "en": "13 combo massive Fire attack on all foes, 3 combo massive Fire attack on single foe (damage relative to remaining HP), massive Fire attack on single foe, enormously boosts BB gauge for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & adds probable evasion for 3 turns",
+    "es": "13 combo massive Fire attack on all foes, 3 combo massive Fire attack on single foe (damage relative to remaining HP), massive Fire attack on single foe, enormously boosts BB gauge for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & adds probable evasion for 3 turns",
+    "id": "13 combo massive Fire attack on all foes, 3 combo massive Fire attack on single foe (damage relative to remaining HP), massive Fire attack on single foe, enormously boosts BB gauge for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & adds probable evasion for 3 turns",
+    "pt": "13 combo massive Fire attack on all foes, 3 combo massive Fire attack on single foe (damage relative to remaining HP), massive Fire attack on single foe, enormously boosts BB gauge for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & adds probable evasion for 3 turns",
+    "th": "13 combo massive Fire attack on all foes, 3 combo massive Fire attack on single foe (damage relative to remaining HP), massive Fire attack on single foe, enormously boosts BB gauge for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & adds probable evasion for 3 turns",
+    "vi": "13 combo massive Fire attack on all foes, 3 combo massive Fire attack on single foe (damage relative to remaining HP), massive Fire attack on single foe, enormously boosts BB gauge for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & adds probable evasion for 3 turns"
+  },
+  "MST_SKILLS_2810628_NAME": {
+    "en": "Howling Hellfire",
+    "es": "Howling Hellfire",
+    "id": "Howling Hellfire",
+    "pt": "Howling Hellfire",
+    "th": "Howling Hellfire",
+    "vi": "Howling Hellfire"
   },
   "MST_SKILLS_2810657_DESCRIPTION": {
     "en": "19 combo massive Fire attack on all foes (damage relative to remaining HP, enormously boosts critical hit rate), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec and critical hit rate for 3 turns, enormous 3 turn Atk, Def reduction & enormously boosts Fire elemental damage for 3 turns",
@@ -87134,5 +87182,53 @@
     "pt": "19 combo massive Earth attack on all foes, enormously boosts Atk relative to Def for 3 turns, raises normal hit amount for 3 turns & hugely boosts max HP",
     "th": "19 คอมโบ โจมตีธาตุดินรุนแรงมหาศาล ใส่ศัตรูทั้งหมด, เพิ่มค่ามหาศาลให้ โจมตี สัมพันธ์กับ ป้องกัน นาน 3 เทิร์น, เพิ่มปริมาณการโจมตีธรรมดา นาน 3 เทิร์น และ เพิ่มค่าอย่างสูงให้ HP สูงสุด",
     "vi": "19 combo massive Earth attack on all foes, enormously boosts Atk relative to Def for 3 turns, raises normal hit amount for 3 turns & hugely boosts max HP"
+  },
+  "MST_SKILLS_2830287_NAME": {
+    "en": "Heaven-Breaking Drill",
+    "es": "Heaven-Breaking Drill",
+    "id": "Bor Pemecah Surga",
+    "pt": "Heaven-Breaking Drill",
+    "th": "เฮฟเว่น-เบรคกิ้ง ดริล",
+    "vi": "Heaven-Breaking Drill"
+  },
+  "MST_SKILLS_2830288_DESCRIPTION": {
+    "en": "22 combo massive Earth attack on all foes, enormously boosts Atk relative to Def for 3 turns, enormously boosts OD gauge fill rate at turn's end for 3 turns, hugely raises normal hit amount for 3 turns & hugely boosts max HP",
+    "es": "22 combo massive Earth attack on all foes, enormously boosts Atk relative to Def for 3 turns, enormously boosts OD gauge fill rate at turn's end for 3 turns, hugely raises normal hit amount for 3 turns & hugely boosts max HP",
+    "id": "22 kombo serangan Bumi masif ke semua musuh, 3 giliran: ekstra jumbo Serang sesuai Tahan dan laju pengisian meteran OD di akhir giliran, amat menaikkan pukulan normal dan HP maks",
+    "pt": "22 combo massive Earth attack on all foes, enormously boosts Atk relative to Def for 3 turns, enormously boosts OD gauge fill rate at turn's end for 3 turns, hugely raises normal hit amount for 3 turns & hugely boosts max HP",
+    "th": "22 คอมโบ โจมตีธาตุดินรุนแรงมหาศาล ใส่ศัตรูทั้งหมด, เพิ่มค่ามหาศาลให้ โจมตี สัมพันธ์กับ ป้องกัน นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ อัตราเติมเกจ OD เมื่อตอนจบเทิร์น นาน 3 เทิร์น,เพิ่มปริมาณการโจมตีธรรมดาอย่างสูง นาน 3 เทิร์น และ เพิ่มค่าอย่างสูงให้ HP สูงสุด",
+    "vi": "22 combo massive Earth attack on all foes, enormously boosts Atk relative to Def for 3 turns, enormously boosts OD gauge fill rate at turn's end for 3 turns, hugely raises normal hit amount for 3 turns & hugely boosts max HP"
+  },
+  "MST_SKILLS_2830288_NAME": {
+    "en": "Universe-Shattering Drill",
+    "es": "Universe-Shattering Drill",
+    "id": "Bor Penghancur Semesta",
+    "pt": "Universe-Shattering Drill",
+    "th": "ยูนิเวิร์ส-แชตเทอริ่ง ดริล",
+    "vi": "Universe-Shattering Drill"
+  },
+  "MST_SKILLS_2830297_DESCRIPTION": {
+    "en": "22 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk and critical hit rate for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & 3 turn enormous Atk, Def reduction",
+    "es": "22 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk and critical hit rate for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & 3 turn enormous Atk, Def reduction",
+    "id": "22 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk and critical hit rate for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & 3 turn enormous Atk, Def reduction",
+    "pt": "22 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk and critical hit rate for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & 3 turn enormous Atk, Def reduction",
+    "th": "22 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk and critical hit rate for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & 3 turn enormous Atk, Def reduction",
+    "vi": "22 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk and critical hit rate for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & 3 turn enormous Atk, Def reduction"
+  },
+  "MST_SKILLS_2830297_NAME": {
+    "en": "Hanami Hymn",
+    "es": "Hanami Hymn",
+    "id": "Hanami Hymn",
+    "pt": "Hanami Hymn",
+    "th": "Hanami Hymn",
+    "vi": "Hanami Hymn"
+  },
+  "MST_SKILLS_2830298_DESCRIPTION": {
+    "en": "24 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk and critical hit rate for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts Earth elemental damage for 3 turns, 3 turn enormous Atk, Def reduction & activates BB/SBB/UBB twice for 1 turn",
+    "es": "24 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk and critical hit rate for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts Earth elemental damage for 3 turns, 3 turn enormous Atk, Def reduction & activates BB/SBB/UBB twice for 1 turn",
+    "id": "24 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk and critical hit rate for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts Earth elemental damage for 3 turns, 3 turn enormous Atk, Def reduction & activates BB/SBB/UBB twice for 1 turn",
+    "pt": "24 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk and critical hit rate for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts Earth elemental damage for 3 turns, 3 turn enormous Atk, Def reduction & activates BB/SBB/UBB twice for 1 turn",
+    "th": "24 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk and critical hit rate for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts Earth elemental damage for 3 turns, 3 turn enormous Atk, Def reduction & activates BB/SBB/UBB twice for 1 turn",
+    "vi": "24 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk and critical hit rate for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts Earth elemental damage for 3 turns, 3 turn enormous Atk, Def reduction & activates BB/SBB/UBB twice for 1 turn"
   }
 }
