@@ -16608,6 +16608,176 @@
         "passive id": "34"
       },
       {
+        "bc drop% for spark": 40,
+        "damage% for spark": 80,
+        "hc drop% for spark": 25,
+        "passive id": "31"
+      }
+    ],
+    "id": 819171,
+    "max_stack": 1,
+    "name": "Lucky Crescent",
+    "raid": false,
+    "rarity": 6,
+    "sell_price": 30000,
+    "sphere type": 3,
+    "sphere type text": "Drop",
+    "thumbnail": "sphere_thum_819171.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 819173,
+        "name": "Yue'yuan"
+      }
+    ],
+    "associated_units": [
+      "30446",
+      "30447"
+    ]
+  },
+  "819172": {
+    "desc": "25% boost to all parameters, reduces BB gauge required for BB, damage taken boosts BB gauge",
+    "effect": [
+      {
+        "atk% buff": 25,
+        "def% buff": 25,
+        "hp% buff": 25,
+        "passive id": "1",
+        "rec% buff": 25
+      },
+      {
+        "bc fill when attacked high": 2,
+        "bc fill when attacked low": 1,
+        "bc fill when attacked%": 100,
+        "passive id": "25"
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 15
+      }
+    ],
+    "id": 819172,
+    "max_stack": 1,
+    "name": "Gibbous Trinket",
+    "raid": false,
+    "rarity": 6,
+    "recipe": {
+      "karma": "300000",
+      "materials": [
+        {
+          "count": 55,
+          "id": 800010,
+          "name": "Moonlit Essence"
+        },
+        {
+          "count": 55,
+          "id": 800011,
+          "name": "Spice Pouch"
+        },
+        {
+          "count": 55,
+          "id": 800012,
+          "name": "Moon Bug"
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 6,
+    "sphere type text": "BB Gauge",
+    "thumbnail": "sphere_thum_819172.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 819173,
+        "name": "Yue'yuan"
+      }
+    ],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
+  },
+  "819173": {
+    "desc": "45% boost to all parameters, reduces BB gauge required for BB, damage taken boosts BB gauge, greatly boosts BC, HC, Item, Karma, and Zel drop rates, considerably boosts Spark damage & Spark damage considerably boosts BC, HC drop rates",
+    "effect": [
+      {
+        "atk% buff": 45,
+        "def% buff": 45,
+        "hp% buff": 45,
+        "passive id": "1",
+        "rec% buff": 45
+      },
+      {
+        "bc fill when attacked high": 3,
+        "bc fill when attacked low": 2,
+        "bc fill when attacked%": 100,
+        "passive id": "25"
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 25
+      },
+      {
+        "bc drop rate% buff": 35,
+        "hc drop rate% buff": 35,
+        "item drop rate% buff": 5,
+        "karma drop rate% buff": 50,
+        "passive id": "19",
+        "zel drop rate% buff": 50
+      },
+      {
+        "bc drop% for spark": 50,
+        "damage% for spark": 100,
+        "hc drop% for spark": 35,
+        "passive id": "31"
+      }
+    ],
+    "id": 819173,
+    "max_stack": 1,
+    "name": "Yue'yuan",
+    "raid": false,
+    "rarity": 7,
+    "recipe": {
+      "karma": "300000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 819172,
+          "name": "Gibbous Trinket"
+        },
+        {
+          "count": 1,
+          "id": 819171,
+          "name": "Lucky Crescent"
+        }
+      ]
+    },
+    "sell_price": 50000,
+    "sphere type": 14,
+    "sphere type text": "Special",
+    "thumbnail": "sphere_thum_819173.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "819174": {
+    "desc": "Enormously boosts Atk, Def relative to lost HP, hugely boosts critical damage, 150% boost to Spark damage, boosts damage against status afflicted foes & enormously boosts BB gauge each turn",
+    "effect": [
+      {
+        "atk% base buff": 100,
+        "atk% extra buff based on hp": 300,
+        "buff proportional to hp": "lost",
+        "def% base buff": 50,
+        "def% extra buff based on hp": 150,
+        "passive id": "46"
+      },
+      {
+        "crit multiplier%": 150,
+        "passive id": "34"
+      },
+      {
         "damage% for spark": 150,
         "passive id": "31"
       },
