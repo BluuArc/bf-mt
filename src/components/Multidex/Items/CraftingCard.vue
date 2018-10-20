@@ -55,16 +55,45 @@
                 </h2>
               </div>
               <v-container fluid v-if="panelLoadCache[activePanel]">
-                <v-layout row wrap>
+                <v-layout row v-for="(mat, i) in baseMaterialsNeeded" :key="i">
                   <v-flex>
-                    your base materials go here
+                    <material-row
+                      :material="mat"
+                      :showButtonCondition="true"
+                      buttonText="Change">
+                      <v-container fluid slot="expanded-area">
+                        <v-layout row>
+                          How much of the following do you have?
+                        </v-layout>
+                        <v-layout row wrap>
+                          <!-- current item -->
+                          <v-flex xs12 sm6 md4 lg3>
+                            <material-input-card
+                              :entry="pageDb[mat.id]"
+                              :value="getHaveValue(mat.id)"
+                              @input="setHaveValue(mat.id, $event)"
+                              :total="mat.count"/>
+                          </v-flex>
+                          <!-- other items that use current item -->
+                          <v-flex
+                            xs12 sm6 md4 lg3
+                            v-for="(craftable, i) in getRelevantCraftablesForMaterial(mat.id)"
+                            :key="i">
+                            <material-input-card
+                              :entry="pageDb[craftable.id]"
+                              :value="getHaveValue(craftable.id)"
+                              @input="setHaveValue(craftable.id, $event)"
+                              :total="craftable.count"/>
+                          </v-flex>
+                        </v-layout>
+                      </v-container>
+                    </material-row>
                   </v-flex>
-                  <!-- <v-flex xs12 sm6 md4 v-for="(id, j) in filteredUsageList" :key="j">
-                    <item-entry-card
-                      :to="getMultidexPathTo(id)"
-                      :entry="pageDb[id]"
-                      style="height: 100%;"/>
-                  </v-flex> -->
+                </v-layout>
+                <v-layout row v-if="item.recipe.karma">
+                  <v-flex>
+                    <material-row :karma="totalKarmaNeeded"/>
+                  </v-flex>
                 </v-layout>
               </v-container>
             </v-expansion-panel-content>
