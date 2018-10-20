@@ -611,7 +611,7 @@ export default {
       this.lastKnownFilters = filterHelper.optionsToString(this.filterOptions);
       this.applyFilters();
       this.syncPageSortsToCache();
-    }, 750),
+    }, 1000),
     debounceApplySorts: debounce(function () {
       this.applySorts();
       this.syncPageSortsToCache();

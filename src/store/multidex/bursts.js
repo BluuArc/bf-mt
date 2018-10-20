@@ -84,6 +84,8 @@ export default {
           name = '',
           associatedUnits = '',
         } = filters;
+        // trim off the spaces of subsequent names
+        const names = name.split('|').filter((v, i) => i === 0 || v.trim()).map(n => n.toLowerCase());
 
         const fitsTernary = (entryIsTrue = false, filterValue = '', { all, truthy, falsy }) => {
           return filterValue === all ||
@@ -93,8 +95,8 @@ export default {
 
         return keys.filter(key => {
           const entry = pageDb[key];
-          const fitsName = (!name ? true : entry.name.toLowerCase().includes(name.toLowerCase()));
-          const fitsID = (!name ? true : key.toString().includes(name) || (entry.id || '').toString().includes(name));
+          const fitsName = (!name ? true : names.filter(n => entry.name.toLowerCase().includes(n)).length > 0);
+          const fitsID = (!name ? true : names.filter(n => key.toString().includes(n) || (entry.id || '').toString().includes(n)).length > 0);
 
           const hasAssociatedUnits = Array.isArray(entry.associated_units) && entry.associated_units.length > 0;
           const fitsAssociatedUnits = fitsTernary(hasAssociatedUnits, associatedUnits, ternaryHelper.associatedUnits);

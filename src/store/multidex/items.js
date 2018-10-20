@@ -112,6 +112,8 @@ export default {
           craftables = '',
           usage = '',
         } = filters;
+        // trim off the spaces of subsequent names
+        const names = name.split('|').filter((v, i) => i === 0 || v.trim()).map(n => n.toLowerCase());
         const includeNoneSphereType = sphereTypes.includes(0);
         const includeAnySphereType = sphereTypes.length === 15;
 
@@ -123,8 +125,8 @@ export default {
 
         return keys.filter(key => {
           const entry = pageDb[key];
-          const fitsName = (!name ? true : entry.name.toLowerCase().includes(name.toLowerCase()));
-          const fitsID = (!name ? true : key.toString().includes(name) || (entry.id || '').toString().includes(name));
+          const fitsName = (!name ? true : names.filter(n => entry.name.toLowerCase().includes(n)).length > 0);
+          const fitsID = (!name ? true : names.filter(n => key.toString().includes(n) || (entry.id || '').toString().includes(n)).length > 0);
           const fitsRarity = rarity.includes(entry.rarity);
           const fitsItemType = itemTypes.includes(entry.type) || (itemTypes.includes('raid') && entry.raid);
 

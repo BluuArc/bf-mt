@@ -93,6 +93,8 @@ export default {
         keys = await dispatch('filterServerExclusiveKeys', { filter: exclusives, keys })
       }
 
+      logger.debug(inputFilters.name.split('|').filter((v, i) => i === 0 || v.trim()).map(n => n.toLowerCase()))
+
       const result = await SWorker.run((keys, filters, pageDb) => {
         const {
           name = '',
@@ -101,10 +103,12 @@ export default {
           unitKinds = [],
           genders = [],
         } = filters;
+        // trim off the spaces of subsequent names
+        const names = name.split('|').filter((v, i) => i === 0 || v.trim()).map(n => n.toLowerCase());
         return keys.filter(key => {
           const entry = pageDb[key];
-          const fitsName = (!name ? true : entry.name.toLowerCase().includes(name.toLowerCase()));
-          const fitsID = (!name ? true : key.toString().includes(name) || (entry.id || '').toString().includes(name));
+          const fitsName = (!name ? true : names.filter(n => entry.name.toLowerCase().includes(n)).length > 0);
+          const fitsID = (!name ? true : names.filter(n => key.toString().includes(n) || (entry.id || '').toString().includes(n)).length > 0);
           const fitsElement = elements.includes(entry.element);
           const fitsRarity = rarity.includes(entry.rarity);
           const fitsGender = genders.includes(entry.gender);
