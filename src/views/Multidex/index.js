@@ -1,7 +1,4 @@
-import Units from './Units.vue';
-import Items from './Items.vue';
-
 export default {
-  Units,
-  Items,
+  Units: () => import(/* webpackChunkName: "units" */ './Units.vue'),
+  Items: () => import(/* webpackChunkName: "items" */ './Items.vue'),
 };
