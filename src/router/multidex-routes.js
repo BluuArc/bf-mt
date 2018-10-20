@@ -23,4 +23,10 @@ export default [
     component: MultidexPages.Items,
     props: defaultMultidexPropHandler,
   },
+  {
+    path: '/multidex/bursts',
+    name: 'Bursts',
+    component: MultidexPages.Bursts,
+    props: defaultMultidexPropHandler,
+  },
 ];
