@@ -8,25 +8,15 @@
     :pageDb="pageDb"
     :inputFilters="filters"
     :filterTypes="filterTypes">
-    <!-- <v-layout row wrap slot="results" slot-scope="{ keys, getMultidexPathTo }">
-      <template v-if="viewMode === 'card'">
-        <v-flex
-          v-for="key in keys"
-          :key="key"
-          xs12 sm6 md4 xl3>
-          <entry-card :to="getMultidexPathTo(key)" :entry="pageDb[key]" v-if="pageDb.hasOwnProperty(key)"/>
-        </v-flex>
-      </template>
-      <template v-else>
-        <v-flex
-          v-for="key in keys"
-          :key="key"
-          xl1 md2 sm3 xs6>
-          <icon-entry-card :to="getMultidexPathTo(key)" :entry="pageDb[key]" v-if="pageDb.hasOwnProperty(key)"/>
-        </v-flex>
-      </template>
+    <v-layout row wrap slot="results" slot-scope="{ keys, getMultidexPathTo }">
+      <v-flex
+        v-for="key in keys"
+        :key="key"
+        xs12 sm6 md4 xl3>
+        <entry-card :to="getMultidexPathTo(key)" :entry="pageDb[key]" v-if="pageDb.hasOwnProperty(key)"/>
+      </v-flex>
     </v-layout>
-    <template slot="dialog-toolbar-title" slot-scope="{ viewId, hasViewId, entry }">
+    <!-- <template slot="dialog-toolbar-title" slot-scope="{ viewId, hasViewId, entry }">
       <v-flex class="d-flex" style="overflow-x: auto;">
         <item-thumbnail
           v-if="hasViewId"
@@ -59,33 +49,21 @@
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex';
 import MultidexPageMixin from '@/components/Multidex/MultidexPageMixin';
-// import EntryCard from '@/components/Multidex/Items/EntryCard';
-// import IconEntryCard from '@/components/Multidex/Items/IconEntryCard';
-// import ItemThumbnail from '@/components/Multidex/Items/ItemThumbnail';
+import EntryCard from '@/components/Multidex/Bursts/EntryCard';
 // import DialogContent from '@/components/Multidex/Items/DialogContent';
 
 export default {
   mixins: [MultidexPageMixin],
   components: {
-    // EntryCard,
-    // IconEntryCard,
-    // ItemThumbnail,
+    EntryCard,
     // DialogContent,
   },
   computed: {
     ...mapState('bursts', ['pageDb']),
     ...mapGetters('bursts', ['getMultidexRouteParamsTo', 'sortTypes', 'requiredModules', 'filterTypes']),
-    viewModes: () => ['card', 'icon'],
   },
-  data: () => ({
-    viewMode: 'card',
-  }),
   methods: {
     ...mapActions('bursts', ['getById']),
-    switchViewMode () {
-      const nextViewModeIndex = this.viewModes.indexOf(this.viewMode) + 1;
-      this.viewMode = this.viewModes[nextViewModeIndex] || this.viewModes[0];
-    },
   },
 };
 </script>
