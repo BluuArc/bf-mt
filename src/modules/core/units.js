@@ -196,3 +196,12 @@ export function getArenaPositionRecommendation (unit = {}) {
 
   return positions;
 }
+
+export function getColoClassUsage (cost = 0, isGlobal = true) {
+  return [
+    ((cost <= 32 && isGlobal) || (cost <= 14 && !isGlobal)) && 'Warrior',
+    ((cost <= 46 && isGlobal) || (cost <= 19 && !isGlobal)) && 'Gladiator',
+    ((cost <= 52 && isGlobal) || (cost <= 35 && !isGlobal)) && 'Conqueror',
+    'Hero', // all units can go to hero class
+  ].filter(v => v);
+}

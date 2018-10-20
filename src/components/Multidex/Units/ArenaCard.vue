@@ -2,8 +2,16 @@
   <description-card-base
     :entry="aiData"
     materialColor="amber darken-3"
-    :titleHtmlGenerator="() => 'Arena AI'"
-    :tabNames="[aiData.length > 0 && 'Positioning', 'Translation', 'JSON'].filter(val => val)">
+    :titleHtmlGenerator="() => 'Arena & Colosseum'"
+    :tabNames="[coloClasses.length > 0 && 'Colo Class', aiData.length > 0 && 'Positioning', 'AI Translation', 'JSON'].filter(val => val)">
+    <v-container fluid class="pt-1" slot="colo-class">
+      <h2 class="subheading">{{ unit.name }} can be used in the following Colosseum classes</h2>
+      <ul>
+        <li v-for="(coloClass, i) in coloClasses" :key="i">
+          <h3 class="subheading">{{ coloClass }}</h3>
+        </li>
+      </ul>
+    </v-container>
     <v-container fluid class="pa-0" slot="positioning">
       <v-layout row class="text-xs-center">
         <v-flex>
@@ -77,7 +85,7 @@
         </v-flex>
       </v-layout>
     </v-container>
-    <v-container fluid class="pa-0 unit-arena-stat-list" slot="translation">
+    <v-container fluid class="pa-0 unit-arena-stat-list" slot="ai-translation">
       <v-layout v-if="aiData.length === 0">
         <v-flex>
           No arena data found.
@@ -95,8 +103,9 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 import DescriptionCardBase from '@/components/Multidex/DescriptionCardBase';
-import { getArenaPositionRecommendation, arenaConditionCodeToText } from '@/modules/core/units';
+import { getArenaPositionRecommendation, arenaConditionCodeToText, getColoClassUsage } from '@/modules/core/units';
 
 export default {
   props: {
@@ -111,6 +120,10 @@ export default {
     DescriptionCardBase,
   },
   computed: {
+    ...mapState('units', ['activeServer']),
+    coloClasses () {
+      return this.unit ? getColoClassUsage(+this.unit.cost, this.activeServer === 'gl') : [];
+    },
     aiData () {
       return (this.unit && Array.isArray(this.unit.ai)) ? this.unit.ai : [];
     },
