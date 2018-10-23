@@ -25,9 +25,21 @@
         </v-flex>
       </v-layout>
     </template>
-    <template slot="buff-table">
-      Buff Table
-    </template>
+    <v-container fluid class="pt-1" slot="buff-table">
+      <v-layout row v-if="numLevels > 1">
+        <v-flex xs4 md2 class="text-xs-center d-align-self-center">
+          Level: {{ levelIndex + 1 }}
+        </v-flex>
+        <v-flex>
+          <v-slider v-model="levelIndex" step="1" ticks min="0" :max="numLevels - 1"/>
+        </v-flex>
+      </v-layout>
+      <v-layout row>
+        <v-flex>
+          <buff-table :effects="currentBurstEffect" :showHeaders="true"/>
+        </v-flex>
+      </v-layout>
+    </v-container>
     <template slot="hitcounts">
       <v-expansion-panel v-if="hitCountData">
         <v-expansion-panel-content v-for="(d, i) in hitCountData" :key="i">
@@ -61,9 +73,25 @@
         No hitcount data found.
       </div>
     </template>
-    <template slot="buff-list">
-      Buff List
-    </template>
+    <v-container fluid class="pt-1" slot="buff-list" slot-scope="{ effects }">
+      <v-layout row v-if="numLevels > 1">
+        <v-flex xs4 md2 class="text-xs-center d-align-self-center">
+          Level: {{ levelIndex + 1 }}
+        </v-flex>
+        <v-flex>
+          <v-slider v-model="levelIndex" step="1" ticks min="0" :max="numLevels - 1"/>
+        </v-flex>
+      </v-layout>
+      <v-layout row>
+        <v-flex>
+          TODO: {{ effects }}
+          <span v-if="contextHandler">
+            <br>
+            Context: {{ contextHandler(effects[0], 0) }}
+          </span>
+        </v-flex>
+      </v-layout>
+    </v-container>
   </description-card-base>
 </template>
 

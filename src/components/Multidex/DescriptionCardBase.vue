@@ -27,7 +27,7 @@
         </slot>
       </section>
       <section slot="buff-list">
-        <slot name="buff-list" :activeTabIndex="activeTabIndex">
+        <slot name="buff-list" :activeTabIndex="activeTabIndex" :effects="effects">
           TODO: {{ effects }}
           <span v-if="contextHandler">
             <br>
