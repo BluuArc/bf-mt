@@ -7,6 +7,11 @@
         </v-flex>
       </v-layout>
       <v-layout row>
+        <v-flex>
+          <effects-card :burst="entry" :logger="logger"/>
+        </v-flex>
+      </v-layout>
+      <v-layout row>
         {{ entry }}
       </v-layout>
       <!-- <v-layout row>
@@ -36,6 +41,7 @@
 <script>
 import DialogContentMixin from '@/components/Multidex/DialogContentMixin';
 import GeneralInfoCard from '@/components/Multidex/Bursts/GeneralInfoCard';
+import EffectsCard from '@/components/Multidex/Bursts/EffectsCard';
 // import MiscellaneousCard from '@/components/Multidex/Items/MiscellaneousCard';
 // import UsageCard from '@/components/Multidex/Items/UsageCard';
 // import CraftingCard from '@/components/Multidex/Items/CraftingCard';
@@ -44,6 +50,7 @@ export default {
   mixins: [DialogContentMixin],
   components: {
     GeneralInfoCard,
+    EffectsCard,
     // MiscellaneousCard,
     // UsageCard,
     // CraftingCard,
