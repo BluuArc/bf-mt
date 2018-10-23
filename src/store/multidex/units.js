@@ -104,7 +104,7 @@ export default {
           genders = [],
         } = filters;
         // trim off the spaces of subsequent names
-        const names = name.split('|').filter((v, i) => i === 0 || v.trim()).map(n => n.toLowerCase());
+        const names = (name || '').split('|').filter((v, i) => i === 0 || v.trim()).map(n => n.toLowerCase());
         return keys.filter(key => {
           const entry = pageDb[key];
           const fitsName = (!name ? true : names.filter(n => entry.name.toLowerCase().includes(n)).length > 0);

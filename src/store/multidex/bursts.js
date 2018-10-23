@@ -85,7 +85,7 @@ export default {
           associatedUnits = '',
         } = filters;
         // trim off the spaces of subsequent names
-        const names = name.split('|').filter((v, i) => i === 0 || v.trim()).map(n => n.toLowerCase());
+        const names = (name || '').split('|').filter((v, i) => i === 0 || v.trim()).map(n => n.toLowerCase());
 
         const fitsTernary = (entryIsTrue = false, filterValue = '', { all, truthy, falsy }) => {
           return filterValue === all ||

@@ -2,14 +2,14 @@
   <dialog-content-base :entry="entry" :loadingEntryData="loadingEntryData">
     <v-container grid-list-lg>
       <v-layout row>
-        {{ entry }}
-      </v-layout>
-      <!-- <v-layout row>
         <v-flex>
-          <general-info-card :item="entry" :logger="logger"/>
+          <general-info-card :burst="entry" :logger="logger"/>
         </v-flex>
       </v-layout>
       <v-layout row>
+        {{ entry }}
+      </v-layout>
+      <!-- <v-layout row>
         <v-flex>
           <miscellaneous-card :item="entry" :logger="logger"/>
         </v-flex>
@@ -35,7 +35,7 @@
 
 <script>
 import DialogContentMixin from '@/components/Multidex/DialogContentMixin';
-// import GeneralInfoCard from '@/components/Multidex/Items/GeneralInfoCard';
+import GeneralInfoCard from '@/components/Multidex/Bursts/GeneralInfoCard';
 // import MiscellaneousCard from '@/components/Multidex/Items/MiscellaneousCard';
 // import UsageCard from '@/components/Multidex/Items/UsageCard';
 // import CraftingCard from '@/components/Multidex/Items/CraftingCard';
@@ -43,7 +43,7 @@ import DialogContentMixin from '@/components/Multidex/DialogContentMixin';
 export default {
   mixins: [DialogContentMixin],
   components: {
-    // GeneralInfoCard,
+    GeneralInfoCard,
     // MiscellaneousCard,
     // UsageCard,
     // CraftingCard,
