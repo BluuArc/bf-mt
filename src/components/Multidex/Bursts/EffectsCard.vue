@@ -73,6 +73,7 @@ import DescriptionCardBase from '@/components/Multidex/DescriptionCardBase';
 import CardTitleWithLink from '@/components/CardTitleWithLink';
 import BuffTable from '@/components/Multidex/BuffTable/MainTable';
 import HitCountTable from '@/components/Multidex/HitCountTable';
+import { getExtraAttacks } from '@/modules/core/units';
 import * as burstHelpers from '@/modules/core/bursts';
 
 export default {
@@ -176,10 +177,23 @@ export default {
     getNumHits (hitCountEntry) {
       return (hitCountEntry.frames && (hitCountEntry.frames['frame times'] || hitCountEntry.frames['hit dmg% distribution'] || []).length) || 0;
     },
+    async setExtraAttacks () {
+      this.extraAttacks = [];
+      if (this.associatedUnits.length === 0) {
+        return;
+      }
+
+      // NOTE: only uses first unit
+      const unit = await this.getUnit(this.burst.associated_units[0]);
+      const allExtraAttacks = await getExtraAttacks(unit);
+
+      this.extraAttacks = allExtraAttacks[this.burstType];
+    },
     async calculateBurstData () {
       this.hitCountData = null;
       
       await this.setBurstType();
+      await this.setExtraAttacks();
 
       const hitCountData = burstHelpers.getHitCountData(this.burst);
       this.extraAttackHitCountData = await burstHelpers.getExtraAttackHitCountData(this.burst, this.extraAttacks, this.burstType !== 'ubb' && this.associatedUnits.length > 0);
