@@ -164,4 +164,8 @@ export default {
     margin-bottom: 8px;
   }
 }
+
+img.unit-image {
+  max-width: 100%;
+}
 </style>
