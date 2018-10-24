@@ -84,11 +84,7 @@
       </v-layout>
       <v-layout row>
         <v-flex>
-          TODO: {{ effects }}
-          <span v-if="contextHandler">
-            <br>
-            Context: {{ contextHandler(effects[0], 0) }}
-          </span>
+          <buff-list :effects="effects" :contextHandler="contextHandler"/>
         </v-flex>
       </v-layout>
     </v-container>
@@ -100,6 +96,7 @@ import { mapState, mapActions, mapGetters } from 'vuex';
 import DescriptionCardBase from '@/components/Multidex/DescriptionCardBase';
 import CardTitleWithLink from '@/components/CardTitleWithLink';
 import BuffTable from '@/components/Multidex/BuffTable/MainTable';
+import BuffList from '@/components/Multidex/BuffList/BuffList';
 import HitCountTable from '@/components/Multidex/HitCountTable';
 import { getExtraAttacks } from '@/modules/core/units';
 import * as burstHelpers from '@/modules/core/bursts';
@@ -117,6 +114,7 @@ export default {
     DescriptionCardBase,
     CardTitleWithLink,
     BuffTable,
+    BuffList,
     HitCountTable,
   },
   computed: {

@@ -283,6 +283,7 @@ export default {
       });
     }, 500),
     syncUrlToLocalEnhancements () {
+      this.logger.debug(this.$route.query);
       if (this.$route.query.enhancements) {
         const enhancements = this.$route.query.enhancements.slice()
           .split('').map(char => spCodeToIndex(char));

@@ -28,11 +28,7 @@
       </section>
       <section slot="buff-list">
         <slot name="buff-list" :activeTabIndex="activeTabIndex" :effects="effects">
-          TODO: {{ effects }}
-          <span v-if="contextHandler">
-            <br>
-            Context: {{ contextHandler(effects[0], 0) }}
-          </span>
+          <buff-list :effects="effects" :contextHandler="contextHandler"/>
         </slot>
       </section>
       <section v-for="tab in extraTabConfig" :key="tab.slot" :slot="tab.slot">
@@ -48,6 +44,7 @@
 import BorderedTitledCard from '@/components/BorderedTitledCard';
 import CardTitleWithLink from '@/components/CardTitleWithLink';
 import BuffTable from '@/components/Multidex/BuffTable/MainTable';
+import BuffList from '@/components/Multidex/BuffList/BuffList';
 import CardTabsContainer from '@/components/CardTabsContainer';
 import JsonViewer from '@/components/JsonViewer';
 
@@ -96,6 +93,7 @@ export default {
     BorderedTitledCard,
     CardTitleWithLink,
     BuffTable,
+    BuffList,
     CardTabsContainer,
     JsonViewer,
   },
