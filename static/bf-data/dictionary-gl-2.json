@@ -1,4 +1,124 @@
 {
+  "MST_LEADERSKILLS_801092_NAME": {
+    "en": "Gelid Dominion",
+    "es": "Dominio gélido",
+    "id": "Dominion Dingin Sekali",
+    "pt": "Domínio Gélido",
+    "th": "เจลิด โดมิเนียน",
+    "vi": "Gelid Dominion"
+  },
+  "MST_LEADERSKILLS_801093_DESCRIPTION": {
+    "en": "30% boost to all parameters, greatly boosts BB gauge fill rate, greatly boosts BC, HC drop rate & greatly boosts BB Atk",
+    "es": "+30% a todos los parámetros y potencia notablemente la vel. de carga del indicador BB, la posibilidad de encontrar CB y CC y el ATQ de BB",
+    "id": "30% ekstra ke semua parameter, tambahan besar BB serang dan laju pengisian meteran BB, tambahan besar perolehan BC dan HC",
+    "pt": "Reforço de 30% em todos os parâmetros, grande reforço na taxa de preenchimento da Barra BB e na taxa de queda do BC e HC e no ATQ BB",
+    "th": "30% เพิ่มทุกค่าพลัง, เพิ่มอัตราการเติมบีบีเป็นจำนวนมากมาย, เพิ่มอัตราการดรอป BC และ HC อย่างมากมาย และเพิ่มบีบีโจมตีอย่างมาก",
+    "vi": "30% boost to all parameters, greatly boosts BB gauge fill rate, greatly boosts BC, HC drop rate & greatly boosts BB Atk"
+  },
+  "MST_LEADERSKILLS_801093_NAME": {
+    "en": "Boreal Ascendancy",
+    "es": "Ascendencia boreal",
+    "id": "Kekuasaan Utara",
+    "pt": "Domínio Boreal",
+    "th": "โบรีล แอสเซนดารี่",
+    "vi": "Boreal Ascendancy"
+  },
+  "MST_LEADERSKILLS_801094_DESCRIPTION": {
+    "en": "30% boost to max HP and Atk of all allies & greatly boosts Spark damage",
+    "es": "30% boost to max HP and Atk of all allies & greatly boosts Spark damage",
+    "id": "30% ekstra HP maks dan Serangan semua sekutu & amat menambah kerusakan Percikan",
+    "pt": "30% boost to max HP and Atk of all allies & greatly boosts Spark damage",
+    "th": "30% เพิ่ม HP สูงสุดและพลังโจมตีให้กับทีม, เพิ่มสปาร์คดาเมจอย่างมาก",
+    "vi": "30% boost to max HP and Atk of all allies & greatly boosts Spark damage"
+  },
+  "MST_LEADERSKILLS_801094_NAME": {
+    "en": "Gunnhildr's Chosen",
+    "es": "Gunnhildr's Chosen",
+    "id": "Pilihan Gunnhildr",
+    "pt": "Gunnhildr's Chosen",
+    "th": "กันไฮด์ โชเซ่น",
+    "vi": "Gunnhildr's Chosen"
+  },
+  "MST_LEADERSKILLS_801096_DESCRIPTION": {
+    "en": "12% boost to Exp received",
+    "es": "12% boost to Exp received",
+    "id": "12% ekstra Exp diterima",
+    "pt": "12% boost to Exp received",
+    "th": "12% เพิ่มค่าประสบการณ์ที่ได้รับ",
+    "vi": "12% boost to Exp received"
+  },
+  "MST_LEADERSKILLS_801096_NAME": {
+    "en": "Mark of Mazzaroth",
+    "es": "Mark of Mazzaroth",
+    "id": "Mark dari Mazzaroth",
+    "pt": "Mark of Mazzaroth",
+    "th": "มาร์ค ออฟ มาซซาร์โรท",
+    "vi": "Mark of Mazzaroth"
+  },
+  "MST_LEADERSKILLS_801097_DESCRIPTION": {
+    "en": "12% boost to Exp received & hugely boosts BC, HC, Zel, Karma, Item drop rate",
+    "es": "12% boost to Exp received & hugely boosts BC, HC, Zel, Karma, Item drop rate",
+    "id": "12% ekstra Exp diterima & amat menambah BC, HC, Zel, Karma, perolehan barang",
+    "pt": "12% boost to Exp received & hugely boosts BC, HC, Zel, Karma, Item drop rate",
+    "th": "12% เพิ่มค่าประสบการณ์ที่ได้รับ, เพิ่มอัตราการดรอป BC, HC, Zel, Karma และไอเทมอย่างมากมายมหาศาล",
+    "vi": "12% boost to Exp received & hugely boosts BC, HC, Zel, Karma, Item drop rate"
+  },
+  "MST_LEADERSKILLS_801097_NAME": {
+    "en": "Sigil of Mazzaroth",
+    "es": "Sigil of Mazzaroth",
+    "id": "Sigil dari Mazzaroth",
+    "pt": "Sigil of Mazzaroth",
+    "th": "ซิจิล ออฟ มาซซาร์โรท",
+    "vi": "Sigil of Mazzaroth"
+  },
+  "MST_LEADERSKILLS_801098_DESCRIPTION": {
+    "en": "12% boost to Exp received, greatly boosts BC, HC, Zel, Karma, Item drop rate & greatly boosts BB gauge fill rate",
+    "es": "12% boost to Exp received, greatly boosts BC, HC, Zel, Karma, Item drop rate & greatly boosts BB gauge fill rate",
+    "id": "12% ekstra Exp diterima, amat menambah BC, HC, Zel, Karma, perolehan barang & amat menambah laju pengisian meteran BB",
+    "pt": "12% boost to Exp received, greatly boosts BC, HC, Zel, Karma, Item drop rate & greatly boosts BB gauge fill rate",
+    "th": "12% เพิ่มค่าประสบการณ์ที่ได้รับ, เพิ่มอัตราการดรอป BC, HC, Zel, Karma และไอเทมอย่างมาก, เพิ่มอัตราการเติมบีบีเกจอย่างมาก",
+    "vi": "12% boost to Exp received, greatly boosts BC, HC, Zel, Karma, Item drop rate & greatly boosts BB gauge fill rate"
+  },
+  "MST_LEADERSKILLS_801098_NAME": {
+    "en": "Regalia of Mazzaroth",
+    "es": "Regalia of Mazzaroth",
+    "id": "Regalia dari Mazzaroth",
+    "pt": "Regalia of Mazzaroth",
+    "th": "เรกาเลีย ออฟ มาซซาร์โรท",
+    "vi": "Regalia of Mazzaroth"
+  },
+  "MST_LEADERSKILLS_801100_DESCRIPTION": {
+    "en": "Recovers HP of all Units every turn",
+    "es": "Recupera PS de todas las unidades en cada turno",
+    "id": "Memulihkan HP semua Unit tiap giliran",
+    "pt": "Recupera o HP de todas as unidades a cada turno",
+    "th": "ฟื้นฟู HP ของยูนิตทั้งหมดทุกเทิร์น",
+    "vi": "Phục hồi Thể lực của tất cả các Quái mỗi lượt"
+  },
+  "MST_LEADERSKILLS_801100_NAME": {
+    "en": "Song of Heavens",
+    "es": "Canción de los cielos",
+    "id": "Lagu Surga",
+    "pt": "Canção do Paraíso",
+    "th": "ซอง ออฟ เฮฟเว่น",
+    "vi": "Bài hát của thiên đường"
+  },
+  "MST_LEADERSKILLS_801101_DESCRIPTION": {
+    "en": "Recovers HP of all Units every turn & boost to BC drop rate",
+    "es": "Recupera PS de todas las unidades en cada turno y aumenta la posibilidad de conseguir CB",
+    "id": "Memulihkan HP semua Unit tiap giliran & menambah frekuensi perolehan BC",
+    "pt": "Recupera o HP de todas as unidades a cada turno e reforço no CB obtido",
+    "th": "ฟื้นฟู HP ของยูนิตทั้งหมดทุกเทิร์น และ เพิ่มค่าอัตราดรอป BC",
+    "vi": "Phục hồi Thể lực của tất cả các Quái mỗi lượt & tăng mức rơi Tinh thể cuộc chiến"
+  },
+  "MST_LEADERSKILLS_801101_NAME": {
+    "en": "Song of Heavens",
+    "es": "Canción de los cielos",
+    "id": "Lagu Surga",
+    "pt": "Canção do Paraíso",
+    "th": "ซอง ออฟ เฮฟเว่น",
+    "vi": "Bài hát của thiên đường"
+  },
   "MST_LEADERSKILLS_801102_DESCRIPTION": {
     "en": "Recovers HP of all units every turn, boost to BC drop rate & nullifies all status ailments",
     "es": "Recupera PS de todas las unidades en cada turno, aumenta la posibilidad de conseguir CB y anula las aflicciones de los estados",
@@ -3502,6 +3622,22 @@
     "pt": "Maverick Sigil",
     "th": "Maverick Sigil",
     "vi": "Maverick Sigil"
+  },
+  "MST_LEADERSKILLS_830628_DESCRIPTION": {
+    "en": "100% boost to all parameters, 100% boost to Atk when BB gauge is full, hugely boosts Spark damage, enormously boosts BB Atk & enormously boosts BB gauge each turn",
+    "es": "100% boost to all parameters, 100% boost to Atk when BB gauge is full, hugely boosts Spark damage, enormously boosts BB Atk & enormously boosts BB gauge each turn",
+    "id": "100% boost to all parameters, 100% boost to Atk when BB gauge is full, hugely boosts Spark damage, enormously boosts BB Atk & enormously boosts BB gauge each turn",
+    "pt": "100% boost to all parameters, 100% boost to Atk when BB gauge is full, hugely boosts Spark damage, enormously boosts BB Atk & enormously boosts BB gauge each turn",
+    "th": "100% boost to all parameters, 100% boost to Atk when BB gauge is full, hugely boosts Spark damage, enormously boosts BB Atk & enormously boosts BB gauge each turn",
+    "vi": "100% boost to all parameters, 100% boost to Atk when BB gauge is full, hugely boosts Spark damage, enormously boosts BB Atk & enormously boosts BB gauge each turn"
+  },
+  "MST_LEADERSKILLS_830628_NAME": {
+    "en": "Blighted Heart",
+    "es": "Blighted Heart",
+    "id": "Blighted Heart",
+    "pt": "Blighted Heart",
+    "th": "Blighted Heart",
+    "vi": "Blighted Heart"
   },
   "MST_LEADERSKILLS_840047_DESCRIPTION": {
     "en": "100% boost to Atk, 60% boost to Def, max HP of Thunder types, 10% damage reduction from Water, Thunder types, considerably reduces BB gauge required for BB & probable considerable reduction of BB gauge fill rate for 2 turns",
@@ -87139,94 +87275,6 @@
     "en": "Remuihl",
     "es": "Remuihl",
     "id": "Remuihl",
-    "pt": "Remuihl",
-    "th": "เรมัวห์",
-    "vi": "Remuihl"
-  },
-  "MST_MONSTERS_55263_NAME": {
-    "en": "Remuihl",
-    "es": "Remuihl",
-    "id": "Remuihl",
-    "pt": "Remuihl",
-    "th": "เรมัวห์",
-    "vi": "Remuihl"
-  },
-  "MST_MONSTERS_55264_NAME": {
-    "en": "Remuihl",
-    "es": "Remuihl",
-    "id": "Remuihl",
-    "pt": "Remuihl",
-    "th": "เรมูวห์",
-    "vi": "Remuihl"
-  },
-  "MST_MONSTERS_55265_NAME": {
-    "en": "Remuihl",
-    "es": "Remuihl",
-    "id": "Remuihl",
-    "pt": "Remuihl",
-    "th": "เรมุอิห์ล",
-    "vi": "Remuihl"
-  },
-  "MST_MONSTERS_55266_NAME": {
-    "en": "Remuihl",
-    "es": "Remuihl",
-    "id": "Remuihl",
-    "pt": "Remuihl",
-    "th": "เรมุอิห์ล",
-    "vi": "Remuihl"
-  },
-  "MST_MONSTERS_55267_NAME": {
-    "en": "Remuihl",
-    "es": "Remuihl",
-    "id": "Remuihl",
-    "pt": "Remuihl",
-    "th": "เรมุอิห์ล",
-    "vi": "Remuihl"
-  },
-  "MST_MONSTERS_55268_NAME": {
-    "en": "Remuihl",
-    "es": "Remuihl",
-    "id": "Remuihl",
-    "pt": "Remuihl",
-    "th": "เรมุอิห์ล",
-    "vi": "Remuihl"
-  },
-  "MST_MONSTERS_55269_NAME": {
-    "en": "Remuihl",
-    "es": "Remuihl",
-    "id": "Zazabis",
-    "pt": "Remuihl",
-    "th": "เรมูห์",
-    "vi": "Remuihl"
-  },
-  "MST_MONSTERS_55270_NAME": {
-    "en": "Remuihl",
-    "es": "Remuihl",
-    "id": "Zazabis",
-    "pt": "Remuihl",
-    "th": "เรมูห์",
-    "vi": "Remuihl"
-  },
-  "MST_MONSTERS_55271_NAME": {
-    "en": "Remuihl",
-    "es": "Remuihl",
-    "id": "Omega Behemoth",
-    "pt": "Remuihl",
-    "th": "เรมูห์",
-    "vi": "Remuihl"
-  },
-  "MST_MONSTERS_55272_NAME": {
-    "en": "Remuihl",
-    "es": "Remuihl",
-    "id": "Malaikat Onar Elsel",
-    "pt": "Remuihl",
-    "th": "เรมูห์",
-    "vi": "Remuihl"
-  },
-  "MST_MONSTERS_55273_NAME": {
-    "en": "Remuihl",
-    "es": "Remuihl",
-    "id": "NA (Takanotsume)",
     "pt": "Remuihl",
     "th": "เรมัวห์",
     "vi": "Remuihl"

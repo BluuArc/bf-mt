@@ -1,44 +1,4 @@
 {
-  "MST_SKILLS_2830298_NAME": {
-    "en": "Raygun Aria",
-    "es": "Raygun Aria",
-    "id": "Raygun Aria",
-    "pt": "Raygun Aria",
-    "th": "Raygun Aria",
-    "vi": "Raygun Aria"
-  },
-  "MST_SKILLS_2830317_DESCRIPTION": {
-    "en": "40 combo massive Earth attack on all foes, boosts Spark damage and enemies' Spark vulnerability for 3 turns & raises normal hit amount for 3 turns",
-    "es": "40 combo massive Earth attack on all foes, boosts Spark damage and enemies' Spark vulnerability for 3 turns & raises normal hit amount for 3 turns",
-    "id": "40 kombo serangan Bumi kuat ke semua musuh, 3 giliran menambah: kerusakan Percikan dan kelemahan musuh akan Percikan & jumlah pukulan normal",
-    "pt": "40 combo massive Earth attack on all foes, boosts Spark damage and enemies' Spark vulnerability for 3 turns & raises normal hit amount for 3 turns",
-    "th": "40 คอมโบ โจมตีด้วยธาตุดินอย่างรุนแรงใส่ศัตรูทั้งหมด, ศัตรูแพ้ทางติดสปาร์ค 3 เทิร์น, เพิ่มฮิต 3 เทิร์น",
-    "vi": "40 combo massive Earth attack on all foes, boosts Spark damage and enemies' Spark vulnerability for 3 turns & raises normal hit amount for 3 turns"
-  },
-  "MST_SKILLS_2830317_NAME": {
-    "en": "Khabayth Al'iiesar ",
-    "es": "Khabayth Al'iiesar ",
-    "id": "Khabayth Al'iiesar ",
-    "pt": "Khabayth Al'iiesar ",
-    "th": "แคบเบย์ธ อัลลิซาร์",
-    "vi": "Khabayth Al'iiesar "
-  },
-  "MST_SKILLS_2830327_DESCRIPTION": {
-    "en": "15 combo massive Earth attack on all foes (damage relative to remaining HP), hugely boosts BB Atk, boosts Atk relative to Def for 3 turns, great 3 turn Atk reduction & massive additional attack on all foes at turn's end",
-    "es": "15 combo massive Earth attack on all foes (damage relative to remaining HP), hugely boosts BB Atk, boosts Atk relative to Def for 3 turns, great 3 turn Atk reduction & massive additional attack on all foes at turn's end",
-    "id": "15 kombo serangan Bumi kuat ke semua musuh (kerusakan sesuai sisa HP), amat menambah BB Serang, menambah Serang sesuai Tahan 3 giliran, pengurangan besar Serangan 3 giliran & tambahan serangan masif ke semua musuh di akhir giliran",
-    "pt": "15 combo massive Earth attack on all foes (damage relative to remaining HP), hugely boosts BB Atk, boosts Atk relative to Def for 3 turns, great 3 turn Atk reduction & massive additional attack on all foes at turn's end",
-    "th": "15 คอมโบ โจมตีธาตุดินรุนแรงมหาศาล ใส่ศัตรูทั้งหมด (ความเสียหายขึ้นอยู่กับ HP ที่เหลือ), เพิ่มค่าอย่างสูงให้ โจมตี BB, เพิ่มค่า โจมตี ขึ้นอยู่กับค่า ป้องกัน นาน 3 เทิร์น,  3 เทิร์น ลดค่า โจมตี อย่างมาก และ โจมตีรุนแรงมหาศาลอีกครั้งใส่ศัตรูทั้งหมด เมื่อจบเทิร์น",
-    "vi": "15 combo massive Earth attack on all foes (damage relative to remaining HP), hugely boosts BB Atk, boosts Atk relative to Def for 3 turns, great 3 turn Atk reduction & massive additional attack on all foes at turn's end"
-  },
-  "MST_SKILLS_2830327_NAME": {
-    "en": "Hysteria: Soul Shatter",
-    "es": "Hysteria: Soul Shatter",
-    "id": "Ledakan Jiwa Tigris",
-    "pt": "Hysteria: Soul Shatter",
-    "th": "ฮิสทีเรีย: โซล แชทเตอร์",
-    "vi": "Hysteria: Soul Shatter"
-  },
   "MST_SKILLS_2830328_DESCRIPTION": {
     "en": "Massive Earth attack on single foe, massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Earth, Dark elemental damage for 3 turns, enormous 3 turns Atk reduction & massive additional damage at turn's end for 2 turns",
     "es": "Massive Earth attack on single foe, massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Earth, Dark elemental damage for 3 turns, enormous 3 turns Atk reduction & massive additional damage at turn's end for 2 turns",
@@ -406,6 +366,22 @@
     "pt": "Great Terra Seal",
     "th": "Great Terra Seal",
     "vi": "Great Terra Seal"
+  },
+  "MST_SKILLS_2830628_DESCRIPTION": {
+    "en": "25 combo massive Earth attack on all foes (25% active Pierce to Earth, Thunder types), enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts Spark damage for 5 turns, enormously boosts BB Atk for 5 turns, damage taken enormously boosts BB gauge for 5 turns & damage taken enormously restores HP for 3 turns",
+    "es": "25 combo massive Earth attack on all foes (25% active Pierce to Earth, Thunder types), enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts Spark damage for 5 turns, enormously boosts BB Atk for 5 turns, damage taken enormously boosts BB gauge for 5 turns & damage taken enormously restores HP for 3 turns",
+    "id": "25 combo massive Earth attack on all foes (25% active Pierce to Earth, Thunder types), enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts Spark damage for 5 turns, enormously boosts BB Atk for 5 turns, damage taken enormously boosts BB gauge for 5 turns & damage taken enormously restores HP for 3 turns",
+    "pt": "25 combo massive Earth attack on all foes (25% active Pierce to Earth, Thunder types), enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts Spark damage for 5 turns, enormously boosts BB Atk for 5 turns, damage taken enormously boosts BB gauge for 5 turns & damage taken enormously restores HP for 3 turns",
+    "th": "25 combo massive Earth attack on all foes (25% active Pierce to Earth, Thunder types), enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts Spark damage for 5 turns, enormously boosts BB Atk for 5 turns, damage taken enormously boosts BB gauge for 5 turns & damage taken enormously restores HP for 3 turns",
+    "vi": "25 combo massive Earth attack on all foes (25% active Pierce to Earth, Thunder types), enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts Spark damage for 5 turns, enormously boosts BB Atk for 5 turns, damage taken enormously boosts BB gauge for 5 turns & damage taken enormously restores HP for 3 turns"
+  },
+  "MST_SKILLS_2830628_NAME": {
+    "en": "Witherroot Ravage",
+    "es": "Witherroot Ravage",
+    "id": "Witherroot Ravage",
+    "pt": "Witherroot Ravage",
+    "th": "Witherroot Ravage",
+    "vi": "Witherroot Ravage"
   },
   "MST_SKILLS_2830_DESCRIPTION": {
     "en": "None",
@@ -87230,5 +87206,77 @@
     "pt": "Frenesi Espiritual",
     "th": "สปิริตเตด เฟรนซี่",
     "vi": "Điên cuồng mạnh mẽ"
+  },
+  "MST_SKILLS_810107_DESCRIPTION": {
+    "en": "15 combo powerful Fire, Dark attack on all foes & boosts Atk for 3 turns",
+    "es": "Combo grupal de 15 poderosos ataques ígneos y oscuros. Aumenta el ataque durante 3 turnos",
+    "id": "15 kombo serangan Api, Gelap kuat ke semua musuh & menambah Serangan untuk 3 giliran",
+    "pt": "Combo poderoso de 15 golpes de Fogo, Sombra em todos os inimigos e aumento no ATQ por 3 turnos",
+    "th": "15 คอมโบ โจมตีด้วยธาตุไฟและความมืดอย่างรุนแรงใส่ศัตรู และเพิ่มพลังโจมตี 3 เทิร์น",
+    "vi": "15 combo powerful Fire, Dark attack on all foes & boosts Atk for 3 turns"
+  },
+  "MST_SKILLS_810107_NAME": {
+    "en": "Savage Reave",
+    "es": "Segador salvaje",
+    "id": "Rampokan Orang Liar",
+    "pt": "Destruição Selvagem",
+    "th": "ซาเวจ รีฟ",
+    "vi": "Savage Reave"
+  },
+  "MST_SKILLS_810108_DESCRIPTION": {
+    "en": "20 combo powerful Fire, Dark attack on all foes, hugely boosts own Atk and Spark damage for 3 turns, hugely boosts all elemental damage for 3 turns & hugely boosts BB Atk for 3 turns",
+    "es": "20 combo powerful Fire, Dark attack on all foes, hugely boosts own Atk and Spark damage for 3 turns, hugely boosts all elemental damage for 3 turns & hugely boosts BB Atk for 3 turns",
+    "id": "20 combo powerful Fire, Dark attack on all foes, hugely boosts own Atk and Spark damage for 3 turns, hugely boosts all elemental damage for 3 turns & hugely boosts BB Atk for 3 turns",
+    "pt": "20 combo powerful Fire, Dark attack on all foes, hugely boosts own Atk and Spark damage for 3 turns, hugely boosts all elemental damage for 3 turns & hugely boosts BB Atk for 3 turns",
+    "th": "20 combo powerful Fire, Dark attack on all foes, hugely boosts own Atk and Spark damage for 3 turns, hugely boosts all elemental damage for 3 turns & hugely boosts BB Atk for 3 turns",
+    "vi": "20 combo powerful Fire, Dark attack on all foes, hugely boosts own Atk and Spark damage for 3 turns, hugely boosts all elemental damage for 3 turns & hugely boosts BB Atk for 3 turns"
+  },
+  "MST_SKILLS_810108_NAME": {
+    "en": "Dread Reave",
+    "es": "Dread Reave",
+    "id": "Perampokan Ngeri",
+    "pt": "Dread Reave",
+    "th": "เดรด รีฟ",
+    "vi": "Dread Reave"
+  },
+  "MST_SKILLS_810147_DESCRIPTION": {
+    "en": "16 combo Fire attack on single foe, casts taunt, massively boosts own Def & additional massive damage dealing effect for 1 turn",
+    "es": "Combo individual de 16 ataques ígneos. Aturde, aumenta enormemente la propia DEF y aplica un efecto de daño masivo adicional por 1 turno",
+    "id": "16 kombo serangan Api ke 1 musuh, Mengejek, tambahan masif untuk Pertahanan sendiri & memberikan efek kerusakan masif 1 giliran",
+    "pt": "Combo de 16 golpes de Fogo em um único alvo, reforço massivo na DEF e efeito de dano massivo por 1 rodada",
+    "th": "16 คอมโบ โจมตีศัตรู 1 ตัวด้วยธาตุไฟ ร่ายยั่วยุ เพิ่มพลังป้องกันให้ตนเองอย่างมหาศาล และ ผล ความเสียหายเพิ่มเติมมหาศาล นาน 1 เทิร์น",
+    "vi": "16 combo Fire attack on single foe, casts taunt, massively boosts own Def & additional massive damage dealing effect for 1 turn"
+  },
+  "MST_SKILLS_810147_NAME": {
+    "en": "Titan's Fury",
+    "es": "Furia titánica",
+    "id": "Kemarahan Titan",
+    "pt": "Fúria do Titã",
+    "th": "ไททัน ฟิวรี่",
+    "vi": "Titan's Fury"
+  },
+  "MST_SKILLS_810148_DESCRIPTION": {
+    "en": "5 combo massive Fire attack on single foe, activates Taunt and massively boosts own Def for 1 turn, boosts damage reduction for 1 turn when guarding, 10% damage reduction from all elemental types for 1 turn, adds probable evasion for 1 turn & damage taken enormously boosts BB gauge for 1 turn",
+    "es": "5 combo massive Fire attack on single foe, activates Taunt and massively boosts own Def for 1 turn, boosts damage reduction for 1 turn when guarding, 10% damage reduction from all elemental types for 1 turn, adds probable evasion for 1 turn & damage taken enormously boosts BB gauge for 1 turn",
+    "id": "5 combo massive Fire attack on single foe, activates Taunt and massively boosts own Def for 1 turn, boosts damage reduction for 1 turn when guarding, 10% damage reduction from all elemental types for 1 turn, adds probable evasion for 1 turn & damage taken enormously boosts BB gauge for 1 turn",
+    "pt": "5 combo massive Fire attack on single foe, activates Taunt and massively boosts own Def for 1 turn, boosts damage reduction for 1 turn when guarding, 10% damage reduction from all elemental types for 1 turn, adds probable evasion for 1 turn & damage taken enormously boosts BB gauge for 1 turn",
+    "th": "5 combo massive Fire attack on single foe, activates Taunt and massively boosts own Def for 1 turn, boosts damage reduction for 1 turn when guarding, 10% damage reduction from all elemental types for 1 turn, adds probable evasion for 1 turn & damage taken enormously boosts BB gauge for 1 turn",
+    "vi": "5 combo massive Fire attack on single foe, activates Taunt and massively boosts own Def for 1 turn, boosts damage reduction for 1 turn when guarding, 10% damage reduction from all elemental types for 1 turn, adds probable evasion for 1 turn & damage taken enormously boosts BB gauge for 1 turn"
+  },
+  "MST_SKILLS_810148_NAME": {
+    "en": "Champion's Furor",
+    "es": "Champion's Furor",
+    "id": "Champion's Furor",
+    "pt": "Champion's Furor",
+    "th": "Champion's Furor",
+    "vi": "Champion's Furor"
+  },
+  "MST_SKILLS_810176_DESCRIPTION": {
+    "en": "13 combo powerful Fire attack on all foes, enormously boosts critical hit rate and boosts critical hit damage for 3 turns & probable great 1 turn Atk, Def reduction",
+    "es": "13 combo powerful Fire attack on all foes, enormously boosts critical hit rate and boosts critical hit damage for 3 turns & probable great 1 turn Atk, Def reduction",
+    "id": "13 kombo serangan Api kuat ke semua musuh, ekstra jumbo frekuensi pukulan ampuh, menambah kerusakan ampuh 3 giliran, kans pengurangan besar 1 giliran Serang, Tahan",
+    "pt": "13 combo powerful Fire attack on all foes, enormously boosts critical hit rate and boosts critical hit damage for 3 turns & probable great 1 turn Atk, Def reduction",
+    "th": "13 คอมโบ โจมตีธาตุไฟอย่างแรง ใส่ศัตรูทั้งหมด, เพิ่มค่าอย่างมหาศาลให้ อัตราเกิดคริติคอล กับ เพิ่มค่า ความเสียหายคริติคอล นาน 3 เทิร์น และ มีโอกาส 1 เทิร์น ลดค่า โจมตี, ป้องกัน อย่างมาก",
+    "vi": "13 combo powerful Fire attack on all foes, enormously boosts critical hit rate and boosts critical hit damage for 3 turns & probable great 1 turn Atk, Def reduction"
   }
 }

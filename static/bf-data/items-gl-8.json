@@ -3004,6 +3004,74 @@
       }
     ]
   },
+  "801016": {
+    "desc": "A brightly gleaming stone containing trace amounts of Faefire.",
+    "id": 801016,
+    "max_stack": 99,
+    "name": "Fae Blessing ",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_801016.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 819190,
+        "name": "Blaze Blossom"
+      }
+    ]
+  },
+  "801017": {
+    "desc": "An eerily glowing stone containing trace amounts of Void. ",
+    "id": 801017,
+    "max_stack": 99,
+    "name": "Void Stone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_801017.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 819189,
+        "name": "Corrupted Blossom"
+      }
+    ]
+  },
+  "801018": {
+    "desc": "Slightly hot to the touch, brilliant hues of gold and red flame dance within this mineral containing concentrated Faefire.",
+    "id": 801018,
+    "max_stack": 99,
+    "name": "Fae Blazing",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_801016.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 819176,
+        "name": "Blaze Blossom EX"
+      }
+    ]
+  },
+  "801019": {
+    "desc": "Ghostly hues of purple and white swirl within this mineral containing concentrated Void. ",
+    "id": 801019,
+    "max_stack": 99,
+    "name": "Void Gem",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_801017.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 819177,
+        "name": "Corrupted Blossom EX"
+      }
+    ]
+  },
   "801101": {
     "desc": "The veiled drop of Akachi, overflowing with cosmic energy.",
     "id": 801101,
@@ -16608,176 +16676,6 @@
         "passive id": "34"
       },
       {
-        "bc drop% for spark": 40,
-        "damage% for spark": 80,
-        "hc drop% for spark": 25,
-        "passive id": "31"
-      }
-    ],
-    "id": 819171,
-    "max_stack": 1,
-    "name": "Lucky Crescent",
-    "raid": false,
-    "rarity": 6,
-    "sell_price": 30000,
-    "sphere type": 3,
-    "sphere type text": "Drop",
-    "thumbnail": "sphere_thum_819171.png",
-    "type": "sphere",
-    "usage": [
-      {
-        "id": 819173,
-        "name": "Yue'yuan"
-      }
-    ],
-    "associated_units": [
-      "30446",
-      "30447"
-    ]
-  },
-  "819172": {
-    "desc": "25% boost to all parameters, reduces BB gauge required for BB, damage taken boosts BB gauge",
-    "effect": [
-      {
-        "atk% buff": 25,
-        "def% buff": 25,
-        "hp% buff": 25,
-        "passive id": "1",
-        "rec% buff": 25
-      },
-      {
-        "bc fill when attacked high": 2,
-        "bc fill when attacked low": 1,
-        "bc fill when attacked%": 100,
-        "passive id": "25"
-      },
-      {
-        "passive id": "48",
-        "reduced bb bc cost%": 15
-      }
-    ],
-    "id": 819172,
-    "max_stack": 1,
-    "name": "Gibbous Trinket",
-    "raid": false,
-    "rarity": 6,
-    "recipe": {
-      "karma": "300000",
-      "materials": [
-        {
-          "count": 55,
-          "id": 800010,
-          "name": "Moonlit Essence"
-        },
-        {
-          "count": 55,
-          "id": 800011,
-          "name": "Spice Pouch"
-        },
-        {
-          "count": 55,
-          "id": 800012,
-          "name": "Moon Bug"
-        }
-      ]
-    },
-    "sell_price": 30000,
-    "sphere type": 6,
-    "sphere type text": "BB Gauge",
-    "thumbnail": "sphere_thum_819172.png",
-    "type": "sphere",
-    "usage": [
-      {
-        "id": 819173,
-        "name": "Yue'yuan"
-      }
-    ],
-    "associated_units": [
-      "41036",
-      "41037",
-      "60497",
-      "840437",
-      "840438"
-    ]
-  },
-  "819173": {
-    "desc": "45% boost to all parameters, reduces BB gauge required for BB, damage taken boosts BB gauge, greatly boosts BC, HC, Item, Karma, and Zel drop rates, considerably boosts Spark damage & Spark damage considerably boosts BC, HC drop rates",
-    "effect": [
-      {
-        "atk% buff": 45,
-        "def% buff": 45,
-        "hp% buff": 45,
-        "passive id": "1",
-        "rec% buff": 45
-      },
-      {
-        "bc fill when attacked high": 3,
-        "bc fill when attacked low": 2,
-        "bc fill when attacked%": 100,
-        "passive id": "25"
-      },
-      {
-        "passive id": "48",
-        "reduced bb bc cost%": 25
-      },
-      {
-        "bc drop rate% buff": 35,
-        "hc drop rate% buff": 35,
-        "item drop rate% buff": 5,
-        "karma drop rate% buff": 50,
-        "passive id": "19",
-        "zel drop rate% buff": 50
-      },
-      {
-        "bc drop% for spark": 50,
-        "damage% for spark": 100,
-        "hc drop% for spark": 35,
-        "passive id": "31"
-      }
-    ],
-    "id": 819173,
-    "max_stack": 1,
-    "name": "Yue'yuan",
-    "raid": false,
-    "rarity": 7,
-    "recipe": {
-      "karma": "300000",
-      "materials": [
-        {
-          "count": 1,
-          "id": 819172,
-          "name": "Gibbous Trinket"
-        },
-        {
-          "count": 1,
-          "id": 819171,
-          "name": "Lucky Crescent"
-        }
-      ]
-    },
-    "sell_price": 50000,
-    "sphere type": 14,
-    "sphere type text": "Special",
-    "thumbnail": "sphere_thum_819173.png",
-    "type": "sphere",
-    "usage": []
-  },
-  "819174": {
-    "desc": "Enormously boosts Atk, Def relative to lost HP, hugely boosts critical damage, 150% boost to Spark damage, boosts damage against status afflicted foes & enormously boosts BB gauge each turn",
-    "effect": [
-      {
-        "atk% base buff": 100,
-        "atk% extra buff based on hp": 300,
-        "buff proportional to hp": "lost",
-        "def% base buff": 50,
-        "def% extra buff based on hp": 150,
-        "passive id": "46"
-      },
-      {
-        "crit multiplier%": 150,
-        "passive id": "34"
-      },
-      {
         "damage% for spark": 150,
         "passive id": "31"
       },
@@ -16888,6 +16786,143 @@
       "840438",
       "860437",
       "860438"
+    ]
+  },
+  "819176": {
+    "desc": "55% boost to Atk, max HP of Fire types, 150% boost to Spark damage, raises Atk parameter limits to 170000, Spark damage restores HP & adds huge boost to Spark damage of Fire types for 3 turns effect to SBB",
+    "effect": [
+      {
+        "atk% buff": 55,
+        "elements buffed": [
+          "fire"
+        ],
+        "hp% buff": 55,
+        "passive id": "2"
+      },
+      {
+        "damage% for spark": 150,
+        "passive id": "31"
+      },
+      {
+        "passive id": "66",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10015",
+            "unknown proc param": "100,3,0,1,0,0,0,0,0,0"
+          }
+        ]
+      },
+      {
+        "increase atk cap": 170000,
+        "passive id": "143"
+      },
+      {
+        "heal on spark high": 600,
+        "heal on spark low": 400,
+        "heal on spark%": 100,
+        "passive id": "101"
+      }
+    ],
+    "id": 819176,
+    "max_stack": 1,
+    "name": "Blaze Blossom EX",
+    "raid": false,
+    "rarity": 7,
+    "recipe": {
+      "karma": "5000000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 819190,
+          "name": "Blaze Blossom"
+        },
+        {
+          "count": 25,
+          "id": 801018,
+          "name": "Fae Blazing"
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 11,
+    "sphere type text": "Spark",
+    "thumbnail": "sphere_thum_819176.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "30546",
+      "810108",
+      "840438",
+      "860167"
+    ]
+  },
+  "819177": {
+    "desc": "55% boost to Def, max HP of Dark types, considerably reduces BB gauge required for BB, probable 25% reduction of damage taken, hugely boosts Atk when BB gauge is full & fills BB to max when damage dealt has exceeded certain amount",
+    "effect": [
+      {
+        "def% buff": 55,
+        "elements buffed": [
+          "dark"
+        ],
+        "hp% buff": 55,
+        "passive id": "2"
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 25
+      },
+      {
+        "dmg reduction chance%": 30,
+        "dmg reduction%": 25,
+        "passive id": "14"
+      },
+      {
+        "atk% buff": 100,
+        "bb gauge above % buff requirement": 100,
+        "passive id": "30"
+      },
+      {
+        "damage dealt threshold activation": 50000,
+        "increase bb gauge": 0,
+        "passive id": "81"
+      }
+    ],
+    "id": 819177,
+    "max_stack": 1,
+    "name": "Corrupted Blossom EX",
+    "raid": false,
+    "rarity": 7,
+    "recipe": {
+      "karma": "5000000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 819189,
+          "name": "Corrupted Blossom"
+        },
+        {
+          "count": 25,
+          "id": 801019,
+          "name": "Void Gem"
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 6,
+    "sphere type text": "BB Gauge",
+    "thumbnail": "sphere_thum_819177.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
     ]
   },
   "819178": {
@@ -17277,6 +17312,206 @@
       "850018",
       "850148",
       "860338"
+    ]
+  },
+  "819189": {
+    "desc": "40% boost to Def, max HP of Dark types, considerably reduces BB gauge required for BB, probable 25% reduction of damage taken, considerably boosts Atk when BB gauge is full & fills BB to max when damage dealt has exceeded certain amount",
+    "effect": [
+      {
+        "def% buff": 40,
+        "elements buffed": [
+          "dark"
+        ],
+        "hp% buff": 40,
+        "passive id": "2"
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 20
+      },
+      {
+        "dmg reduction chance%": 30,
+        "dmg reduction%": 25,
+        "passive id": "14"
+      },
+      {
+        "atk% buff": 90,
+        "bb gauge above % buff requirement": 100,
+        "passive id": "30"
+      },
+      {
+        "damage dealt threshold activation": 50000,
+        "increase bb gauge": 0,
+        "passive id": "81"
+      }
+    ],
+    "id": 819189,
+    "max_stack": 1,
+    "name": "Corrupted Blossom",
+    "raid": false,
+    "rarity": 6,
+    "recipe": {
+      "karma": "200000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 819198,
+          "name": "Flower of the Vale"
+        },
+        {
+          "count": 1,
+          "id": 801017,
+          "name": "Void Stone"
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 6,
+    "sphere type text": "BB Gauge",
+    "thumbnail": "sphere_thum_819177.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 819177,
+        "name": "Corrupted Blossom EX"
+      }
+    ],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
+  },
+  "819190": {
+    "desc": "40% boost to Atk, max HP of Fire types, 120% boost to Spark damage, raises Atk parameter limits to 160000, Spark damage restores HP & adds huge boost to Spark damage of Fire types for 3 turns effect to SBB",
+    "effect": [
+      {
+        "atk% buff": 40,
+        "elements buffed": [
+          "fire"
+        ],
+        "hp% buff": 40,
+        "passive id": "2"
+      },
+      {
+        "damage% for spark": 120,
+        "passive id": "31"
+      },
+      {
+        "passive id": "66",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10015",
+            "unknown proc param": "100,3,0,1,0,0,0,0,0,0"
+          }
+        ]
+      },
+      {
+        "increase atk cap": 160000,
+        "passive id": "143"
+      },
+      {
+        "heal on spark high": 600,
+        "heal on spark low": 400,
+        "heal on spark%": 100,
+        "passive id": "101"
+      }
+    ],
+    "id": 819190,
+    "max_stack": 1,
+    "name": "Blaze Blossom",
+    "raid": false,
+    "rarity": 6,
+    "recipe": {
+      "karma": "200000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 819198,
+          "name": "Flower of the Vale"
+        },
+        {
+          "count": 1,
+          "id": 801016,
+          "name": "Fae Blessing "
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 11,
+    "sphere type text": "Spark",
+    "thumbnail": "sphere_thum_819176.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 819176,
+        "name": "Blaze Blossom EX"
+      }
+    ],
+    "associated_units": [
+      "30546",
+      "810108",
+      "840438",
+      "860167"
+    ]
+  },
+  "819198": {
+    "desc": "30% boost to all parameters of Fire, Dark types, slightly reduces BB gauge required for BB, considerably boosts Atk when BB gauge is full, 100% boost to Spark damage & raises Atk parameter limits to 150000",
+    "effect": [
+      {
+        "atk% buff": 30,
+        "def% buff": 30,
+        "elements buffed": [
+          "fire",
+          "dark"
+        ],
+        "hp% buff": 30,
+        "passive id": "2",
+        "rec% buff": 30
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 15
+      },
+      {
+        "atk% buff": 80,
+        "bb gauge above % buff requirement": 100,
+        "passive id": "30"
+      },
+      {
+        "damage% for spark": 100,
+        "passive id": "31"
+      },
+      {
+        "increase atk cap": 150000,
+        "passive id": "143"
+      }
+    ],
+    "id": 819198,
+    "max_stack": 1,
+    "name": "Flower of the Vale",
+    "raid": false,
+    "rarity": 6,
+    "sell_price": 30000,
+    "sphere type": 14,
+    "sphere type text": "Special",
+    "thumbnail": "sphere_thum_819175.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 819189,
+        "name": "Corrupted Blossom"
+      },
+      {
+        "id": 819190,
+        "name": "Blaze Blossom"
+      }
     ]
   },
   "819901": {
