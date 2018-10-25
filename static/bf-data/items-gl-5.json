@@ -319,5 +319,52 @@
     "thumbnail": "item_thum_22300.png",
     "type": "consumable",
     "usage": []
+  },
+  "5008000": {
+    "desc": "Adds the following effects to LS:<br>150% boost to Atk and 120% boost to Def, Rec, max HP when 2 or more elements are present, 10% damage reduction & raises Atk parameter limits to 180000",
+    "effect": [
+      {
+        "unknown passive id": "107",
+        "unknown passive params": "41,2$150$120$120$0$120"
+      },
+      {
+        "unknown passive id": "107",
+        "unknown passive params": "8,10"
+      },
+      {
+        "unknown passive id": "107",
+        "unknown passive params": "143,180000"
+      }
+    ],
+    "id": 5008000,
+    "max_stack": 1,
+    "name": "Otherworldly Paradigm",
+    "raid": false,
+    "rarity": 7,
+    "sell_price": 0,
+    "thumbnail": "sphere_thum_1_8.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "5008001": {
+    "desc": "150% boost to Atk, 100% boost to Def, Rec, max HP & adds “Final Embrace” effect to BB/SBB",
+    "effect": [
+      {
+        "atk% buff": 120,
+        "crit% buff": 100,
+        "def% buff": 100,
+        "passive id": "1",
+        "rec% buff": 100
+      }
+    ],
+    "id": 5008001,
+    "max_stack": 1,
+    "name": "Final Embrace",
+    "raid": false,
+    "rarity": 7,
+    "sell_price": 0,
+    "thumbnail": "sphere_thum_819175.png",
+    "type": "sphere",
+    "usage": []
   }
 }

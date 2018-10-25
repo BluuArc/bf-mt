@@ -3004,6 +3004,74 @@
       }
     ]
   },
+  "801016": {
+    "desc": "A brightly gleaming stone containing trace amounts of Faefire.",
+    "id": 801016,
+    "max_stack": 99,
+    "name": "Fae Blessing ",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_801016.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 819190,
+        "name": "Blaze Blossom"
+      }
+    ]
+  },
+  "801017": {
+    "desc": "An eerily glowing stone containing trace amounts of Void. ",
+    "id": 801017,
+    "max_stack": 99,
+    "name": "Void Stone",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_801017.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 819189,
+        "name": "Corrupted Blossom"
+      }
+    ]
+  },
+  "801018": {
+    "desc": "Slightly hot to the touch, brilliant hues of gold and red flame dance within this mineral containing concentrated Faefire.",
+    "id": 801018,
+    "max_stack": 99,
+    "name": "Fae Blazing",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_801016.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 819176,
+        "name": "Blaze Blossom EX"
+      }
+    ]
+  },
+  "801019": {
+    "desc": "Ghostly hues of purple and white swirl within this mineral containing concentrated Void. ",
+    "id": 801019,
+    "max_stack": 99,
+    "name": "Void Gem",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_801017.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 819177,
+        "name": "Corrupted Blossom EX"
+      }
+    ]
+  },
   "801101": {
     "desc": "The veiled drop of Akachi, overflowing with cosmic energy.",
     "id": 801101,
@@ -3115,6 +3183,72 @@
     "usage": [],
     "associated_units": [
       "860437"
+    ]
+  },
+  "802001": {
+    "desc": "Broken crystal pieces that radiates a warm power.",
+    "id": 802001,
+    "max_stack": 99,
+    "name": "Prismatic Crystallite",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_802001.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 819179,
+        "name": "Vellum of Salvation"
+      },
+      {
+        "id": 819180,
+        "name": "Vellum of Brilliance"
+      }
+    ],
+    "first_clear_missions": [
+      "8301271",
+      "8301272",
+      "8301273",
+      "8301274",
+      "8301275",
+      "8301276",
+      "8301291",
+      "8301292",
+      "8301293",
+      "8301301"
+    ]
+  },
+  "802002": {
+    "desc": "Luminous liquid in bottles radiating a warm power.",
+    "id": 802002,
+    "max_stack": 99,
+    "name": "Luminous Solvent",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_802002.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 819179,
+        "name": "Vellum of Salvation"
+      },
+      {
+        "id": 819180,
+        "name": "Vellum of Brilliance"
+      }
+    ],
+    "first_clear_missions": [
+      "8301271",
+      "8301272",
+      "8301273",
+      "8301274",
+      "8301275",
+      "8301276",
+      "8301291",
+      "8301292",
+      "8301293",
+      "8301301"
     ]
   },
   "818881": {
@@ -5770,6 +5904,7 @@
     ],
     "associated_units": [
       "30546",
+      "810108",
       "840438",
       "860167"
     ]
@@ -5834,6 +5969,7 @@
     ],
     "associated_units": [
       "30546",
+      "810108",
       "840438",
       "860167"
     ]
@@ -5898,6 +6034,7 @@
     "usage": [],
     "associated_units": [
       "30546",
+      "810108",
       "840438",
       "860167"
     ]
@@ -10088,6 +10225,7 @@
     ],
     "associated_units": [
       "30546",
+      "810108",
       "840438",
       "860167"
     ]
@@ -10160,6 +10298,7 @@
     ],
     "associated_units": [
       "30546",
+      "810108",
       "840438",
       "860167"
     ]
@@ -10232,6 +10371,7 @@
     "usage": [],
     "associated_units": [
       "30546",
+      "810108",
       "840438",
       "860167"
     ]
@@ -14027,6 +14167,7 @@
     "usage": [],
     "associated_units": [
       "30546",
+      "810108",
       "840438",
       "860167"
     ]
@@ -14286,6 +14427,7 @@
     "usage": [],
     "associated_units": [
       "30546",
+      "810108",
       "840438",
       "860167"
     ]
@@ -14586,6 +14728,7 @@
     "usage": [],
     "associated_units": [
       "30546",
+      "810108",
       "840438",
       "860167"
     ]
@@ -16171,6 +16314,7 @@
     "usage": [],
     "associated_units": [
       "30546",
+      "810108",
       "840438",
       "840587",
       "840588",
@@ -16644,6 +16788,387 @@
       "860438"
     ]
   },
+  "819176": {
+    "desc": "55% boost to Atk, max HP of Fire types, 150% boost to Spark damage, raises Atk parameter limits to 170000, Spark damage restores HP & adds huge boost to Spark damage of Fire types for 3 turns effect to SBB",
+    "effect": [
+      {
+        "atk% buff": 55,
+        "elements buffed": [
+          "fire"
+        ],
+        "hp% buff": 55,
+        "passive id": "2"
+      },
+      {
+        "damage% for spark": 150,
+        "passive id": "31"
+      },
+      {
+        "passive id": "66",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10015",
+            "unknown proc param": "100,3,0,1,0,0,0,0,0,0"
+          }
+        ]
+      },
+      {
+        "increase atk cap": 170000,
+        "passive id": "143"
+      },
+      {
+        "heal on spark high": 600,
+        "heal on spark low": 400,
+        "heal on spark%": 100,
+        "passive id": "101"
+      }
+    ],
+    "id": 819176,
+    "max_stack": 1,
+    "name": "Blaze Blossom EX",
+    "raid": false,
+    "rarity": 7,
+    "recipe": {
+      "karma": "5000000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 819190,
+          "name": "Blaze Blossom"
+        },
+        {
+          "count": 25,
+          "id": 801018,
+          "name": "Fae Blazing"
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 11,
+    "sphere type text": "Spark",
+    "thumbnail": "sphere_thum_819176.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "30546",
+      "810108",
+      "840438",
+      "860167"
+    ]
+  },
+  "819177": {
+    "desc": "55% boost to Def, max HP of Dark types, considerably reduces BB gauge required for BB, probable 25% reduction of damage taken, hugely boosts Atk when BB gauge is full & fills BB to max when damage dealt has exceeded certain amount",
+    "effect": [
+      {
+        "def% buff": 55,
+        "elements buffed": [
+          "dark"
+        ],
+        "hp% buff": 55,
+        "passive id": "2"
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 25
+      },
+      {
+        "dmg reduction chance%": 30,
+        "dmg reduction%": 25,
+        "passive id": "14"
+      },
+      {
+        "atk% buff": 100,
+        "bb gauge above % buff requirement": 100,
+        "passive id": "30"
+      },
+      {
+        "damage dealt threshold activation": 50000,
+        "increase bb gauge": 0,
+        "passive id": "81"
+      }
+    ],
+    "id": 819177,
+    "max_stack": 1,
+    "name": "Corrupted Blossom EX",
+    "raid": false,
+    "rarity": 7,
+    "recipe": {
+      "karma": "5000000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 819189,
+          "name": "Corrupted Blossom"
+        },
+        {
+          "count": 25,
+          "id": 801019,
+          "name": "Void Gem"
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 6,
+    "sphere type text": "BB Gauge",
+    "thumbnail": "sphere_thum_819177.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
+  },
+  "819178": {
+    "desc": "40% boost to all parameters, negates all status ailments and Atk, Def, Rec reductions, low probability of enormous damage reduction & restores HP each turn",
+    "effect": [
+      {
+        "atk% buff": 40,
+        "def% buff": 40,
+        "hp% buff": 40,
+        "passive id": "1",
+        "rec% buff": 40
+      },
+      {
+        "atk down resist%": 100,
+        "curse resist%": 100,
+        "def down resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "poison resist%": 100,
+        "rec down resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "passive id": "43",
+        "take 1 dmg%": 7
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 3000,
+        "turn heal low": 1500
+      }
+    ],
+    "id": 819178,
+    "max_stack": 1,
+    "name": "Vellum of Curses",
+    "raid": false,
+    "rarity": 5,
+    "sell_price": 30000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_819178.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 819179,
+        "name": "Vellum of Salvation"
+      }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "820577",
+      "820578",
+      "840438",
+      "860568"
+    ],
+    "first_clear_missions": [
+      "8301301"
+    ]
+  },
+  "819179": {
+    "desc": "45% boost to all parameters, considerably boosts BB Atk when HP is over 50%, negates all status ailments and Atk, Def, Rec reductions, low probability of enormous damage reduction & restores HP each turn",
+    "effect": [
+      {
+        "atk% buff": 45,
+        "def% buff": 45,
+        "hp% buff": 45,
+        "passive id": "1",
+        "rec% buff": 45
+      },
+      {
+        "bb atk% add": 200,
+        "hp threshold": 50,
+        "passive id": "103",
+        "sbb atk% add": 200,
+        "triggered when hp": "higher",
+        "ubb atk% add": 200
+      },
+      {
+        "atk down resist%": 100,
+        "curse resist%": 100,
+        "def down resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "poison resist%": 100,
+        "rec down resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "passive id": "43",
+        "take 1 dmg%": 10
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 3500,
+        "turn heal low": 2000
+      }
+    ],
+    "id": 819179,
+    "max_stack": 1,
+    "name": "Vellum of Salvation",
+    "raid": false,
+    "rarity": 6,
+    "recipe": {
+      "karma": "300000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 819178,
+          "name": "Vellum of Curses"
+        },
+        {
+          "count": 50,
+          "id": 802001,
+          "name": "Prismatic Crystallite"
+        },
+        {
+          "count": 50,
+          "id": 802002,
+          "name": "Luminous Solvent"
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_819179.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 819180,
+        "name": "Vellum of Brilliance"
+      }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "820577",
+      "820578",
+      "840438",
+      "860568"
+    ]
+  },
+  "819180": {
+    "desc": "50% boost to all parameters, boost all parameters when HP is full, hugely boosts BB Atk when HP is over 50%, negates all status ailments and Atk, Def, Rec reductions, low probability of enormous damage reduction & restores HP each turn",
+    "effect": [
+      {
+        "atk% buff": 50,
+        "def% buff": 50,
+        "hp% buff": 50,
+        "passive id": "1",
+        "rec% buff": 50
+      },
+      {
+        "atk% buff": 50,
+        "def% buff": 50,
+        "hp above % buff requirement": 100,
+        "passive id": "11",
+        "rec% buff": 50
+      },
+      {
+        "bb atk% add": 300,
+        "hp threshold": 50,
+        "passive id": "103",
+        "sbb atk% add": 300,
+        "triggered when hp": "higher",
+        "ubb atk% add": 300
+      },
+      {
+        "atk down resist%": 100,
+        "curse resist%": 100,
+        "def down resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "poison resist%": 100,
+        "rec down resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "passive id": "43",
+        "take 1 dmg%": 15
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 4000,
+        "turn heal low": 2500
+      }
+    ],
+    "id": 819180,
+    "max_stack": 1,
+    "name": "Vellum of Brilliance",
+    "raid": false,
+    "rarity": 7,
+    "recipe": {
+      "karma": "300000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 819179,
+          "name": "Vellum of Salvation"
+        },
+        {
+          "count": 70,
+          "id": 802001,
+          "name": "Prismatic Crystallite"
+        },
+        {
+          "count": 70,
+          "id": 802002,
+          "name": "Luminous Solvent"
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_819180.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "820577",
+      "820578",
+      "840438",
+      "860568"
+    ]
+  },
   "819181": {
     "desc": "35% boost to Atk and max HP, enormously boosts BB gauge each turn, considerably boosts BC drop rate & greatly restores HP each turn",
     "effect": [
@@ -16787,6 +17312,206 @@
       "850018",
       "850148",
       "860338"
+    ]
+  },
+  "819189": {
+    "desc": "40% boost to Def, max HP of Dark types, considerably reduces BB gauge required for BB, probable 25% reduction of damage taken, considerably boosts Atk when BB gauge is full & fills BB to max when damage dealt has exceeded certain amount",
+    "effect": [
+      {
+        "def% buff": 40,
+        "elements buffed": [
+          "dark"
+        ],
+        "hp% buff": 40,
+        "passive id": "2"
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 20
+      },
+      {
+        "dmg reduction chance%": 30,
+        "dmg reduction%": 25,
+        "passive id": "14"
+      },
+      {
+        "atk% buff": 90,
+        "bb gauge above % buff requirement": 100,
+        "passive id": "30"
+      },
+      {
+        "damage dealt threshold activation": 50000,
+        "increase bb gauge": 0,
+        "passive id": "81"
+      }
+    ],
+    "id": 819189,
+    "max_stack": 1,
+    "name": "Corrupted Blossom",
+    "raid": false,
+    "rarity": 6,
+    "recipe": {
+      "karma": "200000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 819198,
+          "name": "Flower of the Vale"
+        },
+        {
+          "count": 1,
+          "id": 801017,
+          "name": "Void Stone"
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 6,
+    "sphere type text": "BB Gauge",
+    "thumbnail": "sphere_thum_819177.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 819177,
+        "name": "Corrupted Blossom EX"
+      }
+    ],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "840437",
+      "840438"
+    ]
+  },
+  "819190": {
+    "desc": "40% boost to Atk, max HP of Fire types, 120% boost to Spark damage, raises Atk parameter limits to 160000, Spark damage restores HP & adds huge boost to Spark damage of Fire types for 3 turns effect to SBB",
+    "effect": [
+      {
+        "atk% buff": 40,
+        "elements buffed": [
+          "fire"
+        ],
+        "hp% buff": 40,
+        "passive id": "2"
+      },
+      {
+        "damage% for spark": 120,
+        "passive id": "31"
+      },
+      {
+        "passive id": "66",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10015",
+            "unknown proc param": "100,3,0,1,0,0,0,0,0,0"
+          }
+        ]
+      },
+      {
+        "increase atk cap": 160000,
+        "passive id": "143"
+      },
+      {
+        "heal on spark high": 600,
+        "heal on spark low": 400,
+        "heal on spark%": 100,
+        "passive id": "101"
+      }
+    ],
+    "id": 819190,
+    "max_stack": 1,
+    "name": "Blaze Blossom",
+    "raid": false,
+    "rarity": 6,
+    "recipe": {
+      "karma": "200000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 819198,
+          "name": "Flower of the Vale"
+        },
+        {
+          "count": 1,
+          "id": 801016,
+          "name": "Fae Blessing "
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 11,
+    "sphere type text": "Spark",
+    "thumbnail": "sphere_thum_819176.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 819176,
+        "name": "Blaze Blossom EX"
+      }
+    ],
+    "associated_units": [
+      "30546",
+      "810108",
+      "840438",
+      "860167"
+    ]
+  },
+  "819198": {
+    "desc": "30% boost to all parameters of Fire, Dark types, slightly reduces BB gauge required for BB, considerably boosts Atk when BB gauge is full, 100% boost to Spark damage & raises Atk parameter limits to 150000",
+    "effect": [
+      {
+        "atk% buff": 30,
+        "def% buff": 30,
+        "elements buffed": [
+          "fire",
+          "dark"
+        ],
+        "hp% buff": 30,
+        "passive id": "2",
+        "rec% buff": 30
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 15
+      },
+      {
+        "atk% buff": 80,
+        "bb gauge above % buff requirement": 100,
+        "passive id": "30"
+      },
+      {
+        "damage% for spark": 100,
+        "passive id": "31"
+      },
+      {
+        "increase atk cap": 150000,
+        "passive id": "143"
+      }
+    ],
+    "id": 819198,
+    "max_stack": 1,
+    "name": "Flower of the Vale",
+    "raid": false,
+    "rarity": 6,
+    "sell_price": 30000,
+    "sphere type": 14,
+    "sphere type text": "Special",
+    "thumbnail": "sphere_thum_819175.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 819189,
+        "name": "Corrupted Blossom"
+      },
+      {
+        "id": 819190,
+        "name": "Blaze Blossom"
+      }
     ]
   },
   "819901": {
@@ -25027,6 +25752,7 @@
       "30546",
       "710167",
       "710168",
+      "810108",
       "840438",
       "860167"
     ]
