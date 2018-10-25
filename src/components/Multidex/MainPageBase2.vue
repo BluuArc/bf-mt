@@ -146,11 +146,52 @@ export default {
     },
     // separate from isVisuallyInitializing
     isInternallyInitializing () {
-      return this.aggregatedLoadingState || this.inInitState || this.isStateLoading;
+      return (this.aggregatedLoadingState || this.inInitState || this.isStateLoading);
     },
     // separate from isVisuallyLoadingFromOptions
     isInternallyLoadingFromOptions () {
       return this.loadingFilters || this.loadingSorts;
+    },
+    searchResultCountText () {
+      return [`Showing ${this.allSortedEntries.length}`, this.mainModule.fullName, this.mainModule.fullName === 'Dictionary' ? 'Entries' : ''].join(' ');
+    },
+    sortPanelModel () { // used as input for expansion panel v-model
+      return this.showSortPanel ? 0 : -1;
+    },
+    dbSyncFunctions () {
+      if (!this.actionInfo) {
+        return {};
+      }
+
+      const syncFunctions = {};
+      this.pageModules.forEach(({name}) => {
+        syncFunctions[name] = this.actionInfo[name].dbSync;
+      });
+      return syncFunctions;
+    },
+    numPages () {
+      return Math.ceil(this.allSortedEntries.length / this.amountPerPage);
+    },
+    entriesToShow () {
+      const startIndex = this.pageIndex * this.amountPerPage;
+      return this.allSortedEntries.slice(startIndex, startIndex + this.amountPerPage);
+    },
+    hasNonNameFilters () {
+      // eslint-disable-next-line no-unused-vars
+      const { name, ...filterOptions } = this.filterOptions;
+      return filterHelper.hasFilters(filterOptions);
+    },
+    hasFilters () {
+      return !!this.filterOptions.name || this.hasNonNameFilters;
+    },
+    hasViewId () {
+      return !!this.viewId && this.pageDb.hasOwnProperty(this.viewId);
+    },
+    useAsyncSort () {
+      return Array.isArray(this.sortTypes);
+    },
+    filterOptionsUrl () {
+      return filterHelper.optionsToString(this.filterOptions);
     },
   },
   data () {
@@ -166,6 +207,12 @@ export default {
       allSortedEntries: [],
       filterKeys: [],
     };
+    const resultViewConfig = {
+      amountPerPage: 36,
+      pageIndex: 0,
+      paginationModel: 0,
+      filterHelper,
+    };
     return {
       sortOptions,
       filterOptions,
@@ -173,10 +220,14 @@ export default {
       isVisuallyInitializing: true,
       loadingFilters: false,
       loadingSorts: false,
-      isVisuallyLoadingFromOptions: true,
+      hasInitDb: false,
+      isVisuallyLoadingFromOptions: false,
+      ...resultViewConfig,
     };
   },
   methods: {
+    ...mapActions(['setActiveServer']),
+    ...mapMutations(['setHtmlOverflowDisableState']),
     setVisuallyInitializingDebounced: debounce(function (valueGetter) {
       const newValue = !!valueGetter();
       if (this.isVisuallyInitializing !== newValue) {
@@ -189,6 +240,38 @@ export default {
         this.isVisuallyLoadingFromOptions = newValue;
       }
     }, 500),
+    decrementPage () {
+      if (this.pageIndex <= 0) {
+        this.pageIndex = 0;
+      } else {
+        this.pageIndex -= 1;
+      }
+    },
+    incrementPage () {
+      if (this.pageIndex >= (this.numPages - 1)) {
+        this.pageIndex = this.numPages;
+      } else {
+        this.pageIndex += 1;
+      }
+    },
+    delayedPageIndexChecker: debounce(function () {
+      // case for when the user clicks faster than the page can check
+      if (this.pageIndex <= 0) {
+        this.pageIndex = 0;
+      } else if (this.pageIndex >= (this.numPages - 1)) {
+        this.pageIndex = this.numPages - 1;
+      }
+    }, 50),
+    initDb: debounce(async function () {
+      if (!this.hasRequiredModules) {
+        logger.warn('missing required modules');
+        this.hasInitDb = true;
+        return;
+      }
+      this.hasInitDb = true;
+
+
+    }),
   },
   watch: {
     isInternallyInitializing (newValue) {
@@ -197,6 +280,14 @@ export default {
         this.isVisuallyInitializing = newValue;
       } else {
         this.setVisuallyInitializingDebounced(() => this.isInternallyInitializing);
+        this.hasInitDb = false;
+        this.initDb();
+      }
+    },
+    hasInitDb (newValue) {
+      if (newValue && !this.isInternallyInitializing) {
+        this.setVisuallyInitializingDebounced(() => this.isInternallyInitializing);
+        // TODO: call apply filters
       }
     },
     isVisuallyInitializing (newValue) {
@@ -224,8 +315,9 @@ export default {
     this.filterHelper = filterHelper;
   },
   mounted () {
+    logger.debug('is internally initializing', this.isInternallyInitializing);
     if (!this.isInternallyInitializing) {
-      this.setVisuallyInitializingDebounced(() => this.isInternallyInitializing);
+      this.initDb();
     }
   },
 };
