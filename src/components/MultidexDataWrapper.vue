@@ -13,68 +13,26 @@
 <script>
 import { mapState, mapActions, mapMutations } from 'vuex';
 import { moduleInfo } from '@/store';
-import { servers } from '@/modules/constants';
 import { Logger } from '@/modules/Logger';
+import { generateStateInfo, generateActionInfo } from '@/modules/utils';
 
 const logger = new Logger({ prefix: '[MD-DATA-WRAPPER]' }); // eslint-disable-line no-unused-vars
 const multidexModules = moduleInfo.filter(m => m.type === 'multidex');
 export default {
+  props: {
+    isMain: {
+      type: Boolean,
+      default: false,
+    },
+  },
   computed: {
     ...mapState(['updateTimes', 'loadingState']),
     ...mapState('settings', ['activeServer']),
-    ...(() => {
-      // get state for each module
-      let fullStateMapping = {};
-      multidexModules.map(m => m.name).forEach(m => {
-        const stateMapping = {};
-        stateMapping[`${m}Data`] = 'pageDb';
-        stateMapping[`${m}NumEntries`] = 'numEntries';
-        stateMapping[`${m}IsLoading`] = 'isLoading';
-        stateMapping[`${m}CacheTimes`] = 'cacheTimes';
-        stateMapping[`${m}UpdateTimes`] = 'updateTimes';
-        stateMapping[`${m}LoadingMessage`] = 'loadingMessage';
-        stateMapping[`${m}FilterUrl`] = 'filterUrl';
-        stateMapping[`${m}SortOptions`] = 'sortOptions';
-
-        fullStateMapping = {
-          ...fullStateMapping,
-          ...mapState(m, stateMapping),
-        };
-      });
-      return fullStateMapping;
-    })(),
     stateInfo () {
-      const info = {};
-      multidexModules.forEach(({ name }) => {
-        info[name] = {
-          data: this[`${name}Data`],
-          numEntries: this[`${name}NumEntries`],
-          isLoading: this[`${name}IsLoading`],
-          cacheTimes: this[`${name}CacheTimes`],
-          updateTimes: this[`${name}UpdateTimes`],
-          loadingMessage: this[`${name}LoadingMessage`],
-          filterUrl: this[`${name}FilterUrl`],
-          sortOptions: this[`${name}SortOptions`],
-        };
-        info[name].hasUpdates = this.generateHasUpdatesEntry(info[name], name);
-        info[name].otherServers = this.generateOtherServersEntry(info[name]);
-      });
-      return info;
+      return generateStateInfo(this, multidexModules);
     },
     actionInfo () {
-      const info = {};
-      multidexModules.forEach(({ name }) => {
-        info[name] = {
-          update: this[`${name}DataUpdate`],
-          delete: this[`${name}DataDelete`],
-          filter: this[`${name}DataFilter`],
-          sort: this[`${name}DataSort`],
-          dbSync: this[`${name}DbSync`],
-          updateFilterUrl: this[`${name}FilterUpdate`],
-          updateSortOptions: this[`${name}SortUpdate`],
-        };
-      });
-      return info;
+      return generateActionInfo(this, multidexModules);
     },
     aggregatedInfo () {
       const isLoading = Object.values(this.stateInfo).reduce((acc, val) => acc || val.isLoading, false);
@@ -88,59 +46,16 @@ export default {
     aggregatedInfo: {
       deep: true,
       handler () {
-        this.setLoadingStateInVuex();
+        // only have the main component change the value
+        if (this.isMain) {
+          this.setLoadingStateInVuex();
+        }
       },
     },
   },
   methods: {
-    ...(() => {
-      // get actions for each module
-      let result = {};
-      multidexModules.map(m => m.name).forEach(m => {
-        const actionMapping = {};
-        actionMapping[`${m}DataUpdate`] = 'updateData';
-        actionMapping[`${m}DataDelete`] = 'deleteData';
-        actionMapping[`${m}DbSync`] = 'ensurePageDbSyncWithServer';
-        actionMapping[`${m}DataFilter`] = 'getFilteredKeys';
-        actionMapping[`${m}DataSort`] = 'getSortedKeys';
-
-        const mutationMapping = {};
-        mutationMapping[`${m}FilterUpdate`] = 'setFilterUrl';
-        mutationMapping[`${m}SortUpdate`] = 'setSortOptions';
-
-        result = {
-          ...result,
-          ...mapActions(m, actionMapping),
-          ...mapMutations(m, mutationMapping),
-        };
-      });
-      return result;
-    })(),
     ...mapMutations(['setLoadingState']),
     ...mapActions(['setLoadingStateDebounced']),
-    hasUpdates (moduleStateInfo, server, moduleName) {
-      const updateTimes = this.updateTimes;
-      // logger.debug(moduleStateInfo.updateTimes, server, moduleName, updateTimes);
-      return !!(
-        moduleStateInfo.updateTimes && updateTimes[moduleName] &&
-        moduleStateInfo.updateTimes[server] && updateTimes[moduleName][server] &&
-        (moduleStateInfo.numEntries[server] === 0 || new Date(updateTimes[moduleName][server]) > new Date(moduleStateInfo.updateTimes[server]))
-      );
-    },
-    generateHasUpdatesEntry (moduleStateInfo, moduleName) {
-      const entry = {};
-      servers.forEach(server => {
-        entry[server] = this.hasUpdates(moduleStateInfo, server, moduleName)
-          ? this.updateTimes[moduleName][server]
-          : false;
-      });
-      return entry;
-    },
-    generateOtherServersEntry (moduleStateInfo) {
-      const currentModuleEntryCounts = moduleStateInfo.numEntries;
-      // check if any other server has non-zero entries
-      return servers.filter(s => s !== this.activeServer && currentModuleEntryCounts[s] !== undefined &&currentModuleEntryCounts[s] > 0);
-    },
     setLoadingStateInVuex () {
       // keep on true as long as possible
       if (this.aggregatedInfo.isLoading) {

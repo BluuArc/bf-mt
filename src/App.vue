@@ -1,5 +1,5 @@
 <template>
-  <multidex-data-wrapper>
+  <multidex-data-wrapper :isMain="true">
     <v-app :dark="!lightMode" slot-scope="{ stateInfo, loadingState }">
       <v-navigation-drawer
         persistent

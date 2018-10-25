@@ -1,6 +1,9 @@
 import logger from '@/modules/Logger';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
+import { mapActions, mapMutations } from 'vuex';
+import { servers } from '@/modules/constants';
+import { moduleInfo } from '@/store';
 dayjs.extend(relativeTime);
 
 export function delay (time = 0) {
@@ -68,4 +71,88 @@ export function safeGet (obj = {}, path = [], defaultVal = undefined) {
     logger.error('error accessing prop', { obj, path, defaultVal }, err);
     return defaultVal;
   }
+}
+
+export const _stateInfoHelper = {
+  hasUpdates (moduleStateInfo, server, moduleName, updateTimes) {
+    // logger.debug(moduleStateInfo.updateTimes, server, moduleName, updateTimes);
+    return !!(
+      moduleStateInfo.updateTimes && updateTimes[moduleName] &&
+      moduleStateInfo.updateTimes[server] && updateTimes[moduleName][server] &&
+      (moduleStateInfo.numEntries[server] === 0 || new Date(updateTimes[moduleName][server]) > new Date(moduleStateInfo.updateTimes[server]))
+    );
+  },
+  generateHasUpdatesEntry (moduleStateInfo, moduleName, updateTimes) {
+    const entry = {};
+    servers.forEach(server => {
+      entry[server] = this.hasUpdates(moduleStateInfo, server, moduleName, updateTimes)
+        ? updateTimes[moduleName][server]
+        : false;
+    });
+    return entry;
+  },
+  generateOtherServersEntry (moduleStateInfo, activeServer) {
+    const currentModuleEntryCounts = moduleStateInfo.numEntries;
+    // check if any other server has non-zero entries
+    return servers.filter(s => s !== activeServer && currentModuleEntryCounts[s] !== undefined && currentModuleEntryCounts[s] > 0);
+  },
+};
+
+export function generateStateInfo (context, multidexModules = moduleInfo.filter(m => m.type === 'multidex')) {
+  const stateInfo = {};
+  if (context) {
+    multidexModules.forEach(({ name }) => {
+      const moduleState = context.$store.state[name];
+      stateInfo[name] = {
+        data: moduleState.pageDb,
+        numEntries: moduleState.numEntries,
+        isLoading: moduleState.isLoading,
+        cacheTimes: moduleState.cacheTimes,
+        updateTimes: moduleState.updateTimes,
+        loadingMessage: moduleState.loadingMessage,
+        filterUrl: moduleState.filterUrl,
+        sortOptions: moduleState.sortOptions,
+      };
+      stateInfo[name].hasUpdates = _stateInfoHelper.generateHasUpdatesEntry(stateInfo[name], name, context.updateTimes);
+      stateInfo[name].otherServers = _stateInfoHelper.generateOtherServersEntry(stateInfo[name], context.activeServer);
+    });
+  }
+
+  return stateInfo;
+}
+
+export function generateActionInfo (context, multidexModules = moduleInfo.filter(m => m.type === 'multidex')) {
+  const actionInfo = {};
+  if (context) {
+    const getActionForModule = (moduleName, methodName) => {
+      let result = { ...mapActions.call(context, moduleName, [methodName]) };
+      result = Object.values(result)[0];
+      if (typeof result === 'function') {
+        result = result.bind(context);
+      }
+      return result;
+    };
+
+    const getMutationForModule = (moduleName, methodName) => {
+      let result = { ...mapMutations.call(context, moduleName, [methodName]) };
+      result = Object.values(result)[0];
+      if (typeof result === 'function') {
+        result = result.bind(context);
+      }
+      return result;
+    };
+
+    multidexModules.forEach(({ name }) => {
+      actionInfo[name] = {
+        update: getActionForModule(name, 'updateData'),
+        delete: getActionForModule(name, 'deleteData'),
+        filter: getActionForModule(name, 'getFilteredKeys'),
+        sort: getActionForModule(name, 'getSortedKeys'),
+        dbSync: getActionForModule(name, 'ensurePageDbSyncWithServer'),
+        updateFilterUrl: getMutationForModule(name, 'setFilterUrl'),
+        updateSortOptions: getMutationForModule(name, 'setSortOptions'),
+      };
+    });
+  }
+  return actionInfo;
 }
