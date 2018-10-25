@@ -606,12 +606,13 @@ export default {
     setModuleLoadingState (loadState) {
       this.moduleLoadState = !!loadState;
     },
-    debounceApplyFilters: debounce(function () {
+    debounceApplyFilters: debounce(async function () {
       logger.debug('debounce apply filters');
       this.lastKnownFilters = filterHelper.optionsToString(this.filterOptions);
-      this.applyFilters();
+      await this.applyFilters();
       this.syncPageSortsToCache();
-    }, 1000),
+      this.loadingFilters = false;
+    }, 750),
     debounceApplySorts: debounce(function () {
       this.applySorts();
       this.syncPageSortsToCache();
@@ -827,7 +828,11 @@ export default {
           this.filterOptions.rarity = this.filterOptions.rarity.filter(val => val >= this.minRarity && val <= this.maxRarity);
         } else {
           this.syncLocalFiltersToUrlFilters();
-          this.debounceApplyFilters();
+          if (this.stateInfo[this.mainModule.name].filterUrl !== this.filterOptionsUrl) {
+            this.debounceApplyFilters();
+          } else {
+            this.loadingFilters = false;
+          }
         }
       },
     },

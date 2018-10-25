@@ -29,4 +29,10 @@ export default [
     component: MultidexPages.Bursts,
     props: defaultMultidexPropHandler,
   },
+  {
+    path: '/multidex/extra-skills',
+    name: 'Extra Skills',
+    component: MultidexPages.ExtraSkills,
+    props: defaultMultidexPropHandler,
+  },
 ];
