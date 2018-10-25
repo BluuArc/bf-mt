@@ -79,7 +79,7 @@ export default {
     getBranchNames: state => Object.keys(state.branches),
     getNumberOfNewCommits: state => (branches = Object.keys(state.branches)) => {
       const count = branches.map(branchName => state.countCache[branchName] || 0).reduce((acc, val) => acc + val, 0);
-      logger.debug('num new commits for', branches, count);
+      // logger.debug('num new commits for', branches, count);
       return count;
     },
   },

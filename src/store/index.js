@@ -33,7 +33,7 @@ export default new Vuex.Store({
   },
   state: {
     disableHtmlOverflow: false,
-    inInitState: false,
+    inInitState: true,
     updateTimes: {},
     loadingMessage: '',
     loadingState: false, // changed mostly by MultidexDataWrapper, accessed by all
