@@ -1,4 +1,4 @@
-import MainPageBase from '@/components/Multidex/MainPageBase2';
+import MainPageBase from '@/components/Multidex/MainPageBase';
 
 export default {
   props: ['query', 'viewId', 'server', 'filters'],
