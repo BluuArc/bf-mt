@@ -1,6 +1,7 @@
 <template>
   <v-container grid-list-sm class="multidex-page">
     <proc-selector
+      v-if="filterTypes.includes('procs')"
       :showSelector="showProcSelector"
       @toggleview="showProcSelector = $event"
       :isUnit="isUnit"
@@ -8,11 +9,18 @@
       :filterHelper="filterHelper"
     />
     <passive-selector
+      v-if="filterTypes.includes('passives')"
       :showSelector="showPassiveSelector"
       @toggleview="showPassiveSelector = $event"
       :isUnit="isUnit"
       v-model="filterOptions"
       :filterHelper="filterHelper"
+    />
+    <lad-selector
+      v-if="missionLocationTypes.some(type => filterTypes.includes(type))"
+      :showSelector="showLadSelector"
+      @toggleview="showLadSelector = $event"
+      v-model="filterOptions"
     />
     <!-- search card -->
     <template v-if="!isVisuallyInitializing && hasRequiredModules">
@@ -30,6 +38,7 @@
         :isUnit="isUnit"
         @toggleprocselector="toggleProcSelector"
         @togglepassiveselector="togglePassiveSelector"
+        @toggleladselector="toggleLadSelector"
       />
       <v-layout row>
         <v-flex>
@@ -282,7 +291,7 @@ import debounce from 'lodash/debounce';
 import { Logger } from '@/modules/Logger';
 import { moduleInfo } from '@/store/multidex';
 import { generateStateInfo, generateActionInfo } from '@/modules/utils';
-import { servers } from '@/modules/constants';
+import { servers, missionLocationTypes } from '@/modules/constants';
 import FilterOptionsHelper from '@/modules/FilterOptionsHelper';
 import LoadingIndicator from '@/components/LoadingIndicator';
 import ResultContainer from '@/components/Multidex/ResultContainer';
@@ -292,6 +301,7 @@ import FilterChipList from '@/components/Multidex/Filters/FilterChipList';
 import ProcSelector from '@/components/Multidex/Filters/BuffSelector/ProcSelector';
 import PassiveSelector from '@/components/Multidex/Filters/BuffSelector/PassiveSelector';
 import BaseEntryCard from '@/components/Multidex/BaseEntryCard';
+import LadSelector from '@/components/Multidex/Filters/LandAreaDungeonSelector';
 
 let filterHelper = new FilterOptionsHelper();
 let logger = new Logger({ prefix: '[MULTIDEX/default]' });
@@ -364,6 +374,7 @@ export default {
     ProcSelector,
     PassiveSelector,
     BaseEntryCard,
+    LadSelector,
   },
   computed: {
     ...mapState('settings', ['activeServer']),
@@ -374,6 +385,7 @@ export default {
     }),
     logger: () => logger,
     servers: () => servers,
+    missionLocationTypes: () => missionLocationTypes,
     pageModules () {
       return moduleInfo.filter(m => this.requiredModules.includes(m.name));
     },
@@ -476,6 +488,7 @@ export default {
       showEntryDialog: false,
       showProcSelector: false,
       showPassiveSelector: false,
+      showLadSelector: false,
     };
     return {
       sortOptions,
@@ -589,6 +602,9 @@ export default {
     togglePassiveSelector (val) {
       this.showPassiveSelector = !!val;
     },
+    toggleLadSelector (val) {
+      this.showLadSelector = !!val;
+    },
     resetFilters () {
       const defaultFilterOptions = filterHelper.defaultValues;
 
@@ -671,7 +687,7 @@ export default {
       this.paginationModel = this.pageIndex + 1;
     },
     setHtmlOverflow () {
-      this.setHtmlOverflowDisableState(this.showProcSelector || this.showPassiveSelector || this.showEntryDialog);
+      this.setHtmlOverflowDisableState(this.showProcSelector || this.showPassiveSelector || this.showLadSelector || this.showEntryDialog);
     },
     onResize: debounce(async function () {
       if (this.showUpdateTooltip) {
@@ -846,6 +862,9 @@ export default {
       this.setHtmlOverflow();
     },
     showEntryDialog () {
+      this.setHtmlOverflow();
+    },
+    showLadSelector () {
       this.setHtmlOverflow();
     },
     pageIndex () {

@@ -5,7 +5,8 @@ import { createState, createMutations, createActions, createGetters } from './he
 import { getCacheBustingUrlParam } from '@/modules/utils';
 import {
   exclusiveFilterOptions,
-  defaultTernaryOptions
+  defaultTernaryOptions,
+  missionLocationTypes,
 } from '@/modules/constants';
 import SWorker from '@/assets/sww.min';
 
@@ -37,9 +38,9 @@ export default {
     ...createActions(dbWorker, downloadWorker, logger, 'missions'),
     async updatePossibleValues ({ commit, state }) {
       commit('setLoadingMessage', 'Getting land, area, and dungeon values for missions');
-      const result = await SWorker.run((keys, pageDb) => {
+      const result = await SWorker.run((keys, pageDb, locationTypes) => {
         const possible = { land: [], area: [], dungeon: [] };
-        const locationTypes = ['land', 'area', 'dungeon'];
+        locationTypes.forEach(type => possible[type] = []);
         const addUnique = (arr = [], val = '') => {
           if (!arr.includes(val)) {
             arr.push(val);
@@ -53,7 +54,7 @@ export default {
           });
         });
         return possible;
-      }, [Object.keys(state.pageDb).sort((a, b) => +a - +b), state.pageDb]);
+      }, [Object.keys(state.pageDb).sort((a, b) => +a - +b), state.pageDb, missionLocationTypes]);
       commit('setPossibleValues', result);
     },
     async ensurePageDbSyncWithServer ({ commit, dispatch, state }) {

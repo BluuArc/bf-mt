@@ -28,10 +28,10 @@ export default {
     PanelHeader,
   },
   computed: {
-    showPanel() {
+    showPanel () {
       return this.requireFilter || this.requiredFilters.includes(this.filterKey);
     },
-    hasFilters() {
+    hasFilters () {
       return this.filterHelper.hasFilters(this.value, this.filterKey);
     },
   },

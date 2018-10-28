@@ -5,6 +5,7 @@ export const elements = Object.freeze(['fire', 'water', 'earth', 'thunder', 'lig
 export const genders = Object.freeze(['male', 'female', 'other']);
 export const unitKinds = Object.freeze(['normal', 'evolution', 'enhancing', 'sale']);
 export const itemTypes = Object.freeze(['consumable', 'material', 'raid', 'sphere', 'evomat', 'summoner_consumable', 'ls_sphere']);
+export const missionLocationTypes = Object.freeze(['land', 'area', 'dungeon']);
 
 export const defaultTernaryOptions = new TernaryFilterOption('with', 'without'); // generic ternary
 export const exclusiveFilterOptions = new TernaryFilterOption('exclusive', 'non-exclusive');

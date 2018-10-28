@@ -178,8 +178,7 @@ export default {
     },
   },
   mounted () {
-    // eslint-disable-next-line no-console
-    console.warn('TODO: styling and icons');
+    this.logger.warn('TODO: styling and icons');
     this.syncInputToLocal();
   },
 }

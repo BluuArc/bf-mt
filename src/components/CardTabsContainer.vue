@@ -2,7 +2,7 @@
   <v-container fluid class="pt-0">
     <v-layout row>
       <v-flex class="pb-0">
-        <v-tabs v-model="localValue" class="mb-2">
+        <v-tabs v-model="localValue" class="mb-2" :grow="growTabs">
           <v-tab v-for="(tab, i) in tabs" :key="i">{{ tab.name }}</v-tab>
         </v-tabs>
       </v-flex>
@@ -41,6 +41,10 @@ export default {
     },
     // load everything on mount
     fullLoad: {
+      type: Boolean,
+      default: false,
+    },
+    growTabs: {
       type: Boolean,
       default: false,
     },

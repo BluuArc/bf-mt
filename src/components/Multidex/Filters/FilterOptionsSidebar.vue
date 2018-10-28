@@ -55,6 +55,12 @@
           :requiredFilters="requiredFilters"
           v-model="value"
           :disableFilters="disableFilters"/>
+        <lad-panel
+          :filterHelper="filterHelper"
+          :requiredFilters="requiredFilters"
+          v-model="value"
+          :disableFilters="disableFilters"
+          @toggleladselector="$emit('toggleladselector', $event)"/>
         <associated-units-panel
           :filterHelper="filterHelper"
           :requiredFilters="requiredFilters"
@@ -94,6 +100,7 @@ import ItemTypePanel from './ItemTypePanel';
 import SphereTypePanel from './SphereTypePanel';
 import CraftablesPanel from './CraftablesPanel';
 import UsagePanel from './UsagePanel';
+import LadPanel from './LandAreaDungeonPanel';
 import AssociatedUnitsPanel from './AssociatedUnitsPanel';
 import ServerExclusivePanel from './ServerExclusivePanel';
 import ProcPanel from './ProcPanel';
@@ -147,6 +154,7 @@ export default {
     SphereTypePanel,
     CraftablesPanel,
     UsagePanel,
+    LadPanel,
     AssociatedUnitsPanel,
     ServerExclusivePanel,
     ProcPanel,
