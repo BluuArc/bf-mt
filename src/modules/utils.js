@@ -4,6 +4,7 @@ import relativeTime from 'dayjs/plugin/relativeTime';
 import { mapActions, mapMutations } from 'vuex';
 import { servers } from '@/modules/constants';
 import { moduleInfo } from '@/store';
+import numbro from 'numbro';
 dayjs.extend(relativeTime);
 
 export function delay (time = 0) {
@@ -155,4 +156,8 @@ export function generateActionInfo (context, multidexModules = moduleInfo.filter
     });
   }
   return actionInfo;
+}
+
+export function formatNumber (number) {
+  return +number < 1000 ? +number : numbro(+number).format({ average: true, mantissa: 1 });
 }
