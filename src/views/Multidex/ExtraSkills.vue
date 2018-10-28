@@ -8,7 +8,7 @@
     :pageDb="pageDb"
     :inputFilters="filters"
     :filterTypes="filterTypes">
-    <!-- <v-layout row wrap slot="results" slot-scope="{ keys, getMultidexPathTo }">
+    <v-layout row wrap slot="results" slot-scope="{ keys, getMultidexPathTo }">
       <v-flex
         v-for="key in keys"
         :key="key"
@@ -16,7 +16,7 @@
         <entry-card :to="getMultidexPathTo(key)" :entry="pageDb[key]" v-if="pageDb.hasOwnProperty(key)"/>
       </v-flex>
     </v-layout>
-    <template slot="dialog-toolbar-title" slot-scope="{ viewId, hasViewId, entry }">
+    <!-- <template slot="dialog-toolbar-title" slot-scope="{ viewId, hasViewId, entry }">
         <span v-if="hasViewId">
           {{ entry.name }}
         </span>
@@ -37,13 +37,13 @@
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex';
 import MultidexPageMixin from '@/components/Multidex/MultidexPageMixin';
-// import EntryCard from '@/components/Multidex/Bursts/EntryCard';
+import EntryCard from '@/components/Multidex/ExtraSkills/EntryCard';
 // import DialogContent from '@/components/Multidex/Bursts/DialogContent';
 
 export default {
   mixins: [MultidexPageMixin],
   components: {
-    // EntryCard,
+    EntryCard,
     // DialogContent,
   },
   computed: {

@@ -21,7 +21,7 @@
             v-for="(subItem, j) in group.items"
             :key="`${i}-${j}`"
             exact
-            :value="currentPage === (typeof (subItem.link) === 'function' ? subItem.link() : subItem.link)"
+            :value="currentPageName === subItem.title"
             :to="typeof (subItem.link) === 'function' ? subItem.link() : subItem.link"
             @click="($vuetify.breakpoint.mdAndDown) ? (showDrawer = false) : (showDrawer = showDrawer)">
             <v-list-tile-action>
