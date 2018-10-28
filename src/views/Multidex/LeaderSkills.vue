@@ -24,13 +24,13 @@
           Leader Skill Entry: {{ viewId }}
         </span>
     </template>
-    <!-- <template slot="entry-dialog-content" slot-scope="{ viewId, logger }">
+    <template slot="entry-dialog-content" slot-scope="{ viewId, logger }">
       <dialog-content
         :entryId="viewId"
         :logger="logger"
         :pageDb="pageDb"
         :asyncGetById="getById"/>
-    </template> -->
+    </template>
   </main-page-base>
 </template>
 
@@ -38,13 +38,13 @@
 import { mapState, mapGetters, mapActions } from 'vuex';
 import MultidexPageMixin from '@/components/Multidex/MultidexPageMixin';
 import EntryCard from '@/components/Multidex/LeaderSkills/EntryCard';
-// import DialogContent from '@/components/Multidex/LeaderSkills/DialogContent';
+import DialogContent from '@/components/Multidex/LeaderSkills/DialogContent';
 
 export default {
   mixins: [MultidexPageMixin],
   components: {
     EntryCard,
-    // DialogContent,
+    DialogContent,
   },
   computed: {
     ...mapState('leaderSkills', ['pageDb']),

@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import { mapState, mapActions, mapGetters } from 'vuex';
+import { mapState, mapGetters } from 'vuex';
 import DescriptionCardBase from '@/components/Multidex/DescriptionCardBase';
 import CardTitleWithLink from '@/components/CardTitleWithLink';
 import RarityIcon from '@/components/Multidex/RarityIcon';
@@ -81,11 +81,6 @@ export default {
     rarity () {
       return +this.skill.rarity;
     },
-  },
-  methods: {
-    ...mapActions('units', {
-      getUnit: 'getById'
-    }),
   },
 };
 </script>

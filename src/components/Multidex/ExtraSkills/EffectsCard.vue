@@ -2,7 +2,7 @@
   <description-card-base
     :entry="skill"
     materialColor="purple lighten-1"
-    :titleHtmlGenerator="() => 'Effect Info'"
+    :titleHtmlGenerator="() => 'Effects'"
     :treeOptions="{ maxDepth: 1 }"
     :effectGetter="() => effects"
     :tabNames="['Unified', conditionalEffects.length > 0 && 'Split By Condition', 'Buff List'].filter(v => v)">
@@ -29,7 +29,6 @@
 import { mapGetters } from 'vuex';
 import DescriptionCardBase from '@/components/Multidex/DescriptionCardBase';
 import BuffTable from '@/components/Multidex/BuffTable/MainTable';
-import BuffList from '@/components/Multidex/BuffList/BuffList';
 import { splitEffectsByCondition } from '@/modules/core/extra-skills';
 
 export default {
@@ -44,7 +43,6 @@ export default {
   components: {
     DescriptionCardBase,
     BuffTable,
-    BuffList,
   },
   computed: {
     ...mapGetters('units', {

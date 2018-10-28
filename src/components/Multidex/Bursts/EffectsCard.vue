@@ -2,7 +2,7 @@
   <description-card-base
     :entry="burst"
     materialColor="green darken-2"
-    :titleHtmlGenerator="() => 'Effect Info'"
+    :titleHtmlGenerator="() => 'Effects'"
     :treeOptions="{ maxDepth: 1 }"
     :effectGetter="() => currentBurstEffect"
     :contextHandler="contextHandler"
@@ -11,7 +11,7 @@
       <v-layout row wrap>
         <v-flex xs12 sm8 md9 class="text-xs-left">
           <card-title-with-link
-            titleHtml="Effect Info"/>
+            titleHtml="Effects"/>
         </v-flex>
         <v-flex xs12 sm4 md3 class="text-xs-right">
           <v-tooltip bottom>
