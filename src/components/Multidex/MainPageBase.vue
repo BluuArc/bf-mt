@@ -751,6 +751,8 @@ export default {
     },
     async updateData () {
       this.logger.debug('starting download for', this.toUpdate);
+      this.hasInitDb = false;
+      await this.$nextTick();
       for (const mdModule of this.toUpdate) {
         try {
           await this.actionInfo[mdModule.name].update([this.activeServer]);
@@ -758,7 +760,6 @@ export default {
           this.logger.error(mdModule.fullName, err);
         }
       }
-      this.finishedInit = false;
     },
   },
   watch: {
@@ -773,13 +774,12 @@ export default {
       }
     },
     async hasInitDb (newValue) {
+      this.showUpdateTooltip = this.hasUpdates;
+      this.setDocumentTitle();
+      this.setShowEntryDialog();
       // db finished initializing
       if (newValue && !this.isInternallyInitializing) {
         this.setVisuallyInitializingDebounced(() => this.isInternallyInitializing);
-
-        this.showUpdateTooltip = this.hasUpdates;
-        this.setDocumentTitle();
-        this.setShowEntryDialog();
         
         this.loadingFilters = true; // first time filtering data; set true to avoid flickering loading message
         this.syncSortCacheToPage();
