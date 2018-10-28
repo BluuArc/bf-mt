@@ -1,52 +1,4 @@
 {
-  "MST_SKILLS_2122607_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122607_NAME": {
-    "en": "Bring the next one! Next!",
-    "es": "¡Que pase el que sigue! ¡Siguiente!",
-    "id": "Yang berikutnya! Berikutnya!",
-    "pt": "Traga o próximo! Próximo!",
-    "th": "เอารายต่อไปมา! รายต่อไป!",
-    "vi": "Bring the next one! Next!"
-  },
-  "MST_SKILLS_2122608_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122608_NAME": {
-    "en": "Ew, gross. It's like that guy...",
-    "es": "Uhh, qué asco. Es como ese tipo...",
-    "id": "Ew, menjijikkan. Sepertinya cowok itu...",
-    "pt": "Eca, que nojo. É como aquele cara...",
-    "th": "อี๋ แหยะ เหมือนชายผู้นั้นเลย...",
-    "vi": "Ew, gross. It's like that guy..."
-  },
-  "MST_SKILLS_2122609_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122609_NAME": {
-    "en": "We only need one of you!",
-    "es": "¡Solo necesitamos uno como tú!",
-    "id": "Kami hanya butuh satu dari kalian!",
-    "pt": "Só precisamos de um!",
-    "th": "เราต้องการเพียงอย่างเดียวจากเจ้า!",
-    "vi": "We only need one of you!"
-  },
   "MST_SKILLS_212260_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -86927,6 +86879,38 @@
     "th": "Cunning Strike EX",
     "vi": "Cunning Strike EX"
   },
+  "MST_SKILLS_2820657_DESCRIPTION": {
+    "en": "25 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec and critical hit rate for 3 turns, normal attacks hit all foes for 3 turns, considerably raises normal hit amount for 3 turns & 450% boost to critical damage for 3 turns",
+    "es": "25 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec and critical hit rate for 3 turns, normal attacks hit all foes for 3 turns, considerably raises normal hit amount for 3 turns & 450% boost to critical damage for 3 turns",
+    "id": "25 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec and critical hit rate for 3 turns, normal attacks hit all foes for 3 turns, considerably raises normal hit amount for 3 turns & 450% boost to critical damage for 3 turns",
+    "pt": "25 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec and critical hit rate for 3 turns, normal attacks hit all foes for 3 turns, considerably raises normal hit amount for 3 turns & 450% boost to critical damage for 3 turns",
+    "th": "25 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec and critical hit rate for 3 turns, normal attacks hit all foes for 3 turns, considerably raises normal hit amount for 3 turns & 450% boost to critical damage for 3 turns",
+    "vi": "25 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec and critical hit rate for 3 turns, normal attacks hit all foes for 3 turns, considerably raises normal hit amount for 3 turns & 450% boost to critical damage for 3 turns"
+  },
+  "MST_SKILLS_2820657_NAME": {
+    "en": "Battle Art: Depth Pulse",
+    "es": "Battle Art: Depth Pulse",
+    "id": "Battle Art: Depth Pulse",
+    "pt": "Battle Art: Depth Pulse",
+    "th": "Battle Art: Depth Pulse",
+    "vi": "Battle Art: Depth Pulse"
+  },
+  "MST_SKILLS_2820658_DESCRIPTION": {
+    "en": "30 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec and critical hit rate for 3 turns, normal attacks hit all foes for 3 turns, considerably raises normal hit amount for 3 turns, 500% boost to critical damage for 3 turns & adds 1 extra action within the same turn",
+    "es": "",
+    "id": "",
+    "pt": "",
+    "th": "",
+    "vi": ""
+  },
+  "MST_SKILLS_2820658_NAME": {
+    "en": "Vequa: Maelstrom Maîtresse",
+    "es": "Vequa: Maelstrom Maîtresse",
+    "id": "Vequa: Maelstrom Maîtresse",
+    "pt": "Vequa: Maelstrom Maîtresse",
+    "th": "Vequa: Maelstrom Maîtresse",
+    "vi": "Vequa: Maelstrom Maîtresse"
+  },
   "MST_SKILLS_2820_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -87278,5 +87262,53 @@
     "pt": "Hysteria: Soul Shatter",
     "th": "ฮิสทีเรีย: โซล แชทเตอร์",
     "vi": "Hysteria: Soul Shatter"
+  },
+  "MST_SKILLS_2830328_DESCRIPTION": {
+    "en": "Massive Earth attack on single foe, massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Earth, Dark elemental damage for 3 turns, enormous 3 turns Atk reduction & massive additional damage at turn's end for 2 turns",
+    "es": "Massive Earth attack on single foe, massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Earth, Dark elemental damage for 3 turns, enormous 3 turns Atk reduction & massive additional damage at turn's end for 2 turns",
+    "id": "Massive Earth attack on single foe, massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Earth, Dark elemental damage for 3 turns, enormous 3 turns Atk reduction & massive additional damage at turn's end for 2 turns",
+    "pt": "Massive Earth attack on single foe, massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Earth, Dark elemental damage for 3 turns, enormous 3 turns Atk reduction & massive additional damage at turn's end for 2 turns",
+    "th": "Massive Earth attack on single foe, massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Earth, Dark elemental damage for 3 turns, enormous 3 turns Atk reduction & massive additional damage at turn's end for 2 turns",
+    "vi": "Massive Earth attack on single foe, massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Earth, Dark elemental damage for 3 turns, enormous 3 turns Atk reduction & massive additional damage at turn's end for 2 turns"
+  },
+  "MST_SKILLS_2830328_NAME": {
+    "en": "Now, Suffer…",
+    "es": "Now, Suffer…",
+    "id": "Now, Suffer…",
+    "pt": "Now, Suffer…",
+    "th": "Now, Suffer…",
+    "vi": "Now, Suffer…"
+  },
+  "MST_SKILLS_2830357_DESCRIPTION": {
+    "en": "17 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormous damage reduction for 1 turn & activates Earth barrier",
+    "es": "17 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormous damage reduction for 1 turn & activates Earth barrier",
+    "id": "27 kombo serangan Bumi kuat ke semua musuh (kerusakan sesuai sisa HP), 3 giliran: ekstra jumbo kerusakan Percikan, Serang, Tahan, Pulih, pengurangan jumbo 1 giliran & mengaktifkan penghalang Bumi",
+    "pt": "17 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormous damage reduction for 1 turn & activates Earth barrier",
+    "th": "17 คอมโบ โจมตีธาตุดินอย่างแรง ใส่ศัตรูทั้งหมด (ค่าความเสียหาย สัมพันธ์กับ HP ที่เหลืออยู่), เพิ่มค่ามหาศาลให้ ความเสียหายสปาร์ค นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ โจมตี, ป้องกัน, ฟื้นฟู นาน 3 เทิร์น, ลดค่าความเสียหายมหาศาล นาน 1 เทิร์น และ ใช้งาน กำแพงดิน",
+    "vi": "17 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormous damage reduction for 1 turn & activates Earth barrier"
+  },
+  "MST_SKILLS_2830357_NAME": {
+    "en": "Asphyxiating Vise",
+    "es": "Asphyxiating Vise",
+    "id": "Ragum Sesak Nafas",
+    "pt": "Asphyxiating Vise",
+    "th": "แอสฟิสิเอติ้ง ไวส์",
+    "vi": "Asphyxiating Vise"
+  },
+  "MST_SKILLS_2830358_DESCRIPTION": {
+    "en": "22 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormous damage reduction for 2 turns & activates Earth barrier",
+    "es": "22 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormous damage reduction for 2 turns & activates Earth barrier",
+    "id": "22 kombo serangan Bumi kuat ke semua musuh (kerusakan sesuai sisa HP), 3 giliran: ekstra jumbo kerusakan Percikan, Serang, Tahan, Pulih, pengurangan jumbo kerusakan 2 giliran & mengaktifkan penghalang Bumi",
+    "pt": "22 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormous damage reduction for 2 turns & activates Earth barrier",
+    "th": "22 คอมโบ โจมตีธาตุดินอย่างแรง ใส่ศัตรูทั้งหมด (ค่าความเสียหาย สัมพันธ์กับ HP ที่เหลืออยู่), เพิ่มค่ามหาศาลให้ ความเสียหายสปาร์ค นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ โจมตี, ป้องกัน, ฟื้นฟู นาน 3 เทิร์น, ลดค่าความเสียหายมหาศาล นาน 2 เทิร์น และ ใช้งาน กำแพงดิน",
+    "vi": "22 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormous damage reduction for 2 turns & activates Earth barrier"
+  },
+  "MST_SKILLS_2830358_NAME": {
+    "en": "Thrice-Dead Guillotine",
+    "es": "Thrice-Dead Guillotine",
+    "id": "Guilotine 3x Mati",
+    "pt": "Thrice-Dead Guillotine",
+    "th": "ไทรซ์-เด้ด กิโยติน",
+    "vi": "Thrice-Dead Guillotine"
   }
 }

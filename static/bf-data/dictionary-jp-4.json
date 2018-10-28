@@ -1,20 +1,4 @@
 {
-  "MST_SKILLS_2001090_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2001090_NAME": {
-    "en": "Savage Stab",
-    "es": "Puñalada salvaje",
-    "id": "Tusukan Keji",
-    "pt": "Estocada Selvagem",
-    "th": "ซาเวจ สแตบ",
-    "vi": "Cú đâm tàn bạo"
-  },
   "MST_SKILLS_2001091_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -87278,5 +87262,53 @@
     "pt": "Não preciso de alguém tão fraco!",
     "th": "ข้าไม่ต้องการสิ่งที่อ่อนแอแบบนั้น!",
     "vi": "I don't need such a weakling!"
+  },
+  "MST_SKILLS_2122607_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122607_NAME": {
+    "en": "Bring the next one! Next!",
+    "es": "¡Que pase el que sigue! ¡Siguiente!",
+    "id": "Yang berikutnya! Berikutnya!",
+    "pt": "Traga o próximo! Próximo!",
+    "th": "เอารายต่อไปมา! รายต่อไป!",
+    "vi": "Bring the next one! Next!"
+  },
+  "MST_SKILLS_2122608_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122608_NAME": {
+    "en": "Ew, gross. It's like that guy...",
+    "es": "Uhh, qué asco. Es como ese tipo...",
+    "id": "Ew, menjijikkan. Sepertinya cowok itu...",
+    "pt": "Eca, que nojo. É como aquele cara...",
+    "th": "อี๋ แหยะ เหมือนชายผู้นั้นเลย...",
+    "vi": "Ew, gross. It's like that guy..."
+  },
+  "MST_SKILLS_2122609_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122609_NAME": {
+    "en": "We only need one of you!",
+    "es": "¡Solo necesitamos uno como tú!",
+    "id": "Kami hanya butuh satu dari kalian!",
+    "pt": "Só precisamos de um!",
+    "th": "เราต้องการเพียงอย่างเดียวจากเจ้า!",
+    "vi": "We only need one of you!"
   }
 }
