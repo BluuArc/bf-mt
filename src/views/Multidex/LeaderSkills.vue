@@ -8,7 +8,7 @@
     :pageDb="pageDb"
     :inputFilters="filters"
     :filterTypes="filterTypes">
-    <!-- <v-layout row wrap slot="results" slot-scope="{ keys, getMultidexPathTo }">
+    <v-layout row wrap slot="results" slot-scope="{ keys, getMultidexPathTo }">
       <v-flex
         v-for="key in keys"
         :key="key"
@@ -21,10 +21,10 @@
           {{ entry.name }}
         </span>
         <span v-else>
-          Extra Skills Entry: {{ viewId }}
+          Leader Skill Entry: {{ viewId }}
         </span>
     </template>
-    <template slot="entry-dialog-content" slot-scope="{ viewId, logger }">
+    <!-- <template slot="entry-dialog-content" slot-scope="{ viewId, logger }">
       <dialog-content
         :entryId="viewId"
         :logger="logger"
@@ -37,13 +37,13 @@
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex';
 import MultidexPageMixin from '@/components/Multidex/MultidexPageMixin';
-// import EntryCard from '@/components/Multidex/LeaderSkills/EntryCard';
+import EntryCard from '@/components/Multidex/LeaderSkills/EntryCard';
 // import DialogContent from '@/components/Multidex/LeaderSkills/DialogContent';
 
 export default {
   mixins: [MultidexPageMixin],
   components: {
-    // EntryCard,
+    EntryCard,
     // DialogContent,
   },
   computed: {

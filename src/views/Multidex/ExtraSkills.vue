@@ -21,7 +21,7 @@
           {{ entry.name }}
         </span>
         <span v-else>
-          Extra Skills Entry: {{ viewId }}
+          Extra Skill Entry: {{ viewId }}
         </span>
     </template>
     <template slot="entry-dialog-content" slot-scope="{ viewId, logger }">

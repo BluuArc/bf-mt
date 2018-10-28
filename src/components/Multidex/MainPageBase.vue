@@ -821,9 +821,14 @@ export default {
     activeServer () {
       this.setShowEntryDialog();
     },
-    inputServer (newValue) {
+    async inputServer (newValue) {
       if (!!newValue && newValue !== this.activeServer) {
         this.showEntryDialog = false;
+        this.hasInitDb = false;
+        await this.$nextTick();
+        if (!this.isInternallyInitializing) {
+          this.initDb();
+        }
       }
     },
     inputFilters (newValue, oldValue) {

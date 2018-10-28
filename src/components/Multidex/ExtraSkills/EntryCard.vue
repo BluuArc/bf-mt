@@ -26,7 +26,7 @@
         <v-flex xs5 sm4 class="text-xs-center">
           Associated Units:
         </v-flex>
-        <v-flex xs7 sm8 class="text-xs-left">
+        <v-flex xs7 class="text-xs-left">
           <unit-thumbnail
             v-for="(unit, i) in entry.associated_units"
             :key="i"
