@@ -16,7 +16,7 @@
     </v-layout>
     <v-layout row class="buff-table--row d-align-items-center" v-for="(effectEntry, i) in mappedEffects" :key="i">
       <v-flex xs4 lg1 :class="{ 'text-xs-center buff-table--id-column': true, 'hidden-effects': hiddenIndices.includes(i), 'pl-0': $vuetify.breakpoint.mdAndDown }">
-        <v-btn flat @click="() => toggleEffectView(i)" small style="min-width: 36px;">
+        <v-btn flat @click="() => toggleEffectView(i)" small style="min-width: 36px;" class="collapse-btn">
           <v-icon>{{ hiddenIndices.includes(i) ? 'unfold_more' : 'unfold_less' }}</v-icon>
           {{ effectEntry.id }}
         </v-btn>
@@ -134,6 +134,10 @@ export default {
       margin-right: 0;
       border-right: var(--table-border-settings);
     }
+  }
+
+  & .buff-table .collapse-btn {
+    margin-left: -6px;
   }
 
   .buff-table--row {

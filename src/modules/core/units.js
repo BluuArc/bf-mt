@@ -205,3 +205,12 @@ export function getColoClassUsage (cost = 0, isGlobal = true) {
     'Hero', // all units can go to hero class
   ].filter(v => v);
 }
+export function getHighestRarityUnit (category = 0, unitById = (id) => ({ name: id })) {
+  for (let i = 9; i >= 0; --i) {
+    const id = `${+category + i}`;
+    const unit = unitById(id);
+    if (unit) {
+      return unit;
+    }
+  }
+}
