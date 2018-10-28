@@ -16,12 +16,12 @@
         <entry-card :to="getMultidexPathTo(key)" :entry="pageDb[key]" v-if="pageDb.hasOwnProperty(key)"/>
       </v-flex>
     </v-layout>
-    <!-- <template slot="dialog-toolbar-title" slot-scope="{ viewId, hasViewId, entry }">
+    <template slot="dialog-toolbar-title" slot-scope="{ viewId, hasViewId, entry }">
         <span v-if="hasViewId">
           {{ entry.name }}
         </span>
         <span v-else>
-          Bursts Entry: {{ viewId }}
+          Extra Skills Entry: {{ viewId }}
         </span>
     </template>
     <template slot="entry-dialog-content" slot-scope="{ viewId, logger }">
@@ -30,7 +30,7 @@
         :logger="logger"
         :pageDb="pageDb"
         :asyncGetById="getById"/>
-    </template> -->
+    </template>
   </main-page-base>
 </template>
 
@@ -38,13 +38,13 @@
 import { mapState, mapGetters, mapActions } from 'vuex';
 import MultidexPageMixin from '@/components/Multidex/MultidexPageMixin';
 import EntryCard from '@/components/Multidex/ExtraSkills/EntryCard';
-// import DialogContent from '@/components/Multidex/Bursts/DialogContent';
+import DialogContent from '@/components/Multidex/ExtraSkills/DialogContent';
 
 export default {
   mixins: [MultidexPageMixin],
   components: {
     EntryCard,
-    // DialogContent,
+    DialogContent,
   },
   computed: {
     ...mapState('extraSkills', ['pageDb']),
