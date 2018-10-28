@@ -4,4 +4,5 @@ export default {
   Bursts: () => import( /* webpackChunkName: "bursts" */ './Bursts.vue'),
   ExtraSkills: () => import( /* webpackChunkName: "extraSkills" */ './ExtraSkills.vue'),
   LeaderSkills: () => import( /* webpackChunkName: "leaderSkills" */ './LeaderSkills.vue'),
+  Missions: () => import( /* webpackChunkName: "missions" */ './Missions.vue'),
 };

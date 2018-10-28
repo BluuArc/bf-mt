@@ -38,6 +38,9 @@ export default class FilterOptionsHelper {
       associatedUnits: defaultTernaryOptions.allValue,
       craftables: craftableFilterOptions.allValue,
       usage: usageFilterOptions.allValue,
+      associatedItems: defaultTernaryOptions.allValue,
+      gems: defaultTernaryOptions.allValue,
+      continues: defaultTernaryOptions.allValue,
     };
   }
 
@@ -56,6 +59,10 @@ export default class FilterOptionsHelper {
       procBuffSearchOptions: buffSearchOptions.slice(),
       passives: [],
       passiveBuffSearchOptions: buffSearchOptions.filter(field => !nonPassiveFields.includes(field)),
+
+      land: [],
+      area: [],
+      dungeon: [],
 
       ...(this.ternaryOptions),
       name: '',

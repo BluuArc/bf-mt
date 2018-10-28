@@ -41,4 +41,10 @@ export default [
     component: MultidexPages.LeaderSkills,
     props: defaultMultidexPropHandler,
   },
+  {
+    path: '/multidex/missions',
+    name: 'Missions',
+    component: MultidexPages.Missions,
+    props: defaultMultidexPropHandler,
+  },
 ];
