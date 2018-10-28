@@ -1,20 +1,4 @@
 {
-  "MST_LEADERSKILLS_801092_NAME": {
-    "en": "Gelid Dominion",
-    "es": "Dominio gélido",
-    "id": "Dominion Dingin Sekali",
-    "pt": "Domínio Gélido",
-    "th": "เจลิด โดมิเนียน",
-    "vi": "Gelid Dominion"
-  },
-  "MST_LEADERSKILLS_801093_DESCRIPTION": {
-    "en": "30% boost to all parameters, greatly boosts BB gauge fill rate, greatly boosts BC, HC drop rate & greatly boosts BB Atk",
-    "es": "+30% a todos los parámetros y potencia notablemente la vel. de carga del indicador BB, la posibilidad de encontrar CB y CC y el ATQ de BB",
-    "id": "30% ekstra ke semua parameter, tambahan besar BB serang dan laju pengisian meteran BB, tambahan besar perolehan BC dan HC",
-    "pt": "Reforço de 30% em todos os parâmetros, grande reforço na taxa de preenchimento da Barra BB e na taxa de queda do BC e HC e no ATQ BB",
-    "th": "30% เพิ่มทุกค่าพลัง, เพิ่มอัตราการเติมบีบีเป็นจำนวนมากมาย, เพิ่มอัตราการดรอป BC และ HC อย่างมากมาย และเพิ่มบีบีโจมตีอย่างมาก",
-    "vi": "30% boost to all parameters, greatly boosts BB gauge fill rate, greatly boosts BC, HC drop rate & greatly boosts BB Atk"
-  },
   "MST_LEADERSKILLS_801093_NAME": {
     "en": "Boreal Ascendancy",
     "es": "Ascendencia boreal",
@@ -3158,6 +3142,38 @@
     "pt": "Amphibian Hero",
     "th": "Amphibian Hero",
     "vi": "Amphibian Hero"
+  },
+  "MST_LEADERSKILLS_820657_DESCRIPTION": {
+    "en": "100% boost to Atk, Def and 80% boost to max HP of Water types, 10% damage reduction from Fire, Water types, raises normal hit amount & normal attacks may hit all foes",
+    "es": "100% boost to Atk, Def and 80% boost to max HP of Water types, 10% damage reduction from Fire, Water types, raises normal hit amount & normal attacks may hit all foes",
+    "id": "100% boost to Atk, Def and 80% boost to max HP of Water types, 10% damage reduction from Fire, Water types, raises normal hit amount & normal attacks may hit all foes",
+    "pt": "100% boost to Atk, Def and 80% boost to max HP of Water types, 10% damage reduction from Fire, Water types, raises normal hit amount & normal attacks may hit all foes",
+    "th": "100% boost to Atk, Def and 80% boost to max HP of Water types, 10% damage reduction from Fire, Water types, raises normal hit amount & normal attacks may hit all foes",
+    "vi": "100% boost to Atk, Def and 80% boost to max HP of Water types, 10% damage reduction from Fire, Water types, raises normal hit amount & normal attacks may hit all foes"
+  },
+  "MST_LEADERSKILLS_820657_NAME": {
+    "en": "Tranquil Heart",
+    "es": "Tranquil Heart",
+    "id": "Tranquil Heart",
+    "pt": "Tranquil Heart",
+    "th": "Tranquil Heart",
+    "vi": "Tranquil Heart"
+  },
+  "MST_LEADERSKILLS_820658_DESCRIPTION": {
+    "en": "120% boost to Atk, Def and 100% boost to max HP of Water types, 50% damage reduction from all elements for first 2 turns, 20% damage reduction from Fire, Water types, raises normal hit amount, probable normal attack on all foes & enormously boosts ABP and CBP gain",
+    "es": "120% boost to Atk, Def and 100% boost to max HP of Water types, 50% damage reduction from all elements for first 2 turns, 20% damage reduction from Fire, Water types, raises normal hit amount, probable normal attack on all foes & enormously boosts ABP and CBP gain",
+    "id": "120% boost to Atk, Def and 100% boost to max HP of Water types, 50% damage reduction from all elements for first 2 turns, 20% damage reduction from Fire, Water types, raises normal hit amount, probable normal attack on all foes & enormously boosts ABP and CBP gain",
+    "pt": "120% boost to Atk, Def and 100% boost to max HP of Water types, 50% damage reduction from all elements for first 2 turns, 20% damage reduction from Fire, Water types, raises normal hit amount, probable normal attack on all foes & enormously boosts ABP and CBP gain",
+    "th": "120% boost to Atk, Def and 100% boost to max HP of Water types, 50% damage reduction from all elements for first 2 turns, 20% damage reduction from Fire, Water types, raises normal hit amount, probable normal attack on all foes & enormously boosts ABP and CBP gain",
+    "vi": "120% boost to Atk, Def and 100% boost to max HP of Water types, 50% damage reduction from all elements for first 2 turns, 20% damage reduction from Fire, Water types, raises normal hit amount, probable normal attack on all foes & enormously boosts ABP and CBP gain"
+  },
+  "MST_LEADERSKILLS_820658_NAME": {
+    "en": "Soul of the Resilient",
+    "es": "Soul of the Resilient",
+    "id": "Soul of the Resilient",
+    "pt": "Soul of the Resilient",
+    "th": "Soul of the Resilient",
+    "vi": "Soul of the Resilient"
   },
   "MST_LEADERSKILLS_830047_DESCRIPTION": {
     "en": "100% boost to Atk, 60% boost to Def, max HP of Earth types, 10% damage reduction from Earth, Thunder types, probable considerable reduction of foe's BB gauge & 50% damage counter",
@@ -87277,6 +87293,22 @@
     "id": "Remuihl",
     "pt": "Remuihl",
     "th": "เรมัวห์",
+    "vi": "Remuihl"
+  },
+  "MST_MONSTERS_55263_NAME": {
+    "en": "Remuihl",
+    "es": "Remuihl",
+    "id": "Remuihl",
+    "pt": "Remuihl",
+    "th": "เรมัวห์",
+    "vi": "Remuihl"
+  },
+  "MST_MONSTERS_55264_NAME": {
+    "en": "Remuihl",
+    "es": "Remuihl",
+    "id": "Remuihl",
+    "pt": "Remuihl",
+    "th": "เรมูวห์",
     "vi": "Remuihl"
   }
 }
