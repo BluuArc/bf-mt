@@ -12,6 +12,9 @@
     <area-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
     <dungeon-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
     <associated-units-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
+    <associated-items-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
+    <gems-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
+    <continues-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
     <server-exclusive-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions"/>
     <proc-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions" :isUnit="isUnit"/>
     <passive-chip :requiredFilters="requiredFilters" :filterOptions="filterOptions" :isUnit="isUnit"/>
@@ -30,7 +33,10 @@ import UsageChip from './UsageChip';
 import LandChip from './LAD-LandChip';
 import AreaChip from './LAD-AreaChip';
 import DungeonChip from './LAD-DungeonChip';
+import AssociatedItemsChip from './AssociatedItemsChip';
 import AssociatedUnitsChip from './AssociatedUnitsChip';
+import GemsChip from './GemsChip';
+import ContinuesChip from './ContinuesChip';
 import ServerExclusiveChip from './ServerExclusiveChip';
 import ProcChip from './ProcChip';
 import PassiveChip from './PassiveChip';
@@ -72,6 +78,9 @@ export default {
     AreaChip,
     DungeonChip,
     AssociatedUnitsChip,
+    AssociatedItemsChip,
+    GemsChip,
+    ContinuesChip,
     ServerExclusiveChip,
     ProcChip,
     PassiveChip,

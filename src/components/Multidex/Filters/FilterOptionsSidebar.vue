@@ -66,6 +66,21 @@
           :requiredFilters="requiredFilters"
           v-model="value"
           :disableFilters="disableFilters"/>
+        <associated-items-panel
+          :filterHelper="filterHelper"
+          :requiredFilters="requiredFilters"
+          v-model="value"
+          :disableFilters="disableFilters"/>
+        <gems-panel
+          :filterHelper="filterHelper"
+          :requiredFilters="requiredFilters"
+          v-model="value"
+          :disableFilters="disableFilters"/>
+        <continues-panel
+          :filterHelper="filterHelper"
+          :requiredFilters="requiredFilters"
+          v-model="value"
+          :disableFilters="disableFilters"/>
         <server-exclusive-panel
           :filterHelper="filterHelper"
           :requiredFilters="requiredFilters"
@@ -101,6 +116,9 @@ import SphereTypePanel from './SphereTypePanel';
 import CraftablesPanel from './CraftablesPanel';
 import UsagePanel from './UsagePanel';
 import LadPanel from './LandAreaDungeonPanel';
+import AssociatedItemsPanel from './AssociatedItemsPanel';
+import GemsPanel from './GemsPanel';
+import ContinuesPanel from './ContinuesPanel';
 import AssociatedUnitsPanel from './AssociatedUnitsPanel';
 import ServerExclusivePanel from './ServerExclusivePanel';
 import ProcPanel from './ProcPanel';
@@ -156,6 +174,9 @@ export default {
     UsagePanel,
     LadPanel,
     AssociatedUnitsPanel,
+    AssociatedItemsPanel,
+    GemsPanel,
+    ContinuesPanel,
     ServerExclusivePanel,
     ProcPanel,
     PassivePanel,
