@@ -13,7 +13,7 @@
       </span>
     </v-container>
     <template slot="split-by-condition">
-      <v-expansion-panel>
+      <v-expansion-panel v-model="activeConditionSet">
         <v-expansion-panel-content v-for="(conditionSet, i) in conditionalEffects" :key="i">
           <h2 class="subheading" slot="header" style="text-transform: capitalize;">{{ conditionSet.condition }}</h2>
           <v-container fluid>
@@ -57,9 +57,13 @@ export default {
   },
   data: () => ({
     conditionalEffects: [],
+    activeConditionSet: null,
   }),
   mounted () {
     this.conditionalEffects = splitEffectsByCondition(this.effects, { unitById: this.unitById, itemById: this.itemById });
+    if (this.conditionalEffects.length === 1) {
+      this.activeConditionSet = 0;
+    }
   },
 };
 </script>
