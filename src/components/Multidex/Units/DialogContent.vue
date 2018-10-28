@@ -19,7 +19,8 @@
             </v-layout>
             <v-layout row v-if="entry.first_clear_missions">
               <v-flex>
-                {{ logger.todo('mission card') || 'TODO: mission card' }}
+                <!-- {{ logger.todo('mission card') || 'TODO: mission card' }} -->
+                <first-time-clear-reward-card :entry="entry" :logger="logger"/>
               </v-flex>
             </v-layout>
             <v-layout row wrap>
@@ -89,6 +90,7 @@ import BorderedTitledCard from '@/components/BorderedTitledCard';
 import MiscellaneousCard from '@/components/Multidex/Units/MiscellaneousCard';
 import StatsCard from '@/components/Multidex/Units/StatsCard';
 import EvolutionCard from '@/components/Multidex/Units/EvolutionCard';
+import FirstTimeClearRewardCard from '@/components/Multidex/FirstTimeClearRewardCard';
 import MovementCard from '@/components/Multidex/Units/MovementCard';
 import ArenaCard from '@/components/Multidex/Units/ArenaCard';
 
@@ -107,6 +109,7 @@ export default {
     MiscellaneousCard,
     StatsCard,
     EvolutionCard,
+    FirstTimeClearRewardCard,
     ArenaCard,
     MovementCard,
     LeaderSkillCard,
