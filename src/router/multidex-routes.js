@@ -35,4 +35,10 @@ export default [
     component: MultidexPages.ExtraSkills,
     props: defaultMultidexPropHandler,
   },
+  {
+    path: '/multidex/leader-skills',
+    name: 'Leader Skills',
+    component: MultidexPages.LeaderSkills,
+    props: defaultMultidexPropHandler,
+  },
 ];
