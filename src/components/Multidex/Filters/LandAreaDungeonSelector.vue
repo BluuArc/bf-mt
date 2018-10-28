@@ -9,6 +9,7 @@
                 v-model="configByType[tab.slot].localSelectedIds"
                 :label="`Select ${tab.slot}`"
                 hint="Empty selection is equivalent to showing all."
+                :items="possibleValues[tab.slot]"
                 multiple
                 persistent-hint>
                 <template slot="selection" slot-scope="data">
@@ -23,37 +24,6 @@
                   </v-chip>
                 </template>
               </v-combobox>
-            </v-flex>
-          </v-layout>
-          <v-layout row>
-            <v-flex class="pa-0">
-              <v-container fluid class="pl-1 pr-1">
-                <v-layout row>
-                  <v-flex>
-                    <v-divider/>
-                  </v-flex>
-                </v-layout>
-                <v-layout row>
-                  <v-flex>
-                    <v-text-field
-                      label="Search"
-                      v-model="configByType[tab.slot].query"
-                      clearable
-                      persistent-hint
-                      :hint="`${configByType[tab.slot].filteredIds.length} results`"/>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-              <v-container fluid class="pb-0 pt-0 pl-0 pr-1 lad-selector-list" :id="tab.slot">
-                <v-layout row v-for="(name) in configByType[tab.slot].filteredIds" :key="name" class="lad-selector-list--row">
-                  <v-flex xs2>
-                    <v-checkbox :value="name" v-model="configByType[tab.slot].localSelectedIds"/>
-                  </v-flex>
-                  <v-flex xs10 class="d-align-self-center">
-                    {{ name }}
-                  </v-flex>
-                </v-layout>
-              </v-container>
             </v-flex>
           </v-layout>
         </v-container>
@@ -205,7 +175,6 @@ export default {
       if (newValue) {
         this.syncInputToLocal();
       }
-      this.activeType = 0;
     },
     activeTypeName (newValue) {
       // lazily initialize filtered values
@@ -225,15 +194,5 @@ export default {
 .lad-selector-list {
   max-height: 200px;
   overflow-y: auto;
-
-  & .lad-selector-list--row {
-    &:nth-child(even) {
-      background-color: var(--background-color-alt);
-    }
-
-    .v-input--selection-controls__input {
-      margin: auto;
-    }
-  }
 }
 </style>
