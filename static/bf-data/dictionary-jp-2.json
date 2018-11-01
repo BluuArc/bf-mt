@@ -1,4 +1,284 @@
 {
+  "MST_LEADERSKILLS_801076_DESCRIPTION": {
+    "en": "Reduction in BB gauge required for BB, large reduction to amount of BB gauge used during BB & 20% boost to critical hit rate",
+    "es": "Reduce el indicador BB necesario para BB, reduce notablemente la cantidad usada durante BB y +20% de probabilidad de asestar golpes críticos",
+    "id": "Pengurangan meteran BB untuk BB, pengurangan besar jumlah meteran BB selama BB & 20% ekstra jumlah pukulan ampuh",
+    "pt": "Redução na barra de BB necessária para o BB, reduz muito o uso da barra de BB ao ativar e +20% na chance de crítico",
+    "th": "ลดบีบีเกจที่ต้องใช้สำหรับบีบี, ลดปริมาณบีบีเกจที่ใช้อย่างมากขณะใช้บีบี และ 20% เพิ่มอัตราคริติคอล",
+    "vi": "Reduction in BB gauge required for BB, large reduction to amount of BB gauge used during BB & 20% boost to critical hit rate"
+  },
+  "MST_LEADERSKILLS_801076_NAME": {
+    "en": "Guidance of the Sentinel",
+    "es": "Guía de los centinelas",
+    "id": "Panduan Penjaga",
+    "pt": "Orientação do Sentinela",
+    "th": "กิลแดนซ์ ออฟ เดอะ เซนติเนล",
+    "vi": "Guidance of the Sentinel"
+  },
+  "MST_LEADERSKILLS_801077_DESCRIPTION": {
+    "en": "Greatly boosts critical damage and Spark damage & 20% boost to critical hit rate",
+    "es": "Aumenta notablemente la posibilidad asestar golpes críticos y el daño de Chispas y +20% de probabilidad de asestar golpes críticos",
+    "id": "Amat menambah kerusakan pukulan ampuh dan kerusakan Percikan & 20% ekstra jumlah pukulan ampuh",
+    "pt": "Grande reforço no dano crítico e de Fagulha +20% na chance de crítico",
+    "th": "เพิ่มคริติคอลดาเมจและสปาร์คดาเมจอย่างมาก และ 20% เพิ่มอัตราคริติคอล",
+    "vi": "Greatly boosts critical damage and Spark damage & 20% boost to critical hit rate"
+  },
+  "MST_LEADERSKILLS_801077_NAME": {
+    "en": "Testament of the Almighty",
+    "es": "Testamento de los Omnipotentes",
+    "id": "Perjanjian Maha Kuasa",
+    "pt": "Testamento do Todo-Poderoso",
+    "th": "เทสทาเมนท์ ออฟ เดอะ อัลไมตี้",
+    "vi": "Testament of the Almighty"
+  },
+  "MST_LEADERSKILLS_801078_DESCRIPTION": {
+    "en": "Boosts BB Atk & probable BB gauge boost when attacking",
+    "es": "Aumenta el ATQ de BB y puede aumentar el indicador BB al atacar",
+    "id": "Menambah BB Serang & kemungkinan menambah meteran BB saat menyerang",
+    "pt": "Reforço no ATQ BB e provável reforço no BB ao atacar",
+    "th": "เพิ่มบีบีโจมตี และเพิ่มบีบีเกจขณะโจมตี",
+    "vi": "Boosts BB Atk & probable BB gauge boost when attacking"
+  },
+  "MST_LEADERSKILLS_801078_NAME": {
+    "en": "Swordsmanship",
+    "es": "Arte de la espada",
+    "id": "Ilmu Pedang",
+    "pt": "Esgrima",
+    "th": "ซอร์ดแมนชิป",
+    "vi": "Swordsmanship"
+  },
+  "MST_LEADERSKILLS_801079_DESCRIPTION": {
+    "en": "Largely boosts BB Atk & boosts BB gauge when attacking",
+    "es": "Aumenta notablemente el ATQ de BB y aumenta el indicador BB al recibir ataques",
+    "id": "amat menambah BB Serang & menambah meteran BB saat menyerang",
+    "pt": "Grande reforço no ATQ BB e reforço no BB ao atacar",
+    "th": "เพิ่มบีบีโจมตีอย่างมาก และเพิ่มบีบีเกจขณะโจมตี",
+    "vi": "Largely boosts BB Atk & boosts BB gauge when attacking"
+  },
+  "MST_LEADERSKILLS_801079_NAME": {
+    "en": "Magic Guild's Leader",
+    "es": "Líder del Concilio Mágico",
+    "id": "Pemimpin Serikat Sihir ",
+    "pt": "Líder da Guilda de Magia",
+    "th": "เมจิค กิลด์ ลีดเดอร์",
+    "vi": "Magic Guild's Leader"
+  },
+  "MST_LEADERSKILLS_801080_DESCRIPTION": {
+    "en": "15% boost to max HP, negates all status ailments & slightly boosts BB gauge after each turn",
+    "es": "+15% a los PS máximos, niega todas las aflicciones de estado y aumenta levemente el indicador BB cada turno",
+    "id": "15% ekstra HP maks, menegasi semua status penyakit & agak menambah meteran BB seusai tiap giliran",
+    "pt": "+15% de HP máx., nega efeitos negativos e pequeno reforço no BB a cada rodada",
+    "th": "15% เพิ่ม HP สูงสุด, กันทุกสถานะผิดปกติ และเพิ่มบีบีเกจเล็กน้อยหลังจบเทิร์น",
+    "vi": "15% boost to max HP, negates all status ailments & slightly boosts BB gauge after each turn"
+  },
+  "MST_LEADERSKILLS_801080_NAME": {
+    "en": "Mana Expertise",
+    "es": "Experiencia con el maná",
+    "id": "Keahlian Mana",
+    "pt": "Domínio de Mana",
+    "th": "มาน่า เอ็กเปอไทซ์",
+    "vi": "Mana Expertise"
+  },
+  "MST_LEADERSKILLS_801081_DESCRIPTION": {
+    "en": "25% boost to max HP, negates all status ailments & boosts BB gauge after each turn",
+    "es": "+25% a los PS máximos, niega todas las aflicciones de estado y aumenta el indicador BB cada turno",
+    "id": "25% ekstra HP maks, menegasi semua status penyakit & menambah meteran BB seusai tiap giliran",
+    "pt": "+25% de HP máx., nega efeitos negativos e reforço no BB a cada rodada",
+    "th": "25% เพิ่ม HP สูงสุด, กันทุกสถานะผิดปกติ และเพิ่มบีบีเกจหลังจบเทิร์น",
+    "vi": "25% boost to max HP, negates all status ailments & boosts BB gauge after each turn"
+  },
+  "MST_LEADERSKILLS_801081_NAME": {
+    "en": "Silver Pelt",
+    "es": "Cuero plateado",
+    "id": "Kulit Perak",
+    "pt": "Couro prateado",
+    "th": "ซิลเวอร์ เพล์ท",
+    "vi": "Silver Pelt"
+  },
+  "MST_LEADERSKILLS_801082_DESCRIPTION": {
+    "en": "20% boost to all parameters, reduces all damage received by 5% & slightly increases reduction of damage taken when guarding",
+    "es": "+20% a todos los parámetros, reduce el daño recibido un 5% y aumenta levemente la reducción del daño al protegerse",
+    "id": "20% ekstra ke semua parameter, mengurangi 5% dari semua kerusakan diderita & agak menambah pengurangan kerusakan diderita saat menjaga",
+    "pt": "+20% em todos os parâmetros, -5% no dano sofrido e pequeno reforço na redução de dano ao defender",
+    "th": "20% เพิ่มทุกค่าพารามิเตอร์, ลดดาเมจที่ได้รับ 5% และลดดาเมจมากขึ้นเมื่อตั้งการ์ด",
+    "vi": "20% boost to all parameters, reduces all damage received by 5% & slightly increases reduction of damage taken when guarding"
+  },
+  "MST_LEADERSKILLS_801082_NAME": {
+    "en": "Heretical Ambition",
+    "es": "Ambición herética",
+    "id": "Ambisi Bidah",
+    "pt": "Ambição Herege",
+    "th": "เฮเรติคอล แอมบิทชั่น",
+    "vi": "Heretical Ambition"
+  },
+  "MST_LEADERSKILLS_801083_DESCRIPTION": {
+    "en": "35% boost to all parameters, reduces all damage received by 10%, increases reduction of damage taken when guarding & restores HP when guarding",
+    "es": "+35% a todos los parámetros, reduce el daño recibido un 10% y aumenta levemente la reducción del daño y recupera PS al protegerse",
+    "id": "35% ekstra ke semua parameter, mengurangi 10% dari semua kerusakan diderita & saat menjaga: menambah pengurangan kerusakan diderita & memulihkan HP",
+    "pt": "+35% em todos os parâmetros, -10% no dano sofrido, reforço na redução de dano ao defender e recupera HP ao defender",
+    "th": "35% เพิ่มทุกค่าพารามิเตอร์, ลดดาเมจที่ได้รับ 10% และลดดาเมจมากขึ้นเมื่อตั้งการ์ด, ฟื้น HP เมื่อตั้งการ์ด",
+    "vi": "35% boost to all parameters, reduces all damage received by 10%, increases reduction of damage taken when guarding & restores HP when guarding"
+  },
+  "MST_LEADERSKILLS_801083_NAME": {
+    "en": "Heretical Domination",
+    "es": "Dominación herética",
+    "id": "Dominasi Bidah",
+    "pt": "Dominação Herege",
+    "th": "เฮเรติคอล โดมิเนชั่น",
+    "vi": "Heretical Domination"
+  },
+  "MST_LEADERSKILLS_801084_DESCRIPTION": {
+    "en": "120% boost to Atk of Fire, Water, Earth, Thunder types, boosts elemental damage & boosts BB Atk",
+    "es": "+120% al ATQ de las unidades ígneas, acuáticas, atronadoras y térreas, potencia el daño elemental y el ATQ de BB",
+    "id": "120% ekstra ke Serangan tipe Api, Air, Bumi, Guntur, menambah kerusakan elemen & BB Serang",
+    "pt": "Reforço de 120% no ATQ do tipo Fogo, Água, Terra, Trovão, reforço no dano elemental e ATQ BB",
+    "th": "120% เพิ่มพลังโจมตีให้ยูนิตธาตุไฟ, น้ำ, ดิน, สายฟ้า เพิ่มดาเมจที่เป็นธาตุ และเพิ่ม BB โจมตี",
+    "vi": "120% boost to Atk of Fire, Water, Earth, Thunder types, boosts elemental damage & boosts BB Atk"
+  },
+  "MST_LEADERSKILLS_801084_NAME": {
+    "en": "Arcane Aspect",
+    "es": "Aspecto arcano",
+    "id": "Aspek Misterius",
+    "pt": "Aspecto Misterioso",
+    "th": "อาร์เคน แอสเปค",
+    "vi": "Arcane Aspect"
+  },
+  "MST_LEADERSKILLS_801085_DESCRIPTION": {
+    "en": "100% boost to Atk of Light, Dark types, negates all status ailments & boosts damage against status afflicted foes",
+    "es": "+100% al ATQ de las unidades lumínicas y oscuras, niega las aflicciones de estado y potencia el daño contra enemigos con estado afectado",
+    "id": "100% ekstra Serangan tipe Terang, Gelap; menegasi semua status penyakit & menambah kerusakan terhadap musuh yang terkena status",
+    "pt": "Reforço de 100% no ATQ de Luz, Sombra, nega efeitos negativos e reforça dano contra inimigos com efeitos negativos",
+    "th": "100% เพิ่มพลังโจมตีให้ยูนิตธาตุแสงและความมืด, กันทุกสถานะผิดปกติ และเพิ่มดาเมจเมื่อโจมตีศัตรูที่ติดสถานะผิดปกติ",
+    "vi": "100% boost to Atk of Light, Dark types, negates all status ailments & boosts damage against status afflicted foes"
+  },
+  "MST_LEADERSKILLS_801085_NAME": {
+    "en": "Insidious Supremacy",
+    "es": "Supremacía insidiosa",
+    "id": "Supremasi Berbahaya",
+    "pt": "Supremacia Traiçoeira",
+    "th": "อินซิเดียส ซูพรีมาซี่",
+    "vi": "Insidious Supremacy"
+  },
+  "MST_LEADERSKILLS_801086_DESCRIPTION": {
+    "en": "Boosts critical damage and Fire, Light elemental damage",
+    "es": "Potencia el daño crítico y el daño infligido a los elementos débiles por unidades ígneas y lumínicas",
+    "id": "Menambah kerusakan pukulan kritis & menambah kerusakan terhadap elemen lebih lemah oleh tipe Api dan Terang",
+    "pt": "Reforço no dano crítico e reforço no dano causado a elementos mais fracos por Fogo e Luz",
+    "th": "เพิ่มจำนวนคริติคอลฮิต, เพิ่มดาเมจเมื่อโจมตีธาตุแพ้ทางด้วยธาตุไฟและแสง",
+    "vi": "Boosts critical damage and Fire, Light elemental damage"
+  },
+  "MST_LEADERSKILLS_801086_NAME": {
+    "en": "Heavenly Assimilation",
+    "es": "Asimilación celestial",
+    "id": "Asimilasi Surgawi",
+    "pt": "Assimilação Celeste",
+    "th": "เฮฟเว่นลี่ แอสซิมิเลชั่น",
+    "vi": "Heavenly Assimilation"
+  },
+  "MST_LEADERSKILLS_801087_DESCRIPTION": {
+    "en": "Greatly boosts critical damage and Fire, Light elemental damage",
+    "es": "Potencia notablemente el daño crítico y el daño infligido a los elementos débiles por unidades ígneas y lumínicas",
+    "id": "Amat menambah kerusakan pukulan kritis & amat menambah kerusakan terhadap elemen lebih lemah oleh tipe Api dan Terang",
+    "pt": "Grande reforço no dano crítico e grande reforço no dano causado em elemento mais fraco por tipos Fogo e Luz",
+    "th": "เพิ่มคริติคอลดาเมจอย่างมาก, เพิ่มดาเมจเมื่อโจมตีธาตุแพ้ทางด้วยธาตุไฟและแสง",
+    "vi": "Greatly boosts critical damage and Fire, Light elemental damage"
+  },
+  "MST_LEADERSKILLS_801087_NAME": {
+    "en": "Divine Ruler's Wrath",
+    "es": "Ira del Gobernante Divino",
+    "id": "Murka Penguasa Ilahi",
+    "pt": "Ira do Governante Divino",
+    "th": "ดีไวน์ รูเลอร์ วราธ",
+    "vi": "Divine Ruler's Wrath"
+  },
+  "MST_LEADERSKILLS_801088_DESCRIPTION": {
+    "en": "20% boost to max HP, Atk & boost to critical damage",
+    "es": "+20% a los PS máx. y al ATQ, y aumenta el daño crítico",
+    "id": "20% ekstra untuk HP Maks, Serang & menambah kerusakan pukulan ampuh",
+    "pt": "Reforço de 25% no HP máx., ATQ e reforço no dano crítico",
+    "th": "20% เพิ่ม max HP, พลังโจมตี และเพิ่มคริติคอลดาเมจ",
+    "vi": "20% boost to max HP, Atk & boost to critical damage"
+  },
+  "MST_LEADERSKILLS_801088_NAME": {
+    "en": "Unbridled Fury",
+    "es": "Furia desenfrenada",
+    "id": "Murka Tak Terkendali",
+    "pt": "Fúria Desenfreada",
+    "th": "อันบริดเล็ด ฟิวรี่",
+    "vi": "Unbridled Fury"
+  },
+  "MST_LEADERSKILLS_801089_DESCRIPTION": {
+    "en": "30% boost to max HP, Atk, largely boosts critical damage & boosts BB gauge when attacked",
+    "es": "+30% a los PS máx. y al ATQ, mejora fuertemente el daño crítico y potencia el indicador BB al recibir ataques",
+    "id": "30% ekstra untuk HP Maks, Serang,  amat menambah kerusakan pukulan ampuh & menambah meteran BB saat diserang",
+    "pt": "Reforço de 30% no HP máx., ATQ, grande reforço no dano crítico e reforço na Barra BB ao ser atacado",
+    "th": "30% เพิ่ม max HP, พลังโจมตี, เพิ่มคริติคอลดาเมจอย่างมาก, เพิ่มบีบีเกจเมื่อถูกโจมตี",
+    "vi": "30% boost to max HP, Atk, largely boosts critical damage & boosts BB gauge when attacked"
+  },
+  "MST_LEADERSKILLS_801089_NAME": {
+    "en": "Blood Rage",
+    "es": "Ira sangrienta",
+    "id": "Murka Darah",
+    "pt": "Ira de Sangue",
+    "th": "บลัด เรจ",
+    "vi": "Blood Rage"
+  },
+  "MST_LEADERSKILLS_801090_DESCRIPTION": {
+    "en": "40% boost to max HP, Atk, greatly boosts critical damage, boosts BB gauge when attacked & boosts Atk when BB gauge is full",
+    "es": "+40% a los PS máx. y al ATQ, mejora notablemente el daño crítico y potencia el indicador BB al recibir ataques y el ATQ cuando el indicador BB está lleno",
+    "id": "40% ekstra untuk HP Maks, Serang, amat menambah kerusakan pukulan ampuh, menambah meteran BB saat diserang & menambah Seangan saat meteran BB penuh",
+    "pt": "Reforço de 40% no HP máx., ATQ, reforço imenso no dano crítico, reforço na Barra BB ao ser atacado e reforço no ATQ quando Barra BB estiver cheia",
+    "th": "40% เพิ่ม max HP, พลังโจมตี, เพิ่มคริติคอลดาเมจอย่างมากมาย, เพิ่มบีบีเกจเมื่อถูกโจมตี, เพิ่มพลังโจมตีเมื่อบีบีเกจเต็ม",
+    "vi": "40% boost to max HP, Atk, greatly boosts critical damage, boosts BB gauge when attacked & boosts Atk when BB gauge is full"
+  },
+  "MST_LEADERSKILLS_801090_NAME": {
+    "en": "Infernal Furor",
+    "es": "Furor infernal",
+    "id": "Kehebohan Neraka",
+    "pt": "Fúria Infernal",
+    "th": "อินเฟอนอล ฟิวเรอร์",
+    "vi": "Infernal Furor"
+  },
+  "MST_LEADERSKILLS_801091_DESCRIPTION": {
+    "en": "20% boost to all parameters & boosts BB gauge fill rate",
+    "es": "+20% a todos los parámetros y potencia la vel. de carga del indicador BB",
+    "id": "20% ekstra ke semua parameter & menambah laju pengisian meteran BB",
+    "pt": "Reforço de 15% em todos os parâmetros e reforço na taxa de preenchimento da Barra BB",
+    "th": "20% เพิ่มทุกค่าพลัง, เพิ่มอัตราการเติมบีบี",
+    "vi": "20% boost to all parameters & boosts BB gauge fill rate"
+  },
+  "MST_LEADERSKILLS_801091_NAME": {
+    "en": "Algid Authority",
+    "es": "Autoridad álgida",
+    "id": "Otoritas Dingin",
+    "pt": "Autoridade Gelada",
+    "th": "อัลกริด ออเธอริตี้",
+    "vi": "Algid Authority"
+  },
+  "MST_LEADERSKILLS_801092_DESCRIPTION": {
+    "en": "25% boost to all parameters, largely boosts BB gauge fill rate & largely boosts BC and HC drop rate",
+    "es": "+25% a todos los parámetros y potencia fuertemente la vel. de carga del indicador BB y la posibilidad de encontrar CB y CC",
+    "id": "25% ekstra ke semua parameter, amat menambah laju pengisian meteran BB & amat menambah perolehan BC dan HC",
+    "pt": "Reforço de 15% em todos os parâmetros e grande reforço na taxa de preenchimento da Barra BB e na taxa de queda do BC e HC",
+    "th": "25% เพิ่มทุกค่าพลัง, เพิ่มอัตราการเติมบีบีเป็นจำนวนมาก, เพิ่มอัตราการดรอป BC และ HC อย่างมาก",
+    "vi": "25% boost to all parameters, largely boosts BB gauge fill rate & largely boosts BC and HC drop rate"
+  },
+  "MST_LEADERSKILLS_801092_NAME": {
+    "en": "Gelid Dominion",
+    "es": "Dominio gélido",
+    "id": "Dominion Dingin Sekali",
+    "pt": "Domínio Gélido",
+    "th": "เจลิด โดมิเนียน",
+    "vi": "Gelid Dominion"
+  },
+  "MST_LEADERSKILLS_801093_DESCRIPTION": {
+    "en": "30% boost to all parameters, greatly boosts BB gauge fill rate, greatly boosts BC, HC drop rate & greatly boosts BB Atk",
+    "es": "+30% a todos los parámetros y potencia notablemente la vel. de carga del indicador BB, la posibilidad de encontrar CB y CC y el ATQ de BB",
+    "id": "30% ekstra ke semua parameter, tambahan besar BB serang dan laju pengisian meteran BB, tambahan besar perolehan BC dan HC",
+    "pt": "Reforço de 30% em todos os parâmetros, grande reforço na taxa de preenchimento da Barra BB e na taxa de queda do BC e HC e no ATQ BB",
+    "th": "30% เพิ่มทุกค่าพลัง, เพิ่มอัตราการเติมบีบีเป็นจำนวนมากมาย, เพิ่มอัตราการดรอป BC และ HC อย่างมากมาย และเพิ่มบีบีโจมตีอย่างมาก",
+    "vi": "30% boost to all parameters, greatly boosts BB gauge fill rate, greatly boosts BC, HC drop rate & greatly boosts BB Atk"
+  },
   "MST_LEADERSKILLS_801093_NAME": {
     "en": "Boreal Ascendancy",
     "es": "Ascendencia boreal",
@@ -2360,12 +2640,12 @@
     "vi": "Fire Dragon Slayer Magic"
   },
   "MST_LEADERSKILLS_810548_DESCRIPTION": {
-    "en": "200% boost to Atk, 80% boost to max HP and greatly boosts critical hit rate of Fire types, Spark damage boosts BB gauge, hugely boosts critical damage, hugely boosts Fire elemental damage & 15% damage reduction from Fire, Earth, Dark types",
-    "es": "200% boost to Atk, 80% boost to max HP and greatly boosts critical hit rate of Fire types, Spark damage boosts BB gauge, hugely boosts critical damage, hugely boosts Fire elemental damage & 15% damage reduction from Fire, Earth, Dark types",
-    "id": "200% boost to Atk, 80% boost to max HP and greatly boosts critical hit rate of Fire types, Spark damage boosts BB gauge, hugely boosts critical damage, hugely boosts Fire elemental damage & 15% damage reduction from Fire, Earth, Dark types",
-    "pt": "200% boost to Atk, 80% boost to max HP and greatly boosts critical hit rate of Fire types, Spark damage boosts BB gauge, hugely boosts critical damage, hugely boosts Fire elemental damage & 15% damage reduction from Fire, Earth, Dark types",
-    "th": "200% boost to Atk, 80% boost to max HP and greatly boosts critical hit rate of Fire types, Spark damage boosts BB gauge, hugely boosts critical damage, hugely boosts Fire elemental damage & 15% damage reduction from Fire, Earth, Dark types",
-    "vi": "200% boost to Atk, 80% boost to max HP and greatly boosts critical hit rate of Fire types, Spark damage boosts BB gauge, hugely boosts critical damage, hugely boosts Fire elemental damage & 15% damage reduction from Fire, Earth, Dark types"
+    "en": "200% boost to Atk, 100% boost to max HP and greatly boosts critical hit rate of Fire types, Spark damage boosts BB gauge, hugely boosts critical damage, enormously boosts Fire elemental damage & 15% damage reduction from Fire, Earth, Dark types",
+    "es": "200% boost to Atk, 100% boost to max HP and greatly boosts critical hit rate of Fire types, Spark damage boosts BB gauge, hugely boosts critical damage, enormously boosts Fire elemental damage & 15% damage reduction from Fire, Earth, Dark types",
+    "id": "200% boost to Atk, 100% boost to max HP and greatly boosts critical hit rate of Fire types, Spark damage boosts BB gauge, hugely boosts critical damage, enormously boosts Fire elemental damage & 15% damage reduction from Fire, Earth, Dark types",
+    "pt": "200% boost to Atk, 100% boost to max HP and greatly boosts critical hit rate of Fire types, Spark damage boosts BB gauge, hugely boosts critical damage, enormously boosts Fire elemental damage & 15% damage reduction from Fire, Earth, Dark types",
+    "th": "200% boost to Atk, 100% boost to max HP and greatly boosts critical hit rate of Fire types, Spark damage boosts BB gauge, hugely boosts critical damage, enormously boosts Fire elemental damage & 15% damage reduction from Fire, Earth, Dark types",
+    "vi": "200% boost to Atk, 100% boost to max HP and greatly boosts critical hit rate of Fire types, Spark damage boosts BB gauge, hugely boosts critical damage, enormously boosts Fire elemental damage & 15% damage reduction from Fire, Earth, Dark types"
   },
   "MST_LEADERSKILLS_810548_NAME": {
     "en": "Fire Dragon King Mode",
@@ -3655,6 +3935,38 @@
     "th": "Blighted Heart",
     "vi": "Blighted Heart"
   },
+  "MST_LEADERSKILLS_830647_DESCRIPTION": {
+    "en": "100% boost to Def, max HP and 30% boost to critical hit rate of Earth types, 200% boost to critical damage, 10% additional damage reduction & 15% damage reduction from Earth, Thunder types",
+    "es": "100% boost to Def, max HP and 30% boost to critical hit rate of Earth types, 200% boost to critical damage, 10% additional damage reduction & 15% damage reduction from Earth, Thunder types",
+    "id": "100% boost to Def, max HP and 30% boost to critical hit rate of Earth types, 200% boost to critical damage, 10% additional damage reduction & 15% damage reduction from Earth, Thunder types",
+    "pt": "100% boost to Def, max HP and 30% boost to critical hit rate of Earth types, 200% boost to critical damage, 10% additional damage reduction & 15% damage reduction from Earth, Thunder types",
+    "th": "100% boost to Def, max HP and 30% boost to critical hit rate of Earth types, 200% boost to critical damage, 10% additional damage reduction & 15% damage reduction from Earth, Thunder types",
+    "vi": "100% boost to Def, max HP and 30% boost to critical hit rate of Earth types, 200% boost to critical damage, 10% additional damage reduction & 15% damage reduction from Earth, Thunder types"
+  },
+  "MST_LEADERSKILLS_830647_NAME": {
+    "en": "Iron Dragon Slayer Magic",
+    "es": "Iron Dragon Slayer Magic",
+    "id": "Iron Dragon Slayer Magic",
+    "pt": "Iron Dragon Slayer Magic",
+    "th": "Iron Dragon Slayer Magic",
+    "vi": "Iron Dragon Slayer Magic"
+  },
+  "MST_LEADERSKILLS_830648_DESCRIPTION": {
+    "en": "130% boost to Def, max HP and 30% boost to critical hit rate of Earth types, 250% boost to critical damage, 15% additional damage reduction, 20% damage reduction for 1 turn when damage dealt exceeds certain amount & 15% damage reduction from Earth, Thunder types",
+    "es": "130% boost to Def, max HP and 30% boost to critical hit rate of Earth types, 250% boost to critical damage, 15% additional damage reduction, 20% damage reduction for 1 turn when damage dealt exceeds certain amount & 15% damage reduction from Earth, Thunder types",
+    "id": "130% boost to Def, max HP and 30% boost to critical hit rate of Earth types, 250% boost to critical damage, 15% additional damage reduction, 20% damage reduction for 1 turn when damage dealt exceeds certain amount & 15% damage reduction from Earth, Thunder types",
+    "pt": "130% boost to Def, max HP and 30% boost to critical hit rate of Earth types, 250% boost to critical damage, 15% additional damage reduction, 20% damage reduction for 1 turn when damage dealt exceeds certain amount & 15% damage reduction from Earth, Thunder types",
+    "th": "130% boost to Def, max HP and 30% boost to critical hit rate of Earth types, 250% boost to critical damage, 15% additional damage reduction, 20% damage reduction for 1 turn when damage dealt exceeds certain amount & 15% damage reduction from Earth, Thunder types",
+    "vi": "130% boost to Def, max HP and 30% boost to critical hit rate of Earth types, 250% boost to critical damage, 15% additional damage reduction, 20% damage reduction for 1 turn when damage dealt exceeds certain amount & 15% damage reduction from Earth, Thunder types"
+  },
+  "MST_LEADERSKILLS_830648_NAME": {
+    "en": "Iron Shadow Dragon Mode",
+    "es": "Iron Shadow Dragon Mode",
+    "id": "Iron Shadow Dragon Mode",
+    "pt": "Iron Shadow Dragon Mode",
+    "th": "Iron Shadow Dragon Mode",
+    "vi": "Iron Shadow Dragon Mode"
+  },
   "MST_LEADERSKILLS_840047_DESCRIPTION": {
     "en": "100% boost to Atk, 60% boost to Def, max HP of Thunder types, 10% damage reduction from Water, Thunder types, considerably reduces BB gauge required for BB & probable considerable reduction of BB gauge fill rate for 2 turns",
     "es": "100% boost to Atk, 60% boost to Def, max HP of Thunder types, 10% damage reduction from Water, Thunder types, considerably reduces BB gauge required for BB & probable considerable reduction of BB gauge fill rate for 2 turns",
@@ -4568,12 +4880,12 @@
     "vi": "Spatial Magic"
   },
   "MST_LEADERSKILLS_850548_DESCRIPTION": {
-    "en": "60% boost to all parameters of Light types, hugely boosts critical damage, hugely boosts Light elemental damage & 15% damage reduction from Light, Dark types",
-    "es": "60% boost to all parameters of Light types, hugely boosts critical damage, hugely boosts Light elemental damage & 15% damage reduction from Light, Dark types",
-    "id": "60% boost to all parameters of Light types, hugely boosts critical damage, hugely boosts Light elemental damage & 15% damage reduction from Light, Dark types",
-    "pt": "60% boost to all parameters of Light types, hugely boosts critical damage, hugely boosts Light elemental damage & 15% damage reduction from Light, Dark types",
-    "th": "60% boost to all parameters of Light types, hugely boosts critical damage, hugely boosts Light elemental damage & 15% damage reduction from Light, Dark types",
-    "vi": "60% boost to all parameters of Light types, hugely boosts critical damage, hugely boosts Light elemental damage & 15% damage reduction from Light, Dark types"
+    "en": "80% boost to all parameters of Light types, hugely boosts critical damage, hugely boosts Light elemental damage & 15% damage reduction from Light, Dark types",
+    "es": "80% boost to all parameters of Light types, hugely boosts critical damage, hugely boosts Light elemental damage & 15% damage reduction from Light, Dark types",
+    "id": "80% boost to all parameters of Light types, hugely boosts critical damage, hugely boosts Light elemental damage & 15% damage reduction from Light, Dark types",
+    "pt": "80% boost to all parameters of Light types, hugely boosts critical damage, hugely boosts Light elemental damage & 15% damage reduction from Light, Dark types",
+    "th": "80% boost to all parameters of Light types, hugely boosts critical damage, hugely boosts Light elemental damage & 15% damage reduction from Light, Dark types",
+    "vi": "80% boost to all parameters of Light types, hugely boosts critical damage, hugely boosts Light elemental damage & 15% damage reduction from Light, Dark types"
   },
   "MST_LEADERSKILLS_850548_NAME": {
     "en": "Recompense Summoning",
@@ -4662,6 +4974,70 @@
     "pt": "Symbol of Peace",
     "th": "Symbol of Peace",
     "vi": "Symbol of Peace"
+  },
+  "MST_LEADERSKILLS_850637_DESCRIPTION": {
+    "en": "60% boost to all parameters, boosts BC, HC, Item, Zel and Karma drop rates, probable damage reduction to 1 & considerably boosts OD gauge fill rate",
+    "es": "60% boost to all parameters, boosts BC, HC, Item, Zel and Karma drop rates, probable damage reduction to 1 & considerably boosts OD gauge fill rate",
+    "id": "60% boost to all parameters, boosts BC, HC, Item, Zel and Karma drop rates, probable damage reduction to 1 & considerably boosts OD gauge fill rate",
+    "pt": "60% boost to all parameters, boosts BC, HC, Item, Zel and Karma drop rates, probable damage reduction to 1 & considerably boosts OD gauge fill rate",
+    "th": "60% boost to all parameters, boosts BC, HC, Item, Zel and Karma drop rates, probable damage reduction to 1 & considerably boosts OD gauge fill rate",
+    "vi": "60% boost to all parameters, boosts BC, HC, Item, Zel and Karma drop rates, probable damage reduction to 1 & considerably boosts OD gauge fill rate"
+  },
+  "MST_LEADERSKILLS_850637_NAME": {
+    "en": "Illusion Magic",
+    "es": "Illusion Magic",
+    "id": "Illusion Magic",
+    "pt": "Illusion Magic",
+    "th": "Illusion Magic",
+    "vi": "Illusion Magic"
+  },
+  "MST_LEADERSKILLS_850638_DESCRIPTION": {
+    "en": "80% boost to all parameters, greatly boosts BC, HC, Item, Zel and Karma drop rates, probable damage reduction to 1 & greatly boosts OD gauge fill rate",
+    "es": "80% boost to all parameters, greatly boosts BC, HC, Item, Zel and Karma drop rates, probable damage reduction to 1 & greatly boosts OD gauge fill rate",
+    "id": "80% boost to all parameters, greatly boosts BC, HC, Item, Zel and Karma drop rates, probable damage reduction to 1 & greatly boosts OD gauge fill rate",
+    "pt": "80% boost to all parameters, greatly boosts BC, HC, Item, Zel and Karma drop rates, probable damage reduction to 1 & greatly boosts OD gauge fill rate",
+    "th": "80% boost to all parameters, greatly boosts BC, HC, Item, Zel and Karma drop rates, probable damage reduction to 1 & greatly boosts OD gauge fill rate",
+    "vi": "80% boost to all parameters, greatly boosts BC, HC, Item, Zel and Karma drop rates, probable damage reduction to 1 & greatly boosts OD gauge fill rate"
+  },
+  "MST_LEADERSKILLS_850638_NAME": {
+    "en": "The First Master",
+    "es": "The First Master",
+    "id": "The First Master",
+    "pt": "The First Master",
+    "th": "The First Master",
+    "vi": "The First Master"
+  },
+  "MST_LEADERSKILLS_850647_DESCRIPTION": {
+    "en": "100% boost to Atk, Def, max HP and 30% boost to critical hit rate of Light types, enormously boosts BB Atk, hugely boosts Spark damage & 15% damage reduction from Light, Dark types",
+    "es": "100% boost to Atk, Def, max HP and 30% boost to critical hit rate of Light types, enormously boosts BB Atk, hugely boosts Spark damage & 15% damage reduction from Light, Dark types",
+    "id": "100% boost to Atk, Def, max HP and 30% boost to critical hit rate of Light types, enormously boosts BB Atk, hugely boosts Spark damage & 15% damage reduction from Light, Dark types",
+    "pt": "100% boost to Atk, Def, max HP and 30% boost to critical hit rate of Light types, enormously boosts BB Atk, hugely boosts Spark damage & 15% damage reduction from Light, Dark types",
+    "th": "100% boost to Atk, Def, max HP and 30% boost to critical hit rate of Light types, enormously boosts BB Atk, hugely boosts Spark damage & 15% damage reduction from Light, Dark types",
+    "vi": "100% boost to Atk, Def, max HP and 30% boost to critical hit rate of Light types, enormously boosts BB Atk, hugely boosts Spark damage & 15% damage reduction from Light, Dark types"
+  },
+  "MST_LEADERSKILLS_850647_NAME": {
+    "en": "Sky Dragon Slayer Magic",
+    "es": "Sky Dragon Slayer Magic",
+    "id": "Sky Dragon Slayer Magic",
+    "pt": "Sky Dragon Slayer Magic",
+    "th": "Sky Dragon Slayer Magic",
+    "vi": "Sky Dragon Slayer Magic"
+  },
+  "MST_LEADERSKILLS_850648_DESCRIPTION": {
+    "en": "120% boost to Atk, Def, max HP and 30% boost to critical hit rate of Light types, enormously boosts BB Atk, hugely boosts Spark damage, Spark damage restores HP & 20% damage reduction from Light, Dark types",
+    "es": "120% boost to Atk, Def, max HP and 30% boost to critical hit rate of Light types, enormously boosts BB Atk, hugely boosts Spark damage, Spark damage restores HP & 20% damage reduction from Light, Dark types",
+    "id": "120% boost to Atk, Def, max HP and 30% boost to critical hit rate of Light types, enormously boosts BB Atk, hugely boosts Spark damage, Spark damage restores HP & 20% damage reduction from Light, Dark types",
+    "pt": "120% boost to Atk, Def, max HP and 30% boost to critical hit rate of Light types, enormously boosts BB Atk, hugely boosts Spark damage, Spark damage restores HP & 20% damage reduction from Light, Dark types",
+    "th": "120% boost to Atk, Def, max HP and 30% boost to critical hit rate of Light types, enormously boosts BB Atk, hugely boosts Spark damage, Spark damage restores HP & 20% damage reduction from Light, Dark types",
+    "vi": "120% boost to Atk, Def, max HP and 30% boost to critical hit rate of Light types, enormously boosts BB Atk, hugely boosts Spark damage, Spark damage restores HP & 20% damage reduction from Light, Dark types"
+  },
+  "MST_LEADERSKILLS_850648_NAME": {
+    "en": "Sky Sorceress",
+    "es": "Sky Sorceress",
+    "id": "Sky Sorceress",
+    "pt": "Sky Sorceress",
+    "th": "Sky Sorceress",
+    "vi": "Sky Sorceress"
   },
   "MST_LEADERSKILLS_850977_DESCRIPTION": {
     "en": "40% boost to max HP, boosts Atk relative to how high remaining HP is & boosts Def relative to how low remaining HP is",
@@ -87070,245 +87446,5 @@
     "pt": "Gadelyux",
     "th": "เกลิอักซ์",
     "vi": "Gadelyux"
-  },
-  "MST_MONSTERS_551602_NAME": {
-    "en": "Gadelyux",
-    "es": "Gadelyux",
-    "id": "Gadelyux",
-    "pt": "Gadelyux",
-    "th": "เกลิอักซ์",
-    "vi": "Gadelyux"
-  },
-  "MST_MONSTERS_551603_NAME": {
-    "en": "Gadelyux",
-    "es": "Gadelyux",
-    "id": "Gadelyux",
-    "pt": "Gadelyux",
-    "th": "กาเดลยุกส์",
-    "vi": "Gadelyux"
-  },
-  "MST_MONSTERS_551700_NAME": {
-    "en": "Demon Mare",
-    "es": "Demon Mare",
-    "id": "Setan Mare",
-    "pt": "Demon Mare",
-    "th": "เดม่อน แมร์",
-    "vi": "Demon Mare"
-  },
-  "MST_MONSTERS_551701_NAME": {
-    "en": "Demon Mare",
-    "es": "Demon Mare",
-    "id": "Setan Mare",
-    "pt": "Demon Mare",
-    "th": "เดม่อน แมร์",
-    "vi": "Demon Mare"
-  },
-  "MST_MONSTERS_551800_NAME": {
-    "en": "Demon God Zurg",
-    "es": "Demon God Zurg",
-    "id": "Dewa Setan Zurg",
-    "pt": "Demon God Zurg",
-    "th": "เดม่อน ก็อด เซิร์ก",
-    "vi": "Demon God Zurg"
-  },
-  "MST_MONSTERS_551801_NAME": {
-    "en": "Demon God Zurg",
-    "es": "Demon God Zurg",
-    "id": "Dewa Setan Zurg",
-    "pt": "Demon God Zurg",
-    "th": "เดม่อน ก็อด เซิร์ก",
-    "vi": "Demon God Zurg"
-  },
-  "MST_MONSTERS_551802_NAME": {
-    "en": "Demon God Zurg",
-    "es": "Demon God Zurg",
-    "id": "Dewa Setan Zurg",
-    "pt": "Demon God Zurg",
-    "th": "เดม่อน ก็อด เซิร์ก",
-    "vi": "Demon God Zurg"
-  },
-  "MST_MONSTERS_551900_NAME": {
-    "en": "Evil God Kajah",
-    "es": "Evil God Kajah",
-    "id": "Dewa Jahat Kajah",
-    "pt": "Evil God Kajah",
-    "th": "อีวิล ก็อด คาจาห์",
-    "vi": "Evil God Kajah"
-  },
-  "MST_MONSTERS_551901_NAME": {
-    "en": "Evil God Kajah",
-    "es": "Evil God Kajah",
-    "id": "Dewa Jahat Kajah",
-    "pt": "Evil God Kajah",
-    "th": "อีวิล ก็อด คาจาห์",
-    "vi": "Evil God Kajah"
-  },
-  "MST_MONSTERS_551902_NAME": {
-    "en": "Evil God Kajah",
-    "es": "Evil God Kajah",
-    "id": "Dewa Jahat Kajah",
-    "pt": "Evil God Kajah",
-    "th": "อีวิล ก็อด คาจาห์",
-    "vi": "Evil God Kajah"
-  },
-  "MST_MONSTERS_552000_NAME": {
-    "en": "Evil God Kajah",
-    "es": "Evil God Kajah",
-    "id": "Dewa Jahat Kajah",
-    "pt": "Evil God Kajah",
-    "th": "อีวิล ก็อด คาจาห์",
-    "vi": "Evil God Kajah"
-  },
-  "MST_MONSTERS_552001_NAME": {
-    "en": "Evil God Kajah",
-    "es": "Evil God Kajah",
-    "id": "Dewa Jahat Kajah",
-    "pt": "Evil God Kajah",
-    "th": "อีวิล ก็อด คาจาห์",
-    "vi": "Evil God Kajah"
-  },
-  "MST_MONSTERS_55200_NAME": {
-    "en": "Seraph Azael",
-    "es": "Serafín Azael",
-    "id": "Serafim Azael",
-    "pt": "Serafim Azael",
-    "th": "เซรัฟอาซาเอล",
-    "vi": "Thiên Thần Tối Cao Azael"
-  },
-  "MST_MONSTERS_55201_NAME": {
-    "en": "Seraph Azael",
-    "es": "Serafín Azael",
-    "id": "Serafim Azael",
-    "pt": "Serafim Azael",
-    "th": "เซรัฟอาซาเอล",
-    "vi": "Thiên Thần Tối Cao Azael"
-  },
-  "MST_MONSTERS_55202_NAME": {
-    "en": "Seraph Azael",
-    "es": "Seraph Azael",
-    "id": "Serafim Azael",
-    "pt": "Seraph Azael",
-    "th": "เซราห์ฟ อาเซล",
-    "vi": "Seraph Azael"
-  },
-  "MST_MONSTERS_55250_NAME": {
-    "en": "Remuihl",
-    "es": "Remuihl",
-    "id": "Remuihl",
-    "pt": "Remuihl",
-    "th": "เรมุอิห์ล",
-    "vi": "Remuihl"
-  },
-  "MST_MONSTERS_55251_NAME": {
-    "en": "Remuihl",
-    "es": "Remuihl",
-    "id": "Remuihl",
-    "pt": "Remuihl",
-    "th": "เรมุอิห์ล",
-    "vi": "Remuihl"
-  },
-  "MST_MONSTERS_55252_NAME": {
-    "en": "Remuihl",
-    "es": "Remuihl",
-    "id": "Remuihl",
-    "pt": "Remuihl",
-    "th": "เรมุอิห์ล",
-    "vi": "Remuihl"
-  },
-  "MST_MONSTERS_55253_NAME": {
-    "en": "Remuihl",
-    "es": "Remuihl",
-    "id": "Remuihl",
-    "pt": "Remuihl",
-    "th": "เรมุอิห์ล",
-    "vi": "Remuihl"
-  },
-  "MST_MONSTERS_55254_NAME": {
-    "en": "Remuihl",
-    "es": "Remuihl",
-    "id": "Remuihl",
-    "pt": "Remuihl",
-    "th": "เรมุอิห์ล",
-    "vi": "Remuihl"
-  },
-  "MST_MONSTERS_55255_NAME": {
-    "en": "Remuihl",
-    "es": "Remuihl",
-    "id": "Remuihl",
-    "pt": "Remuihl",
-    "th": "เรมุอิห์ล",
-    "vi": "Remuihl"
-  },
-  "MST_MONSTERS_55256_NAME": {
-    "en": "Remuihl",
-    "es": "Remuihl",
-    "id": "Remuihl",
-    "pt": "Remuihl",
-    "th": "เรมุอิห์ล",
-    "vi": "Remuihl"
-  },
-  "MST_MONSTERS_55257_NAME": {
-    "en": "Remuihl",
-    "es": "Remuihl",
-    "id": "Remuihl",
-    "pt": "Remuihl",
-    "th": "เรมุยห์",
-    "vi": "Remuihl"
-  },
-  "MST_MONSTERS_55258_NAME": {
-    "en": "Remuihl",
-    "es": "Remuihl",
-    "id": "Remuihl",
-    "pt": "Remuihl",
-    "th": "เรมุยห์",
-    "vi": "Remuihl"
-  },
-  "MST_MONSTERS_55259_NAME": {
-    "en": "Remuihl",
-    "es": "Remuihl",
-    "id": "Remuihl",
-    "pt": "Remuihl",
-    "th": "เรมุยห์",
-    "vi": "Remuihl"
-  },
-  "MST_MONSTERS_55260_NAME": {
-    "en": "Remuihl",
-    "es": "Remuihl",
-    "id": "Remuihl",
-    "pt": "Remuihl",
-    "th": "เรมัวห์",
-    "vi": "Remuihl"
-  },
-  "MST_MONSTERS_55261_NAME": {
-    "en": "Remuihl",
-    "es": "Remuihl",
-    "id": "Remuihl",
-    "pt": "Remuihl",
-    "th": "เรมัวห์",
-    "vi": "Remuihl"
-  },
-  "MST_MONSTERS_55262_NAME": {
-    "en": "Remuihl",
-    "es": "Remuihl",
-    "id": "Remuihl",
-    "pt": "Remuihl",
-    "th": "เรมัวห์",
-    "vi": "Remuihl"
-  },
-  "MST_MONSTERS_55263_NAME": {
-    "en": "Remuihl",
-    "es": "Remuihl",
-    "id": "Remuihl",
-    "pt": "Remuihl",
-    "th": "เรมัวห์",
-    "vi": "Remuihl"
-  },
-  "MST_MONSTERS_55264_NAME": {
-    "en": "Remuihl",
-    "es": "Remuihl",
-    "id": "Remuihl",
-    "pt": "Remuihl",
-    "th": "เรมูวห์",
-    "vi": "Remuihl"
   }
 }
