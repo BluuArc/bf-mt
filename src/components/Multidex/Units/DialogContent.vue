@@ -19,7 +19,6 @@
             </v-layout>
             <v-layout row v-if="entry.first_clear_missions">
               <v-flex>
-                <!-- {{ logger.todo('mission card') || 'TODO: mission card' }} -->
                 <first-time-clear-reward-card :entry="entry" :logger="logger"/>
               </v-flex>
             </v-layout>

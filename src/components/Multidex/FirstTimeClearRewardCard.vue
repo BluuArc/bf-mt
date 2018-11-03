@@ -11,7 +11,7 @@
         <v-flex
           v-for="(missionId, i) in entry.first_clear_missions"
           :key="i"
-          xs12 sm6 md4 xl3>
+          xs12 sm6 xl3>
           <mission-card :to="getMultidexPathTo(missionId)" :entry="getById(missionId)"/>
         </v-flex>
       </v-layout>
