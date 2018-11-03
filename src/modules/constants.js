@@ -71,6 +71,21 @@ export const spCategoryMapping = Object.freeze({
   11: 'Special',
 });
 
+export const mimicIds = Object.freeze({
+  mimic: '60142',
+  batMimic: '60143',
+  dragonMimic: '60144',
+  metalMimic: '60224',
+});
+
+export const missionMonsterGroupMapping = Object.freeze({
+  '1000': mimicIds.mimic,
+  '1100': mimicIds.batMimic,
+  '1101': mimicIds.batMimic,
+  '1200': mimicIds.dragonMimic,
+  '1300': mimicIds.metalMimic,
+});
+
 export const effectTypes = Object.freeze({
   ATTACK: {
     name: 'Attack',

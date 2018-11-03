@@ -3,7 +3,7 @@
     <span slot="title">Rewards</span>
     <v-container fluid>
       <v-layout row wrap>
-        <v-flex xs12 md6>
+        <v-flex xs12 :md6="!isThin">
           <v-subheader class="title">Base Rewards</v-subheader>
           <v-list-tile>
             <v-list-tile-action>
@@ -36,7 +36,7 @@
             </v-list-tile-content>
           </v-list-tile>
         </v-flex>
-        <v-flex xs12 md6>
+        <v-flex xs12 :md6="!isThin">
           <v-list subheader style="background-color: transparent;">
             <v-subheader class="title">First Time Clear Rewards</v-subheader>
             <v-list-tile v-if="clearRewards.length === 0">
@@ -118,6 +118,10 @@ export default {
     },
     logger: {
       required: true,
+    },
+    isThin: {
+      type: Boolean,
+      default: false,
     },
   },
   components: {

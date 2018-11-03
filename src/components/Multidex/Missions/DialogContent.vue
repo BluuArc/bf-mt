@@ -14,14 +14,17 @@
           <rewards-card :mission="entry" :logger="logger"/>
         </v-flex>
       </v-layout>
-      <!-- <v-layout row>
-        <v-flex>
-          <usage-card :mission="entry" :logger="logger"/>
+      <v-layout row wrap>
+        <v-flex xs12 :md6="hasMimics" v-if="entry && entry.requires">
+          <requirements-card :mission="entry" :logger="logger" :isThin="hasMimics"/>
+        </v-flex>
+        <v-flex xs12 :md6="(entry && entry.requires)" v-if="hasMimics">
+          <mimic-card :mission="entry" :logger="logger"/>
         </v-flex>
       </v-layout>
-      <v-layout row>
+      <!-- <v-layout row>
         <v-flex>
-          <crafting-card :mission="entry" :logger="logger"/>
+          <mimic-card :mission="entry" :logger="logger"/>
         </v-flex>
       </v-layout> -->
       <v-layout row>
@@ -36,8 +39,8 @@ import DialogContentMixin from '@/components/Multidex/DialogContentMixin';
 import DescriptionCard from '@/components/Multidex/Missions/DescriptionCard';
 import MiscellaneousCard from '@/components/Multidex/Missions/MiscellaneousCard';
 import RewardsCard from '@/components/Multidex/Missions/RewardsCard';
-// import UsageCard from '@/components/Multidex/Items/UsageCard';
-// import CraftingCard from '@/components/Multidex/Items/CraftingCard';
+import RequirementsCard from '@/components/Multidex/Missions/RequirementsCard';
+import MimicCard from '@/components/Multidex/Missions/MimicCard';
 
 export default {
   mixins: [DialogContentMixin],
@@ -45,8 +48,13 @@ export default {
     DescriptionCard,
     MiscellaneousCard,
     RewardsCard,
-    // UsageCard,
-    // CraftingCard,
+    RequirementsCard,
+    MimicCard,
+  },
+  computed: {
+    hasMimics () {
+      return this.entry && this.entry.mimic_info && Object.keys(this.entry.mimic_info).length > 0;
+    },
   },
 };
 </script>
