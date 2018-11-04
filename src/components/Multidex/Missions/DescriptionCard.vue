@@ -1,23 +1,21 @@
 <template>
-  <bordered-titled-card materialColor="amber darken-2" class="multidex-dialog-content-card">
-    <span slot="title">Description</span>
-    <v-container fluid>
-      <v-layout v-if="ladText">
-        <v-flex>
-          {{ ladText }}
-        </v-flex>
-      </v-layout>
-      <v-layout>
-        <v-flex>
-          {{ description }}
-        </v-flex>
-      </v-layout>
-    </v-container>
-  </bordered-titled-card>
+  <description-card-base
+    :entry="mission"
+    materialColor="amber darken-2"
+    :titleHtmlGenerator="() => 'General Info'"
+    :descriptionGetter="() => description"
+    :treeOptions="{ maxDepth: 1 }"
+    :effectGetter="() => []"
+    :tabNames="['Description', 'JSON'].filter(val => val)">
+    <template fluid slot="description">
+      <p v-if="ladText" v-text="ladText"/>
+      <p v-text="description"/>
+    </template>
+  </description-card-base>
 </template>
 
 <script>
-import BorderedTitledCard from '@/components/BorderedTitledCard';
+import DescriptionCardBase from '@/components/Multidex/DescriptionCardBase';
 
 export default {
   props: {
@@ -29,7 +27,7 @@ export default {
     },
   },
   components: {
-    BorderedTitledCard,
+    DescriptionCardBase,
   },
   computed: {
     description () {

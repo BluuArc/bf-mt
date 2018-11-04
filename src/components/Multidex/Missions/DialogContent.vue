@@ -1,12 +1,14 @@
 <template>
   <dialog-content-base :entry="entry" :loadingEntryData="loadingEntryData">
     <v-container grid-list-lg>
-      <v-layout row wrap>
-        <v-flex xs12 sm5>
-          <description-card :mission="entry" :logger="logger" style="height: 100%;"/>
+      <v-layout row>
+        <v-flex>
+          <description-card :mission="entry" :logger="logger"/>
         </v-flex>
-        <v-flex xs12 sm7>
-          <miscellaneous-card :mission="entry" :logger="logger" style="height: 100%;"/>
+      </v-layout>
+      <v-layout row>
+        <v-flex>
+          <miscellaneous-card :mission="entry" :logger="logger"/>
         </v-flex>
       </v-layout>
       <v-layout row>
