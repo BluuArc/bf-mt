@@ -22,13 +22,10 @@
           <mimic-card :mission="entry" :logger="logger"/>
         </v-flex>
       </v-layout>
-      <!-- <v-layout row>
-        <v-flex>
-          <mimic-card :mission="entry" :logger="logger"/>
-        </v-flex>
-      </v-layout> -->
       <v-layout row>
-        {{ entry }}
+        <v-flex>
+          <related-missions-card :mission="entry" :logger="logger"/>
+        </v-flex>
       </v-layout>
     </v-container>
   </dialog-content-base>
@@ -41,6 +38,7 @@ import MiscellaneousCard from '@/components/Multidex/Missions/MiscellaneousCard'
 import RewardsCard from '@/components/Multidex/Missions/RewardsCard';
 import RequirementsCard from '@/components/Multidex/Missions/RequirementsCard';
 import MimicCard from '@/components/Multidex/Missions/MimicCard';
+import RelatedMissionsCard from '@/components/Multidex/Missions/RelatedMissionsCard';
 
 export default {
   mixins: [DialogContentMixin],
@@ -50,6 +48,7 @@ export default {
     RewardsCard,
     RequirementsCard,
     MimicCard,
+    RelatedMissionsCard,
   },
   computed: {
     hasMimics () {
