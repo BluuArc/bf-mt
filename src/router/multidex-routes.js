@@ -47,4 +47,10 @@ export default [
     component: MultidexPages.Missions,
     props: defaultMultidexPropHandler,
   },
+  {
+    path: '/multidex/dictionary',
+    name: 'Dictionary',
+    component: MultidexPages.Dictionary,
+    props: defaultMultidexPropHandler,
+  },
 ];

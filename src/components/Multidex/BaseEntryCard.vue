@@ -16,7 +16,6 @@ export default {
       default: '',
     },
     entry: {
-      type: Object,
       default: () => ({ name: 'No entry specified' }),
     },
   },
@@ -24,7 +23,7 @@ export default {
 </script>
 
 <style lang="less">
-.entry-card:hover {
+.entry-card:not(.no-highlight):hover {
   background-color: var(--background-color-alt--lighten-1)!important;
 }
 </style>

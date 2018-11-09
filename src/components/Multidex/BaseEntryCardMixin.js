@@ -7,7 +7,6 @@ export default {
       default: '',
     },
     entry: {
-      type: Object,
       required: true,
     },
   },

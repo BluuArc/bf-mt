@@ -210,7 +210,7 @@
             :maxResults="stateInfo[mainModule.name].numEntries[activeServer]"
             :numResults="allSortedEntries.length"
             :logger="logger">
-            <slot name="results" :keys="entriesToShow" :getMultidexPathTo="(key) => getMultidexPathTo(key, activeServer).resolved.fullPath">
+            <slot name="results" :logger="logger" :keys="entriesToShow" :getMultidexPathTo="(key) => getMultidexPathTo(key, activeServer).resolved.fullPath">
               <v-layout row wrap>
                 <v-flex
                   v-for="key in entriesToShow"
