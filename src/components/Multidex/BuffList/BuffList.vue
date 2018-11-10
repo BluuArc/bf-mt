@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <v-container fluid grid-list-md>
     <v-layout row>
       <v-flex>
         <h3 class="subheading">
@@ -7,18 +7,23 @@
         </h3>
       </v-flex>
     </v-layout>
-    <v-layout row wrap>
+    <v-layout row wrap class="d-align-items-center">
       <template v-for="(effect, i) in processedEffects">
-        <v-flex xs1 :key="`${i}-icon`" class="text-xs-center">
-          <!-- <buff-icon @click.native="logBuff(effect)" :icon-key="effect.iconKey"/> -->
-          {{ effect.iconKey }}
+        <v-flex
+          xs2 sm1
+          :key="`${i}-icon`"
+          class="text-xs-center">
+          <buff-icon
+            @click.native="logBuff(effect)"
+            :displaySize="iconSize"
+            :iconKey="effect.iconKey"/>
         </v-flex>
-        <v-flex xs1 v-if="$vuetify.breakpoint.mdAndUp" :key="`${i}-type`" class="text-xs-center">
+        <v-flex md1 v-if="$vuetify.breakpoint.mdAndUp" :key="`${i}-type`" class="text-xs-center">
           <p class="mb-0" :title="getTypes(effect.parent.type, true)">
             {{ getTypes(effect.parent.type) }}
           </p>
         </v-flex>
-        <v-flex :xs10="$vuetify.breakpoint.mdAndUp" :xs11="!$vuetify.breakpoint.mdAndUp" :key="i" class="text-xs-left">
+        <v-flex xs10 sm11 md10 :key="i" class="text-xs-left">
           <p class="mb-0">
             <span
               v-if="effect.parent.originalEffect.sp_type"
@@ -40,6 +45,9 @@ import { mapGetters } from 'vuex';
 import EffectProcessor from '@/modules/EffectProcessor/effect-processor';
 import { capitalize, getEffectId } from '@/modules/EffectProcessor/processor-helper';
 import { effectTypes } from '@/modules/constants';
+import logger from '@/modules/Logger';
+import BuffIcon from '@/components/Multidex/BuffList/BuffIcon';
+
 export default {
   props: {
     effects: {
@@ -52,6 +60,9 @@ export default {
     contextHandler: {
       required: false,
     },
+  },
+  components: {
+    BuffIcon,
   },
   computed: {
     ...mapGetters('units', {
@@ -73,6 +84,14 @@ export default {
           const { values, ...parent } = e;
           return values.map(val => ({ ...val, parent, index }));
         }).reduce((acc, val) => acc.concat(val), []);
+    },
+    iconSize () {
+      const breakpoint = this.$vuetify.breakpoint;
+      if (breakpoint.mdAndUp) {
+        return 36;
+      } else {
+        return 32;
+      }
     },
   },
   methods: {
@@ -100,6 +119,9 @@ export default {
       const mainId = getEffectId(translatedEffect.parent.originalEffect);
       const subId = translatedEffect.triggeredEffectContext ? getEffectId(translatedEffect.triggeredEffectContext.originalEffect) : undefined;
       return (subId !== undefined ? [mainId, subId] : [mainId]).join(', ');
+    },
+    logBuff (buff) {
+      logger.debug(buff);
     },
   },
 };
