@@ -16063,6 +16063,68 @@
       "740157"
     ]
   },
+  "740237": {
+    "desc": "250% boost to Atk and 30% boost to critical hit rate when Critical Sphere is equipped, 35% boost to Atk, Def of Thunder types for all allies, probable resistance against 2 KO attacks & adds Thunder barrier effect to BB/SBB",
+    "effects": [
+      {
+        "atk% buff": 250,
+        "conditions": [
+          {
+            "sphere category required": "Critical",
+            "sphere category required (raw)": "2"
+          }
+        ],
+        "crit% buff": 30,
+        "passive id": "1",
+        "passive target": "self"
+      },
+      {
+        "atk% buff": 35,
+        "conditions": [],
+        "def% buff": 35,
+        "elements buffed": [
+          "thunder"
+        ],
+        "passive id": "2",
+        "passive target": "party"
+      },
+      {
+        "angel idol chance% condition": 0,
+        "angel idol recover chance% high": 40,
+        "angel idol recover chance% low": 40,
+        "angel idol recover counts": 2,
+        "conditions": [],
+        "passive id": "69",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "thunder",
+            "elemental barrier hp": 5000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "740237",
+    "name": "Last Survivor",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "740237"
+    ]
+  },
   "750166": {
     "desc": "Considerably boosts BB Atk, boosts critical damage & 50% boost to Spark damage when The Grail is equipped",
     "effects": [
@@ -16431,8 +16493,40 @@
     ]
   },
   "810108": {
-    "desc": "Absorbs HP when attacking, adds Def ignore effect to BB/SBB for 3 turns & boosts Atk, Def when BB gauge is full",
+    "desc": "30% boost to all parameters when Spark sphere is equipped, adds Def ignoring effect to attack for 3 turns effect to BB/SBB, 35% boost to Atk and slightly boosts critical hit rate for all Fire types & absorbs HP while attacking",
     "effects": [
+      {
+        "atk% buff": 30,
+        "conditions": [
+          {
+            "sphere category required": "Spark",
+            "sphere category required (raw)": "11"
+          }
+        ],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      },
+      {
+        "atk% buff": 35,
+        "conditions": [],
+        "crit% buff": 15,
+        "elements buffed": [
+          "fire"
+        ],
+        "passive id": "2",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "hp drain chance%": 100,
+        "hp drain% high": 10,
+        "hp drain% low": 6,
+        "passive id": "17",
+        "passive target": "self"
+      },
       {
         "conditions": [],
         "passive id": "66",
@@ -16449,22 +16543,6 @@
             "target type": "party"
           }
         ]
-      },
-      {
-        "atk% buff": 50,
-        "bb gauge above % buff requirement": 100,
-        "conditions": [],
-        "def% buff": 50,
-        "passive id": "30",
-        "passive target": "self"
-      },
-      {
-        "conditions": [],
-        "hp drain chance%": 100,
-        "hp drain% high": 10,
-        "hp drain% low": 5,
-        "passive id": "17",
-        "passive target": "self"
       }
     ],
     "id": "810108",
@@ -16912,6 +16990,71 @@
     "target": "self",
     "associated_units": [
       "810317"
+    ]
+  },
+  "810318": {
+    "desc": "50% damage reduction for 1 turn when damage taken has exceeded certain amount when Vulcan Axe is equipped, fills own BB gauge to max when damage dealt has exceeded certain amount when Vulcan Axe is equipped, adds probable Spark critical for all allies, raises Atk parameter limits to 180000 & negates critical, elemental damage",
+    "effects": [
+      {
+        "buff": {
+          "buff turns (36)": "1",
+          "dmg reduction% buff": 25
+        },
+        "conditions": [
+          {
+            "item required": [
+              "818931"
+            ]
+          }
+        ],
+        "damage threshold buff activation": 50000,
+        "passive id": "78",
+        "passive target": "self"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "818931"
+            ]
+          }
+        ],
+        "damage dealt threshold activation": 999999,
+        "increase bb gauge": 0,
+        "passive id": "81",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "increase atk cap": 180000,
+        "passive id": "143",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "crit chance base resist%": 100,
+        "crit chance buffed resist%": 100,
+        "crit dmg base damage resist%": 100,
+        "crit dmg buffed damage resist%": 100,
+        "passive id": "53",
+        "passive target": "self",
+        "strong base element damage resist%": 100,
+        "strong buffed element damage resist%": 100
+      },
+      {
+        "conditions": [],
+        "passive id": "100",
+        "passive target": "party",
+        "spark crit chance%": 20,
+        "spark crit dmg%": 100
+      }
+    ],
+    "id": "810318",
+    "name": "Savage Fury",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "810318"
     ]
   },
   "810327": {
@@ -17651,7 +17794,7 @@
     ]
   },
   "810548": {
-    "desc": "25% damage reduction from Fire, Earth types, raises Atk parameter limits to 130000, 10% damage reduction & adds max HP boost effect for self to BB/SBB when Atk Boosting sphere is equipped",
+    "desc": "25% damage reduction from Fire, Earth types, raises Atk parameter limits to 130000, 10% damage reduction & adds huge max HP boost effect for self to BB/SBB when Atk Boosting sphere is equipped",
     "effects": [
       {
         "conditions": [
@@ -17670,7 +17813,7 @@
             "target area": "single",
             "target type": "self",
             "unknown proc id": "92",
-            "unknown proc param": "0,15,0"
+            "unknown proc param": "0,35,0"
           }
         ]
       },
@@ -17919,6 +18062,174 @@
     "target": "self",
     "associated_units": [
       "810588"
+    ]
+  },
+  "810627": {
+    "desc": "10% boost to all parameters for all allies, adds probable Spark critical & critical damage may inflict random status ailments",
+    "effects": [
+      {
+        "atk% buff": 10,
+        "conditions": [],
+        "def% buff": 10,
+        "hp% buff": 10,
+        "passive id": "1",
+        "passive target": "party",
+        "rec% buff": 10
+      },
+      {
+        "conditions": [],
+        "passive id": "100",
+        "passive target": "self",
+        "spark crit chance%": 30,
+        "spark crit dmg%": 80
+      },
+      {
+        "conditions": [],
+        "inflict curse%": 75,
+        "inflict injury%": 75,
+        "inflict paralysis%": 75,
+        "inflict poison%": 75,
+        "inflict sick%": 75,
+        "inflict weaken%": 75,
+        "passive id": "90",
+        "passive target": "self"
+      }
+    ],
+    "id": "810627",
+    "name": "Darkhand Deception",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "810627"
+    ]
+  },
+  "810628": {
+    "desc": "20% boost to all parameters for all allies, adds Def ignoring effect to attack for all allies, adds probable Spark critical, critical damage may inflict random status ailments & probable damage reduction to 1",
+    "effects": [
+      {
+        "atk% buff": 20,
+        "conditions": [],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "party",
+        "rec% buff": 20
+      },
+      {
+        "conditions": [],
+        "ignore def%": 100,
+        "passive id": "29",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "passive id": "100",
+        "passive target": "self",
+        "spark crit chance%": 30,
+        "spark crit dmg%": 100
+      },
+      {
+        "conditions": [],
+        "inflict curse%": 75,
+        "inflict injury%": 75,
+        "inflict paralysis%": 75,
+        "inflict poison%": 75,
+        "inflict sick%": 75,
+        "inflict weaken%": 75,
+        "passive id": "90",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "43",
+        "passive target": "self",
+        "take 1 dmg%": 20
+      }
+    ],
+    "id": "810628",
+    "name": "Eye of the Wolf",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "810628"
+    ]
+  },
+  "810657": {
+    "desc": "Adds Def ignoring effect to attack for all allies & 30% boost to Atk, Def for first 5 turns",
+    "effects": [
+      {
+        "conditions": [],
+        "ignore def%": 100,
+        "passive id": "29",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "first x turns": 5,
+        "first x turns atk% (1)": 30,
+        "first x turns def% (3)": 30,
+        "passive id": "21",
+        "passive target": "self"
+      }
+    ],
+    "id": "810657",
+    "name": "Emblem of Justice",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "810657"
+    ]
+  },
+  "810658": {
+    "desc": "Adds Def ignoring effect to attack for all allies, negates critical damage for all allies, 50% boost to Atk, Def for first 5 turns & adds 15 combo (BB) / 21 combo (SBB) powerful Fire attack on all foes to BB/SBB",
+    "effects": [
+      {
+        "conditions": [],
+        "ignore def%": 100,
+        "passive id": "29",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "first x turns": 5,
+        "first x turns atk% (1)": 50,
+        "first x turns def% (3)": 50,
+        "passive id": "21",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "crit chance base resist%": 100,
+        "crit chance buffed resist%": 100,
+        "crit dmg base damage resist%": 100,
+        "crit dmg buffed damage resist%": 100,
+        "passive id": "53",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb atk%": 620,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "1",
+            "target area": "aoe",
+            "target type": "enemy"
+          }
+        ]
+      }
+    ],
+    "id": "810658",
+    "name": "Scorching Spirit",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "810658"
     ]
   },
   "811017": {
@@ -19127,6 +19438,82 @@
       "820418"
     ]
   },
+  "820437": {
+    "desc": "40% boost to Def, max HP, greatly boosts BB Atk when HP is over 50% & probable damage reduction to 1",
+    "effects": [
+      {
+        "conditions": [],
+        "def% buff": 40,
+        "hp% buff": 40,
+        "passive id": "1",
+        "passive target": "self"
+      },
+      {
+        "bb atk% add": 200,
+        "conditions": [],
+        "hp threshold": 50,
+        "passive id": "103",
+        "passive target": "self",
+        "sbb atk% add": 200,
+        "triggered when hp": "higher",
+        "ubb atk% add": 200
+      },
+      {
+        "conditions": [],
+        "passive id": "43",
+        "passive target": "self",
+        "take 1 dmg%": 15
+      }
+    ],
+    "id": "820437",
+    "name": "Divine Words of Power",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "820437"
+    ]
+  },
+  "820438": {
+    "desc": "60% boost to Def, max HP, greatly boosts BB Atk when HP is over 50%, probable damage reduction to 1 & 15% additional damage reduction for all allies",
+    "effects": [
+      {
+        "conditions": [],
+        "def% buff": 60,
+        "hp% buff": 60,
+        "passive id": "1",
+        "passive target": "self"
+      },
+      {
+        "bb atk% add": 300,
+        "conditions": [],
+        "hp threshold": 50,
+        "passive id": "103",
+        "passive target": "self",
+        "sbb atk% add": 300,
+        "triggered when hp": "higher",
+        "ubb atk% add": 300
+      },
+      {
+        "conditions": [],
+        "passive id": "43",
+        "passive target": "self",
+        "take 1 dmg%": 20
+      },
+      {
+        "conditions": [],
+        "passive target": "party",
+        "unknown passive id": "127",
+        "unknown passive params": "100,15"
+      }
+    ],
+    "id": "820438",
+    "name": "Tongues of Celestial Might",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "820438"
+    ]
+  },
   "820507": {
     "desc": "Adds status ailment removal and negation effects for 3 turns to BB/SBB",
     "effects": [
@@ -19538,6 +19925,139 @@
       "820568"
     ]
   },
+  "820577": {
+    "desc": "Greatly boosts critical damage when Plaguewarden Theodor is in squad or when Vellum of Curses, Salvation or Brilliance is equipped, boosts Atk, Def each turn (up to 4 turns) for all allies & greatly boosts Atk relative to lost HP",
+    "effects": [
+      {
+        "conditions": [
+          {
+            "unit required": "860560"
+          },
+          {
+            "item required": [
+              "819178"
+            ]
+          },
+          {
+            "item required": [
+              "819179"
+            ]
+          },
+          {
+            "item required": [
+              "819180"
+            ]
+          }
+        ],
+        "crit multiplier%": 100,
+        "passive id": "34",
+        "passive target": "self"
+      },
+      {
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 150,
+        "buff proportional to hp": "lost",
+        "conditions": [],
+        "passive id": "46",
+        "passive target": "self"
+      },
+      {
+        "atk% max buff": 40,
+        "conditions": [],
+        "def% max buff": 40,
+        "increase from min to max": 1,
+        "passive id": "105",
+        "passive target": "party",
+        "turn count": 4
+      }
+    ],
+    "id": "820577",
+    "name": "Patient Zero",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "820577"
+    ]
+  },
+  "820578": {
+    "desc": "Greatly boosts critical damage when Plaguewarden Theodor is in squad or when Vellum of Curses, Salvation or Brilliance is equipped, boosts Atk, Def each turn (up to 4 turns) for all allies, greatly boosts Atk relative to lost HP, probable resistance against 2 KO attacks & 19 combo powerful Water attack on single foe to SBB",
+    "effects": [
+      {
+        "conditions": [
+          {
+            "unit required": "860560"
+          },
+          {
+            "item required": [
+              "819178"
+            ]
+          },
+          {
+            "item required": [
+              "819179"
+            ]
+          },
+          {
+            "item required": [
+              "819180"
+            ]
+          }
+        ],
+        "crit multiplier%": 100,
+        "passive id": "34",
+        "passive target": "self"
+      },
+      {
+        "atk% base buff": 50,
+        "atk% extra buff based on hp": 150,
+        "buff proportional to hp": "lost",
+        "conditions": [],
+        "passive id": "46",
+        "passive target": "self"
+      },
+      {
+        "atk% max buff": 60,
+        "conditions": [],
+        "def% max buff": 60,
+        "increase from min to max": 1,
+        "passive id": "105",
+        "passive target": "party",
+        "turn count": 4
+      },
+      {
+        "angel idol chance% condition": 0,
+        "angel idol recover chance% high": 40,
+        "angel idol recover chance% low": 40,
+        "angel idol recover counts": 2,
+        "conditions": [],
+        "passive id": "69",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb atk%": 620,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "1",
+            "target area": "single",
+            "target type": "enemy"
+          }
+        ]
+      }
+    ],
+    "id": "820578",
+    "name": "Corpse Flower",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "820578"
+    ]
+  },
   "820587": {
     "desc": "Boosts damage against status afflicted foes for all allies when Ochaco Uraraka is in the same Squad, 15% boost to all parameters when All Might is in the same Squad, negates all status ailments for all allies & hugely restores HP for 3 turns when guarding for all allies",
     "effects": [
@@ -19679,6 +20199,113 @@
     "target": "self",
     "associated_units": [
       "820588"
+    ]
+  },
+  "820657": {
+    "desc": "15% boost to critical damage for all allies, 30% boost to Atk, Def for first 5 turns & adds Spark damage boosts BB gauge for 3 turns effect to BB/SBB",
+    "effects": [
+      {
+        "conditions": [],
+        "crit multiplier%": 15,
+        "passive id": "34",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "first x turns": 5,
+        "first x turns atk% (1)": 30,
+        "first x turns def% (3)": 30,
+        "passive id": "21",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bc fill on spark buff turns (111)": 3,
+            "bc fill on spark high": 3,
+            "bc fill on spark low": 2,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "820657",
+    "name": "Emblem of Devotion",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "820657"
+    ]
+  },
+  "820658": {
+    "desc": "25% boost to critical damage for all allies, 50% boost to Atk, Def for first 5 turns, adds Spark damage considerably boosts BB gauge for 3 turns effect to BB/SBB & adds 22 combo (BB) / 27 combo (SBB) powerful Water attack on all foes to BB/SBB",
+    "effects": [
+      {
+        "conditions": [],
+        "crit multiplier%": 25,
+        "passive id": "34",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "first x turns": 5,
+        "first x turns atk% (1)": 50,
+        "first x turns def% (3)": 50,
+        "passive id": "21",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bc fill on spark buff turns (111)": 3,
+            "bc fill on spark high": 4,
+            "bc fill on spark low": 3,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb atk%": 620,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "1",
+            "target area": "aoe",
+            "target type": "enemy"
+          }
+        ]
+      }
+    ],
+    "id": "820658",
+    "name": "Sangfroid Spirit",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "820658"
     ]
   },
   "830047": {
@@ -21134,6 +21761,246 @@
     "target": "self",
     "associated_units": [
       "830588"
+    ]
+  },
+  "830597": {
+    "desc": "20% boost to all parameters, probable damage reduction to 1 & greatly boosts Earth elemental damage",
+    "effects": [
+      {
+        "atk% buff": 20,
+        "conditions": [],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      },
+      {
+        "conditions": [],
+        "passive id": "43",
+        "passive target": "self",
+        "take 1 dmg%": 10
+      },
+      {
+        "conditions": [],
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 100,
+        "passive id": "50",
+        "passive target": "self"
+      }
+    ],
+    "id": "830597",
+    "name": "Harmony of the Spheres",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "830597"
+    ]
+  },
+  "830598": {
+    "desc": "30% boost to all parameters, probable damage reduction to 1, greatly boosts Earth elemental damage, slighly boosts Earth elemental damage for all allies & reduces Skip Turn effect duration by 3 turns",
+    "effects": [
+      {
+        "atk% buff": 30,
+        "conditions": [],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      },
+      {
+        "conditions": [],
+        "passive id": "43",
+        "passive target": "self",
+        "take 1 dmg%": 15
+      },
+      {
+        "conditions": [],
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 100,
+        "passive id": "50",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 20,
+        "passive id": "50",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "11009",
+        "unknown passive params": "10005,-3,0,0,0,0,0,0,0,0"
+      }
+    ],
+    "id": "830598",
+    "name": "Goetic Resonance",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "830598"
+    ]
+  },
+  "830628": {
+    "desc": "Boost to Atk, Def, Rec relative to remaining HP for all allies, slight boost to Spark damage for all allies, 50% boost to max HP, damage taken may restore HP & negates all status ailments and Atk, Def, Rec reduction effects",
+    "effects": [
+      {
+        "conditions": [],
+        "hp% buff": 50,
+        "passive id": "1",
+        "passive target": "self"
+      },
+      {
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 30,
+        "buff proportional to hp": "remaining",
+        "conditions": [],
+        "def% base buff": 0,
+        "def% extra buff based on hp": 30,
+        "passive id": "46",
+        "passive target": "party",
+        "rec% base buff": 0,
+        "rec% extra buff based on hp": 30
+      },
+      {
+        "conditions": [],
+        "damage% for spark": 20,
+        "passive id": "31",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "dmg% to hp% when attacked chance%": 30,
+        "dmg% to hp% when attacked high": 25,
+        "dmg% to hp% when attacked low": 20,
+        "passive id": "24",
+        "passive target": "self"
+      },
+      {
+        "atk down resist%": 100,
+        "conditions": [],
+        "curse resist%": 100,
+        "def down resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "passive target": "self",
+        "poison resist%": 100,
+        "rec down resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      }
+    ],
+    "id": "830628",
+    "name": "Tomb of the Barren",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "830628"
+    ]
+  },
+  "830647": {
+    "desc": "15% damage reduction from Earth, Thunder types when Damage Reducing Sphere is equipped & greatly restores HP for 3 turns when guarding for all allies",
+    "effects": [
+      {
+        "conditions": [
+          {
+            "sphere category required": "Damage Reducing",
+            "sphere category required (raw)": "10"
+          }
+        ],
+        "dmg% mitigation for elemental attacks": 15,
+        "mitigate earth attacks": true,
+        "mitigate thunder attacks": true,
+        "passive id": "62",
+        "passive target": "self"
+      },
+      {
+        "buff": {
+          "buff turns (8)": "3",
+          "gradual heal high": 4000,
+          "gradual heal low": 3500
+        },
+        "conditions": [],
+        "on guard activation chance%": 100,
+        "passive id": "88",
+        "passive target": "party"
+      }
+    ],
+    "id": "830647",
+    "name": "Iron Dragon's Scale",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "830647"
+    ]
+  },
+  "830648": {
+    "desc": "25% damage reduction from Earth, Thunder types when Damage Reducing Sphere is equipped, greatly restores HP for 3 turns when guarding for all allies, 15% additional damage reduction for all allies, adds Earth Shield for 3 turns effect to BB/SBB & negates Spark damage",
+    "effects": [
+      {
+        "conditions": [
+          {
+            "sphere category required": "Damage Reducing",
+            "sphere category required (raw)": "10"
+          }
+        ],
+        "dmg% mitigation for elemental attacks": 25,
+        "mitigate earth attacks": true,
+        "mitigate thunder attacks": true,
+        "passive id": "62",
+        "passive target": "self"
+      },
+      {
+        "base spark dmg% resist": 100,
+        "buff spark dmg% resist": 100,
+        "conditions": [],
+        "passive id": "77",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive target": "party",
+        "unknown passive id": "127",
+        "unknown passive params": "100,15"
+      },
+      {
+        "buff": {
+          "buff turns (8)": "3",
+          "gradual heal high": 5000,
+          "gradual heal low": 4000
+        },
+        "conditions": [],
+        "on guard activation chance%": 100,
+        "passive id": "88",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10017",
+            "unknown proc param": "3,6000,6000,3,0"
+          }
+        ]
+      }
+    ],
+    "id": "830648",
+    "name": "Steel Dragon",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "830648"
     ]
   },
   "840047": {
@@ -23075,6 +23942,62 @@
       "850147"
     ]
   },
+  "850148": {
+    "desc": "50% boost to Def, Rec, max HP when Orphira is equipped, 20% boost to max HP for all allies, restores HP each turn for all allies & damage taken boosts BB gauge and may restore HP",
+    "effects": [
+      {
+        "conditions": [
+          {
+            "item required": [
+              "819183"
+            ]
+          }
+        ],
+        "def% buff": 50,
+        "hp% buff": 50,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 50
+      },
+      {
+        "conditions": [],
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "passive id": "33",
+        "passive target": "party",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 2000,
+        "turn heal low": 1000
+      },
+      {
+        "conditions": [],
+        "dmg% to hp% when attacked chance%": 30,
+        "dmg% to hp% when attacked high": 40,
+        "dmg% to hp% when attacked low": 20,
+        "passive id": "24",
+        "passive target": "self"
+      },
+      {
+        "bc fill when attacked high": 3,
+        "bc fill when attacked low": 2,
+        "bc fill when attacked%": 100,
+        "conditions": [],
+        "passive id": "25",
+        "passive target": "self"
+      }
+    ],
+    "id": "850148",
+    "name": "Divine Inspiration",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "850148"
+    ]
+  },
   "850157": {
     "desc": "Slightly boost BC, HC efficacy & adds status ailment removal effect to BB/SBB",
     "effects": [
@@ -24693,7 +25616,7 @@
     ]
   },
   "850548": {
-    "desc": "Negates elemental damage for all allies, raises normal hit amount, boosts all parameters accordingly: 10% when Silver Key is equipped, 15% when Gold Key is equipped, 20% when Diamond Key is equipped & adds all elements to attack for 3 turns effect to BB/SBB/UBB when Diamond Key is equipped",
+    "desc": "Negates elemental damage for all allies, considerably raises normal hit amount, boosts all parameters accordingly: 10% when Silver Key is equipped, 15% when Gold Key is equipped, 20% when Diamond Key is equipped & adds all elements to attack for 3 turns effect to BB/SBB/UBB when Diamond Key is equipped",
     "effects": [
       {
         "conditions": [],
@@ -24704,7 +25627,7 @@
       },
       {
         "conditions": [],
-        "hit increase/hit": 1,
+        "hit increase/hit": 2,
         "passive id": "37",
         "passive target": "self"
       },
@@ -24876,6 +25799,78 @@
       "850558"
     ]
   },
+  "850567": {
+    "desc": "Slightly reduces BB gauge required for BB for all allies, 15% boost to all parameters for all allies & probable damage reduction to 1",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "48",
+        "passive target": "party",
+        "reduced bb bc cost%": 5
+      },
+      {
+        "atk% buff": 15,
+        "conditions": [],
+        "def% buff": 15,
+        "hp% buff": 15,
+        "passive id": "1",
+        "passive target": "party",
+        "rec% buff": 15
+      },
+      {
+        "conditions": [],
+        "passive id": "43",
+        "passive target": "self",
+        "take 1 dmg%": 15
+      }
+    ],
+    "id": "850567",
+    "name": "Rabbit Rabble",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "850567"
+    ]
+  },
+  "850568": {
+    "desc": "Slightly reduces BB gauge required for BB for all allies, 20% boost to all parameters for all allies, 5% damage reduction for all allies & probable damage reduction to 1",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "48",
+        "passive target": "party",
+        "reduced bb bc cost%": 10
+      },
+      {
+        "atk% buff": 20,
+        "conditions": [],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "party",
+        "rec% buff": 20
+      },
+      {
+        "conditions": [],
+        "passive id": "43",
+        "passive target": "self",
+        "take 1 dmg%": 15
+      },
+      {
+        "conditions": [],
+        "dmg% mitigation": 5,
+        "passive id": "8",
+        "passive target": "party"
+      }
+    ],
+    "id": "850568",
+    "name": "Lunar Leveret",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "850568"
+    ]
+  },
   "850588": {
     "desc": "40% boost to all parameters and 10% damage reduction when All Might's Cape is equipped, boosts Atk, Def each turn (up to 4 turns) for all allies, boosts critical damage & probable resistance against 2 KO attacks",
     "effects": [
@@ -24937,6 +25932,222 @@
     "target": "self",
     "associated_units": [
       "850588"
+    ]
+  },
+  "850637": {
+    "desc": "Boosts Atk, Def, Rec relative to lost HP and probable resistance against 1 KO attack when Fairy Heart is equipped, 10% boost to all parameters and 100% boost to BB Atk for all allies & boosts damage reduction when guarding for all allies",
+    "effects": [
+      {
+        "angel idol chance% condition": 0,
+        "angel idol recover chance% high": 40,
+        "angel idol recover chance% low": 40,
+        "angel idol recover counts": 1,
+        "conditions": [
+          {
+            "item required": [
+              "819185"
+            ]
+          }
+        ],
+        "passive id": "69",
+        "passive target": "self"
+      },
+      {
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 60,
+        "buff proportional to hp": "lost",
+        "conditions": [
+          {
+            "item required": [
+              "819185"
+            ]
+          }
+        ],
+        "def% base buff": 0,
+        "def% extra buff based on hp": 60,
+        "passive id": "46",
+        "passive target": "self",
+        "rec% base buff": 0,
+        "rec% extra buff based on hp": 60
+      },
+      {
+        "atk% buff": 10,
+        "conditions": [],
+        "def% buff": 10,
+        "hp% buff": 10,
+        "passive id": "1",
+        "passive target": "party",
+        "rec% buff": 10
+      },
+      {
+        "bb atk% buff": 100,
+        "conditions": [],
+        "passive id": "64",
+        "passive target": "party",
+        "sbb atk% buff": 100,
+        "ubb atk% buff": 100
+      },
+      {
+        "conditions": [],
+        "guard increase mitigation%": 5,
+        "passive id": "58",
+        "passive target": "party"
+      }
+    ],
+    "id": "850637",
+    "name": "Lumen Histoire",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "850637"
+    ]
+  },
+  "850638": {
+    "desc": "Considerably boosts Atk, Def, Rec relative to lost HP and probable resistance against 2 KO attacks when Fairy Heart is equipped, 15% boost to all parameters and 150% boost to BB Atk for all allies & boosts damage reduction when guarding for all allies",
+    "effects": [
+      {
+        "angel idol chance% condition": 0,
+        "angel idol recover chance% high": 40,
+        "angel idol recover chance% low": 40,
+        "angel idol recover counts": 2,
+        "conditions": [
+          {
+            "item required": [
+              "819185"
+            ]
+          }
+        ],
+        "passive id": "69",
+        "passive target": "self"
+      },
+      {
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 100,
+        "buff proportional to hp": "lost",
+        "conditions": [
+          {
+            "item required": [
+              "819185"
+            ]
+          }
+        ],
+        "def% base buff": 0,
+        "def% extra buff based on hp": 100,
+        "passive id": "46",
+        "passive target": "self",
+        "rec% base buff": 0,
+        "rec% extra buff based on hp": 100
+      },
+      {
+        "atk% buff": 15,
+        "conditions": [],
+        "def% buff": 15,
+        "hp% buff": 15,
+        "passive id": "1",
+        "passive target": "party",
+        "rec% buff": 15
+      },
+      {
+        "bb atk% buff": 150,
+        "conditions": [],
+        "passive id": "64",
+        "passive target": "party",
+        "sbb atk% buff": 150,
+        "ubb atk% buff": 150
+      },
+      {
+        "conditions": [],
+        "guard increase mitigation%": 10,
+        "passive id": "58",
+        "passive target": "party"
+      }
+    ],
+    "id": "850638",
+    "name": "Fairy Strategist",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "850638"
+    ]
+  },
+  "850647": {
+    "desc": "10% boost to Atk, Def each turn (up to 4 turns) for all allies & greatly boosts Light elemental damage",
+    "effects": [
+      {
+        "atk% max buff": 40,
+        "conditions": [],
+        "def% max buff": 40,
+        "increase from min to max": 1,
+        "passive id": "105",
+        "passive target": "party",
+        "turn count": 4
+      },
+      {
+        "conditions": [],
+        "elemental weakness multiplier%": 100,
+        "light units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "passive target": "self"
+      }
+    ],
+    "id": "850647",
+    "name": "Enchanter",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "850647"
+    ]
+  },
+  "850648": {
+    "desc": "15% boost to Atk, Def each turn (up to 4 turns) for all allies, greatly boosts Light elemental damage, greatly restores HP each turn & adds probable evasion for 2 turns effect to BB/SBB",
+    "effects": [
+      {
+        "atk% max buff": 60,
+        "conditions": [],
+        "def% max buff": 60,
+        "increase from min to max": 1,
+        "passive id": "105",
+        "passive target": "party",
+        "turn count": 4
+      },
+      {
+        "conditions": [],
+        "elemental weakness multiplier%": 100,
+        "light units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "33",
+        "passive target": "self",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 4000,
+        "turn heal low": 3000
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10007",
+            "unknown proc param": "100,2,0,20"
+          }
+        ]
+      }
+    ],
+    "id": "850648",
+    "name": "Sky Dragon Enchanter",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "850648"
     ]
   },
   "850977": {
@@ -25240,6 +26451,86 @@
     "target": "self",
     "associated_units": [
       "860107"
+    ]
+  },
+  "860108": {
+    "desc": "35% boost to Rec, max HP of Male types, 100% boost to damage against status afflicted foes, adds status ailment and Atk, Def, Rec reduction effect removal to BB/SBB & adds status ailment negation for 3 turns effect to BB/SBB",
+    "effects": [
+      {
+        "conditions": [],
+        "gender required": "male",
+        "hp% buff": 35,
+        "passive id": "42",
+        "passive target": "party",
+        "rec% buff": 35
+      },
+      {
+        "atk% buff when enemy has ailment": 100,
+        "atk% buff when enemy has curse": true,
+        "atk% buff when enemy has injury": true,
+        "atk% buff when enemy has paralysis": true,
+        "atk% buff when enemy has poison": true,
+        "atk% buff when enemy has sick": true,
+        "atk% buff when enemy has weaken": true,
+        "conditions": [],
+        "passive id": "74",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "ailments cured": [
+              "poison",
+              "weaken",
+              "sick",
+              "injury",
+              "curse",
+              "paralysis",
+              "atk down",
+              "def down",
+              "rec down"
+            ],
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "38",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "17",
+            "resist curse% (34)": 100,
+            "resist injury% (33)": 100,
+            "resist paralysis% (35)": 100,
+            "resist poison% (30)": 100,
+            "resist sick% (32)": 100,
+            "resist status ails turns": 3,
+            "resist weaken% (31)": 100,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "860108",
+    "name": "Pumpkin Connoisseur",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "860108"
     ]
   },
   "860127": {
@@ -26405,6 +27696,108 @@
       "860428"
     ]
   },
+  "860437": {
+    "desc": "30% boost to all parameters when Vesper Argentum is equipped, considerably boosts BB gauge each turn for all allies, restores HP each turn for all allies & slightly boosts Atk, Def, Rec each turn for all allies (up to 10 turns)",
+    "effects": [
+      {
+        "atk% buff": 30,
+        "conditions": [
+          {
+            "item required": [
+              "819175"
+            ]
+          }
+        ],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      },
+      {
+        "bc fill per turn": 5,
+        "conditions": [],
+        "passive id": "9",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "passive id": "33",
+        "passive target": "party",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 1500,
+        "turn heal low": 500
+      },
+      {
+        "atk% max buff": 30,
+        "conditions": [],
+        "def% max buff": 30,
+        "increase from min to max": 1,
+        "passive id": "105",
+        "passive target": "party",
+        "rec% max buff": 30,
+        "turn count": 10
+      }
+    ],
+    "id": "860437",
+    "name": "Hour of Reckoning",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "860437"
+    ]
+  },
+  "860438": {
+    "desc": "40% boost to all parameters when Vesper Argentum is equipped, considerably boosts BB gauge each turn for all allies, restores HP each turn for all allies & boosts Atk, Def, Rec each turn for all allies (up to 10 turns)",
+    "effects": [
+      {
+        "atk% buff": 40,
+        "conditions": [
+          {
+            "item required": [
+              "819175"
+            ]
+          }
+        ],
+        "def% buff": 40,
+        "hp% buff": 40,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 40
+      },
+      {
+        "bc fill per turn": 5,
+        "conditions": [],
+        "passive id": "9",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "passive id": "33",
+        "passive target": "party",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 2000,
+        "turn heal low": 1000
+      },
+      {
+        "atk% max buff": 50,
+        "conditions": [],
+        "def% max buff": 50,
+        "increase from min to max": 1,
+        "passive id": "105",
+        "passive target": "party",
+        "rec% max buff": 50,
+        "turn count": 10
+      }
+    ],
+    "id": "860438",
+    "name": "A Templar's Resolve",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "860438"
+    ]
+  },
   "860517": {
     "desc": "Damage taken slightly boosts BB gauge, adds resistance to 1 KO attack for any ally who activates OD & 15% boost to all parameters of Female types",
     "effects": [
@@ -26572,6 +27965,164 @@
     "target": "self",
     "associated_units": [
       "860548"
+    ]
+  },
+  "860557": {
+    "desc": "Negates all status ailments for all allies & 5% additional damage reduction for all allies",
+    "effects": [
+      {
+        "conditions": [],
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "passive target": "party",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "conditions": [],
+        "passive target": "party",
+        "unknown passive id": "127",
+        "unknown passive params": "100,5"
+      }
+    ],
+    "id": "860557",
+    "name": "Ever-Vigilant Sentinels",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "860557"
+    ]
+  },
+  "860558": {
+    "desc": "Negates all status ailments for all allies, 15% additional damage reduction for all allies, damage taken may slightly reduce foe's BB gauge fill rate for 1 turn & adds 1 combo (BB)/ 20 combo (SBB) powerful Dark attack on single foe to BB/SBB",
+    "effects": [
+      {
+        "conditions": [],
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "passive target": "party",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "conditions": [],
+        "passive target": "party",
+        "unknown passive id": "127",
+        "unknown passive params": "100,15"
+      },
+      {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "114",
+        "unknown passive params": "112,-20,-1,20,1"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb atk%": 620,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "1",
+            "target area": "single",
+            "target type": "enemy"
+          }
+        ]
+      }
+    ],
+    "id": "860558",
+    "name": "All-Seeing Eveningstar",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "860558"
+    ]
+  },
+  "860568": {
+    "desc": "30% boost to all parameters when Bloodpoison Florence is in squad or when Vellum of Curses, Salvation or Brilliance is equipped, 10% boost to all parameters of Dark types for all allies, damage taken considerably boosts BB gauge & adds Dark shield for 3 turns effect to BB/SBB/UBB",
+    "effects": [
+      {
+        "atk% buff": 30,
+        "conditions": [
+          {
+            "unit required": "820570"
+          },
+          {
+            "item required": [
+              "819178"
+            ]
+          },
+          {
+            "item required": [
+              "819179"
+            ]
+          },
+          {
+            "item required": [
+              "819180"
+            ]
+          }
+        ],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      },
+      {
+        "atk% buff": 10,
+        "conditions": [],
+        "def% buff": 10,
+        "elements buffed": [
+          "dark"
+        ],
+        "hp% buff": 10,
+        "passive id": "2",
+        "passive target": "party",
+        "rec% buff": 10
+      },
+      {
+        "bc fill when attacked high": 4,
+        "bc fill when attacked low": 2,
+        "bc fill when attacked%": 100,
+        "conditions": [],
+        "passive id": "25",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "trigger on ubb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10017",
+            "unknown proc param": "6,3500,3500,3,0"
+          }
+        ]
+      }
+    ],
+    "id": "860568",
+    "name": "Ashes, We All Fall Down",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "860568"
     ]
   },
   "860607": {
@@ -35225,6 +36776,48 @@
     "rarity": "7",
     "target": "self"
   },
+  "8000022": {
+    "desc": "40% boost to all parameters of light and dark types, Slighty boosts Light and Dark elemental damage, 10% damage reduction from normal attacks, adds resistance to 1 KO attack after activating OD",
+    "effects": [
+      {
+        "atk% buff": 40,
+        "conditions": [],
+        "def% buff": 40,
+        "elements buffed": [
+          "light",
+          "dark"
+        ],
+        "hp% buff": 40,
+        "passive id": "2",
+        "passive target": "self",
+        "rec% buff": 40
+      },
+      {
+        "conditions": [],
+        "dark units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 15,
+        "light units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "128",
+        "unknown passive params": "100,10,100,10"
+      },
+      {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "106",
+        "unknown passive params": "12,100,1,100,-1"
+      }
+    ],
+    "id": "8000022",
+    "name": "Grand Aegis",
+    "rarity": "7",
+    "target": "self"
+  },
   "8000101": {
     "desc": "20% boost to all parameters of Fire types, negates all status ailments, 5% damage reduction from Fire, Earth types & greatly boosts Atk relative to remaining HP",
     "effects": [
@@ -36136,6 +37729,615 @@
     "rarity": "8",
     "target": "self"
   },
+  "8000402": {
+    "desc": "40% boost to max HP, boosts Atk and Rec each turn for up to 5 turns, negates Spark damage, negates Def ignoring effect & greatly boosts elemental damage",
+    "effects": [
+      {
+        "conditions": [],
+        "hp% buff": 40,
+        "passive id": "1",
+        "passive target": "self"
+      },
+      {
+        "atk% max buff": 125,
+        "conditions": [],
+        "increase from min to max": 1,
+        "passive id": "105",
+        "passive target": "self",
+        "rec% max buff": 125,
+        "turn count": 5
+      },
+      {
+        "base spark dmg% resist": 100,
+        "buff spark dmg% resist": 100,
+        "conditions": [],
+        "passive id": "77",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "ignore def resist chance%": 100,
+        "passive id": "92",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "dark units do extra elemental weakness dmg": true,
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 125,
+        "fire units do extra elemental weakness dmg": true,
+        "light units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "passive target": "self",
+        "thunder units do extra elemental weakness dmg": true,
+        "water units do extra elemental weakness dmg": true
+      }
+    ],
+    "id": "8000402",
+    "name": "Brave Autumn",
+    "rarity": "8",
+    "target": "self"
+  },
+  "8000501": {
+    "desc": "10% boost to all parameters for all Fire type allies, 150% boost to Atk and 30% boost to critical hit rate of Fire types, 35% damage reduction for first 2 turns from Fire, Earth types, greatly boosts BB/SBB activation rates & raises Atk parameter limits to 180000",
+    "effects": [
+      {
+        "atk% buff": 150,
+        "conditions": [],
+        "crit% buff": 30,
+        "elements buffed": [
+          "fire"
+        ],
+        "passive id": "2",
+        "passive target": "self"
+      },
+      {
+        "atk% buff": 10,
+        "conditions": [],
+        "def% buff": 10,
+        "elements buffed": [
+          "fire"
+        ],
+        "hp% buff": 10,
+        "passive id": "2",
+        "passive target": "party",
+        "rec% buff": 10
+      },
+      {
+        "conditions": [],
+        "dmg% mitigation for elemental attacks": 35,
+        "dmg% mitigation for elemental attacks buff for first x turns": 2,
+        "mitigate earth attacks": true,
+        "mitigate fire attacks": true,
+        "passive id": "63",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "increase skill activation in arena%": 20,
+        "passive id": "111",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "increase atk cap": 180000,
+        "passive id": "143",
+        "passive target": "self"
+      }
+    ],
+    "id": "8000501",
+    "name": "Oath of Justice",
+    "rarity": "8",
+    "target": "self"
+  },
+  "8000502": {
+    "desc": "5% boost to all parameters for all Fire type allies, 120% boost to Atk and 30% boost to critical hit rate of Fire types, 35% damage reduction for first 2 turns from Fire, Earth types, greatly boosts BB/SBB activation rates & raises Atk parameter limits to 170000",
+    "effects": [
+      {
+        "atk% buff": 120,
+        "conditions": [],
+        "crit% buff": 30,
+        "elements buffed": [
+          "fire"
+        ],
+        "passive id": "2",
+        "passive target": "self"
+      },
+      {
+        "atk% buff": 5,
+        "conditions": [],
+        "def% buff": 5,
+        "elements buffed": [
+          "fire"
+        ],
+        "hp% buff": 5,
+        "passive id": "2",
+        "passive target": "party",
+        "rec% buff": 5
+      },
+      {
+        "conditions": [],
+        "dmg% mitigation for elemental attacks": 35,
+        "dmg% mitigation for elemental attacks buff for first x turns": 2,
+        "mitigate earth attacks": true,
+        "mitigate fire attacks": true,
+        "passive id": "63",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "increase skill activation in arena%": 15,
+        "passive id": "111",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "increase atk cap": 170000,
+        "passive id": "143",
+        "passive target": "self"
+      }
+    ],
+    "id": "8000502",
+    "name": "Blazing Will",
+    "rarity": "7",
+    "target": "self"
+  },
+  "8000503": {
+    "desc": "10% boost to all parameters for all Water type allies, 150% boost to Atk and 30% boost to critical hit rate of Water types, 35% damage reduction for first 2 turns from Fire, Water types, greatly boosts BB/SBB activation rates & raises Atk parameter limits to 180000",
+    "effects": [
+      {
+        "atk% buff": 150,
+        "conditions": [],
+        "crit% buff": 30,
+        "elements buffed": [
+          "water"
+        ],
+        "passive id": "2",
+        "passive target": "self"
+      },
+      {
+        "atk% buff": 10,
+        "conditions": [],
+        "def% buff": 10,
+        "elements buffed": [
+          "water"
+        ],
+        "hp% buff": 10,
+        "passive id": "2",
+        "passive target": "party",
+        "rec% buff": 10
+      },
+      {
+        "conditions": [],
+        "dmg% mitigation for elemental attacks": 35,
+        "dmg% mitigation for elemental attacks buff for first x turns": 2,
+        "mitigate fire attacks": true,
+        "mitigate water attacks": true,
+        "passive id": "63",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "increase skill activation in arena%": 20,
+        "passive id": "111",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "increase atk cap": 180000,
+        "passive id": "143",
+        "passive target": "self"
+      }
+    ],
+    "id": "8000503",
+    "name": "Oath of Devotion",
+    "rarity": "8",
+    "target": "self"
+  },
+  "8000504": {
+    "desc": "5% boost to all parameters for all Water type allies, 120% boost to Atk and 30% boost to critical hit rate of Water types, 35% damage reduction for first 2 turns from Fire, Water types, greatly boosts BB/SBB activation rates & raises Atk parameter limits to 170000",
+    "effects": [
+      {
+        "atk% buff": 120,
+        "conditions": [],
+        "crit% buff": 30,
+        "elements buffed": [
+          "water"
+        ],
+        "passive id": "2",
+        "passive target": "self"
+      },
+      {
+        "atk% buff": 5,
+        "conditions": [],
+        "def% buff": 5,
+        "elements buffed": [
+          "water"
+        ],
+        "hp% buff": 5,
+        "passive id": "2",
+        "passive target": "party",
+        "rec% buff": 5
+      },
+      {
+        "conditions": [],
+        "dmg% mitigation for elemental attacks": 35,
+        "dmg% mitigation for elemental attacks buff for first x turns": 2,
+        "mitigate fire attacks": true,
+        "mitigate water attacks": true,
+        "passive id": "63",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "increase skill activation in arena%": 15,
+        "passive id": "111",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "increase atk cap": 170000,
+        "passive id": "143",
+        "passive target": "self"
+      }
+    ],
+    "id": "8000504",
+    "name": "Noblesse Will",
+    "rarity": "7",
+    "target": "self"
+  },
+  "8000601": {
+    "desc": "10% boost to Atk for all Dark type allies, greatly boosts Atk relative to remaining HP, greatly boosts Dark elemental damage, adds additional powerful attack at turn's end for 3 turns effect to SBB & raises Atk parameter limits to 170000",
+    "effects": [
+      {
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 150,
+        "buff proportional to hp": "remaining",
+        "conditions": [],
+        "passive id": "46",
+        "passive target": "self"
+      },
+      {
+        "atk% buff": 10,
+        "conditions": [],
+        "elements buffed": [
+          "dark"
+        ],
+        "passive id": "2",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "dark units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 100,
+        "passive id": "50",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "dot atk%": 500,
+            "dot element affected": true,
+            "dot flat atk": 100,
+            "dot turns (71)": 3,
+            "dot unit index": 1,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "44",
+            "target area": "aoe",
+            "target type": "enemy"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "increase atk cap": 170000,
+        "passive id": "143",
+        "passive target": "self"
+      }
+    ],
+    "id": "8000601",
+    "name": "Death Orb",
+    "rarity": "7",
+    "target": "self"
+  },
+  "8000602": {
+    "desc": "30% boost to Def, max HP, probable 25% damage reduction, negates elemental damage & 25% damage reduction for first 2 turns",
+    "effects": [
+      {
+        "conditions": [],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "dmg reduction chance%": 20,
+        "dmg reduction%": 25,
+        "passive id": "14",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "53",
+        "passive target": "self",
+        "strong base element damage resist%": 100,
+        "strong buffed element damage resist%": 100
+      },
+      {
+        "conditions": [],
+        "dmg% mitigation for elemental attacks": 25,
+        "dmg% mitigation for elemental attacks buff for first x turns": 2,
+        "mitigate dark attacks": true,
+        "mitigate earth attacks": true,
+        "mitigate fire attacks": true,
+        "mitigate light attacks": true,
+        "mitigate thunder attacks": true,
+        "mitigate water attacks": true,
+        "passive id": "63",
+        "passive target": "self"
+      }
+    ],
+    "id": "8000602",
+    "name": "Deus Corona",
+    "rarity": "7",
+    "target": "self"
+  },
+  "8000603": {
+    "desc": "20% boost to all parameters, boosts Atk, Def, Rec each turn (up to 5 turns), slightly reduces BB gauge required for BB & slightly reduces BB gauge consumed during BB",
+    "effects": [
+      {
+        "atk% buff": 20,
+        "conditions": [],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      },
+      {
+        "atk% max buff": 15,
+        "conditions": [],
+        "def% max buff": 15,
+        "increase from min to max": 1,
+        "passive id": "105",
+        "passive target": "self",
+        "rec% max buff": 15,
+        "turn count": 5
+      },
+      {
+        "conditions": [],
+        "passive id": "48",
+        "passive target": "self",
+        "reduced bb bc cost%": 5
+      },
+      {
+        "conditions": [],
+        "passive id": "49",
+        "passive target": "self",
+        "reduced bb bc use chance%": 100,
+        "reduced bb bc use% high": 5,
+        "reduced bb bc use% low": 5
+      }
+    ],
+    "id": "8000603",
+    "name": "Deus Eques",
+    "rarity": "7",
+    "target": "self"
+  },
+  "8000604": {
+    "desc": "Considerably raises normal hit amount, normal attacks may hit all foes, normal attacks considerably boost BB gauge & boosts BC drop rate",
+    "effects": [
+      {
+        "conditions": [],
+        "hit increase/hit": 2,
+        "passive id": "37",
+        "passive target": "self"
+      },
+      {
+        "aoe atk inc%": -50,
+        "chance to aoe": 5,
+        "conditions": [],
+        "passive id": "96",
+        "passive target": "self"
+      },
+      {
+        "bc fill when attacking high": 5,
+        "bc fill when attacking low": 5,
+        "bc fill when attacking%": 100,
+        "conditions": [],
+        "passive id": "35",
+        "passive target": "self"
+      },
+      {
+        "bc drop rate% buff": 20,
+        "conditions": [],
+        "passive id": "19",
+        "passive target": "self"
+      }
+    ],
+    "id": "8000604",
+    "name": "Ile Vernier",
+    "rarity": "6",
+    "target": "self"
+  },
+  "8000605": {
+    "desc": "100% boost to Atk & slightly boosts Spark damage",
+    "effects": [
+      {
+        "atk% buff": 100,
+        "conditions": [],
+        "passive id": "1",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "damage% for spark": 30,
+        "passive id": "31",
+        "passive target": "self"
+      }
+    ],
+    "id": "8000605",
+    "name": "Ile Arms",
+    "rarity": "6",
+    "target": "self"
+  },
+  "8000606": {
+    "desc": "75% boost to Def & 10% damage reduction from normal attacks",
+    "effects": [
+      {
+        "conditions": [],
+        "def% buff": 75,
+        "passive id": "1",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "128",
+        "unknown passive params": "100,10,100,10"
+      }
+    ],
+    "id": "8000606",
+    "name": "Ile Armor",
+    "rarity": "6",
+    "target": "self"
+  },
+  "8000607": {
+    "desc": "40% boost to max HP, enormously restores HP each turn, greatly boosts BB/SBB activation rates & activates at turn's end effects during turn's start instead",
+    "effects": [
+      {
+        "conditions": [],
+        "hp% buff": 40,
+        "passive id": "1",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "33",
+        "passive target": "self",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 6000,
+        "turn heal low": 6000
+      },
+      {
+        "conditions": [],
+        "increase skill activation in arena%": 15,
+        "passive id": "111",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "72",
+        "unknown passive params": "1,1"
+      }
+    ],
+    "id": "8000607",
+    "name": "Troia",
+    "rarity": "7",
+    "target": "self"
+  },
+  "8000608": {
+    "desc": "Negates all status ailments and Atk, Def, Rec reduction effects & adds status ailment removal effect to BB/SBB/UBB",
+    "effects": [
+      {
+        "atk down resist%": 100,
+        "conditions": [],
+        "curse resist%": 100,
+        "def down resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "passive target": "self",
+        "poison resist%": 100,
+        "rec down resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "trigger on ubb": true,
+        "triggered effect": [
+          {
+            "ailments cured": [
+              "poison",
+              "weaken",
+              "sick",
+              "injury",
+              "curse",
+              "paralysis",
+              "atk down",
+              "def down",
+              "rec down"
+            ],
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "38",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "8000608",
+    "name": "Raise",
+    "rarity": "7",
+    "target": "self"
+  },
+  "8000609": {
+    "desc": "Negates all status ailments and Atk, Def, Rec reduction effects & adds status ailment negation for 3 turns effect to BB/SBB/UBB",
+    "effects": [
+      {
+        "atk down resist%": 100,
+        "conditions": [],
+        "curse resist%": 100,
+        "def down resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "passive target": "self",
+        "poison resist%": 100,
+        "rec down resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "trigger on ubb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "17",
+            "resist curse% (34)": 100,
+            "resist injury% (33)": 100,
+            "resist paralysis% (35)": 100,
+            "resist poison% (30)": 100,
+            "resist sick% (32)": 100,
+            "resist status ails turns": 3,
+            "resist weaken% (31)": 100,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "8000609",
+    "name": "Re-Raise",
+    "rarity": "7",
+    "target": "self"
+  },
   "8200006": {
     "desc": "100% boost to Atk and 30% boost to critical hit rate of Earth types, raises normal hit amount, considerably boosts Spark damage, boosts critical damage, boosts elemental damage & raises Atk parameter limits to 160000",
     "effects": [
@@ -36440,6 +38642,56 @@
     "id": "8200014",
     "name": "Brave Fairy Lv. 2",
     "rarity": "7",
+    "target": "self"
+  },
+  "8850000": {
+    "desc": "120% boost to Atk and 80% boost to Def, Rec, max HP to all Fire, Light type allies, adds powerful attack on all foes (30% active pierce) to BB/SBB for all allies, adds Fire element to attack & raises Atk parameter limits to 200000",
+    "effects": [
+      {
+        "atk% buff": 120,
+        "conditions": [],
+        "def% buff": 80,
+        "elements buffed": [
+          "fire",
+          "light"
+        ],
+        "hp% buff": 80,
+        "passive id": "2",
+        "passive target": "party",
+        "rec% buff": 80
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "party",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "enemy",
+            "unknown proc id": "10020",
+            "unknown proc param": "500,200,30,1,1,1,1,1,1"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "93",
+        "unknown passive params": "1,0,0,0,0,0,-1"
+      },
+      {
+        "conditions": [],
+        "increase atk cap": 200000,
+        "passive id": "143",
+        "passive target": "self"
+      }
+    ],
+    "id": "8850000",
+    "name": "Melody of Creation",
+    "rarity": "1",
     "target": "self"
   },
   "8910287": {

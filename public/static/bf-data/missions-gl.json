@@ -7903,7 +7903,7 @@
       "group_2_monster_group": "1200",
       "spawn_chance_range_maybe": "10.0~34.0"
     },
-    "name": "Time to Vanquish",
+    "name": "Disciple Mare Lv. 1",
     "requires": "933",
     "xp": 4200,
     "zel": 4800
@@ -8027,7 +8027,7 @@
       "group_2_monster_group": "1200",
       "spawn_chance_range_maybe": "10.0~34.0"
     },
-    "name": "Tombstone of Light",
+    "name": "Blazing Mare Lv.1",
     "requires": "943",
     "xp": 4400,
     "zel": 5000
@@ -12411,7 +12411,7 @@
       "group_2_monster_group": "1200",
       "spawn_chance_range_maybe": "10.0~34.0"
     },
-    "name": "Before the Sandstorm",
+    "name": "Paladin Paris",
     "requires": "1413",
     "xp": 5050,
     "zel": 4300
@@ -12783,7 +12783,7 @@
       "group_2_monster_group": "1200",
       "spawn_chance_range_maybe": "10.0~34.0"
     },
-    "name": "Wind Blows to Heaven",
+    "name": "Royal Guard Paris",
     "requires": "1443",
     "xp": 5200,
     "zel": 5000
@@ -13323,7 +13323,7 @@
       "group_2_monster_group": "1200",
       "spawn_chance_range_maybe": "10.0~34.0"
     },
-    "name": "Changing the World",
+    "name": "Eriole",
     "requires": "1476",
     "xp": 8300,
     "zel": 8000
@@ -33859,7 +33859,7 @@
     "karma": 0,
     "land": "Vortex",
     "mimic_info": {},
-    "name": "A New Hope",
+    "name": "Gaia Armor Edea",
     "requires": "150101",
     "xp": 6000,
     "zel": 0
@@ -39859,7 +39859,7 @@
     "continue": true,
     "desc": "You think you have what it takes to defeat my mock Units? You should be really familiar with your opponent this time! I wonder how long you'll last?",
     "difficulty": 1,
-    "dungeon": "Trial Test",
+    "dungeon": "Trial No. 004",
     "energy_use": 50,
     "id": "2000000",
     "karma": 0,
@@ -39880,7 +39880,7 @@
     "continue": true,
     "desc": "Hmm, you're better than I expected. However, if you think you can beat my next Unit, you're wrong! I doubt you'll even be able to survive the first blow!",
     "difficulty": 1,
-    "dungeon": "Trial Test",
+    "dungeon": "Trial No. 004",
     "energy_use": 50,
     "id": "2000001",
     "karma": 0,
@@ -39902,7 +39902,7 @@
     "continue": true,
     "desc": "These mock Units are made of something completely different. You're in for a shock once you start fighting them!",
     "difficulty": 1,
-    "dungeon": "Trial Test",
+    "dungeon": "Trial No. 004",
     "energy_use": 50,
     "id": "2000002",
     "karma": 0,
@@ -39924,7 +39924,7 @@
     "continue": true,
     "desc": "I used entirely different materials to make<br>this new mock Unit, you know!<br>You'll get quite the surprise when<br>you start fighting against it.",
     "difficulty": 1,
-    "dungeon": "Trial Test",
+    "dungeon": "Trial No. 004",
     "energy_use": 50,
     "id": "2000003",
     "karma": 0,
@@ -39952,7 +39952,7 @@
     "continue": true,
     "desc": "These mock Units are made of something completely different. You're in for a shock once you start fighting them!",
     "difficulty": 1,
-    "dungeon": "Trial Test",
+    "dungeon": "Trial No. 004",
     "energy_use": 50,
     "id": "2000004",
     "karma": 0,
@@ -39974,7 +39974,7 @@
     "continue": true,
     "desc": "These mock Units are made of something completely different. You're in for a shock once you start fighting them!",
     "difficulty": 1,
-    "dungeon": "Trial Test",
+    "dungeon": "Trial No. 004",
     "energy_use": 50,
     "id": "2000005",
     "karma": 0,
@@ -40002,7 +40002,7 @@
     "continue": true,
     "desc": "These mock Units are made of something completely different. You're in for a shock once you start fighting them!",
     "difficulty": 1,
-    "dungeon": "Trial Test",
+    "dungeon": "Trial No. 004",
     "energy_use": 50,
     "id": "2000006",
     "karma": 0,
@@ -40024,7 +40024,7 @@
     "continue": true,
     "desc": "These mock Units are made of something completely different. You're in for a shock once you start fighting them!",
     "difficulty": 1,
-    "dungeon": "Trial Test",
+    "dungeon": "Trial No. 004",
     "energy_use": 50,
     "id": "2000007",
     "karma": 0,
@@ -40052,7 +40052,7 @@
     "continue": true,
     "desc": "These mock Units are made of something completely different. You're in for a shock once you start fighting them!",
     "difficulty": 1,
-    "dungeon": "Trial Test",
+    "dungeon": "Trial No. 004",
     "energy_use": 50,
     "id": "2000008",
     "karma": 0,
@@ -40074,13 +40074,13 @@
     "continue": true,
     "desc": "These mock Units are made of something completely different. You're in for a shock once you start fighting them!",
     "difficulty": 1,
-    "dungeon": "Trial Test",
+    "dungeon": "Trial No. 004",
     "energy_use": 50,
     "id": "2000009",
     "karma": 0,
     "land": "Vortex",
     "mimic_info": {},
-    "name": "Trial No. 007",
+    "name": "Trial No.007",
     "requires": "1577,2000007",
     "xp": 90000,
     "zel": 3000000
@@ -40102,7 +40102,7 @@
     "continue": true,
     "desc": "These mock Units are made of something completely different. You're in for a shock once you start fighting them!",
     "difficulty": 1,
-    "dungeon": "Trial Test",
+    "dungeon": "Trial No. 004",
     "energy_use": 50,
     "id": "2000010",
     "karma": 0,
@@ -40124,7 +40124,7 @@
     "continue": true,
     "desc": "These mock Units are made of something completely different. You're in for a shock once you start fighting them!",
     "difficulty": 1,
-    "dungeon": "Trial Test",
+    "dungeon": "Trial No. 004",
     "energy_use": 50,
     "id": "2000011",
     "karma": 0,
@@ -40152,7 +40152,7 @@
     "continue": true,
     "desc": "These mock Units are made of something completely different. You're in for a shock once you start fighting them!",
     "difficulty": 1,
-    "dungeon": "Trial Test",
+    "dungeon": "Trial No. 004",
     "energy_use": 50,
     "id": "2000012",
     "karma": 0,
@@ -40192,7 +40192,7 @@
     "continue": true,
     "desc": "These mock Units are made of something completely different. You're in for a shock once you start fighting them!",
     "difficulty": 1,
-    "dungeon": "Trial Test",
+    "dungeon": "Trial No. 004",
     "energy_use": 50,
     "id": "2000013",
     "karma": 0,
@@ -40220,7 +40220,7 @@
     "continue": true,
     "desc": "These mock Units are made of something completely different. You're in for a shock once you start fighting them!",
     "difficulty": 1,
-    "dungeon": "Trial Test",
+    "dungeon": "Trial No. 004",
     "energy_use": 50,
     "id": "2000014",
     "karma": 0,
@@ -40248,7 +40248,7 @@
     "continue": true,
     "desc": "These mock Units are made of something completely different. You're in for a shock once you start fighting them!",
     "difficulty": 1,
-    "dungeon": "Trial Test",
+    "dungeon": "Trial No. 004",
     "energy_use": 50,
     "id": "2000015",
     "karma": 0,
@@ -41900,6 +41900,23 @@
     "xp": 10000,
     "zel": 50000
   },
+  "5008008": {
+    "area": "Grand Quest",
+    "battle_count": 1,
+    "clear_bonus": [],
+    "continue": false,
+    "desc": "Aimyhr is in peril. Ensa-Taya has sent her Voidborn to devour every last being on this world. Forced to ally with the human kingdoms against a common enemy,  Zeruiah bestows Faefire upon their delegate, Baelfyr.",
+    "difficulty": 1,
+    "dungeon": "5008008",
+    "energy_use": 20,
+    "id": "5008008",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Everlasting Embrace",
+    "xp": 0,
+    "zel": 0
+  },
   "5200000": {
     "area": "GQ Chain Chronicle",
     "battle_count": 1,
@@ -42026,7 +42043,7 @@
     "continue": true,
     "desc": "A group of maidens barged in here and demanded to use my sacred lab to test each other's strength!! Get in there and appease them so I can return to my experiments!",
     "difficulty": 1,
-    "dungeon": "Trial Test",
+    "dungeon": "Trial No. 004",
     "energy_use": 50,
     "id": "8300031",
     "karma": 0,
@@ -42403,7 +42420,7 @@
     "zel": 0
   },
   "8301144": {
-    "area": "800115",
+    "area": "800131",
     "battle_count": 4,
     "clear_bonus": [],
     "continue": true,
@@ -42420,7 +42437,7 @@
     "zel": 0
   },
   "8301145": {
-    "area": "800115",
+    "area": "800131",
     "battle_count": 4,
     "clear_bonus": [],
     "continue": true,
@@ -42434,11 +42451,11 @@
     "mimic_info": {},
     "name": "Let There Be Light",
     "requires": "8301144",
-    "xp": 3000,
+    "xp": 2500,
     "zel": 0
   },
   "8301146": {
-    "area": "800115",
+    "area": "800131",
     "battle_count": 5,
     "clear_bonus": [
       {
@@ -42460,7 +42477,7 @@
     "zel": 0
   },
   "8301147": {
-    "area": "800116",
+    "area": "800131",
     "battle_count": 4,
     "clear_bonus": [],
     "continue": true,
@@ -42477,7 +42494,7 @@
     "zel": 0
   },
   "8301148": {
-    "area": "800116",
+    "area": "800131",
     "battle_count": 5,
     "clear_bonus": [],
     "continue": true,
@@ -42495,7 +42512,7 @@
     "zel": 0
   },
   "8301149": {
-    "area": "800116",
+    "area": "800131",
     "battle_count": 1,
     "clear_bonus": [
       {
@@ -42519,7 +42536,7 @@
     "mimic_info": {},
     "name": "Tartaros",
     "requires": "8301148",
-    "xp": 5000,
+    "xp": 4000,
     "zel": 0
   },
   "8301151": {
@@ -43171,6 +43188,273 @@
     "xp": 4000,
     "zel": 0
   },
+  "8301261": {
+    "area": "800126",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "During the season of autumn, a Moon Fairy is known to masquerade as a mortal in these moonlit forests. Find her to seek her blessing!",
+    "difficulty": 1,
+    "dungeon": "800126",
+    "energy_use": 10,
+    "id": "8301261",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn's Moonlight",
+    "xp": 2000,
+    "zel": 0
+  },
+  "8301262": {
+    "area": "800126",
+    "battle_count": 5,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "As you approach deeper into the moonlit forest, a herd of rabbits coaxes you over towards a brightly lit sanctum. Follow them to uncover their secrets!",
+    "difficulty": 2,
+    "dungeon": "800126",
+    "energy_use": 20,
+    "id": "8301262",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Rabbit Chase!",
+    "requires": "8301261",
+    "xp": 4000,
+    "zel": 0
+  },
+  "8301263": {
+    "area": "800126",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "gem": "1"
+      }
+    ],
+    "continue": false,
+    "desc": "The rabbits were enticed by a mysterious girl making what seems to be fluffy rice cakes. With a giggle, she playfully requests that you play a game with her!",
+    "difficulty": 3,
+    "dungeon": "800126",
+    "energy_use": 25,
+    "id": "8301263",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Desirous Mochi",
+    "requires": "8301262",
+    "xp": 3000,
+    "zel": 0
+  },
+  "8301264": {
+    "area": "800126",
+    "battle_count": 9,
+    "clear_bonus": [
+      {
+        "gem": "1"
+      }
+    ],
+    "continue": false,
+    "desc": "With little time left, QiuTong asks for a final game with her. Send her off with a smile that is as bright as the full moon!",
+    "difficulty": 4,
+    "dungeon": "800126",
+    "energy_use": 25,
+    "id": "8301264",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Moonlight Valediction",
+    "requires": "8301263",
+    "xp": 4000,
+    "zel": 0
+  },
+  "8301271": {
+    "area": "800127",
+    "battle_count": 4,
+    "clear_bonus": [
+      {
+        "item": {
+          "count": "3",
+          "id": "802002"
+        }
+      },
+      {
+        "item": {
+          "count": "3",
+          "id": "802001"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "The Main Hall is dusty from abandonment, and a few doors lead to the rest of this forbidding manor. Your search begins here.",
+    "difficulty": 1,
+    "dungeon": "800127",
+    "energy_use": 10,
+    "id": "8301271",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Main Hall",
+    "xp": 5000,
+    "zel": 0
+  },
+  "8301272": {
+    "area": "800127",
+    "battle_count": 4,
+    "clear_bonus": [
+      {
+        "item": {
+          "count": "3",
+          "id": "802002"
+        }
+      },
+      {
+        "item": {
+          "count": "3",
+          "id": "802001"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "This kitchen has once seen a lot of use, but now lays forgotten from neglect. Pots and utensils are strewn everywhere.",
+    "difficulty": 2,
+    "dungeon": "800127",
+    "energy_use": 10,
+    "id": "8301272",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Kitchen",
+    "requires": "8301271",
+    "xp": 5000,
+    "zel": 0
+  },
+  "8301273": {
+    "area": "800127",
+    "battle_count": 4,
+    "clear_bonus": [
+      {
+        "item": {
+          "count": "3",
+          "id": "802002"
+        }
+      },
+      {
+        "item": {
+          "count": "3",
+          "id": "802001"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "Compared to the rest of the manor, the study is still well-kept. Books on medicine and other disciplines fill the shelves.",
+    "difficulty": 3,
+    "dungeon": "800127",
+    "energy_use": 20,
+    "id": "8301273",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Study",
+    "requires": "8301271",
+    "xp": 10000,
+    "zel": 0
+  },
+  "8301274": {
+    "area": "800127",
+    "battle_count": 5,
+    "clear_bonus": [
+      {
+        "gem": "1"
+      },
+      {
+        "item": {
+          "count": "3",
+          "id": "802002"
+        }
+      },
+      {
+        "item": {
+          "count": "3",
+          "id": "802001"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "Amateur paintings, mostly of flowers and skeletons, hang on the wall. You can't help but feel that you are being watched.",
+    "difficulty": 4,
+    "dungeon": "800127",
+    "energy_use": 5,
+    "id": "8301274",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Gallery",
+    "requires": "8301292",
+    "xp": 2500,
+    "zel": 0
+  },
+  "8301275": {
+    "area": "800127",
+    "battle_count": 4,
+    "clear_bonus": [
+      {
+        "item": {
+          "count": "3",
+          "id": "802002"
+        }
+      },
+      {
+        "item": {
+          "count": "3",
+          "id": "802001"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "Attached to the kitchen is a storage, though any food has long since rotted. There might be something tucked away here.",
+    "difficulty": 4,
+    "dungeon": "800127",
+    "energy_use": 10,
+    "id": "8301275",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Storage",
+    "requires": "8301272",
+    "xp": 5000,
+    "zel": 0
+  },
+  "8301276": {
+    "area": "800127",
+    "battle_count": 5,
+    "clear_bonus": [
+      {
+        "item": {
+          "count": "3",
+          "id": "802002"
+        }
+      },
+      {
+        "item": {
+          "count": "3",
+          "id": "802001"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "At the top of the stairwell stands a shadowy silhouette, though it does not seem to have noticed your presence...yet.",
+    "difficulty": 1,
+    "dungeon": "800127",
+    "energy_use": 5,
+    "id": "8301276",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Main Stairway",
+    "requires": "8301275",
+    "xp": 2500,
+    "zel": 0
+  },
   "8301281": {
     "area": "800128",
     "battle_count": 4,
@@ -43188,6 +43472,102 @@
     "xp": 7500,
     "zel": 50000
   },
+  "8301291": {
+    "area": "800127",
+    "battle_count": 4,
+    "clear_bonus": [
+      {
+        "item": {
+          "count": "3",
+          "id": "802002"
+        }
+      },
+      {
+        "item": {
+          "count": "3",
+          "id": "802001"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "The loft on the second floor is littered with glass shards and broken frames. Two rooms and a hallway lead from here.",
+    "difficulty": 1,
+    "dungeon": "800129",
+    "energy_use": 20,
+    "id": "8301291",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Loft",
+    "requires": "8301276,8301273",
+    "xp": 10000,
+    "zel": 0
+  },
+  "8301292": {
+    "area": "800127",
+    "battle_count": 4,
+    "clear_bonus": [
+      {
+        "item": {
+          "count": "3",
+          "id": "802002"
+        }
+      },
+      {
+        "item": {
+          "count": "3",
+          "id": "802001"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "The second floor hallway terminates in an attic. A thorough search through the cluttered boxes may uncover something.",
+    "difficulty": 3,
+    "dungeon": "800129",
+    "energy_use": 10,
+    "id": "8301292",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Attic",
+    "requires": "8301293",
+    "xp": 5000,
+    "zel": 0
+  },
+  "8301293": {
+    "area": "800127",
+    "battle_count": 5,
+    "clear_bonus": [
+      {
+        "gem": "1"
+      },
+      {
+        "item": {
+          "count": "3",
+          "id": "802002"
+        }
+      },
+      {
+        "item": {
+          "count": "3",
+          "id": "802001"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "Eerie muttering emanates from what appears to be a child's playroom. The shadowy figure seems be pacing around in there…",
+    "difficulty": 2,
+    "dungeon": "800129",
+    "energy_use": 5,
+    "id": "8301293",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Playroom",
+    "requires": "8301291",
+    "xp": 2500,
+    "zel": 0
+  },
   "8301300": {
     "area": "New Frontier Gate",
     "battle_count": 5,
@@ -43204,6 +43584,109 @@
     "name": "Raug Phantasm Lv. 3",
     "xp": 0,
     "zel": 0
+  },
+  "8301301": {
+    "area": "800127",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "gem": "1"
+      },
+      {
+        "item": {
+          "count": "1",
+          "id": "819178"
+        }
+      },
+      {
+        "item": {
+          "count": "3",
+          "id": "802002"
+        }
+      },
+      {
+        "item": {
+          "count": "3",
+          "id": "802001"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "Having explored the rest of the manor, only the bedroom remains. Laughter punctuated by choked sobs fills the eerie air.",
+    "difficulty": 4,
+    "dungeon": "800130",
+    "energy_use": 30,
+    "id": "8301301",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Master Bedroom",
+    "requires": "8301293,8301292,8301274",
+    "xp": 15000,
+    "zel": 0
+  },
+  "8301310": {
+    "area": "800131",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "The mix-up with Wendy was somehow resolved, but now Gajeel the Iron Dragon Slayer has appeared! Can you break through his iron defense?",
+    "difficulty": 2,
+    "dungeon": "800132",
+    "energy_use": 40,
+    "id": "8301310",
+    "karma": 5000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Strength of Iron",
+    "requires": "8301311",
+    "xp": 5000,
+    "zel": 5000
+  },
+  "8301311": {
+    "area": "800131",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "Stumbling through a rift into Grand Gaia, the Sky Dragon Slayer Wendy lashes a gust of wind at you upon seeing you... Don't get blown off your feet!",
+    "difficulty": 3,
+    "dungeon": "800132",
+    "energy_use": 40,
+    "id": "8301311",
+    "karma": 5000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "A Windy Fight",
+    "xp": 5000,
+    "zel": 7500
+  },
+  "8301312": {
+    "area": "800131",
+    "battle_count": 5,
+    "clear_bonus": [
+      {
+        "gem": "1"
+      },
+      {
+        "unit": {
+          "count": "1",
+          "id": "50792"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "Gajeel and Wendy have decided to challenge you together! Will you be able to withstand this fearsome combination of iron and sky magic? ",
+    "difficulty": 4,
+    "dungeon": "800132",
+    "energy_use": 50,
+    "id": "8301312",
+    "karma": 7500,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Iron Covered Skies",
+    "requires": "8301310",
+    "xp": 7000,
+    "zel": 10000
   },
   "8301400": {
     "area": "New Frontier Gate",
@@ -45545,7 +46028,7 @@
     "continue": true,
     "desc": "I... I opened a portal to the Dark Tower and I couldn't control the accursed.<br>Keep it under control and you shall be rewarded.",
     "difficulty": 1,
-    "dungeon": "Trial Test",
+    "dungeon": "Trial No. 004",
     "energy_use": 50,
     "id": "8360021",
     "karma": 0,
@@ -45567,7 +46050,7 @@
     "continue": true,
     "desc": "This mock unit was supposedly widely feared and known far throughout the East. Are you up for the challenge?",
     "difficulty": 1,
-    "dungeon": "Trial Test",
+    "dungeon": "Trial No. 004",
     "energy_use": 50,
     "id": "8360041",
     "karma": 0,
@@ -45589,7 +46072,7 @@
     "continue": true,
     "desc": "I’ve finally done it!! My research has led me to this man of great importance. There is much I would like to ask him but first, would you like a challenge?",
     "difficulty": 1,
-    "dungeon": "Trial Test",
+    "dungeon": "Trial No. 004",
     "energy_use": 50,
     "id": "8360051",
     "karma": 0,
@@ -46269,6 +46752,125 @@
     },
     "name": "Magic Research Lv. 3",
     "xp": 3500,
+    "zel": 0
+  },
+  "8507001": {
+    "area": "New Frontier Gate",
+    "battle_count": 2,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "",
+    "difficulty": 1,
+    "dungeon": "8000007",
+    "energy_use": 0,
+    "id": "8507001",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Heavens Lv.1",
+    "xp": 0,
+    "zel": 0
+  },
+  "8507002": {
+    "area": "New Frontier Gate",
+    "battle_count": 2,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "",
+    "difficulty": 1,
+    "dungeon": "8000007",
+    "energy_use": 0,
+    "id": "8507002",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Heavens Lv.2",
+    "xp": 0,
+    "zel": 0
+  },
+  "8507003": {
+    "area": "New Frontier Gate",
+    "battle_count": 1,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "",
+    "difficulty": 1,
+    "dungeon": "8000007",
+    "energy_use": 0,
+    "id": "8507003",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Heavens Lv.3",
+    "xp": 0,
+    "zel": 0
+  },
+  "8508001": {
+    "area": "New Frontier Gate",
+    "battle_count": 1,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "",
+    "difficulty": 1,
+    "dungeon": "8000008",
+    "energy_use": 0,
+    "id": "8508001",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Essence of Time Lv.1",
+    "xp": 0,
+    "zel": 0
+  },
+  "8508002": {
+    "area": "New Frontier Gate",
+    "battle_count": 2,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "",
+    "difficulty": 1,
+    "dungeon": "8000008",
+    "energy_use": 0,
+    "id": "8508002",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Essence of Time Lv.2",
+    "xp": 0,
+    "zel": 0
+  },
+  "8508003": {
+    "area": "New Frontier Gate",
+    "battle_count": 1,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "",
+    "difficulty": 1,
+    "dungeon": "8000008",
+    "energy_use": 0,
+    "id": "8508003",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Essence of Time Lv.3",
+    "xp": 0,
+    "zel": 0
+  },
+  "8508004": {
+    "area": "New Frontier Gate",
+    "battle_count": 1,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "",
+    "difficulty": 1,
+    "dungeon": "8000008",
+    "energy_use": 0,
+    "id": "8508004",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Essence of Time Lv.4",
+    "xp": 0,
     "zel": 0
   },
   "8701600": {
@@ -47203,6 +47805,516 @@
     "land": "Vortex",
     "mimic_info": {},
     "name": "Summer Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013301": {
+    "area": "80013301",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013301",
+    "energy_use": 30,
+    "id": "83013301",
+    "karma": 50000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013302": {
+    "area": "80013302",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013302",
+    "energy_use": 30,
+    "id": "83013302",
+    "karma": 50000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013303": {
+    "area": "80013303",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013303",
+    "energy_use": 30,
+    "id": "83013303",
+    "karma": 3500000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013304": {
+    "area": "80013304",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013304",
+    "energy_use": 30,
+    "id": "83013304",
+    "karma": 3500000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013305": {
+    "area": "80013305",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013305",
+    "energy_use": 30,
+    "id": "83013305",
+    "karma": 50000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013306": {
+    "area": "80013306",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013306",
+    "energy_use": 30,
+    "id": "83013306",
+    "karma": 50000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013307": {
+    "area": "80013307",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013307",
+    "energy_use": 30,
+    "id": "83013307",
+    "karma": 50000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013308": {
+    "area": "80013308",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013308",
+    "energy_use": 30,
+    "id": "83013308",
+    "karma": 50000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013309": {
+    "area": "80013309",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013309",
+    "energy_use": 30,
+    "id": "83013309",
+    "karma": 50000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013310": {
+    "area": "80013310",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013310",
+    "energy_use": 30,
+    "id": "83013310",
+    "karma": 3500000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013311": {
+    "area": "80013311",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013311",
+    "energy_use": 30,
+    "id": "83013311",
+    "karma": 3500000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013312": {
+    "area": "80013312",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013312",
+    "energy_use": 30,
+    "id": "83013312",
+    "karma": 50000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013313": {
+    "area": "80013313",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013313",
+    "energy_use": 30,
+    "id": "83013313",
+    "karma": 50000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013314": {
+    "area": "80013314",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013314",
+    "energy_use": 30,
+    "id": "83013314",
+    "karma": 50000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013315": {
+    "area": "80013315",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013315",
+    "energy_use": 30,
+    "id": "83013315",
+    "karma": 50000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013316": {
+    "area": "80013316",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013316",
+    "energy_use": 30,
+    "id": "83013316",
+    "karma": 50000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013317": {
+    "area": "80013317",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013317",
+    "energy_use": 30,
+    "id": "83013317",
+    "karma": 3500000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013318": {
+    "area": "80013318",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013318",
+    "energy_use": 30,
+    "id": "83013318",
+    "karma": 3500000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013319": {
+    "area": "80013319",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013319",
+    "energy_use": 30,
+    "id": "83013319",
+    "karma": 50000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013320": {
+    "area": "80013320",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013320",
+    "energy_use": 30,
+    "id": "83013320",
+    "karma": 50000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013321": {
+    "area": "80013321",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013321",
+    "energy_use": 30,
+    "id": "83013321",
+    "karma": 50000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013322": {
+    "area": "80013322",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013322",
+    "energy_use": 30,
+    "id": "83013322",
+    "karma": 50000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013323": {
+    "area": "80013323",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013323",
+    "energy_use": 30,
+    "id": "83013323",
+    "karma": 50000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013324": {
+    "area": "80013324",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013324",
+    "energy_use": 30,
+    "id": "83013324",
+    "karma": 50000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013325": {
+    "area": "80013325",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013325",
+    "energy_use": 30,
+    "id": "83013325",
+    "karma": 3500000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013326": {
+    "area": "80013326",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013326",
+    "energy_use": 30,
+    "id": "83013326",
+    "karma": 3500000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013327": {
+    "area": "80013327",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013327",
+    "energy_use": 30,
+    "id": "83013327",
+    "karma": 50000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013328": {
+    "area": "80013328",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013328",
+    "energy_use": 30,
+    "id": "83013328",
+    "karma": 50000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013329": {
+    "area": "80013329",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013329",
+    "energy_use": 30,
+    "id": "83013329",
+    "karma": 50000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83013330": {
+    "area": "80013330",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "This gateway to the heavens only opens once a day in the autumn season. A symphony of the frogs can be heard in the golden wheat field beyond...",
+    "difficulty": 1,
+    "dungeon": "80013330",
+    "energy_use": 30,
+    "id": "83013330",
+    "karma": 50000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Autumn Paradise",
     "xp": 7500,
     "zel": 50000
   },

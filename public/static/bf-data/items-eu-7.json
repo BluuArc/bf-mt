@@ -305,7 +305,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "700001": {
     "desc": "Delicious orange confectionary. ",
@@ -407,6 +413,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "21106",
+      "21107",
       "31006",
       "31007",
       "750176",
@@ -521,6 +529,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "31066",
+      "31067",
       "730166",
       "750167",
       "750287",
@@ -597,6 +607,12 @@
         "name": "True Elgaia Emblem"
       }
     ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ],
     "first_clear_missions": [
       "9103001",
       "9103101",
@@ -650,6 +666,8 @@
       }
     ],
     "associated_units": [
+      "41036",
+      "41037",
       "60497"
     ]
   },
@@ -691,6 +709,8 @@
       }
     ],
     "associated_units": [
+      "41036",
+      "41037",
       "60497"
     ],
     "first_clear_missions": [
@@ -888,6 +908,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "41036",
+      "41037",
       "60497"
     ]
   },
@@ -1225,6 +1247,12 @@
         "id": 700030,
         "name": "Astral Destoyer"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "700030": {
@@ -1276,6 +1304,12 @@
         "id": 700031,
         "name": "Galactic Destroyer"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "700031": {
@@ -1328,7 +1362,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_4_4.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "700032": {
     "desc": "Boost to all stats (15%) & Boost to BB gauge fill rate (25%) and BC drop rate (10%) & Fill BB gauge when taking damage (2-3 BC)",
@@ -1511,7 +1551,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "item_thum_700037.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "700038": {
     "desc": "Boosts all stats (10%)",
@@ -1554,7 +1600,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "item_thum_700038.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "700039": {
     "desc": "Boosts all stats (10%)",
@@ -1597,7 +1649,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "item_thum_700039.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "700040": {
     "desc": "A seal offered to those who are worthy.",
@@ -1721,6 +1779,10 @@
       }
     ],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "720107"
     ]
   },
@@ -1776,6 +1838,10 @@
       }
     ],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "740227"
     ]
   },
@@ -1944,7 +2010,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_1_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "700052": {
     "desc": "Boosts all parameters (30%) & boosts BB ATK (200%) when HP are full & negates elemental damage & reduce damage taken (5%)",
@@ -2001,6 +2073,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "21106",
+      "21107",
       "31006",
       "31007",
       "840547",
@@ -2218,7 +2292,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "11166",
+      "11167",
       "20916",
+      "61016",
       "710247",
       "720257",
       "730277",
@@ -2435,6 +2512,10 @@
       }
     ],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "710247",
       "720257",
       "730277",
@@ -2524,6 +2605,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "710247",
       "720257",
       "730277",
@@ -2617,6 +2702,10 @@
       }
     ],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "740227"
     ]
   },
@@ -2736,6 +2825,10 @@
       }
     ],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "720107"
     ]
   },
@@ -2831,6 +2924,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "720107",
       "740227"
     ]
@@ -2942,6 +3039,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "41036",
+      "41037",
       "60497"
     ]
   },
@@ -2998,6 +3097,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "31066",
+      "31067",
       "850018"
     ],
     "first_clear_missions": [
@@ -3055,6 +3156,213 @@
     "usage": [],
     "associated_units": [
       "850198"
+    ]
+  },
+  "700079": {
+    "desc": "Boosts all parameters (50%) & damage reduction (5%) & boosts Spark damage (100%) & Spark damage reduction (50%) & adds Spark damage restore HP (400-500 HP) for 3 turns effect to BB/SBB",
+    "effect": [
+      {
+        "atk% buff": 50,
+        "def% buff": 50,
+        "hp% buff": 50,
+        "passive id": "1",
+        "rec% buff": 50
+      },
+      {
+        "dmg reduction chance%": 100,
+        "dmg reduction%": 5,
+        "passive id": "14"
+      },
+      {
+        "damage% for spark": 100,
+        "passive id": "31"
+      },
+      {
+        "base spark dmg% resist": 50,
+        "buff spark dmg% resist": 0,
+        "passive id": "77"
+      },
+      {
+        "passive id": "66",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "87",
+            "spark recover hp buff turns (135)": 3,
+            "spark recover hp chance%": 100,
+            "spark recover hp high": 500,
+            "spark recover hp low": 400,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": 700079,
+    "max_stack": 1,
+    "name": "Gungnir Shard",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 100000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_2_5.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ],
+    "first_clear_missions": [
+      "9108100"
+    ]
+  },
+  "700080": {
+    "desc": "Boosts ATK and max HP (35%) & boosts BB gauge each turn (10 BC) & boosts BC drop rate (30%) & restores HP each turn",
+    "effect": [
+      {
+        "atk% buff": 35,
+        "hp% buff": 35,
+        "passive id": "1"
+      },
+      {
+        "bc drop rate% buff": 30,
+        "passive id": "19"
+      },
+      {
+        "bc fill per turn": 10,
+        "passive id": "9"
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 4000,
+        "turn heal low": 3500
+      }
+    ],
+    "id": 700080,
+    "max_stack": 1,
+    "name": "Harvester Pickaxe",
+    "raid": false,
+    "rarity": 5,
+    "sell_price": 50000,
+    "sphere type": 6,
+    "sphere type text": "BB Gauge",
+    "thumbnail": "sphere_thum_700100.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497"
+    ]
+  },
+  "700081": {
+    "desc": "Boosts DEF and max HP (35%) & boosts BB ATK (100%) & damage reduction (5%) & boosts OD gauge fill rate (20%)",
+    "effect": [
+      {
+        "def% buff": 35,
+        "hp% buff": 35,
+        "passive id": "1"
+      },
+      {
+        "bb atk% buff": 100,
+        "passive id": "64",
+        "sbb atk% buff": 100,
+        "ubb atk% buff": 100
+      },
+      {
+        "dmg% mitigation": 5,
+        "passive id": "8"
+      },
+      {
+        "od fill rate%": 20,
+        "passive id": "70"
+      }
+    ],
+    "id": 700081,
+    "max_stack": 1,
+    "name": "Mysterious Mask",
+    "raid": false,
+    "rarity": 5,
+    "sell_price": 50000,
+    "sphere type": 10,
+    "sphere type text": "Damage Reducing",
+    "thumbnail": "sphere_thum_700101.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860018"
+    ]
+  },
+  "700082": {
+    "desc": "Boosts all parameters (60%) & reduces BB gauge required for BB (20%) & raises normal hit amount (+2) & damage reduction from normal attack (20%) & adds OD gauge boost (10%) effect to BB/SBB",
+    "effect": [
+      {
+        "atk% buff": 60,
+        "def% buff": 60,
+        "hp% buff": 60,
+        "passive id": "1",
+        "rec% buff": 60
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 20
+      },
+      {
+        "hit increase/hit": 2,
+        "passive id": "37"
+      },
+      {
+        "unknown passive id": "128",
+        "unknown passive params": "100,20,100,20"
+      },
+      {
+        "passive id": "66",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "increase od gauge%": 10,
+            "proc id": "43",
+            "target area": "single",
+            "target type": "4"
+          }
+        ]
+      }
+    ],
+    "id": 700082,
+    "max_stack": 1,
+    "name": "Ring of Inner Power",
+    "raid": false,
+    "rarity": 5,
+    "sell_price": 100000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_3_3.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ],
+    "first_clear_missions": [
+      "9108200"
     ]
   },
   "701000": {
@@ -3116,6 +3424,10 @@
       }
     ],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "710116",
       "750216"
     ]
@@ -3181,6 +3493,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "750216"
     ],
     "first_clear_missions": [
@@ -3254,6 +3570,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "710116"
     ]
   },
@@ -3333,6 +3653,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "21106",
+      "21107",
       "31006",
       "31007",
       "760216",
@@ -3484,6 +3806,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "740216",
       "740217"
     ]
@@ -3558,6 +3884,10 @@
       }
     ],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "720216",
       "730216",
       "740146",
@@ -3628,7 +3958,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "11166",
+      "11167",
       "20916",
+      "61016",
       "810547",
       "810548",
       "820397",
@@ -3690,6 +4023,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "710146"
     ]
   },
@@ -3727,6 +4064,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "720216",
       "720217"
     ],
@@ -3792,6 +4133,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "740146"
     ]
   },
@@ -3856,6 +4201,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "730216",
       "730217"
     ]
@@ -3925,6 +4274,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "760146"
     ]
   },
@@ -4012,6 +4365,12 @@
         "id": 701026,
         "name": "Ancient Cybernetic Crown"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "701018": {
@@ -4074,6 +4433,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "710166"
     ]
   },
@@ -4136,7 +4499,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "11166",
+      "11167",
       "20916",
+      "61016",
       "740166",
       "810547",
       "810548",
@@ -4203,6 +4569,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "720166"
     ]
   },
@@ -4347,6 +4717,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "750226"
     ]
   },
@@ -4411,6 +4785,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "750167",
       "750287"
     ]
@@ -4476,6 +4854,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "760226",
       "760227"
     ]
@@ -4511,6 +4893,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "730226",
       "760017"
     ],
@@ -4578,7 +4964,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_3.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "701027": {
     "desc": "Boosts all parameters (20%) & boosts DEF relative to remaining HP (0-40%) & chance to add Spark vulnerability (25% chance) for 1 turn",
@@ -4640,6 +5032,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "21106",
+      "21107",
       "31006",
       "31007",
       "720227",
@@ -4725,6 +5119,12 @@
         "id": 701038,
         "name": "Drill Sharpener"
       }
+    ],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
     ]
   },
   "701030": {
@@ -4793,7 +5193,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "11166",
+      "11167",
       "20916",
+      "61016",
       "730247",
       "810547",
       "810548",
@@ -4865,6 +5268,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "720157"
     ]
   },
@@ -4958,6 +5365,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "750157"
     ]
   },
@@ -5052,6 +5463,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "710217"
     ]
   },
@@ -5139,7 +5554,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "11166",
+      "11167",
       "20916",
+      "61016",
       "740157",
       "810547",
       "810548",
@@ -5201,6 +5619,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "760236",
       "760237"
     ]
@@ -5238,6 +5660,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "710227",
       "720237",
       "730257",
@@ -5283,6 +5709,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "710227",
       "720237",
       "730257",
@@ -5329,6 +5759,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "710227",
       "720237",
       "730257",
@@ -5361,7 +5795,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_70_7.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "701043": {
     "desc": "Has no effect, can be sold. If you can read this, a real version of this Sphere will be distributed to you in early July. Sorry for the wait.",
@@ -5380,7 +5820,13 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_70_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287"
+    ]
   },
   "701044": {
     "desc": "Boosts all parameters (35%) & boosts BC efficacy (30%) & boosts BB ATK (100%) & damage reduction (5%)",
@@ -5419,6 +5865,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "710227",
       "720237",
       "730257",
@@ -5479,7 +5929,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "11166",
+      "11167",
       "20916",
+      "61016",
       "720247",
       "730267",
       "750267",
@@ -5564,6 +6017,8 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "41036",
+      "41037",
       "60497",
       "710237",
       "720217",
@@ -5681,6 +6136,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
       "730217"
     ],
     "first_clear_missions": [
@@ -5728,7 +6187,10 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "11166",
+      "11167",
       "20916",
+      "61016",
       "760267",
       "810547",
       "810548",

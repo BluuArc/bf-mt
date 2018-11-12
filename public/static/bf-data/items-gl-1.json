@@ -6472,6 +6472,52 @@
       "25053"
     ]
   },
+  "13382": {
+    "desc": "This object is useless.",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "0",
+          "unknown proc param": ""
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 13382,
+    "max equipped": 99,
+    "max_stack": 99,
+    "name": "Useless Object",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 100,
+    "thumbnail": "item_thum_22210.png",
+    "type": "consumable",
+    "usage": []
+  },
+  "13383": {
+    "desc": "This item is pointless.",
+    "effect": {
+      "effect": [
+        {
+          "unknown proc id": "0",
+          "unknown proc param": ""
+        }
+      ],
+      "target_area": "aoe",
+      "target_type": "party"
+    },
+    "id": 13383,
+    "max equipped": 50,
+    "max_stack": 99,
+    "name": "Pointless Item",
+    "raid": false,
+    "rarity": 0,
+    "sell_price": 100,
+    "thumbnail": "item_thum_21100.png",
+    "type": "consumable",
+    "usage": []
+  },
   "110000": {
     "desc": "A crystal used to evolve the mock Unit based on Seria",
     "id": 110000,
@@ -6849,6 +6895,7 @@
       "810177",
       "810277",
       "810287",
+      "810317",
       "810327",
       "810337",
       "810356",
@@ -6861,6 +6908,8 @@
       "810547",
       "810557",
       "810587",
+      "810627",
+      "810657",
       "811016",
       "811116",
       "820047",
@@ -6874,11 +6923,14 @@
       "820377",
       "820397",
       "820417",
+      "820437",
       "820507",
       "820547",
       "820557",
       "820567",
+      "820577",
       "820587",
+      "820657",
       "830047",
       "830116",
       "830117",
@@ -6896,6 +6948,8 @@
       "830537",
       "830557",
       "830587",
+      "830597",
+      "830647",
       "840047",
       "840127",
       "840177",
@@ -6936,8 +6990,12 @@
       "850507",
       "850547",
       "850557",
+      "850567",
+      "850637",
+      "850647",
       "860017",
       "860047",
+      "860107",
       "860165",
       "860166",
       "860177",
@@ -6950,7 +7008,8 @@
       "860377",
       "860417",
       "860427",
-      "860517"
+      "860517",
+      "860557"
     ]
   },
   "120000": {
