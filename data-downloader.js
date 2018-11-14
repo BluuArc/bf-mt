@@ -4,7 +4,7 @@ const logger = require('winston');
 const GitHubScraper = require('./gh-scraper');
 logger.level = 'debug';
 
-const outputFolder = 'static/bf-data';
+const outputFolder = 'public/static/bf-data';
 
 const config = {
   getStats: true,
@@ -89,6 +89,7 @@ const handlers = {
         }
 
         curUnit.evo_mats = entry.mats;
+        curUnit.evo_cost = entry.amount;
         curUnit.next = nextUnit.id.toString();
         nextUnit.prev = curUnit.id.toString();
       });
