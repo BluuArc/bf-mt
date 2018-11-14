@@ -187,10 +187,12 @@
         v-if="numPages > 1 && !(loadingFilters || loadingSorts)"
         :value="true"
         fixed app>
-        <v-pagination
-          v-model="paginationModel"
-          :total-visible="$vuetify.breakpoint.mdAndUp ? 20 : undefined"
-          :length="numPages"/>
+        <div class="text-xs-center">
+          <v-pagination
+            v-model="paginationModel"
+            :total-visible="$vuetify.breakpoint.mdAndUp ? 20 : undefined"
+            :length="numPages"/>
+        </div>
       </v-bottom-nav>
     </template>
 
@@ -201,30 +203,30 @@
       </v-flex>
       <v-flex v-else>
         <result-container
-            class="pa-0"
-            :dataIsLoading="isVisuallyLoadingFromOptions"
-            :loadingMessage="`${loadingFilters ? 'Loading' : 'Sorting'} data...`"
-            :requiredModules="pageModules"
-            :stateInfo="stateInfo"
-            :actionInfo="actionInfo"
-            :maxResults="stateInfo[mainModule.name].numEntries[activeServer]"
-            :numResults="allSortedEntries.length"
-            :logger="logger">
-            <slot name="results" :logger="logger" :keys="entriesToShow" :getMultidexPathTo="(key) => getMultidexPathTo(key, activeServer).resolved.fullPath">
-              <v-layout row wrap>
-                <v-flex
-                  v-for="key in entriesToShow"
-                  :key="key"
-                  xs12 sm6 md4 xl3>
-                  <base-entry-card :to="getMultidexPathTo(key, activeServer).resolved.fullPath" :entry="pageDb[key]" v-if="pageDb.hasOwnProperty(key)">
-                    <v-card-text>
-                      {{ (pageDb[key] && (pageDb[key].name || pageDb[key].description)) || key }}
-                    </v-card-text>
-                  </base-entry-card>
-                </v-flex>
-              </v-layout>
-            </slot>
-          </result-container>
+          class="pa-0"
+          :dataIsLoading="isVisuallyLoadingFromOptions"
+          :loadingMessage="`${loadingFilters ? 'Loading' : 'Sorting'} data...`"
+          :requiredModules="pageModules"
+          :stateInfo="stateInfo"
+          :actionInfo="actionInfo"
+          :maxResults="stateInfo[mainModule.name].numEntries[activeServer]"
+          :numResults="allSortedEntries.length"
+          :logger="logger">
+          <slot name="results" :logger="logger" :keys="entriesToShow" :getMultidexPathTo="(key) => getMultidexPathTo(key, activeServer).resolved.fullPath">
+            <v-layout row wrap>
+              <v-flex
+                v-for="key in entriesToShow"
+                :key="key"
+                xs12 sm6 md4 xl3>
+                <base-entry-card :to="getMultidexPathTo(key, activeServer).resolved.fullPath" :entry="pageDb[key]" v-if="pageDb.hasOwnProperty(key)">
+                  <v-card-text>
+                    {{ (pageDb[key] && (pageDb[key].name || pageDb[key].description)) || key }}
+                  </v-card-text>
+                </base-entry-card>
+              </v-flex>
+            </v-layout>
+          </slot>
+        </result-container>
       </v-flex>
       <v-dialog v-model="showEntryDialog" fullscreen hide-overlay lazy transition="dialog-bottom-transition" class="entry-dialog">
         <v-card>
@@ -250,17 +252,17 @@
                 </v-layout>
                 <v-layout row>
                   <v-flex
-                      v-for="(server, i) in servers"
-                      :key="i"
-                      xs12 sm4
-                      class="text-xs-center">
-                      <v-btn
-                        large
-                        :block="$vuetify.breakpoint.xsOnly"
-                        :disabled="server === activeServer"
-                        v-text="server"
-                        :to="getMultidexPathTo(viewId, server).resolved.fullPath"/>
-                    </v-flex>
+                    v-for="(server, i) in servers"
+                    :key="i"
+                    xs12 sm4
+                    class="text-xs-center">
+                    <v-btn
+                      large
+                      :block="$vuetify.breakpoint.xsOnly"
+                      :disabled="server === activeServer"
+                      v-text="server"
+                      :to="getMultidexPathTo(viewId, server).resolved.fullPath"/>
+                  </v-flex>
                 </v-layout>
                 <v-layout row v-if="hasUpdates">
                   <v-flex class="text-xs-center pt-4">
@@ -807,6 +809,8 @@ export default {
         // filter out invalid rarity values
         if (this.filterOptions.rarity && this.filterOptions.rarity.some(val => val < this.minRarity || val > this.maxRarity)) {
           this.filterOptions.rarity = this.filterOptions.rarity.filter(val => val >= this.minRarity && val <= this.maxRarity);
+        } else if (typeof this.filterOptions.name !== 'string') {
+          this.filterOptions.name = '';
         } else {
           this.syncLocalFiltersToUrlFilters();
           this.debounceApplyFilters();
