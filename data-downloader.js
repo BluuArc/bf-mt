@@ -818,7 +818,7 @@ async function getDictionaryForServer(server = 'gl') {
 }
 
 function getUnitDictionaryDataForServer(server = 'gl', dictionaryData = {}, unitData = {}) {
-  logger.info(`${server}: getting unit and dictionary assocations`);
+  logger.info(`${server}: getting unit-dictionary assocations`);
   const result = {};
   const keyPrefix = `MST_UNITCOMMENT`;
   const fields = ['summon', 'fusion', 'evolution', 'description'];
@@ -844,6 +844,27 @@ function getUnitDictionaryDataForServer(server = 'gl', dictionaryData = {}, unit
   return result;
 }
 
+function getItemDictionaryDataForServer(server = 'gl', dictionaryData = {}, itemData = {}) {
+  logger.info(`${server}: getting item-dictionary assocations`);
+  const result = {};
+  const possibleFields = ['ITEMS_BATTLEITEMS', 'ITEMS_MATERIAL', 'LSSPHERE', 'SPHERES'];
+  const generateDictKey = (id, fieldType) => ['MST', fieldType, id, 'LONGDESCRIPTION'].join('_');
+  // check if there's a dictionary entry for every item id
+  Object.keys(itemData).forEach(id => {
+    const dictEntry = possibleFields.reduce((acc, type) => acc || dictionaryData[generateDictKey(id, type)], undefined);
+    if (dictEntry && dictEntry.en) {
+      result[id.toString()] = {
+        lore: dictEntry.en,
+      };
+    }
+  });
+  logger.info(`${server}: saving files`);
+  const filename = `item-dictionary-${server}.json`;
+  fs.writeFileSync(`${outputFolder}/${filename}`, JSON.stringify(result, null, 2), 'utf8');
+  logger.info(`${server}: saved ${filename}`);
+  return result;
+}
+
 async function getData(servers = ['gl', 'eu', 'jp']) {
   if (!config.processData) {
     logger.info('Getting GH stats only');
@@ -856,12 +877,13 @@ async function getData(servers = ['gl', 'eu', 'jp']) {
     const dictionaryData = await getDictionaryForServer(s);
     const missionData = await getMissionsForServer(s, dictionaryData);
     const unitData = await getUnitDataForServer(s, missionData);
-    await getItemDataForServer(s, unitData, missionData);
+    const itemData = await getItemDataForServer(s, unitData, missionData);
     await getBurstDataForServer(s, unitData);
     await getExtraSkillDataForServer(s, unitData);
     await getLeaderSkillDataForServer(s, unitData);
 
     getUnitDictionaryDataForServer(s, dictionaryData, unitData);
+    getItemDictionaryDataForServer(s, dictionaryData, itemData);
   }
 
 
