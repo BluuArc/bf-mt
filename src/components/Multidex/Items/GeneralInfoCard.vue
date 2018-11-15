@@ -6,7 +6,7 @@
     :descriptionGetter="() => description"
     :effectGetter="() => effects"
     :treeOptions="{ maxDepth: 1 }"
-    :tabNames="['Description', lore && 'Lore', effects && 'JSON'].filter(v => v)">
+    :tabNames="['Description', lore && 'Lore', effects && 'JSON', effects && 'Buff List'].filter(v => v)">
     <template slot="lore">
       <span v-html="lore"/>
     </template>
