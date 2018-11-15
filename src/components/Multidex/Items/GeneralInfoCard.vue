@@ -5,7 +5,12 @@
     :titleHtmlGenerator="() => 'General Info'"
     :descriptionGetter="() => description"
     :effectGetter="() => effects"
-    :treeOptions="{ maxDepth: 1 }"/>
+    :treeOptions="{ maxDepth: 1 }"
+    :tabNames="['Description', lore && 'Lore', effects && 'JSON'].filter(v => v)">
+    <template slot="lore">
+      <span v-html="lore"/>
+    </template>
+  </description-card-base>
 </template>
 
 <script>
@@ -30,6 +35,9 @@ export default {
     },
     effects () {
       return this.item && getItemEffects(this.item);
+    },
+    lore () {
+      return this.item && this.item.dictionary && this.item.dictionary.lore;
     },
   },
 };

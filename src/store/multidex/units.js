@@ -67,7 +67,14 @@ export default {
               }));
           }
 
+          
           await Promise.all(loadPromises);
+          const dictionaryData = await downloadWorker.postMessage('getJson', [`${baseUrl}/unit-dictionary-${server}.json?${cacheBustingParam}`]);
+          Object.keys(dictionaryData).forEach(id => {
+            if (pageDb[id]) {
+              pageDb[id].dictionary = dictionaryData[id];
+            }
+          });
           commit('setLoadingMessage', `Storing data for ${server.toUpperCase()} server`);
           await dispatch('saveData', { data: pageDb, server });
           tempLogger.debug('finished updating data');
