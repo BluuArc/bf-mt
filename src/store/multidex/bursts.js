@@ -96,7 +96,7 @@ export default {
         return keys.filter(key => {
           const entry = pageDb[key];
           const fitsName = (!name ? true : names.filter(n => entry.name.toLowerCase().includes(n)).length > 0);
-          const fitsID = (!name ? true : names.filter(n => key.toString().includes(n) || (entry.id || '').toString().includes(n)).length > 0);
+          const fitsID = (!name ? true : names.filter(n => key.toString().toLowerCase().includes(n) || (entry.id || '').toString().includes(n)).length > 0);
 
           const hasAssociatedUnits = Array.isArray(entry.associated_units) && entry.associated_units.length > 0;
           const fitsAssociatedUnits = fitsTernary(hasAssociatedUnits, associatedUnits, ternaryHelper.associatedUnits);

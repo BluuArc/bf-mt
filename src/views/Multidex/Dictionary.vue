@@ -7,7 +7,8 @@
     :viewId="viewId"
     :pageDb="pageDb"
     :inputFilters="filters"
-    :filterTypes="filterTypes">
+    :filterTypes="filterTypes"
+    :onInitDb="onInitDb">
     <v-layout row wrap slot="results" slot-scope="{ keys, logger, getMultidexPathTo }">
       <v-flex
         v-for="key in keys"
@@ -25,7 +26,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters, mapActions } from 'vuex';
+import { mapState, mapGetters, mapActions, mapMutations } from 'vuex';
 import MultidexPageMixin from '@/components/Multidex/MultidexPageMixin';
 import EntryCard from '@/components/Multidex/Dictionary/EntryCard';
 
@@ -37,9 +38,23 @@ export default {
   computed: {
     ...mapState('dictionary', ['pageDb']),
     ...mapGetters('dictionary', ['getMultidexRouteParamsTo', 'sortTypes', 'requiredModules', 'filterTypes']),
+    ...mapState('units', {
+      unitDb: 'pageDb',
+    }),
+    ...mapState('items', {
+      itemDb: 'pageDb',
+    }),
   },
   methods: {
-    ...mapActions('dictionary', ['getById']),
+    ...mapMutations('dictionary', ['setLoadState']),
+    ...mapActions('dictionary', ['getById', 'updateAssociations']),
+    onInitDb () {
+      return this.updateAssociations({
+        unitDb: this.unitDb,
+        itemDb: this.itemDb,
+        setLoadState: true,
+      });
+    },
   },
 };
 </script>

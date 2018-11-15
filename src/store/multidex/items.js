@@ -126,7 +126,7 @@ export default {
         return keys.filter(key => {
           const entry = pageDb[key];
           const fitsName = (!name ? true : names.filter(n => entry.name.toLowerCase().includes(n)).length > 0);
-          const fitsID = (!name ? true : names.filter(n => key.toString().includes(n) || (entry.id || '').toString().includes(n)).length > 0);
+          const fitsID = (!name ? true : names.filter(n => key.toString().toLowerCase().includes(n) || (entry.id || '').toString().includes(n)).length > 0);
           const fitsRarity = rarity.includes(entry.rarity);
           const fitsItemType = itemTypes.includes(entry.type) || (itemTypes.includes('raid') && entry.raid);
 

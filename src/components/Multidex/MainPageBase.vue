@@ -366,6 +366,9 @@ export default {
     onChangeButtonClick: {
       type: Function,
     },
+    onInitDb: {
+      type: Function,
+    },
   },
   components: {
     LoadingIndicator,
@@ -558,6 +561,11 @@ export default {
       for (const m of this.pageModules.map(m => m.name)) {
         await this.actionInfo[m].dbSync();
       }
+
+      if (this.onInitDb) {
+        await Promise.resolve(this.onInitDb());
+      }
+
       this.hasInitDb = true;
     }),
     async setServerBasedOnInputServer () {
@@ -647,9 +655,6 @@ export default {
       }
     },
     async syncUrlFiltersToLocalFilters () {
-      // if (setFilterBool) {
-      //   this.loadingFilters = true;
-      // }
       if (Object.keys(this.inputFilters).length > 0) {
         // get from url
         logger.debug('input filters', this.inputFilters);
@@ -667,9 +672,6 @@ export default {
         this.syncLocalFiltersToUrlFilters(true); // update URL
       } else {
         logger.debug('no filter cache found');
-        // if (setFilterBool) {
-        //   this.loadingFilters = false;
-        // }
       }
     },
     closeDialog () {
