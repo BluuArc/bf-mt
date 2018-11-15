@@ -31,7 +31,7 @@ export default {
     sortTypes: () => ['Dictionary ID', 'Alphabetical'],
     // filterTypes: () => ['associatedUnits', 'associatedItems', 'exclusives'],
     filterTypes: () => [],
-    requiredModules: () => ['dictionary', 'units', 'items'],
+    requiredModules: () => ['dictionary'/*, 'units', 'items'*/],
   },
   actions: {
     ...createActions(dbWorker, downloadWorker, logger, 'dictionary'),
@@ -101,7 +101,6 @@ export default {
         commit('setActiveServer', { server: state.activeServer, data });
 
         // reset unit and item associations
-        logger.warn('resetting assocations');
         commit('setUnitAssociations', {});
         commit('setItemAssociations', {});
         

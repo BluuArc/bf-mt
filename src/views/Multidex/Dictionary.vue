@@ -7,8 +7,7 @@
     :viewId="viewId"
     :pageDb="pageDb"
     :inputFilters="filters"
-    :filterTypes="filterTypes"
-    :onInitDb="onInitDb">
+    :filterTypes="filterTypes">
     <v-layout row wrap slot="results" slot-scope="{ keys, logger, getMultidexPathTo }">
       <v-flex
         v-for="key in keys"
@@ -49,6 +48,7 @@ export default {
     ...mapMutations('dictionary', ['setLoadState']),
     ...mapActions('dictionary', ['getById', 'updateAssociations']),
     onInitDb () {
+      // NOTE: disabled for the time being (add function as param in main-page-base to re-enable)
       return this.updateAssociations({
         unitDb: this.unitDb,
         itemDb: this.itemDb,
