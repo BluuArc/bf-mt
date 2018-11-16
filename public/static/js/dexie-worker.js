@@ -180,8 +180,8 @@ const dbWrapper = {
       const resultDb = {};
       keys.forEach(key => {
         if (currentDb[key] && fitsUnitQuery(currentDb[key])) {
-          const { cost, element, gender, guide_id, id, name, rarity, next, prev, evo_mats, kind } = currentDb[key];
-          resultDb[key] = { cost, element, gender, guide_id, id, name, rarity, next, prev, evo_mats, kind };
+          const { cost, element, gender, guide_id, id, name, rarity, next, prev, evo_mats, kind, evo_cost } = currentDb[key];
+          resultDb[key] = { cost, element, gender, guide_id, id, name, rarity, next, prev, evo_mats, kind, evo_cost };
         }
       });
 

@@ -98,6 +98,12 @@
                       :displayWidth="64" :displayHeight="64"/>
                   </router-link>  
                 </template>
+                <span class="d-block" v-if="evo.cost">
+                  <span class="d-flex-container items-center content-center">
+                    <zel-icon :displaySize="36"/>
+                    {{ `${formatNumber(evo.cost)} Zel` }}
+                  </span>
+                </span>
               </v-flex>
               <v-flex xs12 sm1>
                 <v-icon>{{ $vuetify.breakpoint.xsOnly ? 'keyboard_arrow_down' : 'chevron_right' }}</v-icon>
@@ -131,8 +137,9 @@ import UnitThumbnail from '@/components/Multidex/Units/UnitThumbnail';
 import ArrowsRight from '@/components/Multidex/ArrowsRight';
 import ItemThumbnail from '@/components/Multidex/Items/ItemThumbnail';
 import RarityIcon from '@/components/Multidex/RarityIcon';
+import ZelIcon from '@/components/Multidex/ZelIcon';
 import { getEvolutions } from '@/modules/core/units';
-import { delay } from '@/modules/utils';
+import { delay, formatNumber } from '@/modules/utils';
 
 export default {
   props: {
@@ -154,6 +161,7 @@ export default {
     ArrowsRight,
     ItemThumbnail,
     RarityIcon,
+    ZelIcon,
   },
   computed: {
     ...mapGetters('units', {
@@ -186,6 +194,7 @@ export default {
       this.arrowIndex = (this.arrowIndex < 2) ? this.arrowIndex + 1 : 0;
       requestAnimationFrame(this.loop);
     },
+    formatNumber,
   },
   async mounted () {
     this.loadingEvolutions = true;

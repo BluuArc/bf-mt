@@ -99,6 +99,7 @@ export async function getEvolutions (unit = {}, getUnit = (id) => ({ id })) {
       current: tempUnit.id.toString(),
       next: tempUnit.next,
       mats: tempUnit.evo_mats,
+      cost: tempUnit.evo_cost,
     });
     tempUnit = await Promise.resolve(getUnit(tempUnit.next.toString()));
   }
