@@ -1,28 +1,4 @@
 {
-  "MST_SKILLS_2830408_NAME": {
-    "en": "Grand Calamity",
-    "es": "Grand Calamity",
-    "id": "Grand Calamity",
-    "pt": "Grand Calamity",
-    "th": "Grand Calamity",
-    "vi": "Grand Calamity"
-  },
-  "MST_SKILLS_2830417_DESCRIPTION": {
-    "en": "28 combo massive Earth attack on all foes, activates Earth barrier, adds random status ailment infliction to attack for 3 turns, enormously boosts damage against status afflicted foes for 3 turns & enormously boosts BB Atk for 3 turns",
-    "es": "28 combo massive Earth attack on all foes, activates Earth barrier, adds random status ailment infliction to attack for 3 turns, enormously boosts damage against status afflicted foes for 3 turns & enormously boosts BB Atk for 3 turns",
-    "id": "28 kombo serangan Bumi masif ke semua musuh, mengaktifkan penghalang Bumi, 3 giliran: beri status penyakit acak ke serangan, ekstra jumbo BB Serang dan kerusakan ke musuh yang terkena status",
-    "pt": "28 combo massive Earth attack on all foes, activates Earth barrier, adds random status ailment infliction to attack for 3 turns, enormously boosts damage against status afflicted foes for 3 turns & enormously boosts BB Atk for 3 turns",
-    "th": "28 คอมโบ โจมตีธาตุดินรุนแรงมหาศาล ใส่ศัตรูทั้งหมด, ใช้งาน กำแพงดิน, เพิ่มทำให้ติดสถานะผิดปกติโดยสุ่ม ให้กับการโจมตี นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ ความเสียหาย ต่อศัตรูที่ติดสถานะผิดปกติ นาน 3 เทิร์น และ เพิ่มค่ามหาศาลให้ BB โจมตี นาน 3 เทิร์น",
-    "vi": "28 combo massive Earth attack on all foes, activates Earth barrier, adds random status ailment infliction to attack for 3 turns, enormously boosts damage against status afflicted foes for 3 turns & enormously boosts BB Atk for 3 turns"
-  },
-  "MST_SKILLS_2830417_NAME": {
-    "en": "Howl of Fenris",
-    "es": "Howl of Fenris",
-    "id": "Raungan Fenris",
-    "pt": "Howl of Fenris",
-    "th": "ฮาวล์ ออฟ เฟนริส",
-    "vi": "Howl of Fenris"
-  },
   "MST_SKILLS_2830418_DESCRIPTION": {
     "en": "31 combo massive Earth attack on all foes, activates Earth barrier, adds random status ailment infliction to attack for 3 turns, enormously boosts damage against status afflicted foes for 3 turns & enormously boosts BB Atk for 3 turns",
     "es": "31 combo massive Earth attack on all foes, activates Earth barrier, adds random status ailment infliction to attack for 3 turns, enormously boosts damage against status afflicted foes for 3 turns & enormously boosts BB Atk for 3 turns",
@@ -2614,6 +2590,70 @@
     "pt": "Eternal Grasp",
     "th": "Eternal Grasp",
     "vi": "Eternal Grasp"
+  },
+  "MST_SKILLS_2860637_DESCRIPTION": {
+    "en": "22 combo massive Dark attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 4 combo massive Fire, Thunder, Light, Dark attack on single foe, enormously boosts Atk, Def relative to max HP for 3 turns, enormously boosts Spark damage for 3 turns & enormous 3 turn Atk, Def reduction",
+    "es": "22 combo massive Dark attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 4 combo massive Fire, Thunder, Light, Dark attack on single foe, enormously boosts Atk, Def relative to max HP for 3 turns, enormously boosts Spark damage for 3 turns & enormous 3 turn Atk, Def reduction",
+    "id": "22 combo massive Dark attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 4 combo massive Fire, Thunder, Light, Dark attack on single foe, enormously boosts Atk, Def relative to max HP for 3 turns, enormously boosts Spark damage for 3 turns & enormous 3 turn Atk, Def reduction",
+    "pt": "22 combo massive Dark attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 4 combo massive Fire, Thunder, Light, Dark attack on single foe, enormously boosts Atk, Def relative to max HP for 3 turns, enormously boosts Spark damage for 3 turns & enormous 3 turn Atk, Def reduction",
+    "th": "22 combo massive Dark attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 4 combo massive Fire, Thunder, Light, Dark attack on single foe, enormously boosts Atk, Def relative to max HP for 3 turns, enormously boosts Spark damage for 3 turns & enormous 3 turn Atk, Def reduction",
+    "vi": "22 combo massive Dark attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 4 combo massive Fire, Thunder, Light, Dark attack on single foe, enormously boosts Atk, Def relative to max HP for 3 turns, enormously boosts Spark damage for 3 turns & enormous 3 turn Atk, Def reduction"
+  },
+  "MST_SKILLS_2860637_NAME": {
+    "en": "Black Dragon's Roar Lv. 3",
+    "es": "Black Dragon's Roar Lv. 3",
+    "id": "Black Dragon's Roar Lv. 3",
+    "pt": "Black Dragon's Roar Lv. 3",
+    "th": "Black Dragon's Roar Lv. 3",
+    "vi": "Black Dragon's Roar Lv. 3"
+  },
+  "MST_SKILLS_2860638_DESCRIPTION": {
+    "en": "28 combo massive Dark attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 5 combo massive Fire, Thunder, Light, Dark attack on single foe, enormously boosts Atk, Def relative to max HP for 3 turns, enormously boosts Spark damage for 3 turns, enormous 3 turn Atk, Def reduction & damage taken enormously restores HP for 3 turns",
+    "es": "28 combo massive Dark attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 5 combo massive Fire, Thunder, Light, Dark attack on single foe, enormously boosts Atk, Def relative to max HP for 3 turns, enormously boosts Spark damage for 3 turns, enormous 3 turn Atk, Def reduction & damage taken enormously restores HP for 3 turns",
+    "id": "28 combo massive Dark attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 5 combo massive Fire, Thunder, Light, Dark attack on single foe, enormously boosts Atk, Def relative to max HP for 3 turns, enormously boosts Spark damage for 3 turns, enormous 3 turn Atk, Def reduction & damage taken enormously restores HP for 3 turns",
+    "pt": "28 combo massive Dark attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 5 combo massive Fire, Thunder, Light, Dark attack on single foe, enormously boosts Atk, Def relative to max HP for 3 turns, enormously boosts Spark damage for 3 turns, enormous 3 turn Atk, Def reduction & damage taken enormously restores HP for 3 turns",
+    "th": "28 combo massive Dark attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 5 combo massive Fire, Thunder, Light, Dark attack on single foe, enormously boosts Atk, Def relative to max HP for 3 turns, enormously boosts Spark damage for 3 turns, enormous 3 turn Atk, Def reduction & damage taken enormously restores HP for 3 turns",
+    "vi": "28 combo massive Dark attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 5 combo massive Fire, Thunder, Light, Dark attack on single foe, enormously boosts Atk, Def relative to max HP for 3 turns, enormously boosts Spark damage for 3 turns, enormous 3 turn Atk, Def reduction & damage taken enormously restores HP for 3 turns"
+  },
+  "MST_SKILLS_2860638_NAME": {
+    "en": "Black Dragon's Roar MAX",
+    "es": "Black Dragon's Roar MAX",
+    "id": "Black Dragon's Roar MAX",
+    "pt": "Black Dragon's Roar MAX",
+    "th": "Black Dragon's Roar MAX",
+    "vi": "Black Dragon's Roar MAX"
+  },
+  "MST_SKILLS_2860647_DESCRIPTION": {
+    "en": "28 combo massive Fire, Dark attack on all foes, enormous 3 turn Atk, Def reduction, activates BB/SBB/UBB twice for 2 turns & enormously boosts Atk, Def, Rec, critical hit rate and Dark elemental damage for 3 turns",
+    "es": "28 combo massive Fire, Dark attack on all foes, enormous 3 turn Atk, Def reduction, activates BB/SBB/UBB twice for 2 turns & enormously boosts Atk, Def, Rec, critical hit rate and Dark elemental damage for 3 turns",
+    "id": "28 combo massive Fire, Dark attack on all foes, enormous 3 turn Atk, Def reduction, activates BB/SBB/UBB twice for 2 turns & enormously boosts Atk, Def, Rec, critical hit rate and Dark elemental damage for 3 turns",
+    "pt": "28 combo massive Fire, Dark attack on all foes, enormous 3 turn Atk, Def reduction, activates BB/SBB/UBB twice for 2 turns & enormously boosts Atk, Def, Rec, critical hit rate and Dark elemental damage for 3 turns",
+    "th": "28 combo massive Fire, Dark attack on all foes, enormous 3 turn Atk, Def reduction, activates BB/SBB/UBB twice for 2 turns & enormously boosts Atk, Def, Rec, critical hit rate and Dark elemental damage for 3 turns",
+    "vi": "28 combo massive Fire, Dark attack on all foes, enormous 3 turn Atk, Def reduction, activates BB/SBB/UBB twice for 2 turns & enormously boosts Atk, Def, Rec, critical hit rate and Dark elemental damage for 3 turns"
+  },
+  "MST_SKILLS_2860647_NAME": {
+    "en": "Ankhseram Black Magic Lv. 3",
+    "es": "Ankhseram Black Magic Lv. 3",
+    "id": "Ankhseram Black Magic Lv. 3",
+    "pt": "Ankhseram Black Magic Lv. 3",
+    "th": "Ankhseram Black Magic Lv. 3",
+    "vi": "Ankhseram Black Magic Lv. 3"
+  },
+  "MST_SKILLS_2860648_DESCRIPTION": {
+    "en": "30 combo massive Fire, Dark attack on all foes, enormous 3 turn Atk, Def reduction, activates BB/SBB/UBB twice for 2 turns, enormously boosts Atk, Def, Rec, critical hit rate and Dark elemental damage for 3 turns & Spark damage hugely boosts BB gauge for 3 turns",
+    "es": "30 combo massive Fire, Dark attack on all foes, enormous 3 turn Atk, Def reduction, activates BB/SBB/UBB twice for 2 turns, enormously boosts Atk, Def, Rec, critical hit rate and Dark elemental damage for 3 turns & Spark damage hugely boosts BB gauge for 3 turns",
+    "id": "30 combo massive Fire, Dark attack on all foes, enormous 3 turn Atk, Def reduction, activates BB/SBB/UBB twice for 2 turns, enormously boosts Atk, Def, Rec, critical hit rate and Dark elemental damage for 3 turns & Spark damage hugely boosts BB gauge for 3 turns",
+    "pt": "30 combo massive Fire, Dark attack on all foes, enormous 3 turn Atk, Def reduction, activates BB/SBB/UBB twice for 2 turns, enormously boosts Atk, Def, Rec, critical hit rate and Dark elemental damage for 3 turns & Spark damage hugely boosts BB gauge for 3 turns",
+    "th": "30 combo massive Fire, Dark attack on all foes, enormous 3 turn Atk, Def reduction, activates BB/SBB/UBB twice for 2 turns, enormously boosts Atk, Def, Rec, critical hit rate and Dark elemental damage for 3 turns & Spark damage hugely boosts BB gauge for 3 turns",
+    "vi": "30 combo massive Fire, Dark attack on all foes, enormous 3 turn Atk, Def reduction, activates BB/SBB/UBB twice for 2 turns, enormously boosts Atk, Def, Rec, critical hit rate and Dark elemental damage for 3 turns & Spark damage hugely boosts BB gauge for 3 turns"
+  },
+  "MST_SKILLS_2860648_NAME": {
+    "en": "Ankhseram Black Magic MAX",
+    "es": "Ankhseram Black Magic MAX",
+    "id": "Ankhseram Black Magic MAX",
+    "pt": "Ankhseram Black Magic MAX",
+    "th": "Ankhseram Black Magic MAX",
+    "vi": "Ankhseram Black Magic MAX"
   },
   "MST_SKILLS_2860_DESCRIPTION": {
     "en": "None",
@@ -87446,5 +87486,77 @@
     "pt": "18 combo powerful Fire attack on all foes, greatly boosts Fire types' Atk, Def, Rec for 3 turns, enormously boosts Fire types' critical hit rate for 3 turns & greatly restores HP",
     "th": "18 คอมโบ โจมตีธาตุไฟอย่างแรง ใส่ศัตรูทั้งหมด, เพิ่มค่าอย่างมากให้ โจมตี, ป้องกัน, ฟื้นฟู ของชนิดไฟ นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ อัตราเกิดคริติคอล ของชนิดไฟ นาน 3 เทิร์น กับ ฟื้นคืน HP อย่างมาก",
     "vi": "18 combo powerful Fire attack on all foes, greatly boosts Fire types' Atk, Def, Rec for 3 turns, enormously boosts Fire types' critical hit rate for 3 turns & greatly restores HP"
+  },
+  "MST_SKILLS_810287_NAME": {
+    "en": "Crimson Barrage",
+    "es": "Crimson Barrage",
+    "id": "Berondongan Merah",
+    "pt": "Crimson Barrage",
+    "th": "คริมสัน บาร์เรจ",
+    "vi": "Crimson Barrage"
+  },
+  "MST_SKILLS_810288_DESCRIPTION": {
+    "en": "21 combo powerful Fire attack on all foes, greatly boosts Fire types' Atk, Def, Rec for 3 turns, enormously boosts Fire types' critical hit rate for 3 turns, greatly restores HP & negates all status ailments for 3 turns",
+    "es": "21 combo powerful Fire attack on all foes, greatly boosts Fire types' Atk, Def, Rec for 3 turns, enormously boosts Fire types' critical hit rate for 3 turns, greatly restores HP & negates all status ailments for 3 turns",
+    "id": "21 kombo serangan Api kuat ke semua musuh, 3 giliran: amat menambah Serang, Tahan, Pulih tipe Api, ekstra jumbo pukulan ampuh tipe Api, HP amat pulih, menegasi semua status penyakit",
+    "pt": "21 combo powerful Fire attack on all foes, greatly boosts Fire types' Atk, Def, Rec for 3 turns, enormously boosts Fire types' critical hit rate for 3 turns, greatly restores HP & negates all status ailments for 3 turns",
+    "th": "21 คอมโบ โจมตีธาตุไฟอย่างแรง ใส่ศัตรูทั้งหมด, เพิ่มค่าอย่างมากให้ โจมตี, ป้องกัน, ฟื้นฟู ของชนิดไฟ นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ อัตราเกิดคริติคอล ของชนิดไฟ นาน 3 เทิร์น, ฟื้นคืน HP อย่างมาก กับ ลบล้างสถานะผิดปกติทั้งหมด นาน 3 เทิร์น",
+    "vi": "21 combo powerful Fire attack on all foes, greatly boosts Fire types' Atk, Def, Rec for 3 turns, enormously boosts Fire types' critical hit rate for 3 turns, greatly restores HP & negates all status ailments for 3 turns"
+  },
+  "MST_SKILLS_810288_NAME": {
+    "en": "Unrelenting Devastation",
+    "es": "Unrelenting Devastation",
+    "id": "Kehancuran Tiada Henti",
+    "pt": "Unrelenting Devastation",
+    "th": "อันรีเลนติ้ง ดีวาสเทชั่น",
+    "vi": "Unrelenting Devastation"
+  },
+  "MST_SKILLS_810315_DESCRIPTION": {
+    "en": "9 combo powerful Fire attack on all foes, adds Def ignoring effect to attack for 2 turns & boosts Atk and critical hit rate for 3 turns",
+    "es": "Combo grupal de 9 poderosos ataques ígneos. Agrega un efecto para ignorar la DEF durante 2 turnos y potencia el ATQ y la posibilidad de asestar golpes críticos durante 3 turnos",
+    "id": "9 kombo serangan Api kuat ke semua musuh, menambah efek mengabaikan Pertahanan untuk 2 giliran & menambah Serangan dan frekuensi pukulan ampuh untuk 3 giliran",
+    "pt": "Combo poderoso de 9 golpes de Fogo em todos os inimigos, adiciona efeito ignora DEF para atacar por 2 rodadas e reforço no ATQ e taxa de dano crítico por 3 rodadas",
+    "th": "9 คอมโบ โจมตีด้วยธาตุไฟอย่างรุนแรงใส่ศัตรูทั้งหมด, โจมตีโดยไม่สนพลังป้องกัน 2 เทิร์น, เพิ่มพลังโจมตีและอัตราคริติคอลฮิต 3 เทิร์น",
+    "vi": "9 combo powerful Fire attack on all foes, adds Def ignoring effect to attack for 2 turns & boosts Atk and critical hit rate for 3 turns"
+  },
+  "MST_SKILLS_810315_NAME": {
+    "en": "Velkar Cleave",
+    "es": "Hendidura de Velkar",
+    "id": "Pembelahan Velkar",
+    "pt": "Corte de Velkar",
+    "th": "เวลคาร์ คลีฟ",
+    "vi": "Velkar Cleave"
+  },
+  "MST_SKILLS_810316_DESCRIPTION": {
+    "en": "11 combo powerful Fire attack on all foes (damage increases as HP decreases), adds Def ignoring effect to attack for 2 turns & boosts Atk and critical hit rate for 3 turns",
+    "es": "Combo grupal de 11 poderosos ataques ígneos (el daño aumenta conforme disminuyen los PS). Agrega un efecto para ignorar la DEF durante 2 turnos y potencia el ATQ y la posibilidad de asestar golpes críticos durante 3 turnos",
+    "id": "11 kombo serangan Api kuat ke semua musuh (kerusakan bertambah saat HP berkurang), menambah efek mengabaikan Pertahanan untuk 2 giliran & menambah Serangan dan frekuensi pukulan ampuh untuk 3 giliran",
+    "pt": "Combo poderoso de 11 golpes de Fogo em todos os inimigos (dano aumenta enquanto HP diminui), adiciona efeito ignora DEF para atacar por 2 rodadas e reforço no ATQ e taxa de dano crítico por 3 rodadas",
+    "th": "11 คอมโบ โจมตีด้วยธาตุไฟอย่างรุนแรงใส่ศัตรูทั้งหมด(เพิ่มดาเมจในขณะที่ HP ถูกลด), โจมตีโดยไม่สนพลังป้องกัน 2 เทิร์น, เพิ่มพลังโจมตีและอัตราคริติคอลฮิต 3 เทิร์น",
+    "vi": "11 combo powerful Fire attack on all foes (damage increases as HP decreases), adds Def ignoring effect to attack for 2 turns & boosts Atk and critical hit rate for 3 turns"
+  },
+  "MST_SKILLS_810316_NAME": {
+    "en": "Velkar Divide",
+    "es": "División de Divide",
+    "id": "Pembagian Velkar",
+    "pt": "Divisor de Velkar",
+    "th": "เวลคาร์ ดีไวด์",
+    "vi": "Velkar Divide"
+  },
+  "MST_SKILLS_810317_DESCRIPTION": {
+    "en": "16 combo powerful Fire attack on all foes (damage increases as HP decreases), adds Def ignoring effect to attack for 2 turns, boosts Atk and critical hit rate for 3 turns & partially restores own BB gauge",
+    "es": "Combo grupal de 16 poderosos ataques ígneos (el daño aumenta conforme disminuyen los PS). Agrega un efecto para ignorar la DEF durante 2 turnos y potencia el ATQ y la posibilidad de asestar golpes críticos durante 3 turnos, y recupera parcialmente el indicador BB propio",
+    "id": "16 kombo serangan Api kuat ke semua musuh (kerusakan bertambah saat HP berkurang), menambah efek mengabaikan Pertahanan untuk 2 giliran, menambah Serangan dan frekuensi pukulan ampuh untuk 3 giliran & memulihkan sebagian meteran BB sendiri",
+    "pt": "Combo poderoso de 16 golpes de Fogo em todos os inimigos (dano aumenta enquanto HP diminui), adiciona efeito ignora DEF para atacar por 2 rodadas, reforço no ATQ e taxa de dano crítico por 3 rodadas e restaura parcialmente Barra BB própria",
+    "th": "16 คอมโบ โจมตีด้วยธาตุไฟอย่างรุนแรงใส่ศัตรูทั้งหมด(เพิ่มดาเมจในขณะที่ HP ถูกลด), โจมตีโดยไม่สนพลังป้องกัน 2 เทิร์น, เพิ่มพลังโจมตีและอัตราคริติคอลฮิต 3 เทิร์น, ฟื้นบีบีเกจให้ตัวเอง",
+    "vi": "16 combo powerful Fire attack on all foes (damage increases as HP decreases), adds Def ignoring effect to attack for 2 turns, boosts Atk and critical hit rate for 3 turns & partially restores own BB gauge"
+  },
+  "MST_SKILLS_810317_NAME": {
+    "en": "Velkar Fissure",
+    "es": "Fisura de Velkar",
+    "id": "Retakan Velkar",
+    "pt": "Fissura de Velkar",
+    "th": "เวลคาร์ ฟิสชัวร์",
+    "vi": "Velkar Fissure"
   }
 }
