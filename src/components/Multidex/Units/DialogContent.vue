@@ -60,6 +60,7 @@
             </v-layout>
           </v-container>
         </v-flex>
+        <!-- TODO: move flavor text card here -->
         <v-flex v-else-if="activeMainTab === 'art'">
           <v-container fluid class="text-xs-center">
             <img class="unit-image" :src="images.ills_full"/>

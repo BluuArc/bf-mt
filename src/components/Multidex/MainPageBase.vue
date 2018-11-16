@@ -915,8 +915,13 @@ export default {
 
 <style lang="less">
 .multidex-page {
-  .v-input--radio-group .v-radio {
-    flex: 1;
+  .v-input--radio-group {
+    .v-input__control {
+      flex-grow: 1;
+    }
+    .v-radio {
+      flex: 1;
+    }
   }
 }
 
