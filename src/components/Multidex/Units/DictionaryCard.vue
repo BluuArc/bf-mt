@@ -32,7 +32,9 @@ export default {
   computed: {
     tabNames () {
       return this.entry.dictionary
-        ? Object.keys(this.entry.dictionary).map(k => k === 'description' ? 'lore' : k).sort()
+        ? Object.keys(this.entry.dictionary)
+          .filter(k => this.entry.dictionary[k] && this.entry.dictionary[k].trim())
+          .map(k => k === 'description' ? 'lore' : k).sort()
         : [];
     },
   },

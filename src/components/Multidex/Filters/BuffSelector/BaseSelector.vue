@@ -58,7 +58,14 @@
                   </v-flex>
                   <v-flex xs10 class="d-align-self-center">
                     <v-flex xs12 v-text="buff.text"/>
-                    <v-flex xs12>Icons here</v-flex>
+                    <!-- only render icons if searching for a specific buff -->
+                    <v-flex v-if="query && query.trim()" xs12>
+                      <buff-icon
+                        v-for="(iconKey, i) in getFilteredIconsForBuffSelectorEntry(buff)"
+                        :key="i"
+                        :displaySize="24"
+                        :iconKey="iconKey"/>
+                    </v-flex>
                   </v-flex>
                 </v-layout>
               </v-container>
@@ -77,7 +84,9 @@
 
 <script>
 import SWorker from '@/assets/sww.min.js';
+import IconKeyMappings from '@/modules/EffectProcessor/icon-key-mappings';
 import debounce from 'lodash/debounce';
+import BuffIcon from '@/components/Multidex/BuffList/BuffIcon';
 
 export default {
   props: {
@@ -112,6 +121,9 @@ export default {
     logger: {
       required: true,
     },
+  },
+  components: {
+    BuffIcon,
   },
   data () {
     return {
@@ -159,6 +171,18 @@ export default {
       this.localSelectedIds = [];
       this.query = '';
       await this.filterIds();
+    },
+    getFilteredIconsForBuffSelectorEntry (entry) {
+      if (!entry || !entry.data || typeof (entry.data.possibleIcons) !== 'function') {
+        return [];
+      }
+      return entry.data.possibleIcons()
+        .filter(i => {
+          // for cases of INSTANT_BUFFKEY or PASSIVE_BUFFKEY
+          // eslint-disable-next-line no-unused-vars
+          const [ prefix, ...buffKey ] = i.split('_');
+          return i !== IconKeyMappings.UNKNOWN.name && !!(IconKeyMappings[i] || IconKeyMappings[buffKey.join('_')]);
+        });
     },
   },
   watch: {
