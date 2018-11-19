@@ -50,6 +50,12 @@
         :xlink:href="require('@/assets/buff-translation/raid/raid_room_shadow_question.png')"
         :width="iconSize" :height="iconSize"/>
     </template>
+    <image
+      v-if="iconKey === IconKeyMappings.PASSIVE_BUFF_HPRECTURNSTART.name || iconKey === IconKeyMappings.PASSIVE_BUFF_BBRECTURNSTART.name"
+      width="36" height="36"
+      :xlink:href="require('@/assets/buff-translation/raid/raid_room_time.png')"
+      x="24" y="0"
+      transform="scale(0.55)"/>
     <g class="animate--pulse" v-if="isPassiveIcon(iconKey)">
       <rect x="0" y="0" width="32" height="32" rx="8" ry="8" fill="grey" style="fill-opacity: 0.5"/>
       <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">P</text>
@@ -120,9 +126,15 @@ export default {
       return [x, y].map(c => c * -this.iconSize).join(' ');
     },
     getBattleBuffKeyFromCustomKey (customKey = 'INSTANT_SOME_BUFF') {
-      // eslint-disable-next-line no-unused-vars
-      const [ customPrefix, ...battleBuffIconKey ] = customKey.split('_');
-      return battleBuffIconKey.join('_');
+      if (customKey === IconKeyMappings.PASSIVE_BUFF_HPRECTURNSTART.name) {
+        return IconKeyMappings.BUFF_HPREC.name;
+      } else if (customKey === IconKeyMappings.PASSIVE_BUFF_BBRECTURNSTART.name) {
+        return IconKeyMappings.BUFF_BBREC.name;
+      } else {
+        // eslint-disable-next-line no-unused-vars
+        const [ customPrefix, ...battleBuffIconKey ] = customKey.split('_');
+        return battleBuffIconKey.join('_');
+      }
     },
     getIconConfigForKey (iconKeyInput = '') {
       let config = {};
