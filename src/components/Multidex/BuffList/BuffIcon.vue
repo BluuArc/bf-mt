@@ -14,6 +14,32 @@
         :transform="`translate(${iconConfig.coords})`"
       />
     </template>
+    <g v-else-if="isAttackingIcon(iconKey)">
+      <image
+        v-if="iconKey.endsWith('ST_ATK') || iconKey === IconKeyMappings.ATK.name"
+        width="30" height="32"
+        :xlink:href="(IconKeyMappings[iconKey] || IconKeyMappings.ATK).src"/>
+      <template v-else-if="iconKey.endsWith('AOE_ATK')">
+        <image
+          width="30" height="32"
+          :xlink:href="(IconKeyMappings[iconKey] || IconKeyMappings.ATK).src"
+          transform="translate(-4 0)"/>
+        <image
+          width="30" height="32"
+          :xlink:href="(IconKeyMappings[iconKey] || IconKeyMappings.ATK).src"
+          transform="translate(34 0) scale(-1 1)"/>
+      </template>
+      <template v-else-if="iconKey === IconKeyMappings.RT_ATK.name">
+        <image
+          width="30" height="32"
+          :xlink:href="IconKeyMappings.ATK.src"/>
+        <image
+          width="66" height="66"
+          :xlink:href="require('@/assets/buff-translation/battle/battle_target_mark.png')"
+          transform="scale(0.25)"
+          class="animate--random-target"/>
+      </template>
+    </g>
     <template v-else>
       <image
         :xlink:href="require('@/assets/item_frame_bg2.png')"
@@ -33,6 +59,7 @@ import {
   customBuffIconKeys,
   ailmentBuffIconKeys,
 } from '@/modules/constants';
+import IconKeyMappings from '@/modules/EffectProcessor/icon-key-mappings';
 import logger from '@/modules/Logger';
 
 export default {
@@ -47,6 +74,7 @@ export default {
     },
   },
   computed: {
+    IconKeyMappings: () => IconKeyMappings,
     iconSize () {
       return 32;
     },
@@ -114,10 +142,41 @@ export default {
         ? config
         : null;
     },
+    isAttackingIcon (iconKey = '') {
+      return iconKey === IconKeyMappings.ATK.name
+        || iconKey === IconKeyMappings.RT_ATK.name
+        || iconKey.endsWith('ST_ATK')
+        || iconKey.endsWith('AOE_ATK');
+    },
   },
 };
 </script>
 
-<style>
+<style lang="less">
+.buff-icon {
+  .animate--random-target {
+    animation-name: random-target;
+    animation-timing-function: ease;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
 
+  @keyframes random-target {
+    0%, 100% {
+      transform: translate(-100%,-100%) scale(0.25);
+    }
+    12.5%, 62.5% {
+      transform: translate(17.5%,17.5%) scale(0.35);
+    }
+    25% {
+      transform: translate(100%,100%) scale(0.25);
+    }
+    50% {
+      transform: translate(100%,-100%) scale(0.25);
+    }
+    75% {
+      transform: translate(-100%,100%) scale(0.25);
+    }
+  }
+}
 </style>
