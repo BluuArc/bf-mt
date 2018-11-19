@@ -15,6 +15,7 @@
       />
     </template>
     <g v-else-if="isAttackingIcon(iconKey)">
+      <!-- attack based icons are here -->
       <image
         v-if="iconKey.endsWith('ST_ATK') || iconKey === IconKeyMappings.ATK.name"
         width="30" height="32"
@@ -49,6 +50,10 @@
         :xlink:href="require('@/assets/buff-translation/raid/raid_room_shadow_question.png')"
         :width="iconSize" :height="iconSize"/>
     </template>
+    <g class="animate--pulse" v-if="isPassiveIcon(iconKey)">
+      <rect x="0" y="0" width="32" height="32" rx="8" ry="8" fill="grey" style="fill-opacity: 0.5"/>
+      <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">P</text>
+    </g>
   </svg>
 </template>
 
@@ -114,8 +119,21 @@ export default {
       const x = index - (y * rowLength);
       return [x, y].map(c => c * -this.iconSize).join(' ');
     },
-    getIconConfigForKey (iconKey) {
+    getBattleBuffKeyFromCustomKey (customKey = 'INSTANT_SOME_BUFF') {
+      // eslint-disable-next-line no-unused-vars
+      const [ customPrefix, ...battleBuffIconKey ] = customKey.split('_');
+      return battleBuffIconKey.join('_');
+    },
+    getIconConfigForKey (iconKeyInput = '') {
       let config = {};
+      let iconKey;
+
+      if (this.isPassiveIcon(iconKeyInput)) {
+        iconKey = this.getBattleBuffKeyFromCustomKey(iconKeyInput);
+      } else {
+        iconKey = iconKeyInput.slice();
+      }
+
       if (battleBuffIconKeys.includes(iconKey)) {
         config = {
           ...this.battleBuffMetaData,
@@ -148,6 +166,9 @@ export default {
         || iconKey.endsWith('ST_ATK')
         || iconKey.endsWith('AOE_ATK');
     },
+    isPassiveIcon (iconKey = '') {
+      return iconKey.startsWith('PASSIVE');
+    },
   },
 };
 </script>
@@ -176,6 +197,22 @@ export default {
     }
     75% {
       transform: translate(-100%,100%) scale(0.25);
+    }
+  }
+
+  .animate--pulse {
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    50%, 75% {
+      opacity: 0;
     }
   }
 }
