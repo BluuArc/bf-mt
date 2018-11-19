@@ -50,15 +50,23 @@
         :xlink:href="require('@/assets/buff-translation/raid/raid_room_shadow_question.png')"
         :width="iconSize" :height="iconSize"/>
     </template>
+
+    <!-- extra buff icons -->
     <image
       v-if="iconKey === IconKeyMappings.PASSIVE_BUFF_HPRECTURNSTART.name || iconKey === IconKeyMappings.PASSIVE_BUFF_BBRECTURNSTART.name"
       width="36" height="36"
       :xlink:href="require('@/assets/buff-translation/raid/raid_room_time.png')"
       x="24" y="0"
       transform="scale(0.55)"/>
+
+    <!-- pulsing letters for instant/passive/timed buffs -->
     <g class="animate--pulse" v-if="isPassiveIcon(iconKey)">
       <rect x="0" y="0" width="32" height="32" rx="8" ry="8" fill="grey" style="fill-opacity: 0.5"/>
       <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">P</text>
+    </g>
+    <g class="animate--pulse" v-else-if="isInstantIcon(iconKey)">
+      <rect x="0" y="0" width="32" height="32" rx="8" ry="8" fill="grey" style="fill-opacity: 0.5"/>
+      <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">B</text>
     </g>
   </svg>
 </template>
@@ -140,7 +148,7 @@ export default {
       let config = {};
       let iconKey;
 
-      if (this.isPassiveIcon(iconKeyInput)) {
+      if (this.isPassiveIcon(iconKeyInput) || this.isInstantIcon(iconKeyInput)) {
         iconKey = this.getBattleBuffKeyFromCustomKey(iconKeyInput);
       } else {
         iconKey = iconKeyInput.slice();
@@ -180,6 +188,9 @@ export default {
     },
     isPassiveIcon (iconKey = '') {
       return iconKey.startsWith('PASSIVE');
+    },
+    isInstantIcon (iconKey = '') {
+      return iconKey.startsWith('INSTANT');
     },
   },
 };
