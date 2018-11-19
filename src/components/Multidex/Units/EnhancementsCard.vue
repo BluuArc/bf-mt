@@ -191,7 +191,7 @@ export default {
       if (desc.trim() === name.trim()) {
         return desc || 'No Description';
       } else {
-        return (desc.length > name.length) ? desc : [name, desc ? `(${desc})` : ''].filter(val => val);
+        return (desc.length > name.length) ? desc : [name, desc ? `(${desc})` : ''].filter(val => val).join(' ');
       }
     },
     getDependencyText (skillEntry) {
