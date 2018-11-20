@@ -18,12 +18,12 @@
             :displaySize="iconSize"
             :iconKey="effect.iconKey"/>
         </v-flex>
-        <v-flex md1 v-if="$vuetify.breakpoint.mdAndUp" :key="`${i}-type`" class="text-xs-center">
+        <v-flex lg1 v-if="$vuetify.breakpoint.lgAndUp" :key="`${i}-type`" class="text-xs-center">
           <p class="mb-0" :title="getTypes(effect.parent.type, true)">
             {{ getTypes(effect.parent.type) }}
           </p>
         </v-flex>
-        <v-flex xs10 sm11 md10 :key="i" class="text-xs-left">
+        <v-flex xs10 sm11 lg10 :key="i" class="text-xs-left">
           <p class="mb-0">
             <span
               v-if="effect.parent.originalEffect.sp_type"
@@ -87,7 +87,7 @@ export default {
     },
     iconSize () {
       const breakpoint = this.$vuetify.breakpoint;
-      if (breakpoint.mdAndUp) {
+      if (breakpoint.lgAndUp) {
         return 36;
       } else {
         return 32;

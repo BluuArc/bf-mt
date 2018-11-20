@@ -2,6 +2,7 @@
   <svg
     :width="displayWidth || iconWidth" :height="displayHeight || iconHeight"
     :viewBox="`0 0 ${iconWidth} ${iconHeight}`"
+    :style="`min-width: ${displayWidth || iconWidth}px; min-height: ${displayHeight || iconHeight}px;`"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink">
     <title v-if="iconTitle" v-text="iconTitle"/>
