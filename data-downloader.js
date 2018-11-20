@@ -1,10 +1,18 @@
 const fs = require('fs');
-const rp = require('request-promise');
-const logger = require('winston');
+const axios = require('axios');
+const winston = require('winston');
 const GitHubScraper = require('./gh-scraper');
-logger.level = 'debug';
 
-const outputFolder = 'static/bf-data';
+const logger = winston.createLogger({
+  level: 'debug',
+  transports: [
+    new winston.transports.Console({
+      format: winston.format.simple(),
+    }),
+  ],
+});
+
+const outputFolder = 'public/static/bf-data';
 
 const config = {
   getStats: true,
@@ -89,6 +97,7 @@ const handlers = {
         }
 
         curUnit.evo_mats = entry.mats;
+        curUnit.evo_cost = entry.amount;
         curUnit.next = nextUnit.id.toString();
         nextUnit.prev = curUnit.id.toString();
       });
@@ -208,7 +217,7 @@ const handlers = {
 
       // for every unit
       const addUnitIdToItemId = (unitId, itemId, reason = 'evo') => {
-        logger.debug(reason, 'attempting to add unit', unitId, 'to item', itemId);
+        logger.debug([reason, 'attempting to add unit', unitId, 'to item', itemId].join(' '));
         const item = itemData[itemId.toString()];
         if (item) {
           if (!item.associated_units) {
@@ -595,7 +604,7 @@ const handlers = {
 
 function initializeTimeData () {
   try {
-    return JSON.parse(fs.readFileSync(`static/bf-data/update-stats.json`));
+    return JSON.parse(fs.readFileSync(`${outputFolder}/update-stats.json`));
   } catch (err) {
     logger.error('error loading update-stats.json', err);
     logger.info('creating new time data instance');
@@ -669,12 +678,12 @@ function downloadMultipleFiles(urlArr = [], numConcurrent = 1) {
         const filename = url.slice(url.lastIndexOf("/") + 1);
         logger.debug(`downloading ${filename} from ${url}`);
         localPromises.push(
-          rp.get(url)
-            .then(data => {
+          axios.get(url)
+            .then(response => {
               logger.debug(`got ${filename}; ${--count} remaining`);
               result.push({
                 url: filename, // get file name
-                data
+                data: response.data,
               });
               return;
             })
@@ -808,6 +817,54 @@ async function getDictionaryForServer(server = 'gl') {
   return handlers.dictionary.process(server, dictionaryData);
 }
 
+function getUnitDictionaryDataForServer(server = 'gl', dictionaryData = {}, unitData = {}) {
+  logger.info(`${server}: getting unit-dictionary assocations`);
+  const result = {};
+  const keyPrefix = `MST_UNITCOMMENT`;
+  const fields = ['summon', 'fusion', 'evolution', 'description'];
+  Object.keys(unitData).forEach(id => {
+    const entry = {};
+    let hasEntry = false;
+    fields.forEach(field => {
+      const dictKey = [keyPrefix, id.toString(), field.toUpperCase()].join('_');
+      if (dictionaryData[dictKey] && dictionaryData[dictKey].en) {
+        // use English translation only, if possible
+        entry[field] = dictionaryData[dictKey].en;
+        hasEntry = true;
+      }
+    });
+    if (hasEntry) {
+      result[id.toString()] = entry;
+    }
+  });
+  logger.info(`${server}: saving files`);
+  const filename = `unit-dictionary-${server}.json`;
+  fs.writeFileSync(`${outputFolder}/${filename}`, JSON.stringify(result, null, 2), 'utf8');
+  logger.info(`${server}: saved ${filename}`);
+  return result;
+}
+
+function getItemDictionaryDataForServer(server = 'gl', dictionaryData = {}, itemData = {}) {
+  logger.info(`${server}: getting item-dictionary assocations`);
+  const result = {};
+  const possibleFields = ['ITEMS_BATTLEITEMS', 'ITEMS_MATERIAL', 'LSSPHERE', 'SPHERES'];
+  const generateDictKey = (id, fieldType) => ['MST', fieldType, id, 'LONGDESCRIPTION'].join('_');
+  // check if there's a dictionary entry for every item id
+  Object.keys(itemData).forEach(id => {
+    const dictEntry = possibleFields.reduce((acc, type) => acc || dictionaryData[generateDictKey(id, type)], undefined);
+    if (dictEntry && dictEntry.en) {
+      result[id.toString()] = {
+        lore: dictEntry.en,
+      };
+    }
+  });
+  logger.info(`${server}: saving files`);
+  const filename = `item-dictionary-${server}.json`;
+  fs.writeFileSync(`${outputFolder}/${filename}`, JSON.stringify(result, null, 2), 'utf8');
+  logger.info(`${server}: saved ${filename}`);
+  return result;
+}
+
 async function getData(servers = ['gl', 'eu', 'jp']) {
   if (!config.processData) {
     logger.info('Getting GH stats only');
@@ -820,10 +877,13 @@ async function getData(servers = ['gl', 'eu', 'jp']) {
     const dictionaryData = await getDictionaryForServer(s);
     const missionData = await getMissionsForServer(s, dictionaryData);
     const unitData = await getUnitDataForServer(s, missionData);
-    await getItemDataForServer(s, unitData, missionData);
+    const itemData = await getItemDataForServer(s, unitData, missionData);
     await getBurstDataForServer(s, unitData);
     await getExtraSkillDataForServer(s, unitData);
     await getLeaderSkillDataForServer(s, unitData);
+
+    getUnitDictionaryDataForServer(s, dictionaryData, unitData);
+    getItemDictionaryDataForServer(s, dictionaryData, itemData);
   }
 
 

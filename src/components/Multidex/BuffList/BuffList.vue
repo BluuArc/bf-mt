@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <v-container fluid grid-list-md>
     <v-layout row>
       <v-flex>
         <h3 class="subheading">
@@ -7,21 +7,31 @@
         </h3>
       </v-flex>
     </v-layout>
-    <v-layout row wrap>
+    <v-layout row wrap class="d-align-items-center">
       <template v-for="(effect, i) in processedEffects">
-        <v-flex xs1 :key="`${i}-icon`" class="text-xs-center">
-          <buff-icon @click.native="logBuff(effect)" :icon-key="effect.iconKey"/>
+        <v-flex
+          xs2 sm1
+          :key="`${i}-icon`"
+          class="text-xs-center">
+          <buff-icon
+            @click.native="logBuff(effect)"
+            :displaySize="iconSize"
+            :iconKey="effect.iconKey"/>
         </v-flex>
-        <v-flex xs1 v-if="$vuetify.breakpoint.mdAndUp" :key="`${i}-type`" class="text-xs-center">
-          <p class="mb-0" :title="getTypes(effect.parent.type, true)"
-            >{{ getTypes(effect.parent.type) }}</p>
+        <v-flex lg1 v-if="$vuetify.breakpoint.lgAndUp" :key="`${i}-type`" class="text-xs-center">
+          <p class="mb-0" :title="getTypes(effect.parent.type, true)">
+            {{ getTypes(effect.parent.type) }}
+          </p>
         </v-flex>
-        <v-flex :xs10="$vuetify.breakpoint.mdAndUp" :xs11="!$vuetify.breakpoint.mdAndUp" :key="i" class="text-xs-left">
+        <v-flex xs10 sm11 lg10 :key="i" class="text-xs-left">
           <p class="mb-0">
-            <span v-if="effect.parent.originalEffect.sp_type">({{ handleSpType(effect.parent.originalEffect.sp_type) }})</span>
-            <span v-if="effect.value.turns && !effect.triggeredEffectContext">{{ effect.value.turns.text }}</span>
-            <span>{{ effect.desc }}</span>
-            <span v-text="`[${getEffectIds(effect)}]`"/>
+            <span
+              v-if="effect.parent.originalEffect.sp_type"
+              v-text="`(${handleSpType(effect.parent.originalEffect.sp_type)}) `"/>
+            <span
+              v-if="effect.value.turns && !effect.triggeredEffectContext"
+              v-text="`${effect.value.turns.text} `"/>
+            <span v-text="`${effect.desc} [${getEffectIds(effect)}]`"/>
             <span v-if="effect.value && effect.value.conditions && effect.value.conditions.text" class="d-block"><i>Requirement:</i> {{ effect.value.conditions.text }}</span>
           </p>
         </v-flex>
@@ -32,10 +42,10 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import EffectProcessor from '@/store/instances/EffectProcessor/effect-processor';
-import IconKeyMappings from '@/store/instances/EffectProcessor/icon-key-mappings';
-import ProcessorHelper from '@/store/instances/EffectProcessor/processor-helper';
-import EffectTypes from '@/store/instances/EffectProcessor/effect-types';
+import EffectProcessor from '@/modules/EffectProcessor/effect-processor';
+import { capitalize, getEffectId } from '@/modules/EffectProcessor/processor-helper';
+import { effectTypes } from '@/modules/constants';
+import logger from '@/modules/Logger';
 import BuffIcon from '@/components/Multidex/BuffList/BuffIcon';
 
 export default {
@@ -48,16 +58,25 @@ export default {
       default: () => undefined,
     },
     contextHandler: {
-      type: Function,
+      required: false,
     },
   },
   components: {
-    'buff-icon': BuffIcon,
+    BuffIcon,
   },
   computed: {
-    ...mapGetters('units', ['unitById']),
-    ...mapGetters('items', ['itemById']),
-    effectTypes: () => EffectTypes,
+    ...mapGetters('units', {
+      unitById: 'getById',
+    }),
+    ...mapGetters('items', {
+      itemById: 'getById',
+    }),
+    minimumContextFields () {
+      return {
+        unitById: this.unitById,
+        itemById: this.itemById,
+      };
+    },
     processedEffects () {
       return this.effects
         .map(this.processEffect)
@@ -66,12 +85,13 @@ export default {
           return values.map(val => ({ ...val, parent, index }));
         }).reduce((acc, val) => acc.concat(val), []);
     },
-    iconKeyMappings: () => IconKeyMappings,
-    minimumContextFields () {
-      return {
-        unitById: this.unitById,
-        itemById: this.itemById,
-      };
+    iconSize () {
+      const breakpoint = this.$vuetify.breakpoint;
+      if (breakpoint.lgAndUp) {
+        return 36;
+      } else {
+        return 32;
+      }
     },
   },
   methods: {
@@ -84,29 +104,29 @@ export default {
       }
       return EffectProcessor.process(effect, { ...(this.minimumContextFields), ...context });
     },
-    logBuff (buff) {
-      console.debug(buff);
-    },
     getTypes (types = [], doTranslate = false) {
       if (!doTranslate) {
         return types.join(', ');
       }
       return types
-        .map(type => `${type}: ${(EffectTypes[type.toUpperCase()] || EffectTypes.UNKNOWN).desc}`)
+        .map(type => `${type}: ${(effectTypes[type.toUpperCase()] || effectTypes.UNKNOWN).desc}`)
         .join('\n');
     },
     handleSpType (text) {
-      return ProcessorHelper.capitalize(text).replace('sbb', 'SBB').replace('ubb', 'UBB').replace('bb', 'BB').replace('passive', 'LS');
-    },
-    getEffectId (effect) {
-      return effect['proc id'] || effect['passive id'] || effect['buff id'] ||
-        effect['unknown proc id'] || effect['unknown passive id'] || effect['unknown buff id'] || -1;
+      return capitalize(text).replace('sbb', 'SBB').replace('ubb', 'UBB').replace('bb', 'BB').replace('passive', 'LS');
     },
     getEffectIds (translatedEffect) {
-      const mainId = this.getEffectId(translatedEffect.parent.originalEffect);
-      const subId = translatedEffect.triggeredEffectContext ? this.getEffectId(translatedEffect.triggeredEffectContext.originalEffect) : undefined;
+      const mainId = getEffectId(translatedEffect.parent.originalEffect);
+      const subId = translatedEffect.triggeredEffectContext ? getEffectId(translatedEffect.triggeredEffectContext.originalEffect) : undefined;
       return (subId !== undefined ? [mainId, subId] : [mainId]).join(', ');
+    },
+    logBuff (buff) {
+      logger.debug(buff);
     },
   },
 };
 </script>
+
+<style>
+
+</style>

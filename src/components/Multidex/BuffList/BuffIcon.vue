@@ -1,463 +1,266 @@
 <template>
   <svg
     class="buff-icon"
-    :width="width" :height="height"
-    viewBox="0 0 32 32"
+    :width="displaySize" :height="displaySize"
+    :viewBox="`0 0 ${iconSize} ${iconSize}`"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title v-text="iconKey"/>
+    <title v-if="iconKey" v-text="iconKey"/>
+    <!-- background extra buff icons -->
+    <g v-if="isPassiveTypeStatIcon(iconKey)">
+      <template v-if="isPassiveTypeStatIcon(iconKey) && elements.includes(getTypeInfoFromPassiveTypeStatKey(iconKey).type.toLowerCase())">
+        <image
+          width="156" height="26"
+          :xlink:href="require('@/assets/buff-translation/common/attribute_mark.png')"
+          :transform="`translate(${elements.indexOf(getTypeInfoFromPassiveTypeStatKey(iconKey).type.toLowerCase()) * -26} 0)`"/>
+      </template>
+      <g v-else-if="isPassiveUnitTypeStatIcon(iconKey)">
+        <rect x="5" y="5" width="22" height="22" fill="white"/>
+        <text x="9.5" y="19" font-family="Consolas" font-size="1.20rem" font-weight="bold" fill="black">{{ (getTypeInfoFromPassiveTypeStatKey(iconKey).type[0] || '').toUpperCase() }}</text>
+      </g>
+
+
+    </g>
+
+
+    <!-- buff icons from sheets -->
+    <!-- iconKey is on one of the buff sheets -->
     <image
-      v-if="battleBuffIconKeys.includes(iconKey)"
-      width="480" height="416"
-      xlink:href="@/assets/buff-translation/battle/battle_buff_icon.png"
-      :transform="`translate(${getBattleBuffIconCoordinates(battleBuffIconKeys.indexOf(iconKey))})`"/>
-    <image
-      v-else-if="sgBattleBuffIconKeys.includes(iconKey)"
-      width="480" height="192"
-      xlink:href="@/assets/buff-translation/battle/battle_buff_icon_sg.png"
-      :transform="`translate(${getBattleBuffIconCoordinates(sgBattleBuffIconKeys.indexOf(iconKey), iconKey)})`"/>
-    <image v-else-if="ailmentBuffKeys.includes(iconKey)"
-      width="192" height="32"
-      xlink:href="@/assets/buff-translation/battle/battle_bad_icon.png"
-      :transform="`translate(${getBattleBuffIconCoordinates(ailmentBuffKeys.indexOf(iconKey), iconKey)})`"/>
-    <image
-      v-else-if="customBuffIconKeys.includes(iconKey)"
-      width="480" height="416"
-      xlink:href="@/assets/buff-translation/battle/custom-icons.png"
-      :transform="`translate(${getBattleBuffIconCoordinates(customBuffIconKeys.indexOf(iconKey))})`"/>
-    <image
-      v-else-if="iconKey.endsWith('ST_ATK') || iconKey === iconKeyMapping.ATK.name"
-      width="30" height="32"
-      :xlink:href="(iconKeyMapping[iconKey] || iconKeyMapping.ATK).src"/>
-    <template v-else-if="iconKey.endsWith('AOE_ATK')">
+      v-if="iconConfig"
+      :width="iconConfig.width" :height="iconConfig.height"
+      :xlink:href="iconConfig.src"
+      :transform="`translate(${iconConfig.coords})`"/>
+    <g v-else-if="isAttackingIcon(iconKey)">
+      <!-- attack based icons are here -->
       <image
+        v-if="iconKey.endsWith('ST_ATK') || iconKey === IconKeyMappings.ATK.name"
         width="30" height="32"
-        :xlink:href="(iconKeyMapping[iconKey] || iconKeyMapping.ATK).src"
-        transform="translate(-4 0)"/>
-      <image
-        width="30" height="32"
-        :xlink:href="(iconKeyMapping[iconKey] || iconKeyMapping.ATK).src"
-        transform="translate(34 0) scale(-1 1)"/>
-    </template>
-    <g v-else-if="iconKey === iconKeyMapping.RT_ATK.name" style="position: relative">
+        :xlink:href="(IconKeyMappings[iconKey] || IconKeyMappings.ATK).src"/>
+      <template v-else-if="iconKey.endsWith('AOE_ATK')">
         <image
           width="30" height="32"
-          :xlink:href="iconKeyMapping.ATK.src"/>
+          :xlink:href="(IconKeyMappings[iconKey] || IconKeyMappings.ATK).src"
+          transform="translate(-4 0)"/>
+        <image
+          width="30" height="32"
+          :xlink:href="(IconKeyMappings[iconKey] || IconKeyMappings.ATK).src"
+          transform="translate(34 0) scale(-1 1)"/>
+      </template>
+      <template v-else-if="iconKey === IconKeyMappings.RT_ATK.name">
+        <image
+          width="30" height="32"
+          :xlink:href="IconKeyMappings.ATK.src"/>
         <image
           width="66" height="66"
-          xlink:href="@/assets/buff-translation/battle/battle_target_mark.png"
+          :xlink:href="require('@/assets/buff-translation/battle/battle_target_mark.png')"
           transform="scale(0.25)"
           class="animate--random-target"/>
+      </template>
     </g>
-    <template v-else-if="iconKey.startsWith('INSTANT') && battleBuffIconKeys.includes(getBattleBuffKeyFromCustomKey(iconKey))">
-      <image
-        width="480" height="416"
-        xlink:href="@/assets/buff-translation/battle/battle_buff_icon.png"
-        :transform="`translate(${getBattleBuffIconCoordinates(battleBuffIconKeys.indexOf(getBattleBuffKeyFromCustomKey(iconKey)))})`"/>
-      <g class="animate--pulse">
-        <rect x="0" y="0" width="32" height="32" rx="8" ry="8" fill="grey" style="fill-opacity: 0.5"/>
-        <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">B</text>
-      </g>
-    </template>
-    <template v-else-if="iconKey === iconKeyMapping.PASSIVE_BUFF_HPRECTURNSTART.name">
-      <image
-        width="480" height="416"
-        xlink:href="@/assets/buff-translation/battle/battle_buff_icon.png"
-        :transform="`translate(${getBattleBuffIconCoordinates(battleBuffIconKeys.indexOf(iconKeyMapping.BUFF_HPREC.name))})`"/>
-      <image
-        width="36" height="36"
-        xlink:href="@/assets/buff-translation/raid/raid_room_time.png"
-        x="24" y="0"
-        transform="scale(0.55)"/>
-    </template>
-    <template v-else-if="iconKey === iconKeyMapping.PASSIVE_BUFF_BBRECTURNSTART.name">
-      <image
-        width="480" height="416"
-        xlink:href="@/assets/buff-translation/battle/battle_buff_icon.png"
-        :transform="`translate(${getBattleBuffIconCoordinates(battleBuffIconKeys.indexOf(iconKeyMapping.BUFF_BBREC.name))})`"/>
-      <image
-        width="36" height="36"
-        xlink:href="@/assets/buff-translation/raid/raid_room_time.png"
-        x="24" y="0"
-        transform="scale(0.55)"/>
-    </template>
-    <template v-else-if="iconKey.startsWith('PASSIVE') && battleBuffIconKeys.includes(getBattleBuffKeyFromCustomKey(iconKey))">
-      <image
-        width="480" height="416"
-        xlink:href="@/assets/buff-translation/battle/battle_buff_icon.png"
-        :transform="`translate(${getBattleBuffIconCoordinates(battleBuffIconKeys.indexOf(getBattleBuffKeyFromCustomKey(iconKey)))})`"/>
-      <g class="animate--pulse">
-        <rect x="0" y="0" width="32" height="32" rx="8" ry="8" fill="grey" style="fill-opacity: 0.5"/>
-        <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">P</text>
-      </g>
-    </template>
-    <template v-else-if="iconKey.startsWith('PASSIVE') && ailmentBuffKeys.includes(getBattleBuffKeyFromCustomKey(iconKey))">
-      <image
-        width="192" height="32"
-        xlink:href="@/assets/buff-translation/battle/battle_bad_icon.png"
-        :transform="`translate(${getBattleBuffIconCoordinates(ailmentBuffKeys.indexOf(getBattleBuffKeyFromCustomKey(iconKey)))})`"/>
-      <g class="animate--pulse">
-        <rect x="0" y="0" width="32" height="32" rx="8" ry="8" fill="grey" style="fill-opacity: 0.5"/>
-        <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">P</text>
-      </g>
-    </template>
-    <template v-else-if="(iconKey.startsWith('PASSIVE') || iconKey.startsWith('INSTANT')) && (customBuffIconKeys.includes(getBattleBuffKeyFromCustomKey(iconKey)) || isPassiveTypeStatIcon(iconKey))">
-      <g v-if="iconKey.startsWith('PASSIVE')">
-        <template v-if="isPassiveTypeStatIcon(iconKey) && elements.includes(getTypeInfoFromPassiveTypeStatKey(iconKey).type.toLowerCase())">
-          <image
-            width="156" height="26"
-            xlink:href="@/assets/buff-translation/common/attribute_mark.png"
-            :transform="`translate(${elements.indexOf(getTypeInfoFromPassiveTypeStatKey(iconKey).type.toLowerCase()) * -26} 0)`"/>
-        </template>
-        <template v-else-if="isPassiveUnitTypeStatIcon(iconKey)">
-          <rect x="5" y="5" width="22" height="22" fill="white"/>
-          <text x="9.5" y="19" font-family="Consolas" font-size="1.20rem" font-weight="bold" fill="black">{{ (getTypeInfoFromPassiveTypeStatKey(iconKey).type[0] || '').toUpperCase() }}</text>
-        </template>
-      </g>
-      <g>
-        <template v-if="!['PASSIVE_BUFF_HPUP', 'PASSIVE_BUFF_HCREC', 'INSTANT_BUFF_ALLAILNULL'].includes(iconKey)">
-          <template v-if="iconKey.includes('HPTHRESH')">
-            <image
-              width="480" height="416"
-              xlink:href="@/assets/buff-translation/battle/battle_buff_icon.png"
-              :transform="`translate(${getBattleBuffIconCoordinates(battleBuffIconKeys.indexOf(`BUFF_${getTypeInfoFromPassiveTypeStatKey(iconKey).stat}UP`))})`"/>
-            <image
-              width="480" height="416"
-              xlink:href="@/assets/buff-translation/battle/custom-icons.png"
-              :transform="`translate(${getBattleBuffIconCoordinates(customBuffIconKeys.indexOf(`BUFF_HPTHRESHGENERIC`))})`"/>
-          </template>
-          <image
-            v-else-if="isPassiveTypeStatIcon(iconKey)"
-            width="480" height="416"
-            xlink:href="@/assets/buff-translation/battle/custom-icons.png"
-            :transform="`translate(${getBattleBuffIconCoordinates(customBuffIconKeys.indexOf(`BUFF_ELEMENTAL${getTypeInfoFromPassiveTypeStatKey(iconKey).stat}UP`), `BUFF_ELEMENTAL${getTypeInfoFromPassiveTypeStatKey(iconKey).stat}UP`)})`"/>
-        </template>
-        <image
-          v-else
-          width="480" height="416"
-          xlink:href="@/assets/buff-translation/battle/custom-icons.png"
-          :transform="`translate(${getBattleBuffIconCoordinates(customBuffIconKeys.indexOf(getBattleBuffKeyFromCustomKey(iconKey)), iconKey)})`"/>
-      </g>
-      <g class="animate--pulse">
-        <rect x="0" y="0" width="32" height="32" rx="8" ry="8" fill="grey" style="fill-opacity: 0.5"/>
-        <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">
-          {{ iconKey.startsWith('PASSIVE') ? 'P' : 'B' }}
-        </text>
-      </g>
-    </template>
-    <template v-else-if="iconKey.startsWith('PASSIVE') && !!getDropType(iconKey)">
-      <template v-if="['zel', 'karma'].includes(getDropType(iconKey))">
-        <image
-          width="480" height="416"
-          xlink:href="@/assets/buff-translation/battle/custom-icons.png"
-          :transform="`translate(${getBattleBuffIconCoordinates(customBuffIconKeys.indexOf(`BUFF_GENERICDROP`))})`"/>
-        <image
-          v-if="getDropType(iconKey) === 'zel'"
-          width="102" height="102"
-          xlink:href="@/assets/zell_thum.png"
-          transform="scale(0.3)"/>
-        <image
-          v-else
-          width="102" height="102"
-          xlink:href="@/assets/karma_thum.png"
-          transform="scale(0.3)"/>
-      </template>
-      <image
-        v-else
-        width="480" height="416"
-        xlink:href="@/assets/buff-translation/battle/battle_buff_icon.png"
-        :transform="`translate(${getBattleBuffIconCoordinates(battleBuffIconKeys.indexOf(`BUFF_${getDropType(iconKey).toUpperCase()}DROP`))})`"/>
-      <template v-if="iconKey.includes('HPTHRESH')">
-        <image
-          width="480" height="416"
-          xlink:href="@/assets/buff-translation/battle/custom-icons.png"
-          :transform="`translate(${getBattleBuffIconCoordinates(customBuffIconKeys.indexOf(`BUFF_HPTHRESHGENERIC`))})`"/>
-      </template>
-      <g class="animate--pulse">
-        <rect x="0" y="0" width="32" height="32" rx="8" ry="8" fill="grey" style="fill-opacity: 0.5"/>
-        <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">P</text>
-      </g>
-    </template>
     <template v-else>
       <image
-        xlink:href="@/assets/item_frame_bg2.png"
-        :width="width" :height="height"
+        :xlink:href="require('@/assets/item_frame_bg2.png')"
+        :width="iconSize" :height="iconSize"
         class="buff-background"/>
-        <image
-        xlink:href="@/assets/buff-translation/raid/raid_room_shadow_question.png"
-        :width="width" :height="height"/>
+      <image
+        :xlink:href="require('@/assets/buff-translation/raid/raid_room_shadow_question.png')"
+        :width="iconSize" :height="iconSize"/>
     </template>
+
+    <!-- foreground extra buff icons -->
+    <image
+      v-if="iconKey === IconKeyMappings.PASSIVE_BUFF_HPRECTURNSTART.name || iconKey === IconKeyMappings.PASSIVE_BUFF_BBRECTURNSTART.name"
+      width="36" height="36"
+      :xlink:href="require('@/assets/buff-translation/raid/raid_room_time.png')"
+      x="24" y="0"
+      transform="scale(0.55)"/>
+    <template v-if="['zel', 'karma'].includes(getDropType(iconKey))">
+      <image
+        v-if="getDropType(iconKey) === 'zel'"
+        width="102" height="102"
+        :xlink:href="require('@/assets/zell_thum.png')"
+        transform="scale(0.3)"/>
+      <image
+        v-else
+        width="102" height="102"
+        :xlink:href="require('@/assets/karma_thum.png')"
+        transform="scale(0.3)"/>
+    </template>
+    <image
+      v-if="iconKey.includes('HPTHRESH')"
+      :width="hpThreshForegroundIconConfig.width" :height="hpThreshForegroundIconConfig.height"
+      :xlink:href="hpThreshForegroundIconConfig.src"
+      :transform="`translate(${hpThreshForegroundIconConfig.coords})`"/>
+
+    <!-- pulsing letters for instant/passive/timed buffs -->
+    <g class="animate--pulse" v-if="isPassiveIcon(iconKey)">
+      <rect x="0" y="0" width="32" height="32" rx="8" ry="8" fill="grey" style="fill-opacity: 0.5"/>
+      <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">P</text>
+    </g>
+    <g class="animate--pulse" v-else-if="isInstantIcon(iconKey)">
+      <rect x="0" y="0" width="32" height="32" rx="8" ry="8" fill="grey" style="fill-opacity: 0.5"/>
+      <text x="4" y="30" font-family="Consolas" font-size="3rem" font-weight="bold" fill="white" stroke="black" stroke-width="2px">B</text>
+    </g>
   </svg>
 </template>
 
 <script>
-import IconKeyMapping from '@/store/instances/EffectProcessor/icon-key-mappings';
-import knownConstants from '@/store/modules/constants';
+import { mapState, mapMutations } from 'vuex';
+import {
+  battleBuffIconKeys,
+  sgBattleBuffIconKeys,
+  customBuffIconKeys,
+  ailmentBuffIconKeys,
+  unitTypes,
+  elements,
+  dropTypes,
+} from '@/modules/constants';
+import IconKeyMappings from '@/modules/EffectProcessor/icon-key-mappings';
+import logger from '@/modules/Logger';
 
 export default {
   props: {
-    width: {
-      type: Number,
-      default: 32,
-    },
-    height: {
-      type: Number,
-      default: 32,
-    },
     iconKey: {
       type: String,
+      default: '',
+    },
+    displaySize: {
+      type: Number,
+      default: 32,
     },
   },
   computed: {
-    battleBuffIconKeys: () => [
-      'BUFF_ATKUP',
-      'BUFF_ATKDOWN',
-      'BUFF_DEFUP',
-      'BUFF_DEFDOWN',
-      'BUFF_RECUP',
-      'BUFF_RECDOWN',
-      'BUFF_CRTRATEUP',
-      'BUFF_HPREC',
-      'BUFF_HCDROP',
-      'BUFF_BCDROP',
-      'BUFF_ITEMDROP',
-      'BUFF_KOBLK',
-      'BUFF_FIREATKUP',
-      'BUFF_FIREDEFUP',
-      'BUFF_FIRERECUP',
-      'BUFF_WATERATKUP',
-      'BUFF_WATERDEFUP',
-      'BUFF_WATERRECUP',
-      'BUFF_EARTHATKUP',
-      'BUFF_EARTHDEFUP',
-      'BUFF_EARTHRECUP',
-      'BUFF_THUNDERATKUP',
-      'BUFF_THUNDERDEFUP',
-      'BUFF_THUNDERRECUP',
-      'BUFF_LIGHTATKUP',
-      'BUFF_LIGHTDEFUP',
-      'BUFF_LIGHTRECUP',
-      'BUFF_DARKATKUP',
-      'BUFF_DARKDEFUP',
-      'BUFF_DARKRECUP',
-      'BUFF_FIREATKDOWN',
-      'BUFF_FIREDEFDOWN',
-      'BUFF_FIRERECDOWN',
-      'BUFF_WATERATKDOWN',
-      'BUFF_WATERDEFDOWN',
-      'BUFF_WATERRECDOWN',
-      'BUFF_EARTHATKDOWN',
-      'BUFF_EARTHDEFDOWN',
-      'BUFF_EARTHRECDOWN',
-      'BUFF_THUNDERATKDOWN',
-      'BUFF_THUNDERDEFDOWN',
-      'BUFF_THUNDERRECDOWN',
-      'BUFF_LIGHTATKDOWN',
-      'BUFF_LIGHTDEFDOWN',
-      'BUFF_LIGHTRECDOWN',
-      'BUFF_DARKATKDOWN',
-      'BUFF_DARKDEFDOWN',
-      'BUFF_DARKRECDOWN',
-      'BUFF_FIREDMGDOWN',
-      'BUFF_WATERDMGDOWN',
-      'BUFF_EARTHDMGDOWN',
-      'BUFF_THUNDERDMGDOWN',
-      'BUFF_LIGHTDMGDOWN',
-      'BUFF_DARKDMGDOWN',
-      'BUFF_POISONBLK',
-      'BUFF_WEAKBLK',
-      'BUFF_SICKBLK',
-      'BUFF_INJURYBLK',
-      'BUFF_CURSEBLK',
-      'BUFF_PARALYSISBLK',
-      'BUFF_BBREC',
-      'BUFF_DAMAGEBB',
-      'BUFF_GETENEATT',
-      'BUFF_REPENEATT',
-      'BUFF_IGNOREDEF',
-      'BUFF_DBLSTRIKE',
-      'BUFF_HITUP',
-      'BUFF_ADDFIRE',
-      'BUFF_ADDWATER',
-      'BUFF_ADDEARTH',
-      'BUFF_ADDTHUNDER',
-      'BUFF_ADDLIGHT',
-      'BUFF_ADDDARK',
-      'BUFF_DAMAGECUT',
-      'BUFF_SPARKUP',
-      'BUFF_SPARKHC',
-      'BUFF_SPARKBC',
-      'BUFF_SPARKITEM',
-      'BUFF_DISABLELS',
-      'BUFF_RAIDATKUP',
-      'BUFF_RAIDDEFUP',
-      'BUFF_RAIDRECUP',
-      'BUFF_RAIDCRTUP',
-      'BUFF_RAIDDMGDOWN',
-      'BUFF_ATKDOWNLOCK',
-      'BUFF_DEFDOWNLOCK',
-      'BUFF_RECDOWNLOCK',
-      'BUFF_ADDPOISON',
-      'BUFF_ADDWEAK',
-      'BUFF_ADDSICK',
-      'BUFF_ADDINJURY',
-      'BUFF_ADDCURSE',
-      'BUFF_ADDPARA',
-      'BUFF_SPARKABILITY',
-      'BUFF_ACTIVEOD',
-      'BUFF_TURNDMG',
-      'BUFF_BBATKUP',
-      'BUFF_COUNTERDAMAGE',
-      'BUFF_ADDATKDOWN',
-      'BUFF_ADDDEFDOWN',
-      'BUFF_ADDRECDOWN',
-      'BUFF_BBFILL',
-      'BUFF_CRTUP',
-      'BUFF_FIREDMGUP',
-      'BUFF_WATERMDGUP',
-      'BUFF_EARTHDMGUP',
-      'BUFF_THUNDERDMGUP',
-      'BUFF_LIGHTDMGUP',
-      'BUFF_DARKDMGUP',
-      'BUFF_POISIONCOUNTER',
-      'BUFF_WEAKCOUNTER',
-      'BUFF_SICKCOUNTER',
-      'BUFF_INJCONTER',
-      'BUFF_CURSECOUNTER',
-      'BUFF_PARALYCOUNTER',
-      'BUFF_KOBLOCK',
-      'BUFF_HCDOWN',
-      'BUFF_BCDOWN',
-      'BUFF_SPARKDMGUP',
-      'BUFF_BBATKDOWN',
-      'BUFF_FIRESHIELD',
-      'BUFF_WATERSHIELD',
-      'BUFF_EARTHSHIELD',
-      'BUFF_THUNDERSHIELD',
-      'BUFF_LIGHTSHIELD',
-      'BUFF_DARKSHIELD',
-      'BUFF_AILDMGUP',
-      'BUFF_SPARKBBUP',
-      'BUFF_GUARDCUT',
-      'BUFF_GUARDBBUP',
-      'BUFF_GUARDPARAMUP',
-      'BUFF_BBFILLDOWN',
-      'BUFF_SPARKATKUP',
-      'BUFF_SPARKDEFUP',
-      'BUFF_SPARKRECUP',
-      'BUFF_SPARKCRTUP',
-      'BUFF_RESISTATKDOWN',
-      'BUFF_RESISTDEFDOWN',
-      'BUFF_RESISTRECDOWN',
-      'BUFF_ATKUP2',
-      'BUFF_DEFUP2',
-      'BUFF_RECUP2',
-      'BUFF_SPARKCRTACTIVATED',
-      'BUFF_OVERDRIVEUP',
-      'BUFF_BEENATK_HPREC',
-      'BUFF_HPABS',
-      'BUFF_SPARK_HPREC',
-      'BUFF_ATKUP3',
-      'BUFF_DEFUP3',
-      'BUFF_RECUP3',
-      'BUFF_CRTRATEUP2',
-      'BUFF_SPARKDMGUP2',
-      'BUFF_HPREC2',
-      'BUFF_BBFILL2',
-      'BUFF_ATKUP4',
-      'BUFF_DEFUP4',
-      'BUFF_RECUP4',
-      'BUFF_CRTDOWN',
-      'BUFF_ELEMENTDOWN',
-      'BUFF_SPARKDMGDOWN',
-      'BUFF_AOEATK',
-      'BUFF_NULLSPHERE',
-      'BUFF_NULLES',
-      'BUFF_BBREDUC',
-      'BUFF_ODFILLBOOST',
-      'BUFF_ATKREDUC',
-      'BUFF_TARGETED',
-      'BUFF_PROB_ATKREDUC',
-      'BUFF_PROB_DEFREDUC',
-      'BUFF_PROB_RECREDUC',
-      'BUFF_CRITDMG_VUL',
-      'BUFF_ELEDMG_VUL',
-      'BUFF_NULLITEM',
-      'BUFF_NULLSWAP',
-      'BUFF_FIRESHIELDDOWN',
-      'BUFF_WATERSHIELDDOWN',
-      'BUFF_EARTHSHIELDDOWN',
-      'BUFF_THUNDERSHIELDDOWN',
-      'BUFF_LIGHTSHIELDDOWN',
-      'BUFF_DARKSHIELDDOWN',
-    ],
-    sgBattleBuffIconKeys: () => [
-      'SG_BUFF_TAUNT',
-      'SG_BUFF_STEALTH',
-      'SG_BUFF_ALL',
-      'SG_BUFF_FIRE',
-      'SG_BUFF_WATER',
-      'SG_BUFF_EARTH',
-      'SG_BUFF_THUNDER',
-      'SG_BUFF_LIGHT',
-      'SG_BUFF_DARK',
-      'SG_BUFF_SPHERE_DISABLE',
-      'SG_BUFF_DMG_IMMUNINTY',
-      'SG_BUFF_SKIP_TURN',
-      'SG_BUFF_TIME_STOP',
-      'SG_BUFF_EVASION',
-      'SG_BUFF_CRTRATEDOWN',
-      'SG_BUFF_FIRESHIELDDOWN',
-      'SG_BUFF_WATERSHIELDDOWN',
-      'SG_BUFF_EARTHSHIELDDOWN',
-      'SG_BUFF_THUNDERSHIELDDOWN',
-      'SG_BUFF_LIGHTSHIELDDOWN',
-      'SG_BUFF_DARKSHIELDDOWN',
-      'SG_BUFF_WEAKSHIELD',
-      'SG_BUFF_DAMAGECUTDOWN',
-      'SG_BUFF_ATK_EU',
-      'SG_BUFF_DBLBB_EU',
-      'SG_BUFF_REC_EU',
-    ],
-    customBuffIconKeys: () => [
-      'BUFF_RED',
-      'BUFF_RED_ARROW',
-      'BUFF_HPUP',
-      'BUFF_ELEMENTALHPUP',
-      'BUFF_ELEMENTALCRTRATEUP',
-      'BUFF_ELEMENTALATKUP',
-      'BUFF_ELEMENTALDEFUP',
-      'BUFF_ELEMENTALRECUP',
-      'BUFF_HCREC',
-      'BUFF_ALLAILNULL',
-      'BUFF_HPTHRESHGENERIC',
-      'BUFF_BBTHRESHGENERIC',
-      'BUFF_GENERICDROP',
-      'BUFF_ALLDMGDOWN',
-    ],
-    ailmentBuffKeys: () => knownConstants.ailments.map(ail => `DEBUFF_${ail.toUpperCase()}`),
-    iconKeyMapping: () => IconKeyMapping,
-    elements: () => knownConstants.elements.slice(),
+    ...mapState(['iconKeyConfigCache']),
+    IconKeyMappings: () => IconKeyMappings,
+    elements: () => elements,
+    iconSize () {
+      return 32;
+    },
+    battleBuffMetaData: () => ({
+      src: require('@/assets/buff-translation/battle/battle_buff_icon.png'),
+      width: 480,
+      height: 416,
+    }),
+    sgBattleBuffMetaData: () => ({
+      src: require('@/assets/buff-translation/battle/battle_buff_icon_sg.png'),
+      width: 480,
+      height: 192,
+    }),
+    ailmentBuffMetaData: () => ({
+      src: require('@/assets/buff-translation/battle/battle_bad_icon.png'),
+      width: 192,
+      height: 32,
+    }),
+    customBuffMetaData: () => ({
+      src: require('@/assets/buff-translation/battle/custom-icons.png'),
+      width: 480,
+      height: 416,
+    }),
+    iconConfig () {
+      let result;
+      try {
+        result = this.getIconConfigForKey(this.iconKey);
+      } catch (err) {
+        logger.error(err);
+      }
+      return result;
+    },
     passiveTypeStatKeyBlacklist: () => [
       'PASSIVE_BUFF_HCREC',
     ],
+    hpThreshForegroundIconConfig () {
+      return {
+        ...this.customBuffMetaData,
+        coords: this.getIconCoordinates(customBuffIconKeys.indexOf('BUFF_HPTHRESHGENERIC')),
+      };
+    },
   },
   methods: {
-    getBattleBuffIconCoordinates (index = 0, key) {
-      const rowLength = 15;
+    ...mapMutations(['setValueForIconKey']),
+    getIconCoordinates (index = 0, rowLength = 15) {
       const y = Math.floor(index / rowLength);
       const x = index - (y * rowLength);
-      console.debug(key, index, x, y);
-      return [x, y].map(coord => coord * -32).join(' ');
+      return [x, y].map(c => c * -this.iconSize).join(' ');
     },
     getBattleBuffKeyFromCustomKey (customKey = 'INSTANT_SOME_BUFF') {
-      // eslint-disable-next-line no-unused-vars
-      const [ customPrefix, ...battleBuffIconKey ] = customKey.split('_');
-      return battleBuffIconKey.join('_');
+      if (customKey === IconKeyMappings.PASSIVE_BUFF_HPRECTURNSTART.name) {
+        return IconKeyMappings.BUFF_HPREC.name;
+      } else if (customKey === IconKeyMappings.PASSIVE_BUFF_BBRECTURNSTART.name) {
+        return IconKeyMappings.BUFF_BBREC.name;
+      } else {
+        // eslint-disable-next-line no-unused-vars
+        const [ customPrefix, ...battleBuffIconKey ] = customKey.split('_');
+        return battleBuffIconKey.join('_');
+      }
+    },
+    getIconConfigForKey (iconKeyInput = '') {
+      if (this.iconKeyConfigCache[iconKeyInput] !== undefined) {
+        return this.iconKeyConfigCache[iconKeyInput];
+      }
+      let config = {};
+      let iconKey;
+
+      if (this.isPassiveTypeStatIcon(iconKeyInput) && !['PASSIVE_BUFF_HPUP', 'PASSIVE_BUFF_HCREC', 'INSTANT_BUFF_ALLAILNULL'].includes(iconKey)) {
+        // handles HP threshold and elemental stat boosting icons
+        iconKey = [
+          'BUFF_',
+          !iconKeyInput.includes('HPTHRESH') ? 'ELEMENTAL': '',
+          this.getTypeInfoFromPassiveTypeStatKey(iconKeyInput).stat,
+          'UP'
+        ].filter(v => v).join('');
+      } else if (['zel', 'karma'].includes(this.getDropType(iconKeyInput))) {
+        iconKey = 'BUFF_GENERICDROP';
+      } else if (this.isDropType(iconKeyInput)) {
+        iconKey = `BUFF_${this.getDropType(iconKeyInput).toUpperCase()}DROP`
+      } else if (this.isPassiveIcon(iconKeyInput) || this.isInstantIcon(iconKeyInput)) {
+        iconKey = this.getBattleBuffKeyFromCustomKey(iconKeyInput);
+      } else {
+        iconKey = iconKeyInput.slice();
+      }
+
+      if (battleBuffIconKeys.includes(iconKey)) {
+        config = {
+          ...this.battleBuffMetaData,
+          coords: this.getIconCoordinates(battleBuffIconKeys.indexOf(iconKey)),
+        };
+      } else if (sgBattleBuffIconKeys.includes(iconKey)) {
+        config = {
+          ...this.sgBattleBuffMetaData,
+          coords: this.getIconCoordinates(sgBattleBuffIconKeys.indexOf(iconKey)),
+        };
+      } else if (customBuffIconKeys.includes(iconKey)) {
+        config = {
+          ...this.customBuffMetaData,
+          coords: this.getIconCoordinates(customBuffIconKeys.indexOf(iconKey)),
+        };
+      }  else if (ailmentBuffIconKeys.includes(iconKey)) {
+        config = {
+          ...this.ailmentBuffMetaData,
+          coords: this.getIconCoordinates(ailmentBuffIconKeys.indexOf(iconKey)),
+        };
+      }
+
+      this.iconKeyConfigCache[iconKeyInput] = Object.keys(config).length > 0
+        ? config
+        : null;
+
+      return this.iconKeyConfigCache[iconKeyInput];
+    },
+    isAttackingIcon (iconKey = '') {
+      return iconKey === IconKeyMappings.ATK.name
+        || iconKey === IconKeyMappings.RT_ATK.name
+        || iconKey.endsWith('ST_ATK')
+        || iconKey.endsWith('AOE_ATK');
+    },
+    isPassiveIcon (iconKey = '') {
+      return iconKey.startsWith('PASSIVE');
+    },
+    isInstantIcon (iconKey = '') {
+      return iconKey.startsWith('INSTANT');
     },
     getTypeInfoFromPassiveTypeStatKey (iconKey = 'PASSIVE_BUFF_ELEMENTHPUP') {
-      const regexMatch = iconKey.match(/^PASSIVE_BUFF_(?<element>.*)(CRTRATE|HP|ATK|DEF|REC)UP$/);
-      // console.debug(iconKey, regexMatch);
+      const regexMatch = iconKey.match(/^PASSIVE_BUFF_(.+)(CRTRATE|HP|ATK|DEF|REC)UP$/);
+      // logger.warn(regexMatch);
       return regexMatch && !this.passiveTypeStatKeyBlacklist.includes(iconKey) && {
         type: regexMatch[1],
         stat: regexMatch[2],
@@ -468,86 +271,60 @@ export default {
     },
     isPassiveUnitTypeStatIcon (iconKey) {
       const match = this.getTypeInfoFromPassiveTypeStatKey(iconKey) || {};
-      const isPassiveType = !!match.type && knownConstants.unitTypes.includes(match.type.toLowerCase());
+      const isPassiveType = !!match.type && unitTypes.includes(match.type.toLowerCase());
       return isPassiveType;
     },
-    getDropType (iconKey) {
-      const result = knownConstants.dropTypes.filter(type => iconKey.endsWith(`${type.toUpperCase()}DROP`))[0];
-      console.debug(iconKey, result);
-      return result;
+    getDropType (iconKey = '') {
+      return dropTypes.find(type => iconKey.endsWith(`${type.toUpperCase()}DROP`));
+    },
+    isDropType (iconKey) {
+      return !!this.getDropType(iconKey);
     },
   },
 };
 </script>
 
-<style>
-.buff-icon image.buff-background {
-  z-index: 1;
-}
-
-.buff-icon image:not(.buff-background) {
-  z-index: 2;
-}
-
-.buff-icon .animate--pulse {
-  animation-name: pulse;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-.buff-icon .animate--random-attack {
-  animation-name: random-attack;
-  transform-origin: center center;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-}
-
-.buff-icon .animate--random-target {
-  /* position: absolute; */
-  animation-name: random-target;
-  /* transform-origin: center center; */
-  animation-timing-function: ease;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 1;
-  }
-  50%, 75% {
-    opacity: 0;
-  }
-}
-
-@keyframes random-attack {
-  0% {
-    transform: rotateZ(0);
+<style lang="less">
+.buff-icon {
+  .animate--random-target {
+    animation-name: random-target;
+    animation-timing-function: ease;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
   }
 
-  50% {
-    transform: rotateZ(90deg);
+  @keyframes random-target {
+    0%, 100% {
+      transform: translate(-100%,-100%) scale(0.25);
+    }
+    12.5%, 62.5% {
+      transform: translate(17.5%,17.5%) scale(0.35);
+    }
+    25% {
+      transform: translate(100%,100%) scale(0.25);
+    }
+    50% {
+      transform: translate(100%,-100%) scale(0.25);
+    }
+    75% {
+      transform: translate(-100%,100%) scale(0.25);
+    }
   }
-}
 
-@keyframes random-target {
-  0%, 100% {
-    transform: translate(-100%,-100%) scale(0.25);
+  .animate--pulse {
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
   }
-  12.5%, 62.5% {
-    transform: translate(17.5%,17.5%) scale(0.35);
-  }
-  25% {
-    transform: translate(100%,100%) scale(0.25);
-  }
-  50% {
-    transform: translate(100%,-100%) scale(0.25);
-  }
-  75% {
-    transform: translate(-100%,100%) scale(0.25);
+
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    50%, 75% {
+      opacity: 0;
+    }
   }
 }
 </style>
-
-

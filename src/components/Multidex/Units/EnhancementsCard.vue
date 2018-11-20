@@ -1,145 +1,152 @@
 <template>
-  <v-card>
-    <v-card-title class="light-green darken-2 white--text">
-      <v-layout row wrap>
-        <v-flex xs9 class="text-xs-left">
-          <h3 class="title">SP Enhancements</h3>
+  <description-card-base
+    :entry="feSkills"
+    materialColor="light-green darken-3"
+    :tabNames="['Table', 'Share Build', 'JSON', 'Buff List']"
+    :effectGetter="() => allEffects"
+    :treeOptions="{ maxDepth: 1 }">
+    <template slot="title">
+      <v-layout row wrap class="d-align-items-center">
+        <v-flex xs9 class="text-xs-left" style="word-break: break-word;">
+          <card-title-with-link :titleHtml="titleHtml"/>
         </v-flex>
-        <v-flex xs3 class="text-xs-right">
-          {{ feskillSum }} SP
+        <v-flex xs3 class="text-xs-right body-1">
+          <span>{{ allEnhancementsSum }} SP</span>
         </v-flex>
       </v-layout>
-    </v-card-title>
-    <v-card-text class="pt-0">
-      <v-tabs v-model="activeTab">
-        <v-tab key="table">
-          Table
-        </v-tab>
-        <v-tab key="share">
-          Share Build
-        </v-tab>
-        <v-tab key="json">
-          JSON
-        </v-tab>
-        <v-tab key="buff-list">
-          Buff List (Alpha)
-        </v-tab>
-      </v-tabs>
-      <v-tabs-items v-model="activeTab" touchless>
-        <v-tab-item key="table">
-          <v-container fluid class="sp-table pa-0">
-            <v-layout row class="sp-table--headers">
-              <v-flex xs2 lg1>
-                <v-checkbox
-                  class="pl-1"
-                  :label="`${activeSkillSum} SP`"
-                  :input-value="overallState === 'all'"
-                  :indeterminate="overallState === 'some'"
-                  @click.native="toggleOverallState"
-                  hide-details/>
-              </v-flex>
-              <v-flex xs3 md1 class="center-align-parent">
-                <b class="center-align-container">Type</b>
-              </v-flex>
-              <v-flex xs7 md9 lg10 class="vertical-align-parent">
-                <b class="vertical-align-container">Letter/Description</b>
-              </v-flex>
-            </v-layout>
-            <v-layout row>
-              <v-flex xs12 class="pa-0">
-                <v-divider/>
-              </v-flex>
-            </v-layout>
-            <v-layout row v-for="(skill, index) in unit.feskills" :key="index" class="sp-table--row">
-              <v-flex xs2 lg1 class="vertical-align-parent">
-                <v-checkbox class="vertical-align-container pl-1" hide-details :label="`${skill.skill.bp} SP`" :input-value="!!activeSkills[index]" @click.native="toggleSkill(index)"/>
-              </v-flex>
-              <v-flex xs3 md1 class="text-xs-center center-align-parent">
-                <span class="center-align-container">
-                  <sp-icon :category="skill.category"/>
+    </template>
+    <template slot="table">
+      <v-container fluid class="pa-0 sp-table" v-if="feSkills">
+        <v-layout row class="sp-table--headers d-align-items-center">
+          <v-flex xs2 lg1>
+            <v-checkbox
+              :label="`${activeSkillSum} SP`"
+              :input-value="overallState === 'all'"
+              :indeterminate="overallState === 'some'"
+              @click.native="toggleOverallState"
+              hide-details
+            />
+          </v-flex>
+          <v-flex xs3 md1 class="text-xs-center">
+            Type
+          </v-flex>
+          <v-flex xs7 md9 lg10>
+            Description
+          </v-flex>
+        </v-layout>
+        <v-layout
+          v-for="(skillEntry, index) in feSkills"
+          :key="index"
+          class="sp-table--row d-align-items-center">
+          <v-flex xs2 lg1>
+            <v-checkbox
+              :label="`${skillEntry.skill.bp} SP`"
+              :input-value="!!activeSkills[index]"
+              @click.native="toggleSkill(index)"
+            />
+          </v-flex>
+          <v-flex xs3 md1 class="text-xs-center">
+            <sp-icon :category="+skillEntry.category" :displaySize="24"/>
+          </v-flex>
+          <v-flex xs7 md9 lg10>
+            <v-layout row wrap class="d-align-items-center">
+              <v-flex xs12 sm8>
+                <span class="d-block">
+                  <b>{{ spIndexToCode(index) }}: </b>
+                  {{ getSkillDescription(skillEntry) }}
                 </span>
+                <i v-if="skillEntry.dependency">
+                  {{ getDependencyText(skillEntry) }}
+                </i>
               </v-flex>
-              <v-flex xs7 md9 lg10 class="text-xs-left">
-                <v-layout row wrap>
-                  <v-flex xs12 sm8 class="sp-table--row--description-col">
-                    <div class="sp-table--row--description-col--desc-text">
-                      <p class="ma-0">
-                        <b>{{ String.fromCharCode(65 + index) }}:</b>
-                        {{ getSkillDescription(skill) }}
-                      </p>
-                      <i v-if="skill.dependency">
-                        {{ getDependencyText(skill) }}
-                      </i>
-                    </div>
-                  </v-flex>
-                  <v-flex xs12 sm4 class="text-xs-right">
-                    <v-btn block v-if="!showTables.includes(index)" flat @click="showTables.push(index)">Show Data</v-btn>
-                    <v-btn block v-else flat @click="showTables = showTables.filter(elem => elem !== index)">Hide Data</v-btn>
-                  </v-flex>
-                </v-layout>
-                <v-slide-y-transition>
-                  <div v-show="showTables.includes(index)">
-                    <effect-list :effects="getBuffList(skill)"/>
-                  </div>
-                </v-slide-y-transition>
+              <v-flex xs12 sm4 class="text-xs-right">
+                <v-btn
+                  v-if="!showTables.includes(index)"
+                  block flat
+                  @click="showTables.push(index)">
+                  Show Data
+                </v-btn>
+                <v-btn
+                  v-else
+                  block flat
+                  @click="showTables = showTables.filter(elem => elem !== index)">
+                  Hide Data
+                </v-btn>
               </v-flex>
             </v-layout>
-          </v-container>
-        </v-tab-item>
-        <v-tab-item key="share">
-          <v-container fluid>
-            <v-layout row wrap>
-              <v-flex xs12 md6>
-                <v-checkbox v-model="copyName" label="Add Unit Name" hide-details/>
-              </v-flex>
-              <v-flex xs12 md6>
-                <v-checkbox v-model="copyBullets" label="Add Bullet Points" hide-details/>
-              </v-flex>
-            </v-layout>
-            <v-layout row>
-              <text-viewer :input-text="sharedText" :change-view="`${activeTab}-${copyName}-${copyBullets}`"/>
-            </v-layout>
-          </v-container>
-        </v-tab-item>
-        <v-tab-item key="json">
-          <json-viewer :json="unit.feskills" :change-view="activeTab"/>
-        </v-tab-item>
-        <v-tab-item key="buff-list">
-          <buff-list :effects="unit.feskills.map(getBuffList).reduce((acc, val) => acc.concat(val), [])"/>
-        </v-tab-item>
-      </v-tabs-items>
-    </v-card-text>
-  </v-card>
+            <v-slide-y-transition>
+              <div v-show="showTables.includes(index)">
+                <!-- lazily render buff table once -->
+                <buff-table v-if="showTables.includes(index) || effectCache[skillEntry.id]" :effects="getSkillEffects(skillEntry)" :showHeaders="true"/>
+              </div>
+            </v-slide-y-transition>
+          </v-flex>
+        </v-layout>
+      </v-container>
+      <span v-else>No SP data found.</span>
+    </template>
+    <template slot="share-build" slot-scope="{ activeTabIndex }">
+      <v-container fluid>
+        <v-layout row wrap>
+          <v-flex xs12 sm6 md4>
+            <v-checkbox v-model="copyName" label="Unit Name" hide-details/>
+          </v-flex>
+          <v-flex xs12 sm6 md4>
+            <v-checkbox v-model="copyBullets" label="Bullet Points" hide-details/>
+          </v-flex>
+          <v-flex xs12 sm6 md4>
+            <v-checkbox v-model="copyCode" label="Letter Code" hide-details/>
+          </v-flex>
+        </v-layout>
+        <v-layout row>
+          <v-flex>
+            <text-viewer :inputText="sharedText" :value="activeTabIndex"/>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </template>
+  </description-card-base>
 </template>
 
 <script>
-import JsonViewer from '@/components/Multidex/JsonViewer';
-import TextViewer from '@/components/Multidex/TextViewer';
-import EffectList from '@/components/Multidex/EffectList/MainTable';
-import SPIcon from '@/components/Multidex/Units/SPIcon';
-import BuffList from '@/components/Multidex/BuffList/BuffList';
+import DescriptionCardBase from '@/components/Multidex/DescriptionCardBase';
+import CardTitleWithLink from '@/components/CardTitleWithLink';
+import SpIcon from '@/components/Multidex/Units/SpIcon';
+import BuffTable from '@/components/Multidex/BuffTable/MainTable';
+import TextViewer from '@/components/TextViewer';
+import { getSpSkillEffects, spIndexToCode, spCodeToIndex } from '@/modules/core/units';
 import debounce from 'lodash/debounce';
 
 export default {
-  props: ['unit'],
+  props: {
+    unit: {
+      type: Object,
+    },
+    logger: {
+      required: true,
+    },
+  },
   components: {
-    'json-viewer': JsonViewer,
-    'text-viewer': TextViewer,
-    'effect-list': EffectList,
-    'buff-list': BuffList,
-    'sp-icon': SPIcon,
+    DescriptionCardBase,
+    CardTitleWithLink,
+    SpIcon,
+    BuffTable,
+    TextViewer,
   },
   computed: {
-    feskillSum () {
-      if (!this.unit.feskills) {
+    feSkills () {
+      return this.unit && this.unit.feskills;
+    },
+    allEnhancementsSum () {
+      if (!this.feSkills) {
         return 0;
       }
-      return this.unit.feskills
-        .map(s => s.skill.bp)
+
+      return this.feSkills.map(s => s.skill.bp)
         .reduce((acc, val) => acc + val, 0);
     },
     overallState () {
-      if (this.activeSkillSum === this.feskillSum) {
+      if (this.activeSkillSum === this.allEnhancementsSum) {
         return 'all';
       } else if (this.activeSkillSum === 0) {
         return 'none';
@@ -147,30 +154,66 @@ export default {
         return 'some';
       }
     },
+    titleHtml () {
+      const enhancements = this.$route.query.enhancements;
+      return ['SP Enhancments', enhancements ? `(${enhancements})` : ''].filter(val => val).join(' ');
+    },
+    allEffects () {
+      return !this.feSkills ? [] : this.feSkills
+        .map(s => this.getSkillEffects(s, false))
+        .reduce((acc, val) => acc.concat(val), []);
+    },
   },
   data () {
     return {
       activeSkills: {},
-      activeTab: '',
       activeSkillSum: 0,
       showTables: [],
-      sharedText: '',
+      sharedText: 'No SP enhancements selected',
       copyName: false,
       copyBullets: false,
+      copyCode: false,
+      effectCache: {},
     };
   },
-  watch: {
-    copyName () {
-      this.computeSharedText();
-    },
-    copyBullets () {
-      this.computeSharedText();
-    },
-  },
-  mounted () {
-    this.toggleSkill(0, false);
-  },
   methods: {
+    spIndexToCode,
+    getSPSkillWithID (id) {
+      let skillId = id;
+      if (skillId.indexOf('@') > -1) {
+        skillId = skillId.split('@')[1];
+      }
+      const result = this.feSkills.filter(s => s.id.toString() === skillId);
+      return result[0];
+    },
+    getSkillDescription (skillEntry) {
+      const { desc = '', name = '' } = skillEntry.skill;
+      if (desc.trim() === name.trim()) {
+        return desc || 'No Description';
+      } else {
+        return (desc.length > name.length) ? desc : [name, desc ? `(${desc})` : ''].filter(val => val).join(' ');
+      }
+    },
+    getDependencyText (skillEntry) {
+      const dependentSkillEntry = this.getSPSkillWithID(skillEntry.dependency);
+
+      if (dependentSkillEntry) {
+        return `Requires "${dependentSkillEntry.skill.desc}"`;
+      }
+
+      return skillEntry['dependency comment'] || 'Requires another enhancement';
+    },
+    getSkillEffects (skillEntry, cacheResult = true) {
+      if (this.effectCache[skillEntry.id]) {
+        return this.effectCache[skillEntry.id];
+      }
+      const effects = getSpSkillEffects(skillEntry);
+      // use cacheResult boolean to not prematurely render tables when getting allEffects data
+      if (cacheResult) {
+        this.effectCache[skillEntry.id] = effects;
+      }
+      return effects;
+    },
     toggleOverallState () {
       if (this.overallState === 'all') {
         Object.keys(this.activeSkills)
@@ -178,16 +221,15 @@ export default {
             this.toggleSkill(key, false);
           });
       } else {
-        Object.keys(this.unit.feskills)
+        Object.keys(this.feSkills)
           .forEach((s, i) => {
             this.toggleSkill(i, true);
           });
       }
-      // console.debug('toggling state', this.activeSkills);
     },
     toggleSkill (index, value) {
       this.activeSkills[index] = (value === undefined) ? !this.activeSkills[index] : !!value;
-      const skill = this.unit.feskills[index];
+      const skill = this.feSkills[index];
       if (this.activeSkills[index] && skill.dependency) {
         this.checkSkillDependencyBoxes(skill);
       } else if (!this.activeSkills[index]) {
@@ -195,17 +237,19 @@ export default {
       }
       this.computeActiveSum();
       this.computeSharedText();
+      this.syncLocalEnhancementsToUrl();
     },
     computeSharedText: debounce(function () {
       const activeSkills = Object.keys(this.activeSkills)
         .filter(key => this.activeSkills[key]);
       if (activeSkills.length > 0) {
-        const skills = activeSkills.map(key => this.unit.feskills[key])
-          .map((skill) => {
-            const cost = skill.skill.bp;
-            const desc = skill.skill.desc || skill.skill.name;
+        const skills = activeSkills.map(key => ({ skillEntry: this.feSkills[key], index: +key }))
+          .map(({skillEntry, index }) => {
+            const cost = skillEntry.skill.bp;
+            const desc = this.getSkillDescription(skillEntry);
             const bullet = this.copyBullets ? '* ' : '';
-            return `${bullet}[${cost} SP] - ${desc}`;
+            const code = this.copyCode ? `${spIndexToCode(index)}: ` : '';
+            return `${bullet}[${cost} SP] - ${code}${desc}`;
           }).join('\n')
           .concat(`\n\nTotal: ${this.activeSkillSum} SP`);
 
@@ -221,33 +265,42 @@ export default {
     computeActiveSum: debounce(function () {
       this.activeSkillSum = Object.keys(this.activeSkills)
         .filter(key => this.activeSkills[key])
-        .map(key => this.unit.feskills[key].skill.bp)
+        .map(key => this.feSkills[key].skill.bp)
         .reduce((acc, val) => acc + val, 0);
     }, 50),
-    getSPSkillWithID (id) {
-      let skillId = id;
-      if (skillId.indexOf('@') > -1) {
-        skillId = skillId.split('@')[1];
+    syncLocalEnhancementsToUrl: debounce(function () {
+      const enhancements = Object.keys(this.activeSkills)
+        .filter(key => this.activeSkills[key])
+        .map(key => spIndexToCode(+key))
+        .join('');
+
+      this.$router.replace({
+        path: this.$route.path,
+        query: {
+          ...this.$route.query,
+          enhancements: enhancements || undefined,
+        },
+      });
+    }, 500),
+    syncUrlToLocalEnhancements () {
+      this.logger.debug(this.$route.query);
+      if (this.$route.query.enhancements) {
+        const enhancements = this.$route.query.enhancements.slice()
+          .split('').map(char => spCodeToIndex(char));
+        enhancements.forEach(index => {
+          if (index >= 0 && index < this.feSkills.length) {
+            this.toggleSkill(index, true);
+          } else {
+            this.logger.warn('ignoring invalid index', index);
+          }
+        });
       }
-      const result = this.unit.feskills
-        .filter(s => s.id.toString() === skillId);
-
-      return result[0];
-    },
-    getDependencyText (skill) {
-      const spSkill = this.getSPSkillWithID(skill.dependency);
-
-      if (spSkill) {
-        return `Requires "${spSkill.skill.desc}"`;
-      }
-
-      return skill['dependency comment'] || 'Requires another enhancement';
     },
     // check all boxes current skill requires
     checkSkillDependencyBoxes (skill) {
       const dependentSkill = this.getSPSkillWithID(skill.dependency);
       // console.debug({ dependentSkill });
-      this.unit.feskills.forEach((s, i) => {
+      this.feSkills.forEach((s, i) => {
         if (s.id === dependentSkill.id) {
           this.toggleSkill(i, true);
           if (s.dependency) {
@@ -259,62 +312,66 @@ export default {
     uncheckSkillDependencyBoxes (skill) {
       const activeDependencySkills = Object.keys(this.activeSkills)
         .filter(key => this.activeSkills[key])
-        .map(key => this.unit.feskills[key])
+        .map(key => this.feSkills[key])
         .filter(s => s.dependency && s.dependency.indexOf(skill.id) > -1);
 
       const activeDependencySkillIDs = activeDependencySkills.map(s => s.id);
-      this.unit.feskills.forEach((s, i) => {
+      this.feSkills.forEach((s, i) => {
         if (activeDependencySkillIDs.indexOf(s.id) > -1) {
           this.toggleSkill(i, false);
         }
       });
       activeDependencySkills.forEach(this.uncheckSkillDependencyBoxes);
     },
-    getBuffList (skill) {
-      const buffs = [];
-      skill.skill.effects.forEach(e => {
-        Object.keys(e).forEach(type => {
-          const effect = e[type];
-          buffs.push({ sp_type: type, ...effect });
-        });
-      });
-      return buffs;
+  },
+  watch: {
+    copyName () {
+      this.computeSharedText();
     },
-    getSkillDescription (feskillEntry) {
-      const { desc = '', name = '' } = feskillEntry.skill;
-      if (desc === name) {
-        return desc || 'No Description';
-      } else {
-        return (desc.length > name.length) ? desc : `${name} (${desc})`;
-      }
+    copyBullets () {
+      this.computeSharedText();
     },
+    copyCode () {
+      this.computeSharedText();
+    },
+  },
+  mounted () {
+    this.syncUrlToLocalEnhancements();
   },
 };
 </script>
 
-<style>
-.theme--dark .sp-table--row:nth-child(even) {
-  background-color: var(--border-color-dark);
-}
+<style lang="less">
+.sp-table {
+  --table-border-color: var(--background-color-alt);
+  --table-background-color: var(--background-color-alt--lighten-1);
+  --table-border-settings: 1px solid var(--table-border-color);
 
-.theme--light .sp-table--row:nth-child(even) {
-  background-color: var(--border-color-light);
-}
+  .v-input--checkbox {
+    margin-top: 0;
+    padding-left: 4px;
 
-.sp-table--row .checkbox label{
-  text-overflow: initial;
-  overflow-x: visible;
-}
+    .v-input__slot {
+      margin-bottom: 0;
+    }
 
-@media screen and (min-width: 600px) {
-  .sp-table--row--description-col {
-    position: relative;
+    .v-messages {
+      display: none;
+    }
   }
 
-  .sp-table--row--description-col--desc-text {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+  .sp-table--headers {
+    font-weight: bold;
+    border-bottom: var(--table-border-settings);
+  }
+
+  .sp-table--row {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 8px;
+    &:nth-child(odd) {
+      background-color: var(--table-border-color);
+    }
   }
 }
 </style>

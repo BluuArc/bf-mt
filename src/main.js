@@ -1,26 +1,17 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import '@babel/polyfill';
 import Vue from 'vue';
-import App from './App';
+import './plugins/vuetify';
+import App from './App.vue';
 import router from './router';
-import store from './store';
-import Vuetify from 'vuetify';
-import 'vuetify/dist/vuetify.min.css';
+import store from './store/index';
 
-Vue.use(Vuetify);
+import TreeView from 'vue-json-tree-view';
+Vue.use(TreeView);
 
-router.beforeEach((to, from, next) => {
-  document.title = `BF-MT - ${to.name}`;
-  next();
-});
+Vue.config.productionTip = false
 
-Vue.config.productionTip = false;
-
-/* eslint-disable no-new */
 new Vue({
-  el: '#app',
   router,
   store,
-  components: { App },
-  template: '<App/>',
-});
+  render: h => h(App)
+}).$mount('#app')

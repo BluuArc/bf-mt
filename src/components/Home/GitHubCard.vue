@@ -1,12 +1,8 @@
 <template>
-  <v-card raised class="github-commit-card">
+  <v-card raised id="github-commit-card">
     <v-card-title primary-title>
       <v-flex>
-        <v-badge v-if="numNewCommits > 0">
-          <span slot="badge">{{ numNewCommits }}</span>
-          <h3 class="headline">GitHub Commits</h3>
-        </v-badge>
-        <h3 v-else class="headline">GitHub Commits</h3>
+        <h1 class="title">GitHub Commits</h1>
       </v-flex>
       <v-flex :class="{ 'text-xs-right': $vuetify.breakpoint.smAndUp }">
         <span :title="getFormattedDate(branches.master.updateTime).full">Updated {{ getFormattedDate(branches.master.updateTime).diff }}</span>
@@ -16,10 +12,25 @@
       <v-container fluid class="pt-0">
         <v-layout row wrap>
           <v-flex xs12 md6 v-for="(branch, name) in branches" :key="name">
-            <h3 class="subheading">
-              <b><a :href="`https://github.com/BluuArc/bf-mt/commits/${name}`" rel="noopener" target="_blank" style="color: inherit;">{{ name }}</a></b>
+            <v-badge v-if="branchCounts[name] && branchCounts[name] > 0" left>
+              <span slot="badge" v-text="branchCounts[name]"></span>
+              <h2 class="subheading">
+                <b>
+                  <a :href="`https://github.com/BluuArc/bf-mt/commits/${name}`"
+                    rel="noopener" target="_blank"
+                    style="color: inherit;" v-text="name"/>
+                </b>
+                <v-icon small class="pl-1">fas fa-external-link-alt</v-icon>
+              </h2>
+            </v-badge>
+            <h2 v-else class="subheading">
+              <b>
+                <a :href="`https://github.com/BluuArc/bf-mt/commits/${name}`"
+                  rel="noopener" target="_blank"
+                  style="color: inherit;" v-text="name"/>
+              </b>
               <v-icon small class="pl-1">fas fa-external-link-alt</v-icon>
-            </h3>
+            </h2>
             <p class="body-1" v-text="branch.description"/>
             <v-container fluid class="pa-0">
               <v-layout row v-if="branch.commits.length === 0">
@@ -27,7 +38,7 @@
                   <h3 class="title">No commits found.</h3>
                 </v-flex>
               </v-layout>
-              <v-layout row wrap v-for="item in branch.commits.slice(0, 10)" :key="item.sha">
+              <v-layout row v-for="item in branch.commits.slice(0,10)" :key="item.sha">
                 <v-flex xs3 sm1 class="center-align-parent">
                   <div class="center-align-container">
                     <v-avatar size="36px">
@@ -38,10 +49,16 @@
                 <v-flex xs9 sm11>
                   <p class="body-2 mb-0" v-text="item.commit.message"/>
                   <p class="body-1 mb-0">
-                    <b>{{ item.author.login }}</b>
-                    <span>committed</span>
-                    <span style="white-space: nowrap;" :title="getFormattedDate(item.commit.author.date).full">{{ getFormattedDate(item.commit.author.date).diff }}</span>
-                    <a style="white-space: nowrap; color: inherit;" target="_blank" rel="noopener" :href="item.html_url">({{ item.sha.slice(0, 8) }})</a>
+                    <span v-html="`<b>${item.author.login}</b> committed`"/>
+                    <span
+                      style="white-space: nowrap;"
+                      :title="getFormattedDate(item.commit.author.date).full">
+                      {{ getFormattedDate(item.commit.author.date).diff }}
+                    </span>
+                    <a
+                      style="white-space: nowrap; color: inherit;"
+                      target="_blank" rel="noopener"
+                      :href="item.html_url" v-text="item.sha.slice(0, 8)"/>
                   </p>
                 </v-flex>
               </v-layout>
@@ -54,30 +71,40 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
-import dayjs from 'dayjs';
-import relativeTime from 'dayjs/plugin/relativeTime';
-dayjs.extend(relativeTime);
+import { mapState, mapGetters } from 'vuex';
+import { getFormattedDate } from '@/modules/utils';
+
 export default {
   computed: {
-    ...mapState('settings', ['branches', 'numNewCommits']),
+    ...mapState('github', ['lastSeenTime', 'branches']),
+    ...mapGetters('github', ['getNumberOfNewCommits']),
+  },
+  data () {
+    return {
+      branchCounts: {},
+    };
   },
   methods: {
-    getFormattedDate (inputDate) {
-      const date = dayjs(inputDate);
-      return {
-        full: date.toDate().toLocaleString(),
-        time: date.toDate().toLocaleTimeString(),
-        date: date.toDate().toLocaleDateString(),
-        diff: date.fromNow(),
-      };
+    getFormattedDate,
+    updateCommitCount () {
+      Object.keys(this.branches).forEach(branch => {
+        this.branchCounts[branch] = this.getNumberOfNewCommits([branch]);
+      });
     },
+  },
+  watch: {
+    branches: {
+      deep: true,
+      handler () {
+        this.updateCommitCount();
+      },
+    },
+    lastSeenTime () {
+      this.updateCommitCount();
+    },
+  },
+  mounted () {
+    this.updateCommitCount();
   },
 };
 </script>
-
-<style>
-.github-commit-card .list__tile {
-  padding-left: 0;
-}
-</style>

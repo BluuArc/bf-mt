@@ -1,182 +1,119 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import SettingsModule from './modules/settings';
-import UnitsModule from './modules/units';
-import ItemsModule from './modules/items';
-import BurstModule from './modules/bursts';
-import ExtraSkillModule from './modules/extra-skills';
-import LeaderSkillModule from './modules/leader-skills';
-import MissionModule from './modules/missions';
-import DictionaryModule from './modules/dictionary';
-import downloadWorker from './instances/download-worker';
+import debounce from 'lodash/debounce';
+import { delay } from '@/modules/utils';
+import getUpdateTimes from './instances/update-data-singleton';
+import settings from './settings';
+import github from './github';
+import multidexModules, { moduleInfo as multidexModuleInfo } from './multidex';
 
-const statLogStart = (label, isCollapsed = true) => {
-  console.time(label);
-  if (isCollapsed) {
-    console.groupCollapsed(label);
-  } else {
-    console.group(label);
-  }
-};
-const statLogEnd = (label) => { console.timeEnd(label); console.groupEnd(); };
+import { Logger } from '@/modules/Logger';
+const logger = new Logger({ prefix: '[STORE]' });
 
 Vue.use(Vuex);
-export const moduleInfo = [
+export const moduleInfo = Object.freeze([
   {
     name: 'settings',
     fullName: 'Settings',
     link: '/settings',
   },
   {
-    name: 'units',
-    fullName: 'Units',
-    type: 'multidex',
-    link: '/multidex/units',
+    name: 'github',
+    fullName: 'GitHub Commits',
+    link: '/',
   },
-  {
-    name: 'items',
-    fullName: 'Items',
-    type: 'multidex',
-    link: '/multidex/items',
-  },
-  {
-    name: 'bursts',
-    fullName: 'Bursts',
-    type: 'multidex',
-    link: '/multidex/bursts',
-  },
-  {
-    name: 'extraSkills',
-    fullName: 'Extra Skills',
-    type: 'multidex',
-    link: '/multidex/extra-skills',
-  },
-  {
-    name: 'leaderSkills',
-    fullName: 'Leader Skills',
-    type: 'multidex',
-    link: '/multidex/leader-skills',
-  },
-  {
-    name: 'missions',
-    fullName: 'Missions',
-    type: 'multidex',
-    link: '/multidex/missions',
-  },
-  {
-    name: 'dictionary',
-    fullName: 'Dictionary',
-    type: 'multidex',
-    link: '/multidex/dictionary',
-  },
-];
-export const modules = moduleInfo.map(m => m.name);
-const store = new Vuex.Store({
+  ...multidexModuleInfo,
+]);
+
+export default new Vuex.Store({
   modules: {
-    settings: SettingsModule,
-    units: UnitsModule,
-    items: ItemsModule,
-    bursts: BurstModule,
-    extraSkills: ExtraSkillModule,
-    leaderSkills: LeaderSkillModule,
-    missions: MissionModule,
-    dictionary: DictionaryModule,
+    settings,
+    github,
+    ...multidexModules,
   },
   state: {
     disableHtmlOverflow: false,
-    inInitState: false,
-    modules,
-    sortAndFilterSettings: {},
+    inInitState: true,
     updateTimes: {},
-    multidexModulesWithUpdates: {
-      gl: [],
-      eu: [],
-      jp: [],
-    },
     loadingMessage: '',
+    loadingState: false, // changed mostly by MultidexDataWrapper, accessed by all
+    iconKeyConfigCache: {},
   },
   mutations: {
-    setHtmlOverflow (state, overflowState = false) {
-      state.disableHtmlOverflow = !!overflowState;
-    },
     setInitState (state, newState = false) {
       state.inInitState = !!newState;
     },
-    setSortAndFilterSettings (state, { key, filter, sort }) {
-      state.sortAndFilterSettings[key] = { filter, sort };
+    setLoadingMessage (state, message = '') {
+      logger.debug('LOADING MESSAGE:', message);
+      state.loadingMessage = message;
     },
     setUpdateTimes (state, newTimes = {}) {
       state.updateTimes = newTimes;
     },
-    setMultidexModulesWithUpdates (state, { newUpdates = [], server = 'gl' }) {
-      state.multidexModulesWithUpdates[server] = newUpdates.slice();
+    setLoadingState (state, value) {
+      state.loadingState = !!value;
     },
-    setLoadingMessage (state, message = '') {
-      state.loadingMessage = message;
+    setHtmlOverflowDisableState (state, value) {
+      state.disableHtmlOverflow = !!value;
+    },
+    setValueForIconKey (state, { key, value }) {
+      state.iconKeyConfigCache[key] = value;
     },
   },
   actions: {
+    setLoadingStateDebounced: debounce(async function({ commit, state }, valueGetter) {
+      const newValue = !!valueGetter();
+      if (state.loadingState !== newValue) {
+        await delay(0);
+        commit('setLoadingState', newValue);
+      }
+    }, 500),
     async init ({ dispatch, state, commit }) {
       commit('setInitState', true);
-      for (const m of modules.slice(1)) {
-        commit(`${m}/setLoadState`, true);
-      }
+      const modules = moduleInfo.map(({ name }) => name);
+      multidexModuleInfo.forEach(({ name }) => {
+        commit(`${name}/setLoadState`, true);
+      });
 
       commit('setLoadingMessage', 'Initializing data');
-      statLogStart('overallInit', false);
-      statLogStart('initOnly', false);
+      await delay(0);
       for (const m of modules) {
-        statLogStart(`init-${m}`);
-        console.debug('initializing', m);
+        logger.debug('initializing', m);
         await dispatch(`${m}/init`);
-        if (m !== 'settings') {
+        if (m !== 'settings' && m !== 'github') {
           commit(`${m}/setLoadState`, true);
         }
-        statLogEnd(`init-${m}`);
       }
-      statLogEnd('initOnly');
+      await dispatch('settings/init');
 
       commit('setLoadingMessage', `Setting data to last set server (${(state.settings.activeServer || 'gl').toUpperCase()})`);
       await dispatch('setActiveServer', state.settings.activeServer);
-      statLogEnd('overallInit');
       commit('setLoadingMessage');
       commit('setInitState', false);
     },
-    async setActiveServer ({ dispatch, commit }, server = 'gl') {
-      for (const m of modules.slice(1)) {
-        commit(`${m}/setLoadState`, true);
-      }
-      statLogStart('overallServerChange', false);
-      for (const m of modules) {
-        statLogStart(`serverChange-${m}`);
+    async setActiveServer ({ dispatch, commit }, server = 'gl') { // eslint-disable-line no-unused-vars
+      const modules = moduleInfo.map(({ name }) => name);
+      multidexModuleInfo.forEach(({ name }) => {
+        commit(`${name}/setLoadState`, true);
+      });
+
+      await delay(0);
+      for (const m of modules.filter(m => m !== 'github')) {
         try {
           await dispatch(`${m}/setActiveServer`, server);
         } catch (err) {
-          console.error(err);
+          logger.error(err);
         } finally {
           if (m !== 'settings') {
             commit(`${m}/setLoadState`, false);
           }
         }
-        statLogEnd(`serverChange-${m}`);
       }
-      statLogEnd('overallServerChange');
     },
-    async fetchUpdateTimes ({ commit, state }) {
-      const url = `${location.origin}${location.pathname}static/bf-data/update-stats.json`;
-      const data = await downloadWorker.postMessage('getJson', [url]);
-      state.modules.forEach(m => {
-        if (data[m]) {
-          Object.keys(data[m]).forEach(server => {
-            data[m][server] = new Date(data[m][server]);
-          });
-        }
-      });
-      console.debug('update data', data);
-      commit('setUpdateTimes', data);
+    async fetchUpdateTimes ({ commit }, forceRefresh) {
+      const updateTimes = await getUpdateTimes(forceRefresh);
+      commit('setUpdateTimes', updateTimes);
     },
   },
   strict: true,
 });
-
-export default store;
