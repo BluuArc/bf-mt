@@ -194,7 +194,7 @@ export default {
       }
     },
     getIconConfigForKey (iconKeyInput = '') {
-      if (this.iconKeyConfigCache[iconKeyInput]) {
+      if (this.iconKeyConfigCache[iconKeyInput] !== undefined) {
         return this.iconKeyConfigCache[iconKeyInput];
       }
       let config = {};
@@ -273,7 +273,7 @@ export default {
       const isPassiveType = !!match.type && unitTypes.includes(match.type.toLowerCase());
       return isPassiveType;
     },
-    getDropType (iconKey) {
+    getDropType (iconKey = '') {
       return dropTypes.find(type => iconKey.endsWith(`${type.toUpperCase()}DROP`));
     },
     isDropType (iconKey) {
