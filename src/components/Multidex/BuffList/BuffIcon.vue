@@ -259,7 +259,8 @@ export default {
       return iconKey.startsWith('INSTANT');
     },
     getTypeInfoFromPassiveTypeStatKey (iconKey = 'PASSIVE_BUFF_ELEMENTHPUP') {
-      const regexMatch = iconKey.match(/^PASSIVE_BUFF_(?<element>.+)(CRTRATE|HP|ATK|DEF|REC)UP$/);
+      const regexMatch = iconKey.match(/^PASSIVE_BUFF_(.+)(CRTRATE|HP|ATK|DEF|REC)UP$/);
+      // logger.warn(regexMatch);
       return regexMatch && !this.passiveTypeStatKeyBlacklist.includes(iconKey) && {
         type: regexMatch[1],
         stat: regexMatch[2],
