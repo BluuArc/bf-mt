@@ -13,7 +13,7 @@ const generateUnknownEntry = (id) => ({
 const unknownProcs = {
   ...(() => {
     const entries = {};
-    Object.keys(procTypes.unknown_proc).forEach(id => {
+    procTypes.unknown_proc.forEach(id => {
       entries[id] = helper.generateDefaultEntry(id);
     });
     return entries;

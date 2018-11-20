@@ -6,7 +6,7 @@ const procTypes = require('@/assets/buff-translation/procs.json');
 const procs = {
   ...(() => {
     const entries = {};
-    Object.keys(procTypes.proc).forEach(id => {
+    procTypes.proc.forEach(id => {
       entries[id] = helper.generateDefaultEntry(id);
     });
     return entries;

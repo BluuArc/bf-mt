@@ -15,7 +15,7 @@ const getTargetData = (effect, isLS) => (!isLS && !(effect.sp_type === 'add to p
 const passives = {
   ...(() => {
     const entries = {};
-    Object.keys(passiveTypes.passive).forEach(id => {
+    passiveTypes.passive.forEach(id => {
       entries[id] = helper.generateDefaultEntry(id);
     });
     return entries;

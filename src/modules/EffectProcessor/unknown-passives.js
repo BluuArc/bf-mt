@@ -15,7 +15,7 @@ const generateUnknownEntry = (id) => ({
 const unknownPassives = {
   ...(() => {
     const entries = {};
-    Object.keys(passiveTypes.unknown_passive).forEach(id => {
+    passiveTypes.unknown_passive.forEach(id => {
       entries[id] = helper.generateDefaultEntry(id);
     });
     return entries;

@@ -6,6 +6,8 @@ import UnknownProcs from './unknown-procs';
 import Passives from './passives';
 import UnknownPassives from './unknown-passives';
 
+import { generateDefaultEntry, getEffectId } from './processor-helper';
+
 import { Logger } from '@/modules/Logger';
 
 const logger = new Logger({ prefix: '[Effect-Processor/Main]' });
@@ -48,6 +50,13 @@ export default class EffectProcessor {
         return Passives[effect['passive id']].process(effect, context);
       } else if (effect['unknown passive id'] && UnknownPassives[effect['unknown passive id']]) {
         return UnknownPassives[effect['unknown passive id']].process(effect, context);
+      } else {
+        logger.warn('unknown entry', effect, context);
+        return {
+          ...generateDefaultEntry(getEffectId(effect)),
+          desc: `Unknown buff ${getEffectId(effect)}`,
+          type: [effectTypes.UNKNOWN.name],
+        };
       }
     } catch (err) {
       logger.error('Error parsing effect', { effect, context }, err);
