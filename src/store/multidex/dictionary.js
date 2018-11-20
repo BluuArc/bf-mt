@@ -119,7 +119,7 @@ export default {
           const pageDb = {};
           const loadPromises = [];
           let countFinished = 0;
-          for (let i = 1; i <= 9; ++i) {
+          for (let i = 0; i <= 9; ++i) {
             const url = `${baseUrl}/dictionary-${server}-${i}.json?${cacheBustingParam}`;
             loadPromises.push(downloadWorker
               .postMessage('getJson', [url])
@@ -134,6 +134,7 @@ export default {
           }
 
           await Promise.all(loadPromises);
+          tempLogger.debug('result key length', Object.keys(pageDb).length);
           commit('setLoadingMessage', `Storing data for ${server.toUpperCase()} server`);
           await dispatch('saveData', { data: pageDb, server });
           tempLogger.debug('finished updating data');
