@@ -86,7 +86,7 @@
         {{ setDataIsLoading(loadingState) }}
         {{ onStateUpdate(stateInfo) }}
       </span>
-      <!-- <site-trackers/> -->
+      <site-trackers/>
     </v-app>
   </multidex-data-wrapper>
 </template>
@@ -96,6 +96,7 @@ import logger from '@/modules/Logger';
 import { servers } from '@/modules/constants';
 import { mapActions, mapState, mapGetters } from 'vuex';
 import MultidexDataWrapper from '@/components/MultidexDataWrapper';
+import SiteTrackers from '@/components/SiteTrackers';
 
 import { moduleInfo } from '@/store';
 const multidexModules = moduleInfo.filter(m => m.type === 'multidex');
@@ -103,6 +104,7 @@ export default {
   name: 'App',
   components: {
     MultidexDataWrapper,
+    SiteTrackers,
   },
   computed: {
     ...mapState('settings', ['lightMode', 'activeServer']),
@@ -252,7 +254,6 @@ export default {
     this.pageActiveServer = this.activeServer;
     this.htmlOverflowChangeHandler();
     await this.fetchUpdateTimes();
-    logger.todo('ensure analytics is enabled on deploy');
   },
 };
 </script>

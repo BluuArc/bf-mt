@@ -202,7 +202,6 @@ export default {
     },
   },
   mounted () {
-    this.logger.warn('TODO: styling and icons');
     this.syncInputToLocal();
   },
 }
