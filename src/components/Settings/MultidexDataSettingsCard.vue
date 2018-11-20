@@ -2,7 +2,7 @@
   <multidex-data-wrapper>
     <generic-settings-card
       slot-scope="{ stateInfo, actionInfo, loadingState }"
-      :disable-submission="!formHasChanged"
+      :disable-submission="!formHasChanged || loadingState"
       :form-reset="resetForm"
       :form-submit="() => applyChanges(actionInfo)">
       <v-layout slot="title">
