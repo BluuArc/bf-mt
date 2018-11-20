@@ -74,6 +74,18 @@
       :xlink:href="require('@/assets/buff-translation/raid/raid_room_time.png')"
       x="24" y="0"
       transform="scale(0.55)"/>
+    <template v-if="['zel', 'karma'].includes(getDropType(iconKey))">
+      <image
+        v-if="getDropType(iconKey) === 'zel'"
+        width="102" height="102"
+        :xlink:href="require('@/assets/zell_thum.png')"
+        transform="scale(0.3)"/>
+      <image
+        v-else
+        width="102" height="102"
+        :xlink:href="require('@/assets/karma_thum.png')"
+        transform="scale(0.3)"/>
+    </template>
     <image
       v-if="iconKey.includes('HPTHRESH')"
       :width="hpThreshForegroundIconConfig.width" :height="hpThreshForegroundIconConfig.height"
@@ -100,6 +112,7 @@ import {
   ailmentBuffIconKeys,
   unitTypes,
   elements,
+  dropTypes,
 } from '@/modules/constants';
 import IconKeyMappings from '@/modules/EffectProcessor/icon-key-mappings';
 import logger from '@/modules/Logger';
@@ -189,6 +202,10 @@ export default {
           this.getTypeInfoFromPassiveTypeStatKey(iconKeyInput).stat,
           'UP'
         ].filter(v => v).join('');
+      } else if (['zel', 'karma'].includes(this.getDropType(iconKeyInput))) {
+        iconKey = 'BUFF_GENERICDROP';
+      } else if (this.isDropType(iconKeyInput)) {
+        iconKey = `BUFF_${this.getDropType(iconKeyInput).toUpperCase()}DROP`
       } else if (this.isPassiveIcon(iconKeyInput) || this.isInstantIcon(iconKeyInput)) {
         iconKey = this.getBattleBuffKeyFromCustomKey(iconKeyInput);
       } else {
@@ -247,6 +264,12 @@ export default {
       const match = this.getTypeInfoFromPassiveTypeStatKey(iconKey) || {};
       const isPassiveType = !!match.type && unitTypes.includes(match.type.toLowerCase());
       return isPassiveType;
+    },
+    getDropType (iconKey) {
+      return dropTypes.find(type => iconKey.endsWith(`${type.toUpperCase()}DROP`));
+    },
+    isDropType (iconKey) {
+      return !!this.getDropType(iconKey);
     },
   },
 };
