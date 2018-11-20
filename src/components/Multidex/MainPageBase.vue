@@ -292,7 +292,7 @@ import { mapState, mapActions, mapMutations } from 'vuex';
 import debounce from 'lodash/debounce';
 import { Logger } from '@/modules/Logger';
 import { moduleInfo } from '@/store/multidex';
-import { generateStateInfo, generateActionInfo } from '@/modules/utils';
+import { generateStateInfo, generateActionInfo, delay } from '@/modules/utils';
 import { servers, missionLocationTypes } from '@/modules/constants';
 import FilterOptionsHelper from '@/modules/FilterOptionsHelper';
 import LoadingIndicator from '@/components/LoadingIndicator';
@@ -867,8 +867,18 @@ export default {
     showPassiveSelector () {
       this.setHtmlOverflow();
     },
-    showEntryDialog () {
+    async showEntryDialog (isShowing) {
       this.setHtmlOverflow();
+
+      if (!isShowing) {
+        // fix for bottom padding going missing after dialog closes
+        await delay(1000);
+        const vContent = document.querySelector('.application--wrap .v-content');
+        if (vContent.style.paddingBottom !== '56px' ) {
+          logger.debug('changing padding');
+          vContent.style.paddingBottom = '56px';
+        }
+      }
     },
     showLadSelector () {
       this.setHtmlOverflow();
