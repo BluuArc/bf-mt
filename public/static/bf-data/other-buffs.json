@@ -987,6 +987,32 @@
         }
       ]
     },
+    "98": {
+      "buff turns (98)": [
+        {
+          "value": "-1",
+          "context": [
+            "items",
+            "819167-gl",
+            "effect",
+            "1",
+            "buff"
+          ]
+        }
+      ],
+      "unknown buff params": [
+        {
+          "value": "4&2000&2000&100&0",
+          "context": [
+            "items",
+            "819167-gl",
+            "effect",
+            "1",
+            "buff"
+          ]
+        }
+      ]
+    },
     "99": {
       "buff turns (99)": [
         {

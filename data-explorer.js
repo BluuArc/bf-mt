@@ -23,13 +23,13 @@ function loadData() {
       if (data[type][dataRangeSymbol]) {
         const [min, max] = data[type][dataRangeSymbol];
         for (let i = min; i <= max; ++i) {
-          const fileData = JSON.parse(fs.readFileSync(`static/bf-data/${type}-${server}-${i}.json`, 'utf8'));
+          const fileData = JSON.parse(fs.readFileSync(`public/static/bf-data/${type}-${server}-${i}.json`, 'utf8'));
           Object.keys(fileData).forEach(entryKey => {
             aggregate[`${entryKey}-${server}`] = fileData[entryKey];
           });
         }
       } else {
-        const fileData = JSON.parse(fs.readFileSync(`static/bf-data/${type}-${server}.json`, 'utf8'));
+        const fileData = JSON.parse(fs.readFileSync(`public/static/bf-data/${type}-${server}.json`, 'utf8'));
         Object.keys(fileData).forEach(entryKey => {
           aggregate[`${entryKey}-${server}`] = fileData[entryKey];
         });
@@ -157,19 +157,29 @@ function readMissionValues() {
   return aggregate;
 }
 
+function convertToIdKeysOnly (aggregate) {
+  Object.keys(aggregate).forEach(type => {
+    aggregate[type] = Object.keys(aggregate[type]);
+  });
+  return aggregate;
+}
+
 function main() {
   loadData();
   // const procValues = readProcValues();
-  // fs.writeFileSync("static/bf-data/procs.json", JSON.stringify(procValues, null, 2), 'utf8');
+  // fs.writeFileSync("public/static/bf-data/procs.json", JSON.stringify(procValues, null, 2), 'utf8');
+  // fs.writeFileSync("public/static/bf-data/procs-ids.json", JSON.stringify(convertToIdKeysOnly(procValues), null, 2), 'utf8');
 
   // const passiveValues = readPassiveValues();
-  // fs.writeFileSync("static/bf-data/passives.json", JSON.stringify(passiveValues, null, 2), 'utf8');
+  // fs.writeFileSync("public/static/bf-data/passives.json", JSON.stringify(passiveValues, null, 2), 'utf8');
+  // fs.writeFileSync("public/static/bf-data/passives-ids.json", JSON.stringify(convertToIdKeysOnly(passiveValues), null, 2), 'utf8');
 
-  // const buffValues = readBuffValues();
-  // fs.writeFileSync("static/bf-data/other-buffs.json", JSON.stringify(buffValues, null, 2), 'utf8');
+  const buffValues = readBuffValues();
+  fs.writeFileSync("public/static/bf-data/other-buffs.json", JSON.stringify(buffValues, null, 2), 'utf8');
+  fs.writeFileSync("public/static/bf-data/other-buffs-ids.json", JSON.stringify(convertToIdKeysOnly(buffValues), null, 2), 'utf8');
 
-  const missionValues = readMissionValues();
-  fs.writeFileSync("static/bf-data/missions.json", JSON.stringify(missionValues, null, 2), 'utf8');
+  // const missionValues = readMissionValues();
+  // fs.writeFileSync("public/static/bf-data/missions.json", JSON.stringify(missionValues, null, 2), 'utf8');
 }
 
 main();
