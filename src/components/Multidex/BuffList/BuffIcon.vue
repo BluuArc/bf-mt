@@ -6,14 +6,30 @@
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink">
     <title v-if="iconKey" v-text="iconKey"/>
-    <template v-if="iconConfig">
-      <!-- iconKey is on one of the buff sheets -->
-      <image
-        :width="iconConfig.width" :height="iconConfig.height"
-        :xlink:href="iconConfig.src"
-        :transform="`translate(${iconConfig.coords})`"
-      />
-    </template>
+    <!-- background extra buff icons -->
+    <g v-if="isPassiveTypeStatIcon(iconKey)">
+      <template v-if="isPassiveTypeStatIcon(iconKey) && elements.includes(getTypeInfoFromPassiveTypeStatKey(iconKey).type.toLowerCase())">
+        <image
+          width="156" height="26"
+          :xlink:href="require('@/assets/buff-translation/common/attribute_mark.png')"
+          :transform="`translate(${elements.indexOf(getTypeInfoFromPassiveTypeStatKey(iconKey).type.toLowerCase()) * -26} 0)`"/>
+      </template>
+      <g v-else-if="isPassiveUnitTypeStatIcon(iconKey)">
+        <rect x="5" y="5" width="22" height="22" fill="white"/>
+        <text x="9.5" y="19" font-family="Consolas" font-size="1.20rem" font-weight="bold" fill="black">{{ (getTypeInfoFromPassiveTypeStatKey(iconKey).type[0] || '').toUpperCase() }}</text>
+      </g>
+
+
+    </g>
+
+
+    <!-- buff icons from sheets -->
+    <!-- iconKey is on one of the buff sheets -->
+    <image
+      v-if="iconConfig"
+      :width="iconConfig.width" :height="iconConfig.height"
+      :xlink:href="iconConfig.src"
+      :transform="`translate(${iconConfig.coords})`"/>
     <g v-else-if="isAttackingIcon(iconKey)">
       <!-- attack based icons are here -->
       <image
@@ -51,13 +67,18 @@
         :width="iconSize" :height="iconSize"/>
     </template>
 
-    <!-- extra buff icons -->
+    <!-- foreground extra buff icons -->
     <image
       v-if="iconKey === IconKeyMappings.PASSIVE_BUFF_HPRECTURNSTART.name || iconKey === IconKeyMappings.PASSIVE_BUFF_BBRECTURNSTART.name"
       width="36" height="36"
       :xlink:href="require('@/assets/buff-translation/raid/raid_room_time.png')"
       x="24" y="0"
       transform="scale(0.55)"/>
+    <image
+      v-if="iconKey.includes('HPTHRESH')"
+      :width="hpThreshForegroundIconConfig.width" :height="hpThreshForegroundIconConfig.height"
+      :xlink:href="hpThreshForegroundIconConfig.src"
+      :transform="`translate(${hpThreshForegroundIconConfig.coords})`"/>
 
     <!-- pulsing letters for instant/passive/timed buffs -->
     <g class="animate--pulse" v-if="isPassiveIcon(iconKey)">
@@ -77,6 +98,8 @@ import {
   sgBattleBuffIconKeys,
   customBuffIconKeys,
   ailmentBuffIconKeys,
+  unitTypes,
+  elements,
 } from '@/modules/constants';
 import IconKeyMappings from '@/modules/EffectProcessor/icon-key-mappings';
 import logger from '@/modules/Logger';
@@ -94,6 +117,7 @@ export default {
   },
   computed: {
     IconKeyMappings: () => IconKeyMappings,
+    elements: () => elements,
     iconSize () {
       return 32;
     },
@@ -126,6 +150,15 @@ export default {
       }
       return result;
     },
+    passiveTypeStatKeyBlacklist: () => [
+      'PASSIVE_BUFF_HCREC',
+    ],
+    hpThreshForegroundIconConfig () {
+      return {
+        ...this.customBuffMetaData,
+        coords: this.getIconCoordinates(customBuffIconKeys.indexOf('BUFF_HPTHRESHGENERIC')),
+      };
+    },
   },
   methods: {
     getIconCoordinates (index = 0, rowLength = 15) {
@@ -148,7 +181,15 @@ export default {
       let config = {};
       let iconKey;
 
-      if (this.isPassiveIcon(iconKeyInput) || this.isInstantIcon(iconKeyInput)) {
+      if (this.isPassiveTypeStatIcon(iconKeyInput) && !['PASSIVE_BUFF_HPUP', 'PASSIVE_BUFF_HCREC', 'INSTANT_BUFF_ALLAILNULL'].includes(iconKey)) {
+        // handles HP threshold and elemental stat boosting icons
+        iconKey = [
+          'BUFF_',
+          !iconKeyInput.includes('HPTHRESH') ? 'ELEMENTAL': '',
+          this.getTypeInfoFromPassiveTypeStatKey(iconKeyInput).stat,
+          'UP'
+        ].filter(v => v).join('');
+      } else if (this.isPassiveIcon(iconKeyInput) || this.isInstantIcon(iconKeyInput)) {
         iconKey = this.getBattleBuffKeyFromCustomKey(iconKeyInput);
       } else {
         iconKey = iconKeyInput.slice();
@@ -191,6 +232,21 @@ export default {
     },
     isInstantIcon (iconKey = '') {
       return iconKey.startsWith('INSTANT');
+    },
+    getTypeInfoFromPassiveTypeStatKey (iconKey = 'PASSIVE_BUFF_ELEMENTHPUP') {
+      const regexMatch = iconKey.match(/^PASSIVE_BUFF_(?<element>.+)(CRTRATE|HP|ATK|DEF|REC)UP$/);
+      return regexMatch && !this.passiveTypeStatKeyBlacklist.includes(iconKey) && {
+        type: regexMatch[1],
+        stat: regexMatch[2],
+      };
+    },
+    isPassiveTypeStatIcon (iconKey) {
+      return !!this.getTypeInfoFromPassiveTypeStatKey(iconKey);
+    },
+    isPassiveUnitTypeStatIcon (iconKey) {
+      const match = this.getTypeInfoFromPassiveTypeStatKey(iconKey) || {};
+      const isPassiveType = !!match.type && unitTypes.includes(match.type.toLowerCase());
+      return isPassiveType;
     },
   },
 };
