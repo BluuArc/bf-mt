@@ -37,6 +37,7 @@ export default new Vuex.Store({
     updateTimes: {},
     loadingMessage: '',
     loadingState: false, // changed mostly by MultidexDataWrapper, accessed by all
+    iconKeyConfigCache: {},
   },
   mutations: {
     setInitState (state, newState = false) {
@@ -54,6 +55,9 @@ export default new Vuex.Store({
     },
     setHtmlOverflowDisableState (state, value) {
       state.disableHtmlOverflow = !!value;
+    },
+    setValueForIconKey (state, { key, value }) {
+      state.iconKeyConfigCache[key] = value;
     },
   },
   actions: {

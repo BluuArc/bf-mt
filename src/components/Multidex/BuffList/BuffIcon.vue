@@ -105,6 +105,7 @@
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex';
 import {
   battleBuffIconKeys,
   sgBattleBuffIconKeys,
@@ -129,6 +130,7 @@ export default {
     },
   },
   computed: {
+    ...mapState(['iconKeyConfigCache']),
     IconKeyMappings: () => IconKeyMappings,
     elements: () => elements,
     iconSize () {
@@ -174,6 +176,7 @@ export default {
     },
   },
   methods: {
+    ...mapMutations(['setValueForIconKey']),
     getIconCoordinates (index = 0, rowLength = 15) {
       const y = Math.floor(index / rowLength);
       const x = index - (y * rowLength);
@@ -191,6 +194,9 @@ export default {
       }
     },
     getIconConfigForKey (iconKeyInput = '') {
+      if (this.iconKeyConfigCache[iconKeyInput]) {
+        return this.iconKeyConfigCache[iconKeyInput];
+      }
       let config = {};
       let iconKey;
 
@@ -234,9 +240,11 @@ export default {
         };
       }
 
-      return Object.keys(config).length > 0
+      this.iconKeyConfigCache[iconKeyInput] = Object.keys(config).length > 0
         ? config
         : null;
+
+      return this.iconKeyConfigCache[iconKeyInput];
     },
     isAttackingIcon (iconKey = '') {
       return iconKey === IconKeyMappings.ATK.name
