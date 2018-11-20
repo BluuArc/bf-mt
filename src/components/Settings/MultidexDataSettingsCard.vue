@@ -24,7 +24,7 @@
             <dual-row-cell>
               <v-flex slot="top" v-text="server.toUpperCase()"/>
               <template slot="bottom">
-                <v-flex xs12 md6>
+                <v-flex xs12 lg6>
                   <v-btn
                     block
                     @click="toggleAllModuleReload(server, true)"
@@ -32,7 +32,7 @@
                     Reload All
                   </v-btn>
                 </v-flex>
-                <v-flex xs12 md6>
+                <v-flex xs12 lg6>
                   <v-btn
                     block
                     @click="toggleAllModuleDelete(server, true)"
@@ -49,7 +49,7 @@
             <dual-row-cell>
               <v-flex slot="top" class="text-xs-center subheading font-weight-medium" v-text="mod.fullName"/>
               <template slot="bottom">
-                <v-flex xs12 md6>
+                <v-flex xs12 lg6>
                   <v-btn
                     block
                     @click="toggleAllServerReload(mod.name, true)"
@@ -57,7 +57,7 @@
                     Reload All
                   </v-btn>
                 </v-flex>
-                <v-flex xs12 md6>
+                <v-flex xs12 lg6>
                   <v-btn
                     block
                     @click="toggleAllServerDelete(mod.name, true)"
@@ -87,7 +87,7 @@
                 </p>
               </v-flex>
               <template slot="bottom">
-                <v-flex xs12 md6>
+                <v-flex xs12 lg6>
                   <v-btn block
                     :disabled="loadingState"
                     :outline="!dataUpdate[mod.name].includes(server)"
@@ -95,7 +95,7 @@
                     <v-icon>cloud_download</v-icon>
                   </v-btn>
                 </v-flex>
-                <v-flex xs12 md6>
+                <v-flex xs12 lg6>
                   <v-btn block
                     :disabled="loadingState"
                     :outline="!dataDelete[mod.name].includes(server)"
