@@ -1,5 +1,5 @@
 <template>
-  <v-card raised>
+  <v-card raised class="settings-card">
     <v-card-title>
       <slot name="title" class="title">Settings Title</slot>
     </v-card-title>
@@ -34,3 +34,16 @@ export default {
   },
 };
 </script>
+
+<style lang="less">
+.settings-card {
+  .v-input--radio-group {
+    .v-input__control {
+      flex-grow: 1;
+    }
+    .v-radio {
+      flex: 1;
+    }
+  }
+}
+</style>
