@@ -47,8 +47,8 @@
                   </div>
                 </v-flex>
                 <v-flex xs9 sm11>
-                  <p class="body-2 mb-0" v-text="item.commit.message"/>
-                  <p class="body-1 mb-0">
+                  <p class="body-2 mb-0" v-text="truncateMessage(item.commit.message)"/>
+                  <p class="caption mb-0">
                     <span v-html="`<b>${item.author.login}</b> committed`"/>
                     <span
                       style="white-space: nowrap;"
@@ -90,6 +90,12 @@ export default {
       Object.keys(this.branches).forEach(branch => {
         this.branchCounts[branch] = this.getNumberOfNewCommits([branch]);
       });
+    },
+    truncateMessage (message = '') {
+      return message.length > 50
+        // truncate message as necessary
+        ? [message.slice(0, 50), '...'].join('')
+        : message;
     },
   },
   watch: {
