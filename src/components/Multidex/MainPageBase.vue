@@ -84,7 +84,7 @@
                     <v-flex xs10 class="text-xs-left d-align-self-center">
                       <v-layout>
                         <h2 class="title d-inline-block d-align-self-center">Active Filters</h2>
-                        <v-btn icon small flat @click="resetFilters" v-show="hasFilters">
+                        <v-btn icon small flat @click="resetNonNameFilters" v-show="hasNonNameFilters">
                           <v-icon>highlight_off</v-icon>
                         </v-btn>
                       </v-layout>
@@ -615,12 +615,12 @@ export default {
     toggleLadSelector (val) {
       this.showLadSelector = !!val;
     },
-    resetFilters () {
+    resetNonNameFilters () {
       const defaultFilterOptions = filterHelper.defaultValues;
-
+      const name = this.filterOptions.name || '';
       this.filterOptions = {
         ...defaultFilterOptions,
-        name: '',
+        name,
       };
       logger.debug('reset filter options', this.filterOptions, this.filterOptionsUrl);
       this.syncLocalFiltersToUrlFilters(true);
