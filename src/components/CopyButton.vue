@@ -56,7 +56,7 @@ export default {
       this.dataCopied = true;
     },
   },
-}
+};
 </script>
 
 <style scoped>
