@@ -33,7 +33,7 @@ export default {
   components: {
     LoadingIndicator,
   },
-}
+};
 </script>
 
 <style lang="less">

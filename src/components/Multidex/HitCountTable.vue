@@ -80,7 +80,7 @@ export default {
       { label: 'Blue Text', desc: 'Sparks with an attack that <u>is not</u> from ES/SP/Items (i.e. "native" attacks)', class: 'blue--text' },
       { label: 'Orange Text', desc: 'Sparks with an attack that <u>is</u> from ES/SP/Items (i.e. "extra" attacks)', class: 'orange--text' },
       { label: 'Purple Text', desc: 'Sparks with at least one native attack and one extra attack', class: 'purple--text text--lighten-2' },
-    ]
+    ],
   },
   data () {
     return {

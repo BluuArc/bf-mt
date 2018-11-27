@@ -130,8 +130,8 @@ export default {
             ...(cachedState.branches[branch] || {}),
             commits,
             updateTime: new Date(updateTime).toISOString(),
-          }
-        }
+          },
+        },
       });
       commit('setCommits', { branch, commits, updateTime });
     },

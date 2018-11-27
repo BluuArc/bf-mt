@@ -41,7 +41,7 @@ export default {
       return !this.entry ? '' : [
         this.entry.land,
         this.entry.area,
-        this.entry.dungeon
+        this.entry.dungeon,
       ].filter(v => v).join(' / ');
     },
     xpPerEnergy () {

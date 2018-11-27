@@ -48,7 +48,7 @@ export default {
         return [];
       }
       return this.mission.requires.split(',');
-    }
+    },
   },
   data: () => ({
     type: 'Dungeon',

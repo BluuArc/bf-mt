@@ -26,7 +26,7 @@ export default {
     typeArr () {
       return this.filterOptions.itemTypes;
     },
-    itemTypeMapping: () => itemTypeMapping
+    itemTypeMapping: () => itemTypeMapping,
   },
 };
 </script>

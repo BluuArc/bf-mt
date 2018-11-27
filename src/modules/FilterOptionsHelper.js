@@ -11,9 +11,7 @@ import {
   usageFilterOptions,
 } from '@/modules/constants';
 
-import {
-  arraysAreDifferent
-} from '@/modules/utils';
+import { arraysAreDifferent } from '@/modules/utils';
 
 import { Logger } from '@/modules/Logger';
 

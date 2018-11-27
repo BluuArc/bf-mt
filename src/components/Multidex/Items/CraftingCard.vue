@@ -177,7 +177,7 @@ export default {
           this.relevantMaterialsCache[materialId] = [];
         } else {
           const usageArrays = material.usage.map(entry => entry.id.toString());
-          this.relevantMaterialsCache[materialId] = this.allCraftables.filter(entry => usageArrays.includes(entry.id))
+          this.relevantMaterialsCache[materialId] = this.allCraftables.filter(entry => usageArrays.includes(entry.id));
         }
       }
       return this.relevantMaterialsCache[materialId];

@@ -5,7 +5,7 @@ import { createState, createMutations, createActions, createGetters } from './he
 import { getCacheBustingUrlParam } from '@/modules/utils';
 import {
   exclusiveFilterOptions,
-  defaultTernaryOptions
+  defaultTernaryOptions,
 } from '@/modules/constants';
 import SWorker from '@/assets/sww.min';
 
@@ -72,7 +72,7 @@ export default {
         passiveBuffSearchOptions = [],
       } = inputFilters;
       if (!exclusiveFilterOptions.isAll(exclusives)) {
-        keys = await dispatch('filterServerExclusiveKeys', { filter: exclusives, keys })
+        keys = await dispatch('filterServerExclusiveKeys', { filter: exclusives, keys });
       }
 
       const ternaryHelper = {

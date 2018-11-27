@@ -79,7 +79,7 @@ export async function getExtraAttackFrames (burst) {
     frameTimes.forEach((time, i) => {
       unifiedFrames.push({
         time,
-        dmg: hitDmgDistribution[i]
+        dmg: hitDmgDistribution[i],
       });
     });
 

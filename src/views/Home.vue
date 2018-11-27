@@ -91,7 +91,7 @@ import GitHubCard from '@/components/Home/GitHubCard';
 export default {
   name: 'home',
   components: {
-    GitHubCard
-  }
-}
+    GitHubCard,
+  },
+};
 </script>

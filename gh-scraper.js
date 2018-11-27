@@ -39,7 +39,7 @@ class GitHubScraper {
               name: (elem.querySelector('.content a') || {}).title,
               date: elem.querySelector('.age time-ago') ? elem.querySelector('.age time-ago').attributes.datetime.value : undefined,
               link: (elem.querySelector('.content a') || {}).href,
-              isFolder: elem.querySelector('.icon > svg.octicon') && elem.querySelector('.icon > svg.octicon').classList.contains('octicon-file-directory')
+              isFolder: elem.querySelector('.icon > svg.octicon') && elem.querySelector('.icon > svg.octicon').classList.contains('octicon-file-directory'),
             })).filter(elem => !!elem.name);
             fulfill(result);
           }

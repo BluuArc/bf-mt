@@ -11,7 +11,7 @@
 
 <script>
 import ChipMixin from './FilterChipMixin';
-import { exclusiveFilterOptions } from '@/modules/constants'
+import { exclusiveFilterOptions } from '@/modules/constants';
 
 export default {
   mixins: [ChipMixin],

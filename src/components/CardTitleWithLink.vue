@@ -17,7 +17,7 @@ export default {
   props: {
     titleHtml: {
       type: String,
-      default: '<b>Title:</b> name'
+      default: '<b>Title:</b> name',
     },
     multidexPath: {
       type: String,

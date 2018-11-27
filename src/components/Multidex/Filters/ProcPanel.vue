@@ -52,7 +52,7 @@ export default {
   computed: {
     filterKey: () => 'procs',
     defaultSearchOptions () {
-      return this.filterHelper.defaultValues.procBuffSearchOptions
+      return this.filterHelper.defaultValues.procBuffSearchOptions;
     },
   },
   methods: {

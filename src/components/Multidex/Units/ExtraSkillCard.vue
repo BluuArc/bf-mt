@@ -41,7 +41,7 @@ export default {
         const conditions = parseExtraSkillConditions(effect);
         return Object.values(conditions).some(arr => arr.length > 0);
       });
-    }
+    },
   },
   mounted () {
     if (this.hasConditions) {

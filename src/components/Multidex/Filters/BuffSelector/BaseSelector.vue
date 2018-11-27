@@ -204,7 +204,7 @@ export default {
   mounted () {
     this.syncInputToLocal();
   },
-}
+};
 </script>
 
 <style lang="less">

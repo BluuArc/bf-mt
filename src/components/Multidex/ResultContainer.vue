@@ -47,7 +47,7 @@ export default {
     },
     requiredModules: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     stateInfo: {
       type: Object,

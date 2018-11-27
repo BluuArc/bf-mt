@@ -153,7 +153,7 @@ export default {
         exclusives = exclusiveFilterOptions.allValue,
       } = inputFilters;
       if (!exclusiveFilterOptions.isAll(exclusives)) {
-        keys = await dispatch('filterServerExclusiveKeys', { filter: exclusives, keys })
+        keys = await dispatch('filterServerExclusiveKeys', { filter: exclusives, keys });
       }
 
       // const ternaryHelper = {

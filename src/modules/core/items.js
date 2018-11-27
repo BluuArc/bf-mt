@@ -84,7 +84,7 @@ export async function getItemShoppingList (item, pageDb, currentlyHave = {}) {
   const { karma, ...myMaterials} = currentlyHave;
   const newCurrentlyHave = {
     karma,
-    ...myMaterials
+    ...myMaterials,
   };
 
   // get difference from current karma

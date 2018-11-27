@@ -58,7 +58,7 @@ function getAllPossibleValuesOfObjectThatFitsCondition(objectToSearch, doesObjec
   }
   valuesToIterate = valuesToIterate.filter(key => {
     const value = objectToSearch[key] || objectToSearch[+key];
-    return value !== undefined && value !== null && (typeof value === "object" || Array.isArray(value))
+    return value !== undefined && value !== null && (typeof value === "object" || Array.isArray(value));
   }).forEach(key => {
     const value = objectToSearch[key] || objectToSearch[+key];
     const tempContext = [...context, key];
@@ -89,7 +89,7 @@ function readProcValues() {
   const addToAccumulator = (input, context) => {
     const fieldToIgnore = ['proc id', 'unknown proc id', 'hit dmg% distribution', 'frame times'];
     const id = (input['proc id'] || input['unknown proc id']).toString();
-    const buffAggregate = (!!input['proc id'] ? aggregate.proc : aggregate.unknown_proc);
+    const buffAggregate = (input['proc id'] ? aggregate.proc : aggregate.unknown_proc);
     if (!buffAggregate[id]) {
       buffAggregate[id] = {};
     }
@@ -111,7 +111,7 @@ function readPassiveValues() {
   const addToAccumulator = (input, context) => {
     const fieldToIgnore = ['passive id', 'unknown passive id'];
     const id = (input['passive id'] || input['unknown passive id']).toString();
-    const buffAggregate = (!!input['passive id'] ? aggregate.passive : aggregate.unknown_passive);
+    const buffAggregate = (input['passive id'] ? aggregate.passive : aggregate.unknown_passive);
     if (!buffAggregate[id]) {
       buffAggregate[id] = {};
     }
@@ -134,7 +134,7 @@ function readBuffValues() {
     const fieldToIgnore = ['buff id', 'unknown buff id'];
     const possibleIdKeys = Object.keys(input).filter(key => key.includes('buff id'));
     const id = input[possibleIdKeys[0]].toString();
-    const buffAggregate = (!!possibleIdKeys[0].includes('unknown') ? aggregate.unknown_buff : aggregate.buff);
+    const buffAggregate = (possibleIdKeys[0].includes('unknown') ? aggregate.unknown_buff : aggregate.buff);
     if (!buffAggregate[id]) {
       buffAggregate[id] = {};
     }
@@ -152,7 +152,7 @@ function readMissionValues() {
   const doesFit = (input) => !!input.land || !!input.area;
   const addToAccumulator = (input, context) => {
     Object.keys(input).forEach(key => addValueToAggregate(aggregate, key, { inputValue: input[key], context }));
-  }
+  };
   getAllPossibleValuesOfObjectThatFitsCondition(data.missions, doesFit, addToAccumulator);
   return aggregate;
 }

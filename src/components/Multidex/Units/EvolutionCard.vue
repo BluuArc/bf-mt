@@ -166,11 +166,11 @@ export default {
   computed: {
     ...mapGetters('units', {
       getUnitImages: 'getImageUrls',
-      getMultidexPathForUnit: 'getMultidexPathTo'
+      getMultidexPathForUnit: 'getMultidexPathTo',
     }),
     ...mapGetters('items', {
       getItemImage: 'getImageUrl',
-      getMultidexPathForItem: 'getMultidexPathTo'
+      getMultidexPathForItem: 'getMultidexPathTo',
     }),
   },
   data () {

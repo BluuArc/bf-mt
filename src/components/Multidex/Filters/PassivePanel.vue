@@ -47,7 +47,7 @@ export default {
   computed: {
     filterKey: () => 'passives',
     defaultSearchOptions () {
-      return this.filterHelper.defaultValues.passiveBuffSearchOptions
+      return this.filterHelper.defaultValues.passiveBuffSearchOptions;
     },
   },
   methods: {

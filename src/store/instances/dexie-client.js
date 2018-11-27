@@ -22,7 +22,7 @@ export const makeWorker = (table) => Object.freeze({
   getById: (query, field, id) => wrapper.getById(table, query, field, id),
   getDbStats: (query) => pw.postMessage({
     command: 'getDbStats',
-    args: [table, query]
+    args: [table, query],
   }),
 });
 
@@ -32,7 +32,7 @@ export function makeMultidexWorker (moduleName) {
     ...makeWorker(moduleName),
     getById: (server, id) => wrapper.getById(moduleName, { server }, 'data', id),
     getMiniDb: (server, searchQuery = {}) => wrapper.worker.postMessage({ command: miniDbCommand, args: [server, searchQuery] }),
-  }
+  };
 }
 
 export default wrapper;

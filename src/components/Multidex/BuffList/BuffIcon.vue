@@ -206,12 +206,12 @@ export default {
           'BUFF_',
           !iconKeyInput.includes('HPTHRESH') ? 'ELEMENTAL': '',
           this.getTypeInfoFromPassiveTypeStatKey(iconKeyInput).stat,
-          'UP'
+          'UP',
         ].filter(v => v).join('');
       } else if (['zel', 'karma'].includes(this.getDropType(iconKeyInput))) {
         iconKey = 'BUFF_GENERICDROP';
       } else if (this.isDropType(iconKeyInput)) {
-        iconKey = `BUFF_${this.getDropType(iconKeyInput).toUpperCase()}DROP`
+        iconKey = `BUFF_${this.getDropType(iconKeyInput).toUpperCase()}DROP`;
       } else if (this.isPassiveIcon(iconKeyInput) || this.isInstantIcon(iconKeyInput)) {
         iconKey = this.getBattleBuffKeyFromCustomKey(iconKeyInput);
       } else {

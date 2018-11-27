@@ -770,7 +770,7 @@ export default {
         query: {
           ...query,
           filters,
-        }
+        },
       });
       // logger.debug('resolved path', resolvedPath);
       return resolvedPath;

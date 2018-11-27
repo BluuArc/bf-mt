@@ -23,7 +23,7 @@ export default {
     setActiveServer (state, server) {
       logger.assert(isValidServer(server), 'invalid server', server);
       state.activeServer = server;
-    }
+    },
   },
   actions: {
     getCurrentSettings () {

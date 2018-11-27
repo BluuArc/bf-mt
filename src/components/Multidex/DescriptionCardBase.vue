@@ -67,7 +67,7 @@ export default {
     },
     tabNames: {
       type: Array,
-      default: () => ['Description', 'JSON', 'Buff List']
+      default: () => ['Description', 'JSON', 'Buff List'],
     },
     descriptionGetter: {
       type: Function,
@@ -102,7 +102,7 @@ export default {
       const customConfig = {
         JSON: () => this.entry && 'JSON',
         'Buff List': () => this.hasEffects && 'Buff List',
-      }
+      };
       const tabs = this.tabNames
         .map(name => customConfig[name] !== undefined ? customConfig[name]() : name)
         .filter(val => val);

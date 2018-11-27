@@ -45,15 +45,15 @@ const handlers = {
       const data = {
         info: {
           file: 'info.json',
-          data: {}
+          data: {},
         },
         evo_list: {
           file: 'evo_list.json',
-          data: {}
+          data: {},
         },
         feskills: {
           file: 'feskills.json',
-          data: {}
+          data: {},
         },
       };
 
@@ -172,7 +172,7 @@ const handlers = {
         Object.keys(data)
           .forEach(key => {
             itemData[key] = data[key];
-          })
+          });
       });
       logger.debug('itemData', Object.keys(itemData));
       return itemData;
@@ -207,7 +207,7 @@ const handlers = {
                   if (mat.id === item.id) {
                     item.usage.push({
                       id: otherItem.id,
-                      name: otherItem.name
+                      name: otherItem.name,
                     });
                   }
                 }
@@ -229,7 +229,7 @@ const handlers = {
         } else {
           logger.warn(`Can't add unit ${unitId} because item ${itemId} is not found`);
         }
-      }
+      };
       logger.info(`${server}: cross referencing unit data for usage`);
       Object.values(unitData)
         .forEach(unit => {
@@ -246,7 +246,7 @@ const handlers = {
                 if (Array.isArray(conditionSet['item required'])) {
                   conditionSet['item required'].forEach(itemId => addUnitIdToItemId(unitId, itemId, 'es'));
                 } else {
-                  addUnitIdToItemId(unitId, (conditionSet['item required'] || '').toString(), 'es')
+                  addUnitIdToItemId(unitId, (conditionSet['item required'] || '').toString(), 'es');
                 }
               }
 
@@ -255,7 +255,7 @@ const handlers = {
                   .filter(item => item['sphere type'] && item['sphere type'] === +conditionSet['sphere category required (raw)'])
                   .forEach(item => addUnitIdToItemId(unitId, item.id.toString(), 'es'));
               }
-            })
+            });
           }
         });
 
@@ -326,12 +326,12 @@ const handlers = {
         return r;
       }).forEach(r => {
         const {
-          data
+          data,
         } = r;
         Object.keys(data)
           .forEach(key => {
             bbData[key] = data[key];
-          })
+          });
       });
       logger.debug('bbData', Object.keys(bbData));
       return bbData;
@@ -353,7 +353,7 @@ const handlers = {
                 logger.warn(`No burst ID ${burstId} found in data from unit ${type} ${unit.id} (${unit.name})`);
               }
             }
-          })
+          });
         });
 
       // split data into files based on first number of id
@@ -400,10 +400,10 @@ const handlers = {
         Object.keys(data)
           .forEach(key => {
             esData[key] = data[key];
-          })
+          });
       });
       logger.debug('esData', Object.keys(esData));
-      return esData
+      return esData;
     },
     process (server, esData = {}, unitData = {}) {
       logger.info(`${server}: setting unit associations`);
@@ -453,10 +453,10 @@ const handlers = {
         Object.keys(data)
           .forEach(key => {
             lsData[key] = data[key];
-          })
+          });
       });
       logger.debug('lsData', Object.keys(lsData));
-      return lsData
+      return lsData;
     },
     process (server, lsData = {}, unitData = {}) {
       logger.info(`${server}: setting unit associations`);
@@ -506,7 +506,7 @@ const handlers = {
         Object.keys(data)
           .forEach(key => {
             missionData[key] = data[key];
-          })
+          });
       });
       logger.debug('missionData', Object.keys(missionData));
       return missionData;
@@ -526,7 +526,7 @@ const handlers = {
               if (dictionaryEntry && dictionaryEntry.en) {
                 mission[locationType] = dictionaryEntry.en;
               }
-            })
+            });
         });
 
       logger.info(`${server}: saving files`);
@@ -566,7 +566,7 @@ const handlers = {
         Object.keys(data)
           .forEach(key => {
             dictionaryData[key] = data[key];
-          })
+          });
       });
       logger.debug('dictionaryData', Object.keys(dictionaryData).length);
       return dictionaryData;
@@ -616,7 +616,7 @@ function initializeTimeData () {
       leaderSkills: {},
       missions: {},
       dictionary: {},
-    }
+    };
   }
 }
 
@@ -714,7 +714,7 @@ async function getUnitDataForServer(server = 'gl', missionData = {}, dictionaryD
   } else {
     unitData = {
       info: handlers.units.load(server),
-    }
+    };
   }
   return handlers.units.process(server, unitData, missionData, dictionaryData);
 }

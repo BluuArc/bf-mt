@@ -37,7 +37,7 @@ export default {
       return !this.mission ? '' : [
         this.mission.land,
         this.mission.area,
-        this.mission.dungeon
+        this.mission.dungeon,
       ].filter(v => v).join(' / ');
     },
   },

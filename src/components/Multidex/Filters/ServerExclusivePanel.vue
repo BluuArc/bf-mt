@@ -46,7 +46,7 @@ export default {
       return this.otherServers.length > 0;
     },
     otherServersMessage () {
-      return `Will compare against the cached entries of ${this.otherServers.map(s => s.toUpperCase()).join(' and ')}`
+      return `Will compare against the cached entries of ${this.otherServers.map(s => s.toUpperCase()).join(' and ')}`;
     },
   },
   mounted () {

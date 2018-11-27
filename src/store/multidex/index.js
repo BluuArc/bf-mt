@@ -49,7 +49,7 @@ export const moduleInfo = Object.freeze([
     type: 'multidex',
     link: '/multidex/dictionary',
   },
-])
+]);
 export default {
   units,
   items,

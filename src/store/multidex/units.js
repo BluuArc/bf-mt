@@ -97,10 +97,10 @@ export default {
         passiveBuffSearchOptions = [],
       } = inputFilters;
       if (!exclusiveFilterOptions.isAll(exclusives)) {
-        keys = await dispatch('filterServerExclusiveKeys', { filter: exclusives, keys })
+        keys = await dispatch('filterServerExclusiveKeys', { filter: exclusives, keys });
       }
 
-      logger.debug(inputFilters.name.split('|').filter((v, i) => i === 0 || v.trim()).map(n => n.toLowerCase()))
+      logger.debug(inputFilters.name.split('|').filter((v, i) => i === 0 || v.trim()).map(n => n.toLowerCase()));
 
       const result = await SWorker.run((keys, filters, pageDb) => {
         const {

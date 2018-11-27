@@ -125,8 +125,8 @@ export function generateDefaultEntry (id = '0') {
         values: [{
           iconKey: IconKeyMappings.UNKNOWN.name,
           value: effect,
-          desc: `Unknown effect. Effect Keys: [${Object.keys(effect).join(', ')}]`
-        }, ],
+          desc: `Unknown effect. Effect Keys: [${Object.keys(effect).join(', ')}]`,
+        } ],
       };
     },
   };

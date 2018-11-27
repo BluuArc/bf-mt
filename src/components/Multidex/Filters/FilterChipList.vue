@@ -110,7 +110,7 @@ export default {
       deep: true,
       handler () {
         this.applyStylingToChips();
-      }
+      },
     },
   },
 };

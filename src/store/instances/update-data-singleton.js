@@ -5,7 +5,7 @@ import CacheSingleton from '@/modules/CacheSingleton';
 
 const updateDataSingleton = new CacheSingleton({
   loggerOptions: {
-    prefix: '[UPDATE-DATA-CACHE]'
+    prefix: '[UPDATE-DATA-CACHE]',
   },
   async getter (logger) {
     const url = `${location.origin}${location.pathname}static/bf-data/update-stats.json?${getCacheBustingUrlParam()}`;

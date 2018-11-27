@@ -83,7 +83,7 @@ export default {
   },
   methods: {
     ...mapActions('units', {
-      getUnit: 'getById'
+      getUnit: 'getById',
     }),
     async setBurstType () {
       this.burstType = 'bb';

@@ -169,7 +169,7 @@ export default {
       deep: true,
       handler  () {
         this.syncInputToLocal();
-      }
+      },
     },
     showSelector (newValue) {
       if (newValue) {
@@ -187,7 +187,7 @@ export default {
     logger.warn('TODO: styling and icons');
     this.syncInputToLocal();
   },
-}
+};
 </script>
 
 <style lang="less">
