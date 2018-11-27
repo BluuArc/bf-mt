@@ -5,6 +5,7 @@
     :block="block"
     :color="dataCopied ? 'green' : undefined">
     {{ currentButtonText }}
+    <textarea readonly v-model="textToCopy"/>
   </v-btn>
 </template>
 
@@ -47,23 +48,24 @@ export default {
     },
   },
   methods: {
-    copyToClipboard () {
-      const el = document.createElement('textarea');
-      el.value = this.textToCopy.slice();
-      el.setAttribute('readonly', '');
-      el.style.width = '1px';
-      el.style.height = '1px';
-      el.style.border = 'none';
-      el.style.zIndex = -1;
-      el.style.position = 'absolute';
-      el.style.left = '-9999px';
-      document.body.appendChild(el);
-      el.select();
-      document.execCommand('copy');
-      document.body.removeChild(el);
+    async copyToClipboard () {
+      const textarea = this.$el.querySelector('textarea');
+      textarea.select();
+      document.execCommand('Copy');
+      textarea.selectionEnd = 0;
       this.dataCopied = true;
     },
   },
 }
 </script>
 
+<style scoped>
+textarea {
+  width: 1px;
+  height: 1px;
+  border: none;
+  position: absolute;
+  z-index: -1;
+  left: -9999px;
+}
+</style>
