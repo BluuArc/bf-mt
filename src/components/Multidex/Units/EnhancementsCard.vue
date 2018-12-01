@@ -352,6 +352,10 @@ export default {
     margin-top: 0;
     padding-left: 4px;
 
+    .v-input__control {
+      text-align: center;
+    }
+
     .v-input__slot {
       margin-bottom: 0;
     }
