@@ -35,6 +35,7 @@
           </v-flex>
         </v-layout>
         <v-layout
+          row wrap
           v-for="(skillEntry, index) in feSkills"
           :key="index"
           class="sp-table--row d-align-items-center">
@@ -74,13 +75,13 @@
                 </v-btn>
               </v-flex>
             </v-layout>
-            <v-slide-y-transition>
-              <div v-show="showTables.includes(index)">
-                <!-- lazily render buff table once -->
-                <buff-table v-if="showTables.includes(index) || effectCache[skillEntry.id]" :effects="getSkillEffects(skillEntry)" :showHeaders="true"/>
-              </div>
-            </v-slide-y-transition>
           </v-flex>
+          <v-slide-y-transition>
+            <v-flex xs12 v-show="showTables.includes(index)">
+              <!-- lazily render buff table once -->
+              <buff-table v-if="showTables.includes(index) || effectCache[skillEntry.id]" :effects="getSkillEffects(skillEntry)" :showHeaders="true"/>
+            </v-flex>
+          </v-slide-y-transition>
         </v-layout>
       </v-container>
       <span v-else>No SP data found.</span>
