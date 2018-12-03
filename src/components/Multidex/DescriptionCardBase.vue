@@ -9,14 +9,21 @@
     </template>
     <card-tabs-container :tabs="tabConfig" v-model="activeTabIndex" :class="tabContainerClass">
       <section slot="description">
-        <slot name="description" :toggleBuffTable="() => showBuffTable = !showBuffTable" :showBuffTable="showBuffTable" :activeTabIndex="activeTabIndex">
+        <slot
+          name="description"
+          :toggleBuffTable="() => showBuffTable = !showBuffTable"
+          :showBuffTable="showBuffTable"
+          :hasShownBuffTable="hasShownBuffTable"
+          :activeTabIndex="activeTabIndex">
           {{ descriptionGetter(entry) }}
           <template v-if="entry && hasEffects">
             <v-card-actions class="pl-0 pr-0 pb-0">
               <v-btn flat @click="showBuffTable = !showBuffTable">{{ showBuffTable ? 'Hide' : 'Show' }} Buff Table</v-btn>
             </v-card-actions>
             <v-slide-y-transition>
-              <buff-table :effects="effects" v-show="showBuffTable" :showHeaders="true"/>
+              <div v-show="showBuffTable">
+                <buff-table :effects="effects" v-if="hasShownBuffTable" :showHeaders="true"/>
+              </div>
             </v-slide-y-transition>
           </template>
         </slot>
@@ -123,10 +130,18 @@ export default {
     return {
       activeTabIndex: 0,
       showBuffTable: false,
+      hasShownBuffTable: false,
     };
   },
   methods: {
     nameToSlot: (str) => str.replace(/ /g, '-').toLowerCase(),
+  },
+  watch: {
+    showBuffTable (isShowing) {
+      if (isShowing) {
+        this.hasShownBuffTable = true;
+      }
+    },
   },
 };
 </script>

@@ -29,33 +29,35 @@
         </v-flex>
       </v-layout>
     </template>
-    <template slot="description" slot-scope="{ toggleBuffTable, showBuffTable }">
+    <template slot="description" slot-scope="{ toggleBuffTable, showBuffTable, hasShownBuffTable }">
       {{ description }}
       <template v-if="burst">
         <v-card-actions class="pl-0 pr-0 pb-0">
           <v-btn flat @click="toggleBuffTable">{{ showBuffTable ? 'Hide' : 'Show' }} Buff Table</v-btn>
         </v-card-actions>
         <v-slide-y-transition>
-          <v-container fluid v-show="showBuffTable" grid-list-xl>
-            <v-layout row>
-              <v-flex class="pt-0">
-                <v-divider/>
-              </v-flex>
-            </v-layout>
-            <v-layout row v-if="numLevels > 1">
-              <v-flex xs4 md2 class="text-xs-center d-align-self-center">
-                Level: {{ levelIndex + 1 }}
-              </v-flex>
-              <v-flex>
-                <v-slider v-model="levelIndex" step="1" ticks min="0" :max="numLevels - 1"/>
-              </v-flex>
-            </v-layout>
-            <v-layout row>
-              <v-flex>
-                <buff-table :effects="currentBurstEffect" :showHeaders="true"/>
-              </v-flex>
-            </v-layout>
-          </v-container>
+          <div v-show="showBuffTable">
+            <v-container fluid v-if="hasShownBuffTable" grid-list-xl>
+              <v-layout row>
+                <v-flex class="pt-0">
+                  <v-divider/>
+                </v-flex>
+              </v-layout>
+              <v-layout row v-if="numLevels > 1">
+                <v-flex xs4 md2 class="text-xs-center d-align-self-center">
+                  Level: {{ levelIndex + 1 }}
+                </v-flex>
+                <v-flex>
+                  <v-slider v-model="levelIndex" step="1" ticks min="0" :max="numLevels - 1"/>
+                </v-flex>
+              </v-layout>
+              <v-layout row>
+                <v-flex>
+                  <buff-table :effects="currentBurstEffect" :showHeaders="true"/>
+                </v-flex>
+              </v-layout>
+            </v-container>
+          </div>
         </v-slide-y-transition>
       </template>
     </template>
