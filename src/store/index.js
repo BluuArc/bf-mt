@@ -38,6 +38,7 @@ export default new Vuex.Store({
     loadingMessage: '',
     loadingState: false, // changed mostly by MultidexDataWrapper, accessed by all
     iconKeyConfigCache: {},
+    maxColumnWidthForBuffTable: 0,
   },
   mutations: {
     setInitState (state, newState = false) {
@@ -58,6 +59,9 @@ export default new Vuex.Store({
     },
     setValueForIconKey (state, { key, value }) {
       state.iconKeyConfigCache[key] = value;
+    },
+    setMaxColumnWidthForBuffTable(state, newVal) {
+      state.maxColumnWidthForBuffTable = +newVal;
     },
   },
   actions: {

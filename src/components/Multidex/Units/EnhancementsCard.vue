@@ -77,7 +77,7 @@
             </v-layout>
           </v-flex>
           <v-slide-y-transition>
-            <v-flex xs12 v-show="showTables.includes(index)">
+            <v-flex xs12 v-show="showTables.includes(index)" style="overflow-x: auto;">
               <!-- lazily render buff table once -->
               <buff-table v-if="showTables.includes(index) || effectCache[skillEntry.id]" :effects="getSkillEffects(skillEntry)" :showHeaders="true"/>
             </v-flex>

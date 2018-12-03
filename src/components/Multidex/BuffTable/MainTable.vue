@@ -1,13 +1,13 @@
 <template>
-  <v-container fluid class="buff-table pa-0">
+  <v-container fluid class="buff-table pa-0" v-resize="checkIdColumnWidth">
     <v-layout row v-if="showHeaders" class="buff-table--header">
-      <v-flex xs4 lg1 :class="{ 'text-xs-center': true, 'pl-0': $vuetify.breakpoint.mdAndDown }">
+      <v-flex :class="{ 'text-xs-center buff-table--id-column': true }">
         <v-btn flat @click="toggleAllEffectViews" small style="min-width: 36px;">
           <v-icon>{{ hiddenIndices.length === mappedEffects.length ? 'expand_more' : 'expand_less' }}</v-icon>
           ID
         </v-btn>
       </v-flex>
-      <v-flex xs8 lg11 class="text-xs-center d-align-self-center">
+      <v-flex class="text-xs-center d-align-self-center buff-table--data-columns">
         <v-layout row class="d-align-items-center">
           <v-flex xs3>Buff Property</v-flex>
           <v-flex xs9>Buff Value</v-flex>
@@ -15,13 +15,13 @@
       </v-flex>
     </v-layout>
     <v-layout row class="buff-table--row d-align-items-center" v-for="(effectEntry, i) in mappedEffects" :key="i">
-      <v-flex xs4 lg1 :class="{ 'text-xs-center buff-table--id-column': true, 'hidden-effects': hiddenIndices.includes(i), 'pl-0': $vuetify.breakpoint.mdAndDown }">
+      <v-flex :class="{ 'text-xs-center buff-table--id-column': true, 'hidden-effects': hiddenIndices.includes(i) }">
         <v-btn flat @click="() => toggleEffectView(i)" small style="min-width: 36px;" class="collapse-btn">
           <v-icon>{{ hiddenIndices.includes(i) ? 'unfold_more' : 'unfold_less' }}</v-icon>
           {{ effectEntry.id }}
         </v-btn>
       </v-flex>
-      <v-flex xs8 lg11 :class="{ 'text-xs-center': true }">
+      <v-flex :class="{ 'text-xs-center buff-table--data-columns': true }">
         <template v-if="!hiddenIndices.includes(i)">
           <v-layout row v-for="(prop, j) in getSortedProps(effectEntry.effect)" :key="j" class="buff-table--property-row d-align-items-center">
             <template v-if="isProcBuffList(effectEntry, prop)">
@@ -57,6 +57,8 @@
 
 <script>
 import { getEffectType, getEffectId } from '@/modules/EffectProcessor/processor-helper';
+import { mapState, mapMutations } from 'vuex';
+
 export default {
   props: {
     effects: {
@@ -69,12 +71,14 @@ export default {
     },
   },
   computed: {
+    ...mapState(['maxColumnWidthForBuffTable']),
     idKeys: () => ['passive id', 'unknown passive id', 'proc id', 'unknown proc id'],
     mappedEffects () {
       return this.effects.map(this.getEffectDetails);
     },
   },
   methods: {
+    ...mapMutations(['setMaxColumnWidthForBuffTable']),
     getEffectDetails (effect) {
       const type = getEffectType(effect);
       const id = getEffectId(effect);
@@ -106,11 +110,98 @@ export default {
     isProcBuffList (effectEntry, prop) {
       return effectEntry.type === 'passive' && +effectEntry.id === 66 && prop === 'triggered effect';
     },
+    checkIdColumnWidth () {
+      if (this.$el.clientWidth > 0) {
+        let widthSum = 0;
+        let maxWidth = 0;
+        const cells = Array.from(this.$el.querySelectorAll('.buff-table--id-column'));
+        cells.forEach(elem => {
+            const width = elem.clientWidth;
+            widthSum += width;
+            if (width > maxWidth) {
+              maxWidth = width;
+            }
+          });
+        // console.warn('running checks on', this.$el, maxWidth, cells.length > 0 && widthSum / cells.length);
+        if (maxWidth > this.maxColumnWidthForBuffTable) {
+          this.setMaxColumnWidthForBuffTable(maxWidth);
+        } else if (cells.length > 0 && (widthSum / cells.length) !== maxWidth) {
+          // console.warn('different width', maxWidth, this.maxColumnWidthForBuffTable);
+          this.setIdColumnWidth();
+        } else if (maxWidth > 0 && maxWidth === this.maxColumnWidthForBuffTable) {
+          // already set, so remove event handlers
+          // console.warn('removing handler for', this.$el);
+          this.removeResizeEventHandlers(this.$el);
+          if (this.$el.parentElement) {
+            this.removeResizeEventHandlers(this.$el.parentElement);
+          }
+        }
+      }
+    },
+    setIdColumnWidth () {
+      if (this.maxColumnWidthForBuffTable > 0) {
+        Array.from(this.$el.querySelectorAll('.buff-table--id-column'))
+          .forEach(elem => {
+            // only set if column is visible (i.e. width > 0)
+            if (elem.clientWidth > 0) {
+              elem.style.minWidth = `${this.maxColumnWidthForBuffTable}px`;
+              elem.style.width = `${this.maxColumnWidthForBuffTable}px`;
+            }
+          });
+      }
+    },
+    delayedCheckColumnWidth () {
+      if (this.resizeTimeout) {
+        clearTimeout(this.resizeTimeout);
+      }
+
+      this.resizeTimeout = setTimeout(() => {
+        this.checkIdColumnWidth();
+      }, 100);
+    },
+    attachResizeEventHandlers (elem) {
+      elem.addEventListener('transitionend', this.delayedCheckColumnWidth);
+      elem.addEventListener('webkitTransitionEnd', this.delayedCheckColumnWidth);
+    },
+    removeResizeEventHandlers (elem) {
+      elem.removeEventListener('transitionend', this.delayedCheckColumnWidth);
+      elem.removeEventListener('webkitTransitionEnd', this.delayedCheckColumnWidth);
+    },
   },
   data () {
     return {
       hiddenIndices: [],
+      resizeTimeout: null,
+      allIdCellsInRows: [],
     };
+  },
+  mounted () {
+    this.resizeTimeout = setTimeout(() => {
+      this.checkIdColumnWidth();
+    }, 250);
+    this.setIdColumnWidth();
+
+    this.attachResizeEventHandlers(this.$el);
+    if (this.$el.parentElement) {
+      this.attachResizeEventHandlers(this.$el.parentElement);
+    }
+  },
+  beforeDestroy () {
+    if (this.resizeTimeout) {
+      clearTimeout(this.resizeTimeout);
+    }
+
+    this.removeResizeEventHandlers(this.$el);
+    if (this.$el.parentElement) {
+      this.removeResizeEventHandlers(this.$el.parentElement);
+    }
+  },
+  watch: {
+    maxColumnWidthForBuffTable (newValue, oldValue) {
+      if (!isNaN(newValue) && newValue > oldValue) {
+        this.setIdColumnWidth();
+      }
+    },
   },
   name: 'buff-table',
 };
@@ -126,13 +217,13 @@ export default {
 
   .buff-table--header {
     font-weight: bold;
-  }
 
-  .buff-table--id-column {
-    margin-right: -1px;
-    &.hidden-effects {
-      margin-right: 0;
-      border-right: var(--table-border-settings);
+    .buff-table--id-column {
+      flex-grow: 0;
+    }
+
+    .buff-table--data-columns {
+      flex: 1 1 auto;
     }
   }
 
@@ -144,6 +235,19 @@ export default {
     border-left: var(--table-border-settings);
     border-right: var(--table-border-settings);
     border-top: var(--table-border-settings);
+
+    .buff-table--data-columns {
+      flex: 1 1 auto;
+    }
+
+    .buff-table--id-column {
+      margin-right: -1px;
+      flex-grow: 0;
+      &.hidden-effects {
+        margin-right: 0;
+        border-right: var(--table-border-settings);
+      }
+    }
 
     &:hover {
       background-color: var(--table-background-color);
