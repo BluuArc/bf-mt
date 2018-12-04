@@ -1,12 +1,4 @@
 {
-  "MST_SKILLS_2122600_NAME": {
-    "en": "Crimson Changer",
-    "es": "Cambiador carmesí",
-    "id": "Pengubah Merah",
-    "pt": "Alterador Carmesim",
-    "th": "คริมสัน เชนเจอร์",
-    "vi": "Crimson Changer"
-  },
   "MST_SKILLS_2122601_DESCRIPTION": {
     "en": "18 combo Fire elemental attack on all enemies, boosts Atk & adds Fire element to attack for 3 turns",
     "es": "Combo grupal de 18 ataque ígneos. Aumenta el ataque y agrega fuego al ataque durante 3 turnos",
@@ -87558,5 +87550,69 @@
     "pt": "Howl of Fenris",
     "th": "ฮาวล์ ออฟ เฟนริส",
     "vi": "Howl of Fenris"
+  },
+  "MST_SKILLS_2830418_DESCRIPTION": {
+    "en": "31 combo massive Earth attack on all foes, activates Earth barrier, adds random status ailment infliction to attack for 3 turns, enormously boosts damage against status afflicted foes for 3 turns & enormously boosts BB Atk for 3 turns",
+    "es": "31 combo massive Earth attack on all foes, activates Earth barrier, adds random status ailment infliction to attack for 3 turns, enormously boosts damage against status afflicted foes for 3 turns & enormously boosts BB Atk for 3 turns",
+    "id": "31 kombo serangan Bumi masif ke semua musuh, mengaktifkan penghalang Bumi, 3 giliran: beri status penyakit acak ke serangan, ekstra jumbo BB Serang dan kerusakan ke musuh yang terkena status",
+    "pt": "31 combo massive Earth attack on all foes, activates Earth barrier, adds random status ailment infliction to attack for 3 turns, enormously boosts damage against status afflicted foes for 3 turns & enormously boosts BB Atk for 3 turns",
+    "th": "31 คอมโบ โจมตีธาตุดินรุนแรงมหาศาล ใส่ศัตรูทั้งหมด, ใช้งาน กำแพงดิน, เพิ่มทำให้ติดสถานะผิดปกติโดยสุ่ม ให้กับการโจมตี นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ ความเสียหาย ต่อศัตรูที่ติดสถานะผิดปกติ นาน 3 เทิร์น และ เพิ่มค่ามหาศาลให้ BB โจมตี นาน 3 เทิร์น",
+    "vi": "31 combo massive Earth attack on all foes, activates Earth barrier, adds random status ailment infliction to attack for 3 turns, enormously boosts damage against status afflicted foes for 3 turns & enormously boosts BB Atk for 3 turns"
+  },
+  "MST_SKILLS_2830418_NAME": {
+    "en": "Wrath of Fenris",
+    "es": "Wrath of Fenris",
+    "id": "Amarah Fenris",
+    "pt": "Wrath of Fenris",
+    "th": "วราธ ออฟ เฟนริส",
+    "vi": "Wrath of Fenris"
+  },
+  "MST_SKILLS_2830437_DESCRIPTION": {
+    "en": "25 combo massive Earth attack on all foes, enormously boosts all elemental damage for 3 turns, damage taken enormously restores HP for 3 turns, massive additional damage at turn's end for 3 turns & high probability of raising allies from KO",
+    "es": "25 combo massive Earth attack on all foes, enormously boosts all elemental damage for 3 turns, damage taken enormously restores HP for 3 turns, massive additional damage at turn's end for 3 turns & high probability of raising allies from KO",
+    "id": "25 kombo serangan Guntur masif ke semua musuh, 3 giliran: ekstra jumbo kerusakan semua elemen, kerusakan diderita beri pemulihan jumbo HP, kerusakan tambahan masif di akhir giliran & kans besar membangkitkan sekutu dari KO",
+    "pt": "25 combo massive Earth attack on all foes, enormously boosts all elemental damage for 3 turns, damage taken enormously restores HP for 3 turns, massive additional damage at turn's end for 3 turns & high probability of raising allies from KO",
+    "th": "25 คอมโบ โจมตีธาตุดินรุนแรงมหาศาล ใส่ศัตรูทั้งหมด, เพิ่มค่ามหาศาลให้ ความเสียหายธาตุทั้งหมด นาน 3 เทิร์น, ความเสียหายทีได้รับ ฟื้นคืน HP มหาศาล นาน 3 เทิร์น, ความเสียหายเพิ่มเติมรุนแรงมหาศาล เมื่อตอนจบเทิร์น นาน 3 เทิร์น กับ มีโอกาสสูงที่จะ ชุบชีวิตรพัรธมิตรจาก KO",
+    "vi": "25 combo massive Earth attack on all foes, enormously boosts all elemental damage for 3 turns, damage taken enormously restores HP for 3 turns, massive additional damage at turn's end for 3 turns & high probability of raising allies from KO"
+  },
+  "MST_SKILLS_2830437_NAME": {
+    "en": "Screaming Mandrake Hex",
+    "es": "Screaming Mandrake Hex",
+    "id": "Kutukan Mandrake Menjerit",
+    "pt": "Screaming Mandrake Hex",
+    "th": "สครีมมิ่ง แมนเดรค เฮ็กซ์",
+    "vi": "Screaming Mandrake Hex"
+  },
+  "MST_SKILLS_2830438_DESCRIPTION": {
+    "en": "33 combo massive Earth attack on all foes (with additional 5% damage of foes' max HP), enormously boosts all elemental damage for 3 turns, damage taken enormously restores HP for 3 turns, massive additional damage at turn's end for 3 turns & high probability of raising allies from KO",
+    "es": "33 combo massive Earth attack on all foes (with additional 5% damage of foes' max HP), enormously boosts all elemental damage for 3 turns, damage taken enormously restores HP for 3 turns, massive additional damage at turn's end for 3 turns & high probability of raising allies from KO",
+    "id": "33 kombo serangan Bumi masif ke semua musuh (tambahan 5% keruskakan HP maks musuh), 3 giliran: ekstra jumbo semua kerusakan elemen, kerusakan diderita beri pemulihan jumbo HP, kerusakan masif tambahan di akhir giliran &  kans bangkitkan sekutu dari KO ",
+    "pt": "33 combo massive Earth attack on all foes (with additional 5% damage of foes' max HP), enormously boosts all elemental damage for 3 turns, damage taken enormously restores HP for 3 turns, massive additional damage at turn's end for 3 turns & high probability of raising allies from KO",
+    "th": "33 คอมโบ โจมตีธาตุดินรุนแรงมหาศาล ใส่ศัตรูทั้งหมด (พร้อมความเสียหายเพิ่มเติม 5% ของ HP สูงสุดของศัตรู), เพิ่มค่ามหาศาลให้ ความเสียหายธาตุทั้งหมด นาน 3 เทิร์น, ความเสียหายทีได้รับ ฟื้นคืน HP มหาศาล นาน 3 เทิร์น, ความเสียหายเพิ่มเติมรุนแรงมหาศาล เมื่อตอนจบเทิร์น นาน 3 เทิร์น กับ มีโอกาสสูงที่จะ ชุบชีวิตรพัรธมิตรจาก KO",
+    "vi": "33 combo massive Earth attack on all foes (with additional 5% damage of foes' max HP), enormously boosts all elemental damage for 3 turns, damage taken enormously restores HP for 3 turns, massive additional damage at turn's end for 3 turns & high probability of raising allies from KO"
+  },
+  "MST_SKILLS_2830438_NAME": {
+    "en": "Verdant Vine Coffin",
+    "es": "Verdant Vine Coffin",
+    "id": "Peti Mati Sulur Hijau",
+    "pt": "Verdant Vine Coffin",
+    "th": "เวอร์แดนท์ ไวน์ คอฟฟิน",
+    "vi": "Verdant Vine Coffin"
+  },
+  "MST_SKILLS_2830518_DESCRIPTION": {
+    "en": "32 combo massive Earth and Water attack on all foes, negates critical and elemental damage for 3 turns, enormously boosts Spark damage for 3 turns & enormously boosts BC, HC drop rates and BC efficacy for 3 turns",
+    "es": "32 combo massive Earth and Water attack on all foes, negates critical and elemental damage for 3 turns, enormously boosts Spark damage for 3 turns & enormously boosts BC, HC drop rates and BC efficacy for 3 turns",
+    "id": "32 kombo serangan masif Bumi dan Air ke semua musuh, 3 giliran: menegasi kerusakan elemen dan ampuh, ekstra jumbo kerusakan Percikan, perolehan BC, HC, keampuhan BC",
+    "pt": "32 combo massive Earth and Water attack on all foes, negates critical and elemental damage for 3 turns, enormously boosts Spark damage for 3 turns & enormously boosts BC, HC drop rates and BC efficacy for 3 turns",
+    "th": "32 คอมโบ โจมตีธาตุ ดิน กับ น้ำ รุนแรงมหาศาล ใส่ศัตรูทั้งหมด, ต้านทานความเสียหาย คริติคอล กับ ธาตุ นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ ความเสียหายสปาร์ค นาน 3 เทิร์น และ เพิ่มค่ามหาศาลให้ อัตราดรอป BC, HC กับ ประสิทธิภาพ BC นาน 3 เทิร์น",
+    "vi": "32 combo massive Earth and Water attack on all foes, negates critical and elemental damage for 3 turns, enormously boosts Spark damage for 3 turns & enormously boosts BC, HC drop rates and BC efficacy for 3 turns"
+  },
+  "MST_SKILLS_2830518_NAME": {
+    "en": "Flowing River Surging Earth",
+    "es": "Flowing River Surging Earth",
+    "id": "Aliran Sungai Keluar Bumi",
+    "pt": "Flowing River Surging Earth",
+    "th": "โฟลวอิ้ง ริเวอร์ เซิร์จจิ้ง เอิร์ธ",
+    "vi": "Flowing River Surging Earth"
   }
 }

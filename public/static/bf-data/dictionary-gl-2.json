@@ -1,4 +1,68 @@
 {
+  "MST_LEADERSKILLS_801056_DESCRIPTION": {
+    "en": "Great boost to critical hit damage & boosts Atk power and max HP by 30%",
+    "es": "Aumento al daño crítico, al poder de ataque y a los PS máx. en 30%",
+    "id": "Ekstra kerusakan pukulan ampuh; 30% ekstra kekuatan Serang & maks HP",
+    "pt": "Grande bônus no dano crítico e poder de ATQ e + 30% de HP máx. ",
+    "th": "เพิ่มค่าโจมตีคริติคอล เพิ่มพลังโจมตีและ HP สูงสุด 30%",
+    "vi": "Great boost to critical hit damage & boosts Atk power and max HP by 30%"
+  },
+  "MST_LEADERSKILLS_801056_NAME": {
+    "en": "Flashing Crimson Prescience",
+    "es": "Presencia carmesí brillante",
+    "id": "Terus Mata Kilatan Merah",
+    "pt": "Previsão do Brilho Carmesim",
+    "th": "แฟลชชิ่ง คริมสัน พรีไซแอนซ",
+    "vi": "Flashing Crimson Prescience"
+  },
+  "MST_LEADERSKILLS_801057_DESCRIPTION": {
+    "en": "Nullifies all status ailments & 5% reduction in all damage received for all elements",
+    "es": "Niega aflicciones de estados y reduce 5% el daño recibido de todos los elementos",
+    "id": "Menetralkan semua status & 5% diskon kerusakan diderita semua elemen",
+    "pt": "Nulifica todas as enfermidades e reduz em 5% o dano de todos os elementos",
+    "th": "กันทุกสถานะผิดปกติ และ 5% ลดความเสียหายที่ได้รับจากทุกธาตุ",
+    "vi": "Nullifies all status ailments & 5% reduction in all damage received for all elements"
+  },
+  "MST_LEADERSKILLS_801057_NAME": {
+    "en": "Chrono Protection",
+    "es": "Cronoprotección",
+    "id": "Perlindungan Krono",
+    "pt": "Cronoproteção",
+    "th": "โครโน่ โพรเทคชั่น",
+    "vi": "Chrono Protection"
+  },
+  "MST_LEADERSKILLS_801058_DESCRIPTION": {
+    "en": "Nullifies all status ailments & 10% reduction in all damage received for all elements",
+    "es": "Niega aflicciones de estados y reduce 10% el daño recibido de todos los elementos",
+    "id": "Menetralkan semua status & 10% diskon kerusakan diderita semua elemen",
+    "pt": "Nulifica todas as enfermidades e reduz em 10% o dano de todos os elementos",
+    "th": "กันทุกสถานะผิดปกติ และ 10% ลดความเสียหายที่ได้รับจากทุกธาตุ",
+    "vi": "Nullifies all status ailments & 10% reduction in all damage received for all elements"
+  },
+  "MST_LEADERSKILLS_801058_NAME": {
+    "en": "Chrono Sanctuary",
+    "es": "Cronosantuario",
+    "id": "Suaka Krono",
+    "pt": "Cronosantuário",
+    "th": "โครโน่ แซชัวรี่",
+    "vi": "Chrono Sanctuary"
+  },
+  "MST_LEADERSKILLS_801059_DESCRIPTION": {
+    "en": "10% boost to critical hit rate & boost to HC and BC drop rate",
+    "es": "+10% a la posibilidad de asestar golpes críticos, y aumenta la posibilidad de conseguir CC y CB",
+    "id": "10% ekstra frekuensi pukulan ampuh & menambah perolehan HC dan BC",
+    "pt": "10% de reforço na chance de crítico e reforço na queda de CC e CB",
+    "th": "10% เพิ่มค่า อัตราเกิดคริติคอล และ เพิ่มค่า อัตราดรอป HC กับ BC",
+    "vi": "10% boost to critical hit rate & boost to HC and BC drop rate"
+  },
+  "MST_LEADERSKILLS_801059_NAME": {
+    "en": "Rugged Tenacity",
+    "es": "Tenacidad resistente",
+    "id": "Kegigihan Kasar",
+    "pt": "Tenacidade Robusta",
+    "th": "รักเกตเทนาซิตี้",
+    "vi": "Rugged Tenacity"
+  },
   "MST_LEADERSKILLS_801060_DESCRIPTION": {
     "en": "15% boost to critical hit rate & boost to HC and BC drop rate",
     "es": "+15% a la posibilidad de asestar golpes críticos, y aumenta la posibilidad de conseguir CC y CB",
@@ -4223,6 +4287,38 @@
     "th": "Iron Shadow Dragon Mode",
     "vi": "Iron Shadow Dragon Mode"
   },
+  "MST_LEADERSKILLS_830657_DESCRIPTION": {
+    "en": "100% boost to Atk, Def and 80% boost to max HP of Earth types, 10% damage reduction from Fire, Earth types, damage taken hugely boosts BB gauge & damage taken may reduce foe's BB gauge fill rate for 1 turn",
+    "es": "100% boost to Atk, Def and 80% boost to max HP of Earth types, 10% damage reduction from Fire, Earth types, damage taken hugely boosts BB gauge & damage taken may reduce foe's BB gauge fill rate for 1 turn",
+    "id": "100% boost to Atk, Def and 80% boost to max HP of Earth types, 10% damage reduction from Fire, Earth types, damage taken hugely boosts BB gauge & damage taken may reduce foe's BB gauge fill rate for 1 turn",
+    "pt": "100% boost to Atk, Def and 80% boost to max HP of Earth types, 10% damage reduction from Fire, Earth types, damage taken hugely boosts BB gauge & damage taken may reduce foe's BB gauge fill rate for 1 turn",
+    "th": "100% boost to Atk, Def and 80% boost to max HP of Earth types, 10% damage reduction from Fire, Earth types, damage taken hugely boosts BB gauge & damage taken may reduce foe's BB gauge fill rate for 1 turn",
+    "vi": "100% boost to Atk, Def and 80% boost to max HP of Earth types, 10% damage reduction from Fire, Earth types, damage taken hugely boosts BB gauge & damage taken may reduce foe's BB gauge fill rate for 1 turn"
+  },
+  "MST_LEADERSKILLS_830657_NAME": {
+    "en": "Dauntless Heart",
+    "es": "Dauntless Heart",
+    "id": "Dauntless Heart",
+    "pt": "Dauntless Heart",
+    "th": "Dauntless Heart",
+    "vi": "Dauntless Heart"
+  },
+  "MST_LEADERSKILLS_830658_DESCRIPTION": {
+    "en": "120% boost to Atk, Def and 100% boost to max HP of Earth types, 20% damage reduction from Fire, Earth types, damage taken hugely boosts BB gauge, damage taken may reduce foe's BB gauge fill rate for 1 turn, 50% damage reduction from all element types for first 2 turns & enormously boosts ABP and CBP gain",
+    "es": "120% boost to Atk, Def and 100% boost to max HP of Earth types, 20% damage reduction from Fire, Earth types, damage taken hugely boosts BB gauge, damage taken may reduce foe's BB gauge fill rate for 1 turn, 50% damage reduction from all element types for first 2 turns & enormously boosts ABP and CBP gain",
+    "id": "120% boost to Atk, Def and 100% boost to max HP of Earth types, 20% damage reduction from Fire, Earth types, damage taken hugely boosts BB gauge, damage taken may reduce foe's BB gauge fill rate for 1 turn, 50% damage reduction from all element types for first 2 turns & enormously boosts ABP and CBP gain",
+    "pt": "120% boost to Atk, Def and 100% boost to max HP of Earth types, 20% damage reduction from Fire, Earth types, damage taken hugely boosts BB gauge, damage taken may reduce foe's BB gauge fill rate for 1 turn, 50% damage reduction from all element types for first 2 turns & enormously boosts ABP and CBP gain",
+    "th": "120% boost to Atk, Def and 100% boost to max HP of Earth types, 20% damage reduction from Fire, Earth types, damage taken hugely boosts BB gauge, damage taken may reduce foe's BB gauge fill rate for 1 turn, 50% damage reduction from all element types for first 2 turns & enormously boosts ABP and CBP gain",
+    "vi": "120% boost to Atk, Def and 100% boost to max HP of Earth types, 20% damage reduction from Fire, Earth types, damage taken hugely boosts BB gauge, damage taken may reduce foe's BB gauge fill rate for 1 turn, 50% damage reduction from all element types for first 2 turns & enormously boosts ABP and CBP gain"
+  },
+  "MST_LEADERSKILLS_830658_NAME": {
+    "en": "Soul of the Intrepid",
+    "es": "Soul of the Intrepid",
+    "id": "Soul of the Intrepid",
+    "pt": "Soul of the Intrepid",
+    "th": "Soul of the Intrepid",
+    "vi": "Soul of the Intrepid"
+  },
   "MST_LEADERSKILLS_840047_DESCRIPTION": {
     "en": "100% boost to Atk, 60% boost to Def, max HP of Thunder types, 10% damage reduction from Water, Thunder types, considerably reduces BB gauge required for BB & probable considerable reduction of BB gauge fill rate for 2 turns",
     "es": "100% boost to Atk, 60% boost to Def, max HP of Thunder types, 10% damage reduction from Water, Thunder types, considerably reduces BB gauge required for BB & probable considerable reduction of BB gauge fill rate for 2 turns",
@@ -4270,6 +4366,22 @@
     "pt": "Third Wish",
     "th": "30% เพิ่มค่า โจมตี, เพิ่มค่าเล็กน้อยให้ อัตราเกิดคริติคอล และ ความเสียหายที่ได้รับ อาจจะเติม เกจ BB อย่างมาก",
     "vi": "Third Wish"
+  },
+  "MST_LEADERSKILLS_840148_DESCRIPTION": {
+    "en": "100% boost to all parameters, boosts critical hit rate, hugely boosts Spark and critical damage, negates Def ignoring effects, adds probable resistance against 1 KO attack & raises Atk parameter limits to 130000",
+    "es": "100% boost to all parameters, boosts critical hit rate, hugely boosts Spark and critical damage, negates Def ignoring effects, adds probable resistance against 1 KO attack & raises Atk parameter limits to 130000",
+    "id": "100% boost to all parameters, boosts critical hit rate, hugely boosts Spark and critical damage, negates Def ignoring effects, adds probable resistance against 1 KO attack & raises Atk parameter limits to 130000",
+    "pt": "100% boost to all parameters, boosts critical hit rate, hugely boosts Spark and critical damage, negates Def ignoring effects, adds probable resistance against 1 KO attack & raises Atk parameter limits to 130000",
+    "th": "100% boost to all parameters, boosts critical hit rate, hugely boosts Spark and critical damage, negates Def ignoring effects, adds probable resistance against 1 KO attack & raises Atk parameter limits to 130000",
+    "vi": "100% boost to all parameters, boosts critical hit rate, hugely boosts Spark and critical damage, negates Def ignoring effects, adds probable resistance against 1 KO attack & raises Atk parameter limits to 130000"
+  },
+  "MST_LEADERSKILLS_840148_NAME": {
+    "en": "Chosen of the Gods",
+    "es": "Chosen of the Gods",
+    "id": "Chosen of the Gods",
+    "pt": "Chosen of the Gods",
+    "th": "Chosen of the Gods",
+    "vi": "Chosen of the Gods"
   },
   "MST_LEADERSKILLS_840178_DESCRIPTION": {
     "en": "40% boost to all parameters, raises normal hit amount, greatly reduces BB gauge required for BB & probable normal attack on all foes",
@@ -87502,61 +87614,5 @@
     "pt": "Mila Brilha Cintila",
     "th": "ทวิงคลิงก์แฟลชมิล่า",
     "vi": "Tia nhấp nháy Mila"
-  },
-  "MST_MONSTERS_55101_NAME": {
-    "en": "Twinkling Flash Mila",
-    "es": "Destello fugaz Mila",
-    "id": "Flash Kilat Mila",
-    "pt": "Mila Brilha Cintila",
-    "th": "ทวิงคลิงก์แฟลชมิล่า",
-    "vi": "Tia nhấp nháy Mila"
-  },
-  "MST_MONSTERS_55102_NAME": {
-    "en": "Twinkling Flash Mila",
-    "es": "Destello fugaz Mila",
-    "id": "Flash Kilat Mila",
-    "pt": "Mila Brilha Cintila",
-    "th": "ทวิงคลิงก์แฟลชมิล่า",
-    "vi": "Tia nhấp nháy Mila"
-  },
-  "MST_MONSTERS_55103_NAME": {
-    "en": "Twinkling Flash Mila",
-    "es": "Destello fugaz Mila",
-    "id": "Flash Kilat Mila",
-    "pt": "Mila Brilha Cintila",
-    "th": "ทวิงคลิงก์แฟลชมิล่า",
-    "vi": "Tia nhấp nháy Mila"
-  },
-  "MST_MONSTERS_55104_NAME": {
-    "en": "Twinkling Flash Mila",
-    "es": "Destello fugaz Mila",
-    "id": "Flash Kilat Mila",
-    "pt": "Mila Brilha Cintila",
-    "th": "ทวิงคลิงก์แฟลชมิล่า",
-    "vi": "Tia nhấp nháy Mila"
-  },
-  "MST_MONSTERS_55105_NAME": {
-    "en": "Twinkling Flash Mila",
-    "es": "Destello fugaz Mila",
-    "id": "Flash Berkedip Mila",
-    "pt": "Mila Brilha Cintila",
-    "th": "ทวิงคลิ่ง แฟลช มิล่า",
-    "vi": "Tia nhấp nháy Mila"
-  },
-  "MST_MONSTERS_55106_NAME": {
-    "en": "Twinkling Flash Mila",
-    "es": "Destello fugaz Mila",
-    "id": "Flash Berkedip Mila",
-    "pt": "Mila Brilha Cintila",
-    "th": "ทวิงคลิ่ง แฟลช มิล่า",
-    "vi": "Twinkling Flash Mila"
-  },
-  "MST_MONSTERS_55107_NAME": {
-    "en": "Twinkling Flash Mila",
-    "es": "Destello fugaz Mila",
-    "id": "Flash Kilat Mila",
-    "pt": "Mila Brilha Cintila",
-    "th": "ทวิงคลิงก์แฟลชมิล่า",
-    "vi": "Twinkling Flash Mila"
   }
 }
