@@ -43742,6 +43742,61 @@
     "xp": 7000,
     "zel": 12000
   },
+  "8301381": {
+    "area": "800138",
+    "battle_count": 5,
+    "clear_bonus": [
+      {
+        "gem": "1"
+      },
+      {
+        "unit": {
+          "count": "1",
+          "id": "50792"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "Test the extent of your knowledge of Grand Gaia, hosted by Rizky! Expect many lore related questions!",
+    "difficulty": 1,
+    "dungeon": "800138",
+    "energy_use": 20,
+    "id": "8301381",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Grand Gaia Trivia ft. Rizky",
+    "xp": 3500,
+    "zel": 0
+  },
+  "8301382": {
+    "area": "800138",
+    "battle_count": 5,
+    "clear_bonus": [
+      {
+        "gem": "1"
+      },
+      {
+        "unit": {
+          "count": "1",
+          "id": "50792"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "How well do you know Grand Gaia? Sit down, join the challenge and let Shaly be the judge of that! ",
+    "difficulty": 2,
+    "dungeon": "800138",
+    "energy_use": 20,
+    "id": "8301382",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Grand Gaia Trivia ft. Shaly",
+    "requires": "8301381",
+    "xp": 3500,
+    "zel": 0
+  },
   "8301400": {
     "area": "New Frontier Gate",
     "battle_count": 5,
@@ -46924,6 +46979,74 @@
     "land": "Vortex",
     "mimic_info": {},
     "name": "Essence of Time Lv.4",
+    "xp": 0,
+    "zel": 0
+  },
+  "8509001": {
+    "area": "New Frontier Gate",
+    "battle_count": 1,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "",
+    "difficulty": 1,
+    "dungeon": "8000009",
+    "energy_use": 0,
+    "id": "8509001",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Void Lv.1",
+    "xp": 0,
+    "zel": 0
+  },
+  "8509002": {
+    "area": "New Frontier Gate",
+    "battle_count": 1,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "",
+    "difficulty": 1,
+    "dungeon": "8000009",
+    "energy_use": 0,
+    "id": "8509002",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Void Lv.2",
+    "xp": 0,
+    "zel": 0
+  },
+  "8509003": {
+    "area": "New Frontier Gate",
+    "battle_count": 1,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "",
+    "difficulty": 1,
+    "dungeon": "8000009",
+    "energy_use": 0,
+    "id": "8509003",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Void Lv.3",
+    "xp": 0,
+    "zel": 0
+  },
+  "8509004": {
+    "area": "New Frontier Gate",
+    "battle_count": 1,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "",
+    "difficulty": 1,
+    "dungeon": "8000009",
+    "energy_use": 0,
+    "id": "8509004",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Void Lv.4",
     "xp": 0,
     "zel": 0
   },

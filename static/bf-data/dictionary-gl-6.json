@@ -1,44 +1,4 @@
 {
-  "MST_SKILLS_2830527_DESCRIPTION": {
-    "en": "33 combo massive Earth, Dark and Light attack on all enemies, reduces damage taken by half & fully recovers HP for all allies for 3 turns",
-    "es": "Combo grupal de 33 devastadores ataques térreos, oscuros y lumínicos. Reduce el daño 50% y recupera los PS de todos los aliados por 3 turnos.",
-    "id": "33 kombo serangan masif Bumi, Terang, Gelap ke semua musuh, kurangi separuh kerusakan diderita & meteran BB semua sekutu pulih 3 giliran",
-    "pt": "None",
-    "th": "33 คอมโบ โจมตีด้วยธาตุดิน แสงและความมืดอันรุนแรงใส่ศัตรูทุกตัว ลดความเสียหายที่ได้รับลงครึ่งหนึ่ง และฟื้นฟู HP ให้ทีมจนเต็ม 3 เทิร์น",
-    "vi": "33 combo massive Earth, Dark and Light attack on all enemies, reduces damage taken by half & fully recovers HP for all allies for 3 turns"
-  },
-  "MST_SKILLS_2830527_NAME": {
-    "en": "Chrono Catalysm",
-    "es": "Cronocatalismo",
-    "id": "Bencana Kronos",
-    "pt": "Cronocataclisma",
-    "th": "โครโน่ คาตาลิซึ่ม",
-    "vi": "Chrono Catalysm"
-  },
-  "MST_SKILLS_2830528_DESCRIPTION": {
-    "en": "35 combo 5% to 8% max HP attack on all foes, adds high probability of resistance against 1 KO attack, adds probable evasion for 3 turns, probability of activating BB/SBB/UBB twice for 3 turns, probability of raising allies from KO & enormously boosts BB gauge for 3 turns",
-    "es": "35 combo 5% to 8% max HP attack on all foes, adds high probability of resistance against 1 KO attack, adds probable evasion for 3 turns, probability of activating BB/SBB/UBB twice for 3 turns, probability of raising allies from KO & enormously boosts BB gauge for 3 turns",
-    "id": "35 combo 5% to 8% max HP attack on all foes, adds high probability of resistance against 1 KO attack, adds probable evasion for 3 turns, probability of activating BB/SBB/UBB twice for 3 turns, probability of raising allies from KO & enormously boosts BB gauge for 3 turns",
-    "pt": "35 combo 5% to 8% max HP attack on all foes, adds high probability of resistance against 1 KO attack, adds probable evasion for 3 turns, probability of activating BB/SBB/UBB twice for 3 turns, probability of raising allies from KO & enormously boosts BB gauge for 3 turns",
-    "th": "35 combo 5% to 8% max HP attack on all foes, adds high probability of resistance against 1 KO attack, adds probable evasion for 3 turns, probability of activating BB/SBB/UBB twice for 3 turns, probability of raising allies from KO & enormously boosts BB gauge for 3 turns",
-    "vi": "35 combo 5% to 8% max HP attack on all foes, adds high probability of resistance against 1 KO attack, adds probable evasion for 3 turns, probability of activating BB/SBB/UBB twice for 3 turns, probability of raising allies from KO & enormously boosts BB gauge for 3 turns"
-  },
-  "MST_SKILLS_2830528_NAME": {
-    "en": "Singularity",
-    "es": "Singularity",
-    "id": "Singularity",
-    "pt": "Singularity",
-    "th": "Singularity",
-    "vi": "Singularity"
-  },
-  "MST_SKILLS_2830537_DESCRIPTION": {
-    "en": "22 combo massive Earth attack on all foes, enormously boosts BB gauge for 3 turns, fully restores HP for 3 turns, adds high probability of resistance against 1 KO attack, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts OD gauge",
-    "es": "22 combo massive Earth attack on all foes, enormously boosts BB gauge for 3 turns, fully restores HP for 3 turns, adds high probability of resistance against 1 KO attack, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts OD gauge",
-    "id": "22 combo massive Earth attack on all foes, enormously boosts BB gauge for 3 turns, fully restores HP for 3 turns, adds high probability of resistance against 1 KO attack, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts OD gauge",
-    "pt": "22 combo massive Earth attack on all foes, enormously boosts BB gauge for 3 turns, fully restores HP for 3 turns, adds high probability of resistance against 1 KO attack, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts OD gauge",
-    "th": "22 combo massive Earth attack on all foes, enormously boosts BB gauge for 3 turns, fully restores HP for 3 turns, adds high probability of resistance against 1 KO attack, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts OD gauge",
-    "vi": "22 combo massive Earth attack on all foes, enormously boosts BB gauge for 3 turns, fully restores HP for 3 turns, adds high probability of resistance against 1 KO attack, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts OD gauge"
-  },
   "MST_SKILLS_2830537_NAME": {
     "en": "Hit them again, Bjørn!",
     "es": "Hit them again, Bjørn!",
@@ -2543,6 +2503,38 @@
     "th": "Plague Rite Exorcism",
     "vi": "Plague Rite Exorcism"
   },
+  "MST_SKILLS_2860577_DESCRIPTION": {
+    "en": "6 combo massive Light, Dark attack on all foes, 6 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec  for 3 turns, probability of raising allies from KO, enormously boosts Spark damage for 3 turns & 100% damage reduction from Light, Dark types for 3 turns",
+    "es": "6 combo massive Light, Dark attack on all foes, 6 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec  for 3 turns, probability of raising allies from KO, enormously boosts Spark damage for 3 turns & 100% damage reduction from Light, Dark types for 3 turns",
+    "id": "6 combo massive Light, Dark attack on all foes, 6 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec  for 3 turns, probability of raising allies from KO, enormously boosts Spark damage for 3 turns & 100% damage reduction from Light, Dark types for 3 turns",
+    "pt": "6 combo massive Light, Dark attack on all foes, 6 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec  for 3 turns, probability of raising allies from KO, enormously boosts Spark damage for 3 turns & 100% damage reduction from Light, Dark types for 3 turns",
+    "th": "6 combo massive Light, Dark attack on all foes, 6 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec  for 3 turns, probability of raising allies from KO, enormously boosts Spark damage for 3 turns & 100% damage reduction from Light, Dark types for 3 turns",
+    "vi": "6 combo massive Light, Dark attack on all foes, 6 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec  for 3 turns, probability of raising allies from KO, enormously boosts Spark damage for 3 turns & 100% damage reduction from Light, Dark types for 3 turns"
+  },
+  "MST_SKILLS_2860577_NAME": {
+    "en": "Void of Existence",
+    "es": "Void of Existence",
+    "id": "Void of Existence",
+    "pt": "Void of Existence",
+    "th": "Void of Existence",
+    "vi": "Void of Existence"
+  },
+  "MST_SKILLS_2860578_DESCRIPTION": {
+    "en": "12 combo massive Light, Dark attack on all foes, 5 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec  for 3 turns, raises allies from KO, enormously boosts Spark damage for 3 turns & 100% damage reduction from Light, Dark types for 5 turns",
+    "es": "12 combo massive Light, Dark attack on all foes, 5 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec  for 3 turns, raises allies from KO, enormously boosts Spark damage for 3 turns & 100% damage reduction from Light, Dark types for 5 turns",
+    "id": "12 combo massive Light, Dark attack on all foes, 5 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec  for 3 turns, raises allies from KO, enormously boosts Spark damage for 3 turns & 100% damage reduction from Light, Dark types for 5 turns",
+    "pt": "12 combo massive Light, Dark attack on all foes, 5 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec  for 3 turns, raises allies from KO, enormously boosts Spark damage for 3 turns & 100% damage reduction from Light, Dark types for 5 turns",
+    "th": "12 combo massive Light, Dark attack on all foes, 5 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec  for 3 turns, raises allies from KO, enormously boosts Spark damage for 3 turns & 100% damage reduction from Light, Dark types for 5 turns",
+    "vi": "12 combo massive Light, Dark attack on all foes, 5 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec  for 3 turns, raises allies from KO, enormously boosts Spark damage for 3 turns & 100% damage reduction from Light, Dark types for 5 turns"
+  },
+  "MST_SKILLS_2860578_NAME": {
+    "en": "Mors Certa, Vita Incerta",
+    "es": "Mors Certa, Vita Incerta",
+    "id": "Mors Certa, Vita Incerta",
+    "pt": "Mors Certa, Vita Incerta",
+    "th": "Mors Certa, Vita Incerta",
+    "vi": "Mors Certa, Vita Incerta"
+  },
   "MST_SKILLS_2860607_DESCRIPTION": {
     "en": "35 combo massive Light, Dark, Fire attack on all foes, massive additional attack at turn's end for 3 turns on all foes, considerably increases normal hit amount for 3 turns & activates Light barrier",
     "es": "35 combo massive Light, Dark, Fire attack on all foes, massive additional attack at turn's end for 3 turns on all foes, considerably increases normal hit amount for 3 turns & activates Light barrier",
@@ -2638,6 +2630,22 @@
     "pt": "Ankhseram Black Magic MAX",
     "th": "Ankhseram Black Magic MAX",
     "vi": "Ankhseram Black Magic MAX"
+  },
+  "MST_SKILLS_2860678_DESCRIPTION": {
+    "en": "30 combo massive Fire, Dark attack on all foes, massive additional damage at turn's end for 3 turns, enormously boosts OD gauge fill rate for 5 turns, adds evasion for 1 turn & enormously boosts Spark damage for 3 turns",
+    "es": "30 combo massive Fire, Dark attack on all foes, massive additional damage at turn's end for 3 turns, enormously boosts OD gauge fill rate for 5 turns, adds evasion for 1 turn & enormously boosts Spark damage for 3 turns",
+    "id": "30 combo massive Fire, Dark attack on all foes, massive additional damage at turn's end for 3 turns, enormously boosts OD gauge fill rate for 5 turns, adds evasion for 1 turn & enormously boosts Spark damage for 3 turns",
+    "pt": "30 combo massive Fire, Dark attack on all foes, massive additional damage at turn's end for 3 turns, enormously boosts OD gauge fill rate for 5 turns, adds evasion for 1 turn & enormously boosts Spark damage for 3 turns",
+    "th": "30 combo massive Fire, Dark attack on all foes, massive additional damage at turn's end for 3 turns, enormously boosts OD gauge fill rate for 5 turns, adds evasion for 1 turn & enormously boosts Spark damage for 3 turns",
+    "vi": "30 combo massive Fire, Dark attack on all foes, massive additional damage at turn's end for 3 turns, enormously boosts OD gauge fill rate for 5 turns, adds evasion for 1 turn & enormously boosts Spark damage for 3 turns"
+  },
+  "MST_SKILLS_2860678_NAME": {
+    "en": "Ascension to 'Paradise'",
+    "es": "Ascension to 'Paradise'",
+    "id": "Ascension to 'Paradise'",
+    "pt": "Ascension to 'Paradise'",
+    "th": "Ascension to 'Paradise'",
+    "vi": "Ascension to 'Paradise'"
   },
   "MST_SKILLS_2860_DESCRIPTION": {
     "en": "None",
@@ -87614,5 +87622,109 @@
     "pt": "8 combo powerful Fire attack on all foes, largely boosts own Atk, Def, Rec, and own critical hit rate for 3 turns & boosts Atk, Def relative to HP for 3 turns",
     "th": "8 คอมโบ โจมตีธาตุไฟอย่างแรง ใส่ศัตรูทั้งหมด, เพิ่มให้ตนเองอย่างมาก ค่า โจมตี, ป้องกัน, ฟื้นฟู, กับ อัตราเกิดคริติคอล ของตน นาน 3 เทิร์น และ เพิ่มค่า โจมตี, ป้องกัน ขึ้นอยู่กับ HP นาน 3 เทิร์น",
     "vi": "8 combo powerful Fire attack on all foes, largely boosts own Atk, Def, Rec, and own critical hit rate for 3 turns & boosts Atk, Def relative to HP for 3 turns"
+  },
+  "MST_SKILLS_810337_NAME": {
+    "en": "Dragon Force",
+    "es": "Dragon Force",
+    "id": "Waltz Sakurafubuki",
+    "pt": "Dragon Force",
+    "th": "ดราก้อน ฟอร์ซ",
+    "vi": "Dragon Force"
+  },
+  "MST_SKILLS_810338_DESCRIPTION": {
+    "en": "10 combo powerful Fire attack on all foes, hugely boosts own Atk, Def, Rec, critical hit rate for 3 turns, hugely boosts Atk, Def relative to HP for 3 turns & greatly boosts max HP",
+    "es": "10 combo powerful Fire attack on all foes, hugely boosts own Atk, Def, Rec, critical hit rate for 3 turns, hugely boosts Atk, Def relative to HP for 3 turns & greatly boosts max HP",
+    "id": "10 combo powerful Fire attack on all foes, hugely boosts own Atk, Def, Rec, critical hit rate for 3 turns, hugely boosts Atk, Def relative to HP for 3 turns & greatly boosts max HP",
+    "pt": "10 combo powerful Fire attack on all foes, hugely boosts own Atk, Def, Rec, critical hit rate for 3 turns, hugely boosts Atk, Def relative to HP for 3 turns & greatly boosts max HP",
+    "th": "10 combo powerful Fire attack on all foes, hugely boosts own Atk, Def, Rec, critical hit rate for 3 turns, hugely boosts Atk, Def relative to HP for 3 turns & greatly boosts max HP",
+    "vi": "10 combo powerful Fire attack on all foes, hugely boosts own Atk, Def, Rec, critical hit rate for 3 turns, hugely boosts Atk, Def relative to HP for 3 turns & greatly boosts max HP"
+  },
+  "MST_SKILLS_810338_NAME": {
+    "en": "Soul Conflagration",
+    "es": "Soul Conflagration",
+    "id": "Bencana Neraka",
+    "pt": "Soul Conflagration",
+    "th": "โซล คอนแฟลเกรชั่น",
+    "vi": "Soul Conflagration"
+  },
+  "MST_SKILLS_810356_DESCRIPTION": {
+    "en": "9 combo powerful Fire attack on all foes, probable random status ailment infliction, greatly boosts damage against status afflicted foes for 3 turns & boosts Atk, Def of Fire types for 3 turns",
+    "es": "9 combo powerful Fire attack on all foes, probable random status ailment infliction, greatly boosts damage against status afflicted foes for 3 turns & boosts Atk, Def of Fire types for 3 turns",
+    "id": "9 kombo serangan Api kuat ke semua musuh, kans beri status penyakit acak, 3 giliran: amat tambah merusak musuh terkena status, menambah Serang, Tahan tipe Api",
+    "pt": "9 combo powerful Fire attack on all foes, probable random status ailment infliction, greatly boosts damage against status afflicted foes for 3 turns & boosts Atk, Def of Fire types for 3 turns",
+    "th": "9 คอมโบ โจมตีธาตุไฟอย่างแรง ใส่ศัตรูทั้งหมด, มีโอกาส ทำให้ติดสถานะผิดปกติโดยสุ่ม, เพิ่มค่าอย่างมากให้ ความเสียหาย ต่อศัตรูที่ติดสถานะผิดปกติ นาน 3 เทิร์น และ เพิ่ม โจมตี, ป้องกัน ของชนิดไฟ นาน 3 เทิร์น",
+    "vi": "9 combo powerful Fire attack on all foes, probable random status ailment infliction, greatly boosts damage against status afflicted foes for 3 turns & boosts Atk, Def of Fire types for 3 turns"
+  },
+  "MST_SKILLS_810356_NAME": {
+    "en": "Bladeweave Strike",
+    "es": "Bladeweave Strike",
+    "id": "Serbuan Tenunan Bilah",
+    "pt": "Bladeweave Strike",
+    "th": "เบลดวีฟ สไตรค์",
+    "vi": "Bladeweave Strike"
+  },
+  "MST_SKILLS_810357_DESCRIPTION": {
+    "en": "14 combo powerful Fire attack on all foes, probable random status ailment infliction, hugely boosts damage against status afflicted foes for 3 turns, considerably boosts Atk, Def of Fire types for 3 turns & adds probability to perform 1 extra action to self within the same turn",
+    "es": "14 combo powerful Fire attack on all foes, probable random status ailment infliction, hugely boosts damage against status afflicted foes for 3 turns, considerably boosts Atk, Def of Fire types for 3 turns & adds probability to perform 1 extra action to self within the same turn",
+    "id": "14 kombo serangan Api kuat ke semua musuh, kans beri status penyakit acak, menambah kans melakukan 1 tindakan ekstra sendiri dalam giliran yang sama, 3 giliran: amat tambah merusak musuh terkena status, lumayan menambah Serang, Tahan tipe Api",
+    "pt": "14 combo powerful Fire attack on all foes, probable random status ailment infliction, hugely boosts damage against status afflicted foes for 3 turns, considerably boosts Atk, Def of Fire types for 3 turns & adds probability to perform 1 extra action to self within the same turn",
+    "th": "14 คอมโบ โจมตีธาตุไฟอย่างแรง ใส่ศัตรูทั้งหมด, มีโอกาส ทำให้ติดสถานะผิดปกติโดยสุ่ม, เพิ่มค่าอย่างสูงให้ ความเสียหาย ต่อศัตรูที่ติดสถานะผิดปกติ นาน 3 เทิร์น, เพิ่มค่าอย่างมากให้ โจมตี, ป้องกัน ของชนิดไฟ นาน 3 เทิร์น และ เพิ่มโอกาสที่จะทำ 1 คำสั่งเพิ่มให้กับตนเองภายในเทิร์นเดียวกัน",
+    "vi": "14 combo powerful Fire attack on all foes, probable random status ailment infliction, hugely boosts damage against status afflicted foes for 3 turns, considerably boosts Atk, Def of Fire types for 3 turns & adds probability to perform 1 extra action to self within the same turn"
+  },
+  "MST_SKILLS_810357_NAME": {
+    "en": "Heartstopping Strike",
+    "es": "Heartstopping Strike",
+    "id": "Serbuan Jantung Berhenti",
+    "pt": "Heartstopping Strike",
+    "th": "ฮาร์ทสต็อปปิ้ง สไตรค์",
+    "vi": "Heartstopping Strike"
+  },
+  "MST_SKILLS_810377_DESCRIPTION": {
+    "en": "14 combo powerful Fire attack on single foe, 25 combo random massive Fire attack, hugely boosts damage against status afflicted foes for 3 turns, adds probable great 1 turn Atk, Def, Rec reduction effects to attack for 3 turns & adds probable random status ailment infliction to attack for 3 turns",
+    "es": "14 combo powerful Fire attack on single foe, 25 combo random massive Fire attack, hugely boosts damage against status afflicted foes for 3 turns, adds probable great 1 turn Atk, Def, Rec reduction effects to attack for 3 turns & adds probable random status ailment infliction to attack for 3 turns",
+    "id": "14 combo powerful Fire attack on single foe, 25 combo random massive Fire attack, hugely boosts damage against status afflicted foes for 3 turns, adds probable great 1 turn Atk, Def, Rec reduction effects to attack for 3 turns & adds probable random status ailment infliction to attack for 3 turns",
+    "pt": "14 combo powerful Fire attack on single foe, 25 combo random massive Fire attack, hugely boosts damage against status afflicted foes for 3 turns, adds probable great 1 turn Atk, Def, Rec reduction effects to attack for 3 turns & adds probable random status ailment infliction to attack for 3 turns",
+    "th": "14 combo powerful Fire attack on single foe, 25 combo random massive Fire attack, hugely boosts damage against status afflicted foes for 3 turns, adds probable great 1 turn Atk, Def, Rec reduction effects to attack for 3 turns & adds probable random status ailment infliction to attack for 3 turns",
+    "vi": "14 combo powerful Fire attack on single foe, 25 combo random massive Fire attack, hugely boosts damage against status afflicted foes for 3 turns, adds probable great 1 turn Atk, Def, Rec reduction effects to attack for 3 turns & adds probable random status ailment infliction to attack for 3 turns"
+  },
+  "MST_SKILLS_810377_NAME": {
+    "en": "Baccus Sigh",
+    "es": "Baccus Sigh",
+    "id": "Baccus Sigh",
+    "pt": "Baccus Sigh",
+    "th": "Baccus Sigh",
+    "vi": "Baccus Sigh"
+  },
+  "MST_SKILLS_810378_DESCRIPTION": {
+    "en": "16 combo powerful Fire attack on single foe, 25 combo random massive Fire attack, hugely boosts damage against status afflicted foes for 3 turns, adds probable great 1 turn Atk, Def, Rec reduction effects to attack for 3 turns & adds probable random status ailment infliction to attack for 3 turns",
+    "es": "16 combo powerful Fire attack on single foe, 25 combo random massive Fire attack, hugely boosts damage against status afflicted foes for 3 turns, adds probable great 1 turn Atk, Def, Rec reduction effects to attack for 3 turns & adds probable random status ailment infliction to attack for 3 turns",
+    "id": "16 combo powerful Fire attack on single foe, 25 combo random massive Fire attack, hugely boosts damage against status afflicted foes for 3 turns, adds probable great 1 turn Atk, Def, Rec reduction effects to attack for 3 turns & adds probable random status ailment infliction to attack for 3 turns",
+    "pt": "16 combo powerful Fire attack on single foe, 25 combo random massive Fire attack, hugely boosts damage against status afflicted foes for 3 turns, adds probable great 1 turn Atk, Def, Rec reduction effects to attack for 3 turns & adds probable random status ailment infliction to attack for 3 turns",
+    "th": "16 combo powerful Fire attack on single foe, 25 combo random massive Fire attack, hugely boosts damage against status afflicted foes for 3 turns, adds probable great 1 turn Atk, Def, Rec reduction effects to attack for 3 turns & adds probable random status ailment infliction to attack for 3 turns",
+    "vi": "16 combo powerful Fire attack on single foe, 25 combo random massive Fire attack, hugely boosts damage against status afflicted foes for 3 turns, adds probable great 1 turn Atk, Def, Rec reduction effects to attack for 3 turns & adds probable random status ailment infliction to attack for 3 turns"
+  },
+  "MST_SKILLS_810378_NAME": {
+    "en": "Zweihander",
+    "es": "Zweihander",
+    "id": "Zweihander",
+    "pt": "Zweihander",
+    "th": "Zweihander",
+    "vi": "Zweihander"
+  },
+  "MST_SKILLS_810397_DESCRIPTION": {
+    "en": "12 combo powerful Fire attack on all foes, considerably boosts Atk, Def, Rec for 3 turns, boosts BB gauge for 3 turns & boosts max HP",
+    "es": "12 combo powerful Fire attack on all foes, considerably boosts Atk, Def, Rec for 3 turns, boosts BB gauge for 3 turns & boosts max HP",
+    "id": "12 kombo serangan Api kuat ke semua musuh, menambah HP maks, 3 giliran: lumayan menambah Serang, Tahan, Pulih, menambah meteran BB",
+    "pt": "12 combo powerful Fire attack on all foes, considerably boosts Atk, Def, Rec for 3 turns, boosts BB gauge for 3 turns & boosts max HP",
+    "th": "12 คอมโบ โจมตีธาตุไฟอย่างแรง ใส่ศัตรูทั้งหมด, เพิ่มค่าอย่างมากให้ โจมตี, ป้องกัน, ฟื้นฟู นาน 3 เทิร์น, เพิ่ม เกจ BB นาน 3 เทิร์น และ เพิ่ม HP สูงสุด",
+    "vi": "12 combo powerful Fire attack on all foes, considerably boosts Atk, Def, Rec for 3 turns, boosts BB gauge for 3 turns & boosts max HP"
+  },
+  "MST_SKILLS_810397_NAME": {
+    "en": "Fire Strike",
+    "es": "Fire Strike",
+    "id": "Serbuan Api",
+    "pt": "Fire Strike",
+    "th": "ไฟเออรื สไตรค์",
+    "vi": "Fire Strike"
   }
 }
