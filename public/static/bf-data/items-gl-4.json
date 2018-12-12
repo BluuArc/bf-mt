@@ -310,7 +310,12 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": [],
+    "usage": [
+      {
+        "id": 819194,
+        "name": "Quintan Emerald"
+      }
+    ],
     "associated_units": [
       "51336",
       "51337",
@@ -353,7 +358,12 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_5.png",
     "type": "sphere",
-    "usage": [],
+    "usage": [
+      {
+        "id": 819194,
+        "name": "Quintan Emerald"
+      }
+    ],
     "associated_units": [
       "51336",
       "51337",
@@ -388,7 +398,12 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_3_5.png",
     "type": "sphere",
-    "usage": [],
+    "usage": [
+      {
+        "id": 819194,
+        "name": "Quintan Emerald"
+      }
+    ],
     "associated_units": [
       "51336",
       "51337",
@@ -430,7 +445,12 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_3_5.png",
     "type": "sphere",
-    "usage": [],
+    "usage": [
+      {
+        "id": 819194,
+        "name": "Quintan Emerald"
+      }
+    ],
     "associated_units": [
       "51336",
       "51337",
@@ -477,6 +497,10 @@
       {
         "id": 62000,
         "name": "Flower Crown"
+      },
+      {
+        "id": 819194,
+        "name": "Quintan Emerald"
       }
     ],
     "associated_units": [

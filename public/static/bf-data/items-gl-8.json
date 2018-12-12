@@ -3327,6 +3327,23 @@
       "8301301"
     ]
   },
+  "802003": {
+    "desc": "Snowflake emanating a curious aura.",
+    "id": 802003,
+    "max_stack": 99,
+    "name": "Quintan Snowflake",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_802003.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 819196,
+        "name": "Quintan Relic"
+      }
+    ]
+  },
   "818881": {
     "desc": "Boosts Def by 360% when Unit's HP drops below 35% & slight boost to BC drop rate when attacking",
     "effect": [
@@ -16820,7 +16837,7 @@
     "sell_price": 30000,
     "sphere type": 13,
     "sphere type text": "Atk Boosting",
-    "thumbnail": "sphere_thum_4_6.png",
+    "thumbnail": "sphere_thum_819174.png",
     "type": "sphere",
     "usage": [],
     "associated_units": [
@@ -17420,7 +17437,7 @@
     "sell_price": 30000,
     "sphere type": 7,
     "sphere type text": "HP Recovery",
-    "thumbnail": "sphere_thum_818901.png",
+    "thumbnail": "sphere_thum_819205.png",
     "type": "sphere",
     "usage": [],
     "associated_units": [
@@ -17554,6 +17571,92 @@
       "850637",
       "850638"
     ]
+  },
+  "819187": {
+    "desc": "55% boost to all parameters of Fire, Thunder types, enormously boosts Fire, Thunder elemental damage, enormously boosts OD gauge fill rate & 10% damage reduction from Fire, Thunder types</br>Guild Raid: Boosts Atk, Def when BB gauge is over 50% & adds Extra Skill disable effects purge to UBB",
+    "effect": [
+      {
+        "atk% buff": 55,
+        "def% buff": 55,
+        "elements buffed": [
+          "fire",
+          "thunder"
+        ],
+        "hp% buff": 55,
+        "passive id": "2",
+        "rec% buff": 55
+      },
+      {
+        "elemental weakness multiplier%": 300,
+        "fire units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "thunder units do extra elemental weakness dmg": true
+      },
+      {
+        "od fill rate%": 200,
+        "passive id": "70"
+      },
+      {
+        "dmg% mitigation for elemental attacks": 10,
+        "mitigate fire attacks": true,
+        "mitigate thunder attacks": true,
+        "passive id": "62"
+      }
+    ],
+    "id": 819187,
+    "max_stack": 1,
+    "name": "Fiery Volt",
+    "raid": false,
+    "rarity": 7,
+    "sell_price": 30000,
+    "sphere type": 14,
+    "sphere type text": "Special",
+    "thumbnail": "sphere_thum_819187.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "819188": {
+    "desc": "50% boost to all parameters of Fire, Thunder types, enormously boosts Fire, Thunder elemental damage, enormously boosts OD gauge fill rate & 10% damage reduction from Fire, Thunder types</br>Guild Raid: Boosts Atk, Def when BB gauge is over 50% & adds Extra Skill disable effects purge to UBB",
+    "effect": [
+      {
+        "atk% buff": 50,
+        "def% buff": 50,
+        "elements buffed": [
+          "fire",
+          "thunder"
+        ],
+        "hp% buff": 50,
+        "passive id": "2",
+        "rec% buff": 50
+      },
+      {
+        "elemental weakness multiplier%": 250,
+        "fire units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "thunder units do extra elemental weakness dmg": true
+      },
+      {
+        "od fill rate%": 200,
+        "passive id": "70"
+      },
+      {
+        "dmg% mitigation for elemental attacks": 10,
+        "mitigate fire attacks": true,
+        "mitigate thunder attacks": true,
+        "passive id": "62"
+      }
+    ],
+    "id": 819188,
+    "max_stack": 1,
+    "name": "Infernal Bolt",
+    "raid": false,
+    "rarity": 7,
+    "sell_price": 30000,
+    "sphere type": 14,
+    "sphere type text": "Special",
+    "thumbnail": "sphere_thum_819188.png",
+    "type": "sphere",
+    "usage": []
   },
   "819189": {
     "desc": "40% boost to Def, max HP of Dark types, considerably reduces BB gauge required for BB, probable 25% reduction of damage taken, considerably boosts Atk when BB gauge is full & fills BB to max when damage dealt has exceeded certain amount",
@@ -17700,6 +17803,212 @@
       "810108",
       "840438",
       "860167"
+    ]
+  },
+  "819194": {
+    "desc": "60% boost to all parameters, Spark damage boosts BC, HC drop rate, boosts damage reduction when guarding, damage taken may considerably restore HP and considerably boost BB gauge & negates critical and elemental damage",
+    "effect": [
+      {
+        "atk% buff": 60,
+        "def% buff": 60,
+        "hp% buff": 60,
+        "passive id": "1",
+        "rec% buff": 60
+      },
+      {
+        "bc drop% for spark": 50,
+        "hc drop% for spark": 50,
+        "passive id": "31"
+      },
+      {
+        "guard increase mitigation%": 20,
+        "passive id": "58"
+      },
+      {
+        "dmg% to hp% when attacked chance%": 50,
+        "dmg% to hp% when attacked high": 30,
+        "dmg% to hp% when attacked low": 30,
+        "passive id": "24"
+      },
+      {
+        "bc fill when attacked high": 4,
+        "bc fill when attacked low": 3,
+        "bc fill when attacked%": 100,
+        "passive id": "25"
+      },
+      {
+        "crit chance base resist%": 100,
+        "crit chance buffed resist%": 100,
+        "crit dmg base damage resist%": 100,
+        "crit dmg buffed damage resist%": 100,
+        "passive id": "53",
+        "strong base element damage resist%": 100,
+        "strong buffed element damage resist%": 100
+      }
+    ],
+    "id": 819194,
+    "max_stack": 1,
+    "name": "Quintan Emerald",
+    "raid": false,
+    "rarity": 7,
+    "recipe": {
+      "karma": "500000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 40601,
+          "name": "Prized Light"
+        },
+        {
+          "count": 1,
+          "id": 40602,
+          "name": "Prized Mercy"
+        },
+        {
+          "count": 1,
+          "id": 40603,
+          "name": "Adaptation Jewel"
+        },
+        {
+          "count": 1,
+          "id": 40604,
+          "name": "Existence Jewel"
+        },
+        {
+          "count": 1,
+          "id": 40605,
+          "name": "Perseverance Jewel"
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_5_9.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
+  },
+  "819196": {
+    "desc": "35% boost to all parameters, 15% boost to critical hit rate, slightly reduces BB gauge required for BB, 5% damage reduction, considerably boosts BB gauge each turn & damage taken may restore HP",
+    "effect": [
+      {
+        "atk% buff": 35,
+        "crit% buff": 15,
+        "def% buff": 35,
+        "hp% buff": 35,
+        "passive id": "1",
+        "rec% buff": 35
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 15
+      },
+      {
+        "dmg% mitigation": 5,
+        "passive id": "8"
+      },
+      {
+        "bc fill per turn": 5,
+        "passive id": "9"
+      },
+      {
+        "dmg% to hp% when attacked chance%": 50,
+        "dmg% to hp% when attacked high": 15,
+        "dmg% to hp% when attacked low": 15,
+        "passive id": "24"
+      }
+    ],
+    "id": 819196,
+    "max_stack": 1,
+    "name": "Quintan Relic",
+    "raid": false,
+    "rarity": 6,
+    "recipe": {
+      "karma": "50000",
+      "materials": [
+        {
+          "count": 20,
+          "id": 802003,
+          "name": "Quintan Snowflake"
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_819196.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438"
+    ]
+  },
+  "819197": {
+    "desc": "50% boost to Atk, Def, Rec when BB gauge is over 50%, greatly boosts BB Atk, hugely boosts Spark damage for 2 turns when Sparks exceed certain amount, Spark damage boosts BB gauge & reduces BB gauge required for BB",
+    "effect": [
+      {
+        "atk% buff": 50,
+        "bb gauge above % buff requirement": 50,
+        "def% buff": 50,
+        "passive id": "30",
+        "rec% buff": 50
+      },
+      {
+        "bb atk% buff": 300,
+        "passive id": "64",
+        "sbb atk% buff": 300,
+        "ubb atk% buff": 300
+      },
+      {
+        "buff": {
+          "buff turns (40)": "2",
+          "spark dmg% buff": 150
+        },
+        "passive id": "86",
+        "spark count buff activation": 20
+      },
+      {
+        "bc fill on spark high": 3,
+        "bc fill on spark low": 2,
+        "bc fill on spark%": 100,
+        "passive id": "47"
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 20
+      }
+    ],
+    "id": 819197,
+    "max_stack": 1,
+    "name": "Pallya",
+    "raid": false,
+    "rarity": 7,
+    "sell_price": 30000,
+    "sphere type": 6,
+    "sphere type text": "BB Gauge",
+    "thumbnail": "sphere_thum_819197.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "830148",
+      "840437",
+      "840438"
     ]
   },
   "819198": {
@@ -18020,7 +18329,7 @@
     "sell_price": 30000,
     "sphere type": 1,
     "sphere type text": "Status Boost",
-    "thumbnail": "sphere_thum_4_4.png",
+    "thumbnail": "sphere_thum_819204.png",
     "type": "sphere",
     "usage": [],
     "associated_units": [
@@ -25165,7 +25474,7 @@
   "880244": {
     "desc": "Found in the heart of lands untouched yet by man, this magical creature--held in amber--is a potent source of power.",
     "id": 880244,
-    "max_stack": 99,
+    "max_stack": 199,
     "name": "Amber Butterfly",
     "raid": false,
     "rarity": 3,

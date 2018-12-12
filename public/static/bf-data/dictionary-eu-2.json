@@ -1,4 +1,268 @@
 {
+  "MST_LEADERSKILLS_801039_NAME": {
+    "en": "Nature's Bounty",
+    "es": "Recompensa de la naturaleza",
+    "id": "Hasil Alam",
+    "pt": "Recompença da Natureza",
+    "th": "เนเชอร์ส บาวน์ตี้",
+    "vi": "Tặng vật của thiên nhiên"
+  },
+  "MST_LEADERSKILLS_801040_DESCRIPTION": {
+    "en": "Moderate reduction in BB gauge required for BB & reduces the amount of BB gauge used during BB",
+    "es": "Reduce moderadamente el indicador BB necesario para BB y la cantidad del indicador BB usado durante BB",
+    "id": "Lumayan mengurangi meteran BB untuk BB & mengurangi jumlah meteran BB untuk BB",
+    "pt": "Redução na barra de BB necessária para o BB e redução do uso da barra de BB ao usar BB",
+    "th": "ลดเกจ BB ที่ต้องการสำหรับใช้ BB ลงปานกลาง และ ลดจำนวนเกจ BB ที่ถูกใช้ระหว่าง BB ลง",
+    "vi": "Giảm vừa phải vạch BB cần có để Tăng cường can đảm & giảm lượng vạch BB được sử dụng khi Tăng cường can đảm"
+  },
+  "MST_LEADERSKILLS_801040_NAME": {
+    "en": "Nature's Boon",
+    "es": "Bendición de la naturaleza",
+    "id": "Anugerah Alam",
+    "pt": "Benção da Natureza",
+    "th": "เนเชอร์ส บูน",
+    "vi": "Ân huệ của thiên nhiên"
+  },
+  "MST_LEADERSKILLS_801041_DESCRIPTION": {
+    "en": "Reduction in BB gauge required for BB, reduces the amount of BB gauge used during BB & 15% boost to critical hit rate",
+    "es": "Reduce el indicador BB necesario para BB y la cantidad del indicador BB usado durante BB. +15% de probabilidad de asestar golpes críticos",
+    "id": "Mengurangi meteran BB untuk BB, mengurangi jumlah meteran BB yang digunakan untuk BB & menambah 15% rasio pukulan ampuh",
+    "pt": "Redução na barra de BB necessária para o BB, reduz uso da barra de BB ao usar BB e 15% bônus na taxa de dano crítico",
+    "th": "ลดเกจ BB ที่ต้องการสำหรับใช้ BB ลง, ลดจำนวนเกจ BB ที่ถูกใช้ระหว่าง BB ลง และ 15% เพิ่มอัตราการเกิดคริติคอล",
+    "vi": "Giảm vạch BB cần có để Tăng cường can đảm & giảm lượng vạch BB được sử dụng khi Tăng cường can đảm & tăng 15% tỷ lệ đòn trí mạng"
+  },
+  "MST_LEADERSKILLS_801041_NAME": {
+    "en": "Gaia's Grace",
+    "es": "Gracia de Gaia",
+    "id": "Rahmat Gaia",
+    "pt": "Graça de Gaia",
+    "th": "ไกอาส์ เกรซ",
+    "vi": "Vẻ yêu kiều của Gaia"
+  },
+  "MST_LEADERSKILLS_801042_DESCRIPTION": {
+    "en": "10% boost to critical hit rate & 10% boost to Atk and Def for all Units",
+    "es": "+10% prob. de asestar golpes críticos y +10% ATQ y REC de unidades",
+    "id": "10% ekstra untuk pukulan ampuh, Serangan dan Pertahanan semua unit",
+    "pt": "Bônus de 10% na tx de dano crítico e 10% bônus no ATQ e DEF de todas as unidades",
+    "th": "10% เพิ่มอัตราเกิดคริติคอล และ 10% เพิ่มค่า โจมตี กับ ป้องกัน ของยูนิตทั้งหมด",
+    "vi": "Tăg 10% tỷ lệ đòn trí mạng & tăg 10% Tấn công & Phòng thủ của mọi Quái"
+  },
+  "MST_LEADERSKILLS_801042_NAME": {
+    "en": "Bestial Rage",
+    "es": "Ira bestial",
+    "id": "Kemarahan Binatang",
+    "pt": "Raiva Bestial",
+    "th": "เบสท์เชียล เรจ",
+    "vi": "Cơn thịnh nộ thú tính"
+  },
+  "MST_LEADERSKILLS_801043_DESCRIPTION": {
+    "en": "15% boost to critical hit rate & 15% boost to Atk and Def for all Units",
+    "es": "+15% prob. de asestar golpes críticos y +15% ATQ y REC de unidades",
+    "id": "15% ekstra untuk pukulan ampuh, Serangan dan Pertahanan semua unit",
+    "pt": "Bônus de 15% na tx de dano crítico e 15% bônus no ATQ e DEF de todas as unidades",
+    "th": "15% เพิ่มอัตราเกิดคริติคอล และ 15% เพิ่มค่า โจมตี กับ ป้องกัน ของยูนิตทั้งหมด",
+    "vi": "Tăg 15% tỷ lệ đòn trí mạng & tăg 15% Tấn công & Phòng thủ của mọi Quái"
+  },
+  "MST_LEADERSKILLS_801043_NAME": {
+    "en": "Bestial Wrath",
+    "es": "Cólera bestial",
+    "id": "Murka Binatang",
+    "pt": "Ira Bestial",
+    "th": "เบสท์เชียล ราธ",
+    "vi": "Sự phẫn nộ thú tính"
+  },
+  "MST_LEADERSKILLS_801044_DESCRIPTION": {
+    "en": "Boost in critical hit damage and damage dealt during Spark",
+    "es": "Aumento al daño por golpe crítico y al daño infligido durante Chispas",
+    "id": "Esktra kerusakan pukulan ampuh & selama Percikan",
+    "pt": "Bônus no dano crítico e no dano durante Fagulha",
+    "th": "เพิ่มค่าความเสียหายคริติคอล กับ ความเสียหายที่สร้างระหว่างสปาร์ค",
+    "vi": "Tăng thiệt hại của đòn trí mạng và thiệt hại khi ra đòn Spark"
+  },
+  "MST_LEADERSKILLS_801044_NAME": {
+    "en": "Zedus' Authority",
+    "es": "Autoridad de Zedus",
+    "id": "Otoritas Zedus",
+    "pt": "Autoridade Zedus",
+    "th": "ซีดัส ออโธริตี้",
+    "vi": "Quyền năng của Zedus"
+  },
+  "MST_LEADERSKILLS_801045_DESCRIPTION": {
+    "en": "Boost in critical hit damage and damage dealt during Spark",
+    "es": "Aumento al daño por golpe crítico y al daño infligido durante Chispas",
+    "id": "Esktra kerusakan pukulan ampuh & selama Percikan",
+    "pt": "Bônus no dano crítico e no dano durante Fagulha",
+    "th": "เพิ่มค่าความเสียหายคริติคอล กับ ความเสียหายที่สร้างระหว่างสปาร์ค",
+    "vi": "Tăng thiệt hại của đòn trí mạng và thiệt hại khi ra đòn Spark"
+  },
+  "MST_LEADERSKILLS_801045_NAME": {
+    "en": "Zedus' Jurisdiction",
+    "es": "Jurisdicción de Zedus",
+    "id": "Yuridiksi Zedus",
+    "pt": "Jurisdição de Zedus",
+    "th": "ซีดัส จูริสดิคชั่น",
+    "vi": "Quyền lực của Zedus"
+  },
+  "MST_LEADERSKILLS_801046_DESCRIPTION": {
+    "en": "Large boost in critical hit damage, damage dealt during Spark & 15% boost to critical hit rate",
+    "es": "Gran aumento al daño crítico y al daño infligido durante Chispas. +15% prob. de asestar golpes críticos",
+    "id": "Tambahan besar kerusakan Percikan & pukulan ampuh (15% ekstra pukulan)",
+    "pt": "Grande bônus ne dano crítico, no dano durante Fagulha e 15% bônus na taxa de dano crítico",
+    "th": "เพิ่มค่าความเสียหายคริติคอล, ความเสียหายที่สร้างระหว่างสปาร์ค อย่างมาก และ 15% เพิ่มอัตราเกิดคริติคอล",
+    "vi": "Tăg nhiều t.hại đòn trí mạng, t.hại đòn Spark, tăng 15% t.lệ trí mạng"
+  },
+  "MST_LEADERSKILLS_801046_NAME": {
+    "en": "Zedus' Providence",
+    "es": "Providencia de Zedus",
+    "id": "Penyediaan Zedus",
+    "pt": "Prudência de Zedus",
+    "th": "ซีดัส โพรวิเดนซ์",
+    "vi": "Thiên mệnh của Zedus"
+  },
+  "MST_LEADERSKILLS_801047_DESCRIPTION": {
+    "en": "Greatly boosts BB gauge upon being attacked, great chance of reflecting much damage & probable HP recovery when attacked",
+    "es": "Aumento notablemente del indicador BB y posibilidad recuperar PS al ser atacado. Gran probabilidad de reflejar daño",
+    "id": "Amat menambah meteran BB saat diserang, kans besar membalikkan kerusakan & kemungkinan pemulihan HP saat diserang",
+    "pt": "Reforça muito a barra BB ao receber ataques, chance alta de refletir dano e provável recuperação de HP ao ser atacado",
+    "th": "เพิ่มบีบีเกจอย่างมากขณะถูกโจมตี มีโอกาสสูงในการสะท้อนค่าความเสียหาย และมีโอกาสฟื้นฟู HP เมื่อถูกโจมตี",
+    "vi": "Tăng nhiều vạch BB khi bị tấn công, có cơ hội tốt phản ngược nhiều thiệt hại & có thể phục hồi Thể lực khi bị tấn công"
+  },
+  "MST_LEADERSKILLS_801047_NAME": {
+    "en": "Malevolent Ardour",
+    "es": "Ardor malévolo",
+    "id": "Semangat Jahat",
+    "pt": "Ardor Malévolo",
+    "th": "เมลโวเลนท์ อาดาวเออร์",
+    "vi": "Nhiệt tình ác ý"
+  },
+  "MST_LEADERSKILLS_801048_DESCRIPTION": {
+    "en": "10% boost to Atk, Def and Rec for all Units",
+    "es": "+10% el ataque, la defensa y la recuperación de todas las unidades",
+    "id": "10% ekstra Serang, Tahan, Pulih untuk semua Unit",
+    "pt": "Bônus de 10% no ATQ, DEF e REC de todas unidades",
+    "th": "10% เพิ่มพลังโจมตี พลังป้องกัน และ Rec ให้กับยูนิตทั้งหมด",
+    "vi": "Tăng 10% sức mạnh Tấn công, Phòng thủ và Phục hồi cho tất cả các Quái"
+  },
+  "MST_LEADERSKILLS_801048_NAME": {
+    "en": "Nice Soul",
+    "es": "Alma noble",
+    "id": "Jiwa Baik",
+    "pt": "Boa Alma",
+    "th": "ไนซ์ โซล",
+    "vi": "Linh hồn tốt bụng"
+  },
+  "MST_LEADERSKILLS_801049_DESCRIPTION": {
+    "en": "Boost to BB gauge fill rate",
+    "es": "Aumenta la velocidad de recarga del indicador BB",
+    "id": "Tambahan untuk kecepatan pengisian meteran BB",
+    "pt": "Bônus na taxa de preenchimento da Barra de BB",
+    "th": "เพิ่มปริมาณการเติมบีบีเกจ",
+    "vi": "Tăng tốc độ nạp đầy vạch BB"
+  },
+  "MST_LEADERSKILLS_801049_NAME": {
+    "en": "Fluffy Tail",
+    "es": "Cola peluda",
+    "id": "Ekor Empuk",
+    "pt": "Cauda Macia",
+    "th": "ฟลัฟฟี่ เทล",
+    "vi": "Đuôi đầy lông"
+  },
+  "MST_LEADERSKILLS_801050_DESCRIPTION": {
+    "en": "Large boost to BB gauge fill rate",
+    "es": "Aumenta notablemente la velocidad de recarga del indicador BB",
+    "id": "Tambahan besar untuk kecepatan pengisian meteran BB",
+    "pt": "Grande bônus na taxa de preenchimento da Barra de BB",
+    "th": "เพิ่มปริมาณการเติมบีบีเกจอย่างมาก",
+    "vi": "Tăng nhiều tốc độ nạp đầy vạch BB"
+  },
+  "MST_LEADERSKILLS_801050_NAME": {
+    "en": "Floppy Ears",
+    "es": "Orejas peludas",
+    "id": "Telinga Terkulai",
+    "pt": "Orelhas Moles",
+    "th": "ฟลอปปี้ เอียร์",
+    "vi": "Tai mềm mịn"
+  },
+  "MST_LEADERSKILLS_801051_DESCRIPTION": {
+    "en": "Huge boost to BB gauge fill rate & reduction in BB gauge required for BB",
+    "es": "Aumenta enormemente la velocidad de recarga del indicador BB y reduce el indicador BB necesario para BB",
+    "id": "Tambahan jumbo untuk kecepatan pengisian meteran BB & mengurangi meteran BB yang diperlukan untuk BB",
+    "pt": "Bônus enorme na taxa de preenchimento da Barra de BB e redução no BB necessário para BB",
+    "th": "เพิ่มปริมาณการเติมบีบีเกจอย่างมากที่สุด และลดปริมาณบีบีเกจที่ต้องการ ",
+    "vi": "Tăng mạnh tốc độ nạp đầy vạch BB & giảm vạch BB cần cho BB"
+  },
+  "MST_LEADERSKILLS_801051_NAME": {
+    "en": "Lucky Rabbit's Foot",
+    "es": "Pie del conejo afortunado",
+    "id": "Kaki Kelinci Hoki",
+    "pt": "Pé de Coelho da Sorte",
+    "th": "ลัคกี้ แรบบิท ฟุท",
+    "vi": "Chân thỏ may mắn"
+  },
+  "MST_LEADERSKILLS_801052_DESCRIPTION": {
+    "en": "Small boost to HC and BC drop rate",
+    "es": "Aumenta levemente la posibilidad de conseguir CC y CB",
+    "id": "Tambahan kecil untuk perolehan HC dan BC",
+    "pt": "Pequeno bônus na taxa de queda do BC e HC",
+    "th": "เพิ่มอัตราการดรอป BC และ HC เล็กน้อย",
+    "vi": "Tăng nhẹ tỷ lệ rơi HC và BC"
+  },
+  "MST_LEADERSKILLS_801052_NAME": {
+    "en": "Basket of Jelly Beans",
+    "es": "Cesta de dulces",
+    "id": "Keranjang Permen Jeli",
+    "pt": "Cesta de Jujubas",
+    "th": "บาสเก็ต ออฟ เจลลี่ บีน",
+    "vi": "Giỏ đậu hầm"
+  },
+  "MST_LEADERSKILLS_801053_DESCRIPTION": {
+    "en": "Boost to HC and BC drop rate",
+    "es": "Aumenta la posibilidad de conseguir CC y CB",
+    "id": "Tambahan untuk perolehan HC dan BC",
+    "pt": "Bônus na taxa de queda do BC e HC",
+    "th": "เพิ่มอัตราการดรอป BC และ HC ",
+    "vi": "Tăng tỷ lệ rơi HC và BC"
+  },
+  "MST_LEADERSKILLS_801053_NAME": {
+    "en": "Basket of Dyed Eggs",
+    "es": "Cesta de huevos pintados",
+    "id": "Keranjang Telur Berwarna",
+    "pt": "Cesta de Ovos Pintados",
+    "th": "บาสเก็ต ออฟ ดาย เอ้ก",
+    "vi": "Giỏ trứng nhuộm màu"
+  },
+  "MST_LEADERSKILLS_801054_DESCRIPTION": {
+    "en": "Large boost to HC and BC drop rate & reduction in BB gauge required for BB",
+    "es": "Aumenta notablemente la posibilidad de conseguir CC y CB y reduce el indicador BB necesario para BB",
+    "id": "Tambahan besar untuk perolehan HC dan BC & mengurangi meteran BB yang diperlukan untuk BB",
+    "pt": "Grande bônus na taxa de queda do BC e HC e redução no BB necessário para BB",
+    "th": "เพิ่มอัตราการดรอป BC และ HC อย่างมาก  และลดปริมาณบีบีเกจที่ต้องการ ",
+    "vi": "Tăng nhiều tỷ lệ rơi HC và BC & giảm vạch BB cần cho BB"
+  },
+  "MST_LEADERSKILLS_801054_NAME": {
+    "en": "Bianco's Carrot Basket",
+    "es": "Cesta de zanahorias",
+    "id": "Keranjang Wortel Bianco",
+    "pt": "Cesta do Bianco",
+    "th": "ไบแอนโก้ แครอท บาสเก็ต",
+    "vi": "Giỏ cà rốt của Bianco"
+  },
+  "MST_LEADERSKILLS_801055_DESCRIPTION": {
+    "en": "Great boost to critical hit damage & boosts Atk power and max HP by 10%",
+    "es": "Aumento al daño crítico, al poder de ataque y a los PS máx. en 10%",
+    "id": "Ekstra kerusakan pukulan ampuh; 10% ekstra kekuatan Serang & maks HP",
+    "pt": "Grande bônus no dano crítico e poder de ATQ e + 10% de HP máx. ",
+    "th": "เพิ่มค่าโจมตีคริติคอล เพิ่มพลังโจมตีและ HP สูงสุด 10%",
+    "vi": "Great boost to critical hit damage & boosts Atk power and max HP by 10%"
+  },
+  "MST_LEADERSKILLS_801055_NAME": {
+    "en": "Flashing Crimson Instinct",
+    "es": "Instinto carmesí brillante",
+    "id": "Insting Kilatan Merah ",
+    "pt": "Pressentimento do Brilho Carmesim",
+    "th": "แฟลชชิ่ง คริมสัน อินสติ๊งท์",
+    "vi": "Flashing Crimson Instinct"
+  },
   "MST_LEADERSKILLS_801056_DESCRIPTION": {
     "en": "Great boost to critical hit damage & boosts Atk power and max HP by 30%",
     "es": "Aumento al daño crítico, al poder de ataque y a los PS máx. en 30%",
@@ -3823,6 +4087,22 @@
     "th": "ลอร์ดลี่ อ็อพเพรสชั่น",
     "vi": "Đàn áp hách dịch"
   },
+  "MST_LEADERSKILLS_830148_DESCRIPTION": {
+    "en": "120% boost to Atk, max HP, 30% boost to critical hit rate, enormously boosts elemental damage, greatly boosts BB Atk, greatly reduces BB gauge required for BB & negates critical and elemental damage",
+    "es": "120% boost to Atk, max HP, 30% boost to critical hit rate, enormously boosts elemental damage, greatly boosts BB Atk, greatly reduces BB gauge required for BB & negates critical and elemental damage",
+    "id": "120% boost to Atk, max HP, 30% boost to critical hit rate, enormously boosts elemental damage, greatly boosts BB Atk, greatly reduces BB gauge required for BB & negates critical and elemental damage",
+    "pt": "120% boost to Atk, max HP, 30% boost to critical hit rate, enormously boosts elemental damage, greatly boosts BB Atk, greatly reduces BB gauge required for BB & negates critical and elemental damage",
+    "th": "120% boost to Atk, max HP, 30% boost to critical hit rate, enormously boosts elemental damage, greatly boosts BB Atk, greatly reduces BB gauge required for BB & negates critical and elemental damage",
+    "vi": "120% boost to Atk, max HP, 30% boost to critical hit rate, enormously boosts elemental damage, greatly boosts BB Atk, greatly reduces BB gauge required for BB & negates critical and elemental damage"
+  },
+  "MST_LEADERSKILLS_830148_NAME": {
+    "en": "Spirit of the Hunt",
+    "es": "Spirit of the Hunt",
+    "id": "Spirit of the Hunt",
+    "pt": "Spirit of the Hunt",
+    "th": "Spirit of the Hunt",
+    "vi": "Spirit of the Hunt"
+  },
   "MST_LEADERSKILLS_830187_DESCRIPTION": {
     "en": "80% boost to Atk, Def, 50% boost to max HP, probable normal attack on all foes & boosts BB and SBB activation rates",
     "es": "80% boost to Atk, Def, 50% boost to max HP, probable normal attack on all foes & boosts BB and SBB activation rates",
@@ -5951,6 +6231,38 @@
     "th": "Hippocratic Oath",
     "vi": "Hippocratic Oath"
   },
+  "MST_LEADERSKILLS_860577_DESCRIPTION": {
+    "en": "130% boost to max HP, hugely boosts Spark damage, restores HP each turn & Spark damage slightly boosts BB gauge",
+    "es": "130% boost to max HP, hugely boosts Spark damage, restores HP each turn & Spark damage slightly boosts BB gauge",
+    "id": "130% boost to max HP, hugely boosts Spark damage, restores HP each turn & Spark damage slightly boosts BB gauge",
+    "pt": "130% boost to max HP, hugely boosts Spark damage, restores HP each turn & Spark damage slightly boosts BB gauge",
+    "th": "130% boost to max HP, hugely boosts Spark damage, restores HP each turn & Spark damage slightly boosts BB gauge",
+    "vi": "130% boost to max HP, hugely boosts Spark damage, restores HP each turn & Spark damage slightly boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_860577_NAME": {
+    "en": "Imperfect Mimicry",
+    "es": "Imperfect Mimicry",
+    "id": "Imperfect Mimicry",
+    "pt": "Imperfect Mimicry",
+    "th": "Imperfect Mimicry",
+    "vi": "Imperfect Mimicry"
+  },
+  "MST_LEADERSKILLS_860578_DESCRIPTION": {
+    "en": "175% boost to max HP, enormously boosts Spark damage, considerably restores HP each turn, Spark damage considerably boosts BB gauge & 15% damage reduction",
+    "es": "175% boost to max HP, enormously boosts Spark damage, considerably restores HP each turn, Spark damage considerably boosts BB gauge & 15% damage reduction",
+    "id": "175% boost to max HP, enormously boosts Spark damage, considerably restores HP each turn, Spark damage considerably boosts BB gauge & 15% damage reduction",
+    "pt": "175% boost to max HP, enormously boosts Spark damage, considerably restores HP each turn, Spark damage considerably boosts BB gauge & 15% damage reduction",
+    "th": "175% boost to max HP, enormously boosts Spark damage, considerably restores HP each turn, Spark damage considerably boosts BB gauge & 15% damage reduction",
+    "vi": "175% boost to max HP, enormously boosts Spark damage, considerably restores HP each turn, Spark damage considerably boosts BB gauge & 15% damage reduction"
+  },
+  "MST_LEADERSKILLS_860578_NAME": {
+    "en": "Implanted Memory",
+    "es": "Implanted Memory",
+    "id": "Implanted Memory",
+    "pt": "Implanted Memory",
+    "th": "Implanted Memory",
+    "vi": "Implanted Memory"
+  },
   "MST_LEADERSKILLS_860607_DESCRIPTION": {
     "en": "60% boost to all parameters of Light, Dark, Fire types, negates elemental damage, damage taken considerably boosts BB gauge & considerably reduces BB gauge consumed during BB",
     "es": "60% boost to all parameters of Light, Dark, Fire types, negates elemental damage, damage taken considerably boosts BB gauge & considerably reduces BB gauge consumed during BB",
@@ -6046,6 +6358,22 @@
     "pt": "The Black Wizard",
     "th": "The Black Wizard",
     "vi": "The Black Wizard"
+  },
+  "MST_LEADERSKILLS_860678_DESCRIPTION": {
+    "en": "80% boost to all parameters, Spark damage boosts BB gauge, greatly boosts Spark damage & 15% damage reduction from all element types",
+    "es": "80% boost to all parameters, Spark damage boosts BB gauge, greatly boosts Spark damage & 15% damage reduction from all element types",
+    "id": "80% boost to all parameters, Spark damage boosts BB gauge, greatly boosts Spark damage & 15% damage reduction from all element types",
+    "pt": "80% boost to all parameters, Spark damage boosts BB gauge, greatly boosts Spark damage & 15% damage reduction from all element types",
+    "th": "80% boost to all parameters, Spark damage boosts BB gauge, greatly boosts Spark damage & 15% damage reduction from all element types",
+    "vi": "80% boost to all parameters, Spark damage boosts BB gauge, greatly boosts Spark damage & 15% damage reduction from all element types"
+  },
+  "MST_LEADERSKILLS_860678_NAME": {
+    "en": "Butterflies of Illusion",
+    "es": "Butterflies of Illusion",
+    "id": "Butterflies of Illusion",
+    "pt": "Butterflies of Illusion",
+    "th": "Butterflies of Illusion",
+    "vi": "Butterflies of Illusion"
   },
   "MST_LEADERSKILLS_8700_DESCRIPTION": {
     "en": "15% reduction of damage taken from Water and Fire types",
@@ -87398,221 +87726,5 @@
     "pt": "Guarda-Pesado Nevsky",
     "th": "เฮฟวี่การ์ดเนฟสกี้",
     "vi": "Cận vệ nặngnề Nevsky"
-  },
-  "MST_MONSTERS_55001_NAME": {
-    "en": "Heavy Guard Nevsky",
-    "es": "Guardia duro Nevsky",
-    "id": "Penjaga Berat Nevsky",
-    "pt": "Guarda-Pesado Nevsky",
-    "th": "เฮฟวี่การ์ดเนฟสกี้",
-    "vi": "Cận vệ nặngnề Nevsky"
-  },
-  "MST_MONSTERS_550100_NAME": {
-    "en": "Hunting Demon Horouna",
-    "es": "Demonio cazador Horouna",
-    "id": "Setan Berburu Horouna",
-    "pt": "Horouna Caçador-Demônio",
-    "th": "ฮันติ้ง เดม่อน โฮโรน่า",
-    "vi": "Hunting Demon Horouna"
-  },
-  "MST_MONSTERS_550101_NAME": {
-    "en": "Hunting Demon Horouna",
-    "es": "Demonio cazador Horouna",
-    "id": "Setan Berburu Horouna",
-    "pt": "Horouna Caçador-Demônio",
-    "th": "ฮันติ้ง เดม่อน โฮโรน่า",
-    "vi": "Hunting Demon Horouna"
-  },
-  "MST_MONSTERS_550200_NAME": {
-    "en": "NA (ATM)",
-    "es": "NA (ATM)",
-    "id": "NA (ATM)",
-    "pt": "NA (ATM)",
-    "th": "NA (ATM)",
-    "vi": "NA (ATM)"
-  },
-  "MST_MONSTERS_550201_NAME": {
-    "en": "NA (ATM)",
-    "es": "NA (ATM)",
-    "id": "NA (ATM)",
-    "pt": "NA (ATM)",
-    "th": "NA (ATM)",
-    "vi": "NA (ATM)"
-  },
-  "MST_MONSTERS_550300_NAME": {
-    "en": "NA (ATM)",
-    "es": "NA (ATM)",
-    "id": "NA (ATM)",
-    "pt": "NA (ATM)",
-    "th": "NA (ATM)",
-    "vi": "NA (ATM)"
-  },
-  "MST_MONSTERS_550301_NAME": {
-    "en": "NA (ATM)",
-    "es": "NA (ATM)",
-    "id": "NA (ATM)",
-    "pt": "NA (ATM)",
-    "th": "NA (ATM)",
-    "vi": "NA (ATM)"
-  },
-  "MST_MONSTERS_550400_NAME": {
-    "en": "Beldonarm",
-    "es": "Beldonarm",
-    "id": "Beldonarm",
-    "pt": "Beldonarm",
-    "th": "เบลดอนอาร์ม",
-    "vi": "Beldonarm"
-  },
-  "MST_MONSTERS_550401_NAME": {
-    "en": "Beldonarm",
-    "es": "Beldonarm",
-    "id": "Beldonarm",
-    "pt": "Beldonarm",
-    "th": "เบลดอนอาร์ม",
-    "vi": "Beldonarm"
-  },
-  "MST_MONSTERS_550500_NAME": {
-    "en": "Aganapaddon",
-    "es": "Aganapaddon",
-    "id": "Aganapaddon",
-    "pt": "Aganapaddon",
-    "th": "อกานาแพ็ดดอน",
-    "vi": "Aganapaddon"
-  },
-  "MST_MONSTERS_550501_NAME": {
-    "en": "Aganapaddon",
-    "es": "Aganapaddon",
-    "id": "Aganapaddon",
-    "pt": "Aganapaddon",
-    "th": "อกานาแพ็ดดอน",
-    "vi": "Aganapaddon"
-  },
-  "MST_MONSTERS_55050_NAME": {
-    "en": "Heavy God Nevsky",
-    "es": "Dios pesado Nevsky",
-    "id": "Dewa Berat Nevsky",
-    "pt": "Deus-Pesado Nevsky",
-    "th": "เฮฟวี่ก็อดเนฟสกี้",
-    "vi": "Thần nặng nề Nevsky"
-  },
-  "MST_MONSTERS_55051_NAME": {
-    "en": "Heavy God Nevsky",
-    "es": "Dios pesado Nevsky",
-    "id": "Dewa Berat Nevsky",
-    "pt": "Deus-Pesado Nevsky",
-    "th": "เฮฟวี่ก็อดเนฟสกี้",
-    "vi": "Thần nặng nề Nevsky"
-  },
-  "MST_MONSTERS_55052_NAME": {
-    "en": "Heavy God Nevsky",
-    "es": "Dios pesado Nevsky",
-    "id": "Dewa Berat Nevsky",
-    "pt": "Deus-Pesado Nevsky",
-    "th": "เฮฟวี่ก็อดเนฟสกี้",
-    "vi": "Thần nặng nề Nevsky"
-  },
-  "MST_MONSTERS_55053_NAME": {
-    "en": "Heavy God Nevsky",
-    "es": "Dios pesado Nevsky",
-    "id": "Dewa Berat Nevsky",
-    "pt": "Deus-Pesado Nevsky",
-    "th": "เฮฟวี่ก็อดเนฟสกี้",
-    "vi": "Heavy God Nevsky"
-  },
-  "MST_MONSTERS_55054_NAME": {
-    "en": "Heavy God Nevsky",
-    "es": "Dios pesado Nevsky",
-    "id": "Dewa Berat Nevsky",
-    "pt": "Deus-Pesado Nevsky",
-    "th": "เฮฟวี่ก็อดเนฟสกี้",
-    "vi": "Heavy God Nevsky"
-  },
-  "MST_MONSTERS_550600_NAME": {
-    "en": "NA (Takanotsume)",
-    "es": "NA (Takanotsume)",
-    "id": "NA (Takanotsume)",
-    "pt": "NA (Takanotsume)",
-    "th": "NA (Takanotsume)",
-    "vi": "NA (Takanotsume)"
-  },
-  "MST_MONSTERS_550601_NAME": {
-    "en": "NA (Takanotsume)",
-    "es": "NA (Takanotsume)",
-    "id": "NA (Takanotsume)",
-    "pt": "NA (Takanotsume)",
-    "th": "NA (Takanotsume)",
-    "vi": "NA (Takanotsume)"
-  },
-  "MST_MONSTERS_550700_NAME": {
-    "en": "NA (Takanotsume)",
-    "es": "NA (Takanotsume)",
-    "id": "NA (Takanotsume)",
-    "pt": "NA (Takanotsume)",
-    "th": "NA (Takanotsume)",
-    "vi": "NA (Takanotsume)"
-  },
-  "MST_MONSTERS_550701_NAME": {
-    "en": "NA (Takanotsume)",
-    "es": "NA (Takanotsume)",
-    "id": "NA (Takanotsume)",
-    "pt": "NA (Takanotsume)",
-    "th": "NA (Takanotsume)",
-    "vi": "NA (Takanotsume)"
-  },
-  "MST_MONSTERS_550800_NAME": {
-    "en": "NA (Takanotsume)",
-    "es": "NA (Takanotsume)",
-    "id": "NA (Takanotsume)",
-    "pt": "NA (Takanotsume)",
-    "th": "NA (Takanotsume)",
-    "vi": "NA (Takanotsume)"
-  },
-  "MST_MONSTERS_550801_NAME": {
-    "en": "NA (Takanotsume)",
-    "es": "NA (Takanotsume)",
-    "id": "NA (Takanotsume)",
-    "pt": "NA (Takanotsume)",
-    "th": "NA (Takanotsume)",
-    "vi": "NA (Takanotsume)"
-  },
-  "MST_MONSTERS_550900_NAME": {
-    "en": "NA (Takanotsume)",
-    "es": "NA (Takanotsume)",
-    "id": "NA (Takanotsume)",
-    "pt": "NA (Takanotsume)",
-    "th": "NA (Takanotsume)",
-    "vi": "NA (Takanotsume)"
-  },
-  "MST_MONSTERS_550901_NAME": {
-    "en": "NA (Takanotsume)",
-    "es": "NA (Takanotsume)",
-    "id": "NA (Takanotsume)",
-    "pt": "NA (Takanotsume)",
-    "th": "NA (Takanotsume)",
-    "vi": "NA (Takanotsume)"
-  },
-  "MST_MONSTERS_551000_NAME": {
-    "en": "NA (Takanotsume)",
-    "es": "NA (Takanotsume)",
-    "id": "NA (Takanotsume)",
-    "pt": "NA (Takanotsume)",
-    "th": "NA (Takanotsume)",
-    "vi": "NA (Takanotsume)"
-  },
-  "MST_MONSTERS_551001_NAME": {
-    "en": "NA (Takanotsume)",
-    "es": "NA (Takanotsume)",
-    "id": "NA (Takanotsume)",
-    "pt": "NA (Takanotsume)",
-    "th": "NA (Takanotsume)",
-    "vi": "NA (Takanotsume)"
-  },
-  "MST_MONSTERS_55100_NAME": {
-    "en": "Twinkling Flash Mila",
-    "es": "Destello fugaz Mila",
-    "id": "Flash Kilat Mila",
-    "pt": "Mila Brilha Cintila",
-    "th": "ทวิงคลิงก์แฟลชมิล่า",
-    "vi": "Tia nhấp nháy Mila"
   }
 }

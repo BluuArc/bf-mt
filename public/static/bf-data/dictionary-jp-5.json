@@ -1,4 +1,60 @@
 {
+  "MST_SKILLS_2122590_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122590_NAME": {
+    "en": "I love my sisters, and yet...",
+    "es": "Amo a mi hermana, y aun así...",
+    "id": "Aku cinta saudari-saudariku, tapi...",
+    "pt": "Eu amo minhas irmãs, mas...",
+    "th": "ข้ารักพี่สาวของข้า..แล้วก็...",
+    "vi": "I love my sisters, and yet..."
+  },
+  "MST_SKILLS_212259_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_212259_NAME": {
+    "en": "I walk the path of war.",
+    "es": "Camino la senda de la guerra.",
+    "id": "Kujalani jalur perang.",
+    "pt": "Trilho o caminho da guerra.",
+    "th": "ข้าเดินไปยังทางแห่งสงคราม",
+    "vi": "I walk the path of war."
+  },
+  "MST_SKILLS_21226000_NAME": {
+    "en": "Prepare for the worst.",
+    "es": "Prepare for the worst.",
+    "id": "Bersiaplah untuk yang terburuk.",
+    "pt": "Prepare for the worst.",
+    "th": "เตรียมตัวแพ้ไว้ซะ",
+    "vi": "Prepare for the worst."
+  },
+  "MST_SKILLS_2122600_DESCRIPTION": {
+    "en": "Boosts Atk & adds Fire element to attack for all allies for 3 turns",
+    "es": "Aumenta el ataque y agrega fuego al ataque de los aliados durante 3 turnos",
+    "id": "Menambah Serangan & menambahkan elemen Api ke serangan semua sekutu untuk 3 giliran",
+    "pt": "Aumenta o ATQ e adiciona elemento fogo ao ataque de todos os aliados por 3 rodadas",
+    "th": "เพิ่มค่า โจมตี และ เพิ่มธาตุไฟ ให้กับการโจมตี สำหรับพันธมิตรทั้งหมด นาน 3 เทิร์น",
+    "vi": "Boosts Atk & adds Fire element to attack for all allies for 3 turns"
+  },
+  "MST_SKILLS_2122600_NAME": {
+    "en": "Crimson Changer",
+    "es": "Cambiador carmesí",
+    "id": "Pengubah Merah",
+    "pt": "Alterador Carmesim",
+    "th": "คริมสัน เชนเจอร์",
+    "vi": "Crimson Changer"
+  },
   "MST_SKILLS_2122601_DESCRIPTION": {
     "en": "18 combo Fire elemental attack on all enemies, boosts Atk & adds Fire element to attack for 3 turns",
     "es": "Combo grupal de 18 ataque ígneos. Aumenta el ataque y agrega fuego al ataque durante 3 turnos",
@@ -87215,6 +87271,22 @@
     "th": "อะมาแรนไทน์ ฟัสซิลเลด",
     "vi": "Amaranthine Fusillade"
   },
+  "MST_SKILLS_2830148_DESCRIPTION": {
+    "en": "35 combo massive Earth attack on all foes, enormously boosts BB gauge for 5 turns, enormously boosts elemental damage for 5 turns, enormously boosts own Spark damage for 5 turns, activates BB/SBB/UBB twice for 2 turns & adds probable evasion for 5 turns",
+    "es": "35 combo massive Earth attack on all foes, enormously boosts BB gauge for 5 turns, enormously boosts elemental damage for 5 turns, enormously boosts own Spark damage for 5 turns, activates BB/SBB/UBB twice for 2 turns & adds probable evasion for 5 turns",
+    "id": "35 combo massive Earth attack on all foes, enormously boosts BB gauge for 5 turns, enormously boosts elemental damage for 5 turns, enormously boosts own Spark damage for 5 turns, activates BB/SBB/UBB twice for 2 turns & adds probable evasion for 5 turns",
+    "pt": "35 combo massive Earth attack on all foes, enormously boosts BB gauge for 5 turns, enormously boosts elemental damage for 5 turns, enormously boosts own Spark damage for 5 turns, activates BB/SBB/UBB twice for 2 turns & adds probable evasion for 5 turns",
+    "th": "35 combo massive Earth attack on all foes, enormously boosts BB gauge for 5 turns, enormously boosts elemental damage for 5 turns, enormously boosts own Spark damage for 5 turns, activates BB/SBB/UBB twice for 2 turns & adds probable evasion for 5 turns",
+    "vi": "35 combo massive Earth attack on all foes, enormously boosts BB gauge for 5 turns, enormously boosts elemental damage for 5 turns, enormously boosts own Spark damage for 5 turns, activates BB/SBB/UBB twice for 2 turns & adds probable evasion for 5 turns"
+  },
+  "MST_SKILLS_2830148_NAME": {
+    "en": "Earthsoul Volley",
+    "es": "Earthsoul Volley",
+    "id": "Earthsoul Volley",
+    "pt": "Earthsoul Volley",
+    "th": "Earthsoul Volley",
+    "vi": "Earthsoul Volley"
+  },
   "MST_SKILLS_2830177_DESCRIPTION": {
     "en": "4 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns",
     "es": "8 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns",
@@ -87614,5 +87686,45 @@
     "pt": "Flowing River Surging Earth",
     "th": "โฟลวอิ้ง ริเวอร์ เซิร์จจิ้ง เอิร์ธ",
     "vi": "Flowing River Surging Earth"
+  },
+  "MST_SKILLS_2830527_DESCRIPTION": {
+    "en": "33 combo massive Earth, Dark and Light attack on all enemies, reduces damage taken by half & fully recovers HP for all allies for 3 turns",
+    "es": "Combo grupal de 33 devastadores ataques térreos, oscuros y lumínicos. Reduce el daño 50% y recupera los PS de todos los aliados por 3 turnos.",
+    "id": "33 kombo serangan masif Bumi, Terang, Gelap ke semua musuh, kurangi separuh kerusakan diderita & meteran BB semua sekutu pulih 3 giliran",
+    "pt": "None",
+    "th": "33 คอมโบ โจมตีด้วยธาตุดิน แสงและความมืดอันรุนแรงใส่ศัตรูทุกตัว ลดความเสียหายที่ได้รับลงครึ่งหนึ่ง และฟื้นฟู HP ให้ทีมจนเต็ม 3 เทิร์น",
+    "vi": "33 combo massive Earth, Dark and Light attack on all enemies, reduces damage taken by half & fully recovers HP for all allies for 3 turns"
+  },
+  "MST_SKILLS_2830527_NAME": {
+    "en": "Chrono Catalysm",
+    "es": "Cronocatalismo",
+    "id": "Bencana Kronos",
+    "pt": "Cronocataclisma",
+    "th": "โครโน่ คาตาลิซึ่ม",
+    "vi": "Chrono Catalysm"
+  },
+  "MST_SKILLS_2830528_DESCRIPTION": {
+    "en": "35 combo 5% to 8% max HP attack on all foes, adds high probability of resistance against 1 KO attack, adds probable evasion for 3 turns, probability of activating BB/SBB/UBB twice for 3 turns, probability of raising allies from KO & enormously boosts BB gauge for 3 turns",
+    "es": "35 combo 5% to 8% max HP attack on all foes, adds high probability of resistance against 1 KO attack, adds probable evasion for 3 turns, probability of activating BB/SBB/UBB twice for 3 turns, probability of raising allies from KO & enormously boosts BB gauge for 3 turns",
+    "id": "35 combo 5% to 8% max HP attack on all foes, adds high probability of resistance against 1 KO attack, adds probable evasion for 3 turns, probability of activating BB/SBB/UBB twice for 3 turns, probability of raising allies from KO & enormously boosts BB gauge for 3 turns",
+    "pt": "35 combo 5% to 8% max HP attack on all foes, adds high probability of resistance against 1 KO attack, adds probable evasion for 3 turns, probability of activating BB/SBB/UBB twice for 3 turns, probability of raising allies from KO & enormously boosts BB gauge for 3 turns",
+    "th": "35 combo 5% to 8% max HP attack on all foes, adds high probability of resistance against 1 KO attack, adds probable evasion for 3 turns, probability of activating BB/SBB/UBB twice for 3 turns, probability of raising allies from KO & enormously boosts BB gauge for 3 turns",
+    "vi": "35 combo 5% to 8% max HP attack on all foes, adds high probability of resistance against 1 KO attack, adds probable evasion for 3 turns, probability of activating BB/SBB/UBB twice for 3 turns, probability of raising allies from KO & enormously boosts BB gauge for 3 turns"
+  },
+  "MST_SKILLS_2830528_NAME": {
+    "en": "Singularity",
+    "es": "Singularity",
+    "id": "Singularity",
+    "pt": "Singularity",
+    "th": "Singularity",
+    "vi": "Singularity"
+  },
+  "MST_SKILLS_2830537_DESCRIPTION": {
+    "en": "22 combo massive Earth attack on all foes, enormously boosts BB gauge for 3 turns, fully restores HP for 3 turns, adds high probability of resistance against 1 KO attack, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts OD gauge",
+    "es": "22 combo massive Earth attack on all foes, enormously boosts BB gauge for 3 turns, fully restores HP for 3 turns, adds high probability of resistance against 1 KO attack, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts OD gauge",
+    "id": "22 combo massive Earth attack on all foes, enormously boosts BB gauge for 3 turns, fully restores HP for 3 turns, adds high probability of resistance against 1 KO attack, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts OD gauge",
+    "pt": "22 combo massive Earth attack on all foes, enormously boosts BB gauge for 3 turns, fully restores HP for 3 turns, adds high probability of resistance against 1 KO attack, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts OD gauge",
+    "th": "22 combo massive Earth attack on all foes, enormously boosts BB gauge for 3 turns, fully restores HP for 3 turns, adds high probability of resistance against 1 KO attack, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts OD gauge",
+    "vi": "22 combo massive Earth attack on all foes, enormously boosts BB gauge for 3 turns, fully restores HP for 3 turns, adds high probability of resistance against 1 KO attack, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts OD gauge"
   }
 }
