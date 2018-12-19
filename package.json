@@ -44,8 +44,14 @@
       "eslint:recommended"
     ],
     "rules": {
-      "comma-dangle": ["error", "always-multiline"],
-      "semi": ["error", "always"]
+      "comma-dangle": [
+        "error",
+        "always-multiline"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ]
     },
     "parserOptions": {
       "parser": "babel-eslint"
