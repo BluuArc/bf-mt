@@ -1,4 +1,68 @@
 {
+  "MST_LEADERSKILLS_801035_NAME": {
+    "en": "Gale Force",
+    "es": "Fuerza de vendaval",
+    "id": "Kekuatan Badai",
+    "pt": "Força da Ventania",
+    "th": "เกล ฟอร์ซ",
+    "vi": "Lực gió"
+  },
+  "MST_LEADERSKILLS_801036_DESCRIPTION": {
+    "en": "Large boost to BC drop rate and damage during Spark & chance of reflecting damage when attacked",
+    "es": "Aumenta notablemente la posibilidad de conseguir CB y al daño durante Chispas. Posibilidad de reflejar el daño recibido",
+    "id": "Banyak menambah jumlah BC dan kerusakan ketika Percikan & kemungkinan memantulkan kerusakan ketika diserang",
+    "pt": "Grande bônus na taxa de BC e dano durante Fagulha e chance de refletir dano ao ser atacado",
+    "th": "เพิ่มอัตราการดรอปของ BC กับ ความเสียหายระหว่างสปาร์ค อย่างมาก และ โอกาสที่จะสะท้อนความเสียหายเมื่อถูกโจมตี",
+    "vi": "Tăng nhiều nhẹ tỷ lệ rơi BC và thiệt hại trong đòn Spark & cơ hội phản ngược thiệt hại khi bị tấn công"
+  },
+  "MST_LEADERSKILLS_801036_NAME": {
+    "en": "Ardent Vigor",
+    "es": "Vigor ardiente",
+    "id": "Semangat Rajin",
+    "pt": "Vigor Ardente",
+    "th": "อาร์เดนท์ วิกเกอร์",
+    "vi": "Sinh lực mãnh liệt"
+  },
+  "MST_LEADERSKILLS_801037_DESCRIPTION": {
+    "en": "10% boost to critical hit rate and 25% boost to Rec of all Units",
+    "es": "+10% a la posibilidad asestar golpes críticos y +25% a la recuperación de todas las unidades",
+    "id": "Menambah 10% rasio pukulan ampuh dan 25% Pemulihan pada semua Unit",
+    "pt": "Bônus de 10% na taxa de dano crítico e 25% mais de Rec de todas unidades",
+    "th": "10% เพิ่มอัตราการเกิดคริติคอล กับ 25% เพิ่มค่าฟื้นฟูให้กับทุกยูนิต",
+    "vi": "Tăng 10% tỷ lệ đòn trí mạng và tăng 25% khả năng Phục hồi của tất cả các Quái"
+  },
+  "MST_LEADERSKILLS_801037_NAME": {
+    "en": "Dark Vigor",
+    "es": "Vigor oscuro",
+    "id": "Kekuatan Kegelapan",
+    "pt": "Energia Sombria",
+    "th": "ดาร์ค วิกเกอร์",
+    "vi": "Sinh lực bóng tối"
+  },
+  "MST_LEADERSKILLS_801038_DESCRIPTION": {
+    "en": "15% boost to critical hit rate and 30% boost to Rec of all Units",
+    "es": "+15% a la posibilidad asestar golpes críticos y +30% a la recuperación de todas las unidades",
+    "id": "Menambah 15% rasio pukulan ampuh dan 30% Pemulihan pada semua Unit",
+    "pt": "Bônus de 15% na taxa de dano crítico e 30% mais de Rec de todas unidades",
+    "th": "15% เพิ่มอัตราการเกิดคริติคอล กับ 30% เพิ่มค่าฟื้นฟูให้กับทุกยูนิต",
+    "vi": "Tăng 15% tỷ lệ đòn trí mạng và tăng 30% khả năng Phục hồi của tất cả các Quái"
+  },
+  "MST_LEADERSKILLS_801038_NAME": {
+    "en": "Serpentine Vigor",
+    "es": "Vigor viperino",
+    "id": "Kekuatan Ular",
+    "pt": "Energia Serpente",
+    "th": "เซอเพรไทน์ วิกเกอร์",
+    "vi": "Sinh lực nham hiểm"
+  },
+  "MST_LEADERSKILLS_801039_DESCRIPTION": {
+    "en": "Small reduction in BB gauge required for BB & slightly reduces the amount of BB gauge used during BB",
+    "es": "Reduce levemente el indicador BB necesario para BB y la cantidad de indicador BB usado durante BB",
+    "id": "Mengurangi sedikit meteran BB untuk BB & agak mengurangi jumlah meteran BB  untuk BB",
+    "pt": "Pouca redução na barra de BB necessária para o BB e redução do uso da barra de BB ao usar BB",
+    "th": "ลดเกจ BB ที่ต้องการสำหรับใช้ BB ลงเล็กน้อย และ ลดจำนวนเกจ BB ที่ถูกใช้ระหว่าง BB ลงเล็กน้อย",
+    "vi": "Giảm nhẹ vạch BB cần có để Tăng cường can đảm & giảm nhẹ lượng vạch BB được sử dụng khi Tăng cường can đảm"
+  },
   "MST_LEADERSKILLS_801039_NAME": {
     "en": "Nature's Bounty",
     "es": "Recompensa de la naturaleza",
@@ -3190,6 +3254,38 @@
     "pt": "Inquisição do Reino Supremo",
     "th": "ซูพรีมรูเลอร์อินควิชชั่น",
     "vi": "Supreme Ruler's Inquisition"
+  },
+  "MST_LEADERSKILLS_810517_DESCRIPTION": {
+    "en": "150% boost to Def and 60% boost to Rec, max HP of Fire types, hugely boosts Fire elemental damage, damage taken hugely boosts BB gauge & 10% damage reduction from Fire, Earth types",
+    "es": "150% boost to Def and 60% boost to Rec, max HP of Fire types, hugely boosts Fire elemental damage, damage taken hugely boosts BB gauge & 10% damage reduction from Fire, Earth types",
+    "id": "150% boost to Def and 60% boost to Rec, max HP of Fire types, hugely boosts Fire elemental damage, damage taken hugely boosts BB gauge & 10% damage reduction from Fire, Earth types",
+    "pt": "150% boost to Def and 60% boost to Rec, max HP of Fire types, hugely boosts Fire elemental damage, damage taken hugely boosts BB gauge & 10% damage reduction from Fire, Earth types",
+    "th": "150% boost to Def and 60% boost to Rec, max HP of Fire types, hugely boosts Fire elemental damage, damage taken hugely boosts BB gauge & 10% damage reduction from Fire, Earth types",
+    "vi": "150% boost to Def and 60% boost to Rec, max HP of Fire types, hugely boosts Fire elemental damage, damage taken hugely boosts BB gauge & 10% damage reduction from Fire, Earth types"
+  },
+  "MST_LEADERSKILLS_810517_NAME": {
+    "en": "Upbeat Flourish",
+    "es": "Upbeat Flourish",
+    "id": "Upbeat Flourish",
+    "pt": "Upbeat Flourish",
+    "th": "Upbeat Flourish",
+    "vi": "Upbeat Flourish"
+  },
+  "MST_LEADERSKILLS_810518_DESCRIPTION": {
+    "en": "200% boost to Def and 80% boost to Rec, max HP of Fire types, enormously boosts Fire elemental damage, damage taken enormously boosts BB gauge, 20% damage reduction from Fire, Earth types & 50% Spark damage reduction",
+    "es": "200% boost to Def and 80% boost to Rec, max HP of Fire types, enormously boosts Fire elemental damage, damage taken enormously boosts BB gauge, 20% damage reduction from Fire, Earth types & 50% Spark damage reduction",
+    "id": "200% boost to Def and 80% boost to Rec, max HP of Fire types, enormously boosts Fire elemental damage, damage taken enormously boosts BB gauge, 20% damage reduction from Fire, Earth types & 50% Spark damage reduction",
+    "pt": "200% boost to Def and 80% boost to Rec, max HP of Fire types, enormously boosts Fire elemental damage, damage taken enormously boosts BB gauge, 20% damage reduction from Fire, Earth types & 50% Spark damage reduction",
+    "th": "200% boost to Def and 80% boost to Rec, max HP of Fire types, enormously boosts Fire elemental damage, damage taken enormously boosts BB gauge, 20% damage reduction from Fire, Earth types & 50% Spark damage reduction",
+    "vi": "200% boost to Def and 80% boost to Rec, max HP of Fire types, enormously boosts Fire elemental damage, damage taken enormously boosts BB gauge, 20% damage reduction from Fire, Earth types & 50% Spark damage reduction"
+  },
+  "MST_LEADERSKILLS_810518_NAME": {
+    "en": "Heroic Fanfare",
+    "es": "Heroic Fanfare",
+    "id": "Heroic Fanfare",
+    "pt": "Heroic Fanfare",
+    "th": "Heroic Fanfare",
+    "vi": "Heroic Fanfare"
   },
   "MST_LEADERSKILLS_810528_DESCRIPTION": {
     "en": "80% boost to Atk, Def, max HP, 30% boost to critical hit rate, boosts Atk for 2 turns when damage dealt has exceeded certain amount, hugely boosts critical damage, raises normal hit amount & probable normal attack on all foes",
@@ -87686,45 +87782,5 @@
     "pt": "Deemo e a Garota",
     "th": "ดีโมแอนด์เดอะเกิร์ล",
     "vi": "Deemo và cô gái"
-  },
-  "MST_MONSTERS_54990_NAME": {
-    "en": "Sparkling Light God",
-    "es": "Dios luz brillante",
-    "id": "Dewa Terang Bersinar",
-    "pt": "Deus da Luz Brilhante",
-    "th": "สปาร์คลิ่งไลท์ก็อด",
-    "vi": "Thần sáng lấp lánh"
-  },
-  "MST_MONSTERS_54991_NAME": {
-    "en": "Emo Dark God",
-    "es": "Dios emoscuro",
-    "id": "Dewa Gelap Emosi",
-    "pt": "Deus Sombrio Emo",
-    "th": "อีโมดาร์คก็อด",
-    "vi": "Thần bóng tối Emo"
-  },
-  "MST_MONSTERS_550000_NAME": {
-    "en": "Cursed Hunter Horouna",
-    "es": "Cazadora maldita Horouna",
-    "id": "Pemburu Laknat Horouna",
-    "pt": "Horouna Caçador Maldito",
-    "th": "เคิร์ส ฮันเตอร์ โฮโรน่า",
-    "vi": "Cursed Hunter Horouna"
-  },
-  "MST_MONSTERS_550001_NAME": {
-    "en": "Cursed Hunter Horouna",
-    "es": "Cazadora maldita Horouna",
-    "id": "Pemburu Laknat Horouna",
-    "pt": "Horouna Caçador Maldito",
-    "th": "เคิร์ส ฮันเตอร์ โฮโรน่า",
-    "vi": "Cursed Hunter Horouna"
-  },
-  "MST_MONSTERS_55000_NAME": {
-    "en": "Heavy Guard Nevsky",
-    "es": "Guardia duro Nevsky",
-    "id": "Penjaga Berat Nevsky",
-    "pt": "Guarda-Pesado Nevsky",
-    "th": "เฮฟวี่การ์ดเนฟสกี้",
-    "vi": "Cận vệ nặngnề Nevsky"
   }
 }

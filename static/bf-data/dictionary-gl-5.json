@@ -1,44 +1,4 @@
 {
-  "MST_SKILLS_2122590_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122590_NAME": {
-    "en": "I love my sisters, and yet...",
-    "es": "Amo a mi hermana, y aun así...",
-    "id": "Aku cinta saudari-saudariku, tapi...",
-    "pt": "Eu amo minhas irmãs, mas...",
-    "th": "ข้ารักพี่สาวของข้า..แล้วก็...",
-    "vi": "I love my sisters, and yet..."
-  },
-  "MST_SKILLS_212259_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_212259_NAME": {
-    "en": "I walk the path of war.",
-    "es": "Camino la senda de la guerra.",
-    "id": "Kujalani jalur perang.",
-    "pt": "Trilho o caminho da guerra.",
-    "th": "ข้าเดินไปยังทางแห่งสงคราม",
-    "vi": "I walk the path of war."
-  },
-  "MST_SKILLS_21226000_NAME": {
-    "en": "Prepare for the worst.",
-    "es": "Prepare for the worst.",
-    "id": "Bersiaplah untuk yang terburuk.",
-    "pt": "Prepare for the worst.",
-    "th": "เตรียมตัวแพ้ไว้ซะ",
-    "vi": "Prepare for the worst."
-  },
   "MST_SKILLS_2122600_DESCRIPTION": {
     "en": "Boosts Atk & adds Fire element to attack for all allies for 3 turns",
     "es": "Aumenta el ataque y agrega fuego al ataque de los aliados durante 3 turnos",
@@ -86151,6 +86111,38 @@
     "th": "ไรซิ่ง ฟีนิกซ์",
     "vi": "Rising Phoenix"
   },
+  "MST_SKILLS_2810517_DESCRIPTION": {
+    "en": "22 combo massive Fire attack on all foes (damage relative to remaining HP), enormously boosts Def and critical hit rate for 3 turns, 100% damage reduction from Fire, Earth types for 3 turns, enormously boosts Def relative to max HP for 3 turns & damage taken enormously boosts BB gauge for 3 turns",
+    "es": "22 combo massive Fire attack on all foes (damage relative to remaining HP), enormously boosts Def and critical hit rate for 3 turns, 100% damage reduction from Fire, Earth types for 3 turns, enormously boosts Def relative to max HP for 3 turns & damage taken enormously boosts BB gauge for 3 turns",
+    "id": "22 combo massive Fire attack on all foes (damage relative to remaining HP), enormously boosts Def and critical hit rate for 3 turns, 100% damage reduction from Fire, Earth types for 3 turns, enormously boosts Def relative to max HP for 3 turns & damage taken enormously boosts BB gauge for 3 turns",
+    "pt": "22 combo massive Fire attack on all foes (damage relative to remaining HP), enormously boosts Def and critical hit rate for 3 turns, 100% damage reduction from Fire, Earth types for 3 turns, enormously boosts Def relative to max HP for 3 turns & damage taken enormously boosts BB gauge for 3 turns",
+    "th": "22 combo massive Fire attack on all foes (damage relative to remaining HP), enormously boosts Def and critical hit rate for 3 turns, 100% damage reduction from Fire, Earth types for 3 turns, enormously boosts Def relative to max HP for 3 turns & damage taken enormously boosts BB gauge for 3 turns",
+    "vi": "22 combo massive Fire attack on all foes (damage relative to remaining HP), enormously boosts Def and critical hit rate for 3 turns, 100% damage reduction from Fire, Earth types for 3 turns, enormously boosts Def relative to max HP for 3 turns & damage taken enormously boosts BB gauge for 3 turns"
+  },
+  "MST_SKILLS_2810517_NAME": {
+    "en": "Banisher of Winter",
+    "es": "Banisher of Winter",
+    "id": "Banisher of Winter",
+    "pt": "Banisher of Winter",
+    "th": "Banisher of Winter",
+    "vi": "Banisher of Winter"
+  },
+  "MST_SKILLS_2810518_DESCRIPTION": {
+    "en": "24 combo massive Fire attack on all foes (damage relative to remaining HP), enormosuly boosts Def and critical hit rate for 5 turns, 100% damage reduction from Fire, Earth types for 5 turns, enormously boosts Def relative to max HP for 3 turns, damage taken enormously boosts BB gauge for 3 turns & enormously boosts OD gauge",
+    "es": "24 combo massive Fire attack on all foes (damage relative to remaining HP), enormosuly boosts Def and critical hit rate for 5 turns, 100% damage reduction from Fire, Earth types for 5 turns, enormously boosts Def relative to max HP for 3 turns, damage taken enormously boosts BB gauge for 3 turns & enormously boosts OD gauge",
+    "id": "24 combo massive Fire attack on all foes (damage relative to remaining HP), enormosuly boosts Def and critical hit rate for 5 turns, 100% damage reduction from Fire, Earth types for 5 turns, enormously boosts Def relative to max HP for 3 turns, damage taken enormously boosts BB gauge for 3 turns & enormously boosts OD gauge",
+    "pt": "24 combo massive Fire attack on all foes (damage relative to remaining HP), enormosuly boosts Def and critical hit rate for 5 turns, 100% damage reduction from Fire, Earth types for 5 turns, enormously boosts Def relative to max HP for 3 turns, damage taken enormously boosts BB gauge for 3 turns & enormously boosts OD gauge",
+    "th": "24 combo massive Fire attack on all foes (damage relative to remaining HP), enormosuly boosts Def and critical hit rate for 5 turns, 100% damage reduction from Fire, Earth types for 5 turns, enormously boosts Def relative to max HP for 3 turns, damage taken enormously boosts BB gauge for 3 turns & enormously boosts OD gauge",
+    "vi": "24 combo massive Fire attack on all foes (damage relative to remaining HP), enormosuly boosts Def and critical hit rate for 5 turns, 100% damage reduction from Fire, Earth types for 5 turns, enormously boosts Def relative to max HP for 3 turns, damage taken enormously boosts BB gauge for 3 turns & enormously boosts OD gauge"
+  },
+  "MST_SKILLS_2810518_NAME": {
+    "en": "A Song of Snow and Flames",
+    "es": "A Song of Snow and Flames",
+    "id": "A Song of Snow and Flames",
+    "pt": "A Song of Snow and Flames",
+    "th": "A Song of Snow and Flames",
+    "vi": "A Song of Snow and Flames"
+  },
   "MST_SKILLS_2810527_DESCRIPTION": {
     "en": "18 combo massive Fire attack on all enemies, great chance of greatly reducing enemies' Atk for 2 turns & adds additional damage debuff to enemies at the end of each turn for 3 turns",
     "es": "Combo de 18 devastadores ataques ígneos. Puede reducir notablemente el ATQ enemigo 2 turnos y agrega una despotenciación de daño adicional a los enemigos al final de cada turno por 3 turnos",
@@ -87726,5 +87718,69 @@
     "pt": "22 combo massive Earth attack on all foes, enormously boosts BB gauge for 3 turns, fully restores HP for 3 turns, adds high probability of resistance against 1 KO attack, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts OD gauge",
     "th": "22 combo massive Earth attack on all foes, enormously boosts BB gauge for 3 turns, fully restores HP for 3 turns, adds high probability of resistance against 1 KO attack, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts OD gauge",
     "vi": "22 combo massive Earth attack on all foes, enormously boosts BB gauge for 3 turns, fully restores HP for 3 turns, adds high probability of resistance against 1 KO attack, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts OD gauge"
+  },
+  "MST_SKILLS_2830537_NAME": {
+    "en": "Hit them again, Bjørn!",
+    "es": "Hit them again, Bjørn!",
+    "id": "Hit them again, Bjørn!",
+    "pt": "Hit them again, Bjørn!",
+    "th": "Hit them again, Bjørn!",
+    "vi": "Hit them again, Bjørn!"
+  },
+  "MST_SKILLS_2830538_DESCRIPTION": {
+    "en": "26 combo massive Earth attack on all foes, enormously boosts BB gauge for 3 turns, fully restores HP for 3 turns, adds high probability of resistance against 1 KO attack, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts OD gauge",
+    "es": "26 combo massive Earth attack on all foes, enormously boosts BB gauge for 3 turns, fully restores HP for 3 turns, adds high probability of resistance against 1 KO attack, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts OD gauge",
+    "id": "26 combo massive Earth attack on all foes, enormously boosts BB gauge for 3 turns, fully restores HP for 3 turns, adds high probability of resistance against 1 KO attack, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts OD gauge",
+    "pt": "26 combo massive Earth attack on all foes, enormously boosts BB gauge for 3 turns, fully restores HP for 3 turns, adds high probability of resistance against 1 KO attack, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts OD gauge",
+    "th": "26 combo massive Earth attack on all foes, enormously boosts BB gauge for 3 turns, fully restores HP for 3 turns, adds high probability of resistance against 1 KO attack, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts OD gauge",
+    "vi": "26 combo massive Earth attack on all foes, enormously boosts BB gauge for 3 turns, fully restores HP for 3 turns, adds high probability of resistance against 1 KO attack, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts OD gauge"
+  },
+  "MST_SKILLS_2830538_NAME": {
+    "en": "You got them, Bjørn!",
+    "es": "You got them, Bjørn!",
+    "id": "You got them, Bjørn!",
+    "pt": "You got them, Bjørn!",
+    "th": "You got them, Bjørn!",
+    "vi": "You got them, Bjørn!"
+  },
+  "MST_SKILLS_2830557_DESCRIPTION": {
+    "en": "23 combo massive Earth attack on all foes, high probability of raising allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts OD gauge",
+    "es": "23 combo massive Earth attack on all foes, high probability of raising allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts OD gauge",
+    "id": "23 combo massive Earth attack on all foes, high probability of raising allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts OD gauge",
+    "pt": "23 combo massive Earth attack on all foes, high probability of raising allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts OD gauge",
+    "th": "23 combo massive Earth attack on all foes, high probability of raising allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts OD gauge",
+    "vi": "23 combo massive Earth attack on all foes, high probability of raising allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts OD gauge"
+  },
+  "MST_SKILLS_2830557_NAME": {
+    "en": "Hisa! Wrathful Typhoon!",
+    "es": "Hisa! Wrathful Typhoon!",
+    "id": "Hisa! Wrathful Typhoon!",
+    "pt": "Hisa! Wrathful Typhoon!",
+    "th": "Hisa! Wrathful Typhoon!",
+    "vi": "Hisa! Wrathful Typhoon!"
+  },
+  "MST_SKILLS_2830558_DESCRIPTION": {
+    "en": "26 combo massive Earth attack on all foes, raises allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns, enormously boosts OD gauge & enormously boosts max HP",
+    "es": "26 combo massive Earth attack on all foes, raises allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns, enormously boosts OD gauge & enormously boosts max HP",
+    "id": "26 combo massive Earth attack on all foes, raises allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns, enormously boosts OD gauge & enormously boosts max HP",
+    "pt": "26 combo massive Earth attack on all foes, raises allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns, enormously boosts OD gauge & enormously boosts max HP",
+    "th": "26 combo massive Earth attack on all foes, raises allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns, enormously boosts OD gauge & enormously boosts max HP",
+    "vi": "26 combo massive Earth attack on all foes, raises allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns, enormously boosts OD gauge & enormously boosts max HP"
+  },
+  "MST_SKILLS_2830558_NAME": {
+    "en": "Hisa! Imperious Storm!",
+    "es": "Hisa! Imperious Storm!",
+    "id": "Hisa! Imperious Storm!",
+    "pt": "Hisa! Imperious Storm!",
+    "th": "Hisa! Imperious Storm!",
+    "vi": "Hisa! Imperious Storm!"
+  },
+  "MST_SKILLS_2830587_DESCRIPTION": {
+    "en": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction",
+    "es": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction",
+    "id": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction",
+    "pt": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction",
+    "th": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction",
+    "vi": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction"
   }
 }
