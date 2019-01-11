@@ -35,7 +35,7 @@ class GitHubScraper {
     const page = await getPageInstance(url);
     const fileTree = {};
     const pageResult = await page.evaluate(() => {
-      return new Promise((fulfill, reject) => {
+      return new Promise((fulfill) => {
         const onReady  = () => {
           if (document.readyState === 'complete') {
             const result = Array.from(document.querySelectorAll('tr.js-navigation-item')).map(elem => ({

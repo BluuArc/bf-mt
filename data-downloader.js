@@ -64,6 +64,7 @@ const handlers = {
         }
         return r;
       }).forEach(r => {
+        // eslint-disable-next-line no-unused-vars
         const [name, extension] = r.url.split('.');
         data[name].data = r.data;
       });
@@ -73,6 +74,7 @@ const handlers = {
       const [info, evo_list, feskills] = [data.info.data, data.evo_list.data, data.feskills.data];
       return { info, evo_list, feskills };
     },
+    // eslint-disable-next-line no-unused-vars
     process (server, { info = {}, evo_list = {}, feskills = {} }, missions = {}, dictionary = {}) {
       const elements = ['fire', 'water', 'earth', 'thunder', 'light', 'dark'];
       logger.info(`${server}: merging files`);
@@ -170,6 +172,7 @@ const handlers = {
       logger.debug('itemData', Object.keys(itemData).length).done();
       return itemData;
     },
+    // eslint-disable-next-line no-unused-vars
     process (server, itemData = {}, unitData = {}, missions = {}, dictionary = {}) {
       logger.info(`${server}: setting recipe names`);
       Object.values(itemData)
