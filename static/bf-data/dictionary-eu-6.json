@@ -1,4 +1,20 @@
 {
+  "MST_SKILLS_2830558_NAME": {
+    "en": "Hisa! Imperious Storm!",
+    "es": "Hisa! Imperious Storm!",
+    "id": "Hisa! Imperious Storm!",
+    "pt": "Hisa! Imperious Storm!",
+    "th": "Hisa! Imperious Storm!",
+    "vi": "Hisa! Imperious Storm!"
+  },
+  "MST_SKILLS_2830587_DESCRIPTION": {
+    "en": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction",
+    "es": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction",
+    "id": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction",
+    "pt": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction",
+    "th": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction",
+    "vi": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction"
+  },
   "MST_SKILLS_2830587_NAME": {
     "en": "Home Run Comet",
     "es": "Home Run Comet",
@@ -87782,5 +87798,45 @@
     "pt": "16 combo powerful Fire, Dark attack on all foes, hugely boosts Atk, Def, Rec for 3 turns, slight damage reduction from all elemental types for 1 turn, Spark damage considerably restores HP for 3 turns & greatly boosts max HP",
     "th": "16 คอมโบ โจมตีธาตุ ไฟ, มืด อย่างแรง ใส่ศัตรูทั้งหมด, เพิ่มค่าอย่างสูงให้ โจมตี, ป้องกัน, ฟื้นฟู นาน 3 เทิร์น, ลดค่าความเสียหายจาก ทุกชนิดธาตุ เล็กน้อย นาน 1 เทิร์น, ความเสียหายสปาร์ค ฟื้นคืน HP อย่างมาก นาน 3 เทิร์น และ เพิ่มค่ามากมายให้ HP สูงสุด",
     "vi": "16 combo powerful Fire, Dark attack on all foes, hugely boosts Atk, Def, Rec for 3 turns, slight damage reduction from all elemental types for 1 turn, Spark damage considerably restores HP for 3 turns & greatly boosts max HP"
+  },
+  "MST_SKILLS_810438_NAME": {
+    "en": "Void-Slashing Path",
+    "es": "Void-Slashing Path",
+    "id": "Jalan Pemecah Hampa",
+    "pt": "Void-Slashing Path",
+    "th": "วอยด์-สแลชชิ่ง พาธ",
+    "vi": "Void-Slashing Path"
+  },
+  "MST_SKILLS_810507_DESCRIPTION": {
+    "en": "14 combo powerful Fire attack on all foes, boosts max HP, considerably boosts Def relative to max HP for 3 turns & damage taken may restore HP for 3 turns",
+    "es": "14 combo powerful Fire attack on all foes, boosts max HP, considerably boosts Def relative to max HP for 3 turns & damage taken may restore HP for 3 turns",
+    "id": "14 kombo serangan Api kuat ke semua musuh, menambah HP maks, 3 giliran: lumayan menambah Tahan sesuai HP maks, kerusakan diderita dapat pulihkan HP",
+    "pt": "14 combo powerful Fire attack on all foes, boosts max HP, considerably boosts Def relative to max HP for 3 turns & damage taken may restore HP for 3 turns",
+    "th": "14 คอมโบ โจมตีธาตุไฟอย่างแรง ใส่ศัตรูทั้งหมด, เพิ่ม HP สูงสุด, เพิ่มค่าอย่างมากให้ ป้องกัน สัมพันธ์กับ HP สูงสุด นาน 3 เทิร์น และ ความเสียหายที่ได้รับ อาจจะฟื้นคืน HP นาน 3 เทิร์น",
+    "vi": "14 combo powerful Fire attack on all foes, boosts max HP, considerably boosts Def relative to max HP for 3 turns & damage taken may restore HP for 3 turns"
+  },
+  "MST_SKILLS_810507_NAME": {
+    "en": "Brilliant Ember",
+    "es": "Brilliant Ember",
+    "id": "Bara Terang",
+    "pt": "Brilliant Ember",
+    "th": "บริลเลียนท เอ็มเบอร์",
+    "vi": "Brilliant Ember"
+  },
+  "MST_SKILLS_810508_DESCRIPTION": {
+    "en": "20 combo powerful Fire attack on all foes, boosts max HP, considerably boosts Def relative to max HP for 3 turns, damage taken may restore HP for 3 turns & probability of raising allies from KO",
+    "es": "20 combo powerful Fire attack on all foes, boosts max HP, considerably boosts Def relative to max HP for 3 turns, damage taken may restore HP for 3 turns & probability of raising allies from KO",
+    "id": "20 kombo serangan Api kuat ke semua musuh, menambah HP maks, 3 giliran: lumayan menambah Tahan sesuai HP maks, kerusakan diderita dapat pulihkan HP, kans bangkitkan sekutu dari KO",
+    "pt": "20 combo powerful Fire attack on all foes, boosts max HP, considerably boosts Def relative to max HP for 3 turns, damage taken may restore HP for 3 turns & probability of raising allies from KO",
+    "th": "20 คอมโบ โจมตีธาตุไฟอย่างแรง ใส่ศัตรูทั้งหมด, เพิ่ม HP สูงสุด, เพิ่มค่าอย่างมากให้ ป้องกัน สัมพันธ์กับ HP สูงสุด นาน 3 เทิร์น, ความเสียหายที่ได้รับ อาจจะฟื้นคืน HP นาน 3 เทิร์น และ มีโอกาสที่จะ คืนชีพพันธมิตรจากน็อคเอ๊าท์",
+    "vi": "20 combo powerful Fire attack on all foes, boosts max HP, considerably boosts Def relative to max HP for 3 turns, damage taken may restore HP for 3 turns & probability of raising allies from KO"
+  },
+  "MST_SKILLS_810508_NAME": {
+    "en": "Vermillion  Blaze",
+    "es": "Vermillion  Blaze",
+    "id": "Api Merah Terang",
+    "pt": "Vermillion  Blaze",
+    "th": "เวอร์มิลเลียน เบลซ",
+    "vi": "Vermillion  Blaze"
   }
 }

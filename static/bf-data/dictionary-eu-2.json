@@ -1,4 +1,100 @@
 {
+  "MST_LEADERSKILLS_801029_NAME": {
+    "en": "Dark Ardor",
+    "es": "Pasión oscura",
+    "id": "Hasrat Kegelapan",
+    "pt": "Ardor sombrio",
+    "th": "ดาร์ค อาร์ดอร์",
+    "vi": "Nhuệ khí bóng tối"
+  },
+  "MST_LEADERSKILLS_801030_DESCRIPTION": {
+    "en": "Large boost to Atk and Def relative to the amount of depleted HP",
+    "es": "Aumenta notablemente el ATQ y la DEF según la cantidad de PS perdidos",
+    "id": "Tambahan besar ke Serang dan Tahan relatif sesuai jumlah HP yang berkurang",
+    "pt": "Grande bônus de ATQ e DEF relativo ao HP tirado",
+    "th": "เพิ่มค่า โจมตี กับ ป้องกัน อย่างสูงสัมพันธ์กับปริมาณ HP ที่ลดลงไป",
+    "vi": "Tăng nhiều sức Tấn công và Phòng thủ tương ứng với lượng Thể lực đã suy yếu"
+  },
+  "MST_LEADERSKILLS_801030_NAME": {
+    "en": "Shroud Tenacity",
+    "es": "Tenacidad protectora",
+    "id": "Kafan Keuletan",
+    "pt": "Blindagem viscosa",
+    "th": "ชเราด์ เทนเนซิตี้",
+    "vi": "Vải liệm siết chặt"
+  },
+  "MST_LEADERSKILLS_801031_DESCRIPTION": {
+    "en": "Great boost to Atk and Def relative the amount of depleted HP & 25% boost to Atk of all allies",
+    "es": "Aumenta notablemente el ATQ y la DEF según la cantidad de PS perdidos y aumenta un 25% el ATQ de los aliados",
+    "id": "Sangat menambah Serangan dan Pertahanan tergantung jumlah HP yang hilang & menambah 25% Serangan untuk semua sekutu",
+    "pt": "Grande bônus de ATQ e DEF relativo ao HP tirado e bônus de 25% de ATQ a todos os aliados",
+    "th": "เพิ่มค่า โจมตี กับ Defป้องกัน อย่างมาก สอดคล้องกับปริมาณ HP ที่ลดลง และ 25% เพิ่มค่า โจมตี ให้กับพันธมิตรทุกคน",
+    "vi": "Tăng rất nhiều sức Tấn công và Phòng thủ tương ứng với lượng Thể lực đã suy yếu & tăng25% sức Tấn công của tất cả đồng minh"
+  },
+  "MST_LEADERSKILLS_801031_NAME": {
+    "en": "Cruel Emanation",
+    "es": "Emanación cruel",
+    "id": "Kekuatan Dewa Keji",
+    "pt": "Emanação cruel",
+    "th": "ครูเอล เอ็มเนชั่น",
+    "vi": "Xạ khí tàn độc"
+  },
+  "MST_LEADERSKILLS_801032_DESCRIPTION": {
+    "en": "Slight boost in the BB gauge when attacked & chance of reflecting damage when attacked",
+    "es": "Leve aumento del indicador BB al recibir un ataque. Posibilidad de reflejar el daño recibido",
+    "id": "Agak menambah meteran BB ketika diserang & kemungkinan memantulkan kerusakan ketika diserang",
+    "pt": "Pequeno bônus na barra de BB ao ser atacado e chance de refletir dano ao ser atacado.",
+    "th": "เพิ่มเกจ BB เล็กน้อยเมื่อถูกโจมตี และ โอกาสที่จะสะท้อนความเสียหายเมื่อถูกโจมตี",
+    "vi": "Tăng nhẹ vạch BB khi bị tấn công & cơ hội phản ngược thiệt hại khi bị tấn công"
+  },
+  "MST_LEADERSKILLS_801032_NAME": {
+    "en": "Cursed Aura",
+    "es": "Aura maldita",
+    "id": "Aura Terkutuk",
+    "pt": "Aura Urucada",
+    "th": "เคิร์ส ออร่า",
+    "vi": "Aura bị nguyền"
+  },
+  "MST_LEADERSKILLS_801033_DESCRIPTION": {
+    "en": "Boost in the BB gauge when attacked & chance of reflecting damage when attacked",
+    "es": "Aumento del indicador BB al recibir un ataque. Posibilidad de reflejar el daño recibido",
+    "id": "Menambah meteran BB ketika diserang & kemungkinan memantulkan kerusakan ketika diserang",
+    "pt": "Bônus na barra de BB ao ser atacado e chance de refletir dano ao ser atacado.",
+    "th": "เพิ่มเกจ BB เมื่อถูกโจมตี และ โอกาสที่จะสะท้อนความเสียหายเมื่อถูกโจมตี",
+    "vi": "Tăng vạch BB khi bị tấn công & cơ hội phản ngược thiệt hại khi bị tấn công"
+  },
+  "MST_LEADERSKILLS_801033_NAME": {
+    "en": "Demonic Zeal",
+    "es": "Fanatismo demoníaco",
+    "id": "Semangat Setan",
+    "pt": "Fervor Demoníaco",
+    "th": "เดมอนิค ซีล",
+    "vi": "Nhiệt huyết ma quỷ"
+  },
+  "MST_LEADERSKILLS_801034_DESCRIPTION": {
+    "en": "Slight boost to BC drop rate and damage during Spark",
+    "es": "Aumenta levemente la posibilidad de conseguir CB y el daño durante Chispas",
+    "id": "Sedikit menambah jumlah BC dan kerusakan ketika Percikan",
+    "pt": "Pequeno bônus na taxa de Bce dano durante Fagulha",
+    "th": "เพิ่มอัตราการดรอปของ BC กับ ความเสียหายระหว่างสปาร์ค เล็กน้อย",
+    "vi": "Tăng nhẹ mức rơi BC và thiệt hại trong đòn Spark"
+  },
+  "MST_LEADERSKILLS_801034_NAME": {
+    "en": "Haste Zest",
+    "es": "Placer veloz",
+    "id": "Semangat Bergegas",
+    "pt": "Pressa do Entusiasmo",
+    "th": "เฮลท์ เซสท์",
+    "vi": "Hương vị thoảng nhanh"
+  },
+  "MST_LEADERSKILLS_801035_DESCRIPTION": {
+    "en": "Boost to BC drop rate and damage during Spark",
+    "es": "Aumenta la posibilidad de conseguir CB y al daño durante Chispas",
+    "id": "Menambah jumlah BC dan kerusakan ketika Percikan",
+    "pt": "Bônus na taxa de BC e dano durante Fagulha",
+    "th": "เพิ่มอัตราการดรอปของ BC กับ ความเสียหายระหว่างสปาร์ค",
+    "vi": "Tăng mức rơi BC và thiệt hại trong đòn Spark"
+  },
   "MST_LEADERSKILLS_801035_NAME": {
     "en": "Gale Force",
     "es": "Fuerza de vendaval",
@@ -3415,6 +3511,38 @@
     "th": "สตีล ก็อดส์ ฟอร์เทรส",
     "vi": "Steel God's Fortress"
   },
+  "MST_LEADERSKILLS_810617_DESCRIPTION": {
+    "en": "150% boost to Atk, 100% boost to max HP, 150% boost to Spark damage, Spark damage boosts BB gauge & 15% boost to EXP gained",
+    "es": "150% boost to Atk, 100% boost to max HP, 150% boost to Spark damage, Spark damage boosts BB gauge & 15% boost to EXP gained",
+    "id": "150% boost to Atk, 100% boost to max HP, 150% boost to Spark damage, Spark damage boosts BB gauge & 15% boost to EXP gained",
+    "pt": "150% boost to Atk, 100% boost to max HP, 150% boost to Spark damage, Spark damage boosts BB gauge & 15% boost to EXP gained",
+    "th": "150% boost to Atk, 100% boost to max HP, 150% boost to Spark damage, Spark damage boosts BB gauge & 15% boost to EXP gained",
+    "vi": "150% boost to Atk, 100% boost to max HP, 150% boost to Spark damage, Spark damage boosts BB gauge & 15% boost to EXP gained"
+  },
+  "MST_LEADERSKILLS_810617_NAME": {
+    "en": "Passion Spark",
+    "es": "Passion Spark",
+    "id": "Passion Spark",
+    "pt": "Passion Spark",
+    "th": "Passion Spark",
+    "vi": "Passion Spark"
+  },
+  "MST_LEADERSKILLS_810618_DESCRIPTION": {
+    "en": "200% boost to Atk, 130% boost to max HP, 180% boost to Spark damage, Spark damage considerably boosts BB gauge, 20% damage reduction for 1 turn when damage dealt exceeds certain amount & 25% boost to EXP gained",
+    "es": "200% boost to Atk, 130% boost to max HP, 180% boost to Spark damage, Spark damage considerably boosts BB gauge, 20% damage reduction for 1 turn when damage dealt exceeds certain amount & 25% boost to EXP gained",
+    "id": "200% boost to Atk, 130% boost to max HP, 180% boost to Spark damage, Spark damage considerably boosts BB gauge, 20% damage reduction for 1 turn when damage dealt exceeds certain amount & 25% boost to EXP gained",
+    "pt": "200% boost to Atk, 130% boost to max HP, 180% boost to Spark damage, Spark damage considerably boosts BB gauge, 20% damage reduction for 1 turn when damage dealt exceeds certain amount & 25% boost to EXP gained",
+    "th": "200% boost to Atk, 130% boost to max HP, 180% boost to Spark damage, Spark damage considerably boosts BB gauge, 20% damage reduction for 1 turn when damage dealt exceeds certain amount & 25% boost to EXP gained",
+    "vi": "200% boost to Atk, 130% boost to max HP, 180% boost to Spark damage, Spark damage considerably boosts BB gauge, 20% damage reduction for 1 turn when damage dealt exceeds certain amount & 25% boost to EXP gained"
+  },
+  "MST_LEADERSKILLS_810618_NAME": {
+    "en": "Master Pyrotechnique",
+    "es": "Master Pyrotechnique",
+    "id": "Master Pyrotechnique",
+    "pt": "Master Pyrotechnique",
+    "th": "Master Pyrotechnique",
+    "vi": "Master Pyrotechnique"
+  },
   "MST_LEADERSKILLS_810627_DESCRIPTION": {
     "en": "80% boost to all parameters, enormously boosts BB Atk, hugely boosts BB gauge each turn & probable damage reduction to 1",
     "es": "80% boost to all parameters, enormously boosts BB Atk, hugely boosts BB gauge each turn & probable damage reduction to 1",
@@ -4310,6 +4438,22 @@
     "pt": "Martial Flourish",
     "th": "Martial Flourish",
     "vi": "Martial Flourish"
+  },
+  "MST_LEADERSKILLS_830318_DESCRIPTION": {
+    "en": "100% boost to Atk, max HP, hugely boosts Spark damage, greatly boosts Spark damage for 2 turns when Sparks exceed a certain amount, hugely boosts damage against status afflicted foes & adds probable random status ailment infliction to attack",
+    "es": "100% boost to Atk, max HP, hugely boosts Spark damage, greatly boosts Spark damage for 2 turns when Sparks exceed a certain amount, hugely boosts damage against status afflicted foes & adds probable random status ailment infliction to attack",
+    "id": "100% boost to Atk, max HP, hugely boosts Spark damage, greatly boosts Spark damage for 2 turns when Sparks exceed a certain amount, hugely boosts damage against status afflicted foes & adds probable random status ailment infliction to attack",
+    "pt": "100% boost to Atk, max HP, hugely boosts Spark damage, greatly boosts Spark damage for 2 turns when Sparks exceed a certain amount, hugely boosts damage against status afflicted foes & adds probable random status ailment infliction to attack",
+    "th": "100% boost to Atk, max HP, hugely boosts Spark damage, greatly boosts Spark damage for 2 turns when Sparks exceed a certain amount, hugely boosts damage against status afflicted foes & adds probable random status ailment infliction to attack",
+    "vi": "100% boost to Atk, max HP, hugely boosts Spark damage, greatly boosts Spark damage for 2 turns when Sparks exceed a certain amount, hugely boosts damage against status afflicted foes & adds probable random status ailment infliction to attack"
+  },
+  "MST_LEADERSKILLS_830318_NAME": {
+    "en": "Chieftain's Resolve",
+    "es": "Chieftain's Resolve",
+    "id": "Chieftain's Resolve",
+    "pt": "Chieftain's Resolve",
+    "th": "Chieftain's Resolve",
+    "vi": "Chieftain's Resolve"
   },
   "MST_LEADERSKILLS_830328_DESCRIPTION": {
     "en": "150% boost to Atk, 80% boost to max HP, greatly boosts Atk for 2 turns when damage dealt has exceeded certain amount, greatly boosts BB Atk, hugely boosts Earth, Dark elemental damage & adds probable Def ignoring effect",
@@ -87694,93 +87838,5 @@
     "pt": "GS-1000",
     "th": "จีเอส-1000",
     "vi": "GS-1000"
-  },
-  "MST_MONSTERS_54816_NAME": {
-    "en": "GS-1000",
-    "es": "GS-1000",
-    "id": "GS-1000",
-    "pt": "GS-1000",
-    "th": "GS-1000",
-    "vi": "GS-1000"
-  },
-  "MST_MONSTERS_54817_NAME": {
-    "en": "GS-1000",
-    "es": "GS-1000",
-    "id": "GS-1000",
-    "pt": "GS-1000",
-    "th": "GS-1000",
-    "vi": "GS-1000"
-  },
-  "MST_MONSTERS_54818_NAME": {
-    "en": "GS-1000",
-    "es": "GS-1000",
-    "id": "GS-1000",
-    "pt": "GS-1000",
-    "th": "GS-1000",
-    "vi": "GS-1000"
-  },
-  "MST_MONSTERS_54850_NAME": {
-    "en": "Golden God",
-    "es": "Dios dorado",
-    "id": "Dewa Emas",
-    "pt": "Deus Dourado",
-    "th": "โกลเด้นก็อด",
-    "vi": "Kim Thần"
-  },
-  "MST_MONSTERS_54851_NAME": {
-    "en": "Golden God",
-    "es": "Dios dorado",
-    "id": "Dewa Emas",
-    "pt": "Deus Dourado",
-    "th": "โกลเด้นก็อด",
-    "vi": "Kim Thần"
-  },
-  "MST_MONSTERS_54852_NAME": {
-    "en": "Selfish God",
-    "es": "Dios egoísta",
-    "id": "Dewa Egois",
-    "pt": "Deus Egoísta",
-    "th": "เซลฟิช ก็อด",
-    "vi": "Thần ích kỷ"
-  },
-  "MST_MONSTERS_54853_NAME": {
-    "en": "Golden God",
-    "es": "Golden God",
-    "id": "Dewa Emas",
-    "pt": "Golden God",
-    "th": "โกลเด้น ก็อด",
-    "vi": "Golden God"
-  },
-  "MST_MONSTERS_54900_NAME": {
-    "en": "Deemo and the Girl",
-    "es": "Deemo y la niña",
-    "id": "Deemo dan Gadis",
-    "pt": "Deemo e a Garota",
-    "th": "ดีโมแอนด์เดอะเกิร์ล",
-    "vi": "Deemo và cô gái"
-  },
-  "MST_MONSTERS_54901_NAME": {
-    "en": "Deemo and the Girl",
-    "es": "Deemo y la niña",
-    "id": "Deemo dan Gadis",
-    "pt": "Deemo e a Garota",
-    "th": "ดีโมแอนด์เดอะเกิร์ล",
-    "vi": "Deemo và cô gái"
-  },
-  "MST_MONSTERS_54950_NAME": {
-    "en": "Deemo and the Girl",
-    "es": "Deemo y la niña",
-    "id": "Deemo dan Gadis",
-    "pt": "Deemo e a Garota",
-    "th": "ดีโมแอนด์เดอะเกิร์ล",
-    "vi": "Deemo và cô gái"
-  },
-  "MST_MONSTERS_54951_NAME": {
-    "en": "Deemo and the Girl",
-    "es": "Deemo y la niña",
-    "id": "Deemo dan Gadis",
-    "pt": "Deemo e a Garota",
-    "th": "ดีโมแอนด์เดอะเกิร์ล",
-    "vi": "Deemo và cô gái"
   }
 }
