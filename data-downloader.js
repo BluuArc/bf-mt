@@ -1,16 +1,9 @@
 const fs = require('fs');
 const axios = require('axios');
-const winston = require('winston');
 const GitHubScraper = require('./gh-scraper');
+const CliLogger = require('./cli-logger');
 
-const logger = winston.createLogger({
-  level: 'debug',
-  transports: [
-    new winston.transports.Console({
-      format: winston.format.simple(),
-    }),
-  ],
-});
+const logger = new CliLogger('DOWNLOADER');
 
 const outputFolder = 'public/static/bf-data';
 
@@ -39,7 +32,7 @@ const handlers = {
           .map(f => getGitData(f, server).date)
           .reduce((acc, val) => Math.max(acc, new Date(val)), new Date('Jan 01 1969'));
         updateData.units[server] = new Date(fileDate).toISOString();
-      } catch (err) { logger.error('error setting git data', err); }
+      } catch (err) { logger.error('error setting git data', err).errDone().errDone(); }
     },
     async download (server = 'gl') {
       const data = {
@@ -75,7 +68,7 @@ const handlers = {
         data[name].data = r.data;
       });
 
-      logger.debug('info', Object.keys(data.info.data));
+      logger.debug('info', Object.keys(data.info.data).length).done();
 
       const [info, evo_list, feskills] = [data.info.data, data.evo_list.data, data.feskills.data];
       return { info, evo_list, feskills };
@@ -89,10 +82,10 @@ const handlers = {
           nextUnit = info[entry.evo.id.toString()];
 
         if (!curUnit) {
-          logger.warn(`Can't add evo data to current unit ${id} as entry is missing`);
+          logger.warn(`Can't add evo data to current unit ${id} as entry is missing`).done();
           return;
         } else if (!nextUnit) {
-          logger.warn(`Can't add evo data to next unit ${entry.evo.id} as entry is missing`);
+          logger.warn(`Can't add evo data to next unit ${entry.evo.id} as entry is missing`).done();
           return;
         }
 
@@ -106,7 +99,7 @@ const handlers = {
         const entry = feskills[id];
         const unit = info[id];
         if (!unit) {
-          logger.warn(`Can't add SP data to unit ${id} as entry is missing`);
+          logger.warn(`Can't add SP data to unit ${id} as entry is missing`).done();
           return;
         }
         unit.feskills = entry.skills;
@@ -142,7 +135,7 @@ const handlers = {
         logger.debug(`fileData ${element}`, Object.keys(fileData).length);
         const filename = `units-${server}-${index+1}.json`;
         fs.writeFileSync(`${outputFolder}/${filename}`, JSON.stringify(fileData, null, 2), 'utf8');
-        logger.info(`${server}: saved ${filename}`);
+        logger.info(`${server}: saved ${filename}`).done();
       });
       return info;
     },
@@ -156,7 +149,7 @@ const handlers = {
       try {
         const fileDate = getGitData('items.json', server).date;
         updateData.items[server] = new Date(fileDate).toISOString();
-      } catch (err) { logger.error('error setting git data', err); }
+      } catch (err) { logger.error('error setting git data', err).errDone(); }
     },
     async download (server = 'gl') {
       const itemData = {};
@@ -174,7 +167,7 @@ const handlers = {
             itemData[key] = data[key];
           });
       });
-      logger.debug('itemData', Object.keys(itemData));
+      logger.debug('itemData', Object.keys(itemData).length).done();
       return itemData;
     },
     process (server, itemData = {}, unitData = {}, missions = {}, dictionary = {}) {
@@ -184,7 +177,7 @@ const handlers = {
           if (item.recipe) {
             for (const mat of item.recipe.materials) {
               if (!itemData[mat.id]) {
-                logger.warn(`no entry found for item ${mat.id} in recipe of ${item.id}`);
+                logger.warn(`no entry found for item ${mat.id} in recipe of ${item.id}`).done();
                 mat.name = mat.id.toString();
               } else {
                 mat.name = itemData[mat.id].name;
@@ -227,7 +220,7 @@ const handlers = {
             item.associated_units.push(unitId);
           }
         } else {
-          logger.warn(`Can't add unit ${unitId} because item ${itemId} is not found`);
+          logger.warn(`Can't add unit ${unitId} because item ${itemId} is not found`).done();
         }
       };
       logger.info(`${server}: cross referencing unit data for usage`);
@@ -289,7 +282,7 @@ const handlers = {
         logger.debug(`fileData ${i}`, Object.keys(fileData).length);
         const filename = `items-${server}-${i}.json`;
         fs.writeFileSync(`${outputFolder}/${filename}`, JSON.stringify(fileData, null, 2), 'utf8');
-        logger.info(`${server}: saved ${filename}`);
+        logger.info(`${server}: saved ${filename}`).done();
       }
 
       return itemData;
@@ -309,7 +302,7 @@ const handlers = {
           fileDate = folderData[fileName] ? Math.max(fileDate, new Date(folderData[fileName].date)) : fileDate;
         }
         updateData.bursts[server] = new Date(fileDate).toISOString();
-      } catch (err) { logger.error('error setting git data', err); }
+      } catch (err) { logger.error('error setting git data', err).errDone(); }
     },
     async download(server = 'gl') {
       const bbData = {};
@@ -333,7 +326,7 @@ const handlers = {
             bbData[key] = data[key];
           });
       });
-      logger.debug('bbData', Object.keys(bbData));
+      logger.debug('bbData', Object.keys(bbData).length).done();
       return bbData;
     },
     process (server, bbData = {}, unitData = {}) {
@@ -350,7 +343,7 @@ const handlers = {
                 }
                 bbData[burstId].associated_units.push(unit.id.toString());
               } else {
-                logger.warn(`No burst ID ${burstId} found in data from unit ${type} ${unit.id} (${unit.name})`);
+                logger.warn(`No burst ID ${burstId} found in data from unit ${type} ${unit.id} (${unit.name})`).done();
               }
             }
           });
@@ -369,7 +362,7 @@ const handlers = {
         logger.debug(`fileData ${i}`, Object.keys(fileData).length);
         const filename = `bbs-${server}-${i}.json`;
         fs.writeFileSync(`${outputFolder}/${filename}`, JSON.stringify(fileData, null, 2), 'utf8');
-        logger.info(`${server}: saved ${filename}`);
+        logger.info(`${server}: saved ${filename}`).done();
       }
 
       return bbData;
@@ -384,7 +377,7 @@ const handlers = {
       try {
         const fileDate = getGitData('es.json', server).date;
         updateData.extraSkills[server] = new Date(fileDate).toISOString();
-      } catch (err) { logger.error('error setting git data', err); }
+      } catch (err) { logger.error('error setting git data', err).errDone(); }
     },
     async download(server = 'gl') {
       const esData = {};
@@ -402,7 +395,7 @@ const handlers = {
             esData[key] = data[key];
           });
       });
-      logger.debug('esData', Object.keys(esData));
+      logger.debug('esData', Object.keys(esData).length).done();
       return esData;
     },
     process (server, esData = {}, unitData = {}) {
@@ -417,14 +410,14 @@ const handlers = {
               }
               esData[esId].associated_units.push(unit.id.toString());
             } else {
-              logger.warn(`No ES ID ${esId} found in data from unit ${unit.id} (${unit.name})`);
+              logger.warn(`No ES ID ${esId} found in data from unit ${unit.id} (${unit.name})`).done();
             }
           }
         });
       logger.info(`${server}: saving files`);
       const filename = `es-${server}.json`;
       fs.writeFileSync(`${outputFolder}/${filename}`, JSON.stringify(esData, null, 2), 'utf8');
-      logger.info(`${server}: saved ${filename}`);
+      logger.info(`${server}: saved ${filename}`).done();
       return esData;
     },
     load(server = 'gl') {
@@ -437,7 +430,7 @@ const handlers = {
       try {
         const fileDate = getGitData('ls.json', server).date;
         updateData.leaderSkills[server] = new Date(fileDate).toISOString();
-      } catch (err) { logger.error('error setting git data', err); }
+      } catch (err) { logger.error('error setting git data', err).errDone(); }
     },
     async download(server = 'gl') {
       const lsData = {};
@@ -455,7 +448,7 @@ const handlers = {
             lsData[key] = data[key];
           });
       });
-      logger.debug('lsData', Object.keys(lsData));
+      logger.debug('lsData', Object.keys(lsData).length).done();
       return lsData;
     },
     process (server, lsData = {}, unitData = {}) {
@@ -470,14 +463,14 @@ const handlers = {
               }
               lsData[lsId].associated_units.push(unit.id.toString());
             } else {
-              logger.warn(`No LS ID ${lsId} found in data from unit ${unit.id} (${unit.name})`);
+              logger.warn(`No LS ID ${lsId} found in data from unit ${unit.id} (${unit.name})`).done();
             }
           }
         });
       logger.info(`${server}: saving files`);
       const filename = `ls-${server}.json`;
       fs.writeFileSync(`${outputFolder}/${filename}`, JSON.stringify(lsData, null, 2), 'utf8');
-      logger.info(`${server}: saved ${filename}`);
+      logger.info(`${server}: saved ${filename}`).done();
       return lsData;
     },
     load(server = 'gl') {
@@ -490,7 +483,7 @@ const handlers = {
       try {
         const fileDate = getGitData('missions.json', server).date;
         updateData.missions[server] = new Date(fileDate).toISOString();
-      } catch (err) { logger.error('error setting git data', err); }
+      } catch (err) { logger.error('error setting git data', err).errDone(); }
     },
     async download(server = 'gl') {
       const missionData = {};
@@ -508,7 +501,7 @@ const handlers = {
             missionData[key] = data[key];
           });
       });
-      logger.debug('missionData', Object.keys(missionData));
+      logger.debug('missionData', Object.keys(missionData).length).done();
       return missionData;
     },
     process(server, missionData = {}, dictionaryData = {}) {
@@ -532,7 +525,7 @@ const handlers = {
       logger.info(`${server}: saving files`);
       const filename = `missions-${server}.json`;
       fs.writeFileSync(`${outputFolder}/${filename}`, JSON.stringify(missionData, null, 2), 'utf8');
-      logger.info(`${server}: saved ${filename}`);
+      logger.info(`${server}: saved ${filename}`).done();
       return missionData;
     },
     load(server = 'gl') {
@@ -545,11 +538,11 @@ const handlers = {
       try {
         let fileInfo = ghData['dictionary.json'];
         if (server !== 'gl') {
-          logger.warn(`${server}: using GL dictionary data`);
+          logger.warn(`${server}: using GL dictionary data`).done();
           // fileInfo = ghData[server].contents['dictionary.json'];
         }
         updateData.dictionary[server] = fileInfo.date;
-      } catch (err) { logger.error('error setting git data', err); }
+      } catch (err) { logger.error('error setting git data', err.errDone()); }
     },
     async download(server = 'gl') {
       logger.info(`${server}: getting files`);
@@ -568,7 +561,7 @@ const handlers = {
             dictionaryData[key] = data[key];
           });
       });
-      logger.debug('dictionaryData', Object.keys(dictionaryData).length);
+      logger.debug('dictionaryData', Object.keys(dictionaryData).length).done();
       return dictionaryData;
     },
     process (server, dictionaryData = {}) {
@@ -589,10 +582,10 @@ const handlers = {
         logger.debug(`keys added so far`, keysAdded);
         const filename = `dictionary-${server}-${i}.json`;
         fs.writeFileSync(`${outputFolder}/${filename}`, JSON.stringify(fileData, null, 2), 'utf8');
-        logger.info(`${server}: saved ${filename}`);
+        logger.info(`${server}: saved ${filename}`).done();
         currentIndex += maxLength;
       }
-      logger.debug(`${server}: added all keys`, keysAdded === Object.keys(dictionaryData).length);
+      logger.debug(`${server}: added all keys`, keysAdded === Object.keys(dictionaryData).length).done();
 
       return dictionaryData;
     },
@@ -606,7 +599,7 @@ function initializeTimeData () {
   try {
     return JSON.parse(fs.readFileSync(`${outputFolder}/update-stats.json`));
   } catch (err) {
-    logger.error('error loading update-stats.json', err);
+    logger.error('error loading update-stats.json', err).errDone();
     logger.info('creating new time data instance');
     return {
       units: {},
@@ -629,7 +622,7 @@ function getGitData (file, server = 'gl') {
 }
 
 function loadData (type = 'units', server = 'gl') {
-  console.log(`loading local files for ${type} ${server}`);
+  logger.log(`loading local files for ${type} ${server}`);
   const result = {};
   if (rangeData[type]) {
     const [min, max] = rangeData[type];
@@ -649,7 +642,7 @@ function loadData (type = 'units', server = 'gl') {
       result[entryKey] = fileData[entryKey];
     });
   }
-  console.log(`loaded local files for ${type} ${server}`, Object.keys(result).length);
+  logger.log(`loaded local files for ${type} ${server}`, Object.keys(result).length).done();
   return result;
 }
 
@@ -680,7 +673,7 @@ function downloadMultipleFiles(urlArr = [], numConcurrent = 1) {
         localPromises.push(
           axios.get(url)
             .then(response => {
-              logger.debug(`got ${filename}; ${--count} remaining`);
+              logger.debug(`got ${filename}; ${--count} remaining`).done();
               result.push({
                 url: filename, // get file name
                 data: response.data,
@@ -840,7 +833,7 @@ function getUnitDictionaryDataForServer(server = 'gl', dictionaryData = {}, unit
   logger.info(`${server}: saving files`);
   const filename = `unit-dictionary-${server}.json`;
   fs.writeFileSync(`${outputFolder}/${filename}`, JSON.stringify(result, null, 2), 'utf8');
-  logger.info(`${server}: saved ${filename}`);
+  logger.info(`${server}: saved ${filename}`).done();
   return result;
 }
 
@@ -861,7 +854,7 @@ function getItemDictionaryDataForServer(server = 'gl', dictionaryData = {}, item
   logger.info(`${server}: saving files`);
   const filename = `item-dictionary-${server}.json`;
   fs.writeFileSync(`${outputFolder}/${filename}`, JSON.stringify(result, null, 2), 'utf8');
-  logger.info(`${server}: saved ${filename}`);
+  logger.info(`${server}: saved ${filename}`).done();
   return result;
 }
 
@@ -872,6 +865,7 @@ async function getData(servers = ['gl', 'eu', 'jp']) {
   if (config.getStats) {
     await initializeGHData();
   }
+  logger.done();
   // TODO: implement use of dictionary data
   for (const s of servers) {
     const dictionaryData = await getDictionaryForServer(s);
@@ -890,7 +884,7 @@ async function getData(servers = ['gl', 'eu', 'jp']) {
   logger.info(`saving update statistics file`);
   const filename = `update-stats.json`;
   fs.writeFileSync(`${outputFolder}/${filename}`, JSON.stringify(updateData, null, 2), 'utf8');
-  logger.info(`saved ${filename}`);
+  logger.info(`saved ${filename}`).done();
   return;
 }
 

@@ -1,4 +1,7 @@
 const puppeteer = require('puppeteer');
+const CliLogger = require('./cli-logger');
+
+const logger = new CliLogger('GH-SCRAPER');
 
 const instances = {
   browser: null,
@@ -28,7 +31,7 @@ async function getPageInstance(url) {
 
 class GitHubScraper {
   async getFileTree (url) {
-    console.log('fetching filetree for', url);
+    logger.log('fetching filetree for', url);
     const page = await getPageInstance(url);
     const fileTree = {};
     const pageResult = await page.evaluate(() => {
@@ -59,6 +62,7 @@ class GitHubScraper {
             })).filter(elem => !!elem.name)
             .some(elem => !elem.date);
           if (hasUnresolvedDates) {
+            // eslint-disable-next-line no-console
             console.log('Waiting for dates to load');
             requestAnimationFrame(() => waitForDatesToLoad(callback));
           } else {
@@ -67,9 +71,9 @@ class GitHubScraper {
         }
       });
     });
-    // console.log(pageResult);
+    // logger.log(pageResult);
     for (const entry of pageResult) {
-      // console.log(entry);
+      // logger.log(entry);
       const { name, date, link, isFolder } = entry;
       fileTree[name] = { name, date, link, isFolder };
       if (isFolder) {
@@ -77,7 +81,7 @@ class GitHubScraper {
         fileTree[name].contents = tempResult;
       }
     }
-    console.log('fetched filetree for', url);
+    logger.log('fetched filetree for', url).done();
     return fileTree;
   }
 
