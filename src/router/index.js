@@ -5,6 +5,7 @@ import NotFound from '@/views/NotFound.vue';
 import Home from '@/views/Home.vue';
 import Settings from '@/views/Settings.vue';
 import News from '@/views/News.vue';
+import Debug from '@/views/Debug.vue';
 
 import multidexRoutes from './multidex-routes';
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/news',
       name: 'News & Events',
       component: News,
+    },
+    {
+      path: '/debug',
+      name: 'Debug',
+      component: Debug,
     },
     ...multidexRoutes,
     {
