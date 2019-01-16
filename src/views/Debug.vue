@@ -15,7 +15,9 @@
 </template>
 
 <script>
-import client from '@/modules/BfmtDatabase/client';
+import { makeMultidexTableInstance } from '@/modules/BfmtDatabase/client';
+
+const client = makeMultidexTableInstance('units');
 export default {
   data () {
     return {
@@ -28,13 +30,13 @@ export default {
   },
   methods: {
     async callClient () {
+
       // const result = await client.request('ping', { from: 'debug page' });
-      const result = await client.getTablesWithEntries(['units', 'items'], 'gl');
+      const result = await client.getDbStats('jp');
       // const result = await client.getDbStats({
-      //   table: 'units',
-      //   query: { server: 'gl' },
-      //   field: 'data',
-      //   id: 10017,
+      //   server: 'gl',
+      //   ids: [10017, 20017],
+      //   extractedFields: ['name', 'rarity'],
       // });
       // eslint-disable-next-line no-console
       console.warn({ result });

@@ -42,9 +42,77 @@ export default class ClientApi extends DbInterface {
   getDbStats (table = '', query) {
     return this._worker.request('getDbStats', { table, query });
   }
+}
 
-  // TODO: refactor into ClientApiMultidex?
+export class ClientTableApi extends ClientApi {
+  constructor (exchangeWorker = new Exchange(), tableName = '') {
+    super(exchangeWorker);
+    this._table = tableName;
+  }
+
+  put (entry) {
+    return super.put(this._table, entry);
+  }
+
+  get (query) {
+    return super.get(this._table, query);
+  }
+
+  getFieldInEntry (query, field = '') {
+    return super.getFieldInEntry(this._table, query, field);
+  }
+
+  getFieldKeys (query, field = '') {
+    return super.getFieldKeys(this._table, query, field);
+  }
+
+  getByIds ({ query, field, ids = [], extractedFields = [] }) {
+    return super.getByIds({
+      table: this._table,
+      query,
+      field,
+      ids,
+      extractedFields,
+    });
+  }
+
+  getById ({ query, field, id }) {
+    return super.getById({
+      table: this._table,
+      query,
+      field,
+      id,
+    });
+  }
+
+  getDbStats (query) {
+    return super.getDbStats(this._table, query);
+  }
+}
+
+export class ClientMultidexApi extends ClientTableApi {
+  getByIds ({ server, ids = [], extractedFields = [] }) {
+    return super.getByIds({
+      query: { server },
+      field: 'data',
+      ids,
+      extractedFields,
+    });
+  }
+
+  getById ({ server, id }) {
+    return super.getById({
+      query: { server },
+      field: 'data',
+      id,
+    });
+  }
+
   getTablesWithEntries (tables = [], server = 'gl') {
     return this._worker.request('getTablesWithEntries', { tables, server });
+  }
+
+  getDbStats (server) {
+    return super.getDbStats({ server });
   }
 }

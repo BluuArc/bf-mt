@@ -1,7 +1,7 @@
 export default class DbInterface {
   /* eslint-disable no-unused-vars */
   static _defer (name = 'name of method to be deferred') {
-    return Promise.resolve().then(() => new Error(`Must implement ${name}() in subclass`));
+    return Promise.reject(new Error(`Must implement ${name}() in subclass`));
   }
 
   put ({ table = '', entry } = {}) {
