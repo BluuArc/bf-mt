@@ -12,11 +12,11 @@ export default class DbInterface {
     return DbInterface._defer('get');
   }
 
-  getFieldInEntry ({ table = '', query, fieldName = '' } = {}) {
+  getFieldInEntry ({ table = '', query, field = '' } = {}) {
     return DbInterface._defer('getFieldInEntry');
   }
 
-  getFieldKeys ({ table = '', query, fieldName = '' } = {}) {
+  getFieldKeys ({ table = '', query, field = '' } = {}) {
     return DbInterface._defer('getFieldKeys');
   }
 
@@ -29,7 +29,13 @@ export default class DbInterface {
   }
 
   getDbStats ({ table, query } = {}) {
-    return DbInterface._defer('getById');
+    return DbInterface._defer('getDbStats');
+  }
+
+  // useful for checking if data is loaded in a given set of tables
+  // given an array of table names, return an array of tables that contain entries
+  getTablesWithEntries ({ tables = [], query }) {
+    return DbInterface._defer('getTablesWithEntries');
   }
   /* eslint-enable no-unused-vars */
 }

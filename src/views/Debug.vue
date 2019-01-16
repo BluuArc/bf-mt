@@ -21,7 +21,14 @@ export default {
   methods: {
     async callClient () {
       // const result = await client.request('ping', { from: 'debug page' });
-      const result = await client.get('units', { server: 'gl' });
+      // const result = await client.getFieldKeys('units', { server: 'gl' }, 'data');
+      const result = await client.getByIds({
+        table: 'units',
+        query: { server: 'gl' },
+        field: 'data',
+        ids: [10011, 10017],
+        extractedFields: ['name', 'bb', 'feskills'],
+      });
       // eslint-disable-next-line no-console
       console.warn({ result });
     },
