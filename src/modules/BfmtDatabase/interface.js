@@ -34,7 +34,7 @@ export default class DbInterface {
 
   // useful for checking if data is loaded in a given set of tables
   // given an array of table names, return an array of tables that contain entries
-  getTablesWithEntries ({ tables = [], query }) {
+  getTablesWithEntries ({ tables = [], query } = {}) {
     return DbInterface._defer('getTablesWithEntries');
   }
   /* eslint-enable no-unused-vars */

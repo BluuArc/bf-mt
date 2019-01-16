@@ -79,4 +79,21 @@ export default class WorkerDb extends DbInterface {
     }
     return undefined;
   }
+
+  // Multidex specific
+  async getTablesWithEntries ({ tables = [], server }) {
+    const getCountMapping = (table) => this.getDbStats({
+        table,
+        query: { server },
+      })
+      .then(r => ({
+        table,
+        count: (r && r.keyLength) || 0,
+      }));
+    const countMapping = await Promise.all(tables.map(getCountMapping));
+    logger.debug(countMapping);
+    return countMapping
+      .filter(({ count }) => count > 0)
+      .map(({ table }) => table);
+  }
 }

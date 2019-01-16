@@ -8,12 +8,20 @@
         Trigger Debug Function
       </v-btn>
     </v-layout>
+    <v-layout>
+      {{ result || 'undefined' }}
+    </v-layout>
   </v-container>
 </template>
 
 <script>
 import client from '@/modules/BfmtDatabase/client';
 export default {
+  data () {
+    return {
+      result: undefined,
+    };
+  },
   async mounted () {
     // eslint-disable-next-line no-console
     console.warn({ client });
@@ -21,7 +29,7 @@ export default {
   methods: {
     async callClient () {
       // const result = await client.request('ping', { from: 'debug page' });
-      const result = await client.getDbStats('units', { server: 'jp' });
+      const result = await client.getTablesWithEntries(['units', 'items'], 'gl');
       // const result = await client.getDbStats({
       //   table: 'units',
       //   query: { server: 'gl' },
@@ -30,6 +38,7 @@ export default {
       // });
       // eslint-disable-next-line no-console
       console.warn({ result });
+      this.result = result;
     },
   },
 };

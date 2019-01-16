@@ -42,4 +42,9 @@ export default class ClientApi extends DbInterface {
   getDbStats (table = '', query) {
     return this._worker.request('getDbStats', { table, query });
   }
+
+  // TODO: refactor into ClientApiMultidex?
+  getTablesWithEntries (tables = [], server = 'gl') {
+    return this._worker.request('getTablesWithEntries', { tables, server });
+  }
 }
