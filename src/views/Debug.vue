@@ -20,7 +20,8 @@ export default {
   },
   methods: {
     async callClient () {
-      const result = await client.request('ping', { from: 'debug page' });
+      // const result = await client.request('ping', { from: 'debug page' });
+      const result = await client.get('units', { server: 'gl' });
       // eslint-disable-next-line no-console
       console.warn({ result });
     },
