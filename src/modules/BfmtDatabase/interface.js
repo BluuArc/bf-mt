@@ -25,7 +25,7 @@ export default class DbInterface {
   }
 
   getById ({ table, query, field, id } = {}) {
-    return this.getById({ table, query, field, ids: [id] });
+    return DbInterface._defer('getById');
   }
 
   getDbStats ({ table, query } = {}) {

@@ -13,7 +13,13 @@ export default class WorkerDb extends DbInterface {
   }
 
   get ({ table = '', query }) {
-    return this._db[table].where(query).toArray();
+    return Promise.resolve()
+      .then(() => {
+        return this._db[table].where(query).toArray();
+      }).catch(err => {
+        logger.error(`GET error`, { table, query }, err);
+        return [];
+      });
   }
 
   async getFieldInEntry ({ table = '', query, field = '' }) {
@@ -26,7 +32,7 @@ export default class WorkerDb extends DbInterface {
     return results.length === 0 ? [] : Object.keys(results[0][field]);
   }
 
-  async getByIds ({ table, query, field, ids = [], extractedFields = [] }) {
+  async getByIds ({ table = '', query, field, ids = [], extractedFields = [] }) {
     const results = await this.get({ table, query });
     const returnedResult = {};
     if (results[0] && results[0][field]) {
@@ -50,5 +56,27 @@ export default class WorkerDb extends DbInterface {
     }
     logger.debug(`input[${ids.length} keys]; output[${Object.keys(returnedResult).length} keys]`);
     return returnedResult;
+  }
+
+  async getById ({ table = '', query, field, id }) {
+    const result = await this.getByIds({ table, query, field, ids: [id] });
+    return result[id];
+  }
+
+  async getDbStats ({ table = '', query }) {
+    const results = await this.get({ table, query });
+    if (results.length > 0) {
+      try {
+        const { updateTime, cacheTime } = results[0];
+        return {
+          keyLength: Object.keys(results[0].data).length,
+          updateTime,
+          cacheTime,
+        };
+      } catch(err) {
+        logger.error(err);
+      }
+    }
+    return undefined;
   }
 }

@@ -34,4 +34,12 @@ export default class ClientApi extends DbInterface {
   getByIds ({ table = '', query, field, ids = [], extractedFields = [] }) {
     return this._worker.request('getByIds', { table, query, field, ids, extractedFields });
   }
+
+  getById ({ table = '', query, field, id }) {
+    return this._worker.request('getById', { table, query, field, id });
+  }
+
+  getDbStats (table = '', query) {
+    return this._worker.request('getDbStats', { table, query });
+  }
 }
