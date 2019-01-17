@@ -1,4 +1,52 @@
 {
+  "MST_LEADERSKILLS_801026_NAME": {
+    "en": "Snowy Allure",
+    "es": "Encanto níveo",
+    "id": "Pikat Salju",
+    "pt": "Fascínio Nevado",
+    "th": "สโนววี่ อะเลียว",
+    "vi": "Sự cám dỗ của tuyết"
+  },
+  "MST_LEADERSKILLS_801027_DESCRIPTION": {
+    "en": "10% boost to critical hit rate and 25% boost to Atk of all Units",
+    "es": "+10% de asestar golpes críticos y +25% al ataque de las unidades",
+    "id": "Menambah 10% kesempatan pukulan ampuh dan 25% Serangan pada semua Unit",
+    "pt": "Bônus de 10% ao dano crítico e 25% mais de ataque de todas as unidades",
+    "th": "10% เพิ่มโอกาสเกิดคริติคอล และ 25% เพิ่มค่า โจมตี ให้กับยูนิตทั้งหมด",
+    "vi": "Tăng 10% cơ hội đánh trúng nguy hiểm và tăng 25% sức Tấn công của tất cả các Quái"
+  },
+  "MST_LEADERSKILLS_801027_NAME": {
+    "en": "Dark Zeal",
+    "es": "Fanatismo oscuro",
+    "id": "Semangat Gelap",
+    "pt": "Zelo sombrio",
+    "th": "ดาร์ค ซีล",
+    "vi": "Nhiệt huyết bóng tối"
+  },
+  "MST_LEADERSKILLS_801028_DESCRIPTION": {
+    "en": "15% boost to critical hit rate and 30% boost to Atk of all Units",
+    "es": "+15% de golpes críticos y +30% al ataque de las unidades",
+    "id": "Menambah 15% kesempatan pukulan ampuh dan 30% Serangan pada semua Unit",
+    "pt": "Bônus de 15% ao dano crítico e 30% mais de ataque de todas as unidades",
+    "th": "15% เพิ่มโอกาสเกิดคริติคอล และ 30% เพิ่มค่า โจมตี ให้กับยูนิตทั้งหมด",
+    "vi": "Tăng 15% cơ hội đánh trúng nguy hiểm và tăng 30% sức Tấn công của tất cả các Quái"
+  },
+  "MST_LEADERSKILLS_801028_NAME": {
+    "en": "Nether Source",
+    "es": "Fuente del inframundo",
+    "id": "Sumber Bawah Tanah",
+    "pt": "Fonte inferior",
+    "th": "เนเธอร์ ซอร์ส",
+    "vi": "Nguồn âm phủ"
+  },
+  "MST_LEADERSKILLS_801029_DESCRIPTION": {
+    "en": "Boosts Atk and Def relative to the amount of depleted HP",
+    "es": "Aumenta el ATQ y la DEF según la cantidad de PS perdidos",
+    "id": "Meningkatkan Serang dan Tahan relatif sesuai jumlah HP yang berkurang",
+    "pt": "Bônus de ATQ e DEF relativo ao HP tirado",
+    "th": "เพิ่มค่า โจมตี กับ ป้องกัน สัมพันธ์กับปริมาณ HP ที่ลดลงไป",
+    "vi": "Tăng sức Tấn công và Phòng thủ tương ứng với lượng Thể lực đã suy yếu"
+  },
   "MST_LEADERSKILLS_801029_NAME": {
     "en": "Dark Ardor",
     "es": "Pasión oscura",
@@ -5334,6 +5382,38 @@
     "pt": "Richest Son",
     "th": "Richest Son",
     "vi": "Richest Son"
+  },
+  "MST_LEADERSKILLS_840657_DESCRIPTION": {
+    "en": "100% boost to Atk, Def and 80% boost to max HP for Thunder types, 10% damage reduction from Water, Thunder types, enormously boosts BC efficacy & enormously boosts BB Atk",
+    "es": "100% boost to Atk, Def and 80% boost to max HP for Thunder types, 10% damage reduction from Water, Thunder types, enormously boosts BC efficacy & enormously boosts BB Atk",
+    "id": "100% boost to Atk, Def and 80% boost to max HP for Thunder types, 10% damage reduction from Water, Thunder types, enormously boosts BC efficacy & enormously boosts BB Atk",
+    "pt": "100% boost to Atk, Def and 80% boost to max HP for Thunder types, 10% damage reduction from Water, Thunder types, enormously boosts BC efficacy & enormously boosts BB Atk",
+    "th": "100% boost to Atk, Def and 80% boost to max HP for Thunder types, 10% damage reduction from Water, Thunder types, enormously boosts BC efficacy & enormously boosts BB Atk",
+    "vi": "100% boost to Atk, Def and 80% boost to max HP for Thunder types, 10% damage reduction from Water, Thunder types, enormously boosts BC efficacy & enormously boosts BB Atk"
+  },
+  "MST_LEADERSKILLS_840657_NAME": {
+    "en": "Profound Heart",
+    "es": "Profound Heart",
+    "id": "Profound Heart",
+    "pt": "Profound Heart",
+    "th": "Profound Heart",
+    "vi": "Profound Heart"
+  },
+  "MST_LEADERSKILLS_840658_DESCRIPTION": {
+    "en": "120% boost to Atk, Def and 100% boost to max HP for Thunder types, 20% damage reduction from Water, Thunder types, enormously boosts BC efficacy, enormously boosts BB Atk, 50% damage reduction from all element types for first 2 turns & enormously boosts ABP and CBP gain",
+    "es": "120% boost to Atk, Def and 100% boost to max HP for Thunder types, 20% damage reduction from Water, Thunder types, enormously boosts BC efficacy, enormously boosts BB Atk, 50% damage reduction from all element types for first 2 turns & enormously boosts ABP and CBP gain",
+    "id": "120% boost to Atk, Def and 100% boost to max HP for Thunder types, 20% damage reduction from Water, Thunder types, enormously boosts BC efficacy, enormously boosts BB Atk, 50% damage reduction from all element types for first 2 turns & enormously boosts ABP and CBP gain",
+    "pt": "120% boost to Atk, Def and 100% boost to max HP for Thunder types, 20% damage reduction from Water, Thunder types, enormously boosts BC efficacy, enormously boosts BB Atk, 50% damage reduction from all element types for first 2 turns & enormously boosts ABP and CBP gain",
+    "th": "120% boost to Atk, Def and 100% boost to max HP for Thunder types, 20% damage reduction from Water, Thunder types, enormously boosts BC efficacy, enormously boosts BB Atk, 50% damage reduction from all element types for first 2 turns & enormously boosts ABP and CBP gain",
+    "vi": "120% boost to Atk, Def and 100% boost to max HP for Thunder types, 20% damage reduction from Water, Thunder types, enormously boosts BC efficacy, enormously boosts BB Atk, 50% damage reduction from all element types for first 2 turns & enormously boosts ABP and CBP gain"
+  },
+  "MST_LEADERSKILLS_840658_NAME": {
+    "en": "Soul of the Clairvoyant",
+    "es": "Soul of the Clairvoyant",
+    "id": "Soul of the Clairvoyant",
+    "pt": "Soul of the Clairvoyant",
+    "th": "Soul of the Clairvoyant",
+    "vi": "Soul of the Clairvoyant"
   },
   "MST_LEADERSKILLS_850017_DESCRIPTION": {
     "en": "80% boost to Def, Rec, max HP, boosts Def, Rec relative to remaining HP, 10% damage reduction & restores HP each turn",
@@ -87795,46 +87875,6 @@
     "en": "GS-1000",
     "es": "GS-1000",
     "id": "GS-1000",
-    "pt": "GS-1000",
-    "th": "จีเอส-1000",
-    "vi": "GS-1000"
-  },
-  "MST_MONSTERS_54811_NAME": {
-    "en": "GS-1000",
-    "es": "GS-1000",
-    "id": "GS-1000",
-    "pt": "GS-1000",
-    "th": "จีเอส-1000",
-    "vi": "GS-1000"
-  },
-  "MST_MONSTERS_54812_NAME": {
-    "en": "GS-1000",
-    "es": "GS-1000",
-    "id": "GS-1000",
-    "pt": "GS-1000",
-    "th": "จีเอส-1000",
-    "vi": "GS-1000"
-  },
-  "MST_MONSTERS_54813_NAME": {
-    "en": "GS-1000",
-    "es": "GS-1000",
-    "id": "GS-1000",
-    "pt": "GS-1000",
-    "th": "จีเอส-1000",
-    "vi": "GS-1000"
-  },
-  "MST_MONSTERS_54814_NAME": {
-    "en": "GS-1000",
-    "es": "GS-1000",
-    "id": "GS-1000",
-    "pt": "GS-1000",
-    "th": "จีเอส-1000",
-    "vi": "GS-1000"
-  },
-  "MST_MONSTERS_54815_NAME": {
-    "en": "GS-1000",
-    "es": "GS-1000",
-    "id": "Legenda Langit Falma",
     "pt": "GS-1000",
     "th": "จีเอส-1000",
     "vi": "GS-1000"
