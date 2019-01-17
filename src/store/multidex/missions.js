@@ -33,6 +33,7 @@ export default {
     sortTypes: () => ['Mission ID', 'Alphabetical', 'Energy', 'Battle Count', 'Map', 'XP', 'XP/EN'],
     filterTypes: () => ['associatedUnits', 'associatedItems', 'gems', 'exclusives', 'continues', 'land', 'area', 'dungeon'],
     requiredModules: () => ['missions', 'units', 'items'],
+    miniDbFields: () => ['*'],
   },
   actions: {
     ...createActions(dbWorker, downloadWorker, logger, 'missions'),

@@ -41,6 +41,7 @@ export default {
     sortTypes: () => ['Item ID', 'Alphabetical', 'Rarity', 'Type', 'Sell Price'],
     filterTypes: () => ['rarity', 'itemTypes', 'sphereTypes', 'associatedUnits', 'craftables', 'usage', 'exclusives', 'procs', 'passives'],
     requiredModules: () => ['items', 'units', 'missions'],
+    miniDbFields: () => ['desc', 'id', 'name', 'rarity', 'thumbnail', 'type', 'raid', 'max_stack', 'sell_price', 'recipe', 'usage', 'associated_units', 'sphere type'],
   },
   actions: {
     ...createActions(dbWorker, downloadWorker, logger, 'items'),

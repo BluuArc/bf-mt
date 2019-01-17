@@ -32,6 +32,7 @@ export default {
     // filterTypes: () => ['associatedUnits', 'associatedItems', 'exclusives'],
     filterTypes: () => [],
     requiredModules: () => ['dictionary'/*, 'units', 'items'*/],
+    miniDbFields: () => ['*'],
   },
   actions: {
     ...createActions(dbWorker, downloadWorker, logger, 'dictionary'),

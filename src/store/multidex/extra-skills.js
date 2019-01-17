@@ -20,6 +20,7 @@ export default {
     sortTypes: () => ['Skill ID', 'Alphabetical', 'Rarity'],
     filterTypes: () => ['rarity', 'associatedUnits', 'exclusives', 'procs', 'passives'],
     requiredModules: () => ['extraSkills', 'units', 'items'],
+    miniDbFields: () => ['desc', 'id', 'name', 'associated_units', 'rarity'],
   },
   actions: {
     ...createActions(dbWorker, downloadWorker, logger, 'extraSkills'),

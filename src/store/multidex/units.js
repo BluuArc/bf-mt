@@ -36,6 +36,7 @@ export default {
     sortTypes: () => ['Unit ID', 'Guide ID', 'Alphabetical', 'Rarity', 'Element'],
     filterTypes: () => ['elements', 'rarity', 'unitKinds', 'genders', 'exclusives', 'procs', 'passives'],
     requiredModules: () => ['units', 'items', 'missions'],
+    miniDbFields: () => ['cost', 'element', 'gender', 'guide_id', 'id', 'name', 'rarity', 'next', 'prev', 'evo_mats', 'kind', 'evo_cost'],
   },
   actions: {
     ...createActions(dbWorker, downloadWorker, logger, 'units'),

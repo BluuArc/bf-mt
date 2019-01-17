@@ -20,6 +20,7 @@ export default {
     sortTypes: () => ['Skill ID', 'Alphabetical'],
     filterTypes: () => ['associatedUnits', 'exclusives', 'procs', 'passives'],
     requiredModules: () => ['leaderSkills', 'units'],
+    miniDbFields: () => ['desc', 'id', 'name', 'associated_units'],
   },
   actions: {
     ...createActions(dbWorker, downloadWorker, logger, 'leaderSkills'),

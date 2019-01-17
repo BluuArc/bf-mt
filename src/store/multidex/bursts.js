@@ -20,6 +20,7 @@ export default {
     sortTypes: () => ['Burst ID', 'Alphabetical'],
     filterTypes: () => ['associatedUnits', 'exclusives', 'procs'],
     requiredModules: () => ['bursts', 'units'],
+    miniDbFields: () => ['desc', 'id', 'name', 'associated_units'],
   },
   actions: {
     ...createActions(dbWorker, downloadWorker, logger, 'bursts'),

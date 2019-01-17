@@ -17,7 +17,7 @@
 <script>
 import { makeMultidexTableInstance } from '@/modules/BfmtDatabase/client';
 
-const client = makeMultidexTableInstance('units');
+const client = makeMultidexTableInstance('items');
 export default {
   data () {
     return {
@@ -36,8 +36,8 @@ export default {
       const result = await client.getFilteredDb({
         server: 'gl',
         // ids: [10017, 20017],
-        // extractedFields: ['name', 'rarity'],
-        extractedFields: [],
+        extractedFields: ['name', 'id', 'sphere type'],
+        // extractedFields: [],
       });
       // eslint-disable-next-line no-console
       console.warn({ result });

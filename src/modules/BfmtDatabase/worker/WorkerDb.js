@@ -116,11 +116,13 @@ export default class WorkerDb extends DbInterface {
         return db;
       } else {
         // return a DB containing the extracted fields for each ID
+        // grab everything if extractedFields === ['*']
+        const getEverything = extractedFields.length === 1 && extractedFields[0] === '*';
         return this.getByIds({
           table,
           query: { server },
           ids: keys,
-          extractedFields,
+          extractedFields: getEverything ? [] : extractedFields,
           field: 'data',
         });
       }
