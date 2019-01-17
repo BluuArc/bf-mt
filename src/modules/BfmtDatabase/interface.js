@@ -37,5 +37,9 @@ export default class DbInterface {
   getTablesWithEntries ({ tables = [], query } = {}) {
     return DbInterface._defer('getTablesWithEntries');
   }
+
+  getFilteredDb ({ table, filters, server, extractedFields } = {}) {
+    return DbInterface._defer('getFilteredDb');
+  }
   /* eslint-enable no-unused-vars */
 }

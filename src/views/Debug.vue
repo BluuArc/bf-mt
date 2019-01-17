@@ -32,12 +32,13 @@ export default {
     async callClient () {
 
       // const result = await client.request('ping', { from: 'debug page' });
-      const result = await client.getDbStats('jp');
-      // const result = await client.getDbStats({
-      //   server: 'gl',
-      //   ids: [10017, 20017],
-      //   extractedFields: ['name', 'rarity'],
-      // });
+      // const result = await client.getDbStats('jp');
+      const result = await client.getFilteredDb({
+        server: 'gl',
+        // ids: [10017, 20017],
+        // extractedFields: ['name', 'rarity'],
+        extractedFields: [],
+      });
       // eslint-disable-next-line no-console
       console.warn({ result });
       this.result = result;

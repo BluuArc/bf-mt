@@ -1,7 +1,9 @@
 import Dexie from 'dexie';
 import DbInterface from '../interface';
 import logger from './logger';
+import { multidexModuleInfo } from '@/modules/constants';
 
+const multidexModuleNames = multidexModuleInfo.map(({ name }) => name);
 export default class WorkerDb extends DbInterface {
   constructor (db = new Dexie()) {
     super();
@@ -95,5 +97,36 @@ export default class WorkerDb extends DbInterface {
     return countMapping
       .filter(({ count }) => count > 0)
       .map(({ table }) => table);
+  }
+
+  // eslint-disable-next-line no-unused-vars
+  async getFilteredDb ({ table = '', filters, server = 'gl', extractedFields }) {
+    const keysOnly = !Array.isArray(extractedFields);
+    if (multidexModuleNames.includes(table)) {
+      // TODO: replace with filter functions
+      const keys = await this.getFieldKeys({ table, query: { server }, field: 'data' });
+
+      if (keysOnly) {
+        // return only the keys
+        return keys;
+      } else if (extractedFields.length === 0) {
+        // return DB such that checking db[key] indicates presence of ID (faster than [].includes)
+        const db = {};
+        keys.forEach(key => db[key] = true);
+        return db;
+      } else {
+        // return a DB containing the extracted fields for each ID
+        return this.getByIds({
+          table,
+          query: { server },
+          ids: keys,
+          extractedFields,
+          field: 'data',
+        });
+      }
+    } else {
+      logger.error(`Table not found [${table}]`);
+      return keysOnly ? [] : {};
+    }
   }
 }

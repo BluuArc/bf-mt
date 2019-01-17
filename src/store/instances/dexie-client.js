@@ -1,6 +1,7 @@
 const PromiseWorker = require('promise-worker');
 const worker = new Worker('static/js/dexie-worker.js');
 const pw = new PromiseWorker(worker);
+// import defaultClient, { makeTableInstance, makeMultidexTableInstance } from '@/modules/BfmtDatabase/client';
 
 const wrapper = {
   worker: pw,
@@ -31,7 +32,7 @@ export function makeMultidexWorker (moduleName) {
   return {
     ...makeWorker(moduleName),
     getById: (server, id) => wrapper.getById(moduleName, { server }, 'data', id),
-    getMiniDb: (server, searchQuery = {}) => wrapper.worker.postMessage({ command: miniDbCommand, args: [server, searchQuery] }),
+    getMiniDb: (server, searchQuery = {}, miniDbFields = []) => wrapper.worker.postMessage({ command: miniDbCommand, args: [server, searchQuery, miniDbFields] }),
   };
 }
 

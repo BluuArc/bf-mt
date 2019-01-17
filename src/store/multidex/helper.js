@@ -36,6 +36,7 @@ export const createState = () => {
 
 export const createGetters = (multidexModuleName = 'units') => {
   return {
+    miniDbFields: () => ['id', 'name'],
     getMultidexPathTo: state => (id, server = state.activeServer) => {
       // logger.todo('check if filters are properly retrieved for', multidexModuleName);
       const params = [
@@ -129,11 +130,11 @@ export const createMutations = (logger) => { // eslint-disable-line no-unused-va
 export const createActions = (worker, downloadWorker, logger, dbEntryName = 'units') => {
   /* eslint-disable no-unused-vars */
   return {
-    getMiniDb ({ state }, server = 'gl') {
+    getMiniDb ({ state, getters }, server = 'gl') {
       if (!isValidServer(server)) {
         throw Error(`Invalid server "${server}"`);
       }
-      return worker.getMiniDb(server);
+      return worker.getMiniDb(server, undefined, getters.miniDbFields);
     },
     async getDbStatistics ({ state }, server = 'gl') {
       if (!isValidServer(server)) {
