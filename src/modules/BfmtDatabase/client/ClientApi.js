@@ -2,7 +2,7 @@ import Exchange from 'worker-exchange/lib/exchange-main';
 import DbInterface from '../interface';
 import { Logger } from '@/modules/Logger';
 
-const logger = new Logger({ prefix: '[DB-WORKER/client' });
+const logger = new Logger({ prefix: '[DB-WORKER/client]' });
 export default class ClientApi extends DbInterface {
   constructor (exchangeWorker = new Exchange()) {
     super();
@@ -26,6 +26,7 @@ export default class ClientApi extends DbInterface {
     const handshakeKey = Math.random();
     return new Promise((fulfill, reject) => {
       this._pendingHandshakes[handshakeKey] = true;
+      let totalAttempts = 0;
       let attempts = 0;
       let timeout = null;
       let hasRestarted = false;
@@ -40,12 +41,13 @@ export default class ClientApi extends DbInterface {
           fulfill(result);
         }).catch(reject);
 
-      const startWait = () => timeout = setTimeout(() => {
+      const startWait = () => timeout = setTimeout(async () => {
         const hasEntry = this._pendingHandshakes.hasOwnProperty(handshakeKey);
         if (hasEntry && !!this._pendingHandshakes[handshakeKey]) {
           // request has not responded in time
           attempts++;
-          logger.warn('Timeout occurred. Trying again. Attempts so far', attempts);
+          totalAttempts++;
+          logger.warn('Timeout occurred. Trying again. Attempts so far', totalAttempts);
 
           if (attempts < this._maxRetries) {
             // try again
@@ -53,16 +55,17 @@ export default class ClientApi extends DbInterface {
             startWait();
           } else if (!hasRestarted) {
             // restart worker and try again
-            Promise.resolve(this._worker.terminate())
+            await Promise.resolve(this._worker.terminate())
               .then(() => logger.debug('disposed old worker'))
               .catch(err => logger.error('error disposing old worker:', err));
-            this._worker = this._worker.restart();
+            this._worker = this._worker.restart(true);
             attempts = 0;
             hasRestarted = true;
             sendRequest();
             startWait();
           } else {
-            reject(new Error('Timeout in sending request'));
+            delete this._pendingHandshakes[handshakeKey];
+            reject(new Error(`Timeout in sending request for method [${method}]`));
           }
         } else if (hasEntry) {
           delete this._pendingHandshakes[handshakeKey];

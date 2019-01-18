@@ -2,13 +2,19 @@ import Exchange from 'worker-exchange/lib/exchange-main';
 import DbWorker from 'worker-loader!../worker/index.js';
 import ClientApi, { ClientTableApi, ClientMultidexApi } from './ClientApi';
 
-const makeWorker = () => new Proxy(new Exchange(new DbWorker), {
-  get (obj, prop) {
-    return prop === 'restart'
-      ? () => makeWorker()
-      : obj[prop];
-  },
-});
+let baseWorker = new DbWorker();
+function makeWorker (fullRestart = false) {
+  if (fullRestart) {
+    baseWorker = new DbWorker();
+  }
+  return new Proxy(new Exchange(baseWorker), {
+    get(obj, prop) {
+      return prop === 'restart' ?
+        (restart) => makeWorker(restart) :
+        obj[prop];
+    },
+  });
+}
 const worker = makeWorker();
 // const worker = new Exchange(new DbWorker());
 export default new ClientApi(worker);
