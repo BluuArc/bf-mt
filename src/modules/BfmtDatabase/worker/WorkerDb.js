@@ -19,7 +19,7 @@ export default class WorkerDb extends DbInterface {
       .then(() => {
         return this._db[table].where(query).toArray();
       }).catch(err => {
-        logger.error(`GET error`, { table, query }, err);
+        logger.error(`GET error. Returning default value: []`, { table, query }, err);
         return [];
       });
   }

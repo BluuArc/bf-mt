@@ -1,46 +1,105 @@
 import Exchange from 'worker-exchange/lib/exchange-main';
 import DbInterface from '../interface';
+import { Logger } from '@/modules/Logger';
 
+const logger = new Logger({ prefix: '[DB-WORKER/client' });
 export default class ClientApi extends DbInterface {
   constructor (exchangeWorker = new Exchange()) {
     super();
     this._worker = exchangeWorker;
+    this._pendingHandshakes = {};
+  }
+
+  get _handshakeTimeout () {
+    return 10 * 1000;
+  }
+
+  get _maxRetries () {
+    return 2;
   }
 
   get exchangeWorker () {
     return this._worker;
   }
 
-  request (...args) {
-    return this._worker.request(...args);
+  request (method, data) {
+    const handshakeKey = Math.random();
+    return new Promise((fulfill, reject) => {
+      this._pendingHandshakes[handshakeKey] = true;
+      let attempts = 0;
+      let timeout = null;
+      let hasRestarted = false;
+
+      const sendRequest = () => this._worker.request(method, { handshakeKey, ...data })
+        .then(result => {
+          // successfully got request, so clear handshake setup
+          delete this._pendingHandshakes[handshakeKey];
+          if (timeout !== null) {
+            clearTimeout(timeout);
+          }
+          fulfill(result);
+        }).catch(reject);
+
+      const startWait = () => timeout = setTimeout(() => {
+        const hasEntry = this._pendingHandshakes.hasOwnProperty(handshakeKey);
+        if (hasEntry && !!this._pendingHandshakes[handshakeKey]) {
+          // request has not responded in time
+          attempts++;
+          logger.warn('Timeout occurred. Trying again. Attempts so far', attempts);
+
+          if (attempts < this._maxRetries) {
+            // try again
+            sendRequest();
+            startWait();
+          } else if (!hasRestarted) {
+            // restart worker and try again
+            Promise.resolve(this._worker.terminate())
+              .then(() => logger.debug('disposed old worker'))
+              .catch(err => logger.error('error disposing old worker:', err));
+            this._worker = this._worker.restart();
+            attempts = 0;
+            hasRestarted = true;
+            sendRequest();
+            startWait();
+          } else {
+            reject(new Error('Timeout in sending request'));
+          }
+        } else if (hasEntry) {
+          delete this._pendingHandshakes[handshakeKey];
+        }
+      }, this._handshakeTimeout);
+      
+      sendRequest();
+      startWait();
+    });
   }
 
   put (table = '', entry) {
-    return this._worker.request('put', { table, entry });
+    return this.request('put', { table, entry });
   }
 
   get (table = '', query) {
-    return this._worker.request('get', { table, query });
+    return this.request('get', { table, query });
   }
 
   getFieldInEntry (table = '', query, field = '') {
-    return this._worker.request('getFieldInEntry', { table, query, field });
+    return this.request('getFieldInEntry', { table, query, field });
   }
   
   getFieldKeys (table = '', query, field = '') {
-    return this._worker.request('getFieldKeys', { table, query, field });
+    return this.request('getFieldKeys', { table, query, field });
   }
 
   getByIds ({ table = '', query, field, ids = [], extractedFields = [] }) {
-    return this._worker.request('getByIds', { table, query, field, ids, extractedFields });
+    return this.request('getByIds', { table, query, field, ids, extractedFields });
   }
 
   getById ({ table = '', query, field, id }) {
-    return this._worker.request('getById', { table, query, field, id });
+    return this.request('getById', { table, query, field, id });
   }
 
   getDbStats (table = '', query) {
-    return this._worker.request('getDbStats', { table, query });
+    return this.request('getDbStats', { table, query });
   }
 }
 
@@ -109,7 +168,7 @@ export class ClientMultidexApi extends ClientTableApi {
   }
 
   getTablesWithEntries (tables = [], server = 'gl') {
-    return this._worker.request('getTablesWithEntries', { tables, server });
+    return this.request('getTablesWithEntries', { tables, server });
   }
 
   getDbStats (server) {
@@ -117,7 +176,7 @@ export class ClientMultidexApi extends ClientTableApi {
   }
 
   getFilteredDb ({ filters, server = 'gl', extractedFields }) {
-    return this._worker.request('getFilteredDb', {
+    return this.request('getFilteredDb', {
       table: this._table,
       filters,
       server,
