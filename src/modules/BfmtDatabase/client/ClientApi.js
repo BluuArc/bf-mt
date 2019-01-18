@@ -8,30 +8,29 @@ export default class ClientApi extends DbInterface {
     super();
     this._worker = exchangeWorker;
     this._pendingHandshakes = {};
+    this._pendingRequests = [];
+    this._isProcessingRequests = false;
+    this._processingRequestTimeout = null;
   }
 
   get _handshakeTimeout () {
     return 10 * 1000;
   }
 
-  get _maxRetries () {
-    return 2;
-  }
-
   get exchangeWorker () {
     return this._worker;
   }
 
-  request (method, data) {
-    const handshakeKey = Math.random();
-    return new Promise((fulfill, reject) => {
-      this._pendingHandshakes[handshakeKey] = true;
-      let totalAttempts = 0;
-      let attempts = 0;
-      let timeout = null;
-      let hasRestarted = false;
+  async _processNextRequest () {
+    if (this._isProcessingRequests || this._pendingRequests.length === 0) {
+      return;
+    }
+    this._isProcessingRequests = true;
 
-      const sendRequest = () => this._worker.request(method, { handshakeKey, ...data })
+    let currentRequest = null;
+    try {
+      let timeout = null;
+      const sendRequest = ({ method, data, fulfill, handshakeKey }) => this._worker.request(method, { handshakeKey, ...data })
         .then(result => {
           // successfully got request, so clear handshake setup
           delete this._pendingHandshakes[handshakeKey];
@@ -39,41 +38,75 @@ export default class ClientApi extends DbInterface {
             clearTimeout(timeout);
           }
           fulfill(result);
-        }).catch(reject);
+        });
+      // process one request at a time
+      while (this._pendingRequests.length > 0) {
+        const { method, data, fulfill, reject } = this._pendingRequests.shift();
+        currentRequest = { method, data, fulfill, reject };
+        logger.debug('processing request', currentRequest);
 
-      const startWait = () => timeout = setTimeout(async () => {
-        const hasEntry = this._pendingHandshakes.hasOwnProperty(handshakeKey);
-        if (hasEntry && !!this._pendingHandshakes[handshakeKey]) {
-          // request has not responded in time
-          attempts++;
-          totalAttempts++;
-          logger.warn('Timeout occurred. Trying again. Attempts so far', totalAttempts);
+        await new Promise((whileFulfill, whileReject) => {
+          const handshakeKey = Math.random();
+          this._pendingHandshakes[handshakeKey] = true;
+          let hasRestarted = false;
 
-          if (attempts < this._maxRetries) {
-            // try again
-            sendRequest();
-            startWait();
-          } else if (!hasRestarted) {
-            // restart worker and try again
-            await Promise.resolve(this._worker.terminate())
-              .then(() => logger.debug('disposed old worker'))
-              .catch(err => logger.error('error disposing old worker:', err));
-            this._worker = this._worker.restart(true);
-            attempts = 0;
-            hasRestarted = true;
-            sendRequest();
-            startWait();
-          } else {
-            delete this._pendingHandshakes[handshakeKey];
-            reject(new Error(`Timeout in sending request for method [${method}]`));
-          }
-        } else if (hasEntry) {
-          delete this._pendingHandshakes[handshakeKey];
-        }
+          const attemptSendRequest = () => {
+            sendRequest({ method, data, fulfill, handshakeKey })
+              .then(whileFulfill)
+              .catch(whileReject);
+            timeout = setTimeout(async () => {
+              const hasEntry = this._pendingHandshakes.hasOwnProperty(handshakeKey);
+              if (hasEntry && !!this._pendingHandshakes[handshakeKey]) {
+                // request has not responded in time
+
+                if (!hasRestarted) {
+                  logger.warn('Timeout occurred. Trying again after restarting worker');
+                  // restart worker and try again
+                  await Promise.resolve(this._worker.terminate())
+                    .then(() => logger.debug('terminated old worker'))
+                    .catch(err => logger.error('error disposing old worker:', err));
+                  this._worker = this._worker.restart(true);
+                  hasRestarted = true;
+                  attemptSendRequest();
+                } else {
+                  delete this._pendingHandshakes[handshakeKey];
+                  whileReject(new Error(`Timeout in sending request for method [${method}]`));
+                }
+              } else if (hasEntry) {
+                delete this._pendingHandshakes[handshakeKey];
+              }
+            }, this._handshakeTimeout);
+          };
+          attemptSendRequest();
+          currentRequest = null;
+        });
+      }
+
+      this._processingRequestTimeout = setTimeout(() => {
+        this._processNextRequest();
       }, this._handshakeTimeout);
-      
-      sendRequest();
-      startWait();
+    } catch (err) {
+      logger.error(err);
+      // if there was a current request that failed, reject its promise
+      if (currentRequest && Object.values(currentRequest).some(v => v)) {
+        currentRequest.reject(err);
+      }
+
+      // reject all remaining requests
+      this._pendingRequests.forEach(({ reject }) => reject(err));
+      this._pendingRequests = [];
+    } finally {
+      this._isProcessingRequests = false;
+    }
+  }
+
+  // add request to queue
+  request (method, data) {
+    return new Promise((fulfill, reject) => {
+      this._pendingRequests.push({ method, data, fulfill, reject });
+      if (!this._isProcessingRequests) {
+        this._processNextRequest();
+      }
     });
   }
 
