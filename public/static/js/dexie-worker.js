@@ -1,7 +1,7 @@
 // reference: https://github.com/nolanlawson/promise-worker
 /* global Dexie importScripts, registerPromiseWorker */
 importScripts('./dexie.min-2.0.4.js');
-importScripts('./promise-worker.register.min-1.1.1.js');
+importScripts('./promise-worker.register.min-2.0.0.js');
 
 const db = new Dexie('bf-mt');
 const defaultSchemas = {
