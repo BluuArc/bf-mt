@@ -1,4 +1,3 @@
-// import Exchange from 'worker-exchange/lib/exchange-main';
 import PromiseWorkerExchangeClient from '@/modules/PromiseWorkerExchange/client';
 import DbInterface from '../interface';
 import { Logger } from '@/modules/Logger';

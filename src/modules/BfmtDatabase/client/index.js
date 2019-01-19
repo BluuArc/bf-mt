@@ -1,4 +1,3 @@
-// import Exchange from 'worker-exchange/lib/exchange-main';
 import PromiseWorkerExchangeClient from '@/modules/PromiseWorkerExchange/client';
 import DbWorker from 'worker-loader!../worker/index.js';
 import ClientApi, { ClientTableApi, ClientMultidexApi } from './ClientApi';

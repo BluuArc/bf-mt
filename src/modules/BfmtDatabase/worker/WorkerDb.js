@@ -104,6 +104,7 @@ export default class WorkerDb extends DbInterface {
     const keysOnly = !Array.isArray(extractedFields);
     if (multidexModuleNames.includes(table)) {
       // TODO: replace with filter functions
+      logger.todo('replace with actual filter functions');
       const keys = await this.getFieldKeys({ table, query: { server }, field: 'data' });
 
       if (keysOnly) {

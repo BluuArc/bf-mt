@@ -1,5 +1,5 @@
 
-/* loosely follows API used by worker-exchange module, but uses promise-worker instead */
+/* loosely follows request/onRequest API used by worker-exchange module, but uses promise-worker instead */
 export default class PromiseWorkerExchange {
   constructor () {
     // usage of this depends on subclass implementation
