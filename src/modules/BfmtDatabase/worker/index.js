@@ -7,7 +7,8 @@ const dbApi = new WorkerDb(dbInstance);
 const instance = new PromiseWorkerExchangeWorker();
 
 function init () {
-  const methodsToInit = Object.getOwnPropertyNames(dbApi.__proto__)
+  // add handlers for all dbApi methods
+  const methodsToInit = Object.getOwnPropertyNames(Object.getPrototypeOf(dbApi))
     .filter(name => !name.startsWith('_') && name !== 'constructor');
   logger.debug('adding handlers for dbApi methods', methodsToInit);
   methodsToInit.forEach(method => {

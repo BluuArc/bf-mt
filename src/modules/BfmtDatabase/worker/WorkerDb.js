@@ -45,7 +45,7 @@ export default class WorkerDb extends DbInterface {
           const entry = fieldEntry[id];
           if (extractedFields.length === 0) { // get everything
             returnedResult[id] = entry;
-          } else { // get subset of top-level fields based on extractedFields array
+          } else { // get subset of available top-level fields based on extractedFields array
             const extractedEntry = {};
             extractedFields.forEach(name => {
               if (entry.hasOwnProperty(name)) {
@@ -100,13 +100,9 @@ export default class WorkerDb extends DbInterface {
       .map(({ table }) => table);
   }
 
-  // eslint-disable-next-line no-unused-vars
   async getFilteredDb ({ table = '', filters, server = 'gl', extractedFields }) {
     const keysOnly = !Array.isArray(extractedFields);
     if (multidexModuleNames.includes(table)) {
-      // TODO: replace with filter functions
-      // logger.todo('replace with actual filter functions');
-      // const keys = await this.getFieldKeys({ table, query: { server }, field: 'data' });
       const keys = await getFilteredDb[table](filters, server, this);
       // logger.debug('filtered keys', keys, filters);
       if (keysOnly) {
