@@ -11,9 +11,11 @@ function init () {
     .filter(name => !name.startsWith('_') && name !== 'constructor');
   logger.debug('adding handlers for dbApi methods', methodsToInit);
   methodsToInit.forEach(method => {
-    instance.registerCommand(method, (data) => {
+    instance.registerCommand(method, async (data) => {
       logger.debug('got command', { method, data });
-      return dbApi[method](data);
+      const result = await Promise.resolve().then(() => dbApi[method](data));
+      logger.debug('got result', { method, result });
+      return result;
     });
   });
   logger.debug('worker initialized');

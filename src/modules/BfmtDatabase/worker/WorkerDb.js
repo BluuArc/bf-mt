@@ -2,6 +2,7 @@ import Dexie from 'dexie';
 import DbInterface from '../interface';
 import logger from './logger';
 import { multidexModuleInfo } from '@/modules/constants';
+import * as getFilteredDb from './multidex/getFilteredDb';
 
 const multidexModuleNames = multidexModuleInfo.map(({ name }) => name);
 export default class WorkerDb extends DbInterface {
@@ -104,9 +105,10 @@ export default class WorkerDb extends DbInterface {
     const keysOnly = !Array.isArray(extractedFields);
     if (multidexModuleNames.includes(table)) {
       // TODO: replace with filter functions
-      logger.todo('replace with actual filter functions');
-      const keys = await this.getFieldKeys({ table, query: { server }, field: 'data' });
-
+      // logger.todo('replace with actual filter functions');
+      // const keys = await this.getFieldKeys({ table, query: { server }, field: 'data' });
+      const keys = await getFilteredDb[table](filters, server, this);
+      // logger.debug('filtered keys', keys, filters);
       if (keysOnly) {
         // return only the keys
         return keys;

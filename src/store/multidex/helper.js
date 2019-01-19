@@ -272,7 +272,7 @@ export const createActions = (worker, downloadWorker, logger, dbEntryName = 'uni
       }, [filter, otherKeys, exclusiveFilterOptions.values, keys, state.pageDb]);
       return result;
     },
-    async filterProcsAndPassives ({ commit, state }, { procs = [], procAreas = [], passives = [], passiveAreas = [], keys = [] }) {
+    async filterProcsAndPassives ({ commit, state, getters }, { procs = [], procAreas = [], passives = [], passiveAreas = [], keys = [] }) {
       if (procs.length === 0 && passives.length === 0) {
         return keys;
       }
@@ -287,7 +287,7 @@ export const createActions = (worker, downloadWorker, logger, dbEntryName = 'uni
       let filteredKeys = state.buffSearchCache[cacheKey];
       if (!filteredKeys) {
         logger.debug('cache miss for current procs/passive filters', cacheKey);
-        const filteredDb = await worker.getMiniDb(state.activeServer, searchQuery);
+        const filteredDb = await worker.getMiniDb(state.activeServer, searchQuery, getters.miniDbFields);
         filteredKeys = Object.keys(filteredDb);
         commit('setBuffSearchCache', { [cacheKey]: filteredKeys });
       } else {
