@@ -3,121 +3,22 @@ import PromiseWorkerExchangeClient from '@/modules/PromiseWorkerExchange/client'
 import DbInterface from '../interface';
 import { Logger } from '@/modules/Logger';
 
+// eslint-disable-next-line no-unused-vars
 const logger = new Logger({ prefix: '[DB-WORKER/client]' });
 export default class ClientApi extends DbInterface {
   constructor (exchangeWorker = new PromiseWorkerExchangeClient()) {
     super();
     this._worker = exchangeWorker;
-    this._useQueue = false;
-    this._pendingHandshakes = {};
-    this._pendingRequests = [];
-    this._isProcessingRequests = false;
-    this._processingRequestTimeout = null;
-  }
-
-  get _handshakeTimeout () {
-    return 10 * 1000;
   }
 
   get exchangeWorker () {
     return this._worker;
   }
 
-  _sendRequest (method, data) {
-    return this._worker.request(method, data);
-  }
-
-  async _processNextRequest () {
-    if (this._isProcessingRequests || this._pendingRequests.length === 0) {
-      return;
-    }
-    this._isProcessingRequests = true;
-
-    let currentRequest = null;
-    try {
-      let timeout = null;
-      const sendRequest = ({ method, data, fulfill, handshakeKey }) => this._sendRequest(method, { handshakeKey, ...data })
-        .then(result => {
-          // successfully got request, so clear handshake setup
-          delete this._pendingHandshakes[handshakeKey];
-          if (timeout !== null) {
-            clearTimeout(timeout);
-          }
-          fulfill(result);
-        });
-      // process one request at a time
-      while (this._pendingRequests.length > 0) {
-        const { method, data, fulfill, reject } = this._pendingRequests.shift();
-        currentRequest = { method, data, fulfill, reject };
-        logger.debug('processing request', currentRequest);
-
-        await new Promise((whileFulfill, whileReject) => {
-          const handshakeKey = Math.random();
-          this._pendingHandshakes[handshakeKey] = true;
-          let hasRestarted = true; // TODO: remove this and associated code
-
-          const attemptSendRequest = () => {
-            sendRequest({ method, data, fulfill, handshakeKey })
-              .then(whileFulfill)
-              .catch(whileReject);
-            timeout = setTimeout(async () => {
-              const hasEntry = this._pendingHandshakes.hasOwnProperty(handshakeKey);
-              if (hasEntry && !!this._pendingHandshakes[handshakeKey]) {
-                // request has not responded in time
-
-                if (!hasRestarted) {
-                  logger.warn('Timeout occurred. Trying again after restarting worker');
-                  // restart worker and try again
-                  await Promise.resolve(this._worker.terminate())
-                    .then(() => logger.debug('terminated old worker'))
-                    .catch(err => logger.error('error disposing old worker:', err));
-                  this._worker = this._worker.restart(true);
-                  hasRestarted = true;
-                  attemptSendRequest();
-                } else {
-                  delete this._pendingHandshakes[handshakeKey];
-                  whileReject(new Error(`Timeout in sending request for method [${method}]`));
-                }
-              } else if (hasEntry) {
-                delete this._pendingHandshakes[handshakeKey];
-              }
-            }, this._handshakeTimeout);
-          };
-          attemptSendRequest();
-          currentRequest = null;
-        });
-      }
-
-      this._processingRequestTimeout = setTimeout(() => {
-        this._processNextRequest();
-      }, this._handshakeTimeout);
-    } catch (err) {
-      logger.error(err);
-      // if there was a current request that failed, reject its promise
-      if (currentRequest && Object.values(currentRequest).some(v => v)) {
-        currentRequest.reject(err);
-      }
-
-      // reject all remaining requests
-      this._pendingRequests.forEach(({ reject }) => reject(err));
-      this._pendingRequests = [];
-    } finally {
-      this._isProcessingRequests = false;
-    }
-  }
-
   // add request to queue
   request (method, data) {
-    if (this._useQueue) {
-      return new Promise((fulfill, reject) => {
-        this._pendingRequests.push({ method, data, fulfill, reject });
-        if (!this._isProcessingRequests) {
-          this._processNextRequest();
-        }
-      });
-    } else {
-      return this._sendRequest(method, data);
-    }
+    logger.debug('starting request for', { method, data });
+    return this._worker.request(method, data);
   }
 
   put (table = '', entry) {
