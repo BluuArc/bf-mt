@@ -4,9 +4,8 @@ import PromiseWorkerExchange from './interface';
 export default class PromiseWorkerExchangeWorker extends PromiseWorkerExchange {
   constructor () {
     super();
-
-    registerPromiseWorker(async ({ command, data } = {}) => {
-      this.onRequest(command, data);
+    registerPromiseWorker(({ command, data } = {}) => {
+      return this.onRequest(command, data);
     });
   }
 
@@ -17,7 +16,7 @@ export default class PromiseWorkerExchangeWorker extends PromiseWorkerExchange {
     } else if (this._classMethods.includes(methodName)) {
       result = await Promise.resolve().then(() => this[methodName](data));
     } else {
-      throw new Error(`Unknown command name [${methodName}]`);
+      result = Promise.reject(new Error(`Unknown command/method name [${methodName}]`));
     }
     return result;
   }

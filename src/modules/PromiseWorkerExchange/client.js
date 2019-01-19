@@ -1,7 +1,7 @@
 import PromiseWorker from 'promise-worker';
 import PromiseWorkerExchange from './interface';
 
-export class PromiseWorkerExchangeClient extends PromiseWorkerExchange {
+export default class PromiseWorkerExchangeClient extends PromiseWorkerExchange {
   constructor (worker = new Worker()) {
     super();
     this._promiseWorker = new PromiseWorker(worker);

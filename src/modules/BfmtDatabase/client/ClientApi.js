@@ -1,10 +1,11 @@
-import Exchange from 'worker-exchange/lib/exchange-main';
+// import Exchange from 'worker-exchange/lib/exchange-main';
+import PromiseWorkerExchangeClient from '@/modules/PromiseWorkerExchange/client';
 import DbInterface from '../interface';
 import { Logger } from '@/modules/Logger';
 
 const logger = new Logger({ prefix: '[DB-WORKER/client]' });
 export default class ClientApi extends DbInterface {
-  constructor (exchangeWorker = new Exchange()) {
+  constructor (exchangeWorker = new PromiseWorkerExchangeClient()) {
     super();
     this._worker = exchangeWorker;
     this._pendingHandshakes = {};
@@ -48,7 +49,7 @@ export default class ClientApi extends DbInterface {
         await new Promise((whileFulfill, whileReject) => {
           const handshakeKey = Math.random();
           this._pendingHandshakes[handshakeKey] = true;
-          let hasRestarted = false;
+          let hasRestarted = true; // TODO: remove this and associated code
 
           const attemptSendRequest = () => {
             sendRequest({ method, data, fulfill, handshakeKey })
@@ -140,7 +141,7 @@ export default class ClientApi extends DbInterface {
 }
 
 export class ClientTableApi extends ClientApi {
-  constructor (exchangeWorker = new Exchange(), tableName = '') {
+  constructor (exchangeWorker = new PromiseWorkerExchangeClient(), tableName = '') {
     super(exchangeWorker);
     this._table = tableName;
   }
