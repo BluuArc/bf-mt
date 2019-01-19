@@ -8,6 +8,7 @@ export default class ClientApi extends DbInterface {
   constructor (exchangeWorker = new PromiseWorkerExchangeClient()) {
     super();
     this._worker = exchangeWorker;
+    this._useQueue = false;
     this._pendingHandshakes = {};
     this._pendingRequests = [];
     this._isProcessingRequests = false;
@@ -22,6 +23,10 @@ export default class ClientApi extends DbInterface {
     return this._worker;
   }
 
+  _sendRequest (method, data) {
+    return this._worker.request(method, data);
+  }
+
   async _processNextRequest () {
     if (this._isProcessingRequests || this._pendingRequests.length === 0) {
       return;
@@ -31,7 +36,7 @@ export default class ClientApi extends DbInterface {
     let currentRequest = null;
     try {
       let timeout = null;
-      const sendRequest = ({ method, data, fulfill, handshakeKey }) => this._worker.request(method, { handshakeKey, ...data })
+      const sendRequest = ({ method, data, fulfill, handshakeKey }) => this._sendRequest(method, { handshakeKey, ...data })
         .then(result => {
           // successfully got request, so clear handshake setup
           delete this._pendingHandshakes[handshakeKey];
@@ -103,12 +108,16 @@ export default class ClientApi extends DbInterface {
 
   // add request to queue
   request (method, data) {
-    return new Promise((fulfill, reject) => {
-      this._pendingRequests.push({ method, data, fulfill, reject });
-      if (!this._isProcessingRequests) {
-        this._processNextRequest();
-      }
-    });
+    if (this._useQueue) {
+      return new Promise((fulfill, reject) => {
+        this._pendingRequests.push({ method, data, fulfill, reject });
+        if (!this._isProcessingRequests) {
+          this._processNextRequest();
+        }
+      });
+    } else {
+      return this._sendRequest(method, data);
+    }
   }
 
   put (table = '', entry) {
