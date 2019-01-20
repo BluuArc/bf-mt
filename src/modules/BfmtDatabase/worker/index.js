@@ -23,4 +23,12 @@ function init () {
 }
 
 instance.registerCommand('ping', (data) => `Pong ${data.from}`);
+instance.registerCommand('delayed-ping', (data) => {
+  setTimeout(() => {
+    instance.request('message', {
+      message: `Delayed Pong ${data.from}`,
+    });
+  }, 5000);
+  return `Immediate Pong ${data.from}`;
+});
 init();

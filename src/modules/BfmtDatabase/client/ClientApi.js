@@ -14,6 +14,14 @@ export default class ClientApi extends DbInterface {
     return this._worker;
   }
 
+  registerCommand (methodName, callback) {
+    this._worker.registerCommand(methodName, callback);
+  }
+
+  unregisterCommand (methodName) {
+    this._worker.unregisterCommand(methodName);
+  }
+
   // add request to queue
   request (method, data) {
     logger.debug('starting request for', { method, data });

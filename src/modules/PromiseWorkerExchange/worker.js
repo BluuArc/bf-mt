@@ -21,4 +21,12 @@ export default class PromiseWorkerExchangeWorker extends PromiseWorkerExchange {
     }
     return result;
   }
+
+  // one-way message from worker to client
+  request (methodName, data) {
+    self.postMessage({
+      command: methodName,
+      data,
+    });
+  }
 }

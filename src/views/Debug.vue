@@ -27,18 +27,26 @@ export default {
   async mounted () {
     // eslint-disable-next-line no-console
     console.warn({ client });
+
+    client.registerCommand('message', (data) => {
+      // eslint-disable-next-line no-console
+      console.warn('received message from worker', data);
+    });
+  },
+  beforeDestroy () {
+    client.unregisterCommand('message');
   },
   methods: {
     async callClient () {
 
-      // const result = await client.request('ping', { from: 'debug page' });
+      const result = await client.request('delayed-ping', { from: 'debug page' });
       // const result = await client.getDbStats('gl');
-      const result = await client.getFilteredDb({
-        server: 'gl',
-        // ids: [10017, 20017],
-        extractedFields: ['name', 'id', 'sphere type'],
-        // extractedFields: [],
-      });
+      // const result = await client.getFilteredDb({
+      //   server: 'gl',
+      //   // ids: [10017, 20017],
+      //   extractedFields: ['name', 'id', 'sphere type'],
+      //   // extractedFields: [],
+      // });
       // eslint-disable-next-line no-console
       console.warn({ result });
       this.result = result;
