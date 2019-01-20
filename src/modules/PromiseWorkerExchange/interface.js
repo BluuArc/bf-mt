@@ -6,6 +6,7 @@ export default class PromiseWorkerExchange {
     // can choose to either use class methods only, registered commands only, or both
     this._commands = {};
   }
+
   /* eslint-disable no-unused-vars */
   static _defer (name = 'name of method to be deferred') {
     return Promise.reject(new Error(`Must implement ${name}() in subclass`));

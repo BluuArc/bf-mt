@@ -1,19 +1,27 @@
 import {
   getEffectListInUnit,
-  defaultFitsQuery,
+  fitsBuffQuery,
   getBurstEffects,
 } from './utils';
 
-function defaultDbFilter (currentDb = {}, searchQuery = {}) {
+import { 
+  buffSearchOptions,
+} from '@/modules/constants';
+
+
+function defaultDbFilter (currentDb = {}, searchQuery) {
+  if (typeof searchQuery === 'undefined' || Object.keys(searchQuery).length === 0) {
+    return Object.keys(currentDb);
+  }
   const {
     keys = Object.keys(currentDb),
     procs = [],
     passives = [],
   } = searchQuery;
-  return keys.filter(key => currentDb.hasOwnProperty(key) && defaultFitsQuery(currentDb[key], procs, passives));
+  return keys.filter(key => currentDb.hasOwnProperty(key) && fitsBuffQuery(currentDb[key], procs, passives));
 }
 
-async function getterWrapper (table, server = 'gl', dbWrapper, getResults = (db = {}) => Promise.resolve(Object.keys(db))) {
+async function getterWrapper (table, server = 'gl', dbWrapper, getResults = defaultDbFilter) {
   const results = await dbWrapper.get({ table, query: { server } });
   if (results.length === 0 || !results[0].data || Object.keys(results[0].data).length === 0) {
     return [];
@@ -22,35 +30,55 @@ async function getterWrapper (table, server = 'gl', dbWrapper, getResults = (db 
   }
 }
 
-export function units (searchQuery = {}, server = 'gl', dbWrapper) {
+export function units (searchQuery, server = 'gl', dbWrapper) {
   return getterWrapper('units', server, dbWrapper, (currentDb) => {
+    if (typeof searchQuery === 'undefined' || Object.keys(searchQuery).length === 0) {
+      return Object.keys(currentDb);
+    }
+
     const {
       keys = Object.keys(currentDb),
-      procAreas = ['ls', 'es', 'sp', 'bb', 'sbb', 'ubb'],
-      passiveAreas = ['ls', 'es', 'sp', 'bb', 'sbb', 'ubb'],
+      procBuffSearchOptions = buffSearchOptions.slice(),
+      passiveBuffSearchOptions = buffSearchOptions.slice(),
       procs = [],
       passives = [],
+      name = '',
+      elements = [],
+      rarity = [],
+      unitKinds = [],
+      genders = [],
     } = searchQuery;
+    // trim off the spaces of subsequent names
+    const names = (name || '').split('|').filter((v, i) => i === 0 || v.trim()).map(n => n.toLowerCase());
 
-     const hasAllGivenProcs = (unit) => {
-      const allProcs = procAreas.map(area => getEffectListInUnit(unit, area).map(e => e['proc id'] || e['unknown proc id'])).reduce((acc, val) => acc.concat(val), []);
-      return procs.every(id => allProcs.includes(id));
-    };
-    const hasAllGivenPassives = (unit) => {
-      const allPassives = passiveAreas.map(area => getEffectListInUnit(unit, area).map(e => e['passive id'] || e['unknown passive id'])).reduce((acc, val) => acc.concat(val), []);
-      return passives.every(id => allPassives.includes(id));
-    };
-    const fitsUnitQuery = (unit) => {
-      if (procs.length === 0 && passives.length === 0) {
-        return true;
-      }
+    const fitsUnitBuffQuery = (unit) => fitsBuffQuery(
+      unit,
+      procs,
+      passives,
+      (unit) => procBuffSearchOptions.map(area =>getEffectListInUnit(unit, area)).reduce((acc, val) => acc.concat(val), []),
+      (unit) => passiveBuffSearchOptions.map(area =>getEffectListInUnit(unit, area)).reduce((acc, val) => acc.concat(val), [])
+    );
 
-      const hasProcAreas = procs.length === 0 || hasAllGivenProcs(unit);
-      const hasPassiveAreas = passives.length === 0 || hasAllGivenPassives(unit);
+    const fitsUnitQuery = (key) => {
+      const entry = currentDb[key];
+      const fitsName = (!name ? true : names.filter(n => entry.name.toLowerCase().includes(n)).length > 0);
+      const fitsID = (!name ? true : names.filter(n => key.toString().toLowerCase().includes(n) || (entry.id || '').toString().includes(n)).length > 0);
+      const fitsElement = elements.includes(entry.element);
+      const fitsRarity = rarity.includes(entry.rarity);
+      const fitsGender = genders.includes(entry.gender);
 
-      return hasProcAreas && hasPassiveAreas;
+      // need to flip evo/enhancing as they're marked wrong in the data at time of writing
+      // default to enhancing so that Omni Frog and Omni Emperor aren't hidden by default
+      const kindEntry = (entry.kind === 'evo' ? 'enhancing' : entry.kind === 'enhancing' ? 'evolution' : entry.kind) || 'enhancing';
+      const fitsKind = unitKinds.includes(kindEntry);
+
+      return [fitsName || fitsID, fitsElement, fitsRarity, fitsKind, fitsGender].every(val => val);
     };
-    return keys.filter(key => currentDb.hasOwnProperty(key) && fitsUnitQuery(currentDb[key]));
+    return keys.filter(
+      key => currentDb.hasOwnProperty(key) &&
+        fitsUnitBuffQuery(currentDb[key]) &&
+        fitsUnitQuery(key)
+    );
   });
 }
 
@@ -65,19 +93,13 @@ export function bursts (searchQuery = {}, server = 'gl', dbWrapper) {
       procs = [],
       passives = [],
     } = searchQuery;
-    const fitsQuery = (entry) => {
-      if (procs.length === 0 && passives.length === 0) {
-        return true;
-      }
-
-       const allProcs = getBurstEffects(entry).map(e => e['proc id'] || e['unknown proc id']);
-      const hasProcAreas = procs.length === 0 || procs.every(id => allProcs.includes(id));
-
-       const allPassives = getBurstEffects(entry).map(e => e['passive id'] || e['unknown passive id']);
-      const hasPassiveAreas = passives.length === 0 || passives.every(id => allPassives.includes(id));
-
-       return hasProcAreas && hasPassiveAreas;
-    };
+    const fitsQuery = (entry) => fitsBuffQuery(
+      entry,
+      procs,
+      passives,
+      (entry) => getBurstEffects(entry),
+      (entry) => getBurstEffects(entry),
+    );
     return keys.filter(key => currentDb.hasOwnProperty(key) && fitsQuery(currentDb[key]));
   });
 }

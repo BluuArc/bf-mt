@@ -7,16 +7,34 @@ export function defaultGetEffects (obj = {}) {
   return effects.concat(effects.map(getExtraTriggeredEffects).reduce((acc, val) => Array.isArray(val) ? acc.concat(val) : acc.concat([val]), []));
 }
 
-export function defaultFitsQuery (entry, procs, passives) {
+export function fitsBuffQuery (
+  entry,
+  procs,
+  passives,
+  getProcEffects = (entry) => defaultGetEffects(entry),
+  getPassiveEffects = (entry) => defaultGetEffects(entry),
+) {
   if (procs.length === 0 && passives.length === 0) {
     return true;
   }
 
-  const allProcs = defaultGetEffects(entry).map(e => e['proc id'] || e['unknown proc id']);
-  const hasProcAreas = procs.length === 0 || procs.every(id => allProcs.includes(id));
+  let hasProcAreas = procs.length === 0;
+  if (!hasProcAreas) {
+    const allProcs = getProcEffects(entry)
+      .map(e => e['proc id'] || e['unknown proc id'])
+      .filter(v => v)
+      .map(v => +v);
+    hasProcAreas = procs.every(id => allProcs.includes(+id));
+  }
 
-  const allPassives = defaultGetEffects(entry).map(e => e['passive id'] || e['unknown passive id']);
-  const hasPassiveAreas = passives.length === 0 || passives.every(id => allPassives.includes(id));
+  let hasPassiveAreas = passives.length === 0;
+  if (!hasPassiveAreas) {
+    const allPassives = getPassiveEffects(entry)
+      .map(e => e['passive id'] || e['unknown passive id'])
+      .filter(v => v)
+      .map(v => +v);
+    hasPassiveAreas = passives.every(id => allPassives.includes(+id));
+  }
 
    return hasProcAreas && hasPassiveAreas;
 }
@@ -36,7 +54,7 @@ export function getBuffListFromSpSkill (skill = {}) {
 
 export function getBurstEffects (burst = {}) {
   const endLevelObject = burst && burst.levels && burst.levels[burst.levels.length - 1];
-  return defaultGetEffects(endLevelObject);
+  return defaultGetEffects(endLevelObject || {});
 }
 
 const unitLocations = {
