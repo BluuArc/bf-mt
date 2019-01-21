@@ -3,6 +3,7 @@ import DbInterface from '../interface';
 import logger from './logger';
 import { multidexModuleInfo } from '@/modules/constants';
 import * as getFilteredDb from './multidex/getFilteredDb';
+import * as getSortedKeys from './multidex/getSortedKeys';
 
 const multidexModuleNames = multidexModuleInfo.map(({ name }) => name);
 export default class WorkerDb extends DbInterface {
@@ -100,14 +101,16 @@ export default class WorkerDb extends DbInterface {
       .map(({ table }) => table);
   }
 
-  async getFilteredDb ({ table = '', filters, server = 'gl', extractedFields }) {
+  async getFilteredDb ({ table = '', filters, server = 'gl', extractedFields, sortOptions }) {
     const keysOnly = !Array.isArray(extractedFields);
     if (multidexModuleNames.includes(table)) {
-      const keys = await getFilteredDb[table](filters, server, this);
+      const { keys, fullDb } = await getFilteredDb[table](filters, server, this);
       // logger.debug('filtered keys', keys, filters);
       if (keysOnly) {
         // return only the keys
-        return keys;
+        return typeof sortOptions === 'object'
+          ? getSortedKeys[table]({ keys, db: fullDb, sortOptions })
+          : keys;
       } else if (extractedFields.length === 0) {
         // return DB such that checking db[key] indicates presence of ID (faster than [].includes)
         const db = {};
@@ -128,6 +131,20 @@ export default class WorkerDb extends DbInterface {
     } else {
       logger.error(`Table not found [${table}]`);
       return keysOnly ? [] : {};
+    }
+  }
+
+  async getSortedKeys ({ table = '', sortOptions = {}, server = 'gl', keys = [] }) {
+    const results = await this.get({ table, query: { server } });
+    if (results.length === 0 || !results[0].data || Object.keys(results[0].data).length === 0) {
+      logger.warn(`no table found for [${table}]. Returning input keys back.`);
+      return keys;
+    } else {
+      return getSortedKeys[table]({
+        keys,
+        db: results[0].data,
+        sortOptions,
+      });
     }
   }
 }

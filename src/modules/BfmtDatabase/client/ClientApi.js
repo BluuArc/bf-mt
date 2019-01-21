@@ -129,12 +129,13 @@ export class ClientMultidexApi extends ClientTableApi {
     return super.getDbStats({ server });
   }
 
-  getFilteredDb ({ filters, server = 'gl', extractedFields }) {
+  getFilteredDb ({ filters, server = 'gl', extractedFields, sortOptions }) {
     return this.request('getFilteredDb', {
       table: this._table,
       filters,
       server,
       extractedFields,
+      sortOptions,
     });
   }
 }

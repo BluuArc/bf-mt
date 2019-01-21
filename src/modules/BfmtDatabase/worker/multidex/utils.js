@@ -77,3 +77,24 @@ const unitLocations = {
 export function getEffectListInUnit (unit, location) {
   return (unitLocations[location] || defaultGetEffects)(unit);
 }
+
+// each sort returns a numerical result
+// positive = idA should go after idB when sorting in ascending order
+export const commonSorts = Object.freeze({
+  ID: (idA, idB) => +idA - +idB,
+  Alphabetical: (idA, idB, nameGetter) => {
+    const [nameA, nameB] = [nameGetter(idA), nameGetter(idB)];
+    return (nameA > nameB) ? 1: -1;
+  },
+  Numerical: (idA, idB, numberGetter) => {
+    const [numA, numB] = [numberGetter(idA), numberGetter(idB)];
+    return (numA !== numB) ? (numA - numB) : commonSorts.ID(idA, idB);
+  },
+});
+
+export function applySorts ({ input = [], sortFn = commonSorts.ID, isAscending = true }) {
+  return input.sort((a, b) => {
+    const result = sortFn(a, b);
+    return isAscending ? result : -result;
+  });
+}

@@ -24,9 +24,15 @@ function defaultDbFilter (currentDb = {}, searchQuery) {
 async function getterWrapper (table, server = 'gl', dbWrapper, getResults = defaultDbFilter) {
   const results = await dbWrapper.get({ table, query: { server } });
   if (results.length === 0 || !results[0].data || Object.keys(results[0].data).length === 0) {
-    return [];
+    return {
+      keys: [],
+      fullDb: {},
+    };
   } else {
-    return getResults(results[0].data);
+    return {
+      keys: getResults(results[0].data),
+      fullDb: results[0].data,
+    };
   }
 }
 

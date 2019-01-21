@@ -38,8 +38,12 @@ export default class DbInterface {
     return DbInterface._defer('getTablesWithEntries');
   }
 
-  getFilteredDb ({ table, filters, server, extractedFields } = {}) {
+  getFilteredDb ({ table, filters, server, extractedFields, sortOptions } = {}) {
     return DbInterface._defer('getFilteredDb');
+  }
+
+  getSortedKeys ({ table = '', sortOptions = {}, server = 'gl', keys = [] } = {}) {
+    return DbInterface._defer('getSortedKeys');
   }
   /* eslint-enable no-unused-vars */
 }
