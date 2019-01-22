@@ -18,7 +18,7 @@
 import { makeMultidexTableInstance } from '@/modules/BfmtDatabase/client';
 // import { unitKinds, elements, genders } from '@/modules/constants';
 
-const client = makeMultidexTableInstance('units');
+const client = makeMultidexTableInstance('items');
 export default {
   data () {
     return {
@@ -48,22 +48,22 @@ export default {
         // extractedFields: ['name', 'id', 'sphere type'],
         // extractedFields: [],
         filters: {
-          rarity: [8],
+          itemTypes: ['sphere'],
         },
         sortOptions: {
-          type: 'Alphabetical',
-          isAscending: true,
+          type: 'Sell Price',
+          isAscending: false,
         },
       });
 
-      result = await client.getSortedKeys({
-        server: 'gl',
-        sortOptions: {
-          type: 'Guide ID',
-          isAscending: false,
-        },
-        keys: result,
-      });
+      // result = await client.getSortedKeys({
+      //   server: 'gl',
+      //   sortOptions: {
+      //     type: 'Guide ID',
+      //     isAscending: false,
+      //   },
+      //   keys: result,
+      // });
       // eslint-disable-next-line no-console
       console.warn({ result });
       this.result = result;

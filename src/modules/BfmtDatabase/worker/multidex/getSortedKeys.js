@@ -1,6 +1,7 @@
 import { commonSorts, applySorts } from './utils';
 import {
   elements,
+  itemTypes,
 } from '@/modules/constants';
 
 function sortWrapper ({ keys = [], sortOptions = {}, sortTypes = {}}) {
@@ -22,6 +23,20 @@ export function units ({ keys, db, sortOptions }) {
       Alphabetical: (idA, idB) => commonSorts.Alphabetical(idA, idB, (id) => db[id].name),
       Rarity: (idA, idB) => commonSorts.Numerical(idA, idB, (id) => +db[id].rarity),
       Elements: (idA, idB) => commonSorts.Numerical(idA, idB, (id) => elements.indexOf(db[id].element)),
+    },
+  });
+}
+
+export function items ({ keys, db, sortOptions }) {
+  return sortWrapper({
+    keys,
+    sortOptions,
+    sortTypes: {
+      'Item ID': commonSorts.ID,
+      Alphabetical: (idA, idB) => commonSorts.Alphabetical(idA, idB, (id) => db[id].name),
+      Rarity: (idA, idB) => commonSorts.Numerical(idA, idB, (id) => +db[id].rarity),
+      Type: (idA, idB) => commonSorts.Numerical(idA, idB, (id) => itemTypes.indexOf(db[id].type)),
+      'Sell Price': (idA, idB) => commonSorts.Numerical(idA, idB, (id) => +db[id].sell_price),
     },
   });
 }
