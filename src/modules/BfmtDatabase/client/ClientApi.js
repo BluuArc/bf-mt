@@ -138,4 +138,13 @@ export class ClientMultidexApi extends ClientTableApi {
       sortOptions,
     });
   }
+
+  getSortedKeys ({ sortOptions = {}, server = 'gl', keys = [] }) {
+    return this.request('getSortedKeys', {
+      table: this._table,
+      server,
+      keys,
+      sortOptions,
+    });
+  }
 }

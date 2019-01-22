@@ -2,9 +2,7 @@ import { Logger } from '@/modules/Logger';
 import { makeMultidexWorker } from '../instances/dexie-client';
 import downloadWorker from '../instances/download-worker';
 import { createState, createMutations, createActions, createGetters } from './helper';
-import SWorker from '@/assets/sww.min';
 import {
-  elements,
   exclusiveFilterOptions,
 } from '@/modules/constants';
 import { getCacheBustingUrlParam } from '@/modules/utils';
@@ -101,38 +99,7 @@ export default {
     },
     async getSortedKeys ({ state }, { type, isAscending, keys }) {
       logger.debug('sorts', { type, isAscending, keys });
-      const result = await SWorker.run((keys, type, isAscending, pageDb, elements) => {
-        const sortTypes = {
-          'Unit ID': (idA, idB, isAscending) => {
-            const result = (+idA - +idB);
-            return isAscending ? result : -result;
-          },
-          'Guide ID': (idA, idB, isAscending) => {
-            const result = +pageDb[idA].guide_id - +pageDb[idB].guide_id;
-            return isAscending ? result : -result;
-          },
-          Alphabetical: (idA, idB, isAscending) => {
-            const [nameA, nameB] = [pageDb[idA].name, pageDb[idB].name];
-            const result = (nameA > nameB) ? 1 : -1;
-            return isAscending ? result : -result;
-          },
-          Rarity: (idA, idB, isAscending) => {
-            const [rarityA, rarityB] = [+pageDb[idA].rarity, +pageDb[idB].rarity];
-            const result = rarityA === rarityB ? (+idA - +idB) : (rarityA - rarityB);
-            return isAscending ? result : -result;
-          },
-          Element: (idA, idB, isAscending) => {
-            const [elementA, elementB] = [pageDb[idA].element, pageDb[idB].element];
-            const indexA = elements.indexOf(elementA);
-            const indexB = elements.indexOf(elementB);
-            const result = indexA === indexB ? (+idA - +idB) : (indexA - indexB);
-            return isAscending ? result : -result;
-          },
-        };
-
-        return keys.slice().sort((a, b) => sortTypes[type](a, b, isAscending));
-      }, [keys, type, isAscending, state.pageDb, elements]);
-      return result;
+      return dbWorker.getSortedKeys(state.activeServer, keys, { type, isAscending });
     },
   },
 };

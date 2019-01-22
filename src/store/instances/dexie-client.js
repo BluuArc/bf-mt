@@ -62,7 +62,8 @@ export function makeMultidexWorker (moduleName) {
     getDbStats: ({ server } = {}) => instance.getDbStats(server),
     getTablesWithEntries: (tables, server) => instance.getTablesWithEntries(tables, server),
     getMiniDb: (server, filters, extractedFields) => instance.getFilteredDb({ server, filters, extractedFields }),
-    getFilteredKeys: (server, filters) => instance.getFilteredDb({ server, filters }),
+    getFilteredKeys: (server, filters, sortOptions) => instance.getFilteredDb({ server, filters, sortOptions }),
+    getSortedKeys: (server, keys, sortOptions) => instance.getSortedKeys({ server, keys, sortOptions }),
   });
 }
 

@@ -16,7 +16,7 @@
 
 <script>
 import { makeMultidexTableInstance } from '@/modules/BfmtDatabase/client';
-import { unitKinds, elements, genders } from '@/modules/constants';
+// import { unitKinds, elements, genders } from '@/modules/constants';
 
 const client = makeMultidexTableInstance('units');
 export default {
@@ -42,21 +42,27 @@ export default {
 
       // const result = await client.request('delayed-ping', { from: 'debug page' });
       // const result = await client.getDbStats('gl');
-      const result = await client.getFilteredDb({
+      let result = await client.getFilteredDb({
         server: 'gl',
         // ids: [10017, 20017],
         // extractedFields: ['name', 'id', 'sphere type'],
         // extractedFields: [],
         filters: {
           rarity: [8],
-          unitKinds,
-          elements,
-          genders,
         },
         sortOptions: {
           type: 'Alphabetical',
           isAscending: true,
         },
+      });
+
+      result = await client.getSortedKeys({
+        server: 'gl',
+        sortOptions: {
+          type: 'Guide ID',
+          isAscending: false,
+        },
+        keys: result,
       });
       // eslint-disable-next-line no-console
       console.warn({ result });
