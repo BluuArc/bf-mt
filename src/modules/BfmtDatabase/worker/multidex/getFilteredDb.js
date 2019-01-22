@@ -2,10 +2,21 @@ import {
   getEffectListInUnit,
   fitsBuffQuery,
   getBurstEffects,
+  parseNames,
+  fitsTernary,
 } from './utils';
 
-import { 
+import {
+  elements as allElements,
+  unitKinds as allUnitKinds,
+  genders as allGenders,
   buffSearchOptions,
+
+  itemTypes as allItemTypes,
+  sphereTypeMapping,
+  defaultTernaryOptions,
+  craftableFilterOptions,
+  usageFilterOptions,
 } from '@/modules/constants';
 
 
@@ -49,13 +60,12 @@ export function units (searchQuery, server = 'gl', dbWrapper) {
       procs = [],
       passives = [],
       name = '',
-      elements = [],
-      rarity = [],
-      unitKinds = [],
-      genders = [],
+      elements = allElements.slice(),
+      rarity = (new Array(8)).fill(0).map((_, i) => i + 1),
+      unitKinds = allUnitKinds.slice(),
+      genders = allGenders.slice(),
     } = searchQuery;
-    // trim off the spaces of subsequent names
-    const names = (name || '').split('|').filter((v, i) => i === 0 || v.trim()).map(n => n.toLowerCase());
+    const names = parseNames(name);
 
     const fitsUnitBuffQuery = (unit) => fitsBuffQuery(
       unit,
@@ -88,11 +98,61 @@ export function units (searchQuery, server = 'gl', dbWrapper) {
   });
 }
 
-export function items (searchQuery = {}, server = 'gl', dbWrapper) {
-  return getterWrapper('items', server, dbWrapper, (currentDb) => defaultDbFilter(currentDb, searchQuery));
+export function items (searchQuery, server = 'gl', dbWrapper) {
+  return getterWrapper('items', server, dbWrapper, (currentDb) => {
+    if (typeof searchQuery === 'undefined' || Object.keys(searchQuery).length === 0) {
+      return Object.keys(currentDb);
+    }
+
+    const {
+      keys = Object.keys(currentDb),
+      procs = [],
+      passives = [],
+      name = '',
+      rarity = (new Array(9)).fill(0).map((_, i) => i),
+      itemTypes = allItemTypes.slice(),
+      sphereTypes = Object.keys(sphereTypeMapping).map((_, i) => i),
+      associatedUnits = defaultTernaryOptions.allValue,
+      craftables = craftableFilterOptions.allValue,
+      usage = usageFilterOptions.allValue,
+    } = searchQuery;
+    // trim off the spaces of subsequent names
+    const names = parseNames(name);
+    const includeNoneSphereType = sphereTypes.includes(0);
+    const includeAnySphereType = sphereTypes.length === 15;
+
+    const fitsItemQuery = (key) => {
+      const entry = currentDb[key];
+      const fitsName = (!name ? true : names.filter(n => entry.name.toLowerCase().includes(n)).length > 0);
+      const fitsID = (!name ? true : names.filter(n => key.toString().toLowerCase().includes(n) || (entry.id || '').toString().includes(n)).length > 0);
+      const fitsRarity = rarity.includes(entry.rarity);
+      const fitsItemType = itemTypes.includes(entry.type) || (itemTypes.includes('raid') && entry.raid);
+
+      const hasSphereType = entry['sphere type'] !== undefined || entry.type === 'sphere' || entry.type === 'ls_sphere';
+      const fitsSphereType = includeAnySphereType ||
+        (hasSphereType && (sphereTypes.includes(entry['sphere type']))) ||
+        (includeNoneSphereType && !entry['sphere type']);
+
+      const hasAssociatedUnits = Array.isArray(entry.associated_units) && entry.associated_units.length > 0;
+      const fitsAssociatedUnits = fitsTernary(hasAssociatedUnits, associatedUnits);
+
+      const isCraftable = !!entry.recipe;
+      const fitsCraftable = fitsTernary(isCraftable, craftables, craftableFilterOptions);
+
+      const isUsed = !!entry.usage && entry.usage.length > 0;
+      const fitsUsage = fitsTernary(isUsed, usage, usageFilterOptions);
+
+      return [fitsName || fitsID, fitsItemType, fitsRarity, fitsSphereType, fitsAssociatedUnits, fitsCraftable, fitsUsage].every(val => val);
+    };
+    return keys.filter(
+      key => currentDb.hasOwnProperty(key) &&
+        fitsBuffQuery(currentDb[key], procs, passives) &&
+        fitsItemQuery(key)
+    );
+  });
 }
 
-export function bursts (searchQuery = {}, server = 'gl', dbWrapper) {
+export function bursts (searchQuery, server = 'gl', dbWrapper) {
   return getterWrapper('bursts', server, dbWrapper, (currentDb) => {
     const {
       keys = Object.keys(currentDb),
@@ -110,22 +170,22 @@ export function bursts (searchQuery = {}, server = 'gl', dbWrapper) {
   });
 }
 
-export function extraSkills (searchQuery = {}, server = 'gl', dbWrapper) {
+export function extraSkills (searchQuery, server = 'gl', dbWrapper) {
   return getterWrapper('extraSkills', server, dbWrapper, (currentDb) => defaultDbFilter(currentDb, searchQuery));
 }
 
-export function leaderSkills (searchQuery = {}, server = 'gl', dbWrapper) {
+export function leaderSkills (searchQuery, server = 'gl', dbWrapper) {
   return getterWrapper('leaderSkills', server, dbWrapper, (currentDb) => defaultDbFilter(currentDb, searchQuery));
 }
 
 // eslint-disable-next-line no-unused-vars
-export function missions (searchQuery = {}, server = 'gl', dbWrapper) {
+export function missions (searchQuery, server = 'gl', dbWrapper) {
   // TODO: search based on search query
   return getterWrapper('missions', server, dbWrapper);
 }
 
 // eslint-disable-next-line no-unused-vars
-export function dictionary (searchQuery = {}, server = 'gl', dbWrapper) {
+export function dictionary (searchQuery, server = 'gl', dbWrapper) {
   // TODO: search based on search query
   return getterWrapper('dictionary', server, dbWrapper);
 }

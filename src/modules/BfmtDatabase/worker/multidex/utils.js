@@ -1,3 +1,5 @@
+import { defaultTernaryOptions } from '@/modules/constants';
+
 export function getExtraTriggeredEffects (effect = {}) {
   return effect['triggered effect'] || [];
 }
@@ -76,6 +78,18 @@ const unitLocations = {
 
 export function getEffectListInUnit (unit, location) {
   return (unitLocations[location] || defaultGetEffects)(unit);
+}
+
+export function parseNames (nameInput = '') {
+  return nameInput.split('|')
+    .filter((v, i) => i === 0 || v.trim()) // keep first entry and non-empty-string entries
+    .map(n => n.toLowerCase());
+}
+
+export function fitsTernary (entryIsTrue = false, filterValue = '', ternary = defaultTernaryOptions) {
+  return ternary.isAll(filterValue) ||
+    (ternary.isTruthy(filterValue) && entryIsTrue) ||
+    (ternary.isFalsy(filterValue) && !entryIsTrue);
 }
 
 // each sort returns a numerical result

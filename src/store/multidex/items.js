@@ -6,9 +6,6 @@ import { getCacheBustingUrlParam } from '@/modules/utils';
 import {
   exclusiveFilterOptions,
   sphereTypeMapping,
-  defaultTernaryOptions,
-  craftableFilterOptions,
-  usageFilterOptions,
 } from '@/modules/constants';
 import FilterOptionsHelper from '@/modules/FilterOptionsHelper';
 import SWorker from '@/assets/sww.min';
@@ -90,83 +87,16 @@ export default {
     },
     async getFilteredKeys ({ state, dispatch }, inputFilters = {}) {
       logger.debug('filters', inputFilters);
-      let keys = Object.keys(state.pageDb);
+      let keys; // leave blank, as it should default to full DB in worker
 
       const {
         exclusives = exclusiveFilterOptions.allValue,
-        procs = [],
-        procBuffSearchOptions = [],
-        passives = [],
-        passiveBuffSearchOptions = [],
       } = inputFilters;
       if (!exclusiveFilterOptions.isAll(exclusives)) {
         keys = await dispatch('filterServerExclusiveKeys', { filter: exclusives, keys });
       }
 
-      const ternaryHelper = {
-        associatedUnits: defaultTernaryOptions.values,
-        craftables: craftableFilterOptions.values,
-        usage: usageFilterOptions.values,
-      };
-
-      const result = await SWorker.run((keys, filters, pageDb, ternaryHelper) => {
-        const {
-          name = '',
-          rarity = [],
-          itemTypes = [],
-          sphereTypes = [],
-          associatedUnits = '',
-          craftables = '',
-          usage = '',
-        } = filters;
-        // trim off the spaces of subsequent names
-        const names = (name || '').split('|').filter((v, i) => i === 0 || v.trim()).map(n => n.toLowerCase());
-        const includeNoneSphereType = sphereTypes.includes(0);
-        const includeAnySphereType = sphereTypes.length === 15;
-
-        const fitsTernary = (entryIsTrue = false, filterValue = '', { all, truthy, falsy }) => {
-          return filterValue === all ||
-          (filterValue === truthy && entryIsTrue) ||
-          (filterValue === falsy && !entryIsTrue);
-        };
-
-        return keys.filter(key => {
-          const entry = pageDb[key];
-          const fitsName = (!name ? true : names.filter(n => entry.name.toLowerCase().includes(n)).length > 0);
-          const fitsID = (!name ? true : names.filter(n => key.toString().toLowerCase().includes(n) || (entry.id || '').toString().includes(n)).length > 0);
-          const fitsRarity = rarity.includes(entry.rarity);
-          const fitsItemType = itemTypes.includes(entry.type) || (itemTypes.includes('raid') && entry.raid);
-
-          const hasSphereType = entry['sphere type'] !== undefined || entry.type === 'sphere' || entry.type === 'ls_sphere';
-          const fitsSphereType = includeAnySphereType ||
-            (hasSphereType && (sphereTypes.includes(entry['sphere type']))) ||
-            (includeNoneSphereType && !entry['sphere type']);
-
-          const hasAssociatedUnits = Array.isArray(entry.associated_units) && entry.associated_units.length > 0;
-          const fitsAssociatedUnits = fitsTernary(hasAssociatedUnits, associatedUnits, ternaryHelper.associatedUnits);
-
-          const isCraftable = !!entry.recipe;
-          const fitsCraftable = fitsTernary(isCraftable, craftables, ternaryHelper.craftables);
-
-          const isUsed = !!entry.usage && entry.usage.length > 0;
-          const fitsUsage = fitsTernary(isUsed, usage, ternaryHelper.usage);
-
-          return [fitsName || fitsID, fitsItemType, fitsRarity, fitsSphereType, fitsAssociatedUnits, fitsCraftable, fitsUsage].every(val => val);
-        });
-      }, [keys, inputFilters, state.pageDb, ternaryHelper]);
-
-      if (procs.length > 0 || passives.length > 0) {
-        const filteredKeys = await dispatch('filterProcsAndPassives', {
-          procs,
-          procAreas: procBuffSearchOptions,
-          passives,
-          passiveAreas: passiveBuffSearchOptions,
-          keys: result,
-        });
-        return filteredKeys;
-      } else {
-        return result;
-      }
+      return dbWorker.getFilteredKeys(state.activeServer, { keys, ...inputFilters });
     },
     async getSortedKeys ({ state }, { type, isAscending, keys }) {
       logger.debug('sorts', { type, isAscending, keys });

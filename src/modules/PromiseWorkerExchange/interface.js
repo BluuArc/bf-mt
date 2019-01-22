@@ -1,4 +1,3 @@
-
 /* loosely follows request/onRequest API used by worker-exchange module, but uses promise-worker instead */
 export default class PromiseWorkerExchange {
   constructor () {
@@ -37,15 +36,22 @@ export default class PromiseWorkerExchange {
     return PromiseWorkerExchange._defer('onRequest');
   }
 
-  registerCommand (commandName, func) {
+  // TODO: add aliased names for same command? would allow for multiple handlers of same command
+  registerCommand (commandName, func, alias = 'default') {
     if (typeof func !== 'function') {
       throw new Error('Input is not a function');
     }
 
+    // if (!this._commands.hasOwnProperty(commandName)) {
+    //   this._commands[commandName] = {};
+    // }
     this._commands[commandName] = func;
   }
 
-  unregisterCommand (commandName) {
+  unregisterCommand (commandName, alias = 'default') {
+    // if (this._commands.hasOwnProperty(commandName) && this._commands[commandName].hasOwnProperty(alias)) {
+    //   delete this._commands[commandName][alias];
+    // }
     if (this._commands.hasOwnProperty(commandName)) {
       delete this._commands[commandName];
     }
