@@ -4,7 +4,6 @@ import downloadWorker from '../instances/download-worker';
 import { createState, createMutations, createActions, createGetters } from './helper';
 import { getCacheBustingUrlParam } from '@/modules/utils';
 import {
-  exclusiveFilterOptions,
   sphereTypeMapping,
 } from '@/modules/constants';
 
@@ -81,23 +80,6 @@ export default {
       }
       logger.debug('finished updating data');
       commit('setLoadState', false);
-    },
-    async getFilteredKeys ({ state, dispatch }, inputFilters = {}) {
-      logger.debug('filters', inputFilters);
-      let keys; // leave blank, as it should default to full DB in worker
-
-      const {
-        exclusives = exclusiveFilterOptions.allValue,
-      } = inputFilters;
-      if (!exclusiveFilterOptions.isAll(exclusives)) {
-        keys = await dispatch('filterServerExclusiveKeys', { filter: exclusives, keys });
-      }
-
-      return dbWorker.getFilteredKeys(state.activeServer, { keys, ...inputFilters });
-    },
-    async getSortedKeys ({ state }, { type, isAscending, keys }) {
-      logger.debug('sorts', { type, isAscending, keys });
-      return dbWorker.getSortedKeys(state.activeServer, keys, { type, isAscending });
     },
   },
 };

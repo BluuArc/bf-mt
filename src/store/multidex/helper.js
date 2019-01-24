@@ -297,6 +297,23 @@ export const createActions = (worker, downloadWorker, logger, dbEntryName = 'uni
         return keys.filter(key => cachedKeys.includes(key));
       }, [keys, filteredKeys]);
     },
+    async getFilteredKeys ({ state, dispatch }, inputFilters = {}) {
+      logger.debug('filters', inputFilters);
+      let keys; // leave blank, as it should default to full DB in worker
+
+      const {
+        exclusives = exclusiveFilterOptions.allValue,
+      } = inputFilters;
+      if (!exclusiveFilterOptions.isAll(exclusives)) {
+        keys = await dispatch('filterServerExclusiveKeys', { filter: exclusives, keys });
+      }
+
+      return worker.getFilteredKeys(state.activeServer, { keys, ...inputFilters });
+    },
+    async getSortedKeys ({ state }, { type, isAscending, keys }) {
+      logger.debug('sorts', { type, isAscending, keys });
+      return worker.getSortedKeys(state.activeServer, keys, { type, isAscending });
+    },
   };
   /* eslint-enable no-unused-vars */
 };
