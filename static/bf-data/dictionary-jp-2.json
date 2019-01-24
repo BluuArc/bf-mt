@@ -1,4 +1,76 @@
 {
+  "MST_LEADERSKILLS_801022_DESCRIPTION": {
+    "en": "15% boost to Atk, Def and Rec & 10% boost to HP",
+    "es": "Aumenta 15% el ataque, la defensa y la recuperación, y un 10% los PS",
+    "id": "Peningkatan Serang, Tahan, Pulih: 15%,  HP 10%",
+    "pt": "15% de reforço no ATQ, DEF e REC e 10% no HP",
+    "th": "15% เพิ่มค่าให้กับ โจมตี กับ  ป้องกัน, และ 10% เพิ่มค่าให้ HP",
+    "vi": "Tăng 15% sức mạnh Tấn công, Phòng thủ và Phục hồi & tăng 10% thể lực"
+  },
+  "MST_LEADERSKILLS_801022_NAME": {
+    "en": "Frost Zeal",
+    "es": "Fanatismo gélido",
+    "id": "Semangat Beku",
+    "pt": "Zelo Gelado",
+    "th": "ฟรอสต์ ซีล",
+    "vi": "Nhiệt huyết sương giá"
+  },
+  "MST_LEADERSKILLS_801023_DESCRIPTION": {
+    "en": "15% boost to all parameters & boost to Spark and critical damage",
+    "es": "Aumenta un 15% todos los parámetros y el daño crítico y de Chispas",
+    "id": "Peningkatan semua parameter: 15%, menambah Percikan dan kerusakan Crit",
+    "pt": "15% de reforço a todos os parâmetros e reforço ao dano de Fagulhas e Críticos",
+    "th": "15% เพิ่มค่าพารามิเตอร์ทั้งหมด กับ เพิ่มความเสียหายสปาร์คและคริติคอล",
+    "vi": "Tăng 15% tất cả các tham số & giảm 15% thiệt hại do đòn Spark và Đòn nguy hiểm"
+  },
+  "MST_LEADERSKILLS_801023_NAME": {
+    "en": "Frozen Fury",
+    "es": "Furia helada",
+    "id": "Murka Beku",
+    "pt": "Fúria Gélida",
+    "th": "โฟรเซ่น ฟิวรี่",
+    "vi": "Lốc xoáy sương giá"
+  },
+  "MST_LEADERSKILLS_801024_DESCRIPTION": {
+    "en": "Slight boost in the BB gauge when attacked",
+    "es": "Leve aumento del indicador BB al recibir un ataque",
+    "id": "Agak menambah meteran BB saat diserang",
+    "pt": "Pequeno bônus no preenchimento da barra de BB ao ser atacado",
+    "th": "เพิ่มเกจ BB เล็กน้อย เมื่อถูกโจมตี",
+    "vi": "Tăng nhẹ vạch BB khi bị tấn công"
+  },
+  "MST_LEADERSKILLS_801024_NAME": {
+    "en": "Cold Charm",
+    "es": "Talismán de frío",
+    "id": "Mantra Dingin",
+    "pt": "Amuleto do Frio",
+    "th": "โคลด์ ชาร์ม",
+    "vi": "Bùa chú lạnh giá"
+  },
+  "MST_LEADERSKILLS_801025_DESCRIPTION": {
+    "en": "Large boost in the BB gauge when attacked & probable slight reduction of damage taken",
+    "es": "Gran aumento del indicador BB al recibir ataques. Puede reducir levemente el daño recibido",
+    "id": "Banyak menambah meteran BB pada saat diserang & sedikit kemungkinan mengurangi kerusakan yang diderita",
+    "pt": "Grande bônus na barra de BB ao ser atacado e pequena chance de reduzir o dano sofrido",
+    "th": "เพิ่มเกจ BB อย่างมาก เมื่อถูกโจมตี และ อาจลดความเสียหายที่ได้รับลงเล้กน้อย",
+    "vi": "Tăng nhiều vạch BB khi bị tấn công & có khả năng giảm nhẹ thiệt hại phải chịu"
+  },
+  "MST_LEADERSKILLS_801025_NAME": {
+    "en": "Snow Spell",
+    "es": "Conjuro níveo",
+    "id": "Mantra Salju",
+    "pt": "Feitiço da Neve",
+    "th": "สโนว สเปล",
+    "vi": "Thần chú tuyết"
+  },
+  "MST_LEADERSKILLS_801026_DESCRIPTION": {
+    "en": "Boost in the BB gauge when attacked, probable reduction of damage taken & fills BB gauge",
+    "es": "Aumento del indicador BB al recibir ataques. Puede reducir el daño recibido y llena el indicador BB",
+    "id": "Menambah meteran BB pada saat diserang, kemungkinan mengurangi kerusakan yang diderita & menambah meteran BB",
+    "pt": "Bônus na barra de BB ao ser atacado, provável redução do dano sofrido e preenche barra de BB",
+    "th": "เพิ่มเกจ BB เมื่อถูกโจมตี, อาจลดความเสียหายที่ได้รับ และ เติมเกจ BB",
+    "vi": "Tăng vạch BB khi bị tấn công, có khả năng giảm thiệt hại phải chịu & nạp vạch BB"
+  },
   "MST_LEADERSKILLS_801026_NAME": {
     "en": "Snowy Allure",
     "es": "Encanto níveo",
@@ -87816,62 +87888,6 @@
     "vi": "GS-1000"
   },
   "MST_MONSTERS_54803_NAME": {
-    "en": "GS-1000",
-    "es": "GS-1000",
-    "id": "GS-1000",
-    "pt": "GS-1000",
-    "th": "จีเอส-1000",
-    "vi": "GS-1000"
-  },
-  "MST_MONSTERS_54804_NAME": {
-    "en": "GS-1000",
-    "es": "GS-1000",
-    "id": "GS-1000",
-    "pt": "GS-1000",
-    "th": "จีเอส-1000",
-    "vi": "GS-1000"
-  },
-  "MST_MONSTERS_54805_NAME": {
-    "en": "GS-1000",
-    "es": "GS-1000",
-    "id": "GS-1000",
-    "pt": "GS-1000",
-    "th": "จีเอส-1000",
-    "vi": "GS-1000"
-  },
-  "MST_MONSTERS_54806_NAME": {
-    "en": "GS-1000",
-    "es": "GS-1000",
-    "id": "GS-1000",
-    "pt": "GS-1000",
-    "th": "จีเอส-1000",
-    "vi": "GS-1000"
-  },
-  "MST_MONSTERS_54807_NAME": {
-    "en": "GS-1000",
-    "es": "GS-1000",
-    "id": "GS-1000",
-    "pt": "GS-1000",
-    "th": "จีเอส-1000",
-    "vi": "GS-1000"
-  },
-  "MST_MONSTERS_54808_NAME": {
-    "en": "GS-1000",
-    "es": "GS-1000",
-    "id": "GS-1000",
-    "pt": "GS-1000",
-    "th": "จีเอสหนึ่งพัน",
-    "vi": "GS-1000"
-  },
-  "MST_MONSTERS_54809_NAME": {
-    "en": "GS-1000",
-    "es": "GS-1000",
-    "id": "GS-1000",
-    "pt": "GS-1000",
-    "th": "จีเอส-1000",
-    "vi": "GS-1000"
-  },
-  "MST_MONSTERS_54810_NAME": {
     "en": "GS-1000",
     "es": "GS-1000",
     "id": "GS-1000",
