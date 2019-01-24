@@ -1,4 +1,12 @@
 {
+  "MST_SKILLS_2830597_DESCRIPTION": {
+    "en": "20 combo massive Earth attack on all foes, 10 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Earth elemental damage for 3 turns",
+    "es": "20 combo massive Earth attack on all foes, 10 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Earth elemental damage for 3 turns",
+    "id": "20 combo massive Earth attack on all foes, 10 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Earth elemental damage for 3 turns",
+    "pt": "20 combo massive Earth attack on all foes, 10 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Earth elemental damage for 3 turns",
+    "th": "20 combo massive Earth attack on all foes, 10 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Earth elemental damage for 3 turns",
+    "vi": "20 combo massive Earth attack on all foes, 10 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Earth elemental damage for 3 turns"
+  },
   "MST_SKILLS_2830597_NAME": {
     "en": "Living Kaleidoscope",
     "es": "Living Kaleidoscope",
@@ -87878,5 +87886,13 @@
     "pt": "None",
     "th": "5 คอมโบ โจมตีด้วยธาตุไฟอันรุนแรงใส่ศัตรู 1 ตัว เพิ่มพลังป้องกันโดยไม่นับพลังโจมตี 2 เทิร์น และมีโอกาสสูงในการลดค่าโจมตีของศัตรู 2 เทิร์น",
     "vi": "5 combo massive Fire attack on single enemy, adds Def ignoring effect to attack for 2 turns & chance of greatly reducing enemy's Atk and for 2 turns "
+  },
+  "MST_SKILLS_810526_NAME": {
+    "en": "Phoenix Blast",
+    "es": "Explosión de Fénix",
+    "id": "Ledakan Phoenix",
+    "pt": "Explosão da Fênix",
+    "th": "ฟีนิกซ์ บลาสต์",
+    "vi": "Phoenix Blast"
   }
 }
