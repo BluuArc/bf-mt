@@ -154,19 +154,40 @@ export function items (searchQuery, server = 'gl', dbWrapper) {
 
 export function bursts (searchQuery, server = 'gl', dbWrapper) {
   return getterWrapper('bursts', server, dbWrapper, (currentDb) => {
+    if (typeof searchQuery === 'undefined' || Object.keys(searchQuery).length === 0) {
+      return Object.keys(currentDb);
+    }
+
     const {
       keys = Object.keys(currentDb),
       procs = [],
       passives = [],
+      name = '',
+      associatedUnits = '',
     } = searchQuery;
-    const fitsQuery = (entry) => fitsBuffQuery(
+    const names = parseNames(name);
+    const fitsBurstBuffQuery = (entry) => fitsBuffQuery(
       entry,
       procs,
       passives,
       (entry) => getBurstEffects(entry),
       (entry) => getBurstEffects(entry),
     );
-    return keys.filter(key => currentDb.hasOwnProperty(key) && fitsQuery(currentDb[key]));
+
+    const fitsBurstQuery = (key) => {
+      const entry = currentDb[key];
+      const fitsName = (!name ? true : names.filter(n => entry.name.toLowerCase().includes(n)).length > 0);
+      const fitsID = (!name ? true : names.filter(n => key.toString().toLowerCase().includes(n) || (entry.id || '').toString().includes(n)).length > 0);
+
+      const hasAssociatedUnits = Array.isArray(entry.associated_units) && entry.associated_units.length > 0;
+      const fitsAssociatedUnits = fitsTernary(hasAssociatedUnits, associatedUnits, defaultTernaryOptions);
+
+      return [fitsName || fitsID, fitsAssociatedUnits].every(val => val);
+    };
+    return keys.filter(key => currentDb.hasOwnProperty(key) &&
+      fitsBurstBuffQuery(currentDb[key]) &&
+      fitsBurstQuery(key)
+    );
   });
 }
 

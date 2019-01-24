@@ -40,3 +40,14 @@ export function items ({ keys, db, sortOptions }) {
     },
   });
 }
+
+export function bursts ({ keys, db, sortOptions }) {
+  return sortWrapper({
+    keys,
+    sortOptions,
+    sortTypes: {
+      'Burst ID': commonSorts.ID,
+      Alphabetical: (idA, idB) => commonSorts.Alphabetical(idA, idB, (id) => db[id].name),
+    },
+  });
+}
