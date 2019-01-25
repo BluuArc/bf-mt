@@ -51,3 +51,15 @@ export function bursts ({ keys, db, sortOptions }) {
     },
   });
 }
+
+export function extraSkills ({ keys, db, sortOptions }) {
+  return sortWrapper({
+    keys,
+    sortOptions,
+    sortTypes: {
+      'Skill ID': commonSorts.ID,
+      Alphabetical: (idA, idB) => commonSorts.Alphabetical(idA, idB, (id) => db[id].name),
+      Rarity: (idA, idB) => commonSorts.Numerical(idA, idB, (id) => +db[id].rarity),
+    },
+  });
+}

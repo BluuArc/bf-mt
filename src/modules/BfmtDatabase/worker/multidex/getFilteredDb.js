@@ -192,7 +192,42 @@ export function bursts (searchQuery, server = 'gl', dbWrapper) {
 }
 
 export function extraSkills (searchQuery, server = 'gl', dbWrapper) {
-  return getterWrapper('extraSkills', server, dbWrapper, (currentDb) => defaultDbFilter(currentDb, searchQuery));
+  return getterWrapper('extraSkills', server, dbWrapper, (currentDb) => {
+    if (typeof searchQuery === 'undefined' || Object.keys(searchQuery).length === 0) {
+      return Object.keys(currentDb);
+    }
+
+    const {
+      keys = Object.keys(currentDb),
+        procs = [],
+        passives = [],
+        name = '',
+        rarity = (new Array(9)).fill(0).map((_, i) => i),
+        associatedUnits = '',
+    } = searchQuery;
+    const names = parseNames(name);
+    const fitsSkillBuffQuery = (entry) => fitsBuffQuery(
+      entry,
+      procs,
+      passives,
+    );
+
+    const fitsSkillQuery = (key) => {
+      const entry = currentDb[key];
+      const fitsName = (!name ? true : names.filter(n => entry.name.toLowerCase().includes(n)).length > 0);
+      const fitsID = (!name ? true : names.filter(n => key.toString().toLowerCase().includes(n) || (entry.id || '').toString().includes(n)).length > 0);
+      const fitsRarity = rarity.includes(+entry.rarity);
+
+      const hasAssociatedUnits = Array.isArray(entry.associated_units) && entry.associated_units.length > 0;
+      const fitsAssociatedUnits = fitsTernary(hasAssociatedUnits, associatedUnits, defaultTernaryOptions);
+
+      return [fitsName || fitsID, fitsRarity, fitsAssociatedUnits].every(val => val);
+    };
+    return keys.filter(key => currentDb.hasOwnProperty(key) &&
+    fitsSkillBuffQuery(currentDb[key]) &&
+    fitsSkillQuery(key)
+    );
+  });
 }
 
 export function leaderSkills (searchQuery, server = 'gl', dbWrapper) {
