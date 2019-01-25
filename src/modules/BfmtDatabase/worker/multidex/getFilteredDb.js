@@ -163,7 +163,7 @@ export function bursts (searchQuery, server = 'gl', dbWrapper) {
       procs = [],
       passives = [],
       name = '',
-      associatedUnits = '',
+      associatedUnits = defaultTernaryOptions.allValue,
     } = searchQuery;
     const names = parseNames(name);
     const fitsBurstBuffQuery = (entry) => fitsBuffQuery(
@@ -199,11 +199,11 @@ export function extraSkills (searchQuery, server = 'gl', dbWrapper) {
 
     const {
       keys = Object.keys(currentDb),
-        procs = [],
-        passives = [],
-        name = '',
-        rarity = (new Array(9)).fill(0).map((_, i) => i),
-        associatedUnits = '',
+      procs = [],
+      passives = [],
+      name = '',
+      rarity = (new Array(9)).fill(0).map((_, i) => i),
+      associatedUnits = defaultTernaryOptions.allValue,
     } = searchQuery;
     const names = parseNames(name);
     const fitsSkillBuffQuery = (entry) => fitsBuffQuery(
@@ -224,14 +224,47 @@ export function extraSkills (searchQuery, server = 'gl', dbWrapper) {
       return [fitsName || fitsID, fitsRarity, fitsAssociatedUnits].every(val => val);
     };
     return keys.filter(key => currentDb.hasOwnProperty(key) &&
-    fitsSkillBuffQuery(currentDb[key]) &&
-    fitsSkillQuery(key)
+      fitsSkillBuffQuery(currentDb[key]) &&
+      fitsSkillQuery(key)
     );
   });
 }
 
 export function leaderSkills (searchQuery, server = 'gl', dbWrapper) {
-  return getterWrapper('leaderSkills', server, dbWrapper, (currentDb) => defaultDbFilter(currentDb, searchQuery));
+  return getterWrapper('leaderSkills', server, dbWrapper, (currentDb) => {
+    if (typeof searchQuery === 'undefined' || Object.keys(searchQuery).length === 0) {
+      return Object.keys(currentDb);
+    }
+
+    const {
+      keys = Object.keys(currentDb),
+      procs = [],
+      passives = [],
+      name = '',
+      associatedUnits = defaultTernaryOptions.allValue,
+    } = searchQuery;
+    const names = parseNames(name);
+    const fitsSkillBuffQuery = (entry) => fitsBuffQuery(
+      entry,
+      procs,
+      passives,
+    );
+
+    const fitsSkillQuery = (key) => {
+      const entry = currentDb[key];
+      const fitsName = (!name ? true : names.filter(n => entry.name.toLowerCase().includes(n)).length > 0);
+      const fitsID = (!name ? true : names.filter(n => key.toString().toLowerCase().includes(n) || (entry.id || '').toString().includes(n)).length > 0);
+
+      const hasAssociatedUnits = Array.isArray(entry.associated_units) && entry.associated_units.length > 0;
+      const fitsAssociatedUnits = fitsTernary(hasAssociatedUnits, associatedUnits, defaultTernaryOptions);
+
+      return [fitsName || fitsID, fitsAssociatedUnits].every(val => val);
+    };
+    return keys.filter(key => currentDb.hasOwnProperty(key) &&
+      fitsSkillBuffQuery(currentDb[key]) &&
+      fitsSkillQuery(key)
+    );
+  });
 }
 
 // eslint-disable-next-line no-unused-vars

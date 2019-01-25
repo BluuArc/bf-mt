@@ -63,3 +63,14 @@ export function extraSkills ({ keys, db, sortOptions }) {
     },
   });
 }
+
+export function leaderSkills ({ keys, db, sortOptions }) {
+  return sortWrapper({
+    keys,
+    sortOptions,
+    sortTypes: {
+      'Skill ID': commonSorts.ID,
+      Alphabetical: (idA, idB) => commonSorts.Alphabetical(idA, idB, (id) => db[id].name),
+    },
+  });
+}
