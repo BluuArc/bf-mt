@@ -14,6 +14,7 @@ import {
 
   itemTypes as allItemTypes,
   sphereTypeMapping,
+  missionLocationTypes,
   defaultTernaryOptions,
   craftableFilterOptions,
   usageFilterOptions,
@@ -267,13 +268,52 @@ export function leaderSkills (searchQuery, server = 'gl', dbWrapper) {
   });
 }
 
-// eslint-disable-next-line no-unused-vars
 export function missions (searchQuery, server = 'gl', dbWrapper) {
-  // TODO: search based on search query
-  return getterWrapper('missions', server, dbWrapper);
+  return getterWrapper('missions', server, dbWrapper, (currentDb) => {
+    if (typeof searchQuery === 'undefined' || Object.keys(searchQuery).length === 0) {
+      return Object.keys(currentDb);
+    }
+
+    const {
+      keys = Object.keys(currentDb),
+      name = '',
+      associatedUnits = defaultTernaryOptions.allValue,
+      associatedItems = defaultTernaryOptions.allValue,
+      gems = defaultTernaryOptions.allValue,
+      continues = defaultTernaryOptions.allValue,
+    } = searchQuery;
+    const names = parseNames(name);
+
+    const fitsMissionQuery = (key) => {
+      const entry = currentDb[key];
+      const fitsName = (!name ? true : names.filter(n => entry.name.toLowerCase().includes(n)).length > 0);
+      const fitsID = (!name ? true : names.filter(n => key.toString().toLowerCase().includes(n) || (entry.id || '').toString().includes(n)).length > 0);
+
+      const hasAssociatedUnits = Array.isArray(entry.clear_bonus) && entry.clear_bonus.some(bonus => !!bonus.unit);
+      const fitsAssociatedUnits = fitsTernary(hasAssociatedUnits, associatedUnits, defaultTernaryOptions);
+
+      const hasAssociatedItems = Array.isArray(entry.clear_bonus) && entry.clear_bonus.some(bonus => !!bonus.item);
+      const fitsAssociatedItems = fitsTernary(hasAssociatedItems, associatedItems, defaultTernaryOptions);
+
+      const hasGems = Array.isArray(entry.clear_bonus) && entry.clear_bonus.some(bonus => !!bonus.gem);
+      const fitsGemFilter = fitsTernary(hasGems, gems, defaultTernaryOptions);
+
+      const hasContinues = !!entry.continue;
+      const fitsContinueFilter = fitsTernary(hasContinues, continues, defaultTernaryOptions);
+
+      const fitsLocationFilters = missionLocationTypes.every(locationType => {
+        const locationFilters = searchQuery[locationType] || [];
+        return locationFilters.length === 0 || locationFilters.includes(entry[locationType]);
+      });
+
+      return [fitsName || fitsID, fitsAssociatedUnits, fitsAssociatedItems, fitsGemFilter, fitsLocationFilters, fitsContinueFilter].every(val => val);
+    };
+    return keys.filter(key => currentDb.hasOwnProperty(key) &&
+      fitsMissionQuery(key)
+    );
+  });
 }
 
-// eslint-disable-next-line no-unused-vars
 export function dictionary (searchQuery, server = 'gl', dbWrapper) {
   // TODO: search based on search query
   return getterWrapper('dictionary', server, dbWrapper);
