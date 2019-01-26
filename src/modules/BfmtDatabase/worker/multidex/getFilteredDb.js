@@ -78,8 +78,8 @@ export function units (searchQuery, server = 'gl', dbWrapper) {
 
     const fitsUnitQuery = (key) => {
       const entry = currentDb[key];
-      const fitsName = (!name ? true : names.filter(n => entry.name.toLowerCase().includes(n)).length > 0);
-      const fitsID = (!name ? true : names.filter(n => key.toString().toLowerCase().includes(n) || (entry.id || '').toString().includes(n)).length > 0);
+      const fitsName = (!name ? true : names.some(n => entry.name.toLowerCase().includes(n)));
+      const fitsID = (!name ? true : names.some(n => key.toString().toLowerCase().includes(n) || (entry.id || '').toString().includes(n)));
       const fitsElement = elements.includes(entry.element);
       const fitsRarity = rarity.includes(entry.rarity);
       const fitsGender = genders.includes(entry.gender);
@@ -124,8 +124,8 @@ export function items (searchQuery, server = 'gl', dbWrapper) {
 
     const fitsItemQuery = (key) => {
       const entry = currentDb[key];
-      const fitsName = (!name ? true : names.filter(n => entry.name.toLowerCase().includes(n)).length > 0);
-      const fitsID = (!name ? true : names.filter(n => key.toString().toLowerCase().includes(n) || (entry.id || '').toString().includes(n)).length > 0);
+      const fitsName = (!name ? true : names.some(n => entry.name.toLowerCase().includes(n)));
+      const fitsID = (!name ? true : names.some(n => key.toString().toLowerCase().includes(n) || (entry.id || '').toString().includes(n)));
       const fitsRarity = rarity.includes(entry.rarity);
       const fitsItemType = itemTypes.includes(entry.type) || (itemTypes.includes('raid') && entry.raid);
 
@@ -177,8 +177,8 @@ export function bursts (searchQuery, server = 'gl', dbWrapper) {
 
     const fitsBurstQuery = (key) => {
       const entry = currentDb[key];
-      const fitsName = (!name ? true : names.filter(n => entry.name.toLowerCase().includes(n)).length > 0);
-      const fitsID = (!name ? true : names.filter(n => key.toString().toLowerCase().includes(n) || (entry.id || '').toString().includes(n)).length > 0);
+      const fitsName = (!name ? true : names.some(n => entry.name.toLowerCase().includes(n)));
+      const fitsID = (!name ? true : names.some(n => key.toString().toLowerCase().includes(n) || (entry.id || '').toString().includes(n)));
 
       const hasAssociatedUnits = Array.isArray(entry.associated_units) && entry.associated_units.length > 0;
       const fitsAssociatedUnits = fitsTernary(hasAssociatedUnits, associatedUnits, defaultTernaryOptions);
@@ -215,8 +215,8 @@ export function extraSkills (searchQuery, server = 'gl', dbWrapper) {
 
     const fitsSkillQuery = (key) => {
       const entry = currentDb[key];
-      const fitsName = (!name ? true : names.filter(n => entry.name.toLowerCase().includes(n)).length > 0);
-      const fitsID = (!name ? true : names.filter(n => key.toString().toLowerCase().includes(n) || (entry.id || '').toString().includes(n)).length > 0);
+      const fitsName = (!name ? true : names.some(n => entry.name.toLowerCase().includes(n)));
+      const fitsID = (!name ? true : names.some(n => key.toString().toLowerCase().includes(n) || (entry.id || '').toString().includes(n)));
       const fitsRarity = rarity.includes(+entry.rarity);
 
       const hasAssociatedUnits = Array.isArray(entry.associated_units) && entry.associated_units.length > 0;
@@ -253,8 +253,8 @@ export function leaderSkills (searchQuery, server = 'gl', dbWrapper) {
 
     const fitsSkillQuery = (key) => {
       const entry = currentDb[key];
-      const fitsName = (!name ? true : names.filter(n => entry.name.toLowerCase().includes(n)).length > 0);
-      const fitsID = (!name ? true : names.filter(n => key.toString().toLowerCase().includes(n) || (entry.id || '').toString().includes(n)).length > 0);
+      const fitsName = (!name ? true : names.some(n => entry.name.toLowerCase().includes(n)));
+      const fitsID = (!name ? true : names.some(n => key.toString().toLowerCase().includes(n) || (entry.id || '').toString().includes(n)));
 
       const hasAssociatedUnits = Array.isArray(entry.associated_units) && entry.associated_units.length > 0;
       const fitsAssociatedUnits = fitsTernary(hasAssociatedUnits, associatedUnits, defaultTernaryOptions);
@@ -286,8 +286,8 @@ export function missions (searchQuery, server = 'gl', dbWrapper) {
 
     const fitsMissionQuery = (key) => {
       const entry = currentDb[key];
-      const fitsName = (!name ? true : names.filter(n => entry.name.toLowerCase().includes(n)).length > 0);
-      const fitsID = (!name ? true : names.filter(n => key.toString().toLowerCase().includes(n) || (entry.id || '').toString().includes(n)).length > 0);
+      const fitsName = (!name ? true : names.some(n => entry.name.toLowerCase().includes(n)));
+      const fitsID = (!name ? true : names.some(n => key.toString().toLowerCase().includes(n) || (entry.id || '').toString().includes(n)));
 
       const hasAssociatedUnits = Array.isArray(entry.clear_bonus) && entry.clear_bonus.some(bonus => !!bonus.unit);
       const fitsAssociatedUnits = fitsTernary(hasAssociatedUnits, associatedUnits, defaultTernaryOptions);
@@ -315,6 +315,26 @@ export function missions (searchQuery, server = 'gl', dbWrapper) {
 }
 
 export function dictionary (searchQuery, server = 'gl', dbWrapper) {
-  // TODO: search based on search query
-  return getterWrapper('dictionary', server, dbWrapper);
+  return getterWrapper('dictionary', server, dbWrapper, (currentDb) => {
+    if (typeof searchQuery === 'undefined' || Object.keys(searchQuery).length === 0) {
+      return Object.keys(currentDb);
+    }
+
+    const {
+      keys = Object.keys(currentDb),
+      name = '',
+    } = searchQuery;
+    const names = parseNames(name);
+
+    const fitsDictQuery = (key) => {
+      const entry = currentDb[key];
+      const fitsName = (!name ? true : names.some(n => entry.toLowerCase().includes(n)));
+      const fitsID = (!name ? true : names.some(n => key.toString().toLowerCase().includes(n)));
+
+      return [fitsName || fitsID].every(val => val);
+    };
+    return keys.filter(key => currentDb.hasOwnProperty(key) &&
+      fitsDictQuery(key)
+    );
+  });
 }

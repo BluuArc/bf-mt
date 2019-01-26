@@ -39,10 +39,10 @@ export default class WorkerDb extends DbInterface {
   async getByIds ({ table = '', query, field, ids = [], extractedFields = [] }) {
     const results = await this.get({ table, query });
     const returnedResult = {};
-    if (results[0] && results[0][field]) {
+    if (results[0] !== undefined && results[0][field] !== undefined) {
       const fieldEntry = results[0][field];
       ids.forEach(id => {
-        if (fieldEntry[id]) {
+        if (fieldEntry[id] !== undefined) {
           const entry = fieldEntry[id];
           if (extractedFields.length === 0) { // get everything
             returnedResult[id] = entry;
@@ -58,7 +58,12 @@ export default class WorkerDb extends DbInterface {
         }
       });
     }
-    logger.debug(`input[${ids.length} keys]; output[${Object.keys(returnedResult).length} keys]`);
+    const resultLength = Object.keys(returnedResult).length;
+    if (ids.length !== resultLength) {
+      logger.warn(`input[${ids.length} keys]; output[${resultLength} keys]`);
+    } else {
+      logger.debug(`input[${ids.length} keys]; output[${resultLength} keys]`);
+    }
     return returnedResult;
   }
 

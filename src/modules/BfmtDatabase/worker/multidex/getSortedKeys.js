@@ -112,3 +112,14 @@ export function missions ({ keys, db, sortOptions = {} }) {
     },
   });
 }
+
+export function dictionary ({ keys, db, sortOptions }) {
+  return sortWrapper({
+    keys,
+    sortOptions,
+    sortTypes: {
+      'Dictionary ID': commonSorts.ID,
+      Alphabetical: (idA, idB) => commonSorts.Alphabetical(idA, idB, (id) => db[id]),
+    },
+  });
+}
