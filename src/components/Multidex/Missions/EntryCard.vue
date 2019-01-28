@@ -9,7 +9,7 @@
           <h2 class="body-1">
             <span v-text="ladText"/>
           </h2>
-          <h3 class="body-2" v-if="entry.continue">
+          <h3 class="body-2" v-if="!entry.continue">
             <u><b>No Continues</b></u>
           </h3>
         </v-flex>
