@@ -6,10 +6,9 @@
     :inputServer="server"
     :viewId="viewId"
     :pageDb="pageDb"
-    :getByIds="(ids) => getByIds({ ids }) "
     :inputFilters="filters"
     :filterTypes="filterTypes">
-    <v-layout row wrap slot="results" slot-scope="{ keys, logger, resultDb }">
+    <v-layout row wrap slot="results" slot-scope="{ keys, logger, getMultidexPathTo }">
       <v-flex
         v-for="key in keys"
         :key="key"
@@ -17,8 +16,8 @@
         <entry-card
           class="no-highlight"
           v-if="pageDb.hasOwnProperty(key)"
-          @click.native="logger.debug({ key, value: resultDb[key] })"
-          :entry="resultDb[key]"
+          @click.native="logger.debug({ key, value: pageDb[key] })"
+          :entry="pageDb[key]"
           :entryKey="key"/>
       </v-flex>
     </v-layout>
@@ -47,7 +46,7 @@ export default {
   },
   methods: {
     ...mapMutations('dictionary', ['setLoadState']),
-    ...mapActions('dictionary', ['getById', 'updateAssociations', 'getByIds']),
+    ...mapActions('dictionary', ['getById', 'updateAssociations']),
     onInitDb () {
       // NOTE: disabled for the time being (add function as param in main-page-base to re-enable)
       return this.updateAssociations({

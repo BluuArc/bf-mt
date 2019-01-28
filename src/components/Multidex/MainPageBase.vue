@@ -205,27 +205,22 @@
         <result-container
           class="pa-0"
           :dataIsLoading="isVisuallyLoadingFromOptions"
-          :loadingMessage="resultLoadingMessage"
+          :loadingMessage="`${loadingFilters ? 'Loading' : 'Sorting'} data...`"
           :requiredModules="pageModules"
           :stateInfo="stateInfo"
           :actionInfo="actionInfo"
           :maxResults="stateInfo[mainModule.name].numEntries[activeServer]"
           :numResults="allSortedEntries.length"
           :logger="logger">
-          <slot
-            name="results"
-            :logger="logger"
-            :keys="entriesToShow"
-            :resultDb="resultDb"
-            :getMultidexPathTo="(key) => getMultidexPathTo(key, activeServer).resolved.fullPath">
+          <slot name="results" :logger="logger" :keys="entriesToShow" :getMultidexPathTo="(key) => getMultidexPathTo(key, activeServer).resolved.fullPath">
             <v-layout row wrap>
               <v-flex
                 v-for="key in entriesToShow"
                 :key="key"
                 xs12 sm6 md4 xl3>
-                <base-entry-card :to="getMultidexPathTo(key, activeServer).resolved.fullPath" :entry="resultDb[key]" v-if="pageDb.hasOwnProperty(key)">
+                <base-entry-card :to="getMultidexPathTo(key, activeServer).resolved.fullPath" :entry="pageDb[key]" v-if="pageDb.hasOwnProperty(key)">
                   <v-card-text>
-                    {{ (resultDb[key] && (resultDb[key].name || resultDb[key].description)) || key }}
+                    {{ (pageDb[key] && (pageDb[key].name || pageDb[key].description)) || key }}
                   </v-card-text>
                 </base-entry-card>
               </v-flex>
@@ -340,10 +335,6 @@ export default {
       type: Object,
       default: () => {},
     },
-    getByIds: {
-      type: Function,
-      default: () => {},
-    },
     getMultidexRouteParamsTo: {
       type: Function,
       required: true,
@@ -439,7 +430,7 @@ export default {
     },
     // separate from isVisuallyLoadingFromOptions
     isInternallyLoadingFromOptions () {
-      return this.loadingFilters || this.loadingSorts || this.loadingResultDb;
+      return this.loadingFilters || this.loadingSorts;
     },
     searchResultCountText () {
       return [`Showing ${this.allSortedEntries.length}`, this.mainModule.fullName, this.mainModule.fullName === 'Dictionary' ? 'Entries' : ''].join(' ');
@@ -474,18 +465,6 @@ export default {
     hasUpdates () {
       return !!this.toUpdate.find(m => m.name === this.mainModule.name);
     },
-    resultLoadingMessage () {
-      let prefix;
-      if (this.loadingFilters) {
-        prefix = 'Filtering';
-      } else if (this.loadingSorts) {
-        prefix = 'Sorting';
-      } else if (this.loadingResultDb) {
-        prefix = 'Loading';
-      }
-
-      return prefix ? `${prefix} data...` : undefined;
-    },
   },
   data () {
     const filterOptions = {
@@ -517,14 +496,12 @@ export default {
       showLadSelector: false,
     };
     return {
-      resultDb: {},
       sortOptions,
       filterOptions,
       ...resultOptions,
       isVisuallyInitializing: true,
       loadingFilters: false,
       loadingSorts: false,
-      loadingResultDb: false,
       hasInitDb: false,
       isVisuallyLoadingFromOptions: false,
       ...resultViewConfig,
@@ -760,15 +737,7 @@ export default {
         logger.error('SORT', err);
         this.allSortedEntries = this.filteredKeys.slice();
       }
-      await this.updateResultDb();
       this.loadingSorts = false;
-    },
-    async updateResultDb () {
-      logger.debug('updating resultDb');
-      this.loadingResultDb = true;
-      const keys = this.entriesToShow;
-      this.resultDb = await this.getByIds(keys);
-      this.loadingResultDb = false;
     },
     debounceApplyFilters: debounce(async function () {
       logger.debug('debounce apply filters');
@@ -918,8 +887,6 @@ export default {
       window.scrollTo(0, 0);
       this.delayedPageIndexChecker();
       this.syncPageIndexToPaginationModel();
-      this.loadingResultDb = true;
-      this.updateResultDb();
     },
     paginationModel (newValue) {
       this.pageIndex = newValue - 1;
