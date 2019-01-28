@@ -86,19 +86,18 @@ export default {
       logger.debug('finished updating data');
       commit('setLoadState', false);
     },
-    // TODO: pass along state.possibleValues for sort purposes
-    async getFilteredKeys ({ state, dispatch }, inputFilters = {}) {
-      logger.debug('filters', inputFilters);
+    async getFilteredKeys ({ state, dispatch }, { filters, sorts }) {
+      logger.debug('filters', filters);
       let keys; // leave blank, as it should default to full DB in worker
 
       const {
         exclusives = exclusiveFilterOptions.allValue,
-      } = inputFilters;
+      } = filters;
       if (!exclusiveFilterOptions.isAll(exclusives)) {
         keys = await dispatch('filterServerExclusiveKeys', { filter: exclusives, keys });
       }
 
-      return dbWorker.getFilteredKeys(state.activeServer, { keys, ...inputFilters });
+      return dbWorker.getFilteredKeys(state.activeServer, { keys, ...filters }, sorts ? { ...sorts, possibleValues: state.possibleValues} : undefined);
     },
     async getSortedKeys ({ state }, { type, isAscending, keys }) {
       logger.debug('sorts', { type, isAscending, keys });

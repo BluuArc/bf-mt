@@ -272,43 +272,18 @@ export const createActions = (worker, downloadWorker, logger, dbEntryName = 'uni
       }, [filter, otherKeys, exclusiveFilterOptions.values, keys, state.pageDb]);
       return result;
     },
-    async filterProcsAndPassives ({ commit, state, getters }, { procs = [], procAreas = [], passives = [], passiveAreas = [], keys = [] }) {
-      if (procs.length === 0 && passives.length === 0) {
-        return keys;
-      }
-
-      const searchQuery = {
-        procs: procs.slice().sort().map(val => typeof val !== 'string' ? val.toString() : val),
-        procAreas: procAreas.slice().sort(),
-        passives: passives.slice().sort().map(val => typeof val !== 'string' ? val.toString() : val),
-        passiveAreas: passiveAreas.slice().sort(),
-      };
-      const cacheKey = JSON.stringify(searchQuery);
-      let filteredKeys = state.buffSearchCache[cacheKey];
-      if (!filteredKeys) {
-        logger.debug('cache miss for current procs/passive filters', cacheKey);
-        const filteredDb = await worker.getMiniDb(state.activeServer, searchQuery, getters.miniDbFields);
-        filteredKeys = Object.keys(filteredDb);
-        commit('setBuffSearchCache', { [cacheKey]: filteredKeys });
-      } else {
-        logger.debug('cache hit for current procs/passive filters', filteredKeys.length);
-      }
-      return await SWorker.run((keys, cachedKeys) => {
-        return keys.filter(key => cachedKeys.includes(key));
-      }, [keys, filteredKeys]);
-    },
-    async getFilteredKeys ({ state, dispatch }, inputFilters = {}) {
-      logger.debug('filters', inputFilters);
+    async getFilteredKeys ({ state, dispatch }, { filters, sorts }) {
+      logger.debug('filters', filters);
       let keys; // leave blank, as it should default to full DB in worker
 
       const {
         exclusives = exclusiveFilterOptions.allValue,
-      } = inputFilters;
+      } = filters;
       if (!exclusiveFilterOptions.isAll(exclusives)) {
         keys = await dispatch('filterServerExclusiveKeys', { filter: exclusives, keys });
       }
 
-      return worker.getFilteredKeys(state.activeServer, { keys, ...inputFilters });
+      return worker.getFilteredKeys(state.activeServer, { keys, ...filters }, sorts);
     },
     async getSortedKeys ({ state }, { type, isAscending, keys }) {
       logger.debug('sorts', { type, isAscending, keys });

@@ -147,7 +147,10 @@ export function generateActionInfo (context, multidexModules = moduleInfo.filter
       actionInfo[name] = {
         update: getActionForModule(name, 'updateData'),
         delete: getActionForModule(name, 'deleteData'),
-        filter: getActionForModule(name, 'getFilteredKeys'),
+        filter: (filters, sorts) => {
+          const filterFn = getActionForModule(name, 'getFilteredKeys');
+          return filterFn({ filters, sorts });
+        },
         sort: getActionForModule(name, 'getSortedKeys'),
         dbSync: getActionForModule(name, 'ensurePageDbSyncWithServer'),
         updateFilterUrl: getMutationForModule(name, 'setFilterUrl'),
