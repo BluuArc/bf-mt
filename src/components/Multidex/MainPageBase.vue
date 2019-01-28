@@ -204,7 +204,7 @@
       <v-flex v-else>
         <result-container
           class="pa-0"
-          :dataIsLoading="isVisuallyLoadingFromOptions"
+          :dataIsLoading="isVisuallyLoadingFromOptions || loadingResultDb"
           :loadingMessage="resultLoadingMessage"
           :requiredModules="pageModules"
           :stateInfo="stateInfo"
@@ -439,7 +439,7 @@ export default {
     },
     // separate from isVisuallyLoadingFromOptions
     isInternallyLoadingFromOptions () {
-      return this.loadingFilters || this.loadingSorts || this.loadingResultDb;
+      return this.loadingFilters || this.loadingSorts /* || this.loadingResultDb */;
     },
     searchResultCountText () {
       return [`Showing ${this.allSortedEntries.length}`, this.mainModule.fullName, this.mainModule.fullName === 'Dictionary' ? 'Entries' : ''].join(' ');
