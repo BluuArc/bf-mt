@@ -3,7 +3,6 @@ import { makeMultidexWorker } from '../instances/dexie-client';
 import downloadWorker from '../instances/download-worker';
 import { createState, createMutations, createActions, createGetters } from './helper';
 import { getCacheBustingUrlParam } from '@/modules/utils';
-import { exclusiveFilterOptions } from '@/modules/constants';
 import SWorker from '@/assets/sww.min';
 
 const logger = new Logger({ prefix: '[STORE/DICTIONARY]' });
@@ -32,6 +31,7 @@ export default {
     // filterTypes: () => ['associatedUnits', 'associatedItems', 'exclusives'],
     filterTypes: () => [],
     requiredModules: () => ['dictionary'/*, 'units', 'items'*/],
+    miniDbFields: () => ['*'],
   },
   actions: {
     ...createActions(dbWorker, downloadWorker, logger, 'dictionary'),
@@ -144,68 +144,6 @@ export default {
       }
       logger.debug('finished updating data');
       commit('setLoadState', false);
-    },
-    async getFilteredKeys ({ state, dispatch }, inputFilters = {}) {
-      logger.debug('filters', inputFilters);
-      let keys = Object.keys(state.pageDb);
-
-      const {
-        exclusives = exclusiveFilterOptions.allValue,
-      } = inputFilters;
-      if (!exclusiveFilterOptions.isAll(exclusives)) {
-        keys = await dispatch('filterServerExclusiveKeys', { filter: exclusives, keys });
-      }
-
-      // const ternaryHelper = {
-      //   associatedUnits: defaultTernaryOptions.values,
-      // };
-
-      const result = await SWorker.run((keys, filters, pageDb/*, ternaryHelper*/) => {
-        const {
-          name = '',
-          // associatedUnits = '',
-        } = filters;
-        // trim off the spaces of subsequent names
-        const names = (name || '').split('|').filter((v, i) => i === 0 || v.trim()).map(n => n.toLowerCase());
-
-        // const fitsTernary = (entryIsTrue = false, filterValue = '', { all, truthy, falsy }) => {
-        //   return filterValue === all ||
-        //   (filterValue === truthy && entryIsTrue) ||
-        //   (filterValue === falsy && !entryIsTrue);
-        // };
-
-        return keys.filter(key => {
-          const entry = pageDb[key];
-          const fitsDescription = (!name ? true : names.filter(n => entry.toLowerCase().includes(n)).length > 0);
-          const fitsID = (!name ? true : names.filter(n => key.toString().toLowerCase().includes(n)).length > 0);
-
-          // const hasAssociatedUnits = Array.isArray(entry.associated_units) && entry.associated_units.length > 0;
-          // const fitsAssociatedUnits = fitsTernary(hasAssociatedUnits, associatedUnits, ternaryHelper.associatedUnits);
-
-          return [fitsDescription || fitsID/* , fitsAssociatedUnits*/].every(val => val);
-        });
-      }, [keys, inputFilters, state.pageDb/*, ternaryHelper*/]);
-
-      return result;
-    },
-    async getSortedKeys ({ state }, { type, isAscending, keys }) {
-      logger.debug('sorts', { type, isAscending, keys });
-      const result = await SWorker.run((keys, type, isAscending, pageDb) => {
-        const sortTypes = {
-          'Dictionary ID': (idA, idB, isAscending) => {
-            const result = (idA > idB) ? 1 : -1;
-            return isAscending ? result : -result;
-          },
-          Alphabetical: (idA, idB, isAscending) => {
-            const [nameA, nameB] = [pageDb[idA], pageDb[idB]];
-            const result = (nameA > nameB) ? 1 : -1;
-            return isAscending ? result : -result;
-          },
-        };
-
-        return keys.slice().sort((a, b) => sortTypes[type](a, b, isAscending));
-      }, [keys, type, isAscending, state.pageDb]);
-      return result;
     },
   },
 };

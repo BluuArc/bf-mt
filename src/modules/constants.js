@@ -1,5 +1,50 @@
 import TernaryFilterOption from './TernaryFilterOption';
 
+export const multidexModuleInfo = Object.freeze([
+  {
+    name: 'units',
+    fullName: 'Units',
+    type: 'multidex',
+    link: '/multidex/units',
+  },
+  {
+    name: 'items',
+    fullName: 'Items',
+    type: 'multidex',
+    link: '/multidex/items',
+  },
+  {
+    name: 'bursts',
+    fullName: 'Bursts',
+    type: 'multidex',
+    link: '/multidex/bursts',
+  },
+  {
+    name: 'extraSkills',
+    fullName: 'Extra Skills',
+    type: 'multidex',
+    link: '/multidex/extra-skills',
+  },
+  {
+    name: 'leaderSkills',
+    fullName: 'Leader Skills',
+    type: 'multidex',
+    link: '/multidex/leader-skills',
+  },
+  {
+    name: 'missions',
+    fullName: 'Missions',
+    type: 'multidex',
+    link: '/multidex/missions',
+  },
+  {
+    name: 'dictionary',
+    fullName: 'Dictionary',
+    type: 'multidex',
+    link: '/multidex/dictionary',
+  },
+]);
+
 export const servers = Object.freeze(['gl', 'eu', 'jp']);
 export const elements = Object.freeze(['fire', 'water', 'earth', 'thunder', 'light', 'dark']);
 export const genders = Object.freeze(['male', 'female', 'other']);

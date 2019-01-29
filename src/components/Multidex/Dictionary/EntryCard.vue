@@ -5,7 +5,7 @@
         <v-flex>
           <div class="d-flex-container items-center">
             <h1 class="subheading d-inline-block" style="word-break: break-word;">
-              <b v-text="entryKey" title="key"/>
+              <b v-text="entryKey || '(Empty ID)'" title="key"/>
             </h1>
           </div>
         </v-flex>

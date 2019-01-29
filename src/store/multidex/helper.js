@@ -36,6 +36,7 @@ export const createState = () => {
 
 export const createGetters = (multidexModuleName = 'units') => {
   return {
+    miniDbFields: () => ['id', 'name'],
     getMultidexPathTo: state => (id, server = state.activeServer) => {
       // logger.todo('check if filters are properly retrieved for', multidexModuleName);
       const params = [
@@ -129,11 +130,11 @@ export const createMutations = (logger) => { // eslint-disable-line no-unused-va
 export const createActions = (worker, downloadWorker, logger, dbEntryName = 'units') => {
   /* eslint-disable no-unused-vars */
   return {
-    getMiniDb ({ state }, server = 'gl') {
+    getMiniDb ({ state, getters }, server = 'gl') {
       if (!isValidServer(server)) {
         throw Error(`Invalid server "${server}"`);
       }
-      return worker.getMiniDb(server);
+      return worker.getMiniDb(server, undefined, getters.miniDbFields);
     },
     async getDbStatistics ({ state }, server = 'gl') {
       if (!isValidServer(server)) {
@@ -271,30 +272,22 @@ export const createActions = (worker, downloadWorker, logger, dbEntryName = 'uni
       }, [filter, otherKeys, exclusiveFilterOptions.values, keys, state.pageDb]);
       return result;
     },
-    async filterProcsAndPassives ({ commit, state }, { procs = [], procAreas = [], passives = [], passiveAreas = [], keys = [] }) {
-      if (procs.length === 0 && passives.length === 0) {
-        return keys;
+    async getFilteredKeys ({ state, dispatch }, { filters, sorts }) {
+      logger.debug('filters', filters);
+      let keys; // leave blank, as it should default to full DB in worker
+
+      const {
+        exclusives = exclusiveFilterOptions.allValue,
+      } = filters;
+      if (!exclusiveFilterOptions.isAll(exclusives)) {
+        keys = await dispatch('filterServerExclusiveKeys', { filter: exclusives, keys });
       }
 
-      const searchQuery = {
-        procs: procs.slice().sort().map(val => typeof val !== 'string' ? val.toString() : val),
-        procAreas: procAreas.slice().sort(),
-        passives: passives.slice().sort().map(val => typeof val !== 'string' ? val.toString() : val),
-        passiveAreas: passiveAreas.slice().sort(),
-      };
-      const cacheKey = JSON.stringify(searchQuery);
-      let filteredKeys = state.buffSearchCache[cacheKey];
-      if (!filteredKeys) {
-        logger.debug('cache miss for current procs/passive filters', cacheKey);
-        const filteredDb = await worker.getMiniDb(state.activeServer, searchQuery);
-        filteredKeys = Object.keys(filteredDb);
-        commit('setBuffSearchCache', { [cacheKey]: filteredKeys });
-      } else {
-        logger.debug('cache hit for current procs/passive filters', filteredKeys.length);
-      }
-      return await SWorker.run((keys, cachedKeys) => {
-        return keys.filter(key => cachedKeys.includes(key));
-      }, [keys, filteredKeys]);
+      return worker.getFilteredKeys(state.activeServer, { keys, ...filters }, sorts);
+    },
+    async getSortedKeys ({ state }, { type, isAscending, keys }) {
+      logger.debug('sorts', { type, isAscending, keys });
+      return worker.getSortedKeys(state.activeServer, keys, { type, isAscending });
     },
   };
   /* eslint-enable no-unused-vars */

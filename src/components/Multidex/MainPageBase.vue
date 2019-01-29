@@ -709,12 +709,11 @@ export default {
       }
       this.loadingFilters = true;
       try {
-        this.filteredKeys = await this.actionInfo[this.mainModule.name].filter(this.filterOptions);
+        this.filteredKeys = await this.actionInfo[this.mainModule.name].filter(this.filterOptions, this.sortOptions);
+        this.allSortedEntries = this.filteredKeys.slice(); // sort automatically applied in filter function
       } catch (err) {
         logger.error('FILTER', err);
         this.filteredKeys = Object.keys(this.pageDb);
-      } finally {
-        await this.applySorts();
       }
       this.loadingFilters = false;
     },
