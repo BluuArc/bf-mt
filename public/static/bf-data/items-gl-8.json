@@ -18556,6 +18556,75 @@
       "840438"
     ]
   },
+  "819210": {
+    "desc": "40% boost to Def, Rec, max HP, 15% damage reduction, negates Def ignoring effects, all status ailments and Atk, Def, Rec reduction effects & probable resistance against 2 KO attacks",
+    "effect": [
+      {
+        "def% buff": 40,
+        "hp% buff": 40,
+        "passive id": "1",
+        "rec% buff": 40
+      },
+      {
+        "dmg% mitigation": 15,
+        "passive id": "8"
+      },
+      {
+        "ignore def resist chance%": 100,
+        "passive id": "92"
+      },
+      {
+        "atk down resist%": 100,
+        "curse resist%": 100,
+        "def down resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "poison resist%": 100,
+        "rec down resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "angel idol chance% condition": 0,
+        "angel idol recover chance% high": 40,
+        "angel idol recover chance% low": 40,
+        "angel idol recover counts": 2,
+        "angel idol recover hp%": 100,
+        "passive id": "69"
+      }
+    ],
+    "id": 819210,
+    "max_stack": 1,
+    "name": "Uln'gha",
+    "raid": false,
+    "rarity": 7,
+    "sell_price": 30000,
+    "sphere type": 10,
+    "sphere type text": "Damage Reducing",
+    "thumbnail": "sphere_thum_819210.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "820628",
+      "830647",
+      "830648",
+      "840547",
+      "840548",
+      "850507",
+      "850508",
+      "860017",
+      "860018",
+      "860338"
+    ]
+  },
   "819211": {
     "desc": "120% boost to Atk when BB gauge is above 50%, greatly boosts all elemental damage, 60% boost to Spark damage & raises Atk parameter limits to 160000",
     "effect": [
@@ -18638,8 +18707,8 @@
         "passive id": "24"
       },
       {
-        "bc fill when attacked high": 0,
-        "bc fill when attacked low": 0,
+        "bc fill when attacked high": 1,
+        "bc fill when attacked low": 1,
         "bc fill when attacked%": 100,
         "passive id": "25"
       }
