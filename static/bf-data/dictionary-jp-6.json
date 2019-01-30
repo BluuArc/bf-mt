@@ -1,20 +1,4 @@
 {
-  "MST_SKILLS_2830597_DESCRIPTION": {
-    "en": "20 combo massive Earth attack on all foes, 10 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Earth elemental damage for 3 turns",
-    "es": "20 combo massive Earth attack on all foes, 10 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Earth elemental damage for 3 turns",
-    "id": "20 combo massive Earth attack on all foes, 10 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Earth elemental damage for 3 turns",
-    "pt": "20 combo massive Earth attack on all foes, 10 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Earth elemental damage for 3 turns",
-    "th": "20 combo massive Earth attack on all foes, 10 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Earth elemental damage for 3 turns",
-    "vi": "20 combo massive Earth attack on all foes, 10 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Earth elemental damage for 3 turns"
-  },
-  "MST_SKILLS_2830597_NAME": {
-    "en": "Living Kaleidoscope",
-    "es": "Living Kaleidoscope",
-    "id": "Living Kaleidoscope",
-    "pt": "Living Kaleidoscope",
-    "th": "Living Kaleidoscope",
-    "vi": "Living Kaleidoscope"
-  },
   "MST_SKILLS_2830598_DESCRIPTION": {
     "en": "23 combo massive Earth attack on all foes, 12 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & purges turn skip effect from all allies",
     "es": "23 combo massive Earth attack on all foes, 12 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & purges turn skip effect from all allies",
@@ -782,6 +766,38 @@
     "pt": "Graceful Fate",
     "th": "Graceful Fate",
     "vi": "Graceful Fate"
+  },
+  "MST_SKILLS_2840627_DESCRIPTION": {
+    "en": "21 combo massive Thunder attack on all foes (25% active pierce on Water, Thunder types), enormously boosts all Atk, Def, Rec and critical hit rate for 3 turns, Spark damage enormously boosts BB gauge for 3 turns, probability of raising allies from KO & probable resistance against 1 KO attack",
+    "es": "21 combo massive Thunder attack on all foes (25% active pierce on Water, Thunder types), enormously boosts all Atk, Def, Rec and critical hit rate for 3 turns, Spark damage enormously boosts BB gauge for 3 turns, probability of raising allies from KO & probable resistance against 1 KO attack",
+    "id": "21 combo massive Thunder attack on all foes (25% active pierce on Water, Thunder types), enormously boosts all Atk, Def, Rec and critical hit rate for 3 turns, Spark damage enormously boosts BB gauge for 3 turns, probability of raising allies from KO & probable resistance against 1 KO attack",
+    "pt": "21 combo massive Thunder attack on all foes (25% active pierce on Water, Thunder types), enormously boosts all Atk, Def, Rec and critical hit rate for 3 turns, Spark damage enormously boosts BB gauge for 3 turns, probability of raising allies from KO & probable resistance against 1 KO attack",
+    "th": "21 combo massive Thunder attack on all foes (25% active pierce on Water, Thunder types), enormously boosts all Atk, Def, Rec and critical hit rate for 3 turns, Spark damage enormously boosts BB gauge for 3 turns, probability of raising allies from KO & probable resistance against 1 KO attack",
+    "vi": "21 combo massive Thunder attack on all foes (25% active pierce on Water, Thunder types), enormously boosts all Atk, Def, Rec and critical hit rate for 3 turns, Spark damage enormously boosts BB gauge for 3 turns, probability of raising allies from KO & probable resistance against 1 KO attack"
+  },
+  "MST_SKILLS_2840627_NAME": {
+    "en": "Immortal Descent",
+    "es": "Immortal Descent",
+    "id": "Immortal Descent",
+    "pt": "Immortal Descent",
+    "th": "Immortal Descent",
+    "vi": "Immortal Descent"
+  },
+  "MST_SKILLS_2840628_DESCRIPTION": {
+    "en": "24 combo massive Thunder attack on all foes (25% active pierce to Water, Thunder types), enormously boosts Atk, Def, Rec and critical hit rate for 4 turns, Spark damage enormously boosts BB gauge for 4 turns, raises allies from KO, probable resistance against 1 KO attack & fully restores HP for 4 turns",
+    "es": "24 combo massive Thunder attack on all foes (25% active pierce to Water, Thunder types), enormously boosts Atk, Def, Rec and critical hit rate for 4 turns, Spark damage enormously boosts BB gauge for 4 turns, raises allies from KO, probable resistance against 1 KO attack & fully restores HP for 4 turns",
+    "id": "24 combo massive Thunder attack on all foes (25% active pierce to Water, Thunder types), enormously boosts Atk, Def, Rec and critical hit rate for 4 turns, Spark damage enormously boosts BB gauge for 4 turns, raises allies from KO, probable resistance against 1 KO attack & fully restores HP for 4 turns",
+    "pt": "24 combo massive Thunder attack on all foes (25% active pierce to Water, Thunder types), enormously boosts Atk, Def, Rec and critical hit rate for 4 turns, Spark damage enormously boosts BB gauge for 4 turns, raises allies from KO, probable resistance against 1 KO attack & fully restores HP for 4 turns",
+    "th": "24 combo massive Thunder attack on all foes (25% active pierce to Water, Thunder types), enormously boosts Atk, Def, Rec and critical hit rate for 4 turns, Spark damage enormously boosts BB gauge for 4 turns, raises allies from KO, probable resistance against 1 KO attack & fully restores HP for 4 turns",
+    "vi": "24 combo massive Thunder attack on all foes (25% active pierce to Water, Thunder types), enormously boosts Atk, Def, Rec and critical hit rate for 4 turns, Spark damage enormously boosts BB gauge for 4 turns, raises allies from KO, probable resistance against 1 KO attack & fully restores HP for 4 turns"
+  },
+  "MST_SKILLS_2840628_NAME": {
+    "en": "Heaven-Sundering Roar",
+    "es": "Heaven-Sundering Roar",
+    "id": "Heaven-Sundering Roar",
+    "pt": "Heaven-Sundering Roar",
+    "th": "Heaven-Sundering Roar",
+    "vi": "Heaven-Sundering Roar"
   },
   "MST_SKILLS_2840657_DESCRIPTION": {
     "en": "20 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec, critical hit rate, BB Atk and critical damage for 3 turns & adds probable 1 turn Atk, Def reduction effects to attack for 5 turns",
@@ -87894,5 +87910,69 @@
     "pt": "Explosão da Fênix",
     "th": "ฟีนิกซ์ บลาสต์",
     "vi": "Phoenix Blast"
+  },
+  "MST_SKILLS_810527_DESCRIPTION": {
+    "en": "6 combo massive Fire attack on single enemy, adds Def ignoring effect to attack for 2 turns & chance of greatly reducing enemy's Atk and for 2 turns",
+    "es": "Combo grupal de 6 devastadores ataques ígneos. El ataque ignora la defensa por 2 turnos. Puede reducir el ATQ enemigo por 2 turnos",
+    "id": "6 kombo serangan Api masif ke 1 musuh, 2 giliran: menambah efek mengabaikan Pertahanan musuh & kans amat mengurangi Serangan musuh",
+    "pt": "None",
+    "th": "6 คอมโบ โจมตีด้วยธาตุไฟอันรุนแรงใส่ศัตรู 1 ตัว เพิ่มพลังป้องกันโดยไม่นับพลังโจมตี 2 เทิร์น และมีโอกาสสูงในการลดค่าโจมตีของศัตรู 2 เทิร์น",
+    "vi": "6 combo massive Fire attack on single enemy, adds Def ignoring effect to attack for 2 turns & chance of greatly reducing enemy's Atk and for 2 turns"
+  },
+  "MST_SKILLS_810527_NAME": {
+    "en": "Garuda Impact",
+    "es": "Impacto de Garuda",
+    "id": "Hantaman Garuda",
+    "pt": "Impacto Garuda",
+    "th": "การูด้า อิมแพค",
+    "vi": "Garuda Impact"
+  },
+  "MST_SKILLS_810528_DESCRIPTION": {
+    "en": "16 combo powerful Fire attack on all foes, greatly boosts own Atk, Def and enormously boosts own critical hit rate for 3 turns, boosts own max HP, critical vulnerability infliction for 3 turns, adds to self probability of performing 1 extra action within the same turn & fills own BB gauge to max",
+    "es": "16 combo powerful Fire attack on all foes, greatly boosts own Atk, Def and enormously boosts own critical hit rate for 3 turns, boosts own max HP, critical vulnerability infliction for 3 turns, adds to self probability of performing 1 extra action within the same turn & fills own BB gauge to max",
+    "id": "16 combo powerful Fire attack on all foes, greatly boosts own Atk, Def and enormously boosts own critical hit rate for 3 turns, boosts own max HP, critical vulnerability infliction for 3 turns, adds to self probability of performing 1 extra action within the same turn & fills own BB gauge to max",
+    "pt": "16 combo powerful Fire attack on all foes, greatly boosts own Atk, Def and enormously boosts own critical hit rate for 3 turns, boosts own max HP, critical vulnerability infliction for 3 turns, adds to self probability of performing 1 extra action within the same turn & fills own BB gauge to max",
+    "th": "16 combo powerful Fire attack on all foes, greatly boosts own Atk, Def and enormously boosts own critical hit rate for 3 turns, boosts own max HP, critical vulnerability infliction for 3 turns, adds to self probability of performing 1 extra action within the same turn & fills own BB gauge to max",
+    "vi": "16 combo powerful Fire attack on all foes, greatly boosts own Atk, Def and enormously boosts own critical hit rate for 3 turns, boosts own max HP, critical vulnerability infliction for 3 turns, adds to self probability of performing 1 extra action within the same turn & fills own BB gauge to max"
+  },
+  "MST_SKILLS_810528_NAME": {
+    "en": "Phoenix Inferno",
+    "es": "Phoenix Inferno",
+    "id": "Phoenix Inferno",
+    "pt": "Phoenix Inferno",
+    "th": "Phoenix Inferno",
+    "vi": "Phoenix Inferno"
+  },
+  "MST_SKILLS_810547_DESCRIPTION": {
+    "en": "16 combo powerful Fire attack on single foe (damage relative to remaining HP), adds Def ignoring effect to attack for 3 turns, boosts max HP & fills own BB gauge to max",
+    "es": "16 combo powerful Fire attack on single foe (damage relative to remaining HP), adds Def ignoring effect to attack for 3 turns, boosts max HP & fills own BB gauge to max",
+    "id": "16 combo powerful Fire attack on single foe (damage relative to remaining HP), adds Def ignoring effect to attack for 3 turns, boosts max HP & fills own BB gauge to max",
+    "pt": "16 combo powerful Fire attack on single foe (damage relative to remaining HP), adds Def ignoring effect to attack for 3 turns, boosts max HP & fills own BB gauge to max",
+    "th": "16 combo powerful Fire attack on single foe (damage relative to remaining HP), adds Def ignoring effect to attack for 3 turns, boosts max HP & fills own BB gauge to max",
+    "vi": "16 combo powerful Fire attack on single foe (damage relative to remaining HP), adds Def ignoring effect to attack for 3 turns, boosts max HP & fills own BB gauge to max"
+  },
+  "MST_SKILLS_810547_NAME": {
+    "en": "Crimson Phoenix Blade Lv. 1",
+    "es": "Crimson Phoenix Blade Lv. 1",
+    "id": "Crimson Phoenix Blade Lv. 1",
+    "pt": "Crimson Phoenix Blade Lv. 1",
+    "th": "Crimson Phoenix Blade Lv. 1",
+    "vi": "Crimson Phoenix Blade Lv. 1"
+  },
+  "MST_SKILLS_810548_DESCRIPTION": {
+    "en": "27 combo massive Fire attack on single foe (damage relative to remaining HP), adds Def ignoring effect to attack for 3 turns, greatly boosts max HP, adds 1 extra action within the same turn & fills own BB gauge to max",
+    "es": "27 combo massive Fire attack on single foe (damage relative to remaining HP), adds Def ignoring effect to attack for 3 turns, greatly boosts max HP, adds 1 extra action within the same turn & fills own BB gauge to max",
+    "id": "27 combo massive Fire attack on single foe (damage relative to remaining HP), adds Def ignoring effect to attack for 3 turns, greatly boosts max HP, adds 1 extra action within the same turn & fills own BB gauge to max",
+    "pt": "27 combo massive Fire attack on single foe (damage relative to remaining HP), adds Def ignoring effect to attack for 3 turns, greatly boosts max HP, adds 1 extra action within the same turn & fills own BB gauge to max",
+    "th": "27 combo massive Fire attack on single foe (damage relative to remaining HP), adds Def ignoring effect to attack for 3 turns, greatly boosts max HP, adds 1 extra action within the same turn & fills own BB gauge to max",
+    "vi": "27 combo massive Fire attack on single foe (damage relative to remaining HP), adds Def ignoring effect to attack for 3 turns, greatly boosts max HP, adds 1 extra action within the same turn & fills own BB gauge to max"
+  },
+  "MST_SKILLS_810548_NAME": {
+    "en": "Crimson Phoenix Blade Lv. 4",
+    "es": "Crimson Phoenix Blade Lv. 4",
+    "id": "Crimson Phoenix Blade Lv. 4",
+    "pt": "Crimson Phoenix Blade Lv. 4",
+    "th": "Crimson Phoenix Blade Lv. 4",
+    "vi": "Crimson Phoenix Blade Lv. 4"
   }
 }

@@ -1,4 +1,100 @@
 {
+  "MST_LEADERSKILLS_801016_DESCRIPTION": {
+    "en": "30% boost to max HP, 50% boost to Rec & mitigates 10% of damage received",
+    "es": "Aliados: 30% en PS, 50% en rec. y 15% en crit. Menos 10% daño recibido",
+    "id": "Peningkatan HP 30%, PULIH 50%, CRIT 15%, mengurangi 10% kerusakan untuk semua sekutu.",
+    "pt": "Todos os aliados ganham um reforço de 30% no HP, 50% na REC e 15% no crítico. Reduz em 10% o dano recebido.",
+    "th": "พันธมิตรทุกคนได้รับ 30% เพิ่มค่า HP, 50% เพิ่มค่า ฟื้นฟู, 15%  เพิ่มค่า คริติคอล. ลดค่าลง 10% ของความเสียหายที่ได้รับ",
+    "vi": "Tất cả liên minh nhận tăng 30% Thể lực, tăng 50% Phục hồi, tăng 15% Đòn nguy hiểm. Giảm 10% thiệt hại nhận được."
+  },
+  "MST_LEADERSKILLS_801016_NAME": {
+    "en": "Tidal Grandeur",
+    "es": "Magnificencia marina",
+    "id": "Pasang Megah",
+    "pt": "Tsunami Grandioso",
+    "th": "ไทดอล แกรนเชอร์",
+    "vi": "Thủy triều hùng vĩ"
+  },
+  "MST_LEADERSKILLS_801017_DESCRIPTION": {
+    "en": "20% boost to Atk and Def of all Water types & 15% boost to max HP",
+    "es": "Los aliados acuáticos aumentan 20% ataque y defensa, y un 15% los PS",
+    "id": "Semua sekutu berelemen Air mendapat ekstra SERANG & TAHAN 20%, HP 15%",
+    "pt": "Todos os aliados do elemento Água recebem reforço de 20% no ATQ e DEF, e de 15% no HP",
+    "th": "พันธมิตรธาตุน้ำทั้งหมดได้รับ 20% เพิ่มค่าให้กับ โจมตี กับ  ป้องกัน, และ 15% เพิ่มค่าให้ HP",
+    "vi": "Tất cả liên minh Hệ thủy nhận tăng 20% cả Tấn công & Phòng thủ và tăng 15% Thể lực"
+  },
+  "MST_LEADERSKILLS_801017_NAME": {
+    "en": "Frozen Soul",
+    "es": "Alma gélida",
+    "id": "Jiwa Beku",
+    "pt": "Alma Congelada",
+    "th": "โฟรเซ่น โซล",
+    "vi": "Linh hồn băng giá"
+  },
+  "MST_LEADERSKILLS_801018_DESCRIPTION": {
+    "en": "Boost to BC & Item drop rate",
+    "es": "Aumenta la posibilidad de obtener CB y objetos",
+    "id": "Menambah BC & perolehan barang",
+    "pt": "Reforço na taxa de queda de BC e itens",
+    "th": "เพิ่มอัตราการดรอปของ BC กับ ไอเทม",
+    "vi": "Tăng BC & tỷ lệ rơi đồ"
+  },
+  "MST_LEADERSKILLS_801018_NAME": {
+    "en": "Season Givings",
+    "es": "Regalos navideños",
+    "id": "Pemberian Natal",
+    "pt": "Presentes Sazonais",
+    "th": "ซีซั่น กีฟวิ่ง",
+    "vi": "Tặng phẩm theo mùa"
+  },
+  "MST_LEADERSKILLS_801019_DESCRIPTION": {
+    "en": "Large boost to BC & Item drop rate",
+    "es": "Aumenta notablemente la posibilidad de obtener CB y objetos",
+    "id": "Tambahan besar BC & perolehan barang",
+    "pt": "Grande reforço na taxa de queda de BC e itens",
+    "th": "เพิ่มอัตราการดรอปของ BC กับ ไอเทม อย่างมาก",
+    "vi": "Tăng nhiều BC & tỷ lệ rơi đồ"
+  },
+  "MST_LEADERSKILLS_801019_NAME": {
+    "en": "Season Giftings",
+    "es": "Obsequios navideños",
+    "id": "Penghadiahan Natal",
+    "pt": "Presentes Festivos",
+    "th": "ซีซั่น กิฟท์ติ้ง",
+    "vi": "Quà tặng theo mùa"
+  },
+  "MST_LEADERSKILLS_801020_DESCRIPTION": {
+    "en": "Huge boost to BC & Item drop rate",
+    "es": "Aumenta enormemente la posibilidad de obtener CB y objetos",
+    "id": "Tambahan jumbo BC & perolehan barang",
+    "pt": "Enorme reforço na taxa de queda de BC e itens",
+    "th": "เพิ่มอัตราการดรอปของ BC กับ ไอเทม อย่างมากมาย",
+    "vi": "Tăng rất nhiều BC & tỷ lệ rơi đồ"
+  },
+  "MST_LEADERSKILLS_801020_NAME": {
+    "en": "Season Cravings",
+    "es": "Anhelos navideños",
+    "id": "Idaman Natal",
+    "pt": "Ànsia Festiva",
+    "th": "ซีซั่น คราฟวิ่ง",
+    "vi": "Thứ thèm muốn theo mùa"
+  },
+  "MST_LEADERSKILLS_801021_DESCRIPTION": {
+    "en": "10% boost to Atk, Def and Rec & 5% boost to HP",
+    "es": "Aumenta un 10% el ataque, la defensa y la recuperación, y un 5% los PS",
+    "id": "Peningkatan Serang, Tahan, Pulih: 10%,  HP 5%",
+    "pt": "10% de reforço no ATQ, DEF e REC e 5% no HP",
+    "th": "10% เพิ่มค่าให้กับ โจมตี กับ  ป้องกัน, และ 5% เพิ่มค่าให้ HP",
+    "vi": "Tăng 10% sức mạnh Tấn công, Phòng thủ và Phục hồi & tăng 5% thể lực"
+  },
+  "MST_LEADERSKILLS_801021_NAME": {
+    "en": "Frost Aura",
+    "es": "Aura gélida",
+    "id": "Aura Beku",
+    "pt": "Aura Gelada",
+    "th": "ฟรอสต์ ออร่า",
+    "vi": "Khí chất sương giá"
+  },
   "MST_LEADERSKILLS_801022_DESCRIPTION": {
     "en": "15% boost to Atk, Def and Rec & 10% boost to HP",
     "es": "Aumenta 15% el ataque, la defensa y la recuperación, y un 10% los PS",
@@ -3920,12 +4016,12 @@
     "vi": "Aegis-Shattering Wave"
   },
   "MST_LEADERSKILLS_820278_DESCRIPTION": {
-    "en": "200% boost to Atk and 60% boost to max HP of Water types, 130% boost to Spark damage, chance of reducing damage taken to 1 & hugely boosts Water elemental damage. 25% boost to all parameters of Water types & 15% damage reduction from Water, Fire types in Guild Raid",
-    "es": "200% boost to Atk and 60% boost to max HP of Water types, 130% boost to Spark damage, chance of reducing damage taken to 1 & hugely boosts Water elemental damage. 25% boost to all parameters of Water types & 15% damage reduction from Water, Fire types in Guild Raid",
-    "id": "200% ekstra Serang, 60% ekstra HP maks tipe Air, 130% ekstra kerusakan Percikan, kans kurangi kerusakan menjadi 1, amat menambah kerusakan elemen Air. 25% ekstra semua parameter tipe Air, kurangi 15% kerusakan tipe Air, Api dalam Perang Bersama",
-    "pt": "200% boost to Atk and 60% boost to max HP of Water types, 130% boost to Spark damage, chance of reducing damage taken to 1 & hugely boosts Water elemental damage. 25% boost to all parameters of Water types & 15% damage reduction from Water, Fire types in Guild Raid",
-    "th": "200% เพิ่มค่าให้ โจมตี กับ 60% เพิ่มค่าให้ HP สูงสุด ของชนิดน้ำ, 130% เพิ่มค่าให้ ความเสียหายสปาร์ค, โอกาสที่จะลดความเสียหายที่ได้รับเหลือ 1 และ เพิ่มค่าอย่างสูงให้ ความเสียหายธาตุน้ำ 25% เพิ่มค่าให้ พารามิเตอร์ทั้งหมด ของชนิดน้ำ และ 15% ลดความเสียหายจากชนิด น้ำ, ไฟ ในกีลด์เรด",
-    "vi": "200% boost to Atk and 60% boost to max HP of Water types, 130% boost to Spark damage, chance of reducing damage taken to 1 & hugely boosts Water elemental damage. 25% boost to all parameters of Water types & 15% damage reduction from Water, Fire types in Guild Raid"
+    "en": "225% boost to Atk and 100% boost to max HP of Water types, hugely boosts Spark damage, probable damage reduction to 1 & enormously boosts Water elemental damage. 25% boost to all parameters for Water types & 20% damage reduction from Fire, Water types in Guild Raid.",
+    "es": "225% boost to Atk and 100% boost to max HP of Water types, hugely boosts Spark damage, probable damage reduction to 1 & enormously boosts Water elemental damage. 25% boost to all parameters for Water types & 20% damage reduction from Fire, Water types in Guild Raid.",
+    "id": "225% boost to Atk and 100% boost to max HP of Water types, hugely boosts Spark damage, probable damage reduction to 1 & enormously boosts Water elemental damage. 25% boost to all parameters for Water types & 20% damage reduction from Fire, Water types in Guild Raid.",
+    "pt": "225% boost to Atk and 100% boost to max HP of Water types, hugely boosts Spark damage, probable damage reduction to 1 & enormously boosts Water elemental damage. 25% boost to all parameters for Water types & 20% damage reduction from Fire, Water types in Guild Raid.",
+    "th": "225% boost to Atk and 100% boost to max HP of Water types, hugely boosts Spark damage, probable damage reduction to 1 & enormously boosts Water elemental damage. 25% boost to all parameters for Water types & 20% damage reduction from Fire, Water types in Guild Raid.",
+    "vi": "225% boost to Atk and 100% boost to max HP of Water types, hugely boosts Spark damage, probable damage reduction to 1 & enormously boosts Water elemental damage. 25% boost to all parameters for Water types & 20% damage reduction from Fire, Water types in Guild Raid."
   },
   "MST_LEADERSKILLS_820278_NAME": {
     "en": "Razor Hurricane Approach",
@@ -4350,6 +4446,22 @@
     "pt": "Amphibian Hero",
     "th": "Amphibian Hero",
     "vi": "Amphibian Hero"
+  },
+  "MST_LEADERSKILLS_820628_DESCRIPTION": {
+    "en": "130% boost to Def, Rec, 100% boost to max HP, 15% damage reduction, negates critical damage, elemental damage, all status ailments and Atk, Def, Rec reduction effects & damage taken enormously boosts BB gauge",
+    "es": "130% boost to Def, Rec, 100% boost to max HP, 15% damage reduction, negates critical damage, elemental damage, all status ailments and Atk, Def, Rec reduction effects & damage taken enormously boosts BB gauge",
+    "id": "130% boost to Def, Rec, 100% boost to max HP, 15% damage reduction, negates critical damage, elemental damage, all status ailments and Atk, Def, Rec reduction effects & damage taken enormously boosts BB gauge",
+    "pt": "130% boost to Def, Rec, 100% boost to max HP, 15% damage reduction, negates critical damage, elemental damage, all status ailments and Atk, Def, Rec reduction effects & damage taken enormously boosts BB gauge",
+    "th": "130% boost to Def, Rec, 100% boost to max HP, 15% damage reduction, negates critical damage, elemental damage, all status ailments and Atk, Def, Rec reduction effects & damage taken enormously boosts BB gauge",
+    "vi": "130% boost to Def, Rec, 100% boost to max HP, 15% damage reduction, negates critical damage, elemental damage, all status ailments and Atk, Def, Rec reduction effects & damage taken enormously boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_820628_NAME": {
+    "en": "Cursed Allure",
+    "es": "Cursed Allure",
+    "id": "Cursed Allure",
+    "pt": "Cursed Allure",
+    "th": "Cursed Allure",
+    "vi": "Cursed Allure"
   },
   "MST_LEADERSKILLS_820657_DESCRIPTION": {
     "en": "100% boost to Atk, Def and 80% boost to max HP of Water types, 10% damage reduction from Fire, Water types, raises normal hit amount & normal attacks may hit all foes",
@@ -5454,6 +5566,38 @@
     "pt": "Richest Son",
     "th": "Richest Son",
     "vi": "Richest Son"
+  },
+  "MST_LEADERSKILLS_840627_DESCRIPTION": {
+    "en": "100% boost to Atk, Def, max HP and 30% boost to critical hit rate for Thunder types, Spark damage slightly restores HP and boosts BB gauge & 10% damage reduction from Water, Thunder types",
+    "es": "100% boost to Atk, Def, max HP and 30% boost to critical hit rate for Thunder types, Spark damage slightly restores HP and boosts BB gauge & 10% damage reduction from Water, Thunder types",
+    "id": "100% boost to Atk, Def, max HP and 30% boost to critical hit rate for Thunder types, Spark damage slightly restores HP and boosts BB gauge & 10% damage reduction from Water, Thunder types",
+    "pt": "100% boost to Atk, Def, max HP and 30% boost to critical hit rate for Thunder types, Spark damage slightly restores HP and boosts BB gauge & 10% damage reduction from Water, Thunder types",
+    "th": "100% boost to Atk, Def, max HP and 30% boost to critical hit rate for Thunder types, Spark damage slightly restores HP and boosts BB gauge & 10% damage reduction from Water, Thunder types",
+    "vi": "100% boost to Atk, Def, max HP and 30% boost to critical hit rate for Thunder types, Spark damage slightly restores HP and boosts BB gauge & 10% damage reduction from Water, Thunder types"
+  },
+  "MST_LEADERSKILLS_840627_NAME": {
+    "en": "Hidden Dragon",
+    "es": "Hidden Dragon",
+    "id": "Hidden Dragon",
+    "pt": "Hidden Dragon",
+    "th": "Hidden Dragon",
+    "vi": "Hidden Dragon"
+  },
+  "MST_LEADERSKILLS_840628_DESCRIPTION": {
+    "en": "120% boost to Atk, Def, max HP and 30% boost to critical hit rate of Thunder types, Spark damage slightly restores HP and considerably boosts BB gauge, greatly reduces BB gauge required for BB & 20% damage reduction from Water, Thunder types",
+    "es": "120% boost to Atk, Def, max HP and 30% boost to critical hit rate of Thunder types, Spark damage slightly restores HP and considerably boosts BB gauge, greatly reduces BB gauge required for BB & 20% damage reduction from Water, Thunder types",
+    "id": "120% boost to Atk, Def, max HP and 30% boost to critical hit rate of Thunder types, Spark damage slightly restores HP and considerably boosts BB gauge, greatly reduces BB gauge required for BB & 20% damage reduction from Water, Thunder types",
+    "pt": "120% boost to Atk, Def, max HP and 30% boost to critical hit rate of Thunder types, Spark damage slightly restores HP and considerably boosts BB gauge, greatly reduces BB gauge required for BB & 20% damage reduction from Water, Thunder types",
+    "th": "120% boost to Atk, Def, max HP and 30% boost to critical hit rate of Thunder types, Spark damage slightly restores HP and considerably boosts BB gauge, greatly reduces BB gauge required for BB & 20% damage reduction from Water, Thunder types",
+    "vi": "120% boost to Atk, Def, max HP and 30% boost to critical hit rate of Thunder types, Spark damage slightly restores HP and considerably boosts BB gauge, greatly reduces BB gauge required for BB & 20% damage reduction from Water, Thunder types"
+  },
+  "MST_LEADERSKILLS_840628_NAME": {
+    "en": "Lord of the Storm",
+    "es": "Lord of the Storm",
+    "id": "Lord of the Storm",
+    "pt": "Lord of the Storm",
+    "th": "Lord of the Storm",
+    "vi": "Lord of the Storm"
   },
   "MST_LEADERSKILLS_840657_DESCRIPTION": {
     "en": "100% boost to Atk, Def and 80% boost to max HP for Thunder types, 10% damage reduction from Water, Thunder types, enormously boosts BC efficacy & enormously boosts BB Atk",
@@ -87830,69 +87974,5 @@
     "pt": "GS-200",
     "th": "จีเอส-200",
     "vi": "GS-200"
-  },
-  "MST_MONSTERS_54767_NAME": {
-    "en": "GS-200",
-    "es": "GS-200",
-    "id": "Dewa Petir Amy",
-    "pt": "GS-200",
-    "th": "จีเอส-200",
-    "vi": "GS-200"
-  },
-  "MST_MONSTERS_54768_NAME": {
-    "en": "GS-200",
-    "es": "GS-200",
-    "id": "Jenderal Weiss",
-    "pt": "GS-200",
-    "th": "จีเอส-200",
-    "vi": "GS-200"
-  },
-  "MST_MONSTERS_54769_NAME": {
-    "en": "GS-200",
-    "es": "GS-200",
-    "id": "GS-200",
-    "pt": "GS-200",
-    "th": "GS-200",
-    "vi": "GS-200"
-  },
-  "MST_MONSTERS_54770_NAME": {
-    "en": "GS-200",
-    "es": "GS-200",
-    "id": "GS-200",
-    "pt": "GS-200",
-    "th": "GS-200",
-    "vi": "GS-200"
-  },
-  "MST_MONSTERS_54800_NAME": {
-    "en": "GS-1000",
-    "es": "GS-1000",
-    "id": "GS-1000",
-    "pt": "GS-1000",
-    "th": "จีเอส-1000",
-    "vi": "GS-1000"
-  },
-  "MST_MONSTERS_54801_NAME": {
-    "en": "GS-1000",
-    "es": "GS-1000",
-    "id": "GS-1000",
-    "pt": "GS-1000",
-    "th": "จีเอส-1000",
-    "vi": "GS-1000"
-  },
-  "MST_MONSTERS_54802_NAME": {
-    "en": "GS-1000",
-    "es": "GS-1000",
-    "id": "GS-1000",
-    "pt": "GS-1000",
-    "th": "จีเอส-1000",
-    "vi": "GS-1000"
-  },
-  "MST_MONSTERS_54803_NAME": {
-    "en": "GS-1000",
-    "es": "GS-1000",
-    "id": "GS-1000",
-    "pt": "GS-1000",
-    "th": "จีเอส-1000",
-    "vi": "GS-1000"
   }
 }

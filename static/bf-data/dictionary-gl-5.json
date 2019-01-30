@@ -1,4 +1,52 @@
 {
+  "MST_SKILLS_2122588_NAME": {
+    "en": "Paula! Listen to me!",
+    "es": "¡Paula! ¡Óyeme!",
+    "id": "Paula! Dengarkan aku!",
+    "pt": "Paula! Escute!",
+    "th": "พอลล่า! ฟังข้า!",
+    "vi": "Paula! Listen to me!"
+  },
+  "MST_SKILLS_2122589_DESCRIPTION": {
+    "en": "15 combo Thunder and Light attack on all enemies & probable Injury effect",
+    "es": "Combo grupal de 15 poderosos ataques atronadores y lumínicos. Puede causar Herida",
+    "id": "15 kombo serangan Guntur dan Terang ke semua musuh & kemungkinan efek Luka",
+    "pt": "Combo de 15 golpes de Trovão e Luz em todos os inimigos e provável efeito lesão",
+    "th": "15 คอมโบ โจมตีธาตุสายฟ้า กับ แสง ใส่ศัตรูทั้งหมด และ อาจจะทำให้คิดสถานะ บาดเจ็บ",
+    "vi": "15 combo Thunder and Light attack on all enemies & probable Injury effect"
+  },
+  "MST_SKILLS_2122589_NAME": {
+    "en": "We can't destroy them...!",
+    "es": "¡No podemos destruirlos!",
+    "id": "Kita tidak dapat menghancurkan mereka...!",
+    "pt": "Não podemos destrui-los...!",
+    "th": "เราจะกำจัดพวกเขาไม่ได้!",
+    "vi": "We can't destroy them...!"
+  },
+  "MST_SKILLS_212258_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_212258_NAME": {
+    "en": "I've a reputation to uphold.",
+    "es": "Tengo que mantener mi reputación.",
+    "id": "Aku punya reputasi untuk dipertahankan.",
+    "pt": "Tenho uma reputação a manter.",
+    "th": "ข้าต้องสร้างชื่อเสียงเพื่อให้เกิดการสนับสนุน",
+    "vi": "I've a reputation to uphold."
+  },
+  "MST_SKILLS_21225900_NAME": {
+    "en": "I walk the path of war.",
+    "es": "I walk the path of war.",
+    "id": "Aku berjalan dalam peperangan.",
+    "pt": "I walk the path of war.",
+    "th": "ข้าจะเดินไปในเส้นทางแห่งสงคราม",
+    "vi": "I walk the path of war."
+  },
   "MST_SKILLS_2122590_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -86632,12 +86680,12 @@
     "vi": "World-Hushing Cut"
   },
   "MST_SKILLS_2820278_DESCRIPTION": {
-    "en": "28 combo massive Water attack on all foes, enormously boosts Spark damage for 3 turns, enormously boosts Def for 3 turns, enormously boosts Water elemental damage for 3 turns & hugely boosts max HP",
-    "es": "28 combo massive Water attack on all foes, enormously boosts Spark damage for 3 turns, enormously boosts Def for 3 turns, enormously boosts Water elemental damage for 3 turns & hugely boosts max HP",
-    "id": "28 kombo serangan Air masif ke semua musuh, 3 giliran: ekstra jumbo kerusakan Percikan, Tahan, kerusakan elemen Air & amat menambah HP maks",
-    "pt": "28 combo massive Water attack on all foes, enormously boosts Spark damage for 3 turns, enormously boosts Def for 3 turns, enormously boosts Water elemental damage for 3 turns & hugely boosts max HP",
-    "th": "28 คอมโบ โจมตีธาตุน้ำรุนแรงมหาศาล ใส่ศัตรูทั้งหมด, เพิ่มค่ามหาศาลให้ ความเสียหายสปาร์ค นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ ป้องกัน นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ความเสียหายธาตุน้ำ นาน 3 เทิร์น และ เพิ่มค่าอย่างสูงให้ HP สูงสุด",
-    "vi": "28 combo massive Water attack on all foes, enormously boosts Spark damage for 3 turns, enormously boosts Def for 3 turns, enormously boosts Water elemental damage for 3 turns & hugely boosts max HP"
+    "en": "28 combo massive Water attack on all foes, enormously boosts Spark damage for 3 turns, enormously boosts Def  for 3 turns, enormously boosts Water elemental damage for 3 turns & hugely boosts max HP",
+    "es": "28 combo massive Water attack on all foes, enormously boosts Spark damage for 3 turns, enormously boosts Def  for 3 turns, enormously boosts Water elemental damage for 3 turns & hugely boosts max HP",
+    "id": "28 combo massive Water attack on all foes, enormously boosts Spark damage for 3 turns, enormously boosts Def  for 3 turns, enormously boosts Water elemental damage for 3 turns & hugely boosts max HP",
+    "pt": "28 combo massive Water attack on all foes, enormously boosts Spark damage for 3 turns, enormously boosts Def  for 3 turns, enormously boosts Water elemental damage for 3 turns & hugely boosts max HP",
+    "th": "28 combo massive Water attack on all foes, enormously boosts Spark damage for 3 turns, enormously boosts Def  for 3 turns, enormously boosts Water elemental damage for 3 turns & hugely boosts max HP",
+    "vi": "28 combo massive Water attack on all foes, enormously boosts Spark damage for 3 turns, enormously boosts Def  for 3 turns, enormously boosts Water elemental damage for 3 turns & hugely boosts max HP"
   },
   "MST_SKILLS_2820278_NAME": {
     "en": "World-Silencing Slash",
@@ -87142,6 +87190,22 @@
     "pt": "Cunning Strike EX",
     "th": "Cunning Strike EX",
     "vi": "Cunning Strike EX"
+  },
+  "MST_SKILLS_2820628_DESCRIPTION": {
+    "en": "17 combo massive Water damage on all foes (25% active Pierce on Fire, Water types), 100% damage reduction for 4 turns, enormously boosts max HP, enormously boosts Atk, Def, Rec relative to max HP for 4 turns, enormously boosts BB gauge for 4 turns & raises allies from KO",
+    "es": "17 combo massive Water damage on all foes (25% active Pierce on Fire, Water types), 100% damage reduction for 4 turns, enormously boosts max HP, enormously boosts Atk, Def, Rec relative to max HP for 4 turns, enormously boosts BB gauge for 4 turns & raises allies from KO",
+    "id": "17 combo massive Water damage on all foes (25% active Pierce on Fire, Water types), 100% damage reduction for 4 turns, enormously boosts max HP, enormously boosts Atk, Def, Rec relative to max HP for 4 turns, enormously boosts BB gauge for 4 turns & raises allies from KO",
+    "pt": "17 combo massive Water damage on all foes (25% active Pierce on Fire, Water types), 100% damage reduction for 4 turns, enormously boosts max HP, enormously boosts Atk, Def, Rec relative to max HP for 4 turns, enormously boosts BB gauge for 4 turns & raises allies from KO",
+    "th": "17 combo massive Water damage on all foes (25% active Pierce on Fire, Water types), 100% damage reduction for 4 turns, enormously boosts max HP, enormously boosts Atk, Def, Rec relative to max HP for 4 turns, enormously boosts BB gauge for 4 turns & raises allies from KO",
+    "vi": "17 combo massive Water damage on all foes (25% active Pierce on Fire, Water types), 100% damage reduction for 4 turns, enormously boosts max HP, enormously boosts Atk, Def, Rec relative to max HP for 4 turns, enormously boosts BB gauge for 4 turns & raises allies from KO"
+  },
+  "MST_SKILLS_2820628_NAME": {
+    "en": "Rite of the Drowning Dark",
+    "es": "Rite of the Drowning Dark",
+    "id": "Rite of the Drowning Dark",
+    "pt": "Rite of the Drowning Dark",
+    "th": "Rite of the Drowning Dark",
+    "vi": "Rite of the Drowning Dark"
   },
   "MST_SKILLS_2820657_DESCRIPTION": {
     "en": "25 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec and critical hit rate for 3 turns, normal attacks hit all foes for 3 turns, considerably raises normal hit amount for 3 turns & 450% boost to critical damage for 3 turns",
@@ -87894,5 +87958,21 @@
     "pt": "Home Run Comet EX",
     "th": "Home Run Comet EX",
     "vi": "Home Run Comet EX"
+  },
+  "MST_SKILLS_2830597_DESCRIPTION": {
+    "en": "20 combo massive Earth attack on all foes, 10 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Earth elemental damage for 3 turns",
+    "es": "20 combo massive Earth attack on all foes, 10 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Earth elemental damage for 3 turns",
+    "id": "20 combo massive Earth attack on all foes, 10 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Earth elemental damage for 3 turns",
+    "pt": "20 combo massive Earth attack on all foes, 10 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Earth elemental damage for 3 turns",
+    "th": "20 combo massive Earth attack on all foes, 10 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Earth elemental damage for 3 turns",
+    "vi": "20 combo massive Earth attack on all foes, 10 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Earth elemental damage for 3 turns"
+  },
+  "MST_SKILLS_2830597_NAME": {
+    "en": "Living Kaleidoscope",
+    "es": "Living Kaleidoscope",
+    "id": "Living Kaleidoscope",
+    "pt": "Living Kaleidoscope",
+    "th": "Living Kaleidoscope",
+    "vi": "Living Kaleidoscope"
   }
 }
