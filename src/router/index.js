@@ -8,6 +8,7 @@ import News from '@/views/News.vue';
 import Debug from '@/views/Debug.vue';
 
 import multidexRoutes from './multidex-routes';
+import toolRoutes from './tool-routes';
 
 Vue.use(Router);
 
@@ -42,6 +43,7 @@ export default new Router({
       component: Debug,
     },
     ...multidexRoutes,
+    ...toolRoutes,
     {
      path: '/not-found',
      name: 'Not Found',

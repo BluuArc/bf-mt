@@ -151,7 +151,7 @@ export default {
     };
     return {
       showDrawer: false,
-       menuItems: [
+      menuItems: [
         {
           subheader: 'General',
           items: [
@@ -177,6 +177,16 @@ export default {
         {
           subheader: 'Multidex',
           items: multidexModules.map(generateMultidexEntry),
+        },
+        {
+          subheader: 'Tools',
+          items: [
+            {
+              title: 'Squads',
+              link: '/tools/squads',
+              image: require('@/assets/unit_table.png'),
+            },
+          ],
         },
       ],
       title: 'Brave Frontier Multi Tool',
