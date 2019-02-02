@@ -24,16 +24,23 @@
               xs12 sm6
               class="d-flex py-1"
               style="align-items: center; border: 1px solid var(--background-color-alt);">
-              <v-flex :style="`flex-grow: 0!important;`">
-                <unit-thumbnail
-                  class="ma-2"
-                  :isLeader="i === sampleSquad.lead"
-                  :isFriend="i === sampleSquad.friend"
-                  :src="getImageUrls(unit.id).ills_battle"
-                  :rarity="getUnit(unit.id).rarity"
-                  :imageTitle="getUnit(unit.id).name || unit.id"
-                  :displayWidth="thumbnailSize" :displayHeight="thumbnailSize"/>
-              </v-flex>
+              <v-layout :style="`flex-grow: 0!important;`" column class="mx-2">
+                <v-flex text-xs-center v-if="$vuetify.breakpoint.xsOnly">
+                  <span class="caption">{{ unit.position }}</span>
+                </v-flex>
+                <v-flex>
+                  <unit-thumbnail
+                    :isLeader="i === sampleSquad.lead"
+                    :isFriend="i === sampleSquad.friend"
+                    :src="getImageUrls(unit.id).ills_battle"
+                    :rarity="getUnit(unit.id).rarity"
+                    :imageTitle="getUnit(unit.id).name || unit.id"
+                    :displayWidth="thumbnailSize" :displayHeight="thumbnailSize"/>
+                </v-flex>
+                <v-flex class="text-xs-center">
+                  <span class="body-1" v-text="`${unit.bbOrder}-${unit.bbType.toUpperCase()}`"/>
+                </v-flex>
+              </v-layout>
               <v-layout column>
                 <!-- name and leader/friend icon -->
                 <v-layout align-center>
@@ -120,6 +127,7 @@ import FriendIcon from '@/components/Multidex/MiniFriendIcon';
 import ExtraSkillIcon from '@/components/Multidex/ExtraSkillIcon';
 import SpIcon from '@/components/Multidex/Units/SpIcon';
 import { spCodeToIndex } from '@/modules/core/units';
+import { unitPositionMapping } from '@/modules/constants';
 
 export default {
   components: {
@@ -149,11 +157,12 @@ export default {
       units: (new Array(6))
         .fill(0)
         .map((_, i) => ({
+          position: unitPositionMapping[i],
           id: `${i+1}0017`,
           es: i % 5 && '1013600',
           spheres: [i % 3 && '47410', i % 2 && '61070'].filter(v => v),
-          sp: i < 3 && 'ACDE',
-          bbOrder: i,
+          sp: (i < 3 || i > 4) && 'ACDE',
+          bbOrder: i + 1,
           bbType: ['bb', 'sbb', 'ubb'][Math.floor(Math.random() * 3)],
         })),
     }),

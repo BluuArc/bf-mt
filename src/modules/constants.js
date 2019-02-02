@@ -131,6 +131,8 @@ export const missionMonsterGroupMapping = Object.freeze({
   '1300': mimicIds.metalMimic,
 });
 
+export const unitPositionMapping = Object.freeze(['Top Left', 'Top Right', 'Middle Left', 'Middle Right', 'Bottom Left', 'Bottom Right']);
+
 export const effectTypes = Object.freeze({
   ATTACK: {
     name: 'Attack',
