@@ -41,7 +41,7 @@
                     <rarity-icon
                       :class="{ 'ml-1': getUnit(unit.id).rarity !== 8, 'mr-1': true, }"
                       :rarity="getUnit(unit.id).rarity || 0"
-                      :displaySize="18"/>
+                      :displaySize="22"/>
                     <span class="font-weight-medium">{{ getUnit(unit.id).name || unit.id }}</span>
                   </v-flex>
                   <v-spacer/>
@@ -56,42 +56,32 @@
                       :displaySize="18"/>
                   </v-flex>
                 </v-layout>
-                <v-layout row wrap>
-                  <template v-if="unit.spheres.length > 0">
-                    <v-layout
-                      v-for="(sphereId, i) in unit.spheres"
-                      :key="`${sphereId}-${i}`"
-                      align-center>
-                      <v-layout style="flex-grow: 0;" align-center justify-center>
-                        <sphere-type-icon
-                          :category="getItem(sphereId)['sphere type']"
-                          :displaySize="24"
-                          class="mr-1"/>
-                      </v-layout>
-                      <v-flex>
-                        {{ getItem(sphereId).name || sphereId }}
-                      </v-flex>
-                    </v-layout>
-                  </template>  
-                  <v-layout v-else align-center>
+                <v-layout row wrap align-center>
+                  <v-layout
+                    v-for="(sphereId, i) in (unit.spheres.length > 0 ? unit.spheres : ['No Sphere'])"
+                    :key="`${sphereId}-${i}`"
+                    align-center>
                     <v-layout style="flex-grow: 0;" align-center justify-center>
                       <sphere-type-icon
-                        :category="0"
-                        :displaySize="24"
+                        :category="getItem(sphereId)['sphere type']"
+                        :displaySize="22"
                         class="mr-1"/>
                     </v-layout>
                     <v-flex>
-                      No sphere
+                      {{ getItem(sphereId).name || sphereId }}
                     </v-flex>
                   </v-layout>
                 </v-layout>
-                <v-layout>
-                  <template v-if="!unit.es">
-                    no es
-                  </template>
-                  <template v-else>
-                    es found
-                  </template>
+                <v-layout align-center>
+                  <v-layout style="flex-grow: 0;" align-center justify-center>
+                    <extra-skill-icon
+                      :inactive="!unit.es"
+                      :displaySize="22"
+                      class="mr-1"/>
+                  </v-layout>
+                  <v-flex>
+                    {{ getExtraSkill(unit.es).name || 'No Extra Skill' }}
+                  </v-flex>
                 </v-layout>
                 <v-flex>SP {{ unit.sp }}</v-flex>
               </v-layout>
@@ -110,6 +100,7 @@ import RarityIcon from '@/components/Multidex/RarityIcon';
 import SphereTypeIcon from '@/components/Multidex/Items/SphereTypeIcon';
 import LeaderIcon from '@/components/Multidex/MiniLeaderIcon';
 import FriendIcon from '@/components/Multidex/MiniFriendIcon';
+import ExtraSkillIcon from '@/components/Multidex/ExtraSkillIcon';
 
 export default {
   components: {
@@ -118,6 +109,7 @@ export default {
     SphereTypeIcon,
     LeaderIcon,
     FriendIcon,
+    ExtraSkillIcon,
   },
   computed: {
     ...mapGetters('units', {
@@ -135,8 +127,8 @@ export default {
         .fill(0)
         .map((_, i) => ({
           id: `${i+1}0017`,
-          es: '1013600',
-          spheres: ['47410', '61070'],
+          es: i % 5 && '1013600',
+          spheres: [i % 3 && '47410', i % 2 && '61070'].filter(v => v),
           sp: 'ABCDE',
           bbOrder: i,
           bbType: ['bb', 'sbb', 'ubb'][Math.floor(Math.random() * 3)],
@@ -188,6 +180,9 @@ export default {
     },
     getItem (id) {
       return this.items[id] || {};
+    },
+    getExtraSkill (id) {
+      return this.extraSkills[id] || {};
     },
   },
 };
