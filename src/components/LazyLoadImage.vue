@@ -5,6 +5,7 @@
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink">
     <title v-if="imageTitle" v-text="imageTitle"/>
+    <slot name="before-image"/>
     <g
       class="lazy--placeholder"
       :style="placeholderImageStyle"
@@ -25,6 +26,7 @@
       class="lazy--actual"
       :style="actualImageStyle"
     />
+    <slot name="after-image"/>
   </svg>
 </template>
 

@@ -22,27 +22,77 @@
               v-for="(unit, i) in sampleSquad.units"
               :key="[JSON.stringify(unit), i].join('-')"
               xs12 sm6
-              class="d-flex"
-              style="align-items: center;">
+              class="d-flex py-1"
+              style="align-items: center; border: 1px solid var(--background-color-alt);">
               <v-flex :style="`flex-grow: 0!important;`">
                 <unit-thumbnail
                   class="ma-2"
-                  :src="getImageUrls(unit.id).ills_thum"
+                  :isLeader="i === sampleSquad.lead"
+                  :isFriend="i === sampleSquad.friend"
+                  :src="getImageUrls(unit.id).ills_battle"
                   :rarity="getUnit(unit.id).rarity"
                   :imageTitle="getUnit(unit.id).name || unit.id"
                   :displayWidth="thumbnailSize" :displayHeight="thumbnailSize"/>
               </v-flex>
               <v-layout column>
-                <v-flex class="d-flex-container items-center">
-                  <span v-if="getUnit(unit.id).rarity < 8">{{ getUnit(unit.id).rarity }}</span>
-                  <rarity-icon
-                    :class="{ 'ml-1': getUnit(unit.id).rarity !== 8, 'mr-1': true }"
-                    :rarity="getUnit(unit.id).rarity || 0"
-                    :displaySize="18"/>
-                  <span class="font-weight-medium">{{ getUnit(unit.id).name || unit.id }}</span>
-                </v-flex>
-                <v-flex>Spheres {{ unit.spheres }}</v-flex>
-                <v-flex>Extra Skill {{ unit.es }}</v-flex>
+                <v-layout align-center>
+                  <v-flex class="d-flex-container align-center">
+                    <span v-if="getUnit(unit.id).rarity < 8">{{ getUnit(unit.id).rarity }}</span>
+                    <rarity-icon
+                      :class="{ 'ml-1': getUnit(unit.id).rarity !== 8, 'mr-1': true, }"
+                      :rarity="getUnit(unit.id).rarity || 0"
+                      :displaySize="18"/>
+                    <span class="font-weight-medium">{{ getUnit(unit.id).name || unit.id }}</span>
+                  </v-flex>
+                  <v-spacer/>
+                  <v-flex
+                    v-if="i === sampleSquad.lead || i === sampleSquad.friend"
+                    style="flex-grow: 0;">
+                    <leader-icon
+                      v-if="i === sampleSquad.lead"
+                      :displaySize="18"/>
+                    <friend-icon
+                      v-else-if="i === sampleSquad.friend"
+                      :displaySize="18"/>
+                  </v-flex>
+                </v-layout>
+                <v-layout row wrap>
+                  <template v-if="unit.spheres.length > 0">
+                    <v-layout
+                      v-for="(sphereId, i) in unit.spheres"
+                      :key="`${sphereId}-${i}`"
+                      align-center>
+                      <v-layout style="flex-grow: 0;" align-center justify-center>
+                        <sphere-type-icon
+                          :category="getItem(sphereId)['sphere type']"
+                          :displaySize="24"
+                          class="mr-1"/>
+                      </v-layout>
+                      <v-flex>
+                        {{ getItem(sphereId).name || sphereId }}
+                      </v-flex>
+                    </v-layout>
+                  </template>  
+                  <v-layout v-else align-center>
+                    <v-layout style="flex-grow: 0;" align-center justify-center>
+                      <sphere-type-icon
+                        :category="0"
+                        :displaySize="24"
+                        class="mr-1"/>
+                    </v-layout>
+                    <v-flex>
+                      No sphere
+                    </v-flex>
+                  </v-layout>
+                </v-layout>
+                <v-layout>
+                  <template v-if="!unit.es">
+                    no es
+                  </template>
+                  <template v-else>
+                    es found
+                  </template>
+                </v-layout>
                 <v-flex>SP {{ unit.sp }}</v-flex>
               </v-layout>
             </v-flex>
@@ -57,11 +107,17 @@
 import { mapGetters, mapActions } from 'vuex';
 import UnitThumbnail from '@/components/Multidex/Units/UnitThumbnail';
 import RarityIcon from '@/components/Multidex/RarityIcon';
+import SphereTypeIcon from '@/components/Multidex/Items/SphereTypeIcon';
+import LeaderIcon from '@/components/Multidex/MiniLeaderIcon';
+import FriendIcon from '@/components/Multidex/MiniFriendIcon';
 
 export default {
   components: {
     UnitThumbnail,
     RarityIcon,
+    SphereTypeIcon,
+    LeaderIcon,
+    FriendIcon,
   },
   computed: {
     ...mapGetters('units', {
@@ -129,6 +185,9 @@ export default {
     }),
     getUnit (id) {
       return this.units[id] || {};
+    },
+    getItem (id) {
+      return this.items[id] || {};
     },
   },
 };
