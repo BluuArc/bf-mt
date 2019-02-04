@@ -1,0 +1,217 @@
+<template>
+  <v-card>
+    <v-layout row>
+      <v-flex>
+        <h1 class="title">
+          {{ squad.name }}
+        </h1>
+      </v-flex>
+      <v-spacer/>
+      <v-flex style="flex-grow: 0;">
+        <h2 class="subheading">
+          {{ squadCost }} Cost
+        </h2>
+      </v-flex>
+    </v-layout>
+    <v-layout row wrap>
+      <v-flex
+        v-for="(unit, i) in fullUnits"
+        :key="getUnitEntryKey(unit, i)"
+        xs12 sm6
+        class="d-flex py-1"
+        style="align-items: center; border: 1px solid var(--background-color-alt);">
+        <v-layout :style="`flex-grow: 0!important;`" column class="mx-2">
+          <v-flex text-xs-center v-if="$vuetify.breakpoint.xsOnly">
+            <span class="caption">{{ unit.position }}</span>
+          </v-flex>
+          <v-flex>
+            <unit-thumbnail
+              :src="getImageUrls(unit.id).ills_battle"
+              :rarity="getUnit(unit.id).rarity"
+              :imageTitle="getUnit(unit.id).name || unit.id"
+              :displayWidth="thumbnailSize" :displayHeight="thumbnailSize"/>
+          </v-flex>
+          <v-flex class="text-xs-center" v-if="!isNaN(unit.bbOrder)">
+            <span class="body-1" v-text="getOrderText(unit)"/>
+          </v-flex>
+        </v-layout>
+        <v-layout column>
+          <!-- name and leader/friend icon -->
+          <v-layout align-center>
+            <v-flex class="d-flex-container align-center">
+              <span v-if="getUnit(unit.id).rarity < 8">{{ getUnit(unit.id).rarity }}</span>
+              <rarity-icon
+                :class="{ 'ml-1': getUnit(unit.id).rarity !== 8, 'mr-1': true, }"
+                :rarity="getUnit(unit.id).rarity || 0"
+                :displaySize="22"/>
+              <span class="font-weight-medium">{{ getUnit(unit.id).name || unit.id }}</span>
+            </v-flex>
+            <v-spacer/>
+            <v-flex
+              v-if="i === squad.lead || i === squad.friend"
+              style="flex-grow: 0;">
+              <leader-icon
+                v-if="i === squad.lead"
+                :displaySize="18"/>
+              <friend-icon
+                v-else-if="i === squad.friend"
+                :displaySize="18"/>
+            </v-flex>
+          </v-layout>
+          <!-- extra skill -->
+          <v-layout align-center>
+            <v-layout style="flex-grow: 0;" align-center justify-center>
+              <extra-skill-icon
+                :inactive="!unit.es"
+                :displaySize="22"
+                class="mr-1"/>
+            </v-layout>
+            <v-flex>
+              {{ getExtraSkill(unit.es).name || 'No Extra Skill' }}
+            </v-flex>
+          </v-layout>
+          <!-- spheres -->
+          <v-layout row wrap align-center>
+            <v-layout
+              v-for="(sphereId, i) in (unit.spheres.length > 0 ? unit.spheres : ['No Sphere'])"
+              :key="`${sphereId}-${i}`"
+              align-center>
+              <v-layout style="flex-grow: 0;" align-center justify-center>
+                <sphere-type-icon
+                  :category="getItem(sphereId)['sphere type']"
+                  :displaySize="22"
+                  class="mr-1"/>
+              </v-layout>
+              <v-flex>
+                {{ getItem(sphereId).name || sphereId }}
+              </v-flex>
+            </v-layout>
+          </v-layout>
+          
+          <!-- SP -->
+          <v-layout v-if="unit.sp">
+            <v-flex style="flex-grow: 0;" class="mr-1">
+              {{ getSpCost(unit) }} SP:
+            </v-flex>
+            <v-flex
+              v-for="category in getSpCategories(unit.id)"
+              :key="`${category}-${unit.id}-${i}`"
+              style="flex-grow: 0;">
+              <sp-icon
+                :category="category"
+                :displaySize="22"/>
+            </v-flex>
+          </v-layout>
+        </v-layout>
+      </v-flex>
+    </v-layout>
+  </v-card>
+</template>
+
+<script>
+import { unitPositionMapping } from '@/modules/constants';
+import { mapGetters } from 'vuex';
+import { spCodeToIndex } from '@/modules/core/units';
+import UnitThumbnail from '@/components/Multidex/Units/UnitThumbnail';
+import RarityIcon from '@/components/Multidex/RarityIcon';
+import SphereTypeIcon from '@/components/Multidex/Items/SphereTypeIcon';
+import LeaderIcon from '@/components/Multidex/MiniLeaderIcon';
+import FriendIcon from '@/components/Multidex/MiniFriendIcon';
+import ExtraSkillIcon from '@/components/Multidex/ExtraSkillIcon';
+import SpIcon from '@/components/Multidex/Units/SpIcon';
+
+export default {
+  components: {
+    UnitThumbnail,
+    RarityIcon,
+    SphereTypeIcon,
+    LeaderIcon,
+    FriendIcon,
+    ExtraSkillIcon,
+    SpIcon,
+  },
+  props: {
+    squad: {
+      type: Object,
+      required: true,
+    },
+    getUnit: {
+      type: Function,
+      default: () => ({}),
+    },
+    getItem: {
+      type: Function,
+      default: () => ({}),
+    },
+    getExtraSkill: {
+      type: Function,
+      default: () => ({}),
+    },
+  },
+  computed: {
+    ...mapGetters('units', {
+      getImageUrls: 'getImageUrls',
+    }),
+    thumbnailSize () {
+      return 64;
+    },
+    iconSize () {
+      return 22;
+    },
+    squadCost () {
+      return this.squad.units
+        .map(({ id }) => this.getUnit(id))
+        .reduce((acc, unit) => acc + (+(unit.cost || 0)), 0);
+    },
+    // fills empty positions with empty values
+    fullUnits () {
+      return unitPositionMapping.map(position => {
+        let unit = this.squad.units.find(unit => unit.position === position);
+        if (!unit) { // empty position, so fill it with empty data
+          unit = { position, id: '(Empty)' };
+        }
+
+        return unit;
+      });
+    },
+  },
+  methods: {
+    getUnitEntryKey (unit = {}, i = 0) {
+      return `${JSON.stringify(unit)}-${i}`;
+    },
+    getOrderText (unit = {}) {
+      return [
+        unit.bbOrder,
+        (unit.bbType || (this.getUnit(unit.id).sbb ? 'sbb' : 'bb')).toUpperCase(),
+      ].join('-');
+    },
+    getSpCategories (unit = {}) {
+      const feSkills = this.getUnit(unit.id).feskills;
+      const enhancements = unit.sp;
+      if (!feSkills || !enhancements) {
+        return [];
+      }
+      const filteredSkills = enhancements.split('')
+        .map(char => feSkills[spCodeToIndex(char)])
+        .filter(v => v)
+        .map(s => +s.category);
+      return Array.from(new Set(filteredSkills));
+    },
+    getSpCost (unit = {}) {
+      const feSkills = this.getUnit(unit.id).feskills;
+      const enhancements = unit.sp;
+      if (!feSkills || !enhancements) {
+        return 0;
+      }
+      return enhancements.split('')
+        .map(char => feSkills[spCodeToIndex(char)])
+        .filter(v => v)
+        .reduce((acc, s) => acc + +s.skill.bp, 0);
+    },
+  },
+};
+</script>
+
+<style>
+
+</style>
