@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-layout row>
+    <v-layout row class="pa-2">
       <v-flex>
         <h1 class="title">
           {{ squad.name }}
@@ -13,7 +13,7 @@
         </h2>
       </v-flex>
     </v-layout>
-    <v-layout row wrap>
+    <v-layout row wrap class="px-2">
       <v-flex
         v-for="(unit, i) in fullUnits"
         :key="getUnitEntryKey(unit, i)"
@@ -44,7 +44,7 @@
                 :class="{ 'ml-1': getUnit(unit.id).rarity !== 8, 'mr-1': true, }"
                 :rarity="getUnit(unit.id).rarity || 0"
                 :displaySize="22"/>
-              <span class="font-weight-medium">{{ getUnit(unit.id).name || unit.id }}</span>
+              <span class="font-weight-bold">{{ getUnit(unit.id).name || unit.id }}</span>
             </v-flex>
             <v-spacer/>
             <v-flex
@@ -105,6 +105,11 @@
         </v-layout>
       </v-flex>
     </v-layout>
+    <v-divider class="mt-2"/>
+    <v-card-actions style="justify-content: space-between;">
+      <v-btn flat @click="$emit('view')">View</v-btn>
+      <v-btn flat @click="$emit('share')">Share</v-btn>
+    </v-card-actions>
   </v-card>
 </template>
 

@@ -6,4 +6,10 @@ export default [
     name: 'Squad List',
     component: ToolsPages.SquadList,
   },
+  {
+    path: '/tools/squads/:id',
+    name: 'Squad',
+    component: ToolsPages.Squads,
+    props: true,
+  },
 ];
