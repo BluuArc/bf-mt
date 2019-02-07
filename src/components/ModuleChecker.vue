@@ -137,6 +137,9 @@ export default {
         this.checkingAvailableModules = true;
         const availableModules = await client.getTablesWithEntries(this.requiredModules, this.activeServer);
         this.missingModules = this.requiredModules.filter(m => !availableModules.includes(m));
+        if (this.missingModules.length === 0) {
+          this.$emit('initfinished');
+        }
         this.checkingAvailableModules = false;
       }
     },
@@ -159,9 +162,6 @@ export default {
     }
     loadingDebouncer = new LoadingDebouncer(val => {
       this.isVisuallyInitializing = val;
-      if (!val) {
-        this.$emit('initfinished');
-      }
     });
   },
   beforeDestroy () {

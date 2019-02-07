@@ -27,8 +27,11 @@ import SquadListCard from '@/components/Tools/Squads/SquadListCard';
 import ModuleChecker from '@/components/ModuleChecker';
 import { unitPositionMapping } from '@/modules/constants';
 import { squadRequiredModules } from '@/router/tool-routes';
+import { Logger } from '@/modules/Logger';
 import LoadingDebouncer from '@/modules/LoadingDebouncer';
 
+// eslint-disable-next-line no-unused-vars
+const logger = new Logger({ prefix: '[SquadList]' });
 let loadingDebouncer;
 export default {
   components: {
@@ -61,9 +64,6 @@ export default {
     loadingDebouncer = new LoadingDebouncer(val => {
       this.isVisuallyLoading = val;
     });
-  },
-  async mounted () {
-    await this.getDbData();
   },
   methods: {
     ...mapActions('units', {
@@ -141,9 +141,6 @@ export default {
     },
   },
   watch: {
-    activeServer () {
-      this.getDbData();
-    },
     isInternallyLoading () {
       loadingDebouncer.setValue(() => this.isInternallyLoading);
     },
