@@ -234,8 +234,8 @@ export const createActions = (worker, downloadWorker, logger, dbEntryName = 'uni
       }
       return entry;
     },
-    async getByIds ({ state }, { ids = [], extractedFields }) {
-      return worker.getByIds(state.activeServer, ids, extractedFields);
+    async getByIds ({ state }, { ids = [], extractedFields, server }) {
+      return worker.getByIds(server || state.activeServer, ids, extractedFields);
     },
     async getKeysForServer ({ state, commit }, server = 'gl') {
       if (!state.keyLists[server]) {

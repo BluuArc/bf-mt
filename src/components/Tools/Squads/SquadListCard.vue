@@ -94,7 +94,7 @@
               {{ getSpCost(unit) }} SP:
             </v-flex>
             <v-flex
-              v-for="category in getSpCategories(unit.id)"
+              v-for="category in getSpCategories(unit)"
               :key="`${category}-${unit.id}-${i}`"
               style="flex-grow: 0;">
               <sp-icon

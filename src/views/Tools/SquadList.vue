@@ -1,31 +1,43 @@
 <template>
-  <v-container>
-    <!-- TODO: check that units, items, and es modules exist -->
-    <v-layout row wrap>
-      <v-flex xs12 v-for="squad in squads" :key="squad.id">
-        <squad-list-card
-          class="ma-2"
-          :squad="squad"
-          :getUnit="getUnit"
-          :getItem="getItem"
-          :getExtraSkill="getExtraSkill"
-          @view="() => goToSquadPage(squad.id)"
-        />
-      </v-flex>
-    </v-layout>
-  </v-container>
+  <module-checker
+    :requiredModules="requiredModules"
+    :isExternallyLoading="isVisuallyLoading"
+    externalLoadingMessage="Fetching squad information..."
+    @initfinished="getDbData">
+    <v-container>
+      <v-layout row wrap>
+        <v-flex xs12 v-for="squad in squads" :key="squad.id">
+          <squad-list-card
+            class="ma-2"
+            :squad="squad"
+            :getUnit="getUnit"
+            :getItem="getItem"
+            :getExtraSkill="getExtraSkill"
+            @view="() => goToSquadPage(squad.id)"
+          />
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </module-checker>
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions, mapState } from 'vuex';
 import SquadListCard from '@/components/Tools/Squads/SquadListCard';
+import ModuleChecker from '@/components/ModuleChecker';
 import { unitPositionMapping } from '@/modules/constants';
+import { squadRequiredModules } from '@/router/tool-routes';
+import LoadingDebouncer from '@/modules/LoadingDebouncer';
 
+let loadingDebouncer;
 export default {
   components: {
     SquadListCard,
+    ModuleChecker,
   },
   computed: {
+    ...mapState('settings', ['activeServer']),
+    requiredModules: () => squadRequiredModules,
     squads () {
       return (new Array(10))
         .fill(0)
@@ -37,27 +49,21 @@ export default {
       units: {},
       items: {},
       extraSkills: {},
+      isInternallyLoading: false,
+      isVisuallyLoading: false,
+      activeCallToken: '0',
     };
   },
-  async created () {
-    const unitIds = new Set(), esIds = new Set(), itemIds = new Set();
-    this.squads.forEach(squad => {
-      squad.units.forEach(unit => {
-        unitIds.add(unit.id);
-        if (unit.es) {
-          esIds.add(unit.es);
-        }
-        if (unit.spheres.length > 0) {
-          unit.spheres.forEach(id => {
-            itemIds.add(id);
-          });
-        }
-      });
+  beforeCreate () {
+    if (loadingDebouncer) {
+      loadingDebouncer.dispose();
+    }
+    loadingDebouncer = new LoadingDebouncer(val => {
+      this.isVisuallyLoading = val;
     });
-
-    this.units = await this.getUnits({ ids: Array.from(unitIds) });
-    this.items = await this.getItems({ ids: Array.from(itemIds) });
-    this.extraSkills = await this.getExtraSkills({ ids: Array.from(esIds) });
+  },
+  async mounted () {
+    await this.getDbData();
   },
   methods: {
     ...mapActions('units', {
@@ -69,6 +75,41 @@ export default {
     ...mapActions('extraSkills', {
       getExtraSkills: 'getByIds',
     }),
+    async getDbData () {
+      this.isInternallyLoading = true;
+      // generate unique value on every call
+      const activeCallToken = [(new Date().valueOf()).toString(), Math.random().toString()].join('-');
+      this.activeCallToken = activeCallToken;
+      const unitIds = new Set(), esIds = new Set(), itemIds = new Set();
+      this.squads.forEach(squad => {
+        squad.units.forEach(unit => {
+          unitIds.add(unit.id);
+          if (unit.es) {
+            esIds.add(unit.es);
+          }
+          if (unit.spheres.length > 0) {
+            unit.spheres.forEach(id => {
+              itemIds.add(id);
+            });
+          }
+        });
+      });
+
+      const currentServer = this.activeServer;
+      await [
+        async () => { this.units = await this.getUnits({ ids: Array.from(unitIds), server: currentServer }); },
+        async () => { this.items = await this.getItems({ ids: Array.from(itemIds), server: currentServer }); },
+        async () => { this.extraSkills = await this.getExtraSkills({ ids: Array.from(esIds), server: currentServer }); },
+      ].reduce((acc, val) => acc.then(() => {
+        // only continue if call token is the same
+        if (activeCallToken === this.activeCallToken) {
+          return val();
+        }
+      }), Promise.resolve());
+      if (activeCallToken === this.activeCallToken) {
+        this.isInternallyLoading = false;
+      }
+    },
     getSampleSquad: () => ({
       id: Math.random().toString().split('.')[1],
       name: 'Example Squad',
@@ -97,6 +138,14 @@ export default {
     },
     goToSquadPage (id) {
       this.$router.push({ path: `/tools/squads/${id}` });
+    },
+  },
+  watch: {
+    activeServer () {
+      this.getDbData();
+    },
+    isInternallyLoading () {
+      loadingDebouncer.setValue(() => this.isInternallyLoading);
     },
   },
 };

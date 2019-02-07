@@ -103,7 +103,14 @@ export class ClientTableApi extends ClientApi {
   }
 }
 
+let modulePresenceCache = {};
 export class ClientMultidexApi extends ClientTableApi {
+  async put (entry) {
+    const result = await super.put(entry);
+    modulePresenceCache = {};
+    return result;
+  }
+
   getByIds ({ server, ids = [], extractedFields = [] }) {
     return super.getByIds({
       query: { server },
@@ -121,8 +128,17 @@ export class ClientMultidexApi extends ClientTableApi {
     });
   }
 
-  getTablesWithEntries (tables = [], server = 'gl') {
-    return this.request('getTablesWithEntries', { tables, server });
+  async getTablesWithEntries (tables = [], server = 'gl') {
+    const nonCachedTables = tables.filter(table => !modulePresenceCache.hasOwnProperty(`${server}:${table}`));
+
+    if (nonCachedTables.length > 0) {
+      const results = await this.request('getTablesWithEntries', { tables: nonCachedTables, server });
+      tables.forEach(table => {
+        modulePresenceCache[`${server}:${table}`] = results.includes(table);
+      });
+    }
+
+    return tables.filter(table => modulePresenceCache[`${server}:${table}`]);
   }
 
   getDbStats (server) {

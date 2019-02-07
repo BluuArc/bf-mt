@@ -60,7 +60,7 @@ export default new Vuex.Store({
     setValueForIconKey (state, { key, value }) {
       state.iconKeyConfigCache[key] = value;
     },
-    setMaxColumnWidthForBuffTable(state, newVal) {
+    setMaxColumnWidthForBuffTable (state, newVal) {
       state.maxColumnWidthForBuffTable = +newVal;
     },
   },
@@ -79,21 +79,26 @@ export default new Vuex.Store({
         commit(`${name}/setLoadState`, true);
       });
 
-      commit('setLoadingMessage', 'Initializing data');
-      await delay(0);
-      for (const m of modules) {
-        logger.debug('initializing', m);
-        await dispatch(`${m}/init`);
-        if (m !== 'settings' && m !== 'github') {
-          commit(`${m}/setLoadState`, true);
+      try {
+        commit('setLoadingMessage', 'Initializing data');
+        await delay(0);
+        for (const m of modules) {
+          logger.debug('initializing', m);
+          await dispatch(`${m}/init`);
+          if (m !== 'settings' && m !== 'github') {
+            commit(`${m}/setLoadState`, true);
+          }
         }
+        await dispatch('settings/init');
+  
+        commit('setLoadingMessage', `Setting data to last set server (${(state.settings.activeServer || 'gl').toUpperCase()})`);
+        await dispatch('setActiveServer', state.settings.activeServer);
+      } catch (err) {
+        throw err;
+      } finally {
+        commit('setLoadingMessage');
+        commit('setInitState', false);
       }
-      await dispatch('settings/init');
-
-      commit('setLoadingMessage', `Setting data to last set server (${(state.settings.activeServer || 'gl').toUpperCase()})`);
-      await dispatch('setActiveServer', state.settings.activeServer);
-      commit('setLoadingMessage');
-      commit('setInitState', false);
     },
     async setActiveServer ({ dispatch, commit }, server = 'gl') { // eslint-disable-line no-unused-vars
       const modules = moduleInfo.map(({ name }) => name);
