@@ -107,7 +107,8 @@
     </v-layout>
     <v-divider class="mt-2"/>
     <v-card-actions style="justify-content: space-between;">
-      <v-btn flat @click="$emit('view')">View</v-btn>
+      <v-btn flat v-if="to" :to="to">View</v-btn>
+      <v-btn flat v-else @click="$emit('view')">View</v-btn>
       <v-btn flat @click="$emit('share')">Share</v-btn>
     </v-card-actions>
   </v-card>
@@ -152,6 +153,10 @@ export default {
       type: Function,
       default: () => ({}),
     },
+    to: {
+      type: String,
+      default: '',
+    },
   },
   computed: {
     ...mapGetters('units', {
@@ -185,9 +190,13 @@ export default {
       return `${JSON.stringify(unit)}-${i}`;
     },
     getOrderText (unit = {}) {
+      const bbType = unit.bbType ||
+        (this.getUnit(unit.id).sbb && 'sbb') ||
+        (this.getUnit(unit.id).bb && 'bb') ||
+        ('natk');
       return [
         unit.bbOrder,
-        (unit.bbType || (this.getUnit(unit.id).sbb ? 'sbb' : 'bb')).toUpperCase(),
+        bbType.toUpperCase(),
       ].join('-');
     },
     getSpCategories (unit = {}) {

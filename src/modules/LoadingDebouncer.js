@@ -9,14 +9,14 @@ export default class LoadingDebouncer {
   }
 
   // synchronous getter that gets current boolean value when evaluated
-  setValue (valueGetter = () => false) {
+  setValue (valueGetter = () => false, immediatelySet = false) {
     // debounce timeout
     if (this._timeout) {
       clearTimeout(this._timeout);
     }
 
     const currentValue = !!valueGetter();
-    if (currentValue) {
+    if (currentValue || immediatelySet) {
       this._setter(currentValue);
     } else {
       this._timeout = setTimeout(() => {

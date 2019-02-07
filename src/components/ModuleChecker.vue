@@ -129,8 +129,8 @@ export default {
     };
   },
   methods: {
-    updateVisuallyInitializingFlag (valueGetter) {
-      loadingDebouncer.setValue(valueGetter);
+    updateVisuallyInitializingFlag (valueGetter, immediatelySet) {
+      loadingDebouncer.setValue(valueGetter, immediatelySet);
     },
     async checkAvailableModules () {
       if (this.requiredModules.length > 0) {
@@ -190,7 +190,7 @@ export default {
       }
     },
     checkingAvailableModules () {
-      this.updateVisuallyInitializingFlag(() => this.checkingAvailableModules);
+      this.updateVisuallyInitializingFlag(() => this.checkingAvailableModules, true);
     },
   },
 };

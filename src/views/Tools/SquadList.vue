@@ -13,7 +13,7 @@
             :getUnit="getUnit"
             :getItem="getItem"
             :getExtraSkill="getExtraSkill"
-            @view="() => goToSquadPage(squad.id)"
+            :to="`/tools/squads/${squad.id}`"
           />
         </v-flex>
       </v-layout>
@@ -97,9 +97,21 @@ export default {
 
       const currentServer = this.activeServer;
       await [
-        async () => { this.units = await this.getUnits({ ids: Array.from(unitIds), server: currentServer }); },
-        async () => { this.items = await this.getItems({ ids: Array.from(itemIds), server: currentServer }); },
-        async () => { this.extraSkills = await this.getExtraSkills({ ids: Array.from(esIds), server: currentServer }); },
+        async () => this.units = await this.getUnits({
+          ids: Array.from(unitIds),
+          server: currentServer,
+          extractedFields: ['id', 'rarity', 'feskills', 'name', 'sbb', 'cost'],
+        }),
+        async () => this.items = await this.getItems({
+          ids: Array.from(itemIds),
+          server: currentServer,
+          extractedFields: ['name', 'sphere type'],
+        }),
+        async () => this.extraSkills = await this.getExtraSkills({
+          ids: Array.from(esIds),
+          server: currentServer,
+          extractedFields: ['name'],
+        }),
       ].reduce((acc, val) => acc.then(() => {
         // only continue if call token is the same
         if (activeCallToken === this.activeCallToken) {
@@ -135,9 +147,6 @@ export default {
     },
     getExtraSkill (id) {
       return this.extraSkills[id] || {};
-    },
-    goToSquadPage (id) {
-      this.$router.push({ path: `/tools/squads/${id}` });
     },
   },
   watch: {
