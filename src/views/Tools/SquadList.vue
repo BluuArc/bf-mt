@@ -14,8 +14,8 @@
             :getItem="getItem"
             :getExtraSkill="getExtraSkill"
             :to="`/tools/squads/${squad.id}`"
-            @mounted="registerSquadCard"
-            @unmounted="unRegisterSquadCard"
+            @register="registerSquadCard"
+            @unregister="unRegisterSquadCard"
           />
         </v-flex>
       </v-layout>

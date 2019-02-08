@@ -192,20 +192,20 @@ export default {
     };
   },
   mounted () {
-    this.$emit('mounted', {
+    this.$emit('register', {
       elem: this.$el,
       squadId: this.squad.id,
       setVisibility: (val) => {
         // only set to true once
         if (val) {
           this.isVisible = true;
-          this.$emit('unmounted', { squadId: this.squad.id });
+          this.$emit('unregister', { squadId: this.squad.id });
         }
       },
     });
   },
   beforeDestroy () {
-    this.$emit('unmounted', { elem: this.$el, squadId: this.squad.id });
+    this.$emit('unregister', { elem: this.$el, squadId: this.squad.id });
   },
   methods: {
     getUnitEntryKey (unit = {}, i = 0) {
@@ -243,12 +243,6 @@ export default {
         .map(char => feSkills[spCodeToIndex(char)])
         .filter(v => v)
         .reduce((acc, s) => acc + +s.skill.bp, 0);
-    },
-  },
-  watch: {
-    isVisible (newValue) {
-      // eslint-disable-next-line no-console
-      console.warn('visibility changed to ', newValue, this.squad.name);
     },
   },
 };
