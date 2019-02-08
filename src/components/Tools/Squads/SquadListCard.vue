@@ -42,6 +42,7 @@
             <v-flex class="d-flex-container align-center">
               <span v-if="getUnit(unit.id).rarity < 8">{{ getUnit(unit.id).rarity }}</span>
               <rarity-icon
+                v-if="isVisible"
                 :class="{ 'ml-1': getUnit(unit.id).rarity !== 8, 'mr-1': true, }"
                 :rarity="getUnit(unit.id).rarity || 0"
                 :displaySize="22"/>
@@ -63,6 +64,7 @@
           <v-layout align-center>
             <v-layout style="flex-grow: 0;" align-center justify-center>
               <extra-skill-icon
+                v-if="isVisible"
                 :inactive="!unit.es"
                 :displaySize="22"
                 class="mr-1"/>
@@ -79,6 +81,7 @@
               align-center>
               <v-layout style="flex-grow: 0;" align-center justify-center>
                 <sphere-type-icon
+                  v-if="isVisible"
                   :category="getItem(sphereId)['sphere type']"
                   :displaySize="22"
                   class="mr-1"/>
@@ -110,7 +113,10 @@
     <v-card-actions style="justify-content: space-between;">
       <v-btn flat v-if="to" :to="to">View</v-btn>
       <v-btn flat v-else @click="$emit('view')">View</v-btn>
-      <v-btn flat @click="$emit('share')">Share</v-btn>
+      <v-btn flat @click="$emit('share')">
+        <v-icon left>share</v-icon>
+        Share
+      </v-btn>
     </v-card-actions>
   </v-card>
 </template>
