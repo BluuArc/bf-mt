@@ -35396,6 +35396,46 @@
       "820658"
     ]
   },
+  "820668": {
+    "desc": "200% boost to Atk and 100% boost to Def, max HP for Water types, greatly boosts BB Atk, enormously boosts Water elemental damage, 15% damage reduction from Fire, Water types & greatly boosts OD gauge fill rate",
+    "effects": [
+      {
+        "atk% buff": 200,
+        "def% buff": 100,
+        "elements buffed": [
+          "water"
+        ],
+        "hp% buff": 100,
+        "passive id": "2"
+      },
+      {
+        "bb atk% buff": 350,
+        "passive id": "64",
+        "sbb atk% buff": 350,
+        "ubb atk% buff": 350
+      },
+      {
+        "elemental weakness multiplier%": 225,
+        "passive id": "50",
+        "water units do extra elemental weakness dmg": true
+      },
+      {
+        "dmg% mitigation for elemental attacks": 15,
+        "mitigate fire attacks": true,
+        "mitigate water attacks": true,
+        "passive id": "62"
+      },
+      {
+        "od fill rate%": 30,
+        "passive id": "70"
+      }
+    ],
+    "id": "820668",
+    "name": "Eternal Lie",
+    "associated_units": [
+      "820668"
+    ]
+  },
   "830047": {
     "desc": "100% boost to Atk, 60% boost to Def, max HP of Earth types, 10% damage reduction from Earth, Thunder types, probable considerable reduction of foe's BB gauge & 50% damage counter",
     "effects": [
