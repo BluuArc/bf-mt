@@ -21,8 +21,8 @@
     </g>
     <image
       :width="imageWidth" :height="imageHeight"
-      :xlink:href="src"
-      :href="src"
+      :xlink:href="imageSource"
+      :href="imageSource"
       class="lazy--actual"
       :style="actualImageStyle"
     />
@@ -60,6 +60,9 @@ export default {
       type: String,
       required: true,
     },
+    isVisible: {
+      default: true,
+    },
   },
   computed: {
     placeholderImageStyle () {
@@ -72,11 +75,31 @@ export default {
   data () {
     return {
       imageLoaded: false,
+      imageSource: '',
     };
   },
   mounted () {
-    this.$el.querySelector('image.lazy--actual')
-      .onload = () => { this.imageLoaded = true; };
+    const imageElem = this.$el.querySelector('image.lazy--actual');
+    imageElem.onload = () => {
+      if (this.imageSource) {
+        this.imageLoaded = true;
+      }
+    };
+
+    // delay loading image if not visible
+    if (this.isVisible) {
+      this.imageSource = this.src;
+    }
+  },
+  watch: {
+    isVisible (newValue) {
+      if (newValue && !this.imageSource) {
+        const imageElem = this.$el.querySelector('image.lazy--actual');
+        if (imageElem) {
+          this.imageSource = this.src;
+        }
+      }
+    },
   },
 };
 </script>

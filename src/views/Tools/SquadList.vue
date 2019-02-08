@@ -14,6 +14,8 @@
             :getItem="getItem"
             :getExtraSkill="getExtraSkill"
             :to="`/tools/squads/${squad.id}`"
+            @mounted="registerSquadCard"
+            @unmounted="unRegisterSquadCard"
           />
         </v-flex>
       </v-layout>
@@ -33,6 +35,7 @@ import LoadingDebouncer from '@/modules/LoadingDebouncer';
 // eslint-disable-next-line no-unused-vars
 const logger = new Logger({ prefix: '[SquadList]' });
 let loadingDebouncer;
+let intersectionObserver;
 export default {
   components: {
     SquadListCard,
@@ -55,6 +58,8 @@ export default {
       isInternallyLoading: false,
       isVisuallyLoading: false,
       activeCallToken: '0',
+      isVisible: false,
+      squadDomElems: {},
     };
   },
   beforeCreate () {
@@ -64,6 +69,25 @@ export default {
     loadingDebouncer = new LoadingDebouncer(val => {
       this.isVisuallyLoading = val;
     });
+
+    if (intersectionObserver && intersectionObserver.disconnect) {
+      intersectionObserver.disconnect();
+    }
+    intersectionObserver = new IntersectionObserver((entries) => {
+      const squadKeys = Object.keys(this.squadDomElems);
+      entries.forEach(entry => {
+        const squadId = squadKeys.find(key => this.squadDomElems[key].elem === entry.target);
+        // logger.warn({ elem: entry.target, isIntersecting: entry.isIntersecting, squadId });
+        if (squadId) {
+          this.squadDomElems[squadId].setVisibility(entry.isIntersecting);
+        }
+      });
+    });
+  },
+  beforeDestroy () {
+    if (intersectionObserver && intersectionObserver.disconnect) {
+      intersectionObserver.disconnect();
+    }
   },
   methods: {
     ...mapActions('units', {
@@ -124,7 +148,7 @@ export default {
     },
     getSampleSquad: () => ({
       id: Math.random().toString().split('.')[1],
-      name: 'Example Squad',
+      name: `Example Squad ${String.fromCharCode('A'.charCodeAt(0) + (Math.floor(Math.random() * 26)))}`,
       lead: 0,
       friend: 3,
       units: (new Array(6))
@@ -147,6 +171,23 @@ export default {
     },
     getExtraSkill (id) {
       return this.extraSkills[id] || {};
+    },
+    registerSquadCard ({ elem, squadId, setVisibility } = {}) {
+      if (elem && squadId) {
+        if (this.squadDomElems[squadId]) {
+          intersectionObserver.unobserve(this.squadDomElems[squadId].elem);
+        }
+        intersectionObserver.observe(elem);
+        this.squadDomElems[squadId] = {
+          elem,
+          setVisibility: (val) => setVisibility(val),
+        };
+      }
+    },
+    unRegisterSquadCard ({ squadId } = {}) {
+      if (squadId && this.squadDomElems.hasOwnProperty(squadId)) {
+        intersectionObserver.unobserve(this.squadDomElems[squadId].elem);
+      }
     },
   },
   watch: {

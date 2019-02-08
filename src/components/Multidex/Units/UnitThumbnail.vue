@@ -7,6 +7,7 @@
     :imageHeight="imageDimensions[1]"
     :placeholderSrc="placeHolderSrc"
     :src="src"
+    :isVisible="isVisible"
   />
 </template>
 

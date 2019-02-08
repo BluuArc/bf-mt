@@ -26,6 +26,7 @@
           </v-flex>
           <v-flex>
             <unit-thumbnail
+              :isVisible="isVisible"
               :src="getImageUrls(unit.id).ills_battle"
               :rarity="getUnit(unit.id).rarity"
               :imageTitle="getUnit(unit.id).name || unit.id"
@@ -89,7 +90,7 @@
           </v-layout>
           
           <!-- SP -->
-          <v-layout v-if="unit.sp">
+          <v-layout v-if="unit.sp && isVisible">
             <v-flex style="flex-grow: 0;" class="mr-1">
               {{ getSpCost(unit) }} SP:
             </v-flex>
@@ -185,6 +186,27 @@ export default {
       });
     },
   },
+  data () {
+    return {
+      isVisible: false,
+    };
+  },
+  mounted () {
+    this.$emit('mounted', {
+      elem: this.$el,
+      squadId: this.squad.id,
+      setVisibility: (val) => {
+        // only set to true once
+        if (val) {
+          this.isVisible = true;
+          this.$emit('unmounted', { squadId: this.squad.id });
+        }
+      },
+    });
+  },
+  beforeDestroy () {
+    this.$emit('unmounted', { elem: this.$el, squadId: this.squad.id });
+  },
   methods: {
     getUnitEntryKey (unit = {}, i = 0) {
       return `${JSON.stringify(unit)}-${i}`;
@@ -221,6 +243,12 @@ export default {
         .map(char => feSkills[spCodeToIndex(char)])
         .filter(v => v)
         .reduce((acc, s) => acc + +s.skill.bp, 0);
+    },
+  },
+  watch: {
+    isVisible (newValue) {
+      // eslint-disable-next-line no-console
+      console.warn('visibility changed to ', newValue, this.squad.name);
     },
   },
 };
