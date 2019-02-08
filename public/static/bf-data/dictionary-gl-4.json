@@ -1,4 +1,292 @@
 {
+  "MST_SKILLS_2000950_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000950_NAME": {
+    "en": "Divine Sword",
+    "es": "Espada divina",
+    "id": "Pedang Ilahi",
+    "pt": "Espada Divina",
+    "th": "ดีไวน์ ซอร์ด",
+    "vi": "Thanh kiếm thần thánh"
+  },
+  "MST_SKILLS_2000951_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000951_NAME": {
+    "en": "Master, let's spar!",
+    "es": "¡Maestro, practiquemos!",
+    "id": "Tuan, ayo bertanding!",
+    "pt": "Mestre, vamos treinar!",
+    "th": "นายท่าน ลุยเลย!",
+    "vi": "Sư phụ, hãy tập nào!"
+  },
+  "MST_SKILLS_2000952_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000952_NAME": {
+    "en": "What amazing skill...",
+    "es": "Qué habilidad fascinante...",
+    "id": "Keterampilan hebat...",
+    "pt": "Que habilidade incrível...",
+    "th": "เป็นทักษะที่ยอดเยี่ยม...",
+    "vi": "Kỹ năng thật đáng kinh ngạc..."
+  },
+  "MST_SKILLS_2000953_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000953_NAME": {
+    "en": "Is this La Veda fencing...?",
+    "es": "¿Esto es esgrima de La Veda?",
+    "id": "Ini anggar La Veda?",
+    "pt": "Essa é a esgrima La Veda...?",
+    "th": "นี่คือการฟันดาบของลา วีดา?",
+    "vi": "Đây là phòng tuyến La Veda...?"
+  },
+  "MST_SKILLS_2000954_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000954_NAME": {
+    "en": "Don't go easy on me, please!",
+    "es": "¡No me dejes ganar!",
+    "id": "Jangan meremehkanku!",
+    "pt": "Não facilite pra mim, por favor!",
+    "th": "อย่าออมมอให้ข้า ได้โปรด!",
+    "vi": "Đừng đánh giá thấp ta chứ!"
+  },
+  "MST_SKILLS_2000955_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000955_NAME": {
+    "en": "Argh, I can still fight!",
+    "es": "¡Argh, todavía puedo luchar!",
+    "id": "Argh, aku masih bisa bertarung!",
+    "pt": "Argh, eu ainda posso lutar!",
+    "th": "อั๊ก ข้ายังสู้ไหวอยู่!",
+    "vi": "Grừ, ta vẫn chiến được!"
+  },
+  "MST_SKILLS_2000960_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000960_NAME": {
+    "en": "Cardinal Judgment",
+    "es": "Juicio del cardenal",
+    "id": "Penghakiman Kardinal",
+    "pt": "Julgamento Cardeal",
+    "th": "คาร์ดินัล จัดจ์เมนท์",
+    "vi": "Phán xét của Đức Hồng Y"
+  },
+  "MST_SKILLS_2000961_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000961_NAME": {
+    "en": "Leave it to me, master.",
+    "es": "Déjamelo a mí, maestro.",
+    "id": "Serangkan padaku, tuan.",
+    "pt": "Deixa comigo, mestre!",
+    "th": "ให้ข้าจัดการเอง นายท่าน",
+    "vi": "Hãy để đó cho ta, sư phụ!"
+  },
+  "MST_SKILLS_2000962_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000962_NAME": {
+    "en": "I've strayed from my path...",
+    "es": "Me he alejado de mi camino.",
+    "id": "Aku telah melenceng dari jalanku...",
+    "pt": "Eu me desviei do meu caminho...",
+    "th": "ข้าหลงออกจากทางของข้า...",
+    "vi": "Ta đã lạc lối mất rồi..."
+  },
+  "MST_SKILLS_2000970_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000970_NAME": {
+    "en": "Bright Enchantment ",
+    "es": "Encantamiento brillante ",
+    "id": "Pesona Terang",
+    "pt": "Encantamento do Brilho ",
+    "th": "ไบร์ท เอนชานท์เมนท์",
+    "vi": "Say mê tươi sáng "
+  },
+  "MST_SKILLS_2000971_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000971_NAME": {
+    "en": "Show me your progress.",
+    "es": "Muéstrame tu progreso.",
+    "id": "Tunjukkan kemajuanmu.",
+    "pt": "Mostre-me o seu progresso.",
+    "th": "ให้ข้าดูความก้าวหน้าของเจ้าหน่อย",
+    "vi": "Cho ta xem ngươi tiến bộ thế nào."
+  },
+  "MST_SKILLS_2000972_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000972_NAME": {
+    "en": "Atro, show no mercy!",
+    "es": "Atro, ¡sin piedad!",
+    "id": "Atro, jangan berbelas kasih!",
+    "pt": "Atro, não tenha piedade!",
+    "th": "อาโทร ไม่ต้องปรานี!",
+    "vi": "Atro, đừng thương xót!"
+  },
+  "MST_SKILLS_2000973_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000973_NAME": {
+    "en": "Atro, you're too soft!",
+    "es": "Atro, ¡eres muy suave!",
+    "id": "Atro, kau terlalu lembek!",
+    "pt": "Atro, você é mole demais!",
+    "th": "อาโทร เจ้าใจดีเกินไปแล้ว!",
+    "vi": "Atro, ngươi mềm lòng quá!"
+  },
+  "MST_SKILLS_2000974_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000974_NAME": {
+    "en": "You still need training...",
+    "es": "Aún necesitas entrenar...",
+    "id": "Kau masih perlu latihan...",
+    "pt": "Você ainda precisa de treinamento...",
+    "th": "เจ้ายังต้องฝึกอีก...",
+    "vi": "Ngươi vẫn cần huấn luyện..."
+  },
+  "MST_SKILLS_2000980_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000980_NAME": {
+    "en": "Flash Arrow",
+    "es": "Flecha del destello",
+    "id": "Panah Flash",
+    "pt": "Flecha Resplandecente",
+    "th": "แฟลช แอโร่ว",
+    "vi": "Mũi tên tia chớp"
+  },
+  "MST_SKILLS_2000981_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000981_NAME": {
+    "en": "D-Did you help me?",
+    "es": "¿Me ayudaste?",
+    "id": "K-kau membantuku?",
+    "pt": "V-você me ajudou?",
+    "th": "จ..เจ้าช่วยข้าไว้ใช่มั้ย?",
+    "vi": "Ng-ngươi đã giúp ta?"
+  },
+  "MST_SKILLS_2000982_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000982_NAME": {
+    "en": "You're so beautiful...",
+    "es": "Eres fascinante...",
+    "id": "Kau begitu cantik...",
+    "pt": "Você é tão boita...",
+    "th": "เจ้าช่างงดงามยิ่งนัก...",
+    "vi": "Ngươi thật xinh đẹp..."
+  },
+  "MST_SKILLS_2000983_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000983_NAME": {
+    "en": "Okay! I'll become a knight!",
+    "es": "¡Muy bien! ¡Me convertiré en caballero!",
+    "id": "Oke! Aku akan menjadi ksatria!",
+    "pt": "Tá bom! Vou me tornar cavaleiro!",
+    "th": "ได้เลย! ข้าจะเป็นอัศวิน!",
+    "vi": "Được thôi! Ta sẽ trở thành hiệp sĩ!"
+  },
   "MST_SKILLS_2000990_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -87798,181 +88086,5 @@
     "pt": "Morra com seus amigos humanos!!",
     "th": "จงตายพร้อมกับเพื่อนมนุษย์ของเจ้าซะเถอะ!!",
     "vi": "Die with your human friends!!"
-  },
-  "MST_SKILLS_2122572_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122572_NAME": {
-    "en": "Sister...",
-    "es": "Hermana...",
-    "id": "Kakak...",
-    "pt": "Irmã...",
-    "th": "ท่านพี่...",
-    "vi": "Sister..."
-  },
-  "MST_SKILLS_212257_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_212257_NAME": {
-    "en": "Your art is not what I seek.",
-    "es": "Tu arte no es lo que busco.",
-    "id": "Senimu bukan yang kucari",
-    "pt": "Sua arte não é o que busco.",
-    "th": "การต่อสู้ของเจ้าไม่ใช่อย่างที่ข้าเห็น",
-    "vi": "Your art is not what I seek."
-  },
-  "MST_SKILLS_21225800_NAME": {
-    "en": "I've a reputation to uphold.",
-    "es": "I've a reputation to uphold.",
-    "id": "Aku punya reputasi.",
-    "pt": "I've a reputation to uphold.",
-    "th": "ข้าจะกอบกู้ชื่อเสียงกลับมา",
-    "vi": "I've a reputation to uphold."
-  },
-  "MST_SKILLS_2122580_DESCRIPTION": {
-    "en": "15 combo Thunder and Light attack on all enemies & probable Injury effect",
-    "es": "Combo grupal de 15 poderosos ataques atronadores y lumínicos. Puede causar Herida",
-    "id": "15 kombo serangan Guntur dan Terang ke semua musuh & kemungkinan efek Luka",
-    "pt": "Combo de 15 golpes de Trovão e Luz em todos os inimigos e provável efeito lesão",
-    "th": "15 คอมโบ โจมตีธาตุสายฟ้า กับ แสง ใส่ศัตรูทั้งหมด และ อาจจะทำให้คิดสถานะ บาดเจ็บ",
-    "vi": "15 combo Thunder and Light attack on all enemies & probable Injury effect"
-  },
-  "MST_SKILLS_2122580_NAME": {
-    "en": "12th Shinto Form: Sengou",
-    "es": "12va forma shinto: Sengou",
-    "id": "Bentuk Shinto ke-12: Sengou",
-    "pt": "12ª Forma Shinto: Sengou",
-    "th": "ร่างที่ 12 ของชินโตะ: เซ็นโก",
-    "vi": "12th Shinto Form: Sengou"
-  },
-  "MST_SKILLS_2122581_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122581_NAME": {
-    "en": "Crusade Form: Sky Crusher",
-    "es": "Forma de cruzado: Matacielos",
-    "id": "Bentuk Perang: Penghancur Langit",
-    "pt": "Forma Cruzador: Céu Esmagador",
-    "th": "ร่างครูเสด: สกาย ครัชเชอร์",
-    "vi": "Crusade Form: Sky Crusher"
-  },
-  "MST_SKILLS_2122582_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122582_NAME": {
-    "en": "I know what you must think...",
-    "es": "Sé lo que debes pensar...",
-    "id": "Aku tahu apa yang kau pikirkan...",
-    "pt": "Sei o que deve estar pensando...",
-    "th": "ข้ารู้ในสิ่งที่เจ้าคิด",
-    "vi": "I know what you must think..."
-  },
-  "MST_SKILLS_2122583_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122583_NAME": {
-    "en": "Their actions have meaning.",
-    "es": "Sus acciones tienen un significado.",
-    "id": "Tindakan mereka memiliki arti/",
-    "pt": "Suas atitudes significaram algo.",
-    "th": "การกระทำของพวกเขาล้วนมีความหมาย",
-    "vi": "Their actions have meaning."
-  },
-  "MST_SKILLS_2122584_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122584_NAME": {
-    "en": "So we should destroy them?",
-    "es": "¿Qué tal si los destruimos?",
-    "id": "Jadi kita harus menghancurkan mereka?",
-    "pt": "Então devíamos destrui-los?",
-    "th": "ดังนั้นเราจึงควรกำจัดพวกเขา?",
-    "vi": "So we should destroy them?"
-  },
-  "MST_SKILLS_2122585_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122585_NAME": {
-    "en": "Is revenge the real answer?",
-    "es": "¿La venganza es la verdadera respuesta?",
-    "id": "Apakah balas dendam itu jawaban sesungguhnya?",
-    "pt": "Será que vingança é a resposta?",
-    "th": "การแก้แค้นคือคำตอบที่แท้จริงรึ?",
-    "vi": "Is revenge the real answer?"
-  },
-  "MST_SKILLS_2122586_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122586_NAME": {
-    "en": "Argh... This power...!",
-    "es": "Argh... ¡Este poder...!",
-    "id": "Argh... Kekuatan ini...!",
-    "pt": "Argh... Esse poder...!",
-    "th": "อาห์...พลังนี้มัน…!",
-    "vi": "Argh... This power...!"
-  },
-  "MST_SKILLS_2122587_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122587_NAME": {
-    "en": "Must I answer with force...?!",
-    "es": "¡¿Tengo que responder con fuerza...?!",
-    "id": "Apakah harus kujawab dengan kekuatan?!",
-    "pt": "Devo responder com força...??",
-    "th": "ข้าควรตอบโต้กลับเป็นคำตอบ...?!",
-    "vi": "Must I answer with force...?!"
-  },
-  "MST_SKILLS_2122588_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
   }
 }

@@ -1,4 +1,404 @@
 {
+  "MST_LEADERSKILLS_800105_DESCRIPTION": {
+    "en": "30% boost to Atk & 5% boost to max HP & Rec, of Fire, Water, Earth and Thunder Units",
+    "es": "Aumenta un 5% los PS y la REC y un 30% el ataque de las unidades ígneas, acuáticas, térreas y atronadoras.",
+    "id": "30% menaikkan SERANG, 5% menaikkan HP & PULIH unit Api, Air, Bumi & Guntur",
+    "pt": "Reforço de 30% no ATQ, reforço de 5% em HP e REC de unidades de Fogo, Água, Terra e Trovão",
+    "th": "30% เพิ่มพลังโจมตี, 5% เพิ่ม HP & REC, สำหรับยูนิต ไฟ , น้ำ, ดิน และ สายฟ้า",
+    "vi": "Tăng 30% sức mạnh tấn công, tăng 5% Thể lực & Phòng thủ của các quái hệ Hỏa, Thủy, Thổ & Lôi"
+  },
+  "MST_LEADERSKILLS_800105_NAME": {
+    "en": "Elysian Grandeur",
+    "es": "Grandeza de Elysian",
+    "id": "Kemegahan Elysia",
+    "pt": "Grandeza Elísia",
+    "th": "เอลิเซียนแกรนดิออร์",
+    "vi": "Kẻ hùng mạnh xứ Elysian"
+  },
+  "MST_LEADERSKILLS_800400_DESCRIPTION": {
+    "en": "25% boost to Atk & 3% boost to critical hit rate for Fire types",
+    "es": "Aumenta un 25% el ataque y un 3% el daño crítico de las unidades ígneas",
+    "id": "25% menambah SERANG & 3% menambah KRIT untuk unit Api",
+    "pt": "25% de reforço no ATQ e 3% de reforço no CRÍT para unidades de Fogo",
+    "th": "25% เพิ่งพลังโจมตี และ 3% เพิ่มค่าคริติคอลให้กับยูนิตไฟ",
+    "vi": "Tăng 25% sức mạnh Tấn công & tăng 3% đòn nguy hiểm cho các quái hệ Thủy "
+  },
+  "MST_LEADERSKILLS_800400_NAME": {
+    "en": "Raging Fury",
+    "es": "Furia iracunda",
+    "id": "Murka Berapi-api",
+    "pt": "Fúria Descontrolada",
+    "th": "เรจจิ้งฟิวรี่",
+    "vi": "Lốc xoáy giận dữ"
+  },
+  "MST_LEADERSKILLS_800401_DESCRIPTION": {
+    "en": "50% boost to Atk & 5% boost to critical hit rate for Fire types",
+    "es": "Aumenta un 50% el ataque y un 5% el daño crítico de las unidades ígneas",
+    "id": "50% menambah SERANG & 5% menambah KRIT untuk unit Api",
+    "pt": "50% de reforço no ATQ e 5% de reforço no CRÍT para unidades de Fogo",
+    "th": "50% เพิ่งพลังโจมตี และ 5% เพิ่มค่าคริติคอลให้กับยูนิตไฟ",
+    "vi": "Tăng 50% sức mạnh Tấn công & tăng 5% đòn nguy hiểm cho các quái hệ Thủy "
+  },
+  "MST_LEADERSKILLS_800401_NAME": {
+    "en": "Blazing Heart",
+    "es": "Corazón flamígero",
+    "id": "Jantung Membara",
+    "pt": "Coração Flamejante",
+    "th": "เบลซซิ่งฮาร์ท",
+    "vi": "Trái tim cháy sáng"
+  },
+  "MST_LEADERSKILLS_800402_DESCRIPTION": {
+    "en": "25% boost to Atk & 3% boost to critical hit rate for Thunder types",
+    "es": "Aumenta 25% el atq y 3% el daño crítico de unidades atronadoras",
+    "id": "25% peningkatan SERANG & 3% peningkatan KRIT untuk unit Guntur",
+    "pt": "25% de reforço no ATQ e 3% de reforço no CRÍT para unidades de Trovão",
+    "th": "25% เพิ่มค่า โจมตี และ 3% เพิ่มค่า คริติคอล ให้กับยูนิตสายฟ้า",
+    "vi": "Tăng 25% sức mạnh Tấn công & tăng 3% đòn nguy hiểm cho các quái hệ Lôi"
+  },
+  "MST_LEADERSKILLS_800402_NAME": {
+    "en": "Gear Mode Revolution",
+    "es": "Revolución modo engranaje",
+    "id": "Revolusi Mode Alat",
+    "pt": "Modo de Engrenagem: Revolução",
+    "th": "เกียร์โหมดเรโวลูชั่น",
+    "vi": "Cuộc cách mạng chế độ thiết bị"
+  },
+  "MST_LEADERSKILLS_800403_DESCRIPTION": {
+    "en": "50% boost to Atk & 5% boost to critical hit rate for Thunder types",
+    "es": "Aumenta 50% el atq y 5% el daño crítico de unidades atronadoras",
+    "id": "50% peningkatan SERANG & 5% peningkatan KRIT untuk unit Guntur",
+    "pt": "50% de reforço no ATQ e 5% de reforço no CRÍT para unidades de Trovão",
+    "th": "50% เพิ่มค่า โจมตี และ 5% เพิ่มค่า คริติคอล ให้กับยูนิตสายฟ้า",
+    "vi": "Tăng 50% sức mạnh Tấn công & tăng 5% đòn nguy hiểm cho các quái hệ Lôi"
+  },
+  "MST_LEADERSKILLS_800403_NAME": {
+    "en": "Storm Witches Fury",
+    "es": "Furia de brujas tormentosas",
+    "id": "Kemarahan Penyihir Badai",
+    "pt": "Fúria das Bruxas da Tempestade",
+    "th": "สตอร์มวิทช์เชสฟิวรี่",
+    "vi": "Lốc xoáy của Phù thủy bão tố"
+  },
+  "MST_LEADERSKILLS_800404_DESCRIPTION": {
+    "en": "25% boost to Atk & 3% boost to critical hit rate for Earth types",
+    "es": "Aumenta un 25% el ataque y 3% el daño crítico de las unidades térreas",
+    "id": "Menambah 25% Serangan dan 3% Pukulan Ampuh untuk unit Bumi",
+    "pt": "25% de reforço no ATQ e 3% de reforço no CRÍT para unidades de Terra",
+    "th": "25% เพิ่มค่า โจมตี และ 3% เพิ่มค่า คริติคอล สำหรับยูนิตดิน",
+    "vi": "Tăng 25% sức mạnh Tấn công & tăng 3% đòn nguy hiểm cho các quái hệ Thổ"
+  },
+  "MST_LEADERSKILLS_800404_NAME": {
+    "en": "Critical Sanctum",
+    "es": "Santuario crítico",
+    "id": "Tempat Suci Kritis",
+    "pt": "Templo Crítico",
+    "th": "คริติคอล แซงค์ทัม",
+    "vi": "Linh thiêng tối cao"
+  },
+  "MST_LEADERSKILLS_800405_DESCRIPTION": {
+    "en": "50% boost to Atk & 5% boost to critical hit rate for Earth types",
+    "es": "Aumenta un 50% el ataque y 5% el daño crítico de las unidades térreas",
+    "id": "Menambah 50% Serangan dan 5% Pukulan Ampuh untuk unit Bumi",
+    "pt": "50% de reforço no ATQ e 5% de reforço no CRÍT para unidades de Terra",
+    "th": "50% เพิ่มค่า โจมตี และ 5% เพิ่มค่า คริติคอล สำหรับยูนิตดิน",
+    "vi": "Tăng 50% sức mạnh Tấn công & tăng 5% đòn nguy hiểm cho các quái hệ Thổ"
+  },
+  "MST_LEADERSKILLS_800405_NAME": {
+    "en": "Sovereign Amnesty",
+    "es": "Amnistía soberana",
+    "id": "Pengampunan Berdaulat",
+    "pt": "Anistia Soberana",
+    "th": "โซเวอรีน แอมเนสตี้",
+    "vi": "Ân xá tối thượng"
+  },
+  "MST_LEADERSKILLS_800406_DESCRIPTION": {
+    "en": "25% boost to Atk & 5% boost to critical hit rate for Water types",
+    "es": "+25% al ATQ y +5% a la posibilidad de asestar golpes críticos para las unidades acuáticas",
+    "id": "25% ekstra Serang & 5% ekstra frekuensi pukulan ampuh untuk tipe Air",
+    "pt": "25% de reforço no ATQ e 5% de reforço no CRÍT para unidades de Água",
+    "th": "25% เพิ่มค่า โจมตี และ 5% เพิ่มค่า อัตราเกิดคริติคอล สำหรับชนิด น้ำ",
+    "vi": "25% boost to Atk & 5% boost to critical hit rate for Water types"
+  },
+  "MST_LEADERSKILLS_800406_NAME": {
+    "en": "Jelly Festa",
+    "es": "Fiesta de gelatina",
+    "id": "Jelly Festa",
+    "pt": "Festa da Geleia",
+    "th": "เจลลี่ เฟสต้า",
+    "vi": "Jelly Festa"
+  },
+  "MST_LEADERSKILLS_800407_DESCRIPTION": {
+    "en": "50% boost to Atk & 5% boost to critical hit rate for Water types",
+    "es": "+50% al ATQ y +5% a la posibilidad de asestar golpes críticos para las unidades acuáticas",
+    "id": "50% ekstra Serang & 5% ekstra frekuensi pukulan ampuh untuk tipe Air",
+    "pt": "50% de reforço no ATQ e 5% de reforço no CRÍT para unidades de Água",
+    "th": "50% เพิ่มค่า โจมตี และ 5% เพิ่มค่า อัตราเกิดคริติคอล สำหรับชนิด น้ำ",
+    "vi": "50% boost to Atk & 5% boost to critical hit rate for Water types"
+  },
+  "MST_LEADERSKILLS_800407_NAME": {
+    "en": "Jellypalooza",
+    "es": "Gelapalooza",
+    "id": "Jelypalooza",
+    "pt": "Geleiapalooza",
+    "th": "เจลลี่พาลูซ่า",
+    "vi": "Jellypalooza"
+  },
+  "MST_LEADERSKILLS_800_DESCRIPTION": {
+    "en": "25% boost to Def Power of Lord Types",
+    "es": "Aumenta un 25 % la defensa de las unidades de tipo Noble.",
+    "id": "25% boost untuk Kekuatan Pertahanan Tipe Lord",
+    "pt": "Reforço de 25% na DEF do tipo Lorde",
+    "th": "25% เพิ่มพลังป้องกันของประเภท ลอร์ด",
+    "vi": "25% làm tăng quyền Def của các loại chúa tể "
+  },
+  "MST_LEADERSKILLS_800_NAME": {
+    "en": "Seeker's Defense",
+    "es": "Defensa feudal",
+    "id": "Pertahanan Pencari",
+    "pt": "Defesa do Buscador",
+    "th": "ซีกเกอร์ดีเฟนส์",
+    "vi": "Sự phòng thủ của kẻ tìm kiếm "
+  },
+  "MST_LEADERSKILLS_801001_DESCRIPTION": {
+    "en": "30% boost to Atk for Fire, Water, Earth & Thunder Units",
+    "es": "Aumenta un 30% el ataque de las unidades ígneas, acuáticas, térreas y atronadoras",
+    "id": "Menambah Serangan 30%  untuk unit Api, Air, Bumi & Guntur.",
+    "pt": "Reforço de 30% no ATQ dos tipos Fogo, Água, Terra e Trovão",
+    "th": "30% เพิ่มพลัง โจมตี สำหรับยูนิต ไฟ, น้ำ, ดิน, กับ สายฟ้า",
+    "vi": "Tăng 30% sức mạnh Tấn công của các quái hệ Hỏa, Thủy, Thổ & Lôi"
+  },
+  "MST_LEADERSKILLS_801001_NAME": {
+    "en": "Mystic Aura",
+    "es": "Aura mística",
+    "id": "Aura Mistis",
+    "pt": "Aura Mística",
+    "th": "มิสทิคออร่า",
+    "vi": "Hào quang thần bí"
+  },
+  "MST_LEADERSKILLS_801002_DESCRIPTION": {
+    "en": "50% boost to Atk for Fire, Water, Earth & Thunder Units & boosts damage dealt to weaker elements",
+    "es": "Aumenta un 50% el ataque de las unidades ígneas, acuáticas, térreas y atronadoras. Aumento al daño infligido a los elementos débiles",
+    "id": "Menambah Serangan 50%  untuk unit Api, Air, Bumi & Guntur, menambah kehancuran pada elemen kelemahan.",
+    "pt": "Reforço de 50% no ATQ dos tipos Fogo, Água, Terra e Trovão, reforço no dano causado a elementos fracos",
+    "th": "50% เพิ่มพลัง โจมตี สำหรับยูนิต ไฟ, น้ำ, ดิน, กับ สายฟ้า, เพิ่มความเสียหายที่สร้างให้กับยูนิตที่แพ้ธาตุ",
+    "vi": "Tăng 50% sức mạnh Tấn công của các quái hệ Hỏa, Thủy, Thổ & Lôi, tăng mức thiệt hại cho các yếu tố suy yếu"
+  },
+  "MST_LEADERSKILLS_801002_NAME": {
+    "en": "Mystic Vigor",
+    "es": "Vigor místico",
+    "id": "Semangat Mistis",
+    "pt": "Vigor Místico",
+    "th": "มิสทิควิกเกอร์",
+    "vi": "Vigor thần bí"
+  },
+  "MST_LEADERSKILLS_801003_DESCRIPTION": {
+    "en": "30% boost to Atk of Dark and Light Units",
+    "es": "Aumenta un 30% el ataque de las unidades lumínicas y oscuras.",
+    "id": "Menambah Serangan30% untuk Terang & Gelap",
+    "pt": "Reforço de 30% no ATQ dos tipos Luz e Sombra",
+    "th": "30% เพิ่มพลัง โจมตี สำหรับ แสง กับ มืด",
+    "vi": "Tăng 30% sức mạnh Tấn công hệ Quang & Bóng Tối"
+  },
+  "MST_LEADERSKILLS_801003_NAME": {
+    "en": "Spiteful Aura",
+    "es": "Aura maliciosa",
+    "id": "Aura Pembenci",
+    "pt": "Aura de Rancor",
+    "th": "สไปท์ฟูลออร่า",
+    "vi": "Khí chất thù hận"
+  },
+  "MST_LEADERSKILLS_801004_DESCRIPTION": {
+    "en": "40% boost to Atk for Light & Dark types & negates all status ailments",
+    "es": "Aumenta un 40% el ataque de las unidades lumínicas y oscuras, y previene las aflicciones de estados",
+    "id": "Menambah Serangan 40% untuk Terang & Gelap dan menihilkan semua status penyakit",
+    "pt": "Reforço de 40% no ATQ dos tipos Luz e Sombra e nega efeitos negativos",
+    "th": "40% เพิ่มพลัง โจมตี สำหรับแสงกับ มืด และลบล้างสถานะผิดปกติทั้งหมด",
+    "vi": "Tăng 40% sức mạnh Tấn công của các quái Ánh Sáng & Bóng Tối và hủy bỏ tất cả các hiệu ứng trạng thái"
+  },
+  "MST_LEADERSKILLS_801004_NAME": {
+    "en": "Wicked Shade",
+    "es": "Sombra perversa",
+    "id": "Bayangan Licik",
+    "pt": "Sombra Perversa",
+    "th": "วิคเคดเฉด",
+    "vi": "Bóng đêm tội lỗi"
+  },
+  "MST_LEADERSKILLS_801005_DESCRIPTION": {
+    "en": "10% boost to critical hit rate & 40% boost to Def of all Units",
+    "es": "Los aliados obtienen un 10% de aumento en el crítico y un 40% de aumento en la defensa",
+    "id": "10% tambahan KRIT, 40% tambahan TAHAN untuk semua sekutu",
+    "pt": "Todos os aliados ganham um reforço de 10% no CRIT e 40% na DEF",
+    "th": "พันธมิตรทั้งหมด รับ 10% เพิ่มค่า คริติคอล, 40% เพิ่มค่า ป้องกัน",
+    "vi": "Tất cả liên minh nhận tăng 10% Đòn nguy hiểm, tăng 40% sức mạnh Phòng thủ,"
+  },
+  "MST_LEADERSKILLS_801005_NAME": {
+    "en": "Jet Charger",
+    "es": "Jet de carga",
+    "id": "Pengisi Jet",
+    "pt": "Carga-a-jato",
+    "th": "เจ็ท ชาร์จเจอร์",
+    "vi": "Phản lực tăng áp"
+  },
+  "MST_LEADERSKILLS_801006_DESCRIPTION": {
+    "en": "15% boost to critical hit rate & 50% boost to Def of all Units",
+    "es": "Los aliados obtienen un 15% de aumento en el crítico y un 50% de aumento en la defensa",
+    "id": "15% tambahan KRIT, 50% tambahan TAHAN untuk semua sekutu",
+    "pt": "Todos os aliados ganham um reforço de 15% no CRIT e 50% na DEF",
+    "th": "พันธมิตรทั้งหมด รับ 15% เพิ่มค่า คริติคอล, 50% เพิ่มค่า ป้องกัน",
+    "vi": "Tất cả liên minh nhận tăng 15% Đòn nguy hiểm, tăng 50% sức mạnh Phòng thủ,"
+  },
+  "MST_LEADERSKILLS_801006_NAME": {
+    "en": "Turbo Charger",
+    "es": "Turbo de carga",
+    "id": "Pengisi Turbo",
+    "pt": "Turbocarga",
+    "th": "เทอร์โบ ชาร์จเจอร์",
+    "vi": "Tuabin tăng áp"
+  },
+  "MST_LEADERSKILLS_801007_DESCRIPTION": {
+    "en": "30% boost to Atk and Def & boost in damage dealt to weaker elements",
+    "es": "Los aliados infligen más daño a los elementos débiles. Aumento del 30% al ataque y la defensa",
+    "id": "Semua sekutu tambah merusak elemen lemah, 30% tambahan SERANG & TAHAN",
+    "pt": "Todos os aliados têm dano aumentado contra elementos mais fracos, reforço de 30% no ATQ e DEF",
+    "th": "พันธมิตรทั้งหมด ได้เพิ่มความเสียหายต่อธาตุที่แพ้ทาง, เพิ่ม โจมตี กับ ป้องกัน 30%",
+    "vi": "Tất cả các liên minh đã tăng thiệt hại cho các yếu tố yếu hơn, tăng 30% sức mạnh Tấn công & Phòng thủ"
+  },
+  "MST_LEADERSKILLS_801007_NAME": {
+    "en": "Valiant Stance",
+    "es": "Defensa valerosa",
+    "id": "Sikap Gagah",
+    "pt": "Postura Valente",
+    "th": "วาเลียนท์ สแตนซ์",
+    "vi": "Thái độ gan dạ"
+  },
+  "MST_LEADERSKILLS_801008_DESCRIPTION": {
+    "en": "40% boost to Atk and Def & boost in damage dealt to weaker elements",
+    "es": "Los aliados infligen más daño a los elementos débiles. Aumento del 40% al ataque y la defensa",
+    "id": "Semua sekutu tambah merusak elemen lemah, 40% tambahan SERANG & TAHAN",
+    "pt": "Todos os aliados têm dano aumentado contra elementos mais fracos, reforço de 40% no ATQ e DEF",
+    "th": "พันธมิตรทั้งหมด ได้เพิ่มความเสียหายต่อธาตุที่แพ้ทาง, เพิ่ม โจมตี กับ ป้องกัน 40%",
+    "vi": "Tất cả các liên minh đã tăng thiệt hại cho các yếu tố yếu hơn, tăng 40% sức mạnh Tấn công & Phòng thủ"
+  },
+  "MST_LEADERSKILLS_801008_NAME": {
+    "en": "Heroic Stance",
+    "es": "Defensa heroica",
+    "id": "Sikap Pahlawan",
+    "pt": "Postura Heroica",
+    "th": "ฮีโรอิค สแตนซ์",
+    "vi": "Thái độ anh hùng"
+  },
+  "MST_LEADERSKILLS_801009_DESCRIPTION": {
+    "en": "50% boost to Atk and Def, boost in damage dealt to weaker elements & 15% boost to critical hit rate",
+    "es": "Los aliados infligen más daño a los elementos débiles. Aumento del 50% al ataque y la defensa y del 15% al crítico",
+    "id": "Semua sekutu tambah merusak elemen lemah, 50% tambahan SERANG & TAHAN, 15% tambahan KRIT",
+    "pt": "Todos os aliados têm dano aumentado contra elementos mais fracos, reforço de 50% no ATQ e DEF e 15% no CRIT",
+    "th": "พันธมิตรทั้งหมด ได้เพิ่มความเสียหายต่อธาตุที่แพ้ทาง, เพิ่ม โจมตี กับ ป้องกัน 50%, เพิ่ม คริติคอล 15%",
+    "vi": "Tất cả các liên minh đã tăng thiệt hại cho các yếu tố yếu hơn, tăng 50% sức mạnh Tấn công & Phòng thủ, tăng 50% Đòn nguy hiểm"
+  },
+  "MST_LEADERSKILLS_801009_NAME": {
+    "en": "Titan Aura",
+    "es": "Aura titánica",
+    "id": "Aura Titan",
+    "pt": "Postura Titânica",
+    "th": "ไททัน ออร่า",
+    "vi": "Khí tiết phi thường"
+  },
+  "MST_LEADERSKILLS_801010_DESCRIPTION": {
+    "en": "65% boost to Atk for Fire, Water, Earth & Thunder Units & boosts damage dealt to weak elements",
+    "es": "Aumenta un 65% el ataque de las unidades ígneas, acuáticas, térreas y atronadoras. Aumento al daño infligido a los elementos débiles",
+    "id": "Menambah Serangan 65% untuk unit Api, Air, Bumi & Guntur, tambah merusak elemen lemah",
+    "pt": "Reforço de 65% no ATQ de unidades Fogo, Água, Terra e Trovão, reforço no dano causado a elementos fracos",
+    "th": "65% เพิ่มค่า โจมตี สำหรับยูนิต ไฟ, น้ำ, ดิน และ สายฟ้า, เพิ่มค่า ความเสียหายที่สร้างกับธาตุที่แพ้ทาง",
+    "vi": "Tăng 65% sức mạnh Tấn công của các quái hệ Hỏa, Thủy, Thổ & Lôi, tăng mức thiệt hại cho các yếu tố suy yếu"
+  },
+  "MST_LEADERSKILLS_801010_NAME": {
+    "en": "Mystic Zeal",
+    "es": "Fanatismo místico",
+    "id": "Semangat Mistik",
+    "pt": "Zelo Místico",
+    "th": "มิสติค ซีล",
+    "vi": "Nhiệt huyết thần bí"
+  },
+  "MST_LEADERSKILLS_801011_DESCRIPTION": {
+    "en": "50% boost to Atk for Light & Dark Units and negates all status ailments",
+    "es": "Aumenta un 50% el ataque de las unidades lumínicas y oscuras, y previene las aflicciones de estados",
+    "id": "Menambah Serangan 50% untuk Terang & Gelap dan menegasi semua status",
+    "pt": "Reforço de 50% no ATQ dos tipos Luz e Sombra e nega efeitos negativos",
+    "th": "50% เพิ่มค่า โจมตี สำหรับ แสง และ มืด กับ ป้องกันสถานะผิดปกติทั้งหมด",
+    "vi": "Tăng 50% sức mạnh Tấn công của các quái Ánh Sáng & Bóng Tối & hủy bỏ tất cả các hiệu ứng trạng thái"
+  },
+  "MST_LEADERSKILLS_801011_NAME": {
+    "en": "Snide Authority",
+    "es": "Autoridad maliciosa",
+    "id": "Otoritas Sinis",
+    "pt": "Falsa Autoridade",
+    "th": "สไนด์ ออโธริตี้",
+    "vi": "Uy quyền giả mạo"
+  },
+  "MST_LEADERSKILLS_801012_DESCRIPTION": {
+    "en": "10% boost to critical hit rate and 20% boost to max HP of all Units",
+    "es": "Aliados: 10% de aumento en el crítico y 20% en los PS",
+    "id": "Peningkatan CRIT 10%, HP 20% untuk semua sekutu",
+    "pt": "Todos os aliados ganham um reforço de 10% no CRIT e 20% no HP",
+    "th": "พันธมิตรทุกคนได้รับ 10% เพิ่มค่า คริติคอล, 20% เพิ่มค่า HP",
+    "vi": "Tất cả liên minh nhận tăng 10% Đòn nguy hiểm, tăng 20% Thể lực"
+  },
+  "MST_LEADERSKILLS_801012_NAME": {
+    "en": "Aquatic Zeal",
+    "es": "Fanatismo acuático",
+    "id": "Semangat Akuatik",
+    "pt": "Zelo Aquático",
+    "th": "อควอติค ซีล",
+    "vi": "Nhiệt huyết dưới nước"
+  },
+  "MST_LEADERSKILLS_801013_DESCRIPTION": {
+    "en": "15% boost to critical hit rate and 25% boost to max HP of all Units",
+    "es": "Aliados: 15% de aumento en el crítico y 25% en los PS",
+    "id": "Peningkatan CRIT 15%, HP 25% untuk semua sekutu",
+    "pt": "Todos os aliados ganham um reforço de 15% no CRIT e 25% no HP",
+    "th": "พันธมิตรทุกคนได้รับ 15% เพิ่มค่า คริติคอล, 25% เพิ่มค่า HP",
+    "vi": "Tất cả liên minh nhận tăng 15% Đòn nguy hiểm, tăng 25% Thể lực"
+  },
+  "MST_LEADERSKILLS_801013_NAME": {
+    "en": "Tidal Resonance",
+    "es": "Resonancia marina",
+    "id": "Resonansi Pasang",
+    "pt": "Ressonância Tsunami",
+    "th": "ไทดอล เรสโซแนนซ์",
+    "vi": "Cộng hưởng thủy triều"
+  },
+  "MST_LEADERSKILLS_801014_DESCRIPTION": {
+    "en": "20% boost to max HP, 30% boost to Rec & mitigates 5% of damage received",
+    "es": "Aliados: 20% en PS y 30% en rec. Menos 5% a daño recibido",
+    "id": "Peningkatan HP 20%, PULIH 30%, mengurangi 5% kerusakan untuk semua sekutu.",
+    "pt": "Todos os aliados ganham um reforço de 20% no HP e 30% na REC. Reduz o dano sofrido em 5%.",
+    "th": "พันธมิตรทุกคนได้รับ 20% เพิ่มค่า HP, 30% เพิ่มค่า ฟื้นฟู. ลดค่าลง 5% ของความเสียหายที่ได้รับ",
+    "vi": "Tất cả liên minh nhận tăng 20% Thể lực, tăng 30% Phục hồi. Giảm 5% thiệt hại nhận được."
+  },
+  "MST_LEADERSKILLS_801014_NAME": {
+    "en": "Gush Vigor",
+    "es": "Vigor burbujeante",
+    "id": "Semburan Semangat",
+    "pt": "Erupção Mística",
+    "th": "กัช วิกเกอร์",
+    "vi": "Sinh lực tràn trề"
+  },
+  "MST_LEADERSKILLS_801015_DESCRIPTION": {
+    "en": "25% boost to max HP, 40% boost to Rec & mitigates 7% of damage received",
+    "es": "Aliados: 25% en PS y 40% en rec. Menos 7% a daño recibido",
+    "id": "Peningkatan HP 25%, PULIH 40%, mengurangi 7% kerusakan untuk semua sekutu.",
+    "pt": "Todos os aliados ganham um reforço de 25% no HP e 40% na REC. Reduz o dano sofrido em 7%.",
+    "th": "พันธมิตรทุกคนได้รับ 25% เพิ่มค่า HP, 40% เพิ่มค่า ฟื้นฟู. ลดค่าลง 7% ของความเสียหายที่ได้รับ",
+    "vi": "Tất cả liên minh nhận tăng 25% Thể lực, tăng 40% Phục hồi. Giảm 7% thiệt hại nhận được."
+  },
+  "MST_LEADERSKILLS_801015_NAME": {
+    "en": "Grand Stream",
+    "es": "Oleada magna",
+    "id": "Arus Besar",
+    "pt": "Grande Correnteza",
+    "th": "กัช สตรีม",
+    "vi": "Luồng nước lớn"
+  },
   "MST_LEADERSKILLS_801016_DESCRIPTION": {
     "en": "30% boost to max HP, 50% boost to Rec & mitigates 10% of damage received",
     "es": "Aliados: 30% en PS, 50% en rec. y 15% en crit. Menos 10% daño recibido",
@@ -4494,6 +4894,22 @@
     "pt": "Soul of the Resilient",
     "th": "Soul of the Resilient",
     "vi": "Soul of the Resilient"
+  },
+  "MST_LEADERSKILLS_820668_DESCRIPTION": {
+    "en": "200% boost to Atk and 100% boost to Def, max HP for Water types, greatly boosts BB Atk, enormously boosts Water elemental damage, 15% damage reduction from Fire, Water types & greatly boosts OD gauge fill rate",
+    "es": "200% boost to Atk and 100% boost to Def, max HP for Water types, greatly boosts BB Atk, enormously boosts Water elemental damage, 15% damage reduction from Fire, Water types & greatly boosts OD gauge fill rate",
+    "id": "200% boost to Atk and 100% boost to Def, max HP for Water types, greatly boosts BB Atk, enormously boosts Water elemental damage, 15% damage reduction from Fire, Water types & greatly boosts OD gauge fill rate",
+    "pt": "200% boost to Atk and 100% boost to Def, max HP for Water types, greatly boosts BB Atk, enormously boosts Water elemental damage, 15% damage reduction from Fire, Water types & greatly boosts OD gauge fill rate",
+    "th": "200% boost to Atk and 100% boost to Def, max HP for Water types, greatly boosts BB Atk, enormously boosts Water elemental damage, 15% damage reduction from Fire, Water types & greatly boosts OD gauge fill rate",
+    "vi": "200% boost to Atk and 100% boost to Def, max HP for Water types, greatly boosts BB Atk, enormously boosts Water elemental damage, 15% damage reduction from Fire, Water types & greatly boosts OD gauge fill rate"
+  },
+  "MST_LEADERSKILLS_820668_NAME": {
+    "en": "Eternal Lie",
+    "es": "Eternal Lie",
+    "id": "Eternal Lie",
+    "pt": "Eternal Lie",
+    "th": "Eternal Lie",
+    "vi": "Eternal Lie"
   },
   "MST_LEADERSKILLS_830047_DESCRIPTION": {
     "en": "100% boost to Atk, 60% boost to Def, max HP of Earth types, 10% damage reduction from Earth, Thunder types, probable considerable reduction of foe's BB gauge & 50% damage counter",
@@ -87670,309 +88086,5 @@
     "pt": "Zellha",
     "th": "เซลฮา",
     "vi": "Zellha"
-  },
-  "MST_MONSTERS_54551_NAME": {
-    "en": "Zellha",
-    "es": "Zellha",
-    "id": "Zellha",
-    "pt": "Zellha",
-    "th": "มิล่า",
-    "vi": "Zellha"
-  },
-  "MST_MONSTERS_54552_NAME": {
-    "en": "Zellha",
-    "es": "Zellha",
-    "id": "Zellha",
-    "pt": "Zellha",
-    "th": "มิล่า",
-    "vi": "Zellha"
-  },
-  "MST_MONSTERS_54553_NAME": {
-    "en": "Zellha",
-    "es": "Zellha",
-    "id": "Zellha",
-    "pt": "Zellha",
-    "th": "เซลลาห์",
-    "vi": "Zellha"
-  },
-  "MST_MONSTERS_54600_NAME": {
-    "en": "Ruin Zellha",
-    "es": "Ruina Zellha",
-    "id": "Si Puing Zellha",
-    "pt": "Zellha da Ruína",
-    "th": "รูอินเซลฮา",
-    "vi": "Thần đổ nát Zellha"
-  },
-  "MST_MONSTERS_54601_NAME": {
-    "en": "Ruin Zellha",
-    "es": "Ruina Zellha",
-    "id": "Si Puing Zellha",
-    "pt": "Zellha da Ruína",
-    "th": "รูอินเซลฮา",
-    "vi": "Ruin Zellha"
-  },
-  "MST_MONSTERS_54602_NAME": {
-    "en": "Ruin Zellha",
-    "es": "Ruina Zellha",
-    "id": "Si Puing Zellha",
-    "pt": "Zellha da Ruína",
-    "th": "รูอินเซลฮา",
-    "vi": "Ruin Zellha"
-  },
-  "MST_MONSTERS_54603_NAME": {
-    "en": "Ruin Zellha",
-    "es": "Ruin Zellha",
-    "id": "Palu Petir Elulu",
-    "pt": "Ruin Zellha",
-    "th": "รูน เซลลาห์",
-    "vi": "Ruin Zellha"
-  },
-  "MST_MONSTERS_54604_NAME": {
-    "en": "Ruin Zellha",
-    "es": "Ruin Zellha",
-    "id": "Kaisar Langit Grafl",
-    "pt": "Ruin Zellha",
-    "th": "รูน เซลลาห์",
-    "vi": "Ruin Zellha"
-  },
-  "MST_MONSTERS_54605_NAME": {
-    "en": "Ruin Zellha",
-    "es": "Ruin Zellha",
-    "id": "Ruin Zellha",
-    "pt": "Ruin Zellha",
-    "th": "รูอิน เซลฮา",
-    "vi": "Ruin Zellha"
-  },
-  "MST_MONSTERS_54606_NAME": {
-    "en": "Ruin Zellha",
-    "es": "Ruin Zellha",
-    "id": "Ruin Zellha",
-    "pt": "Ruin Zellha",
-    "th": "รูอิน เซลฮา",
-    "vi": "Ruin Zellha"
-  },
-  "MST_MONSTERS_54650_NAME": {
-    "en": "Ruin Goddess Zellha",
-    "es": "Diosa mortal Zellha",
-    "id": "Dewi Puing Zellha",
-    "pt": "Zellha Deusa Ruína",
-    "th": "รูอินก็อดเดสเซลฮา",
-    "vi": "Nữ thần đ.nát Zellha"
-  },
-  "MST_MONSTERS_54651_NAME": {
-    "en": "Ruin Goddess Zellha",
-    "es": "Diosa mortal Zellha",
-    "id": "Dewi Puing Zellha",
-    "pt": "Zellha Deusa Ruína",
-    "th": "รูอินก็อดเดสเซลฮา",
-    "vi": "Nữ thần đ.nát Zellha"
-  },
-  "MST_MONSTERS_54652_NAME": {
-    "en": "Ruin Goddess Zellha",
-    "es": "Diosa mortal Zellha",
-    "id": "Dewi Puing Zellha",
-    "pt": "Zellha Deusa Ruína",
-    "th": "รูน ก็อดเดส เซลฮา",
-    "vi": "Nữ thần đ.nát Zellha"
-  },
-  "MST_MONSTERS_54653_NAME": {
-    "en": "Ruin Goddess Zellha",
-    "es": "Ruin Goddess Zellha",
-    "id": "Dewi Puing Zellha",
-    "pt": "Ruin Goddess Zellha",
-    "th": "รูอิน ก็อดเดส เซลฮา",
-    "vi": "Ruin Goddess Zellha"
-  },
-  "MST_MONSTERS_54654_NAME": {
-    "en": "Ruin Goddess Zellha",
-    "es": "Ruin Goddess Zellha",
-    "id": "Ruin Goddess Zellha",
-    "pt": "Ruin Goddess Zellha",
-    "th": "Ruin Goddess Zellha",
-    "vi": "Ruin Goddess Zellha"
-  },
-  "MST_MONSTERS_54700_NAME": {
-    "en": "Holy Blades Sefia",
-    "es": "Sefia, Hojas sacras",
-    "id": "Pedang Suci Sefia",
-    "pt": "Sefia Lâmina Sagrada",
-    "th": "โฮลี่เบลดเซเฟีย",
-    "vi": "Kiếm thần Sefia"
-  },
-  "MST_MONSTERS_54701_NAME": {
-    "en": "Holy Blades Sefia",
-    "es": "Sefia, Hojas sacras",
-    "id": "Pedang Suci Sefia",
-    "pt": "Sefia Lâmina Sagrada",
-    "th": "โฮลี่เบลดเซเฟีย",
-    "vi": "Kiếm thần Sefia"
-  },
-  "MST_MONSTERS_54702_NAME": {
-    "en": "Holy Blades Sefia",
-    "es": "Sefia, Hojas sacras",
-    "id": "Bilah Suci Sefia",
-    "pt": "Sefia das Lâminas Sagradas",
-    "th": "โฮลี่เบลดเซเฟีย",
-    "vi": "Holy Blades Sefia"
-  },
-  "MST_MONSTERS_54703_NAME": {
-    "en": "Holy Blades Sefia",
-    "es": "Sefia, Hojas sacras",
-    "id": "Bilah Suci Sefia",
-    "pt": "Sefia das Lâminas Sagradas",
-    "th": "โฮลี่เบลดเซเฟีย",
-    "vi": "Holy Blades Sefia"
-  },
-  "MST_MONSTERS_54704_NAME": {
-    "en": "Holy Blades Sefia",
-    "es": "Sefia, Hojas sacras",
-    "id": "Bilah Suci Sefia",
-    "pt": "Sefia das Lâminas Sagradas",
-    "th": "โฮลี่เบลดเซเฟีย",
-    "vi": "Holy Blades Sefia"
-  },
-  "MST_MONSTERS_54705_NAME": {
-    "en": "Holy Blades Sefia",
-    "es": "Holy Blades Sefia",
-    "id": "Bilah Suci Sefia",
-    "pt": "Holy Blades Sefia",
-    "th": "โฮลรา เบลด เซเฟีย",
-    "vi": "Holy Blades Sefia"
-  },
-  "MST_MONSTERS_54750_NAME": {
-    "en": "GS-200",
-    "es": "GS-200",
-    "id": "GS-200",
-    "pt": "GS-200",
-    "th": "จีเอส-200",
-    "vi": "GS-200"
-  },
-  "MST_MONSTERS_54751_NAME": {
-    "en": "GS-200",
-    "es": "GS-200",
-    "id": "GS-200",
-    "pt": "GS-200",
-    "th": "จีเอส-200",
-    "vi": "GS-200"
-  },
-  "MST_MONSTERS_54752_NAME": {
-    "en": "GS-200",
-    "es": "GS-200",
-    "id": "GS-200",
-    "pt": "GS-200",
-    "th": "จีเอส-200",
-    "vi": "GS-200"
-  },
-  "MST_MONSTERS_54753_NAME": {
-    "en": "GS-200",
-    "es": "GS-200",
-    "id": "GS-200",
-    "pt": "GS-200",
-    "th": "จีเอส-200",
-    "vi": "GS-200"
-  },
-  "MST_MONSTERS_54754_NAME": {
-    "en": "GS-200",
-    "es": "GS-200",
-    "id": "GS-200",
-    "pt": "GS-200",
-    "th": "จีเอส-200",
-    "vi": "GS-200"
-  },
-  "MST_MONSTERS_54755_NAME": {
-    "en": "GS-200",
-    "es": "GS-200",
-    "id": "GS-200",
-    "pt": "GS-200",
-    "th": "จีเอส-200",
-    "vi": "GS-200"
-  },
-  "MST_MONSTERS_54756_NAME": {
-    "en": "GS-200",
-    "es": "GS-200",
-    "id": "GS-200",
-    "pt": "GS-200",
-    "th": "จีเอสสองร้อย",
-    "vi": "GS-200"
-  },
-  "MST_MONSTERS_54757_NAME": {
-    "en": "GS-200",
-    "es": "GS-200",
-    "id": "GS-200",
-    "pt": "GS-200",
-    "th": "จีเอส-200",
-    "vi": "GS-200"
-  },
-  "MST_MONSTERS_54758_NAME": {
-    "en": "GS-200",
-    "es": "GS-200",
-    "id": "GS-200",
-    "pt": "GS-200",
-    "th": "จีเอส-200",
-    "vi": "GS-200"
-  },
-  "MST_MONSTERS_54759_NAME": {
-    "en": "GS-200",
-    "es": "GS-200",
-    "id": "GS-200",
-    "pt": "GS-200",
-    "th": "จีเอส-200",
-    "vi": "GS-200"
-  },
-  "MST_MONSTERS_54760_NAME": {
-    "en": "GS-200",
-    "es": "GS-200",
-    "id": "GS-200",
-    "pt": "GS-200",
-    "th": "จีเอส-200",
-    "vi": "GS-200"
-  },
-  "MST_MONSTERS_54761_NAME": {
-    "en": "GS-200",
-    "es": "GS-200",
-    "id": "GS-200",
-    "pt": "GS-200",
-    "th": "จีเอส-200",
-    "vi": "GS-200"
-  },
-  "MST_MONSTERS_54762_NAME": {
-    "en": "GS-200",
-    "es": "GS-200",
-    "id": "GS-200",
-    "pt": "GS-200",
-    "th": "จีเอส-200",
-    "vi": "GS-200"
-  },
-  "MST_MONSTERS_54763_NAME": {
-    "en": "GS-200",
-    "es": "GS-200",
-    "id": "GS-200",
-    "pt": "GS-200",
-    "th": "จีเอส-200",
-    "vi": "GS-200"
-  },
-  "MST_MONSTERS_54764_NAME": {
-    "en": "GS-200",
-    "es": "GS-200",
-    "id": "GS-200",
-    "pt": "GS-200",
-    "th": "จีเอส-200",
-    "vi": "GS-200"
-  },
-  "MST_MONSTERS_54765_NAME": {
-    "en": "GS-200",
-    "es": "GS-200",
-    "id": "GS-200",
-    "pt": "GS-200",
-    "th": "จีเอส-200",
-    "vi": "GS-200"
-  },
-  "MST_MONSTERS_54766_NAME": {
-    "en": "GS-200",
-    "es": "GS-200",
-    "id": "Kaisar Langit Grafl",
-    "pt": "GS-200",
-    "th": "จีเอส-200",
-    "vi": "GS-200"
   }
 }

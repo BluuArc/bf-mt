@@ -3755,6 +3755,7 @@
       "41036",
       "41037",
       "60497",
+      "820668",
       "840437",
       "840438"
     ],
@@ -4703,6 +4704,7 @@
       "41036",
       "41037",
       "60497",
+      "820668",
       "840437",
       "840438"
     ]
@@ -5631,6 +5633,7 @@
       "60497",
       "820317",
       "820318",
+      "820668",
       "840437",
       "840438"
     ]
@@ -12108,6 +12111,7 @@
       "41036",
       "41037",
       "60497",
+      "820668",
       "840437",
       "840438"
     ]
@@ -12180,6 +12184,7 @@
       "41036",
       "41037",
       "60497",
+      "820668",
       "840437",
       "840438"
     ]
@@ -12251,6 +12256,7 @@
       "41036",
       "41037",
       "60497",
+      "820668",
       "840437",
       "840438"
     ]
@@ -12828,6 +12834,7 @@
       "41036",
       "41037",
       "60497",
+      "820668",
       "840437",
       "840438"
     ]
@@ -14542,6 +14549,7 @@
       "41036",
       "41037",
       "60497",
+      "820668",
       "840437",
       "840438"
     ]
@@ -15073,6 +15081,7 @@
       "41036",
       "41037",
       "60497",
+      "820668",
       "840437",
       "840438"
     ]
@@ -15844,6 +15853,7 @@
       "41036",
       "41037",
       "60497",
+      "820668",
       "840437",
       "840438",
       "850298"
@@ -16654,6 +16664,7 @@
       "41036",
       "41037",
       "60497",
+      "820668",
       "840437",
       "840438",
       "860338"
@@ -16766,6 +16777,7 @@
       "41036",
       "41037",
       "60497",
+      "820668",
       "840437",
       "840438"
     ]
@@ -17093,6 +17105,7 @@
       "41036",
       "41037",
       "60497",
+      "820668",
       "840437",
       "840438"
     ]
@@ -17379,6 +17392,7 @@
       "41036",
       "41037",
       "60497",
+      "820668",
       "840437",
       "840438"
     ]
@@ -17603,6 +17617,7 @@
       "41036",
       "41037",
       "60497",
+      "820668",
       "840437",
       "840438",
       "850637",
@@ -17761,6 +17776,7 @@
       "41036",
       "41037",
       "60497",
+      "820668",
       "840437",
       "840438"
     ]
@@ -18220,6 +18236,7 @@
       "41036",
       "41037",
       "60497",
+      "820668",
       "830148",
       "840437",
       "840438"
@@ -18696,7 +18713,7 @@
       },
       {
         "passive id": "33",
-        "rec% added (turn heal)": 12,
+        "rec% added (turn heal)": 20,
         "turn heal high": 2500,
         "turn heal low": 2000
       },
@@ -18746,6 +18763,57 @@
       "61287",
       "810338",
       "840438"
+    ]
+  },
+  "819234": {
+    "desc": "100% boost to Atk and 40% boost to max HP of Water types, boosts Water elemental damage, adds Def ignoring effect to attack, boosts damage against status afflicted foes & boosts BB gauge when damage dealt has exceeded certain amount",
+    "effect": [
+      {
+        "atk% buff": 100,
+        "elements buffed": [
+          "water"
+        ],
+        "hp% buff": 40,
+        "passive id": "2"
+      },
+      {
+        "elemental weakness multiplier%": 125,
+        "passive id": "50",
+        "water units do extra elemental weakness dmg": true
+      },
+      {
+        "ignore def%": 100,
+        "passive id": "29"
+      },
+      {
+        "atk% buff when enemy has ailment": 100,
+        "atk% buff when enemy has curse": true,
+        "atk% buff when enemy has injury": true,
+        "atk% buff when enemy has paralysis": true,
+        "atk% buff when enemy has poison": true,
+        "atk% buff when enemy has sick": true,
+        "atk% buff when enemy has weaken": true,
+        "passive id": "74"
+      },
+      {
+        "damage dealt threshold activation": 5000,
+        "increase bb gauge": 8,
+        "passive id": "81"
+      }
+    ],
+    "id": 819234,
+    "max_stack": 1,
+    "name": "Réparatrice",
+    "raid": false,
+    "rarity": 7,
+    "sell_price": 30000,
+    "sphere type": 12,
+    "sphere type text": "Defense Penetrating",
+    "thumbnail": "sphere_thum_819234.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "820668"
     ]
   },
   "819901": {
