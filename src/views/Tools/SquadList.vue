@@ -32,8 +32,8 @@
               </v-flex>
               <v-layout row style="flex-grow: 0">
                 <v-flex style="flex-grow: 0">
-                  <v-btn icon flat>
-                    <v-icon>sort</v-icon>
+                  <v-btn icon flat @click="sortOrderAscending = !sortOrderAscending">
+                    <v-icon>{{ `fa-sort-alpha-${sortOrderAscending ? 'down' : 'up' }` }}</v-icon>
                   </v-btn>
                 </v-flex>
                 <v-flex style="flex-grow: 0">
@@ -99,7 +99,14 @@ export default {
         .map(() => Object.freeze(this.getSampleSquad()));
     },
     sortedSquads () {
-      return Object.freeze(this.filteredSquads.slice());
+      return Object.freeze(
+        this.filteredSquads
+          .slice()
+          .sort((a, b) => {
+            const result = a.name < b.name ? -1 : 1;
+            return this.sortOrderAscending ? result : -result;
+          })
+      );
     },
   },
   data () {
@@ -115,6 +122,7 @@ export default {
       nameFilter: '',
       searchIsFocused: false,
       filterChanged: false,
+      sortOrderAscending: true,
       filteredSquads: [],
     };
   },
