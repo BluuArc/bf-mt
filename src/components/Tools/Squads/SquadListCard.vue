@@ -39,14 +39,14 @@
         <v-layout column>
           <!-- name and leader/friend icon -->
           <v-layout align-center>
-            <v-flex class="d-flex-container align-center">
+            <v-flex class="d-flex-container align-center font-weight-bold">
               <span v-if="getUnit(unit.id).rarity < 8">{{ getUnit(unit.id).rarity }}</span>
               <rarity-icon
                 v-if="isVisible"
                 :class="{ 'ml-1': getUnit(unit.id).rarity !== 8, 'mr-1': true, }"
                 :rarity="getUnit(unit.id).rarity || 0"
-                :displaySize="22"/>
-              <span class="font-weight-bold">{{ getUnit(unit.id).name || unit.id }}</span>
+                :displaySize="18"/>
+              <span>{{ getUnit(unit.id).name || unit.id }}</span>
             </v-flex>
             <v-spacer/>
             <v-flex
@@ -93,7 +93,7 @@
           </v-layout>
           
           <!-- SP -->
-          <v-layout v-if="unit.sp && isVisible">
+          <v-layout v-if="unit.sp && isVisible && getSpCost(unit) > 0">
             <v-flex style="flex-grow: 0;" class="mr-1">
               {{ getSpCost(unit) }} SP:
             </v-flex>

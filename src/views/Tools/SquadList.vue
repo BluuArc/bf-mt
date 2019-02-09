@@ -5,9 +5,47 @@
     externalLoadingMessage="Fetching squad information..."
     @initfinished="getDbData">
     <v-container>
-      <v-layout row wrap>
-        <v-flex xs12 v-for="squad in squads" :key="squad.id">
+      <v-toolbar
+        fixed extended
+        scroll-off-screen
+        extension-height="72px"
+      >
+        <v-container fluid class="pt-0 pb-1 mb-0 px-1" slot="extension">
+          <v-layout row align-center>
+            <v-flex>
+              <v-text-field
+                v-model="nameFilter"
+                solo clearable
+                label="Search"
+                prepend-inner-icon="search"
+                hint="hint thing"
+                persistent-hint
+              />
+            </v-flex>
+            <v-layout row style="flex-grow: 0">
+              <v-flex style="flex-grow: 0">
+                <v-btn icon flat>
+                  <v-icon>sort</v-icon>
+                </v-btn>
+              </v-flex>
+              <v-flex style="flex-grow: 0">
+                <v-btn
+                  @click="onFilterUpdate"
+                  :outline="!filterChanged"
+                  :color="filterChanged ? 'primary' : ''"
+                  style="min-width: 64px;"
+                  round>
+                  <v-icon>search</v-icon>
+                </v-btn>
+              </v-flex>
+            </v-layout>
+          </v-layout>
+        </v-container>
+      </v-toolbar>
+      <v-layout row wrap class="mt-5 pt-2">
+        <v-flex xs12 v-for="(squad, i) in sortedSquads" :key="squad.id">
           <squad-list-card
+            :id="`squad-result-${i + 1}`"
             class="ma-2"
             :squad="squad"
             :getUnit="getUnit"
@@ -31,6 +69,7 @@ import { unitPositionMapping } from '@/modules/constants';
 import { squadRequiredModules } from '@/router/tool-routes';
 import { Logger } from '@/modules/Logger';
 import LoadingDebouncer from '@/modules/LoadingDebouncer';
+import debounce from 'lodash/debounce';
 
 // eslint-disable-next-line no-unused-vars
 const logger = new Logger({ prefix: '[SquadList]' });
@@ -49,6 +88,9 @@ export default {
         .fill(0)
         .map(() => Object.freeze(this.getSampleSquad()));
     },
+    sortedSquads () {
+      return Object.freeze(this.filteredSquads.slice());
+    },
   },
   data () {
     return {
@@ -60,6 +102,9 @@ export default {
       activeCallToken: '0',
       isVisible: false,
       squadDomElems: {},
+      nameFilter: '',
+      filterChanged: false,
+      filteredSquads: [],
     };
   },
   beforeCreate () {
@@ -155,7 +200,7 @@ export default {
         .fill(0)
         .map((_, i) => ({
           position: unitPositionMapping[i],
-          id: `${i+1}0017`,
+          id: `${i+1}001${Math.floor(Math.random() * 7) + 1}`,
           es: (Math.random() > 0.5) && '1013600',
           spheres: [(Math.random() > 0.5) && '47410', (Math.random() > 0.5) && '61070'].filter(v => v),
           sp: ((Math.random() > 0.5)) && 'ACDE',
@@ -189,10 +234,39 @@ export default {
         intersectionObserver.unobserve(this.squadDomElems[squadId].elem);
       }
     },
+    filterSquads ({ name = '' } = {}) {
+      const lowerCaseName = name && name.toLowerCase();
+      const includesName = (n) => (n || '').toLowerCase().includes(lowerCaseName);
+      return this.squads.filter(s => {
+        return [
+          () => !lowerCaseName, // check if name has any values
+          () => includesName(s.id.toString()),
+          () => s.name && includesName(s.name),
+          () => s.units.some(u => [
+            () => includesName(this.getUnit(u.id).name),
+            () => u.es && includesName(this.getExtraSkill(u.es).name),
+            () => Array.isArray(u.spheres) && u.spheres.some(i => includesName(this.getItem(i).name)),
+          ].some(v => v())),
+        ].some(v => v());
+      });
+    },
+    onFilterUpdate: debounce(function () {
+      this.filteredSquads = this.filterSquads({ name: this.nameFilter });
+      this.filterChanged = false;
+    }, 300),
   },
   watch: {
     isInternallyLoading () {
       loadingDebouncer.setValue(() => this.isInternallyLoading);
+    },
+    squads: {
+      immediate: true,
+      handler () {
+        this.onFilterUpdate();
+      },
+    },
+    nameFilter () {
+      this.filterChanged = true;
     },
   },
 };
