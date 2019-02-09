@@ -10,36 +10,46 @@
         scroll-off-screen
         extension-height="72px"
       >
-        <v-container fluid class="pt-0 pb-1 mb-0 px-1" slot="extension">
-          <v-layout row align-center>
-            <v-flex>
-              <v-text-field
-                v-model="nameFilter"
-                solo clearable
-                label="Search"
-                prepend-inner-icon="search"
-                hint="hint thing"
-                persistent-hint
-              />
-            </v-flex>
-            <v-layout row style="flex-grow: 0">
-              <v-flex style="flex-grow: 0">
-                <v-btn icon flat>
-                  <v-icon>sort</v-icon>
-                </v-btn>
+        <v-container
+          fluid
+          slot="extension"
+          id="squad-list--search-extension"
+          :class="{ 'pt-0 pb-0 mb-1 px-1': true, focused: searchIsFocused }">
+          <form @submit.prevent="onFilterUpdate">
+            <v-layout row align-center>
+              <v-flex>
+                <v-text-field
+                  v-model="nameFilter"
+                  @focusin="searchIsFocused = true"
+                  @focusout="searchIsFocused = false"
+                  clearable
+                  :color="lightMode ? 'black' : 'white'"
+                  label="Search"
+                  prepend-inner-icon="search"
+                  :hint="`${sortedSquads.length} ${sortedSquads.length === 1 ? 'squad' : 'squads'}`"
+                  persistent-hint
+                />
               </v-flex>
-              <v-flex style="flex-grow: 0">
-                <v-btn
-                  @click="onFilterUpdate"
-                  :outline="!filterChanged"
-                  :color="filterChanged ? 'primary' : ''"
-                  style="min-width: 64px;"
-                  round>
-                  <v-icon>search</v-icon>
-                </v-btn>
-              </v-flex>
+              <v-layout row style="flex-grow: 0">
+                <v-flex style="flex-grow: 0">
+                  <v-btn icon flat>
+                    <v-icon>sort</v-icon>
+                  </v-btn>
+                </v-flex>
+                <v-flex style="flex-grow: 0">
+                  <v-btn
+                    type="submit"
+                    @click="onFilterUpdate"
+                    :outline="!filterChanged"
+                    :color="filterChanged ? 'primary' : ''"
+                    style="min-width: 64px;"
+                    round>
+                    <v-icon>search</v-icon>
+                  </v-btn>
+                </v-flex>
+              </v-layout>
             </v-layout>
-          </v-layout>
+          </form>
         </v-container>
       </v-toolbar>
       <v-layout row wrap class="mt-5 pt-2">
@@ -81,7 +91,7 @@ export default {
     ModuleChecker,
   },
   computed: {
-    ...mapState('settings', ['activeServer']),
+    ...mapState('settings', ['activeServer', 'lightMode']),
     requiredModules: () => squadRequiredModules,
     squads () {
       return (new Array(10))
@@ -103,6 +113,7 @@ export default {
       isVisible: false,
       squadDomElems: {},
       nameFilter: '',
+      searchIsFocused: false,
       filterChanged: false,
       filteredSquads: [],
     };
@@ -234,6 +245,7 @@ export default {
         intersectionObserver.unobserve(this.squadDomElems[squadId].elem);
       }
     },
+    // TODO: offload filter into a worker
     filterSquads ({ name = '' } = {}) {
       const lowerCaseName = name && name.toLowerCase();
       const includesName = (n) => (n || '').toLowerCase().includes(lowerCaseName);
@@ -271,3 +283,29 @@ export default {
   },
 };
 </script>
+
+<style lang="less">
+#squad-list--search-extension {
+  background-color: var(--background-color-alt--lighten-1);
+  border-radius: 28px;
+  transition: border-color 0.25s;
+  border: 1px solid var(--background-color-alt--lighten-1);
+
+  &.focused {
+    border-color: var(--border-color-alt--lighten-2);
+  }
+
+  .v-text-field {
+    .v-input__slot {
+      margin-bottom: 0;
+      &::before, &::after {
+        border-width: 0;
+      }
+    }
+
+    .v-messages {
+      padding-left: 28px;
+    }
+  }
+}
+</style>
