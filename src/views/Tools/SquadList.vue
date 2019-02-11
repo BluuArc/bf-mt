@@ -63,11 +63,21 @@
             :getItem="getItem"
             :getExtraSkill="getExtraSkill"
             :to="`/tools/squads/${squad.id}`"
+            @share="squadToShareIndex = i"
             @register="registerSquadCard"
             @unregister="unRegisterSquadCard"
           />
         </v-flex>
       </v-layout>
+      <v-dialog
+        v-model="showShareDialog"
+        lazy
+        width="500">
+        <share-squad-card v-if="squadsToShow[squadToShareIndex]" :squad="squadsToShow[squadToShareIndex]"/>
+        <div v-else>
+          No squad selected
+        </div>
+      </v-dialog>
       <v-bottom-nav fixed :value="sortedSquads.length > squadsPerPage" app>
         <v-pagination
           style="justify-content: center;"
@@ -83,6 +93,7 @@
 <script>
 import { mapActions, mapState } from 'vuex';
 import SquadListCard from '@/components/Tools/Squads/SquadListCard';
+import ShareSquadCard from '@/components/Tools/Squads/ShareSquadCard';
 import ModuleChecker from '@/components/ModuleChecker';
 import { unitPositionMapping } from '@/modules/constants';
 import { squadRequiredModules } from '@/router/tool-routes';
@@ -97,6 +108,7 @@ let intersectionObserver;
 export default {
   components: {
     SquadListCard,
+    ShareSquadCard,
     ModuleChecker,
   },
   computed: {
@@ -145,6 +157,8 @@ export default {
       sortOrderAscending: true,
       filteredSquads: [],
       currentPage: 1,
+      squadToShareIndex: -1,
+      showShareDialog: false,
     };
   },
   beforeCreate () {
@@ -311,6 +325,16 @@ export default {
     },
     currentPage () {
       window.scrollTo(0, 0);
+    },
+    showShareDialog (isShowing) {
+      if (!isShowing) {
+        this.squadToShareIndex = -1;
+      }
+    },
+    squadToShareIndex (index) {
+      if (this.squadsToShow[index]) {
+        this.showShareDialog = true;
+      }
     },
   },
 };
