@@ -36,7 +36,7 @@
             <span class="body-1" v-text="getOrderText(unit)"/>
           </v-flex>
         </v-layout>
-        <v-layout column>
+        <v-layout column style="align-self: flex-start;">
           <!-- name and leader/friend icon -->
           <v-layout align-center>
             <v-flex class="d-flex-container align-center font-weight-bold">

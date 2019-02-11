@@ -6,6 +6,7 @@
     @initfinished="getDbData">
     <v-container>
       <v-toolbar
+        app
         fixed extended
         scroll-off-screen
         extension-height="72px"
@@ -14,7 +15,7 @@
           fluid
           slot="extension"
           id="squad-list--search-extension"
-          :class="{ 'pt-0 pb-0 mb-1 px-1': true, focused: searchIsFocused }">
+          :class="{ 'pt-0 pb-0 mb-2 px-1': true, focused: searchIsFocused }">
           <form @submit.prevent="onFilterUpdate">
             <v-layout row align-center>
               <v-flex>
@@ -52,8 +53,8 @@
           </form>
         </v-container>
       </v-toolbar>
-      <v-layout row wrap class="mt-5 pt-2">
-        <v-flex xs12 v-for="(squad, i) in sortedSquads" :key="squad.id">
+      <v-layout row wrap>
+        <v-flex xs12 v-for="(squad, i) in squadsToShow" :key="squad.id">
           <squad-list-card
             :id="`squad-result-${i + 1}`"
             class="ma-2"
@@ -67,6 +68,14 @@
           />
         </v-flex>
       </v-layout>
+      <v-bottom-nav fixed :value="sortedSquads.length > squadsPerPage" app>
+        <v-pagination
+          style="justify-content: center;"
+          v-model="currentPage"
+          :length="numPages"
+          :total-visible="$vuetify.breakpoint.mdAndUp ? 20 : undefined"
+        />
+      </v-bottom-nav>
     </v-container>
   </module-checker>
 </template>
@@ -94,7 +103,7 @@ export default {
     ...mapState('settings', ['activeServer', 'lightMode']),
     requiredModules: () => squadRequiredModules,
     squads () {
-      return (new Array(10))
+      return (new Array(15))
         .fill(0)
         .map(() => Object.freeze(this.getSampleSquad()));
     },
@@ -107,6 +116,17 @@ export default {
             return this.sortOrderAscending ? result : -result;
           })
       );
+    },
+    squadsPerPage () {
+      return 10;
+    },
+    squadsToShow () {
+      const pageIndex = this.currentPage - 1;
+      const squadStartIndex = pageIndex * this.squadsPerPage;
+      return Object.freeze(this.sortedSquads.slice(squadStartIndex, squadStartIndex + this.squadsPerPage));
+    },
+    numPages () {
+      return Math.ceil(this.sortedSquads.length / this.squadsPerPage);
     },
   },
   data () {
@@ -124,6 +144,7 @@ export default {
       filterChanged: false,
       sortOrderAscending: true,
       filteredSquads: [],
+      currentPage: 1,
     };
   },
   beforeCreate () {
@@ -287,6 +308,9 @@ export default {
     },
     nameFilter () {
       this.filterChanged = true;
+    },
+    currentPage () {
+      window.scrollTo(0, 0);
     },
   },
 };
