@@ -8,7 +8,14 @@
     :placeholderSrc="placeHolderSrc"
     :src="src"
     :isVisible="isVisible"
-  />
+  >
+    <g slot="before-image">
+      <slot name="before-image"/>
+    </g>
+    <g slot="after-image">
+      <slot name="after-image"/>
+    </g>
+  </lazy-load-image>
 </template>
 
 <script>

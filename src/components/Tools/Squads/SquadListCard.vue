@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card class="squad-list--entry-card">
     <v-layout row class="pa-2">
       <v-flex>
         <h1 class="title">
@@ -20,20 +20,44 @@
         xs12 sm6
         class="d-flex py-1"
         style="align-items: center; border: 1px solid var(--background-color-alt);">
-        <v-layout :style="`flex-grow: 0!important;`" column class="mx-2">
+        <v-layout :style="`flex-grow: 0!important; min-width: ${thumbnailSize}px; max-width: ${thumbnailSize}px;`" column class="mx-2">
           <v-flex text-xs-center v-if="$vuetify.breakpoint.xsOnly">
-            <span class="caption">{{ unit.position }}</span>
+            <span class="caption text-no-wrap">{{ unit.position }}</span>
           </v-flex>
-          <v-flex>
+          <v-layout align-content-center row>
             <unit-thumbnail
+              class="unit-thumbnail"
+              :style="`border-color: ${getBorderColorBasedOnBbType(unit)};`"
               :isVisible="isVisible"
               :src="getImageUrls(unit.id).ills_battle"
               :rarity="getUnit(unit.id).rarity"
               :imageTitle="getUnit(unit.id).name || unit.id"
-              :displayWidth="thumbnailSize" :displayHeight="thumbnailSize"/>
-          </v-flex>
-          <v-flex class="text-xs-center" v-if="!isNaN(unit.bbOrder)">
-            <span class="body-1" v-text="getOrderText(unit)"/>
+              :displayWidth="thumbnailSize" :displayHeight="thumbnailSize">
+              <template slot="after-image">
+                <text
+                  :x="0"
+                  :y="thumbnailSize * 0.75">
+                  {{ !isNaN(unit.bbOrder) ? unit.bbOrder : '-' }}
+                </text>
+              </template>
+            </unit-thumbnail>
+          </v-layout>
+          <v-flex class="text-xs-center" v-if="allOrderText[i]">
+            <span
+              v-if="!isVisible"
+              class="body-1"
+              v-text="allOrderText[i]"/>
+            <v-chip
+              v-else
+              style="justify-content: center;"
+              class="bb-order-chip"
+              :color="(allOrderText[i].includes('UBB') && 'red') || (allOrderText[i].includes('SBB') && 'amber') || 'grey'"
+              light
+              :text-color="lightMode ? 'black' : 'white'"
+              outline
+              small>
+              <b>{{ allOrderText[i] }}</b>
+            </v-chip>
           </v-flex>
         </v-layout>
         <v-layout column style="align-self: flex-start;">
@@ -123,8 +147,9 @@
 
 <script>
 import { unitPositionMapping } from '@/modules/constants';
-import { mapGetters } from 'vuex';
+import { mapGetters, mapState } from 'vuex';
 import { spCodeToIndex } from '@/modules/core/units';
+import colors from 'vuetify/es5/util/colors';
 import UnitThumbnail from '@/components/Multidex/Units/UnitThumbnail';
 import RarityIcon from '@/components/Multidex/RarityIcon';
 import SphereTypeIcon from '@/components/Multidex/Items/SphereTypeIcon';
@@ -166,6 +191,7 @@ export default {
     },
   },
   computed: {
+    ...mapState('settings', ['lightMode']),
     ...mapGetters('units', {
       getImageUrls: 'getImageUrls',
     }),
@@ -190,6 +216,9 @@ export default {
 
         return unit;
       });
+    },
+    allOrderText () {
+      return this.fullUnits.map(u => !isNaN(u.bbOrder) && this.getOrderText(u));
     },
   },
   data () {
@@ -217,13 +246,19 @@ export default {
     getUnitEntryKey (unit = {}, i = 0) {
       return `${JSON.stringify(unit)}-${i}`;
     },
+    getBorderColorBasedOnBbType (unit = {}) {
+      const colorKey = (unit.bbType === 'ubb' && 'red') ||
+      (unit.bbType === 'sbb' && 'amber') ||
+      'grey';
+      return colors[colorKey].base;
+    },
     getOrderText (unit = {}) {
       const bbType = unit.bbType ||
         (this.getUnit(unit.id).sbb && 'sbb') ||
         (this.getUnit(unit.id).bb && 'bb') ||
         ('natk');
       return [
-        unit.bbOrder,
+        // unit.bbOrder,
         bbType.toUpperCase(),
       ].join('-');
     },
@@ -254,6 +289,28 @@ export default {
 };
 </script>
 
-<style>
+<style lang="less">
+.squad-list--entry-card {
+  .bb-order-chip {
+    margin: auto;
+    width: 100%;
+    border-top-left-radius: 0; 
+    border-top-right-radius: 0;
+    margin-top: 0;
+  }
 
+  image.lazy-actual {
+    min-width: 64px;
+  }
+
+  .unit-thumbnail {
+    flex: 0 1 auto;
+    margin: auto;
+    font: bold 4.5em sans-serif;
+    stroke: black;
+    stroke-width: 2px;
+    fill: white;
+    border: 1px solid white;
+  }
+}
 </style>
