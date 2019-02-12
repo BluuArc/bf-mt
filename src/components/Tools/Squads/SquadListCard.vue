@@ -63,7 +63,7 @@
         <v-layout column style="align-self: flex-start;">
           <!-- name and leader/friend icon -->
           <v-layout align-center>
-            <v-flex class="d-flex-container align-center font-weight-bold">
+            <v-flex class="d-flex-container align-center font-weight-bold subheading">
               <span v-if="getUnit(unit.id).rarity < 8">{{ getUnit(unit.id).rarity }}</span>
               <rarity-icon
                 v-if="isVisible"
