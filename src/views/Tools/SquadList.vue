@@ -76,6 +76,9 @@
         <share-squad-card
           v-if="squadsToShow[squadToShareIndex]"
           :squad="squadsToShow[squadToShareIndex]"
+          :getUnit="getUnit"
+          :getItem="getItem"
+          :getExtraSkill="getExtraSkill"
           @back="showShareDialog = false"/>
         <div v-else>
           No squad selected
