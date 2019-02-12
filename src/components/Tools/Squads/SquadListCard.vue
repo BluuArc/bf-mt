@@ -27,7 +27,7 @@
           <v-layout align-content-center row>
             <unit-thumbnail
               class="unit-thumbnail"
-              :style="`border-color: ${getBorderColorBasedOnBbType(unit)};`"
+              :style="`border-color: ${allOrderSettings[i].border};`"
               :isVisible="isVisible"
               :src="getImageUrls(unit.id).ills_battle"
               :rarity="getUnit(unit.id).rarity"
@@ -42,21 +42,21 @@
               </template>
             </unit-thumbnail>
           </v-layout>
-          <v-flex class="text-xs-center" v-if="allOrderText[i]">
+          <v-flex class="text-xs-center" v-if="allOrderSettings[i]">
             <span
               v-if="!isVisible"
               class="body-1"
-              v-text="allOrderText[i]"/>
+              v-text="allOrderSettings[i].text"/>
             <v-chip
               v-else
-              style="justify-content: center;"
+              :style="`
+                background-color: ${allOrderSettings[i].background};
+                color: ${allOrderSettings[i].foreground};
+                border-color: ${allOrderSettings[i].border};
+              `"
               class="bb-order-chip"
-              :color="(allOrderText[i].includes('UBB') && 'red') || (allOrderText[i].includes('SBB') && 'amber') || 'blue-grey'"
-              light
-              :text-color="lightMode ? 'black' : 'white'"
-              outline
               small>
-              <b>{{ allOrderText[i] }}</b>
+              <b>{{ allOrderSettings[i].text }}</b>
             </v-chip>
           </v-flex>
         </v-layout>
@@ -217,8 +217,11 @@ export default {
         return unit;
       });
     },
-    allOrderText () {
-      return this.fullUnits.map(u => !isNaN(u.bbOrder) && this.getOrderText(u));
+    allOrderSettings () {
+      return this.fullUnits.map(u => ({
+        text: (!isNaN(u.bbOrder) && this.getOrderText(u)) || '-',
+        ...this.getColorSetBasedOnBbType((!isNaN(u.bbOrder) && u) || undefined),
+      }));
     },
   },
   data () {
@@ -246,11 +249,16 @@ export default {
     getUnitEntryKey (unit = {}, i = 0) {
       return `${JSON.stringify(unit)}-${i}`;
     },
-    getBorderColorBasedOnBbType (unit = {}) {
+    getColorSetBasedOnBbType (unit = {}) {
       const colorKey = (unit.bbType === 'ubb' && 'red') ||
-      (unit.bbType === 'sbb' && 'amber') ||
-      'blueGrey';
-      return colors[colorKey].base;
+        (unit.bbType === 'sbb' && 'amber') ||
+        'blueGrey';
+      
+      return {
+        border: colors[colorKey].base,
+        background: colors[colorKey].lighten4,
+        foreground: colors[colorKey].darken4,
+      };
     },
     getOrderText (unit = {}) {
       const bbType = unit.bbType ||
@@ -292,6 +300,7 @@ export default {
 <style lang="less">
 .squad-list--entry-card {
   .bb-order-chip {
+    justify-content: center;
     margin: auto;
     width: 100%;
     border-top-left-radius: 0; 
