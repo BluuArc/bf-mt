@@ -258,9 +258,9 @@ export default {
         .map((_, i) => ({
           position: unitPositionMapping[i],
           id: `${i+1}001${Math.floor(Math.random() * 7) + 1}`,
-          es: (Math.random() > 0.5) && '1013600',
+          es: ((Math.random() > 0.5) && '1013600') || undefined,
           spheres: [(Math.random() > 0.5) && '47410', (Math.random() > 0.5) && '61070'].filter(v => v),
-          sp: ((Math.random() > 0.5)) && 'ACDE',
+          sp: (((Math.random() > 0.5)) && 'ACDE') || undefined,
           bbOrder: i + 1,
           bbType: ['bb', 'sbb', 'ubb'][Math.floor(Math.random() * 3)],
         })),

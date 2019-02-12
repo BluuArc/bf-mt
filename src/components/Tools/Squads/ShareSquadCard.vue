@@ -5,7 +5,7 @@
         markdown {{ squad.name }}
       </v-layout>
       <v-layout row slot="json">
-        json {{ squad }}
+        <json-viewer :json="copyableJson" :value="activeTabIndex"/>
       </v-layout>
     </card-tabs-container>
     <v-card-actions>
@@ -18,6 +18,8 @@
 
 <script>
 import CardTabsContainer from '@/components/CardTabsContainer';
+import TextViewer from '@/components/TextViewer';
+import JsonViewer from '@/components/JsonViewer';
 
 export default {
   props: {
@@ -28,9 +30,22 @@ export default {
   },
   components: {
     CardTabsContainer,
+    TextViewer,
+    JsonViewer,
   },
   computed: {
     tabConfig: () => ['markdown', 'json'].map(name => ({ name, slot: name })),
+    copyableJson () {
+      // don't need to share ID to export
+      // eslint-disable-next-line no-unused-vars
+      const { id, ...data } = this.squad;
+      return data;
+    },
+  },
+  data () {
+    return {
+      activeTabIndex: 0,
+    };
   },
 };
 </script>
