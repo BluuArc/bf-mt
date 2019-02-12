@@ -73,7 +73,10 @@
         v-model="showShareDialog"
         lazy
         width="500">
-        <share-squad-card v-if="squadsToShow[squadToShareIndex]" :squad="squadsToShow[squadToShareIndex]"/>
+        <share-squad-card
+          v-if="squadsToShow[squadToShareIndex]"
+          :squad="squadsToShow[squadToShareIndex]"
+          @back="showShareDialog = false"/>
         <div v-else>
           No squad selected
         </div>
