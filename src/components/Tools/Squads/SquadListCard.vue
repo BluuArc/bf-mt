@@ -51,7 +51,7 @@
               v-else
               style="justify-content: center;"
               class="bb-order-chip"
-              :color="(allOrderText[i].includes('UBB') && 'red') || (allOrderText[i].includes('SBB') && 'amber') || 'grey'"
+              :color="(allOrderText[i].includes('UBB') && 'red') || (allOrderText[i].includes('SBB') && 'amber') || 'blue-grey'"
               light
               :text-color="lightMode ? 'black' : 'white'"
               outline
@@ -249,7 +249,7 @@ export default {
     getBorderColorBasedOnBbType (unit = {}) {
       const colorKey = (unit.bbType === 'ubb' && 'red') ||
       (unit.bbType === 'sbb' && 'amber') ||
-      'grey';
+      'blueGrey';
       return colors[colorKey].base;
     },
     getOrderText (unit = {}) {
