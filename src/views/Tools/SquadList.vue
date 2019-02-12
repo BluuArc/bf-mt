@@ -331,6 +331,9 @@ export default {
         this.squadToShareIndex = -1;
       }
     },
+    sortedSquads () {
+      this.currentPage = 1;
+    },
     squadToShareIndex (index) {
       if (this.squadsToShow[index]) {
         this.showShareDialog = true;
