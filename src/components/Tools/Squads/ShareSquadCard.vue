@@ -2,15 +2,42 @@
   <v-card>
     <card-tabs-container :tabs="tabConfig" v-model="activeTabIndex">
       <v-layout column slot="markdown">
-        <v-layout row>
-          Options here
+        <v-layout row wrap>
+          <v-layout row align-center>
+            <v-flex class="subheading px-2" style="flex-grow: 0;">
+              Presets:
+            </v-flex>
+            <v-layout wrap>
+              <v-flex xs12 sm6 class="px-2">
+                <v-btn block outline @click="setToReddit">Reddit</v-btn>
+              </v-flex>
+              <v-flex xs12 sm6 class="px-2">
+                <v-btn block outline @click="setToDiscord">Discord</v-btn>
+              </v-flex>
+            </v-layout>
+          </v-layout>
+          <v-flex xs12 sm6>
+            <v-checkbox v-model="showName" label="Show Squad Name"/>
+          </v-flex>
+          <v-flex xs12 sm6>
+            <v-checkbox v-model="showOrder" label="Show BB Order"/>
+          </v-flex>
+          <v-flex xs12 sm6>
+            <v-checkbox v-model="abbreviate" label="Abbreviate Results"/>
+          </v-flex>
+          <v-flex xs12 sm6>
+            <v-checkbox v-model="showSpCost" :disabled="abbreviate" label="Show SP Costs"/>
+          </v-flex>
+          <v-flex xs12 sm6>
+            <v-checkbox v-model="useBullets" label="Use Bulleted List"/>
+          </v-flex>
         </v-layout>
         <v-flex>
-          <text-viewer :inputText="markdownText" :value="activeTabIndex"/>
+          <text-viewer :inputText="markdownText" :value="updateTime"/>
         </v-flex>
       </v-layout>
       <v-layout row slot="json">
-        <json-viewer :json="copyableJson" :value="activeTabIndex"/>
+        <json-viewer :json="copyableJson" :value="updateTime"/>
       </v-layout>
     </card-tabs-container>
     <v-card-actions>
@@ -60,12 +87,24 @@ export default {
       return otherInfo;
     },
     markdownText () {
-      return this.squadToMarkdown(this.squad);
+      return this.squadToMarkdown(this.squad, {
+        showOrder: this.showOrder,
+        showName: this.showName,
+        useBullets: this.useBullets,
+        abbreviate: this.abbreviate,
+        showSpCost: this.showSpCost,
+      });
     },
   },
   data () {
     return {
       activeTabIndex: 0,
+      updateTime: new Date(), // used to reset copy text
+      showOrder: true,
+      showName: false,
+      useBullets: true,
+      abbreviate: false,
+      showSpCost: true,
     };
   },
   methods: {
@@ -93,8 +132,8 @@ export default {
         // name, position, BB order and type
         entry.push([
           prefix,
-          this.getUnit(unit.id).rarity && `${this.getUnit(unit.id).rarity === 8 ? 'OE' : `${this.getUnit(unit.id).rarity}\\*`}`,
-          this.getUnit(unit.id).name || unit.id,
+          `**__${this.getUnit(unit.id).rarity && `${this.getUnit(unit.id).rarity === 8 ? 'OE' : `${this.getUnit(unit.id).rarity}\\*`}`}`,
+          `${this.getUnit(unit.id).name || unit.id}__**`,
           i === squad.lead && `**(${abbreviate ? 'L' : 'Leader'})**`,
           i === squad.friend && `**(${abbreviate ? 'F' : 'Friend'})**`,
           `- ${unit.position}${showOrder ? ';' : ''}`,
@@ -118,25 +157,26 @@ export default {
           entry.push([
             prefix,
             '**Spheres:**',
-            ...unit.spheres.map(id => this.getItem(id).name || id),
+            unit.spheres.map(id => this.getItem(id).name || id).join(', '),
           ].filter(v => v).join(' '));
         }
 
         if (unit.sp && this.getSpCost(unit) > 0) {
           entry.push([
             prefix,
-            `**SP Enhancements (${this.getSpCost(unit)} SP):`,
+            `**SP Enhancements (${this.getSpCost(unit)} SP):** `,
             abbreviate && unit.sp,
-            !abbreviate && '\n',
-            !abbreviate && this.getSpText(unit).map(skill => [
+
+            // convert SP code to list of SP options
+            !abbreviate && ['\n', this.getSpText(unit).map(skill => [
               `\t${prefix}`,
-              showSpCost && `[${skill.cost} SP] -`,
+              showSpCost && `[${skill.cost} SP] - `,
               `**${skill.code}:** ${skill.text}`,
-            ].filter(v => v).join(' ')).join('\n'),
+            ].filter(v => v).join('')).join('\n')].join(''),
           ].filter(v => v).join(' '));
         }
 
-        sections.push(entry.join('\n'));
+        sections.push(`${entry.join('\n')}\n`);
       });
 
       return sections.join('\n');
@@ -185,6 +225,28 @@ export default {
           text: this.getSkillDescription(v.skill),
           cost: v.skill.skill.bp,
         }));
+    },
+    setToReddit () {
+      this.showOrder = true;
+      this.showName = false;
+      this.useBullets = true;
+      this.abbreviate = false;
+      this.showSpCost = true;
+    },
+    setToDiscord () {
+      this.showOrder = true;
+      this.showName = true;
+      this.useBullets = false;
+      this.abbreviate = false;
+      this.showSpCost = true;
+    },
+  },
+  watch: {
+    markdownText () {
+      this.updateTime = new Date();
+    },
+    activeTabIndex () {
+      this.updateTime = new Date();
     },
   },
 };
