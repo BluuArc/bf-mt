@@ -72,10 +72,11 @@ export default {
     squadToMarkdown (
       squad = {},
       {
-        showOrder = false,
+        showOrder = true,
         showName = false,
         useBullets = true,
         abbreviate = false,
+        showSpCost = true,
         // TODO: have link to add it to their own version?
       } = {},
     ) {
@@ -92,11 +93,12 @@ export default {
         // name, position, BB order and type
         entry.push([
           prefix,
+          this.getUnit(unit.id).rarity && `${this.getUnit(unit.id).rarity === 8 ? 'OE' : `${this.getUnit(unit.id).rarity}\\*`}`,
           this.getUnit(unit.id).name || unit.id,
           i === squad.lead && `**(${abbreviate ? 'L' : 'Leader'})**`,
           i === squad.friend && `**(${abbreviate ? 'F' : 'Friend'})**`,
           `- ${unit.position}${showOrder ? ';' : ''}`,
-          showOrder && this.getBbTypeText(unit),
+          showOrder && `${unit.bbOrder}-${this.getBbTypeText(unit)}`,
         ].filter(v => v).join(' '));
 
         // indent one level for supplementary info
@@ -120,9 +122,19 @@ export default {
           ].filter(v => v).join(' '));
         }
 
-        // if (unit.sp && this.getSpCost(unit) > 0) {
-        //   entry.push
-        // }
+        if (unit.sp && this.getSpCost(unit) > 0) {
+          entry.push([
+            prefix,
+            `**SP Enhancements (${this.getSpCost(unit)} SP):`,
+            abbreviate && unit.sp,
+            !abbreviate && '\n',
+            !abbreviate && this.getSpText(unit).map(skill => [
+              `\t${prefix}`,
+              showSpCost && `[${skill.cost} SP] -`,
+              `**${skill.code}:** ${skill.text}`,
+            ].filter(v => v).join(' ')).join('\n'),
+          ].filter(v => v).join(' '));
+        }
 
         sections.push(entry.join('\n'));
       });
@@ -146,6 +158,33 @@ export default {
         .map(char => feSkills[spCodeToIndex(char)])
         .filter(v => v)
         .reduce((acc, s) => acc + +s.skill.bp, 0);
+    },
+    getSkillDescription (skillEntry) {
+      const { desc = '', name = '' } = skillEntry.skill;
+      if (desc.trim() === name.trim()) {
+        return desc || 'No Description';
+      } else {
+        return (desc.length > name.length) ? desc : [name, desc ? `(${desc})` : ''].filter(val => val).join(' ');
+      }
+    },
+    getSpText (unit) {
+      const feSkills = this.getUnit(unit.id).feskills;
+      const enhancements = unit.sp;
+      if (!feSkills || !enhancements) {
+        return [];
+      }
+
+      return enhancements.split('')
+        .map(char => ({
+          code: char,
+          skill: feSkills[spCodeToIndex(char)],
+        }))
+        .filter(v => v.skill) // only get valid skills
+        .map(v => ({
+          code: v.code,
+          text: this.getSkillDescription(v.skill),
+          cost: v.skill.skill.bp,
+        }));
     },
   },
 };
