@@ -4,17 +4,25 @@
       <v-layout column slot="markdown">
         <v-layout row wrap>
           <v-layout row align-center>
-            <v-flex class="subheading px-2" style="flex-grow: 0;">
-              Presets:
+            <v-flex>
+              <v-select
+                v-model="target"
+                :items="possibleTargets"
+                label="Platform"/>
             </v-flex>
-            <v-layout wrap>
+            <v-flex style="flex-grow: 0;">
+              <v-btn flat @click="setWithPreset">
+                Use Preset
+              </v-btn>
+            </v-flex>
+            <!-- <v-layout wrap>
               <v-flex xs12 sm6 class="px-2">
-                <v-btn block outline @click="setToReddit">Reddit</v-btn>
+                <v-btn block outline @click="setToRedditPresets">Reddit</v-btn>
               </v-flex>
               <v-flex xs12 sm6 class="px-2">
-                <v-btn block outline @click="setToDiscord">Discord</v-btn>
+                <v-btn block outline @click="setToDiscordPresets">Discord</v-btn>
               </v-flex>
-            </v-layout>
+            </v-layout> -->
           </v-layout>
           <v-flex xs12 sm6>
             <v-checkbox v-model="showName" label="Show Squad Name"/>
@@ -30,6 +38,9 @@
           </v-flex>
           <v-flex xs12 sm6>
             <v-checkbox v-model="useBullets" label="Use Bulleted List"/>
+          </v-flex>
+          <v-flex xs12 sm6>
+            <v-checkbox v-model="showShareLink" label="Show Share Link"/>
           </v-flex>
         </v-layout>
         <v-flex>
@@ -49,6 +60,7 @@
 </template>
 
 <script>
+import { unitPositionMapping } from '@/modules/constants';
 import CardTabsContainer from '@/components/CardTabsContainer';
 import TextViewer from '@/components/TextViewer';
 import JsonViewer from '@/components/JsonViewer';
@@ -93,19 +105,43 @@ export default {
         useBullets: this.useBullets,
         abbreviate: this.abbreviate,
         showSpCost: this.showSpCost,
+        showShareLink: this.showShareLink,
       });
     },
+    squadShorthand () {
+      return this.squad.units.map((unit, i) => {
+        return [
+          unit.id,
+          unitPositionMapping.indexOf(unit.position),
+          unit.es || '-',
+          unit.spheres.join('+') || '-',
+          (i === this.squad.lead && 'L') || (i === this.squad.friend && 'F') || '-',
+          unit.bbOrder,
+          unit.bbType,
+          unit.sp || '-',
+        ].join('~');
+      }).join(',');
+    },
+    shareLink () {
+      return `${location.protocol}//${location.host}${location.pathname}/squads/add?import=${encodeURI(this.squadShorthand)}`;
+    },
+    possibleTargets: () => ['Discord', 'Reddit'],
   },
   data () {
     return {
       activeTabIndex: 0,
       updateTime: new Date(), // used to reset copy text
-      showOrder: true,
+      showOrder: false,
       showName: false,
-      useBullets: true,
+      useBullets: false,
       abbreviate: false,
-      showSpCost: true,
+      showSpCost: false,
+      showShareLink: false,
+      target: 'Discord',
     };
+  },
+  mounted () {
+    this.setWithPreset();
   },
   methods: {
     squadToMarkdown (
@@ -116,7 +152,7 @@ export default {
         useBullets = true,
         abbreviate = false,
         showSpCost = true,
-        // TODO: have link to add it to their own version?
+        showShareLink = false,
       } = {},
     ) {
       const sections = [];
@@ -179,6 +215,13 @@ export default {
         sections.push(`${entry.join('\n')}\n`);
       });
 
+      if (showShareLink) {
+        const linkText = this.target === 'Reddit'
+          ? `[Save Squad](${this.shareLink}})`
+          : `Save Squad: ${this.shareLink}`;
+        sections.push(linkText);
+      }
+
       return sections.join('\n');
     },
     getBbTypeText (unit = {}) {
@@ -226,19 +269,16 @@ export default {
           cost: v.skill.skill.bp,
         }));
     },
-    setToReddit () {
+    setWithPreset () {
+      // shared settings
       this.showOrder = true;
-      this.showName = false;
-      this.useBullets = true;
       this.abbreviate = false;
       this.showSpCost = true;
-    },
-    setToDiscord () {
-      this.showOrder = true;
-      this.showName = true;
-      this.useBullets = false;
-      this.abbreviate = false;
-      this.showSpCost = true;
+      this.showShareLink = true;
+
+      // individual settings
+      this.showName = this.target === 'Discord';
+      this.useBullets = this.target === 'Reddit';
     },
   },
   watch: {
