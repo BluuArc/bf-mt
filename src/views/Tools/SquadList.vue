@@ -71,8 +71,7 @@
       </v-layout>
       <v-dialog
         v-model="showShareDialog"
-        lazy
-        width="500">
+        lazy>
         <share-squad-card
           v-if="squadsToShow[squadToShareIndex]"
           :squad="squadsToShow[squadToShareIndex]"

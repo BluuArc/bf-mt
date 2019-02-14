@@ -1,47 +1,60 @@
 <template>
   <v-card>
     <card-tabs-container :tabs="tabConfig" v-model="activeTabIndex">
-      <v-layout column slot="markdown">
-        <v-layout row wrap>
-          <v-layout row align-center>
-            <v-flex>
-              <v-select
-                v-model="target"
-                :items="possibleTargets"
-                label="Platform"/>
+      <v-layout
+        :column="$vuetify.breakpoint.smAndDown"
+        :row="$vuetify.breakpoint.mdAndUp"
+        slot="markdown">
+        <v-layout column wrap :style="{
+          'min-width': $vuetify.breakpoint.mdAndUp ? '50%' : '100%',
+          'max-width': $vuetify.breakpoint.mdAndUp ? '50%' : '100%',
+          }">
+          <v-layout row wrap>
+            <v-flex xs12>
+              <h2 class="title">
+                Formatting
+              </h2>
             </v-flex>
-            <v-flex style="flex-grow: 0;">
-              <v-btn flat @click="setWithPreset">
-                Use Preset
-              </v-btn>
+            <v-layout row align-center>
+              <v-flex>
+                <v-select
+                  v-model="target"
+                  :items="possibleTargets"
+                  label="Platform"/>
+              </v-flex>
+              <v-flex style="flex-grow: 0;">
+                <v-btn flat @click="setWithPreset">
+                  Use Preset
+                </v-btn>
+              </v-flex>
+            </v-layout>
+            <v-flex xs12 sm6>
+              <v-checkbox v-model="useBullets" label="Use Bulleted List"/>
             </v-flex>
-            <!-- <v-layout wrap>
-              <v-flex xs12 sm6 class="px-2">
-                <v-btn block outline @click="setToRedditPresets">Reddit</v-btn>
-              </v-flex>
-              <v-flex xs12 sm6 class="px-2">
-                <v-btn block outline @click="setToDiscordPresets">Discord</v-btn>
-              </v-flex>
-            </v-layout> -->
           </v-layout>
-          <v-flex xs12 sm6>
-            <v-checkbox v-model="showName" label="Show Squad Name"/>
-          </v-flex>
-          <v-flex xs12 sm6>
-            <v-checkbox v-model="showOrder" label="Show BB Order"/>
-          </v-flex>
-          <v-flex xs12 sm6>
-            <v-checkbox v-model="abbreviate" label="Abbreviate Results"/>
-          </v-flex>
-          <v-flex xs12 sm6>
-            <v-checkbox v-model="showSpCost" :disabled="abbreviate" label="Show SP Costs"/>
-          </v-flex>
-          <v-flex xs12 sm6>
-            <v-checkbox v-model="useBullets" label="Use Bulleted List"/>
-          </v-flex>
-          <v-flex xs12 sm6>
-            <v-checkbox v-model="showShareLink" label="Show Share Link"/>
-          </v-flex>
+          <v-divider class="mb-3"/>
+          <v-layout row wrap>
+            <v-flex xs12>
+              <h2 class="title">
+                Information
+              </h2>
+            </v-flex>
+            <v-flex xs12 sm6>
+              <v-checkbox v-model="showName" label="Show Squad Name"/>
+            </v-flex>
+            <v-flex xs12 sm6>
+              <v-checkbox v-model="showOrder" label="Show BB Order"/>
+            </v-flex>
+            <v-flex xs12 sm6>
+              <v-checkbox v-model="abbreviate" label="Abbreviate Results"/>
+            </v-flex>
+            <v-flex xs12 sm6>
+              <v-checkbox v-model="showSpCost" :disabled="abbreviate" label="Show SP Costs"/>
+            </v-flex>
+            <v-flex xs12 sm6>
+              <v-checkbox v-model="showShareLink" label="Show Share Link"/>
+            </v-flex>
+          </v-layout>
         </v-layout>
         <v-flex>
           <text-viewer :inputText="markdownText" :value="updateTime"/>
@@ -51,8 +64,8 @@
         <json-viewer :json="copyableJson" :value="updateTime"/>
       </v-layout>
     </card-tabs-container>
+    <v-divider/>
     <v-card-actions>
-      <v-btn flat>Copy</v-btn>
       <v-spacer/>
       <v-btn flat @click="$emit('back')">Back</v-btn>
     </v-card-actions>
@@ -123,7 +136,7 @@ export default {
       }).join(',');
     },
     shareLink () {
-      return `${location.protocol}//${location.host}${location.pathname}/squads/add?import=${encodeURI(this.squadShorthand)}`;
+      return `${location.protocol}//${location.host}${location.pathname}#/tools/squads/add?import=${encodeURI(this.squadShorthand)}`;
     },
     possibleTargets: () => ['Discord', 'Reddit'],
   },
@@ -205,7 +218,7 @@ export default {
 
             // convert SP code to list of SP options
             !abbreviate && ['\n', this.getSpText(unit).map(skill => [
-              `\t${prefix}`,
+              `\t${useBullets ? `${prefix} ` : ''}`,
               showSpCost && `[${skill.cost} SP] - `,
               `**${skill.code}:** ${skill.text}`,
             ].filter(v => v).join('')).join('\n')].join(''),
