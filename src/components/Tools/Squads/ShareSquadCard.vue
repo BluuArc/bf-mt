@@ -40,19 +40,28 @@
               </h2>
             </v-flex>
             <v-flex xs12 sm6>
-              <v-checkbox v-model="showName" label="Show Squad Name"/>
+              <v-checkbox v-model="showName" label="Squad Name"/>
             </v-flex>
             <v-flex xs12 sm6>
-              <v-checkbox v-model="showOrder" label="Show BB Order"/>
+              <v-checkbox v-model="showOrder" label="BB Order"/>
+            </v-flex>
+            <v-flex xs12 sm6>
+              <v-checkbox v-model="showExtraSkill" label="Extra Skill"/>
+            </v-flex>
+            <v-flex xs12 sm6>
+              <v-checkbox v-model="showSpheres" label="Spheres"/>
+            </v-flex>
+            <v-flex xs12 sm6>
+              <v-checkbox v-model="showEnhancements" label="SP Enhancements"/>
             </v-flex>
             <v-flex xs12 sm6>
               <v-checkbox v-model="abbreviate" label="Abbreviate Results"/>
             </v-flex>
             <v-flex xs12 sm6>
-              <v-checkbox v-model="showSpCost" :disabled="abbreviate" label="Show SP Costs"/>
+              <v-checkbox v-model="showSpCost" :disabled="abbreviate || !showEnhancements" label="SP Costs"/>
             </v-flex>
             <v-flex xs12 sm6>
-              <v-checkbox v-model="showShareLink" label="Show Share Link"/>
+              <v-checkbox v-model="showShareLink" label="Share Link"/>
             </v-flex>
           </v-layout>
         </v-layout>
@@ -119,6 +128,9 @@ export default {
         abbreviate: this.abbreviate,
         showSpCost: this.showSpCost,
         showShareLink: this.showShareLink,
+        showExtraSkill: this.showExtraSkill,
+        showSpheres: this.showSpheres,
+        showEnhancements: this.showEnhancements,
       });
     },
     squadShorthand () {
@@ -150,6 +162,9 @@ export default {
       abbreviate: false,
       showSpCost: false,
       showShareLink: false,
+      showExtraSkill: false,
+      showSpheres: false,
+      showEnhancements: false,
       target: 'Discord',
     };
   },
@@ -166,6 +181,10 @@ export default {
         abbreviate = false,
         showSpCost = true,
         showShareLink = false,
+        showExtraSkill = false,
+        showSpheres = false,
+        showEnhancements = true,
+        // TODO: add spark statistics option
       } = {},
     ) {
       const sections = [];
@@ -194,7 +213,7 @@ export default {
           prefix = '\t*';
         }
 
-        if (unit.es) {
+        if (showExtraSkill && unit.es) {
           entry.push([
             prefix,
             `**${abbreviate ? 'ES' : 'Extra Skill'}:**`,
@@ -202,7 +221,7 @@ export default {
           ].filter(v => v).join(' '));
         }
 
-        if (Array.isArray(unit.spheres) && unit.spheres.length > 0) {
+        if (showSpheres && Array.isArray(unit.spheres) && unit.spheres.length > 0) {
           entry.push([
             prefix,
             '**Spheres:**',
@@ -210,10 +229,10 @@ export default {
           ].filter(v => v).join(' '));
         }
 
-        if (unit.sp && this.getSpCost(unit) > 0) {
+        if (showEnhancements && unit.sp && this.getSpCost(unit) > 0) {
           entry.push([
             prefix,
-            `**SP Enhancements (${this.getSpCost(unit)} SP):** `,
+            `**SP Enhancements (${this.getSpCost(unit)} SP):**`,
             abbreviate && unit.sp,
 
             // convert SP code to list of SP options
@@ -288,6 +307,9 @@ export default {
       this.abbreviate = false;
       this.showSpCost = true;
       this.showShareLink = true;
+      this.showExtraSkill = true;
+      this.showSpheres = true;
+      this.showEnhancements = true;
 
       // individual settings
       this.showName = this.target === 'Discord';
