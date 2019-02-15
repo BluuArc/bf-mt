@@ -43,7 +43,13 @@
               <v-checkbox v-model="showName" label="Squad Name"/>
             </v-flex>
             <v-flex xs12 sm6>
+              <v-checkbox v-model="showPosition" label="Position"/>
+            </v-flex>
+            <v-flex xs12 sm6>
               <v-checkbox v-model="showOrder" label="BB Order"/>
+            </v-flex>
+            <v-flex xs12 sm6>
+              <v-checkbox v-model="showBbType" label="Skill Type"/>
             </v-flex>
             <v-flex xs12 sm6>
               <v-checkbox v-model="showExtraSkill" label="Extra Skill"/>
@@ -122,6 +128,8 @@ export default {
     },
     markdownText () {
       return this.squadToMarkdown(this.squad, {
+        showPosition: this.showPosition,
+        showBbType: this.showBbType,
         showOrder: this.showOrder,
         showName: this.showName,
         useBullets: this.useBullets,
@@ -156,6 +164,8 @@ export default {
     return {
       activeTabIndex: 0,
       updateTime: new Date(), // used to reset copy text
+      showPosition: false,
+      showBbType: false,
       showOrder: false,
       showName: false,
       useBullets: false,
@@ -175,6 +185,8 @@ export default {
     squadToMarkdown (
       squad = {},
       {
+        showPosition = true,
+        showBbType = true,
         showOrder = true,
         showName = false,
         useBullets = true,
@@ -204,8 +216,11 @@ export default {
           `${this.getUnit(unit.id).name || unit.id}__**`,
           i === squad.lead && `**(${abbreviate ? 'L' : 'Leader'})**`,
           i === squad.friend && `**(${abbreviate ? 'F' : 'Friend'})**`,
-          `- ${unit.position}${showOrder ? ';' : ''}`,
-          showOrder && `${unit.bbOrder}-${this.getBbTypeText(unit)}`,
+          (showPosition || showOrder || showBbType) && '-',
+          [
+            showPosition && unit.position,
+            [showOrder && unit.bbOrder, showBbType && this.getBbTypeText(unit)].filter(v => v).join('-'),
+          ].filter(v => v).join('; '),
         ].filter(v => v).join(' '));
 
         // indent one level for supplementary info
@@ -310,6 +325,8 @@ export default {
       this.showExtraSkill = true;
       this.showSpheres = true;
       this.showEnhancements = true;
+      this.showPosition = true;
+      this.showBbType = true;
 
       // individual settings
       this.showName = this.target === 'Discord';
