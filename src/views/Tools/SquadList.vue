@@ -91,6 +91,46 @@
           :total-visible="$vuetify.breakpoint.mdAndUp ? 20 : undefined"
         />
       </v-bottom-nav>
+      <v-speed-dial
+        v-model="fabModel"
+        transition="slide-y-reverse-transition"
+        direction="top"
+        right bottom
+        fixed
+      >
+        <v-btn
+          v-model="fabModel"
+          slot="activator"
+          color="primary"
+          fab>
+          <v-icon>add</v-icon>
+          <v-icon>close</v-icon>
+        </v-btn>
+        <v-tooltip
+          v-model="showTooltip"
+          left>
+          <v-btn fab small outline slot="activator">
+            <v-icon>add</v-icon>
+          </v-btn>
+          <span>New Squad</span>
+        </v-tooltip>
+        <v-tooltip
+          v-model="showTooltip"
+          left>
+          <v-btn fab small outline slot="activator">
+            <v-icon>input</v-icon>
+          </v-btn>
+          <span>Import</span>
+        </v-tooltip>
+        <v-tooltip
+          v-model="showTooltip"
+          left>
+          <v-btn fab small outline slot="activator">
+            <v-icon>file_copy</v-icon>
+          </v-btn>
+          <span>Copy Existing Squad</span>
+        </v-tooltip>
+      </v-speed-dial>
     </v-container>
   </module-checker>
 </template>
@@ -103,6 +143,7 @@ import ModuleChecker from '@/components/ModuleChecker';
 import { unitPositionMapping } from '@/modules/constants';
 import { squadRequiredModules } from '@/router/tool-routes';
 import { Logger } from '@/modules/Logger';
+import { delay } from '@/modules/utils';
 import LoadingDebouncer from '@/modules/LoadingDebouncer';
 import debounce from 'lodash/debounce';
 
@@ -164,6 +205,8 @@ export default {
       currentPage: 1,
       squadToShareIndex: -1,
       showShareDialog: false,
+      fabModel: false,
+      showTooltip: true,
     };
   },
   beforeCreate () {
@@ -342,6 +385,21 @@ export default {
     squadToShareIndex (index) {
       if (this.squadsToShow[index]) {
         this.showShareDialog = true;
+        logger.debug('showing squad', this.squadsToShow[index]);
+      }
+    },
+    async fabModel (isShowing) {
+      // force tooltip to reposition when showing speed dial
+      if (isShowing) {
+        // TODO: do on animation end instead
+        await delay(500);
+        this.showTooltip = false;
+      }
+    },
+    async showTooltip (isShowing) {
+      if (!isShowing) {
+        await this.$nextTick();
+        this.showTooltip = true;
       }
     },
   },
