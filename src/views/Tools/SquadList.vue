@@ -100,6 +100,7 @@
       >
         <v-btn
           v-model="fabModel"
+          @transitionend="() => repositionTooltip()"
           slot="activator"
           color="primary"
           fab>
@@ -109,7 +110,11 @@
         <v-tooltip
           v-model="showTooltip"
           left>
-          <v-btn fab small outline slot="activator">
+          <v-btn
+            fab
+            small
+            outline
+            slot="activator">
             <v-icon>add</v-icon>
           </v-btn>
           <span>New Squad</span>
@@ -117,7 +122,11 @@
         <v-tooltip
           v-model="showTooltip"
           left>
-          <v-btn fab small outline slot="activator">
+          <v-btn
+            fab
+            small
+            outline
+            slot="activator">
             <v-icon>input</v-icon>
           </v-btn>
           <span>Import</span>
@@ -125,7 +134,11 @@
         <v-tooltip
           v-model="showTooltip"
           left>
-          <v-btn fab small outline slot="activator">
+          <v-btn
+            fab
+            small
+            outline
+            slot="activator">
             <v-icon>file_copy</v-icon>
           </v-btn>
           <span>Copy Existing Squad</span>
@@ -143,7 +156,6 @@ import ModuleChecker from '@/components/ModuleChecker';
 import { unitPositionMapping } from '@/modules/constants';
 import { squadRequiredModules } from '@/router/tool-routes';
 import { Logger } from '@/modules/Logger';
-import { delay } from '@/modules/utils';
 import LoadingDebouncer from '@/modules/LoadingDebouncer';
 import debounce from 'lodash/debounce';
 
@@ -357,6 +369,12 @@ export default {
       this.filteredSquads = this.filterSquads({ name: this.nameFilter });
       this.filterChanged = false;
     }, 300),
+    repositionTooltip: debounce(async function (forceReposition) {
+      if (this.fabModel || forceReposition) {
+        await this.$nextTick();
+        this.showTooltip = false;
+      }
+    }, 200),
   },
   watch: {
     isInternallyLoading () {
@@ -386,14 +404,6 @@ export default {
       if (this.squadsToShow[index]) {
         this.showShareDialog = true;
         logger.debug('showing squad', this.squadsToShow[index]);
-      }
-    },
-    async fabModel (isShowing) {
-      // force tooltip to reposition when showing speed dial
-      if (isShowing) {
-        // TODO: do on animation end instead
-        await delay(500);
-        this.showTooltip = false;
       }
     },
     async showTooltip (isShowing) {
