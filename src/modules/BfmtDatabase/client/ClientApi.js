@@ -1,5 +1,6 @@
 import PromiseWorkerExchangeClient from '@/modules/PromiseWorkerExchange/client';
 import DbInterface from '../interface';
+import { getCacheBustingUrlParam } from '@/modules/utils';
 import { Logger } from '@/modules/Logger';
 
 // eslint-disable-next-line no-unused-vars
@@ -139,6 +140,20 @@ export class ClientMultidexApi extends ClientTableApi {
     }
 
     return tables.filter(table => modulePresenceCache[`${server}:${table}`]);
+  }
+
+  getTablesWithUpdates ({
+    tables = [],
+    server = 'gl',
+    sourceUrl = `${location.origin}${location.pathname}static/bf-data/update-stats.json?${getCacheBustingUrlParam()}`,
+    forceRefresh = false,
+  }) {
+    return this.request('getTablesWithUpdates', {
+      tables,
+      server,
+      sourceUrl,
+      forceRefresh,
+    });
   }
 
   getDbStats (server) {

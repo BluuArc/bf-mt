@@ -38,6 +38,12 @@ export default class DbInterface {
     return DbInterface._defer('getTablesWithEntries');
   }
 
+  // useful for checking if data has any updates in a given set of tables
+  // given an array of table names, return an array of tables that have updates
+  getTablesWithUpdates ({ tables = [], query, sourceUrl, forceRefresh } = {}) {
+    return DbInterface._defer('getTablesWithUpdates');
+  }
+
   getFilteredDb ({ table, filters, server, extractedFields, sortOptions } = {}) {
     return DbInterface._defer('getFilteredDb');
   }

@@ -16,6 +16,7 @@
 
 <script>
 import { makeMultidexTableInstance } from '@/modules/BfmtDatabase/client';
+import { multidexModuleInfo } from '@/modules/constants';
 // import { unitKinds, elements, genders } from '@/modules/constants';
 
 const client = makeMultidexTableInstance('items');
@@ -42,18 +43,20 @@ export default {
 
       // const result = await client.request('delayed-ping', { from: 'debug page' });
       // const result = await client.getDbStats('gl');
-      let result = await client.getFilteredDb({
+      let result = await client.getTablesWithUpdates({
         server: 'gl',
+        tables: multidexModuleInfo.map(m => m.name),
+        forceRefresh: true,
         // ids: [10017, 20017],
         // extractedFields: ['name', 'id', 'sphere type'],
         // extractedFields: [],
-        filters: {
-          itemTypes: ['sphere'],
-        },
-        sortOptions: {
-          type: 'Sell Price',
-          isAscending: false,
-        },
+        // filters: {
+        //   itemTypes: ['sphere'],
+        // },
+        // sortOptions: {
+        //   type: 'Sell Price',
+        //   isAscending: false,
+        // },
       });
 
       // result = await client.getSortedKeys({

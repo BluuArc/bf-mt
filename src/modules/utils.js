@@ -3,7 +3,7 @@ import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import { mapActions, mapMutations } from 'vuex';
 import { servers } from '@/modules/constants';
-import { moduleInfo } from '@/store';
+import { multidexModuleInfo } from '@/modules/constants';
 import numbro from 'numbro';
 dayjs.extend(relativeTime);
 
@@ -99,7 +99,7 @@ export const _stateInfoHelper = {
   },
 };
 
-export function generateStateInfo (context, multidexModules = moduleInfo.filter(m => m.type === 'multidex')) {
+export function generateStateInfo (context, multidexModules = multidexModuleInfo.slice()) {
   const stateInfo = {};
   if (context) {
     multidexModules.forEach(({ name }) => {
@@ -122,7 +122,7 @@ export function generateStateInfo (context, multidexModules = moduleInfo.filter(
   return stateInfo;
 }
 
-export function generateActionInfo (context, multidexModules = moduleInfo.filter(m => m.type === 'multidex')) {
+export function generateActionInfo (context, multidexModules = multidexModuleInfo.slice()) {
   const actionInfo = {};
   if (context) {
     const getActionForModule = (moduleName, methodName) => {
