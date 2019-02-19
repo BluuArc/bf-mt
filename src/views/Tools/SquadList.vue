@@ -149,6 +149,7 @@
           fab
           fixed
           left bottom
+          color="primary"
           small
           slot="activator">
           <v-icon>info</v-icon>
