@@ -45,6 +45,7 @@
       </v-container>
       <template v-else>
         <slot name="default"
+          :activeServer="activeServer"
           :downloadData="downloadData"
           :hasUpdates="hasUpdates"
           :modulesWithUpdates="modulesWithUpdates"
