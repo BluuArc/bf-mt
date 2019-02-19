@@ -44,7 +44,11 @@
         </v-layout>
       </v-container>
       <template v-else>
-        <slot name="default" :downloadData="downloadData">
+        <slot name="default"
+          :downloadData="downloadData"
+          :hasUpdates="hasUpdates"
+          :modulesWithUpdates="modulesWithUpdates"
+        >
           All modules loaded
         </slot>
       </template>
@@ -120,11 +124,15 @@ export default {
         'Click the button below to download the missing data.',
       ].join('<br>');
     },
+    hasUpdates () {
+      return this.modulesWithUpdates.length > 0;
+    },
   },
   data () {
     return {
       missingModules: [],
       checkingAvailableModules: false,
+      modulesWithUpdates: [],
       isVisuallyInitializing: true,
     };
   },
@@ -138,7 +146,7 @@ export default {
         const availableModules = await client.getTablesWithEntries(this.requiredModules, this.activeServer);
         this.missingModules = this.requiredModules.filter(m => !availableModules.includes(m));
         if (this.missingModules.length === 0) {
-          this.$emit('initfinished');
+          this.onInitializationFinish();
         }
         this.checkingAvailableModules = false;
       }
@@ -154,6 +162,17 @@ export default {
         }
       }
       this.checkAvailableModules();
+    },
+    async checkForUpdates (inputModules) {
+      const modulesToCheck = Array.isArray(inputModules) ? inputModules : this.requiredModules;
+      this.modulesWithUpdates = await client.getTablesWithUpdates({
+        tables: modulesToCheck,
+        server: this.activeServer,
+      });
+    },
+    async onInitializationFinish () {
+      this.$emit('initfinished');
+      await this.checkForUpdates();
     },
   },
   beforeCreate () {
