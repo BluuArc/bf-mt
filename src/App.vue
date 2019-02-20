@@ -255,6 +255,14 @@ export default {
       if (newValue === 'Home') {
         setTimeout(() => this.setLastSeenTime(new Date()), 10 * 1000);
       }
+
+      // ensure that there is padding for top of content
+      const contentElem = this.$el.querySelector('main.v-content');
+      const toolbarElem = this.$el.querySelector('nav.v-toolbar');
+      if (+contentElem.style.paddingTop.slice(0, -2) < toolbarElem.clientHeight) {
+        contentElem.style.paddingTop = `${toolbarElem.clientHeight}px`;
+      }
+
     },
   },
   async created () {

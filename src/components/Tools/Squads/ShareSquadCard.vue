@@ -92,7 +92,7 @@ import { unitPositionMapping } from '@/modules/constants';
 import CardTabsContainer from '@/components/CardTabsContainer';
 import TextViewer from '@/components/TextViewer';
 import JsonViewer from '@/components/JsonViewer';
-import { spCodeToIndex } from '@/modules/core/units';
+import { spCodeToIndex, getSkillDescription } from '@/modules/core/units';
 
 export default {
   props: {
@@ -289,14 +289,6 @@ export default {
         .filter(v => v)
         .reduce((acc, s) => acc + +s.skill.bp, 0);
     },
-    getSkillDescription (skillEntry) {
-      const { desc = '', name = '' } = skillEntry.skill;
-      if (desc.trim() === name.trim()) {
-        return desc || 'No Description';
-      } else {
-        return (desc.length > name.length) ? desc : [name, desc ? `(${desc})` : ''].filter(val => val).join(' ');
-      }
-    },
     getSpText (unit) {
       const feSkills = this.getUnit(unit.id).feskills;
       const enhancements = unit.sp;
@@ -312,7 +304,7 @@ export default {
         .filter(v => v.skill) // only get valid skills
         .map(v => ({
           code: v.code,
-          text: this.getSkillDescription(v.skill),
+          text: getSkillDescription(v.skill),
           cost: v.skill.skill.bp,
         }));
     },

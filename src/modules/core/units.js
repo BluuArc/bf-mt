@@ -70,6 +70,15 @@ export function getSpSkillEffects (skillEntry) {
   return effects;
 }
 
+export function getSkillDescription (skillEntry) {
+  const { desc = '', name = '' } = skillEntry.skill;
+  if (desc.trim() === name.trim()) {
+    return desc || 'No Description';
+  } else {
+    return (desc.length > name.length) ? desc : [name, desc ? `(${desc})` : ''].filter(val => val).join(' ');
+  }
+}
+
 export function spCodeToIndex (char) {
   return char.charCodeAt(0) - ((char < 'a') ? 'A'.charCodeAt(0) : ('a'.charCodeAt(0))) + (char < 'a' ? 0 : 26);
 }

@@ -4,7 +4,7 @@
     :isExternallyLoading="isVisuallyLoading"
     externalLoadingMessage="Fetching squad information..."
     @initfinished="getDbData">
-    <v-container slot-scope="{ modulesWithUpdates, hasUpdates, downloadData, activeServer }">
+    <v-container slot-scope="{ modulesWithUpdates, hasUpdates, downloadData }">
       <v-toolbar
         app
         fixed extended
@@ -111,6 +111,7 @@
           v-model="showTooltip"
           left>
           <v-btn
+            to="/tools/squads/add"
             fab
             small
             outline
@@ -181,7 +182,6 @@ import { Logger } from '@/modules/Logger';
 import LoadingDebouncer from '@/modules/LoadingDebouncer';
 import debounce from 'lodash/debounce';
 
-// eslint-disable-next-line no-unused-vars
 const logger = new Logger({ prefix: '[SquadList]' });
 let loadingDebouncer;
 let intersectionObserver;

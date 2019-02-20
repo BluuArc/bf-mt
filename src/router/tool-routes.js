@@ -7,9 +7,14 @@ export default [
     path: '/tools/squads',
     name: 'Squad List',
     component: ToolsPages.SquadList,
-    meta: {
-      requiredModules: squadRequiredModules,
-    },
+  },
+  {
+    path: '/tools/squads/add',
+    name: 'Add Squad',
+    component: ToolsPages.AddSquad,
+    props: (route) => ({
+      importSquad: route.query.import,
+    }),
   },
   {
     path: '/tools/squads/:id',
