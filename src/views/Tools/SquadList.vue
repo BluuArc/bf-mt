@@ -12,6 +12,7 @@
         extension-height="72px"
       >
         <v-container
+          v-show="!showCopyModal"
           fluid
           slot="extension"
           id="squad-list--search-extension"
@@ -66,10 +67,20 @@
             @share="squadToShareIndex = i"
             @register="registerSquadCard"
             @unregister="unRegisterSquadCard"
-          />
+          >
+            <template v-if="isCopyMode">
+              <v-card-actions slot="card-actions">
+                <v-btn flat :to="getSquadUrl(squad)">
+                  <v-icon left>file_copy</v-icon>
+                  Copy
+                </v-btn>
+              </v-card-actions>
+            </template>
+          </squad-list-card>
         </v-flex>
       </v-layout>
       <v-dialog
+        v-if="!isCopyMode"
         v-model="showShareDialog"
         lazy>
         <share-squad-card
@@ -92,6 +103,7 @@
         />
       </v-bottom-nav>
       <v-speed-dial
+        v-if="!isCopyMode"
         v-model="fabModel"
         transition="slide-y-reverse-transition"
         direction="top"
@@ -138,6 +150,7 @@
           <v-btn
             fab
             small
+            @click="showCopyModal = true"
             outline
             slot="activator">
             <v-icon>file_copy</v-icon>
@@ -167,6 +180,24 @@
           </v-card-actions>
         </v-card>
       </v-dialog>
+      <v-dialog
+        v-if="!isCopyMode"
+        v-model="showCopyModal"
+        lazy
+        fullscreen
+        hide-overlay
+        transition="dialog-bottom-transition"
+      >
+        <v-card style="background-color: var(--background-color);">
+          <v-toolbar style="z-index: 5;" fixed>
+            <v-btn icon @click="showCopyModal = false">
+              <v-icon>close</v-icon>
+            </v-btn>
+            <v-toolbar-title>Copy Existing Squad</v-toolbar-title>
+          </v-toolbar>
+          <squad-list :isCopyMode="true" style="padding-top: 128px; padding-bottom: 64px;"/>
+        </v-card>
+      </v-dialog>
     </v-container>
   </module-checker>
 </template>
@@ -179,6 +210,7 @@ import ModuleChecker from '@/components/ModuleChecker';
 import { unitPositionMapping, multidexModuleInfo } from '@/modules/constants';
 import { squadRequiredModules } from '@/router/tool-routes';
 import { Logger } from '@/modules/Logger';
+import { squadToShorthand } from '@/modules/core/squads';
 import LoadingDebouncer from '@/modules/LoadingDebouncer';
 import debounce from 'lodash/debounce';
 
@@ -186,6 +218,13 @@ const logger = new Logger({ prefix: '[SquadList]' });
 let loadingDebouncer;
 let intersectionObserver;
 export default {
+  name: 'squad-list',
+  props: {
+    isCopyMode: {
+      type: Boolean,
+      default: false,
+    },
+  },
   components: {
     SquadListCard,
     ShareSquadCard,
@@ -242,6 +281,7 @@ export default {
       fabModel: false,
       showTooltip: true,
       showUpdateDialog: false,
+      showCopyModal: false,
     };
   },
   beforeCreate () {
@@ -402,6 +442,9 @@ export default {
       const associatedModule = multidexModuleInfo.find(m => m.name === internalName);
       return associatedModule ? associatedModule.fullName : internalName;
     },
+    getSquadUrl (squad) {
+      return this.$router.resolve({ path: '/tools/squads/add', query: { import: squadToShorthand(squad) }}).route.fullPath;
+    },
   },
   watch: {
     isInternallyLoading () {
@@ -437,6 +480,35 @@ export default {
       if (!isShowing) {
         await this.$nextTick();
         this.showTooltip = true;
+      }
+    },
+    async showCopyModal (isShowing) {
+      this.$store.commit('setHtmlOverflowDisableState', !!isShowing);
+
+      if (!isShowing) {
+        await this.$nextTick();
+
+        // reregister elements
+        if (intersectionObserver && intersectionObserver.disconnect) {
+          intersectionObserver.disconnect();
+        }
+        intersectionObserver = new IntersectionObserver((entries) => {
+          const squadKeys = Object.keys(this.squadDomElems);
+          entries.forEach(entry => {
+            const squadId = squadKeys.find(key => this.squadDomElems[key].elem === entry.target);
+            // logger.warn({ elem: entry.target, isIntersecting: entry.isIntersecting, squadId });
+            if (squadId) {
+              this.squadDomElems[squadId].setVisibility(entry.isIntersecting);
+            }
+          });
+        });
+        Object.keys(this.squadDomElems).forEach(squadId => {
+          this.registerSquadCard({
+            elem: this.squadDomElems[squadId].elem,
+            squadId,
+            setVisibility: this.squadDomElems[squadId].setVisibility,
+          });
+        });
       }
     },
   },

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-text-field :value="inputText" :label="label" disabled/>
+    <v-text-field :value="inputText" :label="label" readonly/>
     <copy-button block :textToCopy="inputText" :value="value" class="mb-0"/>
   </div>
 </template>

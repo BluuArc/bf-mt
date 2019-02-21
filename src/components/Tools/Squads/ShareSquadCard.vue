@@ -101,11 +101,11 @@
 </template>
 
 <script>
-import { unitPositionMapping } from '@/modules/constants';
+import { spCodeToIndex, getSkillDescription, getSpCost } from '@/modules/core/units';
+import { squadToShorthand } from '@/modules/core/squads';
 import CardTabsContainer from '@/components/CardTabsContainer';
 import TextViewer from '@/components/TextViewer';
 import OneLineTextViewer from '@/components/OneLineTextViewer';
-import { spCodeToIndex, getSkillDescription, getSpCost } from '@/modules/core/units';
 
 export default {
   props: {
@@ -155,21 +155,11 @@ export default {
       });
     },
     squadShorthand () {
-      return this.squad.units.map((unit, i) => {
-        return [
-          unit.id,
-          unitPositionMapping.indexOf(unit.position),
-          unit.es || '-',
-          unit.spheres.join('+') || '-',
-          (i === this.squad.lead && 'L') || (i === this.squad.friend && 'F') || '-',
-          unit.bbOrder,
-          unit.bbType,
-          unit.sp || '-',
-        ].join('~');
-      }).join(',');
+      return squadToShorthand(this.squad);
     },
     shareLink () {
-      return `${location.protocol}//${location.host}${location.pathname}#/tools/squads/add?import=${encodeURI(this.squadShorthand)}`;
+      const path = this.$router.resolve({ path: '/tools/squads/add', query: { import: this.squadShorthand }}).href;
+      return `${location.protocol}//${location.host}${location.pathname}${path}`;
     },
     possibleTargets: () => ['Discord', 'Reddit'],
   },

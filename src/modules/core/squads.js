@@ -106,13 +106,13 @@ export function getSquadErrors (squad = {}, {
       'units',
       'No units array specified',
     ));
-    return;
+    return errors;
   } else if (squad.units.length !== 6) {
     errors.push(makeErrorEntry(
       'units',
       'A squad must have exactly 6 units',
     ));
-    return;
+    return errors;
   }
 
   if (isNaN(squad.lead)) {

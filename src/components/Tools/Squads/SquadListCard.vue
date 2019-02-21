@@ -134,14 +134,16 @@
       </v-flex>
     </v-layout>
     <v-divider class="mt-2"/>
-    <v-card-actions style="justify-content: space-between;">
-      <v-btn flat v-if="to" :to="to">View</v-btn>
-      <v-btn flat v-else @click="$emit('view')">View</v-btn>
-      <v-btn flat @click="$emit('share')">
-        <v-icon left>share</v-icon>
-        Share
-      </v-btn>
-    </v-card-actions>
+    <slot name="card-actions">
+      <v-card-actions style="justify-content: space-between;">
+        <v-btn flat v-if="to" :to="to">View</v-btn>
+        <v-btn flat v-else @click="$emit('view')">View</v-btn>
+        <v-btn flat @click="$emit('share')">
+          <v-icon left>share</v-icon>
+          Share
+        </v-btn>
+      </v-card-actions>
+    </slot>
   </v-card>
 </template>
 
