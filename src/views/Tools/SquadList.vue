@@ -130,7 +130,7 @@
             slot="activator">
             <v-icon>input</v-icon>
           </v-btn>
-          <span>Import</span>
+          <span>Import From Code</span>
         </v-tooltip>
         <v-tooltip
           v-model="showTooltip"

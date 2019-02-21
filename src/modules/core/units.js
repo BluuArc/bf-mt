@@ -79,6 +79,17 @@ export function getSkillDescription (skillEntry) {
   }
 }
 
+export function getSpCost (allFeSkills, enhancements = '') {
+  const isValidFeSKills = typeof allFeSkills === 'object' && Object.keys(allFeSkills).length > 0;
+  if (!isValidFeSKills || !enhancements) {
+    return 0;
+  }
+  return enhancements.split('')
+    .map(char => allFeSkills[spCodeToIndex(char)])
+    .filter(v => v)
+    .reduce((acc, s) => acc + +s.skill.bp, 0);
+}
+
 export function spCodeToIndex (char) {
   return char.charCodeAt(0) - ((char < 'a') ? 'A'.charCodeAt(0) : ('a'.charCodeAt(0))) + (char < 'a' ? 0 : 26);
 }

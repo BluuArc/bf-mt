@@ -17,6 +17,7 @@
 <script>
 import { makeMultidexTableInstance } from '@/modules/BfmtDatabase/client';
 import { multidexModuleInfo } from '@/modules/constants';
+import { getSquadErrors } from '@/modules/core/squads';
 // import { unitKinds, elements, genders } from '@/modules/constants';
 
 const client = makeMultidexTableInstance('items');
@@ -27,6 +28,7 @@ export default {
     };
   },
   async mounted () {
+    window._squadChecker = getSquadErrors;
     // eslint-disable-next-line no-console
     console.warn({ client });
 

@@ -132,6 +132,16 @@ export const missionMonsterGroupMapping = Object.freeze({
 });
 
 export const unitPositionMapping = Object.freeze(['Top Left', 'Top Right', 'Middle Left', 'Middle Right', 'Bottom Left', 'Bottom Right']);
+export const squadFillerMapping = Object.freeze({
+  EMPTY: '(Empty)',
+  ANY: '(Any)',
+});
+export const squadUnitActions = Object.freeze({
+  NATK: 'natk',
+  BB: 'bb',
+  SBB: 'sbb',
+  UBB: 'ubb',
+});
 
 export const effectTypes = Object.freeze({
   ATTACK: {

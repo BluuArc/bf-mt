@@ -75,8 +75,21 @@
           <text-viewer :inputText="markdownText" :value="updateTime"/>
         </v-flex>
       </v-layout>
-      <v-layout row slot="json">
-        <json-viewer :json="copyableJson" :value="updateTime"/>
+      <v-layout row slot="code">
+        <one-line-text-viewer
+          style="flex: 0 1 100%;"
+          :inputText="squadShorthand"
+          label="Code"
+          :value="updateTime"
+        />
+      </v-layout>
+      <v-layout row slot="link">
+        <one-line-text-viewer
+          style="flex: 0 1 100%;"
+          :inputText="shareLink"
+          label="Link"
+          :value="updateTime"
+        />
       </v-layout>
     </card-tabs-container>
     <v-divider/>
@@ -91,8 +104,8 @@
 import { unitPositionMapping } from '@/modules/constants';
 import CardTabsContainer from '@/components/CardTabsContainer';
 import TextViewer from '@/components/TextViewer';
-import JsonViewer from '@/components/JsonViewer';
-import { spCodeToIndex, getSkillDescription } from '@/modules/core/units';
+import OneLineTextViewer from '@/components/OneLineTextViewer';
+import { spCodeToIndex, getSkillDescription, getSpCost } from '@/modules/core/units';
 
 export default {
   props: {
@@ -116,10 +129,10 @@ export default {
   components: {
     CardTabsContainer,
     TextViewer,
-    JsonViewer,
+    OneLineTextViewer,
   },
   computed: {
-    tabConfig: () => ['markdown', 'json'].map(name => ({ name, slot: name })),
+    tabConfig: () => ['markdown', 'code', 'link'].map(name => ({ name, slot: name })),
     copyableJson () {
       // don't need to share ID to export
       // eslint-disable-next-line no-unused-vars
@@ -281,13 +294,7 @@ export default {
     getSpCost (unit = {}) {
       const feSkills = this.getUnit(unit.id).feskills;
       const enhancements = unit.sp;
-      if (!feSkills || !enhancements) {
-        return 0;
-      }
-      return enhancements.split('')
-        .map(char => feSkills[spCodeToIndex(char)])
-        .filter(v => v)
-        .reduce((acc, s) => acc + +s.skill.bp, 0);
+      return getSpCost(feSkills, enhancements);
     },
     getSpText (unit) {
       const feSkills = this.getUnit(unit.id).feskills;
