@@ -79,21 +79,6 @@
           </squad-list-card>
         </v-flex>
       </v-layout>
-      <v-dialog
-        v-if="!isCopyMode"
-        v-model="showShareDialog"
-        lazy>
-        <share-squad-card
-          v-if="squadsToShow[squadToShareIndex]"
-          :squad="squadsToShow[squadToShareIndex]"
-          :getUnit="getUnit"
-          :getItem="getItem"
-          :getExtraSkill="getExtraSkill"
-          @back="showShareDialog = false"/>
-        <div v-else>
-          No squad selected
-        </div>
-      </v-dialog>
       <v-bottom-nav fixed :value="sortedSquads.length > squadsPerPage" app>
         <v-pagination
           style="justify-content: center;"
@@ -102,102 +87,121 @@
           :total-visible="$vuetify.breakpoint.mdAndUp ? 20 : undefined"
         />
       </v-bottom-nav>
-      <v-speed-dial
-        v-if="!isCopyMode"
-        v-model="fabModel"
-        transition="slide-y-reverse-transition"
-        direction="top"
-        right bottom
-        fixed
-      >
-        <v-btn
+      <template v-if="!isCopyMode">
+        <v-dialog
+          v-model="showShareDialog"
+          lazy>
+          <share-squad-card
+            v-if="squadsToShow[squadToShareIndex]"
+            :squad="squadsToShow[squadToShareIndex]"
+            :getUnit="getUnit"
+            :getItem="getItem"
+            :getExtraSkill="getExtraSkill"
+            @back="showShareDialog = false"/>
+          <div v-else>
+            No squad selected
+          </div>
+        </v-dialog>
+        <v-speed-dial
+          v-if="!isCopyMode"
           v-model="fabModel"
-          @transitionend="() => repositionTooltip()"
-          slot="activator"
-          color="primary"
-          fab>
-          <v-icon>add</v-icon>
-          <v-icon>close</v-icon>
-        </v-btn>
-        <v-tooltip
-          v-model="showTooltip"
-          left>
+          transition="slide-y-reverse-transition"
+          direction="top"
+          right bottom
+          fixed>
           <v-btn
-            to="/tools/squads/add"
-            fab
-            small
-            outline
-            slot="activator">
+            v-model="fabModel"
+            @transitionend="() => repositionTooltip()"
+            slot="activator"
+            color="primary"
+            fab>
             <v-icon>add</v-icon>
+            <v-icon>close</v-icon>
           </v-btn>
-          <span>New Squad</span>
-        </v-tooltip>
-        <v-tooltip
-          v-model="showTooltip"
-          left>
-          <v-btn
-            fab
-            small
-            outline
-            slot="activator">
-            <v-icon>input</v-icon>
-          </v-btn>
-          <span>Import From Code</span>
-        </v-tooltip>
-        <v-tooltip
-          v-model="showTooltip"
-          left>
-          <v-btn
-            fab
-            small
-            @click="showCopyModal = true"
-            outline
-            slot="activator">
-            <v-icon>file_copy</v-icon>
-          </v-btn>
-          <span>Copy Existing Squad</span>
-        </v-tooltip>
-      </v-speed-dial>
-      <v-dialog v-if="hasUpdates" v-model="showUpdateDialog" max-width="500px">
-        <v-btn
-          fab
-          fixed
-          left bottom
-          color="primary"
-          small
-          slot="activator">
-          <v-icon>info</v-icon>
-        </v-btn>
-        <v-card>
-          <v-card-text>
-            <h1 class="subheading">
-              Updates are available for this server ({{ activeServer.toUpperCase() }}). ({{ modulesWithUpdates.map(m => getModuleName(m)).join(', ') }})
-            </h1>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn flat color="primary" @click="() => downloadData(modulesWithUpdates)">Download Updates</v-btn>
-            <v-btn color="primary" flat @click.stop="showUpdateDialog = false">Close</v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-dialog>
-      <v-dialog
-        v-if="!isCopyMode"
-        v-model="showCopyModal"
-        lazy
-        fullscreen
-        hide-overlay
-        transition="dialog-bottom-transition"
-      >
-        <v-card style="background-color: var(--background-color);">
-          <v-toolbar style="z-index: 5;" fixed>
-            <v-btn icon @click="showCopyModal = false">
-              <v-icon>close</v-icon>
+          <v-tooltip
+            v-model="showTooltip"
+            left>
+            <v-btn
+              to="/tools/squads/add"
+              fab
+              small
+              outline
+              slot="activator">
+              <v-icon>add</v-icon>
             </v-btn>
-            <v-toolbar-title>Copy Existing Squad</v-toolbar-title>
-          </v-toolbar>
-          <squad-list :isCopyMode="true" style="padding-top: 128px; padding-bottom: 64px;"/>
-        </v-card>
-      </v-dialog>
+            <span>New Squad</span>
+          </v-tooltip>
+          <v-tooltip
+            v-model="showTooltip"
+            left>
+            <v-btn
+              fab
+              small
+              outline
+              slot="activator">
+              <v-icon>input</v-icon>
+            </v-btn>
+            <span>Import From Code</span>
+          </v-tooltip>
+          <v-tooltip
+            v-model="showTooltip"
+            left>
+            <v-btn
+              fab
+              small
+              @click="showCopyModal = true"
+              outline
+              slot="activator">
+              <v-icon>file_copy</v-icon>
+            </v-btn>
+            <span>Copy Existing Squad</span>
+          </v-tooltip>
+        </v-speed-dial>
+        <v-dialog v-if="hasUpdates" v-model="showUpdateDialog" max-width="500px">
+          <v-btn
+            fab
+            fixed
+            left bottom
+            color="primary"
+            small
+            slot="activator">
+            <v-icon>info</v-icon>
+          </v-btn>
+          <v-card>
+            <v-card-text>
+              <h1 class="subheading">
+                Updates are available for this server ({{ activeServer.toUpperCase() }}). ({{ modulesWithUpdates.map(m => getModuleName(m)).join(', ') }})
+              </h1>
+            </v-card-text>
+            <v-card-actions>
+              <v-btn flat color="primary" @click="() => downloadData(modulesWithUpdates)">Download Updates</v-btn>
+              <v-btn color="primary" flat @click.stop="showUpdateDialog = false">Close</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
+        <v-dialog
+          v-model="showCopyModal"
+          lazy
+          fullscreen
+          hide-overlay
+          transition="dialog-bottom-transition"
+        >
+          <v-card style="background-color: var(--background-color);">
+            <v-toolbar style="z-index: 5;" fixed>
+              <v-btn icon @click="showCopyModal = false">
+                <v-icon>close</v-icon>
+              </v-btn>
+              <v-toolbar-title>Copy Existing Squad</v-toolbar-title>
+            </v-toolbar>
+            <squad-list
+              v-if="showCopyModal"
+              :isCopyMode="true"
+              :squadDb="{ units, items, extraSkills }"
+              style="padding-top: 128px; padding-bottom: 64px;"
+            />
+          </v-card>
+        </v-dialog>
+      </template>
     </v-container>
   </module-checker>
 </template>
@@ -208,6 +212,7 @@ import SquadListCard from '@/components/Tools/Squads/SquadListCard';
 import ShareSquadCard from '@/components/Tools/Squads/ShareSquadCard';
 import ModuleChecker from '@/components/ModuleChecker';
 import { unitPositionMapping, multidexModuleInfo } from '@/modules/constants';
+import { ensureContentPadding, delay } from '@/modules/utils';
 import { squadRequiredModules } from '@/router/tool-routes';
 import { Logger } from '@/modules/Logger';
 import { squadToShorthand } from '@/modules/core/squads';
@@ -223,6 +228,9 @@ export default {
     isCopyMode: {
       type: Boolean,
       default: false,
+    },
+    squadDb: {
+      required: false,
     },
   },
   components: {
@@ -326,44 +334,50 @@ export default {
       // generate unique value on every call
       const activeCallToken = [(new Date().valueOf()).toString(), Math.random().toString()].join('-');
       this.activeCallToken = activeCallToken;
-      const unitIds = new Set(), esIds = new Set(), itemIds = new Set();
-      this.squads.forEach(squad => {
-        squad.units.forEach(unit => {
-          unitIds.add(unit.id);
-          if (unit.es) {
-            esIds.add(unit.es);
-          }
-          if (unit.spheres.length > 0) {
-            unit.spheres.forEach(id => {
-              itemIds.add(id);
-            });
-          }
+      if (this.squadDb) {
+        this.units = this.squadDb.units;
+        this.items = this.squadDb.items;
+        this.extraSkills = this.squadDb.extraSkills;
+      } else {
+        const unitIds = new Set(), esIds = new Set(), itemIds = new Set();
+        this.squads.forEach(squad => {
+          squad.units.forEach(unit => {
+            unitIds.add(unit.id);
+            if (unit.es) {
+              esIds.add(unit.es);
+            }
+            if (unit.spheres.length > 0) {
+              unit.spheres.forEach(id => {
+                itemIds.add(id);
+              });
+            }
+          });
         });
-      });
-
-      const currentServer = this.activeServer;
-      await [
-        async () => this.units = await this.getUnits({
-          ids: Array.from(unitIds),
-          server: currentServer,
-          extractedFields: ['id', 'rarity', 'feskills', 'name', 'sbb', 'cost'],
-        }),
-        async () => this.items = await this.getItems({
-          ids: Array.from(itemIds),
-          server: currentServer,
-          extractedFields: ['name', 'sphere type'],
-        }),
-        async () => this.extraSkills = await this.getExtraSkills({
-          ids: Array.from(esIds),
-          server: currentServer,
-          extractedFields: ['name'],
-        }),
-      ].reduce((acc, val) => acc.then(() => {
-        // only continue if call token is the same
-        if (activeCallToken === this.activeCallToken) {
-          return val();
-        }
-      }), Promise.resolve());
+  
+        const currentServer = this.activeServer;
+        await [
+          async () => this.units = await this.getUnits({
+            ids: Array.from(unitIds),
+            server: currentServer,
+            extractedFields: ['id', 'rarity', 'feskills', 'name', 'sbb', 'cost'],
+          }),
+          async () => this.items = await this.getItems({
+            ids: Array.from(itemIds),
+            server: currentServer,
+            extractedFields: ['name', 'sphere type'],
+          }),
+          async () => this.extraSkills = await this.getExtraSkills({
+            ids: Array.from(esIds),
+            server: currentServer,
+            extractedFields: ['name'],
+          }),
+        ].reduce((acc, val) => acc.then(() => {
+          // only continue if call token is the same
+          if (activeCallToken === this.activeCallToken) {
+            return val();
+          }
+        }), Promise.resolve());
+      }
       if (activeCallToken === this.activeCallToken) {
         this.isInternallyLoading = false;
       }
@@ -509,6 +523,11 @@ export default {
             setVisibility: this.squadDomElems[squadId].setVisibility,
           });
         });
+
+        await delay(1000);
+        const toolbarHeight = this.$el.querySelector('nav.v-toolbar').offsetHeight;
+        // 56px is height of bottom navbar
+        ensureContentPadding(toolbarHeight, 56);
       }
     },
   },

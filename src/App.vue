@@ -94,6 +94,7 @@
 <script>
 import logger from '@/modules/Logger';
 import { servers } from '@/modules/constants';
+import { ensureContentPadding } from '@/modules/utils';
 import { mapActions, mapState, mapGetters } from 'vuex';
 import MultidexDataWrapper from '@/components/MultidexDataWrapper';
 import SiteTrackers from '@/components/SiteTrackers';
@@ -256,13 +257,7 @@ export default {
         setTimeout(() => this.setLastSeenTime(new Date()), 10 * 1000);
       }
 
-      // ensure that there is padding for top of content
-      const contentElem = this.$el.querySelector('main.v-content');
-      const toolbarElem = this.$el.querySelector('nav.v-toolbar');
-      if (+contentElem.style.paddingTop.slice(0, -2) < toolbarElem.clientHeight) {
-        contentElem.style.paddingTop = `${toolbarElem.clientHeight}px`;
-      }
-
+      ensureContentPadding();
     },
   },
   async created () {

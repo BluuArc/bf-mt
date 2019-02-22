@@ -164,3 +164,17 @@ export function generateActionInfo (context, multidexModules = multidexModuleInf
 export function formatNumber (number) {
   return +number < 1000 ? +number : numbro(+number).format({ average: true, mantissa: 1 });
 }
+
+export function ensureContentPadding (minTopOffset = 0, minBottomOffset = 0) {
+  // ensure that there is padding for top of content
+  const contentElem = document.querySelector('#app > .application--wrap > main.v-content');
+  const toolbarElem = document.querySelector('#app > .application--wrap > nav.v-toolbar');
+  const targetOffset = Math.max(toolbarElem.offsetHeight, minTopOffset);
+  if (+contentElem.style.paddingTop.slice(0, -2) < targetOffset) {
+    contentElem.style.paddingTop = `${targetOffset}px`;
+  }
+
+  if (+contentElem.style.paddingBottom.slice(0, -2) < minBottomOffset) {
+    contentElem.style.paddingBottom = `${minBottomOffset}px`;
+  }
+}
