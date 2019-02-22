@@ -95,7 +95,7 @@ export function getSquadErrors (squad = {}, {
   getItem = () => {},
   getExtraSkill = () => {},
 } = {}) {
-  const makeErrorEntry = (path = '', message = '', fix) => ({ path, message, fix });
+  const makeErrorEntry = (path = '', message = '', fatal = false, fix) => ({ path, message, fatal, fix });
   const generatePathKey = (...args) => args.join('.');
   const errors = [];
 
@@ -104,13 +104,15 @@ export function getSquadErrors (squad = {}, {
   if (!Array.isArray(squad.units)) {
     errors.push(makeErrorEntry(
       'units',
-      'No units array specified',
+      'No units specified',
+      true,
     ));
     return errors;
   } else if (squad.units.length !== 6) {
     errors.push(makeErrorEntry(
       'units',
       'A squad must have exactly 6 units',
+      true,
     ));
     return errors;
   }
@@ -146,14 +148,13 @@ export function getSquadErrors (squad = {}, {
   const filledPositions = new Set();
   const usedOrders = new Set();
   const possibleActions = Object.values(squadUnitActions);
-  // eslint-disable-next-line no-console
-  console.warn(possibleActions);
   squad.units.forEach((unit, i) => {
     const pathEntry = `units.${i}`;
     if (isNaN(unit.id) && ![squadFillerMapping.EMPTY, squadFillerMapping.ANY].includes(unit.id)) {
       errors.push(makeErrorEntry(
         pathEntry,
         `Unit ID [${unit.id}] is not valid`,
+        true,
       ));
     } else {
       const unitData = getUnit(unit.id) || {};

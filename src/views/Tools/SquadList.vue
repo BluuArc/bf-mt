@@ -138,6 +138,7 @@
               fab
               small
               outline
+              @click="showImportFromCodeModal = true"
               slot="activator">
               <v-icon>input</v-icon>
             </v-btn>
@@ -199,6 +200,28 @@
               :squadDb="{ units, items, extraSkills }"
               style="padding-top: 128px; padding-bottom: 64px;"
             />
+          </v-card>
+        </v-dialog>
+        <v-dialog
+          v-model="showImportFromCodeModal"
+          lazy
+          max-width="500px">
+          <v-card>
+            <v-card-text>
+              <v-textarea
+                :rows="10"
+                v-model="importCode"
+                label="Import Code"/>
+            </v-card-text>
+            <v-card-actions>
+              <v-spacer/>
+              <v-btn
+                :disabled="!importCode"
+                flat
+                :to="getSquadUrl(importCode)">
+                Import
+              </v-btn>
+            </v-card-actions>
           </v-card>
         </v-dialog>
       </template>
@@ -290,6 +313,8 @@ export default {
       showTooltip: true,
       showUpdateDialog: false,
       showCopyModal: false,
+      showImportFromCodeModal: false,
+      importCode: '',
     };
   },
   beforeCreate () {
@@ -457,7 +482,10 @@ export default {
       return associatedModule ? associatedModule.fullName : internalName;
     },
     getSquadUrl (squad) {
-      return this.$router.resolve({ path: '/tools/squads/add', query: { import: squadToShorthand(squad) }}).route.fullPath;
+      return this.$router.resolve({
+        path: '/tools/squads/add',
+        query: { import: typeof squad !== 'string' ? squadToShorthand(squad) : squad },
+      }).route.fullPath;
     },
   },
   watch: {
