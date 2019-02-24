@@ -1,20 +1,4 @@
 {
-  "MST_SKILLS_2830557_DESCRIPTION": {
-    "en": "23 combo massive Earth attack on all foes, high probability of raising allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts OD gauge",
-    "es": "23 combo massive Earth attack on all foes, high probability of raising allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts OD gauge",
-    "id": "23 combo massive Earth attack on all foes, high probability of raising allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts OD gauge",
-    "pt": "23 combo massive Earth attack on all foes, high probability of raising allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts OD gauge",
-    "th": "23 combo massive Earth attack on all foes, high probability of raising allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts OD gauge",
-    "vi": "23 combo massive Earth attack on all foes, high probability of raising allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts OD gauge"
-  },
-  "MST_SKILLS_2830557_NAME": {
-    "en": "Hisa! Wrathful Typhoon!",
-    "es": "Hisa! Wrathful Typhoon!",
-    "id": "Hisa! Wrathful Typhoon!",
-    "pt": "Hisa! Wrathful Typhoon!",
-    "th": "Hisa! Wrathful Typhoon!",
-    "vi": "Hisa! Wrathful Typhoon!"
-  },
   "MST_SKILLS_2830558_DESCRIPTION": {
     "en": "26 combo massive Earth attack on all foes, raises allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns, enormously boosts OD gauge & enormously boosts max HP",
     "es": "26 combo massive Earth attack on all foes, raises allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns, enormously boosts OD gauge & enormously boosts max HP",
@@ -174,6 +158,22 @@
     "pt": "Liebe: Nyan-Jutsu Final Form",
     "th": "Liebe: Nyan-Jutsu Final Form",
     "vi": "Liebe: Nyan-Jutsu Final Form"
+  },
+  "MST_SKILLS_2830678_DESCRIPTION": {
+    "en": "16 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormously boosts Def relative to Atk for 3 turns, 100% damage reduction for 3 turns, enormously boosts max HP & negates critical and elemental damage for 5 turns",
+    "es": "16 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormously boosts Def relative to Atk for 3 turns, 100% damage reduction for 3 turns, enormously boosts max HP & negates critical and elemental damage for 5 turns",
+    "id": "16 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormously boosts Def relative to Atk for 3 turns, 100% damage reduction for 3 turns, enormously boosts max HP & negates critical and elemental damage for 5 turns",
+    "pt": "16 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormously boosts Def relative to Atk for 3 turns, 100% damage reduction for 3 turns, enormously boosts max HP & negates critical and elemental damage for 5 turns",
+    "th": "16 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormously boosts Def relative to Atk for 3 turns, 100% damage reduction for 3 turns, enormously boosts max HP & negates critical and elemental damage for 5 turns",
+    "vi": "16 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormously boosts Def relative to Atk for 3 turns, 100% damage reduction for 3 turns, enormously boosts max HP & negates critical and elemental damage for 5 turns"
+  },
+  "MST_SKILLS_2830678_NAME": {
+    "en": "Junkinator",
+    "es": "Junkinator",
+    "id": "Junkinator",
+    "pt": "Junkinator",
+    "th": "Junkinator",
+    "vi": "Junkinator"
   },
   "MST_SKILLS_2830_DESCRIPTION": {
     "en": "None",
@@ -368,12 +368,12 @@
     "vi": "Serpentine Wavestorm"
   },
   "MST_SKILLS_2840278_DESCRIPTION": {
-    "en": "29 combo massive Thunder attack on all foes (damage relative to remaining HP), 3 combo massive Thunder attack on single foe, enormously boosts critical damage for 3 turns, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts Thunder elemental damage for 3 turns",
-    "es": "29 combo massive Thunder attack on all foes (damage relative to remaining HP), 3 combo massive Thunder attack on single foe, enormously boosts critical damage for 3 turns, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts Thunder elemental damage for 3 turns",
-    "id": "29 kombo serangan Guntur masif ke semua musuh (kerusakan sesuai sisa HP), 3 kombo serangan Guntur masif ke 1 musuh, 3 giliran: ekstra jumbo kerusakan ampuh, kerusakan diderita beri ekstra jumbo meteran BB dan pulihkan HP & menambah kerusakan elemen Guntur",
-    "pt": "29 combo massive Thunder attack on all foes (damage relative to remaining HP), 3 combo massive Thunder attack on single foe, enormously boosts critical damage for 3 turns, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts Thunder elemental damage for 3 turns",
-    "th": "29 คอมโบ โจมตีธาตุสายฟ้ารุนแรงมหาสาล ใส่ศัตรูทั้งหมด (ความเสียหายสัมพันธ์กับ HP ที่เหลืออยู่), 3 คอมโบ โจมตีธาตุสายฟ้ารุนแรงมหาสาล ใส่ศัตรูเป้าหมาย, เพิ่มค่ามหาศาลให้ ความเสียหายคริติคอล นาน 3 เทิร์น, ความเสียหายที่ได้รับ เพิ่มค่ามหาศาลให้ เกจ BB กับ ฟื้นคืน HP นาน 3 เทิร์น และ เพิ่มค่ามหาศาลให้ ความเสียหายธาตุ สายฟ้า นาน 3 เทิร์น",
-    "vi": "29 combo massive Thunder attack on all foes (damage relative to remaining HP), 3 combo massive Thunder attack on single foe, enormously boosts critical damage for 3 turns, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts Thunder elemental damage for 3 turns"
+    "en": "29 combo massive Thunder attack on all foes (damage relative to remaining HP), 3 combo massive Thunder attack on single foe, damage taken enormously boosts BB gauge and fully restores HP for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
+    "es": "29 combo massive Thunder attack on all foes (damage relative to remaining HP), 3 combo massive Thunder attack on single foe, damage taken enormously boosts BB gauge and fully restores HP for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
+    "id": "29 combo massive Thunder attack on all foes (damage relative to remaining HP), 3 combo massive Thunder attack on single foe, damage taken enormously boosts BB gauge and fully restores HP for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
+    "pt": "29 combo massive Thunder attack on all foes (damage relative to remaining HP), 3 combo massive Thunder attack on single foe, damage taken enormously boosts BB gauge and fully restores HP for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
+    "th": "29 combo massive Thunder attack on all foes (damage relative to remaining HP), 3 combo massive Thunder attack on single foe, damage taken enormously boosts BB gauge and fully restores HP for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
+    "vi": "29 combo massive Thunder attack on all foes (damage relative to remaining HP), 3 combo massive Thunder attack on single foe, damage taken enormously boosts BB gauge and fully restores HP for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns"
   },
   "MST_SKILLS_2840278_NAME": {
     "en": "Thousand-Scale Storm",
@@ -640,12 +640,12 @@
     "vi": "Golden Storm Bolt"
   },
   "MST_SKILLS_2840508_DESCRIPTION": {
-    "en": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec and Spark damage for 5 turns & enormously boosts OD gauge",
-    "es": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec and Spark damage for 5 turns & enormously boosts OD gauge",
-    "id": "Serangan Guntur masif ke semua musuh (kerusakan sesuai sisa HP), serangan Guntur masif ke 1 musuh, ekstra jumbo Serang, Tahan, Pulih 3 giliran, ekstra jumbo Serang, Tahan, Pulih, kerusakan Percikan sendiri 5 giliran & ekstra jumbo meteran OD",
-    "pt": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec and Spark damage for 5 turns & enormously boosts OD gauge",
-    "th": "โจมตีธาตุสายฟ้ารุนแรงมหาศาล ใส่ศัตรูทั้งหมด (ความเสียหาย สัมพันธ์กับ HP ที่เหลืออยู่), โจมตีธาตุสายฟ้ารุนแรงมหาศาล ใส่ศัตรูเป้าหมาย, เพิ่มค่ามหาศาลให้ โจมตี, ป้องกัน, ฟื้นฟู นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ โจมตี ของตนเอง, ป้องกัน, ฟื้นฟู กับ ความเสียหายสปาร์ค นาน 5 เทิร์น และ เพิ่มค่ามหาศาลให้ เกจ OD",
-    "vi": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec and Spark damage for 5 turns & enormously boosts OD gauge"
+    "en": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts own Spark damage for 5 turns & enormously boosts OD gauge",
+    "es": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts own Spark damage for 5 turns & enormously boosts OD gauge",
+    "id": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts own Spark damage for 5 turns & enormously boosts OD gauge",
+    "pt": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts own Spark damage for 5 turns & enormously boosts OD gauge",
+    "th": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts own Spark damage for 5 turns & enormously boosts OD gauge",
+    "vi": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts own Spark damage for 5 turns & enormously boosts OD gauge"
   },
   "MST_SKILLS_2840508_NAME": {
     "en": "Universe-Devouring Bolt",
@@ -1742,6 +1742,38 @@
     "pt": "Sky Drill MAX",
     "th": "Sky Drill MAX",
     "vi": "Sky Drill MAX"
+  },
+  "MST_SKILLS_2850657_DESCRIPTION": {
+    "en": "23 combo massive Light attack on all foes (damage relative to remaining HP), adds evasion for 3 turns, enormously boosts Atk, Def, Rec and critical hit rate for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Spark damage for 3 turns",
+    "es": "23 combo massive Light attack on all foes (damage relative to remaining HP), adds evasion for 3 turns, enormously boosts Atk, Def, Rec and critical hit rate for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Spark damage for 3 turns",
+    "id": "23 combo massive Light attack on all foes (damage relative to remaining HP), adds evasion for 3 turns, enormously boosts Atk, Def, Rec and critical hit rate for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Spark damage for 3 turns",
+    "pt": "",
+    "th": "23 combo massive Light attack on all foes (damage relative to remaining HP), adds evasion for 3 turns, enormously boosts Atk, Def, Rec and critical hit rate for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Spark damage for 3 turns",
+    "vi": "23 combo massive Light attack on all foes (damage relative to remaining HP), adds evasion for 3 turns, enormously boosts Atk, Def, Rec and critical hit rate for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Spark damage for 3 turns"
+  },
+  "MST_SKILLS_2850657_NAME": {
+    "en": "Battle Art: Valkyrie Dive",
+    "es": "Battle Art: Valkyrie Dive",
+    "id": "Battle Art: Valkyrie Dive",
+    "pt": "Battle Art: Valkyrie Dive",
+    "th": "Battle Art: Valkyrie Dive",
+    "vi": "Battle Art: Valkyrie Dive"
+  },
+  "MST_SKILLS_2850658_DESCRIPTION": {
+    "en": "25 combo massive Light attack on all foes (damage relative to remaining HP), adds evasion for 3 turns, enormously boosts Atk, Def, Rec and critical hit rate for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts Spark damage for 3 turns & adds random status ailment infliction to attack for 5 turns",
+    "es": "25 combo massive Light attack on all foes (damage relative to remaining HP), adds evasion for 3 turns, enormously boosts Atk, Def, Rec and critical hit rate for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts Spark damage for 3 turns & adds random status ailment infliction to attack for 5 turns",
+    "id": "25 combo massive Light attack on all foes (damage relative to remaining HP), adds evasion for 3 turns, enormously boosts Atk, Def, Rec and critical hit rate for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts Spark damage for 3 turns & adds random status ailment infliction to attack for 5 turns",
+    "pt": "",
+    "th": "25 combo massive Light attack on all foes (damage relative to remaining HP), adds evasion for 3 turns, enormously boosts Atk, Def, Rec and critical hit rate for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts Spark damage for 3 turns & adds random status ailment infliction to attack for 5 turns",
+    "vi": "25 combo massive Light attack on all foes (damage relative to remaining HP), adds evasion for 3 turns, enormously boosts Atk, Def, Rec and critical hit rate for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts Spark damage for 3 turns & adds random status ailment infliction to attack for 5 turns"
+  },
+  "MST_SKILLS_2850658_NAME": {
+    "en": "Walküre: Lightchaser",
+    "es": "Walküre: Lightchaser",
+    "id": "Walküre: Lightchaser",
+    "pt": "Walküre: Lightchaser",
+    "th": "Walküre: Lightchaser",
+    "vi": "Walküre: Lightchaser"
   },
   "MST_SKILLS_2850977_DESCRIPTION": {
     "en": "21 combo massive Light attack on all foes, negates all status ailments for 3 turns, negates Atk, Def, Rec reduction effects for 3 turns, enormously boosts Def for 3 turns & enormously boosts Atk relative to Def for 3 turns",
@@ -87912,12 +87944,12 @@
     "vi": "Brilliant Ember"
   },
   "MST_SKILLS_810508_DESCRIPTION": {
-    "en": "20 combo powerful Fire attack on all foes, boosts max HP, considerably boosts Def relative to max HP for 3 turns, damage taken may restore HP for 3 turns & probability of raising allies from KO",
-    "es": "20 combo powerful Fire attack on all foes, boosts max HP, considerably boosts Def relative to max HP for 3 turns, damage taken may restore HP for 3 turns & probability of raising allies from KO",
-    "id": "20 kombo serangan Api kuat ke semua musuh, menambah HP maks, 3 giliran: lumayan menambah Tahan sesuai HP maks, kerusakan diderita dapat pulihkan HP, kans bangkitkan sekutu dari KO",
-    "pt": "20 combo powerful Fire attack on all foes, boosts max HP, considerably boosts Def relative to max HP for 3 turns, damage taken may restore HP for 3 turns & probability of raising allies from KO",
-    "th": "20 คอมโบ โจมตีธาตุไฟอย่างแรง ใส่ศัตรูทั้งหมด, เพิ่ม HP สูงสุด, เพิ่มค่าอย่างมากให้ ป้องกัน สัมพันธ์กับ HP สูงสุด นาน 3 เทิร์น, ความเสียหายที่ได้รับ อาจจะฟื้นคืน HP นาน 3 เทิร์น และ มีโอกาสที่จะ คืนชีพพันธมิตรจากน็อคเอ๊าท์",
-    "vi": "20 combo powerful Fire attack on all foes, boosts max HP, considerably boosts Def relative to max HP for 3 turns, damage taken may restore HP for 3 turns & probability of raising allies from KO"
+    "en": "20 combo powerful Fire attack on all foes, greatly boosts max HP, enormously boosts Def relative to max HP for 3 turns, damage taken may greatly restore HP for 3 turns, probability of raising allies from KO & probable resistance against 1 KO attack for 2 turns",
+    "es": "20 combo powerful Fire attack on all foes, greatly boosts max HP, enormously boosts Def relative to max HP for 3 turns, damage taken may greatly restore HP for 3 turns, probability of raising allies from KO & probable resistance against 1 KO attack for 2 turns",
+    "id": "20 combo powerful Fire attack on all foes, greatly boosts max HP, enormously boosts Def relative to max HP for 3 turns, damage taken may greatly restore HP for 3 turns, probability of raising allies from KO & probable resistance against 1 KO attack for 2 turns",
+    "pt": "20 combo powerful Fire attack on all foes, greatly boosts max HP, enormously boosts Def relative to max HP for 3 turns, damage taken may greatly restore HP for 3 turns, probability of raising allies from KO & probable resistance against 1 KO attack for 2 turns",
+    "th": "20 combo powerful Fire attack on all foes, greatly boosts max HP, enormously boosts Def relative to max HP for 3 turns, damage taken may greatly restore HP for 3 turns, probability of raising allies from KO & probable resistance against 1 KO attack for 2 turns",
+    "vi": "20 combo powerful Fire attack on all foes, greatly boosts max HP, enormously boosts Def relative to max HP for 3 turns, damage taken may greatly restore HP for 3 turns, probability of raising allies from KO & probable resistance against 1 KO attack for 2 turns"
   },
   "MST_SKILLS_810508_NAME": {
     "en": "Vermillion  Blaze",
@@ -88086,5 +88118,109 @@
     "pt": "Inferno Blast",
     "th": "Inferno Blast",
     "vi": "Inferno Blast"
+  },
+  "MST_SKILLS_810587_DESCRIPTION": {
+    "en": "12 combo Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), considerably boosts own Atk relative to max HP for 3 turns, hugely boosts BB Atk for 3 turns, considerably boosts Atk, Def, Rec and enormously boosts critical hit rate of Fire types for 3 turns & boosts own max HP",
+    "es": "12 combo Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), considerably boosts own Atk relative to max HP for 3 turns, hugely boosts BB Atk for 3 turns, considerably boosts Atk, Def, Rec and enormously boosts critical hit rate of Fire types for 3 turns & boosts own max HP",
+    "id": "12 combo Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), considerably boosts own Atk relative to max HP for 3 turns, hugely boosts BB Atk for 3 turns, considerably boosts Atk, Def, Rec and enormously boosts critical hit rate of Fire types for 3 turns & boosts own max HP",
+    "pt": "12 combo Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), considerably boosts own Atk relative to max HP for 3 turns, hugely boosts BB Atk for 3 turns, considerably boosts Atk, Def, Rec and enormously boosts critical hit rate of Fire types for 3 turns & boosts own max HP",
+    "th": "12 combo Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), considerably boosts own Atk relative to max HP for 3 turns, hugely boosts BB Atk for 3 turns, considerably boosts Atk, Def, Rec and enormously boosts critical hit rate of Fire types for 3 turns & boosts own max HP",
+    "vi": "12 combo Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), considerably boosts own Atk relative to max HP for 3 turns, hugely boosts BB Atk for 3 turns, considerably boosts Atk, Def, Rec and enormously boosts critical hit rate of Fire types for 3 turns & boosts own max HP"
+  },
+  "MST_SKILLS_810587_NAME": {
+    "en": "Explosive Speed Turbo",
+    "es": "Explosive Speed Turbo",
+    "id": "Explosive Speed Turbo",
+    "pt": "Explosive Speed Turbo",
+    "th": "Explosive Speed Turbo",
+    "vi": "Explosive Speed Turbo"
+  },
+  "MST_SKILLS_810588_DESCRIPTION": {
+    "en": "14 combo powerful Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormously boosts own Atk relative to max HP for 3 turns, enormously boosts BB Atk for 3 turns, probability of activating BB/SBB/UBB twice for 1 turn, considerably boosts Atk, Def, Rec and enormously boosts critical hit rate of Fire types for 3 turns & boosts own max HP",
+    "es": "14 combo powerful Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormously boosts own Atk relative to max HP for 3 turns, enormously boosts BB Atk for 3 turns, probability of activating BB/SBB/UBB twice for 1 turn, considerably boosts Atk, Def, Rec and enormously boosts critical hit rate of Fire types for 3 turns & boosts own max HP",
+    "id": "14 combo powerful Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormously boosts own Atk relative to max HP for 3 turns, enormously boosts BB Atk for 3 turns, probability of activating BB/SBB/UBB twice for 1 turn, considerably boosts Atk, Def, Rec and enormously boosts critical hit rate of Fire types for 3 turns & boosts own max HP",
+    "pt": "14 combo powerful Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormously boosts own Atk relative to max HP for 3 turns, enormously boosts BB Atk for 3 turns, probability of activating BB/SBB/UBB twice for 1 turn, considerably boosts Atk, Def, Rec and enormously boosts critical hit rate of Fire types for 3 turns & boosts own max HP",
+    "th": "14 combo powerful Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormously boosts own Atk relative to max HP for 3 turns, enormously boosts BB Atk for 3 turns, probability of activating BB/SBB/UBB twice for 1 turn, considerably boosts Atk, Def, Rec and enormously boosts critical hit rate of Fire types for 3 turns & boosts own max HP",
+    "vi": "14 combo powerful Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormously boosts own Atk relative to max HP for 3 turns, enormously boosts BB Atk for 3 turns, probability of activating BB/SBB/UBB twice for 1 turn, considerably boosts Atk, Def, Rec and enormously boosts critical hit rate of Fire types for 3 turns & boosts own max HP"
+  },
+  "MST_SKILLS_810588_NAME": {
+    "en": "Explosive Speed Turbo EX",
+    "es": "Explosive Speed Turbo EX",
+    "id": "Explosive Speed Turbo EX",
+    "pt": "Explosive Speed Turbo EX",
+    "th": "Explosive Speed Turbo EX",
+    "vi": "Explosive Speed Turbo EX"
+  },
+  "MST_SKILLS_810617_DESCRIPTION": {
+    "en": "13 combo Fire attack on all foes (enormously boosts own critical hit rate), enormously boosts BB gauge, hugely boosts BC efficacy for 3 turns, greatly boosts BC, HC, Item drop rates for 3 turns & hugely boosts OD gauge fill rate for 3 turns",
+    "es": "13 combo Fire attack on all foes (enormously boosts own critical hit rate), enormously boosts BB gauge, hugely boosts BC efficacy for 3 turns, greatly boosts BC, HC, Item drop rates for 3 turns & hugely boosts OD gauge fill rate for 3 turns",
+    "id": "13 combo Fire attack on all foes (enormously boosts own critical hit rate), enormously boosts BB gauge, hugely boosts BC efficacy for 3 turns, greatly boosts BC, HC, Item drop rates for 3 turns & hugely boosts OD gauge fill rate for 3 turns",
+    "pt": "13 combo Fire attack on all foes (enormously boosts own critical hit rate), enormously boosts BB gauge, hugely boosts BC efficacy for 3 turns, greatly boosts BC, HC, Item drop rates for 3 turns & hugely boosts OD gauge fill rate for 3 turns",
+    "th": "13 combo Fire attack on all foes (enormously boosts own critical hit rate), enormously boosts BB gauge, hugely boosts BC efficacy for 3 turns, greatly boosts BC, HC, Item drop rates for 3 turns & hugely boosts OD gauge fill rate for 3 turns",
+    "vi": "13 combo Fire attack on all foes (enormously boosts own critical hit rate), enormously boosts BB gauge, hugely boosts BC efficacy for 3 turns, greatly boosts BC, HC, Item drop rates for 3 turns & hugely boosts OD gauge fill rate for 3 turns"
+  },
+  "MST_SKILLS_810617_NAME": {
+    "en": "Whipflash",
+    "es": "Whipflash",
+    "id": "Whipflash",
+    "pt": "Whipflash",
+    "th": "Whipflash",
+    "vi": "Whipflash"
+  },
+  "MST_SKILLS_810618_DESCRIPTION": {
+    "en": "15 combo powerful Fire attack on all foes (enormously boosts own critical hit rate), enormously boosts BB gauge, enormously boosts BC efficacy for 3 turns, greatly boosts BC, HC, Item drop rates for 3 turns, hugely boosts OD gauge fill rate for 3 turns & greatly boosts OD gauge at turn's end for 3 turns",
+    "es": "15 combo powerful Fire attack on all foes (enormously boosts own critical hit rate), enormously boosts BB gauge, enormously boosts BC efficacy for 3 turns, greatly boosts BC, HC, Item drop rates for 3 turns, hugely boosts OD gauge fill rate for 3 turns & greatly boosts OD gauge at turn's end for 3 turns",
+    "id": "15 combo powerful Fire attack on all foes (enormously boosts own critical hit rate), enormously boosts BB gauge, enormously boosts BC efficacy for 3 turns, greatly boosts BC, HC, Item drop rates for 3 turns, hugely boosts OD gauge fill rate for 3 turns & greatly boosts OD gauge at turn's end for 3 turns",
+    "pt": "15 combo powerful Fire attack on all foes (enormously boosts own critical hit rate), enormously boosts BB gauge, enormously boosts BC efficacy for 3 turns, greatly boosts BC, HC, Item drop rates for 3 turns, hugely boosts OD gauge fill rate for 3 turns & greatly boosts OD gauge at turn's end for 3 turns",
+    "th": "15 combo powerful Fire attack on all foes (enormously boosts own critical hit rate), enormously boosts BB gauge, enormously boosts BC efficacy for 3 turns, greatly boosts BC, HC, Item drop rates for 3 turns, hugely boosts OD gauge fill rate for 3 turns & greatly boosts OD gauge at turn's end for 3 turns",
+    "vi": "15 combo powerful Fire attack on all foes (enormously boosts own critical hit rate), enormously boosts BB gauge, enormously boosts BC efficacy for 3 turns, greatly boosts BC, HC, Item drop rates for 3 turns, hugely boosts OD gauge fill rate for 3 turns & greatly boosts OD gauge at turn's end for 3 turns"
+  },
+  "MST_SKILLS_810618_NAME": {
+    "en": "Velocity Sparker",
+    "es": "Velocity Sparker",
+    "id": "Velocity Sparker",
+    "pt": "Velocity Sparker",
+    "th": "Velocity Sparker",
+    "vi": "Velocity Sparker"
+  },
+  "MST_SKILLS_810627_DESCRIPTION": {
+    "en": "6 combo powerful Fire attack on all foes, boosts max HP, enormously boosts BB Atk for 3 turns, enormously boosts BB gauge for 3 turns & adds probable evasion for 2 turns",
+    "es": "6 combo powerful Fire attack on all foes, boosts max HP, enormously boosts BB Atk for 3 turns, enormously boosts BB gauge for 3 turns & adds probable evasion for 2 turns",
+    "id": "6 combo powerful Fire attack on all foes, boosts max HP, enormously boosts BB Atk for 3 turns, enormously boosts BB gauge for 3 turns & adds probable evasion for 2 turns",
+    "pt": "6 combo powerful Fire attack on all foes, boosts max HP, enormously boosts BB Atk for 3 turns, enormously boosts BB gauge for 3 turns & adds probable evasion for 2 turns",
+    "th": "6 combo powerful Fire attack on all foes, boosts max HP, enormously boosts BB Atk for 3 turns, enormously boosts BB gauge for 3 turns & adds probable evasion for 2 turns",
+    "vi": "6 combo powerful Fire attack on all foes, boosts max HP, enormously boosts BB Atk for 3 turns, enormously boosts BB gauge for 3 turns & adds probable evasion for 2 turns"
+  },
+  "MST_SKILLS_810627_NAME": {
+    "en": "Catching Fire",
+    "es": "Catching Fire",
+    "id": "Catching Fire",
+    "pt": "Catching Fire",
+    "th": "Catching Fire",
+    "vi": "Catching Fire"
+  },
+  "MST_SKILLS_810628_DESCRIPTION": {
+    "en": "11 combo powerful Fire attack on all foes, considerably boosts max HP, enormously boosts BB Atk for 3 turns, enormously boosts BB gauge for 3 turns, adds probable evasion for 2 turns & slightly boosts OD gauge",
+    "es": "11 combo powerful Fire attack on all foes, considerably boosts max HP, enormously boosts BB Atk for 3 turns, enormously boosts BB gauge for 3 turns, adds probable evasion for 2 turns & slightly boosts OD gauge",
+    "id": "11 combo powerful Fire attack on all foes, considerably boosts max HP, enormously boosts BB Atk for 3 turns, enormously boosts BB gauge for 3 turns, adds probable evasion for 2 turns & slightly boosts OD gauge",
+    "pt": "11 combo powerful Fire attack on all foes, considerably boosts max HP, enormously boosts BB Atk for 3 turns, enormously boosts BB gauge for 3 turns, adds probable evasion for 2 turns & slightly boosts OD gauge",
+    "th": "11 combo powerful Fire attack on all foes, considerably boosts max HP, enormously boosts BB Atk for 3 turns, enormously boosts BB gauge for 3 turns, adds probable evasion for 2 turns & slightly boosts OD gauge",
+    "vi": "11 combo powerful Fire attack on all foes, considerably boosts max HP, enormously boosts BB Atk for 3 turns, enormously boosts BB gauge for 3 turns, adds probable evasion for 2 turns & slightly boosts OD gauge"
+  },
+  "MST_SKILLS_810628_NAME": {
+    "en": "Brimstone Blaze",
+    "es": "Brimstone Blaze",
+    "id": "Brimstone Blaze",
+    "pt": "Brimstone Blaze",
+    "th": "Brimstone Blaze",
+    "vi": "Brimstone Blaze"
+  },
+  "MST_SKILLS_810657_DESCRIPTION": {
+    "en": "12 combo powerful Fire attack on all foes, probable KO resistance negation for 2 turns (PvP modes only), hugely boosts Atk, Def, Rec and enormously boosts critical hit rate for 3 turns, probable huge 2 turn Atk, Def reduction & reduces foes' BB gauge",
+    "es": "12 combo powerful Fire attack on all foes, probable KO resistance negation for 2 turns (PvP modes only), hugely boosts Atk, Def, Rec and enormously boosts critical hit rate for 3 turns, probable huge 2 turn Atk, Def reduction & reduces foes' BB gauge",
+    "id": "12 combo powerful Fire attack on all foes, probable KO resistance negation for 2 turns (PvP modes only), hugely boosts Atk, Def, Rec and enormously boosts critical hit rate for 3 turns, probable huge 2 turn Atk, Def reduction & reduces foes' BB gauge",
+    "pt": "12 combo powerful Fire attack on all foes, probable KO resistance negation for 2 turns (PvP modes only), hugely boosts Atk, Def, Rec and enormously boosts critical hit rate for 3 turns, probable huge 2 turn Atk, Def reduction & reduces foes' BB gauge",
+    "th": "12 combo powerful Fire attack on all foes, probable KO resistance negation for 2 turns (PvP modes only), hugely boosts Atk, Def, Rec and enormously boosts critical hit rate for 3 turns, probable huge 2 turn Atk, Def reduction & reduces foes' BB gauge",
+    "vi": "12 combo powerful Fire attack on all foes, probable KO resistance negation for 2 turns (PvP modes only), hugely boosts Atk, Def, Rec and enormously boosts critical hit rate for 3 turns, probable huge 2 turn Atk, Def reduction & reduces foes' BB gauge"
   }
 }

@@ -1,4 +1,92 @@
 {
+  "MST_SKILLS_2122568_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122568_NAME": {
+    "en": "Why can't you hear me...?",
+    "es": "¿Por qué no puedes oírme...?",
+    "id": "Mengapa kau tidak dapat mendengarku...?",
+    "pt": "Por que não me escuta...?",
+    "th": "ทำไมเจ้าไม่ได้ยินข้าล่ะ...?",
+    "vi": "Why can't you hear me...?"
+  },
+  "MST_SKILLS_2122569_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122569_NAME": {
+    "en": "You're so ignorant!!",
+    "es": "¡Eres tan ignorante!",
+    "id": "Kau begitu tidak perhatian!!",
+    "pt": "Você é tão ignorante!!",
+    "th": "ยืนเฉยอยู่ได้!!",
+    "vi": "You're so ignorant!!"
+  },
+  "MST_SKILLS_212256_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_212256_NAME": {
+    "en": "I'll make you my adversary.",
+    "es": "Te convertiré en mi rival.",
+    "id": "Kau akan kujadikan musuhku.",
+    "pt": "Vou enfrentar você.",
+    "th": "ข้าจะทำให้เจ้าเป็นคู่ต่อสู้ของข้า",
+    "vi": "I'll make you my adversary."
+  },
+  "MST_SKILLS_21225700_NAME": {
+    "en": "Your art is not what I seek.",
+    "es": "Your art is not what I seek.",
+    "id": "Teknikmu bukan yang kucari.",
+    "pt": "Your art is not what I seek.",
+    "th": "ข้าไม่เคยเห็นการต่อสู้แบบเจ้า",
+    "vi": "Your art is not what I seek."
+  },
+  "MST_SKILLS_2122570_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122570_NAME": {
+    "en": "I hate you!!",
+    "es": "¡Te odio!",
+    "id": "Aku benci kamu!!",
+    "pt": "Eu te odeio!!",
+    "th": "ข้าเกลียดเจ้า!!",
+    "vi": "I hate you!!"
+  },
+  "MST_SKILLS_2122571_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122571_NAME": {
+    "en": "Die with your human friends!!",
+    "es": "¡Muere con tus amigos humanos!",
+    "id": "Matilah bersama teman-teman manusiamu!",
+    "pt": "Morra com seus amigos humanos!!",
+    "th": "จงตายพร้อมกับเพื่อนมนุษย์ของเจ้าซะเถอะ!!",
+    "vi": "Die with your human friends!!"
+  },
   "MST_SKILLS_2122572_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -86360,12 +86448,12 @@
     "vi": "Luminent Phoenix"
   },
   "MST_SKILLS_2810508_DESCRIPTION": {
-    "en": "Enormously reduces damage taken for 2 turns, hugely boosts max HP, hugely boosts Atk relative to max HP for 3 turns, fully restores HP for 3 turns & raises allies from KO",
-    "es": "Enormously reduces damage taken for 2 turns, hugely boosts max HP, hugely boosts Atk relative to max HP for 3 turns, fully restores HP for 3 turns & raises allies from KO",
-    "id": "Pengurangan jumbo kerusakan diderita untuk 2 giliran, amat menambah HP maks, 3 giliran: amat menambah Serangan sesuai HP maks, HP pulih utuh, membangkitkan sekutu dari KO",
-    "pt": "Enormously reduces damage taken for 2 turns, hugely boosts max HP, hugely boosts Atk relative to max HP for 3 turns, fully restores HP for 3 turns & raises allies from KO",
-    "th": "ลดค่ามหาศาลให้ ความเสียหายที่ได้รับ นาน 2 เทิร์น, เพิ่มค่าอย่างสูงให้ HP สูงสุด, เพิ่มค่าอย่างสูงให้ โจมตี สัมพันธ์กับ HP สูงสุด นาน 3 เทิร์น, ฟื้นคืน HP จนเต็ม นาน 3 เทิร์น และ คืนชีพพันธมิตรจากน็อคเอ๊าท์",
-    "vi": "Enormously reduces damage taken for 2 turns, hugely boosts max HP, hugely boosts Atk relative to max HP for 3 turns, fully restores HP for 3 turns & raises allies from KO"
+    "en": "28 combo massive Fire attack on all foes (damage relative to remaining HP), enormously reduces damage taken for 3 turns, enormously boosts max HP, enormously boosts Atk, Def relative to max HP for 3 turns, fully restores HP for 3 turns & raises allies from KO",
+    "es": "28 combo massive Fire attack on all foes (damage relative to remaining HP), enormously reduces damage taken for 3 turns, enormously boosts max HP, enormously boosts Atk, Def relative to max HP for 3 turns, fully restores HP for 3 turns & raises allies from KO",
+    "id": "28 combo massive Fire attack on all foes (damage relative to remaining HP), enormously reduces damage taken for 3 turns, enormously boosts max HP, enormously boosts Atk, Def relative to max HP for 3 turns, fully restores HP for 3 turns & raises allies from KO",
+    "pt": "28 combo massive Fire attack on all foes (damage relative to remaining HP), enormously reduces damage taken for 3 turns, enormously boosts max HP, enormously boosts Atk, Def relative to max HP for 3 turns, fully restores HP for 3 turns & raises allies from KO",
+    "th": "28 combo massive Fire attack on all foes (damage relative to remaining HP), enormously reduces damage taken for 3 turns, enormously boosts max HP, enormously boosts Atk, Def relative to max HP for 3 turns, fully restores HP for 3 turns & raises allies from KO",
+    "vi": "28 combo massive Fire attack on all foes (damage relative to remaining HP), enormously reduces damage taken for 3 turns, enormously boosts max HP, enormously boosts Atk, Def relative to max HP for 3 turns, fully restores HP for 3 turns & raises allies from KO"
   },
   "MST_SKILLS_2810508_NAME": {
     "en": "Rising Phoenix",
@@ -87431,6 +87519,38 @@
     "th": "Reflections Beyond Reality",
     "vi": "Reflections Beyond Reality"
   },
+  "MST_SKILLS_2820677_DESCRIPTION": {
+    "en": "15 combo massive Water attack on all foes, 15 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, enormously boosts Spark damage for 3 turns & enormously boosts own Spark damage for 3 turns",
+    "es": "15 combo massive Water attack on all foes, 15 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, enormously boosts Spark damage for 3 turns & enormously boosts own Spark damage for 3 turns",
+    "id": "15 combo massive Water attack on all foes, 15 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, enormously boosts Spark damage for 3 turns & enormously boosts own Spark damage for 3 turns",
+    "pt": "15 combo massive Water attack on all foes, 15 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, enormously boosts Spark damage for 3 turns & enormously boosts own Spark damage for 3 turns",
+    "th": "15 combo massive Water attack on all foes, 15 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, enormously boosts Spark damage for 3 turns & enormously boosts own Spark damage for 3 turns",
+    "vi": "15 combo massive Water attack on all foes, 15 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, enormously boosts Spark damage for 3 turns & enormously boosts own Spark damage for 3 turns"
+  },
+  "MST_SKILLS_2820677_NAME": {
+    "en": "Override: Terminate",
+    "es": "Override: Terminate",
+    "id": "Override: Terminate",
+    "pt": "Override: Terminate",
+    "th": "Override: Terminate",
+    "vi": "Override: Terminate"
+  },
+  "MST_SKILLS_2820678_DESCRIPTION": {
+    "en": "36 combo massive Water attack on all foes, 5 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 4 turns, boosts own Spark damage for 4 turns, enormously boosts critical damage for 4 turns & boosts OD gauge at turn's end for 3 turns",
+    "es": "36 combo massive Water attack on all foes, 5 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 4 turns, boosts own Spark damage for 4 turns, enormously boosts critical damage for 4 turns & boosts OD gauge at turn's end for 3 turns",
+    "id": "36 combo massive Water attack on all foes, 5 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 4 turns, boosts own Spark damage for 4 turns, enormously boosts critical damage for 4 turns & boosts OD gauge at turn's end for 3 turns",
+    "pt": "36 combo massive Water attack on all foes, 5 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 4 turns, boosts own Spark damage for 4 turns, enormously boosts critical damage for 4 turns & boosts OD gauge at turn's end for 3 turns",
+    "th": "36 combo massive Water attack on all foes, 5 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 4 turns, boosts own Spark damage for 4 turns, enormously boosts critical damage for 4 turns & boosts OD gauge at turn's end for 3 turns",
+    "vi": "36 combo massive Water attack on all foes, 5 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 4 turns, boosts own Spark damage for 4 turns, enormously boosts critical damage for 4 turns & boosts OD gauge at turn's end for 3 turns"
+  },
+  "MST_SKILLS_2820678_NAME": {
+    "en": "Override: Eliminate",
+    "es": "Override: Eliminate",
+    "id": "Override: Eliminate",
+    "pt": "Override: Eliminate",
+    "th": "Override: Eliminate",
+    "vi": "Override: Eliminate"
+  },
   "MST_SKILLS_2820_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -88086,5 +88206,21 @@
     "pt": "You got them, Bjørn!",
     "th": "You got them, Bjørn!",
     "vi": "You got them, Bjørn!"
+  },
+  "MST_SKILLS_2830557_DESCRIPTION": {
+    "en": "23 combo massive Earth attack on all foes, high probability of raising allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts OD gauge",
+    "es": "23 combo massive Earth attack on all foes, high probability of raising allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts OD gauge",
+    "id": "23 combo massive Earth attack on all foes, high probability of raising allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts OD gauge",
+    "pt": "23 combo massive Earth attack on all foes, high probability of raising allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts OD gauge",
+    "th": "23 combo massive Earth attack on all foes, high probability of raising allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts OD gauge",
+    "vi": "23 combo massive Earth attack on all foes, high probability of raising allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts OD gauge"
+  },
+  "MST_SKILLS_2830557_NAME": {
+    "en": "Hisa! Wrathful Typhoon!",
+    "es": "Hisa! Wrathful Typhoon!",
+    "id": "Hisa! Wrathful Typhoon!",
+    "pt": "Hisa! Wrathful Typhoon!",
+    "th": "Hisa! Wrathful Typhoon!",
+    "vi": "Hisa! Wrathful Typhoon!"
   }
 }

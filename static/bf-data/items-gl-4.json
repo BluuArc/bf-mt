@@ -5655,6 +5655,10 @@
       {
         "id": 62020,
         "name": "Dark Axe"
+      },
+      {
+        "id": 819212,
+        "name": "Hachiman Blade"
       }
     ],
     "associated_units": [
@@ -8395,7 +8399,12 @@
     "sphere type text": "Critical",
     "thumbnail": "sphere_thum_4_1.png",
     "type": "sphere",
-    "usage": [],
+    "usage": [
+      {
+        "id": 819226,
+        "name": "Dragonbane"
+      }
+    ],
     "associated_units": [
       "740237",
       "850198",
@@ -8796,7 +8805,12 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_3_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [
+      {
+        "id": 819214,
+        "name": "Vision"
+      }
+    ]
   },
   "49800": {
     "desc": "Very slight probable dmg reduction to 1, restores BB and greatly restores HP each turn & dmg taken slightly boosts BB gauge and may restore HP",

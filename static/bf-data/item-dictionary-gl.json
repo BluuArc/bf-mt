@@ -2546,6 +2546,9 @@
   "800106": {
     "lore": "A special quartz infused with elemental power and radiates a soothing aura"
   },
+  "800107": {
+    "lore": "A chunk of rock retrieved from the remains of an Orebi Revenant. Its unassuming appearance belies its innate magical properties that can only be harnessed by a Summoner."
+  },
   "800200": {
     "lore": "A snow flake that shines softly with a blue glow. Mystical energy surrounds it."
   },
@@ -2833,6 +2836,15 @@
   },
   "802004": {
     "lore": "A variety of notes, each contained within a small orb. These orbs exude an aura of coldness, a fact that many people find puzzling, considering their appearance."
+  },
+  "802005": {
+    "lore": "This specially engineered flux is one of Vektor's crowning achievements. Boasting a Class-S bond strength, it is up to a hundred times stronger than most industrial variants. It can however be easily dissolved by using any good unbonding agent on the market. making mistakes less deadly than they would be.<br><br>Bearing a striking similarity to hair styling products, some claim that Vektor might have used this for his gravity-proof coiffure. He vehemently denies this when asked."
+  },
+  "802006": {
+    "lore": "This specially crafted spool of lead is used exclusively for the Excelsior series of items that Vektor has lovingly engineered. An important component in any form of electronics, lead creates a bond between contact points. The Excelsior type exceeds all other market types in both durability and conductivity, somehow even positively enhancing the appliance itself.<br><br>When questioned on the specifics of how the lead increases performance, Vektor simply winks and say it is a trade secret."
+  },
+  "802007": {
+    "lore": "This broken chip was once installed in Galene as a modular enhancement to her combat capabilities. However, during her escape from the Corporation, Galene inadvertently destroyed the chip by overloading it during combat with the Security System.<br><br>Although it is currently unusable, it can certainly be restored with enough materials on hand."
   },
   "818881": {
     "lore": "During Leon's early days as a thief, brushes with death had made him realize the importance of survival. He designed a Guardian Cloak that could save him in times of need."
@@ -3491,14 +3503,44 @@
   "819203": {
     "lore": "A mighty spear fashioned after a thunderbolt, symbol of the great demigod leader Zedus. It was said that the power of the old gods manifested as a ravaging thunderstorm upon the newly created world of Athensphere—\"the light that streaks the path of all things.\"<br><br>Zedus fought valiantly and selflessly in the Augmentation Wars, channeling all of his power into every strike of his spear. During his final stand to ensure the evacuation of his people, his gleaming form silhouetted against the smog-choked sky evoked the image of a divine pillar of light smiting evil."
   },
+  "819206": {
+    "lore": "Developed by Vektor, the Excelsior Chip is a modular enchancement for robotic equipment or entities outfitted with the standard XSB-U sockets. This MK-1 chip is an initial prototype of the series, and the very same that propelled him into world of engineering."
+  },
+  "819207": {
+    "lore": "Developed by Vektor, the Excelsior Chip MK-2 is a significant improvement over the MK-1, boasting improvements in every area and adding several new functions for compatible robotic equipment and entities. The MK-2 was the result of countless hours of iteration, mostly due to Vektor wanting \"a bigger bang.\" This chip is popular on the market, especially among fighting robot enthusiasts."
+  },
+  "819208": {
+    "lore": "At the peak of the Excelsior Chip line stands the MK-3, Vektor's pride and joy. Although the series is designed with all robotic equipment and entities in mind, the MK-3 itself is specifically tailored to enhance the battle android Galene's abilities. One could say it is Vektor's way of expressing his love for Galene, despite the strangeness of romance between a human and what many would call a sentient pile of circuits and wires."
+  },
   "819210": {
     "lore": "A grisly, impaled skull with tentacles erupting from its mandible, the Uln'gha is the cherished relic of Saerenthis, high priest of the Endless Abyss.<br><br>This was the skull of the high priest's own father, whom he personally sacrificed to gain favor with their Deep Goddess. This symbolic act was meant to sever all earthly relationships, so that he would wholly devote himself to carrying out Tsovinar's will.<br><br>The Uln'gha appears to have a will of its own at times, and has been known to utter smatterings of eldritch or abyssal phrases."
   },
   "819211": {
     "lore": "A massive blade that is extremely unwieldy to all but the strongest and nimblest of warriors, it bears an uncanny resemblance to another famous sword known as the \"Duster Sword\".<br><br>Before the fateful battle between Shura and Hisui, this weapon was the bane of many great warriors. Though it is crafted from common steel, it shines radiantly with the focus and ambition of its former master. When Shura forsook his name to become the War Demon Shusui, he abandoned his weapon as well, leaving it to be discovered by the Summoner's Hall in an unnamed corner of Celgrad."
   },
+  "819212": {
+    "lore": "A heavy, iridescent longsword, with intricate weaving patterns carved into the side of the blade.<br><br>This is Noel's second attempt to replicate a weapon carried by the War Demon Shusui. Recognising that his berserker fury was Shusui's shortcoming in battle, Noel was careful to dampen the furious aura that emanated from its previous incarnation. The weapon has lost none of its potency, however, and preliminary tests have unveiled the ability to absorb magical strength from its wielder's foes."
+  },
+  "819213": {
+    "lore": "The ultimate weapon. Its power exceeds those of anything once wielded by War Demon Shusui.<br><br>Along with Giselle's unerringly helpful insight, Noel has fashioned a close quarters weapon that changes form at its user's will. However, it requires enormous energy to sustain its form at all times, and only entities with great mental fortitude have the stamina to use such a weapon. Noel believes that this weapon will enable anybody who is strong enough to wield it to become the next War Demon."
+  },
+  "819214": {
+    "lore": "An unassuming metal half-mask, it grants the wearer extraordinary vision of the magics and energies that permeate all things.<br><br>With an improved understanding of magical neural interfaces, Noel has overhauled the way it communicates with the user, removing the unintended side effect of vegetation by long-term use. Noel's testers have, however, reported slight migraines and nausea after extended periods of use, presumably due to the average mind's inability to handle extreme clarity and detail."
+  },
+  "819215": {
+    "lore": "The ultimate soothsayer. In addition to magical vision, its user is endowed with multiple visions of possible events in the near future. Only entities with great mental strength are capable of wearing this device and using it effectively instead of going insane. Noel says it is theoretically possible for a user to focus the mask's power into one single chain of events to see far into its future, but he has yet to find anyone who can."
+  },
   "819224": {
     "lore": "Though cracked in several places, this pulsing orb still retains much of the power of a Revenant—a Guardian that has consumed so much debris that its phantom essence exhibits anomalous energy signals. It was theorized that these Guardians were abandoned decades ago by long-dead Guilds.<br><br>After several tests by Noel and Giselle, the energy signals are similar to pulses in the human brain when accessing memories. The Revenants are thus named for being amalgamations of \"deceased memories\", but whether this is scientific fact or supernatural sentiment is a constant topic of debate between them."
+  },
+  "819225": {
+    "lore": "A little something from Giselle as thanks for all the hard work you've been doing for the Orebus Special Inquiry lately.<br><br>It is well known through history that a lady's kiss is a sign of affectionate—even intimate—favor, but what is baffling is just how she managed to get this to you. Catching a blown kiss is a figure of speech, not a reality-bending, science-defying feat. And yet, here it is, taking up an invisible space in your hand. You can even see her mischievous smile if you close your eyes and focus hard enough.<br><br>Lucky you...?"
+  },
+  "819226": {
+    "lore": "Gleaming scale gauntlets boasting impressive rock knuckles and clawed fingers.<br><br>Noel created these fist weapons by imbuing dragonscale with the raw magic of Orebi Revenants. There are only a few of these in existence as the magical process used to craft them is prone to failure, utterly destroying the materials involved...as well as anybody standing too close, as Noel nearly found out. Forget spears or bows, dragon hunters would do anything to get their hands on a pair of these rockstars."
+  },
+  "819227": {
+    "lore": "A flashing orb containing all the colors that exist in the visible light spectrum."
   },
   "819234": {
     "lore": "A charming, well-crafted hairclip of unknown metal belonging to Giselle. The eerie emerald gem set prominently at its base seems to reflect your bewildered gaze.<br><br>You're not quite sure why such an innocuous item would provoke anxiety, but suddenly, you hear it: vague strains of flutes playing the same thin, monotonous note, accompanied by a slow drumbeat that seems to mimic the living pulse of something far beyond your knowledge.<br><br>Giselle, you think, is truly a woman of mystery... Though, at this point, you're starting to wonder if she was ever human to begin with."
@@ -3905,11 +3947,68 @@
   "880243": {
     "lore": "Glittering like a jewel in the night, this gem contains a small amount of magical power. Crafted by Noel with technology from alien worlds, it allows for newer creations to be made possible."
   },
+  "890001": {
+    "lore": "Crystallized embers shed from the outer shell of a Revenant. Its lingering heat makes it perpetually warm to the touch. Often used as a catalyst in crafting. Shattering the crystal causes a burst of fire to erupt from the cracks. While not particularly deadly on its own, it can easily spark off an explosion during experimentation. Handle with care."
+  },
+  "890002": {
+    "lore": "Crystallized ice flakes shed from the outer shell of a Revenant. Its frigid surface makes it hard to handle without gloves. Often used as a catalyst in crafting.<br><br>Since it melts at a much slower pace than regular ice, some researchers use it as a substitute to keep samples cold. As of now, there doesn't seem to be any negative side effects...yet."
+  },
+  "890003": {
+    "lore": "Crystallized wind shed from the outer shell of a Revenant. It boggles the mind how air can be compressed into a solid form, but it is more accurately energy. Often used as a catalyst in crafting. Such a material is an odd side effect of Revenant energy, and a great curiosity to researchers. Breaking the crystal releases a harmless, gentle gust."
+  },
+  "890004": {
+    "lore": "Crystallized sparks shed from the outer shell of a Revenant. Gives off a powerful static shock when brought within close range of several other crystals. Often used as a catalyst in crafting.<br><br>These crystals are among the more dangerous of the Revenant materials, as their volatility and penchant for loosing sparks can set off a string of terrible accidents."
+  },
+  "890005": {
+    "lore": "An extremely polished crystal shed from the outer shell of a Revenant. Its incredible shine can cause it to be mistaken as a precious mineral. Often used as a catalyst in crafting.<br><br>Though these crystals seem like choice materials for jewelry, they actually contain a powerful burst of light that can cause momentary blindness. Don't drop it!"
+  },
+  "890006": {
+    "lore": "An unnaturally pulsing crystal shed from the outer shell of a Revenant. Its dark surface brims with an eerie energy. Often used as a catalyst in crafting.<br><br>These crystals react most powerfully to other phantom energies on Orebus. Some researchers report hearing whispers upon pressing an ear to the crystal, but others claim to hear them entirely within their mind."
+  },
+  "890007": {
+    "lore": "A large crystal occasionally left behind by a Fire Revenant. Much too hot to handle without safety precautions, but contains a substantial amount of energy that makes it a valuable material in crafting.<br><br>Research suggests that these crystals are formed when energy solidifies within the core of a Revenant. The raging flames of a Fire Revenant dance within its glossy surface, as if it had captured a sliver of fiery hell within its spherical form."
+  },
+  "890008": {
+    "lore": "A large crystal occasionally left behind by an Ice Revenant. So cold that it causes frostbite upon prolonged skin contact. Contains a substantial amount of energy that makes it a valuable material in crafting.<br><br>Research suggests that these crystals are formed when energy solidifies within the core of a Revenant. Its smooth surface is misted over from the ice within. Might this be the frozen heart of a Revenant, if they truly possess souls?"
+  },
+  "890009": {
+    "lore": "A large crystal occasionally left behind by an Earth Revenant. Surprisingly heavy one moment and lightweight the next. Contains a substantial amount of energy that makes it a valuable material in crafting.<br><br>Research suggests that these crystals are formed when energy solidifies within the core of a Revenant. Both land and earth essences swirl dizzyingly within its form. Mother Nature welcomes all creatures into her bosom, regardless of their origin."
+  },
+  "890010": {
+    "lore": "A large crystal occasionally left behind by a Thunder Revenant. Electricity leaps across its golden surface, making it a significant hazard to lab equipment. Contains a substantial amount of energy that makes it a valuable material in crafting.<br><br>Research suggests that these crystals are formed when energy solidifies within the core of a Revenant. Crackling bolts of lightning coalesce in arcing streaks within it, bringing to mind powerful storms."
+  },
+  "890011": {
+    "lore": "A large crystal occasionally left behind by a Light Revenant. Pale and gleaming, it gives off a dim light at all times, growing brighter as dawn approaches. Contains a substantial amount of energy that makes it a valuable material in crafting.<br><br>Research suggests that these crystals are formed when energy solidifies within the core of a Revenant. Light has always been associated with life, and it is little wonder its associated Revenant constantly seeks the embrace of the first sunrise."
+  },
+  "890012": {
+    "lore": "A large crystal occasionally left behind by a Dark Revenant. Dark, yet mesmerising, it seems to grow brighter as dusk approaches. Contains a substantial amount of energy that makes it a valuable material in crafting.<br><br>Research suggests that these crystals are formed when energy solidifies within the core of a Revenant. Darkness has always been associated with death and fear, as it is in the war-torn plane of Orebus, but it is not taboo to some cultures. Death, after all, is but the next stage of life."
+  },
   "890013": {
     "lore": "A long, sharp scale of unknown material, said to hail from the time of the ancients. This can be used as a component in crafting.<br><br>The researchers are divided on whether this scale is organic in origin or was deliberately crafted to look that way. Whatever it is, the beautiful patterns on its surface are mesmerizing to behold."
   },
+  "890014": {
+    "lore": "Rainbow-hued and light as a feather, the strange fabric known as \"Cloudweave\" is spun from the silk of indigenous spiders of Orebus. Though paper-thin, it is surprisingly flexible, making it a popular choice in crafting.<br><br>When harvested, the silk itself is translucent and colorless. Only when it is woven into fabric and exposed to light does it take on its signature gradient."
+  },
   "890015": {
     "lore": "Fine, metallic ash from the sand-blasted wastes of Orebus. Their unique composition makes it an interesting choice as a component in crafting.<br><br>Under certain conditions, these ashes are sometimes found to generate a weak electromagnetic field of their own. Superstitious researchers of the Orebus Special Inquiry claim these ashes to be the remains of those who once called Orebus home."
+  },
+  "890016": {
+    "lore": "Flickering golden fire that is said to burn not flesh, but the very life force of anything it touches. A volatile and dangerous crafting material. "
+  },
+  "890017": {
+    "lore": "An eerily beautiful flower created by harnessing Revenant essences to mimic natural life. Useful as a crafting material due to its alchemical nature. "
+  },
+  "890018": {
+    "lore": "Supercharged streaks of blue and white energy dance across this rock fragment. Highly resilient, this material has many applications in crafting. "
+  },
+  "890019": {
+    "lore": "The combined essences of all elemental Revenants, pulsing in a comforting, harmonious vibe, are concentrated within this palm-sized orb. Extremely rare and sought-after as a crafting material due to its wondrous properties. "
+  },
+  "890020": {
+    "lore": "At first glance, this seems like a reject from Giselle's \"Saturnine\" collection of Lead Feathers, but upon closer inspection reveals an alien texture and gloss atypical of any feather on Grand Gaia. A precious material said to be used as a component for Karcosan hair accessories.<br><br>As far as anyone can tell, Karcosa does not exist within Grand Gaia. Giselle has been on holiday to the strange land of Karcosa several times, and this is one of the keepsakes from her trips."
+  },
+  "890021": {
+    "lore": "This dull silver feather contains traces of lead, which might explain its oxymoronic name. Has limited application as a material for crafting, as it may result in indirect poisoning.<br><br>Giselle has a collection of these, which she proudly shows off in an album titled \"Saturnine.\" Where she even procures these, though, is yet another of her well-kept mysteries."
   },
   "899998": {
     "lore": "The Omni Evolutions are just around the corner! But why not make things more interesting by facing a real challenge? Equip this Sphere and find out who is the Bravest of them all! Be a man!"
