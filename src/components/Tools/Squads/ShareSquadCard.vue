@@ -103,6 +103,7 @@
 <script>
 import { spCodeToIndex, getSkillDescription, getSpCost } from '@/modules/core/units';
 import { squadToShorthand } from '@/modules/core/squads';
+import { squadUnitActions } from '@/modules/constants';
 import CardTabsContainer from '@/components/CardTabsContainer';
 import TextViewer from '@/components/TextViewer';
 import OneLineTextViewer from '@/components/OneLineTextViewer';
@@ -275,10 +276,11 @@ export default {
       return sections.join('\n');
     },
     getBbTypeText (unit = {}) {
+      // default to SBB or below (depending on if the unit has it)
       const bbType = unit.bbType ||
-        (this.getUnit(unit.id).sbb && 'sbb') ||
-        (this.getUnit(unit.id).bb && 'bb') ||
-        ('natk');
+        (this.getUnit(unit.id).sbb && squadUnitActions.SBB) ||
+        (this.getUnit(unit.id).bb && squadUnitActions.BB) ||
+        (squadUnitActions.ATK);
       return bbType.toUpperCase();
     },
     getSpCost (unit = {}) {

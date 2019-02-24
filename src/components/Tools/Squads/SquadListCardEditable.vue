@@ -1,17 +1,15 @@
 <template>
-  <v-card class="squad-list--entry-card">
+  <v-card class="squad-card--editable">
     <v-layout row class="pa-2">
       <v-flex>
-        <h1 class="title">
-          {{ squad.name }}
-        </h1>
+        <v-text-field v-model="squad.name" label="Squad Name"/>
       </v-flex>
-      <v-spacer/>
+      <!-- <v-spacer/>
       <v-flex style="flex-grow: 0;">
         <h2 class="subheading">
           {{ squadCost }} Cost
         </h2>
-      </v-flex>
+      </v-flex> -->
     </v-layout>
     <v-layout row wrap class="px-2">
       <v-flex
@@ -28,7 +26,6 @@
             <unit-thumbnail
               class="unit-thumbnail"
               :style="`border-color: ${allOrderSettings[i].border};`"
-              :isVisible="isVisible"
               :src="getImageUrls(unit.id).ills_battle"
               :rarity="getUnit(unit.id).rarity"
               :imageTitle="getUnit(unit.id).name || unit.id"
@@ -43,12 +40,7 @@
             </unit-thumbnail>
           </v-layout>
           <v-flex class="text-xs-center" v-if="allOrderSettings[i]">
-            <span
-              v-if="!isVisible"
-              class="body-1"
-              v-text="allOrderSettings[i].text"/>
             <v-chip
-              v-else
               :style="`
                 background-color: ${allOrderSettings[i].background};
                 color: ${allOrderSettings[i].foreground};
@@ -66,7 +58,6 @@
             <v-flex class="d-flex-container align-center font-weight-bold subheading">
               <span v-if="getUnit(unit.id).rarity < 8">{{ getUnit(unit.id).rarity }}</span>
               <rarity-icon
-                v-if="isVisible"
                 :class="{ 'ml-1': getUnit(unit.id).rarity !== 8, 'mr-1': true, }"
                 :rarity="getUnit(unit.id).rarity || 0"
                 :displaySize="18"/>
@@ -88,7 +79,6 @@
           <v-layout align-center>
             <v-layout style="flex-grow: 0;" align-center justify-center>
               <extra-skill-icon
-                v-if="isVisible"
                 :inactive="!unit.es"
                 :displaySize="22"
                 class="mr-1"/>
@@ -105,7 +95,6 @@
               align-center>
               <v-layout style="flex-grow: 0;" align-center justify-center>
                 <sphere-type-icon
-                  v-if="isVisible"
                   :category="getItem(sphereId)['sphere type']"
                   :displaySize="22"
                   class="mr-1"/>
@@ -117,7 +106,7 @@
           </v-layout>
           
           <!-- SP -->
-          <v-layout v-if="unit.sp && isVisible && getSpCost(unit) > 0">
+          <v-layout v-if="unit.sp && getSpCost(unit) > 0">
             <v-flex style="flex-grow: 0;" class="mr-1">
               {{ getSpCost(unit) }} SP:
             </v-flex>
@@ -226,24 +215,6 @@ export default {
       }));
     },
   },
-  data () {
-    return {
-      isVisible: false,
-    };
-  },
-  mounted () {
-    this.$emit('register', {
-      elem: this.$el,
-      squadId: this.squad.id,
-      setVisibility: (val) => {
-        // only set to true once
-        if (val) {
-          this.isVisible = true;
-          this.$emit('unregister', { squadId: this.squad.id });
-        }
-      },
-    });
-  },
   beforeDestroy () {
     this.$emit('unregister', { elem: this.$el, squadId: this.squad.id });
   },
@@ -256,7 +227,7 @@ export default {
         (unit.bbType === squadUnitActions.SBB && 'amber') ||
         (unit.bbType === squadUnitActions.BB && 'blueGrey') ||
         'grey';
-      
+
       return {
         border: colors[colorKey].base,
         background: colors[colorKey].lighten4,
@@ -299,7 +270,7 @@ export default {
 </script>
 
 <style lang="less">
-.squad-list--entry-card {
+.squad-card--editable {
   .bb-order-chip {
     justify-content: center;
     margin: auto;

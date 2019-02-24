@@ -137,10 +137,11 @@ export const squadFillerMapping = Object.freeze({
   ANY: '(Any)',
 });
 export const squadUnitActions = Object.freeze({
-  NATK: 'natk',
+  ATK: 'atk',
   BB: 'bb',
   SBB: 'sbb',
   UBB: 'ubb',
+  NONE: 'none',
 });
 
 export const effectTypes = Object.freeze({

@@ -49,10 +49,26 @@ export function generateFillerSquadUnitEntry ({
     id: isEmpty ? squadFillerMapping.EMPTY : squadFillerMapping.ANY,
     position,
     bbOrder,
+    bbType: isEmpty ? 'none' : squadUnitActions.SBB,
   });
 }
 
-export function shorthandToSquad (shorthand = '', name = 'Default Name') {
+export function generateDefaultSquad (allEmpty = false) {
+  return {
+    lead: 0,
+    friend: 3,
+    name: `Squad ${new Date().toLocaleString()}`,
+    units: new Array(6)
+      .fill(0)
+      .map((_, i) => generateFillerSquadUnitEntry({
+        isEmpty: allEmpty,
+        position: unitPositionMapping[i],
+        bbOrder: i + 1,
+      })),
+  };
+}
+
+export function shorthandToSquad (shorthand = '', name = `Squad ${new Date().toLocaleString()}`) {
   let leadIndex = 0, friendIndex = 0;
   const units = shorthand.split(',').map((entry, i) => {
     const [
