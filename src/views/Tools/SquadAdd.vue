@@ -12,18 +12,22 @@
                 <v-flex>
                   <squad-list-card-editable
                     flat
+                    @selectedindex="$ev => selectedIndex = $ev"
                     :squad="squad"
                     :getUnit="getUnit"
                     :getItem="getItem"
                     :getExtraSkill="getExtraSkill"
-                    :isLoadingInParent="isLoadingSquadData"/>
+                    :isLoadingInParent="isLoadingSquadData">
+                    <v-layout slot="after-squad">
+                      {{ selectedIndex }}
+                    </v-layout>
+                  </squad-list-card-editable>
                 </v-flex>
                 <v-flex>
                   {{ squad }}
                 </v-flex>
               </v-layout>
               <v-layout column slot="import-code">
-                <!-- TODO: add successfully parsed message -->
                 <v-flex>
                   <v-text-field v-model="inputCode"/>
                 </v-flex>
@@ -104,6 +108,7 @@ export default {
       squadItems: {},
       squadExtraSkills: {},
       isLoadingSquadData: false,
+      selectedIndex: -1,
     };
   },
   mounted () {

@@ -70,6 +70,7 @@
           >
             <template v-if="isCopyMode">
               <v-card-actions slot="card-actions">
+                <v-spacer/>
                 <v-btn flat :to="getSquadUrl(squad)">
                   <v-icon left>file_copy</v-icon>
                   Copy
