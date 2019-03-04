@@ -13,6 +13,9 @@
           <v-flex class="text-xs-center" style="flex-grow: 0;" v-else-if="isVisuallyInitializing">
             <loading-indicator :loadingMessage="multidexLoadingMessage || mainLoadingMessage"/>
           </v-flex>
+          <v-flex class="text-xs-center" style="flex-grow: 0;" v-else-if="ensuringDbSync">
+            <loading-indicator loadingMessage="Synchronizing modules from DB to page"/>
+          </v-flex>
           <v-flex class="text-xs-center" style="flex-grow: 0;" v-else>
             <loading-indicator :loadingMessage="externalLoadingMessage"/>
           </v-flex>
@@ -86,6 +89,10 @@ export default {
       type: String,
       default: '',
     },
+    ensureDbSync: {
+      type: Boolean,
+      default: false,
+    },
   },
   components: {
     LoadingIndicator,
@@ -110,7 +117,7 @@ export default {
       return loadingModule && state[loadingModule.name].isLoading;
     },
     isInternallyInitializing () {
-      return this.inInitState || this.isStateLoading || this.multidexModulesAreLoading;
+      return this.inInitState || this.isStateLoading || this.multidexModulesAreLoading || this.ensuringDbSync;
     },
     missingModuleNames () {
       return this.missingModules.map(m => {
@@ -133,6 +140,7 @@ export default {
     return {
       missingModules: [],
       checkingAvailableModules: false,
+      ensuringDbSync: false,
       modulesWithUpdates: [],
       isVisuallyInitializing: true,
     };
@@ -147,10 +155,18 @@ export default {
         const availableModules = await client.getTablesWithEntries(this.requiredModules, this.activeServer);
         this.missingModules = this.requiredModules.filter(m => !availableModules.includes(m));
         if (this.missingModules.length === 0) {
-          this.onInitializationFinish();
+          this.checkDbSync();
         }
         this.checkingAvailableModules = false;
       }
+    },
+    async checkDbSync () {
+      if (this.requiredModules.length > 0 && this.ensureDbSync) {
+        this.ensuringDbSync = true;
+        await this.updatePageDbs();
+        this.ensuringDbSync = false;
+      }
+      this.onInitializationFinish();
     },
     async downloadData (inputModules) {
       const modulesToDownload = Array.isArray(inputModules) ? inputModules : this.missingModules;
@@ -174,6 +190,12 @@ export default {
     async onInitializationFinish () {
       this.$emit('initfinished');
       await this.checkForUpdates();
+    },
+    async updatePageDbs () {
+      await this.requiredModules.reduce((acc, name) => {
+        return acc.then(() => this.$store.dispatch(`${name}/ensurePageDbSyncWithServer`))
+          .catch(this.logger.error);
+      }, Promise.resolve());
     },
   },
   beforeCreate () {

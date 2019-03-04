@@ -284,3 +284,26 @@ export function getSquadErrors (squad = {}, {
 
   return errors;
 }
+
+export function getMultidexDatabaseIdsFromSquads (squads = [generateDefaultSquad()]) {
+  const unitIds = new Set(), esIds = new Set(), itemIds = new Set();
+  const squadsToCheck = Array.isArray(squads) ? squads : [squads];
+  squadsToCheck.forEach(squad => {
+    squad.units.forEach(unit => {
+      unitIds.add(unit.id);
+      if (unit.es) {
+        esIds.add(unit.es);
+      }
+      if (unit.spheres.length > 0) {
+        unit.spheres.forEach(id => {
+          itemIds.add(id);
+        });
+      }
+    });
+  });
+  return {
+    units: Array.from(unitIds),
+    extraSkills: Array.from(esIds),
+    items: Array.from(itemIds),
+  };
+}

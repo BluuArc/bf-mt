@@ -238,7 +238,7 @@ import { unitPositionMapping, multidexModuleInfo } from '@/modules/constants';
 import { ensureContentPadding, delay } from '@/modules/utils';
 import { squadRequiredModules } from '@/router/tool-routes';
 import { Logger } from '@/modules/Logger';
-import { squadToShorthand } from '@/modules/core/squads';
+import { squadToShorthand, getMultidexDatabaseIdsFromSquads } from '@/modules/core/squads';
 import LoadingDebouncer from '@/modules/LoadingDebouncer';
 import debounce from 'lodash/debounce';
 
@@ -364,35 +364,22 @@ export default {
         this.items = this.squadDb.items;
         this.extraSkills = this.squadDb.extraSkills;
       } else {
-        const unitIds = new Set(), esIds = new Set(), itemIds = new Set();
-        this.squads.forEach(squad => {
-          squad.units.forEach(unit => {
-            unitIds.add(unit.id);
-            if (unit.es) {
-              esIds.add(unit.es);
-            }
-            if (unit.spheres.length > 0) {
-              unit.spheres.forEach(id => {
-                itemIds.add(id);
-              });
-            }
-          });
-        });
+        const databaseIds = getMultidexDatabaseIdsFromSquads(this.squads);
   
         const currentServer = this.activeServer;
         await [
           async () => this.units = await this.getUnits({
-            ids: Array.from(unitIds),
+            ids: databaseIds.units,
             server: currentServer,
             extractedFields: ['id', 'rarity', 'feskills', 'name', 'sbb', 'cost'],
           }),
           async () => this.items = await this.getItems({
-            ids: Array.from(itemIds),
+            ids: databaseIds.items,
             server: currentServer,
             extractedFields: ['name', 'sphere type'],
           }),
           async () => this.extraSkills = await this.getExtraSkills({
-            ids: Array.from(esIds),
+            ids: databaseIds.extraSkills,
             server: currentServer,
             extractedFields: ['name'],
           }),

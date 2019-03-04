@@ -1,5 +1,5 @@
 <template>
-  <v-card class="squad-card--editable">
+  <v-card class="squad-card--editable" v-bind="$attrs">
     <v-layout row class="pa-2">
       <v-flex>
         <v-text-field v-model="squad.name" label="Squad Name"/>
@@ -12,115 +12,118 @@
       </v-flex> -->
     </v-layout>
     <v-layout row wrap class="px-2">
-      <v-flex
-        v-for="(unit, i) in fullUnits"
-        :key="getUnitEntryKey(unit, i)"
-        xs12 sm6
-        class="d-flex py-1"
-        style="align-items: center; border: 1px solid var(--background-color-alt);">
-        <v-layout :style="`flex-grow: 0!important; min-width: ${thumbnailSize}px; max-width: ${thumbnailSize}px;`" column class="mx-2">
-          <v-flex text-xs-center v-if="$vuetify.breakpoint.xsOnly">
-            <span class="caption text-no-wrap">{{ unit.position }}</span>
-          </v-flex>
-          <v-layout align-content-center row>
-            <unit-thumbnail
-              class="unit-thumbnail"
-              :style="`border-color: ${allOrderSettings[i].border};`"
-              :src="getImageUrls(unit.id).ills_battle"
-              :rarity="getUnit(unit.id).rarity"
-              :imageTitle="getUnit(unit.id).name || unit.id"
-              :displayWidth="thumbnailSize" :displayHeight="thumbnailSize">
-              <template slot="after-image">
-                <text
-                  :x="0"
-                  :y="thumbnailSize * 0.75">
-                  {{ !isNaN(unit.bbOrder) ? unit.bbOrder : '-' }}
-                </text>
-              </template>
-            </unit-thumbnail>
-          </v-layout>
-          <v-flex class="text-xs-center" v-if="allOrderSettings[i]">
-            <v-chip
-              :style="`
-                background-color: ${allOrderSettings[i].background};
-                color: ${allOrderSettings[i].foreground};
-                border-color: ${allOrderSettings[i].border};
-              `"
-              class="bb-order-chip"
-              small>
-              <b>{{ allOrderSettings[i].text }}</b>
-            </v-chip>
-          </v-flex>
-        </v-layout>
-        <v-layout column style="align-self: flex-start;">
-          <!-- name and leader/friend icon -->
-          <v-layout align-center>
-            <v-flex class="d-flex-container align-center font-weight-bold subheading">
-              <span v-if="getUnit(unit.id).rarity < 8">{{ getUnit(unit.id).rarity }}</span>
-              <rarity-icon
-                :class="{ 'ml-1': getUnit(unit.id).rarity !== 8, 'mr-1': true, }"
-                :rarity="getUnit(unit.id).rarity || 0"
-                :displaySize="18"/>
-              <span>{{ getUnit(unit.id).name || unit.id }}</span>
+      <template v-if="!isLoadingInParent">
+        <v-flex
+          v-for="(unit, i) in fullUnits"
+          :key="getUnitEntryKey(unit, i)"
+          xs12 sm6
+          class="d-flex py-1"
+          style="align-items: center; border: 1px solid var(--background-color-alt);">
+          <v-layout :style="`flex-grow: 0!important; min-width: ${thumbnailSize}px; max-width: ${thumbnailSize}px;`" column class="mx-2">
+            <v-flex text-xs-center v-if="$vuetify.breakpoint.xsOnly">
+              <span class="caption text-no-wrap">{{ unit.position }}</span>
             </v-flex>
-            <v-spacer/>
-            <v-flex
-              v-if="i === squad.lead || i === squad.friend"
-              style="flex-grow: 0;">
-              <leader-icon
-                v-if="i === squad.lead"
-                :displaySize="18"/>
-              <friend-icon
-                v-else-if="i === squad.friend"
-                :displaySize="18"/>
-            </v-flex>
-          </v-layout>
-          <!-- extra skill -->
-          <v-layout align-center>
-            <v-layout style="flex-grow: 0;" align-center justify-center>
-              <extra-skill-icon
-                :inactive="!unit.es"
-                :displaySize="22"
-                class="mr-1"/>
+            <v-layout align-content-center row>
+              <unit-thumbnail
+                class="unit-thumbnail"
+                :style="`border-color: ${allOrderSettings[i].border};`"
+                :src="getImageUrls(unit.id).ills_battle"
+                :rarity="getUnit(unit.id).rarity"
+                :imageTitle="getUnit(unit.id).name || unit.id"
+                :displayWidth="thumbnailSize" :displayHeight="thumbnailSize">
+                <template slot="after-image">
+                  <text
+                    :x="0"
+                    :y="thumbnailSize * 0.75">
+                    {{ !isNaN(unit.bbOrder) ? unit.bbOrder : '-' }}
+                  </text>
+                </template>
+              </unit-thumbnail>
             </v-layout>
-            <v-flex>
-              {{ getExtraSkill(unit.es).name || 'No Extra Skill' }}
+            <v-flex class="text-xs-center" v-if="allOrderSettings[i]">
+              <v-chip
+                :style="`
+                  background-color: ${allOrderSettings[i].background};
+                  color: ${allOrderSettings[i].foreground};
+                  border-color: ${allOrderSettings[i].border};
+                `"
+                class="bb-order-chip"
+                small>
+                <b>{{ allOrderSettings[i].text }}</b>
+              </v-chip>
             </v-flex>
           </v-layout>
-          <!-- spheres -->
-          <v-layout row wrap align-center>
-            <v-layout
-              v-for="(sphereId, i) in (unit.spheres.length > 0 ? unit.spheres : ['No Sphere'])"
-              :key="`${sphereId}-${i}`"
-              align-center>
+          <v-layout column style="align-self: flex-start;">
+            <!-- name and leader/friend icon -->
+            <v-layout align-center>
+              <v-flex class="d-flex-container align-center font-weight-bold subheading">
+                <span v-if="getUnit(unit.id).rarity < 8">{{ getUnit(unit.id).rarity }}</span>
+                <rarity-icon
+                  :class="{ 'ml-1': getUnit(unit.id).rarity !== 8, 'mr-1': true, }"
+                  :rarity="getUnit(unit.id).rarity || 0"
+                  :displaySize="18"/>
+                <span>{{ getUnit(unit.id).name || unit.id }}</span>
+              </v-flex>
+              <v-spacer/>
+              <v-flex
+                v-if="i === squad.lead || i === squad.friend"
+                style="flex-grow: 0;">
+                <leader-icon
+                  v-if="i === squad.lead"
+                  :displaySize="18"/>
+                <friend-icon
+                  v-else-if="i === squad.friend"
+                  :displaySize="18"/>
+              </v-flex>
+            </v-layout>
+            <!-- extra skill -->
+            <v-layout align-center>
               <v-layout style="flex-grow: 0;" align-center justify-center>
-                <sphere-type-icon
-                  :category="getItem(sphereId)['sphere type']"
+                <extra-skill-icon
+                  :inactive="!unit.es"
                   :displaySize="22"
                   class="mr-1"/>
               </v-layout>
               <v-flex>
-                {{ getItem(sphereId).name || sphereId }}
+                {{ getExtraSkill(unit.es).name || 'No Extra Skill' }}
+              </v-flex>
+            </v-layout>
+            <!-- spheres -->
+            <v-layout row wrap align-center>
+              <v-layout
+                v-for="(sphereId, i) in (unit.spheres.length > 0 ? unit.spheres : ['No Sphere'])"
+                :key="`${sphereId}-${i}`"
+                align-center>
+                <v-layout style="flex-grow: 0;" align-center justify-center>
+                  <sphere-type-icon
+                    :category="getItem(sphereId)['sphere type']"
+                    :displaySize="22"
+                    class="mr-1"/>
+                </v-layout>
+                <v-flex>
+                  {{ getItem(sphereId).name || sphereId }}
+                </v-flex>
+              </v-layout>
+            </v-layout>
+            
+            <!-- SP -->
+            <v-layout v-if="unit.sp && getSpCost(unit) > 0">
+              <v-flex style="flex-grow: 0;" class="mr-1">
+                {{ getSpCost(unit) }} SP:
+              </v-flex>
+              <v-flex
+                v-for="category in getSpCategories(unit)"
+                :key="`${category}-${unit.id}-${i}`"
+                style="flex-grow: 0;">
+                <sp-icon
+                  :category="category"
+                  :displaySize="22"/>
               </v-flex>
             </v-layout>
           </v-layout>
-          
-          <!-- SP -->
-          <v-layout v-if="unit.sp && getSpCost(unit) > 0">
-            <v-flex style="flex-grow: 0;" class="mr-1">
-              {{ getSpCost(unit) }} SP:
-            </v-flex>
-            <v-flex
-              v-for="category in getSpCategories(unit)"
-              :key="`${category}-${unit.id}-${i}`"
-              style="flex-grow: 0;">
-              <sp-icon
-                :category="category"
-                :displaySize="22"/>
-            </v-flex>
-          </v-layout>
-        </v-layout>
-      </v-flex>
+        </v-flex>
+      </template>
+      <loading-indicator v-else loadingMessage="Loading squad data"/>
     </v-layout>
     <v-divider class="mt-2"/>
     <slot name="card-actions">
@@ -148,6 +151,7 @@ import LeaderIcon from '@/components/Multidex/MiniLeaderIcon';
 import FriendIcon from '@/components/Multidex/MiniFriendIcon';
 import ExtraSkillIcon from '@/components/Multidex/ExtraSkillIcon';
 import SpIcon from '@/components/Multidex/Units/SpIcon';
+import LoadingIndicator from '@/components/LoadingIndicator';
 
 export default {
   components: {
@@ -158,11 +162,16 @@ export default {
     FriendIcon,
     ExtraSkillIcon,
     SpIcon,
+    LoadingIndicator,
   },
   props: {
     squad: {
       type: Object,
       required: true,
+    },
+    isLoadingInParent: {
+      type: Boolean,
+      default: false,
     },
     getUnit: {
       type: Function,
