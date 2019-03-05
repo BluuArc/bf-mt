@@ -1,5 +1,5 @@
 <template>
-  <v-flex class="squad-unit-entry" v-bind="$attrs">
+  <v-flex class="squad-unit-entry" v-bind="$attrs" v-on="$listeners">
     <slot name="before-content"/>
     <div style="display: flex;">
       <v-layout
