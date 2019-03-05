@@ -107,24 +107,14 @@ import { squadUnitActions } from '@/modules/constants';
 import CardTabsContainer from '@/components/CardTabsContainer';
 import TextViewer from '@/components/TextViewer';
 import OneLineTextViewer from '@/components/OneLineTextViewer';
+import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 
 export default {
+  mixins: [GettersMixin],
   props: {
     squad: {
       type: Object,
       required: true,
-    },
-    getUnit: {
-      type: Function,
-      default: () => ({}),
-    },
-    getItem: {
-      type: Function,
-      default: () => ({}),
-    },
-    getExtraSkill: {
-      type: Function,
-      default: () => ({}),
     },
   },
   components: {

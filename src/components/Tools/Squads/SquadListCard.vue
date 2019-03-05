@@ -45,9 +45,12 @@
 
 <script>
 import { unitPositionMapping } from '@/modules/constants';
+import { generateFillerSquadUnitEntry } from '@/modules/core/squads';
 import UnitEntry from '@/components/Tools/Squads/SquadUnitEntry';
+import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 
 export default {
+  mixins: [GettersMixin],
   components: {
     UnitEntry,
   },
@@ -55,18 +58,6 @@ export default {
     squad: {
       type: Object,
       required: true,
-    },
-    getUnit: {
-      type: Function,
-      default: () => ({}),
-    },
-    getItem: {
-      type: Function,
-      default: () => ({}),
-    },
-    getExtraSkill: {
-      type: Function,
-      default: () => ({}),
     },
     to: {
       type: String,
@@ -84,7 +75,7 @@ export default {
       return unitPositionMapping.map(position => {
         let unit = this.squad.units.find(unit => unit.position === position);
         if (!unit) { // empty position, so fill it with empty data
-          unit = { position, id: '(Empty)' };
+          unit = generateFillerSquadUnitEntry({ isEmpty: true, bbOrder: null, position });
         }
 
         return unit;

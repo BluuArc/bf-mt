@@ -49,7 +49,7 @@ export function generateFillerSquadUnitEntry ({
     id: isEmpty ? squadFillerMapping.EMPTY : squadFillerMapping.ANY,
     position,
     bbOrder,
-    bbType: isEmpty ? 'none' : squadUnitActions.SBB,
+    bbType: isEmpty ? squadUnitActions.NONE : squadUnitActions.SBB,
   });
 }
 

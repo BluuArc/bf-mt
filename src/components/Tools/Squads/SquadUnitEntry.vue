@@ -131,8 +131,10 @@ import LeaderIcon from '@/components/Multidex/MiniLeaderIcon';
 import FriendIcon from '@/components/Multidex/MiniFriendIcon';
 import ExtraSkillIcon from '@/components/Multidex/ExtraSkillIcon';
 import SpIcon from '@/components/Multidex/Units/SpIcon';
+import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 
 export default {
+  mixins: [GettersMixin],
   components: {
     UnitThumbnail,
     RarityIcon,
@@ -146,18 +148,6 @@ export default {
     unit: {
       type: Object,
       required: true,
-    },
-    getUnit: {
-      type: Function,
-      default: () => ({}),
-    },
-    getItem: {
-      type: Function,
-      default: () => ({}),
-    },
-    getExtraSkill: {
-      type: Function,
-      default: () => ({}),
     },
     isLead: {
       type: Boolean,

@@ -27,12 +27,15 @@
           :isLead="i === squad.lead"
           :isFriend="i === squad.friend"
           @mouseover="highlightedIndex = i;"
+          @click="() => { selectedIndex = (selectedIndex !== i ? i : -1) }"
           class="d-flex py-1"
-          style="align-items: center; border: 1px solid var(--background-color-alt); position: relative;">
+          :style="`
+            align-items: center;
+            border: 1px solid ${selectedIndex === i ? 'yellow' : 'var(--background-color-alt)'};
+            position: relative;`">
           <div
             slot="before-content"
             v-show="highlightedIndex === i"
-            @click="$emit('selectedindex', i)"
             :style="`
               position: absolute;
               width: 100%;
@@ -53,33 +56,74 @@
             </v-container>
           </div>
         </unit-entry>
-        <slot name="after-squad"/>
+        <unit-entry-editor
+          v-if="squad.units[selectedIndex]"
+          class="pa-2"
+          :squad="squad"
+          :getUnit="getUnit"
+          :getItem="getItem"
+          :getExtraSkill="getExtraSkill"
+          :selectedIndex="selectedIndex"/>
+        <!-- <v-layout row wrap class="pa-2" v-if="squad.units[selectedIndex]">
+          <v-flex xs12>
+            {{ squad.units[selectedIndex] }}
+          </v-flex>
+          <v-flex xs12>
+            Unit selector
+          </v-flex>
+          <v-flex xs12 sm4>
+            Position Selector
+          </v-flex>
+          <v-flex xs6 sm4>
+            BB Order Selector
+          </v-flex>
+          <v-flex xs6 sm4>
+            BB Type Selector
+          </v-flex>
+          <v-flex xs12>
+            Extra Skill selector
+          </v-flex>
+          <v-flex xs12 sm6>
+            Sphere 1 Selector
+          </v-flex>
+          <v-flex xs12 sm6>
+            Sphere 2 Selector
+          </v-flex>
+          <v-flex xs12>
+            SP Builder
+          </v-flex>
+        </v-layout> -->
       </template>
       <loading-indicator v-else loadingMessage="Loading squad data"/>
     </v-layout>
     <v-divider class="mt-2"/>
     <slot name="card-actions">
-      <v-card-actions style="justify-content: space-between;">
+      <!-- <v-card-actions style="justify-content: space-between;">
         <v-btn flat v-if="to" :to="to">View</v-btn>
         <v-btn flat v-else @click="$emit('view')">View</v-btn>
         <v-btn flat @click="$emit('share')">
           <v-icon left>share</v-icon>
           Share
         </v-btn>
-      </v-card-actions>
+      </v-card-actions> -->
     </slot>
   </v-card>
 </template>
 
 <script>
 import { unitPositionMapping } from '@/modules/constants';
+import { generateFillerSquadUnitEntry } from '@/modules/core/squads';
 import UnitEntry from '@/components/Tools/Squads/SquadUnitEntry';
+import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 import LoadingIndicator from '@/components/LoadingIndicator';
+import UnitEntryEditor from '@/components/Tools/Squads/UnitEntryEditor';
 
 export default {
+  mixins: [GettersMixin],
   components: {
     UnitEntry,
     LoadingIndicator,
+    UnitEntryEditor,
   },
   props: {
     squad: {
@@ -89,22 +133,6 @@ export default {
     isLoadingInParent: {
       type: Boolean,
       default: false,
-    },
-    getUnit: {
-      type: Function,
-      default: () => ({}),
-    },
-    getItem: {
-      type: Function,
-      default: () => ({}),
-    },
-    getExtraSkill: {
-      type: Function,
-      default: () => ({}),
-    },
-    to: {
-      type: String,
-      default: '',
     },
   },
   computed: {
@@ -118,9 +146,8 @@ export default {
       return unitPositionMapping.map(position => {
         let unit = this.squad.units.find(unit => unit.position === position);
         if (!unit) { // empty position, so fill it with empty data
-          unit = { position, id: '(Empty)' };
+          unit = generateFillerSquadUnitEntry({ isEmpty: true, bbOrder: null, position });
         }
-
         return unit;
       });
     },
@@ -128,6 +155,7 @@ export default {
   data () {
     return {
       highlightedIndex: -1,
+      selectedIndex: -1,
     };
   },
   methods: {

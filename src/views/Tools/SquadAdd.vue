@@ -17,11 +17,7 @@
                     :getUnit="getUnit"
                     :getItem="getItem"
                     :getExtraSkill="getExtraSkill"
-                    :isLoadingInParent="isLoadingSquadData">
-                    <v-layout slot="after-squad">
-                      {{ selectedIndex }}
-                    </v-layout>
-                  </squad-list-card-editable>
+                    :isLoadingInParent="isLoadingSquadData"/>
                 </v-flex>
                 <v-flex>
                   {{ squad }}
