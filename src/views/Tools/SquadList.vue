@@ -159,28 +159,11 @@
             <span>Copy Existing Squad</span>
           </v-tooltip>
         </v-speed-dial>
-        <v-dialog v-if="hasUpdates" v-model="showUpdateDialog" max-width="500px">
-          <v-btn
-            fab
-            fixed
-            left bottom
-            color="primary"
-            small
-            slot="activator">
-            <v-icon>info</v-icon>
-          </v-btn>
-          <v-card>
-            <v-card-text>
-              <h1 class="subheading">
-                Updates are available for this server ({{ activeServer.toUpperCase() }}). ({{ modulesWithUpdates.map(m => getModuleName(m)).join(', ') }})
-              </h1>
-            </v-card-text>
-            <v-card-actions>
-              <v-btn flat color="primary" @click="() => downloadData(modulesWithUpdates)">Download Updates</v-btn>
-              <v-btn color="primary" flat @click.stop="showUpdateDialog = false">Close</v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-dialog>
+        <module-update-dialog
+          v-if="hasUpdates"
+          v-model="showUpdateDialog"
+          :modulesWithUpdates="modulesWithUpdates"
+          :downloadData="downloadData"/>
         <v-dialog
           v-model="showCopyModal"
           lazy
@@ -232,16 +215,17 @@
 
 <script>
 import { mapActions, mapState } from 'vuex';
-import SquadListCard from '@/components/Tools/Squads/SquadListCard';
-import ShareSquadCard from '@/components/Tools/Squads/ShareSquadCard';
-import ModuleChecker from '@/components/ModuleChecker';
 import { unitPositionMapping, multidexModuleInfo } from '@/modules/constants';
 import { ensureContentPadding, delay } from '@/modules/utils';
 import { squadRequiredModules } from '@/router/tool-routes';
 import { Logger } from '@/modules/Logger';
 import { squadToShorthand, getMultidexDatabaseIdsFromSquads } from '@/modules/core/squads';
-import LoadingDebouncer from '@/modules/LoadingDebouncer';
 import debounce from 'lodash/debounce';
+import LoadingDebouncer from '@/modules/LoadingDebouncer';
+import SquadListCard from '@/components/Tools/Squads/SquadListCard';
+import ShareSquadCard from '@/components/Tools/Squads/ShareSquadCard';
+import ModuleChecker from '@/components/ModuleChecker';
+import ModuleUpdateDialog from '@/components/ModuleUpdateDialog';
 
 const logger = new Logger({ prefix: '[SquadList]' });
 let loadingDebouncer;
@@ -261,6 +245,7 @@ export default {
     SquadListCard,
     ShareSquadCard,
     ModuleChecker,
+    ModuleUpdateDialog,
   },
   computed: {
     ...mapState('settings', ['activeServer', 'lightMode']),

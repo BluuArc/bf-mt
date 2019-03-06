@@ -147,10 +147,10 @@ export default {
     };
   },
   mounted () {
-    // delay showing any loading messages for 50ms
+    // delay showing any loading messages to prevent brief flash of message
     setTimeout(() => {
       this.isPostMount = true;
-    }, 50);
+    }, 25);
   },
   methods: {
     updateVisuallyInitializingFlag (valueGetter, immediatelySet) {
