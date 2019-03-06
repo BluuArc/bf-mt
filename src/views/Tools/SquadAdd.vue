@@ -1,8 +1,7 @@
 <template>
   <module-checker
     :requiredModules="requiredModules"
-    :ensureDbSync="true"
-    externalLoadingMessage="Fetching squad information...">
+    :ensureDbSync="true">
     <v-container>
       <v-layout column>
         <v-flex>

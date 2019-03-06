@@ -134,7 +134,7 @@ export class ClientMultidexApi extends ClientTableApi {
 
     if (nonCachedTables.length > 0) {
       const results = await this.request('getTablesWithEntries', { tables: nonCachedTables, server });
-      tables.forEach(table => {
+      nonCachedTables.forEach(table => {
         modulePresenceCache[`${server}:${table}`] = results.includes(table);
       });
     }

@@ -2,11 +2,11 @@
   <div style="height: 100%;">
     <v-slide-y-transition mode="out-in">
       <v-container
-        v-if="isVisuallyInitializing || checkingAvailableModules || isExternallyLoading"
+        v-if="isVisuallyInitializing || checkingAvailableModules || isExternallyLoading || ensuringDbSync"
         key="loadingMessage"
         fill-height
         justify-center>
-        <v-layout column align-center justify-center>
+        <v-layout column align-center justify-center v-if="isPostMount">
           <v-flex class="text-xs-center" style="flex-grow: 0;" v-if="checkingAvailableModules">
             <loading-indicator loadingMessage="Checking multidex module availability..."/>
           </v-flex>
@@ -14,7 +14,7 @@
             <loading-indicator :loadingMessage="multidexLoadingMessage || mainLoadingMessage"/>
           </v-flex>
           <v-flex class="text-xs-center" style="flex-grow: 0;" v-else-if="ensuringDbSync">
-            <loading-indicator loadingMessage="Synchronizing modules from DB to page"/>
+            <loading-indicator :loadingMessage="multidexLoadingMessage || 'Synchronizing modules from DB to page'"/>
           </v-flex>
           <v-flex class="text-xs-center" style="flex-grow: 0;" v-else>
             <loading-indicator :loadingMessage="externalLoadingMessage"/>
@@ -143,7 +143,14 @@ export default {
       ensuringDbSync: false,
       modulesWithUpdates: [],
       isVisuallyInitializing: true,
+      isPostMount: false,
     };
+  },
+  mounted () {
+    // delay showing any loading messages for 50ms
+    setTimeout(() => {
+      this.isPostMount = true;
+    }, 50);
   },
   methods: {
     updateVisuallyInitializingFlag (valueGetter, immediatelySet) {
@@ -193,7 +200,8 @@ export default {
     },
     async updatePageDbs () {
       await this.requiredModules.reduce((acc, name) => {
-        return acc.then(() => this.$store.dispatch(`${name}/ensurePageDbSyncWithServer`))
+        return acc
+          .then(() => this.$store.dispatch(`${name}/ensurePageDbSyncWithServer`))
           .catch(this.logger.error);
       }, Promise.resolve());
     },
