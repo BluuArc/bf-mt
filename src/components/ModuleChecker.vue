@@ -52,6 +52,7 @@
           :downloadData="downloadData"
           :hasUpdates="hasUpdates"
           :modulesWithUpdates="modulesWithUpdates"
+          :switchServer="switchServer"
         >
           All modules loaded
         </slot>
@@ -63,7 +64,7 @@
 <script>
 import { mapState } from 'vuex';
 import { makeMultidexTableInstance } from '@/modules/BfmtDatabase/client';
-import { multidexModuleInfo } from '@/modules/constants';
+import { multidexModuleInfo, servers } from '@/modules/constants';
 import { Logger } from '@/modules/Logger';
 import LoadingDebouncer from '@/modules/LoadingDebouncer';
 import LoadingIndicator from '@/components/LoadingIndicator';
@@ -117,7 +118,11 @@ export default {
       return loadingModule && state[loadingModule.name].isLoading;
     },
     isInternallyInitializing () {
-      return this.inInitState || this.isStateLoading || this.multidexModulesAreLoading || this.ensuringDbSync;
+      return this.inInitState ||
+        this.isStateLoading ||
+        this.multidexModulesAreLoading ||
+        this.ensuringDbSync ||
+        this.isSwitchingServers;
     },
     missingModuleNames () {
       return this.missingModules.map(m => {
@@ -141,6 +146,7 @@ export default {
       missingModules: [],
       checkingAvailableModules: false,
       ensuringDbSync: false,
+      isSwitchingServers: false,
       modulesWithUpdates: [],
       isVisuallyInitializing: true,
       isPostMount: false,
@@ -201,9 +207,26 @@ export default {
     async updatePageDbs () {
       await this.requiredModules.reduce((acc, name) => {
         return acc
-          .then(() => this.$store.dispatch(`${name}/ensurePageDbSyncWithServer`))
+          .then(() => this.$store.dispatch(`${name}/ensurePageDbSyncWithServer`, this.activeServer))
           .catch(this.logger.error);
       }, Promise.resolve());
+    },
+    async switchServer (server) {
+      let newServer = server;
+      if (!servers.includes(server)) {
+        this.logger.warn(`unknown input server [${server}]. Auto rerouting to last known valid server`, this.activeServer);
+        newServer = this.activeServer;
+      }
+
+      try {
+        this.isSwitchingServers = true;
+        await this.$nextTick();
+        await this.$store.dispatch('setActiveServer', newServer);
+      } catch (err) {
+        this.logger.error(err);
+      } finally {
+        this.isSwitchingServers = false;
+      }
     },
   },
   beforeCreate () {

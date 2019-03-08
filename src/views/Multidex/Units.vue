@@ -5,7 +5,8 @@
     @initfinished="initializationFinished = true">
     <multidex-page-base
       v-if="initializationFinished"
-      slot-scope="{ modulesWithUpdates, hasUpdates, downloadData }"
+      slot-scope="{ modulesWithUpdates, hasUpdates, downloadData, switchServer }"
+      :switchServer="switchServer"
       :modulesWithUpdates="modulesWithUpdates"
       :downloadData="downloadData"
       :hasUpdates="hasUpdates"

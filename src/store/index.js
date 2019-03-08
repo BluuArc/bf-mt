@@ -106,6 +106,8 @@ export default new Vuex.Store({
         commit(`${name}/setLoadState`, true);
       });
 
+      commit('setLoadingState', true);
+      commit('setLoadingMessage', `Switching active server to ${server}`);
       await delay(0);
       for (const m of modules.filter(m => m !== 'github')) {
         try {
@@ -118,6 +120,8 @@ export default new Vuex.Store({
           }
         }
       }
+      commit('setLoadingMessage', '');
+      commit('setLoadingState', false);
     },
     async fetchUpdateTimes ({ commit }, forceRefresh) {
       const updateTimes = await getUpdateTimes(forceRefresh);

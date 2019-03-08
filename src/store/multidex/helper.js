@@ -157,7 +157,10 @@ export const createActions = (worker, downloadWorker, logger, dbEntryName = 'uni
       commit('setActiveServer', { server, commitData: false, needsReload: true });
       commit('setLoadState', false);
     },
-    async ensurePageDbSyncWithServer ({ commit, dispatch, state }) {
+    async ensurePageDbSyncWithServer ({ commit, dispatch, state }, server) {
+      if (server !== undefined && state.activeServer !== server) {
+        await dispatch('setActiveServer', server);
+      }
       if (state.pageDb[state.activeServerSymbol] !== state.activeServer) {
         commit('setLoadState', { loadState: true, message: 'Getting data for active server' });
         const data = await dispatch('getMiniDb', state.activeServer);

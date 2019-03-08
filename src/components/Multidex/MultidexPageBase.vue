@@ -186,22 +186,95 @@
       </div>
     </v-bottom-nav>
 
-    <v-layout>
-      Ready {{ mainModuleState }} {{ Object.entries(mainModuleActions).map(([key, value]) => [key, typeof value]) }}
+    <v-layout row>
+      <result-container
+        class="pa-0"
+        :dataIsLoading="isVisuallyLoadingFromOptions"
+        :loadingMessage="`${loadingSorts ? 'Sorting' : 'Loading'} data...`"
+        :requiredModules="[]"
+        :stateInfo="{}"
+        :actionInfo="{}"
+        :maxResults="mainModuleState.numEntries[activeServer]"
+        :numResults="allSortedEntries.length"
+        :logger="logger">
+        <slot name="results" :logger="logger" :keys="entriesToShow" :getMultidexPathTo="(key) => getMultidexPathTo(key, activeServer).resolved.fullPath">
+          <v-layout row wrap>
+            <v-flex
+              v-for="key in entriesToShow"
+              :key="key"
+              xs12 sm6 md4 xl3>
+              <base-entry-card :to="getMultidexPathTo(key, activeServer).resolved.fullPath" :entry="getEntryById(key)">
+                <v-card-text>
+                  {{ (getEntryById(key) && (getEntryById(key).name || getEntryById(key).description)) || key }}
+                </v-card-text>
+              </base-entry-card>
+            </v-flex>
+          </v-layout>
+        </slot>
+      </result-container>
     </v-layout>
-    <v-layout>
-      <module-update-dialog
-        v-if="hasUpdates"
-        :modulesWithUpdates="modulesWithUpdates"
-        :downloadData="downloadData">
-        <v-btn
-          slot="activator"
-          color="primary"
-          small>
-          <v-icon>info</v-icon>
-        </v-btn>
-      </module-update-dialog>
-    </v-layout>
+
+    <v-dialog
+      v-model="showEntryDialog"
+      fullscreen
+      hide-overlay
+      lazy
+      transition="dialog-bottom-transition"
+      class="entry-dialog">
+      <v-card>
+        <v-toolbar fixed class="entry-dialog-toolbar">
+          <v-btn icon @click="closeDialog">
+            <v-icon>close</v-icon>
+          </v-btn>
+          <v-toolbar-title>
+            <slot name="dialog-toolbar-title" :viewId="viewId" :hasViewId="hasViewId" :entry="getEntryById(viewId)">
+              View {{ mainModule.fullName }} Entry
+            </slot>
+          </v-toolbar-title>
+        </v-toolbar>
+        <v-card-text class="pl-0 pr-0 entry-dialog-content" v-if="!!viewId">
+          <template v-if="!hasViewId">
+            <v-container>
+              <v-layout row>
+                <v-flex class="text-xs-center">
+                  <h2 class="subheading">
+                    Entry with ID {{ viewId }} not found in current server ({{ activeServer.toUpperCase() }}). Would you like to try using a different server?
+                  </h2>
+                </v-flex>
+              </v-layout>
+              <v-layout row>
+                <v-flex
+                  v-for="(server, i) in servers"
+                  :key="i"
+                  xs12 sm4
+                  class="text-xs-center">
+                  <v-btn
+                    large
+                    :block="$vuetify.breakpoint.xsOnly"
+                    :disabled="server === activeServer"
+                    v-text="server"
+                    :to="getMultidexPathTo(viewId, server).resolved.fullPath"/>
+                </v-flex>
+              </v-layout>
+              <v-layout row v-if="hasUpdates">
+                <v-flex class="text-xs-center pt-4">
+                  <h2 class="subheading">
+                    Downloading available updates for this server may give you this missing entry. ({{ modulesWithUpdates.map(m => getModuleName(m)).join(', ') }})
+                  </h2>
+                  <v-btn large @click="() => downloadData(modulesWithUpdates)">Update Data</v-btn>
+                </v-flex>
+              </v-layout>
+            </v-container>
+          </template>
+          <template v-else>
+            <slot name="entry-dialog-content" :viewId="viewId" :logger="logger">
+              <p>Put your dialog content here</p>
+              {{ getEntryById(viewId) }}
+            </slot>
+          </template>
+        </v-card-text>
+      </v-card>
+    </v-dialog>
   </v-container>
 </template>
 
@@ -302,6 +375,9 @@ export default {
       default: false,
     },
     onChangeButtonClick: {
+      type: Function,
+    },
+    switchServer: {
       type: Function,
     },
   },
@@ -471,7 +547,7 @@ export default {
         });
       } else if (this.inputServer !== this.activeServer) {
         try {
-          await this.setActiveServer(this.inputServer);
+          await this.switchServer(this.inputServer);
         } catch (err) {
           logger.error(err);
         }
@@ -630,6 +706,10 @@ export default {
     toggleActiveSelector (selectorName) {
       this.activeSelector = (this.activeSelector === selectorName) ? '' : selectorName;
     },
+    getModuleName (internalName) {
+      const associatedModule = multidexModuleInfo.find(m => m.name === internalName);
+      return associatedModule ? associatedModule.fullName : internalName;
+    },
   },
   watch: {
     isInternallyLoadingFromOptions () {
@@ -673,6 +753,13 @@ export default {
     },
     activeServer () {
       this.setShowEntryDialog();
+    },
+    async inputServer (newValue) {
+      if (!!newValue && newValue !== this.activeServer) {
+        this.showEntryDialog = false;
+        await this.$nextTick();
+        await this.setServerBasedOnInputServer();
+      }
     },
     inputFilters (newValue, oldValue) {
       const hasChanged = filterHelper.optionsToString(newValue) !== filterHelper.optionsToString(oldValue);
