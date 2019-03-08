@@ -3,7 +3,7 @@
     :value="value"
     @input="($val) => $emit('input', $val)"
     max-width="500px">
-    <template slot="activator">
+    <template slot="activator" v-if="useActivator">
       <slot name="activator">
         <v-btn
           fab
@@ -45,6 +45,10 @@ export default {
     downloadData: {
       type: Function,
       required: true,
+    },
+    useActivator: {
+      type: Boolean,
+      default: true,
     },
   },
   computed: {

@@ -1,6 +1,194 @@
 <template>
-  <v-container>
-    Ready {{ mainModuleState }} {{ Object.entries(mainModuleActions).map(([key, value]) => [key, typeof value]) }}
+  <v-container grid-list-sm class="multidex-page">
+    <proc-selector
+      v-if="filterTypes.includes('procs')"
+      :showSelector="activeSelector === 'procs'"
+      @toggleview="($ev) => toggleActiveSelector($ev ? 'procs' : '')"
+      :isUnit="isUnit"
+      v-model="filterOptions"
+      :filterHelper="filterHelper"
+    />
+    <passive-selector
+      v-if="filterTypes.includes('passives')"
+      :showSelector="activeSelector === 'passives'"
+      @toggleview="($ev) => toggleActiveSelector($ev ? 'passives' : '')"
+      :isUnit="isUnit"
+      v-model="filterOptions"
+      :filterHelper="filterHelper"
+    />
+    <lad-selector
+      v-if="missionLocationTypes.some(type => filterTypes.includes(type))"
+      :showSelector="activeSelector === 'lad'"
+      @toggleview="($ev) => toggleActiveSelector($ev ? 'lad' : '')"
+      v-model="filterOptions"
+    />
+    <filter-options-sidebar
+      v-if="filterTypes.length > 0"
+      v-model="filterOptions"
+      :requiredFilters="filterTypes"
+      :disableFilters="isVisuallyLoadingFromOptions"
+      :showFilterSheet="showFilterSheet"
+      @togglesheet="showFilterSheet = $event"
+      :minRarity="minRarity"
+      :maxRarity="maxRarity"
+      :filterHelper="filterHelper"
+      :otherServers="mainModuleState.otherServers"
+      :isUnit="isUnit"
+      @toggleprocselector="($ev) => toggleActiveSelector($ev ? 'procs' : '')"
+      @togglepassiveselector="($ev) => toggleActiveSelector($ev ? 'passives' : '')"
+      @toggleladselector="($ev) => toggleActiveSelector($ev ? 'lad' : '')"
+    />
+    <v-layout row>
+      <v-flex>
+        <v-card raised>
+          <v-container fluid>
+            <v-layout row>
+              <v-flex :xs8="!hasUpdates" :xs6="hasUpdates" :sm7="hasUpdates">
+                <v-text-field v-model="filterOptions.name" clearable label="Search"/>
+              </v-flex>
+              <v-flex xs4 class="text-xs-center d-align-self-center">
+                <span v-text="searchResultCountText"/>
+              </v-flex>
+              <v-flex xs2 sm1 v-if="hasUpdates" class="text-xs-center">
+                <v-tooltip left v-model="showUpdateTooltip" v-resize="onResize">
+                  <v-btn flat icon color="info" slot="activator" @click="showUpdateDialog = true">
+                    <v-icon>info</v-icon>
+                  </v-btn>
+                  <span>Updates Available</span>
+                </v-tooltip>
+                <module-update-dialog
+                  v-if="hasUpdates"
+                  :useActivator="false"
+                  :showSelector="activeSelector === 'update'"
+                  @input="($ev) = toggleActiveSelector($ev ? 'update' : '')"
+                  :modulesWithUpdates="modulesWithUpdates"
+                  :downloadData="downloadData"/>
+              </v-flex>
+            </v-layout>
+            <template v-if="filterTypes.length > 0">
+              <v-layout row>
+                <v-flex>
+                  <v-divider/>
+                </v-flex>
+              </v-layout>
+              <v-layout row>
+                <v-flex xs10 class="text-xs-left d-align-self-center">
+                  <v-layout>
+                    <h2 class="title d-inline-block d-align-self-center">Active Filters</h2>
+                    <v-btn icon small flat @click="resetNonNameFilters" v-show="hasNonNameFilters">
+                      <v-icon>highlight_off</v-icon>
+                    </v-btn>
+                  </v-layout>
+                </v-flex>
+                <v-flex xs2 class="text-xs-right">
+                  <v-btn v-if="$vuetify.breakpoint.xsOnly" flat icon class="mr-0 pr-1" @click="showFilterSheet = !showFilterSheet">
+                    <v-icon>filter_list</v-icon>
+                  </v-btn>
+                </v-flex>
+              </v-layout>
+              <v-layout row>
+                <v-flex xs10 md11 class="d-align-self-center" v-show="hasNonNameFilters">
+                  <filter-chip-list
+                    :requiredFilters="filterTypes"
+                    :filterOptions="filterOptions"
+                    :minRarity="minRarity"
+                    :maxRarity="maxRarity"
+                    :isUnit="isUnit"/>
+                </v-flex>
+                <v-flex xs10 md11 class="d-align-self-center" v-show="!hasNonNameFilters">
+                  No filters applied.
+                </v-flex>
+                <v-flex xs2 md1 class="text-xs-right">
+                  <v-btn v-if="$vuetify.breakpoint.smAndUp" flat icon class="mr-0 pr-1" @click="showFilterSheet = !showFilterSheet">
+                    <v-icon>filter_list</v-icon>
+                  </v-btn>
+                </v-flex>
+              </v-layout>
+              <v-layout row>
+                  <v-flex xs10 md11 class="d-align-self-center">
+                    <v-layout>
+                      <h2 class="title d-inline d-align-self-center pr-2">Sort</h2>
+                      <v-chip small>{{ sortOptions.type }}</v-chip>
+                      <v-chip small>{{ sortOptions.isAscending ? 'Ascending' : 'Descending' }}</v-chip>
+                    </v-layout>
+                  </v-flex>
+                  <v-flex xs2 md1 class="text-xs-right">
+                    <v-btn flat icon class="mr-0 pr-1" @click="showSortPanel = !showSortPanel">
+                      <v-icon>{{ showSortPanel ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</v-icon>
+                    </v-btn>
+                  </v-flex>
+                </v-layout>
+            </template>
+            <v-layout row>
+              <v-flex>
+                <v-divider/>
+              </v-flex>
+            </v-layout>
+          </v-container>
+          <v-expansion-panel v-model="sortPanelModel">
+            <v-expansion-panel-content>
+              <sort-options-container v-model="sortOptions" :disable-input="loadingSorts" :sort-types="sortTypes"/>
+            </v-expansion-panel-content>
+          </v-expansion-panel>
+        </v-card>
+      </v-flex>
+    </v-layout>
+  
+    <v-layout row>
+      <v-flex xs6>
+        <v-btn flat small v-if="onChangeButtonClick" @click="onChangeButtonClick">Change View</v-btn>
+      </v-flex>
+      <v-flex xs6 class="text-xs-right">
+        <v-menu offset-y :close-on-content-click="false">
+          <div slot="activator">
+            <span>Page {{ paginationModel }} of {{ numPages }}</span>
+            <v-icon class="pl-1">fas fa-caret-down</v-icon>
+          </div>
+          <v-card>
+            <v-card-text>
+              <v-container fluid class="pa-0">
+                <v-layout row>
+                  <v-flex xs6 class="d-align-self-center text-xs-center">
+                    Entries Per Page:
+                  </v-flex>
+                  <v-flex xs6>
+                    <v-text-field
+                      v-model="amountPerPage"
+                      :hide-details="true"
+                      solo-inverted
+                      type="number"
+                      min="1"/>
+                  </v-flex>
+                </v-layout>
+                <v-layout row>
+                  <v-flex xs6>
+                    <v-btn block flat @click="pageIndex = 0">First Page</v-btn>
+                  </v-flex>
+                  <v-flex xs6>
+                    <v-btn block flat @click="pageIndex = numPages - 1">Last Page</v-btn>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-card-text>
+          </v-card>
+        </v-menu>
+      </v-flex>
+    </v-layout>
+    <v-bottom-nav
+      v-if="numPages > 1 && !isInternallyLoadingFromOptions"
+      :value="true"
+      fixed app>
+      <div class="text-xs-center">
+        <v-pagination
+          v-model="paginationModel"
+          :total-visible="$vuetify.breakpoint.mdAndUp ? 20 : undefined"
+          :length="numPages"/>
+      </div>
+    </v-bottom-nav>
+
+    <v-layout>
+      Ready {{ mainModuleState }} {{ Object.entries(mainModuleActions).map(([key, value]) => [key, typeof value]) }}
+    </v-layout>
     <v-layout>
       <module-update-dialog
         v-if="hasUpdates"
@@ -166,6 +354,9 @@ export default {
     searchResultCountText () {
       return [`Showing ${this.allSortedEntries.length}`, this.mainModule.fullName, this.mainModule.fullName === 'Dictionary' ? 'Entries' : ''].join(' ');
     },
+    sortPanelModel () { // used as input for expansion panel v-model
+      return this.showSortPanel ? 0 : -1;
+    },
     numPages () {
       return Math.ceil(this.allSortedEntries.length / this.amountPerPage);
     },
@@ -216,9 +407,11 @@ export default {
       paginationModel: 0,
       filterHelper,
 
-      showEntryDialog: false,
       activeSelector: '',
+      showEntryDialog: false,
       showUpdateTooltip: false,
+      showFilterSheet: false,
+      showSortPanel: false,
     };
   },
   beforeCreate () {
@@ -433,6 +626,9 @@ export default {
     }, 250),
     setShowEntryDialog () {
       this.showEntryDialog = !!this.viewId;
+    },
+    toggleActiveSelector (selectorName) {
+      this.activeSelector = (this.activeSelector === selectorName) ? '' : selectorName;
     },
   },
   watch: {
