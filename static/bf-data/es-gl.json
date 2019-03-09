@@ -16021,6 +16021,69 @@
       "720157"
     ]
   },
+  "730257": {
+    "desc": "50% boost to Atk for all allies, 30% boost to all parameters, considerably raises normal hit amount, adds Def ignoring effect to attack & adds all elements to attack for 3 turns effect to BB/SBB",
+    "effects": [
+      {
+        "atk% buff": 30,
+        "conditions": [],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      },
+      {
+        "atk% buff": 50,
+        "conditions": [],
+        "passive id": "1",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "hit increase/hit": 2,
+        "passive id": "37",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "ignore def%": 100,
+        "passive id": "29",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elements added": [
+              "fire",
+              "water",
+              "earth",
+              "thunder",
+              "light",
+              "dark"
+            ],
+            "elements added turns": 3,
+            "proc id": "30",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "730257",
+    "name": "Constellation Spirit",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "730257"
+    ]
+  },
   "740157": {
     "desc": "Adds probable Spark critical for 3 turns effect to BB/SBB, 50% boost to Spark damage & raises Atk parameter limits to 130000",
     "effects": [
@@ -16824,7 +16887,7 @@
     ]
   },
   "810278": {
-    "desc": "Greatly boosts Atk when BB gauge is full, damage taken greatly boosts BB gauge & 100% boost to Spark damage for 2 turns when Sparks exceed certain amount",
+    "desc": "10% boost to all parameters of Fire types for all allies, greatly boosts Atk when BB gauge is full, damage taken greatly boosts BB gauge & 100% boost to Spark damage for 2 turns when Sparks exceed certain amount",
     "effects": [
       {
         "atk% buff": 100,
@@ -16834,8 +16897,8 @@
         "passive target": "self"
       },
       {
-        "bc fill when attacked high": 3,
-        "bc fill when attacked low": 2,
+        "bc fill when attacked high": 4,
+        "bc fill when attacked low": 3,
         "bc fill when attacked%": 100,
         "conditions": [],
         "passive id": "25",
@@ -16850,6 +16913,18 @@
         "passive id": "86",
         "passive target": "self",
         "spark count buff activation": 15
+      },
+      {
+        "atk% buff": 10,
+        "conditions": [],
+        "def% buff": 10,
+        "elements buffed": [
+          "fire"
+        ],
+        "hp% buff": 10,
+        "passive id": "2",
+        "passive target": "party",
+        "rec% buff": 10
       }
     ],
     "id": "810278",
@@ -18416,6 +18491,108 @@
     "target": "self",
     "associated_units": [
       "810658"
+    ]
+  },
+  "810708": {
+    "desc": "Spark damage slightly boosts BB gauge for all allies when Czorag's Malice or BB Gauge Sphere is equipped, slightly boosts Fire elemental damage for all allies, greatly boosts damage dealt against status afflicted foes, 40% boost to Atk, Def each turn (up to 3 turns) & probable damage reduction to 1",
+    "effects": [
+      {
+        "bc fill on spark high": 2,
+        "bc fill on spark low": 1,
+        "bc fill on spark%": 100,
+        "conditions": [
+          {
+            "item required": [
+              "819228"
+            ]
+          },
+          {
+            "sphere category required": "BB Gauge",
+            "sphere category required (raw)": "6"
+          }
+        ],
+        "passive id": "47",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "elemental weakness multiplier%": 20,
+        "fire units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "passive target": "party"
+      },
+      {
+        "atk% buff when enemy has ailment": 150,
+        "atk% buff when enemy has curse": true,
+        "atk% buff when enemy has injury": true,
+        "atk% buff when enemy has paralysis": true,
+        "atk% buff when enemy has poison": true,
+        "atk% buff when enemy has sick": true,
+        "atk% buff when enemy has weaken": true,
+        "conditions": [],
+        "passive id": "74",
+        "passive target": "self"
+      },
+      {
+        "atk% max buff": 120,
+        "conditions": [],
+        "def% max buff": 120,
+        "increase from min to max": 1,
+        "passive id": "105",
+        "passive target": "self",
+        "turn count": 3
+      },
+      {
+        "conditions": [],
+        "passive id": "43",
+        "passive target": "self",
+        "take 1 dmg%": 15
+      }
+    ],
+    "id": "810708",
+    "name": "Demonic Schadenfreude",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "810708"
+    ]
+  },
+  "810900": {
+    "desc": "10% boost to all parameters of Fire types for all allies, damage taken boosts BB gauge & 30% additional damage reduction",
+    "effects": [
+      {
+        "atk% buff": 10,
+        "conditions": [],
+        "def% buff": 10,
+        "elements buffed": [
+          "fire"
+        ],
+        "hp% buff": 10,
+        "passive id": "2",
+        "passive target": "party",
+        "rec% buff": 10
+      },
+      {
+        "bc fill when attacked high": 3,
+        "bc fill when attacked low": 2,
+        "bc fill when attacked%": 100,
+        "conditions": [],
+        "passive id": "25",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "127",
+        "unknown passive params": "100,30"
+      }
+    ],
+    "id": "810900",
+    "name": "Ignis Support",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "810900"
     ]
   },
   "811017": {
@@ -20769,6 +20946,44 @@
       "820678"
     ]
   },
+  "820900": {
+    "desc": "10% boost to all parameters of Water types for all allies, damage taken boosts BB gauge & 30% additional damage reduction",
+    "effects": [
+      {
+        "atk% buff": 10,
+        "conditions": [],
+        "def% buff": 10,
+        "elements buffed": [
+          "water"
+        ],
+        "hp% buff": 10,
+        "passive id": "2",
+        "passive target": "party",
+        "rec% buff": 10
+      },
+      {
+        "bc fill when attacked high": 3,
+        "bc fill when attacked low": 2,
+        "bc fill when attacked%": 100,
+        "conditions": [],
+        "passive id": "25",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "127",
+        "unknown passive params": "100,30"
+      }
+    ],
+    "id": "820900",
+    "name": "Algor Support",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "820900"
+    ]
+  },
   "830047": {
     "desc": "Adds resistance against 1 KO attack when HP is below 25% & negates Atk, Def, Rec reduction effects for all allies",
     "effects": [
@@ -22736,6 +22951,44 @@
     "target": "self",
     "associated_units": [
       "830678"
+    ]
+  },
+  "830900": {
+    "desc": "10% boost to all parameters of Earth types for all allies, damage taken boosts BB gauge & 30% additional damage reduction",
+    "effects": [
+      {
+        "atk% buff": 10,
+        "conditions": [],
+        "def% buff": 10,
+        "elements buffed": [
+          "earth"
+        ],
+        "hp% buff": 10,
+        "passive id": "2",
+        "passive target": "party",
+        "rec% buff": 10
+      },
+      {
+        "bc fill when attacked high": 3,
+        "bc fill when attacked low": 2,
+        "bc fill when attacked%": 100,
+        "conditions": [],
+        "passive id": "25",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "127",
+        "unknown passive params": "100,30"
+      }
+    ],
+    "id": "830900",
+    "name": "Terra Support",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "830900"
     ]
   },
   "840047": {
@@ -24774,6 +25027,44 @@
     "target": "self",
     "associated_units": [
       "840658"
+    ]
+  },
+  "840900": {
+    "desc": "10% boost to all parameters of Thunder types for all allies, damage taken boosts BB gauge & 30% additional damage reduction",
+    "effects": [
+      {
+        "atk% buff": 10,
+        "conditions": [],
+        "def% buff": 10,
+        "elements buffed": [
+          "thunder"
+        ],
+        "hp% buff": 10,
+        "passive id": "2",
+        "passive target": "party",
+        "rec% buff": 10
+      },
+      {
+        "bc fill when attacked high": 3,
+        "bc fill when attacked low": 2,
+        "bc fill when attacked%": 100,
+        "conditions": [],
+        "passive id": "25",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "127",
+        "unknown passive params": "100,30"
+      }
+    ],
+    "id": "840900",
+    "name": "Fulgur Support",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "840900"
     ]
   },
   "850017": {
@@ -27257,6 +27548,44 @@
       "850658"
     ]
   },
+  "850900": {
+    "desc": "10% boost to all parameters of Light types for all allies, damage taken boosts BB gauge & 30% additional damage reduction",
+    "effects": [
+      {
+        "atk% buff": 10,
+        "conditions": [],
+        "def% buff": 10,
+        "elements buffed": [
+          "light"
+        ],
+        "hp% buff": 10,
+        "passive id": "2",
+        "passive target": "party",
+        "rec% buff": 10
+      },
+      {
+        "bc fill when attacked high": 3,
+        "bc fill when attacked low": 2,
+        "bc fill when attacked%": 100,
+        "conditions": [],
+        "passive id": "25",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "127",
+        "unknown passive params": "100,30"
+      }
+    ],
+    "id": "850900",
+    "name": "Lux Support",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "850900"
+    ]
+  },
   "850977": {
     "desc": "Negates critical damage & negates Def ignoring effects",
     "effects": [
@@ -29633,6 +29962,44 @@
     "target": "self",
     "associated_units": [
       "860678"
+    ]
+  },
+  "860900": {
+    "desc": "10% boost to all parameters of Dark types for all allies, damage taken boosts BB gauge & 30% additional damage reduction",
+    "effects": [
+      {
+        "atk% buff": 10,
+        "conditions": [],
+        "def% buff": 10,
+        "elements buffed": [
+          "dark"
+        ],
+        "hp% buff": 10,
+        "passive id": "2",
+        "passive target": "party",
+        "rec% buff": 10
+      },
+      {
+        "bc fill when attacked high": 3,
+        "bc fill when attacked low": 2,
+        "bc fill when attacked%": 100,
+        "conditions": [],
+        "passive id": "25",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "127",
+        "unknown passive params": "100,30"
+      }
+    ],
+    "id": "860900",
+    "name": "Umbra Support",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "860900"
     ]
   },
   "1000000": {

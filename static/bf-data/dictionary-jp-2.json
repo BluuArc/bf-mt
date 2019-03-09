@@ -1,4 +1,204 @@
 {
+  "MST_LEADERSKILLS_7541_DESCRIPTION": {
+    "en": "50% boost to Atk, max HP, Spark damage considerably boosts BC, HC drop rate and boosts BB gauge & 120% boost to Spark damage",
+    "es": "50% boost to Atk, max HP, Spark damage considerably boosts BC, HC drop rate and boosts BB gauge & 120% boost to Spark damage",
+    "id": "50% boost to Atk, max HP, Spark damage considerably boosts BC, HC drop rate and boosts BB gauge & 120% boost to Spark damage",
+    "pt": "50% boost to Atk, max HP, Spark damage considerably boosts BC, HC drop rate and boosts BB gauge & 120% boost to Spark damage",
+    "th": "50% boost to Atk, max HP, Spark damage considerably boosts BC, HC drop rate and boosts BB gauge & 120% boost to Spark damage",
+    "vi": "50% boost to Atk, max HP, Spark damage considerably boosts BC, HC drop rate and boosts BB gauge & 120% boost to Spark damage"
+  },
+  "MST_LEADERSKILLS_7541_NAME": {
+    "en": "Cobalt Twin Bullets",
+    "es": "Cobalt Twin Bullets",
+    "id": "Cobalt Twin Bullets",
+    "pt": "Cobalt Twin Bullets",
+    "th": "Cobalt Twin Bullets",
+    "vi": "Cobalt Twin Bullets"
+  },
+  "MST_LEADERSKILLS_7600_DESCRIPTION": {
+    "en": "50% boost to Atk of Water & Light types",
+    "es": "Aumenta un 50% el ataque de las unidades acuáticas y lumínicas",
+    "id": "Menambah 50% Serangan tipe Air & Terang",
+    "pt": "Reforço de 50% no ATQ do tipo Luz e Água",
+    "th": "50% เพิ่มค่า โจมตี ของยูนิต น้ำ และ แสง",
+    "vi": "Tăng 50% sức mạnh Tấn công của hệ Thủy & Quang"
+  },
+  "MST_LEADERSKILLS_7600_NAME": {
+    "en": "Imperial Power",
+    "es": "Poder imperial",
+    "id": "Kekuatan Kerajaan",
+    "pt": "Poder Imperial",
+    "th": "อิมพีเรียล พาวเวอร์",
+    "vi": "Quyền lực hoàng đế"
+  },
+  "MST_LEADERSKILLS_7601_DESCRIPTION": {
+    "en": "50% boost to Atk, Def, and Rec of Water & Light types",
+    "es": "Aumenta un 50% el ataque, la defensa y la recuperación de las unidades acuáticas y lumínicas",
+    "id": "Menambah 50% Serang, Tahan, Pulih tipe Air & Terang",
+    "pt": "Reforço de 50% no ATQ, DEF e REC do tipo Luz e Água",
+    "th": "50% เพิ่มค่า โจมตี, ป้องกัน, กับ ฟื้นฟู ของยูนิต น้ำ และ แสง",
+    "vi": "Tăng 50% sức mạnh Tấn công, Phòng thủ và Phục hồi của hệ Thủy & Quang"
+  },
+  "MST_LEADERSKILLS_7601_NAME": {
+    "en": "Imperial Authority",
+    "es": "Autoridad imperial",
+    "id": "Otoritas Kerajaan",
+    "pt": "Autoridade Imperial",
+    "th": "อิมพีเรียล ออโธริตี้",
+    "vi": "Uy quyền hoàng đế"
+  },
+  "MST_LEADERSKILLS_760226_DESCRIPTION": {
+    "en": "50% boost to max HP, 100% boost to Spark damage & boosts Atk, Def, Rec relative to remaining HP",
+    "es": "50% boost to max HP, 100% boost to Spark damage & boosts Atk, Def, Rec relative to remaining HP",
+    "id": "50% ekstra semua parameter, 100% ekstra kerusakan Percikan, menambah Serang, Tahan, Pulih sesuai sisa HP",
+    "pt": "50% boost to max HP, 100% boost to Spark damage & boosts Atk, Def, Rec relative to remaining HP",
+    "th": "50% เพิ่มค่าให้ HP สูงสุด, 100% เพิ่มค่าให้ ความเสียหายสปาร์ค และ เพิ่มค่า โจมตี, ป้องกัน, ฟื้นฟู สัมพันธ์กับ HP ที่เหลืออยู่",
+    "vi": "50% boost to max HP, 100% boost to Spark damage & boosts Atk, Def, Rec relative to remaining HP"
+  },
+  "MST_LEADERSKILLS_760226_NAME": {
+    "en": "Ironclad Defense",
+    "es": "Ironclad Defense",
+    "id": "Pertahanan Jubah Besi",
+    "pt": "Ironclad Defense",
+    "th": "ไอร่อนแคลด ดีเฟนส์",
+    "vi": "Ironclad Defense"
+  },
+  "MST_LEADERSKILLS_760227_DESCRIPTION": {
+    "en": "80% boost to max HP, 160% boost to Spark damage, boosts Atk, Def, Rec relative to remaining HP & slightly reduces damage taken for 2 turns when Sparks exceed certain amount",
+    "es": "80% boost to max HP, 160% boost to Spark damage, boosts Atk, Def, Rec relative to remaining HP & slightly reduces damage taken for 2 turns when Sparks exceed certain amount",
+    "id": "80% boost to max HP, 160% boost to Spark damage, boosts Atk, Def, Rec relative to remaining HP & slightly reduces damage taken for 2 turns when Sparks exceed certain amount",
+    "pt": "80% boost to max HP, 160% boost to Spark damage, boosts Atk, Def, Rec relative to remaining HP & slightly reduces damage taken for 2 turns when Sparks exceed certain amount",
+    "th": "80% boost to max HP, 160% boost to Spark damage, boosts Atk, Def, Rec relative to remaining HP & slightly reduces damage taken for 2 turns when Sparks exceed certain amount",
+    "vi": "80% boost to max HP, 160% boost to Spark damage, boosts Atk, Def, Rec relative to remaining HP & slightly reduces damage taken for 2 turns when Sparks exceed certain amount"
+  },
+  "MST_LEADERSKILLS_760227_NAME": {
+    "en": "Impregnable Defense",
+    "es": "Impregnable Defense",
+    "id": "Pertahanan Tak Tertembus",
+    "pt": "Impregnable Defense",
+    "th": "อิมเพลกเนเบิล ดีเฟนส์",
+    "vi": "Impregnable Defense"
+  },
+  "MST_LEADERSKILLS_7900_DESCRIPTION": {
+    "en": "Boosts Atk relative to how high remaining HP is & boosts BB gauge each turn",
+    "es": "Boosts Atk relative to how high remaining HP is & boosts BB gauge each turn",
+    "id": "Menambah Serangan sesuai seberapa tinggi sisa HP & menambah meteran BB tiap giliran",
+    "pt": "Boosts Atk relative to how high remaining HP is & boosts BB gauge each turn",
+    "th": "เพิ่มค่า โจมตี ขึ้นอยู่กับว่า HP ที่เหลืออยู่ สูงแค่ไหน และ เพิ่มค่า เกจ BB แต่ละเทิร์น",
+    "vi": "Boosts Atk relative to how high remaining HP is & boosts BB gauge each turn"
+  },
+  "MST_LEADERSKILLS_7900_NAME": {
+    "en": "Heir to the Sun's Courage",
+    "es": "Heir to the Sun's Courage",
+    "id": "Pewaris Keberanian Matahari",
+    "pt": "Heir to the Sun's Courage",
+    "th": "เพิ่มค่า โจมตี ขึ้นอยู่กับว่า HP ที่เหลืออยู่ สูงแค่ไหน และ เพิ่มค่า เกจ BB แต่ละเทิร์น",
+    "vi": "Heir to the Sun's Courage"
+  },
+  "MST_LEADERSKILLS_7901_DESCRIPTION": {
+    "en": "Boosts BC, HC, Zel drop rate & considerably boosts HC efficacy",
+    "es": "Boosts BC, HC, Zel drop rate & considerably boosts HC efficacy",
+    "id": "Menambah perolehan BC, HC, Zel & lumayan menambah keampuhan HC",
+    "pt": "Boosts BC, HC, Zel drop rate & considerably boosts HC efficacy",
+    "th": "เพิ่มค่า อัตราดรอป BC, HC, เซล และ เพิ่มค่าอย่างมากให้ ประสิทธิภาพ HC",
+    "vi": "Boosts BC, HC, Zel drop rate & considerably boosts HC efficacy"
+  },
+  "MST_LEADERSKILLS_7901_NAME": {
+    "en": "Angel of Loving Protection",
+    "es": "Angel of Loving Protection",
+    "id": "Malaikat Perlindungan Cinta",
+    "pt": "Angel of Loving Protection",
+    "th": "เพิ่มค่า อัตราดรอป BC, HC, เซล และ เพิ่มค่าอย่างมากให้ ประสิทธิภาพ HC",
+    "vi": "Angel of Loving Protection"
+  },
+  "MST_LEADERSKILLS_7902_DESCRIPTION": {
+    "en": "40% boost to Spark damage & boosts BC efficacy",
+    "es": "40% boost to Spark damage & boosts BC efficacy",
+    "id": "40% ekstra kerusakan Percikan & menambah keampuhan BC",
+    "pt": "40% boost to Spark damage & boosts BC efficacy",
+    "th": "40% เพิ่มค่า ความเสียหายสปาร์ค และ เพิ่มค่า ประสิทธิภาพ BC",
+    "vi": "40% boost to Spark damage & boosts BC efficacy"
+  },
+  "MST_LEADERSKILLS_7902_NAME": {
+    "en": "Master Mage",
+    "es": "Master Mage",
+    "id": "Master Bijak",
+    "pt": "Master Mage",
+    "th": "40% เพิ่มค่า ความเสียหายสปาร์ค และ เพิ่มค่า ประสิทธิภาพ BC",
+    "vi": "Master Mage"
+  },
+  "MST_LEADERSKILLS_7903_DESCRIPTION": {
+    "en": "Boosts critical damage & damage taken boosts BB gauge",
+    "es": "Boosts critical damage & damage taken boosts BB gauge",
+    "id": "Menambah kerusakan ampuh & kerusakan diderita menambah meteran BB",
+    "pt": "Boosts critical damage & damage taken boosts BB gauge",
+    "th": "เพิ่มค่า ความเสียหายคริติคอล และ ความเสียหายที่ได้รับ เพิ่มค่า เกจ BB",
+    "vi": "Boosts critical damage & damage taken boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_7903_NAME": {
+    "en": "Spell Master",
+    "es": "Spell Master",
+    "id": "Penguasa Mantra",
+    "pt": "Spell Master",
+    "th": "เพิ่มค่า ความเสียหายคริติคอล และ ความเสียหายที่ได้รับ เพิ่มค่า เกจ BB",
+    "vi": "Spell Master"
+  },
+  "MST_LEADERSKILLS_7904_DESCRIPTION": {
+    "en": "Boosts Atk, Def, Rec when BB gauge is over 50% & boosts BB gauge each turn",
+    "es": "Boosts Atk, Def, Rec when BB gauge is over 50% & boosts BB gauge each turn",
+    "id": "Menambah Serang, Tahan, Pulih saat meteran BB di atas 50% & menambah meteran BB tiap giliran",
+    "pt": "Boosts Atk, Def, Rec when BB gauge is over 50% & boosts BB gauge each turn",
+    "th": "เพิ่มค่า โจมตี, ป้องกัน, ฟื้นฟู เมื่อเกจ BB สูงกว่า 50% และ เพิ่มค่า เกจ BB แต่ละเทิร์น",
+    "vi": "Boosts Atk, Def, Rec when BB gauge is over 50% & boosts BB gauge each turn"
+  },
+  "MST_LEADERSKILLS_7904_NAME": {
+    "en": "Last Fencer",
+    "es": "Last Fencer",
+    "id": "Anggar Terakhir",
+    "pt": "Last Fencer",
+    "th": "เพิ่มค่า โจมตี, ป้องกัน, ฟื้นฟู เมื่อเกจ BB สูงกว่า 50% และ เพิ่มค่า เกจ BB แต่ละเทิร์น",
+    "vi": "Last Fencer"
+  },
+  "MST_LEADERSKILLS_7905_DESCRIPTION": {
+    "en": "Hugely boosts Atk relative to how low remaining HP is & Spark damage slightly boosts BB gauge",
+    "es": "Hugely boosts Atk relative to how low remaining HP is & Spark damage slightly boosts BB gauge",
+    "id": "Amat menambah Serangan sesuai seberapa rendah sisa HP & kerusakan Percikan agak menambah meteran BB",
+    "pt": "Hugely boosts Atk relative to how low remaining HP is & Spark damage slightly boosts BB gauge",
+    "th": "เพิ่มค่าอย่างสูงให้ โจมตี ขึ้นอยู่กับว่า HP ที่เหลืออยู่ ต่ำแค่ไหน และ ความเสียหายสปาร์ค เพิ่มค่าเล็กน้อยให้ เกจ BB",
+    "vi": "Hugely boosts Atk relative to how low remaining HP is & Spark damage slightly boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_7905_NAME": {
+    "en": "Legendary Swordsman",
+    "es": "Legendary Swordsman",
+    "id": "Jago Pedang Legendaris",
+    "pt": "Legendary Swordsman",
+    "th": "เพิ่มค่าอย่างสูงให้ โจมตี ขึ้นอยู่กับว่า HP ที่เหลืออยู่ ต่ำแค่ไหน และ ความเสียหายสปาร์ค เพิ่มค่าเล็กน้อยให้ เกจ BB",
+    "vi": "Legendary Swordsman"
+  },
+  "MST_LEADERSKILLS_7906_DESCRIPTION": {
+    "en": "Hugely boosts Atk relative to how high remaining HP is & boosts BB gauge each turn",
+    "es": "Hugely boosts Atk relative to how high remaining HP is & boosts BB gauge each turn",
+    "id": "Tambahan besar Serangan sesuai seberapa tinggi sisa HP & menambah meteran BB tiap giliran",
+    "pt": "Hugely boosts Atk relative to how high remaining HP is & boosts BB gauge each turn",
+    "th": "เพิ่มค่าอย่างสูงให้ โจมตี ขึ้นอยู่กับว่า HP ที่เหลืออยู่ สูงแค่ไหน และ เพิ่มค่า เกจ BB แต่ละเทิร์น",
+    "vi": "Hugely boosts Atk relative to how high remaining HP is & boosts BB gauge each turn"
+  },
+  "MST_LEADERSKILLS_7906_NAME": {
+    "en": "Connected by a Strong Bond",
+    "es": "Connected by a Strong Bond",
+    "id": "Terhubung Ikatan Kuat",
+    "pt": "Connected by a Strong Bond",
+    "th": "เพิ่มค่าอย่างสูงให้ โจมตี ขึ้นอยู่กับว่า HP ที่เหลืออยู่ สูงแค่ไหน และ เพิ่มค่า เกจ BB แต่ละเทิร์น",
+    "vi": "Connected by a Strong Bond"
+  },
+  "MST_LEADERSKILLS_7907_DESCRIPTION": {
+    "en": "Hugely boosts BC, HC, Zel drop rate & considerably boosts HC efficacy",
+    "es": "Hugely boosts BC, HC, Zel drop rate & considerably boosts HC efficacy",
+    "id": "Amat menambah perolehan BC, HC, Zel & lumayan menambah HC",
+    "pt": "Hugely boosts BC, HC, Zel drop rate & considerably boosts HC efficacy",
+    "th": "เพิ่มค่าอย่างสูงให้ อัตราดรอป BC, HC, เซล และ เพิ่มค่าอย่างมากให้ ประสิทธิภาพ HC",
+    "vi": "Hugely boosts BC, HC, Zel drop rate & considerably boosts HC efficacy"
+  },
   "MST_LEADERSKILLS_7907_NAME": {
     "en": "Lens Hunter",
     "es": "Lens Hunter",
@@ -3976,12 +4176,12 @@
     "vi": "Fate Selectivity Protocol"
   },
   "MST_LEADERSKILLS_810278_DESCRIPTION": {
-    "en": "200% boost to Atk and 60% boost to max HP of Fire types, 130% boost to Spark damage, Spark damage boosts BB gauge & hugely boosts Fire elemental damage. 25% boost to all parameters of Fire types & 15% damage reduction from Fire, Earth types in Guild Raid",
-    "es": "200% boost to Atk and 60% boost to max HP of Fire types, 130% boost to Spark damage, Spark damage boosts BB gauge & hugely boosts Fire elemental damage. 25% boost to all parameters of Fire types & 15% damage reduction from Fire, Earth types in Guild Raid",
-    "id": "200% ekstra Serang, 60% ekstra HP maks tipe Api, 130% ekstra kerusakan Percikan, kerusakan Percikan menambah meteran BB & amat menambah kerusakan elemen Api. 25% ekstra semua parameter tipe Api, kurangi 15% kerusakan dari tipe Api, Bumi dalam Perang Bersama Serikat",
-    "pt": "200% boost to Atk and 60% boost to max HP of Fire types, 130% boost to Spark damage, Spark damage boosts BB gauge & hugely boosts Fire elemental damage. 25% boost to all parameters of Fire types & 15% damage reduction from Fire, Earth types in Guild Raid",
-    "th": "200% เพิ่มค่าให้ โจมตี กับ 60% เพิ่มค่าให้ HP สูงสุด ของชนิด ไฟ, 130% เพิ่มค่าให้ ความเสียหายสปาร์ค, ความเสียหายสปาร์ค เพิ่มค่า เกจ BB และ เพิ่มค่าอย่างสูงให้ความเสียหายธาตุ ไฟ . 25% เพิ่มค่าให้ พารามิเตอร์ทั้งหมด ของชนิด ไฟ และ 15% ลดค่าความเสียหาย จากชนิด ไฟ, ดิน ในกิลด์เรด",
-    "vi": "200% boost to Atk and 60% boost to max HP of Fire types, 130% boost to Spark damage, Spark damage boosts BB gauge & hugely boosts Fire elemental damage. 25% boost to all parameters of Fire types & 15% damage reduction from Fire, Earth types in Guild Raid"
+    "en": "225% boost to Atk, 100% boost to max HP of Fire types, 140% boost to Spark damage, Spark damage considerably boosts BB gauge, & enormously boosts Fire elemental damage. 25% boost to all parameters of Fire types and 20% damage reduction from Fire, Earth types for all allies in Guild Raid",
+    "es": "225% boost to Atk, 100% boost to max HP of Fire types, 140% boost to Spark damage, Spark damage considerably boosts BB gauge, & enormously boosts Fire elemental damage. 25% boost to all parameters of Fire types and 20% damage reduction from Fire, Earth types for all allies in Guild Raid",
+    "id": "225% boost to Atk, 100% boost to max HP of Fire types, 140% boost to Spark damage, Spark damage considerably boosts BB gauge, & enormously boosts Fire elemental damage. 25% boost to all parameters of Fire types and 20% damage reduction from Fire, Earth types for all allies in Guild Raid",
+    "pt": "225% boost to Atk, 100% boost to max HP of Fire types, 140% boost to Spark damage, Spark damage considerably boosts BB gauge, & enormously boosts Fire elemental damage. 25% boost to all parameters of Fire types and 20% damage reduction from Fire, Earth types for all allies in Guild Raid",
+    "th": "225% boost to Atk, 100% boost to max HP of Fire types, 140% boost to Spark damage, Spark damage considerably boosts BB gauge, & enormously boosts Fire elemental damage. 25% boost to all parameters of Fire types and 20% damage reduction from Fire, Earth types for all allies in Guild Raid",
+    "vi": "225% boost to Atk, 100% boost to max HP of Fire types, 140% boost to Spark damage, Spark damage considerably boosts BB gauge, & enormously boosts Fire elemental damage. 25% boost to all parameters of Fire types and 20% damage reduction from Fire, Earth types for all allies in Guild Raid"
   },
   "MST_LEADERSKILLS_810278_NAME": {
     "en": "Titanium Antimagic Technique",
@@ -4486,6 +4686,38 @@
     "pt": "Steel God's Shining Barrier",
     "th": "สตีล ก็อดส์ ไชน์นิ่ง บาร์เรีย",
     "vi": "Steel God's Shining Barrier"
+  },
+  "MST_LEADERSKILLS_810708_DESCRIPTION": {
+    "en": "200% boost to Atk, 100% boost to Def, max HP and 30% boost to critical hit rate of Fire types, hugely boosts critical damage, enormously boosts Fire elemental damage, 15% damage reduction from Fire, Earth types & negates critical and elemental damage",
+    "es": "200% boost to Atk, 100% boost to Def, max HP and 30% boost to critical hit rate of Fire types, hugely boosts critical damage, enormously boosts Fire elemental damage, 15% damage reduction from Fire, Earth types & negates critical and elemental damage",
+    "id": "200% boost to Atk, 100% boost to Def, max HP and 30% boost to critical hit rate of Fire types, hugely boosts critical damage, enormously boosts Fire elemental damage, 15% damage reduction from Fire, Earth types & negates critical and elemental damage",
+    "pt": "200% boost to Atk, 100% boost to Def, max HP and 30% boost to critical hit rate of Fire types, hugely boosts critical damage, enormously boosts Fire elemental damage, 15% damage reduction from Fire, Earth types & negates critical and elemental damage",
+    "th": "200% boost to Atk, 100% boost to Def, max HP and 30% boost to critical hit rate of Fire types, hugely boosts critical damage, enormously boosts Fire elemental damage, 15% damage reduction from Fire, Earth types & negates critical and elemental damage",
+    "vi": "200% boost to Atk, 100% boost to Def, max HP and 30% boost to critical hit rate of Fire types, hugely boosts critical damage, enormously boosts Fire elemental damage, 15% damage reduction from Fire, Earth types & negates critical and elemental damage"
+  },
+  "MST_LEADERSKILLS_810708_NAME": {
+    "en": "Unrestrained Malevolence",
+    "es": "Unrestrained Malevolence",
+    "id": "Unrestrained Malevolence",
+    "pt": "Unrestrained Malevolence",
+    "th": "Unrestrained Malevolence",
+    "vi": "Unrestrained Malevolence"
+  },
+  "MST_LEADERSKILLS_810900_DESCRIPTION": {
+    "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Fire elemental damage, 15% damage reduction from Earth types & negates all status ailments",
+    "es": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Fire elemental damage, 15% damage reduction from Earth types & negates all status ailments",
+    "id": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Fire elemental damage, 15% damage reduction from Earth types & negates all status ailments",
+    "pt": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Fire elemental damage, 15% damage reduction from Earth types & negates all status ailments",
+    "th": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Fire elemental damage, 15% damage reduction from Earth types & negates all status ailments",
+    "vi": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Fire elemental damage, 15% damage reduction from Earth types & negates all status ailments"
+  },
+  "MST_LEADERSKILLS_810900_NAME": {
+    "en": "Ignis Aura",
+    "es": "Ignis Aura",
+    "id": "Ignis Aura",
+    "pt": "Ignis Aura",
+    "th": "Ignis Aura",
+    "vi": "Ignis Aura"
   },
   "MST_LEADERSKILLS_811118_DESCRIPTION": {
     "en": "60% boost to Atk, max HP, 100% boost to Spark damage, boosts Spark damage for 2 turns when Sparks have exceeded certain amount & hugely boosts Fire and Water elemental damage ",
@@ -5191,6 +5423,22 @@
     "th": "Soul Module",
     "vi": "Soul Module"
   },
+  "MST_LEADERSKILLS_820900_DESCRIPTION": {
+    "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Water elemental damage, 15% damage reduction from Fire types & negates all status ailments",
+    "es": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Water elemental damage, 15% damage reduction from Fire types & negates all status ailments",
+    "id": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Water elemental damage, 15% damage reduction from Fire types & negates all status ailments",
+    "pt": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Water elemental damage, 15% damage reduction from Fire types & negates all status ailments",
+    "th": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Water elemental damage, 15% damage reduction from Fire types & negates all status ailments",
+    "vi": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Water elemental damage, 15% damage reduction from Fire types & negates all status ailments"
+  },
+  "MST_LEADERSKILLS_820900_NAME": {
+    "en": "Algor Aura",
+    "es": "Algor Aura",
+    "id": "Algor Aura",
+    "pt": "Algor Aura",
+    "th": "Algor Aura",
+    "vi": "Algor Aura"
+  },
   "MST_LEADERSKILLS_830047_DESCRIPTION": {
     "en": "100% boost to Atk, 60% boost to Def, max HP of Earth types, 10% damage reduction from Earth, Thunder types, probable considerable reduction of foe's BB gauge & 50% damage counter",
     "es": "100% boost to Atk, 60% boost to Def, max HP of Earth types, 10% damage reduction from Earth, Thunder types, probable considerable reduction of foe's BB gauge & 50% damage counter",
@@ -5783,6 +6031,22 @@
     "th": "Scrapping Spirit",
     "vi": "Scrapping Spirit"
   },
+  "MST_LEADERSKILLS_830900_DESCRIPTION": {
+    "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Earth elemental damage, 15% damage reduction from Thunder types & negates all status ailments",
+    "es": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Earth elemental damage, 15% damage reduction from Thunder types & negates all status ailments",
+    "id": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Earth elemental damage, 15% damage reduction from Thunder types & negates all status ailments",
+    "pt": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Earth elemental damage, 15% damage reduction from Thunder types & negates all status ailments",
+    "th": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Earth elemental damage, 15% damage reduction from Thunder types & negates all status ailments",
+    "vi": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Earth elemental damage, 15% damage reduction from Thunder types & negates all status ailments"
+  },
+  "MST_LEADERSKILLS_830900_NAME": {
+    "en": "Terra Aura",
+    "es": "Terra Aura",
+    "id": "Terra Aura",
+    "pt": "Terra Aura",
+    "th": "Terra Aura",
+    "vi": "Terra Aura"
+  },
   "MST_LEADERSKILLS_840047_DESCRIPTION": {
     "en": "100% boost to Atk, 60% boost to Def, max HP of Thunder types, 10% damage reduction from Water, Thunder types, considerably reduces BB gauge required for BB & probable considerable reduction of BB gauge fill rate for 2 turns",
     "es": "100% boost to Atk, 60% boost to Def, max HP of Thunder types, 10% damage reduction from Water, Thunder types, considerably reduces BB gauge required for BB & probable considerable reduction of BB gauge fill rate for 2 turns",
@@ -6342,6 +6606,22 @@
     "pt": "Soul of the Clairvoyant",
     "th": "Soul of the Clairvoyant",
     "vi": "Soul of the Clairvoyant"
+  },
+  "MST_LEADERSKILLS_840900_DESCRIPTION": {
+    "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Thunder elemental damage, 15% damage reduction from Water types & negates all status ailments",
+    "es": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Thunder elemental damage, 15% damage reduction from Water types & negates all status ailments",
+    "id": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Thunder elemental damage, 15% damage reduction from Water types & negates all status ailments",
+    "pt": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Thunder elemental damage, 15% damage reduction from Water types & negates all status ailments",
+    "th": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Thunder elemental damage, 15% damage reduction from Water types & negates all status ailments",
+    "vi": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Thunder elemental damage, 15% damage reduction from Water types & negates all status ailments"
+  },
+  "MST_LEADERSKILLS_840900_NAME": {
+    "en": "Fulgur Aura",
+    "es": "Fulgur Aura",
+    "id": "Fulgur Aura",
+    "pt": "Fulgur Aura",
+    "th": "Fulgur Aura",
+    "vi": "Fulgur Aura"
   },
   "MST_LEADERSKILLS_850017_DESCRIPTION": {
     "en": "80% boost to Def, Rec, max HP, boosts Def, Rec relative to remaining HP, 10% damage reduction & restores HP each turn",
@@ -6966,6 +7246,22 @@
     "pt": "Soul of the Guardian",
     "th": "Soul of the Guardian",
     "vi": "Soul of the Guardian"
+  },
+  "MST_LEADERSKILLS_850900_DESCRIPTION": {
+    "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Light elemental damage, 15% damage reduction from Dark types & negates all status ailments",
+    "es": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Light elemental damage, 15% damage reduction from Dark types & negates all status ailments",
+    "id": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Light elemental damage, 15% damage reduction from Dark types & negates all status ailments",
+    "pt": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Light elemental damage, 15% damage reduction from Dark types & negates all status ailments",
+    "th": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Light elemental damage, 15% damage reduction from Dark types & negates all status ailments",
+    "vi": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Light elemental damage, 15% damage reduction from Dark types & negates all status ailments"
+  },
+  "MST_LEADERSKILLS_850900_NAME": {
+    "en": "Lux Aura",
+    "es": "Lux Aura",
+    "id": "Lux Aura",
+    "pt": "Lux Aura",
+    "th": "Lux Aura",
+    "vi": "Lux Aura"
   },
   "MST_LEADERSKILLS_850977_DESCRIPTION": {
     "en": "40% boost to max HP, boosts Atk relative to how high remaining HP is & boosts Def relative to how low remaining HP is",
@@ -7654,6 +7950,22 @@
     "pt": "Butterflies of Illusion",
     "th": "Butterflies of Illusion",
     "vi": "Butterflies of Illusion"
+  },
+  "MST_LEADERSKILLS_860900_DESCRIPTION": {
+    "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Dark elemental damage, 15% damage reduction from Light types & negates all status ailments",
+    "es": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Dark elemental damage, 15% damage reduction from Light types & negates all status ailments",
+    "id": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Dark elemental damage, 15% damage reduction from Light types & negates all status ailments",
+    "pt": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Dark elemental damage, 15% damage reduction from Light types & negates all status ailments",
+    "th": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Dark elemental damage, 15% damage reduction from Light types & negates all status ailments",
+    "vi": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Dark elemental damage, 15% damage reduction from Light types & negates all status ailments"
+  },
+  "MST_LEADERSKILLS_860900_NAME": {
+    "en": "Umbra Aura",
+    "es": "Umbra Aura",
+    "id": "Umbra Aura",
+    "pt": "Umbra Aura",
+    "th": "Umbra Aura",
+    "vi": "Umbra Aura"
   },
   "MST_LEADERSKILLS_8700_DESCRIPTION": {
     "en": "15% reduction of damage taken from Water and Fire types",
@@ -88078,149 +88390,5 @@
     "pt": "Tilith",
     "th": "ทิลิธ",
     "vi": "Tilith"
-  },
-  "MST_MONSTERS_54351_NAME": {
-    "en": "Disciple Tilith",
-    "es": "Discípula Tilith",
-    "id": "Murid Tilith",
-    "pt": "Discípula Tilith",
-    "th": "ดิวซิเพิลทิลิธ",
-    "vi": "Disciple Tilith"
-  },
-  "MST_MONSTERS_54400_NAME": {
-    "en": "Goddess Tilith",
-    "es": "Diosa Tilith",
-    "id": "Dewi Tilith",
-    "pt": "Deusa Tilith",
-    "th": "ก็อดเดสทิลิธ",
-    "vi": "Nữ thần Tilith"
-  },
-  "MST_MONSTERS_54401_NAME": {
-    "en": "Goddess Tilith",
-    "es": "Diosa Tilith",
-    "id": "Dewi Tilith",
-    "pt": "Deusa Tilith",
-    "th": "ก็อดเดสทิลิธ",
-    "vi": "Nữ thần Tilith"
-  },
-  "MST_MONSTERS_54402_NAME": {
-    "en": "Goddess Tilith",
-    "es": "Diosa Tilith",
-    "id": "Dewi Tilith",
-    "pt": "Deusa Tilith",
-    "th": "ก็อดเดสทิลิธ",
-    "vi": "Nữ thần Tilith"
-  },
-  "MST_MONSTERS_54403_NAME": {
-    "en": "Goddess Tilith",
-    "es": "Diosa Tilith",
-    "id": "Dewi Tilith",
-    "pt": "Deusa Tilith",
-    "th": "ก็อดเดสทิลิธ",
-    "vi": "Goddess Tilith"
-  },
-  "MST_MONSTERS_54404_NAME": {
-    "en": "Goddess Tilith",
-    "es": "Goddess Tilith",
-    "id": "Goddess Tilith",
-    "pt": "Goddess Tilith",
-    "th": "ก็อดเดส ทิลิธ",
-    "vi": "Goddess Tilith"
-  },
-  "MST_MONSTERS_54450_NAME": {
-    "en": "Mila",
-    "es": "Mila",
-    "id": "Mila",
-    "pt": "Mila",
-    "th": "มิล่า",
-    "vi": "Mila"
-  },
-  "MST_MONSTERS_54451_NAME": {
-    "en": "Mila",
-    "es": "Mila",
-    "id": "Mila",
-    "pt": "Mila",
-    "th": "มิล่า",
-    "vi": "Mila"
-  },
-  "MST_MONSTERS_54452_NAME": {
-    "en": "Mila",
-    "es": "Mila",
-    "id": "Mila",
-    "pt": "Mila",
-    "th": "มิล่า",
-    "vi": "Mila"
-  },
-  "MST_MONSTERS_54453_NAME": {
-    "en": "Mila",
-    "es": "Mila",
-    "id": "Mila",
-    "pt": "Mila",
-    "th": "มิล่า",
-    "vi": "Mila"
-  },
-  "MST_MONSTERS_54454_NAME": {
-    "en": "Mila",
-    "es": "Mila",
-    "id": "Mila",
-    "pt": "Mila",
-    "th": "มิล่า",
-    "vi": "Mila"
-  },
-  "MST_MONSTERS_54455_NAME": {
-    "en": "Mila",
-    "es": "Mila",
-    "id": "Mila",
-    "pt": "Mila",
-    "th": "มิล่า",
-    "vi": "Mila"
-  },
-  "MST_MONSTERS_54456_NAME": {
-    "en": "Mila",
-    "es": "Mila",
-    "id": "Mila",
-    "pt": "Mila",
-    "th": "มิล่า",
-    "vi": "Mila"
-  },
-  "MST_MONSTERS_54457_NAME": {
-    "en": "Mila",
-    "es": "Mila",
-    "id": "Mila",
-    "pt": "Mila",
-    "th": "มิล่า",
-    "vi": "Mila"
-  },
-  "MST_MONSTERS_54458_NAME": {
-    "en": "Mila",
-    "es": "Mila",
-    "id": "Mila",
-    "pt": "Mila",
-    "th": "มิล่า",
-    "vi": "Mila"
-  },
-  "MST_MONSTERS_54459_NAME": {
-    "en": "Mila",
-    "es": "Mila",
-    "id": "Mila",
-    "pt": "Mila",
-    "th": "มิลา",
-    "vi": "Mila"
-  },
-  "MST_MONSTERS_54460_NAME": {
-    "en": "Mila",
-    "es": "Mila",
-    "id": "Mila",
-    "pt": "Mila",
-    "th": "มิล่า",
-    "vi": "Mila"
-  },
-  "MST_MONSTERS_54461_NAME": {
-    "en": "Mila",
-    "es": "Mila",
-    "id": "Mila",
-    "pt": "Mila",
-    "th": "มิล่า",
-    "vi": "Mila"
   }
 }
