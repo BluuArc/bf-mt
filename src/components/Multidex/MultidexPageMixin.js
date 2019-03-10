@@ -3,7 +3,7 @@ import MultidexPageBase from '@/components/Multidex/MultidexPageBase';
 import ModuleChecker from '@/components/ModuleChecker';
 
 export default {
-  props: ['query', 'viewId', 'server', 'filters'],
+  props: ['query', 'viewId', 'server', 'filters', 'isSelectMode'],
   components: {
     MainPageBase,
     MultidexPageBase,

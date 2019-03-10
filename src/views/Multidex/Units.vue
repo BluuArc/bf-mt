@@ -28,7 +28,11 @@
             v-for="key in keys"
             :key="key"
             xs12 sm6 md4 xl3>
-            <entry-card :to="getMultidexPathTo(key)" :entry="pageDb[key]" v-if="pageDb.hasOwnProperty(key)"/>
+            <entry-card
+              :to="!isSelectMode ? getMultidexPathTo(key) : undefined"
+              @click="() => isSelectMode && $emit('input', key)"
+              :entry="pageDb[key]"
+              v-if="pageDb.hasOwnProperty(key)"/>
           </v-flex>
         </template>
         <template v-else>
@@ -36,7 +40,11 @@
             v-for="key in keys"
             :key="key"
             lg1 sm2 xs3>
-            <icon-entry-card :to="getMultidexPathTo(key)" :entry="pageDb[key]" v-if="pageDb.hasOwnProperty(key)"/>
+            <icon-entry-card
+              :to="!isSelectMode ? getMultidexPathTo(key) : undefined"
+              @click="() => isSelectMode && $emit('input', key)"
+              :entry="pageDb[key]"
+              v-if="pageDb.hasOwnProperty(key)"/>
           </v-flex>
         </template>
       </v-layout>

@@ -4,7 +4,18 @@
       {{ activeUnit }}
     </v-flex>
     <v-flex xs12>
-      Unit selector: {{ activeUnit.id }}
+      <v-btn @click="activeDialog = 'units'">
+        Unit selector: {{ activeUnit.id }}
+      </v-btn>
+      <!-- <v-dialog
+        :value="activeDialog === 'units'"
+        @input="($ev) => activeDialog = $ev ? 'units' : ''"
+        fullscreen
+        hide-overlay
+        lazy
+        transition="dialog-bottom-transition">
+        <unit-selector :isSelectMode="true" @input="onSelectUnit"/>
+      </v-dialog> -->
     </v-flex>
     <v-flex xs12 sm4>
       Position Selector {{ activeUnit.position }}
@@ -33,9 +44,16 @@
 </template>
 
 <script>
+import UnitSelector from '@/views/Multidex/Units';
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
+import { Logger } from '@/modules/Logger';
+
+const logger = new Logger({ prefix: '[UnitEntryEditor]' });
 export default {
   mixins: [GettersMixin],
+  components: {
+    UnitSelector,
+  },
   props: {
     squad: {
       type: Object,
@@ -49,6 +67,17 @@ export default {
   computed: {
     activeUnit () {
       return this.squad.units[this.selectedIndex] || {};
+    },
+  },
+  data () {
+    return {
+      activeDialog: '',
+    };
+  },
+  methods: {
+    onSelectUnit (input) {
+      logger.warn(input);
+      this.activeDialog = '';
     },
   },
 };
