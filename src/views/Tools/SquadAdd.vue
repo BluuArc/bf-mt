@@ -107,6 +107,7 @@ export default {
     };
   },
   mounted () {
+    this.$store.commit('setHtmlOverflowDisableState', false);
     if (this.inputCode) {
       this.attemptSquadImport();
     } else {

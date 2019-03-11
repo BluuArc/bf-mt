@@ -122,3 +122,17 @@ export function splitEffectsByCondition (effects = [], { unitById, itemById }) {
     }))
     .filter(({ effects }) => effects.length > 0);
 }
+
+export function isValidSkill (skill) {
+  const expectedFields = ['rarity', 'name', 'id', 'desc'];
+  return typeof skill === 'object' && expectedFields.every(f => skill[f] !== undefined);
+}
+
+export function getEmptySkill () {
+  return {
+    id: 0,
+    name: 'None',
+    desc: 'No Extra Skill selected',
+    rarity: 0,
+  };
+}

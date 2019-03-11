@@ -1,46 +1,40 @@
 <template>
   <v-layout row wrap class="unit-entry-editor">
-    <!-- <v-flex xs12>
-      {{ activeUnit }}
-    </v-flex> -->
+    <v-flex xs12>
+      {{ activeUnit }} {{ localSquad }}
+    </v-flex>
     <v-layout row style="width: 100%;" wrap>
-      <!-- <v-btn flat @click="activeDialog = 'units'">
-        Unit selector: {{ activeUnit.id }}
-      </v-btn> -->
+      <v-flex xs12>
+        <v-subheader>Unit</v-subheader>
+      </v-flex>
       <v-flex xs12 sm6>
-        <unit-card :key="activeUnit" :entry="unitData" class="no-highlight"/>
+        <unit-card
+          :key="unitData.id"
+          :entry="unitData"
+          class="no-highlight ml-1"/>
       </v-flex>
       <v-layout row wrap grid>
         <v-flex xs12 class="px-1">
-          <v-btn block>
+          <v-btn block @click="activeDialog = 'units'">
             Select Unit
           </v-btn>
         </v-flex>
         <v-flex sm6 class="px-1">
-          <v-btn block>
+          <v-btn block :disabled="unitData.name === squadFillerMapping.EMPTY">
             Set Empty
           </v-btn>
         </v-flex>
         <v-flex sm6 class="px-1">
-          <v-btn block>
+          <v-btn block :disabled="unitData.name === squadFillerMapping.ANY">
             Set Any
           </v-btn>
         </v-flex>
       </v-layout>
-      <!-- <v-dialog
-        :value="activeDialog === 'units'"
-        @input="($ev) => activeDialog = $ev ? 'units' : ''"
-        fullscreen
-        hide-overlay
-        lazy
-        transition="dialog-bottom-transition">
-        <unit-selector :isSelectMode="true" @input="onSelectUnit"/>
-      </v-dialog> -->
     </v-layout>
     <v-flex xs12>
       <v-container fluid grid-list-md class="pa-1">
         <v-flex xs12>
-          Position
+          <v-subheader>Position</v-subheader>
         </v-flex>
         <v-layout row wrap>
           <v-flex
@@ -55,36 +49,65 @@
       </v-container>
     </v-flex>
     <v-flex xs12 sm4>
-      Lead/Friend selector
-      <!-- <v-select :items=""
-      <v-layout align-items-center row wrap>
-        <v-flex xs12 md4 class="px-1">
-          <v-btn block>
-            Leader
-          </v-btn>
-        </v-flex>
-        <v-flex xs12 md4 class="px-1">
-          <v-btn block>
-            Friend
-          </v-btn>
-        </v-flex>
-        <v-flex xs12 md4 class="px-1">
-          <v-btn block>
-            Neither
-          </v-btn>
-        </v-flex>
-      </v-layout> -->
+      <v-select
+        class="px-1"
+        :value="leadFriendStatus"
+        :items="leadFriendPossibilities"
+        label="Leader or Friend?"/>
     </v-flex>
     <v-flex xs6 sm4>
-      BB Order Selector {{ activeUnit.bbOrder}}
+      <v-layout align-items-center>
+        <v-flex style="flex-shrink: 0;" class="d-flex-container items-center">
+          <v-subheader class="pl-1" style="flex: auto;">BB Order</v-subheader>
+        </v-flex>
+        <v-flex class="d-flex-container items-center">
+        <v-select
+          class="pr-1"
+          :value="activeUnit.bbOrder"
+          :items="bbOrderPossibilities"/>
+        </v-flex>
+      </v-layout>
     </v-flex>
     <v-flex xs6 sm4>
-      BB Type Selector {{ activeUnit.bbType }}
+      <v-layout align-items-center>
+        <v-flex style="flex-shrink: 0;" class="d-flex-container items-center">
+          <v-subheader class="pl-1" style="flex: auto;">Action</v-subheader>
+        </v-flex>
+        <v-flex class="d-flex-container items-center">
+        <v-select
+          class="pr-1"
+          :value="activeUnit.bbType"
+          :items="actionPossibilities"/>
+        </v-flex>
+      </v-layout>
     </v-flex>
     <v-flex xs12>
-      Extra Skill selector {{ activeUnit.es }}
+      <v-layout row style="width: 100%;" wrap>
+      <v-flex xs12>
+        <v-subheader>Extra Skill</v-subheader>
+      </v-flex>
+      <v-flex xs12 sm6>
+        <extra-skill-card
+          :showAssociatedUnits="false"
+          :key="esData.id"
+          :entry="esData"
+          class="no-highlight ml-1"/>
+      </v-flex>
+      <v-layout row wrap align-center>
+        <v-flex xs12 class="px-1">
+          <v-btn block @click="activeDialog = 'units'">
+            Select Extra Skill
+          </v-btn>
+        </v-flex>
+        <v-flex xs12 class="px-1">
+          <v-btn block :disabled="esData.id === 0">
+            Clear Extra Skill
+          </v-btn>
+        </v-flex>
+      </v-layout>
+    </v-layout>
     </v-flex>
-    <v-layout row>
+    <v-layout row wrap>
       <v-flex xs12 sm6>
         Sphere 1 Selector {{ activeUnit.spheres[0] }}
       </v-flex>
@@ -101,9 +124,11 @@
 <script>
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 import UnitCard from '@/components/Multidex/Units/EntryCard';
+import ExtraSkillCard from '@/components/Multidex/ExtraSkills/EntryCard';
 import { Logger } from '@/modules/Logger';
-import { squadFillerMapping, unitPositionMapping } from '@/modules/constants';
+import { squadFillerMapping, unitPositionMapping, squadUnitActions } from '@/modules/constants';
 import { isValidUnit, getFillerUnit } from '@/modules/core/units';
+import { isValidSkill, getEmptySkill } from '@/modules/core/extra-skills';
 import { cloneSquad } from '@/modules/core/squads';
 
 const logger = new Logger({ prefix: '[UnitEntryEditor]' });
@@ -111,6 +136,7 @@ export default {
   mixins: [GettersMixin],
   components: {
     UnitCard,
+    ExtraSkillCard,
   },
   props: {
     squad: {
@@ -132,11 +158,45 @@ export default {
         ? initialData
         : getFillerUnit(this.activeUnit.id === squadFillerMapping.EMPTY);
     },
+    esData () {
+      const initialData = this.getExtraSkill(this.activeUnit.es);
+      return isValidSkill(initialData)
+        ? initialData
+        : getEmptySkill();
+    },
     unitPositionMapping: () => unitPositionMapping,
+    squadFillerMapping: () => squadFillerMapping,
     leadFriendPossibilities: () => ['Leader', 'Friend', 'Neither'],
-    // leadFriendStatus () {
-    //   if ()
-    // },
+    leadFriendStatus () {
+      return [
+        this.squad.lead === this.selectedIndex && 'Leader',
+        this.squad.friend === this.selectedIndex && 'Friend',
+        'Neither',
+      ].find(v => v);
+    },
+    bbOrderPossibilities: () => Object.freeze(new Array(6).fill(0).map((_, i) => i)),
+    actionPossibilities: () => [
+      {
+        text: 'None',
+        value: squadUnitActions.NONE,
+      },
+      {
+        text: 'Attack',
+        value: squadUnitActions.ATK,
+      },
+      {
+        text: 'BB',
+        value: squadUnitActions.BB,
+      },
+      {
+        text: 'SBB',
+        value: squadUnitActions.SBB,
+      },
+      {
+        text: 'UBB',
+        value: squadUnitActions.UBB,
+      },
+    ],
   },
   data () {
     return {

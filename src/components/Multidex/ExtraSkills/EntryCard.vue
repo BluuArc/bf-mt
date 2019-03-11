@@ -22,7 +22,7 @@
           <span v-else>No description.</span>
         </v-flex>
       </v-layout>
-      <v-layout row wrap v-if="entry.associated_units" class="d-align-items-center">
+      <v-layout row wrap v-if="showAssociatedUnits && entry.associated_units" class="d-align-items-center">
         <v-flex xs5 sm4 class="text-xs-center">
           Associated Units:
         </v-flex>
@@ -48,6 +48,12 @@ import UnitThumbnail from '@/components/Multidex/Units/UnitThumbnail';
 
 export default {
   mixins: [EntryCardMixin],
+  props: {
+    showAssociatedUnits: {
+      type: Boolean,
+      default: true,
+    },
+  },
   components: {
     RarityIcon,
     UnitThumbnail,

@@ -200,7 +200,7 @@ export function getSquadErrors (squad = {}, {
       }
 
       // check order
-      if (isNaN(unit.bbOrder)) {
+      if (isNaN(unit.bbOrder) || +unit.bbOrder < 1 || +unit.bbOrder > 6) {
         errors.push(makeErrorEntry(
           generatePathKey(pathEntry, 'bbOrder'),
           `Order [${unit.bbOrder}] is not valid`,
