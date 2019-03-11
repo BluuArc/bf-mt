@@ -33,7 +33,7 @@ export function makeSquadUnitEntry ({
     id,
     position,
     es,
-    spheres,
+    spheres: spheres.slice(),
     bbOrder,
     bbType,
     sp,
@@ -65,6 +65,16 @@ export function generateDefaultSquad (allEmpty = false) {
         position: unitPositionMapping[i],
         bbOrder: i + 1,
       })),
+  };
+}
+
+export function cloneSquad (squad = {}) {
+  const { lead, friend, name } = squad;
+  return {
+    lead,
+    friend,
+    name,
+    units: squad.units.map(makeSquadUnitEntry),
   };
 }
 

@@ -56,9 +56,12 @@
             </v-container>
           </div>
         </unit-entry>
+        <v-flex v-if="squad.units[selectedIndex]" xs12 class="py-1">
+          <v-divider/>
+        </v-flex>
         <unit-entry-editor
           v-if="squad.units[selectedIndex]"
-          class="pa-2"
+          class="py-2"
           :squad="squad"
           :getUnit="getUnit"
           :getItem="getItem"

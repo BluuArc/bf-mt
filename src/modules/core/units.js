@@ -1,5 +1,9 @@
 import { attackingProcs } from '@/modules/EffectProcessor/constants';
-import { spCategoryMapping, moveTypeMapping } from '@/modules/constants';
+import {
+  spCategoryMapping,
+  moveTypeMapping,
+  squadFillerMapping,
+} from '@/modules/constants';
 import { safeGet } from '@/modules/utils';
 
 export function getExtraAttacks (unit) {
@@ -226,6 +230,7 @@ export function getColoClassUsage (cost = 0, isGlobal = true) {
     'Hero', // all units can go to hero class
   ].filter(v => v);
 }
+
 export function getHighestRarityUnit (category = 0, unitById = (id) => ({ name: id })) {
   for (let i = 9; i >= 0; --i) {
     const id = `${+category + i}`;
@@ -234,4 +239,22 @@ export function getHighestRarityUnit (category = 0, unitById = (id) => ({ name: 
       return unit;
     }
   }
+}
+
+export function isValidUnit (unit) {
+  const expectedFields = ['element', 'name', 'id'];
+  return typeof unit === 'object' && expectedFields.every(f => unit[f] !== undefined);
+}
+
+export function getFillerUnit (isEmpty = false, element = 'fire') {
+  return {
+    id: 0,
+    name: isEmpty ? squadFillerMapping.EMPTY : squadFillerMapping.ANY,
+    rarity: 1,
+    element,
+    cost: 0,
+    gender: 'other',
+    guide_id: 0,
+    kind: 'normal',
+  };
 }

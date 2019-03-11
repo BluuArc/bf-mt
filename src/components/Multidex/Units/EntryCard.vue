@@ -1,5 +1,5 @@
 <template>
-  <base-entry-card :to="to">
+  <base-entry-card :to="to || undefined">
     <v-container fluid class="pa-3">
       <v-layout row>
         <v-flex xs3 class="text-xs-center d-align-self-center pb-0">
@@ -14,9 +14,9 @@
             <v-layout row>
               <v-flex>
                 <div class="d-flex-container items-center">
-                  <element-icon :element="entry.element" :displaySize="20" class="mr-1"/>
+                  <element-icon v-if="entry.element" :element="entry.element" :displaySize="20" class="mr-1"/>
                   <h1 class="subheading d-inline-block" style="word-break: break-word;">
-                    <b v-text="entry.name"/>
+                    <b v-text="entry.name || entry.id"/>
                   </h1>
                 </div>
               </v-flex>
