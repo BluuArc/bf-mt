@@ -57,7 +57,7 @@
     </v-flex>
     <v-flex xs6 sm4>
       <v-layout align-items-center>
-        <v-flex style="flex-shrink: 0;" class="d-flex-container items-center">
+        <v-flex style="flex: none;" class="d-flex-container items-center">
           <v-subheader class="pl-1" style="flex: auto;">BB Order</v-subheader>
         </v-flex>
         <v-flex class="d-flex-container items-center">
@@ -70,7 +70,7 @@
     </v-flex>
     <v-flex xs6 sm4>
       <v-layout align-items-center>
-        <v-flex style="flex-shrink: 0;" class="d-flex-container items-center">
+        <v-flex style="flex: none;" class="d-flex-container items-center">
           <v-subheader class="pl-1" style="flex: auto;">Action</v-subheader>
         </v-flex>
         <v-flex class="d-flex-container items-center">
@@ -81,8 +81,7 @@
         </v-flex>
       </v-layout>
     </v-flex>
-    <v-flex xs12>
-      <v-layout row style="width: 100%;" wrap>
+    <v-layout row style="width: 100%; padding-bottom: 8px;" wrap>
       <v-flex xs12>
         <v-subheader>Extra Skill</v-subheader>
       </v-flex>
@@ -93,26 +92,70 @@
           :entry="esData"
           class="no-highlight ml-1"/>
       </v-flex>
-      <v-layout row wrap align-center>
-        <v-flex xs12 class="px-1">
-          <v-btn block @click="activeDialog = 'units'">
-            Select Extra Skill
-          </v-btn>
-        </v-flex>
-        <v-flex xs12 class="px-1">
-          <v-btn block :disabled="esData.id === 0">
-            Clear Extra Skill
-          </v-btn>
-        </v-flex>
-      </v-layout>
-    </v-layout>
-    </v-flex>
-    <v-layout row wrap>
       <v-flex xs12 sm6>
-        Sphere 1 Selector {{ activeUnit.spheres[0] }}
+        <v-layout row wrap align-center fill-height>
+          <v-flex xs12 class="px-1">
+            <v-btn block @click="activeDialog = 'units'">
+              Select Extra Skill
+            </v-btn>
+          </v-flex>
+          <v-flex xs12 class="px-1">
+            <v-btn block :disabled="esData.id === 0">
+              Clear Extra Skill
+            </v-btn>
+          </v-flex>
+        </v-layout>
+      </v-flex>
+    </v-layout>
+    <v-layout row wrap>
+      <v-flex xs12 v-if="$vuetify.breakpoint.smAndUp">
+        <v-subheader>Spheres</v-subheader>
       </v-flex>
       <v-flex xs12 sm6>
-        Sphere 2 Selector {{ activeUnit.spheres[1] }}
+        <v-layout column>
+          <v-flex v-if="$vuetify.breakpoint.xsOnly">
+            <v-subheader>Sphere 1</v-subheader>
+          </v-flex>
+          <v-flex>
+            <sphere-card
+              :key="(sphereData[0] || emptySphere).id"
+              :entry="(sphereData[0] || emptySphere)"
+              class="no-highlight ml-1"/>
+          </v-flex>
+          <v-flex class="px-1">
+            <v-btn block @click="activeDialog = 'units'">
+              Select Sphere 1
+            </v-btn>
+          </v-flex>
+          <v-flex class="px-1">
+            <v-btn block :disabled="!sphereData[0]">
+              Clear Sphere 1
+            </v-btn>
+          </v-flex>
+        </v-layout>
+      </v-flex>
+      <v-flex xs12 sm6>
+        <v-layout column>
+          <v-flex v-if="$vuetify.breakpoint.xsOnly">
+            <v-subheader>Sphere 2</v-subheader>
+          </v-flex>
+          <v-flex>
+            <sphere-card
+              :key="(sphereData[1] || emptySphere).id"
+              :entry="(sphereData[1] || emptySphere)"
+              class="no-highlight ml-1"/>
+          </v-flex>
+          <v-flex class="px-1">
+            <v-btn block @click="activeDialog = 'units'">
+              Select Sphere 2
+            </v-btn>
+          </v-flex>
+          <v-flex class="px-1">
+            <v-btn block :disabled="!sphereData[1]">
+              Clear Sphere 2
+            </v-btn>
+          </v-flex>
+        </v-layout>
       </v-flex>
     </v-layout>
     <v-flex xs12>
@@ -125,10 +168,12 @@
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 import UnitCard from '@/components/Multidex/Units/EntryCard';
 import ExtraSkillCard from '@/components/Multidex/ExtraSkills/EntryCard';
+import SphereCard from '@/components/Multidex/Items/EntryCard';
 import { Logger } from '@/modules/Logger';
 import { squadFillerMapping, unitPositionMapping, squadUnitActions } from '@/modules/constants';
 import { isValidUnit, getFillerUnit } from '@/modules/core/units';
 import { isValidSkill, getEmptySkill } from '@/modules/core/extra-skills';
+import { isValidSphere, getEmptySphere } from '@/modules/core/items';
 import { cloneSquad } from '@/modules/core/squads';
 
 const logger = new Logger({ prefix: '[UnitEntryEditor]' });
@@ -137,6 +182,7 @@ export default {
   components: {
     UnitCard,
     ExtraSkillCard,
+    SphereCard,
   },
   props: {
     squad: {
@@ -164,6 +210,17 @@ export default {
         ? initialData
         : getEmptySkill();
     },
+    sphereData () {
+      return this.activeUnit.spheres.map(sphereId => {
+        const initialData = this.getItem(sphereId);
+        return isValidSphere(initialData)
+          ? initialData
+          : this.emptySphere;
+      });
+    },
+    emptySphere () {
+      return getEmptySphere();
+    },
     unitPositionMapping: () => unitPositionMapping,
     squadFillerMapping: () => squadFillerMapping,
     leadFriendPossibilities: () => ['Leader', 'Friend', 'Neither'],
@@ -174,7 +231,7 @@ export default {
         'Neither',
       ].find(v => v);
     },
-    bbOrderPossibilities: () => Object.freeze(new Array(6).fill(0).map((_, i) => i)),
+    bbOrderPossibilities: () => Object.freeze(new Array(6).fill(0).map((_, i) => i + 1)),
     actionPossibilities: () => [
       {
         text: 'None',

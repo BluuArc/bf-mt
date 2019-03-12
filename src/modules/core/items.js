@@ -207,3 +207,20 @@ export async function getCraftablesInRecipeOfItem (item = {}, pageDb = {}) {
 export function convertMaterialsObjectToArray (input) {
   return Object.entries(input).map(([id, count]) => ({ count, id }));
 }
+
+export function isValidSphere (skill) {
+  const expectedFields = ['rarity', 'name', 'id', 'desc', 'type', 'max_stack', 'sphere type', 'thumbnail'];
+  return typeof skill === 'object' && expectedFields.every(f => skill[f] !== undefined);
+}
+
+export function getEmptySphere () {
+  return {
+    id: 0,
+    name: 'None',
+    desc: 'No Sphere selected',
+    rarity: 0,
+    type: 'sphere',
+    'sphere type': 0, // none
+    max_stack: 0,
+  };
+}
