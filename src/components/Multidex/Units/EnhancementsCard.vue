@@ -16,7 +16,7 @@
       </v-layout>
     </template>
     <template slot="table">
-      <v-container fluid class="pa-0 sp-table" v-if="feSkills">
+      <!-- <v-container fluid class="pa-0 sp-table" v-if="feSkills">
         <v-layout row class="sp-table--headers d-align-items-center">
           <v-flex xs2 lg1>
             <v-checkbox
@@ -78,12 +78,14 @@
           </v-flex>
           <v-slide-y-transition>
             <v-flex xs12 v-show="showTables.includes(index)" style="overflow-x: auto;">
-              <!-- lazily render buff table once -->
               <buff-table v-if="showTables.includes(index) || effectCache[skillEntry.id]" :effects="getSkillEffects(skillEntry)" :showHeaders="true"/>
             </v-flex>
           </v-slide-y-transition>
         </v-layout>
-      </v-container>
+      </v-container> -->
+      <sp-build-table
+        v-if="feSkills"
+        :feSkills="feSkills"/>
       <span v-else>No SP data found.</span>
     </template>
     <template slot="share-build" slot-scope="{ activeTabIndex }">
@@ -115,7 +117,8 @@ import CardTitleWithLink from '@/components/CardTitleWithLink';
 import SpIcon from '@/components/Multidex/Units/SpIcon';
 import BuffTable from '@/components/Multidex/BuffTable/MainTable';
 import TextViewer from '@/components/TextViewer';
-import { getSpSkillEffects, spIndexToCode, spCodeToIndex } from '@/modules/core/units';
+import SpBuildTable from '@/components/Multidex/Units/SpBuildTable';
+import { getSpEntryEffects, spIndexToCode, spCodeToIndex } from '@/modules/core/units';
 import debounce from 'lodash/debounce';
 
 export default {
@@ -133,6 +136,7 @@ export default {
     SpIcon,
     BuffTable,
     TextViewer,
+    SpBuildTable,
   },
   computed: {
     feSkills () {
@@ -208,7 +212,7 @@ export default {
       if (this.effectCache[skillEntry.id]) {
         return this.effectCache[skillEntry.id];
       }
-      const effects = getSpSkillEffects(skillEntry);
+      const effects = getSpEntryEffects(skillEntry);
       // use cacheResult boolean to not prematurely render tables when getting allEffects data
       if (cacheResult) {
         this.effectCache[skillEntry.id] = effects;
@@ -341,42 +345,3 @@ export default {
   },
 };
 </script>
-
-<style lang="less">
-.sp-table {
-  --table-border-color: var(--background-color-alt);
-  --table-background-color: var(--background-color-alt--lighten-1);
-  --table-border-settings: 1px solid var(--table-border-color);
-
-  .v-input--checkbox {
-    margin-top: 0;
-    padding-left: 4px;
-
-    .v-input__control {
-      text-align: center;
-    }
-
-    .v-input__slot {
-      margin-bottom: 0;
-    }
-
-    .v-messages {
-      display: none;
-    }
-  }
-
-  .sp-table--headers {
-    font-weight: bold;
-    border-bottom: var(--table-border-settings);
-  }
-
-  .sp-table--row {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-right: 8px;
-    &:nth-child(odd) {
-      background-color: var(--table-border-color);
-    }
-  }
-}
-</style>

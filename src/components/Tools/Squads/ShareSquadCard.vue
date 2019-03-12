@@ -101,7 +101,7 @@
 </template>
 
 <script>
-import { spCodeToIndex, getSkillDescription, getSpCost } from '@/modules/core/units';
+import { spCodeToIndex, getSpDescription, getSpCost } from '@/modules/core/units';
 import { squadToShorthand } from '@/modules/core/squads';
 import { squadUnitActions } from '@/modules/constants';
 import CardTabsContainer from '@/components/CardTabsContainer';
@@ -293,7 +293,7 @@ export default {
         .filter(v => v.skill) // only get valid skills
         .map(v => ({
           code: v.code,
-          text: getSkillDescription(v.skill),
+          text: getSpDescription(v.skill),
           cost: v.skill.skill.bp,
         }));
     },

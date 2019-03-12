@@ -62,9 +62,9 @@ export function getSpCategory (num) {
   return spCategoryMapping[+num];
 }
 
-export function getSpSkillEffects (skillEntry) {
+export function getSpEntryEffects (spEntry = {}) {
   const effects = [];
-  skillEntry.skill.effects.forEach(e => {
+  spEntry.skill.effects.forEach(e => {
     // distinguish between passive and add to bb/sbb/ubb
     Object.keys(e).forEach(type => {
       const effect = e[type];
@@ -74,17 +74,8 @@ export function getSpSkillEffects (skillEntry) {
   return effects;
 }
 
-export function getSkillDescription (skillEntry) {
-  const { desc = '', name = '' } = skillEntry.skill;
-  if (desc.trim() === name.trim()) {
-    return desc || 'No Description';
-  } else {
-    return (desc.length > name.length) ? desc : [name, desc ? `(${desc})` : ''].filter(val => val).join(' ');
-  }
-}
-
 export function getSpCost (allFeSkills, enhancements = '') {
-  const isValidFeSKills = typeof allFeSkills === 'object' && Object.keys(allFeSkills).length > 0;
+  const isValidFeSKills = Array.isArray(allFeSkills) && allFeSkills.length > 0;
   if (!isValidFeSKills || !enhancements) {
     return 0;
   }
@@ -100,6 +91,33 @@ export function spCodeToIndex (char) {
 
 export function spIndexToCode (index) {
   return String.fromCharCode(index >= 26 ? (index - 26 + 'a'.charCodeAt(0)) : (index + 'A'.charCodeAt(0)));
+}
+
+export function getSpEntryWithId (id, skills = []) {
+  let skillId = id;
+  if (skillId.indexOf('@') > -1) {
+    skillId = skillId.split('@')[1];
+  }
+  return skills.find(s => (s.id || '').toString() === skillId);
+}
+
+export function getSpDescription (spEntry = {}) {
+  const { desc = '', name = '' } = spEntry.skill;
+  if (desc.trim() === name.trim()) {
+    return desc || 'No Description';
+  } else {
+    return (desc.length > name.length)
+      ? desc
+      : [name, desc ? `(${desc})` : ''].filter(val => val).join(' ');
+  }
+}
+
+export function getSpDependencyText (spEntry = {}, allSkills = []) {
+  const dependentSpEntry = getSpEntryWithId(spEntry.dependency, allSkills);
+
+  return dependentSpEntry
+    ? `Requires "${getSpDescription(dependentSpEntry)}"`
+    : (spEntry['dependency comment'] || 'Requires another enhancement');
 }
 
 export function hasEvolutions (unit) {
