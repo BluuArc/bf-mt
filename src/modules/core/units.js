@@ -93,12 +93,19 @@ export function spIndexToCode (index) {
   return String.fromCharCode(index >= 26 ? (index - 26 + 'a'.charCodeAt(0)) : (index + 'A'.charCodeAt(0)));
 }
 
-export function getSpEntryWithId (id, skills = []) {
-  let skillId = id;
-  if (skillId.indexOf('@') > -1) {
-    skillId = skillId.split('@')[1];
+export function getSpEntryId (id = '') {
+  let spId = id;
+  if (typeof spId === 'object') {
+    spId = id.id; // given an spEntry object
   }
-  return skills.find(s => (s.id || '').toString() === skillId);
+  return id.includes('@')
+    ? id.split('@')[1]
+    : id;
+}
+
+export function getSpEntryWithId (id, spEntries = []) {
+  const entryId = getSpEntryId(id);
+  return spEntries.find(s => getSpEntryId(s.id).toString() === entryId);
 }
 
 export function getSpDescription (spEntry = {}) {
@@ -112,12 +119,39 @@ export function getSpDescription (spEntry = {}) {
   }
 }
 
-export function getSpDependencyText (spEntry = {}, allSkills = []) {
-  const dependentSpEntry = getSpEntryWithId(spEntry.dependency, allSkills);
+export function getSpDependencyText (spEntry = {}, allEntries = []) {
+  const dependentSpEntry = getSpEntryWithId(spEntry.dependency, allEntries);
 
   return dependentSpEntry
     ? `Requires "${getSpDescription(dependentSpEntry)}"`
     : (spEntry['dependency comment'] || 'Requires another enhancement');
+}
+
+export function getAllDependenciesFromSpEntry (spEntry = {}, allEntries = []) {
+  const dependencies = [];
+  if (spEntry.dependency) {
+    const dependencyId = getSpEntryId(spEntry.dependency);
+    const dependencyIndex = allEntries.findIndex(s => getSpEntryId(s.id).toString() === dependencyId);
+    if (dependencyIndex > -1) {
+      dependencies.push(spIndexToCode(dependencyIndex));
+      const subDependencies = getAllDependenciesFromSpEntry(allEntries[dependencyIndex], allEntries);
+      subDependencies.forEach(subDependency => {
+        dependencies.push(subDependency);
+      });
+    }
+  }
+  return dependencies;
+}
+
+export function getAllEntriesThatDependOnSpEntry (spEntry = {}, allEntries = []) {
+  const dependents = allEntries
+    .map((entry, index) => ({ entry, index }))
+    .filter(({ entry }) => {
+      return entry.dependency && entry.dependency.includes(spEntry.id);
+    }).map(({ index }) => spIndexToCode(index));
+  const subDependents = dependents.map(depCode => getAllEntriesThatDependOnSpEntry(allEntries[spCodeToIndex(depCode)], allEntries))
+    .reduce((acc, val) => acc.concat(val), []);
+  return Array.from(new Set(dependents.concat(subDependents)));
 }
 
 export function hasEvolutions (unit) {

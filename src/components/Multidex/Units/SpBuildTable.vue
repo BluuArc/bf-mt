@@ -24,8 +24,8 @@
         <td class="sp-column">
           <v-checkbox
             :label="`${spEntry.skill.bp} SP`"
-            v-model="selectedSpEntries"
-            :value="spIndexToCode(index)"
+            :input-value="selectedSpEntries.includes(spIndexToCode(index))"
+            @click.native="toggleSpEntry(index, spEntry)"
           />
         </td>
         <td class="type-column text-xs-center">
@@ -48,7 +48,8 @@ import {
   spIndexToCode,
   // spCodeToIndex,
   getSpCost,
-  // getSpEntryWithId,
+  getAllDependenciesFromSpEntry,
+  getAllEntriesThatDependOnSpEntry,
   getSpDescription,
   getSpDependencyText,
 } from '@/modules/core/units';
@@ -57,6 +58,7 @@ import debounce from 'lodash/debounce';
 import SpIcon from '@/components/Multidex/Units/SpIcon';
 import BuffTable from '@/components/Multidex/BuffTable/MainTable';
 
+// eslint-disable-next-line no-unused-vars
 const logger = new Logger({ prefix: '[SpBuildTable]' });
 export default {
   props: {
@@ -74,8 +76,11 @@ export default {
     BuffTable,
   },
   computed: {
+    allEnhancementsCode () {
+      return this.feSkills.map((_, i) => spIndexToCode(i)).join('');
+    },
     allEnhancementsSum () {
-      return getSpCost(this.feSkills, this.feSkills.map((_, i) => spIndexToCode(i)).join(''));
+      return getSpCost(this.feSkills, this.allEnhancementsCode);
     },
     overallState () {
       if (this.activeSkillSum === this.allEnhancementsSum) {
@@ -115,22 +120,39 @@ export default {
     },
     spIndexToCode,
     toggleOverallState () {
-      logger.debug(this.overallState);
-      // if (this.overallState === 'all') {
-      //   Object.keys(this.activeSkills)
-      //     .forEach(key => {
-      //       // this.toggleSkill(key, false);
-      //     });
-      // } else {
-      //   Object.keys(this.feSkills)
-      //     .forEach((s, i) => {
-      //       // this.toggleSkill(i, true);
-      //     });
-      // }
+      if (this.overallState === 'all') {
+        this.selectedSpEntries = [];
+      } else {
+        this.selectedSpEntries = this.allEnhancementsCode.split('');
+      }
     },
     computeActiveSum: debounce(function () {
-      this.activeSkillSum = getSpCost(this.feSkills, this.value);
+      this.activeSkillSum = getSpCost(this.feSkills, this.selectedSpEntries.join(''));
     }, 50),
+    toggleSpEntry (index, spEntry) {
+      const code = spIndexToCode(index);
+      const isCurrentlyActive = this.selectedSpEntries.includes(code);
+      let newEntries = this.selectedSpEntries.slice();
+      if (isCurrentlyActive) {
+        // toggle off entry and entries dependent on it
+        const dependentEntries = getAllEntriesThatDependOnSpEntry(spEntry, this.feSkills);
+        newEntries = newEntries.filter(activeCode => {
+          return activeCode !== code && !dependentEntries.includes(activeCode);
+        });
+      } else {
+        // toggle on entry and entries it depends on
+        newEntries.push(code);
+
+        const dependencies = getAllDependenciesFromSpEntry(spEntry, this.feSkills);
+        dependencies.forEach(depCode => {
+          if (!newEntries.includes(depCode)) {
+            newEntries.push(depCode);
+          }
+        });
+      }
+
+      this.selectedSpEntries = newEntries;
+    },
   },
   watch: {
     value: {
@@ -140,7 +162,9 @@ export default {
       },
     },
     selectedSpEntries (newValue) {
-      const enhancementCode = newValue.join('');
+      this.computeActiveSum();
+      const enhancementCode = newValue.slice().sort().join('');
+      logger.warn('code', enhancementCode, this.value);
       if (enhancementCode !== this.value) {
         this.$emit('input', enhancementCode);
       }
@@ -168,38 +192,14 @@ table.sp-table {
     }
   }
 
-  // .v-input--checkbox {
-  //   margin-top: 0;
-  //   padding-left: 4px;
-
-  //   .v-input__control {
-  //     text-align: center;
-  //   }
-
-  //   .v-input__slot {
-  //     margin-bottom: 0;
-  //   }
-
-  //   .v-messages {
-  //     display: none;
-  //   }
-  // }
-
   & > thead > th {
     font-weight: bold;
     border-bottom: var(--table-border-settings);
   }
 
   & > tbody > tr {
-    // padding-top: 8px;
-    // padding-bottom: 8px;
-    // padding-right: 8px;
-    &:nth-child(odd) {
+    &:nth-child(even) {
       background-color: var(--table-border-color);
-
-      // & > td {
-      //   background-color: var(--table-border-color);
-      // }
     }
   }
 }

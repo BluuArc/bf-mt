@@ -85,6 +85,7 @@
       </v-container> -->
       <sp-build-table
         v-if="feSkills"
+        v-model="activeEnhancements"
         :feSkills="feSkills"/>
       <span v-else>No SP data found.</span>
     </template>
@@ -118,7 +119,13 @@ import SpIcon from '@/components/Multidex/Units/SpIcon';
 import BuffTable from '@/components/Multidex/BuffTable/MainTable';
 import TextViewer from '@/components/TextViewer';
 import SpBuildTable from '@/components/Multidex/Units/SpBuildTable';
-import { getSpEntryEffects, spIndexToCode, spCodeToIndex } from '@/modules/core/units';
+import {
+  getSpEntryEffects,
+  // spIndexToCode,
+  spCodeToIndex,
+  getSpDescription,
+  getSpCost,
+} from '@/modules/core/units';
 import debounce from 'lodash/debounce';
 
 export default {
@@ -165,7 +172,7 @@ export default {
     },
     allEffects () {
       return !this.feSkills ? [] : this.feSkills
-        .map(s => this.getSkillEffects(s, false))
+        .map(s => getSpEntryEffects(s))
         .reduce((acc, val) => acc.concat(val), []);
     },
   },
@@ -179,84 +186,84 @@ export default {
       copyBullets: false,
       copyCode: false,
       effectCache: {},
+      activeEnhancements: '',
     };
   },
   methods: {
-    spIndexToCode,
-    getSPSkillWithID (id) {
-      let skillId = id;
-      if (skillId.indexOf('@') > -1) {
-        skillId = skillId.split('@')[1];
-      }
-      const result = this.feSkills.filter(s => s.id.toString() === skillId);
-      return result[0];
-    },
-    getSkillDescription (skillEntry) {
-      const { desc = '', name = '' } = skillEntry.skill;
-      if (desc.trim() === name.trim()) {
-        return desc || 'No Description';
-      } else {
-        return (desc.length > name.length) ? desc : [name, desc ? `(${desc})` : ''].filter(val => val).join(' ');
-      }
-    },
-    getDependencyText (skillEntry) {
-      const dependentSkillEntry = this.getSPSkillWithID(skillEntry.dependency);
+    // spIndexToCode,
+    // getSPSkillWithID (id) {
+    //   let skillId = id;
+    //   if (skillId.indexOf('@') > -1) {
+    //     skillId = skillId.split('@')[1];
+    //   }
+    //   const result = this.feSkills.filter(s => s.id.toString() === skillId);
+    //   return result[0];
+    // },
+    // getSkillDescription (skillEntry) {
+    //   const { desc = '', name = '' } = skillEntry.skill;
+    //   if (desc.trim() === name.trim()) {
+    //     return desc || 'No Description';
+    //   } else {
+    //     return (desc.length > name.length) ? desc : [name, desc ? `(${desc})` : ''].filter(val => val).join(' ');
+    //   }
+    // },
+    // getDependencyText (skillEntry) {
+    //   const dependentSkillEntry = this.getSPSkillWithID(skillEntry.dependency);
 
-      if (dependentSkillEntry) {
-        return `Requires "${dependentSkillEntry.skill.desc}"`;
-      }
+    //   if (dependentSkillEntry) {
+    //     return `Requires "${dependentSkillEntry.skill.desc}"`;
+    //   }
 
-      return skillEntry['dependency comment'] || 'Requires another enhancement';
-    },
-    getSkillEffects (skillEntry, cacheResult = true) {
-      if (this.effectCache[skillEntry.id]) {
-        return this.effectCache[skillEntry.id];
-      }
-      const effects = getSpEntryEffects(skillEntry);
-      // use cacheResult boolean to not prematurely render tables when getting allEffects data
-      if (cacheResult) {
-        this.effectCache[skillEntry.id] = effects;
-      }
-      return effects;
-    },
-    toggleOverallState () {
-      if (this.overallState === 'all') {
-        Object.keys(this.activeSkills)
-          .forEach(key => {
-            this.toggleSkill(key, false);
-          });
-      } else {
-        Object.keys(this.feSkills)
-          .forEach((s, i) => {
-            this.toggleSkill(i, true);
-          });
-      }
-    },
-    toggleSkill (index, value) {
-      this.activeSkills[index] = (value === undefined) ? !this.activeSkills[index] : !!value;
-      const skill = this.feSkills[index];
-      if (this.activeSkills[index] && skill.dependency) {
-        this.checkSkillDependencyBoxes(skill);
-      } else if (!this.activeSkills[index]) {
-        this.uncheckSkillDependencyBoxes(skill);
-      }
-      this.computeActiveSum();
-      this.computeSharedText();
-      this.syncLocalEnhancementsToUrl();
-    },
+    //   return skillEntry['dependency comment'] || 'Requires another enhancement';
+    // },
+    // getSkillEffects (skillEntry, cacheResult = true) {
+    //   if (this.effectCache[skillEntry.id]) {
+    //     return this.effectCache[skillEntry.id];
+    //   }
+    //   const effects = getSpEntryEffects(skillEntry);
+    //   // use cacheResult boolean to not prematurely render tables when getting allEffects data
+    //   if (cacheResult) {
+    //     this.effectCache[skillEntry.id] = effects;
+    //   }
+    //   return effects;
+    // },
+    // toggleOverallState () {
+    //   if (this.overallState === 'all') {
+    //     Object.keys(this.activeSkills)
+    //       .forEach(key => {
+    //         this.toggleSkill(key, false);
+    //       });
+    //   } else {
+    //     Object.keys(this.feSkills)
+    //       .forEach((s, i) => {
+    //         this.toggleSkill(i, true);
+    //       });
+    //   }
+    // },
+    // toggleSkill (index, value) {
+    //   this.activeSkills[index] = (value === undefined) ? !this.activeSkills[index] : !!value;
+    //   const skill = this.feSkills[index];
+    //   if (this.activeSkills[index] && skill.dependency) {
+    //     this.checkSkillDependencyBoxes(skill);
+    //   } else if (!this.activeSkills[index]) {
+    //     this.uncheckSkillDependencyBoxes(skill);
+    //   }
+    //   this.computeActiveSum();
+    //   this.computeSharedText();
+    //   this.syncLocalEnhancementsToUrl();
+    // },
     computeSharedText: debounce(function () {
-      const activeSkills = Object.keys(this.activeSkills)
-        .filter(key => this.activeSkills[key]);
-      if (activeSkills.length > 0) {
-        const skills = activeSkills.map(key => ({ skillEntry: this.feSkills[key], index: +key }))
-          .map(({skillEntry, index }) => {
-            const cost = skillEntry.skill.bp;
-            const desc = this.getSkillDescription(skillEntry);
+      if (this.activeEnhancements) {
+        const skills = this.activeEnhancements.split('')
+          .map(code => {
+            const spEntry = this.feSkills[spCodeToIndex(code)];
+            const cost = spEntry.skill.bp;
+            const desc = getSpDescription(spEntry);
             const bullet = this.copyBullets ? '* ' : '';
-            const code = this.copyCode ? `${spIndexToCode(index)}: ` : '';
-            return `${bullet}[${cost} SP] - ${code}${desc}`;
+            const outputCode = this.copyCode ? `${code}: ` : '';
+            return `${bullet}[${cost} SP] - ${outputCode}${desc}`;
           }).join('\n')
-          .concat(`\n\nTotal: ${this.activeSkillSum} SP`);
+          .concat(`\n\nTotal: ${getSpCost(this.feSkills, this.activeEnhancements)} SP`);
 
         if (this.copyName) {
           this.sharedText = `${this.unit.name}\n\n`.concat(skills);
@@ -267,67 +274,54 @@ export default {
         this.sharedText = 'No SP enhancements selected';
       }
     }, 50),
-    computeActiveSum: debounce(function () {
-      this.activeSkillSum = Object.keys(this.activeSkills)
-        .filter(key => this.activeSkills[key])
-        .map(key => this.feSkills[key].skill.bp)
-        .reduce((acc, val) => acc + val, 0);
-    }, 50),
+    // computeActiveSum: debounce(function () {
+    //   this.activeSkillSum = Object.keys(this.activeSkills)
+    //     .filter(key => this.activeSkills[key])
+    //     .map(key => this.feSkills[key].skill.bp)
+    //     .reduce((acc, val) => acc + val, 0);
+    // }, 50),
     syncLocalEnhancementsToUrl: debounce(function () {
-      const enhancements = Object.keys(this.activeSkills)
-        .filter(key => this.activeSkills[key])
-        .map(key => spIndexToCode(+key))
-        .join('');
-
       this.$router.replace({
         path: this.$route.path,
         query: {
           ...this.$route.query,
-          enhancements: enhancements || undefined,
+          enhancements: this.activeEnhancements || undefined,
         },
       });
     }, 500),
     syncUrlToLocalEnhancements () {
       this.logger.debug(this.$route.query);
       if (this.$route.query.enhancements) {
-        const enhancements = this.$route.query.enhancements.slice()
-          .split('').map(char => spCodeToIndex(char));
-        enhancements.forEach(index => {
-          if (index >= 0 && index < this.feSkills.length) {
-            this.toggleSkill(index, true);
-          } else {
-            this.logger.warn('ignoring invalid index', index);
-          }
-        });
+        this.activeEnhancements = this.$route.query.enhancements.slice();
       }
     },
     // check all boxes current skill requires
-    checkSkillDependencyBoxes (skill) {
-      const dependentSkill = this.getSPSkillWithID(skill.dependency);
-      // console.debug({ dependentSkill });
-      this.feSkills.forEach((s, i) => {
-        if (s.id === dependentSkill.id) {
-          this.toggleSkill(i, true);
-          if (s.dependency) {
-            this.checkSkillDependencyBoxes(s);
-          }
-        }
-      });
-    },
-    uncheckSkillDependencyBoxes (skill) {
-      const activeDependencySkills = Object.keys(this.activeSkills)
-        .filter(key => this.activeSkills[key])
-        .map(key => this.feSkills[key])
-        .filter(s => s.dependency && s.dependency.indexOf(skill.id) > -1);
+    // checkSkillDependencyBoxes (skill) {
+    //   const dependentSkill = this.getSPSkillWithID(skill.dependency);
+    //   // console.debug({ dependentSkill });
+    //   this.feSkills.forEach((s, i) => {
+    //     if (s.id === dependentSkill.id) {
+    //       this.toggleSkill(i, true);
+    //       if (s.dependency) {
+    //         this.checkSkillDependencyBoxes(s);
+    //       }
+    //     }
+    //   });
+    // },
+    // uncheckSkillDependencyBoxes (skill) {
+    //   const activeDependencySkills = Object.keys(this.activeSkills)
+    //     .filter(key => this.activeSkills[key])
+    //     .map(key => this.feSkills[key])
+    //     .filter(s => s.dependency && s.dependency.indexOf(skill.id) > -1);
 
-      const activeDependencySkillIDs = activeDependencySkills.map(s => s.id);
-      this.feSkills.forEach((s, i) => {
-        if (activeDependencySkillIDs.indexOf(s.id) > -1) {
-          this.toggleSkill(i, false);
-        }
-      });
-      activeDependencySkills.forEach(this.uncheckSkillDependencyBoxes);
-    },
+    //   const activeDependencySkillIDs = activeDependencySkills.map(s => s.id);
+    //   this.feSkills.forEach((s, i) => {
+    //     if (activeDependencySkillIDs.indexOf(s.id) > -1) {
+    //       this.toggleSkill(i, false);
+    //     }
+    //   });
+    //   activeDependencySkills.forEach(this.uncheckSkillDependencyBoxes);
+    // },
   },
   watch: {
     copyName () {
@@ -338,6 +332,10 @@ export default {
     },
     copyCode () {
       this.computeSharedText();
+    },
+    activeEnhancements () {
+      this.computeSharedText();
+      this.syncLocalEnhancementsToUrl();
     },
   },
   mounted () {
