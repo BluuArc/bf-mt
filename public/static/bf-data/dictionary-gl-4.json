@@ -1,4 +1,100 @@
 {
+  "MST_SKILLS_2000882_NAME": {
+    "en": "I'll defeat all my enemies!",
+    "es": "¡Derrotaré a mis enemigos!",
+    "id": "Akan kukalahkan semua musuhku!",
+    "pt": "Vou derrotar todos os meus inimigos!",
+    "th": "ข้าจะกำจัดศัตรูของข้าทั้งหมด!",
+    "vi": "Ta sẽ đánh bại mọi kẻ thù!"
+  },
+  "MST_SKILLS_2000883_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000883_NAME": {
+    "en": "It's like I'm not myself...",
+    "es": "Es como si no fuera yo...",
+    "id": "Sepertinya aku bukan diriku sendiri…",
+    "pt": "Parece que eu não sou mais eu...",
+    "th": "มันเหมือนว่าข้าไม่ใช่ตัวเอง...",
+    "vi": "Như thể ta không phải là ta"
+  },
+  "MST_SKILLS_2000884_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000884_NAME": {
+    "en": "Defeat...all...enemies...",
+    "es": "Derrotar a los enemigos...",
+    "id": "Kalahkan…semua…musuh…",
+    "pt": "Derrote... todos... os inimigos...",
+    "th": "กำจัด...ศัตรู...ทั้งหมด...",
+    "vi": "Đánh bại...mọi...kẻ thù..."
+  },
+  "MST_SKILLS_2000890_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000890_NAME": {
+    "en": "Eternity Soul",
+    "es": "Alma de la eternidad",
+    "id": "Jiwa Abadi",
+    "pt": "Alma da Eternidade",
+    "th": "อีเทอนิตี้ โซล",
+    "vi": "Linh hồn bất diệt"
+  },
+  "MST_SKILLS_2000891_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000891_NAME": {
+    "en": "Looks like I should help...",
+    "es": "Creo que debería ayudar...",
+    "id": "Sepertinya aku harus menolong…",
+    "pt": "Parece que eu devo ajudar...",
+    "th": "ดูเหมือนว่าข้าควรจะช่วยนะ...",
+    "vi": "Dường như ta nên giúp đỡ..."
+  },
+  "MST_SKILLS_2000892_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000892_NAME": {
+    "en": "I can't take much more...",
+    "es": "No puedo soportarlo más...",
+    "id": "Aku tidak bisa menahan lagi…",
+    "pt": "Não vou aguentar muito mais...",
+    "th": "ข้ารับไม่ไหวอีกต่อไปแล้ว...",
+    "vi": "Ta không thể chịu hơn..."
+  },
+  "MST_SKILLS_2000893_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
   "MST_SKILLS_2000893_NAME": {
     "en": "Too much power...darn Shida!",
     "es": "Ese poder... ¡Maldito Shida!",
@@ -88358,37 +88454,5 @@
     "pt": "Eles são tão cruéis!",
     "th": "พวกเขาล้วนหยาบคาย!",
     "vi": "They are all so mean!"
-  },
-  "MST_SKILLS_2122564_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122564_NAME": {
-    "en": "But...everyone's still alive!",
-    "es": "Pero... ¡todos aún viven!",
-    "id": "Tapi...semuanya masih hidup!",
-    "pt": "Mas... estão todos vivos!",
-    "th": "แต่...ทุกคนยังมีชีวิตอยู่!",
-    "vi": "But...everyone's still alive!"
-  },
-  "MST_SKILLS_2122565_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122565_NAME": {
-    "en": "They can't just do as they want!",
-    "es": "¡No pueden hacer lo que les dé la gana!",
-    "id": "Mereka tidak bisa seenaknya!",
-    "pt": "Eles não podem fazer o que bem entendem!",
-    "th": "พวกเขาไม่สามารถทำในสิ่งที่ต้องการได้!",
-    "vi": "They can't just do as they want!"
   }
 }

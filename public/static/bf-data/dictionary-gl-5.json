@@ -1,4 +1,36 @@
 {
+  "MST_SKILLS_2122564_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122564_NAME": {
+    "en": "But...everyone's still alive!",
+    "es": "Pero... ¡todos aún viven!",
+    "id": "Tapi...semuanya masih hidup!",
+    "pt": "Mas... estão todos vivos!",
+    "th": "แต่...ทุกคนยังมีชีวิตอยู่!",
+    "vi": "But...everyone's still alive!"
+  },
+  "MST_SKILLS_2122565_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122565_NAME": {
+    "en": "They can't just do as they want!",
+    "es": "¡No pueden hacer lo que les dé la gana!",
+    "id": "Mereka tidak bisa seenaknya!",
+    "pt": "Eles não podem fazer o que bem entendem!",
+    "th": "พวกเขาไม่สามารถทำในสิ่งที่ต้องการได้!",
+    "vi": "They can't just do as they want!"
+  },
   "MST_SKILLS_2122566_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -85231,6 +85263,22 @@
     "th": "ไซเลนท์ สลอธเตอร์",
     "vi": "Silent Slaughter"
   },
+  "MST_SKILLS_2710227_DESCRIPTION": {
+    "en": "22 combo massive Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormous additional damage reduction for 3 turns, 100% damage reduction for 3 turns, enormously boosts Fire elemental damage for 3 turns & enormously boosts Def relative to Atk for 3 turns",
+    "es": "22 combo massive Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormous additional damage reduction for 3 turns, 100% damage reduction for 3 turns, enormously boosts Fire elemental damage for 3 turns & enormously boosts Def relative to Atk for 3 turns",
+    "id": "22 combo massive Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormous additional damage reduction for 3 turns, 100% damage reduction for 3 turns, enormously boosts Fire elemental damage for 3 turns & enormously boosts Def relative to Atk for 3 turns",
+    "pt": "22 combo massive Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormous additional damage reduction for 3 turns, 100% damage reduction for 3 turns, enormously boosts Fire elemental damage for 3 turns & enormously boosts Def relative to Atk for 3 turns",
+    "th": "22 combo massive Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormous additional damage reduction for 3 turns, 100% damage reduction for 3 turns, enormously boosts Fire elemental damage for 3 turns & enormously boosts Def relative to Atk for 3 turns",
+    "vi": "22 combo massive Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormous additional damage reduction for 3 turns, 100% damage reduction for 3 turns, enormously boosts Fire elemental damage for 3 turns & enormously boosts Def relative to Atk for 3 turns"
+  },
+  "MST_SKILLS_2710227_NAME": {
+    "en": "Last Stand",
+    "es": "Last Stand",
+    "id": "Last Stand",
+    "pt": "Last Stand",
+    "th": "Last Stand",
+    "vi": "Last Stand"
+  },
   "MST_SKILLS_2710_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -88390,5 +88438,21 @@
     "pt": "23 combo massive Earth attack on all foes, 12 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & purges turn skip effect from all allies",
     "th": "23 combo massive Earth attack on all foes, 12 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & purges turn skip effect from all allies",
     "vi": "23 combo massive Earth attack on all foes, 12 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & purges turn skip effect from all allies"
+  },
+  "MST_SKILLS_2830598_NAME": {
+    "en": "Great Terra Seal",
+    "es": "Great Terra Seal",
+    "id": "Great Terra Seal",
+    "pt": "Great Terra Seal",
+    "th": "Great Terra Seal",
+    "vi": "Great Terra Seal"
+  },
+  "MST_SKILLS_2830628_DESCRIPTION": {
+    "en": "25 combo massive Earth attack on all foes (25% active Pierce to Earth, Thunder types), enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts Spark damage for 5 turns, enormously boosts BB Atk for 5 turns, damage taken enormously boosts BB gauge for 5 turns & damage taken enormously restores HP for 3 turns",
+    "es": "25 combo massive Earth attack on all foes (25% active Pierce to Earth, Thunder types), enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts Spark damage for 5 turns, enormously boosts BB Atk for 5 turns, damage taken enormously boosts BB gauge for 5 turns & damage taken enormously restores HP for 3 turns",
+    "id": "25 combo massive Earth attack on all foes (25% active Pierce to Earth, Thunder types), enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts Spark damage for 5 turns, enormously boosts BB Atk for 5 turns, damage taken enormously boosts BB gauge for 5 turns & damage taken enormously restores HP for 3 turns",
+    "pt": "25 combo massive Earth attack on all foes (25% active Pierce to Earth, Thunder types), enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts Spark damage for 5 turns, enormously boosts BB Atk for 5 turns, damage taken enormously boosts BB gauge for 5 turns & damage taken enormously restores HP for 3 turns",
+    "th": "25 combo massive Earth attack on all foes (25% active Pierce to Earth, Thunder types), enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts Spark damage for 5 turns, enormously boosts BB Atk for 5 turns, damage taken enormously boosts BB gauge for 5 turns & damage taken enormously restores HP for 3 turns",
+    "vi": "25 combo massive Earth attack on all foes (25% active Pierce to Earth, Thunder types), enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts Spark damage for 5 turns, enormously boosts BB Atk for 5 turns, damage taken enormously boosts BB gauge for 5 turns & damage taken enormously restores HP for 3 turns"
   }
 }
