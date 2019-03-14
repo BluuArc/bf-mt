@@ -18,26 +18,56 @@
       </th>
     </thead>
     <tbody>
-      <tr
-        v-for="(spEntry, index) in feSkills"
-        :key="index">
-        <td class="sp-column">
-          <v-checkbox
-            :label="`${spEntry.skill.bp} SP`"
-            :input-value="selectedSpEntries.includes(spIndexToCode(index))"
-            @click.native="toggleSpEntry(index, spEntry)"
-          />
-        </td>
-        <td class="type-column text-xs-center">
-          <sp-icon :category="+spEntry.category" :displaySize="24"/>
-        </td>
-        <td class="description-column py-2">
-          <span class="d-block" v-html="getSpDescription(index)"/>
-          <i v-if="spEntry.dependency">
-            {{ getSpDependencyText(spEntry) }}
-          </i>
-        </td>
-      </tr>
+      <template v-for="(spEntry, index) in feSkills">
+        <tr :key="`${index}-content`" :class="`content-row content-row--${index % 2 === 0 ? 'even' : 'odd'}`">
+          <td class="sp-column">
+            <v-checkbox
+              :label="`${spEntry.skill.bp} SP`"
+              :input-value="selectedSpEntries.includes(spIndexToCode(index))"
+              @click.native="toggleSpEntry(index, spEntry)"
+            />
+          </td>
+          <td class="type-column text-xs-center">
+            <sp-icon :category="+spEntry.category" :displaySize="24"/>
+          </td>
+          <td class="description-column py-2">
+            <v-layout row wrap align-center justify-space-between>
+              <v-flex>
+                <span class="d-block" v-html="getSpDescription(index)"/>
+                <i v-if="spEntry.dependency">
+                  {{ getSpDependencyText(spEntry) }}
+                </i>
+              </v-flex>
+              <v-flex xs12 sm4>
+                <v-btn
+                  v-if="!showTables.includes(index)"
+                  block flat
+                  @click="showTables.push(index)">
+                  Show Data
+                </v-btn>
+                <v-btn
+                  v-else
+                  block flat
+                  @click="showTables = showTables.filter(elem => elem !== index)">
+                  Hide Data
+                </v-btn>
+              </v-flex>
+            </v-layout>
+          </td>
+        </tr>
+        <v-slide-y-transition :key="`${index}-table`">
+          <tr
+            v-show="showTables.includes(index)"
+            :class="`buff-row buff-row--${index % 2 === 0 ? 'even' : 'odd'}`">
+            <td colspan="3">
+              <buff-table
+                class="mb-2"
+                :effects="getSpEffects(spEntry, true)"
+                :showHeaders="true"/>
+            </td>
+          </tr>
+        </v-slide-y-transition>
+      </template>
     </tbody>
   </table>
 </template>
@@ -46,20 +76,16 @@
 import {
   getSpEntryEffects,
   spIndexToCode,
-  // spCodeToIndex,
   getSpCost,
   getAllDependenciesFromSpEntry,
   getAllEntriesThatDependOnSpEntry,
   getSpDescription,
   getSpDependencyText,
 } from '@/modules/core/units';
-import { Logger } from '@/modules/Logger';
 import debounce from 'lodash/debounce';
 import SpIcon from '@/components/Multidex/Units/SpIcon';
 import BuffTable from '@/components/Multidex/BuffTable/MainTable';
 
-// eslint-disable-next-line no-unused-vars
-const logger = new Logger({ prefix: '[SpBuildTable]' });
 export default {
   props: {
     feSkills: {
@@ -93,7 +119,7 @@ export default {
     },
     allEffects () {
       return !this.feSkills ? [] : this.feSkills
-        .map(s => this.getSpEffects(s))
+        .map(s => this.getSpEffects(s, false))
         .reduce((acc, val) => acc.concat(val), []);
     },
   },
@@ -103,14 +129,20 @@ export default {
       activeSkillSum: 0,
       showTables: [],
       effectCache: new WeakMap(),
+      cacheChangeToken: Date.now(),
     };
   },
   methods: {
-    getSpEffects (spEntry) {
-      if (!this.effectCache.has(spEntry)) {
-        this.effectCache.set(spEntry, getSpEntryEffects(spEntry));
+    getSpEffects (spEntry, useCache = false) {
+      if (useCache) {
+        if (!this.effectCache.has(spEntry)) {
+          this.effectCache.set(spEntry, getSpEntryEffects(spEntry));
+          this.cacheExchangeToken = Date.now();
+        }
+        return this.effectCache.get(spEntry);
+      } else {
+        return getSpEntryEffects(spEntry);
       }
-      return this.effectCache.get(spEntry);
     },
     getSpDescription (entryIndex) {
       return `<b>${spIndexToCode(entryIndex)}</b>: ${getSpDescription(this.feSkills[entryIndex])}`;
@@ -164,7 +196,6 @@ export default {
     selectedSpEntries (newValue) {
       this.computeActiveSum();
       const enhancementCode = newValue.slice().sort().join('');
-      logger.warn('code', enhancementCode, this.value);
       if (enhancementCode !== this.value) {
         this.$emit('input', enhancementCode);
       }
@@ -198,8 +229,12 @@ table.sp-table {
   }
 
   & > tbody > tr {
-    &:nth-child(even) {
+    &.content-row--odd, &.buff-row--odd {
       background-color: var(--table-border-color);
+    }
+
+    &.buff-row {
+      overflow-x: auto;
     }
   }
 }
