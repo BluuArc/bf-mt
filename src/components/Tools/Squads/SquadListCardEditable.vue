@@ -62,6 +62,7 @@
         <unit-entry-editor
           v-if="squad.units[selectedIndex]"
           class="py-2"
+          @newunits="($ev) => { selectedIndex = $ev.newIndex; squad.units = $ev.units; }"
           :squad="squad"
           :getUnit="getUnit"
           :getItem="getItem"

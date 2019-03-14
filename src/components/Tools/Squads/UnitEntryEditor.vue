@@ -1,8 +1,5 @@
 <template>
   <v-layout row wrap class="unit-entry-editor">
-    <v-flex xs12>
-      {{ activeUnit }} {{ localSquad }}
-    </v-flex>
     <v-layout row style="width: 100%;" wrap>
       <v-flex xs12>
         <v-subheader>Unit</v-subheader>
@@ -41,7 +38,10 @@
             v-for="position in unitPositionMapping"
             :key="position"
             xs12 sm6>
-            <v-btn block :color="position === activeUnit.position ? 'primary' : undefined">
+            <v-btn
+              block
+              @click="setPosition(position)"
+              :color="position === activeUnit.position ? 'primary' : undefined">
               {{ position }}
             </v-btn>
           </v-flex>
@@ -158,9 +158,22 @@
         </v-layout>
       </v-flex>
     </v-layout>
-    <v-flex xs12>
-      SP Builder {{ activeUnit.sp }}
-    </v-flex>
+    <v-layout column style="width: 100%;">
+      <v-flex>
+        <v-subheader>
+          <span>SP Enhancements</span>
+          <span v-if="activeUnit.sp" class="pl-1">
+            ({{ activeUnit.sp }})
+          </span>
+        </v-subheader>
+      </v-flex>
+      <v-flex>
+        <sp-build-table
+          v-if="unitData.feskills"
+          :value="activeUnit.sp"
+          :feSkills="unitData.feskills"/>
+      </v-flex>
+    </v-layout>
   </v-layout>
 </template>
 
@@ -169,12 +182,13 @@ import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 import UnitCard from '@/components/Multidex/Units/EntryCard';
 import ExtraSkillCard from '@/components/Multidex/ExtraSkills/EntryCard';
 import SphereCard from '@/components/Multidex/Items/EntryCard';
+import SpBuildTable from '@/components/Multidex/Units/SpBuildTable';
 import { Logger } from '@/modules/Logger';
 import { squadFillerMapping, unitPositionMapping, squadUnitActions } from '@/modules/constants';
 import { isValidUnit, getFillerUnit } from '@/modules/core/units';
 import { isValidSkill, getEmptySkill } from '@/modules/core/extra-skills';
 import { isValidSphere, getEmptySphere } from '@/modules/core/items';
-import { cloneSquad } from '@/modules/core/squads';
+import { cloneSquad, sortUnitsByPosition } from '@/modules/core/squads';
 
 const logger = new Logger({ prefix: '[UnitEntryEditor]' });
 export default {
@@ -183,6 +197,7 @@ export default {
     UnitCard,
     ExtraSkillCard,
     SphereCard,
+    SpBuildTable,
   },
   props: {
     squad: {
@@ -265,6 +280,33 @@ export default {
     onSelectUnit (input) {
       logger.warn(input);
       this.activeDialog = '';
+    },
+    emitUnits (units = [], newIndex) {
+      this.$emit('newunits', { units, newIndex });
+    },
+    emitSquad (squad = {}) {
+      this.$emit('newsquad', squad);
+    },
+    setPosition (position) {
+      const units = this.localSquad.units;
+      const unitToSwap = units.find(u => u.position === position);
+      if (unitToSwap) {
+        const otherUnits = units.filter((u, i) => i !== this.selectedIndex && u !== unitToSwap);
+        const newUnitList = sortUnitsByPosition([
+          ...otherUnits,
+          {
+            ...unitToSwap,
+            position: this.activeUnit.position,
+          },
+          {
+            ...this.activeUnit,
+            position,
+          },
+        ], false);
+
+        const newIndex = unitPositionMapping.indexOf(position);
+        this.emitUnits(newUnitList, newIndex);
+      }
     },
   },
   watch: {

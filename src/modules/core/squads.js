@@ -317,3 +317,11 @@ export function getMultidexDatabaseIdsFromSquads (squads = [generateDefaultSquad
     items: Array.from(itemIds),
   };
 }
+
+export function sortUnitsByPosition (units = [], clone = true) {
+  const toSort = clone ? units.slice() : units;
+  return toSort.sort((a, b) => {
+    const [positionA, positionB] = [unitPositionMapping.indexOf(a.position), unitPositionMapping.indexOf(b.position)];
+    return positionA - positionB;
+  });
+}
