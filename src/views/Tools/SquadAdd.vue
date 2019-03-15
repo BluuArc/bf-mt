@@ -12,6 +12,7 @@
                   <squad-list-card-editable
                     flat
                     @selectedindex="$ev => selectedIndex = $ev"
+                    @newsquad="$ev => squad = $ev"
                     :squad="squad"
                     :getUnit="getUnit"
                     :getItem="getItem"

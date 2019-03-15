@@ -63,6 +63,7 @@
           v-if="squad.units[selectedIndex]"
           class="py-2"
           @newunits="($ev) => { selectedIndex = $ev.newIndex; squad.units = $ev.units; }"
+          @newsquad="($ev) => { selectedIndex = $ev.newIndex; $emit('newsquad', $ev.squad); }"
           :squad="squad"
           :getUnit="getUnit"
           :getItem="getItem"

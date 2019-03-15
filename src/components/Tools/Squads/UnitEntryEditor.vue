@@ -53,6 +53,7 @@
         class="px-1"
         :value="leadFriendStatus"
         :items="leadFriendPossibilities"
+        @input="setLeadFriendStatus"
         label="Leader or Friend?"/>
     </v-flex>
     <v-flex xs6 sm4>
@@ -211,7 +212,7 @@ export default {
   },
   computed: {
     activeUnit () {
-      return this.squad.units[this.selectedIndex] || {};
+      return this.localSquad.units[this.selectedIndex] || {};
     },
     unitData () {
       const initialData = this.getUnit(this.activeUnit.id);
@@ -241,8 +242,8 @@ export default {
     leadFriendPossibilities: () => ['Leader', 'Friend', 'Neither'],
     leadFriendStatus () {
       return [
-        this.squad.lead === this.selectedIndex && 'Leader',
-        this.squad.friend === this.selectedIndex && 'Friend',
+        this.localSquad.lead === this.selectedIndex && 'Leader',
+        this.localSquad.friend === this.selectedIndex && 'Friend',
         'Neither',
       ].find(v => v);
     },
@@ -282,10 +283,10 @@ export default {
       this.activeDialog = '';
     },
     emitUnits (units = [], newIndex) {
-      this.$emit('newunits', { units, newIndex });
+      this.$emit('newunits', { units, newIndex: newIndex || this.selectedIndex });
     },
-    emitSquad (squad = {}) {
-      this.$emit('newsquad', squad);
+    emitSquad (squad = {}, newIndex) {
+      this.$emit('newsquad', { squad, newIndex: newIndex || this.selectedIndex });
     },
     setPosition (position) {
       const units = this.localSquad.units;
@@ -307,6 +308,31 @@ export default {
         const newIndex = unitPositionMapping.indexOf(position);
         this.emitUnits(newUnitList, newIndex);
       }
+    },
+    setLeadFriendStatus (status) {
+      const { lead, friend } = this.localSquad;
+      const getEmptyIndex = () => this.localSquad.units
+        .findIndex((_, i) => i !== lead && i !== friend && i !== this.selectedIndex);
+      if (status === 'Leader') {
+        if (friend === this.selectedIndex) {
+          this.localSquad.friend = lead;
+        }
+        this.localSquad.lead = this.selectedIndex;
+      } else if (status === 'Friend') {
+        if (lead === this.selectedIndex) {
+          this.localSquad.lead = friend;
+        }
+        this.localSquad.friend = this.selectedIndex;
+      } else {
+        // neither
+        if (lead === this.selectedIndex) {
+          this.localSquad.lead = getEmptyIndex();
+        } else if (friend === this.selectedIndex) {
+          this.localSquad.friend = getEmptyIndex();
+        }
+      }
+
+      this.emitSquad(this.localSquad);
     },
   },
   watch: {
