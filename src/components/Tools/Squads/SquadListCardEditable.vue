@@ -10,9 +10,6 @@
         </h2>
       </v-flex>
     </v-layout>
-    <v-layout row class="pa-2">
-      <v-flex>Select a unit to edit its details.</v-flex>
-    </v-layout>
     <v-layout row wrap class="px-2" @mouseleave="highlightedIndex = -1">
       <template v-if="!isLoadingInParent">
         <unit-entry
@@ -59,16 +56,29 @@
         <v-flex v-if="squad.units[selectedIndex]" xs12 class="py-1">
           <v-divider/>
         </v-flex>
-        <unit-entry-editor
-          v-if="squad.units[selectedIndex]"
-          class="py-2"
-          @newunits="($ev) => { selectedIndex = $ev.newIndex; $emit('newunits', $ev.units) }"
-          @newsquad="($ev) => { selectedIndex = $ev.newIndex; $emit('newsquad', $ev.squad); }"
-          :squad="squad"
-          :getUnit="getUnit"
-          :getItem="getItem"
-          :getExtraSkill="getExtraSkill"
-          :selectedIndex="selectedIndex"/>
+        <card-tabs-container
+          class="px-0"
+          :tabs="tabConfig"
+          v-model="activeTab">
+          <v-layout slot="squad">
+            Squad Level Controls Here
+          </v-layout>
+          <v-layout slot="unit">
+            <unit-entry-editor
+              v-if="squad.units[selectedIndex]"
+              class="py-2"
+              @newunits="($ev) => { selectedIndex = $ev.newIndex; $emit('newunits', $ev.units) }"
+              @newsquad="($ev) => { selectedIndex = $ev.newIndex; $emit('newsquad', $ev.squad); }"
+              :squad="squad"
+              :getUnit="getUnit"
+              :getItem="getItem"
+              :getExtraSkill="getExtraSkill"
+              :selectedIndex="selectedIndex"/>
+            <span v-else>
+              Select a unit to edit its details
+            </span>
+          </v-layout>
+        </card-tabs-container>
         <!-- <v-layout row wrap class="pa-2" v-if="squad.units[selectedIndex]">
           <v-flex xs12>
             {{ squad.units[selectedIndex] }}
@@ -121,6 +131,7 @@ import { generateFillerSquadUnitEntry } from '@/modules/core/squads';
 import UnitEntry from '@/components/Tools/Squads/SquadUnitEntry';
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 import LoadingIndicator from '@/components/LoadingIndicator';
+import CardTabsContainer from '@/components/CardTabsContainer';
 import UnitEntryEditor from '@/components/Tools/Squads/UnitEntryEditor';
 
 export default {
@@ -129,6 +140,7 @@ export default {
     UnitEntry,
     LoadingIndicator,
     UnitEntryEditor,
+    CardTabsContainer,
   },
   props: {
     squad: {
@@ -141,6 +153,7 @@ export default {
     },
   },
   computed: {
+    tabConfig: () => ['squad', 'unit'].map(name => ({ name, slot: name })),
     squadCost () {
       return this.squad.units
         .map(({ id }) => this.getUnit(id))
@@ -161,6 +174,7 @@ export default {
     return {
       highlightedIndex: -1,
       selectedIndex: -1,
+      activeTab: 0,
     };
   },
   methods: {
@@ -171,6 +185,7 @@ export default {
   watch: {
     selectedIndex () {
       this.highlightedIndex = -1;
+      this.activeTab = 1;
     },
   },
 };

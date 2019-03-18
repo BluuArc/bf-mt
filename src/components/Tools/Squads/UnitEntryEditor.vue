@@ -65,6 +65,7 @@
         <v-select
           class="pr-1"
           :value="activeUnit.bbOrder"
+          @input="setBbOrder"
           :items="bbOrderPossibilities"/>
         </v-flex>
       </v-layout>
@@ -311,8 +312,6 @@ export default {
     },
     setLeadFriendStatus (status) {
       const { lead, friend } = this.localSquad;
-      const getEmptyIndex = () => this.localSquad.units
-        .findIndex((_, i) => i !== lead && i !== friend && i !== this.selectedIndex);
       if (status === 'Leader') {
         if (friend === this.selectedIndex) {
           this.localSquad.friend = lead;
@@ -325,14 +324,33 @@ export default {
         this.localSquad.friend = this.selectedIndex;
       } else {
         // neither
+        // allow for squads to have no leader/friend lead
         if (lead === this.selectedIndex) {
-          this.localSquad.lead = getEmptyIndex();
+          this.localSquad.lead = -1;
         } else if (friend === this.selectedIndex) {
-          this.localSquad.friend = getEmptyIndex();
+          this.localSquad.friend = -1;
         }
       }
 
       this.emitSquad(this.localSquad);
+    },
+    setBbOrder (order) {
+      const unitToSwapOrder = this.localSquad.units.find(u => u.bbOrder === order);
+      if (unitToSwapOrder && unitToSwapOrder !== this.activeUnit) {
+        const otherUnits = this.localSquad.units.filter((u, i) => i !== this.selectedIndex && u !== unitToSwapOrder);
+        const newUnitList = sortUnitsByPosition([
+          ...otherUnits,
+          {
+            ...unitToSwapOrder,
+            bbOrder: this.activeUnit.bbOrder,
+          },
+          {
+            ...this.activeUnit,
+            bbOrder: order,
+          },
+        ], false);
+        this.emitUnits(newUnitList);
+      }
     },
   },
   watch: {
