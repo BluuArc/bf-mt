@@ -13,6 +13,7 @@
                     flat
                     @selectedindex="$ev => selectedIndex = $ev"
                     @newsquad="$ev => squad = $ev"
+                    @newunits="$ev => squad.units = $ev"
                     :squad="squad"
                     :getUnit="getUnit"
                     :getItem="getItem"

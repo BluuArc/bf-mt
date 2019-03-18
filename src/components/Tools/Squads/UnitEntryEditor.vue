@@ -283,15 +283,15 @@ export default {
       this.activeDialog = '';
     },
     emitUnits (units = [], newIndex) {
-      this.$emit('newunits', { units, newIndex: newIndex || this.selectedIndex });
+      this.$emit('newunits', { units, newIndex: !isNaN(newIndex) ? newIndex : this.selectedIndex });
     },
     emitSquad (squad = {}, newIndex) {
-      this.$emit('newsquad', { squad, newIndex: newIndex || this.selectedIndex });
+      this.$emit('newsquad', { squad, newIndex: !isNaN(newIndex) ? newIndex : this.selectedIndex });
     },
     setPosition (position) {
-      const units = this.localSquad.units;
+      const { units } = this.localSquad;
       const unitToSwap = units.find(u => u.position === position);
-      if (unitToSwap) {
+      if (unitToSwap && unitToSwap !== this.activeUnit) {
         const otherUnits = units.filter((u, i) => i !== this.selectedIndex && u !== unitToSwap);
         const newUnitList = sortUnitsByPosition([
           ...otherUnits,

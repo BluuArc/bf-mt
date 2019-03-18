@@ -32,7 +32,7 @@
           </td>
           <td class="description-column py-2">
             <v-layout row wrap align-center justify-space-between>
-              <v-flex>
+              <v-flex xs12 sm8>
                 <span class="d-block" v-html="getSpDescription(index)"/>
                 <i v-if="spEntry.dependency">
                   {{ getSpDependencyText(spEntry) }}

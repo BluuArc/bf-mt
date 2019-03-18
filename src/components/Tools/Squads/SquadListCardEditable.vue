@@ -62,7 +62,7 @@
         <unit-entry-editor
           v-if="squad.units[selectedIndex]"
           class="py-2"
-          @newunits="($ev) => { selectedIndex = $ev.newIndex; squad.units = $ev.units; }"
+          @newunits="($ev) => { selectedIndex = $ev.newIndex; $emit('newunits', $ev.units) }"
           @newsquad="($ev) => { selectedIndex = $ev.newIndex; $emit('newsquad', $ev.squad); }"
           :squad="squad"
           :getUnit="getUnit"
@@ -166,6 +166,11 @@ export default {
   methods: {
     getUnitEntryKey (unit = {}, i = 0) {
       return `${JSON.stringify(unit)}-${i}`;
+    },
+  },
+  watch: {
+    selectedIndex () {
+      this.highlightedIndex = -1;
     },
   },
 };
