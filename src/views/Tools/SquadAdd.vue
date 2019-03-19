@@ -28,10 +28,45 @@
                 <v-flex>
                   <v-text-field v-model="inputCode"/>
                 </v-flex>
-                <v-flex v-if="parseErrorMessage || parsedSuccessfully">
+                <v-flex v-if="parsingCode">
+                  <loading-indicator loadingMessage="Parsing input code"/>
+                </v-flex>
+                <v-flex v-else-if="parseState.type">
                   <v-alert
-                    :value="true" :type="parseErrorMessage ? 'error' : 'success'">
-                    {{ parseErrorMessage || 'Successfully parsed input code' }}
+                    class="squad-message-alert"
+                    outline
+                    :value="true"
+                    :type="parseState.type">
+                    <div>
+                      <div class="d-flex-container items-center">
+                        <span style="flex: auto;">{{ parseState.message }}</span>
+                        <v-btn
+                          v-if="warningMessages.length > 0"
+                          @click="showWarnings = !showWarnings"
+                          flat icon style="flex: none;">
+                          <v-icon>{{ showWarnings ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</v-icon>
+                        </v-btn>
+                      </div>
+                      <div v-if="warningMessages.length > 0">
+                        <v-expansion-panel
+                          :value="showWarnings ? 0 : -1"
+                          @input="$val => showWarnings = $val === 0">
+                          <v-expansion-panel-content :key="0">
+                            <v-list>
+                              <v-list-tile
+                                v-for="message in warningMessages"
+                                :key="message">
+                                <v-list-tile-content>
+                                  <v-list-tile-title>
+                                    {{ message }}
+                                  </v-list-tile-title>
+                                </v-list-tile-content>
+                              </v-list-tile>
+                            </v-list>
+                          </v-expansion-panel-content>
+                        </v-expansion-panel>
+                      </div>
+                    </div>
                   </v-alert>
                 </v-flex>
                 <v-layout justify-end>
@@ -59,15 +94,17 @@ import {
   shorthandToSquad,
   generateDefaultSquad,
   getMultidexDatabaseIdsFromSquads,
+  fixSquadErrors,
 } from '@/modules/core/squads';
 import { Logger } from '@/modules/Logger';
 import { mapState, mapActions } from 'vuex';
 import ModuleChecker from '@/components/ModuleChecker';
 import CardTabsContainer from '@/components/CardTabsContainer';
 import SquadListCardEditable from '@/components/Tools/Squads/SquadListCardEditable';
+import LoadingIndicator from '@/components/LoadingIndicator';
 // import databaseClient from '@/modules/BfmtDatabase/client';
 
-const logger = new Logger({ prefix: 'SquaddAdd' });
+const logger = new Logger({ prefix: '[SquaddAdd]' });
 export default {
   props: {
     importSquad: {
@@ -79,6 +116,7 @@ export default {
     ModuleChecker,
     CardTabsContainer,
     SquadListCardEditable,
+    LoadingIndicator,
   },
   computed: {
     ...mapState('settings', ['activeServer']),
@@ -93,24 +131,37 @@ export default {
     }),
     requiredModules: () => squadRequiredModules,
     tabConfig: () => ['squad', 'import code'].map(name => ({ name, slot: name.replace(/ /g, '-') })),
+    parseState () {
+      const type = (this.parseErrorMessage && 'error') ||
+        (this.parsedSuccessfully && this.warningMessages.length === 0 && 'success') ||
+        (this.parsedSuccessfully && this.warningMessages.length > 0 && 'warning');
+      const message = this.parseErrorMessage ||
+       (this.warningMessages.length > 0 && `Parsed input code with ${this.warningMessages.length} warnings.`) ||
+       'Successfully parsed input code';
+      return { type, message };
+    },
   },
   data () {
     return {
       squad: generateDefaultSquad(),
       inputCode: '',
       parseErrorMessage: '',
+      warningMessages: [],
       parsedSuccessfully: false,
+      parsingCode: false,
       activeTabIndex: 0,
       squadUnits: {},
       squadItems: {},
       squadExtraSkills: {},
       isLoadingSquadData: false,
       selectedIndex: -1,
+      showWarnings: false,
     };
   },
   mounted () {
     this.$store.commit('setHtmlOverflowDisableState', false);
     if (this.inputCode) {
+      this.activeTabIndex = 1;
       this.attemptSquadImport();
     } else {
       this.updateSquadPageDb();
@@ -126,24 +177,34 @@ export default {
     ...mapActions('extraSkills', {
       getExtraSkills: 'getByIds',
     }),
-    attemptSquadImport () {
+    async attemptSquadImport () {
       this.parseErrorMessage = '';
       this.parsedSuccessfully = false;
       if (!this.inputCode) {
         this.parseErrorMessage = 'No input specified';
       } else {
+        this.parsingCode = true;
         try {
-          this.squad = shorthandToSquad(this.inputCode);
+          const initialSquad = shorthandToSquad(this.inputCode);
+          await this.updateSquadPageDbForSquad(initialSquad);
+          const { warnings, ...fixedSquad } = fixSquadErrors(initialSquad, {
+            getUnit: this.getUnit,
+            getExtraSkill: this.getExtraSkill,
+            getItem: this.getItem,
+          });
+          this.warningMessages = warnings;
+          this.squad = fixedSquad;
           this.parsedSuccessfully = true;
         } catch (err) {
           logger.error('error parsing squad', err);
           this.parseErrorMessage = 'Import code is invalid and cannot be parsed.';
         }
+        this.parsingCode = false;
       }
     },
-    async updateSquadPageDb () {
-      if (this.squad) {
-        const databaseIds = getMultidexDatabaseIdsFromSquads(this.squad);
+    async updateSquadPageDbForSquad (squad) {
+      if (squad) {
+        const databaseIds = getMultidexDatabaseIdsFromSquads(squad);
         const toLowerCase = (input) => `${input[0].toLowerCase()}${input.slice(1)}`;
         const currentServer = this.activeServer;
         await ['Units', 'Items', 'ExtraSkills'].reduce((acc, name) => {
@@ -208,16 +269,27 @@ export default {
       this.parsedSuccessfully = false;
     },
     parseErrorMessage (newValue) {
-      if (newValue) {
+      if (newValue && this.warningMessages.length === 0) {
         this.activeTabIndex = 1; // show import tab
       }
     },
     'squad.units': {
       deep: true,
       handler () {
-        this.updateSquadPageDb();
+        this.updateSquadPageDbForSquad(this.squad);
       },
+    },
+    warningMessages (newValue) {
+      this.showWarnings = newValue.length > 0;
     },
   },
 };
 </script>
+
+<style lang="less">
+.squad-message-alert {
+  .v-list__tile {
+    padding: 0;
+  }
+}
+</style>

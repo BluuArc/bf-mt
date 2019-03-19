@@ -160,7 +160,7 @@
         </v-layout>
       </v-flex>
     </v-layout>
-    <v-layout column style="width: 100%;">
+    <v-layout column style="width: 100%;" v-if="Array.isArray(unitData.feskills)">
       <v-flex>
         <v-subheader>
           <span>SP Enhancements</span>
@@ -171,7 +171,6 @@
       </v-flex>
       <v-flex>
         <sp-build-table
-          v-if="unitData.feskills"
           :value="activeUnit.sp"
           :feSkills="unitData.feskills"/>
       </v-flex>
@@ -367,8 +366,8 @@ export default {
 
 <style lang="less" scoped>
 .unit-entry-editor {
-  & > * {
-    border: 1px solid var(--background-color-alt);
+  .v-subheader {
+    padding-left: 0;
   }
 }
 </style>
