@@ -79,7 +79,8 @@
         <v-select
           class="pr-1"
           :value="activeUnit.bbType"
-          :items="actionPossibilities"/>
+          :items="actionPossibilities"
+          @input="setAction"/>
         </v-flex>
       </v-layout>
     </v-flex>
@@ -248,28 +249,33 @@ export default {
       ].find(v => v);
     },
     bbOrderPossibilities: () => Object.freeze(new Array(6).fill(0).map((_, i) => i + 1)),
-    actionPossibilities: () => [
-      {
-        text: 'None',
-        value: squadUnitActions.NONE,
-      },
-      {
-        text: 'Attack',
-        value: squadUnitActions.ATK,
-      },
-      {
-        text: 'BB',
-        value: squadUnitActions.BB,
-      },
-      {
-        text: 'SBB',
-        value: squadUnitActions.SBB,
-      },
-      {
-        text: 'UBB',
-        value: squadUnitActions.UBB,
-      },
-    ],
+    actionPossibilities () {
+      const availableBurstTypes = [
+        {
+          text: 'BB',
+          value: squadUnitActions.BB,
+        },
+        {
+          text: 'SBB',
+          value: squadUnitActions.SBB,
+        },
+        {
+          text: 'UBB',
+          value: squadUnitActions.UBB,
+        },
+      ].filter(({ value }) => this.unitData[value] || this.activeUnit.bbType === value);
+      return [
+        {
+          text: 'None',
+          value: squadUnitActions.NONE,
+        },
+        {
+          text: 'Attack',
+          value: squadUnitActions.ATK,
+        },
+        ...availableBurstTypes,
+      ];
+    },
   },
   data () {
     return {
@@ -349,6 +355,18 @@ export default {
           },
         ], false);
         this.emitUnits(newUnitList);
+      }
+    },
+    setAction (action) {
+      if (this.actionPossibilities.some(({ value }) => action === value)) {
+        this.emitUnits([
+          ...this.localSquad.units.slice(0, this.selectedIndex),
+          {
+            ...this.activeUnit,
+            bbType: action,
+          },
+          ...this.localSquad.units.slice(this.selectedIndex + 1),
+        ]);
       }
     },
   },
