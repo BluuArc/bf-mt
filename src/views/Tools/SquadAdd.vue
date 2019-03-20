@@ -73,7 +73,7 @@
                   <v-flex style="flex-grow: 0;">
                     <v-btn
                       @click="attemptSquadImport"
-                      :disabled="!inputCode"
+                      :disabled="!inputCode || parsingCode || currentSquadCode === lastImportedSquadCode"
                       flat>
                       Import
                     </v-btn>
@@ -92,6 +92,7 @@
 import { squadRequiredModules } from '@/router/tool-routes';
 import {
   shorthandToSquad,
+  squadToShorthand,
   generateDefaultSquad,
   getMultidexDatabaseIdsFromSquads,
   fixSquadErrors,
@@ -140,6 +141,13 @@ export default {
        'Successfully parsed input code';
       return { type, message };
     },
+    currentSquadCode () {
+      try {
+        return squadToShorthand(this.squad);
+      } catch {
+        return '';
+      }
+    },
   },
   data () {
     return {
@@ -156,6 +164,7 @@ export default {
       isLoadingSquadData: false,
       selectedIndex: -1,
       showWarnings: false,
+      lastImportedSquadCode: '',
     };
   },
   mounted () {
@@ -180,10 +189,12 @@ export default {
     async attemptSquadImport () {
       this.parseErrorMessage = '';
       this.parsedSuccessfully = false;
+      this.warningMessages = [];
       if (!this.inputCode) {
         this.parseErrorMessage = 'No input specified';
       } else {
         this.parsingCode = true;
+        await this.$nextTick();
         try {
           const initialSquad = shorthandToSquad(this.inputCode);
           await this.updateSquadPageDbForSquad(initialSquad);
@@ -194,6 +205,7 @@ export default {
           });
           this.warningMessages = warnings;
           this.squad = fixedSquad;
+          this.lastImportedSquadCode = squadToShorthand(fixedSquad);
           this.parsedSuccessfully = true;
         } catch (err) {
           logger.error('error parsing squad', err);

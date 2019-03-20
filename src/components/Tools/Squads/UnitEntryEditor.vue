@@ -173,6 +173,7 @@
       <v-flex>
         <sp-build-table
           :value="activeUnit.sp"
+          @input="setEnhancements"
           :feSkills="unitData.feskills"/>
       </v-flex>
     </v-layout>
@@ -294,6 +295,17 @@ export default {
     emitSquad (squad = {}, newIndex) {
       this.$emit('newsquad', { squad, newIndex: !isNaN(newIndex) ? newIndex : this.selectedIndex });
     },
+    // update an internal value for the current unit
+    updateCurrentUnit (newUnitData = {}) {
+      this.emitUnits([
+        ...this.localSquad.units.slice(0, this.selectedIndex),
+        {
+          ...this.activeUnit,
+          ...newUnitData,
+        },
+        ...this.localSquad.units.slice(this.selectedIndex + 1),
+      ]);
+    },
     setPosition (position) {
       const { units } = this.localSquad;
       const unitToSwap = units.find(u => u.position === position);
@@ -359,15 +371,11 @@ export default {
     },
     setAction (action) {
       if (this.actionPossibilities.some(({ value }) => action === value)) {
-        this.emitUnits([
-          ...this.localSquad.units.slice(0, this.selectedIndex),
-          {
-            ...this.activeUnit,
-            bbType: action,
-          },
-          ...this.localSquad.units.slice(this.selectedIndex + 1),
-        ]);
+        this.updateCurrentUnit({ bbType: action });
       }
+    },
+    setEnhancements (sp) {
+      this.updateCurrentUnit({ sp });
     },
   },
   watch: {
