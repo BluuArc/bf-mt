@@ -31,11 +31,12 @@ export function makeSquadUnitEntry ({
   bbType = '',
   sp = '',
 } = {}) {
+  const toString = (val) => (val || '').toString();
   return {
-    id,
+    id: toString(id),
     position,
-    es,
-    spheres: spheres.slice(),
+    es: toString(es),
+    spheres: spheres.map(toString),
     bbOrder,
     bbType,
     sp,
@@ -186,14 +187,14 @@ export function fixSquadErrors (squad = {}, {
           messages.push(`${unitIdentifer} has invalid BB Type [${unit.bbType}]. Used default BB Type [${bbType}].`);
         }
 
-        const extraSkill = (unit.es && isValidSkill(getExtraSkill(unit.es)))
+        const extraSkill = (id !== squadFillerMapping.EMPTY && unit.es && isValidSkill(getExtraSkill(unit.es)))
           ? unit.es
           : undefined;
         if (extraSkill !== unit.es && !!unit.es) {
           messages.push(`${unitIdentifer} has invalid Extra Skill [${unit.es}]. Removed Extra Skill.`);
         }
 
-        const spheres = (Array.isArray(unit.spheres) ? unit.spheres : [])
+        const spheres = ((id !== squadFillerMapping.EMPTY && Array.isArray(unit.spheres)) ? unit.spheres : [])
           .filter(sphere => isValidSphere(getItem(sphere)));
         if (!Array.isArray(unit.spheres)) {
           messages.push(`${unitIdentifer} has invalid sphere entry. Used default of no spheres.`);
@@ -201,7 +202,7 @@ export function fixSquadErrors (squad = {}, {
           messages.push(`${unitIdentifer} has invalid spheres [${unit.spheres.filter(s => !spheres.includes(s)).join(', ')}]. Removed them from the entry.`);
         }
 
-        const sp = (unitData.feskills && typeof unit.sp === 'string')
+        const sp = (id !== squadFillerMapping.EMPTY && unitData.feskills && typeof unit.sp === 'string')
           ? unit.sp.split('').filter(code => unitData.feskills[spCodeToIndex(code)]).join('')
           : undefined;
         if (sp !== unit.sp && !!unit.sp) {
@@ -277,7 +278,7 @@ export function fixSquadErrors (squad = {}, {
     lead,
     friend,
     name: squad.name || 'Default Squad Name',
-    units,
+    units: sortUnitsByPosition(units),
     warnings: messages,
   };
 }

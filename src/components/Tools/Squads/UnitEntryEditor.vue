@@ -17,12 +17,18 @@
           </v-btn>
         </v-flex>
         <v-flex sm6 class="px-1">
-          <v-btn block :disabled="unitData.name === squadFillerMapping.EMPTY">
+          <v-btn
+            block
+            @click="setUnit(squadFillerMapping.EMPTY)"
+            :disabled="unitData.name === squadFillerMapping.EMPTY">
             Set Empty
           </v-btn>
         </v-flex>
         <v-flex sm6 class="px-1">
-          <v-btn block :disabled="unitData.name === squadFillerMapping.ANY">
+          <v-btn
+            block
+            @click="setUnit(squadFillerMapping.ANY)"
+            :disabled="unitData.name === squadFillerMapping.ANY">
             Set Any
           </v-btn>
         </v-flex>
@@ -51,9 +57,10 @@
     <v-flex xs12 sm4>
       <v-select
         class="px-1"
-        :value="leadFriendStatus"
         :items="leadFriendPossibilities"
+        :value="leadFriendStatus"
         @input="setLeadFriendStatus"
+        :disabled="isEmptyUnit"
         label="Leader or Friend?"/>
     </v-flex>
     <v-flex xs6 sm4>
@@ -78,8 +85,9 @@
         <v-flex class="d-flex-container items-center">
         <v-select
           class="pr-1"
-          :value="activeUnit.bbType"
+          :disabled="isEmptyUnit"
           :items="actionPossibilities"
+          :value="activeUnit.bbType"
           @input="setAction"/>
         </v-flex>
       </v-layout>
@@ -98,7 +106,7 @@
       <v-flex xs12 sm6>
         <v-layout row wrap align-center fill-height>
           <v-flex xs12 class="px-1">
-            <v-btn block @click="activeDialog = 'units'">
+            <v-btn block :disabled="isEmptyUnit">
               Select Extra Skill
             </v-btn>
           </v-flex>
@@ -126,12 +134,15 @@
               class="no-highlight ml-1"/>
           </v-flex>
           <v-flex class="px-1">
-            <v-btn block @click="activeDialog = 'units'">
+            <v-btn block :disabled="isEmptyUnit">
               Select Sphere 1
             </v-btn>
           </v-flex>
           <v-flex class="px-1">
-            <v-btn block :disabled="!sphereData[0]">
+            <v-btn
+              @click="setSpheres(activeUnit.spheres.slice(1, 2))"
+              block
+              :disabled="!sphereData[0]">
               Clear Sphere 1
             </v-btn>
           </v-flex>
@@ -149,19 +160,22 @@
               class="no-highlight ml-1"/>
           </v-flex>
           <v-flex class="px-1">
-            <v-btn block @click="activeDialog = 'units'">
+            <v-btn block :disabled="isEmptyUnit">
               Select Sphere 2
             </v-btn>
           </v-flex>
           <v-flex class="px-1">
-            <v-btn block :disabled="!sphereData[1]">
+            <v-btn
+              block
+              @click="setSpheres(activeUnit.spheres.slice(0, 1))"
+              :disabled="!sphereData[1]">
               Clear Sphere 2
             </v-btn>
           </v-flex>
         </v-layout>
       </v-flex>
     </v-layout>
-    <v-layout column style="width: 100%;" v-if="Array.isArray(unitData.feskills)">
+    <v-layout column style="width: 100%;" v-if="!isEmptyUnit && Array.isArray(unitData.feskills)">
       <v-flex>
         <v-subheader>
           <span>SP Enhancements</span>
@@ -191,7 +205,7 @@ import { squadFillerMapping, unitPositionMapping, squadUnitActions } from '@/mod
 import { isValidUnit, getFillerUnit } from '@/modules/core/units';
 import { isValidSkill, getEmptySkill } from '@/modules/core/extra-skills';
 import { isValidSphere, getEmptySphere } from '@/modules/core/items';
-import { cloneSquad, sortUnitsByPosition } from '@/modules/core/squads';
+import { cloneSquad, sortUnitsByPosition, fixSquadErrors } from '@/modules/core/squads';
 
 const logger = new Logger({ prefix: '[UnitEntryEditor]' });
 export default {
@@ -215,6 +229,9 @@ export default {
   computed: {
     activeUnit () {
       return this.localSquad.units[this.selectedIndex] || {};
+    },
+    isEmptyUnit () {
+      return this.unitData.name === squadFillerMapping.EMPTY;
     },
     unitData () {
       const initialData = this.getUnit(this.activeUnit.id);
@@ -265,17 +282,18 @@ export default {
           value: squadUnitActions.UBB,
         },
       ].filter(({ value }) => this.unitData[value] || this.activeUnit.bbType === value);
-      return [
+
+      const nonBurstActions = [
         {
           text: 'None',
           value: squadUnitActions.NONE,
         },
-        {
+        (!this.isEmptyUnit && {
           text: 'Attack',
           value: squadUnitActions.ATK,
-        },
-        ...availableBurstTypes,
-      ];
+        }),
+      ].filter(v => v);
+      return nonBurstActions.concat(availableBurstTypes);
     },
   },
   data () {
@@ -376,6 +394,36 @@ export default {
     },
     setEnhancements (sp) {
       this.updateCurrentUnit({ sp });
+    },
+    setUnit (id) {
+      const { lead, friend, name } = this.localSquad;
+      // eslint-disable-next-line no-unused-vars
+      const { messages, ...squad } = fixSquadErrors({
+        lead,
+        friend,
+        name,
+        units: [
+          ...this.localSquad.units.slice(0, this.selectedIndex),
+          {
+            ...this.activeUnit,
+            id,
+          },
+          ...this.localSquad.units.slice(this.selectedIndex + 1),
+        ],
+      }, {
+        getUnit: this.getUnit,
+        getExtraSkill: this.getExtraSkill,
+        getItem: this.getItem,
+      });
+      logger.warn(squad);
+      this.emitSquad(squad);
+    },
+    setExtraSkill (es) {
+      this.updateCurrentUnit({ es });
+    },
+    setSpheres (spheres = []) {
+      const newSphereList = spheres.map(id => (id || '').toString()).filter(v => v);
+      this.updateCurrentUnit({ spheres: newSphereList });
     },
   },
   watch: {
