@@ -180,7 +180,7 @@ export default {
       const hasBbOrder = !isNaN(this.unit.bbOrder);
       return {
         text: (hasBbOrder && this.getOrderText(this.unit)) || '-',
-        ...this.getColorSetBasedOnBbType((hasBbOrder && this.unit) || undefined),
+        ...this.getColorSetBasedOnAction((hasBbOrder && this.unit) || undefined),
       };
     },
     rarity () {
@@ -191,10 +191,10 @@ export default {
     },
   },
   methods: {
-    getColorSetBasedOnBbType (unit = {}) {
-      const colorKey = (unit.bbType === squadUnitActions.UBB && 'red') ||
-        (unit.bbType === squadUnitActions.SBB && 'amber') ||
-        (unit.bbType === squadUnitActions.BB && 'blueGrey') ||
+    getColorSetBasedOnAction (unit = {}) {
+      const colorKey = (unit.action === squadUnitActions.UBB && 'red') ||
+        (unit.action === squadUnitActions.SBB && 'amber') ||
+        (unit.action === squadUnitActions.BB && 'blueGrey') ||
         'grey';
 
       return {
@@ -205,11 +205,11 @@ export default {
     },
     getOrderText (unit = {}) {
       // default to SBB or below (depending on if the unit has it)
-      const bbType = unit.bbType ||
+      const action = unit.action ||
         (this.getUnit(unit.id).sbb && squadUnitActions.SBB) ||
         (this.getUnit(unit.id).bb && squadUnitActions.BB) ||
         (squadUnitActions.ATK);
-      return bbType.toUpperCase();
+      return action.toUpperCase();
     },
     getSpCategories (unit = {}) {
       const feSkills = this.getUnit(unit.id).feskills;

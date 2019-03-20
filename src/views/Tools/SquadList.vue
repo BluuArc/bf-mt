@@ -394,7 +394,7 @@ export default {
           spheres: [(Math.random() > 0.5) && '47410', (Math.random() > 0.5) && '61070'].filter(v => v),
           sp: (((Math.random() > 0.5)) && 'ACDE') || undefined,
           bbOrder: i + 1,
-          bbType: ['bb', 'sbb', 'ubb'][Math.floor(Math.random() * 3)],
+          action: ['bb', 'sbb', 'ubb'][Math.floor(Math.random() * 3)],
         })),
     }),
     getUnit (id) {

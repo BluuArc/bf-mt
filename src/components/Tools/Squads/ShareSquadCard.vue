@@ -49,7 +49,7 @@
               <v-checkbox v-model="showOrder" label="BB Order"/>
             </v-flex>
             <v-flex xs12 sm6>
-              <v-checkbox v-model="showBbType" label="Skill Type"/>
+              <v-checkbox v-model="showAction" label="Action"/>
             </v-flex>
             <v-flex xs12 sm6>
               <v-checkbox v-model="showExtraSkill" label="Extra Skill"/>
@@ -133,7 +133,7 @@ export default {
     markdownText () {
       return this.squadToMarkdown(this.squad, {
         showPosition: this.showPosition,
-        showBbType: this.showBbType,
+        showAction: this.showAction,
         showOrder: this.showOrder,
         showName: this.showName,
         useBullets: this.useBullets,
@@ -159,7 +159,7 @@ export default {
       activeTabIndex: 0,
       updateTime: new Date(), // used to reset copy text
       showPosition: false,
-      showBbType: false,
+      showAction: false,
       showOrder: false,
       showName: false,
       useBullets: false,
@@ -180,7 +180,7 @@ export default {
       squad = {},
       {
         showPosition = true,
-        showBbType = true,
+        showAction = true,
         showOrder = true,
         showName = false,
         useBullets = true,
@@ -210,10 +210,10 @@ export default {
           `${this.getUnit(unit.id).name || unit.id}__**`,
           i === squad.lead && `**(${abbreviate ? 'L' : 'Leader'})**`,
           i === squad.friend && `**(${abbreviate ? 'F' : 'Friend'})**`,
-          (showPosition || showOrder || showBbType) && '-',
+          (showPosition || showOrder || showAction) && '-',
           [
             showPosition && unit.position,
-            [showOrder && unit.bbOrder, showBbType && this.getBbTypeText(unit)].filter(v => v).join('-'),
+            [showOrder && unit.bbOrder, showAction && this.getActionText(unit)].filter(v => v).join('-'),
           ].filter(v => v).join('; '),
         ].filter(v => v).join(' '));
 
@@ -265,13 +265,13 @@ export default {
 
       return sections.join('\n');
     },
-    getBbTypeText (unit = {}) {
+    getActionText (unit = {}) {
       // default to SBB or below (depending on if the unit has it)
-      const bbType = unit.bbType ||
+      const action = unit.action ||
         (this.getUnit(unit.id).sbb && squadUnitActions.SBB) ||
         (this.getUnit(unit.id).bb && squadUnitActions.BB) ||
         (squadUnitActions.ATK);
-      return bbType.toUpperCase();
+      return action.toUpperCase();
     },
     getSpCost (unit = {}) {
       const feSkills = this.getUnit(unit.id).feskills;
@@ -307,7 +307,7 @@ export default {
       this.showSpheres = true;
       this.showEnhancements = true;
       this.showPosition = true;
-      this.showBbType = true;
+      this.showAction = true;
 
       // individual settings
       this.showName = this.target === 'Discord';

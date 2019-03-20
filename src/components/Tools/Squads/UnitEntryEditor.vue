@@ -87,7 +87,7 @@
           class="pr-1"
           :disabled="isEmptyUnit"
           :items="actionPossibilities"
-          :value="activeUnit.bbType"
+          :value="activeUnit.action"
           @input="setAction"/>
         </v-flex>
       </v-layout>
@@ -281,7 +281,7 @@ export default {
           text: 'UBB',
           value: squadUnitActions.UBB,
         },
-      ].filter(({ value }) => this.unitData[value] || this.activeUnit.bbType === value);
+      ].filter(({ value }) => this.unitData[value] || this.activeUnit.action === value);
 
       const nonBurstActions = [
         {
@@ -389,7 +389,7 @@ export default {
     },
     setAction (action) {
       if (this.actionPossibilities.some(({ value }) => action === value)) {
-        this.updateCurrentUnit({ bbType: action });
+        this.updateCurrentUnit({ action });
       }
     },
     setEnhancements (sp) {

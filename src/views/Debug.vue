@@ -17,7 +17,7 @@
 <script>
 import { makeMultidexTableInstance } from '@/modules/BfmtDatabase/client';
 import { multidexModuleInfo } from '@/modules/constants';
-import { getSquadErrors, shorthandToSquad } from '@/modules/core/squads';
+import { shorthandToSquad } from '@/modules/core/squads';
 // import { unitKinds, elements, genders } from '@/modules/constants';
 
 const client = makeMultidexTableInstance('items');
@@ -28,7 +28,6 @@ export default {
     };
   },
   async mounted () {
-    window._squadChecker = getSquadErrors;
     window._shorthandToSquad = shorthandToSquad;
     // eslint-disable-next-line no-console
     console.warn({ client });

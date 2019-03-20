@@ -16,7 +16,7 @@ export function squadToShorthand (squad = { units: [] }) {
       unit.spheres.join('+') || '-',
       (i === squad.lead && 'L') || (i === squad.friend && 'F') || '-',
       unit.bbOrder,
-      unit.bbType,
+      unit.action,
       unit.sp || '-',
     ].join('~'))
     .join(',');
@@ -28,7 +28,7 @@ export function makeSquadUnitEntry ({
   es = '',
   spheres = [],
   bbOrder = 0,
-  bbType = '',
+  action = '',
   sp = '',
 } = {}) {
   const toString = (val) => (val || '').toString();
@@ -38,7 +38,7 @@ export function makeSquadUnitEntry ({
     es: toString(es),
     spheres: spheres.map(toString),
     bbOrder,
-    bbType,
+    action,
     sp,
   };
 }
@@ -52,7 +52,7 @@ export function generateFillerSquadUnitEntry ({
     id: isEmpty ? squadFillerMapping.EMPTY : squadFillerMapping.ANY,
     position,
     bbOrder,
-    bbType: isEmpty ? squadUnitActions.NONE : squadUnitActions.SBB,
+    action: isEmpty ? squadUnitActions.NONE : squadUnitActions.SBB,
   });
 }
 
@@ -93,7 +93,7 @@ export function shorthandToSquad (shorthand = '', name = `Squad ${new Date().toL
       sphereText,
       leadFriendFlag,
       bbOrder,
-      bbType,
+      action,
       spText,
     ] = entry.split('~');
     if (leadFriendFlag === 'L') {
@@ -108,7 +108,7 @@ export function shorthandToSquad (shorthand = '', name = `Squad ${new Date().toL
       es: esText !== '-' ? esText : '',
       spheres: sphereText !== '-' ? sphereText.split('+') : [],
       bbOrder: +bbOrder,
-      bbType,
+      action,
       sp: spText !== '-' ? spText : '',
     });
   });
@@ -180,11 +180,11 @@ export function fixSquadErrors (squad = {}, {
         }
 
         // default order of actions when current current action is invalid (if a unit has it): SBB, BB, ATK
-        const bbType = id === squadFillerMapping.EMPTY
+        const action = id === squadFillerMapping.EMPTY
           ? squadUnitActions.NONE
-          : (unitData[unit.bbType] && unit.bbType) || (defaultUnitActions.find(a => !!unitData[a])) || squadUnitActions.ATK;
-        if (bbType !== unit.bbType) {
-          messages.push(`${unitIdentifer} has invalid BB Type [${unit.bbType}]. Used default BB Type [${bbType}].`);
+          : (unitData[unit.action] && unit.action) || (defaultUnitActions.find(a => !!unitData[a])) || squadUnitActions.ATK;
+        if (action !== unit.action) {
+          messages.push(`${unitIdentifer} has invalid action [${unit.action}]. Used default action [${action}].`);
         }
 
         const extraSkill = (id !== squadFillerMapping.EMPTY && unit.es && isValidSkill(getExtraSkill(unit.es)))
@@ -217,7 +217,7 @@ export function fixSquadErrors (squad = {}, {
           id,
           position,
           bbOrder,
-          bbType,
+          action,
           es: extraSkill,
           spheres,
           sp,
@@ -281,186 +281,6 @@ export function fixSquadErrors (squad = {}, {
     units: sortUnitsByPosition(units),
     warnings: messages,
   };
-}
-
-export function getSquadErrors (squad = {}, {
-  // NOTE: these are synchronous getters
-  getUnit = () => {},
-  getItem = () => {},
-  getExtraSkill = () => {},
-} = {}) {
-  const makeErrorEntry = (path = '', message = '', fatal = false, fix) => ({ path, message, fatal, fix });
-  const generatePathKey = (...args) => args.join('.');
-  const errors = [];
-
-  // check if 6 unit entries are present
-  // stop after these checks if any errors are found as further checks require units to be valid
-  if (!Array.isArray(squad.units)) {
-    errors.push(makeErrorEntry(
-      'units',
-      'No units specified',
-      true,
-    ));
-    return errors;
-  } else if (squad.units.length !== 6) {
-    errors.push(makeErrorEntry(
-      'units',
-      'A squad must have exactly 6 units',
-      true,
-    ));
-    return errors;
-  }
-
-  if (isNaN(squad.lead)) {
-    errors.push(makeErrorEntry(
-      'lead',
-      'No squad lead specified',
-    ));
-  } else if (+squad.lead < 0 || +squad.lead > 5) { // bounds check
-    errors.push(makeErrorEntry(
-      'lead',
-      'Squad lead is not a unit',
-    ));
-  } else if (!isNaN(squad.friend) && +squad.lead === +squad.friend) {
-    errors.push(makeErrorEntry(
-      'lead',
-      'Lead and friend are the same',
-    ));
-  }
-
-  // friend lead is not required, but will be validated if present
-  if (!isNaN(squad.friend)) {
-    if (+squad.friend < 0 || +squad.friend > 5) { // bounds check
-      errors.push(makeErrorEntry(
-        'friend',
-        'Squad friend lead is not a unit',
-      ));
-    }
-  }
-
-  // validate each unit entry
-  const filledPositions = new Set();
-  const usedOrders = new Set();
-  const possibleActions = Object.values(squadUnitActions);
-  squad.units.forEach((unit, i) => {
-    const pathEntry = `units.${i}`;
-    if (isNaN(unit.id) && ![squadFillerMapping.EMPTY, squadFillerMapping.ANY].includes(unit.id)) {
-      errors.push(makeErrorEntry(
-        pathEntry,
-        `Unit ID [${unit.id}] is not valid`,
-        true,
-      ));
-    } else {
-      const unitData = getUnit(unit.id) || {};
-      // check position
-      if (!unitPositionMapping.includes(unit.position)) {
-        errors.push(makeErrorEntry(
-          generatePathKey(pathEntry, 'position'),
-          `Position [${unit.position}] is not valid`,
-        ));
-      } else if (filledPositions.has(unit.position)) {
-        errors.push(makeErrorEntry(
-          generatePathKey(pathEntry, 'position'),
-          `Position [${unit.position}] is duplicated`,
-        ));
-      } else {
-        filledPositions.add(unit.position);
-      }
-
-      // check order
-      if (isNaN(unit.bbOrder) || +unit.bbOrder < 1 || +unit.bbOrder > 6) {
-        errors.push(makeErrorEntry(
-          generatePathKey(pathEntry, 'bbOrder'),
-          `Order [${unit.bbOrder}] is not valid`,
-        ));
-      } else if (usedOrders.has(+unit.bbOrder)) {
-        errors.push(makeErrorEntry(
-          generatePathKey(pathEntry, 'bbOrder'),
-          `Order [${unit.bbOrder}] is duplicated`,
-        ));
-      } else {
-        usedOrders.add(+unit.bbOrder);
-      }
-
-      // check against lead/friend indices
-      if (!isNaN(squad.lead) && +squad.lead === i && !unitData) {
-        errors.push(makeErrorEntry(
-          pathEntry,
-          `Leader [${unit.id}] is not a unit`,
-        ));
-      } else if (!isNaN(squad.friend) && +squad.friend === i && !unitData) {
-        errors.push(makeErrorEntry(
-          pathEntry,
-          `Friend lead [${unit.id}] is not a unit`,
-        ));
-      }
-
-      // check BB Type
-      if (!possibleActions.includes(unit.bbType) || (unit.bbType !== squadUnitActions.NATK && !unitData[unit.bbType])) {
-        errors.push(makeErrorEntry(
-          generatePathKey(pathEntry, 'bbType'),
-          `BB Type [${unit.bbType}] is not valid`,
-        ));
-      }
-
-      // check ES
-      if (unit.es) {
-        const extraSkillData = getExtraSkill(unit.es) || {};
-        if (Object.keys(extraSkillData) === 0) {
-          errors.push(makeErrorEntry(
-            generatePathKey(pathEntry, 'es'),
-            `Extra skill [${unit.es}] is not valid`,
-          ));
-        }
-      }
-
-      // check spheres
-      if (!Array.isArray(unit.spheres)) {
-        errors.push(makeErrorEntry(
-          generatePathKey(pathEntry, 'spheres'),
-          `Spheres must be an array`,
-        ));
-      } else if (unit.spheres.length > 2) {
-        errors.push(makeErrorEntry(
-          generatePathKey(pathEntry, 'spheres'),
-          `Cannot have more than 2 spheres`,
-        ));
-      } else {
-        unit.spheres.forEach((sphereId, j) => {
-          const sphereData = getItem(sphereId) || {};
-          if (Object.keys(sphereData) === 0) {
-            errors.push(makeErrorEntry(
-              generatePathKey(pathEntry, 'spheres', j),
-              `Sphere [${sphereId}] is not valid`,
-            ));
-          }
-        });
-      }
-
-      // check enhancements
-      if (unit.sp) {
-        const feSkills = unitData.feSkills;
-        if (!feSkills) {
-          errors.push(makeErrorEntry(
-            generatePathKey(pathEntry, 'sp'),
-            `Unit [${unit.id}] can't have any enhancements`,
-          ));
-        } else {
-          const mappedSkills = unit.sp.split('')
-            .map(char => feSkills[spCodeToIndex(char)])
-            .filter(v => v.skill);
-          if (mappedSkills.length !== unit.sp.length) {
-            errors.push(makeErrorEntry(
-              generatePathKey(pathEntry, 'sp'),
-              `Some SP options (${unit.sp}) are invalid for unit [${unit.id}]`,
-            ));
-          }
-        }
-      }
-    }
-  });
-
-  return errors;
 }
 
 export function getMultidexDatabaseIdsFromSquads (squads = [generateDefaultSquad()]) {

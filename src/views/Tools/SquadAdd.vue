@@ -73,7 +73,7 @@
                   <v-flex style="flex-grow: 0;">
                     <v-btn
                       @click="attemptSquadImport"
-                      :disabled="!inputCode || parsingCode || currentSquadCode === lastImportedSquadCode"
+                      :disabled="!inputCode || parsingCode"
                       flat>
                       Import
                     </v-btn>
