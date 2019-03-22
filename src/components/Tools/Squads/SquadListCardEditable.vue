@@ -79,35 +79,6 @@
             </span>
           </v-layout>
         </card-tabs-container>
-        <!-- <v-layout row wrap class="pa-2" v-if="squad.units[selectedIndex]">
-          <v-flex xs12>
-            {{ squad.units[selectedIndex] }}
-          </v-flex>
-          <v-flex xs12>
-            Unit selector
-          </v-flex>
-          <v-flex xs12 sm4>
-            Position Selector
-          </v-flex>
-          <v-flex xs6 sm4>
-            BB Order Selector
-          </v-flex>
-          <v-flex xs6 sm4>
-            BB Type Selector
-          </v-flex>
-          <v-flex xs12>
-            Extra Skill selector
-          </v-flex>
-          <v-flex xs12 sm6>
-            Sphere 1 Selector
-          </v-flex>
-          <v-flex xs12 sm6>
-            Sphere 2 Selector
-          </v-flex>
-          <v-flex xs12>
-            SP Builder
-          </v-flex>
-        </v-layout> -->
       </template>
       <loading-indicator v-else loadingMessage="Loading squad data"/>
     </v-layout>

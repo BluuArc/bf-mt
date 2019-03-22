@@ -300,6 +300,7 @@ export default {
 
 <style lang="less">
 .squad-message-alert {
+  overflow-x: auto;
   .v-list__tile {
     padding: 0;
   }

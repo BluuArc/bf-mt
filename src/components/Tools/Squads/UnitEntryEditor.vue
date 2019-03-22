@@ -1,5 +1,12 @@
 <template>
   <v-layout row wrap class="unit-entry-editor">
+    <v-dialog
+      :value="!!activeDialog"
+      @input="activeDialog = ''"
+      lazy>
+      <unit-selector v-if="activeDialog === 'units'"
+        @input="$d => setUnit($d.data)"/>
+    </v-dialog>
     <v-layout row style="width: 100%;" wrap>
       <v-flex xs12>
         <v-subheader>Unit</v-subheader>
@@ -111,7 +118,10 @@
             </v-btn>
           </v-flex>
           <v-flex xs12 class="px-1">
-            <v-btn block :disabled="esData.id === 0">
+            <v-btn
+              block
+              @click="setExtraSkill('')"
+              :disabled="esData.id === 0">
               Clear Extra Skill
             </v-btn>
           </v-flex>
@@ -200,6 +210,7 @@ import UnitCard from '@/components/Multidex/Units/EntryCard';
 import ExtraSkillCard from '@/components/Multidex/ExtraSkills/EntryCard';
 import SphereCard from '@/components/Multidex/Items/EntryCard';
 import SpBuildTable from '@/components/Multidex/Units/SpBuildTable';
+import UnitSelector from '@/components/Tools/Squads/MultidexSelectors/UnitSelector';
 import { Logger } from '@/modules/Logger';
 import { squadFillerMapping, unitPositionMapping, squadUnitActions } from '@/modules/constants';
 import { isValidUnit, getFillerUnit } from '@/modules/core/units';
@@ -207,6 +218,7 @@ import { isValidSkill, getEmptySkill } from '@/modules/core/extra-skills';
 import { isValidSphere, getEmptySphere } from '@/modules/core/items';
 import { cloneSquad, sortUnitsByPosition, fixSquadErrors } from '@/modules/core/squads';
 
+// eslint-disable-next-line no-unused-vars
 const logger = new Logger({ prefix: '[UnitEntryEditor]' });
 export default {
   mixins: [GettersMixin],
@@ -215,6 +227,7 @@ export default {
     ExtraSkillCard,
     SphereCard,
     SpBuildTable,
+    UnitSelector,
   },
   props: {
     squad: {
@@ -303,15 +316,17 @@ export default {
     };
   },
   methods: {
-    onSelectUnit (input) {
-      logger.warn(input);
-      this.activeDialog = '';
-    },
     emitUnits (units = [], newIndex) {
       this.$emit('newunits', { units, newIndex: !isNaN(newIndex) ? newIndex : this.selectedIndex });
+      if (this.activeDialog) {
+        this.activeDialog = '';
+      }
     },
     emitSquad (squad = {}, newIndex) {
       this.$emit('newsquad', { squad, newIndex: !isNaN(newIndex) ? newIndex : this.selectedIndex });
+      if (this.activeDialog) {
+        this.activeDialog = '';
+      }
     },
     // update an internal value for the current unit
     updateCurrentUnit (newUnitData = {}) {
@@ -395,28 +410,37 @@ export default {
     setEnhancements (sp) {
       this.updateCurrentUnit({ sp });
     },
-    setUnit (id) {
-      const { lead, friend, name } = this.localSquad;
-      // eslint-disable-next-line no-unused-vars
-      const { messages, ...squad } = fixSquadErrors({
-        lead,
-        friend,
-        name,
-        units: [
-          ...this.localSquad.units.slice(0, this.selectedIndex),
-          {
-            ...this.activeUnit,
-            id,
-          },
-          ...this.localSquad.units.slice(this.selectedIndex + 1),
-        ],
-      }, {
-        getUnit: this.getUnit,
-        getExtraSkill: this.getExtraSkill,
-        getItem: this.getItem,
-      });
-      logger.warn(squad);
-      this.emitSquad(squad);
+    async setUnit (id) {
+      let tempData;
+      if (id.then !== undefined) {
+        await id.then(data => {
+          tempData = data;
+        });
+      } else {
+        tempData = this.getUnit(id);
+      }
+      if (isValidUnit(tempData) || id === squadFillerMapping.ANY || id === squadFillerMapping.EMPTY) {
+        const { lead, friend, name } = this.localSquad;
+        // eslint-disable-next-line no-unused-vars
+        const { messages, ...squad } = fixSquadErrors({
+          lead,
+          friend,
+          name,
+          units: [
+            ...this.localSquad.units.slice(0, this.selectedIndex),
+            {
+              ...this.activeUnit,
+              id: (id.then !== undefined && tempData.id) || id,
+            },
+            ...this.localSquad.units.slice(this.selectedIndex + 1),
+          ],
+        }, {
+          getUnit: (inputId) => +inputId === +tempData.id ? tempData : this.getUnit(inputId),
+          getExtraSkill: this.getExtraSkill,
+          getItem: this.getItem,
+        });
+        this.emitSquad(squad);
+      }
     },
     setExtraSkill (es) {
       this.updateCurrentUnit({ es });
