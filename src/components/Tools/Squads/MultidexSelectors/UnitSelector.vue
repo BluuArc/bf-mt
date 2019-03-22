@@ -1,6 +1,7 @@
 <template>
   <base-selector
     :value="nameFilter"
+    :hasSelection="hasSelection"
     @input="$i => nameFilter = ($i || '').toLowerCase()"
     :allEntryIds="allIds">
     <v-layout row wrap slot="entries" slot-scope="{ entries }">
@@ -43,6 +44,7 @@ export default {
   data () {
     return {
       nameFilter: '',
+      hasSelection: false,
     };
   },
   methods: {
@@ -50,6 +52,7 @@ export default {
       return name.toLowerCase().includes(query);
     },
     sendEntry (id) {
+      this.hasSelection = true;
       this.$emit('input', {
         id,
         data: dbClient.getById({
