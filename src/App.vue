@@ -267,6 +267,10 @@ export default {
     this.pageActiveServer = this.activeServer;
     this.htmlOverflowChangeHandler();
     await this.fetchUpdateTimes();
+
+    if (typeof window.webpackHotUpdateBFMT === 'function') {
+      window.__bfmtContext = this;
+    }
   },
 };
 </script>

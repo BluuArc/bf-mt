@@ -4,8 +4,15 @@
       :value="!!activeDialog"
       @input="activeDialog = ''"
       lazy>
-      <unit-selector v-if="activeDialog === 'units'"
+      <unit-selector
+        v-if="activeDialog === 'units'"
         @input="$d => setUnit($d.data)"/>
+      <es-selector
+        v-else-if="activeDialog === 'extraSkills'"
+        @input="$d => setExtraSkill($d.id)"/>
+      <sphere-selector
+        v-else-if="activeDialog === 'spheres'"
+        @input="$d => onSelectSphere($d.id)"/>
     </v-dialog>
     <v-layout row style="width: 100%;" wrap>
       <v-flex xs12>
@@ -113,7 +120,7 @@
       <v-flex xs12 sm6>
         <v-layout row wrap align-center fill-height>
           <v-flex xs12 class="px-1">
-            <v-btn block :disabled="isEmptyUnit">
+            <v-btn block :disabled="isEmptyUnit" @click="activeDialog = 'extraSkills'">
               Select Extra Skill
             </v-btn>
           </v-flex>
@@ -144,7 +151,7 @@
               class="no-highlight ml-1"/>
           </v-flex>
           <v-flex class="px-1">
-            <v-btn block :disabled="isEmptyUnit">
+            <v-btn block :disabled="isEmptyUnit" @click="() => { lastSelectedSphereIndex = 0; activeDialog = 'spheres'; }">
               Select Sphere 1
             </v-btn>
           </v-flex>
@@ -170,7 +177,7 @@
               class="no-highlight ml-1"/>
           </v-flex>
           <v-flex class="px-1">
-            <v-btn block :disabled="isEmptyUnit">
+            <v-btn block :disabled="isEmptyUnit" @click="() => { lastSelectedSphereIndex = 1; activeDialog = 'spheres'; }">
               Select Sphere 2
             </v-btn>
           </v-flex>
@@ -211,6 +218,8 @@ import ExtraSkillCard from '@/components/Multidex/ExtraSkills/EntryCard';
 import SphereCard from '@/components/Multidex/Items/EntryCard';
 import SpBuildTable from '@/components/Multidex/Units/SpBuildTable';
 import UnitSelector from '@/components/Tools/Squads/MultidexSelectors/UnitSelector';
+import EsSelector from '@/components/Tools/Squads/MultidexSelectors/ExtraSkillSelector';
+import SphereSelector from '@/components/Tools/Squads/MultidexSelectors/SphereSelector';
 import { Logger } from '@/modules/Logger';
 import { squadFillerMapping, unitPositionMapping, squadUnitActions } from '@/modules/constants';
 import { isValidUnit, getFillerUnit } from '@/modules/core/units';
@@ -228,6 +237,8 @@ export default {
     SphereCard,
     SpBuildTable,
     UnitSelector,
+    EsSelector,
+    SphereSelector,
   },
   props: {
     squad: {
@@ -313,9 +324,25 @@ export default {
     return {
       activeDialog: '',
       localSquad: {},
+      lastSelectedSphereIndex: -1,
     };
   },
   methods: {
+    onSelectSphere (sphereId) {
+      let spheres = this.activeUnit.spheres.slice();
+      if (this.lastSelectedSphereIndex > -1 && !spheres.includes(sphereId) && !spheres.includes(+sphereId)) {
+        if (spheres[this.lastSelectedSphereIndex]) {
+          spheres[this.lastSelectedSphereIndex] = sphereId;
+        } else if (spheres.length < 2) {
+          spheres.push(sphereId);
+        } else {
+          // remove first sphere
+          spheres = [spheres[1], sphereId];
+        }
+        this.setSpheres(spheres);
+      }
+      this.activeDialog = '';
+    },
     emitUnits (units = [], newIndex) {
       this.$emit('newunits', { units, newIndex: !isNaN(newIndex) ? newIndex : this.selectedIndex });
       if (this.activeDialog) {
@@ -330,6 +357,7 @@ export default {
     },
     // update an internal value for the current unit
     updateCurrentUnit (newUnitData = {}) {
+      this.lastSelectedSphereIndex = -1;
       this.emitUnits([
         ...this.localSquad.units.slice(0, this.selectedIndex),
         {

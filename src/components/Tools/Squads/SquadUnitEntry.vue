@@ -77,7 +77,7 @@
               :displaySize="22"
               class="mr-1"/>
           </v-layout>
-          <v-flex>
+          <v-flex style="word-break: break-all;">
             {{ getExtraSkill(unit.es).name || 'No Extra Skill' }}
           </v-flex>
         </v-layout>
