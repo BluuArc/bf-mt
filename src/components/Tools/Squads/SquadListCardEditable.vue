@@ -77,11 +77,14 @@
     <v-divider class="mt-2"/>
     <slot name="card-actions">
       <v-card-actions style="justify-content: space-between;">
-        <v-btn flat>
+        <v-btn flat @click="onSaveClick">
           <v-icon left>save</v-icon>
           Save
         </v-btn>
-        <v-btn flat to="/tools/squads">
+        <v-btn
+          flat
+          :to="redirectCancel ? '/tools/squads' : undefined"
+          @click="$emit('cancel')">
           <span>Cancel</span>
         </v-btn>
       </v-card-actions>
@@ -113,6 +116,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    redirectCancel: {
+      type: Boolean,
+      default: true,
+    },
   },
   computed: {
     squadCost () {
@@ -140,6 +147,13 @@ export default {
   methods: {
     getUnitEntryKey (unit = {}, i = 0) {
       return `${JSON.stringify(unit)}-${i}`;
+    },
+    async onSaveClick () {
+      const resultKey = await this.$store.dispatch('squads/storeSquad', {
+        server: this.$store.state.settings.activeServer,
+        squad: this.squad,
+      });
+      this.$emit('save', resultKey);
     },
   },
   watch: {

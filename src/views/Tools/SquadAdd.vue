@@ -14,6 +14,7 @@
                     @selectedindex="$ev => selectedIndex = $ev"
                     @newsquad="$ev => squad = $ev"
                     @newunits="$ev => squad.units = $ev"
+                    @save="onSuccessfulSave"
                     :squad="squad"
                     :getUnit="getUnit"
                     :getItem="getItem"
@@ -259,6 +260,9 @@ export default {
     },
     getExtraSkill (id) {
       return this.squadExtraSkills[id] || {};
+    },
+    onSuccessfulSave (key) {
+      this.$router.push({ path: `/tools/squads/${key}` });
     },
   },
   watch: {

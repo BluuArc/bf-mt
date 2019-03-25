@@ -65,8 +65,7 @@
             :getExtraSkill="getExtraSkill"
             :to="`/tools/squads/${squad.id}`"
             @share="squadToShareIndex = i"
-            @register="registerSquadCard"
-            @unregister="unRegisterSquadCard"
+            :useObserver="false"
           >
             <template v-if="isCopyMode">
               <v-card-actions slot="card-actions">
@@ -229,7 +228,7 @@ import ModuleUpdateDialog from '@/components/ModuleUpdateDialog';
 
 const logger = new Logger({ prefix: '[SquadList]' });
 let loadingDebouncer;
-let intersectionObserver;
+// let intersectionObserver;
 export default {
   name: 'squad-list',
   props: {
@@ -251,9 +250,7 @@ export default {
     ...mapState('settings', ['activeServer', 'lightMode']),
     requiredModules: () => squadRequiredModules,
     squads () {
-      return (new Array(15))
-        .fill(0)
-        .map(() => Object.freeze(this.getSampleSquad()));
+      return this.$store.state.squads.squads;
     },
     sortedSquads () {
       return Object.freeze(
@@ -285,8 +282,8 @@ export default {
       isInternallyLoading: false,
       isVisuallyLoading: false,
       activeCallToken: '0',
-      isVisible: false,
-      squadDomElems: {},
+      // isVisible: false,
+      // squadDomElems: {},
       nameFilter: '',
       searchIsFocused: false,
       filterChanged: false,
@@ -311,24 +308,24 @@ export default {
       this.isVisuallyLoading = val;
     });
 
-    if (intersectionObserver && intersectionObserver.disconnect) {
-      intersectionObserver.disconnect();
-    }
-    intersectionObserver = new IntersectionObserver((entries) => {
-      const squadKeys = Object.keys(this.squadDomElems);
-      entries.forEach(entry => {
-        const squadId = squadKeys.find(key => this.squadDomElems[key].elem === entry.target);
-        // logger.warn({ elem: entry.target, isIntersecting: entry.isIntersecting, squadId });
-        if (squadId) {
-          this.squadDomElems[squadId].setVisibility(entry.isIntersecting);
-        }
-      });
-    });
+    // if (intersectionObserver && intersectionObserver.disconnect) {
+    //   intersectionObserver.disconnect();
+    // }
+    // intersectionObserver = new IntersectionObserver((entries) => {
+    //   const squadKeys = Object.keys(this.squadDomElems);
+    //   entries.forEach(entry => {
+    //     const squadId = squadKeys.find(key => this.squadDomElems[key].elem === entry.target);
+    //     // logger.warn({ elem: entry.target, isIntersecting: entry.isIntersecting, squadId });
+    //     if (squadId) {
+    //       this.squadDomElems[squadId].setVisibility(entry.isIntersecting);
+    //     }
+    //   });
+    // });
   },
   beforeDestroy () {
-    if (intersectionObserver && intersectionObserver.disconnect) {
-      intersectionObserver.disconnect();
-    }
+    // if (intersectionObserver && intersectionObserver.disconnect) {
+    //   intersectionObserver.disconnect();
+    // }
   },
   methods: {
     ...mapActions('units', {
@@ -350,7 +347,13 @@ export default {
         this.items = this.squadDb.items;
         this.extraSkills = this.squadDb.extraSkills;
       } else {
-        const databaseIds = getMultidexDatabaseIdsFromSquads(this.squads);
+        const squads = await this.$store.dispatch('squads/getSquads', this.$store.state.settings.activeServer)
+          .then(result => {
+            const squads = result.map(s => s.squad);
+            this.$store.commit('squads/setSquadList', squads);
+            return squads;
+          });
+        const databaseIds = getMultidexDatabaseIdsFromSquads(squads);
   
         const currentServer = this.activeServer;
         await [
@@ -406,23 +409,23 @@ export default {
     getExtraSkill (id) {
       return this.extraSkills[id] || {};
     },
-    registerSquadCard ({ elem, squadId, setVisibility } = {}) {
-      if (elem && squadId) {
-        if (this.squadDomElems[squadId]) {
-          intersectionObserver.unobserve(this.squadDomElems[squadId].elem);
-        }
-        intersectionObserver.observe(elem);
-        this.squadDomElems[squadId] = {
-          elem,
-          setVisibility: (val) => setVisibility(val),
-        };
-      }
-    },
-    unRegisterSquadCard ({ squadId } = {}) {
-      if (squadId && this.squadDomElems.hasOwnProperty(squadId)) {
-        intersectionObserver.unobserve(this.squadDomElems[squadId].elem);
-      }
-    },
+    // registerSquadCard ({ elem, squadId, setVisibility } = {}) {
+    //   if (elem && squadId) {
+    //     if (this.squadDomElems[squadId]) {
+    //       intersectionObserver.unobserve(this.squadDomElems[squadId].elem);
+    //     }
+    //     intersectionObserver.observe(elem);
+    //     this.squadDomElems[squadId] = {
+    //       elem,
+    //       setVisibility: (val) => setVisibility(val),
+    //     };
+    //   }
+    // },
+    // unRegisterSquadCard ({ squadId } = {}) {
+    //   if (squadId && this.squadDomElems.hasOwnProperty(squadId)) {
+    //     intersectionObserver.unobserve(this.squadDomElems[squadId].elem);
+    //   }
+    // },
     // TODO: offload filter into a worker
     filterSquads ({ name = '' } = {}) {
       const lowerCaseName = name && name.toLowerCase();
@@ -504,26 +507,26 @@ export default {
         await this.$nextTick();
 
         // reregister elements
-        if (intersectionObserver && intersectionObserver.disconnect) {
-          intersectionObserver.disconnect();
-        }
-        intersectionObserver = new IntersectionObserver((entries) => {
-          const squadKeys = Object.keys(this.squadDomElems);
-          entries.forEach(entry => {
-            const squadId = squadKeys.find(key => this.squadDomElems[key].elem === entry.target);
-            // logger.warn({ elem: entry.target, isIntersecting: entry.isIntersecting, squadId });
-            if (squadId) {
-              this.squadDomElems[squadId].setVisibility(entry.isIntersecting);
-            }
-          });
-        });
-        Object.keys(this.squadDomElems).forEach(squadId => {
-          this.registerSquadCard({
-            elem: this.squadDomElems[squadId].elem,
-            squadId,
-            setVisibility: this.squadDomElems[squadId].setVisibility,
-          });
-        });
+        // if (intersectionObserver && intersectionObserver.disconnect) {
+        //   intersectionObserver.disconnect();
+        // }
+        // intersectionObserver = new IntersectionObserver((entries) => {
+        //   const squadKeys = Object.keys(this.squadDomElems);
+        //   entries.forEach(entry => {
+        //     const squadId = squadKeys.find(key => this.squadDomElems[key].elem === entry.target);
+        //     // logger.warn({ elem: entry.target, isIntersecting: entry.isIntersecting, squadId });
+        //     if (squadId) {
+        //       this.squadDomElems[squadId].setVisibility(entry.isIntersecting);
+        //     }
+        //   });
+        // });
+        // Object.keys(this.squadDomElems).forEach(squadId => {
+        //   this.registerSquadCard({
+        //     elem: this.squadDomElems[squadId].elem,
+        //     squadId,
+        //     setVisibility: this.squadDomElems[squadId].setVisibility,
+        //   });
+        // });
 
         await delay(1000);
         const toolbarHeight = this.$el.querySelector('nav.v-toolbar').offsetHeight;

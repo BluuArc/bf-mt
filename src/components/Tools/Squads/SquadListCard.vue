@@ -63,6 +63,10 @@ export default {
       type: String,
       default: '',
     },
+    useObserver: {
+      type: Boolean,
+      default: true,
+    },
   },
   computed: {
     squadCost () {
@@ -88,20 +92,26 @@ export default {
     };
   },
   mounted () {
-    this.$emit('register', {
-      elem: this.$el,
-      squadId: this.squad.id,
-      setVisibility: (val) => {
-        // only set to true once
-        if (val) {
-          this.isVisible = true;
-          this.$emit('unregister', { squadId: this.squad.id });
-        }
-      },
-    });
+    if (this.useObserver) {
+      this.$emit('register', {
+        elem: this.$el,
+        squadId: this.squad.id,
+        setVisibility: (val) => {
+          // only set to true once
+          if (val) {
+            this.isVisible = true;
+            this.$emit('unregister', { squadId: this.squad.id });
+          }
+        },
+      });
+    } else {
+      this.isVisible = true;
+    }
   },
   beforeDestroy () {
-    this.$emit('unregister', { elem: this.$el, squadId: this.squad.id });
+    if (this.useObserver) {
+      this.$emit('unregister', { elem: this.$el, squadId: this.squad.id });
+    }
   },
   methods: {
     getUnitEntryKey (unit = {}, i = 0) {

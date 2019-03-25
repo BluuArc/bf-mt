@@ -26,6 +26,16 @@ export default class WorkerDb extends DbInterface {
       });
   }
 
+  getAll ({ table }) {
+    return Promise.resolve()
+      .then(() => {
+        return this._db[table].toArray();
+      }).catch(err => {
+        logger.error(`GET error. Returning default value: []`, { table }, err);
+        return [];
+      });
+  }
+
   async getFieldInEntry ({ table = '', query, field = '' }) {
     const results = await this.get({ table, query });
     return results.length === 0 ? undefined : results[0][field];

@@ -6,6 +6,7 @@ import getUpdateTimes from './instances/update-data-singleton';
 import settings from './settings';
 import github from './github';
 import multidexModules, { moduleInfo as multidexModuleInfo } from './multidex';
+import squads from './tools/squads';
 
 import { Logger } from '@/modules/Logger';
 const logger = new Logger({ prefix: '[STORE]' });
@@ -30,6 +31,7 @@ export default new Vuex.Store({
     settings,
     github,
     ...multidexModules,
+    squads,
   },
   state: {
     disableHtmlOverflow: false,

@@ -12,6 +12,10 @@ export default class DbInterface {
     return DbInterface._defer('get');
   }
 
+  getAll ({ table = '' } = {}) {
+    return DbInterface._defer('getAll');
+  }
+
   getFieldInEntry ({ table = '', query, field = '' } = {}) {
     return DbInterface._defer('getFieldInEntry');
   }

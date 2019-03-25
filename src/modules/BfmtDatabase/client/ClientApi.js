@@ -37,6 +37,10 @@ export default class ClientApi extends DbInterface {
     return this.request('get', { table, query });
   }
 
+  getAll (table = '') {
+    return this.request('getAll', { table });
+  }
+
   getFieldInEntry (table = '', query, field = '') {
     return this.request('getFieldInEntry', { table, query, field });
   }
@@ -70,6 +74,10 @@ export class ClientTableApi extends ClientApi {
 
   get (query) {
     return super.get(this._table, query);
+  }
+
+  getAll () {
+    return super.getAll(this._table);
   }
 
   getFieldInEntry (query, field = '') {

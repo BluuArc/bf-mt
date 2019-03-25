@@ -15,12 +15,13 @@
 </template>
 
 <script>
-import { makeMultidexTableInstance } from '@/modules/BfmtDatabase/client';
+import { makeTableInstance } from '@/modules/BfmtDatabase/client';
 import { multidexModuleInfo } from '@/modules/constants';
-import { shorthandToSquad } from '@/modules/core/squads';
+// import { shorthandToSquad } from '@/modules/core/squads';
 // import { unitKinds, elements, genders } from '@/modules/constants';
 
-const client = makeMultidexTableInstance('items');
+// const client = makeMultidexTableInstance('items');
+const client = makeTableInstance('settings');
 export default {
   data () {
     return {
@@ -28,7 +29,7 @@ export default {
     };
   },
   async mounted () {
-    window._shorthandToSquad = shorthandToSquad;
+    window._debugContext = this;
     // eslint-disable-next-line no-console
     console.warn({ client });
 
@@ -45,7 +46,7 @@ export default {
 
       // const result = await client.request('delayed-ping', { from: 'debug page' });
       // const result = await client.getDbStats('gl');
-      let result = await client.getTablesWithUpdates({
+      let result = await client.getAll({
         server: 'gl',
         tables: multidexModuleInfo.map(m => m.name),
         forceRefresh: true,
@@ -71,7 +72,7 @@ export default {
       // });
       // eslint-disable-next-line no-console
       console.warn({ result });
-      this.result = result;
+      this.result = Object.freeze(result);
     },
   },
 };
