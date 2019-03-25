@@ -63,7 +63,7 @@ export default {
       type: String,
       default: '',
     },
-    useObserver: {
+    isVisible: {
       type: Boolean,
       default: true,
     },
@@ -85,33 +85,6 @@ export default {
         return unit;
       });
     },
-  },
-  data () {
-    return {
-      isVisible: false,
-    };
-  },
-  mounted () {
-    if (this.useObserver) {
-      this.$emit('register', {
-        elem: this.$el,
-        squadId: this.squad.id,
-        setVisibility: (val) => {
-          // only set to true once
-          if (val) {
-            this.isVisible = true;
-            this.$emit('unregister', { squadId: this.squad.id });
-          }
-        },
-      });
-    } else {
-      this.isVisible = true;
-    }
-  },
-  beforeDestroy () {
-    if (this.useObserver) {
-      this.$emit('unregister', { elem: this.$el, squadId: this.squad.id });
-    }
   },
   methods: {
     getUnitEntryKey (unit = {}, i = 0) {

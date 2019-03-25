@@ -228,7 +228,6 @@ import ModuleUpdateDialog from '@/components/ModuleUpdateDialog';
 
 const logger = new Logger({ prefix: '[SquadList]' });
 let loadingDebouncer;
-// let intersectionObserver;
 export default {
   name: 'squad-list',
   props: {
@@ -282,8 +281,6 @@ export default {
       isInternallyLoading: false,
       isVisuallyLoading: false,
       activeCallToken: '0',
-      // isVisible: false,
-      // squadDomElems: {},
       nameFilter: '',
       searchIsFocused: false,
       filterChanged: false,
@@ -307,25 +304,6 @@ export default {
     loadingDebouncer = new LoadingDebouncer(val => {
       this.isVisuallyLoading = val;
     });
-
-    // if (intersectionObserver && intersectionObserver.disconnect) {
-    //   intersectionObserver.disconnect();
-    // }
-    // intersectionObserver = new IntersectionObserver((entries) => {
-    //   const squadKeys = Object.keys(this.squadDomElems);
-    //   entries.forEach(entry => {
-    //     const squadId = squadKeys.find(key => this.squadDomElems[key].elem === entry.target);
-    //     // logger.warn({ elem: entry.target, isIntersecting: entry.isIntersecting, squadId });
-    //     if (squadId) {
-    //       this.squadDomElems[squadId].setVisibility(entry.isIntersecting);
-    //     }
-    //   });
-    // });
-  },
-  beforeDestroy () {
-    // if (intersectionObserver && intersectionObserver.disconnect) {
-    //   intersectionObserver.disconnect();
-    // }
   },
   methods: {
     ...mapActions('units', {
@@ -409,23 +387,6 @@ export default {
     getExtraSkill (id) {
       return this.extraSkills[id] || {};
     },
-    // registerSquadCard ({ elem, squadId, setVisibility } = {}) {
-    //   if (elem && squadId) {
-    //     if (this.squadDomElems[squadId]) {
-    //       intersectionObserver.unobserve(this.squadDomElems[squadId].elem);
-    //     }
-    //     intersectionObserver.observe(elem);
-    //     this.squadDomElems[squadId] = {
-    //       elem,
-    //       setVisibility: (val) => setVisibility(val),
-    //     };
-    //   }
-    // },
-    // unRegisterSquadCard ({ squadId } = {}) {
-    //   if (squadId && this.squadDomElems.hasOwnProperty(squadId)) {
-    //     intersectionObserver.unobserve(this.squadDomElems[squadId].elem);
-    //   }
-    // },
     // TODO: offload filter into a worker
     filterSquads ({ name = '' } = {}) {
       const lowerCaseName = name && name.toLowerCase();
@@ -504,30 +465,6 @@ export default {
       this.$store.commit('setHtmlOverflowDisableState', !!isShowing);
 
       if (!isShowing) {
-        await this.$nextTick();
-
-        // reregister elements
-        // if (intersectionObserver && intersectionObserver.disconnect) {
-        //   intersectionObserver.disconnect();
-        // }
-        // intersectionObserver = new IntersectionObserver((entries) => {
-        //   const squadKeys = Object.keys(this.squadDomElems);
-        //   entries.forEach(entry => {
-        //     const squadId = squadKeys.find(key => this.squadDomElems[key].elem === entry.target);
-        //     // logger.warn({ elem: entry.target, isIntersecting: entry.isIntersecting, squadId });
-        //     if (squadId) {
-        //       this.squadDomElems[squadId].setVisibility(entry.isIntersecting);
-        //     }
-        //   });
-        // });
-        // Object.keys(this.squadDomElems).forEach(squadId => {
-        //   this.registerSquadCard({
-        //     elem: this.squadDomElems[squadId].elem,
-        //     squadId,
-        //     setVisibility: this.squadDomElems[squadId].setVisibility,
-        //   });
-        // });
-
         await delay(1000);
         const toolbarHeight = this.$el.querySelector('nav.v-toolbar').offsetHeight;
         // 56px is height of bottom navbar
