@@ -56,42 +56,35 @@
         <v-flex v-if="squad.units[selectedIndex]" xs12 class="py-1">
           <v-divider/>
         </v-flex>
-        <card-tabs-container
-          class="px-0"
-          :tabs="tabConfig"
-          v-model="activeTab">
-          <v-layout slot="squad">
-            Squad Level Controls Here
-          </v-layout>
-          <v-layout slot="unit">
-            <unit-entry-editor
-              v-if="squad.units[selectedIndex]"
-              class="py-2"
-              @newunits="($ev) => { selectedIndex = $ev.newIndex; $emit('newunits', $ev.units) }"
-              @newsquad="($ev) => { selectedIndex = $ev.newIndex; $emit('newsquad', $ev.squad); }"
-              :squad="squad"
-              :getUnit="getUnit"
-              :getItem="getItem"
-              :getExtraSkill="getExtraSkill"
-              :selectedIndex="selectedIndex"/>
-            <span v-else>
-              Select a unit to edit its details
-            </span>
-          </v-layout>
-        </card-tabs-container>
+        <v-layout>
+          <unit-entry-editor
+            v-if="squad.units[selectedIndex]"
+            class="py-2"
+            @newunits="($ev) => { selectedIndex = $ev.newIndex; $emit('newunits', $ev.units) }"
+            @newsquad="($ev) => { selectedIndex = $ev.newIndex; $emit('newsquad', $ev.squad); }"
+            :squad="squad"
+            :getUnit="getUnit"
+            :getItem="getItem"
+            :getExtraSkill="getExtraSkill"
+            :selectedIndex="selectedIndex"/>
+          <span v-else>
+            Select a unit to edit its details
+          </span>
+        </v-layout>
       </template>
       <loading-indicator v-else loadingMessage="Loading squad data"/>
     </v-layout>
     <v-divider class="mt-2"/>
     <slot name="card-actions">
-      <!-- <v-card-actions style="justify-content: space-between;">
-        <v-btn flat v-if="to" :to="to">View</v-btn>
-        <v-btn flat v-else @click="$emit('view')">View</v-btn>
-        <v-btn flat @click="$emit('share')">
-          <v-icon left>share</v-icon>
-          Share
+      <v-card-actions style="justify-content: space-between;">
+        <v-btn flat>
+          <v-icon left>save</v-icon>
+          Save
         </v-btn>
-      </v-card-actions> -->
+        <v-btn flat to="/tools/squads">
+          <span>Cancel</span>
+        </v-btn>
+      </v-card-actions>
     </slot>
   </v-card>
 </template>
@@ -102,7 +95,6 @@ import { generateFillerSquadUnitEntry } from '@/modules/core/squads';
 import UnitEntry from '@/components/Tools/Squads/SquadUnitEntry';
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 import LoadingIndicator from '@/components/LoadingIndicator';
-import CardTabsContainer from '@/components/CardTabsContainer';
 import UnitEntryEditor from '@/components/Tools/Squads/UnitEntryEditor';
 
 export default {
@@ -111,7 +103,6 @@ export default {
     UnitEntry,
     LoadingIndicator,
     UnitEntryEditor,
-    CardTabsContainer,
   },
   props: {
     squad: {
@@ -124,7 +115,6 @@ export default {
     },
   },
   computed: {
-    tabConfig: () => ['squad', 'unit'].map(name => ({ name, slot: name })),
     squadCost () {
       return this.squad.units
         .map(({ id }) => this.getUnit(id))
@@ -145,7 +135,6 @@ export default {
     return {
       highlightedIndex: -1,
       selectedIndex: -1,
-      activeTab: 0,
     };
   },
   methods: {
@@ -156,8 +145,15 @@ export default {
   watch: {
     selectedIndex () {
       this.highlightedIndex = -1;
-      this.activeTab = 1;
     },
   },
 };
 </script>
+
+<style lang="less">
+.squad-card--editable {
+  .v-card__actions a:not(:hover):before {
+    background-color: inherit;
+  }
+}
+</style>
