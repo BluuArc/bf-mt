@@ -368,7 +368,7 @@ export default {
       ]);
     },
     setPosition (position) {
-      const { units } = this.localSquad;
+      const { units, lead, friend } = this.localSquad;
       const unitToSwap = units.find(u => u.position === position);
       if (unitToSwap && unitToSwap !== this.activeUnit) {
         const otherUnits = units.filter((u, i) => i !== this.selectedIndex && u !== unitToSwap);
@@ -385,7 +385,11 @@ export default {
         ], false);
 
         const newIndex = unitPositionMapping.indexOf(position);
-        this.emitUnits(newUnitList, newIndex);
+        this.emitSquad({
+          lead: this.selectedIndex === lead ? newIndex : lead,
+          friend: this.selectedIndex === friend ? newIndex : friend,
+          units: newUnitList,
+        }, newIndex);
       }
     },
     setLeadFriendStatus (status) {

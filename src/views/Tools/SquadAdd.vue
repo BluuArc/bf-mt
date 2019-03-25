@@ -20,9 +20,6 @@
                     :getExtraSkill="getExtraSkill"
                     :isLoadingInParent="isLoadingSquadData"/>
                 </v-flex>
-                <v-flex>
-                  {{ squad }}
-                </v-flex>
               </v-layout>
               <v-layout column slot="import-code">
                 <v-flex>
