@@ -31,12 +31,17 @@
     </v-layout>
     <v-divider class="mt-2"/>
     <slot name="card-actions">
-      <v-card-actions style="justify-content: space-between;">
+      <v-card-actions>
         <v-btn flat v-if="to" :to="to">View</v-btn>
         <v-btn flat v-else @click="$emit('view')">View</v-btn>
         <v-btn flat @click="$emit('share')">
           <v-icon left>share</v-icon>
           Share
+        </v-btn>
+        <v-spacer/>
+        <v-btn flat @click="$emit('delete')">
+          <v-icon left>delete</v-icon>
+          Delete
         </v-btn>
       </v-card-actions>
     </slot>

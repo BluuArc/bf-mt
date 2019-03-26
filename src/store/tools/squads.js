@@ -15,12 +15,15 @@ export default {
     },
   },
   actions: {
-    async storeSquad ({ commit, dispatch }, { squad, server, updateInternalList = false }) {
+    async updateSquadList ({ commit, dispatch }, server) {
+      const squads = await dispatch('getSquads', server);
+      commit('setSquadList', squads);
+    },
+    async storeSquad ({ dispatch }, { squad, server, updateInternalList = false }) {
       const resultKey = await dbClient.put({ squad, server });
 
       if (updateInternalList) {
-        const squads = await dispatch('getSquads', server);
-        commit('setSquadList', squads);
+        await dispatch('updateSquadList', server);
       }
 
       return resultKey;
@@ -32,6 +35,14 @@ export default {
       const result = await dbClient.get({ id: +id });
       return result[0];
     },
-    // TODO: delete squad
+    async deleteSquad ({ dispatch }, { id, server, updateInternalList = false }) {
+      const resultKey = await dbClient.delete(+id);
+
+      if (updateInternalList) {
+        await dispatch('updateSquadList', server);
+      }
+
+      return resultKey;
+    },
   },
 };

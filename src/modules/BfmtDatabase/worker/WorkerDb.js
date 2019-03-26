@@ -36,6 +36,10 @@ export default class WorkerDb extends DbInterface {
       });
   }
 
+  delete ({ table, key }) {
+    return this._db[table].delete(key);
+  }
+
   async getFieldInEntry ({ table = '', query, field = '' }) {
     const results = await this.get({ table, query });
     return results.length === 0 ? undefined : results[0][field];

@@ -12,6 +12,10 @@ export default class DbInterface {
     return DbInterface._defer('get');
   }
 
+  delete ({ table, key } = {}) {
+    return DbInterface._defer('delete');
+  }
+
   getAll ({ table = '' } = {}) {
     return DbInterface._defer('getAll');
   }

@@ -64,7 +64,8 @@
             :getItem="getItem"
             :getExtraSkill="getExtraSkill"
             :to="`/tools/squads/${squad.id}`"
-            @share="squadToShareIndex = i"
+            @share="() => { activeSquadIndex = i; activeSquadDialog = 'share'; }"
+            @delete="() => { activeSquadIndex = i; activeSquadDialog = 'delete'; }"
             :useObserver="false"
           >
             <template v-if="isCopyMode">
@@ -89,18 +90,37 @@
       </v-bottom-nav>
       <template v-if="!isCopyMode">
         <v-dialog
-          v-model="showShareDialog"
+          :value="!!activeSquadDialog"
+          @input="$v => activeSquadDialog = $v ? activeSquadDialog : ''"
           lazy>
-          <share-squad-card
-            v-if="squadsToShow[squadToShareIndex]"
-            :squad="squadsToShow[squadToShareIndex]"
-            :getUnit="getUnit"
-            :getItem="getItem"
-            :getExtraSkill="getExtraSkill"
-            @back="showShareDialog = false"/>
-          <div v-else>
-            No squad selected
-          </div>
+          <template v-if="squadsToShow[activeSquadIndex]">
+            <share-squad-card
+              v-if="activeSquadDialog === 'share'"
+              :squad="squadsToShow[activeSquadIndex]"
+              :getUnit="getUnit"
+              :getItem="getItem"
+              :getExtraSkill="getExtraSkill"
+              @back="activeSquadDialog = ''"/>
+            <delete-squad-card
+              v-else-if="activeSquadDialog === 'delete'"
+              :squad="squadsToShow[activeSquadIndex]"
+              :squadId="squadsToShow[activeSquadIndex].id"
+              :getUnit="getUnit"
+              :getItem="getItem"
+              :getExtraSkill="getExtraSkill"
+              @delete="() => { activeSquadDialog = ''; getDbData(); }"
+              @cancel="activeSquadDialog = ''"/>
+          </template>
+          <v-card v-else>
+            <v-card-text>
+              No squad selected
+            </v-card-text>
+            <v-card-actions style="justify-content: flex-end">
+              <v-btn flat @click="activeSquadDialog = ''">
+                Back
+              </v-btn>
+            </v-card-actions>
+          </v-card>
         </v-dialog>
         <v-speed-dial
           v-if="!isCopyMode"
@@ -223,9 +243,11 @@ import debounce from 'lodash/debounce';
 import LoadingDebouncer from '@/modules/LoadingDebouncer';
 import SquadListCard from '@/components/Tools/Squads/SquadListCard';
 import ShareSquadCard from '@/components/Tools/Squads/ShareSquadCard';
+import DeleteSquadCard from '@/components/Tools/Squads/DeleteSquadCard';
 import ModuleChecker from '@/components/ModuleChecker';
 import ModuleUpdateDialog from '@/components/ModuleUpdateDialog';
 
+// eslint-disable-next-line no-unused-vars
 const logger = new Logger({ prefix: '[SquadList]' });
 let loadingDebouncer;
 export default {
@@ -242,6 +264,7 @@ export default {
   components: {
     SquadListCard,
     ShareSquadCard,
+    DeleteSquadCard,
     ModuleChecker,
     ModuleUpdateDialog,
   },
@@ -287,8 +310,8 @@ export default {
       sortOrderAscending: true,
       filteredSquads: [],
       currentPage: 1,
-      squadToShareIndex: -1,
-      showShareDialog: false,
+      activeSquadIndex: -1,
+      activeSquadDialog: '',
       fabModel: false,
       showTooltip: true,
       showUpdateDialog: false,
@@ -327,7 +350,7 @@ export default {
       } else {
         const squads = await this.$store.dispatch('squads/getSquads', this.$store.state.settings.activeServer)
           .then(result => {
-            const squads = result.map(s => s.squad);
+            const squads = result.map(s => ({ id: s.id, ...s.squad }));
             this.$store.commit('squads/setSquadList', squads);
             return squads;
           });
@@ -441,19 +464,13 @@ export default {
     currentPage () {
       window.scrollTo(0, 0);
     },
-    showShareDialog (isShowing) {
-      if (!isShowing) {
-        this.squadToShareIndex = -1;
+    activeSquadDialog (newVal) {
+      if (!newVal) {
+        this.activeSquadIndex = -1;
       }
     },
     sortedSquads () {
       this.currentPage = 1;
-    },
-    squadToShareIndex (index) {
-      if (this.squadsToShow[index]) {
-        this.showShareDialog = true;
-        logger.debug('showing squad', this.squadsToShow[index]);
-      }
     },
     async showTooltip (isShowing) {
       if (!isShowing) {

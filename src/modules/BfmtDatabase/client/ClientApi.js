@@ -37,6 +37,10 @@ export default class ClientApi extends DbInterface {
     return this.request('get', { table, query });
   }
 
+  delete (table = '', key) {
+    return this.request('delete', { table, key });
+  }
+
   getAll (table = '') {
     return this.request('getAll', { table });
   }
@@ -74,6 +78,10 @@ export class ClientTableApi extends ClientApi {
 
   get (query) {
     return super.get(this._table, query);
+  }
+
+  delete (key) {
+    return super.delete(this._table, key);
   }
 
   getAll () {
