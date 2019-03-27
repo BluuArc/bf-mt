@@ -4,7 +4,7 @@
     :isExternallyLoading="isVisuallyLoading"
     externalLoadingMessage="Fetching squad information..."
     @initfinished="getDbData">
-    <v-container slot-scope="{ modulesWithUpdates, hasUpdates, downloadData }">
+    <v-container>
       <v-toolbar
         app
         fixed extended
@@ -178,11 +178,6 @@
             <span>Copy Existing Squad</span>
           </v-tooltip>
         </v-speed-dial>
-        <module-update-dialog
-          v-if="hasUpdates"
-          v-model="showUpdateDialog"
-          :modulesWithUpdates="modulesWithUpdates"
-          :downloadData="downloadData"/>
         <v-dialog
           v-model="showCopyModal"
           lazy
@@ -245,7 +240,6 @@ import SquadListCard from '@/components/Tools/Squads/SquadListCard';
 import ShareSquadCard from '@/components/Tools/Squads/ShareSquadCard';
 import DeleteSquadCard from '@/components/Tools/Squads/DeleteSquadCard';
 import ModuleChecker from '@/components/ModuleChecker';
-import ModuleUpdateDialog from '@/components/ModuleUpdateDialog';
 
 // eslint-disable-next-line no-unused-vars
 const logger = new Logger({ prefix: '[SquadList]' });
@@ -266,7 +260,6 @@ export default {
     ShareSquadCard,
     DeleteSquadCard,
     ModuleChecker,
-    ModuleUpdateDialog,
   },
   computed: {
     ...mapState('settings', ['activeServer', 'lightMode']),
@@ -314,7 +307,6 @@ export default {
       activeSquadDialog: '',
       fabModel: false,
       showTooltip: true,
-      showUpdateDialog: false,
       showCopyModal: false,
       showImportFromCodeModal: false,
       importCode: '',

@@ -46,7 +46,7 @@
           </v-flex>
         </v-layout>
       </v-container>
-      <template v-else>
+      <div v-else>
         <slot name="default"
           :activeServer="activeServer"
           :downloadData="downloadData"
@@ -56,7 +56,12 @@
         >
           All modules loaded
         </slot>
-      </template>
+        <module-update-dialog
+          v-if="useUpdateDialog && hasUpdates"
+          v-model="showUpdateDialog"
+          :modulesWithUpdates="modulesWithUpdates"
+          :downloadData="downloadData"/>
+      </div>
     </v-slide-y-transition>
   </div>
 </template>
@@ -68,6 +73,7 @@ import { multidexModuleInfo, servers } from '@/modules/constants';
 import { Logger } from '@/modules/Logger';
 import LoadingDebouncer from '@/modules/LoadingDebouncer';
 import LoadingIndicator from '@/components/LoadingIndicator';
+import ModuleUpdateDialog from '@/components/ModuleUpdateDialog';
 
 // specific table doesn't matter, as module check method is same for every instance
 const client = makeMultidexTableInstance('units');
@@ -94,9 +100,14 @@ export default {
       type: Boolean,
       default: false,
     },
+    useUpdateDialog: {
+      type: Boolean,
+      default: true,
+    },
   },
   components: {
     LoadingIndicator,
+    ModuleUpdateDialog,
   },
   computed: {
     ...mapState('settings', ['activeServer']),
@@ -150,6 +161,7 @@ export default {
       modulesWithUpdates: [],
       isVisuallyInitializing: true,
       isPostMount: false,
+      showUpdateDialog: false,
     };
   },
   mounted () {

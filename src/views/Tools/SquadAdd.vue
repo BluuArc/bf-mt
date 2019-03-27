@@ -101,7 +101,6 @@ import ModuleChecker from '@/components/ModuleChecker';
 import CardTabsContainer from '@/components/CardTabsContainer';
 import SquadListCardEditable from '@/components/Tools/Squads/SquadListCardEditable';
 import LoadingIndicator from '@/components/LoadingIndicator';
-// import databaseClient from '@/modules/BfmtDatabase/client';
 
 const logger = new Logger({ prefix: '[SquaddAdd]' });
 export default {
