@@ -55,4 +55,12 @@ const router = new Router({
   ],
 });
 
+router.beforeEach((to, from, next) => {
+  const setTitle = !to.path.includes('multidex') || !(to.query.viewId || to.query.filters);
+  if (setTitle) {
+    document.title = `BF-MT - ${to.name}`;
+  }
+  next();
+});
+
 export default router;

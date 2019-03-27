@@ -36,6 +36,21 @@ export default {
         this.squad = result.squad;
       });
   },
+  methods: {
+    setDocumentTitle () {
+      const defaultTitle = 'BF-MT - Squad';
+      if (this.squad && this.squad.name) {
+        document.title = [defaultTitle, this.squad.name].join(' - ');
+      } else {
+        document.title = defaultTitle;
+      }
+    },
+  },
+  watch: {
+    squad () {
+      this.setDocumentTitle();
+    },
+  },
 };
 </script>
 
