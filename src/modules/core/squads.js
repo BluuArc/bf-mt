@@ -10,7 +10,7 @@ import { isValidSphere } from '@/modules/core/items';
 export function squadToShorthand (squad = { units: [] }) {
   return squad.units
     .map((unit, i) => [
-      unit.id,
+      (unit.id === squadFillerMapping.EMPTY && 'E') || (unit.id === squadFillerMapping.ANY && 'X') || unit.id,
       unitPositionMapping.indexOf(unit.position),
       unit.es || '-',
       unit.spheres.join('+') || '-',
@@ -33,7 +33,7 @@ export function makeSquadUnitEntry ({
 } = {}) {
   const toString = (val) => (val || '').toString();
   return {
-    id: toString(id),
+    id: (id === 'E' && squadFillerMapping.EMPTY) || (id === 'X' && squadFillerMapping.ANY) || toString(id),
     position,
     es: toString(es),
     spheres: spheres.map(toString),
@@ -52,7 +52,7 @@ export function generateFillerSquadUnitEntry ({
     id: isEmpty ? squadFillerMapping.EMPTY : squadFillerMapping.ANY,
     position,
     bbOrder,
-    action: isEmpty ? squadUnitActions.NONE : squadUnitActions.SBB,
+    action: isEmpty ? squadUnitActions.NONE : squadUnitActions.ATK,
   });
 }
 

@@ -103,7 +103,7 @@
 <script>
 import { spCodeToIndex, getSpDescription, getSpCost } from '@/modules/core/units';
 import { squadToShorthand } from '@/modules/core/squads';
-import { squadUnitActions } from '@/modules/constants';
+import { squadUnitActions, squadFillerMapping } from '@/modules/constants';
 import CardTabsContainer from '@/components/CardTabsContainer';
 import TextViewer from '@/components/TextViewer';
 import OneLineTextViewer from '@/components/OneLineTextViewer';
@@ -202,12 +202,15 @@ export default {
       squad.units.forEach((unit, i) => {
         const entry = [];
         let prefix = useBullets ? '*' : '';
-        
+        const isFillerUnit = unit.id === squadFillerMapping.ANY || unit.id === squadFillerMapping.EMPTY;
         // name, position, BB order and type
         entry.push([
           prefix,
-          `**__${this.getUnit(unit.id).rarity && `${this.getUnit(unit.id).rarity === 8 ? 'OE' : `${this.getUnit(unit.id).rarity}\\*`}`}`,
-          `${this.getUnit(unit.id).name || unit.id}__**`,
+          isFillerUnit && `**__${this.getUnit(unit.id).name || unit.id}__**`,
+          !isFillerUnit && [
+            `**__${this.getUnit(unit.id).rarity && `${this.getUnit(unit.id).rarity === 8 ? 'OE' : `${this.getUnit(unit.id).rarity}\\*`}`}`,
+            `${this.getUnit(unit.id).name || unit.id}__**`,
+            ].join(' '),
           i === squad.lead && `**(${abbreviate ? 'L' : 'Leader'})**`,
           i === squad.friend && `**(${abbreviate ? 'F' : 'Friend'})**`,
           (showPosition || showOrder || showAction) && '-',

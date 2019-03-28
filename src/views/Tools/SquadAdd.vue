@@ -170,7 +170,7 @@ export default {
       this.activeTabIndex = 1;
       this.attemptSquadImport();
     } else {
-      this.updateSquadPageDb();
+      this.setSquad(this.squad);
     }
   },
   methods: {
@@ -194,15 +194,7 @@ export default {
         await this.$nextTick();
         try {
           const initialSquad = shorthandToSquad(this.inputCode);
-          await this.updateSquadPageDbForSquad(initialSquad);
-          const { warnings, ...fixedSquad } = fixSquadErrors(initialSquad, {
-            getUnit: this.getUnit,
-            getExtraSkill: this.getExtraSkill,
-            getItem: this.getItem,
-          });
-          this.warningMessages = warnings;
-          this.squad = fixedSquad;
-          this.lastImportedSquadCode = squadToShorthand(fixedSquad);
+          await this.setSquad(initialSquad);
           this.parsedSuccessfully = true;
         } catch (err) {
           logger.error('error parsing squad', err);
@@ -210,6 +202,17 @@ export default {
         }
         this.parsingCode = false;
       }
+    },
+    async setSquad (squad) {
+      await this.updateSquadPageDbForSquad(squad);
+      const { warnings, ...fixedSquad } = fixSquadErrors(squad, {
+        getUnit: this.getUnit,
+        getExtraSkill: this.getExtraSkill,
+        getItem: this.getItem,
+      });
+      this.warningMessages = warnings;
+      this.squad = fixedSquad;
+      this.lastImportedSquadCode = squadToShorthand(fixedSquad);
     },
     async updateSquadPageDbForSquad (squad) {
       if (squad) {
