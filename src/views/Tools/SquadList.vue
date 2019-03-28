@@ -66,7 +66,6 @@
             :to="`/tools/squads/${squad.id}`"
             @share="() => { activeSquadIndex = i; activeSquadDialog = 'share'; }"
             @delete="() => { activeSquadIndex = i; activeSquadDialog = 'delete'; }"
-            :useObserver="false"
           >
             <template v-if="isCopyMode">
               <v-card-actions slot="card-actions">

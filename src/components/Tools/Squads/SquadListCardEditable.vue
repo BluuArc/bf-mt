@@ -76,13 +76,17 @@
     </v-layout>
     <v-divider class="mt-2"/>
     <slot name="card-actions">
-      <v-card-actions style="justify-content: space-between;">
-        <v-btn flat @click="onSaveClick">
+      <v-card-actions style="justify-content: space-between;" :disabled="isLoadingInParent">
+        <v-btn
+          flat
+          :disabled="isLoadingInParent"
+          @click="onSaveClick">
           <v-icon left>save</v-icon>
           Save
         </v-btn>
         <v-btn
           flat
+          :disabled="isLoadingInParent"
           :to="redirectCancel ? '/tools/squads' : undefined"
           @click="$emit('cancel')">
           <span>Cancel</span>

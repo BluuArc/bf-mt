@@ -14,32 +14,35 @@
       </v-flex>
     </v-layout>
     <v-layout row wrap class="px-2">
-      <unit-entry
-        v-for="(unit, i) in fullUnits"
-        :key="getUnitEntryKey(unit, i)"
-        xs12 sm6
-        :index="i"
-        :isVisible="isVisible"
-        :unit="unit"
-        :getUnit="getUnit"
-        :getItem="getItem"
-        :getExtraSkill="getExtraSkill"
-        :isLead="i === squad.lead"
-        :isFriend="i === squad.friend"
-        class="d-flex py-1"
-        style="align-items: center; border: 1px solid var(--background-color-alt);"/>
+      <template v-if="!isLoadingInParent">
+        <unit-entry
+          v-for="(unit, i) in fullUnits"
+          :key="getUnitEntryKey(unit, i)"
+          xs12 sm6
+          :index="i"
+          :isVisible="isVisible"
+          :unit="unit"
+          :getUnit="getUnit"
+          :getItem="getItem"
+          :getExtraSkill="getExtraSkill"
+          :isLead="i === squad.lead"
+          :isFriend="i === squad.friend"
+          class="d-flex py-1"
+          style="align-items: center; border: 1px solid var(--background-color-alt);"/>
+      </template>
+      <loading-indicator v-else loadingMessage="Loading squad data"/>
     </v-layout>
     <v-divider class="mt-2"/>
-    <slot name="card-actions">
+    <slot name="card-actions" :disabled="isLoadingInParent || !isVisible">
       <v-card-actions>
-        <v-btn flat v-if="to" :to="to">View</v-btn>
-        <v-btn flat v-else @click="$emit('view')">View</v-btn>
-        <v-btn flat @click="$emit('share')">
+        <v-btn flat :disabled="isLoadingInParent || !isVisible" v-if="to" :to="to">View</v-btn>
+        <v-btn flat :disabled="isLoadingInParent || !isVisible" v-else @click="$emit('view')">View</v-btn>
+        <v-btn flat :disabled="isLoadingInParent || !isVisible" @click="$emit('share')">
           <v-icon left>share</v-icon>
           Share
         </v-btn>
         <v-spacer/>
-        <v-btn flat @click="$emit('delete')">
+        <v-btn flat :disabled="isLoadingInParent || !isVisible" @click="$emit('delete')">
           <v-icon left>delete</v-icon>
           Delete
         </v-btn>
@@ -53,11 +56,13 @@ import { unitPositionMapping } from '@/modules/constants';
 import { generateFillerSquadUnitEntry } from '@/modules/core/squads';
 import UnitEntry from '@/components/Tools/Squads/SquadUnitEntry';
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
+import LoadingIndicator from '@/components/LoadingIndicator';
 
 export default {
   mixins: [GettersMixin],
   components: {
     UnitEntry,
+    LoadingIndicator,
   },
   props: {
     squad: {
@@ -71,6 +76,10 @@ export default {
     isVisible: {
       type: Boolean,
       default: true,
+    },
+    isLoadingInParent: {
+      type: Boolean,
+      default: false,
     },
   },
   computed: {

@@ -56,7 +56,9 @@ const router = new Router({
 });
 
 router.beforeEach((to, from, next) => {
-  const setTitle = !to.path.includes('multidex') || !(to.query.viewId || to.query.filters);
+  const multidexPageWillChangeTitle = to.path.includes('multidex') && (to.query.viewId || to.query.filters);
+  const squadPageWillChangeTitle = to.path.name === 'Squad';
+  const setTitle = !multidexPageWillChangeTitle && !squadPageWillChangeTitle;
   if (setTitle) {
     document.title = `BF-MT - ${to.name}`;
   }
