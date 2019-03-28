@@ -60,6 +60,39 @@
         </v-flex>
       </v-layout>
       <h1>This is the squad page for {{ id }} {{ squad }}</h1>
+      <v-dialog
+        :value="!!activeSquadDialog"
+        @input="$v => activeSquadDialog = $v ? activeSquadDialog : ''"
+        lazy>
+        <template v-if="squadCode">
+          <share-squad-card
+            v-if="activeSquadDialog === 'share'"
+            :squad="squad"
+            :getUnit="getUnit"
+            :getItem="getItem"
+            :getExtraSkill="getExtraSkill"
+            @back="activeSquadDialog = ''"/>
+          <delete-squad-card
+            v-else-if="activeSquadDialog === 'delete'"
+            :squad="squad"
+            :squadId="+id"
+            :getUnit="getUnit"
+            :getItem="getItem"
+            :getExtraSkill="getExtraSkill"
+            @delete="$router.push('/tools/squads')"
+            @cancel="activeSquadDialog = ''"/>
+        </template>
+        <v-card v-else>
+          <v-card-text>
+            No squad selected
+          </v-card-text>
+          <v-card-actions style="justify-content: flex-end">
+            <v-btn flat @click="activeSquadDialog = ''">
+              Back
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
     </v-container>
   </module-checker>
 </template>
