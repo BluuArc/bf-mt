@@ -19,8 +19,13 @@ export default {
       const squads = await dispatch('getSquads', server);
       commit('setSquadList', squads);
     },
-    async storeSquad ({ dispatch }, { squad, server, updateInternalList = false }) {
-      const resultKey = await dbClient.put({ squad, server });
+    async storeSquad ({ dispatch }, { squad, server, id, updateInternalList = false }) {
+      let resultKey;
+      if (!isNaN(id)) { // replace old entry
+        resultKey = await dbClient.put({ squad, server, id: +id });
+      } else { // insert new entry
+        resultKey = await dbClient.put({ squad, server });
+      }
 
       if (updateInternalList) {
         await dispatch('updateSquadList', server);

@@ -386,6 +386,7 @@ export default {
 
         const newIndex = unitPositionMapping.indexOf(position);
         this.emitSquad({
+          ...this.localSquad,
           lead: this.selectedIndex === lead ? newIndex : lead,
           friend: this.selectedIndex === friend ? newIndex : friend,
           units: newUnitList,

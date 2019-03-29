@@ -4,7 +4,7 @@
     :ensureDbSync="true">
     <v-container>
       <v-layout justify-center>
-        <v-flex xs12>
+        <v-flex xs12 v-if="!editMode">
           <squad-list-card
             :squad="squad"
             :getUnit="getUnit"
@@ -58,7 +58,44 @@
             </v-card-actions>
           </squad-list-card>
         </v-flex>
+        <v-flex xs12 v-else>
+          <squad-list-card-editable
+            :squad="tempSquad"
+            :squadId="id"
+            :getUnit="getUnit"
+            :getItem="getItem"
+            :getExtraSkill="getExtraSkill"
+            :redirectOnCancel="false"
+            :isLoadingInParent="isLoadingSquadData"
+            @newsquad="$sq => tempSquad = $sq"
+            @newunits="onNewUnits"
+            @save="() => { squad = tempSquad; editMode = false; }"
+            @cancel="editMode = false"
+          />
+        </v-flex>
       </v-layout>
+      <v-flex xs12>
+        <v-divider class="mt-2"/>
+      </v-flex>
+      <tab-container
+        v-if="!isLoadingSquadData && !editMode"
+        v-model="currentTabIndex"
+        class="px-0 mt-2"
+        color="rgba(0, 0, 0, 0)"
+        :tabs="tabConfig">
+        <v-layout slot="squad-buffs">
+          Squad buffs go here
+        </v-layout>
+        <v-layout slot="unit-buffs">
+          Unit level buffs go here
+        </v-layout>
+        <v-layout slot="spark-statistics">
+          Spark stats go here
+        </v-layout>
+        <v-layout slot="arena">
+          Arena suggestions go here
+        </v-layout>
+      </tab-container>
       <h1>This is the squad page for {{ id }} {{ squad }}</h1>
       <v-dialog
         :value="!!activeSquadDialog"
@@ -104,13 +141,14 @@ import { Logger } from '@/modules/Logger';
 import {
   squadToShorthand,
   getMultidexDatabaseIdsFromSquads,
+  cloneSquad,
 } from '@/modules/core/squads';
 import ModuleChecker from '@/components/ModuleChecker';
 import LoadingIndicator from '@/components/LoadingIndicator';
 import SquadListCard from '@/components/Tools/Squads/SquadListCard';
 import ShareSquadCard from '@/components/Tools/Squads/ShareSquadCard';
 import DeleteSquadCard from '@/components/Tools/Squads/DeleteSquadCard';
-import CardTabsContainer from '@/components/CardTabsContainer';
+import TabContainer from '@/components/CardTabsContainer';
 import SquadListCardEditable from '@/components/Tools/Squads/SquadListCardEditable';
 
 const logger = new Logger({ prefix: '[Squad]' });
@@ -126,13 +164,19 @@ export default {
     SquadListCard,
     ShareSquadCard,
     DeleteSquadCard,
-    CardTabsContainer,
+    TabContainer,
     SquadListCardEditable,
     LoadingIndicator,
   },
   computed: {
     ...mapState('settings', ['activeServer']),
     requiredModules: () => squadRequiredModules,
+    tabConfig: () => [
+      'Squad Buffs',
+      'Unit Buffs',
+      'Spark Statistics',
+      'Arena',
+    ].map(name => ({ name, slot: name.toLowerCase().replace(/ /g, '-') })),
     squadCode () {
       return this.squad ? squadToShorthand(this.squad) : '';
     },
@@ -149,6 +193,8 @@ export default {
       isLoadingSquadData: false,
       activeSquadDialog: '',
       editMode: false,
+      currentTabIndex: 0,
+      tempSquad: {},
     };
   },
   mounted () {
@@ -236,11 +282,26 @@ export default {
         query: { import: typeof squad !== 'string' ? squadToShorthand(squad) : squad },
       }).route.fullPath;
     },
+    onNewUnits (units) {
+      this.tempSquad = { ...this.tempSquad, units };
+    },
   },
   watch: {
     squad (newVal) {
       this.setDocumentTitle();
       this.updatePageDbForSquad(newVal);
+    },
+    editMode (isEditMode) {
+      if (isEditMode) {
+        this.tempSquad = cloneSquad(this.squad);
+      } else {
+        this.tempSquad = {};
+      }
+    },
+    tempSquad (newSquad) {
+      if (newSquad && Array.isArray(newSquad.units)) {
+        this.updatePageDbForSquad(newSquad);
+      }
     },
   },
 };

@@ -87,7 +87,7 @@
         <v-btn
           flat
           :disabled="isLoadingInParent"
-          :to="redirectCancel ? '/tools/squads' : undefined"
+          :to="redirectOnCancel ? '/tools/squads' : undefined"
           @click="$emit('cancel')">
           <span>Cancel</span>
         </v-btn>
@@ -120,9 +120,13 @@ export default {
       type: Boolean,
       default: false,
     },
-    redirectCancel: {
+    redirectOnCancel: {
       type: Boolean,
       default: true,
+    },
+    squadId: {
+      type: String,
+      default: '',
     },
   },
   computed: {
@@ -156,6 +160,7 @@ export default {
       const resultKey = await this.$store.dispatch('squads/storeSquad', {
         server: this.$store.state.settings.activeServer,
         squad: this.squad,
+        id: this.squadId || undefined,
       });
       this.$emit('save', resultKey);
     },
