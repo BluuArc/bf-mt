@@ -77,26 +77,28 @@
       <v-flex xs12>
         <v-divider class="mt-2"/>
       </v-flex>
-      <tab-container
-        v-if="!isLoadingSquadData && !editMode"
-        v-model="currentTabIndex"
-        class="px-0 mt-2"
-        color="rgba(0, 0, 0, 0)"
-        :tabs="tabConfig">
-        <v-layout slot="squad-buffs">
-          Squad buffs go here
-        </v-layout>
-        <v-layout slot="unit-buffs">
-          Unit level buffs go here
-        </v-layout>
-        <v-layout slot="spark-statistics">
-          Spark stats go here
-        </v-layout>
-        <v-layout slot="arena">
-          Arena suggestions go here
-        </v-layout>
-      </tab-container>
-      <h1>This is the squad page for {{ id }} {{ squad }}</h1>
+      <v-flex xs12>
+        <v-card>
+          <tab-container
+            v-if="!isLoadingSquadData && !editMode"
+            v-model="currentTabIndex"
+            class="mt-2"
+            :tabs="tabConfig">
+            <v-layout slot="squad-buffs">
+              Squad buffs go here
+            </v-layout>
+            <v-layout slot="unit-buffs">
+              Unit level buffs go here
+            </v-layout>
+            <v-layout slot="spark-statistics">
+              Spark stats go here
+            </v-layout>
+            <v-layout slot="arena">
+              Arena suggestions go here
+            </v-layout>
+          </tab-container>
+        </v-card>
+      </v-flex>
       <v-dialog
         :value="!!activeSquadDialog"
         @input="$v => activeSquadDialog = $v ? activeSquadDialog : ''"
