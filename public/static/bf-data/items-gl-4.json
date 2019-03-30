@@ -4081,7 +4081,12 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_5_4.png",
     "type": "sphere",
-    "usage": [],
+    "usage": [
+      {
+        "id": 819218,
+        "name": "Beiorg's Armor Mk II"
+      }
+    ],
     "associated_units": [
       "51336",
       "51337",
