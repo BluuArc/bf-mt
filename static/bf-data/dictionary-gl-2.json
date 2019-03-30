@@ -1,4 +1,92 @@
 {
+  "MST_LEADERSKILLS_7526_NAME": {
+    "en": "Frost-fanged Howl",
+    "es": "Frost-fanged Howl",
+    "id": "Lolongan Taring Beku",
+    "pt": "Frost-fanged Howl",
+    "th": "ฟรอสต์-แฟงก์ ฮาวล์",
+    "vi": "Frost-fanged Howl"
+  },
+  "MST_LEADERSKILLS_7527_DESCRIPTION": {
+    "en": "50% boost to Atk, max HP, slight damage reduction for 1 turn when Sparks exceed certain amount & enormously boosts Spark damage for 2 turns when Sparks exceed certain amount",
+    "es": "50% boost to Atk, max HP, slight damage reduction for 1 turn when Sparks exceed certain amount & enormously boosts Spark damage for 2 turns when Sparks exceed certain amount",
+    "id": "50% ekstra Serang, HP maks, agak kurangi kerusakan 1 giliran saat kerusakan Percikan melampaui jumlah tertentu & ekstra jumbo kerusakan Percikan 2 giliran",
+    "pt": "50% boost to Atk, max HP, slight damage reduction for 1 turn when Sparks exceed certain amount & enormously boosts Spark damage for 2 turns when Sparks exceed certain amount",
+    "th": "50% เพิ่มค่าให้ โจมตี, HP สูงสุด, ลดค่าความเสียหายเล็กน้อย นาน 1 เทิร์น เมื่อ ความเสียหายสปาร์ค เกินกว่าปริมาณหนึ่ง กับ เพิ่มค่ามหาศาลให้ ความเสียหายสปาร์ค นาน 2 เทิร์น",
+    "vi": "50% boost to Atk, max HP, slight damage reduction for 1 turn when Sparks exceed certain amount & enormously boosts Spark damage for 2 turns when Sparks exceed certain amount"
+  },
+  "MST_LEADERSKILLS_7527_NAME": {
+    "en": "Glacial Rebuke Arrow",
+    "es": "Glacial Rebuke Arrow",
+    "id": "Panah Teguran Glasial",
+    "pt": "Glacial Rebuke Arrow",
+    "th": "เกลเชี่ยน รีบิวค์ แอร์โรว์",
+    "vi": "Glacial Rebuke Arrow"
+  },
+  "MST_LEADERSKILLS_7528_DESCRIPTION": {
+    "en": "60% boost to Atk, max HP, slight damage reduction for 1 turn when Sparks exceed certain amount, enormously boosts Spark damage for 2 turns when Sparks exceed certain amount & Spark damage boosts BB gauge",
+    "es": "60% boost to Atk, max HP, slight damage reduction for 1 turn when Sparks exceed certain amount, enormously boosts Spark damage for 2 turns when Sparks exceed certain amount & Spark damage boosts BB gauge",
+    "id": "60% ekstra Serang, HP maks, agak kurangi kerusakan 1 giliran saat kerusakan Percikan melampaui jumlah tertentu, ekstra jumbo kerusakan Percikan 2 giliran & kerusakan Percikan menambah meteran BB",
+    "pt": "60% boost to Atk, max HP, slight damage reduction for 1 turn when Sparks exceed certain amount, enormously boosts Spark damage for 2 turns when Sparks exceed certain amount & Spark damage boosts BB gauge",
+    "th": "60% เพิ่มค่าให้ โจมตี, HP สูงสุด, ลดค่าความเสียหายเล็กน้อย นาน 1 เทิร์น เมื่อ ความเสียหายสปาร์ค เกินกว่าปริมาณหนึ่ง, เพิ่มค่ามหาศาลให้ ความเสียหายสปาร์ค นาน 2 เทิร์น กับ ความเสียหายสปาร์ค เพิ่มค่า เกจ BB",
+    "vi": "60% boost to Atk, max HP, slight damage reduction for 1 turn when Sparks exceed certain amount, enormously boosts Spark damage for 2 turns when Sparks exceed certain amount & Spark damage boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_7528_NAME": {
+    "en": "Glacial Judgment Arrow",
+    "es": "Glacial Judgment Arrow",
+    "id": "Panah Penghakiman Glasial",
+    "pt": "Glacial Judgment Arrow",
+    "th": "เกลเชี่ยน จัดจ์เมนท์ แอร์โรว์",
+    "vi": "Glacial Judgment Arrow"
+  },
+  "MST_LEADERSKILLS_7529_DESCRIPTION": {
+    "en": "50% boost to Atk, max HP, enormously boosts BB Atk & adds probable random status ailment counter",
+    "es": "50% boost to Atk, max HP, enormously boosts BB Atk & adds probable random status ailment counter",
+    "id": "50% ekstra Serangan, HP maks, ekstra jumbo BB Serang, menambah kans balas status penyakit acak",
+    "pt": "50% boost to Atk, max HP, enormously boosts BB Atk & adds probable random status ailment counter",
+    "th": "50% เพิ่มค่าให้ โจมตี, HP สูงสุด, เพิ่มค่ามหาศาลให้ BB โจมตี กับ เพิ่มผลอาจทำให้ สวนกลับด้วยสถานะผิดปกติโดยสุ่ม",
+    "vi": "50% boost to Atk, max HP, enormously boosts BB Atk & adds probable random status ailment counter"
+  },
+  "MST_LEADERSKILLS_7529_NAME": {
+    "en": "Accursed Soul",
+    "es": "Accursed Soul",
+    "id": "Jiwa Terkutuk",
+    "pt": "Accursed Soul",
+    "th": "แอคเคิร์ส โวล",
+    "vi": "Accursed Soul"
+  },
+  "MST_LEADERSKILLS_7530_DESCRIPTION": {
+    "en": "60% boost to Atk, max HP, enormously boosts BB Atk, considerably boosts BC efficacy & adds probable random status ailment counter",
+    "es": "60% boost to Atk, max HP, enormously boosts BB Atk, considerably boosts BC efficacy & adds probable random status ailment counter",
+    "id": "60% ekstra Serangan, HP maks, ekstra jumbo BB Serang, lumayan menambah keampuhan BC, menambah kans balas status penyakit acak",
+    "pt": "60% boost to Atk, max HP, enormously boosts BB Atk, considerably boosts BC efficacy & adds probable random status ailment counter",
+    "th": "60% เพิ่มค่าให้ โจมตี, HP สูงสุด, เพิ่มค่ามหาศาลให้ BB โจมตี, เพิ่มค่าอย่างมากให้ ประสิทธิภาพ BC กับ เพิ่มผลอาจทำให้ สวนกลับด้วยสถานะผิดปกติโดยสุ่ม",
+    "vi": "60% boost to Atk, max HP, enormously boosts BB Atk, considerably boosts BC efficacy & adds probable random status ailment counter"
+  },
+  "MST_LEADERSKILLS_7530_NAME": {
+    "en": "Irredeemable Soul",
+    "es": "Irredeemable Soul",
+    "id": "Jiwa Tak Tertebus",
+    "pt": "Irredeemable Soul",
+    "th": "อิรรีดีมเอเบิล โซล",
+    "vi": "Irredeemable Soul"
+  },
+  "MST_LEADERSKILLS_7531_DESCRIPTION": {
+    "en": "30% boost to Atk, Rec, max HP, normal attacks may hit all foes, damage taken may restore HP & negates all status ailments",
+    "es": "30% boost to Atk, Rec, max HP, normal attacks may hit all foes, damage taken may restore HP & negates all status ailments",
+    "id": "30% boost to Atk, Rec, max HP, normal attacks may hit all foes, damage taken may restore HP & negates all status ailments",
+    "pt": "30% boost to Atk, Rec, max HP, normal attacks may hit all foes, damage taken may restore HP & negates all status ailments",
+    "th": "30% boost to Atk, Rec, max HP, normal attacks may hit all foes, damage taken may restore HP & negates all status ailments",
+    "vi": "30% boost to Atk, Rec, max HP, normal attacks may hit all foes, damage taken may restore HP & negates all status ailments"
+  },
+  "MST_LEADERSKILLS_7531_NAME": {
+    "en": "Frigid Absence",
+    "es": "Frigid Absence",
+    "id": "Frigid Absence",
+    "pt": "Frigid Absence",
+    "th": "Frigid Absence",
+    "vi": "Frigid Absence"
+  },
   "MST_LEADERSKILLS_7532_DESCRIPTION": {
     "en": "40% boost to Atk, Rec, max HP, normal attacks may hit all foes, damage taken may restore HP & negates all status ailments",
     "es": "40% boost to Atk, Rec, max HP, normal attacks may hit all foes, damage taken may restore HP & negates all status ailments",
@@ -3424,12 +3512,12 @@
     "vi": "Firestorm of Faith"
   },
   "MST_LEADERSKILLS_801261_DESCRIPTION": {
-    "en": "200% boost to Atk and 60% boost to max HP of Earth types, raises normal hit amount, hugely boosts Earth elemental damage & hugely boosts critical damage. 25% boost to all parameters of Earth Types & 15% damage reduction from Earth, Thunder types in Guild Raid",
-    "es": "200% boost to Atk and 60% boost to max HP of Earth types, raises normal hit amount, hugely boosts Earth elemental damage & hugely boosts critical damage. 25% boost to all parameters of Earth Types & 15% damage reduction from Earth, Thunder types in Guild Raid",
-    "id": "200% ekstra Serang, 60% ekstra HP maks tipe Bumi, menambah jumlah pukulan normal, menegasi kerusakan berbasis elemen, amat menambah kerusakan ampuh. 25% ekstra semua parameter Tipe Bumi & kurangi 15% kerusakan dari tipe Bumi, Guntur di Perang Bersama Serikat",
-    "pt": "200% boost to Atk and 60% boost to max HP of Earth types, raises normal hit amount, hugely boosts Earth elemental damage & hugely boosts critical damage. 25% boost to all parameters of Earth Types & 15% damage reduction from Earth, Thunder types in Guild Raid",
-    "th": "200% เพิ่มค่า โจมตี กับ 60% เพิ่มค่า HP สูงสุด ของชนิดดิน, เพิ่มปริมาณโจมตีธรรมดา, ต้านทานความเสียหายพื้นฐานจากธาตุ และ เพิ่มค่าอย่างสูงให้ ความเสียหายคริติคอล. 25% เพิ่มค่า พารามิเตอร์ทั้งหมด ของชนิดดิน และ 15% ลดค่าความเสียหายจาก ชนิด ดิน, สายฟ้า ในกิลด์เรด",
-    "vi": "200% boost to Atk and 60% boost to max HP of Earth types, raises normal hit amount, hugely boosts Earth elemental damage & hugely boosts critical damage. 25% boost to all parameters of Earth Types & 15% damage reduction from Earth, Thunder types in Guild Raid"
+    "en": "225% boost to Atk, 100% boost to max HP of Earth types, raises normal hit amount, enormously boosts Earth elemental damage & hugely boosts critical damage. 25% boost to all parameters of Earth types and 20% damage reduction from Earth, Thunder types for all allies in Guild Raid",
+    "es": "225% boost to Atk, 100% boost to max HP of Earth types, raises normal hit amount, enormously boosts Earth elemental damage & hugely boosts critical damage. 25% boost to all parameters of Earth types and 20% damage reduction from Earth, Thunder types for all allies in Guild Raid",
+    "id": "225% boost to Atk, 100% boost to max HP of Earth types, raises normal hit amount, enormously boosts Earth elemental damage & hugely boosts critical damage. 25% boost to all parameters of Earth types and 20% damage reduction from Earth, Thunder types for all allies in Guild Raid",
+    "pt": "225% boost to Atk, 100% boost to max HP of Earth types, raises normal hit amount, enormously boosts Earth elemental damage & hugely boosts critical damage. 25% boost to all parameters of Earth types and 20% damage reduction from Earth, Thunder types for all allies in Guild Raid",
+    "th": "225% boost to Atk, 100% boost to max HP of Earth types, raises normal hit amount, enormously boosts Earth elemental damage & hugely boosts critical damage. 25% boost to all parameters of Earth types and 20% damage reduction from Earth, Thunder types for all allies in Guild Raid",
+    "vi": "225% boost to Atk, 100% boost to max HP of Earth types, raises normal hit amount, enormously boosts Earth elemental damage & hugely boosts critical damage. 25% boost to all parameters of Earth types and 20% damage reduction from Earth, Thunder types for all allies in Guild Raid"
   },
   "MST_LEADERSKILLS_801261_NAME": {
     "en": "God-Killing Conviction",
@@ -6399,6 +6487,22 @@
     "th": "80% เพิ่มค่า โจมตี, เพิ่มค่า อัตราเกิดคริติคอล และ ความเสียหายที่ได้รับ กับ ความเสียหายคริติคอล เพิ่มค่าอย่างมากให้ เกจ BB",
     "vi": "Kill Order"
   },
+  "MST_LEADERSKILLS_840318_DESCRIPTION": {
+    "en": "100% boost to Atk, Def, 100% boost to max HP, 15% damage reduction, hugely boosts Spark damage, negates all status ailments and Atk, Def, Rec reduction effects & damage taken hugely boosts BB gauge",
+    "es": "100% boost to Atk, Def, 100% boost to max HP, 15% damage reduction, hugely boosts Spark damage, negates all status ailments and Atk, Def, Rec reduction effects & damage taken hugely boosts BB gauge",
+    "id": "100% boost to Atk, Def, 100% boost to max HP, 15% damage reduction, hugely boosts Spark damage, negates all status ailments and Atk, Def, Rec reduction effects & damage taken hugely boosts BB gauge",
+    "pt": "100% boost to Atk, Def, 100% boost to max HP, 15% damage reduction, hugely boosts Spark damage, negates all status ailments and Atk, Def, Rec reduction effects & damage taken hugely boosts BB gauge",
+    "th": "100% boost to Atk, Def, 100% boost to max HP, 15% damage reduction, hugely boosts Spark damage, negates all status ailments and Atk, Def, Rec reduction effects & damage taken hugely boosts BB gauge",
+    "vi": "100% boost to Atk, Def, 100% boost to max HP, 15% damage reduction, hugely boosts Spark damage, negates all status ailments and Atk, Def, Rec reduction effects & damage taken hugely boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_840318_NAME": {
+    "en": "Savior of Myrranthia",
+    "es": "Savior of Myrranthia",
+    "id": "Savior of Myrranthia",
+    "pt": "Savior of Myrranthia",
+    "th": "Savior of Myrranthia",
+    "vi": "Savior of Myrranthia"
+  },
   "MST_LEADERSKILLS_840357_DESCRIPTION": {
     "en": "50% boost to Atk, Def and max HP of Thunder types, Spark damage slightly boosts BB gauge, reduces damage taken for 1 turn when HP is below 50% & considerably reduces BB gauge required for BB",
     "es": "50% boost to Atk, Def and max HP of Thunder types, Spark damage slightly boosts BB gauge, reduces damage taken for 1 turn when HP is below 50% & considerably reduces BB gauge required for BB",
@@ -7327,6 +7431,38 @@
     "th": "Symbol of Peace",
     "vi": "Symbol of Peace"
   },
+  "MST_LEADERSKILLS_850627_DESCRIPTION": {
+    "en": "100% boost to Rec, max HP, damage taken hugely boosts BB gauge, probable resistance against 1 KO attack, hugely boosts Spark damage & 10% damage reduction",
+    "es": "100% boost to Rec, max HP, damage taken hugely boosts BB gauge, probable resistance against 1 KO attack, hugely boosts Spark damage & 10% damage reduction",
+    "id": "100% boost to Rec, max HP, damage taken hugely boosts BB gauge, probable resistance against 1 KO attack, hugely boosts Spark damage & 10% damage reduction",
+    "pt": "100% boost to Rec, max HP, damage taken hugely boosts BB gauge, probable resistance against 1 KO attack, hugely boosts Spark damage & 10% damage reduction",
+    "th": "100% boost to Rec, max HP, damage taken hugely boosts BB gauge, probable resistance against 1 KO attack, hugely boosts Spark damage & 10% damage reduction",
+    "vi": "100% boost to Rec, max HP, damage taken hugely boosts BB gauge, probable resistance against 1 KO attack, hugely boosts Spark damage & 10% damage reduction"
+  },
+  "MST_LEADERSKILLS_850627_NAME": {
+    "en": "Innocent Paracosm",
+    "es": "Innocent Paracosm",
+    "id": "Innocent Paracosm",
+    "pt": "Innocent Paracosm",
+    "th": "Innocent Paracosm",
+    "vi": "Innocent Paracosm"
+  },
+  "MST_LEADERSKILLS_850628_DESCRIPTION": {
+    "en": "140% boost to Rec, max HP, damage taken hugely boosts BB gauge, probable resistance against 1 KO attack, enormously boosts Spark damage, 15% damage reduction & 15% additional damage reduction",
+    "es": "140% boost to Rec, max HP, damage taken hugely boosts BB gauge, probable resistance against 1 KO attack, enormously boosts Spark damage, 15% damage reduction & 15% additional damage reduction",
+    "id": "140% boost to Rec, max HP, damage taken hugely boosts BB gauge, probable resistance against 1 KO attack, enormously boosts Spark damage, 15% damage reduction & 15% additional damage reduction",
+    "pt": "140% boost to Rec, max HP, damage taken hugely boosts BB gauge, probable resistance against 1 KO attack, enormously boosts Spark damage, 15% damage reduction & 15% additional damage reduction",
+    "th": "140% boost to Rec, max HP, damage taken hugely boosts BB gauge, probable resistance against 1 KO attack, enormously boosts Spark damage, 15% damage reduction & 15% additional damage reduction",
+    "vi": "140% boost to Rec, max HP, damage taken hugely boosts BB gauge, probable resistance against 1 KO attack, enormously boosts Spark damage, 15% damage reduction & 15% additional damage reduction"
+  },
+  "MST_LEADERSKILLS_850628_NAME": {
+    "en": "Samsaric Recurrence",
+    "es": "Samsaric Recurrence",
+    "id": "Samsaric Recurrence",
+    "pt": "Samsaric Recurrence",
+    "th": "Samsaric Recurrence",
+    "vi": "Samsaric Recurrence"
+  },
   "MST_LEADERSKILLS_850637_DESCRIPTION": {
     "en": "60% boost to all parameters, boosts BC, HC, Item, Zel and Karma drop rates, probable damage reduction to 1 & considerably boosts OD gauge fill rate",
     "es": "60% boost to all parameters, boosts BC, HC, Item, Zel and Karma drop rates, probable damage reduction to 1 & considerably boosts OD gauge fill rate",
@@ -8110,6 +8246,38 @@
     "pt": "The Black Wizard",
     "th": "The Black Wizard",
     "vi": "The Black Wizard"
+  },
+  "MST_LEADERSKILLS_860657_DESCRIPTION": {
+    "en": "100% boost to Atk, Def, 80% boost to max HP of Dark types, 10% damage reduction from Light, Dark types, enormously boosts BB gauge each turn & enormously boosts critical damage",
+    "es": "100% boost to Atk, Def, 80% boost to max HP of Dark types, 10% damage reduction from Light, Dark types, enormously boosts BB gauge each turn & enormously boosts critical damage",
+    "id": "100% boost to Atk, Def, 80% boost to max HP of Dark types, 10% damage reduction from Light, Dark types, enormously boosts BB gauge each turn & enormously boosts critical damage",
+    "pt": "100% boost to Atk, Def, 80% boost to max HP of Dark types, 10% damage reduction from Light, Dark types, enormously boosts BB gauge each turn & enormously boosts critical damage",
+    "th": "100% boost to Atk, Def, 80% boost to max HP of Dark types, 10% damage reduction from Light, Dark types, enormously boosts BB gauge each turn & enormously boosts critical damage",
+    "vi": "100% boost to Atk, Def, 80% boost to max HP of Dark types, 10% damage reduction from Light, Dark types, enormously boosts BB gauge each turn & enormously boosts critical damage"
+  },
+  "MST_LEADERSKILLS_860657_NAME": {
+    "en": "Ambitious Heart",
+    "es": "Ambitious Heart",
+    "id": "Ambitious Heart",
+    "pt": "Ambitious Heart",
+    "th": "Ambitious Heart",
+    "vi": "Ambitious Heart"
+  },
+  "MST_LEADERSKILLS_860658_DESCRIPTION": {
+    "en": "120% boost to Atk, Def, 100% boost to max HP of Dark types, 20% damage reduction from Light, Dark types, enormously boosts BB gauge each turn, enormously boosts critical damage, 50% damage reduction from all elements for first 2 turns & enormously boosts ABPand CBP gain",
+    "es": "120% boost to Atk, Def, 100% boost to max HP of Dark types, 20% damage reduction from Light, Dark types, enormously boosts BB gauge each turn, enormously boosts critical damage, 50% damage reduction from all elements for first 2 turns & enormously boosts ABPand CBP gain",
+    "id": "120% boost to Atk, Def, 100% boost to max HP of Dark types, 20% damage reduction from Light, Dark types, enormously boosts BB gauge each turn, enormously boosts critical damage, 50% damage reduction from all elements for first 2 turns & enormously boosts ABPand CBP gain",
+    "pt": "120% boost to Atk, Def, 100% boost to max HP of Dark types, 20% damage reduction from Light, Dark types, enormously boosts BB gauge each turn, enormously boosts critical damage, 50% damage reduction from all elements for first 2 turns & enormously boosts ABPand CBP gain",
+    "th": "120% boost to Atk, Def, 100% boost to max HP of Dark types, 20% damage reduction from Light, Dark types, enormously boosts BB gauge each turn, enormously boosts critical damage, 50% damage reduction from all elements for first 2 turns & enormously boosts ABPand CBP gain",
+    "vi": "120% boost to Atk, Def, 100% boost to max HP of Dark types, 20% damage reduction from Light, Dark types, enormously boosts BB gauge each turn, enormously boosts critical damage, 50% damage reduction from all elements for first 2 turns & enormously boosts ABPand CBP gain"
+  },
+  "MST_LEADERSKILLS_860658_NAME": {
+    "en": "Soul of the Conqueror",
+    "es": "Soul of the Conqueror",
+    "id": "Soul of the Conqueror",
+    "pt": "Soul of the Conqueror",
+    "th": "Soul of the Conqueror",
+    "vi": "Soul of the Conqueror"
   },
   "MST_LEADERSKILLS_860678_DESCRIPTION": {
     "en": "80% boost to all parameters, Spark damage boosts BB gauge, greatly boosts Spark damage & 15% damage reduction from all element types",
@@ -88438,21 +88606,5 @@
     "pt": "Alyut Lâmina da Luz",
     "th": "ไลท์เบลดอัลยูท",
     "vi": "Quang kiếm Alyut"
-  },
-  "MST_MONSTERS_54201_NAME": {
-    "en": "Light Blade Alyut",
-    "es": "Alyut, Hoja de luz",
-    "id": "Bilah Terang Alyut",
-    "pt": "Alyut Lâmina da Luz",
-    "th": "ไลท์ เบลด อัลยุท",
-    "vi": "Light Blade Alyut"
-  },
-  "MST_MONSTERS_54202_NAME": {
-    "en": "Light Blade Alyut",
-    "es": "Alyut, Hoja de luz",
-    "id": "Bilah Terang Alyut",
-    "pt": "Alyut Lâmina da Luz",
-    "th": "ไลท์ เบลด อัลยุท",
-    "vi": "Light Blade Alyut"
   }
 }

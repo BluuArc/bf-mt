@@ -161,8 +161,9 @@
     "effect": {
       "effect": [
         {
-          "unknown proc id": "0",
-          "unknown proc param": ""
+          "atk% buff (100)": 10,
+          "buff timer (seconds)": 300,
+          "proc id": "902"
         }
       ],
       "target_area": "aoe",
@@ -204,8 +205,8 @@
     "effect": {
       "effect": [
         {
-          "unknown proc id": "0",
-          "unknown proc param": ""
+          "unknown proc id": "907",
+          "unknown proc param": "10,300,1"
         }
       ],
       "target_area": "aoe",
