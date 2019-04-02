@@ -82,7 +82,7 @@
           :disabled="isLoadingInParent"
           @click="onSaveClick">
           <v-icon left>save</v-icon>
-          Save
+          Save Squad
         </v-btn>
         <v-btn
           flat
