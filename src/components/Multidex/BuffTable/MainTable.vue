@@ -21,7 +21,7 @@
         <tr :key="`${effectEntry.id}-${i}`">
           <!-- ID cell -->
           <td
-            class="id-column"
+            :class="{ 'id-column first-row': true, 'only-row': hiddenIndices.includes(i) || getSortedProps(effectEntry.effect).length === 1 }"
             :rowspan="hiddenIndices.includes(i) ? 1 : getSortedProps(effectEntry.effect).length">
             <v-btn
               flat small
@@ -40,16 +40,16 @@
           </td>
           <!-- buff row -->
           <template v-if="!hiddenIndices.includes(i)">
-            <td class="property-column property-row--odd">
+            <td :class="{ 'property-column property-row--odd first-row': true, 'only-row': getSortedProps(effectEntry.effect).length === 1 }">
               {{ getSortedProps(effectEntry.effect)[0] }}
             </td>
             <td
-              class="value-column value-row--odd"
+              :class="{ 'value-column value-row--odd first-row': true, 'only-row': getSortedProps(effectEntry.effect).length === 1 }"
               v-if="isProcBuffList(effectEntry, getSortedProps(effectEntry.effect)[0])">
               <buff-table :effects="effectEntry.effect[getSortedProps(effectEntry.effect)[0]]" :showHeaders="false" :isNested="true"/>
             </td>
             <td
-              class="value-column value-row--odd"
+              :class="{ 'value-column value-row--odd first-row': true, 'only-row': getSortedProps(effectEntry.effect).length === 1 }"
               v-else>
               {{ effectEntry.effect[getSortedProps(effectEntry.effect)[0]] }}
               <span v-if="Array.isArray(effectEntry.effect[getSortedProps(effectEntry.effect)[0]]) && effectEntry.effect[getSortedProps(effectEntry.effect)[0]].length === 0">
@@ -57,8 +57,8 @@
               </span>
             </td>
           </template>
-          <td v-else colspan="2">
-            {{ getSortedProps(effectEntry.effect).length }} Effects Hidden
+          <td v-else colspan="2" class="only-row">
+            {{ getEffectsHiddenText(getSortedProps(effectEntry.effect).length) }}
           </td>
         </tr>
 
@@ -67,17 +67,17 @@
           <tr
             v-for="(prop, j) in getSortedProps(effectEntry.effect).slice(1)"
             :key="`${effectEntry.id}-${i}-${j}`">
-            <td :class="{ 'property-column': true, [`property-row--${j % 2 === 0 ? 'even' : 'odd'}`]: true }">
+            <td :class="{ 'property-column': true, [`property-row--${j % 2 === 0 ? 'even' : 'odd'}`]: true, 'last-row': j + 1 === getSortedProps(effectEntry.effect).length }">
               {{ prop }}
             </td>
             <td
-              :class="{ 'value-column': true, [`value-row--${j % 2 === 0 ? 'even' : 'odd'}`]: true }"
+              :class="{ 'value-column': true, [`value-row--${j % 2 === 0 ? 'even' : 'odd'}`]: true, 'last-row': j + 1 === getSortedProps(effectEntry.effect).length }"
               style="overflow-x: auto;"
               v-if="isProcBuffList(effectEntry, prop)">
               <buff-table :effects="effectEntry.effect[prop]" :showHeaders="false" :isNested="true"/>
             </td>
             <td
-              :class="{ 'value-column': true, [`value-row--${j % 2 === 0 ? 'even' : 'odd'}`]: true }"
+              :class="{ 'value-column': true, [`value-row--${j % 2 === 0 ? 'even' : 'odd'}`]: true, 'last-row': j + 1 === getSortedProps(effectEntry.effect).length }"
               v-else>
               {{ effectEntry.effect[prop] }}
               <span v-if="Array.isArray(effectEntry.effect[prop]) && effectEntry.effect[prop].length === 0">
@@ -160,6 +160,9 @@ export default {
     isProcBuffList (effectEntry, prop) {
       return effectEntry.type === 'passive' && +effectEntry.id === 66 && prop === 'triggered effect';
     },
+    getEffectsHiddenText (numProps) {
+      return `${numProps} ${numProps !== 1 ? 'Effects' : 'Effect'} Hidden`;
+    },
   },
   name: 'buff-table',
 };
@@ -210,6 +213,14 @@ table.buff-table {
     .property-column {
       width: 20em;
     }
+
+    .first-row, .only-row {
+      border-top: 2px solid var(--table-background-color);
+    }
+
+    .last-row, .only-row {
+      border-bottom: 2px solid var(--table-background-color);
+    }
   }
 
   & > thead > th {
@@ -217,7 +228,7 @@ table.buff-table {
     border-bottom: var(--table-border-settings);
   }
 
-  .property-row--odd, .value-row--odd {
+  .property-row--odd:not(.only-row), .value-row--odd:not(.only-row) {
     background-color: var(--table-border-color);
   }
 }
