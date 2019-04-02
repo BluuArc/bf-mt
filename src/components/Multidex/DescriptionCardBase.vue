@@ -21,7 +21,7 @@
               <v-btn flat @click="showBuffTable = !showBuffTable">{{ showBuffTable ? 'Hide' : 'Show' }} Buff Table</v-btn>
             </v-card-actions>
             <v-slide-y-transition>
-              <div v-show="showBuffTable">
+              <div v-show="showBuffTable" style="overflow-x: auto;">
                 <buff-table :effects="effects" v-if="hasShownBuffTable" :showHeaders="true"/>
               </div>
             </v-slide-y-transition>

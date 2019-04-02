@@ -16,7 +16,7 @@
       <v-expansion-panel v-model="activeConditionSet">
         <v-expansion-panel-content v-for="(conditionSet, i) in conditionalEffects" :key="i">
           <h2 class="subheading" slot="header" style="text-transform: capitalize;">{{ conditionSet.condition }}</h2>
-          <v-container fluid>
+          <v-container fluid style="overflow-x: auto;">
             <buff-table :effects="conditionSet.effects" :showHeaders="true"/>
           </v-container>
         </v-expansion-panel-content>

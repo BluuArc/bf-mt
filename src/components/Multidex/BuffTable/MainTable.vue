@@ -1,5 +1,5 @@
 <template>
-  <table class="buff-table">
+  <table :class="{ 'buff-table': true, 'is-nested': isNested }">
     <thead v-if="showHeaders">
       <tr>
         <th class="id-column">
@@ -46,7 +46,7 @@
             <td
               class="value-column value-row--odd"
               v-if="isProcBuffList(effectEntry, getSortedProps(effectEntry.effect)[0])">
-              <buff-table :effects="effectEntry.effect[getSortedProps(effectEntry.effect)[0]]" :showHeaders="false"/>
+              <buff-table :effects="effectEntry.effect[getSortedProps(effectEntry.effect)[0]]" :showHeaders="false" :isNested="true"/>
             </td>
             <td
               class="value-column value-row--odd"
@@ -72,8 +72,9 @@
             </td>
             <td
               :class="{ 'value-column': true, [`value-row--${j % 2 === 0 ? 'even' : 'odd'}`]: true }"
+              style="overflow-x: auto;"
               v-if="isProcBuffList(effectEntry, prop)">
-              <buff-table :effects="effectEntry.effect[prop]" :showHeaders="false"/>
+              <buff-table :effects="effectEntry.effect[prop]" :showHeaders="false" :isNested="true"/>
             </td>
             <td
               :class="{ 'value-column': true, [`value-row--${j % 2 === 0 ? 'even' : 'odd'}`]: true }"
@@ -100,6 +101,10 @@ export default {
       default: () => [],
     },
     showHeaders: {
+      type: Boolean,
+      default: false,
+    },
+    isNested: {
       type: Boolean,
       default: false,
     },
@@ -171,6 +176,14 @@ table.buff-table {
   border-collapse: collapse;
   border: var(--table-border-settings);
 
+  &:not(.is-nested) {
+    min-width: 40em;
+  }
+
+  .is-nested .property-column {
+    width: 10em;
+  }
+
   & > thead, & > tbody {
     td, th {
       border: var(--table-border-settings);
@@ -182,7 +195,7 @@ table.buff-table {
     }
 
     .id-column {
-      width: 7em;
+      width: 5em;
 
       button.collapse-btn {
         height: auto;

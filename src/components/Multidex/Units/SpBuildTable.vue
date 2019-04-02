@@ -59,7 +59,7 @@
           <tr
             v-show="showTables.includes(index)"
             :class="`buff-row buff-row--${index % 2 === 0 ? 'even' : 'odd'}`">
-            <td colspan="3">
+            <td colspan="3" style="overflow-x: auto;">
               <buff-table
                 class="mb-2"
                 :effects="getSpEffects(spEntry, true)"

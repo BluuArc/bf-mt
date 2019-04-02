@@ -37,7 +37,7 @@
         </v-card-actions>
         <v-slide-y-transition>
           <div v-show="showBuffTable">
-            <v-container fluid v-if="hasShownBuffTable" grid-list-xl>
+            <v-container fluid v-if="hasShownBuffTable" class="px-0">
               <v-layout row>
                 <v-flex class="pt-0">
                   <v-divider/>
@@ -52,7 +52,7 @@
                 </v-flex>
               </v-layout>
               <v-layout row>
-                <v-flex>
+                <v-flex style="overflow-x: auto;">
                   <buff-table :effects="currentBurstEffect" :showHeaders="true"/>
                 </v-flex>
               </v-layout>

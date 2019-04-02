@@ -35,7 +35,7 @@
         </v-flex>
       </v-layout>
       <v-layout row>
-        <v-flex>
+        <v-flex style="overflow-x: auto;">
           <buff-table :effects="currentBurstEffect" :showHeaders="true"/>
         </v-flex>
       </v-layout>
