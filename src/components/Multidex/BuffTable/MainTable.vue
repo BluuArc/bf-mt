@@ -20,71 +20,34 @@
       <template v-for="(effectEntry, i) in mappedEffects">
         <tr :key="`${effectEntry.id}-${i}`">
           <!-- ID cell -->
-          <td
-            :class="{ 'id-column first-row': true, 'only-row': hiddenIndices.includes(i) || getSortedProps(effectEntry.effect).length === 1 }"
-            :rowspan="hiddenIndices.includes(i) ? 1 : getSortedProps(effectEntry.effect).length">
-            <v-btn
-              flat small
-              class="collapse-btn"
-              @click="() => toggleEffectView(i)">
-              <div style="flex: 1 1 100%;">
-                <v-icon>{{ hiddenIndices.includes(i) ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</v-icon>
-              </div>
-              <div style="flex: 1 1 100%;">
-                {{ effectEntry.id }}
-              </div>
-              <div style="flex: 1 1 100%;">
-                <v-icon>{{ hiddenIndices.includes(i) ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</v-icon>
-              </div>
-            </v-btn>
-          </td>
-          <!-- buff row -->
-          <template v-if="!hiddenIndices.includes(i)">
-            <td :class="{ 'property-column property-row--odd first-row': true, 'only-row': getSortedProps(effectEntry.effect).length === 1 }">
-              {{ getSortedProps(effectEntry.effect)[0] }}
-            </td>
-            <td
-              :class="{ 'value-column value-row--odd first-row': true, 'only-row': getSortedProps(effectEntry.effect).length === 1 }"
-              v-if="isProcBuffList(effectEntry, getSortedProps(effectEntry.effect)[0])">
-              <buff-table :effects="effectEntry.effect[getSortedProps(effectEntry.effect)[0]]" :showHeaders="false" :isNested="true"/>
-            </td>
-            <td
-              :class="{ 'value-column value-row--odd first-row': true, 'only-row': getSortedProps(effectEntry.effect).length === 1 }"
-              v-else>
-              {{ effectEntry.effect[getSortedProps(effectEntry.effect)[0]] }}
-              <span v-if="Array.isArray(effectEntry.effect[getSortedProps(effectEntry.effect)[0]]) && effectEntry.effect[getSortedProps(effectEntry.effect)[0]].length === 0">
-                (None)
-              </span>
-            </td>
-          </template>
-          <td v-else colspan="2" class="only-row">
-            {{ getEffectsHiddenText(getSortedProps(effectEntry.effect).length) }}
-          </td>
+          <id-cell
+            :class="{ 'first-row': true, 'only-row': hiddenIndices.includes(i) || getSortedProps(effectEntry.effect).length === 1 }"
+            :rowspan="hiddenIndices.includes(i) ? 1 : getSortedProps(effectEntry.effect).length"
+            :collapsed="hiddenIndices.includes(i)"
+            :value="effectEntry.id"
+            @click="() => toggleEffectView(i)"/>
+          <property-cell
+            :class="{ 'property-row--odd first-row': !hiddenIndices.includes(i), 'only-row': hiddenIndices.includes(i) || getSortedProps(effectEntry.effect).length === 1 }"
+            :collapsed="hiddenIndices.includes(i)"
+            :value="getSortedProps(effectEntry.effect)[0]"
+            :numProps="getSortedProps(effectEntry.effect).length"/>
+          <value-cell
+            v-if="!hiddenIndices.includes(i)"
+            :class="{ 'value-row--odd first-row': true, 'only-row': getSortedProps(effectEntry.effect).length === 1 }"
+            :value="effectEntry.effect[getSortedProps(effectEntry.effect)[0]]"
+            :isProcBuffList="isProcBuffList(effectEntry, getSortedProps(effectEntry.effect)[0])"/>
         </tr>
 
         <!-- subsequent buff rows for given ID -->
         <template v-if="!hiddenIndices.includes(i)">
-          <tr
+          <property-value-row
             v-for="(prop, j) in getSortedProps(effectEntry.effect).slice(1)"
-            :key="`${effectEntry.id}-${i}-${j}`">
-            <td :class="{ 'property-column': true, [`property-row--${j % 2 === 0 ? 'even' : 'odd'}`]: true, 'last-row': j + 1 === getSortedProps(effectEntry.effect).length }">
-              {{ prop }}
-            </td>
-            <td
-              :class="{ 'value-column': true, [`value-row--${j % 2 === 0 ? 'even' : 'odd'}`]: true, 'last-row': j + 1 === getSortedProps(effectEntry.effect).length }"
-              style="overflow-x: auto;"
-              v-if="isProcBuffList(effectEntry, prop)">
-              <buff-table :effects="effectEntry.effect[prop]" :showHeaders="false" :isNested="true"/>
-            </td>
-            <td
-              :class="{ 'value-column': true, [`value-row--${j % 2 === 0 ? 'even' : 'odd'}`]: true, 'last-row': j + 1 === getSortedProps(effectEntry.effect).length }"
-              v-else>
-              {{ effectEntry.effect[prop] }}
-              <span v-if="Array.isArray(effectEntry.effect[prop]) && effectEntry.effect[prop].length === 0">
-                (None)
-              </span>
-            </td>
-          </tr>
+            :key="`${effectEntry.id}-${i}-${j}`"
+            :propertyCellClass="{ 'property-column': true, [`property-row--${j % 2 === 0 ? 'even' : 'odd'}`]: true, 'last-row': j + 1 === getSortedProps(effectEntry.effect).length }"
+            :valueCellClass="{ 'value-column': true, [`value-row--${j % 2 === 0 ? 'even' : 'odd'}`]: true, 'last-row': j + 1 === getSortedProps(effectEntry.effect).length }"
+            :propName="prop"
+            :propValue="effectEntry.effect[prop]"
+            :isProcBuffList="isProcBuffList(effectEntry, prop)"/>
         </template>
       </template>
     </tbody>
@@ -93,6 +56,10 @@
 
 <script>
 import { getEffectType, getEffectId } from '@/modules/EffectProcessor/processor-helper';
+import IdCell from './IdCell';
+import PropertyCell from './PropertyCell';
+import ValueCell from './ValueCell';
+import PropertyValueRow from './PropertyValueRow';
 
 export default {
   props: {
@@ -108,6 +75,12 @@ export default {
       type: Boolean,
       default: false,
     },
+  },
+  components: {
+    IdCell,
+    PropertyCell,
+    ValueCell,
+    PropertyValueRow,
   },
   computed: {
     idKeys: () => ['passive id', 'unknown passive id', 'proc id', 'unknown proc id'],
@@ -211,7 +184,7 @@ table.buff-table {
     }
 
     .property-column {
-      width: 20em;
+      width: 17.5em;
     }
 
     .first-row, .only-row {
