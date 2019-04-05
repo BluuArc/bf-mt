@@ -1,4 +1,36 @@
 {
+  "MST_SKILLS_2830587_DESCRIPTION": {
+    "en": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction",
+    "es": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction",
+    "id": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction",
+    "pt": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction",
+    "th": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction",
+    "vi": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction"
+  },
+  "MST_SKILLS_2830587_NAME": {
+    "en": "Home Run Comet",
+    "es": "Home Run Comet",
+    "id": "Home Run Comet",
+    "pt": "Home Run Comet",
+    "th": "Home Run Comet",
+    "vi": "Home Run Comet"
+  },
+  "MST_SKILLS_2830588_DESCRIPTION": {
+    "en": "25 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turn Atk, Def reduction & purges LS disable effects from all allies",
+    "es": "25 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turn Atk, Def reduction & purges LS disable effects from all allies",
+    "id": "25 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turn Atk, Def reduction & purges LS disable effects from all allies",
+    "pt": "25 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turn Atk, Def reduction & purges LS disable effects from all allies",
+    "th": "25 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turn Atk, Def reduction & purges LS disable effects from all allies",
+    "vi": "25 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turn Atk, Def reduction & purges LS disable effects from all allies"
+  },
+  "MST_SKILLS_2830588_NAME": {
+    "en": "Home Run Comet EX",
+    "es": "Home Run Comet EX",
+    "id": "Home Run Comet EX",
+    "pt": "Home Run Comet EX",
+    "th": "Home Run Comet EX",
+    "vi": "Home Run Comet EX"
+  },
   "MST_SKILLS_2830597_DESCRIPTION": {
     "en": "20 combo massive Earth attack on all foes, 10 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Earth elemental damage for 3 turns",
     "es": "20 combo massive Earth attack on all foes, 10 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Earth elemental damage for 3 turns",
@@ -2240,12 +2272,12 @@
     "vi": "Only Leads to Death"
   },
   "MST_SKILLS_2860278_DESCRIPTION": {
-    "en": "24 combo massive Dark attack on all foes (damage relative to remaining HP), boosts critical damage for 3 turns, greatly boosts Atk, Def relative to max HP for 3 turns, hugely boosts max HP, hugely reduces damage from Light, Dark types for 3 turns & enormously boosts Dark elemental damage for 3 turns",
-    "es": "24 combo massive Dark attack on all foes (damage relative to remaining HP), boosts critical damage for 3 turns, greatly boosts Atk, Def relative to max HP for 3 turns, hugely boosts max HP, hugely reduces damage from Light & Dark types for 3 turns & enormously boosts Dark elemental damage for 3 turns",
-    "id": "24 kombo serangan Gelap masif ke semua musuh (kerusakan sesuai sisa HP), 3 giliran: menambah kerusakan ampuh, amat menambah HP maks, Serang, Tahan sesuai HP mak, amat mengurangi kerusakan dari tipe Terang, Gelap, ekstra jumbo kerusakan elemen Gelap",
-    "pt": "24 combo massive Dark attack on all foes (damage relative to remaining HP), boosts critical damage for 3 turns, greatly boosts Atk, Def relative to max HP for 3 turns, hugely boosts max HP, hugely reduces damage from Light & Dark types for 3 turns & enormously boosts Dark elemental damage for 3 turns",
-    "th": "24 คอมโบ โจมตีธาตุมืดรุนแรงมหาศาล ใส่ศัตรูทั้งหมด (ความเสียหาย สัมพันธ์กับ HP ที่เหลืออยู่), เพิ่มค่า ความเสียหายคริติคอล นาน 3 เทิร์น, เพิ่มค่าอย่างมากให้ โจมตี, ป้องกัน สัมพันธ์กับ HP สูงสุด นาน 3 เทิร์น, เพิ่มค่าอย่างสูงให้ HP สูงสุด, ลดค่า ความเสียหาย อย่างสูง จากชนิด แสง, มืด นาน 3 เทิร์น และ เพิ่มค่ามหาศาลให้ มืด ความเสียหายธาตุ นาน 3 เทิร์น",
-    "vi": "24 combo massive Dark attack on all foes (damage relative to remaining HP), boosts critical damage for 3 turns, greatly boosts Atk, Def relative to max HP for 3 turns, hugely boosts max HP, hugely reduces damage from Light & Dark types for 3 turns & enormously boosts Dark elemental damage for 3 turns"
+    "en": "24 combo powerful Dark attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, enourmously boosts Atk, Def relative to max HP for 3 turns, hugely boosts max HP, hugely reduces damage from Light, Dark types for 3 turns & enormously boosts Dark elemental damage for 3 turns",
+    "es": "24 combo powerful Dark attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, enourmously boosts Atk, Def relative to max HP for 3 turns, hugely boosts max HP, hugely reduces damage from Light, Dark types for 3 turns & enormously boosts Dark elemental damage for 3 turns",
+    "id": "24 combo powerful Dark attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, enourmously boosts Atk, Def relative to max HP for 3 turns, hugely boosts max HP, hugely reduces damage from Light, Dark types for 3 turns & enormously boosts Dark elemental damage for 3 turns",
+    "pt": "24 combo powerful Dark attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, enourmously boosts Atk, Def relative to max HP for 3 turns, hugely boosts max HP, hugely reduces damage from Light, Dark types for 3 turns & enormously boosts Dark elemental damage for 3 turns",
+    "th": "24 combo powerful Dark attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, enourmously boosts Atk, Def relative to max HP for 3 turns, hugely boosts max HP, hugely reduces damage from Light, Dark types for 3 turns & enormously boosts Dark elemental damage for 3 turns",
+    "vi": "24 combo powerful Dark attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, enourmously boosts Atk, Def relative to max HP for 3 turns, hugely boosts max HP, hugely reduces damage from Light, Dark types for 3 turns & enormously boosts Dark elemental damage for 3 turns"
   },
   "MST_SKILLS_2860278_NAME": {
     "en": "Silence Before Despair",
@@ -2830,6 +2862,22 @@
     "pt": "Ascension to 'Paradise'",
     "th": "Ascension to 'Paradise'",
     "vi": "Ascension to 'Paradise'"
+  },
+  "MST_SKILLS_2860708_DESCRIPTION": {
+    "en": "11 combo massive Dark attack on single foe (or probable 7% damage of foe's max HP), 11 combo massive Dark attack on single foe (25% active Pierce on Light, Dark types), enormously boosts Atk, Def relative to max HP for 3 turns, enormous 3 turn Atk, Def reduction infliction, enormously boosts Dark elemental damage for 4 turns & adds random status ailment infliction to attack for 4 turns",
+    "es": "11 combo massive Dark attack on single foe (or probable 7% damage of foe's max HP), 11 combo massive Dark attack on single foe (25% active Pierce on Light, Dark types), enormously boosts Atk, Def relative to max HP for 3 turns, enormous 3 turn Atk, Def reduction infliction, enormously boosts Dark elemental damage for 4 turns & adds random status ailment infliction to attack for 4 turns",
+    "id": "11 combo massive Dark attack on single foe (or probable 7% damage of foe's max HP), 11 combo massive Dark attack on single foe (25% active Pierce on Light, Dark types), enormously boosts Atk, Def relative to max HP for 3 turns, enormous 3 turn Atk, Def reduction infliction, enormously boosts Dark elemental damage for 4 turns & adds random status ailment infliction to attack for 4 turns",
+    "pt": "11 combo massive Dark attack on single foe (or probable 7% damage of foe's max HP), 11 combo massive Dark attack on single foe (25% active Pierce on Light, Dark types), enormously boosts Atk, Def relative to max HP for 3 turns, enormous 3 turn Atk, Def reduction infliction, enormously boosts Dark elemental damage for 4 turns & adds random status ailment infliction to attack for 4 turns",
+    "th": "11 combo massive Dark attack on single foe (or probable 7% damage of foe's max HP), 11 combo massive Dark attack on single foe (25% active Pierce on Light, Dark types), enormously boosts Atk, Def relative to max HP for 3 turns, enormous 3 turn Atk, Def reduction infliction, enormously boosts Dark elemental damage for 4 turns & adds random status ailment infliction to attack for 4 turns",
+    "vi": "11 combo massive Dark attack on single foe (or probable 7% damage of foe's max HP), 11 combo massive Dark attack on single foe (25% active Pierce on Light, Dark types), enormously boosts Atk, Def relative to max HP for 3 turns, enormous 3 turn Atk, Def reduction infliction, enormously boosts Dark elemental damage for 4 turns & adds random status ailment infliction to attack for 4 turns"
+  },
+  "MST_SKILLS_2860708_NAME": {
+    "en": "Stygian Guillotine",
+    "es": "Stygian Guillotine",
+    "id": "Stygian Guillotine",
+    "pt": "Stygian Guillotine",
+    "th": "Stygian Guillotine",
+    "vi": "Stygian Guillotine"
   },
   "MST_SKILLS_2860900_DESCRIPTION": {
     "en": "18 combo massive Dark attack on all foes (uses all allies' BB gauge), 100% damage reduction from Light types for 2 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & fully restores HP for 3 turns",
@@ -88606,5 +88654,21 @@
     "pt": "15 combo powerful Water attack on all foes, 30 combo random Water attack on all foes, hugely boosts damage dealt against status afflicted foes for 3 turns, adds probable random status ailment infliction to attack for 3 turns & adds probable great 1 turn Atk, Def reduction effect to attack for 3 turns",
     "th": "15 คอมโบ โจมตีธาตุน้ำอย่างแรง ใส่ศัตรูทั้งหมด, 30 คอมโบ สุ่มโจมตีธาตุน้ำ ใส่ศัตรูทั้งหมด, เพิ่มค่าอย่างสูงให้ ความเสียหายที่สร้างต่อศัตรูที่ติดสถานะผิดปกติ นาน 3 เทิร์น, ให้ผล อาจจะ ทำให้ติดสถานะผิดปกติโดยสุ่ม ให้กับการโจมตี นาน 3 เทิร์น กับ ให้ผล อาจจะ ลดค่า โจมตี, ป้องกัน อย่างมาก 1 เทิร์น ให้กับการโจมตี นาน 3 เทิร์น",
     "vi": "15 combo powerful Water attack on all foes, 30 combo random Water attack on all foes, hugely boosts damage dealt against status afflicted foes for 3 turns, adds probable random status ailment infliction to attack for 3 turns & adds probable great 1 turn Atk, Def reduction effect to attack for 3 turns"
+  },
+  "MST_SKILLS_820048_NAME": {
+    "en": "Absolute Utopia",
+    "es": "Absolute Utopia",
+    "id": "Utopia Absolut",
+    "pt": "Absolute Utopia",
+    "th": "แอ็บโซลูท ยูโทเปีย",
+    "vi": "Absolute Utopia"
+  },
+  "MST_SKILLS_820147_DESCRIPTION": {
+    "en": "14 combo Water attack on all foes, casts shield for 2 turns & gradually recovers HP for 3 turns",
+    "es": "Combo grupal de 14 ataques acuáticos. Lanza escudo térreo durante 2 turnos y recupera PS gradualmente durante 3 turnos",
+    "id": "14 kombo serangan Air ke semua musuh, memasang tameng Bumi 2 giliran & perlahan memulihkan HP 3 giliran",
+    "pt": "Combo de 14 golpes de Água em todos os inimigos, escudo de Terra por 2 rodadas e recuperação gradual de HP por 3 rodadas",
+    "th": "14 คอมโบ โจมตีศัตรูทั้งหมดด้วยธาตุน้ำอันรุนแรง สร้างเกราะธาตุดิน 2 เทิร์น, ฟื้นฟู HP 3 เทิร์น",
+    "vi": "14 combo Water attack on all foes, casts shield for 2 turns & gradually recovers HP for 3 turns"
   }
 }
