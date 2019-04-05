@@ -1,12 +1,4 @@
 {
-  "MST_LEADERSKILLS_7526_NAME": {
-    "en": "Frost-fanged Howl",
-    "es": "Frost-fanged Howl",
-    "id": "Lolongan Taring Beku",
-    "pt": "Frost-fanged Howl",
-    "th": "ฟรอสต์-แฟงก์ ฮาวล์",
-    "vi": "Frost-fanged Howl"
-  },
   "MST_LEADERSKILLS_7527_DESCRIPTION": {
     "en": "50% boost to Atk, max HP, slight damage reduction for 1 turn when Sparks exceed certain amount & enormously boosts Spark damage for 2 turns when Sparks exceed certain amount",
     "es": "50% boost to Atk, max HP, slight damage reduction for 1 turn when Sparks exceed certain amount & enormously boosts Spark damage for 2 turns when Sparks exceed certain amount",
@@ -7768,12 +7760,12 @@
     "vi": "Stalwart Bulwark Strategem"
   },
   "MST_LEADERSKILLS_860278_DESCRIPTION": {
-    "en": "200% boost to Atk, 60% boost to max HP and 30% boost to critical hit rate of Dark types, hugely boosts critical damage, hugely boosts Def, Rec when BB gauge is over 50% & hugely boosts Dark elemental damage. 25% boost to all parameters of Dark types & 20% damage reduction from Dark, Light types in Guild Raid",
-    "es": "200% boost to Atk, 60% boost to max HP and 30% boost to critical hit rate of Dark types, hugely boosts critical damage, hugely boosts Def, Rec when BB gauge is over 50% & hugely boosts Dark elemental damage. 25% boost to all parameters of Dark types & 20% damage reduction from Dark, Light types in Guild Raid",
-    "id": "200% ekstra Serang, 60% ekstra HP maks, 30% ekstra pukulan ampuh tipe Gelap, amat menambah: kerusakan ampuh, kerusakan elemen Gelap, dan Tahan, Pulih saat meteran BB di atas 50%. 25% ekstra semua parameter tipe Gelap, kurangi 20% kerusakan dari tipe Terang, Gelap dalam Perang Bersama Serikat",
-    "pt": "200% boost to Atk, 60% boost to max HP and 30% boost to critical hit rate of Dark types, hugely boosts critical damage, hugely boosts Def, Rec when BB gauge is over 50% & hugely boosts Dark elemental damage. 25% boost to all parameters of Dark types & 20% damage reduction from Dark, Light types in Guild Raid",
-    "th": "200% เพิ่มค่าให้ โจมตี, 60% เพิ่มค่าให้ HP สูงสุด กับ 30% เพิ่มค่าให้ อัตราเกิดคริติคอล ของชนิด มืด, เพิ่มค่าอย่างสูงให้ ความเสียหายคริติคอล, เพิ่มค่าอย่างสูงให้ ป้องกัน, ฟื้นฟู เมื่อเกจ BB นั้นมากกว่า 50% และ เพิ่มค่าอย่างสูงให้ มืด ความเสียหายธาตุ. 25% เพิ่มค่าให้ พารามิเตอร์ทั้งหมด ของชนิด มืด และ 20% ลดค่าความเสียหาย จากชนิด มืด, แสง ในกิลด์เรด",
-    "vi": "200% boost to Atk, 60% boost to max HP and 30% boost to critical hit rate of Dark types, hugely boosts critical damage, hugely boosts Def, Rec when BB gauge is over 50% & hugely boosts Dark elemental damage. 25% boost to all parameters of Dark types & 20% damage reduction from Dark, Light types in Guild Raid"
+    "en": "225% boost to Atk, 100% boost to max HP and 30% boost to critical hit rate of Dark types, hugely boosts critical damage, hugely boosts Def, Rec when BB gauge is over 50% & enormously boosts Dark elemental damage. 25% boost to all parameters of Dark types & 20% damage reduction from Dark, Light types in Guild Raid",
+    "es": "225% boost to Atk, 100% boost to max HP and 30% boost to critical hit rate of Dark types, hugely boosts critical damage, hugely boosts Def, Rec when BB gauge is over 50% & enormously boosts Dark elemental damage. 25% boost to all parameters of Dark types & 20% damage reduction from Dark, Light types in Guild Raid",
+    "id": "225% boost to Atk, 100% boost to max HP and 30% boost to critical hit rate of Dark types, hugely boosts critical damage, hugely boosts Def, Rec when BB gauge is over 50% & enormously boosts Dark elemental damage. 25% boost to all parameters of Dark types & 20% damage reduction from Dark, Light types in Guild Raid",
+    "pt": "225% boost to Atk, 100% boost to max HP and 30% boost to critical hit rate of Dark types, hugely boosts critical damage, hugely boosts Def, Rec when BB gauge is over 50% & enormously boosts Dark elemental damage. 25% boost to all parameters of Dark types & 20% damage reduction from Dark, Light types in Guild Raid",
+    "th": "225% boost to Atk, 100% boost to max HP and 30% boost to critical hit rate of Dark types, hugely boosts critical damage, hugely boosts Def, Rec when BB gauge is over 50% & enormously boosts Dark elemental damage. 25% boost to all parameters of Dark types & 20% damage reduction from Dark, Light types in Guild Raid",
+    "vi": "225% boost to Atk, 100% boost to max HP and 30% boost to critical hit rate of Dark types, hugely boosts critical damage, hugely boosts Def, Rec when BB gauge is over 50% & enormously boosts Dark elemental damage. 25% boost to all parameters of Dark types & 20% damage reduction from Dark, Light types in Guild Raid"
   },
   "MST_LEADERSKILLS_860278_NAME": {
     "en": "Massacre Imposition Geas",
@@ -8294,6 +8286,22 @@
     "pt": "Butterflies of Illusion",
     "th": "Butterflies of Illusion",
     "vi": "Butterflies of Illusion"
+  },
+  "MST_LEADERSKILLS_860708_DESCRIPTION": {
+    "en": "200% boost to Atk, 100% boost to Def, max HP and 30% boost to critical hit rate of Dark types, hugely boosts damage against status afflicted foes, enormously boosts Dark elemental damage, 15% damage reduction from Light, Dark types & raises Atk parameter limits to 130000",
+    "es": "200% boost to Atk, 100% boost to Def, max HP and 30% boost to critical hit rate of Dark types, hugely boosts damage against status afflicted foes, enormously boosts Dark elemental damage, 15% damage reduction from Light, Dark types & raises Atk parameter limits to 130000",
+    "id": "200% boost to Atk, 100% boost to Def, max HP and 30% boost to critical hit rate of Dark types, hugely boosts damage against status afflicted foes, enormously boosts Dark elemental damage, 15% damage reduction from Light, Dark types & raises Atk parameter limits to 130000",
+    "pt": "200% boost to Atk, 100% boost to Def, max HP and 30% boost to critical hit rate of Dark types, hugely boosts damage against status afflicted foes, enormously boosts Dark elemental damage, 15% damage reduction from Light, Dark types & raises Atk parameter limits to 130000",
+    "th": "200% boost to Atk, 100% boost to Def, max HP and 30% boost to critical hit rate of Dark types, hugely boosts damage against status afflicted foes, enormously boosts Dark elemental damage, 15% damage reduction from Light, Dark types & raises Atk parameter limits to 130000",
+    "vi": "200% boost to Atk, 100% boost to Def, max HP and 30% boost to critical hit rate of Dark types, hugely boosts damage against status afflicted foes, enormously boosts Dark elemental damage, 15% damage reduction from Light, Dark types & raises Atk parameter limits to 130000"
+  },
+  "MST_LEADERSKILLS_860708_NAME": {
+    "en": "Heart of Darkness",
+    "es": "Heart of Darkness",
+    "id": "Heart of Darkness",
+    "pt": "Heart of Darkness",
+    "th": "Heart of Darkness",
+    "vi": "Heart of Darkness"
   },
   "MST_LEADERSKILLS_860900_DESCRIPTION": {
     "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Dark elemental damage, 15% damage reduction from Light types & negates all status ailments",
@@ -88606,5 +88614,61 @@
     "pt": "Alyut Lâmina da Luz",
     "th": "ไลท์เบลดอัลยูท",
     "vi": "Quang kiếm Alyut"
+  },
+  "MST_MONSTERS_54201_NAME": {
+    "en": "Light Blade Alyut",
+    "es": "Alyut, Hoja de luz",
+    "id": "Bilah Terang Alyut",
+    "pt": "Alyut Lâmina da Luz",
+    "th": "ไลท์ เบลด อัลยุท",
+    "vi": "Light Blade Alyut"
+  },
+  "MST_MONSTERS_54202_NAME": {
+    "en": "Light Blade Alyut",
+    "es": "Alyut, Hoja de luz",
+    "id": "Bilah Terang Alyut",
+    "pt": "Alyut Lâmina da Luz",
+    "th": "ไลท์ เบลด อัลยุท",
+    "vi": "Light Blade Alyut"
+  },
+  "MST_MONSTERS_54203_NAME": {
+    "en": "Light Blade Alyut",
+    "es": "Alyut, Hoja de luz",
+    "id": "Bilah Terang Alyut",
+    "pt": "Alyut Lâmina da Luz",
+    "th": "ไลท์ เบลด อัลยุท",
+    "vi": "Light Blade Alyut"
+  },
+  "MST_MONSTERS_54204_NAME": {
+    "en": "Light Blade Alyut",
+    "es": "Alyut, Hoja de luz",
+    "id": "Bilah Terang Alyut",
+    "pt": "Alyut Lâmina da Luz",
+    "th": "ไลท์ เบลด อัลยุท",
+    "vi": "Light Blade Alyut"
+  },
+  "MST_MONSTERS_54205_NAME": {
+    "en": "Light Blade Alyut",
+    "es": "Alyut, Hoja de luz",
+    "id": "Bilah Terang Alyut",
+    "pt": "Alyut Lâmina da Luz",
+    "th": "ไลท์ เบลด อัลยุท",
+    "vi": "Light Blade Alyut"
+  },
+  "MST_MONSTERS_54206_NAME": {
+    "en": "Light Blade Alyut",
+    "es": "Alyut, Hoja de luz",
+    "id": "Bilah Terang Alyut",
+    "pt": "Alyut Lâmina da Luz",
+    "th": "ไลท์ เบลด อัลยุท",
+    "vi": "Light Blade Alyut"
+  },
+  "MST_MONSTERS_54250_NAME": {
+    "en": "Holy Warrior Alyut",
+    "es": "Alyut el Sagrado",
+    "id": "Prajurit Suci Alyut",
+    "pt": "Alyut Guerreiro Luz",
+    "th": "โฮลี่วอร์ริเออร์อัลยูท",
+    "vi": "Thần binh Alyut"
   }
 }

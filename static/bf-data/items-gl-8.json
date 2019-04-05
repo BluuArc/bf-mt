@@ -3872,7 +3872,8 @@
       "810708",
       "820668",
       "840437",
-      "840438"
+      "840438",
+      "860708"
     ],
     "first_clear_missions": [
       "8385000"
@@ -4823,7 +4824,8 @@
       "810708",
       "820668",
       "840437",
-      "840438"
+      "840438",
+      "860708"
     ]
   },
   "818913": {
@@ -5754,7 +5756,8 @@
       "820318",
       "820668",
       "840437",
-      "840438"
+      "840438",
+      "860708"
     ]
   },
   "818933": {
@@ -12250,7 +12253,8 @@
       "810708",
       "820668",
       "840437",
-      "840438"
+      "840438",
+      "860708"
     ]
   },
   "819091": {
@@ -12325,7 +12329,8 @@
       "810708",
       "820668",
       "840437",
-      "840438"
+      "840438",
+      "860708"
     ]
   },
   "819092": {
@@ -12399,7 +12404,8 @@
       "810708",
       "820668",
       "840437",
-      "840438"
+      "840438",
+      "860708"
     ]
   },
   "819093": {
@@ -12979,7 +12985,8 @@
       "810708",
       "820668",
       "840437",
-      "840438"
+      "840438",
+      "860708"
     ]
   },
   "819103": {
@@ -14696,7 +14703,8 @@
       "810708",
       "820668",
       "840437",
-      "840438"
+      "840438",
+      "860708"
     ]
   },
   "819129": {
@@ -15230,7 +15238,8 @@
       "810708",
       "820668",
       "840437",
-      "840438"
+      "840438",
+      "860708"
     ]
   },
   "819140": {
@@ -16005,7 +16014,8 @@
       "820668",
       "840437",
       "840438",
-      "850298"
+      "850298",
+      "860708"
     ]
   },
   "819156": {
@@ -16818,7 +16828,8 @@
       "820668",
       "840437",
       "840438",
-      "860338"
+      "860338",
+      "860708"
     ]
   },
   "819171": {
@@ -16932,7 +16943,8 @@
       "810708",
       "820668",
       "840437",
-      "840438"
+      "840438",
+      "860708"
     ]
   },
   "819173": {
@@ -17262,7 +17274,8 @@
       "810708",
       "820668",
       "840437",
-      "840438"
+      "840438",
+      "860708"
     ]
   },
   "819178": {
@@ -17551,7 +17564,8 @@
       "810708",
       "820668",
       "840437",
-      "840438"
+      "840438",
+      "860708"
     ]
   },
   "819182": {
@@ -17780,7 +17794,8 @@
       "840437",
       "840438",
       "850637",
-      "850638"
+      "850638",
+      "860708"
     ]
   },
   "819187": {
@@ -17939,7 +17954,8 @@
       "810708",
       "820668",
       "840437",
-      "840438"
+      "840438",
+      "860708"
     ]
   },
   "819190": {
@@ -18402,7 +18418,8 @@
       "820668",
       "830148",
       "840437",
-      "840438"
+      "840438",
+      "860708"
     ]
   },
   "819198": {
@@ -19896,6 +19913,196 @@
       "840438"
     ]
   },
+  "819220": {
+    "desc": "130% boost to Spark damage, Spark damage slightly restores HP and considerably boosts BB gauge, 30% boost to all parameters of Male and Genderless types & adds probability of purging Poison and Sickness negation effects from single foe effect to BB/SBB",
+    "effect": [
+      {
+        "damage% for spark": 130,
+        "passive id": "31"
+      },
+      {
+        "heal on spark high": 600,
+        "heal on spark low": 400,
+        "heal on spark%": 100,
+        "passive id": "101"
+      },
+      {
+        "bc fill on spark high": 3,
+        "bc fill on spark low": 2,
+        "bc fill on spark%": 100,
+        "passive id": "47"
+      },
+      {
+        "passive id": "66",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "single",
+            "target type": "enemy",
+            "unknown proc id": "10019",
+            "unknown proc param": "30,32,0,0,0,0,0,0,0,15"
+          }
+        ]
+      },
+      {
+        "atk% buff": 30,
+        "def% buff": 30,
+        "gender required": "male",
+        "hp% buff": 30,
+        "passive id": "42",
+        "rec% buff": 30
+      },
+      {
+        "atk% buff": 30,
+        "def% buff": 30,
+        "gender required": "genderless",
+        "hp% buff": 30,
+        "passive id": "42",
+        "rec% buff": 30
+      }
+    ],
+    "id": 819220,
+    "max_stack": 1,
+    "name": "Mora's Bane",
+    "raid": false,
+    "rarity": 7,
+    "recipe": {
+      "karma": "800000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 60200,
+          "name": "Twilight Stone"
+        },
+        {
+          "count": 1,
+          "id": 819224,
+          "name": "Revenant Soul"
+        },
+        {
+          "count": 150,
+          "id": 890005,
+          "name": "Orebi Gleamstone"
+        }
+      ]
+    },
+    "sell_price": 999999,
+    "sphere type": 11,
+    "sphere type text": "Spark",
+    "thumbnail": "ls_sphere_thum_1_5.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 819221,
+        "name": "Primal Desire"
+      }
+    ],
+    "associated_units": [
+      "30546",
+      "810108",
+      "840438",
+      "860167"
+    ]
+  },
+  "819221": {
+    "desc": "150% boost to Spark damage, Spark damage slightly restores HP and considerably boosts BB gauge, probable Spark critical, 40% boost to all parameters of Male and Genderless types, adds probability of purging Poison and Sickness negation effects from all foes effect to BB/SBB & increases BB gauge required for BB",
+    "effect": [
+      {
+        "damage% for spark": 150,
+        "passive id": "31"
+      },
+      {
+        "heal on spark high": 800,
+        "heal on spark low": 600,
+        "heal on spark%": 100,
+        "passive id": "101"
+      },
+      {
+        "bc fill on spark high": 4,
+        "bc fill on spark low": 3,
+        "bc fill on spark%": 100,
+        "passive id": "47"
+      },
+      {
+        "passive id": "100",
+        "spark crit chance%": 40,
+        "spark crit dmg%": 150
+      },
+      {
+        "atk% buff": 40,
+        "def% buff": 40,
+        "gender required": "male",
+        "hp% buff": 40,
+        "passive id": "42",
+        "rec% buff": 40
+      },
+      {
+        "atk% buff": 40,
+        "def% buff": 40,
+        "gender required": "genderless",
+        "hp% buff": 40,
+        "passive id": "42",
+        "rec% buff": 40
+      },
+      {
+        "passive id": "66",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "enemy",
+            "unknown proc id": "10019",
+            "unknown proc param": "30,32,0,0,0,0,0,0,0,15"
+          }
+        ]
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": -15
+      }
+    ],
+    "id": 819221,
+    "max_stack": 1,
+    "name": "Primal Desire",
+    "raid": false,
+    "rarity": 7,
+    "recipe": {
+      "karma": "1000000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 819220,
+          "name": "Mora's Bane"
+        },
+        {
+          "count": 1,
+          "id": 819225,
+          "name": "Giselle's Kiss"
+        },
+        {
+          "count": 350,
+          "id": 890011,
+          "name": "Dawn Omphalos"
+        }
+      ]
+    },
+    "sell_price": 999999,
+    "sphere type": 11,
+    "sphere type text": "Spark",
+    "thumbnail": "sphere_thum_2_5.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "30546",
+      "810108",
+      "840438",
+      "860167"
+    ]
+  },
   "819224": {
     "desc": "45% boost to all parameters, restores HP each turn & damage taken slightly boosts BB gauge and may restore HP",
     "effect": [
@@ -19966,6 +20173,10 @@
       {
         "id": 819218,
         "name": "Beiorg's Armor Mk II"
+      },
+      {
+        "id": 819220,
+        "name": "Mora's Bane"
       },
       {
         "id": 819226,
@@ -20061,6 +20272,10 @@
       {
         "id": 819219,
         "name": "Beiorg's Armor Mk V"
+      },
+      {
+        "id": 819221,
+        "name": "Primal Desire"
       },
       {
         "id": 819227,
@@ -20267,6 +20482,68 @@
     "usage": [],
     "associated_units": [
       "810708"
+    ]
+  },
+  "819229": {
+    "desc": "100% boost to Atk and 40% boost to max HP of Dark types, boosts Dark elemental damage, adds Def ignoring effect to attack, considerably boosts BB Atk & considerably restores HP when a foe is slain",
+    "effect": [
+      {
+        "atk% buff": 100,
+        "elements buffed": [
+          "dark"
+        ],
+        "hp% buff": 40,
+        "passive id": "2"
+      },
+      {
+        "dark units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 125,
+        "passive id": "50"
+      },
+      {
+        "bb atk% buff": 300,
+        "passive id": "64",
+        "sbb atk% buff": 300,
+        "ubb atk% buff": 300
+      },
+      {
+        "hp% recover on enemy defeat high": 40,
+        "hp% recover on enemy defeat low": 30,
+        "passive id": "15"
+      },
+      {
+        "ignore def%": 100,
+        "passive id": "29"
+      }
+    ],
+    "id": 819229,
+    "max_stack": 1,
+    "name": "Katerin's Torment",
+    "raid": false,
+    "rarity": 7,
+    "recipe": {
+      "karma": "800000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 890024,
+          "name": "Tears of Innocence"
+        },
+        {
+          "count": 50,
+          "id": 890025,
+          "name": "Grain of Sin"
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 12,
+    "sphere type text": "Defense Penetrating",
+    "thumbnail": "sphere_thum_819229.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "860708"
     ]
   },
   "819234": {
@@ -28186,6 +28463,10 @@
     "type": "material",
     "usage": [
       {
+        "id": 819220,
+        "name": "Mora's Bane"
+      },
+      {
         "id": 890018,
         "name": "Spark of Life"
       }
@@ -28303,6 +28584,10 @@
     "thumbnail": "item_thum_880115.png",
     "type": "material",
     "usage": [
+      {
+        "id": 819221,
+        "name": "Primal Desire"
+      },
       {
         "id": 890018,
         "name": "Spark of Life"
@@ -28677,6 +28962,40 @@
       {
         "id": 819228,
         "name": "Czorag's Malice"
+      }
+    ]
+  },
+  "890024": {
+    "desc": "A sedimentary stone formed from the tears of executed innocents.",
+    "id": 890024,
+    "max_stack": 99,
+    "name": "Tears of Innocence",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 5000,
+    "thumbnail": "item_thum_404.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 819229,
+        "name": "Katerin's Torment"
+      }
+    ]
+  },
+  "890025": {
+    "desc": "A small stone emitting a dark aura, formed from the tainted sins of evil-doers.",
+    "id": 890025,
+    "max_stack": 99,
+    "name": "Grain of Sin",
+    "raid": true,
+    "rarity": 3,
+    "sell_price": 5000,
+    "thumbnail": "item_thum_704.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 819229,
+        "name": "Katerin's Torment"
       }
     ]
   },
