@@ -10,7 +10,7 @@ import {
   getSpEntryEffects,
 } from '@/modules/core/units';
 import { isValidSkill } from '@/modules/core/extra-skills';
-import { isValidSphere } from '@/modules/core/items';
+import { isValidSphere, getItemEffects } from '@/modules/core/items';
 import { getBurstEffects } from '@/modules/core/bursts';
 
 export function squadToShorthand (squad = { units: [] }) {
@@ -71,7 +71,14 @@ export function getEffectsFromSquadUnitEntry (
     getExtraSkill = () => {}, // eslint-disable-line no-unused-vars
   } = {},
 ) {
-  let unitEffects = {};
+  const unitEffects = {
+    leaderSkill: [],
+    extraSkill: [],
+    [squadUnitActions.BB]: [],
+    [squadUnitActions.SBB]: [],
+    [squadUnitActions.UBB]: [],
+    sp: [],
+  };
   if (unitEntry.id && unitEntry.id !== squadFillerMapping.EMPTY && unitEntry.id !== squadFillerMapping.ANY) {
     const unit = getUnit(unitEntry.id) || {};
     if (unit['leader skill'] && Array.isArray(unit['leader skill'].effects)) {
@@ -97,12 +104,29 @@ export function getEffectsFromSquadUnitEntry (
     }
   }
 
-  // if (unitEntry.es) {
-  //   const extraSkill = getExtraSkill(unitEntry.es) || {};
-  // }
+  let extraSkillEffects = [];
+  if (unitEntry.es) {
+    const extraSkill = getExtraSkill(unitEntry.es) || {};
+    if (Array.isArray(extraSkill.effects)) {
+      extraSkillEffects = Array.from(extraSkill.effects);
+    }
+  }
+
+  let sphereEffects = {};
+  if (Array.isArray(unitEntry.spheres)) {
+    unitEntry.spheres.forEach(sphereId => {
+      const item = getItem(sphereId) || {};
+      const effectData = getItemEffects(item);
+      if (effectData.length > 0) {
+        sphereEffects[sphereId] = effectData;
+      }
+    });
+  }
 
   return {
     unit: unitEffects,
+    es: extraSkillEffects,
+    spheres: sphereEffects,
   };
 }
 

@@ -43,6 +43,7 @@ export function getItemEffects (item = {}) {
     return [];
   }
 
+  // consumables
   if (item.effect.effect && item.effect.effect.length > 0) {
     const { effect, ...extraParams } = item.effect;
     return [
@@ -50,7 +51,8 @@ export function getItemEffects (item = {}) {
       ...effect.slice(1),
     ];
   } else {
-    return item.effect;
+    // spheres
+    return Array.from(item.effect);
   }
 }
 

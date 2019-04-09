@@ -56,7 +56,10 @@
         <v-flex v-if="squad.units[selectedIndex]" xs12 class="py-1">
           <v-divider/>
         </v-flex>
-        <v-layout>
+        <v-layout column>
+          <v-flex>
+            <span v-text="unitSelectionText"/>
+          </v-flex>
           <unit-entry-editor
             v-if="squad.units[selectedIndex]"
             class="py-2"
@@ -67,9 +70,6 @@
             :getItem="getItem"
             :getExtraSkill="getExtraSkill"
             :selectedIndex="selectedIndex"/>
-          <span v-else>
-            Select a unit to edit its details
-          </span>
         </v-layout>
       </template>
       <loading-indicator v-else loadingMessage="Loading squad data"/>
@@ -144,6 +144,12 @@ export default {
         }
         return unit;
       });
+    },
+    unitSelectionText () {
+      return [
+        'Select a unit to edit its details.',
+        this.squad.units[this.selectedIndex] && 'Select the same unit to deselect it.',
+      ].filter(v => v).join(' ');
     },
   },
   data () {

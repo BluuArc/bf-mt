@@ -273,9 +273,9 @@ export default {
                   server: currentServer,
                   extractedFields: [],
                 });
-                this[`squad${name}`] = { ...newDb, ...retrievedEntries };
+                this[`squad${name}`] = Object.freeze({ ...newDb, ...retrievedEntries });
               } else {
-                this[`squad${name}`] = newDb;
+                this[`squad${name}`] = Object.freeze(newDb);
               }
             });
           }, Promise.resolve());
