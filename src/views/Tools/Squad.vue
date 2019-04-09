@@ -85,10 +85,25 @@
             class="mt-2"
             :tabs="tabConfig">
             <v-layout slot="squad-buffs">
-              Squad buffs go here
+              <dl>
+                <dt>Party Passives</dt>
+                <dd>table here</dd>
+
+                <dt>Party Buffs</dt>
+                <dd>table here</dd>
+
+                <dt>For the Enemy</dt>
+                <dd>table here</dd>
+              </dl>
             </v-layout>
             <v-layout slot="unit-buffs">
-              Unit level buffs go here
+              <dl>
+                <dt>Self Passives</dt>
+                <dd>table here</dd>
+
+                <dt>Self Buffs</dt>
+                <dd>table here</dd>
+              </dl>
             </v-layout>
             <v-layout slot="spark-statistics">
               Spark stats go here
@@ -144,6 +159,7 @@ import {
   squadToShorthand,
   getMultidexDatabaseIdsFromSquads,
   cloneSquad,
+  getEffectsFromSquadUnitEntry,
 } from '@/modules/core/squads';
 import ModuleChecker from '@/components/ModuleChecker';
 import LoadingIndicator from '@/components/LoadingIndicator';
@@ -300,9 +316,15 @@ export default {
         this.tempSquad = {};
       }
     },
-    tempSquad (newSquad) {
+    async tempSquad (newSquad) {
       if (newSquad && Array.isArray(newSquad.units)) {
-        this.updatePageDbForSquad(newSquad);
+        await this.updatePageDbForSquad(newSquad);
+        // eslint-disable-next-line no-console
+        console.warn(newSquad.units.map(u => getEffectsFromSquadUnitEntry(u, {
+          getUnit: this.getUnit,
+          getItem: this.getItem,
+          getExtraSkill: this.getExtraSkill,
+        })));
       }
     },
   },

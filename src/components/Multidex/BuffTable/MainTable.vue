@@ -39,7 +39,7 @@
         </tr>
 
         <!-- subsequent buff rows for given ID -->
-        <template v-if="!hiddenIndices.includes(i)">
+        <template v-if="!hiddenIndices.includes(i) && getSortedProps(effectEntry.effect).length > 1">
           <property-value-row
             v-for="(prop, j) in getSortedProps(effectEntry.effect).slice(1)"
             :key="`${effectEntry.id}-${i}-${j}`"
@@ -132,9 +132,6 @@ export default {
     },
     isProcBuffList (effectEntry, prop) {
       return effectEntry.type === 'passive' && +effectEntry.id === 66 && prop === 'triggered effect';
-    },
-    getEffectsHiddenText (numProps) {
-      return `${numProps} ${numProps !== 1 ? 'Effects' : 'Effect'} Hidden`;
     },
   },
   name: 'buff-table',

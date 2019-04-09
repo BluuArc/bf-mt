@@ -15,8 +15,6 @@
 </template>
 
 <script>
-// import BuffTable from './MainTable';
-
 export default {
   props: {
     value: {

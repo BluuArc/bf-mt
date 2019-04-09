@@ -121,7 +121,7 @@
 
 <script>
 import { squadUnitActions } from '@/modules/constants';
-import { spCodeToIndex } from '@/modules/core/units';
+import { spCodeToIndex, spCodeToEffects } from '@/modules/core/units';
 import { mapGetters } from 'vuex';
 import colors from 'vuetify/es5/util/colors';
 import UnitThumbnail from '@/components/Multidex/Units/UnitThumbnail';
@@ -217,9 +217,8 @@ export default {
       if (!feSkills || !enhancements) {
         return [];
       }
-      const filteredSkills = enhancements.split('')
-        .map(char => feSkills[spCodeToIndex(char)])
-        .filter(v => v)
+
+      const filteredSkills = spCodeToEffects(enhancements, feSkills)
         .map(s => +s.category);
       return Array.from(new Set(filteredSkills));
     },

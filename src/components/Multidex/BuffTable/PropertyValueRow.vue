@@ -6,10 +6,18 @@
       :value="propName"
       :numProps="numProps"/>
     <value-cell
-      v-if="!collapsed"
+      v-if="!collapsed && !hasMultipleValues"
       :class="valueCellClass"
       :value="propValue"
       :isProcBuffList="isProcBuffList"/>
+    <template v-else-if="!collapsed && hasMultipleValues">
+      <value-cell
+        v-for="(value, i) in propValue"
+        :key="i"
+        :class="valueCellClass"
+        :value="value"
+        :isProcBuffList="isProcBuffList"/>
+    </template>
   </tr>
 </template>
 
@@ -42,6 +50,10 @@ export default {
     numProps: {
       type: Number,
       default: 1,
+    },
+    hasMultipleValues: {
+      type: Boolean,
+      default: false,
     },
   },
   components: {

@@ -93,6 +93,16 @@ export function spIndexToCode (index) {
   return String.fromCharCode(index >= 26 ? (index - 26 + 'a'.charCodeAt(0)) : (index + 'A'.charCodeAt(0)));
 }
 
+export function spCodeToEffects (code, unitEnhancements) {
+  if (!code || !Array.isArray(unitEnhancements)) {
+    return [];
+  }
+
+  return code.split('')
+    .map(char => unitEnhancements[spCodeToIndex(char)])
+    .filter(v => v); // remove invalid entries
+}
+
 export function getSpEntryId (id = '') {
   let spId = id;
   if (typeof spId === 'object') {

@@ -3,9 +3,15 @@ import {
   squadFillerMapping,
   squadUnitActions,
 } from '@/modules/constants';
-import { spCodeToIndex, isValidUnit } from '@/modules/core/units';
+import {
+  spCodeToIndex,
+  isValidUnit,
+  spCodeToEffects,
+  getSpEntryEffects,
+} from '@/modules/core/units';
 import { isValidSkill } from '@/modules/core/extra-skills';
 import { isValidSphere } from '@/modules/core/items';
+import { getBurstEffects } from '@/modules/core/bursts';
 
 export function squadToShorthand (squad = { units: [] }) {
   return squad.units
@@ -54,6 +60,50 @@ export function generateFillerSquadUnitEntry ({
     bbOrder,
     action: isEmpty ? squadUnitActions.NONE : squadUnitActions.ATK,
   });
+}
+
+export function getEffectsFromSquadUnitEntry (
+  unitEntry = generateFillerSquadUnitEntry(),
+  {
+    // NOTE: these are synchronous getters
+    getUnit = () => {},
+    getItem = () => {}, // eslint-disable-line no-unused-vars
+    getExtraSkill = () => {}, // eslint-disable-line no-unused-vars
+  } = {},
+) {
+  let unitEffects = {};
+  if (unitEntry.id && unitEntry.id !== squadFillerMapping.EMPTY && unitEntry.id !== squadFillerMapping.ANY) {
+    const unit = getUnit(unitEntry.id) || {};
+    if (unit['leader skill'] && Array.isArray(unit['leader skill'].effects)) {
+      unitEffects.leaderSkill = Array.from(unit['leader skill'].effects);
+    }
+
+    if (unit['extra skill'] && Array.isArray(unit['extra skill'].effects)) {
+      unitEffects.extraSkill = Array.from(unit['extra skill'].effects);
+    }
+
+    [squadUnitActions.BB, squadUnitActions.SBB, squadUnitActions.UBB].forEach(bbType => {
+      let burstData = (unit[bbType] && Array.isArray(unit[bbType].levels))
+        ? getBurstEffects(unit[bbType])
+        : {};
+      if (Array.isArray(burstData.effects)) {
+        unitEffects[bbType] = Array.from(burstData.effects);
+      }
+    });
+
+    if (unitEntry.sp && Array.isArray(unit.feskills)) {
+      unitEffects.sp = Array.from(new Set(spCodeToEffects(unitEntry.sp, unit.feskills)))
+        .reduce((acc, val) => acc.concat(getSpEntryEffects(val)), []);
+    }
+  }
+
+  // if (unitEntry.es) {
+  //   const extraSkill = getExtraSkill(unitEntry.es) || {};
+  // }
+
+  return {
+    unit: unitEffects,
+  };
 }
 
 export function generateDefaultSquad (allEmpty = false, units) {
