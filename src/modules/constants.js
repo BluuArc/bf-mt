@@ -85,12 +85,20 @@ export const sphereTypeMapping = Object.freeze({
   14: 'Special',
 });
 
+export const squadUnitActions = Object.freeze({
+  ATK: 'atk',
+  BB: 'bb',
+  SBB: 'sbb',
+  UBB: 'ubb',
+  NONE: 'none',
+});
 export const targetAreaMapping = Object.freeze({
   aoe: 'AOE',
   single: 'ST',
   random: 'RT',
 });
-export const buffSearchOptions = Object.freeze(['ls', 'es', 'sp', 'bb', 'sbb', 'ubb']);
+export const burstTypes = Object.freeze([squadUnitActions.BB, squadUnitActions.SBB, squadUnitActions.UBB]);
+export const buffSearchOptions = Object.freeze(['ls', 'es', 'sp'].concat(burstTypes));
 export const unitTypes = Object.freeze(['lord', 'anima', 'breaker', 'guardian', 'oracle']);
 export const ailments = Object.freeze(['poison', 'weak', 'sick', 'injury', 'curse', 'paralysis']);
 export const dropTypes = Object.freeze(['hc', 'bc', 'item', 'zel', 'karma']);
@@ -135,13 +143,6 @@ export const unitPositionMapping = Object.freeze(['Top Left', 'Top Right', 'Midd
 export const squadFillerMapping = Object.freeze({
   EMPTY: '(Empty)',
   ANY: '(Any)',
-});
-export const squadUnitActions = Object.freeze({
-  ATK: 'atk',
-  BB: 'bb',
-  SBB: 'sbb',
-  UBB: 'ubb',
-  NONE: 'none',
 });
 
 export const effectTypes = Object.freeze({
@@ -413,3 +414,15 @@ export const customBuffIconKeys = Object.freeze([
 
 // mapping of icon keys to index on @/assets/buff-translation/battle/battle_bad_icon.png
 export const ailmentBuffIconKeys = ailments.map(ail => `DEBUFF_${ail.toUpperCase()}`);
+
+export const targetTypes = Object.freeze({
+  SELF: 'self',
+  PARTY: 'party',
+  ENEMY: 'enemy',
+});
+
+export const squadBuffTypes = Object.freeze({
+  PASSIVE: 'passive',
+  BUFF: 'buff',
+  BURST: 'burst',
+});

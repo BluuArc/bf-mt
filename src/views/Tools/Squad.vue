@@ -161,6 +161,8 @@ import {
   cloneSquad,
   getEffectsFromSquadUnitEntry,
 } from '@/modules/core/squads';
+import { burstTypes, targetTypes, squadBuffTypes, squadUnitActions } from '@/modules/constants';
+import { getEffectId } from '@/modules/EffectProcessor/processor-helper';
 import ModuleChecker from '@/components/ModuleChecker';
 import LoadingIndicator from '@/components/LoadingIndicator';
 import SquadListCard from '@/components/Tools/Squads/SquadListCard';
@@ -303,11 +305,147 @@ export default {
     onNewUnits (units) {
       this.tempSquad = { ...this.tempSquad, units };
     },
+    /* eslint-disable */
+    getEffectMappingForSquadUnitEntry (entry, target, type) {
+      const entryEffects = getEffectsFromSquadUnitEntry(entry, this);
+      const extractBuffsFromTriggeredEffect = (effect = {}, sourcePath) => Array.isArray(effect['triggered effect'])
+        ? Array.from(effect['triggered effect']).map(e => ({ ...e, sourcePath }))
+        : [];
+      const extractBuffsFromEffects = (effects = []) => effects.map(e => extractBuffsFromTriggeredEffect(e, e.sourcePath))
+        .filter(e => e.length > 0)
+        .reduce((acc, arr) => acc.concat(arr), []);
+
+      let aggregatedEffects = [];
+      if (target === targetTypes.PARTY) {
+        const isLsActive = (this.squad.units.indexOf(entry) === this.squad.lead || this.squad.units.indexOf(entry) === this.squad.friend);
+        const filteredEffects = {
+          unitEs: [],
+          unitSp: [],
+          unitLs: [],
+          elgif: [],
+          spheres: [],
+          unitNonUbb: [],
+          unitUbb: [],
+        };
+        if (type === squadBuffTypes.PASSIVE) {
+          // no spheres as sphere passives only effect current unit
+          if (isLsActive) {
+            filteredEffects.unitLs = entryEffects.unit.ls;
+            filteredEffects.unitSp = entryEffects.unit.sp.filter(e => e.sp_type === 'add to passive'); // add to LS
+          }
+          filteredEffects.unitEs = entryEffects.unit.es.filter(e => e['passive target'] === targetTypes.PARTY);
+          filteredEffects.elgif = entryEffects.es.filter(e => e['passive target'] === targetTypes.PARTY);
+        } else if (type === squadBuffTypes.BUFF) {
+          if (isLsActive) {
+            filteredEffects.unitLs = extractBuffsFromEffects(entryEffects.unit.ls);
+          }
+          filteredEffects.unitEs = extractBuffsFromEffects(entryEffects.unit.es)
+            .filter(e => e['target type'] === targetTypes.PARTY);
+          burstTypes.forEach(burstType => {
+            const burstEffects = entryEffects.unit[burstType].filter(e => e['target type'] === targetTypes.PARTY);
+            if (burstType !== squadUnitActions.UBB) {
+              filteredEffects.unitNonUbb = filteredEffects.unitNonUbb.concat(burstEffects);
+            } else {
+              filteredEffects.unitUbb = filteredEffects.unitUbb.concat(burstEffects);
+            }
+          });
+
+          // assumption: SP entries are in order so upgrades to previous enhancements are closer to the end of the array
+          entryEffects.unit.sp.forEach(spEffect => {
+            const removeOldSpOptions = (currentArr = [], spToRemove = []) => currentArr.filter(e => !spToRemove.includes(e));
+            if (spEffect['triggered effect']) {
+              const buffs = extractBuffsFromTriggeredEffect(spEffect, spEffect.sourcePath)
+                .filter(triggeredEffect => triggeredEffect['target type'] === targetTypes.PARTY)
+                .map(e => {
+                  const carriedKeys = burstTypes.map(t => `trigger on ${t}`).concat(['sp_type']);
+                  const carriedProperties = carriedKeys.reduce((acc, key) => {
+                    if (spEffect[key]) {
+                      acc[key] = spEffect[key];
+                    }
+                    return acc;
+                  }, {})
+                  return ({ ...e, ...carriedProperties });
+                });
+
+              let existingSpBuffs;
+              if (spEffect['trigger on ubb'] && buffs.length > 0) {
+                existingSpBuffs = filteredEffects.unitUbb.filter(e => e['proc id'] === spEffect['proc id'] || e['unknown proc id'] === spEffect['unknown proc id'] && e.sp_type === spEffect.sp_type);
+                if (existingSpBuffs) { // remove old one, as current one will replace it
+                  filteredEffects.unitUbb = removeOldSpOptions(filteredEffects.unitUbb, existingSpBuffs);
+                }
+                filteredEffects.unitUbb = filteredEffects.unitUbb.concat(buffs);
+              }
+              if ((spEffect['trigger on bb'] || spEffect['trigger on sbb']) && buffs.length > 0) {
+                existingSpBuffs = filteredEffects.unitNonUbb.filter(e => e['proc id'] === spEffect['proc id'] || e['unknown proc id'] === spEffect['unknown proc id'] && e.sp_type === spEffect.sp_type);
+                if (existingSpBuffs) { // remove old one, as current one will replace it
+                  filteredEffects.unitNonUbb = removeOldSpOptions(filteredEffects.unitNonUbb, existingSpBuffs);
+                }
+                filteredEffects.unitNonUbb = filteredEffects.unitNonUbb.concat(buffs);
+              }
+            } else if (spEffect.sp_type === 'add to bb' || spEffect.sp_type === 'add to sbb') {
+              // only add burst enhancements if they are already included
+              const existingBuff = filteredEffects.unitNonUbb.find(e => e['proc id'] === spEffect['proc id'] || e['unknown proc id'] === spEffect['unknown proc id']);
+              if (existingBuff) {
+                const existingSpBuffs = filteredEffects.unitNonUbb.filter(e => e['proc id'] === spEffect['proc id'] || e['unknown proc id'] === spEffect['unknown proc id'] && e.sp_type === spEffect.sp_type);
+                if (existingSpBuffs) { // remove old one, as current one will replace it
+                  filteredEffects.unitNonUbb = removeOldSpOptions(filteredEffects.unitNonUbb, existingSpBuffs);
+                }
+                filteredEffects.unitNonUbb.push(spEffect);
+              }
+            } else if (spEffect.sp_type === 'add to ubb') {
+              // only add burst enhancements if they are already included
+              const existingBuff = filteredEffects.unitUbb.find(e => e['proc id'] === spEffect['proc id'] || e['unknown proc id'] === spEffect['unknown proc id']);
+              if (existingBuff) {
+                const existingSpBuffs = filteredEffects.unitUbb.filter(e => e['proc id'] === spEffect['proc id'] || e['unknown proc id'] === spEffect['unknown proc id'] && e.sp_type === spEffect.sp_type);
+                if (existingSpBuffs) { // remove old one, as current one will replace it
+                  filteredEffects.unitUbb = removeOldSpOptions(filteredEffects.unitUbb, existingSpBuffs);
+                }
+                filteredEffects.unitUbb.push(spEffect);
+              }
+            }
+          });
+          Object.values(entryEffects.spheres).forEach(sphere => {
+            const buffs = extractBuffsFromEffects(sphere)
+              .filter(triggeredEffect => triggeredEffect['target type'] === targetTypes.PARTY);
+            if (buffs.length > 0) {
+              filteredEffects.spheres = filteredEffects.spheres.concat(buffs);
+            }
+          });
+          filteredEffects.elgif = extractBuffsFromEffects(entryEffects.es).filter(e => e['target type'] === targetTypes.PARTY);
+          console.warn('buff branch', filteredEffects);
+        }
+        // TODO: burst effects
+
+        aggregatedEffects = Object.values(filteredEffects).reduce((acc, val) => acc.concat(val), [])
+          .sort((a, b) => {
+            return +getEffectId(a) - +getEffectId(b) ||
+            (!a.sp_type && b.sp_type ? -1 : 1) // sp types should go after original values
+          });
+      } else if (target === targetTypes.SELF) {
+        if (Type === squadBuffTypes.PASSIVE) {
+
+        }
+        // TODO: burst effects
+      } else if (target === targetTypes.ENEMY) {
+        aggregatedEffects = burstTypes.reduce((acc, type) => {
+          const allEffects = entryEffects.unit[type];
+          const enemyEffects = allEffects.filter(e => e['target type'] === targetTypes.ENEMY);
+          return acc.concat(enemyEffects);
+        }, []);
+      }
+
+      return aggregatedEffects;
+    },
+    /* eslint-enable */
   },
   watch: {
-    squad (newVal) {
+    async squad (newSquad) {
       this.setDocumentTitle();
-      this.updatePageDbForSquad(newVal);
+      await this.updatePageDbForSquad(newSquad);
+      /* eslint-disable no-console */
+      console.warn(newSquad.units.map(u => getEffectsFromSquadUnitEntry(u, this)));
+      console.warn(newSquad.units.map(u => this.getEffectMappingForSquadUnitEntry(u, targetTypes.PARTY, squadBuffTypes.BUFF)));
+      /* eslint-enable no-console */
     },
     editMode (isEditMode) {
       if (isEditMode) {
@@ -319,12 +457,6 @@ export default {
     async tempSquad (newSquad) {
       if (newSquad && Array.isArray(newSquad.units)) {
         await this.updatePageDbForSquad(newSquad);
-        // eslint-disable-next-line no-console
-        console.warn(newSquad.units.map(u => getEffectsFromSquadUnitEntry(u, {
-          getUnit: this.getUnit,
-          getItem: this.getItem,
-          getExtraSkill: this.getExtraSkill,
-        })));
       }
     },
   },

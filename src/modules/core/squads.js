@@ -2,6 +2,7 @@ import {
   unitPositionMapping,
   squadFillerMapping,
   squadUnitActions,
+  burstTypes,
 } from '@/modules/constants';
 import {
   spCodeToIndex,
@@ -72,8 +73,8 @@ export function getEffectsFromSquadUnitEntry (
   } = {},
 ) {
   const unitEffects = {
-    leaderSkill: [],
-    extraSkill: [],
+    ls: [],
+    es: [],
     [squadUnitActions.BB]: [],
     [squadUnitActions.SBB]: [],
     [squadUnitActions.UBB]: [],
@@ -82,25 +83,25 @@ export function getEffectsFromSquadUnitEntry (
   if (unitEntry.id && unitEntry.id !== squadFillerMapping.EMPTY && unitEntry.id !== squadFillerMapping.ANY) {
     const unit = getUnit(unitEntry.id) || {};
     if (unit['leader skill'] && Array.isArray(unit['leader skill'].effects)) {
-      unitEffects.leaderSkill = Array.from(unit['leader skill'].effects);
+      unitEffects.ls = Array.from(unit['leader skill'].effects).map(e => ({ ...e, sourcePath: 'unit.ls' }));
     }
 
     if (unit['extra skill'] && Array.isArray(unit['extra skill'].effects)) {
-      unitEffects.extraSkill = Array.from(unit['extra skill'].effects);
+      unitEffects.es = Array.from(unit['extra skill'].effects).map(e => ({ ...e, sourcePath: 'unit.es' }));
     }
 
-    [squadUnitActions.BB, squadUnitActions.SBB, squadUnitActions.UBB].forEach(bbType => {
+    burstTypes.forEach(bbType => {
       let burstData = (unit[bbType] && Array.isArray(unit[bbType].levels))
         ? getBurstEffects(unit[bbType])
         : {};
       if (Array.isArray(burstData.effects)) {
-        unitEffects[bbType] = Array.from(burstData.effects);
+        unitEffects[bbType] = Array.from(burstData.effects).map(e => ({ ...e, sourcePath: `unit.${bbType}` }));
       }
     });
 
     if (unitEntry.sp && Array.isArray(unit.feskills)) {
       unitEffects.sp = Array.from(new Set(spCodeToEffects(unitEntry.sp, unit.feskills)))
-        .reduce((acc, val) => acc.concat(getSpEntryEffects(val)), []);
+        .reduce((acc, val) => acc.concat(getSpEntryEffects(val).map(e => ({ ...e, sourcePath: 'unit.sp' }))), []);
     }
   }
 
@@ -108,7 +109,7 @@ export function getEffectsFromSquadUnitEntry (
   if (unitEntry.es) {
     const extraSkill = getExtraSkill(unitEntry.es) || {};
     if (Array.isArray(extraSkill.effects)) {
-      extraSkillEffects = Array.from(extraSkill.effects);
+      extraSkillEffects = Array.from(extraSkill.effects).map(e => ({ ...e, sourcePath: 'es' }));
     }
   }
 
@@ -118,7 +119,7 @@ export function getEffectsFromSquadUnitEntry (
       const item = getItem(sphereId) || {};
       const effectData = getItemEffects(item);
       if (effectData.length > 0) {
-        sphereEffects[sphereId] = effectData;
+        sphereEffects[sphereId] = effectData.map(e => ({ ...e, sourcePath: `sphere:${sphereId}` }));
       }
     });
   }

@@ -228,7 +228,7 @@
 
 <script>
 import { mapActions, mapState } from 'vuex';
-import { unitPositionMapping, multidexModuleInfo } from '@/modules/constants';
+import { multidexModuleInfo } from '@/modules/constants';
 import { ensureContentPadding, delay } from '@/modules/utils';
 import { squadRequiredModules } from '@/router/tool-routes';
 import { Logger } from '@/modules/Logger';
@@ -375,23 +375,6 @@ export default {
         this.isInternallyLoading = false;
       }
     },
-    getSampleSquad: () => ({
-      id: Math.random().toString().split('.')[1],
-      name: `Example Squad ${String.fromCharCode('A'.charCodeAt(0) + (Math.floor(Math.random() * 26)))}`,
-      lead: 0,
-      friend: 3,
-      units: (new Array(6))
-        .fill(0)
-        .map((_, i) => ({
-          position: unitPositionMapping[i],
-          id: `${i+1}001${Math.floor(Math.random() * 7) + 1}`,
-          es: ((Math.random() > 0.5) && '1013600') || undefined,
-          spheres: [(Math.random() > 0.5) && '47410', (Math.random() > 0.5) && '61070'].filter(v => v),
-          sp: (((Math.random() > 0.5)) && 'ACDE') || undefined,
-          bbOrder: i + 1,
-          action: ['bb', 'sbb', 'ubb'][Math.floor(Math.random() * 3)],
-        })),
-    }),
     getUnit (id) {
       return this.units[id] || {};
     },
