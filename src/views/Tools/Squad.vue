@@ -314,6 +314,7 @@ export default {
       const extractBuffsFromEffects = (effects = []) => effects.map(e => extractBuffsFromTriggeredEffect(e, e.sourcePath))
         .filter(e => e.length > 0)
         .reduce((acc, arr) => acc.concat(arr), []);
+      const NON_UBB_ACTIONS = Object.freeze([squadUnitActions.BB, squadUnitActions.SBB]);
 
       let aggregatedEffects = [];
       if (target === targetTypes.PARTY) {
@@ -336,11 +337,34 @@ export default {
           filteredEffects.unitEs = entryEffects.unit.es.filter(e => e['passive target'] === targetTypes.PARTY);
           filteredEffects.elgif = entryEffects.es.filter(e => e['passive target'] === targetTypes.PARTY);
         } else if (type === squadBuffTypes.BUFF) {
+          const processExtraSkill = (esEffects = []) => {
+            esEffects.forEach(esEffect => {
+              const buffs = extractBuffsFromTriggeredEffect(esEffect, esEffect.sourcePath)
+                .filter(e => e['target type'] === targetTypes.PARTY)
+                .map(e => ({ ...e, esConditions: esEffect.conditions }));
+              if (esEffect['trigger on ubb'] && buffs.length > 0) {
+                filteredEffects.unitUbb = filteredEffects.unitUbb.concat(buffs.map(b => ({
+                  ...b,
+                  ['trigger on ubb']: esEffect['trigger on ubb'],
+                })));
+              }
+              if ((esEffect['trigger on bb'] || esEffect['trigger on sbb']) && buffs.length > 0) {
+                NON_UBB_ACTIONS
+                  .filter(t => esEffect[`trigger on ${t}`])
+                  .forEach(t => {
+                    filteredEffects.unitNonUbb = filteredEffects.unitNonUbb.concat(buffs.map(b => ({
+                      ...b,
+                      [`trigger on ${t}`]: esEffect[`trigger on ${t}`],
+                    })));
+                  });
+              }
+            });
+          };
           if (isLsActive) {
             filteredEffects.unitLs = extractBuffsFromEffects(entryEffects.unit.ls);
           }
-          filteredEffects.unitEs = extractBuffsFromEffects(entryEffects.unit.es)
-            .filter(e => e['target type'] === targetTypes.PARTY);
+          processExtraSkill(entryEffects.unit.es);
+
           burstTypes.forEach(burstType => {
             const burstEffects = entryEffects.unit[burstType].filter(e => e['target type'] === targetTypes.PARTY);
             if (burstType !== squadUnitActions.UBB) {
@@ -373,14 +397,24 @@ export default {
                 if (existingSpBuffs) { // remove old one, as current one will replace it
                   filteredEffects.unitUbb = removeOldSpOptions(filteredEffects.unitUbb, existingSpBuffs);
                 }
-                filteredEffects.unitUbb = filteredEffects.unitUbb.concat(buffs);
+                filteredEffects.unitUbb = filteredEffects.unitUbb.concat(buffs.map(b => ({
+                  ...b,
+                  ['trigger on ubb']: spEffect['trigger on ubb'],
+                })));
               }
               if ((spEffect['trigger on bb'] || spEffect['trigger on sbb']) && buffs.length > 0) {
                 existingSpBuffs = filteredEffects.unitNonUbb.filter(e => e['proc id'] === spEffect['proc id'] || e['unknown proc id'] === spEffect['unknown proc id'] && e.sp_type === spEffect.sp_type);
                 if (existingSpBuffs) { // remove old one, as current one will replace it
                   filteredEffects.unitNonUbb = removeOldSpOptions(filteredEffects.unitNonUbb, existingSpBuffs);
                 }
-                filteredEffects.unitNonUbb = filteredEffects.unitNonUbb.concat(buffs);
+                NON_UBB_ACTIONS
+                  .filter(t => spEffect[`trigger on ${t}`])
+                  .forEach(t => {
+                    filteredEffects.unitNonUbb = filteredEffects.unitNonUbb.concat(buffs.map(b => ({
+                      ...b,
+                      [`trigger on ${t}`]: spEffect[`trigger on ${t}`],
+                    })));
+                  });
               }
             } else if (spEffect.sp_type === 'add to bb' || spEffect.sp_type === 'add to sbb') {
               // only add burst enhancements if they are already included
@@ -411,12 +445,13 @@ export default {
               filteredEffects.spheres = filteredEffects.spheres.concat(buffs);
             }
           });
-          filteredEffects.elgif = extractBuffsFromEffects(entryEffects.es).filter(e => e['target type'] === targetTypes.PARTY);
-          console.warn('buff branch', filteredEffects);
+          processExtraSkill(entryEffects.es);
         }
         // TODO: burst effects
 
-        aggregatedEffects = Object.values(filteredEffects).reduce((acc, val) => acc.concat(val), [])
+        aggregatedEffects = Object.values(filteredEffects)
+          .filter(v => v.length > 0)
+          .reduce((acc, val) => acc.concat(val), [])
           .sort((a, b) => {
             return +getEffectId(a) - +getEffectId(b) ||
             (!a.sp_type && b.sp_type ? -1 : 1) // sp types should go after original values

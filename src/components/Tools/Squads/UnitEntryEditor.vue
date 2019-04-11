@@ -6,13 +6,16 @@
       lazy>
       <unit-selector
         v-if="activeDialog === 'units'"
-        @input="$d => setUnit($d.data)"/>
+        @input="$d => setUnit($d.data)"
+        @cancel="activeDialog = ''"/>
       <es-selector
         v-else-if="activeDialog === 'extraSkills'"
-        @input="$d => setExtraSkill($d.id)"/>
+        @input="$d => setExtraSkill($d.id)"
+        @cancel="activeDialog = ''"/>
       <sphere-selector
         v-else-if="activeDialog === 'spheres'"
-        @input="$d => onSelectSphere($d.id)"/>
+        @input="$d => onSelectSphere($d.id)"
+        @cancel="activeDialog = ''"/>
     </v-dialog>
     <v-layout row style="width: 100%;" wrap>
       <v-flex xs12>

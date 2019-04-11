@@ -15,7 +15,11 @@
               :hint="searchHint"/>
           </v-flex>
           <v-flex style="flex-grow: 0;">
-            <v-btn icon flat @click="sendQuery" class="mr-0">
+            <v-btn
+              icon flat
+              :outline="hasDirtyQuery"
+              @click="sendQuery"
+              class="mr-0">
               <v-icon>search</v-icon>
             </v-btn>
           </v-flex>
@@ -36,6 +40,11 @@
             :length="numPages"/>
         </v-layout>
       </template>
+      <v-layout row style="justify-content: flex-end;">
+        <v-flex style="flex: none;">
+          <v-btn flat @click="$emit('cancel')">Cancel</v-btn>
+        </v-flex>
+      </v-layout>
     </v-container>
   </v-card>
 </template>
@@ -73,10 +82,13 @@ export default {
       const startIndex = Math.max((this.currentPage - 1) * this.entriesPerPage, 0);
       return this.allEntryIds.slice(startIndex, startIndex + this.entriesPerPage);
     },
+    hasDirtyQuery () {
+      return this.query !== this.value;
+    },
     searchHint () {
       return [
         `${this.allEntryIds.length} results`,
-        this.query !== this.value && '*',
+        this.hasDirtyQuery && '*',
       ].filter(v => v).join('');
     },
   },

@@ -3,6 +3,7 @@
     :value="nameFilter"
     :hasSelection="hasSelection"
     @input="$i => nameFilter = ($i || '').toLowerCase()"
+    @cancel="$emit('cancel')"
     :allEntryIds="allIds">
     <v-layout row wrap slot="entries" slot-scope="{ entries }">
       <v-flex

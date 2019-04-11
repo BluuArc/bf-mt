@@ -132,6 +132,9 @@ export default {
       cacheChangeToken: Date.now(),
     };
   },
+  mounted () {
+    this.computeActiveSum();
+  },
   methods: {
     getSpEffects (spEntry, useCache = false) {
       if (useCache) {
