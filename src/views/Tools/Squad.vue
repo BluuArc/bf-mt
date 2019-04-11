@@ -457,10 +457,39 @@ export default {
             (!a.sp_type && b.sp_type ? -1 : 1) // sp types should go after original values
           });
       } else if (target === targetTypes.SELF) {
-        if (Type === squadBuffTypes.PASSIVE) {
+        const filteredEffects = {
+          unitEs: [],
+          unitSp: [],
+          elgif: [],
+          spheres: [],
+          unitNonUbb: [],
+          unitUbb: [],
+        };
+        if (type === squadBuffTypes.PASSIVE) {
+          // passive effects have no buffs; buffs are extracted for squadBuffTypes.BUFF
+          filteredEffects.unitEs = entryEffects.unit.es.filter(e => e['passive target'] === targetTypes.SELF && extractBuffsFromTriggeredEffect(e).length === 0);
+          filteredEffects.elgif = entryEffects.es.filter(e => e['passive target'] === targetTypes.SELF && extractBuffsFromTriggeredEffect(e).length === 0);
+          Object.values(entryEffects.spheres).forEach(sphere => {
+            const buffs = sphere.filter(e => extractBuffsFromTriggeredEffect(e).length === 0);
+            if (buffs.length > 0) {
+              filteredEffects.spheres = filteredEffects.spheres.concat(buffs);
+            }
+          });
+          filteredEffects.unitSp = entryEffects.unit.sp
+            .filter(e => extractBuffsFromTriggeredEffect(e).length === 0 && !e.sp_type.startsWith('add to'));
+        } else if (type === squadBuffTypes.BUFF) {
 
         }
         // TODO: burst effects
+
+        console.warn(filteredEffects);
+        aggregatedEffects = Object.values(filteredEffects)
+          .filter(v => v.length > 0)
+          .reduce((acc, val) => acc.concat(val), [])
+          .sort((a, b) => {
+            return +getEffectId(a) - +getEffectId(b) ||
+            (!a.sp_type && b.sp_type ? -1 : 1) // sp types should go after original values
+          });
       } else if (target === targetTypes.ENEMY) {
         aggregatedEffects = burstTypes.reduce((acc, type) => {
           const allEffects = entryEffects.unit[type];
@@ -479,7 +508,7 @@ export default {
       await this.updatePageDbForSquad(newSquad);
       /* eslint-disable no-console */
       console.warn(newSquad.units.map(u => getEffectsFromSquadUnitEntry(u, this)));
-      console.warn(newSquad.units.map(u => this.getEffectMappingForSquadUnitEntry(u, targetTypes.PARTY, squadBuffTypes.BUFF)));
+      console.warn(newSquad.units.map(u => this.getEffectMappingForSquadUnitEntry(u, targetTypes.SELF, squadBuffTypes.PASSIVE)));
       /* eslint-enable no-console */
     },
     editMode (isEditMode) {
