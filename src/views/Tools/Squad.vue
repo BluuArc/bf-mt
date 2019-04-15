@@ -162,7 +162,7 @@ import {
   getEffectsFromSquadUnitEntry,
 } from '@/modules/core/squads';
 import { burstTypes, targetTypes, squadBuffTypes, squadUnitActions } from '@/modules/constants';
-import { getEffectId } from '@/modules/EffectProcessor/processor-helper';
+import { getEffectId, getEffectType } from '@/modules/EffectProcessor/processor-helper';
 import ModuleChecker from '@/components/ModuleChecker';
 import LoadingIndicator from '@/components/LoadingIndicator';
 import SquadListCard from '@/components/Tools/Squads/SquadListCard';
@@ -314,11 +314,12 @@ export default {
       const extractBuffsFromEffects = (effects = []) => effects.map(e => extractBuffsFromTriggeredEffect(e, e.sourcePath))
         .filter(e => e.length > 0)
         .reduce((acc, arr) => acc.concat(arr), []);
+      const removeOldSpOptions = (currentArr = [], spToRemove = []) => currentArr.filter(e => !spToRemove.includes(e));
       const NON_UBB_ACTIONS = Object.freeze([squadUnitActions.BB, squadUnitActions.SBB]);
+      const isLsActive = (this.squad.units.indexOf(entry) === this.squad.lead || this.squad.units.indexOf(entry) === this.squad.friend);
 
       let aggregatedEffects = [];
       if (target === targetTypes.PARTY) {
-        const isLsActive = (this.squad.units.indexOf(entry) === this.squad.lead || this.squad.units.indexOf(entry) === this.squad.friend);
         const filteredEffects = {
           unitEs: [],
           unitSp: [],
@@ -361,7 +362,8 @@ export default {
             });
           };
           if (isLsActive) {
-            filteredEffects.unitLs = extractBuffsFromEffects(entryEffects.unit.ls);
+            filteredEffects.unitLs = extractBuffsFromEffects(entryEffects.unit.ls)
+              .filter(e => e['target type'] === targetTypes.PARTY);
           }
           processExtraSkill(entryEffects.unit.es);
 
@@ -376,7 +378,8 @@ export default {
 
           // assumption: SP entries are in order so upgrades to previous enhancements are closer to the end of the array
           entryEffects.unit.sp.forEach(spEffect => {
-            const removeOldSpOptions = (currentArr = [], spToRemove = []) => currentArr.filter(e => !spToRemove.includes(e));
+            const spEffectType = getEffectType(spEffect);
+            const spEffectId = getEffectId(spEffect);
             if (spEffect['triggered effect']) {
               const buffs = extractBuffsFromTriggeredEffect(spEffect, spEffect.sourcePath)
                 .filter(triggeredEffect => triggeredEffect['target type'] === targetTypes.PARTY)
@@ -393,7 +396,7 @@ export default {
 
               let existingSpBuffs;
               if (spEffect['trigger on ubb'] && buffs.length > 0) {
-                existingSpBuffs = filteredEffects.unitUbb.filter(e => e['proc id'] === spEffect['proc id'] || e['unknown proc id'] === spEffect['unknown proc id'] && e.sp_type === spEffect.sp_type);
+                existingSpBuffs = filteredEffects.unitUbb.filter(e => getEffectType(e) === spEffectType && getEffectId(e) === spEffectId && e.sp_type === spEffect.sp_type);
                 if (existingSpBuffs) { // remove old one, as current one will replace it
                   filteredEffects.unitUbb = removeOldSpOptions(filteredEffects.unitUbb, existingSpBuffs);
                 }
@@ -403,7 +406,7 @@ export default {
                 })));
               }
               if ((spEffect['trigger on bb'] || spEffect['trigger on sbb']) && buffs.length > 0) {
-                existingSpBuffs = filteredEffects.unitNonUbb.filter(e => e['proc id'] === spEffect['proc id'] || e['unknown proc id'] === spEffect['unknown proc id'] && e.sp_type === spEffect.sp_type);
+                existingSpBuffs = filteredEffects.unitNonUbb.filter(e => getEffectType(e) === spEffectType && getEffectId(e) === spEffectId && e.sp_type === spEffect.sp_type);
                 if (existingSpBuffs) { // remove old one, as current one will replace it
                   filteredEffects.unitNonUbb = removeOldSpOptions(filteredEffects.unitNonUbb, existingSpBuffs);
                 }
@@ -418,9 +421,9 @@ export default {
               }
             } else if (spEffect.sp_type === 'add to bb' || spEffect.sp_type === 'add to sbb') {
               // only add burst enhancements if they are already included
-              const existingBuff = filteredEffects.unitNonUbb.find(e => e['proc id'] === spEffect['proc id'] || e['unknown proc id'] === spEffect['unknown proc id']);
+              const existingBuff = filteredEffects.unitNonUbb.find(e => getEffectType(e) === spEffectType && getEffectId(e) === spEffectId);
               if (existingBuff) {
-                const existingSpBuffs = filteredEffects.unitNonUbb.filter(e => e['proc id'] === spEffect['proc id'] || e['unknown proc id'] === spEffect['unknown proc id'] && e.sp_type === spEffect.sp_type);
+                const existingSpBuffs = filteredEffects.unitNonUbb.filter(e => getEffectType(e) === spEffectType && getEffectId(e) === spEffectId && e.sp_type === spEffect.sp_type);
                 if (existingSpBuffs) { // remove old one, as current one will replace it
                   filteredEffects.unitNonUbb = removeOldSpOptions(filteredEffects.unitNonUbb, existingSpBuffs);
                 }
@@ -428,9 +431,9 @@ export default {
               }
             } else if (spEffect.sp_type === 'add to ubb') {
               // only add burst enhancements if they are already included
-              const existingBuff = filteredEffects.unitUbb.find(e => e['proc id'] === spEffect['proc id'] || e['unknown proc id'] === spEffect['unknown proc id']);
+              const existingBuff = filteredEffects.unitUbb.find(e => getEffectType(e) === spEffectType && getEffectId(e) === spEffectId);
               if (existingBuff) {
-                const existingSpBuffs = filteredEffects.unitUbb.filter(e => e['proc id'] === spEffect['proc id'] || e['unknown proc id'] === spEffect['unknown proc id'] && e.sp_type === spEffect.sp_type);
+                const existingSpBuffs = filteredEffects.unitUbb.filter(e => getEffectType(e) === spEffectType && getEffectId(e) === spEffectId && e.sp_type === spEffect.sp_type);
                 if (existingSpBuffs) { // remove old one, as current one will replace it
                   filteredEffects.unitUbb = removeOldSpOptions(filteredEffects.unitUbb, existingSpBuffs);
                 }
@@ -475,10 +478,126 @@ export default {
               filteredEffects.spheres = filteredEffects.spheres.concat(buffs);
             }
           });
-          filteredEffects.unitSp = entryEffects.unit.sp
-            .filter(e => extractBuffsFromTriggeredEffect(e).length === 0 && !e.sp_type.startsWith('add to'));
+          entryEffects.unit.sp.filter(e => extractBuffsFromTriggeredEffect(e).length === 0 && !e.sp_type.startsWith('add to'))
+            .forEach(spEffect => {
+              const existingSpBuffs = filteredEffects.unitSp.filter(e => getEffectType(e) === getEffectType(spEffect) && getEffectId(e) === getEffectId(spEffect) && e.sp_type === spEffect.sp_type);
+              if (existingSpBuffs) { // remove old one, as current one will replace it
+                filteredEffects.unitSp = removeOldSpOptions(filteredEffects.unitSp, existingSpBuffs);
+              }
+              filteredEffects.unitSp.push(spEffect);
+            });
         } else if (type === squadBuffTypes.BUFF) {
+          const processExtraSkill = (esEffects = []) => {
+            esEffects.forEach(esEffect => {
+              const buffs = extractBuffsFromTriggeredEffect(esEffect, esEffect.sourcePath)
+                .filter(e => e['target type'] === targetTypes.SELF)
+                .map(e => ({ ...e, esConditions: esEffect.conditions }));
+              if (esEffect['trigger on ubb'] && buffs.length > 0) {
+                filteredEffects.unitUbb = filteredEffects.unitUbb.concat(buffs.map(b => ({
+                  ...b,
+                  ['trigger on ubb']: esEffect['trigger on ubb'],
+                })));
+              }
+              if ((esEffect['trigger on bb'] || esEffect['trigger on sbb']) && buffs.length > 0) {
+                NON_UBB_ACTIONS
+                  .filter(t => esEffect[`trigger on ${t}`])
+                  .forEach(t => {
+                    filteredEffects.unitNonUbb = filteredEffects.unitNonUbb.concat(buffs.map(b => ({
+                      ...b,
+                      [`trigger on ${t}`]: esEffect[`trigger on ${t}`],
+                    })));
+                  });
+              }
+            });
+          };
+          if (isLsActive) {
+            filteredEffects.unitLs = extractBuffsFromEffects(entryEffects.unit.ls)
+              .filter(e => e['target type'] === targetTypes.SELF);
+          }
+          processExtraSkill(entryEffects.unit.es);
 
+          burstTypes.forEach(burstType => {
+            const burstEffects = entryEffects.unit[burstType].filter(e => e['target type'] === targetTypes.SELF);
+            if (burstType !== squadUnitActions.UBB) {
+              filteredEffects.unitNonUbb = filteredEffects.unitNonUbb.concat(burstEffects);
+            } else {
+              filteredEffects.unitUbb = filteredEffects.unitUbb.concat(burstEffects);
+            }
+          });
+
+          // assumption: SP entries are in order so upgrades to previous enhancements are closer to the end of the array
+          entryEffects.unit.sp.forEach(spEffect => {
+            const spEffectType = getEffectType(spEffect);
+            const spEffectId = getEffectId(spEffect);
+            if (spEffect['triggered effect']) {
+              const buffs = extractBuffsFromTriggeredEffect(spEffect, spEffect.sourcePath)
+                .filter(triggeredEffect => triggeredEffect['target type'] === targetTypes.SELF)
+                .map(e => {
+                  const carriedKeys = burstTypes.map(t => `trigger on ${t}`).concat(['sp_type']);
+                  const carriedProperties = carriedKeys.reduce((acc, key) => {
+                    if (spEffect[key]) {
+                      acc[key] = spEffect[key];
+                    }
+                    return acc;
+                  }, {})
+                  return ({ ...e, ...carriedProperties });
+                });
+
+              let existingSpBuffs;
+              if (spEffect['trigger on ubb'] && buffs.length > 0) {
+                existingSpBuffs = filteredEffects.unitUbb.filter(e => getEffectType(e) === spEffectType && getEffectId(e) === spEffectId && e.sp_type === spEffect.sp_type);
+                if (existingSpBuffs) { // remove old one, as current one will replace it
+                  filteredEffects.unitUbb = removeOldSpOptions(filteredEffects.unitUbb, existingSpBuffs);
+                }
+                filteredEffects.unitUbb = filteredEffects.unitUbb.concat(buffs.map(b => ({
+                  ...b,
+                  ['trigger on ubb']: spEffect['trigger on ubb'],
+                })));
+              }
+              if ((spEffect['trigger on bb'] || spEffect['trigger on sbb']) && buffs.length > 0) {
+                existingSpBuffs = filteredEffects.unitNonUbb.filter(e => getEffectType(e) === spEffectType && getEffectId(e) === spEffectId && e.sp_type === spEffect.sp_type);
+                if (existingSpBuffs) { // remove old one, as current one will replace it
+                  filteredEffects.unitNonUbb = removeOldSpOptions(filteredEffects.unitNonUbb, existingSpBuffs);
+                }
+                NON_UBB_ACTIONS
+                  .filter(t => spEffect[`trigger on ${t}`])
+                  .forEach(t => {
+                    filteredEffects.unitNonUbb = filteredEffects.unitNonUbb.concat(buffs.map(b => ({
+                      ...b,
+                      [`trigger on ${t}`]: spEffect[`trigger on ${t}`],
+                    })));
+                  });
+              }
+            } else if (spEffect.sp_type === 'add to bb' || spEffect.sp_type === 'add to sbb') {
+              // only add burst enhancements if they are already included
+              const existingBuff = filteredEffects.unitNonUbb.find(e => getEffectType(e) === spEffectType && getEffectId(e) === spEffectId);
+              if (existingBuff) {
+                const existingSpBuffs = filteredEffects.unitNonUbb.filter(e => getEffectType(e) === spEffectType && getEffectId(e) === spEffectId && e.sp_type === spEffect.sp_type);
+                if (existingSpBuffs) { // remove old one, as current one will replace it
+                  filteredEffects.unitNonUbb = removeOldSpOptions(filteredEffects.unitNonUbb, existingSpBuffs);
+                }
+                filteredEffects.unitNonUbb.push(spEffect);
+              }
+            } else if (spEffect.sp_type === 'add to ubb') {
+              // only add burst enhancements if they are already included
+              const existingBuff = filteredEffects.unitUbb.find(e => getEffectType(e) === spEffectType && getEffectId(e) === spEffectId);
+              if (existingBuff) {
+                const existingSpBuffs = filteredEffects.unitUbb.filter(e => getEffectType(e) === spEffectType && getEffectId(e) === spEffectId && e.sp_type === spEffect.sp_type);
+                if (existingSpBuffs) { // remove old one, as current one will replace it
+                  filteredEffects.unitUbb = removeOldSpOptions(filteredEffects.unitUbb, existingSpBuffs);
+                }
+                filteredEffects.unitUbb.push(spEffect);
+              }
+            }
+          });
+          Object.values(entryEffects.spheres).forEach(sphere => {
+            const buffs = extractBuffsFromEffects(sphere)
+              .filter(triggeredEffect => triggeredEffect['target type'] === targetTypes.SELF);
+            if (buffs.length > 0) {
+              filteredEffects.spheres = filteredEffects.spheres.concat(buffs);
+            }
+          });
+          processExtraSkill(entryEffects.es);
         }
         // TODO: burst effects
 
@@ -508,7 +627,7 @@ export default {
       await this.updatePageDbForSquad(newSquad);
       /* eslint-disable no-console */
       console.warn(newSquad.units.map(u => getEffectsFromSquadUnitEntry(u, this)));
-      console.warn(newSquad.units.map(u => this.getEffectMappingForSquadUnitEntry(u, targetTypes.SELF, squadBuffTypes.PASSIVE)));
+      console.warn(newSquad.units.map(u => this.getEffectMappingForSquadUnitEntry(u, targetTypes.ENEMY, squadBuffTypes.BUFF)));
       /* eslint-enable no-console */
     },
     editMode (isEditMode) {
