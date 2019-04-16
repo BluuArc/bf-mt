@@ -6,7 +6,6 @@
         :row="$vuetify.breakpoint.mdAndUp"
         slot="markdown">
         <v-layout column wrap :style="{
-          'min-width': $vuetify.breakpoint.mdAndUp ? '50%' : '100%',
           'max-width': $vuetify.breakpoint.mdAndUp ? '50%' : '100%',
           }">
           <v-layout row wrap>

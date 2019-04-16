@@ -751,7 +751,7 @@ export default {
       await this.updatePageDbForSquad(newSquad);
       /* eslint-disable no-console */
       console.warn(newSquad.units.map(u => getEffectsFromSquadUnitEntry(u, this)));
-      console.warn(newSquad.units.map(u => this.getEffectMappingForSquadUnitEntry(u, targetTypes.ENEMY, squadBuffTypes.BUFF)));
+      console.warn(newSquad.units.map(u => this.getEffectMappingForSquadUnitEntry(u, targetTypes.SELF, squadBuffTypes.PASSIVE)));
       /* eslint-enable no-console */
     },
     editMode (isEditMode) {
