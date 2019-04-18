@@ -1,4 +1,124 @@
 {
+  "MST_LEADERSKILLS_7519_NAME": {
+    "en": "Give me a break",
+    "es": "Give me a break",
+    "id": "Beri aku istirahat",
+    "pt": "Give me a break",
+    "th": "กีฟ มี อะ เบรก",
+    "vi": "Give me a break"
+  },
+  "MST_LEADERSKILLS_7520_DESCRIPTION": {
+    "en": "50% boost to Atk, max HP, probable random status ailment infliction & 110% boost to Spark damage",
+    "es": "50% boost to Atk, max HP, probable random status ailment infliction & 110% boost to Spark damage",
+    "id": "50% ekstra Serang, HP maks, kans beri status penyakit acak & 110% ekstra kerusakan Percikan",
+    "pt": "50% boost to Atk, max HP, probable random status ailment infliction & 110% boost to Spark damage",
+    "th": "50% เพิ่มค่าให้ โจมตี, HP สูงสุด, มีโอกาส ทำให้ติดสถานผิดปกติโดยสุ่ม และ 110% เพิ่มค่าให้ ความเสียหายสปาร์ค",
+    "vi": "50% boost to Atk, max HP, probable random status ailment infliction & 110% boost to Spark damage"
+  },
+  "MST_LEADERSKILLS_7520_NAME": {
+    "en": "Hollow Shell's Impurity",
+    "es": "Hollow Shell's Impurity",
+    "id": "Kecemaran Cangkang Kosong",
+    "pt": "Hollow Shell's Impurity",
+    "th": "ฮอลโล่ว เชลส์ อิมเพียวริตี้",
+    "vi": "Hollow Shell's Impurity"
+  },
+  "MST_LEADERSKILLS_7521_DESCRIPTION": {
+    "en": "60% boost to Atk, max HP, probable random status ailment infliction & 130% boost to Spark damage",
+    "es": "60% boost to Atk, max HP, probable random status ailment infliction & 130% boost to Spark damage",
+    "id": "60% ekstra Serang, HP maks, kans beri status penyakit acak & 130% ekstra kerusakan Percikan",
+    "pt": "60% boost to Atk, max HP, probable random status ailment infliction & 130% boost to Spark damage",
+    "th": "60% เพิ่มค่าให้ โจมตี, HP สูงสุด, มีโอกาส ทำให้ติดสถานผิดปกติโดยสุ่ม และ 130% เพิ่มค่าให้ ความเสียหายสปาร์ค",
+    "vi": "60% boost to Atk, max HP, probable random status ailment infliction & 130% boost to Spark damage"
+  },
+  "MST_LEADERSKILLS_7521_NAME": {
+    "en": "Cadaver's Haunting Miasma",
+    "es": "Cadaver's Haunting Miasma",
+    "id": "Miasma Menghantui si Mayat",
+    "pt": "Cadaver's Haunting Miasma",
+    "th": "คาดาเวอร์ ฮอนติ้ง ไมแอสม่า",
+    "vi": "Cadaver's Haunting Miasma"
+  },
+  "MST_LEADERSKILLS_7522_DESCRIPTION": {
+    "en": "NA (Serial Code)",
+    "es": "NA (Serial Code)",
+    "id": "NA (Serial Code)",
+    "pt": "NA (Serial Code)",
+    "th": "NA (Serial Code)",
+    "vi": "NA (Serial Code)"
+  },
+  "MST_LEADERSKILLS_7522_NAME": {
+    "en": "NA (Serial Code)",
+    "es": "NA (Serial Code)",
+    "id": "NA (Serial Code)",
+    "pt": "NA (Serial Code)",
+    "th": "NA (Serial Code)",
+    "vi": "NA (Serial Code)"
+  },
+  "MST_LEADERSKILLS_7523_DESCRIPTION": {
+    "en": "50% boost to Atk, Rec, max HP, negates all status ailments, slight HP absorption & enormously boosts BB Atk when HP is over 50%",
+    "es": "50% boost to Atk, Rec, max HP, negates all status ailments, slight HP absorption & enormously boosts BB Atk when HP is over 50%",
+    "id": "50% ekstra Serang, Pulih, HP maks, menegasi semua status penyakit, agak serap HP, ekstra jumbo BB Serang saat HP di atas 50%",
+    "pt": "50% boost to Atk, Rec, max HP, negates all status ailments, slight HP absorption & enormously boosts BB Atk when HP is over 50%",
+    "th": "50% เพิ่มค่าให้ โจมตี, ฟื้นฟู, HP สูงสุด, ลบล้างสถานะผิดปกติทั้งหมด, ดูดซับ HP เล็กน้อย กับ เพิ่มค่ามหาศาลให้ BB โจมตี เมื่อ HP นั้นมากกว่า 50%",
+    "vi": "50% boost to Atk, Rec, max HP, negates all status ailments, slight HP absorption & enormously boosts BB Atk when HP is over 50%"
+  },
+  "MST_LEADERSKILLS_7523_NAME": {
+    "en": "Flames of Loathing",
+    "es": "Flames of Loathing",
+    "id": "Api Kebencian",
+    "pt": "Flames of Loathing",
+    "th": "เฟลม ออฟ โลธติ้ง",
+    "vi": "Flames of Loathing"
+  },
+  "MST_LEADERSKILLS_7524_DESCRIPTION": {
+    "en": "60% boost to Atk, Rec, max HP, negates all status ailments, slight HP absorption & enormously boosts BB Atk when HP is over 50%",
+    "es": "60% boost to Atk, Rec, max HP, negates all status ailments, slight HP absorption & enormously boosts BB Atk when HP is over 50%",
+    "id": "60% ekstra Serang, Pulih, HP maks, menegasi semua status penyakit, agak serap HP, ekstra jumbo BB Serang saat HP di atas 50%",
+    "pt": "60% boost to Atk, Rec, max HP, negates all status ailments, slight HP absorption & enormously boosts BB Atk when HP is over 50%",
+    "th": "60% เพิ่มค่าให้ โจมตี, ฟื้นฟู, HP สูงสุด, ลบล้างสถานะผิดปกติทั้งหมด, ดูดซับ HP เล็กน้อย กับ เพิ่มค่ามหาศาลให้ BB โจมตี เมื่อ HP นั้นมากกว่า 50%",
+    "vi": "60% boost to Atk, Rec, max HP, negates all status ailments, slight HP absorption & enormously boosts BB Atk when HP is over 50%"
+  },
+  "MST_LEADERSKILLS_7524_NAME": {
+    "en": "Blistering Malice",
+    "es": "Blistering Malice",
+    "id": "Kebencian Terik",
+    "pt": "Blistering Malice",
+    "th": "บลิสเตอริ่ง มาลิซ",
+    "vi": "Blistering Malice"
+  },
+  "MST_LEADERSKILLS_7525_DESCRIPTION": {
+    "en": "50% boost to Atk, max HP, boosts Atk, Def when HP is over 50% & enormously boosts Spark damage and considerably boosts BB Atk for 2 turns when Spark damage exceeds certain amount",
+    "es": "50% boost to Atk, max HP, boosts Atk, Def when HP is over 50% & enormously boosts Spark damage and considerably boosts BB Atk for 2 turns when Spark damage exceeds certain amount",
+    "id": "50% ekstra Serang, HP maks, menambah Serang, Tahan saat HP di atas 50%, ekstra jumbo kerusakan Percikan dan lumayan menambah BB Serang 2 giliran saat kerusakan Percikan melampaui jumlah tertentu",
+    "pt": "50% boost to Atk, max HP, boosts Atk, Def when HP is over 50% & enormously boosts Spark damage and considerably boosts BB Atk for 2 turns when Spark damage exceeds certain amount",
+    "th": "50% เพิ่มค่าให้ โจมตี, HP สูงสุด, เพิ่มค่า โจมตี, ป้องกัน เมื่อ HP นั้นมากกว่า 50% กับ เพิ่มค่ามหาศาลให้ ความเสียหายสปาร์ค และ เพิ่มค่าอย่างมากให้ BB โจมตี นาน 2 เทิร์น เมื่อ ความเสียหายสปาร์ค เกินกว่าปริมาณหนึ่ง",
+    "vi": "50% boost to Atk, max HP, boosts Atk, Def when HP is over 50% & enormously boosts Spark damage and considerably boosts BB Atk for 2 turns when Spark damage exceeds certain amount"
+  },
+  "MST_LEADERSKILLS_7525_NAME": {
+    "en": "Wintery Howl",
+    "es": "Wintery Howl",
+    "id": "Lolongan Musim Dingin",
+    "pt": "Wintery Howl",
+    "th": "วินเทอรี่ ฮาวล์",
+    "vi": "Wintery Howl"
+  },
+  "MST_LEADERSKILLS_7526_DESCRIPTION": {
+    "en": "60% boost to Atk, max HP, considerably boosts Atk, Def when HP is over 50% & enormously boosts Spark damage and considerably boosts BB Atk for 2 turns when Spark damage exceeds certain amount",
+    "es": "60% boost to Atk, max HP, considerably boosts Atk, Def when HP is over 50% & enormously boosts Spark damage and considerably boosts BB Atk for 2 turns when Spark damage exceeds certain amount",
+    "id": "60% ekstra Serang, HP maks, menambah Serang, Tahan saat HP di atas 50%, ekstra jumbo kerusakan Percikan dan lumayan menambah BB Serang 2 giliran saat kerusakan Percikan melampaui jumlah tertentu",
+    "pt": "60% boost to Atk, max HP, considerably boosts Atk, Def when HP is over 50% & enormously boosts Spark damage and considerably boosts BB Atk for 2 turns when Spark damage exceeds certain amount",
+    "th": "60% เพิ่มค่าให้ โจมตี, HP สูงสุด, เพิ่มค่าอย่างมากให้ โจมตี, ป้องกัน เมื่อ HP นั้นมากกว่า 50% กับ เพิ่มค่ามหาศาลให้ ความเสียหายสปาร์ค และ เพิ่มค่าอย่างมากให้ BB โจมตี นาน 2 เทิร์น เมื่อ ความเสียหายสปาร์ค เกินกว่าปริมาณหนึ่ง",
+    "vi": "60% boost to Atk, max HP, considerably boosts Atk, Def when HP is over 50% & enormously boosts Spark damage and considerably boosts BB Atk for 2 turns when Spark damage exceeds certain amount"
+  },
+  "MST_LEADERSKILLS_7526_NAME": {
+    "en": "Frost-fanged Howl",
+    "es": "Frost-fanged Howl",
+    "id": "Lolongan Taring Beku",
+    "pt": "Frost-fanged Howl",
+    "th": "ฟรอสต์-แฟงก์ ฮาวล์",
+    "vi": "Frost-fanged Howl"
+  },
   "MST_LEADERSKILLS_7527_DESCRIPTION": {
     "en": "50% boost to Atk, max HP, slight damage reduction for 1 turn when Sparks exceed certain amount & enormously boosts Spark damage for 2 turns when Sparks exceed certain amount",
     "es": "50% boost to Atk, max HP, slight damage reduction for 1 turn when Sparks exceed certain amount & enormously boosts Spark damage for 2 turns when Sparks exceed certain amount",
@@ -4927,6 +5047,22 @@
     "th": "Unrestrained Malevolence",
     "vi": "Unrestrained Malevolence"
   },
+  "MST_LEADERSKILLS_810718_DESCRIPTION": {
+    "en": "80% boost to all parameters, greatly boosts BB Atk, greatly boosts BC, HC drop rate & 10% damage reduction",
+    "es": "80% boost to all parameters, greatly boosts BB Atk, greatly boosts BC, HC drop rate & 10% damage reduction",
+    "id": "80% boost to all parameters, greatly boosts BB Atk, greatly boosts BC, HC drop rate & 10% damage reduction",
+    "pt": "80% boost to all parameters, greatly boosts BB Atk, greatly boosts BC, HC drop rate & 10% damage reduction",
+    "th": "80% boost to all parameters, greatly boosts BB Atk, greatly boosts BC, HC drop rate & 10% damage reduction",
+    "vi": "80% boost to all parameters, greatly boosts BB Atk, greatly boosts BC, HC drop rate & 10% damage reduction"
+  },
+  "MST_LEADERSKILLS_810718_NAME": {
+    "en": "Lead the People",
+    "es": "Lead the People",
+    "id": "Lead the People",
+    "pt": "Lead the People",
+    "th": "Lead the People",
+    "vi": "Lead the People"
+  },
   "MST_LEADERSKILLS_810900_DESCRIPTION": {
     "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Fire elemental damage, 15% damage reduction from Earth types & negates all status ailments",
     "es": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Fire elemental damage, 15% damage reduction from Earth types & negates all status ailments",
@@ -5647,6 +5783,38 @@
     "th": "Soul Module",
     "vi": "Soul Module"
   },
+  "MST_LEADERSKILLS_820717_DESCRIPTION": {
+    "en": "80% boost to Atk, Def, Rec and 100% boost to max HP, hugely boosts elemental damage, Spark damage boosts BB gauge and slightly restores HP",
+    "es": "80% boost to Atk, Def, Rec and 100% boost to max HP, hugely boosts elemental damage, Spark damage boosts BB gauge and slightly restores HP",
+    "id": "80% boost to Atk, Def, Rec and 100% boost to max HP, hugely boosts elemental damage, Spark damage boosts BB gauge and slightly restores HP",
+    "pt": "80% boost to Atk, Def, Rec and 100% boost to max HP, hugely boosts elemental damage, Spark damage boosts BB gauge and slightly restores HP",
+    "th": "80% boost to Atk, Def, Rec and 100% boost to max HP, hugely boosts elemental damage, Spark damage boosts BB gauge and slightly restores HP",
+    "vi": "80% boost to Atk, Def, Rec and 100% boost to max HP, hugely boosts elemental damage, Spark damage boosts BB gauge and slightly restores HP"
+  },
+  "MST_LEADERSKILLS_820717_NAME": {
+    "en": "Living Brushwork",
+    "es": "Living Brushwork",
+    "id": "Living Brushwork",
+    "pt": "Living Brushwork",
+    "th": "Living Brushwork",
+    "vi": "Living Brushwork"
+  },
+  "MST_LEADERSKILLS_820718_DESCRIPTION": {
+    "en": "100% boost to Atk, Def, Rec and 120% boost to max HP, enormously boosts elemental damage, probable Spark vulnerability infliction for 3 turns, Spark damage considerably boosts BB gauge and slightly restores HP & 25% boost to EXP gained",
+    "es": "100% boost to Atk, Def, Rec and 120% boost to max HP, enormously boosts elemental damage, probable Spark vulnerability infliction for 3 turns, Spark damage considerably boosts BB gauge and slightly restores HP & 25% boost to EXP gained",
+    "id": "100% boost to Atk, Def, Rec and 120% boost to max HP, enormously boosts elemental damage, probable Spark vulnerability infliction for 3 turns, Spark damage considerably boosts BB gauge and slightly restores HP & 25% boost to EXP gained",
+    "pt": "100% boost to Atk, Def, Rec and 120% boost to max HP, enormously boosts elemental damage, probable Spark vulnerability infliction for 3 turns, Spark damage considerably boosts BB gauge and slightly restores HP & 25% boost to EXP gained",
+    "th": "100% boost to Atk, Def, Rec and 120% boost to max HP, enormously boosts elemental damage, probable Spark vulnerability infliction for 3 turns, Spark damage considerably boosts BB gauge and slightly restores HP & 25% boost to EXP gained",
+    "vi": "100% boost to Atk, Def, Rec and 120% boost to max HP, enormously boosts elemental damage, probable Spark vulnerability infliction for 3 turns, Spark damage considerably boosts BB gauge and slightly restores HP & 25% boost to EXP gained"
+  },
+  "MST_LEADERSKILLS_820718_NAME": {
+    "en": "Drawn to Life",
+    "es": "Drawn to Life",
+    "id": "Drawn to Life",
+    "pt": "Drawn to Life",
+    "th": "Drawn to Life",
+    "vi": "Drawn to Life"
+  },
   "MST_LEADERSKILLS_820900_DESCRIPTION": {
     "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Water elemental damage, 15% damage reduction from Fire types & negates all status ailments",
     "es": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Water elemental damage, 15% damage reduction from Fire types & negates all status ailments",
@@ -6351,6 +6519,22 @@
     "th": "30% เพิ่มค่า โจมตี, เพิ่มค่าเล็กน้อยให้ อัตราเกิดคริติคอล และ ความเสียหายที่ได้รับ อาจจะเติม เกจ BB อย่างมาก",
     "vi": "Third Wish"
   },
+  "MST_LEADERSKILLS_840118_DESCRIPTION": {
+    "en": "80% boost to all parameters, enormously boosts BC efficacy, greatly reduces BB gauge required for BB, greatly boosts BB Atk & Spark damage considerably boosts BB gauge",
+    "es": "80% boost to all parameters, enormously boosts BC efficacy, greatly reduces BB gauge required for BB, greatly boosts BB Atk & Spark damage considerably boosts BB gauge",
+    "id": "80% boost to all parameters, enormously boosts BC efficacy, greatly reduces BB gauge required for BB, greatly boosts BB Atk & Spark damage considerably boosts BB gauge",
+    "pt": "80% boost to all parameters, enormously boosts BC efficacy, greatly reduces BB gauge required for BB, greatly boosts BB Atk & Spark damage considerably boosts BB gauge",
+    "th": "80% boost to all parameters, enormously boosts BC efficacy, greatly reduces BB gauge required for BB, greatly boosts BB Atk & Spark damage considerably boosts BB gauge",
+    "vi": "80% boost to all parameters, enormously boosts BC efficacy, greatly reduces BB gauge required for BB, greatly boosts BB Atk & Spark damage considerably boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_840118_NAME": {
+    "en": "Hareband Goggles",
+    "es": "Hareband Goggles",
+    "id": "Hareband Goggles",
+    "pt": "Hareband Goggles",
+    "th": "Hareband Goggles",
+    "vi": "Hareband Goggles"
+  },
   "MST_LEADERSKILLS_840148_DESCRIPTION": {
     "en": "100% boost to all parameters, boosts critical hit rate, hugely boosts Spark and critical damage, negates Def ignoring effects, adds probable resistance against 1 KO attack & raises Atk parameter limits to 130000",
     "es": "100% boost to all parameters, boosts critical hit rate, hugely boosts Spark and critical damage, negates Def ignoring effects, adds probable resistance against 1 KO attack & raises Atk parameter limits to 130000",
@@ -7040,12 +7224,12 @@
     "vi": "Unity-Override Network"
   },
   "MST_LEADERSKILLS_850278_DESCRIPTION": {
-    "en": "200% boost to Atk and 60% boost to max HP of Light types, considerably boosts Atk, Def when BB gauge is over 50%, raises normal hit amount & hugely boosts Light elemental damage.25% boost to all parameters of Light types & 20% damage reduction from Light, Dark types in Guild Raid",
-    "es": "200% boost to Atk and 60% boost to max HP of Light types, considerably boosts Atk, Def when BB gauge is over 50%, raises normal hit amount & hugely boosts Light elemental damage.25% boost to all parameters of Light types & 20% damage reduction from Light, Dark types in Guild Raid",
-    "id": "200% ekstra Serang, 60% ekstra HP maks tipe Terang, lumayan menambah Serang, Tahan saat meteran BB di atas 50%, menambah jumlah pukulan ampuh, amat menambah kerusakan elemen Terang",
-    "pt": "200% boost to Atk and 60% boost to max HP of Light types, considerably boosts Atk, Def when BB gauge is over 50%, raises normal hit amount & hugely boosts Light elemental damage.25% boost to all parameters of Light types & 20% damage reduction from Light, Dark types in Guild Raid",
-    "th": "200% เพิ่มค่าให้ โจมตี กับ 60% เพิ่มค่าให้ HP สูงสุด ของชนิดแสง, เพิ่มค่าอย่างมากให้ โจมตี, ป้องกัน เมื่อเกจ BB นั้นมากกว่า 50%, เพิ่มปริมาณโจมตีธรรมดา และ เพิ่มค่าอย่างสูงให้ ความเสียหายธาตุแสง",
-    "vi": "200% boost to Atk and 60% boost to max HP of Light types, considerably boosts Atk, Def when BB gauge is over 50%, raises normal hit amount & hugely boosts Light elemental damage.25% boost to all parameters of Light types & 20% damage reduction from Light, Dark types in Guild Raid"
+    "en": "225% boost to Atk and 100% boost to max HP of Light types, considerably boosts Atk, Def when BB gauge is over 50%, raises normal hit amount & enormously boosts Light elemental damage. 25% boost to all parameters of Light types & 20% damage reduction from Light, Dark types in Guild Raid",
+    "es": "225% boost to Atk and 100% boost to max HP of Light types, considerably boosts Atk, Def when BB gauge is over 50%, raises normal hit amount & enormously boosts Light elemental damage. 25% boost to all parameters of Light types & 20% damage reduction from Light, Dark types in Guild Raid",
+    "id": "225% boost to Atk and 100% boost to max HP of Light types, considerably boosts Atk, Def when BB gauge is over 50%, raises normal hit amount & enormously boosts Light elemental damage. 25% boost to all parameters of Light types & 20% damage reduction from Light, Dark types in Guild Raid",
+    "pt": "225% boost to Atk and 100% boost to max HP of Light types, considerably boosts Atk, Def when BB gauge is over 50%, raises normal hit amount & enormously boosts Light elemental damage. 25% boost to all parameters of Light types & 20% damage reduction from Light, Dark types in Guild Raid",
+    "th": "225% boost to Atk and 100% boost to max HP of Light types, considerably boosts Atk, Def when BB gauge is over 50%, raises normal hit amount & enormously boosts Light elemental damage. 25% boost to all parameters of Light types & 20% damage reduction from Light, Dark types in Guild Raid",
+    "vi": "225% boost to Atk and 100% boost to max HP of Light types, considerably boosts Atk, Def when BB gauge is over 50%, raises normal hit amount & enormously boosts Light elemental damage. 25% boost to all parameters of Light types & 20% damage reduction from Light, Dark types in Guild Raid"
   },
   "MST_LEADERSKILLS_850278_NAME": {
     "en": "Combat Omniscience Protocol",
@@ -88614,61 +88798,5 @@
     "pt": "Alyut Lâmina da Luz",
     "th": "ไลท์เบลดอัลยูท",
     "vi": "Quang kiếm Alyut"
-  },
-  "MST_MONSTERS_54201_NAME": {
-    "en": "Light Blade Alyut",
-    "es": "Alyut, Hoja de luz",
-    "id": "Bilah Terang Alyut",
-    "pt": "Alyut Lâmina da Luz",
-    "th": "ไลท์ เบลด อัลยุท",
-    "vi": "Light Blade Alyut"
-  },
-  "MST_MONSTERS_54202_NAME": {
-    "en": "Light Blade Alyut",
-    "es": "Alyut, Hoja de luz",
-    "id": "Bilah Terang Alyut",
-    "pt": "Alyut Lâmina da Luz",
-    "th": "ไลท์ เบลด อัลยุท",
-    "vi": "Light Blade Alyut"
-  },
-  "MST_MONSTERS_54203_NAME": {
-    "en": "Light Blade Alyut",
-    "es": "Alyut, Hoja de luz",
-    "id": "Bilah Terang Alyut",
-    "pt": "Alyut Lâmina da Luz",
-    "th": "ไลท์ เบลด อัลยุท",
-    "vi": "Light Blade Alyut"
-  },
-  "MST_MONSTERS_54204_NAME": {
-    "en": "Light Blade Alyut",
-    "es": "Alyut, Hoja de luz",
-    "id": "Bilah Terang Alyut",
-    "pt": "Alyut Lâmina da Luz",
-    "th": "ไลท์ เบลด อัลยุท",
-    "vi": "Light Blade Alyut"
-  },
-  "MST_MONSTERS_54205_NAME": {
-    "en": "Light Blade Alyut",
-    "es": "Alyut, Hoja de luz",
-    "id": "Bilah Terang Alyut",
-    "pt": "Alyut Lâmina da Luz",
-    "th": "ไลท์ เบลด อัลยุท",
-    "vi": "Light Blade Alyut"
-  },
-  "MST_MONSTERS_54206_NAME": {
-    "en": "Light Blade Alyut",
-    "es": "Alyut, Hoja de luz",
-    "id": "Bilah Terang Alyut",
-    "pt": "Alyut Lâmina da Luz",
-    "th": "ไลท์ เบลด อัลยุท",
-    "vi": "Light Blade Alyut"
-  },
-  "MST_MONSTERS_54250_NAME": {
-    "en": "Holy Warrior Alyut",
-    "es": "Alyut el Sagrado",
-    "id": "Prajurit Suci Alyut",
-    "pt": "Alyut Guerreiro Luz",
-    "th": "โฮลี่วอร์ริเออร์อัลยูท",
-    "vi": "Thần binh Alyut"
   }
 }
