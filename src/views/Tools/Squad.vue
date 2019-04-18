@@ -337,7 +337,7 @@ export default {
           }
           filteredEffects.unitEs = entryEffects.unit.es.filter(e => e['passive target'] === targetTypes.PARTY);
           filteredEffects.elgif = entryEffects.es.filter(e => e['passive target'] === targetTypes.PARTY);
-        } else if (type === squadBuffTypes.BUFF) {
+        } else if (type === squadBuffTypes.PROC) {
           const processExtraSkill = (esEffects = []) => {
             esEffects.forEach(esEffect => {
               const buffs = extractBuffsFromTriggeredEffect(esEffect, esEffect.sourcePath)
@@ -469,7 +469,7 @@ export default {
           unitUbb: [],
         };
         if (type === squadBuffTypes.PASSIVE) {
-          // passive effects have no buffs; buffs are extracted for squadBuffTypes.BUFF
+          // passive effects have no buffs; buffs are extracted for squadBuffTypes.PROC
           filteredEffects.unitEs = entryEffects.unit.es.filter(e => e['passive target'] === targetTypes.SELF && extractBuffsFromTriggeredEffect(e).length === 0);
           filteredEffects.elgif = entryEffects.es.filter(e => e['passive target'] === targetTypes.SELF && extractBuffsFromTriggeredEffect(e).length === 0);
           Object.values(entryEffects.spheres).forEach(sphere => {
@@ -486,7 +486,7 @@ export default {
               }
               filteredEffects.unitSp.push(spEffect);
             });
-        } else if (type === squadBuffTypes.BUFF) {
+        } else if (type === squadBuffTypes.PROC) {
           const processExtraSkill = (esEffects = []) => {
             esEffects.forEach(esEffect => {
               const buffs = extractBuffsFromTriggeredEffect(esEffect, esEffect.sourcePath)
@@ -601,7 +601,6 @@ export default {
         }
         // TODO: burst effects
 
-        console.warn(filteredEffects);
         aggregatedEffects = Object.values(filteredEffects)
           .filter(v => v.length > 0)
           .reduce((acc, val) => acc.concat(val), [])
@@ -609,7 +608,7 @@ export default {
             return +getEffectId(a) - +getEffectId(b) ||
             (!a.sp_type && b.sp_type ? -1 : 1) // sp types should go after original values
           });
-      } else if (target === targetTypes.ENEMY) {
+      } else if (target === targetTypes.ENEMY && type === squadBuffTypes.PROC) {
         const filteredEffects = {
           unitEs: [],
           unitSp: [],
@@ -751,7 +750,17 @@ export default {
       await this.updatePageDbForSquad(newSquad);
       /* eslint-disable no-console */
       console.warn(newSquad.units.map(u => getEffectsFromSquadUnitEntry(u, this)));
-      console.warn(newSquad.units.map(u => this.getEffectMappingForSquadUnitEntry(u, targetTypes.SELF, squadBuffTypes.PASSIVE)));
+      const testValues = [squadBuffTypes.PASSIVE, squadBuffTypes.PROC].reduce((acc, squadBuffType) => {
+        newSquad.units.forEach((unit, i) => {
+          acc[`${squadBuffType}-${i}`] = Object.values(targetTypes).reduce((targetAcc, target) => {
+            targetAcc[target] = this.getEffectMappingForSquadUnitEntry(unit, target, squadBuffType);
+            return targetAcc;
+          }, {});
+        });
+        return acc;
+      }, {});
+      console.warn(testValues);
+      // console.warn(newSquad.units.map(u => this.getEffectMappingForSquadUnitEntry(u, targetTypes.SELF, squadBuffTypes.PASSIVE)));
       /* eslint-enable no-console */
     },
     editMode (isEditMode) {

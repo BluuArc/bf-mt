@@ -423,6 +423,6 @@ export const targetTypes = Object.freeze({
 
 export const squadBuffTypes = Object.freeze({
   PASSIVE: 'passive',
-  BUFF: 'buff',
+  PROC: 'proc',
   BURST: 'burst',
 });
