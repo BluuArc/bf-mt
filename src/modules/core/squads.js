@@ -438,12 +438,6 @@ export function getEffectsListForSquadUnitEntry (
     spheres: [],
     unitSp: [],
   };
-  const processLeaderSkillForProcs = () => {
-    if (isLsActive) {
-      filteredEffects.unitLs = extractBuffsFromEffects(entryEffects.unit.ls)
-        .filter(e => e[TARGET_TYPE_KEY] === target);
-    }
-  };
   const processExtraSkillForProcs = (esEffects = []) => {
     esEffects.forEach(esEffect => {
       const buffs = extractBuffsFromTriggeredEffect(esEffect, esEffect.sourcePath)
@@ -472,7 +466,16 @@ export function getEffectsListForSquadUnitEntry (
       }
     });
   };
-  const processBurstsForProcs = () => {
+
+  // TODO: burst effects
+  if (effectType === squadBuffTypes.PROC) {
+    // identical steps regardless of target
+    if (isLsActive) {
+      filteredEffects.unitLs = extractBuffsFromEffects(entryEffects.unit.ls)
+        .filter(e => e[TARGET_TYPE_KEY] === target);
+    }
+    processExtraSkillForProcs(entryEffects.unit.es);
+    
     burstTypes.forEach(burstType => {
       const burstEffects = entryEffects.unit[burstType].filter(e => e[TARGET_TYPE_KEY] === target);
       if (burstType !== squadUnitActions.UBB) {
@@ -481,8 +484,7 @@ export function getEffectsListForSquadUnitEntry (
         filteredEffects.unitUbb = filteredEffects.unitUbb.concat(burstEffects);
       }
     });
-  };
-  const processEnhancementsForProcs = () => {
+
     // assumption: SP entries are in order so upgrades to previous enhancements are closer to the end of the array
     entryEffects.unit.sp.forEach(spEffect => {
       const spEffectType = getEffectType(spEffect);
@@ -521,7 +523,7 @@ export function getEffectsListForSquadUnitEntry (
             filteredEffects.unitNonUbb = removeOldSpOptions(filteredEffects.unitNonUbb, existingSpBuffs);
           }
           [TRIGGER_ON_KEYS.BB, TRIGGER_ON_KEYS.SBB]
-            .filter(t => spEffect[t])
+          .filter(t => spEffect[t])
             .forEach(t => {
               filteredEffects.unitNonUbb = filteredEffects.unitNonUbb.concat(buffs.map(b => ({
                 ...b,
@@ -539,10 +541,16 @@ export function getEffectsListForSquadUnitEntry (
             filteredEffects.unitNonUbb = removeOldSpOptions(filteredEffects.unitNonUbb, existingSpBuffs);
           }
           if (spEffect.sp_type === ADD_TO_KEYS.BB) {
-            filteredEffects.unitNonUbb.push({...spEffect, triggeredOn: 'bb' });
+            filteredEffects.unitNonUbb.push({
+              ...spEffect,
+              triggeredOn: 'bb',
+            });
           }
           if (spEffect.sp_type === ADD_TO_KEYS.SBB) {
-            filteredEffects.unitNonUbb.push({...spEffect, triggeredOn: 'sbb' });
+            filteredEffects.unitNonUbb.push({
+              ...spEffect,
+              triggeredOn: 'sbb',
+            });
           }
         }
       } else if (spEffect.sp_type === ADD_TO_KEYS.UBB) {
@@ -553,12 +561,14 @@ export function getEffectsListForSquadUnitEntry (
           if (existingSpBuffs.length > 0) { // remove old one, as current one will replace it
             filteredEffects.unitUbb = removeOldSpOptions(filteredEffects.unitUbb, existingSpBuffs);
           }
-          filteredEffects.unitUbb.push({...spEffect, triggeredOn: 'ubb'});
+          filteredEffects.unitUbb.push({
+            ...spEffect,
+            triggeredOn: 'ubb',
+          });
         }
       }
     });
-  };
-  const processSpheresForProcs = () => {
+
     Object.values(entryEffects.spheres).forEach(sphereEffects => {
       sphereEffects.forEach(sphereEffect => {
         const buffs = extractBuffsFromTriggeredEffect(sphereEffect, sphereEffect.sourcePath)
@@ -572,7 +582,7 @@ export function getEffectsListForSquadUnitEntry (
         }
         if ((sphereEffect[TRIGGER_ON_KEYS.BB] || sphereEffect[TRIGGER_ON_KEYS.SBB]) && buffs.length > 0) {
           [TRIGGER_ON_KEYS.BB, TRIGGER_ON_KEYS.SBB]
-            .filter(t => sphereEffect[t])
+          .filter(t => sphereEffect[t])
             .forEach(t => {
               filteredEffects.unitNonUbb = filteredEffects.unitNonUbb.concat(buffs.map(b => ({
                 ...b,
@@ -583,10 +593,9 @@ export function getEffectsListForSquadUnitEntry (
         }
       });
     });
-  };
 
-  // TODO: burst effects
-  if (target === targetTypes.PARTY && effectType === squadBuffTypes.PASSIVE) {
+    processExtraSkillForProcs(entryEffects.es);
+  } else if (target === targetTypes.PARTY && effectType === squadBuffTypes.PASSIVE) {
     if (isLsActive) {
       filteredEffects.unitLs = entryEffects.unit.ls;
       filteredEffects.unitSp = entryEffects.unit.sp.filter(e => e.sp_type === 'add to passive' || e[UNKNOWN_PASSIVE_ID_KEY] === ADD_TO_LS_PASSIVE_ID); // add to LS
@@ -599,13 +608,6 @@ export function getEffectsListForSquadUnitEntry (
         filteredEffects.spheres = filteredEffects.spheres.concat(buffs);
       }
     });
-  } else if (target === targetTypes.PARTY && effectType === squadBuffTypes.PROC) {
-    processLeaderSkillForProcs();
-    processExtraSkillForProcs(entryEffects.unit.es);
-    processBurstsForProcs();
-    processEnhancementsForProcs();
-    processSpheresForProcs();
-    processExtraSkillForProcs(entryEffects.es);
   } else if (target === targetTypes.SELF && effectType === squadBuffTypes.PASSIVE) {
     filteredEffects.unitEs = entryEffects.unit.es.filter(e => e[PASSIVE_TARGET_KEY] === targetTypes.SELF && extractBuffsFromTriggeredEffect(e).length === 0);
     filteredEffects.elgif = entryEffects.es.filter(e => e[PASSIVE_TARGET_KEY] === targetTypes.SELF && extractBuffsFromTriggeredEffect(e).length === 0);
@@ -623,20 +625,6 @@ export function getEffectsListForSquadUnitEntry (
         }
         filteredEffects.unitSp.push(spEffect);
       });
-  } else if (target === targetTypes.SELF && effectType === squadBuffTypes.PROC) {
-    processLeaderSkillForProcs();
-    processExtraSkillForProcs(entryEffects.unit.es);
-    processBurstsForProcs();
-    processEnhancementsForProcs();
-    processSpheresForProcs();
-    processExtraSkillForProcs(entryEffects.es);
-  } else if (target === targetTypes.ENEMY && effectType === squadBuffTypes.PROC) {
-    processLeaderSkillForProcs();
-    processExtraSkillForProcs(entryEffects.unit.es);
-    processBurstsForProcs();
-    processEnhancementsForProcs();
-    processSpheresForProcs();
-    processExtraSkillForProcs(entryEffects.es);
   }
 
   // combine all effects into single array and sort by effect ID and whether it has an SP type
