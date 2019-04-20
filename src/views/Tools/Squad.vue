@@ -2,78 +2,80 @@
   <module-checker
     :requiredModules="requiredModules"
     :ensureDbSync="true">
-    <v-container>
-      <v-layout justify-center>
-        <v-flex xs12 v-if="!editMode">
-          <squad-list-card
-            :squad="squad"
-            :getUnit="getUnit"
-            :getItem="getItem"
-            :getExtraSkill="getExtraSkill"
-            :isLoadingInParent="isLoadingSquadData"
-          >
-            <v-card-actions slot="card-actions" slot-scope="{ disabled }">
-              <v-btn
-                flat
-                :icon="minimizeSquadActionButtons"
-                :disabled="disabled"
-                @click="editMode = true">
-                <v-icon :left="!minimizeSquadActionButtons">edit</v-icon>
-                <span v-if="!minimizeSquadActionButtons">
-                  Edit
-                </span>
-              </v-btn>
-              <v-btn
-                flat
-                :icon="minimizeSquadActionButtons"
-                :disabled="disabled"
-                @click="activeSquadDialog = 'share'">
-                <v-icon :left="!minimizeSquadActionButtons">share</v-icon>
-                <span v-if="!minimizeSquadActionButtons">
-                  Share
-                </span>
-              </v-btn>
-              <v-btn
-                v-if="squadCode"
-                flat
-                :icon="minimizeSquadActionButtons"
-                :disabled="disabled"
-                :to="getSquadUrl(squadCode)">
-                <v-icon :left="!minimizeSquadActionButtons">file_copy</v-icon>
-                <span v-if="!minimizeSquadActionButtons">
-                  Copy
-                </span>
-              </v-btn>
-              <v-spacer/>
-              <v-btn
-                flat
-                :icon="minimizeSquadActionButtons"
-                :disabled="disabled"
-                @click="activeSquadDialog = 'delete'">
-                <v-icon :left="!minimizeSquadActionButtons">delete</v-icon>
-                <span v-if="!minimizeSquadActionButtons">
-                  Delete
-                </span>
-              </v-btn>
-            </v-card-actions>
-          </squad-list-card>
-        </v-flex>
-        <v-flex xs12 v-else>
-          <squad-list-card-editable
-            :squad="tempSquad"
-            :squadId="id"
-            :getUnit="getUnit"
-            :getItem="getItem"
-            :getExtraSkill="getExtraSkill"
-            :redirectOnCancel="false"
-            :isLoadingInParent="isLoadingSquadData"
-            @newsquad="$sq => tempSquad = $sq"
-            @newunits="onNewUnits"
-            @save="() => { squad = tempSquad; editMode = false; }"
-            @cancel="editMode = false"
-          />
-        </v-flex>
-      </v-layout>
+    <v-container fluid class="squad-page">
+      <v-container class="pa-0">
+        <v-layout justify-center>
+          <v-flex xs12 v-if="!editMode">
+            <squad-list-card
+              :squad="squad"
+              :getUnit="getUnit"
+              :getItem="getItem"
+              :getExtraSkill="getExtraSkill"
+              :isLoadingInParent="isLoadingSquadData"
+            >
+              <v-card-actions slot="card-actions" slot-scope="{ disabled }">
+                <v-btn
+                  flat
+                  :icon="minimizeSquadActionButtons"
+                  :disabled="disabled"
+                  @click="editMode = true">
+                  <v-icon :left="!minimizeSquadActionButtons">edit</v-icon>
+                  <span v-if="!minimizeSquadActionButtons">
+                    Edit
+                  </span>
+                </v-btn>
+                <v-btn
+                  flat
+                  :icon="minimizeSquadActionButtons"
+                  :disabled="disabled"
+                  @click="activeSquadDialog = 'share'">
+                  <v-icon :left="!minimizeSquadActionButtons">share</v-icon>
+                  <span v-if="!minimizeSquadActionButtons">
+                    Share
+                  </span>
+                </v-btn>
+                <v-btn
+                  v-if="squadCode"
+                  flat
+                  :icon="minimizeSquadActionButtons"
+                  :disabled="disabled"
+                  :to="getSquadUrl(squadCode)">
+                  <v-icon :left="!minimizeSquadActionButtons">file_copy</v-icon>
+                  <span v-if="!minimizeSquadActionButtons">
+                    Copy
+                  </span>
+                </v-btn>
+                <v-spacer/>
+                <v-btn
+                  flat
+                  :icon="minimizeSquadActionButtons"
+                  :disabled="disabled"
+                  @click="activeSquadDialog = 'delete'">
+                  <v-icon :left="!minimizeSquadActionButtons">delete</v-icon>
+                  <span v-if="!minimizeSquadActionButtons">
+                    Delete
+                  </span>
+                </v-btn>
+              </v-card-actions>
+            </squad-list-card>
+          </v-flex>
+          <v-flex xs12 v-else>
+            <squad-list-card-editable
+              :squad="tempSquad"
+              :squadId="id"
+              :getUnit="getUnit"
+              :getItem="getItem"
+              :getExtraSkill="getExtraSkill"
+              :redirectOnCancel="false"
+              :isLoadingInParent="isLoadingSquadData"
+              @newsquad="$sq => tempSquad = $sq"
+              @newunits="onNewUnits"
+              @save="() => { squad = tempSquad; editMode = false; }"
+              @cancel="editMode = false"
+            />
+          </v-flex>
+        </v-layout>
+      </v-container>
       <v-flex xs12>
         <v-divider class="mt-2"/>
       </v-flex>
@@ -87,7 +89,17 @@
             <v-layout slot="squad-buffs">
               <dl>
                 <dt>Party Passives</dt>
-                <dd>table here</dd>
+                <dd>
+                  <squad-buff-compare-table
+                    :getUnit="getUnit"
+                    :getItem="getItem"
+                    :getExtraSkill="getExtraSkill"
+                    :squad="squad"
+                    :targetType="targetTypes.PARTY"
+                    :effectType="squadBuffTypes.PASSIVE">
+
+                  </squad-buff-compare-table>
+                </dd>
 
                 <dt>Party Buffs</dt>
                 <dd>table here</dd>
@@ -170,6 +182,7 @@ import ShareSquadCard from '@/components/Tools/Squads/ShareSquadCard';
 import DeleteSquadCard from '@/components/Tools/Squads/DeleteSquadCard';
 import TabContainer from '@/components/CardTabsContainer';
 import SquadListCardEditable from '@/components/Tools/Squads/SquadListCardEditable';
+import SquadBuffCompareTable from '@/components/Multidex/BuffTable/SquadBuffCompareTable';
 
 const logger = new Logger({ prefix: '[Squad]' });
 export default {
@@ -187,9 +200,12 @@ export default {
     TabContainer,
     SquadListCardEditable,
     LoadingIndicator,
+    SquadBuffCompareTable,
   },
   computed: {
     ...mapState('settings', ['activeServer']),
+    targetTypes: () => targetTypes,
+    squadBuffTypes: () => squadBuffTypes,
     requiredModules: () => squadRequiredModules,
     tabConfig: () => [
       'Squad Buffs',
@@ -347,6 +363,14 @@ export default {
 };
 </script>
 
-<style>
+<style lang="less">
+.squad-page {
+  dl {
+    max-width: 100%;
+  }
 
+  dd {
+    overflow-x: auto;
+  }
+}
 </style>
