@@ -34,36 +34,68 @@
             @click="() => toggleEffectView(i)"/>
           <property-cell
             :class="{ 'property-row--odd first-row': !hiddenRows.includes(i), 'only-row': hiddenRows.includes(i) || propsById[effectId].length === 1 }"
+            :numValueColumns="numValueColumns"
             :collapsed="hiddenRows.includes(i)"
             :value="propsById[effectId][0]"
             :numProps="propsById[effectId].length"/>
           <template v-if="!hiddenRows.includes(i) && unitEntries.length > 0">
             <template v-for="(unitEntry, u) in unitEntries">
-              <td 
-                v-if="effectsById[effectId].filter(effect => effect.source === unitEntry).length === 0"
-                :colspan="columnCountMappingByUnitEntry.get(unitEntry)"
-                :key="`${u}-empty`">
-                (None)
-              </td>
+              <value-cell
+                  v-if="effectsById[effectId].filter(effect => effect.source === unitEntry).length === 0"
+                  :key="`${u}-empty`"
+                  :colspan="columnCountMappingByUnitEntry.get(unitEntry)"
+                  :class="{ 'value-row--odd first-row': true, 'only-row': propsById[effectId].length === 1 }"
+                  value="-"/>
               <template v-else>
-                <td
+                <value-cell
                   v-for="(valueEntry, e) in effectsById[effectId].filter(effect => effect.source === unitEntry)"
-                  :key="`${u}-${e}`">
-                  {{valueEntry.effect[propsById[effectId][0]] !== undefined ? valueEntry.effect[propsById[effectId][0]] : '(None)'}}
-                </td>
+                  :key="`${u}-${e}`"
+                  :class="{ 'value-row--odd first-row': true, 'only-row': propsById[effectId].length === 1 }"
+                  :value="valueEntry.effect[propsById[effectId][0]] !== undefined ? valueEntry.effect[propsById[effectId][0]] : '-'"
+                  :isProcBuffList="isProcBuffList(valueEntry, propsById[effectId][0])"/>
+                <value-cell
+                  v-for="(emptyValue, e) in columnCountMappingByUnitEntry.get(unitEntry) - effectsById[effectId].filter(effect => effect.source === unitEntry).length"
+                  :key="`${u}-${e}-empty`"
+                  :class="{ 'value-row--odd first-row': true, 'only-row': propsById[effectId].length === 1 }"
+                  value="-"/>
               </template>
             </template>
-            <!-- <value-cell
-              v-for="(valueEntry, e) in effectsById[effectId].effects"
-              :key="e"
-              :class="{ 'value-row--odd first-row': true, 'only-row': propsById[effectId].length === 1 }"
-              :value="valueEntry.effect[propsById[effectId][0]]"
-              :isProcBuffList="isProcBuffList(valueEntry, propsById[effectId][0])"/> -->
           </template>
         </tr>
         
-        <!-- <template v-if="!hiddenRows.includes(i) && propsById[effectId].length > 1">
-          <property-value-row
+        <template v-if="!hiddenRows.includes(i) && propsById[effectId].length > 1">
+          <tr v-for="(prop, j) in propsById[effectId].slice(1)" :key="`${effectId}-${i}-${j}`">
+            <property-cell
+              :class="{ 'property-column': true, [`property-row--${j % 2 === 0 ? 'even' : 'odd'}`]: true, 'last-row': j + 1 === propsById[effectId].length }"
+              :numValueColumns="numValueColumns"
+              :collapsed="hiddenRows.includes(i)"
+              :value="prop"
+              :numProps="propsById[effectId].length"/>
+            <template v-for="(unitEntry, u) in unitEntries">
+              <value-cell
+                v-if="effectsById[effectId].filter(effect => effect.source === unitEntry).length === 0"
+                :key="`${u}-${j}-empty`"
+                :data-source="JSON.stringify(unitEntry)"
+                :colspan="columnCountMappingByUnitEntry.get(unitEntry)"
+                :class="{ 'value-column': true, [`value-row--${j % 2 === 0 ? 'even' : 'odd'}`]: true, 'last-row': j + 1 === propsById[effectId].length }"
+                value="-"/>
+              <template v-else>
+                <value-cell
+                  v-for="(valueEntry, e) in effectsById[effectId].filter(effect => effect.source === unitEntry)"
+                  :key="`${u}-${j}-${e}`"
+                  :data-source="JSON.stringify(unitEntry)"
+                  :class="{ 'value-column': true, [`value-row--${j % 2 === 0 ? 'even' : 'odd'}`]: true, 'last-row': j + 1 === propsById[effectId].length }"
+                  :value="valueEntry.effect[prop] !== undefined ? valueEntry.effect[prop] : '-'"
+                  :isProcBuffList="isProcBuffList(valueEntry, prop)"/>
+                <value-cell
+                  v-for="(emptyValue, e) in columnCountMappingByUnitEntry.get(unitEntry) - effectsById[effectId].filter(effect => effect.source === unitEntry).length"
+                  :key="`${u}-${j}-${e}-empty`"
+                  :class="{ 'value-column': true, [`value-row--${j % 2 === 0 ? 'even' : 'odd'}`]: true, 'last-row': j + 1 === propsById[effectId].length }"
+                  value="-"/>
+              </template>
+            </template>
+          </tr>
+          <!-- <property-value-row
             v-for="(prop, j) in propsById[effectId].slice(1)"
             :key="`${effectId}-${i}-${j}`"
             :propertyCellClass="{ 'property-column': true, [`property-row--${j % 2 === 0 ? 'even' : 'odd'}`]: true, 'last-row': j + 1 === propsById[effectId].length }"
@@ -71,8 +103,8 @@
             :propName="prop"
             :propValue="effectsById[effectId]"
             :hasMultipleValues="true"
-            :isProcBuffList="isProcBuffList(effectEntry, prop)"/>
-        </template> -->
+            :isProcBuffList="isProcBuffList(effectEntry, prop)"/> -->
+        </template>
       </template>
     </tbody>
   </table>
@@ -170,7 +202,9 @@ export default {
       return Object.keys(this.effectsById).sort((a, b) => +a - +b);
     },
     numValueColumns () {
-      return Math.max(...Object.keys(this.effectsById).map(id => this.effectsById[id].length));
+      return this.unitEntries.reduce((acc, unit) => {
+        return acc + this.columnCountMappingByUnitEntry.get(unit);
+      }, 0);
     },
     columnCountMappingByUnitEntry () {
       const mapping = new WeakMap();
@@ -188,10 +222,8 @@ export default {
       return mapping;
     },
     tableWidth () {
-      const numValueColumns = this.unitEntries.reduce((acc, unit) => {
-        return acc + this.columnCountMappingByUnitEntry.get(unit);
-      }, 0);
-      return `calc(5em + 17.5em + ${numValueColumns * 13.5}em)`;
+      // ID column + property column + ((numValueColumns) * size of 1 value column)
+      return `calc(5em + 17.5em + ${this.numValueColumns * 13.5}em)`;
     },
   },
   data () {

@@ -366,10 +366,11 @@ export default {
 <style lang="less">
 .squad-page {
   dl {
-    max-width: 100%;
+    width: 100%;
   }
 
   dd {
+    // width: 100%;
     overflow-x: auto;
   }
 }
