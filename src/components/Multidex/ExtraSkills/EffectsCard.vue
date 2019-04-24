@@ -28,7 +28,7 @@
 <script>
 import { mapGetters } from 'vuex';
 import DescriptionCardBase from '@/components/Multidex/DescriptionCardBase';
-import BuffTable from '@/components/Multidex/BuffTable/MainTable';
+import BuffTable from '@/components/Multidex/BuffTableGrid/MainTable';
 import { splitEffectsByCondition } from '@/modules/core/extra-skills';
 
 export default {

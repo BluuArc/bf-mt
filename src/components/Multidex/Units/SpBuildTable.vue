@@ -84,7 +84,7 @@ import {
 } from '@/modules/core/units';
 import debounce from 'lodash/debounce';
 import SpIcon from '@/components/Multidex/Units/SpIcon';
-import BuffTable from '@/components/Multidex/BuffTable/MainTable';
+import BuffTable from '@/components/Multidex/BuffTableGrid/MainTable';
 
 export default {
   props: {

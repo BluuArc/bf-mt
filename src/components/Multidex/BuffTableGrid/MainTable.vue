@@ -2,7 +2,7 @@
   <div class="buff-table-grid" :style="mainGridStyle">
     <template v-if="showHeaders">
       <span class="id-cell header-cell">
-        <v-btn flat @click="toggleAllEffectViews" small style="min-width: 36px;">
+        <v-btn flat @click="toggleAllEffectViews" small style="min-height: 40px;">
           <v-icon>{{ hiddenIndices.length === mappedEffects.length ? 'fullscreen' : 'fullscreen_exit' }}</v-icon>
           ID
         </v-btn>
@@ -112,7 +112,7 @@ export default {
     gridRowConfig () {
       const numEffectRows = this.mappedEffects.length; // number of effect rows
       return [
-        this.showHeaders ? 'minmax(36px, auto)' : '',
+        this.showHeaders ? 'minmax(40px, auto)' : '',
         `repeat(${numEffectRows}, auto)`,
       ].filter(v => v).join(' ');
     },
@@ -188,7 +188,7 @@ div.buff-table-grid {
   --table-border-settings: 1px solid var(--table-border-color);
 
   display: grid;
-  grid-template-columns: minmax(5em, auto) 1fr;
+  grid-template-columns: minmax(64px, auto) 1fr;
   border: var(--table-border-settings);
 
   .header-cell {
@@ -202,7 +202,7 @@ div.buff-table-grid {
     align-content: center;
   }
 
-  .id-cell button.collapse-btn {
+  .id-cell button {
     height: auto;
     min-width: 0;
     flex: auto;
@@ -214,7 +214,12 @@ div.buff-table-grid {
 
   .value-cell {
     text-align: center;
+  }
+
+  .property-cell, .value-cell {
     padding: 0.5em;
+    word-break: break-word;
+    hyphens: auto;
   }
 
   .property-cell, .header-cell {
@@ -239,6 +244,11 @@ div.buff-table-grid {
     display: grid;
     grid-template-columns: 17.5em 1fr;
     grid-auto-flow: stretch;
+
+    // nested table
+    .value-subgrid {
+      grid-template-columns: minmax(17.5em, auto) 1fr;
+    }
 
     .even-row:not(.value-cell), .even-row.value-cell:not(:hover) {
       &:not(.only-row) {

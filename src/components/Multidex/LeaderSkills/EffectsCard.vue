@@ -18,7 +18,7 @@
 
 <script>
 import DescriptionCardBase from '@/components/Multidex/DescriptionCardBase';
-import BuffTable from '@/components/Multidex/BuffTable/MainTable';
+import BuffTable from '@/components/Multidex/BuffTableGrid/MainTable';
 // import BuffList from '@/components/Multidex/BuffList/BuffList';
 
 export default {

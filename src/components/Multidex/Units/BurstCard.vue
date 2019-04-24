@@ -101,7 +101,7 @@
 import { mapGetters } from 'vuex';
 import DescriptionCardBase from '@/components/Multidex/DescriptionCardBase';
 import CardTitleWithLink from '@/components/CardTitleWithLink';
-import BuffTable from '@/components/Multidex/BuffTable/MainTable';
+import BuffTable from '@/components/Multidex/BuffTableGrid/MainTable';
 import HitCountTable from '@/components/Multidex/HitCountTable';
 import * as burstHelpers from '@/modules/core/bursts';
 
