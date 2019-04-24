@@ -102,7 +102,17 @@
                 </dd>
 
                 <dt>Party Buffs</dt>
-                <dd>table here</dd>
+                <dd>
+                  <squad-buff-compare-table-grid
+                    :getUnit="getUnit"
+                    :getItem="getItem"
+                    :getExtraSkill="getExtraSkill"
+                    :squad="squad"
+                    :targetType="targetTypes.PARTY"
+                    :effectType="squadBuffTypes.PROC">
+
+                  </squad-buff-compare-table-grid>
+                </dd>
 
                 <dt>For the Enemy</dt>
                 <dd>table here</dd>
@@ -183,6 +193,7 @@ import DeleteSquadCard from '@/components/Tools/Squads/DeleteSquadCard';
 import TabContainer from '@/components/CardTabsContainer';
 import SquadListCardEditable from '@/components/Tools/Squads/SquadListCardEditable';
 import SquadBuffCompareTable from '@/components/Multidex/BuffTable/SquadBuffCompareTable';
+import SquadBuffCompareTableGrid from '@/components/Multidex/BuffTableGrid/SquadBuffCompareTable';
 
 const logger = new Logger({ prefix: '[Squad]' });
 export default {
@@ -201,6 +212,7 @@ export default {
     SquadListCardEditable,
     LoadingIndicator,
     SquadBuffCompareTable,
+    SquadBuffCompareTableGrid,
   },
   computed: {
     ...mapState('settings', ['activeServer']),
