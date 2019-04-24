@@ -48,6 +48,7 @@
               :class="{
                 'property-cell': true,
                 [j % 2 === 0 ? 'even-row' : 'odd-row']: true,
+                'only-row': getSortedProps(effectEntry.effect).length === 1,
               }"
               :key="`${effectEntry.id}-${i}-${j}-property`"
             >
@@ -56,8 +57,9 @@
             <span
               v-if="hasBuffTable && isProcBuffList(prop)"
               :class="{
-                'value-cell': true,
+                'value-cell has-table': true,
                 [j % 2 === 0 ? 'even-row' : 'odd-row']: true,
+                'only-row': getSortedProps(effectEntry.effect).length === 1,
               }"
               :key="`${effectEntry.id}-${i}-${j}-table`"
             >
@@ -68,6 +70,7 @@
               :class="{
                 'value-cell': true,
                 [j % 2 === 0 ? 'even-row' : 'odd-row']: true,
+                'only-row': getSortedProps(effectEntry.effect).length === 1,
               }"
               :key="`${effectEntry.id}-${i}-${j}-value`"
               style="display: flex; align-items: center; justify-content: center;"
@@ -140,7 +143,7 @@ export default {
     },
     getSortedProps (effect) {
       if (!this.sortedPropsCache.has(effect)) {
-        this.sortedPropsCache.set(effect, Object.keys(effect).sort((a, b) => a < b ? -1 : 1));
+        this.sortedPropsCache.set(effect, Object.freeze(Object.keys(effect).sort((a, b) => a < b ? -1 : 1)));
       }
       return this.sortedPropsCache.get(effect);
     },
@@ -185,12 +188,8 @@ div.buff-table-grid {
   --table-border-settings: 1px solid var(--table-border-color);
 
   display: grid;
-  // grid-template-rows: minmax(1.5em, auto);
   grid-template-columns: minmax(5em, auto) 1fr;
-  justify-items: center;
-  align-items: center;
   border: var(--table-border-settings);
-  // grid-row-gap: 1em;
 
   .header-cell {
     font-weight: bold;
@@ -215,19 +214,18 @@ div.buff-table-grid {
 
   .value-cell {
     text-align: center;
-    padding: 0.5em 0 0.5em;
+    padding: 0.5em;
   }
 
   .property-cell, .header-cell {
-    // text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    // height: 100%;
   }
 
   .property-cell span {
-    flex: none;
+    flex: 1 0 100%;
+    text-align: center;
   }
 
   .id-cell:not(.header-cell), .value-subgrid:not(.header-grid) {
@@ -240,12 +238,20 @@ div.buff-table-grid {
     height: 100%;
     display: grid;
     grid-template-columns: 17.5em 1fr;
-    // justify-items: center;
-    // align-items: center;
     grid-auto-flow: stretch;
 
-    .even-row {
-      background-color: var(--table-border-color);
+    .even-row:not(.value-cell), .even-row.value-cell:not(:hover) {
+      &:not(.only-row) {
+        background-color: var(--table-border-color);
+      }
+    }
+
+    .value-cell:not(.header-cell):hover {
+      background-color: var(--background-color--card);
+    }
+
+    .value-cell.has-table:not(.header-cell):hover {
+      background-color: var(--background-color);
     }
   }
 }
