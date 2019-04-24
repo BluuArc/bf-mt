@@ -22,7 +22,7 @@
             </v-card-actions>
             <v-slide-y-transition>
               <div v-show="showBuffTable" style="overflow-x: auto;">
-                <buff-table :effects="effects" v-if="hasShownBuffTable" :showHeaders="true"/>
+                <buff-table-grid :effects="effects" v-if="hasShownBuffTable" :showHeaders="true"/>
               </div>
             </v-slide-y-transition>
           </template>
@@ -50,7 +50,7 @@
 <script>
 import BorderedTitledCard from '@/components/BorderedTitledCard';
 import CardTitleWithLink from '@/components/CardTitleWithLink';
-import BuffTable from '@/components/Multidex/BuffTable/MainTable';
+import BuffTableGrid from '@/components/Multidex/BuffTableGrid/MainTable';
 import BuffList from '@/components/Multidex/BuffList/BuffList';
 import CardTabsContainer from '@/components/CardTabsContainer';
 import JsonViewer from '@/components/JsonViewer';
@@ -99,7 +99,7 @@ export default {
   components: {
     BorderedTitledCard,
     CardTitleWithLink,
-    BuffTable,
+    BuffTableGrid,
     BuffList,
     CardTabsContainer,
     JsonViewer,
