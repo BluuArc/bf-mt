@@ -1,4 +1,20 @@
 {
+  "MST_SKILLS_212253_NAME": {
+    "en": "I seek strong opponents.",
+    "es": "Busco rivales fuertes.",
+    "id": "Aku mencari lawan kuat.",
+    "pt": "Busco oponentes poderosos.",
+    "th": "ข้าเห็นคู่ต่อสู้",
+    "vi": "I seek strong opponents."
+  },
+  "MST_SKILLS_21225400_NAME": {
+    "en": "Show me your techniques.",
+    "es": "Show me your techniques.",
+    "id": "Tunjukkan teknikmu.",
+    "pt": "Show me your techniques.",
+    "th": "แสดงเทคนิคของเจ้าให้ดูหน่อย",
+    "vi": "Show me your techniques."
+  },
   "MST_SKILLS_2122540_DESCRIPTION": {
     "en": "11 combo powerful Fire attack on all enemies & probable Curse effect",
     "es": "Combo grupal de 11 poderosos ataques ígneos. Puede causar maldición",
@@ -88368,12 +88384,12 @@
     "vi": "DM: V-Slasher MAX"
   },
   "MST_SKILLS_2830188_DESCRIPTION": {
-    "en": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage for 3 turns, enormous 3 turn Atk, Def reduction & enormously boosts own Atk, boosts own critical hit rate and hugely reduces own Def for 3 turns",
-    "es": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage, enormous 3 turn Atk, Def reduction & enormously boosts own Atk, boosts own critical hit rate and hugely reduces own Def for 3 turns",
-    "id": "Serangan Bumi masif ke semua musuh (kerusakan sesuai sisa HP), serangan Bumi masif ke 1 musuh, 3 giliran: ekstra jumbo Serang, Tahan, Pulih, Serangan sendiri, dan kerusakan pukulan ampuh; pengurangan jumbo Serang, Tahan; amat kurangi Tahan sendiri & menambah pukulan ampuh sendiri ",
-    "pt": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage, enormous 3 turn Atk, Def reduction & enormously boosts own Atk, boosts own critical hit rate and hugely reduces own Def for 3 turns",
-    "th": "โจมตีธาตุดินรุนแรงมหาศาล ใส่ศัตรูทั้งหมด (ความเสียหาย สัมพันธ์กับ HP ที่เหลืออยู่), โจมตีธาตุดินรุนแรงมหาศาล ใส่ศัตรูเป้าหมาย, เพิ่มค่ามหาศาลให้ โจมตี, ป้องกัน, ฟื้นฟู นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ ความเสียหายคริติคอล นาน 3 เทิร์น, 3 เทิร์น ลดค่า โจมตี, ป้องกัน มหาศาล และ เพิ่มค่ามหาศาลให้ โจมตี ของตนเอง, เพิ่มค่า อัตราเกิดคริติคอลของตนเอง กับ ลดค่า ป้องกัน ของตนเองอย่างสูง นาน 3 เทิร์น",
-    "vi": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage, enormous 3 turn Atk, Def reduction & enormously boosts own Atk, boosts own critical hit rate and hugely reduces own Def for 3 turns"
+    "en": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage for 3 turns, enormous 3 turn Atk, Def reduction & enormously boosts own Atk and considerably reduces own Def for 3 turns",
+    "es": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage for 3 turns, enormous 3 turn Atk, Def reduction & enormously boosts own Atk and considerably reduces own Def for 3 turns",
+    "id": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage for 3 turns, enormous 3 turn Atk, Def reduction & enormously boosts own Atk and considerably reduces own Def for 3 turns",
+    "pt": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage for 3 turns, enormous 3 turn Atk, Def reduction & enormously boosts own Atk and considerably reduces own Def for 3 turns",
+    "th": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage for 3 turns, enormous 3 turn Atk, Def reduction & enormously boosts own Atk and considerably reduces own Def for 3 turns",
+    "vi": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage for 3 turns, enormous 3 turn Atk, Def reduction & enormously boosts own Atk and considerably reduces own Def for 3 turns"
   },
   "MST_SKILLS_2830188_NAME": {
     "en": "SDM: V-Slasher MAX",
@@ -88798,5 +88814,45 @@
     "pt": "You got them, Bjørn!",
     "th": "You got them, Bjørn!",
     "vi": "You got them, Bjørn!"
+  },
+  "MST_SKILLS_2830557_DESCRIPTION": {
+    "en": "23 combo massive Earth attack on all foes, high probability of raising allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts OD gauge",
+    "es": "23 combo massive Earth attack on all foes, high probability of raising allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts OD gauge",
+    "id": "23 combo massive Earth attack on all foes, high probability of raising allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts OD gauge",
+    "pt": "23 combo massive Earth attack on all foes, high probability of raising allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts OD gauge",
+    "th": "23 combo massive Earth attack on all foes, high probability of raising allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts OD gauge",
+    "vi": "23 combo massive Earth attack on all foes, high probability of raising allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns & enormously boosts OD gauge"
+  },
+  "MST_SKILLS_2830557_NAME": {
+    "en": "Hisa! Wrathful Typhoon!",
+    "es": "Hisa! Wrathful Typhoon!",
+    "id": "Hisa! Wrathful Typhoon!",
+    "pt": "Hisa! Wrathful Typhoon!",
+    "th": "Hisa! Wrathful Typhoon!",
+    "vi": "Hisa! Wrathful Typhoon!"
+  },
+  "MST_SKILLS_2830558_DESCRIPTION": {
+    "en": "26 combo massive Earth attack on all foes, raises allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns, enormously boosts OD gauge & enormously boosts max HP",
+    "es": "26 combo massive Earth attack on all foes, raises allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns, enormously boosts OD gauge & enormously boosts max HP",
+    "id": "26 combo massive Earth attack on all foes, raises allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns, enormously boosts OD gauge & enormously boosts max HP",
+    "pt": "26 combo massive Earth attack on all foes, raises allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns, enormously boosts OD gauge & enormously boosts max HP",
+    "th": "26 combo massive Earth attack on all foes, raises allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns, enormously boosts OD gauge & enormously boosts max HP",
+    "vi": "26 combo massive Earth attack on all foes, raises allies from KO, damage taken enormously boosts BB gauge and restores HP for 3 turns, enormously boosts OD gauge & enormously boosts max HP"
+  },
+  "MST_SKILLS_2830558_NAME": {
+    "en": "Hisa! Imperious Storm!",
+    "es": "Hisa! Imperious Storm!",
+    "id": "Hisa! Imperious Storm!",
+    "pt": "Hisa! Imperious Storm!",
+    "th": "Hisa! Imperious Storm!",
+    "vi": "Hisa! Imperious Storm!"
+  },
+  "MST_SKILLS_2830587_DESCRIPTION": {
+    "en": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction",
+    "es": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction",
+    "id": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction",
+    "pt": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction",
+    "th": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction",
+    "vi": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction"
   }
 }
