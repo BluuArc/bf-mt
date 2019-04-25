@@ -41,21 +41,51 @@
       </span>
       <span  
         class="value-subgrid"
+        :style="mainValueGridStyle"
         :key="`${effectId}-${i}-value-subgrid`"
       >
         <!-- add 1 to column span to account for property column -->
         <span
           v-if="hiddenIndices.includes(i)"
           class="property-cell"
-          :style="convertNumberToColumnSpanStyle(numValueColumns + 1)"
+          style="grid-column: span 2"
           v-text="getEffectsHiddenText(propsById[effectId].length)"
         />
-        <span
-          v-else
-          class="property-cell"
-          :style="convertNumberToColumnSpanStyle(numValueColumns + 1)">
-          {{ effectsById[effectId] }}
-        </span>
+        <template v-else>
+          <template v-for="(prop, j) in propsById[effectId]">
+            <span
+              :class="{
+                'property-cell': true,
+                [j % 2 === 0 ? 'even-row' : 'odd-row']: true,
+                'only-row': propsById[effectId].length === 1,
+              }"
+              :key="`${effectId}-${i}-${j}-property`"
+            >
+              <span v-text="prop"/>
+            </span>
+            <template v-for="(unitEntry, u) in unitEntries">
+              <span
+                v-if="getColumnDataForUnitEntry(unitEntry, effectId).length === 0"
+                :key="`${u}-${i}-${j}-unit-empty`"
+                class="value-cell is-last-value-cell"
+                :style="convertNumberToColumnSpanStyle(columnCountMappingByUnitEntry.get(unitEntry))"
+                v-text="'-'"
+              />
+              <template v-else>
+                <span
+                  v-for="(valueEntry, v) in getColumnDataForUnitEntry(unitEntry, effectId)"
+                  :key="`${u}-${i}-${j}-${v}-unit`"
+                  :class="{
+                    'value-cell': true,
+                    'is-last-value-cell': v === getColumnDataForUnitEntry(unitEntry, effectId).length - 1,
+                  }"
+                >
+                  {{ valueEntry.effect[prop] || '-' }}
+                </span>
+              </template>
+            </template>
+          </template>
+        </template>
       </span>
     </template>
   </div>
@@ -94,7 +124,7 @@ export default {
     },
     mainValueGridStyle () {
       const propertyColumnWidth = '17.5em';
-      const valueSubgridWidth = '1fr';
+      const valueSubgridWidth = 'minmax(5em, 1fr)';
       return {
         'grid-template-columns': [
           propertyColumnWidth,
@@ -185,6 +215,7 @@ export default {
   data () {
     return {
       hiddenIndices: [],
+      entryColumnDataByEffectId: {},
     };
   },
   methods: {
@@ -234,6 +265,29 @@ export default {
     getEffectsHiddenText (numProps) {
       return `${numProps} ${numProps !== 1 ? 'Effects' : 'Effect'} Hidden`;
     },
+    getColumnDataForUnitEntry(entry, effectId) {
+      if (!this.entryColumnDataByEffectId[effectId]) {
+        this.entryColumnDataByEffectId[effectId] = new WeakMap();
+      }
+      const effectIdEntry = this.entryColumnDataByEffectId[effectId];
+      if (!effectIdEntry.has(entry)) {
+        const expectedValueColumns = this.columnCountMappingByUnitEntry.get(entry);
+        let filteredData = this.effectsById[effectId].filter(effect => effect.source === entry);
+        if (filteredData.length > 0) {
+          for (let i = filteredData.length; i < expectedValueColumns; ++i) {
+            // empty effect object signifies empty value
+            filteredData.push({ effect: {} });
+          }
+        }
+        effectIdEntry.set(entry, Object.freeze(filteredData));
+      }
+      return effectIdEntry.get(entry);
+    },
+  },
+  watch: {
+    effectsById () {
+      this.entryColumnDataByEffectId = {};
+    },
   },
 };
 </script>
@@ -246,7 +300,7 @@ div.squad-buff-compare-table-grid {
 
   display: grid;
   grid-template-columns: minmax(64px, auto) 1fr;
-  border: var(--table-border-settings);
+  // border: var(--table-border-settings);
 
   .header-cell {
     font-weight: bold;
@@ -297,6 +351,10 @@ div.squad-buff-compare-table-grid {
   .id-cell:not(.header-cell), .value-subgrid:not(.header-grid) {
     border-top: 2px solid var(--table-background-color);
     border-bottom: 2px solid var(--table-background-color);
+  }
+
+  .is-last-value-cell {
+    border-right: 2px solid var(--table-background-color);
   }
 
   .value-subgrid {
