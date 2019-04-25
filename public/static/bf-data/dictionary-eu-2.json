@@ -1,4 +1,124 @@
 {
+  "MST_LEADERSKILLS_7512_DESCRIPTION": {
+    "en": "60% boost to Atk, max HP, 130% boost to Spark damage, hugely boosts critical damage & adds probable Def ignoring effect to attack",
+    "es": "60% boost to Atk, max HP, 130% boost to Spark damage, hugely boosts critical damage & adds probable Def ignoring effect to attack",
+    "id": "60% ekstra Serang, HP maks, 130% ekstra kerusakan Percikan, amat menambah kerusakan ampuh, beri efek kans abaikan Pertahanan ke serangan",
+    "pt": "60% boost to Atk, max HP, 130% boost to Spark damage, hugely boosts critical damage & adds probable Def ignoring effect to attack",
+    "th": "60% เพิ่มค่าให้ โจมตี, HP สูงสุด, 130% เพิ่มค่าให้ ความเสียหายสปาร์ค, เพิ่มค่าอย่างสูงให้ ความเสียหายคริติคอล และ ให้ผล อาจจะไม่สนค่าป้องกันให้กับการโจมตี",
+    "vi": "60% boost to Atk, max HP, 130% boost to Spark damage, hugely boosts critical damage & adds probable Def ignoring effect to attack"
+  },
+  "MST_LEADERSKILLS_7512_NAME": {
+    "en": "Merciless Undertow",
+    "es": "Merciless Undertow",
+    "id": "Arus Bawah Tanpa Ampun",
+    "pt": "Merciless Undertow",
+    "th": "เมอซี่เลส อันเดอร์โทว",
+    "vi": "Merciless Undertow"
+  },
+  "MST_LEADERSKILLS_7513_DESCRIPTION": {
+    "en": "35% boost to Atk, max HP, 60% boost to Spark damage & adds probable Def ignoring effect to attack",
+    "es": "35% boost to Atk, max HP, 60% boost to Spark damage & adds probable Def ignoring effect to attack",
+    "id": "35% ekstra Serang, HP maks, 60% ekstra kerusakan Percikan, beri efek kans abaikan Pertahanan ke serangan",
+    "pt": "35% boost to Atk, max HP, 60% boost to Spark damage & adds probable Def ignoring effect to attack",
+    "th": "35% เพิ่มค่าให้ โจมตี, HP สูงสุด, 60% เพิ่มค่าให้ ความเสียหายสปาร์ค และ ให้ผล อาจจะไม่สนค่าป้องกันให้กับการโจมตี",
+    "vi": "35% boost to Atk, max HP, 60% boost to Spark damage & adds probable Def ignoring effect to attack"
+  },
+  "MST_LEADERSKILLS_7513_NAME": {
+    "en": "Red Dragon Scales",
+    "es": "Red Dragon Scales",
+    "id": "Sisik Naga Merah",
+    "pt": "Red Dragon Scales",
+    "th": "เร้ด ดราก้อน สเกลส์",
+    "vi": "Red Dragon Scales"
+  },
+  "MST_LEADERSKILLS_7514_DESCRIPTION": {
+    "en": "45% boost to Atk, max HP, adds Fire element to attack, 80% boost to Spark damage & adds probable Def ignoring effect to attack",
+    "es": "45% boost to Atk, max HP, adds Fire element to attack, 80% boost to Spark damage & adds probable Def ignoring effect to attack",
+    "id": "45% ekstra Serang, HP maks, beri elemen Api ke serangan, 80% ekstra kerusakan Percikan, beri efek kans abaikan Pertahanan ke serangan",
+    "pt": "45% boost to Atk, max HP, adds Fire element to attack, 80% boost to Spark damage & adds probable Def ignoring effect to attack",
+    "th": "45% เพิ่มค่าให้ โจมตี, HP สูงสุด, เพิ่ม ธาตุไฟ ให้กับการโจมตี, 80% เพิ่มค่าให้ ความเสียหายสปาร์ค และ ให้ผล อาจจะไม่สนค่าป้องกันให้กับการโจมตี",
+    "vi": "45% boost to Atk, max HP, adds Fire element to attack, 80% boost to Spark damage & adds probable Def ignoring effect to attack"
+  },
+  "MST_LEADERSKILLS_7514_NAME": {
+    "en": "Enchanted Dragon Scales",
+    "es": "Enchanted Dragon Scales",
+    "id": "Sisik Naga Tersihir",
+    "pt": "Enchanted Dragon Scales",
+    "th": "เอ็นชานท์เต็ด ดราก้อน สเกลส์",
+    "vi": "Enchanted Dragon Scales"
+  },
+  "MST_LEADERSKILLS_7515_DESCRIPTION": {
+    "en": "50% boost to Atk, max HP, Spark damage boosts BB gauge, 100% boost to Spark damage & boosts Spark damage for 2 turns when Sparks exceed certain amount",
+    "es": "50% boost to Atk, max HP, Spark damage boosts BB gauge, 100% boost to Spark damage & boosts Spark damage for 2 turns when Sparks exceed certain amount",
+    "id": "50% ekstra Serang, HP maks, kerusakan Percikan menambah meteran BB, 100% ekstra kerusakan Percikan, menambah kerusakan Percikan 2 giliran saat Percikan melampaui jumlah tertentu",
+    "pt": "50% boost to Atk, max HP, Spark damage boosts BB gauge, 100% boost to Spark damage & boosts Spark damage for 2 turns when Sparks exceed certain amount",
+    "th": "50% เพิ่มค่าให้ โจมตี, HP สูงสุด, ความเสียหายสปาร์ค เพิ่มค่า เกจ BB, 100% เพิ่มค่าให้ ความเสียหายสปาร์ค และ เพิ่มค่า ความเสียหายสปาร์ค นาน 2 เทิร์น เมื่อสปาร์คเกินกว่าปริมาณหนึ่ง",
+    "vi": "50% boost to Atk, max HP, Spark damage boosts BB gauge, 100% boost to Spark damage & boosts Spark damage for 2 turns when Sparks exceed certain amount"
+  },
+  "MST_LEADERSKILLS_7515_NAME": {
+    "en": "Mechanist's Soul",
+    "es": "Mechanist's Soul",
+    "id": "Jiwa Mekanis",
+    "pt": "Mechanist's Soul",
+    "th": "เมคคานิสต์ โวล",
+    "vi": "Mechanist's Soul"
+  },
+  "MST_LEADERSKILLS_7516_DESCRIPTION": {
+    "en": "80% boost to Atk, 40% boost to max HP, probable random status ailment infliction & damage taken hugely boosts BB gauge",
+    "es": "80% boost to Atk, 40% boost to max HP, probable random status ailment infliction & damage taken hugely boosts BB gauge",
+    "id": "80% ekstra Serang, 40% ekstra HP maks, kans beri status penyakit acak, kerusakan diderita amat menambah meteran BB",
+    "pt": "80% boost to Atk, 40% boost to max HP, probable random status ailment infliction & damage taken hugely boosts BB gauge",
+    "th": "80% เพิ่มค่าให้ โจมตี, 40% เพิ่มค่าให้ HP สูงสุด, มีโอกาส ทำให้ติดสถานผิดปกติโดยสุ่ม และ ความเสียหายที่ได้รับ เพิ่มค่าอย่างสูงให้ เกจ BB",
+    "vi": "80% boost to Atk, 40% boost to max HP, probable random status ailment infliction & damage taken hugely boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_7516_NAME": {
+    "en": "Corrupted Legions",
+    "es": "Corrupted Legions",
+    "id": "Legiun Terkorupsi",
+    "pt": "Corrupted Legions",
+    "th": "คอร์รับเต็ด ลีเจี้ยนส์",
+    "vi": "Corrupted Legions"
+  },
+  "MST_LEADERSKILLS_7517_DESCRIPTION": {
+    "en": "50% boost to Atk, max HP, slight HP absorption & hugely boosts all elemental damage",
+    "es": "50% boost to Atk, max HP, slight HP absorption & hugely boosts all elemental damage",
+    "id": "50% ekstra Serang, HP maks, agak serap HP & amat menambah kerusakan semua elemen",
+    "pt": "50% boost to Atk, max HP, slight HP absorption & hugely boosts all elemental damage",
+    "th": "50% เพิ่มค่าให้ โจมตี, HP สูงสุด, ดูดซับ HP เล็กน้อย และ เพิ่มค่าอย่างสูงให้ ความเสียหายธาตุทั้งหมด",
+    "vi": "50% boost to Atk, max HP, slight HP absorption & hugely boosts all elemental damage"
+  },
+  "MST_LEADERSKILLS_7517_NAME": {
+    "en": "Forbidden Aberration",
+    "es": "Forbidden Aberration",
+    "id": "Aberasi Terlarang",
+    "pt": "Forbidden Aberration",
+    "th": "ฟอร์บิดเด้น อเบอร์เรชั่น",
+    "vi": "Forbidden Aberration"
+  },
+  "MST_LEADERSKILLS_7518_DESCRIPTION": {
+    "en": "60% boost to Atk, max HP, slight HP absorption, hugely boosts all elemental damage & enormously boosts Spark damage for 2 turns when damage dealt exceeds certain amount",
+    "es": "60% boost to Atk, max HP, slight HP absorption, hugely boosts all elemental damage & enormously boosts Spark damage for 2 turns when damage dealt exceeds certain amount",
+    "id": "60% ekstra Serang, HP maks, agak serap HP, amat menambah kerusakan semua elemen, ekstra jumbo kerusakan Percikan 2 giliran saat sudah merusak melampaui jumah tertentu",
+    "pt": "60% boost to Atk, max HP, slight HP absorption, hugely boosts all elemental damage & enormously boosts Spark damage for 2 turns when damage dealt exceeds certain amount",
+    "th": "60% เพิ่มค่าให้ โจมตี, HP สูงสุด, ดูดซับ HP เล็กน้อย, เพิ่มค่าอย่างสูงให้ ความเสียหายธาตุทั้งหมด และ เพิ่มค่ามหาศาลให้ ความเสียหายสปาร์ค นาน 2 เทิร์น เมื่อความเสียหายที่สร้างเกินกว่าปริมาณหนึ่ง",
+    "vi": "60% boost to Atk, max HP, slight HP absorption, hugely boosts all elemental damage & enormously boosts Spark damage for 2 turns when damage dealt exceeds certain amount"
+  },
+  "MST_LEADERSKILLS_7518_NAME": {
+    "en": "Mockery of Life",
+    "es": "Mockery of Life",
+    "id": "Ejekan Hidup",
+    "pt": "Mockery of Life",
+    "th": "ม็อกเคอรี่ ออฟ ไลฟ์",
+    "vi": "Mockery of Life"
+  },
+  "MST_LEADERSKILLS_7519_DESCRIPTION": {
+    "en": "80% boost to Atk, 30% boost to max HP, hugely boosts BB Atk, considerably boosts critical damage & considerably boosts OD gauge fill rate",
+    "es": "80% boost to Atk, 30% boost to max HP, hugely boosts BB Atk, considerably boosts critical damage & considerably boosts OD gauge fill rate",
+    "id": "80% ekstra Serang, 30% HP maks, amat menambah BB Serang, lumayan menambah kerusakan ampuh & laju pengisian meteran OD",
+    "pt": "80% boost to Atk, 30% boost to max HP, hugely boosts BB Atk, considerably boosts critical damage & considerably boosts OD gauge fill rate",
+    "th": "80% เพิ่มค่าให้ โจมตี, 30% เพิ่มค่าให้ HP สูงสุด, เพิ่มค่าอย่างสูงให้ BB โจมตี, เพิ่มค่าอย่างมากให้ ความเสียหายคริติคอล และ เพิ่มค่าอย่างมากให้ อัตราเติมเกจ OD",
+    "vi": "80% boost to Atk, 30% boost to max HP, hugely boosts BB Atk, considerably boosts critical damage & considerably boosts OD gauge fill rate"
+  },
   "MST_LEADERSKILLS_7519_NAME": {
     "en": "Give me a break",
     "es": "Give me a break",
@@ -3560,12 +3680,12 @@
     "vi": "Curse of Orochi"
   },
   "MST_LEADERSKILLS_801257_DESCRIPTION": {
-    "en": "80% boost to Atk, 40% boost to max HP, hugely boosts BB Atk, enormously boosts Atk when HP is low & greatly boosts BB gauge when damage taken has exceeded certain amount",
-    "es": "80% boost to Atk, 40% boost to max HP, hugely boosts BB Atk, enormously boosts Atk when HP is low & greatly boosts BB gauge when damage taken has exceeded certain amount",
-    "id": "80% ekstra Serang, HP maks, amat menambah BB Serang dan tambahan jumbo Serang saat HP rendah, amat menambah meteran BB saat kerusakan diderita melampaui jumlah tertentu",
-    "pt": "80% boost to Atk, 40% boost to max HP, hugely boosts BB Atk, enormously boosts Atk when HP is low & greatly boosts BB gauge when damage taken has exceeded certain amount",
-    "th": "80% เพิ่มค่า โจมตี, HP สูงสุด, เพิ่มค่าอย่างสูงให้กับ BB โจมตี, เพิ่มค่ามหาศาลให้กับ โจมตี เมื่อ HP นั้นต่ำ และ เพิ่มค่าอย่างมากให้กับ เกจ BB เมื่อ ความเสียหายที่ได้รับ เกินกว่าปริมาณหนึ่ง",
-    "vi": "80% boost to Atk, 40% boost to max HP, hugely boosts BB Atk, enormously boosts Atk when HP is low & greatly boosts BB gauge when damage taken has exceeded certain amount"
+    "en": "150% boost to Atk, 80% boost to max HP, greatly boosts BB Atk, enormously boosts Atk when HP is low, hugely boosts Fire, Dark elemental damage & greatly boosts BB gauge when damage dealt has exceeded certain amount",
+    "es": "150% boost to Atk, 80% boost to max HP, greatly boosts BB Atk, enormously boosts Atk when HP is low, hugely boosts Fire, Dark elemental damage & greatly boosts BB gauge when damage dealt has exceeded certain amount",
+    "id": "150% boost to Atk, 80% boost to max HP, greatly boosts BB Atk, enormously boosts Atk when HP is low, hugely boosts Fire, Dark elemental damage & greatly boosts BB gauge when damage dealt has exceeded certain amount",
+    "pt": "150% boost to Atk, 80% boost to max HP, greatly boosts BB Atk, enormously boosts Atk when HP is low, hugely boosts Fire, Dark elemental damage & greatly boosts BB gauge when damage dealt has exceeded certain amount",
+    "th": "150% boost to Atk, 80% boost to max HP, greatly boosts BB Atk, enormously boosts Atk when HP is low, hugely boosts Fire, Dark elemental damage & greatly boosts BB gauge when damage dealt has exceeded certain amount",
+    "vi": "150% boost to Atk, 80% boost to max HP, greatly boosts BB Atk, enormously boosts Atk when HP is low, hugely boosts Fire, Dark elemental damage & greatly boosts BB gauge when damage dealt has exceeded certain amount"
   },
   "MST_LEADERSKILLS_801257_NAME": {
     "en": "Unbridled Instinct",
@@ -5912,12 +6032,12 @@
     "vi": "Ikari Style"
   },
   "MST_LEADERSKILLS_830188_DESCRIPTION": {
-    "en": "100% boost to Atk, Def, 60% boost to max HP, probable normal attack on all foes, considerably boosts BB and SBB activation rates & considerably boosts ABP and CBP gain",
-    "es": "100% boost to Atk, Def, 60% boost to max HP, probable normal attack on all foes, considerably boosts BB and SBB activation rates & considerably boosts ABP and CBP gain",
-    "id": "100% ekstra Serang, Tahan, 60% ekstra HP maks, kans serangan normal ke semua musuh, lumayan menambah perolehan ABP dan CBP, laju aktivasi BB dan SBB",
-    "pt": "100% boost to Atk, Def, 60% boost to max HP, probable normal attack on all foes, considerably boosts BB and SBB activation rates & considerably boosts ABP and CBP gain",
-    "th": "100% เพิ่มค่าให้ โจมตี, ป้องกัน, 60% เพิ่มค่าให้ HP สูงสุด, มีโอกาส โจมตีธรรมดา ใส่ศัตรูทั้งหมด, เพิ่มค่าอย่างสูงมาก อัตราการใช้งาน BB กับ SBB และ เพิ่มค่าอย่างสูงมาก ABP กับ CBP ที่ได้รับ",
-    "vi": "100% boost to Atk, Def, 60% boost to max HP, probable normal attack on all foes, considerably boosts BB and SBB activation rates & considerably boosts ABP and CBP gain"
+    "en": "120% boost to Atk, Def, 80% boost to max HP, probable on all foes, 15% damage reduction from Earth, Thunder types, considerably boosts BB and SBB activation rates & considerably boosts ABP and CBP gain",
+    "es": "120% boost to Atk, Def, 80% boost to max HP, probable on all foes, 15% damage reduction from Earth, Thunder types, considerably boosts BB and SBB activation rates & considerably boosts ABP and CBP gain",
+    "id": "120% boost to Atk, Def, 80% boost to max HP, probable on all foes, 15% damage reduction from Earth, Thunder types, considerably boosts BB and SBB activation rates & considerably boosts ABP and CBP gain",
+    "pt": "120% boost to Atk, Def, 80% boost to max HP, probable on all foes, 15% damage reduction from Earth, Thunder types, considerably boosts BB and SBB activation rates & considerably boosts ABP and CBP gain",
+    "th": "120% boost to Atk, Def, 80% boost to max HP, probable on all foes, 15% damage reduction from Earth, Thunder types, considerably boosts BB and SBB activation rates & considerably boosts ABP and CBP gain",
+    "vi": "120% boost to Atk, Def, 80% boost to max HP, probable on all foes, 15% damage reduction from Earth, Thunder types, considerably boosts BB and SBB activation rates & considerably boosts ABP and CBP gain"
   },
   "MST_LEADERSKILLS_830188_NAME": {
     "en": "Ikari Mastery",
@@ -7734,6 +7854,38 @@
     "pt": "Soul of the Guardian",
     "th": "Soul of the Guardian",
     "vi": "Soul of the Guardian"
+  },
+  "MST_LEADERSKILLS_850727_DESCRIPTION": {
+    "en": "80% boost to Atk, Def, Rec, 100% boost to max HP, enormously boosts critical damage, damage taken hugely boosts BB gauge, Spark damage considerably boosts BB gauge & negates critical and elemental damage",
+    "es": "80% boost to Atk, Def, Rec, 100% boost to max HP, enormously boosts critical damage, damage taken hugely boosts BB gauge, Spark damage considerably boosts BB gauge & negates critical and elemental damage",
+    "id": "80% boost to Atk, Def, Rec, 100% boost to max HP, enormously boosts critical damage, damage taken hugely boosts BB gauge, Spark damage considerably boosts BB gauge & negates critical and elemental damage",
+    "pt": "80% boost to Atk, Def, Rec, 100% boost to max HP, enormously boosts critical damage, damage taken hugely boosts BB gauge, Spark damage considerably boosts BB gauge & negates critical and elemental damage",
+    "th": "80% boost to Atk, Def, Rec, 100% boost to max HP, enormously boosts critical damage, damage taken hugely boosts BB gauge, Spark damage considerably boosts BB gauge & negates critical and elemental damage",
+    "vi": "80% boost to Atk, Def, Rec, 100% boost to max HP, enormously boosts critical damage, damage taken hugely boosts BB gauge, Spark damage considerably boosts BB gauge & negates critical and elemental damage"
+  },
+  "MST_LEADERSKILLS_850727_NAME": {
+    "en": "Wielder of Illusions",
+    "es": "Wielder of Illusions",
+    "id": "Wielder of Illusions",
+    "pt": "Wielder of Illusions",
+    "th": "Wielder of Illusions",
+    "vi": "Wielder of Illusions"
+  },
+  "MST_LEADERSKILLS_850728_DESCRIPTION": {
+    "en": "100% boost to Atk, Def, Rec, 120% boost to max HP, enormously boosts critical damage, damage taken hugely boosts BB gauge, Spark damage considerably boosts BB gauge, negates critical and elemental damage & 15% damage reduction from Light, Dark types",
+    "es": "100% boost to Atk, Def, Rec, 120% boost to max HP, enormously boosts critical damage, damage taken hugely boosts BB gauge, Spark damage considerably boosts BB gauge, negates critical and elemental damage & 15% damage reduction from Light, Dark types",
+    "id": "100% boost to Atk, Def, Rec, 120% boost to max HP, enormously boosts critical damage, damage taken hugely boosts BB gauge, Spark damage considerably boosts BB gauge, negates critical and elemental damage & 15% damage reduction from Light, Dark types",
+    "pt": "100% boost to Atk, Def, Rec, 120% boost to max HP, enormously boosts critical damage, damage taken hugely boosts BB gauge, Spark damage considerably boosts BB gauge, negates critical and elemental damage & 15% damage reduction from Light, Dark types",
+    "th": "100% boost to Atk, Def, Rec, 120% boost to max HP, enormously boosts critical damage, damage taken hugely boosts BB gauge, Spark damage considerably boosts BB gauge, negates critical and elemental damage & 15% damage reduction from Light, Dark types",
+    "vi": "100% boost to Atk, Def, Rec, 120% boost to max HP, enormously boosts critical damage, damage taken hugely boosts BB gauge, Spark damage considerably boosts BB gauge, negates critical and elemental damage & 15% damage reduction from Light, Dark types"
+  },
+  "MST_LEADERSKILLS_850728_NAME": {
+    "en": "Guardian of Mankind",
+    "es": "Guardian of Mankind",
+    "id": "Guardian of Mankind",
+    "pt": "Guardian of Mankind",
+    "th": "Guardian of Mankind",
+    "vi": "Guardian of Mankind"
   },
   "MST_LEADERSKILLS_850900_DESCRIPTION": {
     "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Light elemental damage, 15% damage reduction from Dark types & negates all status ailments",
@@ -88702,101 +88854,5 @@
     "pt": "Themis Inabalável",
     "th": "อันฟลินชิ่ง ธีมิส",
     "vi": "Themis điềm nhiên"
-  },
-  "MST_MONSTERS_54106_NAME": {
-    "en": "Unflinching Themis",
-    "es": "Themis impávida",
-    "id": "Si Gigih Themis",
-    "pt": "Themis Inabalável",
-    "th": "อันฟลินชิ่ง ธีมิส",
-    "vi": "Themis điềm nhiên"
-  },
-  "MST_MONSTERS_54107_NAME": {
-    "en": "Unflinching Themis",
-    "es": "Themis impávida",
-    "id": "Si Gigih Themis",
-    "pt": "Themis Inabalável",
-    "th": "อันฟลินชิ่ง ธีมิส",
-    "vi": "Themis điềm nhiên"
-  },
-  "MST_MONSTERS_54108_NAME": {
-    "en": "Unflinching Themis",
-    "es": "Themis impávida",
-    "id": "Si Gigih Themis",
-    "pt": "Themis Inabalável",
-    "th": "อันฟลินชิ่ง ธีมิส",
-    "vi": "Themis điềm nhiên"
-  },
-  "MST_MONSTERS_54109_NAME": {
-    "en": "Unflinching Themis",
-    "es": "Themis impávida",
-    "id": "Si Gigih Themis",
-    "pt": "Themis Inabalável",
-    "th": "อันฟลินชิ่ง เธมิส",
-    "vi": "Unflinching Themis"
-  },
-  "MST_MONSTERS_54110_NAME": {
-    "en": "Unflinching Themis",
-    "es": "Themis impávida",
-    "id": "Si Gigih Themis",
-    "pt": "Themis Inabalável",
-    "th": "อันฟลินชิ่งเธมิส",
-    "vi": "Unflinching Themis"
-  },
-  "MST_MONSTERS_54111_NAME": {
-    "en": "Unflinching Themis",
-    "es": "Unflinching Themis",
-    "id": "Elang Besar Ziz",
-    "pt": "Unflinching Themis",
-    "th": "อันฟลิชชิ่ง เธมิส",
-    "vi": "Unflinching Themis"
-  },
-  "MST_MONSTERS_54112_NAME": {
-    "en": "Unflinching Themis",
-    "es": "Unflinching Themis",
-    "id": "Unflinching Themis",
-    "pt": "Unflinching Themis",
-    "th": "อันฟลินชิ่ง เธมิส",
-    "vi": "Unflinching Themis"
-  },
-  "MST_MONSTERS_54113_NAME": {
-    "en": "Unflinching Themis",
-    "es": "Unflinching Themis",
-    "id": "Unflinching Themis",
-    "pt": "Unflinching Themis",
-    "th": "อันฟลินชิ่ง เธมิส",
-    "vi": "Unflinching Themis"
-  },
-  "MST_MONSTERS_54150_NAME": {
-    "en": "Worldly Themis",
-    "es": "Themis cosmopolita",
-    "id": "Themis Duniawi",
-    "pt": "Themis Terreno",
-    "th": "เวิร์ลดลี่เธมิส",
-    "vi": "Themis trần tục"
-  },
-  "MST_MONSTERS_54151_NAME": {
-    "en": "Worldly Themis",
-    "es": "Themis cosmopolita",
-    "id": "Themis Duniawi",
-    "pt": "Themis Terreno",
-    "th": "เวิลด์ลี่เธมิส",
-    "vi": "Worldly Themis"
-  },
-  "MST_MONSTERS_54152_NAME": {
-    "en": "Worldly Themis",
-    "es": "Worldly Themis",
-    "id": "Themis Duniawi",
-    "pt": "Worldly Themis",
-    "th": "เวิร์ลลี่ เธมิส",
-    "vi": "Worldly Themis"
-  },
-  "MST_MONSTERS_54200_NAME": {
-    "en": "Light Blade Alyut",
-    "es": "Alyut, Hoja de luz",
-    "id": "Pedang Cahaya Alyut",
-    "pt": "Alyut Lâmina da Luz",
-    "th": "ไลท์เบลดอัลยูท",
-    "vi": "Quang kiếm Alyut"
   }
 }
