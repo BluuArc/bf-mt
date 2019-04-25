@@ -15,10 +15,10 @@
         v-for="entry in unitEntries" :key="`${entry.id}-${entry.position}`"
         :style="convertNumberToColumnSpanStyle(columnCountMappingByUnitEntry.get(entry))"
         class="value-cell header-cell">
-          <span slot="value-header" :entry="entry">
+          <slot name="value-header" :entry="entry">
             {{ entry.id }} / {{ entry.position }}
-          </span>
-          <div>Clicking on column will collapse data for it</div>
+          </slot>
+          <!-- <div>Clicking on column will collapse data for it</div> -->
       </span>
     </span>
 
@@ -75,6 +75,7 @@
                 <span
                   v-for="(valueEntry, v) in getColumnDataForUnitEntry(unitEntry, effectId)"
                   :key="`${u}-${i}-${j}-${v}-unit`"
+                  :style="convertNumberToColumnSpanStyle(valueEntry.columnSpan || 1)"
                   :class="{
                     'value-cell': true,
                     'is-last-value-cell': v === getColumnDataForUnitEntry(unitEntry, effectId).length - 1,
@@ -273,10 +274,27 @@ export default {
       if (!effectIdEntry.has(entry)) {
         const expectedValueColumns = this.columnCountMappingByUnitEntry.get(entry);
         let filteredData = this.effectsById[effectId].filter(effect => effect.source === entry);
-        if (filteredData.length > 0) {
-          for (let i = filteredData.length; i < expectedValueColumns; ++i) {
-            // empty effect object signifies empty value
-            filteredData.push({ effect: {} });
+        if (filteredData.length > 0 && filteredData.length !== expectedValueColumns) {
+          const initialValueColumns = filteredData.length;
+          if (expectedValueColumns % initialValueColumns === 0) { // distribute space evenly
+            const columnSpan = expectedValueColumns / initialValueColumns;
+            filteredData = filteredData.map(entry => ({ ...entry, columnSpan }));
+          } else if (expectedValueColumns / initialValueColumns > 2) { // distribute space by a number > 1, favoring items near end of array
+            const startIndex = expectedValueColumns % initialValueColumns;
+            const columnSpan = (expectedValueColumns - startIndex) / initialValueColumns;
+            filteredData = filteredData.map((entry, i) => {
+              return i >= startIndex
+                ? ({ ...entry, columnSpan })
+                : entry;
+            });
+          } else { // distribute space by giving 1 to rightmost columns
+            const diff = expectedValueColumns - initialValueColumns;
+            const startIndex = initialValueColumns - diff;
+            filteredData = filteredData.map((entry, i) => {
+              return i >= startIndex
+                ? ({ ...entry, columnSpan: 2 })
+                : entry;
+            });
           }
         }
         effectIdEntry.set(entry, Object.freeze(filteredData));
