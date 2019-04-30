@@ -40,7 +40,7 @@
           v-if="hiddenIndices.includes(i)"
           class="property-cell"
           style="grid-column: span 2"
-          v-text="getEffectsHiddenText(getSortedProps(effectEntry.effect).length)"
+          v-text="getEffectsHiddenText(getSortedProps(effectEntry.effect).length, effectEntry.effect['translated name'])"
         />
         <template v-else>
           <template v-for="(prop, j) in getSortedProps(effectEntry.effect)">
@@ -89,6 +89,7 @@
 
 <script>
 import { getEffectType, getEffectId } from '@/modules/EffectProcessor/processor-helper';
+import { getEffectName } from '@/modules/core/buffs';
 
 export default {
   props: {
@@ -99,6 +100,10 @@ export default {
     showHeaders: {
       type: Boolean,
       default: false,
+    },
+    translateEffectNames: {
+      type: Boolean,
+      default: true,
     },
   },
   computed: {
@@ -139,11 +144,22 @@ export default {
           filteredEffect[key] = effect[key];
         }
       });
+      if (this.translateEffectNames) {
+        filteredEffect['translated name'] = getEffectName(effect) || `Unknown buff ${id}`;
+      }
       return { type, id, effect: filteredEffect };
     },
     getSortedProps (effect) {
       if (!this.sortedPropsCache.has(effect)) {
-        this.sortedPropsCache.set(effect, Object.freeze(Object.keys(effect).sort((a, b) => a < b ? -1 : 1)));
+        this.sortedPropsCache.set(effect, Object.freeze(Object.keys(effect).sort((a, b) => {
+          if (a === 'translated name') {
+            return -1;
+          } else if (b === 'translated name') {
+            return 1;
+          } else {
+            return a < b ? -1 : 1;
+          }
+        })));
       }
       return this.sortedPropsCache.get(effect);
     },
@@ -173,8 +189,11 @@ export default {
     isEmptyArray (obj) {
       return Array.isArray(obj) && obj.length === 0;
     },
-    getEffectsHiddenText (numProps) {
-      return `${numProps} ${numProps !== 1 ? 'Effects' : 'Effect'} Hidden`;
+    getEffectsHiddenText (numProps, name) {
+      return [
+        `${numProps} ${numProps !== 1 ? 'Effects' : 'Effect'} Hidden`,
+        name && `for ${name}`,
+      ].filter(v => v).join(' ');
     },
   },
   name: 'buff-table-grid',

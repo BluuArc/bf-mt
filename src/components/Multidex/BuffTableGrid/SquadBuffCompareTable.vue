@@ -95,6 +95,7 @@
 <script>
 import { getEffectType, getEffectId } from '@/modules/EffectProcessor/processor-helper';
 import { getEffectsListForSquadUnitEntry } from '@/modules/core/squads';
+import { getEffectName } from '@/modules/core/buffs';
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 export default {
   mixins: [GettersMixin],
@@ -184,7 +185,15 @@ export default {
             props.add(prop);
           });
         });
-        acc[key] = Object.freeze(Array.from(props).sort((a, b) => a < b ? -1 : 1));
+        acc[key] = Object.freeze(Array.from(props).sort((a, b) => {
+          if (a === 'effectName' || b === 'sourcePath') {
+            return -1;
+          } else if (b === 'effectName' || a === 'sourcePath') {
+            return 1;
+          } else {
+            return a < b ? -1 : 1;
+          }
+        }));
         return acc;
       }, {});
       return Object.freeze(mapping);
@@ -230,6 +239,7 @@ export default {
           filteredEffect[key] = effect[key];
         }
       });
+      filteredEffect.effectName = getEffectName(effect) || `Unknown effect ${id}`;
       return { type, id, effect: filteredEffect };
     },
     toggleEffectView (i) {
@@ -274,6 +284,8 @@ export default {
       if (!effectIdEntry.has(entry)) {
         const expectedValueColumns = this.columnCountMappingByUnitEntry.get(entry);
         let filteredData = this.effectsById[effectId].filter(effect => effect.source === entry);
+
+        // apply span values to distribute space
         if (filteredData.length > 0 && filteredData.length !== expectedValueColumns) {
           const initialValueColumns = filteredData.length;
           if (expectedValueColumns % initialValueColumns === 0) { // distribute space evenly

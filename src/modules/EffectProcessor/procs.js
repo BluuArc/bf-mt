@@ -1,12 +1,16 @@
 import { effectTypes, elements, ailments } from '../constants';
 import * as helper from './processor-helper';
 import IconKeyMappings from './icon-key-mappings';
+import { getEffectName } from '@/modules/core/buffs';
 const procTypes = require('@/assets/buff-translation/procs.json');
 
 const procs = {
   ...(() => {
     const entries = {};
     procTypes.proc.forEach(id => {
+      const defaultEntry = helper.generateDefaultEntry(id);
+      defaultEntry.desc = getEffectName({ 'proc id': id }) || defaultEntry.desc;
+      entries[id] = defaultEntry;
       entries[id] = helper.generateDefaultEntry(id);
     });
     return entries;
