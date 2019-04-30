@@ -23,7 +23,7 @@ async function main () {
   const procTable = sheetData[Object.keys(sheetData).find(k => k.startsWith('Proc'))];
   addTableDataToMapping(procTable, mapping.proc, 'ID');
 
-  fs.writeFileSync('public/static/bf-data/passive-proc-metadata.json', JSON.stringify(mapping, null, 2), 'utf8');
+  fs.writeFileSync('src/assets/buff-translation/passive-proc-metadata.json', JSON.stringify(mapping, null, 2), 'utf8');
 }
 
 main();
