@@ -1,0 +1,258 @@
+{
+  "1": [
+    "5-atk% buff",
+    "75-atk% buff"
+  ],
+  "2": [
+    "5-atk% buff",
+    "51-inflict atk% debuff"
+  ],
+  "3": [
+    "5-def% buff",
+    "75-def% buff"
+  ],
+  "4": [
+    "5-def% buff",
+    "51-inflict def% debuff"
+  ],
+  "5": [
+    "5-rec% buff",
+    "75-rec% buff"
+  ],
+  "6": [
+    "5-rec% buff",
+    "51-inflict rec% debuff"
+  ],
+  "7": [
+    "5-crit% buff"
+  ],
+  "8": [
+    "3-gradual heal turns",
+    "5-crit% buff"
+  ],
+  "9": [
+    "6-hc drop rate% buff"
+  ],
+  "10": [
+    "6-bc drop rate% buff"
+  ],
+  "11": [
+    "6-item drop rate% buff"
+  ],
+  "12": [
+    "7-angel idol buff"
+  ],
+  "13": [
+    "5-atk% buff"
+  ],
+  "14": [
+    "5-def% buff"
+  ],
+  "15": [
+    "5-rec% buff"
+  ],
+  "16": [
+    "5-crit% buff"
+  ],
+  "20": [
+    "16-mitigate all attacks"
+  ],
+  "21": [
+    "16-mitigate fire attacks"
+  ],
+  "22": [
+    "16-mitigate water attacks"
+  ],
+  "23": [
+    "16-mitigate earth attacks"
+  ],
+  "24": [
+    "16-mitigate thunder attacks"
+  ],
+  "25": [
+    "16-mitigate light attacks"
+  ],
+  "26": [
+    "16-mitigate dark attacks"
+  ],
+  "30": [
+    "17-resist poison%"
+  ],
+  "31": [
+    "17-resist weaken%"
+  ],
+  "32": [
+    "17-resist sick%"
+  ],
+  "33": [
+    "17-resist injury%"
+  ],
+  "34": [
+    "17-resist curse%"
+  ],
+  "35": [
+    "17-resist paralysis%"
+  ],
+  "36": [
+    "18-dmg% reduction turns"
+  ],
+  "37": [
+    "19-increase bb gauge gradual turns"
+  ],
+  "38": [
+    "20-bc fill when attacked turns"
+  ],
+  "39": [
+    "22-defense% ignore turns"
+  ],
+  "40": [
+    "23-spark dmg% buff"
+  ],
+  "46": [
+    "24-atk% buff"
+  ],
+  "47": [
+    "24-def% buff"
+  ],
+  "48": [
+    "24-rec% buff"
+  ],
+  "50": [
+    "26-hit increase buff turns"
+  ],
+  "60": [
+    "36-invalidate LS turns"
+  ],
+  "71": [
+    "44-dot turns"
+  ],
+  "72": [
+    "45-buff turns"
+  ],
+  "74": [
+    "51-inflict atk% debuff chance%"
+  ],
+  "75": [
+    "51-inflict def% debuff chance%"
+  ],
+  "76": [
+    "51-inflict rec% debuff chance%"
+  ],
+  "77": [
+    "52-buff turns"
+  ],
+  "78": [
+    "53-counter inflict poison%"
+  ],
+  "79": [
+    "53-counter inflict weaken%"
+  ],
+  "80": [
+    "53-counter inflict sick%"
+  ],
+  "81": [
+    "53-counter inflict injury%"
+  ],
+  "82": [
+    "53-counter inflict curse%"
+  ],
+  "83": [
+    "53-counter inflict paralysis%"
+  ],
+  "84": [
+    "54-buff turns"
+  ],
+  "91": [
+    "56-angel idol buff turns"
+  ],
+  "92": [
+    "57-bc drop% resist buff turns"
+  ],
+  "94": [
+    "58-spark dmg received debuff turns"
+  ],
+  "100": [
+    "902-atk% buff"
+  ],
+  "110": [
+    "65-atk% buff turns"
+  ],
+  "111": [
+    "67-bc fill on spark buff turns"
+  ],
+  "112": [
+    "71-bb fill inc buff turns"
+  ],
+  "113": [
+    "68-guard increase mitigation buff turns"
+  ],
+  "114": [
+    "69-bb bc fill on guard buff turns"
+  ],
+  "120": [
+    "73-atk down resist%"
+  ],
+  "121": [
+    "73-def down resist%"
+  ],
+  "122": [
+    "73-rec down resist%"
+  ],
+  "123": [
+    "76-extra action buff turns"
+  ],
+  "131": [
+    "83-spark dmg inc buff turns"
+  ],
+  "132": [
+    "84-od fill rate buff turns"
+  ],
+  "133": [
+    "85-hp recover from dmg buff turns"
+  ],
+  "134": [
+    "86-hp drain buff turns"
+  ],
+  "135": [
+    "87-spark recover hp buff turns"
+  ],
+  "136": [
+    "88-spark dmg inc% turns"
+  ],
+  "143": [
+    "93-crit dmg base damage resist%",
+    "93-crit dmg buffed damage resist%"
+  ],
+  "144": [
+    "93-strong base element damage resist%",
+    "93-strong buffed element damage resist%"
+  ],
+  "145": [
+    "93-spark dmg base resist%",
+    "93-spark dmg buffed resist%"
+  ],
+  "148": [
+    "113-od fill turns"
+  ],
+  "153": [
+    "130-atk% buff"
+  ],
+  "154": [
+    "130-def% buff"
+  ],
+  "157": [
+    "132-crit vuln dmg%"
+  ],
+  "158": [
+    "132-elemental vuln dmg%"
+  ],
+  "10000": [
+    "10000-taunt turns"
+  ],
+  "10001": [
+    "10001-stealth turns"
+  ],
+  "10002": [
+    "10002-shield turns"
+  ]
+}
