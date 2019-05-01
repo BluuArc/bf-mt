@@ -90,7 +90,7 @@
               <dl>
                 <dt>Party Passives</dt>
                 <dd>
-                  <squad-buff-compare-table
+                  <squad-buff-expandable-list
                     :getUnit="getUnit"
                     :getItem="getItem"
                     :getExtraSkill="getExtraSkill"
@@ -98,7 +98,7 @@
                     :targetType="targetTypes.PARTY"
                     :effectType="squadBuffTypes.PASSIVE">
 
-                  </squad-buff-compare-table>
+                  </squad-buff-expandable-list>
                 </dd>
 
                 <dt>Party Buffs</dt>
@@ -192,7 +192,7 @@ import ShareSquadCard from '@/components/Tools/Squads/ShareSquadCard';
 import DeleteSquadCard from '@/components/Tools/Squads/DeleteSquadCard';
 import TabContainer from '@/components/CardTabsContainer';
 import SquadListCardEditable from '@/components/Tools/Squads/SquadListCardEditable';
-import SquadBuffCompareTable from '@/components/Multidex/BuffTable/SquadBuffCompareTable';
+import SquadBuffExpandableList from '@/components/Multidex/BuffList/SquadBuffExpandableList';
 import SquadBuffCompareTableGrid from '@/components/Multidex/BuffTableGrid/SquadBuffCompareTable';
 
 const logger = new Logger({ prefix: '[Squad]' });
@@ -211,7 +211,7 @@ export default {
     TabContainer,
     SquadListCardEditable,
     LoadingIndicator,
-    SquadBuffCompareTable,
+    SquadBuffExpandableList,
     SquadBuffCompareTableGrid,
   },
   computed: {
