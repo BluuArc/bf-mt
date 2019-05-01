@@ -40,7 +40,7 @@
           v-if="hiddenIndices.includes(i)"
           class="property-cell"
           style="grid-column: span 2"
-          v-text="getEffectsHiddenText(getSortedProps(effectEntry.effect).length, effectEntry.effect['translated name'])"
+          v-text="getEffectsHiddenText(getSortedProps(effectEntry.effect).length, effectEntry.effect)"
         />
         <template v-else>
           <template v-for="(prop, j) in getSortedProps(effectEntry.effect)">
@@ -189,10 +189,13 @@ export default {
     isEmptyArray (obj) {
       return Array.isArray(obj) && obj.length === 0;
     },
-    getEffectsHiddenText (numProps, name) {
+    getEffectsHiddenText (numProps, effect) {
+      const effectName = effect['translated name'] || getEffectName(effect);
+      const subEffectNames = (effect['triggered effect'] || []).map(getEffectName);
       return [
         `${numProps} ${numProps !== 1 ? 'Effects' : 'Effect'} Hidden`,
-        name && `for ${name}`,
+        effectName && `for ${effectName}`,
+        subEffectNames.length > 0 && `(${subEffectNames.join(', ')})`,
       ].filter(v => v).join(' ');
     },
   },
