@@ -2,7 +2,7 @@
   <module-checker
     :requiredModules="requiredModules"
     :ensureDbSync="true">
-    <v-container fluid class="squad-page">
+    <v-container fluid class="squad-page" v-resize="updateTopNavbarHeight">
       <v-container class="pa-0">
         <v-layout justify-center>
           <v-flex xs12 v-if="!editMode">
@@ -88,7 +88,7 @@
             :tabs="tabConfig">
             <v-layout slot="squad-buffs">
               <dl>
-                <dt>Party Passives</dt>
+                <dt class="title" :style="buffGroupTitleStyle">Party Passives</dt>
                 <dd>
                   <squad-buff-expandable-list
                     :getUnit="getUnit"
@@ -101,9 +101,9 @@
                   </squad-buff-expandable-list>
                 </dd>
 
-                <dt>Party Buffs</dt>
+                <dt class="title" :style="buffGroupTitleStyle">Party Buffs</dt>
                 <dd>
-                  <squad-buff-compare-table-grid
+                  <squad-buff-expandable-list
                     :getUnit="getUnit"
                     :getItem="getItem"
                     :getExtraSkill="getExtraSkill"
@@ -111,19 +111,19 @@
                     :targetType="targetTypes.PARTY"
                     :effectType="squadBuffTypes.PROC">
 
-                  </squad-buff-compare-table-grid>
+                  </squad-buff-expandable-list>
                 </dd>
 
-                <dt>For the Enemy</dt>
+                <dt class="title" :style="buffGroupTitleStyle">For the Enemy</dt>
                 <dd>table here</dd>
               </dl>
             </v-layout>
             <v-layout slot="unit-buffs">
               <dl>
-                <dt>Self Passives</dt>
+                <dt class="title" :style="buffGroupTitleStyle">Self Passives</dt>
                 <dd>table here</dd>
 
-                <dt>Self Buffs</dt>
+                <dt class="title" :style="buffGroupTitleStyle">Self Buffs</dt>
                 <dd>table here</dd>
               </dl>
             </v-layout>
@@ -181,8 +181,6 @@ import {
   squadToShorthand,
   getMultidexDatabaseIdsFromSquads,
   cloneSquad,
-  getEffectMappingFromSquadUnitEntry,
-  getEffectsListForSquadUnitEntry,
 } from '@/modules/core/squads';
 import { targetTypes, squadBuffTypes } from '@/modules/constants';
 import ModuleChecker from '@/components/ModuleChecker';
@@ -231,6 +229,11 @@ export default {
     minimizeSquadActionButtons () {
       return this.$vuetify.breakpoint.xsOnly;
     },
+    buffGroupTitleStyle () {
+      return {
+        top: `${this.topNavbarHeight}px`,
+      };
+    },
   },
   data () {
     return {
@@ -243,6 +246,7 @@ export default {
       editMode: false,
       currentTabIndex: 0,
       tempSquad: {},
+      topNavbarHeight: 56,
     };
   },
   mounted () {
@@ -333,31 +337,16 @@ export default {
     onNewUnits (units) {
       this.tempSquad = { ...this.tempSquad, units };
     },
+    updateTopNavbarHeight () {
+      const topNavbar = document.querySelector('nav.v-toolbar');
+      this.topNavbarHeight = (topNavbar && topNavbar.offsetHeight) || 56;
+    },
   },
   watch: {
     async squad (newSquad) {
       this.setDocumentTitle();
       await this.updatePageDbForSquad(newSquad);
-      /* eslint-disable no-console */
-      console.warn(newSquad.units.map(u => getEffectMappingFromSquadUnitEntry(u, this)));
-      const testValues = [squadBuffTypes.PASSIVE, squadBuffTypes.PROC].reduce((acc, squadBuffType) => {
-        newSquad.units.forEach((unit, i) => {
-          acc[`${squadBuffType}-${i}`] = Object.values(targetTypes).reduce((targetAcc, target) => {
-            // targetAcc[target] = this.getEffectMappingForSquadUnitEntry(unit, target, squadBuffType);
-            targetAcc[target] = getEffectsListForSquadUnitEntry({
-              unitEntry: unit,
-              target,
-              effectType: squadBuffType,
-              squad: newSquad,
-            }, this);
-            return targetAcc;
-          }, {});
-        });
-        return acc;
-      }, {});
-      console.warn(testValues);
-      // console.warn(newSquad.units.map(u => this.getEffectMappingForSquadUnitEntry(u, targetTypes.SELF, squadBuffTypes.PASSIVE)));
-      /* eslint-enable no-console */
+      this.updateTopNavbarHeight();
     },
     editMode (isEditMode) {
       if (isEditMode) {
@@ -379,6 +368,16 @@ export default {
 .squad-page {
   dl {
     width: 100%;
+
+    > dt {
+      position: sticky;
+      background: var(--background-color);
+      z-index: 1;
+      padding: 0.75em 0.25em;
+      margin: 0 -0.25em;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
   }
 
   dd {

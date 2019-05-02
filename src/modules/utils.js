@@ -178,3 +178,25 @@ export function ensureContentPadding (minTopOffset = 0, minBottomOffset = 0) {
     contentElem.style.paddingBottom = `${minBottomOffset}px`;
   }
 }
+
+export function weightedStringSort (a, b, { beginning = [], end = [] } = {}) {
+  const [aBeginningIndex, bBeginningIndex] = [beginning.indexOf(a), beginning.indexOf(b)];
+  const [aEndIndex, bEndIndex] = [end.indexOf(a), end.indexOf(b)];
+  if (aBeginningIndex > -1 && bBeginningIndex > -1) { // both in beginning array
+    return aBeginningIndex - bBeginningIndex;
+  } else if (aEndIndex > -1 && bEndIndex > -1) { // both in end array
+    return aEndIndex - bEndIndex;
+  } else if (
+    aBeginningIndex > -1 && bBeginningIndex === -1 ||
+    aEndIndex === -1 && bEndIndex > -1
+  ) { // a is currently before b
+    return -1;
+  } else if (
+    bBeginningIndex > -1 && aBeginningIndex === -1 ||
+    bEndIndex === -1 && aEndIndex > -1
+  ) { // b is currently before a
+    return 1;
+  } else { // in neither array, so do normal string compare
+    return a < b ? -1 : 1;
+  }
+}

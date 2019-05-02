@@ -3,7 +3,7 @@
     <v-expansion-panel v-model="expandedTables" expand focusable>
       <v-expansion-panel-content v-for="(effectId, i) in sortedEffectIds" :key="effectId">
         <div slot="header" class="expandable-list-entry--header" :key="i">
-          <span class="expandable-list-entry--title" v-text="`${effectId }: ${effectNameById[effectId] }`"/>
+          <span class="expandable-list-entry--title subheading" v-text="`${effectId}: ${effectNameById[effectId] }`"/>
           <span>
             {{ getSquadEntriesForEffectId(effectId).map(u => ({ id: u.id, position: u.position })) }}
           </span>
@@ -22,6 +22,7 @@
 import { getEffectId } from '@/modules/EffectProcessor/processor-helper';
 import { getEffectsListForSquadUnitEntry } from '@/modules/core/squads';
 import { getEffectName } from '@/modules/core/buffs';
+import { weightedStringSort } from '@/modules/utils';
 import ValueSubgrid from '@/components/Multidex/BuffTableGrid/ValueSubgrid';
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 
@@ -60,6 +61,22 @@ export default {
     unitEntries () {
       return this.squad.units;
     },
+    weightedCompareOptions: () => Object.freeze({
+      beginning: [
+        'conditions',
+        'esConditions',
+        'effect delay time(ms)/frame',
+      ],
+      end: [
+        'passive target',
+        'target area',
+        'target type',
+        'buff turns',
+        'sp_type',
+        'triggeredOn',
+        'sourcePath',
+      ],
+    }),
     // assumption: 1 type of effect (passive or proc)
     effectsById () {
       // mapping in order of unit entries keyed by effect id
@@ -96,15 +113,9 @@ export default {
             props.add(prop);
           });
         });
+        const sortOptions = this.weightedCompareOptions;
         acc[key] = Object.freeze(Array.from(props).sort((a, b) => {
-          // source path should be at bottom of cell (end of array)
-          if (b === 'sourcePath') {
-            return -1;
-          } else if (a === 'sourcePath') {
-            return 1;
-          } else {
-            return a < b ? -1 : 1;
-          }
+          return weightedStringSort(a, b, sortOptions);
         }));
         return acc;
       }, {});
@@ -184,6 +195,11 @@ export default {
   .expandable-list-entry--header {
     display: flex;
     align-items: center;
+  }
+
+  .expandable-list-entry--title {
+    font-weight: bold;
+    flex: none;
   }
 }
 </style>

@@ -457,7 +457,7 @@ export default {
 
       if (!isShowing) {
         await delay(1000);
-        const toolbarHeight = this.$el.querySelector('nav.v-toolbar').offsetHeight;
+        const toolbarHeight = document.querySelector('nav.v-toolbar').offsetHeight;
         // 56px is height of bottom navbar
         ensureContentPadding(toolbarHeight, 56);
       }
