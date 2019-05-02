@@ -8,7 +8,11 @@
             {{ getSquadEntriesForEffectId(effectId).map(u => ({ id: u.id, position: u.position })) }}
           </span>
         </div>
-        {{ propsById[effectId] }}
+        <value-subgrid
+          :properties="propsById[effectId]"
+          :values="getSquadEntriesForEffectId(effectId).map(u => getValueSubgridEntry(u, effectId))"
+        >
+        </value-subgrid>
       </v-expansion-panel-content>
     </v-expansion-panel>
   </section>
@@ -18,6 +22,7 @@
 import { getEffectId } from '@/modules/EffectProcessor/processor-helper';
 import { getEffectsListForSquadUnitEntry } from '@/modules/core/squads';
 import { getEffectName } from '@/modules/core/buffs';
+import ValueSubgrid from '@/components/Multidex/BuffTableGrid/ValueSubgrid';
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 
 export default {
@@ -35,6 +40,9 @@ export default {
       type: String,
       required: true,
     },
+  },
+  components: {
+    ValueSubgrid,
   },
   computed: {
     blacklistedKeys: () => [
@@ -117,9 +125,26 @@ export default {
   data () {
     return {
       expandedTables: [],
+      valueSubgridEntryByEntryByEffectId: {},
     };
   },
   methods: {
+    getValueSubgridEntry (entry, effectId) {
+      if (!this.valueSubgridEntryByEntryByEffectId[effectId]) {
+        this.valueSubgridEntryByEntryByEffectId[effectId] = new WeakMap();
+      }
+      const valueSubgridCache = this.valueSubgridEntryByEntryByEffectId[effectId];
+      if (!valueSubgridCache.has(entry)) {
+        const subgridEntry = {
+          identifier: entry,
+          values: this.effectsById[effectId]
+            .filter(effect => effect.source === entry)
+            .map(e => e.effect),
+        };
+        valueSubgridCache.set(entry, subgridEntry);
+      }
+      return valueSubgridCache.get(entry);
+    },
     getEffectDetails (effect) {
       const id = getEffectId(effect);
       const filteredEffect = {};
@@ -156,11 +181,9 @@ export default {
     padding-left: 8px;
     padding-right: 8px;
   }
-  .expandable-list-entry {
-    &--header {
-      display: flex;
-      align-items: center;
-    }
+  .expandable-list-entry--header {
+    display: flex;
+    align-items: center;
   }
 }
 </style>
