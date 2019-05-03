@@ -2,11 +2,35 @@
   <section class="squad-buff-expandable-list">
     <v-expansion-panel v-model="expandedTables" expand focusable>
       <v-expansion-panel-content v-for="(effectId, i) in sortedEffectIds" :key="effectId">
-        <div slot="header" class="expandable-list-entry--header" :key="i">
+        <div slot="header" class="expandable-list-entry--header" :key="i" :headerEntries="getSquadEntriesForEffectId(effectId)">
           <span class="expandable-list-entry--title subheading" v-text="`${effectId}: ${effectNameById[effectId] }`"/>
-          <span>
-            {{ getSquadEntriesForEffectId(effectId).map(u => ({ id: u.id, position: u.position })) }}
-          </span>
+          <div class="expandable-list-entry--columns-preview">
+            <div
+              class="expandable-list-entry--columns-preview-entry"
+              v-for="(unitEntry) in getSquadEntriesForEffectId(effectId)"
+              :key="`${unitEntry.id}-${unitEntry.position}`"
+            >
+              <v-layout align-content-center row>
+                <unit-thumbnail
+                  class="unit-thumbnail"
+                  :src="getImageUrls(unitEntry.id).ills_battle"
+                  :rarity="getUnit(unitEntry.id).rarity"
+                  :imageTitle="getUnit(unitEntry.id).name"
+                  :displayWidth="thumbnailSize" :displayHeight="thumbnailSize">
+                  <template slot="after-image">
+                    <text
+                      :x="0"
+                      :y="thumbnailSize">
+                      {{ !isNaN(unitEntry.bbOrder) ? unitEntry.bbOrder : '-' }}
+                    </text>
+                  </template>
+                </unit-thumbnail>
+              </v-layout>
+              <v-flex text-xs-center>
+                <span class="caption text-no-wrap">{{ unitEntry.position }}</span>
+              </v-flex>
+            </div>
+          </div>
         </div>
         <value-subgrid
           :properties="propsById[effectId]"
@@ -14,7 +38,24 @@
           :getUnit="getUnit"
           :getItem="getItem"
           :getExtraSkill="getExtraSkill"
+          :allowOverflow="true"
+          :minValueColumnWidth="'300px'"
         >
+          <template slot="value-header" slot-scope="{ entry }">
+            <v-layout row style="max-width: 500px; width: 100%; min-width: 300px;">
+              <unit-entry
+                xs12
+                :index="squad.units.indexOf(entry.identifier)"
+                :unit="entry.identifier"
+                :getUnit="getUnit"
+                :getItem="getItem"
+                :getExtraSkill="getExtraSkill"
+                :isLead="squad.units.indexOf(entry.identifier) === squad.lead"
+                :isFriend="squad.units.indexOf(entry.identifier) === squad.friend"
+                class="d-flex py-1"
+                style="align-items: center; border: 1px solid var(--background-color-alt);"/>
+            </v-layout>
+          </template>
         </value-subgrid>
       </v-expansion-panel-content>
     </v-expansion-panel>
@@ -26,7 +67,10 @@ import { getEffectId } from '@/modules/EffectProcessor/processor-helper';
 import { getEffectsListForSquadUnitEntry } from '@/modules/core/squads';
 import { getEffectName } from '@/modules/core/buffs';
 import { weightedStringSort } from '@/modules/utils';
+import { mapGetters } from 'vuex';
 import ValueSubgrid from '@/components/Multidex/BuffTableGrid/ValueSubgrid';
+import UnitEntry from '@/components/Tools/Squads/SquadUnitEntry';
+import UnitThumbnail from '@/components/Multidex/Units/UnitThumbnail';
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 
 export default {
@@ -47,6 +91,8 @@ export default {
   },
   components: {
     ValueSubgrid,
+    UnitThumbnail,
+    UnitEntry,
   },
   computed: {
     blacklistedKeys: () => [
@@ -61,6 +107,12 @@ export default {
       'trigger on sbb',
       'trigger on ubb',
     ],
+    ...mapGetters('units', {
+      getImageUrls: 'getImageUrls',
+    }),
+    thumbnailSize () {
+      return 48;
+    },
     unitEntries () {
       return this.squad.units;
     },
@@ -198,11 +250,39 @@ export default {
   .expandable-list-entry--header {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .expandable-list-entry--title {
     font-weight: bold;
-    flex: none;
+    // flex: none;
+    word-break: break-word;
+  }
+
+  .expandable-list-entry--columns-preview {
+    display: flex;
+    // width: 100%;
+    margin-left: 1em;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .expandable-list-entry--columns-preview-entry {
+    margin: 0 0.5em;
+    min-width: 70px;
+    image.lazy-actual {
+      min-width: 48px;
+    }
+
+    .unit-thumbnail {
+      flex: 0 1 auto;
+      margin: auto;
+      font: bold 4.5em sans-serif;
+      stroke: black;
+      stroke-width: 2px;
+      fill: white;
+    }
   }
 }
 </style>

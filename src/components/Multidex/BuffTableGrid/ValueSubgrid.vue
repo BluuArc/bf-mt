@@ -76,6 +76,14 @@ export default {
       type: Boolean,
       default: true,
     },
+    allowOverflow: {
+      type: Boolean,
+      default: false,
+    },
+    minValueColumnWidth: {
+      type: String,
+      default: '5em',
+    },
   },
   components: {
     SourcePathCell,
@@ -99,12 +107,19 @@ export default {
     },
     mainValueGridStyle () {
       const propertyColumnWidth = '17.5em';
-      const valueSubgridWidth = 'minmax(5em, 1fr)';
+      const valueSubgridWidth = `minmax(${this.minValueColumnWidth}, 1fr)`;
+      const columnConfig = [propertyColumnWidth];
+      this.values.forEach(entry => {
+        const numColumns = this.columnCountMappingByValueEntry.get(entry);
+        if (numColumns > 1) {
+          columnConfig.push(`repeat(${numColumns}, minmax(calc(${this.minValueColumnWidth} / ${numColumns}), 1fr))`);
+        } else {
+          columnConfig.push(valueSubgridWidth);
+        }
+      });
       return {
-        'grid-template-columns': [
-          propertyColumnWidth,
-          `repeat(${this.numValueColumns}, ${valueSubgridWidth})`,
-        ].join(' '),
+        'grid-template-columns': columnConfig.join(' '),
+        overflow: (this.allowOverflow && 'auto') || undefined,
       };
     },
     customCellsByPropertyName: () => [

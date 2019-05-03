@@ -77,7 +77,7 @@
               :displaySize="22"
               class="mr-1"/>
           </v-layout>
-          <v-flex style="word-break: break-all;">
+          <v-flex style="word-break: break-all; text-align: left;">
             {{ getExtraSkill(unit.es).name || 'No Extra Skill' }}
           </v-flex>
         </v-layout>
@@ -94,7 +94,7 @@
                 :displaySize="22"
                 class="mr-1"/>
             </v-layout>
-            <v-flex>
+            <v-flex style="text-align: left">
               {{ getItem(sphereId).name || sphereId }}
             </v-flex>
           </v-layout>
