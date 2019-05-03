@@ -22,20 +22,35 @@
         v-text="prop"
       />
       <template v-for="(entry, e) in values">
-        <span
-          v-for="(valueEntry, v) in entry.values"
-          :key="`${prop}-${p}-${e}-${v}-value`"
-          :class="getClassForValue(v, entry.values, p)"
-        >
-          {{ getPropertyValue(prop, valueEntry) }}
-        </span>
+        <template v-for="(valueEntry, v) in entry.values">
+          <source-path-cell
+            v-if="prop === 'sourcePath'"
+            :key="`${prop}-${p}-${e}-${v}-custom-value`"
+            :class="getClassForValue(v, entry.values, p, prop)"
+            :value="getPropertyValue(prop, valueEntry)"
+            :source="entry.identifier"
+            :getUnit="getUnit"
+            :getItem="getItem"
+            :getExtraSkill="getExtraSkill"
+          />
+          <span
+            v-else
+            :key="`${prop}-${p}-${e}-${v}-value`"
+            :class="getClassForValue(v, entry.values, p, prop)"
+            v-text="getPropertyValue(prop, valueEntry)"
+          />
+        </template>
       </template>
     </template>
   </div>
 </template>
 
 <script>
+import SourcePathCell from '@/components/Multidex/BuffList/SourcePathCell';
+import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
+
 export default {
+  mixins: [GettersMixin],
   props: {
     properties: {
       type: Array,
@@ -54,6 +69,9 @@ export default {
       type: Boolean,
       default: true,
     },
+  },
+  components: {
+    SourcePathCell,
   },
   computed: {
     numValueColumns () {
@@ -81,6 +99,10 @@ export default {
         ].join(' '),
       };
     },
+    customCellsByPropertyName: () => [
+      'sourcePath',
+      'triggeredOn',
+    ],
   },
   methods: {
     getClassForProperty (property, index) {
@@ -90,11 +112,12 @@ export default {
         'only-row': this.properties.length === 0,
       };
     },
-    getClassForValue (valueEntryIndex, parentValuesArray, propertyIndex) {
+    getClassForValue (valueEntryIndex, parentValuesArray, propertyIndex, propertyName) {
       return {
         'value-cell': true,
         [propertyIndex % 2 === 0 ? 'even-row' : 'odd-row']: true,
         'is-last-value-cell': valueEntryIndex === parentValuesArray.length - 1,
+        'is-custom-cell': this.isCustomCell(propertyName),
       };
     },
     convertNumberToColumnSpanStyle (numColumns) {
@@ -104,6 +127,9 @@ export default {
     },
     isProcBuffList (prop) {
       return prop === 'triggered effect';
+    },
+    isCustomCell (prop) {
+      return this.customCellsByPropertyName.includes(prop);
     },
     getPropertyValue (prop, valueEntry) {
       const value = valueEntry[prop] !== undefined ? valueEntry[prop] : '-';
@@ -169,7 +195,11 @@ export default {
     flex-direction: column;
   }
 
-  .value-cell:not(.has-nested-table) {
+  .value-cell.is-custom-cell {
+    padding: 0;
+  }
+
+  .value-cell:not(.is-custom-cell) {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -11,6 +11,9 @@
         <value-subgrid
           :properties="propsById[effectId]"
           :values="getSquadEntriesForEffectId(effectId).map(u => getValueSubgridEntry(u, effectId))"
+          :getUnit="getUnit"
+          :getItem="getItem"
+          :getExtraSkill="getExtraSkill"
         >
         </value-subgrid>
       </v-expansion-panel-content>
