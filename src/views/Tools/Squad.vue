@@ -96,9 +96,8 @@
                     :getExtraSkill="getExtraSkill"
                     :squad="squad"
                     :targetType="targetTypes.PARTY"
-                    :effectType="squadBuffTypes.PASSIVE">
-
-                  </squad-buff-expandable-list>
+                    :effectType="squadBuffTypes.PASSIVE"
+                  />
                 </dd>
 
                 <dt class="title" :style="buffGroupTitleStyle">Party Buffs</dt>
@@ -109,8 +108,8 @@
                     :getExtraSkill="getExtraSkill"
                     :squad="squad"
                     :targetType="targetTypes.PARTY"
-                    :effectType="squadBuffTypes.PROC">
-                  </squad-buff-expandable-list>
+                    :effectType="squadBuffTypes.PROC"
+                  />
                 </dd>
 
                 <dt class="title" :style="buffGroupTitleStyle">For the Enemy</dt>
@@ -121,18 +120,36 @@
                     :getExtraSkill="getExtraSkill"
                     :squad="squad"
                     :targetType="targetTypes.ENEMY"
-                    :effectType="squadBuffTypes.PROC">
-                  </squad-buff-expandable-list>
+                    :effectType="squadBuffTypes.PROC"
+                  />
                 </dd>
               </dl>
             </v-layout>
             <v-layout slot="unit-buffs">
               <dl>
                 <dt class="title" :style="buffGroupTitleStyle">Self Passives</dt>
-                <dd>table here</dd>
+                <dd>
+                  <squad-buff-expandable-list
+                    :getUnit="getUnit"
+                    :getItem="getItem"
+                    :getExtraSkill="getExtraSkill"
+                    :squad="squad"
+                    :targetType="targetTypes.SELF"
+                    :effectType="squadBuffTypes.PASSIVE"
+                  />
+                </dd>
 
                 <dt class="title" :style="buffGroupTitleStyle">Self Buffs</dt>
-                <dd>table here</dd>
+                <dd>
+                  <squad-buff-expandable-list
+                    :getUnit="getUnit"
+                    :getItem="getItem"
+                    :getExtraSkill="getExtraSkill"
+                    :squad="squad"
+                    :targetType="targetTypes.SELF"
+                    :effectType="squadBuffTypes.PROC"
+                  />
+                </dd>
               </dl>
             </v-layout>
             <v-layout slot="spark-statistics">

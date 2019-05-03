@@ -4,12 +4,19 @@
       <h1>Debug Page</h1>
     </v-layout>
     <v-layout>
-      <v-btn @click="callClient">
+      <v-btn @click="promise = callClient()">
         Trigger Debug Function
       </v-btn>
     </v-layout>
     <v-layout>
-      {{ result || 'undefined' }}
+      <!-- {{ result || 'undefined' }} -->
+      <promise-wait v-if="promise" :promise="promise" style="flex: auto;">
+        <template slot-scope="{ result }">
+          <v-btn>
+            {{ result }}
+          </v-btn>
+        </template>
+      </promise-wait>
     </v-layout>
   </v-container>
 </template>
@@ -17,6 +24,7 @@
 <script>
 import { makeTableInstance } from '@/modules/BfmtDatabase/client';
 import { multidexModuleInfo } from '@/modules/constants';
+import PromiseWait from '@/components/PromiseWait';
 // import { shorthandToSquad } from '@/modules/core/squads';
 // import { unitKinds, elements, genders } from '@/modules/constants';
 
@@ -26,7 +34,11 @@ export default {
   data () {
     return {
       result: undefined,
+      promise: null,
     };
+  },
+  components: {
+    PromiseWait,
   },
   async mounted () {
     window._debugContext = this;
@@ -72,7 +84,7 @@ export default {
       // });
       // eslint-disable-next-line no-console
       console.warn({ result });
-      this.result = Object.freeze(result);
+      return Object.freeze(result);
     },
   },
 };
