@@ -8,6 +8,11 @@
           </slot>
         </template>
       </template>
+      <template v-else-if="hasError">
+        <slot name="error" :error="error">
+          <span>Error: {{ error }}</span>
+        </slot>
+      </template>
       <template v-else>
         <slot name="default" :result="result">
           <span>{{ result }}</span>
@@ -41,6 +46,8 @@ export default {
       isVisuallyLoading: true,
       isPostMount: false,
       result: null,
+      hasError: false,
+      error: null,
     };
   },
   beforeCreate () {
@@ -73,10 +80,16 @@ export default {
       immediate: true,
       handler (newPromise) {
         this.result = null;
+        this.hasError = false;
+        this.error = null;
         this.isInternallyLoading = true;
         Promise.resolve(newPromise)
           .then((result) => {
             this.result = result;
+          }).catch((err) => {
+            this.error = err;
+            this.hasError = true;
+          }).then(() => {
             this.isInternallyLoading = false;
           });
       },
