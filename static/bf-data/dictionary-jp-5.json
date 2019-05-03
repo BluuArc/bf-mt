@@ -1,44 +1,4 @@
 {
-  "MST_SKILLS_212253_NAME": {
-    "en": "I seek strong opponents.",
-    "es": "Busco rivales fuertes.",
-    "id": "Aku mencari lawan kuat.",
-    "pt": "Busco oponentes poderosos.",
-    "th": "ข้าเห็นคู่ต่อสู้",
-    "vi": "I seek strong opponents."
-  },
-  "MST_SKILLS_21225400_NAME": {
-    "en": "Show me your techniques.",
-    "es": "Show me your techniques.",
-    "id": "Tunjukkan teknikmu.",
-    "pt": "Show me your techniques.",
-    "th": "แสดงเทคนิคของเจ้าให้ดูหน่อย",
-    "vi": "Show me your techniques."
-  },
-  "MST_SKILLS_2122540_DESCRIPTION": {
-    "en": "11 combo powerful Fire attack on all enemies & probable Curse effect",
-    "es": "Combo grupal de 11 poderosos ataques ígneos. Puede causar maldición",
-    "id": "11 kombo serangan Api kuat ke semua musuh & kemungkinan efek Kutukan",
-    "pt": "Combo poderoso de 11 golpes de Fogo em todos os inimigos e provável efeito de Maldição",
-    "th": "11 คอมโบ โจมตีธาตุไฟอย่างรุนแรง ใส่ศัตรูทั้งหมด และ อาจจะทำให้คิดสถานะ คำสาป",
-    "vi": "11 combo powerful Fire attack on all enemies & probable Curse effect"
-  },
-  "MST_SKILLS_2122540_NAME": {
-    "en": "Rakshasa Pyre",
-    "es": "Pira de Rakshasa",
-    "id": "Raksasa Pyre",
-    "pt": "Pira Rakshasa",
-    "th": "รัคชาซ่า ไพร",
-    "vi": "Rakshasa Pyre"
-  },
-  "MST_SKILLS_2122541_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
   "MST_SKILLS_2122541_NAME": {
     "en": "Demonic Blade",
     "es": "Espada malévola",
@@ -86591,6 +86551,22 @@
     "th": "DM: โอโรจิ นางิ แม็กซ์",
     "vi": "DM: Orochi Nagi MAX"
   },
+  "MST_SKILLS_2810188_DESCRIPTION": {
+    "en": "25 combo massive Fire attack on all foes (damage relative to remaining HP), 4 combo massive Fire attack on single foe, hugely raises normal hit amount for 3 turns, enormously boosts Spark damage for 3 turns, Spark damage hugely boosts BB gauge for 3 turns & massive additional attack at turn's end for 3 turns",
+    "es": "25 combo massive Fire attack on all foes (damage relative to remaining HP), 4 combo massive Fire attack on single foe, hugely raises normal hit amount for 3 turns, enormously boosts Spark damage for 3 turns, Spark damage hugely boosts BB gauge for 3 turns & massive additional attack at turn's end for 3 turns",
+    "id": "25 combo massive Fire attack on all foes (damage relative to remaining HP), 4 combo massive Fire attack on single foe, hugely raises normal hit amount for 3 turns, enormously boosts Spark damage for 3 turns, Spark damage hugely boosts BB gauge for 3 turns & massive additional attack at turn's end for 3 turns",
+    "pt": "25 combo massive Fire attack on all foes (damage relative to remaining HP), 4 combo massive Fire attack on single foe, hugely raises normal hit amount for 3 turns, enormously boosts Spark damage for 3 turns, Spark damage hugely boosts BB gauge for 3 turns & massive additional attack at turn's end for 3 turns",
+    "th": "25 combo massive Fire attack on all foes (damage relative to remaining HP), 4 combo massive Fire attack on single foe, hugely raises normal hit amount for 3 turns, enormously boosts Spark damage for 3 turns, Spark damage hugely boosts BB gauge for 3 turns & massive additional attack at turn's end for 3 turns",
+    "vi": "25 combo massive Fire attack on all foes (damage relative to remaining HP), 4 combo massive Fire attack on single foe, hugely raises normal hit amount for 3 turns, enormously boosts Spark damage for 3 turns, Spark damage hugely boosts BB gauge for 3 turns & massive additional attack at turn's end for 3 turns"
+  },
+  "MST_SKILLS_2810188_NAME": {
+    "en": "SDM: Saishuu Kessen Ougi MAX",
+    "es": "SDM: Saishuu Kessen Ougi MAX",
+    "id": "SDM: Saishuu Kessen Ougi MAX",
+    "pt": "SDM: Saishuu Kessen Ougi MAX",
+    "th": "SDM: Saishuu Kessen Ougi MAX",
+    "vi": "SDM: Saishuu Kessen Ougi MAX"
+  },
   "MST_SKILLS_2810277_DESCRIPTION": {
     "en": "20 combo massive Fire attack on all foes, enormously boosts Spark damage for 3 turns, inflicts enormous Spark vulnerability for 3 turns, enormously boosts Atk for 3 turns & adds additional massive attack at turn's end for 3 turns",
     "es": "20 combo massive Fire attack on all foes, enormously boosts Spark damage for 3 turns, inflicts enormous Spark vulnerability for 3 turns, enormously boosts Atk for 3 turns & adds additional massive attack at turn's end for 3 turns",
@@ -88854,5 +88830,109 @@
     "pt": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction",
     "th": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction",
     "vi": "23 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds high probability of evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turns Atk, Def reduction"
+  },
+  "MST_SKILLS_2830587_NAME": {
+    "en": "Home Run Comet",
+    "es": "Home Run Comet",
+    "id": "Home Run Comet",
+    "pt": "Home Run Comet",
+    "th": "Home Run Comet",
+    "vi": "Home Run Comet"
+  },
+  "MST_SKILLS_2830588_DESCRIPTION": {
+    "en": "25 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turn Atk, Def reduction & purges LS disable effects from all allies",
+    "es": "25 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turn Atk, Def reduction & purges LS disable effects from all allies",
+    "id": "25 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turn Atk, Def reduction & purges LS disable effects from all allies",
+    "pt": "25 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turn Atk, Def reduction & purges LS disable effects from all allies",
+    "th": "25 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turn Atk, Def reduction & purges LS disable effects from all allies",
+    "vi": "25 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), adds evasion for 3 turns, Spark damage hugely boosts BB gauge for 3 turns, fully restores HP for 3 turns, enormous 3 turn Atk, Def reduction & purges LS disable effects from all allies"
+  },
+  "MST_SKILLS_2830588_NAME": {
+    "en": "Home Run Comet EX",
+    "es": "Home Run Comet EX",
+    "id": "Home Run Comet EX",
+    "pt": "Home Run Comet EX",
+    "th": "Home Run Comet EX",
+    "vi": "Home Run Comet EX"
+  },
+  "MST_SKILLS_2830597_DESCRIPTION": {
+    "en": "20 combo massive Earth attack on all foes, 10 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Earth elemental damage for 3 turns",
+    "es": "20 combo massive Earth attack on all foes, 10 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Earth elemental damage for 3 turns",
+    "id": "20 combo massive Earth attack on all foes, 10 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Earth elemental damage for 3 turns",
+    "pt": "20 combo massive Earth attack on all foes, 10 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Earth elemental damage for 3 turns",
+    "th": "20 combo massive Earth attack on all foes, 10 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Earth elemental damage for 3 turns",
+    "vi": "20 combo massive Earth attack on all foes, 10 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Earth elemental damage for 3 turns"
+  },
+  "MST_SKILLS_2830597_NAME": {
+    "en": "Living Kaleidoscope",
+    "es": "Living Kaleidoscope",
+    "id": "Living Kaleidoscope",
+    "pt": "Living Kaleidoscope",
+    "th": "Living Kaleidoscope",
+    "vi": "Living Kaleidoscope"
+  },
+  "MST_SKILLS_2830598_DESCRIPTION": {
+    "en": "23 combo massive Earth attack on all foes, 12 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & purges turn skip effect from all allies",
+    "es": "23 combo massive Earth attack on all foes, 12 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & purges turn skip effect from all allies",
+    "id": "23 combo massive Earth attack on all foes, 12 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & purges turn skip effect from all allies",
+    "pt": "23 combo massive Earth attack on all foes, 12 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & purges turn skip effect from all allies",
+    "th": "23 combo massive Earth attack on all foes, 12 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & purges turn skip effect from all allies",
+    "vi": "23 combo massive Earth attack on all foes, 12 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & purges turn skip effect from all allies"
+  },
+  "MST_SKILLS_2830598_NAME": {
+    "en": "Great Terra Seal",
+    "es": "Great Terra Seal",
+    "id": "Great Terra Seal",
+    "pt": "Great Terra Seal",
+    "th": "Great Terra Seal",
+    "vi": "Great Terra Seal"
+  },
+  "MST_SKILLS_2830628_DESCRIPTION": {
+    "en": "25 combo massive Earth attack on all foes (25% active Pierce to Earth, Thunder types), enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts Spark damage for 5 turns, enormously boosts BB Atk for 5 turns, damage taken enormously boosts BB gauge for 5 turns & damage taken enormously restores HP for 3 turns",
+    "es": "25 combo massive Earth attack on all foes (25% active Pierce to Earth, Thunder types), enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts Spark damage for 5 turns, enormously boosts BB Atk for 5 turns, damage taken enormously boosts BB gauge for 5 turns & damage taken enormously restores HP for 3 turns",
+    "id": "25 combo massive Earth attack on all foes (25% active Pierce to Earth, Thunder types), enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts Spark damage for 5 turns, enormously boosts BB Atk for 5 turns, damage taken enormously boosts BB gauge for 5 turns & damage taken enormously restores HP for 3 turns",
+    "pt": "25 combo massive Earth attack on all foes (25% active Pierce to Earth, Thunder types), enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts Spark damage for 5 turns, enormously boosts BB Atk for 5 turns, damage taken enormously boosts BB gauge for 5 turns & damage taken enormously restores HP for 3 turns",
+    "th": "25 combo massive Earth attack on all foes (25% active Pierce to Earth, Thunder types), enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts Spark damage for 5 turns, enormously boosts BB Atk for 5 turns, damage taken enormously boosts BB gauge for 5 turns & damage taken enormously restores HP for 3 turns",
+    "vi": "25 combo massive Earth attack on all foes (25% active Pierce to Earth, Thunder types), enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts Spark damage for 5 turns, enormously boosts BB Atk for 5 turns, damage taken enormously boosts BB gauge for 5 turns & damage taken enormously restores HP for 3 turns"
+  },
+  "MST_SKILLS_2830628_NAME": {
+    "en": "Witherroot Ravage",
+    "es": "Witherroot Ravage",
+    "id": "Witherroot Ravage",
+    "pt": "Witherroot Ravage",
+    "th": "Witherroot Ravage",
+    "vi": "Witherroot Ravage"
+  },
+  "MST_SKILLS_2830647_DESCRIPTION": {
+    "en": "15 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 100% damage reduction from all element types for 2 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 50% additional damage reduction for 3 turns & enormously boosts max HP",
+    "es": "15 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 100% damage reduction from all element types for 2 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 50% additional damage reduction for 3 turns & enormously boosts max HP",
+    "id": "15 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 100% damage reduction from all element types for 2 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 50% additional damage reduction for 3 turns & enormously boosts max HP",
+    "pt": "15 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 100% damage reduction from all element types for 2 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 50% additional damage reduction for 3 turns & enormously boosts max HP",
+    "th": "15 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 100% damage reduction from all element types for 2 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 50% additional damage reduction for 3 turns & enormously boosts max HP",
+    "vi": "15 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 100% damage reduction from all element types for 2 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 50% additional damage reduction for 3 turns & enormously boosts max HP"
+  },
+  "MST_SKILLS_2830647_NAME": {
+    "en": "Iron God Sword Lv. 3",
+    "es": "Iron God Sword Lv. 3",
+    "id": "Iron God Sword Lv. 3",
+    "pt": "Iron God Sword Lv. 3",
+    "th": "Iron God Sword Lv. 3",
+    "vi": "Iron God Sword Lv. 3"
+  },
+  "MST_SKILLS_2830648_DESCRIPTION": {
+    "en": "16 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 3 combo Earth attack on single foe (25% active Pierce on Earth, Thunder types), 100% damage reduction from all element types for 3 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 100% additional damage reduction for 3 turns & enormously boosts max HP",
+    "es": "16 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 3 combo Earth attack on single foe (25% active Pierce on Earth, Thunder types), 100% damage reduction from all element types for 3 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 100% additional damage reduction for 3 turns & enormously boosts max HP",
+    "id": "16 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 3 combo Earth attack on single foe (25% active Pierce on Earth, Thunder types), 100% damage reduction from all element types for 3 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 100% additional damage reduction for 3 turns & enormously boosts max HP",
+    "pt": "16 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 3 combo Earth attack on single foe (25% active Pierce on Earth, Thunder types), 100% damage reduction from all element types for 3 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 100% additional damage reduction for 3 turns & enormously boosts max HP",
+    "th": "16 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 3 combo Earth attack on single foe (25% active Pierce on Earth, Thunder types), 100% damage reduction from all element types for 3 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 100% additional damage reduction for 3 turns & enormously boosts max HP",
+    "vi": "16 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 3 combo Earth attack on single foe (25% active Pierce on Earth, Thunder types), 100% damage reduction from all element types for 3 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 100% additional damage reduction for 3 turns & enormously boosts max HP"
+  },
+  "MST_SKILLS_2830648_NAME": {
+    "en": "Iron God Sword MAX",
+    "es": "Iron God Sword MAX",
+    "id": "Iron God Sword MAX",
+    "pt": "Iron God Sword MAX",
+    "th": "Iron God Sword MAX",
+    "vi": "Iron God Sword MAX"
   }
 }
