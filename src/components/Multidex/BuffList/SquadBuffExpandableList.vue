@@ -153,8 +153,6 @@ export default {
         });
         return acc;
       }, {});
-      // eslint-disable-next-line no-console
-      console.warn({mapping});
       return Object.freeze(mapping);
     },
     propsById () {
@@ -193,6 +191,10 @@ export default {
       expandedTables: [],
       valueSubgridEntryByEntryByEffectId: {},
     };
+  },
+  mounted () {
+    // eslint-disable-next-line no-console
+    console.warn('Calculating list for', this.targetType, this.effectType);
   },
   methods: {
     getValueSubgridEntry (entry, effectId) {

@@ -24,6 +24,7 @@
 <script>
 import { makeTableInstance } from '@/modules/BfmtDatabase/client';
 import { multidexModuleInfo } from '@/modules/constants';
+import { delay } from '@/modules/utils';
 import PromiseWait from '@/components/PromiseWait';
 // import { shorthandToSquad } from '@/modules/core/squads';
 // import { unitKinds, elements, genders } from '@/modules/constants';
@@ -55,6 +56,8 @@ export default {
   },
   methods: {
     async callClient () {
+
+      await delay(5000);
 
       // const result = await client.request('delayed-ping', { from: 'debug page' });
       // const result = await client.getDbStats('gl');
