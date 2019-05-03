@@ -33,6 +33,12 @@
             :getItem="getItem"
             :getExtraSkill="getExtraSkill"
           />
+          <triggered-on-cell
+            v-else-if="prop === 'triggeredOn'"
+            :key="`${prop}-${p}-${e}-${v}-custom-value`"
+            :class="getClassForValue(v, entry.values, p, prop)"
+            :value="getPropertyValue(prop, valueEntry)"
+          />
           <span
             v-else
             :key="`${prop}-${p}-${e}-${v}-value`"
@@ -47,6 +53,7 @@
 
 <script>
 import SourcePathCell from '@/components/Multidex/BuffList/SourcePathCell';
+import TriggeredOnCell from '@/components/Multidex/BuffList/TriggeredOnCell';
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 
 export default {
@@ -72,6 +79,7 @@ export default {
   },
   components: {
     SourcePathCell,
+    TriggeredOnCell,
   },
   computed: {
     numValueColumns () {

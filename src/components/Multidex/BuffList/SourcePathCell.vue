@@ -1,6 +1,6 @@
 <template>
   <span class="source-path-cell">
-    <span v-html="displayValue" :style="cellStyle"/>
+    <span v-text="displayValue" :style="cellStyle"/>
   </span>
 </template>
 
