@@ -1,4 +1,116 @@
 {
+  "MST_LEADERSKILLS_7505_DESCRIPTION": {
+    "en": "60% boost to Atk, max HP, hugely boosts critical and elemental damage & enormously boosts BB Atk",
+    "es": "60% boost to Atk, max HP, hugely boosts critical and elemental damage & enormously boosts BB Atk",
+    "id": "60% ekstra Serang, HP maks, amat menambah kerusakan ampuh dan elemen, ekstra jumbo BB Serang",
+    "pt": "60% boost to Atk, max HP, hugely boosts critical and elemental damage & enormously boosts BB Atk",
+    "th": "60% เพิ่มค่าให้ โจมตี, HP สูงสุด, เพิ่มค่าอย่างสูงให้ คริติคอล กับ ความเสียหายธาตุ และ เพิ่มค่ามหาศาลให้ BB โจมตี",
+    "vi": "60% boost to Atk, max HP, hugely boosts critical and elemental damage & enormously boosts BB Atk"
+  },
+  "MST_LEADERSKILLS_7505_NAME": {
+    "en": "Breath of Life",
+    "es": "Breath of Life",
+    "id": "Nafas Kehidupan",
+    "pt": "Breath of Life",
+    "th": "บรีธ ออฟ ไลฟ์",
+    "vi": "Breath of Life"
+  },
+  "MST_LEADERSKILLS_7506_DESCRIPTION": {
+    "en": "50% boost to Atk, max HP, Spark damage slightly boosts BB gauge & 110% boost to Spark damage",
+    "es": "50% boost to Atk, max HP, Spark damage slightly boosts BB gauge & 110% boost to Spark damage",
+    "id": "50% ekstra Serang, HP maks, kerusakan Percikan agak menambah meteran BB & 110% ekstra kerusakan Percikan",
+    "pt": "50% boost to Atk, max HP, Spark damage slightly boosts BB gauge & 110% boost to Spark damage",
+    "th": "50% เพิ่มค่าให้ โจมตี, HP สูงสุด, ความเสียหายสปาร์ค เพิ่มค่าเล็กน้อยให้ เกจ BB และ 110% เพิ่มค่าให้ ความเสียหายสปาร์ค",
+    "vi": "50% boost to Atk, max HP, Spark damage slightly boosts BB gauge & 110% boost to Spark damage"
+  },
+  "MST_LEADERSKILLS_7506_NAME": {
+    "en": "Subtle Temptation",
+    "es": "Subtle Temptation",
+    "id": "Godaan Halus",
+    "pt": "Subtle Temptation",
+    "th": "ซับเทิล เทมเทชั่น",
+    "vi": "Subtle Temptation"
+  },
+  "MST_LEADERSKILLS_7507_DESCRIPTION": {
+    "en": "60% boost to Atk, Max HP, Spark damage boosts BB gauge, 130% boost to Spark damage & probable Spark critical",
+    "es": "60% boost to Atk, Max HP, Spark damage boosts BB gauge, 130% boost to Spark damage & probable Spark critical",
+    "id": "60% ekstra Serang, HP maks, kerusakan Percikan menambah meteran BB, 130% ekstra kerusakan Percikan, kans Percikan ampuh",
+    "pt": "60% boost to Atk, Max HP, Spark damage boosts BB gauge, 130% boost to Spark damage & probable Spark critical",
+    "th": "60% เพิ่มค่าให้ โจมตี, HP สูงสุด, ความเสียหายสปาร์ค เพิ่มค่า เกจ BB, 130% เพิ่มค่าให้ ความเสียหายสปาร์ค และ อาจจะ สปาร์คคริติคอล",
+    "vi": "60% boost to Atk, Max HP, Spark damage boosts BB gauge, 130% boost to Spark damage & probable Spark critical"
+  },
+  "MST_LEADERSKILLS_7507_NAME": {
+    "en": "Seductive Request",
+    "es": "Seductive Request",
+    "id": "Permintaan Merayu",
+    "pt": "Seductive Request",
+    "th": "ซีดัคทีฟ รีเควส",
+    "vi": "Seductive Request"
+  },
+  "MST_LEADERSKILLS_7508_DESCRIPTION": {
+    "en": "50% boost to Atk, max HP, critical damage enormously boosts BB gauge, hugely boosts critical damage & critical damage boosts Atk for 2 turns",
+    "es": "50% boost to Atk, max HP, critical damage enormously boosts BB gauge, Hugely boosts critical damage & critical damage boosts Atk for 2 turns",
+    "id": "50% ekstra Serang, HP maks, kerusakan ampuh memberi ekstra jumbo meteran BB, amat menambah kerusakan ampuh, kerusakan ampuh menambah Serangan 2 giliran",
+    "pt": "50% boost to Atk, max HP, critical damage enormously boosts BB gauge, Hugely boosts critical damage & critical damage boosts Atk for 2 turns",
+    "th": "50% เพิ่มค่าให้ โจมตี, HP สูงสุด, ความเสียหายคริติคอล เพิ่มค่ามหาศาลให้ เกจ BB, เพิ่มค่าอย่างสูงให้ ความเสียหายคริติคอล และ ความเสียหายคริติคอล เพิ่มค่า โจมตี นาน 2 เทิร์น",
+    "vi": "50% boost to Atk, max HP, critical damage enormously boosts BB gauge, Hugely boosts critical damage & critical damage boosts Atk for 2 turns"
+  },
+  "MST_LEADERSKILLS_7508_NAME": {
+    "en": "Conqueror Blade",
+    "es": "Conqueror Blade",
+    "id": "Bilah Penakluk",
+    "pt": "Conqueror Blade",
+    "th": "คองเคอเรอร์ เบลด",
+    "vi": "Conqueror Blade"
+  },
+  "MST_LEADERSKILLS_7509_DESCRIPTION": {
+    "en": "50% boost to Atk, max HP, boosts Atk, Def when HP is over 50%, hugely boosts critical damage & enormously boosts BB Atk",
+    "es": "50% boost to Atk, max HP, boosts Atk, Def when HP is over 50%, hugely boosts critical damage & enormously boosts BB Atk",
+    "id": "50% ekstra Serang, HP maks, menambah Serang, Tahan saat HP di atas 50%, amat menambah kerusakan ampuh & ekstra jumbo BB Serang",
+    "pt": "50% boost to Atk, max HP, boosts Atk, Def when HP is over 50%, hugely boosts critical damage & enormously boosts BB Atk",
+    "th": "50% เพิ่มค่าให้ โจมตี, HP สูงสุด, เพิ่มค่า โจมตี, ป้องกัน เมื่อ HP นั้นมากกว่า 50%, เพิ่มค่าอย่างสูงให้ ความเสียหายคริติคอล และ เพิ่มค่ามหาศาลให้ BB โจมตี",
+    "vi": "50% boost to Atk, max HP, boosts Atk, Def when HP is over 50%, hugely boosts critical damage & enormously boosts BB Atk"
+  },
+  "MST_LEADERSKILLS_7509_NAME": {
+    "en": "Molten Wrath",
+    "es": "Molten Wrath",
+    "id": "Murka Lebur",
+    "pt": "Molten Wrath",
+    "th": "โมลเท่น ฮราธ",
+    "vi": "Molten Wrath"
+  },
+  "MST_LEADERSKILLS_7510_DESCRIPTION": {
+    "en": "60% boost to Atk, max HP, considerably boosts Atk, Def when HP is over 50%, hugely boosts critical damage & enormously boosts BB Atk",
+    "es": "60% boost to Atk, max HP, considerably boosts Atk, Def when HP is over 50%, hugely boosts critical damage & enormously boosts BB Atk",
+    "id": "60% ekstra Serang, HP maks, lumayan menambah Serang, Tahan saat HP di atas 50%, amat menambah kerusakan ampuh & ekstra jumbo BB Serang",
+    "pt": "60% boost to Atk, max HP, considerably boosts Atk, Def when HP is over 50%, hugely boosts critical damage & enormously boosts BB Atk",
+    "th": "60% เพิ่มค่าให้ โจมตี, HP สูงสุด, เพิ่มค่าอย่างมากให้ โจมตี, ป้องกัน เมื่อ HP นั้นมากกว่า 50%, เพิ่มค่าอย่างสูงให้ ความเสียหายคริติคอล และ เพิ่มค่ามหาศาลให้ BB โจมตี",
+    "vi": "60% boost to Atk, max HP, considerably boosts Atk, Def when HP is over 50%, hugely boosts critical damage & enormously boosts BB Atk"
+  },
+  "MST_LEADERSKILLS_7510_NAME": {
+    "en": "Molten Annihilation",
+    "es": "Molten Annihilation",
+    "id": "Pembasmian Lebur",
+    "pt": "Molten Annihilation",
+    "th": "โมลเท่น แอนไนไฮเลชั่น",
+    "vi": "Molten Annihilation"
+  },
+  "MST_LEADERSKILLS_7511_DESCRIPTION": {
+    "en": "50% boost to Atk, max HP, 110% boost to Spark damage & hugely boosts critical damage",
+    "es": "50% boost to Atk, max HP, 110% boost to Spark damage & hugely boosts critical damage",
+    "id": "50% ekstra Serang, HP maks, 110% ekstra kerusakan Percikan, amat menambah kerusakan ampuh",
+    "pt": "50% boost to Atk, max HP, 110% boost to Spark damage & hugely boosts critical damage",
+    "th": "50% เพิ่มค่าให้ โจมตี, HP สูงสุด, 110% เพิ่มค่าให้ ความเสียหายสปาร์ค และ เพิ่มค่าอย่างสูงให้ ความเสียหายคริติคอล",
+    "vi": "50% boost to Atk, max HP, 110% boost to Spark damage & hugely boosts critical damage"
+  },
+  "MST_LEADERSKILLS_7511_NAME": {
+    "en": "Savage Breakers",
+    "es": "Savage Breakers",
+    "id": "Perusak Buas",
+    "pt": "Savage Breakers",
+    "th": "ซาเวจ เบรคเกอร์",
+    "vi": "Savage Breakers"
+  },
   "MST_LEADERSKILLS_7512_DESCRIPTION": {
     "en": "60% boost to Atk, max HP, 130% boost to Spark damage, hugely boosts critical damage & adds probable Def ignoring effect to attack",
     "es": "60% boost to Atk, max HP, 130% boost to Spark damage, hugely boosts critical damage & adds probable Def ignoring effect to attack",
@@ -4607,6 +4719,22 @@
     "th": "ชิรานุอิ ริวอุ โจนิน",
     "vi": "Shiranui-ryuu Jonin"
   },
+  "MST_LEADERSKILLS_810188_DESCRIPTION": {
+    "en": "150% boost to Atk, 80% boost to max HP, 150% boost to Spark damage, Spark damage considerably boosts BB gauge & 15% damage reduction from Fire, Dark types",
+    "es": "150% boost to Atk, 80% boost to max HP, 150% boost to Spark damage, Spark damage considerably boosts BB gauge & 15% damage reduction from Fire, Dark types",
+    "id": "150% boost to Atk, 80% boost to max HP, 150% boost to Spark damage, Spark damage considerably boosts BB gauge & 15% damage reduction from Fire, Dark types",
+    "pt": "150% boost to Atk, 80% boost to max HP, 150% boost to Spark damage, Spark damage considerably boosts BB gauge & 15% damage reduction from Fire, Dark types",
+    "th": "150% boost to Atk, 80% boost to max HP, 150% boost to Spark damage, Spark damage considerably boosts BB gauge & 15% damage reduction from Fire, Dark types",
+    "vi": "150% boost to Atk, 80% boost to max HP, 150% boost to Spark damage, Spark damage considerably boosts BB gauge & 15% damage reduction from Fire, Dark types"
+  },
+  "MST_LEADERSKILLS_810188_NAME": {
+    "en": "Fighter for Mankind",
+    "es": "Fighter for Mankind",
+    "id": "Fighter for Mankind",
+    "pt": "Fighter for Mankind",
+    "th": "Fighter for Mankind",
+    "vi": "Fighter for Mankind"
+  },
   "MST_LEADERSKILLS_8101_DESCRIPTION": {
     "en": "15% boost to Def for all Units",
     "es": "Aumenta un 15% la defensa de todas las unidades",
@@ -7854,6 +7982,22 @@
     "pt": "Soul of the Guardian",
     "th": "Soul of the Guardian",
     "vi": "Soul of the Guardian"
+  },
+  "MST_LEADERSKILLS_850708_DESCRIPTION": {
+    "en": "200% boost to Atk and 100% boost to Def, max HP of Light types, 180% boost to Spark damage, enormously boosts Light elemental damage, 15% damage reduction from Light, Dark types & damage taken hugely boosts BB gauge",
+    "es": "200% boost to Atk and 100% boost to Def, max HP of Light types, 180% boost to Spark damage, enormously boosts Light elemental damage, 15% damage reduction from Light, Dark types & damage taken hugely boosts BB gauge",
+    "id": "200% boost to Atk and 100% boost to Def, max HP of Light types, 180% boost to Spark damage, enormously boosts Light elemental damage, 15% damage reduction from Light, Dark types & damage taken hugely boosts BB gauge",
+    "pt": "200% boost to Atk and 100% boost to Def, max HP of Light types, 180% boost to Spark damage, enormously boosts Light elemental damage, 15% damage reduction from Light, Dark types & damage taken hugely boosts BB gauge",
+    "th": "200% boost to Atk and 100% boost to Def, max HP of Light types, 180% boost to Spark damage, enormously boosts Light elemental damage, 15% damage reduction from Light, Dark types & damage taken hugely boosts BB gauge",
+    "vi": "200% boost to Atk and 100% boost to Def, max HP of Light types, 180% boost to Spark damage, enormously boosts Light elemental damage, 15% damage reduction from Light, Dark types & damage taken hugely boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_850708_NAME": {
+    "en": "Stolen Soul-Jewel",
+    "es": "Stolen Soul-Jewel",
+    "id": "Stolen Soul-Jewel",
+    "pt": "Stolen Soul-Jewel",
+    "th": "Stolen Soul-Jewel",
+    "vi": "Stolen Soul-Jewel"
   },
   "MST_LEADERSKILLS_850727_DESCRIPTION": {
     "en": "80% boost to Atk, Def, Rec, 100% boost to max HP, enormously boosts critical damage, damage taken hugely boosts BB gauge, Spark damage considerably boosts BB gauge & negates critical and elemental damage",
@@ -88790,69 +88934,5 @@
     "pt": "Themis Prodígio",
     "th": "โพรดิจี้เธมิส",
     "vi": "Themis phi thường"
-  },
-  "MST_MONSTERS_54053_NAME": {
-    "en": "Prodigy Themis",
-    "es": "Themis prodigio",
-    "id": "Si Ajaib Themis",
-    "pt": "Themis Prodígio",
-    "th": "โพรดิจี้เธมิส",
-    "vi": "Prodigy Themis"
-  },
-  "MST_MONSTERS_54054_NAME": {
-    "en": "Prodigy Themis",
-    "es": "Prodigy Themis",
-    "id": "Prodigy Themis",
-    "pt": "Prodigy Themis",
-    "th": "โพรดิจี้ เธมิส",
-    "vi": "Prodigy Themis"
-  },
-  "MST_MONSTERS_54100_NAME": {
-    "en": "Unflinching Themis",
-    "es": "Themis impávida",
-    "id": "Si Gigih Themis",
-    "pt": "Themis Inabalável",
-    "th": "อันฟลินชิ่งเธมิส",
-    "vi": "Themis điềm nhiên"
-  },
-  "MST_MONSTERS_54101_NAME": {
-    "en": "Unflinching Themis",
-    "es": "Themis impávida",
-    "id": "Si Gigih Themis",
-    "pt": "Themis Inabalável",
-    "th": "อันฟลินชิ่งเธมิส",
-    "vi": "Themis điềm nhiên"
-  },
-  "MST_MONSTERS_54102_NAME": {
-    "en": "Unflinching Themis",
-    "es": "Themis impávida",
-    "id": "Si Gigih Themis",
-    "pt": "Themis Inabalável",
-    "th": "อันฟลินชิ่งเธมิส",
-    "vi": "Themis điềm nhiên"
-  },
-  "MST_MONSTERS_54103_NAME": {
-    "en": "Unflinching Themis",
-    "es": "Themis impávida",
-    "id": "Si Gigih Themis",
-    "pt": "Themis Inabalável",
-    "th": "อันฟลินชิ่งเธมิส",
-    "vi": "Themis điềm nhiên"
-  },
-  "MST_MONSTERS_54104_NAME": {
-    "en": "Unflinching Themis",
-    "es": "Themis impávida",
-    "id": "Si Gigih Themis",
-    "pt": "Themis Inabalável",
-    "th": "อันฟลินชิ่งเธมิส",
-    "vi": "Themis điềm nhiên"
-  },
-  "MST_MONSTERS_54105_NAME": {
-    "en": "Unflinching Themis",
-    "es": "Themis impávida",
-    "id": "Si Gigih Themis",
-    "pt": "Themis Inabalável",
-    "th": "อันฟลินชิ่ง ธีมิส",
-    "vi": "Themis điềm nhiên"
   }
 }
