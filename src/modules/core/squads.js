@@ -470,12 +470,6 @@ export function getEffectsListForSquadUnitEntry (
   // TODO: burst effects
   if (effectType === squadBuffTypes.PROC) {
     // identical steps regardless of target
-    if (isLsActive) {
-      filteredEffects.unitLs = extractBuffsFromEffects(entryEffects.unit.ls)
-        .filter(e => e[TARGET_TYPE_KEY] === target);
-    }
-    processExtraSkillForProcs(entryEffects.unit.es);
-    
     burstTypes.forEach(burstType => {
       const burstEffects = entryEffects.unit[burstType].filter(e => e[TARGET_TYPE_KEY] === target);
       if (burstType !== squadUnitActions.UBB) {
@@ -484,6 +478,12 @@ export function getEffectsListForSquadUnitEntry (
         filteredEffects.unitUbb = filteredEffects.unitUbb.concat(burstEffects);
       }
     });
+
+    if (isLsActive) {
+      filteredEffects.unitLs = extractBuffsFromEffects(entryEffects.unit.ls)
+        .filter(e => e[TARGET_TYPE_KEY] === target);
+    }
+    processExtraSkillForProcs(entryEffects.unit.es);
 
     // assumption: SP entries are in order so upgrades to previous enhancements are closer to the end of the array
     entryEffects.unit.sp.forEach(spEffect => {

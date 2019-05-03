@@ -110,12 +110,20 @@
                     :squad="squad"
                     :targetType="targetTypes.PARTY"
                     :effectType="squadBuffTypes.PROC">
-
                   </squad-buff-expandable-list>
                 </dd>
 
                 <dt class="title" :style="buffGroupTitleStyle">For the Enemy</dt>
-                <dd>table here</dd>
+                <dd>
+                  <squad-buff-expandable-list
+                    :getUnit="getUnit"
+                    :getItem="getItem"
+                    :getExtraSkill="getExtraSkill"
+                    :squad="squad"
+                    :targetType="targetTypes.ENEMY"
+                    :effectType="squadBuffTypes.PROC">
+                  </squad-buff-expandable-list>
+                </dd>
               </dl>
             </v-layout>
             <v-layout slot="unit-buffs">
