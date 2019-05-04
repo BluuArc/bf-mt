@@ -52,6 +52,7 @@
             :getExtraSkill="getExtraSkill"
             :allowOverflow="true"
             :minValueColumnWidth="'300px'"
+            freezePropertyColumn
           >
             <template slot="value-header" slot-scope="{ entry }">
               <v-layout row style="max-width: 500px; width: 100%; min-width: 300px;">
@@ -299,10 +300,16 @@ export default {
   .loading-indicator {
     margin: 2em 0;
   }
+
   .v-expansion-panel__header {
     padding-left: 8px;
     padding-right: 8px;
   }
+
+  .v-expansion-panel__body {
+    background-color: inherit;
+  }
+
   .expandable-list-entry--header {
     display: flex;
     align-items: center;

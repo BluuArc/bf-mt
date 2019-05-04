@@ -84,6 +84,10 @@ export default {
       type: String,
       default: '5em',
     },
+    freezePropertyColumn: {
+      type: Boolean,
+      default: false,
+    },
   },
   components: {
     SourcePathCell,
@@ -106,7 +110,7 @@ export default {
       return mapping;
     },
     mainValueGridStyle () {
-      const propertyColumnWidth = '17.5em';
+      const propertyColumnWidth = this.$vuetify.breakpoint.smAndDown ? '10em' : '17.5em';
       const valueSubgridWidth = `minmax(${this.minValueColumnWidth}, 1fr)`;
       const columnConfig = [propertyColumnWidth];
       this.values.forEach(entry => {
@@ -133,6 +137,7 @@ export default {
         'property-cell': true,
         [index % 2 === 0 ? 'even-row' : 'odd-row']: true,
         'only-row': this.properties.length === 0,
+        'sticky-property-cell': this.freezePropertyColumn,
       };
     },
     getClassForValue (valueEntryIndex, parentValuesArray, propertyIndex, propertyName) {
@@ -167,7 +172,7 @@ export default {
 
 <style lang="less">
 .value-subgrid {
-  --table-border-color: var(--background-color-alt);
+  --table-border-color: hsl(0, 0, 35%);
   --table-background-color: var(--background-color-alt--lighten-1);
   --table-border-settings: 1px solid var(--table-border-color);
 
@@ -176,6 +181,7 @@ export default {
   display: grid;
   grid-template-columns: 17.5em 1fr;
   grid-auto-flow: stretch;
+  background-color: inherit;
 
   // nested table
   .value-subgrid {
@@ -186,6 +192,10 @@ export default {
     &:not(.only-row) {
       background-color: var(--table-border-color);
     }
+  }
+
+  .odd-row:not(.value-cell), .odd-row.value-cell:not(:hover) {
+    background-color: inherit;
   }
 
   .value-cell:not(.header-cell):hover {
@@ -233,8 +243,13 @@ export default {
     text-align: center;
   }
 
-  .is-last-value-cell {
+  .is-last-value-cell, .property-cell {
     border-right: 2px solid var(--table-background-color);
+  }
+
+  .sticky-property-cell {
+    position: sticky;
+    left: 0;
   }
 }
 </style>
