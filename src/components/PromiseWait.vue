@@ -10,7 +10,7 @@
       </template>
       <template v-else-if="hasError">
         <slot name="error" :error="error">
-          <span>Error: {{ error }}</span>
+          <span>Error: {{ JSON.stringify(error) }}</span>
         </slot>
       </template>
       <template v-else>
@@ -24,8 +24,10 @@
 
 <script>
 import LoadingDebouncer from '@/modules/LoadingDebouncer';
+import { Logger } from '@/modules/Logger';
 import LoadingIndicator from '@/components/LoadingIndicator';
 
+const logger = new Logger({ prefix: '[PromiseWait]' });
 let loadingDebouncer;
 export default {
   props: {
@@ -89,6 +91,7 @@ export default {
           }).catch((err) => {
             this.error = err;
             this.hasError = true;
+            logger.error(err);
           }).then(() => {
             this.isInternallyLoading = false;
           });

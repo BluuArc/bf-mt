@@ -12,9 +12,20 @@
       <!-- {{ result || 'undefined' }} -->
       <promise-wait v-if="promise" :promise="promise" style="flex: auto;">
         <template slot-scope="{ result }">
-          <v-btn>
+          <!-- <div>
+            <div v-for="r in result" :key="r">
+              <span>{{ r }}</span>
+            </div>
+          </div> -->
+          <delayed-v-for-array
+            :entries="result"
+            :amountToAddPerTick="10"
+          >
+
+          </delayed-v-for-array>
+          <!-- <v-btn>
             {{ result }}
-          </v-btn>
+          </v-btn> -->
         </template>
       </promise-wait>
     </v-layout>
@@ -22,15 +33,15 @@
 </template>
 
 <script>
-import { makeTableInstance } from '@/modules/BfmtDatabase/client';
-import { multidexModuleInfo } from '@/modules/constants';
-import { delay } from '@/modules/utils';
+import { makeMultidexTableInstance } from '@/modules/BfmtDatabase/client';
+// import { multidexModuleInfo } from '@/modules/constants';
 import PromiseWait from '@/components/PromiseWait';
+import DelayedVForArray from '@/components/DelayedVForArray';
 // import { shorthandToSquad } from '@/modules/core/squads';
 // import { unitKinds, elements, genders } from '@/modules/constants';
 
-// const client = makeMultidexTableInstance('items');
-const client = makeTableInstance('settings');
+const client = makeMultidexTableInstance('units');
+// const client = makeTableInstance('settings');
 export default {
   data () {
     return {
@@ -40,6 +51,7 @@ export default {
   },
   components: {
     PromiseWait,
+    DelayedVForArray,
   },
   async mounted () {
     window._debugContext = this;
@@ -55,16 +67,20 @@ export default {
     client.unregisterCommand('message');
   },
   methods: {
+    tickFunction () {
+      return new Promise((fulfill) => {
+        requestAnimationFrame(() => fulfill());
+        // setTimeout(() => fulfill(), 100);
+      });
+    },
     async callClient () {
-
-      await delay(5000);
 
       // const result = await client.request('delayed-ping', { from: 'debug page' });
       // const result = await client.getDbStats('gl');
-      let result = await client.getAll({
+      let result = await client.getFilteredDb({
         server: 'gl',
-        tables: multidexModuleInfo.map(m => m.name),
-        forceRefresh: true,
+        // tables: multidexModuleInfo.map(m => m.name),
+        // forceRefresh: true,
         // ids: [10017, 20017],
         // extractedFields: ['name', 'id', 'sphere type'],
         // extractedFields: [],
@@ -77,16 +93,16 @@ export default {
         // },
       });
 
-      // result = await client.getSortedKeys({
-      //   server: 'gl',
-      //   sortOptions: {
-      //     type: 'Guide ID',
-      //     isAscending: false,
-      //   },
-      //   keys: result,
-      // });
+      result = await client.getSortedKeys({
+        server: 'gl',
+        sortOptions: {
+          type: 'Guide ID',
+          isAscending: true,
+        },
+        keys: result,
+      });
       // eslint-disable-next-line no-console
-      console.warn({ result });
+      // console.warn({ result });
       return Object.freeze(result);
     },
   },

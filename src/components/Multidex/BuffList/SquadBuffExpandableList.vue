@@ -1,13 +1,21 @@
 <template>
   <section class="squad-buff-expandable-list">
-    <v-expansion-panel v-model="expandedTables" expand focusable>
-      <v-expansion-panel-content v-for="(effectId, i) in sortedEffectIds" :key="effectId">
-        <div slot="header" class="expandable-list-entry--header" :key="i" :headerEntries="getSquadEntriesForEffectId(effectId)">
-          <span class="expandable-list-entry--title subheading" v-text="`${effectId}: ${effectNameById[effectId] }`"/>
+    <loading-indicator v-if="isVisuallyLoadingList" loadingMessage="Loading list..."/>
+    <delayed-v-for-expansion-panel
+      v-show="!isVisuallyLoadingList"
+      @start="handleLoadStart"
+      @end="handleLoadEnd"
+      :entries="sortedEffectIds"
+      v-model="expandedTables"
+      expand
+      focusable>
+      <template slot="header" slot-scope="{ arrayEntry }">
+        <div class="expandable-list-entry--header" :headerEntries="getSquadEntriesForEffectId(arrayEntry)">
+          <span class="expandable-list-entry--title subheading" v-text="`${arrayEntry}: ${effectNameById[arrayEntry] }`"/>
           <div class="expandable-list-entry--columns-preview">
             <div
               class="expandable-list-entry--columns-preview-entry"
-              v-for="(unitEntry) in getSquadEntriesForEffectId(effectId)"
+              v-for="(unitEntry) in getSquadEntriesForEffectId(arrayEntry)"
               :key="`${unitEntry.id}-${unitEntry.position}`"
             >
               <v-layout align-content-center row>
@@ -32,37 +40,43 @@
             </div>
           </div>
         </div>
-        <value-subgrid
-          :properties="propsById[effectId]"
-          :values="getSquadEntriesForEffectId(effectId).map(u => getValueSubgridEntry(u, effectId))"
-          :getUnit="getUnit"
-          :getItem="getItem"
-          :getExtraSkill="getExtraSkill"
-          :allowOverflow="true"
-          :minValueColumnWidth="'300px'"
-        >
-          <template slot="value-header" slot-scope="{ entry }">
-            <v-layout row style="max-width: 500px; width: 100%; min-width: 300px;">
-              <unit-entry
-                xs12
-                :index="squad.units.indexOf(entry.identifier)"
-                :unit="entry.identifier"
-                :getUnit="getUnit"
-                :getItem="getItem"
-                :getExtraSkill="getExtraSkill"
-                :isLead="squad.units.indexOf(entry.identifier) === squad.lead"
-                :isFriend="squad.units.indexOf(entry.identifier) === squad.friend"
-                class="d-flex py-1"
-                style="align-items: center; border: 1px solid var(--background-color-alt);"/>
-            </v-layout>
-          </template>
-        </value-subgrid>
-      </v-expansion-panel-content>
-    </v-expansion-panel>
+      </template>
+      <template slot-scope="{ arrayEntry, index }">
+        <template v-if="viewedTables[index]">
+          <value-subgrid
+            v-show="expandedTables[index]"
+            :properties="propsById[arrayEntry]"
+            :values="getSquadEntriesForEffectId(arrayEntry).map(u => getValueSubgridEntry(u, arrayEntry))"
+            :getUnit="getUnit"
+            :getItem="getItem"
+            :getExtraSkill="getExtraSkill"
+            :allowOverflow="true"
+            :minValueColumnWidth="'300px'"
+          >
+            <template slot="value-header" slot-scope="{ entry }">
+              <v-layout row style="max-width: 500px; width: 100%; min-width: 300px;">
+                <unit-entry
+                  xs12
+                  :index="squad.units.indexOf(entry.identifier)"
+                  :unit="entry.identifier"
+                  :getUnit="getUnit"
+                  :getItem="getItem"
+                  :getExtraSkill="getExtraSkill"
+                  :isLead="squad.units.indexOf(entry.identifier) === squad.lead"
+                  :isFriend="squad.units.indexOf(entry.identifier) === squad.friend"
+                  class="d-flex py-1"
+                  style="align-items: center; border: 1px solid var(--background-color-alt);"/>
+              </v-layout>
+            </template>
+          </value-subgrid>
+        </template>
+      </template>
+    </delayed-v-for-expansion-panel>
   </section>
 </template>
 
 <script>
+import LoadingDebouncer from '@/modules/LoadingDebouncer';
 import { getEffectId } from '@/modules/EffectProcessor/processor-helper';
 import { getEffectsListForSquadUnitEntry } from '@/modules/core/squads';
 import { getEffectName } from '@/modules/core/buffs';
@@ -71,6 +85,8 @@ import { mapGetters } from 'vuex';
 import ValueSubgrid from '@/components/Multidex/BuffTableGrid/ValueSubgrid';
 import UnitEntry from '@/components/Tools/Squads/SquadUnitEntry';
 import UnitThumbnail from '@/components/Multidex/Units/UnitThumbnail';
+import DelayedVForExpansionPanel from './DelayedVForExpansionPanel';
+import LoadingIndicator from '@/components/LoadingIndicator';
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 
 export default {
@@ -93,6 +109,8 @@ export default {
     ValueSubgrid,
     UnitThumbnail,
     UnitEntry,
+    DelayedVForExpansionPanel,
+    LoadingIndicator,
   },
   computed: {
     blacklistedKeys: () => [
@@ -189,14 +207,30 @@ export default {
   data () {
     return {
       expandedTables: [],
+      viewedTables: {},
       valueSubgridEntryByEntryByEffectId: {},
+      loadStartToken: 0,
+      loadEndToken: 0,
+      loadingList: true,
+      isVisuallyLoadingList: true,
+      loadingDebouncer: null,
     };
   },
-  mounted () {
-    // eslint-disable-next-line no-console
-    console.warn('Calculating list for', this.targetType, this.effectType);
+  beforeDestroy () {
+    if (this.loadingDebouncer) {
+      this.loadingDebouncer.dispose();
+    }
   },
   methods: {
+    handleLoadStart (startToken) {
+      this.loadStartToken = startToken;
+      this.loadingList = true;
+    },
+    handleLoadEnd (endToken) {
+      if (this.loadStartToken === endToken) {
+        this.loadingList = false;
+      }
+    },
     getValueSubgridEntry (entry, effectId) {
       if (!this.valueSubgridEntryByEntryByEffectId[effectId]) {
         this.valueSubgridEntryByEntryByEffectId[effectId] = new WeakMap();
@@ -240,11 +274,31 @@ export default {
       return Array.from(new Set(this.effectsById[id].map(e => e.source)));
     },
   },
+  watch: {
+    expandedTables (newValue) {
+      newValue.forEach((doShow, index) => {
+        if (doShow) {
+          this.viewedTables[index] = true;
+        }
+      });
+    },
+    loadingList () {
+      if (!this.loadingDebouncer) {
+        this.loadingDebouncer = new LoadingDebouncer(val => {
+          this.isVisuallyLoadingList = val;
+        });
+      }
+      this.loadingDebouncer.setValue(() => this.loadingList);
+    },
+  },
 };
 </script>
 
 <style lang="less">
 .squad-buff-expandable-list {
+  .loading-indicator {
+    margin: 2em 0;
+  }
   .v-expansion-panel__header {
     padding-left: 8px;
     padding-right: 8px;
