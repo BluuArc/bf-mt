@@ -86,7 +86,26 @@
             v-model="currentTabIndex"
             class="mt-2"
             :tabs="tabConfig">
-            <v-layout slot="buffs">
+            <v-layout slot="buffs" column>
+              <v-expansion-panel class="configuration-panel">
+                <v-expansion-panel-content>
+                  <div slot="header">
+                    Configure Buff View
+                  </div>
+                  <section>
+                    <order-configurator
+                      v-model="buffTables"
+                      :getEntryName="(configIndex) => possibleTables[configIndex].name"
+                      :fullValueSet="defaultBuffTables"
+                    />
+                    <section>
+                      <v-btn flat @click="buffTables = buffTables.concat(defaultBuffTables.filter((_, i) => !buffTables.includes(i)))">Show All</v-btn>
+                      <v-btn flat @click="buffTables = []">Hide All</v-btn>
+                      <v-btn flat @click="buffTables = defaultBuffTables.slice()">Reset to Default</v-btn>
+                    </section>
+                  </section>
+                </v-expansion-panel-content>
+              </v-expansion-panel>
               <dl>
                 <template v-for="tableConfigIndex in buffTables">
                   <dt
@@ -172,7 +191,7 @@ import DeleteSquadCard from '@/components/Tools/Squads/DeleteSquadCard';
 import TabContainer from '@/components/CardTabsContainer';
 import SquadListCardEditable from '@/components/Tools/Squads/SquadListCardEditable';
 import SquadBuffExpandableList from '@/components/Multidex/BuffList/SquadBuffExpandableList';
-import SquadBuffCompareTableGrid from '@/components/Multidex/BuffTableGrid/SquadBuffCompareTable';
+import OrderConfigurator from '@/components/OrderConfigurator';
 
 const logger = new Logger({ prefix: '[Squad]' });
 export default {
@@ -191,7 +210,7 @@ export default {
     SquadListCardEditable,
     LoadingIndicator,
     SquadBuffExpandableList,
-    SquadBuffCompareTableGrid,
+    OrderConfigurator,
   },
   computed: {
     ...mapState('settings', ['activeServer']),
@@ -200,8 +219,6 @@ export default {
     requiredModules: () => squadRequiredModules,
     tabConfig: () => [
       'Buffs',
-      // 'Squad Buffs',
-      // 'Unit Buffs',
       'Spark Statistics',
       'Arena',
     ].map(name => ({ name, slot: name.toLowerCase().replace(/ /g, '-') })),
@@ -243,6 +260,9 @@ export default {
         effectType: squadBuffTypes.PROC,
       },
     ]),
+    defaultBuffTables () {
+      return Object.freeze(this.possibleTables.map((_, i) => i));
+    },
   },
   data () {
     return {
@@ -260,7 +280,7 @@ export default {
     };
   },
   created () {
-    this.buffTables = this.possibleTables.map((_, i) => i);
+    this.buffTables = this.defaultBuffTables.slice();
   },
   mounted () {
     this.isLoadingSquadData = true;
@@ -379,6 +399,13 @@ export default {
 
 <style lang="less">
 .squad-page {
+  .configuration-panel {
+    .v-expansion-panel__header {
+      padding-left: 8px;
+      padding-right: 8px;
+      font-weight: bold;
+    }
+  }
   dl {
     width: 100%;
 
