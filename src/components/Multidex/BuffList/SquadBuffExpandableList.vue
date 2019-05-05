@@ -52,7 +52,6 @@
             :getExtraSkill="getExtraSkill"
             :allowOverflow="true"
             :minValueColumnWidth="'300px'"
-            freezePropertyColumn
           >
             <template slot="value-header" slot-scope="{ entry }">
               <v-layout row style="max-width: 500px; width: 100%; min-width: 300px;">

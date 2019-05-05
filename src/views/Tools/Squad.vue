@@ -86,70 +86,26 @@
             v-model="currentTabIndex"
             class="mt-2"
             :tabs="tabConfig">
-            <v-layout slot="squad-buffs">
+            <v-layout slot="buffs">
               <dl>
-                <dt class="title" :style="buffGroupTitleStyle">Party Passives</dt>
-                <dd>
-                  <squad-buff-expandable-list
-                    :getUnit="getUnit"
-                    :getItem="getItem"
-                    :getExtraSkill="getExtraSkill"
-                    :squad="squad"
-                    :targetType="targetTypes.PARTY"
-                    :effectType="squadBuffTypes.PASSIVE"
+                <template v-for="tableConfigIndex in buffTables">
+                  <dt
+                    class="title"
+                    :style="buffGroupTitleStyle"
+                    :key="`${possibleTables[tableConfigIndex].targetType}-${possibleTables[tableConfigIndex].effectType}-title`"
+                    v-text="possibleTables[tableConfigIndex].name"
                   />
-                </dd>
-
-                <dt class="title" :style="buffGroupTitleStyle">Party Buffs</dt>
-                <dd>
-                  <squad-buff-expandable-list
-                    :getUnit="getUnit"
-                    :getItem="getItem"
-                    :getExtraSkill="getExtraSkill"
-                    :squad="squad"
-                    :targetType="targetTypes.PARTY"
-                    :effectType="squadBuffTypes.PROC"
-                  />
-                </dd>
-
-                <dt class="title" :style="buffGroupTitleStyle">For the Enemy</dt>
-                <dd>
-                  <squad-buff-expandable-list
-                    :getUnit="getUnit"
-                    :getItem="getItem"
-                    :getExtraSkill="getExtraSkill"
-                    :squad="squad"
-                    :targetType="targetTypes.ENEMY"
-                    :effectType="squadBuffTypes.PROC"
-                  />
-                </dd>
-              </dl>
-            </v-layout>
-            <v-layout slot="unit-buffs">
-              <dl>
-                <dt class="title" :style="buffGroupTitleStyle">Self Passives</dt>
-                <dd>
-                  <squad-buff-expandable-list
-                    :getUnit="getUnit"
-                    :getItem="getItem"
-                    :getExtraSkill="getExtraSkill"
-                    :squad="squad"
-                    :targetType="targetTypes.SELF"
-                    :effectType="squadBuffTypes.PASSIVE"
-                  />
-                </dd>
-
-                <dt class="title" :style="buffGroupTitleStyle">Self Buffs</dt>
-                <dd>
-                  <squad-buff-expandable-list
-                    :getUnit="getUnit"
-                    :getItem="getItem"
-                    :getExtraSkill="getExtraSkill"
-                    :squad="squad"
-                    :targetType="targetTypes.SELF"
-                    :effectType="squadBuffTypes.PROC"
-                  />
-                </dd>
+                  <dd :key="`${possibleTables[tableConfigIndex].targetType}-${possibleTables[tableConfigIndex].effectType}-table`">
+                    <squad-buff-expandable-list
+                      :getUnit="getUnit"
+                      :getItem="getItem"
+                      :getExtraSkill="getExtraSkill"
+                      :squad="squad"
+                      :targetType="possibleTables[tableConfigIndex].targetType"
+                      :effectType="possibleTables[tableConfigIndex].effectType"
+                    />
+                  </dd>
+                </template>
               </dl>
             </v-layout>
             <v-layout slot="spark-statistics">
@@ -243,8 +199,9 @@ export default {
     squadBuffTypes: () => squadBuffTypes,
     requiredModules: () => squadRequiredModules,
     tabConfig: () => [
-      'Squad Buffs',
-      'Unit Buffs',
+      'Buffs',
+      // 'Squad Buffs',
+      // 'Unit Buffs',
       'Spark Statistics',
       'Arena',
     ].map(name => ({ name, slot: name.toLowerCase().replace(/ /g, '-') })),
@@ -259,6 +216,33 @@ export default {
         top: `${this.topNavbarHeight}px`,
       };
     },
+    possibleTables: () => Object.freeze([
+      {
+        name: 'Party Passives',
+        targetType: targetTypes.PARTY,
+        effectType: squadBuffTypes.PASSIVE,
+      },
+      {
+        name: 'Party Buffs',
+        targetType: targetTypes.PARTY,
+        effectType: squadBuffTypes.PROC,
+      },
+      {
+        name: 'For the Enemy',
+        targetType: targetTypes.ENEMY,
+        effectType: squadBuffTypes.PROC,
+      },
+      {
+        name: 'Self Passives',
+        targetType: targetTypes.SELF,
+        effectType: squadBuffTypes.PASSIVE,
+      },
+      {
+        name: 'Self Buffs',
+        targetType: targetTypes.SELF,
+        effectType: squadBuffTypes.PROC,
+      },
+    ]),
   },
   data () {
     return {
@@ -272,7 +256,11 @@ export default {
       currentTabIndex: 0,
       tempSquad: {},
       topNavbarHeight: 56,
+      buffTables: [],
     };
+  },
+  created () {
+    this.buffTables = this.possibleTables.map((_, i) => i);
   },
   mounted () {
     this.isLoadingSquadData = true;
