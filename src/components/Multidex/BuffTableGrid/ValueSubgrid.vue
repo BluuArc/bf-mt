@@ -2,7 +2,10 @@
   <div class="value-subgrid" :style="mainValueGridStyle">
     <template v-if="showHeaders">
       <span class="property-cell header-cell">
-        Buff Property
+        <v-btn flat @click="lockPropertyColumn = !lockPropertyColumn">
+          <span style="text-transform: capitalize;">Buff Property</span>
+          <v-icon>{{ lockPropertyColumn ? 'lock' : 'lock_open' }}</v-icon>
+        </v-btn>
       </span>
       <span
         v-for="(entry, i) in values" :key="i"
@@ -131,13 +134,21 @@ export default {
       'triggeredOn',
     ],
   },
+  data () {
+    return {
+      lockPropertyColumn: false,
+    };
+  },
+  mounted () {
+    this.lockPropertyColumn = this.freezePropertyColumn;
+  },
   methods: {
     getClassForProperty (property, index) {
       return {
         'property-cell': true,
         [index % 2 === 0 ? 'even-row' : 'odd-row']: true,
         'only-row': this.properties.length === 0,
-        'sticky-property-cell': this.freezePropertyColumn,
+        'sticky-property-cell': this.lockPropertyColumn,
       };
     },
     getClassForValue (valueEntryIndex, parentValuesArray, propertyIndex, propertyName) {
