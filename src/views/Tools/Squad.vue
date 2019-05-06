@@ -85,6 +85,8 @@
             v-if="!isLoadingSquadData && !editMode"
             v-model="currentTabIndex"
             class="mt-2"
+            :centeredTabs="true"
+            :growTabs="true"
             :tabs="tabConfig">
             <v-layout slot="buffs" column>
               <v-expansion-panel class="configuration-panel">

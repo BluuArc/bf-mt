@@ -212,6 +212,7 @@ div.buff-table-grid {
   display: grid;
   grid-template-columns: minmax(64px, auto) 1fr;
   border: var(--table-border-settings);
+  width: 100%;
 
   .header-cell {
     font-weight: bold;

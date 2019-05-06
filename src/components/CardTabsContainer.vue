@@ -2,7 +2,12 @@
   <v-container fluid class="pt-0">
     <v-layout row>
       <v-flex class="pb-0">
-        <v-tabs v-model="localValue" class="mb-2" :grow="growTabs" :color="color || undefined">
+        <v-tabs
+          v-model="localValue"
+          class="mb-2"
+          :grow="growTabs"
+          :centered="centeredTabs"
+          :color="color || undefined">
           <v-tab v-for="(tab, i) in tabs" :key="i">{{ tab.name }}</v-tab>
         </v-tabs>
       </v-flex>
@@ -45,6 +50,10 @@ export default {
       default: false,
     },
     growTabs: {
+      type: Boolean,
+      default: false,
+    },
+    centeredTabs: {
       type: Boolean,
       default: false,
     },
