@@ -3,6 +3,9 @@ import {
   spCategoryMapping,
   moveTypeMapping,
   squadFillerMapping,
+  arenaActionMapping,
+  arenaTargetMapping,
+  arenaConditionMapping,
 } from '@/modules/constants';
 import { safeGet } from '@/modules/utils';
 
@@ -250,6 +253,14 @@ export function arenaConditionCodeToText (code) {
     afterHealers: 'Anywhere After Healers',
   };
   return mapping[code];
+}
+
+export function arenaConditionToText (data = {}) {
+  const chance = `${data['chance%']}% chance`;
+  const action = arenaActionMapping[data.action] || data.action;
+  const target = arenaTargetMapping[data['target type']] || data['target type'];
+  const condition = arenaConditionMapping[data['target conditions']] || data['target conditions'];
+  return `${chance} to ${action} ${target} ${condition}`;
 }
 
 export function getArenaPositionRecommendation (unit = {}) {

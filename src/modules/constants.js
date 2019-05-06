@@ -426,3 +426,23 @@ export const squadBuffTypes = Object.freeze({
   PROC: 'proc',
   BURST: 'burst',
 });
+
+
+export const arenaConditionMapping = Object.freeze({
+  hp_50pr_under: 'has less than 50% HP',
+  hp_50pr_over: 'has more than 50% HP',
+  hp_75pr_under: 'has less than 75% HP',
+  hp_25pr_under: 'has less than 25% HP',
+  hp_min: 'has the lowest HP',
+  hp_max: 'has the highest HP',
+  atk_max: 'has the highest attack',
+  random: 'is present',
+});
+export const arenaActionMapping = Object.freeze({
+  skill: 'use BB/SBB',
+  attack: 'normal attack',
+});
+export const arenaTargetMapping = Object.freeze({
+  party: 'when an ally',
+  enemy: 'on enemy that',
+});

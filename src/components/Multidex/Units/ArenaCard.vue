@@ -105,7 +105,12 @@
 <script>
 import { mapState } from 'vuex';
 import DescriptionCardBase from '@/components/Multidex/DescriptionCardBase';
-import { getArenaPositionRecommendation, arenaConditionCodeToText, getColoClassUsage } from '@/modules/core/units';
+import {
+  getArenaPositionRecommendation,
+  arenaConditionCodeToText,
+  getColoClassUsage,
+  arenaConditionToText,
+} from '@/modules/core/units';
 
 export default {
   props: {
@@ -127,30 +132,6 @@ export default {
     aiData () {
       return (this.unit && Array.isArray(this.unit.ai)) ? this.unit.ai : [];
     },
-    conditionMapping () {
-      return {
-        hp_50pr_under: 'has less than 50% HP',
-        hp_50pr_over: 'has more than 50% HP',
-        hp_75pr_under: 'has less than 75% HP',
-        hp_25pr_under: 'has less than 25% HP',
-        hp_min: 'has the lowest HP',
-        hp_max: 'has the highest HP',
-        atk_max: 'has the highest attack',
-        random: 'is present',
-      };
-    },
-    actionMapping () {
-      return {
-        skill: 'use BB/SBB',
-        attack: 'normal attack',
-      };
-    },
-    targetMapping () {
-      return {
-        party: 'when an ally',
-        enemy: 'on enemy that',
-      };
-    },
     suggestions () {
       return getArenaPositionRecommendation(this.unit).map(arenaConditionCodeToText);
     },
@@ -160,11 +141,7 @@ export default {
   }),
   methods: {
     generateArenaText (data = {}) {
-      const chance = `${data['chance%']}% chance`;
-      const action = this.actionMapping[data.action] || data.action;
-      const target = this.targetMapping[data['target type']] || data['target type'];
-      const condition = this.conditionMapping[data['target conditions']] || data['target conditions'];
-      return `${chance} to ${action} ${target} ${condition}`;
+      return arenaConditionToText(data);
     },
   },
 };

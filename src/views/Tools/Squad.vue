@@ -132,8 +132,13 @@
             <v-layout slot="spark-statistics">
               Spark stats go here
             </v-layout>
-            <v-layout slot="arena">
-              Arena suggestions go here
+            <v-layout slot="arena" style="overflow-x: auto;">
+              <squad-arena-suggestion-table
+                :getUnit="getUnit"
+                :getItem="getItem"
+                :getExtraSkill="getExtraSkill"
+                :squad="squad"
+              />
             </v-layout>
           </tab-container>
         </v-card>
@@ -193,6 +198,7 @@ import DeleteSquadCard from '@/components/Tools/Squads/DeleteSquadCard';
 import TabContainer from '@/components/CardTabsContainer';
 import SquadListCardEditable from '@/components/Tools/Squads/SquadListCardEditable';
 import SquadBuffExpandableList from '@/components/Multidex/BuffList/SquadBuffExpandableList';
+import SquadArenaSuggestionTable from '@/components/Tools/Squads/SquadArenaSuggestionTable';
 import OrderConfigurator from '@/components/OrderConfigurator';
 
 const logger = new Logger({ prefix: '[Squad]' });
@@ -213,6 +219,7 @@ export default {
     LoadingIndicator,
     SquadBuffExpandableList,
     OrderConfigurator,
+    SquadArenaSuggestionTable,
   },
   computed: {
     ...mapState('settings', ['activeServer']),
