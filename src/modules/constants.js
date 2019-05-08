@@ -109,6 +109,11 @@ export const moveTypeMapping = Object.freeze({
   2: 'Teleporting',
   3: 'Non-Moving',
 });
+export const moveTypeIdByName = Object.freeze({
+  Moving: 1,
+  Teleporting: 2,
+  'Non-Moving': 3,
+});
 
 export const spCategoryMapping = Object.freeze({
   1: 'Parameter Boost',
