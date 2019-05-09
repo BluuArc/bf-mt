@@ -1,4 +1,84 @@
 {
+  "MST_SKILLS_212252_NAME": {
+    "en": "I'm Raaga, martial artist.",
+    "es": "Soy Raaga, artista marcial.",
+    "id": "Aku Raaga, ahli bela diri.",
+    "pt": "Sou Raaga, artista marcial.",
+    "th": "ข้าคือรากะ ผู้ใช้ศิลปะการต่อสู้",
+    "vi": "I'm Raaga, martial artist."
+  },
+  "MST_SKILLS_21225300_NAME": {
+    "en": "I seek strong opponents.",
+    "es": "I seek strong opponents.",
+    "id": "Aku mencari lawan kuat.",
+    "pt": "I seek strong opponents.",
+    "th": "ข้าตามหาคู่ต่อสู้ที่แข็งแกร่ง",
+    "vi": "I seek strong opponents."
+  },
+  "MST_SKILLS_2122530_DESCRIPTION": {
+    "en": "Attack on all enemies",
+    "es": "Ataque grupal",
+    "id": "Menyerang semua musuh",
+    "pt": "Ataque em todos os inimigos",
+    "th": "โจมตีศัตรูทั้งหมด",
+    "vi": "Attack on all enemies"
+  },
+  "MST_SKILLS_2122530_NAME": {
+    "en": "General: All Enemies Attack",
+    "es": "General: Ataque grupal",
+    "id": "Jenderal: Semua Musuh Menyerang",
+    "pt": "General: Todos os inimigos, ataquem",
+    "th": "นายพล: โจมตีศัตรูทุกตัว",
+    "vi": "General: All Enemies Attack"
+  },
+  "MST_SKILLS_212253_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_212253_NAME": {
+    "en": "I seek strong opponents.",
+    "es": "Busco rivales fuertes.",
+    "id": "Aku mencari lawan kuat.",
+    "pt": "Busco oponentes poderosos.",
+    "th": "ข้าเห็นคู่ต่อสู้",
+    "vi": "I seek strong opponents."
+  },
+  "MST_SKILLS_21225400_NAME": {
+    "en": "Show me your techniques.",
+    "es": "Show me your techniques.",
+    "id": "Tunjukkan teknikmu.",
+    "pt": "Show me your techniques.",
+    "th": "แสดงเทคนิคของเจ้าให้ดูหน่อย",
+    "vi": "Show me your techniques."
+  },
+  "MST_SKILLS_2122540_DESCRIPTION": {
+    "en": "11 combo powerful Fire attack on all enemies & probable Curse effect",
+    "es": "Combo grupal de 11 poderosos ataques ígneos. Puede causar maldición",
+    "id": "11 kombo serangan Api kuat ke semua musuh & kemungkinan efek Kutukan",
+    "pt": "Combo poderoso de 11 golpes de Fogo em todos os inimigos e provável efeito de Maldição",
+    "th": "11 คอมโบ โจมตีธาตุไฟอย่างรุนแรง ใส่ศัตรูทั้งหมด และ อาจจะทำให้คิดสถานะ คำสาป",
+    "vi": "11 combo powerful Fire attack on all enemies & probable Curse effect"
+  },
+  "MST_SKILLS_2122540_NAME": {
+    "en": "Rakshasa Pyre",
+    "es": "Pira de Rakshasa",
+    "id": "Raksasa Pyre",
+    "pt": "Pira Rakshasa",
+    "th": "รัคชาซ่า ไพร",
+    "vi": "Rakshasa Pyre"
+  },
+  "MST_SKILLS_2122541_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
   "MST_SKILLS_2122541_NAME": {
     "en": "Demonic Blade",
     "es": "Espada malévola",
@@ -86520,12 +86600,12 @@
     "vi": "DM: Ryuuenbu MAX"
   },
   "MST_SKILLS_2810178_DESCRIPTION": {
-    "en": "23 combo massive Fire attack on all foes, enormously boosts critcal hit damage for 3 turns, enormous 2 turn Atk, Def reduction, adds probablity to perform 1 extra action within the same turn & enormously boosts Atk relative to Def for 3 turns",
-    "es": "23 combo massive Fire attack on all foes, enormously boosts critcal hit damage for 3 turns, enormous 2 turn Atk, Def reduction, adds probablity to perform 1 extra action within the same turn & enormously boosts Atk relative to Def for 3 turns",
-    "id": "23 kombo serangan Api masif ke semua musuh, 3 giliran ekstra jumbo: kerusakan ampuh, pengurangan Serang, Tahan 2 giliran, Serang sesuai Tahan; tambah kans melakukan 1 tindakan ekstra dalam giliran yang sama",
-    "pt": "23 combo massive Fire attack on all foes, enormously boosts critcal hit damage for 3 turns, enormous 2 turn Atk, Def reduction, adds probablity to perform 1 extra action within the same turn & enormously boosts Atk relative to Def for 3 turns",
-    "th": "23 คอมโบ โจมตีธาตุไฟรุนแรงมหาศาล ใส่ศัตรูทั้งหมด, เพิ่มค่ามหาศาลให้ ความเสียหายคริติคอล นาน 3 เทิร์น, 2 เทิร์น ลดค่า โจมตี, ป้องกัน มหาศาล, ให้ โอกาสที่จะใช้เพิ่ม 1 คำสั่งภายในเทิร์นเดียวกัน และ เพิ่มค่ามหาศาลให้ โจมตี สัมพันธ์กับ ป้องกัน นาน 3 เทิร์น",
-    "vi": "23 combo massive Fire attack on all foes, enormously boosts critcal hit damage for 3 turns, enormous 2 turn Atk, Def reduction, adds probablity to perform 1 extra action within the same turn & enormously boosts Atk relative to Def for 3 turns"
+    "en": "23 combo massive Fire attack on all foes, enormously boosts critical damage for 3 turns, adds 1 extra action within the same turn, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec and enormously boosts critical hit rate for 3 turns & enormously boosts Atk relative to Def for 3 turns",
+    "es": "23 combo massive Fire attack on all foes, enormously boosts critical damage for 3 turns, adds 1 extra action within the same turn, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec and enormously boosts critical hit rate for 3 turns & enormously boosts Atk relative to Def for 3 turns",
+    "id": "23 combo massive Fire attack on all foes, enormously boosts critical damage for 3 turns, adds 1 extra action within the same turn, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec and enormously boosts critical hit rate for 3 turns & enormously boosts Atk relative to Def for 3 turns",
+    "pt": "23 combo massive Fire attack on all foes, enormously boosts critical damage for 3 turns, adds 1 extra action within the same turn, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec and enormously boosts critical hit rate for 3 turns & enormously boosts Atk relative to Def for 3 turns",
+    "th": "23 combo massive Fire attack on all foes, enormously boosts critical damage for 3 turns, adds 1 extra action within the same turn, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec and enormously boosts critical hit rate for 3 turns & enormously boosts Atk relative to Def for 3 turns",
+    "vi": "23 combo massive Fire attack on all foes, enormously boosts critical damage for 3 turns, adds 1 extra action within the same turn, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec and enormously boosts critical hit rate for 3 turns & enormously boosts Atk relative to Def for 3 turns"
   },
   "MST_SKILLS_2810178_NAME": {
     "en": "SDM: Ryuuenbu MAX",
@@ -88328,12 +88408,12 @@
     "vi": "DM: Power Geyser MAX"
   },
   "MST_SKILLS_2830178_DESCRIPTION": {
-    "en": "5 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns",
-    "es": "9 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns",
-    "id": "5 kombo serangan masif Api, Bumi ke semua musuh, pengurangan 100% kerusakan 1 giliran, tambahan besar HP maks, tambahan jumbo Serang, Tahan, Pulih 3 giliran",
-    "pt": "10 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns",
-    "th": "5 คอมโบ โจมตีธาตุ ไฟ, ดิน อย่างรุนแรงมหาศาล ใส่ศัตรูทั้งหมด, 100% ลดค่าความเสียหาย นาน 1 เทิร์น, เพิ่มค่าอย่างสูงให้ HP สูงสุด และ เพิ่มค่าอย่างมหาศาลให้ โจมตี, ป้องกัน, ฟื้นฟู นาน 3 เทิร์น",
-    "vi": "8 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns"
+    "en": "5 combo massive Fire, Earth attack on all foes, 100% damage reduction for 3 turns, greatly boosts max HP, enormously boosts Atk, Def, Rec for 3 turns, hugely boosts Atk, Def relative to max HP for 3 turns & activates Earth shield for 3 turns",
+    "es": "5 combo massive Fire, Earth attack on all foes, 100% damage reduction for 3 turns, greatly boosts max HP, enormously boosts Atk, Def, Rec for 3 turns, hugely boosts Atk, Def relative to max HP for 3 turns & activates Earth shield for 3 turns",
+    "id": "5 combo massive Fire, Earth attack on all foes, 100% damage reduction for 3 turns, greatly boosts max HP, enormously boosts Atk, Def, Rec for 3 turns, hugely boosts Atk, Def relative to max HP for 3 turns & activates Earth shield for 3 turns",
+    "pt": "5 combo massive Fire, Earth attack on all foes, 100% damage reduction for 3 turns, greatly boosts max HP, enormously boosts Atk, Def, Rec for 3 turns, hugely boosts Atk, Def relative to max HP for 3 turns & activates Earth shield for 3 turns",
+    "th": "5 combo massive Fire, Earth attack on all foes, 100% damage reduction for 3 turns, greatly boosts max HP, enormously boosts Atk, Def, Rec for 3 turns, hugely boosts Atk, Def relative to max HP for 3 turns & activates Earth shield for 3 turns",
+    "vi": "5 combo massive Fire, Earth attack on all foes, 100% damage reduction for 3 turns, greatly boosts max HP, enormously boosts Atk, Def, Rec for 3 turns, hugely boosts Atk, Def relative to max HP for 3 turns & activates Earth shield for 3 turns"
   },
   "MST_SKILLS_2830178_NAME": {
     "en": "SDM: Power Geyser MAX",
@@ -88918,21 +88998,5 @@
     "pt": "Iron God Sword Lv. 3",
     "th": "Iron God Sword Lv. 3",
     "vi": "Iron God Sword Lv. 3"
-  },
-  "MST_SKILLS_2830648_DESCRIPTION": {
-    "en": "16 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 3 combo Earth attack on single foe (25% active Pierce on Earth, Thunder types), 100% damage reduction from all element types for 3 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 100% additional damage reduction for 3 turns & enormously boosts max HP",
-    "es": "16 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 3 combo Earth attack on single foe (25% active Pierce on Earth, Thunder types), 100% damage reduction from all element types for 3 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 100% additional damage reduction for 3 turns & enormously boosts max HP",
-    "id": "16 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 3 combo Earth attack on single foe (25% active Pierce on Earth, Thunder types), 100% damage reduction from all element types for 3 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 100% additional damage reduction for 3 turns & enormously boosts max HP",
-    "pt": "16 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 3 combo Earth attack on single foe (25% active Pierce on Earth, Thunder types), 100% damage reduction from all element types for 3 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 100% additional damage reduction for 3 turns & enormously boosts max HP",
-    "th": "16 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 3 combo Earth attack on single foe (25% active Pierce on Earth, Thunder types), 100% damage reduction from all element types for 3 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 100% additional damage reduction for 3 turns & enormously boosts max HP",
-    "vi": "16 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 3 combo Earth attack on single foe (25% active Pierce on Earth, Thunder types), 100% damage reduction from all element types for 3 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 100% additional damage reduction for 3 turns & enormously boosts max HP"
-  },
-  "MST_SKILLS_2830648_NAME": {
-    "en": "Iron God Sword MAX",
-    "es": "Iron God Sword MAX",
-    "id": "Iron God Sword MAX",
-    "pt": "Iron God Sword MAX",
-    "th": "Iron God Sword MAX",
-    "vi": "Iron God Sword MAX"
   }
 }
