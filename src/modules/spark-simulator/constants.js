@@ -2,7 +2,7 @@ const passiveProcMetadata = require('@/assets/buff-translation/passive-proc-meta
 
 export const ATTACKING_PROCS = Object.freeze(
   Object.keys(passiveProcMetadata.proc)
-    .filter(id => passiveProcMetadata.proc[id].type === 'Attack')
+    .filter(id => passiveProcMetadata.proc[id].Type === 'Attack')
 );
 
 export const MOVESPEED_OFFSETS = Object.freeze({

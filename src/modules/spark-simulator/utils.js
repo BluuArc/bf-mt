@@ -4,7 +4,7 @@ import {
   getHealFrameData,
   getHitCountData as getHitCountDataFromBurst,
 } from '@/modules/core/bursts';
-import { generateFillerSquadUnitEntry } from '@/modules/core/squad';
+import { generateFillerSquadUnitEntry } from '@/modules/core/squads';
 import {
   targetAreaMapping,
   moveTypeIdByName,
@@ -109,13 +109,14 @@ export function getFramesForSparkUnitEntry ({
   return resultAttackFrames;
 }
 
-export function convertSquadUnitEntryToSparkUnitEntry (entry = generateFillerSquadUnitEntry(), synchronousGetters = { unit, item, extraSkill }) {
+export function convertSquadUnitEntryToSparkUnitEntry (entry = generateFillerSquadUnitEntry(), synchronousGetters = {}) {
   const unitData = synchronousGetters.unit(entry.id);
   const sparkUnitEntry = {
     id: entry.id,
     position: entry.position,
     bbOrder: entry.bbOrder,
     name: unitData.name || entry.id,
+    action: entry.action,
     // TODO: implement extra attack scraping
     extraAttackEffects: [],
     burst: unitData[entry.action],
@@ -155,13 +156,13 @@ export function getBattleFrames (entry = convertSquadUnitEntryToSparkUnitEntry()
   return battleFrames;
 }
 
-export function calculateSparksForSparkSimSquad (squad = [], numEnemies = 6) {
+export function calculateSparksForSparkSimSquad (squad = [], numEnemies = 6, cutinDelay = SBB_NO_CUTIN_DELAY) {
   const aggregatedBattleFrames = {};
-
+  const battleFramesByUnit = new Map();
   // aggregate battle frames
   squad.forEach(unit => {
-    const unitFrames = getBattleFrames(unit);
-    Object.keys(unitFrames)
+    const unitBattleFrames = getBattleFrames(unit, cutinDelay);
+    Object.keys(unitBattleFrames)
       .forEach(frame => {
         if (!aggregatedBattleFrames[frame]) {
           aggregatedBattleFrames[frame] = {
@@ -170,10 +171,63 @@ export function calculateSparksForSparkSimSquad (squad = [], numEnemies = 6) {
           };
         }
 
-        aggregatedBattleFrames[frame].aoe += unitFrames[frame].aoe;
-        aggregatedBattleFrames[frame].st += unitFrames[frame].st;
+        aggregatedBattleFrames[frame].aoe += unitBattleFrames[frame].aoe;
+        aggregatedBattleFrames[frame].st += unitBattleFrames[frame].st;
       });
+    battleFramesByUnit.set(unit, unitBattleFrames);
   });
 
-  // TODO: calculate sparks
+  let possibleSparksSquad = 0;
+  let actualSparkSquad = 0;
+  const sparkResults = squad.map(unit => {
+    const unitBattleFrames = battleFramesByUnit.get(unit);
+    const frameTimes = Object.keys(unitBattleFrames);
+
+    const possibleSparks = frameTimes
+      .map(frame => unitBattleFrames[frame].aoe * numEnemies + unitBattleFrames[frame].st)
+      .reduce((acc, val) => acc + val, 0);
+    const actualSparks = frameTimes.map(frame => {
+      const remainingAoe = aggregatedBattleFrames[frame].aoe - unitBattleFrames[frame].aoe;
+      const remainingSt = aggregatedBattleFrames[frame].st - unitBattleFrames[frame].st;
+
+      const hasAoe = unitBattleFrames[frame].aoe > 0 && remainingAoe > 0;
+      const hasSt = [
+        remainingSt > 0 && unitBattleFrames[frame].st > 0,
+        remainingAoe > 0 && unitBattleFrames[frame].st > 0,
+        remainingSt > 0 && !hasAoe && unitBattleFrames[frame].aoe > 0,
+      ].some(v => v);
+
+      return [
+        hasAoe ? unitBattleFrames[frame].aoe * numEnemies : 0,
+        hasSt ? Math.max(unitBattleFrames[frame].st, 1) : 0,
+      ].reduce((acc, val) => acc + val, 0);
+    }).reduce((acc, val) => acc + val, 0);
+
+    possibleSparksSquad += possibleSparks;
+    actualSparkSquad += actualSparks;
+
+    return {
+      id: unit.id,
+      name: unit.name || unit.id,
+      position: unit.position,
+      bbOrder: unit.bbOrder,
+      action: unit.action,
+      actualSparks,
+      possibleSparks,
+      delay: unit.delay,
+    };
+  });
+
+  const perUnitPercentages = sparkResults
+    .filter(u => u.possibleSparks > 0)
+    .map(u => u.actualSparks / u.possibleSparks);
+  const weightedPercentage = perUnitPercentages
+    .map(val => val * (1 / perUnitPercentages.length))
+    .reduce((acc, val) => acc + val, 0);
+  return {
+    actualSparks: actualSparkSquad,
+    possibleSparks: possibleSparksSquad,
+    weightedPercentage,
+    squad: sparkResults,
+  };
 }

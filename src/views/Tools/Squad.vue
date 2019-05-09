@@ -130,7 +130,12 @@
               </dl>
             </v-layout>
             <v-layout slot="spark-statistics">
-              Spark stats go here
+              <squad-spark-statistics-area
+                :getUnit="getUnit"
+                :getItem="getItem"
+                :getExtraSkill="getExtraSkill"
+                :squad="squad"
+              />
             </v-layout>
             <v-layout slot="arena" style="overflow-x: auto;">
               <squad-arena-suggestion-table
@@ -198,8 +203,9 @@ import DeleteSquadCard from '@/components/Tools/Squads/DeleteSquadCard';
 import TabContainer from '@/components/CardTabsContainer';
 import SquadListCardEditable from '@/components/Tools/Squads/SquadListCardEditable';
 import SquadBuffExpandableList from '@/components/Multidex/BuffList/SquadBuffExpandableList';
-import SquadArenaSuggestionTable from '@/components/Tools/Squads/SquadArenaSuggestionTable';
 import OrderConfigurator from '@/components/OrderConfigurator';
+import SquadArenaSuggestionTable from '@/components/Tools/Squads/SquadArenaSuggestionTable';
+import SquadSparkStatisticsArea from '@/components/Tools/Squads/SparkStatistics/Main';
 
 const logger = new Logger({ prefix: '[Squad]' });
 export default {
@@ -220,6 +226,7 @@ export default {
     SquadBuffExpandableList,
     OrderConfigurator,
     SquadArenaSuggestionTable,
+    SquadSparkStatisticsArea,
   },
   computed: {
     ...mapState('settings', ['activeServer']),
