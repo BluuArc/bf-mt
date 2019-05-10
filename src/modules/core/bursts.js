@@ -4,8 +4,9 @@ import SWorker from '@/assets/sww.min.js';
 
 export function getBurstEffects (burst, level) {
   // default to last level
-  const levelIndex = (level !== undefined) ? level : burst.levels.length - 1;
-  return burst.levels[levelIndex];
+  const burstEffectsByLevel = Array.isArray(burst.levels) ? burst.levels : [];
+  const levelIndex = (level !== undefined) ? level : burstEffectsByLevel.length - 1;
+  return burstEffectsByLevel[levelIndex];
 }
 
 export function getBcDcInfo (burst) {

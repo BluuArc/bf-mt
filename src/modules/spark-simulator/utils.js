@@ -4,13 +4,22 @@ import {
   getHealFrameData,
   getHitCountData as getHitCountDataFromBurst,
 } from '@/modules/core/bursts';
-import { generateFillerSquadUnitEntry } from '@/modules/core/squads';
+import {
+  generateFillerSquadUnitEntry,
+  getEffectsListForSquadUnitEntry,
+  generateDefaultSquad,
+} from '@/modules/core/squads';
 import {
   targetAreaMapping,
   moveTypeIdByName,
   squadFillerMapping,
+  targetTypes,
+  squadBuffTypes,
 } from '@/modules/constants';
 import { getEffectId } from '@/modules/EffectProcessor/processor-helper';
+
+import { Logger } from '@/modules/Logger';
+const logger = new Logger({ prefix: '[SparkSimulator/utils]' }); // eslint-disable-line no-unused-vars
 
 export function getHitCountData (burst) {
   return getHitCountDataFromBurst(burst, f => ATTACKING_PROCS.includes(f.id));
@@ -66,8 +75,12 @@ export function getFramesForSparkUnitEntry ({
   moveSpeed = 0,
   teleporterId = 0,
 }) {
-  const burstFrames = burst['damage frames']
+  const burstFrames = (burst['damage frames'] || [])
     .filter(b => ATTACKING_PROCS.includes(getEffectId(b).toString()));
+  if (burstFrames.length === 0) {
+    return [];
+  }
+
   const burstEffects = getBurstEffects(burst).effects
     .filter(b => ATTACKING_PROCS.includes(getEffectId(b).toString()));
   
@@ -77,17 +90,20 @@ export function getFramesForSparkUnitEntry ({
     !isNaN(delay) ? +delay : 0,
   ].reduce((acc, val) => acc + val, 0);
 
+  const processFrameTimes = (frameTimes = [], totalOffset, isAoe) => {
+    return frameTimes.map(time => ({
+      frame: (+time) + totalOffset,
+      target: isAoe ? 'aoe' : 'st',
+    }));
+  };
+
   let resultAttackFrames = burstFrames.map((frameInfo, index) => {
     const isAoe = burstEffects[index]['target area'] === 'aoe';
     const effectDelay = moveTypeId === moveTypeIdByName.Teleporting
       ? 0
       : +frameInfo['effect delay time(ms)/frame'].split('/')[1];
-    const attackTypeByFrame = {};
-    frameInfo['frame times'].forEach(time => {
-      const actualTime = +time + (moveTypeId === moveTypeIdByName.Teleporting ? 0 : effectDelay) + baseOffset;
-      attackTypeByFrame[actualTime] = isAoe ? 'aoe' : 'st';
-    });
-    return attackTypeByFrame;
+    const totalOffset = (moveTypeId === moveTypeIdByName.Teleporting ? 0 : effectDelay) + baseOffset;
+    return processFrameTimes(frameInfo['frame times'], totalOffset, isAoe);
   });
 
   if (extraAttackEffects.length > 0) {
@@ -96,34 +112,54 @@ export function getFramesForSparkUnitEntry ({
       .map(effect => {
         const isAoe = effect['target area'] === 'aoe';
         const effectDelay = +effect['effect delay time(ms)/frame'].split('/')[1];
-        const attackTypeByFrame = {};
-        // TODO: verify accuracy of this
-        extraAttackFrames['frame times'].forEach(time => {
-          const actualTime = +time + (moveTypeId === moveTypeIdByName.Teleporting ? 0 : effectDelay) + baseOffset;
-          attackTypeByFrame[actualTime] = isAoe ? 'aoe' : 'st';
-        });
-        return attackTypeByFrame;
+        const totalOffset = (moveTypeId === moveTypeIdByName.Teleporting ? 0 : effectDelay) + baseOffset;
+        return processFrameTimes(extraAttackFrames['frame times'], totalOffset, isAoe);
       });
-    resultAttackFrames = resultAttackFrames.concat(resultExtraAttackFrames);
+      resultAttackFrames = resultAttackFrames.concat(resultExtraAttackFrames);
+      // logger.warn({
+      //   burstFrames,
+      //   burstEffects,
+      //   extraAttackEffects: extraAttackEffects.filter(b => ATTACKING_PROCS.includes(getEffectId(b).toString())),
+      //   extraAttackFrames,
+      //   moveSpeed,
+      //   resultAttackFrames,
+      //   resultExtraAttackFrames,
+      //   baseOffset,
+      // });
   }
   return resultAttackFrames;
 }
 
-export function convertSquadUnitEntryToSparkUnitEntry (entry = generateFillerSquadUnitEntry(), synchronousGetters = {}) {
+export function convertSquadUnitEntryToSparkUnitEntry ({
+  entry = generateFillerSquadUnitEntry(),
+  synchronousGetters = {},
+  squad = generateDefaultSquad(),
+} = {}) {
   const unitData = synchronousGetters.unit(entry.id);
+  const sourcesToIgnore = ['unit.bb', 'unit.sbb', 'unit.ubb'];
+  const extraAttackEffects = getEffectsListForSquadUnitEntry({
+    unitEntry: entry,
+    target: targetTypes.ENEMY,
+    effectType: squadBuffTypes.PROC,
+    squad,
+  }, {
+    getUnit: synchronousGetters.unit,
+    getItem: synchronousGetters.getItem,
+    getExtraSkill: synchronousGetters.extraSkill,
+  }).filter(effect => !sourcesToIgnore.includes(effect.sourcePath) && (!effect.triggeredOn || (effect.triggeredOn === entry.action)));
   const sparkUnitEntry = {
     id: entry.id,
     position: entry.position,
     bbOrder: entry.bbOrder,
     name: unitData.name || entry.id,
     action: entry.action,
-    // TODO: implement extra attack scraping
-    extraAttackEffects: [],
+    extraAttackEffects,
     burst: unitData[entry.action],
     moveTypeId: (unitData.movement && unitData.movement.skill && +unitData.movement.skill['move type']) || 0,
     moveSpeed: (unitData.movement && unitData.movement.skill && +unitData.movement.skill['move speed']) || 0,
     moveSpeedType: (unitData.movement && unitData.movement.skill && +unitData.movement.skill['move speed type']) || '1',
     delay: !isNaN(entry.delay) ? +entry.delay : 0,
+    teleporterId: entry.id,
   };
   sparkUnitEntry.frames = getFramesForSparkUnitEntry(sparkUnitEntry);
   return sparkUnitEntry;
@@ -140,16 +176,15 @@ export function getBattleFrames (entry = convertSquadUnitEntryToSparkUnitEntry()
     ].reduce((acc, val) => acc + val, 0);
 
     entry.frames.forEach(attack => {
-      Object.keys(attack).forEach(frame => {
+      attack.forEach(({ frame, target }) => {
         const actualFrame = +frame + frameDelay;
-        const targetType = attack[frame];
         if (!battleFrames[actualFrame]) {
           battleFrames[actualFrame] = {
             aoe: 0,
             st: 0,
           };
         }
-        battleFrames[actualFrame][targetType] += 1;
+        battleFrames[actualFrame][target] += 1;
       });
     });
   }
@@ -179,6 +214,7 @@ export function calculateSparksForSparkSimSquad (squad = [], numEnemies = 6, cut
 
   let possibleSparksSquad = 0;
   let actualSparkSquad = 0;
+  logger.warn(battleFramesByUnit);
   const sparkResults = squad.map(unit => {
     const unitBattleFrames = battleFramesByUnit.get(unit);
     const frameTimes = Object.keys(unitBattleFrames);
@@ -187,20 +223,34 @@ export function calculateSparksForSparkSimSquad (squad = [], numEnemies = 6, cut
       .map(frame => unitBattleFrames[frame].aoe * numEnemies + unitBattleFrames[frame].st)
       .reduce((acc, val) => acc + val, 0);
     const actualSparks = frameTimes.map(frame => {
-      const remainingAoe = aggregatedBattleFrames[frame].aoe - unitBattleFrames[frame].aoe;
-      const remainingSt = aggregatedBattleFrames[frame].st - unitBattleFrames[frame].st;
+      const { aoe: selfAoe, st: selfSt } = unitBattleFrames[frame];
+      const remainingAoe = aggregatedBattleFrames[frame].aoe - selfAoe;
+      const remainingSt = aggregatedBattleFrames[frame].st - selfSt;
 
-      const hasAoe = unitBattleFrames[frame].aoe > 0 && remainingAoe > 0;
-      const hasSt = [
-        remainingSt > 0 && unitBattleFrames[frame].st > 0,
-        remainingAoe > 0 && unitBattleFrames[frame].st > 0,
-        remainingSt > 0 && !hasAoe && unitBattleFrames[frame].aoe > 0,
+      const hasSparkableAoe = [
+        remainingAoe > 0 && selfAoe > 0, // 1+ AOE and self AOE
+        selfAoe > 1, // self sparking AOE
+      ].some(v => v);
+      const hasSparkableSt = [
+        remainingSt > 0 && selfSt > 0, // 2+ ST attacks in same frame
+        remainingAoe > 0 && selfSt > 0, // 1+ AOE and self ST
+        remainingSt > 0 && selfAoe > 0, // 1+ ST and self AOE
+        selfAoe > 0 && selfSt > 0, // self AOE and self ST
+        selfSt > 1, // self sparking ST
       ].some(v => v);
 
-      return [
-        hasAoe ? unitBattleFrames[frame].aoe * numEnemies : 0,
-        hasSt ? Math.max(unitBattleFrames[frame].st, 1) : 0,
-      ].reduce((acc, val) => acc + val, 0);
+      let count = 0;
+      if (hasSparkableAoe) {
+        count += selfAoe * numEnemies;
+      }
+
+      if (hasSparkableSt) {
+        count += selfSt;
+        if (remainingSt > 0 && selfAoe > 0 && !hasSparkableAoe) {
+          count += selfAoe;
+        }
+      }
+      return count;
     }).reduce((acc, val) => acc + val, 0);
 
     possibleSparksSquad += possibleSparks;

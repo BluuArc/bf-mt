@@ -6,7 +6,7 @@
     <div>
       <pre>
         <code>
-          {{ JSON.stringify(results, null, 2) }}
+{{ JSON.stringify(results, null, 2) }}
         </code>
       </pre>
     </div>
