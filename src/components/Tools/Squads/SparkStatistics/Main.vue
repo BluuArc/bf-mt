@@ -1,5 +1,20 @@
 <template>
-  <section>
+  <div class="spark-statistics-container">
+    <section>
+      Statistics for current setup goes here
+    </section>
+    <section>
+      Input area goes here
+    </section>
+    <section>
+      Spark Sim settings go here
+    </section>
+    <section>
+      Sim Results go here (show one at a time, have popup modal to jump to specific result)
+    </section>
+    <section>
+      Powered by <a href="https://joshuacastor.me/project-sparkle/" target="_blank" rel="noopener">Project Sparkle</a>
+    </section>
     <div>
       <v-btn @click="runSimulator">Run Sim</v-btn>
     </div>
@@ -10,7 +25,7 @@
         </code>
       </pre>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -45,6 +60,13 @@ export default {
 };
 </script>
 
-<style>
-
+<style lang="less">
+.spark-statistics-container {
+  a {
+    color: inherit;
+    &:hover {
+      font-weight: bold;
+    }
+  }
+}
 </style>

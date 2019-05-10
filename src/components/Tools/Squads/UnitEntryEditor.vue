@@ -308,7 +308,7 @@ export default {
           text: 'UBB',
           value: squadUnitActions.UBB,
         },
-      ].filter(({ value }) => this.unitData[value] || this.activeUnit.action === value);
+      ].filter(({ value }) => this.activeUnit.id === squadFillerMapping.ANY || this.unitData[value] || this.activeUnit.action === value);
 
       const nonBurstActions = [
         {

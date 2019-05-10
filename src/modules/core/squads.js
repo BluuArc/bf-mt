@@ -260,7 +260,7 @@ export function fixSquadErrors (squad = {}, {
         // default order of actions when current current action is invalid (if a unit has it): SBB, BB, ATK
         const action = id === squadFillerMapping.EMPTY
           ? squadUnitActions.NONE
-          : (unitData[unit.action] && unit.action) || (defaultUnitActions.find(a => !!unitData[a])) || squadUnitActions.ATK;
+          : (id === squadFillerMapping.ANY && unit.action) || (unitData[unit.action] && unit.action) || (defaultUnitActions.find(a => !!unitData[a]));
         if (action !== unit.action) {
           messages.push(`${unitIdentifer} has invalid action [${unit.action}]. Used default action [${action}].`);
         }

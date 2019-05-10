@@ -5,6 +5,7 @@ import {
 } from './utils';
 import { Logger } from '@/modules/Logger';
 
+// eslint-disable-next-line no-unused-vars
 const logger = new Logger({ prefix: '[SparkSimulator]' });
 export default class SparkSimulator {
   constructor () {
@@ -32,7 +33,6 @@ export default class SparkSimulator {
       synchronousGetters: this._dbGetters,
       squad,
     }));
-    logger.warn({sparkSquad});
     return calculateSparksForSparkSimSquad(sparkSquad, numEnemies);
   }
 }

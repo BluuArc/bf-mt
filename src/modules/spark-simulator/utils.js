@@ -214,7 +214,7 @@ export function calculateSparksForSparkSimSquad (squad = [], numEnemies = 6, cut
 
   let possibleSparksSquad = 0;
   let actualSparkSquad = 0;
-  logger.warn(battleFramesByUnit);
+  // logger.warn(battleFramesByUnit);
   const sparkResults = squad.map(unit => {
     const unitBattleFrames = battleFramesByUnit.get(unit);
     const frameTimes = Object.keys(unitBattleFrames);
