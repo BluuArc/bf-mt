@@ -19,6 +19,7 @@ import {
 import { getEffectId } from '@/modules/EffectProcessor/processor-helper';
 
 import { Logger } from '@/modules/Logger';
+import { getMoveType } from '../core/units';
 const logger = new Logger({ prefix: '[SparkSimulator/utils]' }); // eslint-disable-line no-unused-vars
 
 export function getHitCountData (burst) {
@@ -280,4 +281,28 @@ export function calculateSparksForSparkSimSquad (squad = [], numEnemies = 6, cut
     weightedPercentage,
     squad: sparkResults,
   };
+}
+
+export function getDelayDescriptionForSparkUnitResult ({
+  sparkUnitResult = {},
+  unitData = {},
+  cutinDelay = SBB_NO_CUTIN_DELAY,
+} = {}) {
+  const moveTypeId = (unitData.movement && unitData.movement.skill && +unitData.movement.skill['move type']) || 0;
+  const moveSpeed = (unitData.movement && unitData.movement.skill && +unitData.movement.skill['move speed']) || 0;
+  const moveTypeName = getMoveType(unitData);
+  const moveSpeedType = (unitData.movement && unitData.movement.skill && +unitData.movement.skill['move speed type']) || '1';
+
+  const teleporterOffset = (moveTypeId === moveTypeIdByName.Teleporting && TELEPORTER_OFFSETS[unitData.id.toString()]) || 0;
+  const positionBasedOffset = +MOVESPEED_OFFSETS[moveSpeedType][sparkUnitResult.position];
+  const inputDelay = !isNaN(sparkUnitResult.delay) ? +sparkUnitResult.delay : 0;
+
+  const makeEntry = (delay = 0, description = '') => ({ delay, description });
+  return [
+    moveTypeId === moveTypeIdByName['Non-Moving'] && makeEntry(moveSpeed, `innate move speed as a ${moveTypeName} unit`),
+    moveTypeId === moveTypeIdByName.Teleporting && makeEntry(teleporterOffset, `custom offset as a ${moveTypeName} unit`),
+    moveTypeId === moveTypeIdByName.Moving && makeEntry(positionBasedOffset, `offset based on position and move speed type as a ${moveTypeName} unit`),
+    cutinDelay > 0 && makeEntry(cutinDelay, 'burst cut-in delay'),
+    inputDelay > 0 && makeEntry(inputDelay, `custom delay`),
+  ].filter(v => v);
 }
