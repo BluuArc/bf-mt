@@ -88,54 +88,7 @@
               />
             </template>
           </v-flex>
-          <!-- TODO: show spark count and delay (innate + given); show move type and delay for editable -->
         </v-layout>
-        <!-- extra skill -->
-        <!-- <v-layout align-center>
-          <v-layout style="flex-grow: 0;" align-center justify-center>
-            <extra-skill-icon
-              v-if="isVisible"
-              :inactive="!unit.es"
-              :displaySize="22"
-              class="mr-1"/>
-          </v-layout>
-          <v-flex style="word-break: break-all; text-align: left;">
-            {{ getExtraSkill(unit.es).name || 'No Extra Skill' }}
-          </v-flex>
-        </v-layout> -->
-        <!-- spheres -->
-        <!-- <v-layout row wrap align-center>
-          <v-layout
-            v-for="(sphereId, i) in (unit.spheres.length > 0 ? unit.spheres : ['No Sphere'])"
-            :key="`${sphereId}-${i}`"
-            align-center>
-            <v-layout style="flex-grow: 0;" align-center justify-center>
-              <sphere-type-icon
-                v-if="isVisible"
-                :category="getItem(sphereId)['sphere type']"
-                :displaySize="22"
-                class="mr-1"/>
-            </v-layout>
-            <v-flex style="text-align: left">
-              {{ getItem(sphereId).name || sphereId }}
-            </v-flex>
-          </v-layout>
-        </v-layout> -->
-
-        <!-- SP -->
-        <!-- <v-layout v-if="unit.sp && isVisible && getSpCost(unit) > 0">
-          <v-flex style="flex-grow: 0;" class="mr-1">
-            {{ getSpCost(unit) }} SP:
-          </v-flex>
-          <v-flex
-            v-for="category in getSpCategories(unit)"
-            :key="`${category}-${unit.id}-${index}`"
-            style="flex-grow: 0;">
-            <sp-icon
-              :category="category"
-              :displaySize="22"/>
-          </v-flex>
-        </v-layout> -->
       </v-layout>
     </div>
   </v-flex>

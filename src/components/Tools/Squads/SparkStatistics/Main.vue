@@ -8,9 +8,9 @@
             v-if="resultForCurrentSquad"
             :squad="squad"
             :sparkResult="resultForCurrentSquad"
-            :getUnit="getUnit"/>
-          <!-- Statistics for current setup goes here
-          {{ resultForCurrentSquad }} -->
+            :getUnit="getUnit"
+            @share="() => emitShareEvent(resultForCurrentSquad)"
+          />
         </section>
       </v-expansion-panel-content>
       <v-expansion-panel-content>
@@ -83,6 +83,9 @@ export default {
     },
     calculateResultForCurrentSquad () {
       this.resultForCurrentSquad = Object.freeze(this.sparkSimulator.calculateSparksForSquad(this.squad));
+    },
+    emitShareEvent (sparkResult) {
+      this.$emit('share', sparkResult);
     },
   },
 };

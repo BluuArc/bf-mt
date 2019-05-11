@@ -41,6 +41,9 @@
             <v-flex xs12 sm6>
               <v-checkbox v-model="showName" label="Squad Name"/>
             </v-flex>
+            <v-flex xs12 sm6 v-if="sparkResult">
+              <v-checkbox v-model="showTotalSparkability" :disabled="!showName" label="Total Spark Percentage"/>
+            </v-flex>
             <v-flex xs12 sm6>
               <v-checkbox v-model="showPosition" label="Position"/>
             </v-flex>
@@ -49,6 +52,9 @@
             </v-flex>
             <v-flex xs12 sm6>
               <v-checkbox v-model="showAction" label="Action"/>
+            </v-flex>
+            <v-flex xs12 sm6 v-if="sparkResult">
+              <v-checkbox v-model="showSparkStatisticsByUnit" label="Show Sparks per Unit"/>
             </v-flex>
             <v-flex xs12 sm6>
               <v-checkbox v-model="showExtraSkill" label="Extra Skill"/>
@@ -71,7 +77,10 @@
           </v-layout>
         </v-layout>
         <v-flex>
-          <text-viewer :inputText="markdownText" :value="updateTime"/>
+          <text-viewer
+            style="height: 100%;"
+            :inputText="markdownText"
+            :value="updateTime"/>
         </v-flex>
       </v-layout>
       <v-layout row slot="code">
@@ -115,6 +124,9 @@ export default {
       type: Object,
       required: true,
     },
+    sparkResult: {
+      required: false,
+    },
   },
   components: {
     CardTabsContainer,
@@ -130,19 +142,7 @@ export default {
       return otherInfo;
     },
     markdownText () {
-      return this.squadToMarkdown(this.squad, {
-        showPosition: this.showPosition,
-        showAction: this.showAction,
-        showOrder: this.showOrder,
-        showName: this.showName,
-        useBullets: this.useBullets,
-        abbreviate: this.abbreviate,
-        showSpCost: this.showSpCost,
-        showShareLink: this.showShareLink,
-        showExtraSkill: this.showExtraSkill,
-        showSpheres: this.showSpheres,
-        showEnhancements: this.showEnhancements,
-      });
+      return this.squadToMarkdown(this.squad, this);
     },
     squadShorthand () {
       return squadToShorthand(this.squad);
@@ -152,6 +152,18 @@ export default {
       return `${location.protocol}//${location.host}${location.pathname}${path}`;
     },
     possibleTargets: () => ['Discord', 'Reddit'],
+    sparkTextByUnit () {
+      const mapping = new Map();
+      if (this.sparkResult) {
+        this.squad.units.forEach(unit => {
+          const sparkUnitResult = this.sparkResult.squad.find(s => unit.position === s.position);
+          if (sparkUnitResult) {
+            mapping.set(unit, `(${sparkUnitResult.possibleSparks}/${sparkUnitResult.actualSparks})`);
+          }
+        });
+      }
+      return mapping;
+    },
   },
   data () {
     return {
@@ -168,6 +180,8 @@ export default {
       showExtraSkill: false,
       showSpheres: false,
       showEnhancements: false,
+      showSparkStatisticsByUnit: true,
+      showTotalSparkability: true,
       target: 'Discord',
     };
   },
@@ -189,13 +203,18 @@ export default {
         showExtraSkill = false,
         showSpheres = false,
         showEnhancements = true,
-        // TODO: add spark statistics option
+        showSparkStatisticsByUnit = true,
+        showTotalSparkability = true,
       } = {},
     ) {
       const sections = [];
 
       if (showName) {
-        sections.push(`# ${squad.name}\n`);
+        const nameLine = [
+          `${squad.name}`,
+          showTotalSparkability && this.sparkResult && (`(${(this.sparkResult.weightedPercentage * 100).toFixed(2)}%)`),
+        ].filter(v => v).join(' ');
+        sections.push(`# ${nameLine}\n`);
       }
 
       squad.units.forEach((unit, i) => {
@@ -217,6 +236,7 @@ export default {
             showPosition && unit.position,
             [showOrder && unit.bbOrder, showAction && this.getActionText(unit)].filter(v => v).join('-'),
           ].filter(v => v).join('; '),
+          showSparkStatisticsByUnit && this.sparkTextByUnit.get(unit),
         ].filter(v => v).join(' '));
 
         // indent one level for supplementary info

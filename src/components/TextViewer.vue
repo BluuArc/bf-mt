@@ -27,14 +27,21 @@ export default {
 <style lang="less">
 .text-viewer {
   position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .copy-button {
+    flex: none;
+  }
 
   pre {
     overflow: auto;
-    max-height: 45vh;
+    flex: auto;
   }
 
   code {
     width: 100%;
+    height: 100%;
 
     &::before {
       content: '';

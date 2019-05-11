@@ -135,6 +135,7 @@
                 :getItem="getItem"
                 :getExtraSkill="getExtraSkill"
                 :squad="squad"
+                @share="$sparkResult => sparkResultToShare = $sparkResult"
               />
             </v-layout>
             <v-layout slot="arena" style="overflow-x: auto;">
@@ -159,6 +160,7 @@
             :getUnit="getUnit"
             :getItem="getItem"
             :getExtraSkill="getExtraSkill"
+            :sparkResult="sparkResultToShare"
             @back="activeSquadDialog = ''"/>
           <delete-squad-card
             v-else-if="activeSquadDialog === 'delete'"
@@ -293,6 +295,7 @@ export default {
       tempSquad: {},
       topNavbarHeight: 56,
       buffTables: [],
+      sparkResultToShare: null,
     };
   },
   created () {
@@ -407,6 +410,11 @@ export default {
     async tempSquad (newSquad) {
       if (newSquad && Array.isArray(newSquad.units)) {
         await this.updatePageDbForSquad(newSquad);
+      }
+    },
+    sparkResultToShare (newValue) {
+      if (newValue) {
+        this.activeSquadDialog = 'share';
       }
     },
   },
