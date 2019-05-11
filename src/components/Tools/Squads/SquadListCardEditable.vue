@@ -181,8 +181,14 @@ export default {
 
 <style lang="less">
 .squad-card--editable {
-  .v-card__actions a:not(:hover):before {
+  .v-card__actions {
+    position: sticky;
+    bottom: 0;
     background-color: inherit;
+
+    a:not(:hover):before {
+      background-color: inherit;
+    }
   }
 }
 </style>
