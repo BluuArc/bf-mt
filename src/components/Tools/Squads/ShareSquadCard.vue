@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card class="squad-card--share">
     <card-tabs-container :tabs="tabConfig" v-model="activeTabIndex">
       <v-layout
         :column="$vuetify.breakpoint.smAndDown"
@@ -347,3 +347,16 @@ export default {
 };
 </script>
 
+<style lang="less">
+.squad-card--share {
+  .v-card__actions {
+    position: sticky;
+    bottom: 0;
+    background-color: inherit;
+
+    a:not(:hover):before {
+      background-color: inherit;
+    }
+  }
+}
+</style>

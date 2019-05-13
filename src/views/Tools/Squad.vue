@@ -135,7 +135,7 @@
                 :getItem="getItem"
                 :getExtraSkill="getExtraSkill"
                 :squad="squad"
-                @share="$sparkResult => sparkResultToShare = $sparkResult"
+                @share="$sparkResult => { sparkResultToShare = $sparkResult; activeSquadDialog = 'share'; }"
               />
             </v-layout>
             <v-layout slot="arena" style="overflow-x: auto;">
@@ -410,11 +410,6 @@ export default {
     async tempSquad (newSquad) {
       if (newSquad && Array.isArray(newSquad.units)) {
         await this.updatePageDbForSquad(newSquad);
-      }
-    },
-    sparkResultToShare (newValue) {
-      if (newValue) {
-        this.activeSquadDialog = 'share';
       }
     },
   },

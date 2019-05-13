@@ -27,29 +27,3 @@ export default {
   },
 };
 </script>
-
-<style lang="less">
-.text-viewer {
-  position: relative;
-
-  pre {
-    overflow: auto;
-    max-height: 45vh;
-  }
-
-  code {
-    width: 100%;
-
-    &::before {
-      content: '';
-    }
-
-    .theme--dark & {
-      border: 1px solid var(--background-color);
-      background-color: black;
-      color: lightgreen;
-    }
-  }
-}
-</style>
-
