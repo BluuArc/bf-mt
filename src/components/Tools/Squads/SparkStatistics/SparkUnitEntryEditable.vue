@@ -8,7 +8,7 @@
         <v-flex text-xs-center v-if="$vuetify.breakpoint.xsOnly">
           <span class="caption text-no-wrap">{{ unit.position }}</span>
         </v-flex>
-        <v-layout align-content-center row>
+        <v-layout align-content-end row>
           <unit-thumbnail
             class="unit-thumbnail"
             :style="`border-color: ${orderSettings.border};`"
@@ -61,8 +61,50 @@
               :displaySize="18"/>
           </v-flex>
         </v-layout>
-        <v-layout>
-          form options here for action, BB order, delay, relative priority
+        <!-- <v-layout>
+          form options here for action, BB order, delay, relative priority; also locking position
+        </v-layout> -->
+        <v-layout row wrap>
+          <v-flex xs12 md4>
+            <v-select
+              label="Action"
+              :disabled="isEmptyUnit"
+              :items="actionPossibilities"
+              :value="sparkSimUnitConfig.action || unit.action"
+            />
+          </v-flex>
+          <v-flex xs12 md4>
+            <v-select
+              label="BB Order"
+              :disabled="isEmptyUnit"
+              :value="sparkSimUnitConfig.bbOrder || unit.bbOrder"
+              :items="bbOrderPossibilities"
+            />
+          </v-flex>
+          <v-flex xs12 md4>
+            <v-text-field
+              label="Delay"
+              :disabled="isEmptyUnit"
+              type="number"
+              :value="!isNaN(sparkSimUnitConfig.delay) ? +sparkSimUnitConfig.delay : 0"
+            />
+          </v-flex>
+          <v-flex>
+            <v-text-field
+              label="Priority"
+              hint="Higher priority means unit will be prioritized over units with lesser priority for spark results"
+              persistent-hint
+              :disabled="isEmptyUnit"
+              type="number"
+              :value="!isNaN(sparkSimUnitConfig.delay) ? +sparkSimUnitConfig.delay : 0"
+            />
+          </v-flex>
+          <v-flex xs12>
+            <v-btn outline block>
+              <v-icon left>{{ sparkSimUnitConfig.lockPosition ? 'lock' : 'lock_open' }}</v-icon>
+              <span style="text-transform: capitalize;">Position</span>
+            </v-btn>
+          </v-flex>
         </v-layout>
         <!-- <v-layout column>
           <v-flex>
@@ -98,7 +140,7 @@
 </template>
 
 <script>
-import { squadUnitActions } from '@/modules/constants';
+import { squadFillerMapping, squadUnitActions } from '@/modules/constants';
 // import { getDelayDescriptionForSparkUnitResult } from '@/modules/spark-simulator/utils';
 import { mapGetters } from 'vuex';
 import colors from 'vuetify/es5/util/colors';
@@ -129,6 +171,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    sparkSimUnitConfig: {
+      type: Object,
+      default: () => {},
+    },
   },
   computed: {
     ...mapGetters('units', {
@@ -156,15 +202,39 @@ export default {
     name () {
       return this.unitData.name || this.unit.id;
     },
-    // sparkFraction () {
-    //   return `${this.sparkResultForUnit.actualSparks} / ${this.sparkResultForUnit.possibleSparks}`;
-    // },
-    // delayDescription () {
-    //   return getDelayDescriptionForSparkUnitResult({
-    //     sparkUnitResult: this.sparkResultForUnit,
-    //     unitData: this.unitData,
-    //   });
-    // },
+    isEmptyUnit () {
+      return this.unit.name === squadFillerMapping.EMPTY;
+    },
+    actionPossibilities () {
+      const availableBurstTypes = [
+        {
+          text: 'BB',
+          value: squadUnitActions.BB,
+        },
+        {
+          text: 'SBB',
+          value: squadUnitActions.SBB,
+        },
+        {
+          text: 'UBB',
+          value: squadUnitActions.UBB,
+        },
+      ].filter(({ value }) => this.unit.id === squadFillerMapping.ANY || this.unitData[value] || this.unit.action === value);
+
+      const nonBurstActions = [
+        (this.isEmptyUnit && {
+          text: 'None',
+          value: squadUnitActions.NONE,
+        }),
+        (!this.isEmptyUnit && {
+          text: 'Attack',
+          value: squadUnitActions.ATK,
+        }),
+      ].filter(v => v);
+      return nonBurstActions.concat(availableBurstTypes);
+    },
+    bbOrderPossibilities: () => ['(Any)']
+      .concat(new Array(6).fill(0).map((_, i) => i + 1)),
   },
   methods: {
     getColorSetBasedOnAction (unit = {}) {
@@ -208,12 +278,16 @@ export default {
 
   .unit-thumbnail {
     flex: 0 1 auto;
-    margin: auto;
+    margin-top: auto;
     font: bold 4.5em sans-serif;
     stroke: black;
     stroke-width: 2px;
     fill: white;
     border: 1px solid white;
+  }
+
+  .v-input {
+    margin: 0.5em;
   }
 }
 </style>

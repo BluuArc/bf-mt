@@ -22,6 +22,7 @@
         :getUnit="getUnit"
         :isLead="i === squad.lead"
         :isFriend="i === squad.friend"
+        :sparkSimUnitConfig="value.unitConfig[i] || {}"
         class="d-flex py-1"
         style="align-items: center; border: 1px solid var(--background-color-alt);"/>
     </v-layout>
@@ -53,10 +54,10 @@ export default {
       type: Object,
       required: true,
     },
-    // value: {
-    //   type: Object,
-    //   required: true,
-    // },
+    value: {
+      type: Object,
+      required: true,
+    },
   },
   computed: {
     // fills empty positions with empty values

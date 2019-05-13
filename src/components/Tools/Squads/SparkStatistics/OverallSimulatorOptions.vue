@@ -11,7 +11,7 @@
           persistent-hint
         />
         <v-switch
-          label="Burst Cutins are on/off"
+          :label="burstCutinToggleLabel"
           :value="value.burstCutins"
           @change="$v => emitChangedValue({ burstCutins: $v })"
           hide-details
@@ -53,6 +53,11 @@ export default {
     value: {
       type: Object,
       required: true,
+    },
+  },
+  computed: {
+    burstCutinToggleLabel () {
+      return `Burst Cutins are ${this.value.burstCutins ? 'on' : 'off'}`;
     },
   },
   methods: {
