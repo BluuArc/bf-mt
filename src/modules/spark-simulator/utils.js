@@ -306,3 +306,22 @@ export function getDelayDescriptionForSparkUnitResult ({
     inputDelay > 0 && makeEntry(inputDelay, `custom delay`),
   ].filter(v => v);
 }
+
+export function getSimulatorOptions ({
+  unitConfig = [],
+  enemyCount = 6,
+  burstCutins = false,
+  overallDelay = 0,
+  resultThreshold = 50,
+  workerCount = 1,
+} = {}) {
+  const getNumberOrDefault = (num, defaultValue = 0) => !isNaN(num) ? +num : defaultValue;
+  return Object.freeze({
+    unitConfig: Array.isArray(unitConfig) ? unitConfig : [],
+    enemyCount: getNumberOrDefault(enemyCount, 6),
+    burstCutins: !!burstCutins,
+    overallDelay: getNumberOrDefault(overallDelay, 0),
+    resultThreshold: getNumberOrDefault(resultThreshold, 50),
+    workerCount: getNumberOrDefault(workerCount, 1),
+  });
+}

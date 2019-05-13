@@ -6,15 +6,21 @@
           label="Enemy Count"
           type="number"
           hint="There must be at least 2 enemies to ensure accuracy"
+          :value="value.enemyCount"
+          @input="$v => emitChangedValue({ enemyCount: $v })"
           persistent-hint
         />
         <v-switch
-          label="SBB Cutins are on/off"
+          label="Burst Cutins are on/off"
+          :value="value.burstCutins"
+          @change="$v => emitChangedValue({ burstCutins: $v })"
           hide-details
         />
         <v-text-field
           label="Overall Delay (frames)"
           type="number"
+          :value="value.overallDelay"
+          @input="$v => emitChangedValue({ overallDelay: $v })"
           hide-details
         />
       </v-layout>
@@ -23,6 +29,8 @@
       <v-text-field
         label="Result Threshold"
         type="number"
+        :value="value.resultThreshold"
+        @input="$v => emitChangedValue({ resultThreshold: $v })"
         suffix="%"
       />
     </v-flex>
@@ -30,17 +38,26 @@
       <v-text-field
         label="Worker Count"
         type="number"
+        :value="value.workerCount"
+        @input="$v => emitChangedValue({ workerCount: $v })"
       />
     </v-flex>
   </v-layout>
 </template>
 
 <script>
+import { getSimulatorOptions } from '@/modules/spark-simulator/utils';
+
 export default {
   props: {
     value: {
       type: Object,
       required: true,
+    },
+  },
+  methods: {
+    emitChangedValue (newVal = {}) {
+      this.$emit('input', getSimulatorOptions({ ...this.value, ...newVal }));
     },
   },
 };

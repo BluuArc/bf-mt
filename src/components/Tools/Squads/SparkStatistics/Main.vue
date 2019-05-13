@@ -52,6 +52,7 @@
 
 <script>
 import SparkSimulator from '@/modules/spark-simulator';
+import { getSimulatorOptions } from '@/modules/spark-simulator/utils';
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 import SparkSquadCard from '@/components/Tools/Squads/SparkStatistics/SparkSquadCard';
 import SparkSquadCardEditable from '@/components/Tools/Squads/SparkStatistics/SparkSquadCardEditable';
@@ -77,7 +78,7 @@ export default {
       currentSection: 0,
       runningSimulator: true,
       resultForCurrentSquad: null,
-      simulatorOptions: {},
+      simulatorOptions: getSimulatorOptions(),
     };
   },
   mounted () {
