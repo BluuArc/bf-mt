@@ -16,10 +16,16 @@
       <v-expansion-panel-content>
         <span slot="header" class="subheading">Spark Simulator Input</span>
         <section>
-          Input area goes here
+          <spark-squad-card-editable
+            v-model="simulatorOptions"
+            :squad="squad"
+            :getUnit="getUnit"
+          />
         </section>
         <section>
-          Spark Sim settings go here
+          <overall-simulator-options
+            v-model="simulatorOptions"
+          />
         </section>
         <section>
           <v-btn block @click="runSimulator">Run Simulator</v-btn>
@@ -48,6 +54,8 @@
 import SparkSimulator from '@/modules/spark-simulator';
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 import SparkSquadCard from '@/components/Tools/Squads/SparkStatistics/SparkSquadCard';
+import SparkSquadCardEditable from '@/components/Tools/Squads/SparkStatistics/SparkSquadCardEditable';
+import OverallSimulatorOptions from '@/components/Tools/Squads/SparkStatistics/OverallSimulatorOptions';
 
 export default {
   mixins: [GettersMixin],
@@ -59,6 +67,8 @@ export default {
   },
   components: {
     SparkSquadCard,
+    SparkSquadCardEditable,
+    OverallSimulatorOptions,
   },
   data () {
     return {
@@ -67,6 +77,7 @@ export default {
       currentSection: 0,
       runningSimulator: true,
       resultForCurrentSquad: null,
+      simulatorOptions: {},
     };
   },
   mounted () {
