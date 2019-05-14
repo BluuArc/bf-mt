@@ -25,6 +25,7 @@
         <section>
           <overall-simulator-options
             v-model="simulatorOptions"
+            :squad="squad"
           />
         </section>
         <section>
@@ -78,8 +79,11 @@ export default {
       currentSection: 0,
       runningSimulator: true,
       resultForCurrentSquad: null,
-      simulatorOptions: getSimulatorOptions(),
+      simulatorOptions: null,
     };
+  },
+  created () {
+    this.simulatorOptions = getSimulatorOptions(undefined, this.squad);
   },
   mounted () {
     this.sparkSimulator.getters = {

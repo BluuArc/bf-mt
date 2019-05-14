@@ -23,6 +23,7 @@
         :isLead="i === squad.lead"
         :isFriend="i === squad.friend"
         :sparkSimUnitConfig="value.unitConfig[i] || {}"
+        @input="$v => updateEntryForUnit($v, i)"
         class="d-flex py-1"
         style="align-items: center; border: 1px solid var(--background-color-alt);"/>
     </v-layout>
@@ -41,6 +42,7 @@
 <script>
 import { unitPositionMapping } from '@/modules/constants';
 import { generateFillerSquadUnitEntry } from '@/modules/core/squads';
+import { getSimulatorOptions } from '@/modules/spark-simulator/utils';
 import UnitEntry from '@/components/Tools/Squads/SparkStatistics/SparkUnitEntryEditable';
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 
@@ -75,6 +77,14 @@ export default {
   methods: {
     getUnitEntryKey (unit = {}, i = 0) {
       return `${JSON.stringify(unit)}-${i}`;
+    },
+    updateEntryForUnit(newValue, index) {
+      const unitConfig = this.value.unitConfig.slice();
+      unitConfig[index] = newValue;
+      this.emitChangedValue({ unitConfig });
+    },
+    emitChangedValue (newVal = {}) {
+      this.$emit('input', getSimulatorOptions({ ...this.value, ...newVal }, this.squad));
     },
   },
 };

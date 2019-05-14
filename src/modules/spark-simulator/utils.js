@@ -9,17 +9,18 @@ import {
   getEffectsListForSquadUnitEntry,
   generateDefaultSquad,
 } from '@/modules/core/squads';
+import { getMoveType } from '@/modules/core/units';
 import {
   targetAreaMapping,
   moveTypeIdByName,
   squadFillerMapping,
   targetTypes,
   squadBuffTypes,
+  squadUnitActions,
 } from '@/modules/constants';
 import { getEffectId } from '@/modules/EffectProcessor/processor-helper';
 
 import { Logger } from '@/modules/Logger';
-import { getMoveType } from '../core/units';
 const logger = new Logger({ prefix: '[SparkSimulator/utils]' }); // eslint-disable-line no-unused-vars
 
 export function getHitCountData (burst) {
@@ -307,6 +308,10 @@ export function getDelayDescriptionForSparkUnitResult ({
   ].filter(v => v);
 }
 
+function getNumberOrDefault (num, defaultValue = 0) {
+  return !isNaN(num) ? +num : defaultValue;
+}
+
 export function getSimulatorOptions ({
   unitConfig = [],
   enemyCount = 6,
@@ -314,14 +319,37 @@ export function getSimulatorOptions ({
   overallDelay = 0,
   resultThreshold = 50,
   workerCount = 1,
-} = {}) {
-  const getNumberOrDefault = (num, defaultValue = 0) => !isNaN(num) ? +num : defaultValue;
+} = {}, squad = generateDefaultSquad()) {
+  let resultUnitConfig = Array.isArray(unitConfig) ? unitConfig : [];
+  if (Array.isArray(squad.units) && resultUnitConfig.length < squad.units.length) {
+    const numUnits = squad.units.length;
+    // ensure that every unit entry has a corresponding spark unit config entry
+    for (let i = resultUnitConfig.length; i < numUnits; ++i) {
+      resultUnitConfig.push(getSparkSimUnitConfig(squad.units[i]));
+    }
+  }
   return Object.freeze({
-    unitConfig: Array.isArray(unitConfig) ? unitConfig : [],
+    unitConfig: resultUnitConfig,
     enemyCount: getNumberOrDefault(enemyCount, 6),
     burstCutins: !!burstCutins,
     overallDelay: getNumberOrDefault(overallDelay, 0),
     resultThreshold: getNumberOrDefault(resultThreshold, 50),
     workerCount: getNumberOrDefault(workerCount, 1),
+  });
+}
+
+export function getSparkSimUnitConfig ({
+  action = squadUnitActions.ATK,
+  bbOrder = 1,
+  delay = 0,
+  priority = 1,
+  lockPosition = false,
+} = {}) {
+  return Object.freeze({
+    action,
+    bbOrder: getNumberOrDefault(bbOrder, 1),
+    delay: getNumberOrDefault(delay, 0),
+    priority: getNumberOrDefault(priority, 1),
+    lockPosition: !!lockPosition,
   });
 }

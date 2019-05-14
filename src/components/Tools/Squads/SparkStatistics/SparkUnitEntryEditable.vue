@@ -20,7 +20,7 @@
               <text
                 :x="0"
                 :y="thumbnailSize * 0.75">
-                {{ !isNaN(unit.bbOrder) ? unit.bbOrder : '-' }}
+                {{ bbOrderToShow }}
               </text>
             </template>
           </unit-thumbnail>
@@ -47,7 +47,7 @@
               :class="{ 'ml-1': rarity !== 8, 'mr-1': true, }"
               :rarity="rarity || 0"
               :displaySize="18"/>
-            <span>{{ name }}</span>
+            <span>{{ nameLabel }}</span>
           </v-flex>
           <v-spacer/>
           <v-flex
@@ -70,7 +70,8 @@
               label="Action"
               :disabled="isEmptyUnit"
               :items="actionPossibilities"
-              :value="sparkSimUnitConfig.action || unit.action"
+              :value="actionToShow"
+              @input="$v => emitChangedValue({ action: $v })"
             />
           </v-flex>
           <v-flex xs12 md4>
@@ -92,11 +93,11 @@
           <v-flex>
             <v-text-field
               label="Priority"
-              hint="Higher priority means unit will be prioritized over units with lesser priority for spark results"
+              hint="Higher priority means unit will be prioritized over units with lesser priority for spark results. Priority of zero and below means ignore that unit completely."
               persistent-hint
-              :disabled="isEmptyUnit"
+              :disabled="isEmptyUnit || isAnyUnit"
               type="number"
-              :value="!isNaN(sparkSimUnitConfig.delay) ? +sparkSimUnitConfig.delay : 0"
+              :value="!isNaN(sparkSimUnitConfig.priority) ? +sparkSimUnitConfig.priority : 1"
             />
           </v-flex>
           <v-flex xs12>
@@ -141,7 +142,8 @@
 
 <script>
 import { squadFillerMapping, squadUnitActions } from '@/modules/constants';
-// import { getDelayDescriptionForSparkUnitResult } from '@/modules/spark-simulator/utils';
+import { getMoveType } from '@/modules/core/units';
+import { getSparkSimUnitConfig } from '@/modules/spark-simulator/utils';
 import { mapGetters } from 'vuex';
 import colors from 'vuetify/es5/util/colors';
 import UnitThumbnail from '@/components/Multidex/Units/UnitThumbnail';
@@ -192,8 +194,8 @@ export default {
     orderSettings () {
       const hasBbOrder = !isNaN(this.unit.bbOrder);
       return {
-        text: (hasBbOrder && this.getOrderText(this.unit)) || '-',
-        ...this.getColorSetBasedOnAction((hasBbOrder && this.unit) || undefined),
+        text: (hasBbOrder && this.actionText) || '-',
+        ...(hasBbOrder && this.colorSetBasedOnAction) || undefined,
       };
     },
     rarity () {
@@ -204,6 +206,9 @@ export default {
     },
     isEmptyUnit () {
       return this.unit.name === squadFillerMapping.EMPTY;
+    },
+    isAnyUnit () {
+      return this.unit.name === squadFillerMapping.ANY;
     },
     actionPossibilities () {
       const availableBurstTypes = [
@@ -235,12 +240,20 @@ export default {
     },
     bbOrderPossibilities: () => ['(Any)']
       .concat(new Array(6).fill(0).map((_, i) => i + 1)),
-  },
-  methods: {
-    getColorSetBasedOnAction (unit = {}) {
-      const colorKey = (unit.action === squadUnitActions.UBB && 'red') ||
-        (unit.action === squadUnitActions.SBB && 'amber') ||
-        (unit.action === squadUnitActions.BB && 'blueGrey') ||
+    moveTypeText () {
+      const moveType = this.unitData && getMoveType(this.unitData);
+      return (moveType && ` (${moveType})`) || '';
+    },
+    nameLabel () {
+      return `${this.name}${this.moveTypeText}`;
+    },
+    actionToShow () {
+      return this.sparkSimUnitConfig.action || this.unit.action;
+    },
+    colorSetBasedOnAction () {
+      const colorKey = (this.actionToShow === squadUnitActions.UBB && 'red') ||
+        (this.actionToShow === squadUnitActions.SBB && 'amber') ||
+        (this.actionToShow === squadUnitActions.BB && 'blueGrey') ||
         'grey';
 
       return {
@@ -249,13 +262,25 @@ export default {
         foreground: colors[colorKey].darken4,
       };
     },
-    getOrderText (unit = {}) {
+    actionText () {
       // default to SBB or below (depending on if the unit has it)
-      const action = unit.action ||
-        (this.getUnit(unit.id).sbb && squadUnitActions.SBB) ||
-        (this.getUnit(unit.id).bb && squadUnitActions.BB) ||
+      const action = this.actionToShow ||
+        (this.unitData.sbb && squadUnitActions.SBB) ||
+        (this.unitData.bb && squadUnitActions.BB) ||
         (squadUnitActions.ATK);
       return action.toUpperCase();
+    },
+    bbOrderToShow () {
+      return [
+        !isNaN(this.sparkSimUnitConfig.bbOrder) && this.sparkSimUnitConfig.bbOrder,
+        !isNaN(this.unit.bbOrder) && this.unit.bbOrder,
+        '-',
+      ].find(v => v);
+    },
+  },
+  methods: {
+    emitChangedValue (newVal = {}) {
+      this.$emit('input', getSparkSimUnitConfig({ ...this.value, ...newVal }));
     },
   },
 };

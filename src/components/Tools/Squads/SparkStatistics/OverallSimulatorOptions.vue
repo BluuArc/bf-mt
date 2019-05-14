@@ -54,6 +54,10 @@ export default {
       type: Object,
       required: true,
     },
+    squad: {
+      type: Object,
+      required: true,
+    },
   },
   computed: {
     burstCutinToggleLabel () {
@@ -62,7 +66,7 @@ export default {
   },
   methods: {
     emitChangedValue (newVal = {}) {
-      this.$emit('input', getSimulatorOptions({ ...this.value, ...newVal }));
+      this.$emit('input', getSimulatorOptions({ ...this.value, ...newVal }, this.squad));
     },
   },
 };
