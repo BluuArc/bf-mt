@@ -245,7 +245,7 @@ export default {
     bbOrderPossibilities: () => [ANY_BB_ORDER]
       .concat(new Array(6).fill(0).map((_, i) => i + 1)),
     moveTypeText () {
-      const moveType = this.unitData && getMoveType(this.unitData);
+      const moveType = Object.keys(this.unitData).length > 0 && getMoveType(this.unitData);
       return (moveType && ` (${moveType})`) || '';
     },
     nameLabel () {

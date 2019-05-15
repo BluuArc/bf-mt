@@ -42,6 +42,20 @@
         @input="$v => emitChangedValue({ workerCount: $v })"
       />
     </v-flex>
+    <v-flex xs12 sm6>
+      <v-checkbox
+        label="Optimize Order"
+        :value="value.optimizeOrder"
+        @change="$v => emitChangedValue({ optimizeOrder: $v })"
+      />
+    </v-flex>
+    <v-flex xs12 sm6>
+      <v-checkbox
+        label="Optimize Position"
+        :value="value.optimizePosition"
+        @change="$v => emitChangedValue({ optimizePosition: $v })"
+      />
+    </v-flex>
   </v-layout>
 </template>
 

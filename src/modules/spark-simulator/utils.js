@@ -292,7 +292,7 @@ export function getDelayDescriptionForSparkUnitResult ({
 } = {}) {
   const moveTypeId = (unitData.movement && unitData.movement.skill && +unitData.movement.skill['move type']) || 0;
   const moveSpeed = (unitData.movement && unitData.movement.skill && +unitData.movement.skill['move speed']) || 0;
-  const moveTypeName = getMoveType(unitData);
+  const moveTypeName = unitData.movement && getMoveType(unitData);
   const moveSpeedType = (unitData.movement && unitData.movement.skill && +unitData.movement.skill['move speed type']) || '1';
 
   const teleporterOffset = (moveTypeId === moveTypeIdByName.Teleporting && TELEPORTER_OFFSETS[unitData.id.toString()]) || 0;
@@ -320,6 +320,8 @@ export function getSimulatorOptions ({
   overallDelay = 0,
   resultThreshold = 50,
   workerCount = 1,
+  optimizeOrder = true,
+  optimizePosition = true,
 } = {}, squad = generateDefaultSquad()) {
   let resultUnitConfig = Array.isArray(unitConfig) ? unitConfig : [];
   if (Array.isArray(squad.units) && resultUnitConfig.length < squad.units.length) {
@@ -336,6 +338,8 @@ export function getSimulatorOptions ({
     overallDelay: getNumberOrDefault(overallDelay, 0),
     resultThreshold: getNumberOrDefault(resultThreshold, 50),
     workerCount: getNumberOrDefault(workerCount, 1),
+    optimizeOrder: !!optimizeOrder,
+    optimizePosition: !!optimizePosition,
   });
 }
 
