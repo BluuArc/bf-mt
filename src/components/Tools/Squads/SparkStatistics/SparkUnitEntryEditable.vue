@@ -61,9 +61,6 @@
               :displaySize="18"/>
           </v-flex>
         </v-layout>
-        <!-- <v-layout>
-          form options here for action, BB order, delay, relative priority; also locking position
-        </v-layout> -->
         <v-layout row wrap>
           <v-flex xs12 md4>
             <v-select
@@ -80,6 +77,7 @@
               :disabled="isEmptyUnit"
               :value="sparkSimUnitConfig.bbOrder || unit.bbOrder"
               :items="bbOrderPossibilities"
+              @input="$v => emitChangedValue({ bbOrder: $v })"
             />
           </v-flex>
           <v-flex xs12 md4>
@@ -88,20 +86,26 @@
               :disabled="isEmptyUnit"
               type="number"
               :value="!isNaN(sparkSimUnitConfig.delay) ? +sparkSimUnitConfig.delay : 0"
+              @input="$v => emitChangedValue({ delay: $v })"
             />
           </v-flex>
           <v-flex>
             <v-text-field
-              label="Priority"
-              hint="Higher priority means unit will be prioritized over units with lesser priority for spark results. Priority of zero and below means ignore that unit completely."
+              label="Weight"
+              hint="Higher weight means unit will be prioritized over units with lesser weight for spark results. Weight of zero and below means ignore that unit completely."
               persistent-hint
               :disabled="isEmptyUnit || isAnyUnit"
               type="number"
-              :value="!isNaN(sparkSimUnitConfig.priority) ? +sparkSimUnitConfig.priority : 1"
+              :value="!isNaN(sparkSimUnitConfig.weight) ? +sparkSimUnitConfig.weight : 1"
+              @input="$v => emitChangedValue({ weight: $v })"
             />
           </v-flex>
-          <v-flex xs12>
-            <v-btn outline block>
+          <v-flex xs12 style="padding: 0 0.5em">
+            <v-btn
+              outline
+              block
+              @click="emitChangedValue({ lockPosition: !sparkSimUnitConfig.lockPosition })"
+            >
               <v-icon left>{{ sparkSimUnitConfig.lockPosition ? 'lock' : 'lock_open' }}</v-icon>
               <span style="text-transform: capitalize;">Position</span>
             </v-btn>
@@ -141,7 +145,7 @@
 </template>
 
 <script>
-import { squadFillerMapping, squadUnitActions } from '@/modules/constants';
+import { squadFillerMapping, squadUnitActions, ANY_BB_ORDER } from '@/modules/constants';
 import { getMoveType } from '@/modules/core/units';
 import { getSparkSimUnitConfig } from '@/modules/spark-simulator/utils';
 import { mapGetters } from 'vuex';
@@ -238,7 +242,7 @@ export default {
       ].filter(v => v);
       return nonBurstActions.concat(availableBurstTypes);
     },
-    bbOrderPossibilities: () => ['(Any)']
+    bbOrderPossibilities: () => [ANY_BB_ORDER]
       .concat(new Array(6).fill(0).map((_, i) => i + 1)),
     moveTypeText () {
       const moveType = this.unitData && getMoveType(this.unitData);
@@ -273,6 +277,7 @@ export default {
     bbOrderToShow () {
       return [
         !isNaN(this.sparkSimUnitConfig.bbOrder) && this.sparkSimUnitConfig.bbOrder,
+        this.sparkSimUnitConfig.bbOrder === ANY_BB_ORDER && '-',
         !isNaN(this.unit.bbOrder) && this.unit.bbOrder,
         '-',
       ].find(v => v);
@@ -280,7 +285,7 @@ export default {
   },
   methods: {
     emitChangedValue (newVal = {}) {
-      this.$emit('input', getSparkSimUnitConfig({ ...this.value, ...newVal }));
+      this.$emit('input', getSparkSimUnitConfig({ ...this.sparkSimUnitConfig, ...newVal }));
     },
   },
 };

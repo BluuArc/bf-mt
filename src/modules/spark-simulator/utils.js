@@ -17,6 +17,7 @@ import {
   targetTypes,
   squadBuffTypes,
   squadUnitActions,
+  ANY_BB_ORDER,
 } from '@/modules/constants';
 import { getEffectId } from '@/modules/EffectProcessor/processor-helper';
 
@@ -342,14 +343,14 @@ export function getSparkSimUnitConfig ({
   action = squadUnitActions.ATK,
   bbOrder = 1,
   delay = 0,
-  priority = 1,
+  weight = 1,
   lockPosition = false,
 } = {}) {
   return Object.freeze({
     action,
-    bbOrder: getNumberOrDefault(bbOrder, 1),
+    bbOrder: getNumberOrDefault(bbOrder, ANY_BB_ORDER),
     delay: getNumberOrDefault(delay, 0),
-    priority: getNumberOrDefault(priority, 1),
+    weight: getNumberOrDefault(weight, 1),
     lockPosition: !!lockPosition,
   });
 }

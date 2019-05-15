@@ -432,6 +432,7 @@ export const squadBuffTypes = Object.freeze({
   BURST: 'burst',
 });
 
+export const ANY_BB_ORDER = '(Any)';
 
 export const arenaConditionMapping = Object.freeze({
   hp_50pr_under: 'has less than 50% HP',

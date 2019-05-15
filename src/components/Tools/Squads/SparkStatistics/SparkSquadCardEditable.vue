@@ -79,9 +79,11 @@ export default {
       return `${JSON.stringify(unit)}-${i}`;
     },
     updateEntryForUnit(newValue, index) {
-      const unitConfig = this.value.unitConfig.slice();
-      unitConfig[index] = newValue;
-      this.emitChangedValue({ unitConfig });
+      if (!(newValue instanceof Event)) {
+        const unitConfig = this.value.unitConfig.slice();
+        unitConfig[index] = newValue;
+        this.emitChangedValue({ unitConfig });
+      }
     },
     emitChangedValue (newVal = {}) {
       this.$emit('input', getSimulatorOptions({ ...this.value, ...newVal }, this.squad));
