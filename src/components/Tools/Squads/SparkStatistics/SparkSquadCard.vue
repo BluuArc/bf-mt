@@ -18,11 +18,12 @@
         :key="getUnitEntryKey(unit, i)"
         xs12 sm6
         :index="i"
-        :sparkResultForUnit="sparkResultsByUnit.get(unit)"
         :unit="unit"
         :getUnit="getUnit"
         :isLead="i === squad.lead"
         :isFriend="i === squad.friend"
+        :sparkResultForUnit="sparkResultsByUnit.get(unit)"
+        :warnings="warningsByUnit.get(unit)"
         class="d-flex py-1"
         style="align-items: center; border: 1px solid var(--background-color-alt);"/>
     </v-layout>
@@ -39,8 +40,16 @@
 </template>
 
 <script>
-import { unitPositionMapping } from '@/modules/constants';
-import { generateFillerSquadUnitEntry } from '@/modules/core/squads';
+import {
+  unitPositionMapping,
+  targetTypes,
+  squadBuffTypes,
+} from '@/modules/constants';
+import { generateFillerSquadUnitEntry, getEffectsListForSquadUnitEntry } from '@/modules/core/squads';
+import {
+  getAttackEffectsFromBurst,
+  getSimulatorWarningsForSquadUnit,
+} from '@/modules/spark-simulator/utils';
 import UnitEntry from '@/components/Tools/Squads/SparkStatistics/SparkUnitEntry';
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 
@@ -80,6 +89,28 @@ export default {
     },
     sparkPercentage () {
       return `${(this.sparkResult.weightedPercentage * 100).toFixed(2)}%`;
+    },
+    warningsByUnit () {
+      const mapping = new WeakMap();
+      this.fullUnits.forEach(squadUnit => {
+        const sourcesToIgnore = ['unit.bb', 'unit.sbb', 'unit.ubb'];
+        const unitData = this.getUnit(squadUnit.id) || {};
+        const burstAttacks = getAttackEffectsFromBurst(unitData[squadUnit.action]);
+        const extraAttacks = getEffectsListForSquadUnitEntry({
+          unitEntry: squadUnit,
+          target: targetTypes.ENEMY,
+          effectType: squadBuffTypes.PROC,
+          squad: this.squad,
+        }, this)
+          .filter(effect => !sourcesToIgnore.includes(effect.sourcePath) && (!effect.triggeredOn || (effect.triggeredOn === squadUnit.action)));
+
+        mapping.set(squadUnit, getSimulatorWarningsForSquadUnit({
+          unit: squadUnit,
+          attackEffects: burstAttacks.concat(extraAttacks),
+          unitData,
+        }));
+      });
+      return mapping;
     },
   },
   methods: {

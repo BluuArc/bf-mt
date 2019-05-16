@@ -66,28 +66,70 @@
             <span class="headline" v-text="sparkFraction"/>
             <span class="subheading" v-text="'SPARKS'" style="margin-left: 0.5em"/>
           </v-flex>
-          <v-flex class="body-1">
-            Delay:
-            <template v-for="(entry, i) in delayDescription">
-              <v-tooltip
-                :key="entry.description"
-                bottom
-              >
+          <v-layout row>
+            <v-flex class="body-1">
+              Delay:
+              <template v-for="(entry, i) in delayDescription">
+                <v-tooltip
+                  :key="entry.description"
+                  bottom
+                >
+                  <span
+                    slot="activator"
+                    v-text="entry.delay"
+                    style="text-decoration: underline dashed"
+                  />
+                  <span v-text="entry.description"/>
+                </v-tooltip>
                 <span
-                  slot="activator"
-                  v-text="entry.delay"
-                  style="text-decoration: underline dashed"
+                  v-if="i !== delayDescription.length - 1"
+                  :key="i"
+                  style="margin: 0 0.5em"
+                  v-text="'+'"
                 />
-                <span v-text="entry.description"/>
-              </v-tooltip>
-              <span
-                v-if="i !== delayDescription.length - 1"
-                :key="i"
-                style="margin: 0 0.5em"
-                v-text="'+'"
-              />
-            </template>
-          </v-flex>
+              </template>
+            </v-flex>
+            <v-flex style="flex-grow: 0" v-if="warnings.length > 0">
+              <v-dialog v-model="showWarningDialog" max-width="500px">
+                <v-btn
+                  fab
+                  small
+                  color="warning"
+                  slot="activator"
+                >
+                  <v-icon>info</v-icon>
+                </v-btn>
+                <v-card>
+                  <v-card-text>
+                    <v-container fluid class="pa-0">
+                      <v-flex>
+                        <v-alert outline :value="true" type="warning" style="overflow-x: auto;">
+                          <span>This unit has issues that may affect the accuracy of results.</span>
+                          <v-list>
+                            <v-list-tile
+                              v-for="message in warnings"
+                              :key="message">
+                              <v-list-tile-content>
+                                <v-list-tile-title>
+                                  {{ message }}
+                                </v-list-tile-title>
+                              </v-list-tile-content>
+                            </v-list-tile>
+                          </v-list>
+                        </v-alert>
+                      </v-flex>
+                    </v-container>
+                  </v-card-text>
+                  <v-card-actions>
+                    <v-spacer/>
+                    <v-btn flat @click="showWarningDialog = false">
+                      Back
+                    </v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-dialog>
+            </v-flex>
+          </v-layout>
         </v-layout>
       </v-layout>
     </div>
@@ -130,6 +172,10 @@ export default {
       type: Object,
       required: true,
     },
+    warnings: {
+      type: Array,
+      default: () => [],
+    },
   },
   computed: {
     ...mapGetters('units', {
@@ -166,6 +212,11 @@ export default {
         unitData: this.unitData,
       });
     },
+  },
+  data () {
+    return {
+      showWarningDialog: false,
+    };
   },
   methods: {
     getColorSetBasedOnAction (unit = {}) {
