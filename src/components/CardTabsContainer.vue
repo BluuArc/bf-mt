@@ -29,6 +29,8 @@
 </template>
 
 <script>
+import debounce from 'lodash/debounce';
+
 export default {
   props: {
     tabs: {
@@ -74,10 +76,17 @@ export default {
     emitValue () {
       this.$emit('input', this.localValue);
     },
+    removeHeight () {
+      this.$el.querySelector('.v-window__container').style.height = '';
+    },
+    debouncedRemoveHeight: debounce(function () {
+      this.removeHeight();
+    }, 500),
   },
   watch: {
     value (newValue) {
       this.localValue = newValue;
+      this.debouncedRemoveHeight();
     },
     localValue (newValue) {
       this.lazyCache[newValue] = true;

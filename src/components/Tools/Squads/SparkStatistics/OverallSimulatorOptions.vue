@@ -12,8 +12,7 @@
         />
         <v-switch
           :label="burstCutinToggleLabel"
-          :value="value.burstCutins"
-          @change="$v => emitChangedValue({ burstCutins: $v })"
+          v-model="burstCutins"
           hide-details
         />
         <v-text-field
@@ -45,15 +44,13 @@
     <v-flex xs12 sm6>
       <v-checkbox
         label="Optimize Order"
-        :value="value.optimizeOrder"
-        @change="$v => emitChangedValue({ optimizeOrder: $v })"
+        v-model="optimizeOrder"
       />
     </v-flex>
     <v-flex xs12 sm6>
       <v-checkbox
         label="Optimize Position"
-        :value="value.optimizePosition"
-        @change="$v => emitChangedValue({ optimizePosition: $v })"
+        v-model="optimizePosition"
       />
     </v-flex>
   </v-layout>
@@ -78,9 +75,37 @@ export default {
       return `Burst Cutins are ${this.value.burstCutins ? 'on' : 'off'}`;
     },
   },
+  data () {
+    return {
+      burstCutins: false,
+      optimizeOrder: false,
+      optimizePosition: false,
+    };
+  },
   methods: {
     emitChangedValue (newVal = {}) {
       this.$emit('input', getSimulatorOptions({ ...this.value, ...newVal }, this.squad));
+    },
+  },
+  watch: {
+    value: {
+      immediate: true,
+      handler (newValue) {
+        if (newValue) {
+          this.burstCutins = !!newValue.burstCutins;
+          this.optimizeOrder = !!newValue.optimizeOrder;
+          this.optimizePosition = !!newValue.optimizePosition;
+        }
+      },
+    },
+    burstCutins (newValue) {
+      this.emitChangedValue({ burstCutins: newValue });
+    },
+    optimizeOrder (newValue) {
+      this.emitChangedValue({ optimizeOrder: newValue });
+    },
+    optimizePosition (newValue) {
+      this.emitChangedValue({ optimizePosition: newValue });
     },
   },
 };

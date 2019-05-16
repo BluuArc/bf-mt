@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="text-viewer pa-0">
+  <v-container fluid :class="{ 'text-viewer pa-0': true, 'limit-height': limitHeight }">
     <copy-button block :textToCopy="inputText" :value="value" class="mb-0"/>
     <pre><code>{{ inputText }}</code></pre>
   </v-container>
@@ -17,6 +17,10 @@ export default {
     value: {
       default: undefined,
     },
+    limitHeight: {
+      type: Boolean,
+      default: true,
+    },
   },
   components: {
     CopyButton,
@@ -32,6 +36,10 @@ export default {
 
   .copy-button {
     flex: none;
+  }
+
+  &.limit-height pre {
+    max-height: 45vh;
   }
 
   pre {
