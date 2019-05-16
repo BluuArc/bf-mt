@@ -23,6 +23,7 @@
         :isLead="i === squad.lead"
         :isFriend="i === squad.friend"
         :sparkSimUnitConfig="value.unitConfig[i] || {}"
+        :warnings="warningsByUnit.get(unit)"
         @input="$v => updateEntryForUnit($v, i)"
         class="d-flex py-1"
         style="align-items: center; border: 1px solid var(--background-color-alt);"/>
@@ -40,9 +41,17 @@
 </template>
 
 <script>
-import { unitPositionMapping } from '@/modules/constants';
-import { generateFillerSquadUnitEntry } from '@/modules/core/squads';
-import { getSimulatorOptions } from '@/modules/spark-simulator/utils';
+import {
+  unitPositionMapping,
+  targetTypes,
+  squadBuffTypes,
+} from '@/modules/constants';
+import { generateFillerSquadUnitEntry, getEffectsListForSquadUnitEntry } from '@/modules/core/squads';
+import {
+  getSimulatorOptions,
+  getAttackEffectsFromBurst,
+  getSimulatorWarningsForSquadUnit,
+} from '@/modules/spark-simulator/utils';
 import UnitEntry from '@/components/Tools/Squads/SparkStatistics/SparkUnitEntryEditable';
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 
@@ -72,6 +81,28 @@ export default {
 
         return unit;
       });
+    },
+    warningsByUnit () {
+      const mapping = new WeakMap();
+      this.fullUnits.forEach(squadUnit => {
+        const sourcesToIgnore = ['unit.bb', 'unit.sbb', 'unit.ubb'];
+        const unitData = this.getUnit(squadUnit.id) || {};
+        const burstAttacks = getAttackEffectsFromBurst(unitData[squadUnit.action]);
+        const extraAttacks = getEffectsListForSquadUnitEntry({
+          unitEntry: squadUnit,
+          target: targetTypes.ENEMY,
+          effectType: squadBuffTypes.PROC,
+          squad: this.squad,
+        }, this)
+          .filter(effect => !sourcesToIgnore.includes(effect.sourcePath) && (!effect.triggeredOn || (effect.triggeredOn === squadUnit.action)));
+
+        mapping.set(squadUnit, getSimulatorWarningsForSquadUnit({
+          unit: squadUnit,
+          attackEffects: burstAttacks.concat(extraAttacks),
+          unitData,
+        }));
+      });
+      return mapping;
     },
   },
   methods: {

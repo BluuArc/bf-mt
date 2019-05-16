@@ -70,6 +70,11 @@ export function convertExtraAttackInfoToHitCountData (extraAttackEffect = {}, ex
   };
 }
 
+export function getAttackEffectsFromBurst (burst = {}) {
+  return ((getBurstEffects(burst) || {}).effects || [])
+    .filter(b => ATTACKING_PROCS.includes(getEffectId(b).toString()));
+}
+
 export function getFramesForSparkUnitEntry ({
   burst = {},
   extraAttackEffects = [],
@@ -80,12 +85,11 @@ export function getFramesForSparkUnitEntry ({
 }) {
   const burstFrames = (burst['damage frames'] || [])
     .filter(b => ATTACKING_PROCS.includes(getEffectId(b).toString()));
-  if (burstFrames.length === 0) {
+  if (burstFrames.length === 0 && extraAttackEffects.length === 0) {
     return [];
   }
 
-  const burstEffects = getBurstEffects(burst).effects
-    .filter(b => ATTACKING_PROCS.includes(getEffectId(b).toString()));
+  const burstEffects = getAttackEffectsFromBurst(burst);
   
   const baseOffset = [
     moveTypeId === moveTypeIdByName['Non-Moving'] ? moveSpeed : 0,
@@ -357,4 +361,33 @@ export function getSparkSimUnitConfig ({
     weight: getNumberOrDefault(weight, 1),
     lockPosition: !!lockPosition,
   });
+}
+
+export function getSimulatorWarningsForSquadUnit ({
+  unit = generateFillerSquadUnitEntry(),
+  attackEffects = [],
+  unitData = {},
+} = {}) {
+  const attackTargets = new Set();
+  attackEffects.forEach(attack => {
+    const effectId = getEffectId(attack);
+    const targetArea = attack['target area'];
+    const isRandom = +effectId === 13 && !!attack['random attack'];
+
+    attackTargets.add(isRandom ? 'rt' : targetArea);
+  });
+
+  const warnings = Array.from(attackTargets).length === 0
+    ? []
+    : [
+      attackTargets.has('rt') && 'Random attacks aren\'t supported yet',
+      !attackTargets.has('aoe') && 'No AOE attacks found',
+    ].filter(v => v);
+
+  const moveTypeId = (unitData.movement && unitData.movement.skill && +unitData.movement.skill['move type']) || 0;
+  if (moveTypeId === moveTypeIdByName.Teleporting && !TELEPORTER_OFFSETS.hasOwnProperty((unitData.id || unit.id).toString())) {
+    warnings.push('This teleporting unit is not supported yet');
+  }
+
+  return warnings;
 }

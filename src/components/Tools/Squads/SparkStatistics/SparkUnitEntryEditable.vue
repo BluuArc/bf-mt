@@ -5,10 +5,13 @@
       <v-layout
         column class="mx-2"
         :style="`flex-grow: 0!important; min-width: ${thumbnailSize}px; max-width: ${thumbnailSize}px;`">
-        <v-flex text-xs-center v-if="$vuetify.breakpoint.xsOnly">
+        <v-flex text-xs-center v-if="$vuetify.breakpoint.xsOnly" style="flex-grow: 0;">
           <span class="caption text-no-wrap">{{ unit.position }}</span>
         </v-flex>
-        <v-layout align-content-end row>
+        <v-layout
+          :align-content-end="$vuetify.breakpoint.smAndUp"
+          :style="$vuetify.breakpoint.xsOnly ? 'flex-grow: 0;' : undefined"
+        >
           <unit-thumbnail
             class="unit-thumbnail"
             :style="`border-color: ${orderSettings.border};`"
@@ -36,6 +39,51 @@
             small>
             <b>{{ orderSettings.text }}</b>
           </v-chip>
+        </v-flex>
+        <v-flex
+          v-if="warnings.length > 0"
+          align-content-end
+          class="text-xs-center"
+          style="flex-grow: 0;"
+        >
+          <v-dialog v-model="showWarningDialog" max-width="500px">
+            <v-btn
+              fab
+              small
+              color="warning"
+              slot="activator"
+            >
+              <v-icon>info</v-icon>
+            </v-btn>
+            <v-card>
+              <v-card-text>
+                <v-container fluid class="pa-0">
+                  <v-flex>
+                    <v-alert outline :value="true" type="warning">
+                      <span>This unit has issues that may affect the accuracy of results.</span>
+                      <v-list>
+                        <v-list-tile
+                          v-for="message in warnings"
+                          :key="message">
+                          <v-list-tile-content>
+                            <v-list-tile-title>
+                              {{ message }}
+                            </v-list-tile-title>
+                          </v-list-tile-content>
+                        </v-list-tile>
+                      </v-list>
+                    </v-alert>
+                  </v-flex>
+                </v-container>
+              </v-card-text>
+              <v-card-actions>
+                <v-spacer/>
+                <v-btn flat @click="showWarningDialog = false">
+                  Back
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
         </v-flex>
       </v-layout>
       <v-layout column style="align-self: flex-start;">
@@ -181,6 +229,10 @@ export default {
       type: Object,
       default: () => {},
     },
+    warnings: {
+      type: Array,
+      default: () => [],
+    },
   },
   computed: {
     ...mapGetters('units', {
@@ -282,6 +334,11 @@ export default {
         '-',
       ].find(v => v);
     },
+  },
+  data () {
+    return {
+      showWarningDialog: false,
+    };
   },
   methods: {
     emitChangedValue (newVal = {}) {
