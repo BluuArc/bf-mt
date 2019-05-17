@@ -81,7 +81,13 @@ export default {
     },
     debouncedRemoveHeight: debounce(function () {
       this.removeHeight();
+      this.debouncedCheckHeight();
     }, 500),
+    debouncedCheckHeight: debounce(function () {
+      if (this.$el && this.$el.querySelector('.v-window__container').style.height) {
+        this.debouncedRemoveHeight();
+      }
+    }, 1000),
   },
   watch: {
     value (newValue) {
@@ -95,6 +101,7 @@ export default {
   },
   mounted () {
     this.localValue = this.value;
+    this.debouncedCheckHeight();
   },
 };
 </script>

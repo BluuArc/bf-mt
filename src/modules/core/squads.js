@@ -152,12 +152,13 @@ export function generateDefaultSquad (allEmpty = false, units) {
 }
 
 export function cloneSquad (squad = {}) {
-  const { lead, friend, name } = squad;
+  const { lead, friend, name, simulatorOptions } = squad;
   return {
     lead,
     friend,
     name,
     units: squad.units.map(makeSquadUnitEntry),
+    simulatorOptions,
   };
 }
 
@@ -358,6 +359,7 @@ export function fixSquadErrors (squad = {}, {
     name: squad.name || 'Default Squad Name',
     units: sortUnitsByPosition(units),
     warnings: messages,
+    simulatorOptions: squad.simulatorOptions,
   };
 }
 

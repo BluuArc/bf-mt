@@ -66,6 +66,10 @@ export default {
       type: Object,
       required: true,
     },
+    initialSimulatorOptions: {
+      type: Object,
+      default: () => {},
+    },
   },
   components: {
     SparkSquadCard,
@@ -83,7 +87,7 @@ export default {
     };
   },
   created () {
-    this.simulatorOptions = getSimulatorOptions(undefined, this.squad);
+    this.simulatorOptions = getSimulatorOptions(this.initialSimulatorOptions, this.squad);
   },
   mounted () {
     this.sparkSimulator.getters = {
@@ -102,6 +106,14 @@ export default {
     },
     emitShareEvent (sparkResult) {
       this.$emit('share', sparkResult);
+    },
+    emitSimulatorOptions () {
+      this.$emit('simoptions', this.simulatorOptions);
+    },
+  },
+  watch: {
+    simulatorOptions () {
+      this.emitSimulatorOptions();
     },
   },
 };

@@ -135,6 +135,8 @@
                 :getItem="getItem"
                 :getExtraSkill="getExtraSkill"
                 :squad="squad"
+                :initialSimulatorOptions="simulatorOptions"
+                @simoptions="$v => simulatorOptions = $v"
                 @share="$sparkResult => { sparkResultToShare = $sparkResult; activeSquadDialog = 'share'; }"
               />
             </v-layout>
@@ -296,6 +298,7 @@ export default {
       topNavbarHeight: 56,
       buffTables: [],
       sparkResultToShare: null,
+      simulatorOptions: {},
     };
   },
   created () {
@@ -403,6 +406,7 @@ export default {
     editMode (isEditMode) {
       if (isEditMode) {
         this.tempSquad = cloneSquad(this.squad);
+        this.tempSquad.simulatorOptions = this.simulatorOptions;
       } else {
         this.tempSquad = {};
       }
