@@ -9,6 +9,7 @@
             :squad="squad"
             :sparkResult="resultForCurrentSquad"
             :getUnit="getUnit"
+            :simulatorOptions="simulatorOptions"
             @share="() => emitShareEvent(resultForCurrentSquad)"
           />
         </section>
@@ -79,7 +80,7 @@ export default {
   data () {
     return {
       sparkSimulator: new SparkSimulator(),
-      results: null,
+      results: [],
       currentSection: 0,
       runningSimulator: true,
       resultForCurrentSquad: null,
@@ -99,10 +100,10 @@ export default {
   },
   methods: {
     runSimulator () {
-      this.results = this.sparkSimulator.calculateSparksForSquad(this.squad);
+      this.results = this.sparkSimulator.calculateSparksForSquad(this.squad, this.simulatorOptions);
     },
     calculateResultForCurrentSquad () {
-      this.resultForCurrentSquad = Object.freeze(this.sparkSimulator.calculateSparksForSquad(this.squad));
+      this.resultForCurrentSquad = Object.freeze(this.sparkSimulator.calculateSparksForSquad(this.squad, this.simulatorOptions));
     },
     emitShareEvent (sparkResult) {
       this.$emit('share', sparkResult);

@@ -24,6 +24,7 @@
         :isFriend="i === squad.friend"
         :sparkResultForUnit="sparkResultsByUnit.get(unit)"
         :warnings="warningsByUnit.get(unit)"
+        :burstCutins="simulatorOptions.burstCutins"
         class="d-flex py-1"
         style="align-items: center; border: 1px solid var(--background-color-alt);"/>
     </v-layout>
@@ -64,6 +65,10 @@ export default {
       required: true,
     },
     sparkResult: {
+      type: Object,
+      required: true,
+    },
+    simulatorOptions: {
       type: Object,
       required: true,
     },

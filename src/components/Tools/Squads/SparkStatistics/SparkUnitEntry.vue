@@ -176,6 +176,10 @@ export default {
       type: Array,
       default: () => [],
     },
+    burstCutins: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     ...mapGetters('units', {
@@ -210,6 +214,7 @@ export default {
       return getDelayDescriptionForSparkUnitResult({
         sparkUnitResult: this.sparkResultForUnit,
         unitData: this.unitData,
+        burstCutins: !!this.burstCutins,
       });
     },
   },

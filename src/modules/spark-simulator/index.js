@@ -2,6 +2,7 @@ import { generateDefaultSquad } from '@/modules/core/squads';
 import {
   convertSquadUnitEntryToSparkUnitEntry,
   calculateSparksForSparkSimSquad,
+  getSimulatorOptions,
 } from './utils';
 import { Logger } from '@/modules/Logger';
 
@@ -27,12 +28,12 @@ export default class SparkSimulator {
     });
   }
 
-  calculateSparksForSquad (squad = generateDefaultSquad(), numEnemies = 6) {
+  calculateSparksForSquad (squad = generateDefaultSquad(), options = getSimulatorOptions()) {
     const sparkSquad = squad.units.map(u => convertSquadUnitEntryToSparkUnitEntry({
       entry: u,
       synchronousGetters: this._dbGetters,
       squad,
     }));
-    return calculateSparksForSparkSimSquad(sparkSquad, numEnemies);
+    return calculateSparksForSparkSimSquad(sparkSquad, options);
   }
 }

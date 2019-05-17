@@ -1,4 +1,4 @@
-import { SBB_NO_CUTIN_DELAY, ATTACKING_PROCS, TELEPORTER_OFFSETS, MOVESPEED_OFFSETS } from './constants';
+import { SBB_NO_CUTIN_DELAY, ATTACKING_PROCS, TELEPORTER_OFFSETS, MOVESPEED_OFFSETS, SBB_CUTIN_DELAY } from './constants';
 import {
   getBurstEffects,
   getHealFrameData,
@@ -198,12 +198,13 @@ export function getBattleFrames (entry = convertSquadUnitEntryToSparkUnitEntry()
   return battleFrames;
 }
 
-export function calculateSparksForSparkSimSquad (squad = [], numEnemies = 6, cutinDelay = SBB_NO_CUTIN_DELAY) {
+export function calculateSparksForSparkSimSquad (squad = [], options = getSimulatorOptions()) {
+  const { enemyCount, burstCutins } = options;
   const aggregatedBattleFrames = {};
   const battleFramesByUnit = new Map();
   // aggregate battle frames
   squad.forEach(unit => {
-    const unitBattleFrames = getBattleFrames(unit, cutinDelay);
+    const unitBattleFrames = getBattleFrames(unit, burstCutins ? SBB_CUTIN_DELAY : SBB_NO_CUTIN_DELAY);
     Object.keys(unitBattleFrames)
       .forEach(frame => {
         if (!aggregatedBattleFrames[frame]) {
@@ -227,7 +228,7 @@ export function calculateSparksForSparkSimSquad (squad = [], numEnemies = 6, cut
     const frameTimes = Object.keys(unitBattleFrames);
 
     const possibleSparks = frameTimes
-      .map(frame => unitBattleFrames[frame].aoe * numEnemies + unitBattleFrames[frame].st)
+      .map(frame => unitBattleFrames[frame].aoe * enemyCount + unitBattleFrames[frame].st)
       .reduce((acc, val) => acc + val, 0);
     const actualSparks = frameTimes.map(frame => {
       const { aoe: selfAoe, st: selfSt } = unitBattleFrames[frame];
@@ -248,7 +249,7 @@ export function calculateSparksForSparkSimSquad (squad = [], numEnemies = 6, cut
 
       let count = 0;
       if (hasSparkableAoe) {
-        count += selfAoe * numEnemies;
+        count += selfAoe * enemyCount;
       }
 
       if (hasSparkableSt) {
@@ -292,7 +293,7 @@ export function calculateSparksForSparkSimSquad (squad = [], numEnemies = 6, cut
 export function getDelayDescriptionForSparkUnitResult ({
   sparkUnitResult = {},
   unitData = {},
-  cutinDelay = SBB_NO_CUTIN_DELAY,
+  burstCutins = false,
 } = {}) {
   const moveTypeId = (unitData.movement && unitData.movement.skill && +unitData.movement.skill['move type']) || 0;
   const moveSpeed = (unitData.movement && unitData.movement.skill && +unitData.movement.skill['move speed']) || 0;
@@ -302,14 +303,16 @@ export function getDelayDescriptionForSparkUnitResult ({
   const teleporterOffset = (moveTypeId === moveTypeIdByName.Teleporting && TELEPORTER_OFFSETS[unitData.id.toString()]) || 0;
   const positionBasedOffset = +MOVESPEED_OFFSETS[moveSpeedType][sparkUnitResult.position];
   const inputDelay = !isNaN(sparkUnitResult.delay) ? +sparkUnitResult.delay : 0;
+  const squadLevelDelay = !isNaN(sparkUnitResult.squadLevelDelay) ? +sparkUnitResult.squadLevelDelay : 0;
 
   const makeEntry = (delay = 0, description = '') => ({ delay, description });
   return [
     moveTypeId === moveTypeIdByName['Non-Moving'] && makeEntry(moveSpeed, `innate move speed as a ${moveTypeName} unit`),
     moveTypeId === moveTypeIdByName.Teleporting && makeEntry(teleporterOffset, `custom offset as a ${moveTypeName} unit`),
     moveTypeId === moveTypeIdByName.Moving && makeEntry(positionBasedOffset, `offset based on position and move speed type as a ${moveTypeName} unit`),
-    cutinDelay > 0 && makeEntry(cutinDelay, 'burst cut-in delay'),
-    inputDelay > 0 && makeEntry(inputDelay, `custom delay`),
+    makeEntry(burstCutins ? SBB_CUTIN_DELAY : SBB_NO_CUTIN_DELAY, `burst cut-in delay (cut-ins ${burstCutins ? 'on' : 'off'})`),
+    inputDelay > 0 && makeEntry(inputDelay, `custom unit delay`),
+    squadLevelDelay > 0 && makeEntry(squadLevelDelay, `custom squad delay`),
   ].filter(v => v);
 }
 
@@ -321,7 +324,6 @@ export function getSimulatorOptions ({
   unitConfig = [],
   enemyCount = 6,
   burstCutins = false,
-  overallDelay = 0,
   resultThreshold = 50,
   workerCount = 1,
   optimizeOrder = true,
@@ -339,7 +341,6 @@ export function getSimulatorOptions ({
     unitConfig: resultUnitConfig,
     enemyCount: getNumberOrDefault(enemyCount, 6),
     burstCutins: !!burstCutins,
-    overallDelay: getNumberOrDefault(overallDelay, 0),
     resultThreshold: getNumberOrDefault(resultThreshold, 50),
     workerCount: getNumberOrDefault(workerCount, 1),
     optimizeOrder: !!optimizeOrder,

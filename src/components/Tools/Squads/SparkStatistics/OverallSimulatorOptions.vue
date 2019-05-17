@@ -1,28 +1,33 @@
 <template>
   <v-layout row wrap class="overall-simulator-options">
-    <v-flex xs12>
-      <v-layout row wrap align-baseline>
-        <v-text-field
-          label="Enemy Count"
-          type="number"
-          hint="There must be at least 2 enemies to ensure accuracy"
-          :value="value.enemyCount"
-          @input="$v => emitChangedValue({ enemyCount: $v })"
-          persistent-hint
-        />
-        <v-switch
-          :label="burstCutinToggleLabel"
-          v-model="burstCutins"
-          hide-details
-        />
-        <v-text-field
-          label="Overall Delay (frames)"
-          type="number"
-          :value="value.overallDelay"
-          @input="$v => emitChangedValue({ overallDelay: $v })"
-          hide-details
-        />
-      </v-layout>
+    <v-flex xs12 sm6>
+      <v-text-field
+        label="Enemy Count"
+        type="number"
+        hint="There must be at least 2 enemies to ensure accuracy"
+        :value="value.enemyCount"
+        @input="$v => emitChangedValue({ enemyCount: $v })"
+        persistent-hint
+      />
+    </v-flex>
+    <v-flex xs12 sm6>
+      <v-switch
+        :label="burstCutinToggleLabel"
+        v-model="burstCutins"
+        hide-details
+      />
+    </v-flex>
+    <v-flex xs12 sm6>
+      <v-checkbox
+        label="Optimize Order"
+        v-model="optimizeOrder"
+      />
+    </v-flex>
+    <v-flex xs12 sm6>
+      <v-checkbox
+        label="Optimize Position"
+        v-model="optimizePosition"
+      />
     </v-flex>
     <v-flex xs12 sm6>
       <v-text-field
@@ -39,18 +44,6 @@
         type="number"
         :value="value.workerCount"
         @input="$v => emitChangedValue({ workerCount: $v })"
-      />
-    </v-flex>
-    <v-flex xs12 sm6>
-      <v-checkbox
-        label="Optimize Order"
-        v-model="optimizeOrder"
-      />
-    </v-flex>
-    <v-flex xs12 sm6>
-      <v-checkbox
-        label="Optimize Position"
-        v-model="optimizePosition"
       />
     </v-flex>
   </v-layout>
@@ -113,8 +106,10 @@ export default {
 
 <style lang="less">
 .overall-simulator-options {
+  align-items: baseline;
   .v-input {
     margin: 0.5em;
+    flex-shrink: 0;
   }
 }
 </style>
