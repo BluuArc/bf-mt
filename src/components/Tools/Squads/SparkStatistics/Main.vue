@@ -39,6 +39,7 @@
           <section class="result-navigator">
             <v-btn
               flat
+              :icon="$vuetify.breakpoint.xsOnly"
               :disabled="currentResultIndex <= 0"
               @click="currentResultIndex = Math.max(currentResultIndex - 1, 0)"
             >
@@ -51,6 +52,7 @@
             </v-btn>
             <v-btn
               flat
+              :icon="$vuetify.breakpoint.xsOnly"
               :disabled="currentResultIndex + 1 >= results.length"
               @click="currentResultIndex = Math.min(currentResultIndex + 1, results.length - 1)"
             >
@@ -176,7 +178,7 @@ export default {
 
   .result-navigator {
     display: grid;
-    grid-template-columns: minmax(auto, 128px) 1fr minmax(auto, 128px);
+    grid-template-columns: auto 1fr auto;
   }
 }
 </style>
