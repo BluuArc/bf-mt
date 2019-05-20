@@ -84,10 +84,11 @@ export default {
     },
     warningsByUnit () {
       const mapping = new WeakMap();
-      this.fullUnits.forEach(squadUnit => {
+      this.fullUnits.forEach((squadUnit, i) => {
+        const unitConfig = this.value.unitConfig[i] || {};
         const sourcesToIgnore = ['unit.bb', 'unit.sbb', 'unit.ubb'];
         const unitData = this.getUnit(squadUnit.id) || {};
-        const burstAttacks = getAttackEffectsFromBurst(unitData[squadUnit.action]);
+        const burstAttacks = getAttackEffectsFromBurst(unitData[unitConfig.action || squadUnit.action]);
         const extraAttacks = getEffectsListForSquadUnitEntry({
           unitEntry: squadUnit,
           target: targetTypes.ENEMY,
