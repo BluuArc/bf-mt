@@ -45,11 +45,18 @@
             >
               <v-icon>chevron_left</v-icon>
             </v-btn>
-            <v-btn class="mx-2" outline>
+            <v-select
+              class="mx-2"
+              v-model="currentResultIndex"
+              :items="resultSelectValues"
+              item-text="label"
+              item-value="value"
+            />
+            <!-- <v-btn class="mx-2" outline>
               <span>{{ getResultName(results[currentResultIndex], currentResultIndex) }}</span>
               <v-spacer/>
               <v-icon>arrow_drop_down</v-icon>
-            </v-btn>
+            </v-btn> -->
             <v-btn
               flat
               :icon="$vuetify.breakpoint.xsOnly"
@@ -104,6 +111,14 @@ export default {
     SparkSquadCard,
     SparkSquadCardEditable,
     OverallSimulatorOptions,
+  },
+  computed: {
+    resultSelectValues () {
+      return Object.freeze(this.results.map((r, i) => ({
+        label: this.getResultName(r, i),
+        value: i,
+      })));
+    },
   },
   data () {
     return {
@@ -179,6 +194,7 @@ export default {
   .result-navigator {
     display: grid;
     grid-template-columns: auto 1fr auto;
+    align-items: center;
   }
 }
 </style>
