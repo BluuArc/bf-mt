@@ -33,20 +33,46 @@
           <v-btn block @click="runSimulator">Run Simulator</v-btn>
         </section>
       </v-expansion-panel-content>
-      <v-expansion-panel-content v-show="runningSimulator || !!results">
+      <v-expansion-panel-content v-show="!runningSimulator || !!results">
         <span slot="header" class="subheading">Simulator Results</span>
-        <section>
-          Progress can show here.
-          Sim Results go here (show one at a time?, have popup modal to jump to specific result)
-          <pre>
-            <code>
-{{ results && JSON.stringify(results, null, 2) }}
-            </code>
-          </pre>
+        <section v-if="results.length > 0">
+          <section class="result-navigator">
+            <v-btn
+              flat
+              :disabled="currentResultIndex <= 0"
+              @click="currentResultIndex = Math.max(currentResultIndex - 1, 0)"
+            >
+              <v-icon>chevron_left</v-icon>
+            </v-btn>
+            <v-btn class="mx-2" outline>
+              <span>{{ getResultName(results[currentResultIndex], currentResultIndex) }}</span>
+              <v-spacer/>
+              <v-icon>arrow_drop_down</v-icon>
+            </v-btn>
+            <v-btn
+              flat
+              :disabled="currentResultIndex + 1 >= results.length"
+              @click="currentResultIndex = Math.min(currentResultIndex + 1, results.length - 1)"
+            >
+              <v-icon>chevron_right</v-icon>
+            </v-btn>
+          </section>
+          <section>
+            <spark-squad-card
+              :key="getResultName(results[currentResultIndex], currentResultIndex)"
+              :squad="squad"
+              :sparkResult="results[currentResultIndex]"
+              :getUnit="getUnit"
+              :simulatorOptions="simulatorOptions"
+            />
+          </section>
+        </section>
+        <section v-else>
+          No results found for given configuration.
         </section>
       </v-expansion-panel-content>
     </v-expansion-panel>
-    <section>
+    <section class="mt-3">
       Powered by <a href="https://joshuacastor.me/project-sparkle/" target="_blank" rel="noopener">Project Sparkle</a>
     </section>
   </div>
@@ -82,9 +108,10 @@ export default {
       sparkSimulator: new SparkSimulator(),
       results: [],
       currentSection: 0,
-      runningSimulator: true,
+      runningSimulator: false,
       resultForCurrentSquad: null,
       simulatorOptions: null,
+      currentResultIndex: 0,
     };
   },
   created () {
@@ -100,7 +127,8 @@ export default {
   },
   methods: {
     runSimulator () {
-      this.results = this.sparkSimulator.calculateSparksForSquad(this.squad, this.simulatorOptions);
+      const baseResult = this.sparkSimulator.calculateSparksForSquad(this.squad, this.simulatorOptions);
+      this.results = new Array(10).fill(baseResult);
     },
     calculateResultForCurrentSquad () {
       this.resultForCurrentSquad = Object.freeze(this.sparkSimulator.calculateSparksForSquad(this.squad, this.simulatorOptions));
@@ -110,6 +138,9 @@ export default {
     },
     emitSimulatorOptions () {
       this.$emit('simoptions', this.simulatorOptions);
+    },
+    getResultName (sparkResult, resultIndex) {
+      return `Result ${resultIndex + 1} (${(sparkResult.weightedPercentage * 100).toFixed(2)}%)`;
     },
   },
   watch: {
@@ -141,6 +172,11 @@ export default {
     &:hover {
       font-weight: bold;
     }
+  }
+
+  .result-navigator {
+    display: grid;
+    grid-template-columns: minmax(auto, 128px) 1fr minmax(auto, 128px);
   }
 }
 </style>
