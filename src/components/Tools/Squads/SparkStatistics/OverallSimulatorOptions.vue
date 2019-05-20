@@ -29,7 +29,7 @@
         v-model="optimizePosition"
       />
     </v-flex>
-    <v-flex xs12 sm6>
+    <v-flex xs12 sm4>
       <v-text-field
         label="Result Threshold"
         type="number"
@@ -38,7 +38,15 @@
         suffix="%"
       />
     </v-flex>
-    <v-flex xs12 sm6>
+    <v-flex xs12 sm4>
+      <v-text-field
+        label="Max Results"
+        type="number"
+        :value="value.maxResults"
+        @input="$v => emitChangedValue({ maxResults: $v })"
+      />
+    </v-flex>
+    <v-flex xs12 sm4>
       <v-text-field
         label="Worker Count"
         type="number"

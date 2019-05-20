@@ -328,6 +328,7 @@ export function getSimulatorOptions ({
   workerCount = 1,
   optimizeOrder = true,
   optimizePosition = true,
+  maxResults = 10,
 } = {}, squad = generateDefaultSquad()) {
   let resultUnitConfig = Array.isArray(unitConfig) ? unitConfig : [];
   if (Array.isArray(squad.units) && resultUnitConfig.length < squad.units.length) {
@@ -339,12 +340,13 @@ export function getSimulatorOptions ({
   }
   return Object.freeze({
     unitConfig: resultUnitConfig,
-    enemyCount: getNumberOrDefault(enemyCount, 6),
+    enemyCount: Math.max(1, getNumberOrDefault(enemyCount, 6)),
     burstCutins: !!burstCutins,
-    resultThreshold: getNumberOrDefault(resultThreshold, 50),
-    workerCount: getNumberOrDefault(workerCount, 1),
+    resultThreshold: Math.max(0, Math.min(100, getNumberOrDefault(resultThreshold, 50))),
+    workerCount: Math.max(1, getNumberOrDefault(workerCount, 1)),
     optimizeOrder: !!optimizeOrder,
     optimizePosition: !!optimizePosition,
+    maxResults: Math.max(1, Math.min(100, getNumberOrDefault(maxResults, 10))),
   });
 }
 
