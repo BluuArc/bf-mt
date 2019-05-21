@@ -8,6 +8,8 @@ import {
   generateFillerSquadUnitEntry,
   getEffectsListForSquadUnitEntry,
   generateDefaultSquad,
+  makeSquadUnitEntry,
+  cloneSquad,
 } from '@/modules/core/squads';
 import { getMoveType } from '@/modules/core/units';
 import {
@@ -18,6 +20,7 @@ import {
   squadBuffTypes,
   squadUnitActions,
   ANY_BB_ORDER,
+  unitPositionMapping,
 } from '@/modules/constants';
 import { getEffectId } from '@/modules/EffectProcessor/processor-helper';
 
@@ -141,11 +144,17 @@ export function convertSquadUnitEntryToSparkUnitEntry ({
   entry = generateFillerSquadUnitEntry(),
   synchronousGetters = {},
   squad = generateDefaultSquad(),
+  originalPosition,
+  unitConfig = {},
 } = {}) {
   const unitData = synchronousGetters.unit(entry.id);
   const sourcesToIgnore = ['unit.bb', 'unit.sbb', 'unit.ubb'];
   const extraAttackEffects = getEffectsListForSquadUnitEntry({
-    unitEntry: entry,
+    unitEntry: {
+      ...entry,
+      bbOrder: unitConfig.bbOrder || entry.bbOrder,
+      action: unitConfig.action || entry.action,
+    },
     target: targetTypes.ENEMY,
     effectType: squadBuffTypes.PROC,
     squad,
@@ -157,9 +166,9 @@ export function convertSquadUnitEntryToSparkUnitEntry ({
   const sparkUnitEntry = {
     id: entry.id,
     position: entry.position,
-    bbOrder: entry.bbOrder,
+    bbOrder: unitConfig.bbOrder || entry.bbOrder,
+    action: unitConfig.action || entry.action,
     name: unitData.name || entry.id,
-    action: entry.action,
     extraAttackEffects,
     burst: unitData[entry.action],
     moveTypeId: (unitData.movement && unitData.movement.skill && +unitData.movement.skill['move type']) || 0,
@@ -167,8 +176,10 @@ export function convertSquadUnitEntryToSparkUnitEntry ({
     moveSpeedType: (unitData.movement && unitData.movement.skill && +unitData.movement.skill['move speed type']) || '1',
     delay: !isNaN(entry.delay) ? +entry.delay : 0,
     teleporterId: entry.id,
+    originalPosition,
   };
   sparkUnitEntry.frames = getFramesForSparkUnitEntry(sparkUnitEntry);
+
   return sparkUnitEntry;
 }
 
@@ -198,7 +209,7 @@ export function getBattleFrames (entry = convertSquadUnitEntryToSparkUnitEntry()
   return battleFrames;
 }
 
-export function calculateSparksForSparkSimSquad (squad = [], options = getSimulatorOptions()) {
+export function calculateSparksForSparkSimSquad (squad = [convertSquadUnitEntryToSparkUnitEntry()], options = getSimulatorOptions()) {
   const { enemyCount, burstCutins } = options;
   const aggregatedBattleFrames = {};
   const battleFramesByUnit = new Map();
@@ -273,6 +284,7 @@ export function calculateSparksForSparkSimSquad (squad = [], options = getSimula
       actualSparks,
       possibleSparks,
       delay: unit.delay,
+      originalPosition: unit.originalPosition,
     };
   });
 
@@ -393,4 +405,34 @@ export function getSimulatorWarningsForSquadUnit ({
   }
 
   return warnings;
+}
+
+export function applySparkResultToSquad (squad = generateDefaultSquad(), sparkResult = calculateSparksForSparkSimSquad()) {
+  const newUnitSet = [];
+  let { lead, friend } = squad;
+  unitPositionMapping.forEach((position, index) => {
+    const squadUnitIndex = squad.units.findIndex(u => u.position === position);
+    const sparkUnitIndex = sparkResult.squad.findIndex(u => u.originalPosition === position);
+
+    newUnitSet.push(makeSquadUnitEntry({
+      ...squad.units[squadUnitIndex],
+      position: sparkResult.squad[sparkUnitIndex].position,
+      bbOrder: sparkResult.squad[sparkUnitIndex].bbOrder,
+      action: sparkResult.squad[sparkUnitIndex].action,
+    }));
+
+    if (squadUnitIndex === lead) {
+      lead = index;
+    }
+    if (squadUnitIndex === friend) {
+      friend = index;
+    }
+  });
+
+  return cloneSquad({
+    ...squad,
+    lead,
+    friend,
+    units: newUnitSet,
+  });
 }

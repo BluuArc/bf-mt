@@ -6,7 +6,7 @@
         column class="mx-2"
         :style="`flex-grow: 0!important; min-width: ${thumbnailSize}px; max-width: ${thumbnailSize}px;`">
         <v-flex text-xs-center v-if="$vuetify.breakpoint.xsOnly">
-          <span class="caption text-no-wrap">{{ unit.position }}</span>
+          <span class="caption text-no-wrap">{{ position }}</span>
         </v-flex>
         <v-layout align-content-center row>
           <unit-thumbnail
@@ -20,7 +20,7 @@
               <text
                 :x="0"
                 :y="thumbnailSize * 0.75">
-                {{ !isNaN(unit.bbOrder) ? unit.bbOrder : '-' }}
+                {{ !isNaN(bbOrder) ? bbOrder : '-' }}
               </text>
             </template>
           </unit-thumbnail>
@@ -195,10 +195,13 @@ export default {
       return this.getUnit(this.unit.id) || {};
     },
     orderSettings () {
-      const hasBbOrder = !isNaN(this.unit.bbOrder);
+      const hasBbOrder = !isNaN(this.bbOrder);
       return {
-        text: (hasBbOrder && this.getOrderText(this.unit)) || '-',
-        ...this.getColorSetBasedOnAction((hasBbOrder && this.unit) || undefined),
+        text: (hasBbOrder && this.getOrderText({
+          id: this.unit.id,
+          action: this.action,
+        })) || '-',
+        ...this.getColorSetBasedOnAction((hasBbOrder && this.action) || undefined),
       };
     },
     rarity () {
@@ -217,6 +220,15 @@ export default {
         burstCutins: !!this.burstCutins,
       });
     },
+    bbOrder () {
+      return this.sparkResultForUnit.bbOrder || this.unit.bbOrder;
+    },
+    action () {
+      return this.sparkResultForUnit.action || this.unit.action;
+    },
+    position () {
+      return this.sparkResultForUnit.position || this.unit.position;
+    },
   },
   data () {
     return {
@@ -224,10 +236,10 @@ export default {
     };
   },
   methods: {
-    getColorSetBasedOnAction (unit = {}) {
-      const colorKey = (unit.action === squadUnitActions.UBB && 'red') ||
-        (unit.action === squadUnitActions.SBB && 'amber') ||
-        (unit.action === squadUnitActions.BB && 'blueGrey') ||
+    getColorSetBasedOnAction (action) {
+      const colorKey = (action === squadUnitActions.UBB && 'red') ||
+        (action === squadUnitActions.SBB && 'amber') ||
+        (action === squadUnitActions.BB && 'blueGrey') ||
         'grey';
 
       return {

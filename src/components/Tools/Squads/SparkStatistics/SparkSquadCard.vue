@@ -88,7 +88,7 @@ export default {
     sparkResultsByUnit () {
       const mapping = new WeakMap();
       this.fullUnits.forEach(unit => {
-        mapping.set(unit, this.sparkResult.squad.find(u => u.position === unit.position));
+        mapping.set(unit, this.sparkResult.squad.find(u => u.originalPosition === unit.position));
       });
       return mapping;
     },

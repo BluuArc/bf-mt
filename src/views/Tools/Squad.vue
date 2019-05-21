@@ -12,6 +12,7 @@
               :getItem="getItem"
               :getExtraSkill="getExtraSkill"
               :isLoadingInParent="isLoadingSquadData"
+              :key="squadCode"
             >
               <v-card-actions slot="card-actions" slot-scope="{ disabled }">
                 <v-btn
@@ -138,6 +139,7 @@
                 :initialSimulatorOptions="simulatorOptions"
                 @simoptions="$v => simulatorOptions = $v"
                 @share="$sparkResult => { sparkResultToShare = $sparkResult; activeSquadDialog = 'share'; }"
+                @apply="applySparkResult"
               />
             </v-layout>
             <v-layout slot="arena" style="overflow-x: auto;">
@@ -152,7 +154,7 @@
         </v-card>
       </v-flex>
       <v-dialog
-        :value="!!activeSquadDialog"
+        :value="!isLoadingSquadData && !!activeSquadDialog"
         @input="$v => activeSquadDialog = $v ? activeSquadDialog : ''"
         lazy>
         <template v-if="squadCode">
@@ -395,6 +397,17 @@ export default {
     updateTopNavbarHeight () {
       const topNavbar = document.querySelector('nav.v-toolbar');
       this.topNavbarHeight = (topNavbar && topNavbar.offsetHeight) || 56;
+    },
+    async applySparkResult ({ squad, sparkResult } = {}) {
+      squad.simulatorOptions = this.simulatorOptions;
+      await this.$store.dispatch('squads/storeSquad', {
+        server: this.$store.state.settings.activeServer,
+        squad: squad,
+        id: this.id,
+      });
+
+      this.sparkResultToShare = sparkResult;
+      this.squad = squad;
     },
   },
   watch: {

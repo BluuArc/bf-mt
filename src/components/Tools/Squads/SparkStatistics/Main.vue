@@ -33,9 +33,9 @@
           <v-btn block @click="runSimulator">Run Simulator</v-btn>
         </section>
       </v-expansion-panel-content>
-      <v-expansion-panel-content v-show="!runningSimulator || !!results">
+      <v-expansion-panel-content v-show="!runningSimulator && results">
         <span slot="header" class="subheading">Simulator Results</span>
-        <section v-if="results.length > 0">
+        <section v-if="Array.isArray(results) && results.length > 0">
           <section class="result-navigator">
             <v-btn
               flat
@@ -72,8 +72,18 @@
               :squad="squad"
               :sparkResult="results[currentResultIndex]"
               :getUnit="getUnit"
-              :simulatorOptions="simulatorOptions"
-            />
+              :simulatorOptions="simulatorOptions">
+            <v-card-actions slot="card-actions">
+              <v-btn outline @click="() => applySparkResult(results[currentResultIndex])">
+                <v-icon left>save</v-icon>
+                Apply
+              </v-btn>
+              <v-btn flat @click="() => emitShareEvent(results[currentResultIndex])">
+                <v-icon left>share</v-icon>
+                Share
+              </v-btn>
+            </v-card-actions>
+            </spark-squad-card>
           </section>
         </section>
         <section v-else>
@@ -89,7 +99,7 @@
 
 <script>
 import SparkSimulator from '@/modules/spark-simulator';
-import { getSimulatorOptions } from '@/modules/spark-simulator/utils';
+import { getSimulatorOptions, applySparkResultToSquad } from '@/modules/spark-simulator/utils';
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 import SparkSquadCard from '@/components/Tools/Squads/SparkStatistics/SparkSquadCard';
 import SparkSquadCardEditable from '@/components/Tools/Squads/SparkStatistics/SparkSquadCardEditable';
@@ -123,7 +133,7 @@ export default {
   data () {
     return {
       sparkSimulator: new SparkSimulator(),
-      results: [],
+      results: null,
       currentSection: 0,
       runningSimulator: false,
       resultForCurrentSquad: null,
@@ -143,9 +153,11 @@ export default {
     this.calculateResultForCurrentSquad();
   },
   methods: {
-    runSimulator () {
+    async runSimulator () {
       const baseResult = this.sparkSimulator.calculateSparksForSquad(this.squad, this.simulatorOptions);
       this.results = new Array(10).fill(baseResult);
+      await this.$nextTick();
+      this.currentSection = 2; // show result panel
     },
     calculateResultForCurrentSquad () {
       this.resultForCurrentSquad = Object.freeze(this.sparkSimulator.calculateSparksForSquad(this.squad, this.simulatorOptions));
@@ -159,10 +171,21 @@ export default {
     getResultName (sparkResult, resultIndex) {
       return `Result ${resultIndex + 1} (${(sparkResult.weightedPercentage * 100).toFixed(2)}%)`;
     },
+    applySparkResult (sparkResult) {
+      this.$emit('apply', {
+        squad: applySparkResultToSquad(this.squad, sparkResult),
+        sparkResult,
+      });
+
+      this.currentSection = 0; // show current squad panel
+    },
   },
   watch: {
     simulatorOptions () {
       this.emitSimulatorOptions();
+    },
+    squad () {
+      this.calculateResultForCurrentSquad();
     },
   },
 };

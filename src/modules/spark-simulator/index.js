@@ -29,10 +29,12 @@ export default class SparkSimulator {
   }
 
   calculateSparksForSquad (squad = generateDefaultSquad(), options = getSimulatorOptions()) {
-    const sparkSquad = squad.units.map(u => convertSquadUnitEntryToSparkUnitEntry({
+    const sparkSquad = squad.units.map((u, i) => convertSquadUnitEntryToSparkUnitEntry({
       entry: u,
       synchronousGetters: this._dbGetters,
       squad,
+      originalPosition: u.position,
+      unitConfig: options.unitConfig[i],
     }));
     return calculateSparksForSparkSimSquad(sparkSquad, options);
   }
