@@ -78,10 +78,6 @@
                 <v-icon left>save</v-icon>
                 Apply
               </v-btn>
-              <v-btn flat @click="() => emitShareEvent(results[currentResultIndex])">
-                <v-icon left>share</v-icon>
-                Share
-              </v-btn>
             </v-card-actions>
             </spark-squad-card>
           </section>
@@ -186,6 +182,9 @@ export default {
     },
     squad () {
       this.calculateResultForCurrentSquad();
+    },
+    resultForCurrentSquad (newValue) {
+      this.$emit('currentsquadresult', newValue);
     },
   },
 };

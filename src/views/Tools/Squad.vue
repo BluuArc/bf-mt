@@ -140,6 +140,7 @@
                 @simoptions="$v => simulatorOptions = $v"
                 @share="$sparkResult => { sparkResultToShare = $sparkResult; activeSquadDialog = 'share'; }"
                 @apply="applySparkResult"
+                @currentsquadresult="$v => sparkResultToShare = $v"
               />
             </v-layout>
             <v-layout slot="arena" style="overflow-x: auto;">

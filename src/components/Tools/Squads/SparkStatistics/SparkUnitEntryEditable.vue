@@ -122,7 +122,6 @@
           <v-flex xs12 md4>
             <v-select
               label="BB Order"
-              :disabled="isEmptyUnit"
               :value="sparkSimUnitConfig.bbOrder || unit.bbOrder"
               :items="bbOrderPossibilities"
               @input="$v => emitChangedValue({ bbOrder: $v })"
@@ -261,10 +260,10 @@ export default {
       return this.unitData.name || this.unit.id;
     },
     isEmptyUnit () {
-      return this.unit.name === squadFillerMapping.EMPTY;
+      return this.name === squadFillerMapping.EMPTY;
     },
     isAnyUnit () {
-      return this.unit.name === squadFillerMapping.ANY;
+      return this.name === squadFillerMapping.ANY;
     },
     actionPossibilities () {
       const availableBurstTypes = [
