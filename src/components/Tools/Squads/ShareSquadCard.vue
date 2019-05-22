@@ -158,7 +158,7 @@ export default {
         this.squad.units.forEach(unit => {
           const sparkUnitResult = this.sparkResult.squad.find(s => unit.position === s.position);
           if (sparkUnitResult) {
-            mapping.set(unit, `(${sparkUnitResult.possibleSparks}/${sparkUnitResult.actualSparks})`);
+            mapping.set(unit, `(${sparkUnitResult.actualSparks}/${sparkUnitResult.possibleSparks})`);
           }
         });
       }

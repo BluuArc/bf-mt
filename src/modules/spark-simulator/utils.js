@@ -160,9 +160,10 @@ export function convertSquadUnitEntryToSparkUnitEntry ({
     squad,
   }, {
     getUnit: synchronousGetters.unit,
-    getItem: synchronousGetters.getItem,
+    getItem: synchronousGetters.item,
     getExtraSkill: synchronousGetters.extraSkill,
   }).filter(effect => !sourcesToIgnore.includes(effect.sourcePath) && (!effect.triggeredOn || (effect.triggeredOn === entry.action)));
+
   const sparkUnitEntry = {
     id: entry.id,
     position: entry.position,
