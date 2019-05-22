@@ -451,3 +451,37 @@ export function getAllPermutations(arr = []) {
   }
   return results;
 }
+
+export function getPositionPermutations (squad = [convertSquadUnitEntryToSparkUnitEntry()], options = getSimulatorOptions()) {
+  const lockedIndices = [], unlockedPositions = [];
+  squad.forEach((unit, i) => {
+    const unitConfig = options.unitConfig[i];
+    if (unitConfig.lockPosition) {
+      lockedIndices.push(i);
+    } else {
+      unlockedPositions.push(unit.position);
+    }
+  });
+
+  let resultPositions = [[]];
+  const createPositionArray = (positionPermutation = []) => {
+    let currentPermutationIndex = 0;
+    // fill in mapping based on locked and unlocked indices
+    return unitPositionMapping.map((_, i) =>
+      lockedIndices.includes(i)
+        ? squad[i].position
+        : positionPermutation[currentPermutationIndex++]
+    );
+  };
+  if (unlockedPositions.length > 0) {
+    resultPositions = getAllPermutations(unlockedPositions)
+      .map(permutation => createPositionArray(permutation));
+  } else {
+    resultPositions = [lockedIndices.map(i => squad[i].position)];
+  }
+  return resultPositions;
+}
+
+// export function generateSimulatorPermutations (squad = [convertSquadUnitEntryToSparkUnitEntry()], options = getSimulatorOptions()) {
+
+// }
