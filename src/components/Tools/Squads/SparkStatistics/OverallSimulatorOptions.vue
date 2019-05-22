@@ -17,18 +17,6 @@
         hide-details
       />
     </v-flex>
-    <v-flex xs12 sm6>
-      <v-checkbox
-        label="Optimize Order"
-        v-model="optimizeOrder"
-      />
-    </v-flex>
-    <v-flex xs12 sm6>
-      <v-checkbox
-        label="Optimize Position"
-        v-model="optimizePosition"
-      />
-    </v-flex>
     <v-flex xs12 sm4>
       <v-text-field
         label="Result Threshold"
@@ -79,8 +67,6 @@ export default {
   data () {
     return {
       burstCutins: false,
-      optimizeOrder: false,
-      optimizePosition: false,
     };
   },
   methods: {
@@ -94,19 +80,11 @@ export default {
       handler (newValue) {
         if (newValue) {
           this.burstCutins = !!newValue.burstCutins;
-          this.optimizeOrder = !!newValue.optimizeOrder;
-          this.optimizePosition = !!newValue.optimizePosition;
         }
       },
     },
     burstCutins (newValue) {
       this.emitChangedValue({ burstCutins: newValue });
-    },
-    optimizeOrder (newValue) {
-      this.emitChangedValue({ optimizeOrder: newValue });
-    },
-    optimizePosition (newValue) {
-      this.emitChangedValue({ optimizePosition: newValue });
     },
   },
 };

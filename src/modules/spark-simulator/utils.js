@@ -339,8 +339,6 @@ export function getSimulatorOptions ({
   burstCutins = false,
   resultThreshold = 50,
   workerCount = 1,
-  optimizeOrder = true,
-  optimizePosition = true,
   maxResults = 10,
 } = {}, squad = generateDefaultSquad()) {
   let resultUnitConfig = Array.isArray(unitConfig) ? unitConfig : [];
@@ -357,8 +355,6 @@ export function getSimulatorOptions ({
     burstCutins: !!burstCutins,
     resultThreshold: Math.max(0, Math.min(100, getNumberOrDefault(resultThreshold, 50))),
     workerCount: Math.max(1, getNumberOrDefault(workerCount, 1)),
-    optimizeOrder: !!optimizeOrder,
-    optimizePosition: !!optimizePosition,
     maxResults: Math.max(1, Math.min(100, getNumberOrDefault(maxResults, 10))),
   });
 }
@@ -436,4 +432,22 @@ export function applySparkResultToSquad (squad = generateDefaultSquad(), sparkRe
     friend,
     units: newUnitSet,
   });
+}
+
+// original source: https://initjs.org/all-permutations-of-a-set-f1be174c79f8
+export function getAllPermutations(arr = []) {
+  const results = [];
+
+  if (arr.length === 1) {
+    results.push(arr);
+  } else {
+    arr.forEach((d, i) => {
+      const remainingElements = arr.slice(0, i).concat(arr.slice(i + 1, arr.length));
+      const innerPermutations = getAllPermutations(remainingElements);
+      innerPermutations.forEach(permutation => {
+        results.push([d].concat(permutation));
+      });
+    });
+  }
+  return results;
 }
