@@ -1,4 +1,108 @@
 {
+  "MST_LEADERSKILLS_7488_NAME": {
+    "en": "Altruistic Champion",
+    "es": "Altruistic Champion",
+    "id": "Juara Ikhlas",
+    "pt": "Altruistic Champion",
+    "th": "อัลทรูสติค แชมเปี้ยน",
+    "vi": "Altruistic Champion"
+  },
+  "MST_LEADERSKILLS_7489_DESCRIPTION": {
+    "en": "60% boost to Atk, max HP, 120% boost to Spark damage, considerably boosts BB Atk for 2 turns when Spark damage exceeds certain amount & attacks slightly absorb HP",
+    "es": "60% boost to Atk, max HP, 120% boost to Spark damage, considerably boosts BB Atk for 2 turns when Spark damage exceeds certain amount & attacks slightly absorb HP",
+    "id": "60% ekstra Serang, HP maks, 120% ekstra kerusakan Percikan, lumayan menambah BB Serang 2 giliran saat kerusakan Percikan melampaui jumlah tertentu & serangan agak menyerap HP",
+    "pt": "60% boost to Atk, max HP, 120% boost to Spark damage, considerably boosts BB Atk for 2 turns when Spark damage exceeds certain amount & attacks slightly absorb HP",
+    "th": "60% เพิ่มค่าให้ โจมตี, HP สูงสุด, 120% เพิ่มค่าให้ ความเสียหายสปาร์ค, เพิ่มค่าอย่างสูงมาก BB โจมตี นาน 2 เทิร์น เมื่อ ความเสียหายสปาร์ค เกินกว่าปริมาณหนึ่ง และ การโจมตี ดูดซับ HP เล็กน้อย",
+    "vi": "60% boost to Atk, max HP, 120% boost to Spark damage, considerably boosts BB Atk for 2 turns when Spark damage exceeds certain amount & attacks slightly absorb HP"
+  },
+  "MST_LEADERSKILLS_7489_NAME": {
+    "en": "Conqueror Burst",
+    "es": "Conqueror Burst",
+    "id": "Penakluk Ledak",
+    "pt": "Conqueror Burst",
+    "th": "คอนเคอเรอร์ เบิร์ส",
+    "vi": "Conqueror Burst"
+  },
+  "MST_LEADERSKILLS_7490_DESCRIPTION": {
+    "en": "50% boost to Atk, max HP, attacks slightly absorb HP & damage taken boosts BB gauge",
+    "es": "50% boost to Atk, max HP, attacks slightly absorb HP & damage taken boosts BB gauge",
+    "id": "50% ekstra Serang, HP maks, serangan agak menyerap HP, kerusakan diderita menambah meteran BB",
+    "pt": "50% boost to Atk, max HP, attacks slightly absorb HP & damage taken boosts BB gauge",
+    "th": "50% เพิ่มค่าให้ โจมตี, HP สูงสุด, การโจมตี ดูดซับ HP เล็กน้อย และ ความเสียหายที่ได้รับ เพิ่มค่า เกจ BB",
+    "vi": "50% boost to Atk, max HP, attacks slightly absorb HP & damage taken boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_7490_NAME": {
+    "en": "Burial of Wreckage",
+    "es": "Burial of Wreckage",
+    "id": "Penguburan Rongsokan",
+    "pt": "Burial of Wreckage",
+    "th": "บิวเรียล ออฟ เรคเคจ",
+    "vi": "Burial of Wreckage"
+  },
+  "MST_LEADERSKILLS_7491_DESCRIPTION": {
+    "en": "60% boost to Atk, max HP, attacks slightly absorb HP, adds probable resistance against 1 KO attack & damage taken hugely boosts BB gauge",
+    "es": "60% boost to Atk, max HP, attacks slightly absorb HP, adds probable resistance against 1 KO attack & damage taken hugely boosts BB gauge",
+    "id": "60% ekstra Serang, HP maks, serangan agak menyerap HP, menambah kans tahan atas 1 serangan KO, kerusakan diderita amat menambah meteran BB",
+    "pt": "60% boost to Atk, max HP, attacks slightly absorb HP, adds probable resistance against 1 KO attack & damage taken hugely boosts BB gauge",
+    "th": "60% เพิ่มค่าให้ โจมตี, HP สูงสุด, การโจมตี ดูดซับ HP เล็กน้อย, ให้ อาจจะต้านทานต่อ 1 การโจมตีน็อคเอาท์ และ ความเสียหายที่ได้รับ เพิ่มค่าอย่างสูงให้ เกจ BB",
+    "vi": "60% boost to Atk, max HP, attacks slightly absorb HP, adds probable resistance against 1 KO attack & damage taken hugely boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_7491_NAME": {
+    "en": "Myriad of Catastrophes",
+    "es": "Myriad of Catastrophes",
+    "id": "Segudang Bencana",
+    "pt": "Myriad of Catastrophes",
+    "th": "เมอเรียด ออฟ คาแทสโทรฟี่",
+    "vi": "Myriad of Catastrophes"
+  },
+  "MST_LEADERSKILLS_7492_DESCRIPTION": {
+    "en": "50% boost to Atk, max HP, Spark damage slightly boosts BB gauge & 110% boost to Spark damage",
+    "es": "50% boost to Atk, max HP, Spark damage slightly boosts BB gauge & 110% boost to Spark damage",
+    "id": "50% ekstra Serang, HP maks, kerusakan Percikan agak menambah meteran BB, 110% ekstra kerusakan Percikan",
+    "pt": "50% boost to Atk, max HP, Spark damage slightly boosts BB gauge & 110% boost to Spark damage",
+    "th": "50% เพิ่มค่าให้ โจมตี, HP สูงสุด, ความเสียหายสปาร์ค เพิ่มค่าเล็กน้อยให้ เกจ BB และ 110% เพิ่มค่าให้ ความเสียหายสปาร์ค",
+    "vi": "50% boost to Atk, max HP, Spark damage slightly boosts BB gauge & 110% boost to Spark damage"
+  },
+  "MST_LEADERSKILLS_7492_NAME": {
+    "en": "Holy Guardian",
+    "es": "Holy Guardian",
+    "id": "Penjaga Suci",
+    "pt": "Holy Guardian",
+    "th": "โฮลี่ การ์เดี้ยน",
+    "vi": "Holy Guardian"
+  },
+  "MST_LEADERSKILLS_7493_DESCRIPTION": {
+    "en": "60% boost to Atk, max HP, considerably boosts OD gauge fill rate, Spark damage boosts BB gauge & 130% boost to Spark damage",
+    "es": "60% boost to Atk, max HP, considerably boosts OD gauge fill rate, Spark damage boosts BB gauge & 130% boost to Spark damage",
+    "id": "60% ekstra Serang, HP maks, lumayan menambah laju pengisian meteran OD, kerusakan Percikan menambah meteran BB, 130% ekstra kerusakan Percikan",
+    "pt": "60% boost to Atk, max HP, considerably boosts OD gauge fill rate, Spark damage boosts BB gauge & 130% boost to Spark damage",
+    "th": "60% เพิ่มค่าให้ โจมตี, HP สูงสุด, เพิ่มค่าอย่างสูงมาก อัตราเติมเกจ OD, ความเสียหายสปาร์ค เพิ่มค่า เกจ BB และ 130% เพิ่มค่าให้ ความเสียหายสปาร์ค",
+    "vi": "60% boost to Atk, max HP, considerably boosts OD gauge fill rate, Spark damage boosts BB gauge & 130% boost to Spark damage"
+  },
+  "MST_LEADERSKILLS_7493_NAME": {
+    "en": "Holy Protector",
+    "es": "Holy Protector",
+    "id": "Pelindung Suci",
+    "pt": "Holy Protector",
+    "th": "โฮลี่ โพรเทคเตอร์",
+    "vi": "Holy Protector"
+  },
+  "MST_LEADERSKILLS_7494_DESCRIPTION": {
+    "en": "50% boost to Atk, max HP, probable infliction of random status ailment & hugely boosts damage against status afflicted foes",
+    "es": "50% boost to Atk, max HP, probable infliction of random status ailment & hugely boosts damage against status afflicted foes",
+    "id": "50% ekstra Serang, HP maks, kans beri status penyakit acak, amat tambah merusak musuh yang terkena status",
+    "pt": "50% boost to Atk, max HP, probable infliction of random status ailment & hugely boosts damage against status afflicted foes",
+    "th": "50% เพิ่มค่าให้ โจมตี, HP สูงสุด, มีโอกาส ทำให้ติดสถานะผิดปกติโดยสุ่ม และ เพิ่มค่าอย่างสูงให้ ความเสียหายต่อศัตรูที่ติดสถานะผิดปกติ",
+    "vi": "50% boost to Atk, max HP, probable infliction of random status ailment & hugely boosts damage against status afflicted foes"
+  },
+  "MST_LEADERSKILLS_7494_NAME": {
+    "en": "Interrogator's Gambit",
+    "es": "Interrogator's Gambit",
+    "id": "Langkah Pertama Penginterogasi",
+    "pt": "Interrogator's Gambit",
+    "th": "อินเทอโรเกเตอร์ แกมบิท",
+    "vi": "Interrogator's Gambit"
+  },
   "MST_LEADERSKILLS_7495_DESCRIPTION": {
     "en": "60% boost to Atk, max HP, probable infliction of random status ailment & enormously boosts damage against status afflicted foes",
     "es": "60% boost to Atk, max HP, probable infliction of random status ailment & enormously boosts damage against status afflicted foes",
@@ -8830,6 +8934,22 @@
     "pt": "Old Legends",
     "th": "Old Legends",
     "vi": "Old Legends"
+  },
+  "MST_LEADERSKILLS_860628_DESCRIPTION": {
+    "en": "200% boost to Def, 130% boost to max HP, damage taken hugely boosts BB gauge and may restore HP, probable damage reduction to 1 & 20% damage reduction for 1 turn when damage taken has exceeded certain amount",
+    "es": "200% boost to Def, 130% boost to max HP, damage taken hugely boosts BB gauge and may restore HP, probable damage reduction to 1 & 20% damage reduction for 1 turn when damage taken has exceeded certain amount",
+    "id": "200% boost to Def, 130% boost to max HP, damage taken hugely boosts BB gauge and may restore HP, probable damage reduction to 1 & 20% damage reduction for 1 turn when damage taken has exceeded certain amount",
+    "pt": "200% boost to Def, 130% boost to max HP, damage taken hugely boosts BB gauge and may restore HP, probable damage reduction to 1 & 20% damage reduction for 1 turn when damage taken has exceeded certain amount",
+    "th": "200% boost to Def, 130% boost to max HP, damage taken hugely boosts BB gauge and may restore HP, probable damage reduction to 1 & 20% damage reduction for 1 turn when damage taken has exceeded certain amount",
+    "vi": "200% boost to Def, 130% boost to max HP, damage taken hugely boosts BB gauge and may restore HP, probable damage reduction to 1 & 20% damage reduction for 1 turn when damage taken has exceeded certain amount"
+  },
+  "MST_LEADERSKILLS_860628_NAME": {
+    "en": "Tengri of Di'yu",
+    "es": "Tengri of Di'yu",
+    "id": "Tengri of Di'yu",
+    "pt": "Tengri of Di'yu",
+    "th": "Tengri of Di'yu",
+    "vi": "Tengri of Di'yu"
   },
   "MST_LEADERSKILLS_860637_DESCRIPTION": {
     "en": "150% boost to Atk and 80% boost to Def, max HP of Dark types, hugely boosts Spark damage, damage taken may restore HP & 10% damage reduction from Fire, Thunder, Light and Dark types",
@@ -88966,37 +89086,5 @@
     "pt": "Azrael",
     "th": "อัซราเอล",
     "vi": "Azrael"
-  },
-  "MST_MONSTERS_53829_NAME": {
-    "en": "Azrael",
-    "es": "Azrael",
-    "id": "Azrael",
-    "pt": "Azrael",
-    "th": "อัซราเอล",
-    "vi": "Azrael"
-  },
-  "MST_MONSTERS_53850_NAME": {
-    "en": "Leorone",
-    "es": "Leorone",
-    "id": "Leorone",
-    "pt": "Leorone",
-    "th": "ลีโอโรน",
-    "vi": "Leorone"
-  },
-  "MST_MONSTERS_53851_NAME": {
-    "en": "Leorone",
-    "es": "Leorone",
-    "id": "Leorone",
-    "pt": "Leorone",
-    "th": "ลีโอโรน",
-    "vi": "Leorone"
-  },
-  "MST_MONSTERS_53852_NAME": {
-    "en": "Leorone",
-    "es": "Leorone",
-    "id": "Leorone",
-    "pt": "Leorone",
-    "th": "เลโอโรน",
-    "vi": "Leorone"
   }
 }
