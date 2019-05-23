@@ -3,7 +3,10 @@ import {
   convertSquadUnitEntryToSparkUnitEntry,
   calculateSparksForSparkSimSquad,
   getSimulatorOptions,
-  // getPositionPermutations,
+  getOrderPermutations,
+  getPositionPermutations,
+  generateSimulatorPermutations,
+  getUnitConfigForUnoptimizedRun,
 } from './utils';
 import { Logger } from '@/modules/Logger';
 
@@ -35,9 +38,9 @@ export default class SparkSimulator {
       synchronousGetters: this._dbGetters,
       squad,
       originalPosition: u.position,
-      unitConfig: options.unitConfig[i],
+      unitConfig: getUnitConfigForUnoptimizedRun(options.unitConfig[i], u),
     }));
-    // console.warn(getPositionPermutations(sparkSquad, options));
+    console.warn(generateSimulatorPermutations(sparkSquad, options));
     return calculateSparksForSparkSimSquad(sparkSquad, options);
   }
 }

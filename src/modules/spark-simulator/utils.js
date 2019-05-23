@@ -308,6 +308,11 @@ export function getDelayDescriptionForSparkUnitResult ({
   unitData = {},
   burstCutins = false,
 } = {}) {
+  const makeEntry = (delay = 0, description = '') => ({ delay, description });
+  if (sparkUnitResult.id === squadFillerMapping.EMPTY) {
+    return [makeEntry(0, 'Empty Units have no delay')];
+  }
+
   const moveTypeId = (unitData.movement && unitData.movement.skill && +unitData.movement.skill['move type']) || 0;
   const moveSpeed = (unitData.movement && unitData.movement.skill && +unitData.movement.skill['move speed']) || 0;
   const moveTypeName = unitData.movement && getMoveType(unitData);
@@ -318,7 +323,6 @@ export function getDelayDescriptionForSparkUnitResult ({
   const inputDelay = !isNaN(sparkUnitResult.delay) ? +sparkUnitResult.delay : 0;
   const squadLevelDelay = !isNaN(sparkUnitResult.squadLevelDelay) ? +sparkUnitResult.squadLevelDelay : 0;
 
-  const makeEntry = (delay = 0, description = '') => ({ delay, description });
   return [
     moveTypeId === moveTypeIdByName['Non-Moving'] && makeEntry(moveSpeed, `innate move speed as a ${moveTypeName} unit`),
     moveTypeId === moveTypeIdByName.Teleporting && makeEntry(teleporterOffset, `custom offset as a ${moveTypeName} unit`),
@@ -340,6 +344,7 @@ export function getSimulatorOptions ({
   resultThreshold = 50,
   workerCount = 1,
   maxResults = 10,
+  optimize = false,
 } = {}, squad = generateDefaultSquad()) {
   let resultUnitConfig = Array.isArray(unitConfig) ? unitConfig : [];
   if (Array.isArray(squad.units) && resultUnitConfig.length < squad.units.length) {
@@ -356,6 +361,7 @@ export function getSimulatorOptions ({
     resultThreshold: Math.max(0, Math.min(100, getNumberOrDefault(resultThreshold, 50))),
     workerCount: Math.max(1, getNumberOrDefault(workerCount, 1)),
     maxResults: Math.max(1, Math.min(100, getNumberOrDefault(maxResults, 10))),
+    optimize: !!optimize,
   });
 }
 
@@ -365,10 +371,11 @@ export function getSparkSimUnitConfig ({
   delay = 0,
   weight = 1,
   lockPosition = false,
+  id,
 } = {}) {
   return Object.freeze({
-    action,
-    bbOrder: getNumberOrDefault(bbOrder, ANY_BB_ORDER),
+    action: id !== squadFillerMapping.EMPTY ? action : squadUnitActions.NONE,
+    bbOrder: id !== squadFillerMapping.EMPTY ? getNumberOrDefault(bbOrder, ANY_BB_ORDER) : ANY_BB_ORDER,
     delay: getNumberOrDefault(delay, 0),
     weight: getNumberOrDefault(weight, 1),
     lockPosition: !!lockPosition,
@@ -482,6 +489,80 @@ export function getPositionPermutations (squad = [convertSquadUnitEntryToSparkUn
   return resultPositions;
 }
 
-// export function generateSimulatorPermutations (squad = [convertSquadUnitEntryToSparkUnitEntry()], options = getSimulatorOptions()) {
+export function getOrderPermutations (squad = [convertSquadUnitEntryToSparkUnitEntry()], options = getSimulatorOptions()) {
+  const allOrders = squad.map((_, i) => i + 1);
+  const emptyUnits = squad.filter(u => u.id === squadFillerMapping.EMPTY);
+  const lockedUnits = [], unlockedUnits = [];
+  squad.forEach((unit, i) => {
+    const config = options.unitConfig[i];
+    if (!isNaN(config.bbOrder) && allOrders.includes(config.bbOrder)) {
+      lockedUnits.push({ unit, bbOrder: +config.bbOrder });
+    } else if (config.bbOrder === ANY_BB_ORDER) {
+      unlockedUnits.push({ unit });
+    }
+  });
+  const emptyOrders = allOrders
+    .filter(order => order > (squad.length - emptyUnits.length))
+    .map((order, index) => ({ unit: emptyUnits[index], bbOrder: order }));
+  const lockedOrders = lockedUnits.map(({ bbOrder }) => bbOrder);
+  const unlockedOrders = allOrders.filter(order => !lockedOrders.includes(order) && order <= (squad.length - emptyUnits.length));
 
-// }
+  let unitOrderPairings = [[]];
+  if (unlockedOrders.length > 0) {
+    unitOrderPairings = getAllPermutations(unlockedOrders)
+      .map(permutation => {
+        return permutation.map((bbOrder, index) => ({ unit: unlockedUnits[index], bbOrder }))
+          .filter(p => p.unit)
+          .concat(lockedUnits).concat(emptyOrders);
+      });
+  } else {
+    unitOrderPairings = [lockedUnits.concat(emptyOrders)];
+  }
+  return unitOrderPairings.map(permutation => {
+    return permutation
+      .sort((a, b) => squad.indexOf(a.unit) - squad.indexOf(b.unit))
+      .map(p => p.bbOrder);
+  });
+}
+
+export function generateSimulatorPermutations (squad = [convertSquadUnitEntryToSparkUnitEntry()], options = getSimulatorOptions()) {
+  const positionPermutations = getPositionPermutations(squad, options);
+  const orderPermutations = getOrderPermutations(squad, options);
+  const getResultKey = (currentSquad = squad, unitConfig = [{ bbOrder: 0, position: unitPositionMapping[0] }]) => {
+    return currentSquad.map((unit, index) => {
+      const config = unitConfig[index];
+      const unitKey = unit.id === squadFillerMapping.EMPTY || unit.id === squadFillerMapping.ANY
+        ? ''
+        : `${unit.id}|${unit.extraAttackEffects.length}|${unit.action}|${config.position}|${config.bbOrder}`;
+      return unitKey;
+    }).filter(v => v).join('-');
+  };
+  const squadPermutations = [];
+  const permutationHistory = new Map();
+  positionPermutations.forEach(positionPermutation => {
+    orderPermutations.forEach(orderPermutation => {
+      const resultMapping = squad.map((_, i) => ({ position: positionPermutation[i], bbOrder: orderPermutation[i] }));
+      const resultKey = getResultKey(squad, resultMapping);
+      if (!permutationHistory.get(resultKey)) {
+        permutationHistory.set(resultKey, true);
+        squadPermutations.push(resultMapping);
+      }
+    });
+  });
+
+  return squadPermutations;
+}
+
+export function getUnitConfigForUnoptimizedRun (config = getSparkSimUnitConfig(), unit = generateFillerSquadUnitEntry()) {
+  return {
+    ...config,
+    bbOrder: !isNaN(config.bbOrder) ? config.bbOrder : unit.bbOrder,
+  };
+}
+
+export function applyPermutationToUnitConfig (options = [getSparkSimUnitConfig()], permutation = [{ bbOrder: 1, position: unitPositionMapping[0] }]) {
+  return options.map((config, i) => getSparkSimUnitConfig({
+    ...config,
+    ...permutation[i],
+  }));
+}
