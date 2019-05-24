@@ -25,12 +25,14 @@ import {
   targetTypes,
   squadBuffTypes,
   squadFillerMapping,
+  squadUnitActions,
 } from '@/modules/constants';
 import { generateFillerSquadUnitEntry, getEffectsListForSquadUnitEntry } from '@/modules/core/squads';
 import {
   getSimulatorOptions,
   getAttackEffectsFromBurst,
   getSimulatorWarningsForSquadUnit,
+  getSparkSimUnitConfig,
 } from '@/modules/spark-simulator/utils';
 import UnitEntry from '@/components/Tools/Squads/SparkStatistics/SparkUnitEntryEditable';
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
@@ -89,6 +91,11 @@ export default {
       return this.fullUnits.some(u => u.id === squadFillerMapping.EMPTY);
     },
   },
+  mounted () {
+    if (this.hasEmptyUnit) {
+      this.checkEmptyUnitConfig();
+    }
+  },
   methods: {
     getUnitEntryKey (unit = {}, i = 0) {
       return `${JSON.stringify(unit)}-${i}`;
@@ -102,6 +109,36 @@ export default {
     },
     emitChangedValue (newVal = {}) {
       this.$emit('input', getSimulatorOptions({ ...this.value, ...newVal }, this.squad));
+    },
+    checkEmptyUnitConfig () {
+      if (Array.isArray(this.value.unitConfig)) {
+        let needsUpdate = false;
+        const updatedConfig = this.value.unitConfig.map((config, i) => {
+          const associatedSquadUnit = this.squad.units[i];
+          let newConfig = config;
+          if (associatedSquadUnit.id === squadFillerMapping.EMPTY && config.action !== squadUnitActions.NONE) {
+            needsUpdate = true;
+            newConfig = getSparkSimUnitConfig({ ...config, action: squadUnitActions.NONE });
+          }
+          return newConfig;
+        });
+
+        if (needsUpdate) {
+          this.emitChangedValue({ unitConfig: updatedConfig });
+        }
+      }
+    },
+  },
+  watch: {
+    squad () {
+      if (this.hasEmptyUnit) {
+        this.checkEmptyUnitConfig();
+      }
+    },
+    hasEmptyUnit (newVal) {
+      if (newVal) {
+        this.checkEmptyUnitConfig();
+      }
     },
   },
 };

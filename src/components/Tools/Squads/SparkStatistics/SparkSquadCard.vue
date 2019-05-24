@@ -72,7 +72,8 @@ export default {
     // fills empty positions with empty values
     fullUnits () {
       return unitPositionMapping.map(position => {
-        let unit = this.squad.units.find(unit => unit.position === position);
+        const unitSparkResult = this.sparkResult.squad.find(r => r.position === position);
+        let unit = this.squad.units.find(unit => unit.position === unitSparkResult.originalPosition);
         if (!unit) { // empty position, so fill it with empty data
           unit = generateFillerSquadUnitEntry({ isEmpty: true, bbOrder: null, position });
         }

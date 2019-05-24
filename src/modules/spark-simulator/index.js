@@ -5,7 +5,7 @@ import {
   getSimulatorOptions,
   generateSimulatorPermutations,
   getUnitConfigForUnoptimizedRun,
-  applyPermutationToUnitConfig,
+  applyPermutationToSparkSquad,
 } from './utils';
 import { Logger } from '@/modules/Logger';
 
@@ -52,11 +52,11 @@ export default class SparkSimulator {
     }));
     const permutations = generateSimulatorPermutations(sparkSquad, options);
     // TODO: send to worker
-    return [
-      calculateSparksForSparkSimSquad(sparkSquad, {
-        ...options,
-        unitConfig: applyPermutationToUnitConfig(options.unitConfig, permutations[0]),
-      }),
-    ];
+    return permutations.slice(0, options.maxResults).map(permutation => {
+      return calculateSparksForSparkSimSquad(
+        applyPermutationToSparkSquad(sparkSquad, permutation),
+        options,
+      );
+    });
   }
 }

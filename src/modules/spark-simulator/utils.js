@@ -346,7 +346,9 @@ export function getSimulatorOptions ({
   maxResults = 10,
   optimize = false,
 } = {}, squad = generateDefaultSquad()) {
-  let resultUnitConfig = Array.isArray(unitConfig) ? unitConfig : [];
+  let resultUnitConfig = Array.isArray(unitConfig)
+    ? unitConfig.map((config, i) => getSparkSimUnitConfig({ ...config, ...squad.units[i]}))
+    : [];
   if (Array.isArray(squad.units) && resultUnitConfig.length < squad.units.length) {
     const numUnits = squad.units.length;
     // ensure that every unit entry has a corresponding spark unit config entry
@@ -373,8 +375,17 @@ export function getSparkSimUnitConfig ({
   lockPosition = false,
   id,
 } = {}) {
+  let finalAction;
+  if (id === squadFillerMapping.EMPTY) {
+    finalAction = squadUnitActions.NONE;
+  } else if (id !== squadFillerMapping.EMPTY && action === squadUnitActions.NONE) {
+    finalAction = squadUnitActions.ATK;
+  } else {
+    finalAction = action;
+  }
+
   return Object.freeze({
-    action: id !== squadFillerMapping.EMPTY ? action : squadUnitActions.NONE,
+    action: finalAction,
     bbOrder: id !== squadFillerMapping.EMPTY ? getNumberOrDefault(bbOrder, ANY_BB_ORDER) : ANY_BB_ORDER,
     delay: getNumberOrDefault(delay, 0),
     weight: getNumberOrDefault(weight, 1),
@@ -564,5 +575,13 @@ export function applyPermutationToUnitConfig (options = [getSparkSimUnitConfig()
   return options.map((config, i) => getSparkSimUnitConfig({
     ...config,
     ...permutation[i],
+  }));
+}
+
+export function applyPermutationToSparkSquad (squad = [convertSquadUnitEntryToSparkUnitEntry()], permutation = [{ bbOrder: 1, position: unitPositionMapping[0] }]) {
+  return squad.map((unit, i) => ({
+    ...unit,
+    bbOrder: permutation[i].bbOrder,
+    position: permutation[i].position,
   }));
 }
