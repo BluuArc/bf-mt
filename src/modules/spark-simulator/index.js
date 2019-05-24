@@ -52,11 +52,12 @@ export default class SparkSimulator {
     }));
     const permutations = generateSimulatorPermutations(sparkSquad, options);
     // TODO: send to worker
-    return permutations.slice(0, options.maxResults).map(permutation => {
-      return calculateSparksForSparkSimSquad(
-        applyPermutationToSparkSquad(sparkSquad, permutation),
-        options,
-      );
-    });
+    return permutations.slice(0, options.maxResults / 2).concat(permutations.slice(permutations.length - options.maxResults / 2))
+      .map(permutation => {
+        return calculateSparksForSparkSimSquad(
+          applyPermutationToSparkSquad(sparkSquad, permutation),
+          options,
+        );
+      });
   }
 }

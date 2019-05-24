@@ -30,6 +30,25 @@
           />
         </section>
         <section>
+          <v-alert
+            :value="true"
+            :icon="simulatorWarnings.length === 0 ? 'info' : 'priority_high'"
+            :color="simulatorWarnings.length === 0 ? 'info' : 'warning'"
+          >
+            <template v-if="simulatorWarnings.length > 0">
+              <span>Warnings that may affect the accuracy of results:</span>
+              <ul>
+                <li
+                  v-for="w in simulatorWarnings"
+                  :key="w"
+                  v-text="w"
+                />
+              </ul>
+            </template>
+            <span v-else>No squad level warnings found. Make sure to check individual units for warnings.</span>
+          </v-alert>
+        </section>
+        <section>
           <v-btn block @click="runSimulator">Run Simulator</v-btn>
         </section>
       </v-expansion-panel-content>
@@ -90,7 +109,7 @@
 
 <script>
 import SparkSimulator from '@/modules/spark-simulator';
-import { getSimulatorOptions, applySparkResultToSquad } from '@/modules/spark-simulator/utils';
+import { getSimulatorOptions, applySparkResultToSquad, getSimulatorWarningsForSquad } from '@/modules/spark-simulator/utils';
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 import SparkSquadCard from '@/components/Tools/Squads/SparkStatistics/SparkSquadCard';
 import SparkSquadCardEditable from '@/components/Tools/Squads/SparkStatistics/SparkSquadCardEditable';
@@ -119,6 +138,9 @@ export default {
         label: this.getResultName(r, i),
         value: i,
       })));
+    },
+    simulatorWarnings () {
+      return getSimulatorWarningsForSquad(this.squad, this.simulatorOptions);
     },
   },
   data () {

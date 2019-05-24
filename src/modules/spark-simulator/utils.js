@@ -347,7 +347,7 @@ export function getSimulatorOptions ({
   optimize = false,
 } = {}, squad = generateDefaultSquad()) {
   let resultUnitConfig = Array.isArray(unitConfig)
-    ? unitConfig.map((config, i) => getSparkSimUnitConfig({ ...config, ...squad.units[i]}))
+    ? unitConfig.map((config, i) => getSparkSimUnitConfig({ ...config, id: squad.units[i].id }))
     : [];
   if (Array.isArray(squad.units) && resultUnitConfig.length < squad.units.length) {
     const numUnits = squad.units.length;
@@ -417,6 +417,32 @@ export function getSimulatorWarningsForSquadUnit ({
   const moveTypeId = (unitData.movement && unitData.movement.skill && +unitData.movement.skill['move type']) || 0;
   if (moveTypeId === moveTypeIdByName.Teleporting && !TELEPORTER_OFFSETS.hasOwnProperty((unitData.id || unit.id).toString())) {
     warnings.push('This teleporting unit is not supported yet');
+  }
+
+  return warnings;
+}
+
+export function getSimulatorWarningsForSquad (squad = generateDefaultSquad(), options = getSimulatorOptions()) {
+  const warnings = [];
+  const emptyUnits = squad.units.filter(u => u.id === squadFillerMapping.EMPTY);
+  const maxBbOrder = squad.units.length - emptyUnits.length;
+  let highestBbOrderForNonEmptyUnits = 0, lowestBbOrderForEmptyUnits = 0;
+  squad.units.forEach((unit, index) => {
+    const unitConfig = options.unitConfig[index];
+    if (unit.id === squadFillerMapping.EMPTY) {
+      const bbOrder = !isNaN(unitConfig.bbOrder) ? +unitConfig.bbOrder : squad.units.length;
+      lowestBbOrderForEmptyUnits = Math.min(lowestBbOrderForEmptyUnits, bbOrder);
+    } else {
+      const bbOrder = !isNaN(unitConfig.bbOrder) ? +unitConfig.bbOrder : 0;
+      highestBbOrderForNonEmptyUnits = Math.max(highestBbOrderForNonEmptyUnits, bbOrder);
+    }
+  });
+
+  if (highestBbOrderForNonEmptyUnits > maxBbOrder) {
+    warnings.push(`BB Order for non-empty units should not exceed number of non-empty units (${maxBbOrder})`);
+  }
+  if (lowestBbOrderForEmptyUnits > 0 && lowestBbOrderForEmptyUnits <= maxBbOrder) {
+    warnings.push(`BB Order for empty units should not be lower than the number of non-empty units (${maxBbOrder})`);
   }
 
   return warnings;
