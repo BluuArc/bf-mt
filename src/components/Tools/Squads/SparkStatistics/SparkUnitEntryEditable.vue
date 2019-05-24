@@ -158,34 +158,6 @@
             </v-btn>
           </v-flex>
         </v-layout>
-        <!-- <v-layout column>
-          <v-flex>
-            <span class="headline" v-text="sparkFraction"/>
-            <span class="subheading" v-text="'SPARKS'" style="margin-left: 0.5em"/>
-          </v-flex>
-          <v-flex class="body-1">
-            Delay:
-            <template v-for="(entry, i) in delayDescription">
-              <v-tooltip
-                :key="entry.description"
-                bottom
-              >
-                <span
-                  slot="activator"
-                  v-text="entry.delay"
-                  style="text-decoration: underline dashed"
-                />
-                <span v-text="entry.description"/>
-              </v-tooltip>
-              <span
-                v-if="i !== delayDescription.length - 1"
-                :key="i"
-                style="margin: 0 0.5em"
-                v-text="'+'"
-              />
-            </template>
-          </v-flex>
-        </v-layout> -->
       </v-layout>
     </div>
   </v-flex>

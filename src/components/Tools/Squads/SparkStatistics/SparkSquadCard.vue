@@ -6,11 +6,6 @@
           {{ sparkPercentage }} Hits Sparked
         </h1>
       </v-flex>
-      <!-- <v-flex style="flex-grow: 0;" class="ml-2">
-        <v-btn>
-          Copy
-        </v-btn>
-      </v-flex> -->
     </v-layout>
     <v-layout row wrap class="px-2">
       <unit-entry

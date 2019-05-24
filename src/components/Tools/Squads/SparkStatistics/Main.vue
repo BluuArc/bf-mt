@@ -52,11 +52,6 @@
               item-text="label"
               item-value="value"
             />
-            <!-- <v-btn class="mx-2" outline>
-              <span>{{ getResultName(results[currentResultIndex], currentResultIndex) }}</span>
-              <v-spacer/>
-              <v-icon>arrow_drop_down</v-icon>
-            </v-btn> -->
             <v-btn
               flat
               :icon="$vuetify.breakpoint.xsOnly"
