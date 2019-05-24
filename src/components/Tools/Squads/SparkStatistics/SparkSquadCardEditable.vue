@@ -45,7 +45,7 @@ import {
   unitPositionMapping,
   targetTypes,
   squadBuffTypes,
-  ANY_BB_ORDER,
+  // ANY_BB_ORDER,
   squadFillerMapping,
 } from '@/modules/constants';
 import { generateFillerSquadUnitEntry, getEffectsListForSquadUnitEntry } from '@/modules/core/squads';
@@ -53,7 +53,7 @@ import {
   getSimulatorOptions,
   getAttackEffectsFromBurst,
   getSimulatorWarningsForSquadUnit,
-  getSparkSimUnitConfig,
+  // getSparkSimUnitConfig,
 } from '@/modules/spark-simulator/utils';
 import UnitEntry from '@/components/Tools/Squads/SparkStatistics/SparkUnitEntryEditable';
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
@@ -113,9 +113,9 @@ export default {
     },
   },
   mounted () {
-    if (this.hasEmptyUnit) {
-      this.checkEmptyUnitBbOrders();
-    }
+    // if (this.hasEmptyUnit) {
+    //   this.checkEmptyUnitBbOrders();
+    // }
   },
   methods: {
     getUnitEntryKey (unit = {}, i = 0) {
@@ -131,31 +131,31 @@ export default {
     emitChangedValue (newVal = {}) {
       this.$emit('input', getSimulatorOptions({ ...this.value, ...newVal }, this.squad));
     },
-    checkEmptyUnitBbOrders () {
-      if (Array.isArray(this.value.unitConfig)) {
-        let needsUpdate = false;
-        const updatedConfig = this.value.unitConfig.map((config, i) => {
-          const associatedSquadUnit = this.squad.units[i];
-          let newConfig = config;
-          if (associatedSquadUnit.id === squadFillerMapping.EMPTY && config.bbOrder !== ANY_BB_ORDER) {
-            needsUpdate = true;
-            newConfig = getSparkSimUnitConfig({ ...config, bbOrder: ANY_BB_ORDER });
-          }
-          return newConfig;
-        });
+    // checkEmptyUnitBbOrders () {
+    //   if (Array.isArray(this.value.unitConfig)) {
+    //     let needsUpdate = false;
+    //     const updatedConfig = this.value.unitConfig.map((config, i) => {
+    //       const associatedSquadUnit = this.squad.units[i];
+    //       let newConfig = config;
+    //       if (associatedSquadUnit.id === squadFillerMapping.EMPTY && config.bbOrder !== ANY_BB_ORDER) {
+    //         needsUpdate = true;
+    //         newConfig = getSparkSimUnitConfig({ ...config, bbOrder: ANY_BB_ORDER });
+    //       }
+    //       return newConfig;
+    //     });
 
-        if (needsUpdate) {
-          this.emitChangedValue({ unitConfig: updatedConfig });
-        }
-      }
-    },
+    //     if (needsUpdate) {
+    //       this.emitChangedValue({ unitConfig: updatedConfig });
+    //     }
+    //   }
+    // },
   },
   watch: {
-    hasEmptyUnit (newVal) {
-      if (newVal) {
-        this.checkEmptyUnitBbOrders();
-      }
-    },
+    // hasEmptyUnit (newVal) {
+    //   if (newVal) {
+    //     this.checkEmptyUnitBbOrders();
+    //   }
+    // },
   },
 };
 </script>

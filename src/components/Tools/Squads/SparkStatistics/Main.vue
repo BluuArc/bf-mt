@@ -150,13 +150,12 @@ export default {
   },
   methods: {
     async runSimulator () {
-      const baseResult = this.sparkSimulator.calculateSparksForSquad(this.squad, this.simulatorOptions);
-      this.results = new Array(10).fill(baseResult);
+      this.results = await this.sparkSimulator.calculateOptimalOrdersForSquad(this.squad, this.simulatorOptions);
       await this.$nextTick();
       this.currentSection = 2; // show result panel
     },
     calculateResultForCurrentSquad () {
-      this.resultForCurrentSquad = Object.freeze(this.sparkSimulator.calculateSparksForSquad(this.squad, this.simulatorOptions));
+      this.resultForCurrentSquad = Object.freeze(this.sparkSimulator.calculateSparksForSquad(this.squad, getSimulatorOptions(this.squad.simulatorOptions, this.squad)));
     },
     emitShareEvent (sparkResult) {
       this.$emit('share', sparkResult);

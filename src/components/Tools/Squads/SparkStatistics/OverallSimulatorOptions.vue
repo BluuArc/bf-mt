@@ -1,5 +1,23 @@
 <template>
   <v-layout row wrap class="overall-simulator-options">
+    <v-flex xs12 sm4 md2>
+      <span>Set All Orders:</span>
+    </v-flex>
+    <v-flex xs6 sm4 md2>
+      <v-btn class="mx-2" @click="setAllOrdersInitial">Initial</v-btn>
+    </v-flex>
+    <v-flex xs6 sm4 md2>
+      <v-btn class="mx-2" @click="setAllOrdersAny">Any</v-btn>
+    </v-flex>
+    <v-flex xs12 sm4 md2>
+      <span>Set All Positions:</span>
+    </v-flex>
+    <v-flex xs6 sm4 md2>
+      <v-btn class="mx-2" @click="() => setAllPositions(true)">Locked</v-btn>
+    </v-flex>
+    <v-flex xs6 sm4 md2>
+      <v-btn class="mx-2" @click="() => setAllPositions(false)">Unlocked</v-btn>
+    </v-flex>
     <v-flex xs12 sm6>
       <v-text-field
         label="Enemy Count"
@@ -46,7 +64,8 @@
 </template>
 
 <script>
-import { getSimulatorOptions } from '@/modules/spark-simulator/utils';
+import { ANY_BB_ORDER } from '@/modules/constants';
+import { getSimulatorOptions, getSparkSimUnitConfig } from '@/modules/spark-simulator/utils';
 
 export default {
   props: {
@@ -73,6 +92,21 @@ export default {
     emitChangedValue (newVal = {}) {
       this.$emit('input', getSimulatorOptions({ ...this.value, ...newVal }, this.squad));
     },
+    setAllOrdersInitial () {
+      const newUnitConfig = this.value.unitConfig.map((config, i) => {
+        const unit = this.squad.units[i];
+        return getSparkSimUnitConfig({ ...config, bbOrder: unit.bbOrder });
+      });
+      this.emitChangedValue({ unitConfig: newUnitConfig });
+    },
+    setAllOrdersAny () {
+      const newUnitConfig = this.value.unitConfig.map(config => getSparkSimUnitConfig({ ...config, bbOrder: ANY_BB_ORDER }));
+      this.emitChangedValue({ unitConfig: newUnitConfig });
+    },
+    setAllPositions (locked) {
+      const newUnitConfig = this.value.unitConfig.map(config => getSparkSimUnitConfig({ ...config, lockPosition: !!locked }));
+      this.emitChangedValue({ unitConfig: newUnitConfig });
+    },
   },
   watch: {
     value: {
@@ -93,7 +127,7 @@ export default {
 <style lang="less">
 .overall-simulator-options {
   align-items: baseline;
-  .v-input {
+  .v-input, span {
     margin: 0.5em;
     flex-shrink: 0;
   }

@@ -3,10 +3,9 @@ import {
   convertSquadUnitEntryToSparkUnitEntry,
   calculateSparksForSparkSimSquad,
   getSimulatorOptions,
-  getOrderPermutations,
-  getPositionPermutations,
   generateSimulatorPermutations,
   getUnitConfigForUnoptimizedRun,
+  applyPermutationToUnitConfig,
 } from './utils';
 import { Logger } from '@/modules/Logger';
 
@@ -40,7 +39,24 @@ export default class SparkSimulator {
       originalPosition: u.position,
       unitConfig: getUnitConfigForUnoptimizedRun(options.unitConfig[i], u),
     }));
-    console.warn(generateSimulatorPermutations(sparkSquad, options));
     return calculateSparksForSparkSimSquad(sparkSquad, options);
+  }
+
+  async calculateOptimalOrdersForSquad(squad = generateDefaultSquad(), options = getSimulatorOptions()) {
+    const sparkSquad = squad.units.map((u, i) => convertSquadUnitEntryToSparkUnitEntry({
+      entry: u,
+      synchronousGetters: this._dbGetters,
+      squad,
+      originalPosition: u.position,
+      unitConfig: options.unitConfig[i],
+    }));
+    const permutations = generateSimulatorPermutations(sparkSquad, options);
+    // TODO: send to worker
+    return [
+      calculateSparksForSparkSimSquad(sparkSquad, {
+        ...options,
+        unitConfig: applyPermutationToUnitConfig(options.unitConfig, permutations[0]),
+      }),
+    ];
   }
 }

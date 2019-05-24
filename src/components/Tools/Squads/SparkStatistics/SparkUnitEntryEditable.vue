@@ -122,7 +122,6 @@
           <v-flex xs12 md4>
             <v-select
               label="BB Order"
-              :disabled="isEmptyUnit"
               :value="sparkSimUnitConfig.bbOrder || unit.bbOrder"
               :items="bbOrderPossibilities"
               @input="$v => emitChangedValue({ bbOrder: $v })"
@@ -150,7 +149,7 @@
           </v-flex>
           <v-flex xs12 style="padding: 0 0.5em">
             <v-btn
-              outline
+              :outline="!sparkSimUnitConfig.lockPosition"
               block
               @click="emitChangedValue({ lockPosition: !sparkSimUnitConfig.lockPosition })"
             >
