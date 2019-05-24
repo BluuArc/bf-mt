@@ -427,6 +427,7 @@ export function getSimulatorWarningsForSquad (squad = generateDefaultSquad(), op
   const emptyUnits = squad.units.filter(u => u.id === squadFillerMapping.EMPTY);
   const maxBbOrder = squad.units.length - emptyUnits.length;
   let highestBbOrderForNonEmptyUnits = 0, lowestBbOrderForEmptyUnits = 0;
+  const usedOrders = new Set();
   squad.units.forEach((unit, index) => {
     const unitConfig = options.unitConfig[index];
     if (unit.id === squadFillerMapping.EMPTY) {
@@ -435,6 +436,13 @@ export function getSimulatorWarningsForSquad (squad = generateDefaultSquad(), op
     } else {
       const bbOrder = !isNaN(unitConfig.bbOrder) ? +unitConfig.bbOrder : 0;
       highestBbOrderForNonEmptyUnits = Math.max(highestBbOrderForNonEmptyUnits, bbOrder);
+      if (bbOrder > 0) {
+        if (!usedOrders.has(bbOrder)) {
+          usedOrders.add(bbOrder);
+        } else {
+          warnings.push(`Duplicate BB Order found [${bbOrder}]`);
+        }
+      }
     }
   });
 
