@@ -976,6 +976,26 @@
           ]
         },
         {
+          "value": "12&50",
+          "context": [
+            "items",
+            "819218-gl",
+            "effect",
+            "2",
+            "buff"
+          ]
+        },
+        {
+          "value": "25&100",
+          "context": [
+            "items",
+            "819219-gl",
+            "effect",
+            "2",
+            "buff"
+          ]
+        },
+        {
           "value": "100&100",
           "context": [
             "es",
@@ -1530,6 +1550,42 @@
             "47214-gl",
             "effect",
             "3",
+            "buff"
+          ]
+        }
+      ]
+    },
+    "10500": {
+      "buff turns (10500)": [
+        {
+          "value": "1",
+          "context": [
+            "items",
+            "819214-gl",
+            "effect",
+            "4",
+            "buff"
+          ]
+        }
+      ],
+      "unknown buff params": [
+        {
+          "value": "0&3500&3500&3500&",
+          "context": [
+            "items",
+            "819214-gl",
+            "effect",
+            "4",
+            "buff"
+          ]
+        },
+        {
+          "value": "0&7000&7000&7000&",
+          "context": [
+            "items",
+            "819215-gl",
+            "effect",
+            "5",
             "buff"
           ]
         }

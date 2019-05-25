@@ -659,6 +659,24 @@ function getUrl(server = '', file = '') {
   }
 }
 
+async function runWithRetry (fn = () => {}, numAttempts = 5) {
+  let attempts = 0;
+  let result;
+  while (attempts < numAttempts) {
+    logger.debug(`Attempt ${++attempts}/${numAttempts}: attempting to run function`);
+    try {
+      result = await Promise.resolve(fn());
+      attempts = numAttempts;
+    } catch (err) {
+      logger.warn(`Error occurred during attempt ${attempts}/${numAttempts}`, err).done();
+      if (attempts >= numAttempts) {
+        throw err;
+      }
+    }
+  }
+  return result;
+}
+
 // assumption: files with the same name aren't being downloaded
 function downloadMultipleFiles(urlArr = [], numConcurrent = 1) {
   const localArr = urlArr.slice();
@@ -674,15 +692,14 @@ function downloadMultipleFiles(urlArr = [], numConcurrent = 1) {
         const filename = url.slice(url.lastIndexOf("/") + 1);
         logger.debug(`downloading ${filename} from ${url}`);
         localPromises.push(
-          axios.get(url)
+          runWithRetry(() => axios.get(url)
             .then(response => {
               logger.debug(`got ${filename}; ${--count} remaining`).done();
               result.push({
                 url: filename, // get file name
                 data: response.data,
               });
-              return;
-            })
+            }))
         );
       }
 

@@ -29099,7 +29099,7 @@
     "desc": "It is said this is where souls come to be forged. Here is your chance to gain experience as a Summoner as well as some Karma.",
     "difficulty": 1,
     "dungeon": "Souls Training Ground",
-    "energy_use": 15,
+    "energy_use": 8,
     "id": "100050",
     "karma": 0,
     "land": "Vortex",
@@ -29116,7 +29116,7 @@
     "desc": "You are deep within the area where it's said souls come to be forged. Now's your chance to obtain lots of experience as a Summoner as well as Karma.",
     "difficulty": 1,
     "dungeon": "Souls Training Ground",
-    "energy_use": 20,
+    "energy_use": 10,
     "id": "100051",
     "karma": 0,
     "land": "Vortex",
@@ -29133,7 +29133,7 @@
     "desc": "You're at the far end of the area where it's said souls come to be forged. Now's your chance to obtain heaps of experience as a Summoner and Karma.",
     "difficulty": 1,
     "dungeon": "Souls Training Ground",
-    "energy_use": 25,
+    "energy_use": 13,
     "id": "100052",
     "karma": 0,
     "land": "Vortex",
@@ -29150,7 +29150,7 @@
     "desc": "A secret area where visitors are said to train their souls to the limit. You may just obtain more experience and Karma than you could ever imagine.",
     "difficulty": 1,
     "dungeon": "Souls Training Ground",
-    "energy_use": 30,
+    "energy_use": 15,
     "id": "100053",
     "karma": 0,
     "land": "Vortex",
@@ -39848,6 +39848,290 @@
     "xp": 0,
     "zel": 0
   },
+  "1005900": {
+    "area": "Frontier Hunter",
+    "battle_count": 5,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": " You're at the entrance to the mysterious area that appeared beyond the Vortex Gate. The beasts here are somewhat weak, but nevertheless you mustn't be careless.",
+    "difficulty": 1,
+    "dungeon": "59th Expedition",
+    "energy_use": 0,
+    "id": "1005900",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Uncharted Frontier - Entrance 59",
+    "xp": 0,
+    "zel": 0
+  },
+  "1005901": {
+    "area": "Frontier Hunter",
+    "battle_count": 5,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "You're nearing the center of the mysterious area that appeared beyond the Vortex Gate. Who knows what could be waiting for you in this uncharted frontier…",
+    "difficulty": 1,
+    "dungeon": "59th Expedition",
+    "energy_use": 0,
+    "id": "1005901",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Uncharted Frontier - Middle 59",
+    "requires": "1005900",
+    "xp": 0,
+    "zel": 0
+  },
+  "1005902": {
+    "area": "Frontier Hunter",
+    "battle_count": 5,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "You're nearing the end of the mysterious area that appeared beyond the Vortex Gate. Mad beasts far more powerful than those you've come across before await you.",
+    "difficulty": 1,
+    "dungeon": "59th Expedition",
+    "energy_use": 0,
+    "id": "1005902",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Uncharted Frontier - End 59",
+    "requires": "1005901",
+    "xp": 0,
+    "zel": 0
+  },
+  "1005903": {
+    "area": "Frontier Hunter",
+    "battle_count": 6,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "You're at the end of the mysterious area that appeared beyond the Vortex Gate. The air shakes as an awesome force descends upon you.",
+    "difficulty": 1,
+    "dungeon": "59th Expedition",
+    "energy_use": 0,
+    "id": "1005903",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Uncharted Frontier - Terminus 59",
+    "requires": "1005902",
+    "xp": 0,
+    "zel": 0
+  },
+  "1006000": {
+    "area": "Frontier Hunter",
+    "battle_count": 5,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": " You're at the entrance to the mysterious area that appeared beyond the Vortex Gate. The beasts here are somewhat weak, but nevertheless you mustn't be careless.",
+    "difficulty": 1,
+    "dungeon": "60th Expedition",
+    "energy_use": 0,
+    "id": "1006000",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Uncharted Frontier - Entrance 60",
+    "xp": 0,
+    "zel": 0
+  },
+  "1006001": {
+    "area": "Frontier Hunter",
+    "battle_count": 5,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "You're nearing the center of the mysterious area that appeared beyond the Vortex Gate. Who knows what could be waiting for you in this uncharted frontier…",
+    "difficulty": 1,
+    "dungeon": "60th Expedition",
+    "energy_use": 0,
+    "id": "1006001",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Uncharted Frontier - Middle 60",
+    "requires": "1006000",
+    "xp": 0,
+    "zel": 0
+  },
+  "1006002": {
+    "area": "Frontier Hunter",
+    "battle_count": 5,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "You're nearing the end of the mysterious area that appeared beyond the Vortex Gate. Mad beasts far more powerful than those you've come across before await you.",
+    "difficulty": 1,
+    "dungeon": "60th Expedition",
+    "energy_use": 0,
+    "id": "1006002",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Uncharted Frontier - End 60",
+    "requires": "1006001",
+    "xp": 0,
+    "zel": 0
+  },
+  "1006003": {
+    "area": "Frontier Hunter",
+    "battle_count": 6,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "You're at the end of the mysterious area that appeared beyond the Vortex Gate. The air shakes as an awesome force descends upon you.",
+    "difficulty": 1,
+    "dungeon": "60th Expedition",
+    "energy_use": 0,
+    "id": "1006003",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Uncharted Frontier - Terminus 60",
+    "requires": "1006002",
+    "xp": 0,
+    "zel": 0
+  },
+  "1006100": {
+    "area": "Frontier Hunter",
+    "battle_count": 5,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": " You're at the entrance to the mysterious area that appeared beyond the Vortex Gate. The beasts here are somewhat weak, but nevertheless you mustn't be careless.",
+    "difficulty": 1,
+    "dungeon": "1006100",
+    "energy_use": 0,
+    "id": "1006100",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Uncharted Frontier - Entrance 61",
+    "xp": 0,
+    "zel": 0
+  },
+  "1006101": {
+    "area": "Frontier Hunter",
+    "battle_count": 5,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "You're nearing the center of the mysterious area that appeared beyond the Vortex Gate. Who knows what could be waiting for you in this uncharted frontier…",
+    "difficulty": 1,
+    "dungeon": "1006100",
+    "energy_use": 0,
+    "id": "1006101",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Uncharted Frontier - Middle 61",
+    "requires": "1006100",
+    "xp": 0,
+    "zel": 0
+  },
+  "1006102": {
+    "area": "Frontier Hunter",
+    "battle_count": 5,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "You're nearing the end of the mysterious area that appeared beyond the Vortex Gate. Mad beasts far more powerful than those you've come across before await you.",
+    "difficulty": 1,
+    "dungeon": "1006100",
+    "energy_use": 0,
+    "id": "1006102",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Uncharted Frontier - End 61",
+    "requires": "1006101",
+    "xp": 0,
+    "zel": 0
+  },
+  "1006103": {
+    "area": "Frontier Hunter",
+    "battle_count": 6,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "You're at the end of the mysterious area that appeared beyond the Vortex Gate. The air shakes as an awesome force descends upon you.",
+    "difficulty": 1,
+    "dungeon": "1006100",
+    "energy_use": 0,
+    "id": "1006103",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Uncharted Frontier - Terminus 61",
+    "requires": "1006102",
+    "xp": 0,
+    "zel": 0
+  },
+  "1006200": {
+    "area": "Frontier Hunter",
+    "battle_count": 5,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": " You're at the entrance to the mysterious area that appeared beyond the Vortex Gate. The beasts here are somewhat weak, but nevertheless you mustn't be careless.",
+    "difficulty": 1,
+    "dungeon": "1006200",
+    "energy_use": 0,
+    "id": "1006200",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Uncharted Frontier - Entrance 62",
+    "xp": 0,
+    "zel": 0
+  },
+  "1006201": {
+    "area": "Frontier Hunter",
+    "battle_count": 5,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "You're nearing the center of the mysterious area that appeared beyond the Vortex Gate. Who knows what could be waiting for you in this uncharted frontier…",
+    "difficulty": 1,
+    "dungeon": "1006200",
+    "energy_use": 0,
+    "id": "1006201",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Uncharted Frontier - Middle 62",
+    "requires": "1006200",
+    "xp": 0,
+    "zel": 0
+  },
+  "1006202": {
+    "area": "Frontier Hunter",
+    "battle_count": 5,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "You're nearing the end of the mysterious area that appeared beyond the Vortex Gate. Mad beasts far more powerful than those you've come across before await you.",
+    "difficulty": 1,
+    "dungeon": "1006200",
+    "energy_use": 0,
+    "id": "1006202",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Uncharted Frontier - End 62",
+    "requires": "1006201",
+    "xp": 0,
+    "zel": 0
+  },
+  "1006203": {
+    "area": "Frontier Hunter",
+    "battle_count": 6,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "You're at the end of the mysterious area that appeared beyond the Vortex Gate. The air shakes as an awesome force descends upon you.",
+    "difficulty": 1,
+    "dungeon": "1006200",
+    "energy_use": 0,
+    "id": "1006203",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Uncharted Frontier - Terminus 62",
+    "requires": "1006202",
+    "xp": 0,
+    "zel": 0
+  },
   "2000000": {
     "area": "Trial Test",
     "battle_count": 1,
@@ -41917,6 +42201,23 @@
     "xp": 0,
     "zel": 0
   },
+  "5008009": {
+    "area": "Grand Quest",
+    "battle_count": 1,
+    "clear_bonus": [],
+    "continue": false,
+    "desc": "Three years after the Crystalline Spire, memories of the Voidborn still linger in the minds of men. Tensions begin to run high as Fae and Naga activity increase. \"The stars have aligned,\" the wise say. \"Our fates are coming to a close.\"",
+    "difficulty": 1,
+    "dungeon": "5008009",
+    "energy_use": 10,
+    "id": "5008009",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Fates of the Fallen",
+    "xp": 0,
+    "zel": 0
+  },
   "5200000": {
     "area": "GQ Chain Chronicle",
     "battle_count": 1,
@@ -43058,7 +43359,6 @@
     "land": "Vortex",
     "mimic_info": {},
     "name": "Mother of Frogs",
-    "requires": "55555555",
     "xp": 4000,
     "zel": 5000
   },
@@ -43948,6 +44248,280 @@
     "xp": 3500,
     "zel": 0
   },
+  "8301391": {
+    "area": "800139",
+    "battle_count": 4,
+    "clear_bonus": [
+      {
+        "item": {
+          "count": "2",
+          "id": "802005"
+        }
+      },
+      {
+        "item": {
+          "count": "2",
+          "id": "802006"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "You arrive in New Cravich, a high-tech city that has recently announced a public \"restructuring\" of its sentient androids.",
+    "difficulty": 1,
+    "dungeon": "8001391",
+    "energy_use": 10,
+    "id": "8301391",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Sneaking Suspicions",
+    "xp": 3500,
+    "zel": 0
+  },
+  "8301392": {
+    "area": "800139",
+    "battle_count": 3,
+    "clear_bonus": [
+      {
+        "item": {
+          "count": "3",
+          "id": "802005"
+        }
+      },
+      {
+        "item": {
+          "count": "3",
+          "id": "802006"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "Vektor takes you along to infiltrate the Corporation's headquarters to rescue the android Galene from destruction.",
+    "difficulty": 2,
+    "dungeon": "8001391",
+    "energy_use": 15,
+    "id": "8301392",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Hacking for Her",
+    "requires": "8301391",
+    "xp": 4500,
+    "zel": 0
+  },
+  "8301393": {
+    "area": "800139",
+    "battle_count": 3,
+    "clear_bonus": [
+      {
+        "item": {
+          "count": "5",
+          "id": "802005"
+        }
+      },
+      {
+        "item": {
+          "count": "5",
+          "id": "802006"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "The door unlocks, indicating Galene is still active. You and Vektor head into the facility, hoping to get ahead of security.",
+    "difficulty": 3,
+    "dungeon": "8001391",
+    "energy_use": 20,
+    "id": "8301393",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Beating the System",
+    "requires": "8301392,8301395",
+    "xp": 5500,
+    "zel": 0
+  },
+  "8301394": {
+    "area": "800139",
+    "battle_count": 4,
+    "clear_bonus": [
+      {
+        "item": {
+          "count": "2",
+          "id": "802005"
+        }
+      },
+      {
+        "item": {
+          "count": "2",
+          "id": "802006"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "Galene, a highly specialized military android, recalls the last few months of her \"life\" prior to dismantlement…",
+    "difficulty": 1,
+    "dungeon": "8001392",
+    "energy_use": 10,
+    "id": "8301394",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "End-of-Life",
+    "xp": 3500,
+    "zel": 0
+  },
+  "8301395": {
+    "area": "800139",
+    "battle_count": 3,
+    "clear_bonus": [
+      {
+        "item": {
+          "count": "3",
+          "id": "802005"
+        }
+      },
+      {
+        "item": {
+          "count": "3",
+          "id": "802006"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "Having rejected her fate, Galene tries to break out of confinement. A certain young techpunk on her mind gives her courage.",
+    "difficulty": 2,
+    "dungeon": "8001392",
+    "energy_use": 15,
+    "id": "8301395",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Overriding Protocol",
+    "requires": "8301394",
+    "xp": 4500,
+    "zel": 0
+  },
+  "8301396": {
+    "area": "800139",
+    "battle_count": 3,
+    "clear_bonus": [
+      {
+        "item": {
+          "count": "5",
+          "id": "802005"
+        }
+      },
+      {
+        "item": {
+          "count": "5",
+          "id": "802006"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "The door unlocks, indicating Vektor's presence. Surprised and overcome with emotion, Galene sets a course to meet him...",
+    "difficulty": 3,
+    "dungeon": "8001392",
+    "energy_use": 20,
+    "id": "8301396",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "You In My Sights",
+    "requires": "8301392,8301395",
+    "xp": 5500,
+    "zel": 0
+  },
+  "8301397": {
+    "area": "800139",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "gem": "1"
+      },
+      {
+        "item": {
+          "count": "10",
+          "id": "802005"
+        }
+      },
+      {
+        "item": {
+          "count": "10",
+          "id": "802006"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "Vektor and Galene finally reunite, but the Corporation has them in its grip. Will they break through this unfeeling tyranny?",
+    "difficulty": 3,
+    "dungeon": "8001393",
+    "energy_use": 50,
+    "id": "8301397",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Beyond Machine",
+    "requires": "8301393,8301396",
+    "xp": 5500,
+    "zel": 0
+  },
+  "8301398": {
+    "area": "800139",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "gem": "3"
+      },
+      {
+        "item": {
+          "count": "20",
+          "id": "802005"
+        }
+      },
+      {
+        "item": {
+          "count": "20",
+          "id": "802006"
+        }
+      }
+    ],
+    "continue": false,
+    "desc": "Knowing that Vektor and Galene are safe for now, you decide to get to the bottom of the Corporation's sinister AI.",
+    "difficulty": 3,
+    "dungeon": "8001393",
+    "energy_use": 20,
+    "id": "8301398",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "[Hard] Forced Shutdown",
+    "requires": "8301397",
+    "xp": 5500,
+    "zel": 0
+  },
+  "8301399": {
+    "area": "800139",
+    "battle_count": 5,
+    "clear_bonus": [
+      {
+        "gem": "1"
+      }
+    ],
+    "continue": true,
+    "desc": "With the antifield disabled, your powers return. You send Vektor and Galene away, and prepare for a night of scrapping.",
+    "difficulty": 3,
+    "dungeon": "8001393",
+    "energy_use": 30,
+    "id": "8301399",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "[Farm] Scrapping Security",
+    "requires": "8301397",
+    "xp": 5500,
+    "zel": 0
+  },
   "8301400": {
     "area": "New Frontier Gate",
     "battle_count": 5,
@@ -43964,6 +44538,377 @@
     "name": "Raug Phantasm Lv. 4",
     "xp": 0,
     "zel": 0
+  },
+  "8301401": {
+    "area": "800140",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "unit": {
+          "count": "1",
+          "id": "750006"
+        }
+      }
+    ],
+    "continue": false,
+    "desc": "Help Auberi to solve the puzzle and summon the Rainbow Crystal!",
+    "difficulty": 1,
+    "dungeon": "800140",
+    "energy_use": 20,
+    "id": "8301401",
+    "karma": 5000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Last Judgment",
+    "requires": "8301415",
+    "xp": 1000,
+    "zel": 5000
+  },
+  "8301402": {
+    "area": "800140",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "unit": {
+          "count": "1",
+          "id": "750006"
+        }
+      }
+    ],
+    "continue": false,
+    "desc": "Help Auberi to solve the puzzle and summon the Rainbow Crystal!",
+    "difficulty": 1,
+    "dungeon": "800140",
+    "energy_use": 20,
+    "id": "8301402",
+    "karma": 5000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Last Judgment",
+    "requires": "8301415",
+    "xp": 1000,
+    "zel": 5000
+  },
+  "8301403": {
+    "area": "800140",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "unit": {
+          "count": "1",
+          "id": "750006"
+        }
+      }
+    ],
+    "continue": false,
+    "desc": "Help Auberi to solve the puzzle and summon the Rainbow Crystal!",
+    "difficulty": 1,
+    "dungeon": "800140",
+    "energy_use": 20,
+    "id": "8301403",
+    "karma": 5000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Last Judgment",
+    "requires": "8301415",
+    "xp": 1000,
+    "zel": 5000
+  },
+  "8301404": {
+    "area": "800140",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "unit": {
+          "count": "1",
+          "id": "750006"
+        }
+      }
+    ],
+    "continue": false,
+    "desc": "Help Auberi to solve the puzzle and summon the Rainbow Crystal!",
+    "difficulty": 1,
+    "dungeon": "800140",
+    "energy_use": 20,
+    "id": "8301404",
+    "karma": 5000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Last Judgment",
+    "requires": "8301415",
+    "xp": 1000,
+    "zel": 5000
+  },
+  "8301405": {
+    "area": "800140",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "unit": {
+          "count": "1",
+          "id": "750006"
+        }
+      }
+    ],
+    "continue": false,
+    "desc": "Help Auberi to solve the puzzle and summon the Rainbow Crystal!",
+    "difficulty": 1,
+    "dungeon": "800140",
+    "energy_use": 20,
+    "id": "8301405",
+    "karma": 5000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Last Judgment",
+    "requires": "8301415",
+    "xp": 1000,
+    "zel": 5000
+  },
+  "8301406": {
+    "area": "800140",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "unit": {
+          "count": "1",
+          "id": "750006"
+        }
+      }
+    ],
+    "continue": false,
+    "desc": "Help Auberi to solve the puzzle and summon the Rainbow Crystal!",
+    "difficulty": 1,
+    "dungeon": "800140",
+    "energy_use": 20,
+    "id": "8301406",
+    "karma": 5000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Last Judgment",
+    "requires": "8301415",
+    "xp": 1000,
+    "zel": 5000
+  },
+  "8301407": {
+    "area": "800140",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "unit": {
+          "count": "1",
+          "id": "750006"
+        }
+      }
+    ],
+    "continue": false,
+    "desc": "Help Auberi to solve the puzzle and summon the Rainbow Crystal!",
+    "difficulty": 1,
+    "dungeon": "800140",
+    "energy_use": 20,
+    "id": "8301407",
+    "karma": 5000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Last Judgment",
+    "requires": "8301415",
+    "xp": 1000,
+    "zel": 5000
+  },
+  "8301408": {
+    "area": "800140",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "unit": {
+          "count": "1",
+          "id": "750006"
+        }
+      }
+    ],
+    "continue": false,
+    "desc": "Help Auberi to solve the puzzle and summon the Rainbow Crystal!",
+    "difficulty": 1,
+    "dungeon": "800140",
+    "energy_use": 20,
+    "id": "8301408",
+    "karma": 5000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Last Judgment",
+    "requires": "8301415",
+    "xp": 1000,
+    "zel": 5000
+  },
+  "8301409": {
+    "area": "800140",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "unit": {
+          "count": "1",
+          "id": "750006"
+        }
+      }
+    ],
+    "continue": false,
+    "desc": "Help Auberi to solve the puzzle and summon the Rainbow Crystal!",
+    "difficulty": 1,
+    "dungeon": "800140",
+    "energy_use": 20,
+    "id": "8301409",
+    "karma": 5000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Last Judgment",
+    "requires": "8301415",
+    "xp": 1000,
+    "zel": 5000
+  },
+  "8301410": {
+    "area": "800140",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "unit": {
+          "count": "1",
+          "id": "750006"
+        }
+      }
+    ],
+    "continue": false,
+    "desc": "Help Auberi to solve the puzzle and summon the Rainbow Crystal!",
+    "difficulty": 1,
+    "dungeon": "800140",
+    "energy_use": 20,
+    "id": "8301410",
+    "karma": 5000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Last Judgment",
+    "requires": "8301415",
+    "xp": 1000,
+    "zel": 5000
+  },
+  "8301411": {
+    "area": "800140",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "unit": {
+          "count": "1",
+          "id": "750006"
+        }
+      }
+    ],
+    "continue": false,
+    "desc": "Help Auberi to solve the puzzle and summon the Rainbow Crystal!",
+    "difficulty": 1,
+    "dungeon": "800140",
+    "energy_use": 20,
+    "id": "8301411",
+    "karma": 5000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Last Judgment",
+    "requires": "8301415",
+    "xp": 1000,
+    "zel": 5000
+  },
+  "8301412": {
+    "area": "800140",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "unit": {
+          "count": "1",
+          "id": "750006"
+        }
+      }
+    ],
+    "continue": false,
+    "desc": "Help Auberi to solve the puzzle and summon the Rainbow Crystal!",
+    "difficulty": 1,
+    "dungeon": "800140",
+    "energy_use": 20,
+    "id": "8301412",
+    "karma": 5000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Last Judgment",
+    "requires": "8301415",
+    "xp": 1000,
+    "zel": 5000
+  },
+  "8301413": {
+    "area": "800140",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "unit": {
+          "count": "1",
+          "id": "750006"
+        }
+      }
+    ],
+    "continue": false,
+    "desc": "Help Auberi to solve the puzzle and summon the Rainbow Crystal!",
+    "difficulty": 1,
+    "dungeon": "800140",
+    "energy_use": 20,
+    "id": "8301413",
+    "karma": 5000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Last Judgment",
+    "requires": "8301415",
+    "xp": 1000,
+    "zel": 5000
+  },
+  "8301414": {
+    "area": "800140",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "unit": {
+          "count": "1",
+          "id": "750006"
+        }
+      }
+    ],
+    "continue": false,
+    "desc": "Help Auberi to solve the puzzle and summon the Rainbow Crystal!",
+    "difficulty": 1,
+    "dungeon": "800140",
+    "energy_use": 20,
+    "id": "8301414",
+    "karma": 5000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Last Judgment",
+    "requires": "8301415",
+    "xp": 1000,
+    "zel": 5000
+  },
+  "8301415": {
+    "area": "800140",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "gem": "1"
+      }
+    ],
+    "continue": false,
+    "desc": "Marianne needs your help to tame the Crystal Gods!",
+    "difficulty": 1,
+    "dungeon": "800140",
+    "energy_use": 10,
+    "id": "8301415",
+    "karma": 100,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Colored Gods",
+    "xp": 500,
+    "zel": 500
   },
   "8302001": {
     "area": "Unholy Tower",
@@ -49553,6 +50498,798 @@
     "name": "Orebus Paradise",
     "xp": 7500,
     "zel": 50000
+  },
+  "83014001": {
+    "area": "80014001",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "A gateway to Spring stands before you. A symphony of the frogs can be heard beyond the portal!",
+    "difficulty": 1,
+    "dungeon": "80014001",
+    "energy_use": 30,
+    "id": "83014001",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Spring Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83014002": {
+    "area": "80014002",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "A gateway to Spring stands before you. A symphony of the frogs can be heard beyond the portal!",
+    "difficulty": 1,
+    "dungeon": "80014002",
+    "energy_use": 30,
+    "id": "83014002",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Spring Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83014003": {
+    "area": "80014003",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "A gateway to Spring stands before you. A symphony of the frogs can be heard beyond the portal!",
+    "difficulty": 1,
+    "dungeon": "80014003",
+    "energy_use": 30,
+    "id": "83014003",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Spring Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83014004": {
+    "area": "80014004",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "A gateway to Spring stands before you. A symphony of the frogs can be heard beyond the portal!",
+    "difficulty": 1,
+    "dungeon": "80014004",
+    "energy_use": 30,
+    "id": "83014004",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Spring Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83014005": {
+    "area": "80014005",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "A gateway to Spring stands before you. A symphony of the frogs can be heard beyond the portal!",
+    "difficulty": 1,
+    "dungeon": "80014005",
+    "energy_use": 30,
+    "id": "83014005",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Spring Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83014006": {
+    "area": "80014006",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "A gateway to Spring stands before you. A symphony of the frogs can be heard beyond the portal!",
+    "difficulty": 1,
+    "dungeon": "80014006",
+    "energy_use": 30,
+    "id": "83014006",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Spring Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83014007": {
+    "area": "80014007",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "A gateway to Spring stands before you. A symphony of the frogs can be heard beyond the portal!",
+    "difficulty": 1,
+    "dungeon": "80014007",
+    "energy_use": 30,
+    "id": "83014007",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Spring Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83014008": {
+    "area": "80014008",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "A gateway to Spring stands before you. A symphony of the frogs can be heard beyond the portal!",
+    "difficulty": 1,
+    "dungeon": "80014008",
+    "energy_use": 30,
+    "id": "83014008",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Spring Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83014009": {
+    "area": "80014009",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "A gateway to Spring stands before you. A symphony of the frogs can be heard beyond the portal!",
+    "difficulty": 1,
+    "dungeon": "80014009",
+    "energy_use": 30,
+    "id": "83014009",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Spring Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83014010": {
+    "area": "80014010",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "A gateway to Spring stands before you. A symphony of the frogs can be heard beyond the portal!",
+    "difficulty": 1,
+    "dungeon": "80014010",
+    "energy_use": 30,
+    "id": "83014010",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Spring Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83014011": {
+    "area": "80014011",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "A gateway to Spring stands before you. A symphony of the frogs can be heard beyond the portal!",
+    "difficulty": 1,
+    "dungeon": "80014011",
+    "energy_use": 30,
+    "id": "83014011",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Spring Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83014012": {
+    "area": "80014012",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "A gateway to Spring stands before you. A symphony of the frogs can be heard beyond the portal!",
+    "difficulty": 1,
+    "dungeon": "80014012",
+    "energy_use": 30,
+    "id": "83014012",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Spring Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83014013": {
+    "area": "80014013",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "A gateway to Spring stands before you. A symphony of the frogs can be heard beyond the portal!",
+    "difficulty": 1,
+    "dungeon": "80014013",
+    "energy_use": 30,
+    "id": "83014013",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Spring Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83014014": {
+    "area": "80014014",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "A gateway to Spring stands before you. A symphony of the frogs can be heard beyond the portal!",
+    "difficulty": 1,
+    "dungeon": "80014014",
+    "energy_use": 30,
+    "id": "83014014",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Spring Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83014015": {
+    "area": "80014015",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "A gateway to Spring stands before you. A symphony of the frogs can be heard beyond the portal!",
+    "difficulty": 1,
+    "dungeon": "80014015",
+    "energy_use": 30,
+    "id": "83014015",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Spring Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83014016": {
+    "area": "80014016",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "A gateway to Spring stands before you. A symphony of the frogs can be heard beyond the portal!",
+    "difficulty": 1,
+    "dungeon": "80014016",
+    "energy_use": 30,
+    "id": "83014016",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Spring Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83014017": {
+    "area": "80014017",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "A gateway to Spring stands before you. A symphony of the frogs can be heard beyond the portal!",
+    "difficulty": 1,
+    "dungeon": "80014017",
+    "energy_use": 30,
+    "id": "83014017",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Spring Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83014018": {
+    "area": "80014018",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "A gateway to Spring stands before you. A symphony of the frogs can be heard beyond the portal!",
+    "difficulty": 1,
+    "dungeon": "80014018",
+    "energy_use": 30,
+    "id": "83014018",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Spring Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83014019": {
+    "area": "80014019",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "A gateway to Spring stands before you. A symphony of the frogs can be heard beyond the portal!",
+    "difficulty": 1,
+    "dungeon": "80014019",
+    "energy_use": 30,
+    "id": "83014019",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Spring Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83014020": {
+    "area": "80014020",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "A gateway to Spring stands before you. A symphony of the frogs can be heard beyond the portal!",
+    "difficulty": 1,
+    "dungeon": "80014020",
+    "energy_use": 30,
+    "id": "83014020",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Spring Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83014021": {
+    "area": "80014021",
+    "battle_count": 4,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "A gateway to Spring stands before you. A symphony of the frogs can be heard beyond the portal!",
+    "difficulty": 1,
+    "dungeon": "80014021",
+    "energy_use": 30,
+    "id": "83014021",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Spring Paradise",
+    "xp": 7500,
+    "zel": 50000
+  },
+  "83014210": {
+    "area": "800142",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "item": {
+          "count": "1",
+          "id": "802010"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "Join Leona and Kula Diamond to defeat Mai Shiranui.",
+    "difficulty": 1,
+    "dungeon": "8001421",
+    "energy_use": 5,
+    "id": "83014210",
+    "karma": 500,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Contender Alpha",
+    "xp": 0,
+    "zel": 500
+  },
+  "83014211": {
+    "area": "800142",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "item": {
+          "count": "1",
+          "id": "802009"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "Assist the Kusanagi family to gain dominance.",
+    "difficulty": 1,
+    "dungeon": "8001421",
+    "energy_use": 8,
+    "id": "83014211",
+    "karma": 1000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Scion of the Flame Lv. 1",
+    "xp": 0,
+    "zel": 1000
+  },
+  "83014212": {
+    "area": "800142",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "gem": "1"
+      },
+      {
+        "unit": {
+          "count": "1",
+          "id": "50792"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "Assist the Kusanagi family to gain dominance.",
+    "difficulty": 1,
+    "dungeon": "8001421",
+    "energy_use": 10,
+    "id": "83014212",
+    "karma": 75000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Scion of the Flame Lv. 2",
+    "xp": 7500,
+    "zel": 75000
+  },
+  "83014213": {
+    "area": "800142",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "item": {
+          "count": "1",
+          "id": "802010"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "Help the Kagura family reclaim their dominance.",
+    "difficulty": 1,
+    "dungeon": "8001421",
+    "energy_use": 8,
+    "id": "83014213",
+    "karma": 1000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Legacy of Kagura Lv. 1",
+    "xp": 0,
+    "zel": 1000
+  },
+  "83014214": {
+    "area": "800142",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "gem": "1"
+      },
+      {
+        "unit": {
+          "count": "1",
+          "id": "50792"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "Help the Kagura family reclaim their dominance.",
+    "difficulty": 1,
+    "dungeon": "8001421",
+    "energy_use": 10,
+    "id": "83014214",
+    "karma": 75000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Legacy of Kagura Lv. 2",
+    "xp": 7500,
+    "zel": 75000
+  },
+  "83014215": {
+    "area": "800142",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "item": {
+          "count": "1",
+          "id": "802009"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "Join the Yagami family to prove their might.",
+    "difficulty": 1,
+    "dungeon": "8001421",
+    "energy_use": 8,
+    "id": "83014215",
+    "karma": 1000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Sun and The Moon Lv. 1",
+    "xp": 0,
+    "zel": 1000
+  },
+  "83014216": {
+    "area": "800142",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "gem": "1"
+      },
+      {
+        "unit": {
+          "count": "1",
+          "id": "50792"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "Join the Yagami family to prove their might.",
+    "difficulty": 1,
+    "dungeon": "8001421",
+    "energy_use": 10,
+    "id": "83014216",
+    "karma": 75000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Sun and The Moon Lv. 2",
+    "xp": 7500,
+    "zel": 75000
+  },
+  "83014220": {
+    "area": "800142",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "item": {
+          "count": "1",
+          "id": "802009"
+        }
+      },
+      {
+        "item": {
+          "count": "1",
+          "id": "802010"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "As an ancient curse causes a familiar face to twist into a maddened visage, the battle to reclaim his sanity has begun. Ready to choose your path? Go!",
+    "difficulty": 1,
+    "dungeon": "8001422",
+    "energy_use": 10,
+    "id": "83014220",
+    "karma": 2000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Blood of Iori",
+    "xp": 2000,
+    "zel": 2000
+  },
+  "83014221": {
+    "area": "800142",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "item": {
+          "count": "1",
+          "id": "802009"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "Prevent Orochi Iori from escaping.",
+    "difficulty": 1,
+    "dungeon": "8001422",
+    "energy_use": 15,
+    "id": "83014221",
+    "karma": 2000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Wild Rampage",
+    "xp": 2000,
+    "zel": 2000
+  },
+  "83014222": {
+    "area": "800142",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "gem": "1"
+      },
+      {
+        "item": {
+          "count": "1",
+          "id": "802009"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "Wait until sunset to subdue Orochi Iori.",
+    "difficulty": 1,
+    "dungeon": "8001422",
+    "energy_use": 20,
+    "id": "83014222",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Wild Rampage - \"Dusk\"",
+    "xp": 10000,
+    "zel": 10000
+  },
+  "83014223": {
+    "area": "800142",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "gem": "1"
+      },
+      {
+        "item": {
+          "count": "1",
+          "id": "802009"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "Restrain Orochi Iori at dawnbreak.",
+    "difficulty": 1,
+    "dungeon": "8001422",
+    "energy_use": 20,
+    "id": "83014223",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Wild Rampage - \"Dawn\"",
+    "xp": 10000,
+    "zel": 10000
+  },
+  "83014224": {
+    "area": "800142",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "item": {
+          "count": "1",
+          "id": "802010"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "Ambush Orochi Iori in the woods.",
+    "difficulty": 1,
+    "dungeon": "8001422",
+    "energy_use": 15,
+    "id": "83014224",
+    "karma": 2000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Night of the Moon",
+    "xp": 2000,
+    "zel": 2000
+  },
+  "83014225": {
+    "area": "800142",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "gem": "1"
+      },
+      {
+        "item": {
+          "count": "1",
+          "id": "802010"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "<br>Tackle Orochi Iori off the cliff.",
+    "difficulty": 1,
+    "dungeon": "8001422",
+    "energy_use": 20,
+    "id": "83014225",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Night of the Moon - \"Earthbound\"",
+    "xp": 10000,
+    "zel": 10000
+  },
+  "83014226": {
+    "area": "800142",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "gem": "1"
+      },
+      {
+        "item": {
+          "count": "1",
+          "id": "802010"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "Take cover from the storm.",
+    "difficulty": 1,
+    "dungeon": "8001422",
+    "energy_use": 20,
+    "id": "83014226",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Night of the Moon - \"Voltaic\"",
+    "xp": 10000,
+    "zel": 10000
+  },
+  "83014230": {
+    "area": "800142",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "item": {
+          "count": "1",
+          "id": "802010"
+        }
+      },
+      {
+        "item": {
+          "count": "1",
+          "id": "802009"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "Orochi's power, once sealed, has reawakened with the intent to destroy mankind. Choose your ally carefully?or regret the consequences. Ready? Go!",
+    "difficulty": 1,
+    "dungeon": "8001423",
+    "energy_use": 8,
+    "id": "83014230",
+    "karma": 2000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Ascension",
+    "xp": 2000,
+    "zel": 2000
+  },
+  "83014231": {
+    "area": "800142",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "gem": "1"
+      }
+    ],
+    "continue": true,
+    "desc": "Assist Iori Yagami to seal away Orochi.",
+    "difficulty": 1,
+    "dungeon": "8001423",
+    "energy_use": 10,
+    "id": "83014231",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Hakkesshu",
+    "xp": 10000,
+    "zel": 10000
+  },
+  "83014232": {
+    "area": "800142",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "gem": "1"
+      }
+    ],
+    "continue": true,
+    "desc": "Help Leona to annihilate Orochi.",
+    "difficulty": 1,
+    "dungeon": "8001423",
+    "energy_use": 10,
+    "id": "83014232",
+    "karma": 10000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Gaia's Will",
+    "xp": 10000,
+    "zel": 10000
   },
   "83510001": {
     "area": "The Keymaster's Eclipse ",

@@ -1,4 +1,692 @@
 {
+  "MST_SKILLS_2122541_NAME": {
+    "en": "Demonic Blade",
+    "es": "Espada malévola",
+    "id": "Bilah Setan",
+    "pt": "Lâmina Demoníaca",
+    "th": "เดมอนนิค เบลด",
+    "vi": "Demonic Blade"
+  },
+  "MST_SKILLS_2122542_DESCRIPTION": {
+    "en": "11 combo powerful Fire attack on all enemies & probable Curse effect",
+    "es": "Combo grupal de 11 poderosos ataques ígneos. Puede causar maldición",
+    "id": "11 kombo serangan Api kuat ke semua musuh & kemungkinan efek Kutukan",
+    "pt": "Combo poderoso de 11 golpes de Fogo em todos os inimigos e provável efeito de Maldição",
+    "th": "11 คอมโบ โจมตีธาตุไฟอย่างรุนแรง ใส่ศัตรูทั้งหมด และ อาจจะทำให้คิดสถานะ คำสาป",
+    "vi": "11 combo powerful Fire attack on all enemies & probable Curse effect"
+  },
+  "MST_SKILLS_2122542_NAME": {
+    "en": "I am Vishra!",
+    "es": "¡Soy Vishra!",
+    "id": "Aku Vishra!",
+    "pt": "Eu sou Vishra!",
+    "th": "ข้าคือวิชร่า!",
+    "vi": "I am Vishra!"
+  },
+  "MST_SKILLS_2122543_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122543_NAME": {
+    "en": "Within this armor dwells...",
+    "es": "Dentro de esta armadura habita...",
+    "id": "Dalam zirah ini ada...",
+    "pt": "Dentro dessa armadura...",
+    "th": "ด้วยเกราะนี้...",
+    "vi": "Within this armor dwells..."
+  },
+  "MST_SKILLS_2122544_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122544_NAME": {
+    "en": "Hmm...? What about my armor?",
+    "es": "¿Mmm...? ¿Qué hay con mi armadura?",
+    "id": "Hmm...? Bagaimana dengan zirahku?",
+    "pt": "Hmm...? E a minha armadura?",
+    "th": "หืม...? แล้วเกราะของข้าล่ะ?",
+    "vi": "Hmm...? What about my armor?"
+  },
+  "MST_SKILLS_2122545_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122545_NAME": {
+    "en": "You want to put it on display..?",
+    "es": "¿Quieres ponerla en una vitrina...?",
+    "id": "Kau mau memamerkannya..?",
+    "pt": "Você quer expô-la?",
+    "th": "เจ้าต้องการจะใส่มันเหรอ?!",
+    "vi": "You want to put it on display..?"
+  },
+  "MST_SKILLS_2122546_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122546_NAME": {
+    "en": "Are you crazy?!",
+    "es": "¡¿Estás demente?!",
+    "id": "Kau gila?!",
+    "pt": "Enlouqueceu??",
+    "th": "จะบ้าเรอะ?!",
+    "vi": "Are you crazy?!"
+  },
+  "MST_SKILLS_2122547_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122547_NAME": {
+    "en": "My armor isn't mere decoration!",
+    "es": "¡Mi armadura no es un mero decorado!",
+    "id": "Zirahku bukan hanya dekorasi!",
+    "pt": "Minha armadura não é enfeite!",
+    "th": "เกราะของข้าไม่ใช่ของประดับนะ!",
+    "vi": "My armor isn't mere decoration!"
+  },
+  "MST_SKILLS_2122548_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122548_NAME": {
+    "en": "I am a ravenous demon!",
+    "es": "¡Soy un demonio feroz!",
+    "id": "Aku setan yang lapar!",
+    "pt": "Eu sou um demônio faminto!",
+    "th": "ข้าคือปีศาจผู้ตะกละตะกลาม!",
+    "vi": "I am a ravenous demon!"
+  },
+  "MST_SKILLS_2122549_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122549_NAME": {
+    "en": "I'll consume your soul too!",
+    "es": "¡También consumiré tu alma!",
+    "id": "Akan kumakan jiwamu juga!",
+    "pt": "Vou consumir sua alma também!",
+    "th": "ข้าจะกินวิญญาณของเจ้าเช่นกัน!",
+    "vi": "I'll consume your soul too!"
+  },
+  "MST_SKILLS_212254_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_212254_NAME": {
+    "en": "Show me your techniques.",
+    "es": "Muéstrame tus técnicas.",
+    "id": "Tunjukkan teknikmu kepadaku.",
+    "pt": "Mostre-me sua técnica.",
+    "th": "แสดงเทคนิคของเจ้าให้ดูซิ",
+    "vi": "Show me your techniques."
+  },
+  "MST_SKILLS_21225500_NAME": {
+    "en": "Well done. I'm thrilled.",
+    "es": "Well done. I'm thrilled.",
+    "id": "Hebat. Aku bersemangat.",
+    "pt": "Well done. I'm thrilled.",
+    "th": "เยี่ยม ข้าตื่นเต้นจริง",
+    "vi": "Well done. I'm thrilled."
+  },
+  "MST_SKILLS_2122550_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122550_NAME": {
+    "en": "I'll cut down everything!",
+    "es": "¡Devastaré todo!",
+    "id": "Akan kupotong semuanya!",
+    "pt": "Vou acabar com tudo!",
+    "th": "ข้าจะกำจัดทุกสิ่ง!",
+    "vi": "I'll cut down everything!"
+  },
+  "MST_SKILLS_2122551_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122551_NAME": {
+    "en": "And I'll consume everything!",
+    "es": "¡Y consumiré todo!",
+    "id": "Dan akan kumakan semuanya!",
+    "pt": "E consumir tudo!",
+    "th": "และกลืนกินทุกสิ่ง!",
+    "vi": "And I'll consume everything!"
+  },
+  "MST_SKILLS_2122552_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122552_NAME": {
+    "en": "I-I...I am a demon!!",
+    "es": "Soy... ¡Soy un demonio!",
+    "id": "A-A...aku setan!",
+    "pt": "E-eu... sou um demônio!!",
+    "th": "ข้า-ข้า ข้าคือปีศาจ!!",
+    "vi": "I-I...I am a demon!!"
+  },
+  "MST_SKILLS_2122553_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122553_NAME": {
+    "en": "Who...are you? My body...",
+    "es": "¿Quién... eres? Mi cuerpo...",
+    "id": "Siapa... Kamu? Tubuhku...",
+    "pt": "Quem... é você? Meu corpo...",
+    "th": "เจ้า...เป็นใคร? ร่างของข้า...",
+    "vi": "Who...are you? My body..."
+  },
+  "MST_SKILLS_2122554_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122554_NAME": {
+    "en": "You...you're... AARRGHHH...!",
+    "es": "Eres... eres... ¡AARRGHHH...!",
+    "id": "Kau...Kau... AARRGHHH...!",
+    "pt": "Você... você... AARRGHHH...!",
+    "th": "เจ้า...เจ้ามัน...อ๊ากกกกก…!",
+    "vi": "You...you're... AARRGHHH...!"
+  },
+  "MST_SKILLS_2122555_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122555_NAME": {
+    "en": "Make sure to get enough sleep!",
+    "es": "¡No te olvides de dormir ocho horas!",
+    "id": "Pastikan tidur cukup!",
+    "pt": "Durma bastante!",
+    "th": "นอนให้พอนะ!",
+    "vi": "Make sure to get enough sleep!"
+  },
+  "MST_SKILLS_2122556_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122556_NAME": {
+    "en": "Fresh air is healthy for you!",
+    "es": "¡El aire fresco es sano!",
+    "id": "Udara segar sehat untukmu!",
+    "pt": "Ar fresco faz bem pra saúde!",
+    "th": "อากาศสดชื่นมันดีกับเจ้านะ!",
+    "vi": "Fresh air is healthy for you!"
+  },
+  "MST_SKILLS_212255_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_212255_NAME": {
+    "en": "Well done. I'm thrilled.",
+    "es": "Bien hecho. Me dejas anonadado.",
+    "id": "Bagus. Aku menantinya.",
+    "pt": "Muito bem. Estou ansioso.",
+    "th": "เยี่ยมมาก ข้าชักตื่นเต้นแล้ว",
+    "vi": "Well done. I'm thrilled."
+  },
+  "MST_SKILLS_21225600_NAME": {
+    "en": "I'll make you my adversary.",
+    "es": "I'll make you my adversary.",
+    "id": "Aku akan membuatmu musuhku.",
+    "pt": "I'll make you my adversary.",
+    "th": "ข้าจะเป็นคู่แข่งของเจ้า",
+    "vi": "I'll make you my adversary."
+  },
+  "MST_SKILLS_2122560_DESCRIPTION": {
+    "en": "14 combo Earth and Dark attack on all enemies & probable Curse effect",
+    "es": "Combo grupal de 14 ataques oscuros y térreos. Puede causar Maldición",
+    "id": "14 kombo serangan Bumi dan Gelap ke semua musuh & kemungkinan efek Kutukan",
+    "pt": "Combo de 14 golpes de Terra e Sombra em todos inimigos e provável efeito de Maldição",
+    "th": "14 คอมโบ โจมตีธาตุดิน กับ มืด ใส่ศัตรูทั้งหมด และ อาจจะทำให้คิดสถานะ คำสาป",
+    "vi": "14 combo Earth and Dark attack on all enemies & probable Curse effect"
+  },
+  "MST_SKILLS_2122560_NAME": {
+    "en": "Spiritual Paradise Zephyr",
+    "es": "Paraíso ulterior del céfiro",
+    "id": "Surga Spiritual Zephyr",
+    "pt": "Paraiso de Zephyr",
+    "th": "สปิริทชวล พาราไดซ์ เซฟาย",
+    "vi": "Spiritual Paradise Zephyr"
+  },
+  "MST_SKILLS_2122561_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122561_NAME": {
+    "en": "Illusion",
+    "es": "Ilusión",
+    "id": "Ilusi",
+    "pt": "Ilusão",
+    "th": "อิลลูชั่น",
+    "vi": "Illusion"
+  },
+  "MST_SKILLS_2122562_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122562_NAME": {
+    "en": "Why do you help the humans?",
+    "es": "¿Por qué ayudas a los humanos?",
+    "id": "Mengapa kau membantu manusia?",
+    "pt": "Por que ajudar os humanos?",
+    "th": "ทำไมเจ้าถึงไปช่วยมนุษย์?",
+    "vi": "Why do you help the humans?"
+  },
+  "MST_SKILLS_2122563_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122563_NAME": {
+    "en": "They are all so mean!",
+    "es": "¡Son tan malos!",
+    "id": "Mereka semua begitu kejam!",
+    "pt": "Eles são tão cruéis!",
+    "th": "พวกเขาล้วนหยาบคาย!",
+    "vi": "They are all so mean!"
+  },
+  "MST_SKILLS_2122564_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122564_NAME": {
+    "en": "But...everyone's still alive!",
+    "es": "Pero... ¡todos aún viven!",
+    "id": "Tapi...semuanya masih hidup!",
+    "pt": "Mas... estão todos vivos!",
+    "th": "แต่...ทุกคนยังมีชีวิตอยู่!",
+    "vi": "But...everyone's still alive!"
+  },
+  "MST_SKILLS_2122565_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122565_NAME": {
+    "en": "They can't just do as they want!",
+    "es": "¡No pueden hacer lo que les dé la gana!",
+    "id": "Mereka tidak bisa seenaknya!",
+    "pt": "Eles não podem fazer o que bem entendem!",
+    "th": "พวกเขาไม่สามารถทำในสิ่งที่ต้องการได้!",
+    "vi": "They can't just do as they want!"
+  },
+  "MST_SKILLS_2122566_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122566_NAME": {
+    "en": "I want to help everyone!!",
+    "es": "¡Quiero ayudar a todos!",
+    "id": "Aku ingin membantu semua orang!!",
+    "pt": "Eu quero ajudar todo mundo!!",
+    "th": "ข้าต้องการจะช่วยทุกคน!!",
+    "vi": "I want to help everyone!!"
+  },
+  "MST_SKILLS_2122567_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122567_NAME": {
+    "en": "Why can't you see it?",
+    "es": "¿Por qué no lo ves?",
+    "id": "Mengapa kau tidak dapat melihatnya?",
+    "pt": "Não entende?",
+    "th": "เจ้ามองไม่เห็นรึ?",
+    "vi": "Why can't you see it?"
+  },
+  "MST_SKILLS_2122568_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122568_NAME": {
+    "en": "Why can't you hear me...?",
+    "es": "¿Por qué no puedes oírme...?",
+    "id": "Mengapa kau tidak dapat mendengarku...?",
+    "pt": "Por que não me escuta...?",
+    "th": "ทำไมเจ้าไม่ได้ยินข้าล่ะ...?",
+    "vi": "Why can't you hear me...?"
+  },
+  "MST_SKILLS_2122569_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122569_NAME": {
+    "en": "You're so ignorant!!",
+    "es": "¡Eres tan ignorante!",
+    "id": "Kau begitu tidak perhatian!!",
+    "pt": "Você é tão ignorante!!",
+    "th": "ยืนเฉยอยู่ได้!!",
+    "vi": "You're so ignorant!!"
+  },
+  "MST_SKILLS_212256_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_212256_NAME": {
+    "en": "I'll make you my adversary.",
+    "es": "Te convertiré en mi rival.",
+    "id": "Kau akan kujadikan musuhku.",
+    "pt": "Vou enfrentar você.",
+    "th": "ข้าจะทำให้เจ้าเป็นคู่ต่อสู้ของข้า",
+    "vi": "I'll make you my adversary."
+  },
+  "MST_SKILLS_21225700_NAME": {
+    "en": "Your art is not what I seek.",
+    "es": "Your art is not what I seek.",
+    "id": "Teknikmu bukan yang kucari.",
+    "pt": "Your art is not what I seek.",
+    "th": "ข้าไม่เคยเห็นการต่อสู้แบบเจ้า",
+    "vi": "Your art is not what I seek."
+  },
+  "MST_SKILLS_2122570_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122570_NAME": {
+    "en": "I hate you!!",
+    "es": "¡Te odio!",
+    "id": "Aku benci kamu!!",
+    "pt": "Eu te odeio!!",
+    "th": "ข้าเกลียดเจ้า!!",
+    "vi": "I hate you!!"
+  },
+  "MST_SKILLS_2122571_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122571_NAME": {
+    "en": "Die with your human friends!!",
+    "es": "¡Muere con tus amigos humanos!",
+    "id": "Matilah bersama teman-teman manusiamu!",
+    "pt": "Morra com seus amigos humanos!!",
+    "th": "จงตายพร้อมกับเพื่อนมนุษย์ของเจ้าซะเถอะ!!",
+    "vi": "Die with your human friends!!"
+  },
+  "MST_SKILLS_2122572_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122572_NAME": {
+    "en": "Sister...",
+    "es": "Hermana...",
+    "id": "Kakak...",
+    "pt": "Irmã...",
+    "th": "ท่านพี่...",
+    "vi": "Sister..."
+  },
+  "MST_SKILLS_212257_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_212257_NAME": {
+    "en": "Your art is not what I seek.",
+    "es": "Tu arte no es lo que busco.",
+    "id": "Senimu bukan yang kucari",
+    "pt": "Sua arte não é o que busco.",
+    "th": "การต่อสู้ของเจ้าไม่ใช่อย่างที่ข้าเห็น",
+    "vi": "Your art is not what I seek."
+  },
+  "MST_SKILLS_21225800_NAME": {
+    "en": "I've a reputation to uphold.",
+    "es": "I've a reputation to uphold.",
+    "id": "Aku punya reputasi.",
+    "pt": "I've a reputation to uphold.",
+    "th": "ข้าจะกอบกู้ชื่อเสียงกลับมา",
+    "vi": "I've a reputation to uphold."
+  },
+  "MST_SKILLS_2122580_DESCRIPTION": {
+    "en": "15 combo Thunder and Light attack on all enemies & probable Injury effect",
+    "es": "Combo grupal de 15 poderosos ataques atronadores y lumínicos. Puede causar Herida",
+    "id": "15 kombo serangan Guntur dan Terang ke semua musuh & kemungkinan efek Luka",
+    "pt": "Combo de 15 golpes de Trovão e Luz em todos os inimigos e provável efeito lesão",
+    "th": "15 คอมโบ โจมตีธาตุสายฟ้า กับ แสง ใส่ศัตรูทั้งหมด และ อาจจะทำให้คิดสถานะ บาดเจ็บ",
+    "vi": "15 combo Thunder and Light attack on all enemies & probable Injury effect"
+  },
+  "MST_SKILLS_2122580_NAME": {
+    "en": "12th Shinto Form: Sengou",
+    "es": "12va forma shinto: Sengou",
+    "id": "Bentuk Shinto ke-12: Sengou",
+    "pt": "12ª Forma Shinto: Sengou",
+    "th": "ร่างที่ 12 ของชินโตะ: เซ็นโก",
+    "vi": "12th Shinto Form: Sengou"
+  },
+  "MST_SKILLS_2122581_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122581_NAME": {
+    "en": "Crusade Form: Sky Crusher",
+    "es": "Forma de cruzado: Matacielos",
+    "id": "Bentuk Perang: Penghancur Langit",
+    "pt": "Forma Cruzador: Céu Esmagador",
+    "th": "ร่างครูเสด: สกาย ครัชเชอร์",
+    "vi": "Crusade Form: Sky Crusher"
+  },
+  "MST_SKILLS_2122582_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122582_NAME": {
+    "en": "I know what you must think...",
+    "es": "Sé lo que debes pensar...",
+    "id": "Aku tahu apa yang kau pikirkan...",
+    "pt": "Sei o que deve estar pensando...",
+    "th": "ข้ารู้ในสิ่งที่เจ้าคิด",
+    "vi": "I know what you must think..."
+  },
+  "MST_SKILLS_2122583_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122583_NAME": {
+    "en": "Their actions have meaning.",
+    "es": "Sus acciones tienen un significado.",
+    "id": "Tindakan mereka memiliki arti/",
+    "pt": "Suas atitudes significaram algo.",
+    "th": "การกระทำของพวกเขาล้วนมีความหมาย",
+    "vi": "Their actions have meaning."
+  },
+  "MST_SKILLS_2122584_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122584_NAME": {
+    "en": "So we should destroy them?",
+    "es": "¿Qué tal si los destruimos?",
+    "id": "Jadi kita harus menghancurkan mereka?",
+    "pt": "Então devíamos destrui-los?",
+    "th": "ดังนั้นเราจึงควรกำจัดพวกเขา?",
+    "vi": "So we should destroy them?"
+  },
+  "MST_SKILLS_2122585_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122585_NAME": {
+    "en": "Is revenge the real answer?",
+    "es": "¿La venganza es la verdadera respuesta?",
+    "id": "Apakah balas dendam itu jawaban sesungguhnya?",
+    "pt": "Será que vingança é a resposta?",
+    "th": "การแก้แค้นคือคำตอบที่แท้จริงรึ?",
+    "vi": "Is revenge the real answer?"
+  },
+  "MST_SKILLS_2122586_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122586_NAME": {
+    "en": "Argh... This power...!",
+    "es": "Argh... ¡Este poder...!",
+    "id": "Argh... Kekuatan ini...!",
+    "pt": "Argh... Esse poder...!",
+    "th": "อาห์...พลังนี้มัน…!",
+    "vi": "Argh... This power...!"
+  },
+  "MST_SKILLS_2122587_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122587_NAME": {
+    "en": "Must I answer with force...?!",
+    "es": "¡¿Tengo que responder con fuerza...?!",
+    "id": "Apakah harus kujawab dengan kekuatan?!",
+    "pt": "Devo responder com força...??",
+    "th": "ข้าควรตอบโต้กลับเป็นคำตอบ...?!",
+    "vi": "Must I answer with force...?!"
+  },
+  "MST_SKILLS_2122588_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
   "MST_SKILLS_2122588_NAME": {
     "en": "Paula! Listen to me!",
     "es": "¡Paula! ¡Óyeme!",
@@ -84935,6 +85623,22 @@
     "th": "ไซเลนท์ สลอธเตอร์",
     "vi": "Silent Slaughter"
   },
+  "MST_SKILLS_2710227_DESCRIPTION": {
+    "en": "22 combo massive Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormous additional damage reduction for 3 turns, 100% damage reduction for 3 turns, enormously boosts Fire elemental damage for 3 turns & enormously boosts Def relative to Atk for 3 turns",
+    "es": "22 combo massive Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormous additional damage reduction for 3 turns, 100% damage reduction for 3 turns, enormously boosts Fire elemental damage for 3 turns & enormously boosts Def relative to Atk for 3 turns",
+    "id": "22 combo massive Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormous additional damage reduction for 3 turns, 100% damage reduction for 3 turns, enormously boosts Fire elemental damage for 3 turns & enormously boosts Def relative to Atk for 3 turns",
+    "pt": "22 combo massive Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormous additional damage reduction for 3 turns, 100% damage reduction for 3 turns, enormously boosts Fire elemental damage for 3 turns & enormously boosts Def relative to Atk for 3 turns",
+    "th": "22 combo massive Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormous additional damage reduction for 3 turns, 100% damage reduction for 3 turns, enormously boosts Fire elemental damage for 3 turns & enormously boosts Def relative to Atk for 3 turns",
+    "vi": "22 combo massive Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormous additional damage reduction for 3 turns, 100% damage reduction for 3 turns, enormously boosts Fire elemental damage for 3 turns & enormously boosts Def relative to Atk for 3 turns"
+  },
+  "MST_SKILLS_2710227_NAME": {
+    "en": "Last Stand",
+    "es": "Last Stand",
+    "id": "Last Stand",
+    "pt": "Last Stand",
+    "th": "Last Stand",
+    "vi": "Last Stand"
+  },
   "MST_SKILLS_2710_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -85111,6 +85815,22 @@
     "th": "อย่าเพิ่งไป รอจังหวะเปิดก่อน",
     "vi": "Không đi. Đang chờ mở."
   },
+  "MST_SKILLS_2730257_DESCRIPTION": {
+    "en": "Hugely boosts OD gauge, enormously boosts Atk, Def relative to max HP for 5 turns, enormously boosts Atk, Def for 5 turns, greatly raises normal hit amount for 5 turns, enormously boosts BB gauge for 5 turns & adds 1 extra action within the same turn",
+    "es": "Hugely boosts OD gauge, enormously boosts Atk, Def relative to max HP for 5 turns, enormously boosts Atk, Def for 5 turns, greatly raises normal hit amount for 5 turns, enormously boosts BB gauge for 5 turns & adds 1 extra action within the same turn",
+    "id": "Hugely boosts OD gauge, enormously boosts Atk, Def relative to max HP for 5 turns, enormously boosts Atk, Def for 5 turns, greatly raises normal hit amount for 5 turns, enormously boosts BB gauge for 5 turns & adds 1 extra action within the same turn",
+    "pt": "Hugely boosts OD gauge, enormously boosts Atk, Def relative to max HP for 5 turns, enormously boosts Atk, Def for 5 turns, greatly raises normal hit amount for 5 turns, enormously boosts BB gauge for 5 turns & adds 1 extra action within the same turn",
+    "th": "Hugely boosts OD gauge, enormously boosts Atk, Def relative to max HP for 5 turns, enormously boosts Atk, Def for 5 turns, greatly raises normal hit amount for 5 turns, enormously boosts BB gauge for 5 turns & adds 1 extra action within the same turn",
+    "vi": "Hugely boosts OD gauge, enormously boosts Atk, Def relative to max HP for 5 turns, enormously boosts Atk, Def for 5 turns, greatly raises normal hit amount for 5 turns, enormously boosts BB gauge for 5 turns & adds 1 extra action within the same turn"
+  },
+  "MST_SKILLS_2730257_NAME": {
+    "en": "Stratospheric Energy",
+    "es": "Stratospheric Energy",
+    "id": "Stratospheric Energy",
+    "pt": "Stratospheric Energy",
+    "th": "Stratospheric Energy",
+    "vi": "Stratospheric Energy"
+  },
   "MST_SKILLS_2730_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -85158,6 +85878,22 @@
     "pt": "Timely Reinforcements",
     "th": "Timely Reinforcements",
     "vi": "Timely Reinforcements"
+  },
+  "MST_SKILLS_2740247_DESCRIPTION": {
+    "en": "9 combo massive Thunder attack on all foes (damage relative to remaining HP), 3 combo massive Fire, Thunder, Light, Dark attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts all elemental damage for 3 turns & enormously boosts max HP",
+    "es": "9 combo massive Thunder attack on all foes (damage relative to remaining HP), 3 combo massive Fire, Thunder, Light, Dark attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts all elemental damage for 3 turns & enormously boosts max HP",
+    "id": "9 combo massive Thunder attack on all foes (damage relative to remaining HP), 3 combo massive Fire, Thunder, Light, Dark attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts all elemental damage for 3 turns & enormously boosts max HP",
+    "pt": "9 combo massive Thunder attack on all foes (damage relative to remaining HP), 3 combo massive Fire, Thunder, Light, Dark attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts all elemental damage for 3 turns & enormously boosts max HP",
+    "th": "9 combo massive Thunder attack on all foes (damage relative to remaining HP), 3 combo massive Fire, Thunder, Light, Dark attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts all elemental damage for 3 turns & enormously boosts max HP",
+    "vi": "9 combo massive Thunder attack on all foes (damage relative to remaining HP), 3 combo massive Fire, Thunder, Light, Dark attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts all elemental damage for 3 turns & enormously boosts max HP"
+  },
+  "MST_SKILLS_2740247_NAME": {
+    "en": "Immortal Myth",
+    "es": "Immortal Myth",
+    "id": "Immortal Myth",
+    "pt": "Immortal Myth",
+    "th": "Immortal Myth",
+    "vi": "Immortal Myth"
   },
   "MST_SKILLS_2740_DESCRIPTION": {
     "en": "None",
@@ -85784,12 +86520,12 @@
     "vi": "DM: Ryuuenbu MAX"
   },
   "MST_SKILLS_2810178_DESCRIPTION": {
-    "en": "23 combo massive Fire attack on all foes, enormously boosts critcal hit damage for 3 turns, enormous 2 turn Atk, Def reduction, adds probablity to perform 1 extra action within the same turn & enormously boosts Atk relative to Def for 3 turns",
-    "es": "23 combo massive Fire attack on all foes, enormously boosts critcal hit damage for 3 turns, enormous 2 turn Atk, Def reduction, adds probablity to perform 1 extra action within the same turn & enormously boosts Atk relative to Def for 3 turns",
-    "id": "23 kombo serangan Api masif ke semua musuh, 3 giliran ekstra jumbo: kerusakan ampuh, pengurangan Serang, Tahan 2 giliran, Serang sesuai Tahan; tambah kans melakukan 1 tindakan ekstra dalam giliran yang sama",
-    "pt": "23 combo massive Fire attack on all foes, enormously boosts critcal hit damage for 3 turns, enormous 2 turn Atk, Def reduction, adds probablity to perform 1 extra action within the same turn & enormously boosts Atk relative to Def for 3 turns",
-    "th": "23 คอมโบ โจมตีธาตุไฟรุนแรงมหาศาล ใส่ศัตรูทั้งหมด, เพิ่มค่ามหาศาลให้ ความเสียหายคริติคอล นาน 3 เทิร์น, 2 เทิร์น ลดค่า โจมตี, ป้องกัน มหาศาล, ให้ โอกาสที่จะใช้เพิ่ม 1 คำสั่งภายในเทิร์นเดียวกัน และ เพิ่มค่ามหาศาลให้ โจมตี สัมพันธ์กับ ป้องกัน นาน 3 เทิร์น",
-    "vi": "23 combo massive Fire attack on all foes, enormously boosts critcal hit damage for 3 turns, enormous 2 turn Atk, Def reduction, adds probablity to perform 1 extra action within the same turn & enormously boosts Atk relative to Def for 3 turns"
+    "en": "23 combo massive Fire attack on all foes, enormously boosts critical damage for 3 turns, adds 1 extra action within the same turn, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec and enormously boosts critical hit rate for 3 turns & enormously boosts Atk relative to Def for 3 turns",
+    "es": "23 combo massive Fire attack on all foes, enormously boosts critical damage for 3 turns, adds 1 extra action within the same turn, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec and enormously boosts critical hit rate for 3 turns & enormously boosts Atk relative to Def for 3 turns",
+    "id": "23 combo massive Fire attack on all foes, enormously boosts critical damage for 3 turns, adds 1 extra action within the same turn, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec and enormously boosts critical hit rate for 3 turns & enormously boosts Atk relative to Def for 3 turns",
+    "pt": "23 combo massive Fire attack on all foes, enormously boosts critical damage for 3 turns, adds 1 extra action within the same turn, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec and enormously boosts critical hit rate for 3 turns & enormously boosts Atk relative to Def for 3 turns",
+    "th": "23 combo massive Fire attack on all foes, enormously boosts critical damage for 3 turns, adds 1 extra action within the same turn, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec and enormously boosts critical hit rate for 3 turns & enormously boosts Atk relative to Def for 3 turns",
+    "vi": "23 combo massive Fire attack on all foes, enormously boosts critical damage for 3 turns, adds 1 extra action within the same turn, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec and enormously boosts critical hit rate for 3 turns & enormously boosts Atk relative to Def for 3 turns"
   },
   "MST_SKILLS_2810178_NAME": {
     "en": "SDM: Ryuuenbu MAX",
@@ -85815,6 +86551,22 @@
     "th": "DM: โอโรจิ นางิ แม็กซ์",
     "vi": "DM: Orochi Nagi MAX"
   },
+  "MST_SKILLS_2810188_DESCRIPTION": {
+    "en": "25 combo massive Fire attack on all foes (damage relative to remaining HP), 4 combo massive Fire attack on single foe, hugely raises normal hit amount for 3 turns, enormously boosts Spark damage for 3 turns, Spark damage hugely boosts BB gauge for 3 turns & massive additional attack at turn's end for 3 turns",
+    "es": "25 combo massive Fire attack on all foes (damage relative to remaining HP), 4 combo massive Fire attack on single foe, hugely raises normal hit amount for 3 turns, enormously boosts Spark damage for 3 turns, Spark damage hugely boosts BB gauge for 3 turns & massive additional attack at turn's end for 3 turns",
+    "id": "25 combo massive Fire attack on all foes (damage relative to remaining HP), 4 combo massive Fire attack on single foe, hugely raises normal hit amount for 3 turns, enormously boosts Spark damage for 3 turns, Spark damage hugely boosts BB gauge for 3 turns & massive additional attack at turn's end for 3 turns",
+    "pt": "25 combo massive Fire attack on all foes (damage relative to remaining HP), 4 combo massive Fire attack on single foe, hugely raises normal hit amount for 3 turns, enormously boosts Spark damage for 3 turns, Spark damage hugely boosts BB gauge for 3 turns & massive additional attack at turn's end for 3 turns",
+    "th": "25 combo massive Fire attack on all foes (damage relative to remaining HP), 4 combo massive Fire attack on single foe, hugely raises normal hit amount for 3 turns, enormously boosts Spark damage for 3 turns, Spark damage hugely boosts BB gauge for 3 turns & massive additional attack at turn's end for 3 turns",
+    "vi": "25 combo massive Fire attack on all foes (damage relative to remaining HP), 4 combo massive Fire attack on single foe, hugely raises normal hit amount for 3 turns, enormously boosts Spark damage for 3 turns, Spark damage hugely boosts BB gauge for 3 turns & massive additional attack at turn's end for 3 turns"
+  },
+  "MST_SKILLS_2810188_NAME": {
+    "en": "SDM: Saishuu Kessen Ougi MAX",
+    "es": "SDM: Saishuu Kessen Ougi MAX",
+    "id": "SDM: Saishuu Kessen Ougi MAX",
+    "pt": "SDM: Saishuu Kessen Ougi MAX",
+    "th": "SDM: Saishuu Kessen Ougi MAX",
+    "vi": "SDM: Saishuu Kessen Ougi MAX"
+  },
   "MST_SKILLS_2810277_DESCRIPTION": {
     "en": "20 combo massive Fire attack on all foes, enormously boosts Spark damage for 3 turns, inflicts enormous Spark vulnerability for 3 turns, enormously boosts Atk for 3 turns & adds additional massive attack at turn's end for 3 turns",
     "es": "20 combo massive Fire attack on all foes, enormously boosts Spark damage for 3 turns, inflicts enormous Spark vulnerability for 3 turns, enormously boosts Atk for 3 turns & adds additional massive attack at turn's end for 3 turns",
@@ -85834,9 +86586,9 @@
   "MST_SKILLS_2810278_DESCRIPTION": {
     "en": "25 combo massive Fire attack on all foes, enormously boosts Spark damage for 3 turns, inflicts enormous Spark vulnerability for 3 turns, enormously boosts Atk for 3 turns, additional massive attack at turn's end for 3 turns & enormously boosts Fire elemental damage for 3 turns",
     "es": "25 combo massive Fire attack on all foes, enormously boosts Spark damage for 3 turns, inflicts enormous Spark vulnerability for 3 turns, enormously boosts Atk for 3 turns, additional massive attack at turn's end for 3 turns & enormously boosts Fire elemental damage for 3 turns",
-    "id": "25 kombo serangan Api masif ke semua musuh, 3 giliran: ekstra jumbo kerusakan Percikan, Serang, kerusakan elemen Api; beri rentan Percikan, ekstra serangan masif di akhir giliran",
+    "id": "25 combo massive Fire attack on all foes, enormously boosts Spark damage for 3 turns, inflicts enormous Spark vulnerability for 3 turns, enormously boosts Atk for 3 turns, additional massive attack at turn's end for 3 turns & enormously boosts Fire elemental damage for 3 turns",
     "pt": "25 combo massive Fire attack on all foes, enormously boosts Spark damage for 3 turns, inflicts enormous Spark vulnerability for 3 turns, enormously boosts Atk for 3 turns, additional massive attack at turn's end for 3 turns & enormously boosts Fire elemental damage for 3 turns",
-    "th": "25 คอมโบ โจมตีธาตุไฟรุนแรงมหาศาล ใส่ศัตรูทั้งหมด, เพิ่มค่ามหาศาลให้ ความเสียหายสปาร์ค นาน 3 เทิร์น, ทำให้ติดอ่อนแอต่อสปาร์คมหาศาล นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ โจมตี นาน 3 เทิร์น, โจมตีอีกครั้ง อย่างรุนแรงมหาศาล เมื่อตอนจบเทิร์น นาน 3 เทิร์น และ เพิ่มค่ามหาศาลให้ความเสียหายธาตุ ไฟ  นาน 3 เทิร์น",
+    "th": "25 combo massive Fire attack on all foes, enormously boosts Spark damage for 3 turns, inflicts enormous Spark vulnerability for 3 turns, enormously boosts Atk for 3 turns, additional massive attack at turn's end for 3 turns & enormously boosts Fire elemental damage for 3 turns",
     "vi": "25 combo massive Fire attack on all foes, enormously boosts Spark damage for 3 turns, inflicts enormous Spark vulnerability for 3 turns, enormously boosts Atk for 3 turns, additional massive attack at turn's end for 3 turns & enormously boosts Fire elemental damage for 3 turns"
   },
   "MST_SKILLS_2810278_NAME": {
@@ -86184,12 +86936,12 @@
     "vi": "Luminent Phoenix"
   },
   "MST_SKILLS_2810508_DESCRIPTION": {
-    "en": "Enormously reduces damage taken for 2 turns, hugely boosts max HP, hugely boosts Atk relative to max HP for 3 turns, fully restores HP for 3 turns & raises allies from KO",
-    "es": "Enormously reduces damage taken for 2 turns, hugely boosts max HP, hugely boosts Atk relative to max HP for 3 turns, fully restores HP for 3 turns & raises allies from KO",
-    "id": "Pengurangan jumbo kerusakan diderita untuk 2 giliran, amat menambah HP maks, 3 giliran: amat menambah Serangan sesuai HP maks, HP pulih utuh, membangkitkan sekutu dari KO",
-    "pt": "Enormously reduces damage taken for 2 turns, hugely boosts max HP, hugely boosts Atk relative to max HP for 3 turns, fully restores HP for 3 turns & raises allies from KO",
-    "th": "ลดค่ามหาศาลให้ ความเสียหายที่ได้รับ นาน 2 เทิร์น, เพิ่มค่าอย่างสูงให้ HP สูงสุด, เพิ่มค่าอย่างสูงให้ โจมตี สัมพันธ์กับ HP สูงสุด นาน 3 เทิร์น, ฟื้นคืน HP จนเต็ม นาน 3 เทิร์น และ คืนชีพพันธมิตรจากน็อคเอ๊าท์",
-    "vi": "Enormously reduces damage taken for 2 turns, hugely boosts max HP, hugely boosts Atk relative to max HP for 3 turns, fully restores HP for 3 turns & raises allies from KO"
+    "en": "28 combo massive Fire attack on all foes (damage relative to remaining HP), enormously reduces damage taken for 3 turns, enormously boosts max HP, enormously boosts Atk, Def relative to max HP for 3 turns, fully restores HP for 3 turns & raises allies from KO",
+    "es": "28 combo massive Fire attack on all foes (damage relative to remaining HP), enormously reduces damage taken for 3 turns, enormously boosts max HP, enormously boosts Atk, Def relative to max HP for 3 turns, fully restores HP for 3 turns & raises allies from KO",
+    "id": "28 combo massive Fire attack on all foes (damage relative to remaining HP), enormously reduces damage taken for 3 turns, enormously boosts max HP, enormously boosts Atk, Def relative to max HP for 3 turns, fully restores HP for 3 turns & raises allies from KO",
+    "pt": "28 combo massive Fire attack on all foes (damage relative to remaining HP), enormously reduces damage taken for 3 turns, enormously boosts max HP, enormously boosts Atk, Def relative to max HP for 3 turns, fully restores HP for 3 turns & raises allies from KO",
+    "th": "28 combo massive Fire attack on all foes (damage relative to remaining HP), enormously reduces damage taken for 3 turns, enormously boosts max HP, enormously boosts Atk, Def relative to max HP for 3 turns, fully restores HP for 3 turns & raises allies from KO",
+    "vi": "28 combo massive Fire attack on all foes (damage relative to remaining HP), enormously reduces damage taken for 3 turns, enormously boosts max HP, enormously boosts Atk, Def relative to max HP for 3 turns, fully restores HP for 3 turns & raises allies from KO"
   },
   "MST_SKILLS_2810508_NAME": {
     "en": "Rising Phoenix",
@@ -86454,6 +87206,54 @@
     "pt": "Feurig: Ultimate Blast",
     "th": "Feurig: Ultimate Blast",
     "vi": "Feurig: Ultimate Blast"
+  },
+  "MST_SKILLS_2810708_DESCRIPTION": {
+    "en": "20 combo massive Fire attack on single foe (or probable 7% damage of foe's max HP, enormously boosts own critical hit rate), 4 combo massive Fire attack on single foe (25% active Pierce on Fire, Earth types), 100% damage reduction from Fire, Earth types for 3 turns, enormously boosts Fire elemental damage for 4 turns, enormously boosts critical damage for 4 turns & adds random status ailment infliction to attack for 4 turns",
+    "es": "20 combo massive Fire attack on single foe (or probable 7% damage of foe's max HP, enormously boosts own critical hit rate), 4 combo massive Fire attack on single foe (25% active Pierce on Fire, Earth types), 100% damage reduction from Fire, Earth types for 3 turns, enormously boosts Fire elemental damage for 4 turns, enormously boosts critical damage for 4 turns & adds random status ailment infliction to attack for 4 turns",
+    "id": "20 combo massive Fire attack on single foe (or probable 7% damage of foe's max HP, enormously boosts own critical hit rate), 4 combo massive Fire attack on single foe (25% active Pierce on Fire, Earth types), 100% damage reduction from Fire, Earth types for 3 turns, enormously boosts Fire elemental damage for 4 turns, enormously boosts critical damage for 4 turns & adds random status ailment infliction to attack for 4 turns",
+    "pt": "20 combo massive Fire attack on single foe (or probable 7% damage of foe's max HP, enormously boosts own critical hit rate), 4 combo massive Fire attack on single foe (25% active Pierce on Fire, Earth types), 100% damage reduction from Fire, Earth types for 3 turns, enormously boosts Fire elemental damage for 4 turns, enormously boosts critical damage for 4 turns & adds random status ailment infliction to attack for 4 turns",
+    "th": "20 combo massive Fire attack on single foe (or probable 7% damage of foe's max HP, enormously boosts own critical hit rate), 4 combo massive Fire attack on single foe (25% active Pierce on Fire, Earth types), 100% damage reduction from Fire, Earth types for 3 turns, enormously boosts Fire elemental damage for 4 turns, enormously boosts critical damage for 4 turns & adds random status ailment infliction to attack for 4 turns",
+    "vi": "20 combo massive Fire attack on single foe (or probable 7% damage of foe's max HP, enormously boosts own critical hit rate), 4 combo massive Fire attack on single foe (25% active Pierce on Fire, Earth types), 100% damage reduction from Fire, Earth types for 3 turns, enormously boosts Fire elemental damage for 4 turns, enormously boosts critical damage for 4 turns & adds random status ailment infliction to attack for 4 turns"
+  },
+  "MST_SKILLS_2810708_NAME": {
+    "en": "Hellish Obliteration",
+    "es": "Hellish Obliteration",
+    "id": "Hellish Obliteration",
+    "pt": "Hellish Obliteration",
+    "th": "Hellish Obliteration",
+    "vi": "Hellish Obliteration"
+  },
+  "MST_SKILLS_2810718_DESCRIPTION": {
+    "en": "14 combo massive Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), 100% damage reduction for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts BC, HC drop rates for 3 turns, enormously boosts Atk, Def, Rec relative to max HP for 3 turns & activates Fire Barrier",
+    "es": "14 combo massive Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), 100% damage reduction for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts BC, HC drop rates for 3 turns, enormously boosts Atk, Def, Rec relative to max HP for 3 turns & activates Fire Barrier",
+    "id": "14 combo massive Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), 100% damage reduction for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts BC, HC drop rates for 3 turns, enormously boosts Atk, Def, Rec relative to max HP for 3 turns & activates Fire Barrier",
+    "pt": "14 combo massive Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), 100% damage reduction for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts BC, HC drop rates for 3 turns, enormously boosts Atk, Def, Rec relative to max HP for 3 turns & activates Fire Barrier",
+    "th": "14 combo massive Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), 100% damage reduction for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts BC, HC drop rates for 3 turns, enormously boosts Atk, Def, Rec relative to max HP for 3 turns & activates Fire Barrier",
+    "vi": "14 combo massive Fire attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), 100% damage reduction for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts BC, HC drop rates for 3 turns, enormously boosts Atk, Def, Rec relative to max HP for 3 turns & activates Fire Barrier"
+  },
+  "MST_SKILLS_2810718_NAME": {
+    "en": "Royal Red Flush",
+    "es": "Royal Red Flush",
+    "id": "Royal Red Flush",
+    "pt": "Royal Red Flush",
+    "th": "Royal Red Flush",
+    "vi": "Royal Red Flush"
+  },
+  "MST_SKILLS_2810900_DESCRIPTION": {
+    "en": "18 combo massive Fire attack on all foes (uses all allies' BB gauge), 100% damage reduction from Earth types for 2 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & fully restores HP for 3 turns",
+    "es": "18 combo massive Fire attack on all foes (uses all allies' BB gauge), 100% damage reduction from Earth types for 2 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & fully restores HP for 3 turns",
+    "id": "18 combo massive Fire attack on all foes (uses all allies' BB gauge), 100% damage reduction from Earth types for 2 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & fully restores HP for 3 turns",
+    "pt": "18 combo massive Fire attack on all foes (uses all allies' BB gauge), 100% damage reduction from Earth types for 2 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & fully restores HP for 3 turns",
+    "th": "18 combo massive Fire attack on all foes (uses all allies' BB gauge), 100% damage reduction from Earth types for 2 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & fully restores HP for 3 turns",
+    "vi": "18 combo massive Fire attack on all foes (uses all allies' BB gauge), 100% damage reduction from Earth types for 2 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & fully restores HP for 3 turns"
+  },
+  "MST_SKILLS_2810900_NAME": {
+    "en": "Ignis Burst III",
+    "es": "Ignis Burst III",
+    "id": "Ignis Burst III",
+    "pt": "Ignis Burst III",
+    "th": "Ignis Burst III",
+    "vi": "Ignis Burst III"
   },
   "MST_SKILLS_2810_DESCRIPTION": {
     "en": "None",
@@ -87239,6 +88039,102 @@
     "th": "Vequa: Maelstrom Maîtresse",
     "vi": "Vequa: Maelstrom Maîtresse"
   },
+  "MST_SKILLS_2820668_DESCRIPTION": {
+    "en": "23 combo massive Water attack on single foe (or probable 7% damage of foe's max HP), 5 combo massive Water attack on single foe (25% active Pierce on Fire, Water types), activates BB/SBB/UBB twice for 3 turns, enormously boosts Water elemental damage for 4 turns, adds evasion for 3 turns & adds random status ailment infliction to attack for 4 turns",
+    "es": "23 combo massive Water attack on single foe (or probable 7% damage of foe's max HP), 5 combo massive Water attack on single foe (25% active Pierce on Fire, Water types), activates BB/SBB/UBB twice for 3 turns, enormously boosts Water elemental damage for 4 turns, adds evasion for 3 turns & adds random status ailment infliction to attack for 4 turns",
+    "id": "23 combo massive Water attack on single foe (or probable 7% damage of foe's max HP), 5 combo massive Water attack on single foe (25% active Pierce on Fire, Water types), activates BB/SBB/UBB twice for 3 turns, enormously boosts Water elemental damage for 4 turns, adds evasion for 3 turns & adds random status ailment infliction to attack for 4 turns",
+    "pt": "23 combo massive Water attack on single foe (or probable 7% damage of foe's max HP), 5 combo massive Water attack on single foe (25% active Pierce on Fire, Water types), activates BB/SBB/UBB twice for 3 turns, enormously boosts Water elemental damage for 4 turns, adds evasion for 3 turns & adds random status ailment infliction to attack for 4 turns",
+    "th": "23 combo massive Water attack on single foe (or probable 7% damage of foe's max HP), 5 combo massive Water attack on single foe (25% active Pierce on Fire, Water types), activates BB/SBB/UBB twice for 3 turns, enormously boosts Water elemental damage for 4 turns, adds evasion for 3 turns & adds random status ailment infliction to attack for 4 turns",
+    "vi": "23 combo massive Water attack on single foe (or probable 7% damage of foe's max HP), 5 combo massive Water attack on single foe (25% active Pierce on Fire, Water types), activates BB/SBB/UBB twice for 3 turns, enormously boosts Water elemental damage for 4 turns, adds evasion for 3 turns & adds random status ailment infliction to attack for 4 turns"
+  },
+  "MST_SKILLS_2820668_NAME": {
+    "en": "Reflections Beyond Reality",
+    "es": "Reflections Beyond Reality",
+    "id": "Reflections Beyond Reality",
+    "pt": "Reflections Beyond Reality",
+    "th": "Reflections Beyond Reality",
+    "vi": "Reflections Beyond Reality"
+  },
+  "MST_SKILLS_2820677_DESCRIPTION": {
+    "en": "15 combo massive Water attack on all foes, 15 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, enormously boosts Spark damage for 3 turns & enormously boosts own Spark damage for 3 turns",
+    "es": "15 combo massive Water attack on all foes, 15 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, enormously boosts Spark damage for 3 turns & enormously boosts own Spark damage for 3 turns",
+    "id": "15 combo massive Water attack on all foes, 15 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, enormously boosts Spark damage for 3 turns & enormously boosts own Spark damage for 3 turns",
+    "pt": "15 combo massive Water attack on all foes, 15 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, enormously boosts Spark damage for 3 turns & enormously boosts own Spark damage for 3 turns",
+    "th": "15 combo massive Water attack on all foes, 15 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, enormously boosts Spark damage for 3 turns & enormously boosts own Spark damage for 3 turns",
+    "vi": "15 combo massive Water attack on all foes, 15 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, enormously boosts Spark damage for 3 turns & enormously boosts own Spark damage for 3 turns"
+  },
+  "MST_SKILLS_2820677_NAME": {
+    "en": "Override: Terminate",
+    "es": "Override: Terminate",
+    "id": "Override: Terminate",
+    "pt": "Override: Terminate",
+    "th": "Override: Terminate",
+    "vi": "Override: Terminate"
+  },
+  "MST_SKILLS_2820678_DESCRIPTION": {
+    "en": "36 combo massive Water attack on all foes, 5 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 4 turns, boosts own Spark damage for 4 turns, enormously boosts critical damage for 4 turns & boosts OD gauge at turn's end for 3 turns",
+    "es": "36 combo massive Water attack on all foes, 5 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 4 turns, boosts own Spark damage for 4 turns, enormously boosts critical damage for 4 turns & boosts OD gauge at turn's end for 3 turns",
+    "id": "36 combo massive Water attack on all foes, 5 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 4 turns, boosts own Spark damage for 4 turns, enormously boosts critical damage for 4 turns & boosts OD gauge at turn's end for 3 turns",
+    "pt": "36 combo massive Water attack on all foes, 5 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 4 turns, boosts own Spark damage for 4 turns, enormously boosts critical damage for 4 turns & boosts OD gauge at turn's end for 3 turns",
+    "th": "36 combo massive Water attack on all foes, 5 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 4 turns, boosts own Spark damage for 4 turns, enormously boosts critical damage for 4 turns & boosts OD gauge at turn's end for 3 turns",
+    "vi": "36 combo massive Water attack on all foes, 5 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 4 turns, boosts own Spark damage for 4 turns, enormously boosts critical damage for 4 turns & boosts OD gauge at turn's end for 3 turns"
+  },
+  "MST_SKILLS_2820678_NAME": {
+    "en": "Override: Eliminate",
+    "es": "Override: Eliminate",
+    "id": "Override: Eliminate",
+    "pt": "Override: Eliminate",
+    "th": "Override: Eliminate",
+    "vi": "Override: Eliminate"
+  },
+  "MST_SKILLS_2820717_DESCRIPTION": {
+    "en": "19 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, damage taken enormously restores HP for 3 turns, damage taken enormously boosts BB gauge for 3 turns, Spark vulnerability infliction for 3 turns & enormous additional damage reduction for 3 turns",
+    "es": "19 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, damage taken enormously restores HP for 3 turns, damage taken enormously boosts BB gauge for 3 turns, Spark vulnerability infliction for 3 turns & enormous additional damage reduction for 3 turns",
+    "id": "19 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, damage taken enormously restores HP for 3 turns, damage taken enormously boosts BB gauge for 3 turns, Spark vulnerability infliction for 3 turns & enormous additional damage reduction for 3 turns",
+    "pt": "19 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, damage taken enormously restores HP for 3 turns, damage taken enormously boosts BB gauge for 3 turns, Spark vulnerability infliction for 3 turns & enormous additional damage reduction for 3 turns",
+    "th": "19 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, damage taken enormously restores HP for 3 turns, damage taken enormously boosts BB gauge for 3 turns, Spark vulnerability infliction for 3 turns & enormous additional damage reduction for 3 turns",
+    "vi": "19 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, damage taken enormously restores HP for 3 turns, damage taken enormously boosts BB gauge for 3 turns, Spark vulnerability infliction for 3 turns & enormous additional damage reduction for 3 turns"
+  },
+  "MST_SKILLS_2820717_NAME": {
+    "en": "Rêverie Ménagerie",
+    "es": "Rêverie Ménagerie",
+    "id": "Rêverie Ménagerie",
+    "pt": "Rêverie Ménagerie",
+    "th": "Rêverie Ménagerie",
+    "vi": "Rêverie Ménagerie"
+  },
+  "MST_SKILLS_2820718_DESCRIPTION": {
+    "en": "21 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 4 turns, damage taken enormously restores HP for 4 turns, damage taken enormously boosts BB gauge for 4 turns, Spark vulnerability infliction for 4 turns & enormous additional damage reduction for 4 turns",
+    "es": "21 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 4 turns, damage taken enormously restores HP for 4 turns, damage taken enormously boosts BB gauge for 4 turns, Spark vulnerability infliction for 4 turns & enormous additional damage reduction for 4 turns",
+    "id": "21 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 4 turns, damage taken enormously restores HP for 4 turns, damage taken enormously boosts BB gauge for 4 turns, Spark vulnerability infliction for 4 turns & enormous additional damage reduction for 4 turns",
+    "pt": "21 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 4 turns, damage taken enormously restores HP for 4 turns, damage taken enormously boosts BB gauge for 4 turns, Spark vulnerability infliction for 4 turns & enormous additional damage reduction for 4 turns",
+    "th": "21 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 4 turns, damage taken enormously restores HP for 4 turns, damage taken enormously boosts BB gauge for 4 turns, Spark vulnerability infliction for 4 turns & enormous additional damage reduction for 4 turns",
+    "vi": "21 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 4 turns, damage taken enormously restores HP for 4 turns, damage taken enormously boosts BB gauge for 4 turns, Spark vulnerability infliction for 4 turns & enormous additional damage reduction for 4 turns"
+  },
+  "MST_SKILLS_2820718_NAME": {
+    "en": "Portal Bésixdouze",
+    "es": "Portal Bésixdouze",
+    "id": "Portal Bésixdouze",
+    "pt": "Portal Bésixdouze",
+    "th": "Portal Bésixdouze",
+    "vi": "Portal Bésixdouze"
+  },
+  "MST_SKILLS_2820900_DESCRIPTION": {
+    "en": "18 combo massive Water attack on all foes (uses all allies' BB gauge), 100% damage reduction from Fire types for 2 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & fully restores HP for 3 turns",
+    "es": "18 combo massive Water attack on all foes (uses all allies' BB gauge), 100% damage reduction from Fire types for 2 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & fully restores HP for 3 turns",
+    "id": "18 combo massive Water attack on all foes (uses all allies' BB gauge), 100% damage reduction from Fire types for 2 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & fully restores HP for 3 turns",
+    "pt": "18 combo massive Water attack on all foes (uses all allies' BB gauge), 100% damage reduction from Fire types for 2 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & fully restores HP for 3 turns",
+    "th": "18 combo massive Water attack on all foes (uses all allies' BB gauge), 100% damage reduction from Fire types for 2 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & fully restores HP for 3 turns",
+    "vi": "18 combo massive Water attack on all foes (uses all allies' BB gauge), 100% damage reduction from Fire types for 2 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & fully restores HP for 3 turns"
+  },
+  "MST_SKILLS_2820900_NAME": {
+    "en": "Algor Burst III",
+    "es": "Algor Burst III",
+    "id": "Algor Burst III",
+    "pt": "Algor Burst III",
+    "th": "Algor Burst III",
+    "vi": "Algor Burst III"
+  },
   "MST_SKILLS_2820_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -87432,12 +88328,12 @@
     "vi": "DM: Power Geyser MAX"
   },
   "MST_SKILLS_2830178_DESCRIPTION": {
-    "en": "5 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns",
-    "es": "9 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns",
-    "id": "5 kombo serangan masif Api, Bumi ke semua musuh, pengurangan 100% kerusakan 1 giliran, tambahan besar HP maks, tambahan jumbo Serang, Tahan, Pulih 3 giliran",
-    "pt": "10 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns",
-    "th": "5 คอมโบ โจมตีธาตุ ไฟ, ดิน อย่างรุนแรงมหาศาล ใส่ศัตรูทั้งหมด, 100% ลดค่าความเสียหาย นาน 1 เทิร์น, เพิ่มค่าอย่างสูงให้ HP สูงสุด และ เพิ่มค่าอย่างมหาศาลให้ โจมตี, ป้องกัน, ฟื้นฟู นาน 3 เทิร์น",
-    "vi": "8 combo massive Fire, Earth attack on all foes, 100% damage reduction for 1 turn, hugely boosts max HP & enormously boosts Atk, Def, Rec for 3 turns"
+    "en": "5 combo massive Fire, Earth attack on all foes, 100% damage reduction for 3 turns, greatly boosts max HP, enormously boosts Atk, Def, Rec for 3 turns, hugely boosts Atk, Def relative to max HP for 3 turns & activates Earth shield for 3 turns",
+    "es": "5 combo massive Fire, Earth attack on all foes, 100% damage reduction for 3 turns, greatly boosts max HP, enormously boosts Atk, Def, Rec for 3 turns, hugely boosts Atk, Def relative to max HP for 3 turns & activates Earth shield for 3 turns",
+    "id": "5 combo massive Fire, Earth attack on all foes, 100% damage reduction for 3 turns, greatly boosts max HP, enormously boosts Atk, Def, Rec for 3 turns, hugely boosts Atk, Def relative to max HP for 3 turns & activates Earth shield for 3 turns",
+    "pt": "5 combo massive Fire, Earth attack on all foes, 100% damage reduction for 3 turns, greatly boosts max HP, enormously boosts Atk, Def, Rec for 3 turns, hugely boosts Atk, Def relative to max HP for 3 turns & activates Earth shield for 3 turns",
+    "th": "5 combo massive Fire, Earth attack on all foes, 100% damage reduction for 3 turns, greatly boosts max HP, enormously boosts Atk, Def, Rec for 3 turns, hugely boosts Atk, Def relative to max HP for 3 turns & activates Earth shield for 3 turns",
+    "vi": "5 combo massive Fire, Earth attack on all foes, 100% damage reduction for 3 turns, greatly boosts max HP, enormously boosts Atk, Def, Rec for 3 turns, hugely boosts Atk, Def relative to max HP for 3 turns & activates Earth shield for 3 turns"
   },
   "MST_SKILLS_2830178_NAME": {
     "en": "SDM: Power Geyser MAX",
@@ -87464,12 +88360,12 @@
     "vi": "DM: V-Slasher MAX"
   },
   "MST_SKILLS_2830188_DESCRIPTION": {
-    "en": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage for 3 turns, enormous 3 turn Atk, Def reduction & enormously boosts own Atk, boosts own critical hit rate and hugely reduces own Def for 3 turns",
-    "es": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage, enormous 3 turn Atk, Def reduction & enormously boosts own Atk, boosts own critical hit rate and hugely reduces own Def for 3 turns",
-    "id": "Serangan Bumi masif ke semua musuh (kerusakan sesuai sisa HP), serangan Bumi masif ke 1 musuh, 3 giliran: ekstra jumbo Serang, Tahan, Pulih, Serangan sendiri, dan kerusakan pukulan ampuh; pengurangan jumbo Serang, Tahan; amat kurangi Tahan sendiri & menambah pukulan ampuh sendiri ",
-    "pt": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage, enormous 3 turn Atk, Def reduction & enormously boosts own Atk, boosts own critical hit rate and hugely reduces own Def for 3 turns",
-    "th": "โจมตีธาตุดินรุนแรงมหาศาล ใส่ศัตรูทั้งหมด (ความเสียหาย สัมพันธ์กับ HP ที่เหลืออยู่), โจมตีธาตุดินรุนแรงมหาศาล ใส่ศัตรูเป้าหมาย, เพิ่มค่ามหาศาลให้ โจมตี, ป้องกัน, ฟื้นฟู นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ ความเสียหายคริติคอล นาน 3 เทิร์น, 3 เทิร์น ลดค่า โจมตี, ป้องกัน มหาศาล และ เพิ่มค่ามหาศาลให้ โจมตี ของตนเอง, เพิ่มค่า อัตราเกิดคริติคอลของตนเอง กับ ลดค่า ป้องกัน ของตนเองอย่างสูง นาน 3 เทิร์น",
-    "vi": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage, enormous 3 turn Atk, Def reduction & enormously boosts own Atk, boosts own critical hit rate and hugely reduces own Def for 3 turns"
+    "en": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage for 3 turns, enormous 3 turn Atk, Def reduction & enormously boosts own Atk and considerably reduces own Def for 3 turns",
+    "es": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage for 3 turns, enormous 3 turn Atk, Def reduction & enormously boosts own Atk and considerably reduces own Def for 3 turns",
+    "id": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage for 3 turns, enormous 3 turn Atk, Def reduction & enormously boosts own Atk and considerably reduces own Def for 3 turns",
+    "pt": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage for 3 turns, enormous 3 turn Atk, Def reduction & enormously boosts own Atk and considerably reduces own Def for 3 turns",
+    "th": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage for 3 turns, enormous 3 turn Atk, Def reduction & enormously boosts own Atk and considerably reduces own Def for 3 turns",
+    "vi": "Massive Earth attack on all foes (damage relative to remaining HP), massive Earth attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit damage for 3 turns, enormous 3 turn Atk, Def reduction & enormously boosts own Atk and considerably reduces own Def for 3 turns"
   },
   "MST_SKILLS_2830188_NAME": {
     "en": "SDM: V-Slasher MAX",
@@ -87496,12 +88392,12 @@
     "vi": "Plagueborne Blitzkrieg"
   },
   "MST_SKILLS_2830278_DESCRIPTION": {
-    "en": "26 combo massive Earth attack on all foes, normal attacks hit all foes for 3 turns, enormously boosts Atk for 3 turns, enormously boosts Earth elemental damage for 3 turns & additional massive attack at turn's end for 3 turns",
-    "es": "26 combo massive Earth attack on all foes, normal attacks hit all foes for 3 turns, enormously boosts Atk for 3 turns, enormously boosts Earth elemental damage for 3 turns & additional massive attack at turn's end for 3 turns",
-    "id": "26 kombo serangan Bumi masif ke semua musuh, 3 giliran: serangan normal terkena semua musuh, ekstra jumbo Serangan, kerusakan elemen Bumi, Air, Terang, tambahan serangan masif di akhir giliran",
-    "pt": "26 combo massive Earth attack on all foes, normal attacks hit all foes for 3 turns, enormously boosts Atk for 3 turns, enormously boosts Earth elemental damage for 3 turns & additional massive attack at turn's end for 3 turns",
-    "th": "26 คอมโบ โจมตีธาตุดินรุนแรงมหาศาล ใส่ศัตรูทั้งหมด, การโจมตีธรรมดา ตีโดนศัตรูทั้งหมด นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ โจมตี นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ ธาตุดิน , น้ำ, แสง ความเสียหาย นาน 3 เทิร์น และ เพิ่มโจมตีรุนแรงมหาศาล เมื่อตอนจบเทิร์น นาน 3 เทิร์น",
-    "vi": "26 combo massive Earth attack on all foes, normal attacks hit all foes for 3 turns, enormously boosts Atk for 3 turns, enormously boosts Earth elemental damage for 3 turns & additional massive attack at turn's end for 3 turns"
+    "en": "26 combo massive Earth attack on all foes, normal attacks hit all foes for 3 turns, considerably raises normal hit amount for 3 turns, enormously boosts Atk for 3 turns, enormously boosts Earth elemental damage for 3 turns & massive additional attack at turn's end for 3 turns",
+    "es": "26 combo massive Earth attack on all foes, normal attacks hit all foes for 3 turns, considerably raises normal hit amount for 3 turns, enormously boosts Atk for 3 turns, enormously boosts Earth elemental damage for 3 turns & massive additional attack at turn's end for 3 turns",
+    "id": "26 combo massive Earth attack on all foes, normal attacks hit all foes for 3 turns, considerably raises normal hit amount for 3 turns, enormously boosts Atk for 3 turns, enormously boosts Earth elemental damage for 3 turns & massive additional attack at turn's end for 3 turns",
+    "pt": "26 combo massive Earth attack on all foes, normal attacks hit all foes for 3 turns, considerably raises normal hit amount for 3 turns, enormously boosts Atk for 3 turns, enormously boosts Earth elemental damage for 3 turns & massive additional attack at turn's end for 3 turns",
+    "th": "26 combo massive Earth attack on all foes, normal attacks hit all foes for 3 turns, considerably raises normal hit amount for 3 turns, enormously boosts Atk for 3 turns, enormously boosts Earth elemental damage for 3 turns & massive additional attack at turn's end for 3 turns",
+    "vi": "26 combo massive Earth attack on all foes, normal attacks hit all foes for 3 turns, considerably raises normal hit amount for 3 turns, enormously boosts Atk for 3 turns, enormously boosts Earth elemental damage for 3 turns & massive additional attack at turn's end for 3 turns"
   },
   "MST_SKILLS_2830278_NAME": {
     "en": "Pandemic Holocaust",
@@ -87974,5 +88870,221 @@
     "pt": "Living Kaleidoscope",
     "th": "Living Kaleidoscope",
     "vi": "Living Kaleidoscope"
+  },
+  "MST_SKILLS_2830598_DESCRIPTION": {
+    "en": "23 combo massive Earth attack on all foes, 12 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & purges turn skip effect from all allies",
+    "es": "23 combo massive Earth attack on all foes, 12 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & purges turn skip effect from all allies",
+    "id": "23 combo massive Earth attack on all foes, 12 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & purges turn skip effect from all allies",
+    "pt": "23 combo massive Earth attack on all foes, 12 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & purges turn skip effect from all allies",
+    "th": "23 combo massive Earth attack on all foes, 12 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & purges turn skip effect from all allies",
+    "vi": "23 combo massive Earth attack on all foes, 12 combo massive Earth attack on single foe (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts Earth elemental damage for 3 turns & purges turn skip effect from all allies"
+  },
+  "MST_SKILLS_2830598_NAME": {
+    "en": "Great Terra Seal",
+    "es": "Great Terra Seal",
+    "id": "Great Terra Seal",
+    "pt": "Great Terra Seal",
+    "th": "Great Terra Seal",
+    "vi": "Great Terra Seal"
+  },
+  "MST_SKILLS_2830628_DESCRIPTION": {
+    "en": "25 combo massive Earth attack on all foes (25% active Pierce to Earth, Thunder types), enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts Spark damage for 5 turns, enormously boosts BB Atk for 5 turns, damage taken enormously boosts BB gauge for 5 turns & damage taken enormously restores HP for 3 turns",
+    "es": "25 combo massive Earth attack on all foes (25% active Pierce to Earth, Thunder types), enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts Spark damage for 5 turns, enormously boosts BB Atk for 5 turns, damage taken enormously boosts BB gauge for 5 turns & damage taken enormously restores HP for 3 turns",
+    "id": "25 combo massive Earth attack on all foes (25% active Pierce to Earth, Thunder types), enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts Spark damage for 5 turns, enormously boosts BB Atk for 5 turns, damage taken enormously boosts BB gauge for 5 turns & damage taken enormously restores HP for 3 turns",
+    "pt": "25 combo massive Earth attack on all foes (25% active Pierce to Earth, Thunder types), enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts Spark damage for 5 turns, enormously boosts BB Atk for 5 turns, damage taken enormously boosts BB gauge for 5 turns & damage taken enormously restores HP for 3 turns",
+    "th": "25 combo massive Earth attack on all foes (25% active Pierce to Earth, Thunder types), enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts Spark damage for 5 turns, enormously boosts BB Atk for 5 turns, damage taken enormously boosts BB gauge for 5 turns & damage taken enormously restores HP for 3 turns",
+    "vi": "25 combo massive Earth attack on all foes (25% active Pierce to Earth, Thunder types), enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts Spark damage for 5 turns, enormously boosts BB Atk for 5 turns, damage taken enormously boosts BB gauge for 5 turns & damage taken enormously restores HP for 3 turns"
+  },
+  "MST_SKILLS_2830628_NAME": {
+    "en": "Witherroot Ravage",
+    "es": "Witherroot Ravage",
+    "id": "Witherroot Ravage",
+    "pt": "Witherroot Ravage",
+    "th": "Witherroot Ravage",
+    "vi": "Witherroot Ravage"
+  },
+  "MST_SKILLS_2830647_DESCRIPTION": {
+    "en": "15 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 100% damage reduction from all element types for 2 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 50% additional damage reduction for 3 turns & enormously boosts max HP",
+    "es": "15 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 100% damage reduction from all element types for 2 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 50% additional damage reduction for 3 turns & enormously boosts max HP",
+    "id": "15 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 100% damage reduction from all element types for 2 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 50% additional damage reduction for 3 turns & enormously boosts max HP",
+    "pt": "15 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 100% damage reduction from all element types for 2 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 50% additional damage reduction for 3 turns & enormously boosts max HP",
+    "th": "15 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 100% damage reduction from all element types for 2 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 50% additional damage reduction for 3 turns & enormously boosts max HP",
+    "vi": "15 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 100% damage reduction from all element types for 2 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 50% additional damage reduction for 3 turns & enormously boosts max HP"
+  },
+  "MST_SKILLS_2830647_NAME": {
+    "en": "Iron God Sword Lv. 3",
+    "es": "Iron God Sword Lv. 3",
+    "id": "Iron God Sword Lv. 3",
+    "pt": "Iron God Sword Lv. 3",
+    "th": "Iron God Sword Lv. 3",
+    "vi": "Iron God Sword Lv. 3"
+  },
+  "MST_SKILLS_2830648_DESCRIPTION": {
+    "en": "16 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 3 combo Earth attack on single foe (25% active Pierce on Earth, Thunder types), 100% damage reduction from all element types for 3 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 100% additional damage reduction for 3 turns & enormously boosts max HP",
+    "es": "16 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 3 combo Earth attack on single foe (25% active Pierce on Earth, Thunder types), 100% damage reduction from all element types for 3 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 100% additional damage reduction for 3 turns & enormously boosts max HP",
+    "id": "16 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 3 combo Earth attack on single foe (25% active Pierce on Earth, Thunder types), 100% damage reduction from all element types for 3 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 100% additional damage reduction for 3 turns & enormously boosts max HP",
+    "pt": "16 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 3 combo Earth attack on single foe (25% active Pierce on Earth, Thunder types), 100% damage reduction from all element types for 3 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 100% additional damage reduction for 3 turns & enormously boosts max HP",
+    "th": "16 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 3 combo Earth attack on single foe (25% active Pierce on Earth, Thunder types), 100% damage reduction from all element types for 3 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 100% additional damage reduction for 3 turns & enormously boosts max HP",
+    "vi": "16 combo massive Earth attack on all foes (enormously boosts own critical hit rate, damage relative to remaining HP), 3 combo Earth attack on single foe (25% active Pierce on Earth, Thunder types), 100% damage reduction from all element types for 3 turns, enormously boosts Def, Rec relative to Atk for 3 turns, 100% additional damage reduction for 3 turns & enormously boosts max HP"
+  },
+  "MST_SKILLS_2830648_NAME": {
+    "en": "Iron God Sword MAX",
+    "es": "Iron God Sword MAX",
+    "id": "Iron God Sword MAX",
+    "pt": "Iron God Sword MAX",
+    "th": "Iron God Sword MAX",
+    "vi": "Iron God Sword MAX"
+  },
+  "MST_SKILLS_2830657_DESCRIPTION": {
+    "en": "24 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormous 3 turn Atk, Def reduction & damage taken enormously boosts BB gauge and enormously restores HP for 3 turns",
+    "es": "24 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormous 3 turn Atk, Def reduction & damage taken enormously boosts BB gauge and enormously restores HP for 3 turns",
+    "id": "24 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormous 3 turn Atk, Def reduction & damage taken enormously boosts BB gauge and enormously restores HP for 3 turns",
+    "pt": "24 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormous 3 turn Atk, Def reduction & damage taken enormously boosts BB gauge and enormously restores HP for 3 turns",
+    "th": "24 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormous 3 turn Atk, Def reduction & damage taken enormously boosts BB gauge and enormously restores HP for 3 turns",
+    "vi": "24 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormous 3 turn Atk, Def reduction & damage taken enormously boosts BB gauge and enormously restores HP for 3 turns"
+  },
+  "MST_SKILLS_2830657_NAME": {
+    "en": "Battle Art: Claws of Death",
+    "es": "Battle Art: Claws of Death",
+    "id": "Battle Art: Claws of Death",
+    "pt": "Battle Art: Claws of Death",
+    "th": "Battle Art: Claws of Death",
+    "vi": "Battle Art: Claws of Death"
+  },
+  "MST_SKILLS_2830658_DESCRIPTION": {
+    "en": "26 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormous Spark vulnerability infliction for 3 turns, enormous 3 turn Atk, Def reduction & damage taken enormously boosts BB gauge and enormously restores HP for 3 turns",
+    "es": "26 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormous Spark vulnerability infliction for 3 turns, enormous 3 turn Atk, Def reduction & damage taken enormously boosts BB gauge and enormously restores HP for 3 turns",
+    "id": "26 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormous Spark vulnerability infliction for 3 turns, enormous 3 turn Atk, Def reduction & damage taken enormously boosts BB gauge and enormously restores HP for 3 turns",
+    "pt": "26 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormous Spark vulnerability infliction for 3 turns, enormous 3 turn Atk, Def reduction & damage taken enormously boosts BB gauge and enormously restores HP for 3 turns",
+    "th": "26 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormous Spark vulnerability infliction for 3 turns, enormous 3 turn Atk, Def reduction & damage taken enormously boosts BB gauge and enormously restores HP for 3 turns",
+    "vi": "26 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormous Spark vulnerability infliction for 3 turns, enormous 3 turn Atk, Def reduction & damage taken enormously boosts BB gauge and enormously restores HP for 3 turns"
+  },
+  "MST_SKILLS_2830658_NAME": {
+    "en": "Liebe: Nyan-Jutsu Final Form",
+    "es": "Liebe: Nyan-Jutsu Final Form",
+    "id": "Liebe: Nyan-Jutsu Final Form",
+    "pt": "Liebe: Nyan-Jutsu Final Form",
+    "th": "Liebe: Nyan-Jutsu Final Form",
+    "vi": "Liebe: Nyan-Jutsu Final Form"
+  },
+  "MST_SKILLS_2830678_DESCRIPTION": {
+    "en": "16 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormously boosts Def relative to Atk for 3 turns, 100% damage reduction for 3 turns, enormously boosts max HP & negates critical and elemental damage for 5 turns",
+    "es": "16 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormously boosts Def relative to Atk for 3 turns, 100% damage reduction for 3 turns, enormously boosts max HP & negates critical and elemental damage for 5 turns",
+    "id": "16 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormously boosts Def relative to Atk for 3 turns, 100% damage reduction for 3 turns, enormously boosts max HP & negates critical and elemental damage for 5 turns",
+    "pt": "16 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormously boosts Def relative to Atk for 3 turns, 100% damage reduction for 3 turns, enormously boosts max HP & negates critical and elemental damage for 5 turns",
+    "th": "16 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormously boosts Def relative to Atk for 3 turns, 100% damage reduction for 3 turns, enormously boosts max HP & negates critical and elemental damage for 5 turns",
+    "vi": "16 combo massive Earth attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormously boosts Def relative to Atk for 3 turns, 100% damage reduction for 3 turns, enormously boosts max HP & negates critical and elemental damage for 5 turns"
+  },
+  "MST_SKILLS_2830678_NAME": {
+    "en": "Junkinator",
+    "es": "Junkinator",
+    "id": "Junkinator",
+    "pt": "Junkinator",
+    "th": "Junkinator",
+    "vi": "Junkinator"
+  },
+  "MST_SKILLS_2830697_DESCRIPTION": {
+    "en": "13 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts max HP, damage taken enormously boosts BB gauge for 3 turns, damage taken enormously restores HP for 3 turns, probability of raising allies from KO",
+    "es": "13 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts max HP, damage taken enormously boosts BB gauge for 3 turns, damage taken enormously restores HP for 3 turns, probability of raising allies from KO",
+    "id": "13 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts max HP, damage taken enormously boosts BB gauge for 3 turns, damage taken enormously restores HP for 3 turns, probability of raising allies from KO",
+    "pt": "13 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts max HP, damage taken enormously boosts BB gauge for 3 turns, damage taken enormously restores HP for 3 turns, probability of raising allies from KO",
+    "th": "13 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts max HP, damage taken enormously boosts BB gauge for 3 turns, damage taken enormously restores HP for 3 turns, probability of raising allies from KO",
+    "vi": "13 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts max HP, damage taken enormously boosts BB gauge for 3 turns, damage taken enormously restores HP for 3 turns, probability of raising allies from KO"
+  },
+  "MST_SKILLS_2830697_NAME": {
+    "en": "Memories of Spring",
+    "es": "Memories of Spring",
+    "id": "Memories of Spring",
+    "pt": "Memories of Spring",
+    "th": "Memories of Spring",
+    "vi": "Memories of Spring"
+  },
+  "MST_SKILLS_2830698_DESCRIPTION": {
+    "en": "15 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 4 turns, enormously boosts max HP, damage taken enormously boosts BB gauge for 4 turns, damage taken enormously restores HP for 4 turns, raises allies from KO",
+    "es": "15 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 4 turns, enormously boosts max HP, damage taken enormously boosts BB gauge for 4 turns, damage taken enormously restores HP for 4 turns, raises allies from KO",
+    "id": "15 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 4 turns, enormously boosts max HP, damage taken enormously boosts BB gauge for 4 turns, damage taken enormously restores HP for 4 turns, raises allies from KO",
+    "pt": "15 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 4 turns, enormously boosts max HP, damage taken enormously boosts BB gauge for 4 turns, damage taken enormously restores HP for 4 turns, raises allies from KO",
+    "th": "15 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 4 turns, enormously boosts max HP, damage taken enormously boosts BB gauge for 4 turns, damage taken enormously restores HP for 4 turns, raises allies from KO",
+    "vi": "15 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 4 turns, enormously boosts max HP, damage taken enormously boosts BB gauge for 4 turns, damage taken enormously restores HP for 4 turns, raises allies from KO"
+  },
+  "MST_SKILLS_2830698_NAME": {
+    "en": "Dance of the Fairies",
+    "es": "Dance of the Fairies",
+    "id": "Dance of the Fairies",
+    "pt": "Dance of the Fairies",
+    "th": "Dance of the Fairies",
+    "vi": "Dance of the Fairies"
+  },
+  "MST_SKILLS_2830900_DESCRIPTION": {
+    "en": "18 combo massive Earth attack on all foes (uses all allies' BB gauge), 100% damage reduction from Thunder types for 2 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & fully restores HP for 3 turns",
+    "es": "18 combo massive Earth attack on all foes (uses all allies' BB gauge), 100% damage reduction from Thunder types for 2 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & fully restores HP for 3 turns",
+    "id": "18 combo massive Earth attack on all foes (uses all allies' BB gauge), 100% damage reduction from Thunder types for 2 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & fully restores HP for 3 turns",
+    "pt": "18 combo massive Earth attack on all foes (uses all allies' BB gauge), 100% damage reduction from Thunder types for 2 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & fully restores HP for 3 turns",
+    "th": "18 combo massive Earth attack on all foes (uses all allies' BB gauge), 100% damage reduction from Thunder types for 2 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & fully restores HP for 3 turns",
+    "vi": "18 combo massive Earth attack on all foes (uses all allies' BB gauge), 100% damage reduction from Thunder types for 2 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & fully restores HP for 3 turns"
+  },
+  "MST_SKILLS_2830900_NAME": {
+    "en": "Terra Burst III",
+    "es": "Terra Burst III",
+    "id": "Terra Burst III",
+    "pt": "Terra Burst III",
+    "th": "Terra Burst III",
+    "vi": "Terra Burst III"
+  },
+  "MST_SKILLS_2830_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2830_NAME": {
+    "en": "Holy Crown",
+    "es": "Corona sacra",
+    "id": "Tiara Suci",
+    "pt": "Coroa Sagrada",
+    "th": "โฮลี่ คราวน์",
+    "vi": "Vương miện thần thánh"
+  },
+  "MST_SKILLS_2840047_DESCRIPTION": {
+    "en": "25 combo massive Thunder attack on all foes, considerably boosts OD gauge, enormously boosts Atk relative to Rec for 3 turns & enormously boosts Spark damage for 3 turns",
+    "es": "25 combo massive Thunder attack on all foes, considerably boosts OD gauge, enormously boosts Atk relative to Rec for 3 turns & enormously boosts Spark damage for 3 turns",
+    "id": "25 kombo serangan Guntur masif ke semua musuh, lumayan menambah meteran OD, 3 giliran: ekstra jumbo kerusakan Percikan dan Serangan sesuai Pulih",
+    "pt": "25 combo massive Thunder attack on all foes, considerably boosts OD gauge, enormously boosts Atk relative to Rec for 3 turns & enormously boosts Spark damage for 3 turns",
+    "th": "25 คอมโบ โจมตีธาตุสายฟ้ารุนแรงมหาศาล ใส่ศัตรูทั้งหมด, เพิ่มค่าอย่างมากให้ เกจ OD, เพิ่มค่ามหาศาลให้ โจมตี สัมพันธ์กับ ฟื้นฟู นาน 3 เทิร์น และ เพิ่มค่ามหาศาลให้ ความเสียหายสปาร์ค นาน 3 เทิร์น",
+    "vi": "25 combo massive Thunder attack on all foes, considerably boosts OD gauge, enormously boosts Atk relative to Rec for 3 turns & enormously boosts Spark damage for 3 turns"
+  },
+  "MST_SKILLS_2840047_NAME": {
+    "en": "Gearblaster Crescendo Crash",
+    "es": "Gearblaster Crescendo Crash",
+    "id": "Tabrakan Crescendo Pistol",
+    "pt": "Gearblaster Crescendo Crash",
+    "th": "เกียร์บลาสต์เตอร์ เครสเซ็นโด้ แครช",
+    "vi": "Gearblaster Crescendo Crash"
+  },
+  "MST_SKILLS_2840048_DESCRIPTION": {
+    "en": "30 combo massive Thunder attack on all foes, considerably boosts OD gauge, enormously boosts Atk relative to Rec for 3 turns, enormously boosts Spark damage for 3 turns & enormously boosts Thunder elemental damage for 3 turns",
+    "es": "30 combo massive Thunder attack on all foes, considerably boosts OD gauge, enormously boosts Atk relative to Rec for 3 turns, enormously boosts Spark damage for 3 turns & enormously boosts Thunder elemental damage for 3 turns",
+    "id": "30 kombo serangan Guntur masif ke semua musuh, lumayan menambah meteran OD, 3 giliran: ekstra jumbo kerusakan Percikan, kerusakan elemen Guntur, dan Serangan sesuai Pulih",
+    "pt": "30 combo massive Thunder attack on all foes, considerably boosts OD gauge, enormously boosts Atk relative to Rec for 3 turns, enormously boosts Spark damage for 3 turns & enormously boosts Thunder elemental damage for 3 turns",
+    "th": "30 คอมโบ โจมตีธาตุสายฟ้ารุนแรงมหาศาล ใส่ศัตรูทั้งหมด, เพิ่มค่าอย่างมากให้ เกจ OD, เพิ่มค่ามหาศาลให้ โจมตี สัมพันธ์กับ ฟื้นฟู นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ ความเสียหายสปาร์ค นาน 3 เทิร์น และ เพิ่มค่ามหาศาลให้ ความเสียหายธาตุ สายฟ้า นาน 3 เทิร์น",
+    "vi": "30 combo massive Thunder attack on all foes, considerably boosts OD gauge, enormously boosts Atk relative to Rec for 3 turns, enormously boosts Spark damage for 3 turns & enormously boosts Thunder elemental damage for 3 turns"
+  },
+  "MST_SKILLS_2840048_NAME": {
+    "en": "Lightning Crush Detonation",
+    "es": "Lightning Crush Detonation",
+    "id": "Detonasi Kilat Penghancur",
+    "pt": "Lightning Crush Detonation",
+    "th": "ไลท์นิ่ง ครัช เดโทเนชั่น",
+    "vi": "Lightning Crush Detonation"
+  },
+  "MST_SKILLS_2840117_DESCRIPTION": {
+    "en": "18 combo Fire, Thunder, Dark attack on all foes (damage relative to remaining HP). boosts BB Atk and boosts damage against status afflicted foes for 3 turns",
+    "es": "18 combo Fire, Thunder, Dark attack on all foes (damage relative to remaining HP). boosts BB Atk and boosts damage against status afflicted foes for 3 turns",
+    "id": "18 kombo serangan Api, Guntur, Gelap ke semua musuh (kerusakan sesuai sisa HP), menambah BB Serang dan kerusakan atas musuh yang terkena status 3 giliran",
+    "pt": "18 combo Fire, Thunder, Dark attack on all foes (damage relative to remaining HP). boosts BB Atk and boosts damage against status afflicted foes for 3 turns",
+    "th": "18 คอมโบ โจมตีธาตุ ไฟ, สายฟ้า, มืด ใส่ศัตรูทั้งหมด (ความเสียหายขึ้นอยู่กับ HP ที่เหลืออยู่). เพิ่มค่า โจมตี BB กับ เพิ่มค่า ความเสียหายต่อ ศัตรูที่ติดสถานะผิดปกติ นาน 3 เทิร์น",
+    "vi": "18 combo Fire, Thunder, Dark attack on all foes (damage relative to remaining HP). boosts BB Atk and boosts damage against status afflicted foes for 3 turns"
   }
 }
