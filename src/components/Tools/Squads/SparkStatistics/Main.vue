@@ -285,10 +285,7 @@ export default {
       return `Result ${resultIndex + 1} (${(sparkResult.weightedPercentage * 100).toFixed(2)}%)`;
     },
     applySparkResult (sparkResult) {
-      this.$emit('apply', {
-        squad: applySparkResultToSquad(this.squad, sparkResult),
-        sparkResult,
-      });
+      this.$emit('apply', applySparkResultToSquad(this.squad, sparkResult));
 
       this.currentSection = 0; // show current squad panel
     },
