@@ -1,8 +1,8 @@
 import PromiseWorkerExchangeWorker from '@/modules/PromiseWorkerExchange/worker';
-import logger from './logger';
-import SparkSimWorker from './WorkerApi';
+import logger from '@/modules/Logger';
+import WorkerApi from './WorkerApi';
 
-const workerApi = new SparkSimWorker();
+const workerApi = new WorkerApi();
 const instance = new PromiseWorkerExchangeWorker();
 
 function init () {

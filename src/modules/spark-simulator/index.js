@@ -5,8 +5,8 @@ import {
   getSimulatorOptions,
   generateSimulatorPermutations,
   getUnitConfigForUnoptimizedRun,
-  applyPermutationToSparkSquad,
 } from './utils';
+import makeWorker from './client';
 import { Logger } from '@/modules/Logger';
 
 // eslint-disable-next-line no-unused-vars
@@ -51,13 +51,11 @@ export default class SparkSimulator {
       unitConfig: options.unitConfig[i],
     }));
     const permutations = generateSimulatorPermutations(sparkSquad, options);
-    // TODO: send to worker
-    return permutations.slice(0, options.maxResults / 2).concat(permutations.slice(permutations.length - options.maxResults / 2))
-      .map(permutation => {
-        return calculateSparksForSparkSimSquad(
-          applyPermutationToSparkSquad(sparkSquad, permutation),
-          options,
-        );
-      });
+
+    const worker = makeWorker();
+    worker.addProgressListener(p => logger.debug(p));
+    const result = await worker.run({ permutations, sparkSquad });
+    worker.close();
+    return result;
   }
 }
