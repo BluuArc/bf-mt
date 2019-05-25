@@ -1,5 +1,5 @@
 module.exports = {
-  baseUrl: './',
+  publicPath: './',
   configureWebpack: config => {
     if (process.env.NODE_ENV !== 'production') {
       // custom output config to allow HMR on workers
