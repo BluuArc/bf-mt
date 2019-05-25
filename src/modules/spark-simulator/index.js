@@ -3,7 +3,6 @@ import {
   convertSquadUnitEntryToSparkUnitEntry,
   calculateSparksForSparkSimSquad,
   getSimulatorOptions,
-  generateSimulatorPermutations,
   getUnitConfigForUnoptimizedRun,
 } from './utils';
 import makeWorker from './client';
@@ -53,7 +52,6 @@ export default class SparkSimulator {
       originalPosition: u.position,
       unitConfig: options.unitConfig[i],
     }));
-    const permutations = generateSimulatorPermutations(sparkSquad, options);
 
     const worker = makeWorker();
     this._currentWorker = worker;
@@ -61,7 +59,7 @@ export default class SparkSimulator {
     this._progressListeners.forEach(listener => {
       worker.addProgressListener(p => listener(p));
     });
-    const result = await worker.run({ permutations, sparkSquad });
+    const result = await worker.run({ sparkSquad, options });
     worker.close();
     this._currentWorker = null;
     return result;

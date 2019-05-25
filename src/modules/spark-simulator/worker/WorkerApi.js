@@ -4,8 +4,17 @@ import {
   getSimulatorOptions,
   applyPermutationToSparkSquad,
   calculateSparksForSparkSimSquad,
+  generateSimulatorPermutations,
 } from '@/modules/spark-simulator/utils';
 import { Logger } from '@/modules/Logger';
+
+function delay (amount = 0) {
+  return new Promise(fulfill => {
+    setTimeout(() => {
+      fulfill();
+    }, amount);
+  });
+}
 
 // eslint-disable-next-line no-unused-vars
 const logger = new Logger({ prefix: '[SparkSimWorker/worker]' });
@@ -16,20 +25,35 @@ export default class SparkSimWorker extends SparkSimWorkerInterface {
     this._onProgress = () => {};
   }
 
-  run({
-      permutations = [],
+  async run({
+      permutations,
       sparkSquad = [convertSquadUnitEntryToSparkUnitEntry()],
       options = getSimulatorOptions(),
     } = {}) {
     this._runToken = Date.now();
     const currentRunToken = this._runToken;
 
+    let allPermutations;
+    if (!Array.isArray(permutations)) {
+      allPermutations = generateSimulatorPermutations(sparkSquad, options);
+    } else {
+      allPermutations = permutations;
+    }
+    logger.debug('permutations', allPermutations.length);
+
     const results = [], errors = [];
-    let permutationIndex = 0, numPermutations = permutations.length;
+    let lastTimeoutPercent = 0;
+    let permutationIndex = 0, numPermutations = allPermutations.length;
     try {
       while (currentRunToken === this._runToken && permutationIndex < numPermutations) {
+        // give opportunities for cancel calls to occur every 1 percent
+        const currentPercent = Math.floor(permutationIndex / numPermutations * 100);
+        if (currentPercent - lastTimeoutPercent > 1) {
+          await delay();
+          lastTimeoutPercent = currentPercent;
+        }
         this.onProgress({ total: numPermutations, completed: permutationIndex });
-        const permutation = permutations[permutationIndex++];
+        const permutation = allPermutations[permutationIndex++];
         const sparkResult = calculateSparksForSparkSimSquad(
           applyPermutationToSparkSquad(sparkSquad, permutation),
           options,

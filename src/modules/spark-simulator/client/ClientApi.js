@@ -26,7 +26,7 @@ export default class SparkSimClient extends SparkSimWorkerInterface {
   }
 
   run (simArguments = {
-    permutations: [],
+    permutations: null,
     sparkSquad: [convertSquadUnitEntryToSparkUnitEntry()],
     options: getSimulatorOptions(),
   }) {
