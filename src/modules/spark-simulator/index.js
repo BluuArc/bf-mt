@@ -10,7 +10,6 @@ import { MAX_WORKERS } from './constants';
 import makeWorker from './client';
 import { Logger } from '@/modules/Logger';
 
-// eslint-disable-next-line no-unused-vars
 const logger = new Logger({ prefix: '[SparkSimulator]' });
 export default class SparkSimulator {
   constructor () {
@@ -24,7 +23,6 @@ export default class SparkSimulator {
     };
 
     this._progressListeners = new Set();
-    // this._currentWorker = null;
     this._workers = [];
     this._progressTotal = 0;
     this._progressPerWorker = [];
@@ -71,9 +69,6 @@ export default class SparkSimulator {
       this._workers.push(currentWorker);
       this._progressPerWorker.push(0);
       currentWorker.addProgressListener(p => this.onProgress(p, i));
-      // this._progressListeners.forEach(listener => {
-      //   currentWorker.addProgressListener(p => listener(p));
-      // });
       let permutationsForWorker;
       if (workerCount === 1) {
         permutationsForWorker = permutations;
