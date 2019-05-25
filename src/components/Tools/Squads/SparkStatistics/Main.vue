@@ -101,6 +101,36 @@
         </section>
       </v-expansion-panel-content>
     </v-expansion-panel>
+    <v-dialog
+      :value="showProgressDialog"
+      max-width="500px"
+      persistent
+    >
+      <v-card>
+        <v-card-text>
+          <v-progress-linear
+            :value="progressPercent"
+            :indeterminate="progressPercent === 0"
+            query/>
+          {{ progressLabel }}
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer/>
+          <v-btn
+            v-if="!runningSimulator"
+            @click="showProgressDialog = false"
+          >
+            Close
+          </v-btn>
+          <v-btn
+            v-else
+            @click="cancelCalculations"
+          >
+            Cancel
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
     <section class="mt-3">
       Powered by <a href="https://joshuacastor.me/project-sparkle/" target="_blank" rel="noopener">Project Sparkle</a>
     </section>
@@ -142,6 +172,12 @@ export default {
     simulatorWarnings () {
       return getSimulatorWarningsForSquad(this.squad, this.simulatorOptions);
     },
+    progressLabel () {
+      return `${this.progressPercent.toFixed(2)}% (${this.progressActual}/${this.progressTotal})`;
+    },
+    progressPercent () {
+      return (this.progressActual / Math.max(1, this.progressTotal)) * 100;
+    },
   },
   data () {
     return {
@@ -152,6 +188,12 @@ export default {
       resultForCurrentSquad: null,
       simulatorOptions: null,
       currentResultIndex: 0,
+      showProgressDialog: false,
+      progressTotal: 0,
+      progressActual: 0,
+      progressAnimationFrame: null,
+      progressObject: { total: 0, completed: 0 },
+      errors: [],
     };
   },
   created () {
@@ -164,10 +206,37 @@ export default {
       extraSkill: this.getExtraSkill,
     };
     this.calculateResultForCurrentSquad();
+
+    this.sparkSimulator.addProgressListener(p => {
+      this.progressObject = p;
+      this.throttledSetProgress();
+    });
   },
   methods: {
+    cancelCalculations () {
+      this.sparkSimulator.cancelCalculations();
+    },
     async runSimulator () {
-      this.results = await this.sparkSimulator.calculateOptimalOrdersForSquad(this.squad, this.simulatorOptions);
+      // reset results
+      this.progressObject = { total: 0, completed: 0 };
+      this.setProgress();
+      this.results = null;
+      this.runningSimulator = true;
+      this.showProgressDialog = true;
+      await this.$nextTick();
+
+      // run and get results
+      const calculationResults = await this.sparkSimulator.calculateOptimalOrdersForSquad(this.squad, this.simulatorOptions);
+      this.errors = calculationResults.errors;
+      this.results = calculationResults.results;
+      if (this.progressAnimationFrame) {
+        cancelAnimationFrame(this.progressAnimationFrame);
+        this.progressAnimationFrame = null;
+      }
+      this.setProgress();
+      this.runningSimulator = false;
+      this.showProgressDialog = false;
+      this.progressObject = { total: 0, completed: 0 };
       await this.$nextTick();
       this.currentSection = 2; // show result panel
     },
@@ -190,6 +259,27 @@ export default {
       });
 
       this.currentSection = 0; // show current squad panel
+    },
+    setProgress () {
+      this.progressActual = (this.progressObject && this.progressObject.completed) || 0;
+      this.progressTotal = (this.progressObject && this.progressObject.total) || 0;
+    },
+    throttledSetProgress () {
+      if (!this.progressAnimationFrame) {
+        const progressIsDifferent = (progress) => progress !== this.progressObject;
+        const loop = () => {
+          const currentProgressObject = this.progressObject;
+          this.progressAnimationFrame = requestAnimationFrame(() => {
+            if (progressIsDifferent(currentProgressObject)) {
+              this.setProgress();
+            }
+            if (this.runningSimulator) {
+              requestAnimationFrame(loop);
+            }
+          });
+        };
+        loop();
+      }
     },
   },
   watch: {

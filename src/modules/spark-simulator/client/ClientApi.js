@@ -42,7 +42,7 @@ export default class SparkSimClient extends SparkSimWorkerInterface {
       listener(progress);
     });
   }
-  
+
   addProgressListener (fn) {
     if (typeof fn === 'function') {
       this._progressListeners.add(fn);

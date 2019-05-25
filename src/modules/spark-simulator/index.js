@@ -21,6 +21,9 @@ export default class SparkSimulator {
       item: noop,
       extraSkill: noop,
     };
+
+    this._progressListeners = new Set();
+    this._currentWorker = null;
   }
 
   set getters (getters = {}) {
@@ -53,9 +56,38 @@ export default class SparkSimulator {
     const permutations = generateSimulatorPermutations(sparkSquad, options);
 
     const worker = makeWorker();
-    worker.addProgressListener(p => logger.debug(p));
+    this._currentWorker = worker;
+
+    this._progressListeners.forEach(listener => {
+      worker.addProgressListener(p => listener(p));
+    });
     const result = await worker.run({ permutations, sparkSquad });
     worker.close();
+    this._currentWorker = null;
     return result;
+  }
+
+  onProgress (progress = { total: 0, completed: 0 }) {
+    this._progressListeners.forEach(listener => {
+      listener(progress);
+    });
+  }
+  
+  addProgressListener (fn) {
+    if (typeof fn === 'function') {
+      this._progressListeners.add(fn);
+    }
+  }
+
+  removeProgressListener (fn) {
+    if (typeof fn === 'function') {
+      this._progressListeners.delete(fn);
+    }
+  }
+
+  cancelCalculations () {
+    if (this._currentWorker) {
+      this._currentWorker.cancel();
+    }
   }
 }
