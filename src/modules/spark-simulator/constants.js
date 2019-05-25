@@ -80,3 +80,5 @@ export const UNIT_SKILL_TYPES = {
 
 export const SBB_NO_CUTIN_DELAY = 2;
 export const SBB_CUTIN_DELAY = 1;
+
+export const MAX_WORKERS = 2;

@@ -55,6 +55,10 @@ export default class SparkSimClient extends SparkSimWorkerInterface {
     }
   }
 
+  removeAllListeners () {
+    this._progressListeners.clear();
+  }
+
   close () {
     this._worker.close();
     this._worker = null;

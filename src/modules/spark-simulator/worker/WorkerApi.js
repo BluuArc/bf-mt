@@ -35,8 +35,10 @@ export default class SparkSimWorker extends SparkSimWorkerInterface {
 
     let allPermutations;
     if (!Array.isArray(permutations)) {
-      allPermutations = generateSimulatorPermutations(sparkSquad, options);
+      logger.debug('generating permutations');
+      allPermutations = await generateSimulatorPermutations(sparkSquad, options);
     } else {
+      logger.debug('input permutations', permutations.length);
       allPermutations = permutations;
     }
     logger.debug('permutations', allPermutations.length);

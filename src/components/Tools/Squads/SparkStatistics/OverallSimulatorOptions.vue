@@ -68,6 +68,7 @@
 <script>
 import { ANY_BB_ORDER } from '@/modules/constants';
 import { getSimulatorOptions, getSparkSimUnitConfig } from '@/modules/spark-simulator/utils';
+import { MAX_WORKERS } from '@/modules/spark-simulator/constants';
 
 export default {
   props: {
@@ -85,8 +86,9 @@ export default {
       return `Burst Cutins are ${this.value.burstCutins ? 'on' : 'off'}`;
     },
     workerCountFieldLabel () {
-      return `Max: ${navigator.hardwareConcurrency || 2}`;
+      return `Max: ${MAX_WORKERS}`;
     },
+    MAX_WORKERS: () => MAX_WORKERS,
   },
   data () {
     return {

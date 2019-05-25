@@ -1,4 +1,4 @@
-import { SBB_NO_CUTIN_DELAY, ATTACKING_PROCS, TELEPORTER_OFFSETS, MOVESPEED_OFFSETS, SBB_CUTIN_DELAY } from './constants';
+import { SBB_NO_CUTIN_DELAY, ATTACKING_PROCS, TELEPORTER_OFFSETS, MOVESPEED_OFFSETS, SBB_CUTIN_DELAY, MAX_WORKERS } from './constants';
 import {
   getBurstEffects,
   getHealFrameData,
@@ -361,7 +361,7 @@ export function getSimulatorOptions ({
     enemyCount: Math.max(1, getNumberOrDefault(enemyCount, 6)),
     burstCutins: !!burstCutins,
     resultThreshold: Math.max(0, Math.min(100, getNumberOrDefault(resultThreshold, 50))),
-    workerCount: (Math.max(1, Math.min(navigator.hardwareConcurrency || 1, getNumberOrDefault(workerCount, 1)))),
+    workerCount: (Math.max(1, Math.min(MAX_WORKERS, getNumberOrDefault(workerCount, 1)))),
     maxResults: Math.max(1, Math.min(100, getNumberOrDefault(maxResults, 10))),
     optimize: !!optimize,
   });
@@ -570,7 +570,7 @@ export function getOrderPermutations (squad = [convertSquadUnitEntryToSparkUnitE
   });
 }
 
-export function generateSimulatorPermutations (squad = [convertSquadUnitEntryToSparkUnitEntry()], options = getSimulatorOptions()) {
+export async function generateSimulatorPermutations (squad = [convertSquadUnitEntryToSparkUnitEntry()], options = getSimulatorOptions(), delay = () => {}) {
   const positionPermutations = getPositionPermutations(squad, options);
   const orderPermutations = getOrderPermutations(squad, options);
   const getResultKey = (currentSquad = squad, unitConfig = [{ bbOrder: 0, position: unitPositionMapping[0] }]) => {
@@ -584,7 +584,11 @@ export function generateSimulatorPermutations (squad = [convertSquadUnitEntryToS
   };
   const squadPermutations = [];
   const permutationHistory = new Map();
-  positionPermutations.forEach(positionPermutation => {
+  let currentIndex = 0;
+  for (const positionPermutation of positionPermutations) {
+    if (currentIndex % 5 === 0) {
+      await Promise.resolve(delay());
+    }
     orderPermutations.forEach(orderPermutation => {
       const resultMapping = squad.map((_, i) => ({ position: positionPermutation[i], bbOrder: orderPermutation[i] }));
       const resultKey = getResultKey(squad, resultMapping);
@@ -593,7 +597,7 @@ export function generateSimulatorPermutations (squad = [convertSquadUnitEntryToS
         squadPermutations.push(resultMapping);
       }
     });
-  });
+  }
 
   return squadPermutations;
 }
