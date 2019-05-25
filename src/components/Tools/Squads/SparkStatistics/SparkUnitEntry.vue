@@ -88,6 +88,7 @@
                   v-text="'+'"
                 />
               </template>
+              , Weight: {{ sparkResultForUnit.weight }} ({{ relativeWeight }}%)
             </v-flex>
             <v-flex style="flex-grow: 0" v-if="warnings.length > 0">
               <v-dialog v-model="showWarningDialog" max-width="500px">
@@ -179,6 +180,10 @@ export default {
     burstCutins: {
       type: Boolean,
       default: false,
+    },
+    relativeWeight: {
+      type: Number,
+      default: 0,
     },
   },
   computed: {

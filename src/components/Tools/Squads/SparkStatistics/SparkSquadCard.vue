@@ -3,7 +3,7 @@
     <v-layout row class="pa-2" align-center>
       <v-flex>
         <h1 class="title">
-          {{ sparkPercentage }} Hits Sparked
+          {{ sparkPercentage }} Weighted Hits Sparked
         </h1>
       </v-flex>
     </v-layout>
@@ -18,6 +18,7 @@
         :isLead="i === squad.lead"
         :isFriend="i === squad.friend"
         :sparkResultForUnit="sparkResultsByUnit.get(unit)"
+        :relativeWeight="relativeWeightByUnit.get(unit)"
         :warnings="warningsByUnit.get(unit)"
         :burstCutins="simulatorOptions.burstCutins"
         class="d-flex py-1"
@@ -110,6 +111,20 @@ export default {
           attackEffects: burstAttacks.concat(extraAttacks),
           unitData,
         }));
+      });
+      return mapping;
+    },
+    totalWeight () {
+      return Math.max(1, this.sparkResult.squad.reduce((acc, val) => acc + val.weight, 0));
+    },
+    relativeWeightByUnit () {
+      const mapping = new WeakMap();
+      const sparkResultMapping = this.sparkResultsByUnit;
+      const totalWeight = this.totalWeight;
+      this.fullUnits.forEach(squadUnit => {
+        const result = sparkResultMapping.get(squadUnit);
+        const weight = result.weight / totalWeight * 100;
+        mapping.set(squadUnit, +(weight.toFixed(2)));
       });
       return mapping;
     },

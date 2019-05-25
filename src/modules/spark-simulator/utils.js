@@ -145,7 +145,7 @@ export function convertSquadUnitEntryToSparkUnitEntry ({
   synchronousGetters = {},
   squad = generateDefaultSquad(),
   originalPosition,
-  unitConfig = {},
+  unitConfig = getSparkSimUnitConfig(),
 } = {}) {
   const unitData = synchronousGetters.unit(entry.id);
   const sourcesToIgnore = ['unit.bb', 'unit.sbb', 'unit.ubb'];
@@ -177,6 +177,7 @@ export function convertSquadUnitEntryToSparkUnitEntry ({
     moveSpeedType: (unitData.movement && unitData.movement.skill && +unitData.movement.skill['move speed type']) || '1',
     delay: !isNaN(entry.delay) ? +entry.delay : 0,
     teleporterId: entry.id,
+    weight: unitConfig.weight,
     originalPosition,
   };
   sparkUnitEntry.frames = getFramesForSparkUnitEntry(sparkUnitEntry);
@@ -286,15 +287,26 @@ export function calculateSparksForSparkSimSquad (squad = [convertSquadUnitEntryT
       possibleSparks,
       delay: unit.delay,
       originalPosition: unit.originalPosition,
+      weight: unit.weight,
     };
   });
 
-  const perUnitPercentages = sparkResults
-    .filter(u => u.possibleSparks > 0)
-    .map(u => u.actualSparks / u.possibleSparks);
-  const weightedPercentage = perUnitPercentages
-    .map(val => val * (1 / perUnitPercentages.length))
-    .reduce((acc, val) => acc + val, 0);
+  const totalWeight = sparkResults
+    .filter(u => u.weight > 0)
+    .reduce((acc, val) => acc + val.weight, 0);
+  let weightedPercentage;
+  if (totalWeight <= 0) {
+    weightedPercentage = 0;
+  } else {
+    weightedPercentage = sparkResults
+      .map(val => {
+        const percentSparked = val.actualSparks / Math.max(1, val.possibleSparks);
+        const weight = val.weight / totalWeight;
+        return percentSparked * weight;
+      })
+      .reduce((acc, val) => acc + val, 0);
+  }
+
   return {
     actualSparks: actualSparkSquad,
     possibleSparks: possibleSparksSquad,
