@@ -57,6 +57,8 @@
         label="Worker Count"
         type="number"
         :value="value.workerCount"
+        :hint="workerCountFieldLabel"
+        persistent-hint
         @input="$v => emitChangedValue({ workerCount: $v })"
       />
     </v-flex>
@@ -81,6 +83,9 @@ export default {
   computed: {
     burstCutinToggleLabel () {
       return `Burst Cutins are ${this.value.burstCutins ? 'on' : 'off'}`;
+    },
+    workerCountFieldLabel () {
+      return `Max: ${navigator.hardwareConcurrency || 2}`;
     },
   },
   data () {

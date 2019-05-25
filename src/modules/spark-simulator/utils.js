@@ -361,7 +361,7 @@ export function getSimulatorOptions ({
     enemyCount: Math.max(1, getNumberOrDefault(enemyCount, 6)),
     burstCutins: !!burstCutins,
     resultThreshold: Math.max(0, Math.min(100, getNumberOrDefault(resultThreshold, 50))),
-    workerCount: Math.max(1, getNumberOrDefault(workerCount, 1)),
+    workerCount: (Math.max(1, Math.min(navigator.hardwareConcurrency || 1, getNumberOrDefault(workerCount, 1)))),
     maxResults: Math.max(1, Math.min(100, getNumberOrDefault(maxResults, 10))),
     optimize: !!optimize,
   });
