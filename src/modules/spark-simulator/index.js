@@ -91,7 +91,7 @@ export default class SparkSimulator {
       }));
     }
     const results = await Promise.all(calcPromises);
-    const aggregateResult = { errors: [], results: [] };
+    const aggregateResult = { errors: [], results: [], countTested: permutations.length };
     results.forEach((sparkResult, i) => {
       aggregateResult.errors = aggregateResult.errors.concat(sparkResult.errors);
       aggregateResult.results = aggregateResult.results.concat(sparkResult.results)
@@ -100,15 +100,6 @@ export default class SparkSimulator {
       this._workers[i].close();
     });
 
-    // const worker = makeWorker();
-    // this._currentWorker = worker;
-
-    // this._progressListeners.forEach(listener => {
-    //   worker.addProgressListener(p => listener(p));
-    // });
-    // const result = await worker.run({ permutations, sparkSquad, options });
-    // worker.close();
-    // this._currentWorker = null;
     this._workers = [];
     this._progressPerWorker = [];
     return aggregateResult;
@@ -132,6 +123,10 @@ export default class SparkSimulator {
     if (typeof fn === 'function') {
       this._progressListeners.delete(fn);
     }
+  }
+
+  removeAllListeners () {
+    this._progressListeners.clear();
   }
 
   cancelCalculations () {

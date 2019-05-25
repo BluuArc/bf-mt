@@ -2,193 +2,195 @@
   <module-checker
     :requiredModules="requiredModules"
     :ensureDbSync="true">
-    <v-container fluid class="squad-page" v-resize="updateTopNavbarHeight">
-      <v-container class="pa-0">
-        <v-layout justify-center>
-          <v-flex xs12 v-if="!editMode">
-            <squad-list-card
+    <promise-wait :promise="initialLoadPromise">
+      <v-container fluid class="squad-page" v-resize="updateTopNavbarHeight">
+        <v-container class="pa-0">
+          <v-layout justify-center>
+            <v-flex xs12 v-if="!editMode">
+              <squad-list-card
+                :squad="squad"
+                :getUnit="getUnit"
+                :getItem="getItem"
+                :getExtraSkill="getExtraSkill"
+                :isLoadingInParent="isLoadingSquadData"
+                :key="squadCode"
+              >
+                <v-card-actions slot="card-actions" slot-scope="{ disabled }">
+                  <v-btn
+                    flat
+                    :icon="minimizeSquadActionButtons"
+                    :disabled="disabled"
+                    @click="editMode = true">
+                    <v-icon :left="!minimizeSquadActionButtons">edit</v-icon>
+                    <span v-if="!minimizeSquadActionButtons">
+                      Edit
+                    </span>
+                  </v-btn>
+                  <v-btn
+                    flat
+                    :icon="minimizeSquadActionButtons"
+                    :disabled="disabled"
+                    @click="activeSquadDialog = 'share'">
+                    <v-icon :left="!minimizeSquadActionButtons">share</v-icon>
+                    <span v-if="!minimizeSquadActionButtons">
+                      Share
+                    </span>
+                  </v-btn>
+                  <v-btn
+                    v-if="squadCode"
+                    flat
+                    :icon="minimizeSquadActionButtons"
+                    :disabled="disabled"
+                    :to="getSquadUrl(squadCode)">
+                    <v-icon :left="!minimizeSquadActionButtons">file_copy</v-icon>
+                    <span v-if="!minimizeSquadActionButtons">
+                      Copy
+                    </span>
+                  </v-btn>
+                  <v-spacer/>
+                  <v-btn
+                    flat
+                    :icon="minimizeSquadActionButtons"
+                    :disabled="disabled"
+                    @click="activeSquadDialog = 'delete'">
+                    <v-icon :left="!minimizeSquadActionButtons">delete</v-icon>
+                    <span v-if="!minimizeSquadActionButtons">
+                      Delete
+                    </span>
+                  </v-btn>
+                </v-card-actions>
+              </squad-list-card>
+            </v-flex>
+            <v-flex xs12 v-else>
+              <squad-list-card-editable
+                :squad="tempSquad"
+                :squadId="id"
+                :getUnit="getUnit"
+                :getItem="getItem"
+                :getExtraSkill="getExtraSkill"
+                :redirectOnCancel="false"
+                :isLoadingInParent="isLoadingSquadData"
+                @newsquad="$sq => tempSquad = $sq"
+                @newunits="onNewUnits"
+                @save="() => { squad = tempSquad; editMode = false; }"
+                @cancel="editMode = false"
+              />
+            </v-flex>
+          </v-layout>
+        </v-container>
+        <v-flex xs12>
+          <v-divider class="mt-2"/>
+        </v-flex>
+        <v-flex xs12>
+          <v-card>
+            <tab-container
+              v-if="!isLoadingSquadData && !editMode"
+              v-model="currentTabIndex"
+              class="mt-2"
+              :centeredTabs="true"
+              :growTabs="true"
+              :tabs="tabConfig">
+              <v-layout slot="buffs" column>
+                <v-expansion-panel class="configuration-panel">
+                  <v-expansion-panel-content>
+                    <div slot="header">
+                      Configure Buff View
+                    </div>
+                    <section>
+                      <order-configurator
+                        v-model="buffTables"
+                        :getEntryName="(configIndex) => possibleTables[configIndex].name"
+                        :fullValueSet="defaultBuffTables"
+                      />
+                      <section>
+                        <v-btn flat @click="buffTables = buffTables.concat(defaultBuffTables.filter((_, i) => !buffTables.includes(i)))">Show All</v-btn>
+                        <v-btn flat @click="buffTables = []">Hide All</v-btn>
+                        <v-btn flat @click="buffTables = defaultBuffTables.slice()">Reset to Default</v-btn>
+                      </section>
+                    </section>
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+                <dl>
+                  <template v-for="tableConfigIndex in buffTables">
+                    <dt
+                      class="title"
+                      :style="buffGroupTitleStyle"
+                      :key="`${possibleTables[tableConfigIndex].targetType}-${possibleTables[tableConfigIndex].effectType}-title`"
+                      v-text="possibleTables[tableConfigIndex].name"
+                    />
+                    <dd :key="`${possibleTables[tableConfigIndex].targetType}-${possibleTables[tableConfigIndex].effectType}-table`">
+                      <squad-buff-expandable-list
+                        :getUnit="getUnit"
+                        :getItem="getItem"
+                        :getExtraSkill="getExtraSkill"
+                        :squad="squad"
+                        :targetType="possibleTables[tableConfigIndex].targetType"
+                        :effectType="possibleTables[tableConfigIndex].effectType"
+                      />
+                    </dd>
+                  </template>
+                </dl>
+              </v-layout>
+              <v-layout slot="spark-statistics">
+                <squad-spark-statistics-area
+                  :getUnit="getUnit"
+                  :getItem="getItem"
+                  :getExtraSkill="getExtraSkill"
+                  :squad="squad"
+                  :initialSimulatorOptions="simulatorOptions"
+                  @simoptions="$v => simulatorOptions = $v"
+                  @share="$sparkResult => { sparkResultToShare = $sparkResult; activeSquadDialog = 'share'; }"
+                  @apply="applySparkResult"
+                  @currentsquadresult="$v => sparkResultToShare = $v"
+                />
+              </v-layout>
+              <v-layout slot="arena" style="overflow-x: auto;">
+                <squad-arena-suggestion-table
+                  :getUnit="getUnit"
+                  :getItem="getItem"
+                  :getExtraSkill="getExtraSkill"
+                  :squad="squad"
+                />
+              </v-layout>
+            </tab-container>
+          </v-card>
+        </v-flex>
+        <v-dialog
+          :value="!isLoadingSquadData && !!activeSquadDialog"
+          @input="$v => activeSquadDialog = $v ? activeSquadDialog : ''"
+          lazy>
+          <template v-if="squadCode">
+            <share-squad-card
+              v-if="activeSquadDialog === 'share'"
               :squad="squad"
               :getUnit="getUnit"
               :getItem="getItem"
               :getExtraSkill="getExtraSkill"
-              :isLoadingInParent="isLoadingSquadData"
-              :key="squadCode"
-            >
-              <v-card-actions slot="card-actions" slot-scope="{ disabled }">
-                <v-btn
-                  flat
-                  :icon="minimizeSquadActionButtons"
-                  :disabled="disabled"
-                  @click="editMode = true">
-                  <v-icon :left="!minimizeSquadActionButtons">edit</v-icon>
-                  <span v-if="!minimizeSquadActionButtons">
-                    Edit
-                  </span>
-                </v-btn>
-                <v-btn
-                  flat
-                  :icon="minimizeSquadActionButtons"
-                  :disabled="disabled"
-                  @click="activeSquadDialog = 'share'">
-                  <v-icon :left="!minimizeSquadActionButtons">share</v-icon>
-                  <span v-if="!minimizeSquadActionButtons">
-                    Share
-                  </span>
-                </v-btn>
-                <v-btn
-                  v-if="squadCode"
-                  flat
-                  :icon="minimizeSquadActionButtons"
-                  :disabled="disabled"
-                  :to="getSquadUrl(squadCode)">
-                  <v-icon :left="!minimizeSquadActionButtons">file_copy</v-icon>
-                  <span v-if="!minimizeSquadActionButtons">
-                    Copy
-                  </span>
-                </v-btn>
-                <v-spacer/>
-                <v-btn
-                  flat
-                  :icon="minimizeSquadActionButtons"
-                  :disabled="disabled"
-                  @click="activeSquadDialog = 'delete'">
-                  <v-icon :left="!minimizeSquadActionButtons">delete</v-icon>
-                  <span v-if="!minimizeSquadActionButtons">
-                    Delete
-                  </span>
-                </v-btn>
-              </v-card-actions>
-            </squad-list-card>
-          </v-flex>
-          <v-flex xs12 v-else>
-            <squad-list-card-editable
-              :squad="tempSquad"
-              :squadId="id"
+              :sparkResult="sparkResultToShare"
+              @back="activeSquadDialog = ''"/>
+            <delete-squad-card
+              v-else-if="activeSquadDialog === 'delete'"
+              :squad="squad"
+              :squadId="+id"
               :getUnit="getUnit"
               :getItem="getItem"
               :getExtraSkill="getExtraSkill"
-              :redirectOnCancel="false"
-              :isLoadingInParent="isLoadingSquadData"
-              @newsquad="$sq => tempSquad = $sq"
-              @newunits="onNewUnits"
-              @save="() => { squad = tempSquad; editMode = false; }"
-              @cancel="editMode = false"
-            />
-          </v-flex>
-        </v-layout>
+              @delete="$router.push('/tools/squads')"
+              @cancel="activeSquadDialog = ''"/>
+          </template>
+          <v-card v-else>
+            <v-card-text>
+              No squad selected
+            </v-card-text>
+            <v-card-actions style="justify-content: flex-end">
+              <v-btn flat @click="activeSquadDialog = ''">
+                Back
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
       </v-container>
-      <v-flex xs12>
-        <v-divider class="mt-2"/>
-      </v-flex>
-      <v-flex xs12>
-        <v-card>
-          <tab-container
-            v-if="!isLoadingSquadData && !editMode"
-            v-model="currentTabIndex"
-            class="mt-2"
-            :centeredTabs="true"
-            :growTabs="true"
-            :tabs="tabConfig">
-            <v-layout slot="buffs" column>
-              <v-expansion-panel class="configuration-panel">
-                <v-expansion-panel-content>
-                  <div slot="header">
-                    Configure Buff View
-                  </div>
-                  <section>
-                    <order-configurator
-                      v-model="buffTables"
-                      :getEntryName="(configIndex) => possibleTables[configIndex].name"
-                      :fullValueSet="defaultBuffTables"
-                    />
-                    <section>
-                      <v-btn flat @click="buffTables = buffTables.concat(defaultBuffTables.filter((_, i) => !buffTables.includes(i)))">Show All</v-btn>
-                      <v-btn flat @click="buffTables = []">Hide All</v-btn>
-                      <v-btn flat @click="buffTables = defaultBuffTables.slice()">Reset to Default</v-btn>
-                    </section>
-                  </section>
-                </v-expansion-panel-content>
-              </v-expansion-panel>
-              <dl>
-                <template v-for="tableConfigIndex in buffTables">
-                  <dt
-                    class="title"
-                    :style="buffGroupTitleStyle"
-                    :key="`${possibleTables[tableConfigIndex].targetType}-${possibleTables[tableConfigIndex].effectType}-title`"
-                    v-text="possibleTables[tableConfigIndex].name"
-                  />
-                  <dd :key="`${possibleTables[tableConfigIndex].targetType}-${possibleTables[tableConfigIndex].effectType}-table`">
-                    <squad-buff-expandable-list
-                      :getUnit="getUnit"
-                      :getItem="getItem"
-                      :getExtraSkill="getExtraSkill"
-                      :squad="squad"
-                      :targetType="possibleTables[tableConfigIndex].targetType"
-                      :effectType="possibleTables[tableConfigIndex].effectType"
-                    />
-                  </dd>
-                </template>
-              </dl>
-            </v-layout>
-            <v-layout slot="spark-statistics">
-              <squad-spark-statistics-area
-                :getUnit="getUnit"
-                :getItem="getItem"
-                :getExtraSkill="getExtraSkill"
-                :squad="squad"
-                :initialSimulatorOptions="simulatorOptions"
-                @simoptions="$v => simulatorOptions = $v"
-                @share="$sparkResult => { sparkResultToShare = $sparkResult; activeSquadDialog = 'share'; }"
-                @apply="applySparkResult"
-                @currentsquadresult="$v => sparkResultToShare = $v"
-              />
-            </v-layout>
-            <v-layout slot="arena" style="overflow-x: auto;">
-              <squad-arena-suggestion-table
-                :getUnit="getUnit"
-                :getItem="getItem"
-                :getExtraSkill="getExtraSkill"
-                :squad="squad"
-              />
-            </v-layout>
-          </tab-container>
-        </v-card>
-      </v-flex>
-      <v-dialog
-        :value="!isLoadingSquadData && !!activeSquadDialog"
-        @input="$v => activeSquadDialog = $v ? activeSquadDialog : ''"
-        lazy>
-        <template v-if="squadCode">
-          <share-squad-card
-            v-if="activeSquadDialog === 'share'"
-            :squad="squad"
-            :getUnit="getUnit"
-            :getItem="getItem"
-            :getExtraSkill="getExtraSkill"
-            :sparkResult="sparkResultToShare"
-            @back="activeSquadDialog = ''"/>
-          <delete-squad-card
-            v-else-if="activeSquadDialog === 'delete'"
-            :squad="squad"
-            :squadId="+id"
-            :getUnit="getUnit"
-            :getItem="getItem"
-            :getExtraSkill="getExtraSkill"
-            @delete="$router.push('/tools/squads')"
-            @cancel="activeSquadDialog = ''"/>
-        </template>
-        <v-card v-else>
-          <v-card-text>
-            No squad selected
-          </v-card-text>
-          <v-card-actions style="justify-content: flex-end">
-            <v-btn flat @click="activeSquadDialog = ''">
-              Back
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-dialog>
-    </v-container>
+    </promise-wait>
   </module-checker>
 </template>
 
@@ -204,6 +206,7 @@ import {
 import { targetTypes, squadBuffTypes } from '@/modules/constants';
 import ModuleChecker from '@/components/ModuleChecker';
 import LoadingIndicator from '@/components/LoadingIndicator';
+import PromiseWait from '@/components/PromiseWait';
 import SquadListCard from '@/components/Tools/Squads/SquadListCard';
 import ShareSquadCard from '@/components/Tools/Squads/ShareSquadCard';
 import DeleteSquadCard from '@/components/Tools/Squads/DeleteSquadCard';
@@ -234,6 +237,7 @@ export default {
     OrderConfigurator,
     SquadArenaSuggestionTable,
     SquadSparkStatisticsArea,
+    PromiseWait,
   },
   computed: {
     ...mapState('settings', ['activeServer']),
@@ -302,6 +306,7 @@ export default {
       buffTables: [],
       sparkResultToShare: null,
       simulatorOptions: {},
+      initialLoadPromise: Promise.resolve(),
     };
   },
   created () {
@@ -309,7 +314,7 @@ export default {
   },
   mounted () {
     this.isLoadingSquadData = true;
-    this.$store.dispatch('squads/getSquadById', this.id)
+    this.initialLoadPromise = this.$store.dispatch('squads/getSquadById', this.id)
       .then(result => {
         this.squad = result.squad;
       });

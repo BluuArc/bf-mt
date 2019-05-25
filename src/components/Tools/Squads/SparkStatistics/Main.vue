@@ -54,51 +54,68 @@
       </v-expansion-panel-content>
       <v-expansion-panel-content v-show="!runningSimulator && results">
         <span slot="header" class="subheading">Simulator Results</span>
-        <section v-if="Array.isArray(results) && results.length > 0">
-          <section class="result-navigator">
-            <v-btn
-              flat
-              :icon="$vuetify.breakpoint.xsOnly"
-              :disabled="currentResultIndex <= 0"
-              @click="currentResultIndex = Math.max(currentResultIndex - 1, 0)"
-            >
-              <v-icon>chevron_left</v-icon>
-            </v-btn>
-            <v-select
-              class="mx-2"
-              v-model="currentResultIndex"
-              :items="resultSelectValues"
-              item-text="label"
-              item-value="value"
-            />
-            <v-btn
-              flat
-              :icon="$vuetify.breakpoint.xsOnly"
-              :disabled="currentResultIndex + 1 >= results.length"
-              @click="currentResultIndex = Math.min(currentResultIndex + 1, results.length - 1)"
-            >
-              <v-icon>chevron_right</v-icon>
-            </v-btn>
+        <div>
+          <section class="mx-2">
+            <v-alert color="info" :value="true" >
+              <v-layout row wrap>
+                <v-flex>
+                  Time Elapsed: {{ simulationElapsedText }}
+                </v-flex>
+                <v-flex>
+                  Total Combinations Tested: {{ lastTestedCount }}
+                </v-flex>
+                <v-flex>
+                  Combinations Tested/Second: {{ combosTestedPerSecond }}
+                </v-flex>
+              </v-layout>
+            </v-alert>
           </section>
-          <section>
-            <spark-squad-card
-              :key="getResultName(results[currentResultIndex], currentResultIndex)"
-              :squad="squad"
-              :sparkResult="results[currentResultIndex]"
-              :getUnit="getUnit"
-              :simulatorOptions="simulatorOptions">
-            <v-card-actions slot="card-actions">
-              <v-btn outline @click="() => applySparkResult(results[currentResultIndex])">
-                <v-icon left>save</v-icon>
-                Apply
+          <section v-if="Array.isArray(results) && results.length > 0">
+            <section class="result-navigator">
+              <v-btn
+                flat
+                :icon="$vuetify.breakpoint.xsOnly"
+                :disabled="currentResultIndex <= 0"
+                @click="currentResultIndex = Math.max(currentResultIndex - 1, 0)"
+              >
+                <v-icon>chevron_left</v-icon>
               </v-btn>
-            </v-card-actions>
-            </spark-squad-card>
+              <v-select
+                class="mx-2"
+                v-model="currentResultIndex"
+                :items="resultSelectValues"
+                item-text="label"
+                item-value="value"
+              />
+              <v-btn
+                flat
+                :icon="$vuetify.breakpoint.xsOnly"
+                :disabled="currentResultIndex + 1 >= results.length"
+                @click="currentResultIndex = Math.min(currentResultIndex + 1, results.length - 1)"
+              >
+                <v-icon>chevron_right</v-icon>
+              </v-btn>
+            </section>
+            <section>
+              <spark-squad-card
+                :key="getResultName(results[currentResultIndex], currentResultIndex)"
+                :squad="squad"
+                :sparkResult="results[currentResultIndex]"
+                :getUnit="getUnit"
+                :simulatorOptions="simulatorOptions">
+              <v-card-actions slot="card-actions">
+                <v-btn outline @click="() => applySparkResult(results[currentResultIndex])">
+                  <v-icon left>save</v-icon>
+                  Apply
+                </v-btn>
+              </v-card-actions>
+              </spark-squad-card>
+            </section>
           </section>
-        </section>
-        <section v-else>
-          No results found for given configuration.
-        </section>
+          <section v-else>
+            No results found for given configuration.
+          </section>
+        </div>
       </v-expansion-panel-content>
     </v-expansion-panel>
     <v-dialog
@@ -112,7 +129,8 @@
             :value="progressPercent"
             :indeterminate="progressPercent === 0"
             query/>
-          {{ progressLabel }}
+          <div>{{ progressLabel }}</div>
+          <div>Time Elapsed: {{ simulationElapsedText }}</div>
         </v-card-text>
         <v-card-actions>
           <v-spacer/>
@@ -178,6 +196,9 @@ export default {
     progressPercent () {
       return (this.progressActual / Math.max(1, this.progressTotal)) * 100;
     },
+    combosTestedPerSecond () {
+      return (this.lastTestedCount / Math.max(this.simulationEndTime - this.simulationStartTime, 1) * 1000).toFixed(2);
+    },
   },
   data () {
     return {
@@ -192,8 +213,12 @@ export default {
       progressTotal: 0,
       progressActual: 0,
       progressAnimationFrame: null,
-      progressObject: { total: 0, completed: 0 },
+      progressObject: { total: 0, completed: 0, countTested: 0 },
       errors: [],
+      simulationStartTime: Date.now(),
+      simulationEndTime: Date.now(),
+      simulationElapsedText: '',
+      lastTestedCount: 0,
     };
   },
   created () {
@@ -206,11 +231,6 @@ export default {
       extraSkill: this.getExtraSkill,
     };
     this.calculateResultForCurrentSquad();
-
-    this.sparkSimulator.addProgressListener(p => {
-      this.progressObject = p;
-      this.throttledSetProgress();
-    });
   },
   methods: {
     cancelCalculations () {
@@ -223,6 +243,16 @@ export default {
       this.results = null;
       this.runningSimulator = true;
       this.showProgressDialog = true;
+      if (this.progressAnimationFrame) {
+        cancelAnimationFrame(this.progressAnimationFrame);
+        this.progressAnimationFrame = null;
+      }
+      this.sparkSimulator.addProgressListener(p => {
+        this.progressObject = p;
+        this.throttledSetProgress();
+      });
+      this.simulationStartTime = Date.now();
+      this.throttledSetProgress();
       await this.$nextTick();
 
       // run and get results
@@ -237,6 +267,8 @@ export default {
       this.runningSimulator = false;
       this.showProgressDialog = false;
       this.progressObject = { total: 0, completed: 0 };
+      this.simulationEndTime = Date.now();
+      this.sparkSimulator.removeAllListeners();
       await this.$nextTick();
       this.currentSection = 2; // show result panel
     },
@@ -263,6 +295,8 @@ export default {
     setProgress () {
       this.progressActual = (this.progressObject && this.progressObject.completed) || 0;
       this.progressTotal = (this.progressObject && this.progressObject.total) || 0;
+      this.lastTestedCount = (this.progressObject && this.progressObject.completed) || 0;
+      this.simulationElapsedText = this.getTimeElapsedText();
     },
     throttledSetProgress () {
       if (!this.progressAnimationFrame) {
@@ -270,6 +304,7 @@ export default {
         const loop = () => {
           const currentProgressObject = this.progressObject;
           this.progressAnimationFrame = requestAnimationFrame(() => {
+            this.simulationElapsedText = this.getTimeElapsedText();
             if (progressIsDifferent(currentProgressObject)) {
               this.setProgress();
             }
@@ -280,6 +315,14 @@ export default {
         };
         loop();
       }
+    },
+    getTimeElapsedText (otherTime = Date.now()) {
+      const diff = otherTime - this.simulationStartTime;
+      const MS_TO_MINUTES = 1 / (1000 * 60);
+      const MS_TO_SECONDS = 1 / 1000;
+      const minutes = Math.floor(diff * MS_TO_MINUTES);
+      const seconds = Math.floor((diff - (minutes / MS_TO_MINUTES)) * MS_TO_SECONDS);
+      return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
     },
   },
   watch: {
