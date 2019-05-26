@@ -19,7 +19,9 @@
             <template slot="after-image">
               <text
                 :x="0"
-                :y="thumbnailSize * 0.75">
+                :y="thumbnailSize * 0.75"
+                :style="bbOrderStyle"
+              >
                 {{ !isNaN(bbOrder) ? bbOrder : '-' }}
               </text>
             </template>
@@ -155,6 +157,14 @@ import LeaderIcon from '@/components/Multidex/MiniLeaderIcon';
 import FriendIcon from '@/components/Multidex/MiniFriendIcon';
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 
+const colorConfigByBbOrder = [
+  { stroke: colors.red.darken4, fill: colors.red.lighten4 },
+  { stroke: colors.blue.darken4, fill: colors.blue.lighten4 },
+  { stroke: colors.green.darken4, fill: colors.green.lighten4 },
+  { stroke: colors.yellow.darken4, fill: colors.yellow.lighten4 },
+  { stroke: colors.grey.darken4, fill: colors.grey.lighten4 },
+  { stroke: colors.purple.darken4, fill: colors.purple.lighten4 },
+];
 export default {
   mixins: [GettersMixin],
   components: {
@@ -240,6 +250,13 @@ export default {
     },
     position () {
       return this.sparkResultForUnit.position || this.unit.position;
+    },
+    bbOrderStyle () {
+      let style;
+      if (this.$store.state.showBbOrderColors && !isNaN(this.bbOrder) && colorConfigByBbOrder[+this.bbOrder - 1]) {
+        style = { ...colorConfigByBbOrder[+this.bbOrder - 1] };
+      }
+      return style;
     },
   },
   data () {

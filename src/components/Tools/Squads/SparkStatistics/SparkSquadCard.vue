@@ -6,6 +6,15 @@
           {{ sparkPercentage }} Weighted Hits Sparked
         </h1>
       </v-flex>
+      <v-flex style="flex: none;">
+        <v-btn
+          icon flat
+          :color="bbOrderColorToggleIconColor"
+          @click="toggleBbOrderColor"
+        >
+          <v-icon>color_lens</v-icon>
+        </v-btn>
+      </v-flex>
     </v-layout>
     <v-layout row wrap class="px-2">
       <unit-entry
@@ -128,10 +137,18 @@ export default {
       });
       return mapping;
     },
+    bbOrderColorToggleIconColor () {
+      return this.$store.state.showBbOrderColors
+        ? 'primary'
+        : undefined;
+    },
   },
   methods: {
     getUnitEntryKey (unit = {}, i = 0) {
       return `${JSON.stringify(unit)}-${i}`;
+    },
+    toggleBbOrderColor () {
+      this.$store.commit('setShowSparkOrderColors', !this.$store.state.showBbOrderColors);
     },
   },
 };

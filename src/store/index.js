@@ -41,6 +41,7 @@ export default new Vuex.Store({
     loadingState: false, // changed mostly by MultidexDataWrapper, accessed by all
     iconKeyConfigCache: {},
     maxColumnWidthForBuffTable: 0,
+    showBbOrderColors: false,
   },
   mutations: {
     setInitState (state, newState = false) {
@@ -64,6 +65,9 @@ export default new Vuex.Store({
     },
     setMaxColumnWidthForBuffTable (state, newVal) {
       state.maxColumnWidthForBuffTable = +newVal;
+    },
+    setShowSparkOrderColors (state, newVal) {
+      state.showBbOrderColors = !!newVal;
     },
   },
   actions: {
