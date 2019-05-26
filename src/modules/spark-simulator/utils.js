@@ -10,6 +10,7 @@ import {
   generateDefaultSquad,
   makeSquadUnitEntry,
   cloneSquad,
+  sortUnitsByPosition,
 } from '@/modules/core/squads';
 import { getMoveType } from '@/modules/core/units';
 import {
@@ -311,7 +312,7 @@ export function calculateSparksForSparkSimSquad (squad = [convertSquadUnitEntryT
     actualSparks: actualSparkSquad,
     possibleSparks: possibleSparksSquad,
     weightedPercentage,
-    squad: sparkResults,
+    squad: sortUnitsByPosition(sparkResults, false),
   };
 }
 
@@ -354,7 +355,7 @@ export function getSimulatorOptions ({
   enemyCount = 6,
   burstCutins = false,
   resultThreshold = 50,
-  workerCount = 1,
+  workerCount = MAX_WORKERS,
   maxResults = 10,
   optimize = false,
 } = {}, squad = generateDefaultSquad()) {
@@ -373,7 +374,7 @@ export function getSimulatorOptions ({
     enemyCount: Math.max(1, getNumberOrDefault(enemyCount, 6)),
     burstCutins: !!burstCutins,
     resultThreshold: Math.max(0, Math.min(100, getNumberOrDefault(resultThreshold, 50))),
-    workerCount: (Math.max(1, Math.min(MAX_WORKERS, getNumberOrDefault(workerCount, 1)))),
+    workerCount: (Math.max(1, Math.min(MAX_WORKERS, getNumberOrDefault(workerCount, MAX_WORKERS)))),
     maxResults: Math.max(1, Math.min(100, getNumberOrDefault(maxResults, 10))),
     optimize: !!optimize,
   });
@@ -469,9 +470,9 @@ export function getSimulatorWarningsForSquad (squad = generateDefaultSquad(), op
 }
 
 export function applySparkResultToSquad (squad = generateDefaultSquad(), sparkResult = calculateSparksForSparkSimSquad()) {
-  const newUnitSet = [];
+  const newUnitSet = [], newSparkResultSquad = [];
   let { lead, friend } = squad;
-  const newSparkResultSquad = [];
+  let leadUnit, friendUnit;
   unitPositionMapping.forEach((position, index) => {
     const squadUnitIndex = squad.units.findIndex(u => u.position === position);
     const sparkUnitIndex = sparkResult.squad.findIndex(u => u.originalPosition === position);
@@ -485,12 +486,22 @@ export function applySparkResultToSquad (squad = generateDefaultSquad(), sparkRe
     newSparkResultSquad.push(sparkResult.squad[sparkUnitIndex]);
 
     if (squadUnitIndex === lead) {
-      lead = index;
+      leadUnit = newUnitSet[index];
     }
     if (squadUnitIndex === friend) {
-      friend = index;
+      friendUnit = newUnitSet[index];
     }
   });
+
+  // set lead and friend indices properlty
+  sortUnitsByPosition(newUnitSet, false);
+  sortUnitsByPosition(newSparkResultSquad, false);
+  if (leadUnit) {
+    lead = newUnitSet.indexOf(leadUnit);
+  }
+  if (friendUnit) {
+    friend = newUnitSet.indexOf(friendUnit);
+  }
 
   return {
     squad: cloneSquad({

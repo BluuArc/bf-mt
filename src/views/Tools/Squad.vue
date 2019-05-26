@@ -316,7 +316,7 @@ export default {
     this.isLoadingSquadData = true;
     this.initialLoadPromise = this.$store.dispatch('squads/getSquadById', this.id)
       .then(result => {
-        this.squad = result.squad;
+        this.squad = cloneSquad(result.squad);
       });
   },
   methods: {

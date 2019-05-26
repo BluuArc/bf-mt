@@ -82,6 +82,7 @@ import { getEffectsListForSquadUnitEntry } from '@/modules/core/squads';
 import { getEffectName } from '@/modules/core/buffs';
 import { weightedStringSort } from '@/modules/utils';
 import { mapGetters } from 'vuex';
+import { Logger } from '@/modules/Logger';
 import ValueSubgrid from '@/components/Multidex/BuffTableGrid/ValueSubgrid';
 import UnitEntry from '@/components/Tools/Squads/SquadUnitEntry';
 import UnitThumbnail from '@/components/Multidex/Units/UnitThumbnail';
@@ -89,6 +90,7 @@ import DelayedVForExpansionPanel from './DelayedVForExpansionPanel';
 import LoadingIndicator from '@/components/LoadingIndicator';
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 
+const logger = new Logger({ prefix: '[SquadBuffExpandableList]' });
 export default {
   mixins: [GettersMixin],
   props: {
@@ -271,7 +273,10 @@ export default {
       return Array.isArray(obj) && obj.length === 0;
     },
     getSquadEntriesForEffectId (id) {
-      return Array.from(new Set(this.effectsById[id].map(e => e.source)));
+      if (!this.effectsById[id]) {
+        logger.warn(`Missing effect id array [${id}]`, this.effectsById);
+      }
+      return Array.from(new Set((this.effectsById[id] || []).map(e => e.source)));
     },
   },
   watch: {

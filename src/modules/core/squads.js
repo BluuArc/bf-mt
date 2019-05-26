@@ -157,7 +157,7 @@ export function cloneSquad (squad = {}) {
     lead,
     friend,
     name,
-    units: squad.units.map(makeSquadUnitEntry),
+    units: sortUnitsByPosition(squad.units.map(makeSquadUnitEntry), false),
     simulatorOptions,
   };
 }
