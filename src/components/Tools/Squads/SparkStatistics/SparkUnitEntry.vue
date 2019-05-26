@@ -88,7 +88,14 @@
                   v-text="'+'"
                 />
               </template>
-              , Weight: {{ sparkResultForUnit.weight }} ({{ relativeWeight }}%)
+              ,
+              <v-tooltip bottom>
+                <span slot="activator" style="text-decoration: underline dashed">
+                  Weight:
+                </span>
+                <span>Represents how much this unit contributes to the overall spark percentage of the squad.</span>
+              </v-tooltip>
+              {{ sparkResultForUnit.weight }} ({{ relativeWeight }}%)
             </v-flex>
             <v-flex style="flex-grow: 0" v-if="warnings.length > 0">
               <v-dialog v-model="showWarningDialog" max-width="500px">
