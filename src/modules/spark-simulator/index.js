@@ -55,7 +55,7 @@ export default class SparkSimulator {
       originalPosition: u.position,
       unitConfig: options.unitConfig[i],
     }));
-    logger.debug('getting permutations');
+    logger.debug('getting permutations for spark squad', sparkSquad);
     const permutations = await generateSimulatorPermutations(sparkSquad, options, () => new Promise(fulfill => setTimeout(() => fulfill())));
     logger.debug('permutations', permutations.length);
     this._progressTotal = permutations.length;

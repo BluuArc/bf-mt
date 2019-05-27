@@ -154,7 +154,7 @@ export function convertSquadUnitEntryToSparkUnitEntry ({
     unitEntry: {
       ...entry,
       bbOrder: unitConfig.bbOrder || entry.bbOrder,
-      action: unitConfig.action || entry.action,
+      action: unitConfig.action,
     },
     target: targetTypes.ENEMY,
     effectType: squadBuffTypes.PROC,
@@ -172,7 +172,7 @@ export function convertSquadUnitEntryToSparkUnitEntry ({
     action: unitConfig.action || entry.action,
     name: unitData.name || entry.id,
     extraAttackEffects,
-    burst: unitData[entry.action],
+    burst: unitData[unitConfig.action],
     moveTypeId: (unitData.movement && unitData.movement.skill && +unitData.movement.skill['move type']) || 0,
     moveSpeed: (unitData.movement && unitData.movement.skill && +unitData.movement.skill['move speed']) || 0,
     moveSpeedType: (unitData.movement && unitData.movement.skill && +unitData.movement.skill['move speed type']) || '1',

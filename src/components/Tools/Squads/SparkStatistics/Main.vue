@@ -142,6 +142,7 @@
           </v-btn>
           <v-btn
             v-else
+            :disabled="progressTotal === 0"
             @click="cancelCalculations"
           >
             Cancel

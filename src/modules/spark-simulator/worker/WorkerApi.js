@@ -41,7 +41,7 @@ export default class SparkSimWorker extends SparkSimWorkerInterface {
       logger.debug('input permutations', permutations.length);
       allPermutations = permutations;
     }
-    logger.debug('permutations', allPermutations.length);
+    logger.debug('permutations for spark squad', allPermutations.length, { sparkSquad, options });
 
     const results = [], errors = [];
     let lastTimeoutPercent = 0;
