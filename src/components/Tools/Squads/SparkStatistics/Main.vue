@@ -286,7 +286,7 @@ export default {
     },
     applySparkResult (sparkResult) {
       this.$emit('apply', applySparkResultToSquad(this.squad, sparkResult));
-
+      this.results = null;
       this.currentSection = 0; // show current squad panel
     },
     setProgress () {
