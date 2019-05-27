@@ -12,6 +12,11 @@
             :simulatorOptions="simulatorOptions"
             @share="() => emitShareEvent(resultForCurrentSquad)"
           />
+          <span v-else>
+            <v-alert :value="true" color="error" icon="warning">
+              There was a problem generating the spark results for the current squad configuration. ({{ (errorForCurrentSquad && errorForCurrentSquad.message) || errorForCurrentSquad || 'Unknown error' }})
+            </v-alert>
+          </span>
         </section>
       </v-expansion-panel-content>
       <v-expansion-panel-content>
@@ -52,7 +57,7 @@
           <v-btn block @click="runSimulator">Run Simulator</v-btn>
         </section>
       </v-expansion-panel-content>
-      <v-expansion-panel-content v-show="!runningSimulator && results">
+      <v-expansion-panel-content v-show="!runningSimulator && (results || errorForCalculations)">
         <span slot="header" class="subheading">Simulator Results</span>
         <div>
           <section class="mx-2">
@@ -112,6 +117,11 @@
               </spark-squad-card>
             </section>
           </section>
+          <section v-else-if="errorForCalculations">
+            <v-alert :value="true" color="error" icon="warning">
+              There was a problem generating the spark results for the current squad configuration. ({{ errorForCalculations.message || errorForCalculations }})
+            </v-alert>
+          </section>
           <section v-else>
             No results found for given configuration.
           </section>
@@ -163,7 +173,9 @@ import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 import SparkSquadCard from '@/components/Tools/Squads/SparkStatistics/SparkSquadCard';
 import SparkSquadCardEditable from '@/components/Tools/Squads/SparkStatistics/SparkSquadCardEditable';
 import OverallSimulatorOptions from '@/components/Tools/Squads/SparkStatistics/OverallSimulatorOptions';
+import { Logger } from '@/modules/Logger';
 
+const logger = new Logger({ prefix: '[SparkStatisticsArea]' });
 export default {
   mixins: [GettersMixin],
   props: {
@@ -220,6 +232,8 @@ export default {
       simulationEndTime: Date.now(),
       simulationElapsedText: '',
       lastTestedCount: 0,
+      errorForCurrentSquad: null,
+      errorForCalculations: null,
     };
   },
   created () {
@@ -244,6 +258,7 @@ export default {
       this.results = null;
       this.runningSimulator = true;
       this.showProgressDialog = true;
+      this.errorForCalculations = null;
       if (this.progressAnimationFrame) {
         cancelAnimationFrame(this.progressAnimationFrame);
         this.progressAnimationFrame = null;
@@ -257,9 +272,18 @@ export default {
       await this.$nextTick();
 
       // run and get results
-      const calculationResults = await this.sparkSimulator.calculateOptimalOrdersForSquad(this.squad, this.simulatorOptions);
-      this.errors = calculationResults.errors;
-      this.results = calculationResults.results;
+      try {
+        const calculationResults = await this.sparkSimulator.calculateOptimalOrdersForSquad(this.squad, this.simulatorOptions);
+        this.errors = calculationResults.errors;
+        this.results = calculationResults.results;
+      } catch (err) {
+        logger.error('error calculating spark results', {
+          err,
+          squad: this.squad,
+          simulatorOptions: this.simulatorOptions,
+        });
+        this.errorForCalculations = err;
+      }
       if (this.progressAnimationFrame) {
         cancelAnimationFrame(this.progressAnimationFrame);
         this.progressAnimationFrame = null;
@@ -274,7 +298,14 @@ export default {
       this.currentSection = 2; // show result panel
     },
     calculateResultForCurrentSquad () {
-      this.resultForCurrentSquad = Object.freeze(this.sparkSimulator.calculateSparksForSquad(this.squad, getSimulatorOptions(this.squad.simulatorOptions, this.squad)));
+      this.errorForCurrentSquad = null;
+      try {
+        this.resultForCurrentSquad = Object.freeze(this.sparkSimulator.calculateSparksForSquad(this.squad, getSimulatorOptions(this.squad.simulatorOptions, this.squad)));
+      } catch (err) {
+        logger.error('error calculating results for current squad', { err });
+        this.errorForCurrentSquad = err;
+        this.resultForCurrentSquad = null;
+      }
     },
     emitShareEvent (sparkResult) {
       this.$emit('share', sparkResult);
