@@ -165,6 +165,12 @@ export function convertSquadUnitEntryToSparkUnitEntry ({
     getExtraSkill: synchronousGetters.extraSkill,
   }).filter(effect => !sourcesToIgnore.includes(effect.sourcePath) && (!effect.triggeredOn || (effect.triggeredOn === entry.action)));
 
+  let delay;
+  if (!isNaN(unitConfig.delay)) {
+    delay = +unitConfig.delay;
+  } else {
+    delay = !isNaN(entry.delay) ? +entry.delay : 0;
+  }
   const sparkUnitEntry = {
     id: entry.id,
     position: entry.position,
@@ -176,7 +182,7 @@ export function convertSquadUnitEntryToSparkUnitEntry ({
     moveTypeId: (unitData.movement && unitData.movement.skill && +unitData.movement.skill['move type']) || 0,
     moveSpeed: (unitData.movement && unitData.movement.skill && +unitData.movement.skill['move speed']) || 0,
     moveSpeedType: (unitData.movement && unitData.movement.skill && +unitData.movement.skill['move speed type']) || '1',
-    delay: !isNaN(entry.delay) ? +entry.delay : 0,
+    delay,
     teleporterId: entry.id,
     weight: unitConfig.weight,
     originalPosition,
