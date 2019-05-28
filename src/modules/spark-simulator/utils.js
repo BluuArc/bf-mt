@@ -589,7 +589,7 @@ export function getOrderPermutations (squad = [convertSquadUnitEntryToSparkUnitE
     if (!isNaN(config.bbOrder) && allOrders.includes(config.bbOrder)) {
       lockedUnits.push({ unit, bbOrder: +config.bbOrder });
     } else if (config.bbOrder === ANY_BB_ORDER) {
-      unlockedUnits.push({ unit });
+      unlockedUnits.push(unit);
     }
   });
   const emptyOrders = allOrders
@@ -597,7 +597,6 @@ export function getOrderPermutations (squad = [convertSquadUnitEntryToSparkUnitE
     .map((order, index) => ({ unit: emptyUnits[index], bbOrder: order }));
   const lockedOrders = lockedUnits.map(({ bbOrder }) => bbOrder);
   const unlockedOrders = allOrders.filter(order => !lockedOrders.includes(order) && order <= (squad.length - emptyUnits.length));
-
   let unitOrderPairings = [[]];
   if (unlockedOrders.length > 0) {
     unitOrderPairings = getAllPermutations(unlockedOrders)
@@ -628,6 +627,10 @@ export async function generateSimulatorPermutations (squad = [convertSquadUnitEn
       return unitKey;
     }).filter(v => v).join('-');
   };
+  logger.debug({
+    positionPermutations,
+    orderPermutations,
+  });
   const squadPermutations = [];
   const permutationHistory = new Map();
   let currentIndex = 0;
