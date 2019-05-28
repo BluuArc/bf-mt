@@ -306,7 +306,7 @@ export default {
 
   .unit-thumbnail {
     flex: 0 1 auto;
-    margin: auto;
+    margin-top: auto;
     font: bold 4.5em sans-serif;
     stroke: black;
     stroke-width: 2px;
