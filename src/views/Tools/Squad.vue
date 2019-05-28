@@ -404,8 +404,8 @@ export default {
       const topNavbar = document.querySelector('nav.v-toolbar');
       this.topNavbarHeight = (topNavbar && topNavbar.offsetHeight) || 56;
     },
-    async applySparkResult ({ squad, sparkResult } = {}) {
-      squad.simulatorOptions = this.simulatorOptions;
+    async applySparkResult ({ squad, sparkResult, options } = {}) {
+      squad.simulatorOptions = options || this.simulatorOptions;
       await this.$store.dispatch('squads/storeSquad', {
         server: this.$store.state.settings.activeServer,
         squad: squad,

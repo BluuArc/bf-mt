@@ -475,7 +475,7 @@ export function getSimulatorWarningsForSquad (squad = generateDefaultSquad(), op
   return warnings;
 }
 
-export function applySparkResultToSquad (squad = generateDefaultSquad(), sparkResult = calculateSparksForSparkSimSquad()) {
+export function applySparkResultToSquad (squad = generateDefaultSquad(), sparkResult = calculateSparksForSparkSimSquad(), originalOptions = getSimulatorOptions()) {
   const newUnitSet = [], newSparkResultSquad = [];
   let { lead, friend } = squad;
   let leadUnit, friendUnit;
@@ -520,7 +520,16 @@ export function applySparkResultToSquad (squad = generateDefaultSquad(), sparkRe
       ...sparkResult,
       squad: newSparkResultSquad,
     },
+    options: getSimulatorOptions({
+      ...originalOptions,
+      unitConfig: extractUnitConfigFromSparkResultSquad(newSparkResultSquad),
+    }),
   };
+}
+
+export function extractUnitConfigFromSparkResultSquad (squad = calculateSparksForSparkSimSquad().squad) {
+  // assumption: order of units in spark result does not differ from squad it is to be applid on
+  return squad.map(getSparkSimUnitConfig);
 }
 
 // original source: https://initjs.org/all-permutations-of-a-set-f1be174c79f8

@@ -168,7 +168,11 @@
 
 <script>
 import SparkSimulator from '@/modules/spark-simulator';
-import { getSimulatorOptions, applySparkResultToSquad, getSimulatorWarningsForSquad } from '@/modules/spark-simulator/utils';
+import {
+  getSimulatorOptions,
+  applySparkResultToSquad,
+  getSimulatorWarningsForSquad,
+} from '@/modules/spark-simulator/utils';
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 import SparkSquadCard from '@/components/Tools/Squads/SparkStatistics/SparkSquadCard';
 import SparkSquadCardEditable from '@/components/Tools/Squads/SparkStatistics/SparkSquadCardEditable';
@@ -259,6 +263,7 @@ export default {
       this.runningSimulator = true;
       this.showProgressDialog = true;
       this.errorForCalculations = null;
+      this.currentResultIndex = 0;
       if (this.progressAnimationFrame) {
         cancelAnimationFrame(this.progressAnimationFrame);
         this.progressAnimationFrame = null;
@@ -317,8 +322,10 @@ export default {
       return `Result ${resultIndex + 1} (${(sparkResult.weightedPercentage * 100).toFixed(2)}%)`;
     },
     applySparkResult (sparkResult) {
-      this.$emit('apply', applySparkResultToSquad(this.squad, sparkResult));
+      const result = applySparkResultToSquad(this.squad, sparkResult, this.simulatorOptions);
+      this.$emit('apply', result);
       this.results = null;
+      this.simulatorOptions = result.options;
       this.currentSection = 0; // show current squad panel
     },
     setProgress () {

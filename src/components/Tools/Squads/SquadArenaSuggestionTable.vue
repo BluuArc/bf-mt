@@ -5,7 +5,7 @@
       v-html="`<u>Applicable Colosseum Classes:</u> ${usableColoClasses.join(', ')}`"
     />
     <template v-for="(unit, i) in fullUnits">
-      <div :key="`${unit.position}-suggestion`" class="suggestion-text">
+      <div :key="`${squadKey}-${unit.position}-suggestion`" class="suggestion-text">
         <template v-if="i !== squad.friend">
           <div
             style="text-transform: capitalize; font-weight: bold; text-align: center;"
@@ -13,7 +13,7 @@
           />
           <div
             v-for="(arenaText, a) in arenaTextDataBySquadEntry.get(unit)"
-            :key="`${unit.position}-${a}-arena-text`"
+            :key="`${squadKey}-${unit.position}-${a}-arena-text`"
             v-text="arenaText"
           />
         </template>
@@ -21,7 +21,7 @@
           Friend units are not allowed in Arena
         </span>
       </div>
-      <unit-entry :key="`${unit.position}-entry`"
+      <unit-entry :key="`${squadKey}-${unit.position}-entry`"
         :index="i"
         :unit="unit"
         :getUnit="getUnit"
@@ -43,7 +43,7 @@ import {
   arenaConditionToText,
   getColoClassUsage,
 } from '@/modules/core/units';
-import { generateFillerSquadUnitEntry } from '@/modules/core/squads';
+import { generateFillerSquadUnitEntry, squadToShorthand } from '@/modules/core/squads';
 import { unitPositionMapping, squadFillerMapping } from '@/modules/constants';
 import UnitEntry from '@/components/Tools/Squads/SquadUnitEntry';
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
@@ -122,6 +122,9 @@ export default {
       });
 
       return Object.freeze(Array.from(commonColoClasses));
+    },
+    squadKey () {
+      return squadToShorthand(this.squad);
     },
   },
   methods: {
