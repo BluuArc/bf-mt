@@ -32,10 +32,9 @@ export function getBcDcInfo (burst) {
 }
 
 export function getHitCountData (burst, filterFn = (f) => attackingProcs.includes(f.id)) {
-  if (!burst) {
+  if (typeof burst !== 'object' || Object.keys(burst).length === 0) {
     return [];
   }
-
   const endLevel = getBurstEffects(burst);
   return burst['damage frames']
     .map((f, i) => {
