@@ -54,6 +54,12 @@
   "16": [
     "5-crit% buff"
   ],
+  "17": [
+    "5-atk% buff"
+  ],
+  "18": [
+    "5-def% buff"
+  ],
   "20": [
     "16-mitigate all attacks"
   ],
@@ -173,6 +179,12 @@
   ],
   "100": [
     "902-atk% buff"
+  ],
+  "101": [
+    "902-def% buff"
+  ],
+  "102": [
+    "902-rec% buff"
   ],
   "110": [
     "65-atk% buff turns"

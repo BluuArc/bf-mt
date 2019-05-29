@@ -1566,6 +1566,16 @@
             "4",
             "buff"
           ]
+        },
+        {
+          "value": "2",
+          "context": [
+            "items",
+            "819215-gl",
+            "effect",
+            "5",
+            "buff"
+          ]
         }
       ],
       "unknown buff params": [
@@ -1580,10 +1590,20 @@
           ]
         },
         {
-          "value": "0&7000&7000&7000&",
+          "value": "0&7000&7000&7000",
           "context": [
             "items",
             "819215-gl",
+            "effect",
+            "5",
+            "buff"
+          ]
+        },
+        {
+          "value": "0&8000&8000&8000",
+          "context": [
+            "items",
+            "819243-gl",
             "effect",
             "5",
             "buff"
