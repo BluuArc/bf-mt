@@ -424,6 +424,7 @@ export const targetTypes = Object.freeze({
   SELF: 'self',
   PARTY: 'party',
   ENEMY: 'enemy',
+  OTHER: 'other',
 });
 
 export const squadBuffTypes = Object.freeze({

@@ -40,7 +40,7 @@
             :length="numPages"/>
         </v-layout>
       </template>
-      <v-layout row style="justify-content: flex-end;">
+      <v-layout row style="justify-content: flex-end;" v-show="!hasSelection">
         <v-flex style="flex: none;">
           <v-btn flat @click="$emit('cancel')">Cancel</v-btn>
         </v-flex>

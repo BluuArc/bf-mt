@@ -286,6 +286,16 @@ export default {
         targetType: targetTypes.SELF,
         effectType: squadBuffTypes.PROC,
       },
+      {
+        name: 'Other Passives',
+        targetType: targetTypes.OTHER,
+        effectType: squadBuffTypes.PASSIVE,
+      },
+      {
+        name: 'Other Buffs',
+        targetType: targetTypes.OTHER,
+        effectType: squadBuffTypes.PROC,
+      },
     ]),
     defaultBuffTables () {
       return Object.freeze(this.possibleTables.map((_, i) => i));

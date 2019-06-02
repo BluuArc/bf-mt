@@ -429,6 +429,7 @@ export function getEffectsListForSquadUnitEntry (
     SBB: 'add to sbb',
     UBB: 'add to ubb',
   };
+  const KNOWN_TARGET_TYPES = [targetTypes.PARTY, targetTypes.SELF, targetTypes.ENEMY];
   const isLsActive = (squad.units.indexOf(unitEntry) === squad.lead || squad.units.indexOf(unitEntry) === squad.friend);
 
   const filteredEffects = {
@@ -440,10 +441,10 @@ export function getEffectsListForSquadUnitEntry (
     spheres: [],
     unitSp: [],
   };
-  const processExtraSkillForProcs = (esEffects = []) => {
+  const processExtraSkillForProcs = (esEffects = [], matchesTargetType = () => false) => {
     esEffects.forEach(esEffect => {
       const buffs = extractBuffsFromTriggeredEffect(esEffect, esEffect.sourcePath)
-        .filter(e => e[TARGET_TYPE_KEY] === target)
+        .filter(matchesTargetType)
         .map(e => ({
           ...e,
           esConditions: esEffect.conditions,
@@ -472,8 +473,13 @@ export function getEffectsListForSquadUnitEntry (
   // TODO: burst effects
   if (effectType === squadBuffTypes.PROC) {
     // identical steps regardless of target
+    const matchesTargetType = (e = {}) => {
+      return target !== targetTypes.OTHER
+        ? e[TARGET_TYPE_KEY] === target
+        : !KNOWN_TARGET_TYPES.includes(e[TARGET_TYPE_KEY]);
+    };
     burstTypes.forEach(burstType => {
-      const burstEffects = entryEffects.unit[burstType].filter(e => e[TARGET_TYPE_KEY] === target);
+      const burstEffects = entryEffects.unit[burstType].filter(matchesTargetType);
       if (burstType !== squadUnitActions.UBB) {
         filteredEffects.unitNonUbb = filteredEffects.unitNonUbb.concat(burstEffects);
       } else {
@@ -483,7 +489,7 @@ export function getEffectsListForSquadUnitEntry (
 
     if (isLsActive) {
       filteredEffects.unitLs = extractBuffsFromEffects(entryEffects.unit.ls)
-        .filter(e => e[TARGET_TYPE_KEY] === target);
+        .filter(matchesTargetType);
     }
     processExtraSkillForProcs(entryEffects.unit.es);
 
@@ -493,7 +499,7 @@ export function getEffectsListForSquadUnitEntry (
       const spEffectId = getEffectId(spEffect);
       if (spEffect['triggered effect']) {
         const buffs = extractBuffsFromTriggeredEffect(spEffect, spEffect.sourcePath)
-          .filter(triggeredEffect => triggeredEffect[TARGET_TYPE_KEY] === target)
+          .filter(matchesTargetType)
           .map(e => {
             const carriedKeys = burstTypes.map(t => `trigger on ${t}`).concat(['sp_type']);
             const carriedProperties = carriedKeys.reduce((acc, key) => {
@@ -574,7 +580,7 @@ export function getEffectsListForSquadUnitEntry (
     Object.values(entryEffects.spheres).forEach(sphereEffects => {
       sphereEffects.forEach(sphereEffect => {
         const buffs = extractBuffsFromTriggeredEffect(sphereEffect, sphereEffect.sourcePath)
-          .filter(e => e[TARGET_TYPE_KEY] === target);
+          .filter(matchesTargetType);
         if (sphereEffect[TRIGGER_ON_KEYS.UBB] && buffs.length > 0) {
           filteredEffects.unitUbb = filteredEffects.unitUbb.concat(buffs.map(b => ({
             ...b,
@@ -611,8 +617,8 @@ export function getEffectsListForSquadUnitEntry (
       }
     });
   } else if (target === targetTypes.SELF && effectType === squadBuffTypes.PASSIVE) {
-    filteredEffects.unitEs = entryEffects.unit.es.filter(e => e[PASSIVE_TARGET_KEY] === targetTypes.SELF && extractBuffsFromTriggeredEffect(e).length === 0);
-    filteredEffects.elgif = entryEffects.es.filter(e => e[PASSIVE_TARGET_KEY] === targetTypes.SELF && extractBuffsFromTriggeredEffect(e).length === 0);
+    filteredEffects.unitEs = entryEffects.unit.es.filter(e => e[PASSIVE_TARGET_KEY] === target && extractBuffsFromTriggeredEffect(e).length === 0);
+    filteredEffects.elgif = entryEffects.es.filter(e => e[PASSIVE_TARGET_KEY] === target && extractBuffsFromTriggeredEffect(e).length === 0);
     Object.values(entryEffects.spheres).forEach(sphere => {
       const buffs = sphere.filter(e => extractBuffsFromTriggeredEffect(e).length === 0);
       if (buffs.length > 0) {
@@ -627,6 +633,10 @@ export function getEffectsListForSquadUnitEntry (
         }
         filteredEffects.unitSp.push(spEffect);
       });
+  } else if (target === targetTypes.OTHER && effectType === squadBuffTypes.PASSIVE) {
+    const matchesTargetType = (e = {}) => !KNOWN_TARGET_TYPES.includes(e[PASSIVE_TARGET_KEY]);
+    filteredEffects.unitEs = entryEffects.unit.es.filter(e => matchesTargetType(e) && extractBuffsFromTriggeredEffect(e).length === 0);
+    filteredEffects.elgif = entryEffects.es.filter(e => matchesTargetType(e) && extractBuffsFromTriggeredEffect(e).length === 0);
   }
 
   // combine all effects into single array and sort by effect ID and whether it has an SP type

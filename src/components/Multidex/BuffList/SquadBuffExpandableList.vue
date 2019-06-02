@@ -1,6 +1,9 @@
 <template>
   <section class="squad-buff-expandable-list">
     <loading-indicator v-if="isVisuallyLoadingList" loadingMessage="Loading list..."/>
+    <div v-if="!isVisuallyLoadingList && sortedEffectIds.length === 0" class="my-2">
+      No entries of type [{{ effectType }}] targeting [{{ targetType }}].
+    </div>
     <delayed-v-for-expansion-panel
       v-show="!isVisuallyLoadingList"
       @start="handleLoadStart"
