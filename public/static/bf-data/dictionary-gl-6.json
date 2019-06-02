@@ -1,20 +1,4 @@
 {
-  "MST_SKILLS_2840117_NAME": {
-    "en": "The Bonnie Special",
-    "es": "The Bonnie Special",
-    "id": "Bonnie Spesial",
-    "pt": "The Bonnie Special",
-    "th": "เดอะ บอนนี่ สเปเชียล",
-    "vi": "The Bonnie Special"
-  },
-  "MST_SKILLS_2840118_DESCRIPTION": {
-    "en": "23 combo massive Fire, Thunder, Dark attack on all foes, Spark damage hugely boosts BB gauge for 3 turns, enormously boosts BB gauge for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & random status ailment infliction",
-    "es": "23 combo massive Fire, Thunder, Dark attack on all foes, Spark damage hugely boosts BB gauge for 3 turns, enormously boosts BB gauge for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & random status ailment infliction",
-    "id": "23 combo massive Fire, Thunder, Dark attack on all foes, Spark damage hugely boosts BB gauge for 3 turns, enormously boosts BB gauge for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & random status ailment infliction",
-    "pt": "23 combo massive Fire, Thunder, Dark attack on all foes, Spark damage hugely boosts BB gauge for 3 turns, enormously boosts BB gauge for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & random status ailment infliction",
-    "th": "23 combo massive Fire, Thunder, Dark attack on all foes, Spark damage hugely boosts BB gauge for 3 turns, enormously boosts BB gauge for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & random status ailment infliction",
-    "vi": "23 combo massive Fire, Thunder, Dark attack on all foes, Spark damage hugely boosts BB gauge for 3 turns, enormously boosts BB gauge for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & random status ailment infliction"
-  },
   "MST_SKILLS_2840118_NAME": {
     "en": "The Bonnie Classic",
     "es": "The Bonnie Classic",
@@ -21367,6 +21351,62 @@
     "th": "อาดาเม้นท์แคร็ก",
     "vi": "Xâm nhập kiên quyết "
   },
+  "MST_SKILLS_3810338_DESCRIPTION": {
+    "en": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, own max HP, BB Atk, Atk, Def, Rec, critical hit rate, critical damage, Spark damage, damage taken restores HP & activates own BB/SBB/UBB twice",
+    "es": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, own max HP, BB Atk, Atk, Def, Rec, critical hit rate, critical damage, Spark damage, damage taken restores HP & activates own BB/SBB/UBB twice",
+    "id": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, own max HP, BB Atk, Atk, Def, Rec, critical hit rate, critical damage, Spark damage, damage taken restores HP & activates own BB/SBB/UBB twice",
+    "pt": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, own max HP, BB Atk, Atk, Def, Rec, critical hit rate, critical damage, Spark damage, damage taken restores HP & activates own BB/SBB/UBB twice",
+    "th": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, own max HP, BB Atk, Atk, Def, Rec, critical hit rate, critical damage, Spark damage, damage taken restores HP & activates own BB/SBB/UBB twice",
+    "vi": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, own max HP, BB Atk, Atk, Def, Rec, critical hit rate, critical damage, Spark damage, damage taken restores HP & activates own BB/SBB/UBB twice"
+  },
+  "MST_SKILLS_3820628_DESCRIPTION": {
+    "en": "34 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Spark damage, max HP, BB gauge, Atk, Def, Rec relative to max HP, 100% damage reduction, raises allies from KO, activates BB/SBB/UBB twice & damage taken restores HP",
+    "es": "34 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Spark damage, max HP, BB gauge, Atk, Def, Rec relative to max HP, 100% damage reduction, raises allies from KO, activates BB/SBB/UBB twice & damage taken restores HP",
+    "id": "34 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Spark damage, max HP, BB gauge, Atk, Def, Rec relative to max HP, 100% damage reduction, raises allies from KO, activates BB/SBB/UBB twice & damage taken restores HP",
+    "pt": "34 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Spark damage, max HP, BB gauge, Atk, Def, Rec relative to max HP, 100% damage reduction, raises allies from KO, activates BB/SBB/UBB twice & damage taken restores HP",
+    "th": "34 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Spark damage, max HP, BB gauge, Atk, Def, Rec relative to max HP, 100% damage reduction, raises allies from KO, activates BB/SBB/UBB twice & damage taken restores HP",
+    "vi": "34 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Spark damage, max HP, BB gauge, Atk, Def, Rec relative to max HP, 100% damage reduction, raises allies from KO, activates BB/SBB/UBB twice & damage taken restores HP"
+  },
+  "MST_SKILLS_3820668_DESCRIPTION": {
+    "en": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Spark damage, Water, Dark elemental damage, activates BB/SBB/UBB twice, 100% evasion, adds status ailment infliction to attack, raises allies from KO & 100% Light, Dark damage reduction",
+    "es": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Spark damage, Water, Dark elemental damage, activates BB/SBB/UBB twice, 100% evasion, adds status ailment infliction to attack, raises allies from KO & 100% Light, Dark damage reduction",
+    "id": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Spark damage, Water, Dark elemental damage, activates BB/SBB/UBB twice, 100% evasion, adds status ailment infliction to attack, raises allies from KO & 100% Light, Dark damage reduction",
+    "pt": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Spark damage, Water, Dark elemental damage, activates BB/SBB/UBB twice, 100% evasion, adds status ailment infliction to attack, raises allies from KO & 100% Light, Dark damage reduction",
+    "th": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Spark damage, Water, Dark elemental damage, activates BB/SBB/UBB twice, 100% evasion, adds status ailment infliction to attack, raises allies from KO & 100% Light, Dark damage reduction",
+    "vi": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Spark damage, Water, Dark elemental damage, activates BB/SBB/UBB twice, 100% evasion, adds status ailment infliction to attack, raises allies from KO & 100% Light, Dark damage reduction"
+  },
+  "MST_SKILLS_3830528_DESCRIPTION": {
+    "en": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical damage, Earth elemental damage, BB gauge, 80% KO resistance, 80% evasion, 80% activates BB/SBB/UBB twice, 80% raises allies from KO & purges turn skip effect",
+    "es": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical damage, Earth elemental damage, BB gauge, 80% KO resistance, 80% evasion, 80% activates BB/SBB/UBB twice, 80% raises allies from KO & purges turn skip effect",
+    "id": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical damage, Earth elemental damage, BB gauge, 80% KO resistance, 80% evasion, 80% activates BB/SBB/UBB twice, 80% raises allies from KO & purges turn skip effect",
+    "pt": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical damage, Earth elemental damage, BB gauge, 80% KO resistance, 80% evasion, 80% activates BB/SBB/UBB twice, 80% raises allies from KO & purges turn skip effect",
+    "th": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical damage, Earth elemental damage, BB gauge, 80% KO resistance, 80% evasion, 80% activates BB/SBB/UBB twice, 80% raises allies from KO & purges turn skip effect",
+    "vi": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical damage, Earth elemental damage, BB gauge, 80% KO resistance, 80% evasion, 80% activates BB/SBB/UBB twice, 80% raises allies from KO & purges turn skip effect"
+  },
+  "MST_SKILLS_3840628_DESCRIPTION": {
+    "en": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Thunder elemental damage, OD gauge, Spark damage boosts BB gauge, raises allies from KO, 80% KO resistance, fully restores HP & inflicts Atk reduction",
+    "es": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Thunder elemental damage, OD gauge, Spark damage boosts BB gauge, raises allies from KO, 80% KO resistance, fully restores HP & inflicts Atk reduction",
+    "id": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Thunder elemental damage, OD gauge, Spark damage boosts BB gauge, raises allies from KO, 80% KO resistance, fully restores HP & inflicts Atk reduction",
+    "pt": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Thunder elemental damage, OD gauge, Spark damage boosts BB gauge, raises allies from KO, 80% KO resistance, fully restores HP & inflicts Atk reduction",
+    "th": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Thunder elemental damage, OD gauge, Spark damage boosts BB gauge, raises allies from KO, 80% KO resistance, fully restores HP & inflicts Atk reduction",
+    "vi": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Thunder elemental damage, OD gauge, Spark damage boosts BB gauge, raises allies from KO, 80% KO resistance, fully restores HP & inflicts Atk reduction"
+  },
+  "MST_SKILLS_3850167_DESCRIPTION": {
+    "en": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts BB Atk, Spark damage, damage against status afflicted foes, 90% raises allies from KO, fully restores HP, activates Light barrier & 100% DoT reduction",
+    "es": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts BB Atk, Spark damage, damage against status afflicted foes, 90% raises allies from KO, fully restores HP, activates Light barrier & 100% DoT reduction",
+    "id": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts BB Atk, Spark damage, damage against status afflicted foes, 90% raises allies from KO, fully restores HP, activates Light barrier & 100% DoT reduction",
+    "pt": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts BB Atk, Spark damage, damage against status afflicted foes, 90% raises allies from KO, fully restores HP, activates Light barrier & 100% DoT reduction",
+    "th": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts BB Atk, Spark damage, damage against status afflicted foes, 90% raises allies from KO, fully restores HP, activates Light barrier & 100% DoT reduction",
+    "vi": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts BB Atk, Spark damage, damage against status afflicted foes, 90% raises allies from KO, fully restores HP, activates Light barrier & 100% DoT reduction"
+  },
+  "MST_SKILLS_3850628_DESCRIPTION": {
+    "en": "70 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Spark damage, OD gauge, Light elemental damage, activates Light barrier, raises allies from KO, 80% KO resistance, 100% damage reduction, 100% DoT reduction & damage taken boosts BB gauge",
+    "es": "70 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Spark damage, OD gauge, Light elemental damage, activates Light barrier, raises allies from KO, 80% KO resistance, 100% damage reduction, 100% DoT reduction & damage taken boosts BB gauge",
+    "id": "70 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Spark damage, OD gauge, Light elemental damage, activates Light barrier, raises allies from KO, 80% KO resistance, 100% damage reduction, 100% DoT reduction & damage taken boosts BB gauge",
+    "pt": "70 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Spark damage, OD gauge, Light elemental damage, activates Light barrier, raises allies from KO, 80% KO resistance, 100% damage reduction, 100% DoT reduction & damage taken boosts BB gauge",
+    "th": "70 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Spark damage, OD gauge, Light elemental damage, activates Light barrier, raises allies from KO, 80% KO resistance, 100% damage reduction, 100% DoT reduction & damage taken boosts BB gauge",
+    "vi": "70 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Spark damage, OD gauge, Light elemental damage, activates Light barrier, raises allies from KO, 80% KO resistance, 100% damage reduction, 100% DoT reduction & damage taken boosts BB gauge"
+  },
   "MST_SKILLS_3850_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -21382,6 +21422,22 @@
     "pt": "Grande Gêiser",
     "th": "แกรนด์เกย์เซอร์",
     "vi": "Mạch nước lớn "
+  },
+  "MST_SKILLS_3860018_DESCRIPTION": {
+    "en": "64 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, OD gauge, OD gauge fill rate, 100% damage reduction, 100% DoT reduction, negates critical and elemental damage, activates Light barrier & purges LS disable and DoT effects",
+    "es": "64 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, OD gauge, OD gauge fill rate, 100% damage reduction, 100% DoT reduction, negates critical and elemental damage, activates Light barrier & purges LS disable and DoT effects",
+    "id": "64 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, OD gauge, OD gauge fill rate, 100% damage reduction, 100% DoT reduction, negates critical and elemental damage, activates Light barrier & purges LS disable and DoT effects",
+    "pt": "64 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, OD gauge, OD gauge fill rate, 100% damage reduction, 100% DoT reduction, negates critical and elemental damage, activates Light barrier & purges LS disable and DoT effects",
+    "th": "64 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, OD gauge, OD gauge fill rate, 100% damage reduction, 100% DoT reduction, negates critical and elemental damage, activates Light barrier & purges LS disable and DoT effects",
+    "vi": "64 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, OD gauge, OD gauge fill rate, 100% damage reduction, 100% DoT reduction, negates critical and elemental damage, activates Light barrier & purges LS disable and DoT effects"
+  },
+  "MST_SKILLS_3860518_DESCRIPTION": {
+    "en": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, critical hit rate, critical damage, Spark damage, BC, HC drop rate, Dark elemental damage, 85% activates BB/SBB/UBB twice, fully restores HP & 80% raises allies from KO",
+    "es": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, critical hit rate, critical damage, Spark damage, BC, HC drop rate, Dark elemental damage, 85% activates BB/SBB/UBB twice, fully restores HP & 80% raises allies from KO",
+    "id": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, critical hit rate, critical damage, Spark damage, BC, HC drop rate, Dark elemental damage, 85% activates BB/SBB/UBB twice, fully restores HP & 80% raises allies from KO",
+    "pt": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, critical hit rate, critical damage, Spark damage, BC, HC drop rate, Dark elemental damage, 85% activates BB/SBB/UBB twice, fully restores HP & 80% raises allies from KO",
+    "th": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, critical hit rate, critical damage, Spark damage, BC, HC drop rate, Dark elemental damage, 85% activates BB/SBB/UBB twice, fully restores HP & 80% raises allies from KO",
+    "vi": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, critical hit rate, critical damage, Spark damage, BC, HC drop rate, Dark elemental damage, 85% activates BB/SBB/UBB twice, fully restores HP & 80% raises allies from KO"
   },
   "MST_SKILLS_3860_DESCRIPTION": {
     "en": "None",
@@ -81295,6 +81351,22 @@
     "th": "อีเธียเรียลบลาสเตอร์ เอ็กซ์",
     "vi": "Bom thinh không EX"
   },
+  "MST_SKILLS_730227_DESCRIPTION": {
+    "en": "11 combo powerful Earth attack on all foes, low probability of resistance against 1 KO attack, 50% damage reduction for 2 turns, damage taken hugely boosts BB gauge for 3 turns, negates critical and elemental damage for 3 turns & enormously boosts BB gauge for 3 turns",
+    "es": "11 combo powerful Earth attack on all foes, low probability of resistance against 1 KO attack, 50% damage reduction for 2 turns, damage taken hugely boosts BB gauge for 3 turns, negates critical and elemental damage for 3 turns & enormously boosts BB gauge for 3 turns",
+    "id": "11 combo powerful Earth attack on all foes, low probability of resistance against 1 KO attack, 50% damage reduction for 2 turns, damage taken hugely boosts BB gauge for 3 turns, negates critical and elemental damage for 3 turns & enormously boosts BB gauge for 3 turns",
+    "pt": "11 combo powerful Earth attack on all foes, low probability of resistance against 1 KO attack, 50% damage reduction for 2 turns, damage taken hugely boosts BB gauge for 3 turns, negates critical and elemental damage for 3 turns & enormously boosts BB gauge for 3 turns",
+    "th": "11 combo powerful Earth attack on all foes, low probability of resistance against 1 KO attack, 50% damage reduction for 2 turns, damage taken hugely boosts BB gauge for 3 turns, negates critical and elemental damage for 3 turns & enormously boosts BB gauge for 3 turns",
+    "vi": "11 combo powerful Earth attack on all foes, low probability of resistance against 1 KO attack, 50% damage reduction for 2 turns, damage taken hugely boosts BB gauge for 3 turns, negates critical and elemental damage for 3 turns & enormously boosts BB gauge for 3 turns"
+  },
+  "MST_SKILLS_730227_NAME": {
+    "en": "Iridescent Wall",
+    "es": "Iridescent Wall",
+    "id": "Iridescent Wall",
+    "pt": "Iridescent Wall",
+    "th": "Iridescent Wall",
+    "vi": "Iridescent Wall"
+  },
   "MST_SKILLS_730257_DESCRIPTION": {
     "en": "Considerably boosts own max HP, enormously boosts Atk, Def relative to max HP for 3 turns, fills own BB gauge to max, enormously boosts BB gauge & negates all status ailments and Atk, Def, Rec reduction effects for 3 turns",
     "es": "Considerably boosts own max HP, enormously boosts Atk, Def relative to max HP for 3 turns, fills own BB gauge to max, enormously boosts BB gauge & negates all status ailments and Atk, Def, Rec reduction effects for 3 turns",
@@ -89054,37 +89126,5 @@
     "pt": "Blizzaga Edge",
     "th": "บริซาก้า เอดจ์",
     "vi": "Blizzaga Edge"
-  },
-  "MST_SKILLS_820417_DESCRIPTION": {
-    "en": "18 combo powerful Water, Dark attack on all foes, 50% damage reduction for 1 turn & probable slight HP absorption when attacking for 3 turns",
-    "es": "18 combo powerful Water, Dark attack on all foes, 50% damage reduction for 1 turn & probable slight HP absorption when attacking for 3 turns",
-    "id": "18 kombo serangan Air, Gelap ke semua musuh, kurangi 50% kerusakan 1 giliran, kans agak menyerap HP saat menyerang 3 giliran",
-    "pt": "18 combo powerful Water, Dark attack on all foes, 50% damage reduction for 1 turn & probable slight HP absorption when attacking for 3 turns",
-    "th": "18 คอมโบ โจมตีธาตุน้ำ, มืดอย่างแรง ใส่ศัตรูทั้งหมด, 50% ลดค่าความเสียหาย นาน 1 เทิร์น และ มีโอกาส ดูดซับ HP เล็กน้อย เมื่อกำลังโจมตี นาน 3 เทิร์น",
-    "vi": "18 combo powerful Water, Dark attack on all foes, 50% damage reduction for 1 turn & probable slight HP absorption when attacking for 3 turns"
-  },
-  "MST_SKILLS_820417_NAME": {
-    "en": "Coincidence Severed",
-    "es": "Coincidence Severed",
-    "id": "Kebetulan Dibabat",
-    "pt": "Coincidence Severed",
-    "th": "โคอินซิเดนท์ ซิฟเวอร์",
-    "vi": "Coincidence Severed"
-  },
-  "MST_SKILLS_820418_DESCRIPTION": {
-    "en": "20 combo powerful Water, Dark attack on all foes, 50% damage reduction for 2 turns, probable slight HP absorption when attacking for 3 turns & damage taken boosts BB gauge for 3 turns",
-    "es": "20 combo powerful Water, Dark attack on all foes, 50% damage reduction for 2 turns, probable slight HP absorption when attacking for 3 turns & damage taken boosts BB gauge for 3 turns",
-    "id": "20 kombo serangan Air, Gelap kuat ke semua musuh, kurangi 50% kerusakan 2 giliran, 3 giliran: kans agak menyerap HP saat menyerang, kerusakan diderita menambah meteran BB",
-    "pt": "20 combo powerful Water, Dark attack on all foes, 50% damage reduction for 2 turns, probable slight HP absorption when attacking for 3 turns & damage taken boosts BB gauge for 3 turns",
-    "th": "20 คอมโบ โจมตีธาตุน้ำ, มืดอย่างแรง ใส่ศัตรูทั้งหมด, 50% ลดค่าความเสียหาย นาน 2 เทิร์น, มีโอกาส ดูดซับ HP เล็กน้อย เมื่อกำลังโจมตี นาน 3 เทิร์น และ ความเสียหายทีได้รับ เพิ่ม เกจ BB นาน 3 เทิร์น",
-    "vi": "20 combo powerful Water, Dark attack on all foes, 50% damage reduction for 2 turns, probable slight HP absorption when attacking for 3 turns & damage taken boosts BB gauge for 3 turns"
-  },
-  "MST_SKILLS_820418_NAME": {
-    "en": "Coincidence Rewoven",
-    "es": "Coincidence Rewoven",
-    "id": "Kebetulan Dirajut Ulang",
-    "pt": "Coincidence Rewoven",
-    "th": "โคอินซิเดนท์ รีโวเว่น",
-    "vi": "Coincidence Rewoven"
   }
 }
