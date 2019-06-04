@@ -467,6 +467,7 @@ export default {
             {
               ...this.activeUnit,
               id: (id.then !== undefined && tempData.id) || id,
+              sp: '', // reset SP on change
             },
             ...this.localSquad.units.slice(this.selectedIndex + 1),
           ],

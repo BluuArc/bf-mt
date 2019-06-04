@@ -5,6 +5,7 @@
         <v-tabs
           v-model="localValue"
           class="mb-2"
+          show-arrows
           :grow="growTabs"
           :centered="centeredTabs"
           :color="color || undefined">

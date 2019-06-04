@@ -3,7 +3,7 @@
     :requiredModules="requiredModules"
     :ensureDbSync="true">
     <promise-wait :promise="initialLoadPromise">
-      <v-container fluid class="squad-page" v-resize="updateTopNavbarHeight">
+      <v-container fluid class="squad-page" v-resize="onPageReady">
         <v-container class="pa-0">
           <v-layout justify-center>
             <v-flex xs12 v-if="!editMode">
@@ -44,7 +44,7 @@
                     :to="getSquadUrl(squadCode)">
                     <v-icon :left="!minimizeSquadActionButtons">file_copy</v-icon>
                     <span v-if="!minimizeSquadActionButtons">
-                      Copy
+                      Clone
                     </span>
                   </v-btn>
                   <v-spacer/>
@@ -86,11 +86,19 @@
             <tab-container
               v-if="!isLoadingSquadData && !editMode"
               v-model="currentTabIndex"
-              class="mt-2"
+              class="mt-2 mx-0"
               :centeredTabs="true"
               :growTabs="true"
               :tabs="tabConfig">
-              <v-layout slot="buffs" column>
+              <v-layout slot="multidex-links" column>
+                <multidex-links
+                  :getUnit="getUnit"
+                  :getItem="getItem"
+                  :getExtraSkill="getExtraSkill"
+                  :squad="squad"
+                />
+              </v-layout>
+              <v-layout slot="buffs" column class="buff-lists">
                 <v-expansion-panel class="configuration-panel">
                   <v-expansion-panel-content>
                     <div slot="header">
@@ -216,6 +224,7 @@ import SquadBuffExpandableList from '@/components/Multidex/BuffList/SquadBuffExp
 import OrderConfigurator from '@/components/OrderConfigurator';
 import SquadArenaSuggestionTable from '@/components/Tools/Squads/SquadArenaSuggestionTable';
 import SquadSparkStatisticsArea from '@/components/Tools/Squads/SparkStatistics/Main';
+import MultidexLinks from '@/components/Tools/Squads/MultidexLinks';
 
 const logger = new Logger({ prefix: '[Squad]' });
 export default {
@@ -238,6 +247,7 @@ export default {
     SquadArenaSuggestionTable,
     SquadSparkStatisticsArea,
     PromiseWait,
+    MultidexLinks,
   },
   computed: {
     ...mapState('settings', ['activeServer']),
@@ -245,6 +255,7 @@ export default {
     squadBuffTypes: () => squadBuffTypes,
     requiredModules: () => squadRequiredModules,
     tabConfig: () => [
+      'Multidex Links',
       'Buffs',
       'Spark Statistics',
       'Arena',
@@ -410,6 +421,12 @@ export default {
     onNewUnits (units) {
       this.tempSquad = { ...this.tempSquad, units };
     },
+    onPageReady () {
+      this.updateTopNavbarHeight();
+      if (this.$store.state.disableHtmlOverflow) {
+        this.$store.commit('setHtmlOverflowDisableState', false);
+      }
+    },
     updateTopNavbarHeight () {
       const topNavbar = document.querySelector('nav.v-toolbar');
       this.topNavbarHeight = (topNavbar && topNavbar.offsetHeight) || 56;
@@ -430,7 +447,7 @@ export default {
     async squad (newSquad) {
       this.setDocumentTitle();
       await this.updatePageDbForSquad(newSquad);
-      this.updateTopNavbarHeight();
+      this.onPageReady();
     },
     editMode (isEditMode) {
       if (isEditMode) {
@@ -450,7 +467,7 @@ export default {
 </script>
 
 <style lang="less">
-.squad-page {
+.buff-lists {
   .configuration-panel {
     .v-expansion-panel__header {
       padding-left: 8px;

@@ -648,3 +648,31 @@ export function getEffectsListForSquadUnitEntry (
         (!a.sp_type && b.sp_type ? -1 : 1); // sp types should go after original values
     });
 }
+
+export function getMultidexParamsForSquadUnit (unit = generateFillerSquadUnitEntry()) {
+  const links = [];
+  if (unit.id !== squadFillerMapping.ANY && unit.id !== squadFillerMapping.EMPTY) {
+    links.push({
+      moduleName: 'units',
+      id: unit.id,
+      sp: unit.sp,
+    });
+  }
+
+  if (unit.es) {
+    links.push({
+      moduleName: 'extraSkills',
+      id: unit.es,
+    });
+  }
+
+  // add unique entries
+  Array.from(new Set(unit.spheres)).forEach(id => {
+    links.push({
+      moduleName: 'items',
+      id,
+    });
+  });
+
+  return links;
+}
