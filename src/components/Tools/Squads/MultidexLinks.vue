@@ -9,7 +9,6 @@
         />
         <dd :key="`${unitKeyBySquadEntry.get(unit)}-links`">
           <v-layout row wrap>
-            <!-- <div :key="i">{{ linksBySquadEntry.get(unit) }}</div> -->
             <v-flex
               v-for="(entry, i) in linksBySquadEntry.get(unit)"
               :key="i"
@@ -24,9 +23,6 @@
               >
                 {{ entry }}
               </component>
-              <!-- <router-link :to="generateMultidexPathToEntry(entry)">
-                {{ entry }}
-              </router-link> -->
             </v-flex>
           </v-layout>
         </dd>
@@ -132,7 +128,3 @@ export default {
   },
 };
 </script>
-
-<style>
-
-</style>
