@@ -13,7 +13,12 @@
       expand
       focusable>
       <template slot="header" slot-scope="{ arrayEntry }">
-        <div class="expandable-list-entry--header" :headerEntries="getSquadEntriesForEffectId(arrayEntry)">
+        <div
+          :class="{
+            'expandable-list-entry--header': true,
+            'highlighted-header': isHighlightedHeader(arrayEntry),
+          }"
+        >
           <span class="expandable-list-entry--title subheading" v-text="`${arrayEntry}: ${effectNameById[arrayEntry] }`"/>
           <div class="expandable-list-entry--columns-preview">
             <div
@@ -85,6 +90,7 @@ import { getEffectsListForSquadUnitEntry } from '@/modules/core/squads';
 import { getEffectName } from '@/modules/core/buffs';
 import { weightedStringSort } from '@/modules/utils';
 import { mapGetters } from 'vuex';
+import { squadBuffTypes } from '@/modules/constants';
 import { Logger } from '@/modules/Logger';
 import ValueSubgrid from '@/components/Multidex/BuffTableGrid/ValueSubgrid';
 import UnitEntry from '@/components/Tools/Squads/SquadUnitEntry';
@@ -112,6 +118,14 @@ export default {
     effectMappingByUnitEntry: {
       type: WeakMap,
       default: () => new WeakMap(),
+    },
+    highlightedProcs: {
+      type: Array,
+      default: () => [],
+    },
+    highlightedPassives: {
+      type: Array,
+      default: () => [],
     },
   },
   components: {
@@ -223,6 +237,7 @@ export default {
       loadingList: true,
       isVisuallyLoadingList: true,
       loadingDebouncer: null,
+      highlightCheckerTimeout: null,
     };
   },
   beforeDestroy () {
@@ -285,6 +300,38 @@ export default {
       }
       return Array.from(new Set((this.effectsById[id] || []).map(e => e.source)));
     },
+    isHighlightedHeader (id) {
+      let isHighlighted = false;
+      if (this.effectType === squadBuffTypes.PROC) {
+        isHighlighted = this.highlightedProcs.includes(id);
+      } else if (this.effectType === squadBuffTypes.PASSIVE) {
+        isHighlighted = this.highlightedPassives.includes(id);
+      }
+      return isHighlighted;
+    },
+    highlightHeaders () {
+      const allHighlightedHeaders = Array.from(this.$el.querySelectorAll('.highlighted-header'));
+      const isLightMode = !!this.$store.state.settings.lightMode;
+      const classesToAdd = ['blue', isLightMode ? 'lighten-4' : 'darken-4', 'is-highlighted'];
+      allHighlightedHeaders.forEach(header => {
+        const expansionPanelWrapper = header.parentNode;
+        expansionPanelWrapper.classList.add(...classesToAdd);
+      });
+    },
+    ensureHeadersAreHighlighted () {
+      if (!this.highlightCheckerTimeout) {
+        const runCheck = () => {
+          const hasUnhighlightedHeader = !!this.$el.querySelector('.highlighted-header:not(.is-highlighted)');
+          if (hasUnhighlightedHeader && !this.isVisuallyLoadingList) {
+            this.highlightHeaders();
+            this.highlightCheckerTimeout = setTimeout(runCheck, 1000);
+          } else {
+            this.highlightCheckerTimeout = null;
+          }
+        };
+        runCheck();
+      }
+    },
   },
   watch: {
     expandedTables (newValue) {
@@ -301,6 +348,12 @@ export default {
         });
       }
       this.loadingDebouncer.setValue(() => this.loadingList);
+    },
+    async isVisuallyLoadingList (isLoading) {
+      if (!isLoading) {
+        await this.$nextTick();
+        this.ensureHeadersAreHighlighted();
+      }
     },
   },
 };

@@ -74,6 +74,7 @@
         />
         <dd :key="`${possibleTables[tableConfigIndex].targetType}-${possibleTables[tableConfigIndex].effectType}-table`">
           <squad-buff-expandable-list
+            :key="getEffectTypeKey(possibleTables[tableConfigIndex].effectType)"
             :getUnit="getUnit"
             :getItem="getItem"
             :getExtraSkill="getExtraSkill"
@@ -81,6 +82,8 @@
             :targetType="possibleTables[tableConfigIndex].targetType"
             :effectType="possibleTables[tableConfigIndex].effectType"
             :effectMappingByUnitEntry="effectMappingByTable.get(getTableKey(possibleTables[tableConfigIndex].targetType, possibleTables[tableConfigIndex].effectType))"
+            :highlightedProcs="filterOptions.procs"
+            :highlightedPassives="filterOptions.passives"
           />
         </dd>
       </template>
@@ -213,6 +216,15 @@ export default {
   methods: {
     getTableKey (targetType, effectType) {
       return `${targetType}-${effectType}`;
+    },
+    getEffectTypeKey (effectType) {
+      let key = '';
+      if (effectType === squadBuffTypes.PROC) {
+        key = this.filterOptions.procs.join('-');
+      } else if (effectType === squadBuffTypes.PASSIVE) {
+        key = this.filterOptions.passives.join('-');
+      }
+      return key;
     },
   },
 };
