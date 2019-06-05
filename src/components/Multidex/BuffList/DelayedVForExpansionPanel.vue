@@ -66,6 +66,7 @@ export default {
             const startIndex = currentLoop * amountToAddPerTick;
             const subsetToAdd = entries.slice(startIndex, startIndex + amountToAddPerTick);
             this.internalEntries.push(...subsetToAdd);
+            this.$emit('progress', Math.floor(this.internalEntries.length / entries.length * 100));
 
             ++currentLoop;
           }

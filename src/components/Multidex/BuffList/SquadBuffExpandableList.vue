@@ -1,6 +1,6 @@
 <template>
   <section class="squad-buff-expandable-list">
-    <loading-indicator v-if="isVisuallyLoadingList" loadingMessage="Loading list..."/>
+    <loading-indicator :progress="loadProgress" v-if="isVisuallyLoadingList" loadingMessage="Loading list..."/>
     <div v-if="!isVisuallyLoadingList && sortedEffectIds.length === 0" class="my-2">
       No entries of type [{{ effectType }}] targeting [{{ targetType }}].
     </div>
@@ -8,6 +8,7 @@
       v-show="!isVisuallyLoadingList"
       @start="handleLoadStart"
       @end="handleLoadEnd"
+      @progress="$p => loadProgress = $p"
       :entries="sortedEffectIds"
       v-model="expandedTables"
       expand
@@ -238,6 +239,7 @@ export default {
       isVisuallyLoadingList: true,
       loadingDebouncer: null,
       highlightCheckerTimeout: null,
+      loadProgress: -1,
     };
   },
   beforeDestroy () {
@@ -249,6 +251,7 @@ export default {
     handleLoadStart (startToken) {
       this.loadStartToken = startToken;
       this.loadingList = true;
+      this.loadProgress = -1;
     },
     handleLoadEnd (endToken) {
       if (this.loadStartToken === endToken) {
