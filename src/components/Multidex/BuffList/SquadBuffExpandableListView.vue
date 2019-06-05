@@ -36,12 +36,12 @@
       <v-layout row wrap>
         <v-flex
           xs12 md6
-          class="px-2"
           @click="activeSelector = 'procs'"
           style="cursor: pointer;"
         >
           <v-combobox
             :value="filterOptions.procs"
+            class="mx-2"
             disabled
             label="Highlight Active Buffs"
             hint="Empty selection is equivalent to showing all."
@@ -50,12 +50,12 @@
         </v-flex>
         <v-flex
           xs12 md6
-          class="px-2"
           @click="activeSelector = 'passives'"
           style="cursor: pointer;"
         >
           <v-combobox
             :value="filterOptions.passives"
+            class="mx-2"
             disabled
             label="Highlight Passive Buffs"
             hint="Empty selection is equivalent to showing all."
@@ -80,6 +80,7 @@
             :squad="squad"
             :targetType="possibleTables[tableConfigIndex].targetType"
             :effectType="possibleTables[tableConfigIndex].effectType"
+            :effectMappingByUnitEntry="effectMappingByTable.get(getTableKey(possibleTables[tableConfigIndex].targetType, possibleTables[tableConfigIndex].effectType))"
           />
         </dd>
       </template>
@@ -89,6 +90,9 @@
 
 <script>
 import { targetTypes, squadBuffTypes } from '@/modules/constants';
+import { getEffectsListForSquadUnitEntry } from '@/modules/core/squads';
+import { getEffectId } from '@/modules/EffectProcessor/processor-helper';
+// import { getEffectName } from '@/modules/core/buffs';
 import FilterOptionsHelper from '@/modules/FilterOptionsHelper';
 import SquadBuffExpandableList from '@/components/Multidex/BuffList/SquadBuffExpandableList';
 import OrderConfigurator from '@/components/OrderConfigurator';
@@ -160,6 +164,37 @@ export default {
     defaultBuffTables () {
       return Object.freeze(this.possibleTables.map((_, i) => i));
     },
+    effectMappingByTable () {
+      const allProcIds = new Set();
+      const allPassiveIds = new Set();
+      const tableMapping = new Map();
+      const { squad } = this;
+      const unitEntries = squad.units;
+      this.possibleTables.forEach(({ targetType, effectType }) => {
+        const effectMappingByUnit = new WeakMap();
+        unitEntries.forEach(entry => {
+          const effects = getEffectsListForSquadUnitEntry({
+            unitEntry: entry,
+            target: targetType,
+            effectType,
+            squad,
+          }, this);
+          effects.forEach(effect => {
+            if (effectType === squadBuffTypes.PROC) {
+              allProcIds.add(getEffectId(effect));
+            } else if (effectType === squadBuffTypes.PASSIVE) {
+              allPassiveIds.add(getEffectId(effect));
+            }
+          });
+          effectMappingByUnit.set(entry, effects);
+        });
+        tableMapping.set(this.getTableKey(targetType, effectType), effectMappingByUnit);
+      });
+
+      tableMapping.set('allProcs', Array.from(allProcIds).sort((a, b) => +a - +b));
+      tableMapping.set('allPassives', Array.from(allPassiveIds).sort((a, b) => +a - +b));
+      return tableMapping;
+    },
   },
   data () {
     return {
@@ -174,6 +209,11 @@ export default {
   },
   created () {
     this.buffTables = this.defaultBuffTables.slice();
+  },
+  methods: {
+    getTableKey (targetType, effectType) {
+      return `${targetType}-${effectType}`;
+    },
   },
 };
 </script>

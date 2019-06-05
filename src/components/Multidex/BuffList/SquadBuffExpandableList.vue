@@ -109,6 +109,10 @@ export default {
       type: String,
       required: true,
     },
+    effectMappingByUnitEntry: {
+      type: WeakMap,
+      default: () => new WeakMap(),
+    },
   },
   components: {
     ValueSubgrid,
@@ -159,7 +163,7 @@ export default {
     effectsById () {
       // mapping in order of unit entries keyed by effect id
       const mapping = this.unitEntries.reduce((acc, entry) => {
-        const effects = getEffectsListForSquadUnitEntry({
+        const effects = this.effectMappingByUnitEntry.get(entry) || getEffectsListForSquadUnitEntry({
           unitEntry: entry,
           target: this.targetType,
           effectType: this.effectType,
