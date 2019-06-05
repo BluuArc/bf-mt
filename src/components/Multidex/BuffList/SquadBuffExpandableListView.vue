@@ -1,9 +1,9 @@
 <template>
   <span class="squad-buff-expandable-list-view">
-    <v-expansion-panel class="configuration-panel">
+    <v-expansion-panel class="order-configuration-panel">
       <v-expansion-panel-content>
         <div slot="header">
-          Configure Buff View
+          Reorder Buff Lists
         </div>
         <section>
           <order-configurator
@@ -19,6 +19,51 @@
         </section>
       </v-expansion-panel-content>
     </v-expansion-panel>
+    <section class="buff-configuration-area my-2">
+      <proc-selector
+        :showSelector="activeSelector === 'procs'"
+        @toggleview="$show => activeSelector = $show ? 'procs' : ''"
+        v-model="filterOptions"
+        :filterHelper="filterHelper"
+      />
+      <passive-selector
+        :showSelector="activeSelector === 'passives'"
+        @toggleview="$show => activeSelector = $show ? 'passives' : ''"
+        v-model="filterOptions"
+        :filterHelper="filterHelper"
+      />
+      <div class="px-2" style="font-weight: bold;">Buff Highlighting</div>
+      <v-layout row wrap>
+        <v-flex
+          xs12 md6
+          class="px-2"
+          @click="activeSelector = 'procs'"
+          style="cursor: pointer;"
+        >
+          <v-combobox
+            :value="filterOptions.procs"
+            disabled
+            label="Highlight Active Buffs"
+            hint="Empty selection is equivalent to showing all."
+            multiple
+            persistent-hint/>
+        </v-flex>
+        <v-flex
+          xs12 md6
+          class="px-2"
+          @click="activeSelector = 'passives'"
+          style="cursor: pointer;"
+        >
+          <v-combobox
+            :value="filterOptions.passives"
+            disabled
+            label="Highlight Passive Buffs"
+            hint="Empty selection is equivalent to showing all."
+            multiple
+            persistent-hint/>
+        </v-flex>
+      </v-layout>
+    </section>
     <dl>
       <template v-for="tableConfigIndex in buffTables">
         <dt
@@ -44,8 +89,11 @@
 
 <script>
 import { targetTypes, squadBuffTypes } from '@/modules/constants';
+import FilterOptionsHelper from '@/modules/FilterOptionsHelper';
 import SquadBuffExpandableList from '@/components/Multidex/BuffList/SquadBuffExpandableList';
 import OrderConfigurator from '@/components/OrderConfigurator';
+import ProcSelector from '@/components/Multidex/Filters/BuffSelector/ProcSelector';
+import PassiveSelector from '@/components/Multidex/Filters/BuffSelector/PassiveSelector';
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 
 export default {
@@ -63,6 +111,8 @@ export default {
   components: {
     SquadBuffExpandableList,
     OrderConfigurator,
+    ProcSelector,
+    PassiveSelector,
   },
   computed: {
     buffGroupTitleStyle () {
@@ -114,6 +164,12 @@ export default {
   data () {
     return {
       buffTables: [],
+      filterOptions: {
+        procs: ['1', '2', '3'],
+        passives: [],
+      },
+      activeSelector: '',
+      filterHelper: new FilterOptionsHelper(),
     };
   },
   created () {
@@ -125,7 +181,7 @@ export default {
 
 <style lang="less">
 .squad-buff-expandable-list-view {
-  .configuration-panel {
+  .order-configuration-panel {
     .v-expansion-panel__header {
       padding-left: 8px;
       padding-right: 8px;
