@@ -255,6 +255,9 @@ export default {
     this.isLoadingSquadData = true;
     this.initialLoadPromise = this.$store.dispatch('squads/getSquadById', this.id)
       .then(result => {
+        if (!result || !result.squad) {
+          throw new Error('Specified squad doesn\'t exist.');
+        }
         this.squad = cloneSquad(result.squad);
       });
   },

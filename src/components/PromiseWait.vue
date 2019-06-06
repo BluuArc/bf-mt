@@ -10,7 +10,7 @@
       </template>
       <template v-else-if="hasError">
         <slot name="error" :error="error">
-          <span>Error: {{ JSON.stringify(error) }}</span>
+          <span>Error: {{ error.message || JSON.stringify(error) }}</span>
         </slot>
       </template>
       <template v-else>
@@ -88,7 +88,7 @@ export default {
           .then((result) => {
             this.result = result;
           }).catch((err) => {
-            this.error = err;
+            this.error = err || new Error('An error has occurred.');
             this.hasError = true;
             logger.error(err);
           }).then(() => {

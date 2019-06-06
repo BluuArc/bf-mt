@@ -63,6 +63,48 @@
             persistent-hint/>
         </v-flex>
       </v-layout>
+      <v-layout row wrap>
+        <v-flex xs12 md6>
+          <v-alert
+            class="mx-2"
+            :value="true"
+            :type="(missingProcs.length > 0 && 'warning') || 'info'"
+          >
+            <template v-if="missingProcs.length > 0">
+              <p>The following active buffs are missing from the current squad.</p>
+              <ul>
+                <li
+                  v-for="proc in missingProcs"
+                  :key="proc"
+                  v-text="getEffectNameForIdAndType(proc, 'proc')"
+                />
+              </ul>
+            </template>
+            <span v-else-if="filterOptions.procs.length > 0">All specified active buffs are present.</span>
+            <span v-else>No filters for active buffs specified.</span>
+          </v-alert>
+        </v-flex>
+        <v-flex xs12 md6>
+          <v-alert
+            class="mx-2"
+            :value="true"
+            :type="(missingPassives.length > 0 && 'warning') || 'info'"
+          >
+            <template v-if="missingPassives.length > 0">
+              <p>The following passive buffs are missing from the current squad.</p>
+              <ul>
+                <li
+                  v-for="passive in missingPassives"
+                  :key="passive"
+                  v-text="getEffectNameForIdAndType(passive, 'passive')"
+                />
+              </ul>
+            </template>
+            <span v-else-if="filterOptions.passives.length > 0">All specified passive buffs are present.</span>
+            <span v-else>No filters for passive buffs specified.</span>
+          </v-alert>
+        </v-flex>
+      </v-layout>
     </section>
     <dl>
       <template v-for="tableConfigIndex in buffTables">
@@ -95,7 +137,7 @@
 import { targetTypes, squadBuffTypes } from '@/modules/constants';
 import { getEffectsListForSquadUnitEntry } from '@/modules/core/squads';
 import { getEffectId } from '@/modules/EffectProcessor/processor-helper';
-// import { getEffectName } from '@/modules/core/buffs';
+import { getEffectName } from '@/modules/core/buffs';
 import FilterOptionsHelper from '@/modules/FilterOptionsHelper';
 import SquadBuffExpandableList from '@/components/Multidex/BuffList/SquadBuffExpandableList';
 import OrderConfigurator from '@/components/OrderConfigurator';
@@ -198,6 +240,19 @@ export default {
       tableMapping.set('allPassives', Array.from(allPassiveIds).sort((a, b) => +a - +b));
       return tableMapping;
     },
+    missingProcs () {
+      const allProcs = this.effectMappingByTable.get('allProcs');
+      const { procs } = this.filterOptions;
+      return procs.filter(id => !allProcs.includes(id));
+    },
+    missingPassives () {
+      const allPassives = this.effectMappingByTable.get('allPassives');
+      const { passives } = this.filterOptions;
+      return passives.filter(id => !allPassives.includes(id));
+    },
+    hasBuffFilters () {
+      return this.filterOptions.procs.length > 0 || this.filterOptions.passives.length > 0;
+    },
   },
   data () {
     return {
@@ -234,6 +289,20 @@ export default {
         key = this.filterOptions.passives.join('-');
       }
       return key;
+    },
+    getEffectNameForIdAndType (id, type) {
+      let result;
+      if (type === squadBuffTypes.PASSIVE) {
+        result = getEffectName({ 'passive id': id });
+      } else if (type === squadBuffTypes.PROC) {
+        result = getEffectName({ 'proc id': id });
+      }
+
+      if (!result) {
+        result = `Unknown buff`;
+      }
+
+      return `${result} [${id}]`;
     },
   },
   watch: {
