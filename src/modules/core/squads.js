@@ -153,13 +153,14 @@ export function generateDefaultSquad (allEmpty = false, units) {
 }
 
 export function cloneSquad (squad = {}) {
-  const { lead, friend, name, simulatorOptions } = squad;
+  const { lead, friend, name, simulatorOptions, filterOptions } = squad;
   return {
     lead,
     friend,
     name,
     units: sortUnitsByPosition(squad.units.map(makeSquadUnitEntry), false),
     simulatorOptions,
+    filterOptions,
   };
 }
 

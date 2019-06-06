@@ -203,7 +203,7 @@ export default {
     return {
       buffTables: [],
       filterOptions: {
-        procs: ['1', '2', '3'],
+        procs: [],
         passives: [],
       },
       activeSelector: '',
@@ -212,6 +212,15 @@ export default {
   },
   created () {
     this.buffTables = this.defaultBuffTables.slice();
+    if (this.squad.filterOptions) {
+      this.filterOptions.procs = Array.isArray(this.squad.filterOptions.procs)
+        ? this.squad.filterOptions.procs.slice()
+        : [];
+
+      this.filterOptions.passives = Array.isArray(this.squad.filterOptions.passives)
+        ? this.squad.filterOptions.passives.slice()
+        : [];
+    }
   },
   methods: {
     getTableKey (targetType, effectType) {
@@ -225,6 +234,11 @@ export default {
         key = this.filterOptions.passives.join('-');
       }
       return key;
+    },
+  },
+  watch: {
+    activeSelector () {
+      this.squad.filterOptions = this.filterOptions;
     },
   },
 };

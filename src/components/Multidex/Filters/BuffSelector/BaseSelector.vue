@@ -188,7 +188,7 @@ export default {
       loadStartToken: 0,
       loadingList: true,
       loadProgress: -1,
-      showPasteInput: true,
+      showPasteInput: false,
       pasteInput: '',
       showIcons: false,
       loadingDebouncer: null,
