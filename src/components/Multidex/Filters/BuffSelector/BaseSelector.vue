@@ -51,24 +51,22 @@
                   </v-flex>
                 </v-layout>
               </v-container>
-              <v-container fluid class="pb-0 pt-0 pl-0 pr-1 buff-selector-list">
-                <v-layout row v-for="(buff) in filteredIds" :key="buff.value" class="buff-selector-list--row">
-                  <v-flex xs2>
-                    <v-checkbox :value="buff.value.toString()" v-model="localSelectedIds"/>
-                  </v-flex>
-                  <v-flex xs10 class="d-align-self-center">
-                    <v-flex xs12 v-text="buff.text"/>
-                    <!-- only render icons if searching for a specific buff -->
-                    <v-flex v-if="query && query.trim()" xs12>
-                      <buff-icon
-                        v-for="(iconKey, i) in getFilteredIconsForBuffSelectorEntry(buff)"
-                        :key="i"
-                        :displaySize="24"
-                        :iconKey="iconKey"/>
-                    </v-flex>
-                  </v-flex>
-                </v-layout>
-              </v-container>
+              <loading-indicator
+                :progress="loadProgress"
+                v-if="loadingList"
+                loadingMessage="Loading list..."
+              />
+              <delayed-v-for-selector-list
+                v-show="!loadingList"
+                v-model="localSelectedIds"
+                :entries="filteredIds"
+                :getKeyFunction="getKeyForIdEntry"
+                :amountToAddPerTick="10"
+                :showIcons="true"
+                @start="handleLoadStart"
+                @end="handleLoadEnd"
+                @progress="$p => loadProgress = $p"
+              />
             </v-flex>
           </v-layout>
         </v-container>
@@ -86,7 +84,8 @@
 import SWorker from '@/assets/sww.min.js';
 import IconKeyMappings from '@/modules/EffectProcessor/icon-key-mappings';
 import debounce from 'lodash/debounce';
-import BuffIcon from '@/components/Multidex/BuffList/BuffIcon';
+import LoadingIndicator from '@/components/LoadingIndicator';
+import DelayedVForSelectorList from './DelayedVForSelectorList';
 
 export default {
   props: {
@@ -123,7 +122,8 @@ export default {
     },
   },
   components: {
-    BuffIcon,
+    LoadingIndicator,
+    DelayedVForSelectorList,
   },
   data () {
     return {
@@ -131,9 +131,22 @@ export default {
       localSelectedIds: [],
       query: '',
       filteredIds: [],
+      loadStartToken: 0,
+      loadingList: true,
+      loadProgress: -1,
     };
   },
   methods: {
+    handleLoadStart (startToken) {
+      this.loadStartToken = startToken;
+      this.loadingList = true;
+      this.loadProgress = -1;
+    },
+    handleLoadEnd (endToken) {
+      if (this.loadStartToken === endToken) {
+        this.loadingList = false;
+      }
+    },
     emitChange () {
       this.logger.debug('emitting change', {
         searchOptions: this.localSearchOptions,
@@ -183,6 +196,9 @@ export default {
           const [ prefix, ...buffKey ] = i.split('_');
           return i !== IconKeyMappings.UNKNOWN.name && !!(IconKeyMappings[i] || IconKeyMappings[buffKey.join('_')]);
         });
+    },
+    getKeyForIdEntry (buff) {
+      return buff.value;
     },
   },
   watch: {

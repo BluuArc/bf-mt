@@ -234,7 +234,6 @@ export default {
       viewedTables: {},
       valueSubgridEntryByEntryByEffectId: {},
       loadStartToken: 0,
-      loadEndToken: 0,
       loadingList: true,
       isVisuallyLoadingList: true,
       loadingDebouncer: null,
