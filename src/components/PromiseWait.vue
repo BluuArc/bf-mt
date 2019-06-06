@@ -28,7 +28,6 @@ import { Logger } from '@/modules/Logger';
 import LoadingIndicator from '@/components/LoadingIndicator';
 
 const logger = new Logger({ prefix: '[PromiseWait]' });
-let loadingDebouncer;
 export default {
   props: {
     promise: {
@@ -50,15 +49,18 @@ export default {
       result: null,
       hasError: false,
       error: null,
+      loadingDebouncer: null,
     };
   },
-  beforeCreate () {
-    if (loadingDebouncer) {
-      loadingDebouncer.dispose();
+  created () {
+    if (this.loadingDebouncer) {
+      this.loadingDebouncer.dispose();
     }
-    loadingDebouncer = new LoadingDebouncer(val => {
+    this.loadingDebouncer = new LoadingDebouncer(val => {
       this.isVisuallyLoading = val;
     });
+
+    this.loadingDebouncer.setValue(() => this.isInternallyLoading);
   },
   mounted () {
     // delay showing any loading messages to prevent brief flash of message for quickly resolved promises
@@ -67,16 +69,13 @@ export default {
     }, 25);
   },
   beforeDestroy () {
-    if (loadingDebouncer) {
-      loadingDebouncer.dispose();
+    if (this.loadingDebouncer) {
+      this.loadingDebouncer.dispose();
     }
   },
   watch: {
-    isInternallyLoading: {
-      immediate: true,
-      handler () {
-        loadingDebouncer.setValue(() => this.isInternallyLoading);
-      },
+    isInternallyLoading () {
+      this.loadingDebouncer.setValue(() => this.isInternallyLoading);
     },
     promise: {
       immediate: true,

@@ -1,5 +1,5 @@
 <template>
-  <v-dialog :value="showSelector" @input="toggleView($event)" lazy scrollable max-width="400px">
+  <v-dialog persistent :value="showSelector" @input="toggleView($event)" lazy scrollable max-width="400px">
     <v-card>
       <v-card-text>
         <v-container fluid class="pa-0">
@@ -10,7 +10,7 @@
               </v-checkbox>
             </v-flex>
           </v-layout>
-          <v-layout row>
+          <v-layout column>
             <v-flex>
               <v-combobox
                 v-model="localSelectedIds"
@@ -31,6 +31,41 @@
                 </template>
               </v-combobox>
             </v-flex>
+            <v-layout row>
+              <v-flex style="flex: none;">
+                <copy-button
+                  flat small
+                  :textToCopy="selectedIdsText"
+                  buttonText="Copy"
+                  buttonTextCopied="Copied"
+                  v-model="selectedIdsText"
+                />
+              </v-flex>
+              <v-spacer/>
+              <v-flex style="flex: none;">
+                <v-btn flat small @click="showPasteInput = !showPasteInput">
+                  <v-icon left v-show="showPasteInput">
+                    keyboard_hide
+                  </v-icon>
+                  Paste
+                </v-btn>
+              </v-flex>
+            </v-layout>
+            <v-layout row v-show="showPasteInput">
+              <v-flex>
+                <v-text-field
+                  label="Paste Filters"
+                  persistent-hint
+                  :hint="`${detectedPasteFilters.length} Detected Filters`"
+                  v-model="pasteInput"
+                />
+              </v-flex>
+              <v-flex style="flex: none;">
+                <v-btn icon @click="applyPastedFilters">
+                  <v-icon>check</v-icon>
+                </v-btn>
+              </v-flex>
+            </v-layout>
           </v-layout>
           <v-layout row>
             <v-flex class="pa-0">
@@ -62,7 +97,7 @@
                 :entries="filteredIds"
                 :getKeyFunction="getKeyForIdEntry"
                 :amountToAddPerTick="10"
-                :showIcons="true"
+                :showIcons="showIcons"
                 @start="handleLoadStart"
                 @end="handleLoadEnd"
                 @progress="$p => loadProgress = $p"
@@ -72,7 +107,7 @@
         </v-container>
       </v-card-text>
       <v-card-actions>
-        <v-btn flat @click.native="toggleView(false)">Save</v-btn>
+        <v-btn flat @click.native="toggleView(false)">Back</v-btn>
         <v-spacer/>
         <v-btn flat @click.native="resetValues">Reset</v-btn>
       </v-card-actions>
@@ -83,9 +118,11 @@
 <script>
 import SWorker from '@/assets/sww.min.js';
 import IconKeyMappings from '@/modules/EffectProcessor/icon-key-mappings';
+import LoadingDebouncer from '@/modules/LoadingDebouncer';
 import debounce from 'lodash/debounce';
 import LoadingIndicator from '@/components/LoadingIndicator';
 import DelayedVForSelectorList from './DelayedVForSelectorList';
+import CopyButton from '@/components/CopyButton';
 
 export default {
   props: {
@@ -124,6 +161,23 @@ export default {
   components: {
     LoadingIndicator,
     DelayedVForSelectorList,
+    CopyButton,
+  },
+  computed: {
+    selectedIdsText () {
+      return this.selectedIds.join(',');
+    },
+    detectedPasteFilters () {
+      let result = [];
+      if (this.pasteInput) {
+        try {
+          result = Array.from(new Set(this.pasteInput.split(',').filter(v => v)));
+        } catch (err) {
+          this.logger.error('error parsing pasted input', err);
+        }
+      }
+      return result;
+    },
   },
   data () {
     return {
@@ -134,9 +188,31 @@ export default {
       loadStartToken: 0,
       loadingList: true,
       loadProgress: -1,
+      showPasteInput: true,
+      pasteInput: '',
+      showIcons: false,
+      loadingDebouncer: null,
     };
   },
+  created () {
+    if (this.loadingDebouncer) {
+      this.loadingDebouncer.dispose();
+    }
+    this.loadingDebouncer = new LoadingDebouncer(val => {
+      this.showIcons = val;
+    }, 1000, true);
+  },
+  beforeDestroy () {
+    if (this.loadingDebouncer) {
+      this.loadingDebouncer.dispose();
+    }
+  },
   methods: {
+    applyPastedFilters () {
+      this.localSelectedIds = this.detectedPasteFilters;
+      this.pasteInput = '';
+      this.showPasteInput = false;
+    },
     handleLoadStart (startToken) {
       this.loadStartToken = startToken;
       this.loadingList = true;
@@ -213,6 +289,7 @@ export default {
     },
     query () {
       this.onQueryChange();
+      this.loadingDebouncer.setValue(() => !!this.query);
     },
     showSelector (newValue) {
       if (newValue) {
