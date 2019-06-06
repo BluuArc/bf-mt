@@ -314,10 +314,11 @@ export default {
     highlightHeaders () {
       const allHighlightedHeaders = Array.from(this.$el.querySelectorAll('.highlighted-header'));
       const isLightMode = !!this.$store.state.settings.lightMode;
-      const classesToAdd = ['blue', isLightMode ? 'lighten-4' : 'darken-4', 'is-highlighted'];
+      const classesToAdd = ['blue', isLightMode ? 'lighten-4' : 'darken-4'];
       allHighlightedHeaders.forEach(header => {
         const expansionPanelWrapper = header.parentNode;
         expansionPanelWrapper.classList.add(...classesToAdd);
+        header.classList.add('is-highlighted');
       });
     },
     ensureHeadersAreHighlighted () {

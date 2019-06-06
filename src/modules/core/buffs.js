@@ -1,4 +1,4 @@
-import { isPassiveEffect, isProcEffect, getEffectId } from '@/modules/EffectProcessor/processor-helper';
+import { isPassiveEffect, isProcEffect, getEffectId, getEffectType } from '@/modules/EffectProcessor/processor-helper';
 const metadata = require('@/assets/buff-translation/passive-proc-metadata.json');
 
 export function getEffectName (effect = {}) {
@@ -11,4 +11,26 @@ export function getEffectName (effect = {}) {
   }
 
   return name;
+}
+
+export function handleUnknownParams (effect = {}) {
+  const effectType = getEffectType(effect);
+  let resultEffect = effect;
+  if (effectType === 'passive' || effectType === 'proc') {
+    const propertyName = effectType === 'passive'
+      ? 'unknown passive params'
+      : 'unknown proc param';
+    const unknownParams = effect[propertyName] || '';
+    if (unknownParams) {
+      const splitParamsObject = unknownParams.split(',').reduce((acc, val, index) => {
+        acc[`${propertyName}[${index}]`] = val;
+        return acc;
+      }, {});
+      resultEffect = {
+        ...effect,
+        ...splitParamsObject,
+      };
+    }
+  }
+  return resultEffect;
 }

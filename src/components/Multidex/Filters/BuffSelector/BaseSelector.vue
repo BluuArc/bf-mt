@@ -200,6 +200,9 @@ export default {
     getKeyForIdEntry (buff) {
       return buff.value;
     },
+    onQueryChange: debounce(function () {
+      this.filterIds();
+    }, 750),
   },
   watch: {
     searchOptions () {
@@ -208,9 +211,9 @@ export default {
     selectedIds () {
       this.syncInputToLocal();
     },
-    query: debounce(async function () { 
-      await this.filterIds();
-    }, 750),
+    query () {
+      this.onQueryChange();
+    },
     showSelector (newValue) {
       if (newValue) {
         this.syncInputToLocal();

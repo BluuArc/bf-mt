@@ -16,6 +16,7 @@ import { isValidSkill } from '@/modules/core/extra-skills';
 import { isValidSphere, getItemEffects } from '@/modules/core/items';
 import { getBurstEffects } from '@/modules/core/bursts';
 import { getEffectId, getEffectType } from '@/modules/EffectProcessor/processor-helper';
+import { handleUnknownParams } from '@/modules/core/buffs';
 
 export function squadToShorthand (squad = { units: [] }) {
   return squad.units
@@ -643,6 +644,7 @@ export function getEffectsListForSquadUnitEntry (
   return Object.values(filteredEffects)
     .filter(v => v.length > 0)
     .reduce((acc, val) => acc.concat(val), [])
+    .map(handleUnknownParams)
     .sort((a, b) => {
       return +getEffectId(a) - +getEffectId(b) ||
         (!a.sp_type && b.sp_type ? -1 : 1); // sp types should go after original values
