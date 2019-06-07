@@ -89,7 +89,7 @@
 
 <script>
 import { getEffectType, getEffectId } from '@/modules/EffectProcessor/processor-helper';
-import { getEffectName } from '@/modules/core/buffs';
+import { getEffectName, handleUnknownParams } from '@/modules/core/buffs';
 
 export default {
   props: {
@@ -138,10 +138,11 @@ export default {
       const type = getEffectType(effect);
       const id = getEffectId(effect);
       const filteredEffect = {};
-      Object.keys(effect).forEach(key => {
+      const processedEffect = handleUnknownParams(effect);
+      Object.keys(processedEffect).forEach(key => {
         // get everything but the ID
         if (!this.idKeys.includes(key)) {
-          filteredEffect[key] = effect[key];
+          filteredEffect[key] = processedEffect[key];
         }
       });
       if (this.translateEffectNames) {
