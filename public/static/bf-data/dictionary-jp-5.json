@@ -1,4 +1,12 @@
 {
+  "MST_SKILLS_2122540_NAME": {
+    "en": "Rakshasa Pyre",
+    "es": "Pira de Rakshasa",
+    "id": "Raksasa Pyre",
+    "pt": "Pira Rakshasa",
+    "th": "รัคชาซ่า ไพร",
+    "vi": "Rakshasa Pyre"
+  },
   "MST_SKILLS_2122541_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -89126,5 +89134,29 @@
     "pt": "23 combo massive Fire, Thunder, Dark attack on all foes, Spark damage hugely boosts BB gauge for 3 turns, enormously boosts BB gauge for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & random status ailment infliction",
     "th": "23 combo massive Fire, Thunder, Dark attack on all foes, Spark damage hugely boosts BB gauge for 3 turns, enormously boosts BB gauge for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & random status ailment infliction",
     "vi": "23 combo massive Fire, Thunder, Dark attack on all foes, Spark damage hugely boosts BB gauge for 3 turns, enormously boosts BB gauge for 3 turns, enormously boosts BB Atk for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & random status ailment infliction"
+  },
+  "MST_SKILLS_2840118_NAME": {
+    "en": "The Bonnie Classic",
+    "es": "The Bonnie Classic",
+    "id": "The Bonnie Classic",
+    "pt": "The Bonnie Classic",
+    "th": "The Bonnie Classic",
+    "vi": "The Bonnie Classic"
+  },
+  "MST_SKILLS_2840127_DESCRIPTION": {
+    "en": "30 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Spark damage for 3 turns,  considerably boosts own Spark damage for 3 turns & high probable resistance against 1 KO attack",
+    "es": "30 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Spark damage for 3 turns,  considerably boosts own Spark damage for 3 turns & high probable resistance against 1 KO attack",
+    "id": "30 kombo serangan Guntur masif ke semua musuh (kerusakan sesuai sisa HP), 3 giliran: ekstra jumbo Serang, Tahan, Pulih, kerusakan Percikan, lumayan menambah kerusakan Percikan sendiri, kans tinggi tahan atas 1 serangan KO",
+    "pt": "30 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Spark damage for 3 turns,  considerably boosts own Spark damage for 3 turns & high probable resistance against 1 KO attack",
+    "th": "30 คอมโบ โจมตีธาตุสายฟ้ารุนแรงมหาศาล ใส่ศัตรูทั้งหมด (ความเสียหาย สัมพันธ์กับ HP ที่เหลืออยู่), เพิ่มค่ามหาศาลให้ โจมตี, ป้องกัน, ฟื้นฟู นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ ความเสียหายสปาร์ค นาน 3 เทิร์น,  เพิ่มค่าอย่างมากให้ ความเสียหายสปาร์คของตนเอง นาน 3 เทิร์น และ มีโอกาสสูง ต้านทานต่อ 1 การโจมตีน็อคเอาท์",
+    "vi": "30 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Spark damage for 3 turns,  considerably boosts own Spark damage for 3 turns & high probable resistance against 1 KO attack"
+  },
+  "MST_SKILLS_2840127_NAME": {
+    "en": "Bladebolt Execution",
+    "es": "Bladebolt Execution",
+    "id": "Eksekusi Petir Bilah",
+    "pt": "Bladebolt Execution",
+    "th": "เบลดโบลท์ เอ็กซ์คิวชั่น",
+    "vi": "Bladebolt Execution"
   }
 }
