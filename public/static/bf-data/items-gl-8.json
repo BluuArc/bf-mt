@@ -3972,6 +3972,7 @@
       "820668",
       "840437",
       "840438",
+      "840708",
       "850708",
       "860708"
     ],
@@ -4937,6 +4938,7 @@
       "820668",
       "840437",
       "840438",
+      "840708",
       "850708",
       "860708"
     ]
@@ -5882,6 +5884,7 @@
       "820668",
       "840437",
       "840438",
+      "840708",
       "850708",
       "860708"
     ]
@@ -12421,6 +12424,7 @@
       "820668",
       "840437",
       "840438",
+      "840708",
       "850708",
       "860708"
     ]
@@ -12498,6 +12502,7 @@
       "820668",
       "840437",
       "840438",
+      "840708",
       "850708",
       "860708"
     ]
@@ -12574,6 +12579,7 @@
       "820668",
       "840437",
       "840438",
+      "840708",
       "850708",
       "860708"
     ]
@@ -13163,6 +13169,7 @@
       "820668",
       "840437",
       "840438",
+      "840708",
       "850708",
       "860708"
     ]
@@ -14897,6 +14904,7 @@
       "820668",
       "840437",
       "840438",
+      "840708",
       "850708",
       "860708"
     ]
@@ -15435,6 +15443,7 @@
       "820668",
       "840437",
       "840438",
+      "840708",
       "850708",
       "860708"
     ]
@@ -16223,6 +16232,7 @@
       "820668",
       "840437",
       "840438",
+      "840708",
       "850298",
       "850708",
       "860708"
@@ -17042,6 +17052,7 @@
       "820668",
       "840437",
       "840438",
+      "840708",
       "850708",
       "860338",
       "860708"
@@ -17159,6 +17170,7 @@
       "820668",
       "840437",
       "840438",
+      "840708",
       "850708",
       "860708"
     ]
@@ -17493,6 +17505,7 @@
       "820668",
       "840437",
       "840438",
+      "840708",
       "850708",
       "860708"
     ]
@@ -17787,6 +17800,7 @@
       "820668",
       "840437",
       "840438",
+      "840708",
       "850708",
       "860708"
     ]
@@ -18016,6 +18030,7 @@
       "820668",
       "840437",
       "840438",
+      "840708",
       "850637",
       "850638",
       "850708",
@@ -18179,6 +18194,7 @@
       "820668",
       "840437",
       "840438",
+      "840708",
       "850708",
       "860708"
     ]
@@ -18647,6 +18663,7 @@
       "830148",
       "840437",
       "840438",
+      "840708",
       "850708",
       "860708"
     ]
@@ -21164,6 +21181,74 @@
     "usage": [],
     "associated_units": [
       "850708"
+    ]
+  },
+  "819231": {
+    "desc": "100% boost to Atk and 40% boost to max HP of Thunder types, 100% boost to Spark damage, greatly boosts critical damage, adds Def ignoring effect to attack & adds slight boost to OD gauge effect to BB/SBB",
+    "effect": [
+      {
+        "atk% buff": 100,
+        "elements buffed": [
+          "thunder"
+        ],
+        "hp% buff": 40,
+        "passive id": "2"
+      },
+      {
+        "damage% for spark": 100,
+        "passive id": "31"
+      },
+      {
+        "crit multiplier%": 100,
+        "passive id": "34"
+      },
+      {
+        "ignore def%": 100,
+        "passive id": "29"
+      },
+      {
+        "passive id": "66",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "increase od gauge%": 10,
+            "proc id": "43",
+            "target area": "single",
+            "target type": "self"
+          }
+        ]
+      }
+    ],
+    "id": 819231,
+    "max_stack": 1,
+    "name": "Vrána's Calling",
+    "raid": false,
+    "rarity": 7,
+    "recipe": {
+      "karma": "800000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 890037,
+          "name": "Royal Pinion"
+        },
+        {
+          "count": 50,
+          "id": 890038,
+          "name": "Crowsgrip"
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 12,
+    "sphere type text": "Defense Penetrating",
+    "thumbnail": "sphere_thum_819231.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "840708"
     ]
   },
   "819234": {
@@ -30824,6 +30909,40 @@
       {
         "id": 819247,
         "name": "Qormusta Tengri"
+      }
+    ]
+  },
+  "890037": {
+    "desc": "A beautifully kept plume in rich royal blue, the emblem of a noble arcanist house of yore.",
+    "id": 890037,
+    "max_stack": 999,
+    "name": "Royal Pinion",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_201.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 819231,
+        "name": "Vrána's Calling"
+      }
+    ]
+  },
+  "890038": {
+    "desc": "Sharp, pointed metal bit fashioned after a claw. Used by assassins as concealed caltrops.",
+    "id": 890038,
+    "max_stack": 999,
+    "name": "Crowsgrip",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 20,
+    "thumbnail": "item_thum_604.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 819231,
+        "name": "Vrána's Calling"
       }
     ]
   },
