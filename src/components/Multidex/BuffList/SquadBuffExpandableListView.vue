@@ -123,7 +123,7 @@
             :squad="squad"
             :targetType="possibleTables[tableConfigIndex].targetType"
             :effectType="possibleTables[tableConfigIndex].effectType"
-            :effectMappingByUnitEntry="effectMappingByTable.get(getTableKey(possibleTables[tableConfigIndex].targetType, possibleTables[tableConfigIndex].effectType))"
+            :inputEffectMappingByUnitEntry="effectMappingByTable.get(getTableKey(possibleTables[tableConfigIndex].targetType, possibleTables[tableConfigIndex].effectType))"
             :highlightedProcs="filterOptions.procs"
             :highlightedPassives="filterOptions.passives"
           />
@@ -329,7 +329,7 @@ export default {
     > dt {
       position: sticky;
       background: var(--background-color);
-      z-index: 1;
+      z-index: 2;
       padding: 0.75em 0.25em;
       margin: 0 -0.25em;
       border-bottom-left-radius: 8px;

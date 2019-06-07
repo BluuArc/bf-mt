@@ -453,3 +453,12 @@ export const arenaTargetMapping = Object.freeze({
   party: 'when an ally',
   enemy: 'on enemy that',
 });
+
+export const SOURCE_PATH_TO_TEXT_MAPPING = Object.freeze({
+  'unit.ls': 'Leader Skill',
+  'unit.es': 'Extra Skill',
+  'unit.bb': 'Brave Burst',
+  'unit.sbb': 'Super Brave Burst',
+  'unit.ubb': 'Ultimate Brave Burst',
+  'unit.sp': 'SP Enhancement',
+});

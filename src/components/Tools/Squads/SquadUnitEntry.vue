@@ -33,6 +33,7 @@
             v-text="orderSettings.text"/>
           <v-chip
             v-else
+            tabindex="-1"
             :style="`
               background-color: ${orderSettings.background};
               color: ${orderSettings.foreground};

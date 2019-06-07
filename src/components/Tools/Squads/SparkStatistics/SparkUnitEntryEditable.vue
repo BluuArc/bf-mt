@@ -30,6 +30,7 @@
         </v-layout>
         <v-flex class="text-xs-center" v-if="orderSettings">
           <v-chip
+            tabindex="-1"
             :style="`
               background-color: ${orderSettings.background};
               color: ${orderSettings.foreground};

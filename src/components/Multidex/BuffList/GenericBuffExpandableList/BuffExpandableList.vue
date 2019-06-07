@@ -60,10 +60,9 @@ import LoadingDebouncer from '@/modules/LoadingDebouncer';
 import { getEffectId } from '@/modules/EffectProcessor/processor-helper';
 import { getEffectName, handleUnknownParams } from '@/modules/core/buffs';
 import { weightedStringSort } from '@/modules/utils';
-import { squadBuffTypes } from '@/modules/constants';
 import { Logger } from '@/modules/Logger';
-import ValueSubgrid from '@/components/Multidex/BuffTableGrid/ValueSubgrid';
-import DelayedVForExpansionPanel from './DelayedVForExpansionPanel';
+import ValueSubgrid from './ValueSubgrid';
+import DelayedVForExpansionPanel from '@/components/Multidex/BuffList/DelayedVForExpansionPanel';
 import LoadingIndicator from '@/components/LoadingIndicator';
 
 const logger = new Logger({ prefix: '[BuffExpandableList]' });
@@ -129,7 +128,7 @@ export default {
     effectsById () {
       const { getEffectsFromSource, getEffectDetails } = this;
       const mapping = this.sources.reduce((acc, entry) => {
-        const effects = getEffectsFromSource(acc);
+        const effects = getEffectsFromSource(entry);
         effects.forEach(effect => {
           const effectDetails = getEffectDetails(effect);
           effectDetails.source = entry;
@@ -138,6 +137,7 @@ export default {
           }
           acc[effectDetails.id].push(Object.freeze(effectDetails));
         });
+        return acc;
       }, {});
       return Object.freeze(mapping);
     },
@@ -305,7 +305,7 @@ export default {
       if (!isLoading) {
         this.ensureHeadersAreHighlighted();
       }
-    }
+    },
   },
 };
 </script>
