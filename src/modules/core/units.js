@@ -6,7 +6,13 @@ import {
   arenaActionMapping,
   arenaTargetMapping,
   arenaConditionMapping,
+  targetTypes,
+  squadBuffTypes,
+  squadUnitActions,
+  burstTypes,
 } from '@/modules/constants';
+import { getBurstEffects } from '@/modules/core/bursts';
+import { getEffectsList } from '@/modules/core/buffs';
 import { safeGet } from '@/modules/utils';
 
 export function getExtraAttacks (unit) {
@@ -330,4 +336,61 @@ export function getFillerUnit (isEmpty = false, element = 'fire') {
     guide_id: 0,
     kind: 'normal',
   };
+}
+
+export function getEffectMappingFromUnit ({
+  unit = {},
+  enhancements,
+}) {
+  const unitEffects = {
+    ls: [],
+    es: [],
+    [squadUnitActions.BB]: [],
+    [squadUnitActions.SBB]: [],
+    [squadUnitActions.UBB]: [],
+    sp: [],
+  };
+  if (unit['leader skill'] && Array.isArray(unit['leader skill'].effects)) {
+    unitEffects.ls = Array.from(unit['leader skill'].effects).map(e => ({ ...e, sourcePath: 'unit.ls' }));
+  }
+
+  if (unit['extra skill'] && Array.isArray(unit['extra skill'].effects)) {
+    unitEffects.es = Array.from(unit['extra skill'].effects).map(e => ({ ...e, sourcePath: 'unit.es' }));
+  }
+
+  burstTypes.forEach(bbType => {
+    let burstData = (unit[bbType] && Array.isArray(unit[bbType].levels))
+      ? getBurstEffects(unit[bbType])
+      : {};
+    if (Array.isArray(burstData.effects)) {
+      unitEffects[bbType] = Array.from(burstData.effects).map(e => ({ ...e, sourcePath: `unit.${bbType}` }));
+    }
+  });
+
+  if (Array.isArray(unit.feskills)) {
+    // default to all enhancements if none specified
+    const enhancementsToCheck = (typeof enhancements === 'string' && enhancements.length > 0)
+      ? Array.from(new Set(spCodeToEffects(enhancements, unit.feskills)))
+      : unit.feskills;
+    unitEffects.sp = enhancementsToCheck.reduce((acc, val) => acc.concat(getSpEntryEffects(val).map(e => ({ ...e, sourcePath: 'unit.sp' }))), []);
+  }
+
+  return unitEffects;
+}
+
+export function getEffectsListForUnit ({
+  unit = {},
+  target = targetTypes.PARTY,
+  effectType = squadBuffTypes.PROC,
+  enhancements,
+}) {
+  const entryEffects = getEffectMappingFromUnit({ unit, enhancements });
+  return getEffectsList({
+    leaderSkillEffects: entryEffects.ls,
+    nonUbbBurstEffects: entryEffects.bb.concat(entryEffects.sbb),
+    ubbBurstEffects: entryEffects.ubb,
+    spEnhancementEffects: entryEffects.unit.sp,
+    target,
+    effectType,
+  });
 }

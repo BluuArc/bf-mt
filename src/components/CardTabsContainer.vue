@@ -1,6 +1,6 @@
 <template>
   <v-container fluid class="pt-0">
-    <v-layout row>
+    <v-layout row v-show="tabs.length > 1">
       <v-flex class="pb-0">
         <v-tabs
           v-model="localValue"
@@ -13,7 +13,7 @@
         </v-tabs>
       </v-flex>
     </v-layout>
-    <v-layout row>
+    <v-layout row :class="{ 'mt-2': tabs.length <= 1 }">
       <v-flex class="pa-0">
         <v-tabs-items v-model="localValue" touchless>
           <v-tab-item v-for="(tab, i) in tabs" :key="i">

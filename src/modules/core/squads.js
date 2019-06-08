@@ -409,7 +409,7 @@ export function getEffectsListForSquadUnitEntry (
 ) {
   const entryEffects = getEffectMappingFromSquadUnitEntry(unitEntry, syncGetters);
   const isLsActive = (squad.units.indexOf(unitEntry) === squad.lead || squad.units.indexOf(unitEntry) === squad.friend);
-  const result = getEffectsList({
+  return getEffectsList({
     leaderSkillEffects: isLsActive ? entryEffects.unit.ls : [],
     extraSkillEffects: entryEffects.unit.es,
     nonUbbBurstEffects: entryEffects.unit.bb.concat(entryEffects.unit.sbb),
@@ -420,7 +420,6 @@ export function getEffectsListForSquadUnitEntry (
     target,
     effectType,
   });
-  return result;
 }
 
 export function getMultidexParamsForSquadUnit (unit = generateFillerSquadUnitEntry()) {

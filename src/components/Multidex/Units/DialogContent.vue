@@ -41,6 +41,9 @@
           <v-container fluid class="pa-0">
             <v-layout row wrap class="dialog-card-list">
               <v-flex xs12>
+                <summary-card :unit="entry" :logger="logger"/>
+              </v-flex>
+              <v-flex xs12>
                 <leader-skill-card :unit="entry" :logger="logger"/>
               </v-flex>
               <v-flex xs12 v-if="entry && entry['extra skill']">
@@ -100,6 +103,7 @@ import FirstTimeClearRewardCard from '@/components/Multidex/FirstTimeClearReward
 import MovementCard from '@/components/Multidex/Units/MovementCard';
 import ArenaCard from '@/components/Multidex/Units/ArenaCard';
 
+import SummaryCard from '@/components/Multidex/Units/SummaryCard';
 import LeaderSkillCard from '@/components/Multidex/Units/LeaderSkillCard';
 import ExtraSkillCard from '@/components/Multidex/Units/ExtraSkillCard';
 import BurstCard from '@/components/Multidex/Units/BurstCard';
@@ -118,6 +122,7 @@ export default {
     EvolutionCard,
     FirstTimeClearRewardCard,
     ArenaCard,
+    SummaryCard,
     MovementCard,
     LeaderSkillCard,
     ExtraSkillCard,

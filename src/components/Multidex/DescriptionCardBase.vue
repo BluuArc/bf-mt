@@ -43,6 +43,9 @@
           {{ tab.name }}
         </slot>
       </section>
+      <template slot="actions">
+        <slot name="actions"></slot>
+      </template>
     </card-tabs-container>
   </bordered-titled-card>
 </template>
