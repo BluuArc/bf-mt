@@ -1,5 +1,5 @@
 <template>
-  <span class="squad-buff-expandable-list-view">
+  <!-- <span class="squad-buff-expandable-list-view">
     <v-expansion-panel class="order-configuration-panel">
       <v-expansion-panel-content>
         <div slot="header">
@@ -130,19 +130,46 @@
         </dd>
       </template>
     </dl>
-  </span>
+  </span> -->
+  <buff-expandable-list-view
+    :sources="squad.units"
+    :getEffectsFromSource="getEffectsForSquadUnit"
+    :titleTopOffset="topNavbarHeight"
+    :inputFilterOptions="filterOptions"
+    :getTextForSource="getTextForSourceInSquadUnit"
+    @filteroptions="$f => filterOptions = $f"
+  >
+    <template
+      slot="buffexpandablelist"
+      slot-scope="{ sources, targetType, effectType, inputEffectMappingBySource, highlightedBuffIds, listKey }"
+    >
+      <squad-buff-expandable-list
+        :key="listKey"
+        :squad="squad"
+        :targetType="targetType"
+        :effectType="effectType"
+        :inputEffectMappingByUnitEntry="inputEffectMappingBySource"
+        :highlightedProcs="(squadBuffTypes.PROC === effectType && highlightedBuffIds) || []"
+        :highlightedPassives="(squadBuffTypes.PASSIVE === effectType && highlightedBuffIds) || []"
+        :getUnit="getUnit"
+        :getItem="getItem"
+        :getExtraSkill="getExtraSkill"
+      />
+    </template>
+  </buff-expandable-list-view>
 </template>
 
 <script>
-import { targetTypes, squadBuffTypes } from '@/modules/constants';
+import { targetTypes, squadBuffTypes, SOURCE_PATH_TO_TEXT_MAPPING } from '@/modules/constants';
 import { getEffectsListForSquadUnitEntry } from '@/modules/core/squads';
 import { getEffectId } from '@/modules/EffectProcessor/processor-helper';
 import { getEffectName } from '@/modules/core/buffs';
 import FilterOptionsHelper from '@/modules/FilterOptionsHelper';
+// import OrderConfigurator from '@/components/OrderConfigurator';
+// import ProcSelector from '@/components/Multidex/Filters/BuffSelector/ProcSelector';
+// import PassiveSelector from '@/components/Multidex/Filters/BuffSelector/PassiveSelector';
+import BuffExpandableListView from '@/components/Multidex/BuffList/GenericBuffExpandableList/BuffExpandableListView';
 import SquadBuffExpandableList from '@/components/Multidex/BuffList/SquadBuffExpandableList';
-import OrderConfigurator from '@/components/OrderConfigurator';
-import ProcSelector from '@/components/Multidex/Filters/BuffSelector/ProcSelector';
-import PassiveSelector from '@/components/Multidex/Filters/BuffSelector/PassiveSelector';
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
 
 export default {
@@ -159,11 +186,13 @@ export default {
   },
   components: {
     SquadBuffExpandableList,
-    OrderConfigurator,
-    ProcSelector,
-    PassiveSelector,
+    // OrderConfigurator,
+    // ProcSelector,
+    // PassiveSelector,
+    BuffExpandableListView,
   },
   computed: {
+    squadBuffTypes: () => squadBuffTypes,
     buffGroupTitleStyle () {
       return {
         top: `${this.topNavbarHeight}px`,
@@ -303,6 +332,23 @@ export default {
       }
 
       return `${result} [${id}]`;
+    },
+    getEffectsForSquadUnit (unit, targetType, effectType) {
+      const table = this.effectMappingByTable.get(this.getTableKey(targetType, effectType));
+      const effects = table.get(unit);
+      return Array.isArray(effects) ? effects : [];
+    },
+    getTextForSourceInSquadUnit (path, source) {
+      let displayValue = SOURCE_PATH_TO_TEXT_MAPPING[path];
+      if (!displayValue) {
+        if (path === 'es') {
+          displayValue = `Elgif: ${this.getExtraSkill(source.es).name || source.es || path}`;
+        } else if (path.startsWith('sphere:')) {
+          const sphereId = path.split(':')[1];
+          displayValue = `Sphere: ${this.getItem(sphereId).name || sphereId || path}`;
+        }
+      }
+      return displayValue || path;
     },
   },
   watch: {

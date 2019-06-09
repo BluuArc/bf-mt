@@ -132,7 +132,7 @@ export function getEffectsList ({
     }
 
     if (extraSkillEffects.length > 0) {
-      processExtraSkillForProcs(extraSkillEffects);
+      processExtraSkillForProcs(extraSkillEffects, matchesTargetType);
     }
 
     // assumption: SP entries are in order so upgrades to previous enhancements are closer to the end of the array
@@ -242,7 +242,7 @@ export function getEffectsList ({
       }
     });
 
-    processExtraSkillForProcs(elgifEffects);
+    processExtraSkillForProcs(elgifEffects, matchesTargetType);
   } else if (target === targetTypes.PARTY && effectType === squadBuffTypes.PASSIVE) {
     filteredEffects.unitLs = leaderSkillEffects.slice();
     filteredEffects.unitSp = spEnhancementEffects.filter(e => e.sp_type === 'add to passive' || e[UNKNOWN_PASSIVE_ID_KEY] === ADD_TO_LS_PASSIVE_ID); // add to LS

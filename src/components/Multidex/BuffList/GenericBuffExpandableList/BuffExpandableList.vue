@@ -76,6 +76,10 @@ export default {
       type: Function,
       default: () => [],
     },
+    inputEffectMappingBySource: {
+      type: WeakMap,
+      default: () => new WeakMap(),
+    },
     highlightedBuffIds: {
       type: Array,
       default: () => [],
@@ -126,9 +130,9 @@ export default {
     }),
     // assumption: all effects are of the same type (passive, proc, etc)
     effectsById () {
-      const { getEffectsFromSource, getEffectDetails } = this;
+      const { getEffectsFromSource, getEffectDetails, inputEffectMappingBySource } = this;
       const mapping = this.sources.reduce((acc, entry) => {
-        const effects = getEffectsFromSource(entry);
+        const effects = inputEffectMappingBySource.get(entry) || getEffectsFromSource(entry);
         effects.forEach(effect => {
           const effectDetails = getEffectDetails(effect);
           effectDetails.source = entry;

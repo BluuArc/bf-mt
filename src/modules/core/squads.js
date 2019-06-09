@@ -415,7 +415,7 @@ export function getEffectsListForSquadUnitEntry (
     nonUbbBurstEffects: entryEffects.unit.bb.concat(entryEffects.unit.sbb),
     ubbBurstEffects: entryEffects.unit.ubb,
     elgifEffects: entryEffects.es,
-    sphereEffects: Object.values(entryEffects.spheres).map((acc, effects) => acc.concat(effects), []),
+    sphereEffects: Object.values(entryEffects.spheres).reduce((acc, effects) => acc.concat(effects), []),
     spEnhancementEffects: entryEffects.unit.sp,
     target,
     effectType,
