@@ -165,7 +165,7 @@ export default {
   },
   computed: {
     selectedIdsText () {
-      return this.selectedIds.join(',');
+      return this.localSelectedIds.join(',');
     },
     detectedPasteFilters () {
       let result = [];
