@@ -14,19 +14,12 @@
                 Formatting
               </h2>
             </v-flex>
-            <v-layout row align-center>
-              <v-flex>
-                <v-select
-                  v-model="target"
-                  :items="possibleTargets"
-                  label="Platform"/>
-              </v-flex>
-              <v-flex style="flex-grow: 0;">
-                <v-btn flat @click="setWithPreset">
-                  Use Preset
-                </v-btn>
-              </v-flex>
-            </v-layout>
+            <v-flex>
+              <v-select
+                v-model="target"
+                :items="possibleTargets"
+                label="Platform"/>
+            </v-flex>
             <v-flex xs12 sm6>
               <v-checkbox v-model="useBullets" label="Use Bulleted List"/>
             </v-flex>
@@ -80,7 +73,7 @@
           <text-viewer
             style="height: 100%;"
             :inputText="markdownText"
-            :value="updateTime"/>
+            :value="markdownText"/>
         </v-flex>
       </v-layout>
       <v-layout row slot="code">
@@ -88,7 +81,7 @@
           style="flex: 0 1 100%;"
           :inputText="squadShorthand"
           label="Code"
-          :value="updateTime"
+          :value="squadShorthand"
         />
       </v-layout>
       <v-layout row slot="link">
@@ -96,7 +89,7 @@
           style="flex: 0 1 100%;"
           :inputText="shareLink"
           label="Link"
-          :value="updateTime"
+          :value="shareLink"
         />
       </v-layout>
     </card-tabs-container>
@@ -280,7 +273,7 @@ export default {
 
       if (showShareLink) {
         const linkText = this.target === 'Reddit'
-          ? `[Save Squad](${this.shareLink}})`
+          ? `[Save Squad](${this.shareLink})`
           : `Save Squad: ${this.shareLink}`;
         sections.push(linkText);
       }
@@ -337,11 +330,8 @@ export default {
     },
   },
   watch: {
-    markdownText () {
-      this.updateTime = new Date();
-    },
-    activeTabIndex () {
-      this.updateTime = new Date();
+    target () {
+      this.setWithPreset();
     },
   },
 };
