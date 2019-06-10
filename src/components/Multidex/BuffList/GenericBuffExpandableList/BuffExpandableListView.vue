@@ -3,10 +3,34 @@
     <v-expansion-panel class="order-configuration-panel">
       <v-expansion-panel-content>
         <div slot="header">
-          Reorder Buff Lists
+          Configure Buff List View
         </div>
         <section>
+          <v-layout row justify-center align-center class="pl-2">
+            <v-flex style="flex: none">
+              View Mode
+            </v-flex>
+            <v-flex class="text-xs-center">
+              <v-btn
+                flat
+                :outline="viewMode === TARGET_VIEW_TYPE"
+                @click="emitNewViewMode(TARGET_VIEW_TYPE)"
+              >
+                Target
+              </v-btn>
+            </v-flex>
+            <v-flex class="text-xs-center">
+              <v-btn
+                flat
+                :outline="viewMode === OVERVIEW_VIEW_TYPE"
+                @click="emitNewViewMode(OVERVIEW_VIEW_TYPE)"
+              >
+                Overview
+              </v-btn>
+            </v-flex>
+          </v-layout>
           <order-configurator
+            v-show="viewMode === 'target'"
             v-model="buffTables"
             :getEntryName="(configIndex) => possibleTables[configIndex].name"
             :fullValueSet="defaultBuffTables"
@@ -111,62 +135,126 @@
       </template>
     </section>
     <dl>
-      <template v-for="tableConfigIndex in buffTables">
-        <dt
-          class="title"
-          :style="buffListTitleStyle"
-          :key="`${possibleTables[tableConfigIndex].targetType}-${possibleTables[tableConfigIndex].effectType}-title`"
-          v-text="possibleTables[tableConfigIndex].name"
-        />
-        <dd :key="`${possibleTables[tableConfigIndex].targetType}-${possibleTables[tableConfigIndex].effectType}-table`">
-          <slot
-            name="buffexpandablelist"
-            :sources="sources"
-            :targetType="possibleTables[tableConfigIndex].targetType"
-            :effectType="possibleTables[tableConfigIndex].effectType"
-            :inputEffectMappingBySource="effectMappingByTable.get(getTableKey(possibleTables[tableConfigIndex].targetType, possibleTables[tableConfigIndex].effectType))"
-            :highlightedBuffIds="getHighlightedBuffListForTable(possibleTables[tableConfigIndex].effectType)"
-            :getTextForSource="getTextForSource"
-            :listKey="getEffectTypeKey(possibleTables[tableConfigIndex].effectType)"
-          >
-            <buff-expandable-list
-              :key="getEffectTypeKey(possibleTables[tableConfigIndex].effectType)"
+      <template v-if="viewMode === TARGET_VIEW_TYPE">
+        <template v-for="tableConfigIndex in buffTables">
+          <dt
+            class="title"
+            :style="buffListTitleStyle"
+            :key="`${possibleTables[tableConfigIndex].targetType}-${possibleTables[tableConfigIndex].effectType}-title`"
+            v-text="possibleTables[tableConfigIndex].name"
+          />
+          <dd :key="`${possibleTables[tableConfigIndex].targetType}-${possibleTables[tableConfigIndex].effectType}-table`">
+            <slot
+              name="buffexpandablelist"
               :sources="sources"
+              :targetType="possibleTables[tableConfigIndex].targetType"
               :effectType="possibleTables[tableConfigIndex].effectType"
               :inputEffectMappingBySource="effectMappingByTable.get(getTableKey(possibleTables[tableConfigIndex].targetType, possibleTables[tableConfigIndex].effectType))"
               :highlightedBuffIds="getHighlightedBuffListForTable(possibleTables[tableConfigIndex].effectType)"
               :getTextForSource="getTextForSource"
+              :listKey="getEffectTypeKey(possibleTables[tableConfigIndex].effectType)"
             >
-              <template slot="noentries">
-                <slot
-                  name="noentries"
-                  :effectType="possibleTables[tableConfigIndex].effectType"
-                  :targetType="possibleTables[tableConfigIndex].targetType"
-                >
-                  <span>No entries of type [{{ possibleTables[tableConfigIndex].effectType }}] were found.</span>
-                </slot>
-              </template>
-              <template slot="allentrypreview" slot-scope="{ entries, effectId }">
-                <slot
-                  name="allentrypreview"
-                  :entries="entries"
-                  :effectId="effectId"
-                  :effectType="possibleTables[tableConfigIndex].effectType"
-                  :targetType="possibleTables[tableConfigIndex].targetType"
-                >
-                  <div v-for="(source, i) in entries" :key="i">
-                    {{ source }}
-                  </div>
-                </slot>
-              </template>
-              <template slot="value-header" slot-scope="{ entry }">
-                <slot name="value-header" :entry="entry">
-                  <span>{{ entry }}</span>
-                </slot>
-              </template>
-            </buff-expandable-list>
-          </slot>
-        </dd>
+              <buff-expandable-list
+                :key="getEffectTypeKey(possibleTables[tableConfigIndex].effectType)"
+                :sources="sources"
+                :effectType="possibleTables[tableConfigIndex].effectType"
+                :inputEffectMappingBySource="effectMappingByTable.get(getTableKey(possibleTables[tableConfigIndex].targetType, possibleTables[tableConfigIndex].effectType))"
+                :highlightedBuffIds="getHighlightedBuffListForTable(possibleTables[tableConfigIndex].effectType)"
+                :getTextForSource="getTextForSource"
+              >
+                <template slot="noentries">
+                  <slot
+                    name="noentries"
+                    :effectType="possibleTables[tableConfigIndex].effectType"
+                    :targetType="possibleTables[tableConfigIndex].targetType"
+                  >
+                    <span>No entries of type [{{ possibleTables[tableConfigIndex].effectType }}] were found.</span>
+                  </slot>
+                </template>
+                <template slot="allentrypreview" slot-scope="{ entries, effectId }">
+                  <slot
+                    name="allentrypreview"
+                    :entries="entries"
+                    :effectId="effectId"
+                    :effectType="possibleTables[tableConfigIndex].effectType"
+                    :targetType="possibleTables[tableConfigIndex].targetType"
+                  >
+                    <div v-for="(source, i) in entries" :key="i">
+                      {{ source }}
+                    </div>
+                  </slot>
+                </template>
+                <template slot="value-header" slot-scope="{ entry }">
+                  <slot name="value-header" :entry="entry">
+                    <span>{{ entry }}</span>
+                  </slot>
+                </template>
+              </buff-expandable-list>
+            </slot>
+          </dd>
+        </template>
+      </template>
+      <template v-else-if="viewMode === OVERVIEW_VIEW_TYPE">
+        <template v-for="tableConfig in overviewTables">
+          <dt
+            class="title"
+            :style="buffListTitleStyle"
+            :key="`${tableConfig.mappingKey}-${tableConfig.effectType}-title`"
+            v-text="tableConfig.name"
+          />
+          <dd :key="`${tableConfig.mappingKey}-${tableConfig.effectType}-table`">
+            <slot
+              name="buffexpandablelist"
+              :sources="sources"
+              :targetType="tableConfig.mappingKey"
+              :effectType="tableConfig.effectType"
+              :inputEffectMappingBySource="effectMappingByTable.get(tableConfig.mappingKey)"
+              :highlightedBuffIds="getHighlightedBuffListForTable(tableConfig.effectType)"
+              :getTextForSource="getTextForSource"
+              :listKey="getEffectTypeKey(tableConfig.effectType)"
+            >
+              <buff-expandable-list
+                :key="getEffectTypeKey(tableConfig.effectType)"
+                :sources="sources"
+                :effectType="tableConfig.effectType"
+                :inputEffectMappingBySource="effectMappingByTable.get(tableConfig.mappingKey)"
+                :highlightedBuffIds="getHighlightedBuffListForTable(tableConfig.effectType)"
+                :getTextForSource="getTextForSource"
+              >
+                <template slot="noentries">
+                  <slot
+                    name="noentries"
+                    :effectType="tableConfig.effectType"
+                    :targetType="tableConfig.mappingKey"
+                  >
+                    <span>No entries of type [{{ tableConfig.effectType }}] were found.</span>
+                  </slot>
+                </template>
+                <template slot="allentrypreview" slot-scope="{ entries, effectId }">
+                  <slot
+                    name="allentrypreview"
+                    :entries="entries"
+                    :effectId="effectId"
+                    :effectType="tableConfig.effectType"
+                    :targetType="tableConfig.mappingKey"
+                  >
+                    <div v-for="(source, i) in entries" :key="i">
+                      {{ source }}
+                    </div>
+                  </slot>
+                </template>
+                <template slot="value-header" slot-scope="{ entry }">
+                  <slot name="value-header" :entry="entry">
+                    <span>{{ entry }}</span>
+                  </slot>
+                </template>
+              </buff-expandable-list>
+            </slot>
+          </dd>
+        </template>
+      </template>
+      <template v-else>
+        Unknown view mode [{{ viewMode }}]
       </template>
     </dl>
   </div>
@@ -181,6 +269,10 @@ import OrderConfigurator from '@/components/OrderConfigurator';
 import ProcSelector from '@/components/Multidex/Filters/BuffSelector/ProcSelector';
 import PassiveSelector from '@/components/Multidex/Filters/BuffSelector/PassiveSelector';
 import BuffExpandableList from './BuffExpandableList.vue';
+
+const TARGET_VIEW_TYPE = 'target';
+const OVERVIEW_VIEW_TYPE = 'overview';
+const POSSIBLE_VIEW_TYPES = Object.freeze([TARGET_VIEW_TYPE, OVERVIEW_VIEW_TYPE]);
 
 export default {
  props: {
@@ -212,6 +304,10 @@ export default {
     inputFilterOptions: {
       required: false,
     },
+    viewMode: {
+      type: String,
+      default: POSSIBLE_VIEW_TYPES[0],
+    },
  },
  components: {
     BuffExpandableList,
@@ -220,6 +316,8 @@ export default {
     PassiveSelector,
  },
  computed: {
+   TARGET_VIEW_TYPE: () => TARGET_VIEW_TYPE,
+   OVERVIEW_VIEW_TYPE: () => OVERVIEW_VIEW_TYPE,
    buffListTitleStyle () {
      return {
        top: `${this.titleTopOffset}px`,
@@ -262,6 +360,18 @@ export default {
         effectType: squadBuffTypes.PROC,
       },
     ]),
+    overviewTables: () => Object.freeze([
+      {
+        name: 'All Passive Buffs',
+        effectType: squadBuffTypes.PASSIVE,
+        mappingKey: 'allPassivesMapping',
+      },
+      {
+        name: 'All Active Buffs',
+        effectType: squadBuffTypes.PROC,
+        mappingKey: 'allProcsMapping',
+      },
+    ]),
     defaultBuffTables () {
       return Object.freeze(this.possibleTables.map((_, i) => i));
     },
@@ -270,24 +380,35 @@ export default {
       const allPassiveIds = new Set();
       const tableMapping = new Map();
       const { sources, possibleTables, getEffectsFromSource, getTableKey } = this;
+
+      const allProcsBySource = new WeakMap();
+      const allPassivesBySource = new WeakMap();
       possibleTables.forEach(({ targetType, effectType }) => {
         const effectMappingBySource = new WeakMap();
         sources.forEach(entry => {
           const effects = getEffectsFromSource(entry, targetType, effectType);
+          const currentProcAggregate = allProcsBySource.get(entry) || [];
+          const currentPassiveAggregate = allPassivesBySource.get(entry) || [];
           effects.forEach(effect => {
             if (effectType === squadBuffTypes.PROC) {
               allProcIds.add(getEffectId(effect));
+              currentProcAggregate.push(effect);
             } else if (effectType === squadBuffTypes.PASSIVE) {
               allPassiveIds.add(getEffectId(effect));
+              currentPassiveAggregate.push(effect);
             }
           });
           effectMappingBySource.set(entry, effects);
+          allProcsBySource.set(entry, currentProcAggregate);
+          allPassivesBySource.set(entry, currentPassiveAggregate);
         });
         tableMapping.set(getTableKey(targetType, effectType), effectMappingBySource);
       });
 
       tableMapping.set('allProcs', Array.from(allProcIds).sort((a, b) => +a - +b));
       tableMapping.set('allPassives', Array.from(allPassiveIds).sort((a, b) => +a - +b));
+      tableMapping.set('allProcsMapping', allProcsBySource);
+      tableMapping.set('allPassivesMapping', allPassivesBySource);
       return tableMapping;
     },
     missingProcs () {
@@ -364,11 +485,22 @@ export default {
       }
       return list;
     },
+    emitNewViewMode (viewType = TARGET_VIEW_TYPE) {
+      this.$emit('viewmode', viewType);
+    },
   },
   watch: {
     activeSelector () {
       const { procs = [], passives = [] } = this.filterOptions;
       this.$emit('filteroptions', { procs, passives });
+    },
+    viewMode: {
+      immediate: true,
+      handler (newValue) {
+        if (!POSSIBLE_VIEW_TYPES.includes(newValue)) {
+          this.emitNewViewMode(POSSIBLE_VIEW_TYPES[0]);
+        }
+      },
     },
   },
 };

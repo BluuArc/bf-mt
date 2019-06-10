@@ -6,6 +6,8 @@
     :inputFilterOptions="filterOptions"
     :getTextForSource="getTextForSourceInSquadUnit"
     @filteroptions="$f => filterOptions = $f"
+    :viewMode="viewMode"
+    @viewmode="$v => viewMode = $v"
   >
     <template
       slot="buffexpandablelist"
@@ -128,6 +130,7 @@ export default {
         procs: [],
         passives: [],
       },
+      viewMode: '',
     };
   },
   created () {
@@ -139,6 +142,10 @@ export default {
       this.filterOptions.passives = Array.isArray(this.squad.filterOptions.passives)
         ? this.squad.filterOptions.passives.slice()
         : [];
+    }
+
+    if (this.squad.viewMode) {
+      this.viewMode = this.squad.viewMode;
     }
   },
   methods: {
@@ -166,6 +173,9 @@ export default {
   watch: {
     filterOptions (newOptions) {
       this.squad.filterOptions = newOptions;
+    },
+    viewMode (newMode) {
+      this.squad.viewMode = newMode;
     },
   },
 };

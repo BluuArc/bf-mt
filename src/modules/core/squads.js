@@ -152,7 +152,7 @@ export function generateDefaultSquad (allEmpty = false, units) {
 }
 
 export function cloneSquad (squad = {}) {
-  const { lead, friend, name, simulatorOptions, filterOptions } = squad;
+  const { lead, friend, name, simulatorOptions, filterOptions, viewMode } = squad;
   return {
     lead,
     friend,
@@ -160,6 +160,7 @@ export function cloneSquad (squad = {}) {
     units: sortUnitsByPosition(squad.units.map(makeSquadUnitEntry), false),
     simulatorOptions,
     filterOptions,
+    viewMode,
   };
 }
 
