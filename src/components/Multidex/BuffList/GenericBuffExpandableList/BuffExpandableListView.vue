@@ -35,7 +35,7 @@
             :getEntryName="(configIndex) => possibleTables[configIndex].name"
             :fullValueSet="defaultBuffTables"
           />
-          <section>
+          <section v-show="viewMode === 'target'">
             <v-btn flat @click="buffTables = buffTables.concat(defaultBuffTables.filter((_, i) => !buffTables.includes(i)))">Show All</v-btn>
             <v-btn flat @click="buffTables = []">Hide All</v-btn>
             <v-btn flat @click="buffTables = defaultBuffTables.slice()">Reset to Default</v-btn>
