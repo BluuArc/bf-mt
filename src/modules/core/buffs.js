@@ -49,8 +49,10 @@ export function getEffectsList ({
   target = targetTypes.PARTY,
   effectType = squadBuffTypes.PROC,
 }) {
-  const extractBuffsFromTriggeredEffect = (effect = {}, sourcePath) => Array.isArray(effect['triggered effect'])
-    ? Array.from(effect['triggered effect']).map(e => ({ ...e, sourcePath }))
+  const extractBuffsFromTriggeredEffect = (effect = {}, sourcePath, sourceSpCode) => Array.isArray(effect['triggered effect'])
+    ? Array.from(effect['triggered effect']).map(e => sourceSpCode
+        ? ({ ...e, sourcePath, sourceSpCode })
+        : ({ ...e, sourcePath }))
     : [];
   const extractBuffsFromEffects = (effects = []) => effects.map(e => extractBuffsFromTriggeredEffect(e, e.sourcePath))
     .filter(e => e.length > 0)
@@ -140,7 +142,7 @@ export function getEffectsList ({
       const spEffectType = getEffectType(spEffect);
       const spEffectId = getEffectId(spEffect);
       if (spEffect['triggered effect']) {
-        const buffs = extractBuffsFromTriggeredEffect(spEffect, spEffect.sourcePath)
+        const buffs = extractBuffsFromTriggeredEffect(spEffect, spEffect.sourcePath, spEffect.sourceSpCode)
           .filter(matchesTargetType)
           .map(e => {
             const carriedKeys = burstTypes.map(t => `trigger on ${t}`).concat(['sp_type']);

@@ -262,6 +262,7 @@ export default {
   .sticky-property-cell {
     position: sticky;
     left: 0;
+    border-right-color: white;
   }
 }
 </style>

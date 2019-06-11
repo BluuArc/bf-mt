@@ -10,6 +10,7 @@ import {
   spCodeToIndex,
   isValidUnit,
   spCodeToEffects,
+  spIndexToCode,
   getSpEntryEffects,
 } from '@/modules/core/units';
 import { isValidSkill } from '@/modules/core/extra-skills';
@@ -104,7 +105,11 @@ export function getEffectMappingFromSquadUnitEntry (
 
     if (unitEntry.sp && Array.isArray(unit.feskills)) {
       unitEffects.sp = Array.from(new Set(spCodeToEffects(unitEntry.sp, unit.feskills)))
-        .reduce((acc, val) => acc.concat(getSpEntryEffects(val).map(e => ({ ...e, sourcePath: 'unit.sp' }))), []);
+        .reduce((acc, val) => acc.concat(getSpEntryEffects(val).map(e => ({
+          ...e,
+          sourcePath: 'unit.sp',
+          sourceSpCode: spIndexToCode(unit.feskills.indexOf(val)),
+        }))), []);
     }
   }
 

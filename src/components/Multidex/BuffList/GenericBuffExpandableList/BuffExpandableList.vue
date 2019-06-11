@@ -124,6 +124,7 @@ export default {
         'target type',
         'buff turns',
         'sp_type',
+        'sourceSpCode',
         'triggeredOn',
         'sourcePath',
       ],

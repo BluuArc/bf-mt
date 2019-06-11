@@ -372,7 +372,11 @@ export function getEffectMappingFromUnit ({
     const enhancementsToCheck = (typeof enhancements === 'string' && enhancements.length > 0)
       ? Array.from(new Set(spCodeToEffects(enhancements, unit.feskills)))
       : unit.feskills;
-    unitEffects.sp = enhancementsToCheck.reduce((acc, val) => acc.concat(getSpEntryEffects(val).map(e => ({ ...e, sourcePath: 'unit.sp' }))), []);
+    unitEffects.sp = enhancementsToCheck.reduce((acc, val) => acc.concat(getSpEntryEffects(val).map(e => ({
+      ...e,
+      sourcePath: 'unit.sp',
+      sourceSpCode: spIndexToCode(unit.feskills.indexOf(val)),
+    }))), []);
   }
 
   return unitEffects;
