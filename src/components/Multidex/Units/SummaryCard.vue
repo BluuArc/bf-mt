@@ -13,14 +13,12 @@
       </v-flex>
       <v-slide-y-transition>
         <div v-show="isShowing" style="overflow-x: visible;">
-          <!-- <buff-table-grid :effects="effects" v-if="hasShownBuffTable" :showHeaders="true"/> -->
           <buff-expandable-list-view
             v-if="hasShown"
             :viewMode="viewMode"
             @viewmode="$v => viewMode = $v"
             :sources="buffSources"
             :getEffectsFromSource="getEffectsFromSource"
-            :titleTopOffset="topNavbarHeight"
             :stickyTitles="false"
           >
             <span slot="allentrypreview" slot-scope="{ entries }">
@@ -89,7 +87,6 @@ export default {
     return {
       isShowing: false,
       hasShown: false,
-      topNavbarHeight: 64,
       viewMode: '',
     };
   },
@@ -101,10 +98,6 @@ export default {
         effectType,
         whitelistedSources: [sourceKey],
       });
-    },
-    updateTopNavbarHeight () {
-      const topNavbar = document.querySelector('nav.entry-dialog-toolbar');
-      this.topNavbarHeight = (topNavbar && topNavbar.offsetHeight) || 64;
     },
     getColorMappingForSourceKey (sourceKey) {
       return MATERIAL_COLOR_MAPPING.unit[sourceKey];
@@ -121,9 +114,6 @@ export default {
     isShowing (showing) {
       if (showing && !this.hasShown) {
         this.hasShown = true;
-      }
-      if (showing) {
-        this.updateTopNavbarHeight();
       }
     },
   },
