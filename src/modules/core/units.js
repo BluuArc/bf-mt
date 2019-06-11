@@ -383,13 +383,15 @@ export function getEffectsListForUnit ({
   target = targetTypes.PARTY,
   effectType = squadBuffTypes.PROC,
   enhancements,
+  whitelistedSources = ['ls', 'es', 'bb', 'sbb', 'ubb', 'sp'],
 }) {
   const entryEffects = getEffectMappingFromUnit({ unit, enhancements });
+  const getArrayWithKey = (key, actualResult = []) => whitelistedSources.includes(key) ? actualResult : [];
   return getEffectsList({
-    leaderSkillEffects: entryEffects.ls,
-    nonUbbBurstEffects: entryEffects.bb.concat(entryEffects.sbb),
-    ubbBurstEffects: entryEffects.ubb,
-    spEnhancementEffects: entryEffects.unit.sp,
+    leaderSkillEffects: getArrayWithKey('ls', entryEffects.ls),
+    nonUbbBurstEffects: getArrayWithKey('bb', entryEffects.bb).concat(getArrayWithKey('sbb', entryEffects.sbb)),
+    ubbBurstEffects: getArrayWithKey('ubb', entryEffects.ubb),
+    spEnhancementEffects: getArrayWithKey('sp', entryEffects.unit.sp),
     target,
     effectType,
   });
