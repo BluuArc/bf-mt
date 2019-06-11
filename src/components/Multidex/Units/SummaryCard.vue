@@ -34,6 +34,9 @@
                 </v-chip>
               </span>
             </span>
+            <span slot="value-header" slot-scope="{ entry }">
+              {{ getHeaderTextForSource(entry) }}
+            </span>
           </buff-expandable-list-view>
         </div>
       </v-slide-y-transition>
@@ -105,6 +108,13 @@ export default {
     },
     getColorMappingForSourceKey (sourceKey) {
       return MATERIAL_COLOR_MAPPING.unit[sourceKey];
+    },
+    getHeaderTextForSource ({ sourceKey = '', name = '' } = {}) {
+      let prefix = '';
+      if (sourceKey !== 'sp') {
+        prefix = `${sourceKey.toUpperCase()}: `;
+      }
+      return `${prefix}${name}`;
     },
   },
   watch: {
