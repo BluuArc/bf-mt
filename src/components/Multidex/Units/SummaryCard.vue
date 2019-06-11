@@ -12,9 +12,29 @@
         <v-btn block flat large @click="isShowing = !isShowing">{{ buttonText }}</v-btn>
       </v-flex>
       <v-slide-y-transition>
-        <div v-show="isShowing" style="overflow-x: auto;">
+        <div v-show="isShowing" style="overflow-x: visible;">
           <!-- <buff-table-grid :effects="effects" v-if="hasShownBuffTable" :showHeaders="true"/> -->
-          It's showing {{ buffSources }}
+          <buff-expandable-list-view
+            v-if="hasShown"
+            :viewMode="viewMode"
+            @viewmode="$v => viewMode = $v"
+            :sources="buffSources"
+            :getEffectsFromSource="getEffectsFromSource"
+            :titleTopOffset="topNavbarHeight"
+            :stickyTitles="false"
+          >
+            <span slot="allentrypreview" slot-scope="{ entries }">
+              <span v-for="source in entries" :key="source.sourceKey">
+                <v-chip
+                  small
+                  :color="getColorMappingForSourceKey(source.sourceKey).background"
+                  :text-color="getColorMappingForSourceKey(source.sourceKey).text"
+                >
+                  {{ source.sourceKey.toUpperCase() }}
+                </v-chip>
+              </span>
+            </span>
+          </buff-expandable-list-view>
         </div>
       </v-slide-y-transition>
     </v-layout>
@@ -24,7 +44,9 @@
 
 <script>
 import { getEffectsListForUnit } from '@/modules/core/units';
+import { MATERIAL_COLOR_MAPPING } from '@/modules/constants';
 import DescriptionCardBase from '@/components/Multidex/DescriptionCardBase';
+import BuffExpandableListView from '@/components/Multidex/BuffList/GenericBuffExpandableList/BuffExpandableListView';
 
 function getNameOrId (entry = {}) {
   return entry.name || entry.id;
@@ -38,6 +60,7 @@ export default {
   },
   components: {
     DescriptionCardBase,
+    BuffExpandableListView,
   },
   computed: {
     buttonText () {
@@ -63,6 +86,8 @@ export default {
     return {
       isShowing: false,
       hasShown: false,
+      topNavbarHeight: 64,
+      viewMode: '',
     };
   },
   methods: {
@@ -74,11 +99,21 @@ export default {
         whitelistedSources: [sourceKey],
       });
     },
+    updateTopNavbarHeight () {
+      const topNavbar = document.querySelector('nav.entry-dialog-toolbar');
+      this.topNavbarHeight = (topNavbar && topNavbar.offsetHeight) || 64;
+    },
+    getColorMappingForSourceKey (sourceKey) {
+      return MATERIAL_COLOR_MAPPING.unit[sourceKey];
+    },
   },
   watch: {
     isShowing (showing) {
       if (showing && !this.hasShown) {
         this.hasShown = true;
+      }
+      if (showing) {
+        this.updateTopNavbarHeight();
       }
     },
   },

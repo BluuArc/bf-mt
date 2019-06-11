@@ -389,9 +389,10 @@ export function getEffectsListForUnit ({
   const getArrayWithKey = (key, actualResult = []) => whitelistedSources.includes(key) ? actualResult : [];
   return getEffectsList({
     leaderSkillEffects: getArrayWithKey('ls', entryEffects.ls),
+    extraSkillEffects: getArrayWithKey('es', entryEffects.es),
     nonUbbBurstEffects: getArrayWithKey('bb', entryEffects.bb).concat(getArrayWithKey('sbb', entryEffects.sbb)),
     ubbBurstEffects: getArrayWithKey('ubb', entryEffects.ubb),
-    spEnhancementEffects: getArrayWithKey('sp', entryEffects.unit.sp),
+    spEnhancementEffects: getArrayWithKey('sp', entryEffects.sp),
     target,
     effectType,
   });

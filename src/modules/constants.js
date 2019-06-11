@@ -462,3 +462,32 @@ export const SOURCE_PATH_TO_TEXT_MAPPING = Object.freeze({
   'unit.ubb': 'Ultimate Brave Burst',
   'unit.sp': 'SP Enhancement',
 });
+
+export const MATERIAL_COLOR_MAPPING = Object.freeze({
+  unit: {
+    ls: {
+      background: 'green darken-3',
+      text: 'green lighten-5',
+    },
+    es: {
+      background: 'orange darken-4',
+      text: 'orange lighten-5',
+    },
+    bb: {
+      background: 'blue-grey',
+      text: 'blue-grey lighten-5',
+    },
+    sbb: {
+      background: 'yellow darken-3',
+      text: 'yellow lighten-5',
+    },
+    ubb: {
+      background: 'red darken-3',
+      text: 'red lighten-5',
+    },
+    sp: {
+      background: 'light-green darken-3',
+      text: 'light-green lighten-5',
+    },
+  },
+});

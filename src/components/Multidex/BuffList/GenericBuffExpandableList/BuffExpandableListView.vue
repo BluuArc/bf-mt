@@ -197,7 +197,7 @@
       <template v-else-if="viewMode === OVERVIEW_VIEW_TYPE">
         <template v-for="tableConfig in overviewTables">
           <dt
-            class="title"
+            :class="buffListTitleClass"
             :style="buffListTitleStyle"
             :key="`${tableConfig.mappingKey}-${tableConfig.effectType}-title`"
             v-text="tableConfig.name"
@@ -308,6 +308,10 @@ export default {
       type: String,
       default: POSSIBLE_VIEW_TYPES[0],
     },
+    stickyTitles: {
+      type: Boolean,
+      default: true,
+    },
  },
  components: {
     BuffExpandableList,
@@ -321,6 +325,12 @@ export default {
    buffListTitleStyle () {
      return {
        top: `${this.titleTopOffset}px`,
+     };
+   },
+   buffListTitleClass () {
+     return {
+       title: true,
+       'is-sticky': this.stickyTitles,
      };
    },
    possibleTables: () => Object.freeze([
@@ -519,13 +529,16 @@ export default {
     width: 100%;
 
     > dt {
-      position: sticky;
       background: var(--background-color);
-      z-index: 2;
       padding: 0.75em 0.25em;
       margin: 0 -0.25em;
       border-bottom-left-radius: 8px;
       border-bottom-right-radius: 8px;
+
+      &.is-sticky {
+        position: sticky;
+        z-index: 2;
+      }
     }
   }
 
