@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="pt-0">
+  <v-container fluid :class="containerClass">
     <v-layout row v-show="tabs.length > 1">
       <v-flex class="pb-0">
         <v-tabs
@@ -63,6 +63,10 @@ export default {
     color: {
       type: String,
       default: '',
+    },
+    containerClass: {
+      type: String,
+      default: 'pt-0',
     },
   },
   data () {

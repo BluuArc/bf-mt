@@ -1,4 +1,5 @@
 import ToolsPages from '@/views/Tools';
+import { servers } from '@/modules/constants';
 
 export const squadRequiredModules = Object.freeze(['units', 'extraSkills', 'items']);
 
@@ -24,5 +25,14 @@ export default [
     meta: {
       requiredModules: squadRequiredModules,
     },
+  },
+  {
+    path: '/tools/compare',
+    name: 'Compare',
+    component: ToolsPages.Compare,
+    props: (route) => ({
+      server: servers.includes(route.query.server) ? route.query.server : 'gl',
+      input: route.query.input || '',
+    }),
   },
 ];
