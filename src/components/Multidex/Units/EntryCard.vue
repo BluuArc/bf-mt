@@ -52,6 +52,7 @@
         </v-flex>
       </v-layout>
     </v-container>
+    <slot name="card-actions"></slot>
   </base-entry-card>
 </template>
 

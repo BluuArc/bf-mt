@@ -1,0 +1,53 @@
+<template>
+  <component :is="entryCard" :entry="entry">
+    <div slot="card-actions">
+      Card actions here
+    </div>
+  </component>
+</template>
+
+<script>
+import UnitEntryCard from '@/components/Multidex/Units/EntryCard';
+import ItemEntryCard from '@/components/Multidex/Items/EntryCard';
+import ExtraSkillEntryCard from '@/components/Multidex/ExtraSkills/EntryCard';
+import LeaderSkillEntryCard from '@/components/Multidex/LeaderSkills/EntryCard';
+import BurstEntryCard from '@/components/Multidex/Bursts/EntryCard';
+import BaseEntryCard from '@/components/Multidex/BaseEntryCard';
+
+export default {
+  props: {
+    entry: {
+      type: Object,
+      required: true,
+    },
+    type: {
+      type: String,
+      required: true,
+    },
+  },
+  components: {
+    UnitEntryCard,
+    ItemEntryCard,
+    ExtraSkillEntryCard,
+    LeaderSkillEntryCard,
+    BurstEntryCard,
+    BaseEntryCard,
+  },
+  computed: {
+    entryCard () {
+      switch(this.type) {
+        case 'unit': return 'UnitEntryCard';
+        case 'item': return 'ItemEntryCard';
+        case 'es': return 'ExtraSkillEntryCard';
+        case 'ls': return 'LeaderSkillEntryCard';
+        case 'burst': return 'BurstEntryCard';
+        default: return 'BaseEntryCard';
+      }
+    },
+  },
+};
+</script>
+
+<style>
+
+</style>

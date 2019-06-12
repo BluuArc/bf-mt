@@ -35,7 +35,7 @@ export default {
       const result = Array.from(new Set(this.input.split(','))).map(input => {
         try {
           const [type, idAndOptions] = input.split('-');
-          const [id, options] = idAndOptions.split('_');
+          const [id, options] = (idAndOptions || '').split('_');
           if (COMPARE_KEY_ORDER.includes(type)) {
             return { type, id, options };
           }

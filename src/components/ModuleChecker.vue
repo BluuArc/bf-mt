@@ -269,6 +269,11 @@ export default {
         }
       },
     },
+    requiredModules () {
+      if (!this.inInitState) {
+        this.checkingAvailableModules();
+      }
+    },
     activeServer () {
       if (!this.inInitState) {
         this.checkAvailableModules();
