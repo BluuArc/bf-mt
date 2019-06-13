@@ -18,7 +18,7 @@
       <v-layout row class="d-align-items-center">
         <v-flex xs3 class="text-xs-center pb-0">
           <item-thumbnail
-            :src="getImageUrl(entry.id)"
+            :src="getImageUrl(entry.id, entry)"
             :rarity="rarity"
             :type="entry.type"
             :isRaidItem="!!entry.raid"

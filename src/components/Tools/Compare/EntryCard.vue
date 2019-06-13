@@ -1,12 +1,24 @@
 <template>
-  <component :is="entryCard" :entry="entry">
-    <div slot="card-actions">
-      Card actions here
-    </div>
-  </component>
+  <v-card>
+    <component
+      :is="entryCard"
+      :entry="entry"
+      :to="multidexLink"
+    />
+    <v-card-actions>
+      <v-spacer/>
+      <v-btn flat>
+        <v-icon left>
+          clear
+        </v-icon>
+        Remove
+      </v-btn>
+    </v-card-actions>
+  </v-card>
 </template>
 
 <script>
+import { COMPARE_KEY_MAPPING } from '@/modules/constants';
 import UnitEntryCard from '@/components/Multidex/Units/EntryCard';
 import ItemEntryCard from '@/components/Multidex/Items/EntryCard';
 import ExtraSkillEntryCard from '@/components/Multidex/ExtraSkills/EntryCard';
@@ -43,6 +55,12 @@ export default {
         case 'burst': return 'BurstEntryCard';
         default: return 'BaseEntryCard';
       }
+    },
+    multidexLink () {
+      const multidexModule = (COMPARE_KEY_MAPPING[this.type] || {}).multidexKey;
+      return multidexModule
+        ? this.$store.getters[`${multidexModule}/getMultidexPathTo`](this.entry.id)
+        : '';
     },
   },
 };

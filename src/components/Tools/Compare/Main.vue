@@ -1,14 +1,16 @@
 <template>
   <promise-wait :promise="dbLoadPromise">
-    <card-tabs-container :tabs="tabs" class="compare-page" :containerClass="''">
+    <card-tabs-container :tabs="tabs" class="compare-page" :containerClass="'pt-1'">
       <div slot="input">
-        <section v-for="(section, i) in sections" :key="section">
+        <section v-for="(section, i) in sections" :key="section" class="mb-3">
           <div class="title">{{ `${section}s` }}</div>
           <template v-if="getEntriesForMultidexKey(allMultidexKeys[i]).length > 0">
             <v-layout row wrap>
               <v-flex
                 v-for="entry in getEntriesForMultidexKey(allMultidexKeys[i])"
                 :key="entry.id"
+                class="pa-2"
+                xs12 sm6 lg4
               >
                 <entry-card
                   :entry="entry"
