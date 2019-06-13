@@ -77,7 +77,6 @@ import ModuleUpdateDialog from '@/components/ModuleUpdateDialog';
 
 // specific table doesn't matter, as module check method is same for every instance
 const client = makeMultidexTableInstance('units');
-let loadingDebouncer;
 export default {
   props: {
     requiredModules: {
@@ -103,6 +102,14 @@ export default {
     useUpdateDialog: {
       type: Boolean,
       default: true,
+    },
+    postMountDelay: {
+      type: Number,
+      default: 25,
+    },
+    loadingDebounceDelay: {
+      type: Number,
+      default: 150,
     },
   },
   components: {
@@ -162,17 +169,28 @@ export default {
       isVisuallyInitializing: true,
       isPostMount: false,
       showUpdateDialog: false,
+      loadingDebouncer: null,
     };
   },
   mounted () {
-    // delay showing any loading messages to prevent brief flash of message
-    setTimeout(() => {
+    if (this.postMountDelay >= 0) {
+      // delay showing any loading messages to prevent brief flash of message
+      setTimeout(() => {
+        this.isPostMount = true;
+      }, this.postMountDelay);
+    } else {
       this.isPostMount = true;
-    }, 25);
+    }
   },
   methods: {
     updateVisuallyInitializingFlag (valueGetter, immediatelySet) {
-      loadingDebouncer.setValue(valueGetter, immediatelySet);
+      if (!this.loadingDebouncer) {
+        this.loadingDebouncer = new LoadingDebouncer(val => {
+          this.isVisuallyInitializing = val;
+        }, this.loadingDebounceDelay);
+      }
+
+      this.loadingDebouncer.setValue(valueGetter, immediatelySet);
     },
     async checkAvailableModules () {
       if (this.requiredModules.length > 0) {
@@ -241,17 +259,9 @@ export default {
       }
     },
   },
-  beforeCreate () {
-    if (loadingDebouncer) {
-      loadingDebouncer.dispose();
-    }
-    loadingDebouncer = new LoadingDebouncer(val => {
-      this.isVisuallyInitializing = val;
-    });
-  },
   beforeDestroy () {
-    if (loadingDebouncer) {
-      loadingDebouncer.dispose();
+    if (this.loadingDebouncer) {
+      this.loadingDebouncer.dispose();
     }
   },
   watch: {

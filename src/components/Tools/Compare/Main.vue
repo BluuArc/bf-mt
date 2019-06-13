@@ -2,6 +2,13 @@
   <promise-wait :promise="dbLoadPromise" loadingMessage="Loading data from database...">
     <card-tabs-container :tabs="tabs" class="compare-page" :containerClass="'pt-1'">
       <div slot="input">
+        <v-btn
+          color="primary"
+          fab fixed
+          right bottom
+        >
+          <v-icon>add</v-icon>
+        </v-btn>
         <section v-for="(section, i) in sections" :key="section" class="mb-3">
           <div class="title">{{ `${section}s` }}</div>
           <template v-if="getEntriesForMultidexKey(allMultidexKeys[i]).length > 0">

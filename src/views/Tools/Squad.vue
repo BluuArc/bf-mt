@@ -1,7 +1,5 @@
 <template>
-  <module-checker
-    :requiredModules="requiredModules"
-    :ensureDbSync="true">
+  <module-checker :requiredModules="requiredModules">
     <promise-wait :promise="initialLoadPromise">
       <v-container fluid class="squad-page" v-resize="onPageReady">
         <v-container class="pa-0">

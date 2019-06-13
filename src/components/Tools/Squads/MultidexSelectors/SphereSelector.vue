@@ -4,6 +4,7 @@
     :hasSelection="hasSelection"
     @input="$i => nameFilter = ($i || '').toLowerCase()"
     @cancel="$emit('cancel')"
+    :requiredModules="requiredModules"
     :allEntryIds="allIds">
     <v-layout row wrap slot="entries" slot-scope="{ entries }">
       <v-flex
@@ -30,6 +31,9 @@ export default {
     EntryCard,
   },
   computed: {
+    requiredModules () {
+      return ['items'];
+    },
     pageDb () {
       return this.$store.state.items.pageDb;
     },
