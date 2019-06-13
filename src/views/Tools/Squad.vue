@@ -383,7 +383,7 @@ export default {
       await this.updatePageDbForSquad(newSquad);
       this.onPageReady();
     },
-    editMode (isEditMode) {
+    async editMode (isEditMode) {
       if (isEditMode) {
         this.tempSquad = cloneSquad(this.squad);
         this.tempSquad.simulatorOptions = this.simulatorOptions;
@@ -394,6 +394,8 @@ export default {
     async tempSquad (newSquad) {
       if (newSquad && Array.isArray(newSquad.units)) {
         await this.updatePageDbForSquad(newSquad);
+      } else {
+        await this.updatePageDbForSquad(this.squad);
       }
     },
     currentTabIndex () {

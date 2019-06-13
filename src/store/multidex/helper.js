@@ -148,24 +148,50 @@ export const createActions = (worker, downloadWorker, logger, dbEntryName = 'uni
         return { keyLength: 0 };
       }
     },
-    async setActiveServer ({ commit, dispatch }, server = 'gl') {
+    async setActiveServer ({ commit, dispatch }, options) {
+      let server, onLoadStateChange = (options) => commit('setLoadState', options);
+      if (typeof options === 'object') {
+        server = options.server;
+        if (typeof options.onLoadStateChange === 'function') {
+          onLoadStateChange = options.onLoadStateChange;
+        }
+      } else if (typeof options === 'string') {
+        server = options;
+      }
+
       if (!isValidServer(server)) {
         throw Error(`Invalid server "${server}"`);
       }
 
-      commit('setLoadState', { loadState: true, message: `Changing server to ${server}` });
+      onLoadStateChange({
+        loadState: true,
+        message: `Changing server to ${server}`,
+      });
       commit('setActiveServer', { server, commitData: false, needsReload: true });
-      commit('setLoadState', false);
+      onLoadStateChange(false);
     },
-    async ensurePageDbSyncWithServer ({ commit, dispatch, state }, server) {
+    async ensurePageDbSyncWithServer ({ commit, dispatch, state }, options) {
+      let server, onLoadStateChange = (options) => commit('setLoadState', options);
+      if (typeof options === 'object') {
+        server = options.server;
+        if (typeof options.onLoadStateChange === 'function') {
+          onLoadStateChange = options.onLoadStateChange;
+        }
+      } else if (typeof options === 'string') {
+        server = options;
+      }
+
       if (server !== undefined && state.activeServer !== server) {
-        await dispatch('setActiveServer', server);
+        await dispatch('setActiveServer', { server, onLoadStateChange });
       }
       if (state.pageDb[state.activeServerSymbol] !== state.activeServer) {
-        commit('setLoadState', { loadState: true, message: 'Getting data for active server' });
+        onLoadStateChange({
+          loadState: true,
+          message: 'Getting data for active server',
+        });
         const data = await dispatch('getMiniDb', state.activeServer);
         commit('setActiveServer', { server: state.activeServer, data });
-        commit('setLoadState', false);
+        onLoadStateChange(false);
       }
     },
     async fetchUpdateTimes () {

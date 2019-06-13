@@ -13,8 +13,8 @@
           <v-flex class="text-xs-center" style="flex-grow: 0;" v-else-if="isVisuallyInitializing">
             <loading-indicator :loadingMessage="multidexLoadingMessage || mainLoadingMessage"/>
           </v-flex>
-          <v-flex class="text-xs-center" style="flex-grow: 0;" v-else-if="ensuringDbSync">
-            <loading-indicator :loadingMessage="multidexLoadingMessage || 'Synchronizing modules from DB to page'"/>
+          <v-flex class="text-xs-center" style="flex-grow: 0;" v-else-if="ensuringDbSync || dbSyncLoadState">
+            <loading-indicator :loadingMessage="multidexLoadingMessage || dbSyncMessage || 'Synchronizing modules from DB to page'"/>
           </v-flex>
           <v-flex class="text-xs-center" style="flex-grow: 0;" v-else>
             <loading-indicator :loadingMessage="externalLoadingMessage"/>
@@ -77,6 +77,7 @@ import ModuleUpdateDialog from '@/components/ModuleUpdateDialog';
 
 // specific table doesn't matter, as module check method is same for every instance
 const client = makeMultidexTableInstance('units');
+
 export default {
   props: {
     requiredModules: {
@@ -140,6 +141,7 @@ export default {
         this.isStateLoading ||
         this.multidexModulesAreLoading ||
         this.ensuringDbSync ||
+        this.dbSyncLoadState ||
         this.isSwitchingServers;
     },
     missingModuleNames () {
@@ -170,6 +172,8 @@ export default {
       isPostMount: false,
       showUpdateDialog: false,
       loadingDebouncer: null,
+      dbSyncMessage: '',
+      dbSyncLoadState: false,
     };
   },
   mounted () {
@@ -236,8 +240,30 @@ export default {
     },
     async updatePageDbs () {
       await this.requiredModules.reduce((acc, name) => {
+        const associatedMultidexModule = multidexModuleInfo.find(m => m.name === name);
         return acc
-          .then(() => this.$store.dispatch(`${name}/ensurePageDbSyncWithServer`, this.activeServer))
+          .then(() => this.$store.dispatch(`${name}/ensurePageDbSyncWithServer`, {
+            server: this.activeServer,
+            onLoadStateChange: (state) => {
+              let isLoading, loadingMessage;
+              if (typeof state !== 'object') {
+                isLoading = !!state;
+                // clear message if done loading
+                if (!state) {
+                  loadingMessage = '';
+                }
+              } else {
+                isLoading = !!state.loadState;
+                if (state.message !== undefined) {
+                  loadingMessage = state.message;
+                }
+              }
+              this.dbSyncLoadState = isLoading;
+              this.dbSyncMessage = (associatedMultidexModule && isLoading)
+                ? `[${associatedMultidexModule.fullName}] ${loadingMessage}`
+                : '';
+            },
+          }))
           .catch(this.logger.error);
       }, Promise.resolve());
     },

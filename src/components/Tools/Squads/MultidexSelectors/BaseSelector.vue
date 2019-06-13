@@ -3,8 +3,6 @@
     <module-checker
       :requiredModules="requiredModules"
       :ensureDbSync="true"
-      :loadingDebounceDelay="0"
-      :postMountDelay="-1"
     >
       <v-container fluid>
         <v-layout v-if="hasSelection">
