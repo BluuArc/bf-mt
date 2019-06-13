@@ -7,7 +7,7 @@
     />
     <v-card-actions>
       <v-spacer/>
-      <v-btn flat>
+      <v-btn flat @click="$emit('remove')">
         <v-icon left>
           clear
         </v-icon>

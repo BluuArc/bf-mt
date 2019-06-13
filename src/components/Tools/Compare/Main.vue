@@ -1,5 +1,5 @@
 <template>
-  <promise-wait :promise="dbLoadPromise">
+  <promise-wait :promise="dbLoadPromise" loadingMessage="Loading data from database...">
     <card-tabs-container :tabs="tabs" class="compare-page" :containerClass="'pt-1'">
       <div slot="input">
         <section v-for="(section, i) in sections" :key="section" class="mb-3">
@@ -15,6 +15,7 @@
                 <entry-card
                   :entry="entry"
                   :type="COMPARE_KEY_ORDER[i]"
+                  @remove="() => removeCompareInput({ type: COMPARE_KEY_ORDER[i], id: entry.id })"
                 />
               </v-flex>
             </v-layout>
@@ -30,6 +31,7 @@
 
 <script>
 import { COMPARE_KEY_ORDER, COMPARE_KEY_MAPPING } from '@/modules/constants';
+import { convertCompareInputToCode } from '@/modules/core/compare';
 import { Logger } from '@/modules/Logger';
 import PromiseWait from '@/components/PromiseWait';
 import CardTabsContainer from '@/components/CardTabsContainer';
@@ -136,6 +138,21 @@ export default {
     },
     onNewInput () {
       this.dbLoadPromise = this.updatePageDbForInput(this.compareInput);
+    },
+    async removeCompareInput ({ type, id } = {}) {
+      const associatedInput = this.compareInput.find(i => i.type === type && (i.id === id || i.id === (id || '').toString()));
+      const newInputList = this.compareInput.filter(i => i !== associatedInput);
+      if (newInputList.length !== this.compareInput.length) {
+        await new Promise((fulfill, reject) => {
+          this.$router.replace({
+            ...this.$route,
+            query: {
+              ...this.$route.query,
+              input: newInputList.map(convertCompareInputToCode).join(','),
+            },
+          }, fulfill, reject);
+        });
+      }
     },
   },
   watch: {
