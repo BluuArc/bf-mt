@@ -24,7 +24,7 @@
 
 <script>
 import BaseSelector from '@/components/Tools/Squads/MultidexSelectors/BaseSelector';
-import EntryCard from '@/components/Multidex/Items/EntryCard';
+import EntryCard from '@/components/Multidex/LeaderSkills/EntryCard';
 
 export default {
   props: {
@@ -39,16 +39,16 @@ export default {
   },
   computed: {
     requiredModules () {
-      return ['items'];
+      return ['leaderSkills', 'units'];
     },
     pageDb () {
-      return this.$store.state.items.pageDb;
+      return this.$store.state.leaderSkills.pageDb;
     },
     allIds () {
       return Object.keys(this.pageDb).filter(k => {
-        const isSphere = this.pageDb[k].type === 'sphere';
+        const hasAssociatedUnits = !!this.pageDb[k].associated_units;
         const hasName = !this.nameFilter || this.hasName(this.pageDb[k].name, this.nameFilter);
-        return isSphere && hasName;
+        return !hasAssociatedUnits && hasName;
       });
     },
   },

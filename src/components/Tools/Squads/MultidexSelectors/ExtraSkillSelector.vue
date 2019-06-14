@@ -39,7 +39,7 @@ export default {
   },
   computed: {
     requiredModules () {
-      return ['extraSkills', 'units']; // different than what's in the store because items aren't needed in the selector
+      return ['extraSkills', 'units'];
     },
     pageDb () {
       return this.$store.state.extraSkills.pageDb;
@@ -70,6 +70,3 @@ export default {
 };
 </script>
 
-<style>
-
-</style>

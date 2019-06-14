@@ -18,7 +18,13 @@
           {{ pairing.name }}
         </v-btn>
         <div style="width: 100%; display: flex; justify-content: flex-end;">
-          <v-btn style="flex: none;" @click="$emit('cancel')">Cancel</v-btn>
+          <v-btn
+            flat
+            style="flex: none;"
+            @click="$emit('cancel')"
+          >
+            Cancel
+          </v-btn>
         </div>
       </section>
     </v-stepper-content>
@@ -47,6 +53,8 @@ import { COMPARE_KEY_ORDER, COMPARE_KEY_MAPPING } from '@/modules/constants';
 import UnitSelector from '@/components/Tools/Squads/MultidexSelectors/UnitSelector';
 import ExtraSkillSelector from '@/components/Tools/Squads/MultidexSelectors/ExtraSkillSelector';
 import SphereSelector from '@/components/Tools/Squads/MultidexSelectors/SphereSelector';
+import BurstSelector from '@/components/Tools/Squads/MultidexSelectors/BurstSelector';
+import LeaderSkillSelector from '@/components/Tools/Squads/MultidexSelectors/LeaderSkillSelector';
 
 export default {
   props: {
@@ -63,6 +71,8 @@ export default {
     UnitSelector,
     ExtraSkillSelector,
     SphereSelector,
+    BurstSelector,
+    LeaderSkillSelector,
   },
   computed: {
     validTypeSelected () {
@@ -79,6 +89,8 @@ export default {
         case COMPARE_KEY_MAPPING.unit.name: return 'UnitSelector';
         case COMPARE_KEY_MAPPING.item.name: return 'SphereSelector';
         case COMPARE_KEY_MAPPING.es.name: return 'ExtraSkillSelector';
+        case COMPARE_KEY_MAPPING.bb.name: return 'BurstSelector';
+        case COMPARE_KEY_MAPPING.ls.name: return 'LeaderSkillSelector';
         default: return '';
       }
     },
