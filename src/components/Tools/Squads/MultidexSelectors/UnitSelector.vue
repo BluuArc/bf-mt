@@ -1,5 +1,6 @@
 <template>
   <base-selector
+    :showCancelButton="showCancelButton"
     :value="nameFilter"
     :hasSelection="hasSelection"
     @input="$i => nameFilter = ($i || '').toLowerCase()"
@@ -28,6 +29,12 @@ import { makeMultidexTableInstance } from '@/modules/BfmtDatabase/client';
 
 const dbClient = makeMultidexTableInstance('units');
 export default {
+  props: {
+    showCancelButton: {
+      type: Boolean,
+      default: true,
+    },
+  },
   components: {
     BaseSelector,
     EntryCard,

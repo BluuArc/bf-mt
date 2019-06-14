@@ -1,5 +1,6 @@
 <template>
   <base-selector
+    :showCancelButton="showCancelButton"
     :value="nameFilter"
     :hasSelection="hasSelection"
     @input="$i => nameFilter = ($i || '').toLowerCase()"
@@ -26,6 +27,12 @@ import BaseSelector from '@/components/Tools/Squads/MultidexSelectors/BaseSelect
 import EntryCard from '@/components/Multidex/ExtraSkills/EntryCard';
 
 export default {
+  props: {
+    showCancelButton: {
+      type: Boolean,
+      default: true,
+    },
+  },
   components: {
     BaseSelector,
     EntryCard,

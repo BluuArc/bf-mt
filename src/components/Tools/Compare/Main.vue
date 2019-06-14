@@ -2,10 +2,26 @@
   <promise-wait :promise="dbLoadPromise" loadingMessage="Loading data from database...">
     <card-tabs-container :tabs="tabs" class="compare-page" :containerClass="'pt-1'">
       <div slot="input">
+        <v-dialog
+          v-model="showPickerDialog"
+          persistent lazy
+        >
+          <v-card>
+            <add-compare-entry
+              :type="activePickerType"
+              :step="pickerStep"
+              @input="addCompareInput"
+              @step="$s => pickerStep = $s"
+              @cancel="showPickerDialog = false"
+            />
+          </v-card>
+
+        </v-dialog>
         <v-btn
           color="primary"
           fab fixed
           right bottom
+          @click="showPickerDialog = true"
         >
           <v-icon>add</v-icon>
         </v-btn>
@@ -38,11 +54,12 @@
 
 <script>
 import { COMPARE_KEY_ORDER, COMPARE_KEY_MAPPING } from '@/modules/constants';
-import { convertCompareInputToCode } from '@/modules/core/compare';
+import { convertCompareInputToCode, generateCompareInput } from '@/modules/core/compare';
 import { Logger } from '@/modules/Logger';
 import PromiseWait from '@/components/PromiseWait';
 import CardTabsContainer from '@/components/CardTabsContainer';
 import EntryCard from './EntryCard';
+import AddCompareEntry from './AddCompareEntry';
 
 const logger = new Logger({ prefix: '[Compare]' });
 export default {
@@ -56,6 +73,7 @@ export default {
     PromiseWait,
     CardTabsContainer,
     EntryCard,
+    AddCompareEntry,
   },
   computed: {
     tabs: () => Object.freeze(['Input', 'Compare'].map(name => ({ name, slot: name.toLowerCase() }))),
@@ -75,6 +93,9 @@ export default {
       burstsDb: {},
       leaderSkillsDb: {},
       dbLoadPromise: Promise.resolve(),
+      showPickerDialog: false,
+      activePickerType: '',
+      pickerStep: 1,
     };
   },
   beforeMount () {
@@ -161,10 +182,30 @@ export default {
         });
       }
     },
+    async addCompareInput ({ type, id } = {}) {
+      logger.debug('received input to add', { type, id });
+      const associatedInput = this.compareInput.find(i => i.type === type && (i.id === id || i.id === (id || '').toString()));
+      if (!associatedInput) {
+        const newInputList = this.compareInput.concat([generateCompareInput({ type, id })]);
+        await new Promise((fulfill, reject) => {
+          this.$router.replace({
+            ...this.$route,
+            query: {
+              ...this.$route.query,
+              input: newInputList.map(convertCompareInputToCode).join(','),
+            },
+          }, fulfill, reject);
+        });
+      }
+      this.showPickerDialog = false;
+    },
   },
   watch: {
     compareInput () {
       this.onNewInput();
+    },
+    showPickerDialog () {
+      this.pickerStep = 1;
     },
   },
 };

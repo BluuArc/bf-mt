@@ -14,3 +14,7 @@ export function convertCompareInputToCode ({ type = '', id = '', options = '' } 
     ? `${baseCode}_${Array.isArray(options) ? options.join('~') : options}`
     : baseCode;
 }
+
+export function generateCompareInput ({ type = '', id = '', options }) {
+  return { type, id, options };
+}

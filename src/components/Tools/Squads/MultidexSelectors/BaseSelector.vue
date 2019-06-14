@@ -3,6 +3,7 @@
     <module-checker
       :requiredModules="requiredModules"
       :ensureDbSync="true"
+      :useUpdateDialog="false"
     >
       <v-container fluid>
         <v-layout v-if="hasSelection">
@@ -44,11 +45,13 @@
               :length="numPages"/>
           </v-layout>
         </template>
-        <v-layout row style="justify-content: flex-end;" v-show="!hasSelection">
-          <v-flex style="flex: none;">
-            <v-btn flat @click="$emit('cancel')">Cancel</v-btn>
-          </v-flex>
-        </v-layout>
+        <template v-if="showCancelButton">
+          <v-layout row style="justify-content: flex-end;" v-show="!hasSelection">
+            <v-flex style="flex: none;">
+              <v-btn flat @click="$emit('cancel')">Cancel</v-btn>
+            </v-flex>
+          </v-layout>
+        </template>
       </v-container>
     </module-checker>
   </v-card>
@@ -79,6 +82,10 @@ export default {
     requiredModules: {
       type: Array,
       default: () => [],
+    },
+    showCancelButton: {
+      type: Boolean,
+      default: true,
     },
   },
   components: {
