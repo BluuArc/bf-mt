@@ -492,11 +492,11 @@ export const MATERIAL_COLOR_MAPPING = Object.freeze({
   },
 });
 
-export const COMPARE_KEY_ORDER = ['unit', 'item', 'bb', 'es', 'ls'];
+export const COMPARE_KEY_ORDER = ['unit', 'item', 'es', 'bb', 'ls'];
 export const COMPARE_KEY_MAPPING = Object.freeze({
-  unit: { name: 'Unit', multidexKey: 'units' },
-  item: { name : 'Sphere', multidexKey: 'items' },
-  bb: { name: 'Burst', multidexKey: 'bursts' },
-  es: { name: 'Extra Skill', multidexKey: 'extraSkills' },
-  ls: { name: 'Leader Skill', multidexKey: 'leaderSkills' },
+  unit: { name: 'Unit', multidexKey: 'units', key: 'unit' },
+  item: { name : 'Sphere', multidexKey: 'items', key: 'item' },
+  bb: { name: 'Burst', multidexKey: 'bursts', key: 'bb' },
+  es: { name: 'Extra Skill', multidexKey: 'extraSkills', key: 'es' },
+  ls: { name: 'Leader Skill', multidexKey: 'leaderSkills', key: 'ls' },
 });

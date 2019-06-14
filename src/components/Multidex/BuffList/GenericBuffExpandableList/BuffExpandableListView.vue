@@ -138,7 +138,7 @@
       <template v-if="viewMode === TARGET_VIEW_TYPE">
         <template v-for="tableConfigIndex in buffTables">
           <dt
-            class="title"
+            :class="buffListTitleClass"
             :style="buffListTitleStyle"
             :key="`${possibleTables[tableConfigIndex].targetType}-${possibleTables[tableConfigIndex].effectType}-title`"
             v-text="possibleTables[tableConfigIndex].name"

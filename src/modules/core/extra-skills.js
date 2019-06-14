@@ -1,5 +1,7 @@
 import { getHighestRarityUnit } from './units';
 import { getSphereCategory } from './items';
+import { targetTypes, squadBuffTypes } from '@/modules/constants';
+import { getEffectsList } from './buffs';
 
 export function parseExtraSkillConditions (effect) {
   const parsedConditions = { unit: [], item: [], sphereType: [] };
@@ -135,4 +137,24 @@ export function getEmptySkill () {
     desc: 'No Extra Skill selected',
     rarity: 0,
   };
+}
+
+export function getExtraSkillEffects (skill = {}) {
+  return skill && Array.isArray(skill.effects)
+    ? Array.from(skill.effects)
+    : [];
+}
+
+export function getEffectsListForExtraSkill ({
+  skill = {},
+  target = targetTypes.PARTY,
+  effectType = squadBuffTypes.PROC,
+}) {
+  const effects = getExtraSkillEffects(skill)
+    .map(e => ({ ...e, sourcePath: 'es' }));
+  return getEffectsList({
+    elgifEffects: effects,
+    target,
+    effectType,
+  });
 }

@@ -1,6 +1,11 @@
 <template>
   <promise-wait :promise="dbLoadPromise" loadingMessage="Loading data from database...">
-    <card-tabs-container :tabs="tabs" class="compare-page" :containerClass="'pt-1'">
+    <card-tabs-container
+      v-model="currentTabIndex"
+      :tabs="tabs"
+      class="compare-page"
+      :containerClass="'pt-1'"
+    >
       <div slot="input">
         <v-dialog
           v-model="showPickerDialog"
@@ -48,18 +53,35 @@
           </v-layout>
         </section>
       </div>
+      <div slot="compare">
+        <v-card class="pa-2">
+          <buff-expandable-list-view
+            :viewMode="viewMode"
+            @viewmode="$v => viewMode = $v"
+            :sources="compareInput"
+            :getEffectsFromSource="getEffectsFromSource"
+            :titleTopOffset="topNavbarHeight"
+          >
+
+          </buff-expandable-list-view>
+        </v-card>
+      </div>
     </card-tabs-container>
   </promise-wait>
 </template>
 
 <script>
+import { Logger } from '@/modules/Logger';
 import { COMPARE_KEY_ORDER, COMPARE_KEY_MAPPING } from '@/modules/constants';
 import { convertCompareInputToCode, generateCompareInput } from '@/modules/core/compare';
-import { Logger } from '@/modules/Logger';
+import { getEffectsListForUnit } from '@/modules/core/units';
+import { getEffectsListForItem } from '@/modules/core/items';
+import { getEffectsListForExtraSkill } from '@/modules/core/extra-skills';
 import PromiseWait from '@/components/PromiseWait';
 import CardTabsContainer from '@/components/CardTabsContainer';
 import EntryCard from './EntryCard';
 import AddCompareEntry from './AddCompareEntry';
+import BuffExpandableListView from '@/components/Multidex/BuffList/GenericBuffExpandableList/BuffExpandableListView';
 
 const logger = new Logger({ prefix: '[Compare]' });
 export default {
@@ -74,6 +96,7 @@ export default {
     CardTabsContainer,
     EntryCard,
     AddCompareEntry,
+    BuffExpandableListView,
   },
   computed: {
     tabs: () => Object.freeze(['Input', 'Compare'].map(name => ({ name, slot: name.toLowerCase() }))),
@@ -96,6 +119,9 @@ export default {
       showPickerDialog: false,
       activePickerType: '',
       pickerStep: 1,
+      viewMode: '',
+      topNavbarHeight: 56,
+      currentTabIndex: 0,
     };
   },
   beforeMount () {
@@ -199,6 +225,46 @@ export default {
       }
       this.showPickerDialog = false;
     },
+    getEffectsFromSource ({ type, id } = {}, target, effectType) {
+      let result;
+      if (COMPARE_KEY_ORDER.includes(type)) {
+        if (type === COMPARE_KEY_MAPPING.unit.key && this.unitsDb[id]) {
+          result = getEffectsListForUnit({
+            unit: this.unitsDb[id],
+            target,
+            effectType,
+          });
+        } else if (type === COMPARE_KEY_MAPPING.item.key && this.itemsDb[id]) {
+          result = getEffectsListForItem({
+            item: this.itemsDb[id],
+            target,
+            effectType,
+          });
+        } else if (type === COMPARE_KEY_MAPPING.es.key && this.extraSkillsDb[id]) {
+          result = getEffectsListForExtraSkill({
+            skill: this.extraSkillsDb[id],
+            target,
+            effectType,
+          });
+          logger.warn(result);
+        } else {
+          logger.warn('getEffectsFromSource: setting empty entry', { type, id, target, effectType });
+          result = [];
+        }
+      } else {
+        logger.warn('source type not supported', type);
+        result = [];
+      }
+      return result;
+    },
+    getHeaderTextForSource ({ type, id } = {}) {
+      logger.debug('getHeaderTextForSource', { type, id });
+      return `${type}-${id}`;
+    },
+    updateTopNavbarHeight () {
+      const topNavbar = document.querySelector('nav.v-toolbar');
+      this.topNavbarHeight = (topNavbar && topNavbar.offsetHeight) || 56;
+    },
   },
   watch: {
     compareInput () {
@@ -206,6 +272,9 @@ export default {
     },
     showPickerDialog () {
       this.pickerStep = 1;
+    },
+    currentTabIndex () {
+      this.updateTopNavbarHeight();
     },
   },
 };

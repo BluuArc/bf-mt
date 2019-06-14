@@ -1,6 +1,7 @@
-import { sphereTypeMapping } from '@/modules/constants';
+import { sphereTypeMapping, targetTypes, squadBuffTypes } from '@/modules/constants';
 import SWorker from '@/assets/sww.min';
 import cloneDeep from 'lodash/cloneDeep';
+import { getEffectsList } from './buffs';
 
 export function getSphereCategory (item) {
   // can pass in number or item entry directly
@@ -225,4 +226,18 @@ export function getEmptySphere () {
     'sphere type': 0, // none
     max_stack: 0,
   };
+}
+
+export function getEffectsListForItem ({
+  item = {},
+  target = targetTypes.PARTY,
+  effectType = squadBuffTypes.PROC,
+}) {
+  const effects = getItemEffects(item)
+    .map(e => ({ ...e, sourcePath: `Sphere: ${item.name || item.id}` }));
+  return getEffectsList({
+    sphereEffects: effects,
+    target,
+    effectType,
+  });
 }
