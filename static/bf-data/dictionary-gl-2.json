@@ -1,4 +1,28 @@
 {
+  "MST_LEADERSKILLS_7475_DESCRIPTION": {
+    "en": "50% boost to Atk, max HP, Spark damage restores HP, 120% boost to Spark damage & considerably boosts BB Atk for 2 turns when damage taken exceeds certain amount",
+    "es": "50% boost to Atk, max HP, Spark damage restores HP, 120% boost to Spark damage & considerably boosts BB Atk for 2 turns when damage taken exceeds certain amount",
+    "id": "50% ekstra Serang, HP maks, kerusakan Percikan pulihkan HP, 120% ekstra kerusakan Percikan, lumayan menambah BB Serang 2 giliran saat kerusakan melampaui jumlah tertentu",
+    "pt": "50% boost to Atk, max HP, Spark damage restores HP, 120% boost to Spark damage & considerably boosts BB Atk for 2 turns when damage taken exceeds certain amount",
+    "th": "50% เพิ่มค่า โจมตี, HP สูงสุด, ความเสียหายสปาร์ค ฟื้นคืน HP, 120% เพิ่มค่า ความเสียหายสปาร์ค และ เพิ่มค่าอย่างมากให้ BB โจมตี นาน 2 เทิร์น เมื่อความเสียหายที่ได้รับ เกินกว่าปริมาณหนึ่ง",
+    "vi": "50% boost to Atk, max HP, Spark damage restores HP, 120% boost to Spark damage & considerably boosts BB Atk for 2 turns when damage taken exceeds certain amount"
+  },
+  "MST_LEADERSKILLS_7475_NAME": {
+    "en": "Phantom Blessing",
+    "es": "Phantom Blessing",
+    "id": "Berkat Fantom",
+    "pt": "Phantom Blessing",
+    "th": "แฟนธ่อม เบลสซิ่ง",
+    "vi": "Phantom Blessing"
+  },
+  "MST_LEADERSKILLS_7476_DESCRIPTION": {
+    "en": "50% boost to Atk and max HP, 100% boost to Spark damage, hugely boosts BC, HC drop rate & adds probable Spark critical",
+    "es": "50% boost to Atk and max HP, 100% boost to Spark damage, hugely boosts BC, HC drop rate & adds probable Spark critical",
+    "id": "50% ekstra Serang, HP maks, 100% ekstra kerusakan Percikan, amat menambah perolehan BC, HC, menambah kans Percikan ampuh",
+    "pt": "50% boost to Atk and max HP, 100% boost to Spark damage, hugely boosts BC, HC drop rate & adds probable Spark critical",
+    "th": "50% เพิ่มค่า โจมตี กับ HP สูงสุด, 100% เพิ่มค่า ความเสียหายสปาร์ค, เพิ่มค่าอย่างสูงให้ อัตราดรอป BC, HC และ เพิ่ม ความเป็นไปได้ที่จะเกิดสปาร์คคริติคอล",
+    "vi": "50% boost to Atk and max HP, 100% boost to Spark damage, hugely boosts BC, HC drop rate & adds probable Spark critical"
+  },
   "MST_LEADERSKILLS_7476_NAME": {
     "en": "Shining Pride",
     "es": "Shining Pride",
@@ -5750,6 +5774,38 @@
     "pt": "Lead the People",
     "th": "Lead the People",
     "vi": "Lead the People"
+  },
+  "MST_LEADERSKILLS_810757_DESCRIPTION": {
+    "en": "120% boost to Def, Rec and max HP of Fire types, hugely boosts Fire elemental damage, damage taken hugely boosts BB gauge & 10% damage reduction from Fire, Earth types",
+    "es": "120% boost to Def, Rec and max HP of Fire types, hugely boosts Fire elemental damage, damage taken hugely boosts BB gauge & 10% damage reduction from Fire, Earth types",
+    "id": "120% boost to Def, Rec and max HP of Fire types, hugely boosts Fire elemental damage, damage taken hugely boosts BB gauge & 10% damage reduction from Fire, Earth types",
+    "pt": "120% boost to Def, Rec and max HP of Fire types, hugely boosts Fire elemental damage, damage taken hugely boosts BB gauge & 10% damage reduction from Fire, Earth types",
+    "th": "120% boost to Def, Rec and max HP of Fire types, hugely boosts Fire elemental damage, damage taken hugely boosts BB gauge & 10% damage reduction from Fire, Earth types",
+    "vi": "120% boost to Def, Rec and max HP of Fire types, hugely boosts Fire elemental damage, damage taken hugely boosts BB gauge & 10% damage reduction from Fire, Earth types"
+  },
+  "MST_LEADERSKILLS_810757_NAME": {
+    "en": "Fiercely Fashionable",
+    "es": "Fiercely Fashionable",
+    "id": "Fiercely Fashionable",
+    "pt": "Fiercely Fashionable",
+    "th": "Fiercely Fashionable",
+    "vi": "Fiercely Fashionable"
+  },
+  "MST_LEADERSKILLS_810758_DESCRIPTION": {
+    "en": "140% boost to Def, Rec and max HP of Fire types, 20% damage reduction from Fire, Earth types, enormously boosts Fire elemental damage, damage taken enormously boosts BB gauge & damage taken may considerably restore HP",
+    "es": "140% boost to Def, Rec and max HP of Fire types, 20% damage reduction from Fire, Earth types, enormously boosts Fire elemental damage, damage taken enormously boosts BB gauge & damage taken may considerably restore HP",
+    "id": "140% boost to Def, Rec and max HP of Fire types, 20% damage reduction from Fire, Earth types, enormously boosts Fire elemental damage, damage taken enormously boosts BB gauge & damage taken may considerably restore HP",
+    "pt": "140% boost to Def, Rec and max HP of Fire types, 20% damage reduction from Fire, Earth types, enormously boosts Fire elemental damage, damage taken enormously boosts BB gauge & damage taken may considerably restore HP",
+    "th": "140% boost to Def, Rec and max HP of Fire types, 20% damage reduction from Fire, Earth types, enormously boosts Fire elemental damage, damage taken enormously boosts BB gauge & damage taken may considerably restore HP",
+    "vi": "140% boost to Def, Rec and max HP of Fire types, 20% damage reduction from Fire, Earth types, enormously boosts Fire elemental damage, damage taken enormously boosts BB gauge & damage taken may considerably restore HP"
+  },
+  "MST_LEADERSKILLS_810758_NAME": {
+    "en": "Queen of Vanity",
+    "es": "Queen of Vanity",
+    "id": "Queen of Vanity",
+    "pt": "Queen of Vanity",
+    "th": "Queen of Vanity",
+    "vi": "Queen of Vanity"
   },
   "MST_LEADERSKILLS_810900_DESCRIPTION": {
     "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Fire elemental damage, 15% damage reduction from Earth types & negates all status ailments",
@@ -89157,6 +89213,30 @@
     "id": "Azrael",
     "pt": "Azrael",
     "th": "อัซราเอล",
+    "vi": "Azrael"
+  },
+  "MST_MONSTERS_53816_NAME": {
+    "en": "Azrael",
+    "es": "Azrael",
+    "id": "Azrael",
+    "pt": "Azrael",
+    "th": "แอซเรล",
+    "vi": "Azrael"
+  },
+  "MST_MONSTERS_53817_NAME": {
+    "en": "Azrael",
+    "es": "Azrael",
+    "id": "Azrael",
+    "pt": "Azrael",
+    "th": "อาซาเอล",
+    "vi": "Azrael"
+  },
+  "MST_MONSTERS_53818_NAME": {
+    "en": "Azrael",
+    "es": "Azrael",
+    "id": "Azrael",
+    "pt": "Azrael",
+    "th": "อาซาเอล",
     "vi": "Azrael"
   }
 }
