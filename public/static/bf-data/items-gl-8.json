@@ -16518,7 +16518,7 @@
     ]
   },
   "819161": {
-    "desc": "55% boost to all parameters of Light, Dark types, enormously boosts Light, Dark elemental damage, enormously boosts OD gauge fill rate & 10% damage reduction from Light, Dark types \n",
+    "desc": "55% boost to all parameters of Light, Dark types, enormously boosts Light, Dark elemental damage, enormously boosts OD gauge fill rate & 10% damage reduction from Light, Dark types<br>Guild Raid: Boosts Atk, Def when BB gauge is over 50% & adds Extra Skill disable effects purge to UBB",
     "effect": [
       {
         "atk% buff": 55,
@@ -16561,7 +16561,7 @@
     "usage": []
   },
   "819162": {
-    "desc": "50% boost to all parameters of Light, Dark types, enormously boosts Light, Dark elemental damage, enormously boosts OD gauge fill rate & 10% damage reduction from Light, Dark types \n",
+    "desc": "50% boost to all parameters of Light, Dark types, enormously boosts Light, Dark elemental damage, enormously boosts OD gauge fill rate & 10% damage reduction from Light, Dark types<br>Guild Raid: Boosts Atk, Def when BB gauge is over 50% & adds Extra Skill disable effects purge to UBB",
     "effect": [
       {
         "atk% buff": 50,
@@ -20920,7 +20920,7 @@
             "target area": "aoe",
             "target type": "enemy",
             "unknown proc id": "10019",
-            "unknown proc param": "30,31,32,33,34,35,0,0,0,27"
+            "unknown proc param": "30,31,32,33,34,35,0,0,0,25"
           }
         ]
       },
@@ -20941,7 +20941,7 @@
       },
       {
         "unknown passive id": "107",
-        "unknown passive params": "1,15$15$15$0$15"
+        "unknown passive params": "1,15$15$15$0$15\n"
       }
     ],
     "id": 819227,
@@ -28652,7 +28652,7 @@
   "880001": {
     "desc": "A mysterious relic used to evolve the Unit Grandt",
     "id": 880001,
-    "max_stack": 1,
+    "max_stack": 199,
     "name": "Ruby Relic",
     "raid": false,
     "rarity": 3,
@@ -28667,7 +28667,7 @@
   "880003": {
     "desc": "A mysterious relic used to evolve the Unit Elaina",
     "id": 880003,
-    "max_stack": 1,
+    "max_stack": 199,
     "name": "Emerald Relic",
     "raid": false,
     "rarity": 3,
@@ -28682,7 +28682,7 @@
   "880011": {
     "desc": "A mysterious relic used to transcend the Unit Mercenary Grandt",
     "id": 880011,
-    "max_stack": 1,
+    "max_stack": 199,
     "name": "Sanguine Relic",
     "raid": false,
     "rarity": 3,
@@ -28697,7 +28697,7 @@
   "880013": {
     "desc": "A mysterious relic used to transcend the Unit Mercenary Mage Elaina",
     "id": 880013,
-    "max_stack": 1,
+    "max_stack": 199,
     "name": "Verdant Relic",
     "raid": false,
     "rarity": 3,
@@ -29595,6 +29595,14 @@
         "id": 819025,
         "name": "Lunar Essence Orb"
       }
+    ],
+    "associated_units": [
+      "87102601",
+      "87202601",
+      "87302601",
+      "87402601",
+      "87502601",
+      "87602601"
     ]
   },
   "880244": {

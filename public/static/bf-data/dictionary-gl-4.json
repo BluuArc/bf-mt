@@ -1,76 +1,4 @@
 {
-  "MST_SKILLS_2000768_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2000768_NAME": {
-    "en": "Lexida...answer to my heart!",
-    "es": "Lexida... ¡Contéstale a mi corazón!",
-    "id": "Lexida...jawaban hatiku!",
-    "pt": "Lexida... responda a meu coração!",
-    "th": "เล็กส์สิดา...ตอบรับหัวใจของข้า!",
-    "vi": "Lexida...hãy trả lời trái tim của ta!"
-  },
-  "MST_SKILLS_2000769_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2000769_NAME": {
-    "en": "I won't give up! Ever!",
-    "es": "¡No me rendiré! ¡Nunca!",
-    "id": "Aku tidak akan pernah menyerah!",
-    "pt": "Não vou desistir! Nunca!",
-    "th": "ข้าจะไม่ยอมแพ้! ไม่มีวัน!",
-    "vi": "Ta sẽ không từ bỏ! Không bao giờ!"
-  },
-  "MST_SKILLS_2000770_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2000770_NAME": {
-    "en": "Guilty Ash",
-    "es": "Ceniza letal",
-    "id": "Abu Bersalah",
-    "pt": "Cinzas da Culpa",
-    "th": "กิลตี้ แอช",
-    "vi": "Tàn tích tội lỗi"
-  },
-  "MST_SKILLS_2000771_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2000771_NAME": {
-    "en": "I will protect the empire!",
-    "es": "¡Protegeré al imperio!",
-    "id": "Akan kulindungi kekaisaran!",
-    "pt": "Eu vou proteger o império!",
-    "th": "ข้าจะปกป้องจักรวรรดิ!",
-    "vi": "Ta sẽ bảo vệ đế chế này!"
-  },
-  "MST_SKILLS_2000772_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
   "MST_SKILLS_2000772_NAME": {
     "en": "I'll be strong, like father!",
     "es": "¡Seré fuerte como mi padre!",
@@ -89158,5 +89086,157 @@
     "pt": "Combo poderoso de 11 golpes de Fogo em todos os inimigos e provável efeito de Maldição",
     "th": "11 คอมโบ โจมตีธาตุไฟอย่างรุนแรง ใส่ศัตรูทั้งหมด และ อาจจะทำให้คิดสถานะ คำสาป",
     "vi": "11 combo powerful Fire attack on all enemies & probable Curse effect"
+  },
+  "MST_SKILLS_2122540_NAME": {
+    "en": "Rakshasa Pyre",
+    "es": "Pira de Rakshasa",
+    "id": "Raksasa Pyre",
+    "pt": "Pira Rakshasa",
+    "th": "รัคชาซ่า ไพร",
+    "vi": "Rakshasa Pyre"
+  },
+  "MST_SKILLS_2122541_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122541_NAME": {
+    "en": "Demonic Blade",
+    "es": "Espada malévola",
+    "id": "Bilah Setan",
+    "pt": "Lâmina Demoníaca",
+    "th": "เดมอนนิค เบลด",
+    "vi": "Demonic Blade"
+  },
+  "MST_SKILLS_2122542_DESCRIPTION": {
+    "en": "11 combo powerful Fire attack on all enemies & probable Curse effect",
+    "es": "Combo grupal de 11 poderosos ataques ígneos. Puede causar maldición",
+    "id": "11 kombo serangan Api kuat ke semua musuh & kemungkinan efek Kutukan",
+    "pt": "Combo poderoso de 11 golpes de Fogo em todos os inimigos e provável efeito de Maldição",
+    "th": "11 คอมโบ โจมตีธาตุไฟอย่างรุนแรง ใส่ศัตรูทั้งหมด และ อาจจะทำให้คิดสถานะ คำสาป",
+    "vi": "11 combo powerful Fire attack on all enemies & probable Curse effect"
+  },
+  "MST_SKILLS_2122542_NAME": {
+    "en": "I am Vishra!",
+    "es": "¡Soy Vishra!",
+    "id": "Aku Vishra!",
+    "pt": "Eu sou Vishra!",
+    "th": "ข้าคือวิชร่า!",
+    "vi": "I am Vishra!"
+  },
+  "MST_SKILLS_2122543_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122543_NAME": {
+    "en": "Within this armor dwells...",
+    "es": "Dentro de esta armadura habita...",
+    "id": "Dalam zirah ini ada...",
+    "pt": "Dentro dessa armadura...",
+    "th": "ด้วยเกราะนี้...",
+    "vi": "Within this armor dwells..."
+  },
+  "MST_SKILLS_2122544_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122544_NAME": {
+    "en": "Hmm...? What about my armor?",
+    "es": "¿Mmm...? ¿Qué hay con mi armadura?",
+    "id": "Hmm...? Bagaimana dengan zirahku?",
+    "pt": "Hmm...? E a minha armadura?",
+    "th": "หืม...? แล้วเกราะของข้าล่ะ?",
+    "vi": "Hmm...? What about my armor?"
+  },
+  "MST_SKILLS_2122545_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122545_NAME": {
+    "en": "You want to put it on display..?",
+    "es": "¿Quieres ponerla en una vitrina...?",
+    "id": "Kau mau memamerkannya..?",
+    "pt": "Você quer expô-la?",
+    "th": "เจ้าต้องการจะใส่มันเหรอ?!",
+    "vi": "You want to put it on display..?"
+  },
+  "MST_SKILLS_2122546_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122546_NAME": {
+    "en": "Are you crazy?!",
+    "es": "¡¿Estás demente?!",
+    "id": "Kau gila?!",
+    "pt": "Enlouqueceu??",
+    "th": "จะบ้าเรอะ?!",
+    "vi": "Are you crazy?!"
+  },
+  "MST_SKILLS_2122547_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122547_NAME": {
+    "en": "My armor isn't mere decoration!",
+    "es": "¡Mi armadura no es un mero decorado!",
+    "id": "Zirahku bukan hanya dekorasi!",
+    "pt": "Minha armadura não é enfeite!",
+    "th": "เกราะของข้าไม่ใช่ของประดับนะ!",
+    "vi": "My armor isn't mere decoration!"
+  },
+  "MST_SKILLS_2122548_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122548_NAME": {
+    "en": "I am a ravenous demon!",
+    "es": "¡Soy un demonio feroz!",
+    "id": "Aku setan yang lapar!",
+    "pt": "Eu sou um demônio faminto!",
+    "th": "ข้าคือปีศาจผู้ตะกละตะกลาม!",
+    "vi": "I am a ravenous demon!"
+  },
+  "MST_SKILLS_2122549_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122549_NAME": {
+    "en": "I'll consume your soul too!",
+    "es": "¡También consumiré tu alma!",
+    "id": "Akan kumakan jiwamu juga!",
+    "pt": "Vou consumir sua alma também!",
+    "th": "ข้าจะกินวิญญาณของเจ้าเช่นกัน!",
+    "vi": "I'll consume your soul too!"
   }
 }
