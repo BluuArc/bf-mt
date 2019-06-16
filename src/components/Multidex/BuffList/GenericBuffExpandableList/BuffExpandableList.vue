@@ -292,7 +292,7 @@ export default {
   watch: {
     expandedTables (newValue) {
       newValue.forEach((doShow, index) => {
-        if (doShow) {
+        if (doShow && this.viewedTables[index] !== true) {
           this.viewedTables[index] = true;
         }
       });

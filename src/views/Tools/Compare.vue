@@ -9,6 +9,7 @@ import { convertCompareCodeToInput } from '@/modules/core/compare';
 import { Logger } from '@/modules/Logger';
 import ModuleChecker from '@/components/ModuleChecker';
 import ComparePage from '@/components/Tools/Compare/Main';
+import compareInputManager from '@/modules/CompareInputManager';
 
 const logger = new Logger({ prefix: '[Compare]' });
 export default {
@@ -40,6 +41,26 @@ export default {
         }
       }).filter(v => v);
       return Object.freeze(result);
+    },
+  },
+  watch: {
+    input: {
+      immediate: true,
+      async handler (newValue) {
+        if (newValue || this.$route.query.hasOwnProperty('input')) {
+          compareInputManager.compareInputString = newValue;
+        } else if (compareInputManager.compareInputString) {
+          await new Promise((fulfill, reject) => {
+            this.$router.replace({
+              ...this.$route,
+              query: {
+                ...this.$route.query,
+                input: compareInputManager.compareInputString,
+              },
+            }, fulfill, reject);
+          });
+        }
+      },
     },
   },
 };
