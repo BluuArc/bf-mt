@@ -46,9 +46,8 @@ export default {
     },
     allIds () {
       return Object.keys(this.pageDb).filter(k => {
-        const hasAssociatedUnits = !!this.pageDb[k].associated_units;
         const hasName = !this.nameFilter || this.hasName(this.pageDb[k].name, this.nameFilter);
-        return !hasAssociatedUnits && hasName;
+        return hasName;
       });
     },
   },

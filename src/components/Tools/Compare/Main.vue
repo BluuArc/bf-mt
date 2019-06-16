@@ -61,6 +61,7 @@
             :sources="compareInput"
             :getEffectsFromSource="getEffectsFromSource"
             :titleTopOffset="topNavbarHeight"
+            :getTextForSource="getTextForSource"
           >
             <span slot="allentrypreview" slot-scope="{ entries }">
               <span v-for="source in entries" :key="getCompareInputKey(source)">
@@ -69,6 +70,7 @@
                     v-if="getChipConfig(source).avatar"
                     size="64"
                     color="grey darken-1"
+                    tabindex="-1"
                   >
                     <img
                       v-if="getChipConfig(source).avatarIsUrl"
@@ -375,6 +377,14 @@ export default {
         }
       }
       return result;
+    },
+    getTextForSource (sourcePath, source, initialValue) {
+      let result;
+      if (sourcePath === 'es' && this.extraSkillsDb[source.id]) {
+        const name = (this.extraSkillsDb[source.id] && this.extraSkillsDb[source.id].name) || source.id;
+        result = `Extra Skill: ${name}`;
+      }
+      return result || initialValue || sourcePath;
     },
   },
   watch: {

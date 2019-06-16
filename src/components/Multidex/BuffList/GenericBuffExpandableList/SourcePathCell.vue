@@ -66,9 +66,7 @@ export default {
     },
     displayValue () {
       let displayValue = SOURCE_PATH_TO_TEXT_MAPPING[this.value];
-      if (!displayValue) {
-        displayValue = this.getTextForSource(this.value, this.source);
-      }
+      displayValue = this.getTextForSource(this.value, this.source, displayValue) || displayValue;
       return displayValue || this.value;
     },
   },

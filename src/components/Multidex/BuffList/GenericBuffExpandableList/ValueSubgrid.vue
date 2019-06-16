@@ -90,7 +90,7 @@ export default {
     getTextForSource: {
       type: Function,
       // eslint-disable-next-line no-unused-vars
-      default: (path, source) => path,
+      default: (path, source, initial) => initial || path,
     },
   },
   components: {
