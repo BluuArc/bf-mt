@@ -187,6 +187,11 @@ export default {
               link: '/tools/squads',
               image: require('@/assets/unit_table.png'),
             },
+            {
+              title: 'Compare',
+              link: '/tools/compare',
+              image: require('@/assets/tt_icon_m-1.png'),
+            },
           ],
         },
       ],
