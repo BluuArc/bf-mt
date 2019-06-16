@@ -19,6 +19,7 @@
 
 <script>
 import { COMPARE_KEY_MAPPING } from '@/modules/constants';
+import { getEntryCardType } from '@/modules/core/compare';
 import UnitEntryCard from '@/components/Multidex/Units/EntryCard';
 import ItemEntryCard from '@/components/Multidex/Items/EntryCard';
 import ExtraSkillEntryCard from '@/components/Multidex/ExtraSkills/EntryCard';
@@ -47,14 +48,7 @@ export default {
   },
   computed: {
     entryCard () {
-      switch(this.type) {
-        case 'unit': return 'UnitEntryCard';
-        case 'item': return 'ItemEntryCard';
-        case 'es': return 'ExtraSkillEntryCard';
-        case 'ls': return 'LeaderSkillEntryCard';
-        case 'burst': return 'BurstEntryCard';
-        default: return 'BaseEntryCard';
-      }
+      return getEntryCardType(this.type);
     },
     multidexLink () {
       const multidexModule = (COMPARE_KEY_MAPPING[this.type] || {}).multidexKey;

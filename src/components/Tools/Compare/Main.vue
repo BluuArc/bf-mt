@@ -62,7 +62,40 @@
             :getEffectsFromSource="getEffectsFromSource"
             :titleTopOffset="topNavbarHeight"
           >
-
+            <span slot="allentrypreview" slot-scope="{ entries }">
+              <span v-for="source in entries" :key="getCompareInputKey(source)">
+                <v-chip small>
+                  <v-avatar
+                    v-if="getChipConfig(source).avatar"
+                    size="64"
+                    color="grey darken-1"
+                  >
+                    <img
+                      v-if="getChipConfig(source).avatarIsUrl"
+                      :src="getChipConfig(source).avatar"
+                    />
+                    <span
+                      v-else
+                      class="font-weight-bold"
+                      v-text="getChipConfig(source).avatar"
+                    />
+                  </v-avatar>
+                  {{ getChipConfig(source).name }}
+                </v-chip>
+              </span>
+            </span>
+            <span
+              slot="value-header"
+              slot-scope="{ entry }"
+              style="max-width: 500px; width: 100%; min-width: 300px;"
+            >
+              <component
+                :is="getHeaderCardConfig(entry).type"
+                :entry="getHeaderCardConfig(entry).entry"
+                class="no-highlight v-card--flat px-2"
+                style="width: 100%; background-color: transparent;"
+              />
+            </span>
           </buff-expandable-list-view>
         </v-card>
       </div>
@@ -73,7 +106,7 @@
 <script>
 import { Logger } from '@/modules/Logger';
 import { COMPARE_KEY_ORDER, COMPARE_KEY_MAPPING } from '@/modules/constants';
-import { convertCompareInputToCode, generateCompareInput } from '@/modules/core/compare';
+import { convertCompareInputToCode, generateCompareInput, getEntryCardType } from '@/modules/core/compare';
 import { getEffectsListForUnit } from '@/modules/core/units';
 import { getEffectsListForItem } from '@/modules/core/items';
 import { getEffectsListForExtraSkill } from '@/modules/core/extra-skills';
@@ -84,6 +117,12 @@ import CardTabsContainer from '@/components/CardTabsContainer';
 import EntryCard from './EntryCard';
 import AddCompareEntry from './AddCompareEntry';
 import BuffExpandableListView from '@/components/Multidex/BuffList/GenericBuffExpandableList/BuffExpandableListView';
+import UnitEntryCard from '@/components/Multidex/Units/EntryCard';
+import ItemEntryCard from '@/components/Multidex/Items/EntryCard';
+import ExtraSkillEntryCard from '@/components/Multidex/ExtraSkills/EntryCard';
+import LeaderSkillEntryCard from '@/components/Multidex/LeaderSkills/EntryCard';
+import BurstEntryCard from '@/components/Multidex/Bursts/EntryCard';
+import BaseEntryCard from '@/components/Multidex/BaseEntryCard';
 
 const logger = new Logger({ prefix: '[Compare]' });
 export default {
@@ -99,6 +138,12 @@ export default {
     EntryCard,
     AddCompareEntry,
     BuffExpandableListView,
+    UnitEntryCard,
+    ItemEntryCard,
+    ExtraSkillEntryCard,
+    LeaderSkillEntryCard,
+    BurstEntryCard,
+    BaseEntryCard,
   },
   computed: {
     tabs: () => Object.freeze(['Input', 'Compare'].map(name => ({ name, slot: name.toLowerCase() }))),
@@ -270,13 +315,66 @@ export default {
       }
       return result;
     },
-    getHeaderTextForSource ({ type, id } = {}) {
-      logger.debug('getHeaderTextForSource', { type, id });
-      return `${type}-${id}`;
-    },
     updateTopNavbarHeight () {
       const topNavbar = document.querySelector('nav.v-toolbar');
       this.topNavbarHeight = (topNavbar && topNavbar.offsetHeight) || 56;
+    },
+    getCompareInputKey ({ type, id } = {}) {
+      return `${type}-${id}`;
+    },
+    getHeaderCardConfig ({ type, id } = {}) {
+      let entry;
+      if (COMPARE_KEY_ORDER.includes(type)) {
+        if (type === COMPARE_KEY_MAPPING.unit.key && this.unitsDb[id]) {
+          entry = this.unitsDb[id];
+        } else if (type === COMPARE_KEY_MAPPING.item.key && this.itemsDb[id]) {
+          entry = this.itemsDb[id];
+        } else if (type === COMPARE_KEY_MAPPING.es.key && this.extraSkillsDb[id]) {
+          entry = this.extraSkillsDb[id];
+        } else if (type === COMPARE_KEY_MAPPING.bb.key && this.burstsDb[id]) {
+          entry = this.burstsDb[id];
+        } else if (type === COMPARE_KEY_MAPPING.ls.key && this.leaderSkillsDb[id]) {
+          entry = this.leaderSkillsDb[id];
+        }
+      } else {
+        logger.warn('getHeaderCardConfig: source type not supported', type);
+      }
+
+      if (!entry) {
+        entry = {};
+      }
+      return {
+        entry,
+        type: getEntryCardType(type),
+      };
+    },
+    getChipConfig ({ type, id } = {}) {
+      let result = {
+        name: id,
+        avatar: '',
+        avatarIsUrl: false,
+      };
+      if (COMPARE_KEY_ORDER.includes(type)) {
+        if (type === COMPARE_KEY_MAPPING.unit.key && this.unitsDb[id]) {
+          result.name = this.unitsDb[id].name || id;
+          result.avatar = this.$store.getters['units/getImageUrls'](id).ills_battle;
+          result.avatarIsUrl = true;
+        } else if (type === COMPARE_KEY_MAPPING.item.key && this.itemsDb[id]) {
+          result.name = this.itemsDb[id].name || id;
+          result.avatar = this.$store.getters['items/getImageUrl'](id, this.itemsDb[id]);
+          result.avatarIsUrl = true;
+        } else if (type === COMPARE_KEY_MAPPING.es.key && this.extraSkillsDb[id]) {
+          result.name = this.extraSkillsDb[id].name || id;
+          result.avatar = 'ES';
+        } else if (type === COMPARE_KEY_MAPPING.bb.key && this.burstsDb[id]) {
+          result.name = this.burstsDb[id].name || id;
+          result.avatar = 'BB';
+        } else if (type === COMPARE_KEY_MAPPING.ls.key && this.leaderSkillsDb[id]) {
+          result.name = this.leaderSkillsDb[id].name || id;
+          result.avatar = 'LS';
+        }
+      }
+      return result;
     },
   },
   watch: {
