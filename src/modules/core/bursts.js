@@ -1,6 +1,7 @@
 import { attackingProcs } from '@/modules/EffectProcessor/constants';
-import { targetAreaMapping } from '@/modules/constants';
+import { targetAreaMapping, targetTypes, squadBuffTypes } from '@/modules/constants';
 import SWorker from '@/assets/sww.min.js';
+import { getEffectsList } from './buffs';
 
 export function getBurstEffects (burst, level) {
   // default to last level
@@ -181,4 +182,19 @@ export function getSelfSparkCount (frames, inputDelay, sparkedFrames) {
   return frames['frame times']
     .filter(time => (sparkedFrames[(+time + delay)] || []).length > 0)
     .length;
+}
+
+export function getEffectsListForBurst ({
+  burst = {},
+  target = targetTypes.PARTY,
+  effectType = squadBuffTypes.PROC,
+}) {
+  const details = getBurstEffects(burst) || {};
+  const effects = (Array.isArray(details.effects) ? details.effects : [])
+    .map(e => ({ ...e, sourcePath: `Burst: ${burst.name || '(No name found)'} (${burst.id})`}));
+  return getEffectsList({
+    nonUbbBurstEffects: effects,
+    target,
+    effectType,
+  });
 }

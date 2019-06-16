@@ -77,6 +77,8 @@ import { convertCompareInputToCode, generateCompareInput } from '@/modules/core/
 import { getEffectsListForUnit } from '@/modules/core/units';
 import { getEffectsListForItem } from '@/modules/core/items';
 import { getEffectsListForExtraSkill } from '@/modules/core/extra-skills';
+import { getEffectsListForBurst } from '@/modules/core/bursts';
+import { getEffectsListForLeaderSkill } from '@/modules/core/leader-skills';
 import PromiseWait from '@/components/PromiseWait';
 import CardTabsContainer from '@/components/CardTabsContainer';
 import EntryCard from './EntryCard';
@@ -246,7 +248,18 @@ export default {
             target,
             effectType,
           });
-          logger.warn(result);
+        } else if (type === COMPARE_KEY_MAPPING.bb.key && this.burstsDb[id]) {
+          result = getEffectsListForBurst({
+            burst: this.burstsDb[id],
+            target,
+            effectType,
+          });
+        } else if (type === COMPARE_KEY_MAPPING.ls.key && this.leaderSkillsDb[id]) {
+          result = getEffectsListForLeaderSkill({
+            skill: this.leaderSkillsDb[id],
+            target,
+            effectType,
+          });
         } else {
           logger.warn('getEffectsFromSource: setting empty entry', { type, id, target, effectType });
           result = [];
