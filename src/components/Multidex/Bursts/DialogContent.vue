@@ -1,5 +1,9 @@
 <template>
-  <dialog-content-base :entry="entry" :loadingEntryData="loadingEntryData">
+  <dialog-content-base
+    :entry="entry"
+    :loadingEntryData="loadingEntryData"
+    type="bb"
+  >
     <v-container grid-list-lg>
       <v-layout row>
         <v-flex>

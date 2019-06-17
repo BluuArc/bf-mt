@@ -15,11 +15,15 @@
         </slot>
       </v-flex>
     </v-layout>
+    <compare-speed-dial :compareCode="compareCode"/>
   </v-container>
 </template>
 
 <script>
+import { convertCompareInputToCode } from '@/modules/core/compare';
 import LoadingIndicator from '@/components/LoadingIndicator';
+import CompareSpeedDial from '@/components/Tools/Compare/CompareSpeedDial';
+
 export default {
   props: {
     entry: {
@@ -29,9 +33,19 @@ export default {
       type: Boolean,
       required: true,
     },
+    type: {
+      type: String,
+      required: true,
+    },
   },
   components: {
     LoadingIndicator,
+    CompareSpeedDial,
+  },
+  computed: {
+    compareCode () {
+      return convertCompareInputToCode({ type: this.type, id: this.entry && this.entry.id });
+    },
   },
 };
 </script>

@@ -1,5 +1,9 @@
 <template>
-  <dialog-content-base :entry="entry" :loadingEntryData="loadingEntryData">
+  <dialog-content-base
+    :entry="entry"
+    :loadingEntryData="loadingEntryData"
+    type="unit"
+  >
     <v-container class="mb-5 pb-3">
       <v-layout row>
         <v-flex v-if="activeMainTab === 'general'">

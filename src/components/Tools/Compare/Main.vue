@@ -394,11 +394,14 @@ export default {
     showPickerDialog () {
       this.pickerStep = 1;
     },
-    currentTabIndex () {
-      this.updateTopNavbarHeight();
-      if (this.$store.state.disableHtmlOverflow) {
-        this.$store.commit('setHtmlOverflowDisableState', false);
-      }
+    currentTabIndex: {
+      immediate: true,
+      handler () {
+        this.updateTopNavbarHeight();
+        if (this.$store.state.disableHtmlOverflow) {
+          this.$store.commit('setHtmlOverflowDisableState', false);
+        }
+      },
     },
   },
 };
