@@ -1,6 +1,6 @@
 <template>
   <base-summary-card
-    :entry="burst"
+    :entry="skill"
     :buffSources="buffSources"
     :getEffectsFromSource="getEffectsFromSource"
   >
@@ -14,12 +14,12 @@
 </template>
 
 <script>
-import { getEffectsListForBurst } from '@/modules/core/bursts';
+import { getEffectsListForLeaderSkill } from '@/modules/core/leader-skills';
 import BaseSummaryCard from '@/components/Multidex/BaseSummaryCard';
 
 export default {
   props: {
-    burst: {
+    skill: {
       type: Object,
       required: true,
     },
@@ -29,19 +29,19 @@ export default {
   },
   computed: {
     buffSources () {
-      return [{ burst: this.burst }];
+      return [{ skill: this.skill }];
     },
   },
   methods: {
-    getEffectsFromSource ({ burst } = {}, target, effectType) {
-      return getEffectsListForBurst({
-        burst,
+    getEffectsFromSource ({ skill } = {}, target, effectType) {
+      return getEffectsListForLeaderSkill({
+        skill,
         target,
         effectType,
       });
     },
-    getHeaderTextForSource ({ burst } = {}) {
-      return burst.name || burst.id;
+    getHeaderTextForSource ({ skill } = {}) {
+      return skill.name || skill.id;
     },
   },
 };

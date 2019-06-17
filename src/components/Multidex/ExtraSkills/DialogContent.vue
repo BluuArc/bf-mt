@@ -8,6 +8,11 @@
       </v-layout>
       <v-layout row>
         <v-flex>
+          <summary-card :skill="entry" :logger="logger"/>
+        </v-flex>
+      </v-layout>
+      <v-layout row>
+        <v-flex>
           <effects-card :skill="entry" :logger="logger"/>
         </v-flex>
       </v-layout>
@@ -17,13 +22,15 @@
 
 <script>
 import DialogContentMixin from '@/components/Multidex/DialogContentMixin';
-import GeneralInfoCard from '@/components/Multidex/ExtraSkills/GeneralInfoCard';
-import EffectsCard from '@/components/Multidex/ExtraSkills/EffectsCard';
+import GeneralInfoCard from './GeneralInfoCard';
+import SummaryCard from './SummaryCard';
+import EffectsCard from './EffectsCard';
 
 export default {
   mixins: [DialogContentMixin],
   components: {
     GeneralInfoCard,
+    SummaryCard,
     EffectsCard,
   },
 };
