@@ -1,6 +1,11 @@
 <template>
   <dialog-content-base :entry="entry" :loadingEntryData="loadingEntryData">
     <v-container grid-list-lg>
+      <v-layout row v-if="hasEffects">
+        <v-flex>
+          <summary-card :item="entry" :logger="logger"/>
+        </v-flex>
+      </v-layout>
       <v-layout row>
         <v-flex>
           <general-info-card :item="entry" :logger="logger"/>
@@ -32,20 +37,28 @@
 
 <script>
 import DialogContentMixin from '@/components/Multidex/DialogContentMixin';
-import GeneralInfoCard from '@/components/Multidex/Items/GeneralInfoCard';
-import MiscellaneousCard from '@/components/Multidex/Items/MiscellaneousCard';
+import SummaryCard from './SummaryCard';
+import GeneralInfoCard from './GeneralInfoCard';
+import MiscellaneousCard from './MiscellaneousCard';
 import FirstTimeClearRewardCard from '@/components/Multidex/FirstTimeClearRewardCard';
-import UsageCard from '@/components/Multidex/Items/UsageCard';
-import CraftingCard from '@/components/Multidex/Items/CraftingCard';
+import UsageCard from './UsageCard';
+import CraftingCard from './CraftingCard';
+import { getItemEffects } from '@/modules/core/items';
 
 export default {
   mixins: [DialogContentMixin],
   components: {
+    SummaryCard,
     GeneralInfoCard,
     MiscellaneousCard,
     FirstTimeClearRewardCard,
     UsageCard,
     CraftingCard,
+  },
+  computed: {
+    hasEffects () {
+      return this.entry && getItemEffects(this.entry).length > 0;
+    },
   },
 };
 </script>

@@ -534,6 +534,7 @@ export default {
       margin: 0 -0.25em;
       border-bottom-left-radius: 8px;
       border-bottom-right-radius: 8px;
+      border-bottom: 1px solid var(--background-color-alt);
 
       &.is-sticky {
         position: sticky;

@@ -1,53 +1,32 @@
 <template>
-  <description-card-base
-    class="summary-card"
+  <base-summary-card
     :entry="unit"
-    materialColor="blue"
-    :titleHtmlGenerator="() => `<b>Buff Overview</b>`"
-    :tabNames="['Overview']"
+    :buffSources="buffSources"
+    :getEffectsFromSource="getEffectsFromSource"
+    initialViewMode="target"
   >
-  <template slot="overview">
-    <v-layout column>
-      <v-flex>
-        <v-btn block flat large @click="isShowing = !isShowing">{{ buttonText }}</v-btn>
-      </v-flex>
-      <v-slide-y-transition>
-        <div v-show="isShowing" style="overflow-x: visible;">
-          <buff-expandable-list-view
-            v-if="hasShown"
-            :viewMode="viewMode"
-            @viewmode="$v => viewMode = $v"
-            :sources="buffSources"
-            :getEffectsFromSource="getEffectsFromSource"
-            :stickyTitles="false"
-          >
-            <span slot="allentrypreview" slot-scope="{ entries }">
-              <span v-for="source in entries" :key="source.sourceKey">
-                <v-chip
-                  small
-                  :color="getColorMappingForSourceKey(source.sourceKey).background"
-                  :text-color="getColorMappingForSourceKey(source.sourceKey).text"
-                >
-                  {{ source.sourceKey.toUpperCase() }}
-                </v-chip>
-              </span>
-            </span>
-            <span slot="value-header" slot-scope="{ entry }">
-              {{ getHeaderTextForSource(entry) }}
-            </span>
-          </buff-expandable-list-view>
-        </div>
-      </v-slide-y-transition>
-    </v-layout>
-  </template>
-  </description-card-base>
+    <span slot="allentrypreview" slot-scope="{ entries }">
+      <span v-for="source in entries" :key="source.sourceKey">
+        <v-chip
+          small
+          tabindex="-1"
+          :color="getColorMappingForSourceKey(source.sourceKey).background"
+          :text-color="getColorMappingForSourceKey(source.sourceKey).text"
+        >
+          {{ source.sourceKey.toUpperCase() }}
+        </v-chip>
+      </span>
+    </span>
+    <span slot="value-header" slot-scope="{ entry }">
+      {{ getHeaderTextForSource(entry) }}
+    </span>
+  </base-summary-card>
 </template>
 
 <script>
 import { getEffectsListForUnit } from '@/modules/core/units';
 import { MATERIAL_COLOR_MAPPING } from '@/modules/constants';
-import DescriptionCardBase from '@/components/Multidex/DescriptionCardBase';
-import BuffExpandableListView from '@/components/Multidex/BuffList/GenericBuffExpandableList/BuffExpandableListView';
+import BaseSummaryCard from '@/components/Multidex/BaseSummaryCard';
 
 function getNameOrId (entry = {}) {
   return entry.name || entry.id;
@@ -60,13 +39,9 @@ export default {
     },
   },
   components: {
-    DescriptionCardBase,
-    BuffExpandableListView,
+    BaseSummaryCard,
   },
   computed: {
-    buttonText () {
-      return `${this.isShowing ? 'Hide' : 'Show'} Buff Overview`;
-    },
     buffSources () {
       const unitData = this.unit || {};
       return [
@@ -83,18 +58,11 @@ export default {
       }));
     },
   },
-  data () {
-    return {
-      isShowing: false,
-      hasShown: false,
-      viewMode: '',
-    };
-  },
   methods: {
-    getEffectsFromSource ({ sourceKey } = {}, targetType, effectType) {
+    getEffectsFromSource ({ sourceKey } = {}, target, effectType) {
       return getEffectsListForUnit({
         unit: this.unit,
-        target: targetType,
+        target,
         effectType,
         whitelistedSources: [sourceKey],
       });
@@ -110,16 +78,6 @@ export default {
       return `${prefix}${name}`;
     },
   },
-  watch: {
-    isShowing (showing) {
-      if (showing && !this.hasShown) {
-        this.hasShown = true;
-      }
-    },
-  },
 };
 </script>
 
-<style>
-
-</style>

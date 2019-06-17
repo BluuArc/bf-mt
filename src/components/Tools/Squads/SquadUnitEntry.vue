@@ -8,7 +8,7 @@
         <v-flex text-xs-center v-if="$vuetify.breakpoint.xsOnly">
           <span class="caption text-no-wrap">{{ unit.position }}</span>
         </v-flex>
-        <v-layout align-content-center row>
+        <v-layout align-content-center row style="flex-grow: 0">
           <unit-thumbnail
             class="unit-thumbnail"
             :style="`border-color: ${orderSettings.border};`"

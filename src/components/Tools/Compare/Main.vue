@@ -396,6 +396,9 @@ export default {
     },
     currentTabIndex () {
       this.updateTopNavbarHeight();
+      if (this.$store.state.disableHtmlOverflow) {
+        this.$store.commit('setHtmlOverflowDisableState', false);
+      }
     },
   },
 };

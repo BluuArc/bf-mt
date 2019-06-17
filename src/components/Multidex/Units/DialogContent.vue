@@ -95,19 +95,19 @@
 import DialogContentMixin from '@/components/Multidex/DialogContentMixin';
 import BorderedTitledCard from '@/components/BorderedTitledCard';
 
-import MiscellaneousCard from '@/components/Multidex/Units/MiscellaneousCard';
-import StatsCard from '@/components/Multidex/Units/StatsCard';
-import DictionaryCard from '@/components/Multidex/Units/DictionaryCard';
-import EvolutionCard from '@/components/Multidex/Units/EvolutionCard';
+import MiscellaneousCard from './MiscellaneousCard';
+import StatsCard from './StatsCard';
+import DictionaryCard from './DictionaryCard';
+import EvolutionCard from './EvolutionCard';
 import FirstTimeClearRewardCard from '@/components/Multidex/FirstTimeClearRewardCard';
-import MovementCard from '@/components/Multidex/Units/MovementCard';
-import ArenaCard from '@/components/Multidex/Units/ArenaCard';
+import MovementCard from './MovementCard';
+import ArenaCard from './ArenaCard';
 
-import SummaryCard from '@/components/Multidex/Units/SummaryCard';
-import LeaderSkillCard from '@/components/Multidex/Units/LeaderSkillCard';
-import ExtraSkillCard from '@/components/Multidex/Units/ExtraSkillCard';
-import BurstCard from '@/components/Multidex/Units/BurstCard';
-import EnhancementsCard from '@/components/Multidex/Units/EnhancementsCard';
+import SummaryCard from './SummaryCard';
+import LeaderSkillCard from './LeaderSkillCard';
+import ExtraSkillCard from './ExtraSkillCard';
+import BurstCard from './BurstCard';
+import EnhancementsCard from './EnhancementsCard';
 
 import { getExtraAttacks, hasEvolutions } from '@/modules/core/units';
 import { mapGetters } from 'vuex';
