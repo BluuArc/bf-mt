@@ -654,6 +654,9 @@ export default {
         });
       }
     },
+    debounceSyncLocalFiltersToUrlFilters: debounce(function (...args) {
+      this.syncLocalFiltersToUrlFilters(...args);
+    }, 250),
     async syncUrlFiltersToLocalFilters () {
       if (Object.keys(this.inputFilters).length > 0) {
         // get from url
@@ -813,7 +816,7 @@ export default {
         } else if (typeof this.filterOptions.name !== 'string') {
           this.filterOptions.name = '';
         } else {
-          this.syncLocalFiltersToUrlFilters();
+          this.debounceSyncLocalFiltersToUrlFilters();
           this.debounceApplyFilters();
         }
       },
