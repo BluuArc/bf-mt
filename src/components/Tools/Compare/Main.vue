@@ -63,27 +63,35 @@
             :titleTopOffset="topNavbarHeight"
             :getTextForSource="getTextForSource"
           >
-            <span slot="allentrypreview" slot-scope="{ entries }">
-              <span v-for="source in entries" :key="getCompareInputKey(source)">
-                <v-chip small>
-                  <v-avatar
-                    v-if="getChipConfig(source).avatar"
-                    size="64"
-                    color="grey darken-1"
-                    tabindex="-1"
+            <span slot="allentrypreview" slot-scope="{ entries, effectId }">
+              <span v-for="entry in entries" :key="getCompareInputKey(entry.source)">
+                <template v-for="sourcePath in entry.sourcePaths">
+                  <v-chip
+                    :key="`${getCompareInputKey(entry.source)}-${effectId}-${sourcePath}`"
+                    :color="getChipConfig(entry.source, sourcePath).backgroundColor"
+                    :text-color="getChipConfig(entry.source, sourcePath).textColor"
+                    :outline="getChipConfig(entry.source, sourcePath).outline"
+                    small
                   >
-                    <img
-                      v-if="getChipConfig(source).avatarIsUrl"
-                      :src="getChipConfig(source).avatar"
-                    />
-                    <span
-                      v-else
-                      class="font-weight-bold"
-                      v-text="getChipConfig(source).avatar"
-                    />
-                  </v-avatar>
-                  {{ getChipConfig(source).name }}
-                </v-chip>
+                    <v-avatar
+                      v-if="getChipConfig(entry.source).avatar"
+                      size="64"
+                      color="grey darken-1"
+                      tabindex="-1"
+                    >
+                      <img
+                        v-if="getChipConfig(entry.source).avatarIsUrl"
+                        :src="getChipConfig(entry.source).avatar"
+                      />
+                      <span
+                        v-else
+                        class="font-weight-bold"
+                        v-text="getChipConfig(entry.source).avatar"
+                      />
+                    </v-avatar>
+                    {{ getChipConfig(entry.source, sourcePath).name }}
+                  </v-chip>
+                </template>
               </span>
             </span>
             <span
@@ -107,7 +115,7 @@
 
 <script>
 import { Logger } from '@/modules/Logger';
-import { COMPARE_KEY_ORDER, COMPARE_KEY_MAPPING } from '@/modules/constants';
+import { COMPARE_KEY_ORDER, COMPARE_KEY_MAPPING, MATERIAL_COLOR_MAPPING } from '@/modules/constants';
 import { convertCompareInputToCode, generateCompareInput, getEntryCardType } from '@/modules/core/compare';
 import { getEffectsListForUnit } from '@/modules/core/units';
 import { getEffectsListForItem } from '@/modules/core/items';
@@ -350,17 +358,28 @@ export default {
         type: getEntryCardType(type),
       };
     },
-    getChipConfig ({ type, id } = {}) {
+    getChipConfig ({ type, id } = {}, sourcePath) {
       let result = {
         name: id,
         avatar: '',
         avatarIsUrl: false,
+        backgroundColor: undefined,
+        textColor: undefined,
+        outline: false,
       };
       if (COMPARE_KEY_ORDER.includes(type)) {
         if (type === COMPARE_KEY_MAPPING.unit.key && this.unitsDb[id]) {
           result.name = this.unitsDb[id].name || id;
           result.avatar = this.$store.getters['units/getImageUrls'](id).ills_battle;
           result.avatarIsUrl = true;
+
+          const colorConfig = this.getColorMappingForSourcePath(sourcePath);
+          if (colorConfig) {
+            result.backgroundColor = colorConfig.background;
+            result.textColor = colorConfig.text;
+            result.name = `${result.name} (${sourcePath.split('.')[1].toUpperCase()})`;
+            result.outline = true;
+          }
         } else if (type === COMPARE_KEY_MAPPING.item.key && this.itemsDb[id]) {
           result.name = this.itemsDb[id].name || id;
           result.avatar = this.$store.getters['items/getImageUrl'](id, this.itemsDb[id]);
@@ -385,6 +404,9 @@ export default {
         result = `Extra Skill: ${name}`;
       }
       return result || initialValue || sourcePath;
+    },
+    getColorMappingForSourcePath (sourcePath = '') {
+      return (sourcePath.startsWith('unit.') && MATERIAL_COLOR_MAPPING.unit[sourcePath.split('.')[1]]) || undefined;
     },
   },
   watch: {

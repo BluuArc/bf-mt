@@ -19,6 +19,7 @@
               @viewmode="$v => viewMode = $v"
               :sources="buffSources"
               :getEffectsFromSource="getEffectsFromSource"
+              :getTextForSource="getTextForSource"
               :stickyTitles="false"
             >
               <span slot="allentrypreview" slot-scope="{ entries }">
@@ -62,6 +63,9 @@ export default {
     initialViewMode: {
       type: String,
       default: '',
+    },
+    getTextForSource: {
+      required: false,
     },
   },
   components: {

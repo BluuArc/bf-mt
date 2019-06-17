@@ -27,8 +27,8 @@
             :entries="getSourcesForEffectId(arrayEntry)"
             :effectId="arrayEntry"
           >
-            <div v-for="(source, i) in getSourcesForEffectId(arrayEntry)" :key="i">
-              {{ source }}
+            <div v-for="(entry, i) in getSourcesForEffectId(arrayEntry)" :key="i">
+              {{ entry }}
             </div>
           </slot>
         </div>
@@ -38,7 +38,7 @@
           <value-subgrid
             v-show="expandedTables[index]"
             :properties="propsById[arrayEntry]"
-            :values="getSourcesForEffectId(arrayEntry).map(s => getValueSubgridEntry(s, arrayEntry))"
+            :values="getSourcesForEffectId(arrayEntry).map(e => getValueSubgridEntry(e.source, arrayEntry))"
             :allowOverflow="true"
             :minValueColumnWidth="'300px'"
             :getTextForSource="getTextForSource"
@@ -245,10 +245,16 @@ export default {
     },
     getSourcesForEffectId (id) {
       const effectList = this.effectsById[id];
+      const sourcePathsBySource = new Map();
       if (!effectList) {
         logger.warn(`Missing effect id array [${id}]`, this.effectsById);
       }
-      return Array.from(new Set((effectList || []).map(e => e.source)));
+      (effectList || []).forEach(entry => {
+        const sourcePaths = sourcePathsBySource.get(entry.source) || new Set();
+        sourcePaths.add(entry.effect.sourcePath);
+        sourcePathsBySource.set(entry.source, sourcePaths);
+      });
+      return Array.from(sourcePathsBySource.entries()).map(([source, sourcePaths]) => ({ source, sourcePaths: Array.from(sourcePaths) }));
     },
     isHighlightedHeader (id) {
       return this.highlightedBuffIds.includes(id);

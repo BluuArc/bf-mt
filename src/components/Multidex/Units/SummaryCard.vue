@@ -6,14 +6,14 @@
     initialViewMode="target"
   >
     <span slot="allentrypreview" slot-scope="{ entries }">
-      <span v-for="source in entries" :key="source.sourceKey">
+      <span v-for="entry in entries" :key="entry.source.sourceKey">
         <v-chip
           small
           tabindex="-1"
-          :color="getColorMappingForSourceKey(source.sourceKey).background"
-          :text-color="getColorMappingForSourceKey(source.sourceKey).text"
+          :color="getColorMappingForSourceKey(entry.source.sourceKey).background"
+          :text-color="getColorMappingForSourceKey(entry.source.sourceKey).text"
         >
-          {{ source.sourceKey.toUpperCase() }}
+          {{ entry.source.sourceKey.toUpperCase() }}
         </v-chip>
       </span>
     </span>

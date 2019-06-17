@@ -17,27 +17,27 @@
     >
       <div
         class="expandable-list-entry--columns-preview-entry"
-        v-for="unitEntry in entries"
-        :key="`${unitEntry.id}-${unitEntry.position}`"
+        v-for="entry in entries"
+        :key="`${entry.source.id}-${entry.source.position}`"
       >
         <v-layout align-content-center row>
           <unit-thumbnail
             class="unit-thumbnail"
-            :src="getImageUrls(unitEntry.id).ills_battle"
-            :rarity="getUnit(unitEntry.id).rarity"
-            :imageTitle="getUnit(unitEntry.id).name"
+            :src="getImageUrls(entry.source.id).ills_battle"
+            :rarity="getUnit(entry.source.id).rarity"
+            :imageTitle="getUnit(entry.source.id).name"
             :displayWidth="thumbnailSize" :displayHeight="thumbnailSize">
             <template slot="after-image">
               <text
                 :x="0"
                 :y="thumbnailSize">
-                {{ !isNaN(unitEntry.bbOrder) ? unitEntry.bbOrder : '-' }}
+                {{ !isNaN(entry.source.bbOrder) ? entry.source.bbOrder : '-' }}
               </text>
             </template>
           </unit-thumbnail>
         </v-layout>
         <v-flex text-xs-center>
-          <span class="caption text-no-wrap">{{ unitEntry.position }}</span>
+          <span class="caption text-no-wrap">{{ entry.source.position }}</span>
         </v-flex>
       </div>
     </div>

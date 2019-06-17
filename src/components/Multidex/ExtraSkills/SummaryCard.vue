@@ -3,6 +3,7 @@
     :entry="skill"
     :buffSources="buffSources"
     :getEffectsFromSource="getEffectsFromSource"
+    :getTextForSource="getTextForSource"
   >
     <span slot="allentrypreview">
       <!-- show nothing, as there's only one source -->
@@ -42,6 +43,14 @@ export default {
     },
     getHeaderTextForSource ({ skill } = {}) {
       return skill.name || skill.id;
+    },
+    getTextForSource (sourcePath, source, initialValue) {
+      let result;
+      if (sourcePath === 'es' && this.skill) {
+        const name = (this.skill && this.skill.name) || source.id;
+        result = `Extra Skill: ${name}`;
+      }
+      return result || initialValue || sourcePath;
     },
   },
 };
