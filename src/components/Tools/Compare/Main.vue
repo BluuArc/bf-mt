@@ -63,6 +63,33 @@
             :titleTopOffset="topNavbarHeight"
             :getTextForSource="getTextForSource"
           >
+            <template slot="view-config-extra">
+              <section>
+                <v-layout row justify-center align-center class="pl-2">
+                  <v-flex xs2>
+                    Unit Chip View
+                  </v-flex>
+                  <v-flex xs5 class="text-xs-center">
+                    <v-btn
+                      flat
+                      :outline="!unitChipViewModeIsOutlined"
+                      @click="unitChipViewModeIsOutlined = false"
+                    >
+                      Filled
+                    </v-btn>
+                  </v-flex>
+                  <v-flex xs5 class="text-xs-center">
+                    <v-btn
+                      flat
+                      :outline="unitChipViewModeIsOutlined"
+                      @click="unitChipViewModeIsOutlined = true"
+                    >
+                      Outlined
+                    </v-btn>
+                  </v-flex>
+                </v-layout>
+              </section>
+            </template>
             <span slot="allentrypreview" slot-scope="{ entries, effectId }">
               <span v-for="entry in entries" :key="getCompareInputKey(entry.source)">
                 <template v-for="sourcePath in entry.sourcePaths">
@@ -179,6 +206,7 @@ export default {
       viewMode: '',
       topNavbarHeight: 56,
       currentTabIndex: 0,
+      unitChipViewModeIsOutlined: false,
     };
   },
   beforeMount () {
@@ -378,7 +406,7 @@ export default {
             result.backgroundColor = colorConfig.background;
             result.textColor = colorConfig.text;
             result.name = `${result.name} (${sourcePath.split('.')[1].toUpperCase()})`;
-            result.outline = true;
+            result.outline = !!this.unitChipViewModeIsOutlined;
           }
         } else if (type === COMPARE_KEY_MAPPING.item.key && this.itemsDb[id]) {
           result.name = this.itemsDb[id].name || id;

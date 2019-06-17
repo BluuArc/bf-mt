@@ -7,10 +7,10 @@
         </div>
         <section>
           <v-layout row justify-center align-center class="pl-2">
-            <v-flex style="flex: none">
+            <v-flex xs2>
               View Mode
             </v-flex>
-            <v-flex class="text-xs-center">
+            <v-flex xs5 class="text-xs-center">
               <v-btn
                 flat
                 :outline="viewMode === TARGET_VIEW_TYPE"
@@ -19,7 +19,7 @@
                 Target
               </v-btn>
             </v-flex>
-            <v-flex class="text-xs-center">
+            <v-flex xs5 class="text-xs-center">
               <v-btn
                 flat
                 :outline="viewMode === OVERVIEW_VIEW_TYPE"
@@ -41,6 +41,7 @@
             <v-btn flat @click="buffTables = defaultBuffTables.slice()">Reset to Default</v-btn>
           </section>
         </section>
+        <slot name="view-config-extra"></slot>
       </v-expansion-panel-content>
     </v-expansion-panel>
     <section class="buff-configuration-area my-2">
