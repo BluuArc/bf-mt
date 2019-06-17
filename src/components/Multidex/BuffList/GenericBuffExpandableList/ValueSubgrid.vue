@@ -173,10 +173,10 @@ export default {
     },
     getPropertyValue (prop, valueEntry) {
       const value = valueEntry[prop] !== undefined ? valueEntry[prop] : '-';
-      return [
-        typeof value === 'object' ? JSON.stringify(value) : value,
-        Array.isArray(value) && value.length === 0 && '(None)',
-      ].filter(v => v).join(' ');
+      const result = typeof value === 'object' ? JSON.stringify(value) : value;
+      return Array.isArray(value) && value.length === 0
+        ? `${result} (None)`
+        : result;
     },
   },
 };

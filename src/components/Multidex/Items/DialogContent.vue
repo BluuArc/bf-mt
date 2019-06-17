@@ -1,14 +1,14 @@
 <template>
   <dialog-content-base :entry="entry" :loadingEntryData="loadingEntryData">
     <v-container grid-list-lg>
-      <v-layout row v-if="hasEffects">
-        <v-flex>
-          <summary-card :item="entry" :logger="logger"/>
-        </v-flex>
-      </v-layout>
       <v-layout row>
         <v-flex>
           <general-info-card :item="entry" :logger="logger"/>
+        </v-flex>
+      </v-layout>
+      <v-layout row v-if="hasEffects">
+        <v-flex>
+          <summary-card :item="entry" :logger="logger"/>
         </v-flex>
       </v-layout>
       <v-layout row>
