@@ -10,7 +10,10 @@
     :filterTypes="filterTypes"
     :minRarity="1"
     :isUnit="true"
-    :onChangeButtonClick="switchViewMode">
+    :onChangeButtonClick="switchViewMode"
+    :getCompareName="(id, entry) => (entry && entry.name) || id"
+    compareType="unit"
+  >
     <v-layout row wrap slot="results" slot-scope="{ keys, getMultidexPathTo }">
       <template v-if="viewMode === 'card'">
         <v-flex
@@ -54,6 +57,14 @@
         :logger="logger"
         :pageDb="pageDb"
         :asyncGetById="getById"/>
+    </template>
+    <template slot="compare-input-selection" slot-scope="{ selectionId, selectionName }">
+      <v-chip small>
+        <v-avatar>
+          <img :src="getImageUrls(selectionId).ills_battle"/>
+        </v-avatar>
+        <span v-text="selectionName"/>
+      </v-chip>
     </template>
   </main-page-base>
 </template>

@@ -21,7 +21,7 @@
         z-index="500"
         left>
         <v-btn
-          @click="() => createNewComparison()"
+          @click="createNewComparison"
           fab
           small
           outline
@@ -37,7 +37,7 @@
         :key="compareCode"
         left>
         <v-btn
-          @click="() => addToExistingComparison()"
+          @click="addToExistingComparison"
           fab
           small
           outline

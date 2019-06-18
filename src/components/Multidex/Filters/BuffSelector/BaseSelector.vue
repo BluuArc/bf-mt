@@ -313,6 +313,10 @@ export default {
       background-color: var(--background-color-alt);
     }
 
+    .v-input--checkbox {
+      justify-content: center;
+    }
+
     .v-input--selection-controls__input {
       margin: auto;
     }

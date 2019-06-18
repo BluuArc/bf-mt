@@ -194,6 +194,46 @@
             :length="numPages"/>
         </div>
       </v-bottom-nav>
+      <template v-if="allSortedEntries.length > 0 && allSortedEntries.length < 100 && !(loadingFilters || loadingSorts)">
+        <v-dialog
+          v-model="showCompareInputDialog"
+          max-width="400px"
+        >
+          <template slot="activator" slot-scope="{ on }">
+            <v-btn
+              fab fixed
+              right bottom
+              color="primary"
+              v-on="on"
+            >
+              <v-icon>add</v-icon>
+            </v-btn>
+          </template>
+          <mass-add-compare-entry
+            :compareType="compareType"
+            :idsToConsider="allSortedEntries"
+            :getName="(id) => getCompareName(id, pageDb && pageDb[id])"
+            @close="$snackbar => { compareSnackbarOptions = $snackbar; showCompareInputDialog = false; }"
+          >
+            <template slot="selection" slot-scope="{ selectionId, selectionName }">
+              <slot name="compare-input-selection" :selectionId="selectionId" :selectionName="selectionName">
+                <span v-text="selectionName"/>
+              </slot>
+            </template>
+          </mass-add-compare-entry>
+        </v-dialog>
+        <v-snackbar
+          v-if="compareSnackbarOptions"
+          v-model="compareSnackbarOptions.value"
+          color="success"
+          bottom
+        >
+          {{ compareSnackbarOptions.message }}
+          <v-btn flat :to="compareSnackbarOptions.link">
+            View
+          </v-btn>
+        </v-snackbar>
+      </template>
     </template>
 
     <!-- results area -->
@@ -304,6 +344,7 @@ import ProcSelector from '@/components/Multidex/Filters/BuffSelector/ProcSelecto
 import PassiveSelector from '@/components/Multidex/Filters/BuffSelector/PassiveSelector';
 import BaseEntryCard from '@/components/Multidex/BaseEntryCard';
 import LadSelector from '@/components/Multidex/Filters/LandAreaDungeonSelector';
+import MassAddCompareEntry from '@/components/Tools/Compare/MassAddCompareEntry';
 
 let filterHelper = new FilterOptionsHelper();
 let logger = new Logger({ prefix: '[MULTIDEX/default]' });
@@ -369,6 +410,14 @@ export default {
     onInitDb: {
       type: Function,
     },
+    compareType: {
+      type: String,
+      default: '',
+    },
+    getCompareName: {
+      type: Function,
+      default: (id, pageDb) => (pageDb[id] && `${pageDb[id].name} (${id})`) || id,
+    },
   },
   components: {
     LoadingIndicator,
@@ -380,6 +429,7 @@ export default {
     PassiveSelector,
     BaseEntryCard,
     LadSelector,
+    MassAddCompareEntry,
   },
   computed: {
     ...mapState('settings', ['activeServer']),
@@ -494,6 +544,7 @@ export default {
       showProcSelector: false,
       showPassiveSelector: false,
       showLadSelector: false,
+      showCompareInputDialog: false,
     };
     return {
       sortOptions,
@@ -506,6 +557,7 @@ export default {
       isVisuallyLoadingFromOptions: false,
       ...resultViewConfig,
       ...showBooleans,
+      compareSnackbarOptions: null,
     };
   },
   methods: {

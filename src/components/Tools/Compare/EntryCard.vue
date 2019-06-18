@@ -6,13 +6,15 @@
       :to="multidexLink"
     />
     <v-card-actions>
-      <v-spacer/>
-      <v-btn flat @click="$emit('remove')">
-        <v-icon left>
-          clear
-        </v-icon>
-        Remove
-      </v-btn>
+      <slot name="actions">
+        <v-spacer/>
+        <v-btn flat @click="$emit('remove')">
+          <v-icon left>
+            clear
+          </v-icon>
+          Remove
+        </v-btn>
+      </slot>
     </v-card-actions>
   </v-card>
 </template>
@@ -37,6 +39,10 @@ export default {
       type: String,
       required: true,
     },
+    useMultidexLink: {
+      type: Boolean,
+      default: true,
+    },
   },
   components: {
     UnitEntryCard,
@@ -52,7 +58,7 @@ export default {
     },
     multidexLink () {
       const multidexModule = (COMPARE_KEY_MAPPING[this.type] || {}).multidexKey;
-      return multidexModule
+      return multidexModule && this.useMultidexLink
         ? this.$store.getters[`${multidexModule}/getMultidexPathTo`](this.entry.id)
         : '';
     },
