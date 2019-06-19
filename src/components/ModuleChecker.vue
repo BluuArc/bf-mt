@@ -3,7 +3,7 @@
     <v-slide-y-transition mode="out-in">
       <v-container
         v-if="isVisuallyInitializing || checkingAvailableModules || isExternallyLoading || ensuringDbSync"
-        :key="loadingMessage"
+        key="loadingMessage"
         fill-height
         justify-center>
         <v-layout column align-center justify-center v-if="isPostMount">
@@ -23,7 +23,7 @@
       </v-container>
       <v-container
         v-else-if="missingModules.length > 0"
-        :key="missingModuleMessage"
+        key="missingModuleMessage"
         fill-height
         justify-center>
         <v-layout column align-center justify-center>

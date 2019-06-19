@@ -81,7 +81,7 @@ export default {
       return this.effects
         .map(this.processEffect)
         .map((e, index) => {
-          const { values, ...parent } = e;
+          const { values = [], ...parent } = e;
           return values.map(val => ({ ...val, parent, index }));
         }).reduce((acc, val) => acc.concat(val), []);
     },

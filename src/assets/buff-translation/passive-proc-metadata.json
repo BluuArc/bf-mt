@@ -492,7 +492,7 @@
     },
     "127": {
       "ID": "127",
-      "Name": "Damage over Time Mitigation",
+      "Name": "Damage over Time (DoT) Mitigation",
       "In Project Doc": "Y"
     },
     "128": {
@@ -1251,7 +1251,7 @@
     },
     "126": {
       "ID": "126",
-      "Name": "Damage over Time Mitigation",
+      "Name": "Damage over Time (DoT) Mitigation",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -1518,6 +1518,30 @@
       "Name": "%HP Scaling Damage",
       "In Project Doc": "Y",
       "Type": "Attack",
+      "col-4": "",
+      "col-5": ""
+    },
+    "11001": {
+      "ID": "11001",
+      "Name": "Max HP% DoT of Weaker Element Enemies",
+      "In Project Doc": "N",
+      "Type": "",
+      "col-4": "",
+      "col-5": ""
+    },
+    "11002": {
+      "ID": "11002",
+      "Name": "HP Limit Break, Convert to HP",
+      "In Project Doc": "N",
+      "Type": "",
+      "col-4": "",
+      "col-5": ""
+    },
+    "11003": {
+      "ID": "11003",
+      "Name": "Negate Lock and Turn Skip Effects",
+      "In Project Doc": "N",
+      "Type": "",
       "col-4": "",
       "col-5": ""
     },

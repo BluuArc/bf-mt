@@ -3308,20 +3308,30 @@
           ]
         },
         {
-          "value": "85",
+          "value": "120",
           "context": [
             "units",
-            "820508-gl",
+            "810757-gl",
             "leader skill",
             "effects",
             "0"
           ]
         },
         {
-          "value": "120",
+          "value": "140",
           "context": [
             "units",
-            "820578-gl",
+            "810758-gl",
+            "leader skill",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "85",
+          "context": [
+            "units",
+            "820508-gl",
             "leader skill",
             "effects",
             "0"
@@ -3507,6 +3517,16 @@
             "effects",
             "0",
             "add to passive"
+          ]
+        },
+        {
+          "value": "140",
+          "context": [
+            "units",
+            "810758-gl",
+            "leader skill",
+            "effects",
+            "0"
           ]
         },
         {
@@ -3706,6 +3726,16 @@
           "context": [
             "units",
             "810558-gl",
+            "leader skill",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "140",
+          "context": [
+            "units",
+            "810758-gl",
             "leader skill",
             "effects",
             "0"
@@ -5276,6 +5306,15 @@
             "effect",
             "0"
           ]
+        },
+        {
+          "value": "20",
+          "context": [
+            "items",
+            "819249-gl",
+            "effect",
+            "2"
+          ]
         }
       ],
       "conditions": [
@@ -5900,6 +5939,16 @@
           "context": [
             "units",
             "10236-gl",
+            "extra skill",
+            "effects",
+            "1"
+          ]
+        },
+        {
+          "value": "party",
+          "context": [
+            "units",
+            "730227-gl",
             "extra skill",
             "effects",
             "1"
@@ -7294,6 +7343,15 @@
           ]
         },
         {
+          "value": "50",
+          "context": [
+            "items",
+            "819249-gl",
+            "effect",
+            "3"
+          ]
+        },
+        {
           "value": "2",
           "context": [
             "es",
@@ -8647,6 +8705,16 @@
           ]
         },
         {
+          "value": "20",
+          "context": [
+            "units",
+            "810757-gl",
+            "extra skill",
+            "effects",
+            "0"
+          ]
+        },
+        {
           "value": "25",
           "context": [
             "units",
@@ -8746,6 +8814,16 @@
             "extra skill",
             "effects",
             "1"
+          ]
+        },
+        {
+          "value": "20",
+          "context": [
+            "units",
+            "810757-gl",
+            "extra skill",
+            "effects",
+            "0"
           ]
         },
         {
@@ -8857,6 +8935,16 @@
             "extra skill",
             "effects",
             "1"
+          ]
+        },
+        {
+          "value": "party",
+          "context": [
+            "units",
+            "810757-gl",
+            "extra skill",
+            "effects",
+            "0"
           ]
         }
       ],
@@ -9148,6 +9236,16 @@
           ]
         },
         {
+          "value": "30",
+          "context": [
+            "units",
+            "810758-gl",
+            "leader skill",
+            "effects",
+            "4"
+          ]
+        },
+        {
           "value": "10",
           "context": [
             "units",
@@ -9184,16 +9282,6 @@
             "effects",
             "0",
             "passive"
-          ]
-        },
-        {
-          "value": "30",
-          "context": [
-            "units",
-            "820567-gl",
-            "leader skill",
-            "effects",
-            "3"
           ]
         },
         {
@@ -16430,6 +16518,16 @@
           ]
         },
         {
+          "value": "[{\"item required\":[\"819231\"]},{\"sphere category required\":\"BB Gauge\",\"sphere category required (raw)\":\"6\"}]",
+          "context": [
+            "units",
+            "840708-gl",
+            "extra skill",
+            "effects",
+            "0"
+          ]
+        },
+        {
           "value": "[{\"item required\":[\"47205\"]}]",
           "context": [
             "units",
@@ -17704,6 +17802,16 @@
           ]
         },
         {
+          "value": "{\"buff turns (36)\":\"2\",\"dmg reduction% buff\":20}",
+          "context": [
+            "units",
+            "730227-gl",
+            "leader skill",
+            "effects",
+            "1"
+          ]
+        },
+        {
           "value": "{\"buff turns (37)\":\"5\",\"increase bb gauge gradual buff\":1000}",
           "context": [
             "units",
@@ -17728,16 +17836,6 @@
           "context": [
             "units",
             "730226-eu",
-            "leader skill",
-            "effects",
-            "2"
-          ]
-        },
-        {
-          "value": "{\"buff turns (36)\":\"2\",\"dmg reduction% buff\":20}",
-          "context": [
-            "units",
-            "730227-eu",
             "leader skill",
             "effects",
             "2"
@@ -17923,6 +18021,16 @@
             "extra skill",
             "effects",
             "3"
+          ]
+        },
+        {
+          "value": "70",
+          "context": [
+            "units",
+            "730227-gl",
+            "leader skill",
+            "effects",
+            "1"
           ]
         },
         {
@@ -21685,6 +21793,107 @@
           ]
         },
         {
+          "value": "[{\"effect delay time(ms)/frame\":\"0.0/0\",\"heal high\":5000,\"heal low\":4500,\"proc id\":\"2\",\"rec added% (from healer)\":40,\"target area\":\"aoe\",\"target type\":\"party\"}]",
+          "context": [
+            "units",
+            "810758-gl",
+            "extra skill",
+            "effects",
+            "3"
+          ]
+        },
+        {
+          "value": "[{\"def% buff\":200,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"10000\",\"target area\":\"single\",\"target type\":\"self\",\"taunt turns (10000)\":2}]",
+          "context": [
+            "units",
+            "810758-gl",
+            "feskills",
+            "5",
+            "skill",
+            "effects",
+            "0",
+            "passive"
+          ]
+        },
+        {
+          "value": "[{\"bb added atk% based on hp\":500,\"bb added atk% proportional to hp\":\"remaining\",\"bb base atk%\":200,\"bb flat atk\":200,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"47\",\"target area\":\"aoe\",\"target type\":\"enemy\"}]",
+          "context": [
+            "units",
+            "810758-gl",
+            "feskills",
+            "7",
+            "skill",
+            "effects",
+            "0",
+            "passive"
+          ]
+        },
+        {
+          "value": "[{\"effect delay time(ms)/frame\":\"0.0/0\",\"target area\":\"aoe\",\"target type\":\"party\",\"unknown proc id\":\"70002\",\"unknown proc param\":\"0.25,3,0,0,0,0,0,0,0\"}]",
+          "context": [
+            "units",
+            "810758-gl",
+            "feskills",
+            "8",
+            "skill",
+            "effects",
+            "0",
+            "passive"
+          ]
+        },
+        {
+          "value": "[{\"atk buff chance%\":30,\"atk% buff (153)\":-25,\"buff turns\":3,\"debuff turns\":2,\"def buff chance%\":30,\"def% buff (154)\":-25,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"130\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+          "context": [
+            "units",
+            "810758-gl",
+            "feskills",
+            "9",
+            "skill",
+            "effects",
+            "0",
+            "passive"
+          ]
+        },
+        {
+          "value": "[{\"effect delay time(ms)/frame\":\"0.0/0\",\"increase bb gauge gradual\":10,\"increase bb gauge gradual turns (37)\":3,\"proc id\":\"19\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+          "context": [
+            "units",
+            "810758-gl",
+            "feskills",
+            "10",
+            "skill",
+            "effects",
+            "0",
+            "passive"
+          ]
+        },
+        {
+          "value": "[{\"effect delay time(ms)/frame\":\"0.0/0\",\"target area\":\"aoe\",\"target type\":\"100\",\"unknown proc id\":\"10019\",\"unknown proc param\":\"1,13,124,46,137,0,0,0,0,35\"}]",
+          "context": [
+            "units",
+            "810758-gl",
+            "feskills",
+            "11",
+            "skill",
+            "effects",
+            "0",
+            "passive"
+          ]
+        },
+        {
+          "value": "[{\"effect delay time(ms)/frame\":\"0.0/0\",\"target area\":\"aoe\",\"target type\":\"100\",\"unknown proc id\":\"10025\",\"unknown proc param\":\"10510,6,2,0,0\"}]",
+          "context": [
+            "units",
+            "810758-gl",
+            "feskills",
+            "12",
+            "skill",
+            "effects",
+            "0",
+            "passive"
+          ]
+        },
+        {
           "value": "[{\"bb atk% buff\":450,\"buff turns (72)\":3,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"45\",\"sbb atk% buff\":450,\"target area\":\"aoe\",\"target type\":\"party\",\"ubb atk% buff\":450}]",
           "context": [
             "units",
@@ -22315,6 +22524,42 @@
           ]
         },
         {
+          "value": "[{\"effect delay time(ms)/frame\":\"0.0/0\",\"increase od gauge%\":12,\"proc id\":\"43\",\"target area\":\"single\",\"target type\":\"self\"}]",
+          "context": [
+            "units",
+            "720237-gl",
+            "extra skill",
+            "effects",
+            "4"
+          ]
+        },
+        {
+          "value": "[{\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"58\",\"spark dmg received apply%\":100,\"spark dmg received debuff turns (94)\":3,\"spark dmg% received\":30,\"target area\":\"aoe\",\"target type\":\"enemy\"}]",
+          "context": [
+            "units",
+            "720237-gl",
+            "feskills",
+            "4",
+            "skill",
+            "effects",
+            "0",
+            "passive"
+          ]
+        },
+        {
+          "value": "[{\"atk down resist% (120)\":100,\"def down resist% (121)\":100,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"73\",\"rec down resist% (122)\":100,\"stat down immunity buff turns\":3,\"target area\":\"aoe\",\"target type\":\"party\"}]",
+          "context": [
+            "units",
+            "720237-gl",
+            "feskills",
+            "8",
+            "skill",
+            "effects",
+            "0",
+            "passive"
+          ]
+        },
+        {
           "value": "[{\"additional element used for attack check\":\"thunder\",\"bb atk%\":620,\"bb flat atk\":200,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"97\",\"target area\":\"aoe\",\"target type\":\"enemy\"}]",
           "context": [
             "units",
@@ -22625,19 +22870,6 @@
           ]
         },
         {
-          "value": "[{\"def% buff\":200,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"10000\",\"target area\":\"single\",\"target type\":\"self\",\"taunt turns (10000)\":2}]",
-          "context": [
-            "units",
-            "820568-gl",
-            "feskills",
-            "9",
-            "skill",
-            "effects",
-            "0",
-            "passive"
-          ]
-        },
-        {
           "value": "[{\"angel idol buff turns (91)\":999,\"angel idol recover chance%\":15,\"angel idol recover hp%\":1,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"56\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
           "context": [
             "units",
@@ -22752,19 +22984,6 @@
           ]
         },
         {
-          "value": "[{\"atk down resist% (120)\":100,\"def down resist% (121)\":100,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"73\",\"rec down resist% (122)\":100,\"stat down immunity buff turns\":3,\"target area\":\"aoe\",\"target type\":\"party\"}]",
-          "context": [
-            "units",
-            "820628-gl",
-            "feskills",
-            "5",
-            "skill",
-            "effects",
-            "2",
-            "passive"
-          ]
-        },
-        {
           "value": "[{\"buff turns\":3,\"effect delay time(ms)/frame\":\"0.0/0\",\"poison% buff\":25,\"proc id\":\"40\",\"sick% buff\":25,\"target area\":\"aoe\",\"target type\":\"party\",\"weaken% buff\":25}]",
           "context": [
             "units",
@@ -22875,19 +23094,6 @@
             "820678-gl",
             "feskills",
             "7",
-            "skill",
-            "effects",
-            "0",
-            "passive"
-          ]
-        },
-        {
-          "value": "[{\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"58\",\"spark dmg received apply%\":100,\"spark dmg received debuff turns (94)\":3,\"spark dmg% received\":30,\"target area\":\"aoe\",\"target type\":\"enemy\"}]",
-          "context": [
-            "units",
-            "820678-gl",
-            "feskills",
-            "10",
             "skill",
             "effects",
             "0",
@@ -23471,6 +23677,120 @@
           ]
         },
         {
+          "value": "[{\"effect delay time(ms)/frame\":\"0.0/0\",\"elemental barrier absorb dmg%\":100,\"elemental barrier def\":0,\"elemental barrier element\":\"earth\",\"elemental barrier hp\":6000,\"proc id\":\"62\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+          "context": [
+            "units",
+            "730227-gl",
+            "extra skill",
+            "effects",
+            "4"
+          ]
+        },
+        {
+          "value": "[{\"effect delay time(ms)/frame\":\"0.0/0\",\"target area\":\"aoe\",\"target type\":\"party\",\"unknown proc id\":\"126\",\"unknown proc param\":\"25,3,0\"}]",
+          "context": [
+            "units",
+            "730227-gl",
+            "feskills",
+            "7",
+            "skill",
+            "effects",
+            "0",
+            "passive"
+          ]
+        },
+        {
+          "value": "[{\"buff turns\":2,\"effect delay time(ms)/frame\":\"0.0/0\",\"mitigate fire attacks (21)\":15,\"proc id\":\"16\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+          "context": [
+            "units",
+            "730227-gl",
+            "feskills",
+            "9",
+            "skill",
+            "effects",
+            "0",
+            "passive"
+          ]
+        },
+        {
+          "value": "[{\"buff turns\":2,\"effect delay time(ms)/frame\":\"0.0/0\",\"mitigate water attacks (22)\":15,\"proc id\":\"16\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+          "context": [
+            "units",
+            "730227-gl",
+            "feskills",
+            "9",
+            "skill",
+            "effects",
+            "1",
+            "passive"
+          ]
+        },
+        {
+          "value": "[{\"buff turns\":2,\"effect delay time(ms)/frame\":\"0.0/0\",\"mitigate earth attacks (23)\":15,\"proc id\":\"16\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+          "context": [
+            "units",
+            "730227-gl",
+            "feskills",
+            "9",
+            "skill",
+            "effects",
+            "2",
+            "passive"
+          ]
+        },
+        {
+          "value": "[{\"buff turns\":2,\"effect delay time(ms)/frame\":\"0.0/0\",\"mitigate thunder attacks (24)\":15,\"proc id\":\"16\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+          "context": [
+            "units",
+            "730227-gl",
+            "feskills",
+            "9",
+            "skill",
+            "effects",
+            "3",
+            "passive"
+          ]
+        },
+        {
+          "value": "[{\"buff turns\":2,\"effect delay time(ms)/frame\":\"0.0/0\",\"mitigate light attacks (25)\":15,\"proc id\":\"16\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+          "context": [
+            "units",
+            "730227-gl",
+            "feskills",
+            "9",
+            "skill",
+            "effects",
+            "4",
+            "passive"
+          ]
+        },
+        {
+          "value": "[{\"buff turns\":2,\"effect delay time(ms)/frame\":\"0.0/0\",\"mitigate dark attacks (26)\":15,\"proc id\":\"16\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+          "context": [
+            "units",
+            "730227-gl",
+            "feskills",
+            "9",
+            "skill",
+            "effects",
+            "5",
+            "passive"
+          ]
+        },
+        {
+          "value": "[{\"crit vuln chance%\":50,\"crit vuln dmg% (157)\":30,\"effect delay time(ms)/frame\":\"0.0/0\",\"elemental vuln chance%\":50,\"elemental vuln dmg% (158)\":30,\"proc id\":\"132\",\"target area\":\"aoe\",\"target type\":\"enemy\",\"vuln turns\":2}]",
+          "context": [
+            "units",
+            "730227-gl",
+            "feskills",
+            "10",
+            "skill",
+            "effects",
+            "0",
+            "passive"
+          ]
+        },
+        {
           "value": "[{\"buff turns (84)\":3,\"crit multiplier%\":125,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"54\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
           "context": [
             "units",
@@ -23822,19 +24142,6 @@
             "830558-gl",
             "feskills",
             "7",
-            "skill",
-            "effects",
-            "0",
-            "passive"
-          ]
-        },
-        {
-          "value": "[{\"effect delay time(ms)/frame\":\"0.0/0\",\"increase bb gauge gradual\":10,\"increase bb gauge gradual turns (37)\":3,\"proc id\":\"19\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
-          "context": [
-            "units",
-            "830558-gl",
-            "feskills",
-            "8",
             "skill",
             "effects",
             "0",
@@ -24738,20 +25045,7 @@
           ]
         },
         {
-          "value": "[{\"effect delay time(ms)/frame\":\"0.0/0\",\"target area\":\"aoe\",\"target type\":\"party\",\"unknown proc id\":\"70002\",\"unknown proc param\":\"0.25,3,0,0,0,0,0,0,0\"}]",
-          "context": [
-            "units",
-            "840628-gl",
-            "feskills",
-            "11",
-            "skill",
-            "effects",
-            "0",
-            "passive"
-          ]
-        },
-        {
-          "value": "[{\"effect delay time(ms)/frame\":\"0.0/0\",\"target area\":\"aoe\",\"target type\":\"enemy\",\"unknown proc id\":\"10021\",\"unknown proc param\":\"40,2,0\"}]",
+          "value": "[{\"effect delay time(ms)/frame\":\"0.0/0\",\"target area\":\"aoe\",\"target type\":\"100\",\"unknown proc id\":\"10021\",\"unknown proc param\":\"40,2,0\"}]",
           "context": [
             "units",
             "840658-gl",
@@ -24770,6 +25064,19 @@
             "840658-gl",
             "feskills",
             "11",
+            "skill",
+            "effects",
+            "0",
+            "passive"
+          ]
+        },
+        {
+          "value": "[{\"atk% buff (13)\":155,\"buff turns\":4,\"crit% buff (16)\":60,\"def% buff (14)\":155,\"effect delay time(ms)/frame\":\"0.0/0\",\"element buffed\":\"thunder\",\"proc id\":\"5\",\"rec% buff (15)\":155,\"target area\":\"aoe\",\"target type\":\"party\"}]",
+          "context": [
+            "units",
+            "840708-gl",
+            "feskills",
+            "5",
             "skill",
             "effects",
             "0",
@@ -25517,19 +25824,6 @@
           ]
         },
         {
-          "value": "[{\"effect delay time(ms)/frame\":\"0.0/0\",\"target area\":\"aoe\",\"target type\":\"100\",\"unknown proc id\":\"10019\",\"unknown proc param\":\"1,13,124,46,137,0,0,0,0,35\"}]",
-          "context": [
-            "units",
-            "850658-gl",
-            "feskills",
-            "11",
-            "skill",
-            "effects",
-            "0",
-            "passive"
-          ]
-        },
-        {
           "value": "[{\"atk% buff (13)\":155,\"buff turns\":4,\"crit% buff (16)\":60,\"def% buff (14)\":155,\"effect delay time(ms)/frame\":\"0.0/0\",\"element buffed\":\"light\",\"proc id\":\"5\",\"rec% buff (15)\":155,\"target area\":\"aoe\",\"target type\":\"party\"}]",
           "context": [
             "units",
@@ -25556,19 +25850,6 @@
           ]
         },
         {
-          "value": "[{\"effect delay time(ms)/frame\":\"0.0/0\",\"heal high\":5000,\"heal low\":4500,\"proc id\":\"2\",\"rec added% (from healer)\":40,\"target area\":\"aoe\",\"target type\":\"party\"}]",
-          "context": [
-            "units",
-            "850728-gl",
-            "feskills",
-            "6",
-            "skill",
-            "effects",
-            "0",
-            "passive"
-          ]
-        },
-        {
           "value": "[{\"buff turns\":4,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"23\",\"spark dmg% buff (40)\":200,\"target area\":\"aoe\",\"target type\":\"party\"}]",
           "context": [
             "units",
@@ -25588,19 +25869,6 @@
             "850728-gl",
             "feskills",
             "10",
-            "skill",
-            "effects",
-            "0",
-            "passive"
-          ]
-        },
-        {
-          "value": "[{\"effect delay time(ms)/frame\":\"0.0/0\",\"target area\":\"aoe\",\"target type\":\"100\",\"unknown proc id\":\"10025\",\"unknown proc param\":\"10510,6,2,0,0\"}]",
-          "context": [
-            "units",
-            "850728-gl",
-            "feskills",
-            "11",
             "skill",
             "effects",
             "0",
@@ -27844,19 +28112,6 @@
             "820418-eu",
             "feskills",
             "8",
-            "skill",
-            "effects",
-            "0",
-            "passive"
-          ]
-        },
-        {
-          "value": "[{\"effect delay time(ms)/frame\":\"0.0/0\",\"elemental barrier absorb dmg%\":100,\"elemental barrier def\":0,\"elemental barrier element\":\"earth\",\"elemental barrier hp\":6000,\"proc id\":\"62\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
-          "context": [
-            "units",
-            "31067-eu",
-            "feskills",
-            "6",
             "skill",
             "effects",
             "0",
@@ -30686,7 +30941,7 @@
           "value": "30",
           "context": [
             "units",
-            "820298-gl",
+            "720237-gl",
             "leader skill",
             "effects",
             "4"
@@ -31392,7 +31647,7 @@
           "value": "party",
           "context": [
             "units",
-            "820047-gl",
+            "810757-gl",
             "extra skill",
             "effects",
             "1"
@@ -34262,6 +34517,16 @@
           "context": [
             "units",
             "21007-gl",
+            "leader skill",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "{\"atk% buff (1)\":120,\"buff turns (1)\":\"2\"}",
+          "context": [
+            "units",
+            "720237-gl",
             "leader skill",
             "effects",
             "2"
@@ -38844,6 +39109,19 @@
           ]
         },
         {
+          "value": "50,3$0$0$0$0$0$2.25",
+          "context": [
+            "units",
+            "730227-gl",
+            "feskills",
+            "6",
+            "skill",
+            "effects",
+            "0",
+            "passive"
+          ]
+        },
+        {
           "value": "50,4$0$0$0$0$0$2.25",
           "context": [
             "units",
@@ -39105,7 +39383,7 @@
           ]
         },
         {
-          "value": "1,15$15$15$0$15",
+          "value": "1,15$15$15$0$15\n",
           "context": [
             "items",
             "819227-gl",
@@ -39277,6 +39555,16 @@
           ]
         },
         {
+          "value": "0,0,30,30,50,0",
+          "context": [
+            "units",
+            "810758-gl",
+            "extra skill",
+            "effects",
+            "4"
+          ]
+        },
+        {
           "value": "0,0,30,30,10,0",
           "context": [
             "units",
@@ -39321,10 +39609,10 @@
           "value": "[]",
           "context": [
             "units",
-            "40977-gl",
+            "810758-gl",
             "extra skill",
             "effects",
-            "2"
+            "4"
           ]
         }
       ],
@@ -39333,10 +39621,10 @@
           "value": "self",
           "context": [
             "units",
-            "40977-gl",
+            "810758-gl",
             "extra skill",
             "effects",
-            "2"
+            "4"
           ]
         }
       ]

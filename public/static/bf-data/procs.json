@@ -4696,6 +4696,17 @@
           ]
         },
         {
+          "value": "800",
+          "context": [
+            "bbs",
+            "13380472-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
+          ]
+        },
+        {
           "value": "1250",
           "context": [
             "bbs",
@@ -4733,17 +4744,6 @@
           "context": [
             "bbs",
             "201421-gl",
-            "levels",
-            "0",
-            "effects",
-            "0"
-          ]
-        },
-        {
-          "value": "800",
-          "context": [
-            "bbs",
-            "201423-gl",
             "levels",
             "0",
             "effects",
@@ -9813,6 +9813,18 @@
           ]
         },
         {
+          "value": "5000",
+          "context": [
+            "units",
+            "810758-gl",
+            "extra skill",
+            "effects",
+            "3",
+            "triggered effect",
+            "0"
+          ]
+        },
+        {
           "value": "600",
           "context": [
             "units",
@@ -10696,18 +10708,6 @@
             "bb",
             "levels",
             "8",
-            "effects",
-            "2"
-          ]
-        },
-        {
-          "value": "5000",
-          "context": [
-            "units",
-            "820438-gl",
-            "bb",
-            "levels",
-            "9",
             "effects",
             "2"
           ]
@@ -11826,6 +11826,28 @@
           "context": [
             "bbs",
             "13380420-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "3500000",
+          "context": [
+            "bbs",
+            "13380521-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "2500000",
+          "context": [
+            "bbs",
+            "13380523-gl",
             "levels",
             "0",
             "effects",
@@ -14658,6 +14680,18 @@
           ]
         },
         {
+          "value": "4500",
+          "context": [
+            "units",
+            "810758-gl",
+            "extra skill",
+            "effects",
+            "3",
+            "triggered effect",
+            "0"
+          ]
+        },
+        {
           "value": "400",
           "context": [
             "units",
@@ -15457,18 +15491,6 @@
             "bb",
             "levels",
             "8",
-            "effects",
-            "2"
-          ]
-        },
-        {
-          "value": "4500",
-          "context": [
-            "units",
-            "820438-gl",
-            "bb",
-            "levels",
-            "9",
             "effects",
             "2"
           ]
@@ -16714,6 +16736,28 @@
           ]
         },
         {
+          "value": "3500000",
+          "context": [
+            "bbs",
+            "13380521-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "2500000",
+          "context": [
+            "bbs",
+            "13380523-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
           "value": "10500000",
           "context": [
             "bbs",
@@ -17415,17 +17459,6 @@
             "0",
             "effects",
             "0"
-          ]
-        },
-        {
-          "value": "2500000",
-          "context": [
-            "bbs",
-            "8471102-gl",
-            "levels",
-            "0",
-            "effects",
-            "2"
           ]
         },
         {
@@ -25939,6 +25972,18 @@
           ]
         },
         {
+          "value": "4",
+          "context": [
+            "units",
+            "810758-gl",
+            "ubb",
+            "levels",
+            "0",
+            "effects",
+            "3"
+          ]
+        },
+        {
           "value": "1",
           "context": [
             "units",
@@ -25961,18 +26006,6 @@
             "0",
             "effects",
             "1"
-          ]
-        },
-        {
-          "value": "4",
-          "context": [
-            "units",
-            "840628-gl",
-            "ubb",
-            "levels",
-            "0",
-            "effects",
-            "5"
           ]
         },
         {
@@ -29982,12 +30015,12 @@
           "value": "4",
           "context": [
             "units",
-            "820718-gl",
+            "810758-gl",
             "ubb",
             "levels",
             "0",
             "effects",
-            "1"
+            "2"
           ]
         },
         {
@@ -30005,7 +30038,7 @@
           "value": "99",
           "context": [
             "bbs",
-            "13380550-gl",
+            "13380516-gl",
             "levels",
             "0",
             "effects",
@@ -32016,6 +32049,102 @@
           ]
         },
         {
+          "value": "119",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "1",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "123",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "2",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "127",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "3",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "131",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "4",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "139",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "6",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "143",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "7",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "147",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "8",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "155",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "9",
+            "effects",
+            "2"
+          ]
+        },
+        {
           "value": "54",
           "context": [
             "units",
@@ -32037,45 +32166,6 @@
             "1",
             "effects",
             "3"
-          ]
-        },
-        {
-          "value": "123",
-          "context": [
-            "units",
-            "820378-gl",
-            "sbb",
-            "levels",
-            "3",
-            "effects",
-            "3"
-          ]
-        },
-        {
-          "value": "127",
-          "context": [
-            "units",
-            "820378-gl",
-            "sbb",
-            "levels",
-            "7",
-            "effects",
-            "3"
-          ]
-        },
-        {
-          "value": "155",
-          "context": [
-            "units",
-            "820558-gl",
-            "feskills",
-            "11",
-            "skill",
-            "effects",
-            "0",
-            "passive",
-            "triggered effect",
-            "0"
           ]
         },
         {
@@ -32211,18 +32301,6 @@
           ]
         },
         {
-          "value": "139",
-          "context": [
-            "units",
-            "860178-gl",
-            "bb",
-            "levels",
-            "2",
-            "effects",
-            "4"
-          ]
-        },
-        {
           "value": "141",
           "context": [
             "units",
@@ -32230,30 +32308,6 @@
             "bb",
             "levels",
             "3",
-            "effects",
-            "4"
-          ]
-        },
-        {
-          "value": "143",
-          "context": [
-            "units",
-            "860178-gl",
-            "bb",
-            "levels",
-            "4",
-            "effects",
-            "4"
-          ]
-        },
-        {
-          "value": "147",
-          "context": [
-            "units",
-            "860178-gl",
-            "bb",
-            "levels",
-            "6",
             "effects",
             "4"
           ]
@@ -38060,6 +38114,126 @@
           ]
         },
         {
+          "value": "115",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "0",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "119",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "1",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "123",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "2",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "127",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "3",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "131",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "4",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "135",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "5",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "139",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "6",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "143",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "7",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "147",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "8",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "155",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "9",
+            "effects",
+            "2"
+          ]
+        },
+        {
           "value": "121",
           "context": [
             "units",
@@ -38067,18 +38241,6 @@
             "sbb",
             "levels",
             "1",
-            "effects",
-            "3"
-          ]
-        },
-        {
-          "value": "123",
-          "context": [
-            "units",
-            "820378-gl",
-            "sbb",
-            "levels",
-            "3",
             "effects",
             "3"
           ]
@@ -38093,33 +38255,6 @@
             "5",
             "effects",
             "3"
-          ]
-        },
-        {
-          "value": "127",
-          "context": [
-            "units",
-            "820378-gl",
-            "sbb",
-            "levels",
-            "7",
-            "effects",
-            "3"
-          ]
-        },
-        {
-          "value": "155",
-          "context": [
-            "units",
-            "820558-gl",
-            "feskills",
-            "11",
-            "skill",
-            "effects",
-            "0",
-            "passive",
-            "triggered effect",
-            "0"
           ]
         },
         {
@@ -38168,30 +38303,6 @@
             "7",
             "effects",
             "2"
-          ]
-        },
-        {
-          "value": "115",
-          "context": [
-            "units",
-            "840628-gl",
-            "sbb",
-            "levels",
-            "2",
-            "effects",
-            "5"
-          ]
-        },
-        {
-          "value": "135",
-          "context": [
-            "units",
-            "840628-gl",
-            "sbb",
-            "levels",
-            "6",
-            "effects",
-            "5"
           ]
         },
         {
@@ -38814,6 +38925,126 @@
           ]
         },
         {
+          "value": "115",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "0",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "119",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "1",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "123",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "2",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "127",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "3",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "131",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "4",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "135",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "5",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "139",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "6",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "143",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "7",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "147",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "8",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "155",
+          "context": [
+            "units",
+            "810758-gl",
+            "bb",
+            "levels",
+            "9",
+            "effects",
+            "2"
+          ]
+        },
+        {
           "value": "300",
           "context": [
             "units",
@@ -38838,18 +39069,6 @@
           ]
         },
         {
-          "value": "123",
-          "context": [
-            "units",
-            "820378-gl",
-            "sbb",
-            "levels",
-            "3",
-            "effects",
-            "3"
-          ]
-        },
-        {
           "value": "125",
           "context": [
             "units",
@@ -38859,33 +39078,6 @@
             "5",
             "effects",
             "3"
-          ]
-        },
-        {
-          "value": "127",
-          "context": [
-            "units",
-            "820378-gl",
-            "sbb",
-            "levels",
-            "7",
-            "effects",
-            "3"
-          ]
-        },
-        {
-          "value": "155",
-          "context": [
-            "units",
-            "820558-gl",
-            "feskills",
-            "11",
-            "skill",
-            "effects",
-            "0",
-            "passive",
-            "triggered effect",
-            "0"
           ]
         },
         {
@@ -39030,30 +39222,6 @@
             "5",
             "effects",
             "4"
-          ]
-        },
-        {
-          "value": "115",
-          "context": [
-            "units",
-            "840628-gl",
-            "sbb",
-            "levels",
-            "2",
-            "effects",
-            "5"
-          ]
-        },
-        {
-          "value": "135",
-          "context": [
-            "units",
-            "840628-gl",
-            "sbb",
-            "levels",
-            "6",
-            "effects",
-            "5"
           ]
         },
         {
@@ -40653,11 +40821,11 @@
           "value": "4",
           "context": [
             "bbs",
-            "705709-eu",
+            "3860518-gl",
             "levels",
-            "0",
+            "2",
             "effects",
-            "0"
+            "8"
           ]
         },
         {
@@ -43631,6 +43799,17 @@
           ]
         },
         {
+          "value": "{\"atk% buff (2)\":-35,\"proc chance%\":100}",
+          "context": [
+            "bbs",
+            "13380517-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
           "value": "{\"proc chance%\":80,\"rec% buff (6)\":-80}",
           "context": [
             "bbs",
@@ -44020,17 +44199,6 @@
           "context": [
             "bbs",
             "2123767-gl",
-            "levels",
-            "0",
-            "effects",
-            "1"
-          ]
-        },
-        {
-          "value": "{\"atk% buff (2)\":-35,\"proc chance%\":100}",
-          "context": [
-            "bbs",
-            "2124018-gl",
             "levels",
             "0",
             "effects",
@@ -44914,6 +45082,17 @@
           ]
         },
         {
+          "value": "99",
+          "context": [
+            "bbs",
+            "13380517-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
           "value": "4",
           "context": [
             "bbs",
@@ -44944,17 +45123,6 @@
             "0",
             "effects",
             "0"
-          ]
-        },
-        {
-          "value": "99",
-          "context": [
-            "bbs",
-            "2700093-gl",
-            "levels",
-            "0",
-            "effects",
-            "1"
           ]
         },
         {
@@ -45555,6 +45723,17 @@
           ]
         },
         {
+          "value": "{\"def% buff (4)\":-35,\"proc chance%\":100}",
+          "context": [
+            "bbs",
+            "13380517-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
           "value": "{\"def% buff (3)\":25,\"proc chance%\":30}",
           "context": [
             "bbs",
@@ -45790,17 +45969,6 @@
           "context": [
             "bbs",
             "2123767-gl",
-            "levels",
-            "0",
-            "effects",
-            "1"
-          ]
-        },
-        {
-          "value": "{\"def% buff (4)\":-35,\"proc chance%\":100}",
-          "context": [
-            "bbs",
-            "2124018-gl",
             "levels",
             "0",
             "effects",
@@ -59917,6 +60085,21 @@
           ]
         },
         {
+          "value": "15",
+          "context": [
+            "units",
+            "730227-gl",
+            "feskills",
+            "9",
+            "skill",
+            "effects",
+            "0",
+            "passive",
+            "triggered effect",
+            "0"
+          ]
+        },
+        {
           "value": "20",
           "context": [
             "bbs",
@@ -60082,6 +60265,21 @@
           ]
         },
         {
+          "value": "15",
+          "context": [
+            "units",
+            "730227-gl",
+            "feskills",
+            "9",
+            "skill",
+            "effects",
+            "2",
+            "passive",
+            "triggered effect",
+            "0"
+          ]
+        },
+        {
           "value": "100",
           "context": [
             "bbs",
@@ -60145,6 +60343,21 @@
             "811118-gl",
             "feskills",
             "7",
+            "skill",
+            "effects",
+            "1",
+            "passive",
+            "triggered effect",
+            "0"
+          ]
+        },
+        {
+          "value": "15",
+          "context": [
+            "units",
+            "730227-gl",
+            "feskills",
+            "9",
             "skill",
             "effects",
             "1",
@@ -60286,6 +60499,21 @@
           ]
         },
         {
+          "value": "15",
+          "context": [
+            "units",
+            "730227-gl",
+            "feskills",
+            "9",
+            "skill",
+            "effects",
+            "3",
+            "passive",
+            "triggered effect",
+            "0"
+          ]
+        },
+        {
           "value": "100",
           "context": [
             "bbs",
@@ -60363,6 +60591,21 @@
             "skill",
             "effects",
             "0",
+            "passive",
+            "triggered effect",
+            "0"
+          ]
+        },
+        {
+          "value": "15",
+          "context": [
+            "units",
+            "730227-gl",
+            "feskills",
+            "9",
+            "skill",
+            "effects",
+            "4",
             "passive",
             "triggered effect",
             "0"
@@ -60469,6 +60712,21 @@
             "skill",
             "effects",
             "1",
+            "passive",
+            "triggered effect",
+            "0"
+          ]
+        },
+        {
+          "value": "15",
+          "context": [
+            "units",
+            "730227-gl",
+            "feskills",
+            "9",
+            "skill",
+            "effects",
+            "5",
             "passive",
             "triggered effect",
             "0"
@@ -63384,12 +63642,12 @@
           "value": "4",
           "context": [
             "units",
-            "820718-gl",
+            "810758-gl",
             "ubb",
             "levels",
             "0",
             "effects",
-            "3"
+            "1"
           ]
         },
         {
@@ -64071,12 +64329,12 @@
           "value": "4",
           "context": [
             "units",
-            "820678-gl",
+            "720237-gl",
             "ubb",
             "levels",
             "0",
             "effects",
-            "3"
+            "2"
           ]
         },
         {
@@ -65525,6 +65783,66 @@
           ]
         },
         {
+          "value": "155",
+          "context": [
+            "units",
+            "720237-gl",
+            "sbb",
+            "levels",
+            "1",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "165",
+          "context": [
+            "units",
+            "720237-gl",
+            "sbb",
+            "levels",
+            "3",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "175",
+          "context": [
+            "units",
+            "720237-gl",
+            "sbb",
+            "levels",
+            "5",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "185",
+          "context": [
+            "units",
+            "720237-gl",
+            "sbb",
+            "levels",
+            "7",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "190",
+          "context": [
+            "units",
+            "720237-gl",
+            "sbb",
+            "levels",
+            "8",
+            "effects",
+            "2"
+          ]
+        },
+        {
           "value": "162",
           "context": [
             "units",
@@ -65630,66 +65948,6 @@
             "3",
             "effects",
             "2"
-          ]
-        },
-        {
-          "value": "155",
-          "context": [
-            "units",
-            "820677-gl",
-            "sbb",
-            "levels",
-            "7",
-            "effects",
-            "2"
-          ]
-        },
-        {
-          "value": "165",
-          "context": [
-            "units",
-            "820678-gl",
-            "sbb",
-            "levels",
-            "3",
-            "effects",
-            "3"
-          ]
-        },
-        {
-          "value": "175",
-          "context": [
-            "units",
-            "820678-gl",
-            "sbb",
-            "levels",
-            "5",
-            "effects",
-            "3"
-          ]
-        },
-        {
-          "value": "185",
-          "context": [
-            "units",
-            "820678-gl",
-            "sbb",
-            "levels",
-            "7",
-            "effects",
-            "3"
-          ]
-        },
-        {
-          "value": "190",
-          "context": [
-            "units",
-            "820678-gl",
-            "sbb",
-            "levels",
-            "8",
-            "effects",
-            "3"
           ]
         },
         {
@@ -70936,6 +71194,17 @@
           ]
         },
         {
+          "value": "4",
+          "context": [
+            "bbs",
+            "13380457-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
           "value": "20",
           "context": [
             "bbs",
@@ -70955,17 +71224,6 @@
             "0",
             "effects",
             "1"
-          ]
-        },
-        {
-          "value": "4",
-          "context": [
-            "bbs",
-            "4002400-gl",
-            "levels",
-            "0",
-            "effects",
-            "0"
           ]
         },
         {
@@ -71107,7 +71365,7 @@
           "value": "enemy",
           "context": [
             "bbs",
-            "2100311-gl",
+            "13380457-gl",
             "levels",
             "0",
             "effects",
@@ -71363,6 +71621,16 @@
           ]
         },
         {
+          "value": "10",
+          "context": [
+            "units",
+            "840708-gl",
+            "bb",
+            "damage frames",
+            "0"
+          ]
+        },
+        {
           "value": "16",
           "context": [
             "units",
@@ -71408,16 +71676,6 @@
             "units",
             "860428-gl",
             "sbb",
-            "damage frames",
-            "0"
-          ]
-        },
-        {
-          "value": "10",
-          "context": [
-            "units",
-            "860708-gl",
-            "bb",
             "damage frames",
             "0"
           ]
@@ -73300,6 +73558,39 @@
           ]
         },
         {
+          "value": "300",
+          "context": [
+            "bbs",
+            "13380453-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
+          ]
+        },
+        {
+          "value": "375",
+          "context": [
+            "bbs",
+            "13380622-gl",
+            "levels",
+            "0",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "125",
+          "context": [
+            "bbs",
+            "13380689-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
           "value": "15",
           "context": [
             "bbs",
@@ -73315,17 +73606,6 @@
           "context": [
             "bbs",
             "15000709-gl",
-            "levels",
-            "0",
-            "effects",
-            "0"
-          ]
-        },
-        {
-          "value": "300",
-          "context": [
-            "bbs",
-            "15000753-gl",
             "levels",
             "0",
             "effects",
@@ -73535,17 +73815,6 @@
           "context": [
             "bbs",
             "5000064-gl",
-            "levels",
-            "0",
-            "effects",
-            "0"
-          ]
-        },
-        {
-          "value": "125",
-          "context": [
-            "bbs",
-            "5000350-gl",
             "levels",
             "0",
             "effects",
@@ -74347,6 +74616,39 @@
           ]
         },
         {
+          "value": "300",
+          "context": [
+            "bbs",
+            "13380453-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
+          ]
+        },
+        {
+          "value": "375",
+          "context": [
+            "bbs",
+            "13380622-gl",
+            "levels",
+            "0",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "125",
+          "context": [
+            "bbs",
+            "13380689-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
           "value": "240",
           "context": [
             "bbs",
@@ -74560,17 +74862,6 @@
           "context": [
             "bbs",
             "4005273-gl",
-            "levels",
-            "0",
-            "effects",
-            "0"
-          ]
-        },
-        {
-          "value": "300",
-          "context": [
-            "bbs",
-            "4005275-gl",
             "levels",
             "0",
             "effects",
@@ -74802,17 +75093,6 @@
           "context": [
             "bbs",
             "8400817-gl",
-            "levels",
-            "0",
-            "effects",
-            "0"
-          ]
-        },
-        {
-          "value": "125",
-          "context": [
-            "bbs",
-            "8401084-gl",
             "levels",
             "0",
             "effects",
@@ -84359,9 +84639,9 @@
           "value": "16.7/1",
           "context": [
             "bbs",
-            "2004992-gl",
+            "13380632-gl",
             "damage frames",
-            "1"
+            "4"
           ]
         },
         {
@@ -84606,6 +84886,17 @@
           ]
         },
         {
+          "value": "999",
+          "context": [
+            "bbs",
+            "13380631-gl",
+            "levels",
+            "0",
+            "effects",
+            "5"
+          ]
+        },
+        {
           "value": "3",
           "context": [
             "bbs",
@@ -84614,17 +84905,6 @@
             "0",
             "effects",
             "1"
-          ]
-        },
-        {
-          "value": "999",
-          "context": [
-            "bbs",
-            "2004724-gl",
-            "levels",
-            "0",
-            "effects",
-            "0"
           ]
         },
         {
@@ -85585,11 +85865,11 @@
           "value": "25",
           "context": [
             "bbs",
-            "213806-gl",
+            "13380618-gl",
             "levels",
             "0",
             "effects",
-            "1"
+            "0"
           ]
         },
         {
@@ -85865,6 +86145,17 @@
           ]
         },
         {
+          "value": "99",
+          "context": [
+            "bbs",
+            "13380516-gl",
+            "levels",
+            "0",
+            "effects",
+            "2"
+          ]
+        },
+        {
           "value": "4",
           "context": [
             "bbs",
@@ -85873,17 +86164,6 @@
             "0",
             "effects",
             "0"
-          ]
-        },
-        {
-          "value": "99",
-          "context": [
-            "bbs",
-            "8471140-gl",
-            "levels",
-            "0",
-            "effects",
-            "1"
           ]
         },
         {
@@ -87929,12 +88209,12 @@
           "value": "12",
           "context": [
             "units",
-            "820668-gl",
-            "bb",
-            "levels",
-            "0",
+            "720237-gl",
+            "extra skill",
             "effects",
-            "4"
+            "4",
+            "triggered effect",
+            "0"
           ]
         },
         {
@@ -88328,7 +88608,7 @@
           "value": "enemy",
           "context": [
             "bbs",
-            "2003687-gl",
+            "13380648-gl",
             "levels",
             "0",
             "effects",
@@ -92566,6 +92846,17 @@
             "effects",
             "1"
           ]
+        },
+        {
+          "value": "4",
+          "context": [
+            "bbs",
+            "3720237-gl",
+            "levels",
+            "2",
+            "effects",
+            "6"
+          ]
         }
       ],
       "sbb atk% buff": [
@@ -96492,6 +96783,16 @@
           ]
         },
         {
+          "value": "35",
+          "context": [
+            "units",
+            "720237-gl",
+            "sbb",
+            "damage frames",
+            "0"
+          ]
+        },
+        {
           "value": "26",
           "context": [
             "units",
@@ -96522,10 +96823,10 @@
           ]
         },
         {
-          "value": "35",
+          "value": "13",
           "context": [
             "units",
-            "830587-gl",
+            "730227-gl",
             "sbb",
             "damage frames",
             "0"
@@ -96537,16 +96838,6 @@
             "units",
             "830588-gl",
             "sbb",
-            "damage frames",
-            "0"
-          ]
-        },
-        {
-          "value": "13",
-          "context": [
-            "units",
-            "830697-gl",
-            "ubb",
             "damage frames",
             "0"
           ]
@@ -97746,96 +98037,96 @@
           "value": "810",
           "context": [
             "units",
-            "820558-gl",
+            "810758-gl",
             "sbb",
             "levels",
             "1",
             "effects",
-            "1"
+            "0"
           ]
         },
         {
           "value": "820",
           "context": [
             "units",
-            "820558-gl",
+            "810758-gl",
             "sbb",
             "levels",
             "2",
             "effects",
-            "1"
+            "0"
           ]
         },
         {
           "value": "830",
           "context": [
             "units",
-            "820558-gl",
+            "810758-gl",
             "sbb",
             "levels",
             "3",
             "effects",
-            "1"
+            "0"
           ]
         },
         {
           "value": "840",
           "context": [
             "units",
-            "820558-gl",
+            "810758-gl",
             "sbb",
             "levels",
             "4",
             "effects",
-            "1"
+            "0"
           ]
         },
         {
           "value": "850",
           "context": [
             "units",
-            "820558-gl",
+            "810758-gl",
             "sbb",
             "levels",
             "5",
             "effects",
-            "1"
+            "0"
           ]
         },
         {
           "value": "860",
           "context": [
             "units",
-            "820558-gl",
+            "810758-gl",
             "sbb",
             "levels",
             "6",
             "effects",
-            "1"
+            "0"
           ]
         },
         {
           "value": "870",
           "context": [
             "units",
-            "820558-gl",
+            "810758-gl",
             "sbb",
             "levels",
             "7",
             "effects",
-            "1"
+            "0"
           ]
         },
         {
           "value": "880",
           "context": [
             "units",
-            "820558-gl",
+            "810758-gl",
             "sbb",
             "levels",
             "8",
             "effects",
-            "1"
+            "0"
           ]
         },
         {
@@ -99865,6 +100156,15 @@
           ]
         },
         {
+          "value": "50.0/3",
+          "context": [
+            "bbs",
+            "13380484-gl",
+            "damage frames",
+            "3"
+          ]
+        },
+        {
           "value": "1666.7/100",
           "context": [
             "bbs",
@@ -99889,15 +100189,6 @@
             "2003899-gl",
             "damage frames",
             "2"
-          ]
-        },
-        {
-          "value": "50.0/3",
-          "context": [
-            "bbs",
-            "5000824-gl",
-            "damage frames",
-            "3"
           ]
         },
         {
@@ -105553,11 +105844,11 @@
           "value": "100",
           "context": [
             "bbs",
-            "200981-gl",
+            "13380619-gl",
             "levels",
             "0",
             "effects",
-            "3"
+            "0"
           ]
         },
         {
@@ -105698,7 +105989,7 @@
           "value": "999",
           "context": [
             "bbs",
-            "2004733-gl",
+            "13380619-gl",
             "levels",
             "0",
             "effects",
@@ -105810,11 +106101,11 @@
           "value": "100",
           "context": [
             "bbs",
-            "200981-gl",
+            "13380619-gl",
             "levels",
             "0",
             "effects",
-            "3"
+            "0"
           ]
         },
         {
@@ -106664,9 +106955,9 @@
           "value": "0.0/0",
           "context": [
             "bbs",
-            "2005159-gl",
+            "13380625-gl",
             "damage frames",
-            "2"
+            "4"
           ]
         },
         {
@@ -106684,9 +106975,9 @@
           "value": "100",
           "context": [
             "bbs",
-            "2005159-gl",
+            "13380625-gl",
             "damage frames",
-            "2"
+            "4"
           ]
         }
       ],
@@ -106695,9 +106986,9 @@
           "value": "1",
           "context": [
             "bbs",
-            "2005159-gl",
+            "13380625-gl",
             "damage frames",
-            "2"
+            "4"
           ]
         }
       ]
@@ -107723,6 +108014,18 @@
           ]
         },
         {
+          "value": "6000",
+          "context": [
+            "units",
+            "730227-gl",
+            "extra skill",
+            "effects",
+            "4",
+            "triggered effect",
+            "0"
+          ]
+        },
+        {
           "value": "10000",
           "context": [
             "units",
@@ -107769,18 +108072,6 @@
             "effects",
             "1",
             "add to sbb"
-          ]
-        },
-        {
-          "value": "6000",
-          "context": [
-            "units",
-            "850628-gl",
-            "extra skill",
-            "effects",
-            "2",
-            "triggered effect",
-            "0"
           ]
         },
         {
@@ -110812,6 +111103,39 @@
           ]
         },
         {
+          "value": "2",
+          "context": [
+            "bbs",
+            "13380531-gl",
+            "levels",
+            "0",
+            "effects",
+            "3"
+          ]
+        },
+        {
+          "value": "4",
+          "context": [
+            "bbs",
+            "3850167-gl",
+            "levels",
+            "2",
+            "effects",
+            "8"
+          ]
+        },
+        {
+          "value": "5",
+          "context": [
+            "bbs",
+            "3850167-gl",
+            "levels",
+            "4",
+            "effects",
+            "8"
+          ]
+        },
+        {
           "value": "999",
           "context": [
             "bbs",
@@ -110820,17 +111144,6 @@
             "0",
             "effects",
             "0"
-          ]
-        },
-        {
-          "value": "2",
-          "context": [
-            "bbs",
-            "5000971-gl",
-            "levels",
-            "0",
-            "effects",
-            "4"
           ]
         },
         {
@@ -119609,6 +119922,17 @@
             "effects",
             "5"
           ]
+        },
+        {
+          "value": "enemy",
+          "context": [
+            "bbs",
+            "13380649-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
         }
       ],
       "self crit% buff": [
@@ -120078,7 +120402,7 @@
           "value": "33.3/2",
           "context": [
             "bbs",
-            "830126703-gl",
+            "13380687-gl",
             "damage frames",
             "2"
           ]
@@ -125823,6 +126147,17 @@
           ]
         },
         {
+          "value": "999",
+          "context": [
+            "bbs",
+            "13380620-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
+          ]
+        },
+        {
           "value": "99",
           "context": [
             "bbs",
@@ -125831,17 +126166,6 @@
             "0",
             "effects",
             "1"
-          ]
-        },
-        {
-          "value": "999",
-          "context": [
-            "bbs",
-            "8480006-gl",
-            "levels",
-            "0",
-            "effects",
-            "2"
           ]
         }
       ],
@@ -126712,21 +127036,21 @@
     "95": {
       "effect delay time(ms)/frame": [
         {
+          "value": "16.7/1",
+          "context": [
+            "bbs",
+            "13380631-gl",
+            "damage frames",
+            "4"
+          ]
+        },
+        {
           "value": "0.0/0",
           "context": [
             "bbs",
             "310933-gl",
             "damage frames",
             "0"
-          ]
-        },
-        {
-          "value": "16.7/1",
-          "context": [
-            "bbs",
-            "310974-gl",
-            "damage frames",
-            "2"
           ]
         },
         {
@@ -126753,9 +127077,9 @@
           "value": "100",
           "context": [
             "bbs",
-            "310933-gl",
+            "13380631-gl",
             "damage frames",
-            "0"
+            "4"
           ]
         },
         {
@@ -126773,9 +127097,9 @@
           "value": "1",
           "context": [
             "bbs",
-            "310933-gl",
+            "13380631-gl",
             "damage frames",
-            "0"
+            "4"
           ]
         }
       ]
@@ -128660,6 +128984,15 @@
     "123": {
       "effect delay time(ms)/frame": [
         {
+          "value": "16.7/1",
+          "context": [
+            "bbs",
+            "13380621-gl",
+            "damage frames",
+            "0"
+          ]
+        },
+        {
           "value": "0.0/0",
           "context": [
             "bbs",
@@ -128674,7 +129007,7 @@
           "value": "100",
           "context": [
             "bbs",
-            "8401420-gl",
+            "13380621-gl",
             "damage frames",
             "0"
           ]
@@ -128685,7 +129018,7 @@
           "value": "1",
           "context": [
             "bbs",
-            "8401420-gl",
+            "13380621-gl",
             "damage frames",
             "0"
           ]
@@ -128755,9 +129088,9 @@
           "value": "0.0/0",
           "context": [
             "bbs",
-            "5001088-gl",
+            "13380526-gl",
             "damage frames",
-            "2"
+            "0"
           ]
         },
         {
@@ -128847,12 +129180,15 @@
           "value": "30",
           "context": [
             "units",
-            "820657-gl",
-            "bb",
-            "levels",
-            "0",
+            "810758-gl",
+            "feskills",
+            "9",
+            "skill",
             "effects",
-            "4"
+            "0",
+            "passive",
+            "triggered effect",
+            "0"
           ]
         },
         {
@@ -128933,12 +129269,15 @@
           "value": "-25",
           "context": [
             "units",
-            "820658-gl",
-            "bb",
-            "levels",
-            "0",
+            "810758-gl",
+            "feskills",
+            "9",
+            "skill",
             "effects",
-            "4"
+            "0",
+            "passive",
+            "triggered effect",
+            "0"
           ]
         },
         {
@@ -129097,12 +129436,15 @@
           "value": "30",
           "context": [
             "units",
-            "820657-gl",
-            "bb",
-            "levels",
-            "0",
+            "810758-gl",
+            "feskills",
+            "9",
+            "skill",
             "effects",
-            "4"
+            "0",
+            "passive",
+            "triggered effect",
+            "0"
           ]
         },
         {
@@ -129183,12 +129525,15 @@
           "value": "-25",
           "context": [
             "units",
-            "820658-gl",
-            "bb",
-            "levels",
-            "0",
+            "810758-gl",
+            "feskills",
+            "9",
+            "skill",
             "effects",
-            "4"
+            "0",
+            "passive",
+            "triggered effect",
+            "0"
           ]
         },
         {
@@ -129283,21 +129628,21 @@
     "131": {
       "effect delay time(ms)/frame": [
         {
+          "value": "16.7/1",
+          "context": [
+            "bbs",
+            "13380619-gl",
+            "damage frames",
+            "1"
+          ]
+        },
+        {
           "value": "0.0/0",
           "context": [
             "bbs",
             "8470622-gl",
             "damage frames",
             "0"
-          ]
-        },
-        {
-          "value": "16.7/1",
-          "context": [
-            "bbs",
-            "830131275-gl",
-            "damage frames",
-            "1"
           ]
         }
       ],
@@ -129306,9 +129651,9 @@
           "value": "100",
           "context": [
             "bbs",
-            "8470622-gl",
+            "13380619-gl",
             "damage frames",
-            "0"
+            "1"
           ]
         },
         {
@@ -129326,9 +129671,9 @@
           "value": "1",
           "context": [
             "bbs",
-            "8470622-gl",
+            "13380619-gl",
             "damage frames",
-            "0"
+            "1"
           ]
         }
       ]
@@ -129343,6 +129688,15 @@
             "sbb",
             "damage frames",
             "4"
+          ]
+        },
+        {
+          "value": "16.7/1",
+          "context": [
+            "bbs",
+            "13380516-gl",
+            "damage frames",
+            "1"
           ]
         }
       ],
@@ -129697,6 +130051,17 @@
             "effects",
             "4"
           ]
+        },
+        {
+          "value": "single",
+          "context": [
+            "bbs",
+            "13380516-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
+          ]
         }
       ],
       "target type": [
@@ -129710,6 +130075,17 @@
             "0",
             "effects",
             "4"
+          ]
+        },
+        {
+          "value": "party",
+          "context": [
+            "bbs",
+            "13380516-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
           ]
         }
       ],
@@ -129853,6 +130229,17 @@
             "0",
             "effects",
             "3"
+          ]
+        },
+        {
+          "value": "99",
+          "context": [
+            "bbs",
+            "13380516-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
           ]
         }
       ],
@@ -130390,9 +130777,9 @@
           "value": "2",
           "context": [
             "units",
-            "820568-gl",
+            "810758-gl",
             "feskills",
-            "9",
+            "5",
             "skill",
             "effects",
             "0",
@@ -131426,19 +131813,19 @@
           ]
         },
         {
+          "value": "16.7/1",
+          "context": [
+            "bbs",
+            "13380521-gl",
+            "damage frames",
+            "1"
+          ]
+        },
+        {
           "value": "333.3/20",
           "context": [
             "bbs",
             "85100081-gl",
-            "damage frames",
-            "0"
-          ]
-        },
-        {
-          "value": "16.7/1",
-          "context": [
-            "bbs",
-            "88500177-gl",
             "damage frames",
             "0"
           ]
@@ -131496,6 +131883,17 @@
             "effects",
             "0",
             "add to sbb"
+          ]
+        },
+        {
+          "value": "90",
+          "context": [
+            "bbs",
+            "13380521-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
           ]
         },
         {
@@ -132719,7 +133117,7 @@
           "value": "16.7/1",
           "context": [
             "bbs",
-            "8401401-gl",
+            "13380474-gl",
             "damage frames",
             "0"
           ]
@@ -132739,7 +133137,7 @@
           "value": "100",
           "context": [
             "bbs",
-            "8401401-gl",
+            "13380474-gl",
             "damage frames",
             "0"
           ]
@@ -132750,7 +133148,7 @@
           "value": "1",
           "context": [
             "bbs",
-            "8401401-gl",
+            "13380474-gl",
             "damage frames",
             "0"
           ]
@@ -133165,17 +133563,17 @@
           "value": "0.0/0",
           "context": [
             "units",
-            "830657-gl",
+            "810757-gl",
             "bb",
             "damage frames",
-            "2"
+            "3"
           ]
         },
         {
           "value": "16.7/1",
           "context": [
             "bbs",
-            "85070074-gl",
+            "13380605-gl",
             "damage frames",
             "0"
           ]
@@ -133222,10 +133620,10 @@
           "value": "100",
           "context": [
             "units",
-            "830657-gl",
+            "810757-gl",
             "bb",
             "damage frames",
-            "2"
+            "3"
           ]
         }
       ],
@@ -133234,10 +133632,10 @@
           "value": "1",
           "context": [
             "units",
-            "830657-gl",
+            "810757-gl",
             "bb",
             "damage frames",
-            "2"
+            "3"
           ]
         },
         {
@@ -133542,6 +133940,16 @@
           ]
         },
         {
+          "value": "15",
+          "context": [
+            "units",
+            "840708-gl",
+            "ubb",
+            "damage frames",
+            "1"
+          ]
+        },
+        {
           "value": "6",
           "context": [
             "units",
@@ -133625,10 +134033,10 @@
           ]
         },
         {
-          "value": "15",
+          "value": "18",
           "context": [
             "bbs",
-            "83012706-gl",
+            "13380627-gl",
             "damage frames",
             "0"
           ]
@@ -133665,15 +134073,6 @@
           "context": [
             "bbs",
             "85090053-gl",
-            "damage frames",
-            "0"
-          ]
-        },
-        {
-          "value": "18",
-          "context": [
-            "bbs",
-            "87093014-gl",
             "damage frames",
             "0"
           ]
@@ -133928,7 +134327,7 @@
           "value": "16.7/1",
           "context": [
             "bbs",
-            "83013765-gl",
+            "13380471-gl",
             "damage frames",
             "0"
           ]
@@ -134001,9 +134400,18 @@
           "value": "16.7/1",
           "context": [
             "bbs",
-            "85090013-gl",
+            "13380471-gl",
             "damage frames",
-            "0"
+            "3"
+          ]
+        },
+        {
+          "value": "33.3/2",
+          "context": [
+            "bbs",
+            "13380632-gl",
+            "damage frames",
+            "6"
           ]
         }
       ],
@@ -134480,6 +134888,111 @@
         }
       ]
     },
+    "11001": {
+      "effect delay time(ms)/frame": [
+        {
+          "value": "0.0/0",
+          "context": [
+            "bbs",
+            "3810338-gl",
+            "damage frames",
+            "10"
+          ]
+        }
+      ],
+      "hit dmg% distribution (total)": [
+        {
+          "value": "100",
+          "context": [
+            "bbs",
+            "3810338-gl",
+            "damage frames",
+            "10"
+          ]
+        }
+      ],
+      "hits": [
+        {
+          "value": "1",
+          "context": [
+            "bbs",
+            "3810338-gl",
+            "damage frames",
+            "10"
+          ]
+        }
+      ]
+    },
+    "11002": {
+      "effect delay time(ms)/frame": [
+        {
+          "value": "0.0/0",
+          "context": [
+            "bbs",
+            "3850167-gl",
+            "damage frames",
+            "9"
+          ]
+        }
+      ],
+      "hit dmg% distribution (total)": [
+        {
+          "value": "100",
+          "context": [
+            "bbs",
+            "3850167-gl",
+            "damage frames",
+            "9"
+          ]
+        }
+      ],
+      "hits": [
+        {
+          "value": "1",
+          "context": [
+            "bbs",
+            "3850167-gl",
+            "damage frames",
+            "9"
+          ]
+        }
+      ]
+    },
+    "11003": {
+      "effect delay time(ms)/frame": [
+        {
+          "value": "0.0/0",
+          "context": [
+            "bbs",
+            "3720237-gl",
+            "damage frames",
+            "9"
+          ]
+        }
+      ],
+      "hit dmg% distribution (total)": [
+        {
+          "value": "100",
+          "context": [
+            "bbs",
+            "3720237-gl",
+            "damage frames",
+            "9"
+          ]
+        }
+      ],
+      "hits": [
+        {
+          "value": "1",
+          "context": [
+            "bbs",
+            "3720237-gl",
+            "damage frames",
+            "9"
+          ]
+        }
+      ]
+    },
     "70001": {
       "effect delay time(ms)/frame": [
         {
@@ -134921,10 +135434,120 @@
           ]
         },
         {
+          "value": "133800124,0,85,372,0,0",
+          "context": [
+            "bbs",
+            "13380444-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "133800124,1,155,372,0,0",
+          "context": [
+            "bbs",
+            "13380444-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
+          ]
+        },
+        {
+          "value": "133800124,2,225,372,0,0",
+          "context": [
+            "bbs",
+            "13380444-gl",
+            "levels",
+            "0",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "133800124,3,265,292,0,0",
+          "context": [
+            "bbs",
+            "13380444-gl",
+            "levels",
+            "0",
+            "effects",
+            "3"
+          ]
+        },
+        {
+          "value": "133800126,0,265,292,1,0",
+          "context": [
+            "bbs",
+            "13380455-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "133800126,1,155,372,1,0",
+          "context": [
+            "bbs",
+            "13380455-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
+          ]
+        },
+        {
+          "value": "133800126,2,225,372,1,0",
+          "context": [
+            "bbs",
+            "13380455-gl",
+            "levels",
+            "0",
+            "effects",
+            "2"
+          ]
+        },
+        {
           "value": "133800132,0,250,292,0,0",
           "context": [
             "bbs",
             "13380592-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "133800136,0,140,620,1,0",
+          "context": [
+            "bbs",
+            "13380611-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "133800134,0,140,620,1,0",
+          "context": [
+            "bbs",
+            "13380613-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "133800135,0,140,620,1,0",
+          "context": [
+            "bbs",
+            "13380615-gl",
             "levels",
             "0",
             "effects",
@@ -141577,6 +142200,17 @@
           ]
         },
         {
+          "value": "50.0/3",
+          "context": [
+            "bbs",
+            "13380484-gl",
+            "levels",
+            "0",
+            "effects",
+            "3"
+          ]
+        },
+        {
           "value": "1666.7/100",
           "context": [
             "bbs",
@@ -141607,17 +142241,6 @@
             "0",
             "effects",
             "2"
-          ]
-        },
-        {
-          "value": "50.0/3",
-          "context": [
-            "bbs",
-            "5000824-gl",
-            "levels",
-            "0",
-            "effects",
-            "3"
           ]
         },
         {
@@ -141792,6 +142415,17 @@
           ]
         },
         {
+          "value": "100,100,0",
+          "context": [
+            "bbs",
+            "13380484-gl",
+            "levels",
+            "0",
+            "effects",
+            "3"
+          ]
+        },
+        {
           "value": "100,180,0",
           "context": [
             "bbs",
@@ -141840,17 +142474,6 @@
           "context": [
             "bbs",
             "201532-gl",
-            "levels",
-            "0",
-            "effects",
-            "0"
-          ]
-        },
-        {
-          "value": "100,100,0",
-          "context": [
-            "bbs",
-            "214104-gl",
             "levels",
             "0",
             "effects",
@@ -144746,11 +145369,11 @@
           "value": "0.0/0",
           "context": [
             "bbs",
-            "2005159-gl",
+            "13380625-gl",
             "levels",
             "0",
             "effects",
-            "2"
+            "4"
           ]
         },
         {
@@ -144770,11 +145393,11 @@
           "value": "aoe",
           "context": [
             "bbs",
-            "2005159-gl",
+            "13380625-gl",
             "levels",
             "0",
             "effects",
-            "2"
+            "4"
           ]
         }
       ],
@@ -144783,15 +145406,37 @@
           "value": "enemy",
           "context": [
             "bbs",
-            "2005159-gl",
+            "13380625-gl",
             "levels",
             "0",
             "effects",
-            "2"
+            "4"
           ]
         }
       ],
       "unknown proc param": [
+        {
+          "value": "-15,0,0,999,0",
+          "context": [
+            "bbs",
+            "13380625-gl",
+            "levels",
+            "0",
+            "effects",
+            "4"
+          ]
+        },
+        {
+          "value": "-30,0,0,999,0",
+          "context": [
+            "bbs",
+            "13380626-gl",
+            "levels",
+            "0",
+            "effects",
+            "4"
+          ]
+        },
         {
           "value": "-20,-20,-20,3,130",
           "context": [
@@ -145605,7 +146250,7 @@
           "value": "33.3/2",
           "context": [
             "bbs",
-            "830126703-gl",
+            "13380687-gl",
             "levels",
             "0",
             "effects",
@@ -145675,7 +146320,7 @@
           "value": "self",
           "context": [
             "bbs",
-            "83013008-gl",
+            "13380612-gl",
             "levels",
             "0",
             "effects",
@@ -145748,6 +146393,72 @@
             "0",
             "effects",
             "0"
+          ]
+        },
+        {
+          "value": "133900169,100,100,0",
+          "context": [
+            "bbs",
+            "13380612-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "133900167,100,100,0",
+          "context": [
+            "bbs",
+            "13380614-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "133900168,100,100,0",
+          "context": [
+            "bbs",
+            "13380616-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "133900157,100,100,0",
+          "context": [
+            "bbs",
+            "13380687-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "133900171,100,100,0",
+          "context": [
+            "bbs",
+            "13380687-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
+          ]
+        },
+        {
+          "value": "133900172,100,100,0",
+          "context": [
+            "bbs",
+            "13380687-gl",
+            "levels",
+            "0",
+            "effects",
+            "2"
           ]
         },
         {
@@ -147326,6 +148037,17 @@
     "95": {
       "effect delay time(ms)/frame": [
         {
+          "value": "16.7/1",
+          "context": [
+            "bbs",
+            "13380631-gl",
+            "levels",
+            "0",
+            "effects",
+            "4"
+          ]
+        },
+        {
           "value": "0.0/0",
           "context": [
             "bbs",
@@ -147334,17 +148056,6 @@
             "0",
             "effects",
             "0"
-          ]
-        },
-        {
-          "value": "16.7/1",
-          "context": [
-            "bbs",
-            "310974-gl",
-            "levels",
-            "0",
-            "effects",
-            "2"
           ]
         },
         {
@@ -147372,21 +148083,21 @@
       ],
       "target area": [
         {
+          "value": "single",
+          "context": [
+            "bbs",
+            "13380631-gl",
+            "levels",
+            "0",
+            "effects",
+            "4"
+          ]
+        },
+        {
           "value": "aoe",
           "context": [
             "bbs",
             "310933-gl",
-            "levels",
-            "0",
-            "effects",
-            "0"
-          ]
-        },
-        {
-          "value": "single",
-          "context": [
-            "bbs",
-            "310934-gl",
             "levels",
             "0",
             "effects",
@@ -147399,15 +148110,26 @@
           "value": "enemy",
           "context": [
             "bbs",
-            "310933-gl",
+            "13380631-gl",
             "levels",
             "0",
             "effects",
-            "0"
+            "4"
           ]
         }
       ],
       "unknown proc param": [
+        {
+          "value": "0,0,0",
+          "context": [
+            "bbs",
+            "13380631-gl",
+            "levels",
+            "0",
+            "effects",
+            "4"
+          ]
+        },
         {
           "value": "100,999,150",
           "context": [
@@ -147583,11 +148305,11 @@
           "value": "single",
           "context": [
             "bbs",
-            "310838-gl",
+            "13380631-gl",
             "levels",
             "0",
             "effects",
-            "0"
+            "3"
           ]
         }
       ],
@@ -147614,6 +148336,17 @@
             "0",
             "effects",
             "0"
+          ]
+        },
+        {
+          "value": "100,999,0",
+          "context": [
+            "bbs",
+            "13380631-gl",
+            "levels",
+            "0",
+            "effects",
+            "3"
           ]
         },
         {
@@ -147731,17 +148464,6 @@
           "context": [
             "bbs",
             "830110811-gl",
-            "levels",
-            "0",
-            "effects",
-            "1"
-          ]
-        },
-        {
-          "value": "100,999,0",
-          "context": [
-            "bbs",
-            "830139027-gl",
             "levels",
             "0",
             "effects",
@@ -147961,6 +148683,17 @@
     "123": {
       "effect delay time(ms)/frame": [
         {
+          "value": "16.7/1",
+          "context": [
+            "bbs",
+            "13380621-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
           "value": "0.0/0",
           "context": [
             "bbs",
@@ -147977,7 +148710,7 @@
           "value": "aoe",
           "context": [
             "bbs",
-            "8401420-gl",
+            "13380621-gl",
             "levels",
             "0",
             "effects",
@@ -148001,7 +148734,7 @@
           "value": "enemy",
           "context": [
             "bbs",
-            "8401420-gl",
+            "13380621-gl",
             "levels",
             "0",
             "effects",
@@ -148010,6 +148743,17 @@
         }
       ],
       "unknown proc param": [
+        {
+          "value": "100,0,5",
+          "context": [
+            "bbs",
+            "13380621-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
         {
           "value": "100,25,10",
           "context": [
@@ -148578,6 +149322,21 @@
           ]
         },
         {
+          "value": "25,3,0",
+          "context": [
+            "units",
+            "730227-gl",
+            "feskills",
+            "7",
+            "skill",
+            "effects",
+            "0",
+            "passive",
+            "triggered effect",
+            "0"
+          ]
+        },
+        {
           "value": "30,1,120",
           "context": [
             "units",
@@ -148757,18 +149516,6 @@
             "sbb",
             "levels",
             "8",
-            "effects",
-            "5"
-          ]
-        },
-        {
-          "value": "25,3,0",
-          "context": [
-            "units",
-            "830648-gl",
-            "sbb",
-            "levels",
-            "9",
             "effects",
             "5"
           ]
@@ -149023,6 +149770,39 @@
           ]
         },
         {
+          "value": "100,4,145",
+          "context": [
+            "bbs",
+            "3850167-gl",
+            "levels",
+            "2",
+            "effects",
+            "5"
+          ]
+        },
+        {
+          "value": "100,5,145",
+          "context": [
+            "bbs",
+            "3850167-gl",
+            "levels",
+            "4",
+            "effects",
+            "5"
+          ]
+        },
+        {
+          "value": "100,5,0",
+          "context": [
+            "bbs",
+            "3850628-gl",
+            "levels",
+            "2",
+            "effects",
+            "6"
+          ]
+        },
+        {
           "value": "80,9999,50",
           "context": [
             "bbs",
@@ -149096,11 +149876,11 @@
           "value": "0.0/0",
           "context": [
             "bbs",
-            "5001088-gl",
+            "13380526-gl",
             "levels",
             "0",
             "effects",
-            "2"
+            "0"
           ]
         },
         {
@@ -149165,6 +149945,17 @@
           ]
         },
         {
+          "value": "999,0",
+          "context": [
+            "bbs",
+            "13380631-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
+          ]
+        },
+        {
           "value": "1,0",
           "context": [
             "bbs",
@@ -149224,6 +150015,17 @@
     "131": {
       "effect delay time(ms)/frame": [
         {
+          "value": "16.7/1",
+          "context": [
+            "bbs",
+            "13380619-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
+          ]
+        },
+        {
           "value": "0.0/0",
           "context": [
             "bbs",
@@ -149233,20 +150035,20 @@
             "effects",
             "0"
           ]
-        },
+        }
+      ],
+      "target area": [
         {
-          "value": "16.7/1",
+          "value": "single",
           "context": [
             "bbs",
-            "830131275-gl",
+            "13380619-gl",
             "levels",
             "0",
             "effects",
             "1"
           ]
-        }
-      ],
-      "target area": [
+        },
         {
           "value": "aoe",
           "context": [
@@ -149257,20 +150059,20 @@
             "effects",
             "0"
           ]
-        },
+        }
+      ],
+      "target type": [
         {
-          "value": "single",
+          "value": "self",
           "context": [
             "bbs",
-            "830131275-gl",
+            "13380619-gl",
             "levels",
             "0",
             "effects",
             "1"
           ]
-        }
-      ],
-      "target type": [
+        },
         {
           "value": "party",
           "context": [
@@ -149281,20 +150083,20 @@
             "effects",
             "0"
           ]
-        },
+        }
+      ],
+      "unknown proc param": [
         {
-          "value": "self",
+          "value": "25,999,0",
           "context": [
             "bbs",
-            "830131275-gl",
+            "13380619-gl",
             "levels",
             "0",
             "effects",
             "1"
           ]
-        }
-      ],
-      "unknown proc param": [
+        },
         {
           "value": "100,3,0",
           "context": [
@@ -149527,7 +150329,7 @@
           "value": "16.7/1",
           "context": [
             "bbs",
-            "8401401-gl",
+            "13380474-gl",
             "levels",
             "0",
             "effects",
@@ -149551,7 +150353,7 @@
           "value": "single",
           "context": [
             "bbs",
-            "8401401-gl",
+            "13380474-gl",
             "levels",
             "0",
             "effects",
@@ -149575,7 +150377,7 @@
           "value": "self",
           "context": [
             "bbs",
-            "8401401-gl",
+            "13380474-gl",
             "levels",
             "0",
             "effects",
@@ -149606,6 +150408,17 @@
         }
       ],
       "unknown proc param": [
+        {
+          "value": "100,999,1,1,1,1,0,1",
+          "context": [
+            "bbs",
+            "13380474-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
         {
           "value": "100,99,60,0,0,1,0,0",
           "context": [
@@ -150319,11 +151132,11 @@
           "value": "single",
           "context": [
             "bbs",
-            "8470673-gl",
+            "13380462-gl",
             "levels",
             "0",
             "effects",
-            "1"
+            "0"
           ]
         }
       ],
@@ -150350,6 +151163,17 @@
             "0",
             "effects",
             "2"
+          ]
+        },
+        {
+          "value": "100,999,0",
+          "context": [
+            "bbs",
+            "13380462-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
           ]
         },
         {
@@ -151250,6 +152074,39 @@
           ]
         },
         {
+          "value": "100,4,0,100",
+          "context": [
+            "bbs",
+            "3810758-gl",
+            "levels",
+            "2",
+            "effects",
+            "7"
+          ]
+        },
+        {
+          "value": "100,5,0,100",
+          "context": [
+            "bbs",
+            "3810758-gl",
+            "levels",
+            "4",
+            "effects",
+            "7"
+          ]
+        },
+        {
+          "value": "100,4,0,80",
+          "context": [
+            "bbs",
+            "3830528-gl",
+            "levels",
+            "2",
+            "effects",
+            "7"
+          ]
+        },
+        {
           "value": "100,4,10,25",
           "context": [
             "bbs",
@@ -151503,11 +152360,11 @@
           "value": "party",
           "context": [
             "bbs",
-            "83013758-gl",
+            "13380542-gl",
             "levels",
             "0",
             "effects",
-            "0"
+            "1"
           ]
         }
       ],
@@ -151539,6 +152396,50 @@
           "context": [
             "bbs",
             "13380423-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
+          ]
+        },
+        {
+          "value": "25,0,0,0,999,999,0",
+          "context": [
+            "bbs",
+            "13380451-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "10,0,0,0,999,999,0",
+          "context": [
+            "bbs",
+            "13380515-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
+          ]
+        },
+        {
+          "value": "100,0,0,0,99,10,0",
+          "context": [
+            "bbs",
+            "13380542-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "50,0,0,0,99,10,0",
+          "context": [
+            "bbs",
+            "13380542-gl",
             "levels",
             "0",
             "effects",
@@ -152921,6 +153822,18 @@
           ]
         },
         {
+          "value": "0.75,3,0,1",
+          "context": [
+            "units",
+            "810758-gl",
+            "sbb",
+            "levels",
+            "0",
+            "effects",
+            "5"
+          ]
+        },
+        {
           "value": "0.5,3,0,2",
           "context": [
             "units",
@@ -153036,6 +153949,18 @@
             "units",
             "840287-gl",
             "sbb",
+            "levels",
+            "0",
+            "effects",
+            "4"
+          ]
+        },
+        {
+          "value": "0.75,3,0,4",
+          "context": [
+            "units",
+            "840708-gl",
+            "bb",
             "levels",
             "0",
             "effects",
@@ -154881,19 +155806,19 @@
           "value": "0.0/0",
           "context": [
             "units",
-            "830657-gl",
+            "810757-gl",
             "bb",
             "levels",
             "0",
             "effects",
-            "2"
+            "3"
           ]
         },
         {
           "value": "16.7/1",
           "context": [
             "bbs",
-            "85070074-gl",
+            "13380605-gl",
             "levels",
             "0",
             "effects",
@@ -154950,23 +155875,23 @@
           "value": "aoe",
           "context": [
             "units",
-            "830657-gl",
+            "810757-gl",
             "bb",
             "levels",
             "0",
             "effects",
-            "2"
+            "3"
           ]
         },
         {
           "value": "single",
           "context": [
             "bbs",
-            "85080030-gl",
+            "13380605-gl",
             "levels",
             "0",
             "effects",
-            "1"
+            "0"
           ]
         }
       ],
@@ -154975,23 +155900,34 @@
           "value": "100",
           "context": [
             "units",
-            "830657-gl",
+            "810757-gl",
             "bb",
             "levels",
             "0",
             "effects",
-            "2"
+            "3"
           ]
         },
         {
           "value": "enemy",
           "context": [
             "bbs",
-            "8471348-gl",
+            "13380451-gl",
             "levels",
             "0",
             "effects",
-            "4"
+            "5"
+          ]
+        },
+        {
+          "value": "self",
+          "context": [
+            "bbs",
+            "13380605-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
           ]
         }
       ],
@@ -155000,24 +155936,24 @@
           "value": "15,2,0",
           "context": [
             "units",
-            "830657-gl",
+            "810757-gl",
             "bb",
             "levels",
             "0",
             "effects",
-            "2"
+            "3"
           ]
         },
         {
           "value": "20,2,0",
           "context": [
             "units",
-            "830658-gl",
+            "810758-gl",
             "bb",
             "levels",
             "0",
             "effects",
-            "2"
+            "3"
           ]
         },
         {
@@ -155032,6 +155968,138 @@
             "0",
             "passive",
             "triggered effect",
+            "0"
+          ]
+        },
+        {
+          "value": "10,5,0",
+          "context": [
+            "bbs",
+            "13380451-gl",
+            "levels",
+            "0",
+            "effects",
+            "5"
+          ]
+        },
+        {
+          "value": "40,8,0",
+          "context": [
+            "bbs",
+            "13380481-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "25,5,0",
+          "context": [
+            "bbs",
+            "13380485-gl",
+            "levels",
+            "0",
+            "effects",
+            "5"
+          ]
+        },
+        {
+          "value": "45,5,0",
+          "context": [
+            "bbs",
+            "13380486-gl",
+            "levels",
+            "0",
+            "effects",
+            "5"
+          ]
+        },
+        {
+          "value": "65,5,0",
+          "context": [
+            "bbs",
+            "13380487-gl",
+            "levels",
+            "0",
+            "effects",
+            "5"
+          ]
+        },
+        {
+          "value": "75,5,0",
+          "context": [
+            "bbs",
+            "13380488-gl",
+            "levels",
+            "0",
+            "effects",
+            "5"
+          ]
+        },
+        {
+          "value": "8,999,0",
+          "context": [
+            "bbs",
+            "13380605-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "16,999,0",
+          "context": [
+            "bbs",
+            "13380606-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "24,999,0",
+          "context": [
+            "bbs",
+            "13380607-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "32,999,0",
+          "context": [
+            "bbs",
+            "13380608-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "40,999,0",
+          "context": [
+            "bbs",
+            "13380609-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "10,999,0",
+          "context": [
+            "bbs",
+            "13380620-gl",
+            "levels",
+            "0",
+            "effects",
             "0"
           ]
         },
@@ -155511,6 +156579,21 @@
           ]
         },
         {
+          "value": "100",
+          "context": [
+            "units",
+            "810758-gl",
+            "feskills",
+            "11",
+            "skill",
+            "effects",
+            "0",
+            "passive",
+            "triggered effect",
+            "0"
+          ]
+        },
+        {
           "value": "self",
           "context": [
             "units",
@@ -155523,18 +156606,6 @@
             "passive",
             "triggered effect",
             "0"
-          ]
-        },
-        {
-          "value": "100",
-          "context": [
-            "units",
-            "850657-gl",
-            "bb",
-            "levels",
-            "0",
-            "effects",
-            "4"
           ]
         }
       ],
@@ -155645,23 +156716,26 @@
           ]
         },
         {
+          "value": "1,13,124,46,137,0,0,0,0,35",
+          "context": [
+            "units",
+            "810758-gl",
+            "feskills",
+            "11",
+            "skill",
+            "effects",
+            "0",
+            "passive",
+            "triggered effect",
+            "0"
+          ]
+        },
+        {
           "value": "147,0,0,0,0,0,0,0,0,100",
           "context": [
             "units",
             "820438-gl",
             "bb",
-            "levels",
-            "0",
-            "effects",
-            "5"
-          ]
-        },
-        {
-          "value": "147,0,0,0,0,0,0,0,0",
-          "context": [
-            "units",
-            "820438-gl",
-            "ubb",
             "levels",
             "0",
             "effects",
@@ -155790,21 +156864,6 @@
             "0",
             "effects",
             "4"
-          ]
-        },
-        {
-          "value": "1,13,124,46,137,0,0,0,0,35",
-          "context": [
-            "units",
-            "850658-gl",
-            "feskills",
-            "11",
-            "skill",
-            "effects",
-            "0",
-            "passive",
-            "triggered effect",
-            "0"
           ]
         },
         {
@@ -156072,6 +157131,94 @@
           ]
         },
         {
+          "value": "10006,0,0,0,0,0,0,0,0,100",
+          "context": [
+            "bbs",
+            "13380461-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "10001,0,0,0,0,0,0,0,0,100",
+          "context": [
+            "bbs",
+            "13380520-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "21,22,23,24,25,26,36,0,0,100",
+          "context": [
+            "bbs",
+            "13380520-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
+          ]
+        },
+        {
+          "value": "2,4,71,0,0,0,0,0,0,100",
+          "context": [
+            "bbs",
+            "13380520-gl",
+            "levels",
+            "0",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "10511,30,31,32,33,34,35,0,0,100",
+          "context": [
+            "bbs",
+            "13380534-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "110,1,0,0,0,0,0,0,0,100",
+          "context": [
+            "bbs",
+            "13380534-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
+          ]
+        },
+        {
+          "value": "10026,0,0,0,0,0,0,0,0,100",
+          "context": [
+            "bbs",
+            "13380537-gl",
+            "levels",
+            "0",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "10208,10209,10210,10211,0,0,0,0,0,100",
+          "context": [
+            "bbs",
+            "13380543-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
           "value": "10007,0,0,0,0,0,0,0,0,100",
           "context": [
             "bbs",
@@ -156080,6 +157227,149 @@
             "0",
             "effects",
             "0"
+          ]
+        },
+        {
+          "value": "156,150,21,22,23,24,25,26,145,100",
+          "context": [
+            "bbs",
+            "13380622-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "145,51,52,53,54,55,56,92,93,100",
+          "context": [
+            "bbs",
+            "13380622-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
+          ]
+        },
+        {
+          "value": "146,147,60,10006,151,0,0,0,0,100",
+          "context": [
+            "bbs",
+            "13380636-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "10005,10006,0,0,0,0,0,0,0,60",
+          "context": [
+            "bbs",
+            "3720237-gl",
+            "levels",
+            "0",
+            "effects",
+            "10"
+          ]
+        },
+        {
+          "value": "10005,10006,0,0,0,0,0,0,0,70",
+          "context": [
+            "bbs",
+            "3720237-gl",
+            "levels",
+            "1",
+            "effects",
+            "10"
+          ]
+        },
+        {
+          "value": "10005,10006,0,0,0,0,0,0,0,80",
+          "context": [
+            "bbs",
+            "3720237-gl",
+            "levels",
+            "2",
+            "effects",
+            "10"
+          ]
+        },
+        {
+          "value": "10005,10006,0,0,0,0,0,0,0,90",
+          "context": [
+            "bbs",
+            "3720237-gl",
+            "levels",
+            "4",
+            "effects",
+            "10"
+          ]
+        },
+        {
+          "value": "10005,10006,0,0,0,0,0,0,0,100",
+          "context": [
+            "bbs",
+            "3720237-gl",
+            "levels",
+            "6",
+            "effects",
+            "10"
+          ]
+        },
+        {
+          "value": "60,146,147,0,0,0,0,0,0,60",
+          "context": [
+            "bbs",
+            "3810758-gl",
+            "levels",
+            "0",
+            "effects",
+            "12"
+          ]
+        },
+        {
+          "value": "60,146,147,0,0,0,0,0,0,70",
+          "context": [
+            "bbs",
+            "3810758-gl",
+            "levels",
+            "1",
+            "effects",
+            "12"
+          ]
+        },
+        {
+          "value": "60,146,147,0,0,0,0,0,0,80",
+          "context": [
+            "bbs",
+            "3810758-gl",
+            "levels",
+            "2",
+            "effects",
+            "12"
+          ]
+        },
+        {
+          "value": "60,146,147,0,0,0,0,0,0,90",
+          "context": [
+            "bbs",
+            "3810758-gl",
+            "levels",
+            "4",
+            "effects",
+            "12"
+          ]
+        },
+        {
+          "value": "60,146,147,0,0,0,0,0,0,100",
+          "context": [
+            "bbs",
+            "3810758-gl",
+            "levels",
+            "6",
+            "effects",
+            "12"
           ]
         },
         {
@@ -156197,17 +157487,6 @@
           "context": [
             "bbs",
             "83013782-gl",
-            "levels",
-            "0",
-            "effects",
-            "0"
-          ]
-        },
-        {
-          "value": "21,22,23,24,25,26,36,0,0,100",
-          "context": [
-            "bbs",
-            "85070027-gl",
             "levels",
             "0",
             "effects",
@@ -156366,17 +157645,6 @@
             "0",
             "effects",
             "3"
-          ]
-        },
-        {
-          "value": "10001,0,0,0,0,0,0,0,0,100",
-          "context": [
-            "bbs",
-            "88500131-gl",
-            "levels",
-            "0",
-            "effects",
-            "0"
           ]
         },
         {
@@ -157004,6 +158272,94 @@
           ]
         },
         {
+          "value": "200,0,25,1,1,1,1,1,1",
+          "context": [
+            "bbs",
+            "13380451-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
+          ]
+        },
+        {
+          "value": "999999,9999,200,1,1,1,1,1,1",
+          "context": [
+            "bbs",
+            "13380471-gl",
+            "levels",
+            "0",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "500,0,25,1,1,1,1,1,1",
+          "context": [
+            "bbs",
+            "13380485-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
+          ]
+        },
+        {
+          "value": "550,0,35,1,1,1,1,1,1",
+          "context": [
+            "bbs",
+            "13380486-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
+          ]
+        },
+        {
+          "value": "650,0,45,1,1,1,1,1,1",
+          "context": [
+            "bbs",
+            "13380487-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
+          ]
+        },
+        {
+          "value": "800,0,55,1,1,1,1,1,1",
+          "context": [
+            "bbs",
+            "13380488-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
+          ]
+        },
+        {
+          "value": "400,200,50,1,1,1,1,1,1",
+          "context": [
+            "bbs",
+            "13380515-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "650,0,50,1,1,1,1,1,1",
+          "context": [
+            "bbs",
+            "13380528-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
           "value": "425,1250,40,1,1,1,1,1,1,100",
           "context": [
             "bbs",
@@ -157019,6 +158375,50 @@
           "context": [
             "bbs",
             "13380559-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "700,1500,25,1,1,1,1,1,1,100",
+          "context": [
+            "bbs",
+            "13380627-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "500,1500,50,1,1,1,1,1,1,100",
+          "context": [
+            "bbs",
+            "13380658-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "850,1500,50,1,1,1,1,1,1,100",
+          "context": [
+            "bbs",
+            "13380663-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "650,500,25,1,1,1,1,1,1,100",
+          "context": [
+            "bbs",
+            "13380666-gl",
             "levels",
             "0",
             "effects",
@@ -158566,11 +159966,11 @@
           "value": "single",
           "context": [
             "bbs",
-            "8471314-gl",
+            "3820668-gl",
             "levels",
             "0",
             "effects",
-            "1"
+            "11"
           ]
         }
       ],
@@ -158590,16 +159990,12 @@
         {
           "value": "enemy",
           "context": [
-            "units",
-            "840658-gl",
-            "feskills",
-            "7",
-            "skill",
-            "effects",
+            "bbs",
+            "13380207-gl",
+            "levels",
             "0",
-            "passive",
-            "triggered effect",
-            "0"
+            "effects",
+            "2"
           ]
         },
         {
@@ -158663,6 +160059,127 @@
             "0",
             "effects",
             "2"
+          ]
+        },
+        {
+          "value": "20,999,0",
+          "context": [
+            "bbs",
+            "13380623-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "35,999,0",
+          "context": [
+            "bbs",
+            "13380624-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "50,999,0",
+          "context": [
+            "bbs",
+            "13380625-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "75,999,0",
+          "context": [
+            "bbs",
+            "13380626-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "50,2,0",
+          "context": [
+            "bbs",
+            "3820668-gl",
+            "levels",
+            "0",
+            "effects",
+            "11"
+          ]
+        },
+        {
+          "value": "60,2,0",
+          "context": [
+            "bbs",
+            "3820668-gl",
+            "levels",
+            "1",
+            "effects",
+            "11"
+          ]
+        },
+        {
+          "value": "75,2,0",
+          "context": [
+            "bbs",
+            "3820668-gl",
+            "levels",
+            "2",
+            "effects",
+            "11"
+          ]
+        },
+        {
+          "value": "85,2,0",
+          "context": [
+            "bbs",
+            "3820668-gl",
+            "levels",
+            "4",
+            "effects",
+            "11"
+          ]
+        },
+        {
+          "value": "85,3,0",
+          "context": [
+            "bbs",
+            "3820668-gl",
+            "levels",
+            "5",
+            "effects",
+            "11"
+          ]
+        },
+        {
+          "value": "100,3,0",
+          "context": [
+            "bbs",
+            "3820668-gl",
+            "levels",
+            "6",
+            "effects",
+            "11"
+          ]
+        },
+        {
+          "value": "100,4,0",
+          "context": [
+            "bbs",
+            "3820668-gl",
+            "levels",
+            "7",
+            "effects",
+            "11"
           ]
         },
         {
@@ -158809,17 +160326,6 @@
           ]
         },
         {
-          "value": "20,999,0",
-          "context": [
-            "bbs",
-            "8471432-gl",
-            "levels",
-            "0",
-            "effects",
-            "0"
-          ]
-        },
-        {
           "value": "40,999,0",
           "context": [
             "bbs",
@@ -158890,17 +160396,6 @@
           "context": [
             "bbs",
             "83013764-gl",
-            "levels",
-            "0",
-            "effects",
-            "1"
-          ]
-        },
-        {
-          "value": "85,3,0",
-          "context": [
-            "bbs",
-            "83013791-gl",
             "levels",
             "0",
             "effects",
@@ -158985,17 +160480,6 @@
           ]
         },
         {
-          "value": "50,999,0",
-          "context": [
-            "bbs",
-            "85080103-gl",
-            "levels",
-            "0",
-            "effects",
-            "0"
-          ]
-        },
-        {
           "value": "80,1,0",
           "context": [
             "bbs",
@@ -159040,17 +160524,6 @@
           ]
         },
         {
-          "value": "75,999,0",
-          "context": [
-            "bbs",
-            "85100076-gl",
-            "levels",
-            "0",
-            "effects",
-            "0"
-          ]
-        },
-        {
           "value": "75,1,0",
           "context": [
             "bbs",
@@ -159084,32 +160557,10 @@
           ]
         },
         {
-          "value": "100,3,0",
-          "context": [
-            "bbs",
-            "88500130-gl",
-            "levels",
-            "0",
-            "effects",
-            "0"
-          ]
-        },
-        {
           "value": "10,2,0",
           "context": [
             "bbs",
             "88500169-gl",
-            "levels",
-            "0",
-            "effects",
-            "0"
-          ]
-        },
-        {
-          "value": "50,2,0",
-          "context": [
-            "bbs",
-            "88500171-gl",
             "levels",
             "0",
             "effects",
@@ -159216,11 +160667,11 @@
           "value": "single",
           "context": [
             "bbs",
-            "8471314-gl",
+            "3820668-gl",
             "levels",
             "0",
             "effects",
-            "2"
+            "12"
           ]
         }
       ],
@@ -159286,6 +160737,127 @@
             "0",
             "effects",
             "1"
+          ]
+        },
+        {
+          "value": "20,999,0",
+          "context": [
+            "bbs",
+            "13380623-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
+          ]
+        },
+        {
+          "value": "35,999,0",
+          "context": [
+            "bbs",
+            "13380624-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
+          ]
+        },
+        {
+          "value": "50,999,0",
+          "context": [
+            "bbs",
+            "13380625-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
+          ]
+        },
+        {
+          "value": "75,999,0",
+          "context": [
+            "bbs",
+            "13380626-gl",
+            "levels",
+            "0",
+            "effects",
+            "1"
+          ]
+        },
+        {
+          "value": "50,2,0",
+          "context": [
+            "bbs",
+            "3820668-gl",
+            "levels",
+            "0",
+            "effects",
+            "12"
+          ]
+        },
+        {
+          "value": "60,2,0",
+          "context": [
+            "bbs",
+            "3820668-gl",
+            "levels",
+            "1",
+            "effects",
+            "12"
+          ]
+        },
+        {
+          "value": "75,2,0",
+          "context": [
+            "bbs",
+            "3820668-gl",
+            "levels",
+            "2",
+            "effects",
+            "12"
+          ]
+        },
+        {
+          "value": "85,2,0",
+          "context": [
+            "bbs",
+            "3820668-gl",
+            "levels",
+            "4",
+            "effects",
+            "12"
+          ]
+        },
+        {
+          "value": "85,3,0",
+          "context": [
+            "bbs",
+            "3820668-gl",
+            "levels",
+            "5",
+            "effects",
+            "12"
+          ]
+        },
+        {
+          "value": "100,3,0",
+          "context": [
+            "bbs",
+            "3820668-gl",
+            "levels",
+            "6",
+            "effects",
+            "12"
+          ]
+        },
+        {
+          "value": "100,4,0",
+          "context": [
+            "bbs",
+            "3820668-gl",
+            "levels",
+            "7",
+            "effects",
+            "12"
           ]
         },
         {
@@ -159410,17 +160982,6 @@
           ]
         },
         {
-          "value": "20,999,0",
-          "context": [
-            "bbs",
-            "8471432-gl",
-            "levels",
-            "0",
-            "effects",
-            "1"
-          ]
-        },
-        {
           "value": "40,999,0",
           "context": [
             "bbs",
@@ -159498,17 +161059,6 @@
           ]
         },
         {
-          "value": "85,3,0",
-          "context": [
-            "bbs",
-            "83013791-gl",
-            "levels",
-            "0",
-            "effects",
-            "2"
-          ]
-        },
-        {
           "value": "95,2,0",
           "context": [
             "bbs",
@@ -159553,28 +161103,6 @@
           ]
         },
         {
-          "value": "75,999,0",
-          "context": [
-            "bbs",
-            "85080103-gl",
-            "levels",
-            "0",
-            "effects",
-            "1"
-          ]
-        },
-        {
-          "value": "50,999,0",
-          "context": [
-            "bbs",
-            "87093002-gl",
-            "levels",
-            "0",
-            "effects",
-            "1"
-          ]
-        },
-        {
           "value": "75,1,0",
           "context": [
             "bbs",
@@ -159612,28 +161140,6 @@
           "context": [
             "bbs",
             "88500115-gl",
-            "levels",
-            "0",
-            "effects",
-            "1"
-          ]
-        },
-        {
-          "value": "100,3,0",
-          "context": [
-            "bbs",
-            "88500130-gl",
-            "levels",
-            "0",
-            "effects",
-            "1"
-          ]
-        },
-        {
-          "value": "50,2,0",
-          "context": [
-            "bbs",
-            "88500170-gl",
             "levels",
             "0",
             "effects",
@@ -159824,6 +161330,50 @@
           ]
         },
         {
+          "value": "20,999,0",
+          "context": [
+            "bbs",
+            "13380623-gl",
+            "levels",
+            "0",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "35,999,0",
+          "context": [
+            "bbs",
+            "13380624-gl",
+            "levels",
+            "0",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "50,999,0",
+          "context": [
+            "bbs",
+            "13380625-gl",
+            "levels",
+            "0",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "75,999,0",
+          "context": [
+            "bbs",
+            "13380626-gl",
+            "levels",
+            "0",
+            "effects",
+            "2"
+          ]
+        },
+        {
           "value": "95,1,0",
           "context": [
             "bbs",
@@ -159967,17 +161517,6 @@
           ]
         },
         {
-          "value": "20,999,0",
-          "context": [
-            "bbs",
-            "8471432-gl",
-            "levels",
-            "0",
-            "effects",
-            "2"
-          ]
-        },
-        {
           "value": "40,999,0",
           "context": [
             "bbs",
@@ -160030,17 +161569,6 @@
             "0",
             "effects",
             "1"
-          ]
-        },
-        {
-          "value": "50,999,0",
-          "context": [
-            "bbs",
-            "87093002-gl",
-            "levels",
-            "0",
-            "effects",
-            "2"
           ]
         },
         {
@@ -160206,7 +161734,7 @@
           "value": "16.7/1",
           "context": [
             "bbs",
-            "83013765-gl",
+            "13380471-gl",
             "levels",
             "0",
             "effects",
@@ -160264,7 +161792,7 @@
           "value": "single",
           "context": [
             "bbs",
-            "85100078-gl",
+            "13380471-gl",
             "levels",
             "0",
             "effects",
@@ -160360,6 +161888,17 @@
           ]
         },
         {
+          "value": "10510,100,999,0,1",
+          "context": [
+            "bbs",
+            "13380625-gl",
+            "levels",
+            "0",
+            "effects",
+            "3"
+          ]
+        },
+        {
           "value": "10510,40,3,0,1",
           "context": [
             "bbs",
@@ -160389,11 +161928,22 @@
           "value": "16.7/1",
           "context": [
             "bbs",
-            "85090013-gl",
+            "13380471-gl",
             "levels",
             "0",
             "effects",
-            "0"
+            "3"
+          ]
+        },
+        {
+          "value": "33.3/2",
+          "context": [
+            "bbs",
+            "13380632-gl",
+            "levels",
+            "0",
+            "effects",
+            "6"
           ]
         }
       ],
@@ -160413,11 +161963,11 @@
           "value": "single",
           "context": [
             "bbs",
-            "85090043-gl",
+            "13380471-gl",
             "levels",
             "0",
             "effects",
-            "0"
+            "3"
           ]
         }
       ],
@@ -160447,6 +161997,39 @@
           ]
         },
         {
+          "value": "100,1,3,0",
+          "context": [
+            "bbs",
+            "13380471-gl",
+            "levels",
+            "0",
+            "effects",
+            "3"
+          ]
+        },
+        {
+          "value": "100,6,2,0",
+          "context": [
+            "bbs",
+            "13380530-gl",
+            "levels",
+            "0",
+            "effects",
+            "0"
+          ]
+        },
+        {
+          "value": "100,1,2,0",
+          "context": [
+            "bbs",
+            "13380604-gl",
+            "levels",
+            "0",
+            "effects",
+            "3"
+          ]
+        },
+        {
           "value": "100,5,999,0",
           "context": [
             "bbs",
@@ -160462,17 +162045,6 @@
           "context": [
             "bbs",
             "85090014-gl",
-            "levels",
-            "0",
-            "effects",
-            "0"
-          ]
-        },
-        {
-          "value": "100,1,2,0",
-          "context": [
-            "bbs",
-            "85090043-gl",
             "levels",
             "0",
             "effects",
@@ -160598,6 +162170,839 @@
             "0",
             "effects",
             "0"
+          ]
+        }
+      ]
+    },
+    "11001": {
+      "effect delay time(ms)/frame": [
+        {
+          "value": "0.0/0",
+          "context": [
+            "bbs",
+            "3810338-gl",
+            "levels",
+            "0",
+            "effects",
+            "10"
+          ]
+        }
+      ],
+      "target area": [
+        {
+          "value": "single",
+          "context": [
+            "bbs",
+            "3810338-gl",
+            "levels",
+            "0",
+            "effects",
+            "10"
+          ]
+        }
+      ],
+      "target type": [
+        {
+          "value": "enemy",
+          "context": [
+            "bbs",
+            "3810338-gl",
+            "levels",
+            "0",
+            "effects",
+            "10"
+          ]
+        }
+      ],
+      "unknown proc param": [
+        {
+          "value": "0.015,0.02,0,0,1,0,0,0,2,0",
+          "context": [
+            "bbs",
+            "3810338-gl",
+            "levels",
+            "0",
+            "effects",
+            "10"
+          ]
+        },
+        {
+          "value": "0.017,0.022,0,0,1,0,0,0,2,0",
+          "context": [
+            "bbs",
+            "3810338-gl",
+            "levels",
+            "1",
+            "effects",
+            "10"
+          ]
+        },
+        {
+          "value": "0.02,0.025,0,0,1,0,0,0,2,0",
+          "context": [
+            "bbs",
+            "3810338-gl",
+            "levels",
+            "2",
+            "effects",
+            "10"
+          ]
+        },
+        {
+          "value": "0.023,0.028,0,0,1,0,0,0,2,0",
+          "context": [
+            "bbs",
+            "3810338-gl",
+            "levels",
+            "4",
+            "effects",
+            "10"
+          ]
+        },
+        {
+          "value": "0.023,0.028,0,0,1,0,0,0,3,0",
+          "context": [
+            "bbs",
+            "3810338-gl",
+            "levels",
+            "5",
+            "effects",
+            "10"
+          ]
+        },
+        {
+          "value": "0.025,0.03,0,0,1,0,0,0,3,0",
+          "context": [
+            "bbs",
+            "3810338-gl",
+            "levels",
+            "6",
+            "effects",
+            "10"
+          ]
+        },
+        {
+          "value": "0.025,0.03,0,0,1,0,0,0,4,0",
+          "context": [
+            "bbs",
+            "3810338-gl",
+            "levels",
+            "7",
+            "effects",
+            "10"
+          ]
+        },
+        {
+          "value": "0.015,0.02,1,0,0,0,0,0,2,0",
+          "context": [
+            "bbs",
+            "3820628-gl",
+            "levels",
+            "0",
+            "effects",
+            "12"
+          ]
+        },
+        {
+          "value": "0.017,0.022,1,0,0,0,0,0,2,0",
+          "context": [
+            "bbs",
+            "3820628-gl",
+            "levels",
+            "1",
+            "effects",
+            "12"
+          ]
+        },
+        {
+          "value": "0.02,0.025,1,0,0,0,0,0,2,0",
+          "context": [
+            "bbs",
+            "3820628-gl",
+            "levels",
+            "2",
+            "effects",
+            "12"
+          ]
+        },
+        {
+          "value": "0.023,0.028,1,0,0,0,0,0,2,0",
+          "context": [
+            "bbs",
+            "3820628-gl",
+            "levels",
+            "4",
+            "effects",
+            "12"
+          ]
+        },
+        {
+          "value": "0.023,0.028,1,0,0,0,0,0,3,0",
+          "context": [
+            "bbs",
+            "3820628-gl",
+            "levels",
+            "5",
+            "effects",
+            "12"
+          ]
+        },
+        {
+          "value": "0.025,0.03,1,0,0,0,0,0,3,0",
+          "context": [
+            "bbs",
+            "3820628-gl",
+            "levels",
+            "6",
+            "effects",
+            "12"
+          ]
+        },
+        {
+          "value": "0.025,0.03,1,0,0,0,0,0,4,0",
+          "context": [
+            "bbs",
+            "3820628-gl",
+            "levels",
+            "7",
+            "effects",
+            "12"
+          ]
+        },
+        {
+          "value": "0.015,0.02,0,0,0,1,0,0,2,0",
+          "context": [
+            "bbs",
+            "3830528-gl",
+            "levels",
+            "0",
+            "effects",
+            "11"
+          ]
+        },
+        {
+          "value": "0.017,0.022,0,0,0,1,0,0,2,0",
+          "context": [
+            "bbs",
+            "3830528-gl",
+            "levels",
+            "1",
+            "effects",
+            "11"
+          ]
+        },
+        {
+          "value": "0.02,0.025,0,0,0,1,0,0,2,0",
+          "context": [
+            "bbs",
+            "3830528-gl",
+            "levels",
+            "2",
+            "effects",
+            "11"
+          ]
+        },
+        {
+          "value": "0.023,0.028,0,0,0,1,0,0,2,0",
+          "context": [
+            "bbs",
+            "3830528-gl",
+            "levels",
+            "4",
+            "effects",
+            "11"
+          ]
+        },
+        {
+          "value": "0.023,0.028,0,0,0,1,0,0,3,0",
+          "context": [
+            "bbs",
+            "3830528-gl",
+            "levels",
+            "5",
+            "effects",
+            "11"
+          ]
+        },
+        {
+          "value": "0.025,0.03,0,0,0,1,0,0,3,0",
+          "context": [
+            "bbs",
+            "3830528-gl",
+            "levels",
+            "6",
+            "effects",
+            "11"
+          ]
+        },
+        {
+          "value": "0.025,0.03,0,0,0,1,0,0,4,0",
+          "context": [
+            "bbs",
+            "3830528-gl",
+            "levels",
+            "7",
+            "effects",
+            "11"
+          ]
+        },
+        {
+          "value": "0.015,0.02,0,1,0,0,0,0,2,0",
+          "context": [
+            "bbs",
+            "3840628-gl",
+            "levels",
+            "0",
+            "effects",
+            "11"
+          ]
+        },
+        {
+          "value": "0.017,0.022,0,1,0,0,0,0,2,0",
+          "context": [
+            "bbs",
+            "3840628-gl",
+            "levels",
+            "1",
+            "effects",
+            "11"
+          ]
+        },
+        {
+          "value": "0.02,0.025,0,1,0,0,0,0,2,0",
+          "context": [
+            "bbs",
+            "3840628-gl",
+            "levels",
+            "2",
+            "effects",
+            "11"
+          ]
+        },
+        {
+          "value": "0.023,0.028,0,1,0,0,0,0,2,0",
+          "context": [
+            "bbs",
+            "3840628-gl",
+            "levels",
+            "4",
+            "effects",
+            "11"
+          ]
+        },
+        {
+          "value": "0.023,0.028,0,1,0,0,0,0,3,0",
+          "context": [
+            "bbs",
+            "3840628-gl",
+            "levels",
+            "5",
+            "effects",
+            "11"
+          ]
+        },
+        {
+          "value": "0.025,0.03,0,1,0,0,0,0,3,0",
+          "context": [
+            "bbs",
+            "3840628-gl",
+            "levels",
+            "6",
+            "effects",
+            "11"
+          ]
+        },
+        {
+          "value": "0.025,0.03,0,1,0,0,0,0,4,0",
+          "context": [
+            "bbs",
+            "3840628-gl",
+            "levels",
+            "7",
+            "effects",
+            "11"
+          ]
+        },
+        {
+          "value": "0.015,0.02,0,0,0,0,0,1,2,0",
+          "context": [
+            "bbs",
+            "3850628-gl",
+            "levels",
+            "0",
+            "effects",
+            "12"
+          ]
+        },
+        {
+          "value": "0.017,0.022,0,0,0,0,0,1,2,0",
+          "context": [
+            "bbs",
+            "3850628-gl",
+            "levels",
+            "1",
+            "effects",
+            "12"
+          ]
+        },
+        {
+          "value": "0.02,0.025,0,0,0,0,0,1,2,0",
+          "context": [
+            "bbs",
+            "3850628-gl",
+            "levels",
+            "2",
+            "effects",
+            "12"
+          ]
+        },
+        {
+          "value": "0.023,0.028,0,0,0,0,0,1,2,0",
+          "context": [
+            "bbs",
+            "3850628-gl",
+            "levels",
+            "4",
+            "effects",
+            "12"
+          ]
+        },
+        {
+          "value": "0.023,0.028,0,0,0,0,0,1,3,0",
+          "context": [
+            "bbs",
+            "3850628-gl",
+            "levels",
+            "5",
+            "effects",
+            "12"
+          ]
+        },
+        {
+          "value": "0.025,0.03,0,0,0,0,0,1,3,0",
+          "context": [
+            "bbs",
+            "3850628-gl",
+            "levels",
+            "6",
+            "effects",
+            "12"
+          ]
+        },
+        {
+          "value": "0.025,0.03,0,0,0,0,0,1,4,0",
+          "context": [
+            "bbs",
+            "3850628-gl",
+            "levels",
+            "7",
+            "effects",
+            "12"
+          ]
+        },
+        {
+          "value": "0.015,0.02,0,0,0,0,1,0,2,0",
+          "context": [
+            "bbs",
+            "3860518-gl",
+            "levels",
+            "0",
+            "effects",
+            "10"
+          ]
+        },
+        {
+          "value": "0.017,0.022,0,0,0,0,1,0,2,0",
+          "context": [
+            "bbs",
+            "3860518-gl",
+            "levels",
+            "1",
+            "effects",
+            "10"
+          ]
+        },
+        {
+          "value": "0.02,0.025,0,0,0,0,1,0,2,0",
+          "context": [
+            "bbs",
+            "3860518-gl",
+            "levels",
+            "2",
+            "effects",
+            "10"
+          ]
+        },
+        {
+          "value": "0.023,0.028,0,0,0,0,1,0,2,0",
+          "context": [
+            "bbs",
+            "3860518-gl",
+            "levels",
+            "4",
+            "effects",
+            "10"
+          ]
+        },
+        {
+          "value": "0.023,0.028,0,0,0,0,1,0,3,0",
+          "context": [
+            "bbs",
+            "3860518-gl",
+            "levels",
+            "5",
+            "effects",
+            "10"
+          ]
+        },
+        {
+          "value": "0.025,0.03,0,0,0,0,1,0,3,0",
+          "context": [
+            "bbs",
+            "3860518-gl",
+            "levels",
+            "6",
+            "effects",
+            "10"
+          ]
+        },
+        {
+          "value": "0.025,0.03,0,0,0,0,1,0,4,0",
+          "context": [
+            "bbs",
+            "3860518-gl",
+            "levels",
+            "7",
+            "effects",
+            "10"
+          ]
+        }
+      ]
+    },
+    "11002": {
+      "effect delay time(ms)/frame": [
+        {
+          "value": "0.0/0",
+          "context": [
+            "bbs",
+            "3850167-gl",
+            "levels",
+            "0",
+            "effects",
+            "9"
+          ]
+        }
+      ],
+      "target area": [
+        {
+          "value": "aoe",
+          "context": [
+            "bbs",
+            "3850167-gl",
+            "levels",
+            "0",
+            "effects",
+            "9"
+          ]
+        }
+      ],
+      "target type": [
+        {
+          "value": "party",
+          "context": [
+            "bbs",
+            "3850167-gl",
+            "levels",
+            "0",
+            "effects",
+            "9"
+          ]
+        }
+      ],
+      "unknown proc param": [
+        {
+          "value": "0,30,120000,3,0",
+          "context": [
+            "bbs",
+            "3850167-gl",
+            "levels",
+            "0",
+            "effects",
+            "9"
+          ]
+        },
+        {
+          "value": "0,32,125000,3,0",
+          "context": [
+            "bbs",
+            "3850167-gl",
+            "levels",
+            "1",
+            "effects",
+            "9"
+          ]
+        },
+        {
+          "value": "0,35,130000,3,0",
+          "context": [
+            "bbs",
+            "3850167-gl",
+            "levels",
+            "2",
+            "effects",
+            "9"
+          ]
+        },
+        {
+          "value": "0,40,140000,3,0",
+          "context": [
+            "bbs",
+            "3850167-gl",
+            "levels",
+            "4",
+            "effects",
+            "9"
+          ]
+        },
+        {
+          "value": "0,40,140000,4,0",
+          "context": [
+            "bbs",
+            "3850167-gl",
+            "levels",
+            "5",
+            "effects",
+            "9"
+          ]
+        },
+        {
+          "value": "0,45,145000,4,0",
+          "context": [
+            "bbs",
+            "3850167-gl",
+            "levels",
+            "6",
+            "effects",
+            "9"
+          ]
+        },
+        {
+          "value": "0,45,145000,5,0",
+          "context": [
+            "bbs",
+            "3850167-gl",
+            "levels",
+            "7",
+            "effects",
+            "9"
+          ]
+        },
+        {
+          "value": "0,50,150000,5,0",
+          "context": [
+            "bbs",
+            "3850167-gl",
+            "levels",
+            "8",
+            "effects",
+            "9"
+          ]
+        }
+      ]
+    },
+    "11003": {
+      "effect delay time(ms)/frame": [
+        {
+          "value": "0.0/0",
+          "context": [
+            "bbs",
+            "3720237-gl",
+            "levels",
+            "0",
+            "effects",
+            "9"
+          ]
+        }
+      ],
+      "target area": [
+        {
+          "value": "aoe",
+          "context": [
+            "bbs",
+            "3720237-gl",
+            "levels",
+            "0",
+            "effects",
+            "9"
+          ]
+        }
+      ],
+      "target type": [
+        {
+          "value": "party",
+          "context": [
+            "bbs",
+            "3720237-gl",
+            "levels",
+            "0",
+            "effects",
+            "9"
+          ]
+        }
+      ],
+      "unknown proc param": [
+        {
+          "value": "0,0,0,0,60,0,3,0",
+          "context": [
+            "bbs",
+            "3720237-gl",
+            "levels",
+            "0",
+            "effects",
+            "9"
+          ]
+        },
+        {
+          "value": "0,0,0,0,70,0,3,0",
+          "context": [
+            "bbs",
+            "3720237-gl",
+            "levels",
+            "1",
+            "effects",
+            "9"
+          ]
+        },
+        {
+          "value": "0,0,0,0,80,0,3,0",
+          "context": [
+            "bbs",
+            "3720237-gl",
+            "levels",
+            "2",
+            "effects",
+            "9"
+          ]
+        },
+        {
+          "value": "0,0,0,0,90,0,3,0",
+          "context": [
+            "bbs",
+            "3720237-gl",
+            "levels",
+            "4",
+            "effects",
+            "9"
+          ]
+        },
+        {
+          "value": "0,0,0,0,90,0,4,0",
+          "context": [
+            "bbs",
+            "3720237-gl",
+            "levels",
+            "5",
+            "effects",
+            "9"
+          ]
+        },
+        {
+          "value": "0,0,0,0,100,0,4,0",
+          "context": [
+            "bbs",
+            "3720237-gl",
+            "levels",
+            "6",
+            "effects",
+            "9"
+          ]
+        },
+        {
+          "value": "0,0,0,0,100,0,5,0",
+          "context": [
+            "bbs",
+            "3720237-gl",
+            "levels",
+            "7",
+            "effects",
+            "9"
+          ]
+        },
+        {
+          "value": "60,0,0,0,0,0,3,0",
+          "context": [
+            "bbs",
+            "3810758-gl",
+            "levels",
+            "0",
+            "effects",
+            "11"
+          ]
+        },
+        {
+          "value": "70,0,0,0,0,0,3,0",
+          "context": [
+            "bbs",
+            "3810758-gl",
+            "levels",
+            "1",
+            "effects",
+            "11"
+          ]
+        },
+        {
+          "value": "80,0,0,0,0,0,3,0",
+          "context": [
+            "bbs",
+            "3810758-gl",
+            "levels",
+            "2",
+            "effects",
+            "11"
+          ]
+        },
+        {
+          "value": "90,0,0,0,0,0,3,0",
+          "context": [
+            "bbs",
+            "3810758-gl",
+            "levels",
+            "4",
+            "effects",
+            "11"
+          ]
+        },
+        {
+          "value": "90,0,0,0,0,0,4,0",
+          "context": [
+            "bbs",
+            "3810758-gl",
+            "levels",
+            "5",
+            "effects",
+            "11"
+          ]
+        },
+        {
+          "value": "100,0,0,0,0,0,4,0",
+          "context": [
+            "bbs",
+            "3810758-gl",
+            "levels",
+            "6",
+            "effects",
+            "11"
+          ]
+        },
+        {
+          "value": "100,0,0,0,0,0,5,0",
+          "context": [
+            "bbs",
+            "3810758-gl",
+            "levels",
+            "7",
+            "effects",
+            "11"
           ]
         }
       ]
@@ -160975,6 +163380,45 @@
           ]
         },
         {
+          "value": "0.2,2,0,0,0,0,0,0,0",
+          "context": [
+            "units",
+            "810757-gl",
+            "bb",
+            "levels",
+            "0",
+            "effects",
+            "1"
+          ]
+        },
+        {
+          "value": "0.25,3,0,0,0,0,0,0,0",
+          "context": [
+            "units",
+            "810758-gl",
+            "feskills",
+            "8",
+            "skill",
+            "effects",
+            "0",
+            "passive",
+            "triggered effect",
+            "0"
+          ]
+        },
+        {
+          "value": "1,3,0,0,0,0,0,0,0",
+          "context": [
+            "units",
+            "720237-gl",
+            "ubb",
+            "levels",
+            "0",
+            "effects",
+            "4"
+          ]
+        },
+        {
           "value": "0.3,5,0,0,0,0,0,0,0",
           "context": [
             "units",
@@ -161005,33 +163449,6 @@
             "820588-gl",
             "feskills",
             "8",
-            "skill",
-            "effects",
-            "0",
-            "passive",
-            "triggered effect",
-            "0"
-          ]
-        },
-        {
-          "value": "1,3,0,0,0,0,0,0,0",
-          "context": [
-            "units",
-            "820668-gl",
-            "ubb",
-            "levels",
-            "0",
-            "effects",
-            "2"
-          ]
-        },
-        {
-          "value": "0.2,2,0,0,0,0,0,0,0",
-          "context": [
-            "units",
-            "830298-gl",
-            "feskills",
-            "11",
             "skill",
             "effects",
             "0",
@@ -161087,21 +163504,6 @@
             "effects",
             "0",
             "add to bb"
-          ]
-        },
-        {
-          "value": "0.25,3,0,0,0,0,0,0,0",
-          "context": [
-            "units",
-            "840628-gl",
-            "feskills",
-            "11",
-            "skill",
-            "effects",
-            "0",
-            "passive",
-            "triggered effect",
-            "0"
           ]
         },
         {
@@ -161336,6 +163738,28 @@
             "0",
             "effects",
             "3"
+          ]
+        },
+        {
+          "value": "0.85,2,0,0,0,0,0,0",
+          "context": [
+            "bbs",
+            "3860518-gl",
+            "levels",
+            "2",
+            "effects",
+            "2"
+          ]
+        },
+        {
+          "value": "0.85,3,0,0,0,0,0,0",
+          "context": [
+            "bbs",
+            "3860518-gl",
+            "levels",
+            "4",
+            "effects",
+            "2"
           ]
         },
         {
