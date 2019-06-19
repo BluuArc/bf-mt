@@ -19,12 +19,11 @@
       <v-layout row wrap>
         <v-flex xs12 sm6 class="pa-0">
           <v-btn
-            @click="localSelectedIds = idsToConsider.slice()"
-            :disabled="idsToConsider.length > 100"
+            @click="localSelectedIds = idsToConsider.slice(0, 25)"
             :block="$vuetify.breakpoint.xsOnly"
             flat
           >
-            {{ `All (${allEntries.length})` }}
+            {{ idsToConsider.length > 25 ? 'Top 25' : `All (${allEntries.length})` }}
           </v-btn>
         </v-flex>
         <v-flex xs12 sm6 class="pa-0 text-xs-right">
@@ -42,7 +41,7 @@
           :value="true"
           :type="alertType"
         >
-          Comparing too many units may lead to huge performance issues, so be careful when selecting which entries to compare.
+          Comparing too many entries may lead to huge performance issues. It's recommended to filter as much as possible before selecting entries for comparison.
         </v-alert>
       </v-layout>
     </v-card-text>
@@ -51,7 +50,7 @@
         <v-btn
           block flat
           @click="addToExistingComparison"
-          :disabled="localSelectedIds.length === 0"
+          :disabled="!hasPreviousComparison() || localSelectedIds.length === 0"
         >
           <v-icon left>file_copy</v-icon>
           Add to Existing Comparison
@@ -61,14 +60,14 @@
         <v-btn
           block flat
           @click="createNewComparison"
-          :disabled="!hasPreviousComparison() || localSelectedIds.length === 0"
+          :disabled="localSelectedIds.length === 0"
         >
           <v-icon left>insert_drive_file</v-icon>
           Add to New Comparison
         </v-btn>
       </v-flex>
       <v-flex xs12>
-        <v-btn block flat>
+        <v-btn block flat @click="emitClose">
           Cancel
         </v-btn>
       </v-flex>

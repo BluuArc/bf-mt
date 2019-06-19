@@ -194,9 +194,10 @@
             :length="numPages"/>
         </div>
       </v-bottom-nav>
-      <template v-if="allSortedEntries.length > 0 && allSortedEntries.length < 100 && !(loadingFilters || loadingSorts)">
+      <template v-if="allSortedEntries.length > 0 && !(loadingFilters || loadingSorts)">
         <v-dialog
           v-model="showCompareInputDialog"
+          persistent
           max-width="400px"
         >
           <template slot="activator" slot-scope="{ on }">
@@ -416,7 +417,7 @@ export default {
     },
     getCompareName: {
       type: Function,
-      default: (id, pageDb) => (pageDb[id] && `${pageDb[id].name} (${id})`) || id,
+      default: (id, entry) => (entry && `${entry.name} (${id})`) || `[${id}]`,
     },
   },
   components: {
