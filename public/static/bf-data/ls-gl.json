@@ -27181,6 +27181,45 @@
       "720157"
     ]
   },
+  "720237": {
+    "desc": "120% boost to Def, max HP, 180% boost to Spark damage, greatly boosts Spark damage and considerably boosts Atk for 2 turns when Sparks exceed a certain amount & greatly boosts OD gauge fill rate",
+    "effects": [
+      {
+        "def% buff": 120,
+        "hp% buff": 120,
+        "passive id": "1"
+      },
+      {
+        "damage% for spark": 180,
+        "passive id": "31"
+      },
+      {
+        "buff": {
+          "atk% buff (1)": 120,
+          "buff turns (1)": "2"
+        },
+        "passive id": "86",
+        "spark count buff activation": 15
+      },
+      {
+        "buff": {
+          "buff turns (40)": "2",
+          "spark dmg% buff": 120
+        },
+        "passive id": "86",
+        "spark count buff activation": 15
+      },
+      {
+        "od fill rate%": 30,
+        "passive id": "70"
+      }
+    ],
+    "id": "720237",
+    "name": "Incorruptible Spirit",
+    "associated_units": [
+      "720237"
+    ]
+  },
   "730227": {
     "desc": "100% boost to Atk, Def, Rec and 120% boost to max HP, 20% damage reduction for 2 turns when HP is below 70%, 15% damage reduction, hugely boosts critical damage & negates all status ailments and Atk, Def, Rec reduction effects",
     "effects": [

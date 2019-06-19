@@ -1,20 +1,4 @@
 {
-  "MST_SKILLS_2840327_NAME": {
-    "en": "Land Waster",
-    "es": "Land Waster",
-    "id": "Pemboros Tanah",
-    "pt": "Land Waster",
-    "th": "แลนด์ วาสเตอร์",
-    "vi": "Land Waster"
-  },
-  "MST_SKILLS_2840357_DESCRIPTION": {
-    "en": "19 combo massive Thunder attack on all foes, Spark damage considerably boosts BB gauge for 3 turns, fully restores HP for 3 turns & hugely boosts max HP",
-    "es": "19 combo massive Thunder attack on all foes, Spark damage considerably boosts BB gauge for 3 turns, fully restores HP for 3 turns & hugely boosts max HP",
-    "id": "19 kombo serangan Guntur masif ke semua musuh, amat menambah HP maks, 3 giliran: kerusakan Percikan lumayan menambah meteran BB , HP pulih utuh",
-    "pt": "19 combo massive Thunder attack on all foes, Spark damage considerably boosts BB gauge for 3 turns, fully restores HP for 3 turns & hugely boosts max HP",
-    "th": "19 คอมโบ โจมตีธาตุสายฟ้ารุนแรงมหาศาล ใส่ศัตรูทั้งหมด, ความเสียหายสปาร์ค เพิ่มค่าอย่างมากให้ เกจ BB นาน 3 เทิร์น, ฟื้นคืน HP จนเต็ม นาน 3 เทิร์น กับ เพิ่มค่าอย่างสูงให้ HP สูงสุด",
-    "vi": "19 combo massive Thunder attack on all foes, Spark damage considerably boosts BB gauge for 3 turns, fully restores HP for 3 turns & hugely boosts max HP"
-  },
   "MST_SKILLS_2840357_NAME": {
     "en": "The Four Winds Howl",
     "es": "The Four Winds Howl",
@@ -21111,6 +21095,22 @@
     "th": "อีเทอนอลวินเทอร์",
     "vi": "Mùa đông bất diệt "
   },
+  "MST_SKILLS_3720237_DESCRIPTION": {
+    "en": "70 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Spark damage, all elemental damage, max HP, OD gauge, BB Atk  & activates BB/SBB/UBB twice",
+    "es": "70 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Spark damage, all elemental damage, max HP, OD gauge, BB Atk  & activates BB/SBB/UBB twice",
+    "id": "70 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Spark damage, all elemental damage, max HP, OD gauge, BB Atk  & activates BB/SBB/UBB twice",
+    "pt": "70 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Spark damage, all elemental damage, max HP, OD gauge, BB Atk  & activates BB/SBB/UBB twice",
+    "th": "70 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Spark damage, all elemental damage, max HP, OD gauge, BB Atk  & activates BB/SBB/UBB twice",
+    "vi": "70 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Spark damage, all elemental damage, max HP, OD gauge, BB Atk  & activates BB/SBB/UBB twice"
+  },
+  "MST_SKILLS_3720237_NAME": {
+    "en": "Absolute Photon Slash",
+    "es": "Absolute Photon Slash",
+    "id": "Absolute Photon Slash",
+    "pt": "Absolute Photon Slash",
+    "th": "Absolute Photon Slash",
+    "vi": "Absolute Photon Slash"
+  },
   "MST_SKILLS_3750_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -21246,6 +21246,14 @@
     "pt": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, critical hit rate, critical damage, Spark damage, BC, HC drop rate, Dark elemental damage, 85% activates BB/SBB/UBB twice, fully restores HP & 80% raises allies from KO",
     "th": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, critical hit rate, critical damage, Spark damage, BC, HC drop rate, Dark elemental damage, 85% activates BB/SBB/UBB twice, fully restores HP & 80% raises allies from KO",
     "vi": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, critical hit rate, critical damage, Spark damage, BC, HC drop rate, Dark elemental damage, 85% activates BB/SBB/UBB twice, fully restores HP & 80% raises allies from KO"
+  },
+  "MST_SKILLS_3860708_DESCRIPTION": {
+    "en": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def relative to max HP, critical damage, Dark elemental damage, max HP, 100% Light, Dark damage reduction, inflicts Atk, Def reduction & adds status ailment infliction to attack",
+    "es": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def relative to max HP, critical damage, Dark elemental damage, max HP, 100% Light, Dark damage reduction, inflicts Atk, Def reduction & adds status ailment infliction to attack",
+    "id": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def relative to max HP, critical damage, Dark elemental damage, max HP, 100% Light, Dark damage reduction, inflicts Atk, Def reduction & adds status ailment infliction to attack",
+    "pt": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def relative to max HP, critical damage, Dark elemental damage, max HP, 100% Light, Dark damage reduction, inflicts Atk, Def reduction & adds status ailment infliction to attack",
+    "th": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def relative to max HP, critical damage, Dark elemental damage, max HP, 100% Light, Dark damage reduction, inflicts Atk, Def reduction & adds status ailment infliction to attack",
+    "vi": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def relative to max HP, critical damage, Dark elemental damage, max HP, 100% Light, Dark damage reduction, inflicts Atk, Def reduction & adds status ailment infliction to attack"
   },
   "MST_SKILLS_3860_DESCRIPTION": {
     "en": "None",
@@ -80710,6 +80718,22 @@
     "pt": "Crystalline River",
     "th": "คริสตัลไลน์ ริเวอร์",
     "vi": "Crystalline River"
+  },
+  "MST_SKILLS_720237_DESCRIPTION": {
+    "en": "24 combo powerful Water attack on all foes, negates critical and elemental damage for 3 turns, Spark damage reduction for 3 turns, boosts own Spark damage for 3 turns, enormously boosts own Atk for 3 turns & probable huge 2 turn Atk, Def reduction",
+    "es": "24 combo powerful Water attack on all foes, negates critical and elemental damage for 3 turns, Spark damage reduction for 3 turns, boosts own Spark damage for 3 turns, enormously boosts own Atk for 3 turns & probable huge 2 turn Atk, Def reduction",
+    "id": "24 combo powerful Water attack on all foes, negates critical and elemental damage for 3 turns, Spark damage reduction for 3 turns, boosts own Spark damage for 3 turns, enormously boosts own Atk for 3 turns & probable huge 2 turn Atk, Def reduction",
+    "pt": "24 combo powerful Water attack on all foes, negates critical and elemental damage for 3 turns, Spark damage reduction for 3 turns, boosts own Spark damage for 3 turns, enormously boosts own Atk for 3 turns & probable huge 2 turn Atk, Def reduction",
+    "th": "24 combo powerful Water attack on all foes, negates critical and elemental damage for 3 turns, Spark damage reduction for 3 turns, boosts own Spark damage for 3 turns, enormously boosts own Atk for 3 turns & probable huge 2 turn Atk, Def reduction",
+    "vi": "24 combo powerful Water attack on all foes, negates critical and elemental damage for 3 turns, Spark damage reduction for 3 turns, boosts own Spark damage for 3 turns, enormously boosts own Atk for 3 turns & probable huge 2 turn Atk, Def reduction"
+  },
+  "MST_SKILLS_720237_NAME": {
+    "en": "Conviction Bulwark",
+    "es": "Conviction Bulwark",
+    "id": "Conviction Bulwark",
+    "pt": "Conviction Bulwark",
+    "th": "Conviction Bulwark",
+    "vi": "Conviction Bulwark"
   },
   "MST_SKILLS_7210_DESCRIPTION": {
     "en": "None",
