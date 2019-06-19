@@ -4,7 +4,7 @@
       <template v-if="isVisuallyLoading">
         <template v-if="isPostMount">
           <slot name="loading">
-            <loading-indicator :loadingMessage="loadingMessage"/>
+            <loading-indicator :loadingMessage="loadingMessage" :progress="progress"/>
           </slot>
         </template>
       </template>
@@ -36,6 +36,9 @@ export default {
     loadingMessage: {
       type: String,
       default: 'Loading...',
+    },
+    progress: {
+      required: false,
     },
   },
   components: {

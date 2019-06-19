@@ -1,5 +1,20 @@
 <template>
-  <promise-wait :promise="dbLoadPromise" loadingMessage="Loading data from database...">
+  <promise-wait
+    :promise="dbLoadPromise"
+    loadingMessage="Loading data from database..."
+  >
+    <template slot="loading">
+      <div style="height: 100%">
+        <v-container fill-height justify-center>
+          <v-flex class="text-xs-center" style="flex-grow: 0;">
+            <loading-indicator
+              :loadingMessage="dbLoadMessage || 'Loading data from database...'"
+              :progress="dbLoadProgress"
+            />
+          </v-flex>
+        </v-container>
+      </div>
+    </template>
     <card-tabs-container
       v-model="currentTabIndex"
       :tabs="tabs"
@@ -175,7 +190,7 @@
 
 <script>
 import { Logger } from '@/modules/Logger';
-import { COMPARE_KEY_ORDER, COMPARE_KEY_MAPPING, MATERIAL_COLOR_MAPPING } from '@/modules/constants';
+import { COMPARE_KEY_ORDER, COMPARE_KEY_MAPPING, MATERIAL_COLOR_MAPPING, multidexModuleInfo } from '@/modules/constants';
 import { convertCompareInputToCode, generateCompareInput, getEntryCardType } from '@/modules/core/compare';
 import { getEffectsListForUnit } from '@/modules/core/units';
 import { getEffectsListForItem } from '@/modules/core/items';
@@ -183,6 +198,7 @@ import { getEffectsListForExtraSkill } from '@/modules/core/extra-skills';
 import { getEffectsListForBurst } from '@/modules/core/bursts';
 import { getEffectsListForLeaderSkill } from '@/modules/core/leader-skills';
 import PromiseWait from '@/components/PromiseWait';
+import LoadingIndicator from '@/components/LoadingIndicator';
 import CardTabsContainer from '@/components/CardTabsContainer';
 import EntryCard from './EntryCard';
 import AddCompareEntry from './AddCompareEntry';
@@ -204,6 +220,7 @@ export default {
   },
   components: {
     PromiseWait,
+    LoadingIndicator,
     CardTabsContainer,
     EntryCard,
     AddCompareEntry,
@@ -233,6 +250,8 @@ export default {
       burstsDb: {},
       leaderSkillsDb: {},
       dbLoadPromise: Promise.resolve(),
+      dbLoadProgress: -1,
+      dbLoadMessage: '',
       showPickerDialog: false,
       activePickerType: '',
       pickerStep: 1,
@@ -262,11 +281,14 @@ export default {
       return mapping;
     },
     async updatePageDbForInput (inputs = []) {
-      const databaseIds = this.getMultidexDatabaseIdsFromCompareInput(inputs);
       const currentServer = this.$store.state.settings.activeServer;
+      const databaseIds = this.getMultidexDatabaseIdsFromCompareInput(inputs);
+      const databaseIdsKeys = Object.keys(databaseIds);
+      const numKeys = Math.max(databaseIdsKeys.length, 1);
       logger.debug({ databaseIds });
+      this.dbLoadProgress = 0;
       try {
-        await Object.keys(databaseIds).reduce((acc, multidexKey) => {
+        await databaseIdsKeys.reduce((acc, multidexKey) => {
           const entriesToGet = [];
           const pageDb = this[`${multidexKey}Db`];
           const neededKeys = databaseIds[multidexKey];
@@ -283,6 +305,9 @@ export default {
           });
 
           return acc.then(async () => {
+            const moduleName = (multidexModuleInfo.find(m => m.name === multidexKey) || {}).fullName || multidexKey;
+            this.dbLoadProgress = Math.max((databaseIdsKeys.indexOf(multidexKey) / numKeys) * 100, 0);
+            this.dbLoadMessage = `Loading entries for ${moduleName}`;
             if (entriesToGet.length > 0) {
               const retrievedEntries = await this.$store.dispatch(`${multidexKey}/getByIds`, {
                 ids: entriesToGet,
@@ -298,6 +323,7 @@ export default {
       } catch (err) {
         logger.error('error updating page db', err);
       }
+      this.dbLoadProgress = 100;
     },
     getLocalDbForMultidexKey (multidexKey) {
       return (this.allMultidexKeys.includes(multidexKey) && this[`${multidexKey}Db`]) || {};
