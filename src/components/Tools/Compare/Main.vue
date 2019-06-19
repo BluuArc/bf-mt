@@ -20,7 +20,26 @@
               @cancel="showPickerDialog = false"
             />
           </v-card>
-
+        </v-dialog>
+        <v-dialog
+          v-model="showClearDialog"
+          persistent
+          max-width="400px"
+        >
+          <v-card>
+            <v-card-text>
+              Clear all {{ typeToClear }} entries?
+            </v-card-text>
+            <v-card-actions>
+              <v-spacer/>
+              <v-btn outline @click="() => clearEntries(typeToClear)">
+                Yes
+              </v-btn>
+              <v-btn flat @click="showClearDialog = false">
+                No
+              </v-btn>
+            </v-card-actions>
+          </v-card>
         </v-dialog>
         <v-btn
           color="primary"
@@ -30,8 +49,22 @@
         >
           <v-icon>add</v-icon>
         </v-btn>
+        <section v-if="compareInput.length > 25">
+          <v-alert :value="true" type="warning">
+            Comparing too many entries may lead to performance and memory issues.
+          </v-alert>
+        </section>
         <section v-for="(section, i) in sections" :key="section" class="mb-3">
-          <div class="title">{{ `${section}s` }}</div>
+          <div class="title">
+            {{ `${section}s` }}
+            <v-btn
+              v-if="getEntriesForMultidexKey(allMultidexKeys[i]).length > 0"
+              @click="() => { typeToClear = section; showClearDialog = true; }"
+              icon
+            >
+            <v-icon>highlight_off</v-icon>
+          </v-btn>
+          </div>
           <template v-if="getEntriesForMultidexKey(allMultidexKeys[i]).length > 0">
             <v-layout row wrap>
               <v-flex
@@ -207,6 +240,8 @@ export default {
       topNavbarHeight: 56,
       currentTabIndex: 0,
       unitChipViewModeIsOutlined: false,
+      showClearDialog: false,
+      typeToClear: '',
     };
   },
   beforeMount () {
@@ -278,19 +313,22 @@ export default {
     onNewInput () {
       this.dbLoadPromise = this.updatePageDbForInput(this.compareInput);
     },
+    replaceRouteWithInput (inputList = []) {
+      return new Promise((fulfill, reject) => {
+        this.$router.replace({
+          ...this.$route,
+          query: {
+            ...this.$route.query,
+            input: inputList.map(convertCompareInputToCode).join(','),
+          },
+        }, fulfill, reject);
+      });
+    },
     async removeCompareInput ({ type, id } = {}) {
       const associatedInput = this.compareInput.find(i => i.type === type && (i.id === id || i.id === (id || '').toString()));
       const newInputList = this.compareInput.filter(i => i !== associatedInput);
       if (newInputList.length !== this.compareInput.length) {
-        await new Promise((fulfill, reject) => {
-          this.$router.replace({
-            ...this.$route,
-            query: {
-              ...this.$route.query,
-              input: newInputList.map(convertCompareInputToCode).join(','),
-            },
-          }, fulfill, reject);
-        });
+        await this.replaceRouteWithInput(newInputList);
       }
     },
     async addCompareInput ({ type, id } = {}) {
@@ -298,15 +336,7 @@ export default {
       const associatedInput = this.compareInput.find(i => i.type === type && (i.id === id || i.id === (id || '').toString()));
       if (!associatedInput) {
         const newInputList = this.compareInput.concat([generateCompareInput({ type, id })]);
-        await new Promise((fulfill, reject) => {
-          this.$router.replace({
-            ...this.$route,
-            query: {
-              ...this.$route.query,
-              input: newInputList.map(convertCompareInputToCode).join(','),
-            },
-          }, fulfill, reject);
-        });
+        await this.replaceRouteWithInput(newInputList);
       }
       this.showPickerDialog = false;
     },
@@ -435,6 +465,14 @@ export default {
     },
     getColorMappingForSourcePath (sourcePath = '') {
       return (sourcePath.startsWith('unit.') && MATERIAL_COLOR_MAPPING.unit[sourcePath.split('.')[1]]) || undefined;
+    },
+    async clearEntries (sectionName) {
+      const associatedType = COMPARE_KEY_ORDER.find(k => COMPARE_KEY_MAPPING[k].name === sectionName);
+      if (associatedType) {
+        const newInputList = this.compareInput.filter(i => i.type !== associatedType);
+        await this.replaceRouteWithInput(newInputList);
+      }
+      this.showClearDialog = false;
     },
   },
   watch: {

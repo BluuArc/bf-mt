@@ -41,7 +41,7 @@
           :value="true"
           :type="alertType"
         >
-          Comparing too many entries may lead to huge performance issues. It's recommended to filter as much as possible before selecting entries for comparison.
+          Comparing too many entries may lead to performance and memory issues. It's recommended to filter as much as possible before selecting entries for comparison.
         </v-alert>
       </v-layout>
     </v-card-text>
