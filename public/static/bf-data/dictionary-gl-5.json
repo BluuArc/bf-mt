@@ -1,12 +1,4 @@
 {
-  "MST_SKILLS_212254_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
   "MST_SKILLS_212254_NAME": {
     "en": "Show me your techniques.",
     "es": "Muéstrame tus técnicas.",
@@ -85599,6 +85591,22 @@
     "th": "คอมแพสชั่น แคสเคด",
     "vi": "Compassion Cascade"
   },
+  "MST_SKILLS_2720237_DESCRIPTION": {
+    "en": "35 combo massive Water attack on all foes (damage relative to remaining HP), 4 combo massive Water attack on single foe, enormously boosts Atk, Def, Rec for 4 turns, enormously boosts Spark damage for 4 turns, activates BB/SBB/UBB twice for 3 turns & enormously boosts OD gauge",
+    "es": "35 combo massive Water attack on all foes (damage relative to remaining HP), 4 combo massive Water attack on single foe, enormously boosts Atk, Def, Rec for 4 turns, enormously boosts Spark damage for 4 turns, activates BB/SBB/UBB twice for 3 turns & enormously boosts OD gauge",
+    "id": "35 combo massive Water attack on all foes (damage relative to remaining HP), 4 combo massive Water attack on single foe, enormously boosts Atk, Def, Rec for 4 turns, enormously boosts Spark damage for 4 turns, activates BB/SBB/UBB twice for 3 turns & enormously boosts OD gauge",
+    "pt": "35 combo massive Water attack on all foes (damage relative to remaining HP), 4 combo massive Water attack on single foe, enormously boosts Atk, Def, Rec for 4 turns, enormously boosts Spark damage for 4 turns, activates BB/SBB/UBB twice for 3 turns & enormously boosts OD gauge",
+    "th": "35 combo massive Water attack on all foes (damage relative to remaining HP), 4 combo massive Water attack on single foe, enormously boosts Atk, Def, Rec for 4 turns, enormously boosts Spark damage for 4 turns, activates BB/SBB/UBB twice for 3 turns & enormously boosts OD gauge",
+    "vi": "35 combo massive Water attack on all foes (damage relative to remaining HP), 4 combo massive Water attack on single foe, enormously boosts Atk, Def, Rec for 4 turns, enormously boosts Spark damage for 4 turns, activates BB/SBB/UBB twice for 3 turns & enormously boosts OD gauge"
+  },
+  "MST_SKILLS_2720237_NAME": {
+    "en": "Photon Execution",
+    "es": "Photon Execution",
+    "id": "Photon Execution",
+    "pt": "Photon Execution",
+    "th": "Photon Execution",
+    "vi": "Photon Execution"
+  },
   "MST_SKILLS_2720_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -89238,5 +89246,21 @@
     "pt": "1 combo massive Thunder, Dark attack on single foe, enormously boosts own critical and Spark damage for 1 turn & lowers own Def, Rec by 50% for 2 turns",
     "th": "1 คอมโบ โจมตีด้วยธาตุสายฟ้าและความมืดใส่ศัตรู1 ตัว, เพิ่มคริติคอลและสปาร์คให้ตัวเอง 1 เทิร์น, ลดป้องกันและ Rec ของตัวเอง 50% 2 เทิร์น",
     "vi": "1 combo massive Thunder, Dark attack on single foe, enormously boosts own critical and Spark damage for 1 turn & lowers own Def, Rec by 50% for 2 turns"
+  },
+  "MST_SKILLS_2840327_NAME": {
+    "en": "Land Waster",
+    "es": "Land Waster",
+    "id": "Pemboros Tanah",
+    "pt": "Land Waster",
+    "th": "แลนด์ วาสเตอร์",
+    "vi": "Land Waster"
+  },
+  "MST_SKILLS_2840357_DESCRIPTION": {
+    "en": "19 combo massive Thunder attack on all foes, Spark damage considerably boosts BB gauge for 3 turns, fully restores HP for 3 turns & hugely boosts max HP",
+    "es": "19 combo massive Thunder attack on all foes, Spark damage considerably boosts BB gauge for 3 turns, fully restores HP for 3 turns & hugely boosts max HP",
+    "id": "19 kombo serangan Guntur masif ke semua musuh, amat menambah HP maks, 3 giliran: kerusakan Percikan lumayan menambah meteran BB , HP pulih utuh",
+    "pt": "19 combo massive Thunder attack on all foes, Spark damage considerably boosts BB gauge for 3 turns, fully restores HP for 3 turns & hugely boosts max HP",
+    "th": "19 คอมโบ โจมตีธาตุสายฟ้ารุนแรงมหาศาล ใส่ศัตรูทั้งหมด, ความเสียหายสปาร์ค เพิ่มค่าอย่างมากให้ เกจ BB นาน 3 เทิร์น, ฟื้นคืน HP จนเต็ม นาน 3 เทิร์น กับ เพิ่มค่าอย่างสูงให้ HP สูงสุด",
+    "vi": "19 combo massive Thunder attack on all foes, Spark damage considerably boosts BB gauge for 3 turns, fully restores HP for 3 turns & hugely boosts max HP"
   }
 }

@@ -1,4 +1,52 @@
 {
+  "MST_LEADERSKILLS_7472_DESCRIPTION": {
+    "en": "80% boost to Atk for Earth types, 40% boost to Atk and max HP & 15% damage reduction from Water, Thunder types",
+    "es": "80% boost to Atk for Earth types, 40% boost to Atk and max HP & 15% damage reduction from Water, Thunder types",
+    "id": "80% ekstra Serang untuk tipe Bumi, 40% ekstra Serang dan HP maks, pengurangan 15% kerusakan tipe Air, Guntur",
+    "pt": "80% boost to Atk for Earth types, 40% boost to Atk and max HP & 15% damage reduction from Water, Thunder types",
+    "th": "80% เพิ่มค่า โจมตี สำหรับชนิดดิน, 40% เพิ่มค่า โจมตี กับ HP สูงสุด และ 15% ลดค่าความเสียหาย จากชนิด น้ำ, สายฟ้า",
+    "vi": "80% boost to Atk for Earth types, 40% boost to Atk and max HP & 15% damage reduction from Water, Thunder types"
+  },
+  "MST_LEADERSKILLS_7472_NAME": {
+    "en": "Guardian's Courage",
+    "es": "Guardian's Courage",
+    "id": "Keberanian Penjaga",
+    "pt": "Guardian's Courage",
+    "th": "กาเดี้ยน คอเรจ",
+    "vi": "Guardian's Courage"
+  },
+  "MST_LEADERSKILLS_7473_DESCRIPTION": {
+    "en": "100% boost to Atk for Earth types, 50% boost to Atk and max HP, 15% damage reduction from Water, Thunder types & considerably boosts BB gauge when damage dealt has exceeded certain amount",
+    "es": "100% boost to Atk for Earth types, 50% boost to Atk and max HP, 15% damage reduction from Water, Thunder types & considerably boosts BB gauge when damage dealt has exceeded certain amount",
+    "id": "100% ekstra Serang untuk tipe Bumi, 50% ekstra Serang dan HP maks, pengurangan 15% kerusakan tipe Air, Guntur, lumayan menambah meteran BB saat kerusakan melampaui jumlah tertentu",
+    "pt": "100% boost to Atk for Earth types, 50% boost to Atk and max HP, 15% damage reduction from Water, Thunder types & considerably boosts BB gauge when damage dealt has exceeded certain amount",
+    "th": "100% เพิ่มค่า โจมตี สำหรับชนิดดิน, 50% เพิ่มค่า โจมตี กับ HP สูงสุด, 15% ลดค่าความเสียหาย จากชนิด น้ำ, สายฟ้า และ เพิ่มค่าอย่างมากให้ เกจ BB เมื่อความเสียหายที่สร้าง เกินกว่าปริมาณหนึ่ง",
+    "vi": "100% boost to Atk for Earth types, 50% boost to Atk and max HP, 15% damage reduction from Water, Thunder types & considerably boosts BB gauge when damage dealt has exceeded certain amount"
+  },
+  "MST_LEADERSKILLS_7473_NAME": {
+    "en": "Proud Sentinel's Valor",
+    "es": "Proud Sentinel's Valor",
+    "id": "Semangat Penjaga Bangga",
+    "pt": "Proud Sentinel's Valor",
+    "th": "พราว เซ็นติเนล วาเลอร์",
+    "vi": "Proud Sentinel's Valor"
+  },
+  "MST_LEADERSKILLS_7474_DESCRIPTION": {
+    "en": "30% boost to Atk, max HP, 100% boost to Spark damage & boosts BB Atk for 2 turns when damage taken has exceeded certain amount",
+    "es": "30% boost to Atk, max HP, 100% boost to Spark damage & boosts BB Atk for 2 turns when damage taken has exceeded certain amount",
+    "id": "30% ekstra Serang, HP maks, 100% ekstra kerusakan Percikan, menambah BB Serang 2 giliran saat kerusakan melampaui jumlah tertentu",
+    "pt": "30% boost to Atk, max HP, 100% boost to Spark damage & boosts BB Atk for 2 turns when damage taken has exceeded certain amount",
+    "th": "30% เพิ่มค่า โจมตี, HP สูงสุด, 100% เพิ่มค่า ความเสียหายสปาร์ค และ เพิ่ม BB โจมตี นาน 2 เทิร์น เมื่อความเสียหายที่ได้รับ เกินกว่าปริมาณหนึ่ง",
+    "vi": "30% boost to Atk, max HP, 100% boost to Spark damage & boosts BB Atk for 2 turns when damage taken has exceeded certain amount"
+  },
+  "MST_LEADERSKILLS_7474_NAME": {
+    "en": "Phantom Sacrifice",
+    "es": "Phantom Sacrifice",
+    "id": "Pengorbanan Fantom",
+    "pt": "Phantom Sacrifice",
+    "th": "แฟนธ่อม ซาคริฟาย",
+    "vi": "Phantom Sacrifice"
+  },
   "MST_LEADERSKILLS_7475_DESCRIPTION": {
     "en": "50% boost to Atk, max HP, Spark damage restores HP, 120% boost to Spark damage & considerably boosts BB Atk for 2 turns when damage taken exceeds certain amount",
     "es": "50% boost to Atk, max HP, Spark damage restores HP, 120% boost to Spark damage & considerably boosts BB Atk for 2 turns when damage taken exceeds certain amount",
@@ -89213,30 +89261,6 @@
     "id": "Azrael",
     "pt": "Azrael",
     "th": "อัซราเอล",
-    "vi": "Azrael"
-  },
-  "MST_MONSTERS_53816_NAME": {
-    "en": "Azrael",
-    "es": "Azrael",
-    "id": "Azrael",
-    "pt": "Azrael",
-    "th": "แอซเรล",
-    "vi": "Azrael"
-  },
-  "MST_MONSTERS_53817_NAME": {
-    "en": "Azrael",
-    "es": "Azrael",
-    "id": "Azrael",
-    "pt": "Azrael",
-    "th": "อาซาเอล",
-    "vi": "Azrael"
-  },
-  "MST_MONSTERS_53818_NAME": {
-    "en": "Azrael",
-    "es": "Azrael",
-    "id": "Azrael",
-    "pt": "Azrael",
-    "th": "อาซาเอล",
     "vi": "Azrael"
   }
 }
