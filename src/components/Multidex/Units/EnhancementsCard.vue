@@ -34,10 +34,16 @@
           <v-flex xs12 sm6 md4>
             <v-checkbox v-model="copyCode" label="Letter Code" hide-details/>
           </v-flex>
+          <v-flex xs12 sm6 md4>
+            <v-checkbox v-model="useWikiTemplate" label="Use Wiki SP Build Template" hide-details/>
+          </v-flex>
         </v-layout>
         <v-layout row>
           <v-flex>
-            <text-viewer :inputText="sharedText" :value="activeTabIndex"/>
+            <text-viewer
+              :inputText="sharedText"
+              :value="activeTabIndex"
+            />
           </v-flex>
         </v-layout>
       </v-container>
@@ -104,29 +110,91 @@ export default {
       copyBullets: false,
       copyCode: false,
       activeEnhancements: '',
+      useWikiTemplate: false,
     };
   },
   methods: {
     computeSharedText: debounce(function () {
-      if (this.activeEnhancements) {
-        const skills = this.activeEnhancements.split('')
-          .map(code => {
-            const spEntry = this.feSkills[spCodeToIndex(code)];
-            const cost = spEntry.skill.bp;
-            const desc = getSpDescription(spEntry);
-            const bullet = this.copyBullets ? '* ' : '';
-            const outputCode = this.copyCode ? `${code}: ` : '';
-            return `${bullet}[${cost} SP] - ${outputCode}${desc}`;
-          }).join('\n')
-          .concat(`\n\nTotal: ${getSpCost(this.feSkills, this.activeEnhancements)} SP`);
-
-        if (this.copyName) {
-          this.sharedText = `${this.unit.name}\n\n`.concat(skills);
-        } else {
-          this.sharedText = skills;
+      if (this.useWikiTemplate) {
+        const spEntries = [];
+        let totalSpCost = 0;
+        if (this.activeEnhancements) {
+          this.activeEnhancements.split('')
+            .forEach(code => {
+              const spEntry = this.feSkills[spCodeToIndex(code)];
+              spEntries.push({
+                description: getSpDescription(spEntry),
+                cost: spEntry.skill.bp,
+                code, // not currently used in output, but may be used in the future
+              });
+            });
+          totalSpCost = getSpCost(this.feSkills, this.activeEnhancements);
         }
+
+        const lines = [
+          {
+            name: 'build_name',
+            value: `${this.unit.name} build`,
+          },
+          {
+            name: 'element',
+            value: this.unit.element
+              ? `${this.unit.element[0].toUpperCase()}${this.unit.element.slice(1)}`
+              : '',
+          },
+          {
+            name: 'total_sp',
+            value: totalSpCost,
+          },
+          {
+            name: 'author',
+          },
+          ...spEntries.map((entry, i) => [
+            {
+              name: `sp_cost_${i + 1}`,
+              value: entry.cost,
+            },
+            {
+              name: `spskill_${i + 1}`,
+              value: entry.description,
+            },
+          ]).reduce((acc, val) => acc.concat(val), []),
+          {
+            name: 'analysis',
+          },
+          {
+            name: 'last_updated',
+            value: new Date().toDateString(),
+          },
+        ];
+
+        const expectedLength = lines.reduce((acc, val) => Math.max(acc, val.name.length), 1) + 4; // length of longest name + 4 spaces
+        this.sharedText = [
+          '{{Build',
+          ...lines.map(entry => `|${entry.name.padEnd(expectedLength, ' ')} = ${entry.value !== undefined ? entry.value : ''}`),
+          '}}',
+        ].join('\n');
       } else {
-        this.sharedText = 'No SP enhancements selected';
+        if (this.activeEnhancements) {
+          const skills = this.activeEnhancements.split('')
+            .map(code => {
+              const spEntry = this.feSkills[spCodeToIndex(code)];
+              const cost = spEntry.skill.bp;
+              const desc = getSpDescription(spEntry);
+              const bullet = this.copyBullets ? '* ' : '';
+              const outputCode = this.copyCode ? `${code}: ` : '';
+              return `${bullet}[${cost} SP] - ${outputCode}${desc}`;
+            }).join('\n')
+            .concat(`\n\nTotal: ${getSpCost(this.feSkills, this.activeEnhancements)} SP`);
+
+          if (this.copyName) {
+            this.sharedText = `${this.unit.name}\n\n`.concat(skills);
+          } else {
+            this.sharedText = skills;
+          }
+        } else {
+          this.sharedText = 'No SP enhancements selected';
+        }
       }
     }, 50),
     syncLocalEnhancementsToUrl: debounce(function () {
@@ -153,6 +221,9 @@ export default {
       this.computeSharedText();
     },
     copyCode () {
+      this.computeSharedText();
+    },
+    useWikiTemplate () {
       this.computeSharedText();
     },
     activeEnhancements () {
