@@ -12,6 +12,14 @@ export default class DbInterface {
     return DbInterface._defer('get');
   }
 
+  delete ({ table, key } = {}) {
+    return DbInterface._defer('delete');
+  }
+
+  getAll ({ table = '' } = {}) {
+    return DbInterface._defer('getAll');
+  }
+
   getFieldInEntry ({ table = '', query, field = '' } = {}) {
     return DbInterface._defer('getFieldInEntry');
   }
@@ -36,6 +44,12 @@ export default class DbInterface {
   // given an array of table names, return an array of tables that contain entries
   getTablesWithEntries ({ tables = [], query } = {}) {
     return DbInterface._defer('getTablesWithEntries');
+  }
+
+  // useful for checking if data has any updates in a given set of tables
+  // given an array of table names, return an array of tables that have updates
+  getTablesWithUpdates ({ tables = [], query, sourceUrl, forceRefresh } = {}) {
+    return DbInterface._defer('getTablesWithUpdates');
   }
 
   getFilteredDb ({ table, filters, server, extractedFields, sortOptions } = {}) {

@@ -2,13 +2,14 @@ import { effectTypes } from '../constants';
 import * as helper from './processor-helper';
 // import EffectProcessor from './effect-processor';
 import IconKeyMappings from './icon-key-mappings';
+import { getEffectName } from '@/modules/core/buffs';
 const passiveTypes = require('@/assets/buff-translation/passives.json');
 
 const getUnknownParams = (effect) => effect['unknown passive params'].split(',').map(v => +v);
 
 const generateUnknownEntry = (id) => ({
   ...(helper.generateDefaultEntry(id)),
-  desc: `Unknown buff ${id}`,
+  desc: getEffectName({ 'unknown passive id': id }) || `Unknown buff ${id}`,
   type: [effectTypes.UNKNOWN.name],
 });
 
@@ -16,7 +17,9 @@ const unknownPassives = {
   ...(() => {
     const entries = {};
     passiveTypes.unknown_passive.forEach(id => {
-      entries[id] = helper.generateDefaultEntry(id);
+      const defaultEntry = helper.generateDefaultEntry(id);
+      defaultEntry.desc = getEffectName({ 'unknown passive id': id }) || defaultEntry.desc;
+      entries[id] = defaultEntry;
     });
     return entries;
   })(),

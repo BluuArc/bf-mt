@@ -8,7 +8,10 @@
     :pageDb="pageDb"
     :inputFilters="filters"
     :filterTypes="filterTypes"
-    :onChangeButtonClick="switchViewMode">
+    :onChangeButtonClick="switchViewMode"
+    :getCompareName="(id, entry) => (entry && entry.name) || id"
+    compareType="item"
+  >
     <v-layout row wrap slot="results" slot-scope="{ keys, getMultidexPathTo }">
       <template v-if="viewMode === 'card'">
         <v-flex
@@ -53,6 +56,14 @@
         :logger="logger"
         :pageDb="pageDb"
         :asyncGetById="getById"/>
+    </template>
+    <template slot="compare-input-selection" slot-scope="{ selectionId, selectionName }">
+      <v-chip small>
+        <v-avatar>
+          <img :src="getImageUrl(selectionId, pageDb[selectionId])"/>
+        </v-avatar>
+        <span v-text="selectionName"/>
+      </v-chip>
     </template>
   </main-page-base>
 </template>

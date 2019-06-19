@@ -1,6 +1,7 @@
-import { sphereTypeMapping } from '@/modules/constants';
+import { sphereTypeMapping, targetTypes, squadBuffTypes } from '@/modules/constants';
 import SWorker from '@/assets/sww.min';
 import cloneDeep from 'lodash/cloneDeep';
+import { getEffectsList } from './buffs';
 
 export function getSphereCategory (item) {
   // can pass in number or item entry directly
@@ -43,6 +44,7 @@ export function getItemEffects (item = {}) {
     return [];
   }
 
+  // consumables
   if (item.effect.effect && item.effect.effect.length > 0) {
     const { effect, ...extraParams } = item.effect;
     return [
@@ -50,7 +52,8 @@ export function getItemEffects (item = {}) {
       ...effect.slice(1),
     ];
   } else {
-    return item.effect;
+    // spheres
+    return Array.from(item.effect);
   }
 }
 
@@ -206,4 +209,35 @@ export async function getCraftablesInRecipeOfItem (item = {}, pageDb = {}) {
 
 export function convertMaterialsObjectToArray (input) {
   return Object.entries(input).map(([id, count]) => ({ count, id }));
+}
+
+export function isValidSphere (skill) {
+  const expectedFields = ['rarity', 'name', 'id', 'desc', 'type', 'max_stack', 'sphere type', 'thumbnail'];
+  return typeof skill === 'object' && expectedFields.every(f => skill[f] !== undefined);
+}
+
+export function getEmptySphere () {
+  return {
+    id: 0,
+    name: 'None',
+    desc: 'No Sphere selected',
+    rarity: 0,
+    type: 'sphere',
+    'sphere type': 0, // none
+    max_stack: 0,
+  };
+}
+
+export function getEffectsListForItem ({
+  item = {},
+  target = targetTypes.PARTY,
+  effectType = squadBuffTypes.PROC,
+}) {
+  const effects = getItemEffects(item)
+    .map(e => ({ ...e, sourcePath: `Sphere: ${item.name || item.id}` }));
+  return getEffectsList({
+    sphereEffects: effects,
+    target,
+    effectType,
+  });
 }

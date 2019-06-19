@@ -85,12 +85,20 @@ export const sphereTypeMapping = Object.freeze({
   14: 'Special',
 });
 
+export const squadUnitActions = Object.freeze({
+  ATK: 'atk',
+  BB: 'bb',
+  SBB: 'sbb',
+  UBB: 'ubb',
+  NONE: 'none',
+});
 export const targetAreaMapping = Object.freeze({
   aoe: 'AOE',
   single: 'ST',
   random: 'RT',
 });
-export const buffSearchOptions = Object.freeze(['ls', 'es', 'sp', 'bb', 'sbb', 'ubb']);
+export const burstTypes = Object.freeze([squadUnitActions.BB, squadUnitActions.SBB, squadUnitActions.UBB]);
+export const buffSearchOptions = Object.freeze(['ls', 'es', 'sp'].concat(burstTypes));
 export const unitTypes = Object.freeze(['lord', 'anima', 'breaker', 'guardian', 'oracle']);
 export const ailments = Object.freeze(['poison', 'weak', 'sick', 'injury', 'curse', 'paralysis']);
 export const dropTypes = Object.freeze(['hc', 'bc', 'item', 'zel', 'karma']);
@@ -100,6 +108,11 @@ export const moveTypeMapping = Object.freeze({
   1: 'Moving',
   2: 'Teleporting',
   3: 'Non-Moving',
+});
+export const moveTypeIdByName = Object.freeze({
+  Moving: 1,
+  Teleporting: 2,
+  'Non-Moving': 3,
 });
 
 export const spCategoryMapping = Object.freeze({
@@ -129,6 +142,12 @@ export const missionMonsterGroupMapping = Object.freeze({
   '1101': mimicIds.batMimic,
   '1200': mimicIds.dragonMimic,
   '1300': mimicIds.metalMimic,
+});
+
+export const unitPositionMapping = Object.freeze(['Top Left', 'Top Right', 'Middle Left', 'Middle Right', 'Bottom Left', 'Bottom Right']);
+export const squadFillerMapping = Object.freeze({
+  EMPTY: '(Empty)',
+  ANY: '(Any)',
 });
 
 export const effectTypes = Object.freeze({
@@ -400,3 +419,84 @@ export const customBuffIconKeys = Object.freeze([
 
 // mapping of icon keys to index on @/assets/buff-translation/battle/battle_bad_icon.png
 export const ailmentBuffIconKeys = ailments.map(ail => `DEBUFF_${ail.toUpperCase()}`);
+
+export const targetTypes = Object.freeze({
+  SELF: 'self',
+  PARTY: 'party',
+  ENEMY: 'enemy',
+  OTHER: 'other',
+});
+
+export const squadBuffTypes = Object.freeze({
+  PASSIVE: 'passive',
+  PROC: 'proc',
+  BURST: 'burst',
+});
+
+export const ANY_BB_ORDER = '(Any)';
+
+export const arenaConditionMapping = Object.freeze({
+  hp_50pr_under: 'has less than 50% HP',
+  hp_50pr_over: 'has more than 50% HP',
+  hp_75pr_under: 'has less than 75% HP',
+  hp_25pr_under: 'has less than 25% HP',
+  hp_min: 'has the lowest HP',
+  hp_max: 'has the highest HP',
+  atk_max: 'has the highest attack',
+  random: 'is present',
+});
+export const arenaActionMapping = Object.freeze({
+  skill: 'use BB/SBB',
+  attack: 'normal attack',
+});
+export const arenaTargetMapping = Object.freeze({
+  party: 'when an ally',
+  enemy: 'on enemy that',
+});
+
+export const SOURCE_PATH_TO_TEXT_MAPPING = Object.freeze({
+  'unit.ls': 'Leader Skill',
+  'unit.es': 'Extra Skill',
+  'unit.bb': 'Brave Burst',
+  'unit.sbb': 'Super Brave Burst',
+  'unit.ubb': 'Ultimate Brave Burst',
+  'unit.sp': 'SP Enhancement',
+});
+
+export const MATERIAL_COLOR_MAPPING = Object.freeze({
+  unit: {
+    ls: {
+      background: 'green darken-3',
+      text: 'green lighten-5',
+    },
+    es: {
+      background: 'orange darken-4',
+      text: 'orange lighten-5',
+    },
+    bb: {
+      background: 'blue-grey',
+      text: 'blue-grey lighten-5',
+    },
+    sbb: {
+      background: 'yellow darken-3',
+      text: 'yellow lighten-5',
+    },
+    ubb: {
+      background: 'red darken-3',
+      text: 'red lighten-5',
+    },
+    sp: {
+      background: 'light-green darken-3',
+      text: 'light-green lighten-5',
+    },
+  },
+});
+
+export const COMPARE_KEY_ORDER = ['unit', 'item', 'es', 'bb', 'ls'];
+export const COMPARE_KEY_MAPPING = Object.freeze({
+  unit: { name: 'Unit', multidexKey: 'units', key: 'unit' },
+  item: { name : 'Sphere', multidexKey: 'items', key: 'item' },
+  bb: { name: 'Burst', multidexKey: 'bursts', key: 'bb' },
+  es: { name: 'Extra Skill', multidexKey: 'extraSkills', key: 'es' },
+  ls: { name: 'Leader Skill', multidexKey: 'leaderSkills', key: 'ls' },
+});

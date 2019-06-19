@@ -21,8 +21,8 @@
               <v-btn flat @click="showBuffTable = !showBuffTable">{{ showBuffTable ? 'Hide' : 'Show' }} Buff Table</v-btn>
             </v-card-actions>
             <v-slide-y-transition>
-              <div v-show="showBuffTable">
-                <buff-table :effects="effects" v-if="hasShownBuffTable" :showHeaders="true"/>
+              <div v-show="showBuffTable" style="overflow-x: auto;">
+                <buff-table-grid :effects="effects" v-if="hasShownBuffTable" :showHeaders="true"/>
               </div>
             </v-slide-y-transition>
           </template>
@@ -43,6 +43,9 @@
           {{ tab.name }}
         </slot>
       </section>
+      <template slot="actions">
+        <slot name="actions"></slot>
+      </template>
     </card-tabs-container>
   </bordered-titled-card>
 </template>
@@ -50,7 +53,7 @@
 <script>
 import BorderedTitledCard from '@/components/BorderedTitledCard';
 import CardTitleWithLink from '@/components/CardTitleWithLink';
-import BuffTable from '@/components/Multidex/BuffTable/MainTable';
+import BuffTableGrid from '@/components/Multidex/BuffTableGrid/MainTable';
 import BuffList from '@/components/Multidex/BuffList/BuffList';
 import CardTabsContainer from '@/components/CardTabsContainer';
 import JsonViewer from '@/components/JsonViewer';
@@ -99,7 +102,7 @@ export default {
   components: {
     BorderedTitledCard,
     CardTitleWithLink,
-    BuffTable,
+    BuffTableGrid,
     BuffList,
     CardTabsContainer,
     JsonViewer,

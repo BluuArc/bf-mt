@@ -5,6 +5,7 @@
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink">
     <title v-if="imageTitle" v-text="imageTitle"/>
+    <slot name="before-image"/>
     <g
       class="lazy--placeholder"
       :style="placeholderImageStyle"
@@ -20,11 +21,12 @@
     </g>
     <image
       :width="imageWidth" :height="imageHeight"
-      :xlink:href="src"
-      :href="src"
+      :xlink:href="imageSource"
+      :href="imageSource"
       class="lazy--actual"
       :style="actualImageStyle"
     />
+    <slot name="after-image"/>
   </svg>
 </template>
 
@@ -58,6 +60,9 @@ export default {
       type: String,
       required: true,
     },
+    isVisible: {
+      default: true,
+    },
   },
   computed: {
     placeholderImageStyle () {
@@ -70,11 +75,31 @@ export default {
   data () {
     return {
       imageLoaded: false,
+      imageSource: '',
     };
   },
   mounted () {
-    this.$el.querySelector('image.lazy--actual')
-      .onload = () => { this.imageLoaded = true; };
+    const imageElem = this.$el.querySelector('image.lazy--actual');
+    imageElem.onload = () => {
+      if (this.imageSource) {
+        this.imageLoaded = true;
+      }
+    };
+
+    // delay loading image if not visible
+    if (this.isVisible) {
+      this.imageSource = this.src;
+    }
+  },
+  watch: {
+    isVisible (newValue) {
+      if (newValue && !this.imageSource) {
+        const imageElem = this.$el.querySelector('image.lazy--actual');
+        if (imageElem) {
+          this.imageSource = this.src;
+        }
+      }
+    },
   },
 };
 </script>

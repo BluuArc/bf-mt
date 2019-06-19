@@ -4,7 +4,7 @@
     @toggleview="$emit('toggleview', $event)"
     @input="onBaseInput($event)"
     :defaultSearchOptions="defaultSearchOptions"
-    :searchOptions="value.passiveBuffSearchOptions.slice()"
+    :searchOptions="(value.passiveBuffSearchOptions || []).slice()"
     :selectedIds="value.passives.slice()"
     :possibleIds="possibleIds"
     :isUnit="isUnit"

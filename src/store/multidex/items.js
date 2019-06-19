@@ -15,14 +15,16 @@ export default {
   mutations: createMutations(logger),
   getters: {
     ...createGetters('items'),
-    getImageUrl: state => id => {
+    getImageUrl: state => (id, fullEntry) => {
       const cdnUrls = {
         eu: 'http://static-bravefrontier.gumi-europe.net/content',
         gl: 'http://dlc.bfglobal.gumi.sg/content',
         jp: 'http://cdn.android.brave.a-lim.jp',
       };
       const baseUrl = `${cdnUrls[state.activeServer]}/item`;
-      if (state.pageDb.hasOwnProperty(id)) {
+      if (fullEntry && fullEntry.thumbnail) {
+        return `${baseUrl}/${fullEntry.thumbnail}`;
+      } else if (state.pageDb.hasOwnProperty(id)) {
         return `${baseUrl}/${state.pageDb[id].thumbnail}`;
       } else {
         return baseUrl;

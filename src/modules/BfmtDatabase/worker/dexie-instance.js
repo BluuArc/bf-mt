@@ -50,4 +50,12 @@ db.version(4.1).stores({
   return transaction;
 });
 
+db.version(5).stores({
+  squads: '++id,squad',
+});
+
+db.version(5.1).stores({
+  squads: '++id,server,squad',
+});
+
 export default db;

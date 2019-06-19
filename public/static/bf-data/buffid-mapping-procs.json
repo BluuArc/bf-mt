@@ -4,6 +4,7 @@
     "75-atk% buff"
   ],
   "2": [
+    "5-atk% buff",
     "51-inflict atk% debuff"
   ],
   "3": [
@@ -13,6 +14,14 @@
   "4": [
     "5-def% buff",
     "51-inflict def% debuff"
+  ],
+  "5": [
+    "5-rec% buff",
+    "75-rec% buff"
+  ],
+  "6": [
+    "5-rec% buff",
+    "51-inflict rec% debuff"
   ],
   "7": [
     "5-crit% buff"
@@ -27,17 +36,38 @@
   "10": [
     "6-bc drop rate% buff"
   ],
+  "11": [
+    "6-item drop rate% buff"
+  ],
   "12": [
     "7-angel idol buff"
+  ],
+  "13": [
+    "5-atk% buff"
   ],
   "14": [
     "5-def% buff"
   ],
+  "15": [
+    "5-rec% buff"
+  ],
   "16": [
     "5-crit% buff"
   ],
+  "17": [
+    "5-atk% buff"
+  ],
+  "18": [
+    "5-def% buff"
+  ],
+  "20": [
+    "16-mitigate all attacks"
+  ],
   "21": [
     "16-mitigate fire attacks"
+  ],
+  "22": [
+    "16-mitigate water attacks"
   ],
   "23": [
     "16-mitigate earth attacks"
@@ -45,14 +75,23 @@
   "24": [
     "16-mitigate thunder attacks"
   ],
+  "25": [
+    "16-mitigate light attacks"
+  ],
   "26": [
     "16-mitigate dark attacks"
+  ],
+  "30": [
+    "17-resist poison%"
   ],
   "31": [
     "17-resist weaken%"
   ],
   "32": [
     "17-resist sick%"
+  ],
+  "33": [
+    "17-resist injury%"
   ],
   "34": [
     "17-resist curse%"
@@ -81,6 +120,9 @@
   "47": [
     "24-def% buff"
   ],
+  "48": [
+    "24-rec% buff"
+  ],
   "50": [
     "26-hit increase buff turns"
   ],
@@ -94,10 +136,10 @@
     "45-buff turns"
   ],
   "74": [
-    "51-nce%"
+    "51-inflict atk% debuff chance%"
   ],
   "75": [
-    "51-nce%"
+    "51-inflict def% debuff chance%"
   ],
   "76": [
     "51-inflict rec% debuff chance%"
@@ -105,8 +147,17 @@
   "77": [
     "52-buff turns"
   ],
+  "78": [
+    "53-counter inflict poison%"
+  ],
+  "79": [
+    "53-counter inflict weaken%"
+  ],
   "80": [
     "53-counter inflict sick%"
+  ],
+  "81": [
+    "53-counter inflict injury%"
   ],
   "82": [
     "53-counter inflict curse%"
@@ -126,6 +177,15 @@
   "94": [
     "58-spark dmg received debuff turns"
   ],
+  "100": [
+    "902-atk% buff"
+  ],
+  "101": [
+    "902-def% buff"
+  ],
+  "102": [
+    "902-rec% buff"
+  ],
   "110": [
     "65-atk% buff turns"
   ],
@@ -143,6 +203,9 @@
   ],
   "120": [
     "73-atk down resist%"
+  ],
+  "121": [
+    "73-def down resist%"
   ],
   "122": [
     "73-rec down resist%"
@@ -169,13 +232,16 @@
     "88-spark dmg inc% turns"
   ],
   "143": [
-    "93-crit dmg base damage resist%"
+    "93-crit dmg base damage resist%",
+    "93-crit dmg buffed damage resist%"
   ],
   "144": [
-    "93-strong base element damage resist%"
+    "93-strong base element damage resist%",
+    "93-strong buffed element damage resist%"
   ],
   "145": [
-    "93-spark dmg base resist%"
+    "93-spark dmg base resist%",
+    "93-spark dmg buffed resist%"
   ],
   "148": [
     "113-od fill turns"

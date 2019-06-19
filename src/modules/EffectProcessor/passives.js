@@ -2,6 +2,7 @@ import { effectTypes, elements, unitTypes, ailments } from '../constants';
 import * as helper from './processor-helper';
 import EffectProcessor from './effect-processor';
 import IconKeyMappings from './icon-key-mappings';
+import { getEffectName } from '@/modules/core/buffs';
 const passiveTypes = require('@/assets/buff-translation/passives.json');
 
 const getConditionalData = (effect, context) => {
@@ -16,7 +17,9 @@ const passives = {
   ...(() => {
     const entries = {};
     passiveTypes.passive.forEach(id => {
-      entries[id] = helper.generateDefaultEntry(id);
+      const defaultEntry = helper.generateDefaultEntry(id);
+      defaultEntry.desc = getEffectName({ 'passive id': id }) || defaultEntry.desc;
+      entries[id] = defaultEntry;
     });
     return entries;
   })(),

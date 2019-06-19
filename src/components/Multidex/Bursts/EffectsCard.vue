@@ -35,7 +35,7 @@
         </v-flex>
       </v-layout>
       <v-layout row>
-        <v-flex>
+        <v-flex style="overflow-x: auto;">
           <buff-table :effects="currentBurstEffect" :showHeaders="true"/>
         </v-flex>
       </v-layout>
@@ -95,7 +95,7 @@
 import { mapState, mapActions, mapGetters } from 'vuex';
 import DescriptionCardBase from '@/components/Multidex/DescriptionCardBase';
 import CardTitleWithLink from '@/components/CardTitleWithLink';
-import BuffTable from '@/components/Multidex/BuffTable/MainTable';
+import BuffTable from '@/components/Multidex/BuffTableGrid/MainTable';
 import BuffList from '@/components/Multidex/BuffList/BuffList';
 import HitCountTable from '@/components/Multidex/HitCountTable';
 import { getExtraAttacks } from '@/modules/core/units';

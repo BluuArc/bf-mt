@@ -1,5 +1,18 @@
 import { attackingProcs } from '@/modules/EffectProcessor/constants';
-import { spCategoryMapping, moveTypeMapping } from '@/modules/constants';
+import {
+  spCategoryMapping,
+  moveTypeMapping,
+  squadFillerMapping,
+  arenaActionMapping,
+  arenaTargetMapping,
+  arenaConditionMapping,
+  targetTypes,
+  squadBuffTypes,
+  squadUnitActions,
+  burstTypes,
+} from '@/modules/constants';
+import { getBurstEffects } from '@/modules/core/bursts';
+import { getEffectsList } from '@/modules/core/buffs';
 import { safeGet } from '@/modules/utils';
 
 export function getExtraAttacks (unit) {
@@ -58,9 +71,9 @@ export function getSpCategory (num) {
   return spCategoryMapping[+num];
 }
 
-export function getSpSkillEffects (skillEntry) {
+export function getSpEntryEffects (spEntry = {}) {
   const effects = [];
-  skillEntry.skill.effects.forEach(e => {
+  spEntry.skill.effects.forEach(e => {
     // distinguish between passive and add to bb/sbb/ubb
     Object.keys(e).forEach(type => {
       const effect = e[type];
@@ -70,12 +83,94 @@ export function getSpSkillEffects (skillEntry) {
   return effects;
 }
 
+export function getSpCost (allFeSkills, enhancements = '') {
+  const isValidFeSKills = Array.isArray(allFeSkills) && allFeSkills.length > 0;
+  if (!isValidFeSKills || !enhancements) {
+    return 0;
+  }
+  return enhancements.split('')
+    .map(char => allFeSkills[spCodeToIndex(char)])
+    .filter(v => v)
+    .reduce((acc, s) => acc + +s.skill.bp, 0);
+}
+
 export function spCodeToIndex (char) {
   return char.charCodeAt(0) - ((char < 'a') ? 'A'.charCodeAt(0) : ('a'.charCodeAt(0))) + (char < 'a' ? 0 : 26);
 }
 
 export function spIndexToCode (index) {
   return String.fromCharCode(index >= 26 ? (index - 26 + 'a'.charCodeAt(0)) : (index + 'A'.charCodeAt(0)));
+}
+
+export function spCodeToEffects (code, unitEnhancements) {
+  if (!code || !Array.isArray(unitEnhancements)) {
+    return [];
+  }
+
+  return code.split('')
+    .map(char => unitEnhancements[spCodeToIndex(char)])
+    .filter(v => v); // remove invalid entries
+}
+
+export function getSpEntryId (id = '') {
+  let spId = id;
+  if (typeof spId === 'object') {
+    spId = id.id; // given an spEntry object
+  }
+  return id.includes('@')
+    ? id.split('@')[1]
+    : id;
+}
+
+export function getSpEntryWithId (id, spEntries = []) {
+  const entryId = getSpEntryId(id);
+  return spEntries.find(s => getSpEntryId(s.id).toString() === entryId);
+}
+
+export function getSpDescription (spEntry = {}) {
+  const { desc = '', name = '' } = spEntry.skill;
+  if (desc.trim() === name.trim()) {
+    return desc || 'No Description';
+  } else {
+    return (desc.length > name.length)
+      ? desc
+      : [name, desc ? `(${desc})` : ''].filter(val => val).join(' ');
+  }
+}
+
+export function getSpDependencyText (spEntry = {}, allEntries = []) {
+  const dependentSpEntry = getSpEntryWithId(spEntry.dependency, allEntries);
+
+  return dependentSpEntry
+    ? `Requires "${getSpDescription(dependentSpEntry)}"`
+    : (spEntry['dependency comment'] || 'Requires another enhancement');
+}
+
+export function getAllDependenciesFromSpEntry (spEntry = {}, allEntries = []) {
+  const dependencies = [];
+  if (spEntry.dependency) {
+    const dependencyId = getSpEntryId(spEntry.dependency);
+    const dependencyIndex = allEntries.findIndex(s => getSpEntryId(s.id).toString() === dependencyId);
+    if (dependencyIndex > -1) {
+      dependencies.push(spIndexToCode(dependencyIndex));
+      const subDependencies = getAllDependenciesFromSpEntry(allEntries[dependencyIndex], allEntries);
+      subDependencies.forEach(subDependency => {
+        dependencies.push(subDependency);
+      });
+    }
+  }
+  return dependencies;
+}
+
+export function getAllEntriesThatDependOnSpEntry (spEntry = {}, allEntries = []) {
+  const dependents = allEntries
+    .map((entry, index) => ({ entry, index }))
+    .filter(({ entry }) => {
+      return entry.dependency && entry.dependency.includes(spEntry.id);
+    }).map(({ index }) => spIndexToCode(index));
+  const subDependents = dependents.map(depCode => getAllEntriesThatDependOnSpEntry(allEntries[spCodeToIndex(depCode)], allEntries))
+    .reduce((acc, val) => acc.concat(val), []);
+  return Array.from(new Set(dependents.concat(subDependents)));
 }
 
 export function hasEvolutions (unit) {
@@ -166,6 +261,14 @@ export function arenaConditionCodeToText (code) {
   return mapping[code];
 }
 
+export function arenaConditionToText (data = {}) {
+  const chance = `${data['chance%']}% chance`;
+  const action = arenaActionMapping[data.action] || data.action;
+  const target = arenaTargetMapping[data['target type']] || data['target type'];
+  const condition = arenaConditionMapping[data['target conditions']] || data['target conditions'];
+  return `${chance} to ${action} ${target} ${condition}`;
+}
+
 export function getArenaPositionRecommendation (unit = {}) {
   const defaultSuggestion = 'anywhere';
   if (!Array.isArray(unit.ai)) {
@@ -206,6 +309,7 @@ export function getColoClassUsage (cost = 0, isGlobal = true) {
     'Hero', // all units can go to hero class
   ].filter(v => v);
 }
+
 export function getHighestRarityUnit (category = 0, unitById = (id) => ({ name: id })) {
   for (let i = 9; i >= 0; --i) {
     const id = `${+category + i}`;
@@ -214,4 +318,86 @@ export function getHighestRarityUnit (category = 0, unitById = (id) => ({ name: 
       return unit;
     }
   }
+}
+
+export function isValidUnit (unit) {
+  const expectedFields = ['element', 'name', 'id'];
+  return typeof unit === 'object' && expectedFields.every(f => unit[f] !== undefined);
+}
+
+export function getFillerUnit (isEmpty = false, element = 'fire') {
+  return {
+    id: 0,
+    name: isEmpty ? squadFillerMapping.EMPTY : squadFillerMapping.ANY,
+    rarity: 1,
+    element,
+    cost: 0,
+    gender: 'other',
+    guide_id: 0,
+    kind: 'normal',
+  };
+}
+
+export function getEffectMappingFromUnit ({
+  unit = {},
+  enhancements,
+}) {
+  const unitEffects = {
+    ls: [],
+    es: [],
+    [squadUnitActions.BB]: [],
+    [squadUnitActions.SBB]: [],
+    [squadUnitActions.UBB]: [],
+    sp: [],
+  };
+  if (unit['leader skill'] && Array.isArray(unit['leader skill'].effects)) {
+    unitEffects.ls = Array.from(unit['leader skill'].effects).map(e => ({ ...e, sourcePath: 'unit.ls' }));
+  }
+
+  if (unit['extra skill'] && Array.isArray(unit['extra skill'].effects)) {
+    unitEffects.es = Array.from(unit['extra skill'].effects).map(e => ({ ...e, sourcePath: 'unit.es' }));
+  }
+
+  burstTypes.forEach(bbType => {
+    let burstData = (unit[bbType] && Array.isArray(unit[bbType].levels))
+      ? getBurstEffects(unit[bbType])
+      : {};
+    if (Array.isArray(burstData.effects)) {
+      unitEffects[bbType] = Array.from(burstData.effects).map(e => ({ ...e, sourcePath: `unit.${bbType}` }));
+    }
+  });
+
+  if (Array.isArray(unit.feskills)) {
+    // default to all enhancements if none specified
+    const enhancementsToCheck = (typeof enhancements === 'string' && enhancements.length > 0)
+      ? Array.from(new Set(spCodeToEffects(enhancements, unit.feskills)))
+      : unit.feskills;
+    unitEffects.sp = enhancementsToCheck.reduce((acc, val) => acc.concat(getSpEntryEffects(val).map(e => ({
+      ...e,
+      sourcePath: 'unit.sp',
+      sourceSpCode: spIndexToCode(unit.feskills.indexOf(val)),
+    }))), []);
+  }
+
+  return unitEffects;
+}
+
+export function getEffectsListForUnit ({
+  unit = {},
+  target = targetTypes.PARTY,
+  effectType = squadBuffTypes.PROC,
+  enhancements,
+  whitelistedSources = ['ls', 'es', 'bb', 'sbb', 'ubb', 'sp'],
+}) {
+  const entryEffects = getEffectMappingFromUnit({ unit, enhancements });
+  const getArrayWithKey = (key, actualResult = []) => whitelistedSources.includes(key) ? actualResult : [];
+  return getEffectsList({
+    leaderSkillEffects: getArrayWithKey('ls', entryEffects.ls),
+    extraSkillEffects: getArrayWithKey('es', entryEffects.es),
+    nonUbbBurstEffects: getArrayWithKey('bb', entryEffects.bb).concat(getArrayWithKey('sbb', entryEffects.sbb)),
+    ubbBurstEffects: getArrayWithKey('ubb', entryEffects.ubb),
+    spEnhancementEffects: getArrayWithKey('sp', entryEffects.sp),
+    target,
+    effectType,
+  });
 }

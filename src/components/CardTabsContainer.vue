@@ -1,13 +1,19 @@
 <template>
-  <v-container fluid class="pt-0">
-    <v-layout row>
+  <v-container fluid :class="containerClass">
+    <v-layout row v-show="tabs.length > 1">
       <v-flex class="pb-0">
-        <v-tabs v-model="localValue" class="mb-2" :grow="growTabs">
+        <v-tabs
+          v-model="localValue"
+          class="mb-2"
+          show-arrows
+          :grow="growTabs"
+          :centered="centeredTabs"
+          :color="color || undefined">
           <v-tab v-for="(tab, i) in tabs" :key="i">{{ tab.name }}</v-tab>
         </v-tabs>
       </v-flex>
     </v-layout>
-    <v-layout row>
+    <v-layout row :class="{ 'mt-2': tabs.length <= 1 }">
       <v-flex class="pa-0">
         <v-tabs-items v-model="localValue" touchless>
           <v-tab-item v-for="(tab, i) in tabs" :key="i">
@@ -24,6 +30,8 @@
 </template>
 
 <script>
+import debounce from 'lodash/debounce';
+
 export default {
   props: {
     tabs: {
@@ -48,6 +56,18 @@ export default {
       type: Boolean,
       default: false,
     },
+    centeredTabs: {
+      type: Boolean,
+      default: false,
+    },
+    color: {
+      type: String,
+      default: '',
+    },
+    containerClass: {
+      type: String,
+      default: 'pt-0',
+    },
   },
   data () {
     return {
@@ -61,10 +81,23 @@ export default {
     emitValue () {
       this.$emit('input', this.localValue);
     },
+    removeHeight () {
+      this.$el.querySelector('.v-window__container').style.height = '';
+    },
+    debouncedRemoveHeight: debounce(function () {
+      this.removeHeight();
+      this.debouncedCheckHeight();
+    }, 500),
+    debouncedCheckHeight: debounce(function () {
+      if (this.$el && this.$el.querySelector('.v-window__container').style.height) {
+        this.debouncedRemoveHeight();
+      }
+    }, 1000),
   },
   watch: {
     value (newValue) {
       this.localValue = newValue;
+      this.debouncedRemoveHeight();
     },
     localValue (newValue) {
       this.lazyCache[newValue] = true;
@@ -73,6 +106,7 @@ export default {
   },
   mounted () {
     this.localValue = this.value;
+    this.debouncedCheckHeight();
   },
 };
 </script>

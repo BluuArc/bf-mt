@@ -26,6 +26,20 @@ export default class WorkerDb extends DbInterface {
       });
   }
 
+  getAll ({ table }) {
+    return Promise.resolve()
+      .then(() => {
+        return this._db[table].toArray();
+      }).catch(err => {
+        logger.error(`GET error. Returning default value: []`, { table }, err);
+        return [];
+      });
+  }
+
+  delete ({ table, key }) {
+    return this._db[table].delete(key);
+  }
+
   async getFieldInEntry ({ table = '', query, field = '' }) {
     const results = await this.get({ table, query });
     return results.length === 0 ? undefined : results[0][field];
@@ -104,6 +118,30 @@ export default class WorkerDb extends DbInterface {
     return countMapping
       .filter(({ count }) => count > 0)
       .map(({ table }) => table);
+  }
+
+  // Multidex specific
+  async getTablesWithUpdates ({ tables = [], server, sourceUrl }) {
+    const getDateMapping = (table) => this.getDbStats({
+        table,
+        query: { server },
+      })
+      .then(r => ({
+        table,
+        updateTime: new Date((r && r.updateTime) || 0),
+        count: (r && r.keyLength) || 0,
+      }));
+    const [dateMapping, updateTimes] = await Promise.all([
+      Promise.all(tables.map(getDateMapping)),
+      fetch(sourceUrl).then(res => res.ok ? res.json() : Promise.reject(res.statusText)),
+    ]);
+    logger.debug({ dateMapping, updateTimes });
+    return dateMapping
+      .filter(entry =>
+        entry.updateTime && updateTimes[entry.table] && // entries exist
+        updateTimes[entry.table][server] && // server is valid
+        ((entry.count <= 0) || new Date(updateTimes[entry.table][server]) > new Date(entry.updateTime)) // no entries found or if entry date is old
+      ).map(({ table }) => table);
   }
 
   async getFilteredDb ({ table = '', filters, server = 'gl', extractedFields, sortOptions }) {

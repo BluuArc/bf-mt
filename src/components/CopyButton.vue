@@ -1,5 +1,6 @@
 <template>
   <v-btn
+    v-bind="$attrs"
     @click="copyToClipboard"
     class="copy-button"
     :block="block"
@@ -48,7 +49,7 @@ export default {
     },
   },
   methods: {
-    async copyToClipboard () {
+    copyToClipboard () {
       const textarea = this.$el.querySelector('textarea');
       textarea.select();
       document.execCommand('Copy');

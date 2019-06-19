@@ -164,22 +164,61 @@ function convertToIdKeysOnly (aggregate) {
   return aggregate;
 }
 
+function scanForBuffIds () {
+  const buffIdRegex = /(.+)(\s)\((\d+)\)$/;
+  const extractBuffId = (propertyName = '') => {
+    const match = propertyName.match(buffIdRegex);
+    return {
+      id: (match && match[3]) || (void 0),
+      name: (match && match[1]) || (void 0),
+    };
+  };
+  ['passives', 'procs'].forEach(mainBuffType => {
+    const mainData = JSON.parse(fs.readFileSync(`public/static/bf-data/${mainBuffType}.json`, 'utf8'));
+    const dataset = mainData[mainBuffType.slice(0, -1)];
+    const mapping = {};
+    Object.keys(dataset).forEach(buffId => {
+      const buffEntry = dataset[buffId];
+      Object.keys(buffEntry).forEach(property => {
+        console.log(`processing ${mainBuffType} ${buffId} ${property}`);
+        const buffIdEntry = extractBuffId(property);
+        if (buffIdEntry.id !== (void 0)) {
+          console.log(`adding ${mainBuffType} ${buffId} ${property}`);
+          if (!mapping[buffIdEntry.id]) {
+            mapping[buffIdEntry.id] = new Set();
+          }
+          const set = mapping[buffIdEntry.id];
+          set.add(`${buffId}-${buffIdEntry.name}`);
+        }
+        console.log(`finished ${mainBuffType} ${buffId} ${property}`);
+      });
+    });
+    const resultFileData = {};
+    Object.keys(mapping).forEach(key => {
+      resultFileData[key] = Array.from(mapping[key]);
+      console.log(key, resultFileData[key]);
+    });
+    fs.writeFileSync(`public/static/bf-data/buffid-mapping-${mainBuffType}.json`, JSON.stringify(resultFileData, null, 2), 'utf8');
+  });
+}
+
 function main() {
   loadData();
-  // const procValues = readProcValues();
-  // fs.writeFileSync("public/static/bf-data/procs.json", JSON.stringify(procValues, null, 2), 'utf8');
-  // fs.writeFileSync("public/static/bf-data/procs-ids.json", JSON.stringify(convertToIdKeysOnly(procValues), null, 2), 'utf8');
+  const procValues = readProcValues();
+  fs.writeFileSync("public/static/bf-data/procs.json", JSON.stringify(procValues, null, 2), 'utf8');
+  fs.writeFileSync("public/static/bf-data/procs-ids.json", JSON.stringify(convertToIdKeysOnly(procValues), null, 2), 'utf8');
 
-  // const passiveValues = readPassiveValues();
-  // fs.writeFileSync("public/static/bf-data/passives.json", JSON.stringify(passiveValues, null, 2), 'utf8');
-  // fs.writeFileSync("public/static/bf-data/passives-ids.json", JSON.stringify(convertToIdKeysOnly(passiveValues), null, 2), 'utf8');
+  const passiveValues = readPassiveValues();
+  fs.writeFileSync("public/static/bf-data/passives.json", JSON.stringify(passiveValues, null, 2), 'utf8');
+  fs.writeFileSync("public/static/bf-data/passives-ids.json", JSON.stringify(convertToIdKeysOnly(passiveValues), null, 2), 'utf8');
 
   const buffValues = readBuffValues();
   fs.writeFileSync("public/static/bf-data/other-buffs.json", JSON.stringify(buffValues, null, 2), 'utf8');
   fs.writeFileSync("public/static/bf-data/other-buffs-ids.json", JSON.stringify(convertToIdKeysOnly(buffValues), null, 2), 'utf8');
 
-  // const missionValues = readMissionValues();
-  // fs.writeFileSync("public/static/bf-data/missions.json", JSON.stringify(missionValues, null, 2), 'utf8');
+  const missionValues = readMissionValues();
+  fs.writeFileSync("public/static/bf-data/missions.json", JSON.stringify(missionValues, null, 2), 'utf8');
+  scanForBuffIds();
 }
 
 main();

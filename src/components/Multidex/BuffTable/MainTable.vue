@@ -1,63 +1,65 @@
 <template>
-  <v-container fluid class="buff-table pa-0" v-resize="checkIdColumnWidth">
-    <v-layout row v-if="showHeaders" class="buff-table--header">
-      <v-flex :class="{ 'text-xs-center buff-table--id-column': true }">
-        <v-btn flat @click="toggleAllEffectViews" small style="min-width: 36px;">
-          <v-icon>{{ hiddenIndices.length === mappedEffects.length ? 'expand_more' : 'expand_less' }}</v-icon>
-          ID
-        </v-btn>
-      </v-flex>
-      <v-flex class="text-xs-center d-align-self-center buff-table--data-columns">
-        <v-layout row class="d-align-items-center">
-          <v-flex xs3>Buff Property</v-flex>
-          <v-flex xs9>Buff Value</v-flex>
-        </v-layout>
-      </v-flex>
-    </v-layout>
-    <v-layout row class="buff-table--row d-align-items-center" v-for="(effectEntry, i) in mappedEffects" :key="i">
-      <v-flex :class="{ 'text-xs-center buff-table--id-column': true, 'hidden-effects': hiddenIndices.includes(i) }">
-        <v-btn flat @click="() => toggleEffectView(i)" small style="min-width: 36px;" class="collapse-btn">
-          <v-icon>{{ hiddenIndices.includes(i) ? 'unfold_more' : 'unfold_less' }}</v-icon>
-          {{ effectEntry.id }}
-        </v-btn>
-      </v-flex>
-      <v-flex :class="{ 'text-xs-center buff-table--data-columns': true }">
-        <template v-if="!hiddenIndices.includes(i)">
-          <v-layout row v-for="(prop, j) in getSortedProps(effectEntry.effect)" :key="j" class="buff-table--property-row d-align-items-center">
-            <template v-if="isProcBuffList(effectEntry, prop)">
-              <v-flex xs3>
-                {{ prop }}
-              </v-flex>
-              <v-flex xs9>
-                <buff-table :effects="effectEntry.effect[prop]" :showHeaders="false"/>
-              </v-flex>
-            </template>
-            <template v-else>
-              <v-flex xs3>
-                {{ prop }}
-              </v-flex>
-              <v-flex xs9>
-                {{ effectEntry.effect[prop] }}
-                <span v-if="Array.isArray(effectEntry.effect[prop]) && effectEntry.effect[prop].length === 0">(None)</span>
-              </v-flex>
-            </template>
-          </v-layout>
+  <table :class="{ 'buff-table': true, 'is-nested': isNested }">
+    <thead v-if="showHeaders">
+      <tr>
+        <th class="id-column">
+          <v-btn flat @click="toggleAllEffectViews" small style="min-width: 36px;">
+            <v-icon>{{ hiddenIndices.length === mappedEffects.length ? 'fullscreen' : 'fullscreen_exit' }}</v-icon>
+            ID
+          </v-btn>
+        </th>
+        <th class="property-column">
+          Buff Property
+        </th>
+        <th class="value-column">
+          Buff Value
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <template v-for="(effectEntry, i) in mappedEffects">
+        <tr :key="`${effectEntry.id}-${i}`">
+          <!-- ID cell -->
+          <id-cell
+            :class="{ 'first-row': true, 'only-row': hiddenIndices.includes(i) || getSortedProps(effectEntry.effect).length === 1 }"
+            :rowspan="hiddenIndices.includes(i) ? 1 : getSortedProps(effectEntry.effect).length"
+            :collapsed="hiddenIndices.includes(i)"
+            :value="effectEntry.id"
+            @click="() => toggleEffectView(i)"/>
+          <property-cell
+            :class="{ 'property-row--odd first-row': !hiddenIndices.includes(i), 'only-row': hiddenIndices.includes(i) || getSortedProps(effectEntry.effect).length === 1 }"
+            :collapsed="hiddenIndices.includes(i)"
+            :value="getSortedProps(effectEntry.effect)[0]"
+            :numProps="getSortedProps(effectEntry.effect).length"/>
+          <value-cell
+            v-if="!hiddenIndices.includes(i)"
+            :class="{ 'value-row--odd first-row': true, 'only-row': getSortedProps(effectEntry.effect).length === 1 }"
+            :value="effectEntry.effect[getSortedProps(effectEntry.effect)[0]]"
+            :isProcBuffList="isProcBuffList(effectEntry, getSortedProps(effectEntry.effect)[0])"/>
+        </tr>
+
+        <!-- subsequent buff rows for given ID -->
+        <template v-if="!hiddenIndices.includes(i) && getSortedProps(effectEntry.effect).length > 1">
+          <property-value-row
+            v-for="(prop, j) in getSortedProps(effectEntry.effect).slice(1)"
+            :key="`${effectEntry.id}-${i}-${j}`"
+            :propertyCellClass="{ 'property-column': true, [`property-row--${j % 2 === 0 ? 'even' : 'odd'}`]: true, 'last-row': j + 1 === getSortedProps(effectEntry.effect).length }"
+            :valueCellClass="{ 'value-column': true, [`value-row--${j % 2 === 0 ? 'even' : 'odd'}`]: true, 'last-row': j + 1 === getSortedProps(effectEntry.effect).length }"
+            :propName="prop"
+            :propValue="effectEntry.effect[prop]"
+            :isProcBuffList="isProcBuffList(effectEntry, prop)"/>
         </template>
-        <template v-else>
-          <v-layout row>
-            <v-flex>
-              {{ getSortedProps(effectEntry.effect).length }} Effects Hidden
-            </v-flex>
-          </v-layout>
-        </template>
-      </v-flex>
-    </v-layout>
-  </v-container>
+      </template>
+    </tbody>
+  </table>
 </template>
 
 <script>
 import { getEffectType, getEffectId } from '@/modules/EffectProcessor/processor-helper';
-import { mapState, mapMutations } from 'vuex';
+import IdCell from './IdCell';
+import PropertyCell from './PropertyCell';
+import ValueCell from './ValueCell';
+import PropertyValueRow from './PropertyValueRow';
 
 export default {
   props: {
@@ -69,21 +71,39 @@ export default {
       type: Boolean,
       default: false,
     },
+    isNested: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  components: {
+    IdCell,
+    PropertyCell,
+    ValueCell,
+    PropertyValueRow,
   },
   computed: {
-    ...mapState(['maxColumnWidthForBuffTable']),
     idKeys: () => ['passive id', 'unknown passive id', 'proc id', 'unknown proc id'],
     mappedEffects () {
       return this.effects.map(this.getEffectDetails);
     },
+    hasBuffTable () {
+      return this.mappedEffects.some(entry => entry.type === 'passive' && +entry.id === 66);
+    },
+  },
+  data () {
+    return {
+      sortedPropsCache: new WeakMap(),
+      hiddenIndices: [],
+    };
   },
   methods: {
-    ...mapMutations(['setMaxColumnWidthForBuffTable']),
     getEffectDetails (effect) {
       const type = getEffectType(effect);
       const id = getEffectId(effect);
       const filteredEffect = {};
       Object.keys(effect).forEach(key => {
+        // get everything but the ID
         if (!this.idKeys.includes(key)) {
           filteredEffect[key] = effect[key];
         }
@@ -91,7 +111,10 @@ export default {
       return { type, id, effect: filteredEffect };
     },
     getSortedProps (effect) {
-      return Object.keys(effect).sort((a, b) => a < b ? -1 : 1);
+      if (!this.sortedPropsCache.has(effect)) {
+        this.sortedPropsCache.set(effect, Object.keys(effect).sort((a, b) => a < b ? -1 : 1));
+      }
+      return this.sortedPropsCache.get(effect);
     },
     toggleEffectView (i) {
       if (this.hiddenIndices.includes(i)) {
@@ -110,165 +133,73 @@ export default {
     isProcBuffList (effectEntry, prop) {
       return effectEntry.type === 'passive' && +effectEntry.id === 66 && prop === 'triggered effect';
     },
-    checkIdColumnWidth () {
-      if (this.$el.clientWidth > 0) {
-        let widthSum = 0;
-        let maxWidth = 0;
-        const cells = Array.from(this.$el.querySelectorAll('.buff-table--id-column'));
-        cells.forEach(elem => {
-            const width = elem.clientWidth;
-            widthSum += width;
-            if (width > maxWidth) {
-              maxWidth = width;
-            }
-          });
-        // console.warn('running checks on', this.$el, maxWidth, cells.length > 0 && widthSum / cells.length);
-        if (maxWidth > this.maxColumnWidthForBuffTable) {
-          this.setMaxColumnWidthForBuffTable(maxWidth);
-        } else if (cells.length > 0 && (widthSum / cells.length) !== maxWidth) {
-          // console.warn('different width', maxWidth, this.maxColumnWidthForBuffTable);
-          this.setIdColumnWidth();
-        } else if (maxWidth > 0 && maxWidth === this.maxColumnWidthForBuffTable) {
-          // already set, so remove event handlers
-          // console.warn('removing handler for', this.$el);
-          this.removeResizeEventHandlers(this.$el);
-          if (this.$el.parentElement) {
-            this.removeResizeEventHandlers(this.$el.parentElement);
-          }
-        }
-      }
-    },
-    setIdColumnWidth () {
-      if (this.maxColumnWidthForBuffTable > 0) {
-        Array.from(this.$el.querySelectorAll('.buff-table--id-column'))
-          .forEach(elem => {
-            // only set if column is visible (i.e. width > 0)
-            if (elem.clientWidth > 0) {
-              elem.style.minWidth = `${this.maxColumnWidthForBuffTable}px`;
-              elem.style.width = `${this.maxColumnWidthForBuffTable}px`;
-            }
-          });
-      }
-    },
-    delayedCheckColumnWidth () {
-      if (this.resizeTimeout) {
-        clearTimeout(this.resizeTimeout);
-      }
-
-      this.resizeTimeout = setTimeout(() => {
-        this.checkIdColumnWidth();
-      }, 100);
-    },
-    attachResizeEventHandlers (elem) {
-      elem.addEventListener('transitionend', this.delayedCheckColumnWidth);
-      elem.addEventListener('webkitTransitionEnd', this.delayedCheckColumnWidth);
-    },
-    removeResizeEventHandlers (elem) {
-      elem.removeEventListener('transitionend', this.delayedCheckColumnWidth);
-      elem.removeEventListener('webkitTransitionEnd', this.delayedCheckColumnWidth);
-    },
-  },
-  data () {
-    return {
-      hiddenIndices: [],
-      resizeTimeout: null,
-      allIdCellsInRows: [],
-    };
-  },
-  mounted () {
-    this.resizeTimeout = setTimeout(() => {
-      this.checkIdColumnWidth();
-    }, 250);
-    this.setIdColumnWidth();
-
-    this.attachResizeEventHandlers(this.$el);
-    if (this.$el.parentElement) {
-      this.attachResizeEventHandlers(this.$el.parentElement);
-    }
-  },
-  beforeDestroy () {
-    if (this.resizeTimeout) {
-      clearTimeout(this.resizeTimeout);
-    }
-
-    this.removeResizeEventHandlers(this.$el);
-    if (this.$el.parentElement) {
-      this.removeResizeEventHandlers(this.$el.parentElement);
-    }
-  },
-  watch: {
-    maxColumnWidthForBuffTable (newValue, oldValue) {
-      if (!isNaN(newValue) && newValue > oldValue) {
-        this.setIdColumnWidth();
-      }
-    },
   },
   name: 'buff-table',
 };
 </script>
 
 <style lang="less">
-.buff-table {
+table.buff-table {
   --table-border-color: var(--background-color-alt);
   --table-background-color: var(--background-color-alt--lighten-1);
-  --table-hover-color: var(--background-color-alt--lighten-2);
-
   --table-border-settings: 1px solid var(--table-border-color);
 
-  .buff-table--header {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: var(--table-border-settings);
+
+  &:not(.is-nested) {
+    min-width: 40em;
+  }
+
+  .is-nested .property-column {
+    width: 10em;
+  }
+
+  & > thead, & > tbody {
+    td, th {
+      border: var(--table-border-settings);
+      text-align: center;
+    }
+
+    td:not(.id-column) {
+      padding: 0.5em 0;
+    }
+
+    .id-column {
+      width: 5em;
+
+      button.collapse-btn {
+        height: auto;
+        min-width: 0;
+
+        .v-btn__content {
+          flex-wrap: wrap;
+        }
+      }
+    }
+
+    .property-column {
+      width: 17.5em;
+    }
+
+    .first-row, .only-row {
+      border-top: 2px solid var(--table-background-color);
+    }
+
+    .last-row, .only-row {
+      border-bottom: 2px solid var(--table-background-color);
+    }
+  }
+
+  & > thead > th {
     font-weight: bold;
-
-    .buff-table--id-column {
-      flex-grow: 0;
-    }
-
-    .buff-table--data-columns {
-      flex: 1 1 auto;
-    }
+    border-bottom: var(--table-border-settings);
   }
 
-  & .buff-table .collapse-btn {
-    margin-left: -6px;
-  }
-
-  .buff-table--row {
-    border-left: var(--table-border-settings);
-    border-right: var(--table-border-settings);
-    border-top: var(--table-border-settings);
-
-    .buff-table--data-columns {
-      flex: 1 1 auto;
-    }
-
-    .buff-table--id-column {
-      margin-right: -1px;
-      flex-grow: 0;
-      &.hidden-effects {
-        margin-right: 0;
-        border-right: var(--table-border-settings);
-      }
-    }
-
-    &:hover {
-      background-color: var(--table-background-color);
-    }
-
-    &:last-child {
-      border-bottom: var(--table-border-settings);
-    }
-
-    .buff-table--property-row {
-      border-left: var(--table-border-settings);
-
-      &:not(:last-child) {
-        border-bottom: var(--table-border-settings);
-      }
-      min-height: 36px;
-
-      &:hover {
-        background-color: var(--table-hover-color);
-      }
-    }
+  .property-row--odd:not(.only-row), .value-row--odd:not(.only-row) {
+    background-color: var(--table-border-color);
   }
 }
 </style>

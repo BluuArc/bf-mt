@@ -10,6 +10,7 @@
     <slot name="default">
       Put your card content here.
     </slot>
+    <slot name="actions"></slot>
   </v-card>
 </template>
 

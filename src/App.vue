@@ -94,6 +94,7 @@
 <script>
 import logger from '@/modules/Logger';
 import { servers } from '@/modules/constants';
+import { ensureContentPadding } from '@/modules/utils';
 import { mapActions, mapState, mapGetters } from 'vuex';
 import MultidexDataWrapper from '@/components/MultidexDataWrapper';
 import SiteTrackers from '@/components/SiteTrackers';
@@ -151,7 +152,7 @@ export default {
     };
     return {
       showDrawer: false,
-       menuItems: [
+      menuItems: [
         {
           subheader: 'General',
           items: [
@@ -177,6 +178,21 @@ export default {
         {
           subheader: 'Multidex',
           items: multidexModules.map(generateMultidexEntry),
+        },
+        {
+          subheader: 'Tools',
+          items: [
+            {
+              title: 'Squads',
+              link: '/tools/squads',
+              image: require('@/assets/unit_table.png'),
+            },
+            {
+              title: 'Compare',
+              link: '/tools/compare',
+              image: require('@/assets/tt_icon_m-1.png'),
+            },
+          ],
         },
       ],
       title: 'Brave Frontier Multi Tool',
@@ -245,6 +261,8 @@ export default {
       if (newValue === 'Home') {
         setTimeout(() => this.setLastSeenTime(new Date()), 10 * 1000);
       }
+
+      ensureContentPadding();
     },
   },
   async created () {
@@ -254,6 +272,10 @@ export default {
     this.pageActiveServer = this.activeServer;
     this.htmlOverflowChangeHandler();
     await this.fetchUpdateTimes();
+
+    if (typeof window.webpackHotUpdateBFMT === 'function') {
+      window.__bfmtContext = this;
+    }
   },
 };
 </script>

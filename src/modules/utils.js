@@ -3,7 +3,7 @@ import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import { mapActions, mapMutations } from 'vuex';
 import { servers } from '@/modules/constants';
-import { moduleInfo } from '@/store';
+import { multidexModuleInfo } from '@/modules/constants';
 import numbro from 'numbro';
 dayjs.extend(relativeTime);
 
@@ -99,7 +99,7 @@ export const _stateInfoHelper = {
   },
 };
 
-export function generateStateInfo (context, multidexModules = moduleInfo.filter(m => m.type === 'multidex')) {
+export function generateStateInfo (context, multidexModules = multidexModuleInfo.slice()) {
   const stateInfo = {};
   if (context) {
     multidexModules.forEach(({ name }) => {
@@ -122,7 +122,7 @@ export function generateStateInfo (context, multidexModules = moduleInfo.filter(
   return stateInfo;
 }
 
-export function generateActionInfo (context, multidexModules = moduleInfo.filter(m => m.type === 'multidex')) {
+export function generateActionInfo (context, multidexModules = multidexModuleInfo.slice()) {
   const actionInfo = {};
   if (context) {
     const getActionForModule = (moduleName, methodName) => {
@@ -163,4 +163,40 @@ export function generateActionInfo (context, multidexModules = moduleInfo.filter
 
 export function formatNumber (number) {
   return +number < 1000 ? +number : numbro(+number).format({ average: true, mantissa: 1 });
+}
+
+export function ensureContentPadding (minTopOffset = 0, minBottomOffset = 0) {
+  // ensure that there is padding for top of content
+  const contentElem = document.querySelector('#app > .application--wrap > main.v-content');
+  const toolbarElem = document.querySelector('#app > .application--wrap > nav.v-toolbar');
+  const targetOffset = Math.max(toolbarElem.offsetHeight, minTopOffset);
+  if (+contentElem.style.paddingTop.slice(0, -2) < targetOffset) {
+    contentElem.style.paddingTop = `${targetOffset}px`;
+  }
+
+  if (+contentElem.style.paddingBottom.slice(0, -2) < minBottomOffset) {
+    contentElem.style.paddingBottom = `${minBottomOffset}px`;
+  }
+}
+
+export function weightedStringSort (a, b, { beginning = [], end = [] } = {}) {
+  const [aBeginningIndex, bBeginningIndex] = [beginning.indexOf(a), beginning.indexOf(b)];
+  const [aEndIndex, bEndIndex] = [end.indexOf(a), end.indexOf(b)];
+  if (aBeginningIndex > -1 && bBeginningIndex > -1) { // both in beginning array
+    return aBeginningIndex - bBeginningIndex;
+  } else if (aEndIndex > -1 && bEndIndex > -1) { // both in end array
+    return aEndIndex - bEndIndex;
+  } else if (
+    aBeginningIndex > -1 && bBeginningIndex === -1 ||
+    aEndIndex === -1 && bEndIndex > -1
+  ) { // a is currently before b
+    return -1;
+  } else if (
+    bBeginningIndex > -1 && aBeginningIndex === -1 ||
+    bEndIndex === -1 && aEndIndex > -1
+  ) { // b is currently before a
+    return 1;
+  } else { // in neither array, so do normal string compare
+    return a < b ? -1 : 1;
+  }
 }

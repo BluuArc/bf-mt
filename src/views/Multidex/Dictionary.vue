@@ -8,7 +8,7 @@
     :pageDb="pageDb"
     :inputFilters="filters"
     :filterTypes="filterTypes">
-    <v-layout row wrap slot="results" slot-scope="{ keys, logger, getMultidexPathTo }">
+    <v-layout row wrap slot="results" slot-scope="{ keys, logger }">
       <v-flex
         v-for="key in keys"
         :key="key"

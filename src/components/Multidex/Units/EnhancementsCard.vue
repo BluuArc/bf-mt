@@ -16,74 +16,10 @@
       </v-layout>
     </template>
     <template slot="table">
-      <v-container fluid class="pa-0 sp-table" v-if="feSkills">
-        <v-layout row class="sp-table--headers d-align-items-center">
-          <v-flex xs2 lg1>
-            <v-checkbox
-              :label="`${activeSkillSum} SP`"
-              :input-value="overallState === 'all'"
-              :indeterminate="overallState === 'some'"
-              @click.native="toggleOverallState"
-              hide-details
-            />
-          </v-flex>
-          <v-flex xs3 md1 class="text-xs-center">
-            Type
-          </v-flex>
-          <v-flex xs7 md9 lg10>
-            Description
-          </v-flex>
-        </v-layout>
-        <v-layout
-          row wrap
-          v-for="(skillEntry, index) in feSkills"
-          :key="index"
-          class="sp-table--row d-align-items-center">
-          <v-flex xs2 lg1>
-            <v-checkbox
-              :label="`${skillEntry.skill.bp} SP`"
-              :input-value="!!activeSkills[index]"
-              @click.native="toggleSkill(index)"
-            />
-          </v-flex>
-          <v-flex xs3 md1 class="text-xs-center">
-            <sp-icon :category="+skillEntry.category" :displaySize="24"/>
-          </v-flex>
-          <v-flex xs7 md9 lg10>
-            <v-layout row wrap class="d-align-items-center">
-              <v-flex xs12 sm8>
-                <span class="d-block">
-                  <b>{{ spIndexToCode(index) }}: </b>
-                  {{ getSkillDescription(skillEntry) }}
-                </span>
-                <i v-if="skillEntry.dependency">
-                  {{ getDependencyText(skillEntry) }}
-                </i>
-              </v-flex>
-              <v-flex xs12 sm4 class="text-xs-right">
-                <v-btn
-                  v-if="!showTables.includes(index)"
-                  block flat
-                  @click="showTables.push(index)">
-                  Show Data
-                </v-btn>
-                <v-btn
-                  v-else
-                  block flat
-                  @click="showTables = showTables.filter(elem => elem !== index)">
-                  Hide Data
-                </v-btn>
-              </v-flex>
-            </v-layout>
-          </v-flex>
-          <v-slide-y-transition>
-            <v-flex xs12 v-show="showTables.includes(index)" style="overflow-x: auto;">
-              <!-- lazily render buff table once -->
-              <buff-table v-if="showTables.includes(index) || effectCache[skillEntry.id]" :effects="getSkillEffects(skillEntry)" :showHeaders="true"/>
-            </v-flex>
-          </v-slide-y-transition>
-        </v-layout>
-      </v-container>
+      <sp-build-table
+        v-if="feSkills"
+        v-model="activeEnhancements"
+        :feSkills="feSkills"/>
       <span v-else>No SP data found.</span>
     </template>
     <template slot="share-build" slot-scope="{ activeTabIndex }">
@@ -98,10 +34,16 @@
           <v-flex xs12 sm6 md4>
             <v-checkbox v-model="copyCode" label="Letter Code" hide-details/>
           </v-flex>
+          <v-flex xs12 sm6 md4>
+            <v-checkbox v-model="useWikiTemplate" label="Use Wiki SP Build Template" hide-details/>
+          </v-flex>
         </v-layout>
         <v-layout row>
           <v-flex>
-            <text-viewer :inputText="sharedText" :value="activeTabIndex"/>
+            <text-viewer
+              :inputText="sharedText"
+              :value="activeTabIndex"
+            />
           </v-flex>
         </v-layout>
       </v-container>
@@ -112,10 +54,14 @@
 <script>
 import DescriptionCardBase from '@/components/Multidex/DescriptionCardBase';
 import CardTitleWithLink from '@/components/CardTitleWithLink';
-import SpIcon from '@/components/Multidex/Units/SpIcon';
-import BuffTable from '@/components/Multidex/BuffTable/MainTable';
 import TextViewer from '@/components/TextViewer';
-import { getSpSkillEffects, spIndexToCode, spCodeToIndex } from '@/modules/core/units';
+import SpBuildTable from '@/components/Multidex/Units/SpBuildTable';
+import {
+  getSpEntryEffects,
+  spCodeToIndex,
+  getSpDescription,
+  getSpCost,
+} from '@/modules/core/units';
 import debounce from 'lodash/debounce';
 
 export default {
@@ -130,9 +76,8 @@ export default {
   components: {
     DescriptionCardBase,
     CardTitleWithLink,
-    SpIcon,
-    BuffTable,
     TextViewer,
+    SpBuildTable,
   },
   computed: {
     feSkills () {
@@ -146,183 +91,126 @@ export default {
       return this.feSkills.map(s => s.skill.bp)
         .reduce((acc, val) => acc + val, 0);
     },
-    overallState () {
-      if (this.activeSkillSum === this.allEnhancementsSum) {
-        return 'all';
-      } else if (this.activeSkillSum === 0) {
-        return 'none';
-      } else {
-        return 'some';
-      }
-    },
     titleHtml () {
       const enhancements = this.$route.query.enhancements;
-      return ['SP Enhancments', enhancements ? `(${enhancements})` : ''].filter(val => val).join(' ');
+      return ['SP Enhancments', enhancements ? `(${enhancements})` : '']
+        .filter(val => val)
+        .join(' ');
     },
     allEffects () {
       return !this.feSkills ? [] : this.feSkills
-        .map(s => this.getSkillEffects(s, false))
+        .map(s => getSpEntryEffects(s))
         .reduce((acc, val) => acc.concat(val), []);
     },
   },
   data () {
     return {
-      activeSkills: {},
-      activeSkillSum: 0,
-      showTables: [],
       sharedText: 'No SP enhancements selected',
       copyName: false,
       copyBullets: false,
       copyCode: false,
-      effectCache: {},
+      activeEnhancements: '',
+      useWikiTemplate: false,
     };
   },
   methods: {
-    spIndexToCode,
-    getSPSkillWithID (id) {
-      let skillId = id;
-      if (skillId.indexOf('@') > -1) {
-        skillId = skillId.split('@')[1];
-      }
-      const result = this.feSkills.filter(s => s.id.toString() === skillId);
-      return result[0];
-    },
-    getSkillDescription (skillEntry) {
-      const { desc = '', name = '' } = skillEntry.skill;
-      if (desc.trim() === name.trim()) {
-        return desc || 'No Description';
-      } else {
-        return (desc.length > name.length) ? desc : [name, desc ? `(${desc})` : ''].filter(val => val).join(' ');
-      }
-    },
-    getDependencyText (skillEntry) {
-      const dependentSkillEntry = this.getSPSkillWithID(skillEntry.dependency);
-
-      if (dependentSkillEntry) {
-        return `Requires "${dependentSkillEntry.skill.desc}"`;
-      }
-
-      return skillEntry['dependency comment'] || 'Requires another enhancement';
-    },
-    getSkillEffects (skillEntry, cacheResult = true) {
-      if (this.effectCache[skillEntry.id]) {
-        return this.effectCache[skillEntry.id];
-      }
-      const effects = getSpSkillEffects(skillEntry);
-      // use cacheResult boolean to not prematurely render tables when getting allEffects data
-      if (cacheResult) {
-        this.effectCache[skillEntry.id] = effects;
-      }
-      return effects;
-    },
-    toggleOverallState () {
-      if (this.overallState === 'all') {
-        Object.keys(this.activeSkills)
-          .forEach(key => {
-            this.toggleSkill(key, false);
-          });
-      } else {
-        Object.keys(this.feSkills)
-          .forEach((s, i) => {
-            this.toggleSkill(i, true);
-          });
-      }
-    },
-    toggleSkill (index, value) {
-      this.activeSkills[index] = (value === undefined) ? !this.activeSkills[index] : !!value;
-      const skill = this.feSkills[index];
-      if (this.activeSkills[index] && skill.dependency) {
-        this.checkSkillDependencyBoxes(skill);
-      } else if (!this.activeSkills[index]) {
-        this.uncheckSkillDependencyBoxes(skill);
-      }
-      this.computeActiveSum();
-      this.computeSharedText();
-      this.syncLocalEnhancementsToUrl();
-    },
     computeSharedText: debounce(function () {
-      const activeSkills = Object.keys(this.activeSkills)
-        .filter(key => this.activeSkills[key]);
-      if (activeSkills.length > 0) {
-        const skills = activeSkills.map(key => ({ skillEntry: this.feSkills[key], index: +key }))
-          .map(({skillEntry, index }) => {
-            const cost = skillEntry.skill.bp;
-            const desc = this.getSkillDescription(skillEntry);
-            const bullet = this.copyBullets ? '* ' : '';
-            const code = this.copyCode ? `${spIndexToCode(index)}: ` : '';
-            return `${bullet}[${cost} SP] - ${code}${desc}`;
-          }).join('\n')
-          .concat(`\n\nTotal: ${this.activeSkillSum} SP`);
-
-        if (this.copyName) {
-          this.sharedText = `${this.unit.name}\n\n`.concat(skills);
-        } else {
-          this.sharedText = skills;
+      if (this.useWikiTemplate) {
+        const spEntries = [];
+        let totalSpCost = 0;
+        if (this.activeEnhancements) {
+          this.activeEnhancements.split('')
+            .forEach(code => {
+              const spEntry = this.feSkills[spCodeToIndex(code)];
+              spEntries.push({
+                description: getSpDescription(spEntry),
+                cost: spEntry.skill.bp,
+                code, // not currently used in output, but may be used in the future
+              });
+            });
+          totalSpCost = getSpCost(this.feSkills, this.activeEnhancements);
         }
+
+        const lines = [
+          {
+            name: 'build_name',
+            value: `${this.unit.name} build`,
+          },
+          {
+            name: 'element',
+            value: this.unit.element
+              ? `${this.unit.element[0].toUpperCase()}${this.unit.element.slice(1)}`
+              : '',
+          },
+          {
+            name: 'total_sp',
+            value: totalSpCost,
+          },
+          {
+            name: 'author',
+          },
+          ...spEntries.map((entry, i) => [
+            {
+              name: `sp_cost_${i + 1}`,
+              value: entry.cost,
+            },
+            {
+              name: `spskill_${i + 1}`,
+              value: entry.description,
+            },
+          ]).reduce((acc, val) => acc.concat(val), []),
+          {
+            name: 'analysis',
+          },
+          {
+            name: 'last_updated',
+            value: new Date().toDateString(),
+          },
+        ];
+
+        const expectedLength = lines.reduce((acc, val) => Math.max(acc, val.name.length), 1) + 4; // length of longest name + 4 spaces
+        this.sharedText = [
+          '{{Build',
+          ...lines.map(entry => `|${entry.name.padEnd(expectedLength, ' ')} = ${entry.value !== undefined ? entry.value : ''}`),
+          '}}',
+        ].join('\n');
       } else {
-        this.sharedText = 'No SP enhancements selected';
+        if (this.activeEnhancements) {
+          const skills = this.activeEnhancements.split('')
+            .map(code => {
+              const spEntry = this.feSkills[spCodeToIndex(code)];
+              const cost = spEntry.skill.bp;
+              const desc = getSpDescription(spEntry);
+              const bullet = this.copyBullets ? '* ' : '';
+              const outputCode = this.copyCode ? `${code}: ` : '';
+              return `${bullet}[${cost} SP] - ${outputCode}${desc}`;
+            }).join('\n')
+            .concat(`\n\nTotal: ${getSpCost(this.feSkills, this.activeEnhancements)} SP`);
+
+          if (this.copyName) {
+            this.sharedText = `${this.unit.name}\n\n`.concat(skills);
+          } else {
+            this.sharedText = skills;
+          }
+        } else {
+          this.sharedText = 'No SP enhancements selected';
+        }
       }
-    }, 50),
-    computeActiveSum: debounce(function () {
-      this.activeSkillSum = Object.keys(this.activeSkills)
-        .filter(key => this.activeSkills[key])
-        .map(key => this.feSkills[key].skill.bp)
-        .reduce((acc, val) => acc + val, 0);
     }, 50),
     syncLocalEnhancementsToUrl: debounce(function () {
-      const enhancements = Object.keys(this.activeSkills)
-        .filter(key => this.activeSkills[key])
-        .map(key => spIndexToCode(+key))
-        .join('');
-
       this.$router.replace({
         path: this.$route.path,
         query: {
           ...this.$route.query,
-          enhancements: enhancements || undefined,
+          enhancements: this.activeEnhancements || undefined,
         },
       });
     }, 500),
     syncUrlToLocalEnhancements () {
       this.logger.debug(this.$route.query);
       if (this.$route.query.enhancements) {
-        const enhancements = this.$route.query.enhancements.slice()
-          .split('').map(char => spCodeToIndex(char));
-        enhancements.forEach(index => {
-          if (index >= 0 && index < this.feSkills.length) {
-            this.toggleSkill(index, true);
-          } else {
-            this.logger.warn('ignoring invalid index', index);
-          }
-        });
+        this.activeEnhancements = this.$route.query.enhancements.slice();
       }
-    },
-    // check all boxes current skill requires
-    checkSkillDependencyBoxes (skill) {
-      const dependentSkill = this.getSPSkillWithID(skill.dependency);
-      // console.debug({ dependentSkill });
-      this.feSkills.forEach((s, i) => {
-        if (s.id === dependentSkill.id) {
-          this.toggleSkill(i, true);
-          if (s.dependency) {
-            this.checkSkillDependencyBoxes(s);
-          }
-        }
-      });
-    },
-    uncheckSkillDependencyBoxes (skill) {
-      const activeDependencySkills = Object.keys(this.activeSkills)
-        .filter(key => this.activeSkills[key])
-        .map(key => this.feSkills[key])
-        .filter(s => s.dependency && s.dependency.indexOf(skill.id) > -1);
-
-      const activeDependencySkillIDs = activeDependencySkills.map(s => s.id);
-      this.feSkills.forEach((s, i) => {
-        if (activeDependencySkillIDs.indexOf(s.id) > -1) {
-          this.toggleSkill(i, false);
-        }
-      });
-      activeDependencySkills.forEach(this.uncheckSkillDependencyBoxes);
     },
   },
   watch: {
@@ -335,48 +223,16 @@ export default {
     copyCode () {
       this.computeSharedText();
     },
+    useWikiTemplate () {
+      this.computeSharedText();
+    },
+    activeEnhancements () {
+      this.computeSharedText();
+      this.syncLocalEnhancementsToUrl();
+    },
   },
   mounted () {
     this.syncUrlToLocalEnhancements();
   },
 };
 </script>
-
-<style lang="less">
-.sp-table {
-  --table-border-color: var(--background-color-alt);
-  --table-background-color: var(--background-color-alt--lighten-1);
-  --table-border-settings: 1px solid var(--table-border-color);
-
-  .v-input--checkbox {
-    margin-top: 0;
-    padding-left: 4px;
-
-    .v-input__control {
-      text-align: center;
-    }
-
-    .v-input__slot {
-      margin-bottom: 0;
-    }
-
-    .v-messages {
-      display: none;
-    }
-  }
-
-  .sp-table--headers {
-    font-weight: bold;
-    border-bottom: var(--table-border-settings);
-  }
-
-  .sp-table--row {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-right: 8px;
-    &:nth-child(odd) {
-      background-color: var(--table-border-color);
-    }
-  }
-}
-</style>

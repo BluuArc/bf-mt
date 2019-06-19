@@ -7,7 +7,10 @@
     :viewId="viewId"
     :pageDb="pageDb"
     :inputFilters="filters"
-    :filterTypes="filterTypes">
+    :filterTypes="filterTypes"
+    :getCompareName="(id, entry) => (entry && entry.name) || id"
+    compareType="ls"
+  >
     <v-layout row wrap slot="results" slot-scope="{ keys, getMultidexPathTo }">
       <v-flex
         v-for="key in keys"
@@ -30,6 +33,11 @@
         :logger="logger"
         :pageDb="pageDb"
         :asyncGetById="getById"/>
+    </template>
+    <template slot="compare-input-selection" slot-scope="{ selectionId, selectionName }">
+      <v-chip small>
+        <span v-text="`${selectionName} (${selectionId})`"/>
+      </v-chip>
     </template>
   </main-page-base>
 </template>

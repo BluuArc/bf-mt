@@ -6,6 +6,7 @@ import getUpdateTimes from './instances/update-data-singleton';
 import settings from './settings';
 import github from './github';
 import multidexModules, { moduleInfo as multidexModuleInfo } from './multidex';
+import squads from './tools/squads';
 
 import { Logger } from '@/modules/Logger';
 const logger = new Logger({ prefix: '[STORE]' });
@@ -30,6 +31,7 @@ export default new Vuex.Store({
     settings,
     github,
     ...multidexModules,
+    squads,
   },
   state: {
     disableHtmlOverflow: false,
@@ -39,6 +41,7 @@ export default new Vuex.Store({
     loadingState: false, // changed mostly by MultidexDataWrapper, accessed by all
     iconKeyConfigCache: {},
     maxColumnWidthForBuffTable: 0,
+    showBbOrderColors: false,
   },
   mutations: {
     setInitState (state, newState = false) {
@@ -60,8 +63,11 @@ export default new Vuex.Store({
     setValueForIconKey (state, { key, value }) {
       state.iconKeyConfigCache[key] = value;
     },
-    setMaxColumnWidthForBuffTable(state, newVal) {
+    setMaxColumnWidthForBuffTable (state, newVal) {
       state.maxColumnWidthForBuffTable = +newVal;
+    },
+    setShowSparkOrderColors (state, newVal) {
+      state.showBbOrderColors = !!newVal;
     },
   },
   actions: {
@@ -79,21 +85,26 @@ export default new Vuex.Store({
         commit(`${name}/setLoadState`, true);
       });
 
-      commit('setLoadingMessage', 'Initializing data');
-      await delay(0);
-      for (const m of modules) {
-        logger.debug('initializing', m);
-        await dispatch(`${m}/init`);
-        if (m !== 'settings' && m !== 'github') {
-          commit(`${m}/setLoadState`, true);
+      try {
+        commit('setLoadingMessage', 'Initializing data');
+        await delay(0);
+        for (const m of modules) {
+          logger.debug('initializing', m);
+          await dispatch(`${m}/init`);
+          if (m !== 'settings' && m !== 'github') {
+            commit(`${m}/setLoadState`, true);
+          }
         }
+        await dispatch('settings/init');
+  
+        commit('setLoadingMessage', `Setting data to last set server (${(state.settings.activeServer || 'gl').toUpperCase()})`);
+        await dispatch('setActiveServer', state.settings.activeServer);
+      } catch (err) {
+        throw err;
+      } finally {
+        commit('setLoadingMessage');
+        commit('setInitState', false);
       }
-      await dispatch('settings/init');
-
-      commit('setLoadingMessage', `Setting data to last set server (${(state.settings.activeServer || 'gl').toUpperCase()})`);
-      await dispatch('setActiveServer', state.settings.activeServer);
-      commit('setLoadingMessage');
-      commit('setInitState', false);
     },
     async setActiveServer ({ dispatch, commit }, server = 'gl') { // eslint-disable-line no-unused-vars
       const modules = moduleInfo.map(({ name }) => name);
@@ -101,6 +112,8 @@ export default new Vuex.Store({
         commit(`${name}/setLoadState`, true);
       });
 
+      commit('setLoadingState', true);
+      commit('setLoadingMessage', `Switching active server to ${server}`);
       await delay(0);
       for (const m of modules.filter(m => m !== 'github')) {
         try {
@@ -113,6 +126,8 @@ export default new Vuex.Store({
           }
         }
       }
+      commit('setLoadingMessage', '');
+      commit('setLoadingState', false);
     },
     async fetchUpdateTimes ({ commit }, forceRefresh) {
       const updateTimes = await getUpdateTimes(forceRefresh);

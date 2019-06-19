@@ -25,4 +25,9 @@ export default class PromiseWorkerExchangeClient extends PromiseWorkerExchange {
       this._commands[methodName](data);
     }
   }
+
+  close () {
+    this._worker.terminate();
+    this._worker = null;
+  }
 }

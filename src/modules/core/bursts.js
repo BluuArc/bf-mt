@@ -1,11 +1,13 @@
 import { attackingProcs } from '@/modules/EffectProcessor/constants';
-import { targetAreaMapping } from '@/modules/constants';
+import { targetAreaMapping, targetTypes, squadBuffTypes } from '@/modules/constants';
 import SWorker from '@/assets/sww.min.js';
+import { getEffectsList } from './buffs';
 
 export function getBurstEffects (burst, level) {
   // default to last level
-  const levelIndex = (level !== undefined) ? level : burst.levels.length - 1;
-  return burst.levels[levelIndex];
+  const burstEffectsByLevel = Array.isArray(burst.levels) ? burst.levels : [];
+  const levelIndex = (level !== undefined) ? level : burstEffectsByLevel.length - 1;
+  return burstEffectsByLevel[levelIndex];
 }
 
 export function getBcDcInfo (burst) {
@@ -31,10 +33,9 @@ export function getBcDcInfo (burst) {
 }
 
 export function getHitCountData (burst, filterFn = (f) => attackingProcs.includes(f.id)) {
-  if (!burst) {
+  if (typeof burst !== 'object' || Object.keys(burst).length === 0) {
     return [];
   }
-
   const endLevel = getBurstEffects(burst);
   return burst['damage frames']
     .map((f, i) => {
@@ -181,4 +182,19 @@ export function getSelfSparkCount (frames, inputDelay, sparkedFrames) {
   return frames['frame times']
     .filter(time => (sparkedFrames[(+time + delay)] || []).length > 0)
     .length;
+}
+
+export function getEffectsListForBurst ({
+  burst = {},
+  target = targetTypes.PARTY,
+  effectType = squadBuffTypes.PROC,
+}) {
+  const details = getBurstEffects(burst) || {};
+  const effects = (Array.isArray(details.effects) ? details.effects : [])
+    .map(e => ({ ...e, sourcePath: `Burst: ${burst.name || '(No name found)'} (${burst.id})`}));
+  return getEffectsList({
+    nonUbbBurstEffects: effects,
+    target,
+    effectType,
+  });
 }

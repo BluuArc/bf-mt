@@ -2,11 +2,12 @@ import { effectTypes } from '../constants';
 import * as helper from './processor-helper';
 // import knownConstants from '../../modules/constants';
 import IconKeyMappings from './icon-key-mappings';
+import { getEffectName } from '@/modules/core/buffs';
 const procTypes = require('@/assets/buff-translation/procs.json');
 
 const generateUnknownEntry = (id) => ({
   ...(helper.generateDefaultEntry(id)),
-  desc: `Unknown buff ${id}`,
+  desc: getEffectName({ 'unknown proc id': id }) || `Unknown buff ${id}`,
   type: [effectTypes.UNKNOWN.name],
 });
 
@@ -14,7 +15,9 @@ const unknownProcs = {
   ...(() => {
     const entries = {};
     procTypes.unknown_proc.forEach(id => {
-      entries[id] = helper.generateDefaultEntry(id);
+      const defaultEntry = helper.generateDefaultEntry(id);
+      defaultEntry.desc = getEffectName({ 'unknown proc id': id }) || defaultEntry.desc;
+      entries[id] = defaultEntry;
     });
     return entries;
   })(),

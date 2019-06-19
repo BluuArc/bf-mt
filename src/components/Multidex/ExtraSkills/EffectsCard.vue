@@ -16,7 +16,7 @@
       <v-expansion-panel v-model="activeConditionSet">
         <v-expansion-panel-content v-for="(conditionSet, i) in conditionalEffects" :key="i">
           <h2 class="subheading" slot="header" style="text-transform: capitalize;">{{ conditionSet.condition }}</h2>
-          <v-container fluid>
+          <v-container fluid style="overflow-x: auto;">
             <buff-table :effects="conditionSet.effects" :showHeaders="true"/>
           </v-container>
         </v-expansion-panel-content>
@@ -28,7 +28,7 @@
 <script>
 import { mapGetters } from 'vuex';
 import DescriptionCardBase from '@/components/Multidex/DescriptionCardBase';
-import BuffTable from '@/components/Multidex/BuffTable/MainTable';
+import BuffTable from '@/components/Multidex/BuffTableGrid/MainTable';
 import { splitEffectsByCondition } from '@/modules/core/extra-skills';
 
 export default {
