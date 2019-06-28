@@ -5,6 +5,7 @@ import { createState, createMutations, createActions, createGetters } from './he
 import { getCacheBustingUrlParam } from '@/modules/utils';
 import {
   sphereTypeMapping,
+  CONTENT_URLS,
 } from '@/modules/constants';
 
 const logger = new Logger({ prefix: '[STORE/ITEMS]' });
@@ -16,12 +17,7 @@ export default {
   getters: {
     ...createGetters('items'),
     getImageUrl: state => (id, fullEntry) => {
-      const cdnUrls = {
-        eu: 'http://static-bravefrontier.gumi-europe.net/content',
-        gl: 'http://dlc.bfglobal.gumi.sg/content',
-        jp: 'http://cdn.android.brave.a-lim.jp',
-      };
-      const baseUrl = `${cdnUrls[state.activeServer]}/item`;
+      const baseUrl = `${CONTENT_URLS[state.activeServer]}/item`;
       if (fullEntry && fullEntry.thumbnail) {
         return `${baseUrl}/${fullEntry.thumbnail}`;
       } else if (state.pageDb.hasOwnProperty(id)) {

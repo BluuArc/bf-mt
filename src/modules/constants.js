@@ -500,3 +500,9 @@ export const COMPARE_KEY_MAPPING = Object.freeze({
   es: { name: 'Extra Skill', multidexKey: 'extraSkills', key: 'es' },
   ls: { name: 'Leader Skill', multidexKey: 'leaderSkills', key: 'ls' },
 });
+
+export const CONTENT_URLS = {
+  eu: 'http://static-bravefrontier.gumi-europe.net/content',
+  gl: 'https://dv5bk1m8igv7v.cloudfront.net/asset/2200/content',
+  jp: 'http://cdn.android.brave.a-lim.jp',
+};

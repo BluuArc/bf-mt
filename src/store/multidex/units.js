@@ -3,6 +3,7 @@ import { makeMultidexWorker } from '../instances/dexie-client';
 import downloadWorker from '../instances/download-worker';
 import { createState, createMutations, createActions, createGetters } from './helper';
 import { getCacheBustingUrlParam } from '@/modules/utils';
+import { CONTENT_URLS } from '@/modules/constants';
 
 const logger = new Logger({ prefix: '[STORE/UNITS]' });
 const dbWorker = makeMultidexWorker('units');
@@ -13,13 +14,7 @@ export default {
   getters: {
     ...createGetters('units'),
     getImageUrls: state => id => {
-      const cdnUrls = {
-        eu: 'http://static-bravefrontier.gumi-europe.net/content',
-        gl: 'http://dlc.bfglobal.gumi.sg/content',
-        jp: 'http://cdn.android.brave.a-lim.jp',
-      };
-
-      const baseUrl = `${cdnUrls[state.activeServer]}/unit/img`;
+      const baseUrl = `${CONTENT_URLS[state.activeServer]}/unit/img`;
 
       return {
         ills_full: `${baseUrl}/unit_ills_full_${id}.png`,
