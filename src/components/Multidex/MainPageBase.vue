@@ -187,7 +187,7 @@
         v-if="numPages > 1 && !(loadingFilters || loadingSorts)"
         :value="true"
         fixed app>
-        <div class="text-xs-center">
+        <div class="text-xs-center" style="cursor: auto;">
           <v-pagination
             v-model="paginationModel"
             :total-visible="$vuetify.breakpoint.mdAndUp ? 20 : undefined"

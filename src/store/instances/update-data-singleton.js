@@ -1,4 +1,3 @@
-import downloadWorker from './download-worker';
 import { moduleInfo } from '@/store';
 import { getCacheBustingUrlParam } from '@/modules/utils';
 import CacheSingleton from '@/modules/CacheSingleton';
@@ -9,7 +8,11 @@ const updateDataSingleton = new CacheSingleton({
   },
   async getter (logger) {
     const url = `${location.origin}${location.pathname}static/bf-data/update-stats.json?${getCacheBustingUrlParam()}`;
-    const data = await downloadWorker.postMessage('getJson', [url]);
+    const data = fetch(url)
+      .then(res => res.ok
+        ? res.json()
+        : Promise.reject(res.statusText)
+      );
     moduleInfo.forEach(({ name }) => {
       if (data[name]) {
         Object.keys(data[name]).forEach(server => {
