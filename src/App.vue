@@ -192,6 +192,11 @@ export default {
               link: '/tools/compare',
               image: require('@/assets/tt_icon_m-1.png'),
             },
+            {
+              title: 'Tier List Creator',
+              link: '/tools/tier-list-creator',
+              image: require('@/assets/tier-list-icon.png'),
+            },
           ],
         },
       ],
