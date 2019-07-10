@@ -23,7 +23,9 @@
             exact
             :value="currentPageName === subItem.title"
             :to="typeof (subItem.link) === 'function' ? subItem.link() : subItem.link"
-            @click="($vuetify.breakpoint.mdAndDown) ? (showDrawer = false) : (showDrawer = showDrawer)">
+            @click="($vuetify.breakpoint.mdAndDown) ? (showDrawer = false) : (showDrawer = showDrawer)"
+            active-class="primary"
+          >
             <v-list-tile-action>
               <v-progress-circular v-if="stateInfo[subItem.name] && stateInfo[subItem.name].isLoading" indeterminate/>
               <v-badge v-else-if="group.subheader === 'General' && subItem.title === 'Home' && numNewCommits > 0">
