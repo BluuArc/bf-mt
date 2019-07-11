@@ -1,20 +1,4 @@
 {
-  "MST_SKILLS_2122548_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122548_NAME": {
-    "en": "I am a ravenous demon!",
-    "es": "¡Soy un demonio feroz!",
-    "id": "Aku setan yang lapar!",
-    "pt": "Eu sou um demônio faminto!",
-    "th": "ข้าคือปีศาจผู้ตะกละตะกลาม!",
-    "vi": "I am a ravenous demon!"
-  },
   "MST_SKILLS_2122549_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -87199,6 +87183,38 @@
     "th": "Absolutely BOARBARIC!",
     "vi": "Absolutely BOARBARIC!"
   },
+  "MST_SKILLS_2810767_DESCRIPTION": {
+    "en": "11 combo massive Fire attack on all foes (damage relative to remaining HP), 4 combo massive Fire attack on single foe, enormously boosts Spark damage for 3 turns, enormously boosts Fire elemental damage for 3 turns & enormously boosts BB gauge for 3 turns",
+    "es": "11 combo massive Fire attack on all foes (damage relative to remaining HP), 4 combo massive Fire attack on single foe, enormously boosts Spark damage for 3 turns, enormously boosts Fire elemental damage for 3 turns & enormously boosts BB gauge for 3 turns",
+    "id": "11 combo massive Fire attack on all foes (damage relative to remaining HP), 4 combo massive Fire attack on single foe, enormously boosts Spark damage for 3 turns, enormously boosts Fire elemental damage for 3 turns & enormously boosts BB gauge for 3 turns",
+    "pt": "11 combo massive Fire attack on all foes (damage relative to remaining HP), 4 combo massive Fire attack on single foe, enormously boosts Spark damage for 3 turns, enormously boosts Fire elemental damage for 3 turns & enormously boosts BB gauge for 3 turns",
+    "th": "11 combo massive Fire attack on all foes (damage relative to remaining HP), 4 combo massive Fire attack on single foe, enormously boosts Spark damage for 3 turns, enormously boosts Fire elemental damage for 3 turns & enormously boosts BB gauge for 3 turns",
+    "vi": "11 combo massive Fire attack on all foes (damage relative to remaining HP), 4 combo massive Fire attack on single foe, enormously boosts Spark damage for 3 turns, enormously boosts Fire elemental damage for 3 turns & enormously boosts BB gauge for 3 turns"
+  },
+  "MST_SKILLS_2810767_NAME": {
+    "en": "I have to be a good boy.",
+    "es": "I have to be a good boy.",
+    "id": "I have to be a good boy.",
+    "pt": "I have to be a good boy.",
+    "th": "I have to be a good boy.",
+    "vi": "I have to be a good boy."
+  },
+  "MST_SKILLS_2810768_DESCRIPTION": {
+    "en": "13 combo massive Fire attack on all foes (damage relative to remaining HP), 3 combo massive Fire attack on single foe (damage relative to remaining HP), enormously boosts own Spark damage for 4 turns, enormously boosts Spark damage for 4 turns, enormously boosts Fire elemental damage for 4 turns & enormously boosts BB gauge for 4 turn",
+    "es": "13 combo massive Fire attack on all foes (damage relative to remaining HP), 3 combo massive Fire attack on single foe (damage relative to remaining HP), enormously boosts own Spark damage for 4 turns, enormously boosts Spark damage for 4 turns, enormously boosts Fire elemental damage for 4 turns & enormously boosts BB gauge for 4 turn",
+    "id": "13 combo massive Fire attack on all foes (damage relative to remaining HP), 3 combo massive Fire attack on single foe (damage relative to remaining HP), enormously boosts own Spark damage for 4 turns, enormously boosts Spark damage for 4 turns, enormously boosts Fire elemental damage for 4 turns & enormously boosts BB gauge for 4 turn",
+    "pt": "13 combo massive Fire attack on all foes (damage relative to remaining HP), 3 combo massive Fire attack on single foe (damage relative to remaining HP), enormously boosts own Spark damage for 4 turns, enormously boosts Spark damage for 4 turns, enormously boosts Fire elemental damage for 4 turns & enormously boosts BB gauge for 4 turn",
+    "th": "13 combo massive Fire attack on all foes (damage relative to remaining HP), 3 combo massive Fire attack on single foe (damage relative to remaining HP), enormously boosts own Spark damage for 4 turns, enormously boosts Spark damage for 4 turns, enormously boosts Fire elemental damage for 4 turns & enormously boosts BB gauge for 4 turn",
+    "vi": "13 combo massive Fire attack on all foes (damage relative to remaining HP), 3 combo massive Fire attack on single foe (damage relative to remaining HP), enormously boosts own Spark damage for 4 turns, enormously boosts Spark damage for 4 turns, enormously boosts Fire elemental damage for 4 turns & enormously boosts BB gauge for 4 turn"
+  },
+  "MST_SKILLS_2810768_NAME": {
+    "en": "Hell Scythe",
+    "es": "Hell Scythe",
+    "id": "Hell Scythe",
+    "pt": "Hell Scythe",
+    "th": "Hell Scythe",
+    "vi": "Hell Scythe"
+  },
   "MST_SKILLS_2810778_DESCRIPTION": {
     "en": "27 combo massive Fire attack on all foes (partial HP drain, enormously boosts critical hit rate), enormously boosts max HP, 100% damage reduction for 3 turns, enormously boosts Def relative to Atk for 3 turns, massively boosts critical damage for 5 turns & damage taken enormously boosts BB gauge for 3 turns",
     "es": "27 combo massive Fire attack on all foes (partial HP drain, enormously boosts critical hit rate), enormously boosts max HP, 100% damage reduction for 3 turns, enormously boosts Def relative to Atk for 3 turns, massively boosts critical damage for 5 turns & damage taken enormously boosts BB gauge for 3 turns",
@@ -89398,5 +89414,69 @@
     "pt": "18 combo massive Thunder attack on all foes, enormously boosts Atk for 3 turns, raises normal hit amount for 3 turns & normal attacks hit all foes for 3 turns",
     "th": "18 คอมโบ โจมตีธาตุสายฟ้ารุนแรงมหาศาล ใส่ศัตรูทั้งหมด, เพิ่มค่ามหาศาลให้ โจมตี นาน 3 เทิร์น, เพิ่มปริมาณโจมตีธรรมดา นาน 3 เทิร์น และ การโจมตีธรรมดาโดนศัตรูทั้งหมด นาน 3 เทิร์น",
     "vi": "18 combo massive Thunder attack on all foes, enormously boosts Atk for 3 turns, raises normal hit amount for 3 turns & normal attacks hit all foes for 3 turns"
+  },
+  "MST_SKILLS_2840377_NAME": {
+    "en": "Emerald Rain",
+    "es": "Emerald Rain",
+    "id": "Hujan Zamrud",
+    "pt": "Emerald Rain",
+    "th": "เอ็มเมอร์รัลด์ เรน",
+    "vi": "Emerald Rain"
+  },
+  "MST_SKILLS_2840378_DESCRIPTION": {
+    "en": "20 combo massive Thunder attack on all foes, enormously boosts Atk for 3 turns, considerably raises normal hit amount for 3 turns, normal attacks hit all foes for 3 turns & enormously boosts all elemental damage for 3 turns",
+    "es": "20 combo massive Thunder attack on all foes, enormously boosts Atk for 3 turns, considerably raises normal hit amount for 3 turns, normal attacks hit all foes for 3 turns & enormously boosts all elemental damage for 3 turns",
+    "id": "20 kombo serangan Guntur masif ke semua musuh, 3 giliran: ekstra jumbo Serang & kerusakan semua elemen, lumayan menambah pukulan normal, pukulan normal terkena semua musuh",
+    "pt": "20 combo massive Thunder attack on all foes, enormously boosts Atk for 3 turns, considerably raises normal hit amount for 3 turns, normal attacks hit all foes for 3 turns & enormously boosts all elemental damage for 3 turns",
+    "th": "20 คอมโบ โจมตีธาตุสายฟ้ารุนแรงมหาศาล ใส่ศัตรูทั้งหมด, เพิ่มค่ามหาศาลให้ โจมตี นาน 3 เทิร์น, เพิ่มปริมาณโจมตีธรรมดาอย่างมาก นาน 3 เทิร์น, การโจมตีธรรมดาโดนศัตรูทั้งหมด นาน 3 เทิร์น และ เพิ่มค่ามหาศาลให้ ความเสียหายธาตุทั้งหมด นาน 3 เทิร์น",
+    "vi": "20 combo massive Thunder attack on all foes, enormously boosts Atk for 3 turns, considerably raises normal hit amount for 3 turns, normal attacks hit all foes for 3 turns & enormously boosts all elemental damage for 3 turns"
+  },
+  "MST_SKILLS_2840378_NAME": {
+    "en": "Iron Maiden",
+    "es": "Iron Maiden",
+    "id": "Gadis Besi",
+    "pt": "Iron Maiden",
+    "th": "ไอร่อน เมเด้น",
+    "vi": "Iron Maiden"
+  },
+  "MST_SKILLS_2840397_DESCRIPTION": {
+    "en": "30 combo massive Thunder attack on all foes, enormously boosts BB Atk for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts OD gauge fill rate for 5 turns",
+    "es": "30 combo massive Thunder attack on all foes, enormously boosts BB Atk for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts OD gauge fill rate for 5 turns",
+    "id": "30 kombo serangan Guntur masif ke semua musuh, 3 giliran: ekstra jumbo BB Serang, kerusakan ampuh, ekstra jumbo laju pengisian OD 5 giliran",
+    "pt": "30 combo massive Thunder attack on all foes, enormously boosts BB Atk for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts OD gauge fill rate for 5 turns",
+    "th": "30 คอมโบ โจมตีธาตุสายฟ้ารุนแรงมหาศาล ใส่ศัตรูทั้งหมด, เพิ่มค่ามหาศาลให้ BB โจมตี นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ ความเสียหายคริติคอล นาน 3 เทิร์น และ เพิ่มค่ามหาศาลให้ อัตราเติมเกจ OD นาน 5 เทิร์น",
+    "vi": "30 combo massive Thunder attack on all foes, enormously boosts BB Atk for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts OD gauge fill rate for 5 turns"
+  },
+  "MST_SKILLS_2840397_NAME": {
+    "en": "Spark Collision",
+    "es": "Spark Collision",
+    "id": "Tabrakan Percik",
+    "pt": "Spark Collision",
+    "th": "สปาร์ค คอลลิชชั่น",
+    "vi": "Spark Collision"
+  },
+  "MST_SKILLS_2840398_DESCRIPTION": {
+    "en": "32 combo massive Thunder attack on all foes, enormously boosts BB Atk for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts OD gauge fill rate for 5 turns & adds all elements to attack for 3 turns",
+    "es": "32 combo massive Thunder attack on all foes, enormously boosts BB Atk for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts OD gauge fill rate for 5 turns & adds all elements to attack for 3 turns",
+    "id": "32 kombo serangan Guntur masif ke semua musuh, ekstra jumbo laju pengisian meteran OD 5 giliran, 3 giliran: ekstra jumbo BB Serang, pukulan ampuhy, beri semua elemen ke serangan",
+    "pt": "32 combo massive Thunder attack on all foes, enormously boosts BB Atk for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts OD gauge fill rate for 5 turns & adds all elements to attack for 3 turns",
+    "th": "32 คอมโบ โจมตีธาตุสายฟ้ารุนแรงมหาศาล ใส่ศัตรูทั้งหมด, เพิ่มค่ามหาศาลให้ BB โจมตี นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ ความเสียหายคริติคอล นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ อัตราเติมเกจ OD นาน 5 เทิร์น และ เพิ่ม ธาตุทั้งหมด ให้กับการโจมตี นาน 3 เทิร์น",
+    "vi": "32 combo massive Thunder attack on all foes, enormously boosts BB Atk for 3 turns, enormously boosts critical damage for 3 turns, enormously boosts OD gauge fill rate for 5 turns & adds all elements to attack for 3 turns"
+  },
+  "MST_SKILLS_2840398_NAME": {
+    "en": "Voltage Conduit",
+    "es": "Voltage Conduit",
+    "id": "Saluran Voltase",
+    "pt": "Voltage Conduit",
+    "th": "โวลเทจ ดอนดวีท",
+    "vi": "Voltage Conduit"
+  },
+  "MST_SKILLS_2840417_DESCRIPTION": {
+    "en": "23 combo massive Thunder attack on all foes, enormously boosts Atk for 5 turns, boosts critical hit rate for 3 turns, normal attacks hit all foes for 3 turns & considerably raises normal hit amount for 3 turns",
+    "es": "23 combo massive Thunder attack on all foes, enormously boosts Atk for 5 turns, boosts critical hit rate for 3 turns, normal attacks hit all foes for 3 turns & considerably raises normal hit amount for 3 turns",
+    "id": "23 kombo serangan Guntur masif ke semua musuh, ekstra jumbo Serangan 5 giliran, 3 giliran: menambah pukulan ampuh, serangan normal terkena semua musuh, lumayan menambah pukulan normal",
+    "pt": "23 combo massive Thunder attack on all foes, enormously boosts Atk for 5 turns, boosts critical hit rate for 3 turns, normal attacks hit all foes for 3 turns & considerably raises normal hit amount for 3 turns",
+    "th": "23 คอมโบ โจมตีธาตุสายฟ้ารุนแรงมหาสาล ใส่ศัตรูทั้งหมด, เพิ่มค่ามหาศาลให้ โจมตี นาน 5 เทิร์น, เพิ่ม อัตราเกิดคริติคอล นาน 3 เทิร์น, โจมตีธรรมดาโดนศัตรูทั้งหมด นาน 3 เทิร์น และ considerably เพิ่มจำนวนการโจมตีธรรมดา นาน 3 เทิร์น",
+    "vi": "23 combo massive Thunder attack on all foes, enormously boosts Atk for 5 turns, boosts critical hit rate for 3 turns, normal attacks hit all foes for 3 turns & considerably raises normal hit amount for 3 turns"
   }
 }
