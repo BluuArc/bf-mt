@@ -22,8 +22,8 @@
         </h1>
       </v-card-text>
       <v-card-actions>
-        <v-btn flat color="primary" @click="() => downloadData(modulesWithUpdates)">Download Updates</v-btn>
-        <v-btn color="primary" flat @click.stop="$emit('input', false)">Close</v-btn>
+        <v-btn color="primary" @click="() => downloadData(modulesWithUpdates)">Download Updates</v-btn>
+        <v-btn flat @click.stop="$emit('input', false)">Close</v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>
