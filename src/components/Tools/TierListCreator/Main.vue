@@ -1,8 +1,6 @@
 <template>
   <v-container fluid>
-    <v-layout>
-      Tier list area here
-    </v-layout>
+    <tier-list-input-area class="flex"/>
     <v-layout>
       Information here
     </v-layout>
@@ -10,8 +8,12 @@
 </template>
 
 <script>
-export default {
+import TierListInputArea from './TierListInputArea';
 
+export default {
+  components: {
+    TierListInputArea,
+  },
 };
 </script>
 

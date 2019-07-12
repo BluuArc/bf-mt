@@ -4,17 +4,23 @@
       <v-text-field label="Title"/>
     </div>
     <div>
-      <svg>
-        <text>Test</text>
-      </svg>
+      <tier-list-svg v-model="svgConfig"/>
     </div>
   </section>
 </template>
 
 <script>
+import TierListSvg from './TierListMainSvg';
 export default {
-
-}
+  components: {
+    TierListSvg,
+  },
+  data () {
+    return {
+      svgConfig: {},
+    };
+  },
+};
 </script>
 
 <style>
