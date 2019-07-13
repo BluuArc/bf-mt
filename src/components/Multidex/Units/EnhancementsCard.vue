@@ -93,7 +93,7 @@ export default {
     },
     titleHtml () {
       const enhancements = this.$route.query.enhancements;
-      return ['SP Enhancments', enhancements ? `(${enhancements})` : '']
+      return ['SP Enhancements', enhancements ? `(${enhancements})` : '']
         .filter(val => val)
         .join(' ');
     },
