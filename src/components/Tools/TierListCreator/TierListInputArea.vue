@@ -1,8 +1,8 @@
 <template>
   <section class="tier-list-input-area">
-    <div>
+    <!-- <div>
       <v-text-field label="Title"/>
-    </div>
+    </div> -->
     <div>
       <tier-list-svg v-model="svgConfig"/>
     </div>

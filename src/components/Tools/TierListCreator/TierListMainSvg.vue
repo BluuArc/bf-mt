@@ -10,13 +10,34 @@
   >
     <g class="title" v-if="titleHeight > 0">
       <text
-        :x="titleConfig.x" :y="GENERAL_SVG_CONFIG.PADDING"
+        v-if="titles.left"
+        :x="titleConfig.left.x" :y="GENERAL_SVG_CONFIG.PADDING"
         alignment-baseline="hanging"
-        :text-anchor="titleConfig.textAnchor"
+        :text-anchor="titleConfig.left.textAnchor"
         :font-size="GENERAL_SVG_CONFIG.TITLE_FONT_SIZE"
         :font-family="GENERAL_SVG_CONFIG.FONT_FAMILY"
         :style="headerFooterTextStyle"
-        v-text="title"
+        v-text="titles.left"
+      />
+      <text
+        v-if="titles.middle"
+        :x="titleConfig.middle.x" :y="GENERAL_SVG_CONFIG.PADDING"
+        alignment-baseline="hanging"
+        :text-anchor="titleConfig.middle.textAnchor"
+        :font-size="GENERAL_SVG_CONFIG.TITLE_FONT_SIZE"
+        :font-family="GENERAL_SVG_CONFIG.FONT_FAMILY"
+        :style="headerFooterTextStyle"
+        v-text="titles.middle"
+      />
+      <text
+        v-if="titles.right"
+        :x="titleConfig.right.x" :y="GENERAL_SVG_CONFIG.PADDING"
+        alignment-baseline="hanging"
+        :text-anchor="titleConfig.right.textAnchor"
+        :font-size="GENERAL_SVG_CONFIG.TITLE_FONT_SIZE"
+        :font-family="GENERAL_SVG_CONFIG.FONT_FAMILY"
+        :style="headerFooterTextStyle"
+        v-text="titles.right"
       />
     </g>
     <g
@@ -98,32 +119,19 @@ export default {
         ? this.value.categories
         : DEFAULT_CATEGORIES_CONFIG;
     },
-    title () {
-      return this.value.title || 'Test Title';
-    },
-    titleAlignment () {
-      let result = 0;
-      const titleAlignment = !isNaN(this.value.titleAlignment) ? +this.value.titleAlignment : 0;
-      if (titleAlignment < 0) {
-        result = -1;
-      } else if (titleAlignment > 0) {
-        result = 1;
-      }
-      return result;
+    titles () {
+      return {
+        left: this.value.titleLeft || 'Left Title',
+        middle: this.value.titleMiddle || 'Middle Title',
+        right: this.value.titleRight || 'Right Title',
+      };
     },
     titleConfig () {
-      let leftOffset = GENERAL_SVG_CONFIG.PADDING;
-      let textAnchor = 'start';
-      if (this.titleAlignment === 0) { // center justify
-        textAnchor = 'middle';
-        leftOffset += this.overallWidth / 2;
-      } else if (this.titleAlignment === 1) {
-        textAnchor = 'end';
-        leftOffset = this.overallWidth - GENERAL_SVG_CONFIG.PADDING;
-      }
+      const { getTitleConfigForAlignment } = this;
       return {
-        x: leftOffset,
-        textAnchor,
+        left: getTitleConfigForAlignment(-1),
+        middle: getTitleConfigForAlignment(0),
+        right: getTitleConfigForAlignment(1),
       };
     },
     GENERAL_SVG_CONFIG: () => GENERAL_SVG_CONFIG,
@@ -137,7 +145,8 @@ export default {
       ].reduce((acc, val) => acc + val, 0);
     },
     titleHeight () {
-      return !this.title
+      const titles = this.titles;
+      return (!titles.left && !titles.middle && !titles.right)
         ? 0
         : [
           GENERAL_SVG_CONFIG.TITLE_FONT_SIZE,
@@ -195,6 +204,21 @@ export default {
     getCategoryTextStyle (category) {
       return {
         fill: category.textColor,
+      };
+    },
+    getTitleConfigForAlignment (alignment) {
+      let leftOffset = GENERAL_SVG_CONFIG.PADDING;
+      let textAnchor = 'start'; // left justify by default
+      if (alignment === 0) { // center justify
+        textAnchor = 'middle';
+        leftOffset += this.overallWidth / 2;
+      } else if (alignment > 0) { // right justify
+        textAnchor = 'end';
+        leftOffset = this.overallWidth - GENERAL_SVG_CONFIG.PADDING;
+      }
+      return {
+        x: leftOffset,
+        textAnchor,
       };
     },
   },
