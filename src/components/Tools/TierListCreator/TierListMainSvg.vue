@@ -8,12 +8,12 @@
     class="tier-list-svg"
     :style="mainSvgStyle"
   >
-    <g class="title" v-if="titleHeight > 0">
+    <g class="tier-list-title-group" v-if="titleHeight > 0">
       <text
         v-if="titles.left"
-        :x="titleConfig.left.x" :y="GENERAL_SVG_CONFIG.PADDING"
+        :x="titleFooterAlignmentConfig.left.x" :y="GENERAL_SVG_CONFIG.PADDING"
         alignment-baseline="hanging"
-        :text-anchor="titleConfig.left.textAnchor"
+        :text-anchor="titleFooterAlignmentConfig.left.textAnchor"
         :font-size="GENERAL_SVG_CONFIG.TITLE_FONT_SIZE"
         :font-family="GENERAL_SVG_CONFIG.FONT_FAMILY"
         :style="headerFooterTextStyle"
@@ -21,9 +21,9 @@
       />
       <text
         v-if="titles.middle"
-        :x="titleConfig.middle.x" :y="GENERAL_SVG_CONFIG.PADDING"
+        :x="titleFooterAlignmentConfig.middle.x" :y="GENERAL_SVG_CONFIG.PADDING"
         alignment-baseline="hanging"
-        :text-anchor="titleConfig.middle.textAnchor"
+        :text-anchor="titleFooterAlignmentConfig.middle.textAnchor"
         :font-size="GENERAL_SVG_CONFIG.TITLE_FONT_SIZE"
         :font-family="GENERAL_SVG_CONFIG.FONT_FAMILY"
         :style="headerFooterTextStyle"
@@ -31,9 +31,9 @@
       />
       <text
         v-if="titles.right"
-        :x="titleConfig.right.x" :y="GENERAL_SVG_CONFIG.PADDING"
+        :x="titleFooterAlignmentConfig.right.x" :y="GENERAL_SVG_CONFIG.PADDING"
         alignment-baseline="hanging"
-        :text-anchor="titleConfig.right.textAnchor"
+        :text-anchor="titleFooterAlignmentConfig.right.textAnchor"
         :font-size="GENERAL_SVG_CONFIG.TITLE_FONT_SIZE"
         :font-family="GENERAL_SVG_CONFIG.FONT_FAMILY"
         :style="headerFooterTextStyle"
@@ -44,16 +44,16 @@
       class="tier-list-row"
       v-for="(category, i) in categoriesConfig"
       :key="category.key"
-      :transform="`translate(10, ${i * GENERAL_SVG_CONFIG.ROW_HEIGHT + (i + 1) * GENERAL_SVG_CONFIG.PADDING + titleHeight})`"
+      :transform="`translate(10, ${i * GENERAL_SVG_CONFIG.BASE_ROW_HEIGHT + (i + 1) * GENERAL_SVG_CONFIG.PADDING + titleHeight})`"
     >
       <g class="tier-list-row__identifier-cell">
         <rect
           x="0" y="0"
-          :width="GENERAL_SVG_CONFIG.CATEGORY_WIDTH" :height="GENERAL_SVG_CONFIG.ROW_HEIGHT"
+          :width="GENERAL_SVG_CONFIG.CATEGORY_WIDTH" :height="GENERAL_SVG_CONFIG.BASE_ROW_HEIGHT"
           :style="getCategoryCellStyle(category)"
         />
         <text
-          :x="GENERAL_SVG_CONFIG.CATEGORY_WIDTH / 2" :y="GENERAL_SVG_CONFIG.ROW_HEIGHT / 2"
+          :x="GENERAL_SVG_CONFIG.CATEGORY_WIDTH / 2" :y="GENERAL_SVG_CONFIG.BASE_ROW_HEIGHT / 2"
           text-anchor="middle"
           alignment-baseline="middle"
           :font-size="GENERAL_SVG_CONFIG.FONT_SIZE"
@@ -65,40 +65,61 @@
       <g class="tier-list-row__entry-track" transform="translate(110, 0)">
         <rect
           x="0" y="0"
-          :width="baseTrackConfig.width" :height="GENERAL_SVG_CONFIG.ROW_HEIGHT"
+          :width="baseTrackConfig.width" :height="GENERAL_SVG_CONFIG.BASE_ROW_HEIGHT"
           :style="baseTrackConfig.style"
         />
+        <text>
+          {{ category }}
+        </text>
+        <image
+          v-for="(entry, j) in category.entries"
+          :key="entry.name"
+          :x="GENERAL_SVG_CONFIG.ENTRY_SIZE * j" y="0"
+          :width="GENERAL_SVG_CONFIG.ENTRY_SIZE" :height="GENERAL_SVG_CONFIG.ENTRY_SIZE"
+          :xlink:href="entry.base64Url"
+          :href="entry.base64Url"
+        />
       </g>
+    </g>
+    <g class="tier-list-footer-group">
+      <text
+        v-if="footers.left"
+        :x="titleFooterAlignmentConfig.left.x" :y="overallHeight - GENERAL_SVG_CONFIG.PADDING - GENERAL_SVG_CONFIG.FOOTER_FONT_SIZE"
+        alignment-baseline="hanging"
+        :text-anchor="titleFooterAlignmentConfig.left.textAnchor"
+        :font-size="GENERAL_SVG_CONFIG.FOOTER_FONT_SIZE"
+        :font-family="GENERAL_SVG_CONFIG.FONT_FAMILY"
+        :style="headerFooterTextStyle"
+        v-text="footers.left"
+      />
+      <text
+        v-if="footers.right"
+        :x="titleFooterAlignmentConfig.right.x" :y="overallHeight - GENERAL_SVG_CONFIG.PADDING - GENERAL_SVG_CONFIG.FOOTER_FONT_SIZE"
+        alignment-baseline="hanging"
+        :text-anchor="titleFooterAlignmentConfig.right.textAnchor"
+        :font-size="GENERAL_SVG_CONFIG.FOOTER_FONT_SIZE"
+        :font-family="GENERAL_SVG_CONFIG.FONT_FAMILY"
+        :style="headerFooterTextStyle"
+        v-text="footers.right"
+      />
     </g>
   </svg>
 </template>
 
 <script>
 import colors from 'vuetify/es5/util/colors';
-import { generateInput } from '@/modules/core/tier-list-creator';
-
-const DEFAULT_CATEGORIES_CONFIG = [
-  {
-    name: "S",
-    backgroundColor: colors.red.accent1,
-    textColor: colors.shades.black,
-  },
-  {
-    name: "A",
-    backgroundColor: colors.orange.accent1,
-    textColor: colors.shades.black,
-  },
-];
+import { getDefaultCategories } from '@/modules/core/tier-list-creator';
 
 const GENERAL_SVG_CONFIG = {
-  ENTRY_SIZE: 64,
+  ENTRY_SIZE: 70,
   MAX_ENTRIES_PER_ROW: 10,
-  ROW_HEIGHT: 70,
+  BASE_ROW_HEIGHT: 70,
   CATEGORY_WIDTH: 100,
   PADDING: 10,
   FONT_SIZE: '1em',
   FONT_FAMILY: 'Arial',
   TITLE_FONT_SIZE: 16 * 1.25, // 1.25em
+  FOOTER_FONT_SIZE: 16 * 0.75, // 0.75em
 };
 
 export default {
@@ -117,7 +138,7 @@ export default {
     categories () {
       return Array.isArray(this.value.categories)
         ? this.value.categories
-        : DEFAULT_CATEGORIES_CONFIG;
+        : getDefaultCategories();
     },
     titles () {
       return {
@@ -126,12 +147,12 @@ export default {
         right: this.value.titleRight || 'Right Title',
       };
     },
-    titleConfig () {
-      const { getTitleConfigForAlignment } = this;
+    titleFooterAlignmentConfig () {
+      const { getTitleFooterConfigForAlignment } = this;
       return {
-        left: getTitleConfigForAlignment(-1),
-        middle: getTitleConfigForAlignment(0),
-        right: getTitleConfigForAlignment(1),
+        left: getTitleFooterConfigForAlignment(-1),
+        middle: getTitleFooterConfigForAlignment(0),
+        right: getTitleFooterConfigForAlignment(1),
       };
     },
     GENERAL_SVG_CONFIG: () => GENERAL_SVG_CONFIG,
@@ -153,17 +174,19 @@ export default {
           GENERAL_SVG_CONFIG.PADDING,
         ].reduce((acc, val) => acc + val, 0);
     },
-    viewBox () {
+    overallHeight () {
       const numCategories = this.categories.length;
-      const width = this.overallWidth;
-      const height = [
+      return [
         GENERAL_SVG_CONFIG.PADDING,
         this.titleHeight,
-        GENERAL_SVG_CONFIG.ROW_HEIGHT * numCategories + (numCategories - 1) * GENERAL_SVG_CONFIG.PADDING,
+        GENERAL_SVG_CONFIG.BASE_ROW_HEIGHT * numCategories + (numCategories - 1) * GENERAL_SVG_CONFIG.PADDING,
+        GENERAL_SVG_CONFIG.PADDING,
+        GENERAL_SVG_CONFIG.FOOTER_FONT_SIZE,
         GENERAL_SVG_CONFIG.PADDING,
       ].reduce((acc, val) => acc + val, 0);
-
-      return `0 0 ${width} ${height}`;
+    },
+    viewBox () {
+      return `0 0 ${this.overallWidth} ${this.overallHeight}`;
     },
     baseTrackConfig () {
       return {
@@ -178,7 +201,7 @@ export default {
         const name = c.name || `Category ${i + 1}`;
         // entries are keyed by index of category
         const associatedInput = (this.value.entries && Array.isArray(this.value.entries[i]))
-          ? this.value.entries[i].map(generateInput).filter(entry => entry.type && entry.id)
+          ? this.value.entries[i]
           : [];
         return {
           name,
@@ -194,6 +217,12 @@ export default {
         fill: '#fff',
       };
     },
+    footers () {
+      return {
+        left: this.value.footerLeft || 'Left Footer',
+        right: this.value.footerRight || 'Made with the Brave Frontier Multi-Tool',
+      };
+    },
   },
   methods: {
     getCategoryCellStyle (category) {
@@ -206,7 +235,7 @@ export default {
         fill: category.textColor,
       };
     },
-    getTitleConfigForAlignment (alignment) {
+    getTitleFooterConfigForAlignment (alignment) {
       let leftOffset = GENERAL_SVG_CONFIG.PADDING;
       let textAnchor = 'start'; // left justify by default
       if (alignment === 0) { // center justify

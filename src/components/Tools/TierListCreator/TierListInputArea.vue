@@ -4,7 +4,14 @@
       <v-text-field label="Title"/>
     </div> -->
     <div class="tier-list-svg-container">
-      <tier-list-svg v-model="svgConfig" id="tier-list-svg"/>
+      <promise-wait
+        :promise="transformedSvgConfigPromise"
+        loadingMessage="Loading image data..."
+      >
+        <template slot-scope="{ result }">
+          <tier-list-svg :value="result" @input="r => svgConfig = r" id="tier-list-svg"/>
+        </template>
+      </promise-wait>
     </div>
     <v-layout>
       <v-btn
@@ -29,15 +36,40 @@
 </template>
 
 <script>
+import { getDefaultCategories, fetchBase64Png } from '@/modules/core/tier-list-creator';
+import PromiseWait from '@/components/PromiseWait';
 import TierListSvg from './TierListMainSvg';
 export default {
   components: {
     TierListSvg,
+    PromiseWait,
   },
   data () {
     return {
-      svgConfig: {},
+      svgConfig: {
+        categories: getDefaultCategories(),
+        entries: [
+          [
+            {
+              name: 'Fencer Vargas',
+              imgUrl: 'https://dv5bk1m8igv7v.cloudfront.net/asset/2220/content/unit/img/unit_ills_thum_10011.png',
+              base64Url: null,
+              // fontSize: '1em',
+              // fontFamily: 'Arial',
+              // textColor: colors.shades.white,
+              // backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            },
+            {
+              name: 'Selena',
+              imgUrl: 'https://dv5bk1m8igv7v.cloudfront.net/asset/2220/content/unit/img/unit_ills_thum_20011.png',
+              base64Url: null,
+            },
+          ],
+        ],
+      },
+      transformedSvgConfigPromise: Promise.resolve({}),
       downloadLink: '',
+      urlToBase64Mapping: new Map(),
     };
   },
   methods: {
@@ -66,12 +98,47 @@ export default {
         canvas.toBlob((blob) => fulfill(URL.createObjectURL(blob)), 'image/png');
       });
       image.remove();
-      canvas.remove();
+      // canvas.remove();
+      this.$el.appendChild(image);
       URL.revokeObjectURL(svgUrl);
       return pngUrl;
     },
     async generateImageLink () {
       this.downloadLink = await this.generateDownloadLink();
+    },
+    async transformSvgConfig (config = {}) {
+      const initialEntries = Array.isArray(config.entries) ? config.entries : [];
+      const transformedEntries = [];
+      const urlMap = this.urlToBase64Mapping;
+      for (const categoryEntries of initialEntries) {
+        const newCategoryEntries = [];
+        for (const entry of categoryEntries) {
+          let base64Url = entry.base64Url || urlMap.get(entry.imgUrl);
+          if (!base64Url && entry.imgUrl) {
+            base64Url = await fetchBase64Png(entry.imgUrl);
+            urlMap.set(entry.imgUrl);
+          }
+          newCategoryEntries.push({
+            ...entry,
+            base64Url,
+          });
+        }
+        transformedEntries.push(newCategoryEntries);
+      }
+      return {
+        ...config,
+        entries: transformedEntries,
+      };
+    },
+  },
+  watch: {
+    svgConfig: {
+      immediate: true,
+      handler (newValue) {
+        if (newValue) {
+          this.transformedSvgConfigPromise = this.transformSvgConfig(newValue);
+        }
+      },
     },
   },
 };
