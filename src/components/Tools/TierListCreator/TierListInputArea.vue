@@ -3,14 +3,54 @@
     <section class="tier-list-svg-container">
       <tier-list-svg v-model="svgConfig" id="tier-list-svg"/>
     </section>
+    <!-- <div class="text-xs-center" style="margin-top: -26px;">
+      <v-btn fab small>
+        <v-icon>keyboard_arrow_up</v-icon>
+      </v-btn>
+      <v-btn fab small>
+        <v-icon>keyboard_arrow_down</v-icon>
+      </v-btn>
+    </div> -->
     <card-tabs-container
       v-model="currentTabIndex"
       :tabs="tabs"
       containerClass="pt-1 px-0"
     >
-      <section slot="general">
-        General config here
-      </section>
+      <v-container fluid class="py-0 px-1" slot="general" grid-list-md>
+        <v-layout align-baseline>
+          <h3>Header Text</h3>
+          <v-switch class="px-2 mt-0" hide-details/>
+        </v-layout>
+        <v-layout row wrap>
+          <v-flex xs12 sm4>
+            <v-text-field
+              label="Left Title"
+              :value="svgConfig.titleLeft || ''"
+              @input="e => throttledUpdateKeyInSvgConfig('titleLeft', e)"
+            />
+          </v-flex>
+          <v-flex xs12 sm4>
+            <v-text-field
+              label="Middle Title"
+              :value="svgConfig.titleMiddle || ''"
+              @input="e => throttledUpdateKeyInSvgConfig('titleMiddle', e)"
+            />
+          </v-flex>
+          <v-flex xs12 sm4>
+            <v-text-field
+              label="Right Title"
+              :value="svgConfig.titleRight || ''"
+              @input="e => throttledUpdateKeyInSvgConfig('titleRight', e)"
+            />
+          </v-flex>
+        </v-layout>
+        <v-layout>
+          <h3>Footer Text</h3>
+        </v-layout>
+        <v-flex>
+          <v-text-field label="Left Footer"/>
+        </v-flex>
+      </v-container>
       <section slot="categories">
         Categories config here
       </section>
@@ -69,6 +109,7 @@ import { getDefaultCategories, fetchBase64Png } from '@/modules/core/tier-list-c
 import PromiseWait from '@/components/PromiseWait';
 import TierListSvg from './TierListMainSvg';
 import CardTabsContainer from '@/components/CardTabsContainer';
+import throttle from 'lodash/throttle';
 
 export default {
   components: {
@@ -205,6 +246,15 @@ export default {
         entries: transformedEntries,
       };
     },
+    updateKeyInSvgConfig (key, value) {
+      this.svgConfig = {
+        ...this.svgConfig,
+        [key]: value,
+      };
+    },
+    throttledUpdateKeyInSvgConfig: throttle(function(key, value) {
+      this.updateKeyInSvgConfig(key, value);
+    }, 500),
   },
   watch: {
     downloadLink (newValue, oldValue) {
