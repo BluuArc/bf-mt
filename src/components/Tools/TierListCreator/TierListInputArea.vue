@@ -9,6 +9,7 @@
         loadingMessage="Loading image data..."
       >
         <template slot-scope="{ result }">
+          <!-- TODO: replace with dual SVG configuration -->
           <tier-list-svg :value="result" @input="r => svgConfig = r" id="tier-list-svg"/>
         </template>
       </promise-wait>
@@ -64,6 +65,20 @@ export default {
               imgUrl: 'https://dv5bk1m8igv7v.cloudfront.net/asset/2220/content/unit/img/unit_ills_thum_20011.png',
               base64Url: null,
             },
+          ],
+          [
+            ...new Array(10).fill(0).map(() => ({
+              name: 'Burny',
+              imgUrl: 'https://dv5bk1m8igv7v.cloudfront.net/asset/2220/content/unit/img/unit_ills_thum_10032.png',
+              base64Url: null,
+            })),
+          ],
+          [
+            ...new Array(15).fill(0).map(() => ({
+              name: 'Squirty',
+              imgUrl: 'https://dv5bk1m8igv7v.cloudfront.net/asset/2220/content/unit/img/unit_ills_thum_20032.png',
+              base64Url: null,
+            })),
           ],
         ],
       },

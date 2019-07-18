@@ -42,18 +42,18 @@
     </g>
     <g
       class="tier-list-row"
-      v-for="(category, i) in categoriesConfig"
+      v-for="category in categoriesConfig"
       :key="category.key"
-      :transform="`translate(10, ${i * GENERAL_SVG_CONFIG.BASE_ROW_HEIGHT + (i + 1) * GENERAL_SVG_CONFIG.PADDING + titleHeight})`"
+      :transform="`translate(10, ${category.yOffset})`"
     >
       <g class="tier-list-row__identifier-cell">
         <rect
           x="0" y="0"
-          :width="GENERAL_SVG_CONFIG.CATEGORY_WIDTH" :height="GENERAL_SVG_CONFIG.BASE_ROW_HEIGHT"
+          :width="GENERAL_SVG_CONFIG.CATEGORY_WIDTH" :height="category.trackHeight"
           :style="getCategoryCellStyle(category)"
         />
         <text
-          :x="GENERAL_SVG_CONFIG.CATEGORY_WIDTH / 2" :y="GENERAL_SVG_CONFIG.BASE_ROW_HEIGHT / 2"
+          :x="GENERAL_SVG_CONFIG.CATEGORY_WIDTH / 2" :y="category.trackHeight / 2"
           text-anchor="middle"
           alignment-baseline="middle"
           :font-size="GENERAL_SVG_CONFIG.FONT_SIZE"
@@ -65,19 +65,16 @@
       <g class="tier-list-row__entry-track" transform="translate(110, 0)">
         <rect
           x="0" y="0"
-          :width="baseTrackConfig.width" :height="GENERAL_SVG_CONFIG.BASE_ROW_HEIGHT"
+          :width="baseTrackConfig.width" :height="category.trackHeight"
           :style="baseTrackConfig.style"
         />
-        <text>
-          {{ category }}
-        </text>
         <image
           v-for="(entry, j) in category.entries"
-          :key="entry.name"
-          :x="GENERAL_SVG_CONFIG.ENTRY_SIZE * j" y="0"
+          :key="`${JSON.stringify(entry)}-${j}`"
+          :x="getXOffsetForEntry(j)" :y="getYOffsetForEntry(j)"
           :width="GENERAL_SVG_CONFIG.ENTRY_SIZE" :height="GENERAL_SVG_CONFIG.ENTRY_SIZE"
-          :xlink:href="entry.base64Url"
-          :href="entry.base64Url"
+          :xlink:href="entry.base64Url || entry.imgUrl"
+          :href="entry.base64Url || entry.imgUrl"
         />
       </g>
     </g>
@@ -175,11 +172,13 @@ export default {
         ].reduce((acc, val) => acc + val, 0);
     },
     overallHeight () {
-      const numCategories = this.categories.length;
+      const { categoriesConfig } = this;
+      const categoryHeight = categoriesConfig.reduce((acc, val) => acc + val.trackHeight, 0);
+      const paddingForCategories = Math.max(categoriesConfig.length - 1, 0) * GENERAL_SVG_CONFIG.PADDING;
       return [
         GENERAL_SVG_CONFIG.PADDING,
         this.titleHeight,
-        GENERAL_SVG_CONFIG.BASE_ROW_HEIGHT * numCategories + (numCategories - 1) * GENERAL_SVG_CONFIG.PADDING,
+        categoryHeight + paddingForCategories,
         GENERAL_SVG_CONFIG.PADDING,
         GENERAL_SVG_CONFIG.FOOTER_FONT_SIZE,
         GENERAL_SVG_CONFIG.PADDING,
@@ -197,18 +196,29 @@ export default {
       };
     },
     categoriesConfig () {
+      let extraHeight = 0;
+      const { titleHeight } = this;
+      let previousYOffset = 0;
       return this.categories.map((c, i) => {
         const name = c.name || `Category ${i + 1}`;
         // entries are keyed by index of category
         const associatedInput = (this.value.entries && Array.isArray(this.value.entries[i]))
           ? this.value.entries[i]
           : [];
+
+        const yOffset = this.getYOffsetForEntry(Math.max(0, associatedInput.length - 1));
+        if (previousYOffset > 0) {
+          extraHeight += previousYOffset;
+        }
+        previousYOffset = yOffset;
         return {
           name,
           backgroundColor: c.backgroundColor || colors.grey.lighten1,
           textColor: c.textColor || colors.shades.black,
           key: `${name}-${i}`,
           entries: associatedInput,
+          trackHeight: yOffset + GENERAL_SVG_CONFIG.BASE_ROW_HEIGHT,
+          yOffset: i * GENERAL_SVG_CONFIG.BASE_ROW_HEIGHT + (i + 1) * GENERAL_SVG_CONFIG.PADDING + titleHeight + extraHeight,
         };
       });
     },
@@ -249,6 +259,13 @@ export default {
         x: leftOffset,
         textAnchor,
       };
+    },
+    getYOffsetForEntry (index) {
+      return GENERAL_SVG_CONFIG.ENTRY_SIZE * Math.floor(index / GENERAL_SVG_CONFIG.MAX_ENTRIES_PER_ROW);
+    },
+    getXOffsetForEntry (index) {
+      const distanceIndex = index % GENERAL_SVG_CONFIG.MAX_ENTRIES_PER_ROW;
+      return GENERAL_SVG_CONFIG.ENTRY_SIZE * distanceIndex;
     },
   },
 };
