@@ -1,19 +1,8 @@
 <template>
   <section class="tier-list-input-area">
-    <!-- <div>
-      <v-text-field label="Title"/>
-    </div> -->
-    <div class="tier-list-svg-container">
-      <promise-wait
-        :promise="transformedSvgConfigPromise"
-        loadingMessage="Loading image data..."
-      >
-        <template slot-scope="{ result }">
-          <!-- TODO: replace with dual SVG configuration -->
-          <tier-list-svg :value="result" @input="r => svgConfig = r" id="tier-list-svg"/>
-        </template>
-      </promise-wait>
-    </div>
+    <section class="tier-list-svg-container">
+      <tier-list-svg v-model="svgConfig" id="tier-list-svg"/>
+    </section>
     <card-tabs-container
       v-model="currentTabIndex"
       :tabs="tabs"
@@ -29,25 +18,49 @@
         Entries config here
       </section>
       <v-layout slot="export">
-        <v-btn
-          @click="generateImageLink"
-          block
-          class="mr-2"
-        >
-          Generate Image
-        </v-btn>
-        <v-btn
-          block
-          class="ml-2"
-          :color="(downloadLink && 'primary') || undefined"
-          :disabled="!downloadLink"
-          :href="downloadLink"
-          target="_blank"
-        >
-          Download Image
-        </v-btn>
+        <v-flex xs6>
+          <v-btn
+            @click="onGenerateButtonClick"
+            block
+            class="mr-2"
+          >
+            Generate Image
+          </v-btn>
+        </v-flex>
+        <v-flex xs6>
+          <promise-wait :promise="generateImageLinkPromise">
+            <template slot="loading">
+              <v-btn
+                block
+                class="ml-2"
+                disabled
+                loading
+              />
+            </template>
+            <template>
+              <v-btn
+                block
+                class="ml-2"
+                :color="(downloadLink && 'primary') || undefined"
+                :disabled="!downloadLink"
+                :href="downloadLink"
+                target="_blank"
+              >
+                Download Image
+              </v-btn>
+            </template>
+          </promise-wait>
+        </v-flex>
       </v-layout>
     </card-tabs-container>
+    <div style="display: none;">
+      <promise-wait :promise="transformedSvgConfigPromise">
+        <span slot="loading"/>
+        <template slot-scope="{ result }">
+          <tier-list-svg :value="result" id="tier-list-svg-transformed"/>
+        </template>
+      </promise-wait>
+    </div>
   </section>
 </template>
 
@@ -105,6 +118,7 @@ export default {
         ],
       },
       transformedSvgConfigPromise: Promise.resolve({}),
+      generateImageLinkPromise: Promise.resolve(),
       downloadLink: '',
       urlToBase64Mapping: new Map(),
     };
@@ -112,7 +126,7 @@ export default {
   methods: {
     async generateDownloadLink () {
       // convert SVG to image
-      const svg = this.$el.querySelector('svg#tier-list-svg');
+      const svg = this.$el.querySelector('svg#tier-list-svg-transformed');
       const blob = new Blob([svg.outerHTML], { type: 'image/svg+xml' });
       const svgUrl = URL.createObjectURL(blob);
       const image = await new Promise((fulfill, reject) => {
@@ -135,12 +149,36 @@ export default {
         canvas.toBlob((blob) => fulfill(URL.createObjectURL(blob)), 'image/png');
       });
       image.remove();
-      // canvas.remove();
-      this.$el.appendChild(image);
+      canvas.remove();
       URL.revokeObjectURL(svgUrl);
       return pngUrl;
     },
+    async waitUntilTrue (fn = () => true, maxAttempts = 100, timeoutLength = 1000) {
+      let currentAttempt = 0;
+      const delay = () => new Promise(fulfill => {
+        setTimeout(() => fulfill(), timeoutLength);
+      });
+
+      let success = false;
+      while (currentAttempt < maxAttempts && !(success = !!fn())) {
+        currentAttempt++;
+        await delay();
+      }
+
+      if (!success) {
+        throw new Error(`Max failed attempts reached (${maxAttempts})`);
+      }
+    },
+    onGenerateButtonClick () {
+      this.generateImageLinkPromise = this.generateImageLink();
+    },
     async generateImageLink () {
+      this.transformedSvgConfigPromise = this.transformSvgConfig(this.svgConfig);
+
+      await this.transformedSvgConfigPromise;
+      // allow time for SVG to render
+      await new Promise(fulfill => setTimeout(() => fulfill(), 100));
+      await this.waitUntilTrue(() => !!this.$el.querySelector('svg#tier-list-svg-transformed'));
       this.downloadLink = await this.generateDownloadLink();
     },
     async transformSvgConfig (config = {}) {
@@ -153,7 +191,7 @@ export default {
           let base64Url = entry.base64Url || urlMap.get(entry.imgUrl);
           if (!base64Url && entry.imgUrl) {
             base64Url = await fetchBase64Png(entry.imgUrl);
-            urlMap.set(entry.imgUrl);
+            urlMap.set(entry.imgUrl, base64Url);
           }
           newCategoryEntries.push({
             ...entry,
@@ -169,13 +207,11 @@ export default {
     },
   },
   watch: {
-    svgConfig: {
-      immediate: true,
-      handler (newValue) {
-        if (newValue) {
-          this.transformedSvgConfigPromise = this.transformSvgConfig(newValue);
-        }
-      },
+    downloadLink (newValue, oldValue) {
+      // clean up old object URL
+      if (oldValue) {
+        URL.revokeObjectURL(oldValue);
+      }
     },
   },
 };
@@ -193,7 +229,7 @@ export default {
 
 .tier-list-svg-container {
   overflow: auto;
-  max-height: 75vh;
+  max-height: 60vh;
   svg {
     min-width: 768px;
   }
