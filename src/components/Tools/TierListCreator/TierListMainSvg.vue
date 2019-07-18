@@ -71,7 +71,7 @@
         <image
           v-for="(entry, j) in category.entries"
           :key="`${JSON.stringify(entry)}-${j}`"
-          :x="getXOffsetForEntry(j)" :y="getYOffsetForEntry(j)"
+          :x="getEntryXOffset(j)" :y="getEntryYOffset(j)"
           :width="GENERAL_SVG_CONFIG.ENTRY_SIZE" :height="GENERAL_SVG_CONFIG.ENTRY_SIZE"
           :xlink:href="entry.base64Url || entry.imgUrl"
           :href="entry.base64Url || entry.imgUrl"
@@ -206,7 +206,7 @@ export default {
           ? this.value.entries[i]
           : [];
 
-        const yOffset = this.getYOffsetForEntry(Math.max(0, associatedInput.length - 1));
+        const yOffset = this.getEntryYOffset(Math.max(0, associatedInput.length - 1));
         if (previousYOffset > 0) {
           extraHeight += previousYOffset;
         }
@@ -260,10 +260,10 @@ export default {
         textAnchor,
       };
     },
-    getYOffsetForEntry (index) {
+    getEntryYOffset (index) {
       return GENERAL_SVG_CONFIG.ENTRY_SIZE * Math.floor(index / GENERAL_SVG_CONFIG.MAX_ENTRIES_PER_ROW);
     },
-    getXOffsetForEntry (index) {
+    getEntryXOffset (index) {
       const distanceIndex = index % GENERAL_SVG_CONFIG.MAX_ENTRIES_PER_ROW;
       return GENERAL_SVG_CONFIG.ENTRY_SIZE * distanceIndex;
     },

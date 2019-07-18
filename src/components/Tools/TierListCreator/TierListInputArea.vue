@@ -166,7 +166,8 @@ export default {
 }
 
 .tier-list-svg-container {
-  overflow-x: auto;
+  overflow: auto;
+  max-height: 75vh;
   svg {
     min-width: 768px;
   }
