@@ -14,25 +14,40 @@
         </template>
       </promise-wait>
     </div>
-    <v-layout>
-      <v-btn
-        @click="generateImageLink"
-        block
-        class="mr-2"
-      >
-        Generate Image
-      </v-btn>
-      <v-btn
-        block
-        class="ml-2"
-        :color="(downloadLink && 'primary') || undefined"
-        :disabled="!downloadLink"
-        :href="downloadLink"
-        target="_blank"
-      >
-        Download Image
-      </v-btn>
-    </v-layout>
+    <card-tabs-container
+      v-model="currentTabIndex"
+      :tabs="tabs"
+      containerClass="pt-1 px-0"
+    >
+      <section slot="general">
+        General config here
+      </section>
+      <section slot="categories">
+        Categories config here
+      </section>
+      <section slot="entries">
+        Entries config here
+      </section>
+      <v-layout slot="export">
+        <v-btn
+          @click="generateImageLink"
+          block
+          class="mr-2"
+        >
+          Generate Image
+        </v-btn>
+        <v-btn
+          block
+          class="ml-2"
+          :color="(downloadLink && 'primary') || undefined"
+          :disabled="!downloadLink"
+          :href="downloadLink"
+          target="_blank"
+        >
+          Download Image
+        </v-btn>
+      </v-layout>
+    </card-tabs-container>
   </section>
 </template>
 
@@ -40,13 +55,20 @@
 import { getDefaultCategories, fetchBase64Png } from '@/modules/core/tier-list-creator';
 import PromiseWait from '@/components/PromiseWait';
 import TierListSvg from './TierListMainSvg';
+import CardTabsContainer from '@/components/CardTabsContainer';
+
 export default {
   components: {
     TierListSvg,
     PromiseWait,
+    CardTabsContainer,
+  },
+  computed: {
+    tabs: () => Object.freeze(['General', 'Categories', 'Entries', 'Export'].map(name => ({ name, slot: name.toLowerCase() }))),
   },
   data () {
     return {
+      currentTabIndex: 0,
       svgConfig: {
         categories: getDefaultCategories(),
         entries: [
@@ -163,6 +185,10 @@ export default {
 .tier-list-input-area {
   display: flex;
   flex-direction: column;
+
+  .v-tabs__bar {
+    background-color: transparent;
+  }
 }
 
 .tier-list-svg-container {
