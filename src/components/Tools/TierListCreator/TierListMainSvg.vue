@@ -139,9 +139,9 @@ export default {
     },
     titles () {
       return {
-        left: this.value.titleLeft || 'Left Title',
-        middle: this.value.titleMiddle || 'Middle Title',
-        right: this.value.titleRight || 'Right Title',
+        left: this.value.titleLeft || '',
+        middle: this.value.titleMiddle || '',
+        right: this.value.titleRight || '',
       };
     },
     titleFooterAlignmentConfig () {
@@ -229,7 +229,7 @@ export default {
     },
     footers () {
       return {
-        left: this.value.footerLeft || 'Left Footer',
+        left: this.value.footerLeft || '',
         right: this.value.footerRight || 'Made with the Brave Frontier Multi-Tool',
       };
     },

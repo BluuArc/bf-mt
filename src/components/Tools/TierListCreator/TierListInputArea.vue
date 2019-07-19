@@ -19,28 +19,28 @@
       <v-container fluid class="py-0 px-1" slot="general" grid-list-md>
         <v-layout align-baseline>
           <h3>Header Text</h3>
-          <v-switch class="px-2 mt-0" hide-details/>
+          <v-switch class="px-2 mt-0" hide-details v-model="showTitles"/>
         </v-layout>
         <v-layout row wrap>
           <v-flex xs12 sm4>
             <v-text-field
               label="Left Title"
-              :value="svgConfig.titleLeft || ''"
-              @input="e => throttledUpdateKeyInSvgConfig('titleLeft', e)"
+              :disabled="!showTitles"
+              v-model="titleLeft"
             />
           </v-flex>
           <v-flex xs12 sm4>
             <v-text-field
               label="Middle Title"
-              :value="svgConfig.titleMiddle || ''"
-              @input="e => throttledUpdateKeyInSvgConfig('titleMiddle', e)"
+              :disabled="!showTitles"
+              v-model="titleMiddle"
             />
           </v-flex>
           <v-flex xs12 sm4>
             <v-text-field
               label="Right Title"
-              :value="svgConfig.titleRight || ''"
-              @input="e => throttledUpdateKeyInSvgConfig('titleRight', e)"
+              :disabled="!showTitles"
+              v-model="titleRight"
             />
           </v-flex>
         </v-layout>
@@ -48,7 +48,10 @@
           <h3>Footer Text</h3>
         </v-layout>
         <v-flex>
-          <v-text-field label="Left Footer"/>
+          <v-text-field
+            label="Left Footer"
+            v-model="footerLeft"
+          />
         </v-flex>
       </v-container>
       <section slot="categories">
@@ -119,6 +122,7 @@ export default {
   },
   computed: {
     tabs: () => Object.freeze(['General', 'Categories', 'Entries', 'Export'].map(name => ({ name, slot: name.toLowerCase() }))),
+    titleKeys: () => Object.freeze(['titleLeft', 'titleMiddle', 'titleRight']),
   },
   data () {
     return {
@@ -157,11 +161,18 @@ export default {
             })),
           ],
         ],
+        titleMiddle: 'My Tier List',
+        footerLeft: `Created ${new Date().toDateString()}`,
       },
       transformedSvgConfigPromise: Promise.resolve({}),
       generateImageLinkPromise: Promise.resolve(),
       downloadLink: '',
       urlToBase64Mapping: new Map(),
+      showTitles: true,
+      titleLeft: '',
+      titleMiddle: '',
+      titleRight: '',
+      footerLeft: '',
     };
   },
   methods: {
@@ -262,6 +273,36 @@ export default {
       if (oldValue) {
         URL.revokeObjectURL(oldValue);
       }
+    },
+    footerLeft (newValue) {
+      this.throttledUpdateKeyInSvgConfig('footerLeft', this.showTitles ? (newValue || ' ') : '');
+    },
+    titleLeft (newValue) {
+      this.throttledUpdateKeyInSvgConfig('titleLeft', this.showTitles ? (newValue || ' ') : '');
+    },
+    titleMiddle (newValue) {
+      this.throttledUpdateKeyInSvgConfig('titleMiddle', this.showTitles ? (newValue || ' ') : '');
+    },
+    titleRight (newValue) {
+      this.throttledUpdateKeyInSvgConfig('titleRight', this.showTitles ? (newValue || ' ') : '');
+    },
+    showTitles (newValue) {
+      this.titleKeys.forEach(titleKey => {
+        this.updateKeyInSvgConfig(titleKey, newValue ? (this[titleKey] || ' ') : '');
+      });
+    },
+    svgConfig: {
+      immediate: true,
+      handler (newValue) {
+        if (newValue) {
+          // sync with new config
+          this.titleKeys.concat(['footerLeft']).forEach(svgConfigKey => {
+            if (newValue[svgConfigKey] !== this[svgConfigKey]) {
+              this[svgConfigKey] = newValue[svgConfigKey] || '';
+            }
+          });
+        }
+      },
     },
   },
 };
