@@ -68,14 +68,33 @@
           :width="baseTrackConfig.width" :height="category.trackHeight"
           :style="baseTrackConfig.style"
         />
-        <image
-          v-for="(entry, j) in category.entries"
-          :key="`${JSON.stringify(entry)}-${j}`"
-          :x="getEntryXOffset(j)" :y="getEntryYOffset(j)"
-          :width="GENERAL_SVG_CONFIG.ENTRY_SIZE" :height="GENERAL_SVG_CONFIG.ENTRY_SIZE"
-          :xlink:href="entry.base64Url || entry.imgUrl"
-          :href="entry.base64Url || entry.imgUrl"
-        />
+        <template v-for="(entry, j) in category.entries">
+          <image
+            :key="`${JSON.stringify(entry)}-${j}-image`"
+            :x="getEntryXOffset(j)" :y="getEntryYOffset(j)"
+            :width="GENERAL_SVG_CONFIG.ENTRY_SIZE" :height="GENERAL_SVG_CONFIG.ENTRY_SIZE"
+            :xlink:href="entry.base64Url || entry.imgUrl"
+            :href="entry.base64Url || entry.imgUrl"
+          />
+          <g v-if="showEntryNames && entry.name" :key="`${JSON.stringify(entry)}-${j}-label`">
+            <rect
+              :x="getEntryXOffset(j)" :y="getEntryYOffset(j)"
+              :width="GENERAL_SVG_CONFIG.ENTRY_SIZE" :height="GENERAL_SVG_CONFIG.ENTRY_SIZE"
+              fill="black" style="fill-opacity: 0.5"
+            />
+
+            <flow-text
+              :x="getEntryXOffset(j) + GENERAL_SVG_CONFIG.ENTRY_SIZE / 2" :y="getEntryYOffset(j) + GENERAL_SVG_CONFIG.ENTRY_SIZE / 2"
+              fill="white"
+              text-anchor="middle"
+              alignment-baseline="middle"
+              :flowText="entry.name"
+              :flowMaxWidth="GENERAL_SVG_CONFIG.ENTRY_SIZE"
+              :flowLineHeight="16"
+              :flowX="getEntryXOffset(j) + GENERAL_SVG_CONFIG.ENTRY_SIZE / 2"
+            />
+          </g>
+        </template>
       </g>
     </g>
     <g class="tier-list-footer-group">
@@ -106,6 +125,7 @@
 <script>
 import colors from 'vuetify/es5/util/colors';
 import { getDefaultCategories } from '@/modules/core/tier-list-creator';
+import FlowText from '@/components/SvgFlowText';
 
 const GENERAL_SVG_CONFIG = {
   ENTRY_SIZE: 70,
@@ -126,11 +146,17 @@ export default {
       required: true,
     },
   },
+  components: {
+    FlowText,
+  },
   computed: {
     mainSvgStyle () {
       return {
         'background-color': colors.grey.darken4,
       };
+    },
+    showEntryNames () {
+      return !!this.value.showEntryNames;
     },
     categories () {
       return Array.isArray(this.value.categories)

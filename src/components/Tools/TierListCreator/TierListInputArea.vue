@@ -132,7 +132,7 @@ export default {
         entries: [
           [
             {
-              name: 'Fencer Vargas',
+              name: 'Prophetic Tate & Tama',
               imgUrl: 'https://dv5bk1m8igv7v.cloudfront.net/asset/2220/content/unit/img/unit_ills_thum_10011.png',
               base64Url: null,
               // fontSize: '1em',
@@ -141,7 +141,7 @@ export default {
               // backgroundColor: 'rgba(0, 0, 0, 0.5)',
             },
             {
-              name: 'Selena',
+              name: 'Bond of Rih\'alnase',
               imgUrl: 'https://dv5bk1m8igv7v.cloudfront.net/asset/2220/content/unit/img/unit_ills_thum_20011.png',
               base64Url: null,
             },
