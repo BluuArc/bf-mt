@@ -1,4 +1,12 @@
 {
+  "MST_SKILLS_2840417_DESCRIPTION": {
+    "en": "23 combo massive Thunder attack on all foes, enormously boosts Atk for 5 turns, boosts critical hit rate for 3 turns, normal attacks hit all foes for 3 turns & considerably raises normal hit amount for 3 turns",
+    "es": "23 combo massive Thunder attack on all foes, enormously boosts Atk for 5 turns, boosts critical hit rate for 3 turns, normal attacks hit all foes for 3 turns & considerably raises normal hit amount for 3 turns",
+    "id": "23 kombo serangan Guntur masif ke semua musuh, ekstra jumbo Serangan 5 giliran, 3 giliran: menambah pukulan ampuh, serangan normal terkena semua musuh, lumayan menambah pukulan normal",
+    "pt": "23 combo massive Thunder attack on all foes, enormously boosts Atk for 5 turns, boosts critical hit rate for 3 turns, normal attacks hit all foes for 3 turns & considerably raises normal hit amount for 3 turns",
+    "th": "23 คอมโบ โจมตีธาตุสายฟ้ารุนแรงมหาสาล ใส่ศัตรูทั้งหมด, เพิ่มค่ามหาศาลให้ โจมตี นาน 5 เทิร์น, เพิ่ม อัตราเกิดคริติคอล นาน 3 เทิร์น, โจมตีธรรมดาโดนศัตรูทั้งหมด นาน 3 เทิร์น และ considerably เพิ่มจำนวนการโจมตีธรรมดา นาน 3 เทิร์น",
+    "vi": "23 combo massive Thunder attack on all foes, enormously boosts Atk for 5 turns, boosts critical hit rate for 3 turns, normal attacks hit all foes for 3 turns & considerably raises normal hit amount for 3 turns"
+  },
   "MST_SKILLS_2840417_NAME": {
     "en": "Holocaust of Tyr",
     "es": "Holocaust of Tyr",
@@ -21151,6 +21159,22 @@
     "th": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical damage, Earth elemental damage, BB gauge, 80% KO resistance, 80% evasion, 80% activates BB/SBB/UBB twice, 80% raises allies from KO & purges turn skip effect",
     "vi": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical damage, Earth elemental damage, BB gauge, 80% KO resistance, 80% evasion, 80% activates BB/SBB/UBB twice, 80% raises allies from KO & purges turn skip effect"
   },
+  "MST_SKILLS_3830558_DESCRIPTION": {
+    "en": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, critical hit rate, BB gauge, OD gauge, 50% DoT reduction, 100% raises allies from KO, 100% evasion for self & damage taken boosts BB gauge and restores HP",
+    "es": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, critical hit rate, BB gauge, OD gauge, 50% DoT reduction, 100% raises allies from KO, 100% evasion for self & damage taken boosts BB gauge and restores HP",
+    "id": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, critical hit rate, BB gauge, OD gauge, 50% DoT reduction, 100% raises allies from KO, 100% evasion for self & damage taken boosts BB gauge and restores HP",
+    "pt": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, critical hit rate, BB gauge, OD gauge, 50% DoT reduction, 100% raises allies from KO, 100% evasion for self & damage taken boosts BB gauge and restores HP",
+    "th": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, critical hit rate, BB gauge, OD gauge, 50% DoT reduction, 100% raises allies from KO, 100% evasion for self & damage taken boosts BB gauge and restores HP",
+    "vi": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, critical hit rate, BB gauge, OD gauge, 50% DoT reduction, 100% raises allies from KO, 100% evasion for self & damage taken boosts BB gauge and restores HP"
+  },
+  "MST_SKILLS_3830558_NAME": {
+    "en": "Hisa! Tama! Electric Gale!",
+    "es": "Hisa! Tama! Electric Gale!",
+    "id": "Hisa! Tama! Electric Gale!",
+    "pt": "Hisa! Tama! Electric Gale!",
+    "th": "Hisa! Tama! Electric Gale!",
+    "vi": "Hisa! Tama! Electric Gale!"
+  },
   "MST_SKILLS_3840608_DESCRIPTION": {
     "en": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, critical hit rate, critical damage, Spark damage, Thunder and Light elemental damage, damage against status afflicted foes, activates BB/SBB/UBB twice & adds status ailment infliction to attack",
     "es": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, critical hit rate, critical damage, Spark damage, Thunder and Light elemental damage, damage against status afflicted foes, activates BB/SBB/UBB twice & adds status ailment infliction to attack",
@@ -21184,12 +21208,12 @@
     "vi": "30 combo grand dual attack on all foes (damage relative to remaining HP),  boosts OD gauge, Thunder elemental damage, critical damage, adds status ailment infliction to attack & damage taken boosts BB gauge and restores HP"
   },
   "MST_SKILLS_3840768_DESCRIPTION": {
-    "en": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, OD gauge, Spark damage, Atk, Def relative to max HP, 100% evasion, fully restores HP, purges LS and ES disable & activates own BB/SBB/UBB twice",
-    "es": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, OD gauge, Spark damage, Atk, Def relative to max HP, 100% evasion, fully restores HP, purges LS and ES disable & activates own BB/SBB/UBB twice",
-    "id": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, OD gauge, Spark damage, Atk, Def relative to max HP, 100% evasion, fully restores HP, purges LS and ES disable & activates own BB/SBB/UBB twice",
-    "pt": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, OD gauge, Spark damage, Atk, Def relative to max HP, 100% evasion, fully restores HP, purges LS and ES disable & activates own BB/SBB/UBB twice",
-    "th": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, OD gauge, Spark damage, Atk, Def relative to max HP, 100% evasion, fully restores HP, purges LS and ES disable & activates own BB/SBB/UBB twice",
-    "vi": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, OD gauge, Spark damage, Atk, Def relative to max HP, 100% evasion, fully restores HP, purges LS and ES disable & activates own BB/SBB/UBB twice"
+    "en": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, OD gauge, Spark damage, Atk, Def relative to max HP, 100% evasion, fully restores HP, purges LS and ES Lock & activates own BB/SBB/UBB twice",
+    "es": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, OD gauge, Spark damage, Atk, Def relative to max HP, 100% evasion, fully restores HP, purges LS and ES Lock & activates own BB/SBB/UBB twice",
+    "id": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, OD gauge, Spark damage, Atk, Def relative to max HP, 100% evasion, fully restores HP, purges LS and ES Lock & activates own BB/SBB/UBB twice",
+    "pt": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, OD gauge, Spark damage, Atk, Def relative to max HP, 100% evasion, fully restores HP, purges LS and ES Lock & activates own BB/SBB/UBB twice",
+    "th": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, OD gauge, Spark damage, Atk, Def relative to max HP, 100% evasion, fully restores HP, purges LS and ES Lock & activates own BB/SBB/UBB twice",
+    "vi": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, OD gauge, Spark damage, Atk, Def relative to max HP, 100% evasion, fully restores HP, purges LS and ES Lock & activates own BB/SBB/UBB twice"
   },
   "MST_SKILLS_3840768_NAME": {
     "en": "Kagune Barrage",
@@ -21232,12 +21256,12 @@
     "vi": "Mạch nước lớn "
   },
   "MST_SKILLS_3860018_DESCRIPTION": {
-    "en": "64 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, OD gauge, OD gauge fill rate, 100% damage reduction, 100% DoT reduction, negates critical and elemental damage, activates Light barrier & purges LS disable and DoT effects",
-    "es": "64 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, OD gauge, OD gauge fill rate, 100% damage reduction, 100% DoT reduction, negates critical and elemental damage, activates Light barrier & purges LS disable and DoT effects",
-    "id": "64 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, OD gauge, OD gauge fill rate, 100% damage reduction, 100% DoT reduction, negates critical and elemental damage, activates Light barrier & purges LS disable and DoT effects",
-    "pt": "64 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, OD gauge, OD gauge fill rate, 100% damage reduction, 100% DoT reduction, negates critical and elemental damage, activates Light barrier & purges LS disable and DoT effects",
-    "th": "64 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, OD gauge, OD gauge fill rate, 100% damage reduction, 100% DoT reduction, negates critical and elemental damage, activates Light barrier & purges LS disable and DoT effects",
-    "vi": "64 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, OD gauge, OD gauge fill rate, 100% damage reduction, 100% DoT reduction, negates critical and elemental damage, activates Light barrier & purges LS disable and DoT effects"
+    "en": "64 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, OD gauge, OD gauge fill rate, 100% damage reduction, 100% DoT reduction, negates critical and elemental damage, activates Light barrier & purges LS Lock and DoT effects",
+    "es": "64 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, OD gauge, OD gauge fill rate, 100% damage reduction, 100% DoT reduction, negates critical and elemental damage, activates Light barrier & purges LS Lock and DoT effects",
+    "id": "64 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, OD gauge, OD gauge fill rate, 100% damage reduction, 100% DoT reduction, negates critical and elemental damage, activates Light barrier & purges LS Lock and DoT effects",
+    "pt": "64 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, OD gauge, OD gauge fill rate, 100% damage reduction, 100% DoT reduction, negates critical and elemental damage, activates Light barrier & purges LS Lock and DoT effects",
+    "th": "64 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, OD gauge, OD gauge fill rate, 100% damage reduction, 100% DoT reduction, negates critical and elemental damage, activates Light barrier & purges LS Lock and DoT effects",
+    "vi": "64 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, OD gauge, OD gauge fill rate, 100% damage reduction, 100% DoT reduction, negates critical and elemental damage, activates Light barrier & purges LS Lock and DoT effects"
   },
   "MST_SKILLS_3860518_DESCRIPTION": {
     "en": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, critical hit rate, critical damage, Spark damage, BC, HC drop rate, Dark elemental damage, 85% activates BB/SBB/UBB twice, fully restores HP & 80% raises allies from KO",
@@ -88320,12 +88344,12 @@
     "vi": "Ill-Mannered Indignation"
   },
   "MST_SKILLS_810767_DESCRIPTION": {
-    "en": "8 combo powerful Fire attack on all foes (damage relative to remaining HP), fills own BB gauge to max, enormously boosts own Atk for 3 turns, adds probable evasion to self for 2 turns & adds probable 1 extra action for self within the same turn for 2 turns",
-    "es": "8 combo powerful Fire attack on all foes (damage relative to remaining HP), fills own BB gauge to max, enormously boosts own Atk for 3 turns, adds probable evasion to self for 2 turns & adds probable 1 extra action for self within the same turn for 2 turns",
-    "id": "8 combo powerful Fire attack on all foes (damage relative to remaining HP), fills own BB gauge to max, enormously boosts own Atk for 3 turns, adds probable evasion to self for 2 turns & adds probable 1 extra action for self within the same turn for 2 turns",
-    "pt": "8 combo powerful Fire attack on all foes (damage relative to remaining HP), fills own BB gauge to max, enormously boosts own Atk for 3 turns, adds probable evasion to self for 2 turns & adds probable 1 extra action for self within the same turn for 2 turns",
-    "th": "8 combo powerful Fire attack on all foes (damage relative to remaining HP), fills own BB gauge to max, enormously boosts own Atk for 3 turns, adds probable evasion to self for 2 turns & adds probable 1 extra action for self within the same turn for 2 turns",
-    "vi": "8 combo powerful Fire attack on all foes (damage relative to remaining HP), fills own BB gauge to max, enormously boosts own Atk for 3 turns, adds probable evasion to self for 2 turns & adds probable 1 extra action for self within the same turn for 2 turns"
+    "en": "8 combo powerful Fire attack on single foe (damage relative to remaining HP), fills own BB gauge to max, enormously boosts own Atk for 3 turns, adds probable evasion to self for 2 turns & adds probable 1 extra action for self within the same turn for 2 turns",
+    "es": "8 combo powerful Fire attack on single foe (damage relative to remaining HP), fills own BB gauge to max, enormously boosts own Atk for 3 turns, adds probable evasion to self for 2 turns & adds probable 1 extra action for self within the same turn for 2 turns",
+    "id": "8 combo powerful Fire attack on single foe (damage relative to remaining HP), fills own BB gauge to max, enormously boosts own Atk for 3 turns, adds probable evasion to self for 2 turns & adds probable 1 extra action for self within the same turn for 2 turns",
+    "pt": "8 combo powerful Fire attack on single foe (damage relative to remaining HP), fills own BB gauge to max, enormously boosts own Atk for 3 turns, adds probable evasion to self for 2 turns & adds probable 1 extra action for self within the same turn for 2 turns",
+    "th": "8 combo powerful Fire attack on single foe (damage relative to remaining HP), fills own BB gauge to max, enormously boosts own Atk for 3 turns, adds probable evasion to self for 2 turns & adds probable 1 extra action for self within the same turn for 2 turns",
+    "vi": "8 combo powerful Fire attack on single foe (damage relative to remaining HP), fills own BB gauge to max, enormously boosts own Atk for 3 turns, adds probable evasion to self for 2 turns & adds probable 1 extra action for self within the same turn for 2 turns"
   },
   "MST_SKILLS_810767_NAME": {
     "en": "I wanna see how sharp this baby is!",
@@ -89454,29 +89478,5 @@
     "pt": "Algor Burst I",
     "th": "Algor Burst I",
     "vi": "Algor Burst I"
-  },
-  "MST_SKILLS_830006_DESCRIPTION": {
-    "en": "8 combo Earth attack on all foes, probable Poison effect & adds Earth element to attack for 3 turns",
-    "es": "8 combo Earth attack on all foes, probable Poison effect & adds Earth element to attack for 3 turns",
-    "id": "8 kombo serangan Bumi ke semua musuh, kans efek Racun & tambahkan elemen Bumi ke serangan 3 giliran",
-    "pt": "8 combo Earth attack on all foes, probable Poison effect & adds Earth element to attack for 3 turns",
-    "th": "8 คอมโบ โจมตีธาตุดิน ใส่ศัตรูทั้งหมด, มีโอกาสได้ผล พิษ และ เพิ่ม ธาตุดิน ให้กับการโจมตี นาน 3 เทิร์น",
-    "vi": "8 combo Earth attack on all foes, probable Poison effect & adds Earth element to attack for 3 turns"
-  },
-  "MST_SKILLS_830006_NAME": {
-    "en": "Krittycal Strike",
-    "es": "Krittycal Strike",
-    "id": "Serbuan Krittycal",
-    "pt": "Krittycal Strike",
-    "th": "คริตี้คอล สไตรค์",
-    "vi": "Krittycal Strike"
-  },
-  "MST_SKILLS_830047_DESCRIPTION": {
-    "en": "13 combo powerful Earth attack on all foes, powerful additional attack at turn's end for 3 turns, adds probable great 1 turn Atk, Def, Rec reduction effect to attack for 3 turns & hugely boosts Atk, Def, Rec for 3 turns",
-    "es": "13 combo powerful Earth attack on all foes, powerful additional attack at turn's end for 3 turns, adds probable great 1 turn Atk, Def, Rec reduction effect to attack for 3 turns & hugely boosts Atk, Def, Rec for 3 turns",
-    "id": "13 combo powerful Earth attack on all foes, powerful additional attack at turn's end for 3 turns, adds probable great 1 turn Atk, Def, Rec reduction effect to attack for 3 turns & hugely boosts Atk, Def, Rec for 3 turns",
-    "pt": "13 combo powerful Earth attack on all foes, powerful additional attack at turn's end for 3 turns, adds probable great 1 turn Atk, Def, Rec reduction effect to attack for 3 turns & hugely boosts Atk, Def, Rec for 3 turns",
-    "th": "13 combo powerful Earth attack on all foes, powerful additional attack at turn's end for 3 turns, adds probable great 1 turn Atk, Def, Rec reduction effect to attack for 3 turns & hugely boosts Atk, Def, Rec for 3 turns",
-    "vi": "13 combo powerful Earth attack on all foes, powerful additional attack at turn's end for 3 turns, adds probable great 1 turn Atk, Def, Rec reduction effect to attack for 3 turns & hugely boosts Atk, Def, Rec for 3 turns"
   }
 }
