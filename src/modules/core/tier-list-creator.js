@@ -20,7 +20,8 @@ export function fetchBase64Png (url = '') {
 }
 
 export function getDefaultCategories () {
-  return [{
+  return [
+    {
       name: 'S',
       backgroundColor: colors.red.accent1,
       textColor: colors.shades.black,

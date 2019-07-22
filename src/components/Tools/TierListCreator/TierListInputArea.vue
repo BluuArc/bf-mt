@@ -54,11 +54,11 @@
           />
         </v-flex>
       </v-container>
-      <section slot="categories">
-        Categories config here
+      <section slot="links">
+        Multidex links here
       </section>
       <section slot="entries">
-        Entries config here
+        <category-config v-model="svgConfig"/>
       </section>
       <v-layout slot="export">
         <v-flex xs6>
@@ -80,13 +80,13 @@
                 loading
               />
             </template>
-            <template>
+            <template slot-scope="{ result }">
               <v-btn
                 block
                 class="ml-2"
-                :color="(downloadLink && 'primary') || undefined"
-                :disabled="!downloadLink"
-                :href="downloadLink"
+                :color="(result.downloadLink && 'primary') || undefined"
+                :disabled="!result.downloadLink"
+                :href="result.downloadLink"
                 target="_blank"
               >
                 Download Image
@@ -110,18 +110,20 @@
 <script>
 import { getDefaultCategories, fetchBase64Png } from '@/modules/core/tier-list-creator';
 import PromiseWait from '@/components/PromiseWait';
-import TierListSvg from './TierListMainSvg';
 import CardTabsContainer from '@/components/CardTabsContainer';
+import TierListSvg from './TierListMainSvg';
+import CategoryConfig from './CategoryConfig';
 import throttle from 'lodash/throttle';
 
 export default {
   components: {
-    TierListSvg,
     PromiseWait,
     CardTabsContainer,
+    TierListSvg,
+    CategoryConfig,
   },
   computed: {
-    tabs: () => Object.freeze(['General', 'Categories', 'Entries', 'Export'].map(name => ({ name, slot: name.toLowerCase() }))),
+    tabs: () => Object.freeze(['General', 'Entries', 'Export', 'Links'].map(name => ({ name, slot: name.toLowerCase() }))),
     titleKeys: () => Object.freeze(['titleLeft', 'titleMiddle', 'titleRight']),
   },
   data () {
@@ -165,7 +167,7 @@ export default {
         footerLeft: `Created ${new Date().toDateString()}`,
       },
       transformedSvgConfigPromise: Promise.resolve({}),
-      generateImageLinkPromise: Promise.resolve(),
+      generateImageLinkPromise: Promise.resolve(''),
       downloadLink: '',
       urlToBase64Mapping: new Map(),
       showTitles: true,
@@ -229,9 +231,12 @@ export default {
 
       await this.transformedSvgConfigPromise;
       // allow time for SVG to render
-      await new Promise(fulfill => setTimeout(() => fulfill(), 100));
+      await new Promise(fulfill => setTimeout(() => fulfill(), 500));
       await this.waitUntilTrue(() => !!this.$el.querySelector('svg#tier-list-svg-transformed'));
       this.downloadLink = await this.generateDownloadLink();
+      return {
+        downloadLink: this.downloadLink,
+      };
     },
     async transformSvgConfig (config = {}) {
       const initialEntries = Array.isArray(config.entries) ? config.entries : [];
