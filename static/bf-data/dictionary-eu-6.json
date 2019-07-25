@@ -1,4 +1,20 @@
 {
+  "MST_SKILLS_2840438_DESCRIPTION": {
+    "en": "22 combo massive Thunder attack on all foes, 25 combo massive Thunder attack on single foe (damage relative to remaining HP, with enormously boosted critical hit rate), enormously boosts Spark damage for 3 turns, hugely boosts max HP, enormously boosts own critical damage for 1 turn & enormously boosts OD gauge at turn's end for 3 turns",
+    "es": "22 combo massive Thunder attack on all foes, 25 combo massive Thunder attack on single foe (damage relative to remaining HP, with enormously boosted critical hit rate), enormously boosts Spark damage for 3 turns, hugely boosts max HP, enormously boosts own critical damage for 1 turn & enormously boosts OD gauge at turn's end for 3 turns",
+    "id": "22 combo massive Thunder attack on all foes, 25 combo massive Thunder attack on single foe (damage relative to remaining HP, with enormously boosted critical hit rate), enormously boosts Spark damage for 3 turns, hugely boosts max HP, enormously boosts own critical damage for 1 turn & enormously boosts OD gauge at turn's end for 3 turns",
+    "pt": "22 combo massive Thunder attack on all foes, 25 combo massive Thunder attack on single foe (damage relative to remaining HP, with enormously boosted critical hit rate), enormously boosts Spark damage for 3 turns, hugely boosts max HP, enormously boosts own critical damage for 1 turn & enormously boosts OD gauge at turn's end for 3 turns",
+    "th": "22 combo massive Thunder attack on all foes, 25 combo massive Thunder attack on single foe (damage relative to remaining HP, with enormously boosted critical hit rate), enormously boosts Spark damage for 3 turns, hugely boosts max HP, enormously boosts own critical damage for 1 turn & enormously boosts OD gauge at turn's end for 3 turns",
+    "vi": "22 combo massive Thunder attack on all foes, 25 combo massive Thunder attack on single foe (damage relative to remaining HP, with enormously boosted critical hit rate), enormously boosts Spark damage for 3 turns, hugely boosts max HP, enormously boosts own critical damage for 1 turn & enormously boosts OD gauge at turn's end for 3 turns"
+  },
+  "MST_SKILLS_2840438_NAME": {
+    "en": "Primal Joyous Slaughter",
+    "es": "Primal Joyous Slaughter",
+    "id": "Primal Joyous Slaughter",
+    "pt": "Primal Joyous Slaughter",
+    "th": "Primal Joyous Slaughter",
+    "vi": "Primal Joyous Slaughter"
+  },
   "MST_SKILLS_2840507_DESCRIPTION": {
     "en": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec and Spark damage for 5 turns & enormously boosts OD gauge",
     "es": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec and Spark damage for 5 turns & enormously boosts OD gauge",
@@ -302,6 +318,22 @@
     "pt": "Manaburn Fatality",
     "th": "Manaburn Fatality",
     "vi": "Manaburn Fatality"
+  },
+  "MST_SKILLS_2840748_DESCRIPTION": {
+    "en": "24 combo massive Thunder attack on all foes (damage relative to remaining HP), considerably boosts OD gauge, enormously boosts Atk, Def, Rec for 3 turns, 100% damage reduction for 3 turns, probability of raising allies from KO & damage taken enormously restores HP for 3 turns",
+    "es": "24 combo massive Thunder attack on all foes (damage relative to remaining HP), considerably boosts OD gauge, enormously boosts Atk, Def, Rec for 3 turns, 100% damage reduction for 3 turns, probability of raising allies from KO & damage taken enormously restores HP for 3 turns",
+    "id": "24 combo massive Thunder attack on all foes (damage relative to remaining HP), considerably boosts OD gauge, enormously boosts Atk, Def, Rec for 3 turns, 100% damage reduction for 3 turns, probability of raising allies from KO & damage taken enormously restores HP for 3 turns",
+    "pt": "24 combo massive Thunder attack on all foes (damage relative to remaining HP), considerably boosts OD gauge, enormously boosts Atk, Def, Rec for 3 turns, 100% damage reduction for 3 turns, probability of raising allies from KO & damage taken enormously restores HP for 3 turns",
+    "th": "24 combo massive Thunder attack on all foes (damage relative to remaining HP), considerably boosts OD gauge, enormously boosts Atk, Def, Rec for 3 turns, 100% damage reduction for 3 turns, probability of raising allies from KO & damage taken enormously restores HP for 3 turns",
+    "vi": "24 combo massive Thunder attack on all foes (damage relative to remaining HP), considerably boosts OD gauge, enormously boosts Atk, Def, Rec for 3 turns, 100% damage reduction for 3 turns, probability of raising allies from KO & damage taken enormously restores HP for 3 turns"
+  },
+  "MST_SKILLS_2840748_NAME": {
+    "en": "Irukandji Fouetté",
+    "es": "Irukandji Fouetté",
+    "id": "Irukandji Fouetté",
+    "pt": "Irukandji Fouetté",
+    "th": "Irukandji Fouetté",
+    "vi": "Irukandji Fouetté"
   },
   "MST_SKILLS_2840767_DESCRIPTION": {
     "en": "18 combo massive Thunder attack on all foes (damage relative to remaining HP), adds evasion for 3 turns,enormously boosts OD gauge, fully restores HP for 3 turns,enormously boosts Atk, Def relative to HP for 3 turns",
@@ -21087,6 +21119,22 @@
     "th": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Spark damage, Water, Dark elemental damage, activates BB/SBB/UBB twice, 100% evasion, adds status ailment infliction to attack, raises allies from KO & 100% Light, Dark damage reduction",
     "vi": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Spark damage, Water, Dark elemental damage, activates BB/SBB/UBB twice, 100% evasion, adds status ailment infliction to attack, raises allies from KO & 100% Light, Dark damage reduction"
   },
+  "MST_SKILLS_3820748_DESCRIPTION": {
+    "en": "36 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Def relative to Atk, BB gauge to max, OD gauge, 100% damage reduction, 100% DoT reduction, 80% raises allies from KO & damage taken restores HP",
+    "es": "36 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Def relative to Atk, BB gauge to max, OD gauge, 100% damage reduction, 100% DoT reduction, 80% raises allies from KO & damage taken restores HP",
+    "id": "36 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Def relative to Atk, BB gauge to max, OD gauge, 100% damage reduction, 100% DoT reduction, 80% raises allies from KO & damage taken restores HP",
+    "pt": "36 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Def relative to Atk, BB gauge to max, OD gauge, 100% damage reduction, 100% DoT reduction, 80% raises allies from KO & damage taken restores HP",
+    "th": "36 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Def relative to Atk, BB gauge to max, OD gauge, 100% damage reduction, 100% DoT reduction, 80% raises allies from KO & damage taken restores HP",
+    "vi": "36 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Def relative to Atk, BB gauge to max, OD gauge, 100% damage reduction, 100% DoT reduction, 80% raises allies from KO & damage taken restores HP"
+  },
+  "MST_SKILLS_3820748_NAME": {
+    "en": "Tidebreach Fouetté",
+    "es": "Tidebreach Fouetté",
+    "id": "Tidebreach Fouetté",
+    "pt": "Tidebreach Fouetté",
+    "th": "Tidebreach Fouetté",
+    "vi": "Tidebreach Fouetté"
+  },
   "MST_SKILLS_3820758_DESCRIPTION": {
     "en": "70 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, critical hit rate, critical damage, Atk relative to Def, damage taken boosts BB gauge and restores HP, 80% KO resistance, 100% raises allies from KO, 100% evasion & massive DoT on all foes",
     "es": "70 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, critical hit rate, critical damage, Atk relative to Def, damage taken boosts BB gauge and restores HP, 80% KO resistance, 100% raises allies from KO, 100% evasion & massive DoT on all foes",
@@ -21112,12 +21160,12 @@
     "vi": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical damage, Earth elemental damage, BB gauge, 80% KO resistance, 80% evasion, 80% activates BB/SBB/UBB twice, 80% raises allies from KO & purges turn skip effect"
   },
   "MST_SKILLS_3830558_DESCRIPTION": {
-    "en": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, critical hit rate, BB gauge, OD gauge, 50% DoT reduction, 100% raises allies from KO, 100% evasion for self & damage taken boosts BB gauge and restores HP",
-    "es": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, critical hit rate, BB gauge, OD gauge, 50% DoT reduction, 100% raises allies from KO, 100% evasion for self & damage taken boosts BB gauge and restores HP",
-    "id": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, critical hit rate, BB gauge, OD gauge, 50% DoT reduction, 100% raises allies from KO, 100% evasion for self & damage taken boosts BB gauge and restores HP",
-    "pt": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, critical hit rate, BB gauge, OD gauge, 50% DoT reduction, 100% raises allies from KO, 100% evasion for self & damage taken boosts BB gauge and restores HP",
-    "th": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, critical hit rate, BB gauge, OD gauge, 50% DoT reduction, 100% raises allies from KO, 100% evasion for self & damage taken boosts BB gauge and restores HP",
-    "vi": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, critical hit rate, BB gauge, OD gauge, 50% DoT reduction, 100% raises allies from KO, 100% evasion for self & damage taken boosts BB gauge and restores HP"
+    "en": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, BB gauge, OD gauge, 50% DoT reduction, 100% raises allies from KO, 100% evasion for self & damage taken boosts BB gauge and restores HP",
+    "es": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, BB gauge, OD gauge, 50% DoT reduction, 100% raises allies from KO, 100% evasion for self & damage taken boosts BB gauge and restores HP",
+    "id": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, BB gauge, OD gauge, 50% DoT reduction, 100% raises allies from KO, 100% evasion for self & damage taken boosts BB gauge and restores HP",
+    "pt": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, BB gauge, OD gauge, 50% DoT reduction, 100% raises allies from KO, 100% evasion for self & damage taken boosts BB gauge and restores HP",
+    "th": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, BB gauge, OD gauge, 50% DoT reduction, 100% raises allies from KO, 100% evasion for self & damage taken boosts BB gauge and restores HP",
+    "vi": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, BB gauge, OD gauge, 50% DoT reduction, 100% raises allies from KO, 100% evasion for self & damage taken boosts BB gauge and restores HP"
   },
   "MST_SKILLS_3830558_NAME": {
     "en": "Hisa! Tama! Electric Gale!",
@@ -89415,6 +89463,38 @@
     "th": "Stream of Dreams",
     "vi": "Stream of Dreams"
   },
+  "MST_SKILLS_820747_DESCRIPTION": {
+    "en": "11 combo powerful Water attack on all foes, activates Taunt and greatly boosts own Def for 1 turns, 20% additional damage reduction for 3 turns, 50% damage reduction for 2 turns & 10% damage reduction from all element types for 3 turns",
+    "es": "11 combo powerful Water attack on all foes, activates Taunt and greatly boosts own Def for 1 turns, 20% additional damage reduction for 3 turns, 50% damage reduction for 2 turns & 10% damage reduction from all element types for 3 turns",
+    "id": "11 combo powerful Water attack on all foes, activates Taunt and greatly boosts own Def for 1 turns, 20% additional damage reduction for 3 turns, 50% damage reduction for 2 turns & 10% damage reduction from all element types for 3 turns",
+    "pt": "11 combo powerful Water attack on all foes, activates Taunt and greatly boosts own Def for 1 turns, 20% additional damage reduction for 3 turns, 50% damage reduction for 2 turns & 10% damage reduction from all element types for 3 turns",
+    "th": "11 combo powerful Water attack on all foes, activates Taunt and greatly boosts own Def for 1 turns, 20% additional damage reduction for 3 turns, 50% damage reduction for 2 turns & 10% damage reduction from all element types for 3 turns",
+    "vi": "11 combo powerful Water attack on all foes, activates Taunt and greatly boosts own Def for 1 turns, 20% additional damage reduction for 3 turns, 50% damage reduction for 2 turns & 10% damage reduction from all element types for 3 turns"
+  },
+  "MST_SKILLS_820747_NAME": {
+    "en": "Seafoam Smack",
+    "es": "Seafoam Smack",
+    "id": "Seafoam Smack",
+    "pt": "Seafoam Smack",
+    "th": "Seafoam Smack",
+    "vi": "Seafoam Smack"
+  },
+  "MST_SKILLS_820748_DESCRIPTION": {
+    "en": "12 combo powerful Water attack on all foes, activates Taunt and greatly boosts own Def for 2 turns, 25% additional damage reduction for 3 turns, 50% damage reduction for 3 turns, 15% damage reduction from all element types for 3 turns & hugely boosts Def relative to Atk for 3 turns",
+    "es": "12 combo powerful Water attack on all foes, activates Taunt and greatly boosts own Def for 2 turns, 25% additional damage reduction for 3 turns, 50% damage reduction for 3 turns, 15% damage reduction from all element types for 3 turns & hugely boosts Def relative to Atk for 3 turns",
+    "id": "12 combo powerful Water attack on all foes, activates Taunt and greatly boosts own Def for 2 turns, 25% additional damage reduction for 3 turns, 50% damage reduction for 3 turns, 15% damage reduction from all element types for 3 turns & hugely boosts Def relative to Atk for 3 turns",
+    "pt": "12 combo powerful Water attack on all foes, activates Taunt and greatly boosts own Def for 2 turns, 25% additional damage reduction for 3 turns, 50% damage reduction for 3 turns, 15% damage reduction from all element types for 3 turns & hugely boosts Def relative to Atk for 3 turns",
+    "th": "12 combo powerful Water attack on all foes, activates Taunt and greatly boosts own Def for 2 turns, 25% additional damage reduction for 3 turns, 50% damage reduction for 3 turns, 15% damage reduction from all element types for 3 turns & hugely boosts Def relative to Atk for 3 turns",
+    "vi": "12 combo powerful Water attack on all foes, activates Taunt and greatly boosts own Def for 2 turns, 25% additional damage reduction for 3 turns, 50% damage reduction for 3 turns, 15% damage reduction from all element types for 3 turns & hugely boosts Def relative to Atk for 3 turns"
+  },
+  "MST_SKILLS_820748_NAME": {
+    "en": "Coordinated Stun",
+    "es": "Coordinated Stun",
+    "id": "Coordinated Stun",
+    "pt": "Coordinated Stun",
+    "th": "Coordinated Stun",
+    "vi": "Coordinated Stun"
+  },
   "MST_SKILLS_820757_DESCRIPTION": {
     "en": "25 combo powerful Water attack on all foes, adds low probability of resistance against 1 KO attack, damage taken hugely boosts BB gauge and may restore HP for 3 turns & reduces active healing for 2 turns (PvP modes only)",
     "es": "25 combo powerful Water attack on all foes, adds low probability of resistance against 1 KO attack, damage taken hugely boosts BB gauge and may restore HP for 3 turns & reduces active healing for 2 turns (PvP modes only)",
@@ -89502,29 +89582,5 @@
     "pt": "15 combo powerful Earth attack on all foes, powerful additional attack at turn's end for 3 turns, adds probable great 1 turn Atk, Def, Rec reduction effect to attack for 3 turns, hugely boosts Atk, Def, Rec for 3 turns & fixed damage Earth attack on all foes",
     "th": "15 combo powerful Earth attack on all foes, powerful additional attack at turn's end for 3 turns, adds probable great 1 turn Atk, Def, Rec reduction effect to attack for 3 turns, hugely boosts Atk, Def, Rec for 3 turns & fixed damage Earth attack on all foes",
     "vi": "15 combo powerful Earth attack on all foes, powerful additional attack at turn's end for 3 turns, adds probable great 1 turn Atk, Def, Rec reduction effect to attack for 3 turns, hugely boosts Atk, Def, Rec for 3 turns & fixed damage Earth attack on all foes"
-  },
-  "MST_SKILLS_830048_NAME": {
-    "en": "DragonSoul X Revenant",
-    "es": "DragonSoul X Revenant",
-    "id": "DragonSoul X Revenant",
-    "pt": "DragonSoul X Revenant",
-    "th": "DragonSoul X Revenant",
-    "vi": "DragonSoul X Revenant"
-  },
-  "MST_SKILLS_830115_DESCRIPTION": {
-    "en": "25 combo powerful Water, Earth attack on all foes, restores HP & boosts BC, HC drop rate for 3 turns",
-    "es": "25 combo powerful Water, Earth attack on all foes, restores HP & boosts BC, HC drop rate for 3 turns",
-    "id": "25 kombo serangan kuat Air, Bumi ke semua musuh, memulihkan HP & menambah perolehan BC, HC untuk 3 giliran",
-    "pt": "25 combo powerful Water, Earth attack on all foes, restores HP & boosts BC, HC drop rate for 3 turns",
-    "th": "25 คอมโบ โจมตีด้วยธาตุน้ำและดินใส่ศัตรูทั้งหมด, ฟื้น HP, เพิ่มอัตราการดรอป BC HC 3 เทิร์น",
-    "vi": "25 combo powerful Water, Earth attack on all foes, restores HP & boosts BC, HC drop rate for 3 turns"
-  },
-  "MST_SKILLS_830115_NAME": {
-    "en": "Chant of the Fae",
-    "es": "Chant of the Fae",
-    "id": "Mantra Fae",
-    "pt": "Chant of the Fae",
-    "th": "ชาน ออฟ เดอะ แฟ",
-    "vi": "Chant of the Fae"
   }
 }

@@ -1,4 +1,116 @@
 {
+  "MST_LEADERSKILLS_7431_DESCRIPTION": {
+    "en": "30% boost to Atk, max HP & 100% boost to Spark damage",
+    "es": "30% boost to Atk, max HP & 100% boost to Spark damage",
+    "id": "30% ekstra Serang, HP maks & 100% ekstra kerusakan Percikan",
+    "pt": "30% boost to Atk, max HP & 100% boost to Spark damage",
+    "th": "30% เพิ่มค่า โจมตี, HP สูงสุด และ 100% เพิ่มค่า ความเสียหายสปาร์ค",
+    "vi": "30% boost to Atk, max HP & 100% boost to Spark damage"
+  },
+  "MST_LEADERSKILLS_7431_NAME": {
+    "en": "Luminous Flash",
+    "es": "Luminous Flash",
+    "id": "Flash Bersinar",
+    "pt": "Luminous Flash",
+    "th": "ลูมินัส แฟลช",
+    "vi": "Luminous Flash"
+  },
+  "MST_LEADERSKILLS_7432_DESCRIPTION": {
+    "en": "50% boost to Atk, max HP, 120% boost to Spark damage & considerably reduces BB gauge required for BB",
+    "es": "50% boost to Atk, max HP, 120% boost to Spark damage & considerably reduces BB gauge required for BB",
+    "id": "50% ekstra Serang, HP maks, 120% ekstra kerusakan Percikan & luamayan mengurangi meteran BB untuk BB",
+    "pt": "50% boost to Atk, max HP, 120% boost to Spark damage & considerably reduces BB gauge required for BB",
+    "th": "50% เพิ่มค่า โจมตี, HP สูงสุด, 120% เพิ่มค่า ความเสียหายสปาร์ค และ ลดเกจ BB ที่จำเป็นสำหรับใช้ BB อย่างมาก",
+    "vi": "50% boost to Atk, max HP, 120% boost to Spark damage & considerably reduces BB gauge required for BB"
+  },
+  "MST_LEADERSKILLS_7432_NAME": {
+    "en": "Luminous Slash",
+    "es": "Luminous Slash",
+    "id": "Sabetan Bersinar",
+    "pt": "Luminous Slash",
+    "th": "ลูมินัส แสลช",
+    "vi": "Luminous Slash"
+  },
+  "MST_LEADERSKILLS_7433_DESCRIPTION": {
+    "en": "30% boost to Atk, max HP, considerably boosts critical damage & critical damage considerably boosts BB gauge",
+    "es": "30% boost to Atk, max HP, considerably boosts critical damage & critical damage considerably boosts BB gauge",
+    "id": "30% ekstra Serang, HP maks, lumayan menambah kerusakan ampuh & kerusakan ampuh lumayan menambah meteran BB",
+    "pt": "30% boost to Atk, max HP, considerably boosts critical damage & critical damage considerably boosts BB gauge",
+    "th": "30% เพิ่มค่า โจมตี, HP สูงสุด, เพิ่มค่า ความเสียหายคริติคอล อย่างมาก และ ความเสียหายคริติคอล เพิ่มค่า เกจ BB อย่างมาก",
+    "vi": "30% boost to Atk, max HP, considerably boosts critical damage & critical damage considerably boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_7433_NAME": {
+    "en": "Thunder Blade",
+    "es": "Thunder Blade",
+    "id": "Bilah Guntur",
+    "pt": "Thunder Blade",
+    "th": "ธันเดอร์ เบลด",
+    "vi": "Thunder Blade"
+  },
+  "MST_LEADERSKILLS_7434_DESCRIPTION": {
+    "en": "50% boost to Atk, max HP, hugely boosts critical damage, critical damage hugely boosts BB gauge & considerably boosts OD gauge fill rate",
+    "es": "50% boost to Atk, max HP, hugely boosts critical damage, critical damage hugely boosts BB gauge & considerably boosts OD gauge fill rate",
+    "id": "50% ekstra Serang, HP maks, amat menambah kerusakan ampuh, kerusakan ampuh amat menambah meteran BB & lumayan menambah laju pengisian OD",
+    "pt": "50% boost to Atk, max HP, hugely boosts critical damage, critical damage hugely boosts BB gauge & considerably boosts OD gauge fill rate",
+    "th": "50% เพิ่มค่า โจมตี, HP สูงสุด, เพิ่มค่า ความเสียหายคริติคอล อย่างสูง, ความเสียหายคริติคอล เพิ่มค่า เกจ BB อย่างสูง และ เพิ่มค่า อัตราเติมเกจ OD อย่างมาก",
+    "vi": "50% boost to Atk, max HP, hugely boosts critical damage, critical damage hugely boosts BB gauge & considerably boosts OD gauge fill rate"
+  },
+  "MST_LEADERSKILLS_7434_NAME": {
+    "en": "Thunderous Slice",
+    "es": "Thunderous Slice",
+    "id": "Irisan Berguntur",
+    "pt": "Thunderous Slice",
+    "th": "ธันเดอร์รัส สไลซ์",
+    "vi": "Thunderous Slice"
+  },
+  "MST_LEADERSKILLS_7435_DESCRIPTION": {
+    "en": "50% boost to Atk, max HP, hugely boosts BB Atk, 100% boost to Spark damage & hugely boosts BB gauge each turn",
+    "es": "50% boost to Atk, max HP, hugely boosts BB Atk, 100% boost to Spark damage & hugely boosts BB gauge each turn",
+    "id": "50% ekstra Serangan, HP maks, tambahan besar BB Seran, 100% ekstra kerusakan Percikan & amat menambah meteran BB tiap giliran",
+    "pt": "50% boost to Atk, max HP, hugely boosts BB Atk, 100% boost to Spark damage & hugely boosts BB gauge each turn",
+    "th": "50% เพิ่มค่า โจมตี, HP สูงสุด, เพิ่มค่าอย่างสูงให้ BB โจมตี, 100% เพิ่มค่า ความเสียหายสปาร์ค และ เพิ่มค่าอย่างสูงให้ เกจ BB แต่ละเทิร์น",
+    "vi": "50% boost to Atk, max HP, hugely boosts BB Atk, 100% boost to Spark damage & hugely boosts BB gauge each turn"
+  },
+  "MST_LEADERSKILLS_7435_NAME": {
+    "en": "Dominant Power",
+    "es": "Dominant Power",
+    "id": "Kekuatan Dominan",
+    "pt": "Dominant Power",
+    "th": "50% เพิ่มค่า โจมตี, HP สูงสุด, เพิ่มค่าอย่างสูงให้ BB โจมตี, 100% เพิ่มค่า ความเสียหายสปาร์ค และ เพิ่มค่าอย่างสูงให้ เกจ BB แต่ละเทิร์น",
+    "vi": "Dominant Power"
+  },
+  "MST_LEADERSKILLS_7436_DESCRIPTION": {
+    "en": "30% boost to Atk, max HP & probable 15% damage reduction",
+    "es": "30% boost to Atk, max HP & probable 15% damage reduction",
+    "id": "30% ekstra Serangan, HP maks & kans kurangi 15% kerusakan",
+    "pt": "30% boost to Atk, max HP & probable 15% damage reduction",
+    "th": "30% เพิ่มค่าให้ โจมตี, HP สูงสุด กับ มีโอกาส 15% ลดค่าความเสียหาย",
+    "vi": "30% boost to Atk, max HP & probable 15% damage reduction"
+  },
+  "MST_LEADERSKILLS_7436_NAME": {
+    "en": "Pure God's Protection",
+    "es": "Pure God's Protection",
+    "id": "Perlindungan Dewa Murni",
+    "pt": "Pure God's Protection",
+    "th": "เพียว ก็อด โพรเทคชั่น",
+    "vi": "Pure God's Protection"
+  },
+  "MST_LEADERSKILLS_7437_DESCRIPTION": {
+    "en": "50% boost to Atk, max HP, probable 20% damage reduction & negates Def ignoring effect",
+    "es": "50% boost to Atk, max HP, probable 20% damage reduction & negates Def ignoring effect",
+    "id": "50% ekstra Serangan, HP maks, kans kurangi 20% kerusakan & menegasi efek abaikan Pertahanan",
+    "pt": "50% boost to Atk, max HP, probable 20% damage reduction & negates Def ignoring effect",
+    "th": "50% เพิ่มค่าให้ โจมตี, HP สูงสุด, มีโอกาส 20% ลดค่าความเสียหาย กับ ลบล้าง ผลไม่สนค่าป้องกัน",
+    "vi": "50% boost to Atk, max HP, probable 20% damage reduction & negates Def ignoring effect"
+  },
+  "MST_LEADERSKILLS_7437_NAME": {
+    "en": "Holy Dragon's Splendor",
+    "es": "Holy Dragon's Splendor",
+    "id": "Kemegahan Naga Suci",
+    "pt": "Holy Dragon's Splendor",
+    "th": "โฮลี่ ดราก้อน สเปรนดอร์",
+    "vi": "Holy Dragon's Splendor"
+  },
   "MST_LEADERSKILLS_7438_DESCRIPTION": {
     "en": "30% boost to Atk, max HP, considerably boosts all elemental damage & boosts damage against status afflicted foes",
     "es": "30% boost to Atk, max HP, considerably boosts all elemental damage & boosts damage against status afflicted foes",
@@ -7055,6 +7167,38 @@
     "th": "Drawn to Life",
     "vi": "Drawn to Life"
   },
+  "MST_LEADERSKILLS_820747_DESCRIPTION": {
+    "en": "80% boost to Atk, Def, Rec, 100% boost to max HP, 10% additional damage reduction, 20% damage reduction for 2 turns when damage taken has exceeded certain amount & 150% boost to Spark damage",
+    "es": "80% boost to Atk, Def, Rec, 100% boost to max HP, 10% additional damage reduction, 20% damage reduction for 2 turns when damage taken has exceeded certain amount & 150% boost to Spark damage",
+    "id": "80% boost to Atk, Def, Rec, 100% boost to max HP, 10% additional damage reduction, 20% damage reduction for 2 turns when damage taken has exceeded certain amount & 150% boost to Spark damage",
+    "pt": "80% boost to Atk, Def, Rec, 100% boost to max HP, 10% additional damage reduction, 20% damage reduction for 2 turns when damage taken has exceeded certain amount & 150% boost to Spark damage",
+    "th": "80% boost to Atk, Def, Rec, 100% boost to max HP, 10% additional damage reduction, 20% damage reduction for 2 turns when damage taken has exceeded certain amount & 150% boost to Spark damage",
+    "vi": "80% boost to Atk, Def, Rec, 100% boost to max HP, 10% additional damage reduction, 20% damage reduction for 2 turns when damage taken has exceeded certain amount & 150% boost to Spark damage"
+  },
+  "MST_LEADERSKILLS_820747_NAME": {
+    "en": "Beach Bustler",
+    "es": "Beach Bustler",
+    "id": "Beach Bustler",
+    "pt": "Beach Bustler",
+    "th": "Beach Bustler",
+    "vi": "Beach Bustler"
+  },
+  "MST_LEADERSKILLS_820748_DESCRIPTION": {
+    "en": "100% boost to Atk, Def, Rec, 120% boost to max HP, 15% additional damage reduction, 20% damage reduction for 2 turns when damage taken has exceeded certain amount, greatly reduces BB gauge required for BB & 250% boost to Spark damage",
+    "es": "100% boost to Atk, Def, Rec, 120% boost to max HP, 15% additional damage reduction, 20% damage reduction for 2 turns when damage taken has exceeded certain amount, greatly reduces BB gauge required for BB & 250% boost to Spark damage",
+    "id": "100% boost to Atk, Def, Rec, 120% boost to max HP, 15% additional damage reduction, 20% damage reduction for 2 turns when damage taken has exceeded certain amount, greatly reduces BB gauge required for BB & 250% boost to Spark damage",
+    "pt": "100% boost to Atk, Def, Rec, 120% boost to max HP, 15% additional damage reduction, 20% damage reduction for 2 turns when damage taken has exceeded certain amount, greatly reduces BB gauge required for BB & 250% boost to Spark damage",
+    "th": "100% boost to Atk, Def, Rec, 120% boost to max HP, 15% additional damage reduction, 20% damage reduction for 2 turns when damage taken has exceeded certain amount, greatly reduces BB gauge required for BB & 250% boost to Spark damage",
+    "vi": "100% boost to Atk, Def, Rec, 120% boost to max HP, 15% additional damage reduction, 20% damage reduction for 2 turns when damage taken has exceeded certain amount, greatly reduces BB gauge required for BB & 250% boost to Spark damage"
+  },
+  "MST_LEADERSKILLS_820748_NAME": {
+    "en": "Tidal Babe",
+    "es": "Tidal Babe",
+    "id": "Tidal Babe",
+    "pt": "Tidal Babe",
+    "th": "Tidal Babe",
+    "vi": "Tidal Babe"
+  },
   "MST_LEADERSKILLS_820757_DESCRIPTION": {
     "en": "120% boost to Def, Rec and max HP of Water types, 10% damage reduction from Fire, Water types, damage taken hugely boosts BB gauge & adds probable resistance against 1 KO attack",
     "es": "120% boost to Def, Rec and max HP of Water types, 10% damage reduction from Fire, Water types, damage taken hugely boosts BB gauge & adds probable resistance against 1 KO attack",
@@ -8382,6 +8526,22 @@
     "pt": "Black Art Legacy",
     "th": "Black Art Legacy",
     "vi": "Black Art Legacy"
+  },
+  "MST_LEADERSKILLS_840748_DESCRIPTION": {
+    "en": "100% boost to all parameters, 20% damage reduction for 2 turns when damage taken has exceeded certain amount, damage taken may restore HP, negates elemental damage & enormously boosts ABP and CBP gain",
+    "es": "100% boost to all parameters, 20% damage reduction for 2 turns when damage taken has exceeded certain amount, damage taken may restore HP, negates elemental damage & enormously boosts ABP and CBP gain",
+    "id": "100% boost to all parameters, 20% damage reduction for 2 turns when damage taken has exceeded certain amount, damage taken may restore HP, negates elemental damage & enormously boosts ABP and CBP gain",
+    "pt": "100% boost to all parameters, 20% damage reduction for 2 turns when damage taken has exceeded certain amount, damage taken may restore HP, negates elemental damage & enormously boosts ABP and CBP gain",
+    "th": "100% boost to all parameters, 20% damage reduction for 2 turns when damage taken has exceeded certain amount, damage taken may restore HP, negates elemental damage & enormously boosts ABP and CBP gain",
+    "vi": "100% boost to all parameters, 20% damage reduction for 2 turns when damage taken has exceeded certain amount, damage taken may restore HP, negates elemental damage & enormously boosts ABP and CBP gain"
+  },
+  "MST_LEADERSKILLS_840748_NAME": {
+    "en": "Shock Velarium",
+    "es": "Shock Velarium",
+    "id": "Shock Velarium",
+    "pt": "Shock Velarium",
+    "th": "Shock Velarium",
+    "vi": "Shock Velarium"
   },
   "MST_LEADERSKILLS_840767_DESCRIPTION": {
     "en": "100% boost to Atk, max HP, hugely boosts Spark damage & Spark damage boosts BB gauge and slightly restores HP",
@@ -89422,109 +89582,5 @@
     "pt": "Amul Garota do Tempo",
     "th": "ชราย เกิร์ล อามูล",
     "vi": "Nữ Trông Đền Amul"
-  },
-  "MST_MONSTERS_53716_NAME": {
-    "en": "Shrine Girl Amul",
-    "es": "Amul, Joven sagraria",
-    "id": "Gadis Kuil Amul",
-    "pt": "Amul Garota do Tempo",
-    "th": "ชราย เกิร์ล อามูล",
-    "vi": "Nữ Trông Đền Amul"
-  },
-  "MST_MONSTERS_53717_NAME": {
-    "en": "Shrine Girl Amul",
-    "es": "Amul, Joven sagraria",
-    "id": "Gadis Kuil Amul",
-    "pt": "Amul Garota do Tempo",
-    "th": "ชราย เกิร์ล อามูล",
-    "vi": "Nữ Trông Đền Amul"
-  },
-  "MST_MONSTERS_53718_NAME": {
-    "en": "Shrine Girl Amul",
-    "es": "Amul, Joven sagraria",
-    "id": "Gadis Kuil Amul",
-    "pt": "Amul Garota do Tempo",
-    "th": "ชราย เกิร์ล อมูล",
-    "vi": "Shrine Girl Amul"
-  },
-  "MST_MONSTERS_53719_NAME": {
-    "en": "Shrine Girl Amul",
-    "es": "Amul, Joven sagraria",
-    "id": "Nona Kuil Amul",
-    "pt": "Amul Garota do Tempo",
-    "th": "ชไรน์เกิร์ลอามุล",
-    "vi": "Shrine Girl Amul"
-  },
-  "MST_MONSTERS_53720_NAME": {
-    "en": "Shrine Girl Amul",
-    "es": "Amul, Joven sagraria",
-    "id": "Nona Kuil Amul",
-    "pt": "Amul Garota do Tempo",
-    "th": "ชไรน์เกิร์ลอามุล",
-    "vi": "Shrine Girl Amul"
-  },
-  "MST_MONSTERS_53721_NAME": {
-    "en": "Shrine Girl Amul",
-    "es": "Shrine Girl Amul",
-    "id": "Shrine Girl Amul",
-    "pt": "Shrine Girl Amul",
-    "th": "ชไรน์ เกิร์ล อามุล",
-    "vi": "Shrine Girl Amul"
-  },
-  "MST_MONSTERS_53722_NAME": {
-    "en": "Shrine Girl Amul",
-    "es": "Shrine Girl Amul",
-    "id": "Shrine Girl Amul",
-    "pt": "Shrine Girl Amul",
-    "th": "ชไรน์ เกิร์ล อามุล",
-    "vi": "Shrine Girl Amul"
-  },
-  "MST_MONSTERS_53723_NAME": {
-    "en": "Shrine Girl Amul",
-    "es": "Shrine Girl Amul",
-    "id": "Shrine Girl Amul",
-    "pt": "Shrine Girl Amul",
-    "th": "ชไรน์ เกิร์ล อามุล",
-    "vi": "Shrine Girl Amul"
-  },
-  "MST_MONSTERS_53750_NAME": {
-    "en": "Holy Maiden Amul",
-    "es": "Amul, Dama sagrada",
-    "id": "Nona Suci Amul",
-    "pt": "Amul Dama Sagrada",
-    "th": "โฮลี่เมเดนอามุล",
-    "vi": "Thánh nữ Amul"
-  },
-  "MST_MONSTERS_53751_NAME": {
-    "en": "Holy Maiden Amul",
-    "es": "Amul, Dama sagrada",
-    "id": "Nona Suci Amul",
-    "pt": "Amul Dama Sagrada",
-    "th": "โฮลี่เมเดนอามุล",
-    "vi": "Thánh nữ Amul"
-  },
-  "MST_MONSTERS_53752_NAME": {
-    "en": "Holy Maiden Amul",
-    "es": "Amul, Dama sagrada",
-    "id": "Nona Suci Amul",
-    "pt": "Amul Dama Sagrada",
-    "th": "โฮลี่เมเดนอามุล",
-    "vi": "Thánh nữ Amul"
-  },
-  "MST_MONSTERS_53753_NAME": {
-    "en": "Holy Maiden Amul",
-    "es": "Amul, Dama sagrada",
-    "id": "Nona Suci Amul",
-    "pt": "Amul Dama Sagrada",
-    "th": "โฮลี่เมเดนอามุล",
-    "vi": "Thánh nữ Amul"
-  },
-  "MST_MONSTERS_53754_NAME": {
-    "en": "Holy Maiden Amul",
-    "es": "Amul, Dama sagrada",
-    "id": "Nona Suci Amul",
-    "pt": "Amul Dama Sagrada",
-    "th": "โฮลี่เมเดนอามุล",
-    "vi": "Thánh nữ Amul"
   }
 }
