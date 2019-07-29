@@ -108,7 +108,8 @@
 </template>
 
 <script>
-import { getDefaultCategories, fetchBase64Png } from '@/modules/core/tier-list-creator';
+import { fetchBase64Png, generateTierListCode } from '@/modules/core/tier-list-creator';
+import { getUnitImageUrls } from '@/modules/core/units';
 import PromiseWait from '@/components/PromiseWait';
 import CardTabsContainer from '@/components/CardTabsContainer';
 import TierListSvg from './TierListMainSvg';
@@ -116,6 +117,16 @@ import CategoryConfig from './CategoryConfig';
 import throttle from 'lodash/throttle';
 
 export default {
+  props: {
+    inputCategories: {
+      type: Array,
+      default: () => [],
+    },
+    inputEntries: {
+      type: Array,
+      default: () => [],
+    },
+  },
   components: {
     PromiseWait,
     CardTabsContainer,
@@ -125,48 +136,16 @@ export default {
   computed: {
     tabs: () => Object.freeze(['General', 'Entries', 'Export', 'Links'].map(name => ({ name, slot: name.toLowerCase() }))),
     titleKeys: () => Object.freeze(['titleLeft', 'titleMiddle', 'titleRight']),
+    currentConfigCode () {
+      return generateTierListCode(this.svgConfig.categories, this.svgConfig.entries);
+    },
   },
   data () {
     return {
       currentTabIndex: 0,
       svgConfig: {
-        categories: getDefaultCategories(),
-        entries: [
-          [
-            {
-              name: 'Prophetic Tate & Tama',
-              id: '10011',
-              imgUrl: 'https://dv5bk1m8igv7v.cloudfront.net/asset/2220/content/unit/img/unit_ills_thum_10011.png',
-              base64Url: null,
-              // fontSize: '1em',
-              // fontFamily: 'Arial',
-              // textColor: colors.shades.white,
-              // backgroundColor: 'rgba(0, 0, 0, 0.5)',
-            },
-            {
-              name: 'Bond of Rih\'alnase',
-              id: '20011',
-              imgUrl: 'https://dv5bk1m8igv7v.cloudfront.net/asset/2220/content/unit/img/unit_ills_thum_20011.png',
-              base64Url: null,
-            },
-          ],
-          [
-            ...new Array(10).fill(0).map(() => ({
-              name: 'Burny',
-              imgUrl: 'https://dv5bk1m8igv7v.cloudfront.net/asset/2220/content/unit/img/unit_ills_thum_10032.png',
-              id: '10032',
-              base64Url: null,
-            })),
-          ],
-          [
-            ...new Array(15).fill(0).map(() => ({
-              name: 'Squirty',
-              imgUrl: 'https://dv5bk1m8igv7v.cloudfront.net/asset/2220/content/unit/img/unit_ills_thum_20032.png',
-              id: '20032',
-              base64Url: null,
-            })),
-          ],
-        ],
+        categories: [],
+        entries: [],
         titleMiddle: 'My Tier List',
         footerLeft: `Created ${new Date().toDateString()}`,
       },
@@ -275,6 +254,26 @@ export default {
     throttledUpdateKeyInSvgConfig: throttle(function(key, value) {
       this.updateKeyInSvgConfig(key, value);
     }, 500),
+    getExpandedInputEntries (entries = []) {
+      // TODO: support other types besides unit
+      const getUnit = this.$store.getters['units/getById'];
+      return entries.map(categoryEntries => {
+        return categoryEntries.map(entry => {
+          const urls = getUnitImageUrls({
+            id: entry.id,
+            server: this.$store.state.settings.activeServer,
+            suffix: entry.altArtId ? `_${entry.altArtId}` : '',
+          });
+
+          return {
+            ...entry,
+            // TODO: make configurable
+            imgUrl: urls.ills_thum,
+            name: (getUnit(entry.id) || {}).name || entry.id,
+          };
+        });
+      });
+    },
   },
   watch: {
     downloadLink (newValue, oldValue) {
@@ -313,6 +312,27 @@ export default {
         }
       },
     },
+    inputCategories (newVal) {
+      this.updateKeyInSvgConfig('categories', newVal);
+    },
+    inputEntries (newVal) {
+      this.updateKeyInSvgConfig('entries', this.getExpandedInputEntries(newVal));
+    },
+    currentConfigCode (newVal) {
+      if (newVal !== this.$route.query.code) {
+        this.$router.replace({
+          path: this.$route.path,
+          query: {
+            ...this.$route.query,
+            code: newVal,
+          },
+        });
+      }
+    },
+  },
+  mounted () {
+    this.updateKeyInSvgConfig('categories', this.inputCategories);
+    this.updateKeyInSvgConfig('entries', this.getExpandedInputEntries(this.inputEntries));
   },
 };
 </script>

@@ -1,13 +1,13 @@
 import colors from 'vuetify/es5/util/colors';
 import { convertCompareCodeToInput } from './compare';
 
-export function convertCodeToCategory (input = '') {
+export function convertCodeToCategory (input = '', isUriComponent = true) {
   const [name, textColor, backgroundColor] = input.split('-');
 
   let result;
   if (name) {
     result = {
-      name,
+      name: isUriComponent ? decodeURIComponent(name) : name,
       // text and background color are hex values without hashes
       textColor: textColor ? `#${textColor}` : colors.shades.black,
       backgroundColor: backgroundColor ? `#${backgroundColor}` : colors.shades.white,
@@ -29,7 +29,7 @@ export function convertCategoryToCode ({ name, textColor, backgroundColor }) {
   } else {
     backgroundColorCode = '';
   }
-  return `${name}-${textColorCode}-${backgroundColorCode}`;
+  return `${encodeURIComponent(name)}-${textColorCode}-${backgroundColorCode}`;
 }
 
 export function convertCodeToEntry (input = '') {

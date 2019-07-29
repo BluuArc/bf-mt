@@ -41,8 +41,7 @@ export default [
     component: ToolsPages.TierListCreator,
     props: (route) => ({
       server: servers.includes(route.query.server) ? route.query.server : 'gl',
-      categories: route.query.categories || '',
-      entries: route.query.entries || '',
+      code: route.query.code || '',
     }),
   },
 ];

@@ -68,6 +68,14 @@ export default {
       alternateArtId: '',
     };
   },
+  watch: {
+    entry: {
+      immediate: true,
+      handler (newValue) {
+        this.alternateArtId = newValue.altArtId || '';
+      },
+    },
+  },
 };
 </script>
 

@@ -1,5 +1,8 @@
 <template>
-  <module-checker :requiredModules="requiredModules">
+  <module-checker
+    :requiredModules="requiredModules"
+    :ensureDbSync="true"
+  >
     <tier-list-creator-page
       :categories="categories"
       :entries="entries"
