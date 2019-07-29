@@ -135,6 +135,7 @@ export default {
           [
             {
               name: 'Prophetic Tate & Tama',
+              id: '10011',
               imgUrl: 'https://dv5bk1m8igv7v.cloudfront.net/asset/2220/content/unit/img/unit_ills_thum_10011.png',
               base64Url: null,
               // fontSize: '1em',
@@ -144,6 +145,7 @@ export default {
             },
             {
               name: 'Bond of Rih\'alnase',
+              id: '20011',
               imgUrl: 'https://dv5bk1m8igv7v.cloudfront.net/asset/2220/content/unit/img/unit_ills_thum_20011.png',
               base64Url: null,
             },
@@ -152,6 +154,7 @@ export default {
             ...new Array(10).fill(0).map(() => ({
               name: 'Burny',
               imgUrl: 'https://dv5bk1m8igv7v.cloudfront.net/asset/2220/content/unit/img/unit_ills_thum_10032.png',
+              id: '10032',
               base64Url: null,
             })),
           ],
@@ -159,6 +162,7 @@ export default {
             ...new Array(15).fill(0).map(() => ({
               name: 'Squirty',
               imgUrl: 'https://dv5bk1m8igv7v.cloudfront.net/asset/2220/content/unit/img/unit_ills_thum_20032.png',
+              id: '20032',
               base64Url: null,
             })),
           ],

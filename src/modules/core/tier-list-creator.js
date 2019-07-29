@@ -1,12 +1,65 @@
 import colors from 'vuetify/es5/util/colors';
 import { convertCompareCodeToInput } from './compare';
 
-export function convertCodeToInput (input = '') {
-  return convertCompareCodeToInput(input);
+export function convertCodeToCategory (input = '') {
+  const [name, textColor, backgroundColor] = input.split('-');
+
+  let result;
+  if (name) {
+    result = {
+      name,
+      // text and background color are hex values without hashes
+      textColor: textColor ? `#${textColor}` : colors.shades.black,
+      backgroundColor: backgroundColor ? `#${backgroundColor}` : colors.shades.white,
+    };
+  }
+  return result;
 }
 
-export function convertInputToCode ({ type = '', id = '' }) {
-  return `${type}-${id}`;
+export function convertCategoryToCode ({ name, textColor, backgroundColor }) {
+  let textColorCode, backgroundColorCode;
+  if (textColor) {
+    textColorCode = textColor[0] === '#' ? textColor.slice(1): textColor;
+  } else {
+    textColorCode = '';
+  }
+
+  if (backgroundColor) {
+    backgroundColorCode = backgroundColor[0] === '#' ? backgroundColor.slice(1) : backgroundColor;
+  } else {
+    backgroundColorCode = '';
+  }
+  return `${name}-${textColorCode}-${backgroundColorCode}`;
+}
+
+export function convertCodeToEntry (input = '') {
+  const convertedInput = convertCompareCodeToInput(input);
+  let result;
+  if (convertedInput) {
+    result = {
+      type: convertedInput.type,
+      id: convertedInput.id,
+      altArtId: convertedInput.options || '',
+    };
+  }
+  return result;
+}
+
+export function convertEntryToCode ({ type, id, altArtId }) {
+  const baseCode = `${type}-${id}`;
+  return altArtId
+    ? `${baseCode}_${altArtId}`
+    : baseCode;
+}
+
+export function generateTierListCode (categories = [], entries = []) {
+  const categoriesCode = categories
+    .map(convertCategoryToCode)
+    .join(',');
+  const entriesCode = entries
+    .map(categoryEntries => categoryEntries.map(convertEntryToCode).join(','))
+    .join('!');
+  return `${categoriesCode}.${entriesCode}`;
 }
 
 export function fetchBase64Png (url = '') {

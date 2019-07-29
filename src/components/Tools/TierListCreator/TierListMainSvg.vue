@@ -129,7 +129,7 @@ import FlowText from '@/components/SvgFlowText';
 
 const GENERAL_SVG_CONFIG = {
   ENTRY_SIZE: 70,
-  MAX_ENTRIES_PER_ROW: 10,
+  MAX_ENTRIES_PER_ROW: 8, // TODO: make configurable
   BASE_ROW_HEIGHT: 70,
   CATEGORY_WIDTH: 100,
   PADDING: 10,
