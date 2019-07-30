@@ -54,10 +54,12 @@
               <individual-entry-config
                 :entry="entry"
                 :entryIndex="e"
-                :numCategories="getEntriesForCategory(c).length"
+                :categories="categories"
+                :currentCategoryIndex="c"
                 @indexchange="newIndex => swapOrderForEntry(e, newIndex, c)"
                 @delete="deleteEntry(entry, c)"
                 @entry="newEntry => replaceEntry(e, newEntry, c)"
+                @movecategory="newIndex => moveEntryToCategory(entry, c, newIndex)"
               />
             </li>
             <li>
@@ -162,6 +164,18 @@ export default {
       const newFullEntries = this.value.entries.slice();
       if (newFullEntries[categoryIndex]) {
         newFullEntries[categoryIndex] = categoryEntries.map((e, i) => i !== entryIndex ? e : newEntry);
+        this.emitNewValue({
+          entries: newFullEntries,
+        });
+      }
+    },
+    moveEntryToCategory (entry, oldCategoryIndex, newCategoryIndex) {
+      const oldCategoryEntries = this.getEntriesForCategory(oldCategoryIndex);
+      const newCategoryEntries = this.getEntriesForCategory(newCategoryIndex);
+      const newFullEntries = this.value.entries.slice();
+      if (newFullEntries[oldCategoryIndex] && newFullEntries[newCategoryIndex]) {
+        newFullEntries[oldCategoryIndex] = oldCategoryEntries.filter(e => e !== entry);
+        newFullEntries[newCategoryIndex] = newCategoryEntries.concat([entry]);
         this.emitNewValue({
           entries: newFullEntries,
         });

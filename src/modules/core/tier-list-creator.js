@@ -56,8 +56,8 @@ export function generateTierListCode (categories = [], entries = []) {
   const categoriesCode = categories
     .map(convertCategoryToCode)
     .join(',');
-  const entriesCode = entries
-    .map(categoryEntries => categoryEntries.map(convertEntryToCode).join(','))
+  const entriesCode = categories
+    .map((_, i) => (entries[i] || []).map(convertEntryToCode).join(','))
     .join('!');
   return `${categoriesCode}.${entriesCode}`;
 }

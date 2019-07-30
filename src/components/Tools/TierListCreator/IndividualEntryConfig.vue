@@ -28,10 +28,51 @@
         </v-layout>
       </v-layout>
       <v-layout>
-        <!-- TODO -->
-        <v-btn outline block>
-          Move to Category
-        </v-btn>
+        <v-dialog
+          v-model="showCategoriesDialog"
+          lazy
+          scrollable
+          max-width="500"
+        >
+          <template slot="activator" slot-scope="{ on }">
+            <v-btn outline block v-on="on">
+              Move to Category
+            </v-btn>
+          </template>
+          <v-card>
+            <v-card-title>
+              Select New Category for {{ entry.name }}
+            </v-card-title>
+            <v-divider/>
+            <v-card-text style="max-height: 300px;">
+              <v-list>
+                <template v-for="(category, c) in categories">
+                  <v-list-tile
+                    :disabled="c === currentCategoryIndex"
+                    @click="moveToNewCategory(c)"
+                    :key="`${category.name}-${c}`"
+                  >
+                    <v-list-tile-content>
+                      <v-list-tile-title>
+                        {{ category.name }}
+                      </v-list-tile-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
+                  <v-divider
+                    v-if="c < numCategories + 1"
+                    :key="c"
+                  />
+                </template>
+              </v-list>
+            </v-card-text>
+            <v-card-actions>
+              <v-spacer/>
+              <v-btn flat @click="showCategoriesDialog = false">
+                Cancel
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
       </v-layout>
     </v-layout>
     <div>
@@ -55,18 +96,28 @@ export default {
       type: Object,
       required: true,
     },
-    numCategories: {
-      type: Number,
-      default: 0,
+    categories: {
+      type: Array,
+      default: () => [],
     },
     entryIndex: {
       type: Number,
       default: 0,
     },
+    currentCategoryIndex: {
+      type: Number,
+      default: 0,
+    },
+  },
+  computed: {
+    numCategories () {
+      return this.categories.length;
+    },
   },
   data () {
     return {
       alternateArtId: '',
+      showCategoriesDialog: false,
     };
   },
   methods: {
@@ -75,6 +126,10 @@ export default {
         ...this.entry,
         altArtId: this.alternateArtId || '',
       });
+    },
+    moveToNewCategory (newIndex)  {
+      this.showCategoriesDialog = false;
+      this.$emit('movecategory', newIndex);
     },
   },
   watch: {

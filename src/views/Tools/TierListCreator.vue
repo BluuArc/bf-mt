@@ -45,18 +45,15 @@ export default {
         .filter(v => v);
     },
     entries () {
-      const numCategories = this.categories.length;
-      return this.splitCode.entriesCode
-        .split('!')
-        .map((categoryEntries, i) => {
-          if (i < numCategories) {
-            return categoryEntries
-              .split(',')
-              .map(convertCodeToEntry)
-              .filter(v => v);
-          }
-        })
-        .filter(v => v);
+      const rawEntries = this.splitCode.entriesCode.split('!');
+      return this.categories
+        .map((_, i) => {
+          const categoryEntries = rawEntries[i] || '';
+          return categoryEntries
+            .split(',')
+            .map(convertCodeToEntry)
+            .filter(v => v);
+        });
     },
   },
 };
