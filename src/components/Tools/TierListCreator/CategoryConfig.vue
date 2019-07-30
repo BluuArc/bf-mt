@@ -51,7 +51,14 @@
               v-for="(entry, e) in getEntriesForCategory(c)"
               :key="`${entry.id || entry.name || entry.imgUrl}-${e}`"
             >
-              <individual-entry-config :entry="entry" :entryIndex="e" :numCategories="getEntriesForCategory(c).length"/>
+              <individual-entry-config
+                :entry="entry"
+                :entryIndex="e"
+                :numCategories="getEntriesForCategory(c).length"
+                @indexchange="newIndex => swapOrderForEntry(e, newIndex, c)"
+                @delete="deleteEntry(entry, c)"
+                @entry="newEntry => replaceEntry(e, newEntry, c)"
+              />
             </li>
             <li>
               <v-btn flat large>
@@ -112,6 +119,53 @@ export default {
       return this.hasEntries && Array.isArray(this.value.entries[index])
         ? this.value.entries[index]
         : [];
+    },
+    emitNewValue (newValue = {}) {
+      this.$emit('input', {
+        ...this.value,
+        ...newValue,
+      });
+    },
+    swapOrderForEntry (newIndex, oldIndex, categoryIndex) {
+      const categoryEntries = this.getEntriesForCategory(categoryIndex);
+      if (categoryEntries[oldIndex] && categoryEntries[newIndex]) {
+        const currentEntry = categoryEntries[oldIndex];
+        const entryToSwap = categoryEntries[newIndex];
+
+        const newFullEntries = this.value.entries.slice();
+        newFullEntries[categoryIndex] = categoryEntries.map(entry => {
+          if (entry === currentEntry) {
+            return entryToSwap;
+          } else if (entry === entryToSwap) {
+            return currentEntry;
+          } else {
+            return entry;
+          }
+        });
+        this.emitNewValue({
+          entries: newFullEntries,
+        });
+      }
+    },
+    deleteEntry (entryToDelete, categoryIndex) {
+      const categoryEntries = this.getEntriesForCategory(categoryIndex);
+      const newFullEntries = this.value.entries.slice();
+      if (newFullEntries[categoryIndex]) {
+        newFullEntries[categoryIndex] = categoryEntries.filter(e => e !== entryToDelete);
+        this.emitNewValue({
+          entries: newFullEntries,
+        });
+      }
+    },
+    replaceEntry (entryIndex, newEntry, categoryIndex) {
+      const categoryEntries = this.getEntriesForCategory(categoryIndex);
+      const newFullEntries = this.value.entries.slice();
+      if (newFullEntries[categoryIndex]) {
+        newFullEntries[categoryIndex] = categoryEntries.map((e, i) => i !== entryIndex ? e : newEntry);
+        this.emitNewValue({
+          entries: newFullEntries,
+        });
+      }
     },
   },
 };

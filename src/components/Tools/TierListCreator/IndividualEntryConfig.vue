@@ -23,24 +23,25 @@
                 v-model="alternateArtId"
               />
             </v-flex>
-            <v-btn flat>Apply</v-btn>
+            <v-btn flat @click="applyNewAlternateId">Apply</v-btn>
           </v-layout>
         </v-layout>
       </v-layout>
       <v-layout>
+        <!-- TODO -->
         <v-btn outline block>
           Move to Category
         </v-btn>
       </v-layout>
     </v-layout>
     <div>
-      <v-btn block flat :disabled="entryIndex === 0">
+      <v-btn block flat :disabled="entryIndex === 0" @click="$emit('indexchange', entryIndex - 1)">
         <v-icon>keyboard_arrow_up</v-icon>
       </v-btn>
-      <v-btn block flat>
+      <v-btn block flat @click="$emit('delete')">
         <v-icon>close</v-icon>
       </v-btn>
-      <v-btn block flat :disabled="entryIndex === numCategories - 1">
+      <v-btn block flat :disabled="entryIndex === numCategories - 1" @click="$emit('indexchange', entryIndex + 1)">
         <v-icon>keyboard_arrow_down</v-icon>
       </v-btn>
     </div>
@@ -67,6 +68,14 @@ export default {
     return {
       alternateArtId: '',
     };
+  },
+  methods: {
+    applyNewAlternateId () {
+      this.$emit('entry', {
+        ...this.entry,
+        altArtId: this.alternateArtId || '',
+      });
+    },
   },
   watch: {
     entry: {
