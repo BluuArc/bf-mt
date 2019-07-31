@@ -15,7 +15,15 @@
           <v-icon>keyboard_arrow_right</v-icon>
         </v-btn>
         <div class="category-order-config--category-entry-header-config">
-          <v-text-field label="Category Name" :value="category.name"/>
+          <v-layout align-baseline>
+            <v-text-field
+              label="Category Name"
+              :value="editableNameValues[c] || category.name"
+              @input="$v => editableNameValues[c] = $v"/>
+            <v-btn flat @click="updateCategoryValue(c, { name: editableNameValues[c] })">
+              Apply
+            </v-btn>
+          </v-layout>
           <v-layout row wrap>
             <v-flex>
               <label>
@@ -33,13 +41,13 @@
         </div>
         <v-spacer/>
         <div>
-          <v-btn block flat :disabled="c === 0">
+          <v-btn block flat :disabled="c === 0" @click="swapOrderForCategory(c, c - 1)">
             <v-icon>keyboard_arrow_up</v-icon>
           </v-btn>
           <v-btn block flat>
             <v-icon>close</v-icon>
           </v-btn>
-          <v-btn block flat :disabled="c === categories.length - 1">
+          <v-btn block flat :disabled="c === categories.length - 1" @click="swapOrderForCategory(c, c + 1)">
             <v-icon>keyboard_arrow_down</v-icon>
           </v-btn>
         </div>
@@ -74,7 +82,7 @@
       </v-expansion-panel>
     </li>
     <li>
-      <v-btn flat large>
+      <v-btn flat large @click="addCategory">
         <v-icon>add</v-icon>
         Add Category
       </v-btn>
@@ -94,8 +102,10 @@
 </template>
 
 <script>
+import { convertCodeToCategory } from '@/modules/core/tier-list-creator';
 import UnitSelector from '@/components/Tools/Squads/MultidexSelectors/UnitSelector';
 import IndividualEntryConfig from './IndividualEntryConfig';
+import throttle from 'lodash/throttle';
 
 export default {
   components: {
@@ -126,6 +136,7 @@ export default {
       expandedEntries: [],
       activeDialog: '',
       categoryToAddTo: -1,
+      editableNameValues: {},
     };
   },
   methods: {
@@ -220,6 +231,58 @@ export default {
           categoryIndex,
         );
       }
+    },
+    addCategory () {
+      const newCategory = convertCodeToCategory('Category');
+      this.emitNewValue({
+        categories: this.categories.concat([newCategory]),
+        entries: this.allEntries.concat([]),
+      });
+    },
+    swapOrderForCategory (oldIndex, newIndex) {
+      const { categories } = this;
+      if (categories[oldIndex] && categories[newIndex]) {
+        const categoryAtOldIndex = categories[oldIndex];
+        const categoryAtNewIndex = categories[newIndex];
+        const entriesAtOldIndex = this.getEntriesForCategory(oldIndex);
+        const entriesAtNewIndex = this.getEntriesForCategory(newIndex);
+
+        const newCategories = categories.slice();
+        const newEntries = this.allEntries.slice();
+
+        newCategories[oldIndex] = categoryAtNewIndex;
+        newCategories[newIndex] = categoryAtOldIndex;
+        newEntries[oldIndex] = entriesAtNewIndex;
+        newEntries[newIndex] = entriesAtOldIndex;
+
+        this.emitNewValue({
+          categories: newCategories,
+          entries: newEntries,
+        });
+      }
+    },
+    updateCategoryValue (categoryIndex, newValue = {}) {
+      const { categories } = this;
+      if (categories[categoryIndex]) {
+        const newCategories = categories.slice();
+        newCategories[categoryIndex] = {
+          ...categories[categoryIndex],
+          ...newValue,
+        };
+
+        this.emitNewValue({
+          categories: newCategories,
+        });
+      }
+    },
+    throttledUpdateCategoryValue: throttle(function(index, value) {
+      this.updateCategoryValue(index, value);
+    }, 500),
+  },
+  watch: {
+    value () {
+      // reset name fields on new config
+      this.editableNameValues = {};
     },
   },
 };
