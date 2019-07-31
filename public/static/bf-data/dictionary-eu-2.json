@@ -1,4 +1,20 @@
 {
+  "MST_LEADERSKILLS_7430_DESCRIPTION": {
+    "en": "40% boost to Atk, max HP, damage taken considerably boosts BB gauge, hugely boosts Atk when damage taken has exceeded certain amount for 2 turns & slight probability of enormous damage reduction",
+    "es": "40% boost to Atk, max HP, damage taken considerably boosts BB gauge, hugely boosts Atk when damage taken has exceeded certain amount for 2 turns & slight probability of enormous damage reduction",
+    "id": "40% ekstra Serang, HP maks, kerusakan diderita lumayan menambah meteran BB, amat menambah Serangan saat kerusakan diderita melampaui jumlah tertentu - 2 giliran & lkans kecil pengurangan jumbo kerusakan",
+    "pt": "40% boost to Atk, max HP, damage taken considerably boosts BB gauge, hugely boosts Atk when damage taken has exceeded certain amount for 2 turns & slight probability of enormous damage reduction",
+    "th": "40% เพิ่มค่า โจมตี, HP สูงสุด, ความเสียหายที่ได้รับ เพิ่มค่า เกจ BB อย่างมาก, เพิ่มค่า โจมตี อย่างสูง เมื่อ ความเสียหายที่ได้รับเกินกว่าปริมาณหนึ่ง นาน 2 เทิร์น และ มีโอกาสเล็กน้อยที่จะ ลดค่าความเสียหายมหาศาล",
+    "vi": "40% boost to Atk, max HP, damage taken considerably boosts BB gauge, hugely boosts Atk when damage taken has exceeded certain amount for 2 turns & slight probability of enormous damage reduction"
+  },
+  "MST_LEADERSKILLS_7430_NAME": {
+    "en": "War God's Wrath",
+    "es": "War God's Wrath",
+    "id": "Murka Dewa Perang",
+    "pt": "War God's Wrath",
+    "th": "วอร์ ก็อดส ฮราธ",
+    "vi": "War God's Wrath"
+  },
   "MST_LEADERSKILLS_7431_DESCRIPTION": {
     "en": "30% boost to Atk, max HP & 100% boost to Spark damage",
     "es": "30% boost to Atk, max HP & 100% boost to Spark damage",
@@ -7870,6 +7886,22 @@
     "pt": "Sikuri Savant",
     "th": "Sikuri Savant",
     "vi": "Sikuri Savant"
+  },
+  "MST_LEADERSKILLS_830708_DESCRIPTION": {
+    "en": "200% boost to Atk and 100% boost to Def, max HP of Earth types, 180% boost to Spark damage, enormously boosts Earth elemental damage, 15% damage reduction from Earth, Thunder types & adds Def ignoring effect to attack",
+    "es": "200% boost to Atk and 100% boost to Def, max HP of Earth types, 180% boost to Spark damage, enormously boosts Earth elemental damage, 15% damage reduction from Earth, Thunder types & adds Def ignoring effect to attack",
+    "id": "200% boost to Atk and 100% boost to Def, max HP of Earth types, 180% boost to Spark damage, enormously boosts Earth elemental damage, 15% damage reduction from Earth, Thunder types & adds Def ignoring effect to attack",
+    "pt": "200% boost to Atk and 100% boost to Def, max HP of Earth types, 180% boost to Spark damage, enormously boosts Earth elemental damage, 15% damage reduction from Earth, Thunder types & adds Def ignoring effect to attack",
+    "th": "200% boost to Atk and 100% boost to Def, max HP of Earth types, 180% boost to Spark damage, enormously boosts Earth elemental damage, 15% damage reduction from Earth, Thunder types & adds Def ignoring effect to attack",
+    "vi": "200% boost to Atk and 100% boost to Def, max HP of Earth types, 180% boost to Spark damage, enormously boosts Earth elemental damage, 15% damage reduction from Earth, Thunder types & adds Def ignoring effect to attack"
+  },
+  "MST_LEADERSKILLS_830708_NAME": {
+    "en": "Trance of the Hunt",
+    "es": "Trance of the Hunt",
+    "id": "Trance of the Hunt",
+    "pt": "Trance of the Hunt",
+    "th": "Trance of the Hunt",
+    "vi": "Trance of the Hunt"
   },
   "MST_LEADERSKILLS_830767_DESCRIPTION": {
     "en": "80% boost to Atk, Def, Rec, 100% boost to max HP, probable damage reduction to 1, boosts damage reduction when guarding & damage taken may considerably restore HP",

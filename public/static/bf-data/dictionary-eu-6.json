@@ -1,68 +1,4 @@
 {
-  "MST_SKILLS_2840438_DESCRIPTION": {
-    "en": "22 combo massive Thunder attack on all foes, 25 combo massive Thunder attack on single foe (damage relative to remaining HP, with enormously boosted critical hit rate), enormously boosts Spark damage for 3 turns, hugely boosts max HP, enormously boosts own critical damage for 1 turn & enormously boosts OD gauge at turn's end for 3 turns",
-    "es": "22 combo massive Thunder attack on all foes, 25 combo massive Thunder attack on single foe (damage relative to remaining HP, with enormously boosted critical hit rate), enormously boosts Spark damage for 3 turns, hugely boosts max HP, enormously boosts own critical damage for 1 turn & enormously boosts OD gauge at turn's end for 3 turns",
-    "id": "22 combo massive Thunder attack on all foes, 25 combo massive Thunder attack on single foe (damage relative to remaining HP, with enormously boosted critical hit rate), enormously boosts Spark damage for 3 turns, hugely boosts max HP, enormously boosts own critical damage for 1 turn & enormously boosts OD gauge at turn's end for 3 turns",
-    "pt": "22 combo massive Thunder attack on all foes, 25 combo massive Thunder attack on single foe (damage relative to remaining HP, with enormously boosted critical hit rate), enormously boosts Spark damage for 3 turns, hugely boosts max HP, enormously boosts own critical damage for 1 turn & enormously boosts OD gauge at turn's end for 3 turns",
-    "th": "22 combo massive Thunder attack on all foes, 25 combo massive Thunder attack on single foe (damage relative to remaining HP, with enormously boosted critical hit rate), enormously boosts Spark damage for 3 turns, hugely boosts max HP, enormously boosts own critical damage for 1 turn & enormously boosts OD gauge at turn's end for 3 turns",
-    "vi": "22 combo massive Thunder attack on all foes, 25 combo massive Thunder attack on single foe (damage relative to remaining HP, with enormously boosted critical hit rate), enormously boosts Spark damage for 3 turns, hugely boosts max HP, enormously boosts own critical damage for 1 turn & enormously boosts OD gauge at turn's end for 3 turns"
-  },
-  "MST_SKILLS_2840438_NAME": {
-    "en": "Primal Joyous Slaughter",
-    "es": "Primal Joyous Slaughter",
-    "id": "Primal Joyous Slaughter",
-    "pt": "Primal Joyous Slaughter",
-    "th": "Primal Joyous Slaughter",
-    "vi": "Primal Joyous Slaughter"
-  },
-  "MST_SKILLS_2840507_DESCRIPTION": {
-    "en": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec and Spark damage for 5 turns & enormously boosts OD gauge",
-    "es": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec and Spark damage for 5 turns & enormously boosts OD gauge",
-    "id": "Serangan Guntur masif ke semua musuh (kerusakan sesuai sisa HP), serangan Guntur masif ke 1 musuh, ekstra jumbo Serang, Tahan, Pulih 3 giliran, ekstra jumbo Serang, Tahan, Pulih, kerusakan Percikan sendiri 5 giliran & ekstra jumbo meteran OD",
-    "pt": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec and Spark damage for 5 turns & enormously boosts OD gauge",
-    "th": "โจมตีธาตุสายฟ้ารุนแรงมหาศาล ใส่ศัตรูทั้งหมด (ความเสียหาย สัมพันธ์กับ HP ที่เหลืออยู่), โจมตีธาตุสายฟ้ารุนแรงมหาศาล ใส่ศัตรูเป้าหมาย, เพิ่มค่ามหาศาลให้ โจมตี, ป้องกัน, ฟื้นฟู นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ โจมตี ของตนเอง, ป้องกัน, ฟื้นฟู กับ ความเสียหายสปาร์ค นาน 5 เทิร์น และ เพิ่มค่ามหาศาลให้ เกจ OD",
-    "vi": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec and Spark damage for 5 turns & enormously boosts OD gauge"
-  },
-  "MST_SKILLS_2840507_NAME": {
-    "en": "Golden Storm Bolt",
-    "es": "Golden Storm Bolt",
-    "id": "Petir Badai Emas",
-    "pt": "Golden Storm Bolt",
-    "th": "โกลเด้น สตอร์ม โบลท์",
-    "vi": "Golden Storm Bolt"
-  },
-  "MST_SKILLS_2840508_DESCRIPTION": {
-    "en": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts own Spark damage for 5 turns & enormously boosts OD gauge",
-    "es": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts own Spark damage for 5 turns & enormously boosts OD gauge",
-    "id": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts own Spark damage for 5 turns & enormously boosts OD gauge",
-    "pt": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts own Spark damage for 5 turns & enormously boosts OD gauge",
-    "th": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts own Spark damage for 5 turns & enormously boosts OD gauge",
-    "vi": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts own Spark damage for 5 turns & enormously boosts OD gauge"
-  },
-  "MST_SKILLS_2840508_NAME": {
-    "en": "Universe-Devouring Bolt",
-    "es": "Universe-Devouring Bolt",
-    "id": "Petir Pemangsa Semesta",
-    "pt": "Universe-Devouring Bolt",
-    "th": "ยูนิเวิร์ส-ดิวาวริง โบลท์",
-    "vi": "Universe-Devouring Bolt"
-  },
-  "MST_SKILLS_2840547_DESCRIPTION": {
-    "en": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
-    "es": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
-    "id": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
-    "pt": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
-    "th": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
-    "vi": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns"
-  },
-  "MST_SKILLS_2840547_NAME": {
-    "en": "Lightning Beam Lv. 3",
-    "es": "Lightning Beam Lv. 3",
-    "id": "Lightning Beam Lv. 3",
-    "pt": "Lightning Beam Lv. 3",
-    "th": "Lightning Beam Lv. 3",
-    "vi": "Lightning Beam Lv. 3"
-  },
   "MST_SKILLS_2840548_DESCRIPTION": {
     "en": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
     "es": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
@@ -21174,6 +21110,22 @@
     "pt": "Hisa! Tama! Electric Gale!",
     "th": "Hisa! Tama! Electric Gale!",
     "vi": "Hisa! Tama! Electric Gale!"
+  },
+  "MST_SKILLS_3830708_DESCRIPTION": {
+    "en": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Spark damage, Earth elemental damage, adds status ailment infliction to attack, purges LS and ES Lock effects from all allies, raises normal hit amount, normal attacks hit all foes & massive DoT on all foes",
+    "es": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Spark damage, Earth elemental damage, adds status ailment infliction to attack, purges LS and ES Lock effects from all allies, raises normal hit amount, normal attacks hit all foes & massive DoT on all foes",
+    "id": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Spark damage, Earth elemental damage, adds status ailment infliction to attack, purges LS and ES Lock effects from all allies, raises normal hit amount, normal attacks hit all foes & massive DoT on all foes",
+    "pt": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Spark damage, Earth elemental damage, adds status ailment infliction to attack, purges LS and ES Lock effects from all allies, raises normal hit amount, normal attacks hit all foes & massive DoT on all foes",
+    "th": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Spark damage, Earth elemental damage, adds status ailment infliction to attack, purges LS and ES Lock effects from all allies, raises normal hit amount, normal attacks hit all foes & massive DoT on all foes",
+    "vi": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Spark damage, Earth elemental damage, adds status ailment infliction to attack, purges LS and ES Lock effects from all allies, raises normal hit amount, normal attacks hit all foes & massive DoT on all foes"
+  },
+  "MST_SKILLS_3830708_NAME": {
+    "en": "Fleshrend Pandemic",
+    "es": "Fleshrend Pandemic",
+    "id": "Fleshrend Pandemic",
+    "pt": "Fleshrend Pandemic",
+    "th": "Fleshrend Pandemic",
+    "vi": "Fleshrend Pandemic"
   },
   "MST_SKILLS_3840608_DESCRIPTION": {
     "en": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, critical hit rate, critical damage, Spark damage, Thunder and Light elemental damage, damage against status afflicted foes, activates BB/SBB/UBB twice & adds status ailment infliction to attack",
@@ -89582,5 +89534,85 @@
     "pt": "15 combo powerful Earth attack on all foes, powerful additional attack at turn's end for 3 turns, adds probable great 1 turn Atk, Def, Rec reduction effect to attack for 3 turns, hugely boosts Atk, Def, Rec for 3 turns & fixed damage Earth attack on all foes",
     "th": "15 combo powerful Earth attack on all foes, powerful additional attack at turn's end for 3 turns, adds probable great 1 turn Atk, Def, Rec reduction effect to attack for 3 turns, hugely boosts Atk, Def, Rec for 3 turns & fixed damage Earth attack on all foes",
     "vi": "15 combo powerful Earth attack on all foes, powerful additional attack at turn's end for 3 turns, adds probable great 1 turn Atk, Def, Rec reduction effect to attack for 3 turns, hugely boosts Atk, Def, Rec for 3 turns & fixed damage Earth attack on all foes"
+  },
+  "MST_SKILLS_830048_NAME": {
+    "en": "DragonSoul X Revenant",
+    "es": "DragonSoul X Revenant",
+    "id": "DragonSoul X Revenant",
+    "pt": "DragonSoul X Revenant",
+    "th": "DragonSoul X Revenant",
+    "vi": "DragonSoul X Revenant"
+  },
+  "MST_SKILLS_830115_DESCRIPTION": {
+    "en": "25 combo powerful Water, Earth attack on all foes, restores HP & boosts BC, HC drop rate for 3 turns",
+    "es": "25 combo powerful Water, Earth attack on all foes, restores HP & boosts BC, HC drop rate for 3 turns",
+    "id": "25 kombo serangan kuat Air, Bumi ke semua musuh, memulihkan HP & menambah perolehan BC, HC untuk 3 giliran",
+    "pt": "25 combo powerful Water, Earth attack on all foes, restores HP & boosts BC, HC drop rate for 3 turns",
+    "th": "25 คอมโบ โจมตีด้วยธาตุน้ำและดินใส่ศัตรูทั้งหมด, ฟื้น HP, เพิ่มอัตราการดรอป BC HC 3 เทิร์น",
+    "vi": "25 combo powerful Water, Earth attack on all foes, restores HP & boosts BC, HC drop rate for 3 turns"
+  },
+  "MST_SKILLS_830115_NAME": {
+    "en": "Chant of the Fae",
+    "es": "Chant of the Fae",
+    "id": "Mantra Fae",
+    "pt": "Chant of the Fae",
+    "th": "ชาน ออฟ เดอะ แฟ",
+    "vi": "Chant of the Fae"
+  },
+  "MST_SKILLS_830116_DESCRIPTION": {
+    "en": "28 combo powerful Water, Earth attack on all foes, hugely restores HP & hugely boosts BC, HC drop rate for 3 turns",
+    "es": "28 combo powerful Water, Earth attack on all foes, hugely restores HP & hugely boosts BC, HC drop rate for 3 turns",
+    "id": "28 kombo serangan kuat Air, Bumi ke semua musuh, amat memulihkan HP & amat menambah perolehan BC, HC untuk 3 giliran",
+    "pt": "28 combo powerful Water, Earth attack on all foes, hugely restores HP & hugely boosts BC, HC drop rate for 3 turns",
+    "th": "28 คอมโบ โจมตีด้วยธาตุน้ำและดินใส่ศัตรูทั้งหมด, ฟื้น HP อย่างมาก, เพิ่มอัตราการดรอป BC HC อย่างมาก3 เทิร์น",
+    "vi": "28 combo powerful Water, Earth attack on all foes, hugely restores HP & hugely boosts BC, HC drop rate for 3 turns"
+  },
+  "MST_SKILLS_830116_NAME": {
+    "en": "Canticle of the Fae",
+    "es": "Canticle of the Fae",
+    "id": "Lagu Gereja Fae",
+    "pt": "Canticle of the Fae",
+    "th": "แซนติเคิล ออฟ เดอะ แฟ",
+    "vi": "Canticle of the Fae"
+  },
+  "MST_SKILLS_830117_DESCRIPTION": {
+    "en": "30 combo powerful Water, Earth attack on all foes, greatly restores HP, removes all status ailments & greatly boosts BC, HC drop rate for 3 turns",
+    "es": "30 combo powerful Water, Earth attack on all foes, greatly restores HP, removes all status ailments & greatly boosts BC, HC drop rate for 3 turns",
+    "id": "30 kombo serangan kuat Air, Bumi ke semua musuh, amat memulihkan HP, membuang semua status penyakit & amat menambah perolehan BC, HC untuk 3 giliran",
+    "pt": "30 combo powerful Water, Earth attack on all foes, greatly restores HP, removes all status ailments & greatly boosts BC, HC drop rate for 3 turns",
+    "th": "30 คอมโบ โจมตีด้วยธาตุน้ำและดินใส่ศัตรูทั้งหมด, ฟื้น HP อย่างมาก, ล้างทุกสถานะผิดปกติ, เพิ่มอัตราการดรอป BC HC อย่างมาก3 เทิร์น",
+    "vi": "30 combo powerful Water, Earth attack on all foes, greatly restores HP, removes all status ailments & greatly boosts BC, HC drop rate for 3 turns"
+  },
+  "MST_SKILLS_830117_NAME": {
+    "en": "Requiem of the Fae",
+    "es": "Requiem of the Fae",
+    "id": "Rekuiem Fae",
+    "pt": "Requiem of the Fae",
+    "th": "รีเควียม ออฟ เดอะ แฟ",
+    "vi": "Requiem of the Fae"
+  },
+  "MST_SKILLS_830118_DESCRIPTION": {
+    "en": "35 combo powerful Earth, Water attack on all foes, hugely restores HP, removes all status ailments, greatly boosts BC, HC, Item drop rates for 3 turns & boosts max HP",
+    "es": "35 combo powerful Earth, Water attack on all foes, hugely restores HP, removes all status ailments, greatly boosts BC, HC, Item drop rates for 3 turns & boosts max HP",
+    "id": "35 combo powerful Earth, Water attack on all foes, hugely restores HP, removes all status ailments, greatly boosts BC, HC, Item drop rates for 3 turns & boosts max HP",
+    "pt": "35 combo powerful Earth, Water attack on all foes, hugely restores HP, removes all status ailments, greatly boosts BC, HC, Item drop rates for 3 turns & boosts max HP",
+    "th": "35 combo powerful Earth, Water attack on all foes, hugely restores HP, removes all status ailments, greatly boosts BC, HC, Item drop rates for 3 turns & boosts max HP",
+    "vi": "35 combo powerful Earth, Water attack on all foes, hugely restores HP, removes all status ailments, greatly boosts BC, HC, Item drop rates for 3 turns & boosts max HP"
+  },
+  "MST_SKILLS_830118_NAME": {
+    "en": "Adoration of the Fae",
+    "es": "Adoration of the Fae",
+    "id": "Pemujaan Fae",
+    "pt": "Adoration of the Fae",
+    "th": "อดอเรชั่น ออฟ เดอะ แฟ",
+    "vi": "Adoration of the Fae"
+  },
+  "MST_SKILLS_830147_DESCRIPTION": {
+    "en": "25 combo powerful Earth attack on all foes, all status ailments removed and negated & great chance of inflicting Paralysis and Poison",
+    "es": "Combo grupal de 25 poderosos ataques térreos. Quita y niega las aflicciones de estados y gran probabilidad de causar Parálisis y Ponzoña",
+    "id": "25 kombo serangan Bumi kuat ke semua musuh, semua status penyakit dibuang dan dinegasi & kans besar memberikan Lumpuh dan Racun",
+    "pt": "Combo de 25 golpes de Terra em todos os inimigos, remove e nega todos os efeitos negativos e grande chance de causar paralisia e envenenamento",
+    "th": "25 คอมโบ โจมตีด้วยธาตุดินใส่ศัตรูทั้งหมด, ล้างทุกสถานะผิดปกติ, มีโอกาสติดสถานะอัมพาตและพิษอย่างมาก",
+    "vi": "25 combo powerful Earth attack on all foes, all status ailments removed and negated & great chance of inflicting Paralysis and Poison"
   }
 }
