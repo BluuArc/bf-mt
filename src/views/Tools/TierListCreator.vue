@@ -41,7 +41,7 @@ export default {
     categories () {
       return this.splitCode.categoriesCode
         .split(',')
-        .map(convertCodeToCategory)
+        .map(code => convertCodeToCategory(code, true))
         .filter(v => v);
     },
     entries () {

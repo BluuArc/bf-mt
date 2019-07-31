@@ -28,13 +28,21 @@
             <v-flex>
               <label>
                 Text Color
-                <input type="color" :value="category.textColor"/>
+                <input
+                  type="color"
+                  :value="category.textColor"
+                  @input="$v => updateCategoryValue(c, { textColor: $v.target.value })"
+                />
               </label>
             </v-flex>
             <v-flex>
               <label>
                 Background Color
-                <input type="color" :value="category.backgroundColor"/>
+                <input
+                  type="color"
+                  :value="category.backgroundColor"
+                  @input="$v => updateCategoryValue(c, { backgroundColor: $v.target.value })"
+                />
               </label>
             </v-flex>
           </v-layout>

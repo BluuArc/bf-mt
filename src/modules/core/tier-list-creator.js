@@ -1,22 +1,18 @@
 import colors from 'vuetify/es5/util/colors';
 import { convertCompareCodeToInput } from './compare';
 
-export function convertCodeToCategory (input = '', isUriComponent = true) {
-  const [name, textColor, backgroundColor] = input.split('-');
+export function convertCodeToCategory (input = '', isUriComponent) {
+  const [name = 'Category', textColor, backgroundColor] = input.split('-');
 
-  let result;
-  if (name) {
-    result = {
-      name: isUriComponent ? decodeURIComponent(name) : name,
-      // text and background color are hex values without hashes
-      textColor: textColor ? `#${textColor}` : colors.shades.black,
-      backgroundColor: backgroundColor ? `#${backgroundColor}` : colors.shades.white,
-    };
-  }
-  return result;
+  return {
+    name: isUriComponent ? decodeURIComponent(name) : name,
+    // text and background color are hex values without hashes
+    textColor: textColor ? `#${textColor}` : colors.shades.black,
+    backgroundColor: backgroundColor ? `#${backgroundColor}` : colors.shades.white,
+  };
 }
 
-export function convertCategoryToCode ({ name, textColor, backgroundColor }) {
+export function convertCategoryToCode ({ name = '', textColor, backgroundColor }) {
   let textColorCode, backgroundColorCode;
   if (textColor) {
     textColorCode = textColor[0] === '#' ? textColor.slice(1): textColor;
@@ -29,7 +25,7 @@ export function convertCategoryToCode ({ name, textColor, backgroundColor }) {
   } else {
     backgroundColorCode = '';
   }
-  return `${encodeURIComponent(name)}-${textColorCode}-${backgroundColorCode}`;
+  return `${encodeURIComponent(name.replace(/-/g, ''))}-${textColorCode}-${backgroundColorCode}`;
 }
 
 export function convertCodeToEntry (input = '') {
