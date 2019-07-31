@@ -82,7 +82,7 @@
       <v-btn block flat @click="$emit('delete')">
         <v-icon>close</v-icon>
       </v-btn>
-      <v-btn block flat :disabled="entryIndex === numCategories - 1" @click="$emit('indexchange', entryIndex + 1)">
+      <v-btn block flat :disabled="entryIndex === numEntries - 1" @click="$emit('indexchange', entryIndex + 1)">
         <v-icon>keyboard_arrow_down</v-icon>
       </v-btn>
     </div>
@@ -95,6 +95,10 @@ export default {
     entry: {
       type: Object,
       required: true,
+    },
+    numEntries: {
+      type: Number,
+      default: 0,
     },
     categories: {
       type: Array,

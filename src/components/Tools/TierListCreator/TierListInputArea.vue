@@ -139,6 +139,11 @@ export default {
     currentConfigCode () {
       return generateTierListCode(this.svgConfig.categories, this.svgConfig.entries);
     },
+    hasEntriesWithoutUrl () {
+      return this.svgConfig.entries.some(categoryEntries => {
+        return categoryEntries.some(entry => !entry.imgUrl);
+      });
+    },
   },
   data () {
     return {
@@ -327,6 +332,11 @@ export default {
             code: newVal,
           },
         });
+      }
+    },
+    hasEntriesWithoutUrl (newValue) {
+      if (newValue) {
+        this.updateKeyInSvgConfig('entries', this.getExpandedInputEntries(this.svgConfig.entries));
       }
     },
   },

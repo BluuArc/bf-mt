@@ -55,6 +55,7 @@
                 :entry="entry"
                 :entryIndex="e"
                 :categories="categories"
+                :numEntries="getEntriesForCategory(c).length"
                 :currentCategoryIndex="c"
                 @indexchange="newIndex => swapOrderForEntry(e, newIndex, c)"
                 @delete="deleteEntry(entry, c)"
@@ -63,7 +64,7 @@
               />
             </li>
             <li>
-              <v-btn flat large>
+              <v-btn flat large @click="() => { categoryToAddTo = c; activeDialog = 'unit'; }">
                 <v-icon>add</v-icon>
                 Add Entry
               </v-btn>
@@ -77,16 +78,29 @@
         <v-icon>add</v-icon>
         Add Category
       </v-btn>
+      <v-dialog
+        :value="!!activeDialog"
+        @input="activeDialog = ''"
+        lazy
+      >
+        <unit-selector
+          v-if="activeDialog === 'unit'"
+          @input="$d => addEntry($d.data, categoryToAddTo)"
+          @cancel="activeDialog = ''"
+        />
+      </v-dialog>
     </li>
   </ul>
 </template>
 
 <script>
+import UnitSelector from '@/components/Tools/Squads/MultidexSelectors/UnitSelector';
 import IndividualEntryConfig from './IndividualEntryConfig';
 
 export default {
   components: {
     IndividualEntryConfig,
+    UnitSelector,
   },
   props: {
     value: {
@@ -103,10 +117,15 @@ export default {
     hasEntries () {
       return Array.isArray(this.value.entries);
     },
+    allEntries () {
+      return this.value.entries;
+    },
   },
   data () {
     return {
       expandedEntries: [],
+      activeDialog: '',
+      categoryToAddTo: -1,
     };
   },
   methods: {
@@ -118,8 +137,8 @@ export default {
       }
     },
     getEntriesForCategory (index) {
-      return this.hasEntries && Array.isArray(this.value.entries[index])
-        ? this.value.entries[index]
+      return this.hasEntries && Array.isArray(this.allEntries[index])
+        ? this.allEntries[index]
         : [];
     },
     emitNewValue (newValue = {}) {
@@ -128,57 +147,78 @@ export default {
         ...newValue,
       });
     },
+    emitNewEntriesForCategory (newEntries, categoryIndex) {
+      if (this.allEntries[categoryIndex]) {
+        const newFullEntries = this.allEntries.slice();
+        newFullEntries[categoryIndex] = newEntries;
+        this.emitNewValue({
+          entries: newFullEntries,
+        });
+      }
+    },
     swapOrderForEntry (newIndex, oldIndex, categoryIndex) {
       const categoryEntries = this.getEntriesForCategory(categoryIndex);
       if (categoryEntries[oldIndex] && categoryEntries[newIndex]) {
         const currentEntry = categoryEntries[oldIndex];
         const entryToSwap = categoryEntries[newIndex];
 
-        const newFullEntries = this.value.entries.slice();
-        newFullEntries[categoryIndex] = categoryEntries.map(entry => {
-          if (entry === currentEntry) {
-            return entryToSwap;
-          } else if (entry === entryToSwap) {
-            return currentEntry;
-          } else {
-            return entry;
-          }
-        });
-        this.emitNewValue({
-          entries: newFullEntries,
-        });
+        this.emitNewEntriesForCategory(
+          categoryEntries.map(entry => {
+            if (entry === currentEntry) {
+              return entryToSwap;
+            } else if (entry === entryToSwap) {
+              return currentEntry;
+            } else {
+              return entry;
+            }
+          }),
+          categoryIndex,
+        );
       }
     },
     deleteEntry (entryToDelete, categoryIndex) {
-      const categoryEntries = this.getEntriesForCategory(categoryIndex);
-      const newFullEntries = this.value.entries.slice();
-      if (newFullEntries[categoryIndex]) {
-        newFullEntries[categoryIndex] = categoryEntries.filter(e => e !== entryToDelete);
-        this.emitNewValue({
-          entries: newFullEntries,
-        });
+      if (this.allEntries[categoryIndex]) {
+        const categoryEntries = this.getEntriesForCategory(categoryIndex);
+        this.emitNewEntriesForCategory(
+          categoryEntries.filter(e => e !== entryToDelete),
+          categoryIndex,
+        );
       }
     },
     replaceEntry (entryIndex, newEntry, categoryIndex) {
-      const categoryEntries = this.getEntriesForCategory(categoryIndex);
-      const newFullEntries = this.value.entries.slice();
-      if (newFullEntries[categoryIndex]) {
-        newFullEntries[categoryIndex] = categoryEntries.map((e, i) => i !== entryIndex ? e : newEntry);
-        this.emitNewValue({
-          entries: newFullEntries,
-        });
+      if (this.allEntries[categoryIndex]) {
+        const categoryEntries = this.getEntriesForCategory(categoryIndex);
+        this.emitNewEntriesForCategory(
+          categoryEntries.map((e, i) => i !== entryIndex ? e : newEntry),
+          categoryIndex,
+        );
       }
     },
     moveEntryToCategory (entry, oldCategoryIndex, newCategoryIndex) {
-      const oldCategoryEntries = this.getEntriesForCategory(oldCategoryIndex);
-      const newCategoryEntries = this.getEntriesForCategory(newCategoryIndex);
-      const newFullEntries = this.value.entries.slice();
-      if (newFullEntries[oldCategoryIndex] && newFullEntries[newCategoryIndex]) {
+      if (this.allEntries[oldCategoryIndex] && this.allEntries[newCategoryIndex]) {
+        const oldCategoryEntries = this.getEntriesForCategory(oldCategoryIndex);
+        const newCategoryEntries = this.getEntriesForCategory(newCategoryIndex);
+        const newFullEntries = this.allEntries.slice();
         newFullEntries[oldCategoryIndex] = oldCategoryEntries.filter(e => e !== entry);
         newFullEntries[newCategoryIndex] = newCategoryEntries.concat([entry]);
         this.emitNewValue({
           entries: newFullEntries,
         });
+      }
+    },
+    async addEntry (unitPromise, categoryIndex) {
+      if (this.allEntries[categoryIndex]) {
+        const categoryEntries = this.getEntriesForCategory(categoryIndex);
+        const data = await unitPromise;
+        this.activeDialog = '';
+        this.emitNewEntriesForCategory(
+          categoryEntries.concat([{
+            type: "unit",
+            name: data.name,
+            id: `${data.id}`,
+          }]),
+          categoryIndex,
+        );
       }
     },
   },
