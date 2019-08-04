@@ -19,7 +19,8 @@
             <v-text-field
               label="Category Name"
               :value="editableNameValues[c] || category.name"
-              @input="$v => editableNameValues[c] = $v"/>
+              @input="$v => editableNameValues[c] = $v"
+            />
             <v-btn flat @click="updateCategoryValue(c, { name: editableNameValues[c] })">
               Apply
             </v-btn>

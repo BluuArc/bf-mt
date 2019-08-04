@@ -15,6 +15,7 @@ import ModuleChecker from '@/components/ModuleChecker';
 import TierListCreatorPage from '@/components/Tools/TierListCreator/Main';
 import { convertCodeToCategory, convertCodeToEntry } from '@/modules/core/tier-list-creator';
 
+const DEFAULT_CODE = 'S-000000-ff8a80,A-000000-ffd180,B-000000-ffee58,C-000000-81c784,D-000000-64b5f6';
 export default {
   props: {
     code: {
@@ -26,13 +27,18 @@ export default {
     ModuleChecker,
     TierListCreatorPage,
   },
+  data () {
+    return {
+      isFirstLoad: true,
+    };
+  },
   computed: {
     requiredModules: () => Object.freeze([
       'units',
       'items',
     ]),
     splitCode () {
-      const [categoriesCode = '', entriesCode = ''] = (this.code || '').split('.');
+      const [categoriesCode = '', entriesCode = ''] = (this.code || (this.isFirstLoad &&  DEFAULT_CODE) || '').split('.');
       return {
         categoriesCode,
         entriesCode,
@@ -54,6 +60,11 @@ export default {
             .map(convertCodeToEntry)
             .filter(v => v);
         });
+    },
+  },
+  watch: {
+    code () {
+      this.isFirstLoad = false;
     },
   },
 };
