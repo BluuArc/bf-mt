@@ -57,9 +57,11 @@
         </v-list>
         <v-btn flat block href="https://github.com/BluuArc/bf-mt/issues" rel="noopener" target="_blank">Report Issues</v-btn>
         <v-footer>
-          <v-btn flat class="pl-2" href="https://github.com/BluuArc/bf-mt" rel="noopener" target="_blank">
-            <v-icon left class="pr-3">fab fa-github</v-icon>
-            GitHub
+          <v-btn title="GitHub Repository" flat icon href="https://github.com/BluuArc/bf-mt" rel="noopener" target="_blank">
+            <v-icon>fab fa-github</v-icon>
+          </v-btn>
+          <v-btn title="Discord Server" flat icon href="https://discord.gg/rSZe3xZ" rel="noopener" target="_blank">
+            <v-icon>fab fa-discord</v-icon>
           </v-btn>
           <v-spacer/>
           <span class="mx-auto pr-3">&copy; {{ new Date().getUTCFullYear() }}</span>
