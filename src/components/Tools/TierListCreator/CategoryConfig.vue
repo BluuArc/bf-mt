@@ -49,13 +49,24 @@
         </div>
         <v-spacer/>
         <div>
-          <v-btn block flat :disabled="c === 0" @click="swapOrderForCategory(c, c - 1)">
+          <v-btn
+            block flat
+            :disabled="c === 0"
+            @click="swapOrderForCategory(c, c - 1)"
+          >
             <v-icon>keyboard_arrow_up</v-icon>
           </v-btn>
-          <v-btn block flat>
+          <v-btn
+            block flat
+            @click="deleteCategory(c)"
+          >
             <v-icon>close</v-icon>
           </v-btn>
-          <v-btn block flat :disabled="c === categories.length - 1" @click="swapOrderForCategory(c, c + 1)">
+          <v-btn
+            block flat
+            :disabled="c === categories.length - 1"
+            @click="swapOrderForCategory(c, c + 1)"
+          >
             <v-icon>keyboard_arrow_down</v-icon>
           </v-btn>
         </div>
@@ -246,6 +257,17 @@ export default {
         categories: this.categories.concat([newCategory]),
         entries: this.allEntries.concat([]),
       });
+    },
+    deleteCategory (categoryIndex) {
+      const { categories } = this;
+      if (categories[categoryIndex]) {
+        const newCategories = categories.filter((_, i) => i !== categoryIndex);
+        const newEntries = this.allEntries.filter((_, i) => i !== categoryIndex);
+        this.emitNewValue({
+          categories: newCategories,
+          entries: newEntries,
+        });
+      }
     },
     swapOrderForCategory (oldIndex, newIndex) {
       const { categories } = this;
