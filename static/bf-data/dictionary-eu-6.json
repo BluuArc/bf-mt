@@ -1,20 +1,4 @@
 {
-  "MST_SKILLS_2840548_DESCRIPTION": {
-    "en": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
-    "es": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
-    "id": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
-    "pt": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
-    "th": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
-    "vi": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns"
-  },
-  "MST_SKILLS_2840548_NAME": {
-    "en": "Lightning Beam MAX",
-    "es": "Lightning Beam MAX",
-    "id": "Lightning Beam MAX",
-    "pt": "Lightning Beam MAX",
-    "th": "Lightning Beam MAX",
-    "vi": "Lightning Beam MAX"
-  },
   "MST_SKILLS_2840557_DESCRIPTION": {
     "en": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
     "es": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
@@ -21031,6 +21015,22 @@
     "th": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, own max HP, BB Atk, Atk, Def, Rec, critical hit rate, critical damage, Spark damage, damage taken restores HP & activates own BB/SBB/UBB twice",
     "vi": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, own max HP, BB Atk, Atk, Def, Rec, critical hit rate, critical damage, Spark damage, damage taken restores HP & activates own BB/SBB/UBB twice"
   },
+  "MST_SKILLS_3810708_DESCRIPTION": {
+    "en": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Spark damage, Fire elemental damage, critical damage, adds status ailment infliction to attack, 100% Fire, Earth damage reduction, Spark vulnerability infliction & massive DoT on all foes",
+    "es": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Spark damage, Fire elemental damage, critical damage, adds status ailment infliction to attack, 100% Fire, Earth damage reduction, Spark vulnerability infliction & massive DoT on all foes",
+    "id": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Spark damage, Fire elemental damage, critical damage, adds status ailment infliction to attack, 100% Fire, Earth damage reduction, Spark vulnerability infliction & massive DoT on all foes",
+    "pt": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Spark damage, Fire elemental damage, critical damage, adds status ailment infliction to attack, 100% Fire, Earth damage reduction, Spark vulnerability infliction & massive DoT on all foes",
+    "th": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Spark damage, Fire elemental damage, critical damage, adds status ailment infliction to attack, 100% Fire, Earth damage reduction, Spark vulnerability infliction & massive DoT on all foes",
+    "vi": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Spark damage, Fire elemental damage, critical damage, adds status ailment infliction to attack, 100% Fire, Earth damage reduction, Spark vulnerability infliction & massive DoT on all foes"
+  },
+  "MST_SKILLS_3810708_NAME": {
+    "en": "Gigablast Pyromancy",
+    "es": "Gigablast Pyromancy",
+    "id": "Gigablast Pyromancy",
+    "pt": "Gigablast Pyromancy",
+    "th": "Gigablast Pyromancy",
+    "vi": "Gigablast Pyromancy"
+  },
   "MST_SKILLS_3810758_DESCRIPTION": {
     "en": "32 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Spark damage, max HP, 100% evasion, fully restores HP, damage taken boosts BB gauge & adds status ailment infliction to attack",
     "es": "32 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Spark damage, max HP, 100% evasion, fully restores HP, damage taken boosts BB gauge & adds status ailment infliction to attack",
@@ -21038,6 +21038,22 @@
     "pt": "32 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Spark damage, max HP, 100% evasion, fully restores HP, damage taken boosts BB gauge & adds status ailment infliction to attack",
     "th": "32 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Spark damage, max HP, 100% evasion, fully restores HP, damage taken boosts BB gauge & adds status ailment infliction to attack",
     "vi": "32 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Spark damage, max HP, 100% evasion, fully restores HP, damage taken boosts BB gauge & adds status ailment infliction to attack"
+  },
+  "MST_SKILLS_3820288_DESCRIPTION": {
+    "en": "60 combo grand dual attack on all foes (damage relative to remaining HP), boosts Def, max HP, Atk relative to Def, Spark damage, Water elemental damage, critical damage, OD gauge, activates Water barrier & perform 1 extra action within the same turn ",
+    "es": "60 combo grand dual attack on all foes (damage relative to remaining HP), boosts Def, max HP, Atk relative to Def, Spark damage, Water elemental damage, critical damage, OD gauge, activates Water barrier & perform 1 extra action within the same turn ",
+    "id": "60 combo grand dual attack on all foes (damage relative to remaining HP), boosts Def, max HP, Atk relative to Def, Spark damage, Water elemental damage, critical damage, OD gauge, activates Water barrier & perform 1 extra action within the same turn ",
+    "pt": "60 combo grand dual attack on all foes (damage relative to remaining HP), boosts Def, max HP, Atk relative to Def, Spark damage, Water elemental damage, critical damage, OD gauge, activates Water barrier & perform 1 extra action within the same turn ",
+    "th": "60 combo grand dual attack on all foes (damage relative to remaining HP), boosts Def, max HP, Atk relative to Def, Spark damage, Water elemental damage, critical damage, OD gauge, activates Water barrier & perform 1 extra action within the same turn ",
+    "vi": "60 combo grand dual attack on all foes (damage relative to remaining HP), boosts Def, max HP, Atk relative to Def, Spark damage, Water elemental damage, critical damage, OD gauge, activates Water barrier & perform 1 extra action within the same turn "
+  },
+  "MST_SKILLS_3820288_NAME": {
+    "en": "All That Remains",
+    "es": "All That Remains",
+    "id": "All That Remains",
+    "pt": "All That Remains",
+    "th": "All That Remains",
+    "vi": "All That Remains"
   },
   "MST_SKILLS_3820628_DESCRIPTION": {
     "en": "34 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Spark damage, max HP, BB gauge, Atk, Def, Rec relative to max HP, 100% damage reduction, raises allies from KO, activates BB/SBB/UBB twice & damage taken restores HP",
@@ -21190,6 +21206,22 @@
     "pt": "70 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Spark damage, OD gauge, Light elemental damage, activates Light barrier, raises allies from KO, 80% KO resistance, 100% damage reduction, 100% DoT reduction & damage taken boosts BB gauge",
     "th": "70 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Spark damage, OD gauge, Light elemental damage, activates Light barrier, raises allies from KO, 80% KO resistance, 100% damage reduction, 100% DoT reduction & damage taken boosts BB gauge",
     "vi": "70 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Spark damage, OD gauge, Light elemental damage, activates Light barrier, raises allies from KO, 80% KO resistance, 100% damage reduction, 100% DoT reduction & damage taken boosts BB gauge"
+  },
+  "MST_SKILLS_3850708_DESCRIPTION": {
+    "en": "44 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk relative to max HP, Spark damage, Light elemental damage, Spark vulnerability infliction, OD gauge fill rate, adds status ailment infliction to attack & raises normal hit amount",
+    "es": "44 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk relative to max HP, Spark damage, Light elemental damage, Spark vulnerability infliction, OD gauge fill rate, adds status ailment infliction to attack & raises normal hit amount",
+    "id": "44 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk relative to max HP, Spark damage, Light elemental damage, Spark vulnerability infliction, OD gauge fill rate, adds status ailment infliction to attack & raises normal hit amount",
+    "pt": "44 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk relative to max HP, Spark damage, Light elemental damage, Spark vulnerability infliction, OD gauge fill rate, adds status ailment infliction to attack & raises normal hit amount",
+    "th": "44 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk relative to max HP, Spark damage, Light elemental damage, Spark vulnerability infliction, OD gauge fill rate, adds status ailment infliction to attack & raises normal hit amount",
+    "vi": "44 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk relative to max HP, Spark damage, Light elemental damage, Spark vulnerability infliction, OD gauge fill rate, adds status ailment infliction to attack & raises normal hit amount"
+  },
+  "MST_SKILLS_3850708_NAME": {
+    "en": "Foregone Fates",
+    "es": "Foregone Fates",
+    "id": "Foregone Fates",
+    "pt": "Foregone Fates",
+    "th": "Foregone Fates",
+    "vi": "Foregone Fates"
   },
   "MST_SKILLS_3850_DESCRIPTION": {
     "en": "None",
@@ -88776,12 +88808,12 @@
     "vi": "One Arrow, One Target"
   },
   "MST_SKILLS_820288_DESCRIPTION": {
-    "en": "22 combo powerful Water attack on all foes, considerably boosts Water types' Atk, Def, Rec for 3 turns, enormously boosts Water types' critical hit rate for 3 turns, greatly restores HP, considerably boosts OD gauge fill rate for 3 turns & adds 1 extra action to self within the same turn",
-    "es": "22 combo powerful Water attack on all foes, considerably boosts Water types' Atk, Def, Rec for 3 turns, enormously boosts Water types' critical hit rate for 3 turns, greatly restores HP, considerably boosts OD gauge fill rate for 3 turns & adds 1 extra action to self within the same turn",
-    "id": "22 kombo serangan Air kuat ke semua musuh, 3 giliran: lumayan menambah Serang, Tahan, Pulih tipe Air, ekstra jumbo pukulan ampuh tipe Air, HP amat pulih, lumayan menambah laju pengisian meteran OD & beri kans 1 tindakan tambahan sendiri dalam 1 giliran",
-    "pt": "22 combo powerful Water attack on all foes, considerably boosts Water types' Atk, Def, Rec for 3 turns, enormously boosts Water types' critical hit rate for 3 turns, greatly restores HP, considerably boosts OD gauge fill rate for 3 turns & adds 1 extra action to self within the same turn",
-    "th": "22 คอมโบ โจมตีธาตุน้ำอย่างแรง ใส่ศัตรูทั้งหมด, เพิ่มค่าอย่างมากให้ โจมตี, ป้องกัน, ฟื้นฟู ของชนิดน้ำ นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ อัตราเกิดคริติคอล ของชนิดน้ำ นาน 3 เทิร์น, ฟื้นคืน HP อย่างมาก, เพิ่มค่าอย่างมากให้ อัตราเติมเกจ OD นาน 3 เทิร์น กับ เพิ่ม 1 คำสั่งพิเศษให้กับตนเองภายในเทิร์นเดียวกัน",
-    "vi": "22 combo powerful Water attack on all foes, considerably boosts Water types' Atk, Def, Rec for 3 turns, enormously boosts Water types' critical hit rate for 3 turns, greatly restores HP, considerably boosts OD gauge fill rate for 3 turns & adds 1 extra action to self within the same turn"
+    "en": "22 combo powerful Water attack on all foes, hugely boosts Atk, Def, Rec and enormously boosts critical hit rate of Water types for 3 turns, greatly restores HP, hugely boosts OD gauge fill rate for 3 turns & adds 1 extra action to self within the same turn",
+    "es": "22 combo powerful Water attack on all foes, hugely boosts Atk, Def, Rec and enormously boosts critical hit rate of Water types for 3 turns, greatly restores HP, hugely boosts OD gauge fill rate for 3 turns & adds 1 extra action to self within the same turn",
+    "id": "22 combo powerful Water attack on all foes, hugely boosts Atk, Def, Rec and enormously boosts critical hit rate of Water types for 3 turns, greatly restores HP, hugely boosts OD gauge fill rate for 3 turns & adds 1 extra action to self within the same turn",
+    "pt": "22 combo powerful Water attack on all foes, hugely boosts Atk, Def, Rec and enormously boosts critical hit rate of Water types for 3 turns, greatly restores HP, hugely boosts OD gauge fill rate for 3 turns & adds 1 extra action to self within the same turn",
+    "th": "22 combo powerful Water attack on all foes, hugely boosts Atk, Def, Rec and enormously boosts critical hit rate of Water types for 3 turns, greatly restores HP, hugely boosts OD gauge fill rate for 3 turns & adds 1 extra action to self within the same turn",
+    "vi": "22 combo powerful Water attack on all foes, hugely boosts Atk, Def, Rec and enormously boosts critical hit rate of Water types for 3 turns, greatly restores HP, hugely boosts OD gauge fill rate for 3 turns & adds 1 extra action to self within the same turn"
   },
   "MST_SKILLS_820288_NAME": {
     "en": "The World Is Silent",
@@ -89614,5 +89646,21 @@
     "pt": "Combo de 25 golpes de Terra em todos os inimigos, remove e nega todos os efeitos negativos e grande chance de causar paralisia e envenenamento",
     "th": "25 คอมโบ โจมตีด้วยธาตุดินใส่ศัตรูทั้งหมด, ล้างทุกสถานะผิดปกติ, มีโอกาสติดสถานะอัมพาตและพิษอย่างมาก",
     "vi": "25 combo powerful Earth attack on all foes, all status ailments removed and negated & great chance of inflicting Paralysis and Poison"
+  },
+  "MST_SKILLS_830147_NAME": {
+    "en": "Violet Pain",
+    "es": "Dolor violeta",
+    "id": "Rasa Sakit Violet",
+    "pt": "Dor Violeta",
+    "th": "ไวโอเล็ท เพน",
+    "vi": "Violet Pain"
+  },
+  "MST_SKILLS_830148_DESCRIPTION": {
+    "en": "16 combo powerful Earth attack on all foes, enormously boosts BB gauge for 5 turns, removes all status ailments and Atk, Def, Rec reduction effects, negates all status ailments and Atk, Def, Rec reduction effects for 5 turns & adds probable 1 turn Atk, Def reduction effects to attack for 5 turns",
+    "es": "16 combo powerful Earth attack on all foes, enormously boosts BB gauge for 5 turns, removes all status ailments and Atk, Def, Rec reduction effects, negates all status ailments and Atk, Def, Rec reduction effects for 5 turns & adds probable 1 turn Atk, Def reduction effects to attack for 5 turns",
+    "id": "16 combo powerful Earth attack on all foes, enormously boosts BB gauge for 5 turns, removes all status ailments and Atk, Def, Rec reduction effects, negates all status ailments and Atk, Def, Rec reduction effects for 5 turns & adds probable 1 turn Atk, Def reduction effects to attack for 5 turns",
+    "pt": "16 combo powerful Earth attack on all foes, enormously boosts BB gauge for 5 turns, removes all status ailments and Atk, Def, Rec reduction effects, negates all status ailments and Atk, Def, Rec reduction effects for 5 turns & adds probable 1 turn Atk, Def reduction effects to attack for 5 turns",
+    "th": "16 combo powerful Earth attack on all foes, enormously boosts BB gauge for 5 turns, removes all status ailments and Atk, Def, Rec reduction effects, negates all status ailments and Atk, Def, Rec reduction effects for 5 turns & adds probable 1 turn Atk, Def reduction effects to attack for 5 turns",
+    "vi": "16 combo powerful Earth attack on all foes, enormously boosts BB gauge for 5 turns, removes all status ailments and Atk, Def, Rec reduction effects, negates all status ailments and Atk, Def, Rec reduction effects for 5 turns & adds probable 1 turn Atk, Def reduction effects to attack for 5 turns"
   }
 }
