@@ -1,4 +1,20 @@
 {
+  "MST_SKILLS_21225500_NAME": {
+    "en": "Well done. I'm thrilled.",
+    "es": "Well done. I'm thrilled.",
+    "id": "Hebat. Aku bersemangat.",
+    "pt": "Well done. I'm thrilled.",
+    "th": "เยี่ยม ข้าตื่นเต้นจริง",
+    "vi": "Well done. I'm thrilled."
+  },
+  "MST_SKILLS_2122550_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
   "MST_SKILLS_2122550_NAME": {
     "en": "I'll cut down everything!",
     "es": "¡Devastaré todo!",
@@ -87456,12 +87472,12 @@
     "vi": "White Titan-Slaying Bolt"
   },
   "MST_SKILLS_2820288_DESCRIPTION": {
-    "en": "30 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, considerably boosts OD gauge, enormously boosts Atk relative to Def for 3 turns & adds 1 extra action within the same turn",
-    "es": "30 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, considerably boosts OD gauge, enormously boosts Atk relative to Def for 3 turns & adds 1 extra action within the same turn",
-    "id": "30 kombo serangan Air masif ke semua musuh (kerusakan sesuai sisa HP), 3 giliran: ekstra jumbo kerusakan ampuh, Serang sesuai Tahan & lumayan menambah meteran OD & beri kans 1 tindakan tambahan sendiri dalam 1 giliran",
-    "pt": "30 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, considerably boosts OD gauge, enormously boosts Atk relative to Def for 3 turns & adds 1 extra action within the same turn",
-    "th": "30 คอมโบ โจมตีธาตุน้ำรุนแรงมหาศาล ใส่ศัตรูทั้งหมด (ความเสียหายสัมพันธ์กับ HP ที่เหลืออยู่), เพิ่มค่ามหาศาลให้ ความเสียหายคริติคอล นาน 3 เทิร์น, เพิ่มค่าอย่างมากให้ เกจ OD, เพิ่มค่ามหาศาลให้ โจมตี สัมพันธ์กับ ป้องกัน นาน 3 เทิร์น กับ เพิ่ม 1 คำสั่งพิเศษภายในเทิร์นเดียวกัน",
-    "vi": "30 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, considerably boosts OD gauge, enormously boosts Atk relative to Def for 3 turns & adds 1 extra action within the same turn"
+    "en": "30 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, adds 1 extra action within the same turn, enormously boosts OD gauge, enormously boosts Atk relative to Def for 3 turns & activates Water barrier",
+    "es": "30 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, adds 1 extra action within the same turn, enormously boosts OD gauge, enormously boosts Atk relative to Def for 3 turns & activates Water barrier",
+    "id": "30 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, adds 1 extra action within the same turn, enormously boosts OD gauge, enormously boosts Atk relative to Def for 3 turns & activates Water barrier",
+    "pt": "30 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, adds 1 extra action within the same turn, enormously boosts OD gauge, enormously boosts Atk relative to Def for 3 turns & activates Water barrier",
+    "th": "30 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, adds 1 extra action within the same turn, enormously boosts OD gauge, enormously boosts Atk relative to Def for 3 turns & activates Water barrier",
+    "vi": "30 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts critical damage for 3 turns, adds 1 extra action within the same turn, enormously boosts OD gauge, enormously boosts Atk relative to Def for 3 turns & activates Water barrier"
   },
   "MST_SKILLS_2820288_NAME": {
     "en": "There Is No Archer",
@@ -88991,6 +89007,22 @@
     "th": "Junkinator",
     "vi": "Junkinator"
   },
+  "MST_SKILLS_2830688_DESCRIPTION": {
+    "en": "Enormously boosts max HP, 100% damage reduction for 4 turns, adds probable resistance against 1 KO attack, activates BB/SBB/UBB twice for 3 turns, probability of raising allies from KO & purges LS and ES Lock effects from all allies",
+    "es": "Enormously boosts max HP, 100% damage reduction for 4 turns, adds probable resistance against 1 KO attack, activates BB/SBB/UBB twice for 3 turns, probability of raising allies from KO & purges LS and ES Lock effects from all allies",
+    "id": "Enormously boosts max HP, 100% damage reduction for 4 turns, adds probable resistance against 1 KO attack, activates BB/SBB/UBB twice for 3 turns, probability of raising allies from KO & purges LS and ES Lock effects from all allies",
+    "pt": "Enormously boosts max HP, 100% damage reduction for 4 turns, adds probable resistance against 1 KO attack, activates BB/SBB/UBB twice for 3 turns, probability of raising allies from KO & purges LS and ES Lock effects from all allies",
+    "th": "Enormously boosts max HP, 100% damage reduction for 4 turns, adds probable resistance against 1 KO attack, activates BB/SBB/UBB twice for 3 turns, probability of raising allies from KO & purges LS and ES Lock effects from all allies",
+    "vi": "Enormously boosts max HP, 100% damage reduction for 4 turns, adds probable resistance against 1 KO attack, activates BB/SBB/UBB twice for 3 turns, probability of raising allies from KO & purges LS and ES Lock effects from all allies"
+  },
+  "MST_SKILLS_2830688_NAME": {
+    "en": "Banebdjed",
+    "es": "Banebdjed",
+    "id": "Banebdjed",
+    "pt": "Banebdjed",
+    "th": "Banebdjed",
+    "vi": "Banebdjed"
+  },
   "MST_SKILLS_2830697_DESCRIPTION": {
     "en": "13 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts max HP, damage taken enormously boosts BB gauge for 3 turns, damage taken enormously restores HP for 3 turns, probability of raising allies from KO",
     "es": "13 combo massive Earth attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, enormously boosts max HP, damage taken enormously boosts BB gauge for 3 turns, damage taken enormously restores HP for 3 turns, probability of raising allies from KO",
@@ -89614,5 +89646,21 @@
     "pt": "Lightning Beam Lv. 3",
     "th": "Lightning Beam Lv. 3",
     "vi": "Lightning Beam Lv. 3"
+  },
+  "MST_SKILLS_2840548_DESCRIPTION": {
+    "en": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
+    "es": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
+    "id": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
+    "pt": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
+    "th": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
+    "vi": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns"
+  },
+  "MST_SKILLS_2840548_NAME": {
+    "en": "Lightning Beam MAX",
+    "es": "Lightning Beam MAX",
+    "id": "Lightning Beam MAX",
+    "pt": "Lightning Beam MAX",
+    "th": "Lightning Beam MAX",
+    "vi": "Lightning Beam MAX"
   }
 }
