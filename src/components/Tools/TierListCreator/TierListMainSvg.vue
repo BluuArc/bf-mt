@@ -53,6 +53,7 @@
           :style="getCategoryCellStyle(category)"
         />
         <text
+          v-if="!(category.name || '').includes('\n')"
           :x="GENERAL_SVG_CONFIG.CATEGORY_WIDTH / 2" :y="category.trackHeight / 2"
           text-anchor="middle"
           alignment-baseline="middle"
@@ -60,6 +61,20 @@
           :font-family="GENERAL_SVG_CONFIG.FONT_FAMILY"
           :style="getCategoryTextStyle(category)"
           v-text="category.name"
+        />
+        <multi-line-text
+          v-else
+          :text="category.name"
+          :containerHeight="GENERAL_SVG_CONFIG.BASE_ROW_HEIGHT"
+          :textAttributes="{
+            x: GENERAL_SVG_CONFIG.CATEGORY_WIDTH / 2,
+            y: 0,
+            'text-anchor': 'middle',
+            'alignment-baseline': 'hanging',
+            'font-size': GENERAL_SVG_CONFIG.FONT_SIZE,
+            'font-family': GENERAL_SVG_CONFIG.FONT_FAMILY,
+            style: getCategoryTextStyle(category),
+          }"
         />
       </g>
       <g class="tier-list-row__entry-track" transform="translate(110, 0)">
@@ -126,6 +141,7 @@
 import colors from 'vuetify/es5/util/colors';
 import { getDefaultCategories } from '@/modules/core/tier-list-creator';
 import FlowText from '@/components/SvgFlowText';
+import MultiLineText from './MultiLineSvgText';
 
 const GENERAL_SVG_CONFIG = {
   ENTRY_SIZE: 70,
@@ -133,7 +149,7 @@ const GENERAL_SVG_CONFIG = {
   BASE_ROW_HEIGHT: 70,
   CATEGORY_WIDTH: 100,
   PADDING: 10,
-  FONT_SIZE: '1em',
+  FONT_SIZE: 16, // 1em
   FONT_FAMILY: 'Arial',
   TITLE_FONT_SIZE: 16 * 1.25, // 1.25em
   FOOTER_FONT_SIZE: 16 * 0.75, // 0.75em
@@ -148,6 +164,7 @@ export default {
   },
   components: {
     FlowText,
+    MultiLineText,
   },
   computed: {
     mainSvgStyle () {

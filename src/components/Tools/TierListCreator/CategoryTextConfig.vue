@@ -13,13 +13,13 @@
     </v-layout>
     <v-layout v-if="!isMultiLine" align-baseline>
       <v-text-field v-model="localValue"/>
-      <v-btn flat @click="emitChange(localValue)">
+      <v-btn flat :outline="hasDirtyInput" @click="emitChange(localValue)">
         Apply
       </v-btn>
     </v-layout>
     <v-layout v-else column>
       <v-textarea v-model="localValue" hide-details/>
-      <v-btn flat @click="emitChange(localValue)">
+      <v-btn flat :outline="hasDirtyInput" @click="emitChange(localValue)">
         Apply
       </v-btn>
     </v-layout>
@@ -39,6 +39,11 @@ export default {
       isMultiLine: false,
       localValue: '',
     };
+  },
+  computed: {
+    hasDirtyInput () {
+      return this.value !== this.localValue;
+    },
   },
   methods: {
     emitChange (newValue) {

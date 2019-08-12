@@ -35,7 +35,6 @@ export default {
   computed: {
     requiredModules: () => Object.freeze([
       'units',
-      'items',
     ]),
     splitCode () {
       const [categoriesCode = '', entriesCode = ''] = (this.code || (this.isFirstLoad &&  DEFAULT_CODE) || '').split('.');
