@@ -15,15 +15,11 @@
           <v-icon>keyboard_arrow_right</v-icon>
         </v-btn>
         <div class="category-order-config--category-entry-header-config">
-          <v-layout align-baseline>
-            <v-text-field
-              label="Category Name"
+          <v-layout>
+            <category-text-config
               :value="editableNameValues[c] || category.name"
-              @input="$v => editableNameValues[c] = $v"
+              @change="$v => updateCategoryValue(c, { name: $v })"
             />
-            <v-btn flat @click="updateCategoryValue(c, { name: editableNameValues[c] })">
-              Apply
-            </v-btn>
           </v-layout>
           <v-layout row wrap>
             <v-flex>
@@ -125,11 +121,13 @@
 import { convertCodeToCategory } from '@/modules/core/tier-list-creator';
 import UnitSelector from '@/components/Tools/Squads/MultidexSelectors/UnitSelector';
 import IndividualEntryConfig from './IndividualEntryConfig';
+import CategoryTextConfig from './CategoryTextConfig';
 import throttle from 'lodash/throttle';
 
 export default {
   components: {
     IndividualEntryConfig,
+    CategoryTextConfig,
     UnitSelector,
   },
   props: {
