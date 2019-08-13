@@ -219,7 +219,7 @@ export default {
 
       await this.transformedSvgConfigPromise;
       // allow time for SVG to render
-      await new Promise(fulfill => setTimeout(() => fulfill(), 500));
+      await new Promise(fulfill => setTimeout(() => fulfill(), 1000));
       await this.waitUntilTrue(() => !!this.$el.querySelector('svg#tier-list-svg-transformed'));
       this.downloadLink = await this.generateDownloadLink();
       return {
