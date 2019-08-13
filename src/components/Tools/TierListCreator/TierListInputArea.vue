@@ -96,7 +96,7 @@
         </v-flex>
       </v-layout>
     </card-tabs-container>
-    <div style="display: none;">
+    <div v-show="showGeneratedSvg" style="position: absolute; left: -100%; top: -100%;">
       <promise-wait :promise="transformedSvgConfigPromise">
         <span slot="loading"/>
         <template slot-scope="{ result }">
@@ -104,6 +104,20 @@
         </template>
       </promise-wait>
     </div>
+    <v-dialog
+      v-model="showGeneratingDialog"
+      persistent
+      width="300"
+    >
+      <v-container justify-center align-center>
+        <v-layout>
+          Generating Output Image
+        </v-layout>
+        <v-layout>
+          <v-progress-linear indeterminate/>
+        </v-layout>
+      </v-container>
+    </v-dialog>
   </section>
 </template>
 
@@ -163,6 +177,8 @@ export default {
       titleMiddle: '',
       titleRight: '',
       footerLeft: '',
+      showGeneratedSvg: false,
+      showGeneratingDialog: false,
     };
   },
   methods: {
@@ -217,11 +233,15 @@ export default {
     async generateImageLink () {
       this.transformedSvgConfigPromise = this.transformSvgConfig(this.svgConfig);
 
+      this.showGeneratedSvg = true;
+      this.showGeneratingDialog = true;
       await this.transformedSvgConfigPromise;
       // allow time for SVG to render
       await new Promise(fulfill => setTimeout(() => fulfill(), 1000));
       await this.waitUntilTrue(() => !!this.$el.querySelector('svg#tier-list-svg-transformed'));
       this.downloadLink = await this.generateDownloadLink();
+      this.showGeneratedSvg = false;
+      this.showGeneratingDialog = false;
       return {
         downloadLink: this.downloadLink,
       };

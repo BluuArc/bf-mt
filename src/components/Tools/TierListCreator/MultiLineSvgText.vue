@@ -53,13 +53,14 @@ export default {
       group.setAttribute('transform', `translate(0,${yOffset})`);
     },
   },
-  mounted () {
+  async mounted () {
+    await new Promise(fulfill => setTimeout(fulfill, 50));
     this.centerText();
   },
   watch: {
     async text () {
       this.$el.setAttribute('transform', '');
-      await new Promise(fulfill => setTimeout(fulfill, 0));
+      await new Promise(fulfill => setTimeout(fulfill, 50));
       this.centerText();
     },
   },
