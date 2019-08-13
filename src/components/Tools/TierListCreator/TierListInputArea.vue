@@ -109,14 +109,16 @@
       persistent
       width="300"
     >
-      <v-container justify-center align-center>
-        <v-layout>
-          Generating Output Image
-        </v-layout>
-        <v-layout>
-          <v-progress-linear indeterminate/>
-        </v-layout>
-      </v-container>
+      <v-card>
+        <v-container justify-center align-center>
+          <v-layout>
+            Generating Output Image
+          </v-layout>
+          <v-layout>
+            <v-progress-linear indeterminate/>
+          </v-layout>
+        </v-container>
+      </v-card>
     </v-dialog>
   </section>
 </template>
