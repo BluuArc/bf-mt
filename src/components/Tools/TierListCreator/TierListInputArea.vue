@@ -18,6 +18,17 @@
     >
       <v-container fluid class="py-0 px-1" slot="general" grid-list-md>
         <v-layout align-baseline>
+          <v-text-field
+            v-model="importCode"
+            label="Import Code"
+            persistent-hint
+            hint="Apply an empty code to reset the tier list"
+          />
+          <v-btn :flat="!importCode" @click="applyImportCode">
+            Import
+          </v-btn>
+        </v-layout>
+        <v-layout align-baseline>
           <h3>Header Text</h3>
           <v-switch class="px-2 mt-0" hide-details v-model="showTitles"/>
         </v-layout>
@@ -60,7 +71,7 @@
       <section slot="entries">
         <category-config v-model="svgConfig"/>
       </section>
-      <v-layout slot="export">
+      <v-layout slot="export" wrap>
         <v-flex xs6>
           <v-btn
             @click="onGenerateButtonClick"
@@ -94,6 +105,13 @@
             </template>
           </promise-wait>
         </v-flex>
+        <v-flex xs12>
+          <one-line-text-viewer
+            :inputText="currentConfigCode"
+            label="Code"
+            :value="currentConfigCode"
+          />
+        </v-flex>
       </v-layout>
     </card-tabs-container>
     <div v-show="showGeneratedSvg" style="position: absolute; left: -100%; top: -100%;">
@@ -124,10 +142,11 @@
 </template>
 
 <script>
-import { fetchBase64Png, generateTierListCode } from '@/modules/core/tier-list-creator';
+import { fetchBase64Png, generateTierListCode, getDefaultCategories, parseTierListCode } from '@/modules/core/tier-list-creator';
 import { getUnitImageUrls } from '@/modules/core/units';
 import PromiseWait from '@/components/PromiseWait';
 import CardTabsContainer from '@/components/CardTabsContainer';
+import OneLineTextViewer from '@/components/OneLineTextViewer';
 import TierListSvg from './TierListMainSvg';
 import CategoryConfig from './CategoryConfig';
 import throttle from 'lodash/throttle';
@@ -148,6 +167,7 @@ export default {
     CardTabsContainer,
     TierListSvg,
     CategoryConfig,
+    OneLineTextViewer,
   },
   computed: {
     tabs: () => Object.freeze(['General', 'Entries', 'Export', 'Links'].map(name => ({ name, slot: name.toLowerCase() }))),
@@ -159,6 +179,9 @@ export default {
       return this.svgConfig.entries.some(categoryEntries => {
         return categoryEntries.some(entry => !entry.imgUrl);
       });
+    },
+    defaultCode () {
+      return generateTierListCode(getDefaultCategories());
     },
   },
   data () {
@@ -181,6 +204,7 @@ export default {
       footerLeft: '',
       showGeneratedSvg: false,
       showGeneratingDialog: false,
+      importCode: '',
     };
   },
   methods: {
@@ -300,6 +324,15 @@ export default {
           };
         });
       });
+    },
+    applyImportCode () {
+      const { categories, entries } = parseTierListCode(this.importCode || this.defaultCode, true);
+      this.svgConfig = {
+        ...this.svgConfig,
+        categories,
+        entries,
+      };
+      this.importCode = '';
     },
   },
   watch: {

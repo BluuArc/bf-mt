@@ -58,6 +58,28 @@ export function generateTierListCode (categories = [], entries = []) {
   return `${categoriesCode}.${entriesCode}`;
 }
 
+export function parseTierListCode (code = '', hasUriComponents = false) {
+  const [categoriesCode = '', entriesCode = ''] = code.split('.');
+  const categories = (hasUriComponents ? decodeURIComponent(categoriesCode) : categoriesCode)
+    .split(',')
+    .map(categoryCode => convertCodeToCategory(categoryCode, hasUriComponents))
+    .filter(v => v);
+
+  const rawEntries = (hasUriComponents ? decodeURIComponent(entriesCode) : entriesCode)
+    .split('!');
+  const entries = categories.map((_, i) => {
+    const categoryEntries = rawEntries[i] || '';
+    return categoryEntries
+      .split(',')
+      .map(convertCodeToEntry)
+      .filter(v => v);
+  });
+  return {
+    categories,
+    entries,
+  };
+}
+
 export function fetchBase64Png (url = '') {
   // const BASE_URL = 'https://macabre-broomstick-39921.herokuapp.com/getImage';
   const BASE_URL = 'http://localhost:5000/getImage';
