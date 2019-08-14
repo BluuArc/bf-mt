@@ -69,6 +69,24 @@
         Multidex links here
       </section>
       <section slot="entries">
+        <v-layout wrap align-baseline class="px-2">
+          <v-flex xs12 md3>
+            <h3>Image Type</h3>
+          </v-flex>
+          <v-flex
+            v-for="type in IMAGE_TYPES"
+            :key="type.key"
+            md3 xs12
+          >
+            <v-btn
+              :outline="activeImageType === type.key"
+              flat block
+              @click="activeImageType = type.key"
+            >
+              {{ type.name }}
+            </v-btn>
+          </v-flex>
+        </v-layout>
         <category-config v-model="svgConfig"/>
       </section>
       <v-layout slot="export" wrap>
@@ -151,6 +169,12 @@ import TierListSvg from './TierListMainSvg';
 import CategoryConfig from './CategoryConfig';
 import throttle from 'lodash/throttle';
 
+const IMAGE_TYPES = [
+  { name: 'Elemental Thumbnail', key: 'ills_thum' },
+  { name: 'Battle Thumbnail', key: 'ills_battle' },
+  { name: 'Full Illustration', key: 'ills_full' },
+];
+
 export default {
   props: {
     inputCategories: {
@@ -183,6 +207,7 @@ export default {
     defaultCode () {
       return generateTierListCode(getDefaultCategories());
     },
+    IMAGE_TYPES: () => IMAGE_TYPES,
   },
   data () {
     return {
@@ -205,6 +230,7 @@ export default {
       showGeneratedSvg: false,
       showGeneratingDialog: false,
       importCode: '',
+      activeImageType: 'ills_thum',
     };
   },
   methods: {
@@ -318,8 +344,7 @@ export default {
 
           return {
             ...entry,
-            // TODO: make configurable
-            imgUrl: urls.ills_thum,
+            imgUrl: urls[this.activeImageType] || urls.ills_thum,
             name: (getUnit(entry.id) || {}).name || entry.id,
           };
         });
@@ -377,6 +402,9 @@ export default {
     },
     inputEntries (newVal) {
       this.updateKeyInSvgConfig('entries', this.getExpandedInputEntries(newVal));
+    },
+    activeImageType () {
+      this.updateKeyInSvgConfig('entries', this.getExpandedInputEntries(this.svgConfig.entries));
     },
     currentConfigCode (newVal) {
       if (newVal !== this.$route.query.code) {
