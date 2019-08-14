@@ -66,7 +66,7 @@
         </v-flex>
       </v-container>
       <section slot="links">
-        Multidex links here
+        <multidex-links :entries="svgConfig.entries"/>
       </section>
       <section slot="entries">
         <v-layout wrap align-baseline class="px-2">
@@ -167,12 +167,14 @@ import CardTabsContainer from '@/components/CardTabsContainer';
 import OneLineTextViewer from '@/components/OneLineTextViewer';
 import TierListSvg from './TierListMainSvg';
 import CategoryConfig from './CategoryConfig';
+import MultidexLinks from './MultidexLinks';
 import throttle from 'lodash/throttle';
 
 const IMAGE_TYPES = [
   { name: 'Elemental Thumbnail', key: 'ills_thum' },
   { name: 'Battle Thumbnail', key: 'ills_battle' },
   { name: 'Full Illustration', key: 'ills_full' },
+  // TODO: support idle sprites
 ];
 
 export default {
@@ -192,6 +194,7 @@ export default {
     TierListSvg,
     CategoryConfig,
     OneLineTextViewer,
+    MultidexLinks,
   },
   computed: {
     tabs: () => Object.freeze(['General', 'Entries', 'Export', 'Links'].map(name => ({ name, slot: name.toLowerCase() }))),
@@ -359,8 +362,19 @@ export default {
       };
       this.importCode = '';
     },
+    ensureOverflowIsOff () {
+      if (this.$store.state.disableHtmlOverflow) {
+        this.$store.commit('setHtmlOverflowDisableState', false);
+      }
+    },
   },
   watch: {
+    currentTabIndex: {
+      immediate: true,
+      handler () {
+        this.ensureOverflowIsOff();
+      },
+    },
     downloadLink (newValue, oldValue) {
       // clean up old object URL
       if (oldValue) {
