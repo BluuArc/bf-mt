@@ -145,7 +145,7 @@ import MultiLineText from './MultiLineSvgText';
 
 const GENERAL_SVG_CONFIG = {
   ENTRY_SIZE: 70,
-  MAX_ENTRIES_PER_ROW: 8, // TODO: make configurable
+  MAX_ENTRIES_PER_ROW: 8,
   BASE_ROW_HEIGHT: 70,
   CATEGORY_WIDTH: 100,
   PADDING: 10,
@@ -196,12 +196,17 @@ export default {
       };
     },
     GENERAL_SVG_CONFIG: () => GENERAL_SVG_CONFIG,
+    maxEntriesPerRow () {
+      return !isNaN(this.value.maxEntriesPerRow)
+        ? +this.value.maxEntriesPerRow
+        : GENERAL_SVG_CONFIG.MAX_ENTRIES_PER_ROW;
+    },
     overallWidth () {
       return [
         GENERAL_SVG_CONFIG.PADDING,
         GENERAL_SVG_CONFIG.CATEGORY_WIDTH,
         GENERAL_SVG_CONFIG.PADDING,
-        GENERAL_SVG_CONFIG.MAX_ENTRIES_PER_ROW * GENERAL_SVG_CONFIG.ENTRY_SIZE,
+        this.maxEntriesPerRow * GENERAL_SVG_CONFIG.ENTRY_SIZE,
         GENERAL_SVG_CONFIG.PADDING,
       ].reduce((acc, val) => acc + val, 0);
     },
@@ -304,10 +309,10 @@ export default {
       };
     },
     getEntryYOffset (index) {
-      return GENERAL_SVG_CONFIG.ENTRY_SIZE * Math.floor(index / GENERAL_SVG_CONFIG.MAX_ENTRIES_PER_ROW);
+      return GENERAL_SVG_CONFIG.ENTRY_SIZE * Math.floor(index / this.maxEntriesPerRow);
     },
     getEntryXOffset (index) {
-      const distanceIndex = index % GENERAL_SVG_CONFIG.MAX_ENTRIES_PER_ROW;
+      const distanceIndex = index % this.maxEntriesPerRow;
       return GENERAL_SVG_CONFIG.ENTRY_SIZE * distanceIndex;
     },
   },

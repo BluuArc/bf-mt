@@ -71,7 +71,11 @@
       <section slot="entries">
         <v-layout wrap align-baseline class="px-2">
           <v-flex xs12 md3>
-            <h3>Image Type</h3>
+            <label :class="{
+              'v-label': true,
+              'theme--dark': !$store.state.settings.lightMode,
+              'theme--light': $store.state.settings.lightMode
+            }">Image Type</label>
           </v-flex>
           <v-flex
             v-for="type in IMAGE_TYPES"
@@ -86,6 +90,17 @@
               {{ type.name }}
             </v-btn>
           </v-flex>
+        </v-layout>
+        <v-layout class="px-2">
+          <v-slider
+            v-model="maxEntriesPerRow"
+            label="Max Entries per Row"
+            thumb-label="always"
+            thumb-size="24"
+            hide-details
+            min="3" max="20"
+            @change="updateMaxEntries"
+          />
         </v-layout>
         <category-config v-model="svgConfig"/>
       </section>
@@ -234,6 +249,7 @@ export default {
       showGeneratingDialog: false,
       importCode: '',
       activeImageType: 'ills_thum',
+      maxEntriesPerRow: 8,
     };
   },
   methods: {
@@ -366,6 +382,9 @@ export default {
       if (this.$store.state.disableHtmlOverflow) {
         this.$store.commit('setHtmlOverflowDisableState', false);
       }
+    },
+    updateMaxEntries () {
+      this.updateKeyInSvgConfig('maxEntriesPerRow', this.maxEntriesPerRow);
     },
   },
   watch: {
