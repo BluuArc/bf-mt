@@ -47,8 +47,10 @@ export default {
     centerText () {
       const group = this.$el;
       const groupHeight = group.getBBox().height;
-      const yOffset = this.containerHeight > groupHeight
-        ? (this.containerHeight - groupHeight) / 2
+      const parent = group.parentNode;
+      const parentHeight = parent.getBBox().height || this.containerHeight;
+      const yOffset = parentHeight > groupHeight
+        ? (parentHeight - groupHeight) / 2
         : 0;
       group.setAttribute('transform', `translate(0,${yOffset})`);
     },

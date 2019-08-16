@@ -4,8 +4,9 @@
     :ensureDbSync="true"
   >
     <tier-list-creator-page
-      :categories="categories"
-      :entries="entries"
+      :categories="parsedConfiguration.categories"
+      :entries="parsedConfiguration.entries"
+      :config="parsedConfiguration.config"
     />
   </module-checker>
 </template>
@@ -13,7 +14,7 @@
 <script>
 import ModuleChecker from '@/components/ModuleChecker';
 import TierListCreatorPage from '@/components/Tools/TierListCreator/Main';
-import { convertCodeToCategory, convertCodeToEntry } from '@/modules/core/tier-list-creator';
+import { parseTierListCode } from '@/modules/core/tier-list-creator';
 
 const DEFAULT_CODE = 'S-000000-ff8a80,A-000000-ffd180,B-000000-ffee58,C-000000-81c784,D-000000-64b5f6';
 export default {
@@ -36,29 +37,8 @@ export default {
     requiredModules: () => Object.freeze([
       'units',
     ]),
-    splitCode () {
-      const [categoriesCode = '', entriesCode = ''] = (this.code || (this.isFirstLoad &&  DEFAULT_CODE) || '').split('.');
-      return {
-        categoriesCode,
-        entriesCode,
-      };
-    },
-    categories () {
-      return this.splitCode.categoriesCode
-        .split(',')
-        .map(code => convertCodeToCategory(code, true))
-        .filter(v => v);
-    },
-    entries () {
-      const rawEntries = this.splitCode.entriesCode.split('!');
-      return this.categories
-        .map((_, i) => {
-          const categoryEntries = rawEntries[i] || '';
-          return categoryEntries
-            .split(',')
-            .map(convertCodeToEntry)
-            .filter(v => v);
-        });
+    parsedConfiguration () {
+      return parseTierListCode(this.code || (this.isFirstLoad &&  DEFAULT_CODE) || '');
     },
   },
   watch: {

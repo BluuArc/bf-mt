@@ -140,9 +140,9 @@
         </v-flex>
         <v-flex xs12>
           <one-line-text-viewer
-            :inputText="currentConfigCode"
+            :inputText="shareableConfigCode"
             label="Code"
-            :value="currentConfigCode"
+            :value="shareableConfigCode"
           />
         </v-flex>
       </v-layout>
@@ -202,6 +202,10 @@ export default {
       type: Array,
       default: () => [],
     },
+    inputConfig: {
+      type: Object,
+      default: () => {},
+    },
   },
   components: {
     PromiseWait,
@@ -215,7 +219,11 @@ export default {
     tabs: () => Object.freeze(['General', 'Entries', 'Export', 'Links'].map(name => ({ name, slot: name.toLowerCase() }))),
     titleKeys: () => Object.freeze(['titleLeft', 'titleMiddle', 'titleRight']),
     currentConfigCode () {
-      return generateTierListCode(this.svgConfig.categories, this.svgConfig.entries);
+      const { categories, entries, ...config } = this.svgConfig;
+      return generateTierListCode(categories, entries, config);
+    },
+    shareableConfigCode () {
+      return encodeURIComponent(this.currentConfigCode);
     },
     hasEntriesWithoutUrl () {
       return this.svgConfig.entries.some(categoryEntries => {
@@ -370,9 +378,10 @@ export default {
       });
     },
     applyImportCode () {
-      const { categories, entries } = parseTierListCode(this.importCode || this.defaultCode, true);
+      const { categories, entries, config } = parseTierListCode(this.importCode || this.defaultCode, true);
       this.svgConfig = {
         ...this.svgConfig,
+        ...config,
         categories,
         entries,
       };
@@ -436,6 +445,16 @@ export default {
     inputEntries (newVal) {
       this.updateKeyInSvgConfig('entries', this.getExpandedInputEntries(newVal));
     },
+    inputConfig (newVal) {
+      this.svgConfig = {
+        ...this.svgConfig,
+        ...newVal,
+      };
+
+      if (!isNaN(newVal.maxEntriesPerRow) && +newVal.maxEntriesPerRow !== this.maxEntriesPerRow) {
+        this.maxEntriesPerRow = +newVal.maxEntriesPerRow;
+      }
+    },
     activeImageType () {
       this.updateKeyInSvgConfig('entries', this.getExpandedInputEntries(this.svgConfig.entries));
     },
@@ -457,8 +476,12 @@ export default {
     },
   },
   mounted () {
-    this.updateKeyInSvgConfig('categories', this.inputCategories);
-    this.updateKeyInSvgConfig('entries', this.getExpandedInputEntries(this.inputEntries));
+    this.svgConfig = {
+      ...this.svgConfig,
+      ...this.inputConfig,
+      categories: this.inputCategories,
+      entries: this.getExpandedInputEntries(this.inputEntries),
+    };
   },
 };
 </script>

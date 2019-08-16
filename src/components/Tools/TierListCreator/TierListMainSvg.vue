@@ -64,6 +64,7 @@
         />
         <multi-line-text
           v-else
+          :key="JSON.stringify(value)"
           :text="category.name"
           :containerHeight="GENERAL_SVG_CONFIG.BASE_ROW_HEIGHT"
           :textAttributes="{
@@ -133,6 +134,15 @@
         :style="headerFooterTextStyle"
         v-text="footers.right"
       />
+      <text
+        :x="titleFooterAlignmentConfig.right.x" :y="overallHeight - GENERAL_SVG_CONFIG.DISCLAIMER_FONT_SIZE * 1.25"
+        alignment-baseline="hanging"
+        :text-anchor="titleFooterAlignmentConfig.right.textAnchor"
+        :font-size="GENERAL_SVG_CONFIG.DISCLAIMER_FONT_SIZE"
+        :font-family="GENERAL_SVG_CONFIG.FONT_FAMILY"
+        :style="headerFooterTextStyle"
+        v-text="'Not affiliated with Gumi or Alim.'"
+      />
     </g>
   </svg>
 </template>
@@ -153,6 +163,7 @@ const GENERAL_SVG_CONFIG = {
   FONT_FAMILY: 'Arial',
   TITLE_FONT_SIZE: 16 * 1.25, // 1.25em
   FOOTER_FONT_SIZE: 16 * 0.75, // 0.75em
+  DISCLAIMER_FONT_SIZE: 16 * 0.5, // 0.5em
 };
 
 export default {

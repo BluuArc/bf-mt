@@ -8,6 +8,7 @@
       class="flex"
       :inputCategories="categories"
       :inputEntries="entries"
+      :inputConfig="config"
     />
   </v-container>
 </template>
@@ -24,6 +25,10 @@ export default {
     entries: {
       type: Array,
       default: () => [],
+    },
+    config: {
+      type: Object,
+      default: () => {},
     },
   },
   components: {
