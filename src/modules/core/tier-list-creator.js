@@ -12,6 +12,14 @@ export function convertCodeToCategory (input = '', isUriComponent) {
   };
 }
 
+function replaceCharacters (str = '', replacementMapping = []) {
+  let currentStr = str.slice();
+  replacementMapping.forEach(([oldChar, newChar]) => {
+    currentStr = currentStr.replace(oldChar, newChar);
+  });
+  return currentStr;
+}
+
 export function convertCategoryToCode ({ name = '', textColor, backgroundColor }) {
   let textColorCode, backgroundColorCode;
   if (textColor) {
@@ -25,7 +33,9 @@ export function convertCategoryToCode ({ name = '', textColor, backgroundColor }
   } else {
     backgroundColorCode = '';
   }
-  return `${encodeURIComponent(name.replace(/-/g, ''))}-${textColorCode}-${backgroundColorCode}`;
+
+  const cleanedName = replaceCharacters(name, [[/-/g, ''], [/\./g, '']]);
+  return `${cleanedName}-${textColorCode}-${backgroundColorCode}`;
 }
 
 export function convertCodeToEntry (input = '') {
@@ -48,24 +58,46 @@ export function convertEntryToCode ({ type, id, altArtId }) {
     : baseCode;
 }
 
-export function generateTierListCode (categories = [], entries = []) {
+export function generateTierListCode (categories = [], entries = [], config = {}) {
   const categoriesCode = categories
     .map(convertCategoryToCode)
     .join(',');
   const entriesCode = categories
     .map((_, i) => (entries[i] || []).map(convertEntryToCode).join(','))
     .join('!');
-  return `${categoriesCode}.${entriesCode}`;
+  const configCode = Object.keys(config)
+    .sort()
+    .map(key => {
+      const value = typeof config[key] === 'object'
+        ? JSON.stringify(config[key])
+        : config[key];
+      return `${key}!${value}`;
+    })
+    .join('~');
+  return `${categoriesCode}.${entriesCode}.${configCode}`;
+}
+
+function splitOnFirstDelimiter (str = '', delimiter = ',') {
+  const startIndex = str.indexOf(delimiter);
+  let result;
+  if (startIndex > -1) {
+    result = [str.slice(0, startIndex), str.slice(startIndex + 1)];
+  } else {
+    result = [str];
+  }
+  return result;
 }
 
 export function parseTierListCode (code = '', hasUriComponents = false) {
-  const [categoriesCode = '', entriesCode = ''] = code.split('.');
-  const categories = (hasUriComponents ? decodeURIComponent(categoriesCode) : categoriesCode)
+  const cleanedCode = hasUriComponents ? decodeURIComponent(code) : code.slice();
+  const [categoriesCode = '', entriesAndConfigCode = ''] = splitOnFirstDelimiter(cleanedCode, '.');
+  const [entriesCode = '', configCode = ''] = splitOnFirstDelimiter(entriesAndConfigCode, '.');
+  const categories = categoriesCode
     .split(',')
-    .map(categoryCode => convertCodeToCategory(categoryCode, hasUriComponents))
+    .map(categoryCode => convertCodeToCategory(categoryCode))
     .filter(v => v);
 
-  const rawEntries = (hasUriComponents ? decodeURIComponent(entriesCode) : entriesCode)
+  const rawEntries = entriesCode
     .split('!');
   const entries = categories.map((_, i) => {
     const categoryEntries = rawEntries[i] || '';
@@ -74,13 +106,41 @@ export function parseTierListCode (code = '', hasUriComponents = false) {
       .map(convertCodeToEntry)
       .filter(v => v);
   });
+
+  const config = configCode
+    .split('~')
+    .map((pair = '') => {
+      const [key = '', value = ''] = splitOnFirstDelimiter(pair, '!');
+      let cleanedValue = value;
+      if ((value.includes('{') && value.includes('}')) || (value.includes('[') && value.includes(']'))) {
+        try {
+          cleanedValue = JSON.parse(value);
+        } catch {
+          cleanedValue = value;
+        }
+      } else if (value === 'true' || value === 'false') {
+        cleanedValue = value === 'true';
+      } else if (value === 'null') {
+        cleanedValue = null;
+      } else if (value === 'undefined') {
+        cleanedValue = undefined;
+      } else if (!isNaN(value) && value !== '') {
+        cleanedValue = +value;
+      }
+      return [key, cleanedValue];
+    }).reduce((acc, [key, value]) => {
+      acc[key] = value;
+      return acc;
+    }, {});
   return {
     categories,
     entries,
+    config,
   };
 }
 
 export function fetchBase64Png (url = '') {
+  // TODO: change to remote URL
   // const BASE_URL = 'https://macabre-broomstick-39921.herokuapp.com/getImage';
   const BASE_URL = 'http://localhost:5000/getImage';
   return fetch(`${BASE_URL}/${encodeURIComponent(url)}?format=text/plain`)
