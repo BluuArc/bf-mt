@@ -60,7 +60,7 @@
           <v-btn title="GitHub Repository" flat icon href="https://github.com/BluuArc/bf-mt" rel="noopener" target="_blank">
             <v-icon>fab fa-github</v-icon>
           </v-btn>
-          <v-btn title="Discord Server" flat icon href="https://discord.gg/rSZe3xZ" rel="noopener" target="_blank">
+          <v-btn title="Discord Server" flat icon href="https://discord.gg/8rUdRfr" rel="noopener" target="_blank">
             <v-icon>fab fa-discord</v-icon>
           </v-btn>
           <v-spacer/>

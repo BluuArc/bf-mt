@@ -141,7 +141,7 @@
         :font-size="GENERAL_SVG_CONFIG.DISCLAIMER_FONT_SIZE"
         :font-family="GENERAL_SVG_CONFIG.FONT_FAMILY"
         :style="headerFooterTextStyle"
-        v-text="'Not affiliated with Gumi or Alim.'"
+        v-text="'Not affiliated with Gumi or Alim'"
       />
     </g>
   </svg>
