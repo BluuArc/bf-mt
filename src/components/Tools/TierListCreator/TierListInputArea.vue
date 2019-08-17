@@ -104,41 +104,53 @@
         </v-layout>
         <category-config v-model="svgConfig"/>
       </section>
-      <v-layout slot="export" wrap>
-        <v-flex xs6>
-          <v-btn
-            @click="onGenerateButtonClick"
-            block
-            class="mr-2"
-          >
-            Generate Image
-          </v-btn>
-        </v-flex>
-        <v-flex xs6>
-          <promise-wait :promise="generateImageLinkPromise">
-            <template slot="loading">
-              <v-btn
-                block
-                class="ml-2"
-                disabled
-                loading
-              />
-            </template>
-            <template slot-scope="{ result }">
-              <v-btn
-                block
-                class="ml-2"
-                :color="(result.downloadLink && 'primary') || undefined"
-                :disabled="!result.downloadLink"
-                :href="result.downloadLink"
-                target="_blank"
-              >
-                Download Image
-              </v-btn>
-            </template>
-          </promise-wait>
-        </v-flex>
-        <v-flex xs12>
+      <v-layout slot="export" column>
+        <v-layout>
+          <v-text-field
+            :key="shareableConfigCode"
+            label="Scale Factor"
+            :value="scaleFactor"
+            @change="$v => scaleFactor = +$v > 0 ? +$v : 1"
+            :hint="getEstimatedDimensionsText()"
+            persistent-hint
+          />
+        </v-layout>
+        <v-layout>
+          <v-flex xs6>
+            <v-btn
+              @click="onGenerateButtonClick"
+              block
+              class="mr-2"
+            >
+              Generate Image
+            </v-btn>
+          </v-flex>
+          <v-flex xs6>
+            <promise-wait :promise="generateImageLinkPromise">
+              <template slot="loading">
+                <v-btn
+                  block
+                  class="ml-2"
+                  disabled
+                  loading
+                />
+              </template>
+              <template slot-scope="{ result }">
+                <v-btn
+                  block
+                  class="ml-2"
+                  :color="(result.downloadLink && 'primary') || undefined"
+                  :disabled="!result.downloadLink"
+                  :href="result.downloadLink"
+                  target="_blank"
+                >
+                  Download Image
+                </v-btn>
+              </template>
+            </promise-wait>
+          </v-flex>
+        </v-layout>
+        <v-flex>
           <one-line-text-viewer
             :inputText="shareableConfigCode"
             label="Code"
@@ -258,9 +270,22 @@ export default {
       importCode: '',
       activeImageType: 'ills_thum',
       maxEntriesPerRow: 8,
+      scaleFactor: 1,
     };
   },
   methods: {
+    getEstimatedDimensionsText () {
+      const svg = this.$el && this.$el.querySelector('svg#tier-list-svg');
+      if (svg) {
+        const { scaleFactor } = this; // eslint-disable-line no-unused-vars
+        const [x, y, width, height] = svg.getAttribute('viewBox').split(' '); // eslint-disable-line no-unused-vars
+        const newWidth = width * scaleFactor;
+        const newHeight = height * scaleFactor;
+        return `Estimated Dimensions: ${newWidth} x ${newHeight}`;
+      } else {
+        return '';
+      }
+    },
     async generateDownloadLink () {
       // convert SVG to image
       const svg = this.$el.querySelector('svg#tier-list-svg-transformed');
@@ -274,12 +299,11 @@ export default {
       });
 
       // apply image to a canvas
-      // eslint-disable-next-line no-unused-vars
-      const [x, y, width, height] = svg.getAttribute('viewBox').split(' ');
+      const [x, y, width, height] = svg.getAttribute('viewBox').split(' '); // eslint-disable-line no-unused-vars
       const canvas = document.createElement('canvas');
-      canvas.width = width;
-      canvas.height = height;
-      canvas.getContext('2d').drawImage(image, 0, 0);
+      canvas.width = width * this.scaleFactor;
+      canvas.height = height * this.scaleFactor;
+      canvas.getContext('2d').drawImage(image, 0, 0, canvas.width, canvas.height);
 
       // convert canvas to PNG URL and clean up
       const pngUrl = await new Promise((fulfill) => {
@@ -454,6 +478,10 @@ export default {
       if (!isNaN(newVal.maxEntriesPerRow) && +newVal.maxEntriesPerRow !== this.maxEntriesPerRow) {
         this.maxEntriesPerRow = +newVal.maxEntriesPerRow;
       }
+
+      if (!isNaN(newVal.scaleFactor) && +newVal.scaleFactor !== this.scaleFactor) {
+        this.scaleFactor = +newVal.scaleFactor;
+      }
     },
     activeImageType () {
       this.updateKeyInSvgConfig('entries', this.getExpandedInputEntries(this.svgConfig.entries));
@@ -473,6 +501,9 @@ export default {
       if (newValue) {
         this.updateKeyInSvgConfig('entries', this.getExpandedInputEntries(this.svgConfig.entries));
       }
+    },
+    scaleFactor (newVal) {
+      this.updateKeyInSvgConfig('scaleFactor', newVal);
     },
   },
   mounted () {
