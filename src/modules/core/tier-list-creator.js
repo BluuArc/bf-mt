@@ -67,6 +67,7 @@ export function generateTierListCode (categories = [], entries = [], config = {}
     .join('!');
   const configCode = Object.keys(config)
     .sort()
+    .filter(key => key !== '' && (!!key || key === 0)) // get truthy keys (or 0 for arrays)
     .map(key => {
       const value = typeof config[key] === 'object'
         ? JSON.stringify(config[key])
@@ -129,7 +130,9 @@ export function parseTierListCode (code = '', hasUriComponents = false) {
       }
       return [key, cleanedValue];
     }).reduce((acc, [key, value]) => {
-      acc[key] = value;
+      if (key) {
+        acc[key] = value;
+      }
       return acc;
     }, {});
   return {
