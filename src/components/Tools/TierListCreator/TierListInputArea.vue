@@ -482,9 +482,14 @@ export default {
       if (!isNaN(newVal.scaleFactor) && +newVal.scaleFactor !== this.scaleFactor) {
         this.scaleFactor = +newVal.scaleFactor;
       }
+
+      if (newVal.imageType && newVal.imageType !== this.activeImageType) {
+        this.activeImageType = newVal.imageType;
+      }
     },
-    activeImageType () {
+    activeImageType (newVal) {
       this.updateKeyInSvgConfig('entries', this.getExpandedInputEntries(this.svgConfig.entries));
+      this.updateKeyInSvgConfig('imageType', newVal);
     },
     currentConfigCode (newVal) {
       if (newVal !== this.$route.query.code) {
