@@ -170,17 +170,28 @@
     <v-dialog
       v-model="showGeneratingDialog"
       persistent
-      width="300"
+      max-width="500"
     >
       <v-card>
         <v-container justify-center align-center>
           <v-layout>
             Generating Output Image
           </v-layout>
-          <v-layout>
+          <v-layout v-if="!imageGenerationErrorMessage">
             <v-progress-linear indeterminate/>
           </v-layout>
+          <v-layout v-else>
+            <v-alert :value="true" type="error">
+              <span v-text="imageGenerationErrorMessage"/>
+            </v-alert>
+          </v-layout>
         </v-container>
+        <v-card-actions>
+          <v-spacer/>
+          <v-btn flat @click="cancelImageGeneration">
+            Cancel
+          </v-btn>
+        </v-card-actions>
       </v-card>
     </v-dialog>
   </section>
@@ -271,6 +282,8 @@ export default {
       activeImageType: 'ills_thum',
       maxEntriesPerRow: 8,
       scaleFactor: 1,
+      cancelImageGeneration: () => {},
+      imageGenerationErrorMessage: '',
     };
   },
   methods: {
@@ -306,8 +319,14 @@ export default {
       canvas.getContext('2d').drawImage(image, 0, 0, canvas.width, canvas.height);
 
       // convert canvas to PNG URL and clean up
-      const pngUrl = await new Promise((fulfill) => {
-        canvas.toBlob((blob) => fulfill(URL.createObjectURL(blob)), 'image/png');
+      const pngUrl = await new Promise((fulfill, reject) => {
+        canvas.toBlob((blob) => {
+          try {
+            fulfill(URL.createObjectURL(blob));
+          } catch (e) {
+            reject(e);
+          }
+        }, 'image/png');
       });
       image.remove();
       canvas.remove();
@@ -334,17 +353,34 @@ export default {
       this.generateImageLinkPromise = this.generateImageLink();
     },
     async generateImageLink () {
+      let generationCanceled = false;
+      this.cancelImageGeneration = () => {
+        this.showGeneratingDialog = false;
+        this.imageGenerationErrorMessage = '';
+        generationCanceled = true;
+      };
+
       this.transformedSvgConfigPromise = this.transformSvgConfig(this.svgConfig);
 
+      this.imageGenerationErrorMessage = '';
       this.showGeneratedSvg = true;
       this.showGeneratingDialog = true;
       await this.transformedSvgConfigPromise;
       // allow time for SVG to render
       await new Promise(fulfill => setTimeout(() => fulfill(), 1000));
       await this.waitUntilTrue(() => !!this.$el.querySelector('svg#tier-list-svg-transformed'));
-      this.downloadLink = await this.generateDownloadLink();
-      this.showGeneratedSvg = false;
-      this.showGeneratingDialog = false;
+      try {
+        this.downloadLink = await this.generateDownloadLink();
+        this.showGeneratingDialog = false;
+      } catch (e) {
+        this.imageGenerationErrorMessage = (e && e.toString()) || 'An error occurred generating the image.';
+      } finally {
+        this.showGeneratedSvg = false;
+      }
+      if (generationCanceled && this.downloadLink) {
+        URL.revokeObjectURL(this.downloadLink);
+        this.downloadLink = '';
+      }
       return {
         downloadLink: this.downloadLink,
       };
