@@ -21,7 +21,7 @@
               @change="$v => updateCategoryValue(c, { name: $v })"
             />
           </v-layout>
-          <v-layout row wrap>
+          <v-layout row wrap align-baseline>
             <v-flex>
               <label>
                 Text Color
@@ -41,6 +41,15 @@
                   @input="$v => updateCategoryValue(c, { backgroundColor: $v.target.value })"
                 />
               </label>
+            </v-flex>
+            <v-flex>
+              <v-text-field
+                label="Font Size"
+                :value="category.fontSize || 16"
+                @change="$v => updateCategoryValue(c, { fontSize: +$v })"
+                hint="Default: 16"
+                persistent-hint
+              />
             </v-flex>
           </v-layout>
         </div>

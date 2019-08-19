@@ -1,14 +1,17 @@
 import colors from 'vuetify/es5/util/colors';
 import { convertCompareCodeToInput } from './compare';
 
+const DEFAULT_FONT_SIZE = 16;
+
 export function convertCodeToCategory (input = '', isUriComponent) {
-  const [name = 'Category', textColor, backgroundColor] = input.split('-');
+  const [name = 'Category', textColor, backgroundColor, fontSize = DEFAULT_FONT_SIZE] = input.split('-');
 
   return {
     name: isUriComponent ? decodeURIComponent(name) : name,
     // text and background color are hex values without hashes
     textColor: textColor ? `#${textColor}` : colors.shades.black,
     backgroundColor: backgroundColor ? `#${backgroundColor}` : colors.shades.white,
+    fontSize: (!isNaN(fontSize) && +fontSize > 0) ? fontSize : DEFAULT_FONT_SIZE,
   };
 }
 
@@ -20,7 +23,7 @@ function replaceCharacters (str = '', replacementMapping = []) {
   return currentStr;
 }
 
-export function convertCategoryToCode ({ name = '', textColor, backgroundColor }) {
+export function convertCategoryToCode ({ name = '', textColor, backgroundColor, fontSize = DEFAULT_FONT_SIZE }) {
   let textColorCode, backgroundColorCode;
   if (textColor) {
     textColorCode = textColor[0] === '#' ? textColor.slice(1): textColor;
@@ -35,7 +38,7 @@ export function convertCategoryToCode ({ name = '', textColor, backgroundColor }
   }
 
   const cleanedName = replaceCharacters(name, [[/-/g, ''], [/\./g, '']]);
-  return `${cleanedName}-${textColorCode}-${backgroundColorCode}`;
+  return `${cleanedName}-${textColorCode}-${backgroundColorCode}-${fontSize}`;
 }
 
 export function convertCodeToEntry (input = '') {

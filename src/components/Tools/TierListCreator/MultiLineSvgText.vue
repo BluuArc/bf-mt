@@ -31,8 +31,8 @@ export default {
     },
     fontSize () {
       const { textAttributes = {} } = this;
-      return !isNaN(textAttributes.fontSize)
-        ? +textAttributes.fontSize
+      return !isNaN(textAttributes['font-size'])
+        ? +textAttributes['font-size']
         : 16;
     },
   },

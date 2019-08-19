@@ -57,7 +57,7 @@
           :x="GENERAL_SVG_CONFIG.CATEGORY_WIDTH / 2" :y="category.trackHeight / 2"
           text-anchor="middle"
           alignment-baseline="middle"
-          :font-size="GENERAL_SVG_CONFIG.FONT_SIZE"
+          :font-size="category.fontSize || GENERAL_SVG_CONFIG.FONT_SIZE"
           :font-family="GENERAL_SVG_CONFIG.FONT_FAMILY"
           :style="getCategoryTextStyle(category)"
           v-text="category.name"
@@ -72,7 +72,7 @@
             y: 0,
             'text-anchor': 'middle',
             'alignment-baseline': 'hanging',
-            'font-size': GENERAL_SVG_CONFIG.FONT_SIZE,
+            'font-size': category.fontSize || GENERAL_SVG_CONFIG.FONT_SIZE,
             'font-family': GENERAL_SVG_CONFIG.FONT_FAMILY,
             style: getCategoryTextStyle(category),
           }"
@@ -278,6 +278,7 @@ export default {
           entries: associatedInput,
           trackHeight: yOffset + GENERAL_SVG_CONFIG.BASE_ROW_HEIGHT,
           yOffset: i * GENERAL_SVG_CONFIG.BASE_ROW_HEIGHT + (i + 1) * GENERAL_SVG_CONFIG.PADDING + titleHeight + extraHeight,
+          fontSize: !isNaN(c.fontSize) ? +c.fontSize : GENERAL_SVG_CONFIG.FONT_SIZE,
         };
       });
     },
