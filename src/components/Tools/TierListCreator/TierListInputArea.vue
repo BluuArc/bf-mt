@@ -91,6 +91,28 @@
             </v-btn>
           </v-flex>
         </v-layout>
+        <v-layout wrap align-baseline class="px-2">
+          <v-btn flat @click="categoryWidth = categoryWidth - 10">
+            -10
+          </v-btn>
+          <v-btn flat @click="categoryWidth = categoryWidth - 1">
+            -1
+          </v-btn>
+          <v-flex>
+            <v-text-field
+              label="Category Width"
+              :value="categoryWidth"
+              @change="$v => categoryWidth = +$v >= 0 ? +$v : 100"
+              hide-details
+            />
+          </v-flex>
+          <v-btn flat @click="categoryWidth = categoryWidth + 1">
+            +1
+          </v-btn>
+          <v-btn flat @click="categoryWidth = categoryWidth + 10">
+            +10
+          </v-btn>
+        </v-layout>
         <v-layout class="px-2">
           <v-slider
             v-model="maxEntriesPerRow"
@@ -282,6 +304,7 @@ export default {
       activeImageType: 'ills_thum',
       maxEntriesPerRow: 8,
       scaleFactor: 1,
+      categoryWidth: 100,
       cancelImageGeneration: () => {},
       imageGenerationErrorMessage: '',
     };
@@ -522,6 +545,10 @@ export default {
       if (newVal.imageType && newVal.imageType !== this.activeImageType) {
         this.activeImageType = newVal.imageType;
       }
+
+      if (!isNaN(newVal.categoryWidth) && +newVal.categoryWidth !== this.categoryWidth) {
+        this.categoryWidth = +newVal.categoryWidth;
+      }
     },
     activeImageType (newVal) {
       this.updateKeyInSvgConfig('entries', this.getExpandedInputEntries(this.svgConfig.entries));
@@ -545,6 +572,17 @@ export default {
     },
     scaleFactor (newVal) {
       this.updateKeyInSvgConfig('scaleFactor', newVal);
+    },
+    categoryWidth (newWidth) {
+      let actualNewWidth = 100;
+      if (!isNaN(newWidth) && +newWidth >= 0) {
+        actualNewWidth = +newWidth;
+      }
+      if (actualNewWidth !== newWidth) {
+        this.categoryWidth = actualNewWidth;
+      } else if (this.svgConfig.categoryWidth !== actualNewWidth) {
+        this.updateKeyInSvgConfig('categoryWidth', actualNewWidth);
+      }
     },
   },
   mounted () {

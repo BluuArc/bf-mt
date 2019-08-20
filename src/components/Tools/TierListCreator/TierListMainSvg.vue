@@ -44,17 +44,17 @@
       class="tier-list-row"
       v-for="category in categoriesConfig"
       :key="category.key"
-      :transform="`translate(10, ${category.yOffset})`"
+      :transform="`translate(${GENERAL_SVG_CONFIG.PADDING}, ${category.yOffset})`"
     >
       <g class="tier-list-row__identifier-cell">
         <rect
           x="0" y="0"
-          :width="GENERAL_SVG_CONFIG.CATEGORY_WIDTH" :height="category.trackHeight"
+          :width="categoryWidth" :height="category.trackHeight"
           :style="getCategoryCellStyle(category)"
         />
         <text
           v-if="!(category.name || '').includes('\n')"
-          :x="GENERAL_SVG_CONFIG.CATEGORY_WIDTH / 2" :y="category.trackHeight / 2"
+          :x="categoryWidth / 2" :y="category.trackHeight / 2"
           text-anchor="middle"
           alignment-baseline="middle"
           :font-size="category.fontSize || GENERAL_SVG_CONFIG.FONT_SIZE"
@@ -68,7 +68,7 @@
           :text="category.name"
           :containerHeight="GENERAL_SVG_CONFIG.BASE_ROW_HEIGHT"
           :textAttributes="{
-            x: GENERAL_SVG_CONFIG.CATEGORY_WIDTH / 2,
+            x: categoryWidth / 2,
             y: 0,
             'text-anchor': 'middle',
             'alignment-baseline': 'hanging',
@@ -78,7 +78,7 @@
           }"
         />
       </g>
-      <g class="tier-list-row__entry-track" transform="translate(110, 0)">
+      <g class="tier-list-row__entry-track" :transform="`translate(${GENERAL_SVG_CONFIG.PADDING + categoryWidth}, 0)`">
         <rect
           x="0" y="0"
           :width="baseTrackConfig.width" :height="category.trackHeight"
@@ -206,6 +206,11 @@ export default {
         right: getTitleFooterConfigForAlignment(1),
       };
     },
+    categoryWidth () {
+      return !isNaN(this.value.categoryWidth)
+        ? +this.value.categoryWidth
+        : GENERAL_SVG_CONFIG.CATEGORY_WIDTH;
+    },
     GENERAL_SVG_CONFIG: () => GENERAL_SVG_CONFIG,
     maxEntriesPerRow () {
       return !isNaN(this.value.maxEntriesPerRow)
@@ -215,7 +220,7 @@ export default {
     overallWidth () {
       return [
         GENERAL_SVG_CONFIG.PADDING,
-        GENERAL_SVG_CONFIG.CATEGORY_WIDTH,
+        this.categoryWidth,
         GENERAL_SVG_CONFIG.PADDING,
         this.maxEntriesPerRow * GENERAL_SVG_CONFIG.ENTRY_SIZE,
         GENERAL_SVG_CONFIG.PADDING,
@@ -248,7 +253,7 @@ export default {
     },
     baseTrackConfig () {
       return {
-        width: this.overallWidth - GENERAL_SVG_CONFIG.CATEGORY_WIDTH - 3 * GENERAL_SVG_CONFIG.PADDING, // fill width - category cell width - 3x padding (left padding of category + left and right padding of track)
+        width: this.overallWidth - this.categoryWidth - 3 * GENERAL_SVG_CONFIG.PADDING, // fill width - category cell width - 3x padding (left padding of category + left and right padding of track)
         style: {
           fill: colors.grey.darken3,
         },

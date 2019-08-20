@@ -48,7 +48,7 @@ export default {
       const group = this.$el;
       const groupHeight = group.getBBox().height;
       const parent = group.parentNode;
-      const parentHeight = parent.getBBox().height || this.containerHeight;
+      const parentHeight = (parent && parent.getBBox && parent.getBBox().height) || this.containerHeight;
       const yOffset = parentHeight > groupHeight
         ? (parentHeight - groupHeight) / 2
         : 0;
