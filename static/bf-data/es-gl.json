@@ -18814,6 +18814,78 @@
       "810658"
     ]
   },
+  "810687": {
+    "desc": "Probable damage reduction to 1 & negates Def ignoring effects for all allies",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "43",
+        "passive target": "self",
+        "take 1 dmg%": 10
+      },
+      {
+        "conditions": [],
+        "ignore def resist chance%": 100,
+        "passive id": "92",
+        "passive target": "party"
+      }
+    ],
+    "id": "810687",
+    "name": "Matron of Kings",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "810687"
+    ]
+  },
+  "810688": {
+    "desc": "15% additional damage reduction for all allies when Miracle of Khons or Blessing of Khons Sphere is equipped, probable damage reduction to 1, negates Def ignoring effects for all allies & 35% boost to Def, max HP for all allies",
+    "effects": [
+      {
+        "conditions": [
+          {
+            "item required": [
+              "819266"
+            ]
+          },
+          {
+            "item required": [
+              "819265"
+            ]
+          }
+        ],
+        "passive target": "party",
+        "unknown passive id": "127",
+        "unknown passive params": "100,15"
+      },
+      {
+        "conditions": [],
+        "passive id": "43",
+        "passive target": "self",
+        "take 1 dmg%": 15
+      },
+      {
+        "conditions": [],
+        "ignore def resist chance%": 100,
+        "passive id": "92",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "def% buff": 35,
+        "hp% buff": 35,
+        "passive id": "1",
+        "passive target": "party"
+      }
+    ],
+    "id": "810688",
+    "name": "Lady of the Horizons",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "810688"
+    ]
+  },
   "810708": {
     "desc": "Spark damage slightly boosts BB gauge for all allies when Czorag's Malice or BB Gauge Sphere is equipped, slightly boosts Fire elemental damage for all allies, greatly boosts damage dealt against status afflicted foes, 40% boost to Atk, Def each turn (up to 3 turns) & probable damage reduction to 1",
     "effects": [
@@ -24077,6 +24149,107 @@
     "target": "self",
     "associated_units": [
       "830708"
+    ]
+  },
+  "830757": {
+    "desc": "20% boost to Atk, Def for first 5 turns for all allies, slightly boosts critical damage for all allies & negates all status ailments and Atk, Def, Rec reduction effects",
+    "effects": [
+      {
+        "conditions": [],
+        "first x turns": 5,
+        "first x turns atk% (1)": 20,
+        "first x turns def% (3)": 20,
+        "passive id": "21",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "crit multiplier%": 15,
+        "passive id": "34",
+        "passive target": "party"
+      },
+      {
+        "atk down resist%": 100,
+        "conditions": [],
+        "curse resist%": 100,
+        "def down resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "passive target": "self",
+        "poison resist%": 100,
+        "rec down resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      }
+    ],
+    "id": "830757",
+    "name": "Imposing Languor",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "830757"
+    ]
+  },
+  "830758": {
+    "desc": "30% boost to Atk, Def for first 5 turns for all allies, slightly boosts critical damage for all allies, negates all status ailments and Atk, Def, Rec reduction effects, probable considerable reduction of foe's BB gauge & adds Earth shield for 3 turns effect to BB/SBB",
+    "effects": [
+      {
+        "conditions": [],
+        "first x turns": 5,
+        "first x turns atk% (1)": 30,
+        "first x turns def% (3)": 30,
+        "passive id": "21",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "crit multiplier%": 25,
+        "passive id": "34",
+        "passive target": "party"
+      },
+      {
+        "atk down resist%": 100,
+        "conditions": [],
+        "curse resist%": 100,
+        "def down resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "passive target": "self",
+        "poison resist%": 100,
+        "rec down resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "110",
+        "unknown passive params": "0,0,30,30,50,0"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10017",
+            "unknown proc param": "1,6000,6000,3,0"
+          }
+        ]
+      }
+    ],
+    "id": "830758",
+    "name": "Placid Strength",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "830758"
     ]
   },
   "830767": {

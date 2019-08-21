@@ -34267,6 +34267,72 @@
       "810658"
     ]
   },
+  "810687": {
+    "desc": "100% boost to Rec, max HP, slightly boosts damage reduction when guarding, 10% damage reduction & damage taken may considerably restore HP",
+    "effects": [
+      {
+        "hp% buff": 100,
+        "passive id": "1",
+        "rec% buff": 100
+      },
+      {
+        "guard increase mitigation%": 10,
+        "passive id": "58"
+      },
+      {
+        "dmg% mitigation": 10,
+        "passive id": "8"
+      },
+      {
+        "dmg% to hp% when attacked chance%": 50,
+        "dmg% to hp% when attacked high": 25,
+        "dmg% to hp% when attacked low": 20,
+        "passive id": "24"
+      }
+    ],
+    "id": "810687",
+    "name": "Devoted Vigil",
+    "associated_units": [
+      "810687"
+    ]
+  },
+  "810688": {
+    "desc": "150% boost to Rec, max HP, slightly boosts damage reduction when guarding, 15% damage reduction, 250% boost to Spark damage for 2 turns when damage taken has exceeded certain amount & damage taken may considerably restore HP",
+    "effects": [
+      {
+        "hp% buff": 150,
+        "passive id": "1",
+        "rec% buff": 150
+      },
+      {
+        "guard increase mitigation%": 10,
+        "passive id": "58"
+      },
+      {
+        "dmg% mitigation": 15,
+        "passive id": "8"
+      },
+      {
+        "buff": {
+          "buff turns (40)": "1",
+          "spark dmg% buff": 250
+        },
+        "damage threshold buff activation": 10000,
+        "passive id": "78"
+      },
+      {
+        "dmg% to hp% when attacked chance%": 50,
+        "dmg% to hp% when attacked high": 30,
+        "dmg% to hp% when attacked low": 25,
+        "passive id": "24"
+      }
+    ],
+    "id": "810688",
+    "name": "Ninth Hour of the Day",
+    "associated_units": [
+      "810688"
+    ]
+  },
   "810708": {
     "desc": "200% boost to Atk, 100% boost to Def, max HP and 30% boost to critical hit rate of Fire types, hugely boosts critical damage, enormously boosts Fire elemental damage, 15% damage reduction from Fire, Earth types & negates critical and elemental damage",
     "effects": [
@@ -37841,6 +37907,82 @@
     "name": "Trance of the Hunt",
     "associated_units": [
       "830708"
+    ]
+  },
+  "830757": {
+    "desc": "120% boost to Def, Rec and max HP of Earth types, Spark damage slightly restores HP and considerably boosts BB gauge & enormously boosts critical damage",
+    "effects": [
+      {
+        "def% buff": 120,
+        "elements buffed": [
+          "earth"
+        ],
+        "hp% buff": 120,
+        "passive id": "2",
+        "rec% buff": 120
+      },
+      {
+        "bc fill on spark high": 3,
+        "bc fill on spark low": 2,
+        "bc fill on spark%": 100,
+        "passive id": "47"
+      },
+      {
+        "crit multiplier%": 200,
+        "passive id": "34"
+      },
+      {
+        "heal on spark high": 500,
+        "heal on spark low": 400,
+        "heal on spark%": 100,
+        "passive id": "101"
+      }
+    ],
+    "id": "830757",
+    "name": "Quakestrummer",
+    "associated_units": [
+      "830757"
+    ]
+  },
+  "830758": {
+    "desc": "140% boost to Def, Rec and max HP of Earth types, 20% damage reduction from Earth, Thunder types, Spark damage slightly restores HP and considerably boosts BB gauge & enormously boosts critical damage",
+    "effects": [
+      {
+        "def% buff": 140,
+        "elements buffed": [
+          "earth"
+        ],
+        "hp% buff": 140,
+        "passive id": "2",
+        "rec% buff": 140
+      },
+      {
+        "dmg% mitigation for elemental attacks": 20,
+        "mitigate earth attacks": true,
+        "mitigate thunder attacks": true,
+        "passive id": "62"
+      },
+      {
+        "bc fill on spark high": 4,
+        "bc fill on spark low": 3,
+        "bc fill on spark%": 100,
+        "passive id": "47"
+      },
+      {
+        "crit multiplier%": 250,
+        "passive id": "34"
+      },
+      {
+        "heal on spark high": 600,
+        "heal on spark low": 500,
+        "heal on spark%": 100,
+        "passive id": "101"
+      }
+    ],
+    "id": "830758",
+    "name": "Bellowing Bardbarian",
+    "associated_units": [
+      "830758"
     ]
   },
   "830767": {
