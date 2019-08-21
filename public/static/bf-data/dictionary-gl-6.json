@@ -1,28 +1,4 @@
 {
-  "MST_SKILLS_2840557_DESCRIPTION": {
-    "en": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
-    "es": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
-    "id": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
-    "pt": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
-    "th": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
-    "vi": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns"
-  },
-  "MST_SKILLS_2840557_NAME": {
-    "en": "Thunderbird's Judgment",
-    "es": "Thunderbird's Judgment",
-    "id": "Thunderbird's Judgment",
-    "pt": "Thunderbird's Judgment",
-    "th": "Thunderbird's Judgment",
-    "vi": "Thunderbird's Judgment"
-  },
-  "MST_SKILLS_2840558_DESCRIPTION": {
-    "en": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
-    "es": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
-    "id": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
-    "pt": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
-    "th": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
-    "vi": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns"
-  },
   "MST_SKILLS_2840558_NAME": {
     "en": "Thunderbird's Wrath",
     "es": "Thunderbird's Wrath",
@@ -21015,6 +20991,22 @@
     "th": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, own max HP, BB Atk, Atk, Def, Rec, critical hit rate, critical damage, Spark damage, damage taken restores HP & activates own BB/SBB/UBB twice",
     "vi": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, own max HP, BB Atk, Atk, Def, Rec, critical hit rate, critical damage, Spark damage, damage taken restores HP & activates own BB/SBB/UBB twice"
   },
+  "MST_SKILLS_3810688_DESCRIPTION": {
+    "en": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, fully restores HP, 80% KO resistance, activates Fire barrier, purges LS and ES Lock, 100% damage reduction, 100% raises allies from KO & activates own BB/SBB/UBB twice",
+    "es": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, fully restores HP, 80% KO resistance, activates Fire barrier, purges LS and ES Lock, 100% damage reduction, 100% raises allies from KO & activates own BB/SBB/UBB twice",
+    "id": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, fully restores HP, 80% KO resistance, activates Fire barrier, purges LS and ES Lock, 100% damage reduction, 100% raises allies from KO & activates own BB/SBB/UBB twice",
+    "pt": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, fully restores HP, 80% KO resistance, activates Fire barrier, purges LS and ES Lock, 100% damage reduction, 100% raises allies from KO & activates own BB/SBB/UBB twice",
+    "th": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, fully restores HP, 80% KO resistance, activates Fire barrier, purges LS and ES Lock, 100% damage reduction, 100% raises allies from KO & activates own BB/SBB/UBB twice",
+    "vi": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, fully restores HP, 80% KO resistance, activates Fire barrier, purges LS and ES Lock, 100% damage reduction, 100% raises allies from KO & activates own BB/SBB/UBB twice"
+  },
+  "MST_SKILLS_3810688_NAME": {
+    "en": "Gerh en Hati",
+    "es": "Gerh en Hati",
+    "id": "Gerh en Hati",
+    "pt": "Gerh en Hati",
+    "th": "Gerh en Hati",
+    "vi": "Gerh en Hati"
+  },
   "MST_SKILLS_3810708_DESCRIPTION": {
     "en": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Spark damage, Fire elemental damage, critical damage, adds status ailment infliction to attack, 100% Fire, Earth damage reduction, Spark vulnerability infliction & massive DoT on all foes",
     "es": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Spark damage, Fire elemental damage, critical damage, adds status ailment infliction to attack, 100% Fire, Earth damage reduction, Spark vulnerability infliction & massive DoT on all foes",
@@ -21142,6 +21134,22 @@
     "pt": "Fleshrend Pandemic",
     "th": "Fleshrend Pandemic",
     "vi": "Fleshrend Pandemic"
+  },
+  "MST_SKILLS_3830758_DESCRIPTION": {
+    "en": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, critical hit rate, critical damage, BB Atk, BB gauge to max, fully restores HP, purges DoT effects & adds status ailment infliction and Atk, Def reduction to attack",
+    "es": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, critical hit rate, critical damage, BB Atk, BB gauge to max, fully restores HP, purges DoT effects & adds status ailment infliction and Atk, Def reduction to attack",
+    "id": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, critical hit rate, critical damage, BB Atk, BB gauge to max, fully restores HP, purges DoT effects & adds status ailment infliction and Atk, Def reduction to attack",
+    "pt": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, critical hit rate, critical damage, BB Atk, BB gauge to max, fully restores HP, purges DoT effects & adds status ailment infliction and Atk, Def reduction to attack",
+    "th": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, critical hit rate, critical damage, BB Atk, BB gauge to max, fully restores HP, purges DoT effects & adds status ailment infliction and Atk, Def reduction to attack",
+    "vi": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, critical hit rate, critical damage, BB Atk, BB gauge to max, fully restores HP, purges DoT effects & adds status ailment infliction and Atk, Def reduction to attack"
+  },
+  "MST_SKILLS_3830758_NAME": {
+    "en": "Diviner's Doomchant",
+    "es": "Diviner's Doomchant",
+    "id": "Diviner's Doomchant",
+    "pt": "Diviner's Doomchant",
+    "th": "Diviner's Doomchant",
+    "vi": "Diviner's Doomchant"
   },
   "MST_SKILLS_3840608_DESCRIPTION": {
     "en": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, critical hit rate, critical damage, Spark damage, Thunder and Light elemental damage, damage against status afflicted foes, activates BB/SBB/UBB twice & adds status ailment infliction to attack",
@@ -88263,6 +88271,38 @@
     "th": "Incendiary Missile",
     "vi": "Incendiary Missile"
   },
+  "MST_SKILLS_810687_DESCRIPTION": {
+    "en": "19 combo powerful Fire attack on all foes, adds low probability of resistance against 1 KO attack, damage taken may restore HP for 3 turns, 50% damage reduction for 3 turns & boosts damage reduction when guarding for 3 turns",
+    "es": "19 combo powerful Fire attack on all foes, adds low probability of resistance against 1 KO attack, damage taken may restore HP for 3 turns, 50% damage reduction for 3 turns & boosts damage reduction when guarding for 3 turns",
+    "id": "19 combo powerful Fire attack on all foes, adds low probability of resistance against 1 KO attack, damage taken may restore HP for 3 turns, 50% damage reduction for 3 turns & boosts damage reduction when guarding for 3 turns",
+    "pt": "19 combo powerful Fire attack on all foes, adds low probability of resistance against 1 KO attack, damage taken may restore HP for 3 turns, 50% damage reduction for 3 turns & boosts damage reduction when guarding for 3 turns",
+    "th": "19 combo powerful Fire attack on all foes, adds low probability of resistance against 1 KO attack, damage taken may restore HP for 3 turns, 50% damage reduction for 3 turns & boosts damage reduction when guarding for 3 turns",
+    "vi": "19 combo powerful Fire attack on all foes, adds low probability of resistance against 1 KO attack, damage taken may restore HP for 3 turns, 50% damage reduction for 3 turns & boosts damage reduction when guarding for 3 turns"
+  },
+  "MST_SKILLS_810687_NAME": {
+    "en": "Fiercely Bright",
+    "es": "Fiercely Bright",
+    "id": "Fiercely Bright",
+    "pt": "Fiercely Bright",
+    "th": "Fiercely Bright",
+    "vi": "Fiercely Bright"
+  },
+  "MST_SKILLS_810688_DESCRIPTION": {
+    "en": "22 combo powerful Fire attack on all foes, adds low probability of resistance against 1 KO attack, damage taken may restore HP for 3 turns, 50% damage reduction for 3 turns, boosts damage reduction when guarding for 3 turns & purges LS and ES Lock effects from one random ally",
+    "es": "22 combo powerful Fire attack on all foes, adds low probability of resistance against 1 KO attack, damage taken may restore HP for 3 turns, 50% damage reduction for 3 turns, boosts damage reduction when guarding for 3 turns & purges LS and ES Lock effects from one random ally",
+    "id": "22 combo powerful Fire attack on all foes, adds low probability of resistance against 1 KO attack, damage taken may restore HP for 3 turns, 50% damage reduction for 3 turns, boosts damage reduction when guarding for 3 turns & purges LS and ES Lock effects from one random ally",
+    "pt": "22 combo powerful Fire attack on all foes, adds low probability of resistance against 1 KO attack, damage taken may restore HP for 3 turns, 50% damage reduction for 3 turns, boosts damage reduction when guarding for 3 turns & purges LS and ES Lock effects from one random ally",
+    "th": "22 combo powerful Fire attack on all foes, adds low probability of resistance against 1 KO attack, damage taken may restore HP for 3 turns, 50% damage reduction for 3 turns, boosts damage reduction when guarding for 3 turns & purges LS and ES Lock effects from one random ally",
+    "vi": "22 combo powerful Fire attack on all foes, adds low probability of resistance against 1 KO attack, damage taken may restore HP for 3 turns, 50% damage reduction for 3 turns, boosts damage reduction when guarding for 3 turns & purges LS and ES Lock effects from one random ally"
+  },
+  "MST_SKILLS_810688_NAME": {
+    "en": "A Throne Without",
+    "es": "A Throne Without",
+    "id": "A Throne Without",
+    "pt": "A Throne Without",
+    "th": "A Throne Without",
+    "vi": "A Throne Without"
+  },
   "MST_SKILLS_810708_DESCRIPTION": {
     "en": "12 combo massive Fire attack on single foe (or probable 5% damage of foe's max HP, enormously boosts own critical hit rate), 4 combo powerful Fire attack on single foe (damage relative to remaining HP), probability of purging Curse negation effect from single foe, enormously boosts Fire elemental damage for 3 turns, probable elemental and critical vulnerability infliction for 2 turns & probable random status ailment infliction",
     "es": "12 combo massive Fire attack on single foe (or probable 5% damage of foe's max HP, enormously boosts own critical hit rate), 4 combo powerful Fire attack on single foe (damage relative to remaining HP), probability of purging Curse negation effect from single foe, enormously boosts Fire elemental damage for 3 turns, probable elemental and critical vulnerability infliction for 2 turns & probable random status ailment infliction",
@@ -89662,5 +89702,45 @@
     "pt": "16 combo powerful Earth attack on all foes, enormously boosts BB gauge for 5 turns, removes all status ailments and Atk, Def, Rec reduction effects, negates all status ailments and Atk, Def, Rec reduction effects for 5 turns & adds probable 1 turn Atk, Def reduction effects to attack for 5 turns",
     "th": "16 combo powerful Earth attack on all foes, enormously boosts BB gauge for 5 turns, removes all status ailments and Atk, Def, Rec reduction effects, negates all status ailments and Atk, Def, Rec reduction effects for 5 turns & adds probable 1 turn Atk, Def reduction effects to attack for 5 turns",
     "vi": "16 combo powerful Earth attack on all foes, enormously boosts BB gauge for 5 turns, removes all status ailments and Atk, Def, Rec reduction effects, negates all status ailments and Atk, Def, Rec reduction effects for 5 turns & adds probable 1 turn Atk, Def reduction effects to attack for 5 turns"
+  },
+  "MST_SKILLS_830148_NAME": {
+    "en": "Seeker's Arrow",
+    "es": "Seeker's Arrow",
+    "id": "Seeker's Arrow",
+    "pt": "Seeker's Arrow",
+    "th": "Seeker's Arrow",
+    "vi": "Seeker's Arrow"
+  },
+  "MST_SKILLS_830177_DESCRIPTION": {
+    "en": "3 combo powerful Fire, Earth attack on all foes, 50% damage reduction on self for 2 turns & adds Fire, Earth elements to attack for 3 turns",
+    "es": "7 combo powerful Fire, Earth attack on all foes, 50% damage reduction on self for 2 turns & adds Fire, Earth elements to attack for 3 turns",
+    "id": "3 kombo serangan kuat Api, Bumi ke semua musuh, pengurangan 50% kerusakan sendiri 2 giliran, beri elemen Api, Bumi ke serangan 3 giliran",
+    "pt": "8 combo powerful Fire, Earth attack on all foes, 50% damage reduction on self for 2 turns & adds Fire, Earth elements to attack for 3 turns",
+    "th": "3 คอมโบ โจมตีธาตุ ไฟ, ดิน อย่างแรง ใส่ศัตรูทั้งหมด, 50% ลดค่าความเสียหายให้ตัวเอง นาน 2 เทิร์น และ เพิ่มธาตุ ไฟ, ดิน ให้กับการโจมตี นาน 3 เทิร์น",
+    "vi": "6 combo powerful Fire, Earth attack on all foes, 50% damage reduction on self for 2 turns & adds Fire, Earth elements to attack for 3 turns"
+  },
+  "MST_SKILLS_830177_NAME": {
+    "en": "DM: Power Geyser I",
+    "es": "DM: Power Geyser I",
+    "id": "DM: Gletser Kuat I",
+    "pt": "DM: Power Geyser I",
+    "th": "DM: พาวเวอร์ เกย์เซอร์ I",
+    "vi": "DM: Power Geyser I"
+  },
+  "MST_SKILLS_830178_DESCRIPTION": {
+    "en": "4 combo powerful Fire, Earth attack on all foes, 50% damage reduction for 1 turn, damage taken considerably boosts BB gauge for 3 turns, greatly boosts max HP & activates Earth shield for 3 turns",
+    "es": "4 combo powerful Fire, Earth attack on all foes, 50% damage reduction for 1 turn, damage taken considerably boosts BB gauge for 3 turns, greatly boosts max HP & activates Earth shield for 3 turns",
+    "id": "4 combo powerful Fire, Earth attack on all foes, 50% damage reduction for 1 turn, damage taken considerably boosts BB gauge for 3 turns, greatly boosts max HP & activates Earth shield for 3 turns",
+    "pt": "4 combo powerful Fire, Earth attack on all foes, 50% damage reduction for 1 turn, damage taken considerably boosts BB gauge for 3 turns, greatly boosts max HP & activates Earth shield for 3 turns",
+    "th": "4 combo powerful Fire, Earth attack on all foes, 50% damage reduction for 1 turn, damage taken considerably boosts BB gauge for 3 turns, greatly boosts max HP & activates Earth shield for 3 turns",
+    "vi": "4 combo powerful Fire, Earth attack on all foes, 50% damage reduction for 1 turn, damage taken considerably boosts BB gauge for 3 turns, greatly boosts max HP & activates Earth shield for 3 turns"
+  },
+  "MST_SKILLS_830178_NAME": {
+    "en": "SDM: Power Geyser I",
+    "es": "SDM: Power Geyser I",
+    "id": "SDM: Gletser Kuat I",
+    "pt": "SDM: Power Geyser I",
+    "th": "SDM: พาวเวอร์ เกย์เซอร์ I",
+    "vi": "SDM: Power Geyser I"
   }
 }
