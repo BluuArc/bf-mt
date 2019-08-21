@@ -35,4 +35,13 @@ export default [
       input: route.query.input || '',
     }),
   },
+  {
+    path: '/tools/tier-list-creator',
+    name: 'Tier List Creator',
+    component: ToolsPages.TierListCreator,
+    props: (route) => ({
+      server: servers.includes(route.query.server) ? route.query.server : 'gl',
+      code: route.query.code || '',
+    }),
+  },
 ];

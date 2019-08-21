@@ -10,6 +10,7 @@ import {
   squadBuffTypes,
   squadUnitActions,
   burstTypes,
+  CONTENT_URLS,
 } from '@/modules/constants';
 import { getBurstEffects } from '@/modules/core/bursts';
 import { getEffectsList } from '@/modules/core/buffs';
@@ -400,4 +401,15 @@ export function getEffectsListForUnit ({
     target,
     effectType,
   });
+}
+
+export function getUnitImageUrls ({ id, server, suffix = '' }) {
+  const baseUrl = `${CONTENT_URLS[server] || CONTENT_URLS.gl}/unit/img`;
+
+  return {
+    ills_full: `${baseUrl}/unit_ills_full_${id}${suffix}.png`,
+    ills_thum: `${baseUrl}/unit_ills_thum_${id}${suffix}.png`,
+    anime: `${baseUrl}/unit_thum_${id}${suffix}.png`,
+    ills_battle: `${baseUrl}/unit_ills_battle_${id}${suffix}.png`,
+  };
 }

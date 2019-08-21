@@ -23,15 +23,23 @@
             exact
             :value="currentPageName === subItem.title"
             :to="typeof (subItem.link) === 'function' ? subItem.link() : subItem.link"
-            @click="($vuetify.breakpoint.mdAndDown) ? (showDrawer = false) : (showDrawer = showDrawer)">
+            @click="($vuetify.breakpoint.mdAndDown) ? (showDrawer = false) : (showDrawer = showDrawer)"
+            active-class="primary white--text"
+          >
             <v-list-tile-action>
               <v-progress-circular v-if="stateInfo[subItem.name] && stateInfo[subItem.name].isLoading" indeterminate/>
-              <v-badge v-else-if="group.subheader === 'General' && subItem.title === 'Home' && numNewCommits > 0">
+              <v-badge
+                v-else-if="group.subheader === 'General' && subItem.title === 'Home' && numNewCommits > 0"
+                :color="currentPageName === subItem.title ? 'secondary' : 'primary'"
+              >
                 <span slot="badge">{{ numNewCommits > 10 ? '10+' : numNewCommits }}</span>
                 <img v-if="subItem.image" :src="subItem.image" style="width: 30px; vertical-align: middle;"/>
                 <v-icon v-else v-html="subItem.icon"/>
               </v-badge>
-              <v-badge v-else-if="group.subheader === 'General' && subItem.title === 'Settings' && numSettingsUpdates > 0">
+              <v-badge
+                v-else-if="group.subheader === 'General' && subItem.title === 'Settings' && numSettingsUpdates > 0"
+                :color="currentPageName === subItem.title ? 'secondary' : 'primary'"
+              >
                 <span slot="badge">{{ numSettingsUpdates }}</span>
                 <img v-if="subItem.image" :src="subItem.image" style="width: 30px; vertical-align: middle;"/>
                 <v-icon v-else v-html="subItem.icon"/>
@@ -49,9 +57,11 @@
         </v-list>
         <v-btn flat block href="https://github.com/BluuArc/bf-mt/issues" rel="noopener" target="_blank">Report Issues</v-btn>
         <v-footer>
-          <v-btn flat class="pl-2" href="https://github.com/BluuArc/bf-mt" rel="noopener" target="_blank">
-            <v-icon left class="pr-3">fab fa-github</v-icon>
-            GitHub
+          <v-btn title="GitHub Repository" flat icon href="https://github.com/BluuArc/bf-mt" rel="noopener" target="_blank">
+            <v-icon>fab fa-github</v-icon>
+          </v-btn>
+          <v-btn title="Discord Server" flat icon href="https://discord.gg/8rUdRfr" rel="noopener" target="_blank">
+            <v-icon>fab fa-discord</v-icon>
           </v-btn>
           <v-spacer/>
           <span class="mx-auto pr-3">&copy; {{ new Date().getUTCFullYear() }}</span>
@@ -191,6 +201,11 @@ export default {
               title: 'Compare',
               link: '/tools/compare',
               image: require('@/assets/tt_icon_m-1.png'),
+            },
+            {
+              title: 'Tier List Creator',
+              link: '/tools/tier-list-creator',
+              image: require('@/assets/tier-list-icon.png'),
             },
           ],
         },

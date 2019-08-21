@@ -3,4 +3,5 @@ export default {
   Squads: () => import(/* webpackChunkName: "squads" */ './Squad.vue'),
   AddSquad: () => import(/* webpackChunkName: "squads" */ './SquadAdd.vue'),
   Compare: () => import(/* webpackChunkName: "compare" */ './Compare.vue'),
+  TierListCreator: () => import(/* webpackChunkName: "tierlist" */ './TierListCreator.vue'),
 };

@@ -67,8 +67,8 @@
                           </h1>
                         </v-card-text>
                         <v-card-actions>
-                          <v-btn flat color="primary" @click="updateData">Download Updates</v-btn>
-                          <v-btn color="primary" flat @click.stop="showUpdateDialog = false">Close</v-btn>
+                          <v-btn color="primary" @click="updateData">Download Updates</v-btn>
+                          <v-btn flat @click.stop="showUpdateDialog = false">Close</v-btn>
                         </v-card-actions>
                       </v-card>
                     </v-dialog>
