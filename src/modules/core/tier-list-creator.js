@@ -146,9 +146,7 @@ export function parseTierListCode (code = '', hasUriComponents = false) {
 }
 
 export function fetchBase64Png (url = '') {
-  // TODO: change to remote URL
-  // const BASE_URL = 'https://macabre-broomstick-39921.herokuapp.com/getImage';
-  const BASE_URL = 'http://localhost:5000/getImage';
+  const BASE_URL = 'https://macabre-broomstick-39921.herokuapp.com/getImage';
   return fetch(`${BASE_URL}/${encodeURIComponent(url)}?format=text/plain`)
     .then(res => res.ok
         ? res.text()
