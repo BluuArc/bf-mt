@@ -390,8 +390,9 @@ export default {
       this.showGeneratingDialog = true;
       await this.transformedSvgConfigPromise;
       // allow time for SVG to render
-      await new Promise(fulfill => setTimeout(() => fulfill(), 1000));
-      await this.waitUntilTrue(() => !!this.$el.querySelector('svg#tier-list-svg-transformed'));
+      await new Promise(fulfill => setTimeout(() => fulfill(), 1000))
+        .then(() => this.waitUntilTrue(() => !!this.$el.querySelector('svg#tier-list-svg-transformed')))
+        .then(() => new Promise(fulfill => setTimeout(() => fulfill(), 1000)));
       try {
         this.downloadLink = await this.generateDownloadLink();
         this.showGeneratingDialog = false;
