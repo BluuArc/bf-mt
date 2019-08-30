@@ -22,7 +22,7 @@
     },
     "5": {
       "ID": "5",
-      "Name": "Elemental Mitigation",
+      "Name": "Elemental Damage Reduction",
       "In Project Doc": "Y"
     },
     "6": {
@@ -37,7 +37,7 @@
     },
     "8": {
       "ID": "8",
-      "Name": "Mitigation",
+      "Name": "Damage Reduction",
       "In Project Doc": "Y"
     },
     "9": {
@@ -67,7 +67,7 @@
     },
     "14": {
       "ID": "14",
-      "Name": "Mitigation (Chance)",
+      "Name": "Damage Reduction (Chance)",
       "In Project Doc": "Y"
     },
     "15": {
@@ -257,7 +257,7 @@
     },
     "58": {
       "ID": "58",
-      "Name": "Guard Mitigation",
+      "Name": "Damage Reduction when Guarding",
       "In Project Doc": "Y"
     },
     "59": {
@@ -272,12 +272,12 @@
     },
     "62": {
       "ID": "62",
-      "Name": "Elemental Mitigation",
+      "Name": "Elemental Damage Reduction",
       "In Project Doc": "Y"
     },
     "63": {
       "ID": "63",
-      "Name": "Elemental Mitigation for first X Turns",
+      "Name": "Elemental Damage Reduction for first X Turns",
       "In Project Doc": "Y"
     },
     "64": {
@@ -497,7 +497,7 @@
     },
     "128": {
       "ID": "128",
-      "Name": "Damage Mitigation from Normal Attacks",
+      "Name": "Damage Reduction from Normal Attacks",
       "In Project Doc": "Y"
     },
     "143": {
@@ -507,7 +507,7 @@
     },
     "10008": {
       "ID": "10008",
-      "Name": "Damage Mitigation from Specific Sources",
+      "Name": "Damage Reduction from Specific Sources",
       "In Project Doc": "Y"
     },
     "11004": {
@@ -659,7 +659,7 @@
     },
     "16": {
       "ID": "16",
-      "Name": "Elemental Mitigation",
+      "Name": "Elemental Damage Reduction",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -675,7 +675,7 @@
     },
     "18": {
       "ID": "18",
-      "Name": "Damage Mitigation",
+      "Name": "Damage Reduction",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -819,7 +819,7 @@
     },
     "39": {
       "ID": "39",
-      "Name": "Elemental Mitigation",
+      "Name": "Elemental Damage Reduction",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -1043,7 +1043,7 @@
     },
     "68": {
       "ID": "68",
-      "Name": "Guard Mitigation",
+      "Name": "Damage Reduction when Guarding",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -1187,7 +1187,7 @@
     },
     "93": {
       "ID": "93",
-      "Name": "Spark/Critical/Elemental Weakness Damage Mitigation",
+      "Name": "Spark/Critical/Elemental Weakness Damage Reduction",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "93",
