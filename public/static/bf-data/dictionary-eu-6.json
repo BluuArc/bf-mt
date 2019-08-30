@@ -1,28 +1,4 @@
 {
-  "MST_SKILLS_2840558_NAME": {
-    "en": "Thunderbird's Wrath",
-    "es": "Thunderbird's Wrath",
-    "id": "Thunderbird's Wrath",
-    "pt": "Thunderbird's Wrath",
-    "th": "Thunderbird's Wrath",
-    "vi": "Thunderbird's Wrath"
-  },
-  "MST_SKILLS_2840567_DESCRIPTION": {
-    "en": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
-    "es": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
-    "id": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
-    "pt": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
-    "th": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
-    "vi": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns"
-  },
-  "MST_SKILLS_2840567_NAME": {
-    "en": "Xian-qi Formation",
-    "es": "Xian-qi Formation",
-    "id": "Xian-qi Formation",
-    "pt": "Xian-qi Formation",
-    "th": "Xian-qi Formation",
-    "vi": "Xian-qi Formation"
-  },
   "MST_SKILLS_2840568_DESCRIPTION": {
     "en": "26 combo massive Thunder attack on all foes, enormously boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts OD gauge",
     "es": "26 combo massive Thunder attack on all foes, enormously boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts OD gauge",
@@ -262,6 +238,22 @@
     "pt": "Avenging Angel",
     "th": "Avenging Angel",
     "vi": "Avenging Angel"
+  },
+  "MST_SKILLS_2840788_DESCRIPTION": {
+    "en": "28 combo massive Thunder attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormous Spark vulnerability infliction for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts max HP, enormously boosts all elemental damage for 3 turns & enormously boosts BC, HC and Item drop rates for 3 turns",
+    "es": "28 combo massive Thunder attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormous Spark vulnerability infliction for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts max HP, enormously boosts all elemental damage for 3 turns & enormously boosts BC, HC and Item drop rates for 3 turns",
+    "id": "28 combo massive Thunder attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormous Spark vulnerability infliction for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts max HP, enormously boosts all elemental damage for 3 turns & enormously boosts BC, HC and Item drop rates for 3 turns",
+    "pt": "28 combo massive Thunder attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormous Spark vulnerability infliction for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts max HP, enormously boosts all elemental damage for 3 turns & enormously boosts BC, HC and Item drop rates for 3 turns",
+    "th": "28 combo massive Thunder attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormous Spark vulnerability infliction for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts max HP, enormously boosts all elemental damage for 3 turns & enormously boosts BC, HC and Item drop rates for 3 turns",
+    "vi": "28 combo massive Thunder attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), enormous Spark vulnerability infliction for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts max HP, enormously boosts all elemental damage for 3 turns & enormously boosts BC, HC and Item drop rates for 3 turns"
+  },
+  "MST_SKILLS_2840788_NAME": {
+    "en": "Ancient Ones' Call",
+    "es": "Ancient Ones' Call",
+    "id": "Ancient Ones' Call",
+    "pt": "Ancient Ones' Call",
+    "th": "Ancient Ones' Call",
+    "vi": "Ancient Ones' Call"
   },
   "MST_SKILLS_2840900_DESCRIPTION": {
     "en": "18 combo massive Thunder attack on all foes (uses all allies' BB gauge), 100% damage reduction from Water types for 2 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & fully restores HP for 3 turns",
@@ -696,12 +688,12 @@
     "vi": "Howl in Thy Cage, Villain!"
   },
   "MST_SKILLS_2850358_DESCRIPTION": {
-    "en": "43 combo massive Light attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), fully restores HP for 3 turns, enormously boosts Atk, Def, Rec of Light types for 3 turns, enormously boosts Atk relative to Rec for 3 turns, enormous 3 turn Atk reduction & raises allies from KO",
-    "es": "43 combo massive Light attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), fully restores HP for 3 turns, enormously boosts Atk, Def, Rec of Light types for 3 turns, enormously boosts Atk relative to Rec for 3 turns, enormous 3 turn Atk reduction & raises allies from KO",
-    "id": "43 combo massive Light attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), fully restores HP for 3 turns, enormously boosts Atk, Def, Rec of Light types for 3 turns, enormously boosts Atk relative to Rec for 3 turns, enormous 3 turn Atk reduction & raises allies from KO",
-    "pt": "43 combo massive Light attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), fully restores HP for 3 turns, enormously boosts Atk, Def, Rec of Light types for 3 turns, enormously boosts Atk relative to Rec for 3 turns, enormous 3 turn Atk reduction & raises allies from KO",
-    "th": "43 combo massive Light attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), fully restores HP for 3 turns, enormously boosts Atk, Def, Rec of Light types for 3 turns, enormously boosts Atk relative to Rec for 3 turns, enormous 3 turn Atk reduction & raises allies from KO",
-    "vi": "43 combo massive Light attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), fully restores HP for 3 turns, enormously boosts Atk, Def, Rec of Light types for 3 turns, enormously boosts Atk relative to Rec for 3 turns, enormous 3 turn Atk reduction & raises allies from KO"
+    "en": "43 combo massive Light attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), fully restores HP for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Atk relative to Rec for 3 turns, enormous 3 turn Atk reduction & raises allies from KO",
+    "es": "43 combo massive Light attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), fully restores HP for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Atk relative to Rec for 3 turns, enormous 3 turn Atk reduction & raises allies from KO",
+    "id": "43 combo massive Light attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), fully restores HP for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Atk relative to Rec for 3 turns, enormous 3 turn Atk reduction & raises allies from KO",
+    "pt": "43 combo massive Light attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), fully restores HP for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Atk relative to Rec for 3 turns, enormous 3 turn Atk reduction & raises allies from KO",
+    "th": "43 combo massive Light attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), fully restores HP for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Atk relative to Rec for 3 turns, enormous 3 turn Atk reduction & raises allies from KO",
+    "vi": "43 combo massive Light attack on all foes (damage relative to remaining HP, enormously boosts own critical hit rate), fully restores HP for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Atk relative to Rec for 3 turns, enormous 3 turn Atk reduction & raises allies from KO"
   },
   "MST_SKILLS_2850358_NAME": {
     "en": "Know the Sun's Wrath!",
@@ -2326,6 +2318,38 @@
     "pt": "DM: Yaotome MAX",
     "th": "DM: Yaotome MAX",
     "vi": "DM: Yaotome MAX"
+  },
+  "MST_SKILLS_2860787_DESCRIPTION": {
+    "en": "Massive Dark attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec of Dark types for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts own Spark damage for 3 turns & Spark damage boosts BB gauge for 3 turns",
+    "es": "Massive Dark attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec of Dark types for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts own Spark damage for 3 turns & Spark damage boosts BB gauge for 3 turns",
+    "id": "Massive Dark attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec of Dark types for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts own Spark damage for 3 turns & Spark damage boosts BB gauge for 3 turns",
+    "pt": "Massive Dark attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec of Dark types for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts own Spark damage for 3 turns & Spark damage boosts BB gauge for 3 turns",
+    "th": "Massive Dark attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec of Dark types for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts own Spark damage for 3 turns & Spark damage boosts BB gauge for 3 turns",
+    "vi": "Massive Dark attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec of Dark types for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts own Spark damage for 3 turns & Spark damage boosts BB gauge for 3 turns"
+  },
+  "MST_SKILLS_2860787_NAME": {
+    "en": "Straight Out the Park",
+    "es": "Straight Out the Park",
+    "id": "Straight Out the Park",
+    "pt": "Straight Out the Park",
+    "th": "Straight Out the Park",
+    "vi": "Straight Out the Park"
+  },
+  "MST_SKILLS_2860788_DESCRIPTION": {
+    "en": "Massive Dark attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 4 turns, enormously boosts Spark damage for 4 turns, enormously boosts own Spark damage for 4 turns, Spark damage boosts BB gauge for 4 turns & adds evasion for 3 turns",
+    "es": "Massive Dark attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 4 turns, enormously boosts Spark damage for 4 turns, enormously boosts own Spark damage for 4 turns, Spark damage boosts BB gauge for 4 turns & adds evasion for 3 turns",
+    "id": "Massive Dark attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 4 turns, enormously boosts Spark damage for 4 turns, enormously boosts own Spark damage for 4 turns, Spark damage boosts BB gauge for 4 turns & adds evasion for 3 turns",
+    "pt": "Massive Dark attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 4 turns, enormously boosts Spark damage for 4 turns, enormously boosts own Spark damage for 4 turns, Spark damage boosts BB gauge for 4 turns & adds evasion for 3 turns",
+    "th": "Massive Dark attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 4 turns, enormously boosts Spark damage for 4 turns, enormously boosts own Spark damage for 4 turns, Spark damage boosts BB gauge for 4 turns & adds evasion for 3 turns",
+    "vi": "Massive Dark attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 4 turns, enormously boosts Spark damage for 4 turns, enormously boosts own Spark damage for 4 turns, Spark damage boosts BB gauge for 4 turns & adds evasion for 3 turns"
+  },
+  "MST_SKILLS_2860788_NAME": {
+    "en": "Grand Slam Slugger",
+    "es": "Grand Slam Slugger",
+    "id": "Grand Slam Slugger",
+    "pt": "Grand Slam Slugger",
+    "th": "Grand Slam Slugger",
+    "vi": "Grand Slam Slugger"
   },
   "MST_SKILLS_2860900_DESCRIPTION": {
     "en": "18 combo massive Dark attack on all foes (uses all allies' BB gauge), 100% damage reduction from Light types for 2 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & fully restores HP for 3 turns",
@@ -20992,12 +21016,12 @@
     "vi": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, own max HP, BB Atk, Atk, Def, Rec, critical hit rate, critical damage, Spark damage, damage taken restores HP & activates own BB/SBB/UBB twice"
   },
   "MST_SKILLS_3810688_DESCRIPTION": {
-    "en": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, fully restores HP, 80% KO resistance, activates Fire barrier, purges LS and ES Lock, 100% damage reduction, 100% raises allies from KO & activates own BB/SBB/UBB twice",
-    "es": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, fully restores HP, 80% KO resistance, activates Fire barrier, purges LS and ES Lock, 100% damage reduction, 100% raises allies from KO & activates own BB/SBB/UBB twice",
-    "id": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, fully restores HP, 80% KO resistance, activates Fire barrier, purges LS and ES Lock, 100% damage reduction, 100% raises allies from KO & activates own BB/SBB/UBB twice",
-    "pt": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, fully restores HP, 80% KO resistance, activates Fire barrier, purges LS and ES Lock, 100% damage reduction, 100% raises allies from KO & activates own BB/SBB/UBB twice",
-    "th": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, fully restores HP, 80% KO resistance, activates Fire barrier, purges LS and ES Lock, 100% damage reduction, 100% raises allies from KO & activates own BB/SBB/UBB twice",
-    "vi": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, fully restores HP, 80% KO resistance, activates Fire barrier, purges LS and ES Lock, 100% damage reduction, 100% raises allies from KO & activates own BB/SBB/UBB twice"
+    "en": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, fully restores HP, 80% KO resistance, activates Fire barrier, purges LS and ES Lock, 100% damage reduction, 100% raises allies from KO & activates BB/SBB/UBB twice",
+    "es": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, fully restores HP, 80% KO resistance, activates Fire barrier, purges LS and ES Lock, 100% damage reduction, 100% raises allies from KO & activates BB/SBB/UBB twice",
+    "id": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, fully restores HP, 80% KO resistance, activates Fire barrier, purges LS and ES Lock, 100% damage reduction, 100% raises allies from KO & activates BB/SBB/UBB twice",
+    "pt": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, fully restores HP, 80% KO resistance, activates Fire barrier, purges LS and ES Lock, 100% damage reduction, 100% raises allies from KO & activates BB/SBB/UBB twice",
+    "th": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, fully restores HP, 80% KO resistance, activates Fire barrier, purges LS and ES Lock, 100% damage reduction, 100% raises allies from KO & activates BB/SBB/UBB twice",
+    "vi": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, fully restores HP, 80% KO resistance, activates Fire barrier, purges LS and ES Lock, 100% damage reduction, 100% raises allies from KO & activates BB/SBB/UBB twice"
   },
   "MST_SKILLS_3810688_NAME": {
     "en": "Gerh en Hati",
@@ -21151,6 +21175,22 @@
     "th": "Diviner's Doomchant",
     "vi": "Diviner's Doomchant"
   },
+  "MST_SKILLS_3840358_DESCRIPTION": {
+    "en": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, Atk relative to Rec, fully restores HP, inflicts Atk reduction, 100% DoT reduction, 100% Water, Thunder damage reduction, Spark damage boosts BB gauge & 100% raises allies from KO",
+    "es": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, Atk relative to Rec, fully restores HP, inflicts Atk reduction, 100% DoT reduction, 100% Water, Thunder damage reduction, Spark damage boosts BB gauge & 100% raises allies from KO",
+    "id": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, Atk relative to Rec, fully restores HP, inflicts Atk reduction, 100% DoT reduction, 100% Water, Thunder damage reduction, Spark damage boosts BB gauge & 100% raises allies from KO",
+    "pt": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, Atk relative to Rec, fully restores HP, inflicts Atk reduction, 100% DoT reduction, 100% Water, Thunder damage reduction, Spark damage boosts BB gauge & 100% raises allies from KO",
+    "th": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, Atk relative to Rec, fully restores HP, inflicts Atk reduction, 100% DoT reduction, 100% Water, Thunder damage reduction, Spark damage boosts BB gauge & 100% raises allies from KO",
+    "vi": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, Atk relative to Rec, fully restores HP, inflicts Atk reduction, 100% DoT reduction, 100% Water, Thunder damage reduction, Spark damage boosts BB gauge & 100% raises allies from KO"
+  },
+  "MST_SKILLS_3840358_NAME": {
+    "en": "Banished By Light",
+    "es": "Banished By Light",
+    "id": "Banished By Light",
+    "pt": "Banished By Light",
+    "th": "Banished By Light",
+    "vi": "Banished By Light"
+  },
   "MST_SKILLS_3840608_DESCRIPTION": {
     "en": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, critical hit rate, critical damage, Spark damage, Thunder and Light elemental damage, damage against status afflicted foes, activates BB/SBB/UBB twice & adds status ailment infliction to attack",
     "es": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, critical hit rate, critical damage, Spark damage, Thunder and Light elemental damage, damage against status afflicted foes, activates BB/SBB/UBB twice & adds status ailment infliction to attack",
@@ -21184,12 +21224,12 @@
     "vi": "30 combo grand dual attack on all foes (damage relative to remaining HP),  boosts OD gauge, Thunder elemental damage, critical damage, adds status ailment infliction to attack & damage taken boosts BB gauge and restores HP"
   },
   "MST_SKILLS_3840768_DESCRIPTION": {
-    "en": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, OD gauge, Spark damage, Atk, Def relative to max HP, 100% evasion, fully restores HP, purges LS and ES Lock & activates own BB/SBB/UBB twice",
-    "es": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, OD gauge, Spark damage, Atk, Def relative to max HP, 100% evasion, fully restores HP, purges LS and ES Lock & activates own BB/SBB/UBB twice",
-    "id": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, OD gauge, Spark damage, Atk, Def relative to max HP, 100% evasion, fully restores HP, purges LS and ES Lock & activates own BB/SBB/UBB twice",
-    "pt": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, OD gauge, Spark damage, Atk, Def relative to max HP, 100% evasion, fully restores HP, purges LS and ES Lock & activates own BB/SBB/UBB twice",
-    "th": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, OD gauge, Spark damage, Atk, Def relative to max HP, 100% evasion, fully restores HP, purges LS and ES Lock & activates own BB/SBB/UBB twice",
-    "vi": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, OD gauge, Spark damage, Atk, Def relative to max HP, 100% evasion, fully restores HP, purges LS and ES Lock & activates own BB/SBB/UBB twice"
+    "en": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, OD gauge, Spark damage, Atk, Def relative to max HP, 100% evasion, fully restores HP, purges LS and ES Lock & activates BB/SBB/UBB twice",
+    "es": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, OD gauge, Spark damage, Atk, Def relative to max HP, 100% evasion, fully restores HP, purges LS and ES Lock & activates BB/SBB/UBB twice",
+    "id": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, OD gauge, Spark damage, Atk, Def relative to max HP, 100% evasion, fully restores HP, purges LS and ES Lock & activates BB/SBB/UBB twice",
+    "pt": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, OD gauge, Spark damage, Atk, Def relative to max HP, 100% evasion, fully restores HP, purges LS and ES Lock & activates BB/SBB/UBB twice",
+    "th": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, OD gauge, Spark damage, Atk, Def relative to max HP, 100% evasion, fully restores HP, purges LS and ES Lock & activates BB/SBB/UBB twice",
+    "vi": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, OD gauge, Spark damage, Atk, Def relative to max HP, 100% evasion, fully restores HP, purges LS and ES Lock & activates BB/SBB/UBB twice"
   },
   "MST_SKILLS_3840768_NAME": {
     "en": "Kagune Barrage",
@@ -21198,6 +21238,22 @@
     "pt": "Kagune Barrage",
     "th": "Kagune Barrage",
     "vi": "Kagune Barrage"
+  },
+  "MST_SKILLS_3840788_DESCRIPTION": {
+    "en": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, BC, HC, item drop rate, Spark damage, all elemental damage, Spark vulnerability infliction, Spark damage boosts BB gauge & 100% evasion",
+    "es": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, BC, HC, item drop rate, Spark damage, all elemental damage, Spark vulnerability infliction, Spark damage boosts BB gauge & 100% evasion",
+    "id": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, BC, HC, item drop rate, Spark damage, all elemental damage, Spark vulnerability infliction, Spark damage boosts BB gauge & 100% evasion",
+    "pt": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, BC, HC, item drop rate, Spark damage, all elemental damage, Spark vulnerability infliction, Spark damage boosts BB gauge & 100% evasion",
+    "th": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, BC, HC, item drop rate, Spark damage, all elemental damage, Spark vulnerability infliction, Spark damage boosts BB gauge & 100% evasion",
+    "vi": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, Atk, Def, Rec, BC, HC, item drop rate, Spark damage, all elemental damage, Spark vulnerability infliction, Spark damage boosts BB gauge & 100% evasion"
+  },
+  "MST_SKILLS_3840788_NAME": {
+    "en": "Dominating Nature",
+    "es": "Dominating Nature",
+    "id": "Dominating Nature",
+    "pt": "Dominating Nature",
+    "th": "Dominating Nature",
+    "vi": "Dominating Nature"
   },
   "MST_SKILLS_3850167_DESCRIPTION": {
     "en": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts BB Atk, Spark damage, damage against status afflicted foes, 90% raises allies from KO, fully restores HP, activates Light barrier & 100% DoT reduction",
@@ -89742,5 +89798,29 @@
     "pt": "SDM: Power Geyser I",
     "th": "SDM: พาวเวอร์ เกย์เซอร์ I",
     "vi": "SDM: Power Geyser I"
+  },
+  "MST_SKILLS_830187_DESCRIPTION": {
+    "en": "Powerful Earth attack on all foes, greatly boosts Def relative to Atk for 3 turns & adds additional powerful attack at turn's end for 3 turns",
+    "es": "Powerful Earth attack on all foes, greatly boosts Def relative to Atk for 3 turns & adds additional powerful attack at turn's end for 3 turns",
+    "id": "Serangan Bumi kuat ke semua musuh, 3 giliran: amat menambah Tahan sesuai Serang & ekstra serangan kuat di akhir giliran",
+    "pt": "Powerful Earth attack on all foes, greatly boosts Def relative to Atk for 3 turns & adds additional powerful attack at turn's end for 3 turns",
+    "th": "โจมตีธาตุดินอย่างแรง ใส่ศัตรูทั้งหมด, เพิ่มค่าอย่างมากให้ ป้องกัน สัมพันธ์กับ โจมตี นาน 3 เทิร์น และ ให้ โจมตีอย่างแรงอีกครั้ง เมื่อตอนจบเทิร์น นาน 3 เทิร์น",
+    "vi": "Powerful Earth attack on all foes, greatly boosts Def relative to Atk for 3 turns & adds additional powerful attack at turn's end for 3 turns"
+  },
+  "MST_SKILLS_830187_NAME": {
+    "en": "DM: V-Slasher I",
+    "es": "DM: V-Slasher I",
+    "id": "DM: V-Penyabet I",
+    "pt": "DM: V-Slasher I",
+    "th": "ดีเอ็ม: วี-สแลชเชอร์ I",
+    "vi": "DM: V-Slasher I"
+  },
+  "MST_SKILLS_830188_DESCRIPTION": {
+    "en": "Powerful Earth attack on all foes, casts Taunt and hugely boosts own Def for 2 turns, greatly boosts Def relative to Atk for 3 turns, adds additional powerful attack at turn's end for 3 turns & reduces passive healing effectiveness for 1 turn (PvP modes only)",
+    "es": "Powerful Earth attack on all foes, casts Taunt and hugely boosts own Def for 2 turns, greatly boosts Def relative to Atk for 3 turns, adds additional powerful attack at turn's end for 3 turns & reduces passive healing effectiveness for 1 turn (PvP modes only)",
+    "id": "Powerful Earth attack on all foes, casts Taunt and hugely boosts own Def for 2 turns, greatly boosts Def relative to Atk for 3 turns, adds additional powerful attack at turn's end for 3 turns & reduces passive healing effectiveness for 1 turn (PvP modes only)",
+    "pt": "Powerful Earth attack on all foes, casts Taunt and hugely boosts own Def for 2 turns, greatly boosts Def relative to Atk for 3 turns, adds additional powerful attack at turn's end for 3 turns & reduces passive healing effectiveness for 1 turn (PvP modes only)",
+    "th": "Powerful Earth attack on all foes, casts Taunt and hugely boosts own Def for 2 turns, greatly boosts Def relative to Atk for 3 turns, adds additional powerful attack at turn's end for 3 turns & reduces passive healing effectiveness for 1 turn (PvP modes only)",
+    "vi": "Powerful Earth attack on all foes, casts Taunt and hugely boosts own Def for 2 turns, greatly boosts Def relative to Atk for 3 turns, adds additional powerful attack at turn's end for 3 turns & reduces passive healing effectiveness for 1 turn (PvP modes only)"
   }
 }
