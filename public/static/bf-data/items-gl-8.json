@@ -23723,6 +23723,153 @@
       "830688"
     ]
   },
+  "819267": {
+    "desc": "45% all parameters (Water, Light), 5% damage reduction, increases buff durations of damage reduction effects by 1 turn & 50% Spark damage & adds elemental damage to LS",
+    "effect": [
+      {
+        "atk% buff": 45,
+        "def% buff": 45,
+        "elements buffed": [
+          "water",
+          "light"
+        ],
+        "hp% buff": 45,
+        "passive id": "2",
+        "rec% buff": 45
+      },
+      {
+        "unknown passive id": "107",
+        "unknown passive params": "50,1$2$3$4$5$6$0.2"
+      },
+      {
+        "unknown passive id": "11009",
+        "unknown passive params": "21:22:23:24:25:26:36,1"
+      },
+      {
+        "damage% for spark": 50,
+        "passive id": "31"
+      },
+      {
+        "dmg% mitigation": 5,
+        "passive id": "8"
+      }
+    ],
+    "id": 819267,
+    "max_stack": 1,
+    "name": "Word of Athum",
+    "raid": false,
+    "rarity": 6,
+    "recipe": {
+      "karma": "100000",
+      "materials": [
+        {
+          "count": 3,
+          "id": 890045,
+          "name": "Scribesblood"
+        },
+        {
+          "count": 5,
+          "id": 890041,
+          "name": "Shattered Faith"
+        }
+      ]
+    },
+    "sell_price": 1000000,
+    "sphere type": 14,
+    "sphere type text": "Special",
+    "thumbnail": "sphere_thum_819267.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 819268,
+        "name": "Cunei of Athum"
+      }
+    ]
+  },
+  "819268": {
+    "desc": "60% all parameters (Water, Light), 10% damage reduction, adds greatly restores HP effect to BB/SBB, increases buff durations of damage reduction effects by 1 turn, 100% Spark damage & adds elemental damage to LS",
+    "effect": [
+      {
+        "atk% buff": 60,
+        "def% buff": 60,
+        "elements buffed": [
+          "water",
+          "light"
+        ],
+        "hp% buff": 60,
+        "passive id": "2",
+        "rec% buff": 60
+      },
+      {
+        "dmg% mitigation": 10,
+        "passive id": "8"
+      },
+      {
+        "passive id": "66",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "heal high": 4000,
+            "heal low": 3500,
+            "proc id": "2",
+            "rec added% (from healer)": 40,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "unknown passive id": "11009",
+        "unknown passive params": "21:22:23:24:25:26:36,1"
+      },
+      {
+        "unknown passive id": "107",
+        "unknown passive params": "50,1$2$3$4$5$6$0.3"
+      },
+      {
+        "damage% for spark": 100,
+        "passive id": "31"
+      }
+    ],
+    "id": 819268,
+    "max_stack": 1,
+    "name": "Cunei of Athum",
+    "raid": false,
+    "rarity": 7,
+    "recipe": {
+      "karma": "1000000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 819267,
+          "name": "Word of Athum"
+        },
+        {
+          "count": 10,
+          "id": 890046,
+          "name": "Arcane Remnant"
+        },
+        {
+          "count": 1,
+          "id": 890044,
+          "name": "Glittersand"
+        },
+        {
+          "count": 2,
+          "id": 890045,
+          "name": "Scribesblood"
+        }
+      ]
+    },
+    "sell_price": 1000000,
+    "sphere type": 14,
+    "sphere type text": "Special",
+    "thumbnail": "sphere_thum_819268.png",
+    "type": "sphere",
+    "usage": []
+  },
   "819901": {
     "desc": "Boosts Max HP and Def by 5% & boosts Atk for Fire types by 20%",
     "effect": [
@@ -32404,6 +32551,10 @@
       {
         "id": 819264,
         "name": "Harmony of Khons"
+      },
+      {
+        "id": 819267,
+        "name": "Word of Athum"
       }
     ]
   },
@@ -32467,6 +32618,48 @@
       {
         "id": 819266,
         "name": "Miracle of Khons"
+      },
+      {
+        "id": 819268,
+        "name": "Cunei of Athum"
+      }
+    ]
+  },
+  "890045": {
+    "desc": "A small pot of violet ink popularly said to be the true 'lifeforce' of the scribes.",
+    "id": 890045,
+    "max_stack": 99,
+    "name": "Scribesblood",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 100,
+    "thumbnail": "item_thum_890045.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 819267,
+        "name": "Word of Athum"
+      },
+      {
+        "id": 819268,
+        "name": "Cunei of Athum"
+      }
+    ]
+  },
+  "890046": {
+    "desc": "Remnants of spent arcane energy. Glows faintly in the dark and emits a tingling aura.",
+    "id": 890046,
+    "max_stack": 99,
+    "name": "Arcane Remnant",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 1000,
+    "thumbnail": "item_thum_890046.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 819268,
+        "name": "Cunei of Athum"
       }
     ]
   },

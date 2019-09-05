@@ -41014,6 +41014,50 @@
       "850658"
     ]
   },
+  "850688": {
+    "desc": "100% boost to Atk, Def, Rec, 120% boost to max HP, 20% damage reduction for 2 turns when damage taken has exceeded certain amount, damage taken hugely boosts BB gauge, damage taken may considerably restore HP & adds probable resistance against 1 KO attack",
+    "effects": [
+      {
+        "atk% buff": 100,
+        "def% buff": 100,
+        "hp% buff": 120,
+        "passive id": "1",
+        "rec% buff": 100
+      },
+      {
+        "buff": {
+          "buff turns (36)": "1",
+          "dmg reduction% buff": 20
+        },
+        "damage threshold buff activation": 5000,
+        "passive id": "78"
+      },
+      {
+        "bc fill when attacked high": 10,
+        "bc fill when attacked low": 6,
+        "bc fill when attacked%": 100,
+        "passive id": "25"
+      },
+      {
+        "dmg% to hp% when attacked chance%": 50,
+        "dmg% to hp% when attacked high": 30,
+        "dmg% to hp% when attacked low": 25,
+        "passive id": "24"
+      },
+      {
+        "angel idol chance% condition": 0,
+        "angel idol recover chance% high": 25,
+        "angel idol recover chance% low": 25,
+        "angel idol recover counts": 1,
+        "passive id": "69"
+      }
+    ],
+    "id": "850688",
+    "name": "Architect of Urzyma",
+    "associated_units": [
+      "850688"
+    ]
+  },
   "850708": {
     "desc": "200% boost to Atk and 100% boost to Def, max HP of Light types, 180% boost to Spark damage, enormously boosts Light elemental damage, 15% damage reduction from Light, Dark types & damage taken hugely boosts BB gauge",
     "effects": [

@@ -1,4 +1,108 @@
 {
+  "MST_LEADERSKILLS_740157_DESCRIPTION": {
+    "en": "40% boost to max HP, 100% boost to Atk, hugely boosts critical and elemental damage & 100% boost to Spark damage",
+    "es": "40% boost to max HP, 100% boost to Atk, hugely boosts critical and elemental damage & 100% boost to Spark damage",
+    "id": "40% ekstra HP maks, 100% ekstra Serang, amat menambah kerusakan ampuh dan elemen, 100% ekstra kerusakan Percikan",
+    "pt": "40% boost to max HP, 100% boost to Atk, hugely boosts critical and elemental damage & 100% boost to Spark damage",
+    "th": "40% เพิ่มค่าให้ HP สูงสุด, 100% เพิ่มค่าให้ โจมตี, เพิ่มค่าอย่างสูงให้ ความเสียหายคริติคอล และ ธาตุ กับ 100% เพิ่มค่าให้ ความเสียหายสปาร์ค",
+    "vi": "40% boost to max HP, 100% boost to Atk, hugely boosts critical and elemental damage & 100% boost to Spark damage"
+  },
+  "MST_LEADERSKILLS_740157_NAME": {
+    "en": "Full-powered Glass Cannon",
+    "es": "Full-powered Glass Cannon",
+    "id": "Meriam Kaca Berdaya Penuh",
+    "pt": "Full-powered Glass Cannon",
+    "th": "ฟูล-พาวเวอร์ กลาส แคนน่อน",
+    "vi": "Full-powered Glass Cannon"
+  },
+  "MST_LEADERSKILLS_7401_DESCRIPTION": {
+    "en": "30% boost to Atk and max HP for all Units",
+    "es": "30% de aumento al ataque y a los PS máximos de todas las unidades",
+    "id": "Menambah Serangan dan maks HP 30% untuk semua Unit",
+    "pt": "Reforço de 30% no ATQ e HP máx. de todas as unidades",
+    "th": "30% เพิ่มค่า โจมตี กับ HP สูงสุด สำหรับทุกยูนิต",
+    "vi": "Tăng 30% sức mạnh Tấn công và Thể lực tối đa cho tất cả các Quái"
+  },
+  "MST_LEADERSKILLS_7401_NAME": {
+    "en": "High Ruler's Chakra",
+    "es": "Chakra del gran soberano",
+    "id": "Penguasa Tinggi Chakra",
+    "pt": "Chakra do Grão-Rei",
+    "th": "ไฮ รูลเลอร์ จักระ",
+    "vi": "Luân xa của thống soái c.cao"
+  },
+  "MST_LEADERSKILLS_740237_DESCRIPTION": {
+    "en": "100% boost to max HP, 150% boost to Def and 30% boost to critical hit rate of Thunder types, hugely boosts critical damage, hugely boosts Thunder elemental damage, 15% damage reduction from Water, Thunder types & 50% Spark damage reduction",
+    "es": "100% boost to max HP, 150% boost to Def and 30% boost to critical hit rate of Thunder types, hugely boosts critical damage, hugely boosts Thunder elemental damage, 15% damage reduction from Water, Thunder types & 50% Spark damage reduction",
+    "id": "100% boost to max HP, 150% boost to Def and 30% boost to critical hit rate of Thunder types, hugely boosts critical damage, hugely boosts Thunder elemental damage, 15% damage reduction from Water, Thunder types & 50% Spark damage reduction",
+    "pt": "100% boost to max HP, 150% boost to Def and 30% boost to critical hit rate of Thunder types, hugely boosts critical damage, hugely boosts Thunder elemental damage, 15% damage reduction from Water, Thunder types & 50% Spark damage reduction",
+    "th": "100% boost to max HP, 150% boost to Def and 30% boost to critical hit rate of Thunder types, hugely boosts critical damage, hugely boosts Thunder elemental damage, 15% damage reduction from Water, Thunder types & 50% Spark damage reduction",
+    "vi": "100% boost to max HP, 150% boost to Def and 30% boost to critical hit rate of Thunder types, hugely boosts critical damage, hugely boosts Thunder elemental damage, 15% damage reduction from Water, Thunder types & 50% Spark damage reduction"
+  },
+  "MST_LEADERSKILLS_740237_NAME": {
+    "en": "Mighty Wanderer",
+    "es": "Mighty Wanderer",
+    "id": "Mighty Wanderer",
+    "pt": "Mighty Wanderer",
+    "th": "Mighty Wanderer",
+    "vi": "Mighty Wanderer"
+  },
+  "MST_LEADERSKILLS_740247_DESCRIPTION": {
+    "en": "100% boost to all parameters, enormously boosts all elemental damage, 160% boost to Spark damage, greatly boosts BB Atk & boosts Atk relative to remaining HP",
+    "es": "100% boost to all parameters, enormously boosts all elemental damage, 160% boost to Spark damage, greatly boosts BB Atk & boosts Atk relative to remaining HP",
+    "id": "100% boost to all parameters, enormously boosts all elemental damage, 160% boost to Spark damage, greatly boosts BB Atk & boosts Atk relative to remaining HP",
+    "pt": "100% boost to all parameters, enormously boosts all elemental damage, 160% boost to Spark damage, greatly boosts BB Atk & boosts Atk relative to remaining HP",
+    "th": "100% boost to all parameters, enormously boosts all elemental damage, 160% boost to Spark damage, greatly boosts BB Atk & boosts Atk relative to remaining HP",
+    "vi": "100% boost to all parameters, enormously boosts all elemental damage, 160% boost to Spark damage, greatly boosts BB Atk & boosts Atk relative to remaining HP"
+  },
+  "MST_LEADERSKILLS_740247_NAME": {
+    "en": "Epitaph Eternal",
+    "es": "Epitaph Eternal",
+    "id": "Epitaph Eternal",
+    "pt": "Epitaph Eternal",
+    "th": "Epitaph Eternal",
+    "vi": "Epitaph Eternal"
+  },
+  "MST_LEADERSKILLS_7402_DESCRIPTION": {
+    "en": "30% boost to Atk and max HP for all Units & adds chance of ignoring an opponent's Def when attacking",
+    "es": "30% de aumento al ataque y a los PS máximos de todas las unidades. Posibilidad de ignorar la defensa del adversario al atacar",
+    "id": "Menambah Serangan dan maks HP 30% untuk semua Unit & menambah kans mengabaikan pertahanan lawan saat menyerang",
+    "pt": "Bônus de 30% no ATQ de todas as unidades e chance de anular a DEF de um inimigo ao atacar",
+    "th": "30% เพิ่มค่า โจมตี กับ HP สูงสุด สำหรับทุกยูนิต และ เพิ่มโอกาส ไม่สนค่าป้องกันของศัตรูเมื่อกำลังโจตี",
+    "vi": "Tăng 30% sức mạnh Tấn công và Thể lực tối đa của tất cả các Quái & thêm cơ hội bỏ qua sức Phòng thủ của đối thủ khi tấn công"
+  },
+  "MST_LEADERSKILLS_7402_NAME": {
+    "en": "Destruction God's Chakra",
+    "es": "Chakra del dios destructor",
+    "id": "Dewa Destruksi Chakra",
+    "pt": "Chakra do Deus da Destruição",
+    "th": "เดสทรัคชั่น ก็อด จักระ",
+    "vi": "Luân xa của thần hủy diệt"
+  },
+  "MST_LEADERSKILLS_7403_DESCRIPTION": {
+    "en": "30% boost to max HP and Atk of all allies, boosts critical damage & critical damage greatly boosts BB gauge",
+    "es": "Aumenta descomunalmente el daño de Chispas y enormemente el daño elemental de las unidades atronadoras y acuáticas",
+    "id": "30% ekstra HP & Serang maks semua sekutu, menambah kerusakan pukulan ampuh & kerusakan tersebut amat menambah meteran BB",
+    "pt": "Reforço de 30% no HP máx e ATQ dos aliados, reforço no dano crítico e grande reforço na barra BB com dano crítico",
+    "th": "30% เพิ่มค่า เพิ่มค่า HP  สูงสุด กับ โจมตี ของ พันธมิตรทั้งหมด, เพิ่ม ความเสียหายคริติคอล และ ความเสียหายคริติคอล เพิ่ม BB เกจ อย่างมาก",
+    "vi": "30% boost to max HP and Atk of all allies, boosts critical damage & critical damage greatly boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_7403_NAME": {
+    "en": "Soaring Spirit",
+    "es": "Espíritu en vuelo",
+    "id": "Roh Menjulang",
+    "pt": "Espírito Crescente",
+    "th": "โซริ่งสปิริต",
+    "vi": "Soaring Spirit"
+  },
+  "MST_LEADERSKILLS_7404_DESCRIPTION": {
+    "en": "30% boost to max HP and Atk of all allies, greatly boosts critical damage & critical damage hugely boosts BB gauge",
+    "es": "Aumenta enormemente el daño de Chispas y puede causar una aflicción de estado al azar",
+    "id": "30% ekstra HP & Serang maks semua sekutu, amat menambah kerusakan pukulan ampuh & kerusakan tersebut amat menambah meteran BB",
+    "pt": "Reforço de 30% no HP máx e ATQ dos aliados, grande reforço no dano crítico e enorme reforço na barra BB com dano crítico",
+    "th": "30% เพิ่มค่า เพิ่มค่า HP  สูงสุด กับ โจมตี ของ พันธมิตรทั้งหมด, greatly เพิ่ม ความเสียหายคริติคอล และ ความเสียหายคริติคอล เพิ่ม BB เกจ อย่างสูง",
+    "vi": "30% boost to max HP and Atk of all allies, greatly boosts critical damage & critical damage hugely boosts BB gauge"
+  },
   "MST_LEADERSKILLS_7404_NAME": {
     "en": "Supreme Soaring Spirit",
     "es": "Espíritu supremo en vuelo",
@@ -9782,6 +9886,22 @@
     "pt": "Soul of the Guardian",
     "th": "Soul of the Guardian",
     "vi": "Soul of the Guardian"
+  },
+  "MST_LEADERSKILLS_850688_DESCRIPTION": {
+    "en": "100% boost to Atk, Def, Rec, 120% boost to max HP, 20% damage reduction for 2 turns when damage taken has exceeded certain amount, damage taken hugely boosts BB gauge, damage taken may considerably restore HP & adds probable resistance against 1 KO attack",
+    "es": "100% boost to Atk, Def, Rec, 120% boost to max HP, 20% damage reduction for 2 turns when damage taken has exceeded certain amount, damage taken hugely boosts BB gauge, damage taken may considerably restore HP & adds probable resistance against 1 KO attack",
+    "id": "100% boost to Atk, Def, Rec, 120% boost to max HP, 20% damage reduction for 2 turns when damage taken has exceeded certain amount, damage taken hugely boosts BB gauge, damage taken may considerably restore HP & adds probable resistance against 1 KO attack",
+    "pt": "100% boost to Atk, Def, Rec, 120% boost to max HP, 20% damage reduction for 2 turns when damage taken has exceeded certain amount, damage taken hugely boosts BB gauge, damage taken may considerably restore HP & adds probable resistance against 1 KO attack",
+    "th": "100% boost to Atk, Def, Rec, 120% boost to max HP, 20% damage reduction for 2 turns when damage taken has exceeded certain amount, damage taken hugely boosts BB gauge, damage taken may considerably restore HP & adds probable resistance against 1 KO attack",
+    "vi": "100% boost to Atk, Def, Rec, 120% boost to max HP, 20% damage reduction for 2 turns when damage taken has exceeded certain amount, damage taken hugely boosts BB gauge, damage taken may considerably restore HP & adds probable resistance against 1 KO attack"
+  },
+  "MST_LEADERSKILLS_850688_NAME": {
+    "en": "Architect of Urzyma",
+    "es": "Architect of Urzyma",
+    "id": "Architect of Urzyma",
+    "pt": "Architect of Urzyma",
+    "th": "Architect of Urzyma",
+    "vi": "Architect of Urzyma"
   },
   "MST_LEADERSKILLS_850708_DESCRIPTION": {
     "en": "200% boost to Atk and 100% boost to Def, max HP of Light types, 180% boost to Spark damage, enormously boosts Light elemental damage, 15% damage reduction from Light, Dark types & damage taken hugely boosts BB gauge",
@@ -89734,93 +89854,5 @@
     "pt": "Legendary Jona ",
     "th": "เลเจนดารี่ โจน่า ",
     "vi": "Legendary Jona "
-  },
-  "MST_MONSTERS_53421_NAME": {
-    "en": "Legendary Jona ",
-    "es": "Legendary Jona ",
-    "id": "Legendary Jona ",
-    "pt": "Legendary Jona ",
-    "th": "เลเจนดารี่ โจน่า ",
-    "vi": "Legendary Jona "
-  },
-  "MST_MONSTERS_53450_NAME": {
-    "en": "Duelmex",
-    "es": "Duelmex",
-    "id": "Duelmex",
-    "pt": "Duelmex",
-    "th": "ดูเอลเม็กซ์",
-    "vi": "Duelmex"
-  },
-  "MST_MONSTERS_53451_NAME": {
-    "en": "Duelmex",
-    "es": "Duelmex",
-    "id": "Duelmex",
-    "pt": "Duelmex",
-    "th": "ดูเอลเม็กซ์",
-    "vi": "Duelmex"
-  },
-  "MST_MONSTERS_53452_NAME": {
-    "en": "Duelmex",
-    "es": "Duelmex",
-    "id": "Duelmex",
-    "pt": "Duelmex",
-    "th": "ดูเอลเม็กซ์",
-    "vi": "Duelmex"
-  },
-  "MST_MONSTERS_53453_NAME": {
-    "en": "Duelmex",
-    "es": "Duelmex",
-    "id": "Duelmex",
-    "pt": "Duelmex",
-    "th": "ดูเอลเม็กซ์",
-    "vi": "Duelmex"
-  },
-  "MST_MONSTERS_53454_NAME": {
-    "en": "Duelmex",
-    "es": "Duelmex",
-    "id": "Duelmex",
-    "pt": "Duelmex",
-    "th": "ดูเอลเม็กซ์",
-    "vi": "Duelmex"
-  },
-  "MST_MONSTERS_53455_NAME": {
-    "en": "Duelmex",
-    "es": "Duelmex",
-    "id": "Yang Mulia Lord Mesin ",
-    "pt": "Duelmex",
-    "th": "ดูเอลเม็กซ์",
-    "vi": "Duelmex"
-  },
-  "MST_MONSTERS_53456_NAME": {
-    "en": "Duelmex",
-    "es": "Duelmex",
-    "id": "Duelmex",
-    "pt": "Duelmex",
-    "th": "ดูเอลเม็กซ์",
-    "vi": "Duelmex"
-  },
-  "MST_MONSTERS_53500_NAME": {
-    "en": "White Lebra",
-    "es": "Lebra blanco",
-    "id": "Lebra Putih",
-    "pt": "Lebra Branco",
-    "th": "ไวท์ลีบร้า",
-    "vi": "Lebra Trắng"
-  },
-  "MST_MONSTERS_53501_NAME": {
-    "en": "White Lebra",
-    "es": "Lebra blanco",
-    "id": "Lebra Putih",
-    "pt": "Lebra Branco",
-    "th": "ไวท์ลีบร้า",
-    "vi": "Lebra Trắng"
-  },
-  "MST_MONSTERS_53502_NAME": {
-    "en": "White Lebra",
-    "es": "Lebra blanco",
-    "id": "Lebra Putih",
-    "pt": "Lebra Branco",
-    "th": "ไวท์ลีบร้า",
-    "vi": "Lebra Trắng"
   }
 }
