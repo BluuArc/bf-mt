@@ -1,4 +1,12 @@
 {
+  "MST_SKILLS_2840567_NAME": {
+    "en": "Xian-qi Formation",
+    "es": "Xian-qi Formation",
+    "id": "Xian-qi Formation",
+    "pt": "Xian-qi Formation",
+    "th": "Xian-qi Formation",
+    "vi": "Xian-qi Formation"
+  },
   "MST_SKILLS_2840568_DESCRIPTION": {
     "en": "26 combo massive Thunder attack on all foes, enormously boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts OD gauge",
     "es": "26 combo massive Thunder attack on all foes, enormously boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts OD gauge",
@@ -1166,6 +1174,22 @@
     "pt": "Walküre: Lightchaser",
     "th": "Walküre: Lightchaser",
     "vi": "Walküre: Lightchaser"
+  },
+  "MST_SKILLS_2850688_DESCRIPTION": {
+    "en": "23 combo massive Light attack on all foes (damage relative to remaining HP), 100% damage reduction for 4 turns, enormously boosts Atk, Def, Rec and enormously boosts critical hit rate for 4 turns, damage taken hugely boosts BB gauge for 4 turns, adds probable resistance against 1 KO attack & purges LS and ES Lock effects from all allies",
+    "es": "23 combo massive Light attack on all foes (damage relative to remaining HP), 100% damage reduction for 4 turns, enormously boosts Atk, Def, Rec and enormously boosts critical hit rate for 4 turns, damage taken hugely boosts BB gauge for 4 turns, adds probable resistance against 1 KO attack & purges LS and ES Lock effects from all allies",
+    "id": "23 combo massive Light attack on all foes (damage relative to remaining HP), 100% damage reduction for 4 turns, enormously boosts Atk, Def, Rec and enormously boosts critical hit rate for 4 turns, damage taken hugely boosts BB gauge for 4 turns, adds probable resistance against 1 KO attack & purges LS and ES Lock effects from all allies",
+    "pt": "23 combo massive Light attack on all foes (damage relative to remaining HP), 100% damage reduction for 4 turns, enormously boosts Atk, Def, Rec and enormously boosts critical hit rate for 4 turns, damage taken hugely boosts BB gauge for 4 turns, adds probable resistance against 1 KO attack & purges LS and ES Lock effects from all allies",
+    "th": "23 combo massive Light attack on all foes (damage relative to remaining HP), 100% damage reduction for 4 turns, enormously boosts Atk, Def, Rec and enormously boosts critical hit rate for 4 turns, damage taken hugely boosts BB gauge for 4 turns, adds probable resistance against 1 KO attack & purges LS and ES Lock effects from all allies",
+    "vi": "23 combo massive Light attack on all foes (damage relative to remaining HP), 100% damage reduction for 4 turns, enormously boosts Atk, Def, Rec and enormously boosts critical hit rate for 4 turns, damage taken hugely boosts BB gauge for 4 turns, adds probable resistance against 1 KO attack & purges LS and ES Lock effects from all allies"
+  },
+  "MST_SKILLS_2850688_NAME": {
+    "en": "Wepet-er",
+    "es": "Wepet-er",
+    "id": "Wepet-er",
+    "pt": "Wepet-er",
+    "th": "Wepet-er",
+    "vi": "Wepet-er"
   },
   "MST_SKILLS_2850708_DESCRIPTION": {
     "en": "22 combo massive Light attack on single foe (or probable 7% damage of foe's max HP), 6 combo massive Light attack on single foe (25% active Pierce on Light, Dark types), enormous Spark vulnerability infliction for 4 turns, enormously boosts Light elemental damage for 4 turns, enormously boosts Spark damage for 4 turns & adds random status ailment infliction to attack for 4 turns",
@@ -89822,5 +89846,13 @@
     "pt": "Powerful Earth attack on all foes, casts Taunt and hugely boosts own Def for 2 turns, greatly boosts Def relative to Atk for 3 turns, adds additional powerful attack at turn's end for 3 turns & reduces passive healing effectiveness for 1 turn (PvP modes only)",
     "th": "Powerful Earth attack on all foes, casts Taunt and hugely boosts own Def for 2 turns, greatly boosts Def relative to Atk for 3 turns, adds additional powerful attack at turn's end for 3 turns & reduces passive healing effectiveness for 1 turn (PvP modes only)",
     "vi": "Powerful Earth attack on all foes, casts Taunt and hugely boosts own Def for 2 turns, greatly boosts Def relative to Atk for 3 turns, adds additional powerful attack at turn's end for 3 turns & reduces passive healing effectiveness for 1 turn (PvP modes only)"
+  },
+  "MST_SKILLS_830188_NAME": {
+    "en": "SDM: V-Slasher I",
+    "es": "SDM: V-Slasher I",
+    "id": "SDM: V-Penyabet I",
+    "pt": "SDM: V-Slasher I",
+    "th": "เอสเอ็มดี: วี-สแลชเชอร์ I",
+    "vi": "SDM: V-Slasher I"
   }
 }
