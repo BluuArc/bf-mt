@@ -23784,6 +23784,9 @@
         "id": 819268,
         "name": "Cunei of Athum"
       }
+    ],
+    "associated_units": [
+      "820688"
     ]
   },
   "819268": {
@@ -23868,7 +23871,10 @@
     "sphere type text": "Special",
     "thumbnail": "sphere_thum_819268.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "820688"
+    ]
   },
   "819901": {
     "desc": "Boosts Max HP and Def by 5% & boosts Atk for Fire types by 20%",

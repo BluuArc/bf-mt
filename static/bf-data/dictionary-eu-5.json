@@ -1,4 +1,84 @@
 {
+  "MST_SKILLS_2122540_NAME": {
+    "en": "Rakshasa Pyre",
+    "es": "Pira de Rakshasa",
+    "id": "Raksasa Pyre",
+    "pt": "Pira Rakshasa",
+    "th": "รัคชาซ่า ไพร",
+    "vi": "Rakshasa Pyre"
+  },
+  "MST_SKILLS_2122541_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122541_NAME": {
+    "en": "Demonic Blade",
+    "es": "Espada malévola",
+    "id": "Bilah Setan",
+    "pt": "Lâmina Demoníaca",
+    "th": "เดมอนนิค เบลด",
+    "vi": "Demonic Blade"
+  },
+  "MST_SKILLS_2122542_DESCRIPTION": {
+    "en": "11 combo powerful Fire attack on all enemies & probable Curse effect",
+    "es": "Combo grupal de 11 poderosos ataques ígneos. Puede causar maldición",
+    "id": "11 kombo serangan Api kuat ke semua musuh & kemungkinan efek Kutukan",
+    "pt": "Combo poderoso de 11 golpes de Fogo em todos os inimigos e provável efeito de Maldição",
+    "th": "11 คอมโบ โจมตีธาตุไฟอย่างรุนแรง ใส่ศัตรูทั้งหมด และ อาจจะทำให้คิดสถานะ คำสาป",
+    "vi": "11 combo powerful Fire attack on all enemies & probable Curse effect"
+  },
+  "MST_SKILLS_2122542_NAME": {
+    "en": "I am Vishra!",
+    "es": "¡Soy Vishra!",
+    "id": "Aku Vishra!",
+    "pt": "Eu sou Vishra!",
+    "th": "ข้าคือวิชร่า!",
+    "vi": "I am Vishra!"
+  },
+  "MST_SKILLS_2122543_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122543_NAME": {
+    "en": "Within this armor dwells...",
+    "es": "Dentro de esta armadura habita...",
+    "id": "Dalam zirah ini ada...",
+    "pt": "Dentro dessa armadura...",
+    "th": "ด้วยเกราะนี้...",
+    "vi": "Within this armor dwells..."
+  },
+  "MST_SKILLS_2122544_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122544_NAME": {
+    "en": "Hmm...? What about my armor?",
+    "es": "¿Mmm...? ¿Qué hay con mi armadura?",
+    "id": "Hmm...? Bagaimana dengan zirahku?",
+    "pt": "Hmm...? E a minha armadura?",
+    "th": "หืม...? แล้วเกราะของข้าล่ะ?",
+    "vi": "Hmm...? What about my armor?"
+  },
+  "MST_SKILLS_2122545_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
   "MST_SKILLS_2122545_NAME": {
     "en": "You want to put it on display..?",
     "es": "¿Quieres ponerla en una vitrina...?",
@@ -88167,6 +88247,38 @@
     "th": "Override: Eliminate",
     "vi": "Override: Eliminate"
   },
+  "MST_SKILLS_2820687_DESCRIPTION": {
+    "en": "18 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Water elemental damage for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Atk, Def and enormously boosts critical hit rate for 3 turns",
+    "es": "18 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Water elemental damage for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Atk, Def and enormously boosts critical hit rate for 3 turns",
+    "id": "18 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Water elemental damage for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Atk, Def and enormously boosts critical hit rate for 3 turns",
+    "pt": "18 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Water elemental damage for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Atk, Def and enormously boosts critical hit rate for 3 turns",
+    "th": "18 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Water elemental damage for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Atk, Def and enormously boosts critical hit rate for 3 turns",
+    "vi": "18 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Water elemental damage for 3 turns, enormously boosts Spark damage for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts Atk, Def and enormously boosts critical hit rate for 3 turns"
+  },
+  "MST_SKILLS_2820687_NAME": {
+    "en": "Khemennu",
+    "es": "Khemennu",
+    "id": "Khemennu",
+    "pt": "Khemennu",
+    "th": "Khemennu",
+    "vi": "Khemennu"
+  },
+  "MST_SKILLS_2820688_DESCRIPTION": {
+    "en": "25 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Water elemental damage for 4 turns, enormously boosts Spark damage for 4 turns, enormously boosts critical damage for 4 turns, enormously boosts Atk, Def and enormously boosts critical hit rate for 4 turns & purges LS and ES Lock effects from all allies",
+    "es": "25 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Water elemental damage for 4 turns, enormously boosts Spark damage for 4 turns, enormously boosts critical damage for 4 turns, enormously boosts Atk, Def and enormously boosts critical hit rate for 4 turns & purges LS and ES Lock effects from all allies",
+    "id": "25 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Water elemental damage for 4 turns, enormously boosts Spark damage for 4 turns, enormously boosts critical damage for 4 turns, enormously boosts Atk, Def and enormously boosts critical hit rate for 4 turns & purges LS and ES Lock effects from all allies",
+    "pt": "25 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Water elemental damage for 4 turns, enormously boosts Spark damage for 4 turns, enormously boosts critical damage for 4 turns, enormously boosts Atk, Def and enormously boosts critical hit rate for 4 turns & purges LS and ES Lock effects from all allies",
+    "th": "25 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Water elemental damage for 4 turns, enormously boosts Spark damage for 4 turns, enormously boosts critical damage for 4 turns, enormously boosts Atk, Def and enormously boosts critical hit rate for 4 turns & purges LS and ES Lock effects from all allies",
+    "vi": "25 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Water elemental damage for 4 turns, enormously boosts Spark damage for 4 turns, enormously boosts critical damage for 4 turns, enormously boosts Atk, Def and enormously boosts critical hit rate for 4 turns & purges LS and ES Lock effects from all allies"
+  },
+  "MST_SKILLS_2820688_NAME": {
+    "en": "Djar em Rekh",
+    "es": "Djar em Rekh",
+    "id": "Djar em Rekh",
+    "pt": "Djar em Rekh",
+    "th": "Djar em Rekh",
+    "vi": "Djar em Rekh"
+  },
   "MST_SKILLS_2820717_DESCRIPTION": {
     "en": "19 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, damage taken enormously restores HP for 3 turns, damage taken enormously boosts BB gauge for 3 turns, Spark vulnerability infliction for 3 turns & enormous additional damage reduction for 3 turns",
     "es": "19 combo massive Water attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def, Rec for 3 turns, damage taken enormously restores HP for 3 turns, damage taken enormously boosts BB gauge for 3 turns, Spark vulnerability infliction for 3 turns & enormous additional damage reduction for 3 turns",
@@ -88696,12 +88808,12 @@
     "vi": "Asphyxiating Vise"
   },
   "MST_SKILLS_2830358_DESCRIPTION": {
-    "en": "22 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormous damage reduction for 2 turns & activates Earth barrier",
-    "es": "22 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormous damage reduction for 2 turns & activates Earth barrier",
-    "id": "22 kombo serangan Bumi kuat ke semua musuh (kerusakan sesuai sisa HP), 3 giliran: ekstra jumbo kerusakan Percikan, Serang, Tahan, Pulih, pengurangan jumbo kerusakan 2 giliran & mengaktifkan penghalang Bumi",
-    "pt": "22 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormous damage reduction for 2 turns & activates Earth barrier",
-    "th": "22 คอมโบ โจมตีธาตุดินอย่างแรง ใส่ศัตรูทั้งหมด (ค่าความเสียหาย สัมพันธ์กับ HP ที่เหลืออยู่), เพิ่มค่ามหาศาลให้ ความเสียหายสปาร์ค นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ โจมตี, ป้องกัน, ฟื้นฟู นาน 3 เทิร์น, ลดค่าความเสียหายมหาศาล นาน 2 เทิร์น และ ใช้งาน กำแพงดิน",
-    "vi": "22 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, enormous damage reduction for 2 turns & activates Earth barrier"
+    "en": "22 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, 100% damage reduction for 3 turns, Spark damage hugely restores HP for 3 turns & activates Earth barrier",
+    "es": "22 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, 100% damage reduction for 3 turns, Spark damage hugely restores HP for 3 turns & activates Earth barrier",
+    "id": "22 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, 100% damage reduction for 3 turns, Spark damage hugely restores HP for 3 turns & activates Earth barrier",
+    "pt": "22 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, 100% damage reduction for 3 turns, Spark damage hugely restores HP for 3 turns & activates Earth barrier",
+    "th": "22 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, 100% damage reduction for 3 turns, Spark damage hugely restores HP for 3 turns & activates Earth barrier",
+    "vi": "22 combo powerful Earth attack on all foes (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns, 100% damage reduction for 3 turns, Spark damage hugely restores HP for 3 turns & activates Earth barrier"
   },
   "MST_SKILLS_2830358_NAME": {
     "en": "Thrice-Dead Guillotine",
@@ -89814,45 +89926,5 @@
     "pt": "Lightning Beam MAX",
     "th": "Lightning Beam MAX",
     "vi": "Lightning Beam MAX"
-  },
-  "MST_SKILLS_2840557_DESCRIPTION": {
-    "en": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
-    "es": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
-    "id": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
-    "pt": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
-    "th": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
-    "vi": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns"
-  },
-  "MST_SKILLS_2840557_NAME": {
-    "en": "Thunderbird's Judgment",
-    "es": "Thunderbird's Judgment",
-    "id": "Thunderbird's Judgment",
-    "pt": "Thunderbird's Judgment",
-    "th": "Thunderbird's Judgment",
-    "vi": "Thunderbird's Judgment"
-  },
-  "MST_SKILLS_2840558_DESCRIPTION": {
-    "en": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
-    "es": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
-    "id": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
-    "pt": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
-    "th": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
-    "vi": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns"
-  },
-  "MST_SKILLS_2840558_NAME": {
-    "en": "Thunderbird's Wrath",
-    "es": "Thunderbird's Wrath",
-    "id": "Thunderbird's Wrath",
-    "pt": "Thunderbird's Wrath",
-    "th": "Thunderbird's Wrath",
-    "vi": "Thunderbird's Wrath"
-  },
-  "MST_SKILLS_2840567_DESCRIPTION": {
-    "en": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
-    "es": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
-    "id": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
-    "pt": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
-    "th": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
-    "vi": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns"
   }
 }
