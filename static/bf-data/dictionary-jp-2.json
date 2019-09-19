@@ -1,4 +1,12 @@
 {
+  "MST_LEADERSKILLS_708_NAME": {
+    "en": "Pure Power",
+    "es": "Poder puro",
+    "id": "Kekuatan Murni",
+    "pt": "Poder da Pureza",
+    "th": "เพียวพาวเวอร์",
+    "vi": "Sức mạnh thuần khiết "
+  },
   "MST_LEADERSKILLS_709_DESCRIPTION": {
     "en": "50% boost to Atk Power of Oracle Types",
     "es": "Aumenta un 50 % el ataque de las unidades de tipo Augur.",
@@ -9422,6 +9430,38 @@
     "pt": "Shock Velarium",
     "th": "Shock Velarium",
     "vi": "Shock Velarium"
+  },
+  "MST_LEADERSKILLS_840757_DESCRIPTION": {
+    "en": "120% boost to Def, Rec and max HP of Thunder types, 10% damage reduction from Thunder, Water types, 150% boost to spark damage & damage taken may restore HP",
+    "es": "120% boost to Def, Rec and max HP of Thunder types, 10% damage reduction from Thunder, Water types, 150% boost to spark damage & damage taken may restore HP",
+    "id": "120% boost to Def, Rec and max HP of Thunder types, 10% damage reduction from Thunder, Water types, 150% boost to spark damage & damage taken may restore HP",
+    "pt": "120% boost to Def, Rec and max HP of Thunder types, 10% damage reduction from Thunder, Water types, 150% boost to spark damage & damage taken may restore HP",
+    "th": "120% boost to Def, Rec and max HP of Thunder types, 10% damage reduction from Thunder, Water types, 150% boost to spark damage & damage taken may restore HP",
+    "vi": "120% boost to Def, Rec and max HP of Thunder types, 10% damage reduction from Thunder, Water types, 150% boost to spark damage & damage taken may restore HP"
+  },
+  "MST_LEADERSKILLS_840757_NAME": {
+    "en": "Military Stripes",
+    "es": "Military Stripes",
+    "id": "Military Stripes",
+    "pt": "Military Stripes",
+    "th": "Military Stripes",
+    "vi": "Military Stripes"
+  },
+  "MST_LEADERSKILLS_840758_DESCRIPTION": {
+    "en": "140% boost to Def, Rec and max HP of Thunder types, 20% damage reduction from Thunder, Water types, 250% boost to Spark damage & damage taken hugely boosts BB gauge and may restore HP",
+    "es": "140% boost to Def, Rec and max HP of Thunder types, 20% damage reduction from Thunder, Water types, 250% boost to Spark damage & damage taken hugely boosts BB gauge and may restore HP",
+    "id": "140% boost to Def, Rec and max HP of Thunder types, 20% damage reduction from Thunder, Water types, 250% boost to Spark damage & damage taken hugely boosts BB gauge and may restore HP",
+    "pt": "140% boost to Def, Rec and max HP of Thunder types, 20% damage reduction from Thunder, Water types, 250% boost to Spark damage & damage taken hugely boosts BB gauge and may restore HP",
+    "th": "140% boost to Def, Rec and max HP of Thunder types, 20% damage reduction from Thunder, Water types, 250% boost to Spark damage & damage taken hugely boosts BB gauge and may restore HP",
+    "vi": "140% boost to Def, Rec and max HP of Thunder types, 20% damage reduction from Thunder, Water types, 250% boost to Spark damage & damage taken hugely boosts BB gauge and may restore HP"
+  },
+  "MST_LEADERSKILLS_840758_NAME": {
+    "en": "Tigris Alatus",
+    "es": "Tigris Alatus",
+    "id": "Tigris Alatus",
+    "pt": "Tigris Alatus",
+    "th": "Tigris Alatus",
+    "vi": "Tigris Alatus"
   },
   "MST_LEADERSKILLS_840767_DESCRIPTION": {
     "en": "100% boost to Atk, max HP, hugely boosts Spark damage & Spark damage boosts BB gauge and slightly restores HP",
@@ -89915,14 +89955,6 @@
     "en": "Saint Maria",
     "es": "Saint Maria",
     "id": "Pahlawan Juara Estelle",
-    "pt": "Saint Maria",
-    "th": "เซนท์ มาเรีย",
-    "vi": "Saint Maria"
-  },
-  "MST_MONSTERS_53375_NAME": {
-    "en": "Saint Maria",
-    "es": "Saint Maria",
-    "id": "NA (Buku Seni Jepang)",
     "pt": "Saint Maria",
     "th": "เซนท์ มาเรีย",
     "vi": "Saint Maria"
