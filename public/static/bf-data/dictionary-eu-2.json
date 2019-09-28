@@ -1,4 +1,140 @@
 {
+  "MST_LEADERSKILLS_700_DESCRIPTION": {
+    "en": "25% boost to Atk Power of Lord Types",
+    "es": "Aumenta un 25 % el ataque de las unidades de tipo Noble.",
+    "id": "25% boost untuk Kekuatan Serangan Tipe Lord",
+    "pt": "Reforço de 25% no ATQ do tipo Lorde",
+    "th": "25% เพิ่มพลังโจมตีของประเภท ลอร์ด",
+    "vi": "25% làm tăng quyền tấn công của các loại chúa tể "
+  },
+  "MST_LEADERSKILLS_700_NAME": {
+    "en": "Seeker's Power",
+    "es": "Poder feudal",
+    "id": "Kekuatan Pencari",
+    "pt": "Poder do Buscador",
+    "th": "ซีกเกอร์พาวเวอร์",
+    "vi": "Sức mạnh của kẻ tìm kiếm "
+  },
+  "MST_LEADERSKILLS_701_DESCRIPTION": {
+    "en": "50% boost to Atk Power of Lord Types",
+    "es": "% làm tăng quyền tấn công của các loại chúa tể ",
+    "id": "50% boost untuk Kekuatan Serangan Tipe Lord",
+    "pt": "Aumenta un 50 % el ataque de las unidades de tipo Noble.",
+    "th": "50% เพิ่มพลังโจมตีของประเภท ลอร์ด",
+    "vi": "50"
+  },
+  "MST_LEADERSKILLS_701_NAME": {
+    "en": "Seeker's Supremacy",
+    "es": "Supremacía feudal",
+    "id": "Supremasi Pencari",
+    "pt": "Supremacia do Buscador",
+    "th": "ซีกเกอร์สุพรีมมาซี",
+    "vi": "Quyền uy  của kẻ tìm kiếm "
+  },
+  "MST_LEADERSKILLS_702_DESCRIPTION": {
+    "en": "25% boost to Atk Power of Anima Types",
+    "es": "Aumenta un 25 % el ataque de las unidades de tipo Alma.",
+    "id": "25% boost untuk Kekuatan Serangan Tipe Anima",
+    "pt": "Reforço de 25% no ATQ do tipo Anima",
+    "th": "25% เพิ่มพลังโจมตีของประเภท อานิม่า",
+    "vi": "25% làm tăng quyền tấn công của các loại bản ngã  "
+  },
+  "MST_LEADERSKILLS_702_NAME": {
+    "en": "Noble Power",
+    "es": "Poder noble",
+    "id": "Kekuatan Mulia",
+    "pt": "Poder do Nobre",
+    "th": "โนเบลพาวเวอร์",
+    "vi": "Sức mạnh cao quý "
+  },
+  "MST_LEADERSKILLS_703_DESCRIPTION": {
+    "en": "50% boost to Atk Power of Anima Types",
+    "es": "Aumenta un 50 % el ataque de las unidades de tipo Alma.",
+    "id": "50% boost untuk Kekuatan Serangan Tipe Anima",
+    "pt": "Reforço de 50% no ATQ do tipo Anima",
+    "th": "50% เพิ่มพลังโจมตีของประเภท อานิม่า",
+    "vi": "25% làm tăng quyền tấn công của các loại người vi phạm "
+  },
+  "MST_LEADERSKILLS_703_NAME": {
+    "en": "Noble Surpremacy",
+    "es": "Supremacía noble",
+    "id": "Supremasi Mulia",
+    "pt": "Supremacia do Nobre",
+    "th": "โนเบลสุพรีมมาซี",
+    "vi": "Quyền uy cao quý "
+  },
+  "MST_LEADERSKILLS_704_DESCRIPTION": {
+    "en": "25% boost to Atk Power of Breaker Types",
+    "es": "Aumenta un 25 % el ataque de las unidades de tipo Luchador.",
+    "id": "25% boost untuk Kekuatan Serangan Tipe Pemecah",
+    "pt": "Reforço de 25% no ATQ do tipo Lutador",
+    "th": "25% เพิ่มพลังโจมตีของประเภท เบรกเกอร์",
+    "vi": "25% làm tăng quyền tấn công của các loại người vi phạm "
+  },
+  "MST_LEADERSKILLS_704_NAME": {
+    "en": "Force Power",
+    "es": "Poder enérgico",
+    "id": "Kekuatan Kuat",
+    "pt": "Poder da Força",
+    "th": "ฟอร์ซพาวเวอร์",
+    "vi": "Sức mạnh của lực lượng "
+  },
+  "MST_LEADERSKILLS_705_DESCRIPTION": {
+    "en": "50% boost to Atk Power of Breaker Types",
+    "es": "Aumenta un 50 % el ataque de las unidades de tipo Luchador.",
+    "id": "50% boost untuk Kekuatan Serangan Tipe Pemecah",
+    "pt": "Reforço de 50% no ATQ do tipo Lutador",
+    "th": "50% เพิ่มพลังโจมตีของประเภท เบรกเกอร์",
+    "vi": "50% làm tăng quyền tấn công của các loại người vi phạm "
+  },
+  "MST_LEADERSKILLS_705_NAME": {
+    "en": "Force Supremacy",
+    "es": "Supremacía enérgica",
+    "id": "Supremasi Kuat",
+    "pt": "Supremacia da Força",
+    "th": "ฟอร์ซสุพรีมมาซี",
+    "vi": "quyền uy của lực lượng "
+  },
+  "MST_LEADERSKILLS_706_DESCRIPTION": {
+    "en": "25% boost to Atk Power of Guardian Types",
+    "es": "Aumenta un 25 % el ataque de las unidades de tipo Protector.",
+    "id": "25% boost untuk Kekuatan Serangan Tipe Penjaga",
+    "pt": "Reforço de 25% no ATQ do tipo Guardião",
+    "th": "25% เพิ่มพลังโจมตีของประเภท การ์เดียน",
+    "vi": "25% làm tăng quyền tấn công của các loại bảo vệ "
+  },
+  "MST_LEADERSKILLS_706_NAME": {
+    "en": "Pride Power",
+    "es": "Poder honroso",
+    "id": "Kekuatan Bangga",
+    "pt": "Poder do Orgulho",
+    "th": "ไพรด์พาวเวอร์",
+    "vi": "Sức mạnh kiêu hãnh "
+  },
+  "MST_LEADERSKILLS_707_DESCRIPTION": {
+    "en": "50% boost to Atk Power of Guardian Types",
+    "es": "Aumenta un 50 % el ataque de las unidades de tipo Protector.",
+    "id": "50% boost untuk Kekuatan Serangan Tipe Penjaga",
+    "pt": "Reforço de 50% no ATQ do tipo Guardião",
+    "th": "50% เพิ่มพลังโจมตีของประเภท การ์เดียน",
+    "vi": "50% làm tăng quyền tấn công của các loại bảo vệ "
+  },
+  "MST_LEADERSKILLS_707_NAME": {
+    "en": "Pride Supremacy",
+    "es": "Supremacía honrosa",
+    "id": "Supremasi Bangga",
+    "pt": "Supremacia do Orgulho",
+    "th": "ไพรด์สุพรีมมาซี",
+    "vi": "Quyền uy kiêu hãnh "
+  },
+  "MST_LEADERSKILLS_708_DESCRIPTION": {
+    "en": "25% boost to Atk Power of Oracle Types",
+    "es": "Aumenta un 25 % el ataque de las unidades de tipo Augur.",
+    "id": "25% boost untuk Kekuatan Serangan Tipe Oracle",
+    "pt": "Reforço de 25% no ATQ do tipo Oráculo",
+    "th": "25% เพิ่มพลังโจมตีของประเภท ออราเคิล",
+    "vi": "25% làm tăng quyền tấn công của các loại tiên tri "
+  },
   "MST_LEADERSKILLS_708_NAME": {
     "en": "Pure Power",
     "es": "Poder puro",
@@ -10279,6 +10415,22 @@
     "th": "I am a Ghoul",
     "vi": "I am a Ghoul"
   },
+  "MST_LEADERSKILLS_850808_DESCRIPTION": {
+    "en": "120% boost to all parameters, negates critical and elemental damage, negates all status ailments and Atk, Def, Rec reduction effects, enormously boosts BB gauge each turn, 15% damage reduction & 20% boost to EXP gained",
+    "es": "120% boost to all parameters, negates critical and elemental damage, negates all status ailments and Atk, Def, Rec reduction effects, enormously boosts BB gauge each turn, 15% damage reduction & 20% boost to EXP gained",
+    "id": "120% boost to all parameters, negates critical and elemental damage, negates all status ailments and Atk, Def, Rec reduction effects, enormously boosts BB gauge each turn, 15% damage reduction & 20% boost to EXP gained",
+    "pt": "120% boost to all parameters, negates critical and elemental damage, negates all status ailments and Atk, Def, Rec reduction effects, enormously boosts BB gauge each turn, 15% damage reduction & 20% boost to EXP gained",
+    "th": "120% boost to all parameters, negates critical and elemental damage, negates all status ailments and Atk, Def, Rec reduction effects, enormously boosts BB gauge each turn, 15% damage reduction & 20% boost to EXP gained",
+    "vi": "120% boost to all parameters, negates critical and elemental damage, negates all status ailments and Atk, Def, Rec reduction effects, enormously boosts BB gauge each turn, 15% damage reduction & 20% boost to EXP gained"
+  },
+  "MST_LEADERSKILLS_850808_NAME": {
+    "en": "Goddess's Miracle",
+    "es": "Goddess's Miracle",
+    "id": "Goddess's Miracle",
+    "pt": "Goddess's Miracle",
+    "th": "Goddess's Miracle",
+    "vi": "Goddess's Miracle"
+  },
   "MST_LEADERSKILLS_850900_DESCRIPTION": {
     "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Light elemental damage, 15% damage reduction from Dark types & negates all status ailments",
     "es": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Light elemental damage, 15% damage reduction from Dark types & negates all status ailments",
@@ -11126,6 +11278,22 @@
     "pt": "Skiouros Skulker",
     "th": "Skiouros Skulker",
     "vi": "Skiouros Skulker"
+  },
+  "MST_LEADERSKILLS_860808_DESCRIPTION": {
+    "en": "120% boost to all parameters, 15% damage reduction, enormously boosts Dark elemental damage, greatly reduces BB gauge required for BB & adds probable resistance against 1 KO attack",
+    "es": "120% boost to all parameters, 15% damage reduction, enormously boosts Dark elemental damage, greatly reduces BB gauge required for BB & adds probable resistance against 1 KO attack",
+    "id": "120% boost to all parameters, 15% damage reduction, enormously boosts Dark elemental damage, greatly reduces BB gauge required for BB & adds probable resistance against 1 KO attack",
+    "pt": "120% boost to all parameters, 15% damage reduction, enormously boosts Dark elemental damage, greatly reduces BB gauge required for BB & adds probable resistance against 1 KO attack",
+    "th": "120% boost to all parameters, 15% damage reduction, enormously boosts Dark elemental damage, greatly reduces BB gauge required for BB & adds probable resistance against 1 KO attack",
+    "vi": "120% boost to all parameters, 15% damage reduction, enormously boosts Dark elemental damage, greatly reduces BB gauge required for BB & adds probable resistance against 1 KO attack"
+  },
+  "MST_LEADERSKILLS_860808_NAME": {
+    "en": "Young Prodigy",
+    "es": "Young Prodigy",
+    "id": "Young Prodigy",
+    "pt": "Young Prodigy",
+    "th": "Young Prodigy",
+    "vi": "Young Prodigy"
   },
   "MST_LEADERSKILLS_860900_DESCRIPTION": {
     "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Dark elemental damage, 15% damage reduction from Light types & negates all status ailments",
@@ -89862,101 +90030,5 @@
     "pt": "Santa Maria",
     "th": "เซนต์มาเรีย",
     "vi": "Thánh Maria"
-  },
-  "MST_MONSTERS_53363_NAME": {
-    "en": "Saint Maria",
-    "es": "Santa María",
-    "id": "Santa Maria",
-    "pt": "Santa Maria",
-    "th": "เซนท์มาเรีย",
-    "vi": "Saint Maria"
-  },
-  "MST_MONSTERS_53364_NAME": {
-    "en": "Saint Maria",
-    "es": "Santa María",
-    "id": "Santa Maria",
-    "pt": "Santa Maria",
-    "th": "เซนท์มาเรีย",
-    "vi": "Saint Maria"
-  },
-  "MST_MONSTERS_53365_NAME": {
-    "en": "Saint Maria",
-    "es": "Santa María",
-    "id": "Santa Maria",
-    "pt": "Santa Maria",
-    "th": "เซนท์มาเรีย",
-    "vi": "Saint Maria"
-  },
-  "MST_MONSTERS_53366_NAME": {
-    "en": "Saint Maria",
-    "es": "Santa María",
-    "id": "Santa Maria",
-    "pt": "Santa Maria",
-    "th": "เซนต์ มาเรีย",
-    "vi": "Thánh Maria"
-  },
-  "MST_MONSTERS_53367_NAME": {
-    "en": "Saint Maria",
-    "es": "Santa María",
-    "id": "Santa Maria",
-    "pt": "Santa Maria",
-    "th": "เซนต์ มาเรีย",
-    "vi": "Thánh Maria"
-  },
-  "MST_MONSTERS_53368_NAME": {
-    "en": "Saint Maria",
-    "es": "Santa María",
-    "id": "Santa Maria",
-    "pt": "Santa Maria",
-    "th": "เซนท์ มาเรีย",
-    "vi": "Saint Maria"
-  },
-  "MST_MONSTERS_53369_NAME": {
-    "en": "Saint Maria",
-    "es": "Santa María",
-    "id": "Santa Maria",
-    "pt": "Santa Maria",
-    "th": "เซนท์ มาเรีย",
-    "vi": "Saint Maria"
-  },
-  "MST_MONSTERS_53370_NAME": {
-    "en": "Saint Maria",
-    "es": "Santa María",
-    "id": "Santa Maria",
-    "pt": "Santa Maria",
-    "th": "เซนต์มาเรีย",
-    "vi": "Saint Maria"
-  },
-  "MST_MONSTERS_53371_NAME": {
-    "en": "Saint Maria",
-    "es": "Santa María",
-    "id": "Santa Maria",
-    "pt": "Santa Maria",
-    "th": "เซนต์มาเรีย",
-    "vi": "Saint Maria"
-  },
-  "MST_MONSTERS_53372_NAME": {
-    "en": "Saint Maria",
-    "es": "Santa María",
-    "id": "Santa Maria",
-    "pt": "Santa Maria",
-    "th": "เซนต์มาเรีย",
-    "vi": "Saint Maria"
-  },
-  "MST_MONSTERS_53373_NAME": {
-    "en": "Saint Maria",
-    "es": "Saint Maria",
-    "id": "Pahlawan Juara Estelle",
-    "pt": "Saint Maria",
-    "th": "เซนท์ มาเรีย",
-    "vi": "Saint Maria"
-  },
-  "MST_MONSTERS_53374_NAME": {
-    "en": "Saint Maria",
-    "es": "Saint Maria",
-    "id": "Pahlawan Juara Estelle",
-    "pt": "Saint Maria",
-    "th": "เซนท์ มาเรีย",
-    "vi": "Saint Maria"
   }
 }

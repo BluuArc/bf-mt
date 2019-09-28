@@ -2,7 +2,7 @@
   "800000": {
     "desc": "A valuable piece of gold",
     "id": 800000,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Gold Ingot",
     "raid": false,
     "rarity": 3,
@@ -14,7 +14,7 @@
   "800001": {
     "desc": "A valuable piece of polished crystal stone",
     "id": 800001,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Prized Jewel",
     "raid": false,
     "rarity": 3,
@@ -26,7 +26,7 @@
   "800002": {
     "desc": "Coin that could fetch a decent amount of Zel",
     "id": 800002,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Gold Coin",
     "raid": false,
     "rarity": 3,
@@ -38,7 +38,7 @@
   "800003": {
     "desc": "A  rare glimmering hide. Unique crafting material.",
     "id": 800003,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Rainbow Hide",
     "raid": false,
     "rarity": 3,
@@ -53,7 +53,7 @@
   "800004": {
     "desc": "The chipped piece of a unicorn's horn. Unique crafting material.",
     "id": 800004,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Unicorn Shard",
     "raid": false,
     "rarity": 3,
@@ -70,7 +70,7 @@
   "800005": {
     "desc": "The chipped piece of a minotaur's horn. Unique crafting material.",
     "id": 800005,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Mino Shard",
     "raid": false,
     "rarity": 3,
@@ -87,7 +87,7 @@
   "800006": {
     "desc": "An extremely durable material mined from the depths of the earth. Unique crafting material.",
     "id": 800006,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Adamite Shard",
     "raid": false,
     "rarity": 3,
@@ -104,7 +104,7 @@
   "800007": {
     "desc": "The remains of a fallen star. Unique crafting material.",
     "id": 800007,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Star Dust",
     "raid": false,
     "rarity": 3,
@@ -116,7 +116,7 @@
   "800010": {
     "desc": "Pure water infused with lunar magic",
     "id": 800010,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Moonlit Essence",
     "raid": false,
     "rarity": 3,
@@ -137,7 +137,7 @@
   "800011": {
     "desc": "A pouch filled with cooking necessities",
     "id": 800011,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Spice Pouch",
     "raid": false,
     "rarity": 3,
@@ -170,7 +170,7 @@
   "800012": {
     "desc": "A type of firefly that glows in the shimmering yellow hue of the moon",
     "id": 800012,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Moon Bug",
     "raid": false,
     "rarity": 3,
@@ -191,7 +191,7 @@
   "800013": {
     "desc": "An undying flame that doesn't burn nor scotch",
     "id": 800013,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Undying Flame",
     "raid": false,
     "rarity": 3,
@@ -211,7 +211,7 @@
   "800014": {
     "desc": "Drop formed from the dew around the area where the Vortex emerges",
     "id": 800014,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Miracle Drop",
     "raid": false,
     "rarity": 3,
@@ -383,7 +383,7 @@
   "800100": {
     "desc": "The bone of a deceased cursed one. Unique event crafting material.",
     "id": 800100,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Cursed Bone",
     "raid": false,
     "rarity": 3,
@@ -412,7 +412,7 @@
   "800101": {
     "desc": "The remains of a fallen star. Unique crafting material.",
     "id": 800101,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Evil Drop",
     "raid": false,
     "rarity": 3,
@@ -432,7 +432,7 @@
   "800102": {
     "desc": "The remains of a fallen evil being. Unique crafting material.",
     "id": 800102,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Heinous Dust",
     "raid": false,
     "rarity": 3,
@@ -653,7 +653,7 @@
   "800200": {
     "desc": "A pretty snow flake, cool to the touch. Unique event crafting material.",
     "id": 800200,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Snow Flake",
     "raid": false,
     "rarity": 3,
@@ -690,7 +690,7 @@
   "800201": {
     "desc": "Crystal shards that are synthesized with mystical Snow Flakes. Unique event crafting material.",
     "id": 800201,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Snow Crystal",
     "raid": false,
     "rarity": 3,
@@ -731,7 +731,7 @@
   "800202": {
     "desc": "A gemstone filled with the frozen essence of magic. Unique event crafting material.",
     "id": 800202,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Snow Gemstone",
     "raid": false,
     "rarity": 3,
@@ -768,7 +768,7 @@
   "800203": {
     "desc": "A frosted drop of condensed winter essence with magical properties. Unique event crafting material.",
     "id": 800203,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Miracle Frost",
     "raid": false,
     "rarity": 3,
@@ -813,7 +813,7 @@
   "800204": {
     "desc": "The frozen heart of a creature. Unique event crafting material.",
     "id": 800204,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Frozen Heart",
     "raid": false,
     "rarity": 3,
@@ -834,7 +834,7 @@
   "800205": {
     "desc": "The frigid soul of a beast, frozen through dark arts and magic. Unique event crafting material.",
     "id": 800205,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Frozen Soul",
     "raid": false,
     "rarity": 3,
@@ -879,7 +879,7 @@
   "800207": {
     "desc": "A gemstone filled with good wishes. Extremely valuable when sold, but also a unique synthesis material.",
     "id": 800207,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Aspiration Stone",
     "raid": false,
     "rarity": 3,
@@ -946,7 +946,7 @@
   "800210": {
     "desc": "Typically used as a household ornament, this wreath is a symbol of winter's festive spirit.",
     "id": 800210,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Holiday Wreath",
     "raid": false,
     "rarity": 3,
@@ -967,7 +967,7 @@
   "800211": {
     "desc": "Filled with toys, candy, and other goodies, this bag contains an assortment of enjoyable presents.",
     "id": 800211,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Gift Sack",
     "raid": false,
     "rarity": 3,
@@ -992,7 +992,7 @@
   "800212": {
     "desc": "A small toy in the shape of a soldier. It bears a strong resemblance to a mysterious figure.",
     "id": 800212,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Wooden Soldier",
     "raid": false,
     "rarity": 3,
@@ -1009,7 +1009,7 @@
   "800213": {
     "desc": "A shiny badge for those who have proven their courage.",
     "id": 800213,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Toy Badge",
     "raid": false,
     "rarity": 3,
@@ -1029,7 +1029,7 @@
   "800300": {
     "desc": "A recovered stolen packet. Redeem at your nearest merchant for Zel!",
     "id": 800300,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Small Red Packet",
     "raid": false,
     "rarity": 3,
@@ -1041,7 +1041,7 @@
   "800301": {
     "desc": "A recovered stolen packet. Redeem at your nearest merchant for Zel!",
     "id": 800301,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Medium Red Packet",
     "raid": false,
     "rarity": 3,
@@ -1053,7 +1053,7 @@
   "800302": {
     "desc": "A recovered stolen packet. Redeem at your nearest merchant for Zel!",
     "id": 800302,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Big Red Packet",
     "raid": false,
     "rarity": 3,
@@ -1065,7 +1065,7 @@
   "800303": {
     "desc": "An auspicious artifact. Unique event crafting material.",
     "id": 800303,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Embroidered Ball",
     "raid": false,
     "rarity": 3,
@@ -1149,7 +1149,7 @@
   "800306": {
     "desc": "A symbol of ripe old age. Unique event crafting material.",
     "id": 800306,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Longevity Dew",
     "raid": false,
     "rarity": 3,
@@ -1178,7 +1178,7 @@
   "800307": {
     "desc": "All you need is a pinch of this to make it big. Unique event crafting material.",
     "id": 800307,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Prosperity Essence",
     "raid": false,
     "rarity": 3,
@@ -1211,7 +1211,7 @@
   "800308": {
     "desc": "Jem Replica created by Nice Burny",
     "id": 800308,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Jem",
     "raid": false,
     "rarity": 3,
@@ -1232,7 +1232,7 @@
   "800309": {
     "desc": "This charm brings happiness and good fortune to the bearer.",
     "id": 800309,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Happy Charm",
     "raid": false,
     "rarity": 3,
@@ -1257,7 +1257,7 @@
   "800310": {
     "desc": "Coins such as thesehave a long history of bringing good luck.",
     "id": 800310,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Lucky Coin",
     "raid": false,
     "rarity": 3,
@@ -1282,7 +1282,7 @@
   "800311": {
     "desc": "A feather dropped from the most majestic of birds.",
     "id": 800311,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Phoenix Feather",
     "raid": false,
     "rarity": 3,
@@ -1443,7 +1443,7 @@
   "800316": {
     "desc": "A salt crystal obtained from the depths of Grand Gaia.",
     "id": 800316,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Salt",
     "raid": false,
     "rarity": 3,
@@ -1460,7 +1460,7 @@
   "800400": {
     "desc": "A pure white flower. Unique event crafting material.",
     "id": 800400,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Lilium ",
     "raid": false,
     "rarity": 3,
@@ -1480,7 +1480,7 @@
   "800401": {
     "desc": "A deacon's bell. Unique event crafting material.",
     "id": 800401,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Ascension Bell",
     "raid": false,
     "rarity": 3,
@@ -1505,7 +1505,7 @@
   "800402": {
     "desc": "Believed to bring the bearer good luck!  Unique event crafting material.",
     "id": 800402,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Rabbit's Foot",
     "raid": false,
     "rarity": 3,
@@ -1607,7 +1607,7 @@
   "800405": {
     "desc": "A sweet concoction that shines with the unmistakeable hint of magic.",
     "id": 800405,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Magic Chocolate",
     "raid": false,
     "rarity": 3,
@@ -1640,7 +1640,7 @@
   "800406": {
     "desc": "A tart candy that shines with the unmistakeable hint of magic.",
     "id": 800406,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Magic Candy Bits",
     "raid": false,
     "rarity": 3,
@@ -1673,7 +1673,7 @@
   "800407": {
     "desc": "A special egg that glows with the unmistakeable hint of magic.",
     "id": 800407,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Cracked Egg",
     "raid": false,
     "rarity": 3,
@@ -1706,7 +1706,7 @@
   "800408": {
     "desc": "A nutritious vegetable that contains concentrated amounts of magic.",
     "id": 800408,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Gaian Carrot",
     "raid": false,
     "rarity": 3,
@@ -1829,7 +1829,7 @@
   "800501": {
     "desc": "A hardy stone that protects its bearer.",
     "id": 800501,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Litrock",
     "raid": false,
     "rarity": 3,
@@ -1858,7 +1858,7 @@
   "800502": {
     "desc": "The ashes of burnt spiritwood trees.",
     "id": 800502,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Heaven's Ash",
     "raid": false,
     "rarity": 3,
@@ -1891,7 +1891,7 @@
   "800503": {
     "desc": "A large crystal fueled by esper energy.",
     "id": 800503,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Sacred Crystal",
     "raid": false,
     "rarity": 3,
@@ -1924,7 +1924,7 @@
   "800504": {
     "desc": "A mysterious powder left by spirits in their wake.",
     "id": 800504,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Spiritsand",
     "raid": false,
     "rarity": 3,
@@ -1945,7 +1945,7 @@
   "800505": {
     "desc": "A heavy crystal fueled by esper energy.",
     "id": 800505,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Holy Crystal",
     "raid": false,
     "rarity": 3,
@@ -1966,7 +1966,7 @@
   "800506": {
     "desc": "A strangely glowing crystal that holds a memory of courage.",
     "id": 800506,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Courage Fragment",
     "raid": false,
     "rarity": 3,
@@ -2154,7 +2154,7 @@
   "800601": {
     "desc": "A magical flower that glows bright in the face of true love.",
     "id": 800601,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Glowing Rose",
     "raid": false,
     "rarity": 3,
@@ -2179,7 +2179,7 @@
   "800602": {
     "desc": "A magical bow that glows when wielded by the pure of heart.",
     "id": 800602,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Enchanted Bow",
     "raid": false,
     "rarity": 3,
@@ -2204,7 +2204,7 @@
   "800603": {
     "desc": "A magical arrow that strikes through the hearts of its targets.",
     "id": 800603,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Love Arrow",
     "raid": false,
     "rarity": 3,
@@ -2229,7 +2229,7 @@
   "800604": {
     "desc": "An embroidered handkerchief from the kingdom of Krung-go.",
     "id": 800604,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Silk Handkerchief",
     "raid": false,
     "rarity": 3,
@@ -2250,7 +2250,7 @@
   "800605": {
     "desc": "One half of a love pendant, lonely and incomplete.",
     "id": 800605,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Broken Pendant",
     "raid": false,
     "rarity": 3,
@@ -2376,7 +2376,7 @@
   "800701": {
     "desc": "An orb filled with the essence of Fire.",
     "id": 800701,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Fire Essence",
     "raid": false,
     "rarity": 3,
@@ -2397,7 +2397,7 @@
   "800702": {
     "desc": "An orb filled with the essence of Water.",
     "id": 800702,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Water Essence",
     "raid": false,
     "rarity": 3,
@@ -2418,7 +2418,7 @@
   "800703": {
     "desc": "An orb filled with the essence of Earth. \n",
     "id": 800703,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Earth Essence",
     "raid": false,
     "rarity": 3,
@@ -2439,7 +2439,7 @@
   "800704": {
     "desc": "An orb filled with the essence of Thunder. \n",
     "id": 800704,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Thunder Essence",
     "raid": false,
     "rarity": 3,
@@ -2460,7 +2460,7 @@
   "800705": {
     "desc": "An orb filled with the essence of Light. \n",
     "id": 800705,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Light Essence",
     "raid": false,
     "rarity": 3,
@@ -2477,7 +2477,7 @@
   "800706": {
     "desc": "An orb filled with the essence of Darkness. \n",
     "id": 800706,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Dark Essence",
     "raid": false,
     "rarity": 3,
@@ -2494,7 +2494,7 @@
   "800707": {
     "desc": "A talismanic treasure that is imbued with the power of Orochi.",
     "id": 800707,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Orochi's Seal",
     "raid": false,
     "rarity": 3,
@@ -2519,7 +2519,7 @@
   "800801": {
     "desc": "A unique pin used to stylishly bind several materials together.",
     "id": 800801,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Rose Bolt",
     "raid": false,
     "rarity": 3,
@@ -2540,7 +2540,7 @@
   "800802": {
     "desc": "A bullet with an inscription of a heart, it is said to symbolize a gunpowder romance.",
     "id": 800802,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Love Bullet",
     "raid": false,
     "rarity": 3,
@@ -2565,7 +2565,7 @@
   "800803": {
     "desc": "A brilliantly colored crystal that glows with power.",
     "id": 800803,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Pink Crystore",
     "raid": false,
     "rarity": 3,
@@ -2586,7 +2586,7 @@
   "800804": {
     "desc": "A special set of documents detailing how to build a unique set of weapons.",
     "id": 800804,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "VALIS Schematics",
     "raid": false,
     "rarity": 3,
@@ -2611,7 +2611,7 @@
   "800805": {
     "desc": "A special document detailing one's marriage to a very enthusiastic candidate.",
     "id": 800805,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Marriage Certificate",
     "raid": false,
     "rarity": 3,
@@ -2636,7 +2636,7 @@
   "800901": {
     "desc": "A crystallized shard of power crafted from pure fire.",
     "id": 800901,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Ignis Shard",
     "raid": false,
     "rarity": 3,
@@ -2648,7 +2648,7 @@
   "800902": {
     "desc": "A crystallized shard of power crafted from pure ice.",
     "id": 800902,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Algor Shard",
     "raid": false,
     "rarity": 3,
@@ -2660,7 +2660,7 @@
   "800903": {
     "desc": "A crystallized shard of power crafted from pure earth.",
     "id": 800903,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Terra Shard",
     "raid": false,
     "rarity": 3,
@@ -2672,7 +2672,7 @@
   "800904": {
     "desc": "A crystallized shard of power crafted from pure lightning.",
     "id": 800904,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Fulgur Shard",
     "raid": false,
     "rarity": 3,
@@ -2684,7 +2684,7 @@
   "800905": {
     "desc": "A crystallized shard of power crafted from pure light.",
     "id": 800905,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Lux Shard",
     "raid": false,
     "rarity": 3,
@@ -2696,7 +2696,7 @@
   "800906": {
     "desc": "A crystallized shard of power crafted from pure shadow.",
     "id": 800906,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Umbra Shard",
     "raid": false,
     "rarity": 3,
@@ -2708,7 +2708,7 @@
   "800907": {
     "desc": "This tome of elemental power unlocks a hero's potential within.",
     "id": 800907,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Elementum Tome",
     "raid": false,
     "rarity": 3,
@@ -2720,7 +2720,7 @@
   "800908": {
     "desc": "This tome of greater elemental power unlocks a hero's potential within.",
     "id": 800908,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Geminus Tome",
     "raid": false,
     "rarity": 3,
@@ -2767,7 +2767,7 @@
   "801002": {
     "desc": "A glowing, rectangular object that is warm to the touch.",
     "id": 801002,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Fuel Cell",
     "raid": false,
     "rarity": 3,
@@ -2792,7 +2792,7 @@
   "801003": {
     "desc": "A mysteriously heavy device that is strangely warm to the touch.",
     "id": 801003,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Mysterious Gadget",
     "raid": false,
     "rarity": 3,
@@ -2817,7 +2817,7 @@
   "801004": {
     "desc": "A strange device that lets you see faraway things with ease.",
     "id": 801004,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Mechanical Lens",
     "raid": false,
     "rarity": 3,
@@ -2842,7 +2842,7 @@
   "801005": {
     "desc": "A mechanical device that has been engineered to perfection.",
     "id": 801005,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Clockwork Device",
     "raid": false,
     "rarity": 3,
@@ -2867,7 +2867,7 @@
   "801006": {
     "desc": "A form of Lacrima infused with the power of Fire, it feels warm to the touch.",
     "id": 801006,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Fire Lacrima",
     "raid": false,
     "rarity": 3,
@@ -2900,7 +2900,7 @@
   "801007": {
     "desc": "A form of Lacrima infused with the power of Water, it feels cool to the touch.",
     "id": 801007,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Water Lacrima",
     "raid": false,
     "rarity": 3,
@@ -2925,7 +2925,7 @@
   "801008": {
     "desc": "A form of Lacrima infused with the power of Earth, it feels soft to the touch.",
     "id": 801008,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Earth Lacrima",
     "raid": false,
     "rarity": 3,
@@ -2954,7 +2954,7 @@
   "801009": {
     "desc": "A form of Lacrima infused with the power of Thunder, it feels electrifying to the touch.",
     "id": 801009,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Thunder Lacrima",
     "raid": false,
     "rarity": 3,
@@ -2983,7 +2983,7 @@
   "801010": {
     "desc": "A form of Lacrima infused with the power of Light, it feels warm to the touch.",
     "id": 801010,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Light Lacrima",
     "raid": false,
     "rarity": 3,
@@ -3008,7 +3008,7 @@
   "801011": {
     "desc": "A form of Lacrima infused with the power of Darkness, it feels cold to the touch.",
     "id": 801011,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Dark Lacrima",
     "raid": false,
     "rarity": 3,
@@ -3029,7 +3029,7 @@
   "801012": {
     "desc": "A strange, black substance that emits a pungent and aromatic scent.",
     "id": 801012,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Mysterious Essence",
     "raid": false,
     "rarity": 3,
@@ -3046,7 +3046,7 @@
   "801013": {
     "desc": "A rare metallic ore that is highly prized due its malleability and luster.",
     "id": 801013,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Pyrite Ore",
     "raid": false,
     "rarity": 3,
@@ -3063,7 +3063,7 @@
   "801014": {
     "desc": "A handful of luck.",
     "id": 801014,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Fairy Dust",
     "raid": false,
     "rarity": 3,
@@ -3088,7 +3088,7 @@
   "801015": {
     "desc": "A lock of hair.",
     "id": 801015,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Kitsu's Gift",
     "raid": false,
     "rarity": 3,
@@ -3177,7 +3177,7 @@
   "801101": {
     "desc": "The veiled drop of Akachi, overflowing with cosmic energy.",
     "id": 801101,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Veiled Drop",
     "raid": false,
     "rarity": 3,
@@ -3194,7 +3194,7 @@
   "801102": {
     "desc": "The occult fang of Akachi, overflowing with cosmic energy.",
     "id": 801102,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Occult Fang",
     "raid": false,
     "rarity": 3,
@@ -3211,7 +3211,7 @@
   "801103": {
     "desc": "The mystic stone of Akachi, overflowing with cosmic energy.",
     "id": 801103,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Mystic Stone",
     "raid": false,
     "rarity": 3,
@@ -3228,7 +3228,7 @@
   "801104": {
     "desc": "The psychic eye of Akachi, overflowing with cosmic energy.",
     "id": 801104,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Psychic Eye",
     "raid": false,
     "rarity": 3,
@@ -22213,7 +22213,7 @@
     ]
   },
   "819241": {
-    "desc": "50% all parameters, 30% all parameters (Female, Genderless), 150% elemental damage, fills BB gauge when 10k damage dealt, add to BB/SBB [chance to purge Atk, Def, Rec reduction negation] & increases BB activation cost",
+    "desc": "55% all parameters, 30% all parameters (Female, Genderless), 175% elemental damage, fills BB gauge when 10k damage dealt, add to BB/SBB [chance to purge Atk, Def, Rec reduction negation] & increases BB activation cost",
     "effect": [
       {
         "atk% buff": 55,
@@ -23226,6 +23226,134 @@
       "860708"
     ]
   },
+  "819254": {
+    "desc": "50% boost to Def, Rec and max HP of Thunder types, enormously boosts BB gauge each turn, Spark vulnerability infliction for 2 turns, probable resistance against 1 KO attack & activates BB gauge boost each turn effect at turn's start",
+    "effect": [
+      {
+        "def% buff": 50,
+        "elements buffed": [
+          "thunder"
+        ],
+        "hp% buff": 50,
+        "passive id": "2",
+        "rec% buff": 50
+      },
+      {
+        "bc fill per turn": 15,
+        "passive id": "9"
+      },
+      {
+        "passive id": "75",
+        "spark debuff chance%": 100,
+        "spark debuff turns": 1,
+        "spark debuff%": 20
+      },
+      {
+        "angel idol chance% condition": 0,
+        "angel idol recover chance% high": 50,
+        "angel idol recover chance% low": 50,
+        "angel idol recover counts": 1,
+        "angel idol recover hp%": 100,
+        "passive id": "69"
+      },
+      {
+        "unknown passive id": "72",
+        "unknown passive params": "0,1"
+      }
+    ],
+    "id": 819254,
+    "max_stack": 1,
+    "name": "Tiger's Ferocity",
+    "raid": false,
+    "rarity": 6,
+    "sell_price": 30000,
+    "sphere type": 6,
+    "sphere type text": "BB Gauge",
+    "thumbnail": "sphere_thum_819254.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "710227",
+      "810708",
+      "820668",
+      "830708",
+      "840437",
+      "840438",
+      "840708",
+      "850708",
+      "860708"
+    ]
+  },
+  "819255": {
+    "desc": "60% boost to Def, Rec and max HP of Thunder types, enormously boosts BB gauge each turn, Spark vulnerability infliction for 3 turns, Spark damage considerably boosts BB gauge, probable resistance against 1 KO attack & activates BB gauge boost each turn effect at turn's start",
+    "effect": [
+      {
+        "def% buff": 60,
+        "elements buffed": [
+          "thunder"
+        ],
+        "hp% buff": 60,
+        "passive id": "2",
+        "rec% buff": 60
+      },
+      {
+        "bc fill per turn": 20,
+        "passive id": "9"
+      },
+      {
+        "passive id": "75",
+        "spark debuff chance%": 100,
+        "spark debuff turns": 2,
+        "spark debuff%": 30
+      },
+      {
+        "bc fill on spark high": 4,
+        "bc fill on spark low": 3,
+        "bc fill on spark%": 100,
+        "passive id": "47"
+      },
+      {
+        "angel idol chance% condition": 0,
+        "angel idol recover chance% high": 70,
+        "angel idol recover chance% low": 70,
+        "angel idol recover counts": 1,
+        "angel idol recover hp%": 100,
+        "passive id": "69"
+      },
+      {
+        "unknown passive id": "72",
+        "unknown passive params": "0,1"
+      }
+    ],
+    "id": 819255,
+    "max_stack": 1,
+    "name": "Commissar's Pride",
+    "raid": false,
+    "rarity": 7,
+    "sell_price": 30000,
+    "sphere type": 6,
+    "sphere type text": "BB Gauge",
+    "thumbnail": "sphere_thum_819255.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "41036",
+      "41037",
+      "60497",
+      "710227",
+      "810708",
+      "820668",
+      "830708",
+      "840437",
+      "840438",
+      "840708",
+      "850708",
+      "860708"
+    ]
+  },
   "819260": {
     "desc": "50% boost to Atk, max HP, 30% boost to critical hit rate, enormously boosts critical damage, boosts Atk relative to remaining HP, probable Spark critical & adds slight HP absorption to attack",
     "effect": [
@@ -23874,6 +24002,72 @@
     "usage": [],
     "associated_units": [
       "820688"
+    ]
+  },
+  "819284": {
+    "desc": "60% all parameters, enormously boosts BB gauge each turn, 10% damage reduction, restores HP each turn & resistance against 1 KO attack when HP is below 30%",
+    "effect": [
+      {
+        "atk% buff": 60,
+        "def% buff": 60,
+        "hp% buff": 60,
+        "passive id": "1",
+        "rec% buff": 60
+      },
+      {
+        "bc fill per turn": 20,
+        "passive id": "9"
+      },
+      {
+        "dmg% mitigation": 10,
+        "passive id": "8"
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 7000,
+        "turn heal low": 5000
+      },
+      {
+        "buff": {
+          "angel idol buff (12)": true,
+          "angel idol recover hp%": 100,
+          "buff turns (12)": "-1"
+        },
+        "hp below % buff activation": 30,
+        "passive id": "55"
+      }
+    ],
+    "id": 819284,
+    "max_stack": 1,
+    "name": "Iridescent Hope",
+    "raid": false,
+    "rarity": 7,
+    "recipe": {
+      "karma": "300000",
+      "materials": [
+        {
+          "count": 6,
+          "id": 890049,
+          "name": "Starburst Dust"
+        }
+      ]
+    },
+    "sell_price": 30000,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_5_9.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "840438",
+      "850808",
+      "860628"
     ]
   },
   "819901": {
@@ -30203,7 +30397,7 @@
   "880001": {
     "desc": "A mysterious relic used to evolve the Unit Grandt",
     "id": 880001,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Ruby Relic",
     "raid": false,
     "rarity": 3,
@@ -30218,7 +30412,7 @@
   "880003": {
     "desc": "A mysterious relic used to evolve the Unit Elaina",
     "id": 880003,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Emerald Relic",
     "raid": false,
     "rarity": 3,
@@ -30233,7 +30427,7 @@
   "880011": {
     "desc": "A mysterious relic used to transcend the Unit Mercenary Grandt",
     "id": 880011,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Sanguine Relic",
     "raid": false,
     "rarity": 3,
@@ -30248,7 +30442,7 @@
   "880013": {
     "desc": "A mysterious relic used to transcend the Unit Mercenary Mage Elaina",
     "id": 880013,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Verdant Relic",
     "raid": false,
     "rarity": 3,
@@ -30299,7 +30493,7 @@
   "880100": {
     "desc": "A metal fragment of Forgebreaker",
     "id": 880100,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Plasma Fragment",
     "raid": true,
     "rarity": 3,
@@ -30316,7 +30510,7 @@
   "880101": {
     "desc": "A small crystal belonging to Zenia",
     "id": 880101,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Obsidian Quartz",
     "raid": true,
     "rarity": 3,
@@ -30333,7 +30527,7 @@
   "880102": {
     "desc": "A mysterious stone that comes from within the Void",
     "id": 880102,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Void Chunk",
     "raid": true,
     "rarity": 3,
@@ -30378,7 +30572,7 @@
   "880111": {
     "desc": "A small gem used to forge Ultor's blades",
     "id": 880111,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Cyclaw's Rage",
     "raid": true,
     "rarity": 3,
@@ -30395,7 +30589,7 @@
   "880112": {
     "desc": "A small gem used to forge Tridon's trident",
     "id": 880112,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Hydraloid's Wrath",
     "raid": true,
     "rarity": 3,
@@ -30412,7 +30606,7 @@
   "880113": {
     "desc": "A small gem used to forge Andaria’s bow",
     "id": 880113,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Euryalis’ Grace",
     "raid": true,
     "rarity": 3,
@@ -30429,7 +30623,7 @@
   "880114": {
     "desc": "A small gem used to forge Zedus’ spear",
     "id": 880114,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Grievesnare’s Will",
     "raid": true,
     "rarity": 3,
@@ -30446,7 +30640,7 @@
   "880115": {
     "desc": "A small gem used to forge Aurelia’s harp",
     "id": 880115,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Stormwing’s Charm",
     "raid": true,
     "rarity": 3,
@@ -30463,7 +30657,7 @@
   "880116": {
     "desc": "A small gem used to forge Hadaron's Axe",
     "id": 880116,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Netherhound’s Deceit",
     "raid": true,
     "rarity": 3,
@@ -30480,7 +30674,7 @@
   "880201": {
     "desc": "A precious metal used to craft the Deva’s weapons and armor, as well as their grandest buildings.",
     "id": 880201,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Mithril",
     "raid": true,
     "rarity": 3,
@@ -30505,7 +30699,7 @@
   "880202": {
     "desc": "Found in the deepest underground caverns, Morokai harvest this special ore for their best equipment.",
     "id": 880202,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Orihalcum",
     "raid": true,
     "rarity": 3,
@@ -30530,7 +30724,7 @@
   "880211": {
     "desc": "A unique ore used to improve Korzan’s axe.",
     "id": 880211,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Fury of the Destroyer",
     "raid": true,
     "rarity": 3,
@@ -30547,7 +30741,7 @@
   "880212": {
     "desc": "A unique ore used to improve Haile’s battlestaff.",
     "id": 880212,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Scorn of the Ice Queen",
     "raid": true,
     "rarity": 3,
@@ -30564,7 +30758,7 @@
   "880213": {
     "desc": "A unique ore used to improve Avani’s chain blades.",
     "id": 880213,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Bond of the Monster Hunter",
     "raid": true,
     "rarity": 3,
@@ -30581,7 +30775,7 @@
   "880214": {
     "desc": "A unique ore used to improve Mikael’s shield.",
     "id": 880214,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Grief of the Storm Champion",
     "raid": true,
     "rarity": 3,
@@ -30598,7 +30792,7 @@
   "880215": {
     "desc": "MST_ITEMS_MATERIAL_880215_SHORTDESCRIPTION",
     "id": 880215,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Love of the Loremaster",
     "raid": true,
     "rarity": 3,
@@ -30615,7 +30809,7 @@
   "880216": {
     "desc": "MST_ITEMS_MATERIAL_880216_SHORTDESCRIPTION",
     "id": 880216,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Desire of the Shadow Cat",
     "raid": true,
     "rarity": 3,
@@ -30632,7 +30826,7 @@
   "880217": {
     "desc": "A delicious animal shaped treat",
     "id": 880217,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Choco Bunny",
     "raid": false,
     "rarity": 3,
@@ -30649,7 +30843,7 @@
   "880218": {
     "desc": "A beautiful flower that shines in seven different colors",
     "id": 880218,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Chromatic Blossom",
     "raid": false,
     "rarity": 3,
@@ -30669,7 +30863,7 @@
   "880219": {
     "desc": "A fleshy tail from a massive serpent that is wet to the touch.",
     "id": 880219,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Viper Tail",
     "raid": false,
     "rarity": 3,
@@ -30690,7 +30884,7 @@
   "880220": {
     "desc": "An inflexible scale from a mature wyrm that makes a soft clinking sound.",
     "id": 880220,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Molted Wyrmscale",
     "raid": false,
     "rarity": 3,
@@ -30715,7 +30909,7 @@
   "880221": {
     "desc": "A blue flower that glows softly under the right conditions.",
     "id": 880221,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Sarayagaza Bloom",
     "raid": false,
     "rarity": 3,
@@ -30740,7 +30934,7 @@
   "880222": {
     "desc": "A skull of a small animal reinforced with scraps of metal.",
     "id": 880222,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Bone Club",
     "raid": false,
     "rarity": 3,
@@ -30761,7 +30955,7 @@
   "880223": {
     "desc": "An eerie glowing bone. Unique event crafting material.",
     "id": 880223,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Eerie Bone",
     "raid": false,
     "rarity": 3,
@@ -30782,7 +30976,7 @@
   "880224": {
     "desc": "A sticky piece of the shambler plant, freshly cut.",
     "id": 880224,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Shambler Cuttings",
     "raid": false,
     "rarity": 3,
@@ -30807,7 +31001,7 @@
   "880225": {
     "desc": "A tough, barbed stinger from phrun shuttlebugs.",
     "id": 880225,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Phrun Stingers",
     "raid": false,
     "rarity": 3,
@@ -30828,7 +31022,7 @@
   "880226": {
     "desc": "A piece of wood obtained from the burbur tree.",
     "id": 880226,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Burbur Branch",
     "raid": false,
     "rarity": 3,
@@ -30853,7 +31047,7 @@
   "880227": {
     "desc": "A pair of fangs extracted from the centipedes found near burbur trees.",
     "id": 880227,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Centipede Fang",
     "raid": false,
     "rarity": 3,
@@ -30874,7 +31068,7 @@
   "880235": {
     "desc": "A soft tail taken from the dhlerp, tough and sinewy.",
     "id": 880235,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Dhlerp Tail",
     "raid": false,
     "rarity": 3,
@@ -30895,7 +31089,7 @@
   "880236": {
     "desc": "Sand infused with the essence of time, it glitters in odd circumstances.",
     "id": 880236,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Chronal Sand",
     "raid": false,
     "rarity": 3,
@@ -30920,7 +31114,7 @@
   "880237": {
     "desc": "An organic crystal grown from special farms deep underwater.",
     "id": 880237,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Sea-star Crystal",
     "raid": false,
     "rarity": 3,
@@ -30945,7 +31139,7 @@
   "880238": {
     "desc": "Chains forged from volcanic lava that resist and dispel any magic.",
     "id": 880238,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Cthnos Chain",
     "raid": false,
     "rarity": 3,
@@ -30966,7 +31160,7 @@
   "880239": {
     "desc": "A glowing rock found in the frozen wastes of northern Orebus.",
     "id": 880239,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Whiteland Rock",
     "raid": false,
     "rarity": 3,
@@ -31003,7 +31197,7 @@
   "880240": {
     "desc": "Herbs specially grown by the Greherd to hold magical energy.",
     "id": 880240,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Infused Herbs",
     "raid": false,
     "rarity": 3,
@@ -31040,7 +31234,7 @@
   "880241": {
     "desc": "A vial containing a specially cultured magical ailment crafted by the Greherd.",
     "id": 880241,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Aqueous Plague",
     "raid": false,
     "rarity": 3,
@@ -31077,7 +31271,7 @@
   "880242": {
     "desc": "A fossil of creatures long extinct. No one knows what they were.",
     "id": 880242,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Old Fossil",
     "raid": false,
     "rarity": 3,
@@ -31114,7 +31308,7 @@
   "880243": {
     "desc": "Glittering like a jewel in the night, this gem contains a small amount of magical power.",
     "id": 880243,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Distilled Ether",
     "raid": false,
     "rarity": 3,
@@ -31159,7 +31353,7 @@
   "880244": {
     "desc": "Found in the heart of lands untouched yet by man, this magical creature--held in amber--is a potent source of power.",
     "id": 880244,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Amber Butterfly",
     "raid": false,
     "rarity": 3,
@@ -31174,7 +31368,7 @@
   "880301": {
     "desc": "MST_ITEMS_MATERIAL_880301_SHORTDESCRIPTION",
     "id": 880301,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Corroded Token",
     "raid": true,
     "rarity": 3,
@@ -31259,7 +31453,7 @@
   "880302": {
     "desc": "MST_ITEMS_MATERIAL_880302_SHORTDESCRIPTION",
     "id": 880302,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Weathered Bell",
     "raid": true,
     "rarity": 3,
@@ -31392,7 +31586,7 @@
   "880303": {
     "desc": "MST_ITEMS_MATERIAL_880303_SHORTDESCRIPTION",
     "id": 880303,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Ghost-Touched Herbs",
     "raid": true,
     "rarity": 3,
@@ -31453,7 +31647,7 @@
   "880304": {
     "desc": "MST_ITEMS_MATERIAL_880304_SHORTDESCRIPTION",
     "id": 880304,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Saryn’s Robe",
     "raid": true,
     "rarity": 3,
@@ -31718,7 +31912,7 @@
   "880305": {
     "desc": "MST_ITEMS_MATERIAL_880305_SHORTDESCRIPTION",
     "id": 880305,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Ring of Henlecene",
     "raid": true,
     "rarity": 3,
@@ -31730,7 +31924,7 @@
   "880306": {
     "desc": "MST_ITEMS_MATERIAL_880306_SHORTDESCRIPTION",
     "id": 880306,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Broken crown",
     "raid": true,
     "rarity": 3,
@@ -32669,6 +32863,23 @@
       }
     ]
   },
+  "890049": {
+    "desc": "A starburst of emerald dust that sparkles joyfully as it drifts through the air.",
+    "id": 890049,
+    "max_stack": 99,
+    "name": "Starburst Dust",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 1000,
+    "thumbnail": "item_thum_20101.png",
+    "type": "material",
+    "usage": [
+      {
+        "id": 819284,
+        "name": "Iridescent Hope"
+      }
+    ]
+  },
   "899998": {
     "desc": "Boosts Atk & Def by -75% & boosts HP, Rec, critical hit rate by 25%",
     "effect": [
@@ -33061,7 +33272,7 @@
   "88700005": {
     "desc": "Fragments of elemental power crystallized into a brittle physical form.",
     "id": 88700005,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Fragment",
     "raid": false,
     "rarity": 3,
@@ -33078,7 +33289,7 @@
   "88700006": {
     "desc": "A robot of many shapes and sizes that can be found almost anywhere in NeoAvalon.",
     "id": 88700006,
-    "max_stack": 199,
+    "max_stack": 999,
     "name": "Photon Bot",
     "raid": false,
     "rarity": 3,
