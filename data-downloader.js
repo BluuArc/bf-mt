@@ -465,6 +465,10 @@ const handlers = {
           });
         });
 
+      Object.values(bbData).forEach(burst => {
+        burst.attackInfo = getAttackInfoForBurst(burst);
+      });
+
       // split data into files based on first number of id
       logger.info(`${server}: saving files`);
       for (let i = 0; i <= 9; ++i) {
