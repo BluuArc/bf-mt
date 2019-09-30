@@ -2,6 +2,14 @@ const fs = require('fs');
 const axios = require('axios');
 const GitHubScraper = require('./gh-scraper');
 const CliLogger = require('./cli-logger');
+const PROC_PASSIVE_METADATA = require('./src/assets/buff-translation/passive-proc-metadata.json');
+const ATTACKING_PROCS = Object.keys(PROC_PASSIVE_METADATA.proc).filter(id => PROC_PASSIVE_METADATA.proc[id].Type === 'Attack');
+const TARGET_AREA_MAPPING = Object.freeze({
+  aoe: 'AOE',
+  single: 'ST',
+  random: 'RT',
+});
+const BURST_TYPES = ['bb', 'sbb', 'ubb'];
 
 const logger = new CliLogger('DOWNLOADER');
 
@@ -12,6 +20,108 @@ const config = {
   processData: true,
   useLocal: false,
 };
+
+function extractBuffsFromTriggeredEffect (effect = {}, sourcePath) {
+  return Array.isArray(effect['triggered effect'])
+    ? Array.from(effect['triggered effect']).map(e => {
+      const mappedEffect = { ...e, sourcePath };
+      BURST_TYPES.forEach(burstType => {
+        const key = `trigger on ${burstType}`;
+        if (effect[key]) {
+          mappedEffect[key] = true;
+        }
+      });
+      return mappedEffect;
+    })
+    : [];
+}
+
+function getAttackingEffectsForEffectsList (effects = [], sourcePath) {
+  const procTransformer = e => ({
+    id: `${e['proc id'] || e['unknown proc id']}`,
+    target: TARGET_AREA_MAPPING[e['random attack'] ? 'random' : e['target area']],
+    ...(BURST_TYPES.reduce((acc, burstType) => {
+      if (e[`trigger on ${burstType}`]) {
+        acc[burstType] = true;
+      }
+      return acc;
+    }, {})),
+    sourcePath: e.sourcePath,
+  });
+  const attackFilter = e => ATTACKING_PROCS.includes(e.id);
+  const triggeredEffects = effects.filter(e => e['triggered effect']);
+
+  // if triggered effect, then input list is set of passives, which don't have procs
+  let result = [];
+  if (triggeredEffects.length > 0) {
+    result = triggeredEffects.map(e => extractBuffsFromTriggeredEffect(e, sourcePath))
+      .reduce((acc, list) => acc.concat(list), []);
+  } else {
+    result = effects.filter(e => e['proc id'] || e['unknown proc id']);
+  }
+  return result.map(procTransformer)
+    .filter(attackFilter);
+}
+
+function getAttackInfoForBurst (burst = {}) {
+  // get data at last level of burst
+  const burstEntriesByLevel = Array.isArray(burst.levels) ? burst.levels : [];
+  const finalBurstEntry = burstEntriesByLevel[burstEntriesByLevel.length - 1];
+  if(!finalBurstEntry) {
+    return [];
+  }
+  return getAttackingEffectsForEffectsList(finalBurstEntry.effects);
+}
+
+function getAttackInfoForUnit (unit = {}) {
+  const attackInfo = {};
+  // check BB, SBB, and UBB and add accordingly
+  BURST_TYPES.forEach(burstType => {
+    if (unit[burstType]) {
+      attackInfo[burstType] = getAttackInfoForBurst(unit[burstType]);
+    }
+  });
+
+  // check LS, ES, and SP for extra attacks
+  [
+    {
+      key: 'leader skill',
+      name: 'LS',
+    },
+    {
+      key: 'extra skill',
+      name: 'ES',
+    },
+  ].forEach(({ key, name }) => {
+    if (unit[key]) {
+      const mappedEffects = getAttackingEffectsForEffectsList(unit[key].effects, name);
+      if (mappedEffects.length > 0) {
+        BURST_TYPES.forEach(burstType => {
+          if (attackInfo[burstType]) {
+            attackInfo[burstType] = attackInfo[burstType].concat(mappedEffects.filter(e => e[burstType]));
+          }
+        });
+      }
+    }
+  });
+
+  if (unit.feskills) {
+    const allEffects = unit.feskills
+      .map(s => s.skill.effects)
+      .reduce((acc, effectsArr) => acc.concat(effectsArr), [])
+      .filter(s => s.passive)
+      .map(s => s.passive);
+    const mappedEffects = getAttackingEffectsForEffectsList(allEffects, 'SP');
+    if (mappedEffects.length > 0) {
+      BURST_TYPES.forEach(burstType => {
+        if (attackInfo[burstType]) {
+          attackInfo[burstType] = attackInfo[burstType].concat(mappedEffects.filter(e => e[burstType]));
+        }
+      });
+    }
+  }
+  return attackInfo;
+}
 
 let ghData;
 const updateData = initializeTimeData();
@@ -122,6 +232,10 @@ const handlers = {
             }
           });
         });
+        Object.values(info)
+          .forEach(unit => {
+            unit.attackInfo = getAttackInfoForUnit(unit);
+          });
       // TODO: add support for dictionary
 
       // save data into files separated by element
@@ -334,10 +448,9 @@ const handlers = {
     },
     process (server, bbData = {}, unitData = {}) {
       logger.info(`${server}: setting unit associations`);
-      const burstTypes = ['bb', 'sbb', 'ubb'];
       Object.values(unitData)
         .forEach(unit => {
-          burstTypes.forEach(type => {
+          BURST_TYPES.forEach(type => {
             if (unit[type]) {
               const burstId = unit[type].id;
               if (bbData[burstId]) {
@@ -632,7 +745,7 @@ function loadData (type = 'units', server = 'gl') {
     for (let i = min; i <= max; ++i) {
       const fileName = `${type}-${server}-${i}.json`;
       logger.debug(`loading ${fileName}`);
-      const fileData = JSON.parse(fs.readFileSync(`static/bf-data/${fileName}`, 'utf8'));
+      const fileData = JSON.parse(fs.readFileSync(`public/static/bf-data/${fileName}`, 'utf8'));
       Object.keys(fileData).forEach(entryKey => {
         result[entryKey] = fileData[entryKey];
       });
@@ -640,7 +753,7 @@ function loadData (type = 'units', server = 'gl') {
   } else {
     const fileName = `${type}-${server}.json`;
     logger.debug(`loading ${fileName}`);
-    const fileData = JSON.parse(fs.readFileSync(`static/bf-data/${fileName}`, 'utf8'));
+    const fileData = JSON.parse(fs.readFileSync(`public/static/bf-data/${fileName}`, 'utf8'));
     Object.keys(fileData).forEach(entryKey => {
       result[entryKey] = fileData[entryKey];
     });
