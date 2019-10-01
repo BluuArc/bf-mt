@@ -36,8 +36,8 @@ function extractBuffsFromTriggeredEffect (effect = {}, sourcePath) {
     : [];
 }
 
-function getAttackingEffectsForEffectsList (effects = [], sourcePath) {
-  const procTransformer = e => ({
+function getAttackingEffectsForEffectsList (effects = [], sourcePath, getDamageFramesForIndex = () => ({ hits: 0 })) {
+  const procTransformer = (e, i) => ({
     id: `${e['proc id'] || e['unknown proc id']}`,
     target: TARGET_AREA_MAPPING[e['random attack'] ? 'random' : e['target area']],
     ...(BURST_TYPES.reduce((acc, burstType) => {
@@ -47,9 +47,11 @@ function getAttackingEffectsForEffectsList (effects = [], sourcePath) {
       return acc;
     }, {})),
     sourcePath: e.sourcePath,
+    hits: e.hits || (getDamageFramesForIndex(i) || {}).hits || 0,
   });
   const attackFilter = e => ATTACKING_PROCS.includes(e.id);
-  const triggeredEffects = effects.filter(e => e['triggered effect']);
+  const effectsWithIndices = effects.map((e, i) => ({ ...e, originalIndex: i }));
+  const triggeredEffects = effectsWithIndices.filter(e => e['triggered effect']);
 
   // if triggered effect, then input list is set of passives, which don't have procs
   let result = [];
@@ -57,28 +59,92 @@ function getAttackingEffectsForEffectsList (effects = [], sourcePath) {
     result = triggeredEffects.map(e => extractBuffsFromTriggeredEffect(e, sourcePath))
       .reduce((acc, list) => acc.concat(list), []);
   } else {
-    result = effects.filter(e => e['proc id'] || e['unknown proc id']);
+    result = effectsWithIndices.filter(e => e['proc id'] || e['unknown proc id']);
   }
-  return result.map(procTransformer)
+  return result.map(e => procTransformer(e, e.originalIndex))
     .filter(attackFilter);
 }
 
-function getAttackInfoForBurst (burst = {}) {
-  // get data at last level of burst
+function getFinalBurstEntry (burst = {}) {
   const burstEntriesByLevel = Array.isArray(burst.levels) ? burst.levels : [];
-  const finalBurstEntry = burstEntriesByLevel[burstEntriesByLevel.length - 1];
+  return burstEntriesByLevel[burstEntriesByLevel.length - 1];
+}
+
+function getAttackInfoForBurst (burst = {}) {
+  const finalBurstEntry = getFinalBurstEntry(burst);
   if(!finalBurstEntry) {
     return [];
   }
-  return getAttackingEffectsForEffectsList(finalBurstEntry.effects);
+  return getAttackingEffectsForEffectsList(finalBurstEntry.effects, undefined, (i) => burst['damage frames'][i]);
+}
+
+function getHitCountData (burst, filterFn = (f) => ATTACKING_PROCS.includes(f.id)) {
+  if (typeof burst !== 'object' || Object.keys(burst).length === 0) {
+    return [];
+  }
+  const endLevel = getFinalBurstEntry(burst);
+  return burst['damage frames']
+    .map((f, i) => {
+      const effectData = endLevel.effects[i];
+      return {
+        target: TARGET_AREA_MAPPING[effectData['random attack'] ? 'random' : effectData['target area']],
+        id: (f['proc id'] || f['unknown proc id'] || f.id || '').toString(),
+        frames: f,
+        delay: effectData['effect delay time(ms)/frame'],
+        effects: effectData,
+      };
+    }).filter(filterFn);
+}
+
+function getExtraAttackFrames (burst) {
+  const attackFrameSets = getHitCountData(burst).map(d => d.frames);
+  const healFrameSets = getHitCountData(burst, e => e.id === '2').map(d => d.frames);
+
+  let frameTimes = [];
+  let hitDmgDistribution = [];
+
+   // gather frame data
+  attackFrameSets.forEach((frameSet, i) => {
+    const keepFirstFrame = i === 0;
+    frameTimes = frameTimes.concat(frameSet['frame times'].slice(keepFirstFrame ? 0 : 1));
+    hitDmgDistribution = hitDmgDistribution.concat(frameSet['hit dmg% distribution'].slice(keepFirstFrame ? 0 : 1));
+  });
+
+  healFrameSets.forEach((frameSet, i) => {
+    const keepFirstFrame = i === 0 && attackFrameSets.length === 0;
+    frameTimes = frameTimes.concat(frameSet['frame times'].slice(keepFirstFrame ? 0 : 1));
+    hitDmgDistribution = hitDmgDistribution.concat(frameSet['hit dmg% distribution'].slice(keepFirstFrame ? 0 : 1));
+  });
+
+  // sort frames by frame time
+  const unifiedFrames = [];
+  frameTimes.forEach((time, i) => {
+    unifiedFrames.push({
+      time,
+      dmg: hitDmgDistribution[i],
+    });
+  });
+
+  const frames = {
+    'frame times': [],
+    'hit dmg% distribution': [],
+  };
+  unifiedFrames.sort((a, b) => a.time - b.time).forEach(({ time, dmg }) => {
+    frames['frame times'].push(time);
+    frames['hit dmg% distribution'].push(dmg);
+  });
+  frames.hits = frames['frame times'].length;
+  return frames;
 }
 
 function getAttackInfoForUnit (unit = {}) {
   const attackInfo = {};
+  const extraAttackInfo = {};
   // check BB, SBB, and UBB and add accordingly
   BURST_TYPES.forEach(burstType => {
     if (unit[burstType]) {
       attackInfo[burstType] = getAttackInfoForBurst(unit[burstType]);
+      extraAttackInfo[burstType] = getExtraAttackFrames(unit[burstType]);
     }
   });
 
@@ -94,14 +160,12 @@ function getAttackInfoForUnit (unit = {}) {
     },
   ].forEach(({ key, name }) => {
     if (unit[key]) {
-      const mappedEffects = getAttackingEffectsForEffectsList(unit[key].effects, name);
-      if (mappedEffects.length > 0) {
         BURST_TYPES.forEach(burstType => {
           if (attackInfo[burstType]) {
+            const mappedEffects = getAttackingEffectsForEffectsList(unit[key].effects, name, () => extraAttackInfo[burstType]);
             attackInfo[burstType] = attackInfo[burstType].concat(mappedEffects.filter(e => e[burstType]));
           }
         });
-      }
     }
   });
 
@@ -111,14 +175,12 @@ function getAttackInfoForUnit (unit = {}) {
       .reduce((acc, effectsArr) => acc.concat(effectsArr), [])
       .filter(s => s.passive)
       .map(s => s.passive);
-    const mappedEffects = getAttackingEffectsForEffectsList(allEffects, 'SP');
-    if (mappedEffects.length > 0) {
-      BURST_TYPES.forEach(burstType => {
-        if (attackInfo[burstType]) {
-          attackInfo[burstType] = attackInfo[burstType].concat(mappedEffects.filter(e => e[burstType]));
-        }
-      });
-    }
+    BURST_TYPES.forEach(burstType => {
+      if (attackInfo[burstType]) {
+        const mappedEffects = getAttackingEffectsForEffectsList(allEffects, 'SP', () => extraAttackInfo[burstType]);
+        attackInfo[burstType] = attackInfo[burstType].concat(mappedEffects.filter(e => e[burstType]));
+      }
+    });
   }
   return attackInfo;
 }
