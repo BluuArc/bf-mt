@@ -30,6 +30,21 @@
             :displayWidth="thumbnailSize" :displayHeight="thumbnailSize"/>
         </v-flex>
       </v-layout>
+      <v-layout v-if="entry.attackInfo && entry.attackInfo.length > 0" row wrap>
+        <v-chip
+          v-for="(attack, i) in entry.attackInfo"
+          :key="i"
+          small
+          outline
+          style="pointer-events: none;"
+          :color="!$vuetify.theme.dark ? 'white' : 'black'"
+        >
+          <v-avatar :class="{ 'grey': true, 'darken-2': !$vuetify.theme.dark, 'lighten-2': $vuetify.theme.dark }">
+            {{ attack.hits }}
+          </v-avatar>
+          {{ attack.target }}
+        </v-chip>
+      </v-layout>
     </v-container>
   </base-entry-card>
 </template>
