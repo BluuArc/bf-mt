@@ -15,22 +15,39 @@
           <b v-text="entry.name || entry.id"/>
         </h1>
       </div>
-      <v-layout row wrap v-if="attackChips.length > 0" class="attack-chips-container">
-        <v-chip
-          v-for="(attack, i) in attackChips"
-          :key="i"
-          small
-          style="pointer-events: none;"
-          :color="getChipColorConfigForBurstType(attack.burstType).color"
-          text-color="white"
-          outline
-        >
-          <v-avatar :class="getChipColorConfigForBurstType(attack.burstType).avatarColor">
-            {{ attack.hits }}
-          </v-avatar>
-          {{ attack.label }}
-        </v-chip>
-      </v-layout>
+      <div class="attack-chips-container" :data-nonattacker="!hasAnyBurstAttack">
+        <template v-if="hasAnyBurstAttack">
+          <div v-for="type in BURST_TYPES" :key="type" class="attack-chips--burst-entry">
+            <span class="attack-chips--name">
+              {{ type.toUpperCase() }}:
+            </span>
+            <div class="attack-chips--list">
+              <template v-if="hasBurstAttack(type)">
+                <v-chip
+                  v-for="(attack, i) in attackChipsByBurstType[type]"
+                  :key="i"
+                  small
+                  style="pointer-events: none;"
+                  :color="getChipColorConfigForBurstType(attack.burstType).color"
+                  text-color="white"
+                  outline
+                >
+                  <v-avatar :class="getChipColorConfigForBurstType(attack.burstType).avatarColor">
+                    {{ attack.hits }}
+                  </v-avatar>
+                  {{ attack.label }}
+                </v-chip>
+              </template>
+              <span v-else style="margin-left: 4px;">
+                No attacks found.
+              </span>
+            </div>
+          </div>
+        </template>
+        <template v-else>
+          <span>No attacks found.</span>
+        </template>
+      </div>
       <div class="d-flex-container items-center content-flex-end unit-rarity">
         <span v-if="rarity < 8">{{ rarity }}</span>
         <rarity-icon :class="{ 'ml-1': rarity !== 8 }" :rarity="rarity" :displaySize="18"/>
@@ -72,6 +89,9 @@ export default {
   computed: {
     ...mapGetters('units', ['getImageUrls']),
     BURST_TYPES: () => burstTypes,
+    hasAnyBurstAttack () {
+      return !!this.entry && burstTypes.some(t => this.hasBurstAttack(t));
+    },
     rarity () {
       return this.entry.rarity;
     },
@@ -85,7 +105,7 @@ export default {
         return 48;
       }
     },
-    attackChips () {
+    attackChipsByBurstType () {
       const { hasBurstAttack, entry } = this;
       return burstTypes.reduce((acc, burstType) => {
         if (hasBurstAttack(burstType)) {
@@ -94,11 +114,12 @@ export default {
             label: `${attack.target}${attack.sourcePath ? ` (${attack.sourcePath})` : ''}`,
             burstType,
           }));
-          return acc.concat(attacks);
+          acc[burstType] = attacks;
         } else {
-          return acc;
+          acc[burstType] = [];
         }
-      }, []);
+        return acc;
+      }, {});
     },
   },
   methods: {
@@ -133,6 +154,29 @@ export default {
 
   .attack-chips-container {
     grid-area: attack;
+
+    &[data-nonattacker] {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .attack-chips--burst-entry {
+      display: grid;
+      grid-template-columns: 50px 1fr;
+      grid-template-rows: auto;
+      grid-row-gap: 0.25em;
+
+      .attack-chips--name {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--background-color-alt);
+      }
+    }
   }
 
   .unit-rarity {
