@@ -2,17 +2,17 @@
   "passive": {
     "1": {
       "ID": "1",
-      "Name": "Stat Boost",
+      "Name": "Parameter Boost",
       "In Project Doc": "Y"
     },
     "2": {
       "ID": "2",
-      "Name": "Elemental Stat Boost",
+      "Name": "Elemental Parameter Boost",
       "In Project Doc": "Y"
     },
     "3": {
       "ID": "3",
-      "Name": "Type-Based Stat Boost",
+      "Name": "Type-Based Parameter Boost",
       "In Project Doc": "Y"
     },
     "4": {
@@ -42,7 +42,7 @@
     },
     "9": {
       "ID": "9",
-      "Name": "BC Fill per Turn",
+      "Name": "Gradual BB Gauge Boost",
       "In Project Doc": "Y"
     },
     "10": {
@@ -52,12 +52,12 @@
     },
     "11": {
       "ID": "11",
-      "Name": "HP-Conditional Stat Boost",
+      "Name": "HP-Conditional Parameter Boost",
       "In Project Doc": "Y"
     },
     "12": {
       "ID": "12",
-      "Name": "HP-Conditional BC/HC/Zel/Karma/Item Drop Rate Boost",
+      "Name": "HP-Conditional Drop Rate Boost",
       "In Project Doc": "Y"
     },
     "13": {
@@ -72,22 +72,22 @@
     },
     "15": {
       "ID": "15",
-      "Name": "HP Fill on Enemy Defeat",
+      "Name": "Heal on Enemy Defeat",
       "In Project Doc": "Y"
     },
     "16": {
       "ID": "16",
-      "Name": "HP Fill on Battle Victory",
+      "Name": "Heal on Battle Victory",
       "In Project Doc": "Y"
     },
     "17": {
       "ID": "17",
-      "Name": "HP Drain",
+      "Name": "HP Absorption",
       "In Project Doc": "Y"
     },
     "19": {
       "ID": "19",
-      "Name": "BC/HC/Zel/Karma/Item Drop Rate Boost",
+      "Name": "Drop Rate Boost",
       "In Project Doc": "Y"
     },
     "20": {
@@ -97,7 +97,7 @@
     },
     "21": {
       "ID": "21",
-      "Name": "Stats Boost for First X Turns",
+      "Name": "Parameter Boost for First X Turns",
       "In Project Doc": "Y"
     },
     "23": {
@@ -107,7 +107,7 @@
     },
     "24": {
       "ID": "24",
-      "Name": "HP Fill when Hit (Chance)",
+      "Name": "Heal when Attacked (Chance)",
       "In Project Doc": "Y"
     },
     "25": {
@@ -117,17 +117,17 @@
     },
     "26": {
       "ID": "26",
-      "Name": "Damage Reflect (Chance)",
+      "Name": "Damage Counter (Chance)",
       "In Project Doc": "Y"
     },
     "27": {
       "ID": "27",
-      "Name": "Increased Chance of Being Targeted",
+      "Name": "Increased Target Chance",
       "In Project Doc": "Y"
     },
     "28": {
       "ID": "28",
-      "Name": "Decreased Chance of Being Targeted",
+      "Name": "Decreased Target Chance",
       "In Project Doc": "Y"
     },
     "29": {
@@ -137,12 +137,12 @@
     },
     "30": {
       "ID": "30",
-      "Name": "BB Conditional Stat Boost",
+      "Name": "BB Conditional Parameter Boost",
       "In Project Doc": "Y"
     },
     "31": {
       "ID": "31",
-      "Name": "Spark Damage Boost, Boost BC/HC/Zel/Karma Drop Rate on Spark",
+      "Name": "Spark Damage Boost, Boost Drop Rate on Spark",
       "In Project Doc": "Y"
     },
     "32": {
@@ -157,7 +157,7 @@
     },
     "34": {
       "ID": "34",
-      "Name": "Critical Hit Damage Boost",
+      "Name": "Critical Damage Boost",
       "In Project Doc": "Y"
     },
     "35": {
@@ -172,7 +172,7 @@
     },
     "37": {
       "ID": "37",
-      "Name": "Add Extra Hits to Normal Attack",
+      "Name": "Hit Count Boost",
       "In Project Doc": "Y"
     },
     "38": {
@@ -187,27 +187,27 @@
     },
     "40": {
       "ID": "40",
-      "Name": "Stat Conversion",
+      "Name": "Parameter Conversion",
       "In Project Doc": "Y"
     },
     "41": {
       "ID": "41",
-      "Name": "Unique Element Count Conditional Stat Boost",
+      "Name": "Unique Element Count Conditional Parameter Boost",
       "In Project Doc": "Y"
     },
     "42": {
       "ID": "42",
-      "Name": "Gender-Based Stat Boost",
+      "Name": "Gender Parameter Boost",
       "In Project Doc": "Y"
     },
     "43": {
       "ID": "43",
-      "Name": "Chance to Take 1 Damage",
+      "Name": "Damage Reduction to 1",
       "In Project Doc": "Y"
     },
     "44": {
       "ID": "44",
-      "Name": "Flat Stat Boost",
+      "Name": "Flat Parameter Boost",
       "In Project Doc": "Y"
     },
     "45": {
@@ -217,7 +217,7 @@
     },
     "46": {
       "ID": "46",
-      "Name": "Stat Boost Relative to HP Remainaing",
+      "Name": "Parameter Boost Relative to HP Remainaing",
       "In Project Doc": "Y"
     },
     "47": {
@@ -232,12 +232,12 @@
     },
     "49": {
       "ID": "49",
-      "Name": "BC Use Reduction",
+      "Name": "BB Gauge Consumption Reduction",
       "In Project Doc": "Y"
     },
     "50": {
       "ID": "50",
-      "Name": "Elemental Weakness Damage",
+      "Name": "Elemental Damage Boost",
       "In Project Doc": "Y"
     },
     "52": {
@@ -252,7 +252,7 @@
     },
     "55": {
       "ID": "55",
-      "Name": "Add Buff when HP is Below Threshold",
+      "Name": "Conditional Effect based on HP Threshold",
       "In Project Doc": "Y"
     },
     "58": {
@@ -262,7 +262,7 @@
     },
     "59": {
       "ID": "59",
-      "Name": "BC on Hit when Guarding",
+      "Name": "BC Fill when Attacked when Guarding",
       "In Project Doc": "Y"
     },
     "61": {
@@ -287,17 +287,17 @@
     },
     "65": {
       "ID": "65",
-      "Name": "BC Fill on Critical Hit",
+      "Name": "BC Fill on Critical",
       "In Project Doc": "Y"
     },
     "66": {
       "ID": "66",
-      "Name": "Add buff to BB/SBB/UBB",
+      "Name": "Add buff to Brave Burst",
       "In Project Doc": "Y"
     },
     "69": {
       "ID": "69",
-      "Name": "Angel Idol (Chance)",
+      "Name": "Chance KO Resistance (Angel Idol)",
       "In Project Doc": "Y"
     },
     "70": {
@@ -307,22 +307,22 @@
     },
     "71": {
       "ID": "71",
-      "Name": "Status Ailment Counter",
+      "Name": "Status Counter",
       "In Project Doc": "Y"
     },
     "72": {
       "ID": "72",
-      "Name": "Turn End Effects Happen at Turn Start",
+      "Name": "Turn End Effects Activate at Turn Start",
       "In Project Doc": "Y"
     },
     "73": {
       "ID": "73",
-      "Name": "Stat Reduction Negation",
+      "Name": "Parameter Reduction Negation",
       "In Project Doc": "Y"
     },
     "74": {
       "ID": "74",
-      "Name": "Atk Boost on Status Afflicted Foes",
+      "Name": "Attack Boost on Status Afflicted Foes",
       "In Project Doc": "Y"
     },
     "75": {
@@ -337,7 +337,7 @@
     },
     "78": {
       "ID": "78",
-      "Name": "Buff after Damage Received Threshold",
+      "Name": "Conditional Effect after Damage Received Threshold",
       "In Project Doc": "Y"
     },
     "79": {
@@ -347,7 +347,7 @@
     },
     "80": {
       "ID": "80",
-      "Name": "Buff after Damage Dealt Threshold",
+      "Name": "Conditional Effect after Damage Dealt Threshold",
       "In Project Doc": "Y"
     },
     "81": {
@@ -357,12 +357,12 @@
     },
     "82": {
       "ID": "82",
-      "Name": "Buff after BC Received Threshold",
+      "Name": "Conditional Effect after BC Received Threshold",
       "In Project Doc": "Y"
     },
     "84": {
       "ID": "84",
-      "Name": "Buff after HC Received Threshold",
+      "Name": "Conditional Effect after HC Received Threshold",
       "In Project Doc": "Y"
     },
     "85": {
@@ -372,22 +372,22 @@
     },
     "86": {
       "ID": "86",
-      "Name": "Buff after Spark Threshold",
+      "Name": "Conditional Effect after Spark Threshold",
       "In Project Doc": "Y"
     },
     "88": {
       "ID": "88",
-      "Name": "Buff on Guard",
+      "Name": "Conditional Effect on Guard",
       "In Project Doc": "Y"
     },
     "89": {
       "ID": "89",
-      "Name": "Buff on Critical Hit",
+      "Name": "Conditional Effect on Critical",
       "In Project Doc": "Y"
     },
     "90": {
       "ID": "90",
-      "Name": "Status Ailment Inflict on Critical Hit",
+      "Name": "Status Infliction on Critical",
       "In Project Doc": "Y"
     },
     "91": {
@@ -402,7 +402,7 @@
     },
     "93": {
       "ID": "93",
-      "Name": "Element Buff",
+      "Name": "Added Elements",
       "In Project Doc": "Y"
     },
     "96": {
@@ -412,7 +412,7 @@
     },
     "97": {
       "ID": "97",
-      "Name": "EXP Boost",
+      "Name": "Player EXP Boost",
       "In Project Doc": "Y"
     },
     "99": {
@@ -427,17 +427,17 @@
     },
     "101": {
       "ID": "101",
-      "Name": "HP Fill on Spark",
+      "Name": "Heal on Spark",
       "In Project Doc": "Y"
     },
     "102": {
       "ID": "102",
-      "Name": "Elements Buff",
+      "Name": "Added Elements",
       "In Project Doc": "Y"
     },
     "103": {
       "ID": "103",
-      "Name": "BB Atk Boost when HP Passes 50% Threshold",
+      "Name": "BB Atk Boost when HP Passes Threshold",
       "In Project Doc": "Y"
     },
     "104": {
@@ -447,32 +447,32 @@
     },
     "105": {
       "ID": "105",
-      "Name": "Stat Increase/Decrease each turn for up to X turns",
+      "Name": "Turn-Based Parameter Boost",
       "In Project Doc": "Y"
     },
     "106": {
       "ID": "106",
-      "Name": "Buff after Activating Overdrive",
+      "Name": "Conditional Effect after Activating Overdrive",
       "In Project Doc": "Y"
     },
     "107": {
       "ID": "107",
-      "Name": "Add effect to Leader Skill",
+      "Name": "Add Effect to Leader Skill",
       "In Project Doc": "Y"
     },
     "109": {
       "ID": "109",
-      "Name": "Reduce BB Gauge of Target (Chance)",
+      "Name": "BB Gauge Reduction (Chance)",
       "In Project Doc": "Y"
     },
     "110": {
       "ID": "110",
-      "Name": "Reduce BC Efficacy of Target (Chance)",
+      "Name": "BC Efficacy Reduction (Chance)",
       "In Project Doc": "Y"
     },
     "111": {
       "ID": "111",
-      "Name": "Increase BB/SBB Activation Rate",
+      "Name": "Increase Brave Burst Activation Rate",
       "In Project Doc": "Y"
     },
     "112": {
@@ -482,17 +482,17 @@
     },
     "113": {
       "ID": "113",
-      "Name": "Buff after HP Threshold",
+      "Name": "Conditional Effect after HP Threshold",
       "In Project Doc": "Y"
     },
     "114": {
       "ID": "114",
-      "Name": "Inflict Buff when Hit",
+      "Name": "Inflict Buff when Attacked",
       "In Project Doc": "Y"
     },
     "127": {
       "ID": "127",
-      "Name": "Damage over Time (DoT) Mitigation",
+      "Name": "Additional Damage (Damage over Time) Reduction",
       "In Project Doc": "Y"
     },
     "128": {
@@ -502,7 +502,7 @@
     },
     "143": {
       "ID": "143",
-      "Name": "Atk Limit Break",
+      "Name": "Break Atk Parameter Limit",
       "In Project Doc": "Y"
     },
     "10008": {
@@ -512,22 +512,22 @@
     },
     "11004": {
       "ID": "11004",
-      "Name": "Element-Specific Spark Damage Boost",
+      "Name": "Elemental Spark Damage Boost",
       "In Project Doc": "Y"
     },
     "11005": {
       "ID": "11005",
-      "Name": "Element-Specific Critical Hit Damage Boost",
+      "Name": "Elemental Critical Damage Boost",
       "In Project Doc": "Y"
     },
     "11006": {
       "ID": "11006",
-      "Name": "Summoner Avatar EXP Boost",
+      "Name": "Summoner EXP Boost",
       "In Project Doc": "Y"
     },
     "11009": {
       "ID": "11009",
-      "Name": "Increase Turn Duration of Specific Buffs",
+      "Name": "Effect Duration Boost",
       "In Project Doc": "Y"
     },
     "66,1": {
@@ -579,7 +579,7 @@
     },
     "5": {
       "ID": "5",
-      "Name": "Stat Boost",
+      "Name": "Parameter Boost",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -587,7 +587,7 @@
     },
     "6": {
       "ID": "6",
-      "Name": "BC/HC Drop Rate",
+      "Name": "Drop Rate",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -595,7 +595,7 @@
     },
     "7": {
       "ID": "7",
-      "Name": "Angel Idol (Guaranteed)",
+      "Name": "Guaranteed KO Resistance (Angel Idol)",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -603,7 +603,7 @@
     },
     "8": {
       "ID": "8",
-      "Name": "HP Boost",
+      "Name": "Max HP Boost",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -611,7 +611,7 @@
     },
     "9": {
       "ID": "9",
-      "Name": "Stat Reduction",
+      "Name": "Parameter Reduction",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -619,7 +619,7 @@
     },
     "10": {
       "ID": "10",
-      "Name": "Status Cure",
+      "Name": "Status Cleanse",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -683,7 +683,7 @@
     },
     "19": {
       "ID": "19",
-      "Name": "BC per Turn",
+      "Name": "Gradual BB Gauge Boost",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -707,7 +707,7 @@
     },
     "23": {
       "ID": "23",
-      "Name": "Spark Damage Boost",
+      "Name": "Spark Boost",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -715,7 +715,7 @@
     },
     "24": {
       "ID": "24",
-      "Name": "Stat Conversion",
+      "Name": "Parameter Conversion",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "25",
@@ -723,7 +723,7 @@
     },
     "26": {
       "ID": "26",
-      "Name": "Normal Hit Count Boost",
+      "Name": "Hit Count Boost",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -731,7 +731,7 @@
     },
     "27": {
       "ID": "27",
-      "Name": "%HP Damage",
+      "Name": "Proportional Damage",
       "In Project Doc": "Y",
       "Type": "Attack",
       "col-4": "",
@@ -755,7 +755,7 @@
     },
     "30": {
       "ID": "30",
-      "Name": "Element Buff",
+      "Name": "Add Elements",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -763,7 +763,7 @@
     },
     "31": {
       "ID": "31",
-      "Name": "Instant BC Fill",
+      "Name": "Instant BB Gauge Fill",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -771,7 +771,7 @@
     },
     "32": {
       "ID": "32",
-      "Name": "Base Element Change",
+      "Name": "Element Shift",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -779,7 +779,7 @@
     },
     "33": {
       "ID": "33",
-      "Name": "Buff Wipe (Chance)",
+      "Name": "Buff Removal (Chance)",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -803,7 +803,7 @@
     },
     "37": {
       "ID": "37",
-      "Name": "Add a Unit to Battle",
+      "Name": "Summon Unit",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -851,7 +851,7 @@
     },
     "44": {
       "ID": "44",
-      "Name": "Damage over Time",
+      "Name": "Damage over Time (Additional Damage)",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -867,7 +867,7 @@
     },
     "46": {
       "ID": "46",
-      "Name": "Non-Lethal %HP Damage",
+      "Name": "Non-Lethal Proportional Damage",
       "In Project Doc": "Y",
       "Type": "Attack",
       "col-4": "",
@@ -883,7 +883,7 @@
     },
     "48": {
       "ID": "48",
-      "Name": "Piercing %HP Damage",
+      "Name": "Piercing Proportional Damage",
       "In Project Doc": "Y",
       "Type": "Attack",
       "col-4": "",
@@ -891,7 +891,7 @@
     },
     "49": {
       "ID": "49",
-      "Name": "Retire Self",
+      "Name": "Retire",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -899,7 +899,7 @@
     },
     "50": {
       "ID": "50",
-      "Name": "Damage Reflect",
+      "Name": "Damage Counter",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -907,7 +907,7 @@
     },
     "51": {
       "ID": "51",
-      "Name": "Stat Reduction Added to Attack",
+      "Name": "Parameter Reduction Added to Attack",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -923,7 +923,7 @@
     },
     "53": {
       "ID": "53",
-      "Name": "Status Ailment Counter",
+      "Name": "Status Counter",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -931,7 +931,7 @@
     },
     "54": {
       "ID": "54",
-      "Name": "Critical Hit Damage Boost",
+      "Name": "Critical Damage Boost",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -939,7 +939,7 @@
     },
     "55": {
       "ID": "55",
-      "Name": "Elemental Weakness Damage",
+      "Name": "Elemental Damage Boost",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -947,7 +947,7 @@
     },
     "56": {
       "ID": "56",
-      "Name": "Angel Idol (Chance)",
+      "Name": "Chance KO Resistance (Angel Idol)",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -1019,7 +1019,7 @@
     },
     "65": {
       "ID": "65",
-      "Name": "Atk Boost on Status Afflicted Foes",
+      "Name": "Attack Boost on Status Afflicted Foes",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -1075,7 +1075,7 @@
     },
     "73": {
       "ID": "73",
-      "Name": "Stat Reduction Immunity",
+      "Name": "Parameter Reduction Negation",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "74",
@@ -1083,7 +1083,7 @@
     },
     "75": {
       "ID": "75",
-      "Name": "Element Count Based Damage",
+      "Name": "Element Squad-Scaled Damage",
       "In Project Doc": "Y",
       "Type": "Attack",
       "col-4": "",
@@ -1099,7 +1099,7 @@
     },
     "78": {
       "ID": "78",
-      "Name": "Self Stat Boost",
+      "Name": "Self Parameter Boost",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "80",
@@ -1139,7 +1139,7 @@
     },
     "85": {
       "ID": "85",
-      "Name": "HP when Hit",
+      "Name": "Heal when Attacked",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -1147,7 +1147,7 @@
     },
     "86": {
       "ID": "86",
-      "Name": "HP Drain",
+      "Name": "HP Absorption",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -1155,7 +1155,7 @@
     },
     "87": {
       "ID": "87",
-      "Name": "HP Fill on Spark",
+      "Name": "Heal on Spark",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -1163,7 +1163,7 @@
     },
     "88": {
       "ID": "88",
-      "Name": "Self Spark Damage Boost",
+      "Name": "Self Spark Boost",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "90",
@@ -1171,7 +1171,7 @@
     },
     "89": {
       "ID": "89",
-      "Name": "Self Stat Conversion",
+      "Name": "Self Parameter Conversion",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "91",
@@ -1179,7 +1179,7 @@
     },
     "92": {
       "ID": "92",
-      "Name": "Self HP Boost",
+      "Name": "Self Max HP Boost",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -1203,7 +1203,7 @@
     },
     "95": {
       "ID": "95",
-      "Name": "Nullify Sphere Effects",
+      "Name": "Nullify Sphere Effects (Sphere Lock)",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "95",
@@ -1211,7 +1211,7 @@
     },
     "96": {
       "ID": "96",
-      "Name": "Nullify Extra Skill Effects",
+      "Name": "Nullify Extra Skill Effects (ES Lock)",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "96",
@@ -1219,7 +1219,7 @@
     },
     "97": {
       "ID": "97",
-      "Name": "Element-Specific Damage",
+      "Name": "Element Target Damage",
       "In Project Doc": "Y",
       "Type": "Attack",
       "col-4": "112",
@@ -1227,7 +1227,7 @@
     },
     "113": {
       "ID": "113",
-      "Name": "OD Fill at Turn End",
+      "Name": "Gradual OD Fill",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -1235,7 +1235,7 @@
     },
     "119": {
       "ID": "119",
-      "Name": "BC Drain per Turn",
+      "Name": "Gradual BC Drain",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "118",
@@ -1243,15 +1243,15 @@
     },
     "123": {
       "ID": "123",
-      "Name": "",
-      "In Project Doc": "N",
+      "Name": "OD Gauge Reduction",
+      "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
       "col-5": "120 to 122"
     },
     "126": {
       "ID": "126",
-      "Name": "Damage over Time (DoT) Mitigation",
+      "Name": "Damage over Time (Additional Damage) Mitigation",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -1259,7 +1259,7 @@
     },
     "127": {
       "ID": "127",
-      "Name": "Lock On to Unit",
+      "Name": "Lock On",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -1267,7 +1267,7 @@
     },
     "130": {
       "ID": "130",
-      "Name": "Stat Reduction Counter",
+      "Name": "Parameter Reduction Counter",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -1299,7 +1299,7 @@
     },
     "902": {
       "ID": "902",
-      "Name": "Attack Boost (Raid)",
+      "Name": "Raid Parameter Boost",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -1307,7 +1307,7 @@
     },
     "903": {
       "ID": "903",
-      "Name": "Show Boss Location (Raid)",
+      "Name": "Raid Boss Reveal",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "904",
@@ -1315,7 +1315,7 @@
     },
     "905": {
       "ID": "905",
-      "Name": "Teleport Player to Camp (Raid)",
+      "Name": "Raid Teleport",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -1323,7 +1323,7 @@
     },
     "906": {
       "ID": "906",
-      "Name": "Escape From Current Battle (Raid)",
+      "Name": "Raid Flee",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -1331,7 +1331,7 @@
     },
     "907": {
       "ID": "907",
-      "Name": "Damage Reduction (Raid)",
+      "Name": "Raid Damage Reduction",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -1339,7 +1339,7 @@
     },
     "908": {
       "ID": "908",
-      "Name": "Increase Item Drop Rate (Raid)",
+      "Name": "Raid Item Drop Rate Boost",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -1371,7 +1371,7 @@
     },
     "10003": {
       "ID": "10003",
-      "Name": "Nullify Sphere Effects",
+      "Name": "Nullify Sphere Effects (Sphere Lock)",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "10003",
@@ -1427,7 +1427,7 @@
     },
     "10015": {
       "ID": "10015",
-      "Name": "Element-Specific Spark Damage Boost",
+      "Name": "Elemental Spark Boost",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -1435,7 +1435,7 @@
     },
     "10016": {
       "ID": "10016",
-      "Name": "Element-Specific Critical Damage Boost",
+      "Name": "Element Critical Damage Boost",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -1467,7 +1467,7 @@
     },
     "10020": {
       "ID": "10020",
-      "Name": "Mitigation Piercing Damage",
+      "Name": "Piercing Damage",
       "In Project Doc": "Y",
       "Type": "Attack",
       "col-4": "",
@@ -1499,7 +1499,7 @@
     },
     "10025": {
       "ID": "10025",
-      "Name": "Negate KO Resistance",
+      "Name": "KO Resistance Negation",
       "In Project Doc": "Y",
       "Type": "",
       "col-4": "",
@@ -1515,7 +1515,7 @@
     },
     "11000": {
       "ID": "11000",
-      "Name": "%HP Scaling Damage",
+      "Name": "Negative HP-Scaled Damage",
       "In Project Doc": "Y",
       "Type": "Attack",
       "col-4": "",
@@ -1539,7 +1539,7 @@
     },
     "11003": {
       "ID": "11003",
-      "Name": "Negate Lock and Turn Skip Effects",
+      "Name": "Effect Negation",
       "In Project Doc": "N",
       "Type": "",
       "col-4": "",
