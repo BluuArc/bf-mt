@@ -145,7 +145,9 @@
       </v-layout>
       <v-layout row>
         <v-flex xs6>
-          <v-btn flat small v-if="onChangeButtonClick" @click="onChangeButtonClick">Change View</v-btn>
+          <slot name="view-selector">
+            <v-btn flat small v-if="onChangeButtonClick" @click="onChangeButtonClick">Change View</v-btn>
+          </slot>
         </v-flex>
         <v-flex xs6 class="text-xs-right">
           <v-menu offset-y :close-on-content-click="false">

@@ -48,22 +48,6 @@
                   :displaySize="22"/>
               </v-flex>
             </v-layout>
-            <v-layout row wrap v-if="attackChips.length > 0">
-              <v-chip
-                v-for="(attack, i) in attackChips"
-                :key="i"
-                small
-                style="pointer-events: none;"
-                :color="getChipColorConfigForBurstType(attack.burstType).color"
-                text-color="white"
-                outline
-              >
-                <v-avatar :class="getChipColorConfigForBurstType(attack.burstType).avatarColor">
-                  {{ attack.hits }}
-                </v-avatar>
-                {{ attack.label }}
-              </v-chip>
-            </v-layout>
           </v-container>
         </v-flex>
       </v-layout>
@@ -75,27 +59,11 @@
 import { mapGetters } from 'vuex';
 import { getGenderInfo } from '@/modules/utils';
 import { spCodeToIndex, spCodeToEffects } from '@/modules/core/units';
-import { burstTypes } from '@/modules/constants';
 import EntryCardMixin from '@/components/Multidex/BaseEntryCardMixin';
 import ElementIcon from '@/components/Multidex/ElementIcon';
 import RarityIcon from '@/components/Multidex/RarityIcon';
 import SpIcon from '@/components/Multidex/Units/SpIcon';
 import UnitThumbnail from '@/components/Multidex/Units/UnitThumbnail';
-
-const CHIP_COLOR_MAPPING_BY_BURST_TYPE = {
-  bb: {
-    color: 'blue-grey',
-    avatarColor: 'blue-grey darken-1',
-  },
-  sbb: {
-    color: 'amber darken-3',
-    avatarColor: 'amber darken-4',
-  },
-  ubb: {
-    color: 'red darken-3',
-    avatarColor: 'red darken-4',
-  },
-};
 
 export default {
   mixins: [EntryCardMixin],
@@ -113,7 +81,6 @@ export default {
   },
   computed: {
     ...mapGetters('units', ['getImageUrls']),
-    BURST_TYPES: () => burstTypes,
     genderIconInfo () {
       return getGenderInfo(this.entry.gender);
     },
@@ -130,31 +97,8 @@ export default {
         return 48;
       }
     },
-    attackChips () {
-      const { hasBurstAttack, entry } = this;
-      return burstTypes.reduce((acc, burstType) => {
-        if (hasBurstAttack(burstType)) {
-          const attacks = entry.attackInfo[burstType].map(attack => ({
-            hits: attack.hits,
-            label: `${attack.target}${attack.sourcePath ? ` (${attack.sourcePath})` : ''}`,
-            burstType,
-          }));
-          return acc.concat(attacks);
-        } else {
-          return acc;
-        }
-      }, []);
-    },
   },
   methods: {
-    getChipColorConfigForBurstType (type) {
-      return CHIP_COLOR_MAPPING_BY_BURST_TYPE[type] || CHIP_COLOR_MAPPING_BY_BURST_TYPE.bb;
-    },
-    hasBurstAttack (type) {
-      return this.entry.attackInfo &&
-        Array.isArray(this.entry.attackInfo[type]) &&
-        this.entry.attackInfo[type].length >= 1;
-    },
     getSpCategories (unit = {}) {
       const feSkills = unit.feskills;
       const enhancements = this.sp;

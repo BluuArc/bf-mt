@@ -14,13 +14,41 @@
     :getCompareName="(id, entry) => (entry && entry.name) || id"
     compareType="unit"
   >
+    <template slot="view-selector">
+      <v-select
+        :items="viewModes"
+        v-model="viewMode"
+        arial-label="Entry View"
+        hint="Entry View"
+        persistent-hint
+        class="pt-0"
+        color="orange"
+        style="max-width: 75px;"
+      />
+    </template>
     <v-layout row wrap slot="results" slot-scope="{ keys, getMultidexPathTo }">
       <template v-if="viewMode === 'card'">
         <v-flex
           v-for="key in keys"
           :key="key"
           xs12 sm6 md4 xl3>
-          <entry-card :to="getMultidexPathTo(key)" :entry="pageDb[key]" v-if="pageDb.hasOwnProperty(key)"/>
+          <entry-card
+            v-if="pageDb.hasOwnProperty(key)"
+            :to="getMultidexPathTo(key)"
+            :entry="pageDb[key]"
+          />
+        </v-flex>
+      </template>
+      <template v-else-if="viewMode === 'attack'">
+        <v-flex
+          v-for="key in keys"
+          :key="key"
+          xs12 sm6 md4 xl3>
+          <attack-info-entry-card
+            :to="getMultidexPathTo(key)"
+            :entry="pageDb[key]"
+            v-if="pageDb.hasOwnProperty(key)"
+          />
         </v-flex>
       </template>
       <template v-else>
@@ -28,7 +56,11 @@
           v-for="key in keys"
           :key="key"
           lg1 sm2 xs3>
-          <icon-entry-card :to="getMultidexPathTo(key)" :entry="pageDb[key]" v-if="pageDb.hasOwnProperty(key)"/>
+          <icon-entry-card
+            :to="getMultidexPathTo(key)"
+            :entry="pageDb[key]"
+            v-if="pageDb.hasOwnProperty(key)"
+          />
         </v-flex>
       </template>
     </v-layout>
@@ -74,6 +106,7 @@ import { mapState, mapGetters, mapActions } from 'vuex';
 import MultidexPageMixin from '@/components/Multidex/MultidexPageMixin';
 import EntryCard from '@/components/Multidex/Units/EntryCard';
 import IconEntryCard from '@/components/Multidex/Units/IconEntryCard';
+import AttackInfoEntryCard from '@/components/Multidex/Units/AttackInfoEntryCard';
 import UnitThumbnail from '@/components/Multidex/Units/UnitThumbnail';
 import DialogContent from '@/components/Multidex/Units/DialogContent';
 
@@ -82,13 +115,16 @@ export default {
   components: {
     EntryCard,
     IconEntryCard,
+    AttackInfoEntryCard,
     UnitThumbnail,
     DialogContent,
   },
   computed: {
     ...mapState('units', ['pageDb']),
     ...mapGetters('units', ['getImageUrls', 'getMultidexRouteParamsTo', 'sortTypes', 'filterTypes', 'requiredModules']),
-    viewModes: () => ['card', 'icon'],
+    viewModes () {
+      return ['card', 'icon', 'attack'].map(value => ({ value, text: this.capitalize(value) }));
+    },
   },
   data () {
     return {
@@ -97,6 +133,9 @@ export default {
   },
   methods: {
     ...mapActions('units', ['getById']),
+    capitalize (input) {
+      return `${input[0].toUpperCase()}${input.slice(1)}`;
+    },
     switchViewMode () {
       const nextViewModeIndex = this.viewModes.indexOf(this.viewMode) + 1;
       this.viewMode = this.viewModes[nextViewModeIndex] || this.viewModes[0];
