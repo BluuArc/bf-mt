@@ -59,6 +59,7 @@
 <script>
 import { mapGetters } from 'vuex';
 import { burstTypes } from '@/modules/constants';
+import { getEffectName } from '@/modules/core/buffs';
 import EntryCardMixin from '@/components/Multidex/BaseEntryCardMixin';
 import ElementIcon from '@/components/Multidex/ElementIcon';
 import RarityIcon from '@/components/Multidex/RarityIcon';
@@ -109,11 +110,14 @@ export default {
       const { hasBurstAttack, entry } = this;
       return burstTypes.reduce((acc, burstType) => {
         if (hasBurstAttack(burstType)) {
-          const attacks = entry.attackInfo[burstType].map(attack => ({
-            hits: attack.hits,
-            label: `${attack.target}${attack.sourcePath ? ` (${attack.sourcePath})` : ''}`,
-            burstType,
-          }));
+          const attacks = entry.attackInfo[burstType].map(attack => {
+            const buffName = (getEffectName({ 'proc id': attack.id }) || '').replace(/ Damage$/, '');
+            return {
+              hits: attack.hits,
+              label: `${buffName ? `${buffName} ` : ''}${attack.target}${attack.sourcePath ? ` (${attack.sourcePath})` : ''}`,
+              burstType,
+            };
+          });
           acc[burstType] = attacks;
         } else {
           acc[burstType] = [];
@@ -143,9 +147,11 @@ export default {
   grid-template-areas:  "name name rarity"
                         "thumbnail attack attack";
   grid-gap: 0.25em;
+  height: 100%;
 
   .unit-thumbnail {
     grid-area: thumbnail;
+    align-self: center;
   }
 
   .unit-name {
@@ -154,6 +160,7 @@ export default {
 
   .attack-chips-container {
     grid-area: attack;
+    align-self: center;
 
     &[data-nonattacker] {
       display: flex;
@@ -163,7 +170,7 @@ export default {
 
     .attack-chips--burst-entry {
       display: grid;
-      grid-template-columns: 50px 1fr;
+      grid-template-columns: 40px 1fr;
       grid-template-rows: auto;
       grid-row-gap: 0.25em;
 

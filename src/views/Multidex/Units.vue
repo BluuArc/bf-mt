@@ -43,11 +43,12 @@
         <v-flex
           v-for="key in keys"
           :key="key"
-          xs12 sm6 md4 xl3>
+          xs12 md6 xl4>
           <attack-info-entry-card
+            v-if="pageDb.hasOwnProperty(key)"
             :to="getMultidexPathTo(key)"
             :entry="pageDb[key]"
-            v-if="pageDb.hasOwnProperty(key)"
+            style="height: 100%;"
           />
         </v-flex>
       </template>
