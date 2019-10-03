@@ -31,7 +31,7 @@ export default {
     label () {
       const { id, target } = this.attack;
       const buffName = (getEffectName({ 'proc id': id }) || '').replace(/ Damage$/, '');
-      return `${buffName ? `${buffName} ` : ''}${target}`;
+      return `${buffName ? `${buffName} ` : ''}${target !== 'RT' ? target : ''}`;
     },
   },
 };

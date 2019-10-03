@@ -117,7 +117,7 @@ export default {
             const buffName = (getEffectName({ 'proc id': attack.id }) || '').replace(/ Damage$/, '');
             return {
               hits: attack.hits,
-              label: `${buffName ? `${buffName} ` : ''}${attack.target}${attack.sourcePath ? ` (${attack.sourcePath})` : ''}`,
+              label: `${buffName ? `${buffName} ` : ''}${attack.target !== 'RT' ? attack.target : ''}${attack.sourcePath ? ` (${attack.sourcePath})` : ''}`,
               burstType,
             };
           });
