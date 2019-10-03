@@ -17,7 +17,7 @@
       </div>
       <div class="attack-chips-container" :data-nonattacker="!hasAnyBurstAttack">
         <template v-if="hasAnyBurstAttack">
-          <div v-for="type in BURST_TYPES" :key="type" class="attack-chips--burst-entry">
+          <div v-for="type in burstTypesOnEntry" :key="type" class="attack-chips--burst-entry">
             <span class="attack-chips--name">
               {{ type.toUpperCase() }}:
             </span>
@@ -90,6 +90,9 @@ export default {
   computed: {
     ...mapGetters('units', ['getImageUrls']),
     BURST_TYPES: () => burstTypes,
+    burstTypesOnEntry () {
+      return burstTypes.filter(t => this.entry.attackInfo[t]);
+    },
     hasAnyBurstAttack () {
       return !!this.entry && burstTypes.some(t => this.hasBurstAttack(t));
     },
