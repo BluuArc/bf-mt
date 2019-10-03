@@ -169,7 +169,14 @@
         ]
       }
     ],
-    "name": "ヘルアグニッシュ・ブレード"
+    "name": "ヘルアグニッシュ・ブレード",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 11
+      }
+    ]
   },
   "7000001": {
     "damage frames": [
@@ -535,7 +542,14 @@
         ]
       }
     ],
-    "name": "黒炎の翼"
+    "name": "黒炎の翼",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 11
+      }
+    ]
   },
   "7000010": {
     "damage frames": [
@@ -799,7 +813,14 @@
         ]
       }
     ],
-    "name": "裏奥義・輪廻"
+    "name": "裏奥義・輪廻",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
+    ]
   },
   "7000011": {
     "damage frames": [
@@ -1063,7 +1084,14 @@
         ]
       }
     ],
-    "name": "裏奥義・開闢"
+    "name": "裏奥義・開闢",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
+    ]
   },
   "7000020": {
     "damage frames": [
@@ -1229,7 +1257,14 @@
         ]
       }
     ],
-    "name": "スターゲイル"
+    "name": "スターゲイル",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7000030": {
     "damage frames": [
@@ -1391,7 +1426,14 @@
         ]
       }
     ],
-    "name": "サイクロンディザスター"
+    "name": "サイクロンディザスター",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
+    ]
   },
   "7000040": {
     "damage frames": [
@@ -1567,7 +1609,14 @@
         ]
       }
     ],
-    "name": "アバドンイーター"
+    "name": "アバドンイーター",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7000050": {
     "damage frames": [
@@ -1733,6 +1782,13 @@
         ]
       }
     ],
-    "name": "ホワイトエスペランサー"
+    "name": "ホワイトエスペランサー",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   }
 }
