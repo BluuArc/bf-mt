@@ -70,7 +70,14 @@
         ]
       }
     ],
-    "name": "Mother Earth's Pulse"
+    "name": "Mother Earth's Pulse",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 9
+      }
+    ]
   },
   "7001": {
     "damage frames": [
@@ -143,7 +150,14 @@
         ]
       }
     ],
-    "name": "I'm not tiny!"
+    "name": "I'm not tiny!",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 9
+      }
+    ]
   },
   "7002": {
     "damage frames": [
@@ -216,7 +230,14 @@
         ]
       }
     ],
-    "name": "I'm a goddess, you know."
+    "name": "I'm a goddess, you know.",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 9
+      }
+    ]
   },
   "7003": {
     "damage frames": [
@@ -309,7 +330,14 @@
         ]
       }
     ],
-    "name": "My flowers crave blood..."
+    "name": "My flowers crave blood...",
+    "attackInfo": [
+      {
+        "id": "14",
+        "target": "AOE",
+        "hits": 20
+      }
+    ]
   },
   "7010": {
     "damage frames": [
@@ -378,7 +406,14 @@
         ]
       }
     ],
-    "name": "3rd Shinto Form: Ikazuchi"
+    "name": "3rd Shinto Form: Ikazuchi",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 7
+      }
+    ]
   },
   "7011": {
     "damage frames": [
@@ -447,7 +482,14 @@
         ]
       }
     ],
-    "name": "3rd Shinto Form: Ikazuchi"
+    "name": "3rd Shinto Form: Ikazuchi",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 7
+      }
+    ]
   },
   "7020": {
     "damage frames": [
@@ -520,7 +562,14 @@
         ]
       }
     ],
-    "name": "7th Shinto Form: Denshin"
+    "name": "7th Shinto Form: Denshin",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 9
+      }
+    ]
   },
   "7030": {
     "damage frames": [
@@ -573,7 +622,14 @@
         ]
       }
     ],
-    "name": "Flash Effect"
+    "name": "Flash Effect",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7031": {
     "damage frames": [
@@ -626,7 +682,14 @@
         ]
       }
     ],
-    "name": "Flash Effect"
+    "name": "Flash Effect",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7040": {
     "damage frames": [
@@ -683,7 +746,14 @@
         ]
       }
     ],
-    "name": "Cathedral Photon"
+    "name": "Cathedral Photon",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7050": {
     "damage frames": [
@@ -736,7 +806,14 @@
         ]
       }
     ],
-    "name": "Euthanasia"
+    "name": "Euthanasia",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7051": {
     "damage frames": [
@@ -789,7 +866,14 @@
         ]
       }
     ],
-    "name": "Euthanasia"
+    "name": "Euthanasia",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7060": {
     "damage frames": [
@@ -846,7 +930,14 @@
         ]
       }
     ],
-    "name": "Extinction"
+    "name": "Extinction",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7070": {
     "damage frames": [
@@ -885,7 +976,8 @@
         ]
       }
     ],
-    "name": "Cosmo Edge"
+    "name": "Cosmo Edge",
+    "attackInfo": []
   },
   "7071": {
     "damage frames": [
@@ -945,7 +1037,8 @@
         ]
       }
     ],
-    "name": "Cosmo Edge"
+    "name": "Cosmo Edge",
+    "attackInfo": []
   },
   "7080": {
     "damage frames": [
@@ -984,7 +1077,8 @@
         ]
       }
     ],
-    "name": "Chaos Edge"
+    "name": "Chaos Edge",
+    "attackInfo": []
   },
   "7081": {
     "damage frames": [
@@ -1044,7 +1138,8 @@
         ]
       }
     ],
-    "name": "Chaos Edge"
+    "name": "Chaos Edge",
+    "attackInfo": []
   },
   "7090": {
     "damage frames": [
@@ -1088,7 +1183,14 @@
         ]
       }
     ],
-    "name": "Fatal Flame"
+    "name": "Fatal Flame",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
+    ]
   },
   "7100": {
     "damage frames": [
@@ -1136,7 +1238,14 @@
         ]
       }
     ],
-    "name": "Ignite Heaven"
+    "name": "Ignite Heaven",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7110": {
     "damage frames": [
@@ -1178,7 +1287,8 @@
         ]
       }
     ],
-    "name": "Seraphim Edge"
+    "name": "Seraphim Edge",
+    "attackInfo": []
   },
   "7120": {
     "damage frames": [
@@ -1226,7 +1336,14 @@
         ]
       }
     ],
-    "name": "Blue Execution "
+    "name": "Blue Execution ",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7130": {
     "damage frames": [
@@ -1260,7 +1377,8 @@
         ]
       }
     ],
-    "name": "Antidote"
+    "name": "Antidote",
+    "attackInfo": []
   },
   "7131": {
     "damage frames": [
@@ -1295,7 +1413,8 @@
         ]
       }
     ],
-    "name": "Knight's Protection"
+    "name": "Knight's Protection",
+    "attackInfo": []
   },
   "7140": {
     "damage frames": [
@@ -1341,7 +1460,14 @@
         ]
       }
     ],
-    "name": "Mephisto Soul"
+    "name": "Mephisto Soul",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 7
+      }
+    ]
   },
   "7141": {
     "damage frames": [
@@ -1401,7 +1527,14 @@
         ]
       }
     ],
-    "name": "Twin Victim"
+    "name": "Twin Victim",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 14
+      }
+    ]
   },
   "7150": {
     "damage frames": [
@@ -1487,7 +1620,14 @@
         ]
       }
     ],
-    "name": "Rakshasa Execution"
+    "name": "Rakshasa Execution",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7151": {
     "damage frames": [
@@ -1573,7 +1713,14 @@
         ]
       }
     ],
-    "name": "Rakshasa Execution"
+    "name": "Rakshasa Execution",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7152": {
     "damage frames": [
@@ -1618,7 +1765,14 @@
         ]
       }
     ],
-    "name": "Run... I'm losing myself..."
+    "name": "Run... I'm losing myself...",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 7
+      }
+    ]
   },
   "7153": {
     "damage frames": [
@@ -1692,7 +1846,14 @@
         ]
       }
     ],
-    "name": "I will burn everything..."
+    "name": "I will burn everything...",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7160": {
     "damage frames": [
@@ -1726,7 +1887,14 @@
         ]
       }
     ],
-    "name": "Final Judgment"
+    "name": "Final Judgment",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 1
+      }
+    ]
   },
   "7170": {
     "damage frames": [
@@ -1798,7 +1966,14 @@
         ]
       }
     ],
-    "name": "Reality Split"
+    "name": "Reality Split",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 20
+      }
+    ]
   },
   "7180": {
     "damage frames": [
@@ -1835,7 +2010,8 @@
         ]
       }
     ],
-    "name": "Creeping Insanity"
+    "name": "Creeping Insanity",
+    "attackInfo": []
   },
   "7190": {
     "damage frames": [
@@ -1873,7 +2049,14 @@
         ]
       }
     ],
-    "name": "Seal of Destruction I"
+    "name": "Seal of Destruction I",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 3
+      }
+    ]
   },
   "7200": {
     "damage frames": [
@@ -1913,7 +2096,14 @@
         ]
       }
     ],
-    "name": "Seal of Destruction II"
+    "name": "Seal of Destruction II",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 4
+      }
+    ]
   },
   "7210": {
     "damage frames": [
@@ -1956,7 +2146,14 @@
         ]
       }
     ],
-    "name": "Seal of Destruction III"
+    "name": "Seal of Destruction III",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
+    ]
   },
   "7220": {
     "damage frames": [
@@ -2002,7 +2199,14 @@
         ]
       }
     ],
-    "name": "Seal of Destruction IV"
+    "name": "Seal of Destruction IV",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 7
+      }
+    ]
   },
   "7230": {
     "damage frames": [
@@ -2052,7 +2256,14 @@
         ]
       }
     ],
-    "name": "Seal of Destruction V"
+    "name": "Seal of Destruction V",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 9
+      }
+    ]
   },
   "7240": {
     "damage frames": [
@@ -2106,7 +2317,14 @@
         ]
       }
     ],
-    "name": "Seal of Destruction VI"
+    "name": "Seal of Destruction VI",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 11
+      }
+    ]
   },
   "7250": {
     "damage frames": [
@@ -2140,7 +2358,14 @@
         ]
       }
     ],
-    "name": "Vortex Blow"
+    "name": "Vortex Blow",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 1
+      }
+    ]
   },
   "7251": {
     "damage frames": [
@@ -2194,7 +2419,14 @@
         ]
       }
     ],
-    "name": "Hey! Listen up!"
+    "name": "Hey! Listen up!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 1
+      }
+    ]
   },
   "7252": {
     "damage frames": [
@@ -2229,7 +2461,8 @@
         ]
       }
     ],
-    "name": "Get out of my way!"
+    "name": "Get out of my way!",
+    "attackInfo": []
   },
   "7253": {
     "damage frames": [
@@ -2264,7 +2497,14 @@
         ]
       }
     ],
-    "name": "I'm gonna crush you!"
+    "name": "I'm gonna crush you!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 1
+      }
+    ]
   },
   "7254": {
     "damage frames": [
@@ -2299,7 +2539,14 @@
         ]
       }
     ],
-    "name": "Gaia Strike"
+    "name": "Gaia Strike",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 1
+      }
+    ]
   },
   "7255": {
     "damage frames": [
@@ -2340,7 +2587,14 @@
         ]
       }
     ],
-    "name": "Go ahead!"
+    "name": "Go ahead!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 5
+      }
+    ]
   },
   "7256": {
     "damage frames": [
@@ -2381,7 +2635,14 @@
         ]
       }
     ],
-    "name": "This one's mine!"
+    "name": "This one's mine!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 5
+      }
+    ]
   },
   "7257": {
     "damage frames": [
@@ -2435,7 +2696,14 @@
         ]
       }
     ],
-    "name": "You're all such children..."
+    "name": "You're all such children...",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 1
+      }
+    ]
   },
   "7258": {
     "damage frames": [
@@ -2478,7 +2746,14 @@
         ]
       }
     ],
-    "name": "Go ahead!"
+    "name": "Go ahead!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 6
+      }
+    ]
   },
   "7259": {
     "damage frames": [
@@ -2521,7 +2796,14 @@
         ]
       }
     ],
-    "name": "Behold the fruits of my training!"
+    "name": "Behold the fruits of my training!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
+    ]
   },
   "7260": {
     "damage frames": [
@@ -2564,7 +2846,14 @@
         ]
       }
     ],
-    "name": "This one's mine!"
+    "name": "This one's mine!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 6
+      }
+    ]
   },
   "7261": {
     "damage frames": [
@@ -2607,7 +2896,14 @@
         ]
       }
     ],
-    "name": "Check out my skills!"
+    "name": "Check out my skills!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
+    ]
   },
   "7262": {
     "damage frames": [
@@ -2642,7 +2938,14 @@
         ]
       }
     ],
-    "name": "Eat my fist!"
+    "name": "Eat my fist!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 1
+      }
+    ]
   },
   "7263": {
     "damage frames": [
@@ -2677,7 +2980,14 @@
         ]
       }
     ],
-    "name": "Bring it on! Hyaah!"
+    "name": "Bring it on! Hyaah!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 1
+      }
+    ]
   },
   "7264": {
     "damage frames": [
@@ -2731,7 +3041,14 @@
         ]
       }
     ],
-    "name": "Hey, don't just stand there!"
+    "name": "Hey, don't just stand there!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 1
+      }
+    ]
   },
   "7265": {
     "damage frames": [
@@ -2774,7 +3091,14 @@
         ]
       }
     ],
-    "name": "I said stay out of my way!"
+    "name": "I said stay out of my way!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 6
+      }
+    ]
   },
   "7266": {
     "damage frames": [
@@ -2817,7 +3141,14 @@
         ]
       }
     ],
-    "name": "Atilla Shake"
+    "name": "Atilla Shake",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
+    ]
   },
   "7267": {
     "damage frames": [
@@ -2860,7 +3191,14 @@
         ]
       }
     ],
-    "name": "Got no choice..."
+    "name": "Got no choice...",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 6
+      }
+    ]
   },
   "7268": {
     "damage frames": [
@@ -2903,7 +3241,14 @@
         ]
       }
     ],
-    "name": "Spark Kick"
+    "name": "Spark Kick",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
+    ]
   },
   "7280": {
     "damage frames": [
@@ -2971,7 +3316,14 @@
         ]
       }
     ],
-    "name": "Blizzard Seize "
+    "name": "Blizzard Seize ",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7290": {
     "damage frames": [
@@ -3028,7 +3380,8 @@
         ]
       }
     ],
-    "name": "Cure Cloud"
+    "name": "Cure Cloud",
+    "attackInfo": []
   },
   "7291": {
     "damage frames": [
@@ -3064,7 +3417,8 @@
         ]
       }
     ],
-    "name": "Levin Wisdom"
+    "name": "Levin Wisdom",
+    "attackInfo": []
   },
   "7300": {
     "damage frames": [
@@ -3116,7 +3470,14 @@
         ]
       }
     ],
-    "name": "Ethereal Blaster"
+    "name": "Ethereal Blaster",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 10
+      }
+    ]
   },
   "7301": {
     "damage frames": [
@@ -3168,7 +3529,14 @@
         ]
       }
     ],
-    "name": "Ethereal Blaster EX"
+    "name": "Ethereal Blaster EX",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7310": {
     "damage frames": [
@@ -3248,7 +3616,14 @@
         ]
       }
     ],
-    "name": "Soul Rejection"
+    "name": "Soul Rejection",
+    "attackInfo": [
+      {
+        "id": "27",
+        "target": "AOE",
+        "hits": 13
+      }
+    ]
   },
   "7320": {
     "damage frames": [
@@ -3299,7 +3674,14 @@
         ]
       }
     ],
-    "name": "Cursed Blue Slash"
+    "name": "Cursed Blue Slash",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7321": {
     "damage frames": [
@@ -3350,7 +3732,14 @@
         ]
       }
     ],
-    "name": "A normal attack should suffice!"
+    "name": "A normal attack should suffice!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 10
+      }
+    ]
   },
   "7330": {
     "damage frames": [
@@ -3387,7 +3776,8 @@
         ]
       }
     ],
-    "name": "Instant Barrage"
+    "name": "Instant Barrage",
+    "attackInfo": []
   },
   "7340": {
     "damage frames": [
@@ -3459,7 +3849,14 @@
         ]
       }
     ],
-    "name": "Holy Light"
+    "name": "Holy Light",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7350": {
     "damage frames": [
@@ -3527,7 +3924,14 @@
         ]
       }
     ],
-    "name": "Sharp Gaze"
+    "name": "Sharp Gaze",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 8
+      }
+    ]
   },
   "7360": {
     "damage frames": [
@@ -3561,7 +3965,8 @@
         ]
       }
     ],
-    "name": "Vanishing Wave"
+    "name": "Vanishing Wave",
+    "attackInfo": []
   },
   "7370": {
     "damage frames": [
@@ -3651,7 +4056,14 @@
         ]
       }
     ],
-    "name": "Apocalypse"
+    "name": "Apocalypse",
+    "attackInfo": [
+      {
+        "id": "28",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7371": {
     "damage frames": [
@@ -3685,7 +4097,14 @@
         ]
       }
     ],
-    "name": "Apocalypse Zero"
+    "name": "Apocalypse Zero",
+    "attackInfo": [
+      {
+        "id": "28",
+        "target": "AOE",
+        "hits": 1
+      }
+    ]
   },
   "7380": {
     "damage frames": [
@@ -3760,7 +4179,14 @@
         ]
       }
     ],
-    "name": "Sacred Change"
+    "name": "Sacred Change",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7381": {
     "damage frames": [
@@ -3856,7 +4282,14 @@
         ]
       }
     ],
-    "name": "Darkness Change"
+    "name": "Darkness Change",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7390": {
     "damage frames": [
@@ -3891,7 +4324,8 @@
         ]
       }
     ],
-    "name": "Steel Fortification"
+    "name": "Steel Fortification",
+    "attackInfo": []
   },
   "7400": {
     "damage frames": [
@@ -3928,7 +4362,8 @@
         ]
       }
     ],
-    "name": "Life Shower"
+    "name": "Life Shower",
+    "attackInfo": []
   },
   "7410": {
     "damage frames": [
@@ -3979,7 +4414,14 @@
         ]
       }
     ],
-    "name": "Ignite Heaven"
+    "name": "Ignite Heaven",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7420": {
     "damage frames": [
@@ -4026,7 +4468,14 @@
         ]
       }
     ],
-    "name": "Lightning Volcano"
+    "name": "Lightning Volcano",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 6
+      }
+    ]
   },
   "7430": {
     "damage frames": [
@@ -4081,7 +4530,14 @@
         ]
       }
     ],
-    "name": "Ground Rock"
+    "name": "Ground Rock",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7440": {
     "damage frames": [
@@ -4172,7 +4628,14 @@
         ]
       }
     ],
-    "name": "I'm tired. Time for a break."
+    "name": "I'm tired. Time for a break.",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 10
+      }
+    ]
   },
   "7450": {
     "damage frames": [
@@ -4243,7 +4706,14 @@
         ]
       }
     ],
-    "name": "Light Attack"
+    "name": "Light Attack",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 10
+      }
+    ]
   },
   "7460": {
     "damage frames": [
@@ -4334,7 +4804,14 @@
         ]
       }
     ],
-    "name": "Ho ho ho! Time for some fun!"
+    "name": "Ho ho ho! Time for some fun!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 10
+      }
+    ]
   },
   "7470": {
     "damage frames": [
@@ -4407,7 +4884,8 @@
         ]
       }
     ],
-    "name": "Break's over!"
+    "name": "Break's over!",
+    "attackInfo": []
   },
   "7480": {
     "damage frames": [
@@ -4455,7 +4933,14 @@
         ]
       }
     ],
-    "name": "Crimson Comet"
+    "name": "Crimson Comet",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7490": {
     "damage frames": [
@@ -4501,7 +4986,14 @@
         ]
       }
     ],
-    "name": "Crystal Rose"
+    "name": "Crystal Rose",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 7
+      }
+    ]
   },
   "7500": {
     "damage frames": [
@@ -4538,7 +5030,8 @@
         ]
       }
     ],
-    "name": "Ares' Requiem"
+    "name": "Ares' Requiem",
+    "attackInfo": []
   },
   "7501": {
     "damage frames": [
@@ -4575,7 +5068,8 @@
         ]
       }
     ],
-    "name": "General's Serenade"
+    "name": "General's Serenade",
+    "attackInfo": []
   },
   "7502": {
     "damage frames": [
@@ -4633,7 +5127,8 @@
         ]
       }
     ],
-    "name": "Thunderous Aria"
+    "name": "Thunderous Aria",
+    "attackInfo": []
   },
   "7503": {
     "damage frames": [
@@ -4691,7 +5186,8 @@
         ]
       }
     ],
-    "name": "Infatuating Symphony"
+    "name": "Infatuating Symphony",
+    "attackInfo": []
   },
   "7504": {
     "damage frames": [
@@ -4747,7 +5243,8 @@
         ]
       }
     ],
-    "name": "Slaughter Symphony"
+    "name": "Slaughter Symphony",
+    "attackInfo": []
   },
   "7505": {
     "damage frames": [
@@ -4786,7 +5283,14 @@
         ]
       }
     ],
-    "name": "Let the music fest begin!"
+    "name": "Let the music fest begin!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 4
+      }
+    ]
   },
   "7510": {
     "damage frames": [
@@ -4836,7 +5340,14 @@
         ]
       }
     ],
-    "name": "Spiral Scratch"
+    "name": "Spiral Scratch",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 9
+      }
+    ]
   },
   "7511": {
     "damage frames": [
@@ -4886,7 +5397,14 @@
         ]
       }
     ],
-    "name": "I'll do it for Zegar!"
+    "name": "I'll do it for Zegar!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 9
+      }
+    ]
   },
   "7512": {
     "damage frames": [
@@ -4957,7 +5475,14 @@
         ]
       }
     ],
-    "name": "Zegar is a good person!"
+    "name": "Zegar is a good person!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 9
+      }
+    ]
   },
   "7520": {
     "damage frames": [
@@ -4994,7 +5519,8 @@
         ]
       }
     ],
-    "name": "Prayer for Health"
+    "name": "Prayer for Health",
+    "attackInfo": []
   },
   "7521": {
     "damage frames": [
@@ -5031,7 +5557,8 @@
         ]
       }
     ],
-    "name": "Prayer for Health"
+    "name": "Prayer for Health",
+    "attackInfo": []
   },
   "7530": {
     "damage frames": [
@@ -5073,7 +5600,14 @@
         ]
       }
     ],
-    "name": "Joker's Hand"
+    "name": "Joker's Hand",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 5
+      }
+    ]
   },
   "7531": {
     "damage frames": [
@@ -5115,7 +5649,14 @@
         ]
       }
     ],
-    "name": "Joker's Hand"
+    "name": "Joker's Hand",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 5
+      }
+    ]
   },
   "7540": {
     "damage frames": [
@@ -5176,7 +5717,14 @@
         ]
       }
     ],
-    "name": "Flaming Spirit"
+    "name": "Flaming Spirit",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 4
+      }
+    ]
   },
   "7541": {
     "damage frames": [
@@ -5237,7 +5785,14 @@
         ]
       }
     ],
-    "name": "Flaming Spirit"
+    "name": "Flaming Spirit",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 4
+      }
+    ]
   },
   "7550": {
     "damage frames": [
@@ -5279,7 +5834,14 @@
         ]
       }
     ],
-    "name": "Diamond Dust"
+    "name": "Diamond Dust",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 5
+      }
+    ]
   },
   "7551": {
     "damage frames": [
@@ -5322,7 +5884,14 @@
         ]
       }
     ],
-    "name": "Diamond Dust"
+    "name": "Diamond Dust",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 5
+      }
+    ]
   },
   "7560": {
     "damage frames": [
@@ -5387,7 +5956,14 @@
         ]
       }
     ],
-    "name": "Astro Bash"
+    "name": "Astro Bash",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 6
+      }
+    ]
   },
   "7561": {
     "damage frames": [
@@ -5452,7 +6028,14 @@
         ]
       }
     ],
-    "name": "Astro Bash"
+    "name": "Astro Bash",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
+    ]
   },
   "7570": {
     "damage frames": [
@@ -5496,7 +6079,14 @@
         ]
       }
     ],
-    "name": "Pulsar Fall"
+    "name": "Pulsar Fall",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
+    ]
   },
   "7571": {
     "damage frames": [
@@ -5541,7 +6131,14 @@
         ]
       }
     ],
-    "name": "Pulsar Fall"
+    "name": "Pulsar Fall",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
+    ]
   },
   "7580": {
     "damage frames": [
@@ -5608,7 +6205,14 @@
         ]
       }
     ],
-    "name": "Black Hole"
+    "name": "Black Hole",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7581": {
     "damage frames": [
@@ -5676,7 +6280,14 @@
         ]
       }
     ],
-    "name": "Black Hole"
+    "name": "Black Hole",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7582": {
     "damage frames": [
@@ -5743,7 +6354,14 @@
         ]
       }
     ],
-    "name": "Black Hole"
+    "name": "Black Hole",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7590": {
     "damage frames": [
@@ -5801,7 +6419,14 @@
         ]
       }
     ],
-    "name": "Burning Spirit"
+    "name": "Burning Spirit",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 3
+      }
+    ]
   },
   "7600": {
     "damage frames": [
@@ -5843,7 +6468,14 @@
         ]
       }
     ],
-    "name": "Solid Ice"
+    "name": "Solid Ice",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 5
+      }
+    ]
   },
   "7610": {
     "damage frames": [
@@ -5903,7 +6535,14 @@
         ]
       }
     ],
-    "name": "Grand Bash"
+    "name": "Grand Bash",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 4
+      }
+    ]
   },
   "7620": {
     "damage frames": [
@@ -5945,7 +6584,14 @@
         ]
       }
     ],
-    "name": "Lightning Arrow"
+    "name": "Lightning Arrow",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 5
+      }
+    ]
   },
   "7630": {
     "damage frames": [
@@ -5994,7 +6640,14 @@
         ]
       }
     ],
-    "name": "Ground Zapper"
+    "name": "Ground Zapper",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7640": {
     "damage frames": [
@@ -6030,7 +6683,8 @@
         ]
       }
     ],
-    "name": "Creed of Faith"
+    "name": "Creed of Faith",
+    "attackInfo": []
   },
   "7650": {
     "damage frames": [
@@ -6066,7 +6720,8 @@
         ]
       }
     ],
-    "name": "Demon Boost"
+    "name": "Demon Boost",
+    "attackInfo": []
   },
   "7660": {
     "damage frames": [
@@ -6133,7 +6788,14 @@
         ]
       }
     ],
-    "name": "Rising Storm"
+    "name": "Rising Storm",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 8
+      }
+    ]
   },
   "7661": {
     "damage frames": [
@@ -6200,7 +6862,14 @@
         ]
       }
     ],
-    "name": "Rising Storm"
+    "name": "Rising Storm",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 8
+      }
+    ]
   },
   "7670": {
     "damage frames": [
@@ -6269,7 +6938,14 @@
         ]
       }
     ],
-    "name": "Twin Dragon Slash"
+    "name": "Twin Dragon Slash",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 9
+      }
+    ]
   },
   "7671": {
     "damage frames": [
@@ -6359,7 +7035,14 @@
         ]
       }
     ],
-    "name": "I will never forgive you!"
+    "name": "I will never forgive you!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 9
+      }
+    ]
   },
   "7672": {
     "damage frames": [
@@ -6428,7 +7111,14 @@
         ]
       }
     ],
-    "name": "Twin Dragon Slash"
+    "name": "Twin Dragon Slash",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 9
+      }
+    ]
   },
   "7680": {
     "damage frames": [
@@ -6472,7 +7162,14 @@
         ]
       }
     ],
-    "name": "Cosmic Flash"
+    "name": "Cosmic Flash",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
+    ]
   },
   "7690": {
     "damage frames": [
@@ -6516,7 +7213,14 @@
         ]
       }
     ],
-    "name": "Calamity Wave"
+    "name": "Calamity Wave",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
+    ]
   },
   "7700": {
     "damage frames": [
@@ -6552,7 +7256,14 @@
         ]
       }
     ],
-    "name": "Destruct Drive"
+    "name": "Destruct Drive",
+    "attackInfo": [
+      {
+        "id": "13",
+        "target": "RT",
+        "hits": 7
+      }
+    ]
   },
   "7701": {
     "damage frames": [
@@ -6608,7 +7319,14 @@
         ]
       }
     ],
-    "name": "Heavy Barrage"
+    "name": "Heavy Barrage",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 12
+      }
+    ]
   },
   "7702": {
     "damage frames": [
@@ -6644,7 +7362,8 @@
         ]
       }
     ],
-    "name": "System Repair"
+    "name": "System Repair",
+    "attackInfo": []
   },
   "7703": {
     "damage frames": [
@@ -6717,7 +7436,14 @@
         ]
       }
     ],
-    "name": "Genocide Order"
+    "name": "Genocide Order",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 20
+      }
+    ]
   },
   "7710": {
     "damage frames": [
@@ -6774,7 +7500,8 @@
         ]
       }
     ],
-    "name": "Gourmet Dish"
+    "name": "Gourmet Dish",
+    "attackInfo": []
   },
   "7711": {
     "damage frames": [
@@ -6811,7 +7538,14 @@
         ]
       }
     ],
-    "name": "So many ingredients!"
+    "name": "So many ingredients!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 3
+      }
+    ]
   },
   "7712": {
     "damage frames": [
@@ -6888,7 +7622,14 @@
         ]
       }
     ],
-    "name": "I'll eat this one first!"
+    "name": "I'll eat this one first!",
+    "attackInfo": [
+      {
+        "id": "28",
+        "target": "ST",
+        "hits": 1
+      }
+    ]
   },
   "7713": {
     "damage frames": [
@@ -6945,7 +7686,8 @@
         ]
       }
     ],
-    "name": "Accept my love!"
+    "name": "Accept my love!",
+    "attackInfo": []
   },
   "7714": {
     "damage frames": [
@@ -6982,7 +7724,14 @@
         ]
       }
     ],
-    "name": "Oh no, I'm too hungry!"
+    "name": "Oh no, I'm too hungry!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 3
+      }
+    ]
   },
   "7715": {
     "damage frames": [
@@ -7056,7 +7805,14 @@
         ]
       }
     ],
-    "name": "Sorry, but I'm starved!"
+    "name": "Sorry, but I'm starved!",
+    "attackInfo": [
+      {
+        "id": "28",
+        "target": "ST",
+        "hits": 1
+      }
+    ]
   },
   "7716": {
     "damage frames": [
@@ -7134,7 +7890,14 @@
         ]
       }
     ],
-    "name": "Icicle Edge"
+    "name": "Icicle Edge",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 4
+      }
+    ]
   },
   "7717": {
     "damage frames": [
@@ -7172,7 +7935,14 @@
         ]
       }
     ],
-    "name": "Normal All"
+    "name": "Normal All",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 3
+      }
+    ]
   },
   "7720": {
     "damage frames": [
@@ -7229,7 +7999,8 @@
         ]
       }
     ],
-    "name": "Guardian Force"
+    "name": "Guardian Force",
+    "attackInfo": []
   },
   "7730": {
     "damage frames": [
@@ -7301,7 +8072,14 @@
         ]
       }
     ],
-    "name": "Heavy Riposte"
+    "name": "Heavy Riposte",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7740": {
     "damage frames": [
@@ -7368,7 +8146,14 @@
         ]
       }
     ],
-    "name": "Doorway to Hades"
+    "name": "Doorway to Hades",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 8
+      }
+    ]
   },
   "7750": {
     "damage frames": [
@@ -7439,7 +8224,14 @@
         ]
       }
     ],
-    "name": "Soul Eater"
+    "name": "Soul Eater",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7760": {
     "damage frames": [
@@ -7476,7 +8268,14 @@
         ]
       }
     ],
-    "name": "Holy Blaster"
+    "name": "Holy Blaster",
+    "attackInfo": [
+      {
+        "id": "13",
+        "target": "RT",
+        "hits": 8
+      }
+    ]
   },
   "7761": {
     "damage frames": [
@@ -7513,7 +8312,14 @@
         ]
       }
     ],
-    "name": "Holy Blaster"
+    "name": "Holy Blaster",
+    "attackInfo": [
+      {
+        "id": "13",
+        "target": "RT",
+        "hits": 8
+      }
+    ]
   },
   "7770": {
     "damage frames": [
@@ -7584,7 +8390,14 @@
         ]
       }
     ],
-    "name": "Stardust Flare"
+    "name": "Stardust Flare",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7780": {
     "damage frames": [
@@ -7628,7 +8441,14 @@
         ]
       }
     ],
-    "name": "Lightning Volcano"
+    "name": "Lightning Volcano",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
+    ]
   },
   "7790": {
     "damage frames": [
@@ -7680,7 +8500,14 @@
         ]
       }
     ],
-    "name": "Blade of Flames, Burnout!"
+    "name": "Blade of Flames, Burnout!",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "ST",
+        "hits": 8
+      }
+    ]
   },
   "7800": {
     "damage frames": [
@@ -7756,7 +8583,14 @@
         ]
       }
     ],
-    "name": "Blade of Haze, Assassin's Gale!"
+    "name": "Blade of Haze, Assassin's Gale!",
+    "attackInfo": [
+      {
+        "id": "13",
+        "target": "RT",
+        "hits": 36
+      }
+    ]
   },
   "7810": {
     "damage frames": [
@@ -7799,7 +8633,14 @@
         ]
       }
     ],
-    "name": "Blade of Judgment, Vault End!"
+    "name": "Blade of Judgment, Vault End!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 5
+      }
+    ]
   },
   "7820": {
     "damage frames": [
@@ -7876,7 +8717,8 @@
         ]
       }
     ],
-    "name": "First-aid"
+    "name": "First-aid",
+    "attackInfo": []
   },
   "7830": {
     "damage frames": [
@@ -7917,7 +8759,14 @@
         ]
       }
     ],
-    "name": "Nngh... That stung…"
+    "name": "Nngh... That stung…",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 5
+      }
+    ]
   },
   "7840": {
     "damage frames": [
@@ -7966,7 +8815,14 @@
         ]
       }
     ],
-    "name": "Riptide"
+    "name": "Riptide",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7850": {
     "damage frames": [
@@ -8039,7 +8895,14 @@
         ]
       }
     ],
-    "name": "Flood Noir"
+    "name": "Flood Noir",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7851": {
     "damage frames": [
@@ -8087,7 +8950,14 @@
         ]
       }
     ],
-    "name": "You dare disturb the sea?!"
+    "name": "You dare disturb the sea?!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7852": {
     "damage frames": [
@@ -8121,7 +8991,8 @@
         ]
       }
     ],
-    "name": "Summon: Lugina"
+    "name": "Summon: Lugina",
+    "attackInfo": []
   },
   "7853": {
     "damage frames": [
@@ -8155,7 +9026,8 @@
         ]
       }
     ],
-    "name": "Summon: Seria"
+    "name": "Summon: Seria",
+    "attackInfo": []
   },
   "7854": {
     "damage frames": [
@@ -8190,7 +9062,8 @@
         ]
       }
     ],
-    "name": "(This takes too long...)"
+    "name": "(This takes too long...)",
+    "attackInfo": []
   },
   "7855": {
     "damage frames": [
@@ -8225,7 +9098,8 @@
         ]
       }
     ],
-    "name": "(Behave you two!)"
+    "name": "(Behave you two!)",
+    "attackInfo": []
   },
   "7856": {
     "damage frames": [
@@ -8260,7 +9134,8 @@
         ]
       }
     ],
-    "name": "(I can't take this anymore!)"
+    "name": "(I can't take this anymore!)",
+    "attackInfo": []
   },
   "7857": {
     "damage frames": [
@@ -8295,7 +9170,8 @@
         ]
       }
     ],
-    "name": "(Same here! At this rate...)"
+    "name": "(Same here! At this rate...)",
+    "attackInfo": []
   },
   "7858": {
     "damage frames": [
@@ -8330,7 +9206,8 @@
         ]
       }
     ],
-    "name": "(Hey! Stop that!)"
+    "name": "(Hey! Stop that!)",
+    "attackInfo": []
   },
   "7860": {
     "damage frames": [
@@ -8366,7 +9243,14 @@
         ]
       }
     ],
-    "name": "Death Bringer"
+    "name": "Death Bringer",
+    "attackInfo": [
+      {
+        "id": "13",
+        "target": "RT",
+        "hits": 22
+      }
+    ]
   },
   "7861": {
     "damage frames": [
@@ -8402,7 +9286,14 @@
         ]
       }
     ],
-    "name": "Death Bringer"
+    "name": "Death Bringer",
+    "attackInfo": [
+      {
+        "id": "13",
+        "target": "RT",
+        "hits": 22
+      }
+    ]
   },
   "7862": {
     "damage frames": [
@@ -8438,7 +9329,14 @@
         ]
       }
     ],
-    "name": "I was entrusted with protection. I'll defeat every foe."
+    "name": "I was entrusted with protection. I'll defeat every foe.",
+    "attackInfo": [
+      {
+        "id": "13",
+        "target": "RT",
+        "hits": 22
+      }
+    ]
   },
   "7863": {
     "damage frames": [
@@ -8473,7 +9371,8 @@
         ]
       }
     ],
-    "name": "Ngh, I can't go on... I leave the rest to you..."
+    "name": "Ngh, I can't go on... I leave the rest to you...",
+    "attackInfo": []
   },
   "7864": {
     "damage frames": [
@@ -8509,7 +9408,14 @@
         ]
       }
     ],
-    "name": "I won't go down without a fight!!!"
+    "name": "I won't go down without a fight!!!",
+    "attackInfo": [
+      {
+        "id": "13",
+        "target": "RT",
+        "hits": 22
+      }
+    ]
   },
   "7865": {
     "damage frames": [
@@ -8566,7 +9472,14 @@
         ]
       }
     ],
-    "name": "Darvan...! Why, you little--!!!"
+    "name": "Darvan...! Why, you little--!!!",
+    "attackInfo": [
+      {
+        "id": "13",
+        "target": "RT",
+        "hits": 22
+      }
+    ]
   },
   "7870": {
     "damage frames": [
@@ -8679,7 +9592,14 @@
         ]
       }
     ],
-    "name": "Spark Cannon"
+    "name": "Spark Cannon",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 30
+      }
+    ]
   },
   "7880": {
     "damage frames": [
@@ -8766,7 +9686,14 @@
         ]
       }
     ],
-    "name": "On the battlefield, the slightest distraction can be fatal."
+    "name": "On the battlefield, the slightest distraction can be fatal.",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 28
+      }
+    ]
   },
   "7890": {
     "damage frames": [
@@ -8822,7 +9749,14 @@
         ]
       }
     ],
-    "name": "I'm gonna give it all I've got! Prepare yourself!"
+    "name": "I'm gonna give it all I've got! Prepare yourself!",
+    "attackInfo": [
+      {
+        "id": "13",
+        "target": "RT",
+        "hits": 60
+      }
+    ]
   },
   "7900": {
     "damage frames": [
@@ -8857,7 +9791,8 @@
         ]
       }
     ],
-    "name": "I've failed in defeating you..."
+    "name": "I've failed in defeating you...",
+    "attackInfo": []
   },
   "7910": {
     "damage frames": [
@@ -8925,7 +9860,14 @@
         ]
       }
     ],
-    "name": "Somber Claymore"
+    "name": "Somber Claymore",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7911": {
     "damage frames": [
@@ -8960,7 +9902,8 @@
         ]
       }
     ],
-    "name": "Charge"
+    "name": "Charge",
+    "attackInfo": []
   },
   "7912": {
     "damage frames": [
@@ -9008,7 +9951,14 @@
         ]
       }
     ],
-    "name": "World Carnage"
+    "name": "World Carnage",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7913": {
     "damage frames": [
@@ -9076,7 +10026,14 @@
         ]
       }
     ],
-    "name": "Somber Claymore"
+    "name": "Somber Claymore",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7920": {
     "damage frames": [
@@ -9114,7 +10071,8 @@
         ]
       }
     ],
-    "name": "King Beast's Roar"
+    "name": "King Beast's Roar",
+    "attackInfo": []
   },
   "7921": {
     "damage frames": [
@@ -9152,7 +10110,8 @@
         ]
       }
     ],
-    "name": "King Beast's Roar"
+    "name": "King Beast's Roar",
+    "attackInfo": []
   },
   "7930": {
     "damage frames": [
@@ -9198,7 +10157,14 @@
         ]
       }
     ],
-    "name": "Kneel! For I am the true King of Beasts!"
+    "name": "Kneel! For I am the true King of Beasts!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 7
+      }
+    ]
   },
   "7931": {
     "damage frames": [
@@ -9240,7 +10206,14 @@
         ]
       }
     ],
-    "name": "Normal All"
+    "name": "Normal All",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 5
+      }
+    ]
   },
   "7940": {
     "damage frames": [
@@ -9286,7 +10259,14 @@
         ]
       }
     ],
-    "name": "Gehenna Breath"
+    "name": "Gehenna Breath",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 7
+      }
+    ]
   },
   "7950": {
     "damage frames": [
@@ -9353,7 +10333,14 @@
         ]
       }
     ],
-    "name": "Call out my name!"
+    "name": "Call out my name!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 8
+      }
+    ]
   },
   "7951": {
     "damage frames": [
@@ -9420,7 +10407,14 @@
         ]
       }
     ],
-    "name": "I am Zephu! Do you remember me?"
+    "name": "I am Zephu! Do you remember me?",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 8
+      }
+    ]
   },
   "7952": {
     "damage frames": [
@@ -9491,7 +10485,14 @@
         ]
       }
     ],
-    "name": "Haven't I already told you? I am Zephu!"
+    "name": "Haven't I already told you? I am Zephu!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7960": {
     "damage frames": [
@@ -9527,7 +10528,14 @@
         ]
       }
     ],
-    "name": "X Radia"
+    "name": "X Radia",
+    "attackInfo": [
+      {
+        "id": "13",
+        "target": "RT",
+        "hits": 5
+      }
+    ]
   },
   "7961": {
     "damage frames": [
@@ -9563,7 +10571,14 @@
         ]
       }
     ],
-    "name": "X Radia"
+    "name": "X Radia",
+    "attackInfo": [
+      {
+        "id": "13",
+        "target": "RT",
+        "hits": 5
+      }
+    ]
   },
   "7970": {
     "damage frames": [
@@ -9598,7 +10613,8 @@
         ]
       }
     ],
-    "name": "EX Guard"
+    "name": "EX Guard",
+    "attackInfo": []
   },
   "7971": {
     "damage frames": [
@@ -9633,7 +10649,8 @@
         ]
       }
     ],
-    "name": "Mounting Frost"
+    "name": "Mounting Frost",
+    "attackInfo": []
   },
   "7972": {
     "damage frames": [
@@ -9705,7 +10722,14 @@
         ]
       }
     ],
-    "name": "I'll freeze you for all eternity with my frigid power..."
+    "name": "I'll freeze you for all eternity with my frigid power...",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 20
+      }
+    ]
   },
   "7973": {
     "damage frames": [
@@ -9740,7 +10764,8 @@
         ]
       }
     ],
-    "name": "Freeze Preparation"
+    "name": "Freeze Preparation",
+    "attackInfo": []
   },
   "7974": {
     "damage frames": [
@@ -9782,7 +10807,14 @@
         ]
       }
     ],
-    "name": "Normal Attack"
+    "name": "Normal Attack",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 5
+      }
+    ]
   },
   "7980": {
     "damage frames": [
@@ -9838,7 +10870,14 @@
         ]
       }
     ],
-    "name": "Divine Blaster"
+    "name": "Divine Blaster",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 12
+      }
+    ]
   },
   "7990": {
     "damage frames": [
@@ -9874,7 +10913,14 @@
         ]
       }
     ],
-    "name": "Valza Riser"
+    "name": "Valza Riser",
+    "attackInfo": [
+      {
+        "id": "13",
+        "target": "RT",
+        "hits": 5
+      }
+    ]
   },
   "710167": {
     "damage frames": [
@@ -10573,6 +11619,13 @@
     "name": "Pyroclasm",
     "associated_units": [
       "710167"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 13
+      }
     ]
   },
   "710168": {
@@ -11290,6 +12343,13 @@
     "name": "Dark Ignition",
     "associated_units": [
       "710168"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 22
+      }
     ]
   },
   "710217": {
@@ -11847,6 +12907,13 @@
     "name": "Premeditation",
     "associated_units": [
       "710217"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 18
+      }
     ]
   },
   "710227": {
@@ -12390,7 +13457,8 @@
     "name": "Lava-Forged Blade",
     "associated_units": [
       "710227"
-    ]
+    ],
+    "attackInfo": []
   },
   "720157": {
     "damage frames": [
@@ -12979,6 +14047,715 @@
     "name": "Crystalline River",
     "associated_units": [
       "720157"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 14
+      }
+    ]
+  },
+  "720167": {
+    "damage frames": [
+      {
+        "effect delay time(ms)/frame": "16.7/1",
+        "frame times": [
+          45,
+          48,
+          51,
+          54,
+          57,
+          60,
+          63,
+          89,
+          92,
+          95,
+          98,
+          101,
+          104,
+          107,
+          110,
+          113,
+          116,
+          119,
+          122,
+          125,
+          128
+        ],
+        "hit dmg% distribution": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          10,
+          10,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 21,
+        "proc id": "1"
+      },
+      {
+        "effect delay time(ms)/frame": "0.0/0",
+        "frame times": [
+          0
+        ],
+        "hit dmg% distribution": [
+          100
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 1,
+        "proc id": "92"
+      },
+      {
+        "effect delay time(ms)/frame": "0.0/0",
+        "frame times": [
+          0
+        ],
+        "hit dmg% distribution": [
+          100
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 1,
+        "proc id": "126"
+      },
+      {
+        "effect delay time(ms)/frame": "0.0/0",
+        "frame times": [
+          0
+        ],
+        "hit dmg% distribution": [
+          100
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 1,
+        "proc id": "3"
+      },
+      {
+        "effect delay time(ms)/frame": "0.0/0",
+        "frame times": [
+          0
+        ],
+        "hit dmg% distribution": [
+          100
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 1,
+        "proc id": "67"
+      },
+      {
+        "effect delay time(ms)/frame": "0.0/0",
+        "frame times": [
+          0
+        ],
+        "hit dmg% distribution": [
+          100
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 1,
+        "proc id": "87"
+      }
+    ],
+    "desc": "21 combo powerful Water attack on all foes, considerably boosts own max HP, 25% additional damage reduction for 3 turns, greatly restores HP for 3 turns & Spark damage considerably boosts BB gauge and slightly restores HP for 3 turns",
+    "drop check count": 1,
+    "id": "720167",
+    "levels": [
+      {
+        "bc cost": 30,
+        "effects": [
+          {
+            "bb atk%": 450,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "1",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "single",
+            "target type": "self",
+            "unknown proc id": "92",
+            "unknown proc param": "0,25,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "126",
+            "unknown proc param": "25,3,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "gradual heal high": 4500,
+            "gradual heal low": 4000,
+            "gradual heal turns (8)": 3,
+            "proc id": "3",
+            "rec added% (from target)": 20,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "bc fill on spark buff turns (111)": 3,
+            "bc fill on spark high": 4,
+            "bc fill on spark low": 3,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "87",
+            "spark recover hp buff turns (135)": 3,
+            "spark recover hp chance%": 100,
+            "spark recover hp high": 500,
+            "spark recover hp low": 400,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "bc cost": 30,
+        "effects": [
+          {
+            "bb atk%": 460,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "1",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "single",
+            "target type": "self",
+            "unknown proc id": "92",
+            "unknown proc param": "0,25,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "126",
+            "unknown proc param": "25,3,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "gradual heal high": 4500,
+            "gradual heal low": 4000,
+            "gradual heal turns (8)": 3,
+            "proc id": "3",
+            "rec added% (from target)": 20,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "bc fill on spark buff turns (111)": 3,
+            "bc fill on spark high": 4,
+            "bc fill on spark low": 3,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "87",
+            "spark recover hp buff turns (135)": 3,
+            "spark recover hp chance%": 100,
+            "spark recover hp high": 500,
+            "spark recover hp low": 400,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "bc cost": 30,
+        "effects": [
+          {
+            "bb atk%": 470,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "1",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "single",
+            "target type": "self",
+            "unknown proc id": "92",
+            "unknown proc param": "0,25,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "126",
+            "unknown proc param": "25,3,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "gradual heal high": 4500,
+            "gradual heal low": 4000,
+            "gradual heal turns (8)": 3,
+            "proc id": "3",
+            "rec added% (from target)": 20,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "bc fill on spark buff turns (111)": 3,
+            "bc fill on spark high": 4,
+            "bc fill on spark low": 3,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "87",
+            "spark recover hp buff turns (135)": 3,
+            "spark recover hp chance%": 100,
+            "spark recover hp high": 500,
+            "spark recover hp low": 400,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "bc cost": 30,
+        "effects": [
+          {
+            "bb atk%": 480,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "1",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "single",
+            "target type": "self",
+            "unknown proc id": "92",
+            "unknown proc param": "0,25,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "126",
+            "unknown proc param": "25,3,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "gradual heal high": 4500,
+            "gradual heal low": 4000,
+            "gradual heal turns (8)": 3,
+            "proc id": "3",
+            "rec added% (from target)": 20,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "bc fill on spark buff turns (111)": 3,
+            "bc fill on spark high": 4,
+            "bc fill on spark low": 3,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "87",
+            "spark recover hp buff turns (135)": 3,
+            "spark recover hp chance%": 100,
+            "spark recover hp high": 500,
+            "spark recover hp low": 400,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "bc cost": 30,
+        "effects": [
+          {
+            "bb atk%": 490,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "1",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "single",
+            "target type": "self",
+            "unknown proc id": "92",
+            "unknown proc param": "0,25,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "126",
+            "unknown proc param": "25,3,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "gradual heal high": 4500,
+            "gradual heal low": 4000,
+            "gradual heal turns (8)": 3,
+            "proc id": "3",
+            "rec added% (from target)": 20,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "bc fill on spark buff turns (111)": 3,
+            "bc fill on spark high": 4,
+            "bc fill on spark low": 3,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "87",
+            "spark recover hp buff turns (135)": 3,
+            "spark recover hp chance%": 100,
+            "spark recover hp high": 500,
+            "spark recover hp low": 400,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "bc cost": 30,
+        "effects": [
+          {
+            "bb atk%": 500,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "1",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "single",
+            "target type": "self",
+            "unknown proc id": "92",
+            "unknown proc param": "0,25,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "126",
+            "unknown proc param": "25,3,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "gradual heal high": 4500,
+            "gradual heal low": 4000,
+            "gradual heal turns (8)": 3,
+            "proc id": "3",
+            "rec added% (from target)": 20,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "bc fill on spark buff turns (111)": 3,
+            "bc fill on spark high": 4,
+            "bc fill on spark low": 3,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "87",
+            "spark recover hp buff turns (135)": 3,
+            "spark recover hp chance%": 100,
+            "spark recover hp high": 500,
+            "spark recover hp low": 400,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "bc cost": 30,
+        "effects": [
+          {
+            "bb atk%": 510,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "1",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "single",
+            "target type": "self",
+            "unknown proc id": "92",
+            "unknown proc param": "0,25,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "126",
+            "unknown proc param": "25,3,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "gradual heal high": 4500,
+            "gradual heal low": 4000,
+            "gradual heal turns (8)": 3,
+            "proc id": "3",
+            "rec added% (from target)": 20,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "bc fill on spark buff turns (111)": 3,
+            "bc fill on spark high": 4,
+            "bc fill on spark low": 3,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "87",
+            "spark recover hp buff turns (135)": 3,
+            "spark recover hp chance%": 100,
+            "spark recover hp high": 500,
+            "spark recover hp low": 400,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "bc cost": 30,
+        "effects": [
+          {
+            "bb atk%": 520,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "1",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "single",
+            "target type": "self",
+            "unknown proc id": "92",
+            "unknown proc param": "0,25,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "126",
+            "unknown proc param": "25,3,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "gradual heal high": 4500,
+            "gradual heal low": 4000,
+            "gradual heal turns (8)": 3,
+            "proc id": "3",
+            "rec added% (from target)": 20,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "bc fill on spark buff turns (111)": 3,
+            "bc fill on spark high": 4,
+            "bc fill on spark low": 3,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "87",
+            "spark recover hp buff turns (135)": 3,
+            "spark recover hp chance%": 100,
+            "spark recover hp high": 500,
+            "spark recover hp low": 400,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "bc cost": 30,
+        "effects": [
+          {
+            "bb atk%": 530,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "1",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "single",
+            "target type": "self",
+            "unknown proc id": "92",
+            "unknown proc param": "0,25,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "126",
+            "unknown proc param": "25,3,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "gradual heal high": 4500,
+            "gradual heal low": 4000,
+            "gradual heal turns (8)": 3,
+            "proc id": "3",
+            "rec added% (from target)": 20,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "bc fill on spark buff turns (111)": 3,
+            "bc fill on spark high": 4,
+            "bc fill on spark low": 3,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "87",
+            "spark recover hp buff turns (135)": 3,
+            "spark recover hp chance%": 100,
+            "spark recover hp high": 500,
+            "spark recover hp low": 400,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "bc cost": 30,
+        "effects": [
+          {
+            "bb atk%": 550,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "1",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "single",
+            "target type": "self",
+            "unknown proc id": "92",
+            "unknown proc param": "0,25,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "126",
+            "unknown proc param": "25,3,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "gradual heal high": 4500,
+            "gradual heal low": 4000,
+            "gradual heal turns (8)": 3,
+            "proc id": "3",
+            "rec added% (from target)": 20,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "bc fill on spark buff turns (111)": 3,
+            "bc fill on spark high": 4,
+            "bc fill on spark low": 3,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "87",
+            "spark recover hp buff turns (135)": 3,
+            "spark recover hp chance%": 100,
+            "spark recover hp high": 500,
+            "spark recover hp low": 400,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "name": "Issue Solver",
+    "associated_units": [
+      "720167"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 21
+      }
     ]
   },
   "720237": {
@@ -13678,6 +15455,13 @@
     "name": "Conviction Bulwark",
     "associated_units": [
       "720237"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 24
+      }
     ]
   },
   "730227": {
@@ -14373,6 +16157,13 @@
     "name": "Iridescent Wall",
     "associated_units": [
       "730227"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 11
+      }
     ]
   },
   "730257": {
@@ -15048,7 +16839,8 @@
     "name": "Cosmic Restoration",
     "associated_units": [
       "730257"
-    ]
+    ],
+    "attackInfo": []
   },
   "740157": {
     "damage frames": [
@@ -15739,6 +17531,13 @@
     "name": "Aerial Supremacy",
     "associated_units": [
       "740157"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 15
+      }
     ]
   },
   "740237": {
@@ -16386,6 +18185,13 @@
     "name": "Protector of Innocents",
     "associated_units": [
       "740237"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 12
+      }
     ]
   },
   "740247": {
@@ -17103,6 +18909,13 @@
     "name": "Ruler Authority",
     "associated_units": [
       "740247"
+    ],
+    "attackInfo": [
+      {
+        "id": "47",
+        "target": "AOE",
+        "hits": 22
+      }
     ]
   },
   "750166": {
@@ -17412,6 +19225,13 @@
     "name": "Divine Judgement",
     "associated_units": [
       "750166"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 22
+      }
     ]
   },
   "750167": {
@@ -17997,6 +19817,18 @@
     "name": "Thirst for Revenge",
     "associated_units": [
       "750167"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 22
+      },
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 1
+      }
     ]
   },
   "760226": {
@@ -18490,6 +20322,13 @@
     "name": "Mechanical Shield",
     "associated_units": [
       "760226"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 22
+      }
     ]
   },
   "760227": {
@@ -18993,6 +20832,13 @@
     "name": "Mechanical Hoplite",
     "associated_units": [
       "760227"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 27
+      }
     ]
   },
   "7000000": {
@@ -19165,7 +21011,14 @@
         ]
       }
     ],
-    "name": "Anguish Blade"
+    "name": "Anguish Blade",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 11
+      }
+    ]
   },
   "7000001": {
     "damage frames": [
@@ -19531,7 +21384,14 @@
         ]
       }
     ],
-    "name": "Fire Wings"
+    "name": "Fire Wings",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 11
+      }
+    ]
   },
   "7000010": {
     "damage frames": [
@@ -19795,7 +21655,14 @@
         ]
       }
     ],
-    "name": "Secret Attack: Rebirth"
+    "name": "Secret Attack: Rebirth",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
+    ]
   },
   "7000011": {
     "damage frames": [
@@ -20059,7 +21926,14 @@
         ]
       }
     ],
-    "name": "Secret Attack: Creation"
+    "name": "Secret Attack: Creation",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
+    ]
   },
   "7000020": {
     "damage frames": [
@@ -20225,7 +22099,14 @@
         ]
       }
     ],
-    "name": "Star Gale"
+    "name": "Star Gale",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7000030": {
     "damage frames": [
@@ -20387,7 +22268,14 @@
         ]
       }
     ],
-    "name": "Cyclone Disaster"
+    "name": "Cyclone Disaster",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
+    ]
   },
   "7000040": {
     "damage frames": [
@@ -20563,7 +22451,14 @@
         ]
       }
     ],
-    "name": "Abaddon Eater"
+    "name": "Abaddon Eater",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7000050": {
     "damage frames": [
@@ -20729,7 +22624,14 @@
         ]
       }
     ],
-    "name": "White Esperanza"
+    "name": "White Esperanza",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7016001": {
     "damage frames": [
@@ -20881,7 +22783,8 @@
         ]
       }
     ],
-    "name": "Defense Level 100"
+    "name": "Defense Level 100",
+    "attackInfo": []
   },
   "7016002": {
     "damage frames": [
@@ -21043,7 +22946,14 @@
         ]
       }
     ],
-    "name": "Divine Barrier"
+    "name": "Divine Barrier",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
+    ]
   },
   "7016003": {
     "damage frames": [
@@ -21205,7 +23115,14 @@
         ]
       }
     ],
-    "name": "Electro Storm"
+    "name": "Electro Storm",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
+    ]
   },
   "7016004": {
     "damage frames": [
@@ -21365,7 +23282,14 @@
         ]
       }
     ],
-    "name": "Ethereal Blaster"
+    "name": "Ethereal Blaster",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 10
+      }
+    ]
   },
   "7016005": {
     "damage frames": [
@@ -21531,7 +23455,14 @@
         ]
       }
     ],
-    "name": "White Esperanza"
+    "name": "White Esperanza",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7016006": {
     "damage frames": [
@@ -21777,7 +23708,14 @@
         ]
       }
     ],
-    "name": "Burial Shine"
+    "name": "Burial Shine",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 7
+      }
+    ]
   },
   "7016007": {
     "damage frames": [
@@ -22045,7 +23983,14 @@
         ]
       }
     ],
-    "name": "Black Kiss"
+    "name": "Black Kiss",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 8
+      }
+    ]
   },
   "7016008": {
     "damage frames": [
@@ -22449,7 +24394,14 @@
         ]
       }
     ],
-    "name": "World's End"
+    "name": "World's End",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 20
+      }
+    ]
   },
   "7016009": {
     "damage frames": [
@@ -22615,7 +24567,14 @@
         ]
       }
     ],
-    "name": "Orbital Glow"
+    "name": "Orbital Glow",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7500000": {
     "damage frames": [
@@ -22676,7 +24635,14 @@
         ]
       }
     ],
-    "name": "Earth Shudder"
+    "name": "Earth Shudder",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 5
+      }
+    ]
   },
   "7500001": {
     "damage frames": [
@@ -22743,7 +24709,14 @@
         ]
       }
     ],
-    "name": "Corrosive Gale"
+    "name": "Corrosive Gale",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7500002": {
     "damage frames": [
@@ -22808,7 +24781,14 @@
         ]
       }
     ],
-    "name": "Gaian Seed"
+    "name": "Gaian Seed",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 5
+      }
+    ]
   },
   "7500010": {
     "damage frames": [
@@ -22869,7 +24849,14 @@
         ]
       }
     ],
-    "name": "Plague Leaf"
+    "name": "Plague Leaf",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 5
+      }
+    ]
   },
   "7500011": {
     "damage frames": [
@@ -22932,7 +24919,14 @@
         ]
       }
     ],
-    "name": "Poison Leaf"
+    "name": "Poison Leaf",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
+    ]
   },
   "7500020": {
     "damage frames": [
@@ -22995,7 +24989,14 @@
         ]
       }
     ],
-    "name": "Binding Root"
+    "name": "Binding Root",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 6
+      }
+    ]
   },
   "7500021": {
     "damage frames": [
@@ -23039,7 +25040,14 @@
         ]
       }
     ],
-    "name": "Impaling Root"
+    "name": "Impaling Root",
+    "attackInfo": [
+      {
+        "id": "27",
+        "target": "ST",
+        "hits": 5
+      }
+    ]
   },
   "7500022": {
     "damage frames": [
@@ -23093,7 +25101,14 @@
         ]
       }
     ],
-    "name": "Life-Ending Roots"
+    "name": "Life-Ending Roots",
+    "attackInfo": [
+      {
+        "id": "27",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7500023": {
     "damage frames": [
@@ -23129,7 +25144,8 @@
         ]
       }
     ],
-    "name": "The roots run deep in this land..."
+    "name": "The roots run deep in this land...",
+    "attackInfo": []
   },
   "7500030": {
     "damage frames": [
@@ -23171,7 +25187,14 @@
         ]
       }
     ],
-    "name": "Land Impact"
+    "name": "Land Impact",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 5
+      }
+    ]
   },
   "7500031": {
     "damage frames": [
@@ -23207,7 +25230,8 @@
         ]
       }
     ],
-    "name": "Dark light shrouds Melion..."
+    "name": "Dark light shrouds Melion...",
+    "attackInfo": []
   },
   "7500040": {
     "damage frames": [
@@ -23245,7 +25269,14 @@
         ]
       }
     ],
-    "name": "Chains of Harm"
+    "name": "Chains of Harm",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 3
+      }
+    ]
   },
   "7500041": {
     "damage frames": [
@@ -23303,7 +25334,14 @@
         ]
       }
     ],
-    "name": "Bound Shadow Fog"
+    "name": "Bound Shadow Fog",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 3
+      }
+    ]
   },
   "7500042": {
     "damage frames": [
@@ -23375,7 +25413,14 @@
         ]
       }
     ],
-    "name": "Jet Black Swirl"
+    "name": "Jet Black Swirl",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7500043": {
     "damage frames": [
@@ -23448,7 +25493,14 @@
         ]
       }
     ],
-    "name": "Wraith Vortex"
+    "name": "Wraith Vortex",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7500044": {
     "damage frames": [
@@ -23523,7 +25575,8 @@
         ]
       }
     ],
-    "name": "Melion gathers power"
+    "name": "Melion gathers power",
+    "attackInfo": []
   },
   "7500050": {
     "damage frames": [
@@ -23579,7 +25632,8 @@
         ]
       }
     ],
-    "name": "Aura Fist"
+    "name": "Aura Fist",
+    "attackInfo": []
   },
   "7500060": {
     "damage frames": [
@@ -23664,7 +25718,14 @@
         ]
       }
     ],
-    "name": "Leader's Barrage"
+    "name": "Leader's Barrage",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 13
+      }
+    ]
   },
   "7500061": {
     "damage frames": [
@@ -23724,7 +25785,14 @@
         ]
       }
     ],
-    "name": "Soul Rejection"
+    "name": "Soul Rejection",
+    "attackInfo": [
+      {
+        "id": "27",
+        "target": "AOE",
+        "hits": 13
+      }
+    ]
   },
   "7500062": {
     "damage frames": [
@@ -23792,7 +25860,14 @@
         ]
       }
     ],
-    "name": "Sharp Gaze"
+    "name": "Sharp Gaze",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 8
+      }
+    ]
   },
   "7500063": {
     "damage frames": [
@@ -23826,7 +25901,8 @@
         ]
       }
     ],
-    "name": "Vanishing Wave"
+    "name": "Vanishing Wave",
+    "attackInfo": []
   },
   "7500064": {
     "damage frames": [
@@ -23916,7 +25992,14 @@
         ]
       }
     ],
-    "name": "Apocalypse"
+    "name": "Apocalypse",
+    "attackInfo": [
+      {
+        "id": "28",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7500065": {
     "damage frames": [
@@ -23950,7 +26033,14 @@
         ]
       }
     ],
-    "name": "Apocalypse Zero"
+    "name": "Apocalypse Zero",
+    "attackInfo": [
+      {
+        "id": "28",
+        "target": "AOE",
+        "hits": 1
+      }
+    ]
   },
   "7500066": {
     "damage frames": [
@@ -24025,7 +26115,14 @@
         ]
       }
     ],
-    "name": "Sacred Change"
+    "name": "Sacred Change",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7500067": {
     "damage frames": [
@@ -24121,7 +26218,14 @@
         ]
       }
     ],
-    "name": "Darkness Change"
+    "name": "Darkness Change",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7500070": {
     "damage frames": [
@@ -24212,7 +26316,14 @@
         ]
       }
     ],
-    "name": "Jupiter Rising"
+    "name": "Jupiter Rising",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 16
+      }
+    ]
   },
   "7500071": {
     "damage frames": [
@@ -24341,7 +26452,14 @@
         ]
       }
     ],
-    "name": "Chrono Ultimatum"
+    "name": "Chrono Ultimatum",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 25
+      }
+    ]
   },
   "7500072": {
     "damage frames": [
@@ -24421,7 +26539,14 @@
         ]
       }
     ],
-    "name": "Soul Rejection"
+    "name": "Soul Rejection",
+    "attackInfo": [
+      {
+        "id": "27",
+        "target": "AOE",
+        "hits": 13
+      }
+    ]
   },
   "7500073": {
     "damage frames": [
@@ -24498,7 +26623,14 @@
         ]
       }
     ],
-    "name": "Lean Adjustment"
+    "name": "Lean Adjustment",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 8
+      }
+    ]
   },
   "7500074": {
     "damage frames": [
@@ -24550,7 +26682,14 @@
         ]
       }
     ],
-    "name": "Apocalypse"
+    "name": "Apocalypse",
+    "attackInfo": [
+      {
+        "id": "48",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7500075": {
     "damage frames": [
@@ -24584,7 +26723,14 @@
         ]
       }
     ],
-    "name": "Apocalypse Zero"
+    "name": "Apocalypse Zero",
+    "attackInfo": [
+      {
+        "id": "48",
+        "target": "AOE",
+        "hits": 1
+      }
+    ]
   },
   "7500076": {
     "damage frames": [
@@ -24639,7 +26785,8 @@
         ]
       }
     ],
-    "name": "Should I get serious now?"
+    "name": "Should I get serious now?",
+    "attackInfo": []
   },
   "7500077": {
     "damage frames": [
@@ -24674,7 +26821,8 @@
         ]
       }
     ],
-    "name": "Here I go! Be careful!"
+    "name": "Here I go! Be careful!",
+    "attackInfo": []
   },
   "7500078": {
     "damage frames": [
@@ -24712,7 +26860,8 @@
         ]
       }
     ],
-    "name": "I think I'm getting old..."
+    "name": "I think I'm getting old...",
+    "attackInfo": []
   },
   "7500080": {
     "damage frames": [
@@ -24854,7 +27003,14 @@
         ]
       }
     ],
-    "name": "Variable Rise"
+    "name": "Variable Rise",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 18
+      }
+    ]
   },
   "7500081": {
     "damage frames": [
@@ -25007,7 +27163,14 @@
         ]
       }
     ],
-    "name": "Chrono Ishrion"
+    "name": "Chrono Ishrion",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 26
+      }
+    ]
   },
   "7500082": {
     "damage frames": [
@@ -25164,7 +27327,14 @@
         ]
       }
     ],
-    "name": "False Dawn"
+    "name": "False Dawn",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 28
+      }
+    ]
   },
   "7500083": {
     "damage frames": [
@@ -25204,7 +27374,8 @@
         ]
       }
     ],
-    "name": "Cursed Celest"
+    "name": "Cursed Celest",
+    "attackInfo": []
   },
   "7500084": {
     "damage frames": [
@@ -25240,7 +27411,8 @@
         ]
       }
     ],
-    "name": "Grahdens is deep in concentration."
+    "name": "Grahdens is deep in concentration.",
+    "attackInfo": []
   },
   "7500085": {
     "damage frames": [
@@ -25355,7 +27527,14 @@
         ]
       }
     ],
-    "name": "Svate Rauben"
+    "name": "Svate Rauben",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 18
+      }
+    ]
   },
   "7500086": {
     "damage frames": [
@@ -25467,7 +27646,14 @@
         ]
       }
     ],
-    "name": "Solitus Call"
+    "name": "Solitus Call",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 18
+      }
+    ]
   },
   "7500087": {
     "damage frames": [
@@ -25614,7 +27800,14 @@
         ]
       }
     ],
-    "name": "Criminal Lira"
+    "name": "Criminal Lira",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 26
+      }
+    ]
   },
   "7500088": {
     "damage frames": [
@@ -25672,7 +27865,8 @@
         ]
       }
     ],
-    "name": "Overdrive"
+    "name": "Overdrive",
+    "attackInfo": []
   },
   "7500089": {
     "damage frames": [
@@ -25749,7 +27943,14 @@
         ]
       }
     ],
-    "name": "Lean Adjustment"
+    "name": "Lean Adjustment",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 8
+      }
+    ]
   },
   "7500090": {
     "damage frames": [
@@ -25801,7 +28002,14 @@
         ]
       }
     ],
-    "name": "Apocalypse"
+    "name": "Apocalypse",
+    "attackInfo": [
+      {
+        "id": "48",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7500100": {
     "damage frames": [
@@ -25905,7 +28113,14 @@
         ]
       }
     ],
-    "name": "Art of War Strike"
+    "name": "Art of War Strike",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 5
+      }
+    ]
   },
   "7500101": {
     "damage frames": [
@@ -26056,7 +28271,14 @@
         ]
       }
     ],
-    "name": "Divine Fury's Brandish"
+    "name": "Divine Fury's Brandish",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 18
+      }
+    ]
   },
   "7500102": {
     "damage frames": [
@@ -26214,7 +28436,14 @@
         ]
       }
     ],
-    "name": "Flame of War Formation"
+    "name": "Flame of War Formation",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 22
+      }
+    ]
   },
   "7500103": {
     "damage frames": [
@@ -26258,7 +28487,14 @@
         ]
       }
     ],
-    "name": "Warrior's Enlightenment"
+    "name": "Warrior's Enlightenment",
+    "attackInfo": [
+      {
+        "id": "27",
+        "target": "AOE",
+        "hits": 5
+      }
+    ]
   },
   "7500104": {
     "damage frames": [
@@ -26323,7 +28559,14 @@
         ]
       }
     ],
-    "name": "Howling Heavens Strike"
+    "name": "Howling Heavens Strike",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 5
+      }
+    ]
   },
   "7500105": {
     "damage frames": [
@@ -26371,7 +28614,14 @@
         ]
       }
     ],
-    "name": "Impaler's Thrust"
+    "name": "Impaler's Thrust",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 7
+      }
+    ]
   },
   "7500106": {
     "damage frames": [
@@ -26428,7 +28678,8 @@
         ]
       }
     ],
-    "name": "Warrior Awakening"
+    "name": "Warrior Awakening",
+    "attackInfo": []
   },
   "7500107": {
     "damage frames": [
@@ -26540,7 +28791,8 @@
         ]
       }
     ],
-    "name": "Inherited Power"
+    "name": "Inherited Power",
+    "attackInfo": []
   },
   "7500108": {
     "damage frames": [
@@ -26575,7 +28827,8 @@
         ]
       }
     ],
-    "name": "Give your all against my ultimate skill!"
+    "name": "Give your all against my ultimate skill!",
+    "attackInfo": []
   },
   "7500109": {
     "damage frames": [
@@ -26610,7 +28863,8 @@
         ]
       }
     ],
-    "name": "So, which of us is stronger, I wonder?"
+    "name": "So, which of us is stronger, I wonder?",
+    "attackInfo": []
   },
   "7500110": {
     "damage frames": [
@@ -26645,7 +28899,8 @@
         ]
       }
     ],
-    "name": "Fight back with everything you have!"
+    "name": "Fight back with everything you have!",
+    "attackInfo": []
   },
   "7500111": {
     "damage frames": [
@@ -26703,7 +28958,8 @@
         ]
       }
     ],
-    "name": "Overdrive"
+    "name": "Overdrive",
+    "attackInfo": []
   },
   "7500112": {
     "damage frames": [
@@ -26738,7 +28994,8 @@
         ]
       }
     ],
-    "name": "So that's all of your power... Pathetic!"
+    "name": "So that's all of your power... Pathetic!",
+    "attackInfo": []
   },
   "7500113": {
     "damage frames": [
@@ -26773,7 +29030,8 @@
         ]
       }
     ],
-    "name": "Your power is most impressive!"
+    "name": "Your power is most impressive!",
+    "attackInfo": []
   },
   "7500120": {
     "damage frames": [
@@ -26831,7 +29089,14 @@
         ]
       }
     ],
-    "name": "Empty Seal"
+    "name": "Empty Seal",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 13
+      }
+    ]
   },
   "7500121": {
     "damage frames": [
@@ -26914,7 +29179,8 @@
         ]
       }
     ],
-    "name": "Supreme Stance"
+    "name": "Supreme Stance",
+    "attackInfo": []
   },
   "7500122": {
     "damage frames": [
@@ -26993,7 +29259,8 @@
         ]
       }
     ],
-    "name": "Military Stance"
+    "name": "Military Stance",
+    "attackInfo": []
   },
   "7500123": {
     "damage frames": [
@@ -27072,7 +29339,8 @@
         ]
       }
     ],
-    "name": "Godly Stance"
+    "name": "Godly Stance",
+    "attackInfo": []
   },
   "7500124": {
     "damage frames": [
@@ -27129,7 +29397,8 @@
         ]
       }
     ],
-    "name": "Expression of Anger"
+    "name": "Expression of Anger",
+    "attackInfo": []
   },
   "7500125": {
     "damage frames": [
@@ -27195,7 +29464,14 @@
         ]
       }
     ],
-    "name": "War God's Blade Swing"
+    "name": "War God's Blade Swing",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 5
+      }
+    ]
   },
   "7500126": {
     "damage frames": [
@@ -27240,7 +29516,14 @@
         ]
       }
     ],
-    "name": "War God's Blade Thrust"
+    "name": "War God's Blade Thrust",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 6
+      }
+    ]
   },
   "7500127": {
     "damage frames": [
@@ -27276,7 +29559,14 @@
         ]
       }
     ],
-    "name": "Flame Extinguisher"
+    "name": "Flame Extinguisher",
+    "attackInfo": [
+      {
+        "id": "27",
+        "target": "AOE",
+        "hits": 1
+      }
+    ]
   },
   "7500128": {
     "damage frames": [
@@ -27342,7 +29632,14 @@
         ]
       }
     ],
-    "name": "Normal Attack"
+    "name": "Normal Attack",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 6
+      }
+    ]
   },
   "7500129": {
     "damage frames": [
@@ -27399,7 +29696,8 @@
         ]
       }
     ],
-    "name": "War Demon's Ambition"
+    "name": "War Demon's Ambition",
+    "attackInfo": []
   },
   "7500130": {
     "damage frames": [
@@ -27434,7 +29732,8 @@
         ]
       }
     ],
-    "name": "Stance has been broken!"
+    "name": "Stance has been broken!",
+    "attackInfo": []
   },
   "7500131": {
     "damage frames": [
@@ -27561,7 +29860,8 @@
         ]
       }
     ],
-    "name": "Militant God's Stance"
+    "name": "Militant God's Stance",
+    "attackInfo": []
   },
   "7500132": {
     "damage frames": [
@@ -27598,7 +29898,14 @@
         ]
       }
     ],
-    "name": "War God Dance"
+    "name": "War God Dance",
+    "attackInfo": [
+      {
+        "id": "27",
+        "target": "ST",
+        "hits": 1
+      }
+    ]
   },
   "7500133": {
     "damage frames": [
@@ -27635,7 +29942,14 @@
         ]
       }
     ],
-    "name": "War God Dance"
+    "name": "War God Dance",
+    "attackInfo": [
+      {
+        "id": "13",
+        "target": "RT",
+        "hits": 10
+      }
+    ]
   },
   "7500134": {
     "damage frames": [
@@ -27683,7 +29997,14 @@
         ]
       }
     ],
-    "name": "War God Dance"
+    "name": "War God Dance",
+    "attackInfo": [
+      {
+        "id": "28",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7500135": {
     "damage frames": [
@@ -27818,7 +30139,8 @@
         ]
       }
     ],
-    "name": "Inherited Power"
+    "name": "Inherited Power",
+    "attackInfo": []
   },
   "7500136": {
     "damage frames": [
@@ -27857,7 +30179,14 @@
         ]
       }
     ],
-    "name": "Full Megiddo Blast"
+    "name": "Full Megiddo Blast",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 3
+      }
+    ]
   },
   "7500137": {
     "damage frames": [
@@ -27893,7 +30222,14 @@
         ]
       }
     ],
-    "name": "Soul's End"
+    "name": "Soul's End",
+    "attackInfo": [
+      {
+        "id": "27",
+        "target": "ST",
+        "hits": 1
+      }
+    ]
   },
   "7500138": {
     "damage frames": [
@@ -27986,7 +30322,14 @@
         ]
       }
     ],
-    "name": "Hellish Fire Rush"
+    "name": "Hellish Fire Rush",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 30
+      }
+    ]
   },
   "7500139": {
     "damage frames": [
@@ -28043,7 +30386,14 @@
         ]
       }
     ],
-    "name": "Attack Breaker"
+    "name": "Attack Breaker",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 1
+      }
+    ]
   },
   "7500140": {
     "damage frames": [
@@ -28100,7 +30450,14 @@
         ]
       }
     ],
-    "name": "Heal Breaker"
+    "name": "Heal Breaker",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 1
+      }
+    ]
   },
   "7500141": {
     "damage frames": [
@@ -28207,7 +30564,8 @@
         ]
       }
     ],
-    "name": "Hellfire Stance"
+    "name": "Hellfire Stance",
+    "attackInfo": []
   },
   "7500142": {
     "damage frames": [
@@ -28266,7 +30624,14 @@
         ]
       }
     ],
-    "name": "Empty Seal"
+    "name": "Empty Seal",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 13
+      }
+    ]
   },
   "7500143": {
     "damage frames": [
@@ -28364,7 +30729,8 @@
         ]
       }
     ],
-    "name": "War Demon's Delight"
+    "name": "War Demon's Delight",
+    "attackInfo": []
   },
   "7500150": {
     "damage frames": [
@@ -28419,7 +30785,14 @@
         ]
       }
     ],
-    "name": "Alpha Phaser"
+    "name": "Alpha Phaser",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 11
+      }
+    ]
   },
   "7500151": {
     "damage frames": [
@@ -28468,7 +30841,14 @@
         ]
       }
     ],
-    "name": "Radiation"
+    "name": "Radiation",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "7500152": {
     "damage frames": [
@@ -28531,7 +30911,14 @@
         ]
       }
     ],
-    "name": "AD Bomb"
+    "name": "AD Bomb",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 4
+      }
+    ]
   },
   "7500153": {
     "damage frames": [
@@ -28568,7 +30955,8 @@
         ]
       }
     ],
-    "name": "Plasma Shield"
+    "name": "Plasma Shield",
+    "attackInfo": []
   },
   "7500154": {
     "damage frames": [
@@ -28627,7 +31015,8 @@
         ]
       }
     ],
-    "name": "Power Charge"
+    "name": "Power Charge",
+    "attackInfo": []
   },
   "7500155": {
     "damage frames": [
@@ -28687,7 +31076,8 @@
         ]
       }
     ],
-    "name": "High-Power Charge"
+    "name": "High-Power Charge",
+    "attackInfo": []
   },
   "7500156": {
     "damage frames": [
@@ -28743,7 +31133,8 @@
         ]
       }
     ],
-    "name": "Energy Charge"
+    "name": "Energy Charge",
+    "attackInfo": []
   },
   "7500157": {
     "damage frames": [
@@ -28798,7 +31189,14 @@
         ]
       }
     ],
-    "name": "Alpha Phaser"
+    "name": "Alpha Phaser",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 11
+      }
+    ]
   },
   "7500170": {
     "damage frames": [
@@ -28886,7 +31284,14 @@
         ]
       }
     ],
-    "name": "Void Howl"
+    "name": "Void Howl",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 18
+      }
+    ]
   },
   "7500171": {
     "damage frames": [
@@ -28942,7 +31347,8 @@
         ]
       }
     ],
-    "name": "The Divine Wolf opens its mouth wide..."
+    "name": "The Divine Wolf opens its mouth wide...",
+    "attackInfo": []
   },
   "7500172": {
     "damage frames": [
@@ -28992,7 +31398,14 @@
         ]
       }
     ],
-    "name": "Twin Frostclaw"
+    "name": "Twin Frostclaw",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 8
+      }
+    ]
   },
   "7500173": {
     "damage frames": [
@@ -29045,7 +31458,14 @@
         ]
       }
     ],
-    "name": "Frost Shock"
+    "name": "Frost Shock",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7500174": {
     "damage frames": [
@@ -29112,7 +31532,14 @@
         ]
       }
     ],
-    "name": "Frozen Bonds"
+    "name": "Frozen Bonds",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 7
+      }
+    ]
   },
   "7500175": {
     "damage frames": [
@@ -29168,7 +31595,8 @@
         ]
       }
     ],
-    "name": "Howling Wrath"
+    "name": "Howling Wrath",
+    "attackInfo": []
   },
   "7500176": {
     "damage frames": [
@@ -29202,7 +31630,8 @@
         ]
       }
     ],
-    "name": "Armageddon Roar"
+    "name": "Armageddon Roar",
+    "attackInfo": []
   },
   "7500177": {
     "damage frames": [
@@ -29252,7 +31681,14 @@
         ]
       }
     ],
-    "name": "Twin Frostclaw (not displayed)"
+    "name": "Twin Frostclaw (not displayed)",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 8
+      }
+    ]
   },
   "7500178": {
     "damage frames": [
@@ -29341,7 +31777,14 @@
         ]
       }
     ],
-    "name": "Void Howl"
+    "name": "Void Howl",
+    "attackInfo": [
+      {
+        "id": "27",
+        "target": "AOE",
+        "hits": 18
+      }
+    ]
   },
   "7500190": {
     "damage frames": [
@@ -29424,7 +31867,14 @@
         ]
       }
     ],
-    "name": "Eternal Scarlet"
+    "name": "Eternal Scarlet",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 15
+      }
+    ]
   },
   "7500191": {
     "damage frames": [
@@ -29477,7 +31927,14 @@
         ]
       }
     ],
-    "name": "Fanned Flames"
+    "name": "Fanned Flames",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7500192": {
     "damage frames": [
@@ -29549,7 +32006,14 @@
         ]
       }
     ],
-    "name": "Burning Rupture"
+    "name": "Burning Rupture",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7500193": {
     "damage frames": [
@@ -29613,7 +32077,14 @@
         ]
       }
     ],
-    "name": "Dark Disintegration"
+    "name": "Dark Disintegration",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 6
+      }
+    ]
   },
   "7500194": {
     "damage frames": [
@@ -29711,7 +32182,14 @@
         ]
       }
     ],
-    "name": "War in Heaven"
+    "name": "War in Heaven",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7500195": {
     "damage frames": [
@@ -29749,7 +32227,8 @@
         ]
       }
     ],
-    "name": "Blood-Red Lotus"
+    "name": "Blood-Red Lotus",
+    "attackInfo": []
   },
   "7500196": {
     "damage frames": [
@@ -29805,7 +32284,8 @@
         ]
       }
     ],
-    "name": "The Divine Phoenix spreads its wings..."
+    "name": "The Divine Phoenix spreads its wings...",
+    "attackInfo": []
   },
   "7500197": {
     "damage frames": [
@@ -29898,7 +32378,8 @@
         ]
       }
     ],
-    "name": "Treatment Dance"
+    "name": "Treatment Dance",
+    "attackInfo": []
   },
   "7500198": {
     "damage frames": [
@@ -29957,7 +32438,8 @@
         ]
       }
     ],
-    "name": "Inferno of Suffering"
+    "name": "Inferno of Suffering",
+    "attackInfo": []
   },
   "7500199": {
     "damage frames": [
@@ -30064,7 +32546,14 @@
         ]
       }
     ],
-    "name": "Eternal Scarlet"
+    "name": "Eternal Scarlet",
+    "attackInfo": [
+      {
+        "id": "27",
+        "target": "AOE",
+        "hits": 15
+      }
+    ]
   },
   "7500200": {
     "damage frames": [
@@ -30145,7 +32634,14 @@
         ]
       }
     ],
-    "name": "Flames of Execution"
+    "name": "Flames of Execution",
+    "attackInfo": [
+      {
+        "id": "27",
+        "target": "ST",
+        "hits": 4
+      }
+    ]
   },
   "7500210": {
     "damage frames": [
@@ -30228,7 +32724,14 @@
         ]
       }
     ],
-    "name": "Gigantics"
+    "name": "Gigantics",
+    "attackInfo": [
+      {
+        "id": "48",
+        "target": "AOE",
+        "hits": 16
+      }
+    ]
   },
   "7500211": {
     "damage frames": [
@@ -30269,7 +32772,8 @@
         ]
       }
     ],
-    "name": "Points both arm guns at you"
+    "name": "Points both arm guns at you",
+    "attackInfo": []
   },
   "7500212": {
     "damage frames": [
@@ -30325,7 +32829,14 @@
         ]
       }
     ],
-    "name": "Evilness Crush"
+    "name": "Evilness Crush",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 2
+      }
+    ]
   },
   "7500213": {
     "damage frames": [
@@ -30365,7 +32876,14 @@
         ]
       }
     ],
-    "name": "Gatling Burst"
+    "name": "Gatling Burst",
+    "attackInfo": [
+      {
+        "id": "27",
+        "target": "AOE",
+        "hits": 3
+      }
+    ]
   },
   "7500214": {
     "damage frames": [
@@ -30401,7 +32919,14 @@
         ]
       }
     ],
-    "name": "Spirit Smash"
+    "name": "Spirit Smash",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 1
+      }
+    ]
   },
   "7500215": {
     "damage frames": [
@@ -30466,7 +32991,14 @@
         ]
       }
     ],
-    "name": "Struggle Finale"
+    "name": "Struggle Finale",
+    "attackInfo": [
+      {
+        "id": "27",
+        "target": "AOE",
+        "hits": 6
+      }
+    ]
   },
   "7500216": {
     "damage frames": [
@@ -30525,7 +33057,8 @@
         ]
       }
     ],
-    "name": "Accelerate Recovery"
+    "name": "Accelerate Recovery",
+    "attackInfo": []
   },
   "7500217": {
     "damage frames": [
@@ -30621,7 +33154,8 @@
         ]
       }
     ],
-    "name": "Instant Hardening"
+    "name": "Instant Hardening",
+    "attackInfo": []
   },
   "7500218": {
     "damage frames": [
@@ -30701,7 +33235,14 @@
         ]
       }
     ],
-    "name": "Evilness Fragment"
+    "name": "Evilness Fragment",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 2
+      }
+    ]
   },
   "7500219": {
     "damage frames": [
@@ -30764,7 +33305,14 @@
         ]
       }
     ],
-    "name": "Gatling Break"
+    "name": "Gatling Break",
+    "attackInfo": [
+      {
+        "id": "27",
+        "target": "AOE",
+        "hits": 3
+      }
+    ]
   },
   "7500220": {
     "damage frames": [
@@ -30801,7 +33349,8 @@
         ]
       }
     ],
-    "name": "Instaboost"
+    "name": "Instaboost",
+    "attackInfo": []
   },
   "7500221": {
     "damage frames": [
@@ -30865,7 +33414,14 @@
         ]
       }
     ],
-    "name": "Gigantics"
+    "name": "Gigantics",
+    "attackInfo": [
+      {
+        "id": "28",
+        "target": "AOE",
+        "hits": 16
+      }
+    ]
   },
   "7500222": {
     "damage frames": [
@@ -30903,7 +33459,14 @@
         ]
       }
     ],
-    "name": "Spirit Devastator"
+    "name": "Spirit Devastator",
+    "attackInfo": [
+      {
+        "id": "64",
+        "target": "ST",
+        "hits": 1
+      }
+    ]
   },
   "7500223": {
     "damage frames": [
@@ -31013,7 +33576,14 @@
         ]
       }
     ],
-    "name": "Ideal Prosecutor"
+    "name": "Ideal Prosecutor",
+    "attackInfo": [
+      {
+        "id": "27",
+        "target": "AOE",
+        "hits": 7
+      }
+    ]
   },
   "7500227": {
     "damage frames": [
@@ -31208,7 +33778,14 @@
         ]
       }
     ],
-    "name": "Devaloka"
+    "name": "Devaloka",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 50
+      }
+    ]
   },
   "7500228": {
     "damage frames": [
@@ -31259,7 +33836,14 @@
         ]
       }
     ],
-    "name": "Paraidis Breath"
+    "name": "Paraidis Breath",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 9
+      }
+    ]
   },
   "7500229": {
     "damage frames": [
@@ -31381,7 +33965,14 @@
         ]
       }
     ],
-    "name": "Proq Force"
+    "name": "Proq Force",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7500230": {
     "damage frames": [
@@ -31502,7 +34093,14 @@
         ]
       }
     ],
-    "name": "Pargo Force"
+    "name": "Pargo Force",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7500231": {
     "damage frames": [
@@ -31621,7 +34219,14 @@
         ]
       }
     ],
-    "name": "Ezas Force"
+    "name": "Ezas Force",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7500232": {
     "damage frames": [
@@ -31740,7 +34345,14 @@
         ]
       }
     ],
-    "name": "Bron Force"
+    "name": "Bron Force",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7500233": {
     "damage frames": [
@@ -31862,7 +34474,14 @@
         ]
       }
     ],
-    "name": "Skos Force"
+    "name": "Skos Force",
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 10
+      }
+    ]
   },
   "7500234": {
     "damage frames": [
@@ -31919,7 +34538,14 @@
         ]
       }
     ],
-    "name": "Warped Loy Kaloz"
+    "name": "Warped Loy Kaloz",
+    "attackInfo": [
+      {
+        "id": "13",
+        "target": "RT",
+        "hits": 5
+      }
+    ]
   },
   "7500235": {
     "damage frames": [
@@ -32012,7 +34638,19 @@
         ]
       }
     ],
-    "name": "Demon's Pulse"
+    "name": "Demon's Pulse",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 9
+      },
+      {
+        "id": "13",
+        "target": "RT",
+        "hits": 10
+      }
+    ]
   },
   "7500236": {
     "damage frames": [
@@ -32112,7 +34750,8 @@
         ]
       }
     ],
-    "name": "Solid Aura"
+    "name": "Solid Aura",
+    "attackInfo": []
   },
   "7500237": {
     "damage frames": [
@@ -32169,7 +34808,8 @@
         ]
       }
     ],
-    "name": "The halo glows ever brighter..."
+    "name": "The halo glows ever brighter...",
+    "attackInfo": []
   },
   "7500238": {
     "damage frames": [
@@ -32241,7 +34881,14 @@
         ]
       }
     ],
-    "name": "Grid Force"
+    "name": "Grid Force",
+    "attackInfo": [
+      {
+        "id": "27",
+        "target": "AOE",
+        "hits": 9
+      }
+    ]
   },
   "7500239": {
     "damage frames": [
@@ -32312,7 +34959,14 @@
         ]
       }
     ],
-    "name": "Salute Flash"
+    "name": "Salute Flash",
+    "attackInfo": [
+      {
+        "id": "27",
+        "target": "ST",
+        "hits": 7
+      }
+    ]
   },
   "7500240": {
     "damage frames": [
@@ -32409,7 +35063,8 @@
         ]
       }
     ],
-    "name": "Defy Divine Will"
+    "name": "Defy Divine Will",
+    "attackInfo": []
   },
   "7500241": {
     "damage frames": [
@@ -32474,7 +35129,14 @@
         ]
       }
     ],
-    "name": "Destiny Flash"
+    "name": "Destiny Flash",
+    "attackInfo": [
+      {
+        "id": "48",
+        "target": "ST",
+        "hits": 7
+      }
+    ]
   },
   "7500242": {
     "damage frames": [
@@ -32606,7 +35268,14 @@
         ]
       }
     ],
-    "name": "Abrogate Divine Will"
+    "name": "Abrogate Divine Will",
+    "attackInfo": [
+      {
+        "id": "48",
+        "target": "AOE",
+        "hits": 9
+      }
+    ]
   },
   "7500243": {
     "damage frames": [
@@ -32643,7 +35312,8 @@
         ]
       }
     ],
-    "name": "Divine Dragon's eyes narrow..."
+    "name": "Divine Dragon's eyes narrow...",
+    "attackInfo": []
   },
   "70160010": {
     "damage frames": [
@@ -32947,7 +35617,14 @@
         ]
       }
     ],
-    "name": "Mighty Impale"
+    "name": "Mighty Impale",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 16
+      }
+    ]
   },
   "70160011": {
     "damage frames": [
@@ -33099,7 +35776,8 @@
         ]
       }
     ],
-    "name": "Defense Level 100"
+    "name": "Defense Level 100",
+    "attackInfo": []
   },
   "70160014": {
     "damage frames": [
@@ -33259,7 +35937,14 @@
         ]
       }
     ],
-    "name": "Ethereal Blaster"
+    "name": "Ethereal Blaster",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 10
+      }
+    ]
   },
   "70160015": {
     "damage frames": [
@@ -33425,7 +36110,14 @@
         ]
       }
     ],
-    "name": "White Esperanza"
+    "name": "White Esperanza",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "70160016": {
     "damage frames": [
@@ -33671,7 +36363,14 @@
         ]
       }
     ],
-    "name": "Burial Shine"
+    "name": "Burial Shine",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 7
+      }
+    ]
   },
   "70160017": {
     "damage frames": [
@@ -33939,7 +36638,14 @@
         ]
       }
     ],
-    "name": "Black Kiss"
+    "name": "Black Kiss",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 8
+      }
+    ]
   },
   "70160019": {
     "damage frames": [
@@ -34105,7 +36811,14 @@
         ]
       }
     ],
-    "name": "Orbital Glow"
+    "name": "Orbital Glow",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "70160021": {
     "damage frames": [
@@ -34257,7 +36970,8 @@
         ]
       }
     ],
-    "name": "Defense Level 100"
+    "name": "Defense Level 100",
+    "attackInfo": []
   },
   "70160024": {
     "damage frames": [
@@ -34417,7 +37131,14 @@
         ]
       }
     ],
-    "name": "Ethereal Blaster"
+    "name": "Ethereal Blaster",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 10
+      }
+    ]
   },
   "70160025": {
     "damage frames": [
@@ -34583,7 +37304,14 @@
         ]
       }
     ],
-    "name": "White Esperanza"
+    "name": "White Esperanza",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "70160026": {
     "damage frames": [
@@ -34829,7 +37557,14 @@
         ]
       }
     ],
-    "name": "Burial Shine"
+    "name": "Burial Shine",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 7
+      }
+    ]
   },
   "70160027": {
     "damage frames": [
@@ -35097,7 +37832,14 @@
         ]
       }
     ],
-    "name": "Black Kiss"
+    "name": "Black Kiss",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 8
+      }
+    ]
   },
   "70160029": {
     "damage frames": [
@@ -35263,7 +38005,14 @@
         ]
       }
     ],
-    "name": "Orbital Glow"
+    "name": "Orbital Glow",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
+    ]
   },
   "70160031": {
     "damage frames": [
@@ -35589,7 +38338,14 @@
         ]
       }
     ],
-    "name": "Flee, cowards! Flee for your lives!"
+    "name": "Flee, cowards! Flee for your lives!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 27
+      }
+    ]
   },
   "70160032": {
     "damage frames": [
@@ -35875,7 +38631,14 @@
         ]
       }
     ],
-    "name": "I assure you fools, only death awaits!"
+    "name": "I assure you fools, only death awaits!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 27
+      }
+    ]
   },
   "70160033": {
     "damage frames": [
@@ -36037,7 +38800,14 @@
         ]
       }
     ],
-    "name": "Bright Anger of Kings"
+    "name": "Bright Anger of Kings",
+    "attackInfo": [
+      {
+        "id": "27",
+        "target": "ST",
+        "hits": 1
+      }
+    ]
   },
   "70160034": {
     "damage frames": [
@@ -36431,7 +39201,14 @@
         ]
       }
     ],
-    "name": "No Obstacle to Fate"
+    "name": "No Obstacle to Fate",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 22
+      }
+    ]
   },
   "70160035": {
     "damage frames": [
@@ -36635,7 +39412,14 @@
         ]
       }
     ],
-    "name": "Sweep The Field"
+    "name": "Sweep The Field",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 27
+      }
+    ]
   },
   "70160036": {
     "damage frames": [
@@ -36787,7 +39571,8 @@
         ]
       }
     ],
-    "name": "EU_Arthur_S6"
+    "name": "EU_Arthur_S6",
+    "attackInfo": []
   },
   "70160037": {
     "damage frames": [
@@ -36949,7 +39734,8 @@
         ]
       }
     ],
-    "name": "You are in my way. Leave."
+    "name": "You are in my way. Leave.",
+    "attackInfo": []
   },
   "70160038": {
     "damage frames": [
@@ -37111,7 +39897,8 @@
         ]
       }
     ],
-    "name": "This is your only warning. Begone."
+    "name": "This is your only warning. Begone.",
+    "attackInfo": []
   },
   "70160039": {
     "damage frames": [
@@ -37273,7 +40060,8 @@
         ]
       }
     ],
-    "name": "Very well then. I will make this quick."
+    "name": "Very well then. I will make this quick.",
+    "attackInfo": []
   },
   "70160040": {
     "damage frames": [
@@ -37435,7 +40223,8 @@
         ]
       }
     ],
-    "name": "Immortal Kingly Aegis"
+    "name": "Immortal Kingly Aegis",
+    "attackInfo": []
   },
   "70160041": {
     "damage frames": [
@@ -37679,7 +40468,14 @@
         ]
       }
     ],
-    "name": "EU_Arthur_S11"
+    "name": "EU_Arthur_S11",
+    "attackInfo": [
+      {
+        "id": "47",
+        "target": "AOE",
+        "hits": 37
+      }
+    ]
   },
   "70160042": {
     "damage frames": [
@@ -37831,7 +40627,8 @@
         ]
       }
     ],
-    "name": "Titan Beast Hunting"
+    "name": "Titan Beast Hunting",
+    "attackInfo": []
   },
   "70160043": {
     "damage frames": [
@@ -37993,7 +40790,14 @@
         ]
       }
     ],
-    "name": "Rage of A Dying Star"
+    "name": "Rage of A Dying Star",
+    "attackInfo": [
+      {
+        "id": "27",
+        "target": "ST",
+        "hits": 1
+      }
+    ]
   },
   "70160044": {
     "damage frames": [
@@ -38165,7 +40969,8 @@
         ]
       }
     ],
-    "name": "EU_Arthur_S14"
+    "name": "EU_Arthur_S14",
+    "attackInfo": []
   },
   "70160045": {
     "damage frames": [
@@ -38337,7 +41142,8 @@
         ]
       }
     ],
-    "name": "EU_Arthur_S15"
+    "name": "EU_Arthur_S15",
+    "attackInfo": []
   },
   "70160046": {
     "damage frames": [
@@ -38509,7 +41315,8 @@
         ]
       }
     ],
-    "name": "EU_Arthur_S16"
+    "name": "EU_Arthur_S16",
+    "attackInfo": []
   },
   "70160047": {
     "damage frames": [
@@ -38835,7 +41642,14 @@
         ]
       }
     ],
-    "name": "Let me show you the error of your ways!"
+    "name": "Let me show you the error of your ways!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 27
+      }
+    ]
   },
   "70160048": {
     "damage frames": [
@@ -39121,7 +41935,14 @@
         ]
       }
     ],
-    "name": "Blade of the Kingslayer"
+    "name": "Blade of the Kingslayer",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 27
+      }
+    ]
   },
   "70160049": {
     "damage frames": [
@@ -39283,7 +42104,14 @@
         ]
       }
     ],
-    "name": "Eviscerating the Weak"
+    "name": "Eviscerating the Weak",
+    "attackInfo": [
+      {
+        "id": "27",
+        "target": "ST",
+        "hits": 1
+      }
+    ]
   },
   "70160050": {
     "damage frames": [
@@ -39635,7 +42463,14 @@
         ]
       }
     ],
-    "name": "Spear of Crimson Destiny"
+    "name": "Spear of Crimson Destiny",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 1
+      }
+    ]
   },
   "70160051": {
     "damage frames": [
@@ -39839,7 +42674,14 @@
         ]
       }
     ],
-    "name": "Die so that I may climb to victory!"
+    "name": "Die so that I may climb to victory!",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 27
+      }
+    ]
   },
   "70160052": {
     "damage frames": [
@@ -39991,7 +42833,8 @@
         ]
       }
     ],
-    "name": "I won't stop! I will claim my destiny!"
+    "name": "I won't stop! I will claim my destiny!",
+    "attackInfo": []
   },
   "70160053": {
     "damage frames": [
@@ -40153,7 +42996,8 @@
         ]
       }
     ],
-    "name": "EU_Lancelot_S7"
+    "name": "EU_Lancelot_S7",
+    "attackInfo": []
   },
   "70160054": {
     "damage frames": [
@@ -40315,7 +43159,8 @@
         ]
       }
     ],
-    "name": "EU_Lancelot_S8"
+    "name": "EU_Lancelot_S8",
+    "attackInfo": []
   },
   "70160055": {
     "damage frames": [
@@ -40477,7 +43322,8 @@
         ]
       }
     ],
-    "name": "EU_Lancelot_S9"
+    "name": "EU_Lancelot_S9",
+    "attackInfo": []
   },
   "70160056": {
     "damage frames": [
@@ -40639,7 +43485,8 @@
         ]
       }
     ],
-    "name": "Nerves of Steel"
+    "name": "Nerves of Steel",
+    "attackInfo": []
   },
   "70160057": {
     "damage frames": [
@@ -40847,7 +43694,14 @@
         ]
       }
     ],
-    "name": "Move, or I will run you over!"
+    "name": "Move, or I will run you over!",
+    "attackInfo": [
+      {
+        "id": "47",
+        "target": "AOE",
+        "hits": 19
+      }
+    ]
   },
   "70160058": {
     "damage frames": [
@@ -40999,7 +43853,8 @@
         ]
       }
     ],
-    "name": "EU_Lancelot_S12"
+    "name": "EU_Lancelot_S12",
+    "attackInfo": []
   },
   "70160059": {
     "damage frames": [
@@ -41169,7 +44024,14 @@
         ]
       }
     ],
-    "name": "Endure Pain"
+    "name": "Endure Pain",
+    "attackInfo": [
+      {
+        "id": "27",
+        "target": "ST",
+        "hits": 5
+      }
+    ]
   },
   "70160060": {
     "damage frames": [
@@ -41341,7 +44203,8 @@
         ]
       }
     ],
-    "name": "Behold! The tenacity of courage!"
+    "name": "Behold! The tenacity of courage!",
+    "attackInfo": []
   },
   "70160061": {
     "damage frames": [
@@ -41513,7 +44376,8 @@
         ]
       }
     ],
-    "name": "Behold! The...nhh..strength of my will!"
+    "name": "Behold! The...nhh..strength of my will!",
+    "attackInfo": []
   },
   "70160062": {
     "damage frames": [
@@ -41685,6 +44549,7 @@
         ]
       }
     ],
-    "name": "B...Behold! My indomitable spirit!"
+    "name": "B...Behold! My indomitable spirit!",
+    "attackInfo": []
   }
 }

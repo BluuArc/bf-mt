@@ -148,6 +148,13 @@
     "name": "フラッシュゲイル",
     "associated_units": [
       "30011"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 4
+      }
     ]
   },
   "30012": {
@@ -311,6 +318,13 @@
     "name": "フラッシュトルネード",
     "associated_units": [
       "30012"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 5
+      }
     ]
   },
   "30013": {
@@ -474,6 +488,13 @@
     "name": "ミストラルレイジ",
     "associated_units": [
       "30013"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 5
+      }
     ]
   },
   "30014": {
@@ -639,6 +660,13 @@
     "name": "エターナルゼファー",
     "associated_units": [
       "30014"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
     ]
   },
   "30015": {
@@ -808,6 +836,13 @@
     "name": "エターナルシンフォニー",
     "associated_units": [
       "30015"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
     ]
   },
   "30016": {
@@ -985,6 +1020,13 @@
     "name": "クラリオスエンヴァー",
     "associated_units": [
       "30016"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 12
+      }
     ]
   },
   "30017": {
@@ -1448,6 +1490,13 @@
     "name": "ミストラルナイト",
     "associated_units": [
       "30017"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 13
+      }
     ]
   },
   "30021": {
@@ -1607,6 +1656,13 @@
     "name": "カルネージスカイ",
     "associated_units": [
       "30021"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 3
+      }
     ]
   },
   "30022": {
@@ -1766,6 +1822,13 @@
     "name": "スペリオルニードル",
     "associated_units": [
       "30022"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 3
+      }
     ]
   },
   "30023": {
@@ -1931,6 +1994,13 @@
     "name": "シューティングスター",
     "associated_units": [
       "30023"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
     ]
   },
   "30024": {
@@ -2100,6 +2170,13 @@
     "name": "スターゲイル",
     "associated_units": [
       "30024"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
     ]
   },
   "30025": {
@@ -2279,6 +2356,13 @@
     "name": "メテオリックガスト",
     "associated_units": [
       "30025"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 13
+      }
     ]
   },
   "30030": {
@@ -2434,6 +2518,13 @@
     "name": "噛みつきウッド",
     "associated_units": [
       "30030"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 1
+      }
     ]
   },
   "30031": {
@@ -2591,6 +2682,13 @@
     "name": "丸かじりウッド",
     "associated_units": [
       "30031"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 2
+      }
     ]
   },
   "30032": {
@@ -2756,6 +2854,13 @@
     "name": "食べ尽くしウッド",
     "associated_units": [
       "30032"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
     ]
   },
   "30040": {
@@ -2921,7 +3026,8 @@
     "name": "大地の水",
     "associated_units": [
       "30040"
-    ]
+    ],
+    "attackInfo": []
   },
   "30041": {
     "damage frames": [
@@ -3086,7 +3192,8 @@
     "name": "アルカナディア",
     "associated_units": [
       "30041"
-    ]
+    ],
+    "attackInfo": []
   },
   "30042": {
     "damage frames": [
@@ -3251,7 +3358,8 @@
     "name": "時空の光",
     "associated_units": [
       "30042"
-    ]
+    ],
+    "attackInfo": []
   },
   "30050": {
     "damage frames": [
@@ -3416,7 +3524,8 @@
     "name": "パワースクリーム",
     "associated_units": [
       "30050"
-    ]
+    ],
+    "attackInfo": []
   },
   "30051": {
     "damage frames": [
@@ -3581,7 +3690,8 @@
     "name": "パワーインテンション",
     "associated_units": [
       "30051"
-    ]
+    ],
+    "attackInfo": []
   },
   "30052": {
     "damage frames": [
@@ -3746,7 +3856,8 @@
     "name": "大地の叫び",
     "associated_units": [
       "30052"
-    ]
+    ],
+    "attackInfo": []
   },
   "30061": {
     "damage frames": [
@@ -3979,6 +4090,13 @@
     "name": "大円斬",
     "associated_units": [
       "30061"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 4
+      }
     ]
   },
   "30062": {
@@ -4224,6 +4342,13 @@
     "name": "戦斧大破斬",
     "associated_units": [
       "30062"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 5
+      }
     ]
   },
   "30063": {
@@ -4471,6 +4596,13 @@
     "name": "鬼王大破月斬",
     "associated_units": [
       "30063"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 6
+      }
     ]
   },
   "30071": {
@@ -4818,7 +4950,8 @@
     "name": "妖精の歌",
     "associated_units": [
       "30071"
-    ]
+    ],
+    "attackInfo": []
   },
   "30072": {
     "damage frames": [
@@ -5165,7 +5298,8 @@
     "name": "安らぎの聖歌",
     "associated_units": [
       "30072"
-    ]
+    ],
+    "attackInfo": []
   },
   "30073": {
     "damage frames": [
@@ -5512,7 +5646,8 @@
     "name": "慈しみの韻律",
     "associated_units": [
       "30073"
-    ]
+    ],
+    "attackInfo": []
   },
   "30081": {
     "damage frames": [
@@ -5661,6 +5796,13 @@
     "name": "アンゲストクシア",
     "associated_units": [
       "30081"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 3
+      }
     ]
   },
   "30082": {
@@ -5814,6 +5956,13 @@
     "name": "グランドストーム",
     "associated_units": [
       "30082"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 5
+      }
     ]
   },
   "30083": {
@@ -5971,6 +6120,13 @@
     "name": "エーテルサーヴァント",
     "associated_units": [
       "30083"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 7
+      }
     ]
   },
   "30092": {
@@ -6146,7 +6302,8 @@
     "name": "マナライトサークル",
     "associated_units": [
       "30092"
-    ]
+    ],
+    "attackInfo": []
   },
   "30093": {
     "damage frames": [
@@ -6321,7 +6478,8 @@
     "name": "エレメンタルウォール",
     "associated_units": [
       "30093"
-    ]
+    ],
+    "attackInfo": []
   },
   "30094": {
     "damage frames": [
@@ -6496,7 +6654,8 @@
     "name": "グランドウォール",
     "associated_units": [
       "30094"
-    ]
+    ],
+    "attackInfo": []
   },
   "30095": {
     "damage frames": [
@@ -6853,7 +7012,8 @@
     "name": "イージスウォール",
     "associated_units": [
       "30095"
-    ]
+    ],
+    "attackInfo": []
   },
   "30102": {
     "damage frames": [
@@ -7018,6 +7178,13 @@
     "name": "わたし、戦います！",
     "associated_units": [
       "30102"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 6
+      }
     ]
   },
   "30103": {
@@ -7187,6 +7354,13 @@
     "name": "私の剣で皆を守ります！",
     "associated_units": [
       "30103"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 8
+      }
     ]
   },
   "30104": {
@@ -7360,6 +7534,13 @@
     "name": "私に任せてください！",
     "associated_units": [
       "30104"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 10
+      }
     ]
   },
   "30105": {
@@ -7549,6 +7730,13 @@
     "name": "この剣にすべてを！",
     "associated_units": [
       "30105"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 18
+      }
     ]
   },
   "30112": {
@@ -7896,7 +8084,8 @@
     "name": "ルーセントパージ",
     "associated_units": [
       "30112"
-    ]
+    ],
+    "attackInfo": []
   },
   "30113": {
     "damage frames": [
@@ -8243,7 +8432,8 @@
     "name": "べネボランスパージ",
     "associated_units": [
       "30113"
-    ]
+    ],
+    "attackInfo": []
   },
   "30114": {
     "damage frames": [
@@ -8590,7 +8780,8 @@
     "name": "ゴッドパージ",
     "associated_units": [
       "30114"
-    ]
+    ],
+    "attackInfo": []
   },
   "30115": {
     "damage frames": [
@@ -8937,7 +9128,8 @@
     "name": "スペクトルパージ",
     "associated_units": [
       "30115"
-    ]
+    ],
+    "attackInfo": []
   },
   "30116": {
     "damage frames": [
@@ -9426,7 +9618,8 @@
     "name": "アウレアパージ",
     "associated_units": [
       "30116"
-    ]
+    ],
+    "attackInfo": []
   },
   "30122": {
     "damage frames": [
@@ -9601,6 +9794,13 @@
     "name": "ゼフォニックブレット",
     "associated_units": [
       "30122"
+    ],
+    "attackInfo": [
+      {
+        "id": "13",
+        "target": "RT",
+        "hits": 10
+      }
     ]
   },
   "30123": {
@@ -9776,6 +9976,13 @@
     "name": "ジェノサイドグリッツ",
     "associated_units": [
       "30123"
+    ],
+    "attackInfo": [
+      {
+        "id": "13",
+        "target": "RT",
+        "hits": 15
+      }
     ]
   },
   "30124": {
@@ -9951,6 +10158,13 @@
     "name": "シャイニングゾーク",
     "associated_units": [
       "30124"
+    ],
+    "attackInfo": [
+      {
+        "id": "13",
+        "target": "RT",
+        "hits": 20
+      }
     ]
   },
   "30125": {
@@ -10126,6 +10340,13 @@
     "name": "デスヴォートブリンガー",
     "associated_units": [
       "30125"
+    ],
+    "attackInfo": [
+      {
+        "id": "13",
+        "target": "RT",
+        "hits": 22
+      }
     ]
   },
   "30130": {
@@ -10264,7 +10485,13 @@
         ]
       }
     ],
-    "name": "スキル樹の妖精"
+    "name": "スキル樹の妖精",
+    "attackInfo": [
+      {
+        "id": "1",
+        "hits": 1
+      }
+    ]
   },
   "30131": {
     "damage frames": [
@@ -10402,7 +10629,13 @@
         ]
       }
     ],
-    "name": "スキル樹の精霊"
+    "name": "スキル樹の精霊",
+    "attackInfo": [
+      {
+        "id": "1",
+        "hits": 1
+      }
+    ]
   },
   "30132": {
     "damage frames": [
@@ -10540,7 +10773,13 @@
         ]
       }
     ],
-    "name": "スキル樹の石像"
+    "name": "スキル樹の石像",
+    "attackInfo": [
+      {
+        "id": "1",
+        "hits": 1
+      }
+    ]
   },
   "30133": {
     "damage frames": [
@@ -10678,7 +10917,13 @@
         ]
       }
     ],
-    "name": "スキル樹の巨神"
+    "name": "スキル樹の巨神",
+    "attackInfo": [
+      {
+        "id": "1",
+        "hits": 1
+      }
+    ]
   },
   "30141": {
     "damage frames": [
@@ -10919,6 +11164,13 @@
     "name": "ティエラナックル",
     "associated_units": [
       "30141"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 3
+      }
     ]
   },
   "30142": {
@@ -11162,6 +11414,13 @@
     "name": "アダマントクラック",
     "associated_units": [
       "30142"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 4
+      }
     ]
   },
   "30143": {
@@ -11407,6 +11666,13 @@
     "name": "グランドカイザー",
     "associated_units": [
       "30143"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 5
+      }
     ]
   },
   "30144": {
@@ -11654,6 +11920,13 @@
     "name": "アティラシェイク",
     "associated_units": [
       "30144"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 6
+      }
     ]
   },
   "30145": {
@@ -11917,6 +12190,13 @@
     "name": "エンプレスゲイザー",
     "associated_units": [
       "30145"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 14
+      }
     ]
   },
   "30152": {
@@ -12164,6 +12444,13 @@
     "name": "ミラージュニードル",
     "associated_units": [
       "30152"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
     ]
   },
   "30153": {
@@ -12413,6 +12700,13 @@
     "name": "ミリオンスラスト",
     "associated_units": [
       "30153"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 7
+      }
     ]
   },
   "30154": {
@@ -12668,6 +12962,13 @@
     "name": "ラスタグラデーション",
     "associated_units": [
       "30154"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
     ]
   },
   "30155": {
@@ -12927,6 +13228,13 @@
     "name": "ノービリスサンシオン",
     "associated_units": [
       "30155"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 12
+      }
     ]
   },
   "30162": {
@@ -13180,6 +13488,13 @@
     "name": "グランドバッシュ",
     "associated_units": [
       "30162"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 4
+      }
     ]
   },
   "30163": {
@@ -13437,6 +13752,13 @@
     "name": "アストロンバッシュ",
     "associated_units": [
       "30163"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 6
+      }
     ]
   },
   "30164": {
@@ -13698,6 +14020,13 @@
     "name": "グランドクロス",
     "associated_units": [
       "30164"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 8
+      }
     ]
   },
   "30165": {
@@ -13965,6 +14294,13 @@
     "name": "グランドゲール",
     "associated_units": [
       "30165"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 11
+      }
     ]
   },
   "30166": {
@@ -14362,6 +14698,13 @@
     "name": "グランドウィーヴ",
     "associated_units": [
       "30166"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 15
+      }
     ]
   },
   "30167": {
@@ -14987,6 +15330,13 @@
     "name": "グランドエントワイン",
     "associated_units": [
       "30167"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 17
+      }
     ]
   },
   "30171": {
@@ -15218,6 +15568,13 @@
     "name": "クラックアックス",
     "associated_units": [
       "30171"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 3
+      }
     ]
   },
   "30172": {
@@ -15463,6 +15820,13 @@
     "name": "バインドホーク",
     "associated_units": [
       "30172"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 5
+      }
     ]
   },
   "30181": {
@@ -15638,7 +16002,8 @@
     "name": "バトルボイス",
     "associated_units": [
       "30181"
-    ]
+    ],
+    "attackInfo": []
   },
   "30182": {
     "damage frames": [
@@ -15813,7 +16178,8 @@
     "name": "闘神のレクイエム",
     "associated_units": [
       "30182"
-    ]
+    ],
+    "attackInfo": []
   },
   "30191": {
     "damage frames": [
@@ -16055,7 +16421,14 @@
         ]
       }
     ],
-    "name": "スキル樹のツボ"
+    "name": "スキル樹のツボ",
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 5
+      }
+    ]
   },
   "30202": {
     "damage frames": [
@@ -16213,7 +16586,13 @@
         ]
       }
     ],
-    "name": "スキル森メタルゴースト"
+    "name": "スキル森メタルゴースト",
+    "attackInfo": [
+      {
+        "id": "1",
+        "hits": 1
+      }
+    ]
   },
   "30203": {
     "damage frames": [
@@ -16371,7 +16750,13 @@
         ]
       }
     ],
-    "name": "スキル森のメタルキング"
+    "name": "スキル森のメタルキング",
+    "attackInfo": [
+      {
+        "id": "1",
+        "hits": 1
+      }
+    ]
   },
   "30204": {
     "damage frames": [
@@ -16529,7 +16914,13 @@
         ]
       }
     ],
-    "name": "スキル森のメタルゴッド"
+    "name": "スキル森のメタルゴッド",
+    "attackInfo": [
+      {
+        "id": "1",
+        "hits": 1
+      }
+    ]
   },
   "30212": {
     "damage frames": [
@@ -16690,6 +17081,13 @@
     "name": "スター・ツインズ",
     "associated_units": [
       "30212"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 4
+      }
     ]
   },
   "30213": {
@@ -16855,6 +17253,13 @@
     "name": "ツインズ・ラジェーション",
     "associated_units": [
       "30213"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
     ]
   },
   "30214": {
@@ -17024,6 +17429,13 @@
     "name": "サザンクロス",
     "associated_units": [
       "30214"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
     ]
   },
   "30215": {
@@ -17197,6 +17609,13 @@
     "name": "ノーザンクロス",
     "associated_units": [
       "30215"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
     ]
   },
   "30222": {
@@ -17432,6 +17851,13 @@
     "name": "ルーンインパクト",
     "associated_units": [
       "30222"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 5
+      }
     ]
   },
   "30223": {
@@ -17671,6 +18097,13 @@
     "name": "ルーンエフェクト",
     "associated_units": [
       "30223"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 7
+      }
     ]
   },
   "30233": {
@@ -17840,6 +18273,13 @@
     "name": "グランドザッパー",
     "associated_units": [
       "30233"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
     ]
   },
   "30234": {
@@ -18013,6 +18453,13 @@
     "name": "ロックハーデス",
     "associated_units": [
       "30234"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
     ]
   },
   "30235": {
@@ -18198,6 +18645,13 @@
     "name": "モルタ・スカイガーデン",
     "associated_units": [
       "30235"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 16
+      }
     ]
   },
   "30236": {
@@ -18571,6 +19025,13 @@
     "name": "アルブ・スカイガーデン",
     "associated_units": [
       "30236"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 18
+      }
     ]
   },
   "30243": {
@@ -18848,6 +19309,13 @@
     "name": "美しき花の世界",
     "associated_units": [
       "30243"
+    ],
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 6
+      }
     ]
   },
   "30244": {
@@ -19131,6 +19599,13 @@
     "name": "母なる大地の鼓動",
     "associated_units": [
       "30244"
+    ],
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 9
+      }
     ]
   },
   "30245": {
@@ -19424,6 +19899,13 @@
     "name": "凄惨なる楽園の息吹",
     "associated_units": [
       "30245"
+    ],
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 14
+      }
     ]
   },
   "30253": {
@@ -19701,7 +20183,8 @@
     "name": "ブラストエンチャント",
     "associated_units": [
       "30253"
-    ]
+    ],
+    "attackInfo": []
   },
   "30254": {
     "damage frames": [
@@ -19978,7 +20461,8 @@
     "name": "ヴァンシエルガード",
     "associated_units": [
       "30254"
-    ]
+    ],
+    "attackInfo": []
   },
   "30255": {
     "damage frames": [
@@ -20255,7 +20739,8 @@
     "name": "テンペストウォール",
     "associated_units": [
       "30255"
-    ]
+    ],
+    "attackInfo": []
   },
   "30261": {
     "damage frames": [
@@ -20496,6 +20981,13 @@
     "name": "カーズウィンド",
     "associated_units": [
       "30261"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 3
+      }
     ]
   },
   "30262": {
@@ -20739,6 +21231,13 @@
     "name": "カーズヴォート",
     "associated_units": [
       "30262"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 4
+      }
     ]
   },
   "30273": {
@@ -20888,6 +21387,13 @@
     "name": "ブラストアンブラー",
     "associated_units": [
       "30273"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 3
+      }
     ]
   },
   "30274": {
@@ -21049,6 +21555,13 @@
     "name": "ビッグバンブラスト",
     "associated_units": [
       "30274"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 9
+      }
     ]
   },
   "30275": {
@@ -21212,6 +21725,13 @@
     "name": "グラビトン・アーム",
     "associated_units": [
       "30275"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
     ]
   },
   "30276": {
@@ -21585,6 +22105,13 @@
     "name": "グラビトン・フォルト",
     "associated_units": [
       "30276"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 13
+      }
     ]
   },
   "30283": {
@@ -21832,6 +22359,13 @@
     "name": "アースストライク",
     "associated_units": [
       "30283"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 1
+      }
     ]
   },
   "30284": {
@@ -22079,6 +22613,13 @@
     "name": "ガイアストライク",
     "associated_units": [
       "30284"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 1
+      }
     ]
   },
   "30285": {
@@ -22328,6 +22869,13 @@
     "name": "カオスストライク",
     "associated_units": [
       "30285"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 2
+      }
     ]
   },
   "30293": {
@@ -22547,6 +23095,13 @@
     "name": "フォースアグネイト",
     "associated_units": [
       "30293"
+    ],
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 8
+      }
     ]
   },
   "30294": {
@@ -22770,6 +23325,13 @@
     "name": "エレメンタルフォール",
     "associated_units": [
       "30294"
+    ],
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 10
+      }
     ]
   },
   "30295": {
@@ -22999,6 +23561,13 @@
     "name": "フラクタルヴェルデ",
     "associated_units": [
       "30295"
+    ],
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 13
+      }
     ]
   },
   "30303": {
@@ -23240,6 +23809,13 @@
     "name": "皆死ね矢",
     "associated_units": [
       "30303"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
     ]
   },
   "30304": {
@@ -23485,6 +24061,13 @@
     "name": "夢想弓",
     "associated_units": [
       "30304"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
     ]
   },
   "30313": {
@@ -23742,6 +24325,13 @@
     "name": "森の力を見せてあげるっ！",
     "associated_units": [
       "30313"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
     ]
   },
   "30314": {
@@ -24003,6 +24593,13 @@
     "name": "これが古の森の力よ！",
     "associated_units": [
       "30314"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
     ]
   },
   "30315": {
@@ -24268,6 +24865,13 @@
     "name": "大地よ私に力を！",
     "associated_units": [
       "30315"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
     ]
   },
   "30316": {
@@ -24549,6 +25153,13 @@
     "name": "大地よ、真の力を解き放て！",
     "associated_units": [
       "30316"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 13
+      }
     ]
   },
   "30324": {
@@ -24707,7 +25318,13 @@
         ]
       }
     ],
-    "name": "樹のクリスタルゴッド"
+    "name": "樹のクリスタルゴッド",
+    "attackInfo": [
+      {
+        "id": "1",
+        "hits": 1
+      }
+    ]
   },
   "30334": {
     "damage frames": [
@@ -24845,7 +25462,13 @@
         ]
       }
     ],
-    "name": "スキル命樹の機神"
+    "name": "スキル命樹の機神",
+    "attackInfo": [
+      {
+        "id": "1",
+        "hits": 1
+      }
+    ]
   },
   "30343": {
     "damage frames": [
@@ -25010,6 +25633,13 @@
     "name": "フォリウムスカイ",
     "associated_units": [
       "30343"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
     ]
   },
   "30344": {
@@ -25177,6 +25807,13 @@
     "name": "グラースケージ",
     "associated_units": [
       "30344"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 7
+      }
     ]
   },
   "30345": {
@@ -25350,6 +25987,13 @@
     "name": "インフィニットリエール",
     "associated_units": [
       "30345"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
     ]
   },
   "30346": {
@@ -25613,6 +26257,13 @@
     "name": "インフィニットライズ",
     "associated_units": [
       "30346"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 14
+      }
     ]
   },
   "30353": {
@@ -25890,6 +26541,13 @@
     "name": "グランドウェーブ",
     "associated_units": [
       "30353"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
     ]
   },
   "30354": {
@@ -26171,6 +26829,13 @@
     "name": "クラックヘイル",
     "associated_units": [
       "30354"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
     ]
   },
   "30355": {
@@ -26458,6 +27123,13 @@
     "name": "テラフラッドマイン",
     "associated_units": [
       "30355"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 11
+      }
     ]
   },
   "30393": {
@@ -26867,7 +27539,8 @@
     "name": "先輩！サポートしますね！",
     "associated_units": [
       "30393"
-    ]
+    ],
+    "attackInfo": []
   },
   "30394": {
     "damage frames": [
@@ -27276,7 +27949,8 @@
     "name": "後方支援は任せてください！",
     "associated_units": [
       "30394"
-    ]
+    ],
+    "attackInfo": []
   },
   "30413": {
     "damage frames": [
@@ -27527,6 +28201,13 @@
     "name": "砲機兵『ゼイナス』",
     "associated_units": [
       "30413"
+    ],
+    "attackInfo": [
+      {
+        "id": "28",
+        "target": "AOE",
+        "hits": 8
+      }
     ]
   },
   "30414": {
@@ -27780,6 +28461,13 @@
     "name": "砲滅機兵『ゼイナス-０５』",
     "associated_units": [
       "30414"
+    ],
+    "attackInfo": [
+      {
+        "id": "28",
+        "target": "AOE",
+        "hits": 9
+      }
     ]
   },
   "30415": {
@@ -28041,6 +28729,13 @@
     "name": "禁魔砲兵『ゼイナス-ＸＸ』",
     "associated_units": [
       "30415"
+    ],
+    "attackInfo": [
+      {
+        "id": "28",
+        "target": "AOE",
+        "hits": 13
+      }
     ]
   },
   "30423": {
@@ -28412,6 +29107,13 @@
     "name": "ブラットコメル",
     "associated_units": [
       "30423"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 7
+      }
     ]
   },
   "30424": {
@@ -28787,6 +29489,13 @@
     "name": "キルアルボル",
     "associated_units": [
       "30424"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 9
+      }
     ]
   },
   "30425": {
@@ -29166,6 +29875,13 @@
     "name": "カノナモムル",
     "associated_units": [
       "30425"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 11
+      }
     ]
   },
   "30432": {
@@ -29304,7 +30020,13 @@
         ]
       }
     ],
-    "name": "癒の幼魔フワール"
+    "name": "癒の幼魔フワール",
+    "attackInfo": [
+      {
+        "id": "1",
+        "hits": 1
+      }
+    ]
   },
   "30443": {
     "damage frames": [
@@ -29557,6 +30279,13 @@
     "name": "バトルスティール",
     "associated_units": [
       "30443"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 9
+      }
     ]
   },
   "30444": {
@@ -29816,6 +30545,13 @@
     "name": "リディングレイジ",
     "associated_units": [
       "30444"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 12
+      }
     ]
   },
   "30445": {
@@ -30079,6 +30815,13 @@
     "name": "コスモグリップ",
     "associated_units": [
       "30445"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 14
+      }
     ]
   },
   "30446": {
@@ -30548,6 +31291,13 @@
     "name": "インヴィジブルグリップ",
     "associated_units": [
       "30446"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 15
+      }
     ]
   },
   "30447": {
@@ -31021,6 +31771,13 @@
     "name": "イラストリアスグリップ",
     "associated_units": [
       "30447"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 17
+      }
     ]
   },
   "30452": {
@@ -31176,6 +31933,13 @@
     "name": "スクラッチストライク",
     "associated_units": [
       "30452"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 6
+      }
     ]
   },
   "30453": {
@@ -31419,6 +32183,13 @@
     "name": "クローストライク",
     "associated_units": [
       "30453"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 9
+      }
     ]
   },
   "30454": {
@@ -31668,6 +32439,13 @@
     "name": "スラッシュストライク",
     "associated_units": [
       "30454"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 12
+      }
     ]
   },
   "30455": {
@@ -32041,6 +32819,13 @@
     "name": "クリティカルストライク",
     "associated_units": [
       "30455"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 13
+      }
     ]
   },
   "30463": {
@@ -32234,6 +33019,13 @@
     "name": "自分の身は自分で守ります！",
     "associated_units": [
       "30463"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 15
+      }
     ]
   },
   "30464": {
@@ -32437,6 +33229,13 @@
     "name": "私の剣技を見せてあげる！",
     "associated_units": [
       "30464"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 20
+      }
     ]
   },
   "30465": {
@@ -32660,6 +33459,13 @@
     "name": "もう誰も傷つけさせない！",
     "associated_units": [
       "30465"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 30
+      }
     ]
   },
   "30473": {
@@ -32937,7 +33743,8 @@
     "name": "霊鳥のさえずり",
     "associated_units": [
       "30473"
-    ]
+    ],
+    "attackInfo": []
   },
   "30474": {
     "damage frames": [
@@ -33214,7 +34021,8 @@
     "name": "森の主の恵み",
     "associated_units": [
       "30474"
-    ]
+    ],
+    "attackInfo": []
   },
   "30475": {
     "damage frames": [
@@ -33491,7 +34299,8 @@
     "name": "大自然の福音",
     "associated_units": [
       "30475"
-    ]
+    ],
+    "attackInfo": []
   },
   "30483": {
     "damage frames": [
@@ -33664,6 +34473,13 @@
     "name": "大車輪投げ",
     "associated_units": [
       "30483"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
     ]
   },
   "30484": {
@@ -34045,6 +34861,13 @@
     "name": "ドリアード",
     "associated_units": [
       "30484"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 12
+      }
     ]
   },
   "30493": {
@@ -34314,6 +35137,13 @@
     "name": "スターライトソング",
     "associated_units": [
       "30493"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 12
+      }
     ]
   },
   "30494": {
@@ -34613,6 +35443,13 @@
     "name": "シャイニングステージ",
     "associated_units": [
       "30494"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 27
+      }
     ]
   },
   "30495": {
@@ -34912,6 +35749,13 @@
     "name": "メロディークラウン",
     "associated_units": [
       "30495"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 27
+      }
     ]
   },
   "30503": {
@@ -35201,6 +36045,13 @@
     "name": "サモンフェアリー",
     "associated_units": [
       "30503"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 7
+      }
     ]
   },
   "30504": {
@@ -35494,6 +36345,13 @@
     "name": "サモンガーディアン",
     "associated_units": [
       "30504"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 9
+      }
     ]
   },
   "30505": {
@@ -35797,6 +36655,13 @@
     "name": "ギガントマキア",
     "associated_units": [
       "30505"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 14
+      }
     ]
   },
   "30513": {
@@ -36058,6 +36923,13 @@
     "name": "ウッドブラスター",
     "associated_units": [
       "30513"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
     ]
   },
   "30514": {
@@ -36325,6 +37197,13 @@
     "name": "ルストブレス",
     "associated_units": [
       "30514"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 11
+      }
     ]
   },
   "30515": {
@@ -36598,6 +37477,13 @@
     "name": "エメラルドボルグ",
     "associated_units": [
       "30515"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 14
+      }
     ]
   },
   "30516": {
@@ -37049,6 +37935,13 @@
     "name": "エメラルドレイジ",
     "associated_units": [
       "30516"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 17
+      }
     ]
   },
   "30517": {
@@ -37816,6 +38709,13 @@
     "name": "エメラルドストレイタム",
     "associated_units": [
       "30517"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 18
+      }
     ]
   },
   "30523": {
@@ -38067,6 +38967,13 @@
     "name": "ヴァラ・シル",
     "associated_units": [
       "30523"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
     ]
   },
   "30524": {
@@ -38324,6 +39231,13 @@
     "name": "エステル・カラド",
     "associated_units": [
       "30524"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 11
+      }
     ]
   },
   "30533": {
@@ -38495,6 +39409,13 @@
     "name": "ルーイナスドライヴ",
     "associated_units": [
       "30533"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 9
+      }
     ]
   },
   "30534": {
@@ -38782,6 +39703,13 @@
     "name": "エンシェントカタストロフィ",
     "associated_units": [
       "30534"
+    ],
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 1
+      }
     ]
   },
   "30535": {
@@ -39049,6 +39977,13 @@
     "name": "ルーイナスドライヴ・極",
     "associated_units": [
       "30535"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 11
+      }
     ]
   },
   "30543": {
@@ -39242,6 +40177,13 @@
     "name": "剣舞・薔薇ノ舞",
     "associated_units": [
       "30543"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 20
+      }
     ]
   },
   "30544": {
@@ -39445,6 +40387,13 @@
     "name": "剣舞・荊棘ノ舞",
     "associated_units": [
       "30544"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 25
+      }
     ]
   },
   "30545": {
@@ -39658,6 +40607,13 @@
     "name": "秘剣舞・繚乱ノ舞",
     "associated_units": [
       "30545"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 30
+      }
     ]
   },
   "30546": {
@@ -39983,6 +40939,13 @@
     "name": "奉剣舞・睡蓮ノ嵐",
     "associated_units": [
       "30546"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 40
+      }
     ]
   },
   "30554": {
@@ -40274,6 +41237,13 @@
     "name": "ローゼ・スピネル",
     "associated_units": [
       "30554"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
     ]
   },
   "30555": {
@@ -40573,6 +41543,13 @@
     "name": "ローゼ・ヴェノム",
     "associated_units": [
       "30555"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 12
+      }
     ]
   },
   "30556": {
@@ -40878,6 +41855,13 @@
     "name": "ローゼ・ナイトメア",
     "associated_units": [
       "30556"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 15
+      }
     ]
   },
   "30564": {
@@ -41101,6 +42085,13 @@
     "name": "四奉剣『クライドル』",
     "associated_units": [
       "30564"
+    ],
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 10
+      }
     ]
   },
   "30565": {
@@ -41330,6 +42321,13 @@
     "name": "四奉晃剣『バスティール』",
     "associated_units": [
       "30565"
+    ],
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 13
+      }
     ]
   },
   "30566": {
@@ -41563,6 +42561,13 @@
     "name": "四皇烈剣『ヴァル・ニルス』",
     "associated_units": [
       "30566"
+    ],
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 15
+      }
     ]
   },
   "30567": {
@@ -42004,6 +43009,13 @@
     "name": "四聖煌剣『ユーノヴェルン』",
     "associated_units": [
       "30567"
+    ],
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 17
+      }
     ]
   },
   "30572": {
@@ -42263,6 +43275,13 @@
     "name": "ドライアンゲスト",
     "associated_units": [
       "30572"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 7
+      }
     ]
   },
   "30573": {
@@ -42526,6 +43545,13 @@
     "name": "クイントアヴァランチ",
     "associated_units": [
       "30573"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 9
+      }
     ]
   },
   "30582": {
@@ -42787,6 +43813,13 @@
     "name": "バオムクリーヴ",
     "associated_units": [
       "30582"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 8
+      }
     ]
   },
   "30583": {
@@ -43052,6 +44085,13 @@
     "name": "アルベロクリーヴ",
     "associated_units": [
       "30583"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 10
+      }
     ]
   },
   "30594": {
@@ -43313,6 +44353,13 @@
     "name": "翠法魔旋",
     "associated_units": [
       "30594"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
     ]
   },
   "30595": {
@@ -43580,6 +44627,13 @@
     "name": "翠蓮操魔旋",
     "associated_units": [
       "30595"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 11
+      }
     ]
   },
   "30596": {
@@ -43853,6 +44907,13 @@
     "name": "滅塊・翠蓮叢魔旋",
     "associated_units": [
       "30596"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 14
+      }
     ]
   },
   "30604": {
@@ -44126,6 +45187,13 @@
     "name": "グリプスブリーズ",
     "associated_units": [
       "30604"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 9
+      }
     ]
   },
   "30605": {
@@ -44405,6 +45473,13 @@
     "name": "グリプスゲイル",
     "associated_units": [
       "30605"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 12
+      }
     ]
   },
   "30606": {
@@ -44690,6 +45765,13 @@
     "name": "グリプステンペスト",
     "associated_units": [
       "30606"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 15
+      }
     ]
   },
   "30607": {
@@ -45305,6 +46387,13 @@
     "name": "グリプスプロケーラ",
     "associated_units": [
       "30607"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 17
+      }
     ]
   },
   "30614": {
@@ -45600,6 +46689,13 @@
     "name": "二刀流『裂風旋』",
     "associated_units": [
       "30614"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
     ]
   },
   "30615": {
@@ -45901,6 +46997,13 @@
     "name": "飄・二刀流『乱裂旋』",
     "associated_units": [
       "30615"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 13
+      }
     ]
   },
   "30616": {
@@ -46206,6 +47309,13 @@
     "name": "飄剱・二刀流『天裂旋』",
     "associated_units": [
       "30616"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 15
+      }
     ]
   },
   "30624": {
@@ -46717,6 +47827,13 @@
     "name": "フェアリーティア",
     "associated_units": [
       "30624"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 11
+      }
     ]
   },
   "30625": {
@@ -47232,6 +48349,13 @@
     "name": "フェアリーブロウ",
     "associated_units": [
       "30625"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 13
+      }
     ]
   },
   "30626": {
@@ -47751,6 +48875,13 @@
     "name": "フェアリーダスト",
     "associated_units": [
       "30626"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 15
+      }
     ]
   },
   "30627": {
@@ -48386,6 +49517,13 @@
     "name": "フェアリーサーガ",
     "associated_units": [
       "30627"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 17
+      }
     ]
   },
   "30634": {
@@ -48771,6 +49909,13 @@
     "name": "ラヴィジ・カーヴ",
     "associated_units": [
       "30634"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 9
+      }
     ]
   },
   "30635": {
@@ -49160,6 +50305,13 @@
     "name": "ラヴィジ・ロード",
     "associated_units": [
       "30635"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 11
+      }
     ]
   },
   "30636": {
@@ -49553,6 +50705,13 @@
     "name": "ラヴィジ・クリーヴ",
     "associated_units": [
       "30636"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 13
+      }
     ]
   },
   "30645": {
@@ -49828,6 +50987,13 @@
     "name": "エスト・ルドス",
     "associated_units": [
       "30645"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
     ]
   },
   "30646": {
@@ -50107,6 +51273,13 @@
     "name": "イノセント・ルドス",
     "associated_units": [
       "30646"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 12
+      }
     ]
   },
   "30654": {
@@ -50366,6 +51539,13 @@
     "name": "にゃにゃ、どうしようかにゃ",
     "associated_units": [
       "30654"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 12
+      }
     ]
   },
   "30655": {
@@ -50633,6 +51813,13 @@
     "name": "ニャー！！",
     "associated_units": [
       "30655"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 16
+      }
     ]
   },
   "30661": {
@@ -50882,6 +52069,13 @@
     "name": "翠裂の鎌",
     "associated_units": [
       "30661"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 7
+      }
     ]
   },
   "30662": {
@@ -51145,6 +52339,13 @@
     "name": "裂鋼の鎌",
     "associated_units": [
       "30662"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 9
+      }
     ]
   },
   "30674": {
@@ -51406,6 +52607,13 @@
     "name": "ヴィーテルガスト",
     "associated_units": [
       "30674"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
     ]
   },
   "30675": {
@@ -51673,6 +52881,13 @@
     "name": "ヴィーテルドライヴ",
     "associated_units": [
       "30675"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 11
+      }
     ]
   },
   "30676": {
@@ -51944,6 +53159,13 @@
     "name": "ヴィーテルブラスト",
     "associated_units": [
       "30676"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 13
+      }
     ]
   },
   "30684": {
@@ -52491,6 +53713,13 @@
     "name": "アストフォール",
     "associated_units": [
       "30684"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 9
+      }
     ]
   },
   "30685": {
@@ -53040,6 +54269,13 @@
     "name": "アストリーヴ",
     "associated_units": [
       "30685"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
     ]
   },
   "30686": {
@@ -53593,6 +54829,13 @@
     "name": "アストレイヤー",
     "associated_units": [
       "30686"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 12
+      }
     ]
   },
   "30694": {
@@ -54160,6 +55403,13 @@
     "name": "ミストラルクラディ",
     "associated_units": [
       "30694"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 9
+      }
     ]
   },
   "30695": {
@@ -54731,6 +55981,13 @@
     "name": "ミストラルサフィーロ",
     "associated_units": [
       "30695"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 11
+      }
     ]
   },
   "30696": {
@@ -55306,6 +56563,13 @@
     "name": "ミストラルジェイド",
     "associated_units": [
       "30696"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 13
+      }
     ]
   },
   "30704": {
@@ -55649,6 +56913,13 @@
     "name": "ディスペルフロー",
     "associated_units": [
       "30704"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
     ]
   },
   "30705": {
@@ -56002,6 +57273,13 @@
     "name": "ディスペルウィリデ",
     "associated_units": [
       "30705"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 13
+      }
     ]
   },
   "30706": {
@@ -56359,6 +57637,13 @@
     "name": "ディスペルヘイズ",
     "associated_units": [
       "30706"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 15
+      }
     ]
   },
   "30714": {
@@ -56820,6 +58105,13 @@
     "name": "翠蛇のタランテラ",
     "associated_units": [
       "30714"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 11
+      }
     ]
   },
   "30715": {
@@ -57285,6 +58577,13 @@
     "name": "翠鋼蛇のアルマンド",
     "associated_units": [
       "30715"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 13
+      }
     ]
   },
   "30716": {
@@ -57754,6 +59053,13 @@
     "name": "狂隷蛇のパスピエ",
     "associated_units": [
       "30716"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 15
+      }
     ]
   },
   "30724": {
@@ -58109,6 +59415,13 @@
     "name": "キャットベル",
     "associated_units": [
       "30724"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 9
+      }
     ]
   },
   "30725": {
@@ -58476,6 +59789,13 @@
     "name": "必殺・ケモノヅメ",
     "associated_units": [
       "30725"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 15
+      }
     ]
   },
   "30734": {
@@ -58869,6 +60189,13 @@
     "name": "ロカブレイク",
     "associated_units": [
       "30734"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
     ]
   },
   "30735": {
@@ -59264,6 +60591,13 @@
     "name": "ロカブラスト",
     "associated_units": [
       "30735"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 9
+      }
     ]
   },
   "30736": {
@@ -59665,6 +60999,13 @@
     "name": "ロカディスラプト",
     "associated_units": [
       "30736"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 12
+      }
     ]
   },
   "30754": {
@@ -60060,6 +61401,13 @@
     "name": "オーディアスロール",
     "associated_units": [
       "30754"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 9
+      }
     ]
   },
   "30755": {
@@ -60461,6 +61809,13 @@
     "name": "オーディアスソアー",
     "associated_units": [
       "30755"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 12
+      }
     ]
   },
   "30756": {
@@ -60868,6 +62223,13 @@
     "name": "オーディアスグライド",
     "associated_units": [
       "30756"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 15
+      }
     ]
   },
   "30764": {
@@ -61143,6 +62505,13 @@
     "name": "ザンマストーン",
     "associated_units": [
       "30764"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
     ]
   },
   "30765": {
@@ -61424,6 +62793,13 @@
     "name": "マハザンダイン",
     "associated_units": [
       "30765"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 13
+      }
     ]
   },
   "30774": {
@@ -62023,6 +63399,13 @@
     "name": "フェリダ・アマディス",
     "associated_units": [
       "30774"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
     ]
   },
   "30775": {
@@ -62626,6 +64009,13 @@
     "name": "フェリダ・エンシェータ",
     "associated_units": [
       "30775"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 12
+      }
     ]
   },
   "30776": {
@@ -63235,6 +64625,13 @@
     "name": "フェリダ・エリフロール",
     "associated_units": [
       "30776"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 15
+      }
     ]
   },
   "30786": {
@@ -63620,6 +65017,13 @@
     "name": "命紡の聖約",
     "associated_units": [
       "30786"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 14
+      }
     ]
   },
   "30787": {
@@ -64047,6 +65451,13 @@
     "name": "命封の聖戟",
     "associated_units": [
       "30787"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 35
+      }
     ]
   },
   "30796": {
@@ -64488,6 +65899,13 @@
     "name": "レム・ベルデ",
     "associated_units": [
       "30796"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 1
+      }
     ]
   },
   "30797": {
@@ -64929,6 +66347,13 @@
     "name": "イール・ベルデ",
     "associated_units": [
       "30797"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 1
+      }
     ]
   },
   "30804": {
@@ -65300,6 +66725,13 @@
     "name": "デス・ヴォイス",
     "associated_units": [
       "30804"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 12
+      }
     ]
   },
   "30816": {
@@ -65927,6 +67359,13 @@
     "name": "クロアスクード",
     "associated_units": [
       "30816"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
     ]
   },
   "30817": {
@@ -66558,6 +67997,13 @@
     "name": "ディネスクード",
     "associated_units": [
       "30817"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
     ]
   },
   "30822": {
@@ -66833,6 +68279,13 @@
     "name": "カルティヴェイター",
     "associated_units": [
       "30822"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 10
+      }
     ]
   },
   "30823": {
@@ -67116,6 +68569,13 @@
     "name": "ルインデソレイター",
     "associated_units": [
       "30823"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 14
+      }
     ]
   },
   "30836": {
@@ -67603,6 +69063,13 @@
     "name": "異騒の冥風",
     "associated_units": [
       "30836"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 9
+      }
     ]
   },
   "30837": {
@@ -68286,7 +69753,8 @@
     "name": "精命の夢風",
     "associated_units": [
       "30837"
-    ]
+    ],
+    "attackInfo": []
   },
   "30846": {
     "damage frames": [
@@ -68861,6 +70329,13 @@
     "name": "ディマイズ",
     "associated_units": [
       "30846"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 12
+      }
     ]
   },
   "30847": {
@@ -69440,6 +70915,13 @@
     "name": "スタークディマイズ",
     "associated_units": [
       "30847"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 14
+      }
     ]
   },
   "30854": {
@@ -69991,7 +71473,8 @@
     "name": "タイムレコード",
     "associated_units": [
       "30854"
-    ]
+    ],
+    "attackInfo": []
   },
   "30855": {
     "damage frames": [
@@ -70542,7 +72025,8 @@
     "name": "タイムリカバリー",
     "associated_units": [
       "30855"
-    ]
+    ],
+    "attackInfo": []
   },
   "30856": {
     "damage frames": [
@@ -71093,7 +72577,8 @@
     "name": "クロノスフィア",
     "associated_units": [
       "30856"
-    ]
+    ],
+    "attackInfo": []
   },
   "30866": {
     "damage frames": [
@@ -71606,6 +73091,13 @@
     "name": "インペリアル・チャージ",
     "associated_units": [
       "30866"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 12
+      }
     ]
   },
   "30867": {
@@ -72127,6 +73619,13 @@
     "name": "インペリアル・ヴァン",
     "associated_units": [
       "30867"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 16
+      }
     ]
   },
   "30876": {
@@ -72748,6 +74247,13 @@
     "name": "旋風裂破",
     "associated_units": [
       "30876"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 30
+      }
     ]
   },
   "30877": {
@@ -73377,6 +74883,13 @@
     "name": "旋風裂界",
     "associated_units": [
       "30877"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 34
+      }
     ]
   },
   "30884": {
@@ -74006,6 +75519,13 @@
     "name": "妖精の賛歌",
     "associated_units": [
       "30884"
+    ],
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 25
+      }
     ]
   },
   "30885": {
@@ -74641,6 +76161,13 @@
     "name": "妖精の聖歌",
     "associated_units": [
       "30885"
+    ],
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 28
+      }
     ]
   },
   "30886": {
@@ -75280,6 +76807,13 @@
     "name": "妖精の鎮魂歌",
     "associated_units": [
       "30886"
+    ],
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 30
+      }
     ]
   },
   "30896": {
@@ -75787,6 +77321,13 @@
     "name": "デフィニション",
     "associated_units": [
       "30896"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 14
+      }
     ]
   },
   "30897": {
@@ -76300,6 +77841,13 @@
     "name": "クルスデフィニション",
     "associated_units": [
       "30897"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 17
+      }
     ]
   },
   "30907": {
@@ -77089,6 +78637,13 @@
     "name": "インフィニティドゥーム",
     "associated_units": [
       "30907"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 18
+      }
     ]
   },
   "30916": {
@@ -77608,6 +79163,13 @@
     "name": "魔孔照射",
     "associated_units": [
       "30916"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 30
+      }
     ]
   },
   "30917": {
@@ -78135,6 +79697,13 @@
     "name": "魔幻焼射",
     "associated_units": [
       "30917"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 34
+      }
     ]
   },
   "30926": {
@@ -78840,6 +80409,13 @@
     "name": "喰獣『マーグ』",
     "associated_units": [
       "30926"
+    ],
+    "attackInfo": [
+      {
+        "id": "14",
+        "target": "AOE",
+        "hits": 12
+      }
     ]
   },
   "30927": {
@@ -79547,6 +81123,13 @@
     "name": "喰獣合態『マーグ＝ヌム』",
     "associated_units": [
       "30927"
+    ],
+    "attackInfo": [
+      {
+        "id": "14",
+        "target": "AOE",
+        "hits": 13
+      }
     ]
   },
   "30932": {
@@ -79740,6 +81323,13 @@
     "name": "ヘヴィアーム",
     "associated_units": [
       "30932"
+    ],
+    "attackInfo": [
+      {
+        "id": "47",
+        "target": "ST",
+        "hits": 5
+      }
     ]
   },
   "30933": {
@@ -79937,6 +81527,13 @@
     "name": "ヘヴィクラスター",
     "associated_units": [
       "30933"
+    ],
+    "attackInfo": [
+      {
+        "id": "47",
+        "target": "ST",
+        "hits": 7
+      }
     ]
   },
   "30946": {
@@ -80618,6 +82215,13 @@
     "name": "妖隷芽",
     "associated_units": [
       "30946"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 14
+      }
     ]
   },
   "30947": {
@@ -81303,6 +82907,13 @@
     "name": "耀麗萌芽",
     "associated_units": [
       "30947"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 16
+      }
     ]
   },
   "30956": {
@@ -81614,6 +83225,13 @@
     "name": "大地崩砕",
     "associated_units": [
       "30956"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 8
+      }
     ]
   },
   "30957": {
@@ -81929,6 +83547,13 @@
     "name": "大塊崩砕",
     "associated_units": [
       "30957"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 10
+      }
     ]
   },
   "30966": {
@@ -82602,6 +84227,13 @@
     "name": "ヴァイナクレイス",
     "associated_units": [
       "30966"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 11
+      }
     ]
   },
   "30967": {
@@ -83281,6 +84913,13 @@
     "name": "アヴニールクレイス",
     "associated_units": [
       "30967"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 14
+      }
     ]
   },
   "30975": {
@@ -83540,6 +85179,13 @@
     "name": "アマゾン・アタック！",
     "associated_units": [
       "30975"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 12
+      }
     ]
   },
   "30986": {
@@ -84075,6 +85721,13 @@
     "name": "ＲＳＮ",
     "associated_units": [
       "30986"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 18
+      }
     ]
   },
   "30987": {
@@ -84618,6 +86271,13 @@
     "name": "ＵＬＭ",
     "associated_units": [
       "30987"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 22
+      }
     ]
   },
   "30996": {
@@ -85387,6 +87047,13 @@
     "name": "アモルエヴァンジル",
     "associated_units": [
       "30996"
+    ],
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 13
+      }
     ]
   },
   "30997": {
@@ -86160,6 +87827,13 @@
     "name": "グロルエヴァンジル",
     "associated_units": [
       "30997"
+    ],
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 15
+      }
     ]
   },
   "31006": {
@@ -86755,6 +88429,13 @@
     "name": "ヴェーダ流正剣『ユラ』",
     "associated_units": [
       "31006"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 12
+      }
     ]
   },
   "31007": {
@@ -87356,6 +89037,13 @@
     "name": "ヴェーダ流正剣『キルガ』",
     "associated_units": [
       "31007"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 15
+      }
     ]
   },
   "31016": {
@@ -87765,6 +89453,13 @@
     "name": "コラプテッドアース",
     "associated_units": [
       "31016"
+    ],
+    "attackInfo": [
+      {
+        "id": "47",
+        "target": "ST",
+        "hits": 16
+      }
     ]
   },
   "31026": {
@@ -88158,6 +89853,13 @@
     "name": "ホーン・オブ・カレッジ",
     "associated_units": [
       "31026"
+    ],
+    "attackInfo": [
+      {
+        "id": "29",
+        "target": "AOE",
+        "hits": 13
+      }
     ]
   },
   "31036": {
@@ -88701,6 +90403,18 @@
     "name": "鋼砕打",
     "associated_units": [
       "31036"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 1
+      },
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 1
+      }
     ]
   },
   "31037": {
@@ -89244,6 +90958,18 @@
     "name": "殲鋼打",
     "associated_units": [
       "31037"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 1
+      },
+      {
+        "id": "1",
+        "target": "ST",
+        "hits": 1
+      }
     ]
   },
   "31046": {
@@ -89761,6 +91487,13 @@
     "name": "独りにして下さい",
     "associated_units": [
       "31046"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 9
+      }
     ]
   },
   "31047": {
@@ -90302,6 +92035,13 @@
     "name": "魚を捕る時に使ってたんです",
     "associated_units": [
       "31047"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 21
+      }
     ]
   },
   "31053": {
@@ -90571,6 +92311,13 @@
     "name": "百岩烈拳",
     "associated_units": [
       "31053"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 12
+      }
     ]
   },
   "31054": {
@@ -90844,6 +92591,13 @@
     "name": "万岩烈拳",
     "associated_units": [
       "31054"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 14
+      }
     ]
   },
   "31055": {
@@ -91121,6 +92875,13 @@
     "name": "巌烈拳",
     "associated_units": [
       "31055"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 16
+      }
     ]
   },
   "31066": {
@@ -91946,7 +93707,8 @@
     "name": "デピュレイション",
     "associated_units": [
       "31066"
-    ]
+    ],
+    "attackInfo": []
   },
   "31067": {
     "damage frames": [
@@ -92771,7 +94533,8 @@
     "name": "ルストレイション",
     "associated_units": [
       "31067"
-    ]
+    ],
+    "attackInfo": []
   },
   "31074": {
     "damage frames": [
@@ -93042,6 +94805,13 @@
     "name": "カレイジャスアドベンチャー",
     "associated_units": [
       "31074"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 13
+      }
     ]
   },
   "31075": {
@@ -93315,6 +95085,13 @@
     "name": "ブレイブジャーニー",
     "associated_units": [
       "31075"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 14
+      }
     ]
   },
   "31076": {
@@ -93682,6 +95459,13 @@
     "name": "シヴァラスアサルト",
     "associated_units": [
       "31076"
+    ],
+    "attackInfo": [
+      {
+        "id": "1",
+        "target": "AOE",
+        "hits": 15
+      }
     ]
   }
 }
