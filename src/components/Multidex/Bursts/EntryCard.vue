@@ -31,19 +31,11 @@
         </v-flex>
       </v-layout>
       <v-layout v-if="entry.attackInfo && entry.attackInfo.length > 0" row wrap>
-        <v-chip
+        <attack-chip
           v-for="(attack, i) in entry.attackInfo"
           :key="i"
-          small
-          outline
-          style="pointer-events: none;"
-          :color="!$vuetify.theme.dark ? 'white' : 'black'"
-        >
-          <v-avatar :class="{ 'grey': true, 'darken-2': !$vuetify.theme.dark, 'lighten-2': $vuetify.theme.dark }">
-            {{ attack.hits }}
-          </v-avatar>
-          {{ attack.target }}
-        </v-chip>
+          :attack="attack"
+        />
       </v-layout>
     </v-container>
   </base-entry-card>
@@ -53,10 +45,12 @@
 import { mapGetters, mapState } from 'vuex';
 import EntryCardMixin from '@/components/Multidex/BaseEntryCardMixin';
 import UnitThumbnail from '@/components/Multidex/Units/UnitThumbnail';
+import AttackChip from './AttackChip';
 
 export default {
   mixins: [EntryCardMixin],
   components: {
+    AttackChip,
     UnitThumbnail,
   },
   computed: {

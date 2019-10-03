@@ -45,7 +45,7 @@
         <v-expansion-panel-content v-for="(d, i) in hitCountData" :key="i">
           <div slot="header">
             <h2 :class="`title ${$vuetify.breakpoint.xsOnly ? '' : 'd-inline'}`">Attack {{ i + 1 }}</h2>
-            <v-chip small>{{ getNumHits(d) }} hit {{ d.target }}</v-chip>
+            <attack-chip :attack="{ hits: getNumHits(d), target: d.target, id: d.id }"/>
             <v-chip small>{{ d.delay }} delay</v-chip>
             <v-chip v-if="hasSelfSpark(d.frames, d.delay)" small>{{ getSelfSparkCount(d.frames, d.delay) }} Self Sparks</v-chip>
             <v-chip small>{{ getTotalDistribution(d.frames)}}% DMG Distribution</v-chip>
@@ -58,7 +58,7 @@
         <v-expansion-panel-content v-for="(d, j) in (extraAttackHitCountData || [])" :key="hitCountData.length + j">
           <div slot="header">
             <h3 :class="`title ${$vuetify.breakpoint.xsOnly ? '' : 'd-inline'}`">Attack {{ hitCountData.length + j + 1 }} - ({{ d.source }})</h3>
-            <v-chip small>{{ getNumHits(d) }} hit {{ d.target }}</v-chip>
+            <attack-chip :attack="{ hits: getNumHits(d), target: d.target, id: d.id }"/>
             <v-chip small>{{ d.delay }} delay</v-chip>
             <v-chip v-if="hasSelfSpark(d.frames, d.delay)" small>{{ getSelfSparkCount(d.frames, d.delay) }} Self Sparks</v-chip>
             <v-chip small>{{ getTotalDistribution(d.frames)}}% DMG Distribution</v-chip>
@@ -98,6 +98,7 @@ import CardTitleWithLink from '@/components/CardTitleWithLink';
 import BuffTable from '@/components/Multidex/BuffTableGrid/MainTable';
 import BuffList from '@/components/Multidex/BuffList/BuffList';
 import HitCountTable from '@/components/Multidex/HitCountTable';
+import AttackChip from './AttackChip';
 import { getExtraAttacks } from '@/modules/core/units';
 import * as burstHelpers from '@/modules/core/bursts';
 
@@ -111,6 +112,7 @@ export default {
     },
   },
   components: {
+    AttackChip,
     DescriptionCardBase,
     CardTitleWithLink,
     BuffTable,

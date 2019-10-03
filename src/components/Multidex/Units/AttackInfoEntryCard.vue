@@ -146,7 +146,7 @@ export default {
   grid-template-columns: auto 1fr auto;
   grid-template-areas:  "name name rarity"
                         "thumbnail attack attack";
-  grid-gap: 0.25em;
+  grid-gap: 0.25em 0.5em;
   height: 100%;
 
   .unit-thumbnail {
