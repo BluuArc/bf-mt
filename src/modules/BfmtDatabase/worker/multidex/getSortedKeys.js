@@ -23,6 +23,9 @@ export function units ({ keys, db, sortOptions }) {
       Alphabetical: (idA, idB) => commonSorts.Alphabetical(idA, idB, (id) => db[id].name),
       Rarity: (idA, idB) => commonSorts.Numerical(idA, idB, (id) => +db[id].rarity),
       Elements: (idA, idB) => commonSorts.Numerical(idA, idB, (id) => elements.indexOf(db[id].element)),
+      'Attack Count on BB': (idA, idB) => commonSorts.Numerical(idA, idB, (id) => (db[id].attackInfo && db[id].attackInfo.bb) ? db[id].attackInfo.bb.length : 0),
+      'Attack Count on SBB': (idA, idB) => commonSorts.Numerical(idA, idB, (id) => (db[id].attackInfo && db[id].attackInfo.sbb) ? db[id].attackInfo.sbb.length : 0),
+      'Attack Count on UBB': (idA, idB) => commonSorts.Numerical(idA, idB, (id) => (db[id].attackInfo && db[id].attackInfo.ubb) ? db[id].attackInfo.ubb.length : 0),
     },
   });
 }
@@ -48,6 +51,7 @@ export function bursts ({ keys, db, sortOptions }) {
     sortTypes: {
       'Burst ID': commonSorts.ID,
       Alphabetical: (idA, idB) => commonSorts.Alphabetical(idA, idB, (id) => db[id].name),
+      'Attack Count': (idA, idB) => commonSorts.Numerical(idA, idB, (id) => db[id].attackInfo ? db[id].attackInfo.length : 0),
     },
   });
 }

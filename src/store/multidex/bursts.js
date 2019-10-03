@@ -12,7 +12,7 @@ export default {
   mutations: createMutations(logger),
   getters: {
     ...createGetters('bursts'),
-    sortTypes: () => ['Burst ID', 'Alphabetical'],
+    sortTypes: () => ['Burst ID', 'Alphabetical', 'Attack Count'],
     filterTypes: () => ['associatedUnits', 'exclusives', 'procs'],
     requiredModules: () => ['bursts', 'units'],
     miniDbFields: () => ['desc', 'id', 'name', 'associated_units', 'attackInfo'],

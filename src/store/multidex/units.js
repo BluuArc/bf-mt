@@ -23,7 +23,7 @@ export default {
         ills_battle: `${baseUrl}/unit_ills_battle_${id}.png`,
       };
     },
-    sortTypes: () => ['Unit ID', 'Guide ID', 'Alphabetical', 'Rarity', 'Element'],
+    sortTypes: () => ['Unit ID', 'Guide ID', 'Alphabetical', 'Rarity', 'Element', 'Attack Count on BB', 'Attack Count on SBB', 'Attack Count on UBB'],
     filterTypes: () => ['elements', 'rarity', 'unitKinds', 'genders', 'exclusives', 'procs', 'passives'],
     requiredModules: () => ['units', 'items', 'missions'],
     miniDbFields: () => ['cost', 'element', 'gender', 'guide_id', 'id', 'name', 'rarity', 'next', 'prev', 'evo_mats', 'kind', 'evo_cost', 'attackInfo'],
