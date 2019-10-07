@@ -15,24 +15,24 @@
           <b v-text="entry.name || entry.id"/>
         </h1>
       </div>
-      <div class="attack-chips-container" :data-nonattacker="!hasAnyBurstAttack">
-        <template v-if="hasAnyBurstAttack">
-          <div v-for="type in burstTypesOnEntry" :key="type" class="attack-chips--burst-entry">
+      <div class="attack-chips-container" :data-nonattacker="!hasAnyAttack">
+        <template v-if="hasAnyAttack">
+          <div v-for="type in attackTypesOnEntry" :key="type" class="attack-chips--burst-entry">
             <span class="attack-chips--name">
-              {{ type.toUpperCase() }}:
+              {{ attackTypeNameMapping[type] }}:
             </span>
             <div class="attack-chips--list">
-              <template v-if="hasBurstAttack(type)">
+              <template v-if="hasAttack(type)">
                 <v-chip
                   v-for="(attack, i) in attackChipsByBurstType[type]"
                   :key="i"
                   small
                   style="pointer-events: none;"
-                  :color="getChipColorConfigForBurstType(attack.burstType).color"
+                  :color="getChipColorConfigForAttackType(attack.burstType).color"
                   text-color="white"
                   outline
                 >
-                  <v-avatar :class="getChipColorConfigForBurstType(attack.burstType).avatarColor">
+                  <v-avatar :class="getChipColorConfigForAttackType(attack.burstType).avatarColor">
                     {{ attack.hits }}
                   </v-avatar>
                   {{ attack.label }}
@@ -65,7 +65,7 @@ import ElementIcon from '@/components/Multidex/ElementIcon';
 import RarityIcon from '@/components/Multidex/RarityIcon';
 import UnitThumbnail from '@/components/Multidex/Units/UnitThumbnail';
 
-const CHIP_COLOR_MAPPING_BY_BURST_TYPE = {
+const CHIP_COLOR_MAPPING_BY_ATTACK_TYPE = {
   bb: {
     color: 'blue-grey',
     avatarColor: 'blue-grey darken-1',
@@ -89,12 +89,18 @@ export default {
   },
   computed: {
     ...mapGetters('units', ['getImageUrls']),
-    BURST_TYPES: () => burstTypes,
-    burstTypesOnEntry () {
-      return burstTypes.filter(t => this.entry.attackInfo[t]);
+    attackTypes: () => ['normal'].concat(burstTypes),
+    attackTypesOnEntry () {
+      return this.attackTypes.filter(t => this.hasAttack(t));
     },
-    hasAnyBurstAttack () {
-      return !!this.entry && burstTypes.some(t => this.hasBurstAttack(t));
+    attackTypeNameMapping: () => Object.freeze({
+      normal: 'ATK',
+      bb: 'BB',
+      sbb: 'SBB',
+      ubb: 'UBB',
+    }),
+    hasAnyAttack () {
+      return !!this.entry && this.attackTypes.some(t => this.hasAttack(t));
     },
     rarity () {
       return this.entry.rarity;
@@ -109,15 +115,31 @@ export default {
         return 48;
       }
     },
+    hasDifferingMoveTypes () {
+      const attackTypes = {};
+      Object.values(this.entry.attackInfo || {}).forEach(attacks => {
+        attacks.forEach(attack => {
+          if (!attackTypes[attack.moveType]) {
+            attackTypes[attack.moveType] = true;
+          }
+        });
+      });
+      return Object.keys(attackTypes).length > 1;
+    },
     attackChipsByBurstType () {
-      const { hasBurstAttack, entry } = this;
-      return burstTypes.reduce((acc, burstType) => {
-        if (hasBurstAttack(burstType)) {
+      const { hasAttack, entry, hasDifferingMoveTypes } = this;
+      return this.attackTypes.reduce((acc, burstType) => {
+        if (hasAttack(burstType)) {
           const attacks = entry.attackInfo[burstType].map(attack => {
             const buffName = (getEffectName({ 'proc id': attack.id }) || '').replace(/ Damage$/, '');
             return {
               hits: attack.hits,
-              label: `${buffName ? `${buffName} ` : ''}${attack.target !== 'RT' ? attack.target : ''}${attack.sourcePath ? ` (${attack.sourcePath})` : ''}`,
+              label: [
+                buffName,
+                (hasDifferingMoveTypes || burstType === 'normal') ? attack.moveType : '',
+                attack.target !== 'RT' ? attack.target : '',
+                attack.sourcePath ? `(${attack.sourcePath})` : '',
+              ].filter(v => v).join(' '),
               burstType,
             };
           });
@@ -130,10 +152,10 @@ export default {
     },
   },
   methods: {
-    getChipColorConfigForBurstType (type) {
-      return CHIP_COLOR_MAPPING_BY_BURST_TYPE[type] || CHIP_COLOR_MAPPING_BY_BURST_TYPE.bb;
+    getChipColorConfigForAttackType (type) {
+      return CHIP_COLOR_MAPPING_BY_ATTACK_TYPE[type] || CHIP_COLOR_MAPPING_BY_ATTACK_TYPE.bb;
     },
-    hasBurstAttack (type) {
+    hasAttack (type) {
       return this.entry.attackInfo &&
         Array.isArray(this.entry.attackInfo[type]) &&
         this.entry.attackInfo[type].length >= 1;

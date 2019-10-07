@@ -10,6 +10,11 @@ const TARGET_AREA_MAPPING = Object.freeze({
   random: 'RT',
 });
 const BURST_TYPES = ['bb', 'sbb', 'ubb'];
+const MOVE_TYPE_MAPPING = Object.freeze({
+  1: 'Moving',
+  2: 'Teleporting',
+  3: 'Non-Moving',
+});
 
 const logger = new CliLogger('DOWNLOADER');
 
@@ -140,6 +145,18 @@ function getExtraAttackFrames (burst) {
 function getAttackInfoForUnit (unit = {}) {
   const attackInfo = {};
   const extraAttackInfo = {};
+
+  if (unit['damage frames']) {
+    attackInfo.normal = [
+      {
+        id: '1',
+        target: 'ST',
+        hits: unit['damage frames'].hits,
+        moveType: unit.movement && MOVE_TYPE_MAPPING[(unit.movement.attack || {})['move type']] || undefined,
+      },
+    ];
+  }
+
   // check BB, SBB, and UBB and add accordingly
   BURST_TYPES.forEach(burstType => {
     if (unit[burstType]) {
@@ -179,6 +196,15 @@ function getAttackInfoForUnit (unit = {}) {
       if (attackInfo[burstType]) {
         const mappedEffects = getAttackingEffectsForEffectsList(allEffects, 'SP', () => extraAttackInfo[burstType]);
         attackInfo[burstType] = attackInfo[burstType].concat(mappedEffects.filter(e => e[burstType]));
+      }
+    });
+  }
+
+  const moveTypeForBursts = unit.movement && MOVE_TYPE_MAPPING[(unit.movement.skill || {})['move type']] || undefined;
+  if (moveTypeForBursts) {
+    BURST_TYPES.forEach(burstType => {
+      if (attackInfo[burstType]) {
+        attackInfo[burstType] = attackInfo[burstType].map(entry => ({ ...entry, moveType: moveTypeForBursts }));
       }
     });
   }
@@ -297,6 +323,9 @@ const handlers = {
         Object.values(info)
           .forEach(unit => {
             unit.attackInfo = getAttackInfoForUnit(unit);
+            if (unit.movement && unit.movement.attack && unit.movement.skill && unit.movement.attack['move type'] !== unit.movement.skill['move type']) {
+              logger.warn(`Movement types for attack and skill don't match for unit ${unit.id}`).done();
+            }
           });
       // TODO: add support for dictionary
 
