@@ -115,6 +115,7 @@
   },
   "10051": {
     "summon": "Dye it red, you say?<br>If it's bloodshed you want,<br>then you have my blade!",
+    "fusion": "How do you like my power now!<br>Impressive, isn't it!!",
     "evolution": "My hat is my pride!<br>Wearing it, I become stronger!",
     "description": "While Goblins act in groups, there are always a few that stand out. These individuals are called Redcaps. They act as leaders, wear red hats, wield brutal weapons and command the other Goblins. One theory suggests they were initially infused with a higher amount of evil, but more research is needed to prove this."
   },
@@ -693,7 +694,7 @@
   "10366": {
     "summon": "He's a strong, kind person.<br>Yet frail and sensitive as well.<br>That's why I love him!",
     "fusion": "I was wrong…<br>Strength is limitless, isn't it? <br>The way you demonstrate that is admirable!",
-    "evolution": "I will accept all of your joy, <br>sadness, regret, rage, and pride. ",
+    "evolution": "I will accept all of your joy, <br>sadness, regret, rage, and pride. <br>Because you are so dear to me.",
     "description": "Her final wish was for the happiness of the one she loved. However, she also understood the tragedy about to unfold. Even so, all she could do was hope. In the end the strength of her love brought about a miracle. The flames that rose from her body devoured everything remaining on the battlefield. Records left by individuals later tell the following of the battle's end: \"Those gentle flames purified the souls of all they touched.\""
   },
   "10373": {
@@ -781,7 +782,9 @@
   },
   "10493": {
     "summon": "Summoning others forth?<br>A skill only the powerless<br>would ever think of.",
-    "evolution": " "
+    "fusion": "I have no interest in you.<br>It would be wise<br>to remove yourself from my presence.",
+    "evolution": " ",
+    "description": "During the war with the gods, the Agni Empire had incredible power that was controlled by the emperor. He is said to have had great confidence in his own abilities, to make traitors pay by his own hand, and to have always ruled his people with a piercing aura of coercion. Because of this, many of his vassals suffered atrophies from hunching in fear, and would sometimes faint in his presence from nervousness. Also, before his crowning, he recruited many knights to serve under the Imperial Guard with under his leadership. It is said that to this day, they were the strongest and most elite knighthood in history."
   },
   "10494": {
     "summon": "Making you happy is easy.<br>Just do as I say.<br>There's no need to think.",
@@ -1111,13 +1114,14 @@
     "description": "Born in the Federation and raised in the Empire, Reda spent her life seeking a place where she truly belonged. Her frequent solitary activities after joining the Akras Summoners' Hall may have been due to an avoidance of close relationships for fear of revealing her marginalization. However, in contrast to her feelings, many in the Summoners' Hall were secretly fond of her. Had she accepted comrades, she likely could have formed a mighty contingent of demon slayers around herself."
   },
   "10721": {
-    "summon": "Grrrrrr!",
-    "fusion": "Grrr! Grrr! ",
+    "summon": "Grrrrrr!<br>*Hiss...*",
+    "fusion": "Grrr! Grrr! <br>Grrr...",
     "description": "A wild animal native to Ishgria. The Carbuncle is quadrupedal when first born, and is closely protected by its parents as it grows. Accordingly, almost all quadrupedal Carbuncles spotted by humans have lost their parents, or have been separated from them. They are generally rough-natured, with vicious personalities. Difficult to tame even before maturity, Carbuncles have been known to attack humans to secure a meal. They can control the flames extending from their haunches like a tail."
   },
   "10722": {
-    "fusion": "Roar! ",
-    "evolution": "*Growl...* ",
+    "summon": "Roooaaarr! <br>You...give...food... <br>I...fight!",
+    "fusion": "Roar! <br>Your...food...is...delicious... <br>Give...more...more!",
+    "evolution": "*Growl...* <br>I...understand... <br>Make...me...stronger!",
     "description": "A wild animal native to Ishgria. After reaching maturity, it becomes bipedal, and the flames extending from its haunches split in two. The crystal on its forehead moves to its chest as well in maturity, but how this shift occurs is not well understood. It grows increasingly territorial, and will mercilessly attack any who enter its terrain. Facing it is not to be taken lightly, as the attacks launched with its newly-developed arms will quickly send anyone flying."
   },
   "10734": {
@@ -1168,7 +1172,8 @@
   "10756": {
     "summon": "My flame was his ceremonial bonfire.<br>It's the only thing I could do<br>after having accomplished nothing.",
     "fusion": "Fire, empower Dandelga!<br>Use your burning power to incinerate<br>the gods who hurt my people!",
-    "evolution": "Making them regret this isn't enough.<br>I will pulverize their souls!<br>And my fire will incinerate the gods!"
+    "evolution": "Making them regret this isn't enough.<br>I will pulverize their souls!<br>And my fire will incinerate the gods!",
+    "description": "A former knight of the Agni Empire. Having recovered his memories, Avant remembered that he had lost all hope in the world after the death of his son. Feeling helpless for having been unable to do anything about it, he cried for three days and three nights before traveling with his blade again. This time his goal would be the new promised land, though once he caught up with the refugees on their way there, he did not actually join them. Instead, he kept an eye on them from afar, single-handedly protecting them from the God Army on their tail."
   },
   "10757": {
     "summon": "There's nothing more to worry about in Agni. Not as long as he's with the knights. So I can travel freely.",
@@ -1898,51 +1903,61 @@
   },
   "20163": {
     "summon": "So you’re the one who saw<br>fit to summon me?<br>Very well. When do we get started?",
+    "fusion": "That’s the stuff!<br>Now I’m even stronger than before!<br>You and me: we’re unstoppable!",
     "evolution": "You’re more capable than I thought.<br>Looks like I misjudged you.<br>Now let’s show the world we mean business!",
     "description": "One of the four legendary warriors who fought to save the Kingdom of Palmyna.<br>As a priest, Dean initially struggled with the idea of fighting against the gods––until he saw the carnage they were wreaking, that is. He used his sway over the frosty elements to freeze his enemies in their tracks. Though often described as a rowdy, somewhat coarse individual, his relentless banter also served as a source of much-needed comic relief among the four warriors."
   },
   "20164": {
     "summon": "Do you see it? The glistening of ice!<br>Watch as my Blizzard Blast<br>freezes everything in sight!",
+    "fusion": "Never underestimate the importance of growing stronger.<br>Not just in body,<br>but in mind, also.",
     "evolution": "Behold my newly evolved strength!<br>Umm... Who are you planning on using<br>it for, exactly?",
     "description": "One of the four legendary warriors who fought to save the Kingdom of Palmyna.<br>By the time he reached the base of the gods’ assault on Palmyna, Dean’s power was already far superior to that of the average god. In the final showdown against the leader of the gods, he used all his magic reserves to freeze the enemy’s movement, creating just enough time for Loch to strike the final blow with his Zeus Bow. Along with the other three warriors, Dean’s eventual fate is shrouded in mystery."
   },
   "20165": {
     "summon": "My ice will show the way.<br>Allow me to search with you<br>for what you so desire!",
+    "fusion": "I once had a partner with<br>who I trained my very soul.<br>Do you have someone like that?",
     "evolution": "My power is reborn.<br>Even power over the gods can't<br>give you what you want.",
     "description": "One of the four legendary warriors who fought to save the Kingdom of Palmyna. After the battle with Cardes, commander of the god army, was over, Dean found himself waking up on a beach in Amdahl. Trying to dig up memories which might explain why he had survived, he felt the power of the girl who had once led him. Then, feeling that she was still holding on to life, he decided to search for her and his other companions. His body then filled with energy, having surpassed his own limits."
   },
   "20171": {
     "summon": "You look delicious!<br>I guess I will follow you!",
+    "fusion": "Wait!<br>I don't want this,<br>I want to eat you!",
     "evolution": " ",
     "description": "A monster that inhabits snowy mountains, it enjoys the taste of human flesh and therefore is considered extremely dangerous to people. It's not easy escaping from beneath its massive claws, and most are simply swallowed up whole. They seem to be aware of their strengths and weaknesses, avoiding those who carry around thunder types. Summoners however often have trouble dealing with them as it's difficult to ascertain their element. "
   },
   "20172": {
     "summon": "My favorite thing is<br>the wisdom of humans!<br>You are wise too, right?",
+    "fusion": "Give me lots more!<br>If you do, I will become<br>more intelligent!",
     "evolution": "Have you seen me?<br>Look at how wonderful<br>my armor is!",
     "description": "A monster that gains all the knowledge held by the people it devours. Its defense is also greatly increased by the armor it wears which was stolen from humans it found in the past. They rarely form large groups, but they do seem to communicate with each other via a means of communication specific to their race which is comprised of gestures and very basic speech. It's even been said that Hrungnirs have formed militant groups to take revenge on humans who have attacked a certain individual's residence. "
   },
   "20181": {
     "summon": "You wish to hire me?<br>The Black Rose isn't cheap,<br>you know?",
+    "fusion": "Hehe, thank you very much.<br>I'll repay your kind investment<br>with ample interest.",
     "evolution": " ",
     "description": "A wicked woman shopkeeper once famous in the La Veda Republic. She was a talented woman who made her way as a peddler, eventually establishing a company in an area which was dominated by monsters. However, those jealous of her success spread nasty rumors that her company was built on deception, and she came to be known by the people as the \"Black Rose.\" To this, it is said she stated, \"If that's how it's going to be, I guess I should live up to my name.\""
   },
   "20182": {
     "summon": "Kneel down before me,<br>the Frozen Rose!<br>That's how I talk on the job.",
+    "fusion": "Of course I remember my<br>days fighting with this whip.<br>Of course I didn't torture anyone!",
     "evolution": "Are you fighting for the<br>betterment of the world?<br>I will do my best to assist you.",
     "description": "A wicked woman shopkeeper once famous in the La Veda Republic. It is said she earned a fortune using her political connections by selling weapons during the war. She had apparently received large amounts of money from many influential people, but little is known other than that. Though many thought she lived a life of luxury, she instead donated all she could to places like orphanages and medical institutions, which would later be be brought to light by historians."
   },
   "20191": {
     "summon": "What's with you?<br>Who said I wanted to be<br>summoned by you anyway!?<br>",
+    "fusion": " ",
     "evolution": " ",
     "description": "A curious creature that lives in a pot which is said to hold a power capable of dramatically changing the properties of water. They're known to speak in a particularly crude manner, though it's rumored that this is only because they're actually shy and simply unable to express themselves otherwise. They show particular resistance when first encountered and great effort is required in capturing them. However, it seems they'll let those to whom they open up to touch the prized horn on their forehead. "
   },
   "20202": {
     "summon": "You want my knowledge?<br>I don't mind giving it to you,<br>but can you use it?",
+    "fusion": " ",
     "evolution": " ",
     "description": "This subspecies of Metal Ghost is said to have changed after having amassed extensive records on the element of water. One must be patient in keeping company with them as they often complain by saying things like \"I like cool places but I hate the cold,\" and \"I don't like my food too hot or too cold.\" The element of water is much stronger in them than in normal Metal Ghosts, and it's said that when fused to other water types they provide loads more experience as well."
   },
   "20203": {
     "summon": "You'd like my power?<br>If you fuse me with someone<br>nice I'll consider it!",
+    "fusion": " ",
     "evolution": "Oh!<br>I guess I've evolved.<br>Look what you can do!",
     "description": "This subspecies of Metal King is said to hold within its large body a huge collection of information on the element of water. Though gender doesn't exist in the metal record species of which Metal Kings are included, it is said that there are many Water Kings which talk and act more feminine than others. It was once said that because of this they were most often encountered by men, though there's been a lot of fuss since it came to light that this may not be so. However, despite this some still believe the rumors."
   },
@@ -2020,7 +2035,7 @@
   },
   "20243": {
     "summon": "Why ally with a human?<br>Don't think you can understand<br>what a goddess is thinking.",
-    "fusion": "That’s the stuff!<br>Now I’m even stronger than before!<br>You and me: we’re unstoppable!",
+    "fusion": "Humans are so pitiful.<br>You're not even aware of<br>your own hypocrisy.",
     "evolution": " ",
     "description": "The second oldest of the Six Sibyl Sisters who fought against the gods in order to save the humans. Full of pride as a sibyl, it's said she always acted in a just manner. Because of this it's said that she viewed those with questionable values as wicked, and was comparatively more negative than her other sisters. At the beginning of the great war she followed her elder sister Sola in saving the humans, but in the midst of that she bore witness to the many evil deeds they were also capable of."
   },
@@ -2605,14 +2620,14 @@
     "description": "A captain of the Sorcerer’s Army from another world guided by the Chain Chronicle. Capable of piercing enemies from great distances with her magic, as well as freezing them with a swing of her blade in a matter of seconds, Yuni excels in every aspect of combat. However, unfamiliar with how to express most human emotions, she has the tendency of acting like she's ready for a fight whenever she carries out any type of order. On the other hand, because she never tires emotionally during battle, she is considered to be the new generation of rational soldier."
   },
   "20661": {
-    "summon": "Caw, caw! ",
-    "fusion": "*Screech* *squawk!* ",
+    "summon": "Caw, caw! <br>*Squawk* *squawk...*",
+    "fusion": "*Screech* *squawk!* <br>Cawwww!",
     "description": "A migratory bird native to Ishgria. It favors waterfront areas, and is able to store enormous amounts of water inside its body. As a result, its body and wings remain wet no matter how long it is in flight. It is said that many desert animals will prioritize hunting this bird on spotting it. It feeds primarily on small animals, but has been known to attack even humans with its razor-sharp claws when hungry."
   },
   "20662": {
-    "summon": "Bawk, bawk! ",
-    "fusion": "Cawww! ",
-    "evolution": "*Hiss!* ",
+    "summon": "Bawk, bawk! <br>Cawww!",
+    "fusion": "Cawww! <br>*Squawk* *squawk!*",
+    "evolution": "*Hiss!* <br>Bawk! Bawk!",
     "description": "A migratory bird native to Ishgria. As time passes, its body and wingspan double, and the bird begins to hunt animals its own size or larger. These birds usually mate for life once they reach maturity, but there are virtually no visible differences between males and females. The foul taste of this bird's meat is often mentioned as one of its unique traits. Only those of profoundly unique tastes or those on the verge of starvation ever attempt to hunt this bird for food."
   },
   "20674": {
@@ -3269,7 +3284,9 @@
   },
   "30115": {
     "summon": "We confirm your strong spirit.<br>We will help pursue your hopes.<br>Let us seek truth for the future.",
-    "evolution": "A world isolated by the gods.<br>Would you like to see into it?<br>If so, let us show you the way."
+    "fusion": "Our power comes not from <br>fighting but from knowledge.<br>What drives you to find power?",
+    "evolution": "A world isolated by the gods.<br>Would you like to see into it?<br>If so, let us show you the way.",
+    "description": "The father of all trees, Eltri, after acquiring the knowledge of countless years came to hold a multitude of personalities. It's thought he separated his personalities so that he could debate between them, increasing the precision of his thinking. There is an unconfirmed theory that states that his multiple personalities reside within his fort-like exterior. It appears that the faces that can be seen on him now represent his main personalities, with all important conversations going through them. "
   },
   "30116": {
     "summon": "What is a world? There is no point<br>to that question, for worlds will<br>keep multiplying regardless.",
@@ -3784,13 +3801,13 @@
     "summon": "I am but a simple thief. Me, betrothed to the Princess of Wind? Where did you hear such rubbish?! I'd sooner hang than fraternize with royalty! ",
     "fusion": "I see it...yes, the light!<br>I knew I could count on you,<br>my trusty partner in crime!",
     "evolution": "As twilight gives way to darkness, the dashing thief Zelnite has arrived to snatch another princess from her cage!",
-    "description": "Deep in the night, as dark shadows blocked out the moonlight, the master thief Zelnite, wrapped in a sparkling cloak, appeared before the imprisoned Princess of the Wind. Zelnite chastised the princess's resignation to sacrificing her life in exchange for the royal family's precious heirloom and stole her off into the night. But, can they uncover the secret powers of the heirloom, and the true identity of the evildoers who seek it? "
+    "description": "Deep in the night, as dark shadows blocked out the moonlight, the master thief Zelnite, wrapped in a sparkling cloak, appeared before the imprisoned Princess of the Wind. Zelnite chastised the princess's resignation to sacrificing her life in exchange for the royal family's precious heirloom and stole her off into the night. But, can they uncover the secret powers of the heirloom, and the true identity of the evildoers who seek it? <br><br>(An excerpt from \"The Adventures of the Chivalrous Thief Zelnite and the Princess of the Wind\")"
   },
   "30447": {
     "summon": "Who am I, you ask?<br>I'm afraid only she may ever know.<br>I swore upon this crest!",
     "fusion": "Seems like there's some treasure here just begging to be stolen!<br>Let's go, partner!!",
     "evolution": "As the stars slumber in the sky,<br>the chivalrous thief Zelnite<br>makes his grand entrance!<br>If you wish to be stolen, please step up!",
-    "description": "Stealing the curse that had been laid upon the Princess of the Wind, Zelnite saved the kingdom in its hour of need. Seeking new treasures, the gallant thief dashed through the moonlit night with his partner at his side. Even as he did, he held his unbreakable bond with the princess close to his heart..."
+    "description": "Stealing the curse that had been laid upon the Princess of the Wind, Zelnite saved the kingdom in its hour of need. Seeking new treasures, the gallant thief dashed through the moonlit night with his partner at his side. Even as he did, he held his unbreakable bond with the princess close to his heart...<br><br>The chivalrous, peerless thief Zelnite, who saved the tragic princess... Where will he strike next? What untold treasures will he capture in the future?!<br><br>(An excerpt from the final chapter of \"The Adventures of the Chivalrous Thief Zelnite!\")"
   },
   "30463": {
     "summon": "Summoner or not, you must<br>address me like a princess.<br>I'm not asking.<br>That was an order.",
@@ -3896,7 +3913,8 @@
   },
   "30533": {
     "summon": "If you interrupted my research for something stupid, you're gonna regret it.",
-    "fusion": "Is that it?<br>You're gonna have to do better than that if you wanna see the fruit of your research!"
+    "fusion": "Is that it?<br>You're gonna have to do better than that if you wanna see the fruit of your research!",
+    "description": "A mage from the world of \"Terca Lumireis,\" who is considered to be one of the brightest minds of a certain Blastia research facility there. Rita cares for nothing except her studies, and never minces her words. She is seldom considerate of those around her, and has quite the short temper. These negative traits make her stand out as a \"weirdo\" even among the strange researchers who work with her. For this very reason, Rita has never had any friends, though she seems not to care. However, rumor has it she won't stand for anyone who gets in the way of her studies."
   },
   "30534": {
     "summon": "I only believe in Blastia.<br>As for you... Well...<br>Hope you don't mind being farther down the ladder.",
@@ -4109,14 +4127,14 @@
     "description": "A warrior from another world guided by the Chain Chronicle. Her lynx-like footing along with her colorful knife allow her to cut through large numbers of enemies, opening a path in their midst in the blink of an eye as they all fall around her. Lindsey is also very skilled in taunting enemies and leading them towards traps, which gives her fighting style a lot of flexibility on the battlefield. Due to her bright personality, she is considered the mascot of the Volunteer Army by her fellow warriors. However, since she never feels nervous or under pressure, the pranks she plays on her beloved comrades never cease, even during the toughest battles."
   },
   "30661": {
-    "summon": "Buzzzz! ",
-    "fusion": "*Click* Buzz!",
+    "summon": "Buzzzz! <br>Are you...my...food? <br>*Click!* *Click!*",
+    "fusion": "*Click* Buzz!<br>Not...enough...yet... <br>Buzz, buzz...",
     "description": "An insect native to Ishgria with a combative and vicious personality. It is omnivorous, and will devour both plants and small animals. It was once thought that this insect had some flight ability due to its feather-like features, but recent research has revealed that it has virtually no abilities of this sort. The features once seen as feathers have been discovered to be part of its sense of touch. Using them, it detects changes in the movement of the air around it to track other creatures."
   },
   "30662": {
-    "summon": "Buzzz!",
-    "fusion": "Buzz, buzz! ",
-    "evolution": "Buzz!",
+    "summon": "Buzzz!<br>Quick...give...prey! <br>*Buzz!*",
+    "fusion": "Buzz, buzz! <br>Give...give more! <br>Buzz... *click!*",
+    "evolution": "Buzz!<br>Power...grew stronger... <br>Not...bad…",
     "description": "An insect native to Ishgria. It grows more vicious and agile in maturity, making it more dangerous, but the increase in its powers of perception is even more marked. The Summoners' Hall urges caution regarding surprise attacks from this insect in particular when entering Ishgria's forests. Owing to its appearance, research is underway regarding connections between this insect and the Valmodora variety that has been sighted in Grand Gaia. However, no clear commonalities have been discovered at this time."
   },
   "30674": {
@@ -4510,7 +4528,9 @@
   },
   "40014": {
     "summon": "Lightning! Rain down on me! <br>Fill me with the numbing <br>power to aid this fool!",
-    "evolution": "Sorry to keep you waiting!<br>Now let my thunder attacks <br>destroy everything!"
+    "fusion": "Wow! I can't be stopped!<br>There's none who can face me!",
+    "evolution": "Sorry to keep you waiting!<br>Now let my thunder attacks <br>destroy everything!",
+    "description": "A warrior from the ruined Atharva Republic. One of the six heroes and said to have fought the gods wielding Thunder Sword Batootha, during the great war with the gods he decimated his enemies with elusive speed and devistating thunder blows despite the ridiculous odds he was up against. The epic tale of him saving Goddess Emilia is still held as a timeless tale."
   },
   "40015": {
     "summon": "My Batootha is pleased!<br>It's happy to be in existence at<br>the same time as me!!",
@@ -5150,7 +5170,9 @@
   },
   "40345": {
     "summon": "I shall use my power for the sake<br>of the one who helped me gain it.<br>Allow me to clear a path for you.",
-    "evolution": "Output has increased greatly.<br>We must handle this with care.<br>I do not wish to harm my friends."
+    "fusion": "Hmph...thanks.<br>Preparations are complete.<br>I'm always here to help.",
+    "evolution": "Output has increased greatly.<br>We must handle this with care.<br>I do not wish to harm my friends.",
+    "description": "A former Guardian who followed the man who went against the gods. His essence as a warrior came from his sculpted physique and his otherworldly abiltiy to create and wield incredibly strong mechanical weapons. Though it's said he never fired on his friends, in order to divert the attention of the Guardians who refused to listen to each other as they continued fighting, he aimed toward the sky and unleashed a torrent of electrified bullets. The thunderous cloud of bullets blew away the dark clouds, leaving a streak of light over the battlefield."
   },
   "40346": {
     "summon": "Not only did I take his life,<br>but her hope too.<br>I couldn't even do anything...",
@@ -5547,14 +5569,14 @@
     "description": "A Holy Knight from another world guided by the Chain Chronicle. The reason why so many knights have pledged themselves to Symphonia is simply because of her unwavering, pure, and charming smile. When she steps on to the battlefield donning her gorgeous armor, her gallant figure makes everything around her shine, curiously healing whatever wounds her comrades may have suffered by enveloping them in her dazzling light. Always executing orders perfectly with the best interest of her knights in mind, Symphonia continues to attain victories one after another."
   },
   "40631": {
-    "summon": "Rooaaarr...",
-    "fusion": "Grr! *snarl...*",
+    "summon": "Rooaaarr...<br>None shall have...<br>...my precious crystal.",
+    "fusion": "Grr! *snarl...*<br>I will crush...<br>...all that stand before me.",
     "description": "A thunder dragon that has swallowed one of the amethysts mined deep in the crystal caverns of Ishgria. Originally a regular thunder dragon that lived in the caverns, it ingested an amethyst after mistaking it for prey. Most of its abdomen was then consumed by the amethyst's magical influence. The amethyst glows brilliantly and beautifully, almost bewitchingly. However, while the thunder dragon gained impressive resilience from it, the evil residing in the crystal caused the dragon to go on rampages in which it attacks both friends and foes alike."
   },
   "40632": {
-    "summon": "Grrr...",
-    "fusion": "*Snarl* Grr...",
-    "evolution": "Grr, rarrr...",
+    "summon": "Grrr...<br>The crystal's power...<br>...is mine.",
+    "fusion": "*Snarl* Grr...<br>I will not...<br>...follow your orders.",
+    "evolution": "Grr, rarrr...<br>Incomprehensible...<br>What is your goal?",
     "description": "A thunder dragon that has swallowed one of the amethysts mined deep in the crystal caverns of Ishgria. It devastates the targets of its attacks with its robust constitution and razor-sharp talons. It also heals most damage immediately as long as the amethyst in its chest is intact. Generally moving in packs, the thunder dragon with the largest amethyst in its chest leads the group. Accordingly, theories contend that the amethysts also determine rank among them. "
   },
   "40644": {
@@ -5650,7 +5672,8 @@
   "40715": {
     "summon": "I can never go against you...<br>Everything shall be as you desire.<br>Please, do not doubt me...",
     "fusion": "You needn't show me any sympathy.<br>It only makes it more painful...<br>No, please forget what I said.",
-    "evolution": "I shall serve you to the best of my ability. Please...don't hesitate to use all of my power."
+    "evolution": "I shall serve you to the best of my ability. Please...don't hesitate to use all of my power.",
+    "description": "Radia's obsession with political authority stemmed from her rejection of the policies of her father, the emperor. Some suppose that her eventual devotion to faithfully following her father's orders was due to feeling a need to prove her loyalty. After her change of heart, she became bitter and spiteful, often quarreling with her siblings. However, some historians theorize that her complete dedication to her father was merely a way to hide her true feelings."
   },
   "40716": {
     "summon": "All people bear some sort of regret in their lives. I have discarded my ideals, and forgotten my feelings...but I shall never regret it!",
@@ -6340,7 +6363,9 @@
   },
   "50202": {
     "summon": "Fusion! Fusion!<br>Hehe! Everyone's happy <br>when I'm used in fusion!",
-    "evolution": " "
+    "fusion": " ",
+    "evolution": " ",
+    "description": "This subspecies of Metal Ghost is said to have changed after having amassed extensive records on the element of light. It is called the most unlucky of the metal record species, and not just because of the amount of knowledge it holds within itself, but also because of the various things that come out of its mouth. The element of light is much stronger in them than in normal Metal Ghosts, and it's said that when fused to other light types they provide loads more experience as well."
   },
   "50203": {
     "summon": "Feel it!<br>The breath of the metal records!<br>This is our power!",
@@ -7068,14 +7093,14 @@
     "description": "A white divine beast native to Ishgria. Having inherited an ancient tablet from its ancestors, it keeps it under close guard to prevent it from being stolen by its natural enemy, the Emgif. It is said that this tablet contains many secret techniques sealed within it, and that whomsoever is fused with it gains the same mysterious abilities. Very rarely spotted in nature, many consider the Elgif to be a good omen when they make an appearance. However, they do disappear when they gift others with the techniques in their tablet. "
   },
   "50801": {
-    "summon": "Hehehe...",
-    "fusion": "A new sacrifice...",
+    "summon": "Hehehe...<br>You...?<br>A despicable human...?",
+    "fusion": "A new sacrifice...<br>New energy...<br>Hehehe...",
     "description": "The spirits of gods whose life force was stolen by humans in Grand Gaia. These spirits would normally ascend to the heavens, but without purification, they have become choked with hatred and found their way to Ishgria. Since their hatred toward humans is extremely strong, they possess any they encounter and steal their spiritual energy. When they possess a useful human, they dominate the subconscious with preternatural fear and lead the human to slay his or her own allies before even noticing the oppression."
   },
   "50802": {
-    "summon": "Human...",
+    "summon": "Human...<br>I will have my revenge on you...",
     "fusion": "This will not suffice...<br>I lack something to complete my soul...",
-    "evolution": "I want to go back...",
+    "evolution": "I want to go back...<br>Just once more, if I can…",
     "description": "The spirits of gods whose life force was stolen by humans in Grand Gaia. Their hatred grows each time they devour a soul, and they have gained immense magical power. While their true form is a glowing, pale blue orb, they will take the form of spirits wandering Ishgria in order to lure in humans. They then gleefully tear apart the helpless human's spirit. Some researchers contend that these are the imperfect manifestations of fallen deities' rage over their unfinished business."
   },
   "50814": {
@@ -7233,7 +7258,8 @@
   "50945": {
     "summon": "As your aide, I shall acquire enough power to protect my people!",
     "fusion": "I shall defeat any opponent who presents itself to help you realize your ambitions!",
-    "evolution": "You can count on my protection.<br>Now let us face our enemy together!"
+    "evolution": "You can count on my protection.<br>Now let us face our enemy together!",
+    "description": "A Samurai who claims to be from the Eastern Kingdom of Mikado located in another world. Flynn's actions marked his place in history, and he came to be known as the savior by many. According to legend, he had enough power to defeat the gods, and was forced to intervene in a battle amongst the divinities themselves. However, only a handful of people know what role he actually played in the war. The only way to learn what really took place is to follow the tracks of a certain young hero."
   },
   "50955": {
     "summon": "I shall be your guiding light.<br>You have nothing to fear when you walk beside me.",
@@ -7571,7 +7597,7 @@
     "summon": "You knew I use a demon blade?<br>Then let me share with you <br>the secret to its power!",
     "fusion": "A katana relies not just on<br>strength but also on spirit.<br>I must train both body and mind!",
     "evolution": "I walk the blood-drenched <br>path of a samurai.<br>Is that alright with you?",
-    "description": "An other-worldly samurai that appeared in the ruined Bariura Empire. He fought in many famous duels with his special katana."
+    "description": "An other-worldly samurai that appeared in the ruined Bariura Empire. He fought in many famous duels with his special katana.<br>Rumors spread around Grand Gaia and many swordsmen challenged him. His beloved katana awakened its true power during those fights. It was a demonic blade that lusted for human blood. Unable to restrain himself, he gave in to its power."
   },
   "60023": {
     "summon": "Souls resting within my blade,<br>My last task will be to<br>fulfil your deepest wish!",
@@ -7701,7 +7727,9 @@
   },
   "60084": {
     "summon": "Summoner of the demon lord,<br>what is it that you desire of me?<br>To rule the world? Or to destroy it?",
-    "evolution": "Are you pleased by the<br>sight of my temporal form?<br>Ha ha, how foolish of you, human."
+    "fusion": "Why should a demon lord<br>grant his power for your sake?<br>Summoners are so arrogant.",
+    "evolution": "Are you pleased by the<br>sight of my temporal form?<br>Ha ha, how foolish of you, human.",
+    "description": "The immortal king of magical beings whose magical powers are beyond those of even Lich. However, to humans this Legion is little more than a shell created according to the legend of the undying Lich, and Legion's true body is said to exist somewhere else. There also exists a forbidden book which foretells that should his true body and soul be reunited, the power born from that would surpass even the gods and the ensuing massacre would be enough to fill the entire world with bodies. "
   },
   "60085": {
     "summon": "If you are unaware, I shall tell you.<br>You have chosen a future<br>full of destruction. Mwa ha ha.",
@@ -7795,7 +7823,9 @@
   },
   "60116": {
     "summon": "I had someone taking care of me...<br>No, I already knew that.<br>I'm sure someone cares for you too...",
-    "evolution": "This may be my last chance.<br>But...that's why I want to fight.<br>And this time, of my own free will!"
+    "fusion": "Argh.. It's okay...<br>It hurts, but I'm fine...<br>I know you have good intentions...",
+    "evolution": "This may be my last chance.<br>But...that's why I want to fight.<br>And this time, of my own free will!",
+    "description": "Having lost her life in battle, Alice continued to dye her sickle with the blood of her enemies while unconscious. This was due to the fact that she had collected a countless amount of souls while cursing the world during her lifetime. However, Alice suddenly recovered her consciousness when amongst the numerous souls in her body, a light spoke softly to her. She had no recollection of what the light was, but she got a familiar feeling from it nevertheless. As tears streamed down her face, she muttered the word \"sister\" to herself, and began to fight for her survival with both darkness and light within her."
   },
   "60117": {
     "summon": "It was definitely thanks to that<br>certain someone that I was able to<br>escape my father's shackles...<br>Elza...",
@@ -8431,7 +8461,9 @@
   },
   "60585": {
     "summon": "My music was meant to bring happiness<br>to this world. I hope you enjoy<br>this next song, Summoner.",
-    "evolution": "Your music has awakened<br>a powerful force within me.<br>My voice will be able to reach everyone now!"
+    "fusion": "When you cheer me on,<br>the rhythm of my heart grows faster.<br>I wonder what that means...",
+    "evolution": "Your music has awakened<br>a powerful force within me.<br>My voice will be able to reach everyone now!",
+    "description": "A songstress who appeared from another world. Luka's special ability to sing in tongues yet unknown to the people of Grand Gaia caused a great stir amongst the masses that caused her fame to skyrocket. During this time she also acquired a special musical instrument used to compliment her voice on stage. It would be this combination which would ultimately cement her position as one of the most adored artists of her time. As her soothing voice echoed throughout the walls of the ancient ruins, a dark and mysterious glow is said to have lit the stage, as if emanating from her."
   },
   "60593": {
     "summon": "You want me to lend a hand?<br>Even when I look like this?<br>Hmph, you're an interesting one.",
@@ -8717,14 +8749,14 @@
     "description": "A black divine beast native to Ishgria. Though very similar to the Elgif, the Emgif are another race of creatures which possess ancient tables of power. However, their empty tablets steal the sealed  techniques within other tablets, turning them into Elgif in the process. Though this outcome may sound like it reduces their numbers greatly, they seem to reproduce at a constant rate regardless. Unfortunately, however, neither the Emgif nor Elgif truly grasp how valuable their tablets truly are."
   },
   "60821": {
-    "summon": "Who...are you?",
-    "fusion": "Hehehe...",
+    "summon": "Who...are you?<br>Are you...<br>...my new owner?",
+    "fusion": "Hehehe...<br>I just need to wait a bit longer to see the outside world...",
     "description": "A tome holding supreme magical power. It was originally a possession belonging to an individual who crossed from Grand Gaia to Ishgria. However, it was touched by evil when its owner lost it, and began to manifest disturbing magical hands from the locations where dark magical secrets were recorded within it. It is said that any seized by the hands will be pulled into the book with merciless strength, and that their health will be drained. Afterwards, their chewed-up remains will be expelled once again."
   },
   "60822": {
-    "summon": "Come here...",
-    "fusion": "Hehehe...",
-    "evolution": "Oh, it's you...",
+    "summon": "Come here...<br>I'll chew you up,<br>down to the last scrap!",
+    "fusion": "Hehehe...<br>More freedom from gaining more energy...",
+    "evolution": "Oh, it's you...<br>Hehehe...<br>I've been looking for you!",
     "description": "A tome holding supreme magical power. It has gained a wide breadth of knowledge from devouring wanderers in Ishgria, thus attaining its present form. There are many mysteries concerning it as a life form, and even which of its multiple eyes are real is not fully understood. It searches for targets to confuse and deceive with a sinister laugh, but also shows concern for its owner. As a result, its innermost thoughts remain difficult to comprehend. "
   },
   "60834": {
@@ -8775,7 +8807,7 @@
   "60874": {
     "summon": "Only my master can control me.<br>Serving my master is my happiness.<br>I am here for my master's sake only.",
     "fusion": "Summoning arts...?<br>You use this power without truly<br>comprehending it, don't you...",
-    "description": "Grybe's attempt to fire his cannon in the air to divert his comrades' attention did not stop them from slaying each other. When the knight of fire attacked his comrades after going mad with rage, Grybe pointed his cannon towards him. He pulled the trigger with great sadness and pierced through the knight of fire's body, only to find out he had also been fatally wounded himself. Grybe then used his last breath to say that the fire knight's lover had protected the knight's pride and life until the very end."
+    "description": "The disciple of a high ranking god. Capable of changing his own body into weapons and armor, Febros served his divine master as a living shield. However, his whereabouts became unknown during the great war against humanity, after which he somehow became unwillingly involved in the Four Fallen Gods' plot. He was actually considered good enough to join their ranks as one of the Fallen Gods' disciples, but refused this offer stating that he would continue waiting for his original master."
   },
   "60875": {
     "summon": "When I was but a tool, I never<br>realized my opponents had feelings.<br>I finally did when...",
@@ -9645,7 +9677,7 @@
     "summon": "We're all right beside each other. We've got our friends close by! Now, there's nothing to fear! Because we're not alone!",
     "fusion": "We are Fairy Tail! We're from the guild that doesn't know when to stop! We won't survive unless we keep running!",
     "evolution": "We fight for those who've suffered! No matter if our opponents are humans, demons, or even gods!",
-    "description": "Biggest problem child and wizard who belongs to wizard's guild Fairy Tail, Natsu Dragneel is a Dragon Slayer whose magic allowed him to be enveloped by fire. Despite his carefree nature, he has proven to be loyal and highly protective of his family and allies. "
+    "description": "Biggest problem child and wizard who belongs to wizard's guild Fairy Tail, Natsu Dragneel is a Dragon Slayer whose magic allowed him to be enveloped by fire. Despite his carefree nature, he has proven to be loyal and highly protective of his family and allies."
   },
   "810557": {
     "summon": "Thanks for summoning me! I will make the exception of listening to you. Do me a favor and keep that dragon away from me though.",
@@ -9723,7 +9755,7 @@
     "summon": "Here and ready for duty, Captain!<br>What's the schedule like today?<br>...Wait a second, who are you?",
     "fusion": "I could go another round!<br>Truth is, I really like marching.<br>Sounds like a beating heart, doesn't it?",
     "evolution": "The trumpets sound,<br>the people sing!<br>Today, we march forward as one!",
-    "description": "Far away in the mysterious world of Paskua lies a great castle whose grandeur evokes the natural beauty of the skies and land. Ruled by a fair and just king, its inhabitants were a peaceful lot that nevertheless built up its own army for self-defense. Though trained for practical purposes, the flashy decorum of its soldiers are a sight to behold, especially when their bold banners and smartly uniformed guard march in the streets during the king's birthday.<br><br>Among these soldiers, one stands out in particular: a young girl among the adults, marching proudly with the king's banner held high. Marianne looks far too young to be in the military, but don't let her appearance fool you—she's an accomplished standard-bearer and a boon to the royal castle guards with her constant vigilance and attentive attitude. Most of the others find her a tad too stuffy, but secretly, Marianne wants to have fun too. Unfortunately, her sense of duty tends to overpower everything else.<br><br>The royal castle guards respond with force only to overt threats, but Marianne's jumpy nature often gets her into trouble. She has thankfully learned to smack with the flat end of her blade after several accidents involving badly-timed pranks in the mess hall. Still, Marianne is energetic, responsible, and mature for her age—the gold standard for new recruits, for better or for worse, and so enjoys the confidence and trust of her superiors."
+    "description": "Far away in the mysterious world of Paskua lies a great castle whose grandeur evokes the natural beauty of the skies and land. Ruled by a fair and just king, its inhabitants were a peaceful lot that nevertheless built up its own army for self-defense. Though trained for practical purposes, the flashy decorum of its soldiers are a sight to behold, especially when their bold banners and smartly uniformed guard march in the streets during the king's birthday.<br><br>Among these soldiers, one stands out in particular: a young girl among the adults, marching proudly with the king's banner held high. Marianne looks far too young to be in the military, but don't let her appearance fool you—she's an accomplished standard-bearer and a boon to the royal castle guards with her constant vigilance and attentive attitude. Most of the others find her a tad too stuffy, but secretly, Marianne wants to have fun too. Unfortunately, her sense of duty tends to overpower everything else.<br><br>The royal castle guards respond with force only to overt threats, but Marianne's jumpy nature often gets her into trouble. She has thankfully learned to smack with the flat end of her blade after several accidents involving badly-timed pranks in the mess hall. Still, Marianne is energetic, responsible, and mature for her age—the gold standard for new recruits, for better or for worse, and so enjoys the confidence and trust of her superiors.<br><br>After a run-in with strange crystal creatures while patrolling the castle grounds, Marianne finds herself in the company of a strange painter and a stranger situation..."
   },
   "810757": {
     "summon": "Hmph. I'll have you know<br>I don't tolerate bumbling fools.<br>Chop chop!",
@@ -10199,13 +10231,13 @@
   "820677": {
     "summon": "VLKR Type-04, designation \"Galene\" reporting.<br>Pending orders.<br>...I...look forward to working with you.",
     "fusion": "Upgrade installed.<br>Functions enhanced.<br>Assistance ackn-...Thank...you.",
-    "description": "Following a successful power struggle, the Corporation gained significant political influence and governmental control over the city. One of their first major projects was to assure the general public that they no longer wished to pursue war, and the city's entire squadron of urban military androids were sent to be \"deactivated.\" "
+    "description": "Following a successful power struggle, the Corporation gained significant political influence and governmental control over the city. One of their first major projects was to assure the general public that they no longer wished to pursue war, and the city's entire squadron of urban military androids were sent to be \"deactivated.\" <br><br>But this is only a half-truth. These androids were equipped with the latest in artificial intelligence, which made them well-suited for taking down humanoid targets and navigating in an urban landscape. When one of the androids visibly expressed the equivalent of human emotion, the Corporation feared that their growing sentience would soon cause them to question orders and incite rebellion. This unit, like the others, had an assigned codename: Galene.<br><br>The androids were sent in batches to the state junkyard to be \"disposed of\", but the general callous attitude toward robots of any kind was simply to disintegrate. No matter how human they pretended to be, an android was just a pile of circuits and wires programmed to respond in certain ways.<br><br>Galene, however, demonstrated more than just passing curiosity in her fate. Her capacity for emotion was astounding, even to herself, and inwardly she feared her imminent demise. While she awaited her turn to be dismantled for reusable parts, she suddenly struck up conversation with a scruffy young man over the only thing that was sufficiently interesting as a topic: his steel prosthetic leg."
   },
   "820678": {
     "summon": "VLKR Type-...My...name is Galene.<br>It feels liberating to have<br>a name to call my own.",
     "fusion": "All systems updated.<br>Ready to go anytime.<br>I feel prepared for anything.",
     "evolution": "This...sensation of...joy.<br>Is this \"emotion?\"<br>...It...feels pleasant. I like it.",
-    "description": "Galene is an urban military android outfitted with the latest in artificial intelligence technology. Their growing sentience had inadvertently caused paranoia in the Corporation, the major governing party of the city, and so their entire squadron was sent to be \"deactivated\" on the pretense of pursuing peace. Galene especially demonstrated an unusual curiosity even among her comrades, and was the main reason for the initiative."
+    "description": "Galene is an urban military android outfitted with the latest in artificial intelligence technology. Their growing sentience had inadvertently caused paranoia in the Corporation, the major governing party of the city, and so their entire squadron was sent to be \"deactivated\" on the pretense of pursuing peace. Galene especially demonstrated an unusual curiosity even among her comrades, and was the main reason for the initiative.<br><br>The young man she struck up an impromptu conversation with was taken aback at her incredibly lifelike mannerism, and over the next few hours, both had momentarily forgotten Galene was awaiting her turn to be dismantled for parts. When the next batch of androids was sent in, Vektor struck her name from the logsheet on a whim, and smuggled her away from the junkyard. <br><br>Over the next few months, Vektor and Galene shared a curious relationship—he regularly performed maintenance as best as he could to military standards, while she continuously explored the \"anomalous signals\" she was unable to logically process. Vektor found himself free-falling in love with the android, and so did Galene develop the same feelings for him—feelings that, like all those other signals, was an enjoyable mystery to her.<br><br>When the Corporation detected Galene's still-active signal, enforcers were sent in to retrieve and completely destroy her within the safety of their facilities. Having rapidly achieved a new dimension of self-awareness, Galene struggled against her captors, and broke out of confinement of her own accord by overriding her protocols.<br><br>For the first time, Galene knew what she wanted: to be free, and that meant to be with Vektor."
   },
   "820687": {
     "summon": "...Hmm?<br>A visitor, and in search of knowledge, no less.<br>How many ages has it been since...?",
@@ -10221,13 +10253,13 @@
   "820717": {
     "summon": "Mm...It's not the right shade of blue...<br>Oh! Excellent timing.<br>Pass me that rag, won't you?",
     "fusion": "I can have this? Really?<br>I have to thank you somehow…",
-    "description": "An introverted painter who lives in a lonely wing of the royal castle in the world of Paskua, Auberi is a rather shy soul with a kind and gentle disposition. Talk to him about painting, however, and watch him bubble over with excitement. Hardly anyone except for a handful of servants knows he's an inhabitant of the castle, but what's even stranger is that the king's only son and heir has not made any public appearances for years ever since the painter mysteriously appeared.<br><br>Auberi's greatest dream is to bring joy to people's lives—although he hasn't much in way of martial prowess or incredible charisma, he uses his talent in art to paint the wonders of life. To accomplish such an abstract goal, pure talent and skill would not suffice; he needed something that could draw out the magic of life itself. Something that could be used as a pigment...<br><br>Rainbows are a common sight in Paskua, but more so in spring due to the latent magical energies in the atmosphere. Like a streak of colorful paint across an azure canvas, they attract strange, otherworldly creatures known as Crystals, whose multicolored bodies reflect the celestial bridges."
+    "description": "An introverted painter who lives in a lonely wing of the royal castle in the world of Paskua, Auberi is a rather shy soul with a kind and gentle disposition. Talk to him about painting, however, and watch him bubble over with excitement. Hardly anyone except for a handful of servants knows he's an inhabitant of the castle, but what's even stranger is that the king's only son and heir has not made any public appearances for years ever since the painter mysteriously appeared.<br><br>Auberi's greatest dream is to bring joy to people's lives—although he hasn't much in way of martial prowess or incredible charisma, he uses his talent in art to paint the wonders of life. To accomplish such an abstract goal, pure talent and skill would not suffice; he needed something that could draw out the magic of life itself. Something that could be used as a pigment...<br><br>Rainbows are a common sight in Paskua, but more so in spring due to the latent magical energies in the atmosphere. Like a streak of colorful paint across an azure canvas, they attract strange, otherworldly creatures known as Crystals, whose multicolored bodies reflect the celestial bridges.<br><br>With his trusty palette in hand, Auberi decided to go in search of the legendary Rainbow Paint, a pigment that can only be made with the minerals of a Crystal's body. However, their mysterious rituals were a trial to decipher, until the appearance of an energetic royal guard and her little mishap sparked an idea in his head. Glancing down at his palette, he suddenly knew what needed to be done..."
   },
   "820718": {
     "summon": "When I finish painting,<br>I'm usually as surprised as anyone else.<br>Life is full of wonder, isn't it?",
     "fusion": "Hehe. You're too nice!<br>Why don't you stay awhile?<br>I'll paint a nice portrait of you.",
     "evolution": "Hmm...That'll do it.<br>My masterpiece is finally complete!<br>It's all thanks to you.",
-    "description": "A gentle, soft-spoken painter from the strange world of Paskua who lives in a lonely wing of a royal castle. Despite his shyness, Auberi is always eager to share his thoughts and feelings on art with kindred souls. Though hardly anyone has seen this elusive painter, his friendship with the royal sorcerer and the fact that several servants regularly attend to him prove he is not just a simple guest.<br><br>Along with Marianne, the dutiful royal guard who first stumbled upon the Crystals, Auberi managed to unravel the mystery of their rituals, culminating in the appearance of the most legendary among them—the fabled Rainbow Crystal. Its wondrous voice was filled with kindness as it encouraged the young painter to pursue his dream of creating art so evocative they moved hearts and touched souls. With its generous blessing and several days' worth of collected material, Auberi was finally able to create enough Rainbow Paint to complete his masterpiece...a portrait of the royal family. Notably, the portrait includes Auberi himself.<br><br>The king's only son, the mysterious prince who had shied away from public appearance for years...was Auberi all along."
+    "description": "A gentle, soft-spoken painter from the strange world of Paskua who lives in a lonely wing of a royal castle. Despite his shyness, Auberi is always eager to share his thoughts and feelings on art with kindred souls. Though hardly anyone has seen this elusive painter, his friendship with the royal sorcerer and the fact that several servants regularly attend to him prove he is not just a simple guest.<br><br>Along with Marianne, the dutiful royal guard who first stumbled upon the Crystals, Auberi managed to unravel the mystery of their rituals, culminating in the appearance of the most legendary among them—the fabled Rainbow Crystal. Its wondrous voice was filled with kindness as it encouraged the young painter to pursue his dream of creating art so evocative they moved hearts and touched souls. With its generous blessing and several days' worth of collected material, Auberi was finally able to create enough Rainbow Paint to complete his masterpiece...a portrait of the royal family. Notably, the portrait includes Auberi himself.<br><br>The king's only son, the mysterious prince who had shied away from public appearance for years...was Auberi all along.<br><br>Recounting all this brings a wistful look to Auberi's eyes. He is grateful to his father for allowing him at least a degree of freedom to pursue his true wish—to paint the joy of life for his people instead of lead them as the future heir to the throne—but what he had truly missed was the warmth of family and kinship. Auberi hopes that his portrait will help the king understand that the gift of joy is as important as pragmatism, and that this is his chosen path in life."
   },
   "820747": {
     "summon": "Heeey~! It's Sennie!<br>Rain or shine I'll be there!<br>Sun is always the best though!",
@@ -10289,7 +10321,9 @@
   },
   "830035": {
     "summon": "Ding ding!~",
-    "evolution": " "
+    "fusion": "Ding ding!~<br>I sound clearer now!",
+    "evolution": " ",
+    "description": "In the mysterious halls of melody, an energetic being echoes loudly as it courses through the corridors singing a cheery and soft tune."
   },
   "830044": {
     "summon": "At last, my soul has been reborn. My deepest gratitude to you, Summoner, for releasing me from these bonds...",
@@ -11298,13 +11332,13 @@
     "description": "When Eva was little, her parents realized that she was different from other children. She wasn't afraid of harsh cold weather and was able to manipulate snow and ice. Being nobles, her parents couldn't afford their status to be questioned as having been attained by witchery and spellcraft. Thus, they brought Eva into the far north and abandoned her in the snowy mountains. For days she wandered in the snow, shivering from hunger. In the night, she materialized an ice dome to shelter herself. The spirits of the frozen mountains were fascinated and sympathized with this special child. They commanded birds to bring Eva berries, and squirrels to bring her nuts. In time, Eva grew up becoming a guardian of the spirits and wildlife of the mountains. She became lonely as time went by, so the spirits materialized from the snow to be her companions."
   },
   "850124": {
-    "summon": "Swoosh... Gzztt... Buzz...",
+    "summon": "Swoosh... Gzztt... Buzz...<br>[Awaiting Command...]",
     "fusion": "Buzzt... Buzt... Whoosh...",
     "evolution": " ",
     "description": "Stormwings are augmented aero machines infused with the extracted souls of Harpies. They were one of the first experimental creations by Gazia in the light of the Augmentation Wars which eventually caused the fall of Athensphere. Their sharp claws and mechanical bodies allow these highly intelligent souls to take more damage and punishment than their original bodies. They can reach hazardous areas or pursue enemies at unmatched speeds, making them a highly lethal opponent on the battlefield."
   },
   "850125": {
-    "summon": "Swoosh... Gzztt... Buzz...",
+    "summon": "Swoosh... Gzztt... Buzz...<br>[Awaiting Command...]",
     "fusion": "Buzzt... Buzt... Whoosh...",
     "evolution": "TURBO UPGRADE COMPLETE.",
     "description": "Stormwings are augmented aero machines infused with the extracted souls of Harpies. They were one of the first experimental creations by Gazia in the light of the Augmentation Wars which eventually caused the fall of Athensphere. Their sharp claws and mechanical bodies allow these highly intelligent souls to take more damage and punishment than their original bodies. They can reach hazardous areas or pursue enemies at unmatched speeds, making them a highly lethal opponent on the battlefield. Created to self-preserve and evolve, Stormwings salvage the battlefields for parts to upgrade themselves in order to improve their abilities and power."
@@ -11635,13 +11669,13 @@
   "850567": {
     "summon": "Alright, is everybunny ready? We've got a lot of sweets to pound today! Summoner, do you want to try some?",
     "fusion": "There's plenty to go around, so take as much as you want! ...Huh? Me? Well, don't mind if I do!",
-    "description": "One of the most important festivals of Aimyhr is the Harvest Festival, celebrated in varying forms and capacities in each region. The legend of the Lunar Maiden originates from the South, and to this day remains the most enduring among the people of N'an Xin, the Great Southern Plateau. It is said that during autumn, a moon fairy descends to earth and walks among the people to partake in revelry. At season's end, she sheds her disguise and returns to the heavens as the celestial Lunar Maiden. She keeps watch over earthly affairs through the eyes of humans who have been charmed by her celestial rabbit companions."
+    "description": "One of the most important festivals of Aimyhr is the Harvest Festival, celebrated in varying forms and capacities in each region. The legend of the Lunar Maiden originates from the South, and to this day remains the most enduring among the people of N'an Xin, the Great Southern Plateau. It is said that during autumn, a moon fairy descends to earth and walks among the people to partake in revelry. At season's end, she sheds her disguise and returns to the heavens as the celestial Lunar Maiden. She keeps watch over earthly affairs through the eyes of humans who have been charmed by her celestial rabbit companions.<br><br>The human guise assumed by this fairy is that of a lively young girl. This child of autumn, named QiuTong in oral traditions, is said to be a familiar sight to the old villages—a testament to generations of seasonal visits. Accompanied by a rabble of rabbits, her joyous laughter and sweet personality evoke thanksgiving cheer. The wooden mallet she carries is used in the creation of traditional Southern sweets eaten during the Harvest Festival. The soft, white treat is a hit with both young and old alike, and its similarity to rabbits has earned the delicacy a nickname: \"bunnytail.\" Its simple ingredients and ease of preparation also make it an essential snack for the hardworking villager during winter."
   },
   "850568": {
     "summon": "Ahh...Summoner, was it you who called upon me? It's been so long since I last walked among the people...",
     "fusion": "Oh! The offerings are sumptuous this year...I am pleased to see it's another bountiful season.",
     "evolution": "So it is that I must return to my celestial perch...but don't worry. I will always be watching over you.",
-    "description": "Near the end of autumn, the people of Aimyhr celebrate with the Harvest Festival to give thanks for a bountiful season and to ask for protection against the coming winter. According to Southern myths, a moon fairy descends to earth and revels among the mortals during this time, then sheds her human guise and returns to the heavens as the celestial Lunar Maiden at festival's end. The Lunar Maiden surveys the earthly realm through the eyes of humans charmed by her celestial rabbits."
+    "description": "Near the end of autumn, the people of Aimyhr celebrate with the Harvest Festival to give thanks for a bountiful season and to ask for protection against the coming winter. According to Southern myths, a moon fairy descends to earth and revels among the mortals during this time, then sheds her human guise and returns to the heavens as the celestial Lunar Maiden at festival's end. The Lunar Maiden surveys the earthly realm through the eyes of humans charmed by her celestial rabbits.<br><br>Although the Lunar Maiden is all-seeing, she is forbidden to intervene in mortal affairs. Legend has it that long ago, when Aimyhr was still a young world, the coalescence of magical energies brought a host of celestials into existence. The Lunar Maiden was the most curious of them, and so descended to earth to live among humans.<br><br>The villagers noticed the moon dimming with each passing year, until it was swallowed by the surrounding darkness one autumn. Plunged into a harsh and early winter, many villagers succumbed to famine and frostbite. The Lunar Maiden realised that by leaving her celestial home, the balance between the two seasons was disrupted. Overwhelmed by guilt and sorrow, she took to the skies, illuminating the heavens once more. She would return to the villages the following autumn as a young girl, teaching them the art of sweet-making and produce-storing, then back to the skies to ease Aimyhr into winter. Under the guidance of the gentle autumn moon, the villagers prospered, and held festivals in gratitude of the Lunar Maiden. This girl was named QiuTong by the villagers, meaning \"autumn red,\" and is mentioned in oral traditions as an alias of this curious, sympathetic celestial."
   },
   "850588": {
     "summon": "Fear not, kid!! I am here!",
@@ -11907,7 +11941,7 @@
     "summon": "Darkness is my ally. I was born in it, molded by it. And I will use it to guard Athensphere until the end of time.",
     "fusion": "Is that all? You waste my time with trifles.",
     "evolution": "There are few that I call friends. Time will tell if you are one of them.",
-    "description": "In the hidden dark of Athensphere, Hadaron kept an unceasing watch for jealous adversaries seeking to trespass. Together with the mechanical defenses set up by Gazia, no demon ever succeeded in gaining the city of the demigods. With his betrayal, Gazia's weapons turned its sights upon Hadaron and the unsuspecting city, achieving total surprise and havoc. Yet Hadaron was able to recover quickly and disable the Mad Heretic's weapons, slowing the expeditious annihilation of Athensphere."
+    "description": "In the hidden dark of Athensphere, Hadaron kept an unceasing watch for jealous adversaries seeking to trespass. Together with the mechanical defenses set up by Gazia, no demon ever succeeded in gaining the city of the demigods. With his betrayal, Gazia's weapons turned its sights upon Hadaron and the unsuspecting city, achieving total surprise and havoc. Yet Hadaron was able to recover quickly and disable the Mad Heretic's weapons, slowing the expeditious annihilation of Athensphere.<br>Records retrieved from the mysterious land that came through the Void Rift illuminated much about the elusive demigod of darkness. Hadaron was appointed by the Lord of Athensphere for the thankless task of guarding Athensphere's underworld. Zedus believed Hadaron to be the only demigod capable of withstanding the dark forces constantly assailing the city without succumbing to its corruption. Over time, Hadaron grew familiar with the dark, and was able to employ its powers effectively, even against darkness itself. As he policed the borders with effectiveness, the shadowy denizens of the underworld came to greatly respect Hadaron and his greataxe Kronax, both for his strength and his propensity towards strict but fair rules. Outwardly, Hadaron became brooding and intimidating to many of his fellow demigods who did not understand him or the source of his new powers. Hadaron did not mind the distance nor the rumors that he had indeed been corrupted, preferring to have only a few close friends, people that he could call blood brothers."
   },
   "860156": {
     "summon": "My, my… what do we have here?<br>What a charming face you have.<br>Come here, darling… I promise, I don’t bite… ",
@@ -12100,7 +12134,7 @@
     "description": "In order to become a knight, one must be of noble birth and pledge their allegiance to the kingdom. These \"knights\" of the uppercrust are often a little more than ruffians, picking on the peasant folk at their own pleasure. And then there are the \"onion knights\";  they were noble not of birth but in deeds. These \"onion knights\" were recognized by the kingdom for their valiance and sacrifice in mankind's greatest times of need. They were revered and honored by the peasant folk, but scorned by the highborn. The man known as Galtier was one such onion knight. Born the son of a farmer, Galtier proved his worth as a mighty warrior by slaying a powerful demon wolf that lived in the dark woods. Thus Galtier was handsomely rewarded with his very own land, manor and title. Having tasted the power and wealth he never had in his entire life, Galtier desired for more. He commissioned a master blacksmith to forge him a weapon unlike any other, using the fangs of the demon wolf he slew. After the weapon was forged, Galtier struck down the very smith who forged the weapon, along with his helpless daughter. He could not risk having anyone come into possession of a weapon more powerful than his. He alone would be the hero of the people. Little did he know of the fate that awaited him--that the innocent daughter of the blacksmith he slew would return with far more power than he had, and claim the vengeance that she was due.  "
   },
   "860428": {
-    "summon": "I...am a hero...<br>The one...and only...savior!<br>Honor me...worship me...<br>Fear me...",
+    "summon": "I...am a hero...<br>The one...and only...savior!<br>Honor me...worship me...<br>Fear me…",
     "fusion": "What is mine...is mine...<br>What is yours...will be mine...<br>That is...only inevitable...",
     "evolution": "For the sacrifices...I've made...<br>For all I've done...for the people...<br>I will claim...my dues...",
     "description": "The knight once known as Galtier gave in to his greed for the power and riches that would be bestowed upon the one who would become the hero of the kingdom. His greed would lead to his eventual downfall, as the spirit of the demon wolf Galtier supposedly slew lived on within it's fangs. Once the tainted scythe was forged, the demon was finally able to take over the darkness within Galtier's own soul. Turning his blade upon the people he once swore to protect, Galtier thus began his descent into madness and chaos. Were it not for the power of the ancient wisp Jack and the young girl who prevented the fallen knight's reign of terror, the man once known as Galtier would have become a living husk for the demon that consumed him from within. No longer would the onion knight fight in the name of his kingdom. The demon that was once known as Galtier would eventually bring about the downfall of the kingdom, pillaging the lands to feed his greed. The fact that the despoiler continued to live would inadvertently twist the fate of yet another innocent life. The girl who would become the guardian of the woods would fall into darkness herself, becoming yet another powerful being of darkness. These two beings of immense power then would have inevitably met, and the aftermath of their encounter would have no doubt become a nightmare for generations to come. "
@@ -12153,7 +12187,7 @@
     "summon": "The doctor is in. Have a seat. What brings you here today?<br>Tell me, my friend...tell me where it hurts.",
     "fusion": "Hmm...I believe I can put this to good use.<br>As for the side effects...well...<br>we'll just have to see, won't we?",
     "evolution": "Splendid! This is quite the breakthrough!<br>I expect resistance,<br>but given time, they'll learn. Hahaha…",
-    "description": "Gentlemanly yet socially reserved, Theodor graduated at the top of his class and went on to open a small medical practice alongside his partner and nurse, Florence. The pair had met during their studies, and he was drawn to her charming optimism and shared passion for patient care.<br><br>"
+    "description": "Gentlemanly yet socially reserved, Theodor graduated at the top of his class and went on to open a small medical practice alongside his partner and nurse, Florence. The pair had met during their studies, and he was drawn to her charming optimism and shared passion for patient care.<br><br>Though merely a fledgling in his career, Theodor soon faced his greatest challenge: an outbreak of a deadly plague. As hundreds succumbed to the virulent disease, doctors scrambled to find a cure for this wasting sickness. Those afflicted grew sallow, moaned terribly, and occasionally had violent spasms.<br><br>After many long and sleepless nights in his study, Theodor concocted what he believed to be an immunization against the disease's worst effects. However, the general public had begun to see doctors as harbingers of death; many supposed \"cures\" had instead killed patients outright. To his surprise, Florence offered to be his test subject.<br><br>As his beloved partner waited for the drug to be administered, waves of fear rippled through Theodor. Whatever happens, Florence assured him, she would bear its full consequences. This was a sacrifice for the future of medicine, so that no one should have to suffer.<br><br>These words continue to reverberate in his mind, as even now, the beak-masked doctor works tirelessly to undo the terrible price Florence paid for his failure. Though the plague and its victims had long since passed, he could never forget how he sent his only love to a torturous undeath."
   },
   "860577": {
     "summon": "And you say this enhances my \"functions\"?<br>I suppose these electric things have their lives as well.",
@@ -12221,6 +12255,17 @@
     "fusion": "More! More! I want more of the cute ones!<br><br><br>Now now, let's be fair. We agreed they must come in pairs.",
     "evolution": "Paradise? Aren't we already in it?<br><br>Silly girl, there's always a paradise beyond paradise.",
     "description": "Much as how fate brings together man and beast, so does a higher power see to their separation - not from each other, but from life. Reapers said to pass judgment to those on the battlefield, the twins Illucen and Illumina sought out worthy warriors who opposed death in the war wrought by a scheming girl and her raven. Loving both man and animal, the twins took on the best of both forms, recognizable and familiar to their charges. The twins would grace the chosen slain with their presence, much like the ferriers who guide lost souls seeking solace in everlasting paradise—except it is but an illusion. Brave warriors and their beast companions who fall to their judgment find only eternal imprisonment within the dark realms of the twins. For this reason, they are known as the \"Butterflies of Illusion.\""
+  },
+  "860687": {
+    "summon": "Well! Here to join this riotous occasion, hmm?<br>I admire your enthusiasm.<br>Then come—frolic in the fire with me!",
+    "fusion": "Hmhm...Aren't you sweet?<br>Come here. Closer...<br>...And feed my little darling here.",
+    "description": "Chaotic, volatile, and an incorrigible trickster—all these and more have been used to describe Set, the goddess of deserts, storms, and trickery. The younger sister of Osiris, patron of the earth's abundance, Set was as fickle as her brother was stoic. Among their many conflicts, one would change the face of the pantheon forever.<br><br>The red soil of Urzyma was barren and dry, in contrast with the fertile black soil upon which the first humans built their civilizations. Osiris and his wife Aesys watched over them, cementing their status as symbols of nature, and left the scorching desert sands to Set. Unhappy with this arrangement, Set confronted Osiris, but his cold remark about her inability to govern the land she was given cut deep into her pride. In a fit of envious rage, Set mangled Osiris with her threads of darkness, leaving his body strewn along the riverbanks. It was said that on that day, her Sha—her totemic animal—howled the first storm into existence.<br><br>Though Osiris would subsequently be reborn as the Lord of the netherworld Duat thanks to his wife's devotion, Set did not show up for his ceremony, and over the years slowly withdrew her attendance from their court. Shunned by her divine brethren, Set chose to slink through the lands of her undying brother instead, garnering widespread yet clandestine worship from those who skulk in the darkness as she does.<br><br>As the patron of rogues, thieves, and assassins, worship of Set is generally frowned upon, but scribes—especially those of Thoth—advise their kings to be tolerant of her cult according to an ancient adage: there can be no Light without Darkness."
+  },
+  "860688": {
+    "summon": "They've never looked upon me with favor<br>as they do my brother.<br>...Yet, was it not I who gave the Lord of Life his throne...?",
+    "fusion": "You've been so well-mannered.<br>I think you deserve something good...<br>Oh, look at you. What were you thinking about, hmm?",
+    "evolution": "Fools—the lot of them.<br>In Chaos will a new Order be born,<br>as Order begets Chaos...",
+    "description": "Set, the chaotic goddess of deserts, storms, and trickery, is notorious among the Urzyma pantheon for her greatest crime—the murder of her own brother, Osiris, over rulership of the ancient lands. While this allowed his subsequent rebirth as the ruler of the netherworld Duat, Set was shunned as an outcast by the rest of her brethren, itinerant forevermore.<br><br>Only Thoth, the goddess of knowledge, remains impartial to the entire affair—for reality, even for gods, is never black and white. In several of her scribes' inscriptions dismissed (and later, destroyed) by Osiris' Priests of Silence as blasphemy, the vagabond followers of Set's benighted path attest that the Lord of Life's murder in the physical realm was necessary. Without an immortal figure to watch over the passing of mortal souls, the underworld would be a lawless realm, fit to one day overturn the Balance of the world. Chaos, while an inherently dark and destructive force, served as a counterbalance—the Shadow of the Sun.<br><br>When the marked mortal known as the God-King rose to infamy, several of the gods assumed treachery on her part. Suspicion deepened as the Deceiver herself vanished from court, and it was only Thoth's intervention and the relative silence of Ptah that prevented the pantheon from mounting a god-hunt.<br><br>Few, however, know of Set's ultimate role in this spiral of darkness. Where even the Architect obeyed Order without question, Set dared to challenge the wheels of fate herself.<br><br>Indeed, there may be a seed of truth in the inscriptions the Priests of Silence refused to acknowledge: that Set, for all her capriciousness, had bestowed upon mortals that most human of traits—defiance."
   },
   "860708": {
     "summon": "You desire a death...Very well.<br>Who is it, then?<br>Whose head is fated to be on the block?",
