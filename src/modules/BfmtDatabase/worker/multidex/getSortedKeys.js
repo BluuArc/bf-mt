@@ -13,6 +13,17 @@ function sortWrapper ({ keys = [], sortOptions = {}, sortTypes = {}}) {
   });
 }
 
+const getHitCountInfoForAttackInfoEntry = (entry) => {
+  let hitCounts = 0;
+  if (Array.isArray(entry)) {
+    hitCounts = entry.reduce((acc, val) => {
+      return acc + (+val.hits * (val.target === 'AOE' ? 6 : 1));
+    }, 0);
+  }
+  return hitCounts;
+};
+const getAttackCountForAttackInfoEntry = (entry) => Array.isArray(entry) ? entry.length : 0;
+
 export function units ({ keys, db, sortOptions }) {
   return sortWrapper({
     keys,
@@ -23,9 +34,25 @@ export function units ({ keys, db, sortOptions }) {
       Alphabetical: (idA, idB) => commonSorts.Alphabetical(idA, idB, (id) => db[id].name),
       Rarity: (idA, idB) => commonSorts.Numerical(idA, idB, (id) => +db[id].rarity),
       Elements: (idA, idB) => commonSorts.Numerical(idA, idB, (id) => elements.indexOf(db[id].element)),
-      'Attack Count on BB': (idA, idB) => commonSorts.Numerical(idA, idB, (id) => (db[id].attackInfo && db[id].attackInfo.bb) ? db[id].attackInfo.bb.length : 0),
-      'Attack Count on SBB': (idA, idB) => commonSorts.Numerical(idA, idB, (id) => (db[id].attackInfo && db[id].attackInfo.sbb) ? db[id].attackInfo.sbb.length : 0),
-      'Attack Count on UBB': (idA, idB) => commonSorts.Numerical(idA, idB, (id) => (db[id].attackInfo && db[id].attackInfo.ubb) ? db[id].attackInfo.ubb.length : 0),
+      'Normal Attack Hit Count': (idA, idB) => commonSorts.Numerical(
+        idA, idB,
+        (id) => getHitCountInfoForAttackInfoEntry(db[id].attackInfo && db[id].attackInfo.normal),
+      ),
+      'Attack Count on BB': (idA, idB) => commonSorts.Numerical(
+        idA, idB,
+        (id) => getAttackCountForAttackInfoEntry(db[id].attackInfo && db[id].attackInfo.bb),
+        (a, b) => commonSorts.Numerical(a, b, (id) => getHitCountInfoForAttackInfoEntry(db[id].attackInfo && db[id].attackInfo.bb)),
+      ),
+      'Attack Count on SBB': (idA, idB) => commonSorts.Numerical(
+        idA, idB,
+        (id) => getAttackCountForAttackInfoEntry(db[id].attackInfo && db[id].attackInfo.sbb),
+        (a, b) => commonSorts.Numerical(a, b, (id) => getHitCountInfoForAttackInfoEntry(db[id].attackInfo && db[id].attackInfo.sbb)),
+      ),
+      'Attack Count on UBB': (idA, idB) => commonSorts.Numerical(
+        idA, idB,
+        (id) => getAttackCountForAttackInfoEntry(db[id].attackInfo && db[id].attackInfo.ubb),
+        (a, b) => commonSorts.Numerical(a, b, (id) => getHitCountInfoForAttackInfoEntry(db[id].attackInfo && db[id].attackInfo.ubb)),
+      ),
     },
   });
 }
@@ -51,7 +78,11 @@ export function bursts ({ keys, db, sortOptions }) {
     sortTypes: {
       'Burst ID': commonSorts.ID,
       Alphabetical: (idA, idB) => commonSorts.Alphabetical(idA, idB, (id) => db[id].name),
-      'Attack Count': (idA, idB) => commonSorts.Numerical(idA, idB, (id) => db[id].attackInfo ? db[id].attackInfo.length : 0),
+      'Attack Count': (idA, idB) => commonSorts.Numerical(
+        idA, idB,
+        (id) => getAttackCountForAttackInfoEntry(db[id].attackInfo),
+        (a, b) => commonSorts.Numerical(a, b, (id) => getHitCountInfoForAttackInfoEntry(db[id].attackInfo)),
+      ),
     },
   });
 }

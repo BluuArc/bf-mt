@@ -100,9 +100,9 @@ export const commonSorts = Object.freeze({
     const [nameA, nameB] = [nameGetter(idA), nameGetter(idB)];
     return (nameA > nameB) ? 1: -1;
   },
-  Numerical: (idA, idB, numberGetter) => {
+  Numerical: (idA, idB, numberGetter, secondarySort = commonSorts.ID) => {
     const [numA, numB] = [numberGetter(idA), numberGetter(idB)];
-    return (numA !== numB) ? (numA - numB) : commonSorts.ID(idA, idB);
+    return (numA !== numB) ? (numA - numB) : secondarySort(idA, idB);
   },
 });
 
