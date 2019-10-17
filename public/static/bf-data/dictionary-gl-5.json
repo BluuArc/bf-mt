@@ -1,4 +1,100 @@
 {
+  "MST_SKILLS_21225300_NAME": {
+    "en": "I seek strong opponents.",
+    "es": "I seek strong opponents.",
+    "id": "Aku mencari lawan kuat.",
+    "pt": "I seek strong opponents.",
+    "th": "ข้าตามหาคู่ต่อสู้ที่แข็งแกร่ง",
+    "vi": "I seek strong opponents."
+  },
+  "MST_SKILLS_2122530_DESCRIPTION": {
+    "en": "Attack on all enemies",
+    "es": "Ataque grupal",
+    "id": "Menyerang semua musuh",
+    "pt": "Ataque em todos os inimigos",
+    "th": "โจมตีศัตรูทั้งหมด",
+    "vi": "Attack on all enemies"
+  },
+  "MST_SKILLS_2122530_NAME": {
+    "en": "General: All Enemies Attack",
+    "es": "General: Ataque grupal",
+    "id": "Jenderal: Semua Musuh Menyerang",
+    "pt": "General: Todos os inimigos, ataquem",
+    "th": "นายพล: โจมตีศัตรูทุกตัว",
+    "vi": "General: All Enemies Attack"
+  },
+  "MST_SKILLS_212253_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_212253_NAME": {
+    "en": "I seek strong opponents.",
+    "es": "Busco rivales fuertes.",
+    "id": "Aku mencari lawan kuat.",
+    "pt": "Busco oponentes poderosos.",
+    "th": "ข้าเห็นคู่ต่อสู้",
+    "vi": "I seek strong opponents."
+  },
+  "MST_SKILLS_21225400_NAME": {
+    "en": "Show me your techniques.",
+    "es": "Show me your techniques.",
+    "id": "Tunjukkan teknikmu.",
+    "pt": "Show me your techniques.",
+    "th": "แสดงเทคนิคของเจ้าให้ดูหน่อย",
+    "vi": "Show me your techniques."
+  },
+  "MST_SKILLS_2122540_DESCRIPTION": {
+    "en": "11 combo powerful Fire attack on all enemies & probable Curse effect",
+    "es": "Combo grupal de 11 poderosos ataques ígneos. Puede causar maldición",
+    "id": "11 kombo serangan Api kuat ke semua musuh & kemungkinan efek Kutukan",
+    "pt": "Combo poderoso de 11 golpes de Fogo em todos os inimigos e provável efeito de Maldição",
+    "th": "11 คอมโบ โจมตีธาตุไฟอย่างรุนแรง ใส่ศัตรูทั้งหมด และ อาจจะทำให้คิดสถานะ คำสาป",
+    "vi": "11 combo powerful Fire attack on all enemies & probable Curse effect"
+  },
+  "MST_SKILLS_2122540_NAME": {
+    "en": "Rakshasa Pyre",
+    "es": "Pira de Rakshasa",
+    "id": "Raksasa Pyre",
+    "pt": "Pira Rakshasa",
+    "th": "รัคชาซ่า ไพร",
+    "vi": "Rakshasa Pyre"
+  },
+  "MST_SKILLS_2122541_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122541_NAME": {
+    "en": "Demonic Blade",
+    "es": "Espada malévola",
+    "id": "Bilah Setan",
+    "pt": "Lâmina Demoníaca",
+    "th": "เดมอนนิค เบลด",
+    "vi": "Demonic Blade"
+  },
+  "MST_SKILLS_2122542_DESCRIPTION": {
+    "en": "11 combo powerful Fire attack on all enemies & probable Curse effect",
+    "es": "Combo grupal de 11 poderosos ataques ígneos. Puede causar maldición",
+    "id": "11 kombo serangan Api kuat ke semua musuh & kemungkinan efek Kutukan",
+    "pt": "Combo poderoso de 11 golpes de Fogo em todos os inimigos e provável efeito de Maldição",
+    "th": "11 คอมโบ โจมตีธาตุไฟอย่างรุนแรง ใส่ศัตรูทั้งหมด และ อาจจะทำให้คิดสถานะ คำสาป",
+    "vi": "11 combo powerful Fire attack on all enemies & probable Curse effect"
+  },
+  "MST_SKILLS_2122542_NAME": {
+    "en": "I am Vishra!",
+    "es": "¡Soy Vishra!",
+    "id": "Aku Vishra!",
+    "pt": "Eu sou Vishra!",
+    "th": "ข้าคือวิชร่า!",
+    "vi": "I am Vishra!"
+  },
   "MST_SKILLS_2122543_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -86752,12 +86848,12 @@
     "vi": "Sunburst Defiance"
   },
   "MST_SKILLS_2810357_DESCRIPTION": {
-    "en": "23 combo massive Fire attack on all foes (damage relative to remaining HP), high probability of raising allies from KO, enormously boosts Atk, Def of Fire types for 3 turns & additional massive attack at turn's end for 1 turn",
-    "es": "23 combo massive Fire attack on all foes (damage relative to remaining HP), high probability of raising allies from KO, enormously boosts Atk, Def of Fire types for 3 turns & additional massive attack at turn's end for 1 turn",
-    "id": "23 kombo serangan Api masif ke semua musuh (kerusakan sesuai sisa HP), kans tinggi membangkitkan sekutu dari KO, ekstra jumbo Serang, Tahan tipe Api 3 giliran, ekstra serangan masif di akhir giliran 1 giliran",
-    "pt": "23 combo massive Fire attack on all foes (damage relative to remaining HP), high probability of raising allies from KO, enormously boosts Atk, Def of Fire types for 3 turns & additional massive attack at turn's end for 1 turn",
-    "th": "23 คอมโบ โจมตีธาตุไฟรุนแรงมหาศาล ใส่ศัตรูทั้งหมด (ความเสียหาย สัมพันธ์กับ HP ที่เหลืออยู่), มีโอกาสสูงที่จะชุบชีวิตพันธมิตรจากน็อคเอาท์, เพิ่มค่ามหาศาลให้ โจมตี, ป้องกัน ของชนิดไฟ นาน 3 เทิร์น และ เพิ่มโจมตีรุนแรงมหาศาล เมื่อตอนจบเทิร์น นาน 1 เทิร์น",
-    "vi": "23 combo massive Fire attack on all foes (damage relative to remaining HP), high probability of raising allies from KO, enormously boosts Atk, Def of Fire types for 3 turns & additional massive attack at turn's end for 1 turn"
+    "en": "23 combo Fire attack on all foes (damage relative to remaining HP), boosts Atk, Def for 3 turns, 1 turn DoT infliction, raises allies from KO, adds all status ailments infliction to attack for 3 turns & boosts damage against status afflicted foes for 3 turns",
+    "es": "23 combo Fire attack on all foes (damage relative to remaining HP), boosts Atk, Def for 3 turns, 1 turn DoT infliction, raises allies from KO, adds all status ailments infliction to attack for 3 turns & boosts damage against status afflicted foes for 3 turns",
+    "id": "23 combo Fire attack on all foes (damage relative to remaining HP), boosts Atk, Def for 3 turns, 1 turn DoT infliction, raises allies from KO, adds all status ailments infliction to attack for 3 turns & boosts damage against status afflicted foes for 3 turns",
+    "pt": "23 combo Fire attack on all foes (damage relative to remaining HP), boosts Atk, Def for 3 turns, 1 turn DoT infliction, raises allies from KO, adds all status ailments infliction to attack for 3 turns & boosts damage against status afflicted foes for 3 turns",
+    "th": "23 combo Fire attack on all foes (damage relative to remaining HP), boosts Atk, Def for 3 turns, 1 turn DoT infliction, raises allies from KO, adds all status ailments infliction to attack for 3 turns & boosts damage against status afflicted foes for 3 turns",
+    "vi": "23 combo Fire attack on all foes (damage relative to remaining HP), boosts Atk, Def for 3 turns, 1 turn DoT infliction, raises allies from KO, adds all status ailments infliction to attack for 3 turns & boosts damage against status afflicted foes for 3 turns"
   },
   "MST_SKILLS_2810357_NAME": {
     "en": "Sunless Dawn",
@@ -89958,5 +90054,13 @@
     "pt": "26 combo massive Thunder attack on all foes, enormously boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts OD gauge",
     "th": "26 combo massive Thunder attack on all foes, enormously boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts OD gauge",
     "vi": "26 combo massive Thunder attack on all foes, enormously boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts OD gauge"
+  },
+  "MST_SKILLS_2840568_NAME": {
+    "en": "Thousand Xian-qi Trigrams",
+    "es": "Thousand Xian-qi Trigrams",
+    "id": "Thousand Xian-qi Trigrams",
+    "pt": "Thousand Xian-qi Trigrams",
+    "th": "Thousand Xian-qi Trigrams",
+    "vi": "Thousand Xian-qi Trigrams"
   }
 }

@@ -1,12 +1,4 @@
 {
-  "MST_SKILLS_2840568_NAME": {
-    "en": "Thousand Xian-qi Trigrams",
-    "es": "Thousand Xian-qi Trigrams",
-    "id": "Thousand Xian-qi Trigrams",
-    "pt": "Thousand Xian-qi Trigrams",
-    "th": "Thousand Xian-qi Trigrams",
-    "vi": "Thousand Xian-qi Trigrams"
-  },
   "MST_SKILLS_2840577_DESCRIPTION": {
     "en": "23 combo massive Thunder attack on all foes (damage relative to remaining HP), greatly boosts max HP, enormously boosts Atk, Def, Rec for 3 turns, greatly boosts own Atk, Def, Rec for 5 turns & enormously boosts BB gauge for 3 turns",
     "es": "23 combo massive Thunder attack on all foes (damage relative to remaining HP), greatly boosts max HP, enormously boosts Atk, Def, Rec for 3 turns, greatly boosts own Atk, Def, Rec for 5 turns & enormously boosts BB gauge for 3 turns",
@@ -166,6 +158,22 @@
     "pt": "Drang: Doom Diviner",
     "th": "Drang: Doom Diviner",
     "vi": "Drang: Doom Diviner"
+  },
+  "MST_SKILLS_2840688_DESCRIPTION": {
+    "en": "35 combo Thunder attack on all foes (damage relative to remaining HP), 100% damage reduction for 4 turns, boosts critical damage for 4 turns, boosts BB gauge for 4 turns, boosts max HP & purges LS lock and ES lock from all allies",
+    "es": "35 combo Thunder attack on all foes (damage relative to remaining HP), 100% damage reduction for 4 turns, boosts critical damage for 4 turns, boosts BB gauge for 4 turns, boosts max HP & purges LS lock and ES lock from all allies",
+    "id": "35 combo Thunder attack on all foes (damage relative to remaining HP), 100% damage reduction for 4 turns, boosts critical damage for 4 turns, boosts BB gauge for 4 turns, boosts max HP & purges LS lock and ES lock from all allies",
+    "pt": "35 combo Thunder attack on all foes (damage relative to remaining HP), 100% damage reduction for 4 turns, boosts critical damage for 4 turns, boosts BB gauge for 4 turns, boosts max HP & purges LS lock and ES lock from all allies",
+    "th": "35 combo Thunder attack on all foes (damage relative to remaining HP), 100% damage reduction for 4 turns, boosts critical damage for 4 turns, boosts BB gauge for 4 turns, boosts max HP & purges LS lock and ES lock from all allies",
+    "vi": "35 combo Thunder attack on all foes (damage relative to remaining HP), 100% damage reduction for 4 turns, boosts critical damage for 4 turns, boosts BB gauge for 4 turns, boosts max HP & purges LS lock and ES lock from all allies"
+  },
+  "MST_SKILLS_2840688_NAME": {
+    "en": "Maa Kheru",
+    "es": "Maa Kheru",
+    "id": "Maa Kheru",
+    "pt": "Maa Kheru",
+    "th": "Maa Kheru",
+    "vi": "Maa Kheru"
   },
   "MST_SKILLS_2840708_DESCRIPTION": {
     "en": "15 combo massive Thunder attack on single foe (or probable 7% damage of foes' max HP), 15 combo massive Thunder attack on single foe (25% active Pierce to Water, Thunder types), enormously boosts OD gauge, enormously boosts Thunder elemental damage for 4 turns, enormously boosts critical damage for 4 turns & adds random status ailment infliction to attack for 4 turns",
@@ -1832,12 +1840,12 @@
     "vi": "Soul Questioning Technique"
   },
   "MST_SKILLS_2860357_DESCRIPTION": {
-    "en": "25 combo massive Dark attack on all foes, enormous damage reduction for 2 turns, enormously boosts Atk, Def relative to Rec for 3 turns, enormously boosts Rec for 4 turns & negates critical and elemental damage for 5 turns",
-    "es": "25 combo massive Dark attack on all foes, enormous damage reduction for 2 turns, enormously boosts Atk, Def relative to Rec for 3 turns, enormously boosts Rec for 4 turns & negates critical and elemental damage for 5 turns",
-    "id": "25 kombo serangan Gelap masif ke semua musuh, pengurangan jumbo kerusakan 2 giliran, ekstra jumbo Serang, Tahan sesuai Pulih 3 giliran, ekstra jumbo Pulih 4 giliran, menegasi kerusakan ampuh dan elemen 5 giliran",
-    "pt": "25 combo massive Dark attack on all foes, enormous damage reduction for 2 turns, enormously boosts Atk, Def relative to Rec for 3 turns, enormously boosts Rec for 4 turns & negates critical and elemental damage for 5 turns",
-    "th": "25 คอมโบ โจมตีธาตุมืดรุนแรงมหาศาล ใส่ศัตรูทั้งหมด, ลดค่าความเสียหายมากมายมหาศาล นาน 2 เทิร์น, เพิ่มค่ามหาศาลให้ โจมตี, ป้องกัน สัมพันธ์กับ ฟื้นฟู นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ ฟื้นฟู นาน 4 เทิร์น และ ต้านทาน คริติคอล กับ ความเสียหายธาตุ นาน 5 เทิร์น",
-    "vi": "25 combo massive Dark attack on all foes, enormous damage reduction for 2 turns, enormously boosts Atk, Def relative to Rec for 3 turns, enormously boosts Rec for 4 turns & negates critical and elemental damage for 5 turns"
+    "en": "25 combo Dark attack on all foes, 100% damage reduction for 3 turns, boosts Atk, Def relative to Rec for 3 turns, purges DOT from all allies, boosts Atk, Def, Rec for 3 turns & 100% critical and elemental damage reduction for 5 turns",
+    "es": "25 combo Dark attack on all foes, 100% damage reduction for 3 turns, boosts Atk, Def relative to Rec for 3 turns, purges DOT from all allies, boosts Atk, Def, Rec for 3 turns & 100% critical and elemental damage reduction for 5 turns",
+    "id": "25 combo Dark attack on all foes, 100% damage reduction for 3 turns, boosts Atk, Def relative to Rec for 3 turns, purges DOT from all allies, boosts Atk, Def, Rec for 3 turns & 100% critical and elemental damage reduction for 5 turns",
+    "pt": "25 combo Dark attack on all foes, 100% damage reduction for 3 turns, boosts Atk, Def relative to Rec for 3 turns, purges DOT from all allies, boosts Atk, Def, Rec for 3 turns & 100% critical and elemental damage reduction for 5 turns",
+    "th": "25 combo Dark attack on all foes, 100% damage reduction for 3 turns, boosts Atk, Def relative to Rec for 3 turns, purges DOT from all allies, boosts Atk, Def, Rec for 3 turns & 100% critical and elemental damage reduction for 5 turns",
+    "vi": "25 combo Dark attack on all foes, 100% damage reduction for 3 turns, boosts Atk, Def relative to Rec for 3 turns, purges DOT from all allies, boosts Atk, Def, Rec for 3 turns & 100% critical and elemental damage reduction for 5 turns"
   },
   "MST_SKILLS_2860357_NAME": {
     "en": "Heart-Knowing Heka",
@@ -21135,6 +21143,22 @@
     "th": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, own max HP, BB Atk, Atk, Def, Rec, critical hit rate, critical damage, Spark damage, damage taken restores HP & activates own BB/SBB/UBB twice",
     "vi": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, own max HP, BB Atk, Atk, Def, Rec, critical hit rate, critical damage, Spark damage, damage taken restores HP & activates own BB/SBB/UBB twice"
   },
+  "MST_SKILLS_3810357_DESCRIPTION": {
+    "en": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, damage against status afflicted foes, Atk, Def relative to Rec, 100% raises allies from KO, massive DoT on all foes, adds status ailment infliction to attack, 100% damage reduction, purges DOT effects & negates critical and elemental damage",
+    "es": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, damage against status afflicted foes, Atk, Def relative to Rec, 100% raises allies from KO, massive DoT on all foes, adds status ailment infliction to attack, 100% damage reduction, purges DOT effects & negates critical and elemental damage",
+    "id": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, damage against status afflicted foes, Atk, Def relative to Rec, 100% raises allies from KO, massive DoT on all foes, adds status ailment infliction to attack, 100% damage reduction, purges DOT effects & negates critical and elemental damage",
+    "pt": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, damage against status afflicted foes, Atk, Def relative to Rec, 100% raises allies from KO, massive DoT on all foes, adds status ailment infliction to attack, 100% damage reduction, purges DOT effects & negates critical and elemental damage",
+    "th": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, damage against status afflicted foes, Atk, Def relative to Rec, 100% raises allies from KO, massive DoT on all foes, adds status ailment infliction to attack, 100% damage reduction, purges DOT effects & negates critical and elemental damage",
+    "vi": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, damage against status afflicted foes, Atk, Def relative to Rec, 100% raises allies from KO, massive DoT on all foes, adds status ailment infliction to attack, 100% damage reduction, purges DOT effects & negates critical and elemental damage"
+  },
+  "MST_SKILLS_3810357_NAME": {
+    "en": "Shards of Destiny",
+    "es": "Shards of Destiny",
+    "id": "Shards of Destiny",
+    "pt": "Shards of Destiny",
+    "th": "Shards of Destiny",
+    "vi": "Shards of Destiny"
+  },
   "MST_SKILLS_3810688_DESCRIPTION": {
     "en": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, fully restores HP, 80% KO resistance, activates Fire barrier, purges LS and ES Lock, 100% damage reduction, 100% raises allies from KO & activates BB/SBB/UBB twice",
     "es": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, fully restores HP, 80% KO resistance, activates Fire barrier, purges LS and ES Lock, 100% damage reduction, 100% raises allies from KO & activates BB/SBB/UBB twice",
@@ -21224,12 +21248,12 @@
     "vi": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Spark damage, Water, Dark elemental damage, activates BB/SBB/UBB twice, 100% evasion, adds status ailment infliction to attack, raises allies from KO & 100% Light, Dark damage reduction"
   },
   "MST_SKILLS_3820688_DESCRIPTION": {
-    "en": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, critical hit rate, critical damage, Spark damage, Water, Light elemental damage, 100% damage reduction, damage taken boosts BB gauge, 80% KO resistance & purges LS Lock and DoT effects",
-    "es": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, critical hit rate, critical damage, Spark damage, Water, Light elemental damage, 100% damage reduction, damage taken boosts BB gauge, 80% KO resistance & purges LS Lock and DoT effects",
-    "id": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, critical hit rate, critical damage, Spark damage, Water, Light elemental damage, 100% damage reduction, damage taken boosts BB gauge, 80% KO resistance & purges LS Lock and DoT effects",
-    "pt": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, critical hit rate, critical damage, Spark damage, Water, Light elemental damage, 100% damage reduction, damage taken boosts BB gauge, 80% KO resistance & purges LS Lock and DoT effects",
-    "th": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, critical hit rate, critical damage, Spark damage, Water, Light elemental damage, 100% damage reduction, damage taken boosts BB gauge, 80% KO resistance & purges LS Lock and DoT effects",
-    "vi": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, critical hit rate, critical damage, Spark damage, Water, Light elemental damage, 100% damage reduction, damage taken boosts BB gauge, 80% KO resistance & purges LS Lock and DoT effects"
+    "en": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, critical hit rate, critical damage, Spark damage, Water, Light elemental damage, 100% damage reduction, damage taken boosts BB gauge, 80% KO resistance & purges LS and ES Lock",
+    "es": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, critical hit rate, critical damage, Spark damage, Water, Light elemental damage, 100% damage reduction, damage taken boosts BB gauge, 80% KO resistance & purges LS and ES Lock",
+    "id": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, critical hit rate, critical damage, Spark damage, Water, Light elemental damage, 100% damage reduction, damage taken boosts BB gauge, 80% KO resistance & purges LS and ES Lock",
+    "pt": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, critical hit rate, critical damage, Spark damage, Water, Light elemental damage, 100% damage reduction, damage taken boosts BB gauge, 80% KO resistance & purges LS and ES Lock",
+    "th": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, critical hit rate, critical damage, Spark damage, Water, Light elemental damage, 100% damage reduction, damage taken boosts BB gauge, 80% KO resistance & purges LS and ES Lock",
+    "vi": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, critical hit rate, critical damage, Spark damage, Water, Light elemental damage, 100% damage reduction, damage taken boosts BB gauge, 80% KO resistance & purges LS and ES Lock"
   },
   "MST_SKILLS_3820688_NAME": {
     "en": "Qemahu Kharu",
@@ -21366,6 +21390,22 @@
     "pt": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Thunder elemental damage, OD gauge, Spark damage boosts BB gauge, raises allies from KO, 80% KO resistance, fully restores HP & inflicts Atk reduction",
     "th": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Thunder elemental damage, OD gauge, Spark damage boosts BB gauge, raises allies from KO, 80% KO resistance, fully restores HP & inflicts Atk reduction",
     "vi": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Thunder elemental damage, OD gauge, Spark damage boosts BB gauge, raises allies from KO, 80% KO resistance, fully restores HP & inflicts Atk reduction"
+  },
+  "MST_SKILLS_3840688_DESCRIPTION": {
+    "en": "70 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, spark damage, critical damage, Thunder, Dark elemental damage, fills BB gauge, inflicts Atk, Def reduction, 100% damage reduction, 100% DoT reduction & purges LS and ES Lock",
+    "es": "70 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, spark damage, critical damage, Thunder, Dark elemental damage, fills BB gauge, inflicts Atk, Def reduction, 100% damage reduction, 100% DoT reduction & purges LS and ES Lock",
+    "id": "70 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, spark damage, critical damage, Thunder, Dark elemental damage, fills BB gauge, inflicts Atk, Def reduction, 100% damage reduction, 100% DoT reduction & purges LS and ES Lock",
+    "pt": "70 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, spark damage, critical damage, Thunder, Dark elemental damage, fills BB gauge, inflicts Atk, Def reduction, 100% damage reduction, 100% DoT reduction & purges LS and ES Lock",
+    "th": "70 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, spark damage, critical damage, Thunder, Dark elemental damage, fills BB gauge, inflicts Atk, Def reduction, 100% damage reduction, 100% DoT reduction & purges LS and ES Lock",
+    "vi": "70 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, spark damage, critical damage, Thunder, Dark elemental damage, fills BB gauge, inflicts Atk, Def reduction, 100% damage reduction, 100% DoT reduction & purges LS and ES Lock"
+  },
+  "MST_SKILLS_3840688_NAME": {
+    "en": "Seḥtemu em Īsefty",
+    "es": "Seḥtemu em Īsefty",
+    "id": "Seḥtemu em Īsefty",
+    "pt": "Seḥtemu em Īsefty",
+    "th": "Seḥtemu em Īsefty",
+    "vi": "Seḥtemu em Īsefty"
   },
   "MST_SKILLS_3840708_DESCRIPTION": {
     "en": "30 combo grand dual attack on all foes (damage relative to remaining HP),  boosts OD gauge, Thunder elemental damage, critical damage, adds status ailment infliction to attack & damage taken boosts BB gauge and restores HP",
@@ -88032,12 +88072,12 @@
     "vi": "Bladeweave Strike"
   },
   "MST_SKILLS_810357_DESCRIPTION": {
-    "en": "14 combo powerful Fire attack on all foes, probable random status ailment infliction, hugely boosts damage against status afflicted foes for 3 turns, considerably boosts Atk, Def of Fire types for 3 turns & adds probability to perform 1 extra action to self within the same turn",
-    "es": "14 combo powerful Fire attack on all foes, probable random status ailment infliction, hugely boosts damage against status afflicted foes for 3 turns, considerably boosts Atk, Def of Fire types for 3 turns & adds probability to perform 1 extra action to self within the same turn",
-    "id": "14 kombo serangan Api kuat ke semua musuh, kans beri status penyakit acak, menambah kans melakukan 1 tindakan ekstra sendiri dalam giliran yang sama, 3 giliran: amat tambah merusak musuh terkena status, lumayan menambah Serang, Tahan tipe Api",
-    "pt": "14 combo powerful Fire attack on all foes, probable random status ailment infliction, hugely boosts damage against status afflicted foes for 3 turns, considerably boosts Atk, Def of Fire types for 3 turns & adds probability to perform 1 extra action to self within the same turn",
-    "th": "14 คอมโบ โจมตีธาตุไฟอย่างแรง ใส่ศัตรูทั้งหมด, มีโอกาส ทำให้ติดสถานะผิดปกติโดยสุ่ม, เพิ่มค่าอย่างสูงให้ ความเสียหาย ต่อศัตรูที่ติดสถานะผิดปกติ นาน 3 เทิร์น, เพิ่มค่าอย่างมากให้ โจมตี, ป้องกัน ของชนิดไฟ นาน 3 เทิร์น และ เพิ่มโอกาสที่จะทำ 1 คำสั่งเพิ่มให้กับตนเองภายในเทิร์นเดียวกัน",
-    "vi": "14 combo powerful Fire attack on all foes, probable random status ailment infliction, hugely boosts damage against status afflicted foes for 3 turns, considerably boosts Atk, Def of Fire types for 3 turns & adds probability to perform 1 extra action to self within the same turn"
+    "en": "14 combo Fire attack on all foes, boosts Atk, Def (Fire) for 3 turns, boosts damage against status afflicted foes for 3 turns, probable random status ailments infliction, may raise allies from KO & 1 extra action for self for 1 turn",
+    "es": "14 combo Fire attack on all foes, boosts Atk, Def (Fire) for 3 turns, boosts damage against status afflicted foes for 3 turns, probable random status ailments infliction, may raise allies from KO & 1 extra action for self for 1 turn",
+    "id": "14 combo Fire attack on all foes, boosts Atk, Def (Fire) for 3 turns, boosts damage against status afflicted foes for 3 turns, probable random status ailments infliction, may raise allies from KO & 1 extra action for self for 1 turn",
+    "pt": "14 combo Fire attack on all foes, boosts Atk, Def (Fire) for 3 turns, boosts damage against status afflicted foes for 3 turns, probable random status ailments infliction, may raise allies from KO & 1 extra action for self for 1 turn",
+    "th": "14 combo Fire attack on all foes, boosts Atk, Def (Fire) for 3 turns, boosts damage against status afflicted foes for 3 turns, probable random status ailments infliction, may raise allies from KO & 1 extra action for self for 1 turn",
+    "vi": "14 combo Fire attack on all foes, boosts Atk, Def (Fire) for 3 turns, boosts damage against status afflicted foes for 3 turns, probable random status ailments infliction, may raise allies from KO & 1 extra action for self for 1 turn"
   },
   "MST_SKILLS_810357_NAME": {
     "en": "Heartstopping Strike",
@@ -89958,5 +89998,69 @@
     "pt": "30 combo powerful Water, Earth attack on all foes, greatly restores HP, removes all status ailments & greatly boosts BC, HC drop rate for 3 turns",
     "th": "30 คอมโบ โจมตีด้วยธาตุน้ำและดินใส่ศัตรูทั้งหมด, ฟื้น HP อย่างมาก, ล้างทุกสถานะผิดปกติ, เพิ่มอัตราการดรอป BC HC อย่างมาก3 เทิร์น",
     "vi": "30 combo powerful Water, Earth attack on all foes, greatly restores HP, removes all status ailments & greatly boosts BC, HC drop rate for 3 turns"
+  },
+  "MST_SKILLS_830117_NAME": {
+    "en": "Requiem of the Fae",
+    "es": "Requiem of the Fae",
+    "id": "Rekuiem Fae",
+    "pt": "Requiem of the Fae",
+    "th": "รีเควียม ออฟ เดอะ แฟ",
+    "vi": "Requiem of the Fae"
+  },
+  "MST_SKILLS_830118_DESCRIPTION": {
+    "en": "35 combo powerful Earth, Water attack on all foes, hugely restores HP, removes all status ailments, greatly boosts BC, HC, Item drop rates for 3 turns & boosts max HP",
+    "es": "35 combo powerful Earth, Water attack on all foes, hugely restores HP, removes all status ailments, greatly boosts BC, HC, Item drop rates for 3 turns & boosts max HP",
+    "id": "35 combo powerful Earth, Water attack on all foes, hugely restores HP, removes all status ailments, greatly boosts BC, HC, Item drop rates for 3 turns & boosts max HP",
+    "pt": "35 combo powerful Earth, Water attack on all foes, hugely restores HP, removes all status ailments, greatly boosts BC, HC, Item drop rates for 3 turns & boosts max HP",
+    "th": "35 combo powerful Earth, Water attack on all foes, hugely restores HP, removes all status ailments, greatly boosts BC, HC, Item drop rates for 3 turns & boosts max HP",
+    "vi": "35 combo powerful Earth, Water attack on all foes, hugely restores HP, removes all status ailments, greatly boosts BC, HC, Item drop rates for 3 turns & boosts max HP"
+  },
+  "MST_SKILLS_830118_NAME": {
+    "en": "Adoration of the Fae",
+    "es": "Adoration of the Fae",
+    "id": "Pemujaan Fae",
+    "pt": "Adoration of the Fae",
+    "th": "อดอเรชั่น ออฟ เดอะ แฟ",
+    "vi": "Adoration of the Fae"
+  },
+  "MST_SKILLS_830147_DESCRIPTION": {
+    "en": "25 combo powerful Earth attack on all foes, all status ailments removed and negated & great chance of inflicting Paralysis and Poison",
+    "es": "Combo grupal de 25 poderosos ataques térreos. Quita y niega las aflicciones de estados y gran probabilidad de causar Parálisis y Ponzoña",
+    "id": "25 kombo serangan Bumi kuat ke semua musuh, semua status penyakit dibuang dan dinegasi & kans besar memberikan Lumpuh dan Racun",
+    "pt": "Combo de 25 golpes de Terra em todos os inimigos, remove e nega todos os efeitos negativos e grande chance de causar paralisia e envenenamento",
+    "th": "25 คอมโบ โจมตีด้วยธาตุดินใส่ศัตรูทั้งหมด, ล้างทุกสถานะผิดปกติ, มีโอกาสติดสถานะอัมพาตและพิษอย่างมาก",
+    "vi": "25 combo powerful Earth attack on all foes, all status ailments removed and negated & great chance of inflicting Paralysis and Poison"
+  },
+  "MST_SKILLS_830147_NAME": {
+    "en": "Violet Pain",
+    "es": "Dolor violeta",
+    "id": "Rasa Sakit Violet",
+    "pt": "Dor Violeta",
+    "th": "ไวโอเล็ท เพน",
+    "vi": "Violet Pain"
+  },
+  "MST_SKILLS_830148_DESCRIPTION": {
+    "en": "16 combo powerful Earth attack on all foes, enormously boosts BB gauge for 5 turns, removes all status ailments and Atk, Def, Rec reduction effects, negates all status ailments and Atk, Def, Rec reduction effects for 5 turns & adds probable 1 turn Atk, Def reduction effects to attack for 5 turns",
+    "es": "16 combo powerful Earth attack on all foes, enormously boosts BB gauge for 5 turns, removes all status ailments and Atk, Def, Rec reduction effects, negates all status ailments and Atk, Def, Rec reduction effects for 5 turns & adds probable 1 turn Atk, Def reduction effects to attack for 5 turns",
+    "id": "16 combo powerful Earth attack on all foes, enormously boosts BB gauge for 5 turns, removes all status ailments and Atk, Def, Rec reduction effects, negates all status ailments and Atk, Def, Rec reduction effects for 5 turns & adds probable 1 turn Atk, Def reduction effects to attack for 5 turns",
+    "pt": "16 combo powerful Earth attack on all foes, enormously boosts BB gauge for 5 turns, removes all status ailments and Atk, Def, Rec reduction effects, negates all status ailments and Atk, Def, Rec reduction effects for 5 turns & adds probable 1 turn Atk, Def reduction effects to attack for 5 turns",
+    "th": "16 combo powerful Earth attack on all foes, enormously boosts BB gauge for 5 turns, removes all status ailments and Atk, Def, Rec reduction effects, negates all status ailments and Atk, Def, Rec reduction effects for 5 turns & adds probable 1 turn Atk, Def reduction effects to attack for 5 turns",
+    "vi": "16 combo powerful Earth attack on all foes, enormously boosts BB gauge for 5 turns, removes all status ailments and Atk, Def, Rec reduction effects, negates all status ailments and Atk, Def, Rec reduction effects for 5 turns & adds probable 1 turn Atk, Def reduction effects to attack for 5 turns"
+  },
+  "MST_SKILLS_830148_NAME": {
+    "en": "Seeker's Arrow",
+    "es": "Seeker's Arrow",
+    "id": "Seeker's Arrow",
+    "pt": "Seeker's Arrow",
+    "th": "Seeker's Arrow",
+    "vi": "Seeker's Arrow"
+  },
+  "MST_SKILLS_830177_DESCRIPTION": {
+    "en": "3 combo powerful Fire, Earth attack on all foes, 50% damage reduction on self for 2 turns & adds Fire, Earth elements to attack for 3 turns",
+    "es": "7 combo powerful Fire, Earth attack on all foes, 50% damage reduction on self for 2 turns & adds Fire, Earth elements to attack for 3 turns",
+    "id": "3 kombo serangan kuat Api, Bumi ke semua musuh, pengurangan 50% kerusakan sendiri 2 giliran, beri elemen Api, Bumi ke serangan 3 giliran",
+    "pt": "8 combo powerful Fire, Earth attack on all foes, 50% damage reduction on self for 2 turns & adds Fire, Earth elements to attack for 3 turns",
+    "th": "3 คอมโบ โจมตีธาตุ ไฟ, ดิน อย่างแรง ใส่ศัตรูทั้งหมด, 50% ลดค่าความเสียหายให้ตัวเอง นาน 2 เทิร์น และ เพิ่มธาตุ ไฟ, ดิน ให้กับการโจมตี นาน 3 เทิร์น",
+    "vi": "6 combo powerful Fire, Earth attack on all foes, 50% damage reduction on self for 2 turns & adds Fire, Earth elements to attack for 3 turns"
   }
 }
