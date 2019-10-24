@@ -474,7 +474,19 @@
     "sell_price": 200,
     "thumbnail": "item_thum_800103.png",
     "type": "consumable",
-    "usage": []
+    "usage": [],
+    "first_clear_missions": [
+      "8301520",
+      "8301521",
+      "8301522",
+      "8301523",
+      "8301524",
+      "8301525",
+      "8301530",
+      "8301531",
+      "8301532",
+      "8301533"
+    ]
   },
   "800104": {
     "desc": "A strange piece of glowing crystal that holds a rare power.",
@@ -23595,7 +23607,7 @@
     ]
   },
   "819264": {
-    "desc": "40% boost to all parameters of Fire, Earth types, negates all status ailments, increases buff durations of stats boosts by 1 turn & adds boost own max HP effect to BB/SBB",
+    "desc": "40% boost to all parameters of Fire, Earth types, negates all status ailments, increases durations of parameter boost effectss by 1 turn & adds boost own max HP effect to BB/SBB",
     "effect": [
       {
         "atk% buff": 40,
@@ -23674,7 +23686,7 @@
     ]
   },
   "819265": {
-    "desc": "50% boost to all parameters of Fire, Earth types, negates all status ailments, increases buff durations of stats boosts by 1 turn, adds boost own max HP effect to BB/SBB & adds 5% damage reduction to LS",
+    "desc": "50% boost to all parameters of Fire, Earth types, negates all status ailments, increases durations of parameter boost effectss by 1 turn, adds boost own max HP effect to BB/SBB & adds 5% damage reduction to LS",
     "effect": [
       {
         "atk% buff": 50,
@@ -23766,7 +23778,7 @@
     ]
   },
   "819266": {
-    "desc": "60% boost to all parameters of Fire, Earth types, reduces BB gauge required for BB, negates all status ailments, increases buff durations of stats boosts by 1 turn, adds boost own max HP effect to BB/SBB & adds 5% damage reduction to LS",
+    "desc": "60% boost to all parameters of Fire, Earth types, reduces BB gauge required for BB, negates all status ailments, increases durations of parameter boost effectss by 1 turn, adds boost own max HP effect to BB/SBB & adds 5% damage reduction to LS",
     "effect": [
       {
         "atk% buff": 60,

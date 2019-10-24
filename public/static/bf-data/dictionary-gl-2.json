@@ -1,4 +1,308 @@
 {
+  "MST_LEADERSKILLS_600_DESCRIPTION": {
+    "en": "10% reduction in damage Taken",
+    "es": "Reduce un 10 % el daño infligido a tus unidades.",
+    "id": "10% pengurangan kerusakan Diderita",
+    "pt": "10% de redução no dano sofrido",
+    "th": "10% ลดค่าความเสียหายจากดาเมจที่ได้รับ",
+    "vi": "10% giảm thiệt hại xảy ra "
+  },
+  "MST_LEADERSKILLS_600_NAME": {
+    "en": "Great Shield",
+    "es": "Gran escudo",
+    "id": "Tameng Besar",
+    "pt": "Grande Escudo",
+    "th": "เกรทชิล",
+    "vi": "khiên chắn "
+  },
+  "MST_LEADERSKILLS_601_DESCRIPTION": {
+    "en": "20% reduction in damage Taken",
+    "es": "Reduce un 20 % el daño infligido a tus unidades.",
+    "id": "20% pengurangan kerusakan Diderita",
+    "pt": "20% de redução no dano sofrido",
+    "th": "20% ลดค่าความเสียหายจากดาเมจที่ได้รับ",
+    "vi": "15% giảm thiệt hại xảy ra "
+  },
+  "MST_LEADERSKILLS_601_NAME": {
+    "en": "Iron Wall",
+    "es": "Muro férreo",
+    "id": "Tembok Besi",
+    "pt": "Muralha de Ferro",
+    "th": "ไอออนวอลล์",
+    "vi": "tường sắt "
+  },
+  "MST_LEADERSKILLS_6100_DESCRIPTION": {
+    "en": "Probable slight boost in the BB gauge or HP recovery when attacked",
+    "es": "Posible leve aumento del indicador BB o de recuperar PS al recibir un ataque",
+    "id": "Mungkin agak menambah meteran BB atau pemulihan HP saat diserang",
+    "pt": "Possível pequeno bônus na barra de BB ou na recuperação de HP ao ser atacado",
+    "th": "มีความเป็นไปได้ที่จะเพิ่มเกจ BB หรือ ฟื้นฟู HP เล็กน้อยเมื่อโจมตี",
+    "vi": "Có thể tăng nhẹ vạch BB hoặc mức phục hồi Thể lực khi bị tấn công"
+  },
+  "MST_LEADERSKILLS_6100_NAME": {
+    "en": "Phantom Awakening",
+    "es": "Despertar fantasmal",
+    "id": "Pembangkitan Fantom",
+    "pt": "Despertar Fantasma",
+    "th": "แฟนทอมอะเวคเคนนิ่ง",
+    "vi": "Bóng ma thức giấc"
+  },
+  "MST_LEADERSKILLS_6101_DESCRIPTION": {
+    "en": "Probable boost in the BB gauge or HP recovery when attacked",
+    "es": "Posible aumento del indicador BB o de recuperar PS al recibir un ataque",
+    "id": "Mungkin menambah meteran BB atau pemulihan HP saat diserang",
+    "pt": "Possível bônus na barra de BB ou na recuperação de HP ao ser atacado",
+    "th": "มีความเป็นไปได้ที่จะเพิ่มเกจ BB หรือ ฟื้นฟู HP เมื่อโจมตี",
+    "vi": "Có thể tăng vạch BB hoặc mức phục hồi Thể lực khi bị tấn công"
+  },
+  "MST_LEADERSKILLS_6101_NAME": {
+    "en": "Phantom God Awakening",
+    "es": "Despertar del dios fantasmal",
+    "id": "Pembangkitan Fantom Dewa",
+    "pt": "Despertar do Deus Fantasma",
+    "th": "แฟนทอมก็อดอะเวคเคนนิ่ง",
+    "vi": "Ma thần tỉnh giấc"
+  },
+  "MST_LEADERSKILLS_6102_DESCRIPTION": {
+    "en": "Probable great boost in the BB gauge when attacked & probable HP recovery when attacked",
+    "es": "Probable great boost in the BB gauge when attacked & probable HP recovery when attacked",
+    "id": "Kemungkinan tambahan besar meteran BB saat diserang & kemungkinan pemulihan HP saat diserang",
+    "pt": "Probable great boost in the BB gauge when attacked & probable HP recovery when attacked",
+    "th": "มีโอกาสเพิ่มบีบีเกจสูงเมื่อถูกโจมตี, มีโอกาสฟื้น HP เมื่อถูกโจมตี",
+    "vi": "Probable great boost in the BB gauge when attacked & probable HP recovery when attacked"
+  },
+  "MST_LEADERSKILLS_6102_NAME": {
+    "en": "Phantom Ruler's Awakening",
+    "es": "Phantom Ruler's Awakening",
+    "id": "Bangkitnya Penguasa Fantom",
+    "pt": "Phantom Ruler's Awakening",
+    "th": "แฟนธ่อม รูเลอร์ อวาเคนนิ่ง",
+    "vi": "Phantom Ruler's Awakening"
+  },
+  "MST_LEADERSKILLS_6200_DESCRIPTION": {
+    "en": "Boosts Def by 25% for all allies",
+    "es": "Aumenta en 25% la defensa de los aliados",
+    "id": "Menambah Pertahanan 25% semua sekutu",
+    "pt": "Aumenta a DEF de todos os aliados em 25%",
+    "th": "เพิ่มค่า ป้องกัน ขึ้น 25% ให้กับพันธมิตรทุกคน",
+    "vi": "Tăng khả năng Phòng thủ lên 25% cho mọi đồng minh"
+  },
+  "MST_LEADERSKILLS_6200_NAME": {
+    "en": "Imperial Cross",
+    "es": "Cruz imperial",
+    "id": "Palang Kekaisaran",
+    "pt": "Cruz Imperial",
+    "th": "อิมพีเรียล ครอส",
+    "vi": "Thánh giá hoàng đế"
+  },
+  "MST_LEADERSKILLS_6300_DESCRIPTION": {
+    "en": "Chance of BB gauge filling when attacking",
+    "es": "Posibilidad de que se llene el indicador BB al atacar",
+    "id": "Kans meteran BB terisi saat menyerang",
+    "pt": "Dá chance de preencher a barra de BB ao atacar",
+    "th": "มีโอกาสที่จะเติมเกจ BB เมื่อโจมตี",
+    "vi": "Tăng cơ hội nạp vạch BB khi tấn công"
+  },
+  "MST_LEADERSKILLS_6300_NAME": {
+    "en": "Emperor's Command",
+    "es": "Orden del emperador",
+    "id": "Komando Kaisar",
+    "pt": "Ordem do Imperador",
+    "th": "เอ็มเพอเรอร์ คอมมานด์",
+    "vi": "Mệnh lệnh của Hoàng đế"
+  },
+  "MST_LEADERSKILLS_6301_DESCRIPTION": {
+    "en": "Chance of BB gauge greatly filling when attacking",
+    "es": "Posibilidad de que se llene considerablemente el indicador BB al atacar",
+    "id": "Kans meteran BB amat terisi saat menyerang",
+    "pt": "Dá chance de preencher grande parte da barra de BB ao atacar",
+    "th": "มีโอกาสที่จะเติมเกจ BB อย่างมากเมื่อโจมตี",
+    "vi": "Tăng khả năng nạp đầy vạch BB khi tấn công"
+  },
+  "MST_LEADERSKILLS_6301_NAME": {
+    "en": "God Emperor's Command",
+    "es": "Orden del Dios emperador",
+    "id": "Komando Kaisar Dewa",
+    "pt": "Ordem do Deus Imperador",
+    "th": "ก็อด เอ็มเพอเรอร์ คอมมานด์",
+    "vi": "Mệnh lệnh của Hoàng đế"
+  },
+  "MST_LEADERSKILLS_6302_DESCRIPTION": {
+    "en": "Chance of BB gauge greatly filling when attacking & chance of ignoring an opponent's Def when attacking",
+    "es": "Posibilidad de que se llene considerablemente el indicador BB y de ignorar la defensa de un adversario al ataca",
+    "id": "Kans meteran BB amat terisi & kans mengabaikan Pertahanan lawan saat menyerang",
+    "pt": "Dá chance de preencher grande parte da barra de BB ao atacar e de ignorar a DEF de um inimigo ao atacar",
+    "th": "มีโอกาสที่จะเติมเกจ BB อย่างมากเมื่อโจมตี & มีโอกาสที่จะไม่สนค่า ป้องกัน ของศัตรู เมื่อโจมตี",
+    "vi": "Có cơ hội nạp đầy vạch BB khi tấn công & cơ hội bỏ qua Phòng thủ của đối phương khi tấn công"
+  },
+  "MST_LEADERSKILLS_6302_NAME": {
+    "en": "Destruction God's Command",
+    "es": "Orden del Dios destructor",
+    "id": "Komando Dewa Penghancur",
+    "pt": "Ordem do Deus da Destruição",
+    "th": "เดสทรัคชั่น ก็อด คอมมานด์",
+    "vi": "Lệnh của Chúa thần hủy diệt"
+  },
+  "MST_LEADERSKILLS_6400_DESCRIPTION": {
+    "en": "Boosts Atk relative to the amount of HP remaining",
+    "es": "Aumenta el ataque según la cantidad de PS restantes",
+    "id": "Menambah Serangan relatif dengan jumlah sisa HP",
+    "pt": "Aumenta o ATQ com relação à quantidade de HP restante",
+    "th": "เพิ่มค่า โจมตี สัมพันธ์กับปริมาณของ HP ที่เหลืออยู่",
+    "vi": "Tăng khả năng Tấn công liên quan đến lượng Thể lực còn lại"
+  },
+  "MST_LEADERSKILLS_6400_NAME": {
+    "en": "Dark Aura",
+    "es": "Aura oscura",
+    "id": "Aura Gelap",
+    "pt": "Aura Sombria",
+    "th": "ดาร์ค ออร่า",
+    "vi": "Khí chất hắc ám"
+  },
+  "MST_LEADERSKILLS_6401_DESCRIPTION": {
+    "en": "Greatly boosts Atk relative to the amount of HP remaining",
+    "es": "Aumenta notablemente el ataque según la cantidad de PS restantes",
+    "id": "Amat menambah Serangan relatif dengan jumlah sisa HP",
+    "pt": "Aumenta muito o ATQ com relação à quantidade de HP restante",
+    "th": "เพิ่มค่า โจมตี อย่างมาก สัมพันธ์กับปริมาณของ HP ที่เหลืออยู่",
+    "vi": "Tăng mạnh khả năng Tấn công liên quan đến lượng Thể lực còn lại"
+  },
+  "MST_LEADERSKILLS_6401_NAME": {
+    "en": "Ominous Aura",
+    "es": "Aura ominosa",
+    "id": "Aura Seram",
+    "pt": "Aura Sinistra",
+    "th": "อมมิเนียส ออร่า",
+    "vi": "Khí chất báo điềm gở"
+  },
+  "MST_LEADERSKILLS_6500_DESCRIPTION": {
+    "en": "Reduces amount of BB gauge needed to activate BB & 20% reduction in damage from Light & Dark Types",
+    "es": "Reduce el indicador BB para activar BB. Reduce un 20% el daño de las unidades lumínicas y oscuras",
+    "id": "Mengurangi syarat jumlah meteran BB untuk mengaktifkan BB & mengurangi kerusakan 20% dari Tipe Terang & Gelap",
+    "pt": "Redução do necessário para ativação do BB na barra de BB e 20% de redução no dano de tipo Luz e Sombra",
+    "th": "ลดปริมาณเกจ BB ที่ต้องการสำหรับใช้ BB และ 20% ลดความเสียหายจากชนิด แสง กับ มืด",
+    "vi": "Giảm lượng nạp vạch BB cần để kích hoạt BB & giảm 20% thiệt hại do các loại hệ Quang & Bóng tối"
+  },
+  "MST_LEADERSKILLS_6500_NAME": {
+    "en": "Manipulator's Ambition",
+    "es": "Ambición del manipulador",
+    "id": "Ambisi Manipulator",
+    "pt": "Ambição do Manipulador",
+    "th": "มานิพูเลเตอร์สแอมบิทชั่น",
+    "vi": "Tham vọng của kẻ lôi kéo"
+  },
+  "MST_LEADERSKILLS_6600_DESCRIPTION": {
+    "en": "Fills BB gauge hugely after each turn & boosts the BB gauge fill rate",
+    "es": "El indicador BB se llena notablemente después de cada turno. Aumenta la velocidad de llenado del indicador BB",
+    "id": "Amat mengisi meteran BB seusai giliran & menambah laju pengisian meteran BB",
+    "pt": "A barra de BB enche bastante a cada turno e a velocidade de aumento da barra cresce",
+    "th": "เติม BB เกจอย่างมากหลังจากทุกเทริน์ และ เร่งอัตราการเติม BB เกจ",
+    "vi": "Nạp vạch BB rất nhiều sau mỗi lượt & tăng tốc độ nạp vạch BB"
+  },
+  "MST_LEADERSKILLS_6600_NAME": {
+    "en": "Concert of Light",
+    "es": "Concierto de luz",
+    "id": "Konser Cahaya",
+    "pt": "Concerto de Luz",
+    "th": "คอนเสิร์ตออฟไลท์",
+    "vi": "Bản hòa tấu Ánh sáng"
+  },
+  "MST_LEADERSKILLS_6601_DESCRIPTION": {
+    "en": "Boosts HC drop rate & hugely boosts Rec rate",
+    "es": "Aumenta la posibilidad de conseguir CC y aumenta notablemente la velocidad de recuperación",
+    "id": "Menambah frekuensi perolehan HC & amat menambah laju Pemulihan",
+    "pt": "Aumenta a taxa de queda de CC e aumenta muito a velocidade de REC",
+    "th": "เร่งอัตราการดรอปของ HC และเพิ่มค่าฟื้นฟูอย่างมาก",
+    "vi": "Tăng tỷ lệ rơi HC & tăng mạnh tốc độ Phục hồi"
+  },
+  "MST_LEADERSKILLS_6601_NAME": {
+    "en": "Noble Smile",
+    "es": "Sonrisa noble",
+    "id": "Senyuman Ningrat",
+    "pt": "Sorriso Nobre",
+    "th": "โนเบิลสไมล์",
+    "vi": "Nụ cười cao quý"
+  },
+  "MST_LEADERSKILLS_6602_DESCRIPTION": {
+    "en": "Hugely boosts BB gauge after each turn, boosts BB gauge fill rate & reduces BB gauge required to activate BB",
+    "es": "Aumenta enormemente el indicador BB cada turno, aumenta su velocidad de carga y reduce la cantidad de indicador BB consumida para activar BB",
+    "id": "Amat menambah meteran BB seusai giliran, menambah laju pengisian meteran BB & mengurangi meteran BB untuk mengaktifkan BB",
+    "pt": "Grande reforço na barra BB após cada rodada, reforço no preenchimento de BB e redução na barra BB necessária para ativação",
+    "th": "เพิ่ม BB เกจอย่างมากในเทิร์นถัดไป, เพิ่มอัตราการเติม BB เกจ c]t]f  gd0muj9hv'",
+    "vi": "Hugely boosts BB gauge after each turn, boosts BB gauge fill rate & reduces BB gauge required to activate BB"
+  },
+  "MST_LEADERSKILLS_6602_NAME": {
+    "en": "Futuristic Concert",
+    "es": "Concierto futurístico",
+    "id": "Konser Futuristik",
+    "pt": "Concerto Futurista",
+    "th": "เฟอเธอร์ริสติค คอนเสิร์ต",
+    "vi": "Futuristic Concert"
+  },
+  "MST_LEADERSKILLS_6700_DESCRIPTION": {
+    "en": "Slight boost in critical hit damage & boost in damage dealt during Spark",
+    "es": "Aumento leve al daño por golpe crítico y al daño infligido durante Chispa",
+    "id": "Agak menambah kerusakan pukulan kritis & tambah merusak selama Percikan",
+    "pt": "Leve reforço no dano crítico e reforço no dano das fagulhas",
+    "th": "เพิ่มค่า ความเสียหายคริติคอล เล็กน้อย และ เพิ่มความเสียหายที่สร้างระหว่างสปาร์ค",
+    "vi": "Tăng nhẹ thiệt hại của đòn đánh trúng nguy hiểm & tăng thiệt hại khi ra đòn Spark"
+  },
+  "MST_LEADERSKILLS_6700_NAME": {
+    "en": "Sacred Sword's Hero",
+    "es": "Héroe de la espada sacra",
+    "id": "Pahlawan Pedang Suci",
+    "pt": "Herói da espada sagrada",
+    "th": "เซเครด ซอร์ดส์ ฮีโร่",
+    "vi": "Anh Hùng Kiếm Thiêng"
+  },
+  "MST_LEADERSKILLS_6800_DESCRIPTION": {
+    "en": "Fills BB gauge hugely after each turn & slightly recovers HP for 1 turn",
+    "es": "El indicador BB se llena notablemente después de cada turno. Recupera PV levemente durante un turno",
+    "id": "Amat mengisi meteran BB seusai tiap giliran & agak memulihkan HP 1 giliran",
+    "pt": "A barra de BB enche bastante a cada turno e recupera levemente HP por uma rodada",
+    "th": "เติมเกจ BB อย่างมากหลังจากแต่ละเทิร์น และ ฟื้นฟู HP เล็กน้อย นาน 1 เทิร์น",
+    "vi": "Nạp vạch Tăng cường can đảm rất nhiều sau mỗi lượt & phục hồi nhẹ Thể lực trong 1 lượt"
+  },
+  "MST_LEADERSKILLS_6800_NAME": {
+    "en": "Time Enough for Love",
+    "es": "Época para el amor",
+    "id": "Cukup Waktu untuk Cinta",
+    "pt": "Pausa para Amor",
+    "th": "ไทม์ อีนาฟ ฟอร์ เลิฟ",
+    "vi": "Đủ Thời Gian cho Tình Yêu"
+  },
+  "MST_LEADERSKILLS_6900_DESCRIPTION": {
+    "en": "Reduction in BB gauge required for BB & reduces the amount of BB gauge used during BB",
+    "es": "Reduce el indicador BB necesario para BB y reduce la cantidad del indicador BB usado durante BB",
+    "id": "Mengurangi syarat BB & mengurangi jumlah meteran BB yang dipakai selama BB",
+    "pt": "Redução na barra de BB necessária para o BB e redução do uso da barra de BB ao usar BB",
+    "th": "ลดความต้องการเกจ BB ที่ต้องการสำหรับ BB และ ลดปริมาณของเกจ BB ที่ใช้ระหว่าง BB",
+    "vi": "Giảm vạch Tăng cường can đảm cần có để Tăng cường can đảm & giảm lượng vạch Tăng cường can đảm được sử dụng khi Tăng cường can đảm"
+  },
+  "MST_LEADERSKILLS_6900_NAME": {
+    "en": "Child of the Sprites",
+    "es": "Niño de los duendes",
+    "id": "Anak Para Roh",
+    "pt": "Criança dos duendes",
+    "th": "ไชลด์ ออฟ เดอะ สไปรท์",
+    "vi": "Con của Tiên Nữ"
+  },
+  "MST_LEADERSKILLS_7000_DESCRIPTION": {
+    "en": "Boost in damage dealt to weak elements",
+    "es": "Aumenta el daño infligido a los enemigos debilitados",
+    "id": "Tambah merusak elemen lemah",
+    "pt": "Aumento no dano causado a elementos fracos",
+    "th": "เพิ่มความเสียหายที่สร้างกับธาตุที่แพ้ทาง",
+    "vi": "Tăng mức thiệt hại cho các yếu tố suy yếu"
+  },
+  "MST_LEADERSKILLS_7000_NAME": {
+    "en": "Ancient White Dragon",
+    "es": "Dragón blanco ancestral",
+    "id": "Naga Putih Kuno",
+    "pt": "Dragão branco ancião",
+    "th": "เอนเชี่ยน ไวท์ ดราก้อน",
+    "vi": "Bạch Long Cổ Xưa"
+  },
   "MST_LEADERSKILLS_700_DESCRIPTION": {
     "en": "25% boost to Atk Power of Lord Types",
     "es": "Aumenta un 25 % el ataque de las unidades de tipo Noble.",
@@ -8943,6 +9247,38 @@
     "th": "Pride of the Tsukiyama Family",
     "vi": "Pride of the Tsukiyama Family"
   },
+  "MST_LEADERSKILLS_830787_DESCRIPTION": {
+    "en": "90% all parameters, 150% spark damage, 100% critical and elemental damage reduction & negates all status ailments and Atk, Def, Rec reduction",
+    "es": "90% all parameters, 150% spark damage, 100% critical and elemental damage reduction & negates all status ailments and Atk, Def, Rec reduction",
+    "id": "90% all parameters, 150% spark damage, 100% critical and elemental damage reduction & negates all status ailments and Atk, Def, Rec reduction",
+    "pt": "90% all parameters, 150% spark damage, 100% critical and elemental damage reduction & negates all status ailments and Atk, Def, Rec reduction",
+    "th": "90% all parameters, 150% spark damage, 100% critical and elemental damage reduction & negates all status ailments and Atk, Def, Rec reduction",
+    "vi": "90% all parameters, 150% spark damage, 100% critical and elemental damage reduction & negates all status ailments and Atk, Def, Rec reduction"
+  },
+  "MST_LEADERSKILLS_830787_NAME": {
+    "en": "La Catrina",
+    "es": "La Catrina",
+    "id": "La Catrina",
+    "pt": "La Catrina",
+    "th": "La Catrina",
+    "vi": "La Catrina"
+  },
+  "MST_LEADERSKILLS_830788_DESCRIPTION": {
+    "en": "120% all parameters, 250% spark damage, 350% BB Atk, 100% critical and elemental damage reduction & negates all status ailments and Atk, Def, Rec reduction",
+    "es": "120% all parameters, 250% spark damage, 350% BB Atk, 100% critical and elemental damage reduction & negates all status ailments and Atk, Def, Rec reduction",
+    "id": "120% all parameters, 250% spark damage, 350% BB Atk, 100% critical and elemental damage reduction & negates all status ailments and Atk, Def, Rec reduction",
+    "pt": "120% all parameters, 250% spark damage, 350% BB Atk, 100% critical and elemental damage reduction & negates all status ailments and Atk, Def, Rec reduction",
+    "th": "120% all parameters, 250% spark damage, 350% BB Atk, 100% critical and elemental damage reduction & negates all status ailments and Atk, Def, Rec reduction",
+    "vi": "120% all parameters, 250% spark damage, 350% BB Atk, 100% critical and elemental damage reduction & negates all status ailments and Atk, Def, Rec reduction"
+  },
+  "MST_LEADERSKILLS_830788_NAME": {
+    "en": "Santa Muerte",
+    "es": "Santa Muerte",
+    "id": "Santa Muerte",
+    "pt": "Santa Muerte",
+    "th": "Santa Muerte",
+    "vi": "Santa Muerte"
+  },
   "MST_LEADERSKILLS_830900_DESCRIPTION": {
     "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Earth elemental damage, 15% damage reduction from Thunder types & negates all status ailments",
     "es": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Earth elemental damage, 15% damage reduction from Thunder types & negates all status ailments",
@@ -10447,6 +10783,22 @@
     "th": "I am a Ghoul",
     "vi": "I am a Ghoul"
   },
+  "MST_LEADERSKILLS_850788_DESCRIPTION": {
+    "en": "100% Atk, Def, max HP, 120% damage against status afflicted foes, 20% damage reduction for 1 turn when HP is below 50%, 150% critical damage & 30% OD gauge fill rate",
+    "es": "100% Atk, Def, max HP, 120% damage against status afflicted foes, 20% damage reduction for 1 turn when HP is below 50%, 150% critical damage & 30% OD gauge fill rate",
+    "id": "100% Atk, Def, max HP, 120% damage against status afflicted foes, 20% damage reduction for 1 turn when HP is below 50%, 150% critical damage & 30% OD gauge fill rate",
+    "pt": "100% Atk, Def, max HP, 120% damage against status afflicted foes, 20% damage reduction for 1 turn when HP is below 50%, 150% critical damage & 30% OD gauge fill rate",
+    "th": "100% Atk, Def, max HP, 120% damage against status afflicted foes, 20% damage reduction for 1 turn when HP is below 50%, 150% critical damage & 30% OD gauge fill rate",
+    "vi": "100% Atk, Def, max HP, 120% damage against status afflicted foes, 20% damage reduction for 1 turn when HP is below 50%, 150% critical damage & 30% OD gauge fill rate"
+  },
+  "MST_LEADERSKILLS_850788_NAME": {
+    "en": "Miss Jiangshi",
+    "es": "Miss Jiangshi",
+    "id": "Miss Jiangshi",
+    "pt": "Miss Jiangshi",
+    "th": "Miss Jiangshi",
+    "vi": "Miss Jiangshi"
+  },
   "MST_LEADERSKILLS_850808_DESCRIPTION": {
     "en": "120% boost to all parameters, negates critical and elemental damage, negates all status ailments and Atk, Def, Rec reduction effects, enormously boosts BB gauge each turn, 15% damage reduction & 20% boost to EXP gained",
     "es": "120% boost to all parameters, negates critical and elemental damage, negates all status ailments and Atk, Def, Rec reduction effects, enormously boosts BB gauge each turn, 15% damage reduction & 20% boost to EXP gained",
@@ -11008,12 +11360,12 @@
     "vi": "Black Devil Prodigy"
   },
   "MST_LEADERSKILLS_860568_DESCRIPTION": {
-    "en": "80% boost to Atk, max HP, greatly restores HP  for 2 turns when HP is below 50%, enormously boosts HC efficacy & 15% damage reduction from Light, Dark types",
-    "es": "80% boost to Atk, max HP, greatly restores HP  for 2 turns when HP is below 50%, enormously boosts HC efficacy & 15% damage reduction from Light, Dark types",
-    "id": "80% boost to Atk, max HP, greatly restores HP  for 2 turns when HP is below 50%, enormously boosts HC efficacy & 15% damage reduction from Light, Dark types",
-    "pt": "80% boost to Atk, max HP, greatly restores HP  for 2 turns when HP is below 50%, enormously boosts HC efficacy & 15% damage reduction from Light, Dark types",
-    "th": "80% boost to Atk, max HP, greatly restores HP  for 2 turns when HP is below 50%, enormously boosts HC efficacy & 15% damage reduction from Light, Dark types",
-    "vi": "80% boost to Atk, max HP, greatly restores HP  for 2 turns when HP is below 50%, enormously boosts HC efficacy & 15% damage reduction from Light, Dark types"
+    "en": "120% Atk, Rec, 80% max HP, restores HP for 2 turns when HP is below 50%, probable 1 KO resistance, 15% damage reduction from Light, Dark types & spark damage restores HP",
+    "es": "120% Atk, Rec, 80% max HP, restores HP for 2 turns when HP is below 50%, probable 1 KO resistance, 15% damage reduction from Light, Dark types & spark damage restores HP",
+    "id": "120% Atk, Rec, 80% max HP, restores HP for 2 turns when HP is below 50%, probable 1 KO resistance, 15% damage reduction from Light, Dark types & spark damage restores HP",
+    "pt": "120% Atk, Rec, 80% max HP, restores HP for 2 turns when HP is below 50%, probable 1 KO resistance, 15% damage reduction from Light, Dark types & spark damage restores HP",
+    "th": "120% Atk, Rec, 80% max HP, restores HP for 2 turns when HP is below 50%, probable 1 KO resistance, 15% damage reduction from Light, Dark types & spark damage restores HP",
+    "vi": "120% Atk, Rec, 80% max HP, restores HP for 2 turns when HP is below 50%, probable 1 KO resistance, 15% damage reduction from Light, Dark types & spark damage restores HP"
   },
   "MST_LEADERSKILLS_860568_NAME": {
     "en": "Hippocratic Oath",
@@ -89798,269 +90150,5 @@
     "pt": "Lilith Ciborgue",
     "th": "ไซบอร์กลิลิธ",
     "vi": "Người nửa máy Lilith"
-  },
-  "MST_MONSTERS_53204_NAME": {
-    "en": "Cyborg Lilith",
-    "es": "Androide Lilith",
-    "id": "Cyborg Lilith",
-    "pt": "Lilith Ciborgue",
-    "th": "ไซบอร์กลิลิธ",
-    "vi": "Cyborg Lilith"
-  },
-  "MST_MONSTERS_53205_NAME": {
-    "en": "Cyborg Lilith",
-    "es": "Cyborg Lilith",
-    "id": "Bilah Kerajaan Dolk",
-    "pt": "Cyborg Lilith",
-    "th": "ไซบอร์ก ลิลิธ",
-    "vi": "Cyborg Lilith"
-  },
-  "MST_MONSTERS_53250_NAME": {
-    "en": "Cyborg Lilith II",
-    "es": "Androide Lilith II",
-    "id": "Cyborg Lilith II",
-    "pt": "Lilith Ciborgue II",
-    "th": "ไซบอร์กลิลิธ II",
-    "vi": "Ng.nửa máy Lilith II"
-  },
-  "MST_MONSTERS_53251_NAME": {
-    "en": "Cyborg Lilith II",
-    "es": "Androide Lilith II",
-    "id": "Cyborg Lilith II",
-    "pt": "Lilith Ciborgue II",
-    "th": "ไซบอร์กลิลิธ II",
-    "vi": "Ng.nửa máy Lilith II"
-  },
-  "MST_MONSTERS_53252_NAME": {
-    "en": "Cyborg Lilith II",
-    "es": "Androide Lilith II",
-    "id": "Cyborg Lilith II",
-    "pt": "Lilith Ciborgue II",
-    "th": "ไซบอร์กลิลิธ II",
-    "vi": "Ng.nửa máy Lilith II"
-  },
-  "MST_MONSTERS_53253_NAME": {
-    "en": "Cyborg Lilith II",
-    "es": "Androide Lilith II",
-    "id": "Cyborg Lilith II",
-    "pt": "Lilith Ciborgue II",
-    "th": "ไซบอร์กลิธที่สอง",
-    "vi": "Cyborg Lilith II"
-  },
-  "MST_MONSTERS_53254_NAME": {
-    "en": "Cyborg Lilith II",
-    "es": "Androide Lilith II",
-    "id": "Cyborg Lilith II",
-    "pt": "Lilith Ciborgue II",
-    "th": "ไซบอร์กลิธที่สอง",
-    "vi": "Cyborg Lilith II"
-  },
-  "MST_MONSTERS_53255_NAME": {
-    "en": "Cyborg Lilith II",
-    "es": "Androide Lilith II",
-    "id": "Cyborg Lilith II",
-    "pt": "Lilith Ciborgue II",
-    "th": "ไซบอร์ก ลิลิธ ทู",
-    "vi": "Người Nửa Máy Lilith II"
-  },
-  "MST_MONSTERS_53256_NAME": {
-    "en": "Cyborg Lilith II",
-    "es": "Androide Lilith II",
-    "id": "Cyborg Lilith II",
-    "pt": "Lilith Ciborgue II",
-    "th": "ไซบอร์ก ลิลิธ ทู",
-    "vi": "Người Nửa Máy Lilith II"
-  },
-  "MST_MONSTERS_53257_NAME": {
-    "en": "Cyborg Lilith II",
-    "es": "Androide Lilith II",
-    "id": "Cyborg Lilith II",
-    "pt": "Lilith Ciborgue II",
-    "th": "ไซบอร์ก ลิลิธ ทู",
-    "vi": "Người Nửa Máy Lilith II"
-  },
-  "MST_MONSTERS_53258_NAME": {
-    "en": "Cyborg Lilith II",
-    "es": "Androide Lilith II",
-    "id": "Cyborg Lilith II",
-    "pt": "Lilith Ciborgue II",
-    "th": "ไซบอร์ก ลิลิธ ทู",
-    "vi": "Cyborg Lilith II"
-  },
-  "MST_MONSTERS_53259_NAME": {
-    "en": "Cyborg Lilith II",
-    "es": "Androide Lilith II",
-    "id": "Cyborg Lilith II",
-    "pt": "Lilith Ciborgue II",
-    "th": "ไซบอร์ก ลิลิธ ทู",
-    "vi": "Cyborg Lilith II"
-  },
-  "MST_MONSTERS_53260_NAME": {
-    "en": "Cyborg Lilith II",
-    "es": "Androide Lilith II",
-    "id": "Cyborg Lilith II",
-    "pt": "Lilith Ciborgue II",
-    "th": "ไซบอร์กลิลิธ II",
-    "vi": "Cyborg Lilith II"
-  },
-  "MST_MONSTERS_53261_NAME": {
-    "en": "Cyborg Lilith II",
-    "es": "Cyborg Lilith II",
-    "id": "Claymore Surgawi Dolk",
-    "pt": "Cyborg Lilith II",
-    "th": "ไซบอร์ก ลิลิธ II",
-    "vi": "Cyborg Lilith II"
-  },
-  "MST_MONSTERS_53262_NAME": {
-    "en": "Cyborg Lilith II",
-    "es": "Cyborg Lilith II",
-    "id": "Legenda Bumi Lance",
-    "pt": "Cyborg Lilith II",
-    "th": "ไซบอร์ก ลิลิธ II",
-    "vi": "Cyborg Lilith II"
-  },
-  "MST_MONSTERS_53263_NAME": {
-    "en": "Cyborg Lilith II",
-    "es": "Cyborg Lilith II",
-    "id": "Legenda Bumi Lance",
-    "pt": "Cyborg Lilith II",
-    "th": "ไซบอร์ก ลิลิธ II",
-    "vi": "Cyborg Lilith II"
-  },
-  "MST_MONSTERS_53264_NAME": {
-    "en": "Cyborg Lilith II",
-    "es": "Cyborg Lilith II",
-    "id": "Pahlawan Juara Estelle",
-    "pt": "Cyborg Lilith II",
-    "th": "ไซบอร์ก ลิลิธ II",
-    "vi": "Cyborg Lilith II"
-  },
-  "MST_MONSTERS_53265_NAME": {
-    "en": "Cyborg Lilith II",
-    "es": "Cyborg Lilith II",
-    "id": "Cyborg Lilith II",
-    "pt": "Cyborg Lilith II",
-    "th": "ไซบอร์ก ลิลิธ II",
-    "vi": "Cyborg Lilith II"
-  },
-  "MST_MONSTERS_53266_NAME": {
-    "en": "Cyborg Lilith II",
-    "es": "Cyborg Lilith II",
-    "id": "Cyborg Lilith II",
-    "pt": "Cyborg Lilith II",
-    "th": "ไซบอร์ก ลิลิธ II",
-    "vi": "Cyborg Lilith II"
-  },
-  "MST_MONSTERS_53300_NAME": {
-    "en": "Light Crystal",
-    "es": "Cristal lumínico",
-    "id": "Kristal Terang",
-    "pt": "Cristal da Luz",
-    "th": "ไลท์คริสตัล",
-    "vi": "Quang pha lê"
-  },
-  "MST_MONSTERS_53301_NAME": {
-    "en": "Light Crystal",
-    "es": "Cristal lumínico",
-    "id": "Kristal Terang",
-    "pt": "Cristal da Luz",
-    "th": "ไลท์คริสตัล",
-    "vi": "Quang pha lê"
-  },
-  "MST_MONSTERS_53302_NAME": {
-    "en": "Moody Crystal",
-    "es": "Cristal voluble",
-    "id": "Kristal Moody",
-    "pt": "Cristal Taciturno",
-    "th": "มูดดี้คริสตัล",
-    "vi": "Pha lê tâm trạng"
-  },
-  "MST_MONSTERS_53303_NAME": {
-    "en": "Light Crystal",
-    "es": "Cristal lumínico",
-    "id": "Kristal Terang",
-    "pt": "Cristal da Luz",
-    "th": "ไลท์คริสตัล",
-    "vi": "Quang pha lê"
-  },
-  "MST_MONSTERS_53304_NAME": {
-    "en": "Light Crystal",
-    "es": "Cristal lumínico",
-    "id": "Kristal Terang",
-    "pt": "Cristal da Luz",
-    "th": "ไลท์คริสตัล",
-    "vi": "Light Crystal"
-  },
-  "MST_MONSTERS_53350_NAME": {
-    "en": "Saint Maria",
-    "es": "Santa María",
-    "id": "Santa Maria",
-    "pt": "Santa Maria",
-    "th": "เซนต์มาเรีย",
-    "vi": "Thánh Maria"
-  },
-  "MST_MONSTERS_53351_NAME": {
-    "en": "Saint Maria",
-    "es": "Santa María",
-    "id": "Santa Maria",
-    "pt": "Santa Maria",
-    "th": "เซนต์มาเรีย",
-    "vi": "Thánh Maria"
-  },
-  "MST_MONSTERS_53352_NAME": {
-    "en": "Saint Maria",
-    "es": "Santa María",
-    "id": "Santa Maria",
-    "pt": "Santa Maria",
-    "th": "เซนต์มาเรีย",
-    "vi": "Thánh Maria"
-  },
-  "MST_MONSTERS_53353_NAME": {
-    "en": "Saint Maria",
-    "es": "Santa María",
-    "id": "Santa Maria",
-    "pt": "Santa Maria",
-    "th": "เซนต์มาเรีย",
-    "vi": "Thánh Maria"
-  },
-  "MST_MONSTERS_53354_NAME": {
-    "en": "Saint Maria",
-    "es": "Santa María",
-    "id": "Santa Maria",
-    "pt": "Santa Maria",
-    "th": "เซนต์มาเรีย",
-    "vi": "Thánh Maria"
-  },
-  "MST_MONSTERS_53355_NAME": {
-    "en": "Saint Maria",
-    "es": "Santa María",
-    "id": "Santa Maria",
-    "pt": "Santa Maria",
-    "th": "เซนต์มาเรีย",
-    "vi": "Thánh Maria"
-  },
-  "MST_MONSTERS_53356_NAME": {
-    "en": "Saint Maria",
-    "es": "Santa María",
-    "id": "Santa Maria",
-    "pt": "Santa Maria",
-    "th": "เซนต์มาเรีย",
-    "vi": "Thánh Maria"
-  },
-  "MST_MONSTERS_53357_NAME": {
-    "en": "Saint Maria",
-    "es": "Santa María",
-    "id": "Santa Maria",
-    "pt": "Santa Maria",
-    "th": "เซนต์มาเรีย",
-    "vi": "Thánh Maria"
-  },
-  "MST_MONSTERS_53358_NAME": {
-    "en": "Saint Maria",
-    "es": "Santa María",
-    "id": "Santa Maria",
-    "pt": "Santa Maria",
-    "th": "เซนต์มาเรีย",
-    "vi": "Thánh Maria"
   }
 }
