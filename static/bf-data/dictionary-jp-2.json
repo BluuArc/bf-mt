@@ -1,4 +1,124 @@
 {
+  "MST_LEADERSKILLS_5802_NAME": {
+    "en": "White Notes",
+    "es": "White Notes",
+    "id": "Catatan Putih",
+    "pt": "White Notes",
+    "th": "ไวท์ โน้ต",
+    "vi": "White Notes"
+  },
+  "MST_LEADERSKILLS_5803_DESCRIPTION": {
+    "en": "Greatly boosts Spark damage, boosts BB gauge & boosts BB Atk when Sparks have exceeded certain amount for next turn",
+    "es": "Greatly boosts Spark damage, boosts BB gauge & boosts BB Atk when Sparks have exceeded certain amount for next turn",
+    "id": "Amat menambah kerusakan Percikan, menambah meteran BB & menambah BB Serang saat Percikan melampaui jumlah tertentu untuk giliran berikutnya",
+    "pt": "Greatly boosts Spark damage, boosts BB gauge & boosts BB Atk when Sparks have exceeded certain amount for next turn",
+    "th": "เร่งบีบีเกจอย่างมากจากสปาร์คดาเมจ, เร่ง BB เกจ, เพิ่ม BB Atk เมื่อสปาร์คถึงจำนวนที่ต้องการในเทิร์นถัดไป",
+    "vi": "Greatly boosts Spark damage, boosts BB gauge & boosts BB Atk when Sparks have exceeded certain amount for next turn"
+  },
+  "MST_LEADERSKILLS_5803_NAME": {
+    "en": "Black Notes",
+    "es": "Black Notes",
+    "id": "Catatan Hitam",
+    "pt": "Black Notes",
+    "th": "แบล็ค โน้ต",
+    "vi": "Black Notes"
+  },
+  "MST_LEADERSKILLS_5900_DESCRIPTION": {
+    "en": "20% boost to Atk, Def, Rec and max HP of all Units when 6 elements or more are present",
+    "es": "20% de aumento al poder de ataque, a la defensa, a la recuperación y a los PS de todas las unidades en presencia de 6 o más elementos",
+    "id": "Menambah 20% Serang, Tahan, Pulih, maks HP semua Unit saat ada 6 elemen atau lebih",
+    "pt": "Bônus de 20% em ATQ, DEF, REC e HP máximo de todas as unidades quando 6 ou mais elementos estão presentes",
+    "th": "20% เพิ่มค่า โจมตี, ป้องกัน, ฟื้นฟู และ HP สูงสุด ของทุกยูนิต เมื่อมียูนิตในทีมตั้งแต่ 6 ธาตุขึ้นไป",
+    "vi": "Tăng 20% sức Tấn công, Phòng thủ, Phục hồi và Thể lực tối đa của tất cả các Quái khi có 6 yếu tố hoặc nhiều hơn"
+  },
+  "MST_LEADERSKILLS_5900_NAME": {
+    "en": "Authority of Six",
+    "es": "Autoridad de los Seis",
+    "id": "Otoritas Enam",
+    "pt": "Autoridade dos Seis",
+    "th": "ออโธริตี้ออฟซิกส์",
+    "vi": "Quyền năng của sáu"
+  },
+  "MST_LEADERSKILLS_5901_DESCRIPTION": {
+    "en": "25% boost to Atk, Def, Rec and max HP of all Units when 6 elements or more are present",
+    "es": "25% de aumento al poder de ataque, a la defensa, a la recuperación y a los PS de todas las unidades en presencia de 6 o más elementos",
+    "id": "Menambah 25% Serang, Tahan, Pulih, maks HP semua Unit saat ada 6 elemen atau lebih",
+    "pt": "Bônus de 25% em ATQ, DEF, REC e HP máximo de todas as unidades quando 6 ou mais elementos estão presentes",
+    "th": "25% เพิ่มค่า โจมตี, ป้องกัน, ฟื้นฟู และ HP สูงสุด ของทุกยูนิต เมื่อมียูนิตในทีมตั้งแต่ 6 ธาตุขึ้นไป",
+    "vi": "Tăng 25% sức Tấn công, Phòng thủ, Phục hồi và Thể lực tối đa của tất cả các Quái khi có 6 yếu tố hoặc nhiều hơn"
+  },
+  "MST_LEADERSKILLS_5901_NAME": {
+    "en": "Authority of the Six Gods",
+    "es": "Autoridad de los Seis dioses",
+    "id": "Otoritas Enam Dewa",
+    "pt": "Autoridade dos Seis Deuses",
+    "th": "ออโธริตี้ออฟเดอะซิกส์ก็อด",
+    "vi": "Quyền lực của Sáu Chúa Thần"
+  },
+  "MST_LEADERSKILLS_5902_DESCRIPTION": {
+    "en": "30% boost to Atk, Def, Rec and max HP of all Units when 6 elements are present",
+    "es": "30% boost to Atk, Def, Rec and max HP of all Units when 6 elements are present",
+    "id": "30% ekstra Serang, Tahan, Pulih, dan HP maks semua Unit saat ada 6 elemen",
+    "pt": "30% boost to Atk, Def, Rec and max HP of all Units when 6 elements are present",
+    "th": "30% เพิ่มพลังโจมตี, ป้องกัน, Rec และ HP สูงสุดเมื่อมียูนิตครบ 6 ธาตุในทีม",
+    "vi": "30% boost to Atk, Def, Rec and max HP of all Units when 6 elements are present"
+  },
+  "MST_LEADERSKILLS_5902_NAME": {
+    "en": "Supremacy of the Six Gods",
+    "es": "Supremacy of the Six Gods",
+    "id": "Supremasi Enam Dewa",
+    "pt": "Supremacy of the Six Gods",
+    "th": "ซูพรีมาซี่ ออฟ เดอะ ซิก ก็อดส์",
+    "vi": "Supremacy of the Six Gods"
+  },
+  "MST_LEADERSKILLS_6000_DESCRIPTION": {
+    "en": "50% boost to Atk power when 6 elements or more are present",
+    "es": "50% de aumento al poder de ataque en presencia de 6 o más elementos",
+    "id": "Menambah 50% kekuatan Serangan saat ada 6 elemen atau lebih",
+    "pt": "Bônus de 50% no ATQ quando 6 ou mais elementos estão presentes",
+    "th": "50% เพิ่มค่า พลังโจมตี เมื่อมียูนิตในทีมตั้งแต่ 6 ธาตุขึ้นไป",
+    "vi": "Tăng 50% sức Tấn công khi có 6 yếu tố hoặc nhiều hơn"
+  },
+  "MST_LEADERSKILLS_6000_NAME": {
+    "en": "Power of Six",
+    "es": "Poder de los Seis",
+    "id": "Kekuatan Enam",
+    "pt": "Poder dos Seis",
+    "th": "พาวเวอร์ออฟซิกส์",
+    "vi": "Sức mạnh của sáu"
+  },
+  "MST_LEADERSKILLS_6001_DESCRIPTION": {
+    "en": "75% boost to Atk power when 6 elements or more are present",
+    "es": "75% de aumento al poder de ataque en presencia de 6 o más elementos",
+    "id": "Menambah 75% kekuatan Serangan saat ada 6 elemen atau lebih",
+    "pt": "Bônus de 75% no ATQ quando 6 ou mais elementos estão presentes",
+    "th": "75% เพิ่มค่า พลังโจมตี เมื่อมียูนิตในทีมตั้งแต่ 6 ธาตุขึ้นไป",
+    "vi": "Tăng 75% sức Tấn công khi có 6 yếu tố hoặc nhiều hơn"
+  },
+  "MST_LEADERSKILLS_6001_NAME": {
+    "en": "Power of the Six Gods",
+    "es": "Poder de los Seis dioses",
+    "id": "Kekuatan Enam Dewa",
+    "pt": "Poder dos Seis Deuses",
+    "th": "พาวเวอร์ออฟเดอะซิกส์ก็อด",
+    "vi": "Sức mạnh của Sáu Chúa Thần"
+  },
+  "MST_LEADERSKILLS_6002_DESCRIPTION": {
+    "en": "100% boost to Atk power of all Units when 6 elements are present",
+    "es": "100% boost to Atk power of all Units when 6 elements are present",
+    "id": "100% ekstra kekuatan Serangan semua Unit saat ada 6 elemen",
+    "pt": "100% boost to Atk power of all Units when 6 elements are present",
+    "th": "100% เพิ่มพลังโจมตี, ป้องกัน, Rec และ HP สูงสุดเมื่อมียูนิตครบ 6 ธาตุในทีม",
+    "vi": "100% boost to Atk power of all Units when 6 elements are present"
+  },
+  "MST_LEADERSKILLS_6002_NAME": {
+    "en": "Might of the Six Gods",
+    "es": "Might of the Six Gods",
+    "id": "Kekuatan Enam Dewa",
+    "pt": "Might of the Six Gods",
+    "th": "ไมท์ ออฟ เดอะ ซิก ก็อดส์",
+    "vi": "Might of the Six Gods"
+  },
   "MST_LEADERSKILLS_600_DESCRIPTION": {
     "en": "10% reduction in damage Taken",
     "es": "Reduce un 10 % el daño infligido a tus unidades.",
@@ -10750,6 +10870,38 @@
     "pt": "Guardian of Mankind",
     "th": "Guardian of Mankind",
     "vi": "Guardian of Mankind"
+  },
+  "MST_LEADERSKILLS_850757_DESCRIPTION": {
+    "en": "120% Def, Rec, max HP (Light), 10% damage reduction from Light, Dark types, 150% spark damage & spark damage restores HP",
+    "es": "120% Def, Rec, max HP (Light), 10% damage reduction from Light, Dark types, 150% spark damage & spark damage restores HP",
+    "id": "120% Def, Rec, max HP (Light), 10% damage reduction from Light, Dark types, 150% spark damage & spark damage restores HP",
+    "pt": "120% Def, Rec, max HP (Light), 10% damage reduction from Light, Dark types, 150% spark damage & spark damage restores HP",
+    "th": "120% Def, Rec, max HP (Light), 10% damage reduction from Light, Dark types, 150% spark damage & spark damage restores HP",
+    "vi": "120% Def, Rec, max HP (Light), 10% damage reduction from Light, Dark types, 150% spark damage & spark damage restores HP"
+  },
+  "MST_LEADERSKILLS_850757_NAME": {
+    "en": "Lasersaw Journeyman",
+    "es": "Lasersaw Journeyman",
+    "id": "Lasersaw Journeyman",
+    "pt": "Lasersaw Journeyman",
+    "th": "Lasersaw Journeyman",
+    "vi": "Lasersaw Journeyman"
+  },
+  "MST_LEADERSKILLS_850758_DESCRIPTION": {
+    "en": "140% Def, Rec, max HP (Light), 20% damage reduction from Light, Dark types, spark damage fills BB gauge and restores HP & 250% spark damage",
+    "es": "140% Def, Rec, max HP (Light), 20% damage reduction from Light, Dark types, spark damage fills BB gauge and restores HP & 250% spark damage",
+    "id": "140% Def, Rec, max HP (Light), 20% damage reduction from Light, Dark types, spark damage fills BB gauge and restores HP & 250% spark damage",
+    "pt": "140% Def, Rec, max HP (Light), 20% damage reduction from Light, Dark types, spark damage fills BB gauge and restores HP & 250% spark damage",
+    "th": "140% Def, Rec, max HP (Light), 20% damage reduction from Light, Dark types, spark damage fills BB gauge and restores HP & 250% spark damage",
+    "vi": "140% Def, Rec, max HP (Light), 20% damage reduction from Light, Dark types, spark damage fills BB gauge and restores HP & 250% spark damage"
+  },
+  "MST_LEADERSKILLS_850758_NAME": {
+    "en": "Lightwright Extraordinaire",
+    "es": "Lightwright Extraordinaire",
+    "id": "Lightwright Extraordinaire",
+    "pt": "Lightwright Extraordinaire",
+    "th": "Lightwright Extraordinaire",
+    "vi": "Lightwright Extraordinaire"
   },
   "MST_LEADERSKILLS_850767_DESCRIPTION": {
     "en": "120% boost to all parameters, enormously boosts Thunder, Light elemental damage, raises Atk parameter limits to 130000 & 15% additional damage reduction",
@@ -90070,85 +90222,5 @@
     "pt": "Sola",
     "th": "โซล่า",
     "vi": "Sola"
-  },
-  "MST_MONSTERS_53100_NAME": {
-    "en": "Ray Sibyl Sola",
-    "es": "Sibila del rayo Sola",
-    "id": "Sibyl Sinar Sola",
-    "pt": "Sola Sibila do Raio",
-    "th": "เรย์ซิบบิลโซล่า",
-    "vi": "Tia thần nữ Sola"
-  },
-  "MST_MONSTERS_53101_NAME": {
-    "en": "Ray Sibyl Sola",
-    "es": "Sibila del rayo Sola",
-    "id": "Sibyl Sinar Sola",
-    "pt": "Sola Sibila do Raio",
-    "th": "เรย์ซิบบิลโซล่า",
-    "vi": "Tia thần nữ Sola"
-  },
-  "MST_MONSTERS_53102_NAME": {
-    "en": "Ray Sibyl Sola",
-    "es": "Sibila del rayo Sola",
-    "id": "Sibyl Sinar Sola",
-    "pt": "Sola Sibila do Raio",
-    "th": "เรย์ซิบบิลโซล่า",
-    "vi": "Tia thần nữ Sola"
-  },
-  "MST_MONSTERS_53103_NAME": {
-    "en": "Ray Sibyl Sola",
-    "es": "Sibila del rayo Sola",
-    "id": "Sibyl Sinar Sola",
-    "pt": "Sola Sibila do Raio",
-    "th": "เรย์ซิบบิลโซล่า",
-    "vi": "Tia thần nữ Sola"
-  },
-  "MST_MONSTERS_53104_NAME": {
-    "en": "Ray Sibyl Sola",
-    "es": "Sibila del rayo Sola",
-    "id": "Sibyl Sinar Sola",
-    "pt": "Sola Sibila do Raio",
-    "th": "เรย์ซิบบิลโซล่า",
-    "vi": "Tia thần nữ Sola"
-  },
-  "MST_MONSTERS_53154_NAME": {
-    "en": "Sky Queen Vanila",
-    "es": "Reina del cielo Vanila",
-    "id": "Ratu Langit Vanila",
-    "pt": "Rainha do Céu Vanila",
-    "th": "สกายควีนวานิลา",
-    "vi": "NữhoàngbầutrờiVanila"
-  },
-  "MST_MONSTERS_53200_NAME": {
-    "en": "Cyborg Lilith",
-    "es": "Androide Lilith",
-    "id": "Cyborg Lilith",
-    "pt": "Lilith Ciborgue",
-    "th": "ไซบอร์กลิลิธ",
-    "vi": "Người nửa máy Lilith"
-  },
-  "MST_MONSTERS_53201_NAME": {
-    "en": "Cyborg Lilith",
-    "es": "Androide Lilith",
-    "id": "Cyborg Lilith",
-    "pt": "Lilith Ciborgue",
-    "th": "ไซบอร์กลิลิธ",
-    "vi": "Người nửa máy Lilith"
-  },
-  "MST_MONSTERS_53202_NAME": {
-    "en": "Cyborg Lilith",
-    "es": "Androide Lilith",
-    "id": "Cyborg Lilith",
-    "pt": "Lilith Ciborgue",
-    "th": "ไซบอร์กลิลิธ",
-    "vi": "Người nửa máy Lilith"
-  },
-  "MST_MONSTERS_53203_NAME": {
-    "en": "Cyborg Lilith",
-    "es": "Androide Lilith",
-    "id": "Cyborg Lilith",
-    "pt": "Lilith Ciborgue",
-    "th": "ไซบอร์กลิลิธ",
-    "vi": "Người nửa máy Lilith"
   }
 }

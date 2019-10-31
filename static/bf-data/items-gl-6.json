@@ -1548,7 +1548,12 @@
     "sphere type text": "Special",
     "thumbnail": "sphere_thum_5_9.png",
     "type": "sphere",
-    "usage": []
+    "usage": [
+      {
+        "id": 819285,
+        "name": "Divine Master Gate"
+      }
+    ]
   },
   "62000": {
     "desc": "30% boost to all parameters, Spark damage and damage taken may considerably boost BB gauge & 50% boost to Spark damage",
