@@ -1,4 +1,276 @@
 {
+  "MST_LEADERSKILLS_5544_NAME": {
+    "en": "Mysterious Coincidence",
+    "es": "Mysterious Coincidence",
+    "id": "Kebetulan Misterius",
+    "pt": "Mysterious Coincidence",
+    "th": "มิสทีเรียส คอยน์ซิเดนซ์",
+    "vi": "Mysterious Coincidence"
+  },
+  "MST_LEADERSKILLS_5545_DESCRIPTION": {
+    "en": "60% boost to max HP, boosts Atk, Def, Rec relative to remaining HP & boosts Atk, Def, Rec each turn for up to 3 turns",
+    "es": "60% boost to max HP, boosts Atk, Def, Rec relative to remaining HP & boosts Atk, Def, Rec each turn for up to 3 turns",
+    "id": "60% ekstra HP maks, menambah Serang, Tahan, Pulih sesuai sisa HP & menambah Serang, Tahan, Pulih tiap giliran hingga 3 giliran",
+    "pt": "60% boost to max HP, boosts Atk, Def, Rec relative to remaining HP & boosts Atk, Def, Rec each turn for up to 3 turns",
+    "th": "60% เพิ่มค่าให้ HP สูงสุด, เพิ่มค่า โจมตี, ป้องกัน, ฟื้นฟู สัมพันธ์กับ HP ที่เหลืออยู่ กับ เพิ่มค่า โจมตี, ป้องกัน, ฟื้นฟู แต่ละเทิร์น นานมากถึง 3 เทิร์น",
+    "vi": "60% boost to max HP, boosts Atk, Def, Rec relative to remaining HP & boosts Atk, Def, Rec each turn for up to 3 turns"
+  },
+  "MST_LEADERSKILLS_5545_NAME": {
+    "en": "Sea God's Wrath",
+    "es": "Sea God's Wrath",
+    "id": "Murka Dewa Laut",
+    "pt": "Sea God's Wrath",
+    "th": "ซี ก็อดส์ ฮราธ",
+    "vi": "Sea God's Wrath"
+  },
+  "MST_LEADERSKILLS_5546_DESCRIPTION": {
+    "en": "80% boost to max HP, considerably boosts Atk, Def, Rec relative to remaining HP, boosts Atk, Def, Rec each turn for up to 3 turns & 130% boost to Spark damage",
+    "es": "80% boost to max HP, considerably boosts Atk, Def, Rec relative to remaining HP, boosts Atk, Def, Rec each turn for up to 3 turns & 130% boost to Spark damage",
+    "id": "80% ekstra HP maks, menambah Serang, Tahan, Pulih sesuai sisa HP, menambah Serang, Tahan, Pulih tiap giliran hingga 3 giliran & 130% ekstra kerusakan Percikan",
+    "pt": "80% boost to max HP, considerably boosts Atk, Def, Rec relative to remaining HP, boosts Atk, Def, Rec each turn for up to 3 turns & 130% boost to Spark damage",
+    "th": "80% เพิ่มค่าให้ HP สูงสุด, เพิ่มค่าอย่างมากให้ โจมตี, ป้องกัน, ฟื้นฟู สัมพันธ์กับ HP ที่เหลืออยู่, เพิ่มค่า โจมตี, ป้องกัน, ฟื้นฟู แต่ละเทิร์น นานมากถึง 3 เทิร์น กับ 130% เพิ่มค่าให้ ความเสียหายสปาร์ค",
+    "vi": "80% boost to max HP, considerably boosts Atk, Def, Rec relative to remaining HP, boosts Atk, Def, Rec each turn for up to 3 turns & 130% boost to Spark damage"
+  },
+  "MST_LEADERSKILLS_5546_NAME": {
+    "en": "Sea God's Roar",
+    "es": "Sea God's Roar",
+    "id": "Raungan Dewa Laut",
+    "pt": "Sea God's Roar",
+    "th": "ซี ก็อดส์ รอร์",
+    "vi": "Sea God's Roar"
+  },
+  "MST_LEADERSKILLS_554_DESCRIPTION": {
+    "en": "15% damage reduction from Dark types, hugely boosts Light Type elemental damage & 100% boost to Spark damage",
+    "es": "15% damage reduction from Dark types, hugely boosts Light Type elemental damage & 100% boost to Spark damage",
+    "id": "15% kurangi kerusakan dari tipe Gelap, amat menamah kerusakan elemen Terang & 100% ekstra kerusakan Percikan",
+    "pt": "15% damage reduction from Dark types, hugely boosts Light Type elemental damage & 100% boost to Spark damage",
+    "th": "15% ลดความเสียหายจาก ชนิด มืด, เพิ่มค่าอย่างสูงกับ ชนิด แสง ความเสียหายธาตุ และ 100% เพิ่มค่าให้กับ ความเสียหายสปาร์ค",
+    "vi": "15% damage reduction from Dark types, hugely boosts Light Type elemental damage & 100% boost to Spark damage"
+  },
+  "MST_LEADERSKILLS_554_NAME": {
+    "en": "Royal Flash Conviction",
+    "es": "Royal Flash Conviction",
+    "id": "Keyakinan Flash Ningrat",
+    "pt": "Royal Flash Conviction",
+    "th": "รอยัล แฟลช คอนวิคชั่น",
+    "vi": "Royal Flash Conviction"
+  },
+  "MST_LEADERSKILLS_555_DESCRIPTION": {
+    "en": "15% reduction in damage from Light types, hugely boosts Dark Type elemental damage & considerably boosts OD gauge fill rate",
+    "es": "15% reduction in damage from Light types, hugely boosts Dark Type elemental damage & considerably boosts OD gauge fill rate",
+    "id": "15% kurangi kerusakan dari tipe Terang, amat menamah kerusakan elemenGelap & lumayan menambah laju pengisian meteran OD",
+    "pt": "15% reduction in damage from Light types, hugely boosts Dark Type elemental damage & considerably boosts OD gauge fill rate",
+    "th": "15% ลดค่าความเสียหายจาก ชนิด แสง, เพิ่มค่าอย่างสูงกับ ชนิด มืด ความเสียหายธาตุ และ เพิ่ม อัตราเติม เกจ OD อย่างมาก",
+    "vi": "15% reduction in damage from Light types, hugely boosts Dark Type elemental damage & considerably boosts OD gauge fill rate"
+  },
+  "MST_LEADERSKILLS_555_NAME": {
+    "en": "Shadow King's Conviction",
+    "es": "Shadow King's Conviction",
+    "id": "Keyakinan Raja Bayangan",
+    "pt": "Shadow King's Conviction",
+    "th": "ชาโดว์ คิง คอนวิคชั่น",
+    "vi": "Shadow King's Conviction"
+  },
+  "MST_LEADERSKILLS_5600_DESCRIPTION": {
+    "en": "25% boost to Atk of all Light and Dark Units",
+    "es": "25% de aumento al poder de ataque de las unidades lumínicas y oscuras",
+    "id": "Menambah 25% Serangan semua Unit Terang dan Gelap",
+    "pt": "Bônus de 25% no ATQ de unidades dos tipos Sombra e Luz",
+    "th": "25% เพิ่มค่า โจมตี ของยูนิตแสง กับ มืด ทั้งหมด",
+    "vi": "Tăng 25% sức mạnh Tấn công của tất cả các Quái Ánh sáng và Bóng tối"
+  },
+  "MST_LEADERSKILLS_5600_NAME": {
+    "en": "Fallen Emperor's Power",
+    "es": "Poder del emperador caído",
+    "id": "Kekuatan Kaisar Sesat",
+    "pt": "Poder do Imperador Derrotado",
+    "th": "ฟอลเล่นเอ็มเพอเรอร์พาวเวอร์",
+    "vi": "Sức mạnh Đọa Lạc Đế Hoàng"
+  },
+  "MST_LEADERSKILLS_5601_DESCRIPTION": {
+    "en": "50% boost to Atk of all Light and Dark Units",
+    "es": "50% de aumento al poder de ataque de las unidades lumínicas y oscuras",
+    "id": "Menambah 50% Serangan semua Unit Terang dan Gelap",
+    "pt": "Bônus de 50% no ATQ de unidades dos tipos Sombra e Luz",
+    "th": "50% เพิ่มค่า โจมตี ของยูนิตแสง กับ มืด ทั้งหมด",
+    "vi": "Tăng 50% sức mạnh Tấn công của tất cả các Quái Ánh sáng và Bóng tối"
+  },
+  "MST_LEADERSKILLS_5601_NAME": {
+    "en": "Fallen God's Power",
+    "es": "Poder del dios caído",
+    "id": "Kekuatan Dewa Sesat",
+    "pt": "Poder do Deus Caído",
+    "th": "ฟอลเล่นก็อดส์พาวเวอร์",
+    "vi": "Sức mạnh Đọa Lạc Chúa Thần"
+  },
+  "MST_LEADERSKILLS_5602_DESCRIPTION": {
+    "en": "50% boost to Atk of all Light and Dark Units & 10% reduction in damage from Light and Dark Types",
+    "es": "50% de aumento al poder de ataque de las unidades lumínicas y oscuras y 10% de reducción al daño de los ataques oscuros y lumínicos",
+    "id": "Menambah 50% Serangan semua Unit Terang dan Gelap & mengurangi 10% kerusakan dari Tipe Terang & Gelap",
+    "pt": "Bônus de 50% no ATQ de unidades dos tipos Sombra e Luz e 10% de redução no dano recebido de tipos Luz e Sombra",
+    "th": "50% เพิ่มค่า โจมตี ของยูนิตแสง กับ มืด ทั้งหมด และ ลดความเสียหายจากธาตุ แสง กับ มืด ลง 10%",
+    "vi": "Tăng 50% sức mạnh Tấn công của tất cả các Quái Ánh Sáng và Bóng Tối & giảm 10% thiệt hại do hệ Quang và hệ Bóng Tối"
+  },
+  "MST_LEADERSKILLS_5602_NAME": {
+    "en": "Fallen God's Authority",
+    "es": "Autoridad del dios caído",
+    "id": "Otoritas Dewa Sesat",
+    "pt": "Autoridade do Deus Caído",
+    "th": "ฟอลเล่นก็อดส์ออโธริตี้",
+    "vi": "Quyền lực Đọa Lạc Chúa Thần"
+  },
+  "MST_LEADERSKILLS_5700_DESCRIPTION": {
+    "en": "Slight boost in the BB gauge when attacked",
+    "es": "Leve aumento del indicador BB al recibir un ataque",
+    "id": "Agak menambah meteran BB saat diserang",
+    "pt": "Pequeno bônus no preenchimento da barra de BB ao ser atacado",
+    "th": "เพิ่มเกจ BB เล็กน้อยเมื่อโจมตี",
+    "vi": "Tăng nhẹ vạch BB khi bị tấn công"
+  },
+  "MST_LEADERSKILLS_5700_NAME": {
+    "en": "Ares' Howl",
+    "es": "Aullido de Ares",
+    "id": "Raungan Ares",
+    "pt": "Uivo de Ares",
+    "th": "อาเรสฮาวล์",
+    "vi": "Tiếng gào thét của Ares"
+  },
+  "MST_LEADERSKILLS_5701_DESCRIPTION": {
+    "en": "Boost in the BB gauge when attacked",
+    "es": "Aumento del indicador BB al recibir un ataque",
+    "id": "Menambah meteran BB saat diserang",
+    "pt": "Bônus no preenchimento da barra de BB ao ser atacado",
+    "th": "เพิ่มเกจ BB เมื่อโจมตี",
+    "vi": "Tăng vạch BB khi bị tấn công"
+  },
+  "MST_LEADERSKILLS_5701_NAME": {
+    "en": "Ares' Rage",
+    "es": "Ira de Ares",
+    "id": "Murka Ares",
+    "pt": "Fúria de Ares",
+    "th": "อาเรสเรจ",
+    "vi": "Cơn thịnh nộ của Ares"
+  },
+  "MST_LEADERSKILLS_5702_DESCRIPTION": {
+    "en": "Large boost in the BB gauge when attacked",
+    "es": "Gran aumento del indicador BB al recibir un ataque",
+    "id": "Amat menambah meteran BB saat diserang",
+    "pt": "Grande bônus no preenchimento da barra de BB ao ser atacado",
+    "th": "เพิ่มเกจ BB อย่างมากเมื่อโจมตี",
+    "vi": "Tăng mạnh vạch BB khi bị tấn công"
+  },
+  "MST_LEADERSKILLS_5702_NAME": {
+    "en": "Ares' Echo",
+    "es": "Eco de Ares",
+    "id": "Gema Ares",
+    "pt": "Eco de Ares",
+    "th": "อาเรสเอคโค่",
+    "vi": "Tiếng vọng của Ares"
+  },
+  "MST_LEADERSKILLS_5703_DESCRIPTION": {
+    "en": "Boost in the BB gauge when attacked & boosts the BB gauge fill rate",
+    "es": "Aumento del indicador BB al recibir un ataque. Aumenta el índice de llenado del indicador BB",
+    "id": "Peningkatan meteran BB saat diserang & menambah kecepatan mengisi meteran BB",
+    "pt": "Bônus no preenchimento da barra de BB ao ser atacado e bônus na taxa de preenchimento da barra de BB",
+    "th": "เพิ่มเกจ BB เมื่อถูกโจมตี และ เพิ่มค่า อัตราการเติมเกจ BB",
+    "vi": "Tăng vạch Tăng cường can đảm khi bị tấn công & tăng tốc độ nạp vạch Tăng cường can đảm"
+  },
+  "MST_LEADERSKILLS_5703_NAME": {
+    "en": "Ares' Aurora",
+    "es": "Aurora de Ares",
+    "id": "Aurora Ares",
+    "pt": "Aurora de Ares",
+    "th": "อาเรส ออโรร่า",
+    "vi": "Nữ Thần Rạng Đông của Ares"
+  },
+  "MST_LEADERSKILLS_5704_DESCRIPTION": {
+    "en": "Boosts BB gauge when attacked & greatly boosts efficacy of HC",
+    "es": "Boosts BB gauge when attacked & greatly boosts efficacy of HC",
+    "id": "Menambah meteran BB saat diserang & amat menambah keampuhan HC",
+    "pt": "Boosts BB gauge when attacked & greatly boosts efficacy of HC",
+    "th": "เพิ่มบีบีเกจเมื่อถูกโจมตี, เพิ่มประสิทธิภาพของ HC",
+    "vi": "Boosts BB gauge when attacked & greatly boosts efficacy of HC"
+  },
+  "MST_LEADERSKILLS_5704_NAME": {
+    "en": "Tolerant Heart",
+    "es": "Tolerant Heart",
+    "id": "Hati Toleran",
+    "pt": "Tolerant Heart",
+    "th": "โทเลอแรนท์ ฮาร์ท",
+    "vi": "Tolerant Heart"
+  },
+  "MST_LEADERSKILLS_5705_DESCRIPTION": {
+    "en": "Boosts BB gauge when attacked & hugely boosts efficacy of HC",
+    "es": "Boosts BB gauge when attacked & hugely boosts efficacy of HC",
+    "id": "Menambah meteran BB saat diserang & amat menambah keampuhan HC",
+    "pt": "Boosts BB gauge when attacked & hugely boosts efficacy of HC",
+    "th": "เพิ่มบีบีเกจเมื่อถูกโจมตี, เพิ่มประสิทธิภาพของ HC อย่างมาก",
+    "vi": "Boosts BB gauge when attacked & hugely boosts efficacy of HC"
+  },
+  "MST_LEADERSKILLS_5705_NAME": {
+    "en": "Tolerant Love",
+    "es": "Tolerant Love",
+    "id": "Cinta Toleran",
+    "pt": "Tolerant Love",
+    "th": "โทเลอแรนท์ เลิฟ",
+    "vi": "Tolerant Love"
+  },
+  "MST_LEADERSKILLS_5706_DESCRIPTION": {
+    "en": "Damage taken considerably boosts BB gauge, boosts BC efficacy & considerably reduces BB gauge required for BB",
+    "es": "Damage taken considerably boosts BB gauge, boosts BC efficacy & considerably reduces BB gauge required for BB",
+    "id": "Kerusakan diderta menambah meteran BB, menambah keampuhan BC & lumayan mengurangi syarat meteran BB untuk BB",
+    "pt": "Damage taken considerably boosts BB gauge, boosts BC efficacy & considerably reduces BB gauge required for BB",
+    "th": "ความเสียหายที่ได้รับ เพิ่ม เกจ BB มากมาย, เพิ่ม ประสิทธิภาพ BC และ ลด เกจ BB ที่ต้องการสำหรับใช้ BB มากมาย",
+    "vi": "Damage taken considerably boosts BB gauge, boosts BC efficacy & considerably reduces BB gauge required for BB"
+  },
+  "MST_LEADERSKILLS_5706_NAME": {
+    "en": "Maiden's Wanderlust",
+    "es": "Maiden's Wanderlust",
+    "id": "Nafsu Kelana si Gadis",
+    "pt": "Maiden's Wanderlust",
+    "th": "เมเดนส์ วอนเดอรัสต์",
+    "vi": "Maiden's Wanderlust"
+  },
+  "MST_LEADERSKILLS_5800_DESCRIPTION": {
+    "en": "Probable boost in the BB gauge produced during Spark",
+    "es": "Probable aumento del indicador BB durante Chispas",
+    "id": "Mungkin menambah meteran BB yang diproduksi selama Percikan",
+    "pt": "Possível bônus no preenchimento da barra de BB durante a Fagulha",
+    "th": "อาจเพิ่มการผลิตเกจ BB ในระหว่างสปาร์ค",
+    "vi": "Có thể tăng vạch BB được tạo ra trong Spark"
+  },
+  "MST_LEADERSKILLS_5800_NAME": {
+    "en": "Charm",
+    "es": "Talismán",
+    "id": "Pesona",
+    "pt": "Amuleto",
+    "th": "ชาร์ม",
+    "vi": "Bùa chú"
+  },
+  "MST_LEADERSKILLS_5801_DESCRIPTION": {
+    "en": "Spark damage boosts BB gauge",
+    "es": "Spark damage boosts BB gauge",
+    "id": "Kerusakan Percikan menambah meteran BB",
+    "pt": "Spark damage boosts BB gauge",
+    "th": "เพิ่มบีบีเกจจากสปาร์คดาเมจ",
+    "vi": "Spark damage boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_5801_NAME": {
+    "en": "All Charm",
+    "es": "Gran talismán",
+    "id": "Semua Pesona",
+    "pt": "Amuleto Total",
+    "th": "ออลชาร์ม",
+    "vi": "Tất cả bùa chú"
+  },
+  "MST_LEADERSKILLS_5802_DESCRIPTION": {
+    "en": "Spark damage boosts BB gauge and restores HP & boosts BB Atk when Sparks have exceeded certain amount for next turn",
+    "es": "Spark damage boosts BB gauge and restores HP & boosts BB Atk when Sparks have exceeded certain amount for next turn",
+    "id": "Kerusakan Percikan menambah meteran BB dan memulihkan HP & menambah BB Serang saat Percikan melampaui jumlah tertentu untuk giliran berikutnya",
+    "pt": "Spark damage boosts BB gauge and restores HP & boosts BB Atk when Sparks have exceeded certain amount for next turn",
+    "th": "เร่งบีบีเกจจากสปาร์คดาเมจ, ฟื้น HP, เพิ่ม BB Atk เมื่อสปาร์คถึงจำนวนที่ต้องการในเทิร์นถัดไป",
+    "vi": "Spark damage boosts BB gauge and restores HP & boosts BB Atk when Sparks have exceeded certain amount for next turn"
+  },
   "MST_LEADERSKILLS_5802_NAME": {
     "en": "White Notes",
     "es": "White Notes",
@@ -731,7 +1003,7 @@
     "en": "Slight boost in BB gauge when attacked & probable 15% damage counterattack ",
     "es": "Leve aumento del indicador BB al recibir un ataque. Puede causar un contraataque de 15% de daño ",
     "id": "Agak menambah meteran BB saat diserang & kemungkinan 15% kerusakan serangan balik",
-    "pt": "Pequeno reforço na barra BB ao ser atacado e provável contra-ataque de 15% de dano ",
+    "pt": "Pequeno reforço na barra BB ao ser atacado e provável contra-ataque de 15% de dano",
     "th": "เติมเกจ BB เล็กน้อย เมื่อถูกโจมตี และ เป็นไปได้ที่จะ สวนกลับ 15% ค่าความเสียหาย",
     "vi": "Tăng nhẹ vạch BB khi bị tấn công & có thể phản công 15% thiệt hại "
   },
@@ -747,7 +1019,7 @@
     "en": "Boosts BB gauge when attacked & probable 20% damage counterattack ",
     "es": "Aumenta el indicador BB al recibir un ataque. Puede causar un contraataque de 20% de daño ",
     "id": "Menambah meteran BB saat diserang & kemungkinan 20% kerusakan serangan balik",
-    "pt": "Reforço na barra BB ao ser atacado e provável contra-ataque de 20% de dano ",
+    "pt": "Reforço na barra BB ao ser atacado e provável contra-ataque de 20% de dano",
     "th": "เติมเกจ BB เมื่อถูกโจมตี และ เป็นไปได้ที่จะ สวนกลับ 20% ค่าความเสียหาย",
     "vi": "Tăng vạch BB khi bị tấn công & có thể phản công 20% thiệt hại "
   },
@@ -2059,7 +2331,7 @@
     "en": "50% boost to Atk and max HP, 10% damage reduction from Water, Thunder types & hugely boosts Earth, Thunder elemental damage ",
     "es": "50% boost to Atk and max HP, 10% damage reduction from Water, Thunder types & hugely boosts Earth, Thunder elemental damage ",
     "id": "50% ekstra Serang dan HP maks, kurangi 10% kerusakan dari tipe Air, Guntur, amat menambah kerusakan elemen Bumi, Guntur",
-    "pt": "50% boost to Atk and max HP, 10% damage reduction from Water, Thunder types & hugely boosts Earth, Thunder elemental damage ",
+    "pt": "50% boost to Atk and max HP, 10% damage reduction from Water, Thunder types & hugely boosts Earth, Thunder elemental damage",
     "th": "50% เพิ่มค่า โจมตี กับ HP สูงสุด, 10% ลดค่าความเสียหาย จากชนิด น้ำ, สายฟ้า และ เพิ่มค่าอย่างสูงให้ ความเสียหายธาตุ ดิน, สายฟ้า",
     "vi": "50% boost to Atk and max HP, 10% damage reduction from Water, Thunder types & hugely boosts Earth, Thunder elemental damage "
   },
@@ -4395,7 +4667,7 @@
     "en": "Great boost to critical hit damage & boosts Atk power and max HP by 10%",
     "es": "Aumento al daño crítico, al poder de ataque y a los PS máx. en 10%",
     "id": "Ekstra kerusakan pukulan ampuh; 10% ekstra kekuatan Serang & maks HP",
-    "pt": "Grande bônus no dano crítico e poder de ATQ e + 10% de HP máx. ",
+    "pt": "Grande bônus no dano crítico e poder de ATQ e + 10% de HP máx.",
     "th": "เพิ่มค่าโจมตีคริติคอล เพิ่มพลังโจมตีและ HP สูงสุด 10%",
     "vi": "Great boost to critical hit damage & boosts Atk power and max HP by 10%"
   },
@@ -4411,7 +4683,7 @@
     "en": "Great boost to critical hit damage & boosts Atk power and max HP by 30%",
     "es": "Aumento al daño crítico, al poder de ataque y a los PS máx. en 30%",
     "id": "Ekstra kerusakan pukulan ampuh; 30% ekstra kekuatan Serang & maks HP",
-    "pt": "Grande bônus no dano crítico e poder de ATQ e + 30% de HP máx. ",
+    "pt": "Grande bônus no dano crítico e poder de ATQ e + 30% de HP máx.",
     "th": "เพิ่มค่าโจมตีคริติคอล เพิ่มพลังโจมตีและ HP สูงสุด 30%",
     "vi": "Great boost to critical hit damage & boosts Atk power and max HP by 30%"
   },
@@ -5631,14 +5903,6 @@
     "th": "40% เพิ่มค่าให้กับ HP สูงสุด, เพิ่ม โจมตี BB กับ ความเสียหายสปาร์ค อย่างมาก",
     "vi": "40% boost to max HP, greatly boosts BB Atk and Spark damage"
   },
-  "MST_LEADERSKILLS_801222_NAME": {
-    "en": "Singular Enigma",
-    "es": "",
-    "id": "",
-    "pt": "",
-    "th": "",
-    "vi": ""
-  },
   "MST_LEADERSKILLS_801223_DESCRIPTION": {
     "en": "50% boost to max HP, greatly boosts BB Atk and Spark damage & boosts Atk relative to how high HP is",
     "es": "50% boost to max HP, greatly boosts BB Atk and Spark damage & boosts Atk relative to how high HP is",
@@ -5683,7 +5947,7 @@
     "en": "Risque Enthrallment ",
     "es": "Risque Enthrallment ",
     "id": "Pesona Berisiko",
-    "pt": "Risque Enthrallment ",
+    "pt": "Risque Enthrallment",
     "th": "ริสเคอร์ เอ็นธรอลเมนท์",
     "vi": "Risque Enthrallment "
   },
@@ -7803,7 +8067,7 @@
     "en": "60% boost to Atk, max HP, 100% boost to Spark damage, boosts Spark damage for 2 turns when Sparks have exceeded certain amount & hugely boosts Fire and Water elemental damage ",
     "es": "60% boost to Atk, max HP, 100% boost to Spark damage, boosts Spark damage for 2 turns when Sparks have exceeded certain amount & hugely boosts Fire and Water elemental damage ",
     "id": "60% boost to Atk, max HP, 100% boost to Spark damage, boosts Spark damage for 2 turns when Sparks have exceeded certain amount & hugely boosts Fire and Water elemental damage ",
-    "pt": "60% boost to Atk, max HP, 100% boost to Spark damage, boosts Spark damage for 2 turns when Sparks have exceeded certain amount & hugely boosts Fire and Water elemental damage ",
+    "pt": "60% boost to Atk, max HP, 100% boost to Spark damage, boosts Spark damage for 2 turns when Sparks have exceeded certain amount & hugely boosts Fire and Water elemental damage",
     "th": "60% boost to Atk, max HP, 100% boost to Spark damage, boosts Spark damage for 2 turns when Sparks have exceeded certain amount & hugely boosts Fire and Water elemental damage ",
     "vi": "60% boost to Atk, max HP, 100% boost to Spark damage, boosts Spark damage for 2 turns when Sparks have exceeded certain amount & hugely boosts Fire and Water elemental damage "
   },
@@ -8070,14 +8334,6 @@
     "pt": "Frigid Supremacy",
     "th": "Frigid Supremacy",
     "vi": "Frigid Supremacy"
-  },
-  "MST_LEADERSKILLS_820357_DESCRIPTION": {
-    "en": "80% boost to Atk, Def and max HP of Water types, 5% damage reduction from normal attacks, reduces BB gauge required for BB & ",
-    "es": "",
-    "id": "",
-    "pt": "",
-    "th": "",
-    "vi": ""
   },
   "MST_LEADERSKILLS_820357_NAME": {
     "en": "Rising River Current",
@@ -9399,6 +9655,22 @@
     "th": "Santa Muerte",
     "vi": "Santa Muerte"
   },
+  "MST_LEADERSKILLS_830808_DESCRIPTION": {
+    "en": "120% max HP, 200% Atk, Def, for first 3 turns, probable 25% damage reduction, 30% reduction to BB activation cost, 250% spark damage when HP is above 50% & 135% ABP, 60% CBP gain",
+    "es": "120% max HP, 200% Atk, Def, for first 3 turns, probable 25% damage reduction, 30% reduction to BB activation cost, 250% spark damage when HP is above 50% & 135% ABP, 60% CBP gain",
+    "id": "120% max HP, 200% Atk, Def, for first 3 turns, probable 25% damage reduction, 30% reduction to BB activation cost, 250% spark damage when HP is above 50% & 135% ABP, 60% CBP gain",
+    "pt": "120% max HP, 200% Atk, Def, for first 3 turns, probable 25% damage reduction, 30% reduction to BB activation cost, 250% spark damage when HP is above 50% & 135% ABP, 60% CBP gain",
+    "th": "120% max HP, 200% Atk, Def, for first 3 turns, probable 25% damage reduction, 30% reduction to BB activation cost, 250% spark damage when HP is above 50% & 135% ABP, 60% CBP gain",
+    "vi": "120% max HP, 200% Atk, Def, for first 3 turns, probable 25% damage reduction, 30% reduction to BB activation cost, 250% spark damage when HP is above 50% & 135% ABP, 60% CBP gain"
+  },
+  "MST_LEADERSKILLS_830808_NAME": {
+    "en": "Summoner of Old: Emerald",
+    "es": "Summoner of Old: Emerald",
+    "id": "Summoner of Old: Emerald",
+    "pt": "Summoner of Old: Emerald",
+    "th": "Summoner of Old: Emerald",
+    "vi": "Summoner of Old: Emerald"
+  },
   "MST_LEADERSKILLS_830900_DESCRIPTION": {
     "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Earth elemental damage, 15% damage reduction from Thunder types & negates all status ailments",
     "es": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Earth elemental damage, 15% damage reduction from Thunder types & negates all status ailments",
@@ -10135,6 +10407,22 @@
     "th": "Druid Aspirant",
     "vi": "Druid Aspirant"
   },
+  "MST_LEADERSKILLS_840808_DESCRIPTION": {
+    "en": "140% all parameters, probable damage reduction to 1, 250% Thunder elemental damage, damage taken fills BB gauge & probable 1 KO resistance",
+    "es": "140% all parameters, probable damage reduction to 1, 250% Thunder elemental damage, damage taken fills BB gauge & probable 1 KO resistance",
+    "id": "140% all parameters, probable damage reduction to 1, 250% Thunder elemental damage, damage taken fills BB gauge & probable 1 KO resistance",
+    "pt": "140% all parameters, probable damage reduction to 1, 250% Thunder elemental damage, damage taken fills BB gauge & probable 1 KO resistance",
+    "th": "140% all parameters, probable damage reduction to 1, 250% Thunder elemental damage, damage taken fills BB gauge & probable 1 KO resistance",
+    "vi": "140% all parameters, probable damage reduction to 1, 250% Thunder elemental damage, damage taken fills BB gauge & probable 1 KO resistance"
+  },
+  "MST_LEADERSKILLS_840808_NAME": {
+    "en": "Divine Ruler's Edge",
+    "es": "Divine Ruler's Edge",
+    "id": "Divine Ruler's Edge",
+    "pt": "Divine Ruler's Edge",
+    "th": "Divine Ruler's Edge",
+    "vi": "Divine Ruler's Edge"
+  },
   "MST_LEADERSKILLS_840900_DESCRIPTION": {
     "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Thunder elemental damage, 15% damage reduction from Water types & negates all status ailments",
     "es": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Thunder elemental damage, 15% damage reduction from Water types & negates all status ailments",
@@ -10411,7 +10699,7 @@
     "en": "80% boost to Rec and max HP of Light types, greatly boosts damage against status afflicted foes, damage taken greatly boosts BB gauge & Spark damage boosts BB gauge ",
     "es": "80% boost to Rec and max HP of Light types, greatly boosts damage against status afflicted foes, damage taken greatly boosts BB gauge & Spark damage boosts BB gauge ",
     "id": "80% boost to Rec and max HP of Light types, greatly boosts damage against status afflicted foes, damage taken greatly boosts BB gauge & Spark damage boosts BB gauge ",
-    "pt": "80% boost to Rec and max HP of Light types, greatly boosts damage against status afflicted foes, damage taken greatly boosts BB gauge & Spark damage boosts BB gauge ",
+    "pt": "80% boost to Rec and max HP of Light types, greatly boosts damage against status afflicted foes, damage taken greatly boosts BB gauge & Spark damage boosts BB gauge",
     "th": "80% boost to Rec and max HP of Light types, greatly boosts damage against status afflicted foes, damage taken greatly boosts BB gauge & Spark damage boosts BB gauge ",
     "vi": "80% boost to Rec and max HP of Light types, greatly boosts damage against status afflicted foes, damage taken greatly boosts BB gauge & Spark damage boosts BB gauge "
   },
@@ -11046,14 +11334,6 @@
     "pt": "Blacklight Templar",
     "th": "Blacklight Templar",
     "vi": "Blacklight Templar"
-  },
-  "MST_LEADERSKILLS_860047_DESCRIPTION": {
-    "en": "100% boost to Atk, 60% boost to Def, max HP of Dark types, 10% damage reduction from Light, Dark types, raises normal hit amount & probable normal attack on all foes",
-    "es": "",
-    "id": "",
-    "pt": "",
-    "th": "",
-    "vi": ""
   },
   "MST_LEADERSKILLS_860047_NAME": {
     "en": "Candenti Umbrae",
@@ -12507,7 +12787,7 @@
     "en": "30% boost to Def of all allies ",
     "es": "+30% a la defensa de todos los aliados. ",
     "id": "30% ekstra Pertahanan semua sekutu",
-    "pt": "Reforço de 30% na DEF de todos os aliados ",
+    "pt": "Reforço de 30% na DEF de todos os aliados",
     "th": "30% เพิ่มพลังป้องกันให้ทีม",
     "vi": "Tăng 30% sức mạnh Phòng thủ của mọi đồng minh "
   },
@@ -13355,7 +13635,7 @@
     "en": "15% boost to Atk of Fire types & 15% damage reduction from Fire types ",
     "es": "+15% al ATQ de las unidades ígneas y 15% de reducción de daño por parte de las unidades ígneas ",
     "id": "15% ekstra Serangan tipe Api & 15% pengurangan kerusakan dari tipe Api",
-    "pt": "Reforço de 15% em ataque de fogo e 15% de redução no dano do tipo Fogo ",
+    "pt": "Reforço de 15% em ataque de fogo e 15% de redução no dano do tipo Fogo",
     "th": "15% เพิ่มพลังโจมตีให้ยูนิตธาตุไฟ และ 15% ลดดาเมจจากยูนิตธาตุไฟ",
     "vi": "15% boost to Atk of Fire types & 15% damage reduction from Fire types "
   },
@@ -13371,7 +13651,7 @@
     "en": "15% boost to Atk of Water types & 15% damage reduction from Water types ",
     "es": "+15% al ATQ de las unidades acuáticas y 15% de reducción de daño por parte de las unidades acuáticas ",
     "id": "15% ekstra Serangan tipe Air & 15% pengurangan kerusakan dari tipe Air",
-    "pt": "Reforço de 15% em ataque de água e 15% de redução no dano do tipo Água ",
+    "pt": "Reforço de 15% em ataque de água e 15% de redução no dano do tipo Água",
     "th": "15% เพิ่มพลังโจมตีให้ยูนิตธาตุน้ำ และ 15% ลดดาเมจจากยูนิตธาตุน้ำ",
     "vi": "15% boost to Atk of Water types & 15% damage reduction from Water types "
   },
@@ -13387,7 +13667,7 @@
     "en": "15% boost to Atk of Earth types & 15% damage reduction from Earth types ",
     "es": "+15% al ATQ de las unidades térreas y 15% de reducción de daño por parte de las unidades térreas ",
     "id": "15% ekstra Serangan tipe Bumi & 15% pengurangan kerusakan dari tipe Bumi",
-    "pt": "Reforço de 15% em ataque de Terra e 15% de redução no dano do tipo Terra ",
+    "pt": "Reforço de 15% em ataque de Terra e 15% de redução no dano do tipo Terra",
     "th": "15% เพิ่มพลังโจมตีให้ยูนิตธาตุดิน และ 15% ลดดาเมจจากยูนิตธาตุดิน",
     "vi": "15% boost to Atk of Earth types & 15% damage reduction from Earth types "
   },
@@ -13403,7 +13683,7 @@
     "en": "15% boost to Atk of Thunder types & 15% damage reduction from Thunder types ",
     "es": "+15% al ATQ de las unidades atronadoras y 15% de reducción de daño por parte de las unidades atronadoras ",
     "id": "15% ekstra Serangan tipe Guntur & 15% pengurangan kerusakan dari tipe Guntur",
-    "pt": "Reforço de 15% em ataque de Trovão e 15% de redução no dano do tipo Trovão ",
+    "pt": "Reforço de 15% em ataque de Trovão e 15% de redução no dano do tipo Trovão",
     "th": "15% เพิ่มพลังโจมตีให้ยูนิตธาตุสายฟ้า และ 15% ลดดาเมจจากยูนิตธาตุสายฟ้า",
     "vi": "15% boost to Atk of Thunder types & 15% damage reduction from Thunder types "
   },
@@ -13419,7 +13699,7 @@
     "en": "15% boost to Atk of Light types & 15% damage reduction from Light types ",
     "es": "+15% al ATQ de las unidades lumínicas y 15% de reducción de daño por parte de las unidades lumínicas ",
     "id": "15% ekstra Serangan tipe Terang & 15% pengurangan kerusakan dari tipe Terang",
-    "pt": "Reforço de 15% em ataque de Luz e 15% de redução no dano do tipo Luz ",
+    "pt": "Reforço de 15% em ataque de Luz e 15% de redução no dano do tipo Luz",
     "th": "15% เพิ่มพลังโจมตีให้ยูนิตธาตุแสง และ 15% ลดดาเมจจากยูนิตธาตุแสง",
     "vi": "15% boost to Atk of Light types & 15% damage reduction from Light types "
   },
@@ -13435,7 +13715,7 @@
     "en": "15% boost to Atk of Dark types & 15% damage reduction from Dark types ",
     "es": "+15% al ATQ de las unidades oscuras y 15% de reducción de daño por parte de las unidades oscuras ",
     "id": "15% ekstra Serangan tipe Gelap & 15% pengurangan kerusakan dari tipe Gelap",
-    "pt": "Reforço de 15% em ataque da Sombra e 15% de redução no dano do tipo Sombra ",
+    "pt": "Reforço de 15% em ataque da Sombra e 15% de redução no dano do tipo Sombra",
     "th": "15% เพิ่มพลังโจมตีให้ยูนิตธาตุความมืด และ 15% ลดดาเมจจากยูนิตธาตุความมืด",
     "vi": "15% boost to Atk of Dark types & 15% damage reduction from Dark types "
   },
@@ -90030,197 +90310,5 @@
     "pt": "Melchio Legionário",
     "th": "ลีเจี้ยนแนรี่เมลคิโอ",
     "vi": "Lính Melchio"
-  },
-  "MST_MONSTERS_52951_NAME": {
-    "en": "Legionary Melchio",
-    "es": "Legionario Melchio",
-    "id": "Legiuner Melchio",
-    "pt": "Melchio Legionário",
-    "th": "ลีเจี้ยนแนรี่เมลคิโอ",
-    "vi": "Lính Melchio"
-  },
-  "MST_MONSTERS_52952_NAME": {
-    "en": "Legionary Melchio",
-    "es": "Legionario Melchio",
-    "id": "Legiuner Melchio",
-    "pt": "Melchio Legionário",
-    "th": "ลีเจี้ยนแนรี่เมลคิโอ",
-    "vi": "Lính Melchio"
-  },
-  "MST_MONSTERS_52953_NAME": {
-    "en": "Legionary Melchio",
-    "es": "Legionario Melchio",
-    "id": "Legiuner Melchio",
-    "pt": "Melchio Legionário",
-    "th": "ลีเจี้ยนแนรี่เมลคิโอ",
-    "vi": "Lính Melchio"
-  },
-  "MST_MONSTERS_52954_NAME": {
-    "en": "Legionary Melchio",
-    "es": "Legionario Melchio",
-    "id": "Legiun Melchio",
-    "pt": "Melchio Legionário",
-    "th": "ลีเจียนนารี่เมลคิโอ",
-    "vi": "Legionary Melchio"
-  },
-  "MST_MONSTERS_53000_NAME": {
-    "en": "Centurion Melchio",
-    "es": "Centurión Melchio",
-    "id": "Centurion Melchio",
-    "pt": "Melchio Centurião",
-    "th": "เซ็นจูเรียนเมลคิโอ",
-    "vi": "Sĩ quan Melchio"
-  },
-  "MST_MONSTERS_53001_NAME": {
-    "en": "Centurion Melchio",
-    "es": "Centurión Melchio",
-    "id": "Centurion Melchio",
-    "pt": "Melchio Centurião",
-    "th": "เซ็นจูเรียนเมลคิโอ",
-    "vi": "Sĩ quan Melchio"
-  },
-  "MST_MONSTERS_53002_NAME": {
-    "en": "Centurion Melchio",
-    "es": "Centurión Melchio",
-    "id": "Centurion Melchio",
-    "pt": "Melchio Centurião",
-    "th": "เซ็นจูเรียนเมลคิโอ",
-    "vi": "Sĩ quan Melchio"
-  },
-  "MST_MONSTERS_53003_NAME": {
-    "en": "Centurion Melchio",
-    "es": "Centurión Melchio",
-    "id": "Centurion Melchio",
-    "pt": "Melchio Centurião",
-    "th": "เซ็นจูเรียนเมลคิโอ",
-    "vi": "Sĩ quan Melchio"
-  },
-  "MST_MONSTERS_53004_NAME": {
-    "en": "Centurion Melchio",
-    "es": "Centurión Melchio",
-    "id": "Centurion Melchio",
-    "pt": "Melchio Centurião",
-    "th": "เซ็นจูเรียนเมลคิโอ",
-    "vi": "Sĩ quan Melchio"
-  },
-  "MST_MONSTERS_53005_NAME": {
-    "en": "Centurion Melchio",
-    "es": "Centurión Melchio",
-    "id": "Centurion Melchio",
-    "pt": "Melchio Centurião",
-    "th": "เซ็นจูเรียนเมลคิโอ",
-    "vi": "Sĩ quan Melchio"
-  },
-  "MST_MONSTERS_53006_NAME": {
-    "en": "Centurion Melchio",
-    "es": "Centurión Melchio",
-    "id": "Centurion Melchio",
-    "pt": "Melchio Centurião",
-    "th": "เซนทูเรียนเมลคิโอ",
-    "vi": "Centurion Melchio"
-  },
-  "MST_MONSTERS_53007_NAME": {
-    "en": "Centurion Melchio",
-    "es": "Centurión Melchio",
-    "id": "Centurion Melchio",
-    "pt": "Melchio Centurião",
-    "th": "เซนจูเรียน เมลชิโอ้",
-    "vi": "Sĩ Quan Melchio"
-  },
-  "MST_MONSTERS_53008_NAME": {
-    "en": "Centurion Melchio",
-    "es": "Centurión Melchio",
-    "id": "Centurion Melchio",
-    "pt": "Melchio Centurião",
-    "th": "เซนจูเรียน เมลชิโอ้",
-    "vi": "Sĩ Quan Melchio"
-  },
-  "MST_MONSTERS_53009_NAME": {
-    "en": "Centurion Melchio",
-    "es": "Centurión Melchio",
-    "id": "Centurion Melchio",
-    "pt": "Melchio Centurião",
-    "th": "เซนจูเรียน เมลชิโอ้",
-    "vi": "Centurion Melchio"
-  },
-  "MST_MONSTERS_53010_NAME": {
-    "en": "Centurion Melchio",
-    "es": "Centurión Melchio",
-    "id": "Centurion Melchio",
-    "pt": "Melchio Centurião",
-    "th": "เซ็นจูเรียนเมลคิโอ",
-    "vi": "Centurion Melchio"
-  },
-  "MST_MONSTERS_53011_NAME": {
-    "en": "Centurion Melchio",
-    "es": "Centurión Melchio",
-    "id": "Centurion Melchio",
-    "pt": "Melchio Centurião",
-    "th": "เซ็นจูเรียนเมลคิโอ",
-    "vi": "Centurion Melchio"
-  },
-  "MST_MONSTERS_53012_NAME": {
-    "en": "Centurion Melchio",
-    "es": "Centurión Melchio",
-    "id": "Centurion Melchio",
-    "pt": "Melchio Centurião",
-    "th": "เซ็นจูเรียนเมลคิโอ",
-    "vi": "Centurion Melchio"
-  },
-  "MST_MONSTERS_53013_NAME": {
-    "en": "Centurion Melchio",
-    "es": "Centurion Melchio",
-    "id": "Bilah Kerajaan Dolk",
-    "pt": "Centurion Melchio",
-    "th": "เซนจูเรียน เมลชิโอ้",
-    "vi": "Centurion Melchio"
-  },
-  "MST_MONSTERS_53014_NAME": {
-    "en": "Centurion Melchio",
-    "es": "Centurion Melchio",
-    "id": "Bilah Kerajaan Dolk",
-    "pt": "Centurion Melchio",
-    "th": "เซนจูเรียน เมลชิโอ้",
-    "vi": "Centurion Melchio"
-  },
-  "MST_MONSTERS_53015_NAME": {
-    "en": "Centurion Melchio",
-    "es": "Centurion Melchio",
-    "id": "Centurion Melchio",
-    "pt": "Centurion Melchio",
-    "th": "เซ็นจูเรียน เมลคิโอ",
-    "vi": "Centurion Melchio"
-  },
-  "MST_MONSTERS_53016_NAME": {
-    "en": "Centurion Melchio",
-    "es": "Centurion Melchio",
-    "id": "Centurion Melchio",
-    "pt": "Centurion Melchio",
-    "th": "เซ็นจูเรียน เมลคิโอ",
-    "vi": "Centurion Melchio"
-  },
-  "MST_MONSTERS_53050_NAME": {
-    "en": "Sola",
-    "es": "Sola",
-    "id": "Sola",
-    "pt": "Sola",
-    "th": "โซล่า",
-    "vi": "Sola"
-  },
-  "MST_MONSTERS_53051_NAME": {
-    "en": "Sola",
-    "es": "Sola",
-    "id": "Sola",
-    "pt": "Sola",
-    "th": "โซล่า",
-    "vi": "Sola"
-  },
-  "MST_MONSTERS_53052_NAME": {
-    "en": "Sola",
-    "es": "Sola",
-    "id": "Sola",
-    "pt": "Sola",
-    "th": "โซล่า",
-    "vi": "Sola"
   }
 }

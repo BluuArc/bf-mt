@@ -2726,9 +2726,6 @@
   "800702": {
     "lore": "An orb filled with the essence of Water. This potent power enhances one's affinity and control of the element."
   },
-  "800703": {
-    "lore": "An orb filled with the essence of Earth. This potent power enhances one's affinity and control of the element."
-  },
   "800704": {
     "lore": "An orb filled with the essence of Thunder. This potent power enhances one's affinity and control of the element."
   },
@@ -2794,12 +2791,6 @@
   },
   "801013": {
     "lore": "A rare metallic ore that is highly prized due its malleability and luster. Due to its resemblance to gold, it is often used to craft trinkets of all kinds."
-  },
-  "801014": {
-    "lore": "Unlike other fairies, Linlin leaves behind a faint trail of dust that is almost undetectable wherever she goes. Sharp-eyed observers often mistake it for weirdly colored snowflakes."
-  },
-  "801015": {
-    "lore": "A legacy of Kitsu's valiance. His extensive injuries taken to save the child has left traces all over the battlefield, but they are indistinguishable from fallen snow in the winter."
   },
   "801016": {
     "lore": "Legends tell of a divine source of fire granted to the Fae, the first people to walk the land of Aimyhr. The great Starsage Zeruiah was prudent with this power, for its destructive capability was second to none."
@@ -3722,6 +3713,9 @@
   "819287": {
     "lore": "In the distant past, lost in the history of Grand Gaia, the creators of space and time forged a sword of nothingness. Its blade cuts through space and slashes through time - a tool for exterminating their own faulty creations. This imitation, although weaker than the real blade, will at least not deconstruct the wielder."
   },
+  "819293": {
+    "lore": "A lavish purple cloak belonging to Lugina, one of the Summoners of Old. Its black pauldrons are polished to a neat shine.<br><br>The sight of this cloak whipping around is a common sight in the Survey Office, where Lugina oversees expeditions to other worlds, and his skills in combat and diplomacy are highly respected."
+  },
   "819901": {
     "lore": "A glowing red blade infused with a Fire soul, forged by a powerful elemental blacksmith. It empowers the wielder who too possesses the soul of Fire."
   },
@@ -4064,6 +4058,18 @@
   "880212": {
     "lore": "The aspect of the Ice Queen’s pride made manifest. One can feel the utter disdain seeping into the surroundings. Pride goes before destruction, a haughty Deva before a fall"
   },
+  "880213": {
+    "lore": "The aspect of the Monster Hunter's bond made manifest. One can feel the familial bond of the clan growing within. Loyalty above all."
+  },
+  "880214": {
+    "lore": "The aspect of the Paladin's grief made manifest. One can feel the silent anguish engulf the area. To weep is to make less the depth of grief."
+  },
+  "880215": {
+    "lore": "The aspect of the Loremaster's love made manifest. Once can feel the compulsion to understand all. Love has no boundaries."
+  },
+  "880216": {
+    "lore": "The aspect of the Shadow Cat's desire made manifest. One can feel the deep yearning to belong. Home is where the heart is."
+  },
   "880217": {
     "lore": "A pungent chocolate said to be only given to the pure-hearted young of Randall by the guardians in the skies. It is a rare and precious Item that should be cherished."
   },
@@ -4120,9 +4126,6 @@
   },
   "880242": {
     "lore": "A fossil of creatures long extinct. No one knows what they were, but their bodies are believed to have held minute traces of magic."
-  },
-  "880243": {
-    "lore": "Glittering like a jewel in the night, this gem contains a small amount of magical power. Crafted by Noel with technology from alien worlds, it allows for newer creations to be made possible."
   },
   "890001": {
     "lore": "Crystallized embers shed from the outer shell of a Revenant. Its lingering heat makes it perpetually warm to the touch. Often used as a catalyst in crafting. Shattering the crystal causes a burst of fire to erupt from the cracks. While not particularly deadly on its own, it can easily spark off an explosion during experimentation. Handle with care."
@@ -4235,11 +4238,23 @@
   "890044": {
     "lore": "A handful of golden sand, which was said to blanket all of Urzyma once upon a time. Over centuries, unimaginable amounts of gold was refined from the land and sold to lords from distant regions. Now, such rare grains are only known to be found within the God-King's treasury."
   },
+  "890045": {
+    "lore": "A small pot of violet ink popularly said to be the true 'lifeforce' of the scribes. It has a faintly aromatic scent that reminds one of the riverbank.<br><br>In the age of the gods, violet ink was worth its weight in gold, for it was said to contain the essence of the divine. Only scribes were allowed to use it, and even then, they could only inscribe heka, or hymns to the gods. Under the rule of certain kings, their funerary rites also made use of this ink, though it is unclear whether it was out of religious devotion or sheer hubris."
+  },
+  "890046": {
+    "lore": "Remnants of spent arcane energy. Glows faintly in the dark and emits a tingling aura. Grain-like and glittering, these are often mistaken for tiny crystals.<br><br>Practitioners of heka are familiar with these grains. When arcane energy manifests physically, it leaves an 'imprint' upon the fabric of the world, such as smoke trails or motes of light. Upon contact with an object, the energy usually scatters as a burst, leaving trace amounts of these grains. It is not uncommon for spell-slinging grounds to be littered with arcane remnants, giving their floors a distinctive blue tinge."
+  },
   "890047": {
     "lore": "A peculiar ornament shaped like a cold, steely eye. Inlaid with fine metal and a small jewel.<br><br>Crafted with great care by a high priest or priestess, these ornaments are bestowed upon those who have walked faithfully by the side of Truth and worked all their life to uphold Justice. They are traditionally worn upon the forehead, symbolizing the third divine eye."
   },
   "890048": {
     "lore": "A small handful of blood-red earth. Said to originate from the domain of Set, the Deceiver.<br><br>In contrast with the fertile black soil where the first humans raised their civilizations, the red soil of the desert was dry, barren, and perpetually scorching. Some compare their vibrant colors to blood; the more superstitious (and dastardly) of Set's followers smear it as a ritual tattoo, believing it is in fact the ichor of the Deceiver."
+  },
+  "890049": {
+    "lore": "A starburst of emerald dust that sparkles joyfully as it drifts through the air. It leaves behind a trail of light that seems to shimmer in different colors depending on the angle."
+  },
+  "890060": {
+    "lore": "A cloth scrap in a vibrant purple hue, emblematic of a powerful champion. Purple is a popular color of choice for the attire of champions and nobles alike."
   },
   "899998": {
     "lore": "The Omni Evolutions are just around the corner! But why not make things more interesting by facing a real challenge? Equip this Sphere and find out who is the Bravest of them all! Be a man!"
