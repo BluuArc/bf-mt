@@ -1,4 +1,52 @@
 {
+  "MST_LEADERSKILLS_5541_NAME": {
+    "en": "Season Giftings",
+    "es": "Season Giftings",
+    "id": "Musim Hadiah",
+    "pt": "Season Giftings",
+    "th": "ซีซัน กิฟติ้ง",
+    "vi": "Season Giftings"
+  },
+  "MST_LEADERSKILLS_5542_DESCRIPTION": {
+    "en": "Huge boost to BC & Item drop rate",
+    "es": "Huge boost to BC & Item drop rate",
+    "id": "Tambahan amat besar perolehan BC dan barang",
+    "pt": "Huge boost to BC & Item drop rate",
+    "th": "เพื่มค่าอย่างสูง อัตราดรอป BC และ ไอเท็ม",
+    "vi": "Huge boost to BC & Item drop rate"
+  },
+  "MST_LEADERSKILLS_5542_NAME": {
+    "en": "Season Cravings",
+    "es": "Season Cravings",
+    "id": "Musim Idaman",
+    "pt": "Season Cravings",
+    "th": "ซีซัน เครฟวิ่ง",
+    "vi": "Season Cravings"
+  },
+  "MST_LEADERSKILLS_5543_DESCRIPTION": {
+    "en": "40% boost to max HP, slightly boosts Atk, Def, Rec when HP is over 50% & considerably boosts damage against status afflicted foes",
+    "es": "40% boost to max HP, slightly boosts Atk, Def, Rec when HP is over 50% & considerably boosts damage against status afflicted foes",
+    "id": "40% ekstra HP maks, agak menambah Serang, Tahan, Pulih saat HP di atas 50%, lumayan menambah kerusakan ke musuh yang terkena status",
+    "pt": "40% boost to max HP, slightly boosts Atk, Def, Rec when HP is over 50% & considerably boosts damage against status afflicted foes",
+    "th": "40% เพิ่มค่า HP สูงสุด, เพิ่มค่าเล็กน้อยให้ โจมตี, ป้องกัน, ฟื้นฟู เมื่อ HP นั้นสูงกว่า 50% และ เพิ่มค่าอย่างมากให้ ความเสียหายต่อศัตรูท่าติดสถานะผิดปกติ",
+    "vi": "40% boost to max HP, slightly boosts Atk, Def, Rec when HP is over 50% & considerably boosts damage against status afflicted foes"
+  },
+  "MST_LEADERSKILLS_5543_NAME": {
+    "en": "Curious Coincidence",
+    "es": "Curious Coincidence",
+    "id": "Kebetulan Aneh",
+    "pt": "Curious Coincidence",
+    "th": "คิวเรียส คอยน์ซิเดนซ์",
+    "vi": "Curious Coincidence"
+  },
+  "MST_LEADERSKILLS_5544_DESCRIPTION": {
+    "en": "60% boost to max HP, boosts Atk, Def, Rec when HP is over 50%, hugely boosts damage to status afflicted foes & considerably boosts BC efficacy",
+    "es": "60% boost to max HP, boosts Atk, Def, Rec when HP is over 50%, hugely boosts damage to status afflicted foes & considerably boosts BC efficacy",
+    "id": "60% ekstra HP maks, menambah Serang, Tahan, Pulih saat HP di atas 50%, amat menambah kerusakan ke musuh yang terkena status, lumayan menambah keampuhan BC",
+    "pt": "60% boost to max HP, boosts Atk, Def, Rec when HP is over 50%, hugely boosts damage to status afflicted foes & considerably boosts BC efficacy",
+    "th": "60% เพิ่มค่า HP สูงสุด, เพิ่ม โจมตี, ป้องกัน, ฟื้นฟู เมื่อ HP นั้นสูงกว่า 50%, เพิ่มค่าอย่างสูงให้ ความเสียหายต่อศัตรูท่าติดสถานะผิดปกติ และ เพิ่มค่าอย่างมากให้ ประสิทธิภาพ BC",
+    "vi": "60% boost to max HP, boosts Atk, Def, Rec when HP is over 50%, hugely boosts damage to status afflicted foes & considerably boosts BC efficacy"
+  },
   "MST_LEADERSKILLS_5544_NAME": {
     "en": "Mysterious Coincidence",
     "es": "Mysterious Coincidence",
@@ -12094,6 +12142,38 @@
     "pt": "Maddened Destroyer",
     "th": "Maddened Destroyer",
     "vi": "Maddened Destroyer"
+  },
+  "MST_LEADERSKILLS_860757_DESCRIPTION": {
+    "en": "120% Def, Rec, max HP (Dark), 10% damage reduction from Light, Dark types, spark damage fills BB gauge & 200% critical damage",
+    "es": "120% Def, Rec, max HP (Dark), 10% damage reduction from Light, Dark types, spark damage fills BB gauge & 200% critical damage",
+    "id": "120% Def, Rec, max HP (Dark), 10% damage reduction from Light, Dark types, spark damage fills BB gauge & 200% critical damage",
+    "pt": "120% Def, Rec, max HP (Dark), 10% damage reduction from Light, Dark types, spark damage fills BB gauge & 200% critical damage",
+    "th": "120% Def, Rec, max HP (Dark), 10% damage reduction from Light, Dark types, spark damage fills BB gauge & 200% critical damage",
+    "vi": "120% Def, Rec, max HP (Dark), 10% damage reduction from Light, Dark types, spark damage fills BB gauge & 200% critical damage"
+  },
+  "MST_LEADERSKILLS_860757_NAME": {
+    "en": "Spiritus Tenebris",
+    "es": "Spiritus Tenebris",
+    "id": "Spiritus Tenebris",
+    "pt": "Spiritus Tenebris",
+    "th": "Spiritus Tenebris",
+    "vi": "Spiritus Tenebris"
+  },
+  "MST_LEADERSKILLS_860758_DESCRIPTION": {
+    "en": "140% Def, Rec, max HP (Dark), 20% damage reduction from Light, Dark types, spark damage fills BB gauge, 250% critical damage & 200% spark damage",
+    "es": "140% Def, Rec, max HP (Dark), 20% damage reduction from Light, Dark types, spark damage fills BB gauge, 250% critical damage & 200% spark damage",
+    "id": "140% Def, Rec, max HP (Dark), 20% damage reduction from Light, Dark types, spark damage fills BB gauge, 250% critical damage & 200% spark damage",
+    "pt": "140% Def, Rec, max HP (Dark), 20% damage reduction from Light, Dark types, spark damage fills BB gauge, 250% critical damage & 200% spark damage",
+    "th": "140% Def, Rec, max HP (Dark), 20% damage reduction from Light, Dark types, spark damage fills BB gauge, 250% critical damage & 200% spark damage",
+    "vi": "140% Def, Rec, max HP (Dark), 20% damage reduction from Light, Dark types, spark damage fills BB gauge, 250% critical damage & 200% spark damage"
+  },
+  "MST_LEADERSKILLS_860758_NAME": {
+    "en": "Umbra Draconis",
+    "es": "Umbra Draconis",
+    "id": "Umbra Draconis",
+    "pt": "Umbra Draconis",
+    "th": "Umbra Draconis",
+    "vi": "Umbra Draconis"
   },
   "MST_LEADERSKILLS_860787_DESCRIPTION": {
     "en": "150% boost to Atk, 80% boost to max HP and 30% boost to critical hit rate, adds probable Spark critical, 150% boost to Spark damage & Spark damage considerably boosts BB gauge",
@@ -90270,45 +90350,5 @@
     "pt": "Atro da Luz Divina",
     "th": "โฮลี่ไลท์อาโทร",
     "vi": "Holy Light Atro"
-  },
-  "MST_MONSTERS_52856_NAME": {
-    "en": "Holy Light Atro",
-    "es": "Luz sagrada Atro",
-    "id": "Terang Suci Atro",
-    "pt": "Atro da Luz Divina",
-    "th": "โฮลี่ไลท์อาโทร",
-    "vi": "Holy Light Atro"
-  },
-  "MST_MONSTERS_52857_NAME": {
-    "en": "Holy Light Atro",
-    "es": "Luz sagrada Atro",
-    "id": "Terang Suci Atro",
-    "pt": "Atro da Luz Divina",
-    "th": "โฮลี่ ไลท์ อาโทร",
-    "vi": "Holy Light Atro"
-  },
-  "MST_MONSTERS_52900_NAME": {
-    "en": "Keymaster Gilnea",
-    "es": "Guardián de la llave Gilnea",
-    "id": "Ahli Kunci Gilnea",
-    "pt": "Gilnea Mestre Chave",
-    "th": "คีย์มาสเตอร์กิลเนีย",
-    "vi": "Keymaster Gilnea"
-  },
-  "MST_MONSTERS_52901_NAME": {
-    "en": "Keymaster Gilnea",
-    "es": "Guardián de la llave Gilnea",
-    "id": "Ahli Kunci Gilnea",
-    "pt": "Gilnea Mestre Chave",
-    "th": "คีย์มาสเตอร์กิลเนีย",
-    "vi": "Keymaster Gilnea"
-  },
-  "MST_MONSTERS_52950_NAME": {
-    "en": "Legionary Melchio",
-    "es": "Legionario Melchio",
-    "id": "Legiuner Melchio",
-    "pt": "Melchio Legionário",
-    "th": "ลีเจี้ยนแนรี่เมลคิโอ",
-    "vi": "Lính Melchio"
   }
 }
