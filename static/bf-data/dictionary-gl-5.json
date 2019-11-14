@@ -1,12 +1,4 @@
 {
-  "MST_SKILLS_212251_DESCRIPTION": {
-    "en": "15 combo powerful Light attack on all enemies & largely boosts Spark damage for 3 turns",
-    "es": "Combo grupal de 15 poderosos ataques lumínicos. Aumenta notablemente el daño de los ataques de Chispas durante 3 turnos",
-    "id": "15 kombo serangan Terang kuat ke semua musuh & tambahan besar kerusakan Percikan 3 giliran",
-    "pt": "Combo poderoso de 15 golpes de Luz em todos os inimigos e grande reforço no dano da Fagulha por 3 rodadas",
-    "th": "15 คอมโบ โจมตีศัตรูทั้งหมดด้วยธาตุแสง และเพิ่มสปาร์คดาเมจ 3 เทิร์น",
-    "vi": "15 combo powerful Light attack on all enemies & largely boosts Spark damage for 3 turns"
-  },
   "MST_SKILLS_212251_NAME": {
     "en": "Spiritual Mourning",
     "es": "Luto espiritual",
@@ -90310,5 +90302,53 @@
     "pt": "Thousand Xian-qi Trigrams",
     "th": "Thousand Xian-qi Trigrams",
     "vi": "Thousand Xian-qi Trigrams"
+  },
+  "MST_SKILLS_2840577_DESCRIPTION": {
+    "en": "23 combo massive Thunder attack on all foes (damage relative to remaining HP), greatly boosts max HP, enormously boosts Atk, Def, Rec for 3 turns, greatly boosts own Atk, Def, Rec for 5 turns & enormously boosts BB gauge for 3 turns",
+    "es": "23 combo massive Thunder attack on all foes (damage relative to remaining HP), greatly boosts max HP, enormously boosts Atk, Def, Rec for 3 turns, greatly boosts own Atk, Def, Rec for 5 turns & enormously boosts BB gauge for 3 turns",
+    "id": "23 combo massive Thunder attack on all foes (damage relative to remaining HP), greatly boosts max HP, enormously boosts Atk, Def, Rec for 3 turns, greatly boosts own Atk, Def, Rec for 5 turns & enormously boosts BB gauge for 3 turns",
+    "pt": "23 combo massive Thunder attack on all foes (damage relative to remaining HP), greatly boosts max HP, enormously boosts Atk, Def, Rec for 3 turns, greatly boosts own Atk, Def, Rec for 5 turns & enormously boosts BB gauge for 3 turns",
+    "th": "23 combo massive Thunder attack on all foes (damage relative to remaining HP), greatly boosts max HP, enormously boosts Atk, Def, Rec for 3 turns, greatly boosts own Atk, Def, Rec for 5 turns & enormously boosts BB gauge for 3 turns",
+    "vi": "23 combo massive Thunder attack on all foes (damage relative to remaining HP), greatly boosts max HP, enormously boosts Atk, Def, Rec for 3 turns, greatly boosts own Atk, Def, Rec for 5 turns & enormously boosts BB gauge for 3 turns"
+  },
+  "MST_SKILLS_2840577_NAME": {
+    "en": "Desperate Assault",
+    "es": "Desperate Assault",
+    "id": "Desperate Assault",
+    "pt": "Desperate Assault",
+    "th": "Desperate Assault",
+    "vi": "Desperate Assault"
+  },
+  "MST_SKILLS_2840578_DESCRIPTION": {
+    "en": "24 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts max HP, enormously boosts Atk, Def, Rec for 3 turns, hugely boosts own Atk, Def, Rec for 5 turns, hugely boosts Atk, Def, Rec relative to max HP for 3 turns & enormously boosts BB gauge for 3 turns",
+    "es": "24 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts max HP, enormously boosts Atk, Def, Rec for 3 turns, hugely boosts own Atk, Def, Rec for 5 turns, hugely boosts Atk, Def, Rec relative to max HP for 3 turns & enormously boosts BB gauge for 3 turns",
+    "id": "24 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts max HP, enormously boosts Atk, Def, Rec for 3 turns, hugely boosts own Atk, Def, Rec for 5 turns, hugely boosts Atk, Def, Rec relative to max HP for 3 turns & enormously boosts BB gauge for 3 turns",
+    "pt": "24 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts max HP, enormously boosts Atk, Def, Rec for 3 turns, hugely boosts own Atk, Def, Rec for 5 turns, hugely boosts Atk, Def, Rec relative to max HP for 3 turns & enormously boosts BB gauge for 3 turns",
+    "th": "24 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts max HP, enormously boosts Atk, Def, Rec for 3 turns, hugely boosts own Atk, Def, Rec for 5 turns, hugely boosts Atk, Def, Rec relative to max HP for 3 turns & enormously boosts BB gauge for 3 turns",
+    "vi": "24 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts max HP, enormously boosts Atk, Def, Rec for 3 turns, hugely boosts own Atk, Def, Rec for 5 turns, hugely boosts Atk, Def, Rec relative to max HP for 3 turns & enormously boosts BB gauge for 3 turns"
+  },
+  "MST_SKILLS_2840578_NAME": {
+    "en": "Relentless Onslaught",
+    "es": "Relentless Onslaught",
+    "id": "Relentless Onslaught",
+    "pt": "Relentless Onslaught",
+    "th": "Relentless Onslaught",
+    "vi": "Relentless Onslaught"
+  },
+  "MST_SKILLS_2840587_DESCRIPTION": {
+    "en": "18 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def relative to max HP for 3 turns, enormously boosts Atk, Def for 3 turns, enormously boosts Spark and critical damage for 3 turns & inflict 50% max HP damage to self",
+    "es": "18 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def relative to max HP for 3 turns, enormously boosts Atk, Def for 3 turns, enormously boosts Spark and critical damage for 3 turns & inflict 50% max HP damage to self",
+    "id": "18 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def relative to max HP for 3 turns, enormously boosts Atk, Def for 3 turns, enormously boosts Spark and critical damage for 3 turns & inflict 50% max HP damage to self",
+    "pt": "18 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def relative to max HP for 3 turns, enormously boosts Atk, Def for 3 turns, enormously boosts Spark and critical damage for 3 turns & inflict 50% max HP damage to self",
+    "th": "18 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def relative to max HP for 3 turns, enormously boosts Atk, Def for 3 turns, enormously boosts Spark and critical damage for 3 turns & inflict 50% max HP damage to self",
+    "vi": "18 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts Atk, Def relative to max HP for 3 turns, enormously boosts Atk, Def for 3 turns, enormously boosts Spark and critical damage for 3 turns & inflict 50% max HP damage to self"
+  },
+  "MST_SKILLS_2840587_NAME": {
+    "en": "Delaware Detroit Smash",
+    "es": "Delaware Detroit Smash",
+    "id": "Delaware Detroit Smash",
+    "pt": "Delaware Detroit Smash",
+    "th": "Delaware Detroit Smash",
+    "vi": "Delaware Detroit Smash"
   }
 }
