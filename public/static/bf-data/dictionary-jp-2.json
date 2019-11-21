@@ -1,4 +1,180 @@
 {
+  "MST_LEADERSKILLS_5524_NAME": {
+    "en": "Dark God's Revelation",
+    "es": "Dark God's Revelation",
+    "id": "Pengungkapan Dewa Gelap",
+    "pt": "Dark God's Revelation",
+    "th": "ดาร์ค ก็อดส เรเวลเลชั่น",
+    "vi": "Dark God's Revelation"
+  },
+  "MST_LEADERSKILLS_5525_DESCRIPTION": {
+    "en": "50% boost to max HP, restores HP and considerably boosts BB gauge each turn & considerably boosts OD gauge fill rate",
+    "es": "50% boost to max HP, restores HP and considerably boosts BB gauge each turn & considerably boosts OD gauge fill rate",
+    "id": "50% ekstra HP maks, HP pulih, agak menambah meteran BB tiap giliran & lumayan menambah laju pengisian OD",
+    "pt": "50% boost to max HP, restores HP and considerably boosts BB gauge each turn & considerably boosts OD gauge fill rate",
+    "th": "50% เพิ่มค่า HP สูงสุด, ฟื้นฟู HP กับ เพิ่มค่า เกจ BB อย่างมาก ในแต่ละเทิร์น และ เพิ่มค่า อัตราเติมเกจ OD อย่างมาก",
+    "vi": "50% boost to max HP, restores HP and considerably boosts BB gauge each turn & considerably boosts OD gauge fill rate"
+  },
+  "MST_LEADERSKILLS_5525_NAME": {
+    "en": "Dark God's Warning",
+    "es": "Dark God's Warning",
+    "id": "Peringatan Dewa Gelap",
+    "pt": "Dark God's Warning",
+    "th": "ดาร์ค ก็อดส วอร์นนิ่ง",
+    "vi": "Dark God's Warning"
+  },
+  "MST_LEADERSKILLS_5528_DESCRIPTION": {
+    "en": "50% boost to max HP, hugely boosts critical damage, 100% boost to Spark damage & enormously boosts BB Atk",
+    "es": "50% boost to max HP, hugely boosts critical damage, 100% boost to Spark damage & enormously boosts BB Atk",
+    "id": "50% ekstra HP maks, amat menambah kerusakan ampuh, 100% ekstra kerusakan Percikan, tambahan jumbo BB Serang",
+    "pt": "50% boost to max HP, hugely boosts critical damage, 100% boost to Spark damage & enormously boosts BB Atk",
+    "th": "50% เพิ่มค่าให้ HP สูงสุด, เพิ่ม ความเสียหายคริติคอล อย่างสูง, 100% เพิ่มค่าให้ ความเสียหายปาร์ค กับ เพิ่ม โจมตี BB มหาศาล",
+    "vi": "50% boost to max HP, hugely boosts critical damage, 100% boost to Spark damage & enormously boosts BB Atk"
+  },
+  "MST_LEADERSKILLS_5528_NAME": {
+    "en": "Starfire Phoenix Blade",
+    "es": "Starfire Phoenix Blade",
+    "id": "Bilah Phoenix Api Bintang",
+    "pt": "Starfire Phoenix Blade",
+    "th": "สตาร์ไฟ ฟินิกส์ เบลด",
+    "vi": "Starfire Phoenix Blade"
+  },
+  "MST_LEADERSKILLS_5529_DESCRIPTION": {
+    "en": "30% boost to max HP, slightly boosts Atk, Def, Rec when HP is over 50%, Spark damage slightly boosts BB gauge & 100% boost to Spark damage",
+    "es": "30% boost to max HP, slightly boosts Atk, Def, Rec when HP is over 50%, Spark damage slightly boosts BB gauge & 100% boost to Spark damage",
+    "id": "30% ekstra HP maks, agak menambah Serang, Tahan, Pulih saat HP di atas 50%, kerusakan Percikan agak menambah meteran BB & 100% ekstra kerusakan Percikan",
+    "pt": "30% boost to max HP, slightly boosts Atk, Def, Rec when HP is over 50%, Spark damage slightly boosts BB gauge & 100% boost to Spark damage",
+    "th": "30% เพิ่ม HP สูงสุด, เพิ่มพลังโจมตี, ป้องกัน, ฟื้นฟูเมื่อ HP มากกว่า 50%, เพิ่มบีบีเกจเล็กน้อยจากความเสียหายสปาร์ค, 100% เพิ่มความเสียหายสปาร์ค",
+    "vi": "30% boost to max HP, slightly boosts Atk, Def, Rec when HP is over 50%, Spark damage slightly boosts BB gauge & 100% boost to Spark damage"
+  },
+  "MST_LEADERSKILLS_5529_NAME": {
+    "en": "Divine Violent Flame",
+    "es": "Divine Violent Flame",
+    "id": "Api Kekerasan Ilahi",
+    "pt": "Divine Violent Flame",
+    "th": "ดีไวน์ ไวโอเลนท์ เฟลม",
+    "vi": "Divine Violent Flame"
+  },
+  "MST_LEADERSKILLS_552_DESCRIPTION": {
+    "en": "15% damage reduction from Water types, hugely boosts damage against Water types & negates critical damage",
+    "es": "15% damage reduction from Water types, hugely boosts damage against Water types & negates critical damage",
+    "id": "15% pengurangan kerusakan dari tipe Air, amat menambah kerusakan melawan tipe Air & menegasi kerusakan pukulan ampuh",
+    "pt": "15% damage reduction from Water types, hugely boosts damage against Water types & negates critical damage",
+    "th": "15% ลดดาเมจธาตุน้ำ, เร่งดาเมจอย่างมากต่อธาตุน้ำ, กันคริติคอลดาเมจ",
+    "vi": "15% damage reduction from Water types, hugely boosts damage against Water types & negates critical damage"
+  },
+  "MST_LEADERSKILLS_552_NAME": {
+    "en": "Spiritual Conviction",
+    "es": "Spiritual Conviction",
+    "id": "Keyakinan Spiritual",
+    "pt": "Spiritual Conviction",
+    "th": "สปิริตช่วล คอนวิคชั่น",
+    "vi": "Spiritual Conviction"
+  },
+  "MST_LEADERSKILLS_5530_DESCRIPTION": {
+    "en": "50% boost to max HP, boosts Atk, Def, Rec when HP is over 50%, Spark damage boosts BB gauge & 120% boost to Spark damage",
+    "es": "50% boost to max HP, boosts Atk, Def, Rec when HP is over 50%, Spark damage boosts BB gauge & 120% boost to Spark damage",
+    "id": "50% ekstra HP maks, menambah Serang, Tahan, Pulih saat HP di atas 50%, kerusakan Percikan menambah meteran BB & 120% ekstra kerusakan Percikan",
+    "pt": "50% boost to max HP, boosts Atk, Def, Rec when HP is over 50%, Spark damage boosts BB gauge & 120% boost to Spark damage",
+    "th": "50% เพิ่ม HP สูงสุด, เพิ่มพลังโจมตี, ป้องกัน, ฟื้นฟูเมื่อ HP มากกว่า 50%, เพิ่มบีบีเกจจากความเสียหายสปาร์ค, 120% เพิ่มความเสียหายสปาร์ค",
+    "vi": "50% boost to max HP, boosts Atk, Def, Rec when HP is over 50%, Spark damage boosts BB gauge & 120% boost to Spark damage"
+  },
+  "MST_LEADERSKILLS_5530_NAME": {
+    "en": "Supreme Heavenly War",
+    "es": "Supreme Heavenly War",
+    "id": "Perang Surgawi Supremasi",
+    "pt": "Supreme Heavenly War",
+    "th": "ซูพรีม เฮฟเว่นลี่ วอร์",
+    "vi": "Supreme Heavenly War"
+  },
+  "MST_LEADERSKILLS_5531_DESCRIPTION": {
+    "en": "40% boost to max HP, slightly boosts Atk, Def, Rec relative to remaining HP & restores HP each turn",
+    "es": "40% boost to max HP, slightly boosts Atk, Def, Rec relative to remaining HP & restores HP each turn",
+    "id": "40% ekstra HP maks, agak menambah Serang, Tahan, Pulih sesuai sisa HP & HP pulih tiap giliran",
+    "pt": "40% boost to max HP, slightly boosts Atk, Def, Rec relative to remaining HP & restores HP each turn",
+    "th": "40% เพิ่ม HP สูงสุด, เพิ่มพลังโจมตี, ป้องกัน, ฟื้นฟูเล็กน้อยโดยขึ้นกับ HP ที่เหลือ, ฟื้นฟู HP ในแต่ละเทิร์น",
+    "vi": "40% boost to max HP, slightly boosts Atk, Def, Rec relative to remaining HP & restores HP each turn"
+  },
+  "MST_LEADERSKILLS_5531_NAME": {
+    "en": "Divine Mandate",
+    "es": "Divine Mandate",
+    "id": "Mandat Ilahi",
+    "pt": "Divine Mandate",
+    "th": "ดีไวน์ แมนเดท",
+    "vi": "Divine Mandate"
+  },
+  "MST_LEADERSKILLS_5532_DESCRIPTION": {
+    "en": "60% boost to max HP, boosts Atk, Def, Rec relative to remaining HP, restores HP each turn & 15% damage reduction from Fire, Water types",
+    "es": "60% boost to max HP, boosts Atk, Def, Rec relative to remaining HP, restores HP each turn & 15% damage reduction from Fire, Water types",
+    "id": "60% ekstra HP maks, menambah Serang, Tahan, Pulih sesuai sisa HP, HP pulih tiap giliran, kurangi 15% kerusakan dari tipe Api, Air",
+    "pt": "60% boost to max HP, boosts Atk, Def, Rec relative to remaining HP, restores HP each turn & 15% damage reduction from Fire, Water types",
+    "th": "60% เพิ่ม HP สูงสุด, เพิ่มพลังโจมตี, ป้องกัน, ฟื้นฟูโดยขึ้นกับ HP ที่เหลือ, ฟื้นฟู HP ในแต่ละเทิร์น, ลดความเสียหายธาตุไฟและน้ำ 15%",
+    "vi": "60% boost to max HP, boosts Atk, Def, Rec relative to remaining HP, restores HP each turn & 15% damage reduction from Fire, Water types"
+  },
+  "MST_LEADERSKILLS_5532_NAME": {
+    "en": "Divine Mercy",
+    "es": "Divine Mercy",
+    "id": "Belas Asih Ilahi",
+    "pt": "Divine Mercy",
+    "th": "ดีไวน์ เมอซี่",
+    "vi": "Divine Mercy"
+  },
+  "MST_LEADERSKILLS_5539_DESCRIPTION": {
+    "en": "60% boost to max HP, enormously boosts HC drop rate, hugely boosts HC efficacy & probable 20% damage reduction",
+    "es": "60% boost to max HP, enormously boosts HC drop rate, hugely boosts HC efficacy & probable 20% damage reduction",
+    "id": "60% ekstra HP maks, ekstra jumbo perolehan HC, amat menambah keampuhan HC, kans kurangi 20% kerusakan",
+    "pt": "60% boost to max HP, enormously boosts HC drop rate, hugely boosts HC efficacy & probable 20% damage reduction",
+    "th": "60% เพิ่มค่า HP สูงสุด, เพิ่มค่ามหาศาลให้ อัตราดรอป HC, เพิ่มค่าอย่างสูงให้ ประสิทธิภาพ HC และ มีโอกาส ลดค่าความเสียหาย 20%",
+    "vi": "60% boost to max HP, enormously boosts HC drop rate, hugely boosts HC efficacy & probable 20% damage reduction"
+  },
+  "MST_LEADERSKILLS_5539_NAME": {
+    "en": "Merciful Goddess's Wisdom",
+    "es": "Merciful Goddess's Wisdom",
+    "id": "Kearifan Dewi Murah Hati",
+    "pt": "Merciful Goddess's Wisdom",
+    "th": "เมอซิฟูล ก็อดเดส วิสดอม",
+    "vi": "Merciful Goddess's Wisdom"
+  },
+  "MST_LEADERSKILLS_553_DESCRIPTION": {
+    "en": "15% damage reduction from Earth types, hugely boosts Fire elemental damage against Earth types & negates all status ailments",
+    "es": "15% damage reduction from Earth types, hugely boosts Fire elemental damage against Earth types & negates all status ailments",
+    "id": "Pengurangan 15% kerusakan dari tipe Bumi, tambahan jumbo kerusakan elemen Api terhadap tipe Bumi & menegasi semua status penyakit",
+    "pt": "15% damage reduction from Earth types, hugely boosts Fire elemental damage against Earth types & negates all status ailments",
+    "th": "15% ลดดาเมจจากธาตุดิน, เพิ่มดาเมจธาตุไฟอย่างมากต่อธาตุดิน, กันทุกสถานะผิดปกติ",
+    "vi": "15% damage reduction from Earth types, hugely boosts Fire elemental damage against Earth types & negates all status ailments"
+  },
+  "MST_LEADERSKILLS_553_NAME": {
+    "en": "Ardent Conviction",
+    "es": "Ardent Conviction",
+    "id": "Keyakinan Bersemangat",
+    "pt": "Ardent Conviction",
+    "th": "อาร์เดนท์ คอนวิคชั่น",
+    "vi": "Ardent Conviction"
+  },
+  "MST_LEADERSKILLS_5540_DESCRIPTION": {
+    "en": "Boost to BC & Item drop rate",
+    "es": "Boost to BC & Item drop rate",
+    "id": "Menambah perolehan BC dan barang",
+    "pt": "Boost to BC & Item drop rate",
+    "th": "อัตราดรอป BC และ ไอเท็ม",
+    "vi": "Boost to BC & Item drop rate"
+  },
+  "MST_LEADERSKILLS_5540_NAME": {
+    "en": "Season Givings",
+    "es": "Season Givings",
+    "id": "Musim Memberi",
+    "pt": "Season Givings",
+    "th": "ซีซัน กิฟวิ่ง",
+    "vi": "Season Givings"
+  },
+  "MST_LEADERSKILLS_5541_DESCRIPTION": {
+    "en": "Large boost to BC & Item drop rate",
+    "es": "Large boost to BC & Item drop rate",
+    "id": "Tambahan besar perolehan BC dan barang",
+    "pt": "Large boost to BC & Item drop rate",
+    "th": "เพื่มค่าอย่างมาก อัตราดรอป BC และ ไอเท็ม",
+    "vi": "Large boost to BC & Item drop rate"
+  },
   "MST_LEADERSKILLS_5541_NAME": {
     "en": "Season Giftings",
     "es": "Season Giftings",
@@ -8095,6 +8271,38 @@
     "th": "Jason",
     "vi": "Jason"
   },
+  "MST_LEADERSKILLS_810837_DESCRIPTION": {
+    "en": "150% Atk, 100% max HP, 30% critical rate, 200% spark damage, raises Atk limit to 130k & 10% damage reduction from Fire, Water, Light, Dark types",
+    "es": "150% Atk, 100% max HP, 30% critical rate, 200% spark damage, raises Atk limit to 130k & 10% damage reduction from Fire, Water, Light, Dark types",
+    "id": "150% Atk, 100% max HP, 30% critical rate, 200% spark damage, raises Atk limit to 130k & 10% damage reduction from Fire, Water, Light, Dark types",
+    "pt": "150% Atk, 100% max HP, 30% critical rate, 200% spark damage, raises Atk limit to 130k & 10% damage reduction from Fire, Water, Light, Dark types",
+    "th": "150% Atk, 100% max HP, 30% critical rate, 200% spark damage, raises Atk limit to 130k & 10% damage reduction from Fire, Water, Light, Dark types",
+    "vi": "150% Atk, 100% max HP, 30% critical rate, 200% spark damage, raises Atk limit to 130k & 10% damage reduction from Fire, Water, Light, Dark types"
+  },
+  "MST_LEADERSKILLS_810837_NAME": {
+    "en": "Okay... Now it's your turn",
+    "es": "Okay... Now it's your turn",
+    "id": "Okay... Now it's your turn",
+    "pt": "Okay... Now it's your turn",
+    "th": "Okay... Now it's your turn",
+    "vi": "Okay... Now it's your turn"
+  },
+  "MST_LEADERSKILLS_810838_DESCRIPTION": {
+    "en": "200% Atk, 150% max HP, 30% critical rate, 300% spark damage, raises Atk limit to 160k, 30% OD gauge fill rate & 15% damage reduction from Fire, Water, Light, Dark types",
+    "es": "200% Atk, 150% max HP, 30% critical rate, 300% spark damage, raises Atk limit to 160k, 30% OD gauge fill rate & 15% damage reduction from Fire, Water, Light, Dark types",
+    "id": "200% Atk, 150% max HP, 30% critical rate, 300% spark damage, raises Atk limit to 160k, 30% OD gauge fill rate & 15% damage reduction from Fire, Water, Light, Dark types",
+    "pt": "200% Atk, 150% max HP, 30% critical rate, 300% spark damage, raises Atk limit to 160k, 30% OD gauge fill rate & 15% damage reduction from Fire, Water, Light, Dark types",
+    "th": "200% Atk, 150% max HP, 30% critical rate, 300% spark damage, raises Atk limit to 160k, 30% OD gauge fill rate & 15% damage reduction from Fire, Water, Light, Dark types",
+    "vi": "200% Atk, 150% max HP, 30% critical rate, 300% spark damage, raises Atk limit to 160k, 30% OD gauge fill rate & 15% damage reduction from Fire, Water, Light, Dark types"
+  },
+  "MST_LEADERSKILLS_810838_NAME": {
+    "en": "Down to business",
+    "es": "Down to business",
+    "id": "Down to business",
+    "pt": "Down to business",
+    "th": "Down to business",
+    "vi": "Down to business"
+  },
   "MST_LEADERSKILLS_810900_DESCRIPTION": {
     "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Fire elemental damage, 15% damage reduction from Earth types & negates all status ailments",
     "es": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Fire elemental damage, 15% damage reduction from Earth types & negates all status ailments",
@@ -9718,6 +9926,22 @@
     "pt": "Summoner of Old: Emerald",
     "th": "Summoner of Old: Emerald",
     "vi": "Summoner of Old: Emerald"
+  },
+  "MST_LEADERSKILLS_830838_DESCRIPTION": {
+    "en": "120% Atk, max HP, 100% Def, Rec, negates all status ailments and Atk, Def, Rec reduction, spark damage fills BB gauge, 30% OD gauge fill rate & 40% BC, HC, 5% Item, 20% Zel, 30% Karma drop rates",
+    "es": "120% Atk, max HP, 100% Def, Rec, negates all status ailments and Atk, Def, Rec reduction, spark damage fills BB gauge, 30% OD gauge fill rate & 40% BC, HC, 5% Item, 20% Zel, 30% Karma drop rates",
+    "id": "120% Atk, max HP, 100% Def, Rec, negates all status ailments and Atk, Def, Rec reduction, spark damage fills BB gauge, 30% OD gauge fill rate & 40% BC, HC, 5% Item, 20% Zel, 30% Karma drop rates",
+    "pt": "120% Atk, max HP, 100% Def, Rec, negates all status ailments and Atk, Def, Rec reduction, spark damage fills BB gauge, 30% OD gauge fill rate & 40% BC, HC, 5% Item, 20% Zel, 30% Karma drop rates",
+    "th": "120% Atk, max HP, 100% Def, Rec, negates all status ailments and Atk, Def, Rec reduction, spark damage fills BB gauge, 30% OD gauge fill rate & 40% BC, HC, 5% Item, 20% Zel, 30% Karma drop rates",
+    "vi": "120% Atk, max HP, 100% Def, Rec, negates all status ailments and Atk, Def, Rec reduction, spark damage fills BB gauge, 30% OD gauge fill rate & 40% BC, HC, 5% Item, 20% Zel, 30% Karma drop rates"
+  },
+  "MST_LEADERSKILLS_830838_NAME": {
+    "en": "Somebody give me a light!",
+    "es": "Somebody give me a light!",
+    "id": "Somebody give me a light!",
+    "pt": "Somebody give me a light!",
+    "th": "Somebody give me a light!",
+    "vi": "Somebody give me a light!"
   },
   "MST_LEADERSKILLS_830900_DESCRIPTION": {
     "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Earth elemental damage, 15% damage reduction from Thunder types & negates all status ailments",
@@ -14898,18 +15122,26 @@
   "MST_MISSIONQUEST_37_MESSAGE": {
     "en": "The key to victory is using your key gambits perfectly. You'll probably get the idea when you start winning your way through.",
     "es": "The key to victory is using your key gambits perfectly. You'll probably get the idea when you start winning your way through.",
-    "id": "The key to victory is using your key gambits perfectly. You'll probably get the idea when you start winning your way through.",
+    "id": "Kunci kemenangan adalah memakai aksi kunci dengan sempurna. Mungkin kau akan dapat ide saat mulai menang.",
     "pt": "The key to victory is using your key gambits perfectly. You'll probably get the idea when you start winning your way through.",
-    "th": "The key to victory is using your key gambits perfectly. You'll probably get the idea when you start winning your way through.",
+    "th": "กุญแจสู่ชัยชนะคือการใช้ กลเม็ดของคุณอย่างสมบูรณ์แบบ คุณอาจจะเข้าใจแนวคิดนี้เมื่อคุณเริ่มเส้นทางชัยชนะของคุณไปเรื่อยๆ",
     "vi": "The key to victory is using your key gambits perfectly. You'll probably get the idea when you start winning your way through."
   },
   "MST_MISSIONQUEST_38_MESSAGE": {
     "en": "Are you keeping track of your reserve Units' statuses? Move to get the ones that are ready to fight in position to sub in.",
     "es": "Are you keeping track of your reserve Units' statuses? Move to get the ones that are ready to fight in position to sub in.",
-    "id": "Are you keeping track of your reserve Units' statuses? Move to get the ones that are ready to fight in position to sub in.",
+    "id": "Apakah kamu mengikuti status Unit cadanganmu? Pindahkan untuk memakai yang siap bertarung untuk masuk posisinya.",
     "pt": "Are you keeping track of your reserve Units' statuses? Move to get the ones that are ready to fight in position to sub in.",
-    "th": "Are you keeping track of your reserve Units' statuses? Move to get the ones that are ready to fight in position to sub in.",
+    "th": "คุณกำลังติดตามสถานะของยูนิตสำรองของคุณไว้หรือไม่? ย้ายไปรับยูนิตที่พร้อมที่จะต่อสู้ในตำแหน่งตัวสำรอง",
     "vi": "Are you keeping track of your reserve Units' statuses? Move to get the ones that are ready to fight in position to sub in."
+  },
+  "MST_MISSIONQUEST_39_MESSAGE": {
+    "en": "The Holy Emperor is finally here. This will probably the toughest battle you've ever faced. Make sure you give it everything you've got.",
+    "es": "The Holy Emperor is finally here. This will probably the toughest battle you've ever faced. Make sure you give it everything you've got.",
+    "id": "Kaisar Suci akhirnya tiba. Ini mungkin perang tersulit yang pernah kau hadapi. Pastikan kau berjuang sebisamu.",
+    "pt": "The Holy Emperor is finally here. This will probably the toughest battle you've ever faced. Make sure you give it everything you've got.",
+    "th": "ในที่สุดจักรพรรดิศักดิ์สิทธิ์ก็มาถึงที่นี่ นี่อาจจะเป็นการต่อสู้ที่ยากลำบากที่สุดเท่าที่เจ้าเคยเผชิญหน้า จงแน่ใจว่าเจ้าได้ทุ่มเทด้วยทุกอย่างที่เจ้ามี",
+    "vi": "The Holy Emperor is finally here. This will probably the toughest battle you've ever faced. Make sure you give it everything you've got."
   },
   "MST_MISSIONQUEST_3_MESSAGE": {
     "en": "My mock Units are powerful, don't you think?<br>Feel free to give up.<br>I'll accept your challenge<br>at any time!",
@@ -14918,6 +15150,14 @@
     "pt": "“Minhas unidades simuladas são poderosas, não acha?<br>Pode desistir se quiser.<br>Vou aceitar seu desafio<br>quando quiser!\"",
     "th": "\"ยูนิตเทียมของข้าแข็งแกร่งสุดๆ เลย เจ้าว่าไหม?<br>จะยอมแพ้ก็ได้นะ<br>ข้าจะรับการท้าทายของเจ้า<br>เมื่อไหร่ก็ได้!\"",
     "vi": "\"Lũ Quái của ta cực mạnh, ngươi không nghĩ thế à?<br>Cứ sẵn sàng bỏ cuộc nhé.<br>Ta sẽ chấp nhận thách thức của ngươi<br>bất cứ lúc nào!\""
+  },
+  "MST_MISSIONQUEST_40_MESSAGE": {
+    "en": "The Holy Emperor is finally here. This will probably the toughest battle you've ever faced. Make sure you give it everything you've got.",
+    "es": "The Holy Emperor is finally here. This will probably the toughest battle you've ever faced. Make sure you give it everything you've got.",
+    "id": "Kaisar Suci akhirnya tiba. Ini mungkin perang tersulit yang pernah kau hadapi. Pastikan kau berjuang sebisamu.",
+    "pt": "The Holy Emperor is finally here. This will probably the toughest battle you've ever faced. Make sure you give it everything you've got.",
+    "th": "ในที่สุดจักรพรรดิศักดิ์สิทธิ์ก็มาถึงที่นี่ นี่อาจจะเป็นการต่อสู้ที่ยากลำบากที่สุดเท่าที่เจ้าเคยเผชิญหน้า จงแน่ใจว่าเจ้าได้ทุ่มเทด้วยทุกอย่างที่เจ้ามี",
+    "vi": "The Holy Emperor is finally here. This will probably the toughest battle you've ever faced. Make sure you give it everything you've got."
   },
   "MST_MISSIONQUEST_4_MESSAGE": {
     "en": "You think my attacks are unfair?<br> Battle isn't just about attacking, you know!",
@@ -15947,7 +16187,7 @@
     "en": "This shield is impregnable.<br>Can a rookie like you break through it?",
     "es": "Este escudo es impenetrable.<br>¿Piensas que un novato como tú podrá atravesarlo?",
     "id": "Tameng ini tak dapat ditembus.<br>Bisakah pemula seperti dirimu menembusnya?",
-    "pt": "Este escudo é inquebrável.<br>Será que você pode passar por ele? ",
+    "pt": "Este escudo é inquebrável.<br>Será que você pode passar por ele?",
     "th": "เกราะนี้เจาะไม่ได้<br>แล้วเด็กฝึกหัดอย่างเจ้าจะทำลายมันได้เหรอ?",
     "vi": "Chiếc khiên này rất vững chắc.<br>Một tân binh như ngươi có thể xuyên thủng nó không?"
   },
@@ -17619,7 +17859,7 @@
     "en": "You have indeed grown, my child. I see it's time for my strongest technique. Stand strong, if you can!　",
     "es": "You have indeed grown, my child. I see it's time for my strongest technique. Stand strong, if you can!　",
     "id": "Kau memang sudah bertumbuh, anakku. Ini waktunya untuk teknik terkuatku. Tetaplah kuat, jika bisa!",
-    "pt": "You have indeed grown, my child. I see it's time for my strongest technique. Stand strong, if you can!　",
+    "pt": "You have indeed grown, my child. I see it's time for my strongest technique. Stand strong, if you can!",
     "th": "เจ้าได้เติบโตขึ้นแล้วจริงๆ ลูกข้า ดูเหมือนว่ามันถึงเวลาที่ข้าต้องใช้เคล็ดลับที่แข็งแกร่งที่สุดออกมาแล้วสิ ทนให้ไหว ถ้าเจ้าทำได้!",
     "vi": "You have indeed grown, my child. I see it's time for my strongest technique. Stand strong, if you can!　"
   },
@@ -18771,7 +19011,7 @@
     "en": "We have to hurry. If it is who I think it is then...<br>Hey! Terry! ",
     "es": "We have to hurry. If it is who I think it is then...<br>Hey! Terry! ",
     "id": "Kita harus bergegas. Kalau ini dia yang kupikirkan...<br>Hei! Terry! ",
-    "pt": "We have to hurry. If it is who I think it is then...<br>Hey! Terry! ",
+    "pt": "We have to hurry. If it is who I think it is then...<br>Hey! Terry!",
     "th": "เราต้องรีบแล้ว ถ้านี่คือคนที่ข้าคิด...<br>เฮ้! เทอรี่! ",
     "vi": "We have to hurry. If it is who I think it is then...<br>Hey! Terry! "
   },
@@ -18907,7 +19147,7 @@
     "en": "Pathetic rats! Why do you fight? ",
     "es": "Pathetic rats! Why do you fight? ",
     "id": "Tikus menyedihkan! Mengapa kalian berjuang?",
-    "pt": "Pathetic rats! Why do you fight? ",
+    "pt": "Pathetic rats! Why do you fight?",
     "th": "เจ้าโง่! ทำไมถึงยังคิดจะสู้? ",
     "vi": "Pathetic rats! Why do you fight? "
   },
@@ -20571,7 +20811,7 @@
     "en": "So you're interesting after all!<br>Well, hurry up and deliver the final blow <br>so you can move on to the next opponent. ",
     "es": "¡Así que eres interesante después de todo! <br>Bueno, apúrate y asesta el golpe final <br>para poder luchar contra el siguiente rival. ",
     "id": "Jadi kau memang menarik!<br>Cepat, dan kirim pukulan terakhir <br>agar kau bisa pindah ke lawan berikutnya.",
-    "pt": "Então você é interessante, no final das contas!<br>Bem, anda logo e dê o último golpe <br>para que possa partir para o próximo oponente. ",
+    "pt": "Então você é interessante, no final das contas!<br>Bem, anda logo e dê o último golpe <br>para que possa partir para o próximo oponente.",
     "th": "เจ้านี่มันน่าสนใจจริงๆ !<br>เอาล่ะ รีบลงมือจบการโจมตีเสียสิ <br>เจ้าจะได้ไปเจอกับศัตรูตัวต่อไปสักที",
     "vi": "Vậy rốt cuộc ngươi vẫn có hứng thú!<br>Chà, vậy hãy nhanh lên và ra đòn cuối cùng đi <br>để ngươi có thể chuyển sang đối thủ tiếp theo. "
   },
@@ -20715,7 +20955,7 @@
     "en": "Flora Aegis Edea",
     "es": "Edea do Escudo Florido",
     "id": "Flora Aegis Edea",
-    "pt": "",
+    "pt": "Edea do Escudo Florido",
     "th": "ฟลอร่า อีกิส อีเดีย",
     "vi": "Aegis floral Edea"
   },
@@ -20723,7 +20963,7 @@
     "en": "Heaven's Bow Loch",
     "es": "Loch Arco Celeste",
     "id": "Busur Surga Loch",
-    "pt": "",
+    "pt": "Loch Arco Celeste",
     "th": "เฮฟเว่น โบว ลอร์ช",
     "vi": "Loch, Arco celestial"
   },
@@ -20731,7 +20971,7 @@
     "en": "Celestial Archer Loch",
     "es": "Arqueiro Celestial Loch",
     "id": "Pemanah Langit Loch",
-    "pt": "",
+    "pt": "Arqueiro Celestial Loch",
     "th": "เซเลสเชียล อาร์เชอร์ ลอร์ช",
     "vi": "Arquero celestial Loch"
   },
@@ -20739,7 +20979,7 @@
     "en": "Ice Master Dean",
     "es": "Mestre do Gelo Dean",
     "id": "Master Es Dean",
-    "pt": "",
+    "pt": "Mestre do Gelo Dean",
     "th": "ไอซ์ มาสเตอร์ ดีน",
     "vi": "Dean, Maestro gélido"
   },
@@ -20747,7 +20987,7 @@
     "en": "Taskmaster Lorand",
     "es": "Lorand Treinador",
     "id": "Pemberi Tugas Lorand",
-    "pt": "",
+    "pt": "Lorand Treinador",
     "th": "แทคสมาสเตอร์ โลแรนด์",
     "vi": "Capataz Lorand"
   },
@@ -20755,7 +20995,7 @@
     "en": "Ice Warrior Karl",
     "es": "Karl Guerreiro do Gelo",
     "id": "Ksatria Es Karl",
-    "pt": "",
+    "pt": "Karl Guerreiro do Gelo",
     "th": "ไอซ์ วอริเออร์ คาร์ล",
     "vi": "Guerrero gélido Karl"
   },
@@ -20763,7 +21003,7 @@
     "en": "Goddess Axe Michele",
     "es": "Michele Deusa do Machado",
     "id": "Dewi Kapak Michele",
-    "pt": "",
+    "pt": "Michele Deusa do Machado",
     "th": "ก็อดเดส แอ็กซ์ มิเชล",
     "vi": "Diosa Michele"
   },
@@ -20771,7 +21011,7 @@
     "en": "Empyreal Drake Lodin",
     "es": "Lodin Dragão Supremo",
     "id": "Drake Langit Lodin",
-    "pt": "",
+    "pt": "Lodin Dragão Supremo",
     "th": "เอ็มไพรีล เดรค โลดิน",
     "vi": "Dragón empíreo Lodin"
   },
@@ -20779,7 +21019,7 @@
     "en": "Goddess Axe Michele",
     "es": "Michele Deusa do Machado",
     "id": "Dewi Kapak Michele",
-    "pt": "",
+    "pt": "Michele Deusa do Machado",
     "th": "ก็อดเดส แอ็กซ์ มิเชล",
     "vi": "Diosa Michele"
   },
@@ -20787,7 +21027,7 @@
     "en": "Final Apostle Tiara",
     "es": "Tiara Doutrinadora",
     "id": "Murid Terakhir Tiara",
-    "pt": "",
+    "pt": "Tiara Doutrinadora",
     "th": "ไฟนอล อะพอสเทิล เทียร่า",
     "vi": "Tiara, Apóstol final"
   },
@@ -20795,7 +21035,7 @@
     "en": "Blade Emperor Zelban",
     "es": "Zelban Imperador das Lâminas",
     "id": "Kaisar Bilah Zelban",
-    "pt": "",
+    "pt": "Zelban Imperador das Lâminas",
     "th": "เบลด เอ็มเพอเรอร์ เซลบาน",
     "vi": "Emperador Zelban"
   },
@@ -20803,7 +21043,7 @@
     "en": "Empyreal Drake Lodin",
     "es": "Lodin Dragão Supremo",
     "id": "Drake Langit Lodin",
-    "pt": "",
+    "pt": "Lodin Dragão Supremo",
     "th": "เอ็มไพรีล เดรค โลดิน",
     "vi": "Dragón empíreo Lodin"
   },
@@ -20811,7 +21051,7 @@
     "en": "Duel-SGX",
     "es": "SGX-Duelo",
     "id": "Duel-SGX",
-    "pt": "",
+    "pt": "SGX-Duelo",
     "th": "ดูเอล-เอสจีเอ็กซ์",
     "vi": "Duel-SGX"
   },
@@ -20819,7 +21059,7 @@
     "en": "Skilled Lance Noah",
     "es": "Skilled Lance Noah",
     "id": "Tombak Ahli Noah",
-    "pt": "",
+    "pt": "Skilled Lance Noah",
     "th": "สกิลเล็ด แลนซ์ โนอาห์",
     "vi": "Skilled Lance Noah"
   },
@@ -20827,7 +21067,7 @@
     "en": "Elise",
     "es": "Elise",
     "id": "Elise",
-    "pt": "",
+    "pt": "Elise",
     "th": "เอลิเซ่",
     "vi": "Elise"
   },
@@ -20835,7 +21075,7 @@
     "en": "Lin",
     "es": "Lin",
     "id": "Lin",
-    "pt": "",
+    "pt": "Lin",
     "th": "ลิน",
     "vi": "Lin"
   },
@@ -20843,7 +21083,7 @@
     "en": "Sera",
     "es": "Sera",
     "id": "Sera",
-    "pt": "",
+    "pt": "Sera",
     "th": "เซร่า",
     "vi": "Sera"
   },
@@ -20851,7 +21091,7 @@
     "en": "Magma Twin-Pike Claire",
     "es": "Magma Twin-Pike Claire",
     "id": "Tombak Duo Magma Claire",
-    "pt": "",
+    "pt": "Magma Twin-Pike Claire",
     "th": "แมกม่า ทวิน-ไปค์ แคลร์",
     "vi": "Magma Twin-Pike Claire"
   },
@@ -20859,7 +21099,7 @@
     "en": "Glacier Twin-Blade Colt",
     "es": "Glacier Twin-Blade Colt",
     "id": "Bilah Duo Gletser Colt",
-    "pt": "",
+    "pt": "Glacier Twin-Blade Colt",
     "th": "กลาเซีย ทวิน-เบลด โคลท์",
     "vi": "Glacier Twin-Blade Colt"
   },
@@ -20867,7 +21107,7 @@
     "en": "Sylvan Excalibur Quaid",
     "es": "Sylvan Excalibur Quaid",
     "id": "Sylvan Excalibur Quaid",
-    "pt": "",
+    "pt": "Sylvan Excalibur Quaid",
     "th": "ซิลวาน เอ็กคาลิเบอร์ เควด",
     "vi": "Sylvan Excalibur Quaid"
   },
@@ -20875,7 +21115,7 @@
     "en": "Thunderbird Sabre Diana",
     "es": "Thunderbird Sabre Diana",
     "id": "Sabel Thunderbird Diana",
-    "pt": "",
+    "pt": "Thunderbird Sabre Diana",
     "th": "ธันเดอร์เบิร์ด ซาเบร ไดอาน่า",
     "vi": "Thunderbird Sabre Diana"
   },
@@ -20883,7 +21123,7 @@
     "en": "Radiant Virtue Fadahl",
     "es": "Radiant Virtue Fadahl",
     "id": "Nilai Bersinar Fadahl",
-    "pt": "",
+    "pt": "Radiant Virtue Fadahl",
     "th": "เรเดียนท เวอทู ฟาดาห์ล",
     "vi": "Radiant Virtue Fadahl"
   },
@@ -20891,7 +21131,7 @@
     "en": "Galactic Treasure Ivris",
     "es": "Galactic Treasure Ivris",
     "id": "Harta Galaksi Ivris",
-    "pt": "",
+    "pt": "Galactic Treasure Ivris",
     "th": "กาแลคติก เทรเชอร์ ไอวริส",
     "vi": "Galactic Treasure Ivris"
   },
@@ -20899,7 +21139,7 @@
     "en": "Holy Flame Vargas",
     "es": "Vargas Chama Sagrada",
     "id": "Bara Suci Vargas",
-    "pt": "",
+    "pt": "Vargas Chama Sagrada",
     "th": "โฮลี่ เฟลม วากัส",
     "vi": "Llama sagrada Vargas"
   },
@@ -20907,7 +21147,7 @@
     "en": "Bow God Lario",
     "es": "Lario Deus do Arco",
     "id": "Dewa Busur Lario",
-    "pt": "",
+    "pt": "Lario Deus do Arco",
     "th": "โบว ก็อด ลาริโอ้",
     "vi": "Dios del arco Lario"
   },
@@ -20915,7 +21155,7 @@
     "en": "Commander Mega",
     "es": "Comandante Mega",
     "id": "Komandan Mega",
-    "pt": "",
+    "pt": "Comandante Mega",
     "th": "คอมมานเดอร์ เมก้า",
     "vi": "Comandante Mega"
   },
@@ -20923,7 +21163,7 @@
     "en": "Scythe God Alice",
     "es": "Alice Deusa da Foice",
     "id": "Dewa Sabit Alice",
-    "pt": "",
+    "pt": "Alice Deusa da Foice",
     "th": "สซินท์ ก็อด อลิซ",
     "vi": "Diosa letal Alice"
   },
@@ -20931,7 +21171,7 @@
     "en": "Brave Hero Alma",
     "es": "Alma Brava Heroína",
     "id": "Pahlawan Berani Alma",
-    "pt": "",
+    "pt": "Alma Brava Heroína",
     "th": "เบรฟ ฮีโร่ อัลม่า",
     "vi": "Héroe Brave Alma"
   },
@@ -20939,7 +21179,7 @@
     "en": "God Blade Mifune",
     "es": "Mifune Deus da Lâmina",
     "id": "Dewa Bilah Mifune",
-    "pt": "",
+    "pt": "Mifune Deus da Lâmina",
     "th": "ก็อด เบลด มิฟุเนะ",
     "vi": "Dios letal Mifune"
   },
@@ -20947,7 +21187,7 @@
     "en": "Gaia King Lugina",
     "es": "Lugina Rei-Gaia",
     "id": "Raja Gaia Lugina",
-    "pt": "",
+    "pt": "Lugina Rei-Gaia",
     "th": "ไกอา คิง ลูจิน่า",
     "vi": "Rey de Gaia Lugina"
   },
@@ -20955,7 +21195,7 @@
     "en": "Royal Guard Paris",
     "es": "Paris Guarda Real",
     "id": "Pengawal Kerajaan Paris",
-    "pt": "",
+    "pt": "Paris Guarda Real",
     "th": "รอยัล การ์ด ปารีส",
     "vi": "Guardia Real Paris"
   },
@@ -20963,7 +21203,7 @@
     "en": "Mirfah",
     "es": "Mirfah",
     "id": "Mirfah",
-    "pt": "",
+    "pt": "Mirfah",
     "th": "เมอร์ฟาห์",
     "vi": "Mirfah"
   },
@@ -20971,7 +21211,7 @@
     "en": "Seismic Fury Lugina",
     "es": "Seismic Fury Lugina",
     "id": "Murka Seismik Lugina",
-    "pt": "",
+    "pt": "Seismic Fury Lugina",
     "th": "เซสมิค ฟิวรี่ ลูจิน่า",
     "vi": "Seismic Fury Lugina"
   },
@@ -20979,7 +21219,7 @@
     "en": "Solar Fervor Seria",
     "es": "Solar Fervor Seria",
     "id": "Semangat Surya Seria",
-    "pt": "",
+    "pt": "Solar Fervor Seria",
     "th": "โซลาร์ เฟอเวอร์ ซีเรีย",
     "vi": "Solar Fervor Seria"
   },
@@ -20987,7 +21227,7 @@
     "en": "Boreal Courage Karl",
     "es": "Boreal Courage Karl",
     "id": "Keberanian Utara Karl",
-    "pt": "",
+    "pt": "Boreal Courage Karl",
     "th": "บอเรียล คอเรจ คาร์ล ",
     "vi": "Boreal Courage Karl"
   },
@@ -20995,7 +21235,7 @@
     "en": "Boreal Courage Karl",
     "es": "Boreal Courage Karl",
     "id": "Semangat Surya Seria",
-    "pt": "",
+    "pt": "Boreal Courage Karl",
     "th": "โซลาร์ เฟอเวอร์ ซีเรีย",
     "vi": "Boreal Courage Karl"
   },
@@ -21003,7 +21243,7 @@
     "en": "Solar Fervor Seria",
     "es": "Solar Fervor Seria",
     "id": "Keberanian Utara Karl",
-    "pt": "",
+    "pt": "Solar Fervor Seria",
     "th": "บอเรียล คอเรจ คาร์ล",
     "vi": "Solar Fervor Seria"
   },
@@ -21011,7 +21251,7 @@
     "en": "Seismic Fury Lugina",
     "es": "Seismic Fury Lugina",
     "id": "Murka Seismik Lugina",
-    "pt": "",
+    "pt": "Seismic Fury Lugina",
     "th": "ไซซ์มิค ฟิวรี่ ลูจิน่า",
     "vi": "Seismic Fury Lugina"
   },
@@ -21019,7 +21259,7 @@
     "en": "Radiating Grandeur Paris",
     "es": "Radiating Grandeur Paris",
     "id": "Paris Terpancar Megah",
-    "pt": "",
+    "pt": "Radiating Grandeur Paris",
     "th": "เรดีเอติ้ง แกรนเจอ ปารีส",
     "vi": "Radiating Grandeur Paris"
   },
@@ -21027,7 +21267,7 @@
     "en": "Sacred Goddess Tilith",
     "es": "Sacred Goddess Tilith",
     "id": "Dewi Suci Tilith",
-    "pt": "",
+    "pt": "Sacred Goddess Tilith",
     "th": "เซเครด ก็อดเดส ทิลิธ",
     "vi": "Sacred Goddess Tilith"
   },
@@ -21035,7 +21275,7 @@
     "en": "Dark Oracle Knight Ark",
     "es": "Dark Oracle Knight Ark",
     "id": "Ksatria Peramal Gelap Ark",
-    "pt": "",
+    "pt": "Dark Oracle Knight Ark",
     "th": "ดาร์ค ออราเคิล ไนท์ อาร์ค",
     "vi": "Dark Oracle Knight Ark"
   },
@@ -21043,7 +21283,7 @@
     "en": "Dark Oracle Knight Ark",
     "es": "Dark Oracle Knight Ark",
     "id": "Ksatria Peramal Gelap Ark",
-    "pt": "",
+    "pt": "Dark Oracle Knight Ark",
     "th": "ดาร์ค ออราเคิล ไนท์ อาร์ค",
     "vi": "Dark Oracle Knight Ark"
   },
@@ -21051,7 +21291,7 @@
     "en": "Blade God Seria",
     "es": "Seria Deusa da Lâmina",
     "id": "Dewa Bilah Seria",
-    "pt": "",
+    "pt": "Seria Deusa da Lâmina",
     "th": "เบลด ก็อด ซีเรีย",
     "vi": "Diosa espadachina Seria"
   },
@@ -21059,7 +21299,7 @@
     "en": "Ice Warrior Karl",
     "es": "Karl Guerreiro do Gelo",
     "id": "Ksatria Es Karl",
-    "pt": "",
+    "pt": "Karl Guerreiro do Gelo",
     "th": "ไอซ์ วอริเออร์ คาร์ล",
     "vi": "Guerrero gélido Karl"
   },
@@ -21067,7 +21307,7 @@
     "en": "Grahdens",
     "es": "Grahdens",
     "id": "Grahdens",
-    "pt": "",
+    "pt": "Grahdens",
     "th": "กราห์เดนส์",
     "vi": "Grahdens"
   },
@@ -21075,7 +21315,7 @@
     "en": "Blizzard God Karl",
     "es": "Deus da Nevasca Karl",
     "id": "Dewa Badai Es Karl",
-    "pt": "",
+    "pt": "Deus da Nevasca Karl",
     "th": "บลิซซาร์ด ก็อด คาร์ล",
     "vi": "Dios glacial Karl"
   },
@@ -21083,7 +21323,7 @@
     "en": "Sacred Goddess Tilith",
     "es": "Sacred Goddess Tilith",
     "id": "Dewi Suci Tilith",
-    "pt": "",
+    "pt": "Sacred Goddess Tilith",
     "th": "เซเครด ก็อดเดส ธิลิท",
     "vi": "Sacred Goddess Tilith"
   },
@@ -21091,7 +21331,7 @@
     "en": "Scarlet Wonderer Reda",
     "es": "Scarlet Wonderer Reda",
     "id": "Pengembara Merah Reda",
-    "pt": "",
+    "pt": "Scarlet Wonderer Reda",
     "th": "สกาเล็ต แวนเดอเรอร์ เรด้า",
     "vi": "Scarlet Wonderer Reda"
   },
@@ -21099,7 +21339,7 @@
     "en": "Seismic Fury Lugina",
     "es": "Seismic Fury Lugina",
     "id": "Murka Seismik Lugina",
-    "pt": "",
+    "pt": "Seismic Fury Lugina",
     "th": "ไซสมิค ฟิวรี่ ลูจิน่า",
     "vi": "Seismic Fury Lugina"
   },
@@ -21107,7 +21347,7 @@
     "en": "Sacred Goddess Tilith",
     "es": "Sacred Goddess Tilith",
     "id": "Dewi Suci Tilith",
-    "pt": "",
+    "pt": "Sacred Goddess Tilith",
     "th": "เซเคร็ด ก็อดเดส ธิลิท",
     "vi": "Sacred Goddess Tilith"
   },
@@ -21115,7 +21355,7 @@
     "en": "Scarlet Wanderer Reda",
     "es": "Scarlet Wanderer Reda",
     "id": "Pengelana Merah Reda",
-    "pt": "",
+    "pt": "Scarlet Wanderer Reda",
     "th": "เซเคร็ด แวนเดอเรอร์ เรด้า",
     "vi": "Scarlet Wanderer Reda"
   },
@@ -21123,7 +21363,7 @@
     "en": "Solar Fervor Seria",
     "es": "Solar Fervor Seria",
     "id": "Semangat Surya Seria",
-    "pt": "",
+    "pt": "Solar Fervor Seria",
     "th": "โซลาร์ เฟอร์เวอร์ ซีเรีย",
     "vi": "Solar Fervor Seria"
   },
@@ -21131,7 +21371,7 @@
     "en": "Solar Fervor Seria",
     "es": "Solar Fervor Seria",
     "id": "Semangat Surya Seria",
-    "pt": "",
+    "pt": "Solar Fervor Seria",
     "th": "โซลาร์ เฟอร์เวอร์ ซีเรีย",
     "vi": "Solar Fervor Seria"
   },
@@ -21139,7 +21379,7 @@
     "en": "Crimson Scout Reda",
     "es": "Crimson Scout Reda",
     "id": "Pramuka Merah Reda",
-    "pt": "",
+    "pt": "Crimson Scout Reda",
     "th": "คริมสัน สเกาท์ เรด้า",
     "vi": "Crimson Scout Reda"
   },
@@ -21147,7 +21387,7 @@
     "en": "Effulgent Dusk Grahdens",
     "es": "Effulgent Dusk Grahdens",
     "id": "Senja Berkilau Grahdens",
-    "pt": "",
+    "pt": "Effulgent Dusk Grahdens",
     "th": "เอฟฟุลเจนท์ ดัสค์ กราห์เดนส์",
     "vi": "Effulgent Dusk Grahdens"
   },
@@ -21155,7 +21395,7 @@
     "en": "Adjutant Mel",
     "es": "Adjutant Mel",
     "id": "Ajudan Mel",
-    "pt": "",
+    "pt": "Adjutant Mel",
     "th": "แอดจูแทนท์ เมล",
     "vi": "Adjutant Mel"
   },
@@ -21163,7 +21403,7 @@
     "en": "Solar Fervor Seria",
     "es": "Solar Fervor Seria",
     "id": "Semangat Surya Seria",
-    "pt": "",
+    "pt": "Solar Fervor Seria",
     "th": "โซลาร์ เฟอร์เวอร์ ซีเรีย",
     "vi": "Solar Fervor Seria"
   },
@@ -21171,7 +21411,7 @@
     "en": "Boreal Courage Karl",
     "es": "Boreal Courage Karl",
     "id": "Keberanian Utara Karl",
-    "pt": "",
+    "pt": "Boreal Courage Karl",
     "th": "บอเรียล เคอเรจ คาร์ล",
     "vi": "Boreal Courage Karl"
   },
@@ -21179,7 +21419,7 @@
     "en": "Blazing Dawn Owen",
     "es": "Blazing Dawn Owen",
     "id": "Senja Membara Owen",
-    "pt": "",
+    "pt": "Blazing Dawn Owen",
     "th": "เบลซซิ่ง ดอว์น โอเว่น",
     "vi": "Blazing Dawn Owen"
   },
@@ -21187,7 +21427,7 @@
     "en": "Seismic Fury Lugina",
     "es": "Seismic Fury Lugina",
     "id": "Seismic Fury Lugina",
-    "pt": "",
+    "pt": "Seismic Fury Lugina",
     "th": "Seismic Fury Lugina",
     "vi": "Seismic Fury Lugina"
   },
@@ -21195,7 +21435,7 @@
     "en": "Blade God Seria",
     "es": "Seria Deusa da Lâmina",
     "id": "Dewa Bilah Seria",
-    "pt": "",
+    "pt": "Seria Deusa da Lâmina",
     "th": "เบลด ก็อด ซีเรีย",
     "vi": "Diosa espadachina Seria"
   },
@@ -21203,7 +21443,7 @@
     "en": "Goddess Tilith",
     "es": "Deusa Tilith",
     "id": "Dewi Tilith",
-    "pt": "",
+    "pt": "Deusa Tilith",
     "th": "ก็อดเดส ธิลิท",
     "vi": "Diosa Tilith"
   },
@@ -21211,7 +21451,7 @@
     "en": "Grahdens",
     "es": "Grahdens",
     "id": "Grahdens",
-    "pt": "",
+    "pt": "Grahdens",
     "th": "กราห์เดนส์",
     "vi": "Grahdens"
   },
@@ -21219,7 +21459,7 @@
     "en": "Gaia King Lugina",
     "es": "Lugina Rei-Gaia",
     "id": "Raja Gaia Lugina",
-    "pt": "",
+    "pt": "Lugina Rei-Gaia",
     "th": "ไกอา คิง ลูจิน่า",
     "vi": "Rey de Gaia Lugina"
   },
@@ -21227,7 +21467,7 @@
     "en": "Royal Guard Paris",
     "es": "Paris Guarda Real",
     "id": "Pengawal Kerajaan Paris",
-    "pt": "",
+    "pt": "Paris Guarda Real",
     "th": "รอยัล การ์ด ปารีส",
     "vi": "Guardia Real Paris"
   },
@@ -21235,7 +21475,7 @@
     "en": "Gaia King Lugina",
     "es": "Lugina Rei-Gaia",
     "id": "Raja Gaia Lugina",
-    "pt": "",
+    "pt": "Lugina Rei-Gaia",
     "th": "ไกอา คิง ลูจิน่า",
     "vi": "Rey de Gaia Lugina"
   },
@@ -21243,7 +21483,7 @@
     "en": "Phoena",
     "es": "Phoena",
     "id": "Phoena",
-    "pt": "",
+    "pt": "Phoena",
     "th": "ฟีน่า",
     "vi": "Foena"
   },
@@ -21251,7 +21491,7 @@
     "en": "Velnar",
     "es": "Velnar",
     "id": "Velnar",
-    "pt": "",
+    "pt": "Velnar",
     "th": "เวลนาร์",
     "vi": "Velnar"
   },
@@ -21259,7 +21499,7 @@
     "en": "Yuni",
     "es": "Yuni",
     "id": "Yuni",
-    "pt": "",
+    "pt": "Yuni",
     "th": "ยูนิ",
     "vi": "Yuni"
   },
@@ -21267,7 +21507,7 @@
     "en": "Grahdens",
     "es": "Grahdens",
     "id": "Grahdens",
-    "pt": "",
+    "pt": "Grahdens",
     "th": "กราห์เดนส์",
     "vi": "Grahdens"
   },
@@ -21275,7 +21515,7 @@
     "en": "Twilight God Grahdens",
     "es": "Grahdens Deus Poente",
     "id": "Dewa Senja Grahdens",
-    "pt": "",
+    "pt": "Grahdens Deus Poente",
     "th": "ทไวไลท์ ก็อด กราห์เดนส์",
     "vi": "Dios del ocaso Grahdens"
   },
@@ -21283,7 +21523,7 @@
     "en": "Scythe Alice",
     "es": "Scythe Alice",
     "id": "Alice Sabit",
-    "pt": "",
+    "pt": "Scythe Alice",
     "th": "ไซธ์ อลิซ",
     "vi": "Scythe Alice"
   },
@@ -21291,7 +21531,7 @@
     "en": "Inferno Queen Elza",
     "es": "Inferno Queen Elza",
     "id": "Ratu Inferno Elza",
-    "pt": "",
+    "pt": "Inferno Queen Elza",
     "th": "อินเฟอร์โน่ ควีน เอลซ่า",
     "vi": "Inferno Queen Elza"
   },
@@ -21299,7 +21539,7 @@
     "en": "NA (ATM)",
     "es": "NA (ATM)",
     "id": "NA (ATM)",
-    "pt": "",
+    "pt": "NA (ATM)",
     "th": "NA (ATM)",
     "vi": "NA (ATM)"
   },
@@ -21307,7 +21547,7 @@
     "en": "NA (ATM)",
     "es": "NA (ATM)",
     "id": "NA (ATM)",
-    "pt": "",
+    "pt": "NA (ATM)",
     "th": "NA (ATM)",
     "vi": "NA (ATM)"
   },
@@ -21315,7 +21555,7 @@
     "en": "Asahi",
     "es": "Asahi",
     "id": "Asahi",
-    "pt": "",
+    "pt": "Asahi",
     "th": "อาซาฮิ",
     "vi": "Asahi"
   },
@@ -21323,7 +21563,7 @@
     "en": "Nozomi",
     "es": "Nozomi",
     "id": "Nozomi",
-    "pt": "",
+    "pt": "Nozomi",
     "th": "โนโซมิ",
     "vi": "Nozomi"
   },
@@ -21331,7 +21571,7 @@
     "en": "Mighty Blaze Griff",
     "es": "Mighty Blaze Griff",
     "id": "Kobaran Kuat Griff",
-    "pt": "",
+    "pt": "Mighty Blaze Griff",
     "th": "ไมท์ตี้ เบลด กริฟ",
     "vi": "Mighty Blaze Griff"
   },
@@ -21339,7 +21579,7 @@
     "en": "Azure Queen Iris",
     "es": "Azure Queen Iris",
     "id": "Ratu Biru Iris",
-    "pt": "",
+    "pt": "Azure Queen Iris",
     "th": "แอสเชอร์ ควีน ไอริส",
     "vi": "Azure Queen Iris"
   },
@@ -21347,7 +21587,7 @@
     "en": "Jade Shimmer Libera",
     "es": "Jade Shimmer Libera",
     "id": "Kilau Giok Libera",
-    "pt": "",
+    "pt": "Jade Shimmer Libera",
     "th": "เจด ชิมเมอร์ ลิเบร่า",
     "vi": "Jade Shimmer Libera"
   },
@@ -21355,7 +21595,7 @@
     "en": "Lightning Rod Rhoa",
     "es": "Lightning Rod Rhoa",
     "id": "Tongkat Kilat Rhoa",
-    "pt": "",
+    "pt": "Lightning Rod Rhoa",
     "th": "ไลท์นิ่ง ร็อด โรห์อา",
     "vi": "Lightning Rod Rhoa"
   },
@@ -21363,7 +21603,7 @@
     "en": "Honorable Knight Krantz",
     "es": "Honorable Knight Krantz",
     "id": "Ksatria Terhormat Krantz",
-    "pt": "",
+    "pt": "Honorable Knight Krantz",
     "th": "ออเนอเรเบิล ไนท์ ครานซ์",
     "vi": "Honorable Knight Krantz"
   },
@@ -21371,7 +21611,7 @@
     "en": "Shadow Serpent Kafka",
     "es": "Shadow Serpent Kafka",
     "id": "Ular Bayangan Kafka",
-    "pt": "",
+    "pt": "Shadow Serpent Kafka",
     "th": "ชาโดว์ เซอเพนท์ คาฟก้า",
     "vi": "Shadow Serpent Kafka"
   },
@@ -21379,7 +21619,7 @@
     "en": "Retribution Demon Mirfah",
     "es": "Retribution Demon Mirfah",
     "id": "Setan Pembalasan Mirfah",
-    "pt": "",
+    "pt": "Retribution Demon Mirfah",
     "th": "รีทริบิวชั่น ดีม่อน เมอร์ฟาห์",
     "vi": "Retribution Demon Mirfah"
   },
@@ -21387,7 +21627,7 @@
     "en": "Noble Ember Mirfah",
     "es": "Noble Ember Mirfah",
     "id": "Bara Api Mulia Mirfah",
-    "pt": "",
+    "pt": "Noble Ember Mirfah",
     "th": "โนเบิล เอ็มเบอร์ เมอร์ฟาห์",
     "vi": "Noble Ember Mirfah"
   },
@@ -21395,7 +21635,7 @@
     "en": "Indomitable Flare Griff",
     "es": "Indomitable Flare Griff",
     "id": "Suar Gigih Griff",
-    "pt": "",
+    "pt": "Indomitable Flare Griff",
     "th": "อินดอมิเทเบิล แฟลร์ กริฟ",
     "vi": "Indomitable Flare Griff"
   },
@@ -21403,7 +21643,7 @@
     "en": "Indigo Soul Iris",
     "es": "Indigo Soul Iris",
     "id": "Jiwa Indigo Iris",
-    "pt": "",
+    "pt": "Indigo Soul Iris",
     "th": "อินดิโก โซล ไอริส",
     "vi": "Indigo Soul Iris"
   },
@@ -21411,7 +21651,7 @@
     "en": "Emerald Radiance Libera",
     "es": "Emerald Radiance Libera",
     "id": "Cahaya Zamrud Libera",
-    "pt": "",
+    "pt": "Emerald Radiance Libera",
     "th": "เอ็มเมอรัล เรเดี๊ยนท์ ลิเบร่า",
     "vi": "Emerald Radiance Libera"
   },
@@ -21419,7 +21659,7 @@
     "en": "Roaring Staff Rhoa",
     "es": "Roaring Staff Rhoa",
     "id": "Tongkat Meraung Rhoa",
-    "pt": "",
+    "pt": "Roaring Staff Rhoa",
     "th": "รอร์ริ่ง สตาฟ โรห์อา",
     "vi": "Roaring Staff Rhoa"
   },
@@ -21427,7 +21667,7 @@
     "en": "Virtuous Champion Krantz",
     "es": "Virtuous Champion Krantz",
     "id": "Juara Mulia Krantz",
-    "pt": "",
+    "pt": "Virtuous Champion Krantz",
     "th": "เวอชิวอัส แชมป์เปี้ยน ครานซ์",
     "vi": "Virtuous Champion Krantz"
   },
@@ -21435,7 +21675,7 @@
     "en": "Sinister Basilisk Kafka",
     "es": "Sinister Basilisk Kafka",
     "id": "Ular Menyeramkan Kafka",
-    "pt": "",
+    "pt": "Sinister Basilisk Kafka",
     "th": "ซินิสเตอร บาสิลิสค์ คาฟก้า",
     "vi": "Sinister Basilisk Kafka"
   },
@@ -21443,7 +21683,7 @@
     "en": "Grahdens",
     "es": "Grahdens",
     "id": "Grahdens",
-    "pt": "",
+    "pt": "Grahdens",
     "th": "กราห์เดนส์",
     "vi": "Grahdens"
   },
@@ -21451,7 +21691,7 @@
     "en": "NA (Takanotsume)",
     "es": "NA (Takanotsume)",
     "id": "NA (Takanotsume)",
-    "pt": "",
+    "pt": "NA (Takanotsume)",
     "th": "NA (Takanotsume)",
     "vi": "NA (Takanotsume)"
   },
@@ -21459,7 +21699,7 @@
     "en": "Ice Warrior Karl",
     "es": "Ice Warrior Karl",
     "id": "Pejuang Es Karl",
-    "pt": "",
+    "pt": "Ice Warrior Karl",
     "th": "ไอซ์ วอริเออร์ คาร์ล",
     "vi": "Ice Warrior Karl"
   },
@@ -21467,7 +21707,7 @@
     "en": "Blade God Seria",
     "es": "Blade God Seria",
     "id": "Dewa Bilah Seria",
-    "pt": "",
+    "pt": "Blade God Seria",
     "th": "เบลด ก็อด ซีเรีย",
     "vi": "Blade God Seria"
   },
@@ -21475,7 +21715,7 @@
     "en": "Grahdens",
     "es": "Grahdens",
     "id": "Grahdens",
-    "pt": "",
+    "pt": "Grahdens",
     "th": "กราห์เดนส์",
     "vi": "Grahdens"
   },
@@ -21483,7 +21723,7 @@
     "en": "Gaia King Lugina",
     "es": "Gaia King Lugina",
     "id": "Raja Gaia Lugina",
-    "pt": "",
+    "pt": "Gaia King Lugina",
     "th": "ไกอา คิง ลูจิน่า",
     "vi": "Gaia King Lugina"
   },
@@ -21491,7 +21731,7 @@
     "en": "Lin",
     "es": "Lin",
     "id": "Lin",
-    "pt": "",
+    "pt": "Lin",
     "th": "หลิน",
     "vi": "Lin"
   },
@@ -21499,7 +21739,7 @@
     "en": "Elise",
     "es": "Elise",
     "id": "Elise",
-    "pt": "",
+    "pt": "Elise",
     "th": "เอลิเซ่",
     "vi": "Elise"
   },
@@ -21507,7 +21747,7 @@
     "en": "Sera",
     "es": "Sera",
     "id": "Sera",
-    "pt": "",
+    "pt": "Sera",
     "th": "เซร่า",
     "vi": "Sera"
   },
@@ -21515,7 +21755,7 @@
     "en": "Scorching Sword Reed",
     "es": "Scorching Sword Reed",
     "id": "Pedang Panas Reed",
-    "pt": "",
+    "pt": "Scorching Sword Reed",
     "th": "สคอร์ชชิ่ง ซอร์ด รี้ด",
     "vi": "Scorching Sword Reed"
   },
@@ -21523,7 +21763,7 @@
     "en": "Supreme Lawmaker Aneil",
     "es": "Supreme Lawmaker Aneil",
     "id": "Legislatif Supremasi Aneil",
-    "pt": "",
+    "pt": "Supreme Lawmaker Aneil",
     "th": "ซูพรีม ลอวเมคเกอร์ อเนล",
     "vi": "Supreme Lawmaker Aneil"
   },
@@ -21531,7 +21771,7 @@
     "en": "Lightning Speed Lucana",
     "es": "Lightning Speed Lucana",
     "id": "Sambaran Kilat Lucana",
-    "pt": "",
+    "pt": "Lightning Speed Lucana",
     "th": "ไลท์นิ่ง สปีด ลูคาน่า",
     "vi": "Lightning Speed Lucana"
   },
@@ -21539,7 +21779,7 @@
     "en": "Sacred Armor Nevsky",
     "es": "Sacred Armor Nevsky",
     "id": "Zirah Suci Nevsky",
-    "pt": "",
+    "pt": "Sacred Armor Nevsky",
     "th": "ซาเคร็ด อาเมอร์ เนฟสกาย",
     "vi": "Sacred Armor Nevsky"
   },
@@ -21547,7 +21787,7 @@
     "en": "Twin Dragons Eru",
     "es": "Twin Dragons Eru",
     "id": "Naga Kembar Eru",
-    "pt": "",
+    "pt": "Twin Dragons Eru",
     "th": "ทวิน ดราก้อน อีรุ",
     "vi": "Twin Dragons Eru"
   },
@@ -21555,7 +21795,7 @@
     "en": "Mystical Talon Rhein",
     "es": "Mystical Talon Rhein",
     "id": "Cakar Mistis Rhein",
-    "pt": "",
+    "pt": "Mystical Talon Rhein",
     "th": "มิสติคอล ทาลอน เรห์น",
     "vi": "Mystical Talon Rhein"
   },
@@ -21563,7 +21803,7 @@
     "en": "Ardent Dawn Avant",
     "es": "Ardent Dawn Avant",
     "id": "Semangat Fajar Avant",
-    "pt": "",
+    "pt": "Ardent Dawn Avant",
     "th": "อาร์เดนท์ ดอว์น อแวนท์",
     "vi": "Ardent Dawn Avant"
   },
@@ -21571,7 +21811,7 @@
     "en": "Heavenly Claymore Dolk",
     "es": "Heavenly Claymore Dolk",
     "id": "Claymore Surgawi Dolk",
-    "pt": "",
+    "pt": "Heavenly Claymore Dolk",
     "th": "เฮฟเวนลี่ เคลมอร์ ดอล์ค",
     "vi": "Heavenly Claymore Dolk"
   },
@@ -21579,7 +21819,7 @@
     "en": "Tartarus Massacre Sirius",
     "es": "Tartarus Massacre Sirius",
     "id": "Pembantaian Neraka Sirius",
-    "pt": "",
+    "pt": "Tartarus Massacre Sirius",
     "th": "ทาร์ทารัส แมสสะเคอร์ ซิรีอัส",
     "vi": "Tartarus Massacre Sirius"
   },
@@ -21587,7 +21827,7 @@
     "en": "Tartarus Flood Sareas",
     "es": "Tartarus Flood Sareas",
     "id": "Banjir Neraka Sareas",
-    "pt": "",
+    "pt": "Tartarus Flood Sareas",
     "th": "ทาร์ทารัส ฟลัด ซาเรียส",
     "vi": "Tartarus Flood Sareas"
   },
@@ -21595,7 +21835,7 @@
     "en": "Tartarus Demolition Dure",
     "es": "Tartarus Demolition Dure",
     "id": "Pembongkaran Neraka Dure",
-    "pt": "",
+    "pt": "Tartarus Demolition Dure",
     "th": "ทาร์ทารัส เดโมลิชั่น ดิวเร่",
     "vi": "Tartarus Demolition Dure"
   },
@@ -21603,7 +21843,7 @@
     "en": "Tartarus Blaze Berdette",
     "es": "Tartarus Blaze Berdette",
     "id": "Api Neraka Berdette",
-    "pt": "",
+    "pt": "Tartarus Blaze Berdette",
     "th": "ทาร์ทารัส เบลซ เบอร์เด็ตต์",
     "vi": "Tartarus Blaze Berdette"
   },
@@ -21611,7 +21851,7 @@
     "en": "Tartarus Sacrifice Radia",
     "es": "Tartarus Sacrifice Radia",
     "id": "Pengorbanan Neraka Radia",
-    "pt": "",
+    "pt": "Tartarus Sacrifice Radia",
     "th": "ทาร์ทารัส แซคคริไฟซ์ ราเดีย",
     "vi": "Tartarus Sacrifice Radia"
   },
@@ -21619,7 +21859,7 @@
     "en": "Lin",
     "es": "Lin",
     "id": "Lin",
-    "pt": "",
+    "pt": "Lin",
     "th": "หลิน",
     "vi": "Lin"
   },
@@ -21627,7 +21867,7 @@
     "en": "Royal Guard Paris",
     "es": "Paris Guarda Real",
     "id": "Pengawal Kerajaan Paris",
-    "pt": "",
+    "pt": "Paris Guarda Real",
     "th": "รอยัล การ์ด ปารีส",
     "vi": "Guardia Real Paris"
   },
@@ -21635,7 +21875,7 @@
     "en": "Storm Goddess Paris",
     "es": "Paris Deusa da Tormenta",
     "id": "Dewi Badai Paris",
-    "pt": "",
+    "pt": "Paris Deusa da Tormenta",
     "th": "สตอร์ม ก็อดเดส ปารีส",
     "vi": "Diosa Tormentosa Paris"
   },
@@ -21643,7 +21883,7 @@
     "en": "Gaia King Lugina",
     "es": "Lugina Rei-Gaia",
     "id": "Raja Gaia Lugina",
-    "pt": "",
+    "pt": "Lugina Rei-Gaia",
     "th": "ไกอา คิง ลูจิน่า",
     "vi": "Rey de Gaia Lugina"
   },
@@ -21651,7 +21891,7 @@
     "en": "Quake God Lugina",
     "es": "Deusa do Tremor Lugina",
     "id": "Dewa Gempa Lugina",
-    "pt": "",
+    "pt": "Deusa do Tremor Lugina",
     "th": "เควค ก็อด ลูจิน่า",
     "vi": "Lugina Dios Tectónico"
   },
@@ -21659,7 +21899,7 @@
     "en": "Blizzard God Karl",
     "es": "Deus da Nevasca Karl",
     "id": "Dewa Badai Es Karl",
-    "pt": "",
+    "pt": "Deus da Nevasca Karl",
     "th": "บลิซซาร์ด ก็อด คาร์ล",
     "vi": "Dios glacial Karl"
   },
@@ -21667,7 +21907,7 @@
     "en": "Blade God Seria",
     "es": "Seria Deusa da Lâmina",
     "id": "Dewa Bilah Seria",
-    "pt": "",
+    "pt": "Seria Deusa da Lâmina",
     "th": "เบลด ก็อด ซีเรีย",
     "vi": "Diosa espadachina Seria"
   },
@@ -21675,7 +21915,7 @@
     "en": "Goddess Tilith",
     "es": "Deusa Tilith",
     "id": "Dewi Tilith",
-    "pt": "",
+    "pt": "Deusa Tilith",
     "th": "ก็อดเดส ธิลิท",
     "vi": "Diosa Tilith"
   },
@@ -21683,7 +21923,7 @@
     "en": "Grahdens",
     "es": "Grahdens",
     "id": "Grahdens",
-    "pt": "",
+    "pt": "Grahdens",
     "th": "กราห์เดนส์",
     "vi": "Grahdens"
   },
@@ -21691,7 +21931,7 @@
     "en": "Gaia King Lugina",
     "es": "Lugina Rei-Gaia",
     "id": "Raja Gaia Lugina",
-    "pt": "",
+    "pt": "Lugina Rei-Gaia",
     "th": "ไกอา คิง ลูจิน่า",
     "vi": "Rey de Gaia Lugina"
   },
@@ -21699,7 +21939,7 @@
     "en": "Gaia Armor Edea",
     "es": "Edea Armadura de Gaia",
     "id": "Zirah Gaia Edea",
-    "pt": "",
+    "pt": "Edea Armadura de Gaia",
     "th": "ไกอา อาร์เมอร์ อีเดีย",
     "vi": "Edea, Armadura Gaia"
   },
@@ -21707,7 +21947,7 @@
     "en": "Grahdens",
     "es": "Grahdens",
     "id": "Grahdens",
-    "pt": "",
+    "pt": "Grahdens",
     "th": "กราห์เดนส์",
     "vi": "Grahdens"
   },
@@ -21715,7 +21955,7 @@
     "en": "Twilight God Grahdens",
     "es": "Grahdens Deus Poente",
     "id": "Dewa Senja Grahdens",
-    "pt": "",
+    "pt": "Grahdens Deus Poente",
     "th": "ทไวไลท์ ก็อด กราห์เดนส์",
     "vi": "Dios del ocaso Grahdens"
   },
@@ -21723,7 +21963,7 @@
     "en": "Heaven's Bow Loch",
     "es": "Loch Arco Celeste",
     "id": "Busur Surga Loch",
-    "pt": "",
+    "pt": "Loch Arco Celeste",
     "th": "เฮฟเว่น โบว ลอร์ช",
     "vi": "Loch, Arco celestial"
   },
@@ -21731,7 +21971,7 @@
     "en": "Lin",
     "es": "Lin",
     "id": "Lin",
-    "pt": "",
+    "pt": "Lin",
     "th": "หลิน",
     "vi": "Lin"
   },
@@ -21739,7 +21979,7 @@
     "en": "Ice Master Dean",
     "es": "Mestre do Gelo Dean",
     "id": "Master Es Dean",
-    "pt": "",
+    "pt": "Mestre do Gelo Dean",
     "th": "ไอซ์ มาสเตอร์ ดีน",
     "vi": "Dean, Maestro gélido"
   },
@@ -21747,7 +21987,7 @@
     "en": "Royal Guard Paris",
     "es": "Paris Guarda Real",
     "id": "Pengawal Kerajaan Paris",
-    "pt": "",
+    "pt": "Paris Guarda Real",
     "th": "รอยัล การ์ด ปารีส",
     "vi": "Guardia Real Paris"
   },
@@ -21755,7 +21995,7 @@
     "en": "Storm Goddess Paris",
     "es": "Paris Deusa da Tormenta",
     "id": "Dewi Badai Paris",
-    "pt": "",
+    "pt": "Paris Deusa da Tormenta",
     "th": "สตอร์ม ก็อดเดส ปารีส",
     "vi": "Diosa Tormentosa Paris"
   },
@@ -21763,7 +22003,7 @@
     "en": "Taskmaster Lorand",
     "es": "Lorand Treinador",
     "id": "Pemberi Tugas Lorand",
-    "pt": "",
+    "pt": "Lorand Treinador",
     "th": "แทคสมาสเตอร์ โลแรนด์",
     "vi": "Capataz Lorand"
   },
@@ -21771,7 +22011,7 @@
     "en": "Gaia Armor Edea",
     "es": "Edea Armadura de Gaia",
     "id": "Zirah Gaia Edea",
-    "pt": "",
+    "pt": "Edea Armadura de Gaia",
     "th": "ไกอา อาร์เมอร์ อีเดีย",
     "vi": "Edea, Armadura Gaia"
   },
@@ -21779,7 +22019,7 @@
     "en": "Heaven's Bow Loch",
     "es": "Loch Arco Celeste",
     "id": "Busur Surga Loch",
-    "pt": "",
+    "pt": "Loch Arco Celeste",
     "th": "เฮฟเว่น โบว ลอร์ช",
     "vi": "Loch, Arco celestial"
   },
@@ -21787,7 +22027,7 @@
     "en": "Ice Master Dean",
     "es": "Mestre do Gelo Dean",
     "id": "Master Es Dean",
-    "pt": "",
+    "pt": "Mestre do Gelo Dean",
     "th": "ไอซ์ มาสเตอร์ ดีน",
     "vi": "Dean, Maestro gélido"
   },
@@ -21795,7 +22035,7 @@
     "en": "Taskmaster Lorand",
     "es": "Lorand Treinador",
     "id": "Pemberi Tugas Lorand",
-    "pt": "",
+    "pt": "Lorand Treinador",
     "th": "แทคสมาสเตอร์ โลแรนด์",
     "vi": "Capataz Lorand"
   },
@@ -21803,7 +22043,7 @@
     "en": "Frolic Emperor Kira",
     "es": "Kira Imperador Alegre",
     "id": "Kaisar Main Kira",
-    "pt": "",
+    "pt": "Kira Imperador Alegre",
     "th": "ฟรอลิค เอ็มเพอเรอร์ คิระ",
     "vi": "Emperador Jolgorio Kira"
   },
@@ -21811,7 +22051,7 @@
     "en": "Ice Warrior Karl",
     "es": "Karl Guerreiro do Gelo",
     "id": "Ksatria Es Karl",
-    "pt": "",
+    "pt": "Karl Guerreiro do Gelo",
     "th": "ไอซ์ วอริเออร์ คาร์ล",
     "vi": "Guerrero gélido Karl"
   },
@@ -21819,7 +22059,7 @@
     "en": "Royal Guard Paris",
     "es": "Paris Guarda Real",
     "id": "Pengawal Kerajaan Paris",
-    "pt": "",
+    "pt": "Paris Guarda Real",
     "th": "รอยัล การ์ด ปารีส",
     "vi": "Guardia Real Paris"
   },
@@ -21827,7 +22067,7 @@
     "en": "Gaia King Lugina",
     "es": "Lugina Rei-Gaia",
     "id": "Raja Gaia Lugina",
-    "pt": "",
+    "pt": "Lugina Rei-Gaia",
     "th": "ไกอา คิง ลูจิน่า",
     "vi": "Rey de Gaia Lugina"
   },
@@ -21835,7 +22075,7 @@
     "en": "Gaia King Lugina",
     "es": "Lugina Rei-Gaia",
     "id": "Raja Gaia Lugina",
-    "pt": "",
+    "pt": "Lugina Rei-Gaia",
     "th": "ไกอา คิง ลูจิน่า",
     "vi": "Rey de Gaia Lugina"
   },
@@ -21843,7 +22083,7 @@
     "en": "Ice Warrior Karl",
     "es": "Karl Guerreiro do Gelo",
     "id": "Ksatria Es Karl",
-    "pt": "",
+    "pt": "Karl Guerreiro do Gelo",
     "th": "ไอซ์ วอริเออร์ คาร์ล",
     "vi": "Guerrero gélido Karl"
   },
@@ -21851,7 +22091,7 @@
     "en": "Blade God Seria",
     "es": "Seria Deusa da Lâmina",
     "id": "Dewa Bilah Seria",
-    "pt": "",
+    "pt": "Seria Deusa da Lâmina",
     "th": "เบลด ก็อด ซีเรีย",
     "vi": "Diosa espadachina Seria"
   },
@@ -21859,7 +22099,7 @@
     "en": "Blizzard God Karl",
     "es": "Deus da Nevasca Karl",
     "id": "Dewa Badai Es Karl",
-    "pt": "",
+    "pt": "Deus da Nevasca Karl",
     "th": "บลิซซาร์ด ก็อด คาร์ล",
     "vi": "Dios glacial Karl"
   },
@@ -21867,7 +22107,7 @@
     "en": "Goddess Tilith",
     "es": "Deusa Tilith",
     "id": "Dewi Tilith",
-    "pt": "",
+    "pt": "Deusa Tilith",
     "th": "ก็อดเดส ธิลิท",
     "vi": "Diosa Tilith"
   },
@@ -21875,7 +22115,7 @@
     "en": "Blade God Seria",
     "es": "Seria Deusa da Lâmina",
     "id": "Dewa Bilah Seria",
-    "pt": "",
+    "pt": "Seria Deusa da Lâmina",
     "th": "เบลด ก็อด ซีเรีย",
     "vi": "Diosa espadachina Seria"
   },
@@ -21883,7 +22123,7 @@
     "en": "Goddess Tilith",
     "es": "Deusa Tilith",
     "id": "Dewi Tilith",
-    "pt": "",
+    "pt": "Deusa Tilith",
     "th": "ก็อดเดส ธิลิท",
     "vi": "Diosa Tilith"
   },
@@ -21891,7 +22131,7 @@
     "en": "Gaia King Lugina",
     "es": "Lugina Rei-Gaia",
     "id": "Raja Gaia Lugina",
-    "pt": "",
+    "pt": "Lugina Rei-Gaia",
     "th": "ไกอา คิง ลูจิน่า",
     "vi": "Rey de Gaia Lugina"
   },
@@ -21899,7 +22139,7 @@
     "en": "Ice Warrior Karl",
     "es": "Karl Guerreiro do Gelo",
     "id": "Ksatria Es Karl",
-    "pt": "",
+    "pt": "Karl Guerreiro do Gelo",
     "th": "ไอซ์ วอริเออร์ คาร์ล",
     "vi": "Guerrero gélido Karl"
   },
@@ -23219,7 +23459,7 @@
     "en": "Burny ",
     "es": "Chamizo ",
     "id": "Burny ",
-    "pt": "Burny ",
+    "pt": "Burny",
     "th": "เบิร์นนี่",
     "vi": "Burny "
   },
@@ -23227,7 +23467,7 @@
     "en": "Burny ",
     "es": "Chamizo ",
     "id": "Burny ",
-    "pt": "Burny ",
+    "pt": "Burny",
     "th": "เบิร์นนี่",
     "vi": "Burny "
   },
@@ -59787,7 +60027,7 @@
     "en": "Eerie Mandragora ",
     "es": "Mandrágora lúgubre ",
     "id": "Mandragora Seram",
-    "pt": "Mandrágora Estranha ",
+    "pt": "Mandrágora Estranha",
     "th": "เอรี่แมนดราโกร่า",
     "vi": "Cây khoai ma Eerie "
   },
@@ -90174,181 +90414,5 @@
     "pt": "Holy Empress Luna",
     "th": "โฮลี่ เอ็มเพรส ลูน่า",
     "vi": "Holy Empress Luna"
-  },
-  "MST_MONSTERS_52768_NAME": {
-    "en": "Holy Empress Luna",
-    "es": "Holy Empress Luna",
-    "id": "Holy Empress Luna",
-    "pt": "Holy Empress Luna",
-    "th": "โฮลี่ เอ็มเพรส ลูน่า",
-    "vi": "Holy Empress Luna"
-  },
-  "MST_MONSTERS_52769_NAME": {
-    "en": "Holy Empress Luna",
-    "es": "Holy Empress Luna",
-    "id": "Holy Empress Luna",
-    "pt": "Holy Empress Luna",
-    "th": "โฮลี่ เอ็มเพรส ลูน่า",
-    "vi": "Holy Empress Luna"
-  },
-  "MST_MONSTERS_52800_NAME": {
-    "en": "Pistol God Heidt",
-    "es": "Dios de armas Heidt",
-    "id": "Dewa Pistol Heidt",
-    "pt": "Heidt Pistola Divina",
-    "th": "พิสทอลก๊อดไฮด์",
-    "vi": "Thần súng ngắn Heidt"
-  },
-  "MST_MONSTERS_52801_NAME": {
-    "en": "Pistol God Heidt",
-    "es": "Dios de armas Heidt",
-    "id": "Dewa Pistol Heidt",
-    "pt": "Heidt Pistola Divina",
-    "th": "พิสทอลก๊อดไฮด์",
-    "vi": "Thần súng ngắn Heidt"
-  },
-  "MST_MONSTERS_52802_NAME": {
-    "en": "Pistol God Heidt",
-    "es": "Dios de armas Heidt",
-    "id": "Dewa Pistol Heidt",
-    "pt": "Heidt Pistola Divina",
-    "th": "พิสทอลก๊อดไฮด์",
-    "vi": "Thần súng ngắn Heidt"
-  },
-  "MST_MONSTERS_52803_NAME": {
-    "en": "Pistol God Heidt",
-    "es": "Dios de armas Heidt",
-    "id": "Dewa Pistol Heidt",
-    "pt": "Heidt Pistola Divina",
-    "th": "พิสทอลก๊อดไฮด์",
-    "vi": "Thần súng ngắn Heidt"
-  },
-  "MST_MONSTERS_52804_NAME": {
-    "en": "Pistol God Heidt",
-    "es": "Dios de armas Heidt",
-    "id": "Dewa Pistol Heidt",
-    "pt": "Heidt Pistola Divina",
-    "th": "พิสทอลก๊อดไฮด์",
-    "vi": "Thần súng ngắn Heidt"
-  },
-  "MST_MONSTERS_52805_NAME": {
-    "en": "Pistol God Heidt",
-    "es": "Dios de armas Heidt",
-    "id": "Dewa Pistol Heidt",
-    "pt": "Heidt Pistola Divina",
-    "th": "พิสทอลก๊อดไฮด์",
-    "vi": "Thần súng ngắn Heidt"
-  },
-  "MST_MONSTERS_52806_NAME": {
-    "en": "Pistol God Heidt",
-    "es": "Dios de armas Heidt",
-    "id": "Dewa Pistol Heidt",
-    "pt": "Heidt Pistola Divina",
-    "th": "พิสทอลก๊อดไฮด์",
-    "vi": "Thần súng ngắn Heidt"
-  },
-  "MST_MONSTERS_52807_NAME": {
-    "en": "Pistol God Heidt",
-    "es": "Dios de armas Heidt",
-    "id": "Dewa Pistol Heidt",
-    "pt": "Heidt Pistola Divina",
-    "th": "พิสทอลก๊อดไฮด์",
-    "vi": "Thần súng ngắn Heidt"
-  },
-  "MST_MONSTERS_52808_NAME": {
-    "en": "Pistol God Heidt",
-    "es": "Dios de armas Heidt",
-    "id": "Dewa Pistol Heidt",
-    "pt": "Heidt Pistola Divina",
-    "th": "พิสทอลก็อดฮีดท์",
-    "vi": "Pistol God Heidt"
-  },
-  "MST_MONSTERS_52809_NAME": {
-    "en": "Pistol God Heidt",
-    "es": "Dios de armas Heidt",
-    "id": "Dewa Pistol Heidt",
-    "pt": "Heidt Pistola Divina",
-    "th": "พิสทอล ก็อด ไฮด์",
-    "vi": "Thần Súng Ngắn Heidt"
-  },
-  "MST_MONSTERS_52810_NAME": {
-    "en": "Pistol God Heidt",
-    "es": "Dios de armas Heidt",
-    "id": "Dewa Pistol Heidt",
-    "pt": "Heidt Pistola Divina",
-    "th": "พิสตอล ก็อด เฮดิท",
-    "vi": "Pistol God Heidt"
-  },
-  "MST_MONSTERS_52811_NAME": {
-    "en": "Pistol God Heidt",
-    "es": "Pistol God Heidt",
-    "id": "Pedang Ningrat Dolk",
-    "pt": "Pistol God Heidt",
-    "th": "พิสทอล ก็อด เฮดิท",
-    "vi": "Pistol God Heidt"
-  },
-  "MST_MONSTERS_52812_NAME": {
-    "en": "Pistol God Heidt",
-    "es": "Pistol God Heidt",
-    "id": "Pistol God Heidt",
-    "pt": "Pistol God Heidt",
-    "th": "พิสทอล ก็อด ไฮด์",
-    "vi": "Pistol God Heidt"
-  },
-  "MST_MONSTERS_52813_NAME": {
-    "en": "Pistol God Heidt",
-    "es": "Pistol God Heidt",
-    "id": "Pistol God Heidt",
-    "pt": "Pistol God Heidt",
-    "th": "พิสทอล ก็อด ไฮด์",
-    "vi": "Pistol God Heidt"
-  },
-  "MST_MONSTERS_52850_NAME": {
-    "en": "Holy Light Atro",
-    "es": "Luz sagrada Atro",
-    "id": "Terang Suci Atro",
-    "pt": "Atro da Luz Divina",
-    "th": "โฮลี่ไลท์อาโทร",
-    "vi": "Quang thần Atro"
-  },
-  "MST_MONSTERS_52851_NAME": {
-    "en": "Holy Light Atro",
-    "es": "Luz sagrada Atro",
-    "id": "Terang Suci Atro",
-    "pt": "Atro da Luz Divina",
-    "th": "โฮลี่ไลท์อาโทร",
-    "vi": "Quang thần Atro"
-  },
-  "MST_MONSTERS_52852_NAME": {
-    "en": "Holy Light Atro",
-    "es": "Luz sagrada Atro",
-    "id": "Terang Suci Atro",
-    "pt": "Atro da Luz Divina",
-    "th": "โฮลี่ไลท์อาโทร",
-    "vi": "Quang thần Atro"
-  },
-  "MST_MONSTERS_52853_NAME": {
-    "en": "Holy Light Atro",
-    "es": "Luz sagrada Atro",
-    "id": "Terang Suci Atro",
-    "pt": "Atro da Luz Divina",
-    "th": "โฮลี่ไลท์อาโทร",
-    "vi": "Quang thần Atro"
-  },
-  "MST_MONSTERS_52854_NAME": {
-    "en": "Holy Light Atro",
-    "es": "Luz sagrada Atro",
-    "id": "Terang Suci Atro",
-    "pt": "Atro da Luz Divina",
-    "th": "โฮลี่ไลท์อาโทร",
-    "vi": "Quang thần Atro"
-  },
-  "MST_MONSTERS_52855_NAME": {
-    "en": "Holy Light Atro",
-    "es": "Luz sagrada Atro",
-    "id": "Terang Suci Atro",
-    "pt": "Atro da Luz Divina",
-    "th": "โฮลี่ไลท์อาโทร",
-    "vi": "Holy Light Atro"
   }
 }
