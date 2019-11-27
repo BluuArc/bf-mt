@@ -1,4 +1,60 @@
 {
+  "MST_SKILLS_2000600_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000600_NAME": {
+    "en": "Double Blizzard",
+    "es": "Doble granizo",
+    "id": "Badai Salju Ganda",
+    "pt": "Nevasca Dupla",
+    "th": "ดับเบิล บลิซซาร์ด",
+    "vi": "Bão tuyết kép"
+  },
+  "MST_SKILLS_2000601_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000601_NAME": {
+    "en": "Ooga!",
+    "es": "¡Ooga!",
+    "id": "Ooga!",
+    "pt": "Uga!",
+    "th": "โอก้า!",
+    "vi": "Ooga!"
+  },
+  "MST_SKILLS_2000602_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000602_NAME": {
+    "en": "That meat look good!",
+    "es": "¡Esa carne se ve sabrosa!",
+    "id": "Dagingnya kayaknya enak!",
+    "pt": "Essa carne parece bom!",
+    "th": "เนื้อนั่นดูดีจัง!",
+    "vi": "Miếng thịt đó trông ngon đó!"
+  },
+  "MST_SKILLS_2000603_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
   "MST_SKILLS_2000603_NAME": {
     "en": "I eat it first!",
     "es": "¡Primero a comer!",
@@ -90374,45 +90430,5 @@
     "pt": "Combo poderoso de 15 golpes de Luz em todos os inimigos e grande reforço no dano da Fagulha por 3 rodadas",
     "th": "15 คอมโบ โจมตีศัตรูทั้งหมดด้วยธาตุแสง และเพิ่มสปาร์คดาเมจ 3 เทิร์น",
     "vi": "15 combo powerful Light attack on all enemies & largely boosts Spark damage for 3 turns"
-  },
-  "MST_SKILLS_212251_NAME": {
-    "en": "Spiritual Mourning",
-    "es": "Luto espiritual",
-    "id": "Perkabungan Spiritual",
-    "pt": "Luto Espiritual",
-    "th": "สปริวล มัวนิ่ง",
-    "vi": "Spiritual Mourning"
-  },
-  "MST_SKILLS_21225200_NAME": {
-    "en": "I'm Raaga, martial artist.",
-    "es": "I'm Raaga, martial artist.",
-    "id": "Aku Raaga, ahli bela diri.",
-    "pt": "I'm Raaga, martial artist.",
-    "th": "ข้าคือรากะ นักต่อสู้",
-    "vi": "I'm Raaga, martial artist."
-  },
-  "MST_SKILLS_2122520_DESCRIPTION": {
-    "en": "20 combo powerful Dark attack on all enemies & big boost to Atk, Def and Rec for 3 turns",
-    "es": "Combo grupal de 20 poderosos ataques oscuros. Aumenta notablemente el ATQ, la DEF y la REC durante 3 turnos",
-    "id": "20 kombo serangan Gelap kuat ke semua musuh & tambahan besar untuk Serang, Tahan, Pulih 3 giliran",
-    "pt": "Combo poderoso de 20 golpes de Sombra em todos os inimigos e grande bônus ao ATQ, DEF e REC por 3 rodadas",
-    "th": "20 คอมโบ โจมตีด้วยธาตุความมืดใส่ศัตรูทั้งหมด, เพิ่มพลังโจมตี, ป้องกัน และ Rec อย่างมาก 3 เทิร์น",
-    "vi": "20 combo powerful Dark attack on all enemies & big boost to Atk, Def and Rec for 3 turns"
-  },
-  "MST_SKILLS_2122520_NAME": {
-    "en": "Nebula Glass",
-    "es": "Cristal nebuloso",
-    "id": "Kaca Nebula",
-    "pt": "Vidro Nebuloso",
-    "th": "เนบิวล่า กลาส",
-    "vi": "Nebula Glass"
-  },
-  "MST_SKILLS_2122521_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
   }
 }
