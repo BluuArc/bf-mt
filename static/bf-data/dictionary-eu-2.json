@@ -1,4 +1,148 @@
 {
+  "MST_LEADERSKILLS_5515_NAME": {
+    "en": "Shadow Demon's Radiance",
+    "es": "Radiancia del demonio sombrío",
+    "id": "Radians Setan Bayangan",
+    "pt": "Esplendor do Demônio Sombrio",
+    "th": "ชาโดว เดม่อน เรเดียนซ",
+    "vi": "Shadow Demon's Radiance"
+  },
+  "MST_LEADERSKILLS_5516_DESCRIPTION": {
+    "en": "30% boost to max HP & greatly boosts BB gauge fill rate",
+    "es": "30% boost to max HP & greatly boosts BB gauge fill rate",
+    "id": "30% ekstra HP maks, amat menambah laju pengisian meteran BB",
+    "pt": "30% boost to max HP & greatly boosts BB gauge fill rate",
+    "th": "30% เพิ่ม HP สูงสุดและเพิ่มอัตราการเติมบีบีเกจอย่างมาก",
+    "vi": "30% boost to max HP & greatly boosts BB gauge fill rate"
+  },
+  "MST_LEADERSKILLS_5516_NAME": {
+    "en": "Scarlet Blade's Light",
+    "es": "Scarlet Blade's Light",
+    "id": "Terang Bilah Merah",
+    "pt": "Scarlet Blade's Light",
+    "th": "สกาเล็ต เบลด ไลท์",
+    "vi": "Scarlet Blade's Light"
+  },
+  "MST_LEADERSKILLS_5517_DESCRIPTION": {
+    "en": "40% boost to max HP, hugely boosts BB gauge fill rate & probable resistance against 1 KO attack",
+    "es": "40% boost to max HP, hugely boosts BB gauge fill rate & probable resistance against 1 KO attack",
+    "id": "40% ekstra HP maks, amat menambah laju pengisian meteran BB, kans tahan akan 1 serangan KO",
+    "pt": "40% boost to max HP, hugely boosts BB gauge fill rate & probable resistance against 1 KO attack",
+    "th": "40% เพิ่ม HP สูงสุดและเพิ่มอัตราการเติมบีบีเกจอย่างมากมาย, มีโอกาสกันสถานะโจมตีติด KO",
+    "vi": "40% boost to max HP, hugely boosts BB gauge fill rate & probable resistance against 1 KO attack"
+  },
+  "MST_LEADERSKILLS_5517_NAME": {
+    "en": "Scarlet Blade's Demon Light",
+    "es": "Scarlet Blade's Demon Light",
+    "id": "Terang Setan Bilah Merah",
+    "pt": "Scarlet Blade's Demon Light",
+    "th": "สกาเล็ต เบลด เดม่อน ไลท์",
+    "vi": "Scarlet Blade's Demon Light"
+  },
+  "MST_LEADERSKILLS_5518_DESCRIPTION": {
+    "en": "30% boost to max HP & greatly reduces BB gauge required for BB",
+    "es": "30% boost to max HP & greatly reduces BB gauge required for BB",
+    "id": "30% ekstra HP maks & amat mengurangi meteran BB untuk BB",
+    "pt": "30% boost to max HP & greatly reduces BB gauge required for BB",
+    "th": "30% เพิ่ม HP สูงสุด, ลดบีบีเกจที่ต้องใช้อย่างมาก",
+    "vi": "30% boost to max HP & greatly reduces BB gauge required for BB"
+  },
+  "MST_LEADERSKILLS_5518_NAME": {
+    "en": "Winged Mock God's Technique",
+    "es": "Winged Mock God's Technique",
+    "id": "Teknik Dewa Tiruan Bersayap",
+    "pt": "Winged Mock God's Technique",
+    "th": "วิงเก็ด มอค ก็อด เทคนิค",
+    "vi": "Winged Mock God's Technique"
+  },
+  "MST_LEADERSKILLS_5519_DESCRIPTION": {
+    "en": "40% boost to max HP, greatly reduces BB gauge required for BB & greatly boosts BC efficacy",
+    "es": "40% boost to max HP, greatly reduces BB gauge required for BB & greatly boosts BC efficacy",
+    "id": "40% ekstra HP maks, amat mengurangi meteran BB untuk BB & amat menambah keampuhan BC",
+    "pt": "40% boost to max HP, greatly reduces BB gauge required for BB & greatly boosts BC efficacy",
+    "th": "40% เพิ่ม HP สูงสุด, ลดบีบีเกจที่ต้องใช้อย่างมาก, เพิ่มประสิทธิภาพของ BC อย่างมาก",
+    "vi": "40% boost to max HP, greatly reduces BB gauge required for BB & greatly boosts BC efficacy"
+  },
+  "MST_LEADERSKILLS_5519_NAME": {
+    "en": "Blue Winged God's Purge",
+    "es": "Blue Winged God's Purge",
+    "id": "Pemurnian Dewa Bersayap Biru",
+    "pt": "Blue Winged God's Purge",
+    "th": "บลู วิงเก็ด ก็อด เพิร์จ",
+    "vi": "Blue Winged God's Purge"
+  },
+  "MST_LEADERSKILLS_551_DESCRIPTION": {
+    "en": "15% damage reduction from Thunder types, hugely boosts damage against Thunder types & greatly boosts BB Atk",
+    "es": "15% damage reduction from Thunder types, hugely boosts damage against Thunder types & greatly boosts BB Atk",
+    "id": "15% pengurangan kerusakan dari tipe Guntur, amat menambah kerusakan melawan tipe Guntur & amat menambah BB Serang",
+    "pt": "15% damage reduction from Thunder types, hugely boosts damage against Thunder types & greatly boosts BB Atk",
+    "th": "15% ลดดาเมจธาตุสายฟ้า, เร่งดาเมจอย่างมากต่อธาตุสายฟ้า, เพิ่ม BB Atk อย่างมาก",
+    "vi": "15% damage reduction from Thunder types, hugely boosts damage against Thunder types & greatly boosts BB Atk"
+  },
+  "MST_LEADERSKILLS_551_NAME": {
+    "en": "Shining Conviction",
+    "es": "Shining Conviction",
+    "id": "Keyakinan Bersinar",
+    "pt": "Shining Conviction",
+    "th": "ชายนิ่ง คอนวิคชั่น",
+    "vi": "Shining Conviction"
+  },
+  "MST_LEADERSKILLS_5520_DESCRIPTION": {
+    "en": "30% boost to max HP & probable Spark vulnerability for 2 turns",
+    "es": "30% boost to max HP & probable Spark vulnerability for 2 turns",
+    "id": "30% ekstra HP maks & kans rentan Percikan 2 giliran",
+    "pt": "30% boost to max HP & probable Spark vulnerability for 2 turns",
+    "th": "30% เพิ่มค่าให้กับ HP สูงสุด และ มีโอกาส อ่อนแอต่อสปาร์ค นาน 2 เทิร์น",
+    "vi": "30% boost to max HP & probable Spark vulnerability for 2 turns"
+  },
+  "MST_LEADERSKILLS_5520_NAME": {
+    "en": "King's Flashing Axe",
+    "es": "King's Flashing Axe",
+    "id": "Kapak Berkilat Raja",
+    "pt": "King's Flashing Axe",
+    "th": "คิง แฟลชชิ่ง แอ็กซ์",
+    "vi": "King's Flashing Axe"
+  },
+  "MST_LEADERSKILLS_5521_DESCRIPTION": {
+    "en": "40% boost to max HP, hugely boosts Atk relative to remaining HP &  probable Spark vulnerability for 2 turns",
+    "es": "40% boost to max HP, hugely boosts Atk relative to remaining HP &  probable Spark vulnerability for 2 turns",
+    "id": "40% ekstra HP maks, amat menambah Serangan seusai sisa HP & kans rentan Percikan 2 giliran",
+    "pt": "40% boost to max HP, hugely boosts Atk relative to remaining HP &  probable Spark vulnerability for 2 turns",
+    "th": "40% เพิ่มค่าให้กับ HP สูงสุด, เพิ่มค่า โจมตี อย่างสูง ขึ้นอยู่กับ HP ที่คงเหลือ และ  มีโอกาส อ่อนแอต่อสปาร์ค นาน 2 เทิร์น",
+    "vi": "40% boost to max HP, hugely boosts Atk relative to remaining HP &  probable Spark vulnerability for 2 turns"
+  },
+  "MST_LEADERSKILLS_5521_NAME": {
+    "en": "Obliterating Wrath Axe",
+    "es": "Obliterating Wrath Axe",
+    "id": "Kapak Murka Melenyapkan",
+    "pt": "Obliterating Wrath Axe",
+    "th": "ออบลิเทอเรติ้ง ราธ แอ็กซ์",
+    "vi": "Obliterating Wrath Axe"
+  },
+  "MST_LEADERSKILLS_5522_DESCRIPTION": {
+    "en": "30% boost to max HP & boosts damage against status afflicted foes",
+    "es": "30% boost to max HP & boosts damage against status afflicted foes",
+    "id": "30% ekstra HP maks & tambah merusak musuh yang terkena status",
+    "pt": "30% boost to max HP & boosts damage against status afflicted foes",
+    "th": "30% เพิ่มค่าให้กับ HP สูงสุด และ เพิ่ม ความเสียหายต่อ ศัตรูที่ติดสถานะผิดปกติ",
+    "vi": "30% boost to max HP & boosts damage against status afflicted foes"
+  },
+  "MST_LEADERSKILLS_5522_NAME": {
+    "en": "Scorpio's Sigil",
+    "es": "Scorpio's Sigil",
+    "id": "Simbol Sihir Kalajengking",
+    "pt": "Scorpio's Sigil",
+    "th": "สกอปิโอ ไซกิล",
+    "vi": "Scorpio's Sigil"
+  },
+  "MST_LEADERSKILLS_5523_DESCRIPTION": {
+    "en": "40% boost to max HP, considerably boosts OD gauge fill rate & hugely boosts damage against status afflicted foes",
+    "es": "40% boost to max HP, considerably boosts OD gauge fill rate & hugely boosts damage against status afflicted foes",
+    "id": "40% ekstra HP maks, menambah laju pengisian meteran OD & tambah amat merusak musuh yang terkena status",
+    "pt": "40% boost to max HP, considerably boosts OD gauge fill rate & hugely boosts damage against status afflicted foes",
+    "th": "40% เพิ่มค่าให้กับ HP สูงสุด, เพิ่ม อัตราเติม เกจ OD อย่างมาก และ เพิ่มค่าอย่างสูงกับ ความเสียหายต่อ ศัตรูที่ติดสถานะผิดปกติ",
+    "vi": "40% boost to max HP, considerably boosts OD gauge fill rate & hugely boosts damage against status afflicted foes"
+  },
   "MST_LEADERSKILLS_5523_NAME": {
     "en": "Scorpio's Guidance",
     "es": "Scorpio's Guidance",
@@ -8287,6 +8431,22 @@
     "th": "Jason",
     "vi": "Jason"
   },
+  "MST_LEADERSKILLS_810798_DESCRIPTION": {
+    "en": "100% Def, max HP, 200% Atk (Fire), 15% damage reduction, 250% spark damage, damage taken fills BB gauge & probable 1 KO resistance",
+    "es": "100% Def, max HP, 200% Atk (Fire), 15% damage reduction, 250% spark damage, damage taken fills BB gauge & probable 1 KO resistance",
+    "id": "100% Def, max HP, 200% Atk (Fire), 15% damage reduction, 250% spark damage, damage taken fills BB gauge & probable 1 KO resistance",
+    "pt": "100% Def, max HP, 200% Atk (Fire), 15% damage reduction, 250% spark damage, damage taken fills BB gauge & probable 1 KO resistance",
+    "th": "100% Def, max HP, 200% Atk (Fire), 15% damage reduction, 250% spark damage, damage taken fills BB gauge & probable 1 KO resistance",
+    "vi": "100% Def, max HP, 200% Atk (Fire), 15% damage reduction, 250% spark damage, damage taken fills BB gauge & probable 1 KO resistance"
+  },
+  "MST_LEADERSKILLS_810798_NAME": {
+    "en": "Touched with Fire",
+    "es": "Touched with Fire",
+    "id": "Touched with Fire",
+    "pt": "Touched with Fire",
+    "th": "Touched with Fire",
+    "vi": "Touched with Fire"
+  },
   "MST_LEADERSKILLS_810837_DESCRIPTION": {
     "en": "150% Atk, 100% max HP, 30% critical rate, 200% spark damage, raises Atk limit to 130k & 10% damage reduction from Fire, Water, Light, Dark types",
     "es": "150% Atk, 100% max HP, 30% critical rate, 200% spark damage, raises Atk limit to 130k & 10% damage reduction from Fire, Water, Light, Dark types",
@@ -12502,6 +12662,22 @@
     "pt": "Young Prodigy",
     "th": "Young Prodigy",
     "vi": "Young Prodigy"
+  },
+  "MST_LEADERSKILLS_860838_DESCRIPTION": {
+    "en": "120% Atk, max HP, 100% Def, Rec, 100% ABP, 50% CBP gain, raises normal hit amount, normal attacks may hit all foes & adds probable 1 turn Atk reduction infliction to attack for 2 turns when damage dealt is over 1",
+    "es": "120% Atk, max HP, 100% Def, Rec, 100% ABP, 50% CBP gain, raises normal hit amount, normal attacks may hit all foes & adds probable 1 turn Atk reduction infliction to attack for 2 turns when damage dealt is over 1",
+    "id": "120% Atk, max HP, 100% Def, Rec, 100% ABP, 50% CBP gain, raises normal hit amount, normal attacks may hit all foes & adds probable 1 turn Atk reduction infliction to attack for 2 turns when damage dealt is over 1",
+    "pt": "120% Atk, max HP, 100% Def, Rec, 100% ABP, 50% CBP gain, raises normal hit amount, normal attacks may hit all foes & adds probable 1 turn Atk reduction infliction to attack for 2 turns when damage dealt is over 1",
+    "th": "120% Atk, max HP, 100% Def, Rec, 100% ABP, 50% CBP gain, raises normal hit amount, normal attacks may hit all foes & adds probable 1 turn Atk reduction infliction to attack for 2 turns when damage dealt is over 1",
+    "vi": "120% Atk, max HP, 100% Def, Rec, 100% ABP, 50% CBP gain, raises normal hit amount, normal attacks may hit all foes & adds probable 1 turn Atk reduction infliction to attack for 2 turns when damage dealt is over 1"
+  },
+  "MST_LEADERSKILLS_860838_NAME": {
+    "en": "Tsujigiri",
+    "es": "Tsujigiri",
+    "id": "Tsujigiri",
+    "pt": "Tsujigiri",
+    "th": "Tsujigiri",
+    "vi": "Tsujigiri"
   },
   "MST_LEADERSKILLS_860900_DESCRIPTION": {
     "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Dark elemental damage, 15% damage reduction from Light types & negates all status ailments",
@@ -90302,133 +90478,5 @@
     "pt": "Totem Milagroso",
     "th": "มิราเคิลโทเทม",
     "vi": "Thần vật linh thiêng"
-  },
-  "MST_MONSTERS_52701_NAME": {
-    "en": "Miracle Totem",
-    "es": "Tótem milagroso",
-    "id": "Totem Mukjizat",
-    "pt": "Totem Milagroso",
-    "th": "มิราเคิลโทเทม",
-    "vi": "Thần vật linh thiêng"
-  },
-  "MST_MONSTERS_52702_NAME": {
-    "en": "Miracle Totem",
-    "es": "Tótem milagroso",
-    "id": "Totem Mukjizat",
-    "pt": "Totem Milagroso",
-    "th": "มิราเคิลโทเทม",
-    "vi": "Thần vật linh thiêng"
-  },
-  "MST_MONSTERS_52703_NAME": {
-    "en": "Miracle Totem",
-    "es": "Tótem milagroso",
-    "id": "Totem Mukjizat",
-    "pt": "Totem Milagroso",
-    "th": "มิราเคิลโทเทม",
-    "vi": "Thần vật linh thiêng"
-  },
-  "MST_MONSTERS_52750_NAME": {
-    "en": "Holy Empress Luna",
-    "es": "Sacra emperatriz Luna",
-    "id": "Kaisar Suci Luna",
-    "pt": "Imperatriz Luna",
-    "th": "โฮลี่เอ็มเพรสลูน่า",
-    "vi": "Thánh hậu Luna"
-  },
-  "MST_MONSTERS_52751_NAME": {
-    "en": "Holy Empress Luna",
-    "es": "Sacra emperatriz Luna",
-    "id": "Kaisar Suci Luna",
-    "pt": "Imperatriz Luna",
-    "th": "โฮลี่เอ็มเพรสลูน่า",
-    "vi": "Thánh hậu Luna"
-  },
-  "MST_MONSTERS_52752_NAME": {
-    "en": "Holy Empress Luna",
-    "es": "Sacra emperatriz Luna",
-    "id": "Kaisar Suci Luna",
-    "pt": "Imperatriz Luna",
-    "th": "โฮลี่เอ็มเพรสลูน่า",
-    "vi": "Thánh hậu Luna"
-  },
-  "MST_MONSTERS_52753_NAME": {
-    "en": "Holy Empress Luna",
-    "es": "Sacra emperatriz Luna",
-    "id": "Kaisar Suci Luna",
-    "pt": "Imperatriz Luna",
-    "th": "โฮลี่เอ็มเพรสลูน่า",
-    "vi": "Thánh hậu Luna"
-  },
-  "MST_MONSTERS_52754_NAME": {
-    "en": "Holy Empress Luna",
-    "es": "Sacra emperatriz Luna",
-    "id": "Kaisar Suci Luna",
-    "pt": "Imperatriz Luna",
-    "th": "โฮลี่เอ็มเพรสลูน่า",
-    "vi": "Thánh hậu Luna"
-  },
-  "MST_MONSTERS_52755_NAME": {
-    "en": "Holy Empress Luna",
-    "es": "Sacra emperatriz Luna",
-    "id": "Kaisar Suci Luna",
-    "pt": "Imperatriz Luna",
-    "th": "โฮลี่เอ็มเพรสลูน่า",
-    "vi": "Thánh hậu Luna"
-  },
-  "MST_MONSTERS_52756_NAME": {
-    "en": "Holy Empress Luna",
-    "es": "Sacra emperatriz Luna",
-    "id": "Kaisar Suci Luna",
-    "pt": "Imperatriz Luna",
-    "th": "โฮลี่เอ็มเพรสลูน่า",
-    "vi": "Thánh hậu Luna"
-  },
-  "MST_MONSTERS_52757_NAME": {
-    "en": "Holy Empress Luna",
-    "es": "Sacra emperatriz Luna",
-    "id": "Kaisar Suci Luna",
-    "pt": "Imperatriz Luna",
-    "th": "โฮลี่เอ็มเพรสลูน่า",
-    "vi": "Thánh hậu Luna"
-  },
-  "MST_MONSTERS_52758_NAME": {
-    "en": "Holy Empress Luna",
-    "es": "Sacra emperatriz Luna",
-    "id": "Kaisar Suci Luna",
-    "pt": "Imperatriz Luna",
-    "th": "โฮลี่เอ็มเพรสลูน่า",
-    "vi": "Thánh hậu Luna"
-  },
-  "MST_MONSTERS_52759_NAME": {
-    "en": "Holy Empress Luna",
-    "es": "Sacra emperatriz Luna",
-    "id": "Kaisar Suci Luna",
-    "pt": "Imperatriz Luna",
-    "th": "โฮลี่เอ็มเพรสลูน่า",
-    "vi": "Thánh hậu Luna"
-  },
-  "MST_MONSTERS_52760_NAME": {
-    "en": "Holy Empress Luna",
-    "es": "Sacra emperatriz Luna",
-    "id": "Kaisar Suci Luna",
-    "pt": "Imperatriz Luna",
-    "th": "โฮลี่เอ็มเพรสลูน่า",
-    "vi": "Thánh hậu Luna"
-  },
-  "MST_MONSTERS_52761_NAME": {
-    "en": "Holy Empress Luna",
-    "es": "Sacra emperatriz Luna",
-    "id": "Kaisar Suci Luna",
-    "pt": "Imper. Sagrada Luna",
-    "th": "โฮลี่เอ็มเพรสลูน่า",
-    "vi": "Holy Empress Luna"
-  },
-  "MST_MONSTERS_52762_NAME": {
-    "en": "Holy Empress Luna",
-    "es": "Sacra emperatriz Luna",
-    "id": "Kaisar Suci Luna",
-    "pt": "Imper. Sagrada Luna",
-    "th": "โฮลี่ เฮ้มเพรส ลูน่า",
-    "vi": "Thánh Hậu Luna"
   }
 }
