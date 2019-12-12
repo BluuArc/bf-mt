@@ -1,4 +1,180 @@
 {
+  "MST_LEADERSKILLS_5504_NAME": {
+    "en": "Original Oracle",
+    "es": "Oráculo original",
+    "id": "Peramal Asli",
+    "pt": "Oráculo Original",
+    "th": "ออริจินอล ออเรเคิล",
+    "vi": "Lời tiên tri đầu tiên"
+  },
+  "MST_LEADERSKILLS_5505_DESCRIPTION": {
+    "en": "40% boost to max HP of all allies, probable HP recovery when attacked & recovers HP each turn",
+    "es": "+40% los PS máx. de los aliados, puede recuperar PS al recibir un ataque y recupera PS cada turno",
+    "id": "40% ekstra maks HP semua sekutu, kemungkinan pemulihan HP saat diserang & memulihkan HP tiap giliran",
+    "pt": "40% de reforço no HP máx. de todos os aliados, chance de recuperar HP ao ser atacado e recuperação de HP a cada rodada",
+    "th": "40% เพิ่ม HP สูงสุดให้กับทีม, มีโอกาสฟื้น HP เมื่อถูกโจมตี และฟื้น HP ในเทิร์นต่อไป",
+    "vi": "40% boost to max HP of all allies, probable HP recovery when attacked & recovers HP each turn"
+  },
+  "MST_LEADERSKILLS_5505_NAME": {
+    "en": "Ruling Beast's Commandment",
+    "es": "Orden de la bestia dominante",
+    "id": "Perintah Beast Penguasa",
+    "pt": "Comando da Besta Regente",
+    "th": "รูลลิ่ง บีสต์ คอมมานเมนท์",
+    "vi": "Ruling Beast's Commandment"
+  },
+  "MST_LEADERSKILLS_5506_DESCRIPTION": {
+    "en": "40% boost to max HP for all Units, recovers HP each turn & probable HP absorption when attacking",
+    "es": "+40% a los PS máx. de las unidades, recupera PS cada turno y puede absorber PS al recibir ataques",
+    "id": "40% ekstra ke HP maks semua Unit, memulihkan HP tiap giliran & kemungkinan penyerapan HP saat menyerang",
+    "pt": "+40% no HP máx. de todas as unidades, recupera HP a cada rodada e provável absorção de HP ao atacar",
+    "th": "40% เพิ่ม max HP ให้กับทุกยูนิต ฟื้นฟู HP ในเทิร์น และมีโอกาสดูด HP เมื่อทำการโจมตี",
+    "vi": "40% boost to max HP for all Units, recovers HP each turn & probable HP absorption when attacking"
+  },
+  "MST_LEADERSKILLS_5506_NAME": {
+    "en": "Wave Oracle",
+    "es": "Oráculo de la marea",
+    "id": "Gelombang Peramal",
+    "pt": "Oráculo da Onda",
+    "th": "เวฟ โอราเคิล",
+    "vi": "Wave Oracle"
+  },
+  "MST_LEADERSKILLS_5507_DESCRIPTION": {
+    "en": "30% boost to HP & boosts Atk when HP high, boosts Def when HP low",
+    "es": "+30% a los PS, aumenta el ATQ cuando los PS son bajos y aumenta la DEF cuando son altos",
+    "id": "30% ekstra untuk HP & menambah Serangan saat HP tinggi, menambah Pertahanan saat HP rendah",
+    "pt": "+30% no ATQ e HP quando o HP estiver alto, reforço na DEF quando HP estiver baixo",
+    "th": "30% เพิ่มพลังโจมตีเมื่อ HP สูง และเพิ่มพลังป้องกันเมื่อ HP ต่ำ",
+    "vi": "30% boost max to HP & boosts Atk when HP high, boosts Def when HP low"
+  },
+  "MST_LEADERSKILLS_5507_NAME": {
+    "en": "Radiant Deity's Law",
+    "es": "Ley de la deidad radiante",
+    "id": "Hukum Dewa Radians",
+    "pt": "Lei da Divindade Radiante",
+    "th": "เรเดียนท์ เดตี้ ลอว",
+    "vi": "Radiant Deity's Law"
+  },
+  "MST_LEADERSKILLS_5508_DESCRIPTION": {
+    "en": "30% boost to HP & boosts Atk when HP high, boosts Def when HP low",
+    "es": "+30% a los PS, aumenta el ATQ cuando los PS son bajos y aumenta la DEF cuando son altos",
+    "id": "30% ekstra untuk HP & menambah Serangan saat HP tinggi, menambah Pertahanan saat HP rendah",
+    "pt": "+30% no ATQ e HP quando o HP estiver alto, reforço na DEF quando HP estiver baixo",
+    "th": "30% เพิ่มพลังโจมตีเมื่อ HP สูง และเพิ่มพลังป้องกันเมื่อ HP ต่ำ",
+    "vi": "30% boost to max HP & boosts Atk when HP high, boosts Def when HP low"
+  },
+  "MST_LEADERSKILLS_5508_NAME": {
+    "en": "Radiant Deity's Commandment",
+    "es": "Orden de la deidad radiante",
+    "id": "Perintah Dewa Radians",
+    "pt": "Mandamento da Divindade Radiante",
+    "th": "เรเดียนท์ เดตี้ คอมแมนเมนท์",
+    "vi": "Radiant Deity's Commandment"
+  },
+  "MST_LEADERSKILLS_550_DESCRIPTION": {
+    "en": "15% damage reduction from Fire types, hugely boosts damage against Water, Fire types & boosts critical damage",
+    "es": "15% de reducción de daño de las unidades ígneas, potencia el daño crítico y mejora enormemente el daño contra unidades ígneas y acuáticas",
+    "id": "15% pengurangan kerusakan dari tipe Api, amat menambah kerusakan melawan tipe Air, Api & menambah kerusakan pukulan ampuh",
+    "pt": "15% menos dano de Fogo sofrido, reforço imenso no dano contra Água, Fogo e reforço no dano crítico.",
+    "th": "ลดดาเมจจากธาตุไฟ 15%, เพิ่มดาเมจอย่างมากเมื่อโจมตียูนิตธาตุน้ำและไฟ, เพิ่มคริติคอลดาเมจ",
+    "vi": "15% damage reduction from Fire types, hugely boosts damage against Water, Fire types & boosts critical damage"
+  },
+  "MST_LEADERSKILLS_550_NAME": {
+    "en": "Strong Conviction",
+    "es": "Convicción fuerte",
+    "id": "Keyakinan Kuat",
+    "pt": "Forte Convicção",
+    "th": "สตรอง คอนวินชั่น",
+    "vi": "Strong Conviction"
+  },
+  "MST_LEADERSKILLS_5510_DESCRIPTION": {
+    "en": "30% boost to max HP for all Units",
+    "es": "30% de aumento a los PS máximos de todas las unidades",
+    "id": "30% tambahan ke maks HP untuk semua Unit",
+    "pt": "30% bônus no HP máx. de todas unidades",
+    "th": "30% เพิ่มค่า HP สูงสุดให้ทุกยูนิต",
+    "vi": "Tăng 30% Thể lực tối đa cho tất cả các Quái"
+  },
+  "MST_LEADERSKILLS_5510_NAME": {
+    "en": "Affectionate Support",
+    "es": "Apoyo afectuoso",
+    "id": "Dukungan Kasih",
+    "pt": "Suporte Afetuoso",
+    "th": "เอฟเฟกชั่นเนส ซัพพอร์ต",
+    "vi": "Hỗ trợ trìu mến"
+  },
+  "MST_LEADERSKILLS_5511_DESCRIPTION": {
+    "en": "30% boost to max HP for all Units, slightly recovers HP each turn & boosts effectiveness of HC",
+    "es": "30% de aumento a los PS máximos de todas las unidades, recuperación leve de PS por turno y aumento de la efectividad de los CC",
+    "id": "30% tambahan ke maks HP untuk semua Unit, agak memulihkan HP tiap giliran & menambah efektivitas HC",
+    "pt": "30% bônus no HP máx. de todas unidades, certa recuperação de HP a cada turno e bônus na efetividade do HC",
+    "th": "30% เพิ่มค่า HP สูงสุดให้ทุกยูนิต ฟื้นฟู HP ในแต่ละเทิร์นและเพิ่มประสิทธิภาพของ HC",
+    "vi": "Tăng 30% Thể lực tối đa cho tất cả các Quái, phục hồi nhẹ Thể lực mỗi lượt & tăng hiệu quả của HC"
+  },
+  "MST_LEADERSKILLS_5511_NAME": {
+    "en": "Benevolent Support",
+    "es": "Apoyo benevolente",
+    "id": "Dukungan Mulia",
+    "pt": "Suporte Benevolente",
+    "th": "เบเนโวเลนท์ ซัพพอร์ต",
+    "vi": "Hỗ trợ nhân từ"
+  },
+  "MST_LEADERSKILLS_5512_DESCRIPTION": {
+    "en": "30% boost to max HP & greatly boosts critical, Spark damage",
+    "es": "+30% los PS máx. y aumenta notablemente el daño de Chispas y el daño crítico",
+    "id": "30% ekstra ke HP maks & amat menambah kerusakan pukulan ampuh, Percikan",
+    "pt": "+30% no HP máx e grande reforço no dano crítico e de Fagulha",
+    "th": "30% เพิ่ม HP สูงสุด, เพิ่มค่าคริติคอลและสปาร์คดาเมจอย่างมาก",
+    "vi": "30% boost to max HP & greatly boosts critical, Spark damage"
+  },
+  "MST_LEADERSKILLS_5512_NAME": {
+    "en": "Smoldering Sky",
+    "es": "Cielo ardiente",
+    "id": "Langit Membara",
+    "pt": "Céu Ardente",
+    "th": "สโมลเดอริ่ง สกาย",
+    "vi": "Smoldering Sky"
+  },
+  "MST_LEADERSKILLS_5513_DESCRIPTION": {
+    "en": "30% boost to max HP, greatly boosts critical, Spark damage & greatly boosts BB attack damage",
+    "es": "+30% los PS máx., aumenta notablemente el daño de Chispas, el daño crítico y el daño del ataque de BB",
+    "id": "30% ekstra ke HP maks, amat menambah kerusakan pukulan ampuh, Percikan & kerusakan BB serang",
+    "pt": "+30% no HP máx, grande reforço no dano crítico, de Fagulha e de BB",
+    "th": "30% เพิ่ม HP สูงสุด, เพิ่มค่าคริติคอลและสปาร์คดาเมจอย่างมาก, เพิ่มดาเมจบีบีโจมตี",
+    "vi": "30% boost to max HP, greatly boosts critical, Spark damage & greatly boosts BB attack damage"
+  },
+  "MST_LEADERSKILLS_5513_NAME": {
+    "en": "Smoldering Blade",
+    "es": "Hoja ardiente",
+    "id": "Bilah Membara",
+    "pt": "Lâmina Ardente",
+    "th": "สโมลเดอริ่ง เบลด",
+    "vi": "Smoldering Blade"
+  },
+  "MST_LEADERSKILLS_5514_DESCRIPTION": {
+    "en": "30% boost to max HP & hugely boosts Spark damage",
+    "es": "+30% los PS máx. y aumenta enormemente el daño de Chispas",
+    "id": "30% ekstra ke HP maks & amat menambah kerusakan Percikan",
+    "pt": "+30% no HP máx e grande reforço no dano de Fagulha",
+    "th": "30% เพิ่ม HP สูงสุด, และเพิ่มสปาร์คดาเมจมหาศาล",
+    "vi": "30% boost to max HP & hugely boosts Spark damage"
+  },
+  "MST_LEADERSKILLS_5514_NAME": {
+    "en": "Shadow Eater's Brandish",
+    "es": "Habilidad del Tragasombras",
+    "id": "Ayunan Pemakan Bayangan",
+    "pt": "Golpe do Devorador das Sombras",
+    "th": "ชาโดว อีทเตอร์ แบรนดิช",
+    "vi": "Shadow Eater's Brandish"
+  },
+  "MST_LEADERSKILLS_5515_DESCRIPTION": {
+    "en": "30% boost to max HP, enormously boosts Spark damage & slightly boosts BB gauge",
+    "es": "+30% a los PS máx., aumenta enormemente el daño de Chispas y levemente el indicador BB",
+    "id": "30% ekstra ke HP maks, super menambah kerusakan Percikan & agak menambah meteran BB",
+    "pt": "+30% no HP máx., reforço enorme no dano de Fagulha e reforço pequeno na barra BB",
+    "th": "30% เพิ่ม HP สูงสุด, และเพิ่มสปาร์คดาเมจมากมายมหาศาล และเพิ่มบีบีเกจเล็กน้อย",
+    "vi": "30% boost to max HP, enormously boosts Spark damage & slightly boosts BB gauge"
+  },
   "MST_LEADERSKILLS_5515_NAME": {
     "en": "Shadow Demon's Radiance",
     "es": "Radiancia del demonio sombrío",
@@ -10118,6 +10294,22 @@
     "pt": "Santa Muerte",
     "th": "Santa Muerte",
     "vi": "Santa Muerte"
+  },
+  "MST_LEADERSKILLS_830798_DESCRIPTION": {
+    "en": "100% Def, max HP, 200% Atk (Earth), 250% Earth elemental damage, fills BB gauge each turn, 20% damage reduction from Earth, Thunder types & probable 1 KO resistance",
+    "es": "100% Def, max HP, 200% Atk (Earth), 250% Earth elemental damage, fills BB gauge each turn, 20% damage reduction from Earth, Thunder types & probable 1 KO resistance",
+    "id": "100% Def, max HP, 200% Atk (Earth), 250% Earth elemental damage, fills BB gauge each turn, 20% damage reduction from Earth, Thunder types & probable 1 KO resistance",
+    "pt": "100% Def, max HP, 200% Atk (Earth), 250% Earth elemental damage, fills BB gauge each turn, 20% damage reduction from Earth, Thunder types & probable 1 KO resistance",
+    "th": "100% Def, max HP, 200% Atk (Earth), 250% Earth elemental damage, fills BB gauge each turn, 20% damage reduction from Earth, Thunder types & probable 1 KO resistance",
+    "vi": "100% Def, max HP, 200% Atk (Earth), 250% Earth elemental damage, fills BB gauge each turn, 20% damage reduction from Earth, Thunder types & probable 1 KO resistance"
+  },
+  "MST_LEADERSKILLS_830798_NAME": {
+    "en": "Dirge of the Masked Ones",
+    "es": "Dirge of the Masked Ones",
+    "id": "Dirge of the Masked Ones",
+    "pt": "Dirge of the Masked Ones",
+    "th": "Dirge of the Masked Ones",
+    "vi": "Dirge of the Masked Ones"
   },
   "MST_LEADERSKILLS_830808_DESCRIPTION": {
     "en": "120% max HP, 200% Atk, Def, for first 3 turns, probable 25% damage reduction, 30% reduction to BB activation cost, 250% spark damage when HP is above 50% & 135% ABP, 60% CBP gain",
@@ -90342,141 +90534,5 @@
     "pt": "Sefia Rainha Lâmina",
     "th": "เบลดควีนเซเฟีย",
     "vi": "Nữ hoàng Sefia"
-  },
-  "MST_MONSTERS_52654_NAME": {
-    "en": "Blade Queen Sefia",
-    "es": "Reina de espadas Sefia",
-    "id": "Ratu Pisau Sefia",
-    "pt": "Sefia Rainha Lâmina",
-    "th": "เบลดควีนเซเฟีย",
-    "vi": "Nữ hoàng Sefia"
-  },
-  "MST_MONSTERS_52655_NAME": {
-    "en": "Blade Queen Sefia",
-    "es": "Reina de espadas Sefia",
-    "id": "Ratu Pisau Sefia",
-    "pt": "Sefia Rainha Lâmina",
-    "th": "เบลดควีนเซเฟีย",
-    "vi": "Nữ hoàng Sefia"
-  },
-  "MST_MONSTERS_52656_NAME": {
-    "en": "Blade Queen Sefia",
-    "es": "Reina de espadas Sefia",
-    "id": "Ratu Pisau Sefia",
-    "pt": "Sefia Rainha Lâmina",
-    "th": "เบลดควีนเซเฟีย",
-    "vi": "Nữ hoàng Sefia"
-  },
-  "MST_MONSTERS_52657_NAME": {
-    "en": "Blade Queen Sefia",
-    "es": "Reina de espadas Sefia",
-    "id": "Ratu Pisau Sefia",
-    "pt": "Sefia Rainha Lâmina",
-    "th": "เบลดควีนเซเฟีย",
-    "vi": "Nữ hoàng Sefia"
-  },
-  "MST_MONSTERS_52658_NAME": {
-    "en": "Blade Queen Sefia",
-    "es": "Reina de espadas Sefia",
-    "id": "Ratu Pisau Sefia",
-    "pt": "Sefia Rainha Lâmina",
-    "th": "เบลดควีนเซเฟีย",
-    "vi": "Nữ hoàng Sefia"
-  },
-  "MST_MONSTERS_52659_NAME": {
-    "en": "Blade Queen Sefia",
-    "es": "Reina de espadas Sefia",
-    "id": "Ratu Pisau Sefia",
-    "pt": "Sefia Rainha Lâmina",
-    "th": "เบลดควีนเซเฟีย",
-    "vi": "Nữ hoàng Sefia"
-  },
-  "MST_MONSTERS_52660_NAME": {
-    "en": "Blade Queen Sefia",
-    "es": "Ciclón de espadas Sefia",
-    "id": "Ratu Bilah Sefia",
-    "pt": "Sefia Rainha das Lâminas",
-    "th": "เบลดควีนเซเฟีย",
-    "vi": "Blade Queen Sefia"
-  },
-  "MST_MONSTERS_52661_NAME": {
-    "en": "Blade Queen Sefia",
-    "es": "Ciclón de espadas Sefia",
-    "id": "Ratu Bilah Sefia",
-    "pt": "Sefia Rainha das Lâminas",
-    "th": "เบลดควีนเซเฟีย",
-    "vi": "Blade Queen Sefia"
-  },
-  "MST_MONSTERS_52662_NAME": {
-    "en": "Blade Queen Sefia",
-    "es": "Ciclón de espadas Sefia",
-    "id": "Ratu Bilah Sefia",
-    "pt": "Sefia Rainha das Lâminas",
-    "th": "เบลด ควีน เซเฟีย",
-    "vi": "Nữ Hoàng Kiếm Sefia"
-  },
-  "MST_MONSTERS_52663_NAME": {
-    "en": "Blade Queen Sefia",
-    "es": "Ciclón de espadas Sefia",
-    "id": "Ratu Bilah Sefia",
-    "pt": "Sefia Rainha das Lâminas",
-    "th": "เบลด ควีน เซเฟีย",
-    "vi": "Blade Queen Sefia"
-  },
-  "MST_MONSTERS_52664_NAME": {
-    "en": "Blade Queen Sefia",
-    "es": "Ciclón de espadas Sefia",
-    "id": "Ratu Pisau Sefia",
-    "pt": "Sefia Rainha das Lâminas",
-    "th": "เบลดควีนเซเฟีย",
-    "vi": "Blade Queen Sefia"
-  },
-  "MST_MONSTERS_52665_NAME": {
-    "en": "Blade Queen Sefia",
-    "es": "Ciclón de espadas Sefia",
-    "id": "Ratu Pisau Sefia",
-    "pt": "Sefia Rainha das Lâminas",
-    "th": "เบลดควีนเซเฟีย",
-    "vi": "Blade Queen Sefia"
-  },
-  "MST_MONSTERS_52666_NAME": {
-    "en": "Blade Queen Sefia",
-    "es": "Blade Queen Sefia",
-    "id": "NA (ATM)",
-    "pt": "Blade Queen Sefia",
-    "th": "เบลด ควีน เซเฟีย",
-    "vi": "Blade Queen Sefia"
-  },
-  "MST_MONSTERS_52667_NAME": {
-    "en": "Blade Queen Sefia",
-    "es": "Blade Queen Sefia",
-    "id": "NA (ATM)",
-    "pt": "Blade Queen Sefia",
-    "th": "เบลด ควีน เซเฟีย",
-    "vi": "Blade Queen Sefia"
-  },
-  "MST_MONSTERS_52668_NAME": {
-    "en": "Blade Queen Sefia",
-    "es": "Blade Queen Sefia",
-    "id": "Blade Queen Sefia",
-    "pt": "Blade Queen Sefia",
-    "th": "เบลด ควีน เซเฟีย",
-    "vi": "Blade Queen Sefia"
-  },
-  "MST_MONSTERS_52669_NAME": {
-    "en": "Blade Queen Sefia",
-    "es": "Blade Queen Sefia",
-    "id": "Blade Queen Sefia",
-    "pt": "Blade Queen Sefia",
-    "th": "เบลด ควีน เซเฟีย",
-    "vi": "Blade Queen Sefia"
-  },
-  "MST_MONSTERS_52700_NAME": {
-    "en": "Miracle Totem",
-    "es": "Tótem milagroso",
-    "id": "Totem Mukjizat",
-    "pt": "Totem Milagroso",
-    "th": "มิราเคิลโทเทม",
-    "vi": "Thần vật linh thiêng"
   }
 }
