@@ -1,4 +1,252 @@
 {
+  "MST_LEADERSKILLS_5300_DESCRIPTION": {
+    "en": "Large boost in critical hit damage & large boost in damage dealt to weak elements",
+    "es": "Gran aumento al daño por golpe crítico y al daño infligido a los enemigos debilitados.",
+    "id": "Peningkatan besar untuk kerusakan pukulan ampuh & perusakan elemen lemah",
+    "pt": "Grande reforço no dano crítico e grande reforço no dano causado a elementos fracos",
+    "th": "เพิ่มค่าความเสียหายอย่างมากจากการโจมตีคริติคอล กับ เพิ่มค่าความเสียหายอย่างมากที่สร้างกับยูนิตที่แพ้ธาตุ",
+    "vi": "Tăng nhiều thiệt hại của đòn đánh trúng nguy hiểm & tăng nhiều thiệt hại cho các yếu tố suy yếu"
+  },
+  "MST_LEADERSKILLS_5300_NAME": {
+    "en": "Power of Creation",
+    "es": "Poder de creación",
+    "id": "Kekuatan Penciptaan",
+    "pt": "Poder da Criação",
+    "th": "พาวเวอร์ออฟครีเอชั่น",
+    "vi": "Sức mạnh của đấng sáng tạo"
+  },
+  "MST_LEADERSKILLS_5400_DESCRIPTION": {
+    "en": "Boost to BC, HC, Zel, Karma and Item drop rate",
+    "es": "Aumenta la posibilidad de obtener CB, CC, Zel, Karma y objetos",
+    "id": "Menambah BC, HC, Zel, Karma, dan frekuensi perolehan barang",
+    "pt": "Aumenta a taxa de queda de BC, HC, Zel, Karma e itens",
+    "th": "เพิ่มอัตราดรอปของ BC, HC, เซล,คาร์ม่า และ ไอเทม",
+    "vi": "Tăng BC, HC, Zel, Karma và tỷ lệ rơi đồ"
+  },
+  "MST_LEADERSKILLS_5400_NAME": {
+    "en": "Great Thief's Technique",
+    "es": "Técnica del gran ladrón",
+    "id": "Teknik Maling Besar",
+    "pt": "Técnica do Grande Ladrão",
+    "th": "เกรทธีฟส์เทคนิค",
+    "vi": "Kỹ năng tên trộm tuyệt vời"
+  },
+  "MST_LEADERSKILLS_5401_DESCRIPTION": {
+    "en": "Large boost to BC, HC, Zel, Karma and Item drop rate",
+    "es": "Aumenta notablemente la posibilidad de obtener CB, CC, Zel, Karma y objetos",
+    "id": "Amat menambah BC, HC, Zel, Karma, dan frekuensi perolehan barang",
+    "pt": "Aumenta muito a taxa de queda de BC, HC, Zel, Karma e itens",
+    "th": "เพิ่มอัตราดรอปอย่างมากของ BC, HC, เซล,คาร์ม่า และ ไอเทม",
+    "vi": "Tăng mạnh BC, HC, Zel, Karma và tỷ lệ rơi đồ"
+  },
+  "MST_LEADERSKILLS_5401_NAME": {
+    "en": "Master Thief's Technique",
+    "es": "Técnica del ladrón maestro",
+    "id": "Teknik Master Maling",
+    "pt": "Técnica do Ladrão Mestre",
+    "th": "มาสเตอร์ธีฟส์เทคนิค",
+    "vi": "Kỹ năng tên trộm bậc thầy"
+  },
+  "MST_LEADERSKILLS_5402_DESCRIPTION": {
+    "en": "Huge boost to BC, HC, Zel, Karma and Item drop rate",
+    "es": "Enorme aumento a la posibilidad de obtener CB, CC, Zel, Karma y objetos",
+    "id": "Super menambah BC, HC, Zel, Karma, dan frekuensi perolehan barang",
+    "pt": "Aumento enorme na taxa de queda de BC, HC, Zel, Karma e itens",
+    "th": "เพิ่มอัตราดรอปอย่างมากมายของ BC, HC, เซล,คาร์ม่า และ ไอเทม",
+    "vi": "Tăng cực mạnh BC, HC, Zel, Karma và tỷ lệ rơi đồ"
+  },
+  "MST_LEADERSKILLS_5402_NAME": {
+    "en": "Master Thief's Secret",
+    "es": "Secreto del ladrón maestro",
+    "id": "Rahasia Master Maling",
+    "pt": "Segredo do Ladrão Mestre",
+    "th": "มาสเตอร์ธีฟส์ซีเครท",
+    "vi": "Bí mật của tên trộm bậc thầy"
+  },
+  "MST_LEADERSKILLS_5403_DESCRIPTION": {
+    "en": "30% boost to max HP, enormously boosts BC, HC, Zel and Karma drop rates & boosts EXP gained",
+    "es": "30% boost to max HP, enormously boosts BC, HC, Zel and Karma drop rates & boosts EXP gained",
+    "id": "30% ekstra HP maks, tambahan jumbo perolehan BC, HC, Zel, Karma & menambah perolehan XP",
+    "pt": "30% boost to max HP, enormously boosts BC, HC, Zel and Karma drop rates & boosts EXP gained",
+    "th": "30% เพิ่มค่าให้กับ HP สูงสุด, เพิ่มอัตราดรอป BC, HC, เซล กับ คาร์ม่า มหาศาล และ เพิ่ม EXP ที่ได้รับ",
+    "vi": "30% boost to max HP, enormously boosts BC, HC, Zel and Karma drop rates & boosts EXP gained"
+  },
+  "MST_LEADERSKILLS_5403_NAME": {
+    "en": "Godly Thievery",
+    "es": "Godly Thievery",
+    "id": "Pencurian Dewa",
+    "pt": "Godly Thievery",
+    "th": "ก็อดลี่ ทีฟเวอรี่",
+    "vi": "Godly Thievery"
+  },
+  "MST_LEADERSKILLS_5404_DESCRIPTION": {
+    "en": "50% boost to max HP, enormously boosts BC, HC, Zel, Karma, and Item drop rates & boosts EXP gained",
+    "es": "50% boost to max HP, enormously boosts BC, HC, Zel, Karma, and Item drop rates & boosts EXP gained",
+    "id": "50% ekstra HP maks, ekstra jumbo BC, HC, Zel, Karma, laju perolehan Barang & menambah perolehan XP",
+    "pt": "50% boost to max HP, enormously boosts BC, HC, Zel, Karma, and Item drop rates & boosts EXP gained",
+    "th": "50% เพิ่มค่า HP สูงสุด, เพิ่มค่ามหาศาลให้อัตราดรอป BC, HC, เซล, คาร์มา, กับ ไอเทม  และ เพิ่มค่า ประสบการณ์ที่ได้รับ",
+    "vi": "50% boost to max HP, enormously boosts BC, HC, Zel, Karma, and Item drop rates & boosts EXP gained"
+  },
+  "MST_LEADERSKILLS_5404_NAME": {
+    "en": "Thief's Illusion",
+    "es": "Thief's Illusion",
+    "id": "Ilusi Pencuri",
+    "pt": "Thief's Illusion",
+    "th": "ทีฟ อิลลูชั่น",
+    "vi": "Thief's Illusion"
+  },
+  "MST_LEADERSKILLS_5405_DESCRIPTION": {
+    "en": "12% boost to EXP received",
+    "es": "12% boost to EXP received",
+    "id": "12% ekstra EXP yang diterima",
+    "pt": "12% boost to EXP received",
+    "th": "12% เพิ่มค่า EXP ที่ได้รับ",
+    "vi": "12% boost to EXP received"
+  },
+  "MST_LEADERSKILLS_5405_NAME": {
+    "en": "Mark of Mazzaroth",
+    "es": "Mark of Mazzaroth",
+    "id": "Tanda Mazzaroth",
+    "pt": "Mark of Mazzaroth",
+    "th": "มาร์ค ออฟ มาซซาโรธ",
+    "vi": "Mark of Mazzaroth"
+  },
+  "MST_LEADERSKILLS_5406_DESCRIPTION": {
+    "en": "12% boost to EXP received & hugely boosts BC, HC, Zel, Karma and Item drop rate",
+    "es": "12% boost to EXP received & hugely boosts BC, HC, Zel, Karma and Item drop rate",
+    "id": "12% ekstra EXP yang diterima, tambahan besar perolehan BC, HC, Zel, Karma, barang",
+    "pt": "12% boost to EXP received & hugely boosts BC, HC, Zel, Karma and Item drop rate",
+    "th": "12% เพิ่มค่า EXP ที่ได้รับ และ เพิ่มค่าอย่างสูงให้ อัตราดรอป BC, HC, เซล, คาร์มา กับ ไอเท็ม",
+    "vi": "12% boost to EXP received & hugely boosts BC, HC, Zel, Karma and Item drop rate"
+  },
+  "MST_LEADERSKILLS_5406_NAME": {
+    "en": "Sigil of Mazzaroth",
+    "es": "Sigil of Mazzaroth",
+    "id": "Gambar Mazzaroth",
+    "pt": "Sigil of Mazzaroth",
+    "th": "ซิจิล ออฟ มาซซาโรธ",
+    "vi": "Sigil of Mazzaroth"
+  },
+  "MST_LEADERSKILLS_5407_DESCRIPTION": {
+    "en": "12% boost to Exp received, greatly boosts BC, HC, Zel, Karma and Item drop rate & greatly boosts BB gauge fill rate",
+    "es": "12% boost to Exp received, greatly boosts BC, HC, Zel, Karma and Item drop rate & greatly boosts BB gauge fill rate",
+    "id": "12% ekstra EXP yang diterima, tambahan besar perolehan BC, HC, Zel, Karma, barang, laju pengisian meteran BB",
+    "pt": "12% boost to Exp received, greatly boosts BC, HC, Zel, Karma and Item drop rate & greatly boosts BB gauge fill rate",
+    "th": "12% เพิ่มค่า Exp ที่ได้รับ, เพิ่มค่าอย่างมากมายให้ อัตราดรอป BC, HC, เซล, คาร์มา กับ ไอเท็ม และ เพิ่มค่าอย่างมากมายให้ อัตราเติมเกจ BB",
+    "vi": "12% boost to Exp received, greatly boosts BC, HC, Zel, Karma and Item drop rate & greatly boosts BB gauge fill rate"
+  },
+  "MST_LEADERSKILLS_5407_NAME": {
+    "en": "Regalia of Mazzaroth",
+    "es": "Regalia of Mazzaroth",
+    "id": "Emblem Mazzaroth",
+    "pt": "Regalia of Mazzaroth",
+    "th": "เรกาเลีย ออฟ มาซซาโรธ",
+    "vi": "Regalia of Mazzaroth"
+  },
+  "MST_LEADERSKILLS_5410_DESCRIPTION": {
+    "en": "Boosts Karma drop rate",
+    "es": "Aumenta la probabilidad de conseguir Karma",
+    "id": "Menambah perolehan Karma",
+    "pt": "Reforço na obtenção de Karma",
+    "th": "เพิ่มอัตราการดรอปคาร์ม่า",
+    "vi": "Tăng tỷ lệ rơi Karma"
+  },
+  "MST_LEADERSKILLS_5410_NAME": {
+    "en": "Soul Vigor",
+    "es": "Vigor del alma",
+    "id": "Semangat Jiwa",
+    "pt": "Vigor da Alma",
+    "th": "โซล ไวเกอร์",
+    "vi": "Linh Hồn Mãnh Liệt"
+  },
+  "MST_LEADERSKILLS_5420_DESCRIPTION": {
+    "en": "Boosts BC drop rate",
+    "es": "Aumenta la probabilidad de conseguir CB",
+    "id": "Menambah perolehan BC",
+    "pt": "Reforço na obtenção de CB",
+    "th": "เพิ่มอัตราการดรอป BC",
+    "vi": "Tăng tỷ lệ rơi Tinh thể cuộc chiến"
+  },
+  "MST_LEADERSKILLS_5420_NAME": {
+    "en": "Fighting Vigor",
+    "es": "Vigor de batalla",
+    "id": "Semangat Tarung",
+    "pt": "Vigor de Luta",
+    "th": "ไฟติ้ง ไวเกอร์",
+    "vi": "Mãnh Chiến"
+  },
+  "MST_LEADERSKILLS_5500_DESCRIPTION": {
+    "en": "15% boost to max HP",
+    "es": "15% de aumento a los PS de todas las unidades",
+    "id": "Menambah 15% HP semua Unit",
+    "pt": "Bônus de 15% ao HP de todas as unidades",
+    "th": "15% เพิ่มค่า HP ของทุกยูนิต",
+    "vi": "Tăng 15% HP của tất cả các Quái"
+  },
+  "MST_LEADERSKILLS_5500_NAME": {
+    "en": "Royal Oracle",
+    "es": "Augur real",
+    "id": "Orakel Ningrat",
+    "pt": "Oráculo Real",
+    "th": "รอยัลออราเคิล",
+    "vi": "Tiên tri hoàng gia"
+  },
+  "MST_LEADERSKILLS_5501_DESCRIPTION": {
+    "en": "30% boost to max HP",
+    "es": "30% de aumento a los PS de todas las unidades",
+    "id": "Menambah 30% HP semua Unit",
+    "pt": "Bônus de 30% ao HP de todas as unidades",
+    "th": "30% เพิ่มค่า HP ของทุกยูนิต",
+    "vi": "Tăng 30% HP của tất cả các Quái"
+  },
+  "MST_LEADERSKILLS_5501_NAME": {
+    "en": "Supreme Oracle",
+    "es": "Augur supremo",
+    "id": "Orakel Utama",
+    "pt": "Oráculo Supremo",
+    "th": "สุพรีมออราเคิล",
+    "vi": "Tiên tri tối cao"
+  },
+  "MST_LEADERSKILLS_5502_DESCRIPTION": {
+    "en": "30% boost to HP of all Units & slightly recovers HP each turn",
+    "es": "Aumenta un 30% los PS de todas las unidades y recupera PS levemente cada turno",
+    "id": "30% tambahan HP untuk semua Unit & agak memulihkan HP tiap giliran",
+    "pt": "Bônus de 30% ao HP de todas unidades e recupera HP a cada rodada.",
+    "th": "30% เพิ่มค่า HP สำหรับทุกยูนิต และ ฟื้นฟู HP เล็กน้อยในแต่ละเทิร์น",
+    "vi": "Tăng 30% Thể lực của tất cả các Quái & phục hồi nhẹ Thể lực mỗi lượt"
+  },
+  "MST_LEADERSKILLS_5502_NAME": {
+    "en": "Divine Oracle",
+    "es": "Augur divino",
+    "id": "Orakel Ilahi",
+    "pt": "Oráculo Divino",
+    "th": "ดิไวน์ออราเคิล",
+    "vi": "Tiên tri thần thánh"
+  },
+  "MST_LEADERSKILLS_5503_DESCRIPTION": {
+    "en": "30% boost to HP of all Units & probable slight HP recovery when attacked",
+    "es": "30% de aumento a los PS de todas las unidades. Puedes recuperar un poco de PV cuando te atacan",
+    "id": "Peningkatan 30% meteran BB semua Unit & mungkin HP agak pulih saat diserang",
+    "pt": "Bônus de 30% ao HP de todas as unidades e provável recuperação de HP ao ser atacado.",
+    "th": "30% เพิ่มค่า HP ของทุกยูนิต และ อาจจะฟื้นฟู HP เล็กน้อยเมื่อถูกโจมตี",
+    "vi": "Tăng 30% Thể lực cho tất cả các Quái & có thể phục hồi nhẹ Thể lực khi bị tấn công"
+  },
+  "MST_LEADERSKILLS_5503_NAME": {
+    "en": "Phatom Demon's Oracle",
+    "es": "Oráculo del demonio fantasma",
+    "id": "Oracle Setan Fantom",
+    "pt": "Oráculo Demônio fantasma",
+    "th": "แฟนท่อม เดม่อนส์ ออราเคิล",
+    "vi": "Lời Tiên Tri Ma Quỷ"
+  },
+  "MST_LEADERSKILLS_5504_DESCRIPTION": {
+    "en": "40% boost to max HP for all Units & adds chance of slightly recovering HP when attacked",
+    "es": "40% de aumento a los PS máximo de todas las unidades. Agrega la posibilidad de recuperar una leve cantidad de PS al recibir un ataque",
+    "id": "40% menambah maks HP semua Unit & menambah kans agak memulihkan HP saat diserang",
+    "pt": "Aumento de 40% no HP máximo de todas as unidades e chance de recuperar HP ao ser atacado",
+    "th": "40% เพิ่มค่า HP สูงสุด สำหรับทุกยูนิต และ เพิ่มโอกาส ที่จะฟื้นฟู HP เล็กน้อย เมื่อถูกโจมตี",
+    "vi": "Tăng 40% Thể lực tối đa của tất cả các Quái & thêm cơ hội phục hồi nhẹ Thể lực khi bị tấn công"
+  },
   "MST_LEADERSKILLS_5504_NAME": {
     "en": "Original Oracle",
     "es": "Oráculo original",
@@ -8623,6 +8871,38 @@
     "th": "Touched with Fire",
     "vi": "Touched with Fire"
   },
+  "MST_LEADERSKILLS_810827_DESCRIPTION": {
+    "en": "120% Atk, max HP, 100% Def, and 30% critical rate (Fire), 10% damage reduction from Fire, Earth types, raises normal hit amount, normal attacks may hit all foes, 20% reduction to BB activation cost",
+    "es": "120% Atk, max HP, 100% Def, and 30% critical rate (Fire), 10% damage reduction from Fire, Earth types, raises normal hit amount, normal attacks may hit all foes, 20% reduction to BB activation cost",
+    "id": "120% Atk, max HP, 100% Def, and 30% critical rate (Fire), 10% damage reduction from Fire, Earth types, raises normal hit amount, normal attacks may hit all foes, 20% reduction to BB activation cost",
+    "pt": "120% Atk, max HP, 100% Def, and 30% critical rate (Fire), 10% damage reduction from Fire, Earth types, raises normal hit amount, normal attacks may hit all foes, 20% reduction to BB activation cost",
+    "th": "120% Atk, max HP, 100% Def, and 30% critical rate (Fire), 10% damage reduction from Fire, Earth types, raises normal hit amount, normal attacks may hit all foes, 20% reduction to BB activation cost",
+    "vi": "120% Atk, max HP, 100% Def, and 30% critical rate (Fire), 10% damage reduction from Fire, Earth types, raises normal hit amount, normal attacks may hit all foes, 20% reduction to BB activation cost"
+  },
+  "MST_LEADERSKILLS_810827_NAME": {
+    "en": "Streetwise Slinker",
+    "es": "Streetwise Slinker",
+    "id": "Streetwise Slinker",
+    "pt": "Streetwise Slinker",
+    "th": "Streetwise Slinker",
+    "vi": "Streetwise Slinker"
+  },
+  "MST_LEADERSKILLS_810828_DESCRIPTION": {
+    "en": "150% Atk, max HP, 120% Def, and 30% critical rate (Fire), 20% damage reduction from Fire, Earth types, raises normal hit amount, normal attacks may hit all foes, 30% reduction to BB activation cost & 135% ABP, 80% CBP gain",
+    "es": "150% Atk, max HP, 120% Def, and 30% critical rate (Fire), 20% damage reduction from Fire, Earth types, raises normal hit amount, normal attacks may hit all foes, 30% reduction to BB activation cost & 135% ABP, 80% CBP gain",
+    "id": "150% Atk, max HP, 120% Def, and 30% critical rate (Fire), 20% damage reduction from Fire, Earth types, raises normal hit amount, normal attacks may hit all foes, 30% reduction to BB activation cost & 135% ABP, 80% CBP gain",
+    "pt": "150% Atk, max HP, 120% Def, and 30% critical rate (Fire), 20% damage reduction from Fire, Earth types, raises normal hit amount, normal attacks may hit all foes, 30% reduction to BB activation cost & 135% ABP, 80% CBP gain",
+    "th": "150% Atk, max HP, 120% Def, and 30% critical rate (Fire), 20% damage reduction from Fire, Earth types, raises normal hit amount, normal attacks may hit all foes, 30% reduction to BB activation cost & 135% ABP, 80% CBP gain",
+    "vi": "150% Atk, max HP, 120% Def, and 30% critical rate (Fire), 20% damage reduction from Fire, Earth types, raises normal hit amount, normal attacks may hit all foes, 30% reduction to BB activation cost & 135% ABP, 80% CBP gain"
+  },
+  "MST_LEADERSKILLS_810828_NAME": {
+    "en": "Mesmerising Flow",
+    "es": "Mesmerising Flow",
+    "id": "Mesmerising Flow",
+    "pt": "Mesmerising Flow",
+    "th": "Mesmerising Flow",
+    "vi": "Mesmerising Flow"
+  },
   "MST_LEADERSKILLS_810837_DESCRIPTION": {
     "en": "150% Atk, 100% max HP, 30% critical rate, 200% spark damage, raises Atk limit to 130k & 10% damage reduction from Fire, Water, Light, Dark types",
     "es": "150% Atk, 100% max HP, 30% critical rate, 200% spark damage, raises Atk limit to 130k & 10% damage reduction from Fire, Water, Light, Dark types",
@@ -10376,12 +10656,12 @@
     "vi": "Storm Witches Legacy"
   },
   "MST_LEADERSKILLS_840048_DESCRIPTION": {
-    "en": "150% boost to Atk, 80% boost to Def, max HP of Thunder types, 20% damage reduction from Water, Thunder types, considerably reduces BB gauge required for BB, probable considerable reduction of BB gauge fill rate for 2 turns & considerably boosts ABP and CBP gain",
-    "es": "150% boost to Atk, 80% boost to Def, max HP of Thunder types, 20% damage reduction from Water, Thunder types, considerably reduces BB gauge required for BB, probable considerable reduction of BB gauge fill rate for 2 turns & considerably boosts ABP and CBP gain",
-    "id": "150% ekstra Serang, 80% esktra Tahan, HP maks tipe Guntur, kurangi 20% kerusakan dari tipe Air, Guntur, lumayan kurangi meteran BB untuk BB, kans lumayan kurangi laju pengisian meteran BB untuk 2 giliran, lumayan menambah perolehan ABP dan CBP",
-    "pt": "150% boost to Atk, 80% boost to Def, max HP of Thunder types, 20% damage reduction from Water, Thunder types, considerably reduces BB gauge required for BB, probable considerable reduction of BB gauge fill rate for 2 turns & considerably boosts ABP and CBP gain",
-    "th": "150% เพิ่มค่าให้ โจมตี, 80% เพิ่มค่าให้ ป้องกัน, HP สูงสุด ของชนิด สายฟ้า, 20% ลดค่าความเสียหายจากชนิด น้ำ, สายฟ้า, ลดค่าเกจ BB ที่จำเป็นสำหรับใช้ BB อย่างมาก, มีโอกาส ลดค่าอย่างมาก ของอัตราเติมเกจ BB นาน 2 เทิร์น และ เพิ่มค่าอย่างมากให้ ABP กับ CBP ทีได้รับ",
-    "vi": "150% boost to Atk, 80% boost to Def, max HP of Thunder types, 20% damage reduction from Water, Thunder types, considerably reduces BB gauge required for BB, probable considerable reduction of BB gauge fill rate for 2 turns & considerably boosts ABP and CBP gain"
+    "en": "200% Atk, 80% Def, max HP (Thunder), 20% damage reduction from Water, Thunder types, 25% reduction to BB activation cost, adds probable 2 turns 50% BB gauge fill rate reduction infliction to attack & 100% ABP, 50% CBP gain",
+    "es": "200% Atk, 80% Def, max HP (Thunder), 20% damage reduction from Water, Thunder types, 25% reduction to BB activation cost, adds probable 2 turns 50% BB gauge fill rate reduction infliction to attack & 100% ABP, 50% CBP gain",
+    "id": "200% Atk, 80% Def, max HP (Thunder), 20% damage reduction from Water, Thunder types, 25% reduction to BB activation cost, adds probable 2 turns 50% BB gauge fill rate reduction infliction to attack & 100% ABP, 50% CBP gain",
+    "pt": "200% Atk, 80% Def, max HP (Thunder), 20% damage reduction from Water, Thunder types, 25% reduction to BB activation cost, adds probable 2 turns 50% BB gauge fill rate reduction infliction to attack & 100% ABP, 50% CBP gain",
+    "th": "200% Atk, 80% Def, max HP (Thunder), 20% damage reduction from Water, Thunder types, 25% reduction to BB activation cost, adds probable 2 turns 50% BB gauge fill rate reduction infliction to attack & 100% ABP, 50% CBP gain",
+    "vi": "200% Atk, 80% Def, max HP (Thunder), 20% damage reduction from Water, Thunder types, 25% reduction to BB activation cost, adds probable 2 turns 50% BB gauge fill rate reduction infliction to attack & 100% ABP, 50% CBP gain"
   },
   "MST_LEADERSKILLS_840048_NAME": {
     "en": "Storm Witches Ascension",
@@ -90318,221 +90598,5 @@
     "pt": "Grande Sábia Mimir",
     "th": "เกรท เสจ มิเมียร์",
     "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_52471_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Si Bijak Agung Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรท เสจ มิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_52472_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Si Bijak Agung Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรท เสจ มิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_52473_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Si Bijak Agung Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรท เสจ มิเมียร์",
-    "vi": "Hiền Triết Mimir"
-  },
-  "MST_MONSTERS_52474_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Si Bijak Agung Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรท เสจ ไมเมอร์",
-    "vi": "Great Sage Mimir"
-  },
-  "MST_MONSTERS_52475_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Bijak Agung Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรทเซจมิเมียร์",
-    "vi": "Great Sage Mimir"
-  },
-  "MST_MONSTERS_52476_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Bijak Agung Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรทเซจมิเมียร์",
-    "vi": "Great Sage Mimir"
-  },
-  "MST_MONSTERS_52477_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Bijak Agung Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรทเซจมิเมียร์",
-    "vi": "Great Sage Mimir"
-  },
-  "MST_MONSTERS_52478_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Great Sage Mimir",
-    "id": "Mantis",
-    "pt": "Great Sage Mimir",
-    "th": "เกรท เซจ ไมเมอร์",
-    "vi": "Great Sage Mimir"
-  },
-  "MST_MONSTERS_52479_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Great Sage Mimir",
-    "id": "Bilah Siklon Dion",
-    "pt": "Great Sage Mimir",
-    "th": "เกรท เซจ ไมเมอร์",
-    "vi": "Great Sage Mimir"
-  },
-  "MST_MONSTERS_52480_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Great Sage Mimir",
-    "id": "Tombak Perunggu Drevas",
-    "pt": "Great Sage Mimir",
-    "th": "เกรท เซจ ไมเมอร์",
-    "vi": "Great Sage Mimir"
-  },
-  "MST_MONSTERS_52481_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Great Sage Mimir",
-    "id": "Great Sage Mimir",
-    "pt": "Great Sage Mimir",
-    "th": "เกรท เซจ มิเมียร์",
-    "vi": "Great Sage Mimir"
-  },
-  "MST_MONSTERS_52482_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Great Sage Mimir",
-    "id": "Great Sage Mimir",
-    "pt": "Great Sage Mimir",
-    "th": "เกรท เซจ มิเมียร์",
-    "vi": "Great Sage Mimir"
-  },
-  "MST_MONSTERS_52500_NAME": {
-    "en": "Light Pot",
-    "es": "Pote de luz",
-    "id": "Pot Terang",
-    "pt": "Pote da Luz",
-    "th": "ไลท์พอท",
-    "vi": "Bình ánh sáng"
-  },
-  "MST_MONSTERS_52501_NAME": {
-    "en": "Light Pot",
-    "es": "Pote de luz",
-    "id": "Pot Terang",
-    "pt": "Pote da Luz",
-    "th": "ไลท์พอท",
-    "vi": "Bình ánh sáng"
-  },
-  "MST_MONSTERS_52502_NAME": {
-    "en": "Soothing Pot",
-    "es": "Pote calmante",
-    "id": "Soothing Pot",
-    "pt": "Pote Tranquilizante",
-    "th": "ไลท์พอท",
-    "vi": "Bình xoa dịu"
-  },
-  "MST_MONSTERS_52503_NAME": {
-    "en": "Pot Enemy 5",
-    "es": "Pot Enemy 5",
-    "id": "Musuh Pot 5",
-    "pt": "Pot Enemy 5",
-    "th": "พ็อต เอ็นเนอมี่ 5",
-    "vi": "Pot Enemy 5"
-  },
-  "MST_MONSTERS_52550_NAME": {
-    "en": "Eight Blade Sefia",
-    "es": "Ocho espadas Sefia",
-    "id": "Si 8 Pisau Sefia",
-    "pt": "Sefia Oito Lâminas",
-    "th": "เอทเบลดเซเฟีย",
-    "vi": "Kiếm tám Sefia"
-  },
-  "MST_MONSTERS_52551_NAME": {
-    "en": "Eight Blade Sefia",
-    "es": "Ocho espadas Sefia",
-    "id": "Si 8 Pisau Sefia",
-    "pt": "Sefia Oito Lâminas",
-    "th": "เอทเบลดเซเฟีย",
-    "vi": "Kiếm tám Sefia"
-  },
-  "MST_MONSTERS_52600_NAME": {
-    "en": "Blade Storm Sefia",
-    "es": "Ciclón de espadas Sefia",
-    "id": "Badai Pisau Sefia",
-    "pt": "Sefia Lâmina Tufão",
-    "th": "เบลดสตอร์มเซเฟีย",
-    "vi": "Bão kiếm Sefia"
-  },
-  "MST_MONSTERS_52601_NAME": {
-    "en": "Blade Storm Sefia",
-    "es": "Ciclón de espadas Sefia",
-    "id": "Badai Pisau Sefia",
-    "pt": "Sefia Lâmina Tufão",
-    "th": "เบลดสตอร์มเซเฟีย",
-    "vi": "Bão kiếm Sefia"
-  },
-  "MST_MONSTERS_52602_NAME": {
-    "en": "Blade Storm Sefia",
-    "es": "Ciclón de espadas Sefia",
-    "id": "Badai Pisau Sefia",
-    "pt": "Sefia Lâmina Tufão",
-    "th": "เบลดสตอร์มเซเฟีย",
-    "vi": "Bão kiếm Sefia"
-  },
-  "MST_MONSTERS_52603_NAME": {
-    "en": "Blade Storm Sefia",
-    "es": "Blade Storm Sefia",
-    "id": "NA (ATM)",
-    "pt": "Blade Storm Sefia",
-    "th": "เบลด สตรอม เซเฟีย",
-    "vi": "Blade Storm Sefia"
-  },
-  "MST_MONSTERS_52604_NAME": {
-    "en": "Blade Storm Sefia",
-    "es": "Blade Storm Sefia",
-    "id": "NA (ATM)",
-    "pt": "Blade Storm Sefia",
-    "th": "เบลด สตรอม เซเฟีย",
-    "vi": "Blade Storm Sefia"
-  },
-  "MST_MONSTERS_52650_NAME": {
-    "en": "Blade Queen Sefia",
-    "es": "Reina de espadas Sefia",
-    "id": "Ratu Pisau Sefia",
-    "pt": "Sefia Rainha Lâmina",
-    "th": "เบลดควีนเซเฟีย",
-    "vi": "Nữ hoàng Sefia"
-  },
-  "MST_MONSTERS_52651_NAME": {
-    "en": "Blade Queen Sefia",
-    "es": "Reina de espadas Sefia",
-    "id": "Ratu Pisau Sefia",
-    "pt": "Sefia Rainha Lâmina",
-    "th": "เบลดควีนเซเฟีย",
-    "vi": "Nữ hoàng Sefia"
-  },
-  "MST_MONSTERS_52652_NAME": {
-    "en": "Blade Queen Sefia",
-    "es": "Reina de espadas Sefia",
-    "id": "Ratu Pisau Sefia",
-    "pt": "Sefia Rainha Lâmina",
-    "th": "เบลดควีนเซเฟีย",
-    "vi": "Nữ hoàng Sefia"
-  },
-  "MST_MONSTERS_52653_NAME": {
-    "en": "Blade Queen Sefia",
-    "es": "Reina de espadas Sefia",
-    "id": "Ratu Pisau Sefia",
-    "pt": "Sefia Rainha Lâmina",
-    "th": "เบลดควีนเซเฟีย",
-    "vi": "Nữ hoàng Sefia"
   }
 }

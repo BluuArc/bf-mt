@@ -1,4 +1,124 @@
 {
+  "MST_SKILLS_2122498_NAME": {
+    "en": "Lord Will is much stronger.",
+    "es": "Lord Will es mucho más fuerte.",
+    "id": "Lord Will Jauh lebih kuat.",
+    "pt": "Lorde Will é muito mais forte.",
+    "th": "ท่านวิลจะต้องแข็งแกร่งขึ้น",
+    "vi": "Lord Will is much stronger."
+  },
+  "MST_SKILLS_21225000_NAME": {
+    "en": "Fierce Brandish",
+    "es": "Fierce Brandish",
+    "id": "Ayunan Sengit",
+    "pt": "Fierce Brandish",
+    "th": "เฟียซ แบรนดิช",
+    "vi": "Fierce Brandish"
+  },
+  "MST_SKILLS_2122500_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122500_NAME": {
+    "en": "Glace Argento",
+    "es": "Glace Argento",
+    "id": "Glace Argento",
+    "pt": "Argento Gelado",
+    "th": "เกลซ อาเจนโต้",
+    "vi": "Glace Argento"
+  },
+  "MST_SKILLS_2122501_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122501_NAME": {
+    "en": "Heilblizen",
+    "es": "Heilblizen",
+    "id": "Heilblizen",
+    "pt": "Brilho da Cura",
+    "th": "เฮลไบเซน",
+    "vi": "Heilblizen"
+  },
+  "MST_SKILLS_2122502_DESCRIPTION": {
+    "en": "Water elemental attack against all enemies",
+    "es": "Ataque elemental acuático contra todos los enemigos",
+    "id": "Serangan berelemen Air melawan semua musuh",
+    "pt": "Ataque de Água em todos os inimigos",
+    "th": "โจมตีโต้ตอบศัตรูด้วยธาตุน้ำ",
+    "vi": "Water elemental attack against all enemies"
+  },
+  "MST_SKILLS_2122502_NAME": {
+    "en": "What's with those results?!",
+    "es": "¡¿Qué son esos resultados?!",
+    "id": "Ada apa dengan hasil itu?!",
+    "pt": "Qual é a desses resultados??",
+    "th": "ทำไมเป็นแบบนั้น?!",
+    "vi": "What's with those results?!"
+  },
+  "MST_SKILLS_2122503_DESCRIPTION": {
+    "en": "Water elemental attack against all enemies",
+    "es": "Ataque elemental acuático contra todos los enemigos",
+    "id": "Serangan berelemen Air melawan semua musuh",
+    "pt": "Ataque de Água em todos os inimigos",
+    "th": "โจมตีโต้ตอบศัตรูด้วยธาตุน้ำ",
+    "vi": "Water elemental attack against all enemies"
+  },
+  "MST_SKILLS_2122503_NAME": {
+    "en": "Why wasn't Claire ranked first?!",
+    "es": "¡¿Por qué Claire no clasificó primera?!",
+    "id": "Mengapa bukan Claire nomor satu?!",
+    "pt": "Por que a Claire não saiu em primeiro lugar??",
+    "th": "ทำไมแคลร์ไม่ได้อันดับที่หนึ่ง?!",
+    "vi": "Why wasn't Claire ranked first?!"
+  },
+  "MST_SKILLS_2122504_DESCRIPTION": {
+    "en": "Water elemental attack against all enemies",
+    "es": "Ataque elemental acuático contra todos los enemigos",
+    "id": "Serangan berelemen Air melawan semua musuh",
+    "pt": "Ataque de Água em todos os inimigos",
+    "th": "โจมตีโต้ตอบศัตรูด้วยธาตุน้ำ",
+    "vi": "Water elemental attack against all enemies"
+  },
+  "MST_SKILLS_2122504_NAME": {
+    "en": "I refuse to accept it!!",
+    "es": "¡Me niego a aceptarlo!",
+    "id": "Aku menolak menerimanya!!",
+    "pt": "Recuso-me a aceitar!!",
+    "th": "ข้าไม่ยอมรับหรอก!!",
+    "vi": "I refuse to accept it!!"
+  },
+  "MST_SKILLS_2122505_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122505_NAME": {
+    "en": "If you weren't here...",
+    "es": "Si no estuvieras aquí...",
+    "id": "Kalau kau tidak di sini...",
+    "pt": "Se você não estivesse aqui...",
+    "th": "ถ้าเจ้าไม่ได้อยู่ที่นี่...",
+    "vi": "If you weren't here..."
+  },
+  "MST_SKILLS_2122506_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
   "MST_SKILLS_2122506_NAME": {
     "en": "Claire would be number one for sure!",
     "es": "¡Claire sería la número uno! ¡No hay dudas!",
@@ -87815,6 +87935,38 @@
     "th": "Incandescent Downfall",
     "vi": "Incandescent Downfall"
   },
+  "MST_SKILLS_2810827_DESCRIPTION": {
+    "en": "19 combo Fire attack on all foes damage relative to remaining HP), 1 turn Atk, Def reduction infliction for 3 turns, raises normal hit amount for 3 turns, boosts Fire elemental damage for 3 turns, boosts Atk, Rec relative to Def for 3 turns",
+    "es": "19 combo Fire attack on all foes damage relative to remaining HP), 1 turn Atk, Def reduction infliction for 3 turns, raises normal hit amount for 3 turns, boosts Fire elemental damage for 3 turns, boosts Atk, Rec relative to Def for 3 turns",
+    "id": "19 combo Fire attack on all foes damage relative to remaining HP), 1 turn Atk, Def reduction infliction for 3 turns, raises normal hit amount for 3 turns, boosts Fire elemental damage for 3 turns, boosts Atk, Rec relative to Def for 3 turns",
+    "pt": "19 combo Fire attack on all foes damage relative to remaining HP), 1 turn Atk, Def reduction infliction for 3 turns, raises normal hit amount for 3 turns, boosts Fire elemental damage for 3 turns, boosts Atk, Rec relative to Def for 3 turns",
+    "th": "19 combo Fire attack on all foes damage relative to remaining HP), 1 turn Atk, Def reduction infliction for 3 turns, raises normal hit amount for 3 turns, boosts Fire elemental damage for 3 turns, boosts Atk, Rec relative to Def for 3 turns",
+    "vi": "19 combo Fire attack on all foes damage relative to remaining HP), 1 turn Atk, Def reduction infliction for 3 turns, raises normal hit amount for 3 turns, boosts Fire elemental damage for 3 turns, boosts Atk, Rec relative to Def for 3 turns"
+  },
+  "MST_SKILLS_2810827_NAME": {
+    "en": "Signal Sidewinder",
+    "es": "Signal Sidewinder",
+    "id": "Signal Sidewinder",
+    "pt": "Signal Sidewinder",
+    "th": "Signal Sidewinder",
+    "vi": "Signal Sidewinder"
+  },
+  "MST_SKILLS_2810828_DESCRIPTION": {
+    "en": "21 combo Fire attack on all foes damage relative to remaining HP), 1 turn Atk, Def reduction infliction for 3 turns, raises normal hit amount for 4 turns, boosts Fire elemental damage for 4 turns, boosts Atk, Rec relative to Def for 4 turns & 1 extra action for 1 turn",
+    "es": "21 combo Fire attack on all foes damage relative to remaining HP), 1 turn Atk, Def reduction infliction for 3 turns, raises normal hit amount for 4 turns, boosts Fire elemental damage for 4 turns, boosts Atk, Rec relative to Def for 4 turns & 1 extra action for 1 turn",
+    "id": "21 combo Fire attack on all foes damage relative to remaining HP), 1 turn Atk, Def reduction infliction for 3 turns, raises normal hit amount for 4 turns, boosts Fire elemental damage for 4 turns, boosts Atk, Rec relative to Def for 4 turns & 1 extra action for 1 turn",
+    "pt": "21 combo Fire attack on all foes damage relative to remaining HP), 1 turn Atk, Def reduction infliction for 3 turns, raises normal hit amount for 4 turns, boosts Fire elemental damage for 4 turns, boosts Atk, Rec relative to Def for 4 turns & 1 extra action for 1 turn",
+    "th": "21 combo Fire attack on all foes damage relative to remaining HP), 1 turn Atk, Def reduction infliction for 3 turns, raises normal hit amount for 4 turns, boosts Fire elemental damage for 4 turns, boosts Atk, Rec relative to Def for 4 turns & 1 extra action for 1 turn",
+    "vi": "21 combo Fire attack on all foes damage relative to remaining HP), 1 turn Atk, Def reduction infliction for 3 turns, raises normal hit amount for 4 turns, boosts Fire elemental damage for 4 turns, boosts Atk, Rec relative to Def for 4 turns & 1 extra action for 1 turn"
+  },
+  "MST_SKILLS_2810828_NAME": {
+    "en": "Ouroboric Futurism",
+    "es": "Ouroboric Futurism",
+    "id": "Ouroboric Futurism",
+    "pt": "Ouroboric Futurism",
+    "th": "Ouroboric Futurism",
+    "vi": "Ouroboric Futurism"
+  },
   "MST_SKILLS_2810837_DESCRIPTION": {
     "en": "20 combo Fire attack on all foes (damage relative to remaining HP), boosts spark damage for 3 turns, activates BB/SBB/UBB twice for 2 turns, boosts Atk, Def, Rec relative to max HP for 3 turns & boosts max HP",
     "es": "20 combo Fire attack on all foes (damage relative to remaining HP), boosts spark damage for 3 turns, activates BB/SBB/UBB twice for 2 turns, boosts Atk, Def, Rec relative to max HP for 3 turns & boosts max HP",
@@ -89976,12 +90128,12 @@
     "vi": "Gearblaster Crescendo Crash"
   },
   "MST_SKILLS_2840048_DESCRIPTION": {
-    "en": "30 combo massive Thunder attack on all foes, considerably boosts OD gauge, enormously boosts Atk relative to Rec for 3 turns, enormously boosts Spark damage for 3 turns & enormously boosts Thunder elemental damage for 3 turns",
-    "es": "30 combo massive Thunder attack on all foes, considerably boosts OD gauge, enormously boosts Atk relative to Rec for 3 turns, enormously boosts Spark damage for 3 turns & enormously boosts Thunder elemental damage for 3 turns",
-    "id": "30 kombo serangan Guntur masif ke semua musuh, lumayan menambah meteran OD, 3 giliran: ekstra jumbo kerusakan Percikan, kerusakan elemen Guntur, dan Serangan sesuai Pulih",
-    "pt": "30 combo massive Thunder attack on all foes, considerably boosts OD gauge, enormously boosts Atk relative to Rec for 3 turns, enormously boosts Spark damage for 3 turns & enormously boosts Thunder elemental damage for 3 turns",
-    "th": "30 คอมโบ โจมตีธาตุสายฟ้ารุนแรงมหาศาล ใส่ศัตรูทั้งหมด, เพิ่มค่าอย่างมากให้ เกจ OD, เพิ่มค่ามหาศาลให้ โจมตี สัมพันธ์กับ ฟื้นฟู นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ ความเสียหายสปาร์ค นาน 3 เทิร์น และ เพิ่มค่ามหาศาลให้ ความเสียหายธาตุ สายฟ้า นาน 3 เทิร์น",
-    "vi": "30 combo massive Thunder attack on all foes, considerably boosts OD gauge, enormously boosts Atk relative to Rec for 3 turns, enormously boosts Spark damage for 3 turns & enormously boosts Thunder elemental damage for 3 turns"
+    "en": "30 combo Thunder attack on all foes & fills OD gauge, boosts Atk relative to Rec for 3 turns & boosts spark damage for 3 turns, boosts Thunder elemental damage for 3 turns & 3 turns DoT infliction",
+    "es": "30 combo Thunder attack on all foes & fills OD gauge, boosts Atk relative to Rec for 3 turns & boosts spark damage for 3 turns, boosts Thunder elemental damage for 3 turns & 3 turns DoT infliction",
+    "id": "30 combo Thunder attack on all foes & fills OD gauge, boosts Atk relative to Rec for 3 turns & boosts spark damage for 3 turns, boosts Thunder elemental damage for 3 turns & 3 turns DoT infliction",
+    "pt": "30 combo Thunder attack on all foes & fills OD gauge, boosts Atk relative to Rec for 3 turns & boosts spark damage for 3 turns, boosts Thunder elemental damage for 3 turns & 3 turns DoT infliction",
+    "th": "30 combo Thunder attack on all foes & fills OD gauge, boosts Atk relative to Rec for 3 turns & boosts spark damage for 3 turns, boosts Thunder elemental damage for 3 turns & 3 turns DoT infliction",
+    "vi": "30 combo Thunder attack on all foes & fills OD gauge, boosts Atk relative to Rec for 3 turns & boosts spark damage for 3 turns, boosts Thunder elemental damage for 3 turns & 3 turns DoT infliction"
   },
   "MST_SKILLS_2840048_NAME": {
     "en": "Lightning Crush Detonation",
@@ -90446,93 +90598,5 @@
     "pt": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts own Spark damage for 5 turns & enormously boosts OD gauge",
     "th": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts own Spark damage for 5 turns & enormously boosts OD gauge",
     "vi": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts own Spark damage for 5 turns & enormously boosts OD gauge"
-  },
-  "MST_SKILLS_2840508_NAME": {
-    "en": "Universe-Devouring Bolt",
-    "es": "Universe-Devouring Bolt",
-    "id": "Petir Pemangsa Semesta",
-    "pt": "Universe-Devouring Bolt",
-    "th": "ยูนิเวิร์ส-ดิวาวริง โบลท์",
-    "vi": "Universe-Devouring Bolt"
-  },
-  "MST_SKILLS_2840547_DESCRIPTION": {
-    "en": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
-    "es": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
-    "id": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
-    "pt": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
-    "th": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
-    "vi": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns"
-  },
-  "MST_SKILLS_2840547_NAME": {
-    "en": "Lightning Beam Lv. 3",
-    "es": "Lightning Beam Lv. 3",
-    "id": "Lightning Beam Lv. 3",
-    "pt": "Lightning Beam Lv. 3",
-    "th": "Lightning Beam Lv. 3",
-    "vi": "Lightning Beam Lv. 3"
-  },
-  "MST_SKILLS_2840548_DESCRIPTION": {
-    "en": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
-    "es": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
-    "id": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
-    "pt": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
-    "th": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
-    "vi": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns"
-  },
-  "MST_SKILLS_2840548_NAME": {
-    "en": "Lightning Beam MAX",
-    "es": "Lightning Beam MAX",
-    "id": "Lightning Beam MAX",
-    "pt": "Lightning Beam MAX",
-    "th": "Lightning Beam MAX",
-    "vi": "Lightning Beam MAX"
-  },
-  "MST_SKILLS_2840557_DESCRIPTION": {
-    "en": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
-    "es": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
-    "id": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
-    "pt": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
-    "th": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
-    "vi": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns"
-  },
-  "MST_SKILLS_2840557_NAME": {
-    "en": "Thunderbird's Judgment",
-    "es": "Thunderbird's Judgment",
-    "id": "Thunderbird's Judgment",
-    "pt": "Thunderbird's Judgment",
-    "th": "Thunderbird's Judgment",
-    "vi": "Thunderbird's Judgment"
-  },
-  "MST_SKILLS_2840558_DESCRIPTION": {
-    "en": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
-    "es": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
-    "id": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
-    "pt": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
-    "th": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
-    "vi": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns"
-  },
-  "MST_SKILLS_2840558_NAME": {
-    "en": "Thunderbird's Wrath",
-    "es": "Thunderbird's Wrath",
-    "id": "Thunderbird's Wrath",
-    "pt": "Thunderbird's Wrath",
-    "th": "Thunderbird's Wrath",
-    "vi": "Thunderbird's Wrath"
-  },
-  "MST_SKILLS_2840567_DESCRIPTION": {
-    "en": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
-    "es": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
-    "id": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
-    "pt": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
-    "th": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
-    "vi": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns"
-  },
-  "MST_SKILLS_2840567_NAME": {
-    "en": "Xian-qi Formation",
-    "es": "Xian-qi Formation",
-    "id": "Xian-qi Formation",
-    "pt": "Xian-qi Formation",
-    "th": "Xian-qi Formation",
-    "vi": "Xian-qi Formation"
   }
 }
