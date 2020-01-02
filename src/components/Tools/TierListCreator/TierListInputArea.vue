@@ -91,6 +91,51 @@
             </v-btn>
           </v-flex>
         </v-layout>
+        <v-layout column align-baseline class="px-2">
+          <v-layout align-baseline style="width: 100%">
+            <label :class="{
+              'v-label': true,
+              'theme--dark': !$store.state.settings.lightMode,
+              'theme--light': $store.state.settings.lightMode
+            }">Unit Numbers</label>
+            <!-- <v-switch class="px-2 mt-0" hide-details v-model="showUnitNumbers"/> -->
+            <v-select
+              class="px-2"
+              :items="unitNumberPositionKeys"
+              :value="svgConfig.unitNumberPosition"
+            />
+          </v-layout>
+          <v-layout row wrap align-baseline style="width: 100%" class="px-2">
+            <v-flex>
+              <label>
+                Text Fill Color
+                <input
+                  type="color"
+                  :disabled="!showUnitNumbers"
+                />
+              </label>
+            </v-flex>
+            <v-flex>
+              <label>
+                Text Stroke Color
+                <input
+                  type="color"
+                  :disabled="!showUnitNumbers"
+                />
+              </label>
+            </v-flex>
+            <v-flex>
+              <v-text-field
+                class="px-1"
+                label="Font Size"
+                :value="16"
+                :disabled="!showUnitNumbers"
+                hint="Default: 16"
+                persistent-hint
+              />
+            </v-flex>
+          </v-layout>
+        </v-layout>
         <v-layout wrap align-baseline class="px-2">
           <v-btn flat @click="categoryWidth = categoryWidth - 10">
             -10
@@ -263,6 +308,7 @@ export default {
   computed: {
     tabs: () => Object.freeze(['General', 'Entries', 'Export', 'Links'].map(name => ({ name, slot: name.toLowerCase() }))),
     titleKeys: () => Object.freeze(['titleLeft', 'titleMiddle', 'titleRight']),
+    unitNumberPositionKeys: () => Object.freeze(['None', 'Top', 'Middle', 'Bottom']),
     currentConfigCode () {
       const { categories, entries, ...config } = this.svgConfig;
       return generateTierListCode(categories, entries, config);
@@ -279,6 +325,9 @@ export default {
       return generateTierListCode(getDefaultCategories());
     },
     IMAGE_TYPES: () => IMAGE_TYPES,
+    showUnitNumbers () {
+      return this.svgConfig && this.svgConfig.unitNumberPosition !== 'None';
+    },
   },
   data () {
     return {
@@ -288,6 +337,7 @@ export default {
         entries: [],
         titleMiddle: 'My Tier List',
         footerLeft: `Created ${new Date().toDateString()}`,
+        unitNumberPosition: 'None',
       },
       transformedSvgConfigPromise: Promise.resolve({}),
       generateImageLinkPromise: Promise.resolve(''),
