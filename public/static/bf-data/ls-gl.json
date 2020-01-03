@@ -35456,7 +35456,7 @@
     ]
   },
   "820357": {
-    "desc": "MST_LEADERSKILLS_820357_DESCRIPTION",
+    "desc": "80% boost to Atk, Def and max HP of Water types, 5% damage reduction from normal attacks, reduces BB gauge required for BB & damage taken greatly boosts BB gauge",
     "effects": [
       {
         "atk% buff": 80,
@@ -38653,6 +38653,40 @@
     "name": "Summoner of Old: Emerald",
     "associated_units": [
       "830808"
+    ]
+  },
+  "830818": {
+    "desc": "150% Atk, Def, max HP, 30% reduction to BB activation cost, spark damage fills BB gauge, 15% DoT reduction & 30% OD gauge fill rate",
+    "effects": [
+      {
+        "atk% buff": 150,
+        "def% buff": 150,
+        "hp% buff": 150,
+        "passive id": "1"
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 30
+      },
+      {
+        "bc fill on spark high": 4,
+        "bc fill on spark low": 3,
+        "bc fill on spark%": 100,
+        "passive id": "47"
+      },
+      {
+        "unknown passive id": "127",
+        "unknown passive params": "100,15"
+      },
+      {
+        "od fill rate%": 30,
+        "passive id": "70"
+      }
+    ],
+    "id": "830818",
+    "name": "Spenta Resplendent",
+    "associated_units": [
+      "830818"
     ]
   },
   "830838": {
@@ -44275,6 +44309,46 @@
     "name": "Young Prodigy",
     "associated_units": [
       "860808"
+    ]
+  },
+  "860818": {
+    "desc": "140% all parameters, spark damage restores HP, 250% Dark elemental damage, fills BB gauge each turn & 50% BC, HC, Zel, Karma, 9% Item drop rates",
+    "effects": [
+      {
+        "atk% buff": 140,
+        "def% buff": 140,
+        "hp% buff": 140,
+        "passive id": "1",
+        "rec% buff": 140
+      },
+      {
+        "heal on spark high": 600,
+        "heal on spark low": 500,
+        "heal on spark%": 100,
+        "passive id": "101"
+      },
+      {
+        "dark units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 250,
+        "passive id": "50"
+      },
+      {
+        "bc fill per turn": 10,
+        "passive id": "9"
+      },
+      {
+        "bc drop rate% buff": 50,
+        "hc drop rate% buff": 50,
+        "item drop rate% buff": 9,
+        "karma drop rate% buff": 50,
+        "passive id": "19",
+        "zel drop rate% buff": 50
+      }
+    ],
+    "id": "860818",
+    "name": "Manah Ascendant",
+    "associated_units": [
+      "860818"
     ]
   },
   "860838": {

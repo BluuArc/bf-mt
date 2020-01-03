@@ -25127,6 +25127,60 @@
       "830808"
     ]
   },
+  "830818": {
+    "desc": "25% spark damage and fills BB gauge each turn for all allies, 30% all parameters, 50% DoT reduction & add to BB (adds Earth shield for 3 turns)",
+    "effects": [
+      {
+        "conditions": [],
+        "damage% for spark": 25,
+        "passive id": "31",
+        "passive target": "party"
+      },
+      {
+        "bc fill per turn": 5,
+        "conditions": [],
+        "passive id": "9",
+        "passive target": "party"
+      },
+      {
+        "atk% buff": 30,
+        "conditions": [],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      },
+      {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "127",
+        "unknown passive params": "100,50"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10017",
+            "unknown proc param": "3,6000,6000,3,0"
+          }
+        ]
+      }
+    ],
+    "id": "830818",
+    "name": "Winter's Hearth",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "830818"
+    ]
+  },
   "830838": {
     "desc": "10% Zel, 25% Karma drop rates for all allies and 40% all parameters when Stroke of Luck is equipped, 15% Atk, Def each turn (4 times) for all allies, probable damage reduction to 1 & 100% critical and elemental damage reduction",
     "effects": [
@@ -34236,6 +34290,62 @@
     "target": "self",
     "associated_units": [
       "860808"
+    ]
+  },
+  "860818": {
+    "desc": "25% spark damage and adds ignore Def to attack for all allies, 0-100% Atk, Def, Rec relative to remaining HP, 100% spark damage & negates all status ailments and Atk, Def, Rec reduction",
+    "effects": [
+      {
+        "conditions": [],
+        "damage% for spark": 25,
+        "passive id": "31",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "ignore def%": 100,
+        "passive id": "29",
+        "passive target": "party"
+      },
+      {
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 100,
+        "buff proportional to hp": "remaining",
+        "conditions": [],
+        "def% base buff": 0,
+        "def% extra buff based on hp": 100,
+        "passive id": "46",
+        "passive target": "self",
+        "rec% base buff": 0,
+        "rec% extra buff based on hp": 100
+      },
+      {
+        "conditions": [],
+        "damage% for spark": 100,
+        "passive id": "31",
+        "passive target": "self"
+      },
+      {
+        "atk down resist%": 100,
+        "conditions": [],
+        "curse resist%": 100,
+        "def down resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "passive target": "self",
+        "poison resist%": 100,
+        "rec down resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      }
+    ],
+    "id": "860818",
+    "name": "Prowling Hunter",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "860818"
     ]
   },
   "860838": {
@@ -46283,6 +46393,57 @@
     "id": "8850006",
     "name": "Way of the Free",
     "rarity": "6",
+    "target": "self"
+  },
+  "8900001": {
+    "desc": "35% all parameters and 30% critical rate (Fire, Water), 20% damage reduction when guarding, 5% damage reduction, 75% Fire, Water elemental damage & 100% BB Atk for all allies",
+    "effects": [
+      {
+        "atk% buff": 35,
+        "conditions": [],
+        "crit% buff": 30,
+        "def% buff": 35,
+        "elements buffed": [
+          "fire",
+          "water"
+        ],
+        "hp% buff": 35,
+        "passive id": "2",
+        "passive target": "self",
+        "rec% buff": 35
+      },
+      {
+        "conditions": [],
+        "guard increase mitigation%": 20,
+        "passive id": "58",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "dmg% mitigation": 5,
+        "passive id": "8",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "elemental weakness multiplier%": 75,
+        "fire units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "passive target": "party",
+        "water units do extra elemental weakness dmg": true
+      },
+      {
+        "bb atk% buff": 100,
+        "conditions": [],
+        "passive id": "64",
+        "passive target": "party",
+        "sbb atk% buff": 100,
+        "ubb atk% buff": 100
+      }
+    ],
+    "id": "8900001",
+    "name": "Hydrothermal Mark",
+    "rarity": "7",
     "target": "self"
   },
   "8910287": {

@@ -1,20 +1,4 @@
 {
-  "MST_SKILLS_2122498_NAME": {
-    "en": "Lord Will is much stronger.",
-    "es": "Lord Will es mucho más fuerte.",
-    "id": "Lord Will Jauh lebih kuat.",
-    "pt": "Lorde Will é muito mais forte.",
-    "th": "ท่านวิลจะต้องแข็งแกร่งขึ้น",
-    "vi": "Lord Will is much stronger."
-  },
-  "MST_SKILLS_21225000_NAME": {
-    "en": "Fierce Brandish",
-    "es": "Fierce Brandish",
-    "id": "Ayunan Sengit",
-    "pt": "Fierce Brandish",
-    "th": "เฟียซ แบรนดิช",
-    "vi": "Fierce Brandish"
-  },
   "MST_SKILLS_2122500_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -90063,6 +90047,22 @@
     "th": "Emerald Blade: High Pride",
     "vi": "Emerald Blade: High Pride"
   },
+  "MST_SKILLS_2830818_DESCRIPTION": {
+    "en": "23 combo Earth attack on all foes (damage relative to remaining HP), evasion for 3 turns, probable spark critical for 4 turns, boosts spark damage for 4 turns, 100% DoT reduction for 4 turns & fills OD gauge",
+    "es": "23 combo Earth attack on all foes (damage relative to remaining HP), evasion for 3 turns, probable spark critical for 4 turns, boosts spark damage for 4 turns, 100% DoT reduction for 4 turns & fills OD gauge",
+    "id": "23 combo Earth attack on all foes (damage relative to remaining HP), evasion for 3 turns, probable spark critical for 4 turns, boosts spark damage for 4 turns, 100% DoT reduction for 4 turns & fills OD gauge",
+    "pt": "23 combo Earth attack on all foes (damage relative to remaining HP), evasion for 3 turns, probable spark critical for 4 turns, boosts spark damage for 4 turns, 100% DoT reduction for 4 turns & fills OD gauge",
+    "th": "23 combo Earth attack on all foes (damage relative to remaining HP), evasion for 3 turns, probable spark critical for 4 turns, boosts spark damage for 4 turns, 100% DoT reduction for 4 turns & fills OD gauge",
+    "vi": "23 combo Earth attack on all foes (damage relative to remaining HP), evasion for 3 turns, probable spark critical for 4 turns, boosts spark damage for 4 turns, 100% DoT reduction for 4 turns & fills OD gauge"
+  },
+  "MST_SKILLS_2830818_NAME": {
+    "en": "Urvazishta",
+    "es": "Urvazishta",
+    "id": "Urvazishta",
+    "pt": "Urvazishta",
+    "th": "Urvazishta",
+    "vi": "Urvazishta"
+  },
   "MST_SKILLS_2830838_DESCRIPTION": {
     "en": "30 combo Earth attack on all foes (damage relative to remaining HP), adds Earth shield for 3 turns, evasion for 2 turns, boosts Atk, Def relative to Rec for 3 turns, probable KO resistance & fully restores HP for 3 turns",
     "es": "30 combo Earth attack on all foes (damage relative to remaining HP), adds Earth shield for 3 turns, evasion for 2 turns, boosts Atk, Def relative to Rec for 3 turns, probable KO resistance & fully restores HP for 3 turns",
@@ -90598,5 +90598,93 @@
     "pt": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts own Spark damage for 5 turns & enormously boosts OD gauge",
     "th": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts own Spark damage for 5 turns & enormously boosts OD gauge",
     "vi": "Massive Thunder attack on all foes (damage relative to remaining HP), massive Thunder attack on single foe, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts own Atk, Def, Rec for 5 turns, enormously boosts own Spark damage for 5 turns & enormously boosts OD gauge"
+  },
+  "MST_SKILLS_2840508_NAME": {
+    "en": "Universe-Devouring Bolt",
+    "es": "Universe-Devouring Bolt",
+    "id": "Petir Pemangsa Semesta",
+    "pt": "Universe-Devouring Bolt",
+    "th": "ยูนิเวิร์ส-ดิวาวริง โบลท์",
+    "vi": "Universe-Devouring Bolt"
+  },
+  "MST_SKILLS_2840547_DESCRIPTION": {
+    "en": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
+    "es": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
+    "id": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
+    "pt": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
+    "th": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
+    "vi": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns"
+  },
+  "MST_SKILLS_2840547_NAME": {
+    "en": "Lightning Beam Lv. 3",
+    "es": "Lightning Beam Lv. 3",
+    "id": "Lightning Beam Lv. 3",
+    "pt": "Lightning Beam Lv. 3",
+    "th": "Lightning Beam Lv. 3",
+    "vi": "Lightning Beam Lv. 3"
+  },
+  "MST_SKILLS_2840548_DESCRIPTION": {
+    "en": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
+    "es": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
+    "id": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
+    "pt": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
+    "th": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
+    "vi": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns"
+  },
+  "MST_SKILLS_2840548_NAME": {
+    "en": "Lightning Beam MAX",
+    "es": "Lightning Beam MAX",
+    "id": "Lightning Beam MAX",
+    "pt": "Lightning Beam MAX",
+    "th": "Lightning Beam MAX",
+    "vi": "Lightning Beam MAX"
+  },
+  "MST_SKILLS_2840557_DESCRIPTION": {
+    "en": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
+    "es": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
+    "id": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
+    "pt": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
+    "th": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
+    "vi": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns"
+  },
+  "MST_SKILLS_2840557_NAME": {
+    "en": "Thunderbird's Judgment",
+    "es": "Thunderbird's Judgment",
+    "id": "Thunderbird's Judgment",
+    "pt": "Thunderbird's Judgment",
+    "th": "Thunderbird's Judgment",
+    "vi": "Thunderbird's Judgment"
+  },
+  "MST_SKILLS_2840558_DESCRIPTION": {
+    "en": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
+    "es": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
+    "id": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
+    "pt": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
+    "th": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
+    "vi": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns"
+  },
+  "MST_SKILLS_2840558_NAME": {
+    "en": "Thunderbird's Wrath",
+    "es": "Thunderbird's Wrath",
+    "id": "Thunderbird's Wrath",
+    "pt": "Thunderbird's Wrath",
+    "th": "Thunderbird's Wrath",
+    "vi": "Thunderbird's Wrath"
+  },
+  "MST_SKILLS_2840567_DESCRIPTION": {
+    "en": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
+    "es": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
+    "id": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
+    "pt": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
+    "th": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
+    "vi": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns"
+  },
+  "MST_SKILLS_2840567_NAME": {
+    "en": "Xian-qi Formation",
+    "es": "Xian-qi Formation",
+    "id": "Xian-qi Formation",
+    "pt": "Xian-qi Formation",
+    "th": "Xian-qi Formation",
+    "vi": "Xian-qi Formation"
   }
 }

@@ -1,4 +1,180 @@
 {
+  "MST_LEADERSKILLS_5201_DESCRIPTION": {
+    "en": "50% boost to Atk when BB gauge is full",
+    "es": "50% de aumento en atq cuando el indicador BB está lleno.",
+    "id": "50% kenaikan Serangan saat meteran BB penuh",
+    "pt": "Reforça de 50% no ATQ quando a barra BB está cheia",
+    "th": "50% เพิ่มค่า โจมตี เมื่อเกจ BB เต็ม",
+    "vi": "Tăng 50% sức Tấn công khi vạch BB đầy"
+  },
+  "MST_LEADERSKILLS_5201_NAME": {
+    "en": "Magic Flood",
+    "es": "Inundación de magia",
+    "id": "Banjir Sihir",
+    "pt": "Inundação Mágica",
+    "th": "แมจิคฟลัด",
+    "vi": "Lũ lụt ma thuật"
+  },
+  "MST_LEADERSKILLS_520_DESCRIPTION": {
+    "en": "25% boost to Atk for all Units & 15% reduction in damage from Earth Types",
+    "es": "Aumenta un 25% el ataque de todas las unidades y reduce un 15% el daño de las unidades térreas",
+    "id": "Menambah 25% Serangan untuk semua unit & mengurangi 15% kerusakan dari Tipe Bumi",
+    "pt": "Aumento de 25% no ATQ de todas as unidades e redução de 15% no dano do tipo terra",
+    "th": "25% เพิ่มค่า โจมตี ให้กับทุกยูนิต และ 15% ลดความเสียหายจากธาตุดิน",
+    "vi": "Tăng 25% sức mạnh Tấn công của tất cả các Quái ánh sáng và Bóng tối & giảm 15% thiệt hại do hệ Quang và hệ Bóng tối"
+  },
+  "MST_LEADERSKILLS_520_NAME": {
+    "en": "Authority of the Earth God",
+    "es": "Autoridad del Dios térreo",
+    "id": "Otoritas Dewa Bumi",
+    "pt": "Autoridade do Deus da Terra",
+    "th": "ออเธอร์ริตี้ออฟเดอะเอิร์ธก็อด",
+    "vi": "Quyền năng của Thổ thần"
+  },
+  "MST_LEADERSKILLS_521_DESCRIPTION": {
+    "en": "25% boost to Atk for all Units & 15% reduction in damage from Thunder Types",
+    "es": "Aumenta un 25% el ataque de todas las unidades y reduce un 15% el daño de las unidades atronadoras",
+    "id": "Menambah 25% Serangan untuk semua unit & mengurangi 15% kerusakan dari Tipe Guntur",
+    "pt": "Aumento de 25% no ATQ de todas as unidades e redução de 15% no dano do tipo trovão",
+    "th": "25% เพิ่มค่า โจมตี ให้กับทุกยูนิต และ 15% ลดความเสียหายจากธาตุสายฟ้า",
+    "vi": "Tăng 25% sức mạnh Tấn công cho tất cả các Quái & giảm 15% thiệt hại do các loại hệ Lôi"
+  },
+  "MST_LEADERSKILLS_521_NAME": {
+    "en": "Authority of the Thunder God",
+    "es": "Autoridad del Dios atronador",
+    "id": "Otoritas Dewa Guntur",
+    "pt": "Autoridade do Deus do Trovão",
+    "th": "ออเธอร์ริตี้ออฟเดอะธันเดอร์ก็อด",
+    "vi": "Quyền năng của Lôi thần"
+  },
+  "MST_LEADERSKILLS_522_DESCRIPTION": {
+    "en": "25% boost to Atk for all Units & 15% reduction in damage from Light Types",
+    "es": "Aumenta un 25% el ataque de todas las unidades y reduce un 15% el daño de las unidades lumínicas",
+    "id": "Menambah 25% Serangan untuk semua unit & mengurangi 15% kerusakan dari Tipe Terang",
+    "pt": "Aumento de 25% no ATQ de todas as unidades e redução de 15% no dano do tipo luz",
+    "th": "25% เพิ่มค่า โจมตี ให้กับทุกยูนิต และ 15% ลดความเสียหายจากธาตุแสง",
+    "vi": "Tăng 25% sức mạnh Tấn công cho tất cả các Quái & giảm 15% thiệt hại do các loại hệ Quang"
+  },
+  "MST_LEADERSKILLS_522_NAME": {
+    "en": "Authority of the Light God",
+    "es": "Autoridad del Dios lumínico",
+    "id": "Otoritas Dewa Terang",
+    "pt": "Autoridade do Deus da Luz",
+    "th": "ออเธอร์ริตี้ออฟเดอะไลท์ก็อด",
+    "vi": "Quyền năng của Quang thần"
+  },
+  "MST_LEADERSKILLS_523_DESCRIPTION": {
+    "en": "25% boost to Atk for all Units & 15% reduction in damage from Dark Types",
+    "es": "Aumenta un 25% el ataque de todas las unidades y reduce un 15% el daño de las unidades oscuras",
+    "id": "Menambah 25% Serangan untuk semua unit & mengurangi 15% kerusakan dari Tipe Gelap",
+    "pt": "Aumento de 25% no ATQ de todas as unidades e redução de 15% no dano do tipo sombra",
+    "th": "25% เพิ่มค่า โจมตี ให้กับทุกยูนิต และ 15% ลดความเสียหายจากธาตุมืด",
+    "vi": "Tăng 25% sức mạnh Tấn công cho tất cả các Quái & giảm 15% thiệt hại do các loại hệ Bóng tối"
+  },
+  "MST_LEADERSKILLS_523_NAME": {
+    "en": "Authority of the Dark God",
+    "es": "Autoridad del Dios oscuro",
+    "id": "Otoritas Dewa Gelap",
+    "pt": "Autoridade do Deus da Sombra",
+    "th": "ออเธอร์ริตี้ออฟเดอะดาร์คก็อด",
+    "vi": "Quyền năng của Hắc thần"
+  },
+  "MST_LEADERSKILLS_524_DESCRIPTION": {
+    "en": "15% reduction in damage from Fire types & 20% boost to Atk and max HP for all Units",
+    "es": "Aumenta un 20% el ataque y los PS de todas las unidades y reduce un 15% el daño de las unidades ígneas",
+    "id": "Mengurangi kerusakan dari tipe Api 15% & menambah 20% Serangan dan maks HP untuk semua Unit",
+    "pt": "Redução de 15% no dano do tipo Fogo e reforço de 20% no ATQ e no HP máx. de unidades",
+    "th": "15% ลดค่าความเสียหายจาก ยูนิตไฟ และ 20% เพิ่มค่า โจมตี กับ HP สูงสุด สำหรับทุกยูนิต",
+    "vi": "Giảm 15% thiệt hại do các loại hệ Hỏa & tăng 20% sức mạnh Tấn công và Thể lực tối đa cho tất cả các Quái"
+  },
+  "MST_LEADERSKILLS_524_NAME": {
+    "en": "Fire God Barrier",
+    "es": "Barrera del dios ígneo",
+    "id": "Penghalang Dewa Api",
+    "pt": "Barreira do Deus do Fogo",
+    "th": "ไฟเออร์ ก็อด แบร์ริเออร์",
+    "vi": "Hỏa Thần Barrier"
+  },
+  "MST_LEADERSKILLS_525_DESCRIPTION": {
+    "en": "15% reduction in damage from Water types & 20% boost to Def and max HP for all Units",
+    "es": "Aumenta un 20% la defensa y los PS de todas las unidades, y reduce un 15% el daño de las unidades acuáticas",
+    "id": "Mengurangi kerusakan dari tipe Air 15% & menambah 20% Pertahanan dan maks HP untuk semua Unit",
+    "pt": "Redução de 15% de redução no dano de tipo Água e 20% de reforço na defesa e HP máx. de todas as unidades",
+    "th": "15% ลดค่าความเสียหายจาก ยูนิตน้ำ และ 20% เพิ่มค่า ป้องกัน กับ HP สูงสุด สำหรับทุกยูนิต",
+    "vi": "Giảm 15% thiệt hại do hệ Thủy & tăng 20% Phòng thủ & Thể lực tối đa cho tất cả các Quái"
+  },
+  "MST_LEADERSKILLS_525_NAME": {
+    "en": "Water God Barrier",
+    "es": "Barrera del dios acuático",
+    "id": "Penghalang Dewa Air",
+    "pt": "Barreira do Deus da Água",
+    "th": "วอเตอร์ ก็อด แบร์ริเออร์",
+    "vi": "Rào cản thần nước"
+  },
+  "MST_LEADERSKILLS_526_DESCRIPTION": {
+    "en": "15% reduction in damage from Earth types & probable boost of BB gauge and or HP recovery when attacked",
+    "es": "Reduce un 15 % el daño recibido de las unidades térreas y puede aumentar el indicador BB o recuperar PS al recibir un ataque",
+    "id": "Mengurangi kerusakan dari tipe Bumi 15% & kemungkinan menambah meteran BB dan/atau pemulihan HP saat diserang",
+    "pt": "15% de redução no dano de tipo Terra e provável reforço na barra BB e/ou recuperação de HP ao ser atacado(a)",
+    "th": "15% ลดค่าความเสียหายจาก ยูนิตดิน และ อาจเติมเกจ BB และ หรือ ฟื้นฟู HP เมื่อถูกโจมตี",
+    "vi": "Giảm 15% thiệt hại do hệ Thổ & có thể tăng vạch Tăng cường can đảm và/hoặc phục hồi Thể lực khi bị tấn công"
+  },
+  "MST_LEADERSKILLS_526_NAME": {
+    "en": "Earth God Barrier",
+    "es": "Barrera del dios térreo",
+    "id": "Penghalang Dewa Bumi",
+    "pt": "Barreira do Deus da Terra",
+    "th": "เอิร์ธ ก็อด แบร์ริเออร์",
+    "vi": "Rào cản thần đất"
+  },
+  "MST_LEADERSKILLS_527_DESCRIPTION": {
+    "en": "15% reduction in damage from Thunder types & great boost in BB gauge produced during Spark",
+    "es": "Reduce un 15 % el daño infligido a las unidades de trueno y aumenta notablemente el BB creado durante Chispas",
+    "id": "Mengurangi kerusakan dari tipe Guntur 15% & amat menambah meteran BB yang dihasilkan selama Percikan",
+    "pt": "15% de redução no dano de tipo Trovão e grande reforço na barra BB produzida durante a Fagulha",
+    "th": "15% ลดค่าความเสียหายจาก ยูนิตสายฟ้า และ เพิ่มการผลิตเกจ BB อย่างมาก ระหว่างสปาร์ค",
+    "vi": "Giảm 15% thiệt hại do hệ Lôi & tăng rất nhiều vạch Tăng cường can đảm được tạo ra trong Spark"
+  },
+  "MST_LEADERSKILLS_527_NAME": {
+    "en": "Thunder God Barrier",
+    "es": "Barrera del dios atronador",
+    "id": "Penghalang Dewa Guntur",
+    "pt": "Barreira do Deus do Trovão",
+    "th": "ธันเดอร์ ก็อด แบร์ริเออร์",
+    "vi": "Rào cản thần sấm"
+  },
+  "MST_LEADERSKILLS_528_DESCRIPTION": {
+    "en": "15% reduction in damage from Light types & BB gauge fills hugely after each turn",
+    "es": "Reduce un 15 % el daño recibido de las unidades lumínicas y el indicador BB se llena notablemente tras cada turno",
+    "id": "Mengurangi kerusakan dari tipe Terang 15% & meteran BB amat terisi seusai tiap giliran",
+    "pt": "15% de redução no dano de tipo Luz e barra BB enche muito a cada turno",
+    "th": "15% ลดค่าความเสียหายจาก ยูนิตแสง และ เกจ BB เติมอย่างสูงในแต่ละเทิร์น",
+    "vi": "Giảm 15% thiệt hại do hệ Quang & vạch Tăng cường can đảm nạp rất nhiều sau mỗi lượt"
+  },
+  "MST_LEADERSKILLS_528_NAME": {
+    "en": "Light God Barrier",
+    "es": "Barrera del dios lumínico",
+    "id": "Penghalang Dewa Terang",
+    "pt": "Barreira do Deus da Luz",
+    "th": "ไลท์ ก็อด แบร์ริเออร์",
+    "vi": "Rào cản thần ánh sáng"
+  },
+  "MST_LEADERSKILLS_529_DESCRIPTION": {
+    "en": "15% reduction in damage from Dark types & 25% boost to Atk for all Units",
+    "es": "Aumenta un 25% el ataque de todas las unidades y reduce un 15% el daño de las unidades oscuras",
+    "id": "Mengurangi kerusakan dari tipe Gelap 15% & menambah 20% Serangan untuk semua Unit",
+    "pt": "15% de redução no dano de tipo Sombra e 25% de reforço no ATQ de todas as unidades",
+    "th": "15% ลดค่าความเสียหายจาก ยูนิตมืด และ 25% เพิ่มค่า โจมตี สำหรับทุกยูนิต",
+    "vi": "Giảm 15% thiệt hại do hệ Bóng tối & tăng 25% sức mạnh Tấn công cho tất cả các Quái"
+  },
+  "MST_LEADERSKILLS_529_NAME": {
+    "en": "Dark God Barrier",
+    "es": "Barrera del dios oscuro",
+    "id": "Penghalang Dewa Gelap",
+    "pt": "Barreira do Deus das Sombras",
+    "th": "ดาร์ค ก็อด แบร์ริเออร์",
+    "vi": "Rào cản thần bóng tối"
+  },
   "MST_LEADERSKILLS_5300_DESCRIPTION": {
     "en": "Large boost in critical hit damage & large boost in damage dealt to weak elements",
     "es": "Gran aumento al daño por golpe crítico y al daño infligido a los enemigos debilitados.",
@@ -9223,6 +9399,14 @@
     "th": "Frigid Supremacy",
     "vi": "Frigid Supremacy"
   },
+  "MST_LEADERSKILLS_820357_DESCRIPTION": {
+    "en": "80% boost to Atk, Def and max HP of Water types, 5% damage reduction from normal attacks, reduces BB gauge required for BB & damage taken greatly boosts BB gauge",
+    "es": "80% boost to Atk, Def and max HP of Water types, 5% damage reduction from normal attacks, reduces BB gauge required for BB & damage taken greatly boosts BB gauge",
+    "id": "80% boost to Atk, Def and max HP of Water types, 5% damage reduction from normal attacks, reduces BB gauge required for BB & damage taken greatly boosts BB gauge",
+    "pt": "80% boost to Atk, Def and max HP of Water types, 5% damage reduction from normal attacks, reduces BB gauge required for BB & damage taken greatly boosts BB gauge",
+    "th": "80% boost to Atk, Def and max HP of Water types, 5% damage reduction from normal attacks, reduces BB gauge required for BB & damage taken greatly boosts BB gauge",
+    "vi": "80% boost to Atk, Def and max HP of Water types, 5% damage reduction from normal attacks, reduces BB gauge required for BB & damage taken greatly boosts BB gauge"
+  },
   "MST_LEADERSKILLS_820357_NAME": {
     "en": "Rising River Current",
     "es": "Rising River Current",
@@ -10606,6 +10790,22 @@
     "pt": "Summoner of Old: Emerald",
     "th": "Summoner of Old: Emerald",
     "vi": "Summoner of Old: Emerald"
+  },
+  "MST_LEADERSKILLS_830818_DESCRIPTION": {
+    "en": "150% Atk, Def, max HP, 30% reduction to BB activation cost, spark damage fills BB gauge, 15% DoT reduction & 30% OD gauge fill rate",
+    "es": "150% Atk, Def, max HP, 30% reduction to BB activation cost, spark damage fills BB gauge, 15% DoT reduction & 30% OD gauge fill rate",
+    "id": "150% Atk, Def, max HP, 30% reduction to BB activation cost, spark damage fills BB gauge, 15% DoT reduction & 30% OD gauge fill rate",
+    "pt": "150% Atk, Def, max HP, 30% reduction to BB activation cost, spark damage fills BB gauge, 15% DoT reduction & 30% OD gauge fill rate",
+    "th": "150% Atk, Def, max HP, 30% reduction to BB activation cost, spark damage fills BB gauge, 15% DoT reduction & 30% OD gauge fill rate",
+    "vi": "150% Atk, Def, max HP, 30% reduction to BB activation cost, spark damage fills BB gauge, 15% DoT reduction & 30% OD gauge fill rate"
+  },
+  "MST_LEADERSKILLS_830818_NAME": {
+    "en": "Spenta Resplendent",
+    "es": "Spenta Resplendent",
+    "id": "Spenta Resplendent",
+    "pt": "Spenta Resplendent",
+    "th": "Spenta Resplendent",
+    "vi": "Spenta Resplendent"
   },
   "MST_LEADERSKILLS_830838_DESCRIPTION": {
     "en": "120% Atk, max HP, 100% Def, Rec, negates all status ailments and Atk, Def, Rec reduction, spark damage fills BB gauge, 30% OD gauge fill rate & 40% BC, HC, 5% Item, 20% Zel, 30% Karma drop rates",
@@ -13134,6 +13334,22 @@
     "pt": "Young Prodigy",
     "th": "Young Prodigy",
     "vi": "Young Prodigy"
+  },
+  "MST_LEADERSKILLS_860818_DESCRIPTION": {
+    "en": "140% all parameters, spark damage restores HP, 250% Dark elemental damage, fills BB gauge each turn & 50% BC, HC, Zel, Karma, 9% Item drop rates",
+    "es": "140% all parameters, spark damage restores HP, 250% Dark elemental damage, fills BB gauge each turn & 50% BC, HC, Zel, Karma, 9% Item drop rates",
+    "id": "140% all parameters, spark damage restores HP, 250% Dark elemental damage, fills BB gauge each turn & 50% BC, HC, Zel, Karma, 9% Item drop rates",
+    "pt": "140% all parameters, spark damage restores HP, 250% Dark elemental damage, fills BB gauge each turn & 50% BC, HC, Zel, Karma, 9% Item drop rates",
+    "th": "140% all parameters, spark damage restores HP, 250% Dark elemental damage, fills BB gauge each turn & 50% BC, HC, Zel, Karma, 9% Item drop rates",
+    "vi": "140% all parameters, spark damage restores HP, 250% Dark elemental damage, fills BB gauge each turn & 50% BC, HC, Zel, Karma, 9% Item drop rates"
+  },
+  "MST_LEADERSKILLS_860818_NAME": {
+    "en": "Manah Ascendant",
+    "es": "Manah Ascendant",
+    "id": "Manah Ascendant",
+    "pt": "Manah Ascendant",
+    "th": "Manah Ascendant",
+    "vi": "Manah Ascendant"
   },
   "MST_LEADERSKILLS_860838_DESCRIPTION": {
     "en": "120% Atk, max HP, 100% Def, Rec, 100% ABP, 50% CBP gain, raises normal hit amount, normal attacks may hit all foes & adds probable 1 turn Atk reduction infliction to attack for 2 turns when damage dealt is over 1",
@@ -90469,134 +90685,6 @@
     "id": "Maha Bijak Mimir",
     "pt": "Grande Sábia Mimir",
     "th": "เกรทเซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_52455_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Maha Bijak Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรทเซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_52456_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Maha Bijak Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรทเซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_52457_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Maha Bijak Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรทเซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_52458_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Maha Bijak Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรทเซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_52459_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Maha Bijak Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรทเซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_52460_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Maha Bijak Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรทเซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_52461_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Maha Bijak Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรทเซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_52462_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Maha Bijak Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรทเซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_52463_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Maha Bijak Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรทเซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_52464_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Maha Bijak Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรทเซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_52465_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Maha Bijak Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรทเซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_52466_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Maha Bijak Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรทเซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_52467_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Maha Bijak Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรทเซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_52468_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Great Sage Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรทเซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_52469_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Bijak Agung Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรทเซจไมเมอร์",
-    "vi": "Great Sage Mimir"
-  },
-  "MST_MONSTERS_52470_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Si Bijak Agung Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรท เสจ มิเมียร์",
     "vi": "Hiền triết Mimir"
   }
 }
