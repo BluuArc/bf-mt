@@ -93,21 +93,16 @@
             :href="entry.base64Url || entry.imgUrl"
           />
           <g v-if="showEntryNumber && entry.guideId" :key="`${JSON.stringify(entry)}-${j}-label`">
-            <rect
-              :x="getEntryXOffset(j)" :y="getEntryYOffset(j)"
-              :width="GENERAL_SVG_CONFIG.ENTRY_SIZE" :height="GENERAL_SVG_CONFIG.ENTRY_SIZE"
-              fill="black" style="fill-opacity: 0.5"
-            />
-
-            <flow-text
+            <text
               :x="getEntryXOffset(j) + GENERAL_SVG_CONFIG.ENTRY_SIZE / 2" :y="getEntryYOffset(j) + unitNumberConfig.yOffset"
               :fill="unitNumberConfig.fill"
+              :stroke="unitNumberConfig.stroke"
+              :font-size="`${unitNumberConfig.size}px`"
               text-anchor="middle"
               alignment-baseline="middle"
-              :flowText="`#${entry.guideId}`"
-              :flowMaxWidth="GENERAL_SVG_CONFIG.ENTRY_SIZE"
-              :flowLineHeight="unitNumberConfig.size"
-              :flowX="getEntryXOffset(j) + GENERAL_SVG_CONFIG.ENTRY_SIZE / 2"
+              font-weight="700"
+              font-family="Arial"
+              v-text="`#${entry.guideId}`"
             />
           </g>
         </template>

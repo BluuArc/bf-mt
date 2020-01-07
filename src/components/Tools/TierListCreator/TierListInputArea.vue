@@ -135,7 +135,7 @@
                 :disabled="!showUnitNumbers"
                 :value="svgConfig.unitNumberSize"
                 @change="getSetterForSvgProperty('unitNumberSize')($event)"
-                hint="Default: 16"
+                hint="Default: 20"
                 persistent-hint
               />
             </v-flex>
@@ -345,7 +345,7 @@ export default {
         unitNumberPosition: 'None',
         unitNumberStroke: '#000000',
         unitNumberFill: '#ffffff',
-        unitNumberSize: 16,
+        unitNumberSize: 20,
       },
       transformedSvgConfigPromise: Promise.resolve({}),
       generateImageLinkPromise: Promise.resolve(''),
@@ -551,13 +551,19 @@ export default {
             defaultValue = '#000000';
             break;
           case 'unitNumberSize':
-            defaultValue = 16;
+            defaultValue = 20;
             break;
         }
         if (typeof defaultValue === 'number') {
-          setter = (newValue) => this.updateKeyInSvgConfig(propertyName, +newValue || defaultValue);
+          setter = (newValue) => {
+            const value = (newValue && newValue.target) ? newValue.target.value : newValue;
+            this.updateKeyInSvgConfig(propertyName, +value || defaultValue);
+          };
         } else {
-          setter = (newValue) => this.updateKeyInSvgConfig(propertyName, defaultValue ? (newValue || defaultValue) : newValue);
+          setter = (newValue) => {
+            const value = (newValue && newValue.target) ? newValue.target.value : newValue;
+            this.updateKeyInSvgConfig(propertyName, defaultValue ? (value || defaultValue) : value);
+          };
         }
         this.svgPropertySetters.set(propertyName, setter);
       }
