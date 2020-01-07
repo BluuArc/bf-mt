@@ -287,6 +287,17 @@ const IMAGE_TYPES = [
   // TODO: support idle sprites
 ];
 
+const generateDefaultSvgConfig = () => ({
+  categories: [],
+  entries: [],
+  titleMiddle: 'My Tier List',
+  footerLeft: `Created ${new Date().toDateString()}`,
+  unitNumberPosition: 'None',
+  unitNumberStroke: '#000000',
+  unitNumberFill: '#ffffff',
+  unitNumberSize: 20,
+});
+
 export default {
   props: {
     inputCategories: {
@@ -337,16 +348,7 @@ export default {
   data () {
     return {
       currentTabIndex: 0,
-      svgConfig: {
-        categories: [],
-        entries: [],
-        titleMiddle: 'My Tier List',
-        footerLeft: `Created ${new Date().toDateString()}`,
-        unitNumberPosition: 'None',
-        unitNumberStroke: '#000000',
-        unitNumberFill: '#ffffff',
-        unitNumberSize: 20,
-      },
+      svgConfig: generateDefaultSvgConfig(),
       transformedSvgConfigPromise: Promise.resolve({}),
       generateImageLinkPromise: Promise.resolve(''),
       downloadLink: '',
@@ -525,6 +527,7 @@ export default {
       const { categories, entries, config } = parseTierListCode(this.importCode || this.defaultCode, true);
       this.svgConfig = {
         ...this.svgConfig,
+        ...generateDefaultSvgConfig(),
         ...config,
         categories,
         entries,
