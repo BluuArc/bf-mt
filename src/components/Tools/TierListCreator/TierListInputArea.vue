@@ -98,11 +98,11 @@
               'theme--dark': !$store.state.settings.lightMode,
               'theme--light': $store.state.settings.lightMode
             }">Unit Numbers</label>
-            <!-- <v-switch class="px-2 mt-0" hide-details v-model="showUnitNumbers"/> -->
             <v-select
               class="px-2"
               :items="unitNumberPositionKeys"
               :value="svgConfig.unitNumberPosition"
+              @input="getSetterForSvgProperty('unitNumberPosition')($event)"
             />
           </v-layout>
           <v-layout row wrap align-baseline style="width: 100%" class="px-2">
@@ -112,6 +112,8 @@
                 <input
                   type="color"
                   :disabled="!showUnitNumbers"
+                  :value="svgConfig.unitNumberFill"
+                  @input="getSetterForSvgProperty('unitNumberFill')($event)"
                 />
               </label>
             </v-flex>
@@ -121,6 +123,8 @@
                 <input
                   type="color"
                   :disabled="!showUnitNumbers"
+                  :value="svgConfig.unitNumberStroke"
+                  @input="getSetterForSvgProperty('unitNumberStroke')($event)"
                 />
               </label>
             </v-flex>
@@ -128,8 +132,9 @@
               <v-text-field
                 class="px-1"
                 label="Font Size"
-                :value="16"
                 :disabled="!showUnitNumbers"
+                :value="svgConfig.unitNumberSize"
+                @change="getSetterForSvgProperty('unitNumberSize')($event)"
                 hint="Default: 16"
                 persistent-hint
               />
@@ -338,6 +343,9 @@ export default {
         titleMiddle: 'My Tier List',
         footerLeft: `Created ${new Date().toDateString()}`,
         unitNumberPosition: 'None',
+        unitNumberStroke: '#000000',
+        unitNumberFill: '#ffffff',
+        unitNumberSize: 16,
       },
       transformedSvgConfigPromise: Promise.resolve({}),
       generateImageLinkPromise: Promise.resolve(''),
@@ -357,6 +365,7 @@ export default {
       categoryWidth: 100,
       cancelImageGeneration: () => {},
       imageGenerationErrorMessage: '',
+      svgPropertySetters: new Map(),
     };
   },
   methods: {
@@ -507,6 +516,7 @@ export default {
             ...entry,
             imgUrl: urls[this.activeImageType] || urls.ills_thum,
             name: (getUnit(entry.id) || {}).name || entry.id,
+            guideId: (getUnit(entry.id) || {}).guide_id || entry.id,
           };
         });
       });
@@ -525,6 +535,33 @@ export default {
       if (this.$store.state.disableHtmlOverflow) {
         this.$store.commit('setHtmlOverflowDisableState', false);
       }
+    },
+    getSetterForSvgProperty (propertyName) {
+      let setter = this.svgPropertySetters.get(propertyName);
+      if (!setter) {
+        let defaultValue;
+        switch (propertyName) {
+          case 'unitNumberPosition':
+            defaultValue = 'None';
+            break;
+          case 'unitNumberFill':
+            defaultValue = '#ffffff';
+            break;
+          case 'unitNumberStroke':
+            defaultValue = '#000000';
+            break;
+          case 'unitNumberSize':
+            defaultValue = 16;
+            break;
+        }
+        if (typeof defaultValue === 'number') {
+          setter = (newValue) => this.updateKeyInSvgConfig(propertyName, +newValue || defaultValue);
+        } else {
+          setter = (newValue) => this.updateKeyInSvgConfig(propertyName, defaultValue ? (newValue || defaultValue) : newValue);
+        }
+        this.svgPropertySetters.set(propertyName, setter);
+      }
+      return setter;
     },
     updateMaxEntries () {
       this.updateKeyInSvgConfig('maxEntriesPerRow', this.maxEntriesPerRow);
