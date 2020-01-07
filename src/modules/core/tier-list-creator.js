@@ -2,6 +2,16 @@ import colors from 'vuetify/es5/util/colors';
 import { convertCompareCodeToInput } from './compare';
 
 const DEFAULT_FONT_SIZE = 16;
+const SHORTHAND_MAPPINGS = Object.freeze([
+  ['footerLeft', 'fL'],
+  ['titleLeft', 'tL'],
+  ['titleMiddle', 'tM'],
+  ['titleRight', 'tR'],
+  ['unitNumberPosition', 'uNP'],
+  ['unitNumberStroke', 'uNSC'],
+  ['unitNumberFill', 'uNFC'],
+  ['unitNumberSize', 'uNS'],
+]);
 
 export function convertCodeToCategory (input = '', isUriComponent) {
   const [name = 'Category', textColor, backgroundColor, fontSize = DEFAULT_FONT_SIZE] = input.split('-');
@@ -75,7 +85,9 @@ export function generateTierListCode (categories = [], entries = [], config = {}
       const value = typeof config[key] === 'object'
         ? JSON.stringify(config[key])
         : config[key];
-      return `${key}!${value}`;
+      const keyMap = SHORTHAND_MAPPINGS.find(([originalKey]) => originalKey === key) || [];
+      const shorthandKey = keyMap[1] || key;
+      return `${shorthandKey}!${value}`;
     })
     .join('~');
   return `${categoriesCode}.${entriesCode}.${configCode}`;
@@ -134,7 +146,9 @@ export function parseTierListCode (code = '', hasUriComponents = false) {
       return [key, cleanedValue];
     }).reduce((acc, [key, value]) => {
       if (key) {
-        acc[key] = value;
+        const keyMap = SHORTHAND_MAPPINGS.find(([, shorthandKey]) => shorthandKey === key) || [];
+        const originalKey = keyMap[0] || key;
+        acc[originalKey] = value;
       }
       return acc;
     }, {});
