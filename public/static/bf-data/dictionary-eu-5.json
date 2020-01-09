@@ -1,4 +1,68 @@
 {
+  "MST_SKILLS_2122495_NAME": {
+    "en": "I shall protect Lord Will!",
+    "es": "¡Protegeré a Lord Will!",
+    "id": "Aku akan melindungi Lord Will!",
+    "pt": "Vou proteger Lorde Will!",
+    "th": "ข้าจะปกป้องท่านวิล!",
+    "vi": "I shall protect Lord Will!"
+  },
+  "MST_SKILLS_2122496_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122496_NAME": {
+    "en": "I fight in Lord Will's name!",
+    "es": "¡Lucho en nombre de Lord Will!",
+    "id": "Aku bertarung atas nama Lord Will!",
+    "pt": "Eu luto em nome de Lorde Will!",
+    "th": "ข้าจะสู้ในนามของท่านวิล!",
+    "vi": "I fight in Lord Will's name!"
+  },
+  "MST_SKILLS_2122497_DESCRIPTION": {
+    "en": "10 combo powerful Light attack on all enemies",
+    "es": "Combo grupal de 10 poderosos ataques lumínicos",
+    "id": "10 kombo serangan Terang kuat ke semua musuh",
+    "pt": "Combo poderoso de 10 golpes de Luz em todos os inimigos",
+    "th": "10 คอมโบ โจมตีด้วยธาตุแสงใส่ศัตรูทั้งหมด",
+    "vi": "10 combo powerful Light attack on all enemies"
+  },
+  "MST_SKILLS_2122497_NAME": {
+    "en": "Even if I have to give my life...!",
+    "es": "¡Incluso si tengo que entregar mi vida...!",
+    "id": "Bahkan jika aku harus memberikan nyawaku...!",
+    "pt": "Mesmo se eu tiver de dar minha vida...!",
+    "th": "แม้ว่าจะต้องสละชีวิต…!",
+    "vi": "Even if I have to give my life...!"
+  },
+  "MST_SKILLS_2122498_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122498_NAME": {
+    "en": "Lord Will is much stronger.",
+    "es": "Lord Will es mucho más fuerte.",
+    "id": "Lord Will Jauh lebih kuat.",
+    "pt": "Lorde Will é muito mais forte.",
+    "th": "ท่านวิลจะต้องแข็งแกร่งขึ้น",
+    "vi": "Lord Will is much stronger."
+  },
+  "MST_SKILLS_21225000_NAME": {
+    "en": "Fierce Brandish",
+    "es": "Fierce Brandish",
+    "id": "Ayunan Sengit",
+    "pt": "Fierce Brandish",
+    "th": "เฟียซ แบรนดิช",
+    "vi": "Fierce Brandish"
+  },
   "MST_SKILLS_2122500_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -87919,6 +87983,22 @@
     "th": "Incandescent Downfall",
     "vi": "Incandescent Downfall"
   },
+  "MST_SKILLS_2810808_DESCRIPTION": {
+    "en": "18 combo Fire attack on all foes (damage relative to remaining HP), 6 combo Fire attack on single foe, boosts spark damage for 4 turns, boosts critical damage for 4 turns, damage taken fills BB gauge for 4 turns & boosts Atk, Def, Rec and critical rate for 4 turns",
+    "es": "18 combo Fire attack on all foes (damage relative to remaining HP), 6 combo Fire attack on single foe, boosts spark damage for 4 turns, boosts critical damage for 4 turns, damage taken fills BB gauge for 4 turns & boosts Atk, Def, Rec and critical rate for 4 turns",
+    "id": "18 combo Fire attack on all foes (damage relative to remaining HP), 6 combo Fire attack on single foe, boosts spark damage for 4 turns, boosts critical damage for 4 turns, damage taken fills BB gauge for 4 turns & boosts Atk, Def, Rec and critical rate for 4 turns",
+    "pt": "18 combo Fire attack on all foes (damage relative to remaining HP), 6 combo Fire attack on single foe, boosts spark damage for 4 turns, boosts critical damage for 4 turns, damage taken fills BB gauge for 4 turns & boosts Atk, Def, Rec and critical rate for 4 turns",
+    "th": "18 combo Fire attack on all foes (damage relative to remaining HP), 6 combo Fire attack on single foe, boosts spark damage for 4 turns, boosts critical damage for 4 turns, damage taken fills BB gauge for 4 turns & boosts Atk, Def, Rec and critical rate for 4 turns",
+    "vi": "18 combo Fire attack on all foes (damage relative to remaining HP), 6 combo Fire attack on single foe, boosts spark damage for 4 turns, boosts critical damage for 4 turns, damage taken fills BB gauge for 4 turns & boosts Atk, Def, Rec and critical rate for 4 turns"
+  },
+  "MST_SKILLS_2810808_NAME": {
+    "en": "Seraphim Slash",
+    "es": "Seraphim Slash",
+    "id": "Seraphim Slash",
+    "pt": "Seraphim Slash",
+    "th": "Seraphim Slash",
+    "vi": "Seraphim Slash"
+  },
   "MST_SKILLS_2810827_DESCRIPTION": {
     "en": "19 combo Fire attack on all foes damage relative to remaining HP), 1 turn Atk, Def reduction infliction for 3 turns, raises normal hit amount for 3 turns, boosts Fire elemental damage for 3 turns, boosts Atk, Rec relative to Def for 3 turns",
     "es": "19 combo Fire attack on all foes damage relative to remaining HP), 1 turn Atk, Def reduction infliction for 3 turns, raises normal hit amount for 3 turns, boosts Fire elemental damage for 3 turns, boosts Atk, Rec relative to Def for 3 turns",
@@ -88958,6 +89038,22 @@
     "pt": "Algernon's Eureka!",
     "th": "Algernon's Eureka!",
     "vi": "Algernon's Eureka!"
+  },
+  "MST_SKILLS_2820808_DESCRIPTION": {
+    "en": "22 combo Water attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec for 4 turns, probable KO resistance, fills BB gauge for 4 turns, boosts Water elemental damage for 4 turns & fills OD gauge",
+    "es": "22 combo Water attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec for 4 turns, probable KO resistance, fills BB gauge for 4 turns, boosts Water elemental damage for 4 turns & fills OD gauge",
+    "id": "22 combo Water attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec for 4 turns, probable KO resistance, fills BB gauge for 4 turns, boosts Water elemental damage for 4 turns & fills OD gauge",
+    "pt": "22 combo Water attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec for 4 turns, probable KO resistance, fills BB gauge for 4 turns, boosts Water elemental damage for 4 turns & fills OD gauge",
+    "th": "22 combo Water attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec for 4 turns, probable KO resistance, fills BB gauge for 4 turns, boosts Water elemental damage for 4 turns & fills OD gauge",
+    "vi": "22 combo Water attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec for 4 turns, probable KO resistance, fills BB gauge for 4 turns, boosts Water elemental damage for 4 turns & fills OD gauge"
+  },
+  "MST_SKILLS_2820808_NAME": {
+    "en": "Null Heavens Formation",
+    "es": "Null Heavens Formation",
+    "id": "Null Heavens Formation",
+    "pt": "Null Heavens Formation",
+    "th": "Null Heavens Formation",
+    "vi": "Null Heavens Formation"
   },
   "MST_SKILLS_2820837_DESCRIPTION": {
     "en": "20 combo Water attack on all foes (damage relative to remaining HP), boosts critical damage for 3 turns, spark critical for 3 turns, boosts Atk, Def and critical rate for 3 turns & 3 turns spark vulnerability infliction",
@@ -90646,45 +90742,5 @@
     "pt": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
     "th": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
     "vi": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns"
-  },
-  "MST_SKILLS_2840557_NAME": {
-    "en": "Thunderbird's Judgment",
-    "es": "Thunderbird's Judgment",
-    "id": "Thunderbird's Judgment",
-    "pt": "Thunderbird's Judgment",
-    "th": "Thunderbird's Judgment",
-    "vi": "Thunderbird's Judgment"
-  },
-  "MST_SKILLS_2840558_DESCRIPTION": {
-    "en": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
-    "es": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
-    "id": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
-    "pt": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
-    "th": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
-    "vi": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns"
-  },
-  "MST_SKILLS_2840558_NAME": {
-    "en": "Thunderbird's Wrath",
-    "es": "Thunderbird's Wrath",
-    "id": "Thunderbird's Wrath",
-    "pt": "Thunderbird's Wrath",
-    "th": "Thunderbird's Wrath",
-    "vi": "Thunderbird's Wrath"
-  },
-  "MST_SKILLS_2840567_DESCRIPTION": {
-    "en": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
-    "es": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
-    "id": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
-    "pt": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
-    "th": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
-    "vi": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns"
-  },
-  "MST_SKILLS_2840567_NAME": {
-    "en": "Xian-qi Formation",
-    "es": "Xian-qi Formation",
-    "id": "Xian-qi Formation",
-    "pt": "Xian-qi Formation",
-    "th": "Xian-qi Formation",
-    "vi": "Xian-qi Formation"
   }
 }

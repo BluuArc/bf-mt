@@ -1,4 +1,172 @@
 {
+  "MST_LEADERSKILLS_511_NAME": {
+    "en": "Dark Barrier",
+    "es": "Barrera oscura",
+    "id": "Penghalang Gelap",
+    "pt": "Barreira das Sombras",
+    "th": "ดาร์กบาเรีย",
+    "vi": "rào chắn bóng tối "
+  },
+  "MST_LEADERSKILLS_512_DESCRIPTION": {
+    "en": "15% reduction in damage from Fire types & boost to damage dealt to Fire types from Water types",
+    "es": "Reduce un 15% el daño de las unidades ígneas. Aumenta el daño que las unidades acuáticas le infligen a las unidades ígneas",
+    "id": "15% pengurangan kerusakan dari tipe Api & menambah merusak tipe Api dari tipe Air",
+    "pt": "15% de redução nos danos recebido de tipo Fogo e reforço no danos causados por tipo Água ao tipo Fogo",
+    "th": "15% ลดค่าความเสียหายจาก ยูนิตไฟ และ เพิ่มค่าความเสียหายที่สร้างให้กับ ยูนิตไฟ จาก ยูนิตน้ำ",
+    "vi": "15% giảm thiệt hại do hệ Hỏa & tăng thiệt hại gây ra cho hệ Hỏa từ hệ Thủy"
+  },
+  "MST_LEADERSKILLS_512_NAME": {
+    "en": "Fire's Conviction",
+    "es": "Convicción ígnea",
+    "id": "Keyakinan Api",
+    "pt": "Convicção do Fogo",
+    "th": "ไฟเออร์คอนวิคชั่น",
+    "vi": "Phán quyết cho hỏa"
+  },
+  "MST_LEADERSKILLS_51367_DESCRIPTION": {
+    "en": "150% Rec, max HP, fills BB gauge each turn, negates all status ailments and Atk, Def, Rec reduction & 15% damage reduction",
+    "es": "150% Rec, max HP, fills BB gauge each turn, negates all status ailments and Atk, Def, Rec reduction & 15% damage reduction",
+    "id": "150% Rec, max HP, fills BB gauge each turn, negates all status ailments and Atk, Def, Rec reduction & 15% damage reduction",
+    "pt": "150% Rec, max HP, fills BB gauge each turn, negates all status ailments and Atk, Def, Rec reduction & 15% damage reduction",
+    "th": "150% Rec, max HP, fills BB gauge each turn, negates all status ailments and Atk, Def, Rec reduction & 15% damage reduction",
+    "vi": "150% Rec, max HP, fills BB gauge each turn, negates all status ailments and Atk, Def, Rec reduction & 15% damage reduction"
+  },
+  "MST_LEADERSKILLS_51367_NAME": {
+    "en": "Hope for the Future",
+    "es": "Hope for the Future",
+    "id": "Hope for the Future",
+    "pt": "Hope for the Future",
+    "th": "Hope for the Future",
+    "vi": "Hope for the Future"
+  },
+  "MST_LEADERSKILLS_513_DESCRIPTION": {
+    "en": "15% reduction in damage from Water types & boost to damage dealt to Water types from Thunder types",
+    "es": "Reduce un 15% el daño de las unidades acuáticas. Aumenta el daño que las unidades tormentosas le infligen a las unidades acuáticas",
+    "id": "15% pengurangan kerusakan dari tipe Air & menambah merusak tipe Air dari tipe Guntur",
+    "pt": "15% de redução nos danos recebido de tipo Água e reforço nos danos causados por tipo Trovão ao tipo Água",
+    "th": "15% ลดค่าความเสียหายจาก ยูนิตน้ำ และ เพิ่มค่าความเสียหายที่สร้างให้กับ ยูนิตน้ำ จาก ยูนิตสายฟ้า",
+    "vi": "15% giảm thiệt hại do hệ Thủy & tăng thiệt hại gây ra cho hệ Thủy từ hệ Lôi"
+  },
+  "MST_LEADERSKILLS_513_NAME": {
+    "en": "Water's Conviction",
+    "es": "Convicción acuática",
+    "id": "Keyakinan Air",
+    "pt": "Convicção da Água",
+    "th": "วอเตอร์คอนวิคชั่น",
+    "vi": "Phán quyết cho Thủy"
+  },
+  "MST_LEADERSKILLS_514_DESCRIPTION": {
+    "en": "15% reduction in damage from Earth types & boost to damage dealt to Earth types from Fire types",
+    "es": "Reduce un 15% el daño de las unidades térreas. Aumenta el daño que las unidades ígneas le infligen a las unidades térreas",
+    "id": "15% pengurangan kerusakan dari tipe Bumi & menambah merusak tipe Bumi dari tipe Api",
+    "pt": "15% de redução no danos recebidos de tipo Terra e reforço no danos causados por tipo Fogo ao tipo Terra",
+    "th": "15% ลดค่าความเสียหายจาก ยูนิตดิน และ เพิ่มค่าความเสียหายที่สร้างให้กับ ยูนิตดิน จาก ยูนิตไฟ",
+    "vi": "15% giảm thiệt hại do hệ Thổ & tăng thiệt hại gây ra cho hệ Thổ từ hệ Hỏa"
+  },
+  "MST_LEADERSKILLS_514_NAME": {
+    "en": "Earth's Conviction",
+    "es": "Convicción térrea",
+    "id": "Keyakinan Bumi",
+    "pt": "Convicção da Terra",
+    "th": "เอิร์ธคอนวิคชั่น",
+    "vi": "Phán quyết cho Thổ"
+  },
+  "MST_LEADERSKILLS_515_DESCRIPTION": {
+    "en": "15% reduction in damage from Thunder types & boost to damage dealt to Thunder types from Earth types",
+    "es": "Reduce un 15% el daño de las unidades atronadoras. Aumenta el daño que las unidades térreas le infligen a las unidades atronadoras",
+    "id": "15% pengurangan kerusakan dari tipe Guntur & menambah merusak tipe Guntur dari tipe Bumi",
+    "pt": "15% de redução nos danos recebidos de tipo Trovão e reforço no danos causados por tipo Terra ao tipo Trovão",
+    "th": "15% ลดค่าความเสียหายจาก ยูนิตสายฟ้า และ เพิ่มค่าความเสียหายที่สร้างให้กับ ยูนิตสายฟ้า จาก ยูนิตดิน",
+    "vi": "15% giảm thiệt hại do hệ Lôi & tăng thiệt hại gây ra cho hệ Lôi từ hệ Thổ"
+  },
+  "MST_LEADERSKILLS_515_NAME": {
+    "en": "Thunder's Conviction",
+    "es": "Convicción atronadora",
+    "id": "Keyakinan Guntur",
+    "pt": "Convicção do Trovão",
+    "th": "ธันเดอร์คอนวิคชั่น",
+    "vi": "Phán quyết cho Lôi"
+  },
+  "MST_LEADERSKILLS_516_DESCRIPTION": {
+    "en": "15% reduction in damage from Light types & boost to damage dealt to Light types from Dark types",
+    "es": "Reduce un 15% el daño de las unidades lumínicas. Aumenta el daño que las unidades oscuras le infligen a las unidades lumínicas",
+    "id": "15% pengurangan kerusakan dari tipe Terang & menambah merusak tipe Terang dari tipe Gelap",
+    "pt": "15% de redução nos danos recebido de tipo Luz e reforço nos danos causados por tipo Sombra ao tipo Luz",
+    "th": "15% ลดค่าความเสียหายจาก ยูนิตแสง และ เพิ่มค่าความเสียหายที่สร้างให้กับ ยูนิตแสง จาก ยูนิตมืด",
+    "vi": "15% giảm thiệt hại do hệ Quang & tăng thiệt hại gây ra cho hệ Quang từ hệ Bóng Tối"
+  },
+  "MST_LEADERSKILLS_516_NAME": {
+    "en": "Light's Conviction",
+    "es": "Convicción lumínica",
+    "id": "Keyakinan Terang",
+    "pt": "Convicção da Luz",
+    "th": "ไลท์คอนวิคชั่น",
+    "vi": "Phán quyết cho Quang"
+  },
+  "MST_LEADERSKILLS_517_DESCRIPTION": {
+    "en": "15% reduction in damage from Dark types & boost to damage dealt to Dark types from Light types",
+    "es": "Reduce un 15% el daño de las unidades oscuras. Aumenta el daño que las unidades lumínicas le infligen a las unidades oscuras",
+    "id": "15% pengurangan kerusakan dari tipe Gelap & menambah merusak tipe Gelap dari tipe Terang",
+    "pt": "15% de redução nos danos recebido de tipo Sombra e reforço nos danos causado por tipo Luz ao tipo Sombra",
+    "th": "15% ลดค่าความเสียหายจาก ยูนิตมืด และ เพิ่มค่าความเสียหายที่สร้างให้กับ ยูนิตมืด จาก ยูนิตแสง",
+    "vi": "15% giảm thiệt hại do hệ Bóng Tối & tăng thiệt hại gây ra cho hệ Bóng Tối từ hệ Quang"
+  },
+  "MST_LEADERSKILLS_517_NAME": {
+    "en": "Dark's Conviction",
+    "es": "Convicción oscura",
+    "id": "Keyakinan Gelap",
+    "pt": "Convicção da Sombra",
+    "th": "ดาร์คคอนวิคชั่น",
+    "vi": "Phán quyết cho Bóng Tối"
+  },
+  "MST_LEADERSKILLS_518_DESCRIPTION": {
+    "en": "25% boost to Atk for all Units & 15% reduction in damage from Fire Types",
+    "es": "Aumenta un 25% el ataque de todas las unidades y reduce un 15% el daño de las unidades ígneas",
+    "id": "Menambah 25% Serangan untuk semua unit & mengurangi 15% kerusakan dari Tipe Api",
+    "pt": "Aumento de 25% no ATQ de todas as unidades e redução de 15% no dano do tipo fogo",
+    "th": "25% เพิ่มค่า โจมตี ให้กับทุกยูนิต และ 15% ลดความเสียหายจากธาตุไฟ",
+    "vi": "Tăng 25% sức mạnh Tấn công cho tất cả các Quái & giảm 15% thiệt hại do các loại hệ Hỏa"
+  },
+  "MST_LEADERSKILLS_518_NAME": {
+    "en": "Authority of the Fire God",
+    "es": "Autoridad del Dios ígneo",
+    "id": "Otoritas Dewa Api",
+    "pt": "Autoridade do Deus do Fogo",
+    "th": "ออเธอร์ริตี้ออฟเดอะไฟเออร์ก็อด",
+    "vi": "Quyền năng của Hỏa thần"
+  },
+  "MST_LEADERSKILLS_519_DESCRIPTION": {
+    "en": "25% boost to Atk for all Units & 15% reduction in damage from Water Types",
+    "es": "Aumenta un 25% el ataque de todas las unidades y reduce un 15% el daño de las unidades acuáticas",
+    "id": "Menambah 25% Serangan untuk semua unit & mengurangi 15% kerusakan dari Tipe Air",
+    "pt": "Aumento de 25% no ATQ de todas as unidades e redução de 15% no dano do tipo água",
+    "th": "25% เพิ่มค่า โจมตี ให้กับทุกยูนิต และ 15% ลดความเสียหายจากธาตุน้ำ",
+    "vi": "Tăng 25% sức mạnh Tấn công cho tất cả các Quái & giảm 15% thiệt hại do các loại hệ Thủy"
+  },
+  "MST_LEADERSKILLS_519_NAME": {
+    "en": "Authority of the Water God",
+    "es": "Autoridad del Dios acuático",
+    "id": "Otoritas Dewa Air",
+    "pt": "Autoridade do Deus da Água",
+    "th": "ออเธอร์ริตี้ออฟเดอะวอเทอร์ก็อด",
+    "vi": "Quyền năng của Thủy thần"
+  },
+  "MST_LEADERSKILLS_5200_DESCRIPTION": {
+    "en": "25% boost to Atk when BB gauge is full",
+    "es": "25% de aumento en atq cuando el indicador BB está lleno.",
+    "id": "25% kenaikan Serangan saat meteran BB penuh",
+    "pt": "Reforça de 25% no ATQ quando a barra BB está cheia",
+    "th": "25% เพิ่มค่า โจมตี เมื่อเกจ BB เต็ม",
+    "vi": "Tăng 25% sức Tấn công khi vạch BB đầy"
+  },
+  "MST_LEADERSKILLS_5200_NAME": {
+    "en": "Magic Overflow",
+    "es": "Sobrecarga mágica",
+    "id": "Luapan Sihir",
+    "pt": "Fluxo de Magia",
+    "th": "แมจิคโอเวอร์โฟล",
+    "vi": "Tràn đầy ma thuật"
+  },
   "MST_LEADERSKILLS_5201_DESCRIPTION": {
     "en": "50% boost to Atk when BB gauge is full",
     "es": "50% de aumento en atq cuando el indicador BB está lleno.",
@@ -9047,6 +9215,22 @@
     "th": "Touched with Fire",
     "vi": "Touched with Fire"
   },
+  "MST_LEADERSKILLS_810808_DESCRIPTION": {
+    "en": "140% all parameters, 250% critical damage, 250% spark damage, probable damage reduction to 1 & 25-30% BB gauge consumed reduction",
+    "es": "140% all parameters, 250% critical damage, 250% spark damage, probable damage reduction to 1 & 25-30% BB gauge consumed reduction",
+    "id": "140% all parameters, 250% critical damage, 250% spark damage, probable damage reduction to 1 & 25-30% BB gauge consumed reduction",
+    "pt": "140% all parameters, 250% critical damage, 250% spark damage, probable damage reduction to 1 & 25-30% BB gauge consumed reduction",
+    "th": "140% all parameters, 250% critical damage, 250% spark damage, probable damage reduction to 1 & 25-30% BB gauge consumed reduction",
+    "vi": "140% all parameters, 250% critical damage, 250% spark damage, probable damage reduction to 1 & 25-30% BB gauge consumed reduction"
+  },
+  "MST_LEADERSKILLS_810808_NAME": {
+    "en": "Summoner of Old: Ruby",
+    "es": "Summoner of Old: Ruby",
+    "id": "Summoner of Old: Ruby",
+    "pt": "Summoner of Old: Ruby",
+    "th": "Summoner of Old: Ruby",
+    "vi": "Summoner of Old: Ruby"
+  },
   "MST_LEADERSKILLS_810827_DESCRIPTION": {
     "en": "120% Atk, max HP, 100% Def, and 30% critical rate (Fire), 10% damage reduction from Fire, Earth types, raises normal hit amount, normal attacks may hit all foes, 20% reduction to BB activation cost",
     "es": "120% Atk, max HP, 100% Def, and 30% critical rate (Fire), 10% damage reduction from Fire, Earth types, raises normal hit amount, normal attacks may hit all foes, 20% reduction to BB activation cost",
@@ -9958,6 +10142,22 @@
     "pt": "Distracted Brilliance",
     "th": "Distracted Brilliance",
     "vi": "Distracted Brilliance"
+  },
+  "MST_LEADERSKILLS_820808_DESCRIPTION": {
+    "en": "120% all parameters, 250% Water elemental damage, fills BB gauge each turn, spark damage fills BB gauge & 100% critical, elemental damage reduction",
+    "es": "120% all parameters, 250% Water elemental damage, fills BB gauge each turn, spark damage fills BB gauge & 100% critical, elemental damage reduction",
+    "id": "120% all parameters, 250% Water elemental damage, fills BB gauge each turn, spark damage fills BB gauge & 100% critical, elemental damage reduction",
+    "pt": "120% all parameters, 250% Water elemental damage, fills BB gauge each turn, spark damage fills BB gauge & 100% critical, elemental damage reduction",
+    "th": "120% all parameters, 250% Water elemental damage, fills BB gauge each turn, spark damage fills BB gauge & 100% critical, elemental damage reduction",
+    "vi": "120% all parameters, 250% Water elemental damage, fills BB gauge each turn, spark damage fills BB gauge & 100% critical, elemental damage reduction"
+  },
+  "MST_LEADERSKILLS_820808_NAME": {
+    "en": "Summoner of Old: Sapphire",
+    "es": "Summoner of Old: Sapphire",
+    "id": "Summoner of Old: Sapphire",
+    "pt": "Summoner of Old: Sapphire",
+    "th": "Summoner of Old: Sapphire",
+    "vi": "Summoner of Old: Sapphire"
   },
   "MST_LEADERSKILLS_820837_DESCRIPTION": {
     "en": "150% Atk, 100% max HP, 30% critical rate, raises normal hit amount, 150% spark damage & 150% critical damage",
@@ -90542,149 +90742,5 @@
     "pt": "Cait Sith",
     "th": "เคท สิธ",
     "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52417_NAME": {
-    "en": "Cait Sith",
-    "es": "Cait Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคทซิธ",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52418_NAME": {
-    "en": "Cait Sith",
-    "es": "Gato Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคท ซิท",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52419_NAME": {
-    "en": "Cait Sith",
-    "es": "Gato Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคท ซิท",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52420_NAME": {
-    "en": "Cait Sith",
-    "es": "Gato Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคท ซิท",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52421_NAME": {
-    "en": "Cait Sith",
-    "es": "Cait Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคท ซิลท",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52422_NAME": {
-    "en": "Cait Sith",
-    "es": "Gato Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคท ซิลท",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52423_NAME": {
-    "en": "Cait Sith",
-    "es": "Cait Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคท สิธ",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52424_NAME": {
-    "en": "Cait Sith",
-    "es": "Gato Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคท สิธ",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52425_NAME": {
-    "en": "Cait Sith",
-    "es": "Cait Sith",
-    "id": "Kaiser Mossy",
-    "pt": "Cait Sith",
-    "th": "เคท ซิท",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52426_NAME": {
-    "en": "Cait Sith",
-    "es": "Cait Sith",
-    "id": "Pedang Lebar Bumi Duran",
-    "pt": "Cait Sith",
-    "th": "เคท ซิท",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52427_NAME": {
-    "en": "Cait Sith",
-    "es": "Cait Sith",
-    "id": "Quatre Marinus Duran",
-    "pt": "Cait Sith",
-    "th": "เคท ซิท",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52428_NAME": {
-    "en": "Cait Sith",
-    "es": "Cait Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคท สิธ",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52429_NAME": {
-    "en": "Cait Sith",
-    "es": "Cait Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคท สิธ",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52450_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Bijak Agung Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรทเซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_52451_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Bijak Agung Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรทเซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_52452_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Bijak Agung Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรทเซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_52453_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Bijak Agung Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรทเซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_52454_NAME": {
-    "en": "Great Sage Mimir",
-    "es": "Gran sabia Mimir",
-    "id": "Maha Bijak Mimir",
-    "pt": "Grande Sábia Mimir",
-    "th": "เกรทเซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
   }
 }
