@@ -11,6 +11,9 @@ const SHORTHAND_MAPPINGS = Object.freeze([
   ['unitNumberStroke', 'uNSC'],
   ['unitNumberFill', 'uNFC'],
   ['unitNumberSize', 'uNS'],
+  ['imageType', 'iT'],
+  ['scaleFactor', 'sF'],
+  ['maxEntriesPerRow', 'mEPR'],
 ]);
 
 export function convertCodeToCategory (input = '', isUriComponent) {
