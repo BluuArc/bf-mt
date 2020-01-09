@@ -91,6 +91,56 @@
             </v-btn>
           </v-flex>
         </v-layout>
+        <v-layout column align-baseline class="px-2">
+          <v-layout align-baseline style="width: 100%">
+            <label :class="{
+              'v-label': true,
+              'theme--dark': !$store.state.settings.lightMode,
+              'theme--light': $store.state.settings.lightMode
+            }">Unit Numbers</label>
+            <v-select
+              class="px-2"
+              :items="unitNumberPositionKeys"
+              :value="svgConfig.unitNumberPosition"
+              @input="getSetterForSvgProperty('unitNumberPosition')($event)"
+            />
+          </v-layout>
+          <v-layout row wrap align-baseline style="width: 100%" class="px-2">
+            <v-flex>
+              <label>
+                Text Fill Color
+                <input
+                  type="color"
+                  :disabled="!showUnitNumbers"
+                  :value="svgConfig.unitNumberFill"
+                  @input="getSetterForSvgProperty('unitNumberFill')($event)"
+                />
+              </label>
+            </v-flex>
+            <v-flex>
+              <label>
+                Text Stroke Color
+                <input
+                  type="color"
+                  :disabled="!showUnitNumbers"
+                  :value="svgConfig.unitNumberStroke"
+                  @input="getSetterForSvgProperty('unitNumberStroke')($event)"
+                />
+              </label>
+            </v-flex>
+            <v-flex>
+              <v-text-field
+                class="px-1"
+                label="Font Size"
+                :disabled="!showUnitNumbers"
+                :value="svgConfig.unitNumberSize"
+                @change="getSetterForSvgProperty('unitNumberSize')($event)"
+                hint="Default: 20"
+                persistent-hint
+              />
+            </v-flex>
+          </v-layout>
+        </v-layout>
         <v-layout wrap align-baseline class="px-2">
           <v-btn flat @click="categoryWidth = categoryWidth - 10">
             -10
@@ -237,6 +287,20 @@ const IMAGE_TYPES = [
   // TODO: support idle sprites
 ];
 
+const generateDefaultSvgConfig = () => ({
+  categories: [],
+  entries: [],
+  titleMiddle: 'My Tier List',
+  imageType: 'ills_thum',
+  scaleFactor: 1,
+  maxEntriesPerRow: 8,
+  footerLeft: `Created ${new Date().toDateString()}`,
+  unitNumberPosition: 'None',
+  unitNumberStroke: '#000000',
+  unitNumberFill: '#ffffff',
+  unitNumberSize: 20,
+});
+
 export default {
   props: {
     inputCategories: {
@@ -263,6 +327,7 @@ export default {
   computed: {
     tabs: () => Object.freeze(['General', 'Entries', 'Export', 'Links'].map(name => ({ name, slot: name.toLowerCase() }))),
     titleKeys: () => Object.freeze(['titleLeft', 'titleMiddle', 'titleRight']),
+    unitNumberPositionKeys: () => Object.freeze(['None', 'Top', 'Middle', 'Bottom']),
     currentConfigCode () {
       const { categories, entries, ...config } = this.svgConfig;
       return generateTierListCode(categories, entries, config);
@@ -279,16 +344,14 @@ export default {
       return generateTierListCode(getDefaultCategories());
     },
     IMAGE_TYPES: () => IMAGE_TYPES,
+    showUnitNumbers () {
+      return this.svgConfig && this.svgConfig.unitNumberPosition !== 'None';
+    },
   },
   data () {
     return {
       currentTabIndex: 0,
-      svgConfig: {
-        categories: [],
-        entries: [],
-        titleMiddle: 'My Tier List',
-        footerLeft: `Created ${new Date().toDateString()}`,
-      },
+      svgConfig: generateDefaultSvgConfig(),
       transformedSvgConfigPromise: Promise.resolve({}),
       generateImageLinkPromise: Promise.resolve(''),
       downloadLink: '',
@@ -307,6 +370,7 @@ export default {
       categoryWidth: 100,
       cancelImageGeneration: () => {},
       imageGenerationErrorMessage: '',
+      svgPropertySetters: new Map(),
     };
   },
   methods: {
@@ -457,6 +521,7 @@ export default {
             ...entry,
             imgUrl: urls[this.activeImageType] || urls.ills_thum,
             name: (getUnit(entry.id) || {}).name || entry.id,
+            guideId: (getUnit(entry.id) || {}).guide_id || entry.id,
           };
         });
       });
@@ -465,6 +530,7 @@ export default {
       const { categories, entries, config } = parseTierListCode(this.importCode || this.defaultCode, true);
       this.svgConfig = {
         ...this.svgConfig,
+        ...generateDefaultSvgConfig(),
         ...config,
         categories,
         entries,
@@ -475,6 +541,39 @@ export default {
       if (this.$store.state.disableHtmlOverflow) {
         this.$store.commit('setHtmlOverflowDisableState', false);
       }
+    },
+    getSetterForSvgProperty (propertyName) {
+      let setter = this.svgPropertySetters.get(propertyName);
+      if (!setter) {
+        let defaultValue;
+        switch (propertyName) {
+          case 'unitNumberPosition':
+            defaultValue = 'None';
+            break;
+          case 'unitNumberFill':
+            defaultValue = '#ffffff';
+            break;
+          case 'unitNumberStroke':
+            defaultValue = '#000000';
+            break;
+          case 'unitNumberSize':
+            defaultValue = 20;
+            break;
+        }
+        if (typeof defaultValue === 'number') {
+          setter = (newValue) => {
+            const value = (newValue && newValue.target) ? newValue.target.value : newValue;
+            this.updateKeyInSvgConfig(propertyName, +value || defaultValue);
+          };
+        } else {
+          setter = (newValue) => {
+            const value = (newValue && newValue.target) ? newValue.target.value : newValue;
+            this.updateKeyInSvgConfig(propertyName, defaultValue ? (value || defaultValue) : value);
+          };
+        }
+        this.svgPropertySetters.set(propertyName, setter);
+      }
+      return setter;
     },
     updateMaxEntries () {
       this.updateKeyInSvgConfig('maxEntriesPerRow', this.maxEntriesPerRow);

@@ -92,22 +92,17 @@
             :xlink:href="entry.base64Url || entry.imgUrl"
             :href="entry.base64Url || entry.imgUrl"
           />
-          <g v-if="showEntryNames && entry.name" :key="`${JSON.stringify(entry)}-${j}-label`">
-            <rect
-              :x="getEntryXOffset(j)" :y="getEntryYOffset(j)"
-              :width="GENERAL_SVG_CONFIG.ENTRY_SIZE" :height="GENERAL_SVG_CONFIG.ENTRY_SIZE"
-              fill="black" style="fill-opacity: 0.5"
-            />
-
-            <flow-text
-              :x="getEntryXOffset(j) + GENERAL_SVG_CONFIG.ENTRY_SIZE / 2" :y="getEntryYOffset(j) + GENERAL_SVG_CONFIG.ENTRY_SIZE / 2"
-              fill="white"
+          <g v-if="showEntryNumber && entry.guideId" :key="`${JSON.stringify(entry)}-${j}-label`">
+            <text
+              :x="getEntryXOffset(j) + GENERAL_SVG_CONFIG.ENTRY_SIZE / 2" :y="getEntryYOffset(j) + unitNumberConfig.yOffset"
+              :fill="unitNumberConfig.fill"
+              :stroke="unitNumberConfig.stroke"
+              :font-size="`${unitNumberConfig.size}px`"
               text-anchor="middle"
               alignment-baseline="middle"
-              :flowText="entry.name"
-              :flowMaxWidth="GENERAL_SVG_CONFIG.ENTRY_SIZE"
-              :flowLineHeight="16"
-              :flowX="getEntryXOffset(j) + GENERAL_SVG_CONFIG.ENTRY_SIZE / 2"
+              font-weight="700"
+              font-family="Arial"
+              v-text="`#${entry.guideId}`"
             />
           </g>
         </template>
@@ -183,8 +178,9 @@ export default {
         'background-color': colors.grey.darken4,
       };
     },
-    showEntryNames () {
-      return !!this.value.showEntryNames;
+    showEntryNumber () {
+      return !!this.value.unitNumberPosition && this.value.unitNumberPosition !== 'None';
+      // return !!this.value.showEntryNumber;
     },
     categories () {
       return Array.isArray(this.value.categories)
@@ -296,6 +292,24 @@ export default {
       return {
         left: this.value.footerLeft || '',
         right: this.value.footerRight || 'Made with the Brave Frontier Multi-Tool',
+      };
+    },
+    unitNumberConfig () {
+      const position = this.value.unitNumberPosition;
+      const size = this.value.unitNumberSize;
+      let yOffset = 0;
+      if (position === 'Top') {
+        yOffset = size;
+      } else if (position === 'Middle') {
+        yOffset = GENERAL_SVG_CONFIG.ENTRY_SIZE / 2;
+      } else if (position === 'Bottom') {
+        yOffset = GENERAL_SVG_CONFIG.ENTRY_SIZE - size / 2;
+      }
+      return {
+        yOffset,
+        stroke: this.value.unitNumberStroke,
+        fill: this.value.unitNumberFill,
+        size,
       };
     },
   },
