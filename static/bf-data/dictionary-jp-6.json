@@ -1,4 +1,44 @@
 {
+  "MST_SKILLS_2840557_NAME": {
+    "en": "Thunderbird's Judgment",
+    "es": "Thunderbird's Judgment",
+    "id": "Thunderbird's Judgment",
+    "pt": "Thunderbird's Judgment",
+    "th": "Thunderbird's Judgment",
+    "vi": "Thunderbird's Judgment"
+  },
+  "MST_SKILLS_2840558_DESCRIPTION": {
+    "en": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
+    "es": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
+    "id": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
+    "pt": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
+    "th": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
+    "vi": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns"
+  },
+  "MST_SKILLS_2840558_NAME": {
+    "en": "Thunderbird's Wrath",
+    "es": "Thunderbird's Wrath",
+    "id": "Thunderbird's Wrath",
+    "pt": "Thunderbird's Wrath",
+    "th": "Thunderbird's Wrath",
+    "vi": "Thunderbird's Wrath"
+  },
+  "MST_SKILLS_2840567_DESCRIPTION": {
+    "en": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
+    "es": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
+    "id": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
+    "pt": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
+    "th": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns",
+    "vi": "22 combo massive Thunder attack on all foes, hugely boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns & enormously boosts critical damage for 3 turns"
+  },
+  "MST_SKILLS_2840567_NAME": {
+    "en": "Xian-qi Formation",
+    "es": "Xian-qi Formation",
+    "id": "Xian-qi Formation",
+    "pt": "Xian-qi Formation",
+    "th": "Xian-qi Formation",
+    "vi": "Xian-qi Formation"
+  },
   "MST_SKILLS_2840568_DESCRIPTION": {
     "en": "26 combo massive Thunder attack on all foes, enormously boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts OD gauge",
     "es": "26 combo massive Thunder attack on all foes, enormously boosts Atk and critical hit rate for 3 turns, enormous 3 turn Atk reduction, enormously boosts Thunder elemental damage for 3 turns, enormously boosts critical damage for 3 turns & enormously boosts OD gauge",
@@ -21422,6 +21462,22 @@
     "pt": "Zenith Falling",
     "th": "Zenith Falling",
     "vi": "Zenith Falling"
+  },
+  "MST_SKILLS_3810808_DESCRIPTION": {
+    "en": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, critical damage, Fire, Water elemental damage, BB gauge, damage taken boosts BB gauge, OD gauge & 80% KO resistance",
+    "es": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, critical damage, Fire, Water elemental damage, BB gauge, damage taken boosts BB gauge, OD gauge & 80% KO resistance",
+    "id": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, critical damage, Fire, Water elemental damage, BB gauge, damage taken boosts BB gauge, OD gauge & 80% KO resistance",
+    "pt": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, critical damage, Fire, Water elemental damage, BB gauge, damage taken boosts BB gauge, OD gauge & 80% KO resistance",
+    "th": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, critical damage, Fire, Water elemental damage, BB gauge, damage taken boosts BB gauge, OD gauge & 80% KO resistance",
+    "vi": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, critical damage, Fire, Water elemental damage, BB gauge, damage taken boosts BB gauge, OD gauge & 80% KO resistance"
+  },
+  "MST_SKILLS_3810808_NAME": {
+    "en": "Vanguard of Akras",
+    "es": "Vanguard of Akras",
+    "id": "Vanguard of Akras",
+    "pt": "Vanguard of Akras",
+    "th": "Vanguard of Akras",
+    "vi": "Vanguard of Akras"
   },
   "MST_SKILLS_3810828_DESCRIPTION": {
     "en": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Rec relative to Def, spark damage, Fire, Thunder elemental damage, OD gauge, raises normal hit amount, inflicts Atk, Def reduction, massive DoT on all foes & perform 1 extra action within the same turn ",
@@ -89143,6 +89199,22 @@
     "th": "Waxen Xoanon",
     "vi": "Waxen Xoanon"
   },
+  "MST_SKILLS_810808_DESCRIPTION": {
+    "en": "16 combo Fire attack on all foes (damage relative to remaining HP), adds Fire barrier, boosts BB Atk for 3 turns, boosts BC, HC drop rate for 3 turns, spark damage fills BB gauge for 3 turns & boosts own Atk, Def, Rec and critical rate for 3 turns",
+    "es": "16 combo Fire attack on all foes (damage relative to remaining HP), adds Fire barrier, boosts BB Atk for 3 turns, boosts BC, HC drop rate for 3 turns, spark damage fills BB gauge for 3 turns & boosts own Atk, Def, Rec and critical rate for 3 turns",
+    "id": "16 combo Fire attack on all foes (damage relative to remaining HP), adds Fire barrier, boosts BB Atk for 3 turns, boosts BC, HC drop rate for 3 turns, spark damage fills BB gauge for 3 turns & boosts own Atk, Def, Rec and critical rate for 3 turns",
+    "pt": "16 combo Fire attack on all foes (damage relative to remaining HP), adds Fire barrier, boosts BB Atk for 3 turns, boosts BC, HC drop rate for 3 turns, spark damage fills BB gauge for 3 turns & boosts own Atk, Def, Rec and critical rate for 3 turns",
+    "th": "16 combo Fire attack on all foes (damage relative to remaining HP), adds Fire barrier, boosts BB Atk for 3 turns, boosts BC, HC drop rate for 3 turns, spark damage fills BB gauge for 3 turns & boosts own Atk, Def, Rec and critical rate for 3 turns",
+    "vi": "16 combo Fire attack on all foes (damage relative to remaining HP), adds Fire barrier, boosts BB Atk for 3 turns, boosts BC, HC drop rate for 3 turns, spark damage fills BB gauge for 3 turns & boosts own Atk, Def, Rec and critical rate for 3 turns"
+  },
+  "MST_SKILLS_810808_NAME": {
+    "en": "Volcano Blazer",
+    "es": "Volcano Blazer",
+    "id": "Volcano Blazer",
+    "pt": "Volcano Blazer",
+    "th": "Volcano Blazer",
+    "vi": "Volcano Blazer"
+  },
   "MST_SKILLS_810827_DESCRIPTION": {
     "en": "13 combo Fire attack on all foes (damage relative to remaining HP), probable 1 turn Atk, Def reduction infliction for 3 turns, raises normal hit amount for 3 turns, normal attacks hits all foes for 3 turns & 2 turns active healing reduction infliction (PvP modes only)",
     "es": "13 combo Fire attack on all foes (damage relative to remaining HP), probable 1 turn Atk, Def reduction infliction for 3 turns, raises normal hit amount for 3 turns, normal attacks hits all foes for 3 turns & 2 turns active healing reduction infliction (PvP modes only)",
@@ -90375,6 +90447,22 @@
     "th": "Volatile Variable",
     "vi": "Volatile Variable"
   },
+  "MST_SKILLS_820808_DESCRIPTION": {
+    "en": "12 combo Water attack on all foes (damage relative to remaining HP), boosts BB Atk for 3 turns, fills BB gauge, fills BB gauge for 3 turns, 100% critical, elemental damage reduction for 3 turns & fills OD gauge",
+    "es": "12 combo Water attack on all foes (damage relative to remaining HP), boosts BB Atk for 3 turns, fills BB gauge, fills BB gauge for 3 turns, 100% critical, elemental damage reduction for 3 turns & fills OD gauge",
+    "id": "12 combo Water attack on all foes (damage relative to remaining HP), boosts BB Atk for 3 turns, fills BB gauge, fills BB gauge for 3 turns, 100% critical, elemental damage reduction for 3 turns & fills OD gauge",
+    "pt": "12 combo Water attack on all foes (damage relative to remaining HP), boosts BB Atk for 3 turns, fills BB gauge, fills BB gauge for 3 turns, 100% critical, elemental damage reduction for 3 turns & fills OD gauge",
+    "th": "12 combo Water attack on all foes (damage relative to remaining HP), boosts BB Atk for 3 turns, fills BB gauge, fills BB gauge for 3 turns, 100% critical, elemental damage reduction for 3 turns & fills OD gauge",
+    "vi": "12 combo Water attack on all foes (damage relative to remaining HP), boosts BB Atk for 3 turns, fills BB gauge, fills BB gauge for 3 turns, 100% critical, elemental damage reduction for 3 turns & fills OD gauge"
+  },
+  "MST_SKILLS_820808_NAME": {
+    "en": "Dragon Demon's Slash",
+    "es": "Dragon Demon's Slash",
+    "id": "Dragon Demon's Slash",
+    "pt": "Dragon Demon's Slash",
+    "th": "Dragon Demon's Slash",
+    "vi": "Dragon Demon's Slash"
+  },
   "MST_SKILLS_820837_DESCRIPTION": {
     "en": "12 combo Water attack on all foes (damage relative to remaining HP), 5 combo Water attack on single foe, boosts own spark damage for 3 turns, fills own BB gauge to max & boosts own Atk and critical rate for 3 turns",
     "es": "12 combo Water attack on all foes (damage relative to remaining HP), 5 combo Water attack on single foe, boosts own spark damage for 3 turns, fills own BB gauge to max & boosts own Atk and critical rate for 3 turns",
@@ -90654,37 +90742,5 @@
     "pt": "17 combo Earth attack on all foes (enormously boosts own critical hit rate), normal attacks hit all foes for 3 turns, considerably raises normal hit amount for 3 turns, adds probable 1 turn great Atk, Def reduction to attack for 3 turns & boosts critical damage of Earth types for 3 turns",
     "th": "17 combo Earth attack on all foes (enormously boosts own critical hit rate), normal attacks hit all foes for 3 turns, considerably raises normal hit amount for 3 turns, adds probable 1 turn great Atk, Def reduction to attack for 3 turns & boosts critical damage of Earth types for 3 turns",
     "vi": "17 combo Earth attack on all foes (enormously boosts own critical hit rate), normal attacks hit all foes for 3 turns, considerably raises normal hit amount for 3 turns, adds probable 1 turn great Atk, Def reduction to attack for 3 turns & boosts critical damage of Earth types for 3 turns"
-  },
-  "MST_SKILLS_830278_NAME": {
-    "en": "Malarial Barrage",
-    "es": "Malarial Barrage",
-    "id": "Berondongan Malaria",
-    "pt": "Malarial Barrage",
-    "th": "มาลาไรอัล บาราจ",
-    "vi": "Malarial Barrage"
-  },
-  "MST_SKILLS_830287_DESCRIPTION": {
-    "en": "13 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns & damage taken may slightly restore HP for 3 turns",
-    "es": "13 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns & damage taken may slightly restore HP for 3 turns",
-    "id": "13 kombo serangan Bumi kuat ke semua musuh, 3 giliran: amat menambah Serang, Tahan, Pulih tipe Bumi, ekstra jumbo pukulan ampuh tipe Bumi, kerusakan diderita dapat agak pulihkan HP",
-    "pt": "13 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns & damage taken may slightly restore HP for 3 turns",
-    "th": "13 คอมโบ โจมตีธาตุดินอย่างแรง ใส่ศัตรูทั้งหมด, เพิ่มค่าอย่างมากให้ โจมตี, ป้องกัน, ฟื้นฟู ของชนิด ดิน นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ อัตราเกิดคริติคอล ของชนิด ดิน นาน 3 เทิร์น และ ความเสียหายที่ได้รับ อาจฟื้นคืน HP เล็กน้อย นาน 3 เทิร์น",
-    "vi": "13 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns & damage taken may slightly restore HP for 3 turns"
-  },
-  "MST_SKILLS_830287_NAME": {
-    "en": "Debris Typhoon",
-    "es": "Debris Typhoon",
-    "id": "Taifun Puing",
-    "pt": "Debris Typhoon",
-    "th": "เดบริส ไทฟูน",
-    "vi": "Debris Typhoon"
-  },
-  "MST_SKILLS_830288_DESCRIPTION": {
-    "en": "16 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns, damage taken may slightly restore HP for 3 turns & boosts max HP",
-    "es": "16 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns, damage taken may slightly restore HP for 3 turns & boosts max HP",
-    "id": "16 kombo serangan Bumi kuat ke semua musuh, 3 giliran: amat menambah Serang, Tahan, Pulih tipe Bumi, ekstra jumbo pukulan ampuh tipe Bumi, kerusakan diderita dapat agak pulihkan HP, menambah HP maks",
-    "pt": "16 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns, damage taken may slightly restore HP for 3 turns & boosts max HP",
-    "th": "16 คอมโบ โจมตีธาตุดินอย่างแรง ใส่ศัตรูทั้งหมด, เพิ่มค่าอย่างมากให้ โจมตี, ป้องกัน, ฟื้นฟู ของชนิด ดิน นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ อัตราเกิดคริติคอล ของชนิด ดิน นาน 3 เทิร์น, ความเสียหายที่ได้รับ อาจฟื้นคืน HP เล็กน้อย นาน 3 เทิร์น และ เพิ่มค่า HP สูงสุด",
-    "vi": "16 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns, damage taken may slightly restore HP for 3 turns & boosts max HP"
   }
 }

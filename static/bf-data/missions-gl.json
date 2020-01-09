@@ -29105,7 +29105,7 @@
     "land": "Vortex",
     "mimic_info": {},
     "name": "Soul Sanctuary Lv. 1",
-    "xp": 3500,
+    "xp": 5250,
     "zel": 0
   },
   "100051": {
@@ -29122,7 +29122,7 @@
     "land": "Vortex",
     "mimic_info": {},
     "name": "Soul Sanctuary Lv. 2",
-    "xp": 6400,
+    "xp": 9600,
     "zel": 0
   },
   "100052": {
@@ -29139,7 +29139,7 @@
     "land": "Vortex",
     "mimic_info": {},
     "name": "Soul Sanctuary Lv. 3",
-    "xp": 9200,
+    "xp": 13800,
     "zel": 0
   },
   "100053": {
@@ -29156,7 +29156,7 @@
     "land": "Vortex",
     "mimic_info": {},
     "name": "Soul Sanctuary Lv. 4",
-    "xp": 13200,
+    "xp": 19800,
     "zel": 0
   },
   "100100": {
@@ -40629,6 +40629,77 @@
     "xp": 0,
     "zel": 0
   },
+  "1007000": {
+    "area": "Frontier Hunter",
+    "battle_count": 5,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": " You're at the entrance to the mysterious area that appeared beyond the Vortex Gate. The beasts here are somewhat weak, but nevertheless you mustn't be careless.",
+    "difficulty": 1,
+    "dungeon": "1007000",
+    "energy_use": 0,
+    "id": "1007000",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Uncharted Frontier - Entrance 70",
+    "xp": 0,
+    "zel": 0
+  },
+  "1007001": {
+    "area": "Frontier Hunter",
+    "battle_count": 5,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "You're nearing the center of the mysterious area that appeared beyond the Vortex Gate. Who knows what could be waiting for you in this uncharted frontier…",
+    "difficulty": 1,
+    "dungeon": "1007000",
+    "energy_use": 0,
+    "id": "1007001",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Uncharted Frontier - Middle 70",
+    "requires": "1007000",
+    "xp": 0,
+    "zel": 0
+  },
+  "1007002": {
+    "area": "Frontier Hunter",
+    "battle_count": 5,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "You're nearing the end of the mysterious area that appeared beyond the Vortex Gate. Mad beasts far more powerful than those you've come across before await you.",
+    "difficulty": 1,
+    "dungeon": "1007000",
+    "energy_use": 0,
+    "id": "1007002",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Uncharted Frontier - End 70",
+    "requires": "1007001",
+    "xp": 0,
+    "zel": 0
+  },
+  "1007003": {
+    "area": "Frontier Hunter",
+    "battle_count": 6,
+    "clear_bonus": [],
+    "continue": true,
+    "desc": "You're at the end of the mysterious area that appeared beyond the Vortex Gate. The air shakes as an awesome force descends upon you.",
+    "difficulty": 1,
+    "dungeon": "1007000",
+    "energy_use": 0,
+    "id": "1007003",
+    "karma": 0,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "Uncharted Frontier - Terminus 70",
+    "requires": "1007002",
+    "xp": 0,
+    "zel": 0
+  },
   "2000000": {
     "area": "Trial Test",
     "battle_count": 1,
@@ -46498,6 +46569,52 @@
     "mimic_info": {},
     "name": "[Hard] The Curse Master",
     "requires": "8301640",
+    "xp": 6000,
+    "zel": 6000
+  },
+  "8301650": {
+    "area": "800165",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "unit": {
+          "count": "1",
+          "id": "820808"
+        }
+      }
+    ],
+    "continue": true,
+    "desc": "An otherworldly visitor of an unknown, robotic nature has arrived on the plains of Grand Gaia. Who exactly are they?",
+    "difficulty": 1,
+    "dungeon": "800165",
+    "energy_use": 25,
+    "id": "8301650",
+    "karma": 1000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "The Warmonger",
+    "xp": 2000,
+    "zel": 2000
+  },
+  "8301651": {
+    "area": "800165",
+    "battle_count": 1,
+    "clear_bonus": [
+      {
+        "gem": "3"
+      }
+    ],
+    "continue": false,
+    "desc": "For inexplicable reasons, memories of your fight against Zaad seem to have blurred. The Warmonger might be stronger than you originally remembered…",
+    "difficulty": 1,
+    "dungeon": "800165",
+    "energy_use": 50,
+    "id": "8301651",
+    "karma": 3000,
+    "land": "Vortex",
+    "mimic_info": {},
+    "name": "[Hard] The Warmonger",
+    "requires": "8301650",
     "xp": 6000,
     "zel": 6000
   },
