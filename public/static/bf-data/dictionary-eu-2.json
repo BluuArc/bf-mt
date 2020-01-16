@@ -1,4 +1,148 @@
 {
+  "MST_LEADERSKILLS_504_NAME": {
+    "en": "Earth's Protection",
+    "es": "Blindaje pétreo",
+    "id": "Proteksi Bumi",
+    "pt": "Proteção da Terra",
+    "th": "เอิร์ธโพรเทคชั่น",
+    "vi": "sự bảo vệ của đất "
+  },
+  "MST_LEADERSKILLS_505_DESCRIPTION": {
+    "en": "15% reduction in damage from Earth Types",
+    "es": "Reduce un 15 % el daño infligido a las unidades de tierra.",
+    "id": "15% pengurangan untuk kerusakan dari Tipe Bumi",
+    "pt": "15% de redução no dano de tipo Terra",
+    "th": "15% ลดค่าความเสียหายจากประเภทดิน",
+    "vi": "15% giảm thiệt hại từ các loại đất "
+  },
+  "MST_LEADERSKILLS_505_NAME": {
+    "en": "Earth Barrier",
+    "es": "Barrera pétrea",
+    "id": "Penghalang Bumi",
+    "pt": "Barreira da Terra",
+    "th": "เอิร์ธบาเรีย",
+    "vi": "Rào chắn đất "
+  },
+  "MST_LEADERSKILLS_506_DESCRIPTION": {
+    "en": "10% reduction in damage from Thunder Types",
+    "es": "Reduce un 10 % el daño infligido a las unidades de trueno.",
+    "id": "10% pengurangan untuk kerusakan dari Tipe Guntur",
+    "pt": "10% de redução no dano de tipo Trovão",
+    "th": "10% ลดค่าความเสียหายจากประเภทสายฟ้า",
+    "vi": "10% giảm thiệt hại từ các loại sấm "
+  },
+  "MST_LEADERSKILLS_506_NAME": {
+    "en": "Thunder's Protection",
+    "es": "Blindaje de rayo",
+    "id": "Proteksi Guntur",
+    "pt": "Proteção do Trovão",
+    "th": "ทันเดอร์โพรเทคชั่น",
+    "vi": "Sự bảo vệ của sấm "
+  },
+  "MST_LEADERSKILLS_507_DESCRIPTION": {
+    "en": "15% reduction in damage from Thunder Types",
+    "es": "Reduce un 15 % el daño infligido a las unidades de trueno.",
+    "id": "15% pengurangan untuk kerusakan dari Tipe Guntur",
+    "pt": "15% de redução no dano de tipo Trovão",
+    "th": "15% ลดค่าความเสียหายจากประเภทสายฟ้า",
+    "vi": "15% giảm thiệt hại từ các loại sấm "
+  },
+  "MST_LEADERSKILLS_507_NAME": {
+    "en": "Thunder Barrier",
+    "es": "Barrera eléctrica",
+    "id": "Penghalang Guntur",
+    "pt": "Barreira do Trovão",
+    "th": "ทันเดอร์บาเรีย",
+    "vi": "rào chắn sấm "
+  },
+  "MST_LEADERSKILLS_508_DESCRIPTION": {
+    "en": "10% reduction in damage from Light Types",
+    "es": "Reduce un 10 % el daño infligido a las unidades de luz.",
+    "id": "10% pengurangan untuk kerusakan dari Tipe Terang",
+    "pt": "10% de redução no dano de tipo Luz",
+    "th": "10% ลดค่าความเสียหายจากประเภทแสง",
+    "vi": "10% giảm thiệt hại từ các loại ánh sáng "
+  },
+  "MST_LEADERSKILLS_508_NAME": {
+    "en": "Light's Protection",
+    "es": "Blindaje de luz",
+    "id": "Proteksi Terang",
+    "pt": "Proteção da Luz",
+    "th": "ไลท์โพรเทคชั่น",
+    "vi": "sự bảo vệ của ánh sáng "
+  },
+  "MST_LEADERSKILLS_509_DESCRIPTION": {
+    "en": "15% reduction in damage from Light Types",
+    "es": "Reduce un 15 % el daño infligido a las unidades de luz.",
+    "id": "15% pengurangan untuk kerusakan dari Tipe Terang",
+    "pt": "15% de redução no dano de tipo Luz",
+    "th": "15% ลดค่าความเสียหายจากประเภทแสง",
+    "vi": "15%giảm thiệt hại từ các loại ánh sáng "
+  },
+  "MST_LEADERSKILLS_509_NAME": {
+    "en": "Light Barrier",
+    "es": "Barrera de luz",
+    "id": "Penghalang Terang",
+    "pt": "Barreira da Luz",
+    "th": "ไลท์บาเรีย",
+    "vi": "rào chắn ánh sáng "
+  },
+  "MST_LEADERSKILLS_5100_DESCRIPTION": {
+    "en": "Chance of BB gauge greatly filling after defeating an enemy",
+    "es": "Posibilidad de llenado considerable de indicador BB al derrotar a un enemigo.",
+    "id": "Kans meteran BB sangat terisi setelah mengalahkan musuh",
+    "pt": "Chance de preencher grande parte da barra de BB ao derrotar um inimigo",
+    "th": "มีโอกาสที่เกจ BB จะเติมอย่างมาก หลังจากกำจัดศัตรูได้",
+    "vi": "Tăng nhiều khả năng nạp đầy vạch Tăng cường can đảm sau khi đánh bại kẻ thù"
+  },
+  "MST_LEADERSKILLS_5100_NAME": {
+    "en": "Major Energy Absorption",
+    "es": "Absorción mayor de energía",
+    "id": "Absorpsi Energi Mayor",
+    "pt": "Absorção Maior de Energia",
+    "th": "เมเจอร์เอนเนอจี้แอบซอร์บชั่น",
+    "vi": "Hấp thụ năng lượng lớn"
+  },
+  "MST_LEADERSKILLS_5101_DESCRIPTION": {
+    "en": "Chance of BB gauge hugely filling after defeating an enemy",
+    "es": "Posibilidad de llenado formidable de indicador BB al derrotar a un enemigo.",
+    "id": "Kans meteran BB super terisi setelah mengalahkan musuh",
+    "pt": "Chance de preencher grande parte da barra de BB ao derrotar um inimigo",
+    "th": "มีโอกาสที่เกจ BB จะเติมอย่างมหาศาล หลังจากกำจัดศัตรูได้",
+    "vi": "Tăng rất nhiều khả năng nạp đầy vạch Tăng cường can đảm sau khi đánh bại kẻ thù"
+  },
+  "MST_LEADERSKILLS_5101_NAME": {
+    "en": "Critical Energy Absorption",
+    "es": "Absorción crítica de energía",
+    "id": "Absorpsi Energi Kritis",
+    "pt": "Absorção Crítica de Energia",
+    "th": "คริติคอลเอนเนอจี้แอบซอร์บชั่น",
+    "vi": "Hấp thụ năng lượng tới hạn"
+  },
+  "MST_LEADERSKILLS_510_DESCRIPTION": {
+    "en": "10% reduction in damage from Dark Types",
+    "es": "Reduce un 10 % el daño infligido a las unidades del mal.",
+    "id": "10% pengurangan untuk kerusakan dari Tipe Gelap",
+    "pt": "10% de redução no dano de tipo Sombra",
+    "th": "10% ลดค่าความเสียหายจากประเภทความมืด",
+    "vi": "10% giảm thiệt hại từ các loại ánh sáng "
+  },
+  "MST_LEADERSKILLS_510_NAME": {
+    "en": "Dark Protection",
+    "es": "Blindaje oscuro",
+    "id": "Proteksi Gelap",
+    "pt": "Proteção das Sombras",
+    "th": "ดาร์กโพรเทคชั่น",
+    "vi": "sự bảo vệ của bóng tối "
+  },
+  "MST_LEADERSKILLS_511_DESCRIPTION": {
+    "en": "15% reduction in damage from Dark Types",
+    "es": "Reduce un 15 % el daño infligido a las unidades del mal.",
+    "id": "15% pengurangan untuk kerusakan dari Tipe Gelap",
+    "pt": "15% de redução no dano de tipo Sombra",
+    "th": "15% ลดค่าความเสียหายจากประเภทความมืด",
+    "vi": "15% giảm thiệt hại từ các loại bóng tối "
+  },
   "MST_LEADERSKILLS_511_NAME": {
     "en": "Dark Barrier",
     "es": "Barrera oscura",
@@ -10159,6 +10303,38 @@
     "th": "Summoner of Old: Sapphire",
     "vi": "Summoner of Old: Sapphire"
   },
+  "MST_LEADERSKILLS_820827_DESCRIPTION": {
+    "en": "120% Atk, max HP, 100% Def and 30% critical rate (Water), 10% damage reduction from Fire, Water types, 10% DoT reduction, probable spark critical & 150% spark damage",
+    "es": "120% Atk, max HP, 100% Def and 30% critical rate (Water), 10% damage reduction from Fire, Water types, 10% DoT reduction, probable spark critical & 150% spark damage",
+    "id": "120% Atk, max HP, 100% Def and 30% critical rate (Water), 10% damage reduction from Fire, Water types, 10% DoT reduction, probable spark critical & 150% spark damage",
+    "pt": "120% Atk, max HP, 100% Def and 30% critical rate (Water), 10% damage reduction from Fire, Water types, 10% DoT reduction, probable spark critical & 150% spark damage",
+    "th": "120% Atk, max HP, 100% Def and 30% critical rate (Water), 10% damage reduction from Fire, Water types, 10% DoT reduction, probable spark critical & 150% spark damage",
+    "vi": "120% Atk, max HP, 100% Def and 30% critical rate (Water), 10% damage reduction from Fire, Water types, 10% DoT reduction, probable spark critical & 150% spark damage"
+  },
+  "MST_LEADERSKILLS_820827_NAME": {
+    "en": "Soul Arch",
+    "es": "Soul Arch",
+    "id": "Soul Arch",
+    "pt": "Soul Arch",
+    "th": "Soul Arch",
+    "vi": "Soul Arch"
+  },
+  "MST_LEADERSKILLS_820828_DESCRIPTION": {
+    "en": "150% Atk, max HP, 120% Def and 30% critical rate (Water), 20% damage reduction from Fire, Water types, 15% DoT reduction, probable spark critical, 250% spark damage & 135% ABP, 80% CBP gain",
+    "es": "150% Atk, max HP, 120% Def and 30% critical rate (Water), 20% damage reduction from Fire, Water types, 15% DoT reduction, probable spark critical, 250% spark damage & 135% ABP, 80% CBP gain",
+    "id": "150% Atk, max HP, 120% Def and 30% critical rate (Water), 20% damage reduction from Fire, Water types, 15% DoT reduction, probable spark critical, 250% spark damage & 135% ABP, 80% CBP gain",
+    "pt": "150% Atk, max HP, 120% Def and 30% critical rate (Water), 20% damage reduction from Fire, Water types, 15% DoT reduction, probable spark critical, 250% spark damage & 135% ABP, 80% CBP gain",
+    "th": "150% Atk, max HP, 120% Def and 30% critical rate (Water), 20% damage reduction from Fire, Water types, 15% DoT reduction, probable spark critical, 250% spark damage & 135% ABP, 80% CBP gain",
+    "vi": "150% Atk, max HP, 120% Def and 30% critical rate (Water), 20% damage reduction from Fire, Water types, 15% DoT reduction, probable spark critical, 250% spark damage & 135% ABP, 80% CBP gain"
+  },
+  "MST_LEADERSKILLS_820828_NAME": {
+    "en": "Endless Summer",
+    "es": "Endless Summer",
+    "id": "Endless Summer",
+    "pt": "Endless Summer",
+    "th": "Endless Summer",
+    "vi": "Endless Summer"
+  },
   "MST_LEADERSKILLS_820837_DESCRIPTION": {
     "en": "150% Atk, 100% max HP, 30% critical rate, raises normal hit amount, 150% spark damage & 150% critical damage",
     "es": "150% Atk, 100% max HP, 30% critical rate, raises normal hit amount, 150% spark damage & 150% critical damage",
@@ -12704,12 +12880,12 @@
     "vi": "Candenti Umbrae"
   },
   "MST_LEADERSKILLS_860048_DESCRIPTION": {
-    "en": "150% boost to Atk, 80% boost to Def, max HP of Dark types, 20% damage reduction from Light, Dark types, raises normal hit amount, probable normal attack on all foes & considerably boosts ABP and CBP gain",
-    "es": "150% boost to Atk, 80% boost to Def, max HP of Dark types, 20% damage reduction from Light, Dark types, raises normal hit amount, probable normal attack on all foes & considerably boosts ABP and CBP gain",
-    "id": "150% boost to Atk, 80% boost to Def, max HP of Dark types, 20% damage reduction from Light, Dark types, raises normal hit amount, probable normal attack on all foes & considerably boosts ABP and CBP gain",
-    "pt": "150% boost to Atk, 80% boost to Def, max HP of Dark types, 20% damage reduction from Light, Dark types, raises normal hit amount, probable normal attack on all foes & considerably boosts ABP and CBP gain",
-    "th": "150% boost to Atk, 80% boost to Def, max HP of Dark types, 20% damage reduction from Light, Dark types, raises normal hit amount, probable normal attack on all foes & considerably boosts ABP and CBP gain",
-    "vi": "150% boost to Atk, 80% boost to Def, max HP of Dark types, 20% damage reduction from Light, Dark types, raises normal hit amount, probable normal attack on all foes & considerably boosts ABP and CBP gain"
+    "en": "200% Atk, 80% Def, max HP (Dark), 20% damage reduction from Light, Dark types, raises normal hit amount, normal attacks may hit all foes & 100% ABP, 50% CBP gain",
+    "es": "200% Atk, 80% Def, max HP (Dark), 20% damage reduction from Light, Dark types, raises normal hit amount, normal attacks may hit all foes & 100% ABP, 50% CBP gain",
+    "id": "200% Atk, 80% Def, max HP (Dark), 20% damage reduction from Light, Dark types, raises normal hit amount, normal attacks may hit all foes & 100% ABP, 50% CBP gain",
+    "pt": "200% Atk, 80% Def, max HP (Dark), 20% damage reduction from Light, Dark types, raises normal hit amount, normal attacks may hit all foes & 100% ABP, 50% CBP gain",
+    "th": "200% Atk, 80% Def, max HP (Dark), 20% damage reduction from Light, Dark types, raises normal hit amount, normal attacks may hit all foes & 100% ABP, 50% CBP gain",
+    "vi": "200% Atk, 80% Def, max HP (Dark), 20% damage reduction from Light, Dark types, raises normal hit amount, normal attacks may hit all foes & 100% ABP, 50% CBP gain"
   },
   "MST_LEADERSKILLS_860048_NAME": {
     "en": "Tenebris Ignis",
@@ -90626,118 +90802,6 @@
   "MST_MONSTERS_52402_NAME": {
     "en": "Cait Sith",
     "es": "Gato Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคท สิธ",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52403_NAME": {
-    "en": "Cait Sith",
-    "es": "Gato Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคท สิธ",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52404_NAME": {
-    "en": "Cait Sith",
-    "es": "Gato Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคท สิธ",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52405_NAME": {
-    "en": "Cait Sith",
-    "es": "Gato Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคท สิธ",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52406_NAME": {
-    "en": "Cait Sith",
-    "es": "Gato Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคท สิธ",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52407_NAME": {
-    "en": "Cait Sith",
-    "es": "Gato Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคท สิธ",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52408_NAME": {
-    "en": "Cait Sith",
-    "es": "Cait Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคท สิธ",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52409_NAME": {
-    "en": "Cait Sith",
-    "es": "Cait Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคท สิธ",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52410_NAME": {
-    "en": "Cait Sith",
-    "es": "Cait Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคท สิธ",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52411_NAME": {
-    "en": "Cait Sith",
-    "es": "Cait Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคท สิธ",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52412_NAME": {
-    "en": "Cait Sith",
-    "es": "Cait Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคท สิธ",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52413_NAME": {
-    "en": "Cait Sith",
-    "es": "Cait Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคท สิธ",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52414_NAME": {
-    "en": "Cait Sith",
-    "es": "Cait Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคท สิธ",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52415_NAME": {
-    "en": "Cait Sith",
-    "es": "Cait Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคท สิธ",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52416_NAME": {
-    "en": "Cait Sith",
-    "es": "Cait Sith",
     "id": "Cait Sith",
     "pt": "Cait Sith",
     "th": "เคท สิธ",

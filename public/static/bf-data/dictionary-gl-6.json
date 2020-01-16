@@ -1,20 +1,4 @@
 {
-  "MST_SKILLS_2840557_NAME": {
-    "en": "Thunderbird's Judgment",
-    "es": "Thunderbird's Judgment",
-    "id": "Thunderbird's Judgment",
-    "pt": "Thunderbird's Judgment",
-    "th": "Thunderbird's Judgment",
-    "vi": "Thunderbird's Judgment"
-  },
-  "MST_SKILLS_2840558_DESCRIPTION": {
-    "en": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
-    "es": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
-    "id": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
-    "pt": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
-    "th": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
-    "vi": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns"
-  },
   "MST_SKILLS_2840558_NAME": {
     "en": "Thunderbird's Wrath",
     "es": "Thunderbird's Wrath",
@@ -1544,12 +1528,12 @@
     "vi": "Nightblade Guillotine"
   },
   "MST_SKILLS_2860048_DESCRIPTION": {
-    "en": "21 combo massive Dark attack on all foes, normal attacks hit all foes for 3 turns, enormously boosts critical damage for 3 turns, considerably raises normal hit amount for 3 turns & enormously boosts Atk, Def, Rec for 3 turns",
-    "es": "21 combo massive Dark attack on all foes, normal attacks hit all foes for 3 turns, enormously boosts critical damage for 3 turns, considerably raises normal hit amount for 3 turns & enormously boosts Atk, Def, Rec for 3 turns",
-    "id": "21 combo massive Dark attack on all foes, normal attacks hit all foes for 3 turns, enormously boosts critical damage for 3 turns, considerably raises normal hit amount for 3 turns & enormously boosts Atk, Def, Rec for 3 turns",
-    "pt": "21 combo massive Dark attack on all foes, normal attacks hit all foes for 3 turns, enormously boosts critical damage for 3 turns, considerably raises normal hit amount for 3 turns & enormously boosts Atk, Def, Rec for 3 turns",
-    "th": "21 combo massive Dark attack on all foes, normal attacks hit all foes for 3 turns, enormously boosts critical damage for 3 turns, considerably raises normal hit amount for 3 turns & enormously boosts Atk, Def, Rec for 3 turns",
-    "vi": "21 combo massive Dark attack on all foes, normal attacks hit all foes for 3 turns, enormously boosts critical damage for 3 turns, considerably raises normal hit amount for 3 turns & enormously boosts Atk, Def, Rec for 3 turns"
+    "en": "21 combo Dark attack on all foes, normal attacks hits all foes for 3 turns, boosts critical damage for 3 turns, raises normal hit amount for 3 turns, boosts Atk, Def, Rec and critical rate for 3 turns & 3 turns DoT infliction",
+    "es": "21 combo Dark attack on all foes, normal attacks hits all foes for 3 turns, boosts critical damage for 3 turns, raises normal hit amount for 3 turns, boosts Atk, Def, Rec and critical rate for 3 turns & 3 turns DoT infliction",
+    "id": "21 combo Dark attack on all foes, normal attacks hits all foes for 3 turns, boosts critical damage for 3 turns, raises normal hit amount for 3 turns, boosts Atk, Def, Rec and critical rate for 3 turns & 3 turns DoT infliction",
+    "pt": "21 combo Dark attack on all foes, normal attacks hits all foes for 3 turns, boosts critical damage for 3 turns, raises normal hit amount for 3 turns, boosts Atk, Def, Rec and critical rate for 3 turns & 3 turns DoT infliction",
+    "th": "21 combo Dark attack on all foes, normal attacks hits all foes for 3 turns, boosts critical damage for 3 turns, raises normal hit amount for 3 turns, boosts Atk, Def, Rec and critical rate for 3 turns & 3 turns DoT infliction",
+    "vi": "21 combo Dark attack on all foes, normal attacks hits all foes for 3 turns, boosts critical damage for 3 turns, raises normal hit amount for 3 turns, boosts Atk, Def, Rec and critical rate for 3 turns & 3 turns DoT infliction"
   },
   "MST_SKILLS_2860048_NAME": {
     "en": "Masque-Ripping Execution",
@@ -21638,6 +21622,22 @@
     "pt": "Liquid Silver Nightmare",
     "th": "Liquid Silver Nightmare",
     "vi": "Liquid Silver Nightmare"
+  },
+  "MST_SKILLS_3820828_DESCRIPTION": {
+    "en": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, critical damage, Atk, Def, Rec relative to max HP, raises normal hit amount, normal attacks hit all foes, 100% evasion, inflicts Atk, Def reduction, massive DoT on all foes & 100% DoT reduction",
+    "es": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, critical damage, Atk, Def, Rec relative to max HP, raises normal hit amount, normal attacks hit all foes, 100% evasion, inflicts Atk, Def reduction, massive DoT on all foes & 100% DoT reduction",
+    "id": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, critical damage, Atk, Def, Rec relative to max HP, raises normal hit amount, normal attacks hit all foes, 100% evasion, inflicts Atk, Def reduction, massive DoT on all foes & 100% DoT reduction",
+    "pt": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, critical damage, Atk, Def, Rec relative to max HP, raises normal hit amount, normal attacks hit all foes, 100% evasion, inflicts Atk, Def reduction, massive DoT on all foes & 100% DoT reduction",
+    "th": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, critical damage, Atk, Def, Rec relative to max HP, raises normal hit amount, normal attacks hit all foes, 100% evasion, inflicts Atk, Def reduction, massive DoT on all foes & 100% DoT reduction",
+    "vi": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, critical damage, Atk, Def, Rec relative to max HP, raises normal hit amount, normal attacks hit all foes, 100% evasion, inflicts Atk, Def reduction, massive DoT on all foes & 100% DoT reduction"
+  },
+  "MST_SKILLS_3820828_NAME": {
+    "en": "Conflicted Philosophy",
+    "es": "Conflicted Philosophy",
+    "id": "Conflicted Philosophy",
+    "pt": "Conflicted Philosophy",
+    "th": "Conflicted Philosophy",
+    "vi": "Conflicted Philosophy"
   },
   "MST_SKILLS_3830528_DESCRIPTION": {
     "en": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical damage, Earth elemental damage, BB gauge, 80% KO resistance, 80% evasion, 80% activates BB/SBB/UBB twice, 80% raises allies from KO & purges turn skip effect",
@@ -90463,6 +90463,38 @@
     "th": "Dragon Demon's Slash",
     "vi": "Dragon Demon's Slash"
   },
+  "MST_SKILLS_820827_DESCRIPTION": {
+    "en": "14 combo Water attack on all foes (damage relative to remaining HP), probable 3 turns Atk, Def reduction infliction, 20% DoT reduction for 2 turns, boosts Atk, Def, Rec relative to max HP for 3 turns & 2 turns max HP reduction infliction (PvP modes only)",
+    "es": "14 combo Water attack on all foes (damage relative to remaining HP), probable 3 turns Atk, Def reduction infliction, 20% DoT reduction for 2 turns, boosts Atk, Def, Rec relative to max HP for 3 turns & 2 turns max HP reduction infliction (PvP modes only)",
+    "id": "14 combo Water attack on all foes (damage relative to remaining HP), probable 3 turns Atk, Def reduction infliction, 20% DoT reduction for 2 turns, boosts Atk, Def, Rec relative to max HP for 3 turns & 2 turns max HP reduction infliction (PvP modes only)",
+    "pt": "14 combo Water attack on all foes (damage relative to remaining HP), probable 3 turns Atk, Def reduction infliction, 20% DoT reduction for 2 turns, boosts Atk, Def, Rec relative to max HP for 3 turns & 2 turns max HP reduction infliction (PvP modes only)",
+    "th": "14 combo Water attack on all foes (damage relative to remaining HP), probable 3 turns Atk, Def reduction infliction, 20% DoT reduction for 2 turns, boosts Atk, Def, Rec relative to max HP for 3 turns & 2 turns max HP reduction infliction (PvP modes only)",
+    "vi": "14 combo Water attack on all foes (damage relative to remaining HP), probable 3 turns Atk, Def reduction infliction, 20% DoT reduction for 2 turns, boosts Atk, Def, Rec relative to max HP for 3 turns & 2 turns max HP reduction infliction (PvP modes only)"
+  },
+  "MST_SKILLS_820827_NAME": {
+    "en": "Whitewave Flip",
+    "es": "Whitewave Flip",
+    "id": "Whitewave Flip",
+    "pt": "Whitewave Flip",
+    "th": "Whitewave Flip",
+    "vi": "Whitewave Flip"
+  },
+  "MST_SKILLS_820828_DESCRIPTION": {
+    "en": "16 combo Water attack on all foes (damage relative to remaining HP), adds probable 2 turns Atk, Def reduction infliction counter for 3 turns, probable 3 turns Atk, Def reduction infliction, 30% DoT reduction for 2 turns, boosts Atk, Def, Rec relative to max HP for 3 turns & 2 turns max HP reduction infliction (PvP modes only)",
+    "es": "16 combo Water attack on all foes (damage relative to remaining HP), adds probable 2 turns Atk, Def reduction infliction counter for 3 turns, probable 3 turns Atk, Def reduction infliction, 30% DoT reduction for 2 turns, boosts Atk, Def, Rec relative to max HP for 3 turns & 2 turns max HP reduction infliction (PvP modes only)",
+    "id": "16 combo Water attack on all foes (damage relative to remaining HP), adds probable 2 turns Atk, Def reduction infliction counter for 3 turns, probable 3 turns Atk, Def reduction infliction, 30% DoT reduction for 2 turns, boosts Atk, Def, Rec relative to max HP for 3 turns & 2 turns max HP reduction infliction (PvP modes only)",
+    "pt": "16 combo Water attack on all foes (damage relative to remaining HP), adds probable 2 turns Atk, Def reduction infliction counter for 3 turns, probable 3 turns Atk, Def reduction infliction, 30% DoT reduction for 2 turns, boosts Atk, Def, Rec relative to max HP for 3 turns & 2 turns max HP reduction infliction (PvP modes only)",
+    "th": "16 combo Water attack on all foes (damage relative to remaining HP), adds probable 2 turns Atk, Def reduction infliction counter for 3 turns, probable 3 turns Atk, Def reduction infliction, 30% DoT reduction for 2 turns, boosts Atk, Def, Rec relative to max HP for 3 turns & 2 turns max HP reduction infliction (PvP modes only)",
+    "vi": "16 combo Water attack on all foes (damage relative to remaining HP), adds probable 2 turns Atk, Def reduction infliction counter for 3 turns, probable 3 turns Atk, Def reduction infliction, 30% DoT reduction for 2 turns, boosts Atk, Def, Rec relative to max HP for 3 turns & 2 turns max HP reduction infliction (PvP modes only)"
+  },
+  "MST_SKILLS_820828_NAME": {
+    "en": "Whitewater Surge",
+    "es": "Whitewater Surge",
+    "id": "Whitewater Surge",
+    "pt": "Whitewater Surge",
+    "th": "Whitewater Surge",
+    "vi": "Whitewater Surge"
+  },
   "MST_SKILLS_820837_DESCRIPTION": {
     "en": "12 combo Water attack on all foes (damage relative to remaining HP), 5 combo Water attack on single foe, boosts own spark damage for 3 turns, fills own BB gauge to max & boosts own Atk and critical rate for 3 turns",
     "es": "12 combo Water attack on all foes (damage relative to remaining HP), 5 combo Water attack on single foe, boosts own spark damage for 3 turns, fills own BB gauge to max & boosts own Atk and critical rate for 3 turns",
@@ -90742,5 +90774,37 @@
     "pt": "17 combo Earth attack on all foes (enormously boosts own critical hit rate), normal attacks hit all foes for 3 turns, considerably raises normal hit amount for 3 turns, adds probable 1 turn great Atk, Def reduction to attack for 3 turns & boosts critical damage of Earth types for 3 turns",
     "th": "17 combo Earth attack on all foes (enormously boosts own critical hit rate), normal attacks hit all foes for 3 turns, considerably raises normal hit amount for 3 turns, adds probable 1 turn great Atk, Def reduction to attack for 3 turns & boosts critical damage of Earth types for 3 turns",
     "vi": "17 combo Earth attack on all foes (enormously boosts own critical hit rate), normal attacks hit all foes for 3 turns, considerably raises normal hit amount for 3 turns, adds probable 1 turn great Atk, Def reduction to attack for 3 turns & boosts critical damage of Earth types for 3 turns"
+  },
+  "MST_SKILLS_830278_NAME": {
+    "en": "Malarial Barrage",
+    "es": "Malarial Barrage",
+    "id": "Berondongan Malaria",
+    "pt": "Malarial Barrage",
+    "th": "มาลาไรอัล บาราจ",
+    "vi": "Malarial Barrage"
+  },
+  "MST_SKILLS_830287_DESCRIPTION": {
+    "en": "13 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns & damage taken may slightly restore HP for 3 turns",
+    "es": "13 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns & damage taken may slightly restore HP for 3 turns",
+    "id": "13 kombo serangan Bumi kuat ke semua musuh, 3 giliran: amat menambah Serang, Tahan, Pulih tipe Bumi, ekstra jumbo pukulan ampuh tipe Bumi, kerusakan diderita dapat agak pulihkan HP",
+    "pt": "13 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns & damage taken may slightly restore HP for 3 turns",
+    "th": "13 คอมโบ โจมตีธาตุดินอย่างแรง ใส่ศัตรูทั้งหมด, เพิ่มค่าอย่างมากให้ โจมตี, ป้องกัน, ฟื้นฟู ของชนิด ดิน นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ อัตราเกิดคริติคอล ของชนิด ดิน นาน 3 เทิร์น และ ความเสียหายที่ได้รับ อาจฟื้นคืน HP เล็กน้อย นาน 3 เทิร์น",
+    "vi": "13 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns & damage taken may slightly restore HP for 3 turns"
+  },
+  "MST_SKILLS_830287_NAME": {
+    "en": "Debris Typhoon",
+    "es": "Debris Typhoon",
+    "id": "Taifun Puing",
+    "pt": "Debris Typhoon",
+    "th": "เดบริส ไทฟูน",
+    "vi": "Debris Typhoon"
+  },
+  "MST_SKILLS_830288_DESCRIPTION": {
+    "en": "16 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns, damage taken may slightly restore HP for 3 turns & boosts max HP",
+    "es": "16 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns, damage taken may slightly restore HP for 3 turns & boosts max HP",
+    "id": "16 kombo serangan Bumi kuat ke semua musuh, 3 giliran: amat menambah Serang, Tahan, Pulih tipe Bumi, ekstra jumbo pukulan ampuh tipe Bumi, kerusakan diderita dapat agak pulihkan HP, menambah HP maks",
+    "pt": "16 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns, damage taken may slightly restore HP for 3 turns & boosts max HP",
+    "th": "16 คอมโบ โจมตีธาตุดินอย่างแรง ใส่ศัตรูทั้งหมด, เพิ่มค่าอย่างมากให้ โจมตี, ป้องกัน, ฟื้นฟู ของชนิด ดิน นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ อัตราเกิดคริติคอล ของชนิด ดิน นาน 3 เทิร์น, ความเสียหายที่ได้รับ อาจฟื้นคืน HP เล็กน้อย นาน 3 เทิร์น และ เพิ่มค่า HP สูงสุด",
+    "vi": "16 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns, damage taken may slightly restore HP for 3 turns & boosts max HP"
   }
 }
