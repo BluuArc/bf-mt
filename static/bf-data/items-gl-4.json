@@ -767,6 +767,9 @@
         "id": 62060,
         "name": "Health Codex"
       }
+    ],
+    "associated_units": [
+      "760006"
     ]
   },
   "41300": {
@@ -1605,6 +1608,9 @@
         "id": 62150,
         "name": "Daybreak Moon"
       }
+    ],
+    "associated_units": [
+      "760006"
     ]
   },
   "42100": {
@@ -2267,7 +2273,10 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_5_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "760006"
+    ]
   },
   "43700": {
     "desc": "確率で防御貫通効果を付与",
@@ -3061,6 +3070,9 @@
     "thumbnail": "sphere_thum_1_8.png",
     "type": "sphere",
     "usage": [],
+    "associated_units": [
+      "760006"
+    ],
     "first_clear_missions": [
       "2000008"
     ]
@@ -3609,7 +3621,10 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_5_5.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "760006"
+    ]
   },
   "45300": {
     "desc": "30% boost to Def, Rec and max HP & massively boosts Def when HP is below 50%",
@@ -6903,7 +6918,10 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_5_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "760006"
+    ]
   },
   "48201": {
     "desc": "30% boost to Atk, Def, Rec and max HP & boosts BB gauge when attacked each turn",
@@ -7478,7 +7496,10 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_5_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "760006"
+    ]
   },
   "48217": {
     "desc": "Negates critical damage, 30% boost to Atk, Def, Rec, max HP & damage taken considerably boosts BB gauge",
@@ -7955,7 +7976,10 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_5_2.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "760006"
+    ]
   },
   "48300": {
     "desc": "Hugely boosts attack's BC, HC drop rate, boosts BC, HC efficacy & recovers BB gauge, HP each turn",
@@ -8306,7 +8330,10 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_3_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "760006"
+    ]
   },
   "48430": {
     "desc": "40% boost to Atk, Def, Rec, max HP, boosts Atk relative to BB gauge & again relative to remaining HP",
@@ -9241,6 +9268,9 @@
         "id": 819214,
         "name": "Vision"
       }
+    ],
+    "associated_units": [
+      "760006"
     ]
   },
   "49800": {

@@ -1121,19 +1121,21 @@
     "usage": []
   },
   "800305": {
-    "desc": "Greatly replenishes a Unit's HP & boosts DEF and REC for 2 turns",
+    "desc": "Greatly replenishes a Unit's HP.",
     "effect": {
       "effect": [
         {
-          "unknown proc id": "2-5",
-          "unknown proc param": "2000,2000,0,0-0,0,20,20,0,2"
+          "heal high": 2000,
+          "heal low": 2000,
+          "proc id": "2",
+          "rec added% (from healer)": 22.5
         }
       ],
       "target_area": "single",
       "target_type": "party"
     },
     "id": 800305,
-    "max equipped": 5,
+    "max equipped": 10,
     "max_stack": 99,
     "name": "Nian Gao",
     "raid": false,
@@ -5351,17 +5353,17 @@
     ]
   },
   "818920": {
-    "desc": "Boost Atk by 20%; max HP, Def and Rec by 15%, & boosts Spark damage",
+    "desc": "30% max HP, Def and Rec, 50% Atk & 40% spark damage",
     "effect": [
       {
-        "atk% buff": 20,
-        "def% buff": 15,
-        "hp% buff": 15,
+        "atk% buff": 50,
+        "def% buff": 30,
+        "hp% buff": 30,
         "passive id": "1",
-        "rec% buff": 15
+        "rec% buff": 30
       },
       {
-        "damage% for spark": 20,
+        "damage% for spark": 40,
         "passive id": "31"
       }
     ],
@@ -5584,17 +5586,17 @@
     ]
   },
   "818924": {
-    "desc": "40% boost to Atk, 30% boost to max HP, Def and Rec & boosts Spark damage",
+    "desc": "40% max HP, Def and Rec, 80% Atk & 50% spark damage",
     "effect": [
       {
-        "atk% buff": 40,
-        "def% buff": 30,
-        "hp% buff": 30,
+        "atk% buff": 80,
+        "def% buff": 40,
+        "hp% buff": 40,
         "passive id": "1",
-        "rec% buff": 30
+        "rec% buff": 40
       },
       {
-        "damage% for spark": 40,
+        "damage% for spark": 50,
         "passive id": "31"
       }
     ],
@@ -5602,7 +5604,7 @@
     "max_stack": 1,
     "name": "Golden Lion Regalia",
     "raid": false,
-    "rarity": 4,
+    "rarity": 3,
     "recipe": {
       "karma": "85000",
       "materials": [
@@ -5657,14 +5659,14 @@
     ]
   },
   "818925": {
-    "desc": "40% boost to Atk, 35% boost to max HP, Def, Rec, boosts Spark damage & negates all status ailments",
+    "desc": "50% max HP, Def and Rec, 120% Atk, 60% spark damage & negates all status ailments",
     "effect": [
       {
-        "atk% buff": 40,
-        "def% buff": 35,
-        "hp% buff": 35,
+        "atk% buff": 120,
+        "def% buff": 50,
+        "hp% buff": 50,
         "passive id": "1",
-        "rec% buff": 35
+        "rec% buff": 50
       },
       {
         "damage% for spark": 60,
@@ -5739,14 +5741,14 @@
     ]
   },
   "818926": {
-    "desc": "40% boost to all parameters, boosts Spark damage, negates all status ailments & reduces damage taken from Fire, Water types",
+    "desc": "60% all parameters, 80% spark damage, negates all status ailments & 15% damage reduction from Fire, Water types",
     "effect": [
       {
-        "atk% buff": 40,
-        "def% buff": 40,
-        "hp% buff": 40,
+        "atk% buff": 60,
+        "def% buff": 60,
+        "hp% buff": 60,
         "passive id": "1",
-        "rec% buff": 40
+        "rec% buff": 60
       },
       {
         "damage% for spark": 80,
@@ -5762,7 +5764,7 @@
         "weaken resist%": 100
       },
       {
-        "dmg% mitigation for elemental attacks": 10,
+        "dmg% mitigation for elemental attacks": 15,
         "mitigate fire attacks": true,
         "mitigate water attacks": true,
         "passive id": "62"
@@ -13911,6 +13913,9 @@
         "id": 819110,
         "name": "Geared Steerwheel"
       }
+    ],
+    "associated_units": [
+      "760006"
     ]
   },
   "819110": {
@@ -13986,6 +13991,9 @@
         "id": 819111,
         "name": "Masked Steerwheel"
       }
+    ],
+    "associated_units": [
+      "760006"
     ]
   },
   "819111": {
@@ -14085,7 +14093,10 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_819111.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "760006"
+    ]
   },
   "819112": {
     "desc": "50% boost to all parameters, 100% boost to elemental damage, 30% boost to OD gauge fill rate, 30% reduction to BB cost & 50% reduction to additional damage received",
@@ -15053,7 +15064,10 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_819125.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "760006"
+    ]
   },
   "819126": {
     "desc": "40% boost to all parameters, reduces damage taken for 2 turns when HP is below 50%, hugely Boosts BB Atk & boosts BB gauge when damage is received<br>Guild Raid: Greatly boosts Atk, Def relative to how low HP is & probable resistance against 2 KO attacks",
@@ -16995,6 +17009,7 @@
     "type": "sphere",
     "usage": [],
     "associated_units": [
+      "760006",
       "830298"
     ]
   },
@@ -20199,6 +20214,9 @@
         "id": 819215,
         "name": "Providence"
       }
+    ],
+    "associated_units": [
+      "760006"
     ]
   },
   "819215": {
@@ -20308,6 +20326,9 @@
         "id": 819243,
         "name": "Lament of Dread"
       }
+    ],
+    "associated_units": [
+      "760006"
     ]
   },
   "819216": {
@@ -22675,7 +22696,10 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_819243.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "760006"
+    ]
   },
   "819244": {
     "desc": "50% all parameters (Guardian), probable damage reduction to 1, damage taken fills BB gauge and may restore HP, add to BB/SBB [chance to purge Atk, Def, Rec reduction negation], restores HP each turn & increases BB activation cost",
@@ -31664,7 +31688,10 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_838003.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "760006"
+    ]
   },
   "839901": {
     "desc": "Boosts max HP and Def by 5% & boosts Atk for Earth types by 20%",

@@ -1,4 +1,84 @@
 {
+  "MST_LEADERSKILLS_5002_NAME": {
+    "en": "Supreme Demon Power",
+    "es": "Poder del demonio supremo",
+    "id": "Kekuatan Setan Utama",
+    "pt": "Poder do Demônio Supremo",
+    "th": "สุพรีมเดม่อนก็อดพาวเวอร์",
+    "vi": "Sức mạnh ma quỷ tối thượng"
+  },
+  "MST_LEADERSKILLS_500_DESCRIPTION": {
+    "en": "10% reduction in damage from Fire Types",
+    "es": "Reduce un 10 % el daño infligido a las unidades de fuego.",
+    "id": "10% pengurangan untuk kerusakan dari Tipe Api",
+    "pt": "10% de redução no dano de tipo Fogo",
+    "th": "10% ลดค่าความเสียหายจากประเภทไฟ",
+    "vi": "10% giảm thiệt hại từ các loại lửa "
+  },
+  "MST_LEADERSKILLS_500_NAME": {
+    "en": "Fire's Protection",
+    "es": "Blindaje ígneo",
+    "id": "Proteksi Api",
+    "pt": "Proteção do Fogo",
+    "th": "ไฟเออร์โพรเทคชั่น",
+    "vi": "sự bảo vệ của lửa "
+  },
+  "MST_LEADERSKILLS_501_DESCRIPTION": {
+    "en": "15% reduction in damage from Fire Types",
+    "es": "Reduce un 15 % el daño infligido a las unidades de fuego.",
+    "id": "15% pengurangan untuk kerusakan dari Tipe Api",
+    "pt": "15% de redução no dano de tipo Fogo",
+    "th": "15% ลดค่าความเสียหายจากประเภทไฟ",
+    "vi": "15% giảm thiệt hại từ các loại lửa "
+  },
+  "MST_LEADERSKILLS_501_NAME": {
+    "en": "Fire Barrier",
+    "es": "Barrera ígnea",
+    "id": "Penghalang Api",
+    "pt": "Barreira de Fogo",
+    "th": "ไฟเออร์บาเรีย",
+    "vi": "rào chắn lửa "
+  },
+  "MST_LEADERSKILLS_502_DESCRIPTION": {
+    "en": "10% reduction in damage from Water Types",
+    "es": "Reduce un 10 % el daño infligido a las unidades de agua.",
+    "id": "10% pengurangan untuk kerusakan dari Tipe Air",
+    "pt": "10% de redução no dano de tipo Água",
+    "th": "10% ลดค่าความเสียหายจากประเภทน้ำ",
+    "vi": "10% giảm thiệt hại từ các loại nước "
+  },
+  "MST_LEADERSKILLS_502_NAME": {
+    "en": "Water's Protection",
+    "es": "Blindaje acuático",
+    "id": "Proteksi Air",
+    "pt": "Proteção da Água",
+    "th": "วอเตอร์โพรเทคชั่น",
+    "vi": "Sự bảo vệ của nước "
+  },
+  "MST_LEADERSKILLS_503_DESCRIPTION": {
+    "en": "15% reduction in damage from Water Types",
+    "es": "Reduce un 15 % el daño infligido a las unidades de agua.",
+    "id": "15% pengurangan untuk kerusakan dari Tipe Air",
+    "pt": "15% de redução no dano de tipo Água",
+    "th": "15% ลดค่าความเสียหายจากประเภทน้ำ",
+    "vi": "15% giảm thiệt hại từ các loại nước "
+  },
+  "MST_LEADERSKILLS_503_NAME": {
+    "en": "Water Barrier",
+    "es": "Barrera acuática",
+    "id": "Penghalang Air",
+    "pt": "Barreira de Água",
+    "th": "วอเตอร์บาเรีย",
+    "vi": "rào chắn nước "
+  },
+  "MST_LEADERSKILLS_504_DESCRIPTION": {
+    "en": "10% reduction in damage from Earth Types",
+    "es": "Reduce un 10 % el daño infligido a las unidades de tierra.",
+    "id": "10% pengurangan untuk kerusakan dari Tipe Bumi",
+    "pt": "10% de redução no dano de tipo Terra",
+    "th": "10% ลดค่าความเสียหายจากประเภทดิน",
+    "vi": "10% giảm thiệt hại từ các loại đất "
+  },
   "MST_LEADERSKILLS_504_NAME": {
     "en": "Earth's Protection",
     "es": "Blindaje pétreo",
@@ -4518,6 +4598,22 @@
     "pt": "Cobalt Twin Bullets",
     "th": "Cobalt Twin Bullets",
     "vi": "Cobalt Twin Bullets"
+  },
+  "MST_LEADERSKILLS_760006_DESCRIPTION": {
+    "en": "180% max HP, damage taken fills BB gauge, 20% damage reduction for 1 turn when damage taken is over 5k, probable 1 KO resistance & 30% OD gauge fill rate",
+    "es": "180% max HP, damage taken fills BB gauge, 20% damage reduction for 1 turn when damage taken is over 5k, probable 1 KO resistance & 30% OD gauge fill rate",
+    "id": "180% max HP, damage taken fills BB gauge, 20% damage reduction for 1 turn when damage taken is over 5k, probable 1 KO resistance & 30% OD gauge fill rate",
+    "pt": "180% max HP, damage taken fills BB gauge, 20% damage reduction for 1 turn when damage taken is over 5k, probable 1 KO resistance & 30% OD gauge fill rate",
+    "th": "180% max HP, damage taken fills BB gauge, 20% damage reduction for 1 turn when damage taken is over 5k, probable 1 KO resistance & 30% OD gauge fill rate",
+    "vi": "180% max HP, damage taken fills BB gauge, 20% damage reduction for 1 turn when damage taken is over 5k, probable 1 KO resistance & 30% OD gauge fill rate"
+  },
+  "MST_LEADERSKILLS_760006_NAME": {
+    "en": "Primordial Corruption",
+    "es": "Primordial Corruption",
+    "id": "Primordial Corruption",
+    "pt": "Primordial Corruption",
+    "th": "Primordial Corruption",
+    "vi": "Primordial Corruption"
   },
   "MST_LEADERSKILLS_7600_DESCRIPTION": {
     "en": "50% boost to Atk of Water & Light types",
@@ -90734,77 +90830,5 @@
     "pt": "Al-mi'raj",
     "th": "อัลมิร่า",
     "vi": "Al-mi'raj"
-  },
-  "MST_MONSTERS_52367_NAME": {
-    "en": "Al-mi'raj",
-    "es": "Al-mi'raj",
-    "id": "Al-mi'raj",
-    "pt": "Al-mi'raj",
-    "th": "อัลมิร่า",
-    "vi": "Al-mi'raj"
-  },
-  "MST_MONSTERS_52368_NAME": {
-    "en": "Al-mi'raj",
-    "es": "Al-mi'raj",
-    "id": "Al-mi'raj",
-    "pt": "Al-mi'raj",
-    "th": "อัลมิราจ",
-    "vi": "Al-mi'raj"
-  },
-  "MST_MONSTERS_52369_NAME": {
-    "en": "Al-mi'raj",
-    "es": "Al-mi'raj",
-    "id": "Al-mi'raj",
-    "pt": "Al-mi'raj",
-    "th": "อัล-มิราจ",
-    "vi": "Al-mi'raj"
-  },
-  "MST_MONSTERS_52370_NAME": {
-    "en": "Al-mi'raj",
-    "es": "Al-mi'raj",
-    "id": "Al-mi'raj",
-    "pt": "Al-mi'raj",
-    "th": "อัล-มิราจ",
-    "vi": "Al-mi'raj"
-  },
-  "MST_MONSTERS_52371_NAME": {
-    "en": "Al-mi'raj",
-    "es": "Al-mi'raj",
-    "id": "Al-mi'raj",
-    "pt": "Al-mi'raj",
-    "th": "อัล-มิราจ",
-    "vi": "Al-mi'raj"
-  },
-  "MST_MONSTERS_52372_NAME": {
-    "en": "Al-mi'raj",
-    "es": "Al-mi'raj",
-    "id": "Al-mi'raj",
-    "pt": "Al-mi'raj",
-    "th": "อัล-มิราจ",
-    "vi": "Al-mi'raj"
-  },
-  "MST_MONSTERS_52400_NAME": {
-    "en": "Cait Sith",
-    "es": "Gato Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคท สิธ",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52401_NAME": {
-    "en": "Cait Sith",
-    "es": "Gato Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคท สิธ",
-    "vi": "Cait Sith"
-  },
-  "MST_MONSTERS_52402_NAME": {
-    "en": "Cait Sith",
-    "es": "Gato Sith",
-    "id": "Cait Sith",
-    "pt": "Cait Sith",
-    "th": "เคท สิธ",
-    "vi": "Cait Sith"
   }
 }

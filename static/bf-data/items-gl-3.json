@@ -4308,6 +4308,9 @@
         "id": 35300,
         "name": "Crown Light"
       }
+    ],
+    "associated_units": [
+      "760006"
     ]
   },
   "32301": {
@@ -4343,7 +4346,10 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_5_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "760006"
+    ]
   },
   "32400": {
     "desc": "Increases Resistance to Weak",
@@ -4391,6 +4397,9 @@
         "id": 35301,
         "name": "Royal Light"
       }
+    ],
+    "associated_units": [
+      "760006"
     ]
   },
   "32401": {
@@ -4426,7 +4435,10 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_5_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "760006"
+    ]
   },
   "32500": {
     "desc": "Increases Resistance to Sick",
@@ -4474,6 +4486,9 @@
         "id": 35300,
         "name": "Crown Light"
       }
+    ],
+    "associated_units": [
+      "760006"
     ]
   },
   "32501": {
@@ -4509,7 +4524,10 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_5_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "760006"
+    ]
   },
   "32600": {
     "desc": "Increases Resistance to Injury",
@@ -4557,6 +4575,9 @@
         "id": 35301,
         "name": "Royal Light"
       }
+    ],
+    "associated_units": [
+      "760006"
     ]
   },
   "32601": {
@@ -4592,7 +4613,10 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_5_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "760006"
+    ]
   },
   "32700": {
     "desc": "Increases Resistance to Curse",
@@ -4640,6 +4664,9 @@
         "id": 35300,
         "name": "Crown Light"
       }
+    ],
+    "associated_units": [
+      "760006"
     ]
   },
   "32701": {
@@ -4675,7 +4702,10 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_5_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "760006"
+    ]
   },
   "32800": {
     "desc": "Increases Resistance to Paralysis",
@@ -4723,6 +4753,9 @@
         "id": 35301,
         "name": "Royal Light"
       }
+    ],
+    "associated_units": [
+      "760006"
     ]
   },
   "32801": {
@@ -4758,7 +4791,10 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_5_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "760006"
+    ]
   },
   "32900": {
     "desc": "Boosts BB Gauge when an Enemy is Defeated",
@@ -7386,7 +7422,10 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_5_8.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "760006"
+    ]
   },
   "35200": {
     "desc": "Boosts Atk, Def, Rec, and Max HP by 5%",
@@ -7581,6 +7620,9 @@
         "id": 38100,
         "name": "Bright Shard"
       }
+    ],
+    "associated_units": [
+      "760006"
     ]
   },
   "35301": {
@@ -7642,6 +7684,9 @@
         "id": 38200,
         "name": "Royal Shard"
       }
+    ],
+    "associated_units": [
+      "760006"
     ]
   },
   "35400": {
@@ -8576,6 +8621,9 @@
         "id": 62110,
         "name": "Barrier Mirror"
       }
+    ],
+    "associated_units": [
+      "760006"
     ]
   },
   "37300": {
@@ -9229,6 +9277,9 @@
         "id": 88700008,
         "name": "Cursed Photon Rod"
       }
+    ],
+    "associated_units": [
+      "760006"
     ]
   },
   "37800": {
@@ -9569,6 +9620,9 @@
         "id": 234000,
         "name": "Taboo Grimoire"
       }
+    ],
+    "associated_units": [
+      "760006"
     ]
   },
   "38200": {
@@ -9621,6 +9675,9 @@
         "id": 234000,
         "name": "Taboo Grimoire"
       }
+    ],
+    "associated_units": [
+      "760006"
     ]
   },
   "38300": {
