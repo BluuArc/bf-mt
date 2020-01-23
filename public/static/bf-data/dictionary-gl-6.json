@@ -1,4 +1,36 @@
 {
+  "MST_SKILLS_2840548_NAME": {
+    "en": "Lightning Beam MAX",
+    "es": "Lightning Beam MAX",
+    "id": "Lightning Beam MAX",
+    "pt": "Lightning Beam MAX",
+    "th": "Lightning Beam MAX",
+    "vi": "Lightning Beam MAX"
+  },
+  "MST_SKILLS_2840557_DESCRIPTION": {
+    "en": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
+    "es": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
+    "id": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
+    "pt": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
+    "th": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
+    "vi": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns"
+  },
+  "MST_SKILLS_2840557_NAME": {
+    "en": "Thunderbird's Judgment",
+    "es": "Thunderbird's Judgment",
+    "id": "Thunderbird's Judgment",
+    "pt": "Thunderbird's Judgment",
+    "th": "Thunderbird's Judgment",
+    "vi": "Thunderbird's Judgment"
+  },
+  "MST_SKILLS_2840558_DESCRIPTION": {
+    "en": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
+    "es": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
+    "id": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
+    "pt": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
+    "th": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns",
+    "vi": "22 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & 50% additional damage reduction for 5 turns"
+  },
   "MST_SKILLS_2840558_NAME": {
     "en": "Thunderbird's Wrath",
     "es": "Thunderbird's Wrath",
@@ -83967,6 +83999,22 @@
     "th": "เบิร์นนิ่งสปิริท",
     "vi": "Thiêu hồn"
   },
+  "MST_SKILLS_760006_DESCRIPTION": {
+    "en": "12 combo Earth, Dark attack on all foes, probable KO resistance, boosts BC efficacy for 3 turns, fills BB gauge for 3 turns, boosts OD gauge fill rate for 3 turns & fills OD gauge",
+    "es": "12 combo Earth, Dark attack on all foes, probable KO resistance, boosts BC efficacy for 3 turns, fills BB gauge for 3 turns, boosts OD gauge fill rate for 3 turns & fills OD gauge",
+    "id": "12 combo Earth, Dark attack on all foes, probable KO resistance, boosts BC efficacy for 3 turns, fills BB gauge for 3 turns, boosts OD gauge fill rate for 3 turns & fills OD gauge",
+    "pt": "12 combo Earth, Dark attack on all foes, probable KO resistance, boosts BC efficacy for 3 turns, fills BB gauge for 3 turns, boosts OD gauge fill rate for 3 turns & fills OD gauge",
+    "th": "12 combo Earth, Dark attack on all foes, probable KO resistance, boosts BC efficacy for 3 turns, fills BB gauge for 3 turns, boosts OD gauge fill rate for 3 turns & fills OD gauge",
+    "vi": "12 combo Earth, Dark attack on all foes, probable KO resistance, boosts BC efficacy for 3 turns, fills BB gauge for 3 turns, boosts OD gauge fill rate for 3 turns & fills OD gauge"
+  },
+  "MST_SKILLS_760006_NAME": {
+    "en": "Vile Bloom",
+    "es": "Vile Bloom",
+    "id": "Vile Bloom",
+    "pt": "Vile Bloom",
+    "th": "Vile Bloom",
+    "vi": "Vile Bloom"
+  },
   "MST_SKILLS_7600_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -90782,29 +90830,5 @@
     "pt": "Malarial Barrage",
     "th": "มาลาไรอัล บาราจ",
     "vi": "Malarial Barrage"
-  },
-  "MST_SKILLS_830287_DESCRIPTION": {
-    "en": "13 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns & damage taken may slightly restore HP for 3 turns",
-    "es": "13 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns & damage taken may slightly restore HP for 3 turns",
-    "id": "13 kombo serangan Bumi kuat ke semua musuh, 3 giliran: amat menambah Serang, Tahan, Pulih tipe Bumi, ekstra jumbo pukulan ampuh tipe Bumi, kerusakan diderita dapat agak pulihkan HP",
-    "pt": "13 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns & damage taken may slightly restore HP for 3 turns",
-    "th": "13 คอมโบ โจมตีธาตุดินอย่างแรง ใส่ศัตรูทั้งหมด, เพิ่มค่าอย่างมากให้ โจมตี, ป้องกัน, ฟื้นฟู ของชนิด ดิน นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ อัตราเกิดคริติคอล ของชนิด ดิน นาน 3 เทิร์น และ ความเสียหายที่ได้รับ อาจฟื้นคืน HP เล็กน้อย นาน 3 เทิร์น",
-    "vi": "13 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns & damage taken may slightly restore HP for 3 turns"
-  },
-  "MST_SKILLS_830287_NAME": {
-    "en": "Debris Typhoon",
-    "es": "Debris Typhoon",
-    "id": "Taifun Puing",
-    "pt": "Debris Typhoon",
-    "th": "เดบริส ไทฟูน",
-    "vi": "Debris Typhoon"
-  },
-  "MST_SKILLS_830288_DESCRIPTION": {
-    "en": "16 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns, damage taken may slightly restore HP for 3 turns & boosts max HP",
-    "es": "16 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns, damage taken may slightly restore HP for 3 turns & boosts max HP",
-    "id": "16 kombo serangan Bumi kuat ke semua musuh, 3 giliran: amat menambah Serang, Tahan, Pulih tipe Bumi, ekstra jumbo pukulan ampuh tipe Bumi, kerusakan diderita dapat agak pulihkan HP, menambah HP maks",
-    "pt": "16 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns, damage taken may slightly restore HP for 3 turns & boosts max HP",
-    "th": "16 คอมโบ โจมตีธาตุดินอย่างแรง ใส่ศัตรูทั้งหมด, เพิ่มค่าอย่างมากให้ โจมตี, ป้องกัน, ฟื้นฟู ของชนิด ดิน นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ อัตราเกิดคริติคอล ของชนิด ดิน นาน 3 เทิร์น, ความเสียหายที่ได้รับ อาจฟื้นคืน HP เล็กน้อย นาน 3 เทิร์น และ เพิ่มค่า HP สูงสุด",
-    "vi": "16 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns, damage taken may slightly restore HP for 3 turns & boosts max HP"
   }
 }

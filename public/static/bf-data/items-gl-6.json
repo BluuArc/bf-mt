@@ -4195,7 +4195,10 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_3_1.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "760006"
+    ]
   },
   "62390": {
     "desc": "80% boost to max HP, activates at turn's end BB gauge boost each turn effect at turn's start instead, enormously boosts BB gauge each turn, 20% damage reduction for 1 turn when damage dealt exceeds certain amount & negates critical and elemental damage for 2 turns when damage taken exceeds certain amount",

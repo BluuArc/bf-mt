@@ -29,7 +29,10 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_5_6.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "760006"
+    ]
   },
   "90101": {
     "desc": "50% boost to Atk, 100% boost to Spark damage, Spark damage slightly boosts BB gauge & negates Curse, Paralysis, Injury effects",
