@@ -1,4 +1,68 @@
 {
+  "MST_LEADERSKILLS_4912_NAME": {
+    "en": "Magical Sanctuary",
+    "es": "Santuario mágico",
+    "id": "Suaka Sihir",
+    "pt": "Santuário Mágico",
+    "th": "แมจิคอล แซงชัวรี่",
+    "vi": "Điện thờ ma thuật"
+  },
+  "MST_LEADERSKILLS_4913_DESCRIPTION": {
+    "en": "Greatly reduces BB gauge required for BB, boosts BB gauge fill rate & probable slight damage reduction",
+    "es": "Reduce notablemente el indicador BB necesario para BB, potencia la vel. de carga del indicador BB y puede reducir el daño recibido",
+    "id": "Amat mengurangi meteran BB yang diperlukan untuk BB, menambah laju pengisian meteran BB & kemungkinan agak mengurangi kerusakan",
+    "pt": "Redução enorme no BB necessário para BB, reforço no preenchimento da Barra de BB e provável leve redução de dano",
+    "th": "ลดบีบีเกจที่ใช้ในบีบีลงเป็นจำนวนมาก, เพิ่มอัตราการเติมบีบี, มีโอกาสลดดาเมจที่ได้รับลงเล็กน้อย",
+    "vi": "Greatly reduces BB gauge required for BB, boosts BB gauge fill rate & probable slight damage reduction"
+  },
+  "MST_LEADERSKILLS_4913_NAME": {
+    "en": "Demonic Bolt Barrier",
+    "es": "Barrera de rayo demoníaca",
+    "id": "Penghadang Petir Setan",
+    "pt": "Barreira do Trovão Demoníaco",
+    "th": "เดมอนนิค โบล์ท บาเรีย",
+    "vi": "Demonic Bolt Barrier"
+  },
+  "MST_LEADERSKILLS_5000_DESCRIPTION": {
+    "en": "Great boost to Atk of units with 20% HP or less",
+    "es": "Gran aumento en atq de unidades con 20% de PS o menos.",
+    "id": "Kenaikan besar Serangan unit dengan HP 20% ke bawah",
+    "pt": "Grande reforço no ATQ das unidades com 20% de HP ou menos",
+    "th": "เพิ่มค่า โจมตี อย่างมาก ให้กับยูนิตที่มี 20% HP หรือ ต่ำกว่านั้น",
+    "vi": "Tăng mạnh sức Tấn công của các quái với 20% Thể lực hoặc ít hơn"
+  },
+  "MST_LEADERSKILLS_5000_NAME": {
+    "en": "Demon Power",
+    "es": "Poder demoníaco",
+    "id": "Kekuatan Setan",
+    "pt": "Poder do Demônio",
+    "th": "เดม่อนพาวเวอร์",
+    "vi": "Sức mạnh ma quỷ"
+  },
+  "MST_LEADERSKILLS_5001_DESCRIPTION": {
+    "en": "Great boost to Atk of units with 25% HP or less",
+    "es": "Gran aumento en atq de las unidades con 25% de PS o menos.",
+    "id": "Kenaikan besar Serangan unit dengan HP 25% ke bawah",
+    "pt": "Grande reforço no ATQ das unidades com 25% de HP ou menos",
+    "th": "เพิ่มค่า โจมตี อย่างมาก ให้กับยูนิตที่มี 25% HP หรือ ต่ำกว่านั้น",
+    "vi": "Tăng mạnh sức Tấn công của các quái với 25% Thể lực hoặc ít hơn"
+  },
+  "MST_LEADERSKILLS_5001_NAME": {
+    "en": "Demon God Power",
+    "es": "Poder del dios demoníaco",
+    "id": "Kekuatan Dewa Setan",
+    "pt": "Poder do Deus-Demônio",
+    "th": "เดม่อนก็อดพาวเวอร์",
+    "vi": "Sức mạnh thần quỷ"
+  },
+  "MST_LEADERSKILLS_5002_DESCRIPTION": {
+    "en": "Great boost to Atk of units with 30% HP or less",
+    "es": "Gran aumento en atq de las unidades con 30% de PS o menos.",
+    "id": "Kenaikan besar Serangan unit dengan HP 30% ke bawah",
+    "pt": "Grande reforço no ATQ das unidades com 30% de HP ou menos",
+    "th": "เพิ่มค่า โจมตี อย่างมาก ให้กับยูนิตที่มี 30% HP หรือ ต่ำกว่านั้น",
+    "vi": "Tăng mạnh sức Tấn công của các quái với 30% Thể lực hoặc ít hơn"
+  },
   "MST_LEADERSKILLS_5002_NAME": {
     "en": "Supreme Demon Power",
     "es": "Poder del demonio supremo",
@@ -12030,6 +12094,22 @@
     "pt": "Druid Aspirant",
     "th": "Druid Aspirant",
     "vi": "Druid Aspirant"
+  },
+  "MST_LEADERSKILLS_840798_DESCRIPTION": {
+    "en": "100% Def, max HP, 200% Atk (Thunder), 250% spark damage, 15% damage reduction, probable damage reduction to 1 & probable 1 KO resistance",
+    "es": "100% Def, max HP, 200% Atk (Thunder), 250% spark damage, 15% damage reduction, probable damage reduction to 1 & probable 1 KO resistance",
+    "id": "100% Def, max HP, 200% Atk (Thunder), 250% spark damage, 15% damage reduction, probable damage reduction to 1 & probable 1 KO resistance",
+    "pt": "100% Def, max HP, 200% Atk (Thunder), 250% spark damage, 15% damage reduction, probable damage reduction to 1 & probable 1 KO resistance",
+    "th": "100% Def, max HP, 200% Atk (Thunder), 250% spark damage, 15% damage reduction, probable damage reduction to 1 & probable 1 KO resistance",
+    "vi": "100% Def, max HP, 200% Atk (Thunder), 250% spark damage, 15% damage reduction, probable damage reduction to 1 & probable 1 KO resistance"
+  },
+  "MST_LEADERSKILLS_840798_NAME": {
+    "en": "Steel and Faith",
+    "es": "Steel and Faith",
+    "id": "Steel and Faith",
+    "pt": "Steel and Faith",
+    "th": "Steel and Faith",
+    "vi": "Steel and Faith"
   },
   "MST_LEADERSKILLS_840808_DESCRIPTION": {
     "en": "140% all parameters, probable damage reduction to 1, 250% Thunder elemental damage, damage taken fills BB gauge & probable 1 KO resistance",
@@ -90768,62 +90848,6 @@
     "vi": "Al-mi'raj"
   },
   "MST_MONSTERS_52359_NAME": {
-    "en": "Al-mi'raj",
-    "es": "Al-mi'raj",
-    "id": "Al-mi'raj",
-    "pt": "Al-mi'raj",
-    "th": "อัลมิร่า",
-    "vi": "Al-mi'raj"
-  },
-  "MST_MONSTERS_52360_NAME": {
-    "en": "Al-mi'raj",
-    "es": "Al-mi'raj",
-    "id": "Al-mi'raj",
-    "pt": "Al-mi'raj",
-    "th": "อัลมิร่า",
-    "vi": "Al-mi'raj"
-  },
-  "MST_MONSTERS_52361_NAME": {
-    "en": "Al-mi'raj",
-    "es": "Al-mi'raj",
-    "id": "Al-mi'raj",
-    "pt": "Al-mi'raj",
-    "th": "อัลมิร่า",
-    "vi": "Al-mi'raj"
-  },
-  "MST_MONSTERS_52362_NAME": {
-    "en": "Al-mi'raj",
-    "es": "Al-mi'raj",
-    "id": "Al-mi'raj",
-    "pt": "Al-mi'raj",
-    "th": "อัลมิร่า",
-    "vi": "Al-mi'raj"
-  },
-  "MST_MONSTERS_52363_NAME": {
-    "en": "Al-mi'raj",
-    "es": "Al-mi'raj",
-    "id": "Al-mi'raj",
-    "pt": "Al-mi'raj",
-    "th": "อัลมิร่า",
-    "vi": "Al-mi'raj"
-  },
-  "MST_MONSTERS_52364_NAME": {
-    "en": "Al-mi'raj",
-    "es": "Al-mi'raj",
-    "id": "Al-mi'raj",
-    "pt": "Al-mi'raj",
-    "th": "อัลมิร่า",
-    "vi": "Al-mi'raj"
-  },
-  "MST_MONSTERS_52365_NAME": {
-    "en": "Al-mi'raj",
-    "es": "Al-mi'raj",
-    "id": "Al-mi'raj",
-    "pt": "Al-mi'raj",
-    "th": "อัลมิร่า",
-    "vi": "Al-mi'raj"
-  },
-  "MST_MONSTERS_52366_NAME": {
     "en": "Al-mi'raj",
     "es": "Al-mi'raj",
     "id": "Al-mi'raj",
