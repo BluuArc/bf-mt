@@ -1,4 +1,68 @@
 {
+  "MST_LEADERSKILLS_4901_NAME": {
+    "en": "High Ruler's Magic",
+    "es": "Magia del gran soberano",
+    "id": "Sihir Penguasa Tinggi",
+    "pt": "Magia do Grão-Rei",
+    "th": "ไฮรูเลอร์แมจิค",
+    "vi": "Ma thuật của thống soái cấp cao"
+  },
+  "MST_LEADERSKILLS_4902_DESCRIPTION": {
+    "en": "Large reduction in BB gauge required for BB",
+    "es": "Gran reducción en el indicador BB necesario para BB.",
+    "id": "Pengurangan besar meteran BB yang diperlukan untuk BB",
+    "pt": "Grande redução na barra de BB necessária para o Brave Burst",
+    "th": "ลดเกจ BB ที่ต้องการสำหรับการใช้ BB ลงมาก",
+    "vi": "Giảm nhiều vạch Tăng cường can đảm bắt buộc để Tăng cường can đảm"
+  },
+  "MST_LEADERSKILLS_4902_NAME": {
+    "en": "Supreme Ruler's Magic",
+    "es": "Magia del supremo soberano",
+    "id": "Sihir Penguasa Utama",
+    "pt": "Magia do Imperador Supremo",
+    "th": "สุพรีมรูเลอร์แมจิค",
+    "vi": "Ma thuật của thống soái tối cao"
+  },
+  "MST_LEADERSKILLS_4910_DESCRIPTION": {
+    "en": "Reduction in BB gauge required for BB & 25% Atk boost for all Units",
+    "es": "Reducción en el indicador BB necesario para BB. Aumenta un 25% el ataque de todas las unidades",
+    "id": "Mengurangi meteran BB yang dibutuhkan untuk BB & menambah 25% Serangan untuk semua unit",
+    "pt": "Redução na barra de BB necessária para o Brave Burst e aumento de 25% no ATQ de todas as unidades",
+    "th": "ลดค่าเกจ BB ที่ต้องการสำหรับการใช้ BB และ 25% เพิ่มค่า โจมตี ให้กับทุกยูนิต",
+    "vi": "Giảm vạch Tăng cường can đảm cần có cho BB & tăng sức mạnh Tấn công 25% cho tất cả các Quái"
+  },
+  "MST_LEADERSKILLS_4910_NAME": {
+    "en": "Emperor's Magic",
+    "es": "Magia del emperador",
+    "id": "Sihir Kaisar",
+    "pt": "Magia do Imperador",
+    "th": "เอ็มเพอเรอร์สเมจิค",
+    "vi": "Phép thuật của Hoàng đế"
+  },
+  "MST_LEADERSKILLS_4911_DESCRIPTION": {
+    "en": "Reduction in BB gauge required for BB & BB gauge fills after each turn",
+    "es": "Reduce el indicador BB necesario para BB y lo llena después de cada turno",
+    "id": "Pengurangan syarat meteran untuk BB & meteran BB terisi seusai tiap giliran",
+    "pt": "Redução na barra de BB necessária para o BB e a barra de BB enche após cada rodada.",
+    "th": "ลดความต้องการเกจ BB ที่ต้องการสำหรับ BB และ เติมเกต BB หลังจากแต่ละเทิร์น",
+    "vi": "Giảm vạch Tăng cường can đảm cần có để Tăng cường can đảm & vạch Tăng cường can đảm nạp sau mỗi lượt"
+  },
+  "MST_LEADERSKILLS_4911_NAME": {
+    "en": "War God's Magic",
+    "es": "Magia del dios bélico",
+    "id": "Sihir Dewa Perang",
+    "pt": "Magia do Deus da guerra",
+    "th": "วอร์ ก็อดส์ แมจิค",
+    "vi": "Phép Thuật của Thần Ch.Tranh"
+  },
+  "MST_LEADERSKILLS_4912_DESCRIPTION": {
+    "en": "Reduction in BB gauge required to activate BB & adds chance of small reduction in damage taken",
+    "es": "Leve reducción en el indicador BB necesario para activar BB y tiene la posibilidad de reducir levemente el daño recibido",
+    "id": "Mengurangi syarat meteran BB untuk mengaktifkan BB & menambah kans agak mengurangi kerusakan",
+    "pt": "Redução da barra necessária para ativação do BB e adiciona a chance de uma pequena redução no dano sofrido",
+    "th": "ลดค่าเกจ BB ที่ต้องการสำหรับการใช้ BB และ เพิ่มโอกาสที่จะ ลดความเสียหายที่ได้รับลงเล็กน้อย",
+    "vi": "Giảm vạch BB bắt buộc để kích hoạt BB & thêm cơ hội giảm một phần nhỏ thiệt hại phải chịu"
+  },
   "MST_LEADERSKILLS_4912_NAME": {
     "en": "Magical Sanctuary",
     "es": "Santuario mágico",
@@ -2503,6 +2567,22 @@
     "th": "Zodiacal Essence",
     "vi": "Zodiacal Essence"
   },
+  "MST_LEADERSKILLS_730287_DESCRIPTION": {
+    "en": "140% all parameters, probable spark critical, 20% damage reduction for 2 turns when damage taken is over 5k, 200% all elemental damage & 400% BB Atk",
+    "es": "140% all parameters, probable spark critical, 20% damage reduction for 2 turns when damage taken is over 5k, 200% all elemental damage & 400% BB Atk",
+    "id": "140% all parameters, probable spark critical, 20% damage reduction for 2 turns when damage taken is over 5k, 200% all elemental damage & 400% BB Atk",
+    "pt": "140% all parameters, probable spark critical, 20% damage reduction for 2 turns when damage taken is over 5k, 200% all elemental damage & 400% BB Atk",
+    "th": "140% all parameters, probable spark critical, 20% damage reduction for 2 turns when damage taken is over 5k, 200% all elemental damage & 400% BB Atk",
+    "vi": "140% all parameters, probable spark critical, 20% damage reduction for 2 turns when damage taken is over 5k, 200% all elemental damage & 400% BB Atk"
+  },
+  "MST_LEADERSKILLS_730287_NAME": {
+    "en": "Protectress of All Women",
+    "es": "Protectress of All Women",
+    "id": "Protectress of All Women",
+    "pt": "Protectress of All Women",
+    "th": "Protectress of All Women",
+    "vi": "Protectress of All Women"
+  },
   "MST_LEADERSKILLS_7400_DESCRIPTION": {
     "en": "15% boost to Atk and max HP for all Units",
     "es": "15% de aumento al ataque y a los PS máximos de todas las unidades",
@@ -4664,12 +4744,12 @@
     "vi": "Cobalt Twin Bullets"
   },
   "MST_LEADERSKILLS_760006_DESCRIPTION": {
-    "en": "180% max HP, damage taken fills BB gauge, 20% damage reduction for 1 turn when damage taken is over 5k, probable 1 KO resistance & 30% OD gauge fill rate",
-    "es": "180% max HP, damage taken fills BB gauge, 20% damage reduction for 1 turn when damage taken is over 5k, probable 1 KO resistance & 30% OD gauge fill rate",
-    "id": "180% max HP, damage taken fills BB gauge, 20% damage reduction for 1 turn when damage taken is over 5k, probable 1 KO resistance & 30% OD gauge fill rate",
-    "pt": "180% max HP, damage taken fills BB gauge, 20% damage reduction for 1 turn when damage taken is over 5k, probable 1 KO resistance & 30% OD gauge fill rate",
-    "th": "180% max HP, damage taken fills BB gauge, 20% damage reduction for 1 turn when damage taken is over 5k, probable 1 KO resistance & 30% OD gauge fill rate",
-    "vi": "180% max HP, damage taken fills BB gauge, 20% damage reduction for 1 turn when damage taken is over 5k, probable 1 KO resistance & 30% OD gauge fill rate"
+    "en": "180% max HP, damage taken fills BB gauge, 20% damage reduction for 2 turns when damage taken is over 5k, probable 1 KO resistance & 30% OD gauge fill rate",
+    "es": "180% max HP, damage taken fills BB gauge, 20% damage reduction for 2 turns when damage taken is over 5k, probable 1 KO resistance & 30% OD gauge fill rate",
+    "id": "180% max HP, damage taken fills BB gauge, 20% damage reduction for 2 turns when damage taken is over 5k, probable 1 KO resistance & 30% OD gauge fill rate",
+    "pt": "180% max HP, damage taken fills BB gauge, 20% damage reduction for 2 turns when damage taken is over 5k, probable 1 KO resistance & 30% OD gauge fill rate",
+    "th": "180% max HP, damage taken fills BB gauge, 20% damage reduction for 2 turns when damage taken is over 5k, probable 1 KO resistance & 30% OD gauge fill rate",
+    "vi": "180% max HP, damage taken fills BB gauge, 20% damage reduction for 2 turns when damage taken is over 5k, probable 1 KO resistance & 30% OD gauge fill rate"
   },
   "MST_LEADERSKILLS_760006_NAME": {
     "en": "Primordial Corruption",
@@ -90800,54 +90880,6 @@
     "vi": "Al-mi'raj"
   },
   "MST_MONSTERS_52353_NAME": {
-    "en": "Al-mi'raj",
-    "es": "Al-mi'raj",
-    "id": "Al-mi'raj",
-    "pt": "Al-mi'raj",
-    "th": "อัลมิร่า",
-    "vi": "Al-mi'raj"
-  },
-  "MST_MONSTERS_52354_NAME": {
-    "en": "Al-mi'raj",
-    "es": "Al-mi'raj",
-    "id": "Al-mi'raj",
-    "pt": "Al-mi'raj",
-    "th": "อัลมิร่า",
-    "vi": "Al-mi'raj"
-  },
-  "MST_MONSTERS_52355_NAME": {
-    "en": "Al-mi'raj",
-    "es": "Al-mi'raj",
-    "id": "Al-mi'raj",
-    "pt": "Al-mi'raj",
-    "th": "อัลมิร่า",
-    "vi": "Al-mi'raj"
-  },
-  "MST_MONSTERS_52356_NAME": {
-    "en": "Al-mi'raj",
-    "es": "Al-mi'raj",
-    "id": "Al-mi'raj",
-    "pt": "Al-mi'raj",
-    "th": "อัลมิร่า",
-    "vi": "Al-mi'raj"
-  },
-  "MST_MONSTERS_52357_NAME": {
-    "en": "Al-mi'raj",
-    "es": "Al-mi'raj",
-    "id": "Al-mi'raj",
-    "pt": "Al-mi'raj",
-    "th": "อัลมิร่า",
-    "vi": "Al-mi'raj"
-  },
-  "MST_MONSTERS_52358_NAME": {
-    "en": "Al-mi'raj",
-    "es": "Al-mi'raj",
-    "id": "Al-mi'raj",
-    "pt": "Al-mi'raj",
-    "th": "อัลมิร่า",
-    "vi": "Al-mi'raj"
-  },
-  "MST_MONSTERS_52359_NAME": {
     "en": "Al-mi'raj",
     "es": "Al-mi'raj",
     "id": "Al-mi'raj",

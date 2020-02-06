@@ -1,20 +1,4 @@
 {
-  "MST_SKILLS_2840548_NAME": {
-    "en": "Lightning Beam MAX",
-    "es": "Lightning Beam MAX",
-    "id": "Lightning Beam MAX",
-    "pt": "Lightning Beam MAX",
-    "th": "Lightning Beam MAX",
-    "vi": "Lightning Beam MAX"
-  },
-  "MST_SKILLS_2840557_DESCRIPTION": {
-    "en": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
-    "es": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
-    "id": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
-    "pt": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
-    "th": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
-    "vi": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns"
-  },
   "MST_SKILLS_2840557_NAME": {
     "en": "Thunderbird's Judgment",
     "es": "Thunderbird's Judgment",
@@ -21302,6 +21286,22 @@
     "pt": "Absolute Photon Slash",
     "th": "Absolute Photon Slash",
     "vi": "Absolute Photon Slash"
+  },
+  "MST_SKILLS_3730287_DESCRIPTION": {
+    "en": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, BB Atk, max HP, all elemental damage, spark vulnerability infliction, BB gauge to max, OD gauge, damage taken restores HP, 80% KO resistance, purges LS, ES Lock and DoT & may purge Paralysis and Poison negation from all foes",
+    "es": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, BB Atk, max HP, all elemental damage, spark vulnerability infliction, BB gauge to max, OD gauge, damage taken restores HP, 80% KO resistance, purges LS, ES Lock and DoT & may purge Paralysis and Poison negation from all foes",
+    "id": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, BB Atk, max HP, all elemental damage, spark vulnerability infliction, BB gauge to max, OD gauge, damage taken restores HP, 80% KO resistance, purges LS, ES Lock and DoT & may purge Paralysis and Poison negation from all foes",
+    "pt": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, BB Atk, max HP, all elemental damage, spark vulnerability infliction, BB gauge to max, OD gauge, damage taken restores HP, 80% KO resistance, purges LS, ES Lock and DoT & may purge Paralysis and Poison negation from all foes",
+    "th": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, BB Atk, max HP, all elemental damage, spark vulnerability infliction, BB gauge to max, OD gauge, damage taken restores HP, 80% KO resistance, purges LS, ES Lock and DoT & may purge Paralysis and Poison negation from all foes",
+    "vi": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, BB Atk, max HP, all elemental damage, spark vulnerability infliction, BB gauge to max, OD gauge, damage taken restores HP, 80% KO resistance, purges LS, ES Lock and DoT & may purge Paralysis and Poison negation from all foes"
+  },
+  "MST_SKILLS_3730287_NAME": {
+    "en": "Cataclysmic Corruption",
+    "es": "Cataclysmic Corruption",
+    "id": "Cataclysmic Corruption",
+    "pt": "Cataclysmic Corruption",
+    "th": "Cataclysmic Corruption",
+    "vi": "Cataclysmic Corruption"
   },
   "MST_SKILLS_3750_DESCRIPTION": {
     "en": "None",
@@ -82047,6 +82047,22 @@
     "th": "Cosmic Restoration",
     "vi": "Cosmic Restoration"
   },
+  "MST_SKILLS_730287_DESCRIPTION": {
+    "en": "19 combo Earth attack on all foes, boosts BC, HC drop rate for 3 turns, boosts BB Atk for 3 turns, damage taken fills BB gauge for 3 turns, boosts own max HP & activates Taunt and boosts own Atk, Def and critical rate for 2 turns",
+    "es": "19 combo Earth attack on all foes, boosts BC, HC drop rate for 3 turns, boosts BB Atk for 3 turns, damage taken fills BB gauge for 3 turns, boosts own max HP & activates Taunt and boosts own Atk, Def and critical rate for 2 turns",
+    "id": "19 combo Earth attack on all foes, boosts BC, HC drop rate for 3 turns, boosts BB Atk for 3 turns, damage taken fills BB gauge for 3 turns, boosts own max HP & activates Taunt and boosts own Atk, Def and critical rate for 2 turns",
+    "pt": "19 combo Earth attack on all foes, boosts BC, HC drop rate for 3 turns, boosts BB Atk for 3 turns, damage taken fills BB gauge for 3 turns, boosts own max HP & activates Taunt and boosts own Atk, Def and critical rate for 2 turns",
+    "th": "19 combo Earth attack on all foes, boosts BC, HC drop rate for 3 turns, boosts BB Atk for 3 turns, damage taken fills BB gauge for 3 turns, boosts own max HP & activates Taunt and boosts own Atk, Def and critical rate for 2 turns",
+    "vi": "19 combo Earth attack on all foes, boosts BC, HC drop rate for 3 turns, boosts BB Atk for 3 turns, damage taken fills BB gauge for 3 turns, boosts own max HP & activates Taunt and boosts own Atk, Def and critical rate for 2 turns"
+  },
+  "MST_SKILLS_730287_NAME": {
+    "en": "Energy of the Past",
+    "es": "Energy of the Past",
+    "id": "Energy of the Past",
+    "pt": "Energy of the Past",
+    "th": "Energy of the Past",
+    "vi": "Energy of the Past"
+  },
   "MST_SKILLS_7310_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -90854,5 +90870,21 @@
     "pt": "13 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns & damage taken may slightly restore HP for 3 turns",
     "th": "13 คอมโบ โจมตีธาตุดินอย่างแรง ใส่ศัตรูทั้งหมด, เพิ่มค่าอย่างมากให้ โจมตี, ป้องกัน, ฟื้นฟู ของชนิด ดิน นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ อัตราเกิดคริติคอล ของชนิด ดิน นาน 3 เทิร์น และ ความเสียหายที่ได้รับ อาจฟื้นคืน HP เล็กน้อย นาน 3 เทิร์น",
     "vi": "13 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns & damage taken may slightly restore HP for 3 turns"
+  },
+  "MST_SKILLS_830287_NAME": {
+    "en": "Debris Typhoon",
+    "es": "Debris Typhoon",
+    "id": "Taifun Puing",
+    "pt": "Debris Typhoon",
+    "th": "เดบริส ไทฟูน",
+    "vi": "Debris Typhoon"
+  },
+  "MST_SKILLS_830288_DESCRIPTION": {
+    "en": "16 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns, damage taken may slightly restore HP for 3 turns & boosts max HP",
+    "es": "16 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns, damage taken may slightly restore HP for 3 turns & boosts max HP",
+    "id": "16 kombo serangan Bumi kuat ke semua musuh, 3 giliran: amat menambah Serang, Tahan, Pulih tipe Bumi, ekstra jumbo pukulan ampuh tipe Bumi, kerusakan diderita dapat agak pulihkan HP, menambah HP maks",
+    "pt": "16 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns, damage taken may slightly restore HP for 3 turns & boosts max HP",
+    "th": "16 คอมโบ โจมตีธาตุดินอย่างแรง ใส่ศัตรูทั้งหมด, เพิ่มค่าอย่างมากให้ โจมตี, ป้องกัน, ฟื้นฟู ของชนิด ดิน นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ อัตราเกิดคริติคอล ของชนิด ดิน นาน 3 เทิร์น, ความเสียหายที่ได้รับ อาจฟื้นคืน HP เล็กน้อย นาน 3 เทิร์น และ เพิ่มค่า HP สูงสุด",
+    "vi": "16 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns, damage taken may slightly restore HP for 3 turns & boosts max HP"
   }
 }
