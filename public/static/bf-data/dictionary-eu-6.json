@@ -1,4 +1,52 @@
 {
+  "MST_SKILLS_2840508_NAME": {
+    "en": "Universe-Devouring Bolt",
+    "es": "Universe-Devouring Bolt",
+    "id": "Petir Pemangsa Semesta",
+    "pt": "Universe-Devouring Bolt",
+    "th": "ยูนิเวิร์ส-ดิวาวริง โบลท์",
+    "vi": "Universe-Devouring Bolt"
+  },
+  "MST_SKILLS_2840547_DESCRIPTION": {
+    "en": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
+    "es": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
+    "id": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
+    "pt": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
+    "th": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
+    "vi": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns"
+  },
+  "MST_SKILLS_2840547_NAME": {
+    "en": "Lightning Beam Lv. 3",
+    "es": "Lightning Beam Lv. 3",
+    "id": "Lightning Beam Lv. 3",
+    "pt": "Lightning Beam Lv. 3",
+    "th": "Lightning Beam Lv. 3",
+    "vi": "Lightning Beam Lv. 3"
+  },
+  "MST_SKILLS_2840548_DESCRIPTION": {
+    "en": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
+    "es": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
+    "id": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
+    "pt": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
+    "th": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
+    "vi": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns"
+  },
+  "MST_SKILLS_2840548_NAME": {
+    "en": "Lightning Beam MAX",
+    "es": "Lightning Beam MAX",
+    "id": "Lightning Beam MAX",
+    "pt": "Lightning Beam MAX",
+    "th": "Lightning Beam MAX",
+    "vi": "Lightning Beam MAX"
+  },
+  "MST_SKILLS_2840557_DESCRIPTION": {
+    "en": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
+    "es": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
+    "id": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
+    "pt": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
+    "th": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns",
+    "vi": "20 combo massive Thunder attack on all foes, damage taken enormously restores HP for 3 turns, adds evasion to self for 1 turn, enormously boosts Atk, Def, Rec for 3 turns & enormously boosts BB gauge for 3 turns"
+  },
   "MST_SKILLS_2840557_NAME": {
     "en": "Thunderbird's Judgment",
     "es": "Thunderbird's Judgment",
@@ -374,6 +422,22 @@
     "pt": "Humanity's Light of Hope",
     "th": "Humanity's Light of Hope",
     "vi": "Humanity's Light of Hope"
+  },
+  "MST_SKILLS_2840848_DESCRIPTION": {
+    "en": "24 combo Thunder attack on all foes (damage relative to remaining HP), may raise allies from KO, fills BB gauge for 4 turns, activates BB/SBB/UBB twice for 3 turns, boosts Atk, Rec relative to Def for 4 turns & fully restores HP for 4 turns",
+    "es": "24 combo Thunder attack on all foes (damage relative to remaining HP), may raise allies from KO, fills BB gauge for 4 turns, activates BB/SBB/UBB twice for 3 turns, boosts Atk, Rec relative to Def for 4 turns & fully restores HP for 4 turns",
+    "id": "24 combo Thunder attack on all foes (damage relative to remaining HP), may raise allies from KO, fills BB gauge for 4 turns, activates BB/SBB/UBB twice for 3 turns, boosts Atk, Rec relative to Def for 4 turns & fully restores HP for 4 turns",
+    "pt": "24 combo Thunder attack on all foes (damage relative to remaining HP), may raise allies from KO, fills BB gauge for 4 turns, activates BB/SBB/UBB twice for 3 turns, boosts Atk, Rec relative to Def for 4 turns & fully restores HP for 4 turns",
+    "th": "24 combo Thunder attack on all foes (damage relative to remaining HP), may raise allies from KO, fills BB gauge for 4 turns, activates BB/SBB/UBB twice for 3 turns, boosts Atk, Rec relative to Def for 4 turns & fully restores HP for 4 turns",
+    "vi": "24 combo Thunder attack on all foes (damage relative to remaining HP), may raise allies from KO, fills BB gauge for 4 turns, activates BB/SBB/UBB twice for 3 turns, boosts Atk, Rec relative to Def for 4 turns & fully restores HP for 4 turns"
+  },
+  "MST_SKILLS_2840848_NAME": {
+    "en": "Mimicked Judgement",
+    "es": "Mimicked Judgement",
+    "id": "Mimicked Judgement",
+    "pt": "Mimicked Judgement",
+    "th": "Mimicked Judgement",
+    "vi": "Mimicked Judgement"
   },
   "MST_SKILLS_2840900_DESCRIPTION": {
     "en": "18 combo massive Thunder attack on all foes (uses all allies' BB gauge), 100% damage reduction from Water types for 2 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & fully restores HP for 3 turns",
@@ -21623,6 +21687,22 @@
     "th": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Spark damage, Water, Dark elemental damage, activates BB/SBB/UBB twice, 100% evasion, adds status ailment infliction to attack, raises allies from KO & 100% Light, Dark damage reduction",
     "vi": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, Spark damage, Water, Dark elemental damage, activates BB/SBB/UBB twice, 100% evasion, adds status ailment infliction to attack, raises allies from KO & 100% Light, Dark damage reduction"
   },
+  "MST_SKILLS_3820678_DESCRIPTION": {
+    "en": "72 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, spark damage, critical damage, Def relative to Atk, 100% damage reduction, negates critical and elemental damage & fills OD gauge at turn's end",
+    "es": "72 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, spark damage, critical damage, Def relative to Atk, 100% damage reduction, negates critical and elemental damage & fills OD gauge at turn's end",
+    "id": "72 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, spark damage, critical damage, Def relative to Atk, 100% damage reduction, negates critical and elemental damage & fills OD gauge at turn's end",
+    "pt": "72 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, spark damage, critical damage, Def relative to Atk, 100% damage reduction, negates critical and elemental damage & fills OD gauge at turn's end",
+    "th": "72 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, spark damage, critical damage, Def relative to Atk, 100% damage reduction, negates critical and elemental damage & fills OD gauge at turn's end",
+    "vi": "72 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, spark damage, critical damage, Def relative to Atk, 100% damage reduction, negates critical and elemental damage & fills OD gauge at turn's end"
+  },
+  "MST_SKILLS_3820678_NAME": {
+    "en": "Beyond Human",
+    "es": "Beyond Human",
+    "id": "Beyond Human",
+    "pt": "Beyond Human",
+    "th": "Beyond Human",
+    "vi": "Beyond Human"
+  },
   "MST_SKILLS_3820688_DESCRIPTION": {
     "en": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, critical hit rate, critical damage, Spark damage, Water, Light elemental damage, 100% damage reduction, damage taken boosts BB gauge, 80% KO resistance & purges LS and ES Lock",
     "es": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, critical hit rate, critical damage, Spark damage, Water, Light elemental damage, 100% damage reduction, damage taken boosts BB gauge, 80% KO resistance & purges LS and ES Lock",
@@ -21686,6 +21766,22 @@
     "pt": "Conflicted Philosophy",
     "th": "Conflicted Philosophy",
     "vi": "Conflicted Philosophy"
+  },
+  "MST_SKILLS_3820848_DESCRIPTION": {
+    "en": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Rec relative to Def, fully restores HP, fills BB gauge, OD gauge, damage taken boosts BB gauge and restores HP, 100% damage reduction, adds status ailment infliction to attack, 80% raises allies from KO & activates BB/SBB/UBB twice",
+    "es": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Rec relative to Def, fully restores HP, fills BB gauge, OD gauge, damage taken boosts BB gauge and restores HP, 100% damage reduction, adds status ailment infliction to attack, 80% raises allies from KO & activates BB/SBB/UBB twice",
+    "id": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Rec relative to Def, fully restores HP, fills BB gauge, OD gauge, damage taken boosts BB gauge and restores HP, 100% damage reduction, adds status ailment infliction to attack, 80% raises allies from KO & activates BB/SBB/UBB twice",
+    "pt": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Rec relative to Def, fully restores HP, fills BB gauge, OD gauge, damage taken boosts BB gauge and restores HP, 100% damage reduction, adds status ailment infliction to attack, 80% raises allies from KO & activates BB/SBB/UBB twice",
+    "th": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Rec relative to Def, fully restores HP, fills BB gauge, OD gauge, damage taken boosts BB gauge and restores HP, 100% damage reduction, adds status ailment infliction to attack, 80% raises allies from KO & activates BB/SBB/UBB twice",
+    "vi": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Rec relative to Def, fully restores HP, fills BB gauge, OD gauge, damage taken boosts BB gauge and restores HP, 100% damage reduction, adds status ailment infliction to attack, 80% raises allies from KO & activates BB/SBB/UBB twice"
+  },
+  "MST_SKILLS_3820848_NAME": {
+    "en": "Vade Retro, Spiritus!",
+    "es": "Vade Retro, Spiritus!",
+    "id": "Vade Retro, Spiritus!",
+    "pt": "Vade Retro, Spiritus!",
+    "th": "Vade Retro, Spiritus!",
+    "vi": "Vade Retro, Spiritus!"
   },
   "MST_SKILLS_3830528_DESCRIPTION": {
     "en": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical damage, Earth elemental damage, BB gauge, 80% KO resistance, 80% evasion, 80% activates BB/SBB/UBB twice, 80% raises allies from KO & purges turn skip effect",
@@ -90607,6 +90703,22 @@
     "th": "Wakizashi",
     "vi": "Wakizashi"
   },
+  "MST_SKILLS_820848_DESCRIPTION": {
+    "en": "13 combo Water attack on all foes, activates Taunt and boosts own Def for 2 turns, adds probable 2 turns Atk, Def reduction infliction counter for 3 turns& damage taken fills BB gauge and may restore HP for 3 turns",
+    "es": "13 combo Water attack on all foes, activates Taunt and boosts own Def for 2 turns, adds probable 2 turns Atk, Def reduction infliction counter for 3 turns& damage taken fills BB gauge and may restore HP for 3 turns",
+    "id": "13 combo Water attack on all foes, activates Taunt and boosts own Def for 2 turns, adds probable 2 turns Atk, Def reduction infliction counter for 3 turns& damage taken fills BB gauge and may restore HP for 3 turns",
+    "pt": "13 combo Water attack on all foes, activates Taunt and boosts own Def for 2 turns, adds probable 2 turns Atk, Def reduction infliction counter for 3 turns& damage taken fills BB gauge and may restore HP for 3 turns",
+    "th": "13 combo Water attack on all foes, activates Taunt and boosts own Def for 2 turns, adds probable 2 turns Atk, Def reduction infliction counter for 3 turns& damage taken fills BB gauge and may restore HP for 3 turns",
+    "vi": "13 combo Water attack on all foes, activates Taunt and boosts own Def for 2 turns, adds probable 2 turns Atk, Def reduction infliction counter for 3 turns& damage taken fills BB gauge and may restore HP for 3 turns"
+  },
+  "MST_SKILLS_820848_NAME": {
+    "en": "Cold Benediction",
+    "es": "Cold Benediction",
+    "id": "Cold Benediction",
+    "pt": "Cold Benediction",
+    "th": "Cold Benediction",
+    "vi": "Cold Benediction"
+  },
   "MST_SKILLS_820900_DESCRIPTION": {
     "en": "12 combo powerful Water attack on all foes, 50% damage reduction for 1 turn, greatly restores HP, slightly boosts OD gauge & greatly boosts max HP",
     "es": "12 combo powerful Water attack on all foes, 50% damage reduction for 1 turn, greatly restores HP, slightly boosts OD gauge & greatly boosts max HP",
@@ -90854,37 +90966,5 @@
     "pt": "17 combo Earth attack on all foes (enormously boosts own critical hit rate), normal attacks hit all foes for 3 turns, considerably raises normal hit amount for 3 turns, adds probable 1 turn great Atk, Def reduction to attack for 3 turns & boosts critical damage of Earth types for 3 turns",
     "th": "17 combo Earth attack on all foes (enormously boosts own critical hit rate), normal attacks hit all foes for 3 turns, considerably raises normal hit amount for 3 turns, adds probable 1 turn great Atk, Def reduction to attack for 3 turns & boosts critical damage of Earth types for 3 turns",
     "vi": "17 combo Earth attack on all foes (enormously boosts own critical hit rate), normal attacks hit all foes for 3 turns, considerably raises normal hit amount for 3 turns, adds probable 1 turn great Atk, Def reduction to attack for 3 turns & boosts critical damage of Earth types for 3 turns"
-  },
-  "MST_SKILLS_830278_NAME": {
-    "en": "Malarial Barrage",
-    "es": "Malarial Barrage",
-    "id": "Berondongan Malaria",
-    "pt": "Malarial Barrage",
-    "th": "มาลาไรอัล บาราจ",
-    "vi": "Malarial Barrage"
-  },
-  "MST_SKILLS_830287_DESCRIPTION": {
-    "en": "13 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns & damage taken may slightly restore HP for 3 turns",
-    "es": "13 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns & damage taken may slightly restore HP for 3 turns",
-    "id": "13 kombo serangan Bumi kuat ke semua musuh, 3 giliran: amat menambah Serang, Tahan, Pulih tipe Bumi, ekstra jumbo pukulan ampuh tipe Bumi, kerusakan diderita dapat agak pulihkan HP",
-    "pt": "13 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns & damage taken may slightly restore HP for 3 turns",
-    "th": "13 คอมโบ โจมตีธาตุดินอย่างแรง ใส่ศัตรูทั้งหมด, เพิ่มค่าอย่างมากให้ โจมตี, ป้องกัน, ฟื้นฟู ของชนิด ดิน นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ อัตราเกิดคริติคอล ของชนิด ดิน นาน 3 เทิร์น และ ความเสียหายที่ได้รับ อาจฟื้นคืน HP เล็กน้อย นาน 3 เทิร์น",
-    "vi": "13 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns & damage taken may slightly restore HP for 3 turns"
-  },
-  "MST_SKILLS_830287_NAME": {
-    "en": "Debris Typhoon",
-    "es": "Debris Typhoon",
-    "id": "Taifun Puing",
-    "pt": "Debris Typhoon",
-    "th": "เดบริส ไทฟูน",
-    "vi": "Debris Typhoon"
-  },
-  "MST_SKILLS_830288_DESCRIPTION": {
-    "en": "16 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns, damage taken may slightly restore HP for 3 turns & boosts max HP",
-    "es": "16 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns, damage taken may slightly restore HP for 3 turns & boosts max HP",
-    "id": "16 kombo serangan Bumi kuat ke semua musuh, 3 giliran: amat menambah Serang, Tahan, Pulih tipe Bumi, ekstra jumbo pukulan ampuh tipe Bumi, kerusakan diderita dapat agak pulihkan HP, menambah HP maks",
-    "pt": "16 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns, damage taken may slightly restore HP for 3 turns & boosts max HP",
-    "th": "16 คอมโบ โจมตีธาตุดินอย่างแรง ใส่ศัตรูทั้งหมด, เพิ่มค่าอย่างมากให้ โจมตี, ป้องกัน, ฟื้นฟู ของชนิด ดิน นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ อัตราเกิดคริติคอล ของชนิด ดิน นาน 3 เทิร์น, ความเสียหายที่ได้รับ อาจฟื้นคืน HP เล็กน้อย นาน 3 เทิร์น และ เพิ่มค่า HP สูงสุด",
-    "vi": "16 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns, damage taken may slightly restore HP for 3 turns & boosts max HP"
   }
 }

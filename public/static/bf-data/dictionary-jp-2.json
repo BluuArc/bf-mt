@@ -1,4 +1,140 @@
 {
+  "MST_LEADERSKILLS_4402_DESCRIPTION": {
+    "en": "30% boost to max HP, considerably boosts BB gauge each turn, negates all status ailments & negates Atk, Def, Rec reductions",
+    "es": "30% boost to max HP, considerably boosts BB gauge each turn, negates all status ailments & negates Atk, Def, Rec reductions",
+    "id": "30% ekstra Serangan, lumayan menambah meteran BB tiap giliran, menegasi semua status penyakit, pengurangan Serang, Tahan, Pulih",
+    "pt": "30% boost to max HP, considerably boosts BB gauge each turn, negates all status ailments & negates Atk, Def, Rec reductions",
+    "th": "30% เพิ่มค่าให้กับ HP สูงสุด, เพิ่ม เกจ BB มากมาย แต่ละเทิร์น, ลบล้าง สถานะผิดปกติทั้งหมด และ ลบล้าง การลดค่า โจมตี, ป้องกัน, ฟื้นฟู",
+    "vi": "30% boost to max HP, considerably boosts BB gauge each turn, negates all status ailments & negates Atk, Def, Rec reductions"
+  },
+  "MST_LEADERSKILLS_4402_NAME": {
+    "en": "Goddess's Revelation",
+    "es": "Goddess's Revelation",
+    "id": "Pengungkapan Dewi",
+    "pt": "Goddess's Revelation",
+    "th": "ก็อดเดส รีวีลเลชั่น",
+    "vi": "Goddess's Revelation"
+  },
+  "MST_LEADERSKILLS_4403_DESCRIPTION": {
+    "en": "50% boost to Rec, max HP, enormously boosts BB gauge each turn, negates all status ailments, negates all Atk, Def, Rec reduction effects & 10% damage reduction",
+    "es": "50% boost to Rec, max HP, enormously boosts BB gauge each turn, negates all status ailments, negates all Atk, Def, Rec reduction effects & 10% damage reduction",
+    "id": "50% ekstra Pulih, HP maks, tambahan jumbo meteran BB tiap giliran, menegasi semua status penyakit dan efek kurangi Serang, Tahan, Pulih & 10% kurangi kerusakan",
+    "pt": "50% boost to Rec, max HP, enormously boosts BB gauge each turn, negates all status ailments, negates all Atk, Def, Rec reduction effects & 10% damage reduction",
+    "th": "50% เพิ่มค่า ฟื้นฟู, HP สูงสุด, เพิ่มค่า เกจ BB อย่างมากในแต่ละเทิร์น, ต้านทานสถานะผิดปกติทั้งหมด, ต้านทานผลการลดค่า โจมตี, ป้องกัน, ฟื้นฟู ทั้งหมด และ 10% ลดค่าความเสียหาย",
+    "vi": "50% boost to Rec, max HP, enormously boosts BB gauge each turn, negates all status ailments, negates all Atk, Def, Rec reduction effects & 10% damage reduction"
+  },
+  "MST_LEADERSKILLS_4403_NAME": {
+    "en": "Graceful Goddess's Wish",
+    "es": "Graceful Goddess's Wish",
+    "id": "Keinginan Dewi Anggun",
+    "pt": "Graceful Goddess's Wish",
+    "th": "เกรซฟูล ก็อดเดส วิช",
+    "vi": "Graceful Goddess's Wish"
+  },
+  "MST_LEADERSKILLS_4500_DESCRIPTION": {
+    "en": "25% boost to Atk power of male Units",
+    "es": "Aumenta un 25% el ataque de las unidades masculinas.",
+    "id": "25% menambah kekuatan Serang Unit pria",
+    "pt": "Reforço de 25% no ATQ de unidades masculinas",
+    "th": "25% เพิ่มพลัง โจมตี ให้ยูนิตเพศชาย",
+    "vi": "Tăng 25% sức mạnh tấn công của các Quái nam"
+  },
+  "MST_LEADERSKILLS_4500_NAME": {
+    "en": "Brave Power",
+    "es": "Poder valiente",
+    "id": "Kekuatan Berani",
+    "pt": "Poder da Coragem",
+    "th": "เบรฟพาวเวอร์",
+    "vi": "Sức mạnh dũng cảm"
+  },
+  "MST_LEADERSKILLS_4600_DESCRIPTION": {
+    "en": "25% boost to Atk power of female Units",
+    "es": "Aumenta un 25% el ataque de las unidades femeninas.",
+    "id": "25% menambah kekuatan Serang Unit wanita",
+    "pt": "Reforço de 25% no ATQ de unidades femininas",
+    "th": "25% เพิ่มพลัง โจมตี ให้ยูนิตเพศหญิง",
+    "vi": "Tăng 25% sức mạnh tấn công của các Quái nữ"
+  },
+  "MST_LEADERSKILLS_4600_NAME": {
+    "en": "Sweet Power",
+    "es": "Poder dulce",
+    "id": "Kekuatan Manis",
+    "pt": "Poder da Doçura",
+    "th": "สวีทพาวเวอร์",
+    "vi": "Sức mạnh ngọt ngào"
+  },
+  "MST_LEADERSKILLS_4700_DESCRIPTION": {
+    "en": "25% boost to Atk power of genderless Units",
+    "es": "Aumenta un 25% el ataque de las unidades sin género.",
+    "id": "25% menambah kekuatan Serang Unit tak berjenis kelamin",
+    "pt": "Reforço de 25% no ATQ de unidades sem gênero",
+    "th": "25% เพิ่มพลัง โจมตี ไม่จำกัดเพศ",
+    "vi": "Tăng 25% sức mạnh tấn công của các Quái phi giới tính"
+  },
+  "MST_LEADERSKILLS_4700_NAME": {
+    "en": "Absolute Power",
+    "es": "Poder absoluto",
+    "id": "Kekuatan Absolut",
+    "pt": "Poder Absoluto",
+    "th": "แอ็บโซลูทพาวเวอร์",
+    "vi": "Sức mạnh tuyệt đối"
+  },
+  "MST_LEADERSKILLS_4800_DESCRIPTION": {
+    "en": "Boost in damage dealt to weak elements",
+    "es": "Aumenta el daño infligido a los enemigos debilitados",
+    "id": "Makin merusak elemen lemah",
+    "pt": "Bônus no dano causado a elementos fracos",
+    "th": "เพิ่มความเสียหายที่ทำให้กับธาตุที่แพ้ทาง",
+    "vi": "Tăng mức thiệt hại cho các yếu tố suy yếu"
+  },
+  "MST_LEADERSKILLS_4800_NAME": {
+    "en": "Royal Oppression",
+    "es": "Opresión real",
+    "id": "Penindasan Ningrat",
+    "pt": "Opressão Real",
+    "th": "รอยัลออพเพรสชั่น",
+    "vi": "Áp bức hoàng gia"
+  },
+  "MST_LEADERSKILLS_4801_DESCRIPTION": {
+    "en": "Great boost in damage dealt to weak elements",
+    "es": "Aumenta notablemente el daño infligido a los enemigos debilitados",
+    "id": "Amat makin merusak elemen lemah",
+    "pt": "Grande bônus no dano causado a elementos fracos",
+    "th": "เพิ่มความเสียหายที่ทำให้กับธาตุที่แพ้ทางอย่างมาก",
+    "vi": "Tăng mạnh mức thiệt hại cho các yếu tố suy yếu"
+  },
+  "MST_LEADERSKILLS_4801_NAME": {
+    "en": "Supreme Oppression",
+    "es": "Opresión suprema",
+    "id": "Penindasan Utama",
+    "pt": "Opressão Suprema",
+    "th": "สุพรีมออพเพรสชั่น",
+    "vi": "Áp bức tối cao"
+  },
+  "MST_LEADERSKILLS_4900_DESCRIPTION": {
+    "en": "Small reduction in BB gauge required for BB",
+    "es": "Leve reducción en el indicador BB necesario para BB.",
+    "id": "Pengurangan kecil meteran BB yang diperlukan untuk BB",
+    "pt": "Pequena redução na barra de BB necessária para o Brave Burst",
+    "th": "ลดเกจ BB ที่ต้องการสำหรับการใช้ BB ลงเล็กน้อย",
+    "vi": "Giảm nhỏ vạch Tăng cường can đảm bắt buộc để Tăng cường can đảm"
+  },
+  "MST_LEADERSKILLS_4900_NAME": {
+    "en": "Monarch's Magic",
+    "es": "Magia del monarca",
+    "id": "Sihir Monarki",
+    "pt": "Magia do Monarca",
+    "th": "โมนาชแมจิค",
+    "vi": "Ma thuật của Monarch"
+  },
+  "MST_LEADERSKILLS_4901_DESCRIPTION": {
+    "en": "Reduction in BB gauge required for BB",
+    "es": "Reducción en el indicador BB necesario para BB.",
+    "id": "Pengurangan meteran BB yang diperlukan untuk BB",
+    "pt": "Redução na barra de BB necessária para o Brave Burst",
+    "th": "ลดเกจ BB ที่ต้องการสำหรับการใช้ BB ลง",
+    "vi": "Giảm vạch Tăng cường can đảm để Tăng cường can đảm"
+  },
   "MST_LEADERSKILLS_4901_NAME": {
     "en": "High Ruler's Magic",
     "es": "Magia del gran soberano",
@@ -10607,6 +10743,22 @@
     "th": "Way of the Samurai",
     "vi": "Way of the Samurai"
   },
+  "MST_LEADERSKILLS_820848_DESCRIPTION": {
+    "en": "150% Atk, Def, 100% max HP (Water, Thunder), damage taken fills BB gauge, 15% damage reduction from Water, Thunder types, probable damage reduction to 1 & 100% ABP, 50% CBP gain",
+    "es": "150% Atk, Def, 100% max HP (Water, Thunder), damage taken fills BB gauge, 15% damage reduction from Water, Thunder types, probable damage reduction to 1 & 100% ABP, 50% CBP gain",
+    "id": "150% Atk, Def, 100% max HP (Water, Thunder), damage taken fills BB gauge, 15% damage reduction from Water, Thunder types, probable damage reduction to 1 & 100% ABP, 50% CBP gain",
+    "pt": "150% Atk, Def, 100% max HP (Water, Thunder), damage taken fills BB gauge, 15% damage reduction from Water, Thunder types, probable damage reduction to 1 & 100% ABP, 50% CBP gain",
+    "th": "150% Atk, Def, 100% max HP (Water, Thunder), damage taken fills BB gauge, 15% damage reduction from Water, Thunder types, probable damage reduction to 1 & 100% ABP, 50% CBP gain",
+    "vi": "150% Atk, Def, 100% max HP (Water, Thunder), damage taken fills BB gauge, 15% damage reduction from Water, Thunder types, probable damage reduction to 1 & 100% ABP, 50% CBP gain"
+  },
+  "MST_LEADERSKILLS_820848_NAME": {
+    "en": "Fortune Favors the Bold",
+    "es": "Fortune Favors the Bold",
+    "id": "Fortune Favors the Bold",
+    "pt": "Fortune Favors the Bold",
+    "th": "Fortune Favors the Bold",
+    "vi": "Fortune Favors the Bold"
+  },
   "MST_LEADERSKILLS_820900_DESCRIPTION": {
     "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Water elemental damage, 15% damage reduction from Fire types & negates all status ailments",
     "es": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Water elemental damage, 15% damage reduction from Fire types & negates all status ailments",
@@ -12206,6 +12358,22 @@
     "pt": "Divine Ruler's Edge",
     "th": "Divine Ruler's Edge",
     "vi": "Divine Ruler's Edge"
+  },
+  "MST_LEADERSKILLS_840848_DESCRIPTION": {
+    "en": "140% Atk, Def, max HP and 30% critical rate (Thunder), 30% reduction to BB activation cost, spark damage restores HP, 30% OD gauge fill rate & 20% damage reduction for 2 turns when damage taken is over 5k",
+    "es": "140% Atk, Def, max HP and 30% critical rate (Thunder), 30% reduction to BB activation cost, spark damage restores HP, 30% OD gauge fill rate & 20% damage reduction for 2 turns when damage taken is over 5k",
+    "id": "140% Atk, Def, max HP and 30% critical rate (Thunder), 30% reduction to BB activation cost, spark damage restores HP, 30% OD gauge fill rate & 20% damage reduction for 2 turns when damage taken is over 5k",
+    "pt": "140% Atk, Def, max HP and 30% critical rate (Thunder), 30% reduction to BB activation cost, spark damage restores HP, 30% OD gauge fill rate & 20% damage reduction for 2 turns when damage taken is over 5k",
+    "th": "140% Atk, Def, max HP and 30% critical rate (Thunder), 30% reduction to BB activation cost, spark damage restores HP, 30% OD gauge fill rate & 20% damage reduction for 2 turns when damage taken is over 5k",
+    "vi": "140% Atk, Def, max HP and 30% critical rate (Thunder), 30% reduction to BB activation cost, spark damage restores HP, 30% OD gauge fill rate & 20% damage reduction for 2 turns when damage taken is over 5k"
+  },
+  "MST_LEADERSKILLS_840848_NAME": {
+    "en": "The Temptress",
+    "es": "The Temptress",
+    "id": "The Temptress",
+    "pt": "The Temptress",
+    "th": "The Temptress",
+    "vi": "The Temptress"
   },
   "MST_LEADERSKILLS_840900_DESCRIPTION": {
     "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Thunder elemental damage, 15% damage reduction from Water types & negates all status ailments",
@@ -17855,6 +18023,86 @@
     "th": "\"Nngh, that stung!<br>ข้าประเมินเจ้าต่ำไปหน่อย!<br>ข้าจะไม่ยั้งมืออีกต่อไปแล้ว!!\"",
     "vi": "\"Nngh, đau thật!<br>Ta đã đánh giá thấp ngươi!<br>Ta sẽ không nể nang gì nữa!!\""
   },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2000_MESSAGES": {
+    "en": "Where are we?",
+    "es": "Where are we?",
+    "id": "Where are we?",
+    "pt": "Where are we?",
+    "th": "Where are we?",
+    "vi": "Where are we?"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2001_MESSAGES": {
+    "en": "I don't know...Something pulled us in here.",
+    "es": "I don't know...Something pulled us in here.",
+    "id": "I don't know...Something pulled us in here.",
+    "pt": "I don't know...Something pulled us in here.",
+    "th": "I don't know...Something pulled us in here.",
+    "vi": "I don't know...Something pulled us in here."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2002_MESSAGES": {
+    "en": "Play by my rules, or stay here...forever.",
+    "es": "Play by my rules, or stay here...forever.",
+    "id": "Play by my rules, or stay here...forever.",
+    "pt": "Play by my rules, or stay here...forever.",
+    "th": "Play by my rules, or stay here...forever.",
+    "vi": "Play by my rules, or stay here...forever."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2003_MESSAGES": {
+    "en": "Ugh.",
+    "es": "Ugh.",
+    "id": "Ugh.",
+    "pt": "Ugh.",
+    "th": "Ugh.",
+    "vi": "Ugh."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2004_MESSAGES": {
+    "en": "Guess we don't have a choice but to play this game.",
+    "es": "Guess we don't have a choice but to play this game.",
+    "id": "Guess we don't have a choice but to play this game.",
+    "pt": "Guess we don't have a choice but to play this game.",
+    "th": "Guess we don't have a choice but to play this game.",
+    "vi": "Guess we don't have a choice but to play this game."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2005_MESSAGES": {
+    "en": "Use Attack to inspect the statue. Use BB to make your choice. Good luck, seeker…",
+    "es": "Use Attack to inspect the statue. Use BB to make your choice. Good luck, seeker…",
+    "id": "Use Attack to inspect the statue. Use BB to make your choice. Good luck, seeker…",
+    "pt": "Use Attack to inspect the statue. Use BB to make your choice. Good luck, seeker…",
+    "th": "Use Attack to inspect the statue. Use BB to make your choice. Good luck, seeker…",
+    "vi": "Use Attack to inspect the statue. Use BB to make your choice. Good luck, seeker…"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2006_MESSAGES": {
+    "en": "Hey! Are you crazy? Why'd you just-",
+    "es": "Hey! Are you crazy? Why'd you just-",
+    "id": "Hey! Are you crazy? Why'd you just-",
+    "pt": "Hey! Are you crazy? Why'd you just-",
+    "th": "Hey! Are you crazy? Why'd you just-",
+    "vi": "Hey! Are you crazy? Why'd you just-"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2007_MESSAGES": {
+    "en": "How strange...You're here too.",
+    "es": "How strange...You're here too.",
+    "id": "How strange...You're here too.",
+    "pt": "How strange...You're here too.",
+    "th": "How strange...You're here too.",
+    "vi": "How strange...You're here too."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2008_MESSAGES": {
+    "en": "It's Master's voice...",
+    "es": "It's Master's voice...",
+    "id": "It's Master's voice...",
+    "pt": "It's Master's voice...",
+    "th": "It's Master's voice...",
+    "vi": "It's Master's voice..."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2009_MESSAGES": {
+    "en": "...No matter. Let us continue.",
+    "es": "...No matter. Let us continue.",
+    "id": "...No matter. Let us continue.",
+    "pt": "...No matter. Let us continue.",
+    "th": "...No matter. Let us continue.",
+    "vi": "...No matter. Let us continue."
+  },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_200_MESSAGES": {
     "en": "Was your previous victory just<br>a stroke of luck? Or could it be<br>that this mock Unit is too much for you?",
     "es": "¿Tu victoria anterior<br>fue solo un golpe de suerte? ¿O quizá esta unidad de práctica<br>es demasiado para ti?",
@@ -17862,6 +18110,78 @@
     "pt": "Será que sua vitória anterior<br>foi pura sorte? Ou será que<br>essa unidade simulada é demais para você?",
     "th": "ชัยชนะครั้งก่อนของเจ้านั้นได้เพราะ<br>โชคช่วยรึเปล่านะ? หรือว่ายูนิตจำลองนี้<br>จะเก่งกว่าเจ้าเกินไป?",
     "vi": "Was your previous victory just<br>a stroke of luck? Or could it be<br>that this mock Unit is too much for you?"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2010_MESSAGES": {
+    "en": "Use Attack to inspect the statue. Use BB to make your choice. Good luck, spirit…",
+    "es": "Use Attack to inspect the statue. Use BB to make your choice. Good luck, spirit…",
+    "id": "Use Attack to inspect the statue. Use BB to make your choice. Good luck, spirit…",
+    "pt": "Use Attack to inspect the statue. Use BB to make your choice. Good luck, spirit…",
+    "th": "Use Attack to inspect the statue. Use BB to make your choice. Good luck, spirit…",
+    "vi": "Use Attack to inspect the statue. Use BB to make your choice. Good luck, spirit…"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2011_MESSAGES": {
+    "en": "Interesting. You are sharper than I thought.",
+    "es": "Interesting. You are sharper than I thought.",
+    "id": "Interesting. You are sharper than I thought.",
+    "pt": "Interesting. You are sharper than I thought.",
+    "th": "Interesting. You are sharper than I thought.",
+    "vi": "Interesting. You are sharper than I thought."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2012_MESSAGES": {
+    "en": "Now, spirit, let us see his heart.",
+    "es": "Now, spirit, let us see his heart.",
+    "id": "Now, spirit, let us see his heart.",
+    "pt": "Now, spirit, let us see his heart.",
+    "th": "Now, spirit, let us see his heart.",
+    "vi": "Now, spirit, let us see his heart."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2013_MESSAGES": {
+    "en": "Khh...",
+    "es": "Khh...",
+    "id": "Khh...",
+    "pt": "Khh...",
+    "th": "Khh...",
+    "vi": "Khh..."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2014_MESSAGES": {
+    "en": "So, you yearn for the ultimate truth. Very well!",
+    "es": "So, you yearn for the ultimate truth. Very well!",
+    "id": "So, you yearn for the ultimate truth. Very well!",
+    "pt": "So, you yearn for the ultimate truth. Very well!",
+    "th": "So, you yearn for the ultimate truth. Very well!",
+    "vi": "So, you yearn for the ultimate truth. Very well!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2015_MESSAGES": {
+    "en": "Pass this final test, and earn your freedom...",
+    "es": "Pass this final test, and earn your freedom...",
+    "id": "Pass this final test, and earn your freedom...",
+    "pt": "Pass this final test, and earn your freedom...",
+    "th": "Pass this final test, and earn your freedom...",
+    "vi": "Pass this final test, and earn your freedom..."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2016_MESSAGES": {
+    "en": "Fail, and perish.",
+    "es": "Fail, and perish.",
+    "id": "Fail, and perish.",
+    "pt": "Fail, and perish.",
+    "th": "Fail, and perish.",
+    "vi": "Fail, and perish."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2017_MESSAGES": {
+    "en": "Wait, what?!",
+    "es": "Wait, what?!",
+    "id": "Wait, what?!",
+    "pt": "Wait, what?!",
+    "th": "Wait, what?!",
+    "vi": "Wait, what?!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2018_MESSAGES": {
+    "en": "Use Attack to inspect the statue. Use BB to make your choice. Good luck.",
+    "es": "Use Attack to inspect the statue. Use BB to make your choice. Good luck.",
+    "id": "Use Attack to inspect the statue. Use BB to make your choice. Good luck.",
+    "pt": "Use Attack to inspect the statue. Use BB to make your choice. Good luck.",
+    "th": "Use Attack to inspect the statue. Use BB to make your choice. Good luck.",
+    "vi": "Use Attack to inspect the statue. Use BB to make your choice. Good luck."
   },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_201_MESSAGES": {
     "en": "You sought to challenge me.<br>This amount of power was to be<br>expected. However, it's time to<br>end all this playing around.",
@@ -90646,245 +90966,5 @@
     "pt": "Mestre Sagrado Aem",
     "th": "โฮลี่มาสเตอร์เอม",
     "vi": "Thầy thánh Aem"
-  },
-  "MST_MONSTERS_51960_NAME": {
-    "en": "Holy Master Aem",
-    "es": "Maestro sacro Aem",
-    "id": "Master Suci Aem",
-    "pt": "Mestre Sagrado Aem",
-    "th": "โฮลี่มาสเตอร์เอม",
-    "vi": "Thầy thánh Aem"
-  },
-  "MST_MONSTERS_51961_NAME": {
-    "en": "Holy Master Aem",
-    "es": "Maestro sacro Aem",
-    "id": "Master Suci Aem",
-    "pt": "Mestre Sagrado Aem",
-    "th": "โฮลี่มาสเตอร์เอม",
-    "vi": "Thầy thánh Aem"
-  },
-  "MST_MONSTERS_51962_NAME": {
-    "en": "Holy Master Aem",
-    "es": "Maestro sacro Aem",
-    "id": "Master Suci Aem",
-    "pt": "Mestre Sagrado Aem",
-    "th": "โอลี่มาสเตอร์ไอม์",
-    "vi": "Holy Master Aem"
-  },
-  "MST_MONSTERS_51963_NAME": {
-    "en": "Holy Master Aem",
-    "es": "Maestro sacro Aem",
-    "id": "Master Suci Aem",
-    "pt": "Mestre Sagrado Aem",
-    "th": "โฮลี่ มาสเตอร์ เอม",
-    "vi": "Thầy Thánh Aem"
-  },
-  "MST_MONSTERS_51964_NAME": {
-    "en": "Holy Master Aem",
-    "es": "Maestro sacro Aem",
-    "id": "Master Suci Aem",
-    "pt": "Mestre Sagrado Aem",
-    "th": "โฮลี่ มาสเตอร์ เอม",
-    "vi": "Holy Master Aem"
-  },
-  "MST_MONSTERS_51965_NAME": {
-    "en": "Holy Master Aem",
-    "es": "Maestro sacro Aem",
-    "id": "Master Suci Aem",
-    "pt": "Mestre Sagrado Aem",
-    "th": "โฮลี่มาสเตอร์เอม",
-    "vi": "Holy Master Aem"
-  },
-  "MST_MONSTERS_51966_NAME": {
-    "en": "Holy Master Aem",
-    "es": "Maestro sacro Aem",
-    "id": "Master Suci Aem",
-    "pt": "Mestre Sagrado Aem",
-    "th": "โฮลี่มาสเตอร์เอม",
-    "vi": "Holy Master Aem"
-  },
-  "MST_MONSTERS_51967_NAME": {
-    "en": "Holy Master Aem",
-    "es": "Holy Master Aem",
-    "id": "Beast Liar Mau",
-    "pt": "Holy Master Aem",
-    "th": "โฮลี่ มาสเตอร์ เอม",
-    "vi": "Holy Master Aem"
-  },
-  "MST_MONSTERS_51968_NAME": {
-    "en": "Holy Master Aem",
-    "es": "Holy Master Aem",
-    "id": "Kaiser Mossy",
-    "pt": "Holy Master Aem",
-    "th": "โฮลี่ มาสเตอร์ เอม",
-    "vi": "Holy Master Aem"
-  },
-  "MST_MONSTERS_51969_NAME": {
-    "en": "Holy Master Aem",
-    "es": "Holy Master Aem",
-    "id": "Holy Master Aem",
-    "pt": "Holy Master Aem",
-    "th": "โฮลี่ มาสเตอร์ เอม",
-    "vi": "Holy Master Aem"
-  },
-  "MST_MONSTERS_51970_NAME": {
-    "en": "Holy Master Aem",
-    "es": "Holy Master Aem",
-    "id": "Holy Master Aem",
-    "pt": "Holy Master Aem",
-    "th": "โฮลี่ มาสเตอร์ เอม",
-    "vi": "Holy Master Aem"
-  },
-  "MST_MONSTERS_52000_NAME": {
-    "en": "Star Prince Nekky",
-    "es": "Príncipe estelar Nekky",
-    "id": "Raden Astro Nekky",
-    "pt": "Nekky Príncipe Luz",
-    "th": "สตาร์พริ้นซ์เนคคี",
-    "vi": "Hoàng tử Nekky"
-  },
-  "MST_MONSTERS_52001_NAME": {
-    "en": "Star Prince Nekky",
-    "es": "Príncipe estelar Nekky",
-    "id": "Raden Astro Nekky",
-    "pt": "Nekky Príncipe Luz",
-    "th": "สตาร์พริ้นซ์เนคคี",
-    "vi": "Hoàng tử Nekky"
-  },
-  "MST_MONSTERS_52050_NAME": {
-    "en": "Star King Nekky",
-    "es": "Rey estelar Nekky",
-    "id": "Raja Astro Nekky",
-    "pt": "Nekky Rei da Luz",
-    "th": "สคาร์คิงเนคคี",
-    "vi": "Vua sao Nekky"
-  },
-  "MST_MONSTERS_52051_NAME": {
-    "en": "Star King Nekky",
-    "es": "Rey estelar Nekky",
-    "id": "Raja Astro Nekky",
-    "pt": "Nekky Rei da Luz",
-    "th": "สคาร์คิงเนคคี",
-    "vi": "Vua sao Nekky"
-  },
-  "MST_MONSTERS_52052_NAME": {
-    "en": "Pumburkiny",
-    "es": "Pumburkiny",
-    "id": "Pumburkiny",
-    "pt": "Abóburny",
-    "th": "พัมเบอคินี่",
-    "vi": "Bí ngô lửa"
-  },
-  "MST_MONSTERS_52100_NAME": {
-    "en": "Platinum Nekky",
-    "es": "Platino Nekky",
-    "id": "Platinum Nekky",
-    "pt": "Nekky de Platina",
-    "th": "แพลตตินั่มเนคคี",
-    "vi": "Bạch kim Nekky"
-  },
-  "MST_MONSTERS_52101_NAME": {
-    "en": "Frosty",
-    "es": "Heladio",
-    "id": "Frosty",
-    "pt": "Frosty",
-    "th": "ฟรอสตี้",
-    "vi": "Sương giá"
-  },
-  "MST_MONSTERS_52102_NAME": {
-    "en": "Platinum Nekky",
-    "es": "Platinum Nekky",
-    "id": "Platinum Nekky",
-    "pt": "Platinum Nekky",
-    "th": "แพลทินัม เนคกี้",
-    "vi": "Platinum Nekky"
-  },
-  "MST_MONSTERS_52150_NAME": {
-    "en": "Light Ghost",
-    "es": "Fantasma de luz",
-    "id": "Hantu Terang",
-    "pt": "Espírito da Luz",
-    "th": "ไลท์โกส",
-    "vi": "Ma ánh sáng"
-  },
-  "MST_MONSTERS_52151_NAME": {
-    "en": "Light Ghost",
-    "es": "Fantasma de luz",
-    "id": "Hantu Terang",
-    "pt": "Espírito da Luz",
-    "th": "ไลท์โกส",
-    "vi": "Ma ánh sáng"
-  },
-  "MST_MONSTERS_52200_NAME": {
-    "en": "Light King",
-    "es": "Rey de luz",
-    "id": "Raja Terang",
-    "pt": "Rei da Luz",
-    "th": "ไลท์คิง",
-    "vi": "Chúa tể ánh sáng"
-  },
-  "MST_MONSTERS_52201_NAME": {
-    "en": "Light King",
-    "es": "Rey de luz",
-    "id": "Raja Terang",
-    "pt": "Rei da Luz",
-    "th": "ไลท์คิง",
-    "vi": "Chúa tể ánh sáng"
-  },
-  "MST_MONSTERS_52250_NAME": {
-    "en": "Light God",
-    "es": "Dios de luz",
-    "id": "Dewa Terang",
-    "pt": "Deus da Luz",
-    "th": "ไลท์ก๊อด",
-    "vi": "Thần ánh sáng"
-  },
-  "MST_MONSTERS_52251_NAME": {
-    "en": "Light God",
-    "es": "Dios de luz",
-    "id": "Dewa Terang",
-    "pt": "Deus da Luz",
-    "th": "ไลท์ก๊อด",
-    "vi": "Thần ánh sáng"
-  },
-  "MST_MONSTERS_52252_NAME": {
-    "en": "Light God",
-    "es": "Dios de luz",
-    "id": "Dewa Terang",
-    "pt": "Deus da Luz",
-    "th": "ไลท์ก๊อด",
-    "vi": "Thần ánh sáng"
-  },
-  "MST_MONSTERS_52300_NAME": {
-    "en": "Al-mi'raj",
-    "es": "Al-mi'raj",
-    "id": "Al-mi'raj",
-    "pt": "Al-mi'raj",
-    "th": "อัลมิร่า",
-    "vi": "Al-mi'raj"
-  },
-  "MST_MONSTERS_52351_NAME": {
-    "en": "Al-mi'raj",
-    "es": "Al-mi'raj",
-    "id": "Al-mi'raj",
-    "pt": "Al-mi'raj",
-    "th": "อัลมิร่า",
-    "vi": "Al-mi'raj"
-  },
-  "MST_MONSTERS_52352_NAME": {
-    "en": "Al-mi'raj",
-    "es": "Al-mi'raj",
-    "id": "Al-mi'raj",
-    "pt": "Al-mi'raj",
-    "th": "อัลมิร่า",
-    "vi": "Al-mi'raj"
-  },
-  "MST_MONSTERS_52353_NAME": {
-    "en": "Al-mi'raj",
-    "es": "Al-mi'raj",
-    "id": "Al-mi'raj",
-    "pt": "Al-mi'raj",
-    "th": "อัลมิร่า",
-    "vi": "Al-mi'raj"
   }
 }
