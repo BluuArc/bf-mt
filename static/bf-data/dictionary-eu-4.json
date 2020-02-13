@@ -1,4 +1,196 @@
 {
+  "MST_SKILLS_2000501_NAME": {
+    "en": "Growl!",
+    "es": "¡Grr!",
+    "id": "Growl!",
+    "pt": "*rugido*",
+    "th": "แฮ่!!",
+    "vi": "Tiếng gầm!"
+  },
+  "MST_SKILLS_2000502_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000502_NAME": {
+    "en": "Hear me roar and kneel before me!",
+    "es": "Oye mi gruñido e inclínate ante mí.",
+    "id": "Dengarkan raunganku dan berlututlah!",
+    "pt": "Ouça meu rugido e ajoelhe-se diante de mim!",
+    "th": "ฟังเสียงคำรามของข้าแล้วจงคุกเข่าลง!",
+    "vi": "Hãy nghe ta gầm thét và quỳ xuống trước mặt ta!"
+  },
+  "MST_SKILLS_2000503_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000503_NAME": {
+    "en": "Prepare to die, human!",
+    "es": "Prepárate para morir, humano.",
+    "id": "Bersiaplah untuk mati, manusia!",
+    "pt": "Prepare-se para morrer, humano!",
+    "th": "เตรียมตัวตาย เจ้ามนุษย์!",
+    "vi": "Chuẩn bị chết đi, lũ người kia!"
+  },
+  "MST_SKILLS_2000504_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000504_NAME": {
+    "en": "Think your weapons can harm my flesh?!",
+    "es": "¿Crees que tus armas pueden dañar mi carne?",
+    "id": "Kaupikir senjatamu bisa melukai dagingku?!",
+    "pt": "Acha que suas armas podem ferir minha carne?!",
+    "th": "เจ้าคิดว่าอาวุธของเจ้าจะทำอันตรายร่างของข้าได้รึ?!",
+    "vi": "Ngươi nghĩ vũ khí của mình có thể đả thương da thịt ta?!"
+  },
+  "MST_SKILLS_2000505_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000505_NAME": {
+    "en": "You fool! You are the prey, not me!",
+    "es": "¡Tonto! ¡Tú eres la presa, no yo!",
+    "id": "Tolol! Kau mangsanya, bukan aku!",
+    "pt": "Tolice! Você é a presa, não eu!",
+    "th": "เจ้าโง่! เจ้าคือเหยื่อ ไม่ใช่ข้า!",
+    "vi": "Ngươi thật ngốc! Ngươi mới là con mồi, không phải ta!"
+  },
+  "MST_SKILLS_2000506_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000506_NAME": {
+    "en": "Your blade is mighty, after all!",
+    "es": "Después de todo, tu espada es poderosa.",
+    "id": "Pedangmu memang sakti!",
+    "pt": "Sua lâmina é poderosa afinal!",
+    "th": "ดาบของเจ้าแข็งแกร่ง ใช้ได้!",
+    "vi": "Cuối cùng thì lưỡi kiếm của ngươi mới là kẻ mạnh!"
+  },
+  "MST_SKILLS_2000510_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000510_NAME": {
+    "en": "Rising Arc",
+    "es": "Arco creciente",
+    "id": "Busur Bangkit",
+    "pt": "Arco Ascendente",
+    "th": "ไรซิ่งอาร์ค",
+    "vi": "Hồ quang dâng tràn"
+  },
+  "MST_SKILLS_2000511_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000511_NAME": {
+    "en": "Here we go, Grafl! I'm counting on you, old friend!",
+    "es": "¡Aquí vamos, Grafl! Cuento contigo, viejo amigo.",
+    "id": "Ini dia, Frafl! Aku mengandalkanmu!",
+    "pt": "Lá vamos nós, Grafl! Estou contando com você, velho amigo!",
+    "th": "ลุยล่ะนะกราฟ! ข้าฝากเจ้าด้วยล่ะเพื่อนเก่า!",
+    "vi": "Chúng ta đi thôi, Grafl! Ta trông cậy vào ngươi đó, bạn thân à!"
+  },
+  "MST_SKILLS_2000512_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000512_NAME": {
+    "en": "Lightning, gather in my blades!",
+    "es": "Rayos, vengan a mis espadas.",
+    "id": "Petir, berkumpullah di pedangku!",
+    "pt": "Relâmpago, venha a minhas lâminas!",
+    "th": "สายฟ้า มารวมที่ดาบของข้า!",
+    "vi": "Tia sét, hãy tập trung ở lưỡi kiếm của ta!"
+  },
+  "MST_SKILLS_2000513_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000513_NAME": {
+    "en": "Grafl! You won't get away with this, you fiend!",
+    "es": "¡Grafl! No te saldrás con la tuya, demonio.",
+    "id": "Grafl! Kau tidak akan lolos dengan ini, iblis!",
+    "pt": "Grafl! Você não vai escapar com essa, demônio!",
+    "th": "กราฟ! เจ้าจะต้องชดใช้กับเรื่องนี้ เจ้าปีศาจ!",
+    "vi": "Grafl! Ngươi sẽ không bỏ đi như vậy đâu, ác nhân kia!"
+  },
+  "MST_SKILLS_2000520_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000520_NAME": {
+    "en": "Plasma Magnum",
+    "es": "Revólver de plasma",
+    "id": "Plasma Magnum",
+    "pt": "Magna-plasma",
+    "th": "พลาสม่าแม็กนั่ม",
+    "vi": "Bình huyết thanh"
+  },
+  "MST_SKILLS_2000521_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000521_NAME": {
+    "en": "Gods?! Who cares? I'll shoot them all down!",
+    "es": "¿Dioses? ¿A quién le importa? Los derribaré a todos con mis armas.",
+    "id": "Dewa? Siapa peduli? Akan kutembak jatuh mereka semua?",
+    "pt": "Deuses?! Quem se importa? Vou acabar com todos!",
+    "th": "เทพเจ้า?! ใครจะสน? ข้าจะยิงสอยให้ร่วงทั้งหมดล่ะ!",
+    "vi": "Các vị thần?! Ai quan tâm? Ta sẽ hạ hết bọn chúng!"
+  },
+  "MST_SKILLS_2000522_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
   "MST_SKILLS_2000522_NAME": {
     "en": "Here comes cover fire, you scum!",
     "es": "Aquí tienes tu fuego de cobertura, basura.",
@@ -90774,117 +90966,5 @@
     "pt": "None",
     "th": "None",
     "vi": "None"
-  },
-  "MST_SKILLS_2122483_NAME": {
-    "en": "I can rest easy now.",
-    "es": "Ya puedo descansar en paz.",
-    "id": "Aku bisa rehat tenang sekarang.",
-    "pt": "Agora posso descansar em paz.",
-    "th": "ข้าจะได้พักเสียที",
-    "vi": "I can rest easy now."
-  },
-  "MST_SKILLS_2122484_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122484_NAME": {
-    "en": "Urias is glowing even more.",
-    "es": "Urias brilla aún más.",
-    "id": "Urias bersinar lebih terang.",
-    "pt": "Urias brilha ainda mais.",
-    "th": "ยูเรียสเปล่งแสงจ้าขึ้น",
-    "vi": "Urias is glowing even more."
-  },
-  "MST_SKILLS_2122485_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122485_NAME": {
-    "en": "Please lend me your power.",
-    "es": "Por favor, préstame tu poder.",
-    "id": "Tolong pinjami aku kekuatanmu.",
-    "pt": "Por favor, conceda-me seu poder.",
-    "th": "ได้โปรดให้ข้ายืมพลังด้วยเถิด",
-    "vi": "Please lend me your power."
-  },
-  "MST_SKILLS_2122486_DESCRIPTION": {
-    "en": "8 combo powerful Light attack on all enemies ",
-    "es": "Combo grupal de 8 poderosos ataques lumínicos ",
-    "id": "8 kombo serangan Terang kuat ke semua musuh",
-    "pt": "Combo poderoso de 8 golpes de Luz em todos os inimigos",
-    "th": "8 คอมโบ โจมตีด้วยธาตุแสงใส่ศัตรูทั้งหมด",
-    "vi": "8 combo powerful Light attack on all enemies "
-  },
-  "MST_SKILLS_2122486_NAME": {
-    "en": "Let's fight the gods together!",
-    "es": "¡Luchemos contra los dioses juntos!",
-    "id": "Mari kita perangi para dewa bersama-sama!",
-    "pt": "Vamos enfrentar os deuses juntos!",
-    "th": "มาสู้กับเทพด้วยกัน!",
-    "vi": "Let's fight the gods together!"
-  },
-  "MST_SKILLS_2122487_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122487_NAME": {
-    "en": "Urias, unleash your power!",
-    "es": "¡Urias, desata tu poder!",
-    "id": "Urias, keluarkan kekuatanmu!",
-    "pt": "Urias, libere seu poder!",
-    "th": "ยูเรียส ปลดปล่อยพลังของเจ้าซะ!",
-    "vi": "Urias, unleash your power!"
-  },
-  "MST_SKILLS_2122488_DESCRIPTION": {
-    "en": "9 combo Light elemental attack on all enemies & boost to all allies' Atk and Def for 3 turns",
-    "es": "Combo grupal de 9 ataques lumínicos que aumenta el ataque y la defensa de los aliados durante 3 turnos",
-    "id": "9 kombo serangan Terang kuat ke semua musuh & tambahan untuk Serangan dan Pertahanan semua sekutu untuk 3 giliran",
-    "pt": "Combo de 9 golpes com elemento Luz em todos os inimigos e reforço no ATQ e DEF de todos os aliados por 3 rodadas",
-    "th": "9 คอมโบ โจมตีด้วยธาตุแสงใส่ศัตรูทั้งหมด, เพิ่มพลังโจมตีและป้องกันใส่้ทีม 3 เทิร์น",
-    "vi": "9 combo Light elemental attack on all enemies & boost to all allies' Atk and Def for 3 turns"
-  },
-  "MST_SKILLS_2122488_NAME": {
-    "en": "I can't...lose...!",
-    "es": "¡No puedo... perder!",
-    "id": "Aku tidak boleh...kalah...!",
-    "pt": "Não posso... perder...!",
-    "th": "ข้าจะไม่...แพ้…!",
-    "vi": "I can't...lose...!"
-  },
-  "MST_SKILLS_2122489_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122489_NAME": {
-    "en": "Sir Aem, I'm sorry...!",
-    "es": "¡Sir Aem, lo siento...!",
-    "id": "Sir Aem, maaf...!",
-    "pt": "Sir Aem, me desculpe...!",
-    "th": "ท่านเอม...ขออภัยด้วย…!",
-    "vi": "Sir Aem, I'm sorry...!"
-  },
-  "MST_SKILLS_2122490_DESCRIPTION": {
-    "en": "8 combo powerful Light attack on all enemies ",
-    "es": "Combo grupal de 8 poderosos ataques lumínicos. ",
-    "id": "8 kombo serangan Terang kuat ke semua musuh",
-    "pt": "Combo poderoso de 8 golpes de Luz em todos os inimigos",
-    "th": "8 คอมโบ โจมตีด้วยธาตุแสงใส่ศัตรูทั้งหมด",
-    "vi": "8 combo powerful Light attack on all enemies "
   }
 }
