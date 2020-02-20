@@ -1,4 +1,52 @@
 {
+  "MST_LEADERSKILLS_4397_DESCRIPTION": {
+    "en": "120% boost to Def, max HP, damage taken enormously boosts BB gauge and may considerably reduce foe's BB gauge fill rate for 1 turn & enormously boosts ABP and CBP gain",
+    "es": "120% boost to Def, max HP, damage taken enormously boosts BB gauge and may considerably reduce foe's BB gauge fill rate for 1 turn & enormously boosts ABP and CBP gain",
+    "id": "120% boost to Def, max HP, damage taken enormously boosts BB gauge and may considerably reduce foe's BB gauge fill rate for 1 turn & enormously boosts ABP and CBP gain",
+    "pt": "120% boost to Def, max HP, damage taken enormously boosts BB gauge and may considerably reduce foe's BB gauge fill rate for 1 turn & enormously boosts ABP and CBP gain",
+    "th": "120% boost to Def, max HP, damage taken enormously boosts BB gauge and may considerably reduce foe's BB gauge fill rate for 1 turn & enormously boosts ABP and CBP gain",
+    "vi": "120% boost to Def, max HP, damage taken enormously boosts BB gauge and may considerably reduce foe's BB gauge fill rate for 1 turn & enormously boosts ABP and CBP gain"
+  },
+  "MST_LEADERSKILLS_4397_NAME": {
+    "en": "Eternal Prayer",
+    "es": "Eternal Prayer",
+    "id": "Eternal Prayer",
+    "pt": "Eternal Prayer",
+    "th": "Eternal Prayer",
+    "vi": "Eternal Prayer"
+  },
+  "MST_LEADERSKILLS_4400_DESCRIPTION": {
+    "en": "Boosts resistence to status ailments & fills BB gauge after each turn",
+    "es": "Aumento de resistencia a dolencias y sube indicador BB tras cada turno",
+    "id": "Menambah ketahanan status penyakit & mengisi meteran BB seusai giliran",
+    "pt": "Melhora a resistência a status negativos e enche grande parte da barra de BB após cada turno",
+    "th": "เพิ่มความต้านทานสถานะผิดปกติ และ เติมเกจ BB หลังจบทุกเทิร์น",
+    "vi": "Tăng sức đề kháng đối với bệnh tật trạng thái và nạp vạch Tăng cường can đảm sau mỗi lượt"
+  },
+  "MST_LEADERSKILLS_4400_NAME": {
+    "en": "Goddess' Gift",
+    "es": "Regalo de diosa",
+    "id": "Hadiah Dewi",
+    "pt": "Bênção da Deusa",
+    "th": "ก็อดเดสกิฟท์",
+    "vi": "Quà tặng của Nữ thần"
+  },
+  "MST_LEADERSKILLS_4401_DESCRIPTION": {
+    "en": "Negates status ailments & greatly fills BB gauge after each turn",
+    "es": "Anula dolencias y llena considerablemente indicador BB tras cada turno",
+    "id": "Menetralkan status penyakit & amat mengisi meteran GG seusai giliran",
+    "pt": "Anula status negativos e enche grande parte da barra de BB após cada turno",
+    "th": "ป้องกันสถานะผิดปกติทั้งหมด และ เติมเกจ BB หลังจบทุกเทิร์น",
+    "vi": "Hủy bỏ hiệu ứng trạng thái & nạp đầy vạch Tăng cường can đảm sau mỗi lượt"
+  },
+  "MST_LEADERSKILLS_4401_NAME": {
+    "en": "Goddess' Miracle",
+    "es": "Milagro de diosa",
+    "id": "Mukjizat Dewi",
+    "pt": "Milagre da Deusa",
+    "th": "ก้อดเดสมิราเคิล",
+    "vi": "Phép màu của Nữ thần"
+  },
   "MST_LEADERSKILLS_4402_DESCRIPTION": {
     "en": "30% boost to max HP, considerably boosts BB gauge each turn, negates all status ailments & negates Atk, Def, Rec reductions",
     "es": "30% boost to max HP, considerably boosts BB gauge each turn, negates all status ailments & negates Atk, Def, Rec reductions",
@@ -14118,6 +14166,22 @@
     "pt": "Skiouros Skulker",
     "th": "Skiouros Skulker",
     "vi": "Skiouros Skulker"
+  },
+  "MST_LEADERSKILLS_860798_DESCRIPTION": {
+    "en": "200% Atk, 140% Def, max HP and 30% critical rate (Dark), 250% critical damage, 250% spark damage, 30% reduction to BB activation cost & probable 25% damage reduction",
+    "es": "200% Atk, 140% Def, max HP and 30% critical rate (Dark), 250% critical damage, 250% spark damage, 30% reduction to BB activation cost & probable 25% damage reduction",
+    "id": "200% Atk, 140% Def, max HP and 30% critical rate (Dark), 250% critical damage, 250% spark damage, 30% reduction to BB activation cost & probable 25% damage reduction",
+    "pt": "200% Atk, 140% Def, max HP and 30% critical rate (Dark), 250% critical damage, 250% spark damage, 30% reduction to BB activation cost & probable 25% damage reduction",
+    "th": "200% Atk, 140% Def, max HP and 30% critical rate (Dark), 250% critical damage, 250% spark damage, 30% reduction to BB activation cost & probable 25% damage reduction",
+    "vi": "200% Atk, 140% Def, max HP and 30% critical rate (Dark), 250% critical damage, 250% spark damage, 30% reduction to BB activation cost & probable 25% damage reduction"
+  },
+  "MST_LEADERSKILLS_860798_NAME": {
+    "en": "Forlorn Hope",
+    "es": "Forlorn Hope",
+    "id": "Forlorn Hope",
+    "pt": "Forlorn Hope",
+    "th": "Forlorn Hope",
+    "vi": "Forlorn Hope"
   },
   "MST_LEADERSKILLS_860808_DESCRIPTION": {
     "en": "120% boost to all parameters, 15% damage reduction, enormously boosts Dark elemental damage, greatly reduces BB gauge required for BB & adds probable resistance against 1 KO attack",
@@ -90920,46 +90984,6 @@
     "vi": "Thầy thánh Aem"
   },
   "MST_MONSTERS_51954_NAME": {
-    "en": "Holy Master Aem",
-    "es": "Maestro sacro Aem",
-    "id": "Master Suci Aem",
-    "pt": "Mestre Sagrado Aem",
-    "th": "โฮลี่มาสเตอร์เอม",
-    "vi": "Thầy thánh Aem"
-  },
-  "MST_MONSTERS_51955_NAME": {
-    "en": "Holy Master Aem",
-    "es": "Maestro sacro Aem",
-    "id": "Master Suci Aem",
-    "pt": "Mestre Sagrado Aem",
-    "th": "โฮลี่มาสเตอร์เอม",
-    "vi": "Thầy thánh Aem"
-  },
-  "MST_MONSTERS_51956_NAME": {
-    "en": "Holy Master Aem",
-    "es": "Maestro sacro Aem",
-    "id": "Master Suci Aem",
-    "pt": "Mestre Sagrado Aem",
-    "th": "โฮลี่มาสเตอร์เอม",
-    "vi": "Thầy thánh Aem"
-  },
-  "MST_MONSTERS_51957_NAME": {
-    "en": "Holy Master Aem",
-    "es": "Maestro sacro Aem",
-    "id": "Master Suci Aem",
-    "pt": "Mestre Sagrado Aem",
-    "th": "โฮลี่มาสเตอร์เอม",
-    "vi": "Thầy thánh Aem"
-  },
-  "MST_MONSTERS_51958_NAME": {
-    "en": "Holy Master Aem",
-    "es": "Maestro sacro Aem",
-    "id": "Master Suci Aem",
-    "pt": "Mestre Sagrado Aem",
-    "th": "โฮลี่มาสเตอร์เอม",
-    "vi": "Thầy thánh Aem"
-  },
-  "MST_MONSTERS_51959_NAME": {
     "en": "Holy Master Aem",
     "es": "Maestro sacro Aem",
     "id": "Master Suci Aem",
