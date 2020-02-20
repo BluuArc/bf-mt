@@ -1,20 +1,4 @@
 {
-  "MST_SKILLS_2840508_NAME": {
-    "en": "Universe-Devouring Bolt",
-    "es": "Universe-Devouring Bolt",
-    "id": "Petir Pemangsa Semesta",
-    "pt": "Universe-Devouring Bolt",
-    "th": "ยูนิเวิร์ส-ดิวาวริง โบลท์",
-    "vi": "Universe-Devouring Bolt"
-  },
-  "MST_SKILLS_2840547_DESCRIPTION": {
-    "en": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
-    "es": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
-    "id": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
-    "pt": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
-    "th": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
-    "vi": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns"
-  },
   "MST_SKILLS_2840547_NAME": {
     "en": "Lightning Beam Lv. 3",
     "es": "Lightning Beam Lv. 3",
@@ -2678,6 +2662,22 @@
     "pt": "Grand Slam Slugger",
     "th": "Grand Slam Slugger",
     "vi": "Grand Slam Slugger"
+  },
+  "MST_SKILLS_2860798_DESCRIPTION": {
+    "en": "30 combo Dark attack on all foes (damage relative to remaining HP), 10 combo Dark attack on single foe (or probable 7% damage of foes' max HP), boosts max HP, boosts Atk, Def, Rec and critical rate for 4 turns, boosts critical damage for 4 turns & boosts spark damage for 4 turns",
+    "es": "30 combo Dark attack on all foes (damage relative to remaining HP), 10 combo Dark attack on single foe (or probable 7% damage of foes' max HP), boosts max HP, boosts Atk, Def, Rec and critical rate for 4 turns, boosts critical damage for 4 turns & boosts spark damage for 4 turns",
+    "id": "30 combo Dark attack on all foes (damage relative to remaining HP), 10 combo Dark attack on single foe (or probable 7% damage of foes' max HP), boosts max HP, boosts Atk, Def, Rec and critical rate for 4 turns, boosts critical damage for 4 turns & boosts spark damage for 4 turns",
+    "pt": "30 combo Dark attack on all foes (damage relative to remaining HP), 10 combo Dark attack on single foe (or probable 7% damage of foes' max HP), boosts max HP, boosts Atk, Def, Rec and critical rate for 4 turns, boosts critical damage for 4 turns & boosts spark damage for 4 turns",
+    "th": "30 combo Dark attack on all foes (damage relative to remaining HP), 10 combo Dark attack on single foe (or probable 7% damage of foes' max HP), boosts max HP, boosts Atk, Def, Rec and critical rate for 4 turns, boosts critical damage for 4 turns & boosts spark damage for 4 turns",
+    "vi": "30 combo Dark attack on all foes (damage relative to remaining HP), 10 combo Dark attack on single foe (or probable 7% damage of foes' max HP), boosts max HP, boosts Atk, Def, Rec and critical rate for 4 turns, boosts critical damage for 4 turns & boosts spark damage for 4 turns"
+  },
+  "MST_SKILLS_2860798_NAME": {
+    "en": "Umbra Corona",
+    "es": "Umbra Corona",
+    "id": "Umbra Corona",
+    "pt": "Umbra Corona",
+    "th": "Umbra Corona",
+    "vi": "Umbra Corona"
   },
   "MST_SKILLS_2860808_DESCRIPTION": {
     "en": "33 combo massive Dark attack on all foes (damage relative to remaining HP), adds probable resistance against 1 KO attack, enormously boosts Atk, Def, Rec and enormously boosts critical hit rate for 4 turns, enormously boosts Dark elemental damage for 4 turns, damage taken hugely boosts BB gauge for 4 turns & raises allies from KO",
@@ -21998,6 +21998,22 @@
     "pt": "Dominating Nature",
     "th": "Dominating Nature",
     "vi": "Dominating Nature"
+  },
+  "MST_SKILLS_3840798_DESCRIPTION": {
+    "en": "60 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, spark damage, critical damage, BB Atk, Atk, Def, Rec relative to max HP, 100% evasion & 100% DoT reduction",
+    "es": "60 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, spark damage, critical damage, BB Atk, Atk, Def, Rec relative to max HP, 100% evasion & 100% DoT reduction",
+    "id": "60 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, spark damage, critical damage, BB Atk, Atk, Def, Rec relative to max HP, 100% evasion & 100% DoT reduction",
+    "pt": "60 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, spark damage, critical damage, BB Atk, Atk, Def, Rec relative to max HP, 100% evasion & 100% DoT reduction",
+    "th": "60 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, spark damage, critical damage, BB Atk, Atk, Def, Rec relative to max HP, 100% evasion & 100% DoT reduction",
+    "vi": "60 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, spark damage, critical damage, BB Atk, Atk, Def, Rec relative to max HP, 100% evasion & 100% DoT reduction"
+  },
+  "MST_SKILLS_3840798_NAME": {
+    "en": "Ruinous Ambition",
+    "es": "Ruinous Ambition",
+    "id": "Ruinous Ambition",
+    "pt": "Ruinous Ambition",
+    "th": "Ruinous Ambition",
+    "vi": "Ruinous Ambition"
   },
   "MST_SKILLS_3850167_DESCRIPTION": {
     "en": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts BB Atk, Spark damage, damage against status afflicted foes, 90% raises allies from KO, fully restores HP, activates Light barrier & 100% DoT reduction",
@@ -90966,5 +90982,13 @@
     "pt": "17 combo Earth attack on all foes (enormously boosts own critical hit rate), normal attacks hit all foes for 3 turns, considerably raises normal hit amount for 3 turns, adds probable 1 turn great Atk, Def reduction to attack for 3 turns & boosts critical damage of Earth types for 3 turns",
     "th": "17 combo Earth attack on all foes (enormously boosts own critical hit rate), normal attacks hit all foes for 3 turns, considerably raises normal hit amount for 3 turns, adds probable 1 turn great Atk, Def reduction to attack for 3 turns & boosts critical damage of Earth types for 3 turns",
     "vi": "17 combo Earth attack on all foes (enormously boosts own critical hit rate), normal attacks hit all foes for 3 turns, considerably raises normal hit amount for 3 turns, adds probable 1 turn great Atk, Def reduction to attack for 3 turns & boosts critical damage of Earth types for 3 turns"
+  },
+  "MST_SKILLS_830278_NAME": {
+    "en": "Malarial Barrage",
+    "es": "Malarial Barrage",
+    "id": "Berondongan Malaria",
+    "pt": "Malarial Barrage",
+    "th": "มาลาไรอัล บาราจ",
+    "vi": "Malarial Barrage"
   }
 }
