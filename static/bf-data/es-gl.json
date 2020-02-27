@@ -19723,9 +19723,8 @@
             ]
           },
           {
-            "item required": [
-              "13"
-            ]
+            "sphere category required": "Atk Boosting",
+            "sphere category required (raw)": "13"
           }
         ],
         "elemental weakness multiplier%": 100,
@@ -19784,9 +19783,8 @@
             ]
           },
           {
-            "item required": [
-              "13"
-            ]
+            "sphere category required": "Atk Boosting",
+            "sphere category required (raw)": "13"
           }
         ],
         "elemental weakness multiplier%": 120,
@@ -25542,6 +25540,90 @@
       "830818"
     ]
   },
+  "830827": {
+    "desc": "40% Atk, 15% critical rate for all allies, 100% spark damage, and damage taken may inflict 30% BB gauge fill rate reduction for 1 turn & 100% spark damage reduction",
+    "effects": [
+      {
+        "atk% buff": 40,
+        "conditions": [],
+        "crit% buff": 15,
+        "passive id": "1",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "damage% for spark": 100,
+        "passive id": "31",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "114",
+        "unknown passive params": "112,-30,-1,10,1"
+      },
+      {
+        "base spark dmg% resist": 100,
+        "buff spark dmg% resist": 100,
+        "conditions": [],
+        "passive id": "77",
+        "passive target": "self"
+      }
+    ],
+    "id": "830827",
+    "name": "Sprightly Cheer",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "830827"
+    ]
+  },
+  "830828": {
+    "desc": "50% Atk, 15% critical rate, damage taken fills BB gauge and damage taken may inflict 30% BB gauge fill rate reduction for 1 turn for all allies, 100% spark damage reduction & 100% spark damage",
+    "effects": [
+      {
+        "atk% buff": 50,
+        "conditions": [],
+        "crit% buff": 15,
+        "passive id": "1",
+        "passive target": "party"
+      },
+      {
+        "bc fill when attacked high": 2,
+        "bc fill when attacked low": 1,
+        "bc fill when attacked%": 100,
+        "conditions": [],
+        "passive id": "25",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "passive target": "party",
+        "unknown passive id": "114",
+        "unknown passive params": "112,-30,-1,10,1"
+      },
+      {
+        "base spark dmg% resist": 100,
+        "buff spark dmg% resist": 100,
+        "conditions": [],
+        "passive id": "77",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "damage% for spark": 100,
+        "passive id": "31",
+        "passive target": "self"
+      }
+    ],
+    "id": "830828",
+    "name": "Ragged Altruism",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "830828"
+    ]
+  },
   "830838": {
     "desc": "10% Zel, 25% Karma drop rates for all allies and 40% all parameters when Stroke of Luck is equipped, 15% Atk, Def each turn (4 times) for all allies, probable damage reduction to 1 & 100% critical and elemental damage reduction",
     "effects": [
@@ -28616,11 +28698,11 @@
     ]
   },
   "850048": {
-    "desc": "80% boost to Spark damage, reduces BB gauge required for BB for all allies, raises Atk parameter limits to 130000 & adds 18 combo powerful Light attack against Light, Dark types effect to SBB",
+    "desc": "5% reduction to BB activation cost for all allies, 100% spark damage, raises Atk limit to 180k & add to SBB (18 combo Light attack on Light, Dark foes)",
     "effects": [
       {
         "conditions": [],
-        "damage% for spark": 80,
+        "damage% for spark": 100,
         "passive id": "31",
         "passive target": "self"
       },
@@ -28632,7 +28714,7 @@
       },
       {
         "conditions": [],
-        "increase atk cap": 130000,
+        "increase atk cap": 180000,
         "passive id": "143",
         "passive target": "self"
       },
@@ -34732,6 +34814,68 @@
     "target": "self",
     "associated_units": [
       "860788"
+    ]
+  },
+  "860798": {
+    "desc": "30% reduction to BB activation cost when Lost Innocence or Atk Boosting sphere is equipped, 25% all parameters (Dark), 20% Dark elemental damage and 25% critical damage for all allies & 30% all parameters",
+    "effects": [
+      {
+        "conditions": [
+          {
+            "item required": [
+              "819296"
+            ]
+          },
+          {
+            "sphere category required": "Atk Boosting",
+            "sphere category required (raw)": "13"
+          }
+        ],
+        "passive id": "48",
+        "passive target": "self",
+        "reduced bb bc cost%": 30
+      },
+      {
+        "conditions": [],
+        "crit multiplier%": 25,
+        "passive id": "34",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "dark units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 20,
+        "passive id": "50",
+        "passive target": "party"
+      },
+      {
+        "atk% buff": 25,
+        "conditions": [],
+        "def% buff": 25,
+        "elements buffed": [
+          "dark"
+        ],
+        "hp% buff": 25,
+        "passive id": "2",
+        "passive target": "party",
+        "rec% buff": 25
+      },
+      {
+        "atk% buff": 30,
+        "conditions": [],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      }
+    ],
+    "id": "860798",
+    "name": "Unrequited Nostalgia",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "860798"
     ]
   },
   "860808": {
@@ -46340,7 +46484,9 @@
         "bb atk% buff": 250,
         "conditions": [],
         "passive id": "64",
-        "passive target": "self"
+        "passive target": "self",
+        "sbb atk% buff": 250,
+        "ubb atk% buff": 250
       },
       {
         "bc fill on crit max": 10,
