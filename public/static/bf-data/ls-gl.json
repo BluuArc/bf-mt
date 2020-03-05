@@ -27609,6 +27609,37 @@
       "750167"
     ]
   },
+  "750317": {
+    "desc": "180% max HP, 250% spark damage, probable spark critical, fills BB gauge each turn & 30% OD gauge fill rate",
+    "effects": [
+      {
+        "hp% buff": 180,
+        "passive id": "1"
+      },
+      {
+        "damage% for spark": 250,
+        "passive id": "31"
+      },
+      {
+        "passive id": "100",
+        "spark crit chance%": 50,
+        "spark crit dmg%": 100
+      },
+      {
+        "bc fill per turn": 10,
+        "passive id": "9"
+      },
+      {
+        "od fill rate%": 30,
+        "passive id": "70"
+      }
+    ],
+    "id": "750317",
+    "name": "Blessing of All-Father",
+    "associated_units": [
+      "750317"
+    ]
+  },
   "760006": {
     "desc": "180% max HP, damage taken fills BB gauge, 20% damage reduction for 2 turns when damage taken is over 5k, probable 1 KO resistance & 30% OD gauge fill rate",
     "effects": [

@@ -1,4 +1,100 @@
 {
+  "MST_LEADERSKILLS_4381_DESCRIPTION": {
+    "en": "50% boost to Def, max HP, boosts Atk, Def, Rec each turn for up to 3 turns, probable 15% damage reduction & damage taken boosts BB gauge",
+    "es": "50% boost to Def, max HP, boosts Atk, Def, Rec each turn for up to 3 turns, probable 15% damage reduction & damage taken boosts BB gauge",
+    "id": "50% ekstra Tahan, HP maks, menambah Serang, Tahan, Pulih tiap giliran hingga 3 giliran, kans kurangi 15% kerusakan & kerusakan diderita menambah meteran BB",
+    "pt": "50% boost to Def, max HP, boosts Atk, Def, Rec each turn for up to 3 turns, probable 15% damage reduction & damage taken boosts BB gauge",
+    "th": "50% เพิ่มค่าให้ ป้องกัน, HP สูงสุด, เพิ่มค่า โจมตี, ป้องกัน, ฟื้นฟู แต่ละเทิร์น นานถึง 3 เทิร์น, อาจทำให้ 15% ลดค่าความเสียหาย กับ ความเสียหายที่ได้รับ เพิ่มค่า เกจ BB",
+    "vi": "50% boost to Def, max HP, boosts Atk, Def, Rec each turn for up to 3 turns, probable 15% damage reduction & damage taken boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_4381_NAME": {
+    "en": "Deflector Shield",
+    "es": "Deflector Shield",
+    "id": "Tameng Pembelok",
+    "pt": "Deflector Shield",
+    "th": "ดีเฟลคเตอร์ ชีลด์",
+    "vi": "Deflector Shield"
+  },
+  "MST_LEADERSKILLS_4382_DESCRIPTION": {
+    "en": "60% boost to Def, max HP, boosts Atk, Def, Rec each turn for up to 3 turns, probable 20% damage reduction & damage taken hugely boosts BB gauge",
+    "es": "60% boost to Def, max HP, boosts Atk, Def, Rec each turn for up to 3 turns, probable 20% damage reduction & damage taken hugely boosts BB gauge",
+    "id": "60% ekstra Tahan, HP maks, menambah Serang, Tahan, Pulih tiap giliran hingga 3 giliran, kans kurangi 20% kerusakan & kerusakan diderita amat menambah meteran BB",
+    "pt": "60% boost to Def, max HP, boosts Atk, Def, Rec each turn for up to 3 turns, probable 20% damage reduction & damage taken hugely boosts BB gauge",
+    "th": "60% เพิ่มค่าให้ ป้องกัน, HP สูงสุด, เพิ่มค่า โจมตี, ป้องกัน, ฟื้นฟู แต่ละเทิร์น นานถึง 3 เทิร์น, อาจทำให้ 20% ลดค่าความเสียหาย กับ ความเสียหายที่ได้รับ เพิ่มค่าอย่างสูงให้ เกจ BB",
+    "vi": "60% boost to Def, max HP, boosts Atk, Def, Rec each turn for up to 3 turns, probable 20% damage reduction & damage taken hugely boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_4382_NAME": {
+    "en": "Ablative Armor",
+    "es": "Ablative Armor",
+    "id": "Zirah Ablatif",
+    "pt": "Ablative Armor",
+    "th": "อบลาทีฟ อาร์เมอร์",
+    "vi": "Ablative Armor"
+  },
+  "MST_LEADERSKILLS_4383_DESCRIPTION": {
+    "en": "80% boost to Def, 40% boost to max HP, considerably boosts OD gauge fill rate, Spark damage boosts BB gauge & damage taken enormously boosts BB gauge",
+    "es": "80% boost to Def, 40% boost to max HP, considerably boosts OD gauge fill rate, Spark damage boosts BB gauge & damage taken enormously boosts BB gauge",
+    "id": "80% ekstra Tahan, 40% ekstra HP maks, lumayan menambah laju pengisian meteran OD, kerusakan Percikan menambah meteran BB, kerusakan diderita beri ekstra jumbo meteran BB",
+    "pt": "80% boost to Def, 40% boost to max HP, considerably boosts OD gauge fill rate, Spark damage boosts BB gauge & damage taken enormously boosts BB gauge",
+    "th": "80% เพิ่มค่าให้ ป้องกัน, 40% เพิ่มค่าให้ HP สูงสุด, เพิ่มค่าอย่างมากให้ อัตราเติมเกจ OD, เพิ่มค่า ความเสียหายสปาร์ค เกจ BB กับ ความเสียหายทีได้รับ เพิ่มค่ามหาศาลให้ เกจ BB",
+    "vi": "80% boost to Def, 40% boost to max HP, considerably boosts OD gauge fill rate, Spark damage boosts BB gauge & damage taken enormously boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_4383_NAME": {
+    "en": "Sinister Games",
+    "es": "Sinister Games",
+    "id": "Permainan Sinis",
+    "pt": "Sinister Games",
+    "th": "สินิสเตอร์ เกมส์",
+    "vi": "Sinister Games"
+  },
+  "MST_LEADERSKILLS_4384_DESCRIPTION": {
+    "en": "50% boost to Def, max HP, 5% damage reduction from Fire, Water, Earth, Thunder types & negates critical and elemental damage",
+    "es": "50% boost to Def, max HP, 5% damage reduction from Fire, Water, Earth, Thunder types & negates critical and elemental damage",
+    "id": "50% ekstra Tahan, HP maks, kurangi 5% kerusakan dari tipe Api, Air, Bumi, Guntur & menegasi kerusakan ampuh dan elemen",
+    "pt": "50% boost to Def, max HP, 5% damage reduction from Fire, Water, Earth, Thunder types & negates critical and elemental damage",
+    "th": "50% เพิ่มค่าให้ ป้องกัน, HP สูงสุด, 5% ลดค่าความเสียหาย จากชนิด ไฟ, น้ำ, ดิน, สายฟ้า กับ ลบล้างความเสียหาย คริติคอล และ ธาตุ",
+    "vi": "50% boost to Def, max HP, 5% damage reduction from Fire, Water, Earth, Thunder types & negates critical and elemental damage"
+  },
+  "MST_LEADERSKILLS_4384_NAME": {
+    "en": "Frigid Oath",
+    "es": "Frigid Oath",
+    "id": "Sumpah Dingin",
+    "pt": "Frigid Oath",
+    "th": "ฟริกิด โอธ",
+    "vi": "Frigid Oath"
+  },
+  "MST_LEADERSKILLS_4385_DESCRIPTION": {
+    "en": "60% boost to Def, max HP, 10% damage reduction from Fire, Water, Earth, Thunder types, negates critical and elemental damage & considerably restores HP each turn",
+    "es": "60% boost to Def, max HP, 10% damage reduction from Fire, Water, Earth, Thunder types, negates critical and elemental damage & considerably restores HP each turn",
+    "id": "60% ekstra Tahan, HP maks, kurangi 10% kerusakan dari tipe Api, Air, Bumi, Guntur, menegasi kerusakan ampuh dan elemen, lumayan memulihkan HP tiap giliran",
+    "pt": "60% boost to Def, max HP, 10% damage reduction from Fire, Water, Earth, Thunder types, negates critical and elemental damage & considerably restores HP each turn",
+    "th": "60% เพิ่มค่าให้ ป้องกัน, HP สูงสุด, 10% ลดค่าความเสียหาย จากชนิด ไฟ, น้ำ, ดิน, สายฟ้า, ลบล้างความเสียหาย คริติคอล และ ธาตุ กับ ฟื้นคืน HP อย่างมาก แต่ละเทิร์น",
+    "vi": "60% boost to Def, max HP, 10% damage reduction from Fire, Water, Earth, Thunder types, negates critical and elemental damage & considerably restores HP each turn"
+  },
+  "MST_LEADERSKILLS_4385_NAME": {
+    "en": "Sacred Oath",
+    "es": "Sacred Oath",
+    "id": "Sumpah Rahasia",
+    "pt": "Sacred Oath",
+    "th": "เซเครด โอธ",
+    "vi": "Sacred Oath"
+  },
+  "MST_LEADERSKILLS_4386_DESCRIPTION": {
+    "en": "50% boost to Def, max HP, slight damage reduction for 1 turn when damage dealt exceeds certain amount & probable 15% damage reduction",
+    "es": "50% boost to Def, max HP, slight damage reduction for 1 turn when damage dealt exceeds certain amount & probable 15% damage reduction",
+    "id": "50% boost to Def, max HP, slight damage reduction for 1 turn when damage dealt exceeds certain amount & probable 15% damage reduction",
+    "pt": "50% boost to Def, max HP, slight damage reduction for 1 turn when damage dealt exceeds certain amount & probable 15% damage reduction",
+    "th": "50% boost to Def, max HP, slight damage reduction for 1 turn when damage dealt exceeds certain amount & probable 15% damage reduction",
+    "vi": "50% boost to Def, max HP, slight damage reduction for 1 turn when damage dealt exceeds certain amount & probable 15% damage reduction"
+  },
+  "MST_LEADERSKILLS_4386_NAME": {
+    "en": "Red Justice Oath",
+    "es": "Red Justice Oath",
+    "id": "Red Justice Oath",
+    "pt": "Red Justice Oath",
+    "th": "Red Justice Oath",
+    "vi": "Red Justice Oath"
+  },
   "MST_LEADERSKILLS_4387_DESCRIPTION": {
     "en": "60% boost to Def, max HP, slight damage reduction for 1 turn when damage dealt exceeds certain amount, probable 20% damage reduction & considerably boosts BC efficacy",
     "es": "60% boost to Def, max HP, slight damage reduction for 1 turn when damage dealt exceeds certain amount, probable 20% damage reduction & considerably boosts BC efficacy",
@@ -4382,6 +4478,22 @@
     "pt": "Transgressão do Deus do Caos",
     "th": "เคออส ก็อด ทรานส์เกรสชั่น",
     "vi": "Vi phạm của thần hỗn mang"
+  },
+  "MST_LEADERSKILLS_750317_DESCRIPTION": {
+    "en": "180% max HP, 250% spark damage, probable spark critical, fills BB gauge each turn & 30% OD gauge fill rate",
+    "es": "180% max HP, 250% spark damage, probable spark critical, fills BB gauge each turn & 30% OD gauge fill rate",
+    "id": "180% max HP, 250% spark damage, probable spark critical, fills BB gauge each turn & 30% OD gauge fill rate",
+    "pt": "180% max HP, 250% spark damage, probable spark critical, fills BB gauge each turn & 30% OD gauge fill rate",
+    "th": "180% max HP, 250% spark damage, probable spark critical, fills BB gauge each turn & 30% OD gauge fill rate",
+    "vi": "180% max HP, 250% spark damage, probable spark critical, fills BB gauge each turn & 30% OD gauge fill rate"
+  },
+  "MST_LEADERSKILLS_750317_NAME": {
+    "en": "Blessing of All-Father",
+    "es": "Blessing of All-Father",
+    "id": "Blessing of All-Father",
+    "pt": "Blessing of All-Father",
+    "th": "Blessing of All-Father",
+    "vi": "Blessing of All-Father"
   },
   "MST_LEADERSKILLS_7503_DESCRIPTION": {
     "en": "120% boost to Atk, 60% boost to max HP, boosts EXP gained & adds probable Def ignoring effect",
@@ -90982,61 +91094,5 @@
     "pt": "Alma Heroína",
     "th": "ฮีโร่อัลม่า",
     "vi": "Anh hùng Alma"
-  },
-  "MST_MONSTERS_51812_NAME": {
-    "en": "Hero Alma",
-    "es": "Heroína Alma",
-    "id": "Pahlawan Alma",
-    "pt": "Alma Heroína",
-    "th": "ฮีโร่อัลม่า",
-    "vi": "Anh hùng Alma"
-  },
-  "MST_MONSTERS_51850_NAME": {
-    "en": "Knight Aem",
-    "es": "Caballero Aem",
-    "id": "Ksatria Aem",
-    "pt": "Cavaleiro Aem",
-    "th": "ไนท์เอม",
-    "vi": "Tia chớp Aem"
-  },
-  "MST_MONSTERS_51851_NAME": {
-    "en": "Knight Aem",
-    "es": "Caballero Aem",
-    "id": "Ksatria Aem",
-    "pt": "Cavaleiro Aem",
-    "th": "ไนท์เอม",
-    "vi": "Tia chớp Aem"
-  },
-  "MST_MONSTERS_51852_NAME": {
-    "en": "Knight Aem",
-    "es": "Caballero Aem",
-    "id": "Ksatria Aem",
-    "pt": "Cavaleiro Aem",
-    "th": "ไนท์เอม",
-    "vi": "Tia chớp Aem"
-  },
-  "MST_MONSTERS_518_NAME": {
-    "en": "Chronographia Phoena",
-    "es": "Chronographia Phoena",
-    "id": "Chronographia Phoena",
-    "pt": "Chronographia Phoena",
-    "th": "Chronographia Phoena",
-    "vi": "Chronographia Phoena"
-  },
-  "MST_MONSTERS_51900_NAME": {
-    "en": "Champion Aem",
-    "es": "Campeón Aem",
-    "id": "Juara Aem",
-    "pt": "Campeão Aem",
-    "th": "แชมเปี้ยนเอม",
-    "vi": "Quán quân Aem"
-  },
-  "MST_MONSTERS_51901_NAME": {
-    "en": "Champion Aem",
-    "es": "Campeón Aem",
-    "id": "Juara Aem",
-    "pt": "Campeão Aem",
-    "th": "แชมเปี้ยนเอม",
-    "vi": "Quán quân Aem"
   }
 }

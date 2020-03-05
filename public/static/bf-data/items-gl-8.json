@@ -17973,7 +17973,12 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_819176.png",
     "type": "sphere",
-    "usage": [],
+    "usage": [
+      {
+        "id": 819189,
+        "name": "Corrupted Blossom"
+      }
+    ],
     "associated_units": [
       "30546",
       "720237",
@@ -18038,7 +18043,12 @@
     "sphere type text": "BB Gauge",
     "thumbnail": "sphere_thum_819177.png",
     "type": "sphere",
-    "usage": [],
+    "usage": [
+      {
+        "id": 819190,
+        "name": "Blaze Blossom"
+      }
+    ],
     "associated_units": [
       "41036",
       "41037",
@@ -18714,12 +18724,12 @@
     "raid": false,
     "rarity": 6,
     "recipe": {
-      "karma": "200000",
+      "karma": "2000000",
       "materials": [
         {
           "count": 1,
-          "id": 819198,
-          "name": "Flower of the Vale"
+          "id": 819176,
+          "name": "Blaze Blossom EX"
         },
         {
           "count": 1,
@@ -18799,12 +18809,12 @@
     "raid": false,
     "rarity": 6,
     "recipe": {
-      "karma": "200000",
+      "karma": "2000000",
       "materials": [
         {
           "count": 1,
-          "id": 819198,
-          "name": "Flower of the Vale"
+          "id": 819177,
+          "name": "Corrupted Blossom EX"
         },
         {
           "count": 1,
@@ -19274,16 +19284,7 @@
     "sphere type text": "Special",
     "thumbnail": "sphere_thum_819175.png",
     "type": "sphere",
-    "usage": [
-      {
-        "id": 819189,
-        "name": "Corrupted Blossom"
-      },
-      {
-        "id": 819190,
-        "name": "Blaze Blossom"
-      }
-    ]
+    "usage": []
   },
   "819199": {
     "desc": "50% boost to Atk, Def of Fire and Water types, resistance against 1 KO attack after activating OD, 50% Spark damage reduction, hugely boosts damage against status afflicted foes & probable 20% damage counter",
@@ -26148,6 +26149,92 @@
       "850018",
       "860338"
     ]
+  },
+  "819311": {
+    "desc": "55% boost to all parameters of Water, Earth types, enormously boosts Water, Earth elemental damage, enormously boosts OD gauge fill rate & 10% damage reduction from Water, Earth types<br>Guild Raid: Boosts Atk, Def when BB gauge is over 50% & adds Extra Skill disable effects purge to UBB",
+    "effect": [
+      {
+        "atk% buff": 55,
+        "def% buff": 55,
+        "elements buffed": [
+          "water",
+          "earth"
+        ],
+        "hp% buff": 55,
+        "passive id": "2",
+        "rec% buff": 55
+      },
+      {
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 300,
+        "passive id": "50",
+        "water units do extra elemental weakness dmg": true
+      },
+      {
+        "od fill rate%": 200,
+        "passive id": "70"
+      },
+      {
+        "dmg% mitigation for elemental attacks": 10,
+        "mitigate earth attacks": true,
+        "mitigate water attacks": true,
+        "passive id": "62"
+      }
+    ],
+    "id": 819311,
+    "max_stack": 1,
+    "name": "Aqua leafage",
+    "raid": false,
+    "rarity": 7,
+    "sell_price": 30000,
+    "sphere type": 14,
+    "sphere type text": "Special",
+    "thumbnail": "sphere_thum_819311.png",
+    "type": "sphere",
+    "usage": []
+  },
+  "819312": {
+    "desc": "50% boost to all parameters of Water, Earth types, enormously boosts Water, Earth elemental damage, enormously boosts OD gauge fill rate & 10% damage reduction from Water, Earth types <br>Guild Raid: Boosts Atk, Def when BB gauge is over 50% & adds Extra Skill disable effects purge to UBB",
+    "effect": [
+      {
+        "atk% buff": 50,
+        "def% buff": 50,
+        "elements buffed": [
+          "water",
+          "earth"
+        ],
+        "hp% buff": 50,
+        "passive id": "2",
+        "rec% buff": 50
+      },
+      {
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 250,
+        "passive id": "50",
+        "water units do extra elemental weakness dmg": true
+      },
+      {
+        "od fill rate%": 200,
+        "passive id": "70"
+      },
+      {
+        "dmg% mitigation for elemental attacks": 10,
+        "mitigate earth attacks": true,
+        "mitigate water attacks": true,
+        "passive id": "62"
+      }
+    ],
+    "id": 819312,
+    "max_stack": 1,
+    "name": "Aqueous Foliage",
+    "raid": false,
+    "rarity": 7,
+    "sell_price": 30000,
+    "sphere type": 14,
+    "sphere type text": "Special",
+    "thumbnail": "sphere_thum_819312.png",
+    "type": "sphere",
+    "usage": []
   },
   "819901": {
     "desc": "Boosts Max HP and Def by 5% & boosts Atk for Fire types by 20%",

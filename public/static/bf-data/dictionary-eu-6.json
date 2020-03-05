@@ -1,4 +1,36 @@
 {
+  "MST_SKILLS_2840508_NAME": {
+    "en": "Universe-Devouring Bolt",
+    "es": "Universe-Devouring Bolt",
+    "id": "Petir Pemangsa Semesta",
+    "pt": "Universe-Devouring Bolt",
+    "th": "ยูนิเวิร์ส-ดิวาวริง โบลท์",
+    "vi": "Universe-Devouring Bolt"
+  },
+  "MST_SKILLS_2840547_DESCRIPTION": {
+    "en": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
+    "es": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
+    "id": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
+    "pt": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
+    "th": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns",
+    "vi": "70 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 3 turns, enormously boosts Atk, Def, Rec for 3 turns & huge damage reduction from all elemental types for 3 turns"
+  },
+  "MST_SKILLS_2840547_NAME": {
+    "en": "Lightning Beam Lv. 3",
+    "es": "Lightning Beam Lv. 3",
+    "id": "Lightning Beam Lv. 3",
+    "pt": "Lightning Beam Lv. 3",
+    "th": "Lightning Beam Lv. 3",
+    "vi": "Lightning Beam Lv. 3"
+  },
+  "MST_SKILLS_2840548_DESCRIPTION": {
+    "en": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
+    "es": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
+    "id": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
+    "pt": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
+    "th": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns",
+    "vi": "84 combo massive Thunder attack on all foes (damage relative to remaining HP), negates critical and elemental damage for 5 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Thunder elemental damage for 3 turns & enormous damage reduction from all elemental types for 3 turns"
+  },
   "MST_SKILLS_2840548_NAME": {
     "en": "Lightning Beam MAX",
     "es": "Lightning Beam MAX",
@@ -21351,6 +21383,22 @@
     "th": "Cataclysmic Corruption",
     "vi": "Cataclysmic Corruption"
   },
+  "MST_SKILLS_3750317_DESCRIPTION": {
+    "en": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, BB Atk, spark damage, all elemental damage, spark vulnerability infliction, BB gauge & 100% raises allies from KO",
+    "es": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, BB Atk, spark damage, all elemental damage, spark vulnerability infliction, BB gauge & 100% raises allies from KO",
+    "id": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, BB Atk, spark damage, all elemental damage, spark vulnerability infliction, BB gauge & 100% raises allies from KO",
+    "pt": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, BB Atk, spark damage, all elemental damage, spark vulnerability infliction, BB gauge & 100% raises allies from KO",
+    "th": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, BB Atk, spark damage, all elemental damage, spark vulnerability infliction, BB gauge & 100% raises allies from KO",
+    "vi": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, BB Atk, spark damage, all elemental damage, spark vulnerability infliction, BB gauge & 100% raises allies from KO"
+  },
+  "MST_SKILLS_3750317_NAME": {
+    "en": "Heimskringla",
+    "es": "Heimskringla",
+    "id": "Heimskringla",
+    "pt": "Heimskringla",
+    "th": "Heimskringla",
+    "vi": "Heimskringla"
+  },
   "MST_SKILLS_3750_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -21366,6 +21414,22 @@
     "pt": "Punho da Terra",
     "th": "เธร่านัคเคิล",
     "vi": "Khớp đốt Tierra"
+  },
+  "MST_SKILLS_3760006_DESCRIPTION": {
+    "en": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, BB gauge to max, OD gauge, damage taken restores HP, 100% raises allies from KO, 80% KO resistance, purges LS, ES Lock and DoT & may purge Paralysis and Poison negation from all foes",
+    "es": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, BB gauge to max, OD gauge, damage taken restores HP, 100% raises allies from KO, 80% KO resistance, purges LS, ES Lock and DoT & may purge Paralysis and Poison negation from all foes",
+    "id": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, BB gauge to max, OD gauge, damage taken restores HP, 100% raises allies from KO, 80% KO resistance, purges LS, ES Lock and DoT & may purge Paralysis and Poison negation from all foes",
+    "pt": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, BB gauge to max, OD gauge, damage taken restores HP, 100% raises allies from KO, 80% KO resistance, purges LS, ES Lock and DoT & may purge Paralysis and Poison negation from all foes",
+    "th": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, BB gauge to max, OD gauge, damage taken restores HP, 100% raises allies from KO, 80% KO resistance, purges LS, ES Lock and DoT & may purge Paralysis and Poison negation from all foes",
+    "vi": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, BB gauge to max, OD gauge, damage taken restores HP, 100% raises allies from KO, 80% KO resistance, purges LS, ES Lock and DoT & may purge Paralysis and Poison negation from all foes"
+  },
+  "MST_SKILLS_3760006_NAME": {
+    "en": "Fall of the Gods",
+    "es": "Fall of the Gods",
+    "id": "Fall of the Gods",
+    "pt": "Fall of the Gods",
+    "th": "Fall of the Gods",
+    "vi": "Fall of the Gods"
   },
   "MST_SKILLS_3800_DESCRIPTION": {
     "en": "None",
@@ -83791,6 +83855,22 @@
     "th": "ธันเดอรัสอาเรีย",
     "vi": "Aria lôi đình"
   },
+  "MST_SKILLS_750317_DESCRIPTION": {
+    "en": "18 combo Light attack on all foes (damage relative to remaining HP, spark damage restores HP for 3 turns, 50% damage reduction for 2 turns, may raise allies from KO, may activate BB/SBB/UBB twice for 2 turns & boosts own max HP",
+    "es": "18 combo Light attack on all foes (damage relative to remaining HP, spark damage restores HP for 3 turns, 50% damage reduction for 2 turns, may raise allies from KO, may activate BB/SBB/UBB twice for 2 turns & boosts own max HP",
+    "id": "18 combo Light attack on all foes (damage relative to remaining HP, spark damage restores HP for 3 turns, 50% damage reduction for 2 turns, may raise allies from KO, may activate BB/SBB/UBB twice for 2 turns & boosts own max HP",
+    "pt": "18 combo Light attack on all foes (damage relative to remaining HP, spark damage restores HP for 3 turns, 50% damage reduction for 2 turns, may raise allies from KO, may activate BB/SBB/UBB twice for 2 turns & boosts own max HP",
+    "th": "18 combo Light attack on all foes (damage relative to remaining HP, spark damage restores HP for 3 turns, 50% damage reduction for 2 turns, may raise allies from KO, may activate BB/SBB/UBB twice for 2 turns & boosts own max HP",
+    "vi": "18 combo Light attack on all foes (damage relative to remaining HP, spark damage restores HP for 3 turns, 50% damage reduction for 2 turns, may raise allies from KO, may activate BB/SBB/UBB twice for 2 turns & boosts own max HP"
+  },
+  "MST_SKILLS_750317_NAME": {
+    "en": "Life Spark",
+    "es": "Life Spark",
+    "id": "Life Spark",
+    "pt": "Life Spark",
+    "th": "Life Spark",
+    "vi": "Life Spark"
+  },
   "MST_SKILLS_7503_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -91014,29 +91094,5 @@
     "pt": "16 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns, damage taken may slightly restore HP for 3 turns & boosts max HP",
     "th": "16 คอมโบ โจมตีธาตุดินอย่างแรง ใส่ศัตรูทั้งหมด, เพิ่มค่าอย่างมากให้ โจมตี, ป้องกัน, ฟื้นฟู ของชนิด ดิน นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ อัตราเกิดคริติคอล ของชนิด ดิน นาน 3 เทิร์น, ความเสียหายที่ได้รับ อาจฟื้นคืน HP เล็กน้อย นาน 3 เทิร์น และ เพิ่มค่า HP สูงสุด",
     "vi": "16 combo powerful Earth attack on all foes, greatly boosts Earth types' Atk, Def, Rec for 3 turns, enormously boosts Earth types' critical hit rate for 3 turns, damage taken may slightly restore HP for 3 turns & boosts max HP"
-  },
-  "MST_SKILLS_830288_NAME": {
-    "en": "Whirlwind Spearhead",
-    "es": "Whirlwind Spearhead",
-    "id": "Pelopor Angin Puyuh",
-    "pt": "Whirlwind Spearhead",
-    "th": "เวิรล์วินด์ สเปียร์เฮด",
-    "vi": "Whirlwind Spearhead"
-  },
-  "MST_SKILLS_830297_DESCRIPTION": {
-    "en": "11 combo powerful Earth attack on all foes, 5 combo massive Earth attack on single Thunder foe, Spark damage boosts BB gauge for 3 turns & probable 1 turn huge Atk reduction",
-    "es": "11 combo powerful Earth attack on all foes, 5 combo massive Earth attack on single Thunder foe, Spark damage boosts BB gauge for 3 turns & probable 1 turn huge Atk reduction",
-    "id": "11 combo powerful Earth attack on all foes, 5 combo massive Earth attack on single Thunder foe, Spark damage boosts BB gauge for 3 turns & probable 1 turn huge Atk reduction",
-    "pt": "11 combo powerful Earth attack on all foes, 5 combo massive Earth attack on single Thunder foe, Spark damage boosts BB gauge for 3 turns & probable 1 turn huge Atk reduction",
-    "th": "11 combo powerful Earth attack on all foes, 5 combo massive Earth attack on single Thunder foe, Spark damage boosts BB gauge for 3 turns & probable 1 turn huge Atk reduction",
-    "vi": "11 combo powerful Earth attack on all foes, 5 combo massive Earth attack on single Thunder foe, Spark damage boosts BB gauge for 3 turns & probable 1 turn huge Atk reduction"
-  },
-  "MST_SKILLS_830297_NAME": {
-    "en": "Sweeping Melody",
-    "es": "Sweeping Melody",
-    "id": "Sweeping Melody",
-    "pt": "Sweeping Melody",
-    "th": "Sweeping Melody",
-    "vi": "Sweeping Melody"
   }
 }
