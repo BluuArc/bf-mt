@@ -1,4 +1,132 @@
 {
+  "MST_SKILLS_2000480_NAME": {
+    "en": "Spark Kick",
+    "es": "Patada eléctrica",
+    "id": "Tendangan Percik",
+    "pt": "Chute Elétrico",
+    "th": "สปาร์คคิก",
+    "vi": "Tấn công mau lẹ"
+  },
+  "MST_SKILLS_2000481_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000481_NAME": {
+    "en": "I'll take it from here! (R-Run away!)",
+    "es": "¡Yo me encargo! (Co... ¡Corre!)",
+    "id": "Kuambil alih dari sini! (La-Lari!)",
+    "pt": "Eu assumo daqui! (C-corre!)",
+    "th": "จากนี้ไปข้าจัดการเอง! (นะ-หนีไป!)",
+    "vi": "Ta sẽ lấy nó từ đây! (C-Chạy đi ngay!)"
+  },
+  "MST_SKILLS_2000482_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000482_NAME": {
+    "en": "I'm not done yet! (This one is way too tough!)",
+    "es": "¡Todavía no he terminado! (¡Este es demasiado duro!)",
+    "id": "Aku belum selesai! (Yang ini terlalu tangguh!)",
+    "pt": "Ainda não acabei! (Esse é bem forte!)",
+    "th": "ข้ายังไม่เสร็จหรอกนะ! (เจ้านี่มันเก่งเกินไปแล้ว!)",
+    "vi": "Ta vẫn chưa xong mà! (Đây là một cách quá khó khăn!)"
+  },
+  "MST_SKILLS_2000483_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000483_NAME": {
+    "en": "I'll show you what I'm really made of! (I'm done for!)",
+    "es": "¡Te mostraré lo que soy capaz de hacer! (¡Ya fue suficiente!)",
+    "id": "Akan kutunjukkan kemampuanku! (Jurus terakhirku!)",
+    "pt": "Vou te mostrar o que eu sei de verdade! (Estou acabado!)",
+    "th": "ข้าจะแสดงให้เจ้าเห็นว่าข้าเจ๋งขนาดไหน! (ข้าตายแน่!)",
+    "vi": "Ta sẽ cho ngươi thấy ta thực sự như thế nào! (Ta xong rồi!)"
+  },
+  "MST_SKILLS_2000484_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000484_NAME": {
+    "en": "Ugh... I can't do this on my own!",
+    "es": "Ay... No puedo hacer esto por mi cuenta.",
+    "id": "Ugh… Aku tidak bisa melakukan ini sendirian!",
+    "pt": "Ah... Não consigo fazer isso só!",
+    "th": "โอย... ข้าไม่สามารถทำแบบนี้คนเดียวได้!",
+    "vi": "Ừ… Ta không thể làm điều này mình ta!"
+  },
+  "MST_SKILLS_2000485_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000485_NAME": {
+    "en": "Y-You haven't seen the last of Nemia, dodo!",
+    "es": "No has visto todo lo que Nemia puede ofrecer, dodo.",
+    "id": "Ka-Kamu belum melihat Nemia terakhir kalinya, dodo!",
+    "pt": "Não é a última vez que você vai ver Nemia!",
+    "th": "จะ-เจ้ายังไม่เห็นที่สุดของเนเมีย ย้ากก!",
+    "vi": "N-Ngươi vẫn chưa nhìn thấy tận cùng của Nemia, hơ hơ!"
+  },
+  "MST_SKILLS_2000490_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000490_NAME": {
+    "en": "Earth Strike",
+    "es": "Golpe térreo",
+    "id": "Hantaman Bumi",
+    "pt": "Golpe da Terra",
+    "th": "เอิรืธสไตรค์",
+    "vi": "Thổ công"
+  },
+  "MST_SKILLS_2000491_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000491_NAME": {
+    "en": "Go back to where you came from! No swords allowed here!",
+    "es": "¡Vuelve al foso de donde viniste! ¡Aquí no se permiten las espadas!",
+    "id": "Pulang ke asalmu! Pedang dilarang di sini!",
+    "pt": "Volte para o lugar de onde veio! Espadas são proibidas aqui!",
+    "th": "กลับไปยังที่ ที่เจ้าจากมาซะ! ห้ามใช้ดาบที่นี่!",
+    "vi": "Hãy quay về nơi ngươi đã ra đi! Nơi này không được phép dùng kiếm!"
+  },
+  "MST_SKILLS_2000492_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
   "MST_SKILLS_2000492_NAME": {
     "en": "Stop wasting my time, or I'll knock you into oblivion!",
     "es": "Deja de hacerme perder el tiempo o te mandaré al olvido de un puñetazo.",
@@ -90966,77 +91094,5 @@
     "pt": "Combo poderoso de 8 golpes de Sombra em todos os inimigos",
     "th": "8 คอมโบ โจมตีศัตรูทั้งหมดด้วยธาตุความมืด",
     "vi": "8 combo powerful Dark attack on all enemies"
-  },
-  "MST_SKILLS_2122475_NAME": {
-    "en": "Bloody Chaos",
-    "es": "Caos sangriento",
-    "id": "Kekacauan Berdarah",
-    "pt": "Caos Sangrento",
-    "th": "บลัดดี้ คาออส",
-    "vi": "Bloody Chaos"
-  },
-  "MST_SKILLS_2122476_DESCRIPTION": {
-    "en": "9 combo Dark elemental attack on all enemies & great boost to all allies' Def for 3 turns",
-    "es": "Combo grupal de 9 ataques oscuros. Aumenta notablemente la defensa de los aliados durante 3 turnos",
-    "id": "9 kombo serangan Gelap ke semua musuh & tambahan besar ke Pertahanan semua sekutu 3 giliran",
-    "pt": "Combo poderoso de 9 golpes de Sombra em todos os inimigos e grande reforço na DEF dos Aliados por 3 rodadas",
-    "th": "9 คอมโบ โจมตีศัตรูทั้งหมดด้วยธาตุความมืด และเพิ่มพลังป้องกันให้ทีม 3 เทิร์น",
-    "vi": "9 combo Dark elemental attack on all enemies & great boost to all allies' Def for 3 turns"
-  },
-  "MST_SKILLS_2122476_NAME": {
-    "en": "Dark Eraser",
-    "es": "Oscuridad sofocante",
-    "id": "Penghapus Gelap",
-    "pt": "Eliminador Negro",
-    "th": "ดาร์ค อีเรเซอร์",
-    "vi": "Dark Eraser"
-  },
-  "MST_SKILLS_2122480_DESCRIPTION": {
-    "en": "8 combo powerful Light attack on all enemies ",
-    "es": "Combo grupal de 8 poderosos ataques lumínicos ",
-    "id": "8 kombo serangan Terang kuat ke semua musuh",
-    "pt": "Combo poderoso de 8 golpes de Luz em todos os inimigos",
-    "th": "8 คอมโบ โจมตีด้วยธาตุแสงใส่ศัตรูทั้งหมด",
-    "vi": "8 combo powerful Light attack on all enemies "
-  },
-  "MST_SKILLS_2122480_NAME": {
-    "en": "Heaven's Gate",
-    "es": "Puerta del cielo",
-    "id": "Gerbang Surga",
-    "pt": "Portal do Céu",
-    "th": "เฮฟเว่น เกท",
-    "vi": "Heaven's Gate"
-  },
-  "MST_SKILLS_2122481_DESCRIPTION": {
-    "en": "9 combo Light elemental attack on all enemies & boost to all allies' Atk and Def for 3 turns",
-    "es": "Combo grupal de 9 ataques lumínicos que aumenta el ataque y la defensa de los aliados durante 3 turnos",
-    "id": "9 kombo serangan Terang  ke semua musuh & menambah Serangan dan Pertahanan semua sekutu untuk 3 giliran",
-    "pt": "Combo de 9 golpes com elemento Luz em todos os inimigos e reforço no ATQ e DEF de todos os aliados por 3 rodadas",
-    "th": "9 คอมโบ โจมตีด้วยธาตุแสงใส่ศัตรูทั้งหมด, เพิ่มพลังโจมตีและป้องกันใส่้ทีม 3 เทิร์น",
-    "vi": "9 combo Light elemental attack on all enemies & boost to all allies' Atk and Def for 3 turns"
-  },
-  "MST_SKILLS_2122481_NAME": {
-    "en": "Veritas Delta",
-    "es": "Delta veritas",
-    "id": "Veritas Delta",
-    "pt": "Veritas Delta",
-    "th": "เวอริตัส เดลต้า",
-    "vi": "Veritas Delta"
-  },
-  "MST_SKILLS_2122482_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122482_NAME": {
-    "en": "You're...Sir Aem!!",
-    "es": "Eres... ¡Sir Aem!",
-    "id": "Anda... Sir Aem!!",
-    "pt": "Você é... Sir Aem!!",
-    "th": "ท่านคือ...ท่านเอม!!",
-    "vi": "You're...Sir Aem!!"
   }
 }
