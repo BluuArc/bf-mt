@@ -886,8 +886,10 @@ async function runWithRetry (fn = () => {}, numAttempts = 5) {
 }
 
 // assumption: files with the same name aren't being downloaded
-function downloadMultipleFiles(urlArr = [], numConcurrent = 1) {
+function downloadMultipleFiles(urlArr = [], numConcurrent = 1, delay = 1000) {
+  const getFilenameFromUrl = (url) => url.slice(url.lastIndexOf("/") + 1);
   const localArr = urlArr.slice();
+  const filenames = localArr.map(getFilenameFromUrl);
   const result = [];
   let count = localArr.length;
   const helper = (successCb, failureCb) => {
@@ -897,16 +899,20 @@ function downloadMultipleFiles(urlArr = [], numConcurrent = 1) {
       const localPromises = [];
       for (let i = 0; i < numConcurrent && localArr.length > 0; ++i) {
         const url = localArr.shift();
-        const filename = url.slice(url.lastIndexOf("/") + 1);
+        const filename = getFilenameFromUrl(url);
         logger.debug(`downloading ${filename} from ${url}`);
         localPromises.push(
           runWithRetry(() => axios.get(url)
             .then(response => {
-              logger.debug(`got ${filename}; ${--count} remaining`).done();
               result.push({
                 url: filename, // get file name
                 data: response.data,
               });
+              const remaining = filenames.filter(f => !result.some(r => r.url === f));
+              logger.debug(`got ${filename}; ${--count} remaining [${remaining.join(', ')}]`).done();
+              if (count > 0) {
+                return new Promise((resolve) => setTimeout(resolve, delay));
+              }
             }))
         );
       }
