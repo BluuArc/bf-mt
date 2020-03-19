@@ -1,4 +1,84 @@
 {
+  "MST_LEADERSKILLS_4371_DESCRIPTION": {
+    "en": "50% boost to Def, max HP, negates all status ailments & boosts damage reduction when guarding",
+    "es": "50% boost to Def, max HP, negates all status ailments & boosts damage reduction when guarding",
+    "id": "50% ekstra Tahan, HP maks, menegasi semua status penyakit & tambah kurangi kerusakan saat menjaga",
+    "pt": "50% boost to Def, max HP, negates all status ailments & boosts damage reduction when guarding",
+    "th": "50% เพิ่มค่าให้ ป้องกัน, HP สูงสุด, ลบล้างสถานะผิดปกติทั้งหมด และ เพิ่มค่าการลดความเสียหาย เมื่อกำลังตั้งการ์ด",
+    "vi": "50% boost to Def, max HP, negates all status ailments & boosts damage reduction when guarding"
+  },
+  "MST_LEADERSKILLS_4371_NAME": {
+    "en": "Corrupter's Shell",
+    "es": "Corrupter's Shell",
+    "id": "Cangkang Koruptor",
+    "pt": "Corrupter's Shell",
+    "th": "คอร์รับเตอร์ เชล",
+    "vi": "Corrupter's Shell"
+  },
+  "MST_LEADERSKILLS_4372_DESCRIPTION": {
+    "en": "60% boost to Def, max HP, negates all status ailments, boosts damage reduction when guarding & slight damage reduction for 2 turns when damage taken exceeds certain amount",
+    "es": "60% boost to Def, max HP, negates all status ailments, boosts damage reduction when guarding & slight damage reduction for 2 turns when damage taken exceeds certain amount",
+    "id": "60% ekstra Tahan, HP maks, menegasi semua status penyakit, tambah kurangi kerusakan saat menjaga, agak kurangi kerusakan 2 giliran saat kerusakan diderita melampaui jumlah tertentu",
+    "pt": "60% boost to Def, max HP, negates all status ailments, boosts damage reduction when guarding & slight damage reduction for 2 turns when damage taken exceeds certain amount",
+    "th": "60% เพิ่มค่าให้ ป้องกัน, HP สูงสุด, ลบล้างสถานะผิดปกติทั้งหมด, เพิ่มค่าการลดความเสียหาย เมื่อกำลังตั้งการ์ด และ ลดความเสียหายเล็กน้อย นาน 2 เทิร์น เมื่อความเสียหายที่ได้รับเกินกว่าปริมาณหนึ่ง",
+    "vi": "60% boost to Def, max HP, negates all status ailments, boosts damage reduction when guarding & slight damage reduction for 2 turns when damage taken exceeds certain amount"
+  },
+  "MST_LEADERSKILLS_4372_NAME": {
+    "en": "Mocking Shell",
+    "es": "Mocking Shell",
+    "id": "Cangkang Mengejek",
+    "pt": "Mocking Shell",
+    "th": "ม็อกกิ้ง เชล",
+    "vi": "Mocking Shell"
+  },
+  "MST_LEADERSKILLS_4373_DESCRIPTION": {
+    "en": "50% boost to Def, max HP, slightly boosts Atk, Def relative to remaining HP & 110% boost to Spark damage",
+    "es": "50% boost to Def, max HP, slightly boosts Atk, Def relative to remaining HP & 110% boost to Spark damage",
+    "id": "50% ekstra Tahan, HP maks, agak menambah Serang, Tahan sesuai sisa HP & 110% ekstra kerusakan Percikan",
+    "pt": "50% boost to Def, max HP, slightly boosts Atk, Def relative to remaining HP & 110% boost to Spark damage",
+    "th": "50% เพิ่มค่าให้ ป้องกัน, HP สูงสุด, เพิ่มค่าเล็กน้อยให้ โจมตี, ป้องกัน สัมพันธ์กับ HP ที่เหลืออยู่ และ 110% เพิ่มค่าให้ ความเสียหายสปาร์ค",
+    "vi": "50% boost to Def, max HP, slightly boosts Atk, Def relative to remaining HP & 110% boost to Spark damage"
+  },
+  "MST_LEADERSKILLS_4373_NAME": {
+    "en": "Searing Commandment",
+    "es": "Searing Commandment",
+    "id": "Perintah Membakar",
+    "pt": "Searing Commandment",
+    "th": "เวียรืริ่ง คอมมานเมนท์",
+    "vi": "Searing Commandment"
+  },
+  "MST_LEADERSKILLS_4374_DESCRIPTION": {
+    "en": "60% boost to Def, max HP, boosts Atk, Def relative to remaining HP, 130% boost to Spark damage & considerably restores HP each turn",
+    "es": "60% boost to Def, max HP, boosts Atk, Def relative to remaining HP, 130% boost to Spark damage & considerably restores HP each turn",
+    "id": "60% ekstra Tahan, HP maks, agak menambah Serang, Tahan sesuai sisa HP & 130% ekstra kerusakan Percikan, lumayan pulihkan HP tiap giliran",
+    "pt": "60% boost to Def, max HP, boosts Atk, Def relative to remaining HP, 130% boost to Spark damage & considerably restores HP each turn",
+    "th": "60% เพิ่มค่าให้ ป้องกัน, HP สูงสุด, เพิ่มค่า โจมตี, ป้องกัน สัมพันธ์กับ HP ที่เหลืออยู่, 130% เพิ่มค่าให้ ความเสียหายสปาร์ค และ ฟื้นคืน HP อย่างมาก แต่ละเทิร์น",
+    "vi": "60% boost to Def, max HP, boosts Atk, Def relative to remaining HP, 130% boost to Spark damage & considerably restores HP each turn"
+  },
+  "MST_LEADERSKILLS_4374_NAME": {
+    "en": "Incandescent Precept",
+    "es": "Incandescent Precept",
+    "id": "Aturan Pijaran",
+    "pt": "Incandescent Precept",
+    "th": "อินแคนเดสเซนท์ พรีเซปต์",
+    "vi": "Incandescent Precept"
+  },
+  "MST_LEADERSKILLS_4375_DESCRIPTION": {
+    "en": "50% boost to Def, max HP, adds probable random status ailment counter & damage taken boosts BB gauge",
+    "es": "50% boost to Def, max HP, adds probable random status ailment counter & damage taken boosts BB gauge",
+    "id": "50% ekstra Tahan, HP maks, kans balas status penyakit acak, kerusakan diderita menambah meteran BB",
+    "pt": "50% boost to Def, max HP, adds probable random status ailment counter & damage taken boosts BB gauge",
+    "th": "50% เพิ่มค่าให้ ป้องกัน, HP สูงสุด, เพิ่มโอกาส สวนกลับด้วยสถานะผิดปกติ และ ความเสียหายที่ได้รับ เพิ่มค่า เกจ BB",
+    "vi": "50% boost to Def, max HP, adds probable random status ailment counter & damage taken boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_4375_NAME": {
+    "en": "Deceiver's Ruse",
+    "es": "Deceiver's Ruse",
+    "id": "Tipuan Penipu",
+    "pt": "Deceiver's Ruse",
+    "th": "ดีซีฟเวอร์ ริวส์",
+    "vi": "Deceiver's Ruse"
+  },
   "MST_LEADERSKILLS_4376_DESCRIPTION": {
     "en": "60% boost to Def, max HP, probable 25% damage counter, adds probable random status ailment counter & damage taken hugely boosts BB gauge",
     "es": "60% boost to Def, max HP, probable 25% damage counter, adds probable random status ailment counter & damage taken hugely boosts BB gauge",
@@ -11112,12 +11192,12 @@
     "vi": "Draconic Ascension"
   },
   "MST_LEADERSKILLS_830048_DESCRIPTION": {
-    "en": "150% boost to Atk, 80% boost to Def, max HP of Earth types, 20% damage reduction from Earth, Thunder types, considerably boosts ABP and CBP gain, probable considerable reduction of foe's BB gauge & 50-75% damage counter",
-    "es": "150% boost to Atk, 80% boost to Def, max HP of Earth types, 20% damage reduction from Earth, Thunder types, considerably boosts ABP and CBP gain, probable considerable reduction of foe's BB gauge & 50-75% damage counter",
-    "id": "150% boost to Atk, 80% boost to Def, max HP of Earth types, 20% damage reduction from Earth, Thunder types, considerably boosts ABP and CBP gain, probable considerable reduction of foe's BB gauge & 50-75% damage counter",
-    "pt": "150% boost to Atk, 80% boost to Def, max HP of Earth types, 20% damage reduction from Earth, Thunder types, considerably boosts ABP and CBP gain, probable considerable reduction of foe's BB gauge & 50-75% damage counter",
-    "th": "150% boost to Atk, 80% boost to Def, max HP of Earth types, 20% damage reduction from Earth, Thunder types, considerably boosts ABP and CBP gain, probable considerable reduction of foe's BB gauge & 50-75% damage counter",
-    "vi": "150% boost to Atk, 80% boost to Def, max HP of Earth types, 20% damage reduction from Earth, Thunder types, considerably boosts ABP and CBP gain, probable considerable reduction of foe's BB gauge & 50-75% damage counter"
+    "en": "200% Atk, 80% Def, max HP (Earth), 20% damage reduction from Earth, Thunder types, adds probable 50% BB gauge reduction to attack, 50-75% damage counter & 100% ABP, 50% CBP gain",
+    "es": "200% Atk, 80% Def, max HP (Earth), 20% damage reduction from Earth, Thunder types, adds probable 50% BB gauge reduction to attack, 50-75% damage counter & 100% ABP, 50% CBP gain",
+    "id": "200% Atk, 80% Def, max HP (Earth), 20% damage reduction from Earth, Thunder types, adds probable 50% BB gauge reduction to attack, 50-75% damage counter & 100% ABP, 50% CBP gain",
+    "pt": "200% Atk, 80% Def, max HP (Earth), 20% damage reduction from Earth, Thunder types, adds probable 50% BB gauge reduction to attack, 50-75% damage counter & 100% ABP, 50% CBP gain",
+    "th": "200% Atk, 80% Def, max HP (Earth), 20% damage reduction from Earth, Thunder types, adds probable 50% BB gauge reduction to attack, 50-75% damage counter & 100% ABP, 50% CBP gain",
+    "vi": "200% Atk, 80% Def, max HP (Earth), 20% damage reduction from Earth, Thunder types, adds probable 50% BB gauge reduction to attack, 50-75% damage counter & 100% ABP, 50% CBP gain"
   },
   "MST_LEADERSKILLS_830048_NAME": {
     "en": "Death Requiem",
@@ -12710,6 +12790,38 @@
     "pt": "Divine Ruler's Edge",
     "th": "Divine Ruler's Edge",
     "vi": "Divine Ruler's Edge"
+  },
+  "MST_LEADERSKILLS_840827_DESCRIPTION": {
+    "en": "120% Atk, max HP, 100% Def and 30% critical rate (Thunder), 10% damage reduction from Water, Thunder types, raises normal hit amount, normal attacks may hit all foes & critical damage fills BB gauge",
+    "es": "120% Atk, max HP, 100% Def and 30% critical rate (Thunder), 10% damage reduction from Water, Thunder types, raises normal hit amount, normal attacks may hit all foes & critical damage fills BB gauge",
+    "id": "120% Atk, max HP, 100% Def and 30% critical rate (Thunder), 10% damage reduction from Water, Thunder types, raises normal hit amount, normal attacks may hit all foes & critical damage fills BB gauge",
+    "pt": "120% Atk, max HP, 100% Def and 30% critical rate (Thunder), 10% damage reduction from Water, Thunder types, raises normal hit amount, normal attacks may hit all foes & critical damage fills BB gauge",
+    "th": "120% Atk, max HP, 100% Def and 30% critical rate (Thunder), 10% damage reduction from Water, Thunder types, raises normal hit amount, normal attacks may hit all foes & critical damage fills BB gauge",
+    "vi": "120% Atk, max HP, 100% Def and 30% critical rate (Thunder), 10% damage reduction from Water, Thunder types, raises normal hit amount, normal attacks may hit all foes & critical damage fills BB gauge"
+  },
+  "MST_LEADERSKILLS_840827_NAME": {
+    "en": "Golden Gaze",
+    "es": "Golden Gaze",
+    "id": "Golden Gaze",
+    "pt": "Golden Gaze",
+    "th": "Golden Gaze",
+    "vi": "Golden Gaze"
+  },
+  "MST_LEADERSKILLS_840828_DESCRIPTION": {
+    "en": "150% Atk, max HP, 120% Def and 30% critical rate (Thunder), 20% damage reduction from Water, Thunder types, raises normal hit amount, normal attacks may hit all foes, 135% ABP, 80% CBP gain & critical damage fills BB gauge",
+    "es": "150% Atk, max HP, 120% Def and 30% critical rate (Thunder), 20% damage reduction from Water, Thunder types, raises normal hit amount, normal attacks may hit all foes, 135% ABP, 80% CBP gain & critical damage fills BB gauge",
+    "id": "150% Atk, max HP, 120% Def and 30% critical rate (Thunder), 20% damage reduction from Water, Thunder types, raises normal hit amount, normal attacks may hit all foes, 135% ABP, 80% CBP gain & critical damage fills BB gauge",
+    "pt": "150% Atk, max HP, 120% Def and 30% critical rate (Thunder), 20% damage reduction from Water, Thunder types, raises normal hit amount, normal attacks may hit all foes, 135% ABP, 80% CBP gain & critical damage fills BB gauge",
+    "th": "150% Atk, max HP, 120% Def and 30% critical rate (Thunder), 20% damage reduction from Water, Thunder types, raises normal hit amount, normal attacks may hit all foes, 135% ABP, 80% CBP gain & critical damage fills BB gauge",
+    "vi": "150% Atk, max HP, 120% Def and 30% critical rate (Thunder), 20% damage reduction from Water, Thunder types, raises normal hit amount, normal attacks may hit all foes, 135% ABP, 80% CBP gain & critical damage fills BB gauge"
+  },
+  "MST_LEADERSKILLS_840828_NAME": {
+    "en": "Awakened Emptiness",
+    "es": "Awakened Emptiness",
+    "id": "Awakened Emptiness",
+    "pt": "Awakened Emptiness",
+    "th": "Awakened Emptiness",
+    "vi": "Awakened Emptiness"
   },
   "MST_LEADERSKILLS_840848_DESCRIPTION": {
     "en": "140% Atk, Def, max HP and 30% critical rate (Thunder), 30% reduction to BB activation cost, spark damage restores HP, 30% OD gauge fill rate & 20% damage reduction for 2 turns when damage taken is over 5k",
@@ -91086,53 +91198,5 @@
     "pt": "Deus Ganancioso",
     "th": "กรีดดี้ก็อด",
     "vi": "Thần háu ăn"
-  },
-  "MST_MONSTERS_516_NAME": {
-    "en": "Captain Yuuri",
-    "es": "Captain Yuuri",
-    "id": "Captain Yuuri",
-    "pt": "Captain Yuuri",
-    "th": "Captain Yuuri",
-    "vi": "Captain Yuuri"
-  },
-  "MST_MONSTERS_51700_NAME": {
-    "en": "Traveler Alma",
-    "es": "Viajera Alma",
-    "id": "Pengelana Alma",
-    "pt": "Alma Viajante",
-    "th": "ทราเวเลอร์อัลม่า",
-    "vi": "Kẻ du hành Alma"
-  },
-  "MST_MONSTERS_51701_NAME": {
-    "en": "Traveler Alma",
-    "es": "Viajera Alma",
-    "id": "Pengelana Alma",
-    "pt": "Alma Viajante",
-    "th": "ทราเวเลอร์อัลม่า",
-    "vi": "Kẻ du hành Alma"
-  },
-  "MST_MONSTERS_51750_NAME": {
-    "en": "Adventurer Alma",
-    "es": "Aventurera Alma",
-    "id": "Petualang Alma",
-    "pt": "Alma Aventureira",
-    "th": "แอดเวนเชอเรออัลม่า",
-    "vi": "Kẻ phiêu lưu Alma"
-  },
-  "MST_MONSTERS_51751_NAME": {
-    "en": "Adventurer Alma",
-    "es": "Aventurera Alma",
-    "id": "Petualang Alma",
-    "pt": "Alma Aventureira",
-    "th": "แอดเวนเชอเรออัลม่า",
-    "vi": "Kẻ phiêu lưu Alma"
-  },
-  "MST_MONSTERS_51752_NAME": {
-    "en": "Adventurer Alma",
-    "es": "Aventurera Alma",
-    "id": "Petualang Alma",
-    "pt": "Alma Aventureira",
-    "th": "แอดเวนเชอเรออัลม่า",
-    "vi": "Kẻ phiêu lưu Alma"
   }
 }

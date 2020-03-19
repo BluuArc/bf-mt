@@ -1,4 +1,36 @@
 {
+  "MST_SKILLS_2000471_NAME": {
+    "en": "Look! An interesting sparring partner!",
+    "es": "¡Mira! ¡Un compañero de práctica interesante!",
+    "id": "Lihat! Lawan tanding yang menarik!",
+    "pt": "Olha! Um parceiro de treino interessante!",
+    "th": "ดูสิ! คู่ซ้อมที่น่าสนใจ!",
+    "vi": "Xem kìa! Một đối tác tập luyện thật thú vị!"
+  },
+  "MST_SKILLS_2000472_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000472_NAME": {
+    "en": "Give 'em hell, Zelban!",
+    "es": "Que conozcan el infierno, Zelban.",
+    "id": "Kirim mereka ke neraka, Zelban!",
+    "pt": "Acabe com eles, Zelban!",
+    "th": "ส่งมันลงนรกเลย เซลแบน!",
+    "vi": "Cho chúng xuống địa ngục đi, Zelban!"
+  },
+  "MST_SKILLS_2000473_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
   "MST_SKILLS_2000473_NAME": {
     "en": "Concentrate, concentrate!",
     "es": "¡Concéntrate! ¡Concéntrate!",
@@ -91134,5 +91166,37 @@
     "pt": "Você será minha oferenda às sombras!",
     "th": "ข้าจะพาเจ้าไปสู่ความมืด!",
     "vi": "I'll offer you to the dark!"
+  },
+  "MST_SKILLS_2122475_DESCRIPTION": {
+    "en": "8 combo powerful Dark attack on all enemies",
+    "es": "Combo grupal de 8 poderosos ataques oscuros",
+    "id": "8 kombo serangan Gelap ke semua musuh",
+    "pt": "Combo poderoso de 8 golpes de Sombra em todos os inimigos",
+    "th": "8 คอมโบ โจมตีศัตรูทั้งหมดด้วยธาตุความมืด",
+    "vi": "8 combo powerful Dark attack on all enemies"
+  },
+  "MST_SKILLS_2122475_NAME": {
+    "en": "Bloody Chaos",
+    "es": "Caos sangriento",
+    "id": "Kekacauan Berdarah",
+    "pt": "Caos Sangrento",
+    "th": "บลัดดี้ คาออส",
+    "vi": "Bloody Chaos"
+  },
+  "MST_SKILLS_2122476_DESCRIPTION": {
+    "en": "9 combo Dark elemental attack on all enemies & great boost to all allies' Def for 3 turns",
+    "es": "Combo grupal de 9 ataques oscuros. Aumenta notablemente la defensa de los aliados durante 3 turnos",
+    "id": "9 kombo serangan Gelap ke semua musuh & tambahan besar ke Pertahanan semua sekutu 3 giliran",
+    "pt": "Combo poderoso de 9 golpes de Sombra em todos os inimigos e grande reforço na DEF dos Aliados por 3 rodadas",
+    "th": "9 คอมโบ โจมตีศัตรูทั้งหมดด้วยธาตุความมืด และเพิ่มพลังป้องกันให้ทีม 3 เทิร์น",
+    "vi": "9 combo Dark elemental attack on all enemies & great boost to all allies' Def for 3 turns"
+  },
+  "MST_SKILLS_2122476_NAME": {
+    "en": "Dark Eraser",
+    "es": "Oscuridad sofocante",
+    "id": "Penghapus Gelap",
+    "pt": "Eliminador Negro",
+    "th": "ดาร์ค อีเรเซอร์",
+    "vi": "Dark Eraser"
   }
 }

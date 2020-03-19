@@ -149548,5 +149548,1407 @@
     ],
     "name": "Judge Wisdom",
     "attackInfo": []
+  },
+  "4850628": {
+    "damage frames": [
+      {
+        "effect delay time(ms)/frame": "16.7/1",
+        "frame times": [
+          56,
+          59,
+          62,
+          65,
+          68,
+          71,
+          74,
+          77,
+          80,
+          83,
+          86,
+          89,
+          92,
+          95,
+          98,
+          101,
+          104,
+          107,
+          110,
+          113
+        ],
+        "hit dmg% distribution": [
+          6,
+          6,
+          6,
+          6,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          4,
+          4,
+          4,
+          4
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 20,
+        "proc id": "47"
+      },
+      {
+        "effect delay time(ms)/frame": "16.7/1",
+        "frame times": [
+          56,
+          59,
+          62,
+          65,
+          68,
+          71,
+          74,
+          77,
+          80,
+          83,
+          86,
+          89,
+          92,
+          95,
+          98,
+          101,
+          104,
+          107,
+          110,
+          113
+        ],
+        "hit dmg% distribution": [
+          6,
+          6,
+          6,
+          6,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          4,
+          4,
+          4,
+          4
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 20,
+        "proc id": "47"
+      },
+      {
+        "effect delay time(ms)/frame": "0.0/0",
+        "frame times": [
+          0
+        ],
+        "hit dmg% distribution": [
+          100
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 1,
+        "proc id": "23"
+      },
+      {
+        "effect delay time(ms)/frame": "0.0/0",
+        "frame times": [
+          0
+        ],
+        "hit dmg% distribution": [
+          100
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 1,
+        "proc id": "62"
+      },
+      {
+        "effect delay time(ms)/frame": "0.0/0",
+        "frame times": [
+          0
+        ],
+        "hit dmg% distribution": [
+          100
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 1,
+        "proc id": "66"
+      },
+      {
+        "effect delay time(ms)/frame": "0.0/0",
+        "frame times": [
+          0
+        ],
+        "hit dmg% distribution": [
+          100
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 1,
+        "proc id": "56"
+      },
+      {
+        "effect delay time(ms)/frame": "0.0/0",
+        "frame times": [
+          0
+        ],
+        "hit dmg% distribution": [
+          100
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 1,
+        "proc id": "126"
+      },
+      {
+        "effect delay time(ms)/frame": "0.0/0",
+        "frame times": [
+          0
+        ],
+        "hit dmg% distribution": [
+          100
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 1,
+        "proc id": "67"
+      },
+      {
+        "effect delay time(ms)/frame": "0.0/0",
+        "frame times": [
+          0
+        ],
+        "hit dmg% distribution": [
+          100
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 1,
+        "proc id": "5"
+      },
+      {
+        "effect delay time(ms)/frame": "0.0/0",
+        "frame times": [
+          0
+        ],
+        "hit dmg% distribution": [
+          100
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 1,
+        "proc id": "3"
+      },
+      {
+        "effect delay time(ms)/frame": "0.0/0",
+        "frame times": [
+          0
+        ],
+        "hit dmg% distribution": [
+          100
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 1,
+        "proc id": "11003"
+      },
+      {
+        "effect delay time(ms)/frame": "0.0/0",
+        "frame times": [
+          0
+        ],
+        "hit dmg% distribution": [
+          100
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 1,
+        "proc id": "10019"
+      }
+    ],
+    "desc": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, spark damage boosts BB gauge, 100% raises allies from KO, 80% KO resistance, fully restores HP, activates Light barrier & 100% DoT reduction",
+    "drop check count": 1,
+    "id": "4850628",
+    "levels": [
+      {
+        "bc cost": 7,
+        "effects": [
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb dmg%": 250,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "buff turns": 4,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "23",
+            "spark dmg% buff (40)": 500,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "light",
+            "elemental barrier hp": 50000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "66",
+            "revive unit chance%": 100,
+            "revive unit hp%": 100,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "angel idol buff turns (91)": 999,
+            "angel idol recover chance%": 80,
+            "angel idol recover hp%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "56",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "126",
+            "unknown proc param": "100,4,0"
+          },
+          {
+            "bc fill on spark buff turns (111)": 4,
+            "bc fill on spark high": 8,
+            "bc fill on spark low": 5,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "atk% buff (1)": 400,
+            "buff turns": 4,
+            "crit% buff (7)": 60,
+            "def% buff (3)": 400,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "rec% buff (5)": 400,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "gradual heal high": 99999,
+            "gradual heal low": 98999,
+            "gradual heal turns (8)": 4,
+            "proc id": "3",
+            "rec added% (from target)": 10,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "11003",
+            "unknown proc param": "0,60,0,0,0,0,3,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "10501,10550,10551,10552,0,0,0,0,0,60"
+          }
+        ]
+      },
+      {
+        "bc cost": 7,
+        "effects": [
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb dmg%": 300,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "buff turns": 4,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "23",
+            "spark dmg% buff (40)": 500,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "light",
+            "elemental barrier hp": 50000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "66",
+            "revive unit chance%": 100,
+            "revive unit hp%": 100,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "angel idol buff turns (91)": 999,
+            "angel idol recover chance%": 80,
+            "angel idol recover hp%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "56",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "126",
+            "unknown proc param": "100,4,0"
+          },
+          {
+            "bc fill on spark buff turns (111)": 4,
+            "bc fill on spark high": 8,
+            "bc fill on spark low": 5,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "atk% buff (1)": 400,
+            "buff turns": 4,
+            "crit% buff (7)": 60,
+            "def% buff (3)": 400,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "rec% buff (5)": 400,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "gradual heal high": 99999,
+            "gradual heal low": 98999,
+            "gradual heal turns (8)": 4,
+            "proc id": "3",
+            "rec added% (from target)": 10,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "11003",
+            "unknown proc param": "0,70,0,0,0,0,3,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "10501,10550,10551,10552,0,0,0,0,0,70"
+          }
+        ]
+      },
+      {
+        "bc cost": 7,
+        "effects": [
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb dmg%": 350,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "buff turns": 5,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "23",
+            "spark dmg% buff (40)": 500,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "light",
+            "elemental barrier hp": 50000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "66",
+            "revive unit chance%": 100,
+            "revive unit hp%": 100,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "angel idol buff turns (91)": 999,
+            "angel idol recover chance%": 80,
+            "angel idol recover hp%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "56",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "126",
+            "unknown proc param": "100,5,0"
+          },
+          {
+            "bc fill on spark buff turns (111)": 5,
+            "bc fill on spark high": 8,
+            "bc fill on spark low": 5,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "atk% buff (1)": 400,
+            "buff turns": 5,
+            "crit% buff (7)": 60,
+            "def% buff (3)": 400,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "rec% buff (5)": 400,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "gradual heal high": 99999,
+            "gradual heal low": 98999,
+            "gradual heal turns (8)": 5,
+            "proc id": "3",
+            "rec added% (from target)": 10,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "11003",
+            "unknown proc param": "0,80,0,0,0,0,3,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "10501,10550,10551,10552,0,0,0,0,0,80"
+          }
+        ]
+      },
+      {
+        "bc cost": 6,
+        "effects": [
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb dmg%": 400,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "buff turns": 5,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "23",
+            "spark dmg% buff (40)": 500,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "light",
+            "elemental barrier hp": 50000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "66",
+            "revive unit chance%": 100,
+            "revive unit hp%": 100,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "angel idol buff turns (91)": 999,
+            "angel idol recover chance%": 80,
+            "angel idol recover hp%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "56",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "126",
+            "unknown proc param": "100,5,0"
+          },
+          {
+            "bc fill on spark buff turns (111)": 5,
+            "bc fill on spark high": 8,
+            "bc fill on spark low": 5,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "atk% buff (1)": 400,
+            "buff turns": 5,
+            "crit% buff (7)": 60,
+            "def% buff (3)": 400,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "rec% buff (5)": 400,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "gradual heal high": 99999,
+            "gradual heal low": 98999,
+            "gradual heal turns (8)": 5,
+            "proc id": "3",
+            "rec added% (from target)": 10,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "11003",
+            "unknown proc param": "0,80,0,0,0,0,3,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "10501,10550,10551,10552,0,0,0,0,0,80"
+          }
+        ]
+      },
+      {
+        "bc cost": 6,
+        "effects": [
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb dmg%": 450,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "buff turns": 5,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "23",
+            "spark dmg% buff (40)": 500,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "light",
+            "elemental barrier hp": 50000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "66",
+            "revive unit chance%": 100,
+            "revive unit hp%": 100,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "angel idol buff turns (91)": 999,
+            "angel idol recover chance%": 80,
+            "angel idol recover hp%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "56",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "126",
+            "unknown proc param": "100,5,0"
+          },
+          {
+            "bc fill on spark buff turns (111)": 5,
+            "bc fill on spark high": 8,
+            "bc fill on spark low": 5,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "atk% buff (1)": 400,
+            "buff turns": 5,
+            "crit% buff (7)": 60,
+            "def% buff (3)": 400,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "rec% buff (5)": 400,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "gradual heal high": 99999,
+            "gradual heal low": 98999,
+            "gradual heal turns (8)": 5,
+            "proc id": "3",
+            "rec added% (from target)": 10,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "11003",
+            "unknown proc param": "0,90,0,0,0,0,3,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "10501,10550,10551,10552,0,0,0,0,0,90"
+          }
+        ]
+      },
+      {
+        "bc cost": 5,
+        "effects": [
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb dmg%": 500,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "buff turns": 5,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "23",
+            "spark dmg% buff (40)": 500,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "light",
+            "elemental barrier hp": 50000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "66",
+            "revive unit chance%": 100,
+            "revive unit hp%": 100,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "angel idol buff turns (91)": 999,
+            "angel idol recover chance%": 80,
+            "angel idol recover hp%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "56",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "126",
+            "unknown proc param": "100,5,0"
+          },
+          {
+            "bc fill on spark buff turns (111)": 5,
+            "bc fill on spark high": 8,
+            "bc fill on spark low": 5,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "atk% buff (1)": 400,
+            "buff turns": 5,
+            "crit% buff (7)": 60,
+            "def% buff (3)": 400,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "rec% buff (5)": 400,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "gradual heal high": 99999,
+            "gradual heal low": 98999,
+            "gradual heal turns (8)": 5,
+            "proc id": "3",
+            "rec added% (from target)": 10,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "11003",
+            "unknown proc param": "0,90,0,0,0,0,4,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "10501,10550,10551,10552,0,0,0,0,0,90"
+          }
+        ]
+      },
+      {
+        "bc cost": 5,
+        "effects": [
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb dmg%": 500,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "buff turns": 5,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "23",
+            "spark dmg% buff (40)": 500,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "light",
+            "elemental barrier hp": 50000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "66",
+            "revive unit chance%": 100,
+            "revive unit hp%": 100,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "angel idol buff turns (91)": 999,
+            "angel idol recover chance%": 80,
+            "angel idol recover hp%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "56",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "126",
+            "unknown proc param": "100,5,0"
+          },
+          {
+            "bc fill on spark buff turns (111)": 5,
+            "bc fill on spark high": 8,
+            "bc fill on spark low": 5,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "atk% buff (1)": 400,
+            "buff turns": 5,
+            "crit% buff (7)": 60,
+            "def% buff (3)": 400,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "rec% buff (5)": 400,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "gradual heal high": 99999,
+            "gradual heal low": 98999,
+            "gradual heal turns (8)": 5,
+            "proc id": "3",
+            "rec added% (from target)": 10,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "11003",
+            "unknown proc param": "0,100,0,0,0,0,4,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "10501,10550,10551,10552,0,0,0,0,0,100"
+          }
+        ]
+      },
+      {
+        "bc cost": 4,
+        "effects": [
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb dmg%": 500,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "buff turns": 5,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "23",
+            "spark dmg% buff (40)": 500,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "light",
+            "elemental barrier hp": 50000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "66",
+            "revive unit chance%": 100,
+            "revive unit hp%": 100,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "angel idol buff turns (91)": 999,
+            "angel idol recover chance%": 80,
+            "angel idol recover hp%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "56",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "126",
+            "unknown proc param": "100,5,0"
+          },
+          {
+            "bc fill on spark buff turns (111)": 5,
+            "bc fill on spark high": 8,
+            "bc fill on spark low": 5,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "atk% buff (1)": 400,
+            "buff turns": 5,
+            "crit% buff (7)": 60,
+            "def% buff (3)": 400,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "rec% buff (5)": 400,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "gradual heal high": 99999,
+            "gradual heal low": 98999,
+            "gradual heal turns (8)": 5,
+            "proc id": "3",
+            "rec added% (from target)": 10,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "11003",
+            "unknown proc param": "0,100,0,0,0,0,5,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "10501,10550,10551,10552,0,0,0,0,0,100"
+          }
+        ]
+      },
+      {
+        "bc cost": 4,
+        "effects": [
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb dmg%": 500,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "buff turns": 5,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "23",
+            "spark dmg% buff (40)": 500,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "light",
+            "elemental barrier hp": 50000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "66",
+            "revive unit chance%": 100,
+            "revive unit hp%": 100,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "angel idol buff turns (91)": 999,
+            "angel idol recover chance%": 80,
+            "angel idol recover hp%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "56",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "126",
+            "unknown proc param": "100,5,0"
+          },
+          {
+            "bc fill on spark buff turns (111)": 5,
+            "bc fill on spark high": 8,
+            "bc fill on spark low": 5,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "atk% buff (1)": 400,
+            "buff turns": 5,
+            "crit% buff (7)": 60,
+            "def% buff (3)": 400,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "rec% buff (5)": 400,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "gradual heal high": 99999,
+            "gradual heal low": 98999,
+            "gradual heal turns (8)": 5,
+            "proc id": "3",
+            "rec added% (from target)": 10,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "11003",
+            "unknown proc param": "0,100,0,0,0,0,5,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "10501,10550,10551,10552,0,0,0,0,0,100"
+          }
+        ]
+      },
+      {
+        "bc cost": 3,
+        "effects": [
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb dmg%": 500,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "buff turns": 5,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "23",
+            "spark dmg% buff (40)": 500,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "light",
+            "elemental barrier hp": 50000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "66",
+            "revive unit chance%": 100,
+            "revive unit hp%": 100,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "angel idol buff turns (91)": 999,
+            "angel idol recover chance%": 80,
+            "angel idol recover hp%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "56",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "126",
+            "unknown proc param": "100,5,0"
+          },
+          {
+            "bc fill on spark buff turns (111)": 5,
+            "bc fill on spark high": 8,
+            "bc fill on spark low": 5,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "atk% buff (1)": 400,
+            "buff turns": 5,
+            "crit% buff (7)": 60,
+            "def% buff (3)": 400,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "rec% buff (5)": 400,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "gradual heal high": 99999,
+            "gradual heal low": 98999,
+            "gradual heal turns (8)": 5,
+            "proc id": "3",
+            "rec added% (from target)": 10,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "11003",
+            "unknown proc param": "0,100,0,0,0,0,5,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "10501,10550,10551,10552,0,0,0,0,0,100"
+          }
+        ]
+      }
+    ],
+    "name": "Ephemeral Gold",
+    "attackInfo": [
+      {
+        "id": "47",
+        "target": "AOE",
+        "hits": 20
+      },
+      {
+        "id": "47",
+        "target": "AOE",
+        "hits": 20
+      }
+    ]
   }
 }
