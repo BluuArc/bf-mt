@@ -1,4 +1,156 @@
 {
+  "MST_LEADERSKILLS_4361_NAME": {
+    "en": "Knightly Pivot",
+    "es": "Knightly Pivot",
+    "id": "Poros Ksatria",
+    "pt": "Knightly Pivot",
+    "th": "ไนท์ลี่ ไพวอท",
+    "vi": "Knightly Pivot"
+  },
+  "MST_LEADERSKILLS_4362_DESCRIPTION": {
+    "en": "50% boost to Def and max HP, considerably reduces BB gauge required for BB, considerably boosts BC efficacy & probable 20% damage reduction",
+    "es": "50% boost to Def and max HP, considerably reduces BB gauge required for BB, considerably boosts BC efficacy & probable 20% damage reduction",
+    "id": "50% ekstra Tahan dan HP maks, lumayan mengurangi meteran BB untuk BB, lumayan menambah keampuhan BC, kans kurangi 20% kerusakan",
+    "pt": "50% boost to Def and max HP, considerably reduces BB gauge required for BB, considerably boosts BC efficacy & probable 20% damage reduction",
+    "th": "50% เพิ่มค่า ป้องกัน กับ HP สูงสุด, ลดค่ามหาศาลให้เกจ BB ที่ต้องการสำหรับใช้ BB, เพิ่มค่าอย่างมากให้ ประสิทธิภาพ BC และ อาจจะ 20% ลดค่าความเสียหาย",
+    "vi": "50% boost to Def and max HP, considerably reduces BB gauge required for BB, considerably boosts BC efficacy & probable 20% damage reduction"
+  },
+  "MST_LEADERSKILLS_4362_NAME": {
+    "en": "Shining Defense",
+    "es": "Shining Defense",
+    "id": "Pertahanan Bersinar",
+    "pt": "Shining Defense",
+    "th": "ชายนิ่ง ดีเฟนส์",
+    "vi": "Shining Defense"
+  },
+  "MST_LEADERSKILLS_4363_DESCRIPTION": {
+    "en": "60% boost to Def, max HP, hugely boosts damage against status afflicted foes & damage taken hugely boosts BB gauge and may restore HP",
+    "es": "60% boost to Def, max HP, hugely boosts damage against status afflicted foes & damage taken hugely boosts BB gauge and may restore HP",
+    "id": "60% ekstra Tahan, HP maks, amat tambah merusak musuh terkena status, kerusakan diderita amat menambah meteran BB dan dapat pulihkan HP",
+    "pt": "60% boost to Def, max HP, hugely boosts damage against status afflicted foes & damage taken hugely boosts BB gauge and may restore HP",
+    "th": "60% เพิ่มค่าให้ ป้องกัน, HP สูงสุด, เพิ่มค่าอย่างสูงให้ ความเสียหายต่อศัตรูที่ติดสถานะผิดปกติ และ ความเสียหายที่ได้รับ เพิ่มค่าอย่างสูงให้ เกจ BB กับ อาจฟื้นคืน HP",
+    "vi": "60% boost to Def, max HP, hugely boosts damage against status afflicted foes & damage taken hugely boosts BB gauge and may restore HP"
+  },
+  "MST_LEADERSKILLS_4363_NAME": {
+    "en": "Blessed Wisdom",
+    "es": "Blessed Wisdom",
+    "id": "Kearifan Terberkati",
+    "pt": "Blessed Wisdom",
+    "th": "เบลส วิสดอม",
+    "vi": "Blessed Wisdom"
+  },
+  "MST_LEADERSKILLS_4364_DESCRIPTION": {
+    "en": "50% boost to Def, max HP, boosts damage reduction when guarding & damage taken boosts BB gauge",
+    "es": "50% boost to Def, max HP, boosts damage reduction when guarding & damage taken boosts BB gauge",
+    "id": "50% ekstra Tahan, HP maks, tambah kurangi kerusakan saat menjaga, kerusakan diderita menambah meteran BB",
+    "pt": "50% boost to Def, max HP, boosts damage reduction when guarding & damage taken boosts BB gauge",
+    "th": "50% เพิ่มค่าให้ ป้องกัน, HP สูงสุด, เพิ่มค่า ลดค่าความเสียหาย เมื่อกำลังตั้งการ์ด และ ความเสียหายที่ได้รับ เพิ่มค่า เกจ BB",
+    "vi": "50% boost to Def, max HP, boosts damage reduction when guarding & damage taken boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_4364_NAME": {
+    "en": "Guardian of Fire",
+    "es": "Guardian of Fire",
+    "id": "Penjaga Api",
+    "pt": "Guardian of Fire",
+    "th": "การ์เดี้ยน ออฟ ไฟเออร์",
+    "vi": "Guardian of Fire"
+  },
+  "MST_LEADERSKILLS_4365_DESCRIPTION": {
+    "en": "60% boost to Def, max HP, boosts damage reduction when guarding, considerably restores HP each turn & damage taken hugely boosts BB gauge",
+    "es": "60% boost to Def, max HP, boosts damage reduction when guarding, considerably restores HP each turn & damage taken hugely boosts BB gauge",
+    "id": "60% ekstra Tahan, HP maks, tambah kurangi kerusakan saat menjaga, lumayan pulihkan HP tiap giliran, kerusakan diderita amat menambah meteran BB",
+    "pt": "60% boost to Def, max HP, boosts damage reduction when guarding, considerably restores HP each turn & damage taken hugely boosts BB gauge",
+    "th": "60% เพิ่มค่าให้ ป้องกัน, HP สูงสุด, เพิ่มค่า ลดค่าความเสียหาย เมื่อกำลังตั้งการ์ด, ฟื้นคืน HP อย่างมาก แต่ละเทิร์น และ ความเสียหายที่ได้รับ เพิ่มค่าอย่างสูงให้ เกจ BB",
+    "vi": "60% boost to Def, max HP, boosts damage reduction when guarding, considerably restores HP each turn & damage taken hugely boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_4365_NAME": {
+    "en": "Guardian of Divine Flame",
+    "es": "Guardian of Divine Flame",
+    "id": "Penjaga Api Ilahi",
+    "pt": "Guardian of Divine Flame",
+    "th": "การ์เดี้ยน ออฟ ดิไวน์ เฟลม",
+    "vi": "Guardian of Divine Flame"
+  },
+  "MST_LEADERSKILLS_4366_DESCRIPTION": {
+    "en": "50% boost to Def, max HP, considerably boosts BC efficacy, probable 20% damage reduction & restores HP each turn",
+    "es": "50% boost to Def, max HP, considerably boosts BC efficacy, probable 20% damage reduction & restores HP each turn",
+    "id": "50% ekstra Tahan, HP maks, lumayan menambah keampuhan BC, kans kurangi 20% kerusakan, memulihkan HP tiap giliran",
+    "pt": "50% boost to Def, max HP, considerably boosts BC efficacy, probable 20% damage reduction & restores HP each turn",
+    "th": "50% เพิ่มค่าให้ ป้องกัน, HP สูงสุด, เพิ่มค่าอย่างสูงมาก ประสิทธิภาพ BC, มีโอกาส 20% ลดค่าความเสียหาย และ ฟื้นคืน HP แต่ละเทิร์น",
+    "vi": "50% boost to Def, max HP, considerably boosts BC efficacy, probable 20% damage reduction & restores HP each turn"
+  },
+  "MST_LEADERSKILLS_4366_NAME": {
+    "en": "Embers of Conquest",
+    "es": "Embers of Conquest",
+    "id": "Bara Penaklukan",
+    "pt": "Embers of Conquest",
+    "th": "เอ็มเบอร์ ออฟ คอนเควส",
+    "vi": "Embers of Conquest"
+  },
+  "MST_LEADERSKILLS_4367_DESCRIPTION": {
+    "en": "50% boost to Def, max HP, damage taken boosts BB gauge & considerably boosts BB gauge each turn",
+    "es": "50% boost to Def, max HP, damage taken boosts BB gauge & considerably boosts BB gauge each turn",
+    "id": "50% ekstra Tahan, HP maks, kerusakan diderita menambah meteran BB tiap giliran",
+    "pt": "50% boost to Def, max HP, damage taken boosts BB gauge & considerably boosts BB gauge each turn",
+    "th": "50% เพิ่มค่าให้ ป้องกัน, HP สูงสุด, ความเสียหายที่ได้รับ เพิ่มค่า เกจ BB และ เพิ่มค่าอย่างสูงมาก เกจ BB แต่ละเทิร์น",
+    "vi": "50% boost to Def, max HP, damage taken boosts BB gauge & considerably boosts BB gauge each turn"
+  },
+  "MST_LEADERSKILLS_4367_NAME": {
+    "en": "All-Seeing Sentinel",
+    "es": "All-Seeing Sentinel",
+    "id": "Penjaga Melihat Semua",
+    "pt": "All-Seeing Sentinel",
+    "th": "ออล ซีอิ้ง เซนติเนล",
+    "vi": "All-Seeing Sentinel"
+  },
+  "MST_LEADERSKILLS_4368_DESCRIPTION": {
+    "en": "60% boost to Def, max HP, damage taken hugely boosts BB gauge, hugely boosts BB gauge each turn & negates Def ignoring effect",
+    "es": "60% boost to Def, max HP, damage taken hugely boosts BB gauge, hugely boosts BB gauge each turn & negates Def ignoring effect",
+    "id": "60% ekstra Tahan, HP maks, kerusakan diderita amat menambah meteran BB tiap giliran, amat menambah meteran BB tiap giliran, menegasi efek abaikan Tahan",
+    "pt": "60% boost to Def, max HP, damage taken hugely boosts BB gauge, hugely boosts BB gauge each turn & negates Def ignoring effect",
+    "th": "60% เพิ่มค่าให้ ป้องกัน, HP สูงสุด, ความเสียหายที่ได้รับ เพิ่มค่าอย่างสูงให้ เกจ BB, เพิ่มค่าอย่างสูงให้ เกจ BB แต่ละเทิร์น และ ผลต้านทานไม่สนค่าป้องกัน",
+    "vi": "60% boost to Def, max HP, damage taken hugely boosts BB gauge, hugely boosts BB gauge each turn & negates Def ignoring effect"
+  },
+  "MST_LEADERSKILLS_4368_NAME": {
+    "en": "Omniscient Sentinel",
+    "es": "Omniscient Sentinel",
+    "id": "Penjaga Mahatahu",
+    "pt": "Omniscient Sentinel",
+    "th": "ออมนิเซนท์ เซนติเนล",
+    "vi": "Omniscient Sentinel"
+  },
+  "MST_LEADERSKILLS_4369_DESCRIPTION": {
+    "en": "60% boost to Def, max HP, hugely reduces BB gauge required for BB & damage taken hugely boosts BB gauge and may restore HP",
+    "es": "60% boost to Def, max HP, hugely reduces BB gauge required for BB & damage taken hugely boosts BB gauge and may restore HP",
+    "id": "60% ekstra Tahan, HP maks, amat kurangi meteran BB untuk BB & kerusakan diderita amat menambah meteran BB dan dapat pulihkan HP",
+    "pt": "60% boost to Def, max HP, hugely reduces BB gauge required for BB & damage taken hugely boosts BB gauge and may restore HP",
+    "th": "60% เพิ่มค่าให้ ป้องกัน, HP สูงสุด, ลดค่าอย่างสูงให้ เกจ BB ที่จำเป็นสำหรับใช้ BB และ ความเสียหายที่ได้รับ เพิ่มค่าอย่างสูงให้ เกจ BB กับ อาจฟื้นคืน HP",
+    "vi": "60% boost to Def, max HP, hugely reduces BB gauge required for BB & damage taken hugely boosts BB gauge and may restore HP"
+  },
+  "MST_LEADERSKILLS_4369_NAME": {
+    "en": "Divine Mandate",
+    "es": "Divine Mandate",
+    "id": "Mandat Ilahi",
+    "pt": "Divine Mandate",
+    "th": "ดิไวน์ แมนเดท",
+    "vi": "Divine Mandate"
+  },
+  "MST_LEADERSKILLS_4370_DESCRIPTION": {
+    "en": "50% boost to Def, max HP, boosts damage reduction rate when guarding, probable 20% damage reduction & damage taken when guarding hugely boosts BB gauge",
+    "es": "50% boost to Def, max HP, boosts damage reduction rate when guarding, probable 20% damage reduction & hugely boosts BB gauge when attacked while guarding",
+    "id": "50% ekstra Tahan, HP maks, tambah kurangi kerusakan saat menjaga, kans kurangi 20% kerusakan & amat menambah meteran BB saat diserang ketika menjaga",
+    "pt": "50% boost to Def, max HP, boosts damage reduction rate when guarding, probable 20% damage reduction & hugely boosts BB gauge when attacked while guarding",
+    "th": "50% เพิ่มค่าให้ ป้องกัน, HP สูงสุด, เพิ่มค่าอัตราการลดความเสียหาย เมื่อกำลังตั้งการ์ด, อาจจะ 20% ลดค่าความเสียหาย และ เพิ่มค่าอย่างสูงให้ เกจ BB เมื่อถูกโจมตี ขณะกำลังตั้งการ์ด",
+    "vi": "50% boost to Def, max HP, boosts damage reduction rate when guarding, probable 20% damage reduction & hugely boosts BB gauge when attacked while guarding"
+  },
+  "MST_LEADERSKILLS_4370_NAME": {
+    "en": "Dark Divinity Barrier",
+    "es": "Dark Divinity Barrier",
+    "id": "Penghalang Keilahian Gelap",
+    "pt": "Dark Divinity Barrier",
+    "th": "ดาร์ค ดิไวนิตี้ แบริเออร์",
+    "vi": "Dark Divinity Barrier"
+  },
   "MST_LEADERSKILLS_4371_DESCRIPTION": {
     "en": "50% boost to Def, max HP, negates all status ailments & boosts damage reduction when guarding",
     "es": "50% boost to Def, max HP, negates all status ailments & boosts damage reduction when guarding",
@@ -12022,6 +12174,22 @@
     "pt": "Somebody give me a light!",
     "th": "Somebody give me a light!",
     "vi": "Somebody give me a light!"
+  },
+  "MST_LEADERSKILLS_830858_DESCRIPTION": {
+    "en": "140% all parameters, 250% spark damage, probable spark critical, spark damage fills BB gauge & probable damage reduction to 1",
+    "es": "140% all parameters, 250% spark damage, probable spark critical, spark damage fills BB gauge & probable damage reduction to 1",
+    "id": "140% all parameters, 250% spark damage, probable spark critical, spark damage fills BB gauge & probable damage reduction to 1",
+    "pt": "140% all parameters, 250% spark damage, probable spark critical, spark damage fills BB gauge & probable damage reduction to 1",
+    "th": "140% all parameters, 250% spark damage, probable spark critical, spark damage fills BB gauge & probable damage reduction to 1",
+    "vi": "140% all parameters, 250% spark damage, probable spark critical, spark damage fills BB gauge & probable damage reduction to 1"
+  },
+  "MST_LEADERSKILLS_830858_NAME": {
+    "en": "Majesty of War",
+    "es": "Majesty of War",
+    "id": "Majesty of War",
+    "pt": "Majesty of War",
+    "th": "Majesty of War",
+    "vi": "Majesty of War"
   },
   "MST_LEADERSKILLS_830900_DESCRIPTION": {
     "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Earth elemental damage, 15% damage reduction from Thunder types & negates all status ailments",
@@ -91070,133 +91238,5 @@
     "pt": "Totem da Luz",
     "th": "โทเทมแสง",
     "vi": "Vật tổ ánh sáng"
-  },
-  "MST_MONSTERS_51550_NAME": {
-    "en": "Jewel Ghost",
-    "es": "Fantasma Joyoso",
-    "id": "Hantu Intan",
-    "pt": "Fantasma da Joia",
-    "th": "จีเวลโกส",
-    "vi": "Ma quản kho báu"
-  },
-  "MST_MONSTERS_51551_NAME": {
-    "en": "Jewel Ghost",
-    "es": "Fantasma Joyoso",
-    "id": "Hantu Intan",
-    "pt": "Fantasma da Joia",
-    "th": "จีเวลโกส",
-    "vi": "Ma quản kho báu"
-  },
-  "MST_MONSTERS_51552_NAME": {
-    "en": "Wild Jewel Ghost",
-    "es": "Fantasma de joyas salvaje",
-    "id": "Hantu Intan Liar",
-    "pt": "Fantasma da Joia Selvagem",
-    "th": "ไวลด์จีเวเวลโกส",
-    "vi": "Ma đá quý hoang"
-  },
-  "MST_MONSTERS_51553_NAME": {
-    "en": "Jewel Ghost",
-    "es": "Jewel Ghost",
-    "id": "Hantu Intan",
-    "pt": "Jewel Ghost",
-    "th": "จีเวลโกสท์",
-    "vi": "Jewel Ghost"
-  },
-  "MST_MONSTERS_51554_NAME": {
-    "en": "Jewel Ghost",
-    "es": "Jewel Ghost",
-    "id": "Hantu Intan",
-    "pt": "Jewel Ghost",
-    "th": "จีเวลโกสท์",
-    "vi": "Jewel Ghost"
-  },
-  "MST_MONSTERS_51555_NAME": {
-    "en": "Jewel Ghost",
-    "es": "Jewel Ghost",
-    "id": "Hantu Intan",
-    "pt": "Jewel Ghost",
-    "th": "จีเวลโกสท์",
-    "vi": "Jewel Ghost"
-  },
-  "MST_MONSTERS_51556_NAME": {
-    "en": "Jewel Ghost",
-    "es": "Jewel Ghost",
-    "id": "Hantu Intan",
-    "pt": "Jewel Ghost",
-    "th": "จีเวล โกสต์",
-    "vi": "Jewel Ghost"
-  },
-  "MST_MONSTERS_515_NAME": {
-    "en": "Yuuri",
-    "es": "Yuuri",
-    "id": "Yuuri",
-    "pt": "Yuuri",
-    "th": "Yuuri",
-    "vi": "Yuuri"
-  },
-  "MST_MONSTERS_51600_NAME": {
-    "en": "Jewel King",
-    "es": "Rey Joyoso",
-    "id": "Raja Intan",
-    "pt": "Rei da Joia",
-    "th": "จีเวลคิง",
-    "vi": "Vua kho báu"
-  },
-  "MST_MONSTERS_51601_NAME": {
-    "en": "Jewel King",
-    "es": "Rey Joyoso",
-    "id": "Raja Intan",
-    "pt": "Rei da Joia",
-    "th": "จีเวลคิง",
-    "vi": "Vua kho báu"
-  },
-  "MST_MONSTERS_51602_NAME": {
-    "en": "Jewel King",
-    "es": "Jewel King",
-    "id": "Pemotong Hurikan Dion",
-    "pt": "Jewel King",
-    "th": "จีเวล คิง",
-    "vi": "Jewel King"
-  },
-  "MST_MONSTERS_51650_NAME": {
-    "en": "Jewel God",
-    "es": "Dios Joyoso",
-    "id": "Dewa Intan",
-    "pt": "Deus da Joia",
-    "th": "จีเวลก๊อด",
-    "vi": "Chúa tể kho báu"
-  },
-  "MST_MONSTERS_51651_NAME": {
-    "en": "Jewel God",
-    "es": "Dios Joyoso",
-    "id": "Dewa Intan",
-    "pt": "Deus da Joia",
-    "th": "จีเวลก๊อด",
-    "vi": "Chúa tể kho báu"
-  },
-  "MST_MONSTERS_51660_NAME": {
-    "en": "Glutton God",
-    "es": "Dios glotón",
-    "id": "Dewa Rakus",
-    "pt": "Deus Glutão",
-    "th": "กลัททอนก๊อด",
-    "vi": "Thánh ăn"
-  },
-  "MST_MONSTERS_51661_NAME": {
-    "en": "Voracious God",
-    "es": "Dios voraz",
-    "id": "Dewa Lahap",
-    "pt": "Deus Voraz",
-    "th": "โวราเซียสก๊อด",
-    "vi": "Chúa tham"
-  },
-  "MST_MONSTERS_51662_NAME": {
-    "en": "Greedy God",
-    "es": "Dios avaro",
-    "id": "Dewa Rakus",
-    "pt": "Deus Ganancioso",
-    "th": "กรีดดี้ก็อด",
-    "vi": "Thần háu ăn"
   }
 }
