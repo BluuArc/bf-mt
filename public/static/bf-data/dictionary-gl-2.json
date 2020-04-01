@@ -1,4 +1,84 @@
 {
+  "MST_LEADERSKILLS_4356_NAME": {
+    "en": "Fighter's Vigor",
+    "es": "Fighter's Vigor",
+    "id": "Semangat Petarung",
+    "pt": "Fighter's Vigor",
+    "th": "ไฟท์เตอร์ วิเกอร์",
+    "vi": "Fighter's Vigor"
+  },
+  "MST_LEADERSKILLS_4357_DESCRIPTION": {
+    "en": "80% boost to Def, 30% boost to max HP, probable foe BB gauge reduction & 10% reduction to Fire, Water, Earth, Thunder elemental damage",
+    "es": "80% boost to Def, 30% boost to max HP, probable foe BB gauge reduction & 10% reduction to Fire, Water, Earth, Thunder elemental damage",
+    "id": "80% ekstra Tahan, 30% ekstra HP maks, kans pengurangan meteran BB musuh, pengurangan 10% kerusakan elemen Api, Air, Bumi, Guntur",
+    "pt": "80% boost to Def, 30% boost to max HP, probable foe BB gauge reduction & 10% reduction to Fire, Water, Earth, Thunder elemental damage",
+    "th": "80% เพิ่มค่า ป้องกัน, 30% เพิ่มค่า HP สูงสุด, มีโอกาส ลดเกจ BB ศัตรู และ 10% ลดค่าความเสียหายธาตุ ไฟ, น้ำ, ดิน, สายฟ้า",
+    "vi": "80% boost to Def, 30% boost to max HP, probable foe BB gauge reduction & 10% reduction to Fire, Water, Earth, Thunder elemental damage"
+  },
+  "MST_LEADERSKILLS_4357_NAME": {
+    "en": "Sorcerous Defense",
+    "es": "Sorcerous Defense",
+    "id": "Pertahanan Penyihir",
+    "pt": "Sorcerous Defense",
+    "th": "ซอเซอรัส ดีเฟนส์",
+    "vi": "Sorcerous Defense"
+  },
+  "MST_LEADERSKILLS_4358_DESCRIPTION": {
+    "en": "100% boost to Def, 50% boost to max HP, probable considerable foe BB gauge reduction, 15% reduction to Fire, Water, Earth, Thunder elemental damage & considerably boosts ABP and CBP gain",
+    "es": "100% boost to Def, 50% boost to max HP, probable considerable foe BB gauge reduction, 15% reduction to Fire, Water, Earth, Thunder elemental damage & considerably boosts ABP and CBP gain",
+    "id": "100% ekstra Tahan, 50% ekstra HP maks, kans pengurangan meteran BB musuh, pengurangan 15% kerusakan elemen Api, Air, Bumi, Guntur, lumayan menambah perolehan ABP dan CBP",
+    "pt": "100% boost to Def, 50% boost to max HP, probable considerable foe BB gauge reduction, 15% reduction to Fire, Water, Earth, Thunder elemental damage & considerably boosts ABP and CBP gain",
+    "th": "100% เพิ่มค่า ป้องกัน, 50% เพิ่มค่า HP สูงสุด, มีโอกาส ลดเกจ BB ศัตรูอย่างมาก, 15% ลดค่าความเสียหายธาตุ ไฟ, น้ำ, ดิน, สายฟ้า และ เพิ่มค่าอย่างมากให้ ABP กับ CBP ที่ได้รับ",
+    "vi": "100% boost to Def, 50% boost to max HP, probable considerable foe BB gauge reduction, 15% reduction to Fire, Water, Earth, Thunder elemental damage & considerably boosts ABP and CBP gain"
+  },
+  "MST_LEADERSKILLS_4358_NAME": {
+    "en": "Bold Defense",
+    "es": "Bold Defense",
+    "id": "Pertahanan Berani",
+    "pt": "Bold Defense",
+    "th": "โบลด์ ดีเฟนส์",
+    "vi": "Bold Defense"
+  },
+  "MST_LEADERSKILLS_4359_DESCRIPTION": {
+    "en": "50% boost to Def and max HP, negates all status ailments and Def ignoring effects & damage taken hugely boosts BB gauge",
+    "es": "50% boost to Def and max HP, negates all status ailments and Def ignoring effects & damage taken hugely boosts BB gauge",
+    "id": "50% ekstra Tahan, HP maks, menegasi semua status penyakit danefek abaikan Pertahanan, kerusakan diderita amat menambah meteran BB",
+    "pt": "50% boost to Def and max HP, negates all status ailments and Def ignoring effects & damage taken hugely boosts BB gauge",
+    "th": "50% เพิ่มค่า ป้องกัน กับ HP สูงสุด, ต้านทาน สถานะผิดปกติทั้งหมด กับ ผลไม่สนค่าป้องกัน และ ความเสียหายทีได้รับ เพิ่มค่าอย่างสูงให้ เกจ BB",
+    "vi": "50% boost to Def and max HP, negates all status ailments and Def ignoring effects & damage taken hugely boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_4359_NAME": {
+    "en": "Heavenly Jurisdiction",
+    "es": "Heavenly Jurisdiction",
+    "id": "Yurisdiksi Surgawi",
+    "pt": "Heavenly Jurisdiction",
+    "th": "เฮฟเวนลี่ จูริสดิคชั่น",
+    "vi": "Heavenly Jurisdiction"
+  },
+  "MST_LEADERSKILLS_4360_DESCRIPTION": {
+    "en": "80% boost to Def, 30% boost to max HP, 10% elemental damage reduction from Light, Dark types & probability of resistance against 1 KO attack",
+    "es": "80% boost to Def, 30% boost to max HP, 10% elemental damage reduction from Light, Dark types & probability of resistance against 1 KO attack",
+    "id": "80% ekstra Tahan, 30% ekstra HP maks, 10% kurangi kerusakan elemen dari tipe Terang, Gelap & kans tahan atas 1 serangan KO",
+    "pt": "80% boost to Def, 30% boost to max HP, 10% elemental damage reduction from Light, Dark types & probability of resistance against 1 KO attack",
+    "th": "80% เพิ่มค่า ป้องกัน, 30% เพิ่มค่า HP สูงสุด, 10% ลดความเสียหายธาตุจาก ชนิด แสง, มืด และ มีโอกาสที่จะ ต้านทาน 1 การโจมตีน็อคเอ๊าท์",
+    "vi": "80% boost to Def, 30% boost to max HP, 10% elemental damage reduction from Light, Dark types & probability of resistance against 1 KO attack"
+  },
+  "MST_LEADERSKILLS_4360_NAME": {
+    "en": "Warrior Creed",
+    "es": "Warrior Creed",
+    "id": "Kredo Pejuang",
+    "pt": "Warrior Creed",
+    "th": "วอริเออร์ ครีด",
+    "vi": "Warrior Creed"
+  },
+  "MST_LEADERSKILLS_4361_DESCRIPTION": {
+    "en": "100% boost to Def, 50% boost to max HP, 15% elemental damage reduction from Light, Dark types, adds probability of resistance against 1 KO attack & considerably boosts ABP and CBP gain",
+    "es": "100% boost to Def, 50% boost to max HP, 15% elemental damage reduction from Light, Dark types, adds probability of resistance against 1 KO attack & considerably boosts ABP and CBP gain",
+    "id": "100% ekstra Tahan, 50% ekstra HP maks, 15% kurangi kerusakan elemen dari tipe Terang, Gelap, menambah kans tahan atas 1 serangan KO, lumayan menambah perolehan ABP dan CBP",
+    "pt": "100% boost to Def, 50% boost to max HP, 15% elemental damage reduction from Light, Dark types, adds probability of resistance against 1 KO attack & considerably boosts ABP and CBP gain",
+    "th": "100% เพิ่มค่า ป้องกัน, 50% เพิ่มค่า HP สูงสุด, 15% ลดความเสียหายธาตุจาก ชนิด แสง, มืด, ให้ มีโอกาสที่จะ ต้านทาน 1 การโจมตีน็อคเอ๊าท์ และ เพิ่มค่าอย่างมากให้ ABP กับ CBP ทีได้รับ",
+    "vi": "100% boost to Def, 50% boost to max HP, 15% elemental damage reduction from Light, Dark types, adds probability of resistance against 1 KO attack & considerably boosts ABP and CBP gain"
+  },
   "MST_LEADERSKILLS_4361_NAME": {
     "en": "Knightly Pivot",
     "es": "Knightly Pivot",
@@ -10366,6 +10446,22 @@
     "pt": "Down to business",
     "th": "Down to business",
     "vi": "Down to business"
+  },
+  "MST_LEADERSKILLS_810858_DESCRIPTION": {
+    "en": "140% all parameters, 0-80% Atk, Def relative to remaining HP, 250% Fire elemental damage, fills BB gauge each turn & 15% DoT reduction",
+    "es": "140% all parameters, 0-80% Atk, Def relative to remaining HP, 250% Fire elemental damage, fills BB gauge each turn & 15% DoT reduction",
+    "id": "140% all parameters, 0-80% Atk, Def relative to remaining HP, 250% Fire elemental damage, fills BB gauge each turn & 15% DoT reduction",
+    "pt": "140% all parameters, 0-80% Atk, Def relative to remaining HP, 250% Fire elemental damage, fills BB gauge each turn & 15% DoT reduction",
+    "th": "140% all parameters, 0-80% Atk, Def relative to remaining HP, 250% Fire elemental damage, fills BB gauge each turn & 15% DoT reduction",
+    "vi": "140% all parameters, 0-80% Atk, Def relative to remaining HP, 250% Fire elemental damage, fills BB gauge each turn & 15% DoT reduction"
+  },
+  "MST_LEADERSKILLS_810858_NAME": {
+    "en": "Light of Aries",
+    "es": "Light of Aries",
+    "id": "Light of Aries",
+    "pt": "Light of Aries",
+    "th": "Light of Aries",
+    "vi": "Light of Aries"
   },
   "MST_LEADERSKILLS_810900_DESCRIPTION": {
     "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Fire elemental damage, 15% damage reduction from Earth types & negates all status ailments",
@@ -91174,69 +91270,5 @@
     "pt": "Symphonia",
     "th": "Symphonia",
     "vi": "Symphonia"
-  },
-  "MST_MONSTERS_51400_NAME": {
-    "en": "Light Spirit",
-    "es": "Espíritu de luz",
-    "id": "Roh Terang",
-    "pt": "Espírito da Luz",
-    "th": "สปิริตแสง",
-    "vi": "Thần ánh sáng"
-  },
-  "MST_MONSTERS_51401_NAME": {
-    "en": "Light Spirit",
-    "es": "Espíritu de luz",
-    "id": "Roh Terang",
-    "pt": "Espírito da Luz",
-    "th": "สปิริตแสง",
-    "vi": "Thần ánh sáng"
-  },
-  "MST_MONSTERS_51450_NAME": {
-    "en": "Light Idol",
-    "es": "Ídolo de luz",
-    "id": "Idola Terang",
-    "pt": "Ídolo da Luz",
-    "th": "ไอดอลแสง",
-    "vi": "T. Tượng ánh sáng"
-  },
-  "MST_MONSTERS_51451_NAME": {
-    "en": "Light Idol",
-    "es": "Ídolo de luz",
-    "id": "Idola Terang",
-    "pt": "Ídolo da Luz",
-    "th": "ไอดอลแสง",
-    "vi": "T. Tượng ánh sáng"
-  },
-  "MST_MONSTERS_51452_NAME": {
-    "en": "Idol Enemy 5",
-    "es": "Idol Enemy 5",
-    "id": "Musuh Idola 5",
-    "pt": "Idol Enemy 5",
-    "th": "ไอดอล เอ็นเนอมี่ 5",
-    "vi": "Idol Enemy 5"
-  },
-  "MST_MONSTERS_514_NAME": {
-    "en": "Holy Knight Symphonia",
-    "es": "Holy Knight Symphonia",
-    "id": "Holy Knight Symphonia",
-    "pt": "Holy Knight Symphonia",
-    "th": "Holy Knight Symphonia",
-    "vi": "Holy Knight Symphonia"
-  },
-  "MST_MONSTERS_51500_NAME": {
-    "en": "Light Totem",
-    "es": "Tótem de luz",
-    "id": "Totem Terang",
-    "pt": "Totem da Luz",
-    "th": "โทเทมแสง",
-    "vi": "Vật tổ ánh sáng"
-  },
-  "MST_MONSTERS_51501_NAME": {
-    "en": "Light Totem",
-    "es": "Tótem de luz",
-    "id": "Totem Terang",
-    "pt": "Totem da Luz",
-    "th": "โทเทมแสง",
-    "vi": "Vật tổ ánh sáng"
   }
 }
