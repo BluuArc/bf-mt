@@ -1,4 +1,308 @@
 {
+  "MST_LEADERSKILLS_4335_NAME": {
+    "en": "Silent God's Poetry",
+    "es": "Silent God's Poetry",
+    "id": "Puisi Dewa Diam",
+    "pt": "Silent God's Poetry",
+    "th": "ไซเลนท์ ก็อด โพเอทรี่",
+    "vi": "Silent God's Poetry"
+  },
+  "MST_LEADERSKILLS_4336_DESCRIPTION": {
+    "en": "30% boost to Def, max HP & raises normal hit amount",
+    "es": "30% boost to Def, max HP & raises normal hit amount",
+    "id": "30% ekstra Tahan, HP maks, menambah jumlah pukulan normal",
+    "pt": "30% boost to Def, max HP & raises normal hit amount",
+    "th": "30% เพิ่มค่าให้ ป้องกัน, HP สูงสุด กับ เพิ่มจำนวนครั้งการโจมตีธรรมดา",
+    "vi": "30% boost to Def, max HP & raises normal hit amount"
+  },
+  "MST_LEADERSKILLS_4336_NAME": {
+    "en": "Death's Temple",
+    "es": "Death's Temple",
+    "id": "Kuil Maut",
+    "pt": "Death's Temple",
+    "th": "เดธ เทมเพิล",
+    "vi": "Death's Temple"
+  },
+  "MST_LEADERSKILLS_4337_DESCRIPTION": {
+    "en": "40% boost to Def, max HP, raises normal hit amount & probable normal attack on all foes",
+    "es": "40% boost to Def, max HP, raises normal hit amount & probable normal attack on all foes",
+    "id": "40% ekstra Tahan, HP maks, menambah jumlah pukulan normal & kans serangan normal ke semua musuh",
+    "pt": "40% boost to Def, max HP, raises normal hit amount & probable normal attack on all foes",
+    "th": "40% เพิ่มค่าให้ ป้องกัน, HP สูงสุด, เพิ่มจำนวนครั้งการโจมตีธรรมดา กับ มีโอกาส โจมตีธรรมดาใส่ศัตรูทั้งหมด",
+    "vi": "40% boost to Def, max HP, raises normal hit amount & probable normal attack on all foes"
+  },
+  "MST_LEADERSKILLS_4337_NAME": {
+    "en": "Drowned God's Temple",
+    "es": "Drowned God's Temple",
+    "id": "Kuil Dewa Tenggelam",
+    "pt": "Drowned God's Temple",
+    "th": "ดราวน์ ก็อด เทมเพิล",
+    "vi": "Drowned God's Temple"
+  },
+  "MST_LEADERSKILLS_4338_DESCRIPTION": {
+    "en": "30% boost to Def, max HP & damage taken may slightly restore HP",
+    "es": "30% boost to Def, max HP & damage taken may slightly restore HP",
+    "id": "30% ekstra Tahan, HP maks, kerusakan diderita dapat agak memulihkan HP",
+    "pt": "30% boost to Def, max HP & damage taken may slightly restore HP",
+    "th": "30% เพิ่มค่า ป้องกัน, HP สูงสุด และ ความเสียหายที่ได้รับ อาจจะ ฟื้นคืน HP เล็กน้อย",
+    "vi": "30% boost to Def, max HP & damage taken may slightly restore HP"
+  },
+  "MST_LEADERSKILLS_4338_NAME": {
+    "en": "Heavenly Wisdom",
+    "es": "Heavenly Wisdom",
+    "id": "Kebijaksanaan Surgawi",
+    "pt": "Heavenly Wisdom",
+    "th": "เฮฟเว่นลี่ วิสด้อม",
+    "vi": "Heavenly Wisdom"
+  },
+  "MST_LEADERSKILLS_4339_DESCRIPTION": {
+    "en": "50% boost to Def, max HP, damage taken may restore HP & negates critical damage",
+    "es": "50% boost to Def, max HP, damage taken may restore HP & negates critical damage",
+    "id": "50% ekstra Tahan, HP maks, kerusakan diderita dapat agak memulihkan HP, menegasi kerusakan ampuh",
+    "pt": "50% boost to Def, max HP, damage taken may restore HP & negates critical damage",
+    "th": "50% เพิ่มค่า ป้องกัน, HP สูงสุด, ความเสียหายที่ได้รับ อาจจะ ฟื้นคืน HP และ ต้านทาน ความเสียหายคริติคอล",
+    "vi": "50% boost to Def, max HP, damage taken may restore HP & negates critical damage"
+  },
+  "MST_LEADERSKILLS_4339_NAME": {
+    "en": "Heroic Wisdom",
+    "es": "Heroic Wisdom",
+    "id": "Kebijaksanaan Heroik",
+    "pt": "Heroic Wisdom",
+    "th": "ฮีโรอิค วิสด้อม",
+    "vi": "Heroic Wisdom"
+  },
+  "MST_LEADERSKILLS_4340_DESCRIPTION": {
+    "en": "30% boost to Def, max HP & negates critical damage",
+    "es": "30% boost to Def, max HP & negates critical damage",
+    "id": "30% ekstra Tahan, HP maks & menegasi kerusakan ampuh",
+    "pt": "30% boost to Def, max HP & negates critical damage",
+    "th": "30% เพิ่มพลังป้องกันและ HP สูงสุด, กันคริติคอล",
+    "vi": "30% boost to Def, max HP & negates critical damage"
+  },
+  "MST_LEADERSKILLS_4340_NAME": {
+    "en": "Divine Nature Style",
+    "es": "Divine Nature Style",
+    "id": "Gaya Alam Ilahi",
+    "pt": "Divine Nature Style",
+    "th": "ดีไวน์ เนเจอร์ สไตล์",
+    "vi": "Divine Nature Style"
+  },
+  "MST_LEADERSKILLS_4341_DESCRIPTION": {
+    "en": "50% boost to Def, max HP, negates critical damage & slightly reduces damage for 2 turns when damage taken has exceeded certain amount",
+    "es": "50% boost to Def, max HP, negates critical damage & slightly reduces damage for 2 turns when damage taken has exceeded certain amount",
+    "id": "30% ekstra Tahan, HP maks, menegasi kerusakan ampuh, agak kurangi kerusakan 2 giliran saat melebihi jumlah tertentu",
+    "pt": "50% boost to Def, max HP, negates critical damage & slightly reduces damage for 2 turns when damage taken has exceeded certain amount",
+    "th": "50% เพิ่มพลังป้องกันและ HP สูงสุด, กันคริติคอล, ลดความเสียหายเล็กน้อย 2 เทิร์นเมื่อความเสียหายที่ได้รับถึงตามกำหนด",
+    "vi": "50% boost to Def, max HP, negates critical damage & slightly reduces damage for 2 turns when damage taken has exceeded certain amount"
+  },
+  "MST_LEADERSKILLS_4341_NAME": {
+    "en": "Supreme Heavenly Style",
+    "es": "Supreme Heavenly Style",
+    "id": "Gaya Surgawi Supremasi",
+    "pt": "Supreme Heavenly Style",
+    "th": "ซูพรีม เฮฟเว่นลี่ สไตล์",
+    "vi": "Supreme Heavenly Style"
+  },
+  "MST_LEADERSKILLS_4344_DESCRIPTION": {
+    "en": "30% boost to Def and max HP & probable random status ailment infliction",
+    "es": "30% boost to Def and max HP & probable random status ailment infliction",
+    "id": "30% ekstra Tahan dan HP maks & kans beri status penyakit acak",
+    "pt": "30% boost to Def and max HP & probable random status ailment infliction",
+    "th": "30% เพิ่มพลังโจมตีและ HP สูงสุด, โจมตีติดสถานะแบบสุ่ม",
+    "vi": "30% boost to Def and max HP & probable random status ailment infliction"
+  },
+  "MST_LEADERSKILLS_4344_NAME": {
+    "en": "Pestilence",
+    "es": "Pestilence",
+    "id": "Wabah",
+    "pt": "Pestilence",
+    "th": "เพสทิเลนซ์",
+    "vi": "Pestilence"
+  },
+  "MST_LEADERSKILLS_4345_DESCRIPTION": {
+    "en": "50% boost to Def and max HP, probable random status ailment infliction & damage taken hugely boosts BB gauge",
+    "es": "50% boost to Def and max HP, probable random status ailment infliction & damage taken hugely boosts BB gauge",
+    "id": "50% ekstra Tahan dan HP maks, kans beri status penyakit acak & kerusakan diderita amat menambah meteran BB",
+    "pt": "50% boost to Def and max HP, probable random status ailment infliction & damage taken hugely boosts BB gauge",
+    "th": "50% เพิ่มพลังโจมตีและ HP สูงสุด, โจมตีติดสถานะแบบสุ่ม, เพิ่มบีบีเกจอย่างมากจากความเสียหายทีได้รับ",
+    "vi": "50% boost to Def and max HP, probable random status ailment infliction & damage taken hugely boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_4345_NAME": {
+    "en": "Vile Pestilence",
+    "es": "Vile Pestilence",
+    "id": "Wabah Jahat",
+    "pt": "Vile Pestilence",
+    "th": "ไวล์ เพสทิเลนซ์",
+    "vi": "Vile Pestilence"
+  },
+  "MST_LEADERSKILLS_4346_DESCRIPTION": {
+    "en": "50% boost to Def and max HP, negates critical damage, 10% damage reduction from Fire, Water, Earth and Thunder types & damage taken hugely boosts BB gauge",
+    "es": "50% boost to Def and max HP, negates critical damage, 10% damage reduction from Fire, Water, Earth and Thunder types & damage taken hugely boosts BB gauge",
+    "id": "50% ekstra Tahan dan HP maks, menegasi kerusakan ampuh, kurangi 10% kerusakan dari tipe Api, Air, Bumi, Guntur & kerusakan diderita amat menambah meteran BB",
+    "pt": "50% boost to Def and max HP, negates critical damage, 10% damage reduction from Fire, Water, Earth and Thunder types & damage taken hugely boosts BB gauge",
+    "th": "50% เพิ่มค่า ป้องกัน กับ HP สูงสุด, ต้านทาน ความเสียหายคริติคอล, 10% ลดค่าความเสียหายจาก ชนิด ไฟ, น้ำ, ดิน กับ สายฟ้า และ ความเสียหายทีได้รับ เพิ่มค่าอย่างมากให้ เกจ BB",
+    "vi": "50% boost to Def and max HP, negates critical damage, 10% damage reduction from Fire, Water, Earth and Thunder types & damage taken hugely boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_4346_NAME": {
+    "en": "Bonds of a Beautiful Ruler",
+    "es": "Bonds of a Beautiful Ruler",
+    "id": "Ikatan Pemerintah Cantik",
+    "pt": "Bonds of a Beautiful Ruler",
+    "th": "บอนออฟอะบิวตี้ฟูลรูลเลอร์",
+    "vi": "Bonds of a Beautiful Ruler"
+  },
+  "MST_LEADERSKILLS_4347_DESCRIPTION": {
+    "en": "20% boost to Def and max HP, negates all status ailments & considerably boosts BB Atk",
+    "es": "20% boost to Def and max HP, negates all status ailments & considerably boosts BB Atk",
+    "id": "20% ekstra Tahan dan HP maks, menegasi semua status penyakit, lumayan menambah BB Serang",
+    "pt": "20% boost to Def and max HP, negates all status ailments & considerably boosts BB Atk",
+    "th": "20% เพิ่มค่าให้ ป้องกัน กับ HP สูงสุด, ลบล้างสถานะผิดปกติทั้งหมด และ เพิ่มค่าอย่างมากให้ BB โจมตี",
+    "vi": "20% boost to Def and max HP, negates all status ailments & considerably boosts BB Atk"
+  },
+  "MST_LEADERSKILLS_4347_NAME": {
+    "en": "Knight's Pride",
+    "es": "Knight's Pride",
+    "id": "Harga Diri Ksatria",
+    "pt": "Knight's Pride",
+    "th": "ไนท์ส ไพรด์",
+    "vi": "Knight's Pride"
+  },
+  "MST_LEADERSKILLS_4348_DESCRIPTION": {
+    "en": "30% boost to Def and max HP, negates all status ailments & considerably boosts BB Atk",
+    "es": "30% boost to Def and max HP, negates all status ailments & considerably boosts BB Atk",
+    "id": "30% ekstra Tahan dan HP maks, menegasi semua status penyakit, lumayan menambah BB Serang",
+    "pt": "30% boost to Def and max HP, negates all status ailments & considerably boosts BB Atk",
+    "th": "30% เพิ่มค่าให้ ป้องกัน กับ HP สูงสุด, ลบล้างสถานะผิดปกติทั้งหมด และ เพิ่มค่าอย่างมากให้ BB โจมตี",
+    "vi": "30% boost to Def and max HP, negates all status ailments & considerably boosts BB Atk"
+  },
+  "MST_LEADERSKILLS_4348_NAME": {
+    "en": "Blood's Awakening",
+    "es": "Blood's Awakening",
+    "id": "Bangkitnya Darah",
+    "pt": "Blood's Awakening",
+    "th": "บลัด อเวคเคนนิ่ง",
+    "vi": "Blood's Awakening"
+  },
+  "MST_LEADERSKILLS_4349_DESCRIPTION": {
+    "en": "20% boost to Def and max HP, slightly restores HP each turn & damage taken may slightly restore HP",
+    "es": "20% boost to Def and max HP, slightly restores HP each turn & damage taken may slightly restore HP",
+    "id": "20% ekstra Tahan dan HP maks, agak pulihkan HP tiap giliran, kerusakan diderita dapat agak pulihkan HP",
+    "pt": "20% boost to Def and max HP, slightly restores HP each turn & damage taken may slightly restore HP",
+    "th": "20% เพิ่มค่าให้ ป้องกัน กับ HP สูงสุด, ฟื้นคืน HP เล็กน้อย แต่ละเทิร์น และ ความเสียหายที่ได้รับ อาจฟื้นคืน HP เล็กน้อย",
+    "vi": "20% boost to Def and max HP, slightly restores HP each turn & damage taken may slightly restore HP"
+  },
+  "MST_LEADERSKILLS_4349_NAME": {
+    "en": "Purely Innocent Heart",
+    "es": "Purely Innocent Heart",
+    "id": "Hati Murni Lugu",
+    "pt": "Purely Innocent Heart",
+    "th": "เพียวลี่ อินโนเซ้นส์ ฮาร์ท",
+    "vi": "Purely Innocent Heart"
+  },
+  "MST_LEADERSKILLS_4350_DESCRIPTION": {
+    "en": "30% boost to Def and max HP, adds Light element to attack, restores HP each turn & damage taken may slightly restore HP",
+    "es": "30% boost to Def and max HP, adds Light element to attack, restores HP each turn & damage taken may slightly restore HP",
+    "id": "30% ekstra Tahan dan HP maks, beri elemen Terang ke serangan, HP pulih tiap giliran, kerusakan diderita dapat agak pulihkan HP",
+    "pt": "30% boost to Def and max HP, adds Light element to attack, restores HP each turn & damage taken may slightly restore HP",
+    "th": "30% เพิ่มค่าให้ ป้องกัน กับ HP สูงสุด, เพิ่มธาตุ แสง ให้กับการโจมตี, ฟื้นคืน HP แต่ละเทิร์น และ ความเสียหายที่ได้รับ อาจฟื้นคืน HP เล็กน้อย",
+    "vi": "30% boost to Def and max HP, adds Light element to attack, restores HP each turn & damage taken may slightly restore HP"
+  },
+  "MST_LEADERSKILLS_4350_NAME": {
+    "en": "Unwavering Friendship",
+    "es": "Unwavering Friendship",
+    "id": "Persahabatan Tetap",
+    "pt": "Unwavering Friendship",
+    "th": "อันเวฟวิ่ง เฟรนด์ชิพ",
+    "vi": "Unwavering Friendship"
+  },
+  "MST_LEADERSKILLS_4351_DESCRIPTION": {
+    "en": "30% boost to Def, max HP, negates all status ailments & restores HP each turn",
+    "es": "30% boost to Def, max HP, negates all status ailments & restores HP each turn",
+    "id": "30% ekstra Tahan, HP maks, menegasi semua status penyakit, HP pulih tiap giliran",
+    "pt": "30% boost to Def, max HP, negates all status ailments & restores HP each turn",
+    "th": "30% เพิ่มค่า ป้องกัน, HP สูงสุด, ลบล้าง สถานะผิดปกติทั้งหมด และ ฟื้นคืน HP แต่ละเทิร์น",
+    "vi": "30% boost to Def, max HP, negates all status ailments & restores HP each turn"
+  },
+  "MST_LEADERSKILLS_4351_NAME": {
+    "en": "Iron Courage",
+    "es": "Iron Courage",
+    "id": "Keberanian Besi",
+    "pt": "Iron Courage",
+    "th": "ไออ้อน คอเรจ",
+    "vi": "Iron Courage"
+  },
+  "MST_LEADERSKILLS_4352_DESCRIPTION": {
+    "en": "50% boost to Def, max HP, negates all status ailments, restores HP each turn & slightly reduces damage taken for 1 turn when Sparks exceed certain amount",
+    "es": "50% boost to Def, max HP, negates all status ailments, restores HP each turn & slightly reduces damage taken for 1 turn when Sparks exceed certain amount",
+    "id": "50% ekstra Tahan, HP maks, menegasi semua status penyakit, HP pulih tiap giliran, agak kurangi kerusakan diderita 1 giliran saat Percikan melampaui jumlah tertentu",
+    "pt": "50% boost to Def, max HP, negates all status ailments, restores HP each turn & slightly reduces damage taken for 1 turn when Sparks exceed certain amount",
+    "th": "50% เพิ่มค่า ป้องกัน, HP สูงสุด, ลบล้าง สถานะผิดปกติทั้งหมด, ฟื้นคืน HP แต่ละเทิร์น และ ลดค่าความเสียหายที่ได้รับเล็กน้อย นาน 1 เทิร์น เมื่อสปาร์คเกินกว่าปริมาณที่กำหนด",
+    "vi": "50% boost to Def, max HP, negates all status ailments, restores HP each turn & slightly reduces damage taken for 1 turn when Sparks exceed certain amount"
+  },
+  "MST_LEADERSKILLS_4352_NAME": {
+    "en": "Iron Virtue",
+    "es": "Iron Virtue",
+    "id": "Nilai Besi",
+    "pt": "Iron Virtue",
+    "th": "ไออ้อน เวอทู",
+    "vi": "Iron Virtue"
+  },
+  "MST_LEADERSKILLS_4353_DESCRIPTION": {
+    "en": "30% boost to Def, max HP & damage taken boosts BB gauge and may restore HP",
+    "es": "30% boost to Def, max HP & damage taken boosts BB gauge and may restore HP",
+    "id": "30% ekstra Tahan, HP maks, kerusakan diderita menambah meteran BB dan dapat memulihkan HP",
+    "pt": "30% boost to Def, max HP & damage taken boosts BB gauge and may restore HP",
+    "th": "30% เพิ่มค่า ป้องกัน, HP สูงสุด และ ความเสียหายที่ได้รับเพิ่มค่า เกจ BB กับ อาจฟื้นคืน HP",
+    "vi": "30% boost to Def, max HP & damage taken boosts BB gauge and may restore HP"
+  },
+  "MST_LEADERSKILLS_4353_NAME": {
+    "en": "Divine Rule",
+    "es": "Divine Rule",
+    "id": "Aturan Ilahi",
+    "pt": "Divine Rule",
+    "th": "ดีไวน์ รูล",
+    "vi": "Divine Rule"
+  },
+  "MST_LEADERSKILLS_4354_DESCRIPTION": {
+    "en": "50% boost to Def, max HP, considerably boosts OD gauge fill rate, damage taken hugely boosts BB gauge and may restore HP",
+    "es": "50% boost to Def, max HP, considerably boosts OD gauge fill rate, damage taken hugely boosts BB gauge and may restore HP",
+    "id": "50% ekstra Tahan, HP maks, lumayan menambah laju pengisian meteran OD, kerusakan diderita amat menambah meteran BB dan dapat memulihkan HP",
+    "pt": "50% boost to Def, max HP, considerably boosts OD gauge fill rate, damage taken hugely boosts BB gauge and may restore HP",
+    "th": "50% เพิ่มค่า ป้องกัน, HP สูงสุด, เพิ่มอัตราเติมเกจ OD อย่างมาก, ความเสียหายที่ได้รับ เพิ่มค่าอย่างสูงให้ เกจ BB และ อาจฟื้นคืน HP",
+    "vi": "50% boost to Def, max HP, considerably boosts OD gauge fill rate, damage taken hugely boosts BB gauge and may restore HP"
+  },
+  "MST_LEADERSKILLS_4354_NAME": {
+    "en": "Divine Law",
+    "es": "Divine Law",
+    "id": "Hukum Ilahi",
+    "pt": "Divine Law",
+    "th": "ดีไวน์ ลอว",
+    "vi": "Divine Law"
+  },
+  "MST_LEADERSKILLS_4355_DESCRIPTION": {
+    "en": "80% boost to Def, 30% boost to max HP, boosts BB and SBB activation rates & damage taken boosts BB gauge",
+    "es": "80% boost to Def, 30% boost to max HP, boosts BB and SBB activation rates & damage taken boosts BB gauge",
+    "id": "80% ekstra Tahan, 30% ekstra HP maks, menambah laju aktivasi BB dan SBB, kerusakan diderita menambah meteran BB",
+    "pt": "80% boost to Def, 30% boost to max HP, boosts BB and SBB activation rates & damage taken boosts BB gauge",
+    "th": "80% เพิ่มค่า ป้องกัน, 30% เพิ่มค่า HP สูงสุด, เพิ่ม อัตราการใช้งาน BB กับ SBB และ ความเสียหายที่ได้รับเพิ่มค่า เกจ BB",
+    "vi": "80% boost to Def, 30% boost to max HP, boosts BB and SBB activation rates & damage taken boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_4355_NAME": {
+    "en": "Fighter's Fortune",
+    "es": "Fighter's Fortune",
+    "id": "Hoki Petarung",
+    "pt": "Fighter's Fortune",
+    "th": "ไฟท์เตอร์ ฟอร์จูน",
+    "vi": "Fighter's Fortune"
+  },
+  "MST_LEADERSKILLS_4356_DESCRIPTION": {
+    "en": "100% boost to Def, 50% boost to max HP, considerably boosts BB and SBB activation rates, damage taken hugely boosts BB gauge & considerably boosts ABP and CBP gain",
+    "es": "100% boost to Def, 50% boost to max HP, considerably boosts BB and SBB activation rates, damage taken hugely boosts BB gauge & considerably boosts ABP and CBP gain",
+    "id": "100% ekstra Tahan, 50% ekstra HP maks, lumayan menambah  laju aktivasi BB dan SBB, kerusakan amat diderita menambah meteran BB, lumayan menambah perolehan ABP dan CBP",
+    "pt": "100% boost to Def, 50% boost to max HP, considerably boosts BB and SBB activation rates, damage taken hugely boosts BB gauge & considerably boosts ABP and CBP gain",
+    "th": "100% เพิ่มค่า ป้องกัน, 50% เพิ่มค่า HP สูงสุด, เพิ่มค่าอย่างมากให้ อัตราการใช้งาน BB กับ SBB, ความเสียหายที่ได้รับ เพิ่มค่าอย่างสูงให้ เกจ BB และ เพิ่มค่าอย่างมากให้ ABP กับ CBP ที่ได้รับ",
+    "vi": "100% boost to Def, 50% boost to max HP, considerably boosts BB and SBB activation rates, damage taken hugely boosts BB gauge & considerably boosts ABP and CBP gain"
+  },
   "MST_LEADERSKILLS_4356_NAME": {
     "en": "Fighter's Vigor",
     "es": "Fighter's Vigor",
@@ -8816,12 +9120,12 @@
     "vi": "Scarlet Bloodletting"
   },
   "MST_LEADERSKILLS_801266_DESCRIPTION": {
-    "en": "50% boost to Atk, max HP, hugely boosts Spark damage for 2 turns when Sparks have exceeded certain amount, Spark damage boosts BB gauge & negates elemental damage",
-    "es": "50% boost to Atk, max HP, hugely boosts Spark damage for 2 turns when Sparks have exceeded certain amount, Spark damage boosts BB gauge & negates elemental damage",
-    "id": "50% ekstra Serang, HP maks, amat menambah kerusakan Percikan 2 giliran saat melebihi jumlah tertentu, kerusakan Percikan menambah meteran BB & menegasi kerusakan elemen",
-    "pt": "50% boost to Atk, max HP, hugely boosts Spark damage for 2 turns when Sparks have exceeded certain amount, Spark damage boosts BB gauge & negates elemental damage",
-    "th": "50% เพิ่มพลังโจมตีและ HP สูงสุด, เพิ่มความเสียหายสปาร์คอย่างมากมาย 2 เทิร์นเมื่อสปาร์คถึงตามกำหนด,  เพิ่มบีบีเกจจากความเสียหายสปาร์ค, กันความเสียหายธาตุ ",
-    "vi": "50% boost to Atk, max HP, hugely boosts Spark damage for 2 turns when Sparks have exceeded certain amount, Spark damage boosts BB gauge & negates elemental damage"
+    "en": "150% Atk, 80% max HP, 100% elemental damage reduction, spark damage fills BB gauge, 150% spark damage & 20% reduction to BB activation cost",
+    "es": "150% Atk, 80% max HP, 100% elemental damage reduction, spark damage fills BB gauge, 150% spark damage & 20% reduction to BB activation cost",
+    "id": "150% Atk, 80% max HP, 100% elemental damage reduction, spark damage fills BB gauge, 150% spark damage & 20% reduction to BB activation cost",
+    "pt": "150% Atk, 80% max HP, 100% elemental damage reduction, spark damage fills BB gauge, 150% spark damage & 20% reduction to BB activation cost",
+    "th": "150% Atk, 80% max HP, 100% elemental damage reduction, spark damage fills BB gauge, 150% spark damage & 20% reduction to BB activation cost",
+    "vi": "150% Atk, 80% max HP, 100% elemental damage reduction, spark damage fills BB gauge, 150% spark damage & 20% reduction to BB activation cost"
   },
   "MST_LEADERSKILLS_801266_NAME": {
     "en": "Bloodflame Baptism",
@@ -11311,6 +11615,22 @@
     "th": "Distracted Brilliance",
     "vi": "Distracted Brilliance"
   },
+  "MST_LEADERSKILLS_820798_DESCRIPTION": {
+    "en": "200% Atk, 140% Def, max HP and 30% critical rate (Water), 250% critical damage, 250% Water elemental damage, 30% reduction to BB activation cost & probable 1 KO resistance",
+    "es": "200% Atk, 140% Def, max HP and 30% critical rate (Water), 250% critical damage, 250% Water elemental damage, 30% reduction to BB activation cost & probable 1 KO resistance",
+    "id": "200% Atk, 140% Def, max HP and 30% critical rate (Water), 250% critical damage, 250% Water elemental damage, 30% reduction to BB activation cost & probable 1 KO resistance",
+    "pt": "200% Atk, 140% Def, max HP and 30% critical rate (Water), 250% critical damage, 250% Water elemental damage, 30% reduction to BB activation cost & probable 1 KO resistance",
+    "th": "200% Atk, 140% Def, max HP and 30% critical rate (Water), 250% critical damage, 250% Water elemental damage, 30% reduction to BB activation cost & probable 1 KO resistance",
+    "vi": "200% Atk, 140% Def, max HP and 30% critical rate (Water), 250% critical damage, 250% Water elemental damage, 30% reduction to BB activation cost & probable 1 KO resistance"
+  },
+  "MST_LEADERSKILLS_820798_NAME": {
+    "en": "Seal-Fiend's Song",
+    "es": "Seal-Fiend's Song",
+    "id": "Seal-Fiend's Song",
+    "pt": "Seal-Fiend's Song",
+    "th": "Seal-Fiend's Song",
+    "vi": "Seal-Fiend's Song"
+  },
   "MST_LEADERSKILLS_820808_DESCRIPTION": {
     "en": "120% all parameters, 250% Water elemental damage, fills BB gauge each turn, spark damage fills BB gauge & 100% critical, elemental damage reduction",
     "es": "120% all parameters, 250% Water elemental damage, fills BB gauge each turn, spark damage fills BB gauge & 100% critical, elemental damage reduction",
@@ -12592,12 +12912,12 @@
     "vi": "Uncontrolled Rage"
   },
   "MST_LEADERSKILLS_840438_DESCRIPTION": {
-    "en": "125% boost to Atk, 50% boost to Def and 80% boost to max HP, negates elemental damage, negates Def ignoring effects, 130% boost to Spark damage & 8% damage reduction",
-    "es": "125% boost to Atk, 50% boost to Def and 80% boost to max HP, negates elemental damage, negates Def ignoring effects, 130% boost to Spark damage & 8% damage reduction",
-    "id": "125% boost to Atk, 50% boost to Def and 80% boost to max HP, negates elemental damage, negates Def ignoring effects, 130% boost to Spark damage & 8% damage reduction",
-    "pt": "125% boost to Atk, 50% boost to Def and 80% boost to max HP, negates elemental damage, negates Def ignoring effects, 130% boost to Spark damage & 8% damage reduction",
-    "th": "125% boost to Atk, 50% boost to Def and 80% boost to max HP, negates elemental damage, negates Def ignoring effects, 130% boost to Spark damage & 8% damage reduction",
-    "vi": "125% boost to Atk, 50% boost to Def and 80% boost to max HP, negates elemental damage, negates Def ignoring effects, 130% boost to Spark damage & 8% damage reduction"
+    "en": "125% Atk, 50% Def, 100% max HP, 100% elemental damage reduction, negates ignore Def, 150% spark damage & 8% damage reduction",
+    "es": "125% Atk, 50% Def, 100% max HP, 100% elemental damage reduction, negates ignore Def, 150% spark damage & 8% damage reduction",
+    "id": "125% Atk, 50% Def, 100% max HP, 100% elemental damage reduction, negates ignore Def, 150% spark damage & 8% damage reduction",
+    "pt": "125% Atk, 50% Def, 100% max HP, 100% elemental damage reduction, negates ignore Def, 150% spark damage & 8% damage reduction",
+    "th": "125% Atk, 50% Def, 100% max HP, 100% elemental damage reduction, negates ignore Def, 150% spark damage & 8% damage reduction",
+    "vi": "125% Atk, 50% Def, 100% max HP, 100% elemental damage reduction, negates ignore Def, 150% spark damage & 8% damage reduction"
   },
   "MST_LEADERSKILLS_840438_NAME": {
     "en": "Berserker's Red Calm",
@@ -91030,245 +91350,5 @@
     "pt": "Will Paladino",
     "th": "โฮลี่ไนท์วิล",
     "vi": "Hiệp sĩ mộ đạo Will"
-  },
-  "MST_MONSTERS_512_NAME": {
-    "en": "Wildcat Lindsey",
-    "es": "Wildcat Lindsey",
-    "id": "Wildcat Lindsey",
-    "pt": "Wildcat Lindsey",
-    "th": "Wildcat Lindsey",
-    "vi": "Wildcat Lindsey"
-  },
-  "MST_MONSTERS_51300_NAME": {
-    "en": "God Knight Will",
-    "es": "Gran paladín Will",
-    "id": "Dewa Ksatria Will",
-    "pt": "Deus da Luz Will",
-    "th": "ก๊อดไนท์วิล",
-    "vi": "Hiệp sĩ thánh Will"
-  },
-  "MST_MONSTERS_51301_NAME": {
-    "en": "God Knight Will",
-    "es": "Gran paladín Will",
-    "id": "Dewa Ksatria Will",
-    "pt": "Deus da Luz Will",
-    "th": "ก๊อดไนท์วิล",
-    "vi": "Hiệp sĩ thánh Will"
-  },
-  "MST_MONSTERS_51302_NAME": {
-    "en": "God Knight Will",
-    "es": "Gran paladín Will",
-    "id": "Dewa Ksatria Will",
-    "pt": "Deus da Luz Will",
-    "th": "ก๊อดไนท์วิล",
-    "vi": "Hiệp sĩ thánh Will"
-  },
-  "MST_MONSTERS_51303_NAME": {
-    "en": "God Knight Will",
-    "es": "Gran paladín Will",
-    "id": "Dewa Ksatria Will",
-    "pt": "Deus da Luz Will",
-    "th": "ก๊อดไนท์วิล",
-    "vi": "Hiệp sĩ thánh Will"
-  },
-  "MST_MONSTERS_51304_NAME": {
-    "en": "God Knight Will",
-    "es": "Gran paladín Will",
-    "id": "Dewa Ksatria Will",
-    "pt": "Deus da Luz Will",
-    "th": "ก๊อดไนท์วิล",
-    "vi": "Hiệp sĩ thánh Will"
-  },
-  "MST_MONSTERS_51305_NAME": {
-    "en": "God Knight Will",
-    "es": "Gran paladín Will",
-    "id": "Dewa Ksatria Will",
-    "pt": "Deus da Luz Will",
-    "th": "ก๊อดไนท์วิล",
-    "vi": "Hiệp sĩ thánh Will"
-  },
-  "MST_MONSTERS_51306_NAME": {
-    "en": "God Knight Will",
-    "es": "Gran paladín Will",
-    "id": "Dewa Ksatria Will",
-    "pt": "Deus da Luz Will",
-    "th": "ก๊อดไนท์วิล",
-    "vi": "Hiệp sĩ thánh Will"
-  },
-  "MST_MONSTERS_51307_NAME": {
-    "en": "God Knight Will",
-    "es": "Gran paladín Will",
-    "id": "Dewa Ksatria Will",
-    "pt": "Deus da Luz Will",
-    "th": "ก๊อดไนท์วิล",
-    "vi": "Hiệp sĩ thánh Will"
-  },
-  "MST_MONSTERS_51310_NAME": {
-    "en": "God Knight Will",
-    "es": "Gran paladín Will",
-    "id": "Dewa Ksatria Will",
-    "pt": "Deus da Luz Will",
-    "th": "ก๊อดไนท์วิล",
-    "vi": "Hiệp sĩ thánh Will"
-  },
-  "MST_MONSTERS_51311_NAME": {
-    "en": "God Knight Will",
-    "es": "Gran paladín Will",
-    "id": "Dewa Ksatria Will",
-    "pt": "Deus da Luz Will",
-    "th": "ก๊อดไนท์วิล",
-    "vi": "Hiệp sĩ thánh Will"
-  },
-  "MST_MONSTERS_51312_NAME": {
-    "en": "God Knight Will",
-    "es": "Gran paladín Will",
-    "id": "Dewa Ksatria Will",
-    "pt": "Deus da Luz Will",
-    "th": "ก๊อดไนท์วิล",
-    "vi": "Hiệp sĩ thánh Will"
-  },
-  "MST_MONSTERS_51313_NAME": {
-    "en": "God Knight Will",
-    "es": "Gran paladín Will",
-    "id": "Dewa Ksatria Will",
-    "pt": "Deus da Luz Will",
-    "th": "ก๊อดไนท์วิล",
-    "vi": "Hiệp sĩ thánh Will"
-  },
-  "MST_MONSTERS_51314_NAME": {
-    "en": "God Knight Will",
-    "es": "Gran paladín Will",
-    "id": "Dewa Ksatria Will",
-    "pt": "Deus da Luz Will",
-    "th": "ก๊อดไนท์วิล",
-    "vi": "Hiệp sĩ thánh Will"
-  },
-  "MST_MONSTERS_51315_NAME": {
-    "en": "God Knight Will",
-    "es": "Gran paladín Will",
-    "id": "Dewa Ksatria Will",
-    "pt": "Deus da Luz Will",
-    "th": "ก๊อดไนท์วิล",
-    "vi": "Hiệp sĩ thánh Will"
-  },
-  "MST_MONSTERS_51316_NAME": {
-    "en": "God Knight Will",
-    "es": "Gran paladín Will",
-    "id": "Dewa Ksatria Will",
-    "pt": "Deus da Luz Will",
-    "th": "ก๊อดไนท์วิล",
-    "vi": "Hiệp sĩ thánh Will"
-  },
-  "MST_MONSTERS_51317_NAME": {
-    "en": "God Knight Will",
-    "es": "Gran paladín Will",
-    "id": "Dewa Ksatria Will",
-    "pt": "Deus da Luz Will",
-    "th": "ก๊อดไนท์วิล",
-    "vi": "Hiệp sĩ thánh Will"
-  },
-  "MST_MONSTERS_51318_NAME": {
-    "en": "God Knight Will",
-    "es": "Gran paladín Will",
-    "id": "Dewa Ksatria Will",
-    "pt": "Deus da Luz Will",
-    "th": "ก๊อดไนท์วิล",
-    "vi": "Hiệp sĩ thánh Will"
-  },
-  "MST_MONSTERS_51319_NAME": {
-    "en": "God Knight Will",
-    "es": "Gran paladín Will",
-    "id": "Dewa Ksatria Will",
-    "pt": "Deus da Luz Will",
-    "th": "ก๊อดไนท์วิล",
-    "vi": "Hiệp sĩ thánh Will"
-  },
-  "MST_MONSTERS_51320_NAME": {
-    "en": "God Knight Will",
-    "es": "Gran paladín Will",
-    "id": "Ksatria Dewa Will",
-    "pt": "Deus Paladino Will",
-    "th": "ก็อดไนท์วิล",
-    "vi": "God Knight Will"
-  },
-  "MST_MONSTERS_51321_NAME": {
-    "en": "God Knight Will",
-    "es": "Gran paladín Will",
-    "id": "Ksatria Dewa Will",
-    "pt": "Deus Paladino Will",
-    "th": "ก็อด ไนท์ วิล",
-    "vi": "Hiệp Sĩ Thánh Will"
-  },
-  "MST_MONSTERS_51322_NAME": {
-    "en": "God Knight Will",
-    "es": "Gran paladín Will",
-    "id": "Ksatria Dewa Will",
-    "pt": "Deus Paladino Will",
-    "th": "ก็อด ไนท์ วิล",
-    "vi": "Hiệp Sĩ Thánh Will"
-  },
-  "MST_MONSTERS_51323_NAME": {
-    "en": "God Knight Will",
-    "es": "Gran paladín Will",
-    "id": "Ksatria Dewa Will",
-    "pt": "Deus Paladino Will",
-    "th": "ก็อด ไนท์ วิล",
-    "vi": "God Knight Will"
-  },
-  "MST_MONSTERS_51324_NAME": {
-    "en": "Dark Will",
-    "es": "Voluntad oscura",
-    "id": "Will Gelap",
-    "pt": "Will Sombrio",
-    "th": "ดาร์ค วิล",
-    "vi": "Dark Will"
-  },
-  "MST_MONSTERS_51325_NAME": {
-    "en": "God Knight Will",
-    "es": "Gran paladín Will",
-    "id": "Dewa Ksatria Will",
-    "pt": "Deus Paladino Will",
-    "th": "ก๊อดไนท์วิล",
-    "vi": "God Knight Will"
-  },
-  "MST_MONSTERS_51326_NAME": {
-    "en": "God Knight Will",
-    "es": "God Knight Will",
-    "id": "Sylvan Excalibur Quaid",
-    "pt": "God Knight Will",
-    "th": "ก็อด ไนท์ วิล",
-    "vi": "God Knight Will"
-  },
-  "MST_MONSTERS_51350_NAME": {
-    "en": "Light Nymph",
-    "es": "Ninfa de luz",
-    "id": "Nymph Terang",
-    "pt": "Ninfa da Luz",
-    "th": "นิมป์แสง",
-    "vi": "Quang thần nữ"
-  },
-  "MST_MONSTERS_51351_NAME": {
-    "en": "Light Nymph",
-    "es": "Ninfa de luz",
-    "id": "Nymph Terang",
-    "pt": "Ninfa da Luz",
-    "th": "นิมป์แสง",
-    "vi": "Quang thần nữ"
-  },
-  "MST_MONSTERS_51352_NAME": {
-    "en": "Light Nymph Lv 99",
-    "es": "Ninfa de luz Lv 99",
-    "id": "Nymph Terang Lv 99",
-    "pt": "Ninfa da Luz Lv 99",
-    "th": "นิมป์แสง Lv 99",
-    "vi": "Quang thần nữ cấp 99"
-  },
-  "MST_MONSTERS_513_NAME": {
-    "en": "Symphonia",
-    "es": "Symphonia",
-    "id": "Symphonia",
-    "pt": "Symphonia",
-    "th": "Symphonia",
-    "vi": "Symphonia"
   }
 }
