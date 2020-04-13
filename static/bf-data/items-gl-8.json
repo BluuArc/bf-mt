@@ -26381,7 +26381,10 @@
     "sphere type text": "Special",
     "thumbnail": "sphere_thum_819298.png",
     "type": "sphere",
-    "usage": []
+    "usage": [],
+    "associated_units": [
+      "820798"
+    ]
   },
   "819299": {
     "desc": "100% boost to Spark damage, activates Thunder barrier when damage taken exceeds certain amount, Spark damage slightly boosts BB gauge, 100% Spark damage reduction & adds max HP boost effect to self to BB/SBB",
