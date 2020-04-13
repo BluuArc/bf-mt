@@ -36991,7 +36991,10 @@
       }
     ],
     "id": "820798",
-    "name": "Seal-Fiend's Song"
+    "name": "Seal-Fiend's Song",
+    "associated_units": [
+      "820798"
+    ]
   },
   "820808": {
     "desc": "120% all parameters, 250% Water elemental damage, fills BB gauge each turn, spark damage fills BB gauge & 100% critical, elemental damage reduction",
