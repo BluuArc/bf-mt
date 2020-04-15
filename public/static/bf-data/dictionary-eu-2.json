@@ -1,4 +1,76 @@
 {
+  "MST_LEADERSKILLS_4331_DESCRIPTION": {
+    "en": "40% boost to Def, max HP, damage taken considerably boosts BB gauge & slightly absorbs HP",
+    "es": "40% boost to Def, max HP, damage taken considerably boosts BB gauge & slightly absorbs HP",
+    "id": "40% ekstra Tahan, HP maks, kerusakan diderita lumayan menambah meteran BB & agak menyerap HP",
+    "pt": "40% boost to Def, max HP, damage taken considerably boosts BB gauge & slightly absorbs HP",
+    "th": "40% เพิ่มค่า ป้องกัน, HP สูงสุด, ความเสียหายที่ได้รับ เพิ่มค่า เกจ BB อย่างมาก และ ดูดซับ HP เล็กน้อย",
+    "vi": "40% boost to Def, max HP, damage taken considerably boosts BB gauge & slightly absorbs HP"
+  },
+  "MST_LEADERSKILLS_4331_NAME": {
+    "en": "Miraculous Sanctuary",
+    "es": "Miraculous Sanctuary",
+    "id": "Suaka Mukjizat",
+    "pt": "Miraculous Sanctuary",
+    "th": "มิราคูรัส แซงชัวรี่",
+    "vi": "Miraculous Sanctuary"
+  },
+  "MST_LEADERSKILLS_4332_DESCRIPTION": {
+    "en": "30% boost to Def, max HP & boosts Spark damage when BC collected exceeded a certain amount for 2 turns",
+    "es": "30% boost to Def, max HP & boosts Spark damage when BC collected exceeded a certain amount for 2 turns",
+    "id": "30% ekstra Tahan, HP maks & menambah kerusakan Percikan saat perolehan BC melampaui jumlah tertentu untuk 2 giliran",
+    "pt": "30% boost to Def, max HP & boosts Spark damage when BC collected exceeded a certain amount for 2 turns",
+    "th": "30% เพิ่มค่า ป้องกัน, HP สูงสุด และ เพิ่มค่า ความเสียหายสปาร์ค เมื่อ สะสม BC เกินกว่าปริมาณหนึ่ง นาน 2 เทิร์น",
+    "vi": "30% boost to Def, max HP & boosts Spark damage when BC collected exceeded a certain amount for 2 turns"
+  },
+  "MST_LEADERSKILLS_4332_NAME": {
+    "en": "Heavenly Sanctuary",
+    "es": "Heavenly Sanctuary",
+    "id": "Suaka Surgawi",
+    "pt": "Heavenly Sanctuary",
+    "th": "เฮฟเว่นลี่ แซงชัวรี่",
+    "vi": "Heavenly Sanctuary"
+  },
+  "MST_LEADERSKILLS_4333_DESCRIPTION": {
+    "en": "40% boost to Def, max HP, enormously boosts Spark damage when BC collected has exceeded certain amount for 2 turns & considerably boosts BB Atk when HC collected has exceeded certain amount for 2 turns",
+    "es": "40% boost to Def, max HP, enormously boosts Spark damage when BC collected has exceeded certain amount for 2 turns & considerably boosts BB Atk when HC collected has exceeded certain amount for 2 turns",
+    "id": "40% ekstra Tahan, HP maks, ekstra jumbo kerusakan Percikan saat perolehan BC melampaui jumlah tertentu 2 giliran, lumayan menambah BB Serang saat perolehan HP melampaui jumlah tertentu 2 giliran",
+    "pt": "40% boost to Def, max HP, enormously boosts Spark damage when BC collected has exceeded certain amount for 2 turns & considerably boosts BB Atk when HC collected has exceeded certain amount for 2 turns",
+    "th": "40% เพิ่มค่า ป้องกัน, HP สูงสุด, เพิ่มค่า ความเสียหายสปาร์คมหาศาล เมื่อ สะสม BC เกินกว่าปริมาณหนึ่ง นาน 2 เทิร์น และ เพิ่มค่า โจมตี BB อย่างมาก เมื่อ สะสม HC เกินกว่าปริมาณหนึ่ง นาน 2 เทิร์น",
+    "vi": "40% boost to Def, max HP, enormously boosts Spark damage when BC collected has exceeded certain amount for 2 turns & considerably boosts BB Atk when HC collected has exceeded certain amount for 2 turns"
+  },
+  "MST_LEADERSKILLS_4333_NAME": {
+    "en": "Sage's Seal",
+    "es": "Sage's Seal",
+    "id": "Segel Si Bijak",
+    "pt": "Sage's Seal",
+    "th": "เซจ ซีล",
+    "vi": "Sage's Seal"
+  },
+  "MST_LEADERSKILLS_4334_DESCRIPTION": {
+    "en": "30% boost to Def, max HP, probable slight HP recovery when attacked & boosts BC drop rate",
+    "es": "30% boost to Def, max HP, probable slight HP recovery when attacked & boosts BC drop rate",
+    "id": "30% ekstra Tahan, HP maks, kans HP agak pulih saat diserang & ekstra perolehan BC",
+    "pt": "30% boost to Def, max HP, probable slight HP recovery when attacked & boosts BC drop rate",
+    "th": "30% เพิ่มค่าให้ ป้องกัน, HP สูงสุด, มีโอกาส ฟื้นฟู HP เล็กน้อย เมื่อถูกโจมตี กับ เพิ่ม อัตราดรอป BC",
+    "vi": "30% boost to Def, max HP, probable slight HP recovery when attacked & boosts BC drop rate"
+  },
+  "MST_LEADERSKILLS_4334_NAME": {
+    "en": "Silent God's Sanctuary",
+    "es": "Silent God's Sanctuary",
+    "id": "Suaka Dewa Diam",
+    "pt": "Silent God's Sanctuary",
+    "th": "ไซเลนท์ ก็อด แซงชัวรี่",
+    "vi": "Silent God's Sanctuary"
+  },
+  "MST_LEADERSKILLS_4335_DESCRIPTION": {
+    "en": "40% boost to Def, max HP, damage taken may slightly restore HP, hugely boosts BC drop rate & probable resistance against 1 KO attack",
+    "es": "40% boost to Def, max HP, damage taken may slightly restore HP, hugely boosts BC drop rate & probable resistance against 1 KO attack",
+    "id": "40% ekstra Tahan, HP maks, kerusakan diderita agak pulihkan HP, ekstra besar perolehan BC, kans tahan melawan 1 serangan KO",
+    "pt": "40% boost to Def, max HP, damage taken may slightly restore HP, hugely boosts BC drop rate & probable resistance against 1 KO attack",
+    "th": "40% เพิ่มค่าให้ ป้องกัน, HP สูงสุด, ความเสียหายที่ได้รับ อาจฟื้นคืน HP เล็กน้อย, เพิ่ม อัตราดรอป BC อย่างสูง กับ มีโอกาส ต้านทานต่อ 1 การโจมตีน็อคเอาท์",
+    "vi": "40% boost to Def, max HP, damage taken may slightly restore HP, hugely boosts BC drop rate & probable resistance against 1 KO attack"
+  },
   "MST_LEADERSKILLS_4335_NAME": {
     "en": "Silent God's Poetry",
     "es": "Silent God's Poetry",
@@ -11727,6 +11799,38 @@
     "th": "Fortune Favors the Bold",
     "vi": "Fortune Favors the Bold"
   },
+  "MST_LEADERSKILLS_820867_DESCRIPTION": {
+    "en": "100% Atk, 120% Def, 100% Rec, 120% max HP, 150% spark damage, 20% OD gauge fill rate & spark damage fills BB gauge",
+    "es": "100% Atk, 120% Def, 100% Rec, 120% max HP, 150% spark damage, 20% OD gauge fill rate & spark damage fills BB gauge",
+    "id": "100% Atk, 120% Def, 100% Rec, 120% max HP, 150% spark damage, 20% OD gauge fill rate & spark damage fills BB gauge",
+    "pt": "100% Atk, 120% Def, 100% Rec, 120% max HP, 150% spark damage, 20% OD gauge fill rate & spark damage fills BB gauge",
+    "th": "100% Atk, 120% Def, 100% Rec, 120% max HP, 150% spark damage, 20% OD gauge fill rate & spark damage fills BB gauge",
+    "vi": "100% Atk, 120% Def, 100% Rec, 120% max HP, 150% spark damage, 20% OD gauge fill rate & spark damage fills BB gauge"
+  },
+  "MST_LEADERSKILLS_820867_NAME": {
+    "en": "Bernardelli Insurance Agents",
+    "es": "Bernardelli Insurance Agents",
+    "id": "Bernardelli Insurance Agents",
+    "pt": "Bernardelli Insurance Agents",
+    "th": "Bernardelli Insurance Agents",
+    "vi": "Bernardelli Insurance Agents"
+  },
+  "MST_LEADERSKILLS_820868_DESCRIPTION": {
+    "en": "120% Atk, 150% Def, 120% Rec, 150% max HP, 250% spark damage, 20% damage reduction for 2 turns when damage taken is over 5k, 30% OD gauge fill rate & spark damage fills BB gauge",
+    "es": "120% Atk, 150% Def, 120% Rec, 150% max HP, 250% spark damage, 20% damage reduction for 2 turns when damage taken is over 5k, 30% OD gauge fill rate & spark damage fills BB gauge",
+    "id": "120% Atk, 150% Def, 120% Rec, 150% max HP, 250% spark damage, 20% damage reduction for 2 turns when damage taken is over 5k, 30% OD gauge fill rate & spark damage fills BB gauge",
+    "pt": "120% Atk, 150% Def, 120% Rec, 150% max HP, 250% spark damage, 20% damage reduction for 2 turns when damage taken is over 5k, 30% OD gauge fill rate & spark damage fills BB gauge",
+    "th": "120% Atk, 150% Def, 120% Rec, 150% max HP, 250% spark damage, 20% damage reduction for 2 turns when damage taken is over 5k, 30% OD gauge fill rate & spark damage fills BB gauge",
+    "vi": "120% Atk, 150% Def, 120% Rec, 150% max HP, 250% spark damage, 20% damage reduction for 2 turns when damage taken is over 5k, 30% OD gauge fill rate & spark damage fills BB gauge"
+  },
+  "MST_LEADERSKILLS_820868_NAME": {
+    "en": "Friends of a Typhoon",
+    "es": "Friends of a Typhoon",
+    "id": "Friends of a Typhoon",
+    "pt": "Friends of a Typhoon",
+    "th": "Friends of a Typhoon",
+    "vi": "Friends of a Typhoon"
+  },
   "MST_LEADERSKILLS_820900_DESCRIPTION": {
     "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Water elemental damage, 15% damage reduction from Fire types & negates all status ailments",
     "es": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Water elemental damage, 15% damage reduction from Fire types & negates all status ailments",
@@ -13422,6 +13526,38 @@
     "pt": "The Temptress",
     "th": "The Temptress",
     "vi": "The Temptress"
+  },
+  "MST_LEADERSKILLS_840867_DESCRIPTION": {
+    "en": "150% Atk, 100% max HP, 30% critical rate, 200% Earth, Thunder elemental damage, damage taken fills BB gauge & probable spark critical",
+    "es": "150% Atk, 100% max HP, 30% critical rate, 200% Earth, Thunder elemental damage, damage taken fills BB gauge & probable spark critical",
+    "id": "150% Atk, 100% max HP, 30% critical rate, 200% Earth, Thunder elemental damage, damage taken fills BB gauge & probable spark critical",
+    "pt": "150% Atk, 100% max HP, 30% critical rate, 200% Earth, Thunder elemental damage, damage taken fills BB gauge & probable spark critical",
+    "th": "150% Atk, 100% max HP, 30% critical rate, 200% Earth, Thunder elemental damage, damage taken fills BB gauge & probable spark critical",
+    "vi": "150% Atk, 100% max HP, 30% critical rate, 200% Earth, Thunder elemental damage, damage taken fills BB gauge & probable spark critical"
+  },
+  "MST_LEADERSKILLS_840867_NAME": {
+    "en": "Wanted Hero",
+    "es": "Wanted Hero",
+    "id": "Wanted Hero",
+    "pt": "Wanted Hero",
+    "th": "Wanted Hero",
+    "vi": "Wanted Hero"
+  },
+  "MST_LEADERSKILLS_840868_DESCRIPTION": {
+    "en": "200% Atk, 150% max HP, 30% critical rate, 300% Earth, Thunder elemental damage, damage taken fills BB gauge, probable spark critical & 100% critical and elemental damage reduction",
+    "es": "200% Atk, 150% max HP, 30% critical rate, 300% Earth, Thunder elemental damage, damage taken fills BB gauge, probable spark critical & 100% critical and elemental damage reduction",
+    "id": "200% Atk, 150% max HP, 30% critical rate, 300% Earth, Thunder elemental damage, damage taken fills BB gauge, probable spark critical & 100% critical and elemental damage reduction",
+    "pt": "200% Atk, 150% max HP, 30% critical rate, 300% Earth, Thunder elemental damage, damage taken fills BB gauge, probable spark critical & 100% critical and elemental damage reduction",
+    "th": "200% Atk, 150% max HP, 30% critical rate, 300% Earth, Thunder elemental damage, damage taken fills BB gauge, probable spark critical & 100% critical and elemental damage reduction",
+    "vi": "200% Atk, 150% max HP, 30% critical rate, 300% Earth, Thunder elemental damage, damage taken fills BB gauge, probable spark critical & 100% critical and elemental damage reduction"
+  },
+  "MST_LEADERSKILLS_840868_NAME": {
+    "en": "Humanoid Typhoon",
+    "es": "Humanoid Typhoon",
+    "id": "Humanoid Typhoon",
+    "pt": "Humanoid Typhoon",
+    "th": "Humanoid Typhoon",
+    "vi": "Humanoid Typhoon"
   },
   "MST_LEADERSKILLS_840900_DESCRIPTION": {
     "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Thunder elemental damage, 15% damage reduction from Water types & negates all status ailments",
@@ -91310,45 +91446,5 @@
     "pt": "Will Cavaleiro",
     "th": "ไนท์วิล",
     "vi": "Hiệp sĩ Will"
-  },
-  "MST_MONSTERS_51202_NAME": {
-    "en": "Knight Will",
-    "es": "Caballero Will",
-    "id": "Ksatria Will",
-    "pt": "Will Cavaleiro",
-    "th": "ไนท์วิล",
-    "vi": "Hiệp sĩ Will"
-  },
-  "MST_MONSTERS_51250_NAME": {
-    "en": "Holy Knight Will",
-    "es": "Paladín Will",
-    "id": "Ksatria Suci Will",
-    "pt": "Will Paladino",
-    "th": "โฮลี่ไนท์วิล",
-    "vi": "Hiệp sĩ mộ đạo Will"
-  },
-  "MST_MONSTERS_51251_NAME": {
-    "en": "Holy Knight Will",
-    "es": "Paladín Will",
-    "id": "Ksatria Suci Will",
-    "pt": "Will Paladino",
-    "th": "โฮลี่ไนท์วิล",
-    "vi": "Hiệp sĩ mộ đạo Will"
-  },
-  "MST_MONSTERS_51252_NAME": {
-    "en": "Holy Knight Will",
-    "es": "Paladín Will",
-    "id": "Ksatria Suci Will",
-    "pt": "Will Paladino",
-    "th": "โฮลี่ไนท์วิล",
-    "vi": "Hiệp sĩ mộ đạo Will"
-  },
-  "MST_MONSTERS_51253_NAME": {
-    "en": "Holy Knight Will",
-    "es": "Paladín Will",
-    "id": "Ksatria Suci Will",
-    "pt": "Will Paladino",
-    "th": "โฮลี่ไนท์วิล",
-    "vi": "Hiệp sĩ mộ đạo Will"
   }
 }
