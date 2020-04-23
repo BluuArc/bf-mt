@@ -1,4 +1,172 @@
 {
+  "MST_LEADERSKILLS_4319_NAME": {
+    "en": "Glorious Sanctification",
+    "es": "Santificación gloriosa",
+    "id": "Pengudusan Mulia",
+    "pt": "Santificação Gloriosa",
+    "th": "กลอเรียส แซงทิฟิเคชั่น",
+    "vi": "Glorious Sanctification"
+  },
+  "MST_LEADERSKILLS_4320_DESCRIPTION": {
+    "en": "30% boost to max HP, Def & boosts BB gauge each turn",
+    "es": "30% boost to max HP, Def & boosts BB gauge each turn",
+    "id": "30% ekstra HP maks, Tahan & menambah meteran BB tiap giliran",
+    "pt": "30% boost to max HP, Def & boosts BB gauge each turn",
+    "th": "30% เพิ่ม HP สูงสุดและพลังป้องกัน, เพิ่มบีบีเกจในแต่ละเทิร์น",
+    "vi": "30% boost to max HP, Def & boosts BB gauge each turn"
+  },
+  "MST_LEADERSKILLS_4320_NAME": {
+    "en": "Sacred Dawn's Sanctuary",
+    "es": "Sacred Dawn's Sanctuary",
+    "id": "Suaka Fajar Suci",
+    "pt": "Sacred Dawn's Sanctuary",
+    "th": "ซาเคร็ด ดอว์น แซงทัวรี่",
+    "vi": "Sacred Dawn's Sanctuary"
+  },
+  "MST_LEADERSKILLS_4321_DESCRIPTION": {
+    "en": "40% boost to max HP, Def, boosts BB gauge each turn & boosts OD gauge fill rate",
+    "es": "40% boost to max HP, Def, boosts BB gauge each turn & boosts OD gauge fill rate",
+    "id": "40% ekstra HP maks, Tahan, menambah meteran BB tiap giliran & laju pengisian meteran OD",
+    "pt": "40% boost to max HP, Def, boosts BB gauge each turn & boosts OD gauge fill rate",
+    "th": "40% เพิ่ม HP สูงสุดและพลังป้องกัน, เพิ่มบีบีเกจในแต่ละเทิร์น, เพิ่มอัตราการเติมโอดีเกจ",
+    "vi": "40% boost to max HP, Def, boosts BB gauge each turn & boosts OD gauge fill rate"
+  },
+  "MST_LEADERSKILLS_4321_NAME": {
+    "en": "Sacred Dawn's Miracle",
+    "es": "Sacred Dawn's Miracle",
+    "id": "Mukjizat Fajar Suci",
+    "pt": "Sacred Dawn's Miracle",
+    "th": "ซาเคร็ด ดอว์น มิราเคิล",
+    "vi": "Sacred Dawn's Miracle"
+  },
+  "MST_LEADERSKILLS_4323_DESCRIPTION": {
+    "en": "40% boost to max HP, Def, damage taken greatly boosts BB gauge & reduces damage taken when damage taken has exceeded certain amount for 2 turns",
+    "es": "40% boost to max HP, Def, damage taken greatly boosts BB gauge & reduces damage taken when damage taken has exceeded certain amount for 2 turns",
+    "id": "40% ekstra HP maks, Tahan, kerusakan diderita amat menambah meteran BB & kurangi kerusakan saat melampaui batas selama 2 giliran",
+    "pt": "40% boost to max HP, Def, damage taken greatly boosts BB gauge & reduces damage taken when damage taken has exceeded certain amount for 2 turns",
+    "th": "40% เพิ่ม HP สูงสุด และพลังป้องกัน, เพิ่มบีบีเกจอย่างมากจากดาเมจที่ได้รับ, ลดดาเมจทีได้รับเมื่อดาเมจถึงจำนวนที่กำหนด 2 เทิร์น",
+    "vi": "40% boost to max HP, Def, damage taken greatly boosts BB gauge & reduces damage taken when damage taken has exceeded certain amount for 2 turns"
+  },
+  "MST_LEADERSKILLS_4323_NAME": {
+    "en": "Cursed Emperor's Land",
+    "es": "Cursed Emperor's Land",
+    "id": "Tanah Kaisar Terkutuk",
+    "pt": "Cursed Emperor's Land",
+    "th": "เคิร์ส เอ็มเพอเรอร์ แลนด์",
+    "vi": "Cursed Emperor's Land"
+  },
+  "MST_LEADERSKILLS_4324_DESCRIPTION": {
+    "en": "30% boost to Def, max HP & negates critical damage",
+    "es": "30% boost to Def, max HP & negates critical damage",
+    "id": "30% ekstra Tahan, HP maks & menegasi kerusakan ampuh",
+    "pt": "30% boost to Def, max HP & negates critical damage",
+    "th": "30% เพิ่มพลังป้องกันและ HP สูงสุด, กันคริติคอลดาเมจ",
+    "vi": "30% boost to Def, max HP & negates critical damage"
+  },
+  "MST_LEADERSKILLS_4324_NAME": {
+    "en": "Divine Magnetic Field",
+    "es": "Divine Magnetic Field",
+    "id": "Bidang Magnetik Ilahi",
+    "pt": "Divine Magnetic Field",
+    "th": "ดีไวน์ แมกเนติก ฟิลด์",
+    "vi": "Divine Magnetic Field"
+  },
+  "MST_LEADERSKILLS_4325_DESCRIPTION": {
+    "en": "30% boost to Def, max HP & negates critical, elemental damage",
+    "es": "30% boost to Def, max HP & negates critical, elemental damage",
+    "id": "30% ekstra Tahan, HP maks & menegasi kerusakan elemen dan ampuh ",
+    "pt": "30% boost to Def, max HP & negates critical, elemental damage",
+    "th": "30% เพิ่มพลังป้องกันและ HP สูงสุด, กันคริติคอลและดาเมจธาตุ",
+    "vi": "30% boost to Def, max HP & negates critical, elemental damage"
+  },
+  "MST_LEADERSKILLS_4325_NAME": {
+    "en": "Imperial Magnetic Field",
+    "es": "Imperial Magnetic Field",
+    "id": "Bidang Magnetik Kerajaan",
+    "pt": "Imperial Magnetic Field",
+    "th": "อิมพีเรียล แมกเนติก ฟิลด์",
+    "vi": "Imperial Magnetic Field"
+  },
+  "MST_LEADERSKILLS_4326_DESCRIPTION": {
+    "en": "30% boost to Def, max HP, slightly boosts Def, Rec when HP is low & negates all status ailments",
+    "es": "30% boost to Def, max HP, slightly boosts Def, Rec when HP is low & negates all status ailments",
+    "id": "30% ekstra Tahan, HP maks, agak menambah Tahan, Pulih saat HP rendah & menegasi semua status penyakit",
+    "pt": "30% boost to Def, max HP, slightly boosts Def, Rec when HP is low & negates all status ailments",
+    "th": "30% เพิ่มค่า ป้องกัน, HP สูงสุด, เพิ่มเล็กน้อยให้กับค่า ป้องกัน, ฟื้นฟู เมื่อ HP ต่ำ และ ต้านทานสถานะผิดปกติทั้งหมด",
+    "vi": "30% boost to Def, max HP, slightly boosts Def, Rec when HP is low & negates all status ailments"
+  },
+  "MST_LEADERSKILLS_4326_NAME": {
+    "en": "Emperor's Holy Ground",
+    "es": "Emperor's Holy Ground",
+    "id": "Tanah Suci Kaisar",
+    "pt": "Emperor's Holy Ground",
+    "th": "เอ็มเพอเรอร์ โฮลี่ กราวนด์",
+    "vi": "Emperor's Holy Ground"
+  },
+  "MST_LEADERSKILLS_4327_DESCRIPTION": {
+    "en": "50% boost to Def, max HP, boosts Def, Rec when HP is low & negates all status ailments and elemental damage",
+    "es": "50% boost to Def, max HP, boosts Def, Rec when HP is low & negates all status ailments and elemental damage",
+    "id": "50% ekstra Tahan, HP maks, agak menambah Tahan, Pulih saat HP rendah & menegasi semua status penyakit dan kerusakan elemen",
+    "pt": "50% boost to Def, max HP, boosts Def, Rec when HP is low & negates all status ailments and elemental damage",
+    "th": "50% เพิ่มค่า ป้องกัน, HP สูงสุด, เพิ่มค่า ป้องกัน, ฟื้นฟู เมื่อ HP ต่ำ และ ต้านทานสถานะผิดปกติทั้งหมด กับ ความเสียหายธาตุ",
+    "vi": "50% boost to Def, max HP, boosts Def, Rec when HP is low & negates all status ailments and elemental damage"
+  },
+  "MST_LEADERSKILLS_4327_NAME": {
+    "en": "Omni Emperor's Holy Ground",
+    "es": "Omni Emperor's Holy Ground",
+    "id": "Tanah Suci Kaisar Omni",
+    "pt": "Omni Emperor's Holy Ground",
+    "th": "อมนิ เอ็มเพอเรอร์ โฮลี่ กราวนด์",
+    "vi": "Omni Emperor's Holy Ground"
+  },
+  "MST_LEADERSKILLS_4328_DESCRIPTION": {
+    "en": "30% boost to Def, max HP & probable random status ailment infliction",
+    "es": "30% boost to Def, max HP & probable random status ailment infliction",
+    "id": "30% ekstra Tahan, HP maks & kans memberi status penyakit acak",
+    "pt": "30% boost to Def, max HP & probable random status ailment infliction",
+    "th": "30% เพิ่มค่า ป้องกัน, HP สูงสุด และ อาจจะ ทำให้ติดสถานะผิดปกติโดยสุ่ม",
+    "vi": "30% boost to Def, max HP & probable random status ailment infliction"
+  },
+  "MST_LEADERSKILLS_4328_NAME": {
+    "en": "Ephemeral Sanctuary",
+    "es": "Ephemeral Sanctuary",
+    "id": "Suaka Fana",
+    "pt": "Ephemeral Sanctuary",
+    "th": "อิเฟมเมอรัล แซงชัวรี่",
+    "vi": "Ephemeral Sanctuary"
+  },
+  "MST_LEADERSKILLS_4329_DESCRIPTION": {
+    "en": "40% boost to Def, max HP, slight damage reduction when damage taken has exceeded certain amount for 2 turns & probable random status ailment infliction",
+    "es": "40% boost to Def, max HP, slight damage reduction when damage taken has exceeded certain amount for 2 turns & probable random status ailment infliction",
+    "id": "40% ekstra Tahan, HP maks, agak mengurangi kerusakan saat melampaui jumlah tertentu - 2 giliran & kans status penyakit acak",
+    "pt": "40% boost to Def, max HP, slight damage reduction when damage taken has exceeded certain amount for 2 turns & probable random status ailment infliction",
+    "th": "40% เพิ่มค่า ป้องกัน, HP สูงสุด, ลดค่าความเสียหายเล้กน้อย เมื่อ ความเสียหายที่ได้รับเกินกว่าปริมาณหนึ่ง นาน 2 เทิร์น และ อาจจะ ทำให้ติดสถานะผิดปกติโดยสุ่ม",
+    "vi": "40% boost to Def, max HP, slight damage reduction when damage taken has exceeded certain amount for 2 turns & probable random status ailment infliction"
+  },
+  "MST_LEADERSKILLS_4329_NAME": {
+    "en": "Ephemeral Uncharted Region",
+    "es": "Ephemeral Uncharted Region",
+    "id": "Wilayah FanaTak Terpetakan ",
+    "pt": "Ephemeral Uncharted Region",
+    "th": "อิเฟมเมอรัล อันชาร์ทเตด รีเจี้ยน",
+    "vi": "Ephemeral Uncharted Region"
+  },
+  "MST_LEADERSKILLS_4330_DESCRIPTION": {
+    "en": "30% boost to Def, max HP & damage taken greatly boosts BB gauge",
+    "es": "30% boost to Def, max HP & damage taken greatly boosts BB gauge",
+    "id": "30% ekstra Tahan, HP maks & kerusakan diderita amat menambah meteran BB",
+    "pt": "30% boost to Def, max HP & damage taken greatly boosts BB gauge",
+    "th": "30% เพิ่มค่า ป้องกัน, HP สูงสุด และ ความเสียหายที่ได้รับ เพิ่มค่า เกจ BB อย่างสูง",
+    "vi": "30% boost to Def, max HP & damage taken greatly boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_4330_NAME": {
+    "en": "Divine Sanctuary",
+    "es": "Divine Sanctuary",
+    "id": "Suaka Ilahi",
+    "pt": "Divine Sanctuary",
+    "th": "ดิไวน์ แซงชัวรี่",
+    "vi": "Divine Sanctuary"
+  },
   "MST_LEADERSKILLS_4331_DESCRIPTION": {
     "en": "40% boost to Def, max HP, damage taken considerably boosts BB gauge & slightly absorbs HP",
     "es": "40% boost to Def, max HP, damage taken considerably boosts BB gauge & slightly absorbs HP",
@@ -12711,6 +12879,38 @@
     "th": "Majesty of War",
     "vi": "Majesty of War"
   },
+  "MST_LEADERSKILLS_830867_DESCRIPTION": {
+    "en": "120% Atk, Def, max HP, 30% critical rate, 200% Earth, Thunder elemental damage, 350% BB Atk & 10% damage reduction from Earth, Thunder, Light, Dark types",
+    "es": "120% Atk, Def, max HP, 30% critical rate, 200% Earth, Thunder elemental damage, 350% BB Atk & 10% damage reduction from Earth, Thunder, Light, Dark types",
+    "id": "120% Atk, Def, max HP, 30% critical rate, 200% Earth, Thunder elemental damage, 350% BB Atk & 10% damage reduction from Earth, Thunder, Light, Dark types",
+    "pt": "120% Atk, Def, max HP, 30% critical rate, 200% Earth, Thunder elemental damage, 350% BB Atk & 10% damage reduction from Earth, Thunder, Light, Dark types",
+    "th": "120% Atk, Def, max HP, 30% critical rate, 200% Earth, Thunder elemental damage, 350% BB Atk & 10% damage reduction from Earth, Thunder, Light, Dark types",
+    "vi": "120% Atk, Def, max HP, 30% critical rate, 200% Earth, Thunder elemental damage, 350% BB Atk & 10% damage reduction from Earth, Thunder, Light, Dark types"
+  },
+  "MST_LEADERSKILLS_830867_NAME": {
+    "en": "Wandering Priest",
+    "es": "Wandering Priest",
+    "id": "Wandering Priest",
+    "pt": "Wandering Priest",
+    "th": "Wandering Priest",
+    "vi": "Wandering Priest"
+  },
+  "MST_LEADERSKILLS_830868_DESCRIPTION": {
+    "en": "150% Atk, Def, max HP, 30% critical rate, 300% Earth, Thunder elemental damage, 400% BB Atk, 15% damage reduction from Earth, Thunder, Light, Dark types & probable 1 KO resistance",
+    "es": "150% Atk, Def, max HP, 30% critical rate, 300% Earth, Thunder elemental damage, 400% BB Atk, 15% damage reduction from Earth, Thunder, Light, Dark types & probable 1 KO resistance",
+    "id": "150% Atk, Def, max HP, 30% critical rate, 300% Earth, Thunder elemental damage, 400% BB Atk, 15% damage reduction from Earth, Thunder, Light, Dark types & probable 1 KO resistance",
+    "pt": "150% Atk, Def, max HP, 30% critical rate, 300% Earth, Thunder elemental damage, 400% BB Atk, 15% damage reduction from Earth, Thunder, Light, Dark types & probable 1 KO resistance",
+    "th": "150% Atk, Def, max HP, 30% critical rate, 300% Earth, Thunder elemental damage, 400% BB Atk, 15% damage reduction from Earth, Thunder, Light, Dark types & probable 1 KO resistance",
+    "vi": "150% Atk, Def, max HP, 30% critical rate, 300% Earth, Thunder elemental damage, 400% BB Atk, 15% damage reduction from Earth, Thunder, Light, Dark types & probable 1 KO resistance"
+  },
+  "MST_LEADERSKILLS_830868_NAME": {
+    "en": "Man With A Mission",
+    "es": "Man With A Mission",
+    "id": "Man With A Mission",
+    "pt": "Man With A Mission",
+    "th": "Man With A Mission",
+    "vi": "Man With A Mission"
+  },
   "MST_LEADERSKILLS_830900_DESCRIPTION": {
     "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Earth elemental damage, 15% damage reduction from Thunder types & negates all status ailments",
     "es": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Earth elemental damage, 15% damage reduction from Thunder types & negates all status ailments",
@@ -13558,6 +13758,22 @@
     "pt": "Humanoid Typhoon",
     "th": "Humanoid Typhoon",
     "vi": "Humanoid Typhoon"
+  },
+  "MST_LEADERSKILLS_840878_DESCRIPTION": {
+    "en": "150% Atk, 120% max HP, 30% critical rate, 200% spark damage when HP is above 50%, 200% all elemental damage, damage taken may restore HP & 100% critical and elemental damage reduction",
+    "es": "150% Atk, 120% max HP, 30% critical rate, 200% spark damage when HP is above 50%, 200% all elemental damage, damage taken may restore HP & 100% critical and elemental damage reduction",
+    "id": "150% Atk, 120% max HP, 30% critical rate, 200% spark damage when HP is above 50%, 200% all elemental damage, damage taken may restore HP & 100% critical and elemental damage reduction",
+    "pt": "150% Atk, 120% max HP, 30% critical rate, 200% spark damage when HP is above 50%, 200% all elemental damage, damage taken may restore HP & 100% critical and elemental damage reduction",
+    "th": "150% Atk, 120% max HP, 30% critical rate, 200% spark damage when HP is above 50%, 200% all elemental damage, damage taken may restore HP & 100% critical and elemental damage reduction",
+    "vi": "150% Atk, 120% max HP, 30% critical rate, 200% spark damage when HP is above 50%, 200% all elemental damage, damage taken may restore HP & 100% critical and elemental damage reduction"
+  },
+  "MST_LEADERSKILLS_840878_NAME": {
+    "en": "Merciless Killer",
+    "es": "Merciless Killer",
+    "id": "Merciless Killer",
+    "pt": "Merciless Killer",
+    "th": "Merciless Killer",
+    "vi": "Merciless Killer"
   },
   "MST_LEADERSKILLS_840900_DESCRIPTION": {
     "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Thunder elemental damage, 15% damage reduction from Water types & negates all status ailments",
@@ -15382,6 +15598,38 @@
     "pt": "Tsujigiri",
     "th": "Tsujigiri",
     "vi": "Tsujigiri"
+  },
+  "MST_LEADERSKILLS_860867_DESCRIPTION": {
+    "en": "120% Atk, 100% Def, 120% max HP and 30% critical rate (Dark), 250% critical damage, damage taken fills BB gauge & 15% damage reduction for 2 turns when damage taken is over 5k",
+    "es": "120% Atk, 100% Def, 120% max HP and 30% critical rate (Dark), 250% critical damage, damage taken fills BB gauge & 15% damage reduction for 2 turns when damage taken is over 5k",
+    "id": "120% Atk, 100% Def, 120% max HP and 30% critical rate (Dark), 250% critical damage, damage taken fills BB gauge & 15% damage reduction for 2 turns when damage taken is over 5k",
+    "pt": "120% Atk, 100% Def, 120% max HP and 30% critical rate (Dark), 250% critical damage, damage taken fills BB gauge & 15% damage reduction for 2 turns when damage taken is over 5k",
+    "th": "120% Atk, 100% Def, 120% max HP and 30% critical rate (Dark), 250% critical damage, damage taken fills BB gauge & 15% damage reduction for 2 turns when damage taken is over 5k",
+    "vi": "120% Atk, 100% Def, 120% max HP and 30% critical rate (Dark), 250% critical damage, damage taken fills BB gauge & 15% damage reduction for 2 turns when damage taken is over 5k"
+  },
+  "MST_LEADERSKILLS_860867_NAME": {
+    "en": "Master of Puppets",
+    "es": "Master of Puppets",
+    "id": "Master of Puppets",
+    "pt": "Master of Puppets",
+    "th": "Master of Puppets",
+    "vi": "Master of Puppets"
+  },
+  "MST_LEADERSKILLS_860868_DESCRIPTION": {
+    "en": "150% Atk, 120% Def, 150% max HP and 30% critical rate (Dark), 300% critical damage, damage taken fills BB gauge, 15% damage reduction & 20% damage reduction for 2 turns when damage taken is over 5k",
+    "es": "150% Atk, 120% Def, 150% max HP and 30% critical rate (Dark), 300% critical damage, damage taken fills BB gauge, 15% damage reduction & 20% damage reduction for 2 turns when damage taken is over 5k",
+    "id": "150% Atk, 120% Def, 150% max HP and 30% critical rate (Dark), 300% critical damage, damage taken fills BB gauge, 15% damage reduction & 20% damage reduction for 2 turns when damage taken is over 5k",
+    "pt": "150% Atk, 120% Def, 150% max HP and 30% critical rate (Dark), 300% critical damage, damage taken fills BB gauge, 15% damage reduction & 20% damage reduction for 2 turns when damage taken is over 5k",
+    "th": "150% Atk, 120% Def, 150% max HP and 30% critical rate (Dark), 300% critical damage, damage taken fills BB gauge, 15% damage reduction & 20% damage reduction for 2 turns when damage taken is over 5k",
+    "vi": "150% Atk, 120% Def, 150% max HP and 30% critical rate (Dark), 300% critical damage, damage taken fills BB gauge, 15% damage reduction & 20% damage reduction for 2 turns when damage taken is over 5k"
+  },
+  "MST_LEADERSKILLS_860868_NAME": {
+    "en": "Gung-Ho-Guns' Lord",
+    "es": "Gung-Ho-Guns' Lord",
+    "id": "Gung-Ho-Guns' Lord",
+    "pt": "Gung-Ho-Guns' Lord",
+    "th": "Gung-Ho-Guns' Lord",
+    "vi": "Gung-Ho-Guns' Lord"
   },
   "MST_LEADERSKILLS_860900_DESCRIPTION": {
     "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Dark elemental damage, 15% damage reduction from Light types & negates all status ailments",
@@ -91302,149 +91550,5 @@
     "pt": "Rameldria",
     "th": "ราเมลเดรีย",
     "vi": "Rameldria"
-  },
-  "MST_MONSTERS_51156_NAME": {
-    "en": "Rameldria",
-    "es": "Rameldria",
-    "id": "Rameldria",
-    "pt": "Rameldria",
-    "th": "ราเมลเดรีย",
-    "vi": "Rameldria"
-  },
-  "MST_MONSTERS_51157_NAME": {
-    "en": "Rameldria",
-    "es": "Rameldria",
-    "id": "Rameldria",
-    "pt": "Rameldria",
-    "th": "ราเมลเดรีย",
-    "vi": "Rameldria"
-  },
-  "MST_MONSTERS_51158_NAME": {
-    "en": "Rameldria",
-    "es": "Rameldria",
-    "id": "Rameldria",
-    "pt": "Rameldria",
-    "th": "ราเมลเดรีย",
-    "vi": "Rameldria"
-  },
-  "MST_MONSTERS_51159_NAME": {
-    "en": "Rameldria",
-    "es": "Rameldria",
-    "id": "Rameldria",
-    "pt": "Rameldria",
-    "th": "ราเมลเดรีย",
-    "vi": "Rameldria"
-  },
-  "MST_MONSTERS_51160_NAME": {
-    "en": "Rameldria",
-    "es": "Rameldria",
-    "id": "Rameldria",
-    "pt": "Rameldria",
-    "th": "ราเมลเดรีย",
-    "vi": "Rameldria"
-  },
-  "MST_MONSTERS_51161_NAME": {
-    "en": "Rameldria",
-    "es": "Rameldria",
-    "id": "Rameldria",
-    "pt": "Rameldria",
-    "th": "ราเมลเดรีย",
-    "vi": "Rameldria"
-  },
-  "MST_MONSTERS_51162_NAME": {
-    "en": "Rameldria",
-    "es": "Rameldria",
-    "id": "Rameldria",
-    "pt": "Rameldria",
-    "th": "ราเมลเดรีย",
-    "vi": "Rameldria"
-  },
-  "MST_MONSTERS_51163_NAME": {
-    "en": "Rameldria",
-    "es": "Rameldria",
-    "id": "Rameldria",
-    "pt": "Rameldria",
-    "th": "ราเมลเดรีย",
-    "vi": "Rameldria"
-  },
-  "MST_MONSTERS_51164_NAME": {
-    "en": "Rameldria",
-    "es": "Rameldria",
-    "id": "Rameldria",
-    "pt": "Rameldria",
-    "th": "ราเมลเดรีย",
-    "vi": "Rameldria"
-  },
-  "MST_MONSTERS_51165_NAME": {
-    "en": "Rameldria",
-    "es": "Rameldria",
-    "id": "Rameldria",
-    "pt": "Rameldria",
-    "th": "ราเมลเดรีย",
-    "vi": "Rameldria"
-  },
-  "MST_MONSTERS_51166_NAME": {
-    "en": "Rameldria",
-    "es": "Rameldria",
-    "id": "Rameldria",
-    "pt": "Rameldria",
-    "th": "ราเมลเดรีย",
-    "vi": "Rameldria"
-  },
-  "MST_MONSTERS_51167_NAME": {
-    "en": "Rameldria",
-    "es": "Rameldria",
-    "id": "Rameldria",
-    "pt": "Rameldria",
-    "th": "ราเมลเดรีย",
-    "vi": "Rameldria"
-  },
-  "MST_MONSTERS_51168_NAME": {
-    "en": "Rameldria",
-    "es": "Rameldria",
-    "id": "Rameldria",
-    "pt": "Rameldria",
-    "th": "ราเมลเดรีย",
-    "vi": "Rameldria"
-  },
-  "MST_MONSTERS_51169_NAME": {
-    "en": "Rameldria",
-    "es": "Rameldria",
-    "id": "Dewa Gempa Lugina",
-    "pt": "Rameldria",
-    "th": "ราเมลเดรีย",
-    "vi": "Rameldria"
-  },
-  "MST_MONSTERS_51170_NAME": {
-    "en": "Rameldria",
-    "es": "Rameldria",
-    "id": "Rameldria",
-    "pt": "Rameldria",
-    "th": "ราเมลเดรีย",
-    "vi": "Rameldria"
-  },
-  "MST_MONSTERS_511_NAME": {
-    "en": "Lindsey",
-    "es": "Lindsey",
-    "id": "Lindsey",
-    "pt": "Lindsey",
-    "th": "Lindsey",
-    "vi": "Lindsey"
-  },
-  "MST_MONSTERS_51200_NAME": {
-    "en": "Knight Will",
-    "es": "Caballero Will",
-    "id": "Ksatria Will",
-    "pt": "Will Cavaleiro",
-    "th": "ไนท์วิล",
-    "vi": "Hiệp sĩ Will"
-  },
-  "MST_MONSTERS_51201_NAME": {
-    "en": "Knight Will",
-    "es": "Caballero Will",
-    "id": "Ksatria Will",
-    "pt": "Will Cavaleiro",
-    "th": "ไนท์วิล",
-    "vi": "Hiệp sĩ Will"
   }
 }
