@@ -1,8 +1,6 @@
 import { servers, exclusiveFilterOptions } from '@/modules/constants';
 import getUpdateTimes from '@/store/instances/update-data-singleton';
-import SWorker from '@/assets/sww.min';
-// eslint-disable-next-line no-unused-vars
-import logger from '@/modules/Logger';
+import logger from '@/modules/Logger'; // eslint-disable-line no-unused-vars
 const defaultStartDate = new Date('Jan 01 1969');
 
 export const createState = () => {
@@ -58,7 +56,7 @@ export const createGetters = (multidexModuleName = 'units') => {
 };
 
 export const isValidServer = server => servers.includes(server);
-export const createMutations = (logger) => { // eslint-disable-line no-unused-vars
+export const createMutations = (logger) => {
   return {
     setActiveServer (state, { data = {}, server = 'gl', commitData = true, needsReload = false }) {
       if (!isValidServer(server)) {
@@ -280,28 +278,27 @@ export const createActions = (worker, downloadWorker, logger, dbEntryName = 'uni
       return keys;
     },
     async filterServerExclusiveKeys ({ dispatch, state }, { filter = exclusiveFilterOptions.allValue, keys = [] }) {
-      let otherKeys = [];
+      let result;
       if (!exclusiveFilterOptions.isAll(filter)) {
         const otherServers = servers.filter(s => s !== state.activeServer);
+        logger.debug('fetching keys for other servers', otherServers);
         const serverKeys = await Promise.all(otherServers.map(s => dispatch('getKeysForServer', s)));
-        otherKeys = await SWorker.run((keysA, keysB) => {
-          const unionResult = keysA.slice()
-            .concat(keysB.filter(b => !keysA.includes(b)))
-            .sort((a, b) => +a - +b);
-          return unionResult;
-        }, [...serverKeys]);
-      }
-
-      const result = await SWorker.run((exclusivesFilter, otherKeys, ternaryValues, inputKeys, pageDb) => {
-        return inputKeys.filter(key => {
+        const otherKeys = new Set(...serverKeys);
+        logger.debug({ otherKeys, keys, filter });
+        const pageDb = state.pageDb;
+        const shouldBeExclusive = exclusiveFilterOptions.isTruthy(filter);
+        result = keys.filter(key => {
           const entry = pageDb[key];
-          const isExclusive = !otherKeys.includes((entry.id || '').toString());
+          // const isExclusive = !otherKeys.includes((entry.id || key).toString());
+          const isExclusive = !otherKeys.has(`${entry.id || key}`);
           return (
-            exclusivesFilter === ternaryValues.all ||
-            (exclusivesFilter === ternaryValues.truthy && isExclusive) ||
-            (exclusivesFilter === ternaryValues.falsy && !isExclusive));
+            (shouldBeExclusive && isExclusive) ||
+            (!shouldBeExclusive && !isExclusive)
+          );
         });
-      }, [filter, otherKeys, exclusiveFilterOptions.values, keys, state.pageDb]);
+      } else {
+        result = keys;
+      }
       return result;
     },
     async getFilteredKeys ({ state, dispatch }, { filters, sorts }) {
@@ -312,7 +309,7 @@ export const createActions = (worker, downloadWorker, logger, dbEntryName = 'uni
         exclusives = exclusiveFilterOptions.allValue,
       } = filters;
       if (!exclusiveFilterOptions.isAll(exclusives)) {
-        keys = await dispatch('filterServerExclusiveKeys', { filter: exclusives, keys });
+        keys = await dispatch('filterServerExclusiveKeys', { filter: exclusives, keys: Object.keys(state.pageDb) });
       }
 
       return worker.getFilteredKeys(state.activeServer, { keys, ...filters }, sorts);
