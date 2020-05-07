@@ -2717,7 +2717,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_800905.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "first_clear_missions": [
+      "8301761"
+    ]
   },
   "800906": {
     "desc": "A crystallized shard of power crafted from pure shadow.",
@@ -2729,7 +2732,10 @@
     "sell_price": 10000,
     "thumbnail": "item_thum_800906.png",
     "type": "evomat",
-    "usage": []
+    "usage": [],
+    "first_clear_missions": [
+      "8301762"
+    ]
   },
   "800907": {
     "desc": "This tome of elemental power unlocks a hero's potential within.",
@@ -36726,7 +36732,8 @@
       }
     ],
     "first_clear_missions": [
-      "8301751"
+      "8301751",
+      "8301771"
     ]
   },
   "890063": {
@@ -36754,7 +36761,8 @@
       }
     ],
     "first_clear_missions": [
-      "8301751"
+      "8301751",
+      "8301771"
     ]
   },
   "899998": {
