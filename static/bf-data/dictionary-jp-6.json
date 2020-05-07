@@ -1,4 +1,12 @@
 {
+  "MST_SKILLS_2840658_NAME": {
+    "en": "Drang: Doom Diviner",
+    "es": "Drang: Doom Diviner",
+    "id": "Drang: Doom Diviner",
+    "pt": "Drang: Doom Diviner",
+    "th": "Drang: Doom Diviner",
+    "vi": "Drang: Doom Diviner"
+  },
   "MST_SKILLS_2840688_DESCRIPTION": {
     "en": "35 combo Thunder attack on all foes (damage relative to remaining HP), 100% damage reduction for 4 turns, boosts critical damage for 4 turns, boosts BB gauge for 4 turns, boosts max HP & purges LS lock and ES lock from all allies",
     "es": "35 combo Thunder attack on all foes (damage relative to remaining HP), 100% damage reduction for 4 turns, boosts critical damage for 4 turns, boosts BB gauge for 4 turns, boosts max HP & purges LS lock and ES lock from all allies",
@@ -1342,6 +1350,22 @@
     "pt": "Endless Miracle",
     "th": "Endless Miracle",
     "vi": "Endless Miracle"
+  },
+  "MST_SKILLS_2850858_DESCRIPTION": {
+    "en": "13 combo Light attack on all foes (damage relative to remaining HP), 100% damage reduction for 4 turns, boosts max HP, boosts Atk, Def, Rec and critical rate (All elements) for 4 turns, probable KO resistance & activates BB/SBB/UBB twice for 3 turns",
+    "es": "13 combo Light attack on all foes (damage relative to remaining HP), 100% damage reduction for 4 turns, boosts max HP, boosts Atk, Def, Rec and critical rate (All elements) for 4 turns, probable KO resistance & activates BB/SBB/UBB twice for 3 turns",
+    "id": "13 combo Light attack on all foes (damage relative to remaining HP), 100% damage reduction for 4 turns, boosts max HP, boosts Atk, Def, Rec and critical rate (All elements) for 4 turns, probable KO resistance & activates BB/SBB/UBB twice for 3 turns",
+    "pt": "13 combo Light attack on all foes (damage relative to remaining HP), 100% damage reduction for 4 turns, boosts max HP, boosts Atk, Def, Rec and critical rate (All elements) for 4 turns, probable KO resistance & activates BB/SBB/UBB twice for 3 turns",
+    "th": "13 combo Light attack on all foes (damage relative to remaining HP), 100% damage reduction for 4 turns, boosts max HP, boosts Atk, Def, Rec and critical rate (All elements) for 4 turns, probable KO resistance & activates BB/SBB/UBB twice for 3 turns",
+    "vi": "13 combo Light attack on all foes (damage relative to remaining HP), 100% damage reduction for 4 turns, boosts max HP, boosts Atk, Def, Rec and critical rate (All elements) for 4 turns, probable KO resistance & activates BB/SBB/UBB twice for 3 turns"
+  },
+  "MST_SKILLS_2850858_NAME": {
+    "en": "Lost Lumina",
+    "es": "Lost Lumina",
+    "id": "Lost Lumina",
+    "pt": "Lost Lumina",
+    "th": "Lost Lumina",
+    "vi": "Lost Lumina"
   },
   "MST_SKILLS_2850900_DESCRIPTION": {
     "en": "18 combo massive Light attack on all foes (uses all allies' BB gauge), 100% damage reduction from Dark types for 2 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & fully restores HP for 3 turns",
@@ -22214,6 +22238,22 @@
     "pt": "Beauty and the Brains",
     "th": "Beauty and the Brains",
     "vi": "Beauty and the Brains"
+  },
+  "MST_SKILLS_3850858_DESCRIPTION": {
+    "en": "66 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, BB gauge, OD gauge, damage taken boosts BB gauge and restores HP, 100% damage reduction, 80% KO resistance & activates BB/SBB/UBB twice",
+    "es": "66 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, BB gauge, OD gauge, damage taken boosts BB gauge and restores HP, 100% damage reduction, 80% KO resistance & activates BB/SBB/UBB twice",
+    "id": "66 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, BB gauge, OD gauge, damage taken boosts BB gauge and restores HP, 100% damage reduction, 80% KO resistance & activates BB/SBB/UBB twice",
+    "pt": "66 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, BB gauge, OD gauge, damage taken boosts BB gauge and restores HP, 100% damage reduction, 80% KO resistance & activates BB/SBB/UBB twice",
+    "th": "66 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, BB gauge, OD gauge, damage taken boosts BB gauge and restores HP, 100% damage reduction, 80% KO resistance & activates BB/SBB/UBB twice",
+    "vi": "66 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, BB gauge, OD gauge, damage taken boosts BB gauge and restores HP, 100% damage reduction, 80% KO resistance & activates BB/SBB/UBB twice"
+  },
+  "MST_SKILLS_3850858_NAME": {
+    "en": "Grandiose Finish",
+    "es": "Grandiose Finish",
+    "id": "Grandiose Finish",
+    "pt": "Grandiose Finish",
+    "th": "Grandiose Finish",
+    "vi": "Grandiose Finish"
   },
   "MST_SKILLS_3850_DESCRIPTION": {
     "en": "None",

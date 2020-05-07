@@ -1,4 +1,92 @@
 {
+  "MST_SKILLS_2000403_NAME": {
+    "en": "Taste the fire of Hades!",
+    "es": "¡Prueba el fuego de Hades!",
+    "id": "Rasakan api Hades!",
+    "pt": "Sinta o sabor do fogo de Hades!",
+    "th": "จงลิ้มรสไฟของฮาเดส!",
+    "vi": "Hãy thử ngọn lửa Hades!"
+  },
+  "MST_SKILLS_2000410_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000410_NAME": {
+    "en": "Thunder Execution",
+    "es": "Ejecución atronadora",
+    "id": "Eksekusi Guntur",
+    "pt": "Execução Trovejante",
+    "th": "ธันเดอร์เอ็กซิคิวชั่น",
+    "vi": "Bùng nổ sấm sét"
+  },
+  "MST_SKILLS_2000411_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000411_NAME": {
+    "en": "This lady... The things she can do with a sword!",
+    "es": "Esta mujer... ¡Las cosas que puede hacer con una espada!",
+    "id": "Putri ini… Dia jago sekali pedangnya!",
+    "pt": "Esta moça... O que ela consegue fazer com uma espada!",
+    "th": "ผู้หญิงคนนี้... กับฝีมือดาบของเธอ!",
+    "vi": "Tiểu thư này... Những thứ cô ta có thể làm với một thanh kiếm!"
+  },
+  "MST_SKILLS_2000412_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000412_NAME": {
+    "en": "I guess brute force does have its limits...",
+    "es": "Supongo que la fuerza bruta tiene sus límites...",
+    "id": "Kurasa kekuatan brutal ada batasnya…",
+    "pt": "Acho que força bruta tem seus limites...",
+    "th": "ข้าเดาว่าพลังเถื่อนมันก็มีชีดจำกัดของมัน...",
+    "vi": "Ta đoán bạo lực chẳng có giới hạn của nó đâu..."
+  },
+  "MST_SKILLS_2000413_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000413_NAME": {
+    "en": "Darn! Was I wrong?!",
+    "es": "¡Maldición! ¿Estaba equivocado?",
+    "id": "Sial! Aku salah?!",
+    "pt": "Droga! Eu me enganei?!",
+    "th": "ให้ตาย! ข้าเป็นฝ่ายผิดรึ?",
+    "vi": "Quỷ tha ma bắt! Ta đã sai chăng?!"
+  },
+  "MST_SKILLS_2000414_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000414_NAME": {
+    "en": "Step aside! I have bigger fish to fry!",
+    "es": "Hazte a un lado. Tengo pescados más grandes por freír.",
+    "id": "Minggir! Aku punya urusan lebih penting!",
+    "pt": "Saia do caminho! Tenho coisas mais importantes a fazer!",
+    "th": "หลบไป! ข้ามีเรื่องที่สำคัญหว่านี้ต้องทำ!",
+    "vi": "Tránh ra bên! Ta có con cá lớn hơn để nướng!"
+  },
   "MST_SKILLS_2000420_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -91496,54 +91584,6 @@
     "vi": "Sorry..."
   },
   "MST_SKILLS_2122460_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122460_NAME": {
-    "en": "Sis, stand back.",
-    "es": "Hermana, hazte a un lado.",
-    "id": "Kak, mundur.",
-    "pt": "Mana, pra trás.",
-    "th": "พี่ ถอยไปซะ",
-    "vi": "Sis, stand back."
-  },
-  "MST_SKILLS_2122461_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122461_NAME": {
-    "en": "I can do this by myself!",
-    "es": "¡Puedo hacerlo yo misma!",
-    "id": "Aku bisa melakukan ini sendiri!",
-    "pt": "Posso fazer isso sozinho!",
-    "th": "ข้าทำเองได้!",
-    "vi": "I can do this by myself!"
-  },
-  "MST_SKILLS_2122462_DESCRIPTION": {
-    "en": "13 combo powerful Water attack on all enemies & boosts critical hit rate for all allies for 3 turns",
-    "es": "Combo grupal de 13 poderosos ataques acuáticos. Aumenta la probabilidad de asestar golpes críticos de los aliados durante 3 turnos",
-    "id": "13 kombo serangan Air kuat ke semua musuh & menambah frekuensi pukulan ampuh semua sekutu 3 giliran",
-    "pt": "Combo poderoso de 13 golpes de Água em todos os inimigos e bônus na taxa do dano crítico dos aliados por 3 rodadas",
-    "th": "13 คอมโบ โจมตีศัตรูทั้งหมดด้วยธาตุน้ำ และเพิ่มเรทคริติคอลให้ทีม 3 เทิร์น",
-    "vi": "13 combo powerful Water attack on all enemies & boosts critical hit rate for all allies for 3 turns"
-  },
-  "MST_SKILLS_2122462_NAME": {
-    "en": "Glace Gleyre",
-    "es": "Glace Gleyre",
-    "id": "Glace Gleyre",
-    "pt": "Gleyre Gelado",
-    "th": "เกลซ เกลีย",
-    "vi": "Glace Gleyre"
-  },
-  "MST_SKILLS_2122470_DESCRIPTION": {
     "en": "None",
     "es": "None",
     "id": "None",
