@@ -7,6 +7,7 @@ import settings from './settings';
 import github from './github';
 import multidexModules, { moduleInfo as multidexModuleInfo } from './multidex';
 import squads from './tools/squads';
+import tierList from './tools/tier-list';
 
 import { Logger } from '@/modules/Logger';
 const logger = new Logger({ prefix: '[STORE]' });
@@ -32,6 +33,7 @@ export default new Vuex.Store({
     github,
     ...multidexModules,
     squads,
+    tierList,
   },
   state: {
     disableHtmlOverflow: false,
@@ -96,7 +98,7 @@ export default new Vuex.Store({
           }
         }
         await dispatch('settings/init');
-  
+
         commit('setLoadingMessage', `Setting data to last set server (${(state.settings.activeServer || 'gl').toUpperCase()})`);
         await dispatch('setActiveServer', state.settings.activeServer);
       } catch (err) {

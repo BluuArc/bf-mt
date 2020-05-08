@@ -111,6 +111,90 @@ import SiteTrackers from '@/components/SiteTrackers';
 
 import { moduleInfo } from '@/store';
 const multidexModules = moduleInfo.filter(m => m.type === 'multidex');
+
+function getMenuItems () {
+  const multidexIconMapping = {
+    units: {image: require('@/assets/unit_thum.png')},
+    items: {image: require('@/assets/sphere_thum_5_5.png')},
+    bursts: {image: require('@/assets/battle_meter_current.png')},
+    extraSkills: {image: require('@/assets/unit_ills_full_50792_100x103.png')},
+    leaderSkills: {image: require('@/assets/battle_leader_skill_icon.png')},
+    missions: {image: require('@/assets/achievement_pt_icon.png')},
+    dictionary: {image: require('@/assets/challeng_hierarchy_mark_gold.png')},
+    default: {icon: 'extension'},
+  };
+  const generateMultidexEntry = (entry) => {
+    return {
+      ...entry,
+      title: entry.fullName,
+      link: () => {
+        // attempt to get url from state getter
+        const url = this.$store && this.$store.getters &&
+          this.$store.getters[`${entry.name}/getMultidexPathTo`] &&
+          this.$store.getters[`${entry.name}/getMultidexPathTo`]();
+        // logger.debug(url, this);
+        return url || entry.link;
+      },
+      ...(multidexIconMapping[entry.name] || multidexIconMapping.default),
+    };
+  };
+
+  return [
+    {
+      subheader: 'General',
+      items: [
+        {
+          icon: 'home',
+          title: 'Home',
+          link: '/',
+          generalHome: true,
+        },
+        {
+          icon: 'calendar_today',
+          title: 'News & Events',
+          link: '/news',
+        },
+        {
+          icon: 'settings',
+          title: 'Settings',
+          link: '/settings',
+          generalSettings: true,
+        },
+      ],
+    },
+    {
+      subheader: 'Multidex',
+      items: multidexModules.map(generateMultidexEntry),
+    },
+    {
+      subheader: 'Tools',
+      items: [
+        {
+          title: 'Squads',
+          link: '/tools/squads',
+          image: require('@/assets/unit_table.png'),
+        },
+        {
+          title: 'Compare',
+          link: '/tools/compare',
+          image: require('@/assets/tt_icon_m-1.png'),
+        },
+        {
+          title: 'Tier List Creator',
+          link: (() => {
+            const currentCode = (this.$store && this.$store.state && this.$store.state.tierList && this.$store.state.tierList.currentCode) || '';
+            const baseUrl = '/tools/tier-list-creator';
+            return currentCode
+              ? `${baseUrl}?code=${currentCode}`
+              : baseUrl;
+          })(),
+          image: require('@/assets/tier-list-icon.png'),
+        },
+      ],
+    },
+  ];
+}
+
 export default {
   name: 'App',
   components: {
@@ -135,81 +219,9 @@ export default {
     multidexModules: () => multidexModules,
   },
   data () {
-    const multidexIconMapping = {
-      units: {image: require('@/assets/unit_thum.png')},
-      items: {image: require('@/assets/sphere_thum_5_5.png')},
-      bursts: {image: require('@/assets/battle_meter_current.png')},
-      extraSkills: {image: require('@/assets/unit_ills_full_50792_100x103.png')},
-      leaderSkills: {image: require('@/assets/battle_leader_skill_icon.png')},
-      missions: {image: require('@/assets/achievement_pt_icon.png')},
-      dictionary: {image: require('@/assets/challeng_hierarchy_mark_gold.png')},
-      default: {icon: 'extension'},
-    };
-    const generateMultidexEntry = (entry) => {
-      return {
-        ...entry,
-        title: entry.fullName,
-        link: () => {
-          // attempt to get url from state getter
-          const url = this.$store && this.$store.getters &&
-            this.$store.getters[`${entry.name}/getMultidexPathTo`] &&
-            this.$store.getters[`${entry.name}/getMultidexPathTo`]();
-          // logger.debug(url, this);
-          return url || entry.link;
-        },
-        ...(multidexIconMapping[entry.name] || multidexIconMapping.default),
-      };
-    };
     return {
       showDrawer: false,
-      menuItems: [
-        {
-          subheader: 'General',
-          items: [
-            {
-              icon: 'home',
-              title: 'Home',
-              link: '/',
-              generalHome: true,
-            },
-            {
-              icon: 'calendar_today',
-              title: 'News & Events',
-              link: '/news',
-            },
-            {
-              icon: 'settings',
-              title: 'Settings',
-              link: '/settings',
-              generalSettings: true,
-            },
-          ],
-        },
-        {
-          subheader: 'Multidex',
-          items: multidexModules.map(generateMultidexEntry),
-        },
-        {
-          subheader: 'Tools',
-          items: [
-            {
-              title: 'Squads',
-              link: '/tools/squads',
-              image: require('@/assets/unit_table.png'),
-            },
-            {
-              title: 'Compare',
-              link: '/tools/compare',
-              image: require('@/assets/tt_icon_m-1.png'),
-            },
-            {
-              title: 'Tier List Creator',
-              link: '/tools/tier-list-creator',
-              image: require('@/assets/tier-list-icon.png'),
-            },
-          ],
-        },
-      ],
+      menuItems: getMenuItems.call(this),
       title: 'Brave Frontier Multi Tool',
       pageActiveServer: '',
       dataIsLoading: false,
@@ -279,6 +291,11 @@ export default {
 
       ensureContentPadding();
     },
+    showDrawer (newValue) {
+      if (newValue) {
+        this.menuItems = getMenuItems.call(this);
+      }
+    },
   },
   async created () {
     await this.init();
@@ -316,7 +333,7 @@ html {
     --background-color--card: #fff;
     --background-color: #fafafa;
   }
-  
+
   .theme--dark {
     --background-color-alt--lighten-2: grey;
     --background-color-alt--lighten-1: dimgrey;
@@ -346,7 +363,7 @@ html {
   font-family: monospace;
   font-size: 14px;
   margin-left: 18px;
-  
+
 }
 
 .tree-view-wrapper {
@@ -392,7 +409,7 @@ html {
 
 .tree-view-item-key-with-chevron.opened::before {
   top:4px;
-  transform: rotate(90deg);  
+  transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
 }
 

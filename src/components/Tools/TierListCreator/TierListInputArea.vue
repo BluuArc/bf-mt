@@ -25,7 +25,7 @@
             hint="Apply an empty code to reset the tier list"
           />
           <v-btn :flat="!importCode" @click="applyImportCode">
-            Import
+            {{ importCode ? 'Import' : 'Reset' }}
           </v-btn>
         </v-layout>
         <v-layout align-baseline>
@@ -686,12 +686,14 @@ export default {
     },
   },
   mounted () {
-    this.svgConfig = {
-      ...this.svgConfig,
-      ...this.inputConfig,
-      categories: this.inputCategories,
-      entries: this.getExpandedInputEntries(this.inputEntries),
-    };
+    setTimeout(() => {
+      this.svgConfig = {
+        ...this.svgConfig,
+        ...this.inputConfig,
+        categories: this.inputCategories,
+        entries: this.getExpandedInputEntries(this.inputEntries),
+      };
+    }, 50);
   },
 };
 </script>

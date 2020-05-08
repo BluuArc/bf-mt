@@ -34,6 +34,14 @@ export default {
     actionInfo () {
       return generateActionInfo(this, multidexModules);
     },
+    linkInfo () {
+      const currentState = this.$store && this.$store.state;
+      let result = {};
+      if (currentState) {
+        result.tierList = currentState.tierList.currentCode || '';
+      }
+      return result;
+    },
     aggregatedInfo () {
       const isLoading = Object.values(this.stateInfo).reduce((acc, val) => acc || val.isLoading, false);
       const loadingMessage = multidexModules.filter(m => this.stateInfo[m.name].loadingMessage)
