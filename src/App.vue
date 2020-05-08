@@ -1,6 +1,6 @@
 <template>
   <multidex-data-wrapper :isMain="true">
-    <v-app :dark="!lightMode" slot-scope="{ stateInfo, loadingState }">
+    <v-app :dark="!lightMode" slot-scope="{ stateInfo, loadingState, linkInfo }">
       <v-navigation-drawer
         persistent
         v-model="showDrawer"
@@ -22,7 +22,7 @@
             :key="`${i}-${j}`"
             exact
             :value="currentPageName === subItem.title"
-            :to="typeof (subItem.link) === 'function' ? subItem.link() : subItem.link"
+            :to="typeof (subItem.link) === 'function' ? subItem.link(linkInfo) : subItem.link"
             @click="($vuetify.breakpoint.mdAndDown) ? (showDrawer = false) : (showDrawer = showDrawer)"
             active-class="primary white--text"
           >
@@ -94,7 +94,7 @@
       <!-- HACK: stateInfo is computed by wrapper, saved to app state here on page update -->
       <span style="display: none;">
         {{ setDataIsLoading(loadingState) }}
-        {{ onStateUpdate(stateInfo) }}
+        {{ onStateUpdate(stateInfo, linkInfo) }}
       </span>
       <site-trackers/>
     </v-app>
@@ -112,7 +112,7 @@ import SiteTrackers from '@/components/SiteTrackers';
 import { moduleInfo } from '@/store';
 const multidexModules = moduleInfo.filter(m => m.type === 'multidex');
 
-function getMenuItems () {
+function getMenuItems (linkInfo) {
   const multidexIconMapping = {
     units: {image: require('@/assets/unit_thum.png')},
     items: {image: require('@/assets/sphere_thum_5_5.png')},
@@ -182,7 +182,7 @@ function getMenuItems () {
         {
           title: 'Tier List Creator',
           link: (() => {
-            const currentCode = (this.$store && this.$store.state && this.$store.state.tierList && this.$store.state.tierList.currentCode) || '';
+            const currentCode = (linkInfo && linkInfo.tierList) || '';
             const baseUrl = '/tools/tier-list-creator';
             return currentCode
               ? `${baseUrl}?code=${currentCode}`
@@ -227,6 +227,7 @@ export default {
       dataIsLoading: false,
       numSettingsUpdates: 0,
       numNewCommits: 0,
+      lastTierListCode: '',
     };
   },
   methods: {
@@ -246,8 +247,12 @@ export default {
         return serverCount;
       }).reduce((acc, val) => acc + val, 0);
     },
-    onStateUpdate (stateInfo) {
+    onStateUpdate (stateInfo, linkInfo) {
       this.calculateNewSettingsUpdateCount(stateInfo);
+      if (linkInfo && this.lastTierListCode !== linkInfo.tierList) {
+        this.menuItems = getMenuItems.call(this, linkInfo);
+        this.lastTierListCode = linkInfo.tierList;
+      }
       this.numNewCommits = this.getNumberOfNewCommits();
     },
   },

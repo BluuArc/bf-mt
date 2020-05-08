@@ -4,6 +4,7 @@
       :stateInfo="stateInfo"
       :actionInfo="actionInfo"
       :aggregatedInfo="aggregatedInfo"
+      :linkInfo="linkInfo"
       :loadingState="loadingState">
       Place your markup here to receive scoped data.
     </slot>
@@ -36,11 +37,9 @@ export default {
     },
     linkInfo () {
       const currentState = this.$store && this.$store.state;
-      let result = {};
-      if (currentState) {
-        result.tierList = currentState.tierList.currentCode || '';
-      }
-      return result;
+      return {
+        tierList: (currentState && currentState.tierList.currentCode) || '',
+      };
     },
     aggregatedInfo () {
       const isLoading = Object.values(this.stateInfo).reduce((acc, val) => acc || val.isLoading, false);
