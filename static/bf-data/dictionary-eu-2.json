@@ -1,4 +1,68 @@
 {
+  "MST_LEADERSKILLS_4301_DESCRIPTION": {
+    "en": "10% boost to Def and HP for all types",
+    "es": "10% aumento en defensa y PS para todos los tipos",
+    "id": "10% kenaikan Pertahanan dan HP semua tipe",
+    "pt": "Bônus de 10% a DEF e HP para todos os tipos",
+    "th": "10% เพิ่มพลังป้องกัน และ HP ให้ยูนิตทุกประเภท",
+    "vi": "Tăng 10% Phòng thủ và HP cho tất cả các loại"
+  },
+  "MST_LEADERSKILLS_4301_NAME": {
+    "en": "Supreme Sanctuary",
+    "es": "Santuario supremo",
+    "id": "Kuil Supermasi",
+    "pt": "Santuário Supremo",
+    "th": "ซูพรีมแซงชัวรี่",
+    "vi": "Điện thờ tối cao"
+  },
+  "MST_LEADERSKILLS_4302_DESCRIPTION": {
+    "en": "20% boost to Def and HP & chance of small reduction in damage taken",
+    "es": "Aumenta un 20% la defensa y los PS. Probabilidad baja de reducir el daño recibido.",
+    "id": "20% kenaikan Tahan dan HP & kans agak mengurangi kerusakan",
+    "pt": "20% de reforço na DEF e HP e chance de pequena redução no dano sofrido",
+    "th": "20% เพิ่มพลัง ป้องกัน กับ HP และ โอกาสลดความเสียหายที่ได้รับลงเล็กน้อย",
+    "vi": "Tăng 20% Phòng thủ và HP & có cơ hội giảm ít thiệt hại nhận được"
+  },
+  "MST_LEADERSKILLS_4302_NAME": {
+    "en": "Immersing Holiness",
+    "es": "Santidad inmersiva",
+    "id": "Kesucian Merendam",
+    "pt": "Imersão Sagrada",
+    "th": "อิมเมิร์สซิ่งโฮลี่เนส",
+    "vi": "Ngập tràn linh thiêng"
+  },
+  "MST_LEADERSKILLS_4303_DESCRIPTION": {
+    "en": "40% boost to max HP, Def & probable damage reduction",
+    "es": "40% boost to max HP, Def & probable damage reduction",
+    "id": "40% ekstra HP maks, Tahan & kans pengurangan kerusakan",
+    "pt": "40% boost to max HP, Def & probable damage reduction",
+    "th": "40% เพิ่ม HP สูงสุด และพลังป้องกัน, มีโอกาสลดพลังโจมตี",
+    "vi": "40% boost to max HP, Def & probable damage reduction"
+  },
+  "MST_LEADERSKILLS_4303_NAME": {
+    "en": "Stone God's Sanctuary",
+    "es": "Stone God's Sanctuary",
+    "id": "Suaka Dewa Batu",
+    "pt": "Stone God's Sanctuary",
+    "th": "สโตน ก็อด แซงทัวรี่",
+    "vi": "Stone God's Sanctuary"
+  },
+  "MST_LEADERSKILLS_4310_DESCRIPTION": {
+    "en": "30% boost to max HP and Def for all Units",
+    "es": "Aumenta un 30% los PS máximos y la DEF de todas las unidades",
+    "id": "30% ekstra HP dan Tahan maks untuk semua Unit",
+    "pt": "30% de reforço no HP máx e DEF de todas as unidades",
+    "th": "30% เพิ่มค่า HP สูงสุด และ ป้องกัน สำหรับทุกยูนิต",
+    "vi": "30% boost to max HP and Def for all Units"
+  },
+  "MST_LEADERSKILLS_4310_NAME": {
+    "en": "Eris's Sanctuary",
+    "es": "Santuario de Eris",
+    "id": "Suaka Eris",
+    "pt": "Santuário de Eris",
+    "th": "เอริสแซงทูรี่",
+    "vi": "Eris's Sanctuary"
+  },
   "MST_LEADERSKILLS_4311_DESCRIPTION": {
     "en": "30% boost to max HP and Def for all Units & slightly boosts BB gauge when attacked",
     "es": "Aumenta un 30% los PS máximos y la DEF de todas las unidades y aumenta levemente el indicador BB al recibir un ataque",
@@ -13174,6 +13238,22 @@
     "pt": "For the Culling Code",
     "th": "50% เพิ่มค่า โจมตี, เพิ่มค่าเล็กน้อยให้ อัตราเกิดคริติคอล และ ความเสียหายที่ได้รับ เพิ่มค่าอย่างมากให้ เกจ BB",
     "vi": "For the Culling Code"
+  },
+  "MST_LEADERSKILLS_840258_DESCRIPTION": {
+    "en": "150% max HP, negates all status ailments and Atk, Def, Rec reduction, damage taken fills BB gauge, 20% damage reduction for 2 turns when damage taken is over 5k & damage taken may restore HP",
+    "es": "150% max HP, negates all status ailments and Atk, Def, Rec reduction, damage taken fills BB gauge, 20% damage reduction for 2 turns when damage taken is over 5k & damage taken may restore HP",
+    "id": "150% max HP, negates all status ailments and Atk, Def, Rec reduction, damage taken fills BB gauge, 20% damage reduction for 2 turns when damage taken is over 5k & damage taken may restore HP",
+    "pt": "150% max HP, negates all status ailments and Atk, Def, Rec reduction, damage taken fills BB gauge, 20% damage reduction for 2 turns when damage taken is over 5k & damage taken may restore HP",
+    "th": "150% max HP, negates all status ailments and Atk, Def, Rec reduction, damage taken fills BB gauge, 20% damage reduction for 2 turns when damage taken is over 5k & damage taken may restore HP",
+    "vi": "150% max HP, negates all status ailments and Atk, Def, Rec reduction, damage taken fills BB gauge, 20% damage reduction for 2 turns when damage taken is over 5k & damage taken may restore HP"
+  },
+  "MST_LEADERSKILLS_840258_NAME": {
+    "en": "Paragon's Might",
+    "es": "Paragon's Might",
+    "id": "Paragon's Might",
+    "pt": "Paragon's Might",
+    "th": "Paragon's Might",
+    "vi": "Paragon's Might"
   },
   "MST_LEADERSKILLS_840277_DESCRIPTION": {
     "en": "150% boost to Atk, 50% boost to max HP and 20% boost to critical hit rate of Thunder types, hugely boosts critical damage & critical damage considerably boosts BB gauge for 3 turns. 20% boost to all parameters of Thunder types in Guild Raid",
@@ -91542,53 +91622,5 @@
     "pt": "Heidt Tiro Divino",
     "th": "โฮลี่ช็อทไฮด์",
     "vi": "Đạn thánh Heidt"
-  },
-  "MST_MONSTERS_51013_NAME": {
-    "en": "Holy Shot Heidt",
-    "es": "Tiro sagrado Heidt",
-    "id": "Tembakan Suci Heidt",
-    "pt": "Heidt Tiro Divino",
-    "th": "โฮลี่ช็อทฮีดท์",
-    "vi": "Holy Shot Heidt"
-  },
-  "MST_MONSTERS_51014_NAME": {
-    "en": "Holy Shot Heidt",
-    "es": "Holy Shot Heidt",
-    "id": "Impal",
-    "pt": "Holy Shot Heidt",
-    "th": "โฮลี่ ช็อต เฮดิท",
-    "vi": "Holy Shot Heidt"
-  },
-  "MST_MONSTERS_51050_NAME": {
-    "en": "Wyvern",
-    "es": "Guiverno",
-    "id": "Wyvern",
-    "pt": "Dragonete",
-    "th": "ไวเวิร์น",
-    "vi": "Rồng bay"
-  },
-  "MST_MONSTERS_51051_NAME": {
-    "en": "Wyvern",
-    "es": "Guiverno",
-    "id": "Wyvern",
-    "pt": "Dragonete",
-    "th": "ไวเวิร์น",
-    "vi": "Rồng bay"
-  },
-  "MST_MONSTERS_51052_NAME": {
-    "en": "Wyvern",
-    "es": "Guiverno",
-    "id": "Wyvern",
-    "pt": "Dragonete",
-    "th": "ไวเวิร์น",
-    "vi": "Rồng bay"
-  },
-  "MST_MONSTERS_51053_NAME": {
-    "en": "Wyvern",
-    "es": "Guiverno",
-    "id": "Wyvern",
-    "pt": "Dragonete",
-    "th": "ไวเวิร์น",
-    "vi": "Rồng bay"
   }
 }
