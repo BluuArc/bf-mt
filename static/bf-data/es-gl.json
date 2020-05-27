@@ -20707,7 +20707,7 @@
     ]
   },
   "820048": {
-    "desc": "Raises Atk parameter limits to 130000, damage taken boosts BB gauge, negates all status ailments for all allies, adds critical hit rate boost effect to BB/SBB for 3 turns & adds 23 combo powerful Water attack against Fire, Water types effect to SBB",
+    "desc": "Damage taken fills BB gauge, raises Atk limit to 180k, add to BB/SBB (Boosts critical rate for 3 turns), add to SBB (23 combo Water attack on Fire/Water foes) & negates all status ailments for all allies",
     "effects": [
       {
         "bc fill when attacked high": 4,
@@ -20719,20 +20719,27 @@
       },
       {
         "conditions": [],
-        "curse resist%": 100,
-        "injury resist%": 100,
-        "paralysis resist%": 100,
-        "passive id": "73",
-        "passive target": "party",
-        "poison resist%": 100,
-        "sick resist%": 100,
-        "weaken resist%": 100
+        "increase atk cap": 180000,
+        "passive id": "143",
+        "passive target": "self"
       },
       {
         "conditions": [],
-        "increase atk cap": 130000,
-        "passive id": "143",
-        "passive target": "self"
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
       },
       {
         "conditions": [],
@@ -20753,21 +20760,14 @@
       },
       {
         "conditions": [],
-        "passive id": "66",
-        "passive target": "self",
-        "trigger on bb": true,
-        "trigger on sbb": true,
-        "triggered effect": [
-          {
-            "buff turns": 3,
-            "crit% buff (7)": 60,
-            "effect delay time(ms)/frame": "0.0/0",
-            "element buffed": "all",
-            "proc id": "5",
-            "target area": "aoe",
-            "target type": "party"
-          }
-        ]
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "passive target": "party",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
       }
     ],
     "id": "820048",
@@ -25052,7 +25052,7 @@
     ]
   },
   "830438": {
-    "desc": "Boosts elemental damage & damage taken may restore HP of all allies",
+    "desc": "Damage taken may restore HP and adds ignore Def to attack for all allies, 30% all parameters, 100% all elemental damage & 25% reduction to BB activation cost",
     "effects": [
       {
         "conditions": [],
@@ -25070,8 +25070,29 @@
         "conditions": [],
         "dmg% to hp% when attacked chance%": 20,
         "dmg% to hp% when attacked high": 25,
-        "dmg% to hp% when attacked low": 20,
+        "dmg% to hp% when attacked low": 25,
         "passive id": "24",
+        "passive target": "party"
+      },
+      {
+        "atk% buff": 30,
+        "conditions": [],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      },
+      {
+        "conditions": [],
+        "passive id": "48",
+        "passive target": "self",
+        "reduced bb bc cost%": 25
+      },
+      {
+        "conditions": [],
+        "ignore def%": 100,
+        "passive id": "29",
         "passive target": "party"
       }
     ],
@@ -33309,6 +33330,90 @@
       "850808"
     ]
   },
+  "850827": {
+    "desc": "40% Atk, 15% critical rate for all allies, damage taken may inflict 30% BB gauge fill rate reduction for 1 turn, negates Atk, Def, Rec reduction & 100% spark damage",
+    "effects": [
+      {
+        "atk% buff": 40,
+        "conditions": [],
+        "crit% buff": 15,
+        "passive id": "1",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "114",
+        "unknown passive params": "112,-30,-1,10,1"
+      },
+      {
+        "atk down resist%": 100,
+        "conditions": [],
+        "def down resist%": 100,
+        "passive id": "73",
+        "passive target": "self",
+        "rec down resist%": 100
+      },
+      {
+        "conditions": [],
+        "damage% for spark": 100,
+        "passive id": "31",
+        "passive target": "self"
+      }
+    ],
+    "id": "850827",
+    "name": "Upbeat Swagger",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "850827"
+    ]
+  },
+  "850828": {
+    "desc": "50% Atk, 15% critical rate, damage taken may inflict 30% BB gauge fill rate reduction for 1 turn and adds ignore Def to attack for all allies, negates Atk, Def, Rec reduction & 100% spark damage",
+    "effects": [
+      {
+        "atk% buff": 50,
+        "conditions": [],
+        "crit% buff": 15,
+        "passive id": "1",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "passive target": "party",
+        "unknown passive id": "114",
+        "unknown passive params": "112,-30,-1,10,1"
+      },
+      {
+        "conditions": [],
+        "ignore def%": 100,
+        "passive id": "29",
+        "passive target": "party"
+      },
+      {
+        "atk down resist%": 100,
+        "conditions": [],
+        "def down resist%": 100,
+        "passive id": "73",
+        "passive target": "self",
+        "rec down resist%": 100
+      },
+      {
+        "conditions": [],
+        "damage% for spark": 100,
+        "passive id": "31",
+        "passive target": "self"
+      }
+    ],
+    "id": "850828",
+    "name": "Fighter's Flair",
+    "rarity": "8",
+    "target": "self",
+    "associated_units": [
+      "850828"
+    ]
+  },
   "850858": {
     "desc": "10% reduction to BB activation cost and 5% damage reduction for all allies, 120% spark damage, negates all status ailments and Atk, Def, Rec reduction & 1 KO resistance when HP is below 100%",
     "effects": [
@@ -34953,10 +35058,12 @@
     ]
   },
   "860418": {
-    "desc": "Considerably boosts Def relative to HP remaining & restores HP each turn",
+    "desc": "Spark damage restores HP for all allies, 30% all parameters, 0-100% Atk, Def relative to remaining HP, restores HP each turn & 100% Dark elemental damage",
     "effects": [
       {
-        "buff proportional to hp": "lost",
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 100,
+        "buff proportional to hp": "remaining",
         "conditions": [],
         "def% base buff": 0,
         "def% extra buff based on hp": 100,
@@ -34968,8 +35075,32 @@
         "passive id": "33",
         "passive target": "self",
         "rec% added (turn heal)": 20,
-        "turn heal high": 1500,
-        "turn heal low": 1000
+        "turn heal high": 4000,
+        "turn heal low": 3000
+      },
+      {
+        "atk% buff": 30,
+        "conditions": [],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      },
+      {
+        "conditions": [],
+        "dark units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 100,
+        "passive id": "50",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "heal on spark high": 600,
+        "heal on spark low": 500,
+        "heal on spark%": 100,
+        "passive id": "101",
+        "passive target": "party"
       }
     ],
     "id": "860418",
@@ -49265,6 +49396,128 @@
     ],
     "id": "8900006",
     "name": "Hydrothermal Mark EX",
+    "rarity": "8",
+    "target": "self"
+  },
+  "8900007": {
+    "desc": "40% all parameters and 30% critical rate (Earth, Thunder), 25% damage reduction when guarding, 10% damage reduction from Fire, Earth types, 100% Earth, Thunder elemental damage, 30% Earth, Thunder elemental damage for all allies & 120% BB Atk for all alli",
+    "effects": [
+      {
+        "atk% buff": 40,
+        "conditions": [],
+        "crit% buff": 30,
+        "def% buff": 40,
+        "elements buffed": [
+          "earth",
+          "thunder"
+        ],
+        "hp% buff": 40,
+        "passive id": "2",
+        "passive target": "self",
+        "rec% buff": 40
+      },
+      {
+        "conditions": [],
+        "guard increase mitigation%": 25,
+        "passive id": "58",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "dmg% mitigation for elemental attacks": 10,
+        "mitigate earth attacks": true,
+        "mitigate fire attacks": true,
+        "passive id": "62",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 100,
+        "passive id": "50",
+        "passive target": "self",
+        "thunder units do extra elemental weakness dmg": true
+      },
+      {
+        "conditions": [],
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 30,
+        "passive id": "50",
+        "passive target": "party",
+        "thunder units do extra elemental weakness dmg": true
+      },
+      {
+        "bb atk% buff": 120,
+        "conditions": [],
+        "passive id": "64",
+        "passive target": "party",
+        "sbb atk% buff": 120,
+        "ubb atk% buff": 120
+      }
+    ],
+    "id": "8900007",
+    "name": "Heavenquake Mark EX",
+    "rarity": "8",
+    "target": "self"
+  },
+  "8900008": {
+    "desc": "40% all parameters and 30% critical rate (Light, Dark), 25% damage reduction when guarding, 10% damage reduction from Light, Dark types, 100% Light, Dark elemental damage, 30% Light, Dark elemental damage for all allies & 120% BB Atk for all allies",
+    "effects": [
+      {
+        "atk% buff": 40,
+        "conditions": [],
+        "crit% buff": 30,
+        "def% buff": 40,
+        "elements buffed": [
+          "light",
+          "dark"
+        ],
+        "hp% buff": 40,
+        "passive id": "2",
+        "passive target": "self",
+        "rec% buff": 40
+      },
+      {
+        "conditions": [],
+        "guard increase mitigation%": 25,
+        "passive id": "58",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "dmg% mitigation for elemental attacks": 10,
+        "mitigate dark attacks": true,
+        "mitigate light attacks": true,
+        "passive id": "62",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "dark units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 100,
+        "light units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "dark units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 30,
+        "light units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "passive target": "party"
+      },
+      {
+        "bb atk% buff": 120,
+        "conditions": [],
+        "passive id": "64",
+        "passive target": "party",
+        "sbb atk% buff": 120,
+        "ubb atk% buff": 120
+      }
+    ],
+    "id": "8900008",
+    "name": "Monochromic Mark EX",
     "rarity": "8",
     "target": "self"
   },
