@@ -1,4 +1,156 @@
 {
+  "MST_SKILLS_2000370_NAME": {
+    "en": "Thunder Expulsion",
+    "es": "Expulsión atronadora",
+    "id": "Pengusiran Guntur",
+    "pt": "Expurgo Trovejante",
+    "th": "ธันเดอร์เอ็กซ์พัลชั่น",
+    "vi": "Thần bùng nổ"
+  },
+  "MST_SKILLS_2000371_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000371_NAME": {
+    "en": "Whoa! I'm on fire!",
+    "es": "¡Guau! ¡Estoy en llamas!",
+    "id": "Whoa! Aku terbakar!",
+    "pt": "Nossa! Estou com tudo!",
+    "th": "ว้าว! ข้ากำลังฮึกเหิมเลย!",
+    "vi": "Chà! Ta đang ngồi trên lửa đây!"
+  },
+  "MST_SKILLS_2000372_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000372_NAME": {
+    "en": "Take this! Can you handle my thunder?",
+    "es": "¡Toma esto! ¿Podrás con mi trueno?",
+    "id": "Rasakan ini! Apa kau bisa mengatasi gunturku?",
+    "pt": "Toma essa! Você aguenta meu trovão?",
+    "th": "รับนี่ไป! เจ้ารับมือกับสายฟ้าของข้าได้ไหม?",
+    "vi": "Cầm lấy này! Ngươi có thể giải quyết cơn lôi đình của ta sao?"
+  },
+  "MST_SKILLS_2000373_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000373_NAME": {
+    "en": "Outta my way! Or I'll bash you all to bits!",
+    "es": "¡Fuera de mi camino! ¡O te dejaré hecho pedazos!",
+    "id": "Jangan halangi aku! Atau kau kuhancurkan berkeping-keping!",
+    "pt": "Fora do caminho! Ou vou esmigalhar vocês!",
+    "th": "หลีกไปให้พ้น! ไม่อย่างนั้นข้าจะขยี้เจ้าให้เป็นผง!",
+    "vi": "Tránh đường ta! Hoặc ta sẽ đập ngươi nát bấy!"
+  },
+  "MST_SKILLS_2000374_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000374_NAME": {
+    "en": "Huh. You're not as weak as I thought.",
+    "es": "Uh. No eres tan débil cómo pensaba.",
+    "id": "Huh. Kau tidak selemah yang kukira.",
+    "pt": "Uh. Você não é tão fraco quanto eu achava.",
+    "th": "หึ เจ้าไม่ได้อ่อนแออย่างที่ข้าคิดเอาไว้",
+    "vi": "Hừ. Ngươi cũng chẳng yếu như ta nghĩ."
+  },
+  "MST_SKILLS_2000375_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000375_NAME": {
+    "en": "Tsk! I'm just not in the mood today.",
+    "es": "¡Tsk! Hoy no estoy de humor.",
+    "id": "Tsk! Aku hanya tidak mood sekarang.",
+    "pt": "Tsc! Não estou com vontade hoje.",
+    "th": "ชิ! วันนี้ข้าแค่อารมณ์ไม่ดีเท่าไหร่",
+    "vi": "Tsk! Bữa nay ta không có hứng."
+  },
+  "MST_SKILLS_2000380_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000380_NAME": {
+    "en": "Thunderstorm",
+    "es": "Tormenta eléctrica",
+    "id": "Badai Topan",
+    "pt": "Tempestade Elétrica",
+    "th": "ธันเดอร์สตอร์ม",
+    "vi": "Thần sấm sét"
+  },
+  "MST_SKILLS_2000381_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000381_NAME": {
+    "en": "I'm supercharged!",
+    "es": "¡Estoy supercargado!",
+    "id": "Aku super terisi!",
+    "pt": "Estou supercarregado!",
+    "th": "ข้าชาร์จพลังเต็มที่แล้ว!",
+    "vi": "Ta mệt rồi."
+  },
+  "MST_SKILLS_2000382_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000382_NAME": {
+    "en": "I'm shooting sparks everywhere!",
+    "es": "¡Lanzo chispas para todos lados!",
+    "id": "Aku menembakkan percikan di mana saja!",
+    "pt": "Estou lançando faíscas por todos os lados!",
+    "th": "ข้ายิงสะเก็ดไฟไปทั่วเลย!",
+    "vi": "Ta đang bắn tia ở khắp mọi nơi!"
+  },
+  "MST_SKILLS_2000383_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000383_NAME": {
+    "en": "You want to be electrocuted?!",
+    "es": "¿Quieres electrocutarte?",
+    "id": "Kamu mau disetrum?!",
+    "pt": "Você quer ser eletrocutado?!",
+    "th": "เจ้าอยากจะโดนช็อตอย่างนั้นรึ?!",
+    "vi": "Ngươi có muốn bị điện giật?!"
+  },
   "MST_SKILLS_2000384_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -91654,85 +91806,5 @@
     "pt": "Eu falei pra parar!!!",
     "th": "ข้าบอกให้หยุดไง!!!",
     "vi": "I told you to stop that!!!"
-  },
-  "MST_SKILLS_2122456_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122456_NAME": {
-    "en": "It's just a scratch...",
-    "es": "Solo es un rasguño...",
-    "id": "Itu hanya sebuah goresan...",
-    "pt": "É só um arranhão...",
-    "th": "นั่นแค่รอยข่วน...",
-    "vi": "It's just a scratch..."
-  },
-  "MST_SKILLS_2122457_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122457_NAME": {
-    "en": "You're so overprotective!!",
-    "es": "¡Me proteges demasiado!",
-    "id": "Kau terlalu melindungi!!",
-    "pt": "Você é tão superprotetora!!",
-    "th": "เจ้าดูแลมากเกินไปแล้ว!!!",
-    "vi": "You're so overprotective!!"
-  },
-  "MST_SKILLS_2122458_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122458_NAME": {
-    "en": "You're embarrassing me!!",
-    "es": "¡Me haces sonrojar!",
-    "id": "Kau mempermalukanku!!",
-    "pt": "Você está me envergonhando!!",
-    "th": "เจ้าทำให้ข้าอับอาย!!",
-    "vi": "You're embarrassing me!!"
-  },
-  "MST_SKILLS_2122459_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122459_NAME": {
-    "en": "Sorry...",
-    "es": "Lo siento...",
-    "id": "Maaf...",
-    "pt": "Desculpe...",
-    "th": "โทษที...",
-    "vi": "Sorry..."
-  },
-  "MST_SKILLS_2122460_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122460_NAME": {
-    "en": "Sis, stand back.",
-    "es": "Hermana, hazte a un lado.",
-    "id": "Kak, mundur.",
-    "pt": "Mana, pra trás.",
-    "th": "พี่ ถอยไปซะ",
-    "vi": "Sis, stand back."
   }
 }
