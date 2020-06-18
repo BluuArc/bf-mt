@@ -1,20 +1,4 @@
 {
-  "MST_SKILLS_2840758_NAME": {
-    "en": "Lightning Strikes Twice",
-    "es": "Lightning Strikes Twice",
-    "id": "Lightning Strikes Twice",
-    "pt": "Lightning Strikes Twice",
-    "th": "Lightning Strikes Twice",
-    "vi": "Lightning Strikes Twice"
-  },
-  "MST_SKILLS_2840767_DESCRIPTION": {
-    "en": "18 combo massive Thunder attack on all foes (damage relative to remaining HP), adds evasion for 3 turns,enormously boosts OD gauge, fully restores HP for 3 turns,enormously boosts Atk, Def relative to HP for 3 turns",
-    "es": "18 combo massive Thunder attack on all foes (damage relative to remaining HP), adds evasion for 3 turns,enormously boosts OD gauge, fully restores HP for 3 turns,enormously boosts Atk, Def relative to HP for 3 turns",
-    "id": "18 combo massive Thunder attack on all foes (damage relative to remaining HP), adds evasion for 3 turns,enormously boosts OD gauge, fully restores HP for 3 turns,enormously boosts Atk, Def relative to HP for 3 turns",
-    "pt": "18 combo massive Thunder attack on all foes (damage relative to remaining HP), adds evasion for 3 turns,enormously boosts OD gauge, fully restores HP for 3 turns,enormously boosts Atk, Def relative to HP for 3 turns",
-    "th": "18 combo massive Thunder attack on all foes (damage relative to remaining HP), adds evasion for 3 turns,enormously boosts OD gauge, fully restores HP for 3 turns,enormously boosts Atk, Def relative to HP for 3 turns",
-    "vi": "18 combo massive Thunder attack on all foes (damage relative to remaining HP), adds evasion for 3 turns,enormously boosts OD gauge, fully restores HP for 3 turns,enormously boosts Atk, Def relative to HP for 3 turns"
-  },
   "MST_SKILLS_2840767_NAME": {
     "en": "You’re getting on my nerves!",
     "es": "You’re getting on my nerves!",
@@ -182,6 +166,22 @@
     "pt": "Ahahahaha!",
     "th": "Ahahahaha!",
     "vi": "Ahahahaha!"
+  },
+  "MST_SKILLS_2840888_DESCRIPTION": {
+    "en": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
+    "es": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
+    "id": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
+    "pt": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
+    "th": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
+    "vi": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance"
+  },
+  "MST_SKILLS_2840888_NAME": {
+    "en": "Three Steps to Śūnyatā",
+    "es": "Three Steps to Śūnyatā",
+    "id": "Three Steps to Śūnyatā",
+    "pt": "Three Steps to Śūnyatā",
+    "th": "Three Steps to Śūnyatā",
+    "vi": "Three Steps to Śūnyatā"
   },
   "MST_SKILLS_2840900_DESCRIPTION": {
     "en": "18 combo massive Thunder attack on all foes (uses all allies' BB gauge), 100% damage reduction from Water types for 2 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & fully restores HP for 3 turns",
@@ -21942,6 +21942,22 @@
     "pt": "Holy Commencement",
     "th": "Holy Commencement",
     "vi": "Holy Commencement"
+  },
+  "MST_SKILLS_3830888_DESCRIPTION": {
+    "en": "68 combo grand dual attack on all foes (damage relative to remaining HP), boosts spark damage, max HP, 100% damage reduction, spark damage restores HP and boosts BB gauge, 80% KO resistance, 80% raises allies from KO & 50% OverDrive Fill",
+    "es": "68 combo grand dual attack on all foes (damage relative to remaining HP), boosts spark damage, max HP, 100% damage reduction, spark damage restores HP and boosts BB gauge, 80% KO resistance, 80% raises allies from KO & 50% OverDrive Fill",
+    "id": "68 combo grand dual attack on all foes (damage relative to remaining HP), boosts spark damage, max HP, 100% damage reduction, spark damage restores HP and boosts BB gauge, 80% KO resistance, 80% raises allies from KO & 50% OverDrive Fill",
+    "pt": "68 combo grand dual attack on all foes (damage relative to remaining HP), boosts spark damage, max HP, 100% damage reduction, spark damage restores HP and boosts BB gauge, 80% KO resistance, 80% raises allies from KO & 50% OverDrive Fill",
+    "th": "68 combo grand dual attack on all foes (damage relative to remaining HP), boosts spark damage, max HP, 100% damage reduction, spark damage restores HP and boosts BB gauge, 80% KO resistance, 80% raises allies from KO & 50% OverDrive Fill",
+    "vi": "68 combo grand dual attack on all foes (damage relative to remaining HP), boosts spark damage, max HP, 100% damage reduction, spark damage restores HP and boosts BB gauge, 80% KO resistance, 80% raises allies from KO & 50% OverDrive Fill"
+  },
+  "MST_SKILLS_3830888_NAME": {
+    "en": "Trilakṣaṇa",
+    "es": "Trilakṣaṇa",
+    "id": "Trilakṣaṇa",
+    "pt": "Trilakṣaṇa",
+    "th": "Trilakṣaṇa",
+    "vi": "Trilakṣaṇa"
   },
   "MST_SKILLS_3840258_DESCRIPTION": {
     "en": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, max HP, spark damage, BB gauge, 100% damage reduction, raises normal hit amount, damage taken restores HP & inflicts Atk, Def reduction",

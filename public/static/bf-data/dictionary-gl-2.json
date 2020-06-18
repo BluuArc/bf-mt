@@ -1,4 +1,20 @@
 {
+  "MST_LEADERSKILLS_3501_NAME": {
+    "en": "Holy Light's Spirit",
+    "es": "Espíritu de luz sagrada",
+    "id": "Roh Terang Suci",
+    "pt": "Espírito da Luz Divina",
+    "th": "โฮลี่ไลท์สปิริต",
+    "vi": "Tinh thần Ánh sáng thần thánh"
+  },
+  "MST_LEADERSKILLS_3502_DESCRIPTION": {
+    "en": "65% boost to Atk power of Light, Fire, and Thunder types & adds chance of reducing damage taken",
+    "es": "65% de aumento al ataque de las unidades lumínicas, ígneas y atronadoras. Posibilidad de reducir el daño recibido",
+    "id": "Menambah 65% Serangan tipe Terang, Api, dan Guntur & kemungkinan mengurangi kerusakan yang diterima",
+    "pt": "Bônus de 65% no ATQ dos tipos Luz, Fogo e Trovão e chance de reduzir dano recebido",
+    "th": "65% เพิ่มพลังโจมตีของยูนิต แสง, ไฟ, กับ สายฟ้า และ เพิ่มโอกาสที่จะลดความเสียหายที่ได้รับ",
+    "vi": "Tăng 65% sức mạnh tấn công của các loại Quang, Hỏa và Lôi & thêm cơ hội giảm thiệt hại phải chịu"
+  },
   "MST_LEADERSKILLS_3502_NAME": {
     "en": "Holy Light's Assault",
     "es": "Asalto de luz sagrada",
@@ -14398,6 +14414,22 @@
     "pt": "Merciless Killer",
     "th": "Merciless Killer",
     "vi": "Merciless Killer"
+  },
+  "MST_LEADERSKILLS_840888_DESCRIPTION": {
+    "en": "140% all parameters and 30% critical rate (Thunder), 250% spark damage, 250% critical damage, spark damage fills BB gauge & spark damage restores HP",
+    "es": "140% all parameters and 30% critical rate (Thunder), 250% spark damage, 250% critical damage, spark damage fills BB gauge & spark damage restores HP",
+    "id": "140% all parameters and 30% critical rate (Thunder), 250% spark damage, 250% critical damage, spark damage fills BB gauge & spark damage restores HP",
+    "pt": "140% all parameters and 30% critical rate (Thunder), 250% spark damage, 250% critical damage, spark damage fills BB gauge & spark damage restores HP",
+    "th": "140% all parameters and 30% critical rate (Thunder), 250% spark damage, 250% critical damage, spark damage fills BB gauge & spark damage restores HP",
+    "vi": "140% all parameters and 30% critical rate (Thunder), 250% spark damage, 250% critical damage, spark damage fills BB gauge & spark damage restores HP"
+  },
+  "MST_LEADERSKILLS_840888_NAME": {
+    "en": "Narukami",
+    "es": "Narukami",
+    "id": "Narukami",
+    "pt": "Narukami",
+    "th": "Narukami",
+    "vi": "Narukami"
   },
   "MST_LEADERSKILLS_840900_DESCRIPTION": {
     "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Thunder elemental damage, 15% damage reduction from Water types & negates all status ailments",
@@ -91790,21 +91822,5 @@
     "pt": "Valquíria",
     "th": "วาไครี่",
     "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_50876_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วาไครี่",
-    "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_508_NAME": {
-    "en": "Sorcerer's Army Velnar",
-    "es": "Sorcerer's Army Velnar",
-    "id": "Sorcerer's Army Velnar",
-    "pt": "Sorcerer's Army Velnar",
-    "th": "Sorcerer's Army Velnar",
-    "vi": "Sorcerer's Army Velnar"
   }
 }
