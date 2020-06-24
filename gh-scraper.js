@@ -38,11 +38,11 @@ class GitHubScraper {
       return new Promise((fulfill) => {
         const onReady  = () => {
           if (document.readyState === 'complete') {
-            const result = Array.from(document.querySelectorAll('tr.js-navigation-item')).map(elem => ({
-              name: (elem.querySelector('.content a') || {}).title,
-              date: elem.querySelector('.age time-ago') ? elem.querySelector('.age time-ago').attributes.datetime.value : undefined,
-              link: (elem.querySelector('.content a') || {}).href,
-              isFolder: elem.querySelector('.icon > svg.octicon') && elem.querySelector('.icon > svg.octicon').classList.contains('octicon-file-directory'),
+            const result = Array.from(document.querySelectorAll('.js-navigation-item')).map(elem => ({
+              name: (elem.querySelector('[role="rowheader"] a') || {}).title,
+              date: elem.querySelector('time-ago') ? elem.querySelector('time-ago').attributes.datetime.value : undefined,
+              link: (elem.querySelector('[role="rowheader"] a') || {}).href,
+              isFolder: elem.querySelector('.svg.octicon') && elem.querySelector('.svg.octicon').classList.contains('octicon-file-directory'),
             })).filter(elem => !!elem.name);
             fulfill(result);
           }
@@ -55,10 +55,10 @@ class GitHubScraper {
         }
 
         function waitForDatesToLoad (callback) {
-          const hasUnresolvedDates = Array.from(document.querySelectorAll('tr.js-navigation-item'))
+          const hasUnresolvedDates = Array.from(document.querySelectorAll('.js-navigation-item'))
             .map(elem => ({
-              name: (elem.querySelector('.content a') || {}).title,
-              date: elem.querySelector('.age time-ago') ? elem.querySelector('.age time-ago').attributes.datetime.value : undefined,
+              name: (elem.querySelector('[role="rowheader"] a') || {}).title,
+              date: elem.querySelector('time-ago') ? elem.querySelector('time-ago').attributes.datetime.value : undefined,
             })).filter(elem => !!elem.name)
             .some(elem => !elem.date);
           if (hasUnresolvedDates) {
