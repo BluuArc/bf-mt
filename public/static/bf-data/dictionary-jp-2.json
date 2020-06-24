@@ -1,4 +1,132 @@
 {
+  "MST_LEADERSKILLS_3202_NAME": {
+    "en": "Cold Darkness's Assault",
+    "es": "Asalto de oscuridad gélida",
+    "id": "Serangan Kegelapan Dingin",
+    "pt": "Ataque da Escuridão Gélida",
+    "th": "โคลด์ ดาร์คเนส แอสซอลท์",
+    "vi": "Bóng tối lạnh lẽo tấn công"
+  },
+  "MST_LEADERSKILLS_3300_DESCRIPTION": {
+    "en": "25% boost to Atk power of Earth and Dark types",
+    "es": "25% aumento en poder de ataque de tipo tierra y oscuridad",
+    "id": "25% kenaikan kekuatan Serang tipe Bumi dan Gelap",
+    "pt": "Bônus de 25% no ATQ dos tipos Sombra e Terra",
+    "th": "25% เพิ่มพลังโจมตีของประเภท ดิน และ มืด",
+    "vi": "Tăng 25% sức mạnh tấn công của các loại Thổ và Bóng tối"
+  },
+  "MST_LEADERSKILLS_3300_NAME": {
+    "en": "Lush Darkness' Power",
+    "es": "Poder de oscuridad abundante",
+    "id": "Kekuatan Kegelapan Subur",
+    "pt": "Poder da Escuridão Embriagante",
+    "th": "ลัชดาร์คเนสพาวเวอร์",
+    "vi": "Sức mạnh Bóng tối căng tràn"
+  },
+  "MST_LEADERSKILLS_3301_DESCRIPTION": {
+    "en": "50% boost to Atk power of Earth and Dark types",
+    "es": "50% aumento en poder de ataque de tipo tierra y oscuridad",
+    "id": "50% kenaikan kekuatan Serang tipe Bumi dan Gelap",
+    "pt": "Bônus de 50% no ATQ dos tipos Sombra e Terra",
+    "th": "50% เพิ่มพลังโจมตีของประเภท ดิน และ มืด",
+    "vi": "Tăng 50% sức mạnh tấn công của các loại Thổ và Bóng tối"
+  },
+  "MST_LEADERSKILLS_3301_NAME": {
+    "en": "Lush Darkness' Spirit",
+    "es": "Espíritu de oscuridad abundante",
+    "id": "Roh Kegelapan Subur",
+    "pt": "Espírito da Escuridão Embriagante",
+    "th": "ลัชดาร์คเนสสปิริต",
+    "vi": "Tinh thần Bóng tối căng tràn"
+  },
+  "MST_LEADERSKILLS_3302_DESCRIPTION": {
+    "en": "65% boost to Atk power of Earth and Dark types & boosts effectiveness and drop rate of HC",
+    "es": "65% de aumento al ataque de las unidades terrestres y oscuras, y aumento a la efectividad y la posibilidad de encontrar CC",
+    "id": "Menambah 65% Serangan tipe Bumi dan Gelap & menambah efektivitas dan jumlah HC",
+    "pt": "Bônus de 65% no ATQ dos tipos Sombra e Terra e bônus na taxa de queda e efetividade do HC",
+    "th": "65% เพิ่มพลังโจมตีของยูนิต ดิน กับ มืด และ เพิ่มประสิทธิภาพ กับ อัตราดรอปของ HC",
+    "vi": "Tăng 65% sức mạnh tấn công của các loại Thổ và Hắc & tăng hiệu quả và tỷ lệ rơi Tinh thể trái tim"
+  },
+  "MST_LEADERSKILLS_3302_NAME": {
+    "en": "Lush Darkness's Assault",
+    "es": "Asalto de oscuridad opulenta",
+    "id": "Serangan Kegelapan Rimbun",
+    "pt": "Ataque Escuridão Viçosa",
+    "th": "ลัช ดารค์เนส แอสซอลท์",
+    "vi": "Bóng tối tràn ngập tấn công"
+  },
+  "MST_LEADERSKILLS_3400_DESCRIPTION": {
+    "en": "25% boost to Atk power of Thunder and Light types",
+    "es": "25% aumento en poder de ataque de tipo trueno y luz",
+    "id": "25% kenaikan kekuatan Serang tipe Guntur dan Terang",
+    "pt": "Bônus de 25% no ATQ dos tipos Luz e Trovão",
+    "th": "25% เพิ่มพลังโจมตีของประเภท สายฟ้า และ แสง",
+    "vi": "Tăng 25% sức mạnh tấn công của các loại Lôi và Ánh sáng"
+  },
+  "MST_LEADERSKILLS_3400_NAME": {
+    "en": "Bursting Light's Power",
+    "es": "Poder de luz llameante",
+    "id": "Kekuatan Terang Meledak",
+    "pt": "Poder da Luz Explosiva",
+    "th": "เบิร์สติ้งไลท์พาวเวอร์",
+    "vi": "Sức mạnh Ánh sáng bùng nổ"
+  },
+  "MST_LEADERSKILLS_3401_DESCRIPTION": {
+    "en": "50% boost to Atk power of Thunder and Light types",
+    "es": "50% aumento en poder de ataque de tipo trueno y luz",
+    "id": "50% kenaikan kekuatan Serang tipe Guntur dan Terang",
+    "pt": "Bônus de 50% no ATQ dos tipos Luz e Trovão",
+    "th": "50% เพิ่มพลังโจมตีของประเภท สายฟ้า และ แสง",
+    "vi": "Tăng 50% sức mạnh tấn công của các loại Lôi và Ánh sáng"
+  },
+  "MST_LEADERSKILLS_3401_NAME": {
+    "en": "Bursting Light's Spirit",
+    "es": "Espíritu de luz llameante",
+    "id": "Roh Terang Meledak",
+    "pt": "Espírito da Luz Explosiva",
+    "th": "เบิร์สติ้งไลท์สปิริต",
+    "vi": "Tinh thần Ánh sáng bùng nổ"
+  },
+  "MST_LEADERSKILLS_3402_DESCRIPTION": {
+    "en": "65% boost to Atk power of Thunder and Light types & recovers HP each turn",
+    "es": "65% de aumento al ataque de las unidades lumínicas y atronadoras, y recuperación de PS todos los turnos",
+    "id": "Menambah 65% Serangan tipe Guntur dan Terang & memulihkan HP setiap giliran",
+    "pt": "Bônus de 65% no ATQ dos tipos Luz e Trovão e recupera HP as cada turno.",
+    "th": "65% เพิ่มพลังโจมตีของยูนิต สายฟ้า กับ แสง และ ฟื้นฟู HP แต่ละเทิร์น",
+    "vi": "Tăng 65% sức mạnh tấn công của các loại Lôi và Quang & phục hồi Thể lực mỗi lượt"
+  },
+  "MST_LEADERSKILLS_3402_NAME": {
+    "en": "Bursting Light's Assault",
+    "es": "Asalto de luz llameante",
+    "id": "Serangan Cahaya Ledak",
+    "pt": "Ataque da Luz Explosiva",
+    "th": "เบิร์สติ้ง ไลท์ แอสซอลท์",
+    "vi": "Ánh sáng bùng nổ tấn công"
+  },
+  "MST_LEADERSKILLS_3500_DESCRIPTION": {
+    "en": "15% boost to Atk power of Light, Fire, and Thunder types",
+    "es": "15% aumento en poder de ataque de tipo luz, fuego y trueno",
+    "id": "15% kenaikan kekuatan Serang tipe Terang, Api, dan Guntur",
+    "pt": "Bônus de 15% no ATQ dos tipos Luz, Fogo e Trovão",
+    "th": "15% เพิ่มพลังโจมตีของประเภท แสง, ไฟ, และ สายฟ้า",
+    "vi": "Tăng 15% sức mạnh tấn công của các loại Ánh sáng, Hỏa và Lôi"
+  },
+  "MST_LEADERSKILLS_3500_NAME": {
+    "en": "Holy Light's Power",
+    "es": "Poder de luz sagrada",
+    "id": "Kekuatan Terang Suci",
+    "pt": "Poder da Luz Divina",
+    "th": "โฮลี่ไลท์พาวเวอร์",
+    "vi": "Sức mạnh Ánh sáng thần thánh"
+  },
+  "MST_LEADERSKILLS_3501_DESCRIPTION": {
+    "en": "30% boost to Atk power of Light, Fire, and Thunder types",
+    "es": "30% aumento en poder de ataque de tipo luz, fuego y trueno",
+    "id": "30% kenaikan kekuatan Serang tipe Terang, Api, dan Guntur",
+    "pt": "Bônus de 30% no ATQ dos tipos Luz, Fogo e Trovão",
+    "th": "30% เพิ่มพลังโจมตีของประเภท แสง, ไฟ, และ สายฟ้า",
+    "vi": "Tăng 30% sức mạnh tấn công của các loại Ánh sáng, Hỏa và Lôi"
+  },
   "MST_LEADERSKILLS_3501_NAME": {
     "en": "Holy Light's Spirit",
     "es": "Espíritu de luz sagrada",
@@ -9968,12 +10096,12 @@
     "vi": "Midnight Sonata"
   },
   "MST_LEADERSKILLS_801268_DESCRIPTION": {
-    "en": "60% boost to max HP, boosts Atk, Def, Rec relative to remaining HP, damage taken may restore HP & considerably reduces BB gauge required for BB",
-    "es": "60% boost to max HP, boosts Atk, Def, Rec relative to remaining HP, damage taken may restore HP & considerably reduces BB gauge required for BB",
-    "id": "60% ekstra HP maks, menambah Serang, Tahan, Pulih sesuai sisa HP, kerusakan diderita bisa pulihkan HP & lumayan kurangi meteran BB untuk BB",
-    "pt": "60% boost to max HP, boosts Atk, Def, Rec relative to remaining HP, damage taken may restore HP & considerably reduces BB gauge required for BB",
-    "th": "60% เพิ่มค่า HP สูงสุด, เพิ่มค่า โจมตี, ป้องกัน, ฟื้นฟู สัมพันธ์กับ HP ที่เหลืออยู่, ความเสียหายทีได้รับ อาจจะ ฟื้นคืน HP และ ลดเกจ BB ที่จำเป็นสำหรับ BB อย่างมาก",
-    "vi": "60% boost to max HP, boosts Atk, Def, Rec relative to remaining HP, damage taken may restore HP & considerably reduces BB gauge required for BB"
+    "en": "160% max HP, 0-100% Atk, Def, Rec relative to remaining HP, probable 3 turns spark vulnerability infliction, 25% reduction to BB activation cost & damage taken may restore HP",
+    "es": "160% max HP, 0-100% Atk, Def, Rec relative to remaining HP, probable 3 turns spark vulnerability infliction, 25% reduction to BB activation cost & damage taken may restore HP",
+    "id": "160% max HP, 0-100% Atk, Def, Rec relative to remaining HP, probable 3 turns spark vulnerability infliction, 25% reduction to BB activation cost & damage taken may restore HP",
+    "pt": "160% max HP, 0-100% Atk, Def, Rec relative to remaining HP, probable 3 turns spark vulnerability infliction, 25% reduction to BB activation cost & damage taken may restore HP",
+    "th": "160% max HP, 0-100% Atk, Def, Rec relative to remaining HP, probable 3 turns spark vulnerability infliction, 25% reduction to BB activation cost & damage taken may restore HP",
+    "vi": "160% max HP, 0-100% Atk, Def, Rec relative to remaining HP, probable 3 turns spark vulnerability infliction, 25% reduction to BB activation cost & damage taken may restore HP"
   },
   "MST_LEADERSKILLS_801268_NAME": {
     "en": "Lucent Rhapsody",
@@ -10688,12 +10816,12 @@
     "vi": "Unstoppable Flame Torrent"
   },
   "MST_LEADERSKILLS_810048_DESCRIPTION": {
-    "en": "150% boost to Atk, 80% boost to Def, max HP of Fire types, 20% damage reduction from Fire, Earth types, considerably boosts ABP and CBP gain, probable considerable reduction of foe's BB gauge & probable normal attack on all foes",
-    "es": "150% boost to Atk, 80% boost to Def, max HP of Fire types, 20% damage reduction from Fire, Earth types, considerably boosts ABP and CBP gain, probable considerable reduction of foe's BB gauge & probable normal attack on all foes",
-    "id": "150% ekstra Serang, 80% ekstra Tahan, HP maks tipe Api, kurangi 20% kerusakan dari tipe Api, Bumi, lumayan menambah perolehan ABP dan CBP, kans lumayan kurangi meteran BB musuh, kans serangan normal ke semua musuh",
-    "pt": "150% boost to Atk, 80% boost to Def, max HP of Fire types, 20% damage reduction from Fire, Earth types, considerably boosts ABP and CBP gain, probable considerable reduction of foe's BB gauge & probable normal attack on all foes",
-    "th": "150% เพิ่มค่าให้ โจมตี, 80% เพิ่มค่าให้ ป้องกัน, HP สูงสุด ของชนิดไฟ, 20% ลดค่าความเสียหาย จากชนิด ไฟ, ดิน, เพิ่มค่าอย่างมากให้ ABP และ CBP ที่ได้รับ, อาจทำให้ ลดค่าเกจ BB ของศัตรูอย่างมาก กับ อาจโจมตีธรรมดาใส่ศัตรูทั้งหมด",
-    "vi": "150% boost to Atk, 80% boost to Def, max HP of Fire types, 20% damage reduction from Fire, Earth types, considerably boosts ABP and CBP gain, probable considerable reduction of foe's BB gauge & probable normal attack on all foes"
+    "en": "200% Atk, 80% Def, 80% max HP (Fire), 20% damage reduction from Fire, Earth types, adds probable 50% BB gauge reduction to attack, normal attacks may hit all foes & 100% ABP, 50% CBP gain",
+    "es": "200% Atk, 80% Def, 80% max HP (Fire), 20% damage reduction from Fire, Earth types, adds probable 50% BB gauge reduction to attack, normal attacks may hit all foes & 100% ABP, 50% CBP gain",
+    "id": "200% Atk, 80% Def, 80% max HP (Fire), 20% damage reduction from Fire, Earth types, adds probable 50% BB gauge reduction to attack, normal attacks may hit all foes & 100% ABP, 50% CBP gain",
+    "pt": "200% Atk, 80% Def, 80% max HP (Fire), 20% damage reduction from Fire, Earth types, adds probable 50% BB gauge reduction to attack, normal attacks may hit all foes & 100% ABP, 50% CBP gain",
+    "th": "200% Atk, 80% Def, 80% max HP (Fire), 20% damage reduction from Fire, Earth types, adds probable 50% BB gauge reduction to attack, normal attacks may hit all foes & 100% ABP, 50% CBP gain",
+    "vi": "200% Atk, 80% Def, 80% max HP (Fire), 20% damage reduction from Fire, Earth types, adds probable 50% BB gauge reduction to attack, normal attacks may hit all foes & 100% ABP, 50% CBP gain"
   },
   "MST_LEADERSKILLS_810048_NAME": {
     "en": "Burning Copper Soul",
@@ -16286,6 +16414,38 @@
     "pt": "Manah Ascendant",
     "th": "Manah Ascendant",
     "vi": "Manah Ascendant"
+  },
+  "MST_LEADERSKILLS_860827_DESCRIPTION": {
+    "en": "120% Atk, 100% Def, 120% max HP and 30% critical rate (Dark), 10% damage reduction from Light, Dark types, 15% DoT reduction, spark damage restores HP & probable spark critical",
+    "es": "120% Atk, 100% Def, 120% max HP and 30% critical rate (Dark), 10% damage reduction from Light, Dark types, 15% DoT reduction, spark damage restores HP & probable spark critical",
+    "id": "120% Atk, 100% Def, 120% max HP and 30% critical rate (Dark), 10% damage reduction from Light, Dark types, 15% DoT reduction, spark damage restores HP & probable spark critical",
+    "pt": "120% Atk, 100% Def, 120% max HP and 30% critical rate (Dark), 10% damage reduction from Light, Dark types, 15% DoT reduction, spark damage restores HP & probable spark critical",
+    "th": "120% Atk, 100% Def, 120% max HP and 30% critical rate (Dark), 10% damage reduction from Light, Dark types, 15% DoT reduction, spark damage restores HP & probable spark critical",
+    "vi": "120% Atk, 100% Def, 120% max HP and 30% critical rate (Dark), 10% damage reduction from Light, Dark types, 15% DoT reduction, spark damage restores HP & probable spark critical"
+  },
+  "MST_LEADERSKILLS_860827_NAME": {
+    "en": "Reclusive Shadow",
+    "es": "Reclusive Shadow",
+    "id": "Reclusive Shadow",
+    "pt": "Reclusive Shadow",
+    "th": "Reclusive Shadow",
+    "vi": "Reclusive Shadow"
+  },
+  "MST_LEADERSKILLS_860828_DESCRIPTION": {
+    "en": "150% Atk, 120% Def, 150% max HP and 30% critical rate (Dark), 20% damage reduction from Light, Dark types, spark damage restores HP, 15% DoT reduction, probable spark critical & 135% ABP, 80% CBP gain",
+    "es": "150% Atk, 120% Def, 150% max HP and 30% critical rate (Dark), 20% damage reduction from Light, Dark types, spark damage restores HP, 15% DoT reduction, probable spark critical & 135% ABP, 80% CBP gain",
+    "id": "150% Atk, 120% Def, 150% max HP and 30% critical rate (Dark), 20% damage reduction from Light, Dark types, spark damage restores HP, 15% DoT reduction, probable spark critical & 135% ABP, 80% CBP gain",
+    "pt": "150% Atk, 120% Def, 150% max HP and 30% critical rate (Dark), 20% damage reduction from Light, Dark types, spark damage restores HP, 15% DoT reduction, probable spark critical & 135% ABP, 80% CBP gain",
+    "th": "150% Atk, 120% Def, 150% max HP and 30% critical rate (Dark), 20% damage reduction from Light, Dark types, spark damage restores HP, 15% DoT reduction, probable spark critical & 135% ABP, 80% CBP gain",
+    "vi": "150% Atk, 120% Def, 150% max HP and 30% critical rate (Dark), 20% damage reduction from Light, Dark types, spark damage restores HP, 15% DoT reduction, probable spark critical & 135% ABP, 80% CBP gain"
+  },
+  "MST_LEADERSKILLS_860828_NAME": {
+    "en": "Grim Walker",
+    "es": "Grim Walker",
+    "id": "Grim Walker",
+    "pt": "Grim Walker",
+    "th": "Grim Walker",
+    "vi": "Grim Walker"
   },
   "MST_LEADERSKILLS_860838_DESCRIPTION": {
     "en": "120% Atk, max HP, 100% Def, Rec, 100% ABP, 50% CBP gain, raises normal hit amount, normal attacks may hit all foes & adds probable 1 turn Atk reduction infliction to attack for 2 turns when damage dealt is over 1",
@@ -91725,102 +91885,6 @@
     "id": "Valkyrie",
     "pt": "Valquíria",
     "th": "วาลคิรี",
-    "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_50864_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วาลคิรี",
-    "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_50865_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วาลคิรี",
-    "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_50866_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วาลคิรี",
-    "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_50867_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วาลคิรี",
-    "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_50868_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วาลคิรี",
-    "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_50869_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วาลคิรี",
-    "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_50870_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วาลคิรี",
-    "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_50871_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วาลคิรี",
-    "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_50872_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วัลไครี่",
-    "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_50873_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วาลคิรี่",
-    "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_50874_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วาไครี่",
-    "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_50875_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วาไครี่",
     "vi": "Valkyrie"
   }
 }
