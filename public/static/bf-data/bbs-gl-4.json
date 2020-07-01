@@ -150879,6 +150879,1398 @@
       }
     ]
   },
+  "4820688": {
+    "damage frames": [
+      {
+        "effect delay time(ms)/frame": "16.7/1",
+        "frame times": [
+          14,
+          17,
+          20,
+          23,
+          26,
+          29,
+          32,
+          35,
+          38,
+          41,
+          44,
+          47,
+          50,
+          53,
+          56,
+          59,
+          62,
+          65,
+          68,
+          71,
+          74,
+          77,
+          80,
+          83,
+          86,
+          89,
+          92,
+          95,
+          98,
+          101,
+          104,
+          107,
+          110,
+          113,
+          116
+        ],
+        "hit dmg% distribution": [
+          6,
+          5,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          5
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 35,
+        "proc id": "47"
+      },
+      {
+        "effect delay time(ms)/frame": "16.7/1",
+        "frame times": [
+          14,
+          17,
+          20,
+          23,
+          26,
+          29,
+          32,
+          35,
+          38,
+          41,
+          44,
+          47,
+          50,
+          53,
+          56,
+          59,
+          62,
+          65,
+          68,
+          71,
+          74,
+          77,
+          80,
+          83,
+          86,
+          89,
+          92,
+          95,
+          98,
+          101,
+          104,
+          107,
+          110,
+          113,
+          116
+        ],
+        "hit dmg% distribution": [
+          6,
+          5,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          5
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 35,
+        "proc id": "47"
+      },
+      {
+        "effect delay time(ms)/frame": "0.0/0",
+        "frame times": [
+          0
+        ],
+        "hit dmg% distribution": [
+          100
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 1,
+        "proc id": "55"
+      },
+      {
+        "effect delay time(ms)/frame": "0.0/0",
+        "frame times": [
+          0
+        ],
+        "hit dmg% distribution": [
+          100
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 1,
+        "proc id": "23"
+      },
+      {
+        "effect delay time(ms)/frame": "0.0/0",
+        "frame times": [
+          0
+        ],
+        "hit dmg% distribution": [
+          100
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 1,
+        "proc id": "54"
+      },
+      {
+        "effect delay time(ms)/frame": "0.0/0",
+        "frame times": [
+          0
+        ],
+        "hit dmg% distribution": [
+          100
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 1,
+        "proc id": "5"
+      },
+      {
+        "effect delay time(ms)/frame": "0.0/0",
+        "frame times": [
+          0
+        ],
+        "hit dmg% distribution": [
+          100
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 1,
+        "proc id": "10019"
+      },
+      {
+        "effect delay time(ms)/frame": "0.0/0",
+        "frame times": [
+          0
+        ],
+        "hit dmg% distribution": [
+          100
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 1,
+        "proc id": "18"
+      },
+      {
+        "effect delay time(ms)/frame": "0.0/0",
+        "frame times": [
+          0
+        ],
+        "hit dmg% distribution": [
+          100
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 1,
+        "proc id": "19"
+      },
+      {
+        "effect delay time(ms)/frame": "0.0/0",
+        "frame times": [
+          0
+        ],
+        "hit dmg% distribution": [
+          100
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 1,
+        "proc id": "8"
+      },
+      {
+        "effect delay time(ms)/frame": "0.0/0",
+        "frame times": [
+          0
+        ],
+        "hit dmg% distribution": [
+          100
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 1,
+        "proc id": "11003"
+      },
+      {
+        "effect delay time(ms)/frame": "0.0/0",
+        "frame times": [
+          0
+        ],
+        "hit dmg% distribution": [
+          100
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 1,
+        "proc id": "10019"
+      }
+    ],
+    "desc": "70 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate, Water, Thunder elemental damage, spark damage, critical damage, max HP, fills BB gauge, 100% damage reduction & purges LS and ES Lock",
+    "drop check count": 1,
+    "id": "4820688",
+    "levels": [
+      {
+        "bc cost": 7,
+        "effects": [
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb dmg%": 250,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental weakness buff turns": 4,
+            "elemental weakness multiplier%": 500,
+            "proc id": "55",
+            "target area": "aoe",
+            "target type": "party",
+            "thunder units do extra elemental weakness dmg": true,
+            "water units do extra elemental weakness dmg": true
+          },
+          {
+            "buff turns": 4,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "23",
+            "spark dmg% buff (40)": 500,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "buff turns (84)": 4,
+            "crit multiplier%": 500,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "54",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "atk% buff (1)": 500,
+            "buff turns": 4,
+            "crit% buff (7)": 60,
+            "def% buff (3)": 500,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "60,147,0,0,0,0,0,0,0,100"
+          },
+          {
+            "dmg% reduction": 100,
+            "dmg% reduction turns (36)": 4,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "18",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "increase bb gauge gradual": 100,
+            "increase bb gauge gradual turns (37)": 4,
+            "proc id": "19",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "max hp% increase": 55,
+            "proc id": "8",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "11003",
+            "unknown proc param": "0,0,0,0,60,0,3,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "10005,10006,0,0,0,0,0,0,0,60"
+          }
+        ]
+      },
+      {
+        "bc cost": 7,
+        "effects": [
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb dmg%": 300,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental weakness buff turns": 4,
+            "elemental weakness multiplier%": 500,
+            "proc id": "55",
+            "target area": "aoe",
+            "target type": "party",
+            "thunder units do extra elemental weakness dmg": true,
+            "water units do extra elemental weakness dmg": true
+          },
+          {
+            "buff turns": 4,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "23",
+            "spark dmg% buff (40)": 500,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "buff turns (84)": 4,
+            "crit multiplier%": 500,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "54",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "atk% buff (1)": 500,
+            "buff turns": 4,
+            "crit% buff (7)": 60,
+            "def% buff (3)": 500,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "60,147,0,0,0,0,0,0,0,100"
+          },
+          {
+            "dmg% reduction": 100,
+            "dmg% reduction turns (36)": 4,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "18",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "increase bb gauge gradual": 100,
+            "increase bb gauge gradual turns (37)": 4,
+            "proc id": "19",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "max hp% increase": 55,
+            "proc id": "8",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "11003",
+            "unknown proc param": "0,0,0,0,70,0,3,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "10005,10006,0,0,0,0,0,0,0,70"
+          }
+        ]
+      },
+      {
+        "bc cost": 7,
+        "effects": [
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb dmg%": 350,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental weakness buff turns": 5,
+            "elemental weakness multiplier%": 500,
+            "proc id": "55",
+            "target area": "aoe",
+            "target type": "party",
+            "thunder units do extra elemental weakness dmg": true,
+            "water units do extra elemental weakness dmg": true
+          },
+          {
+            "buff turns": 5,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "23",
+            "spark dmg% buff (40)": 500,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "buff turns (84)": 5,
+            "crit multiplier%": 500,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "54",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "atk% buff (1)": 500,
+            "buff turns": 5,
+            "crit% buff (7)": 60,
+            "def% buff (3)": 500,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "60,147,0,0,0,0,0,0,0,100"
+          },
+          {
+            "dmg% reduction": 100,
+            "dmg% reduction turns (36)": 5,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "18",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "increase bb gauge gradual": 100,
+            "increase bb gauge gradual turns (37)": 5,
+            "proc id": "19",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "max hp% increase": 55,
+            "proc id": "8",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "11003",
+            "unknown proc param": "0,0,0,0,80,0,3,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "10005,10006,0,0,0,0,0,0,0,80"
+          }
+        ]
+      },
+      {
+        "bc cost": 6,
+        "effects": [
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb dmg%": 400,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental weakness buff turns": 5,
+            "elemental weakness multiplier%": 500,
+            "proc id": "55",
+            "target area": "aoe",
+            "target type": "party",
+            "thunder units do extra elemental weakness dmg": true,
+            "water units do extra elemental weakness dmg": true
+          },
+          {
+            "buff turns": 5,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "23",
+            "spark dmg% buff (40)": 500,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "buff turns (84)": 5,
+            "crit multiplier%": 500,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "54",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "atk% buff (1)": 500,
+            "buff turns": 5,
+            "crit% buff (7)": 60,
+            "def% buff (3)": 500,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "60,147,0,0,0,0,0,0,0,100"
+          },
+          {
+            "dmg% reduction": 100,
+            "dmg% reduction turns (36)": 5,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "18",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "increase bb gauge gradual": 100,
+            "increase bb gauge gradual turns (37)": 5,
+            "proc id": "19",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "max hp% increase": 55,
+            "proc id": "8",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "11003",
+            "unknown proc param": "0,0,0,0,80,0,3,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "10005,10006,0,0,0,0,0,0,0,80"
+          }
+        ]
+      },
+      {
+        "bc cost": 6,
+        "effects": [
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb dmg%": 450,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental weakness buff turns": 5,
+            "elemental weakness multiplier%": 500,
+            "proc id": "55",
+            "target area": "aoe",
+            "target type": "party",
+            "thunder units do extra elemental weakness dmg": true,
+            "water units do extra elemental weakness dmg": true
+          },
+          {
+            "buff turns": 5,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "23",
+            "spark dmg% buff (40)": 500,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "buff turns (84)": 5,
+            "crit multiplier%": 500,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "54",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "atk% buff (1)": 500,
+            "buff turns": 5,
+            "crit% buff (7)": 60,
+            "def% buff (3)": 500,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "60,147,0,0,0,0,0,0,0,100"
+          },
+          {
+            "dmg% reduction": 100,
+            "dmg% reduction turns (36)": 5,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "18",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "increase bb gauge gradual": 100,
+            "increase bb gauge gradual turns (37)": 5,
+            "proc id": "19",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "max hp% increase": 55,
+            "proc id": "8",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "11003",
+            "unknown proc param": "0,0,0,0,90,0,3,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "10005,10006,0,0,0,0,0,0,0,90"
+          }
+        ]
+      },
+      {
+        "bc cost": 5,
+        "effects": [
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb dmg%": 500,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental weakness buff turns": 5,
+            "elemental weakness multiplier%": 500,
+            "proc id": "55",
+            "target area": "aoe",
+            "target type": "party",
+            "thunder units do extra elemental weakness dmg": true,
+            "water units do extra elemental weakness dmg": true
+          },
+          {
+            "buff turns": 5,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "23",
+            "spark dmg% buff (40)": 500,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "buff turns (84)": 5,
+            "crit multiplier%": 500,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "54",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "atk% buff (1)": 500,
+            "buff turns": 5,
+            "crit% buff (7)": 60,
+            "def% buff (3)": 500,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "60,147,0,0,0,0,0,0,0,100"
+          },
+          {
+            "dmg% reduction": 100,
+            "dmg% reduction turns (36)": 5,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "18",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "increase bb gauge gradual": 100,
+            "increase bb gauge gradual turns (37)": 5,
+            "proc id": "19",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "max hp% increase": 55,
+            "proc id": "8",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "11003",
+            "unknown proc param": "0,0,0,0,90,0,4,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "10005,10006,0,0,0,0,0,0,0,90"
+          }
+        ]
+      },
+      {
+        "bc cost": 5,
+        "effects": [
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb dmg%": 500,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental weakness buff turns": 5,
+            "elemental weakness multiplier%": 500,
+            "proc id": "55",
+            "target area": "aoe",
+            "target type": "party",
+            "thunder units do extra elemental weakness dmg": true,
+            "water units do extra elemental weakness dmg": true
+          },
+          {
+            "buff turns": 5,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "23",
+            "spark dmg% buff (40)": 500,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "buff turns (84)": 5,
+            "crit multiplier%": 500,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "54",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "atk% buff (1)": 500,
+            "buff turns": 5,
+            "crit% buff (7)": 60,
+            "def% buff (3)": 500,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "60,147,0,0,0,0,0,0,0,100"
+          },
+          {
+            "dmg% reduction": 100,
+            "dmg% reduction turns (36)": 5,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "18",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "increase bb gauge gradual": 100,
+            "increase bb gauge gradual turns (37)": 5,
+            "proc id": "19",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "max hp% increase": 55,
+            "proc id": "8",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "11003",
+            "unknown proc param": "0,0,0,0,100,0,4,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "10005,10006,0,0,0,0,0,0,0,100"
+          }
+        ]
+      },
+      {
+        "bc cost": 4,
+        "effects": [
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb dmg%": 500,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental weakness buff turns": 5,
+            "elemental weakness multiplier%": 500,
+            "proc id": "55",
+            "target area": "aoe",
+            "target type": "party",
+            "thunder units do extra elemental weakness dmg": true,
+            "water units do extra elemental weakness dmg": true
+          },
+          {
+            "buff turns": 5,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "23",
+            "spark dmg% buff (40)": 500,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "buff turns (84)": 5,
+            "crit multiplier%": 500,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "54",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "atk% buff (1)": 500,
+            "buff turns": 5,
+            "crit% buff (7)": 60,
+            "def% buff (3)": 500,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "60,147,0,0,0,0,0,0,0,100"
+          },
+          {
+            "dmg% reduction": 100,
+            "dmg% reduction turns (36)": 5,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "18",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "increase bb gauge gradual": 100,
+            "increase bb gauge gradual turns (37)": 5,
+            "proc id": "19",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "max hp% increase": 55,
+            "proc id": "8",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "11003",
+            "unknown proc param": "0,0,0,0,100,0,5,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "10005,10006,0,0,0,0,0,0,0,100"
+          }
+        ]
+      },
+      {
+        "bc cost": 4,
+        "effects": [
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb dmg%": 500,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental weakness buff turns": 5,
+            "elemental weakness multiplier%": 500,
+            "proc id": "55",
+            "target area": "aoe",
+            "target type": "party",
+            "thunder units do extra elemental weakness dmg": true,
+            "water units do extra elemental weakness dmg": true
+          },
+          {
+            "buff turns": 5,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "23",
+            "spark dmg% buff (40)": 500,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "buff turns (84)": 5,
+            "crit multiplier%": 500,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "54",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "atk% buff (1)": 500,
+            "buff turns": 5,
+            "crit% buff (7)": 60,
+            "def% buff (3)": 500,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "60,147,0,0,0,0,0,0,0,100"
+          },
+          {
+            "dmg% reduction": 100,
+            "dmg% reduction turns (36)": 5,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "18",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "increase bb gauge gradual": 100,
+            "increase bb gauge gradual turns (37)": 5,
+            "proc id": "19",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "max hp% increase": 55,
+            "proc id": "8",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "11003",
+            "unknown proc param": "0,0,0,0,100,0,5,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "10005,10006,0,0,0,0,0,0,0,100"
+          }
+        ]
+      },
+      {
+        "bc cost": 3,
+        "effects": [
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb dmg%": 500,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "bb added atk% based on hp": 2000,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 2000,
+            "bb crit%": 60,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "47",
+            "target area": "aoe",
+            "target type": "enemy"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental weakness buff turns": 5,
+            "elemental weakness multiplier%": 500,
+            "proc id": "55",
+            "target area": "aoe",
+            "target type": "party",
+            "thunder units do extra elemental weakness dmg": true,
+            "water units do extra elemental weakness dmg": true
+          },
+          {
+            "buff turns": 5,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "23",
+            "spark dmg% buff (40)": 500,
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "buff turns (84)": 5,
+            "crit multiplier%": 500,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "54",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "atk% buff (1)": 500,
+            "buff turns": 5,
+            "crit% buff (7)": 60,
+            "def% buff (3)": 500,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "60,147,0,0,0,0,0,0,0,100"
+          },
+          {
+            "dmg% reduction": 100,
+            "dmg% reduction turns (36)": 5,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "18",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "increase bb gauge gradual": 100,
+            "increase bb gauge gradual turns (37)": 5,
+            "proc id": "19",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "max hp% increase": 55,
+            "proc id": "8",
+            "target area": "aoe",
+            "target type": "party"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "11003",
+            "unknown proc param": "0,0,0,0,100,0,5,0"
+          },
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "10005,10006,0,0,0,0,0,0,0,100"
+          }
+        ]
+      }
+    ],
+    "name": "Weshem-ib",
+    "attackInfo": [
+      {
+        "id": "47",
+        "target": "AOE",
+        "hits": 35
+      },
+      {
+        "id": "47",
+        "target": "AOE",
+        "hits": 35
+      }
+    ]
+  },
   "4850628": {
     "damage frames": [
       {
