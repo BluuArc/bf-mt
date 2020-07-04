@@ -634,6 +634,17 @@
           ]
         },
         {
+          "value": "-25&30&2",
+          "context": [
+            "units",
+            "820838-gl",
+            "leader skill",
+            "effects",
+            "4",
+            "buff"
+          ]
+        },
+        {
           "value": "-20&20&1",
           "context": [
             "units",
@@ -652,6 +663,17 @@
             "extra skill",
             "effects",
             "2",
+            "buff"
+          ]
+        },
+        {
+          "value": " -20&30&1",
+          "context": [
+            "units",
+            "860838-gl",
+            "leader skill",
+            "effects",
+            "4",
             "buff"
           ]
         },
@@ -940,6 +962,16 @@
             "2",
             "buff"
           ]
+        },
+        {
+          "value": "3",
+          "context": [
+            "items",
+            "819285-gl",
+            "effect",
+            "6",
+            "buff"
+          ]
         }
       ],
       "unknown buff params": [
@@ -992,6 +1024,16 @@
             "819219-gl",
             "effect",
             "2",
+            "buff"
+          ]
+        },
+        {
+          "value": "50&100",
+          "context": [
+            "items",
+            "819285-gl",
+            "effect",
+            "6",
             "buff"
           ]
         },
@@ -1550,6 +1592,32 @@
             "47214-gl",
             "effect",
             "3",
+            "buff"
+          ]
+        }
+      ]
+    },
+    "10001": {
+      "buff turns (10001)": [
+        {
+          "value": "2",
+          "context": [
+            "items",
+            "819261-gl",
+            "effect",
+            "4",
+            "buff"
+          ]
+        }
+      ],
+      "unknown buff params": [
+        {
+          "value": "100&0&0&0",
+          "context": [
+            "items",
+            "819261-gl",
+            "effect",
+            "4",
             "buff"
           ]
         }
