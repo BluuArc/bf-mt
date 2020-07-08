@@ -1,4 +1,52 @@
 {
+  "MST_LEADERSKILLS_311_NAME": {
+    "en": "Dark God's Cure",
+    "es": "Cura oscura divina",
+    "id": "Obat Dewa Gelap",
+    "pt": "Cura do Deus das Sombras",
+    "th": "ดาร์กก๊อดเคียว",
+    "vi": "Sự cứu rỗi của thần bóng đêm "
+  },
+  "MST_LEADERSKILLS_3200_DESCRIPTION": {
+    "en": "25% boost to Atk power of Water and Dark types",
+    "es": "25% aumento en poder de ataque de tipo agua y oscuridad",
+    "id": "25% kenaikan kekuatan Serang tipe Air dan Gelap",
+    "pt": "Bônus de 25% no ATQ dos tipos Sombra e Água",
+    "th": "25% เพิ่มพลังโจมตีของประเภท น้ำ และ มืด",
+    "vi": "Tăng 25% sức mạnh tấn công của các loại Thủy và Bóng tối"
+  },
+  "MST_LEADERSKILLS_3200_NAME": {
+    "en": "Cold Darkness' Power",
+    "es": "Poder de oscuridad gélida",
+    "id": "Kekuatan Kegelapan Dingin",
+    "pt": "Poder da Escuridão Gélida",
+    "th": "โคลด์ดาร์คเนสพาวเวอร์",
+    "vi": "Sức mạnh Bóng tối lạnh lẽo"
+  },
+  "MST_LEADERSKILLS_3201_DESCRIPTION": {
+    "en": "50% boost to Atk power of Water and Dark types",
+    "es": "50% aumento en poder de ataque de tipo agua y oscuridad",
+    "id": "50% kenaikan kekuatan Serang tipe Air dan Gelap",
+    "pt": "Bônus de 50% no ATQ dos tipos Sombra e Água",
+    "th": "50% เพิ่มพลังโจมตีของประเภท น้ำ และ มืด",
+    "vi": "Tăng 50% sức mạnh tấn công của các loại Thủy và Bóng tối"
+  },
+  "MST_LEADERSKILLS_3201_NAME": {
+    "en": "Cold Darkness' Spirit",
+    "es": "Espíritu de oscuridad gélida",
+    "id": "Roh Kegelapan Dingin",
+    "pt": "Espírito da Escuridão Gélida",
+    "th": "โคลด์ดาร์คเนสสปิริต",
+    "vi": "Tinh thần Bóng tối lạnh lẽo"
+  },
+  "MST_LEADERSKILLS_3202_DESCRIPTION": {
+    "en": "65% boost to Atk power of Water and Dark types & boosts damage produced during Spark",
+    "es": "65% de aumento al ataque de las unidades acuáticas y oscuras, y aumento al daño producido durante Chispas",
+    "id": "Menambah 65% Serangan tipe Air dan Gelap & menambah kerusakan Percikan",
+    "pt": "Bônus de 65% no ATQ dos tipos Sombra e Água e bônus no dano produzido durante Fagulha",
+    "th": "65% เพิ่มพลังโจมตีของยูนิต น้ำ กับ มืด และ เพิ่มความเสียหายที่สร้างระหว่างสปาร์ค",
+    "vi": "Tăng 65% sức mạnh tấn công của các loại Thủy và Bóng tối & tăng thiệt hại được tạo ra trong đòn Spark"
+  },
   "MST_LEADERSKILLS_3202_NAME": {
     "en": "Cold Darkness's Assault",
     "es": "Asalto de oscuridad gélida",
@@ -11743,6 +11791,22 @@
     "th": "Ignis Aura",
     "vi": "Ignis Aura"
   },
+  "MST_LEADERSKILLS_810908_DESCRIPTION": {
+    "en": "150% Def, Max HP, 200% spark damage when HP is above 50%, damage taken may restore HP, 20% damage reduction when damage taken is over 5k & 15% DoT reduction",
+    "es": "150% Def, Max HP, 200% spark damage when HP is above 50%, damage taken may restore HP, 20% damage reduction when damage taken is over 5k & 15% DoT reduction",
+    "id": "150% Def, Max HP, 200% spark damage when HP is above 50%, damage taken may restore HP, 20% damage reduction when damage taken is over 5k & 15% DoT reduction",
+    "pt": "150% Def, Max HP, 200% spark damage when HP is above 50%, damage taken may restore HP, 20% damage reduction when damage taken is over 5k & 15% DoT reduction",
+    "th": "150% Def, Max HP, 200% spark damage when HP is above 50%, damage taken may restore HP, 20% damage reduction when damage taken is over 5k & 15% DoT reduction",
+    "vi": "150% Def, Max HP, 200% spark damage when HP is above 50%, damage taken may restore HP, 20% damage reduction when damage taken is over 5k & 15% DoT reduction"
+  },
+  "MST_LEADERSKILLS_810908_NAME": {
+    "en": "Pride of House Valen",
+    "es": "Pride of House Valen",
+    "id": "Pride of House Valen",
+    "pt": "Pride of House Valen",
+    "th": "Pride of House Valen",
+    "vi": "Pride of House Valen"
+  },
   "MST_LEADERSKILLS_811118_DESCRIPTION": {
     "en": "60% boost to Atk, max HP, 100% boost to Spark damage, boosts Spark damage for 2 turns when Sparks have exceeded certain amount & hugely boosts Fire and Water elemental damage ",
     "es": "60% boost to Atk, max HP, 100% boost to Spark damage, boosts Spark damage for 2 turns when Sparks have exceeded certain amount & hugely boosts Fire and Water elemental damage ",
@@ -12464,12 +12528,12 @@
     "vi": "Divined Word"
   },
   "MST_LEADERSKILLS_820688_DESCRIPTION": {
-    "en": "200% boost to Atk, 140% boost to max HP, 30% boost to critical hit rate of Water types, hugely boost Spark damage, enormously boosts Water elemental damage, 15% damage reduction from Fire, Water types & damage taken may restore HP",
-    "es": "200% boost to Atk, 140% boost to max HP, 30% boost to critical hit rate of Water types, hugely boost Spark damage, enormously boosts Water elemental damage, 15% damage reduction from Fire, Water types & damage taken may restore HP",
-    "id": "200% boost to Atk, 140% boost to max HP, 30% boost to critical hit rate of Water types, hugely boost Spark damage, enormously boosts Water elemental damage, 15% damage reduction from Fire, Water types & damage taken may restore HP",
-    "pt": "200% boost to Atk, 140% boost to max HP, 30% boost to critical hit rate of Water types, hugely boost Spark damage, enormously boosts Water elemental damage, 15% damage reduction from Fire, Water types & damage taken may restore HP",
-    "th": "200% boost to Atk, 140% boost to max HP, 30% boost to critical hit rate of Water types, hugely boost Spark damage, enormously boosts Water elemental damage, 15% damage reduction from Fire, Water types & damage taken may restore HP",
-    "vi": "200% boost to Atk, 140% boost to max HP, 30% boost to critical hit rate of Water types, hugely boost Spark damage, enormously boosts Water elemental damage, 15% damage reduction from Fire, Water types & damage taken may restore HP"
+    "en": "200% Atk, 140% max HP and 30% critical rate (Water), 180% spark damage, 225% Water elemental damage, 15% damage reduction from Fire, Water types & damage taken may restore HP",
+    "es": "200% Atk, 140% max HP and 30% critical rate (Water), 180% spark damage, 225% Water elemental damage, 15% damage reduction from Fire, Water types & damage taken may restore HP",
+    "id": "200% Atk, 140% max HP and 30% critical rate (Water), 180% spark damage, 225% Water elemental damage, 15% damage reduction from Fire, Water types & damage taken may restore HP",
+    "pt": "200% Atk, 140% max HP and 30% critical rate (Water), 180% spark damage, 225% Water elemental damage, 15% damage reduction from Fire, Water types & damage taken may restore HP",
+    "th": "200% Atk, 140% max HP and 30% critical rate (Water), 180% spark damage, 225% Water elemental damage, 15% damage reduction from Fire, Water types & damage taken may restore HP",
+    "vi": "200% Atk, 140% max HP and 30% critical rate (Water), 180% spark damage, 225% Water elemental damage, 15% damage reduction from Fire, Water types & damage taken may restore HP"
   },
   "MST_LEADERSKILLS_820688_NAME": {
     "en": "Thrice Great",
@@ -91840,46 +91904,6 @@
     "vi": "Valkyrie"
   },
   "MST_MONSTERS_50858_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วาลคิรี",
-    "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_50859_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วาลคิรี",
-    "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_50860_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วาลคิรี",
-    "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_50861_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วาลคิรี",
-    "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_50862_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วาลคิรี",
-    "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_50863_NAME": {
     "en": "Valkyrie",
     "es": "Valquiria",
     "id": "Valkyrie",
