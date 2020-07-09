@@ -23,6 +23,23 @@
           </v-layout>
           <v-layout row wrap align-baseline>
             <v-flex>
+              <v-btn-toggle
+                multiple
+                :value="getFontModificationMappingForCategory(category)"
+                @change="$v => handleModificationMappingUpdate(c, $v)"
+              >
+                <v-btn flat value="bold">
+                  <v-icon>format_bold</v-icon>
+                </v-btn>
+                <v-btn flat value="italic">
+                  <v-icon>format_italic</v-icon>
+                </v-btn>
+                <v-btn flat value="underline">
+                  <v-icon>format_underlined</v-icon>
+                </v-btn>
+              </v-btn-toggle>
+            </v-flex>
+            <v-flex>
               <label>
                 Text Color
                 <input
@@ -316,6 +333,21 @@ export default {
     throttledUpdateCategoryValue: throttle(function(index, value) {
       this.updateCategoryValue(index, value);
     }, 500),
+    getFontModificationMappingForCategory (category) {
+      return [
+        category.fontWeight === 'bold' && 'bold',
+        category.fontStyle === 'italic' && 'italic',
+        category.textDecoration === 'underline' && 'underline',
+      ].filter((v) => v);
+    },
+    handleModificationMappingUpdate (categoryIndex, values = []) {
+      const fontModificationValues = {
+        fontWeight: values.includes('bold') ? 'bold' : 'normal',
+        fontStyle: values.includes('italic') ? 'italic' : 'normal',
+        textDecoration: values.includes('underline') ? 'underline' : 'unset',
+      };
+      this.updateCategoryValue(categoryIndex, fontModificationValues);
+    },
   },
   watch: {
     value () {

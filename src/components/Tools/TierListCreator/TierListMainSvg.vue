@@ -59,6 +59,9 @@
           alignment-baseline="middle"
           :font-size="category.fontSize || GENERAL_SVG_CONFIG.FONT_SIZE"
           :font-family="GENERAL_SVG_CONFIG.FONT_FAMILY"
+          :font-weight="category.fontWeight"
+          :font-style="category.fontStyle"
+          :text-decoration="category.textDecoration"
           :style="getCategoryTextStyle(category)"
           v-text="category.name"
         />
@@ -74,6 +77,9 @@
             'alignment-baseline': 'hanging',
             'font-size': category.fontSize || GENERAL_SVG_CONFIG.FONT_SIZE,
             'font-family': GENERAL_SVG_CONFIG.FONT_FAMILY,
+            'font-weight': category.fontWeight,
+            'font-style': category.fontStyle,
+            'text-decoration': category.textDecoration,
             style: getCategoryTextStyle(category),
           }"
         />
@@ -156,6 +162,9 @@ const GENERAL_SVG_CONFIG = {
   PADDING: 10,
   FONT_SIZE: 16, // 1em
   FONT_FAMILY: 'Arial',
+  FONT_STYLE: 'normal',
+  FONT_WEIGHT: 'normal',
+  TEXT_DECORATION: 'unset',
   TITLE_FONT_SIZE: 16 * 1.25, // 1.25em
   FOOTER_FONT_SIZE: 16 * 0.75, // 0.75em
   DISCLAIMER_FONT_SIZE: 16 * 0.5, // 0.5em
@@ -280,6 +289,9 @@ export default {
           trackHeight: yOffset + GENERAL_SVG_CONFIG.BASE_ROW_HEIGHT,
           yOffset: i * GENERAL_SVG_CONFIG.BASE_ROW_HEIGHT + (i + 1) * GENERAL_SVG_CONFIG.PADDING + titleHeight + extraHeight,
           fontSize: !isNaN(c.fontSize) ? +c.fontSize : GENERAL_SVG_CONFIG.FONT_SIZE,
+          fontWeight: c.fontWeight || GENERAL_SVG_CONFIG.FONT_WEIGHT,
+          fontStyle: c.fontStyle || GENERAL_SVG_CONFIG.FONT_STYLE,
+          textDecoration: c.textDecoration || GENERAL_SVG_CONFIG.TEXT_DECORATION,
         };
       });
     },

@@ -2,6 +2,9 @@ import colors from 'vuetify/es5/util/colors';
 import { convertCompareCodeToInput } from './compare';
 
 const DEFAULT_FONT_SIZE = 16;
+const DEFAULT_FONT_WEIGHT = 'normal';
+const DEFAULT_TEXT_DECORATION = 'unset';
+const DEFAULT_FONT_STYLE = 'normal';
 const SHORTHAND_MAPPINGS = Object.freeze([
   ['footerLeft', 'fL'],
   ['titleLeft', 'tL'],
@@ -15,9 +18,18 @@ const SHORTHAND_MAPPINGS = Object.freeze([
   ['scaleFactor', 'sF'],
   ['maxEntriesPerRow', 'mEPR'],
 ]);
+const FULL_TO_SHORT_FONT_ATTRIBUTE_MAPPINGS = Object.freeze([
+  ['normal', 'n'],
+  ['unset', 'u'],
+  ['bold', 'b'],
+  ['italic', 'i'],
+  ['underline', 'l'],
+]);
+const SHORT_TO_FULL_FONT_ATTRIBUTE_MAPPINGS = FULL_TO_SHORT_FONT_ATTRIBUTE_MAPPINGS.map(([full, short]) => [short, full]);
 
 export function convertCodeToCategory (input = '', isUriComponent) {
-  const [name = 'Category', textColor, backgroundColor, fontSize = DEFAULT_FONT_SIZE] = input.split('-');
+  const [name = 'Category', textColor, backgroundColor, fontSize = DEFAULT_FONT_SIZE, fontModifications = 'nun'] = input.split('-');
+  const [fontWeight = DEFAULT_FONT_WEIGHT, textDecoration = DEFAULT_TEXT_DECORATION, fontStyle = DEFAULT_FONT_STYLE] = fontModifications.split('').map((c) => replaceWithMapping(c[0], SHORT_TO_FULL_FONT_ATTRIBUTE_MAPPINGS));
 
   return {
     name: isUriComponent ? decodeURIComponent(name) : name,
@@ -25,6 +37,9 @@ export function convertCodeToCategory (input = '', isUriComponent) {
     textColor: textColor ? `#${textColor}` : colors.shades.black,
     backgroundColor: backgroundColor ? `#${backgroundColor}` : colors.shades.white,
     fontSize: (!isNaN(fontSize) && +fontSize > 0) ? fontSize : DEFAULT_FONT_SIZE,
+    fontWeight,
+    textDecoration,
+    fontStyle,
   };
 }
 
@@ -36,7 +51,20 @@ function replaceCharacters (str = '', replacementMapping = []) {
   return currentStr;
 }
 
-export function convertCategoryToCode ({ name = '', textColor, backgroundColor, fontSize = DEFAULT_FONT_SIZE }) {
+function replaceWithMapping (str = '', replacementMapping = []) {
+  const mapPair = replacementMapping.find(([key]) => key === str) || [];
+  return mapPair[1] || str;
+}
+
+export function convertCategoryToCode ({
+  name = '',
+  textColor,
+  backgroundColor,
+  fontSize = DEFAULT_FONT_SIZE,
+  fontWeight = DEFAULT_FONT_WEIGHT,
+  textDecoration = DEFAULT_TEXT_DECORATION,
+  fontStyle = DEFAULT_FONT_STYLE,
+}) {
   let textColorCode, backgroundColorCode;
   if (textColor) {
     textColorCode = textColor[0] === '#' ? textColor.slice(1): textColor;
@@ -51,7 +79,10 @@ export function convertCategoryToCode ({ name = '', textColor, backgroundColor, 
   }
 
   const cleanedName = replaceCharacters(name, [[/-/g, ''], [/\./g, '']]);
-  return `${cleanedName}-${textColorCode}-${backgroundColorCode}-${fontSize}`;
+  const fontModifications = [fontWeight, textDecoration, fontStyle]
+    .map((v) => replaceWithMapping(v, FULL_TO_SHORT_FONT_ATTRIBUTE_MAPPINGS))
+    .join('');
+  return `${cleanedName}-${textColorCode}-${backgroundColorCode}-${fontSize}-${fontModifications}`;
 }
 
 export function convertCodeToEntry (input = '') {
