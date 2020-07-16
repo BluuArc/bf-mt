@@ -15,7 +15,7 @@
         </slot>
       </v-flex>
     </v-layout>
-    <compare-speed-dial :compareCode="compareCode"/>
+    <compare-speed-dial v-if="type" :compareCode="compareCode"/>
   </v-container>
 </template>
 
@@ -35,7 +35,6 @@ export default {
     },
     type: {
       type: String,
-      required: true,
     },
   },
   components: {
