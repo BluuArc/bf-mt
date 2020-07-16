@@ -1,4 +1,84 @@
 {
+  "MST_LEADERSKILLS_309_NAME": {
+    "en": "Light God's Cure",
+    "es": "Cura de luz divina",
+    "id": "Obat Dewa Terang",
+    "pt": "Cura do Deus da Luz",
+    "th": "ไลท์ก๊อดเคียว",
+    "vi": "Sự cứu rồi của thần ánh sáng "
+  },
+  "MST_LEADERSKILLS_3100_DESCRIPTION": {
+    "en": "25% boost to Atk power of Fire and Light types",
+    "es": "25% de aumento en poder de ataque de tipo fuego y luz",
+    "id": "25% kenaikan kekuatan Serang tipe Api dan Terang",
+    "pt": "Bônus de 25% no ATQ dos tipos Luz e Fogo",
+    "th": "25% เพิ่มพลังโจมตีของประเภท ไฟ และ แสง",
+    "vi": "Tăng 25% sức mạnh tấn công của các loại Hỏa và Ánh sáng"
+  },
+  "MST_LEADERSKILLS_3100_NAME": {
+    "en": "Burning Light's Power",
+    "es": "Poder luz ardiente",
+    "id": "Kekuatan Terang Membakar",
+    "pt": "Poder da Luz Escaldante",
+    "th": "เบิร์นนิ่งไลท์พาวเวอร์",
+    "vi": "Sức mạnh Ánh sáng bùng cháy"
+  },
+  "MST_LEADERSKILLS_3101_DESCRIPTION": {
+    "en": "50% boost to Atk power of Fire and Light types",
+    "es": "50% de aumento en poder de ataque de tipo fuego y luz",
+    "id": "50% kenaikan kekuatan Serang tipe Api dan Terang",
+    "pt": "Bônus de 50% no ATQ dos tipos Luz e Fogo",
+    "th": "50% เพิ่มพลังโจมตีของประเภท ไฟ และ แสง",
+    "vi": "Tăng 50% sức mạnh tấn công của các loại Hỏa và Ánh sáng"
+  },
+  "MST_LEADERSKILLS_3101_NAME": {
+    "en": "Burning Light's Spirit",
+    "es": "Espíritu de luz ardiente",
+    "id": "Roh Terang Membakar",
+    "pt": "Espírito da Luz Escaldante",
+    "th": "เบิร์นนิ่งไลท์สปิริต",
+    "vi": "Tinh thần Ánh sáng bùng cháy"
+  },
+  "MST_LEADERSKILLS_3102_DESCRIPTION": {
+    "en": "65% boost to Atk power of Fire and Light types & large boost in effectiveness of HC",
+    "es": "65% de aumento al ataque de las unidades lumínicas e ígneas, y gran aumento a la efectividad de los CC",
+    "id": "Menambah 65% Serangan tipe Api dan Terang & menambah besar efektivitas HC",
+    "pt": "Bônus de 65% no poder de ATQ dos tipos Luz e Fogo e grande bônus na efetividade do HC",
+    "th": "65% เพิ่มพลังโจมตีของยูนิต ไฟ กับ แสง และ เพิ่มประสิทธิภาพของ HC อย่างมาก",
+    "vi": "Tăng 65% sức mạnh tấn công của các loại Hỏa và Quang & tăng mạnh hiệu quả của Tinh thể trái tim"
+  },
+  "MST_LEADERSKILLS_3102_NAME": {
+    "en": "Burning Light's Assault",
+    "es": "Asalto de luz ardiente",
+    "id": "Serangan Cahaya Bakar",
+    "pt": "Ataque da Luz Escaldante",
+    "th": "เบิร์นนิ่ง ไลท์ แอสซอลท์",
+    "vi": "Ánh sáng bùng cháy tấn công"
+  },
+  "MST_LEADERSKILLS_310_DESCRIPTION": {
+    "en": "25% boost to Recovery of Dark Types",
+    "es": "Aumenta un 25 % la recuperación de las unidades del mal.",
+    "id": "25% boost untuk Pemulihan Tipe Gelap",
+    "pt": "Reforço de 25% na Recuperação do tipo Sombra",
+    "th": "25% เพิ่มอัตราฟื้นฟูของประเภทความมืด",
+    "vi": "25% làm tăng quyền khôi phục các loại bóng tối "
+  },
+  "MST_LEADERSKILLS_310_NAME": {
+    "en": "Dark Spirit's Cure",
+    "es": "Cura oscura espiritual",
+    "id": "Obat Roh Gelap",
+    "pt": "Cura do Espírito das Sombras",
+    "th": "ดาร์กสปิริตเคียว",
+    "vi": "Sự cứu rồi tinh thần bóng đêm "
+  },
+  "MST_LEADERSKILLS_311_DESCRIPTION": {
+    "en": "50% boost to Recovery of Dark Types",
+    "es": "Aumenta un 50 % la recuperación de las unidades del mal.",
+    "id": "50% boost untuk Pemulihan Tipe Gelap",
+    "pt": "Reforço de 50% na Recuperação do tipo Sombra",
+    "th": "50% เพิ่มอัตราฟื้นฟูของประเภทความมืด",
+    "vi": "50% làm tăng quyền khôi phục các loaị bóng tối "
+  },
   "MST_LEADERSKILLS_311_NAME": {
     "en": "Dark God's Cure",
     "es": "Cura oscura divina",
@@ -15518,6 +15598,22 @@
     "pt": "Supreme Ruler's Exorcism",
     "th": "Supreme Ruler's Exorcism",
     "vi": "Supreme Ruler's Exorcism"
+  },
+  "MST_LEADERSKILLS_850888_DESCRIPTION": {
+    "en": "100% Atk, Def, Rec, 150% max HP, 20% damage reduction for 2 turns when damage taken is over 5k, 20% damage reduction from normal attacks, damage taken fills BB gauge & damage taken restores HP",
+    "es": "100% Atk, Def, Rec, 150% max HP, 20% damage reduction for 2 turns when damage taken is over 5k, 20% damage reduction from normal attacks, damage taken fills BB gauge & damage taken restores HP",
+    "id": "100% Atk, Def, Rec, 150% max HP, 20% damage reduction for 2 turns when damage taken is over 5k, 20% damage reduction from normal attacks, damage taken fills BB gauge & damage taken restores HP",
+    "pt": "100% Atk, Def, Rec, 150% max HP, 20% damage reduction for 2 turns when damage taken is over 5k, 20% damage reduction from normal attacks, damage taken fills BB gauge & damage taken restores HP",
+    "th": "100% Atk, Def, Rec, 150% max HP, 20% damage reduction for 2 turns when damage taken is over 5k, 20% damage reduction from normal attacks, damage taken fills BB gauge & damage taken restores HP",
+    "vi": "100% Atk, Def, Rec, 150% max HP, 20% damage reduction for 2 turns when damage taken is over 5k, 20% damage reduction from normal attacks, damage taken fills BB gauge & damage taken restores HP"
+  },
+  "MST_LEADERSKILLS_850888_NAME": {
+    "en": "Clarion Call",
+    "es": "Clarion Call",
+    "id": "Clarion Call",
+    "pt": "Clarion Call",
+    "th": "Clarion Call",
+    "vi": "Clarion Call"
   },
   "MST_LEADERSKILLS_850900_DESCRIPTION": {
     "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Light elemental damage, 15% damage reduction from Dark types & negates all status ailments",
@@ -91838,77 +91934,5 @@
     "pt": "Angel Maria",
     "th": "แองเจิล มาเรีย",
     "vi": "Angel Maria"
-  },
-  "MST_MONSTERS_50850_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วาลคิรี",
-    "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_50851_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วาลคิรี",
-    "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_50852_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วาลคิรี",
-    "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_50853_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วาลคิรี",
-    "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_50854_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วาลคิรี",
-    "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_50855_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วาลคิรี",
-    "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_50856_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วาลคิรี",
-    "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_50857_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วาลคิรี",
-    "vi": "Valkyrie"
-  },
-  "MST_MONSTERS_50858_NAME": {
-    "en": "Valkyrie",
-    "es": "Valquiria",
-    "id": "Valkyrie",
-    "pt": "Valquíria",
-    "th": "วาลคิรี",
-    "vi": "Valkyrie"
   }
 }
