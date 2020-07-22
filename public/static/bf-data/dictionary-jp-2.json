@@ -1,4 +1,148 @@
 {
+  "MST_LEADERSKILLS_3011_NAME": {
+    "en": "Epidemic God's Retribution",
+    "es": "Epidemic God's Retribution",
+    "id": "Pembalasan Dewa Epidemik",
+    "pt": "Epidemic God's Retribution",
+    "th": "เอพพิเดมิค ก็อด เรทริบิวชั่น",
+    "vi": "Epidemic God's Retribution"
+  },
+  "MST_LEADERSKILLS_301_DESCRIPTION": {
+    "en": "50% boost to Recovery of Fire Types",
+    "es": "Aumenta un 50 % la recuperación de las unidades de fuego.",
+    "id": "50% boost untuk Pemulihan Tipe Api",
+    "pt": "Reforço de 50% na Recuperação do tipo Fogo",
+    "th": "50% เพิ่มอัตราฟื้นฟูของประเภทไฟ",
+    "vi": "50% làm tăng quyền khôi phục của các loại lửa "
+  },
+  "MST_LEADERSKILLS_301_NAME": {
+    "en": "Fire God's Cure",
+    "es": "Cura ígnea divina",
+    "id": "Obat Dewa Api",
+    "pt": "Cura do Deus do Fogo",
+    "th": "ไฟเออร์ก๊อดเคียว",
+    "vi": "Sự cứu rỗi của thần lửa "
+  },
+  "MST_LEADERSKILLS_302_DESCRIPTION": {
+    "en": "25% boost to Recovery of Water Types",
+    "es": "Aumenta un 25 % la recuperación de las unidades de agua.",
+    "id": "25% boost untuk Pemulihan Tipe Air",
+    "pt": "Reforço de 25% na Recuperação do tipo Água",
+    "th": "25% เพิ่มอัตราฟื้นฟูของประเภทน้ำ",
+    "vi": "25% làm tăng quyền khôi phục của các loại nước "
+  },
+  "MST_LEADERSKILLS_302_NAME": {
+    "en": "Water Spirit's Cure",
+    "es": "Cura acuática espiritual",
+    "id": "Obat Roh Air",
+    "pt": "Cura do Espírito da Água",
+    "th": "วอเตอร์สปิริตเคียว",
+    "vi": "Sự cứu rồi tinh thần của nước "
+  },
+  "MST_LEADERSKILLS_303_DESCRIPTION": {
+    "en": "50% boost to Recovery of Water Types",
+    "es": "Aumenta un 50 % la recuperación de las unidades de agua.",
+    "id": "50% boost untuk Pemulihan Tipe Air",
+    "pt": "Reforço de 50% na Recuperação do tipo Água",
+    "th": "50% เพิ่มอัตราฟื้นฟูของประเภทน้ำ",
+    "vi": "50% làm tăng quyền khôi phục của các loại nước "
+  },
+  "MST_LEADERSKILLS_303_NAME": {
+    "en": "Water God''s Cure",
+    "es": "Cura acuática divina",
+    "id": "Obat Dewa Air",
+    "pt": "Cura do Deus da Água",
+    "th": "วอเตอร์ก๊อดเคียว",
+    "vi": "Sự cứu rỗi của thần nước "
+  },
+  "MST_LEADERSKILLS_304_DESCRIPTION": {
+    "en": "25% boost to Recovery of Earth Types",
+    "es": "Aumenta un 25 % la recuperación de las unidades de tierra.",
+    "id": "25% boost untuk Pemulihan Tipe Bumi",
+    "pt": "Reforço de 25% na Recuperação do tipo Terra",
+    "th": "25% เพิ่มอัตราฟื้นฟูของประเภทดิน",
+    "vi": "25% làm tăng quyền khôi phục của các loại đất "
+  },
+  "MST_LEADERSKILLS_304_NAME": {
+    "en": "Earth Spirit's Cure",
+    "es": "Cura pétrea espiritual",
+    "id": "Obat Roh Bumi",
+    "pt": "Cura do Espírito da Terra",
+    "th": "เอิร์ธสปิริตเคียว",
+    "vi": "Sự cứu rồi tinh thần của đất "
+  },
+  "MST_LEADERSKILLS_305_DESCRIPTION": {
+    "en": "50% boost to Recovery of Earth Types",
+    "es": "Aumenta un 50 % la recuperación de las unidades de tierra.",
+    "id": "50% boost untuk Pemulihan Tipe Bumi",
+    "pt": "Reforço de 50% na Recuperação do tipo Terra",
+    "th": "50% เพิ่มอัตราฟื้นฟูของประเภทดิน",
+    "vi": "50% làm tăng quyền khôi phục của các loại sấm "
+  },
+  "MST_LEADERSKILLS_305_NAME": {
+    "en": "Earth God's Cure",
+    "es": "Cura pétrea divina",
+    "id": "Obat Dewa Bumi",
+    "pt": "Cura do Deus da Terra",
+    "th": "เอิร์ธก๊อดเคียว",
+    "vi": "Sự cứu rỗi của thần đất "
+  },
+  "MST_LEADERSKILLS_306_DESCRIPTION": {
+    "en": "25% boost to Recovery of Thunder Types",
+    "es": "Aumenta un 25 % la recuperación de las unidades de trueno.",
+    "id": "25% boost untuk Pemulihan Tipe Guntur",
+    "pt": "Reforço de 25% na Recuperação do tipo Trovão",
+    "th": "25% เพิ่มอัตราฟื้นฟูของประเภทสายฟ้า",
+    "vi": "25% làm tăng quyền khôi phục các loại sấm "
+  },
+  "MST_LEADERSKILLS_306_NAME": {
+    "en": "Thunder Spirit's Cure",
+    "es": "Cura eléctrica espiritual",
+    "id": "Obat Roh Guntur",
+    "pt": "Cura do Espírito do Trovão",
+    "th": "ทันเดอร์สปิริตเคียว",
+    "vi": "Sự cứu rỗi tinh thần của sấm "
+  },
+  "MST_LEADERSKILLS_307_DESCRIPTION": {
+    "en": "50% boost to Recovery of Thunder Types",
+    "es": "Aumenta un 50 % la recuperación de las unidades de trueno.",
+    "id": "50% boost untuk Pemulihan Tipe Guntur",
+    "pt": "Reforço de 50% na Recuperação do tipo Trovão",
+    "th": "50% เพิ่มอัตราฟื้นฟูของประเภทสายฟ้า",
+    "vi": "50% làm tăng quyền khôi phục các loại sấm "
+  },
+  "MST_LEADERSKILLS_307_NAME": {
+    "en": "Thunder God's Cure",
+    "es": "Cura eléctrica divina",
+    "id": "Obat Dewa Guntur",
+    "pt": "Cura do Deus do Trovão",
+    "th": "ทันเดอร์ก๊อดเคียว",
+    "vi": "Sự cứu rỗi của thần sấm "
+  },
+  "MST_LEADERSKILLS_308_DESCRIPTION": {
+    "en": "25% boost to Recovery of Light Types",
+    "es": "Aumenta un 25 % la recuperación de las unidades de luz.",
+    "id": "25% boost untuk Pemulihan Tipe Terang",
+    "pt": "Reforço de 25% na Recuperação do tipo Luz",
+    "th": "25% เพิ่มอัตราฟื้นฟูของประเภทแสง",
+    "vi": "25% làm tăng quyền khôi phục các loại  ánh sáng "
+  },
+  "MST_LEADERSKILLS_308_NAME": {
+    "en": "Light Spirit's Cure",
+    "es": "Cura de luz espiritual",
+    "id": "Obat Roh Terang",
+    "pt": "Cura do Espírito da Luz",
+    "th": "ไลท์สปิริตเคียว",
+    "vi": "Sự cứu rỗi tinh thần của ánh sáng "
+  },
+  "MST_LEADERSKILLS_309_DESCRIPTION": {
+    "en": "50% boost to Recovery of Light Types",
+    "es": "Aumenta un 50 % la recuperación de las unidades de luz.",
+    "id": "50% boost untuk Pemulihan Tipe Terang",
+    "pt": "Reforço de 50% na Recuperação do tipo Luz",
+    "th": "50% เพิ่มอัตราฟื้นฟูของประเภทแสง",
+    "vi": "50% làm tăng quyền khôi phục các loai ánh sáng "
+  },
   "MST_LEADERSKILLS_309_NAME": {
     "en": "Light God's Cure",
     "es": "Cura de luz divina",
@@ -11408,12 +11552,12 @@
     "vi": "Fiery Resistance"
   },
   "MST_LEADERSKILLS_810558_DESCRIPTION": {
-    "en": "80% boost to Atk, max HP, 120% boost to Def, Rec of Fire types, considerably restores HP each turn, hugely boosts BB gauge when damage dealt has exceeded certain amount & damage taken hugely boosts BB gauge",
-    "es": "80% boost to Atk, max HP, 120% boost to Def, Rec of Fire types, considerably restores HP each turn, hugely boosts BB gauge when damage dealt has exceeded certain amount & damage taken hugely boosts BB gauge",
-    "id": "80% boost to Atk, max HP, 120% boost to Def, Rec of Fire types, considerably restores HP each turn, hugely boosts BB gauge when damage dealt has exceeded certain amount & damage taken hugely boosts BB gauge",
-    "pt": "80% boost to Atk, max HP, 120% boost to Def, Rec of Fire types, considerably restores HP each turn, hugely boosts BB gauge when damage dealt has exceeded certain amount & damage taken hugely boosts BB gauge",
-    "th": "80% boost to Atk, max HP, 120% boost to Def, Rec of Fire types, considerably restores HP each turn, hugely boosts BB gauge when damage dealt has exceeded certain amount & damage taken hugely boosts BB gauge",
-    "vi": "80% boost to Atk, max HP, 120% boost to Def, Rec of Fire types, considerably restores HP each turn, hugely boosts BB gauge when damage dealt has exceeded certain amount & damage taken hugely boosts BB gauge"
+    "en": "100% Atk, 140% Def, 140% Rec, 100% max HP (Fire), restores HP each turn, fills BB gauge when damage dealt is over 5k, damage taken fills BB gauge & negates all status ailments and Atk, Def, Rec reduction",
+    "es": "100% Atk, 140% Def, 140% Rec, 100% max HP (Fire), restores HP each turn, fills BB gauge when damage dealt is over 5k, damage taken fills BB gauge & negates all status ailments and Atk, Def, Rec reduction",
+    "id": "100% Atk, 140% Def, 140% Rec, 100% max HP (Fire), restores HP each turn, fills BB gauge when damage dealt is over 5k, damage taken fills BB gauge & negates all status ailments and Atk, Def, Rec reduction",
+    "pt": "100% Atk, 140% Def, 140% Rec, 100% max HP (Fire), restores HP each turn, fills BB gauge when damage dealt is over 5k, damage taken fills BB gauge & negates all status ailments and Atk, Def, Rec reduction",
+    "th": "100% Atk, 140% Def, 140% Rec, 100% max HP (Fire), restores HP each turn, fills BB gauge when damage dealt is over 5k, damage taken fills BB gauge & negates all status ailments and Atk, Def, Rec reduction",
+    "vi": "100% Atk, 140% Def, 140% Rec, 100% max HP (Fire), restores HP each turn, fills BB gauge when damage dealt is over 5k, damage taken fills BB gauge & negates all status ailments and Atk, Def, Rec reduction"
   },
   "MST_LEADERSKILLS_810558_NAME": {
     "en": "Violent Retaliation",
@@ -12894,6 +13038,22 @@
     "pt": "Algor Aura",
     "th": "Algor Aura",
     "vi": "Algor Aura"
+  },
+  "MST_LEADERSKILLS_820938_DESCRIPTION": {
+    "en": "140% Atk, Def, max HP and 30% critical rate (Water), 250% critical damage, probable spark critical, critical damage fills BB gauge & 30% OD gauge fill rate",
+    "es": "140% Atk, Def, max HP and 30% critical rate (Water), 250% critical damage, probable spark critical, critical damage fills BB gauge & 30% OD gauge fill rate",
+    "id": "140% Atk, Def, max HP and 30% critical rate (Water), 250% critical damage, probable spark critical, critical damage fills BB gauge & 30% OD gauge fill rate",
+    "pt": "140% Atk, Def, max HP and 30% critical rate (Water), 250% critical damage, probable spark critical, critical damage fills BB gauge & 30% OD gauge fill rate",
+    "th": "140% Atk, Def, max HP and 30% critical rate (Water), 250% critical damage, probable spark critical, critical damage fills BB gauge & 30% OD gauge fill rate",
+    "vi": "140% Atk, Def, max HP and 30% critical rate (Water), 250% critical damage, probable spark critical, critical damage fills BB gauge & 30% OD gauge fill rate"
+  },
+  "MST_LEADERSKILLS_820938_NAME": {
+    "en": "Medusa Strike",
+    "es": "Medusa Strike",
+    "id": "Medusa Strike",
+    "pt": "Medusa Strike",
+    "th": "Medusa Strike",
+    "vi": "Medusa Strike"
   },
   "MST_LEADERSKILLS_830047_DESCRIPTION": {
     "en": "100% boost to Atk, 60% boost to Def, max HP of Earth types, 10% damage reduction from Earth, Thunder types, probable considerable reduction of foe's BB gauge & 50% damage counter",
@@ -91814,125 +91974,5 @@
     "pt": "Maria Angelical",
     "th": "แองเจิ้ลมาเรีย",
     "vi": "Thiên thần Maria"
-  },
-  "MST_MONSTERS_50817_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิ้ลมาเรีย",
-    "vi": "Thiên thần Maria"
-  },
-  "MST_MONSTERS_50818_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิ้ลมาเรีย",
-    "vi": "Thiên thần Maria"
-  },
-  "MST_MONSTERS_50819_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิ้ลมาเรีย",
-    "vi": "Thiên thần Maria"
-  },
-  "MST_MONSTERS_50820_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิลมาเรีย",
-    "vi": "Angel Maria"
-  },
-  "MST_MONSTERS_50821_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิล มาเรีย",
-    "vi": "Thiên thần Maria"
-  },
-  "MST_MONSTERS_50822_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิล มาเรีย",
-    "vi": "Thiên thần Maria"
-  },
-  "MST_MONSTERS_50823_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิล มาเรีย",
-    "vi": "Thiên thần Maria"
-  },
-  "MST_MONSTERS_50824_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิล มาเรีย",
-    "vi": "Angel Maria"
-  },
-  "MST_MONSTERS_50825_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิ้ลมาเรีย",
-    "vi": "Angel Maria"
-  },
-  "MST_MONSTERS_50826_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิ้ลมาเรีย",
-    "vi": "Angel Maria"
-  },
-  "MST_MONSTERS_50827_NAME": {
-    "en": "Angel Maria",
-    "es": "Angel Maria",
-    "id": "Dewa Maling Zelnite",
-    "pt": "Angel Maria",
-    "th": "แองเจล มาเรีย",
-    "vi": "Angel Maria"
-  },
-  "MST_MONSTERS_50828_NAME": {
-    "en": "Angel Maria",
-    "es": "Angel Maria",
-    "id": "Fantom Ristrall",
-    "pt": "Angel Maria",
-    "th": "แองเจล มาเรีย",
-    "vi": "Angel Maria"
-  },
-  "MST_MONSTERS_50829_NAME": {
-    "en": "Angel Maria",
-    "es": "Angel Maria",
-    "id": "Finkell",
-    "pt": "Angel Maria",
-    "th": "แองเจล มาเรีย",
-    "vi": "Angel Maria"
-  },
-  "MST_MONSTERS_50830_NAME": {
-    "en": "Angel Maria",
-    "es": "Angel Maria",
-    "id": "Angel Maria",
-    "pt": "Angel Maria",
-    "th": "แองเจิล มาเรีย",
-    "vi": "Angel Maria"
-  },
-  "MST_MONSTERS_50831_NAME": {
-    "en": "Angel Maria",
-    "es": "Angel Maria",
-    "id": "Angel Maria",
-    "pt": "Angel Maria",
-    "th": "แองเจิล มาเรีย",
-    "vi": "Angel Maria"
   }
 }
