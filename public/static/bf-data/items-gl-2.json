@@ -4830,5 +4830,28 @@
       "860258",
       "860628"
     ]
+  },
+  "20000803": {
+    "desc": "",
+    "effect": {
+      "effect": [
+        {
+          "fixed damage": 1000000000,
+          "proc id": "28"
+        }
+      ],
+      "target_area": "single",
+      "target_type": "enemy"
+    },
+    "id": 20000803,
+    "max equipped": 99,
+    "max_stack": 99,
+    "name": "1 Billion sword",
+    "raid": false,
+    "rarity": 3,
+    "sell_price": 200,
+    "thumbnail": "item_thum_880020.png",
+    "type": "consumable",
+    "usage": []
   }
 }

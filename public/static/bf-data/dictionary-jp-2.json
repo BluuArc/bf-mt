@@ -1,4 +1,196 @@
 {
+  "MST_LEADERSKILLS_3000_NAME": {
+    "en": "Epidemic Wave",
+    "es": "Onda epidémica",
+    "id": "Gelombang Epidemik",
+    "pt": "Onda Epidêmica",
+    "th": "เอพพิเดมมิคเวฟ",
+    "vi": "Sóng bệnh dịch"
+  },
+  "MST_LEADERSKILLS_3001_DESCRIPTION": {
+    "en": "Chance of inflicting a random status ailment when attacking",
+    "es": "Posibilidad de infligir dolencia aleatoria al atacar",
+    "id": "Kans menyebabkan status penyakit acak saat menyerang",
+    "pt": "Dá chance de causar um status negativo aleatório ao atacar",
+    "th": "เมื่อโจมตี มีโอกาสที่จะสร้างสถานะผิดปกติโดยสุ่ม",
+    "vi": "Có cơ hội gây ra bệnh tật tình trạng ngẫu nhiên khi tấn công"
+  },
+  "MST_LEADERSKILLS_3001_NAME": {
+    "en": "Pandemic Spread",
+    "es": "Propagación pandémica",
+    "id": "Sebaran Pandemik",
+    "pt": "Propagação Pandêmica",
+    "th": "แพนเดมมิคสเปรด",
+    "vi": "Lây lan bệnh dịch"
+  },
+  "MST_LEADERSKILLS_3002_DESCRIPTION": {
+    "en": "25% boost to Atk power & high chance of inflicting a status ailment when attacking",
+    "es": "Aumenta un 25% el ataque. Gran posibilidad de dañar el estado al atacar.",
+    "id": "25% kenaikan kekuatan Serang & kans tinggi memberi status sakit saat menyerang",
+    "pt": "Reforço de 25% no ATQ e alta chance de causar um status negativo ao atacar",
+    "th": "25% เพิ่มพลังโจมตี และ มีโอกาสสูงที่จะทำให้เกิดสถานะผิดปกติเมื่อโจมตี",
+    "vi": "Tăng 25% sức mạnh tấn công & nhiều cơ hội gây ra tình trạng bệnh tật khi tấn công"
+  },
+  "MST_LEADERSKILLS_3002_NAME": {
+    "en": "Epidemic Power",
+    "es": "Poder epidémico",
+    "id": "Kekuatan Epidemik",
+    "pt": "Epidemia de Poder",
+    "th": "เอพพิเดมิคพาวเวอร์",
+    "vi": "Sức mạnh bệnh dịch"
+  },
+  "MST_LEADERSKILLS_3003_DESCRIPTION": {
+    "en": "Chance of inflicting a random status ailment when attacking & boost in critical hit damage",
+    "es": "Puede afectar al estado de una forma aleatoria al atacar y aumenta el daño de los golpes críticos",
+    "id": "Kans beri status acak saat menyerang & tambah kerusakan pukulan ampuh",
+    "pt": "Dá chance de causar um status negativo aleatório ao atacar e aumenta o dano de ataques críticos",
+    "th": "โอกาสจะทำให้ติดสถานะผิดปกติโดยสุ่มเมื่อโจมตี และ เพิ่มความเสียหายจากการโจมตีคริติคอล",
+    "vi": "Có cơ hội gây ra bệnh tật tình trạng ngẫu nhiên khi tấn công & tăng mức thiệt hại khi đánh trúng nguy hiểm"
+  },
+  "MST_LEADERSKILLS_3003_NAME": {
+    "en": "Epidemic Flash",
+    "es": "Destello epidémico",
+    "id": "Flash Epidemik",
+    "pt": "Brilho Epidêmico",
+    "th": "เอพิเดมิคแฟลช",
+    "vi": "Tia sóng bệnh dịch"
+  },
+  "MST_LEADERSKILLS_3004_DESCRIPTION": {
+    "en": "Chance of inflicting a random status ailment when attacking & boost in damage dealt during Spark",
+    "es": "Puede afectar al estado de forma aleatoria al atacar, y aumenta el daño de los golpes durante Chispas.",
+    "id": "Kans memberikan status acak saat menyerang & tambah merusak saat Percikan",
+    "pt": "Chance de causar uma enfermidade aleatória ao atacar e reforço no dano durante a Fagulha",
+    "th": "มีโอกาสที่จะทำให้เกิด สถานะผิดปกติโดยสุ่มเมื่อโจมตี กับ เพิ่มค่า ความเสียหายที่สร้างระหว่างเกิดสปาร์ค",
+    "vi": "Có cơ hội gây ra bệnh tật tình trạng ngẫu nhiên khi tấn công & tăng mức thiệt hại khi gây ra trong Bắn tỉa"
+  },
+  "MST_LEADERSKILLS_3004_NAME": {
+    "en": "Serious Epidemic",
+    "es": "Epidemia severa",
+    "id": "Epidemik Serius",
+    "pt": "Epidemia Séria",
+    "th": "ซีเรียสเอพิเดมิค",
+    "vi": "Bệnh dịch nghiêm trọng"
+  },
+  "MST_LEADERSKILLS_3005_DESCRIPTION": {
+    "en": "Chance of inflicting a random status ailment when attacking & chance of slightly absorbing HP",
+    "es": "Probabilidad de infligir dolencia aleatoria al atacar y de absorber un poco de PV",
+    "id": "Kas memberi status acak saat menyerang & kans agak menyerap HP",
+    "pt": "Chance de causar um efeito negativo aleatório ao atacar e chance de absorver um pouco de HP",
+    "th": "โอกาสที่จะทำให้เกิดสถานะผิดปกติโดยสุ่มเมื่อกำลังโจมตี และ โอกาสการดูดซับ HP เล็กน้อย",
+    "vi": "Có cơ hội gây ra bệnh tật tình trạng ngẫu nhiên khi tấn công & cơ hội hấp thụ một chút Thể lực"
+  },
+  "MST_LEADERSKILLS_3005_NAME": {
+    "en": "Epidemic God Usurpation",
+    "es": "Usurpación de dios epidémico",
+    "id": "Rebutan Kuasa Dewa Epidemik",
+    "pt": "Usurpação divina epidêmica",
+    "th": "เอพิเดมิค ก็อด ยูเซอเพชั่น",
+    "vi": "Chiếm Quyền Thần Bệnh Dịch"
+  },
+  "MST_LEADERSKILLS_3006_DESCRIPTION": {
+    "en": "High chance of inflicting a random status ailment when attacking & slightly absorbs HP when attacking",
+    "es": "Gran posibilidad de afectar al estado aleatoriamente al atacar y recupera una leve cantidad de PS al atacar",
+    "id": "Kesempatan besar untuk menyebabkan penyakit ketika menyerang & sedikit menyerap HP ketika menyerang",
+    "pt": "Chance de infligir um estado negativo ao atacar e chance de absorver HP ao atacar.",
+    "th": "โอกาสสูงที่จะทำให้เกิดสถานะผิดปกติโดยสุ่มเมื่อกำลังโจมตี และ ดูดซับ HP เล็กน้อยเมื่อกำลังโจมตี",
+    "vi": "Có cơ hội cao gây ra bệnh tật tình trạng ngẫu nhiên khi tấn công & hấp thụ một chút Thể lực khi tấn công"
+  },
+  "MST_LEADERSKILLS_3006_NAME": {
+    "en": "Epidemic God's Possession",
+    "es": "Posesión del dios epidémico",
+    "id": "Milik Dewa Epidemi",
+    "pt": "Possessão Epidêmica de Deus",
+    "th": "เอพิเดมิค ก็อดส์ อสเซสชั่น",
+    "vi": "Thuộc địa của Thần Bệnh Dịch"
+  },
+  "MST_LEADERSKILLS_3007_DESCRIPTION": {
+    "en": "Probable infliction of random status ailment when attacking & slightly reduces amount of BB gauge consumed during BB",
+    "es": "Probable infliction of random status ailment when attacking & slightly reduces amount of BB gauge consumed during BB",
+    "id": "Kemungkinan memberi status penyakit acak saat menyerang & agak mengurangi konsumsi meteran BB selama BB",
+    "pt": "Probable infliction of random status ailment when attacking & slightly reduces amount of BB gauge consumed during BB",
+    "th": "มีโอกาสโจมตีติดสถานะผิดปกติ, ลดบีบีเกจที่ต้องใช้ระหว่างบีบี",
+    "vi": "Probable infliction of random status ailment when attacking & slightly reduces amount of BB gauge consumed during BB"
+  },
+  "MST_LEADERSKILLS_3007_NAME": {
+    "en": "Epidemic Ambition",
+    "es": "Epidemic Ambition",
+    "id": "Ambisi Epidemi",
+    "pt": "Epidemic Ambition",
+    "th": "อิพิเดอมิค แอมบิชชั่น",
+    "vi": "Epidemic Ambition"
+  },
+  "MST_LEADERSKILLS_3008_DESCRIPTION": {
+    "en": "High probable infliction of random status ailment when attacking & reduces amount of BB gauge consumed during BB",
+    "es": "High probable infliction of random status ailment when attacking & reduces amount of BB gauge consumed during BB",
+    "id": "Kemungkinan besar memberi status penyakit acak saat menyerang & mengurangi konsumsi meteran BB selama BB",
+    "pt": "High probable infliction of random status ailment when attacking & reduces amount of BB gauge consumed during BB",
+    "th": "มีโอกาสโจมตีติดสถานะผิดปกติสูง, ลดบีบีเกจที่ต้องใช้ระหว่างบีบี",
+    "vi": "High probable infliction of random status ailment when attacking & reduces amount of BB gauge consumed during BB"
+  },
+  "MST_LEADERSKILLS_3008_NAME": {
+    "en": "Epidemic God's Ambition",
+    "es": "Epidemic God's Ambition",
+    "id": "Ambisi Dewa Epidemi",
+    "pt": "Epidemic God's Ambition",
+    "th": "อิพิเดอมิค ก็อด แอมบิชชั่น",
+    "vi": "Epidemic God's Ambition"
+  },
+  "MST_LEADERSKILLS_3009_DESCRIPTION": {
+    "en": "High probable infliction of random status ailment, greatly boosts critical damage & 80% boost to Atk",
+    "es": "High probable infliction of random status ailment, greatly boosts critical damage & 80% boost to Atk",
+    "id": "Kemungkinan besar memberi status pemyakit acak, amat menambah kerusakan pukulan ampuh & 80% ekstra Serangan",
+    "pt": "High probable infliction of random status ailment, greatly boosts critical damage & 80% boost to Atk",
+    "th": "มีโอกาสติดสถานะผิดปกติแบบสุ่มอย่างมาก, เพิ่มคริติคอลดาเมจอย่างมาก, 80% เพิ่มพลังโจมตี",
+    "vi": "High probable infliction of random status ailment, greatly boosts critical damage & 80% boost to Atk"
+  },
+  "MST_LEADERSKILLS_3009_NAME": {
+    "en": "Full Epidemic Flash",
+    "es": "Full Epidemic Flash",
+    "id": "Flash Epidemik Penuh",
+    "pt": "Full Epidemic Flash",
+    "th": "ฟูล อิพิเดอมิค แฟลช",
+    "vi": "Full Epidemic Flash"
+  },
+  "MST_LEADERSKILLS_300_DESCRIPTION": {
+    "en": "25% boost to Recovery of Fire Types",
+    "es": "Aumenta un 25 % la recuperación de las unidades de fuego.",
+    "id": "25% boost untuk Pemulihan Tipe Api",
+    "pt": "Reforço de 25% na Recuperação do tipo Fogo",
+    "th": "25% เพิ่มอัตราฟื้นฟูของประเภทไฟ",
+    "vi": "25% làm tăng quyền khôi phục của các loại lửa "
+  },
+  "MST_LEADERSKILLS_300_NAME": {
+    "en": "Fire Spirit's Cure",
+    "es": "Cura ígnea espiritual",
+    "id": "Obat Roh Api",
+    "pt": "Cura do Espírito do Fogo",
+    "th": "ไฟเออร์สปิริตเคียว",
+    "vi": "Sự cứu rỗi tinh thần của lửa "
+  },
+  "MST_LEADERSKILLS_3010_DESCRIPTION": {
+    "en": "Probable random status ailment infliction & probable random status ailment infliction counter",
+    "es": "Probable random status ailment infliction & probable random status ailment infliction counter",
+    "id": "Kas memberi status penyakit acak & kans membalas pemberian status penyakit acak",
+    "pt": "Probable random status ailment infliction & probable random status ailment infliction counter",
+    "th": "มีโอกาส ทำให้ติดสถานะผิดปกติโดยสุ่ม และ มีโอกาส สวนกลับทำให้ติดสถานะผิดปกติโดยสุ่ม",
+    "vi": "Probable random status ailment infliction & probable random status ailment infliction counter"
+  },
+  "MST_LEADERSKILLS_3010_NAME": {
+    "en": "Epidemic God's Admonition",
+    "es": "Epidemic God's Admonition",
+    "id": "Peringatan Dewa Epidemik",
+    "pt": "Epidemic God's Admonition",
+    "th": "เอพพิเดมิค ก็อด แอดมอนนิชั่น",
+    "vi": "Epidemic God's Admonition"
+  },
+  "MST_LEADERSKILLS_3011_DESCRIPTION": {
+    "en": "Probable random status ailment infliction & probable random status ailment infliction counter",
+    "es": "Probable random status ailment infliction & probable random status ailment infliction counter",
+    "id": "Kas memberi status penyakit acak & kans membalas pemberian status penyakit acak",
+    "pt": "Probable random status ailment infliction & probable random status ailment infliction counter",
+    "th": "มีโอกาส ทำให้ติดสถานะผิดปกติโดยสุ่ม และ มีโอกาส สวนกลับทำให้ติดสถานะผิดปกติโดยสุ่ม",
+    "vi": "Probable random status ailment infliction & probable random status ailment infliction counter"
+  },
   "MST_LEADERSKILLS_3011_NAME": {
     "en": "Epidemic God's Retribution",
     "es": "Epidemic God's Retribution",
@@ -10448,12 +10640,12 @@
     "vi": "Wrath of the Isengrim"
   },
   "MST_LEADERSKILLS_801273_DESCRIPTION": {
-    "en": "40% boost to all parameters, enormously boosts BB Atk when HP is above 50%, hugely boosts damage against status afflicted foes & negates all status ailments",
-    "es": "40% boost to all parameters, enormously boosts BB Atk when HP is above 50%, hugely boosts damage against status afflicted foes & negates all status ailments",
-    "id": "40% ekstra semua parameter, ekstra jumbo BB Serang saat HP di bawah 50%, amat tambah merusak musuh yang terkena status, menegasi semua status penyakit",
-    "pt": "40% boost to all parameters, enormously boosts BB Atk when HP is above 50%, hugely boosts damage against status afflicted foes & negates all status ailments",
-    "th": "40% เพิ่มค่า พารามิเตอร์ทั้งหมด, เพิ่มค่ามหาศาลให้ BB โจมตี เมื่อ HP มากกว่า 50%, เพิ่มค่าอย่างสูงให้ ความเสียหายต่อศัตรูที่ติดสถานะผิดปกติ และ ลบล้าง สถานะผิดปกติทั้งหมด",
-    "vi": "40% boost to all parameters, enormously boosts BB Atk when HP is above 50%, hugely boosts damage against status afflicted foes & negates all status ailments"
+    "en": "120% all parameters, 350% BB Atk, 175% damage against status afflicted foes, negates all status ailments and Atk, Def, Rec reduction & 30% OD gauge fill rate",
+    "es": "120% all parameters, 350% BB Atk, 175% damage against status afflicted foes, negates all status ailments and Atk, Def, Rec reduction & 30% OD gauge fill rate",
+    "id": "120% all parameters, 350% BB Atk, 175% damage against status afflicted foes, negates all status ailments and Atk, Def, Rec reduction & 30% OD gauge fill rate",
+    "pt": "120% all parameters, 350% BB Atk, 175% damage against status afflicted foes, negates all status ailments and Atk, Def, Rec reduction & 30% OD gauge fill rate",
+    "th": "120% all parameters, 350% BB Atk, 175% damage against status afflicted foes, negates all status ailments and Atk, Def, Rec reduction & 30% OD gauge fill rate",
+    "vi": "120% all parameters, 350% BB Atk, 175% damage against status afflicted foes, negates all status ailments and Atk, Def, Rec reduction & 30% OD gauge fill rate"
   },
   "MST_LEADERSKILLS_801273_NAME": {
     "en": "Chosen of the Forest",
@@ -12031,6 +12223,22 @@
     "th": "Pride of House Valen",
     "vi": "Pride of House Valen"
   },
+  "MST_LEADERSKILLS_810918_DESCRIPTION": {
+    "en": "100% all parameters, 15% damage reduction from Fire, Earth types, 150% spark damage for 2 turns when sparks dealt is over 15 times, spark damage restores HP & 100% ABP, 50% CBP gain",
+    "es": "100% all parameters, 15% damage reduction from Fire, Earth types, 150% spark damage for 2 turns when sparks dealt is over 15 times, spark damage restores HP & 100% ABP, 50% CBP gain",
+    "id": "100% all parameters, 15% damage reduction from Fire, Earth types, 150% spark damage for 2 turns when sparks dealt is over 15 times, spark damage restores HP & 100% ABP, 50% CBP gain",
+    "pt": "100% all parameters, 15% damage reduction from Fire, Earth types, 150% spark damage for 2 turns when sparks dealt is over 15 times, spark damage restores HP & 100% ABP, 50% CBP gain",
+    "th": "100% all parameters, 15% damage reduction from Fire, Earth types, 150% spark damage for 2 turns when sparks dealt is over 15 times, spark damage restores HP & 100% ABP, 50% CBP gain",
+    "vi": "100% all parameters, 15% damage reduction from Fire, Earth types, 150% spark damage for 2 turns when sparks dealt is over 15 times, spark damage restores HP & 100% ABP, 50% CBP gain"
+  },
+  "MST_LEADERSKILLS_810918_NAME": {
+    "en": "Reviving a Nation",
+    "es": "Reviving a Nation",
+    "id": "Reviving a Nation",
+    "pt": "Reviving a Nation",
+    "th": "Reviving a Nation",
+    "vi": "Reviving a Nation"
+  },
   "MST_LEADERSKILLS_811118_DESCRIPTION": {
     "en": "60% boost to Atk, max HP, 100% boost to Spark damage, boosts Spark damage for 2 turns when Sparks have exceeded certain amount & hugely boosts Fire and Water elemental damage ",
     "es": "60% boost to Atk, max HP, 100% boost to Spark damage, boosts Spark damage for 2 turns when Sparks have exceeded certain amount & hugely boosts Fire and Water elemental damage ",
@@ -12384,12 +12592,12 @@
     "vi": "Path Between Worlds"
   },
   "MST_LEADERSKILLS_820418_DESCRIPTION": {
-    "en": "50% boost to Def, max HP, boosts Atk, Def relative to remaining HP, damage taken may restore HP & enormously boosts BB Atk when HP is over 50%",
-    "es": "50% boost to Def, max HP, boosts Atk, Def relative to remaining HP, damage taken may restore HP & enormously boosts BB Atk when HP is over 50%",
-    "id": "50% ekstra Tahan, HP maks, menambah Serang, Tahan sesuai sisa HP, kerusakan diderita dapat memulihkan HP, ekstra jumbo BB Serang saat HP di atas 50%",
-    "pt": "50% boost to Def, max HP, boosts Atk, Def relative to remaining HP, damage taken may restore HP & enormously boosts BB Atk when HP is over 50%",
-    "th": "50% เพิ่มค่า ป้องกัน, HP สูงสุด, เพิ่ม โจมตี, ป้องกัน สัมพันธ์กับ HP ที่เหลืออยู่, ความเสียหายทีได้รับ อาจฟื้นคืน HP และ เพิ่มค่ามหาศาลให้ BB โจมตี เมื่อ HP นั้นมากกว่า 50%",
-    "vi": "50% boost to Def, max HP, boosts Atk, Def relative to remaining HP, damage taken may restore HP & enormously boosts BB Atk when HP is over 50%"
+    "en": "120% Def, 150% max HP, 0-100% Atk, Def, Rec relative to remaining HP, 350% BB Atk, damage taken may restore HP & 15% damage reduction from Water, Thunder types",
+    "es": "120% Def, 150% max HP, 0-100% Atk, Def, Rec relative to remaining HP, 350% BB Atk, damage taken may restore HP & 15% damage reduction from Water, Thunder types",
+    "id": "120% Def, 150% max HP, 0-100% Atk, Def, Rec relative to remaining HP, 350% BB Atk, damage taken may restore HP & 15% damage reduction from Water, Thunder types",
+    "pt": "120% Def, 150% max HP, 0-100% Atk, Def, Rec relative to remaining HP, 350% BB Atk, damage taken may restore HP & 15% damage reduction from Water, Thunder types",
+    "th": "120% Def, 150% max HP, 0-100% Atk, Def, Rec relative to remaining HP, 350% BB Atk, damage taken may restore HP & 15% damage reduction from Water, Thunder types",
+    "vi": "120% Def, 150% max HP, 0-100% Atk, Def, Rec relative to remaining HP, 350% BB Atk, damage taken may restore HP & 15% damage reduction from Water, Thunder types"
   },
   "MST_LEADERSKILLS_820418_NAME": {
     "en": "No True Destiny",
@@ -13054,6 +13262,22 @@
     "pt": "Medusa Strike",
     "th": "Medusa Strike",
     "vi": "Medusa Strike"
+  },
+  "MST_LEADERSKILLS_820948_DESCRIPTION": {
+    "en": "120% Def, 150% Rec, max HP and 30% critical rate (Water), 15% DoT reduction, spark damage restores HP, probable 1 KO resistance & 250% spark damage",
+    "es": "120% Def, 150% Rec, max HP and 30% critical rate (Water), 15% DoT reduction, spark damage restores HP, probable 1 KO resistance & 250% spark damage",
+    "id": "120% Def, 150% Rec, max HP and 30% critical rate (Water), 15% DoT reduction, spark damage restores HP, probable 1 KO resistance & 250% spark damage",
+    "pt": "120% Def, 150% Rec, max HP and 30% critical rate (Water), 15% DoT reduction, spark damage restores HP, probable 1 KO resistance & 250% spark damage",
+    "th": "120% Def, 150% Rec, max HP and 30% critical rate (Water), 15% DoT reduction, spark damage restores HP, probable 1 KO resistance & 250% spark damage",
+    "vi": "120% Def, 150% Rec, max HP and 30% critical rate (Water), 15% DoT reduction, spark damage restores HP, probable 1 KO resistance & 250% spark damage"
+  },
+  "MST_LEADERSKILLS_820948_NAME": {
+    "en": "Enchanted Ice",
+    "es": "Enchanted Ice",
+    "id": "Enchanted Ice",
+    "pt": "Enchanted Ice",
+    "th": "Enchanted Ice",
+    "vi": "Enchanted Ice"
   },
   "MST_LEADERSKILLS_830047_DESCRIPTION": {
     "en": "100% boost to Atk, 60% boost to Def, max HP of Earth types, 10% damage reduction from Earth, Thunder types, probable considerable reduction of foe's BB gauge & 50% damage counter",
@@ -91814,165 +92038,5 @@
     "pt": "Maria Sacerdotisa",
     "th": "พรีสเทส มาเรีย",
     "vi": "Nữ tu Maria"
-  },
-  "MST_MONSTERS_50772_NAME": {
-    "en": "Priestess Maria",
-    "es": "Sacerdotisa María",
-    "id": "Pendeta Maria",
-    "pt": "Maria Sacerdotisa",
-    "th": "พรีสเทส มาเรีย",
-    "vi": "Nữ tu Maria"
-  },
-  "MST_MONSTERS_50773_NAME": {
-    "en": "Priestess Maria",
-    "es": "Sacerdotisa María",
-    "id": "Pendeta Maria",
-    "pt": "Maria Sacerdotisa",
-    "th": "พรีสเทส มาเรีย",
-    "vi": "Nữ tu Maria"
-  },
-  "MST_MONSTERS_507_NAME": {
-    "en": "Velnar",
-    "es": "Velnar",
-    "id": "Velnar",
-    "pt": "Velnar",
-    "th": "Velnar",
-    "vi": "Velnar"
-  },
-  "MST_MONSTERS_50800_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิ้ลมาเรีย",
-    "vi": "Thiên thần Maria"
-  },
-  "MST_MONSTERS_50801_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิ้ลมาเรีย",
-    "vi": "Thiên thần Maria"
-  },
-  "MST_MONSTERS_50802_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิ้ลมาเรีย",
-    "vi": "Thiên thần Maria"
-  },
-  "MST_MONSTERS_50803_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิ้ลมาเรีย",
-    "vi": "Thiên thần Maria"
-  },
-  "MST_MONSTERS_50804_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิ้ลมาเรีย",
-    "vi": "Thiên thần Maria"
-  },
-  "MST_MONSTERS_50805_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิ้ลมาเรีย",
-    "vi": "Thiên thần Maria"
-  },
-  "MST_MONSTERS_50806_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิ้ลมาเรีย",
-    "vi": "Thiên thần Maria"
-  },
-  "MST_MONSTERS_50807_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิ้ลมาเรีย",
-    "vi": "Thiên thần Maria"
-  },
-  "MST_MONSTERS_50808_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิ้ลมาเรีย",
-    "vi": "Thiên thần Maria"
-  },
-  "MST_MONSTERS_50809_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิ้ลมาเรีย",
-    "vi": "Thiên thần Maria"
-  },
-  "MST_MONSTERS_50810_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิ้ลมาเรีย",
-    "vi": "Thiên thần Maria"
-  },
-  "MST_MONSTERS_50811_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิ้ลมาเรีย",
-    "vi": "Thiên thần Maria"
-  },
-  "MST_MONSTERS_50812_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิ้ลมาเรีย",
-    "vi": "Thiên thần Maria"
-  },
-  "MST_MONSTERS_50813_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิ้ลมาเรีย",
-    "vi": "Thiên thần Maria"
-  },
-  "MST_MONSTERS_50814_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิ้ลมาเรีย",
-    "vi": "Thiên thần Maria"
-  },
-  "MST_MONSTERS_50815_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิ้ลมาเรีย",
-    "vi": "Thiên thần Maria"
-  },
-  "MST_MONSTERS_50816_NAME": {
-    "en": "Angel Maria",
-    "es": "Eminencia María",
-    "id": "Malaikat Maria",
-    "pt": "Maria Angelical",
-    "th": "แองเจิ้ลมาเรีย",
-    "vi": "Thiên thần Maria"
   }
 }
