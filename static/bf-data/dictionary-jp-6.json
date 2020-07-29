@@ -1,4 +1,36 @@
 {
+  "MST_SKILLS_2840758_NAME": {
+    "en": "Lightning Strikes Twice",
+    "es": "Lightning Strikes Twice",
+    "id": "Lightning Strikes Twice",
+    "pt": "Lightning Strikes Twice",
+    "th": "Lightning Strikes Twice",
+    "vi": "Lightning Strikes Twice"
+  },
+  "MST_SKILLS_2840767_DESCRIPTION": {
+    "en": "18 combo massive Thunder attack on all foes (damage relative to remaining HP), adds evasion for 3 turns,enormously boosts OD gauge, fully restores HP for 3 turns,enormously boosts Atk, Def relative to HP for 3 turns",
+    "es": "18 combo massive Thunder attack on all foes (damage relative to remaining HP), adds evasion for 3 turns,enormously boosts OD gauge, fully restores HP for 3 turns,enormously boosts Atk, Def relative to HP for 3 turns",
+    "id": "18 combo massive Thunder attack on all foes (damage relative to remaining HP), adds evasion for 3 turns,enormously boosts OD gauge, fully restores HP for 3 turns,enormously boosts Atk, Def relative to HP for 3 turns",
+    "pt": "18 combo massive Thunder attack on all foes (damage relative to remaining HP), adds evasion for 3 turns,enormously boosts OD gauge, fully restores HP for 3 turns,enormously boosts Atk, Def relative to HP for 3 turns",
+    "th": "18 combo massive Thunder attack on all foes (damage relative to remaining HP), adds evasion for 3 turns,enormously boosts OD gauge, fully restores HP for 3 turns,enormously boosts Atk, Def relative to HP for 3 turns",
+    "vi": "18 combo massive Thunder attack on all foes (damage relative to remaining HP), adds evasion for 3 turns,enormously boosts OD gauge, fully restores HP for 3 turns,enormously boosts Atk, Def relative to HP for 3 turns"
+  },
+  "MST_SKILLS_2840767_NAME": {
+    "en": "You’re getting on my nerves!",
+    "es": "You’re getting on my nerves!",
+    "id": "You’re getting on my nerves!",
+    "pt": "You’re getting on my nerves!",
+    "th": "You’re getting on my nerves!",
+    "vi": "You’re getting on my nerves!"
+  },
+  "MST_SKILLS_2840768_DESCRIPTION": {
+    "en": "23 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts OD gauge, adds evasion for 3 turns, fully restores HP for 4 turns, purges LS and ES disable effects from all allies & enormously boosts Atk, Def relative to HP for 4 turns",
+    "es": "23 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts OD gauge, adds evasion for 3 turns, fully restores HP for 4 turns, purges LS and ES disable effects from all allies & enormously boosts Atk, Def relative to HP for 4 turns",
+    "id": "23 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts OD gauge, adds evasion for 3 turns, fully restores HP for 4 turns, purges LS and ES disable effects from all allies & enormously boosts Atk, Def relative to HP for 4 turns",
+    "pt": "23 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts OD gauge, adds evasion for 3 turns, fully restores HP for 4 turns, purges LS and ES disable effects from all allies & enormously boosts Atk, Def relative to HP for 4 turns",
+    "th": "23 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts OD gauge, adds evasion for 3 turns, fully restores HP for 4 turns, purges LS and ES disable effects from all allies & enormously boosts Atk, Def relative to HP for 4 turns",
+    "vi": "23 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts OD gauge, adds evasion for 3 turns, fully restores HP for 4 turns, purges LS and ES disable effects from all allies & enormously boosts Atk, Def relative to HP for 4 turns"
+  },
   "MST_SKILLS_2840768_NAME": {
     "en": "Avenging Angel",
     "es": "Avenging Angel",
@@ -21639,6 +21671,14 @@
     "th": "Blades of the Wild",
     "vi": "Blades of the Wild"
   },
+  "MST_SKILLS_3820418_DESCRIPTION": {
+    "en": "62 combo grand dual attack on all foes (damage relative to remaining HP), boosts BB Atk, max HP, Atk, Def relative to max HP, damage against status afflicted foes, adds status ailment infliction to attack, fully restores HP, activates water barrier, 100% damage reduction & fills OD gauge at turn's end",
+    "es": "62 combo grand dual attack on all foes (damage relative to remaining HP), boosts BB Atk, max HP, Atk, Def relative to max HP, damage against status afflicted foes, adds status ailment infliction to attack, fully restores HP, activates water barrier, 100% damage reduction & fills OD gauge at turn's end",
+    "id": "62 combo grand dual attack on all foes (damage relative to remaining HP), boosts BB Atk, max HP, Atk, Def relative to max HP, damage against status afflicted foes, adds status ailment infliction to attack, fully restores HP, activates water barrier, 100% damage reduction & fills OD gauge at turn's end",
+    "pt": "62 combo grand dual attack on all foes (damage relative to remaining HP), boosts BB Atk, max HP, Atk, Def relative to max HP, damage against status afflicted foes, adds status ailment infliction to attack, fully restores HP, activates water barrier, 100% damage reduction & fills OD gauge at turn's end",
+    "th": "62 combo grand dual attack on all foes (damage relative to remaining HP), boosts BB Atk, max HP, Atk, Def relative to max HP, damage against status afflicted foes, adds status ailment infliction to attack, fully restores HP, activates water barrier, 100% damage reduction & fills OD gauge at turn's end",
+    "vi": "62 combo grand dual attack on all foes (damage relative to remaining HP), boosts BB Atk, max HP, Atk, Def relative to max HP, damage against status afflicted foes, adds status ailment infliction to attack, fully restores HP, activates water barrier, 100% damage reduction & fills OD gauge at turn's end"
+  },
   "MST_SKILLS_3820438_DESCRIPTION": {
     "en": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, spark damage, spark critical, spark vulnerability infliction, Atk, Def, Rec relative to max HP, 100% DoT reduction, fully restores HP & purges ES Lock",
     "es": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, spark damage, spark critical, spark vulnerability infliction, Atk, Def, Rec relative to max HP, 100% DoT reduction, fully restores HP & purges ES Lock",
@@ -21830,6 +21870,22 @@
     "pt": "Disastrous Adventure",
     "th": "Disastrous Adventure",
     "vi": "Disastrous Adventure"
+  },
+  "MST_SKILLS_3820938_DESCRIPTION": {
+    "en": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, spark damage, critical damage, BB gauge, spark vulnerability infliction, 100% evasion, inflicts Atk, Def reduction, fully restores HP & 100% raises allies from KO",
+    "es": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, spark damage, critical damage, BB gauge, spark vulnerability infliction, 100% evasion, inflicts Atk, Def reduction, fully restores HP & 100% raises allies from KO",
+    "id": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, spark damage, critical damage, BB gauge, spark vulnerability infliction, 100% evasion, inflicts Atk, Def reduction, fully restores HP & 100% raises allies from KO",
+    "pt": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, spark damage, critical damage, BB gauge, spark vulnerability infliction, 100% evasion, inflicts Atk, Def reduction, fully restores HP & 100% raises allies from KO",
+    "th": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, spark damage, critical damage, BB gauge, spark vulnerability infliction, 100% evasion, inflicts Atk, Def reduction, fully restores HP & 100% raises allies from KO",
+    "vi": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, spark damage, critical damage, BB gauge, spark vulnerability infliction, 100% evasion, inflicts Atk, Def reduction, fully restores HP & 100% raises allies from KO"
+  },
+  "MST_SKILLS_3820938_NAME": {
+    "en": "Vow of the Phillarm Cross",
+    "es": "Vow of the Phillarm Cross",
+    "id": "Vow of the Phillarm Cross",
+    "pt": "Vow of the Phillarm Cross",
+    "th": "Vow of the Phillarm Cross",
+    "vi": "Vow of the Phillarm Cross"
   },
   "MST_SKILLS_3830438_DESCRIPTION": {
     "en": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, all elemental damage, OD gauge fill rate, fully restores HP, damage taken restores HP, 80% raises allies from KO, 80% KO resistance, inflicts Atk, Def reduction & massive DoT on all foes",
@@ -89959,6 +90015,22 @@
     "th": "Baldr's Cleave",
     "vi": "Baldr's Cleave"
   },
+  "MST_SKILLS_810918_DESCRIPTION": {
+    "en": "15 combo Fire attack on all foes, fills own BB gauge to max, probable 2 turns Atk reduction infliction, boosts own max HP & probable all status ailments infliction",
+    "es": "15 combo Fire attack on all foes, fills own BB gauge to max, probable 2 turns Atk reduction infliction, boosts own max HP & probable all status ailments infliction",
+    "id": "15 combo Fire attack on all foes, fills own BB gauge to max, probable 2 turns Atk reduction infliction, boosts own max HP & probable all status ailments infliction",
+    "pt": "15 combo Fire attack on all foes, fills own BB gauge to max, probable 2 turns Atk reduction infliction, boosts own max HP & probable all status ailments infliction",
+    "th": "15 combo Fire attack on all foes, fills own BB gauge to max, probable 2 turns Atk reduction infliction, boosts own max HP & probable all status ailments infliction",
+    "vi": "15 combo Fire attack on all foes, fills own BB gauge to max, probable 2 turns Atk reduction infliction, boosts own max HP & probable all status ailments infliction"
+  },
+  "MST_SKILLS_810918_NAME": {
+    "en": "The Little Conqueror",
+    "es": "The Little Conqueror",
+    "id": "The Little Conqueror",
+    "pt": "The Little Conqueror",
+    "th": "The Little Conqueror",
+    "vi": "The Little Conqueror"
+  },
   "MST_SKILLS_811016_DESCRIPTION": {
     "en": "15 combo powerful Fire attack on all foes & boosts critical hit rate for 3 turns",
     "es": "Combo grupal de 15 poderosos ataques ígneos. Aumenta la posibilidad de asestar golpes críticos durante 3 turnos",
@@ -90632,12 +90704,12 @@
     "vi": "Coincidence Severed"
   },
   "MST_SKILLS_820418_DESCRIPTION": {
-    "en": "20 combo powerful Water, Dark attack on all foes, 50% damage reduction for 2 turns, probable slight HP absorption when attacking for 3 turns & damage taken boosts BB gauge for 3 turns",
-    "es": "20 combo powerful Water, Dark attack on all foes, 50% damage reduction for 2 turns, probable slight HP absorption when attacking for 3 turns & damage taken boosts BB gauge for 3 turns",
-    "id": "20 kombo serangan Air, Gelap kuat ke semua musuh, kurangi 50% kerusakan 2 giliran, 3 giliran: kans agak menyerap HP saat menyerang, kerusakan diderita menambah meteran BB",
-    "pt": "20 combo powerful Water, Dark attack on all foes, 50% damage reduction for 2 turns, probable slight HP absorption when attacking for 3 turns & damage taken boosts BB gauge for 3 turns",
-    "th": "20 คอมโบ โจมตีธาตุน้ำ, มืดอย่างแรง ใส่ศัตรูทั้งหมด, 50% ลดค่าความเสียหาย นาน 2 เทิร์น, มีโอกาส ดูดซับ HP เล็กน้อย เมื่อกำลังโจมตี นาน 3 เทิร์น และ ความเสียหายทีได้รับ เพิ่ม เกจ BB นาน 3 เทิร์น",
-    "vi": "20 combo powerful Water, Dark attack on all foes, 50% damage reduction for 2 turns, probable slight HP absorption when attacking for 3 turns & damage taken boosts BB gauge for 3 turns"
+    "en": "20 combo Water, Dark attack on all foes, damage taken fills BB gauge and may restore HP for 3 turns, 50% damage reduction for 3 turns & adds Water barrier",
+    "es": "20 combo Water, Dark attack on all foes, damage taken fills BB gauge and may restore HP for 3 turns, 50% damage reduction for 3 turns & adds Water barrier",
+    "id": "20 combo Water, Dark attack on all foes, damage taken fills BB gauge and may restore HP for 3 turns, 50% damage reduction for 3 turns & adds Water barrier",
+    "pt": "20 combo Water, Dark attack on all foes, damage taken fills BB gauge and may restore HP for 3 turns, 50% damage reduction for 3 turns & adds Water barrier",
+    "th": "20 combo Water, Dark attack on all foes, damage taken fills BB gauge and may restore HP for 3 turns, 50% damage reduction for 3 turns & adds Water barrier",
+    "vi": "20 combo Water, Dark attack on all foes, damage taken fills BB gauge and may restore HP for 3 turns, 50% damage reduction for 3 turns & adds Water barrier"
   },
   "MST_SKILLS_820418_NAME": {
     "en": "Coincidence Rewoven",
@@ -91303,6 +91375,22 @@
     "th": "Snake Bite",
     "vi": "Snake Bite"
   },
+  "MST_SKILLS_820948_DESCRIPTION": {
+    "en": "12 combo Water attack on all foes (damage relative to remaining HP), restores HP for 3 turns, 25% DoT reduction for 3 turns, adds Water barrier, fills BB gauge for 3 turns & may raise allies from KO",
+    "es": "12 combo Water attack on all foes (damage relative to remaining HP), restores HP for 3 turns, 25% DoT reduction for 3 turns, adds Water barrier, fills BB gauge for 3 turns & may raise allies from KO",
+    "id": "12 combo Water attack on all foes (damage relative to remaining HP), restores HP for 3 turns, 25% DoT reduction for 3 turns, adds Water barrier, fills BB gauge for 3 turns & may raise allies from KO",
+    "pt": "12 combo Water attack on all foes (damage relative to remaining HP), restores HP for 3 turns, 25% DoT reduction for 3 turns, adds Water barrier, fills BB gauge for 3 turns & may raise allies from KO",
+    "th": "12 combo Water attack on all foes (damage relative to remaining HP), restores HP for 3 turns, 25% DoT reduction for 3 turns, adds Water barrier, fills BB gauge for 3 turns & may raise allies from KO",
+    "vi": "12 combo Water attack on all foes (damage relative to remaining HP), restores HP for 3 turns, 25% DoT reduction for 3 turns, adds Water barrier, fills BB gauge for 3 turns & may raise allies from KO"
+  },
+  "MST_SKILLS_820948_NAME": {
+    "en": "Isolation",
+    "es": "Isolation",
+    "id": "Isolation",
+    "pt": "Isolation",
+    "th": "Isolation",
+    "vi": "Isolation"
+  },
   "MST_SKILLS_830006_DESCRIPTION": {
     "en": "8 combo Earth attack on all foes, probable Poison effect & adds Earth element to attack for 3 turns",
     "es": "8 combo Earth attack on all foes, probable Poison effect & adds Earth element to attack for 3 turns",
@@ -91864,12 +91952,12 @@
     "vi": "Veil of Joro"
   },
   "MST_SKILLS_830418_DESCRIPTION": {
-    "en": "21 combo powerful Earth and Water attack on all foes, activates Water barrier, probable status ailment counter for 3 turns, negates all status ailment for 3 turns & removes all status ailments",
-    "es": "21 combo powerful Earth and Water attack on all foes, activates Water barrier, probable status ailment counter for 3 turns, negates all status ailment for 3 turns & removes all status ailments",
-    "id": "21 kombo serangan kuat Bumi dan Air ke semua musuh, mengaktifkan penghalang Air, 3 giliran: kans membalas status penyakit, menegasi semua status penyakit, membuang semua status",
-    "pt": "21 combo powerful Earth and Water attack on all foes, activates Water barrier, probable status ailment counter for 3 turns, negates all status ailment for 3 turns & removes all status ailments",
-    "th": "21 คอมโบ โจมตีธาตุดิน กับ น้ำ ใส่ศัตรูทั้งหมด, ใช้งาน กำแพงน้ำ, มีโอกาส สวนกลับด้วยสถานะผิดปกติ นาน 3 เทิร์น, ต้านทาน สถานะผิดปกติทั้งหมด นาน 3 เทิร์น และ ล้างสถานะผิดปกติทั้งหมด",
-    "vi": "21 combo powerful Earth and Water attack on all foes, activates Water barrier, probable status ailment counter for 3 turns, negates all status ailment for 3 turns & removes all status ailments"
+    "en": "21 combo Water, Earth attack on all foes, probable random status ailments infliction counter for 3 turns, removes and negates all status ailments and Atk, Def, Rec reduction for 3 turns & adds Water barrier",
+    "es": "21 combo Water, Earth attack on all foes, probable random status ailments infliction counter for 3 turns, removes and negates all status ailments and Atk, Def, Rec reduction for 3 turns & adds Water barrier",
+    "id": "21 combo Water, Earth attack on all foes, probable random status ailments infliction counter for 3 turns, removes and negates all status ailments and Atk, Def, Rec reduction for 3 turns & adds Water barrier",
+    "pt": "21 combo Water, Earth attack on all foes, probable random status ailments infliction counter for 3 turns, removes and negates all status ailments and Atk, Def, Rec reduction for 3 turns & adds Water barrier",
+    "th": "21 combo Water, Earth attack on all foes, probable random status ailments infliction counter for 3 turns, removes and negates all status ailments and Atk, Def, Rec reduction for 3 turns & adds Water barrier",
+    "vi": "21 combo Water, Earth attack on all foes, probable random status ailments infliction counter for 3 turns, removes and negates all status ailments and Atk, Def, Rec reduction for 3 turns & adds Water barrier"
   },
   "MST_SKILLS_830418_NAME": {
     "en": "Shroud of Joro",
@@ -91950,29 +92038,5 @@
     "pt": "None",
     "th": "ล้างทุกสถานะผิดปกติ ฟื้นฟู HP และบีบีเกจอย่างมากแก่ทีม 3 เทิร์น",
     "vi": "Removes all negative status ailments, gradually recovers a great amount of HP for all allies & gradually recovers BB gauge for all allies for 3 turns  "
-  },
-  "MST_SKILLS_830526_NAME": {
-    "en": "Time Recovery",
-    "es": "Recuperación temporal",
-    "id": "Pemulihan Waktu",
-    "pt": "Recuperação do Tempo",
-    "th": "ไทม์ รีโคเวอรี่",
-    "vi": "Time Recovery"
-  },
-  "MST_SKILLS_830527_DESCRIPTION": {
-    "en": "Removes all negative status ailments, gradually recovers a great amount of HP for all allies & gradually recovers BB gauge for all allies for 3 turns  ",
-    "es": "Quita aflicciones negativas de los estados, recupera gradualmente una vasta cantidad de PS aliados y recupera su indicador BB por 3 turnos  ",
-    "id": "Menghapus semua status negatif, perlahan memulihkan: sejumlah besar HP semua sekutu & meteran BB semua sekutu 3 giliran",
-    "pt": "None",
-    "th": "ล้างทุกสถานะผิดปกติ ฟื้นฟู HP และบีบีเกจอย่างมากแก่ทีม 3 เทิร์น",
-    "vi": "Removes all negative status ailments, gradually recovers a great amount of HP for all allies & gradually recovers BB gauge for all allies for 3 turns  "
-  },
-  "MST_SKILLS_830527_NAME": {
-    "en": "Chronosphere",
-    "es": "Cronoesfera",
-    "id": "Bola Kronos",
-    "pt": "Cronosfera",
-    "th": "โครโนสเฟียร์",
-    "vi": "Chronosphere"
   }
 }
