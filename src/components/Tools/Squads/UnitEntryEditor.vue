@@ -82,12 +82,13 @@
     </v-flex>
     <v-flex xs6 sm4>
       <v-layout align-items-center>
-        <v-flex style="flex: none;" class="d-flex-container items-center">
+        <v-flex style="flex: none;" class="d-flex-container items-center" id="bb-order-label">
           <v-subheader class="pl-1" style="flex: auto;">BB Order</v-subheader>
         </v-flex>
         <v-flex class="d-flex-container items-center">
         <v-select
           class="pr-1"
+          aria-labelledby="bb-order-label"
           :value="activeUnit.bbOrder"
           @input="setBbOrder"
           :items="bbOrderPossibilities"/>
@@ -96,16 +97,49 @@
     </v-flex>
     <v-flex xs6 sm4>
       <v-layout align-items-center>
-        <v-flex style="flex: none;" class="d-flex-container items-center">
+        <v-flex style="flex: none;" class="d-flex-container items-center" id="action-label">
           <v-subheader class="pl-1" style="flex: auto;">Action</v-subheader>
         </v-flex>
         <v-flex class="d-flex-container items-center">
         <v-select
           class="pr-1"
+          aria-labelledby="action-label"
           :disabled="isEmptyUnit"
           :items="actionPossibilities"
           :value="activeUnit.action"
           @input="setAction"/>
+        </v-flex>
+      </v-layout>
+    </v-flex>
+    <v-flex xs6>
+      <v-layout align-items-center>
+        <v-flex style="flex: none;" class="d-flex-container items-center" id="type-label">
+          <v-subheader class="pl-1" style="flex: auto;">Type</v-subheader>
+        </v-flex>
+        <v-flex class="d-flex-container items-center">
+        <v-select
+          class="pr-1"
+          aria-labelledby="type-label"
+          :disabled="isEmptyUnit"
+          :items="typePossibilities"
+          :value="activeUnit.type"
+          @input="setType"/>
+        </v-flex>
+      </v-layout>
+    </v-flex>
+    <v-flex xs6>
+      <v-layout align-items-center>
+        <v-flex style="flex: none;" class="d-flex-container items-center" id="boost-label">
+          <v-subheader class="pl-1" style="flex: auto;">OE+ Level</v-subheader>
+        </v-flex>
+        <v-flex class="d-flex-container items-center">
+        <v-select
+          class="pr-1"
+          aria-labelledby="boost-label"
+          :disabled="isEmptyUnit || !canEditBoost"
+          :items="boostPossibilities"
+          :value="activeUnit.omniBoost"
+          @input="setOmniBoost"/>
         </v-flex>
       </v-layout>
     </v-flex>
@@ -224,7 +258,7 @@ import UnitSelector from '@/components/Tools/Squads/MultidexSelectors/UnitSelect
 import EsSelector from '@/components/Tools/Squads/MultidexSelectors/ExtraSkillSelector';
 import SphereSelector from '@/components/Tools/Squads/MultidexSelectors/SphereSelector';
 import { Logger } from '@/modules/Logger';
-import { squadFillerMapping, unitPositionMapping, squadUnitActions } from '@/modules/constants';
+import { squadFillerMapping, unitPositionMapping, squadUnitActions, UNIT_TYPE_MAPPING } from '@/modules/constants';
 import { isValidUnit, getFillerUnit } from '@/modules/core/units';
 import { isValidSkill, getEmptySkill } from '@/modules/core/extra-skills';
 import { isValidSphere, getEmptySphere } from '@/modules/core/items';
@@ -321,6 +355,11 @@ export default {
         }),
       ].filter(v => v);
       return nonBurstActions.concat(availableBurstTypes);
+    },
+    typePossibilities: () => ['L', 'A', 'B', 'G', 'O', 'R'].map(type => ({ value: type, text: UNIT_TYPE_MAPPING[type] })),
+    boostPossibilities: () => [0, 1, 2, 3],
+    canEditBoost () {
+      return +this.unitData.rarity === 8 || this.activeUnit.id === squadFillerMapping.ANY;
     },
   },
   data () {
@@ -442,6 +481,12 @@ export default {
       if (this.actionPossibilities.some(({ value }) => action === value)) {
         this.updateCurrentUnit({ action });
       }
+    },
+    setType (type) {
+      this.updateCurrentUnit({ type });
+    },
+    setOmniBoost (omniBoost) {
+      this.updateCurrentUnit({ omniBoost });
     },
     setEnhancements (sp) {
       this.updateCurrentUnit({ sp });

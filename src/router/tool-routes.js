@@ -1,7 +1,7 @@
 import ToolsPages from '@/views/Tools';
 import { servers } from '@/modules/constants';
 
-export const squadRequiredModules = Object.freeze(['units', 'extraSkills', 'items']);
+export const squadRequiredModules = Object.freeze(['units', 'extraSkills', 'items', 'leaderSkills']);
 
 export default [
   {

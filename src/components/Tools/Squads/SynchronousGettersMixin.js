@@ -12,5 +12,9 @@ export default {
       type: Function,
       default: () => ({}),
     },
+    getLeaderSkill: {
+      type: Function,
+      default: () => ({}),
+    },
   },
 };

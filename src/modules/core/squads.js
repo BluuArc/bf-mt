@@ -5,6 +5,9 @@ import {
   burstTypes,
   squadBuffTypes,
   targetTypes,
+  UNIT_TYPE_MAPPING,
+  UNIT_TYPE_BUFF_ID_BY_TYPE,
+  OMNI_PARADIGM_ID_BY_LEVEL,
 } from '@/modules/constants';
 import {
   spCodeToIndex,
@@ -29,6 +32,8 @@ export function squadToShorthand (squad = { units: [] }) {
       unit.bbOrder,
       unit.action,
       unit.sp || '-',
+      unit.type || ((unit.id === squadFillerMapping.EMPTY) ? '-' : UNIT_TYPE_MAPPING.Lord),
+      unit.omniBoost || 0,
     ].join('~'))
     .join(',');
 }
@@ -41,6 +46,8 @@ export function makeSquadUnitEntry ({
   bbOrder = 0,
   action = '',
   sp = '',
+  type = '',
+  omniBoost = 0,
 } = {}) {
   const toString = (val) => (val || '').toString();
   return {
@@ -51,6 +58,8 @@ export function makeSquadUnitEntry ({
     bbOrder,
     action,
     sp,
+    type: type || ((id === squadFillerMapping.EMPTY) ? '-' : UNIT_TYPE_MAPPING.Lord), // make type info retroactive
+    omniBoost: +omniBoost,
   };
 }
 
@@ -72,8 +81,8 @@ export function getEffectMappingFromSquadUnitEntry (
   {
     // NOTE: these are synchronous getters
     getUnit = () => {},
-    getItem = () => {}, // eslint-disable-line no-unused-vars
-    getExtraSkill = () => {}, // eslint-disable-line no-unused-vars
+    getItem = () => {},
+    getExtraSkill = () => {},
   } = {},
 ) {
   const unitEffects = {
@@ -132,6 +141,16 @@ export function getEffectMappingFromSquadUnitEntry (
     });
   }
 
+  const typeBuffKey = `${UNIT_TYPE_MAPPING[unitEntry.type]}${unitEntry.omniBoost}`;
+  if (typeBuffKey in UNIT_TYPE_BUFF_ID_BY_TYPE) {
+    const extraSkill = getExtraSkill(UNIT_TYPE_BUFF_ID_BY_TYPE[typeBuffKey]) || {};
+    if (Array.isArray(extraSkill.effects)) {
+      extraSkillEffects = Array.from(extraSkill.effects)
+        .filter(e => e['passive target'] !== targetTypes.PARTY) // filter out party effects as they will be added at the squad level
+        .map(e => ({ ...e, sourcePath: 'unit.type' }));
+    }
+  }
+
   return {
     unit: unitEffects,
     es: extraSkillEffects,
@@ -181,6 +200,8 @@ export function shorthandToSquad (shorthand = '', name = `Squad ${new Date().toL
       bbOrder,
       action,
       spText,
+      type,
+      omniBoost,
     ] = entry.split('~');
     if (leadFriendFlag === 'L') {
       leadIndex = i;
@@ -196,6 +217,8 @@ export function shorthandToSquad (shorthand = '', name = `Squad ${new Date().toL
       bbOrder: +bbOrder,
       action,
       sp: spText !== '-' ? spText : '',
+      type,
+      omniBoost,
     });
   });
   return {
@@ -299,6 +322,29 @@ export function fixSquadErrors (squad = {}, {
           messages.push(message);
         }
 
+        let type = unit.type || '';
+        if (id === squadFillerMapping.EMPTY && type) {
+          messages.push(`${unitIdentifer} is empty and therefore cannot have a type. Removing type designation.`);
+          type = '';
+        } else if (id !== squadFillerMapping.EMPTY && !type) {
+          messages.push(`${unitIdentifer} has no type. Defaulting to ${UNIT_TYPE_MAPPING.L}`);
+          type = UNIT_TYPE_MAPPING.Lord;
+        }
+
+        let omniBoost = +unit.omniBoost || 0;
+        if (id === squadFillerMapping.EMPTY && omniBoost !== 0) {
+          messages.push(`${unitIdentifer} is empty and therefore cannot have an OE+ levels. Using 0 for level.`);
+          omniBoost = 0;
+        } else if (id !== squadFillerMapping.EMPTY) {
+          if (isNaN(unit.omniBoost)) {
+            messages.push(`${unitIdentifer} has a non-number value for OE+ level. Using 0 for level.`);
+            omniBoost = 0;
+          } else if (omniBoost < 0 || omniBoost > 3) {
+            messages.push(`${unitIdentifer} has a value outside of the valid range for OE+ levels [${omniBoost}, expected 0-3]. Using 0 for level.`);
+            omniBoost = 0;
+          }
+        }
+
         units.push(makeSquadUnitEntry({
           id,
           position,
@@ -307,6 +353,8 @@ export function fixSquadErrors (squad = {}, {
           es: extraSkill,
           spheres,
           sp,
+          type,
+          omniBoost,
         }));
       } else {
         messages.push(`Unit at input index ${i} is invalid and has been removed from squad.`);
@@ -386,10 +434,16 @@ export function getMultidexDatabaseIdsFromSquads (squads = [generateDefaultSquad
       }
     });
   });
+
+  Object.values(UNIT_TYPE_BUFF_ID_BY_TYPE).forEach(id => {
+    esIds.add(id);
+  });
+
   return {
     units: Array.from(unitIds),
     extraSkills: Array.from(esIds),
     items: Array.from(itemIds),
+    leaderSkills: Object.values(OMNI_PARADIGM_ID_BY_LEVEL),
   };
 }
 
@@ -411,10 +465,13 @@ export function getEffectsListForSquadUnitEntry (
     getUnit: () => {},
     getItem: () => {},
     getExtraSkill: () => {},
+    getLeaderSkill: () => {},
   },
 ) {
   const entryEffects = getEffectMappingFromSquadUnitEntry(unitEntry, syncGetters);
   const isLsActive = (squad.units.indexOf(unitEntry) === squad.lead || squad.units.indexOf(unitEntry) === squad.friend);
+  // TODO: OE+ paradigm
+  // TODO: type level 3 buffs
   return getEffectsList({
     leaderSkillEffects: isLsActive ? entryEffects.unit.ls : [],
     extraSkillEffects: entryEffects.unit.es,
@@ -442,6 +499,14 @@ export function getMultidexParamsForSquadUnit (unit = generateFillerSquadUnitEnt
     links.push({
       moduleName: 'extraSkills',
       id: unit.es,
+    });
+  }
+
+  const typeBuffKey = `${UNIT_TYPE_MAPPING[unit.type]}${unit.omniBoost}`;
+  if (typeBuffKey in UNIT_TYPE_BUFF_ID_BY_TYPE) {
+    links.push({
+      moduleName: 'extraSkills',
+      id: UNIT_TYPE_BUFF_ID_BY_TYPE[typeBuffKey],
     });
   }
 

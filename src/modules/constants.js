@@ -461,6 +461,67 @@ export const SOURCE_PATH_TO_TEXT_MAPPING = Object.freeze({
   'unit.sbb': 'Super Brave Burst',
   'unit.ubb': 'Ultimate Brave Burst',
   'unit.sp': 'SP Enhancement',
+  'unit.type': 'Unit Type',
+  'squad.omniBoost': 'Elemental Paradigm',
+});
+
+export const UNIT_TYPE_MAPPING = Object.freeze({
+  L: 'Lord',
+  A: 'Anima',
+  B: 'Breaker',
+  G: 'Guardian',
+  O: 'Oracle',
+  R: 'Rex',
+  Lord: 'L',
+  Anima: 'A',
+  Breaker: 'B',
+  Guardian: 'G',
+  Oracle: 'O',
+  Rex: 'R',
+});
+
+/**
+ * @description Leader Skill IDs of Omni Paradigm buffs
+ */
+export const OMNI_PARADIGM_ID_BY_LEVEL = Object.freeze({
+  1: '8100100',
+  2: '8100200',
+  3: '8100300',
+});
+
+/**
+ * @description Extra Skill IDs of buffs given based on a unit's type.
+ */
+export const UNIT_TYPE_BUFF_ID_BY_TYPE = Object.freeze({
+  Lord0: '500100',
+  Lord1: '500101',
+  Lord2: '500102',
+  Lord3: '500103',
+
+  Anima0: '500200',
+  Anima1: '500201',
+  Anima2: '500202',
+  Anima3: '500203',
+
+  Breaker0: '500300',
+  Breaker1: '500301',
+  Breaker2: '500302',
+  Breaker3: '500303',
+
+  Guardian0: '500400',
+  Guardian1: '500401',
+  Guardian2: '500402',
+  Guardian3: '500403',
+
+  Oracle0: '500500',
+  Oracle1: '500501',
+  Oracle2: '500502',
+  Oracle3: '500503',
+
+  Rex0: '500600',
+  Rex1: '500601',
+  Rex2: '500602',
+  Rex3: '500603',
 });
 
 export const MATERIAL_COLOR_MAPPING = Object.freeze({

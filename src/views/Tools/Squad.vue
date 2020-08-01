@@ -237,6 +237,7 @@ export default {
       squadUnits: {},
       squadItems: {},
       squadExtraSkills: {},
+      squadLeaderSkills: {},
       isLoadingSquadData: false,
       activeSquadDialog: '',
       editMode: false,
@@ -269,6 +270,9 @@ export default {
     ...mapActions('extraSkills', {
       getExtraSkills: 'getByIds',
     }),
+    ...mapActions('leaderSkills', {
+      getLeaderSkills: 'getByIds',
+    }),
     getUnit (id) {
       return this.squadUnits[id] || {};
     },
@@ -278,13 +282,16 @@ export default {
     getExtraSkill (id) {
       return this.squadExtraSkills[id] || {};
     },
+    getLeaderSkill (id) {
+      return this.squadLeaderSkills[id] || {};
+    },
     async updatePageDbForSquad (squad) {
       if (squad) {
         const databaseIds = getMultidexDatabaseIdsFromSquads(squad);
         const toLowerCase = (input) => `${input[0].toLowerCase()}${input.slice(1)}`;
         const currentServer = this.activeServer;
         try {
-          await ['Units', 'Items', 'ExtraSkills'].reduce((acc, name) => {
+          await ['Units', 'Items', 'ExtraSkills', 'LeaderSkills'].reduce((acc, name) => {
             const entriesToGet = [];
             const componentDb = this[`squad${name}`];
             const neededKeys = databaseIds[toLowerCase(name)];
@@ -299,7 +306,7 @@ export default {
                 }
               }
             });
-  
+
             return acc.then(async () => {
               if (entriesToGet.length > 0) {
                 if (!this.isLoadingSquadData) {

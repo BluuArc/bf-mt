@@ -110,7 +110,7 @@
 <script>
 import { spCodeToIndex, getSpDescription, getSpCost } from '@/modules/core/units';
 import { squadToShorthand } from '@/modules/core/squads';
-import { squadUnitActions, squadFillerMapping, unitPositionMapping } from '@/modules/constants';
+import { squadUnitActions, squadFillerMapping, unitPositionMapping, UNIT_TYPE_MAPPING } from '@/modules/constants';
 import CardTabsContainer from '@/components/CardTabsContainer';
 import TextViewer from '@/components/TextViewer';
 import OneLineTextViewer from '@/components/OneLineTextViewer';
@@ -190,6 +190,26 @@ export default {
     this.setWithPreset();
   },
   methods: {
+    getDisplayNameForSquadUnit (unit, abbreviatedType = false) {
+      const unitData = this.getUnit(unit.id);
+      let displayName;
+      if (unit.id === squadFillerMapping.EMPTY) {
+        displayName = `**__${unitData.name || unit.id}__**`;
+      } else {
+        const rarity = ((unitData.rarity && unitData.rarity === 8) || unit.id === squadFillerMapping.ANY) ? `OE+${unit.omniBoost || 0} ` : `${unitData.rarity}\\* `;
+        const name = unitData.name || unit.id;
+        let type;
+        if (abbreviatedType) {
+          type = unit.type || UNIT_TYPE_MAPPING.Lord;
+        } else {
+          type = UNIT_TYPE_MAPPING[unit.type] || UNIT_TYPE_MAPPING.L;
+        }
+
+        displayName = `**__${rarity || ''}${name} (${type})__**`;
+      }
+
+      return displayName;
+    },
     squadToMarkdown (
       squad = {},
       options = {},
@@ -225,17 +245,14 @@ export default {
         squad.units.forEach((unit, i) => {
           const entry = [];
           let prefix = useBullets ? '*' : '';
-          const isFillerUnit = unit.id === squadFillerMapping.ANY || unit.id === squadFillerMapping.EMPTY;
+          const displayName = this.getDisplayNameForSquadUnit(unit, this.abbreviate);
+
           // name, position, BB order and type
           entry.push([
             prefix,
-            isFillerUnit && `**__${this.getUnit(unit.id).name || unit.id}__**`,
-            !isFillerUnit && [
-              `**__${this.getUnit(unit.id).rarity && `${this.getUnit(unit.id).rarity === 8 ? 'OE' : `${this.getUnit(unit.id).rarity}\\*`}`}`,
-              `${this.getUnit(unit.id).name || unit.id}__**`,
-              ].join(' '),
-            i === squad.lead && `**(${abbreviate ? 'L' : 'Leader'})**`,
-            i === squad.friend && `**(${abbreviate ? 'F' : 'Friend'})**`,
+            displayName,
+            i === squad.lead && `**[${abbreviate ? 'L' : 'Leader'}]**`,
+            i === squad.friend && `**[${abbreviate ? 'F' : 'Friend'}]**`,
             (showPosition || showOrder || showAction) && '-',
             [
               showPosition && unit.position,
@@ -353,21 +370,17 @@ export default {
         showSparkStatisticsByUnit = true,
         showTotalSparkability = true,
       } = options;
-      const { squad, getUnit, sparkTextByUnit, getActionText } = this;
+      const { squad, sparkTextByUnit, getActionText } = this;
       const isDiscord = this.target === 'Discord';
       const names = unitPositionMapping.map(position => {
         const i = squad.units.findIndex(u => u.position === position);
         const unit = squad.units[i];
-        const isFillerUnit = unit.id === squadFillerMapping.ANY || unit.id === squadFillerMapping.EMPTY;
+        const displayName = this.getDisplayNameForSquadUnit(unit, this.abbreviate);
         // name, position, BB order and type
         const nameLine = [
-          isFillerUnit && `**__${getUnit(unit.id).name || unit.id}__**`,
-          !isFillerUnit && [
-            `**__${getUnit(unit.id).rarity && `${getUnit(unit.id).rarity === 8 ? 'OE' : `${getUnit(unit.id).rarity}\\*`}`}`,
-            `${getUnit(unit.id).name || unit.id}__**`,
-            ].join(' '),
-          i === squad.lead && '**(L)**',
-          i === squad.friend && '**(F)**',
+          displayName,
+          i === squad.lead && '**[L]**',
+          i === squad.friend && '**[F]**',
           '-',
           [
             showOrder && unit.bbOrder,

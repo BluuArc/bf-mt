@@ -121,7 +121,7 @@
 </template>
 
 <script>
-import { squadUnitActions } from '@/modules/constants';
+import { squadUnitActions, squadFillerMapping, UNIT_TYPE_MAPPING } from '@/modules/constants';
 import { spCodeToIndex, spCodeToEffects } from '@/modules/core/units';
 import { mapGetters } from 'vuex';
 import colors from 'vuetify/es5/util/colors';
@@ -188,7 +188,18 @@ export default {
       return this.getUnit(this.unit.id).rarity;
     },
     name () {
-      return this.getUnit(this.unit.id).name || this.unit.id;
+      const name = this.getUnit(this.unit.id).name || this.unit.id;
+      let typeAndBoost = '';
+      if (name !== squadFillerMapping.EMPTY) {
+        const type = UNIT_TYPE_MAPPING[this.unit.type] || UNIT_TYPE_MAPPING.L;
+        if (+this.rarity === 8 || name === squadFillerMapping.ANY) {
+          typeAndBoost = `${type} +${this.unit.omniBoost || 0}`;
+        } else {
+          typeAndBoost = type;
+        }
+      }
+
+      return typeAndBoost ? `${name} (${typeAndBoost})` : name;
     },
   },
   methods: {
@@ -244,7 +255,7 @@ export default {
     justify-content: center;
     margin: auto;
     width: 100%;
-    border-top-left-radius: 0; 
+    border-top-left-radius: 0;
     border-top-right-radius: 0;
     margin-top: 0;
   }
