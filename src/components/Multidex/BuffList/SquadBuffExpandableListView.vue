@@ -24,6 +24,7 @@
         :getUnit="getUnit"
         :getItem="getItem"
         :getExtraSkill="getExtraSkill"
+        :getLeaderSkill="getLeaderSkill"
       />
     </template>
   </buff-expandable-list-view>

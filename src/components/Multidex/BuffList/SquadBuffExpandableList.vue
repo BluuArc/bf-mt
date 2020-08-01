@@ -63,13 +63,21 @@
 </template>
 
 <script>
-import { getEffectsListForSquadUnitEntry } from '@/modules/core/squads';
+import { getEffectsListForSquadUnitEntry, generateFillerSquadUnitEntry, getEffectsListBasedOnSquadComposition } from '@/modules/core/squads';
 import { mapGetters } from 'vuex';
-import { squadBuffTypes, SOURCE_PATH_TO_TEXT_MAPPING } from '@/modules/constants';
+import { squadBuffTypes, SOURCE_PATH_TO_TEXT_MAPPING, squadFillerMapping } from '@/modules/constants';
 import UnitEntry from '@/components/Tools/Squads/SquadUnitEntry';
 import UnitThumbnail from '@/components/Multidex/Units/UnitThumbnail';
 import BuffExpandableList from '@/components/Multidex/BuffList/GenericBuffExpandableList/BuffExpandableList';
 import GettersMixin from '@/components/Tools/Squads/SynchronousGettersMixin';
+
+function generateSquadAsUnitEntry () {
+  const baseEntry = generateFillerSquadUnitEntry();
+  baseEntry.id = squadFillerMapping.SQUAD;
+  baseEntry.position = 'Squad';
+  baseEntry.bbOrder = '-';
+  return baseEntry;
+}
 
 export default {
   mixins: [GettersMixin],
@@ -124,19 +132,27 @@ export default {
       return 48;
     },
     unitEntries () {
-      return this.squad.units;
+      return this.squad.units.concat([generateSquadAsUnitEntry()]);
     },
     effectMappingByUnitEntry () {
       const mapping = new WeakMap();
       this.unitEntries.forEach(unit => {
         let effects = this.inputEffectMappingByUnitEntry.get(unit);
         if (!Array.isArray(effects)) {
-          effects = getEffectsListForSquadUnitEntry({
-            unitEntry: unit,
-            target: this.targetType,
-            effectType: this.effectType,
-            squad: this.squad,
-          }, this);
+          if (unit.id !== squadFillerMapping.SQUAD) {
+            effects = getEffectsListForSquadUnitEntry({
+              unitEntry: unit,
+              target: this.targetType,
+              effectType: this.effectType,
+              squad: this.squad,
+            }, this);
+          } else {
+            effects = getEffectsListBasedOnSquadComposition({
+              target: this.targetType,
+              effectType: this.effectType,
+              squad: this.squad,
+            }, this);
+          }
         }
         mapping.set(unit, effects);
       });
@@ -165,6 +181,11 @@ export default {
         } else if (path.startsWith('sphere:')) {
           const sphereId = path.split(':')[1];
           displayValue = `Sphere: ${this.getItem(sphereId).name || sphereId || path}`;
+        }
+      } else if (path === 'squad.omniBoost') {
+        const unitData = this.getUnit(source.id) || {};
+        if (unitData.element) {
+          displayValue = `Elemental Paradigm (${unitData.element})`;
         }
       }
       return displayValue || path;

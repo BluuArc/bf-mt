@@ -148,6 +148,7 @@ export const unitPositionMapping = Object.freeze(['Top Left', 'Top Right', 'Midd
 export const squadFillerMapping = Object.freeze({
   EMPTY: '(Empty)',
   ANY: '(Any)',
+  SQUAD: '(Squad)',
 });
 
 export const effectTypes = Object.freeze({
@@ -461,7 +462,12 @@ export const SOURCE_PATH_TO_TEXT_MAPPING = Object.freeze({
   'unit.sbb': 'Super Brave Burst',
   'unit.ubb': 'Ultimate Brave Burst',
   'unit.sp': 'SP Enhancement',
-  'unit.type': 'Unit Type',
+  'unit.type.lord': 'Unit Type (Lord)',
+  'unit.type.anima': 'Unit Type (Anima)',
+  'unit.type.breaker': 'Unit Type (Breaker)',
+  'unit.type.guardian': 'Unit Type (Guardian)',
+  'unit.type.oracle': 'Unit Type (Oracle)',
+  'unit.type.rex': 'Unit Type (Rex)',
   'squad.omniBoost': 'Elemental Paradigm',
 });
 

@@ -101,6 +101,7 @@
                   :getUnit="getUnit"
                   :getItem="getItem"
                   :getExtraSkill="getExtraSkill"
+                  :getLeaderSkill="getLeaderSkill"
                   :squad="squad"
                   :topNavbarHeight="topNavbarHeight"
                 />

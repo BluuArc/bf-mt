@@ -190,7 +190,7 @@ export default {
     name () {
       const name = this.getUnit(this.unit.id).name || this.unit.id;
       let typeAndBoost = '';
-      if (name !== squadFillerMapping.EMPTY) {
+      if (name !== squadFillerMapping.EMPTY && name !== squadFillerMapping.SQUAD) {
         const type = UNIT_TYPE_MAPPING[this.unit.type] || UNIT_TYPE_MAPPING.L;
         if (+this.rarity === 8 || name === squadFillerMapping.ANY) {
           typeAndBoost = `${type} +${this.unit.omniBoost || 0}`;

@@ -8,6 +8,7 @@ import {
   UNIT_TYPE_MAPPING,
   UNIT_TYPE_BUFF_ID_BY_TYPE,
   OMNI_PARADIGM_ID_BY_LEVEL,
+  elements,
 } from '@/modules/constants';
 import {
   spCodeToIndex,
@@ -145,9 +146,10 @@ export function getEffectMappingFromSquadUnitEntry (
   if (typeBuffKey in UNIT_TYPE_BUFF_ID_BY_TYPE) {
     const extraSkill = getExtraSkill(UNIT_TYPE_BUFF_ID_BY_TYPE[typeBuffKey]) || {};
     if (Array.isArray(extraSkill.effects)) {
+      const type = UNIT_TYPE_MAPPING[unitEntry.type].toLowerCase();
       extraSkillEffects = Array.from(extraSkill.effects)
         .filter(e => e['passive target'] !== targetTypes.PARTY) // filter out party effects as they will be added at the squad level
-        .map(e => ({ ...e, sourcePath: 'unit.type' }));
+        .map(e => ({ ...e, sourcePath: `unit.type.${type}` }));
     }
   }
 
@@ -470,8 +472,7 @@ export function getEffectsListForSquadUnitEntry (
 ) {
   const entryEffects = getEffectMappingFromSquadUnitEntry(unitEntry, syncGetters);
   const isLsActive = (squad.units.indexOf(unitEntry) === squad.lead || squad.units.indexOf(unitEntry) === squad.friend);
-  // TODO: OE+ paradigm
-  // TODO: type level 3 buffs
+
   return getEffectsList({
     leaderSkillEffects: isLsActive ? entryEffects.unit.ls : [],
     extraSkillEffects: entryEffects.unit.es,
@@ -480,6 +481,108 @@ export function getEffectsListForSquadUnitEntry (
     elgifEffects: entryEffects.es,
     sphereEffects: Object.values(entryEffects.spheres).reduce((acc, effects) => acc.concat(effects), []),
     spEnhancementEffects: entryEffects.unit.sp,
+    target,
+    effectType,
+  });
+}
+
+export function getEffectsListBasedOnSquadComposition (
+  {
+    target = targetTypes.PARTY,
+    effectType = squadBuffTypes.PROC,
+    squad = generateDefaultSquad(),
+  }, syncGetters = {
+    getUnit: () => {},
+    getItem: () => {},
+    getExtraSkill: () => {},
+    getLeaderSkill: () => {},
+  },
+) {
+  const activeLevelThreeTypeBoosts = new Set();
+  let activeOmniParadigmEffects = [];
+  const omniBoostedUnitsByElement = {
+    fire: [],
+    water: [],
+    earth: [],
+    thunder: [],
+    light: [],
+    dark: [],
+  };
+
+  let isAllOmni = true;
+  squad.units.forEach((unit, i) => {
+    const typeBuffKey = `${UNIT_TYPE_MAPPING[unit.type]}${unit.omniBoost}`;
+    if (unit.omniBoost === 3 && typeBuffKey in UNIT_TYPE_BUFF_ID_BY_TYPE) {
+      const id = UNIT_TYPE_BUFF_ID_BY_TYPE[typeBuffKey];
+      const type = UNIT_TYPE_MAPPING[unit.type].toLowerCase();
+      activeLevelThreeTypeBoosts.add(`${id}-${type}`);
+    }
+
+    const unitData = syncGetters.getUnit(unit.id) || {};
+    if (squad.friend !== i && (unit.omniBoost > 0 || +unitData.rarity === 8)) {
+      if (unitData.element in omniBoostedUnitsByElement) {
+        omniBoostedUnitsByElement[unitData.element].push(unit.omniBoost);
+      }
+    }
+
+    if (squad.friend !== i && +unitData.rarity !== 8) {
+      isAllOmni = false;
+    }
+  });
+
+  if (isAllOmni) {
+    const getCountOfEntriesWithMinimumValue = (entries = [], value) => entries.reduce((acc, val) => acc + (((val >= value) && 1) || 0), 0);
+    Object.entries(omniBoostedUnitsByElement).forEach(([element, entries]) => {
+      const numEntries = entries.length;
+      let activeOmniParadigmBoost;
+      // conditions taken from https://bravefrontierglobal.fandom.com/wiki/Elemental_Paradigm#Specifications
+      if (numEntries >= 5 && getCountOfEntriesWithMinimumValue(entries, 3) >= 3) {
+        activeOmniParadigmBoost = OMNI_PARADIGM_ID_BY_LEVEL[3];
+      } else if (numEntries >= 4 && getCountOfEntriesWithMinimumValue(entries, 2) >= 3) {
+        activeOmniParadigmBoost = OMNI_PARADIGM_ID_BY_LEVEL[2];
+      } else if (numEntries >= 3 && getCountOfEntriesWithMinimumValue(entries, 1) >= 3) {
+        activeOmniParadigmBoost = OMNI_PARADIGM_ID_BY_LEVEL[1];
+      }
+
+      if (activeOmniParadigmBoost) {
+        const lsData = syncGetters.getLeaderSkill(activeOmniParadigmBoost) || {};
+        if (Array.isArray(lsData.effects)) {
+          const elementValue = elements.indexOf(element) + 1;
+          const addElementToParadigmEffect = (effectValue = '') => effectValue.replace('X', elementValue);
+          const effects = Array.from(lsData.effects).map(e => {
+            const modifiedEffect = { ...e, sourcePath: 'squad.omniBoost' };
+            if ('passive param' in modifiedEffect) {
+              modifiedEffect['passive param'] = addElementToParadigmEffect(modifiedEffect['passive param']);
+            }
+
+            if ('unknown passive params' in modifiedEffect) {
+              modifiedEffect['unknown passive params'] = addElementToParadigmEffect(modifiedEffect['unknown passive params']);
+            }
+
+            return modifiedEffect;
+          });
+
+          activeOmniParadigmEffects = activeOmniParadigmEffects.concat(effects);
+        }
+      }
+    });
+  }
+
+  const activeLevelThreeTypeEffects = Array.from(activeLevelThreeTypeBoosts).reduce((acc, entry) => {
+    const [id, type] = entry.split('-');
+    const esData = syncGetters.getExtraSkill(id);
+    let effects = [];
+    if (Array.isArray(esData.effects)) {
+      effects = Array.from(esData.effects)
+        .filter(e => e['passive target'] === targetTypes.PARTY) // only party effects
+        .map(e => ({ ...e, sourcePath: `unit.type.${type}` }));
+    }
+    return acc.concat(effects);
+  }, []);
+
+  return getEffectsList({
+    leaderSkillEffects: activeOmniParadigmEffects,
+    extraSkillEffects: activeLevelThreeTypeEffects,
     target,
     effectType,
   });
