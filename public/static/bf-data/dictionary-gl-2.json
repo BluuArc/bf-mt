@@ -1,4 +1,36 @@
 {
+  "MST_LEADERSKILLS_2905_NAME": {
+    "en": "Snow Spell",
+    "es": "Snow Spell",
+    "id": "Sihir Salju",
+    "pt": "Snow Spell",
+    "th": "สโนว สเปล",
+    "vi": "Snow Spell"
+  },
+  "MST_LEADERSKILLS_2906_DESCRIPTION": {
+    "en": "Boost in the BB gauge when attacked, probable reduction of damage taken & fills BB gauge",
+    "es": "Boost in the BB gauge when attacked, probable reduction of damage taken & fills BB gauge",
+    "id": "Menambah meteran BB saat diserang, kans mengurangi kerusakan diderita & mengisi meteran BB",
+    "pt": "Boost in the BB gauge when attacked, probable reduction of damage taken & fills BB gauge",
+    "th": "เพิ่มค่าให้ เกจ BB เมื่อถูกโจมตี, อาจจะ ลดค่าความเสียหายที่ได้รับ และ เติมเกจ BB",
+    "vi": "Boost in the BB gauge when attacked, probable reduction of damage taken & fills BB gauge"
+  },
+  "MST_LEADERSKILLS_2906_NAME": {
+    "en": "Snowy Allure",
+    "es": "Snowy Allure",
+    "id": "Daya Tarik Salju",
+    "pt": "Snowy Allure",
+    "th": "สโนววี่ อัลลัวร์",
+    "vi": "Snowy Allure"
+  },
+  "MST_LEADERSKILLS_3000_DESCRIPTION": {
+    "en": "Low chance of inflicting a random status ailment when attacking",
+    "es": "Poca posibilidad de infligir dolencia aleatoria al atacar",
+    "id": "Kans kecil menyebabkan status penyakit acak saat menyerang",
+    "pt": "Dá chance pequena de causar um status negativo aleatório ao atacar",
+    "th": "เมื่อโจมตี มีโอกาสเล็กน้อยที่จะสร้างสถานะผิดปกติโดยสุ่ม",
+    "vi": "Ít cơ hội gây ra bệnh tật tình trạng ngẫu nhiên khi tấn công"
+  },
   "MST_LEADERSKILLS_3000_NAME": {
     "en": "Epidemic Wave",
     "es": "Onda epidémica",
@@ -16014,6 +16046,22 @@
     "pt": "Lux Aura",
     "th": "Lux Aura",
     "vi": "Lux Aura"
+  },
+  "MST_LEADERSKILLS_850918_DESCRIPTION": {
+    "en": "100% all parameters, 15% damage reduction, probable 1 KO resistance, 40% BC, HC, 5% Item, 20% Zel, 30% Karma drop rates & negates all status ailments and Atk, Def, Rec reduction",
+    "es": "100% all parameters, 15% damage reduction, probable 1 KO resistance, 40% BC, HC, 5% Item, 20% Zel, 30% Karma drop rates & negates all status ailments and Atk, Def, Rec reduction",
+    "id": "100% all parameters, 15% damage reduction, probable 1 KO resistance, 40% BC, HC, 5% Item, 20% Zel, 30% Karma drop rates & negates all status ailments and Atk, Def, Rec reduction",
+    "pt": "100% all parameters, 15% damage reduction, probable 1 KO resistance, 40% BC, HC, 5% Item, 20% Zel, 30% Karma drop rates & negates all status ailments and Atk, Def, Rec reduction",
+    "th": "100% all parameters, 15% damage reduction, probable 1 KO resistance, 40% BC, HC, 5% Item, 20% Zel, 30% Karma drop rates & negates all status ailments and Atk, Def, Rec reduction",
+    "vi": "100% all parameters, 15% damage reduction, probable 1 KO resistance, 40% BC, HC, 5% Item, 20% Zel, 30% Karma drop rates & negates all status ailments and Atk, Def, Rec reduction"
+  },
+  "MST_LEADERSKILLS_850918_NAME": {
+    "en": "Spiritual Support",
+    "es": "Spiritual Support",
+    "id": "Spiritual Support",
+    "pt": "Spiritual Support",
+    "th": "Spiritual Support",
+    "vi": "Spiritual Support"
   },
   "MST_LEADERSKILLS_850977_DESCRIPTION": {
     "en": "40% boost to max HP, boosts Atk relative to how high remaining HP is & boosts Def relative to how low remaining HP is",
@@ -92013,30 +92061,6 @@
     "id": "Pendeta Maria",
     "pt": "Maria Sacerdotisa",
     "th": "พรีสเทสมาเรีย",
-    "vi": "Nữ tu Maria"
-  },
-  "MST_MONSTERS_50769_NAME": {
-    "en": "Priestess Maria",
-    "es": "Sacerdotisa María",
-    "id": "Pendeta Maria",
-    "pt": "Maria Sacerdotisa",
-    "th": "พรีสเทสมาเรีย",
-    "vi": "Nữ tu Maria"
-  },
-  "MST_MONSTERS_50770_NAME": {
-    "en": "Priestess Maria",
-    "es": "Sacerdotisa María",
-    "id": "Pendeta Maria",
-    "pt": "Maria Sacerdotisa",
-    "th": "พรีสเทสมาเรีย",
-    "vi": "Priestess Maria"
-  },
-  "MST_MONSTERS_50771_NAME": {
-    "en": "Priestess Maria",
-    "es": "Sacerdotisa María",
-    "id": "Pendeta Maria",
-    "pt": "Maria Sacerdotisa",
-    "th": "พรีสเทส มาเรีย",
     "vi": "Nữ tu Maria"
   }
 }
