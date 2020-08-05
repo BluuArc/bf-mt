@@ -1,36 +1,4 @@
 {
-  "MST_SKILLS_2840758_NAME": {
-    "en": "Lightning Strikes Twice",
-    "es": "Lightning Strikes Twice",
-    "id": "Lightning Strikes Twice",
-    "pt": "Lightning Strikes Twice",
-    "th": "Lightning Strikes Twice",
-    "vi": "Lightning Strikes Twice"
-  },
-  "MST_SKILLS_2840767_DESCRIPTION": {
-    "en": "18 combo massive Thunder attack on all foes (damage relative to remaining HP), adds evasion for 3 turns,enormously boosts OD gauge, fully restores HP for 3 turns,enormously boosts Atk, Def relative to HP for 3 turns",
-    "es": "18 combo massive Thunder attack on all foes (damage relative to remaining HP), adds evasion for 3 turns,enormously boosts OD gauge, fully restores HP for 3 turns,enormously boosts Atk, Def relative to HP for 3 turns",
-    "id": "18 combo massive Thunder attack on all foes (damage relative to remaining HP), adds evasion for 3 turns,enormously boosts OD gauge, fully restores HP for 3 turns,enormously boosts Atk, Def relative to HP for 3 turns",
-    "pt": "18 combo massive Thunder attack on all foes (damage relative to remaining HP), adds evasion for 3 turns,enormously boosts OD gauge, fully restores HP for 3 turns,enormously boosts Atk, Def relative to HP for 3 turns",
-    "th": "18 combo massive Thunder attack on all foes (damage relative to remaining HP), adds evasion for 3 turns,enormously boosts OD gauge, fully restores HP for 3 turns,enormously boosts Atk, Def relative to HP for 3 turns",
-    "vi": "18 combo massive Thunder attack on all foes (damage relative to remaining HP), adds evasion for 3 turns,enormously boosts OD gauge, fully restores HP for 3 turns,enormously boosts Atk, Def relative to HP for 3 turns"
-  },
-  "MST_SKILLS_2840767_NAME": {
-    "en": "You’re getting on my nerves!",
-    "es": "You’re getting on my nerves!",
-    "id": "You’re getting on my nerves!",
-    "pt": "You’re getting on my nerves!",
-    "th": "You’re getting on my nerves!",
-    "vi": "You’re getting on my nerves!"
-  },
-  "MST_SKILLS_2840768_DESCRIPTION": {
-    "en": "23 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts OD gauge, adds evasion for 3 turns, fully restores HP for 4 turns, purges LS and ES disable effects from all allies & enormously boosts Atk, Def relative to HP for 4 turns",
-    "es": "23 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts OD gauge, adds evasion for 3 turns, fully restores HP for 4 turns, purges LS and ES disable effects from all allies & enormously boosts Atk, Def relative to HP for 4 turns",
-    "id": "23 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts OD gauge, adds evasion for 3 turns, fully restores HP for 4 turns, purges LS and ES disable effects from all allies & enormously boosts Atk, Def relative to HP for 4 turns",
-    "pt": "23 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts OD gauge, adds evasion for 3 turns, fully restores HP for 4 turns, purges LS and ES disable effects from all allies & enormously boosts Atk, Def relative to HP for 4 turns",
-    "th": "23 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts OD gauge, adds evasion for 3 turns, fully restores HP for 4 turns, purges LS and ES disable effects from all allies & enormously boosts Atk, Def relative to HP for 4 turns",
-    "vi": "23 combo massive Thunder attack on all foes (damage relative to remaining HP), enormously boosts OD gauge, adds evasion for 3 turns, fully restores HP for 4 turns, purges LS and ES disable effects from all allies & enormously boosts Atk, Def relative to HP for 4 turns"
-  },
   "MST_SKILLS_2840768_NAME": {
     "en": "Avenging Angel",
     "es": "Avenging Angel",
@@ -1366,6 +1334,22 @@
     "pt": "Lux Burst III",
     "th": "Lux Burst III",
     "vi": "Lux Burst III"
+  },
+  "MST_SKILLS_2850918_DESCRIPTION": {
+    "en": "18 combo Light attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec for 3 turns, fully restores HP for 3 turns, fills BB gauge for 3 turns & may raise allies from KO",
+    "es": "18 combo Light attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec for 3 turns, fully restores HP for 3 turns, fills BB gauge for 3 turns & may raise allies from KO",
+    "id": "18 combo Light attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec for 3 turns, fully restores HP for 3 turns, fills BB gauge for 3 turns & may raise allies from KO",
+    "pt": "18 combo Light attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec for 3 turns, fully restores HP for 3 turns, fills BB gauge for 3 turns & may raise allies from KO",
+    "th": "18 combo Light attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec for 3 turns, fully restores HP for 3 turns, fills BB gauge for 3 turns & may raise allies from KO",
+    "vi": "18 combo Light attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec for 3 turns, fully restores HP for 3 turns, fills BB gauge for 3 turns & may raise allies from KO"
+  },
+  "MST_SKILLS_2850918_NAME": {
+    "en": "Heavensent Mercy",
+    "es": "Heavensent Mercy",
+    "id": "Heavensent Mercy",
+    "pt": "Heavensent Mercy",
+    "th": "Heavensent Mercy",
+    "vi": "Heavensent Mercy"
   },
   "MST_SKILLS_2850977_DESCRIPTION": {
     "en": "21 combo massive Light attack on all foes, negates all status ailments for 3 turns, negates Atk, Def, Rec reduction effects for 3 turns, enormously boosts Def for 3 turns & enormously boosts Atk relative to Def for 3 turns",
@@ -92038,5 +92022,45 @@
     "pt": "None",
     "th": "ล้างทุกสถานะผิดปกติ ฟื้นฟู HP และบีบีเกจอย่างมากแก่ทีม 3 เทิร์น",
     "vi": "Removes all negative status ailments, gradually recovers a great amount of HP for all allies & gradually recovers BB gauge for all allies for 3 turns  "
+  },
+  "MST_SKILLS_830526_NAME": {
+    "en": "Time Recovery",
+    "es": "Recuperación temporal",
+    "id": "Pemulihan Waktu",
+    "pt": "Recuperação do Tempo",
+    "th": "ไทม์ รีโคเวอรี่",
+    "vi": "Time Recovery"
+  },
+  "MST_SKILLS_830527_DESCRIPTION": {
+    "en": "Removes all negative status ailments, gradually recovers a great amount of HP for all allies & gradually recovers BB gauge for all allies for 3 turns  ",
+    "es": "Quita aflicciones negativas de los estados, recupera gradualmente una vasta cantidad de PS aliados y recupera su indicador BB por 3 turnos  ",
+    "id": "Menghapus semua status negatif, perlahan memulihkan: sejumlah besar HP semua sekutu & meteran BB semua sekutu 3 giliran",
+    "pt": "None",
+    "th": "ล้างทุกสถานะผิดปกติ ฟื้นฟู HP และบีบีเกจอย่างมากแก่ทีม 3 เทิร์น",
+    "vi": "Removes all negative status ailments, gradually recovers a great amount of HP for all allies & gradually recovers BB gauge for all allies for 3 turns  "
+  },
+  "MST_SKILLS_830527_NAME": {
+    "en": "Chronosphere",
+    "es": "Cronoesfera",
+    "id": "Bola Kronos",
+    "pt": "Cronosfera",
+    "th": "โครโนสเฟียร์",
+    "vi": "Chronosphere"
+  },
+  "MST_SKILLS_830528_DESCRIPTION": {
+    "en": "15 combo powerful Earth attack on all foes, negates all status ailments for 3 turns, negates Atk, Def, Rec reductions for 3 turns, removes all status ailments, greatly restores HP for 3 turns & enormously boosts BB gauge for 3 turns",
+    "es": "15 combo powerful Earth attack on all foes, negates all status ailments for 3 turns, negates Atk, Def, Rec reductions for 3 turns, removes all status ailments, greatly restores HP for 3 turns & enormously boosts BB gauge for 3 turns",
+    "id": "15 combo powerful Earth attack on all foes, negates all status ailments for 3 turns, negates Atk, Def, Rec reductions for 3 turns, removes all status ailments, greatly restores HP for 3 turns & enormously boosts BB gauge for 3 turns",
+    "pt": "15 combo powerful Earth attack on all foes, negates all status ailments for 3 turns, negates Atk, Def, Rec reductions for 3 turns, removes all status ailments, greatly restores HP for 3 turns & enormously boosts BB gauge for 3 turns",
+    "th": "15 combo powerful Earth attack on all foes, negates all status ailments for 3 turns, negates Atk, Def, Rec reductions for 3 turns, removes all status ailments, greatly restores HP for 3 turns & enormously boosts BB gauge for 3 turns",
+    "vi": "15 combo powerful Earth attack on all foes, negates all status ailments for 3 turns, negates Atk, Def, Rec reductions for 3 turns, removes all status ailments, greatly restores HP for 3 turns & enormously boosts BB gauge for 3 turns"
+  },
+  "MST_SKILLS_830528_NAME": {
+    "en": "Through the Hourglass",
+    "es": "Through the Hourglass",
+    "id": "Through the Hourglass",
+    "pt": "Through the Hourglass",
+    "th": "Through the Hourglass",
+    "vi": "Through the Hourglass"
   }
 }
