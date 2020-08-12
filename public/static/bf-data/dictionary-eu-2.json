@@ -1,4 +1,108 @@
 {
+  "MST_LEADERSKILLS_2804_DESCRIPTION": {
+    "en": "Probable Def ignoring effect when attacking, 80% boost to Atk & hugely boosts BB gauge when attacking normally",
+    "es": "Posibilidad de ignorar la DEF enemiga al atacar, +80% al ATQ y potencia enormemente el indicador BB al atacar normalmente",
+    "id": "Kemungkinan efek mengabaikan Pertahanan saat menyerang, 80% ekstra Serangan & amat menambah meteran BB saat menyerang normal",
+    "pt": "Chance de ignorar defesa ao atacar, 80% de reforço no ATQ e grande reforço na barra BB em ataques normais",
+    "th": "มีโอกาสไม่สนค่าป้องกันเมื่อโจมตี, 80% เพิ่มพลังโจมตีและเพิ่ม BB เกจอย่างมากเมื่อโจมตีปกติ",
+    "vi": "Probable Def ignoring effect when attacking, 80% boost to Atk & hugely boosts BB gauge when attacking normally"
+  },
+  "MST_LEADERSKILLS_2804_NAME": {
+    "en": "Destructive Threat",
+    "es": "Amenaza destructiva",
+    "id": "Ancaman Destruktif",
+    "pt": "Ameaça Destrutiva",
+    "th": "ดีสทรัคทีฟ ทรีท",
+    "vi": "Destructive Threat"
+  },
+  "MST_LEADERSKILLS_2900_DESCRIPTION": {
+    "en": "BB gauge fills and very low chance of taking only 1 damage when attacked",
+    "es": "Indicador BB se llena y muy poca posibilidad de recibir 1 daño al ser atacado",
+    "id": "Meteran BB terisi, kans amat kecil menderita 1 kerusakan saat diserang",
+    "pt": "Enche a barra de BB dá uma chance mínima de sofrer apenas 1 de dano ao ser atacado",
+    "th": "เติมเกจ BB และมีโอกาสน้อยมากที่จะรับความเสียหายแค่ 1 เมื่อถูกโจมตี",
+    "vi": "Nạp vạch Tăng cường can đảm và rất ít cơ hội chịu duy nhất 1 thiệt hại khi bị tấn công"
+  },
+  "MST_LEADERSKILLS_2900_NAME": {
+    "en": "Priestess' Guard",
+    "es": "Guarda de sacerdotisa",
+    "id": "Penjaga Pendeta",
+    "pt": "Guarda da Sacerdotisa",
+    "th": "พรีสเทสการ์ด",
+    "vi": "Cận vệ của Nữ tu"
+  },
+  "MST_LEADERSKILLS_2901_DESCRIPTION": {
+    "en": "BB gauge fills and low chance of taking only 1 damage when attacked",
+    "es": "Indicador BB se llena y poca posibilidad de recibir 1 daño al ser atacado",
+    "id": "Meteran BB terisi, kans kecil menderita 1 kerusakan saat diserang",
+    "pt": "Enche a barra de BB dá uma chance pequena de sofrer apenas 1 de dano ao ser atacado",
+    "th": "เติมเกจ BB และมีโอกาสเล็กน้อยที่จะรับความเสียหายแค่ 1 เมื่อถูกโจมตี",
+    "vi": "Nạp vạch Tăng cường can đảm và ít có cơ hội chịu duy nhất 1 thiệt hại khi bị tấn công"
+  },
+  "MST_LEADERSKILLS_2901_NAME": {
+    "en": "High Priestess' Guard",
+    "es": "Guarda de alta sacerdotisa",
+    "id": "Penjaga Pendeta Tinggi",
+    "pt": "Guarda da Suma-Sacerdotisa",
+    "th": "ไฮพรีสเทสการ์ด",
+    "vi": "Cận vệ cấp Cao của Nữ tu"
+  },
+  "MST_LEADERSKILLS_2902_DESCRIPTION": {
+    "en": "Huge boost to BB gauge when attacked & adds chance of reducing damage taken to 1",
+    "es": "Gran aumento del indicador BB al recibir un ataque. Otorga la posibilidad de reducir el daño recibido a 1",
+    "id": "Tambahan jumbo ke meteran BB saat diserang & menambah kans mengurangi kerusakan menjadi 1",
+    "pt": "Grande bônus na barra de BB ao ser atacado e chance de reduzir dano sofrido para 1",
+    "th": "เร่งบีบีเกจลีโอกาสฟื้นฟูพลังเมื่อถูกโจมตี",
+    "vi": "Tăng rất nhiều vạch BB khi bị tấn công & thêm cơ hội giảm thiệt hại phải chịu xuống 1"
+  },
+  "MST_LEADERSKILLS_2902_NAME": {
+    "en": "Divine Priestess's Guard",
+    "es": "Guarda de sacerdotisa divina",
+    "id": "Penjagaan Pendeta Ilahi",
+    "pt": "Divina Sacerdotisa",
+    "th": "ดีไวน์โพรเท็คชั่น",
+    "vi": "Cận vệ của Thánh nữ"
+  },
+  "MST_LEADERSKILLS_2903_DESCRIPTION": {
+    "en": "40% boost to max HP, damage taken hugely boosts BB gauge & probable damage reduction to 1",
+    "es": "40% boost to max HP, damage taken hugely boosts BB gauge & probable damage reduction to 1",
+    "id": "40% esktra HP maks, kerusakan diderita amat menambah meteran BB & kans mengurangi kerusakan menjadi 1",
+    "pt": "40% boost to max HP, damage taken hugely boosts BB gauge & probable damage reduction to 1",
+    "th": "40% เพิ่ม HP สูงสุด, เพิ่มบีบีเกจอย่างมากจากดาเมจที่ได้รับ, มีโอกาสลดดาเมจทีได้รับเหลือ 1 ",
+    "vi": "40% boost to max HP, damage taken hugely boosts BB gauge & probable damage reduction to 1"
+  },
+  "MST_LEADERSKILLS_2903_NAME": {
+    "en": "Divine Priestess's Sanctuary",
+    "es": "Divine Priestess's Sanctuary",
+    "id": "Suka Pendeta Ilahi",
+    "pt": "Divine Priestess's Sanctuary",
+    "th": "ดีไวน์ พรีสเทส แซงทัวรี่",
+    "vi": "Divine Priestess's Sanctuary"
+  },
+  "MST_LEADERSKILLS_2904_DESCRIPTION": {
+    "en": "Slight boost in the BB gauge when attacked",
+    "es": "Slight boost in the BB gauge when attacked",
+    "id": "Agak menambah meteran BB saat diserang",
+    "pt": "Slight boost in the BB gauge when attacked",
+    "th": "เพิ่มค่าเล็กน้อยให้ เกจ BB เมื่อถูกโจมตี",
+    "vi": "Slight boost in the BB gauge when attacked"
+  },
+  "MST_LEADERSKILLS_2904_NAME": {
+    "en": "Cold Charm",
+    "es": "Cold Charm",
+    "id": "Jimat Dingin",
+    "pt": "Cold Charm",
+    "th": "โคลด์ ชาร์ม",
+    "vi": "Cold Charm"
+  },
+  "MST_LEADERSKILLS_2905_DESCRIPTION": {
+    "en": "Boost in the BB gauge when attacked & probable slight reduction of damage taken",
+    "es": "Boost in the BB gauge when attacked & probable slight reduction of damage taken",
+    "id": "Menambah meteran BB saat diserang & kans agak mengurangi kerusakan diderita",
+    "pt": "Boost in the BB gauge when attacked & probable slight reduction of damage taken",
+    "th": "เพิ่มค่าให้ เกจ BB เมื่อถูกโจมตี และ อาจจะ ลดค่าเล็กน้อยให้ความเสียหายที่ได้รับ",
+    "vi": "Boost in the BB gauge when attacked & probable slight reduction of damage taken"
+  },
   "MST_LEADERSKILLS_2905_NAME": {
     "en": "Snow Spell",
     "es": "Snow Spell",
@@ -12271,6 +12375,22 @@
     "th": "Reviving a Nation",
     "vi": "Reviving a Nation"
   },
+  "MST_LEADERSKILLS_810928_DESCRIPTION": {
+    "en": "150% Atk, 100% max HP, 30% critical rate, critical damage fills BB gauge, probable spark critical, 200% critical damage & 50% BC, HC, 9% Item, 50% Zel, Karma drop rates",
+    "es": "150% Atk, 100% max HP, 30% critical rate, critical damage fills BB gauge, probable spark critical, 200% critical damage & 50% BC, HC, 9% Item, 50% Zel, Karma drop rates",
+    "id": "150% Atk, 100% max HP, 30% critical rate, critical damage fills BB gauge, probable spark critical, 200% critical damage & 50% BC, HC, 9% Item, 50% Zel, Karma drop rates",
+    "pt": "150% Atk, 100% max HP, 30% critical rate, critical damage fills BB gauge, probable spark critical, 200% critical damage & 50% BC, HC, 9% Item, 50% Zel, Karma drop rates",
+    "th": "150% Atk, 100% max HP, 30% critical rate, critical damage fills BB gauge, probable spark critical, 200% critical damage & 50% BC, HC, 9% Item, 50% Zel, Karma drop rates",
+    "vi": "150% Atk, 100% max HP, 30% critical rate, critical damage fills BB gauge, probable spark critical, 200% critical damage & 50% BC, HC, 9% Item, 50% Zel, Karma drop rates"
+  },
+  "MST_LEADERSKILLS_810928_NAME": {
+    "en": "Loup-Garou",
+    "es": "Loup-Garou",
+    "id": "Loup-Garou",
+    "pt": "Loup-Garou",
+    "th": "Loup-Garou",
+    "vi": "Loup-Garou"
+  },
   "MST_LEADERSKILLS_811118_DESCRIPTION": {
     "en": "60% boost to Atk, max HP, 100% boost to Spark damage, boosts Spark damage for 2 turns when Sparks have exceeded certain amount & hugely boosts Fire and Water elemental damage ",
     "es": "60% boost to Atk, max HP, 100% boost to Spark damage, boosts Spark damage for 2 turns when Sparks have exceeded certain amount & hugely boosts Fire and Water elemental damage ",
@@ -14239,6 +14359,22 @@
     "th": "Terra Aura",
     "vi": "Terra Aura"
   },
+  "MST_LEADERSKILLS_830918_DESCRIPTION": {
+    "en": "100% all parameters, 30% critical rate, raises normal hit amount, normal attacks may hit all foes, critical damage fills BB gauge & 150% critical damage",
+    "es": "100% all parameters, 30% critical rate, raises normal hit amount, normal attacks may hit all foes, critical damage fills BB gauge & 150% critical damage",
+    "id": "100% all parameters, 30% critical rate, raises normal hit amount, normal attacks may hit all foes, critical damage fills BB gauge & 150% critical damage",
+    "pt": "100% all parameters, 30% critical rate, raises normal hit amount, normal attacks may hit all foes, critical damage fills BB gauge & 150% critical damage",
+    "th": "100% all parameters, 30% critical rate, raises normal hit amount, normal attacks may hit all foes, critical damage fills BB gauge & 150% critical damage",
+    "vi": "100% all parameters, 30% critical rate, raises normal hit amount, normal attacks may hit all foes, critical damage fills BB gauge & 150% critical damage"
+  },
+  "MST_LEADERSKILLS_830918_NAME": {
+    "en": "The Musketeers' Motto",
+    "es": "The Musketeers' Motto",
+    "id": "The Musketeers' Motto",
+    "pt": "The Musketeers' Motto",
+    "th": "The Musketeers' Motto",
+    "vi": "The Musketeers' Motto"
+  },
   "MST_LEADERSKILLS_840047_DESCRIPTION": {
     "en": "100% boost to Atk, 60% boost to Def, max HP of Thunder types, 10% damage reduction from Water, Thunder types, considerably reduces BB gauge required for BB & probable considerable reduction of BB gauge fill rate for 2 turns",
     "es": "100% boost to Atk, 60% boost to Def, max HP of Thunder types, 10% damage reduction from Water, Thunder types, considerably reduces BB gauge required for BB & probable considerable reduction of BB gauge fill rate for 2 turns",
@@ -16062,6 +16198,22 @@
     "pt": "Spiritual Support",
     "th": "Spiritual Support",
     "vi": "Spiritual Support"
+  },
+  "MST_LEADERSKILLS_850928_DESCRIPTION": {
+    "en": "140% Atk, Def, max HP and 30% critical rate (Light), 250% Light elemental damage, spark damage fills BB gauge, 100% critical and elemental damage reduction & 30% OD gauge fill rate",
+    "es": "140% Atk, Def, max HP and 30% critical rate (Light), 250% Light elemental damage, spark damage fills BB gauge, 100% critical and elemental damage reduction & 30% OD gauge fill rate",
+    "id": "140% Atk, Def, max HP and 30% critical rate (Light), 250% Light elemental damage, spark damage fills BB gauge, 100% critical and elemental damage reduction & 30% OD gauge fill rate",
+    "pt": "140% Atk, Def, max HP and 30% critical rate (Light), 250% Light elemental damage, spark damage fills BB gauge, 100% critical and elemental damage reduction & 30% OD gauge fill rate",
+    "th": "140% Atk, Def, max HP and 30% critical rate (Light), 250% Light elemental damage, spark damage fills BB gauge, 100% critical and elemental damage reduction & 30% OD gauge fill rate",
+    "vi": "140% Atk, Def, max HP and 30% critical rate (Light), 250% Light elemental damage, spark damage fills BB gauge, 100% critical and elemental damage reduction & 30% OD gauge fill rate"
+  },
+  "MST_LEADERSKILLS_850928_NAME": {
+    "en": "Child of the Fae",
+    "es": "Child of the Fae",
+    "id": "Child of the Fae",
+    "pt": "Child of the Fae",
+    "th": "Child of the Fae",
+    "vi": "Child of the Fae"
   },
   "MST_LEADERSKILLS_850977_DESCRIPTION": {
     "en": "40% boost to max HP, boosts Atk relative to how high remaining HP is & boosts Def relative to how low remaining HP is",
@@ -21207,6 +21359,86 @@
     "th": "งั้นข้าจะแสดงให้เจ้าเห็นส่วนหนึ่งของพลัง<br>ของข้า...<br>ที่มาจากทาสรับใช้ของข้า เซิร์ก",
     "vi": "Very well. I shall show you<br>a fraction of my power...<br>Come forth Zurg, my servant."
   },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2030_MESSAGES": {
+    "en": "Looks like they've raised the alarm, and the ones with orders to engage have a red mark...",
+    "es": "Looks like they've raised the alarm, and the ones with orders to engage have a red mark...",
+    "id": "Looks like they've raised the alarm, and the ones with orders to engage have a red mark...",
+    "pt": "Looks like they've raised the alarm, and the ones with orders to engage have a red mark...",
+    "th": "Looks like they've raised the alarm, and the ones with orders to engage have a red mark...",
+    "vi": "Looks like they've raised the alarm, and the ones with orders to engage have a red mark..."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2031_MESSAGES": {
+    "en": "We'll have to take them out in order!",
+    "es": "We'll have to take them out in order!",
+    "id": "We'll have to take them out in order!",
+    "pt": "We'll have to take them out in order!",
+    "th": "We'll have to take them out in order!",
+    "vi": "We'll have to take them out in order!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2032_MESSAGES": {
+    "en": "These seem to have elemental weaknesses.",
+    "es": "These seem to have elemental weaknesses.",
+    "id": "These seem to have elemental weaknesses.",
+    "pt": "These seem to have elemental weaknesses.",
+    "th": "These seem to have elemental weaknesses.",
+    "vi": "These seem to have elemental weaknesses."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2033_MESSAGES": {
+    "en": "Elemental weaknesses again, huh?",
+    "es": "Elemental weaknesses again, huh?",
+    "id": "Elemental weaknesses again, huh?",
+    "pt": "Elemental weaknesses again, huh?",
+    "th": "Elemental weaknesses again, huh?",
+    "vi": "Elemental weaknesses again, huh?"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2034_MESSAGES": {
+    "en": "And the guards are back with their red marks to engage.",
+    "es": "And the guards are back with their red marks to engage.",
+    "id": "And the guards are back with their red marks to engage.",
+    "pt": "And the guards are back with their red marks to engage.",
+    "th": "And the guards are back with their red marks to engage.",
+    "vi": "And the guards are back with their red marks to engage."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2035_MESSAGES": {
+    "en": "Grandsire's not holding back. We need to watch him carefully...",
+    "es": "Grandsire's not holding back. We need to watch him carefully...",
+    "id": "Grandsire's not holding back. We need to watch him carefully...",
+    "pt": "Grandsire's not holding back. We need to watch him carefully...",
+    "th": "Grandsire's not holding back. We need to watch him carefully...",
+    "vi": "Grandsire's not holding back. We need to watch him carefully..."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2036_MESSAGES": {
+    "en": "The shades of our past are marked with red sin...",
+    "es": "The shades of our past are marked with red sin...",
+    "id": "The shades of our past are marked with red sin...",
+    "pt": "The shades of our past are marked with red sin...",
+    "th": "The shades of our past are marked with red sin...",
+    "vi": "The shades of our past are marked with red sin..."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2037_MESSAGES": {
+    "en": "...and Grandsire seems to harness the very elements to his will.",
+    "es": "...and Grandsire seems to harness the very elements to his will.",
+    "id": "...and Grandsire seems to harness the very elements to his will.",
+    "pt": "...and Grandsire seems to harness the very elements to his will.",
+    "th": "...and Grandsire seems to harness the very elements to his will.",
+    "vi": "...and Grandsire seems to harness the very elements to his will."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2038_MESSAGES": {
+    "en": "We should take care not to expose our weaknesses.",
+    "es": "We should take care not to expose our weaknesses.",
+    "id": "We should take care not to expose our weaknesses.",
+    "pt": "We should take care not to expose our weaknesses.",
+    "th": "We should take care not to expose our weaknesses.",
+    "vi": "We should take care not to expose our weaknesses."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2039_MESSAGES": {
+    "en": "Come, pup! The enemies are upon our gates; will you leave these cowards to slaughter us?",
+    "es": "Come, pup! The enemies are upon our gates; will you leave these cowards to slaughter us?",
+    "id": "Come, pup! The enemies are upon our gates; will you leave these cowards to slaughter us?",
+    "pt": "Come, pup! The enemies are upon our gates; will you leave these cowards to slaughter us?",
+    "th": "Come, pup! The enemies are upon our gates; will you leave these cowards to slaughter us?",
+    "vi": "Come, pup! The enemies are upon our gates; will you leave these cowards to slaughter us?"
+  },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_203_MESSAGES": {
     "en": "Mortal creature, I commend you<br>for having gotten this far...",
     "es": "Criatura mortal, te felicito<br>por haber llegado tan lejos...",
@@ -21214,6 +21446,14 @@
     "pt": "Mortal, eu o parabenizo<br>por ter chegado tão longe...",
     "th": "เจ้าสัตว์ต่ำต้อยเอ๋ย, ข้าขอชมเชยเจ้า<br>ที่มาได้ไกลขนาดนี้...",
     "vi": "Mortal creature, I commend you<br>for having gotten this far..."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2040_MESSAGES": {
+    "en": "Look upon the red mark of their sins!",
+    "es": "Look upon the red mark of their sins!",
+    "id": "Look upon the red mark of their sins!",
+    "pt": "Look upon the red mark of their sins!",
+    "th": "Look upon the red mark of their sins!",
+    "vi": "Look upon the red mark of their sins!"
   },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_204_MESSAGES": {
     "en": "But you shall go no farther.<br>Behold my true power!",
@@ -91910,157 +92150,5 @@
     "pt": "Pegasus",
     "th": "เพกาซัส",
     "vi": "Pegasus"
-  },
-  "MST_MONSTERS_50750_NAME": {
-    "en": "Priestess Maria",
-    "es": "Sacerdotisa María",
-    "id": "Pendeta Maria",
-    "pt": "Maria Sacerdotisa",
-    "th": "พรีสเทสมาเรีย",
-    "vi": "Nữ tu Maria"
-  },
-  "MST_MONSTERS_50751_NAME": {
-    "en": "Priestess Maria",
-    "es": "Sacerdotisa María",
-    "id": "Pendeta Maria",
-    "pt": "Maria Sacerdotisa",
-    "th": "พรีสเทสมาเรีย",
-    "vi": "Nữ tu Maria"
-  },
-  "MST_MONSTERS_50752_NAME": {
-    "en": "Priestess Maria",
-    "es": "Sacerdotisa María",
-    "id": "Pendeta Maria",
-    "pt": "Maria Sacerdotisa",
-    "th": "พรีสเทสมาเรีย",
-    "vi": "Nữ tu Maria"
-  },
-  "MST_MONSTERS_50753_NAME": {
-    "en": "Priestess Maria",
-    "es": "Sacerdotisa María",
-    "id": "Pendeta Maria",
-    "pt": "Maria Sacerdotisa",
-    "th": "พรีสเทสมาเรีย",
-    "vi": "Nữ tu Maria"
-  },
-  "MST_MONSTERS_50754_NAME": {
-    "en": "Priestess Maria",
-    "es": "Sacerdotisa María",
-    "id": "Pendeta Maria",
-    "pt": "Maria Sacerdotisa",
-    "th": "พรีสเทสมาเรีย",
-    "vi": "Nữ tu Maria"
-  },
-  "MST_MONSTERS_50755_NAME": {
-    "en": "Priestess Maria",
-    "es": "Sacerdotisa María",
-    "id": "Pendeta Maria",
-    "pt": "Maria Sacerdotisa",
-    "th": "พรีสเทสมาเรีย",
-    "vi": "Nữ tu Maria"
-  },
-  "MST_MONSTERS_50756_NAME": {
-    "en": "Priestess Maria",
-    "es": "Sacerdotisa María",
-    "id": "Pendeta Maria",
-    "pt": "Maria Sacerdotisa",
-    "th": "พรีสเทสมาเรีย",
-    "vi": "Nữ tu Maria"
-  },
-  "MST_MONSTERS_50757_NAME": {
-    "en": "Priestess Maria",
-    "es": "Sacerdotisa María",
-    "id": "Pendeta Maria",
-    "pt": "Maria Sacerdotisa",
-    "th": "พรีสเทสมาเรีย",
-    "vi": "Nữ tu Maria"
-  },
-  "MST_MONSTERS_50758_NAME": {
-    "en": "Priestess Maria",
-    "es": "Sacerdotisa María",
-    "id": "Pendeta Maria",
-    "pt": "Maria Sacerdotisa",
-    "th": "พรีสเทสมาเรีย",
-    "vi": "Nữ tu Maria"
-  },
-  "MST_MONSTERS_50759_NAME": {
-    "en": "Priestess Maria",
-    "es": "Sacerdotisa María",
-    "id": "Pendeta Maria",
-    "pt": "Maria Sacerdotisa",
-    "th": "พรีสเทสมาเรีย",
-    "vi": "Nữ tu Maria"
-  },
-  "MST_MONSTERS_50760_NAME": {
-    "en": "Priestess Maria",
-    "es": "Sacerdotisa María",
-    "id": "Pendeta Maria",
-    "pt": "Maria Sacerdotisa",
-    "th": "พรีสเทสมาเรีย",
-    "vi": "Nữ tu Maria"
-  },
-  "MST_MONSTERS_50761_NAME": {
-    "en": "Priestess Maria",
-    "es": "Sacerdotisa María",
-    "id": "Pendeta Maria",
-    "pt": "Maria Sacerdotisa",
-    "th": "พรีสเทสมาเรีย",
-    "vi": "Nữ tu Maria"
-  },
-  "MST_MONSTERS_50762_NAME": {
-    "en": "Priestess Maria",
-    "es": "Sacerdotisa María",
-    "id": "Pendeta Maria",
-    "pt": "Maria Sacerdotisa",
-    "th": "พรีสเทสมาเรีย",
-    "vi": "Nữ tu Maria"
-  },
-  "MST_MONSTERS_50763_NAME": {
-    "en": "Priestess Maria",
-    "es": "Sacerdotisa María",
-    "id": "Pendeta Maria",
-    "pt": "Maria Sacerdotisa",
-    "th": "พรีสเทสมาเรีย",
-    "vi": "Nữ tu Maria"
-  },
-  "MST_MONSTERS_50764_NAME": {
-    "en": "Priestess Maria",
-    "es": "Sacerdotisa María",
-    "id": "Pendeta Maria",
-    "pt": "Maria Sacerdotisa",
-    "th": "พรีสเทสมาเรีย",
-    "vi": "Nữ tu Maria"
-  },
-  "MST_MONSTERS_50765_NAME": {
-    "en": "Priestess Maria",
-    "es": "Sacerdotisa María",
-    "id": "Pendeta Maria",
-    "pt": "Maria Sacerdotisa",
-    "th": "พรีสเทสมาเรีย",
-    "vi": "Nữ tu Maria"
-  },
-  "MST_MONSTERS_50766_NAME": {
-    "en": "Priestess Maria",
-    "es": "Sacerdotisa María",
-    "id": "Pendeta Maria",
-    "pt": "Maria Sacerdotisa",
-    "th": "พรีสเทสมาเรีย",
-    "vi": "Nữ tu Maria"
-  },
-  "MST_MONSTERS_50767_NAME": {
-    "en": "Priestess Maria",
-    "es": "Sacerdotisa María",
-    "id": "Pendeta Maria",
-    "pt": "Maria Sacerdotisa",
-    "th": "พรีสเทสมาเรีย",
-    "vi": "Nữ tu Maria"
-  },
-  "MST_MONSTERS_50768_NAME": {
-    "en": "Priestess Maria",
-    "es": "Sacerdotisa María",
-    "id": "Pendeta Maria",
-    "pt": "Maria Sacerdotisa",
-    "th": "พรีสเทสมาเรีย",
-    "vi": "Nữ tu Maria"
   }
 }

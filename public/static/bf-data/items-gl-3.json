@@ -8727,7 +8727,12 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_2_9.png",
     "type": "sphere",
-    "usage": [],
+    "usage": [
+      {
+        "id": 819332,
+        "name": "Noel's Experiment"
+      }
+    ],
     "associated_units": [
       "51336",
       "51337",
