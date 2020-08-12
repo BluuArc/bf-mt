@@ -22994,7 +22994,12 @@
     "sphere type text": "Atk Boosting",
     "thumbnail": "sphere_thum_819239.png",
     "type": "sphere",
-    "usage": [],
+    "usage": [
+      {
+        "id": 819333,
+        "name": "Victory Roar"
+      }
+    ],
     "associated_units": [
       "11166",
       "11167",
@@ -23110,7 +23115,12 @@
     "sphere type text": "Spark",
     "thumbnail": "sphere_thum_819240.png",
     "type": "sphere",
-    "usage": [],
+    "usage": [
+      {
+        "id": 819337,
+        "name": "Eternal Ballad"
+      }
+    ],
     "associated_units": [
       "30546",
       "720237",
@@ -23205,7 +23215,12 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_819241.png",
     "type": "sphere",
-    "usage": [],
+    "usage": [
+      {
+        "id": 819338,
+        "name": "Elegy of Regret"
+      }
+    ],
     "associated_units": [
       "51336",
       "51337",
@@ -23303,7 +23318,12 @@
     "sphere type text": "Status Boost",
     "thumbnail": "sphere_thum_819242.png",
     "type": "sphere",
-    "usage": [],
+    "usage": [
+      {
+        "id": 819336,
+        "name": "Joyous Harmony"
+      }
+    ],
     "associated_units": [
       "51336",
       "51337",
@@ -23417,7 +23437,12 @@
     "sphere type text": "Status Ailments Resistant",
     "thumbnail": "sphere_thum_819243.png",
     "type": "sphere",
-    "usage": [],
+    "usage": [
+      {
+        "id": 819334,
+        "name": "Dirge of Dread"
+      }
+    ],
     "associated_units": [
       "760006"
     ]
@@ -23499,7 +23524,12 @@
     "sphere type text": "Damage Reducing",
     "thumbnail": "sphere_thum_819244.png",
     "type": "sphere",
-    "usage": [],
+    "usage": [
+      {
+        "id": 819335,
+        "name": "Absolute Silence"
+      }
+    ],
     "associated_units": [
       "21056",
       "21057",
@@ -28521,6 +28551,693 @@
       "840438",
       "840878",
       "860167"
+    ]
+  },
+  "819332": {
+    "desc": "No effect.",
+    "effect": [
+      {
+        "passive id": "1"
+      }
+    ],
+    "id": 819332,
+    "max_stack": 1,
+    "name": "Noel's Experiment",
+    "raid": false,
+    "rarity": 7,
+    "recipe": {
+      "karma": "700000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 36702,
+          "name": "God Hunter"
+        }
+      ]
+    },
+    "sell_price": 1000,
+    "sphere type": 14,
+    "sphere type text": "Special",
+    "thumbnail": "sphere_thum_empty.png",
+    "type": "sphere",
+    "usage": [
+      {
+        "id": 819333,
+        "name": "Victory Roar"
+      },
+      {
+        "id": 819334,
+        "name": "Dirge of Dread"
+      },
+      {
+        "id": 819335,
+        "name": "Absolute Silence"
+      },
+      {
+        "id": 819336,
+        "name": "Joyous Harmony"
+      },
+      {
+        "id": 819337,
+        "name": "Eternal Ballad"
+      },
+      {
+        "id": 819338,
+        "name": "Elegy of Regret"
+      }
+    ]
+  },
+  "819333": {
+    "desc": "175% Atk, 20% all parameters (Breaker), 200% elemental damage, 135% Spark damage, raises max Atk limit to 200000, add to BB/SBB [chance to purge Atk boost] & increases BB activation cost",
+    "effect": [
+      {
+        "dark units do extra elemental weakness dmg": true,
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 200,
+        "fire units do extra elemental weakness dmg": true,
+        "light units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "thunder units do extra elemental weakness dmg": true,
+        "water units do extra elemental weakness dmg": true
+      },
+      {
+        "atk% buff": 175,
+        "passive id": "1"
+      },
+      {
+        "increase atk cap": 200000,
+        "passive id": "143"
+      },
+      {
+        "atk% buff": 20,
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "3",
+        "rec% buff": 20,
+        "unit type buffed": "breaker"
+      },
+      {
+        "passive id": "66",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "enemy",
+            "unknown proc id": "10019",
+            "unknown proc param": "1,13,0,0,0,0,0,0,0,25"
+          }
+        ]
+      },
+      {
+        "damage% for spark": 135,
+        "passive id": "31"
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": -15
+      }
+    ],
+    "id": 819333,
+    "max_stack": 1,
+    "name": "Victory Roar",
+    "raid": true,
+    "rarity": 7,
+    "recipe": {
+      "karma": "7000000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 819239,
+          "name": "Victory Chant"
+        },
+        {
+          "count": 2,
+          "id": 819332,
+          "name": "Noel's Experiment"
+        },
+        {
+          "count": 7,
+          "id": 890033,
+          "name": "Whispering Shard"
+        }
+      ]
+    },
+    "sell_price": 999999,
+    "sphere type": 13,
+    "sphere type text": "Atk Boosting",
+    "thumbnail": "sphere_thum_819239.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "11166",
+      "11167",
+      "20816",
+      "20817",
+      "20916",
+      "51317",
+      "61016",
+      "61017",
+      "740247",
+      "810547",
+      "810548",
+      "810837",
+      "810838",
+      "820397",
+      "820398",
+      "830408",
+      "840437",
+      "840438",
+      "840767",
+      "840768",
+      "840867",
+      "840868",
+      "850367",
+      "850368",
+      "850767",
+      "850768",
+      "860338",
+      "860798"
+    ]
+  },
+  "819334": {
+    "desc": "55% all parameters (Oracle), negates all status ailments, fills BB gauge each turn, add to BB/SBB [remove all status ailments and Atk, Def, Rec reduction, chance to purge Curse, Weak negation] & activates 9000 HP Shield when 15 BC collected",
+    "effect": [
+      {
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "bc fill per turn": 30,
+        "passive id": "9"
+      },
+      {
+        "passive id": "66",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "ailments cured": [
+              "poison",
+              "weaken",
+              "sick",
+              "injury",
+              "curse",
+              "paralysis",
+              "atk down",
+              "def down",
+              "rec down"
+            ],
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "38",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "atk% buff": 55,
+        "def% buff": 55,
+        "hp% buff": 55,
+        "passive id": "3",
+        "rec% buff": 55,
+        "unit type buffed": "oracle"
+      },
+      {
+        "passive id": "66",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "enemy",
+            "unknown proc id": "10019",
+            "unknown proc param": "31,34,0,0,0,0,0,0,0,25"
+          }
+        ]
+      },
+      {
+        "bc receive count buff activation": 15,
+        "buff": {
+          "buff turns (10500)": "2",
+          "unknown buff id": "10500",
+          "unknown buff params": "0&9000&9000&9000"
+        },
+        "passive id": "82"
+      }
+    ],
+    "id": 819334,
+    "max_stack": 1,
+    "name": "Dirge of Dread",
+    "raid": true,
+    "rarity": 7,
+    "recipe": {
+      "karma": "7000000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 819243,
+          "name": "Lament of Dread"
+        },
+        {
+          "count": 2,
+          "id": 819332,
+          "name": "Noel's Experiment"
+        },
+        {
+          "count": 7,
+          "id": 890033,
+          "name": "Whispering Shard"
+        }
+      ]
+    },
+    "sell_price": 999999,
+    "sphere type": 5,
+    "sphere type text": "Status Ailments Resistant",
+    "thumbnail": "sphere_thum_819243.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "760006"
+    ]
+  },
+  "819335": {
+    "desc": "55% all parameters (Guardian), probable damage reduction to 1, damage taken fills BB gauge and may restore HP, add to BB/SBB [chance to purge Atk, Def, Rec reduction negation], restores HP each turn & increases BB activation cost",
+    "effect": [
+      {
+        "passive id": "43",
+        "take 1 dmg%": 25
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 20,
+        "turn heal high": 8000,
+        "turn heal low": 6000
+      },
+      {
+        "dmg% to hp% when attacked chance%": 50,
+        "dmg% to hp% when attacked high": 40,
+        "dmg% to hp% when attacked low": 40,
+        "passive id": "24"
+      },
+      {
+        "atk% buff": 55,
+        "def% buff": 55,
+        "hp% buff": 55,
+        "passive id": "3",
+        "rec% buff": 55,
+        "unit type buffed": "guardian"
+      },
+      {
+        "passive id": "66",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "enemy",
+            "unknown proc id": "10019",
+            "unknown proc param": "120,121,122,0,0,0,0,0,0,25"
+          }
+        ]
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": -15
+      },
+      {
+        "bc fill when attacked high": 8,
+        "bc fill when attacked low": 6,
+        "bc fill when attacked%": 100,
+        "passive id": "25"
+      }
+    ],
+    "id": 819335,
+    "max_stack": 1,
+    "name": "Absolute Silence",
+    "raid": true,
+    "rarity": 7,
+    "recipe": {
+      "karma": "7000000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 819244,
+          "name": "Resolute Silence"
+        },
+        {
+          "count": 2,
+          "id": 819332,
+          "name": "Noel's Experiment"
+        },
+        {
+          "count": 7,
+          "id": 890033,
+          "name": "Whispering Shard"
+        }
+      ]
+    },
+    "sell_price": 999999,
+    "sphere type": 10,
+    "sphere type text": "Damage Reducing",
+    "thumbnail": "sphere_thum_819244.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "21056",
+      "21057",
+      "21106",
+      "21107",
+      "31006",
+      "31007",
+      "810408",
+      "830647",
+      "830648",
+      "840547",
+      "840548",
+      "840798",
+      "850507",
+      "850508",
+      "860017",
+      "860018",
+      "860338"
+    ]
+  },
+  "819336": {
+    "desc": "55% all parameters, 35% all parameters (Anima), 15% elemental damage reduction, probable resistance against 1 KO attack when 100k damage taken, add to BB/SBB [chance to purge Injury, Paralysis negation] & increases BB activation cost",
+    "effect": [
+      {
+        "atk% buff": 55,
+        "def% buff": 55,
+        "hp% buff": 55,
+        "passive id": "1",
+        "rec% buff": 55
+      },
+      {
+        "dmg% mitigation for elemental attacks": 15,
+        "mitigate dark attacks": true,
+        "mitigate earth attacks": true,
+        "mitigate fire attacks": true,
+        "mitigate light attacks": true,
+        "mitigate thunder attacks": true,
+        "mitigate water attacks": true,
+        "passive id": "62"
+      },
+      {
+        "buff": {
+          "buff turns (91)": "999",
+          "unknown buff id": "91",
+          "unknown buff params": "25&100"
+        },
+        "damage threshold buff activation": 100000,
+        "passive id": "78"
+      },
+      {
+        "atk% buff": 35,
+        "def% buff": 35,
+        "hp% buff": 35,
+        "passive id": "3",
+        "rec% buff": 35,
+        "unit type buffed": "anima"
+      },
+      {
+        "passive id": "66",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "enemy",
+            "unknown proc id": "10019",
+            "unknown proc param": "33,35,0,0,0,0,0,0,0,25"
+          }
+        ]
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": -10
+      }
+    ],
+    "id": 819336,
+    "max_stack": 1,
+    "name": "Joyous Harmony",
+    "raid": true,
+    "rarity": 7,
+    "recipe": {
+      "karma": "7000000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 819242,
+          "name": "Thrilling Harmony"
+        },
+        {
+          "count": 2,
+          "id": 819332,
+          "name": "Noel's Experiment"
+        },
+        {
+          "count": 7,
+          "id": 890033,
+          "name": "Whispering Shard"
+        }
+      ]
+    },
+    "sell_price": 999999,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_819242.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "820837",
+      "820838",
+      "830867",
+      "830868",
+      "840258",
+      "840438",
+      "860258",
+      "860628"
+    ]
+  },
+  "819337": {
+    "desc": "45% all parameters (Male, Genderless), 170% Spark damage, Sparks restore HP and fill BB gauge, probable Spark critical, add to BB/SBB [chance to purge Sick, Poison negation] & increases BB activation cost",
+    "effect": [
+      {
+        "damage% for spark": 170,
+        "passive id": "31"
+      },
+      {
+        "heal on spark high": 800,
+        "heal on spark low": 600,
+        "heal on spark%": 100,
+        "passive id": "101"
+      },
+      {
+        "bc fill on spark high": 4,
+        "bc fill on spark low": 3,
+        "bc fill on spark%": 100,
+        "passive id": "47"
+      },
+      {
+        "passive id": "100",
+        "spark crit chance%": 50,
+        "spark crit dmg%": 175
+      },
+      {
+        "atk% buff": 45,
+        "def% buff": 45,
+        "gender required": "male",
+        "hp% buff": 45,
+        "passive id": "42",
+        "rec% buff": 45
+      },
+      {
+        "atk% buff": 45,
+        "def% buff": 45,
+        "gender required": "genderless",
+        "hp% buff": 45,
+        "passive id": "42",
+        "rec% buff": 45
+      },
+      {
+        "passive id": "66",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "enemy",
+            "unknown proc id": "10019",
+            "unknown proc param": "30,32,0,0,0,0,0,0,0,25"
+          }
+        ]
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": -15
+      }
+    ],
+    "id": 819337,
+    "max_stack": 1,
+    "name": "Eternal Ballad",
+    "raid": true,
+    "rarity": 7,
+    "recipe": {
+      "karma": "7000000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 819240,
+          "name": "Fleeting Ballad"
+        },
+        {
+          "count": 2,
+          "id": 819332,
+          "name": "Noel's Experiment"
+        },
+        {
+          "count": 7,
+          "id": 890033,
+          "name": "Whispering Shard"
+        }
+      ]
+    },
+    "sell_price": 999999,
+    "sphere type": 11,
+    "sphere type text": "Spark",
+    "thumbnail": "sphere_thum_819240.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "30546",
+      "720237",
+      "810108",
+      "840438",
+      "840878",
+      "860167"
+    ]
+  },
+  "819338": {
+    "desc": "55% all parameters, 35% all parameters (Female, Genderless), 200% elemental damage, fills BB gauge when 10k damage dealt, add to BB/SBB [chance to purge Atk, Def, Rec reduction negation] & increases BB activation cost",
+    "effect": [
+      {
+        "atk% buff": 55,
+        "def% buff": 55,
+        "hp% buff": 55,
+        "passive id": "1",
+        "rec% buff": 55
+      },
+      {
+        "dark units do extra elemental weakness dmg": true,
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 200,
+        "fire units do extra elemental weakness dmg": true,
+        "light units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "thunder units do extra elemental weakness dmg": true,
+        "water units do extra elemental weakness dmg": true
+      },
+      {
+        "damage dealt threshold activation": 10000,
+        "increase bb gauge": 20,
+        "passive id": "81"
+      },
+      {
+        "atk% buff": 35,
+        "def% buff": 35,
+        "gender required": "female",
+        "hp% buff": 35,
+        "passive id": "42",
+        "rec% buff": 35
+      },
+      {
+        "atk% buff": 35,
+        "def% buff": 35,
+        "gender required": "genderless",
+        "hp% buff": 35,
+        "passive id": "42",
+        "rec% buff": 35
+      },
+      {
+        "passive id": "66",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "enemy",
+            "unknown proc id": "10019",
+            "unknown proc param": "120,121,122,0,0,0,0,0,0,25"
+          }
+        ]
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": -10
+      }
+    ],
+    "id": 819338,
+    "max_stack": 1,
+    "name": "Elegy of Regret",
+    "raid": true,
+    "rarity": 7,
+    "recipe": {
+      "karma": "7000000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 819241,
+          "name": "Requiem of Regret"
+        },
+        {
+          "count": 2,
+          "id": 819332,
+          "name": "Noel's Experiment"
+        },
+        {
+          "count": 7,
+          "id": 890033,
+          "name": "Whispering Shard"
+        }
+      ]
+    },
+    "sell_price": 999999,
+    "sphere type": 1,
+    "sphere type text": "Status Boost",
+    "thumbnail": "sphere_thum_819241.png",
+    "type": "sphere",
+    "usage": [],
+    "associated_units": [
+      "51336",
+      "51337",
+      "61286",
+      "61287",
+      "810338",
+      "820837",
+      "820838",
+      "830867",
+      "830868",
+      "840258",
+      "840438",
+      "860258",
+      "860628"
     ]
   },
   "819901": {
@@ -37387,6 +38104,30 @@
       {
         "id": 819285,
         "name": "Divine Master Gate"
+      },
+      {
+        "id": 819333,
+        "name": "Victory Roar"
+      },
+      {
+        "id": 819334,
+        "name": "Dirge of Dread"
+      },
+      {
+        "id": 819335,
+        "name": "Absolute Silence"
+      },
+      {
+        "id": 819336,
+        "name": "Joyous Harmony"
+      },
+      {
+        "id": 819337,
+        "name": "Eternal Ballad"
+      },
+      {
+        "id": 819338,
+        "name": "Elegy of Regret"
       }
     ],
     "associated_units": [
