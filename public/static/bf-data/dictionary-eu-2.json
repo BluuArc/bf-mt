@@ -1,4 +1,20 @@
 {
+  "MST_LEADERSKILLS_2803_DESCRIPTION": {
+    "en": "Small chance of ignoring an opponent's Def when attacking & boost in critical hit damage",
+    "es": "Pequeña probabilidad de ignorar la defensa del oponente al atacar y aumento al daño de golpe crítico",
+    "id": "Kans kecil mengabaikan Pertahanan lawan saat menyerang & menambah kerusakan pukulan ampuh",
+    "pt": "Dá chance pequena de ignorar a DEF do adversário ao atacar e bônus no dano de ataques críticos",
+    "th": "โอกาสเล็กน้อยที่จะไม่สนค่า ป้องกัน ของศัตรูเมื่อโจมตี และ เพิ่มค่าความเสียหายคริติคอล",
+    "vi": "Cơ hội nhỏ để bỏ qua sức Phòng thủ của đối thủ khi tấn công và tăng thiệt hại do đòn trí mạng"
+  },
+  "MST_LEADERSKILLS_2803_NAME": {
+    "en": "Destructive Flash",
+    "es": "Destello destructivo",
+    "id": "Flash Perusak",
+    "pt": "Brilho Destrutivo",
+    "th": "เดสทรัคทีฟแฟลช",
+    "vi": "Tia hủy diệt"
+  },
   "MST_LEADERSKILLS_2804_DESCRIPTION": {
     "en": "Probable Def ignoring effect when attacking, 80% boost to Atk & hugely boosts BB gauge when attacking normally",
     "es": "Posibilidad de ignorar la DEF enemiga al atacar, +80% al ATQ y potencia enormemente el indicador BB al atacar normalmente",
@@ -17238,6 +17254,22 @@
     "pt": "Gung-Ho-Guns' Lord",
     "th": "Gung-Ho-Guns' Lord",
     "vi": "Gung-Ho-Guns' Lord"
+  },
+  "MST_LEADERSKILLS_860888_DESCRIPTION": {
+    "en": "100% Atk, Def, Rec, 150% max HP, 220% all elemental damage, spark damage fills BB gauge, probable 1 KO resistance & probable damage reduction to 1",
+    "es": "100% Atk, Def, Rec, 150% max HP, 220% all elemental damage, spark damage fills BB gauge, probable 1 KO resistance & probable damage reduction to 1",
+    "id": "100% Atk, Def, Rec, 150% max HP, 220% all elemental damage, spark damage fills BB gauge, probable 1 KO resistance & probable damage reduction to 1",
+    "pt": "100% Atk, Def, Rec, 150% max HP, 220% all elemental damage, spark damage fills BB gauge, probable 1 KO resistance & probable damage reduction to 1",
+    "th": "100% Atk, Def, Rec, 150% max HP, 220% all elemental damage, spark damage fills BB gauge, probable 1 KO resistance & probable damage reduction to 1",
+    "vi": "100% Atk, Def, Rec, 150% max HP, 220% all elemental damage, spark damage fills BB gauge, probable 1 KO resistance & probable damage reduction to 1"
+  },
+  "MST_LEADERSKILLS_860888_NAME": {
+    "en": "Elveskud",
+    "es": "Elveskud",
+    "id": "Elveskud",
+    "pt": "Elveskud",
+    "th": "Elveskud",
+    "vi": "Elveskud"
   },
   "MST_LEADERSKILLS_860900_DESCRIPTION": {
     "en": "100% boost to max HP, Spark damage boosts BB gauge, hugely boosts Dark elemental damage, 15% damage reduction from Light types & negates all status ailments",
@@ -92136,14 +92168,6 @@
     "vi": "Pegasus"
   },
   "MST_MONSTERS_50732_NAME": {
-    "en": "Pegasus",
-    "es": "Pegasus",
-    "id": "Pegasus",
-    "pt": "Pegasus",
-    "th": "เพกาซัส",
-    "vi": "Pegasus"
-  },
-  "MST_MONSTERS_50733_NAME": {
     "en": "Pegasus",
     "es": "Pegasus",
     "id": "Pegasus",

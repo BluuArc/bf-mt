@@ -1,52 +1,4 @@
 {
-  "MST_SKILLS_2840798_NAME": {
-    "en": "Manaburst Tempest",
-    "es": "Manaburst Tempest",
-    "id": "Manaburst Tempest",
-    "pt": "Manaburst Tempest",
-    "th": "Manaburst Tempest",
-    "vi": "Manaburst Tempest"
-  },
-  "MST_SKILLS_2840808_DESCRIPTION": {
-    "en": "15 combo Thunder attack on all foes (damage relative to remaining HP), 100% damage reduction for 4 turns, boosts Atk, Def, Rec for 4 turns, probable KO resistance, fully restores HP for 4 turns & damage taken fills BB gauge for 4 turns",
-    "es": "15 combo Thunder attack on all foes (damage relative to remaining HP), 100% damage reduction for 4 turns, boosts Atk, Def, Rec for 4 turns, probable KO resistance, fully restores HP for 4 turns & damage taken fills BB gauge for 4 turns",
-    "id": "15 combo Thunder attack on all foes (damage relative to remaining HP), 100% damage reduction for 4 turns, boosts Atk, Def, Rec for 4 turns, probable KO resistance, fully restores HP for 4 turns & damage taken fills BB gauge for 4 turns",
-    "pt": "15 combo Thunder attack on all foes (damage relative to remaining HP), 100% damage reduction for 4 turns, boosts Atk, Def, Rec for 4 turns, probable KO resistance, fully restores HP for 4 turns & damage taken fills BB gauge for 4 turns",
-    "th": "15 combo Thunder attack on all foes (damage relative to remaining HP), 100% damage reduction for 4 turns, boosts Atk, Def, Rec for 4 turns, probable KO resistance, fully restores HP for 4 turns & damage taken fills BB gauge for 4 turns",
-    "vi": "15 combo Thunder attack on all foes (damage relative to remaining HP), 100% damage reduction for 4 turns, boosts Atk, Def, Rec for 4 turns, probable KO resistance, fully restores HP for 4 turns & damage taken fills BB gauge for 4 turns"
-  },
-  "MST_SKILLS_2840808_NAME": {
-    "en": "Humanity's Light of Hope",
-    "es": "Humanity's Light of Hope",
-    "id": "Humanity's Light of Hope",
-    "pt": "Humanity's Light of Hope",
-    "th": "Humanity's Light of Hope",
-    "vi": "Humanity's Light of Hope"
-  },
-  "MST_SKILLS_2840827_DESCRIPTION": {
-    "en": "19 combo Thunder attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 3 turns, raises normal hit amount for 3 turns, boosts critical damage for 3 turns & fills BB gauge for 3 turns",
-    "es": "19 combo Thunder attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 3 turns, raises normal hit amount for 3 turns, boosts critical damage for 3 turns & fills BB gauge for 3 turns",
-    "id": "19 combo Thunder attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 3 turns, raises normal hit amount for 3 turns, boosts critical damage for 3 turns & fills BB gauge for 3 turns",
-    "pt": "19 combo Thunder attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 3 turns, raises normal hit amount for 3 turns, boosts critical damage for 3 turns & fills BB gauge for 3 turns",
-    "th": "19 combo Thunder attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 3 turns, raises normal hit amount for 3 turns, boosts critical damage for 3 turns & fills BB gauge for 3 turns",
-    "vi": "19 combo Thunder attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 3 turns, raises normal hit amount for 3 turns, boosts critical damage for 3 turns & fills BB gauge for 3 turns"
-  },
-  "MST_SKILLS_2840827_NAME": {
-    "en": "Celestial Vanquisher",
-    "es": "Celestial Vanquisher",
-    "id": "Celestial Vanquisher",
-    "pt": "Celestial Vanquisher",
-    "th": "Celestial Vanquisher",
-    "vi": "Celestial Vanquisher"
-  },
-  "MST_SKILLS_2840828_DESCRIPTION": {
-    "en": "22 combo Thunder attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 4 turns, fills BB gauge for 4 turns, boosts critical damage for 4 turns, 1 extra action for 1 turn & raises normal hit amount for 4 turns",
-    "es": "22 combo Thunder attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 4 turns, fills BB gauge for 4 turns, boosts critical damage for 4 turns, 1 extra action for 1 turn & raises normal hit amount for 4 turns",
-    "id": "22 combo Thunder attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 4 turns, fills BB gauge for 4 turns, boosts critical damage for 4 turns, 1 extra action for 1 turn & raises normal hit amount for 4 turns",
-    "pt": "22 combo Thunder attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 4 turns, fills BB gauge for 4 turns, boosts critical damage for 4 turns, 1 extra action for 1 turn & raises normal hit amount for 4 turns",
-    "th": "22 combo Thunder attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 4 turns, fills BB gauge for 4 turns, boosts critical damage for 4 turns, 1 extra action for 1 turn & raises normal hit amount for 4 turns",
-    "vi": "22 combo Thunder attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 4 turns, fills BB gauge for 4 turns, boosts critical damage for 4 turns, 1 extra action for 1 turn & raises normal hit amount for 4 turns"
-  },
   "MST_SKILLS_2840828_NAME": {
     "en": "Victorious Over Evil",
     "es": "Victorious Over Evil",
@@ -2614,6 +2566,22 @@
     "pt": "Heartless Sadist",
     "th": "Heartless Sadist",
     "vi": "Heartless Sadist"
+  },
+  "MST_SKILLS_2860888_DESCRIPTION": {
+    "en": "34 combo Dark attack on all foes (damage relative to remaining HP), boosts all elemental damage for 4 turns, boosts critical damage for 4 turns, spark damage fills BB gauge for 4 turns, activates BB/SBB/UBB twice for 3 turns & raises allies from KO",
+    "es": "34 combo Dark attack on all foes (damage relative to remaining HP), boosts all elemental damage for 4 turns, boosts critical damage for 4 turns, spark damage fills BB gauge for 4 turns, activates BB/SBB/UBB twice for 3 turns & raises allies from KO",
+    "id": "34 combo Dark attack on all foes (damage relative to remaining HP), boosts all elemental damage for 4 turns, boosts critical damage for 4 turns, spark damage fills BB gauge for 4 turns, activates BB/SBB/UBB twice for 3 turns & raises allies from KO",
+    "pt": "34 combo Dark attack on all foes (damage relative to remaining HP), boosts all elemental damage for 4 turns, boosts critical damage for 4 turns, spark damage fills BB gauge for 4 turns, activates BB/SBB/UBB twice for 3 turns & raises allies from KO",
+    "th": "34 combo Dark attack on all foes (damage relative to remaining HP), boosts all elemental damage for 4 turns, boosts critical damage for 4 turns, spark damage fills BB gauge for 4 turns, activates BB/SBB/UBB twice for 3 turns & raises allies from KO",
+    "vi": "34 combo Dark attack on all foes (damage relative to remaining HP), boosts all elemental damage for 4 turns, boosts critical damage for 4 turns, spark damage fills BB gauge for 4 turns, activates BB/SBB/UBB twice for 3 turns & raises allies from KO"
+  },
+  "MST_SKILLS_2860888_NAME": {
+    "en": "Silent Solipsis",
+    "es": "Silent Solipsis",
+    "id": "Silent Solipsis",
+    "pt": "Silent Solipsis",
+    "th": "Silent Solipsis",
+    "vi": "Silent Solipsis"
   },
   "MST_SKILLS_2860900_DESCRIPTION": {
     "en": "18 combo massive Dark attack on all foes (uses all allies' BB gauge), 100% damage reduction from Light types for 2 turns, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts BB gauge for 3 turns & fully restores HP for 3 turns",
@@ -22390,6 +22358,22 @@
     "pt": "Grandiose Finish",
     "th": "Grandiose Finish",
     "vi": "Grandiose Finish"
+  },
+  "MST_SKILLS_3850888_DESCRIPTION": {
+    "en": "68 combo grand dual attack on all foes (damage relative to remaining HP), boosts all elemental damage, critical damage, max HP, 100% damage reduction, Atk, Def, Rec relative to max HP, spark damage boosts BB gauge, damage taken boosts BB gauge and restores HP, activates BB/SBB/UBB twice & 80% KO resistance",
+    "es": "68 combo grand dual attack on all foes (damage relative to remaining HP), boosts all elemental damage, critical damage, max HP, 100% damage reduction, Atk, Def, Rec relative to max HP, spark damage boosts BB gauge, damage taken boosts BB gauge and restores HP, activates BB/SBB/UBB twice & 80% KO resistance",
+    "id": "68 combo grand dual attack on all foes (damage relative to remaining HP), boosts all elemental damage, critical damage, max HP, 100% damage reduction, Atk, Def, Rec relative to max HP, spark damage boosts BB gauge, damage taken boosts BB gauge and restores HP, activates BB/SBB/UBB twice & 80% KO resistance",
+    "pt": "68 combo grand dual attack on all foes (damage relative to remaining HP), boosts all elemental damage, critical damage, max HP, 100% damage reduction, Atk, Def, Rec relative to max HP, spark damage boosts BB gauge, damage taken boosts BB gauge and restores HP, activates BB/SBB/UBB twice & 80% KO resistance",
+    "th": "68 combo grand dual attack on all foes (damage relative to remaining HP), boosts all elemental damage, critical damage, max HP, 100% damage reduction, Atk, Def, Rec relative to max HP, spark damage boosts BB gauge, damage taken boosts BB gauge and restores HP, activates BB/SBB/UBB twice & 80% KO resistance",
+    "vi": "68 combo grand dual attack on all foes (damage relative to remaining HP), boosts all elemental damage, critical damage, max HP, 100% damage reduction, Atk, Def, Rec relative to max HP, spark damage boosts BB gauge, damage taken boosts BB gauge and restores HP, activates BB/SBB/UBB twice & 80% KO resistance"
+  },
+  "MST_SKILLS_3850888_NAME": {
+    "en": "Sacrosanct Qualia",
+    "es": "Sacrosanct Qualia",
+    "id": "Sacrosanct Qualia",
+    "pt": "Sacrosanct Qualia",
+    "th": "Sacrosanct Qualia",
+    "vi": "Sacrosanct Qualia"
   },
   "MST_SKILLS_3850928_DESCRIPTION": {
     "en": "44 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, BC, HC, item drop rate, critical damage, own Spark damage, Light, Fire elemental damage, OD gauge, spark damage boosts BB gauge, fully restores HP & 100% evasion",
@@ -90016,12 +90000,12 @@
     "vi": "The Little Conqueror"
   },
   "MST_SKILLS_810928_DESCRIPTION": {
-    "en": "11 combo Fire attack on all foes, adds ignore Def to attack for 5 turns, boosts BC, HC drop rate, Item drop rate for 3 turns, boosts max HP for all allies & probable evasion for self for 2 turns",
-    "es": "11 combo Fire attack on all foes, adds ignore Def to attack for 5 turns, boosts BC, HC drop rate, Item drop rate for 3 turns, boosts max HP for all allies & probable evasion for self for 2 turns",
-    "id": "11 combo Fire attack on all foes, adds ignore Def to attack for 5 turns, boosts BC, HC drop rate, Item drop rate for 3 turns, boosts max HP for all allies & probable evasion for self for 2 turns",
-    "pt": "11 combo Fire attack on all foes, adds ignore Def to attack for 5 turns, boosts BC, HC drop rate, Item drop rate for 3 turns, boosts max HP for all allies & probable evasion for self for 2 turns",
-    "th": "11 combo Fire attack on all foes, adds ignore Def to attack for 5 turns, boosts BC, HC drop rate, Item drop rate for 3 turns, boosts max HP for all allies & probable evasion for self for 2 turns",
-    "vi": "11 combo Fire attack on all foes, adds ignore Def to attack for 5 turns, boosts BC, HC drop rate, Item drop rate for 3 turns, boosts max HP for all allies & probable evasion for self for 2 turns"
+    "en": "11 combo Fire attack on all foes, adds ignore Def to attack for 5 turns, boosts BC, HC drop rate, Item drop rate for 3 turns, boosts max HP & probable evasion for self for 2 turns",
+    "es": "11 combo Fire attack on all foes, adds ignore Def to attack for 5 turns, boosts BC, HC drop rate, Item drop rate for 3 turns, boosts max HP & probable evasion for self for 2 turns",
+    "id": "11 combo Fire attack on all foes, adds ignore Def to attack for 5 turns, boosts BC, HC drop rate, Item drop rate for 3 turns, boosts max HP & probable evasion for self for 2 turns",
+    "pt": "11 combo Fire attack on all foes, adds ignore Def to attack for 5 turns, boosts BC, HC drop rate, Item drop rate for 3 turns, boosts max HP & probable evasion for self for 2 turns",
+    "th": "11 combo Fire attack on all foes, adds ignore Def to attack for 5 turns, boosts BC, HC drop rate, Item drop rate for 3 turns, boosts max HP & probable evasion for self for 2 turns",
+    "vi": "11 combo Fire attack on all foes, adds ignore Def to attack for 5 turns, boosts BC, HC drop rate, Item drop rate for 3 turns, boosts max HP & probable evasion for self for 2 turns"
   },
   "MST_SKILLS_810928_NAME": {
     "en": "Night-Haunt",
@@ -92150,5 +92134,45 @@
     "pt": "18 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage boosts BB gauge for 3 turns, enormously boosts BB gauge & probable huge 2 turn Atk, Def reduction",
     "th": "18 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage boosts BB gauge for 3 turns, enormously boosts BB gauge & probable huge 2 turn Atk, Def reduction",
     "vi": "18 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage boosts BB gauge for 3 turns, enormously boosts BB gauge & probable huge 2 turn Atk, Def reduction"
+  },
+  "MST_SKILLS_830587_NAME": {
+    "en": "Skill Release",
+    "es": "Skill Release",
+    "id": "Skill Release",
+    "pt": "Skill Release",
+    "th": "Skill Release",
+    "vi": "Skill Release"
+  },
+  "MST_SKILLS_830588_DESCRIPTION": {
+    "en": "20 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage considerably boosts BB gauge for 3 turns, enormously boosts BB gauge, probable huge 2 turn Atk, Def reduction & purges LS disable effects from one random ally",
+    "es": "20 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage considerably boosts BB gauge for 3 turns, enormously boosts BB gauge, probable huge 2 turn Atk, Def reduction & purges LS disable effects from one random ally",
+    "id": "20 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage considerably boosts BB gauge for 3 turns, enormously boosts BB gauge, probable huge 2 turn Atk, Def reduction & purges LS disable effects from one random ally",
+    "pt": "20 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage considerably boosts BB gauge for 3 turns, enormously boosts BB gauge, probable huge 2 turn Atk, Def reduction & purges LS disable effects from one random ally",
+    "th": "20 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage considerably boosts BB gauge for 3 turns, enormously boosts BB gauge, probable huge 2 turn Atk, Def reduction & purges LS disable effects from one random ally",
+    "vi": "20 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage considerably boosts BB gauge for 3 turns, enormously boosts BB gauge, probable huge 2 turn Atk, Def reduction & purges LS disable effects from one random ally"
+  },
+  "MST_SKILLS_830588_NAME": {
+    "en": "Skill Release EX",
+    "es": "Skill Release EX",
+    "id": "Skill Release EX",
+    "pt": "Skill Release EX",
+    "th": "Skill Release EX",
+    "vi": "Skill Release EX"
+  },
+  "MST_SKILLS_830597_DESCRIPTION": {
+    "en": "12 combo Earth attack on all foes, boosts max HP, hugely boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit rate for 3 turns, hugely boosts Atk, Def, Rec relative to max HP for 3 turns & boosts BC, HC drop rates for 3 turns",
+    "es": "12 combo Earth attack on all foes, boosts max HP, hugely boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit rate for 3 turns, hugely boosts Atk, Def, Rec relative to max HP for 3 turns & boosts BC, HC drop rates for 3 turns",
+    "id": "12 combo Earth attack on all foes, boosts max HP, hugely boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit rate for 3 turns, hugely boosts Atk, Def, Rec relative to max HP for 3 turns & boosts BC, HC drop rates for 3 turns",
+    "pt": "12 combo Earth attack on all foes, boosts max HP, hugely boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit rate for 3 turns, hugely boosts Atk, Def, Rec relative to max HP for 3 turns & boosts BC, HC drop rates for 3 turns",
+    "th": "12 combo Earth attack on all foes, boosts max HP, hugely boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit rate for 3 turns, hugely boosts Atk, Def, Rec relative to max HP for 3 turns & boosts BC, HC drop rates for 3 turns",
+    "vi": "12 combo Earth attack on all foes, boosts max HP, hugely boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit rate for 3 turns, hugely boosts Atk, Def, Rec relative to max HP for 3 turns & boosts BC, HC drop rates for 3 turns"
+  },
+  "MST_SKILLS_830597_NAME": {
+    "en": "Form Constant",
+    "es": "Form Constant",
+    "id": "Form Constant",
+    "pt": "Form Constant",
+    "th": "Form Constant",
+    "vi": "Form Constant"
   }
 }
