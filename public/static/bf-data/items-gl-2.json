@@ -4836,8 +4836,8 @@
     "effect": {
       "effect": [
         {
-          "fixed damage": 1000000000,
-          "proc id": "28"
+          "unknown proc id": "0",
+          "unknown proc param": "0"
         }
       ],
       "target_area": "single",
@@ -4846,7 +4846,7 @@
     "id": 20000803,
     "max equipped": 99,
     "max_stack": 99,
-    "name": "1 Billion sword",
+    "name": "hard cookie",
     "raid": false,
     "rarity": 3,
     "sell_price": 200,
