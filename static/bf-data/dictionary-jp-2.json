@@ -1,4 +1,52 @@
 {
+  "MST_LEADERSKILLS_2512_NAME": {
+    "en": "Beast's Untamed Soul",
+    "es": "Beast's Untamed Soul",
+    "id": "Jiwa Beast Liar",
+    "pt": "Beast's Untamed Soul",
+    "th": "บีสต์อันเทมเม็ดโซล",
+    "vi": "Beast's Untamed Soul"
+  },
+  "MST_LEADERSKILLS_2513_DESCRIPTION": {
+    "en": "80% boost to Atk and Def for first 2 turns & probable 15% damage counter",
+    "es": "80% boost to Atk and Def for first 2 turns & probable 15% damage counter",
+    "id": "80% ekstra Serang & Tahan untuk 2 giliran pertama & kans balas 15% kerusakan",
+    "pt": "80% boost to Atk and Def for first 2 turns & probable 15% damage counter",
+    "th": "80% เพิ่มค่าให้ โจมตี กับ ป้องกัน สำหรับ 2 เทิร์นแรก และ มีโอกาส 15% สวนกลับค่าความเสียหาย",
+    "vi": "80% boost to Atk and Def for first 2 turns & probable 15% damage counter"
+  },
+  "MST_LEADERSKILLS_2513_NAME": {
+    "en": "Heir to the Blade",
+    "es": "Heir to the Blade",
+    "id": "Pewaris Pedang",
+    "pt": "Heir to the Blade",
+    "th": "เอียร์ ทู เดอะ เบลด",
+    "vi": "Heir to the Blade"
+  },
+  "MST_LEADERSKILLS_2514_DESCRIPTION": {
+    "en": "100% boost to Atk and Def for first 2 turns, probable 15% damage counter & critical damage hugely boosts BB gauge",
+    "es": "100% boost to Atk and Def for first 2 turns, probable 15% damage counter & critical damage hugely boosts BB gauge",
+    "id": "100% ekstra Serang & Tahan untuk 2 giliran pertama, kans balas 15% kerusakan, kerusakan ampuh amat menambah meteran BB",
+    "pt": "100% boost to Atk and Def for first 2 turns, probable 15% damage counter & critical damage hugely boosts BB gauge",
+    "th": "100% เพิ่มค่าให้ โจมตี กับ ป้องกัน สำหรับ 2 เทิร์นแรก, มีโอกาส 15% สวนกลับค่าความเสียหาย และ ความเสียหายคริติคอล เพิ่มค่าอย่างสูงให้ เกจ BB",
+    "vi": "100% boost to Atk and Def for first 2 turns, probable 15% damage counter & critical damage hugely boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_2514_NAME": {
+    "en": "Devotion to Potential",
+    "es": "Devotion to Potential",
+    "id": "Pengabdian untuk Potensi",
+    "pt": "Devotion to Potential",
+    "th": "ดีโวชั่น ทู โพเทนเชี่ยล",
+    "vi": "Devotion to Potential"
+  },
+  "MST_LEADERSKILLS_2515_DESCRIPTION": {
+    "en": "30% boost to max HP, 120% boost to Atk, Def for first 3 turns & probable normal attack on all foes",
+    "es": "30% boost to max HP, 120% boost to Atk, Def for first 3 turns & probable normal attack on all foes",
+    "id": "30% ekstra HP maks, 120% ekstra Serang, Tahan untuk 3 giliran pertama, kans serangan normal ke semua musuh",
+    "pt": "30% boost to max HP, 120% boost to Atk, Def for first 3 turns & probable normal attack on all foes",
+    "th": "30% เพิ่มค่า HP สูงสุด, 120% เพิ่มค่า โจมตี, ป้องกัน สำหรับ 3 เทิร์นแรก และ มีโอกาส normal attack on all foes",
+    "vi": "30% boost to max HP, 120% boost to Atk, Def for first 3 turns & probable normal attack on all foes"
+  },
   "MST_LEADERSKILLS_2515_NAME": {
     "en": "Battle Roar",
     "es": "Battle Roar",
@@ -16399,6 +16447,22 @@
     "th": "Lux Aura",
     "vi": "Lux Aura"
   },
+  "MST_LEADERSKILLS_850908_DESCRIPTION": {
+    "en": "150% Atk, max HP, 200% spark damage for 2 turns when sparks dealt is over 15 times, spark damage fills BB gauge, 300% BB Atk & 30% OD gauge fill rate",
+    "es": "150% Atk, max HP, 200% spark damage for 2 turns when sparks dealt is over 15 times, spark damage fills BB gauge, 300% BB Atk & 30% OD gauge fill rate",
+    "id": "150% Atk, max HP, 200% spark damage for 2 turns when sparks dealt is over 15 times, spark damage fills BB gauge, 300% BB Atk & 30% OD gauge fill rate",
+    "pt": "150% Atk, max HP, 200% spark damage for 2 turns when sparks dealt is over 15 times, spark damage fills BB gauge, 300% BB Atk & 30% OD gauge fill rate",
+    "th": "150% Atk, max HP, 200% spark damage for 2 turns when sparks dealt is over 15 times, spark damage fills BB gauge, 300% BB Atk & 30% OD gauge fill rate",
+    "vi": "150% Atk, max HP, 200% spark damage for 2 turns when sparks dealt is over 15 times, spark damage fills BB gauge, 300% BB Atk & 30% OD gauge fill rate"
+  },
+  "MST_LEADERSKILLS_850908_NAME": {
+    "en": "Wedjat",
+    "es": "Wedjat",
+    "id": "Wedjat",
+    "pt": "Wedjat",
+    "th": "Wedjat",
+    "vi": "Wedjat"
+  },
   "MST_LEADERSKILLS_850918_DESCRIPTION": {
     "en": "100% all parameters, 15% damage reduction, probable 1 KO resistance, 40% BC, HC, 5% Item, 20% Zel, 30% Karma drop rates & negates all status ailments and Atk, Def, Rec reduction",
     "es": "100% all parameters, 15% damage reduction, probable 1 KO resistance, 40% BC, HC, 5% Item, 20% Zel, 30% Karma drop rates & negates all status ailments and Atk, Def, Rec reduction",
@@ -21686,6 +21750,46 @@
     "pt": "Look upon the red mark of their sins!",
     "th": "Look upon the red mark of their sins!",
     "vi": "Look upon the red mark of their sins!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2041_MESSAGES": {
+    "en": "To face the darkness, you must confront the powerful leaders at their helm.",
+    "es": "To face the darkness, you must confront the powerful leaders at their helm.",
+    "id": "To face the darkness, you must confront the powerful leaders at their helm.",
+    "pt": "To face the darkness, you must confront the powerful leaders at their helm.",
+    "th": "To face the darkness, you must confront the powerful leaders at their helm.",
+    "vi": "To face the darkness, you must confront the powerful leaders at their helm."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2042_MESSAGES": {
+    "en": "The Chaos grows with each new soul it enslaves.",
+    "es": "The Chaos grows with each new soul it enslaves.",
+    "id": "The Chaos grows with each new soul it enslaves.",
+    "pt": "The Chaos grows with each new soul it enslaves.",
+    "th": "The Chaos grows with each new soul it enslaves.",
+    "vi": "The Chaos grows with each new soul it enslaves."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2043_MESSAGES": {
+    "en": "Do not waste your time on small fry...",
+    "es": "Do not waste your time on small fry...",
+    "id": "Do not waste your time on small fry...",
+    "pt": "Do not waste your time on small fry...",
+    "th": "Do not waste your time on small fry...",
+    "vi": "Do not waste your time on small fry..."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2044_MESSAGES": {
+    "en": "Cut off the serpent's head, and the rest shall perish as well.",
+    "es": "Cut off the serpent's head, and the rest shall perish as well.",
+    "id": "Cut off the serpent's head, and the rest shall perish as well.",
+    "pt": "Cut off the serpent's head, and the rest shall perish as well.",
+    "th": "Cut off the serpent's head, and the rest shall perish as well.",
+    "vi": "Cut off the serpent's head, and the rest shall perish as well."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2045_MESSAGES": {
+    "en": "Understand this, and the armies of darkness shall fall.",
+    "es": "Understand this, and the armies of darkness shall fall.",
+    "id": "Understand this, and the armies of darkness shall fall.",
+    "pt": "Understand this, and the armies of darkness shall fall.",
+    "th": "Understand this, and the armies of darkness shall fall.",
+    "vi": "Understand this, and the armies of darkness shall fall."
   },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_204_MESSAGES": {
     "en": "But you shall go no farther.<br>Behold my true power!",
@@ -92149,78 +92253,6 @@
     "id": "Pegasus",
     "pt": "Pégaso",
     "th": "เปกาซัส",
-    "vi": "Ngựa pegat"
-  },
-  "MST_MONSTERS_50705_NAME": {
-    "en": "Pegasus",
-    "es": "Pegaso",
-    "id": "Pegasus",
-    "pt": "Pégaso",
-    "th": "เปกาซัส",
-    "vi": "Ngựa pegat"
-  },
-  "MST_MONSTERS_50706_NAME": {
-    "en": "Pegasus",
-    "es": "Pegaso",
-    "id": "Pegasus",
-    "pt": "Pégaso",
-    "th": "เพกาซัส",
-    "vi": "Ngựa pegat"
-  },
-  "MST_MONSTERS_50707_NAME": {
-    "en": "Pegasus",
-    "es": "Pegaso",
-    "id": "Pegasus",
-    "pt": "Pégaso",
-    "th": "เพกาซัส",
-    "vi": "Ngựa pegat"
-  },
-  "MST_MONSTERS_50708_NAME": {
-    "en": "Pegasus",
-    "es": "Pegaso",
-    "id": "Pegasus",
-    "pt": "Pégaso",
-    "th": "เพกาซัส",
-    "vi": "Ngựa pegat"
-  },
-  "MST_MONSTERS_50709_NAME": {
-    "en": "Pegasus",
-    "es": "Pegaso",
-    "id": "Pegasus",
-    "pt": "Pégaso",
-    "th": "เพกาซัส",
-    "vi": "Ngựa pegat"
-  },
-  "MST_MONSTERS_50710_NAME": {
-    "en": "Pegasus",
-    "es": "Pegaso",
-    "id": "Pegasus",
-    "pt": "Pégaso",
-    "th": "เพกาซัส",
-    "vi": "Ngựa pegat"
-  },
-  "MST_MONSTERS_50711_NAME": {
-    "en": "Pegasus",
-    "es": "Pegaso",
-    "id": "Pegasus",
-    "pt": "Pégaso",
-    "th": "เพกาซัส",
-    "vi": "Ngựa pegat"
-  },
-  "MST_MONSTERS_50712_NAME": {
-    "en": "Pegasus",
-    "es": "Pegaso",
-    "id": "Pegasus",
-    "pt": "Pégaso",
-    "th": "เพกาซัส",
-    "vi": "Ngựa pegat"
-  },
-  "MST_MONSTERS_50713_NAME": {
-    "en": "Pegasus",
-    "es": "Pegaso",
-    "id": "Pegasus",
-    "pt": "Pégaso",
-    "th": "เพกาซัส",
     "vi": "Ngựa pegat"
   }
 }
