@@ -1,4 +1,140 @@
 {
+  "MST_LEADERSKILLS_2504_DESCRIPTION": {
+    "en": "50% boost to Atk power for first 2 turns",
+    "es": "50% de aumento al poder de ataque durante 2 turnos",
+    "id": "Menambah 50% kekuatan Serangan untuk 2 giliran pertama",
+    "pt": "Bônus de 50% no ATQ pelos 2 primeiros turnos",
+    "th": "50% เพิ่มค่า พลังโจมตี สำหรับ 2 เทิร์นแรก",
+    "vi": "Tăng 50% sức tấn công cho 2 lượt đầu"
+  },
+  "MST_LEADERSKILLS_2504_NAME": {
+    "en": "Instant Power",
+    "es": "Poder instantáneo",
+    "id": "Kekuatan Instan",
+    "pt": "Poder Instantâneo",
+    "th": "อินสแตนท์พาวเวอร์",
+    "vi": "Sức mạnh tức thì"
+  },
+  "MST_LEADERSKILLS_2505_DESCRIPTION": {
+    "en": "75% boost to Atk power for first 2 turns",
+    "es": "75% de aumento al poder de ataque durante 2 turnos",
+    "id": "Menambah 75% kekuatan Serangan untuk 2 giliran pertama",
+    "pt": "Bônus de 75% no ATQ pelos 2 primeiros turnos",
+    "th": "75% เพิ่มค่า พลังโจมตี สำหรับ 2 เทิร์นแรก",
+    "vi": "Tăng 75% sức tấn công cho 2 lượt đầu"
+  },
+  "MST_LEADERSKILLS_2505_NAME": {
+    "en": "Instant Herculean Power",
+    "es": "Poder hercúleo instantáneo",
+    "id": "Kekuatan Herkules Instan",
+    "pt": "Poder Instantâneo de Hércules",
+    "th": "อินสแตนท์เฮอคิวลีนพาวเวอร์",
+    "vi": "Sức mạnh Héc-quin tức thì"
+  },
+  "MST_LEADERSKILLS_2506_DESCRIPTION": {
+    "en": "100% boost to Atk power for first 2 turns",
+    "es": "100% boost to Atk power for first 2 turns",
+    "id": "100% ekstra kekuatan Serangan untuk 2 giliran pertama",
+    "pt": "100% boost to Atk power for first 2 turns",
+    "th": "100% เพิ่มพลังโจมตี 2 เทิร์นแรก",
+    "vi": "100% boost to Atk power for first 2 turns"
+  },
+  "MST_LEADERSKILLS_2506_NAME": {
+    "en": "Instant Divine Power",
+    "es": "Instant Divine Power",
+    "id": "Kekuatan Ilahi Instan",
+    "pt": "Instant Divine Power",
+    "th": "อินสแตนท์ ดีไวน์ พาวเวอร์",
+    "vi": "Instant Divine Power"
+  },
+  "MST_LEADERSKILLS_2507_DESCRIPTION": {
+    "en": "100% boost to Atk and Def for first 2 turns & reduces BB gauge required for BB",
+    "es": "100% boost to Atk and Def for first 2 turns & reduces BB gauge required for BB",
+    "id": "100% ekstra kekuatan Serangan dan Pertahanan untuk 2 giliran pertama & mengurangi syarat meteran BB untuk BB",
+    "pt": "100% boost to Atk and Def for first 2 turns & reduces BB gauge required for BB",
+    "th": "100% เพิ่มพลังโจมตีและป้องกัน 2 เทิร์นแรก, ลดจำนวนบีบีเกจที่ต้องใช้",
+    "vi": "100% boost to Atk and Def for first 2 turns & reduces BB gauge required for BB"
+  },
+  "MST_LEADERSKILLS_2507_NAME": {
+    "en": "Instant Heavenly Strike",
+    "es": "Instant Heavenly Strike",
+    "id": "Serbuan Surgawi Instan",
+    "pt": "Instant Heavenly Strike",
+    "th": "อินสแตนท์ เฮฟเว่นลี่ สไตรค์",
+    "vi": "Instant Heavenly Strike"
+  },
+  "MST_LEADERSKILLS_2508_DESCRIPTION": {
+    "en": "120% boost to Atk, Def for first 2 turns, probable damage reduction & reduction in BB gauge required for BB",
+    "es": "120% boost to Atk, Def for first 2 turns, probable damage reduction & reduction in BB gauge required for BB",
+    "id": "120% ekstra Serang, Tahan 2 giliran pertama, kans mengurangi kerusakan & pengurangan meteran BB untuk BB",
+    "pt": "120% boost to Atk, Def for first 2 turns, probable damage reduction & reduction in BB gauge required for BB",
+    "th": "120% เพิ่มพลังโจมตีและป้องกัน 2 เทิร์นแรก, มีโอกาสลดดาเมจ, ลดบีบีเกจที่ต้องใช้",
+    "vi": "120% boost to Atk, Def for first 2 turns, probable damage reduction & reduction in BB gauge required for BB"
+  },
+  "MST_LEADERSKILLS_2508_NAME": {
+    "en": "Instant Dragon Strike",
+    "es": "Instant Dragon Strike",
+    "id": "Serbuan Naga Instan",
+    "pt": "Instant Dragon Strike",
+    "th": "อินสแตนท์ ดราก้อน สไตร์ค",
+    "vi": "Instant Dragon Strike"
+  },
+  "MST_LEADERSKILLS_2509_DESCRIPTION": {
+    "en": "100% boost to Atk, Def for first 2 turns & boosts Spark damage",
+    "es": "100% boost to Atk, Def for first 2 turns & boosts Spark damage",
+    "id": "100% esktra Serangan, Pertahanan untuk 2 giliran pertama & menambah kerusakan Percikan",
+    "pt": "100% boost to Atk, Def for first 2 turns & boosts Spark damage",
+    "th": "100% เพิ่มพลังโจมตีและป้องกัน 2 เทิร์นแรก, เพิ่มสปาร์คดาเมจ",
+    "vi": "100% boost to Atk, Def for first 2 turns & boosts Spark damage"
+  },
+  "MST_LEADERSKILLS_2509_NAME": {
+    "en": "Instant Flash",
+    "es": "Instant Flash",
+    "id": "Flash Instan",
+    "pt": "Instant Flash",
+    "th": "อินสแตนท์ แฟลช",
+    "vi": "Instant Flash"
+  },
+  "MST_LEADERSKILLS_2510_DESCRIPTION": {
+    "en": "120% boost to Atk, Def for first 2 turns, enormously boosts Spark damage & Spark damage slightly boosts BB gauge",
+    "es": "120% boost to Atk, Def for first 2 turns, enormously boosts Spark damage & Spark damage slightly boosts BB gauge",
+    "id": "120% esktra Serangan, Pertahanan untuk 2 giliran pertama, tambahan jumbo kerusakan Percikan& kerusakan Percikan agak menambah meteran BB",
+    "pt": "120% boost to Atk, Def for first 2 turns, enormously boosts Spark damage & Spark damage slightly boosts BB gauge",
+    "th": "120% เพิ่มพลังโจมตีและป้องกัน 2 เทิร์นแรก, เพิ่มสปาร์คดาเมจอย่างมากมายมหาศาลและเพิ่มบีบีเกจเล้กน้อยจากสปาร์คดาเมจ",
+    "vi": "120% boost to Atk, Def for first 2 turns, enormously boosts Spark damage & Spark damage slightly boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_2510_NAME": {
+    "en": "Instant Rumbling Flash",
+    "es": "Instant Rumbling Flash",
+    "id": "Gemuruh Flash Instan",
+    "pt": "Instant Rumbling Flash",
+    "th": "อินสแตนท์ รัมบลิ้ง แฟลช",
+    "vi": "Instant Rumbling Flash"
+  },
+  "MST_LEADERSKILLS_2511_DESCRIPTION": {
+    "en": "120% boost to Atk, Def and 20% damage reduction for first 2 turns & adds probable Def ignoring effect to attack",
+    "es": "120% boost to Atk, Def and 20% damage reduction for first 2 turns & adds probable Def ignoring effect to attack",
+    "id": "120% ekstra Serang, Tahan, kurangi 20% kerusakan untuk 2 giliran pertama & tambah kans efek abaikan Pertahanan ke serangan",
+    "pt": "120% boost to Atk, Def and 20% damage reduction for first 2 turns & adds probable Def ignoring effect to attack",
+    "th": "120% เพิ่มค่า โจมตี, ป้องกัน กับ 20% ลดค่าความเสียหาย สำหรับ 2 เทิร์นแรก และ เพิ่มผล มีโอกาส ไม่สนค่าป้องป้องกัน ให้กับการโจมตี",
+    "vi": "120% boost to Atk, Def and 20% damage reduction for first 2 turns & adds probable Def ignoring effect to attack"
+  },
+  "MST_LEADERSKILLS_2511_NAME": {
+    "en": "Beast's Ferocious Spirit",
+    "es": "Beast's Ferocious Spirit",
+    "id": "Roh Beast Ganas",
+    "pt": "Beast's Ferocious Spirit",
+    "th": "บีสต์ฟีโรเชียสสปิริต",
+    "vi": "Beast's Ferocious Spirit"
+  },
+  "MST_LEADERSKILLS_2512_DESCRIPTION": {
+    "en": "150% boost to Atk, Def and 25% damage reduction for first 2 turns, adds probable Def ignoring effect to attack & adds probable 1 turn Atk reduction effect to attack for 2 turns when damage dealt has exceeded certain amount",
+    "es": "150% boost to Atk, Def and 25% damage reduction for first 2 turns, adds probable Def ignoring effect to attack & adds probable 1 turn Atk reduction effect to attack for 2 turns when damage dealt has exceeded certain amount",
+    "id": "150% ekstra Serang, Tahan, kurangi 25% kerusakan 2 giliran pertama, tambah kans efek abaikan Pertahanan ke serangan, tambah kans efek pengurangan Serangan 1 giliran ditambahkan ke serangan untuk 2 giliran saat kerusakan ditimbulkan melampaui jumlah tertentu",
+    "pt": "150% boost to Atk, Def and 25% damage reduction for first 2 turns, adds probable Def ignoring effect to attack & adds probable 1 turn Atk reduction effect to attack for 2 turns when damage dealt has exceeded certain amount",
+    "th": "150% เพิ่มค่า โจมตี, ป้องกัน กับ 25% ลดค่าความเสียหาย สำหรับ 2 เทิร์นแรก, เพิ่มผล มีโอกาส ไม่สนค่าป้องป้องกัน ให้กับการโจมตี และ เพิ่มผล มีโอกาส 1 เทิร์น ลดค่าโจมตี ให้กับการโจมตี นาน 2 เทิร์น เมื่อ ความเสียหายที่สร้าง เกินกว่าปริมาณหนึ่ง",
+    "vi": "150% boost to Atk, Def and 25% damage reduction for first 2 turns, adds probable Def ignoring effect to attack & adds probable 1 turn Atk reduction effect to attack for 2 turns when damage dealt has exceeded certain amount"
+  },
   "MST_LEADERSKILLS_2512_NAME": {
     "en": "Beast's Untamed Soul",
     "es": "Beast's Untamed Soul",
@@ -12639,6 +12775,22 @@
     "th": "Loup-Garou",
     "vi": "Loup-Garou"
   },
+  "MST_LEADERSKILLS_810958_DESCRIPTION": {
+    "en": "100% Atk, Def, Rec, 150% max HP, spark damage fills BB gauge, raises normal hit amount, probable damage reduction to 1 & normal attacks may hit all foes",
+    "es": "100% Atk, Def, Rec, 150% max HP, spark damage fills BB gauge, raises normal hit amount, probable damage reduction to 1 & normal attacks may hit all foes",
+    "id": "100% Atk, Def, Rec, 150% max HP, spark damage fills BB gauge, raises normal hit amount, probable damage reduction to 1 & normal attacks may hit all foes",
+    "pt": "100% Atk, Def, Rec, 150% max HP, spark damage fills BB gauge, raises normal hit amount, probable damage reduction to 1 & normal attacks may hit all foes",
+    "th": "100% Atk, Def, Rec, 150% max HP, spark damage fills BB gauge, raises normal hit amount, probable damage reduction to 1 & normal attacks may hit all foes",
+    "vi": "100% Atk, Def, Rec, 150% max HP, spark damage fills BB gauge, raises normal hit amount, probable damage reduction to 1 & normal attacks may hit all foes"
+  },
+  "MST_LEADERSKILLS_810958_NAME": {
+    "en": "Burning Grudge of Peril",
+    "es": "Burning Grudge of Peril",
+    "id": "Burning Grudge of Peril",
+    "pt": "Burning Grudge of Peril",
+    "th": "Burning Grudge of Peril",
+    "vi": "Burning Grudge of Peril"
+  },
   "MST_LEADERSKILLS_811118_DESCRIPTION": {
     "en": "60% boost to Atk, max HP, 100% boost to Spark damage, boosts Spark damage for 2 turns when Sparks have exceeded certain amount & hugely boosts Fire and Water elemental damage ",
     "es": "60% boost to Atk, max HP, 100% boost to Spark damage, boosts Spark damage for 2 turns when Sparks have exceeded certain amount & hugely boosts Fire and Water elemental damage ",
@@ -14096,12 +14248,12 @@
     "vi": "Kototamagaku Scholar"
   },
   "MST_LEADERSKILLS_830558_DESCRIPTION": {
-    "en": "80% boost to Atk, max HP, 120% boost to Def, Rec of Earth types, normal attack boosts BB gauge, Spark damage considerably boosts BB gauge & negates elemental damage",
-    "es": "80% boost to Atk, max HP, 120% boost to Def, Rec of Earth types, normal attack boosts BB gauge, Spark damage considerably boosts BB gauge & negates elemental damage",
-    "id": "80% boost to Atk, max HP, 120% boost to Def, Rec of Earth types, normal attack boosts BB gauge, Spark damage considerably boosts BB gauge & negates elemental damage",
-    "pt": "80% boost to Atk, max HP, 120% boost to Def, Rec of Earth types, normal attack boosts BB gauge, Spark damage considerably boosts BB gauge & negates elemental damage",
-    "th": "80% boost to Atk, max HP, 120% boost to Def, Rec of Earth types, normal attack boosts BB gauge, Spark damage considerably boosts BB gauge & negates elemental damage",
-    "vi": "80% boost to Atk, max HP, 120% boost to Def, Rec of Earth types, normal attack boosts BB gauge, Spark damage considerably boosts BB gauge & negates elemental damage"
+    "en": "100% Atk, 140% Def, Rec, 100% max HP (Earth), normal attacks fills BB gauge, spark damage fills BB gauge, 30% reduction to BB activation cost & 100% critical and elemental damage reduction",
+    "es": "100% Atk, 140% Def, Rec, 100% max HP (Earth), normal attacks fills BB gauge, spark damage fills BB gauge, 30% reduction to BB activation cost & 100% critical and elemental damage reduction",
+    "id": "100% Atk, 140% Def, Rec, 100% max HP (Earth), normal attacks fills BB gauge, spark damage fills BB gauge, 30% reduction to BB activation cost & 100% critical and elemental damage reduction",
+    "pt": "100% Atk, 140% Def, Rec, 100% max HP (Earth), normal attacks fills BB gauge, spark damage fills BB gauge, 30% reduction to BB activation cost & 100% critical and elemental damage reduction",
+    "th": "100% Atk, 140% Def, Rec, 100% max HP (Earth), normal attacks fills BB gauge, spark damage fills BB gauge, 30% reduction to BB activation cost & 100% critical and elemental damage reduction",
+    "vi": "100% Atk, 140% Def, Rec, 100% max HP (Earth), normal attacks fills BB gauge, spark damage fills BB gauge, 30% reduction to BB activation cost & 100% critical and elemental damage reduction"
   },
   "MST_LEADERSKILLS_830558_NAME": {
     "en": "Pure Kotodama Mastery",
@@ -92150,109 +92302,5 @@
     "pt": "Unicórnio",
     "th": "ยูนิคอน",
     "vi": "Kỳ lân"
-  },
-  "MST_MONSTERS_50653_NAME": {
-    "en": "Unicorn",
-    "es": "Unicornio",
-    "id": "Unicorn",
-    "pt": "Unicórnio",
-    "th": "ยูนิคอน",
-    "vi": "Kỳ lân"
-  },
-  "MST_MONSTERS_50654_NAME": {
-    "en": "Unicorn",
-    "es": "Unicornio",
-    "id": "Unicorn",
-    "pt": "Unicórnio",
-    "th": "ยูนิคอน",
-    "vi": "Kỳ lân"
-  },
-  "MST_MONSTERS_50655_NAME": {
-    "en": "Unicorn",
-    "es": "Unicornio",
-    "id": "Unicorn",
-    "pt": "Unicórnio",
-    "th": "ยูนิคอน",
-    "vi": "Kỳ lân"
-  },
-  "MST_MONSTERS_50656_NAME": {
-    "en": "Unicorn",
-    "es": "Unicornio",
-    "id": "Unicorn",
-    "pt": "Unicórnio",
-    "th": "ยูนิคอน",
-    "vi": "Kỳ lân"
-  },
-  "MST_MONSTERS_50657_NAME": {
-    "en": "Unicorn",
-    "es": "Unicornio",
-    "id": "Unicorn",
-    "pt": "Unicórnio",
-    "th": "ยูนิคอน",
-    "vi": "Kỳ lân"
-  },
-  "MST_MONSTERS_50658_NAME": {
-    "en": "Unicorn",
-    "es": "Unicornio",
-    "id": "Unicorn",
-    "pt": "Unicórnio",
-    "th": "ยูนิคอร์น",
-    "vi": "Kỳ lân"
-  },
-  "MST_MONSTERS_50659_NAME": {
-    "en": "Unicorn",
-    "es": "Unicornio",
-    "id": "Unicorn",
-    "pt": "Unicórnio",
-    "th": "ยูนิคอร์น",
-    "vi": "Kỳ lân"
-  },
-  "MST_MONSTERS_50660_NAME": {
-    "en": "Unicorn",
-    "es": "Unicornio",
-    "id": "Unicorn",
-    "pt": "Unicórnio",
-    "th": "ยูนิคอร์น",
-    "vi": "Kỳ lân"
-  },
-  "MST_MONSTERS_50700_NAME": {
-    "en": "Pegasus",
-    "es": "Pegaso",
-    "id": "Pegasus",
-    "pt": "Pégaso",
-    "th": "เปกาซัส",
-    "vi": "Ngựa pegat"
-  },
-  "MST_MONSTERS_50701_NAME": {
-    "en": "Pegasus",
-    "es": "Pegaso",
-    "id": "Pegasus",
-    "pt": "Pégaso",
-    "th": "เปกาซัส",
-    "vi": "Ngựa pegat"
-  },
-  "MST_MONSTERS_50702_NAME": {
-    "en": "Pegasus",
-    "es": "Pegaso",
-    "id": "Pegasus",
-    "pt": "Pégaso",
-    "th": "เปกาซัส",
-    "vi": "Ngựa pegat"
-  },
-  "MST_MONSTERS_50703_NAME": {
-    "en": "Pegasus",
-    "es": "Pegaso",
-    "id": "Pegasus",
-    "pt": "Pégaso",
-    "th": "เปกาซัส",
-    "vi": "Ngựa pegat"
-  },
-  "MST_MONSTERS_50704_NAME": {
-    "en": "Pegasus",
-    "es": "Pegaso",
-    "id": "Pegasus",
-    "pt": "Pégaso",
-    "th": "เปกาซัส",
-    "vi": "Ngựa pegat"
   }
 }
