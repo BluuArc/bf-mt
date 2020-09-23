@@ -1,4 +1,20 @@
 {
+  "MST_LEADERSKILLS_2503_DESCRIPTION": {
+    "en": "50% boost to Atk, Def, & Rec for first turn",
+    "es": "50% de aumento en atq, def y recuperación durante el primero turno.",
+    "id": "50% kenaikan Serang, Tahan, Pulih untuk giliran pertama",
+    "pt": "50% de reforço no ATQ, DEF e Rec no primeiro turno",
+    "th": "50% เพิ่มค่า โจมตี, ป้องกัน, กับ ฟื้นฟู สำหรับเทิร์นแรก",
+    "vi": "Tăng 50% sức Tấn công, Phòng thủ & Hồi phục trong lượt đầu tiên"
+  },
+  "MST_LEADERSKILLS_2503_NAME": {
+    "en": "Instant Divine Wind",
+    "es": "Viento divino raudo",
+    "id": "Angin Ilahi Instan",
+    "pt": "Vento Divino Instantâneo",
+    "th": "อินสแตนท์ดิไวน์วินด์",
+    "vi": "Cơn gió siêu phàm tức thì"
+  },
   "MST_LEADERSKILLS_2504_DESCRIPTION": {
     "en": "50% boost to Atk power for first 2 turns",
     "es": "50% de aumento al poder de ataque durante 2 turnos",
@@ -13766,6 +13782,22 @@
     "pt": "Friends of a Typhoon",
     "th": "Friends of a Typhoon",
     "vi": "Friends of a Typhoon"
+  },
+  "MST_LEADERSKILLS_820888_DESCRIPTION": {
+    "en": "100% Atk, Def, Rec, 150% max HP, 250% Water elemental damage, 20% damage reduction for 1 turn when damage taken is over 5k, probable damage reduction to 1 & damage taken may restore HP",
+    "es": "100% Atk, Def, Rec, 150% max HP, 250% Water elemental damage, 20% damage reduction for 1 turn when damage taken is over 5k, probable damage reduction to 1 & damage taken may restore HP",
+    "id": "100% Atk, Def, Rec, 150% max HP, 250% Water elemental damage, 20% damage reduction for 1 turn when damage taken is over 5k, probable damage reduction to 1 & damage taken may restore HP",
+    "pt": "100% Atk, Def, Rec, 150% max HP, 250% Water elemental damage, 20% damage reduction for 1 turn when damage taken is over 5k, probable damage reduction to 1 & damage taken may restore HP",
+    "th": "100% Atk, Def, Rec, 150% max HP, 250% Water elemental damage, 20% damage reduction for 1 turn when damage taken is over 5k, probable damage reduction to 1 & damage taken may restore HP",
+    "vi": "100% Atk, Def, Rec, 150% max HP, 250% Water elemental damage, 20% damage reduction for 1 turn when damage taken is over 5k, probable damage reduction to 1 & damage taken may restore HP"
+  },
+  "MST_LEADERSKILLS_820888_NAME": {
+    "en": "Deific Simulacrum",
+    "es": "Deific Simulacrum",
+    "id": "Deific Simulacrum",
+    "pt": "Deific Simulacrum",
+    "th": "Deific Simulacrum",
+    "vi": "Deific Simulacrum"
   },
   "MST_LEADERSKILLS_820898_DESCRIPTION": {
     "en": "150% Atk, 100% max HP, 30% critical rate, 200% spark damage when HP is above 50%, spark damage restores HP, fills BB gauge each turn & 30% OD gauge fill rate",
@@ -92280,22 +92312,6 @@
     "vi": "Blessed Angel"
   },
   "MST_MONSTERS_50650_NAME": {
-    "en": "Unicorn",
-    "es": "Unicornio",
-    "id": "Unicorn",
-    "pt": "Unicórnio",
-    "th": "ยูนิคอน",
-    "vi": "Kỳ lân"
-  },
-  "MST_MONSTERS_50651_NAME": {
-    "en": "Unicorn",
-    "es": "Unicornio",
-    "id": "Unicorn",
-    "pt": "Unicórnio",
-    "th": "ยูนิคอน",
-    "vi": "Kỳ lân"
-  },
-  "MST_MONSTERS_50652_NAME": {
     "en": "Unicorn",
     "es": "Unicornio",
     "id": "Unicorn",
