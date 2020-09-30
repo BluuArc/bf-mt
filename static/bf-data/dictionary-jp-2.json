@@ -1,4 +1,20 @@
 {
+  "MST_LEADERSKILLS_2502_DESCRIPTION": {
+    "en": "25% boost to Atk, Def, & Rec for first turn",
+    "es": "25% de aumento en atq, def y recuperación durante el primero turno.",
+    "id": "25% kenaikan Serang, Tahan, Pulih untuk giliran pertama",
+    "pt": "25% de reforço no ATQ, DEF e Rec no primeiro turno",
+    "th": "25% เพิ่มค่า โจมตี, ป้องกัน, กับ ฟื้นฟู สำหรับเทิร์นแรก",
+    "vi": "Tăng 25% sức Tấn công, Phòng thủ & Hồi phục trong lượt đầu tiên"
+  },
+  "MST_LEADERSKILLS_2502_NAME": {
+    "en": "Instant Destruction Gale",
+    "es": "Brisa de destrucción rauda",
+    "id": "Badai Penghancur Instan",
+    "pt": "Vendo da Destruição Instantânea",
+    "th": "อินสแตนท์เดสทรัคชั่นเกล",
+    "vi": "Cơn gió hủy diệt tức thì"
+  },
   "MST_LEADERSKILLS_2503_DESCRIPTION": {
     "en": "50% boost to Atk, Def, & Rec for first turn",
     "es": "50% de aumento en atq, def y recuperación durante el primero turno.",
@@ -15718,6 +15734,22 @@
     "pt": "Fulgur Aura",
     "th": "Fulgur Aura",
     "vi": "Fulgur Aura"
+  },
+  "MST_LEADERSKILLS_840958_DESCRIPTION": {
+    "en": "100% Atk, Def, Rec, 150% max HP, 400% BB Atk, 20% damage reduction for 1 turn when damage taken is over 5k, 10% damage reduction when guarding & fills BB gauge when guarding",
+    "es": "100% Atk, Def, Rec, 150% max HP, 400% BB Atk, 20% damage reduction for 1 turn when damage taken is over 5k, 10% damage reduction when guarding & fills BB gauge when guarding",
+    "id": "100% Atk, Def, Rec, 150% max HP, 400% BB Atk, 20% damage reduction for 1 turn when damage taken is over 5k, 10% damage reduction when guarding & fills BB gauge when guarding",
+    "pt": "100% Atk, Def, Rec, 150% max HP, 400% BB Atk, 20% damage reduction for 1 turn when damage taken is over 5k, 10% damage reduction when guarding & fills BB gauge when guarding",
+    "th": "100% Atk, Def, Rec, 150% max HP, 400% BB Atk, 20% damage reduction for 1 turn when damage taken is over 5k, 10% damage reduction when guarding & fills BB gauge when guarding",
+    "vi": "100% Atk, Def, Rec, 150% max HP, 400% BB Atk, 20% damage reduction for 1 turn when damage taken is over 5k, 10% damage reduction when guarding & fills BB gauge when guarding"
+  },
+  "MST_LEADERSKILLS_840958_NAME": {
+    "en": "Righteous Anger",
+    "es": "Righteous Anger",
+    "id": "Righteous Anger",
+    "pt": "Righteous Anger",
+    "th": "Righteous Anger",
+    "vi": "Righteous Anger"
   },
   "MST_LEADERSKILLS_850017_DESCRIPTION": {
     "en": "80% boost to Def, Rec, max HP, boosts Def, Rec relative to remaining HP, 10% damage reduction & restores HP each turn",
@@ -92302,21 +92334,5 @@
     "pt": "Arcanjo",
     "th": "อาร์ชแองเจิล",
     "vi": "Tổng Thiên Sứ"
-  },
-  "MST_MONSTERS_50632_NAME": {
-    "en": "Blessed Angel",
-    "es": "Ángel bendito",
-    "id": "Malaikat Terberkati",
-    "pt": "Anjo Abençoado",
-    "th": "เบลสเซ็ด แองเจิล",
-    "vi": "Blessed Angel"
-  },
-  "MST_MONSTERS_50650_NAME": {
-    "en": "Unicorn",
-    "es": "Unicornio",
-    "id": "Unicorn",
-    "pt": "Unicórnio",
-    "th": "ยูนิคอน",
-    "vi": "Kỳ lân"
   }
 }
