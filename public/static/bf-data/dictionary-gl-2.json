@@ -1,4 +1,124 @@
 {
+  "MST_LEADERSKILLS_2321_NAME": {
+    "en": "Flashing Divine Radiance",
+    "es": "Radiancia divina fulgurante",
+    "id": "Sinar Ilahi Berkilat",
+    "pt": "Luz Divina Resplandecente",
+    "th": "แฟลชชิ่ง ดีไวน์ เรเดียนซ",
+    "vi": "Hào Quang Thần Lóe Sáng"
+  },
+  "MST_LEADERSKILLS_2400_DESCRIPTION": {
+    "en": "15% boost to Atk and Def power of all Units",
+    "es": "15% aumento en poder de ataque y defensa en las unidades",
+    "id": "15% boost untuk kekuatan Serangan dan Pertahanan semua Unit",
+    "pt": "Bônus de 15% a ATQ e DEF de todas as unidades",
+    "th": "15% เพิ่มพลังโจมตีและป้องกันของทุกยูนิต",
+    "vi": "Tăng 15% sức tấn công và phòng thủ của tất cả các con quái vật "
+  },
+  "MST_LEADERSKILLS_2400_NAME": {
+    "en": "Royal Wave",
+    "es": "Onda real",
+    "id": "Gelombang Ningrat",
+    "pt": "Onda Real",
+    "th": "รอยัลเวฟ",
+    "vi": "Cơn sóng hoàng gia "
+  },
+  "MST_LEADERSKILLS_2401_DESCRIPTION": {
+    "en": "20% boost to Atk and Def power of all Units",
+    "es": "20% aumento en poder de ataque y defensa en las unidades",
+    "id": "20% boost untuk kekuatan Serangan dan Pertahanan semua Unit",
+    "pt": "Bônus de 20% a ATQ e DEF de todas as unidades",
+    "th": "20% เพิ่มพลังโจมตีและป้องกันของทุกยูนิต",
+    "vi": "Tăng 20% sức tấn công và phòng thủ của tất cả các con quái vật "
+  },
+  "MST_LEADERSKILLS_2401_NAME": {
+    "en": "Supreme Wave",
+    "es": "Onda suprema",
+    "id": "Gelombang Super",
+    "pt": "Onda Suprema",
+    "th": "สุพรีมเวฟ",
+    "vi": "Cơn sóng tối cao "
+  },
+  "MST_LEADERSKILLS_2402_DESCRIPTION": {
+    "en": "25% boost to Atk and Def for all types",
+    "es": "Aumenta un 25% el ataque y la defensa para todos los tipos de unidades.",
+    "id": "25% menambah Serang dan Tahan semua tipe",
+    "pt": "Reforço de 25% no ATQ e DEF de todos os tipos",
+    "th": "25% เพิ่มพลัง โจมตี และ ป้องกัน ให้ยูนิตทุกชนิด",
+    "vi": "Tăng 25% sức tấn công và phòng thủ cho tất cả các hệ"
+  },
+  "MST_LEADERSKILLS_2402_NAME": {
+    "en": "Divine Wave",
+    "es": "Onda divina",
+    "id": "Ombak Ilahi",
+    "pt": "Onda Divina",
+    "th": "ดิไวน์เวฟ",
+    "vi": "Sóng thần thánh"
+  },
+  "MST_LEADERSKILLS_2403_DESCRIPTION": {
+    "en": "30% boost to Atk and Def for all Units & large boost in effectiveness of HC",
+    "es": "Aumenta un 30% la defensa de todas las unidades y aumenta la efectividad de los CC",
+    "id": "Tambahan 30% untuk Serang dan Tahan semua Unit & tambahan besar efektivitas HC",
+    "pt": "Aumento de 30% no ATQ e DEF de todas as unidades e grande bônus na eficácia de HC",
+    "th": "30% boost to Atk and Def for all Units & large boost in effectiveness of HC",
+    "vi": "Tăng 30% sức mạnh Phòng thủ cho tất cả các Quái & tăng mạnh hiệu quả của Tinh thể trái tim"
+  },
+  "MST_LEADERSKILLS_2403_NAME": {
+    "en": "Fierce God's Wave",
+    "es": "Oleada del dios feroz",
+    "id": "Ombak Dewa Galak",
+    "pt": "Onda feroz divina",
+    "th": "เฟียซก็อดสเวฟ",
+    "vi": "Sóng của Thần hung tợn"
+  },
+  "MST_LEADERSKILLS_2404_DESCRIPTION": {
+    "en": "40% boost to Atk, Def, hugely boosts HC efficacy, probable HP recovery when attacked & hugely reduces BB gauge required for BB",
+    "es": "40% boost to Atk, Def, hugely boosts HC efficacy, probable HP recovery when attacked & hugely reduces BB gauge required for BB",
+    "id": "40% ekstra Serang, Tahan, amat menambah keampuhan HC, kans HP pulih saat diserang & amat mengurangi syarat meteran BB untuk BB",
+    "pt": "40% boost to Atk, Def, hugely boosts HC efficacy, probable HP recovery when attacked & hugely reduces BB gauge required for BB",
+    "th": "40% เพิ่มค่าให้กับ โจมตี, ป้องกัน, เพิ่มค่าอย่างสูงกับ ประสิทธิภาพ HC, มีโอกาส ฟื้นฟู HP เมื่อถูกโจมตี และ ลดค่าอย่างสูงให้กับ เกจ BB ที่ต้องการสำหรับใช้ BB",
+    "vi": "40% boost to Atk, Def, hugely boosts HC efficacy, probable HP recovery when attacked & hugely reduces BB gauge required for BB"
+  },
+  "MST_LEADERSKILLS_2404_NAME": {
+    "en": "Solar Wave",
+    "es": "Solar Wave",
+    "id": "Gelombang Surya",
+    "pt": "Solar Wave",
+    "th": "โซลาร์ เวฟ",
+    "vi": "Solar Wave"
+  },
+  "MST_LEADERSKILLS_2500_DESCRIPTION": {
+    "en": "25% boost to Atk and Def for first 2 turns",
+    "es": "25% aumento en poder de ataque y defensa por 2 turnos",
+    "id": "25% boost untuk Serangan dan Pertahanan pada 2 giliran pertama",
+    "pt": "Bônus de 25% a ATQ e DEF pelos 2 primeiros turnos",
+    "th": "25% เพิ่มการโจมตีและป้องกันนาน 2 เทิร์น",
+    "vi": "Tăng 25% sức tấn công và phòng thủ cho 2 lượt đầu"
+  },
+  "MST_LEADERSKILLS_2500_NAME": {
+    "en": "Instant Assault",
+    "es": "Asalto inmediato",
+    "id": "Serbuan Instan",
+    "pt": "Ataque Instantâneo",
+    "th": "อินสแตนท์แอสซัลท์",
+    "vi": "Tấn công tức thời"
+  },
+  "MST_LEADERSKILLS_2501_DESCRIPTION": {
+    "en": "50% boost to Atk and Def for first 2 turns",
+    "es": "50% aumento en poder de ataque y defensa por 2 turnos",
+    "id": "50% boost untuk Serangan dan Pertahanan pada 2 giliran pertama",
+    "pt": "Bônus de 50% a ATQ e DEF pelos 2 primeiros turnos",
+    "th": "50% เพิ่มการโจมตีและป้องกันนาน 2 เทิร์น",
+    "vi": "Tăng 50% sức tấn công và phòng thủ cho 2 lượt đầu"
+  },
+  "MST_LEADERSKILLS_2501_NAME": {
+    "en": "Instant Barrage",
+    "es": "Bombardeo inmediato",
+    "id": "Bendungan Instan",
+    "pt": "Bombardeio Instantâneo",
+    "th": "อินสแตนท์บาราจ",
+    "vi": "Hàng rào tức thời"
+  },
   "MST_LEADERSKILLS_2502_DESCRIPTION": {
     "en": "25% boost to Atk, Def, & Rec for first turn",
     "es": "25% de aumento en atq, def y recuperación durante el primero turno.",
@@ -15240,12 +15360,12 @@
     "vi": "Peerless Tracker"
   },
   "MST_LEADERSKILLS_840558_DESCRIPTION": {
-    "en": "80% boost to Atk, max HP, 120% boost to Def, Rec of Thunder types, Spark damage considerably boosts BB gauge, enormously boost BB gauge each turn & 15% additional damage reduction",
-    "es": "80% boost to Atk, max HP, 120% boost to Def, Rec of Thunder types, Spark damage considerably boosts BB gauge, enormously boost BB gauge each turn & 15% additional damage reduction",
-    "id": "80% boost to Atk, max HP, 120% boost to Def, Rec of Thunder types, Spark damage considerably boosts BB gauge, enormously boost BB gauge each turn & 15% additional damage reduction",
-    "pt": "80% boost to Atk, max HP, 120% boost to Def, Rec of Thunder types, Spark damage considerably boosts BB gauge, enormously boost BB gauge each turn & 15% additional damage reduction",
-    "th": "80% boost to Atk, max HP, 120% boost to Def, Rec of Thunder types, Spark damage considerably boosts BB gauge, enormously boost BB gauge each turn & 15% additional damage reduction",
-    "vi": "80% boost to Atk, max HP, 120% boost to Def, Rec of Thunder types, Spark damage considerably boosts BB gauge, enormously boost BB gauge each turn & 15% additional damage reduction"
+    "en": "100% Atk, 140% Def, Rec, 100% max HP (Thunder), spark damage fills BB gauge, spark damage restores HP, fills BB gauge each turn & 15% DoT reduction",
+    "es": "100% Atk, 140% Def, Rec, 100% max HP (Thunder), spark damage fills BB gauge, spark damage restores HP, fills BB gauge each turn & 15% DoT reduction",
+    "id": "100% Atk, 140% Def, Rec, 100% max HP (Thunder), spark damage fills BB gauge, spark damage restores HP, fills BB gauge each turn & 15% DoT reduction",
+    "pt": "100% Atk, 140% Def, Rec, 100% max HP (Thunder), spark damage fills BB gauge, spark damage restores HP, fills BB gauge each turn & 15% DoT reduction",
+    "th": "100% Atk, 140% Def, Rec, 100% max HP (Thunder), spark damage fills BB gauge, spark damage restores HP, fills BB gauge each turn & 15% DoT reduction",
+    "vi": "100% Atk, 140% Def, Rec, 100% max HP (Thunder), spark damage fills BB gauge, spark damage restores HP, fills BB gauge each turn & 15% DoT reduction"
   },
   "MST_LEADERSKILLS_840558_NAME": {
     "en": "Ferocious Thunder Lynxes",
@@ -16710,6 +16830,22 @@
     "pt": "Child of the Fae",
     "th": "Child of the Fae",
     "vi": "Child of the Fae"
+  },
+  "MST_LEADERSKILLS_850958_DESCRIPTION": {
+    "en": "140% all parameters and 30% critical rate (Light), 300% critical damage, critical damage fills BB gauge, negates all status ailments and Atk, Def, Rec reduction & restores HP each turn",
+    "es": "140% all parameters and 30% critical rate (Light), 300% critical damage, critical damage fills BB gauge, negates all status ailments and Atk, Def, Rec reduction & restores HP each turn",
+    "id": "140% all parameters and 30% critical rate (Light), 300% critical damage, critical damage fills BB gauge, negates all status ailments and Atk, Def, Rec reduction & restores HP each turn",
+    "pt": "140% all parameters and 30% critical rate (Light), 300% critical damage, critical damage fills BB gauge, negates all status ailments and Atk, Def, Rec reduction & restores HP each turn",
+    "th": "140% all parameters and 30% critical rate (Light), 300% critical damage, critical damage fills BB gauge, negates all status ailments and Atk, Def, Rec reduction & restores HP each turn",
+    "vi": "140% all parameters and 30% critical rate (Light), 300% critical damage, critical damage fills BB gauge, negates all status ailments and Atk, Def, Rec reduction & restores HP each turn"
+  },
+  "MST_LEADERSKILLS_850958_NAME": {
+    "en": "Demolition Master",
+    "es": "Demolition Master",
+    "id": "Demolition Master",
+    "pt": "Demolition Master",
+    "th": "Demolition Master",
+    "vi": "Demolition Master"
   },
   "MST_LEADERSKILLS_850977_DESCRIPTION": {
     "en": "40% boost to max HP, boosts Atk relative to how high remaining HP is & boosts Def relative to how low remaining HP is",
@@ -92246,93 +92382,5 @@
     "pt": "Arcanjo",
     "th": "อาร์คแองเจิ้ล",
     "vi": "Tổng thiên sứ"
-  },
-  "MST_MONSTERS_50621_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang",
-    "pt": "Arcanjo",
-    "th": "อาร์คแองเจิ้ล",
-    "vi": "Tổng thiên sứ"
-  },
-  "MST_MONSTERS_50622_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang",
-    "pt": "Arcanjo",
-    "th": "อาร์คแองเจิ้ล",
-    "vi": "Tổng thiên sứ"
-  },
-  "MST_MONSTERS_50623_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang",
-    "pt": "Arcanjo",
-    "th": "อาร์คแองเจิ้ล",
-    "vi": "Tổng thiên sứ"
-  },
-  "MST_MONSTERS_50624_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang",
-    "pt": "Arcanjo",
-    "th": "อาร์คแองเจิล",
-    "vi": "Archangel"
-  },
-  "MST_MONSTERS_50625_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang",
-    "pt": "Arcanjo",
-    "th": "อาร์คแองเจิล",
-    "vi": "Archangel"
-  },
-  "MST_MONSTERS_50626_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang",
-    "pt": "Arcanjo",
-    "th": "อาร์คแองเจิล",
-    "vi": "Archangel"
-  },
-  "MST_MONSTERS_50627_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang",
-    "pt": "Arcanjo",
-    "th": "อาร์คแองเจิล",
-    "vi": "Archangel"
-  },
-  "MST_MONSTERS_50628_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang",
-    "pt": "Arcanjo",
-    "th": "อาร์คแองเจิล",
-    "vi": "Archangel"
-  },
-  "MST_MONSTERS_50629_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang ",
-    "pt": "Arcanjo",
-    "th": "อาร์ชแองเจิล",
-    "vi": "Tổng Thiên Sứ"
-  },
-  "MST_MONSTERS_50630_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang ",
-    "pt": "Arcanjo",
-    "th": "อาร์ชแองเจิล",
-    "vi": "Tổng Thiên Sứ"
-  },
-  "MST_MONSTERS_50631_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang ",
-    "pt": "Arcanjo",
-    "th": "อาร์ชแองเจิล",
-    "vi": "Tổng Thiên Sứ"
   }
 }
