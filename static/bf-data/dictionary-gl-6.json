@@ -1,44 +1,4 @@
 {
-  "MST_SKILLS_2840828_DESCRIPTION": {
-    "en": "22 combo Thunder attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 4 turns, fills BB gauge for 4 turns, boosts critical damage for 4 turns, 1 extra action for 1 turn & raises normal hit amount for 4 turns",
-    "es": "22 combo Thunder attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 4 turns, fills BB gauge for 4 turns, boosts critical damage for 4 turns, 1 extra action for 1 turn & raises normal hit amount for 4 turns",
-    "id": "22 combo Thunder attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 4 turns, fills BB gauge for 4 turns, boosts critical damage for 4 turns, 1 extra action for 1 turn & raises normal hit amount for 4 turns",
-    "pt": "22 combo Thunder attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 4 turns, fills BB gauge for 4 turns, boosts critical damage for 4 turns, 1 extra action for 1 turn & raises normal hit amount for 4 turns",
-    "th": "22 combo Thunder attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 4 turns, fills BB gauge for 4 turns, boosts critical damage for 4 turns, 1 extra action for 1 turn & raises normal hit amount for 4 turns",
-    "vi": "22 combo Thunder attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 4 turns, fills BB gauge for 4 turns, boosts critical damage for 4 turns, 1 extra action for 1 turn & raises normal hit amount for 4 turns"
-  },
-  "MST_SKILLS_2840828_NAME": {
-    "en": "Victorious Over Evil",
-    "es": "Victorious Over Evil",
-    "id": "Victorious Over Evil",
-    "pt": "Victorious Over Evil",
-    "th": "Victorious Over Evil",
-    "vi": "Victorious Over Evil"
-  },
-  "MST_SKILLS_2840848_DESCRIPTION": {
-    "en": "24 combo Thunder attack on all foes (damage relative to remaining HP), may raise allies from KO, fills BB gauge for 4 turns, activates BB/SBB/UBB twice for 3 turns, boosts Atk, Rec relative to Def for 4 turns & fully restores HP for 4 turns",
-    "es": "24 combo Thunder attack on all foes (damage relative to remaining HP), may raise allies from KO, fills BB gauge for 4 turns, activates BB/SBB/UBB twice for 3 turns, boosts Atk, Rec relative to Def for 4 turns & fully restores HP for 4 turns",
-    "id": "24 combo Thunder attack on all foes (damage relative to remaining HP), may raise allies from KO, fills BB gauge for 4 turns, activates BB/SBB/UBB twice for 3 turns, boosts Atk, Rec relative to Def for 4 turns & fully restores HP for 4 turns",
-    "pt": "24 combo Thunder attack on all foes (damage relative to remaining HP), may raise allies from KO, fills BB gauge for 4 turns, activates BB/SBB/UBB twice for 3 turns, boosts Atk, Rec relative to Def for 4 turns & fully restores HP for 4 turns",
-    "th": "24 combo Thunder attack on all foes (damage relative to remaining HP), may raise allies from KO, fills BB gauge for 4 turns, activates BB/SBB/UBB twice for 3 turns, boosts Atk, Rec relative to Def for 4 turns & fully restores HP for 4 turns",
-    "vi": "24 combo Thunder attack on all foes (damage relative to remaining HP), may raise allies from KO, fills BB gauge for 4 turns, activates BB/SBB/UBB twice for 3 turns, boosts Atk, Rec relative to Def for 4 turns & fully restores HP for 4 turns"
-  },
-  "MST_SKILLS_2840848_NAME": {
-    "en": "Mimicked Judgement",
-    "es": "Mimicked Judgement",
-    "id": "Mimicked Judgement",
-    "pt": "Mimicked Judgement",
-    "th": "Mimicked Judgement",
-    "vi": "Mimicked Judgement"
-  },
-  "MST_SKILLS_2840867_DESCRIPTION": {
-    "en": "26 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), probable evasion for 3 turns, boosts Thunder elemental damage for 3 turns, boosts own spark damage for 3 turns & boosts max HP",
-    "es": "26 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), probable evasion for 3 turns, boosts Thunder elemental damage for 3 turns, boosts own spark damage for 3 turns & boosts max HP",
-    "id": "26 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), probable evasion for 3 turns, boosts Thunder elemental damage for 3 turns, boosts own spark damage for 3 turns & boosts max HP",
-    "pt": "26 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), probable evasion for 3 turns, boosts Thunder elemental damage for 3 turns, boosts own spark damage for 3 turns & boosts max HP",
-    "th": "26 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), probable evasion for 3 turns, boosts Thunder elemental damage for 3 turns, boosts own spark damage for 3 turns & boosts max HP",
-    "vi": "26 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), probable evasion for 3 turns, boosts Thunder elemental damage for 3 turns, boosts own spark damage for 3 turns & boosts max HP"
-  },
   "MST_SKILLS_2840867_NAME": {
     "en": "The fight's over.",
     "es": "The fight's over.",
@@ -1326,6 +1286,22 @@
     "pt": "Faelight Gaol",
     "th": "Faelight Gaol",
     "vi": "Faelight Gaol"
+  },
+  "MST_SKILLS_2850958_DESCRIPTION": {
+    "en": "20 combo Light attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 4 turns, boosts critical damage for 4 turns, adds probable 1 turn Atk, Def reduction infliction to attack for 4 turns, fills BB gauge for 4 turns & fills OD gauge at turn's end for 4 turns",
+    "es": "20 combo Light attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 4 turns, boosts critical damage for 4 turns, adds probable 1 turn Atk, Def reduction infliction to attack for 4 turns, fills BB gauge for 4 turns & fills OD gauge at turn's end for 4 turns",
+    "id": "20 combo Light attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 4 turns, boosts critical damage for 4 turns, adds probable 1 turn Atk, Def reduction infliction to attack for 4 turns, fills BB gauge for 4 turns & fills OD gauge at turn's end for 4 turns",
+    "pt": "20 combo Light attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 4 turns, boosts critical damage for 4 turns, adds probable 1 turn Atk, Def reduction infliction to attack for 4 turns, fills BB gauge for 4 turns & fills OD gauge at turn's end for 4 turns",
+    "th": "20 combo Light attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 4 turns, boosts critical damage for 4 turns, adds probable 1 turn Atk, Def reduction infliction to attack for 4 turns, fills BB gauge for 4 turns & fills OD gauge at turn's end for 4 turns",
+    "vi": "20 combo Light attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 4 turns, boosts critical damage for 4 turns, adds probable 1 turn Atk, Def reduction infliction to attack for 4 turns, fills BB gauge for 4 turns & fills OD gauge at turn's end for 4 turns"
+  },
+  "MST_SKILLS_2850958_NAME": {
+    "en": "Cavern Megabuster",
+    "es": "Cavern Megabuster",
+    "id": "Cavern Megabuster",
+    "pt": "Cavern Megabuster",
+    "th": "Cavern Megabuster",
+    "vi": "Cavern Megabuster"
   },
   "MST_SKILLS_2850977_DESCRIPTION": {
     "en": "21 combo massive Light attack on all foes, negates all status ailments for 3 turns, negates Atk, Def, Rec reduction effects for 3 turns, enormously boosts Def for 3 turns & enormously boosts Atk relative to Def for 3 turns",
@@ -22527,6 +22503,22 @@
     "th": "Forgiven Betrayal",
     "vi": "Forgiven Betrayal"
   },
+  "MST_SKILLS_3850958_DESCRIPTION": {
+    "en": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Earth, Light elemental damage, BB gauge, 100% evasion, fully restores HP, fills OD gauge at turn's end & adds Atk, Def reduction to attack",
+    "es": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Earth, Light elemental damage, BB gauge, 100% evasion, fully restores HP, fills OD gauge at turn's end & adds Atk, Def reduction to attack",
+    "id": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Earth, Light elemental damage, BB gauge, 100% evasion, fully restores HP, fills OD gauge at turn's end & adds Atk, Def reduction to attack",
+    "pt": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Earth, Light elemental damage, BB gauge, 100% evasion, fully restores HP, fills OD gauge at turn's end & adds Atk, Def reduction to attack",
+    "th": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Earth, Light elemental damage, BB gauge, 100% evasion, fully restores HP, fills OD gauge at turn's end & adds Atk, Def reduction to attack",
+    "vi": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, Earth, Light elemental damage, BB gauge, 100% evasion, fully restores HP, fills OD gauge at turn's end & adds Atk, Def reduction to attack"
+  },
+  "MST_SKILLS_3850958_NAME": {
+    "en": "Heavenshaker",
+    "es": "Heavenshaker",
+    "id": "Heavenshaker",
+    "pt": "Heavenshaker",
+    "th": "Heavenshaker",
+    "vi": "Heavenshaker"
+  },
   "MST_SKILLS_3850_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -39495,6 +39487,22 @@
     "th": "Crowning Glory",
     "vi": "Crowning Glory"
   },
+  "MST_SKILLS_4810958_DESCRIPTION": {
+    "en": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, critical damage, spark damage, inflicts Atk, Def reduction, raises normal hit amount, BB gauge, fills OD gauge at turn's end & adds Atk, Def reduction to attack",
+    "es": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, critical damage, spark damage, inflicts Atk, Def reduction, raises normal hit amount, BB gauge, fills OD gauge at turn's end & adds Atk, Def reduction to attack",
+    "id": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, critical damage, spark damage, inflicts Atk, Def reduction, raises normal hit amount, BB gauge, fills OD gauge at turn's end & adds Atk, Def reduction to attack",
+    "pt": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, critical damage, spark damage, inflicts Atk, Def reduction, raises normal hit amount, BB gauge, fills OD gauge at turn's end & adds Atk, Def reduction to attack",
+    "th": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, critical damage, spark damage, inflicts Atk, Def reduction, raises normal hit amount, BB gauge, fills OD gauge at turn's end & adds Atk, Def reduction to attack",
+    "vi": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, critical damage, spark damage, inflicts Atk, Def reduction, raises normal hit amount, BB gauge, fills OD gauge at turn's end & adds Atk, Def reduction to attack"
+  },
+  "MST_SKILLS_4810958_NAME": {
+    "en": "Explosive Escape",
+    "es": "Explosive Escape",
+    "id": "Explosive Escape",
+    "pt": "Explosive Escape",
+    "th": "Explosive Escape",
+    "vi": "Explosive Escape"
+  },
   "MST_SKILLS_4820688_DESCRIPTION": {
     "en": "70 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate, Water, Thunder elemental damage, spark damage, critical damage, max HP, fills BB gauge, 100% damage reduction & purges LS and ES Lock",
     "es": "70 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate, Water, Thunder elemental damage, spark damage, critical damage, max HP, fills BB gauge, 100% damage reduction & purges LS and ES Lock",
@@ -39527,6 +39535,22 @@
     "th": "Rock the Waves!",
     "vi": "Rock the Waves!"
   },
+  "MST_SKILLS_4840828_DESCRIPTION": {
+    "en": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, Spark damage, critical damage, BB gauge, spark critical, raises normal hit amount, spark damage boosts BB gauge & activates BB/SBB/UBB twice",
+    "es": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, Spark damage, critical damage, BB gauge, spark critical, raises normal hit amount, spark damage boosts BB gauge & activates BB/SBB/UBB twice",
+    "id": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, Spark damage, critical damage, BB gauge, spark critical, raises normal hit amount, spark damage boosts BB gauge & activates BB/SBB/UBB twice",
+    "pt": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, Spark damage, critical damage, BB gauge, spark critical, raises normal hit amount, spark damage boosts BB gauge & activates BB/SBB/UBB twice",
+    "th": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, Spark damage, critical damage, BB gauge, spark critical, raises normal hit amount, spark damage boosts BB gauge & activates BB/SBB/UBB twice",
+    "vi": "56 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, Spark damage, critical damage, BB gauge, spark critical, raises normal hit amount, spark damage boosts BB gauge & activates BB/SBB/UBB twice"
+  },
+  "MST_SKILLS_4840828_NAME": {
+    "en": "Man, Myth, Legend",
+    "es": "Man, Myth, Legend",
+    "id": "Man, Myth, Legend",
+    "pt": "Man, Myth, Legend",
+    "th": "Man, Myth, Legend",
+    "vi": "Man, Myth, Legend"
+  },
   "MST_SKILLS_4850628_DESCRIPTION": {
     "en": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, spark damage boosts BB gauge, 100% raises allies from KO, 80% KO resistance, fully restores HP, activates Light barrier & 100% DoT reduction",
     "es": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, spark damage boosts BB gauge, 100% raises allies from KO, 80% KO resistance, fully restores HP, activates Light barrier & 100% DoT reduction",
@@ -39542,6 +39566,22 @@
     "pt": "Ephemeral Gold",
     "th": "Ephemeral Gold",
     "vi": "Ephemeral Gold"
+  },
+  "MST_SKILLS_4850958_DESCRIPTION": {
+    "en": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP,  critical damage, Thunder, Light elemental damage, 100% damage reduction, damage taken boosts BB gauge, BB gauge, fills OD gauge at turn's end & adds Atk, Def reduction to attack",
+    "es": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP,  critical damage, Thunder, Light elemental damage, 100% damage reduction, damage taken boosts BB gauge, BB gauge, fills OD gauge at turn's end & adds Atk, Def reduction to attack",
+    "id": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP,  critical damage, Thunder, Light elemental damage, 100% damage reduction, damage taken boosts BB gauge, BB gauge, fills OD gauge at turn's end & adds Atk, Def reduction to attack",
+    "pt": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP,  critical damage, Thunder, Light elemental damage, 100% damage reduction, damage taken boosts BB gauge, BB gauge, fills OD gauge at turn's end & adds Atk, Def reduction to attack",
+    "th": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP,  critical damage, Thunder, Light elemental damage, 100% damage reduction, damage taken boosts BB gauge, BB gauge, fills OD gauge at turn's end & adds Atk, Def reduction to attack",
+    "vi": "42 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP,  critical damage, Thunder, Light elemental damage, 100% damage reduction, damage taken boosts BB gauge, BB gauge, fills OD gauge at turn's end & adds Atk, Def reduction to attack"
+  },
+  "MST_SKILLS_4850958_NAME": {
+    "en": "Bursting Pride",
+    "es": "Bursting Pride",
+    "id": "Bursting Pride",
+    "pt": "Bursting Pride",
+    "th": "Bursting Pride",
+    "vi": "Bursting Pride"
   },
   "MST_SKILLS_4850_DESCRIPTION": {
     "en": "None",
@@ -92334,5 +92374,13 @@
     "pt": "18 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage boosts BB gauge for 3 turns, enormously boosts BB gauge & probable huge 2 turn Atk, Def reduction",
     "th": "18 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage boosts BB gauge for 3 turns, enormously boosts BB gauge & probable huge 2 turn Atk, Def reduction",
     "vi": "18 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage boosts BB gauge for 3 turns, enormously boosts BB gauge & probable huge 2 turn Atk, Def reduction"
+  },
+  "MST_SKILLS_830587_NAME": {
+    "en": "Skill Release",
+    "es": "Skill Release",
+    "id": "Skill Release",
+    "pt": "Skill Release",
+    "th": "Skill Release",
+    "vi": "Skill Release"
   }
 }
