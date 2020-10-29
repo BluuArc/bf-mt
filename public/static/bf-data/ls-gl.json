@@ -42081,6 +42081,40 @@
       "840958"
     ]
   },
+  "840968": {
+    "desc": "200% Atk, 140% max HP, 30% critical rate, 300% critical damage, probable damage reduction to 1, spark damage fills BB gauge & 30% OD gauge fill rate",
+    "effects": [
+      {
+        "atk% buff": 200,
+        "crit% buff": 30,
+        "hp% buff": 140,
+        "passive id": "1"
+      },
+      {
+        "crit multiplier%": 300,
+        "passive id": "34"
+      },
+      {
+        "passive id": "43",
+        "take 1 dmg%": 20
+      },
+      {
+        "bc fill on spark high": 4,
+        "bc fill on spark low": 3,
+        "bc fill on spark%": 100,
+        "passive id": "47"
+      },
+      {
+        "od fill rate%": 30,
+        "passive id": "70"
+      }
+    ],
+    "id": "840968",
+    "name": "Patient Control",
+    "associated_units": [
+      "840968"
+    ]
+  },
   "850017": {
     "desc": "80% boost to Def, Rec, max HP, boosts Def, Rec relative to remaining HP, 10% damage reduction & restores HP each turn",
     "effects": [
@@ -46737,6 +46771,40 @@
     "name": "Umbra Aura",
     "associated_units": [
       "860900"
+    ]
+  },
+  "860968": {
+    "desc": "150% Atk, 100% max HP, 30% critical rate, 200% Dark elemental damage, fills BB gauge each turn, probable spark critical & probable damage reduction to 1",
+    "effects": [
+      {
+        "atk% buff": 150,
+        "crit% buff": 30,
+        "hp% buff": 100,
+        "passive id": "1"
+      },
+      {
+        "dark units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 200,
+        "passive id": "50"
+      },
+      {
+        "bc fill per turn": 10,
+        "passive id": "9"
+      },
+      {
+        "passive id": "100",
+        "spark crit chance%": 50,
+        "spark crit dmg%": 60
+      },
+      {
+        "passive id": "43",
+        "take 1 dmg%": 20
+      }
+    ],
+    "id": "860968",
+    "name": "Miss Anthropy",
+    "associated_units": [
+      "860968"
     ]
   },
   "8100100": {

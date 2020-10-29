@@ -1,12 +1,4 @@
 {
-  "MST_SKILLS_2840888_DESCRIPTION": {
-    "en": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
-    "es": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
-    "id": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
-    "pt": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
-    "th": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
-    "vi": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance"
-  },
   "MST_SKILLS_2840888_NAME": {
     "en": "Three Steps to Śūnyatā",
     "es": "Three Steps to Śūnyatā",
@@ -46,6 +38,22 @@
     "pt": "Thunderous Vigilance",
     "th": "Thunderous Vigilance",
     "vi": "Thunderous Vigilance"
+  },
+  "MST_SKILLS_2840968_DESCRIPTION": {
+    "en": "26 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 13 combo Thunder attack on single foe (25% active Pierce on Water, Thunder foes), 1 extra action for 1 turn, boosts spark damage for 4 turns, boosts critical damage for 4 turns & fills OD gauge at turn's end for 4 turns",
+    "es": "26 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 13 combo Thunder attack on single foe (25% active Pierce on Water, Thunder foes), 1 extra action for 1 turn, boosts spark damage for 4 turns, boosts critical damage for 4 turns & fills OD gauge at turn's end for 4 turns",
+    "id": "26 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 13 combo Thunder attack on single foe (25% active Pierce on Water, Thunder foes), 1 extra action for 1 turn, boosts spark damage for 4 turns, boosts critical damage for 4 turns & fills OD gauge at turn's end for 4 turns",
+    "pt": "26 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 13 combo Thunder attack on single foe (25% active Pierce on Water, Thunder foes), 1 extra action for 1 turn, boosts spark damage for 4 turns, boosts critical damage for 4 turns & fills OD gauge at turn's end for 4 turns",
+    "th": "26 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 13 combo Thunder attack on single foe (25% active Pierce on Water, Thunder foes), 1 extra action for 1 turn, boosts spark damage for 4 turns, boosts critical damage for 4 turns & fills OD gauge at turn's end for 4 turns",
+    "vi": "26 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 13 combo Thunder attack on single foe (25% active Pierce on Water, Thunder foes), 1 extra action for 1 turn, boosts spark damage for 4 turns, boosts critical damage for 4 turns & fills OD gauge at turn's end for 4 turns"
+  },
+  "MST_SKILLS_2840968_NAME": {
+    "en": "Overstimulate",
+    "es": "Overstimulate",
+    "id": "Overstimulate",
+    "pt": "Overstimulate",
+    "th": "Overstimulate",
+    "vi": "Overstimulate"
   },
   "MST_SKILLS_2840_DESCRIPTION": {
     "en": "None",
@@ -2574,6 +2582,22 @@
     "pt": "Umbra Burst III",
     "th": "Umbra Burst III",
     "vi": "Umbra Burst III"
+  },
+  "MST_SKILLS_2860968_DESCRIPTION": {
+    "en": "23 combo Dark attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 3 turns, boosts Dark elemental damage for 3 turns, fills BB gauge for 3 turns, 3 turns DoT infliction & 3 turns Atk, Def reduction infliction",
+    "es": "23 combo Dark attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 3 turns, boosts Dark elemental damage for 3 turns, fills BB gauge for 3 turns, 3 turns DoT infliction & 3 turns Atk, Def reduction infliction",
+    "id": "23 combo Dark attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 3 turns, boosts Dark elemental damage for 3 turns, fills BB gauge for 3 turns, 3 turns DoT infliction & 3 turns Atk, Def reduction infliction",
+    "pt": "23 combo Dark attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 3 turns, boosts Dark elemental damage for 3 turns, fills BB gauge for 3 turns, 3 turns DoT infliction & 3 turns Atk, Def reduction infliction",
+    "th": "23 combo Dark attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 3 turns, boosts Dark elemental damage for 3 turns, fills BB gauge for 3 turns, 3 turns DoT infliction & 3 turns Atk, Def reduction infliction",
+    "vi": "23 combo Dark attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 3 turns, boosts Dark elemental damage for 3 turns, fills BB gauge for 3 turns, 3 turns DoT infliction & 3 turns Atk, Def reduction infliction"
+  },
+  "MST_SKILLS_2860968_NAME": {
+    "en": "Psychebreak",
+    "es": "Psychebreak",
+    "id": "Psychebreak",
+    "pt": "Psychebreak",
+    "th": "Psychebreak",
+    "vi": "Psychebreak"
   },
   "MST_SKILLS_2860_DESCRIPTION": {
     "en": "None",
@@ -22294,6 +22318,22 @@
     "pt": "Soul of Justice",
     "th": "Soul of Justice",
     "vi": "Soul of Justice"
+  },
+  "MST_SKILLS_3840968_DESCRIPTION": {
+    "en": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, spark damage, Thunder, Dark elemental damage, BB gauge, fills OD gauge at turn's end, inflicts Atk, Def reduction, massive DoT on all foes & perform 1 extra action within the same turn ",
+    "es": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, spark damage, Thunder, Dark elemental damage, BB gauge, fills OD gauge at turn's end, inflicts Atk, Def reduction, massive DoT on all foes & perform 1 extra action within the same turn ",
+    "id": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, spark damage, Thunder, Dark elemental damage, BB gauge, fills OD gauge at turn's end, inflicts Atk, Def reduction, massive DoT on all foes & perform 1 extra action within the same turn ",
+    "pt": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, spark damage, Thunder, Dark elemental damage, BB gauge, fills OD gauge at turn's end, inflicts Atk, Def reduction, massive DoT on all foes & perform 1 extra action within the same turn",
+    "th": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, spark damage, Thunder, Dark elemental damage, BB gauge, fills OD gauge at turn's end, inflicts Atk, Def reduction, massive DoT on all foes & perform 1 extra action within the same turn ",
+    "vi": "52 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, spark damage, Thunder, Dark elemental damage, BB gauge, fills OD gauge at turn's end, inflicts Atk, Def reduction, massive DoT on all foes & perform 1 extra action within the same turn "
+  },
+  "MST_SKILLS_3840968_NAME": {
+    "en": "Prisoner's Dilemma",
+    "es": "Prisoner's Dilemma",
+    "id": "Prisoner's Dilemma",
+    "pt": "Prisoner's Dilemma",
+    "th": "Prisoner's Dilemma",
+    "vi": "Prisoner's Dilemma"
   },
   "MST_SKILLS_3850167_DESCRIPTION": {
     "en": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts BB Atk, Spark damage, damage against status afflicted foes, 90% raises allies from KO, fully restores HP, activates Light barrier & 100% DoT reduction",
