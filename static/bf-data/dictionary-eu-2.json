@@ -1,4 +1,92 @@
 {
+  "MST_LEADERSKILLS_2310_NAME": {
+    "en": "Flashing Strategy",
+    "es": "Estrategia resplandeciente",
+    "id": "Strategi Menyala",
+    "pt": "Estratégia Ofuscante",
+    "th": "แฟลชชิ่ง สแตรเทอจี้",
+    "vi": "Chiến lược lóe sáng"
+  },
+  "MST_LEADERSKILLS_2311_DESCRIPTION": {
+    "en": "Large boost to critical damage & large boost to damage dealt to weaker elements by Light and Dark types",
+    "es": "Aumenta mucho el daño crítico y el daño que se le provoca a los elementos débiles con luz y oscuridad",
+    "id": "Menambah besar kerusakan pukulan ampuh & tambah merusak elemen lemah tipe Terang dan Gelap",
+    "pt": "Bônus ao dano crítico e bônus aos danos causados por Luz e Sombra em elementos fracos",
+    "th": "เพิ่มค่าความเสียหายคริติคอลอย่างมาก และ เพิ่มค่าความเสียหายอย่างมากที่สร้างกับธาตุที่แพ้ทางโดย ชนิด แสง กับ มืด",
+    "vi": "Tăng nhiều thiệt hại do đòn trí mạng & tăng nhiều thiệt hại gây ra cho các yếu tố yêu hơn bởi hệ Ánh sáng và Bóng tối"
+  },
+  "MST_LEADERSKILLS_2311_NAME": {
+    "en": "Flashing Ogre Blade",
+    "es": "Hoja orca brillante",
+    "id": "Kilat Pedang Ogre",
+    "pt": "Espada de Ogro Ofuscante",
+    "th": "แฟลชชิ่ง โอเกอร์ เบลด",
+    "vi": "Kiếm yêu tinh rực sáng"
+  },
+  "MST_LEADERSKILLS_2312_DESCRIPTION": {
+    "en": "Large boost to critical damage & great boost to damage dealt to weaker elements by Light and Dark types",
+    "es": "Aumenta mucho el daño crítico y notablemente el daño que se le provoca a los elementos débiles con luz y oscuridad",
+    "id": "Menambah besar kerusakan pukulan ampuh & tambah merusak elemen lemah tipe Terang dan Gelap",
+    "pt": "Bônus ao dano crítico e bônus aos danos causados por Luz e Sombra em elementos fracos",
+    "th": "เพิ่มค่าความเสียหายคริติคอลอย่างมาก และ เพิ่มค่าความเสียหายอย่างมากมายที่สร้างกับธาตุที่แพ้ทางโดย ชนิด แสง กับ มืด",
+    "vi": "Tăng nhiều thiệt hại do đòn trí mạng & tăng mạnh thiệt hại gây ra cho các yếu tố yếu hơn bởi hệ Ánh sáng và Bóng tối"
+  },
+  "MST_LEADERSKILLS_2312_NAME": {
+    "en": "Flashing Demon Blade",
+    "es": "Hoja demoníaca brillante",
+    "id": "Kilat Pedang Setan",
+    "pt": "Espada Demoníaca Ofuscante",
+    "th": "แฟลชชิ่ง เดม่อน เบลด",
+    "vi": "Kiếm quỷ rực sáng"
+  },
+  "MST_LEADERSKILLS_2313_DESCRIPTION": {
+    "en": "Greatly boosts critical damage & boosts max HP and Rec by 10%",
+    "es": "Greatly boosts critical damage & boosts max HP and Rec by 10%",
+    "id": "Amat menambah kerusakan pukulan ampuh & menambah HP maks dan Pemulihan 10%",
+    "pt": "Greatly boosts critical damage & boosts max HP and Rec by 10%",
+    "th": "เพิ่มคริติคอลดาเมจอย่างมาก, 10% เพิ่ม HP สูงสุดและ Rec",
+    "vi": "Greatly boosts critical damage & boosts max HP and Rec by 10%"
+  },
+  "MST_LEADERSKILLS_2313_NAME": {
+    "en": "Flashing Divine Protection",
+    "es": "Flashing Divine Protection",
+    "id": "Perlindungan Ilahi Berkedip",
+    "pt": "Flashing Divine Protection",
+    "th": "แฟลชชิ่ง ดีไวน์ โพรเทคชั่น",
+    "vi": "Flashing Divine Protection"
+  },
+  "MST_LEADERSKILLS_2314_DESCRIPTION": {
+    "en": "Greatly boosts critical damage & boosts max HP and Rec by 30%",
+    "es": "Greatly boosts critical damage & boosts max HP and Rec by 30%",
+    "id": "Amat menambah kerusakan pukulan ampuh & menambah HP maks dan Pemulihan 30%",
+    "pt": "Greatly boosts critical damage & boosts max HP and Rec by 30%",
+    "th": "เพิ่มคริติคอลดาเมจอย่างมาก, 30% เพิ่ม HP สูงสุดและ Rec",
+    "vi": "Greatly boosts critical damage & boosts max HP and Rec by 30%"
+  },
+  "MST_LEADERSKILLS_2314_NAME": {
+    "en": "Flashing Divine Grace",
+    "es": "Flashing Divine Grace",
+    "id": "Rahmat Ilahi Berkedip",
+    "pt": "Flashing Divine Grace",
+    "th": "แฟลชชิ่ง ดีไวน์ เกรซ",
+    "vi": "Flashing Divine Grace"
+  },
+  "MST_LEADERSKILLS_2320_DESCRIPTION": {
+    "en": "Greatly boosts critical hit damage & greatly boosts damage dealt to weaker elements by Earth and Thunder types",
+    "es": "Aumenta notablemente el daño crítico y el daño infligido a los elementos débiles por tipos térreos y atronadores",
+    "id": "Amat menambah kerusakan pukulan ampuh & amat merusak elemen yang lebih lemah oleh tipe Bumi dan Guntur",
+    "pt": "Grande reforço no dano crítico e grande reforço no dano causado a elementos mais fracos por tipos Terra e Trovão",
+    "th": "เพิ่มค่าคริติคอล และเพิ่มความเสียหายอย่างมากต่อธาตุที่แพ้ทางของธาตุดินและธาตุสายฟ้า",
+    "vi": "Tăng nhiều thiệt hại do đòn trí mạng & tăng nhiều thiệt hại gây ra cho yếu tố yếu hơn bởi hệ Thổ và Lôi"
+  },
+  "MST_LEADERSKILLS_2320_NAME": {
+    "en": "Flashing Radiance",
+    "es": "Radiancia fulgurante",
+    "id": "Sinar Berkilat",
+    "pt": "Luz Resplandecente",
+    "th": "แฟลชชิ่ง เรเดียนซ",
+    "vi": "Hào Quang Lóe Sáng"
+  },
   "MST_LEADERSKILLS_2321_DESCRIPTION": {
     "en": "Greatly boosts critical hit damage & hugely boosts damage dealt to weaker elements by Earth and Thunder types",
     "es": "Aumenta notablemente el daño crítico y enormemente el daño infligido a los elementos débiles por tipos térreos y atronadores",
@@ -15895,6 +15983,22 @@
     "th": "Righteous Anger",
     "vi": "Righteous Anger"
   },
+  "MST_LEADERSKILLS_840968_DESCRIPTION": {
+    "en": "200% Atk, 140% max HP, 30% critical rate, 300% critical damage, probable damage reduction to 1, spark damage fills BB gauge & 30% OD gauge fill rate",
+    "es": "200% Atk, 140% max HP, 30% critical rate, 300% critical damage, probable damage reduction to 1, spark damage fills BB gauge & 30% OD gauge fill rate",
+    "id": "200% Atk, 140% max HP, 30% critical rate, 300% critical damage, probable damage reduction to 1, spark damage fills BB gauge & 30% OD gauge fill rate",
+    "pt": "200% Atk, 140% max HP, 30% critical rate, 300% critical damage, probable damage reduction to 1, spark damage fills BB gauge & 30% OD gauge fill rate",
+    "th": "200% Atk, 140% max HP, 30% critical rate, 300% critical damage, probable damage reduction to 1, spark damage fills BB gauge & 30% OD gauge fill rate",
+    "vi": "200% Atk, 140% max HP, 30% critical rate, 300% critical damage, probable damage reduction to 1, spark damage fills BB gauge & 30% OD gauge fill rate"
+  },
+  "MST_LEADERSKILLS_840968_NAME": {
+    "en": "Patient Control",
+    "es": "Patient Control",
+    "id": "Patient Control",
+    "pt": "Patient Control",
+    "th": "Patient Control",
+    "vi": "Patient Control"
+  },
   "MST_LEADERSKILLS_850017_DESCRIPTION": {
     "en": "80% boost to Def, Rec, max HP, boosts Def, Rec relative to remaining HP, 10% damage reduction & restores HP each turn",
     "es": "80% boost to Def, Rec, max HP, boosts Def, Rec relative to remaining HP, 10% damage reduction & restores HP each turn",
@@ -17926,6 +18030,22 @@
     "pt": "Umbra Aura",
     "th": "Umbra Aura",
     "vi": "Umbra Aura"
+  },
+  "MST_LEADERSKILLS_860968_DESCRIPTION": {
+    "en": "150% Atk, 100% max HP, 30% critical rate, 200% Dark elemental damage, fills BB gauge each turn, probable spark critical & probable damage reduction to 1",
+    "es": "150% Atk, 100% max HP, 30% critical rate, 200% Dark elemental damage, fills BB gauge each turn, probable spark critical & probable damage reduction to 1",
+    "id": "150% Atk, 100% max HP, 30% critical rate, 200% Dark elemental damage, fills BB gauge each turn, probable spark critical & probable damage reduction to 1",
+    "pt": "150% Atk, 100% max HP, 30% critical rate, 200% Dark elemental damage, fills BB gauge each turn, probable spark critical & probable damage reduction to 1",
+    "th": "150% Atk, 100% max HP, 30% critical rate, 200% Dark elemental damage, fills BB gauge each turn, probable spark critical & probable damage reduction to 1",
+    "vi": "150% Atk, 100% max HP, 30% critical rate, 200% Dark elemental damage, fills BB gauge each turn, probable spark critical & probable damage reduction to 1"
+  },
+  "MST_LEADERSKILLS_860968_NAME": {
+    "en": "Miss Anthropy",
+    "es": "Miss Anthropy",
+    "id": "Miss Anthropy",
+    "pt": "Miss Anthropy",
+    "th": "Miss Anthropy",
+    "vi": "Miss Anthropy"
   },
   "MST_LEADERSKILLS_8700_DESCRIPTION": {
     "en": "15% reduction of damage taken from Water and Fire types",
@@ -92320,86 +92440,6 @@
     "vi": "Thiên thần bị nguyền rủa"
   },
   "MST_MONSTERS_50612_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang",
-    "pt": "Arcanjo",
-    "th": "อาร์คแองเจิ้ล",
-    "vi": "Tổng thiên sứ"
-  },
-  "MST_MONSTERS_50613_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang",
-    "pt": "Arcanjo",
-    "th": "อาร์คแองเจิ้ล",
-    "vi": "Tổng thiên sứ"
-  },
-  "MST_MONSTERS_50614_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang",
-    "pt": "Arcanjo",
-    "th": "อาร์คแองเจิ้ล",
-    "vi": "Tổng thiên sứ"
-  },
-  "MST_MONSTERS_50615_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang",
-    "pt": "Arcanjo",
-    "th": "อาร์คแองเจิ้ล",
-    "vi": "Tổng thiên sứ"
-  },
-  "MST_MONSTERS_50616_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang",
-    "pt": "Arcanjo",
-    "th": "อาร์คแองเจิ้ล",
-    "vi": "Tổng thiên sứ"
-  },
-  "MST_MONSTERS_50617_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang",
-    "pt": "Arcanjo",
-    "th": "อาร์คแองเจิ้ล",
-    "vi": "Tổng thiên sứ"
-  },
-  "MST_MONSTERS_50618_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang",
-    "pt": "Arcanjo",
-    "th": "อาร์คแองเจิ้ล",
-    "vi": "Tổng thiên sứ"
-  },
-  "MST_MONSTERS_50619_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang",
-    "pt": "Arcanjo",
-    "th": "อาร์คแองเจิ้ล",
-    "vi": "Tổng thiên sứ"
-  },
-  "MST_MONSTERS_506200_NAME": {
-    "en": "Rancorous Demon Guzaleg",
-    "es": "Rancorous Demon Guzaleg",
-    "id": "Setan Penuh Benci Guzaleg",
-    "pt": "Rancorous Demon Guzaleg",
-    "th": "แรนคอรัส เดม่อน กูซาเลก",
-    "vi": "Rancorous Demon Guzaleg"
-  },
-  "MST_MONSTERS_506201_NAME": {
-    "en": "Rancorous Demon Guzaleg",
-    "es": "Rancorous Demon Guzaleg",
-    "id": "Setan Penuh Benci Guzaleg",
-    "pt": "Rancorous Demon Guzaleg",
-    "th": "แรนคอรัส เดม่อน กูซาเลก",
-    "vi": "Rancorous Demon Guzaleg"
-  },
-  "MST_MONSTERS_50620_NAME": {
     "en": "Archangel",
     "es": "Arcángel",
     "id": "Malaikat Perang",
