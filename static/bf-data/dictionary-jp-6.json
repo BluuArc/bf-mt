@@ -1,4 +1,20 @@
 {
+  "MST_SKILLS_2840878_NAME": {
+    "en": "Ahahahaha!",
+    "es": "Ahahahaha!",
+    "id": "Ahahahaha!",
+    "pt": "Ahahahaha!",
+    "th": "Ahahahaha!",
+    "vi": "Ahahahaha!"
+  },
+  "MST_SKILLS_2840888_DESCRIPTION": {
+    "en": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
+    "es": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
+    "id": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
+    "pt": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
+    "th": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
+    "vi": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance"
+  },
   "MST_SKILLS_2840888_NAME": {
     "en": "Three Steps to Śūnyatā",
     "es": "Three Steps to Śūnyatā",
@@ -1302,6 +1318,22 @@
     "pt": "Shining Cross",
     "th": "Shining Cross",
     "vi": "Shining Cross"
+  },
+  "MST_SKILLS_2850988_DESCRIPTION": {
+    "en": "23 combo Light attack on all foes (damage relative to remaining HP), 12 combo Light attack on single foe (25% active Pierce on Light, Dark foes), boosts spark damage for 4 turns, spark damage restores HP for 4 turns, boosts Atk, Def, Rec for 4 turns & 1 extra action for 1 turn",
+    "es": "23 combo Light attack on all foes (damage relative to remaining HP), 12 combo Light attack on single foe (25% active Pierce on Light, Dark foes), boosts spark damage for 4 turns, spark damage restores HP for 4 turns, boosts Atk, Def, Rec for 4 turns & 1 extra action for 1 turn",
+    "id": "23 combo Light attack on all foes (damage relative to remaining HP), 12 combo Light attack on single foe (25% active Pierce on Light, Dark foes), boosts spark damage for 4 turns, spark damage restores HP for 4 turns, boosts Atk, Def, Rec for 4 turns & 1 extra action for 1 turn",
+    "pt": "23 combo Light attack on all foes (damage relative to remaining HP), 12 combo Light attack on single foe (25% active Pierce on Light, Dark foes), boosts spark damage for 4 turns, spark damage restores HP for 4 turns, boosts Atk, Def, Rec for 4 turns & 1 extra action for 1 turn",
+    "th": "23 combo Light attack on all foes (damage relative to remaining HP), 12 combo Light attack on single foe (25% active Pierce on Light, Dark foes), boosts spark damage for 4 turns, spark damage restores HP for 4 turns, boosts Atk, Def, Rec for 4 turns & 1 extra action for 1 turn",
+    "vi": "23 combo Light attack on all foes (damage relative to remaining HP), 12 combo Light attack on single foe (25% active Pierce on Light, Dark foes), boosts spark damage for 4 turns, spark damage restores HP for 4 turns, boosts Atk, Def, Rec for 4 turns & 1 extra action for 1 turn"
+  },
+  "MST_SKILLS_2850988_NAME": {
+    "en": "Voidlight Collapse",
+    "es": "Voidlight Collapse",
+    "id": "Voidlight Collapse",
+    "pt": "Voidlight Collapse",
+    "th": "Voidlight Collapse",
+    "vi": "Voidlight Collapse"
   },
   "MST_SKILLS_2850_DESCRIPTION": {
     "en": "None",
@@ -92446,5 +92478,21 @@
     "pt": "Skill Release EX",
     "th": "Skill Release EX",
     "vi": "Skill Release EX"
+  },
+  "MST_SKILLS_830597_DESCRIPTION": {
+    "en": "12 combo Earth attack on all foes, boosts max HP, hugely boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit rate for 3 turns, hugely boosts Atk, Def, Rec relative to max HP for 3 turns & boosts BC, HC drop rates for 3 turns",
+    "es": "12 combo Earth attack on all foes, boosts max HP, hugely boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit rate for 3 turns, hugely boosts Atk, Def, Rec relative to max HP for 3 turns & boosts BC, HC drop rates for 3 turns",
+    "id": "12 combo Earth attack on all foes, boosts max HP, hugely boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit rate for 3 turns, hugely boosts Atk, Def, Rec relative to max HP for 3 turns & boosts BC, HC drop rates for 3 turns",
+    "pt": "12 combo Earth attack on all foes, boosts max HP, hugely boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit rate for 3 turns, hugely boosts Atk, Def, Rec relative to max HP for 3 turns & boosts BC, HC drop rates for 3 turns",
+    "th": "12 combo Earth attack on all foes, boosts max HP, hugely boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit rate for 3 turns, hugely boosts Atk, Def, Rec relative to max HP for 3 turns & boosts BC, HC drop rates for 3 turns",
+    "vi": "12 combo Earth attack on all foes, boosts max HP, hugely boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit rate for 3 turns, hugely boosts Atk, Def, Rec relative to max HP for 3 turns & boosts BC, HC drop rates for 3 turns"
+  },
+  "MST_SKILLS_830597_NAME": {
+    "en": "Form Constant",
+    "es": "Form Constant",
+    "id": "Form Constant",
+    "pt": "Form Constant",
+    "th": "Form Constant",
+    "vi": "Form Constant"
   }
 }
