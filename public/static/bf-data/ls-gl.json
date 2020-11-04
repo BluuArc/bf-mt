@@ -44451,6 +44451,41 @@
       "850978"
     ]
   },
+  "850988": {
+    "desc": "200% Atk, 150% max HP, 30% critical rate, 300% spark damage, probable spark critical, 15% damage reduction & spark damage restores HP",
+    "effects": [
+      {
+        "atk% buff": 200,
+        "crit% buff": 30,
+        "hp% buff": 150,
+        "passive id": "1"
+      },
+      {
+        "damage% for spark": 300,
+        "passive id": "31"
+      },
+      {
+        "passive id": "100",
+        "spark crit chance%": 50,
+        "spark crit dmg%": 100
+      },
+      {
+        "dmg% mitigation": 15,
+        "passive id": "8"
+      },
+      {
+        "heal on spark high": 600,
+        "heal on spark low": 500,
+        "heal on spark%": 100,
+        "passive id": "101"
+      }
+    ],
+    "id": "850988",
+    "name": "Paradoxical Light",
+    "associated_units": [
+      "850988"
+    ]
+  },
   "860017": {
     "desc": "100% boost to Atk, Def, 80% boost to max HP of Light, Dark types, greatly boosts BB Atk, damage taken hugely boosts BB gauge & 10% damage reduction from Light, Dark types",
     "effects": [

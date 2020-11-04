@@ -1,4 +1,180 @@
 {
+  "MST_LEADERSKILLS_2221_NAME": {
+    "en": "Five Lights' Destiny",
+    "es": "Destino de cinco luces",
+    "id": "Takdir Lima Sinar",
+    "pt": "Luz dos Cinco Destinos",
+    "th": "ไฟว์ ไลท์ เดสทินี่",
+    "vi": "Five Lights' Destiny"
+  },
+  "MST_LEADERSKILLS_2222_DESCRIPTION": {
+    "en": "30% boost to max HP and 100% boost to Atk when 5 elements or more are present & high probable infliction of random status ailment",
+    "es": "30% boost to max HP and 100% boost to Atk when 5 elements or more are present & high probable infliction of random status ailment",
+    "id": "30% ekstra HP maks dan 100% ekstra Serangan saat ada 5 elemen atau lebih & kemungkinan besar memberi status pemyakit acak",
+    "pt": "30% boost to max HP and 100% boost to Atk when 5 elements or more are present & high probable infliction of random status ailment",
+    "th": "30% เพิ่ม HP สูงสุด,100% เพิ่มพลังโจมตีเมื่อมียูนิตครบ 5 ธาตุหรือมากกว่า, มีโอกาสติดสถานะผิดปกติแบบสุ่มอย่างมาก",
+    "vi": "30% boost to max HP and 100% boost to Atk when 5 elements or more are present & high probable infliction of random status ailment"
+  },
+  "MST_LEADERSKILLS_2222_NAME": {
+    "en": "Five Lights' Epidemic",
+    "es": "Five Lights' Epidemic",
+    "id": "Epidemi Lima Terang",
+    "pt": "Five Lights' Epidemic",
+    "th": "ไฟฟ์ ไลท์ อิพิเดอมิค",
+    "vi": "Five Lights' Epidemic"
+  },
+  "MST_LEADERSKILLS_2223_DESCRIPTION": {
+    "en": "30% boost to max HP and 100% boost to Atk when 5 elements or more are present & boosts Spark damage",
+    "es": "30% boost to max HP and 100% boost to Atk when 5 elements or more are present & boosts Spark damage",
+    "id": "30% ekstra HP maks dan 100% ekstra Serangan saat ada 5 elemen ke atas & menambah Percikan",
+    "pt": "30% boost to max HP and 100% boost to Atk when 5 elements or more are present & boosts Spark damage",
+    "th": "30% เพิ่ม HP สูงสุด, 100% เพิ่มพลังโจมตีเมื่อมี 5 ธาตุหรือมากกว่าอยู่ในทีม, เพิ่มสปาร์คดาเมจ",
+    "vi": "30% boost to max HP and 100% boost to Atk when 5 elements or more are present & boosts Spark damage"
+  },
+  "MST_LEADERSKILLS_2223_NAME": {
+    "en": "Five Lights' Flash",
+    "es": "Five Lights' Flash",
+    "id": "Flah Lima Terang",
+    "pt": "Five Lights' Flash",
+    "th": "ไฟว์ ไลท์ แฟลช",
+    "vi": "Five Lights' Flash"
+  },
+  "MST_LEADERSKILLS_2224_DESCRIPTION": {
+    "en": "100% boost to Atk and 30% boost to max HP when 5 elements or more are present & adds probable Def ignoring effect",
+    "es": "100% boost to Atk and 30% boost to max HP when 5 elements or more are present & adds probable Def ignoring effect",
+    "id": "100% ekstra Serangan, 30$ esktra HP maks saat ada 5 elemen ke atas & menambahkan kans efek abaikan Pertahanan",
+    "pt": "100% boost to Atk and 30% boost to max HP when 5 elements or more are present & adds probable Def ignoring effect",
+    "th": "100% เพิ่มค่าให้กับ โจมตี กับ 30% เพิ่มค่าให้กับ HP สูงสุด เมื่อมี 5 ธาตุ หรือมากกว่านั้นในปาร์ตี้ และ เพิ่ม โอกาสให้เกิด ผลไม่สนค่าป้องกัน",
+    "vi": "100% boost to Atk and 30% boost to max HP when 5 elements or more are present & adds probable Def ignoring effect"
+  },
+  "MST_LEADERSKILLS_2224_NAME": {
+    "en": "Five Lights' Punishment",
+    "es": "Five Lights' Punishment",
+    "id": "Hukuman Lima Terang",
+    "pt": "Five Lights' Punishment",
+    "th": "ไฟว์ ไลท์ พันนิชเมนท์",
+    "vi": "Five Lights' Punishment"
+  },
+  "MST_LEADERSKILLS_2225_DESCRIPTION": {
+    "en": "50% boost to Atk and 30% boost to max HP when 5 elements or more are present, 100% boost to Atk and 30% boost to max HP for all allies, huge boost to BC, HC drop rates & hugely boosts BB gauge each turn",
+    "es": "50% boost to Atk and 30% boost to max HP when 5 elements or more are present, 100% boost to Atk and 30% boost to max HP for all allies, huge boost to BC, HC drop rates & hugely boosts BB gauge each turn",
+    "id": "50% ekstra Serangan, 30% ekstra HP maks saat ada 5 elemen atau lebih, 100% ekstra Serangan dan 30% ekstra HP maks untuk semua sekutu, tambahan besar perolehan BC, HC, amat menambah meteran BB tiap giliran",
+    "pt": "50% boost to Atk and 30% boost to max HP when 5 elements or more are present, 100% boost to Atk and 30% boost to max HP for all allies, huge boost to BC, HC drop rates & hugely boosts BB gauge each turn",
+    "th": "50% เพิ่มค่าให้ โจมตี และ 30% เพิ่มค่าให้ HP สูงสุด เมื่อ 5 ธาตุหรือมากกว่านั้นอยู่ในทีม, 100% เพิ่มค่าให้ โจมตี และ 30% เพิ่มค่าให้ HP สูงสุด สำหรับพันธมิตรทั้งหมด, เพิ่มค่าอย่างสูงให้ อัตราดรอป BC, HC กับ เพิ่ม เกจ BB อย่างสูง แต่ละเทิร์น",
+    "vi": "50% boost to Atk and 30% boost to max HP when 5 elements or more are present, 100% boost to Atk and 30% boost to max HP for all allies, huge boost to BC, HC drop rates & hugely boosts BB gauge each turn"
+  },
+  "MST_LEADERSKILLS_2225_NAME": {
+    "en": "Five Lights' Decree",
+    "es": "Five Lights' Decree",
+    "id": "Dekrit Lima Terang",
+    "pt": "Five Lights' Decree",
+    "th": "ไฟว์ ไลท์ ดีครี",
+    "vi": "Five Lights' Decree"
+  },
+  "MST_LEADERSKILLS_2226_DESCRIPTION": {
+    "en": "100% boost to Atk and 30% boost to max HP when 5 elements or more are present, 50% boost to Atk, 30% boost to max HP, reduces BB gauge required for BB & boosts BC efficacy",
+    "es": "100% boost to Atk and 30% boost to max HP when 5 elements or more are present, 50% boost to Atk, 30% boost to max HP, reduces BB gauge required for BB & boosts BC efficacy",
+    "id": "100% ekstra Serang, 30% ekstra HP maks saat ada 5 elemen atau lebih, 50% ekstra Serang, 30% ekstra HP maks, kurangi meteran BB untuk BB, menambah keampuhan BC",
+    "pt": "100% boost to Atk and 30% boost to max HP when 5 elements or more are present, 50% boost to Atk, 30% boost to max HP, reduces BB gauge required for BB & boosts BC efficacy",
+    "th": "100% เพิ่มค่า โจมตี กับ 30% เพิ่มค่า HP สูงสุด เมื่อ 5 ธาตุหรือมากกว่านั้นอยู่ในทีม, 50% เพิ่มค่า โจมตี, 30% เพิ่มค่า HP สูงสุด, ลดเกจ BB ที่จำเป็นสำหรับ BB และ เพิ่มค่า ประสิทธิภาพ BC",
+    "vi": "100% boost to Atk and 30% boost to max HP when 5 elements or more are present, 50% boost to Atk, 30% boost to max HP, reduces BB gauge required for BB & boosts BC efficacy"
+  },
+  "MST_LEADERSKILLS_2226_NAME": {
+    "en": "Divine Soul",
+    "es": "Divine Soul",
+    "id": "Jiwa Dewa",
+    "pt": "Divine Soul",
+    "th": "ดีไวน์โซล",
+    "vi": "Divine Soul"
+  },
+  "MST_LEADERSKILLS_2228_DESCRIPTION": {
+    "en": "100% boost to Atk and 30% boost to max HP when 5 elements or more are present, 50% boost to Atk, 30% boost to max HP, 100% boost to Spark damage & considerably boosts BB Atk when HP is over 50%",
+    "es": "100% boost to Atk and 30% boost to max HP when 5 elements or more are present, 50% boost to Atk, 30% boost to max HP, 100% boost to Spark damage & considerably boosts BB Atk when HP is over 50%",
+    "id": "100% ekstra Serangan, 30% ekstra HP maks saat ada 5 elemen atau lebih, 50% ekstra Serang, 30% ekstra HP maks, 100% ekstra kerusakan Percikan & lumayan menambah BB Serang saat HP di atas 50%",
+    "pt": "100% boost to Atk and 30% boost to max HP when 5 elements or more are present, 50% boost to Atk, 30% boost to max HP, 100% boost to Spark damage & considerably boosts BB Atk when HP is over 50%",
+    "th": "100% เพิ่มค่าให้ โจมตี กับ 30% เพิ่มค่าให้ HP สูงสุด เมื่อมียูนิต 5 ธาตุ หรือมากกว่านั้นอยู่ในทีม, 50% เพิ่มค่าให้ โจมตี, 30% เพิ่มค่าให้ HP สูงสุด, 100% เพิ่มค่าให้ ความเสียหายสปาร์ค และ เพิ่มค่าอย่างมากให้ BB โจมตี เมื่อ HP นั้นมากกว่า 50%",
+    "vi": "100% boost to Atk and 30% boost to max HP when 5 elements or more are present, 50% boost to Atk, 30% boost to max HP, 100% boost to Spark damage & considerably boosts BB Atk when HP is over 50%"
+  },
+  "MST_LEADERSKILLS_2228_NAME": {
+    "en": "Mecha-Angel Blast",
+    "es": "Mecha-Angel Blast",
+    "id": "Ledakan Meka-Malaikat",
+    "pt": "Mecha-Angel Blast",
+    "th": "เมคคะ-แองเจิล บลาสต์",
+    "vi": "Mecha-Angel Blast"
+  },
+  "MST_LEADERSKILLS_2229_DESCRIPTION": {
+    "en": "100% boost to Atk and 30% boost to max HP when 5 elements or more are present, 50% boost to Atk, 30% boost to max HP, hugely boosts critical damage & considerably boosts BC efficacy",
+    "es": "100% boost to Atk and 30% boost to max HP when 5 elements or more are present, 50% boost to Atk, 30% boost to max HP, hugely boosts critical damage & considerably boosts BC efficacy",
+    "id": "100% ekstra Serang, 30% ekstra HP maks saat ada 5 elemen atau lebih, 50% ekstra Serang, 30% ekstra HP maks,  amat menambah kerusakan ampuh & lumayan menambah keampuhan BC",
+    "pt": "100% boost to Atk and 30% boost to max HP when 5 elements or more are present, 50% boost to Atk, 30% boost to max HP, hugely boosts critical damage & considerably boosts BC efficacy",
+    "th": "100% เพิ่มค่าให้ โจมตี และ 30% เพิ่มค่าให้ HP สูงสุด เมื่อ 5 ธาตุหรือมากกว่านั้นอยู่ในทีม, 50% เพิ่มค่าให้ โจมตี, 30% เพิ่มค่าให้ HP สูงสุด, เพิ่มค่าอย่างสูงให้ ความเสียหายคริติคอล กับ เพิ่มค่าอย่างมากให้ ประสิทธิภาพ BC",
+    "vi": "100% boost to Atk and 30% boost to max HP when 5 elements or more are present, 50% boost to Atk, 30% boost to max HP, hugely boosts critical damage & considerably boosts BC efficacy"
+  },
+  "MST_LEADERSKILLS_2229_NAME": {
+    "en": "Vestal Radiance",
+    "es": "Vestal Radiance",
+    "id": "Kilau Perawan",
+    "pt": "Vestal Radiance",
+    "th": "เวสทอล เรเดี๊ยนซ์",
+    "vi": "Vestal Radiance"
+  },
+  "MST_LEADERSKILLS_2300_DESCRIPTION": {
+    "en": "Boost in critical hit damage",
+    "es": "Aumento en daño crítico de golpe",
+    "id": "Boost untuk kerusakan dari pukulan ampuh",
+    "pt": "Bônus no dano de ataques críticos",
+    "th": "เพิ่มความเสียหายจากการโจมตีคริติคอล",
+    "vi": "Tăng cường phá hủy nghiêm trọng "
+  },
+  "MST_LEADERSKILLS_2300_NAME": {
+    "en": "Flashing Blade",
+    "es": "Hoja brillante",
+    "id": "Pisau Berkilat",
+    "pt": "Lâmina Ofuscante",
+    "th": "แฟรชชิ่งเบลด",
+    "vi": "Lưỡi hái lóe sáng "
+  },
+  "MST_LEADERSKILLS_2301_DESCRIPTION": {
+    "en": "Large boost in critical hit damage",
+    "es": "Gran aumento en daño crítico de golpe",
+    "id": "Boost besar untuk kerusakan dari pukulan ampuh",
+    "pt": "Grande bônus no dano de ataques críticos",
+    "th": "เพิ่มความเสียหายอย่างมากจากการโจมตีคริติคอล",
+    "vi": "Tăng cường phá hủy trên diện rộng "
+  },
+  "MST_LEADERSKILLS_2301_NAME": {
+    "en": "Flashing Slash",
+    "es": "Mandoble brillante",
+    "id": "Sabetan Berkilat",
+    "pt": "Corte Ofuscante",
+    "th": "แฟรชชิ่งสแลช",
+    "vi": "Nhát chém lóe sáng "
+  },
+  "MST_LEADERSKILLS_2302_DESCRIPTION": {
+    "en": "Boost in critical hit damage",
+    "es": "Aumento el daño de los golpes críticos",
+    "id": "Menambah kerusakan akibat pukulan ampuh",
+    "pt": "Bônus no dano de ataques críticos",
+    "th": "เพิ่มค่าความเสียหายคริติคอล",
+    "vi": "Tăng thiệt hại do đòn trí mạng"
+  },
+  "MST_LEADERSKILLS_2302_NAME": {
+    "en": "Flashing Edge",
+    "es": "Borde centellante",
+    "id": "Jurang Menyala",
+    "pt": "Lâmina Brilhante",
+    "th": "แฟลชชิ่งเอดจ์",
+    "vi": "Bờ vực lóe sáng"
+  },
+  "MST_LEADERSKILLS_2310_DESCRIPTION": {
+    "en": "Large boost in critical hit damage & adds chance of repelling 20% of damage taken when attacked",
+    "es": "Notable aumento al daño por golpe crítico y agrega la posibilidad de rechazar un 20% del daño recibido",
+    "id": "Tambahan besar untuk kerusakan pukulan ampuh & menambah kans mengurangi 20% kerusakan saat diserang",
+    "pt": "Grande aumento no dano de ataque crítico e chance de repelir 20% do dano recebido ao ser atacado",
+    "th": "เพิ่มความเสียหายจากคริติคอลอย่างมาก และ เพิ่มโอกาส ที่จะลด 20% ของค่าความเสียหายที่ได้รับ เมื่อถูกโจมตี",
+    "vi": "Tăng thiệt hại do đòn trí mạng & thêm cơ hội đẩy lùi 20% thiệt hại khi bị tấn công"
+  },
   "MST_LEADERSKILLS_2310_NAME": {
     "en": "Flashing Strategy",
     "es": "Estrategia resplandeciente",
@@ -17006,6 +17182,22 @@
     "pt": "Light of Dawn's Boon",
     "th": "Light of Dawn's Boon",
     "vi": "Light of Dawn's Boon"
+  },
+  "MST_LEADERSKILLS_850988_DESCRIPTION": {
+    "en": "200% Atk, 150% max HP, 30% critical rate, 300% spark damage, probable spark critical, 15% damage reduction & spark damage restores HP",
+    "es": "200% Atk, 150% max HP, 30% critical rate, 300% spark damage, probable spark critical, 15% damage reduction & spark damage restores HP",
+    "id": "200% Atk, 150% max HP, 30% critical rate, 300% spark damage, probable spark critical, 15% damage reduction & spark damage restores HP",
+    "pt": "200% Atk, 150% max HP, 30% critical rate, 300% spark damage, probable spark critical, 15% damage reduction & spark damage restores HP",
+    "th": "200% Atk, 150% max HP, 30% critical rate, 300% spark damage, probable spark critical, 15% damage reduction & spark damage restores HP",
+    "vi": "200% Atk, 150% max HP, 30% critical rate, 300% spark damage, probable spark critical, 15% damage reduction & spark damage restores HP"
+  },
+  "MST_LEADERSKILLS_850988_NAME": {
+    "en": "Paradoxical Light",
+    "es": "Paradoxical Light",
+    "id": "Paradoxical Light",
+    "pt": "Paradoxical Light",
+    "th": "Paradoxical Light",
+    "vi": "Paradoxical Light"
   },
   "MST_LEADERSKILLS_860017_DESCRIPTION": {
     "en": "100% boost to Atk, Def, 80% boost to max HP of Light, Dark types, greatly boosts BB Atk, damage taken hugely boosts BB gauge & 10% damage reduction from Light, Dark types",
@@ -92302,149 +92494,5 @@
     "pt": "Heresy Demon Kalon",
     "th": "เฮเรซี่ เดม่อน คาลอน",
     "vi": "Heresy Demon Kalon"
-  },
-  "MST_MONSTERS_50600_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang",
-    "pt": "Arcanjo",
-    "th": "อาร์คแองเจิ้ล",
-    "vi": "Tổng thiên sứ"
-  },
-  "MST_MONSTERS_50601_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang",
-    "pt": "Arcanjo",
-    "th": "อาร์คแองเจิ้ล",
-    "vi": "Tổng thiên sứ"
-  },
-  "MST_MONSTERS_50602_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang",
-    "pt": "Arcanjo",
-    "th": "อาร์คแองเจิ้ล",
-    "vi": "Tổng thiên sứ"
-  },
-  "MST_MONSTERS_50603_NAME": {
-    "en": "Blessed Angel",
-    "es": "Ángel bendito",
-    "id": "Malaikat Berkat",
-    "pt": "Anjo Abençoado",
-    "th": "นางฟ้าให้พร",
-    "vi": "Thiên thần được chúc phúc"
-  },
-  "MST_MONSTERS_50604_NAME": {
-    "en": "Blessed Angel",
-    "es": "Ángel bendito",
-    "id": "Malaikat Berkat",
-    "pt": "Anjo Abençoado",
-    "th": "นางฟ้าให้พร",
-    "vi": "Thiên thần được chúc phúc"
-  },
-  "MST_MONSTERS_50605_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang",
-    "pt": "Arcanjo",
-    "th": "อาร์คแองเจิ้ล",
-    "vi": "Tổng thiên sứ"
-  },
-  "MST_MONSTERS_50606_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang",
-    "pt": "Arcanjo",
-    "th": "อาร์คแองเจิ้ล",
-    "vi": "Tổng thiên sứ"
-  },
-  "MST_MONSTERS_50607_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang",
-    "pt": "Arcanjo",
-    "th": "อาร์คแองเจิ้ล",
-    "vi": "Tổng thiên sứ"
-  },
-  "MST_MONSTERS_50608_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang",
-    "pt": "Arcanjo",
-    "th": "อาร์คแองเจิ้ล",
-    "vi": "Tổng thiên sứ"
-  },
-  "MST_MONSTERS_50609_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang",
-    "pt": "Arcanjo",
-    "th": "อาร์คแองเจิ้ล",
-    "vi": "Tổng thiên sứ"
-  },
-  "MST_MONSTERS_506100_NAME": {
-    "en": "Grudging Beast Guzaleg",
-    "es": "Grudging Beast Guzaleg",
-    "id": "Beast Dendam Guzaleg",
-    "pt": "Grudging Beast Guzaleg",
-    "th": "กรัดจิ้ง บีสต์ กูซาเลก",
-    "vi": "Grudging Beast Guzaleg"
-  },
-  "MST_MONSTERS_506101_NAME": {
-    "en": "Grudging Beast Guzaleg",
-    "es": "Grudging Beast Guzaleg",
-    "id": "Beast Dendam Guzaleg",
-    "pt": "Grudging Beast Guzaleg",
-    "th": "กรัดจิ้ง บีสต์ กูซาเลก",
-    "vi": "Grudging Beast Guzaleg"
-  },
-  "MST_MONSTERS_506102_NAME": {
-    "en": "Grudging Beast Guzaleg",
-    "es": "Grudging Beast Guzaleg",
-    "id": "Beast Dendam Guzaleg",
-    "pt": "Grudging Beast Guzaleg",
-    "th": "กรัดจิ้ง บีสต์ กูซาเลก",
-    "vi": "Grudging Beast Guzaleg"
-  },
-  "MST_MONSTERS_506103_NAME": {
-    "en": "Grudging Beast Guzaleg",
-    "es": "Grudging Beast Guzaleg",
-    "id": "Beast Dendam Guzaleg",
-    "pt": "Grudging Beast Guzaleg",
-    "th": "กรัดจิ้ง บีสต์ กูซาเลก",
-    "vi": "Grudging Beast Guzaleg"
-  },
-  "MST_MONSTERS_506104_NAME": {
-    "en": "Grudging Beast Guzaleg",
-    "es": "Grudging Beast Guzaleg",
-    "id": "Beast Dendam Guzaleg",
-    "pt": "Grudging Beast Guzaleg",
-    "th": "กรัดจิ้ง บีสต์ กูซาเลก",
-    "vi": "Grudging Beast Guzaleg"
-  },
-  "MST_MONSTERS_50610_NAME": {
-    "en": "Blessed Angel",
-    "es": "Ángel bendito",
-    "id": "Malaikat Berkat",
-    "pt": "Anjo Abençoado",
-    "th": "นางฟ้าให้พร",
-    "vi": "Thiên thần được chúc phúc"
-  },
-  "MST_MONSTERS_50611_NAME": {
-    "en": "Cursed Angel",
-    "es": "Ángel maldito",
-    "id": "Cursed Angel",
-    "pt": "Anjo Amaldiçoado",
-    "th": "อาร์คแองเจิ้ล",
-    "vi": "Thiên thần bị nguyền rủa"
-  },
-  "MST_MONSTERS_50612_NAME": {
-    "en": "Archangel",
-    "es": "Arcángel",
-    "id": "Malaikat Perang",
-    "pt": "Arcanjo",
-    "th": "อาร์คแองเจิ้ล",
-    "vi": "Tổng thiên sứ"
   }
 }
