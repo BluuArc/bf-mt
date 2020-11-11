@@ -1,4 +1,36 @@
 {
+  "MST_LEADERSKILLS_2219_NAME": {
+    "en": "Five Lights' Soul",
+    "es": "Alma de cinco luces",
+    "id": "Jiwa Lima Sinar",
+    "pt": "Luz das Cinco Almas",
+    "th": "ไฟว์ ไลท์ โซล",
+    "vi": "Five Lights' Soul"
+  },
+  "MST_LEADERSKILLS_2220_DESCRIPTION": {
+    "en": "30% boost to max HP and 50% boost to Atk of all allies when 5 elements or more are present",
+    "es": "+30% a los PS máx., +50% al ATQ de los aliados en presencia de 5 o más elementos",
+    "id": "30% ekstra maks HP dan 50% ekstra Serangan semua sekutu saat ada 5 elemen ke atas",
+    "pt": "Reforço de 30% no HP máx. e de 50% no ATQ de todos os aliados quando 5 elementos ou mais estiverem presentes",
+    "th": "30% เพิ่ม HP สูงสุด และ 50% เพิมพลังโจมตีให้ทีมเมื่อยูนิต 5 ธาตุในทีมหรือมากกว่า ",
+    "vi": "30% boost to max HP and 50% boost to Atk of all allies when 5 elements or more are present"
+  },
+  "MST_LEADERSKILLS_2220_NAME": {
+    "en": "Five Lights' Anima",
+    "es": "Ánima de cinco luces",
+    "id": "Anima Lima Sinar",
+    "pt": "Luz dos Cinco Espíritos",
+    "th": "ไฟว์ ไลท์ อนิม่า",
+    "vi": "Five Lights' Anima"
+  },
+  "MST_LEADERSKILLS_2221_DESCRIPTION": {
+    "en": "30% boost to max HP and 100% boost to Atk of all allies when 5 elements or more are present & boosts BC and HC drop rate",
+    "es": "+30% a los PS máx., +100% al ATQ de los aliados en presencia de 5 o más elementos y aumenta la posibilidad de conseguir CB y CC",
+    "id": "30% ekstra maks HP dan 100% ekstra Serangan semua sekutu saat ada 5 elemen ke atas &  menambah perolehan BC dan HC",
+    "pt": "Reforço de 30% no HP máx. e de 100% no ATQ de todos os aliados quando 5 elementos ou mais estiverem presentes, e reforço na obtenção de CB e CC",
+    "th": "30% เพิ่ม HP สูงสุด และ 50% เพิมพลังโจมตีให้ทีมเมื่อยูนิต 5 ธาตุในทีมหรือมากกว่า และเพิ่มอัตราดรอป BC และ HC",
+    "vi": "30% boost to max HP and 100% boost to Atk of all allies when 5 elements or more are present & boosts BC and HC drop rate"
+  },
   "MST_LEADERSKILLS_2221_NAME": {
     "en": "Five Lights' Destiny",
     "es": "Destino de cinco luces",
@@ -14286,6 +14318,22 @@
     "pt": "Enchanted Ice",
     "th": "Enchanted Ice",
     "vi": "Enchanted Ice"
+  },
+  "MST_LEADERSKILLS_820958_DESCRIPTION": {
+    "en": "140% Atk, 140% Def, 140% max HP and 30% critical rate (Water), 100% Atk, 100% Def when BB gauge is above 50%, 250% spark damage, 50% spark damage reduction & fills BB gauge each turn",
+    "es": "140% Atk, 140% Def, 140% max HP and 30% critical rate (Water), 100% Atk, 100% Def when BB gauge is above 50%, 250% spark damage, 50% spark damage reduction & fills BB gauge each turn",
+    "id": "140% Atk, 140% Def, 140% max HP and 30% critical rate (Water), 100% Atk, 100% Def when BB gauge is above 50%, 250% spark damage, 50% spark damage reduction & fills BB gauge each turn",
+    "pt": "140% Atk, 140% Def, 140% max HP and 30% critical rate (Water), 100% Atk, 100% Def when BB gauge is above 50%, 250% spark damage, 50% spark damage reduction & fills BB gauge each turn",
+    "th": "140% Atk, 140% Def, 140% max HP and 30% critical rate (Water), 100% Atk, 100% Def when BB gauge is above 50%, 250% spark damage, 50% spark damage reduction & fills BB gauge each turn",
+    "vi": "140% Atk, 140% Def, 140% max HP and 30% critical rate (Water), 100% Atk, 100% Def when BB gauge is above 50%, 250% spark damage, 50% spark damage reduction & fills BB gauge each turn"
+  },
+  "MST_LEADERSKILLS_820958_NAME": {
+    "en": "Crystalline Sharpshooter",
+    "es": "Crystalline Sharpshooter",
+    "id": "Crystalline Sharpshooter",
+    "pt": "Crystalline Sharpshooter",
+    "th": "Crystalline Sharpshooter",
+    "vi": "Crystalline Sharpshooter"
   },
   "MST_LEADERSKILLS_830047_DESCRIPTION": {
     "en": "100% boost to Atk, 60% boost to Def, max HP of Earth types, 10% damage reduction from Earth, Thunder types, probable considerable reduction of foe's BB gauge & 50% damage counter",
@@ -92480,14 +92528,6 @@
     "vi": "Guile Demon Mora"
   },
   "MST_MONSTERS_506000_NAME": {
-    "en": "Heresy Demon Kalon",
-    "es": "Heresy Demon Kalon",
-    "id": "Setan Bidaah Kalon",
-    "pt": "Heresy Demon Kalon",
-    "th": "เฮเรซี่ เดม่อน คาลอน",
-    "vi": "Heresy Demon Kalon"
-  },
-  "MST_MONSTERS_506001_NAME": {
     "en": "Heresy Demon Kalon",
     "es": "Heresy Demon Kalon",
     "id": "Setan Bidaah Kalon",

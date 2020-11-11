@@ -1,20 +1,4 @@
 {
-  "MST_SKILLS_2000262_NAME": {
-    "en": "When the World Tree awakens so will the forest.",
-    "es": "Cuando el Sumo árbol se despierte, lo mismo hará el bosque.",
-    "id": "Saat Pohon Dunia bangun, hutan juga.",
-    "pt": "Quando a Árvore do Mundo acordar, a floresta acordará também.",
-    "th": "เมื่อใดก็ตามที่ต้นไม้โลกตื่นขึ้น ป่าเองก็ตื่นเช่นเดียวกัน",
-    "vi": "Khi Cây thế giới thức giấc, khu rừng cũng vậy."
-  },
-  "MST_SKILLS_2000263_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
   "MST_SKILLS_2000263_NAME": {
     "en": "I must protect the peace of the forest!",
     "es": "¡Debo proteger la paz del bosque!",
@@ -92494,5 +92478,61 @@
     "pt": "Ela não consegue me acompanhar.",
     "th": "เธออยู่กับข้าไม่ได้",
     "vi": "She can't keep up with me."
+  },
+  "MST_SKILLS_2122427_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122427_NAME": {
+    "en": "After all, I'm a genius!",
+    "es": "¡Después de todo, nadie se compara conmigo!",
+    "id": "Yang jelas, aku kan genius!",
+    "pt": "Afinal, sou um gênio!",
+    "th": "แต่สรุปก็คือ ข้าน่ะเก่งที่สุด!",
+    "vi": "After all, I'm a genius!"
+  },
+  "MST_SKILLS_2122428_DESCRIPTION": {
+    "en": "Greatly recovers HP for all allies & adds Dark element to attack for 3 turns",
+    "es": "Recupera notablemente los PS de los aliados y agrega oscuridad al ataque durante 3 turnos",
+    "id": "Amat memulihkan HP semua sekutu & menambah elemen  Gelap ke serangan 3 giliran",
+    "pt": "Aumenta muito o HP de todos os aliados e adiciona o elemento Sombra ao ataque por 3 rodadas",
+    "th": "ฟื้นฟู HP ให้ทีม และเพิ่มการโจมตีด้วยธาตุความมืด 3 เทิร์น",
+    "vi": "Greatly recovers HP for all allies & adds Dark element to attack for 3 turns"
+  },
+  "MST_SKILLS_2122428_NAME": {
+    "en": "Demented Cure",
+    "es": "Cura demencial",
+    "id": "Obat Gila",
+    "pt": "Cura Demente",
+    "th": "ดีเมนเท็ด เคียว",
+    "vi": "Demented Cure"
+  },
+  "MST_SKILLS_2122429_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2122429_NAME": {
+    "en": "That's my little sister!",
+    "es": "¡Esa es mi hermana menor!",
+    "id": "Itu baru adik kecilku!",
+    "pt": "Essa é minha irmãzinha!",
+    "th": "นั่นคือน้องสาวของข้า!",
+    "vi": "That's my little sister!"
+  },
+  "MST_SKILLS_2122430_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
   }
 }
