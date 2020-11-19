@@ -1,4 +1,116 @@
 {
+  "MST_LEADERSKILLS_2209_NAME": {
+    "en": "Five Light's Order",
+    "es": "Orden de cinco luces",
+    "id": "Perintah Lima Cahaya",
+    "pt": "Ordem das Cinco Luzes",
+    "th": "ไฟฟ์ไลท์ออเดอร์",
+    "vi": "Ngũ quang lệnh"
+  },
+  "MST_LEADERSKILLS_2210_DESCRIPTION": {
+    "en": "15% boost to HP & Rec of all Units when 5 elements or more are present",
+    "es": "15% de aumento a los PS y la recuperación de las unidades en presencia de 5 o más elementos.",
+    "id": "15% kenaikan HP & Pulih semua Unit jika ada 5 elemen ke atas",
+    "pt": "15% de reforço no HP e Rec de todas as unidades quando 5 ou mais elementos estão presentes",
+    "th": "15% เพิ่มค่า HP กับ ฟื้นฟู ของยูนิตทั้งหมด เมื่อมีตั้งแต่ 5 ธาตุขึ้นไปอยู่ในทีม",
+    "vi": "Tăng 15% Thể lực & Hồi phục của tất cả các quái khi có 5 yếu tố hoặc nhiều hơn"
+  },
+  "MST_LEADERSKILLS_2210_NAME": {
+    "en": "Five Brights Cure",
+    "es": "Cura de cinco brillos",
+    "id": "Lima Obat Cerah",
+    "pt": "Cura dos Cinco Brilhos",
+    "th": "ไฟฟ์ไบรท์เคียวเออร์",
+    "vi": "Chữa trị năm yếu tố"
+  },
+  "MST_LEADERSKILLS_2211_DESCRIPTION": {
+    "en": "30% boost to HP & Rec of all Units when 5 elements or more are present",
+    "es": "30% de aumento a los PS y la recuperación de todas las unidades en presencia de 5 o más elementos.",
+    "id": "30% kenaikan HP & Pulih semua Unit jika ada 5 elemen ke atas",
+    "pt": "30% de reforço no HP e Rec de todas as unidades quando 5 ou mais elementos estão presentes",
+    "th": "30% เพิ่มค่า HP กับ ฟื้นฟู ของยูนิตทั้งหมด เมื่อมีตั้งแต่ 5 ธาตุขึ้นไปอยู่ในทีม",
+    "vi": "Tăng 30% Thể lực & Hồi phục của tất cả các quái khi có 5 yếu tố hoặc nhiều hơn"
+  },
+  "MST_LEADERSKILLS_2211_NAME": {
+    "en": "Divine Five Brights Cure",
+    "es": "Cura de cinco brillos divina",
+    "id": "Lima Obat Cerah Ilahi",
+    "pt": "Cura Divina dos Cinco Brilhos",
+    "th": "ดิไวน์ไฟฟ์ไบรท์เคียวเออร์",
+    "vi": "Chữa trị năm yếu tố siêu phàm"
+  },
+  "MST_LEADERSKILLS_2212_DESCRIPTION": {
+    "en": "50% boost to Atk of all Units when 5 elements or more are present & reduction in BB gauge required for BB ",
+    "es": "50% de aumento de ataque a todas las unidades en presencia de cinco o más elementos. Reducción en el indicador BB necesario para BB ",
+    "id": "50% menambah Serangan semua Unit saat ada 5 elemen atau lebih & mengurangi syarat meteran untuk BB",
+    "pt": "Bônus de 50% no ATQ de todas as unidades quando 5 ou mais elementos estão presentes e redução da barra de BB necessária para BB",
+    "th": "50% เพิ่มค่าโจมตี ของทุกยูนิต เมื่อมียูนิตตั้งแต่ 5 ธาตุขึ้นไปอยู่ในทีม และ ลดความต้องการเกจ BB ที่ต้องการสำหรับ BB",
+    "vi": "Tăng 50% sức Tấn công của tất cả các quái khi có 5 yếu tố hoặc nhiều hơn xuất hiện & giảm vạch Tăng cường can đảm cần có để Tăng cường can đảm "
+  },
+  "MST_LEADERSKILLS_2212_NAME": {
+    "en": "Five Lights' Hellion",
+    "es": "Demonio de las cinco luces",
+    "id": "Kenakalan Lima Terang",
+    "pt": "Hellion Cinco Luzes",
+    "th": "ไฟว์ ไลท์ เฮลเลี่ยน",
+    "vi": "Kẻ Quấy Rầy của Ngũ Quang"
+  },
+  "MST_LEADERSKILLS_2213_DESCRIPTION": {
+    "en": "50% boost to Atk of all Units when 5 elements or more are present & reduces the amount of BB gauge used during BB",
+    "es": "50% de aumento de ataque a todas las unidades en presencia de cinco o más elementos. Reduce la cantidad de BB usado durante BB",
+    "id": "50% menambah Serangan semua Unit saat ada 5 elemen atau lebih & mengurangi jumlah meteran BB yang dipakai selama BB",
+    "pt": "Bônus de 50% no ATQ de todas as unidades quando 5 ou mais elementos estão presentes e redução da barra de BB necessária para BB",
+    "th": "50% เพิ่มค่าโจมตี ของทุกยูนิต เมื่อมียูนิตตั้งแต่ 5 ธาตุขึ้นไปอยู่ในทีม และ ลดปริมาณของเกจ BB ที่ใช้ระหว่าง BB",
+    "vi": "Tăng 50% sức Tấn công của tất cả các quái khi có 5 yếu tố hoặc nhiều hơn xuất hiện & giảm lượng vạch Tăng cường can đảm được sử dụng khi Tăng cường can đảm"
+  },
+  "MST_LEADERSKILLS_2213_NAME": {
+    "en": "Five Lights' Supremacy",
+    "es": "Supremacía de cinco luces",
+    "id": "Supremasi Lima Terang",
+    "pt": "Supremacia Cinco Luzes",
+    "th": "ไฟว์ ไลท์ สุพรีมาซี่",
+    "vi": "Uy Quyền T.Cao của Ngũ Quang"
+  },
+  "MST_LEADERSKILLS_2214_DESCRIPTION": {
+    "en": "50% boost to Atk of all Units when 5 elements or more are present, slightly reduces BB gauge required for BB & slightly boosts BB gauge",
+    "es": "50% boost to Atk of all Units when 5 elements or more are present, slightly reduces BB gauge required for BB & slightly boosts BB gauge",
+    "id": "50% ekstra Serangan semua Unit saat ada 5 elemen atau lebih, agak mengurangi syarat meteran BB untuk BB & agak menambah meteran BB",
+    "pt": "50% boost to Atk of all Units when 5 elements or more are present, slightly reduces BB gauge required for BB & slightly boosts BB gauge",
+    "th": "50% เพิ่มพลังโจมตีให้กับทุกยูนิตเมื่อมี 5 ธาตุหรือมากกว่า, ลดบีบีเกจที่ต้องการลงเล็กน้อย, เพิ่มบีบีเกจเล็กน้อย",
+    "vi": "50% boost to Atk of all Units when 5 elements or more are present, slightly reduces BB gauge required for BB & slightly boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_2214_NAME": {
+    "en": "Five Brave Lights' Power",
+    "es": "Five Brave Lights' Power",
+    "id": "Lima Kekuatan Sinar Berani",
+    "pt": "Five Brave Lights' Power",
+    "th": "ไฟฟ์ เบรฟ ไลท์ พาวเวอร์",
+    "vi": "Five Brave Lights' Power"
+  },
+  "MST_LEADERSKILLS_2215_DESCRIPTION": {
+    "en": "100% boost to Atk of all Units when 5 elements or more are present, slightly reduces BB gauge required for BB & slightly boosts BB gauge",
+    "es": "100% boost to Atk of all Units when 5 elements or more are present, slightly reduces BB gauge required for BB & slightly boosts BB gauge",
+    "id": "100% ekstra Serangan semua Unit saat ada 5 elemen atau lebih, agak mengurangi syarat meteran BB untuk BB & agak menambah meteran BB",
+    "pt": "100% boost to Atk of all Units when 5 elements or more are present, slightly reduces BB gauge required for BB & slightly boosts BB gauge",
+    "th": "100% เพิ่มพลังโจมตีให้กับทุกยูนิตเมื่อมี 5 ธาตุหรือมากกว่า, ลดบีบีเกจที่ต้องการลงเล็กน้อย, เพิ่มบีบีเกจเล็กน้อย",
+    "vi": "100% boost to Atk of all Units when 5 elements or more are present, slightly reduces BB gauge required for BB & slightly boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_2215_NAME": {
+    "en": "Five Brave Lights' Essence",
+    "es": "Five Brave Lights' Essence",
+    "id": "Lima Esensi Sinar Berani",
+    "pt": "Five Brave Lights' Essence",
+    "th": "ไฟฟ์ เบรฟ ไลท์ เอสเซนท์",
+    "vi": "Five Brave Lights' Essence"
+  },
+  "MST_LEADERSKILLS_2219_DESCRIPTION": {
+    "en": "30% boost to max HP and 100% boost to Atk of all allies when 5 elements or more are present & greatly boosts BB gauge fill rate",
+    "es": "+30% a los PS máx., +100% al ATQ de los aliados en presencia de 5 o más elementos y potencia notablemente el nivel de carga del indicador BB",
+    "id": "30% ekstra maks HP dan 100% ekstra Serangan semua sekutu saat ada 5 elemen ke atas & amat menambah pengisian meteran BB",
+    "pt": "Reforço de 30% no HP máx. e de 100% no ATQ de todos os aliados quando 5 elementos ou mais estiverem presentes, e grande reforço na taxa de preenchimento da barra BB",
+    "th": "30% เพิ่ม HP สูงสุด และ 100% เพิมพลังโจมตีให้ทีมเมื่อยูนิต 5 ธาตุในทีมหรือมากกว่า และเพิ่มอัตราการเติม BB เกจอย่างมาก",
+    "vi": "30% boost to max HP and 100% boost to Atk of all allies when 5 elements or more are present & greatly boosts BB gauge fill rate"
+  },
   "MST_LEADERSKILLS_2219_NAME": {
     "en": "Five Lights' Soul",
     "es": "Alma de cinco luces",
@@ -15295,6 +15407,22 @@
     "th": "Holy Crusade",
     "vi": "Holy Crusade"
   },
+  "MST_LEADERSKILLS_830978_DESCRIPTION": {
+    "en": "140% all parameters, 250% all elemental damage, 20% damage reduction for 1 turn when damage taken is over 5k, fills BB gauge each turn & 30% OD gauge fill rate",
+    "es": "140% all parameters, 250% all elemental damage, 20% damage reduction for 1 turn when damage taken is over 5k, fills BB gauge each turn & 30% OD gauge fill rate",
+    "id": "140% all parameters, 250% all elemental damage, 20% damage reduction for 1 turn when damage taken is over 5k, fills BB gauge each turn & 30% OD gauge fill rate",
+    "pt": "140% all parameters, 250% all elemental damage, 20% damage reduction for 1 turn when damage taken is over 5k, fills BB gauge each turn & 30% OD gauge fill rate",
+    "th": "140% all parameters, 250% all elemental damage, 20% damage reduction for 1 turn when damage taken is over 5k, fills BB gauge each turn & 30% OD gauge fill rate",
+    "vi": "140% all parameters, 250% all elemental damage, 20% damage reduction for 1 turn when damage taken is over 5k, fills BB gauge each turn & 30% OD gauge fill rate"
+  },
+  "MST_LEADERSKILLS_830978_NAME": {
+    "en": "Summer Miracle",
+    "es": "Summer Miracle",
+    "id": "Summer Miracle",
+    "pt": "Summer Miracle",
+    "th": "Summer Miracle",
+    "vi": "Summer Miracle"
+  },
   "MST_LEADERSKILLS_840047_DESCRIPTION": {
     "en": "100% boost to Atk, 60% boost to Def, max HP of Thunder types, 10% damage reduction from Water, Thunder types, considerably reduces BB gauge required for BB & probable considerable reduction of BB gauge fill rate for 2 turns",
     "es": "100% boost to Atk, 60% boost to Def, max HP of Thunder types, 10% damage reduction from Water, Thunder types, considerably reduces BB gauge required for BB & probable considerable reduction of BB gauge fill rate for 2 turns",
@@ -18286,6 +18414,22 @@
     "pt": "Miss Anthropy",
     "th": "Miss Anthropy",
     "vi": "Miss Anthropy"
+  },
+  "MST_LEADERSKILLS_860978_DESCRIPTION": {
+    "en": "140% all parameters, 25% reduction to BB activation cost, 100% critical, elemental damage reduction, 50% BC, HC, 18% Item, 60% Zel, Karma drop rates & 25% EXP gained",
+    "es": "140% all parameters, 25% reduction to BB activation cost, 100% critical, elemental damage reduction, 50% BC, HC, 18% Item, 60% Zel, Karma drop rates & 25% EXP gained",
+    "id": "140% all parameters, 25% reduction to BB activation cost, 100% critical, elemental damage reduction, 50% BC, HC, 18% Item, 60% Zel, Karma drop rates & 25% EXP gained",
+    "pt": "140% all parameters, 25% reduction to BB activation cost, 100% critical, elemental damage reduction, 50% BC, HC, 18% Item, 60% Zel, Karma drop rates & 25% EXP gained",
+    "th": "140% all parameters, 25% reduction to BB activation cost, 100% critical, elemental damage reduction, 50% BC, HC, 18% Item, 60% Zel, Karma drop rates & 25% EXP gained",
+    "vi": "140% all parameters, 25% reduction to BB activation cost, 100% critical, elemental damage reduction, 50% BC, HC, 18% Item, 60% Zel, Karma drop rates & 25% EXP gained"
+  },
+  "MST_LEADERSKILLS_860978_NAME": {
+    "en": "Awakened Bloodlust",
+    "es": "Awakened Bloodlust",
+    "id": "Awakened Bloodlust",
+    "pt": "Awakened Bloodlust",
+    "th": "Awakened Bloodlust",
+    "vi": "Awakened Bloodlust"
   },
   "MST_LEADERSKILLS_8700_DESCRIPTION": {
     "en": "15% reduction of damage taken from Water and Fire types",
@@ -22527,6 +22671,38 @@
     "th": "Understand this, and the armies of darkness shall fall.",
     "vi": "Understand this, and the armies of darkness shall fall."
   },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2046_MESSAGES": {
+    "en": "Whoa, these shellwalkers look pretty nasty!",
+    "es": "Whoa, these shellwalkers look pretty nasty!",
+    "id": "Whoa, these shellwalkers look pretty nasty!",
+    "pt": "Whoa, these shellwalkers look pretty nasty!",
+    "th": "Whoa, these shellwalkers look pretty nasty!",
+    "vi": "Whoa, these shellwalkers look pretty nasty!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2047_MESSAGES": {
+    "en": "We should take a careful assessment of their conditions...",
+    "es": "We should take a careful assessment of their conditions...",
+    "id": "We should take a careful assessment of their conditions...",
+    "pt": "We should take a careful assessment of their conditions...",
+    "th": "We should take a careful assessment of their conditions...",
+    "vi": "We should take a careful assessment of their conditions..."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2048_MESSAGES": {
+    "en": "...And apply the right moves to break their shells!",
+    "es": "...And apply the right moves to break their shells!",
+    "id": "...And apply the right moves to break their shells!",
+    "pt": "...And apply the right moves to break their shells!",
+    "th": "...And apply the right moves to break their shells!",
+    "vi": "...And apply the right moves to break their shells!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2049_MESSAGES": {
+    "en": "If we work together... We'll beat them!",
+    "es": "If we work together... We'll beat them!",
+    "id": "If we work together... We'll beat them!",
+    "pt": "If we work together... We'll beat them!",
+    "th": "If we work together... We'll beat them!",
+    "vi": "If we work together... We'll beat them!"
+  },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_204_MESSAGES": {
     "en": "But you shall go no farther.<br>Behold my true power!",
     "es": "Pero no podrás seguir avanzando.<br>¡Contempla mi verdadero poder!",
@@ -22535,6 +22711,86 @@
     "th": "แต่เจ้าคงไปต่อไมได้แล้วล่ะ<br>รับพลังที่แท้จริงของข้าไปซะ!",
     "vi": "But you shall go no farther.<br>Behold my true power!"
   },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2050_MESSAGES": {
+    "en": "I'm heeere! ...Hmm? What's that?",
+    "es": "I'm heeere! ...Hmm? What's that?",
+    "id": "I'm heeere! ...Hmm? What's that?",
+    "pt": "I'm heeere! ...Hmm? What's that?",
+    "th": "I'm heeere! ...Hmm? What's that?",
+    "vi": "I'm heeere! ...Hmm? What's that?"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2051_MESSAGES": {
+    "en": "Razorfins! And they're accompanied by a cephalopod!",
+    "es": "Razorfins! And they're accompanied by a cephalopod!",
+    "id": "Razorfins! And they're accompanied by a cephalopod!",
+    "pt": "Razorfins! And they're accompanied by a cephalopod!",
+    "th": "Razorfins! And they're accompanied by a cephalopod!",
+    "vi": "Razorfins! And they're accompanied by a cephalopod!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2052_MESSAGES": {
+    "en": "We've got to get rid of that squid first!",
+    "es": "We've got to get rid of that squid first!",
+    "id": "We've got to get rid of that squid first!",
+    "pt": "We've got to get rid of that squid first!",
+    "th": "We've got to get rid of that squid first!",
+    "vi": "We've got to get rid of that squid first!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2053_MESSAGES": {
+    "en": "Let's all do our best!",
+    "es": "Let's all do our best!",
+    "id": "Let's all do our best!",
+    "pt": "Let's all do our best!",
+    "th": "Let's all do our best!",
+    "vi": "Let's all do our best!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2054_MESSAGES": {
+    "en": "Ugh, they're swarming! I can't move...",
+    "es": "Ugh, they're swarming! I can't move...",
+    "id": "Ugh, they're swarming! I can't move...",
+    "pt": "Ugh, they're swarming! I can't move...",
+    "th": "Ugh, they're swarming! I can't move...",
+    "vi": "Ugh, they're swarming! I can't move..."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2055_MESSAGES": {
+    "en": "We'll have to cover each other as much as possible!",
+    "es": "We'll have to cover each other as much as possible!",
+    "id": "We'll have to cover each other as much as possible!",
+    "pt": "We'll have to cover each other as much as possible!",
+    "th": "We'll have to cover each other as much as possible!",
+    "vi": "We'll have to cover each other as much as possible!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2056_MESSAGES": {
+    "en": "If we take them out wave by wave, we'll have more space to breathe!",
+    "es": "If we take them out wave by wave, we'll have more space to breathe!",
+    "id": "If we take them out wave by wave, we'll have more space to breathe!",
+    "pt": "If we take them out wave by wave, we'll have more space to breathe!",
+    "th": "If we take them out wave by wave, we'll have more space to breathe!",
+    "vi": "If we take them out wave by wave, we'll have more space to breathe!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2057_MESSAGES": {
+    "en": "Come on, everyone!",
+    "es": "Come on, everyone!",
+    "id": "Come on, everyone!",
+    "pt": "Come on, everyone!",
+    "th": "Come on, everyone!",
+    "vi": "Come on, everyone!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2058_MESSAGES": {
+    "en": "You're here! Thank goodness... But the leviathan's on a rampage!",
+    "es": "You're here! Thank goodness... But the leviathan's on a rampage!",
+    "id": "You're here! Thank goodness... But the leviathan's on a rampage!",
+    "pt": "You're here! Thank goodness... But the leviathan's on a rampage!",
+    "th": "You're here! Thank goodness... But the leviathan's on a rampage!",
+    "vi": "You're here! Thank goodness... But the leviathan's on a rampage!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2059_MESSAGES": {
+    "en": "I can't move from here right now...",
+    "es": "I can't move from here right now...",
+    "id": "I can't move from here right now...",
+    "pt": "I can't move from here right now...",
+    "th": "I can't move from here right now...",
+    "vi": "I can't move from here right now..."
+  },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_205_MESSAGES": {
     "en": "Cornered by a human?!<br>I, who have assimilated countless gods?!",
     "es": "¡¿Arrinconado por un humano?!<br>¡¿Yo, que he asimilado a cientos de dioses?!",
@@ -22542,6 +22798,22 @@
     "pt": "Derrotado por um humano?<br>Eu, que assimilei deuses incontáveis??",
     "th": "ถูกมนุษย์เอาชนะได้?!<br>ข้า ที่เป็นส่วนหนึ่งของเทพเนี่ยนะ?!",
     "vi": "Cornered by a human?!<br>I, who have assimilated countless gods?!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2060_MESSAGES": {
+    "en": "But that doesn't mean I can't support you with my skills!",
+    "es": "But that doesn't mean I can't support you with my skills!",
+    "id": "But that doesn't mean I can't support you with my skills!",
+    "pt": "But that doesn't mean I can't support you with my skills!",
+    "th": "But that doesn't mean I can't support you with my skills!",
+    "vi": "But that doesn't mean I can't support you with my skills!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2061_MESSAGES": {
+    "en": "We can do this!",
+    "es": "We can do this!",
+    "id": "We can do this!",
+    "pt": "We can do this!",
+    "th": "We can do this!",
+    "vi": "We can do this!"
   },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_206_MESSAGES": {
     "en": "I am the Beast God...<br>The Beast God Afla Dilith!<br>I shall not lose to the likes<br>of you!",
@@ -92350,189 +92622,5 @@
     "pt": "Zelban Imperador das Lâminas",
     "th": "เบลด เอ็มเพอเรอร์ เซลบาห์ล",
     "vi": "Blade Emperor Zelban"
-  },
-  "MST_MONSTERS_505500_NAME": {
-    "en": "Hundred Tails Neochimera",
-    "es": "Hundred Tails Neochimera",
-    "id": "Penjudi Zeul",
-    "pt": "Hundred Tails Neochimera",
-    "th": "ฮันเดรด เทล นีโอชิเมร่า",
-    "vi": "Hundred Tails Neochimera"
-  },
-  "MST_MONSTERS_505501_NAME": {
-    "en": "Hundred Tails Neochimera",
-    "es": "Hundred Tails Neochimera",
-    "id": "Penjudi Kakap Zeul",
-    "pt": "Hundred Tails Neochimera",
-    "th": "ฮันเดรด เทล นีโอชิเมร่า",
-    "vi": "Hundred Tails Neochimera"
-  },
-  "MST_MONSTERS_50550_NAME": {
-    "en": "Angel",
-    "es": "Ángel",
-    "id": "Malaikat",
-    "pt": "Anjo",
-    "th": "นางฟ้า",
-    "vi": "Thiên thần"
-  },
-  "MST_MONSTERS_50551_NAME": {
-    "en": "Angel",
-    "es": "Ángel",
-    "id": "Malaikat",
-    "pt": "Anjo",
-    "th": "นางฟ้า",
-    "vi": "Thiên thần"
-  },
-  "MST_MONSTERS_50552_NAME": {
-    "en": "Angel",
-    "es": "Ángel",
-    "id": "Malaikat",
-    "pt": "Anjo",
-    "th": "นางฟ้า",
-    "vi": "Thiên thần"
-  },
-  "MST_MONSTERS_50553_NAME": {
-    "en": "Angel",
-    "es": "Ángel",
-    "id": "Malaikat",
-    "pt": "Anjo",
-    "th": "นางฟ้า",
-    "vi": "Thiên thần"
-  },
-  "MST_MONSTERS_50554_NAME": {
-    "en": "Angel",
-    "es": "Ángel",
-    "id": "Malaikat",
-    "pt": "Anjo",
-    "th": "นางฟ้า",
-    "vi": "Thiên thần"
-  },
-  "MST_MONSTERS_50555_NAME": {
-    "en": "Angel",
-    "es": "Ángel",
-    "id": "Malaikat",
-    "pt": "Anjo",
-    "th": "นางฟ้า",
-    "vi": "Thiên thần"
-  },
-  "MST_MONSTERS_50556_NAME": {
-    "en": "Angel",
-    "es": "Ángel",
-    "id": "Malaikat",
-    "pt": "Anjo",
-    "th": "นางฟ้า",
-    "vi": "Thiên thần"
-  },
-  "MST_MONSTERS_50557_NAME": {
-    "en": "Angel",
-    "es": "Ángel",
-    "id": "Dewi",
-    "pt": "Anjo",
-    "th": "นางฟ้า",
-    "vi": "Thiên thần"
-  },
-  "MST_MONSTERS_505600_NAME": {
-    "en": "Decay Demon Melord",
-    "es": "Decay Demon Melord",
-    "id": "Hujan Kilat Zoldark",
-    "pt": "Decay Demon Melord",
-    "th": "ดีเคย์ เดม่อน เมลอร์ด",
-    "vi": "Decay Demon Melord"
-  },
-  "MST_MONSTERS_505601_NAME": {
-    "en": "Decay Demon Melord",
-    "es": "Decay Demon Melord",
-    "id": "Hujan Kilat Zoldark",
-    "pt": "Decay Demon Melord",
-    "th": "ดีเคย์ เดม่อน เมลอร์ด",
-    "vi": "Decay Demon Melord"
-  },
-  "MST_MONSTERS_505700_NAME": {
-    "en": "Ragruvord",
-    "es": "Ragruvord",
-    "id": "Badai Listrik Eldora",
-    "pt": "Ragruvord",
-    "th": "แรคกรูวอร์ด",
-    "vi": "Ragruvord"
-  },
-  "MST_MONSTERS_505701_NAME": {
-    "en": "Ragruvord",
-    "es": "Ragruvord",
-    "id": "Bahamut",
-    "pt": "Ragruvord",
-    "th": "แรคกรูวอร์ด",
-    "vi": "Ragruvord"
-  },
-  "MST_MONSTERS_505800_NAME": {
-    "en": "War Demon Shusui",
-    "es": "War Demon Shusui",
-    "id": "Raja Berani Hogar",
-    "pt": "War Demon Shusui",
-    "th": "วอ เดม่อน ชูซุย",
-    "vi": "War Demon Shusui"
-  },
-  "MST_MONSTERS_505801_NAME": {
-    "en": "War Demon Shusui",
-    "es": "War Demon Shusui",
-    "id": "Bijak Ningrat Fadahl",
-    "pt": "War Demon Shusui",
-    "th": "วอ เดม่อน ชูซุย",
-    "vi": "War Demon Shusui"
-  },
-  "MST_MONSTERS_505802_NAME": {
-    "en": "War Demon Shusui",
-    "es": "War Demon Shusui",
-    "id": "Juara Saleh Krantz",
-    "pt": "War Demon Shusui",
-    "th": "วอ เดม่อน ชูซุย",
-    "vi": "War Demon Shusui"
-  },
-  "MST_MONSTERS_505803_NAME": {
-    "en": "War Demon Shusui",
-    "es": "War Demon Shusui",
-    "id": "Lagu Gelap Eric",
-    "pt": "War Demon Shusui",
-    "th": "วอ เดม่อน ชูซุย",
-    "vi": "War Demon Shusui"
-  },
-  "MST_MONSTERS_505804_NAME": {
-    "en": "War Demon Shusui",
-    "es": "War Demon Shusui",
-    "id": "Setan Perang Shusui",
-    "pt": "War Demon Shusui",
-    "th": "วอร์ เดม่อน ชูซุย",
-    "vi": "War Demon Shusui"
-  },
-  "MST_MONSTERS_505805_NAME": {
-    "en": "War Demon Shusui",
-    "es": "War Demon Shusui",
-    "id": "Setan Perang Shusui",
-    "pt": "War Demon Shusui",
-    "th": "วอร์ เดม่อน ชูซุย",
-    "vi": "War Demon Shusui"
-  },
-  "MST_MONSTERS_505900_NAME": {
-    "en": "Guile Demon Mora",
-    "es": "Guile Demon Mora",
-    "id": "Setan Tipu Daya Mora",
-    "pt": "Guile Demon Mora",
-    "th": "กีล เดม่อน โมร่า",
-    "vi": "Guile Demon Mora"
-  },
-  "MST_MONSTERS_505901_NAME": {
-    "en": "Guile Demon Mora",
-    "es": "Guile Demon Mora",
-    "id": "Setan Tipu Daya Mora",
-    "pt": "Guile Demon Mora",
-    "th": "กีล เดม่อน โมร่า",
-    "vi": "Guile Demon Mora"
-  },
-  "MST_MONSTERS_506000_NAME": {
-    "en": "Heresy Demon Kalon",
-    "es": "Heresy Demon Kalon",
-    "id": "Setan Bidaah Kalon",
-    "pt": "Heresy Demon Kalon",
-    "th": "เฮเรซี่ เดม่อน คาลอน",
-    "vi": "Heresy Demon Kalon"
   }
 }
