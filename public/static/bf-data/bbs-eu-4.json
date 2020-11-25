@@ -122229,7 +122229,13 @@
       }
     ],
     "name": "Bye-bye bomb!",
-    "attackInfo": []
+    "attackInfo": [
+      {
+        "id": "42",
+        "target": "AOE",
+        "hits": 4
+      }
+    ]
   },
   "4001700": {
     "damage frames": [

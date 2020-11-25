@@ -1,20 +1,4 @@
 {
-  "MST_SKILLS_2840878_NAME": {
-    "en": "Ahahahaha!",
-    "es": "Ahahahaha!",
-    "id": "Ahahahaha!",
-    "pt": "Ahahahaha!",
-    "th": "Ahahahaha!",
-    "vi": "Ahahahaha!"
-  },
-  "MST_SKILLS_2840888_DESCRIPTION": {
-    "en": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
-    "es": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
-    "id": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
-    "pt": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
-    "th": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
-    "vi": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance"
-  },
   "MST_SKILLS_2840888_NAME": {
     "en": "Three Steps to Śūnyatā",
     "es": "Three Steps to Śūnyatā",
@@ -776,12 +760,12 @@
     "vi": "Mainspring Crescendo"
   },
   "MST_SKILLS_2850558_DESCRIPTION": {
-    "en": "26 combo massive Light attack on all foes, activates Light shield for 3 turns, enormously boosts Def, Rec relative to Atk for 3 turns, enormously boosts BB gauge for 3 turns, hugely boosts own Atk for 3 turns & greatly boosts own Spark damage for 3 turns",
-    "es": "26 combo massive Light attack on all foes, activates Light shield for 3 turns, enormously boosts Def, Rec relative to Atk for 3 turns, enormously boosts BB gauge for 3 turns, hugely boosts own Atk for 3 turns & greatly boosts own Spark damage for 3 turns",
-    "id": "26 combo massive Light attack on all foes, activates Light shield for 3 turns, enormously boosts Def, Rec relative to Atk for 3 turns, enormously boosts BB gauge for 3 turns, hugely boosts own Atk for 3 turns & greatly boosts own Spark damage for 3 turns",
-    "pt": "26 combo massive Light attack on all foes, activates Light shield for 3 turns, enormously boosts Def, Rec relative to Atk for 3 turns, enormously boosts BB gauge for 3 turns, hugely boosts own Atk for 3 turns & greatly boosts own Spark damage for 3 turns",
-    "th": "26 combo massive Light attack on all foes, activates Light shield for 3 turns, enormously boosts Def, Rec relative to Atk for 3 turns, enormously boosts BB gauge for 3 turns, hugely boosts own Atk for 3 turns & greatly boosts own Spark damage for 3 turns",
-    "vi": "26 combo massive Light attack on all foes, activates Light shield for 3 turns, enormously boosts Def, Rec relative to Atk for 3 turns, enormously boosts BB gauge for 3 turns, hugely boosts own Atk for 3 turns & greatly boosts own Spark damage for 3 turns"
+    "en": "26 combo Light attack on all foes (damage relative to remaining HP), adds Light shield for 4 turns, boosts Def, Rec relative to Atk for 4 turns, fills BB gauge for 4 turns, boosts own Atk for 4 turns & boosts own spark damage for 4 turns",
+    "es": "26 combo Light attack on all foes (damage relative to remaining HP), adds Light shield for 4 turns, boosts Def, Rec relative to Atk for 4 turns, fills BB gauge for 4 turns, boosts own Atk for 4 turns & boosts own spark damage for 4 turns",
+    "id": "26 combo Light attack on all foes (damage relative to remaining HP), adds Light shield for 4 turns, boosts Def, Rec relative to Atk for 4 turns, fills BB gauge for 4 turns, boosts own Atk for 4 turns & boosts own spark damage for 4 turns",
+    "pt": "26 combo Light attack on all foes (damage relative to remaining HP), adds Light shield for 4 turns, boosts Def, Rec relative to Atk for 4 turns, fills BB gauge for 4 turns, boosts own Atk for 4 turns & boosts own spark damage for 4 turns",
+    "th": "26 combo Light attack on all foes (damage relative to remaining HP), adds Light shield for 4 turns, boosts Def, Rec relative to Atk for 4 turns, fills BB gauge for 4 turns, boosts own Atk for 4 turns & boosts own spark damage for 4 turns",
+    "vi": "26 combo Light attack on all foes (damage relative to remaining HP), adds Light shield for 4 turns, boosts Def, Rec relative to Atk for 4 turns, fills BB gauge for 4 turns, boosts own Atk for 4 turns & boosts own spark damage for 4 turns"
   },
   "MST_SKILLS_2850558_NAME": {
     "en": "Mainspring Finale",
@@ -39679,6 +39663,22 @@
     "th": "Rock the Waves!",
     "vi": "Rock the Waves!"
   },
+  "MST_SKILLS_4830828_DESCRIPTION": {
+    "en": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, critical damage, Def relative to Atk, 100% damage reduction, damage taken boosts BB gauge and restores HP, damage taken inflicts Atk, Def reduction & 100% raises allies from KO",
+    "es": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, critical damage, Def relative to Atk, 100% damage reduction, damage taken boosts BB gauge and restores HP, damage taken inflicts Atk, Def reduction & 100% raises allies from KO",
+    "id": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, critical damage, Def relative to Atk, 100% damage reduction, damage taken boosts BB gauge and restores HP, damage taken inflicts Atk, Def reduction & 100% raises allies from KO",
+    "pt": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, critical damage, Def relative to Atk, 100% damage reduction, damage taken boosts BB gauge and restores HP, damage taken inflicts Atk, Def reduction & 100% raises allies from KO",
+    "th": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, critical damage, Def relative to Atk, 100% damage reduction, damage taken boosts BB gauge and restores HP, damage taken inflicts Atk, Def reduction & 100% raises allies from KO",
+    "vi": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, critical damage, Def relative to Atk, 100% damage reduction, damage taken boosts BB gauge and restores HP, damage taken inflicts Atk, Def reduction & 100% raises allies from KO"
+  },
+  "MST_SKILLS_4830828_NAME": {
+    "en": "Skyfall Avalanche",
+    "es": "Skyfall Avalanche",
+    "id": "Skyfall Avalanche",
+    "pt": "Skyfall Avalanche",
+    "th": "Skyfall Avalanche",
+    "vi": "Skyfall Avalanche"
+  },
   "MST_SKILLS_4830958_DESCRIPTION": {
     "en": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, spark damage, critical damage, Water, Earth elemental damage, BB gauge, spark critical, spark vulnerability infliction, 100% evasion & fully restores HP",
     "es": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, spark damage, critical damage, Water, Earth elemental damage, BB gauge, spark critical, spark vulnerability infliction, 100% evasion & fully restores HP",
@@ -39808,12 +39808,12 @@
     "vi": "Vấn đề bóng đêm "
   },
   "MST_SKILLS_4860578_DESCRIPTION": {
-    "en": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, spark damage, 100% Light, Dark damage reduction, spark damage restores HP & 100% raises allies from KO",
-    "es": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, spark damage, 100% Light, Dark damage reduction, spark damage restores HP & 100% raises allies from KO",
-    "id": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, spark damage, 100% Light, Dark damage reduction, spark damage restores HP & 100% raises allies from KO",
-    "pt": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, spark damage, 100% Light, Dark damage reduction, spark damage restores HP & 100% raises allies from KO",
-    "th": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, spark damage, 100% Light, Dark damage reduction, spark damage restores HP & 100% raises allies from KO",
-    "vi": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, spark damage, 100% Light, Dark damage reduction, spark damage restores HP & 100% raises allies from KO"
+    "en": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, spark damage, 100% Light, Dark damage reduction, spark damage restores HP, 100% raises allies from KO & perform 1 extra action within the same turn",
+    "es": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, spark damage, 100% Light, Dark damage reduction, spark damage restores HP, 100% raises allies from KO & perform 1 extra action within the same turn",
+    "id": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, spark damage, 100% Light, Dark damage reduction, spark damage restores HP, 100% raises allies from KO & perform 1 extra action within the same turn",
+    "pt": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, spark damage, 100% Light, Dark damage reduction, spark damage restores HP, 100% raises allies from KO & perform 1 extra action within the same turn",
+    "th": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, spark damage, 100% Light, Dark damage reduction, spark damage restores HP, 100% raises allies from KO & perform 1 extra action within the same turn",
+    "vi": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, spark damage, 100% Light, Dark damage reduction, spark damage restores HP, 100% raises allies from KO & perform 1 extra action within the same turn"
   },
   "MST_SKILLS_4860578_NAME": {
     "en": "Cosmic Inception",
@@ -92622,5 +92622,21 @@
     "pt": "Skill Release",
     "th": "Skill Release",
     "vi": "Skill Release"
+  },
+  "MST_SKILLS_830588_DESCRIPTION": {
+    "en": "20 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage considerably boosts BB gauge for 3 turns, enormously boosts BB gauge, probable huge 2 turn Atk, Def reduction & purges LS disable effects from one random ally",
+    "es": "20 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage considerably boosts BB gauge for 3 turns, enormously boosts BB gauge, probable huge 2 turn Atk, Def reduction & purges LS disable effects from one random ally",
+    "id": "20 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage considerably boosts BB gauge for 3 turns, enormously boosts BB gauge, probable huge 2 turn Atk, Def reduction & purges LS disable effects from one random ally",
+    "pt": "20 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage considerably boosts BB gauge for 3 turns, enormously boosts BB gauge, probable huge 2 turn Atk, Def reduction & purges LS disable effects from one random ally",
+    "th": "20 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage considerably boosts BB gauge for 3 turns, enormously boosts BB gauge, probable huge 2 turn Atk, Def reduction & purges LS disable effects from one random ally",
+    "vi": "20 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage considerably boosts BB gauge for 3 turns, enormously boosts BB gauge, probable huge 2 turn Atk, Def reduction & purges LS disable effects from one random ally"
+  },
+  "MST_SKILLS_830588_NAME": {
+    "en": "Skill Release EX",
+    "es": "Skill Release EX",
+    "id": "Skill Release EX",
+    "pt": "Skill Release EX",
+    "th": "Skill Release EX",
+    "vi": "Skill Release EX"
   }
 }

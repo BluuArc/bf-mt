@@ -1,4 +1,52 @@
 {
+  "MST_LEADERSKILLS_2206_NAME": {
+    "en": "Five Light's Destruction",
+    "es": "Destrucción de cinco luces",
+    "id": "Kehancuran Lima Cahaya",
+    "pt": "Destruição das Cinco Luzes",
+    "th": "ไฟฟ์ไลท์เดสทรัคชั่น",
+    "vi": "Ngũ quang hủy diệt"
+  },
+  "MST_LEADERSKILLS_2207_DESCRIPTION": {
+    "en": "50% boost to Atk power of all Units when 5 elements or more are present & increase in damage dealt during Spark",
+    "es": "+50% al poder de ataque de todas las unidades. Aumenta el daño infligido durante Chispas en presencia de 5 o más elementos",
+    "id": "50% tambah kekuatan Serang semua Unit & tambah merusak selama Percikan jika ada 5 elemen ke atas",
+    "pt": "Bônus de 50% no ATQ de todas as unidades e aumento no dano causado durante a Fagulha quando 5 ou mais elementos estão presentes",
+    "th": "50% เพิ่มพลังโจมตี ของทุกยูนิต และ เพิ่มความเสียหายที่สร้างระหว่างสปาร์ค เมื่อมี 5 ธาตุขึ้นไปอยู่ในทีม",
+    "vi": "Tăng 50% sức Tấn công của tất cả các quái & tăng mức thiệt hại trong Bắn tỉa khi có 5 yếu tố hoặc nhiều hơn"
+  },
+  "MST_LEADERSKILLS_2207_NAME": {
+    "en": "Five Light's Rage",
+    "es": "Ira de cinco luces",
+    "id": "Murka Lima Cahaya",
+    "pt": "Ira das Cinco Luzes",
+    "th": "ไฟฟ์ไลท์เรจ",
+    "vi": "Ngũ quang cuồng nộ"
+  },
+  "MST_LEADERSKILLS_2208_DESCRIPTION": {
+    "en": "50% boost to Atk power of all Units when 5 elements or more are present & small boost in HC production",
+    "es": "+ 50% al poder de ataque de todas las unidades. Pequeño aumento en la producción de CC en presencia de 5 o más elementos",
+    "id": "50% tambah kekuatan Serang semua Unit & agak menambah produksi HC jika ada 5 elemen ke atas",
+    "pt": "Bônus de 50% no ATQ de todas as unidades e pequeno bônus na produção de CC quando 5 ou mais elementos estão presentes",
+    "th": "50% เพิ่มพลังโจมตี ของทุกยูนิต และ เพิ่มการผลิต HC เล็กน้อย เมื่อมี 5 ธาตุขึ้นไปอยู่ในทีม",
+    "vi": "Tăng 50% sức Tấn công của tất cả các quái & tăng nhẹ lúc tạo Tinh thể trái tim khi có 5 yếu tố hoặc nhiều hơn"
+  },
+  "MST_LEADERSKILLS_2208_NAME": {
+    "en": "Five Light's Mercy",
+    "es": "Piedad de cinco luces",
+    "id": "Kemurahan Lima Cahaya",
+    "pt": "Clemência das Cinco Luzes",
+    "th": "ไฟฟ์ไลท์เมอซี่",
+    "vi": "Ngũ quang khoan hòa"
+  },
+  "MST_LEADERSKILLS_2209_DESCRIPTION": {
+    "en": "65% boost to Atk power of all Units when 5 elements or more are present",
+    "es": "+65% al poder de ataque de todas las unidades en presencia de 5 o más elementos",
+    "id": "65% tambah kekuatan Serang semua Unit jika ada 5 elemen ke atas",
+    "pt": "Bônus de 65% no ATQ de todas as unidades quando 5 ou mais elementos estão presentes",
+    "th": "65% เพิ่มพลังโจมตี ของทุกยูนิต เมื่อมี 5 ธาตุขึ้นไปอยู่ในทีม",
+    "vi": "Tăng 65% sức Tấn công của tất cả các quái khi có 5 yếu tố hoặc nhiều hơn"
+  },
   "MST_LEADERSKILLS_2209_NAME": {
     "en": "Five Light's Order",
     "es": "Orden de cinco luces",
@@ -16816,12 +16864,12 @@
     "vi": "Analytical Genius"
   },
   "MST_LEADERSKILLS_850558_DESCRIPTION": {
-    "en": "80% boost to Atk, max HP, 120% boost to Def, Rec of Light types, probable normal attack on all foes, probable damage reduction to 1 & adds Def ignoring effect to attack",
-    "es": "80% boost to Atk, max HP, 120% boost to Def, Rec of Light types, probable normal attack on all foes, probable damage reduction to 1 & adds Def ignoring effect to attack",
-    "id": "80% boost to Atk, max HP, 120% boost to Def, Rec of Light types, probable normal attack on all foes, probable damage reduction to 1 & adds Def ignoring effect to attack",
-    "pt": "80% boost to Atk, max HP, 120% boost to Def, Rec of Light types, probable normal attack on all foes, probable damage reduction to 1 & adds Def ignoring effect to attack",
-    "th": "80% boost to Atk, max HP, 120% boost to Def, Rec of Light types, probable normal attack on all foes, probable damage reduction to 1 & adds Def ignoring effect to attack",
-    "vi": "80% boost to Atk, max HP, 120% boost to Def, Rec of Light types, probable normal attack on all foes, probable damage reduction to 1 & adds Def ignoring effect to attack"
+    "en": "100% Atk, 140% Def, Rec, 100% max HP (Light), normal attacks may hit all foes, raises normal hit amount, probable damage reduction to 1& adds ignore Def to attack",
+    "es": "100% Atk, 140% Def, Rec, 100% max HP (Light), normal attacks may hit all foes, raises normal hit amount, probable damage reduction to 1& adds ignore Def to attack",
+    "id": "100% Atk, 140% Def, Rec, 100% max HP (Light), normal attacks may hit all foes, raises normal hit amount, probable damage reduction to 1& adds ignore Def to attack",
+    "pt": "100% Atk, 140% Def, Rec, 100% max HP (Light), normal attacks may hit all foes, raises normal hit amount, probable damage reduction to 1& adds ignore Def to attack",
+    "th": "100% Atk, 140% Def, Rec, 100% max HP (Light), normal attacks may hit all foes, raises normal hit amount, probable damage reduction to 1& adds ignore Def to attack",
+    "vi": "100% Atk, 140% Def, Rec, 100% max HP (Light), normal attacks may hit all foes, raises normal hit amount, probable damage reduction to 1& adds ignore Def to attack"
   },
   "MST_LEADERSKILLS_850558_NAME": {
     "en": "Thousand Moves Prodigy",
@@ -92590,37 +92638,5 @@
     "pt": "Mimir Senhora da Luz",
     "th": "ไลท์ลอร์ดมิเมียร์",
     "vi": "Light Lord Mimir"
-  },
-  "MST_MONSTERS_505300_NAME": {
-    "en": "Duel-SGX",
-    "es": "Duel-SGX",
-    "id": "Duel-SGX",
-    "pt": "SGX-Duelo",
-    "th": "ดูเอล-เอสจีเอ็กซ์",
-    "vi": "Duel-SGX"
-  },
-  "MST_MONSTERS_505301_NAME": {
-    "en": "Duel-SGX",
-    "es": "Duel-SGX",
-    "id": "Duel-SGX",
-    "pt": "SGX-Duelo",
-    "th": "ดูเอล-เอสจีเอ็กซ์",
-    "vi": "Duel-SGX"
-  },
-  "MST_MONSTERS_505400_NAME": {
-    "en": "Blade Emperor Zelban",
-    "es": "Emperador Zelban",
-    "id": "Kaisar Bilah Zelban",
-    "pt": "Zelban Imperador das Lâminas",
-    "th": "เบลด เอ็มเพอเรอร์ เซลบาห์ล",
-    "vi": "Blade Emperor Zelban"
-  },
-  "MST_MONSTERS_505401_NAME": {
-    "en": "Blade Emperor Zelban",
-    "es": "Emperador Zelban",
-    "id": "Kaisar Bilah Zelban",
-    "pt": "Zelban Imperador das Lâminas",
-    "th": "เบลด เอ็มเพอเรอร์ เซลบาห์ล",
-    "vi": "Blade Emperor Zelban"
   }
 }
