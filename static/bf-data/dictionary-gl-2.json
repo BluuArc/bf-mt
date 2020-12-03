@@ -1,4 +1,84 @@
 {
+  "MST_LEADERSKILLS_2201_NAME": {
+    "en": "Five Light's Force",
+    "es": "Fuerza de cinco luces",
+    "id": "Lima Gaya Terang",
+    "pt": "Força das Cinco Luzes",
+    "th": "ไฟฟ์ไลท์พาวฟอร์ซ",
+    "vi": "Sức mạnh của ánh sáng "
+  },
+  "MST_LEADERSKILLS_2202_DESCRIPTION": {
+    "en": "50% boost to Atk power when 5 elements or more are present & 10% boost to HP of all Units",
+    "es": "+50% al poder de ataque y +10% a los PS de todas las unidades en presencia de 5 o más elementos",
+    "id": "50% tambah kekuatan Serang & 10% tambah HP semua Unit jika ada 5 elemen ke atas",
+    "pt": "Bônus de 50% no ATQ e de 10% no HP de todas as unidades quando 5 ou mais elementos estão presentes",
+    "th": "50% เพิ่มพลังโจมตี และ 10% เพิ่มค่า HP ของทุกยูนิต เมื่อมี 5 ธาตุขึ้นไปอยู่ในทีม",
+    "vi": "Tăng 50% sức tấn công & tăng 10% Sinh lực của tất cả các quái khi có 5 yếu tố hoặc nhiều hơn"
+  },
+  "MST_LEADERSKILLS_2202_NAME": {
+    "en": "Five Light's Creation",
+    "es": "Creación de cinco luces",
+    "id": "Kreasi Lima Cahaya",
+    "pt": "Criação das Cinco Luzes",
+    "th": "ไฟฟ์ไลท์ครีเอชั่น",
+    "vi": "Ngũ quang sáng tạo"
+  },
+  "MST_LEADERSKILLS_2203_DESCRIPTION": {
+    "en": "50% boost to Atk power of all Units when 5 elements or more are present & fills BB gauge after each turn ",
+    "es": "+50% al poder de ataque de todas las unidades. Llena el indicador BB tras cada turno en presencia de 5 o más elementos",
+    "id": "50% tambah kekuatan Serang semua Unit & mengisi meteran BB seusai giliran jika ada 5 elemen ke atas",
+    "pt": "Bônus de 50% no ATQ de todas as unidades e enche a barra de BB após cada turno quando 5 ou mais elementos estão presentes",
+    "th": "50% เพิ่มพลังโจมตี ของทุกยูนิต และ เติมเกจ BB หลังจากแต่ละเทิร์น เมื่อมี 5 ธาตุขึ้นไปอยู่ในทีม",
+    "vi": "Tăng 50% sức tấn công của tất cả các quái & nạp vạch Tăng cường can đảm khi có 5 yếu tố hoặc nhiều hơn"
+  },
+  "MST_LEADERSKILLS_2203_NAME": {
+    "en": "Five Light's Aggression",
+    "es": "Agresión de cinco luces",
+    "id": "Agresi Lima Cahaya",
+    "pt": "Agressão das Cinco Luzes",
+    "th": "ไฟฟ์ไลท์เอ็กเกรสชั่น",
+    "vi": "Ngũ quang công kích"
+  },
+  "MST_LEADERSKILLS_2204_DESCRIPTION": {
+    "en": "50% boost to Atk power when 5 elements or more are present & 10% boost to Def and Rec of all Units ",
+    "es": "+50% al poder de ataque y +10% a la defensa y recuperación de todas las unidades en presencia de 5 o más elementos",
+    "id": "50% tambah kekuatan Serang, 10% tambah Tahan & Pulih semua Unit jika ada 5 elemen ke atas",
+    "pt": "Bônus de 50% no ATQ e de 10% na DEF e na REC de todas as unidades quando 5 ou mais elementos estão presentes",
+    "th": "50% เพิ่มพลังโจมตี และ 10% เพิ่มค่า ป้องกัน และ ฟื้นฟู ของทุกยูนิต เมื่อมี 5 ธาตุขึ้นไปอยู่ในทีม",
+    "vi": "Tăng 50% sức Tấn công & tăng 10% sức Phòng thủ và Hồi phục của tất cả các quái khi có 5 yếu tố hoặc nhiều hơn"
+  },
+  "MST_LEADERSKILLS_2204_NAME": {
+    "en": "Five Light's Fortitude",
+    "es": "Fortaleza de cinco luces",
+    "id": "Benteng Lima Cahaya",
+    "pt": "Força das Cinco Luzes",
+    "th": "ไฟฟ์ไลท์ฟอทิทิวด์",
+    "vi": "Ngũ quang nghị lực"
+  },
+  "MST_LEADERSKILLS_2205_DESCRIPTION": {
+    "en": "50% boost to Atk power of all Units when 5 elements or more are present & boost to BB gauge fill rate",
+    "es": "+50% al poder de ataque de todas las unidades. Aumenta el nivel de carga del indicador BB en presencia de 5 o más elementos.",
+    "id": "50% tambah kekuatan Serang semua Unit & makin mengisi meteran BB jika ada 5 elemen ke atas",
+    "pt": "Bônus de 50% no ATQ de todas as unidades e aumento na taxa de preenchimento da barra de BB quando 5 ou mais elementos estão presentes",
+    "th": "50% เพิ่มพลังโจมตี ของทุกยูนิต และ เพิ่มค่าอัตราการเติมเกจ BB เมื่อมี 5 ธาตุขึ้นไปอยู่ในทีม",
+    "vi": "Tăng 50% sức Tấn công của tất cả các quái & tăng tốc độ nạp vạch Tăng cường can đảm khi có 5 yếu tố hoặc nhiều hơn"
+  },
+  "MST_LEADERSKILLS_2205_NAME": {
+    "en": "Five Light's Spirit",
+    "es": "Espíritu de cinco luces",
+    "id": "Roh Lima Cahaya",
+    "pt": "Espírito das Cinco Luzes",
+    "th": "ไฟฟ์ไลท์สปิริต",
+    "vi": "Ngũ quang tinh thần"
+  },
+  "MST_LEADERSKILLS_2206_DESCRIPTION": {
+    "en": "50% boost to Atk power of all Units when 5 elements or more are present & small chance of ignoring an opponent's Def when attacking",
+    "es": "+50% al poder de ataque de todas las unidades. Leve posibilidad de ignorar la defensa del adversario al atacar en presencia de 5 o más elementos",
+    "id": "50% tambah kekuatan Serang semua Unit & kans kecil abaikan Pertahanan musuh jika ada 5 elemen ke atas",
+    "pt": "Bônus de 50% no ATQ de todas as unidades e pequena chance de anular a DEF de um inimigo ao atacar quando 5 ou mais elementos estão presentes",
+    "th": "50% เพิ่มพลังโจมตี ของทุกยูนิต และ โอกาสเล็กน้อยที่จะไม่สนค่าป้องกันของศัตรูขณะโจมตี เมื่อมี 5 ธาตุขึ้นไปอยู่ในทีม",
+    "vi": "Tăng 50% sức Tấn công của tất cả các quái & có vài cơ hội bỏ qua sức Phòng thủ của đối thủ lúc tấn công khi có 5 yếu tố hoặc nhiều hơn"
+  },
   "MST_LEADERSKILLS_2206_NAME": {
     "en": "Five Light's Destruction",
     "es": "Destrucción de cinco luces",
@@ -12576,12 +12656,12 @@
     "vi": "Unflinching Under Fire"
   },
   "MST_LEADERSKILLS_810288_DESCRIPTION": {
-    "en": "60% boost to Atk, max HP, damage taken boosts BB gauge, damage taken may restore HP & enormously boosts BB Atk when HP is above 50%",
-    "es": "60% boost to Atk, max HP, damage taken boosts BB gauge, damage taken may restore HP & enormously boosts BB Atk when HP is above 50%",
-    "id": "60% ekstra Serang, HP maks, kerusakan diderita menambah meteran BB, kerusakan diderita dapat pulihkan HP, ekstra jumbo BB Serang saat HP di atas 50%",
-    "pt": "60% boost to Atk, max HP, damage taken boosts BB gauge, damage taken may restore HP & enormously boosts BB Atk when HP is above 50%",
-    "th": "60% เพิ่มค่าให้ โจมตี, HP สูงสุด, ความเสียหายที่ได้รับ เพิ่มค่า เกจ BB, ความเสียหายที่ได้รับ อาจฟื้นคืน HP กับ เพิ่มค่ามหาศาลให้ BB โจมตี เมื่อ HP นั้นมากกว่า 50%",
-    "vi": "60% boost to Atk, max HP, damage taken boosts BB gauge, damage taken may restore HP & enormously boosts BB Atk when HP is above 50%"
+    "en": "150% Atk, max HP, 30% critical rate, damage taken fills BB gauge, damage taken may restore HP, 550% BB Atk when HP is above 50% & probable damage reduction to 1",
+    "es": "150% Atk, max HP, 30% critical rate, damage taken fills BB gauge, damage taken may restore HP, 550% BB Atk when HP is above 50% & probable damage reduction to 1",
+    "id": "150% Atk, max HP, 30% critical rate, damage taken fills BB gauge, damage taken may restore HP, 550% BB Atk when HP is above 50% & probable damage reduction to 1",
+    "pt": "150% Atk, max HP, 30% critical rate, damage taken fills BB gauge, damage taken may restore HP, 550% BB Atk when HP is above 50% & probable damage reduction to 1",
+    "th": "150% Atk, max HP, 30% critical rate, damage taken fills BB gauge, damage taken may restore HP, 550% BB Atk when HP is above 50% & probable damage reduction to 1",
+    "vi": "150% Atk, max HP, 30% critical rate, damage taken fills BB gauge, damage taken may restore HP, 550% BB Atk when HP is above 50% & probable damage reduction to 1"
   },
   "MST_LEADERSKILLS_810288_NAME": {
     "en": "Ironclad Orders of Flame",
@@ -15648,12 +15728,12 @@
     "vi": "Predictive Communique"
   },
   "MST_LEADERSKILLS_840288_DESCRIPTION": {
-    "en": "60% boost to Atk, max HP, hugely boosts critical hit rate, hugely boosts critical damage, negates all status ailments & damage taken boosts BB gauge",
-    "es": "60% boost to Atk, max HP, hugely boosts critical hit rate, hugely boosts critical damage, negates all status ailments & damage taken boosts BB gauge",
-    "id": "60% ekstra Serang, HP maks, amat menambah frekuensi pukulan ampuh, kerusakan ampuh; menegasi semua status penyakit & kerusakan diderita menambah meteran BB",
-    "pt": "60% boost to Atk, max HP, hugely boosts critical hit rate, hugely boosts critical damage, negates all status ailments & damage taken boosts BB gauge",
-    "th": "60% เพิ่มค่าให้ โจมตี, HP สูงสุด, เพิ่มค่าอย่างสูงให้ อัตราเกิดคริติคอล, เพิ่มค่าอย่างสูงให้ ความเสียหายคริติคอล, ลบสถานะผิดปกติทั้งหมด กับ ความเสียหายทีได้รับ เพิ่มค่า เกจ BB",
-    "vi": "60% boost to Atk, max HP, hugely boosts critical hit rate, hugely boosts critical damage, negates all status ailments & damage taken boosts BB gauge"
+    "en": "150% Atk, max HP, 30% critical rate, 250% critical damage, damage taken fills BB gauge, negates all status ailments and Atk, Def, Rec reduction & 25% reduction to BB activation cost",
+    "es": "150% Atk, max HP, 30% critical rate, 250% critical damage, damage taken fills BB gauge, negates all status ailments and Atk, Def, Rec reduction & 25% reduction to BB activation cost",
+    "id": "150% Atk, max HP, 30% critical rate, 250% critical damage, damage taken fills BB gauge, negates all status ailments and Atk, Def, Rec reduction & 25% reduction to BB activation cost",
+    "pt": "150% Atk, max HP, 30% critical rate, 250% critical damage, damage taken fills BB gauge, negates all status ailments and Atk, Def, Rec reduction & 25% reduction to BB activation cost",
+    "th": "150% Atk, max HP, 30% critical rate, 250% critical damage, damage taken fills BB gauge, negates all status ailments and Atk, Def, Rec reduction & 25% reduction to BB activation cost",
+    "vi": "150% Atk, max HP, 30% critical rate, 250% critical damage, damage taken fills BB gauge, negates all status ailments and Atk, Def, Rec reduction & 25% reduction to BB activation cost"
   },
   "MST_LEADERSKILLS_840288_NAME": {
     "en": "Hyperacoustic Motivation",
@@ -92566,77 +92646,5 @@
     "pt": "Mimir Dama da Luz",
     "th": "ไลท์ลอร์ดมิเมียร์",
     "vi": "Chúa tể Mimir"
-  },
-  "MST_MONSTERS_50517_NAME": {
-    "en": "Light Lord Mimir",
-    "es": "Dama sagrada Mimi",
-    "id": "Lord Terang Mimir",
-    "pt": "Mimir Dama da Luz",
-    "th": "ไลท์ลอร์ดมิเมียร์",
-    "vi": "Chúa tể Mimir"
-  },
-  "MST_MONSTERS_50518_NAME": {
-    "en": "Light Lord Mimir",
-    "es": "Dama sagrada Mimi",
-    "id": "Lord Terang Mimir",
-    "pt": "Mimir Dama da Luz",
-    "th": "ไลท์ลอร์ดมิเมียร์",
-    "vi": "Chúa tể Mimir"
-  },
-  "MST_MONSTERS_50519_NAME": {
-    "en": "Light Lord Mimir",
-    "es": "Dama sagrada Mimi",
-    "id": "Lord Terang Mimir",
-    "pt": "Mimir Senhora da Luz",
-    "th": "ไลท์ลอร์ดไมเมอร์",
-    "vi": "Light Lord Mimir"
-  },
-  "MST_MONSTERS_50520_NAME": {
-    "en": "Light Lord Mimir",
-    "es": "Dama sagrada Mimi",
-    "id": "Lord Terang Mimir",
-    "pt": "Mimir Senhora da Luz",
-    "th": "ไลท์ ลอร์ด มิเมียร์",
-    "vi": "Chúa Tể Ánh Sáng Mimir"
-  },
-  "MST_MONSTERS_50521_NAME": {
-    "en": "Light Lord Mimir",
-    "es": "Dama sagrada Mimi",
-    "id": "Lord Terang Mimir",
-    "pt": "Mimir Senhora da Luz",
-    "th": "ไลท์ ลอร์ด มิเมียร์",
-    "vi": "Chúa Tể Ánh Sáng Mimir"
-  },
-  "MST_MONSTERS_50522_NAME": {
-    "en": "Light Lord Mimir",
-    "es": "Dama sagrada Mimi",
-    "id": "Lord Terang Mimir",
-    "pt": "Mimir Senhora da Luz",
-    "th": "ไลท์ ลอร์ด มิเมียร์",
-    "vi": "Chúa Tể Ánh Sáng Mimir"
-  },
-  "MST_MONSTERS_50523_NAME": {
-    "en": "Light Lord Mimir",
-    "es": "Dama sagrada Mimi",
-    "id": "Lord Terang Mimir",
-    "pt": "Mimir Senhora da Luz",
-    "th": "ไลท์ ลอร์ด มิเมียร์",
-    "vi": "Chúa Tể Ánh Sáng Mimir"
-  },
-  "MST_MONSTERS_50524_NAME": {
-    "en": "Light Lord Mimir",
-    "es": "Dama sagrada Mimi",
-    "id": "Lord Terang Mimir",
-    "pt": "Mimir Senhora da Luz",
-    "th": "ไลท์ ลอร์ด ไมเมอร์",
-    "vi": "Light Lord Mimir"
-  },
-  "MST_MONSTERS_50525_NAME": {
-    "en": "Light Lord Mimir",
-    "es": "Dama sagrada Mimi",
-    "id": "Lord Terang Mimir",
-    "pt": "Mimir Senhora da Luz",
-    "th": "ไลท์ลอร์ดมิเมียร์",
-    "vi": "Light Lord Mimir"
   }
 }
