@@ -1,4 +1,28 @@
 {
+  "MST_LEADERSKILLS_2200_DESCRIPTION": {
+    "en": "25% boost to Atk power of all Units when 5 elements or more are present",
+    "es": "25% de aumento en poder de ataque de unidades en presencia de 5 o más elementos",
+    "id": "25% boost untuk kekuatan Serangan semua Unit jika ada 5 elemen atau lebih",
+    "pt": "Bônus de 25% no ATQ de todas as unidades quando 5 ou mais elementos estão presentes",
+    "th": "25% เพิ่มพลังโจมตีของทุกยูนิตเมื่อมีธาตุตั้งแต่ 5 ชนิดขึ้นไปในปาร์ตี้",
+    "vi": "Tăng 25% sức tấn công của các con quái vật khi có 5 yếu tố hoặc nhiều hơn "
+  },
+  "MST_LEADERSKILLS_2200_NAME": {
+    "en": "Five Light's Power",
+    "es": "Poder de cinco luces",
+    "id": "Lima Kekuatan Terang",
+    "pt": "Poder das Cinco Luzes",
+    "th": "ไฟฟ์ไลท์พาวเวอร์",
+    "vi": "Năng lượng của ánh sáng "
+  },
+  "MST_LEADERSKILLS_2201_DESCRIPTION": {
+    "en": "50% boost to Atk power of all Units when 5 elements or more are present",
+    "es": "50% de aumento en poder de ataque de unidades en presencia de 5 o más elementos",
+    "id": "50% boost untuk kekuatan Serangan semua Unit jika ada 5 elemen atau lebih",
+    "pt": "Bônus de 50% no ATQ de todas as unidades quando 5 ou mais elementos estão presentes",
+    "th": "50% เพิ่มพลังโจมตีของทุกยูนิตเมื่อมีธาตุตั้งแต่ 5 ชนิดขึ้นไปในปาร์ตี้",
+    "vi": "Tăng 50% sức tấn công của các con quái vật khi có 5 yếu tố hoặc nhiều hơn "
+  },
   "MST_LEADERSKILLS_2201_NAME": {
     "en": "Five Light's Force",
     "es": "Fuerza de cinco luces",
@@ -18526,6 +18550,22 @@
     "pt": "Umbra Aura",
     "th": "Umbra Aura",
     "vi": "Umbra Aura"
+  },
+  "MST_LEADERSKILLS_860958_DESCRIPTION": {
+    "en": "200% Atk, 140% Def, max HP and 30% critical rate (Dark), 250% critical damage, 400% BB Atk, fills BB gauge each turn & 100% critical, elemental damage reduction",
+    "es": "200% Atk, 140% Def, max HP and 30% critical rate (Dark), 250% critical damage, 400% BB Atk, fills BB gauge each turn & 100% critical, elemental damage reduction",
+    "id": "200% Atk, 140% Def, max HP and 30% critical rate (Dark), 250% critical damage, 400% BB Atk, fills BB gauge each turn & 100% critical, elemental damage reduction",
+    "pt": "200% Atk, 140% Def, max HP and 30% critical rate (Dark), 250% critical damage, 400% BB Atk, fills BB gauge each turn & 100% critical, elemental damage reduction",
+    "th": "200% Atk, 140% Def, max HP and 30% critical rate (Dark), 250% critical damage, 400% BB Atk, fills BB gauge each turn & 100% critical, elemental damage reduction",
+    "vi": "200% Atk, 140% Def, max HP and 30% critical rate (Dark), 250% critical damage, 400% BB Atk, fills BB gauge each turn & 100% critical, elemental damage reduction"
+  },
+  "MST_LEADERSKILLS_860958_NAME": {
+    "en": "Baleful Authority",
+    "es": "Baleful Authority",
+    "id": "Baleful Authority",
+    "pt": "Baleful Authority",
+    "th": "Baleful Authority",
+    "vi": "Baleful Authority"
   },
   "MST_LEADERSKILLS_860968_DESCRIPTION": {
     "en": "150% Atk, 100% max HP, 30% critical rate, 200% Dark elemental damage, fills BB gauge each turn, probable spark critical & probable damage reduction to 1",
