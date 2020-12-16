@@ -1,4 +1,28 @@
 {
+  "MST_SKILLS_2840958_NAME": {
+    "en": "Thunderous Vigilance",
+    "es": "Thunderous Vigilance",
+    "id": "Thunderous Vigilance",
+    "pt": "Thunderous Vigilance",
+    "th": "Thunderous Vigilance",
+    "vi": "Thunderous Vigilance"
+  },
+  "MST_SKILLS_2840968_DESCRIPTION": {
+    "en": "26 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 13 combo Thunder attack on single foe (25% active Pierce on Water, Thunder foes), 1 extra action for 1 turn, boosts spark damage for 4 turns, boosts critical damage for 4 turns & fills OD gauge at turn's end for 4 turns",
+    "es": "26 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 13 combo Thunder attack on single foe (25% active Pierce on Water, Thunder foes), 1 extra action for 1 turn, boosts spark damage for 4 turns, boosts critical damage for 4 turns & fills OD gauge at turn's end for 4 turns",
+    "id": "26 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 13 combo Thunder attack on single foe (25% active Pierce on Water, Thunder foes), 1 extra action for 1 turn, boosts spark damage for 4 turns, boosts critical damage for 4 turns & fills OD gauge at turn's end for 4 turns",
+    "pt": "26 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 13 combo Thunder attack on single foe (25% active Pierce on Water, Thunder foes), 1 extra action for 1 turn, boosts spark damage for 4 turns, boosts critical damage for 4 turns & fills OD gauge at turn's end for 4 turns",
+    "th": "26 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 13 combo Thunder attack on single foe (25% active Pierce on Water, Thunder foes), 1 extra action for 1 turn, boosts spark damage for 4 turns, boosts critical damage for 4 turns & fills OD gauge at turn's end for 4 turns",
+    "vi": "26 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 13 combo Thunder attack on single foe (25% active Pierce on Water, Thunder foes), 1 extra action for 1 turn, boosts spark damage for 4 turns, boosts critical damage for 4 turns & fills OD gauge at turn's end for 4 turns"
+  },
+  "MST_SKILLS_2840968_NAME": {
+    "en": "Overstimulate",
+    "es": "Overstimulate",
+    "id": "Overstimulate",
+    "pt": "Overstimulate",
+    "th": "Overstimulate",
+    "vi": "Overstimulate"
+  },
   "MST_SKILLS_2840_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -2000,12 +2024,12 @@
     "vi": "Midnight Deviousness"
   },
   "MST_SKILLS_2860558_DESCRIPTION": {
-    "en": "25 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts BB gauge for 3 turns, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Dark elemental damage for 3 turns & activates Dark shield for 3 turns",
-    "es": "25 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts BB gauge for 3 turns, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Dark elemental damage for 3 turns & activates Dark shield for 3 turns",
-    "id": "25 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts BB gauge for 3 turns, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Dark elemental damage for 3 turns & activates Dark shield for 3 turns",
-    "pt": "25 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts BB gauge for 3 turns, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Dark elemental damage for 3 turns & activates Dark shield for 3 turns",
-    "th": "25 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts BB gauge for 3 turns, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Dark elemental damage for 3 turns & activates Dark shield for 3 turns",
-    "vi": "25 combo massive Dark attack on all foes (damage relative to remaining HP), enormously boosts BB gauge for 3 turns, enormous 3 turn Atk, Def reduction, enormously boosts Atk, Def, Rec for 3 turns, enormously boosts Dark elemental damage for 3 turns & activates Dark shield for 3 turns"
+    "en": "25 combo Dark attack on all foes (damage relative to remaining HP), 4 turn Atk, Def reduction infliction, fills BB gauge for 4 turns, boosts Atk, Def, Rec and critical rate for 4 turns, boosts Dark elemental damage for 4 turns & adds Dark shield for 4 turns",
+    "es": "25 combo Dark attack on all foes (damage relative to remaining HP), 4 turn Atk, Def reduction infliction, fills BB gauge for 4 turns, boosts Atk, Def, Rec and critical rate for 4 turns, boosts Dark elemental damage for 4 turns & adds Dark shield for 4 turns",
+    "id": "25 combo Dark attack on all foes (damage relative to remaining HP), 4 turn Atk, Def reduction infliction, fills BB gauge for 4 turns, boosts Atk, Def, Rec and critical rate for 4 turns, boosts Dark elemental damage for 4 turns & adds Dark shield for 4 turns",
+    "pt": "25 combo Dark attack on all foes (damage relative to remaining HP), 4 turn Atk, Def reduction infliction, fills BB gauge for 4 turns, boosts Atk, Def, Rec and critical rate for 4 turns, boosts Dark elemental damage for 4 turns & adds Dark shield for 4 turns",
+    "th": "25 combo Dark attack on all foes (damage relative to remaining HP), 4 turn Atk, Def reduction infliction, fills BB gauge for 4 turns, boosts Atk, Def, Rec and critical rate for 4 turns, boosts Dark elemental damage for 4 turns & adds Dark shield for 4 turns",
+    "vi": "25 combo Dark attack on all foes (damage relative to remaining HP), 4 turn Atk, Def reduction infliction, fills BB gauge for 4 turns, boosts Atk, Def, Rec and critical rate for 4 turns, boosts Dark elemental damage for 4 turns & adds Dark shield for 4 turns"
   },
   "MST_SKILLS_2860558_NAME": {
     "en": "Cunning Finale",
@@ -39542,6 +39566,22 @@
     "pt": "Meteoro",
     "th": "ชู้ทติ้งสตาร์",
     "vi": "Ngôi sao bắn "
+  },
+  "MST_SKILLS_4810758_DESCRIPTION": {
+    "en": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, spark damage, critical damage, Atk relative to Def, spark critical, fully restores HP, 100% evasion, damage taken boosts BB gauge & damage taken inflicts Atk, Def reduction",
+    "es": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, spark damage, critical damage, Atk relative to Def, spark critical, fully restores HP, 100% evasion, damage taken boosts BB gauge & damage taken inflicts Atk, Def reduction",
+    "id": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, spark damage, critical damage, Atk relative to Def, spark critical, fully restores HP, 100% evasion, damage taken boosts BB gauge & damage taken inflicts Atk, Def reduction",
+    "pt": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, spark damage, critical damage, Atk relative to Def, spark critical, fully restores HP, 100% evasion, damage taken boosts BB gauge & damage taken inflicts Atk, Def reduction",
+    "th": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, spark damage, critical damage, Atk relative to Def, spark critical, fully restores HP, 100% evasion, damage taken boosts BB gauge & damage taken inflicts Atk, Def reduction",
+    "vi": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, spark damage, critical damage, Atk relative to Def, spark critical, fully restores HP, 100% evasion, damage taken boosts BB gauge & damage taken inflicts Atk, Def reduction"
+  },
+  "MST_SKILLS_4810758_NAME": {
+    "en": "Fight Night Furore",
+    "es": "Fight Night Furore",
+    "id": "Fight Night Furore",
+    "pt": "Fight Night Furore",
+    "th": "Fight Night Furore",
+    "vi": "Fight Night Furore"
   },
   "MST_SKILLS_4810858_DESCRIPTION": {
     "en": "40 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, critical damage, spark damage, Fire elemental damage, Atk, Def, Rec relative to max HP, damage taken boosts BB gauge and restores HP & 100% DoT reduction",
@@ -92654,37 +92694,5 @@
     "pt": "18 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage boosts BB gauge for 3 turns, enormously boosts BB gauge & probable huge 2 turn Atk, Def reduction",
     "th": "18 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage boosts BB gauge for 3 turns, enormously boosts BB gauge & probable huge 2 turn Atk, Def reduction",
     "vi": "18 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage boosts BB gauge for 3 turns, enormously boosts BB gauge & probable huge 2 turn Atk, Def reduction"
-  },
-  "MST_SKILLS_830587_NAME": {
-    "en": "Skill Release",
-    "es": "Skill Release",
-    "id": "Skill Release",
-    "pt": "Skill Release",
-    "th": "Skill Release",
-    "vi": "Skill Release"
-  },
-  "MST_SKILLS_830588_DESCRIPTION": {
-    "en": "20 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage considerably boosts BB gauge for 3 turns, enormously boosts BB gauge, probable huge 2 turn Atk, Def reduction & purges LS disable effects from one random ally",
-    "es": "20 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage considerably boosts BB gauge for 3 turns, enormously boosts BB gauge, probable huge 2 turn Atk, Def reduction & purges LS disable effects from one random ally",
-    "id": "20 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage considerably boosts BB gauge for 3 turns, enormously boosts BB gauge, probable huge 2 turn Atk, Def reduction & purges LS disable effects from one random ally",
-    "pt": "20 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage considerably boosts BB gauge for 3 turns, enormously boosts BB gauge, probable huge 2 turn Atk, Def reduction & purges LS disable effects from one random ally",
-    "th": "20 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage considerably boosts BB gauge for 3 turns, enormously boosts BB gauge, probable huge 2 turn Atk, Def reduction & purges LS disable effects from one random ally",
-    "vi": "20 combo powerful Earth attack on all foes, adds probable evasion for 1 turn, Spark damage considerably boosts BB gauge for 3 turns, enormously boosts BB gauge, probable huge 2 turn Atk, Def reduction & purges LS disable effects from one random ally"
-  },
-  "MST_SKILLS_830588_NAME": {
-    "en": "Skill Release EX",
-    "es": "Skill Release EX",
-    "id": "Skill Release EX",
-    "pt": "Skill Release EX",
-    "th": "Skill Release EX",
-    "vi": "Skill Release EX"
-  },
-  "MST_SKILLS_830597_DESCRIPTION": {
-    "en": "12 combo Earth attack on all foes, boosts max HP, hugely boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit rate for 3 turns, hugely boosts Atk, Def, Rec relative to max HP for 3 turns & boosts BC, HC drop rates for 3 turns",
-    "es": "12 combo Earth attack on all foes, boosts max HP, hugely boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit rate for 3 turns, hugely boosts Atk, Def, Rec relative to max HP for 3 turns & boosts BC, HC drop rates for 3 turns",
-    "id": "12 combo Earth attack on all foes, boosts max HP, hugely boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit rate for 3 turns, hugely boosts Atk, Def, Rec relative to max HP for 3 turns & boosts BC, HC drop rates for 3 turns",
-    "pt": "12 combo Earth attack on all foes, boosts max HP, hugely boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit rate for 3 turns, hugely boosts Atk, Def, Rec relative to max HP for 3 turns & boosts BC, HC drop rates for 3 turns",
-    "th": "12 combo Earth attack on all foes, boosts max HP, hugely boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit rate for 3 turns, hugely boosts Atk, Def, Rec relative to max HP for 3 turns & boosts BC, HC drop rates for 3 turns",
-    "vi": "12 combo Earth attack on all foes, boosts max HP, hugely boosts Atk, Def, Rec for 3 turns, enormously boosts critical hit rate for 3 turns, hugely boosts Atk, Def, Rec relative to max HP for 3 turns & boosts BC, HC drop rates for 3 turns"
   }
 }
