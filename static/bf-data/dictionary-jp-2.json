@@ -1,4 +1,60 @@
 {
+  "MST_LEADERSKILLS_2134_NAME": {
+    "en": "Eternal Blazing Nature",
+    "es": "Eternal Blazing Nature",
+    "id": "Sifat Berkobar Abadi",
+    "pt": "Eternal Blazing Nature",
+    "th": "เอเทอนัล เบลซซิ่ง เนเจอร์",
+    "vi": "Eternal Blazing Nature"
+  },
+  "MST_LEADERSKILLS_2135_DESCRIPTION": {
+    "en": "40% boost to max HP, negates all status ailments, probable 20% damage reduction & negates Def ignoring effect",
+    "es": "40% boost to max HP, negates all status ailments, probable 20% damage reduction & negates Def ignoring effect",
+    "id": "40% ekstra HP maks, menegasi semua status penyakit, kans kurangi 20% kerusakan & menegasi efek abaikan Pertahanan",
+    "pt": "40% boost to max HP, negates all status ailments, probable 20% damage reduction & negates Def ignoring effect",
+    "th": "40% เพิ่มค่าให้กับ HP สูงสุด, ลบล้าง สถานะผิดปกติทั้งหมด, มีโอกาส 20% ลดความเสียหาย และ ลบล้าง ผลไม่สนค่าป้องกัน",
+    "vi": "40% boost to max HP, negates all status ailments, probable 20% damage reduction & negates Def ignoring effect"
+  },
+  "MST_LEADERSKILLS_2135_NAME": {
+    "en": "Eternal Guardian",
+    "es": "Eternal Guardian",
+    "id": "Penjaga Abadi",
+    "pt": "Eternal Guardian",
+    "th": "อีเทอนอล กอร์เดี้ยน",
+    "vi": "Eternal Guardian"
+  },
+  "MST_LEADERSKILLS_2136_DESCRIPTION": {
+    "en": "Negates all status ailments & slightly restores HP and boosts BC, HC drop rate each turn",
+    "es": "Negates all status ailments & slightly restores HP and boosts BC, HC drop rate each turn",
+    "id": "Menegasi semua status penyakit & HP agak pulih, menambah perolehan BC, HC tiap giliran",
+    "pt": "Negates all status ailments & slightly restores HP and boosts BC, HC drop rate each turn",
+    "th": "ต้านทานสถานะผิดปกติทั้งหมด และ ฟื้นคืน HP เล็กน้อย กับ เพิ่ม อัตราดรอป BC, HC แต่ละเทิร์น",
+    "vi": "Negates all status ailments & slightly restores HP and boosts BC, HC drop rate each turn"
+  },
+  "MST_LEADERSKILLS_2136_NAME": {
+    "en": "Becoming Official!",
+    "es": "Becoming Official!",
+    "id": "Jadi Resmi!",
+    "pt": "Becoming Official!",
+    "th": "บีคัมมิ่ง ออฟฟิศเชียล!",
+    "vi": "Becoming Official!"
+  },
+  "MST_LEADERSKILLS_2137_DESCRIPTION": {
+    "en": "Negates all status ailments, restores HP and considerably boosts BC, HC drop rate each turn & considerably boosts HC efficacy",
+    "es": "Negates all status ailments, restores HP and considerably boosts BC, HC drop rate each turn & considerably boosts HC efficacy",
+    "id": "Menegasi semua status penyakit, HP pulih, lumayan menambah keampuhan HC, perolehan BC, HC tiap giliran",
+    "pt": "Negates all status ailments, restores HP and considerably boosts BC, HC drop rate each turn & considerably boosts HC efficacy",
+    "th": "ต้านทานสถานะผิดปกติทั้งหมด, ฟื้นคืน HP กับ เพิ่มค่าอย่างมากให้ อัตราดรอป BC, HC แต่ละเทิร์น และ เพิ่มค่าอย่างมากให้ ประสิทธิภาพ HC",
+    "vi": "Negates all status ailments, restores HP and considerably boosts BC, HC drop rate each turn & considerably boosts HC efficacy"
+  },
+  "MST_LEADERSKILLS_2137_NAME": {
+    "en": "Godslayer's Companion ",
+    "es": "Godslayer's Companion ",
+    "id": "Teman Pembunuh Dewa",
+    "pt": "Godslayer's Companion",
+    "th": "ก็อดสเลเยอร์ส คอมแพเนี่ยน ",
+    "vi": "Godslayer's Companion "
+  },
   "MST_LEADERSKILLS_2200_DESCRIPTION": {
     "en": "25% boost to Atk power of all Units when 5 elements or more are present",
     "es": "25% de aumento en poder de ataque de unidades en presencia de 5 o más elementos",
@@ -18008,12 +18064,12 @@
     "vi": "War's Handmaiden"
   },
   "MST_LEADERSKILLS_860558_DESCRIPTION": {
-    "en": "80% boost to Atk, max HP, 120% boost to Def, Rec of Dark types, 100% boost to Atk, Def for first 3 turns, 15% additional damage reduction & damage taken hugely boosts BB gauge",
-    "es": "80% boost to Atk, max HP, 120% boost to Def, Rec of Dark types, 100% boost to Atk, Def for first 3 turns, 15% additional damage reduction & damage taken hugely boosts BB gauge",
-    "id": "80% boost to Atk, max HP, 120% boost to Def, Rec of Dark types, 100% boost to Atk, Def for first 3 turns, 15% additional damage reduction & damage taken hugely boosts BB gauge",
-    "pt": "80% boost to Atk, max HP, 120% boost to Def, Rec of Dark types, 100% boost to Atk, Def for first 3 turns, 15% additional damage reduction & damage taken hugely boosts BB gauge",
-    "th": "80% boost to Atk, max HP, 120% boost to Def, Rec of Dark types, 100% boost to Atk, Def for first 3 turns, 15% additional damage reduction & damage taken hugely boosts BB gauge",
-    "vi": "80% boost to Atk, max HP, 120% boost to Def, Rec of Dark types, 100% boost to Atk, Def for first 3 turns, 15% additional damage reduction & damage taken hugely boosts BB gauge"
+    "en": "100% Atk, 140% Def, Rec, 100% max HP (Dark), 150% Atk, Def for first 3 turns, 15% DoT reduction, damage taken fills BB gauge & 225% Dark elemental damage",
+    "es": "100% Atk, 140% Def, Rec, 100% max HP (Dark), 150% Atk, Def for first 3 turns, 15% DoT reduction, damage taken fills BB gauge & 225% Dark elemental damage",
+    "id": "100% Atk, 140% Def, Rec, 100% max HP (Dark), 150% Atk, Def for first 3 turns, 15% DoT reduction, damage taken fills BB gauge & 225% Dark elemental damage",
+    "pt": "100% Atk, 140% Def, Rec, 100% max HP (Dark), 150% Atk, Def for first 3 turns, 15% DoT reduction, damage taken fills BB gauge & 225% Dark elemental damage",
+    "th": "100% Atk, 140% Def, Rec, 100% max HP (Dark), 150% Atk, Def for first 3 turns, 15% DoT reduction, damage taken fills BB gauge & 225% Dark elemental damage",
+    "vi": "100% Atk, 140% Def, Rec, 100% max HP (Dark), 150% Atk, Def for first 3 turns, 15% DoT reduction, damage taken fills BB gauge & 225% Dark elemental damage"
   },
   "MST_LEADERSKILLS_860558_NAME": {
     "en": "Black Devil Prodigy",
@@ -92632,54 +92688,6 @@
     "vi": "Legatus Melchio"
   },
   "MST_MONSTERS_50510_NAME": {
-    "en": "Light Lord Mimir",
-    "es": "Dama sagrada Mimi",
-    "id": "Lord Terang Mimir",
-    "pt": "Mimir Dama da Luz",
-    "th": "ไลท์ลอร์ดมิเมียร์",
-    "vi": "Chúa tể Mimir"
-  },
-  "MST_MONSTERS_50511_NAME": {
-    "en": "Light Lord Mimir",
-    "es": "Dama sagrada Mimi",
-    "id": "Lord Terang Mimir",
-    "pt": "Mimir Dama da Luz",
-    "th": "ไลท์ลอร์ดมิเมียร์",
-    "vi": "Chúa tể Mimir"
-  },
-  "MST_MONSTERS_50512_NAME": {
-    "en": "Light Lord Mimir",
-    "es": "Dama sagrada Mimi",
-    "id": "Lord Terang Mimir",
-    "pt": "Mimir Dama da Luz",
-    "th": "ไลท์ลอร์ดมิเมียร์",
-    "vi": "Chúa tể Mimir"
-  },
-  "MST_MONSTERS_50513_NAME": {
-    "en": "Light Lord Mimir",
-    "es": "Dama sagrada Mimi",
-    "id": "Lord Terang Mimir",
-    "pt": "Mimir Dama da Luz",
-    "th": "ไลท์ลอร์ดมิเมียร์",
-    "vi": "Chúa tể Mimir"
-  },
-  "MST_MONSTERS_50514_NAME": {
-    "en": "Light Lord Mimir",
-    "es": "Dama sagrada Mimi",
-    "id": "Lord Terang Mimir",
-    "pt": "Mimir Dama da Luz",
-    "th": "ไลท์ลอร์ดมิเมียร์",
-    "vi": "Chúa tể Mimir"
-  },
-  "MST_MONSTERS_50515_NAME": {
-    "en": "Light Lord Mimir",
-    "es": "Dama sagrada Mimi",
-    "id": "Lord Terang Mimir",
-    "pt": "Mimir Dama da Luz",
-    "th": "ไลท์ลอร์ดมิเมียร์",
-    "vi": "Chúa tể Mimir"
-  },
-  "MST_MONSTERS_50516_NAME": {
     "en": "Light Lord Mimir",
     "es": "Dama sagrada Mimi",
     "id": "Lord Terang Mimir",
