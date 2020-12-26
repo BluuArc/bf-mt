@@ -1,4 +1,76 @@
 {
+  "MST_LEADERSKILLS_2130_DESCRIPTION": {
+    "en": "Negates all status ailments, 15% boost to Atk & boosts Spark damage",
+    "es": "Niega las aflicciones de estado, +15% al ATQ y potencia el daño de Chispas",
+    "id": "Menegasi semua status penyakit, 15% ekstra Serangan & menambah kerusakan Percikan",
+    "pt": "Nega efeitos negativos, 15% de reforço no ATQ e reforço no dano de fagulha",
+    "th": "กันทุกสถานะผิดปกติ, 15% เพิ่มพลังโจมตี และเพิ่มสปาร์คดาเมจ",
+    "vi": "Negates all status ailments, 15% boost to Atk & boosts Spark damage"
+  },
+  "MST_LEADERSKILLS_2130_NAME": {
+    "en": "Clear Sky's Breeze",
+    "es": "Brisa del cielo claro",
+    "id": "Angin Langit Cerah",
+    "pt": "Brisa de Céu Azul",
+    "th": "เคลียร์ สกาย บรีซ",
+    "vi": "Clear Sky's Breeze"
+  },
+  "MST_LEADERSKILLS_2131_DESCRIPTION": {
+    "en": "Negates all status ailments, 30% boost to Atk & hugely boosts Spark damage",
+    "es": "Niega las aflicciones de estado, +30% al ATQ y potencia enormemente el daño de Chispas",
+    "id": "Menegasi semua status penyakit, 30% ekstra Serangan & amat menambah kerusakan Percikan",
+    "pt": "Nega efeitos negativos, 30% de reforço no ATQ e reforço imenso no dano de fagulha",
+    "th": "กันทุกสถานะผิดปกติ, 30% เพิ่มพลังโจมตี และเพิ่มสปาร์คดาเมจอย่างมาก",
+    "vi": "Negates all status ailments, 30% boost to Atk & hugely boosts Spark damage"
+  },
+  "MST_LEADERSKILLS_2131_NAME": {
+    "en": "Clear Sky's Divine Breeze",
+    "es": "Brisa divina del cielo claro",
+    "id": "Angin Ilahi Langit Cerah",
+    "pt": "Brisa Divina de Céu Azul",
+    "th": "เคลียร์ สกาย ดีไวน์ บรีซ",
+    "vi": "Clear Sky's Divine Breeze"
+  },
+  "MST_LEADERSKILLS_2132_DESCRIPTION": {
+    "en": "Negates all status ailments & 40% boost to max HP",
+    "es": "Negates all status ailments & 40% boost to max HP",
+    "id": "Menegasi semua status penyakit & 40% ekstra HP maks",
+    "pt": "Negates all status ailments & 40% boost to max HP",
+    "th": "กันทุกสถานะผิดปกติ, 40% เพิ่ม HP สูงสุด",
+    "vi": "Negates all status ailments & 40% boost to max HP"
+  },
+  "MST_LEADERSKILLS_2132_NAME": {
+    "en": "Eternal Woe Flower",
+    "es": "Eternal Woe Flower",
+    "id": "Bunga Duka Abadi",
+    "pt": "Eternal Woe Flower",
+    "th": "เอเทอนัล โว ฟลาวเวอร์",
+    "vi": "Eternal Woe Flower"
+  },
+  "MST_LEADERSKILLS_2133_DESCRIPTION": {
+    "en": "Negates all status ailments, 40% boost to max HP & Spark damage restores HP and BB gauge",
+    "es": "Negates all status ailments, 40% boost to max HP & Spark damage restores HP and BB gauge",
+    "id": "Menegasi semua status penyakit, 40% ekstra HP maks & kerusakan Percikan memulihkan HP dan meteran BB",
+    "pt": "Negates all status ailments, 40% boost to max HP & Spark damage restores HP and BB gauge",
+    "th": "กันทุกสถานะผิดปกติ, 40% เพิ่ม HP สูงสุด และสปาร์คดาเมจ, ฟื้น HP และบีบีเกจ",
+    "vi": "Negates all status ailments, 40% boost to max HP & Spark damage restores HP and BB gauge"
+  },
+  "MST_LEADERSKILLS_2133_NAME": {
+    "en": "Eternal Calamity Flower",
+    "es": "Eternal Calamity Flower",
+    "id": "Bunga Bencana Abadi",
+    "pt": "Eternal Calamity Flower",
+    "th": "เอเทอนัล คาลามิตี้ ฟลาวเวอร์",
+    "vi": "Eternal Calamity Flower"
+  },
+  "MST_LEADERSKILLS_2134_DESCRIPTION": {
+    "en": "Negates all status ailments, 30% boost to max HP, Def & 15% damage reduction from Fire, Earth types",
+    "es": "Negates all status ailments, 30% boost to max HP, Def & 15% damage reduction from Fire, Earth types",
+    "id": "Menegasi semua status penyakit, 30% ekstra HP maks, Pertahanan & 15% pengurangan kerusakan dari tipe Api, Bumi",
+    "pt": "Negates all status ailments, 30% boost to max HP, Def & 15% damage reduction from Fire, Earth types",
+    "th": "กันทุกสถานะผิดปกติ, 30% เพิ่ม HP สูงสุด และพลังป้องกัน, 15% ลดดาเมจจากธาตุไฟและธาตุดิน",
+    "vi": "Negates all status ailments, 30% boost to max HP, Def & 15% damage reduction from Fire, Earth types"
+  },
   "MST_LEADERSKILLS_2134_NAME": {
     "en": "Eternal Blazing Nature",
     "es": "Eternal Blazing Nature",
@@ -14655,6 +14727,22 @@
     "th": "Crystalline Sharpshooter",
     "vi": "Crystalline Sharpshooter"
   },
+  "MST_LEADERSKILLS_820998_DESCRIPTION": {
+    "en": "150% Atk, Def, 100% Rec, 150% max HP, 20% damage reduction for 1 turn when damage taken is over 5k, 30% reduction to BB activation cost, 300% spark damage & 30% OD gauge fill rate",
+    "es": "150% Atk, Def, 100% Rec, 150% max HP, 20% damage reduction for 1 turn when damage taken is over 5k, 30% reduction to BB activation cost, 300% spark damage & 30% OD gauge fill rate",
+    "id": "150% Atk, Def, 100% Rec, 150% max HP, 20% damage reduction for 1 turn when damage taken is over 5k, 30% reduction to BB activation cost, 300% spark damage & 30% OD gauge fill rate",
+    "pt": "150% Atk, Def, 100% Rec, 150% max HP, 20% damage reduction for 1 turn when damage taken is over 5k, 30% reduction to BB activation cost, 300% spark damage & 30% OD gauge fill rate",
+    "th": "150% Atk, Def, 100% Rec, 150% max HP, 20% damage reduction for 1 turn when damage taken is over 5k, 30% reduction to BB activation cost, 300% spark damage & 30% OD gauge fill rate",
+    "vi": "150% Atk, Def, 100% Rec, 150% max HP, 20% damage reduction for 1 turn when damage taken is over 5k, 30% reduction to BB activation cost, 300% spark damage & 30% OD gauge fill rate"
+  },
+  "MST_LEADERSKILLS_820998_NAME": {
+    "en": "Dreamdiver",
+    "es": "Dreamdiver",
+    "id": "Dreamdiver",
+    "pt": "Dreamdiver",
+    "th": "Dreamdiver",
+    "vi": "Dreamdiver"
+  },
   "MST_LEADERSKILLS_830047_DESCRIPTION": {
     "en": "100% boost to Atk, 60% boost to Def, max HP of Earth types, 10% damage reduction from Earth, Thunder types, probable considerable reduction of foe's BB gauge & 50% damage counter",
     "es": "100% boost to Atk, 60% boost to Def, max HP of Earth types, 10% damage reduction from Earth, Thunder types, probable considerable reduction of foe's BB gauge & 50% damage counter",
@@ -15630,6 +15718,22 @@
     "pt": "Summer Miracle",
     "th": "Summer Miracle",
     "vi": "Summer Miracle"
+  },
+  "MST_LEADERSKILLS_830998_DESCRIPTION": {
+    "en": "150% Atk, 100% max HP, 30% critical rate, 15% DoT reduction, probable 1 KO resistance, 200% all elemental damage & negates all status ailments and Atk, Def, Rec reduction",
+    "es": "150% Atk, 100% max HP, 30% critical rate, 15% DoT reduction, probable 1 KO resistance, 200% all elemental damage & negates all status ailments and Atk, Def, Rec reduction",
+    "id": "150% Atk, 100% max HP, 30% critical rate, 15% DoT reduction, probable 1 KO resistance, 200% all elemental damage & negates all status ailments and Atk, Def, Rec reduction",
+    "pt": "150% Atk, 100% max HP, 30% critical rate, 15% DoT reduction, probable 1 KO resistance, 200% all elemental damage & negates all status ailments and Atk, Def, Rec reduction",
+    "th": "150% Atk, 100% max HP, 30% critical rate, 15% DoT reduction, probable 1 KO resistance, 200% all elemental damage & negates all status ailments and Atk, Def, Rec reduction",
+    "vi": "150% Atk, 100% max HP, 30% critical rate, 15% DoT reduction, probable 1 KO resistance, 200% all elemental damage & negates all status ailments and Atk, Def, Rec reduction"
+  },
+  "MST_LEADERSKILLS_830998_NAME": {
+    "en": "Soul of the Land",
+    "es": "Soul of the Land",
+    "id": "Soul of the Land",
+    "pt": "Soul of the Land",
+    "th": "Soul of the Land",
+    "vi": "Soul of the Land"
   },
   "MST_LEADERSKILLS_840047_DESCRIPTION": {
     "en": "100% boost to Atk, 60% boost to Def, max HP of Thunder types, 10% damage reduction from Water, Thunder types, considerably reduces BB gauge required for BB & probable considerable reduction of BB gauge fill rate for 2 turns",
@@ -23039,6 +23143,70 @@
     "th": "We can do this!",
     "vi": "We can do this!"
   },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2062_MESSAGES": {
+    "en": "E-Eh?! What's going on? Time has stopped...",
+    "es": "E-Eh?! What's going on? Time has stopped...",
+    "id": "E-Eh?! What's going on? Time has stopped...",
+    "pt": "E-Eh?! What's going on? Time has stopped...",
+    "th": "E-Eh?! What's going on? Time has stopped...",
+    "vi": "E-Eh?! What's going on? Time has stopped..."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2063_MESSAGES": {
+    "en": "Is that a story page...sticking out of the snow?",
+    "es": "Is that a story page...sticking out of the snow?",
+    "id": "Is that a story page...sticking out of the snow?",
+    "pt": "Is that a story page...sticking out of the snow?",
+    "th": "Is that a story page...sticking out of the snow?",
+    "vi": "Is that a story page...sticking out of the snow?"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2064_MESSAGES": {
+    "en": "Maybe if I bop those weird orbs, I can lure them out...",
+    "es": "Maybe if I bop those weird orbs, I can lure them out...",
+    "id": "Maybe if I bop those weird orbs, I can lure them out...",
+    "pt": "Maybe if I bop those weird orbs, I can lure them out...",
+    "th": "Maybe if I bop those weird orbs, I can lure them out...",
+    "vi": "Maybe if I bop those weird orbs, I can lure them out..."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2065_MESSAGES": {
+    "en": "...And the story can continue!",
+    "es": "...And the story can continue!",
+    "id": "...And the story can continue!",
+    "pt": "...And the story can continue!",
+    "th": "...And the story can continue!",
+    "vi": "...And the story can continue!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2066_MESSAGES": {
+    "en": "Oh, there seems to be more pages scattered here!",
+    "es": "Oh, there seems to be more pages scattered here!",
+    "id": "Oh, there seems to be more pages scattered here!",
+    "pt": "Oh, there seems to be more pages scattered here!",
+    "th": "Oh, there seems to be more pages scattered here!",
+    "vi": "Oh, there seems to be more pages scattered here!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2067_MESSAGES": {
+    "en": "...And more of those weird orbs...",
+    "es": "...And more of those weird orbs...",
+    "id": "...And more of those weird orbs...",
+    "pt": "...And more of those weird orbs...",
+    "th": "...And more of those weird orbs...",
+    "vi": "...And more of those weird orbs..."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2068_MESSAGES": {
+    "en": "Different orbs will summon different numbers of Snow-Eaters.",
+    "es": "Different orbs will summon different numbers of Snow-Eaters.",
+    "id": "Different orbs will summon different numbers of Snow-Eaters.",
+    "pt": "Different orbs will summon different numbers of Snow-Eaters.",
+    "th": "Different orbs will summon different numbers of Snow-Eaters.",
+    "vi": "Different orbs will summon different numbers of Snow-Eaters."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2069_MESSAGES": {
+    "en": "Find the missing pages to continue the tale!",
+    "es": "Find the missing pages to continue the tale!",
+    "id": "Find the missing pages to continue the tale!",
+    "pt": "Find the missing pages to continue the tale!",
+    "th": "Find the missing pages to continue the tale!",
+    "vi": "Find the missing pages to continue the tale!"
+  },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_206_MESSAGES": {
     "en": "I am the Beast God...<br>The Beast God Afla Dilith!<br>I shall not lose to the likes<br>of you!",
     "es": "Soy el Dios Bestial...<br>¡El Dios Bestial Afla Dilith!<br>¡No perderé contra<br>una calaña como la tuya!",
@@ -23047,6 +23215,86 @@
     "th": "ข้าคือเทพแห่งสัตว์ร้าย...<br>อัฟลาห์ ดิลิธ!<br>ข้าไม่ควรจะแพ้<br>คนอย่างเจ้า!",
     "vi": "I am the Beast God...<br>The Beast God Afla Dilith!<br>I shall not lose to the likes<br>of you!"
   },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2070_MESSAGES": {
+    "en": "Okay! We can do this, Woolie!",
+    "es": "Okay! We can do this, Woolie!",
+    "id": "Okay! We can do this, Woolie!",
+    "pt": "Okay! We can do this, Woolie!",
+    "th": "Okay! We can do this, Woolie!",
+    "vi": "Okay! We can do this, Woolie!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2071_MESSAGES": {
+    "en": "The orbs will now disappear permanently upon defeat.",
+    "es": "The orbs will now disappear permanently upon defeat.",
+    "id": "The orbs will now disappear permanently upon defeat.",
+    "pt": "The orbs will now disappear permanently upon defeat.",
+    "th": "The orbs will now disappear permanently upon defeat.",
+    "vi": "The orbs will now disappear permanently upon defeat."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2072_MESSAGES": {
+    "en": "Think carefully about the order.",
+    "es": "Think carefully about the order.",
+    "id": "Think carefully about the order.",
+    "pt": "Think carefully about the order.",
+    "th": "Think carefully about the order.",
+    "vi": "Think carefully about the order."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2073_MESSAGES": {
+    "en": "Find the missing pages to continue the tale!",
+    "es": "Find the missing pages to continue the tale!",
+    "id": "Find the missing pages to continue the tale!",
+    "pt": "Find the missing pages to continue the tale!",
+    "th": "Find the missing pages to continue the tale!",
+    "vi": "Find the missing pages to continue the tale!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2074_MESSAGES": {
+    "en": "Whew! What a long hike. I wonder where the story's taking us...",
+    "es": "Whew! What a long hike. I wonder where the story's taking us...",
+    "id": "Whew! What a long hike. I wonder where the story's taking us...",
+    "pt": "Whew! What a long hike. I wonder where the story's taking us...",
+    "th": "Whew! What a long hike. I wonder where the story's taking us...",
+    "vi": "Whew! What a long hike. I wonder where the story's taking us..."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2075_MESSAGES": {
+    "en": "After an orb is defeated, its appearance will change.",
+    "es": "After an orb is defeated, its appearance will change.",
+    "id": "After an orb is defeated, its appearance will change.",
+    "pt": "After an orb is defeated, its appearance will change.",
+    "th": "After an orb is defeated, its appearance will change.",
+    "vi": "After an orb is defeated, its appearance will change."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2076_MESSAGES": {
+    "en": "Take note of its new appearance.",
+    "es": "Take note of its new appearance.",
+    "id": "Take note of its new appearance.",
+    "pt": "Take note of its new appearance.",
+    "th": "Take note of its new appearance.",
+    "vi": "Take note of its new appearance."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2077_MESSAGES": {
+    "en": "Find the missing pages to continue the tale!",
+    "es": "Find the missing pages to continue the tale!",
+    "id": "Find the missing pages to continue the tale!",
+    "pt": "Find the missing pages to continue the tale!",
+    "th": "Find the missing pages to continue the tale!",
+    "vi": "Find the missing pages to continue the tale!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2078_MESSAGES": {
+    "en": "I wonder if the pages can tell us anything about the Heart of Spring...",
+    "es": "I wonder if the pages can tell us anything about the Heart of Spring...",
+    "id": "I wonder if the pages can tell us anything about the Heart of Spring...",
+    "pt": "I wonder if the pages can tell us anything about the Heart of Spring...",
+    "th": "I wonder if the pages can tell us anything about the Heart of Spring...",
+    "vi": "I wonder if the pages can tell us anything about the Heart of Spring..."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2079_MESSAGES": {
+    "en": "More orbs will now change their appearances upon defeat.",
+    "es": "More orbs will now change their appearances upon defeat.",
+    "id": "More orbs will now change their appearances upon defeat.",
+    "pt": "More orbs will now change their appearances upon defeat.",
+    "th": "More orbs will now change their appearances upon defeat.",
+    "vi": "More orbs will now change their appearances upon defeat."
+  },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_207_MESSAGES": {
     "en": "Humans cannot defeat a god.<br>It's impossible... Impossible!<br>Witness my divine wrath!",
     "es": "Los humanos no pueden derrotar a un dios.<br>Es imposible... ¡Inconcebible!<br>¡Contempla mi ira divina!",
@@ -23054,6 +23302,22 @@
     "pt": "Humanos não podem derrotar deuses.<br>É impossível... Impossível!<br>Contemple minha ira divina!",
     "th": "มนุษยืเอาชนะเทพไมได้หรอก<br>เป็นไปไม่ได้... เป็นไปไม่ได้!<br>จงดูความเกรี้ยวโกรธของข้านี่!",
     "vi": "Humans cannot defeat a god.<br>It's impossible... Impossible!<br>Witness my divine wrath!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2080_MESSAGES": {
+    "en": "Keep a close eye on them!",
+    "es": "Keep a close eye on them!",
+    "id": "Keep a close eye on them!",
+    "pt": "Keep a close eye on them!",
+    "th": "Keep a close eye on them!",
+    "vi": "Keep a close eye on them!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2081_MESSAGES": {
+    "en": "Find the missing pages to continue the tale!",
+    "es": "Find the missing pages to continue the tale!",
+    "id": "Find the missing pages to continue the tale!",
+    "pt": "Find the missing pages to continue the tale!",
+    "th": "Find the missing pages to continue the tale!",
+    "vi": "Find the missing pages to continue the tale!"
   },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_208_MESSAGES": {
     "en": "Think you have surpassed me?!<br>No, I will not have it!!<br>The world is mine, only mine!!",
@@ -92494,205 +92758,5 @@
     "pt": "Deus Desafiador Luther",
     "th": "ดีเฟียนท ก็อด ลูเธอร์",
     "vi": "Thần chống đối Luther"
-  },
-  "MST_MONSTERS_504800_NAME": {
-    "en": "Tyrant Goddess Phee",
-    "es": "Diosa tirana Phee",
-    "id": "Dewi Tiran Phee",
-    "pt": "Deusa Tirana Phee",
-    "th": "ไทแรนท์ ก็อดเดส ฟี",
-    "vi": "Nữ bạo chúa Phee"
-  },
-  "MST_MONSTERS_504801_NAME": {
-    "en": "Tyrant Goddess Phee",
-    "es": "Diosa tirana Phee",
-    "id": "Dewi Tiran Phee",
-    "pt": "Deusa Tirana Phee",
-    "th": "ไทแรนท์ ก็อดเดส ฟี",
-    "vi": "Nữ bạo chúa Phee"
-  },
-  "MST_MONSTERS_504802_NAME": {
-    "en": "Tyrant Goddess Phee",
-    "es": "Diosa tirana Phee",
-    "id": "Dewi Tiran Phee",
-    "pt": "Deusa Tirana Phee",
-    "th": "ไทแรนท์ ก็อดเดส ฟี",
-    "vi": "Nữ bạo chúa Phee"
-  },
-  "MST_MONSTERS_504900_NAME": {
-    "en": "Master Lorand",
-    "es": "Maestro Lorand",
-    "id": "Master Lorand",
-    "pt": "Mestre Lorand",
-    "th": "มาสเตอร์ โลแรนด์",
-    "vi": "Thạc Sĩ Lorand"
-  },
-  "MST_MONSTERS_504901_NAME": {
-    "en": "Master Lorand",
-    "es": "Maestro Lorand",
-    "id": "Master Lorand",
-    "pt": "Mestre Lorand",
-    "th": "มาสเตอร์ โลแรนด์",
-    "vi": "Thạc Sĩ Lorand"
-  },
-  "MST_MONSTERS_505000_NAME": {
-    "en": "Centurion Melchio",
-    "es": "Centurión Melchio",
-    "id": "Centurion Melchio",
-    "pt": "Melchio Centurião",
-    "th": "เซนจูเรียน เมลชิโอ้",
-    "vi": "Centurion Melchio"
-  },
-  "MST_MONSTERS_505001_NAME": {
-    "en": "Centurion Melchio",
-    "es": "Centurión Melchio",
-    "id": "Centurion Melchio",
-    "pt": "Melchio Centurião",
-    "th": "เซนจูเรียน เมลชิโอ้",
-    "vi": "Centurion Melchio"
-  },
-  "MST_MONSTERS_505002_NAME": {
-    "en": "Centurion Melchio",
-    "es": "Centurión Melchio",
-    "id": "Centurion Melchio",
-    "pt": "Melchio Centurião",
-    "th": "เซนจูเรียน เมลชิโอ้",
-    "vi": "Centurion Melchio"
-  },
-  "MST_MONSTERS_505003_NAME": {
-    "en": "Centurion Melchio",
-    "es": "Centurión Melchio",
-    "id": "Centurion Melchio",
-    "pt": "Melchio Centurião",
-    "th": "เซนจูเรียน เมลชิโอ้",
-    "vi": "Centurion Melchio"
-  },
-  "MST_MONSTERS_50500_NAME": {
-    "en": "Light Lord Mimir",
-    "es": "Dama sagrada Mimi",
-    "id": "Lord Terang Mimir",
-    "pt": "Mimir Dama da Luz",
-    "th": "ไลท์ลอร์ดมิเมียร์",
-    "vi": "Chúa tể Mimir"
-  },
-  "MST_MONSTERS_50501_NAME": {
-    "en": "Light Lord Mimir",
-    "es": "Dama sagrada Mimi",
-    "id": "Lord Terang Mimir",
-    "pt": "Mimir Dama da Luz",
-    "th": "ไลท์ลอร์ดมิเมียร์",
-    "vi": "Chúa tể Mimir"
-  },
-  "MST_MONSTERS_50502_NAME": {
-    "en": "Light Lord Mimir",
-    "es": "Dama sagrada Mimi",
-    "id": "Lord Terang Mimir",
-    "pt": "Mimir Dama da Luz",
-    "th": "ไลท์ลอร์ดมิเมียร์",
-    "vi": "Chúa tể Mimir"
-  },
-  "MST_MONSTERS_50503_NAME": {
-    "en": "Light Lord Mimir",
-    "es": "Dama sagrada Mimi",
-    "id": "Lord Terang Mimir",
-    "pt": "Mimir Dama da Luz",
-    "th": "ไลท์ลอร์ดมิเมียร์",
-    "vi": "Chúa tể Mimir"
-  },
-  "MST_MONSTERS_50504_NAME": {
-    "en": "Light Lord Mimir",
-    "es": "Dama sagrada Mimi",
-    "id": "Lord Terang Mimir",
-    "pt": "Mimir Dama da Luz",
-    "th": "ไลท์ลอร์ดมิเมียร์",
-    "vi": "Chúa tể Mimir"
-  },
-  "MST_MONSTERS_50505_NAME": {
-    "en": "Light Lord Mimir",
-    "es": "Dama sagrada Mimi",
-    "id": "Lord Terang Mimir",
-    "pt": "Mimir Dama da Luz",
-    "th": "ไลท์ลอร์ดมิเมียร์",
-    "vi": "Chúa tể Mimir"
-  },
-  "MST_MONSTERS_50506_NAME": {
-    "en": "Light Lord Mimir",
-    "es": "Dama sagrada Mimi",
-    "id": "Lord Terang Mimir",
-    "pt": "Mimir Dama da Luz",
-    "th": "ไลท์ลอร์ดมิเมียร์",
-    "vi": "Chúa tể Mimir"
-  },
-  "MST_MONSTERS_50507_NAME": {
-    "en": "Light Lord Mimir",
-    "es": "Dama sagrada Mimi",
-    "id": "Lord Terang Mimir",
-    "pt": "Mimir Dama da Luz",
-    "th": "ไลท์ลอร์ดมิเมียร์",
-    "vi": "Chúa tể Mimir"
-  },
-  "MST_MONSTERS_50508_NAME": {
-    "en": "Light Lord Mimir",
-    "es": "Dama sagrada Mimi",
-    "id": "Lord Terang Mimir",
-    "pt": "Mimir Dama da Luz",
-    "th": "ไลท์ลอร์ดมิเมียร์",
-    "vi": "Chúa tể Mimir"
-  },
-  "MST_MONSTERS_50509_NAME": {
-    "en": "Light Lord Mimir",
-    "es": "Dama sagrada Mimi",
-    "id": "Lord Terang Mimir",
-    "pt": "Mimir Dama da Luz",
-    "th": "ไลท์ลอร์ดมิเมียร์",
-    "vi": "Chúa tể Mimir"
-  },
-  "MST_MONSTERS_505100_NAME": {
-    "en": "Legatus Melchio",
-    "es": "Legatus Melchio",
-    "id": "Legatus Melchio",
-    "pt": "Melchio Legado",
-    "th": "เลกาตัส เมลชิโอ้",
-    "vi": "Legatus Melchio"
-  },
-  "MST_MONSTERS_505101_NAME": {
-    "en": "Legatus Melchio",
-    "es": "Legatus Melchio",
-    "id": "Legatus Melchio",
-    "pt": "Melchio Legado",
-    "th": "เลกาตัส เมลชิโอ้",
-    "vi": "Legatus Melchio"
-  },
-  "MST_MONSTERS_505102_NAME": {
-    "en": "Legatus Melchio",
-    "es": "Legatus Melchio",
-    "id": "Legatus Melchio",
-    "pt": "Melchio Legado",
-    "th": "เลกาตัส เมลชิโอ้",
-    "vi": "Legatus Melchio"
-  },
-  "MST_MONSTERS_505103_NAME": {
-    "en": "Legatus Melchio",
-    "es": "Legatus Melchio",
-    "id": "Legatus Melchio",
-    "pt": "Melchio Legado",
-    "th": "เลกาตัส เมลชิโอ้",
-    "vi": "Legatus Melchio"
-  },
-  "MST_MONSTERS_505104_NAME": {
-    "en": "Legatus Melchio",
-    "es": "Legatus Melchio",
-    "id": "Legatus Melchio",
-    "pt": "Melchio Legado",
-    "th": "เลกาตัส เมลชิโอ้",
-    "vi": "Legatus Melchio"
-  },
-  "MST_MONSTERS_50510_NAME": {
-    "en": "Light Lord Mimir",
-    "es": "Dama sagrada Mimi",
-    "id": "Lord Terang Mimir",
-    "pt": "Mimir Dama da Luz",
-    "th": "ไลท์ลอร์ดมิเมียร์",
-    "vi": "Chúa tể Mimir"
   }
 }

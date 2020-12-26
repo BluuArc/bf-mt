@@ -37817,6 +37817,43 @@
       "820958"
     ]
   },
+  "820998": {
+    "desc": "150% Atk, Def, 100% Rec, 150% max HP, 20% damage reduction for 1 turn when damage taken is over 5k, 30% reduction to BB activation cost, 300% spark damage & 30% OD gauge fill rate",
+    "effects": [
+      {
+        "atk% buff": 150,
+        "def% buff": 150,
+        "hp% buff": 150,
+        "passive id": "1",
+        "rec% buff": 100
+      },
+      {
+        "buff": {
+          "buff turns (36)": "1",
+          "dmg reduction% buff": 20
+        },
+        "damage threshold buff activation": 5000,
+        "passive id": "78"
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": 30
+      },
+      {
+        "damage% for spark": 300,
+        "passive id": "31"
+      },
+      {
+        "od fill rate%": 30,
+        "passive id": "70"
+      }
+    ],
+    "id": "820998",
+    "name": "Dreamdiver",
+    "associated_units": [
+      "820998"
+    ]
+  },
   "830047": {
     "desc": "100% boost to Atk, 60% boost to Def, max HP of Earth types, 10% damage reduction from Earth, Thunder types, probable considerable reduction of foe's BB gauge & 50% damage counter",
     "effects": [
@@ -40110,6 +40147,55 @@
     "name": "Summer Miracle",
     "associated_units": [
       "830978"
+    ]
+  },
+  "830998": {
+    "desc": "150% Atk, 100% max HP, 30% critical rate, 15% DoT reduction, probable 1 KO resistance, 200% all elemental damage & negates all status ailments and Atk, Def, Rec reduction",
+    "effects": [
+      {
+        "atk% buff": 150,
+        "crit% buff": 30,
+        "hp% buff": 100,
+        "passive id": "1"
+      },
+      {
+        "unknown passive id": "127",
+        "unknown passive params": "100,15"
+      },
+      {
+        "angel idol chance% condition": 0,
+        "angel idol recover chance% high": 25,
+        "angel idol recover chance% low": 25,
+        "angel idol recover counts": 1,
+        "passive id": "69"
+      },
+      {
+        "dark units do extra elemental weakness dmg": true,
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 200,
+        "fire units do extra elemental weakness dmg": true,
+        "light units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "thunder units do extra elemental weakness dmg": true,
+        "water units do extra elemental weakness dmg": true
+      },
+      {
+        "atk down resist%": 100,
+        "curse resist%": 100,
+        "def down resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "poison resist%": 100,
+        "rec down resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      }
+    ],
+    "id": "830998",
+    "name": "Soul of the Land",
+    "associated_units": [
+      "830998"
     ]
   },
   "840047": {
