@@ -24492,6 +24492,64 @@
       "820958"
     ]
   },
+  "820998": {
+    "desc": "120% Water elemental damage when Glaes is in squad or Atk Boosting sphere is equipped, 25% spark damage for all allies, 40% all parameters, probable 2 KO resistance & probable damage reduction to 1",
+    "effects": [
+      {
+        "conditions": [
+          {
+            "unit required": "830990"
+          },
+          {
+            "sphere category required": "Atk Boosting",
+            "sphere category required (raw)": "13"
+          }
+        ],
+        "elemental weakness multiplier%": 120,
+        "passive id": "50",
+        "passive target": "self",
+        "water units do extra elemental weakness dmg": true
+      },
+      {
+        "conditions": [],
+        "damage% for spark": 25,
+        "passive id": "31",
+        "passive target": "party"
+      },
+      {
+        "atk% buff": 40,
+        "conditions": [],
+        "def% buff": 40,
+        "hp% buff": 40,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 40
+      },
+      {
+        "angel idol chance% condition": 0,
+        "angel idol recover chance% high": 50,
+        "angel idol recover chance% low": 50,
+        "angel idol recover counts": 2,
+        "angel idol recover hp%": 1,
+        "conditions": [],
+        "passive id": "69",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "43",
+        "passive target": "self",
+        "take 1 dmg%": 20
+      }
+    ],
+    "id": "820998",
+    "name": "Floofy Woolie",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "820998"
+    ]
+  },
   "830047": {
     "desc": "Adds resistance against 1 KO attack when HP is below 25% & negates Atk, Def, Rec reduction effects for all allies",
     "effects": [
@@ -27990,6 +28048,88 @@
     "target": "self",
     "associated_units": [
       "830978"
+    ]
+  },
+  "830998": {
+    "desc": "Restores HP each turn when Maeri is in squad or HP Recovery sphere is equipped, 15% DoT reduction, 10% BB gauge consumed reduction for all allies, negates all status ailments and Atk, Def, Rec reduction & add to BB/SBB (Removes all status ailments and Atk, Def, Rec reduction)",
+    "effects": [
+      {
+        "conditions": [
+          {
+            "unit required": "820990"
+          },
+          {
+            "sphere category required": "HP Recovery",
+            "sphere category required (raw)": "7"
+          }
+        ],
+        "passive id": "33",
+        "passive target": "self",
+        "rec% added (turn heal)": 11,
+        "turn heal high": 4000,
+        "turn heal low": 3000
+      },
+      {
+        "conditions": [],
+        "passive target": "party",
+        "unknown passive id": "127",
+        "unknown passive params": "100,15"
+      },
+      {
+        "conditions": [],
+        "passive id": "49",
+        "passive target": "party",
+        "reduced bb bc use chance%": 100,
+        "reduced bb bc use% high": 10,
+        "reduced bb bc use% low": 10
+      },
+      {
+        "atk down resist%": 100,
+        "conditions": [],
+        "curse resist%": 100,
+        "def down resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "passive target": "self",
+        "poison resist%": 100,
+        "rec down resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "ailments cured": [
+              "poison",
+              "weaken",
+              "sick",
+              "injury",
+              "curse",
+              "paralysis",
+              "atk down",
+              "def down",
+              "rec down"
+            ],
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "38",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "830998",
+    "name": "Old Zero",
+    "rarity": "7",
+    "target": "self",
+    "associated_units": [
+      "830998"
     ]
   },
   "840047": {
@@ -49941,6 +50081,110 @@
     "rarity": "7",
     "target": "self"
   },
+  "8000525": {
+    "desc": "15% all parameters (Dark) for all allies, 120% Def, 50% max HP (Dark), 120% spark damage, 20% BB/SBB activation rates & 35% damage reduction from Dark, Light types for first 2 turns",
+    "effects": [
+      {
+        "atk% buff": 15,
+        "conditions": [],
+        "def% buff": 15,
+        "elements buffed": [
+          "dark"
+        ],
+        "hp% buff": 15,
+        "passive id": "2",
+        "passive target": "party",
+        "rec% buff": 15
+      },
+      {
+        "conditions": [],
+        "def% buff": 120,
+        "elements buffed": [
+          "dark"
+        ],
+        "hp% buff": 50,
+        "passive id": "2",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "damage% for spark": 120,
+        "passive id": "31",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "increase skill activation in arena%": 20,
+        "passive id": "111",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "dmg% mitigation for elemental attacks": 35,
+        "dmg% mitigation for elemental attacks buff for first x turns": 2,
+        "mitigate dark attacks": true,
+        "mitigate light attacks": true,
+        "passive id": "63",
+        "passive target": "self"
+      }
+    ],
+    "id": "8000525",
+    "name": "Giselbert's Pride",
+    "rarity": "8",
+    "target": "self"
+  },
+  "8000526": {
+    "desc": "10% all parameters (Dark) for all allies, 100% Def, 40% max HP (Dark), 100% spark damage, 15% BB/SBB activation rates & 35% damage reduction from Dark, Light types for first 2 turns",
+    "effects": [
+      {
+        "atk% buff": 10,
+        "conditions": [],
+        "def% buff": 10,
+        "elements buffed": [
+          "dark"
+        ],
+        "hp% buff": 10,
+        "passive id": "2",
+        "passive target": "party",
+        "rec% buff": 10
+      },
+      {
+        "conditions": [],
+        "def% buff": 100,
+        "elements buffed": [
+          "dark"
+        ],
+        "hp% buff": 40,
+        "passive id": "2",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "damage% for spark": 100,
+        "passive id": "31",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "increase skill activation in arena%": 15,
+        "passive id": "111",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "dmg% mitigation for elemental attacks": 35,
+        "dmg% mitigation for elemental attacks buff for first x turns": 2,
+        "mitigate dark attacks": true,
+        "mitigate light attacks": true,
+        "passive id": "63",
+        "passive target": "self"
+      }
+    ],
+    "id": "8000526",
+    "name": "Giselbert's Favor",
+    "rarity": "7",
+    "target": "self"
+  },
   "8000527": {
     "desc": "50% Atk, max HP (Light, Dark) for all allies, probable spark critical, 10% reduction to BB activation cost & 20% OD gauge fill rate",
     "effects": [
@@ -50067,6 +50311,52 @@
     ],
     "id": "8000529",
     "name": "Rainbow Bubble",
+    "rarity": "7",
+    "target": "self"
+  },
+  "8000530": {
+    "desc": "50% Atk, max HP (Water), 15% all elemental damage for all allies, spark damage fills BB gauge  & 10% damage reduction",
+    "effects": [
+      {
+        "atk% buff": 50,
+        "conditions": [],
+        "elements buffed": [
+          "water"
+        ],
+        "hp% buff": 50,
+        "passive id": "2",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "dark units do extra elemental weakness dmg": true,
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 15,
+        "fire units do extra elemental weakness dmg": true,
+        "light units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "passive target": "party",
+        "thunder units do extra elemental weakness dmg": true,
+        "water units do extra elemental weakness dmg": true
+      },
+      {
+        "bc fill on spark high": 2,
+        "bc fill on spark low": 1,
+        "bc fill on spark%": 100,
+        "conditions": [],
+        "passive id": "47",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "dmg reduction chance%": 100,
+        "dmg reduction%": 10,
+        "passive id": "14",
+        "passive target": "self"
+      }
+    ],
+    "id": "8000530",
+    "name": "Wintry Dreamscape",
     "rarity": "7",
     "target": "self"
   },
