@@ -1,20 +1,4 @@
 {
-  "MST_SKILLS_2840868_DESCRIPTION": {
-    "en": "32 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 7 combo Thunder attack on single foe (25% active Pierce on Water, Thunder foes), evasion for 3 turns, boosts Thunder elemental damage for 4 turns, boosts own spark damage for 4 turns & boosts max HP",
-    "es": "32 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 7 combo Thunder attack on single foe (25% active Pierce on Water, Thunder foes), evasion for 3 turns, boosts Thunder elemental damage for 4 turns, boosts own spark damage for 4 turns & boosts max HP",
-    "id": "32 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 7 combo Thunder attack on single foe (25% active Pierce on Water, Thunder foes), evasion for 3 turns, boosts Thunder elemental damage for 4 turns, boosts own spark damage for 4 turns & boosts max HP",
-    "pt": "32 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 7 combo Thunder attack on single foe (25% active Pierce on Water, Thunder foes), evasion for 3 turns, boosts Thunder elemental damage for 4 turns, boosts own spark damage for 4 turns & boosts max HP",
-    "th": "32 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 7 combo Thunder attack on single foe (25% active Pierce on Water, Thunder foes), evasion for 3 turns, boosts Thunder elemental damage for 4 turns, boosts own spark damage for 4 turns & boosts max HP",
-    "vi": "32 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 7 combo Thunder attack on single foe (25% active Pierce on Water, Thunder foes), evasion for 3 turns, boosts Thunder elemental damage for 4 turns, boosts own spark damage for 4 turns & boosts max HP"
-  },
-  "MST_SKILLS_2840868_NAME": {
-    "en": "Come on.",
-    "es": "Come on.",
-    "id": "Come on.",
-    "pt": "Come on.",
-    "th": "Come on.",
-    "vi": "Come on."
-  },
   "MST_SKILLS_2840878_DESCRIPTION": {
     "en": "34 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 6 combo Thunder attack on single foe (boosts own critical rate), evasion for 3 turns, boosts Thunder elemental damage for 3 turns, damage taken fills BB gauge for 3 turns & 3 turns Atk, Def reduction infliction",
     "es": "34 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 6 combo Thunder attack on single foe (boosts own critical rate), evasion for 3 turns, boosts Thunder elemental damage for 3 turns, damage taken fills BB gauge for 3 turns & 3 turns Atk, Def reduction infliction",
@@ -21711,6 +21695,22 @@
     "th": "Jailbreak",
     "vi": "Jailbreak"
   },
+  "MST_SKILLS_3810998_DESCRIPTION": {
+    "en": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, critical damage, Fire, Earth elemental damage, BB gauge, fully restores HP, 100% DoT reduction, 100% raises allies from KO & inflicts Atk, Def reduction",
+    "es": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, critical damage, Fire, Earth elemental damage, BB gauge, fully restores HP, 100% DoT reduction, 100% raises allies from KO & inflicts Atk, Def reduction",
+    "id": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, critical damage, Fire, Earth elemental damage, BB gauge, fully restores HP, 100% DoT reduction, 100% raises allies from KO & inflicts Atk, Def reduction",
+    "pt": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, critical damage, Fire, Earth elemental damage, BB gauge, fully restores HP, 100% DoT reduction, 100% raises allies from KO & inflicts Atk, Def reduction",
+    "th": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, critical damage, Fire, Earth elemental damage, BB gauge, fully restores HP, 100% DoT reduction, 100% raises allies from KO & inflicts Atk, Def reduction",
+    "vi": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, critical damage, Fire, Earth elemental damage, BB gauge, fully restores HP, 100% DoT reduction, 100% raises allies from KO & inflicts Atk, Def reduction"
+  },
+  "MST_SKILLS_3810998_NAME": {
+    "en": "Awakened Spirits",
+    "es": "Awakened Spirits",
+    "id": "Awakened Spirits",
+    "pt": "Awakened Spirits",
+    "th": "Awakened Spirits",
+    "vi": "Awakened Spirits"
+  },
   "MST_SKILLS_3820288_DESCRIPTION": {
     "en": "60 combo grand dual attack on all foes (damage relative to remaining HP), boosts Def, max HP, Atk relative to Def, Spark damage, Water elemental damage, critical damage, OD gauge, activates Water barrier & perform 1 extra action within the same turn ",
     "es": "60 combo grand dual attack on all foes (damage relative to remaining HP), boosts Def, max HP, Atk relative to Def, Spark damage, Water elemental damage, critical damage, OD gauge, activates Water barrier & perform 1 extra action within the same turn ",
@@ -21990,6 +21990,22 @@
     "pt": "Sparkling Detonator",
     "th": "Sparkling Detonator",
     "vi": "Sparkling Detonator"
+  },
+  "MST_SKILLS_3820998_DESCRIPTION": {
+    "en": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, Water, Earth elemental damage, Atk, Def, Rec relative to max HP, OD gauge, BB gauge, spark vulnerability infliction, 100% damage reduction, 100% DoT reduction & inflicts Atk, Def reduction",
+    "es": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, Water, Earth elemental damage, Atk, Def, Rec relative to max HP, OD gauge, BB gauge, spark vulnerability infliction, 100% damage reduction, 100% DoT reduction & inflicts Atk, Def reduction",
+    "id": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, Water, Earth elemental damage, Atk, Def, Rec relative to max HP, OD gauge, BB gauge, spark vulnerability infliction, 100% damage reduction, 100% DoT reduction & inflicts Atk, Def reduction",
+    "pt": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, Water, Earth elemental damage, Atk, Def, Rec relative to max HP, OD gauge, BB gauge, spark vulnerability infliction, 100% damage reduction, 100% DoT reduction & inflicts Atk, Def reduction",
+    "th": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, Water, Earth elemental damage, Atk, Def, Rec relative to max HP, OD gauge, BB gauge, spark vulnerability infliction, 100% damage reduction, 100% DoT reduction & inflicts Atk, Def reduction",
+    "vi": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, spark damage, Water, Earth elemental damage, Atk, Def, Rec relative to max HP, OD gauge, BB gauge, spark vulnerability infliction, 100% damage reduction, 100% DoT reduction & inflicts Atk, Def reduction"
+  },
+  "MST_SKILLS_3820998_NAME": {
+    "en": "Crystal Menagerie",
+    "es": "Crystal Menagerie",
+    "id": "Crystal Menagerie",
+    "pt": "Crystal Menagerie",
+    "th": "Crystal Menagerie",
+    "vi": "Crystal Menagerie"
   },
   "MST_SKILLS_3830438_DESCRIPTION": {
     "en": "50 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, all elemental damage, OD gauge fill rate, fully restores HP, damage taken restores HP, 80% raises allies from KO, 80% KO resistance, inflicts Atk, Def reduction & massive DoT on all foes",
@@ -39734,6 +39750,22 @@
     "pt": "Lawless Last Stand",
     "th": "Lawless Last Stand",
     "vi": "Lawless Last Stand"
+  },
+  "MST_SKILLS_4820998_DESCRIPTION": {
+    "en": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, spark damage, critical damage, Atk, Def, Rec relative to max HP, OD gauge, fully restores HP, 100% damage reduction, spark vulnerability infliction & 100% raises allies from KO",
+    "es": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, spark damage, critical damage, Atk, Def, Rec relative to max HP, OD gauge, fully restores HP, 100% damage reduction, spark vulnerability infliction & 100% raises allies from KO",
+    "id": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, spark damage, critical damage, Atk, Def, Rec relative to max HP, OD gauge, fully restores HP, 100% damage reduction, spark vulnerability infliction & 100% raises allies from KO",
+    "pt": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, spark damage, critical damage, Atk, Def, Rec relative to max HP, OD gauge, fully restores HP, 100% damage reduction, spark vulnerability infliction & 100% raises allies from KO",
+    "th": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, spark damage, critical damage, Atk, Def, Rec relative to max HP, OD gauge, fully restores HP, 100% damage reduction, spark vulnerability infliction & 100% raises allies from KO",
+    "vi": "48 combo grand dual attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec, critical hit rate, max HP, spark damage, critical damage, Atk, Def, Rec relative to max HP, OD gauge, fully restores HP, 100% damage reduction, spark vulnerability infliction & 100% raises allies from KO"
+  },
+  "MST_SKILLS_4820998_NAME": {
+    "en": "Dragonfear",
+    "es": "Dragonfear",
+    "id": "Dragonfear",
+    "pt": "Dragonfear",
+    "th": "Dragonfear",
+    "vi": "Dragonfear"
   },
   "MST_SKILLS_4830758_DESCRIPTION": {
     "en": "46 combo grand dual attack on all foes (damage relative to remaining HP), boosts max HP, spark damage, critical damage, Atk, Def, Rec relative to max HP, 100% evasion, BB gauge, fully restores HP, 100% DoT reduction, purges DoT effects & inflicts Atk, Def reduction",
@@ -90615,6 +90647,22 @@
     "th": "Casket Ember",
     "vi": "Casket Ember"
   },
+  "MST_SKILLS_810998_DESCRIPTION": {
+    "en": "15 combo Fire attack on all foes (damage relative to remaining HP, boosts own critical rate), may activate BB/SBB/UBB twice for 3 turns, restores HP, fills OD gauge at turn's end for 3 turns, may raise allies from KO & boosts own max HP",
+    "es": "15 combo Fire attack on all foes (damage relative to remaining HP, boosts own critical rate), may activate BB/SBB/UBB twice for 3 turns, restores HP, fills OD gauge at turn's end for 3 turns, may raise allies from KO & boosts own max HP",
+    "id": "15 combo Fire attack on all foes (damage relative to remaining HP, boosts own critical rate), may activate BB/SBB/UBB twice for 3 turns, restores HP, fills OD gauge at turn's end for 3 turns, may raise allies from KO & boosts own max HP",
+    "pt": "15 combo Fire attack on all foes (damage relative to remaining HP, boosts own critical rate), may activate BB/SBB/UBB twice for 3 turns, restores HP, fills OD gauge at turn's end for 3 turns, may raise allies from KO & boosts own max HP",
+    "th": "15 combo Fire attack on all foes (damage relative to remaining HP, boosts own critical rate), may activate BB/SBB/UBB twice for 3 turns, restores HP, fills OD gauge at turn's end for 3 turns, may raise allies from KO & boosts own max HP",
+    "vi": "15 combo Fire attack on all foes (damage relative to remaining HP, boosts own critical rate), may activate BB/SBB/UBB twice for 3 turns, restores HP, fills OD gauge at turn's end for 3 turns, may raise allies from KO & boosts own max HP"
+  },
+  "MST_SKILLS_810998_NAME": {
+    "en": "Fireflower",
+    "es": "Fireflower",
+    "id": "Fireflower",
+    "pt": "Fireflower",
+    "th": "Fireflower",
+    "vi": "Fireflower"
+  },
   "MST_SKILLS_811016_DESCRIPTION": {
     "en": "15 combo powerful Fire attack on all foes & boosts critical hit rate for 3 turns",
     "es": "Combo grupal de 15 poderosos ataques ígneos. Aumenta la posibilidad de asestar golpes críticos durante 3 turnos",
@@ -92734,29 +92782,5 @@
     "pt": "17 combo powerful Earth attack on all foes, hugely boosts BC efficacy for 3 turns, damage taken may restore HP for 3 turns, negates all status ailments, critical, elemental damage and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
     "th": "17 combo powerful Earth attack on all foes, hugely boosts BC efficacy for 3 turns, damage taken may restore HP for 3 turns, negates all status ailments, critical, elemental damage and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
     "vi": "17 combo powerful Earth attack on all foes, hugely boosts BC efficacy for 3 turns, damage taken may restore HP for 3 turns, negates all status ailments, critical, elemental damage and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack"
-  },
-  "MST_SKILLS_830538_NAME": {
-    "en": "Ooh! Right on the head!",
-    "es": "Ooh! Right on the head!",
-    "id": "Ooh! Right on the head!",
-    "pt": "Ooh! Right on the head!",
-    "th": "Ooh! Right on the head!",
-    "vi": "Ooh! Right on the head!"
-  },
-  "MST_SKILLS_830557_DESCRIPTION": {
-    "en": "17 combo powerful Earth attack on all foes, reduces foe's BB gauge fill rate for 3 turns, probability of raising allies from KO, considerably boosts Atk, Def, Rec and enormously boosts critical hit rate of Earth types for 3 turns & hugely restores HP for 3 turns",
-    "es": "17 combo powerful Earth attack on all foes, reduces foe's BB gauge fill rate for 3 turns, probability of raising allies from KO, considerably boosts Atk, Def, Rec and enormously boosts critical hit rate of Earth types for 3 turns & hugely restores HP for 3 turns",
-    "id": "17 combo powerful Earth attack on all foes, reduces foe's BB gauge fill rate for 3 turns, probability of raising allies from KO, considerably boosts Atk, Def, Rec and enormously boosts critical hit rate of Earth types for 3 turns & hugely restores HP for 3 turns",
-    "pt": "17 combo powerful Earth attack on all foes, reduces foe's BB gauge fill rate for 3 turns, probability of raising allies from KO, considerably boosts Atk, Def, Rec and enormously boosts critical hit rate of Earth types for 3 turns & hugely restores HP for 3 turns",
-    "th": "17 combo powerful Earth attack on all foes, reduces foe's BB gauge fill rate for 3 turns, probability of raising allies from KO, considerably boosts Atk, Def, Rec and enormously boosts critical hit rate of Earth types for 3 turns & hugely restores HP for 3 turns",
-    "vi": "17 combo powerful Earth attack on all foes, reduces foe's BB gauge fill rate for 3 turns, probability of raising allies from KO, considerably boosts Atk, Def, Rec and enormously boosts critical hit rate of Earth types for 3 turns & hugely restores HP for 3 turns"
-  },
-  "MST_SKILLS_830557_NAME": {
-    "en": "Hisa! Joyful Breeze!",
-    "es": "Hisa! Joyful Breeze!",
-    "id": "Hisa! Joyful Breeze!",
-    "pt": "Hisa! Joyful Breeze!",
-    "th": "Hisa! Joyful Breeze!",
-    "vi": "Hisa! Joyful Breeze!"
   }
 }
