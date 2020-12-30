@@ -1,4 +1,36 @@
 {
+  "MST_LEADERSKILLS_2125_DESCRIPTION": {
+    "en": "Negates all status ailments, recovers HP each turn & probable recovery of HP when attacked",
+    "es": "Anula las aflicciones de los estados, recupera PS cada turno y puede recuperar PS al atacar",
+    "id": "Menetralkan semua status penyait, memulihkan HP tiap giliran, kemungkinan memulihkan HP saat diserang",
+    "pt": "Anula qualquer status negativo, recupera HP a cada rodada e provável recuperação de HP quando atacado",
+    "th": "กันทุกสถานะผิดปกติ ฟื้น HP เมื่อจบเทิร์น และเพิ่มโอกาสฟื้น HP เมื่อถูกโจมตี",
+    "vi": "Hủy bỏ mọi hiệu ứng trạng thái, phục hồi Thể lực mỗi lượt & có thể phục hồi Thể lực khi bị tấn công"
+  },
+  "MST_LEADERSKILLS_2125_NAME": {
+    "en": "Eternal Grace",
+    "es": "Gracia eterna",
+    "id": "Rahmat Abadi",
+    "pt": "Graça Eterna",
+    "th": "อีเทอนัล เกรซ",
+    "vi": "Ân Điển Bất Tận"
+  },
+  "MST_LEADERSKILLS_2129_DESCRIPTION": {
+    "en": "Negates all status ailments, recovers HP each turn & damage taken boosts BB gauge",
+    "es": "Anula las aflicciones de estado, recupera PS cada turno y el daño recibido potencia el indicador BB",
+    "id": "Menegasi semua status penyakit, memulihkan HP tiap giliran & kerusakan diderita menambah meteran BB",
+    "pt": "Anula efeitos negativos, recupera HP a cada rodada e dano sofrido reforça Barra BB",
+    "th": "กันทุกสถานะผิดปกติ, ฟื้น HP ในแต่ละเทิร์น, เร่งบีบีเกจจากดาเมจที่ได้รับ",
+    "vi": "Negates all status ailments, recovers HP each turn & damage taken boosts BB gauge"
+  },
+  "MST_LEADERSKILLS_2129_NAME": {
+    "en": "Eternal Star Life",
+    "es": "Vida estelar eterna",
+    "id": "Kehidupan Bintang Abadi",
+    "pt": "Estrela da Vida Eterna",
+    "th": "อีเทอนัล สตาร์ ไลฟ์",
+    "vi": "Eternal Star Life"
+  },
   "MST_LEADERSKILLS_2130_DESCRIPTION": {
     "en": "Negates all status ailments, 15% boost to Atk & boosts Spark damage",
     "es": "Niega las aflicciones de estado, +15% al ATQ y potencia el daño de Chispas",
@@ -13654,6 +13686,22 @@
     "pt": "Burning Grudge of Peril",
     "th": "Burning Grudge of Peril",
     "vi": "Burning Grudge of Peril"
+  },
+  "MST_LEADERSKILLS_810998_DESCRIPTION": {
+    "en": "150% Atk, 100% Def, 150% Rec, max HP, 30% critical rate, 300% critical damage, probable 1 KO resistance, probable spark critical & probable damage reduction to 1",
+    "es": "150% Atk, 100% Def, 150% Rec, max HP, 30% critical rate, 300% critical damage, probable 1 KO resistance, probable spark critical & probable damage reduction to 1",
+    "id": "150% Atk, 100% Def, 150% Rec, max HP, 30% critical rate, 300% critical damage, probable 1 KO resistance, probable spark critical & probable damage reduction to 1",
+    "pt": "150% Atk, 100% Def, 150% Rec, max HP, 30% critical rate, 300% critical damage, probable 1 KO resistance, probable spark critical & probable damage reduction to 1",
+    "th": "150% Atk, 100% Def, 150% Rec, max HP, 30% critical rate, 300% critical damage, probable 1 KO resistance, probable spark critical & probable damage reduction to 1",
+    "vi": "150% Atk, 100% Def, 150% Rec, max HP, 30% critical rate, 300% critical damage, probable 1 KO resistance, probable spark critical & probable damage reduction to 1"
+  },
+  "MST_LEADERSKILLS_810998_NAME": {
+    "en": "Blooming Combust",
+    "es": "Blooming Combust",
+    "id": "Blooming Combust",
+    "pt": "Blooming Combust",
+    "th": "Blooming Combust",
+    "vi": "Blooming Combust"
   },
   "MST_LEADERSKILLS_811118_DESCRIPTION": {
     "en": "60% boost to Atk, max HP, 100% boost to Spark damage, boosts Spark damage for 2 turns when Sparks have exceeded certain amount & hugely boosts Fire and Water elemental damage ",
@@ -92734,29 +92782,5 @@
     "pt": "Sábia Mimir",
     "th": "เซจมิเมียร์",
     "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_504700_NAME": {
-    "en": "Defiant God Luther",
-    "es": "Dios osado Luther",
-    "id": "Dewa Berontak Luther",
-    "pt": "Deus Desafiador Luther",
-    "th": "ดีเฟียนท ก็อด ลูเธอร์",
-    "vi": "Thần chống đối Luther"
-  },
-  "MST_MONSTERS_504701_NAME": {
-    "en": "Defiant God Luther",
-    "es": "Dios osado Luther",
-    "id": "Dewa Berontak Luther",
-    "pt": "Deus Desafiador Luther",
-    "th": "ดีเฟียนท ก็อด ลูเธอร์",
-    "vi": "Thần chống đối Luther"
-  },
-  "MST_MONSTERS_504702_NAME": {
-    "en": "Defiant God Luther",
-    "es": "Dios osado Luther",
-    "id": "Dewa Berontak Luther",
-    "pt": "Deus Desafiador Luther",
-    "th": "ดีเฟียนท ก็อด ลูเธอร์",
-    "vi": "Thần chống đối Luther"
   }
 }
