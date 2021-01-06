@@ -1,4 +1,20 @@
 {
+  "MST_LEADERSKILLS_2124_DESCRIPTION": {
+    "en": "Negates all status ailments, recovers HP each turn & probable slight recovery of HP when attacked",
+    "es": "Anula las aflicciones de los estados, recupera PS cada turno y puede recuperar una cantidad leve de PS al atacar",
+    "id": "Menetralkan semua status penyait, memulihkan HP tiap giliran, kemungkinan agak memulihkan HP saat diserang",
+    "pt": "Anula qualquer status negativo, recupera HP a cada rodada e provável recuperação de HP quando atacado",
+    "th": "กันทุกสถานะผิดปกติ ฟื้น HP เมื่อจบเทิร์น และเพิ่มโอกาสเล็กน้อยในการฟื้น HP เมื่อถูกโจมตี",
+    "vi": "Hủy bỏ mọi hiệu ứng trạng thái, phục hồi Thể lực mỗi lượt & có thể phục hồi nhẹ Thể lực khi bị tấn công"
+  },
+  "MST_LEADERSKILLS_2124_NAME": {
+    "en": "Eternal Truth",
+    "es": "Verdad eterna",
+    "id": "Kebenaran Abadi",
+    "pt": "Verdade Eterna",
+    "th": "อีเทอนัล ทรูธ",
+    "vi": "Sự Thật Vĩnh Cửu"
+  },
   "MST_LEADERSKILLS_2125_DESCRIPTION": {
     "en": "Negates all status ailments, recovers HP each turn & probable recovery of HP when attacked",
     "es": "Anula las aflicciones de los estados, recupera PS cada turno y puede recuperar PS al atacar",
@@ -18807,6 +18823,22 @@
     "th": "Awakened Bloodlust",
     "vi": "Awakened Bloodlust"
   },
+  "MST_LEADERSKILLS_860998_DESCRIPTION": {
+    "en": "200% Atk, 140% max HP, 30% critical rate, 300% spark damage, probable spark critical, spark damage restores HP & 100% critical, elemental damage reduction",
+    "es": "200% Atk, 140% max HP, 30% critical rate, 300% spark damage, probable spark critical, spark damage restores HP & 100% critical, elemental damage reduction",
+    "id": "200% Atk, 140% max HP, 30% critical rate, 300% spark damage, probable spark critical, spark damage restores HP & 100% critical, elemental damage reduction",
+    "pt": "200% Atk, 140% max HP, 30% critical rate, 300% spark damage, probable spark critical, spark damage restores HP & 100% critical, elemental damage reduction",
+    "th": "200% Atk, 140% max HP, 30% critical rate, 300% spark damage, probable spark critical, spark damage restores HP & 100% critical, elemental damage reduction",
+    "vi": "200% Atk, 140% max HP, 30% critical rate, 300% spark damage, probable spark critical, spark damage restores HP & 100% critical, elemental damage reduction"
+  },
+  "MST_LEADERSKILLS_860998_NAME": {
+    "en": "Blind Sight",
+    "es": "Blind Sight",
+    "id": "Blind Sight",
+    "pt": "Blind Sight",
+    "th": "Blind Sight",
+    "vi": "Blind Sight"
+  },
   "MST_LEADERSKILLS_8700_DESCRIPTION": {
     "en": "15% reduction of damage taken from Water and Fire types",
     "es": "Reduce un 15% el daño recibido de las unidades acuáticas e ígneas",
@@ -23367,6 +23399,70 @@
     "th": "Find the missing pages to continue the tale!",
     "vi": "Find the missing pages to continue the tale!"
   },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2082_MESSAGES": {
+    "en": "Hah, spirits this impure shouldn't be suffered to exist!",
+    "es": "Hah, spirits this impure shouldn't be suffered to exist!",
+    "id": "Hah, spirits this impure shouldn't be suffered to exist!",
+    "pt": "Hah, spirits this impure shouldn't be suffered to exist!",
+    "th": "Hah, spirits this impure shouldn't be suffered to exist!",
+    "vi": "Hah, spirits this impure shouldn't be suffered to exist!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2083_MESSAGES": {
+    "en": "...I say that, but getting burned by those embers will still leave a mark.",
+    "es": "...I say that, but getting burned by those embers will still leave a mark.",
+    "id": "...I say that, but getting burned by those embers will still leave a mark.",
+    "pt": "...I say that, but getting burned by those embers will still leave a mark.",
+    "th": "...I say that, but getting burned by those embers will still leave a mark.",
+    "vi": "...I say that, but getting burned by those embers will still leave a mark."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2084_MESSAGES": {
+    "en": "And the tainted soil seems to bolster its brethren.",
+    "es": "And the tainted soil seems to bolster its brethren.",
+    "id": "And the tainted soil seems to bolster its brethren.",
+    "pt": "And the tainted soil seems to bolster its brethren.",
+    "th": "And the tainted soil seems to bolster its brethren.",
+    "vi": "And the tainted soil seems to bolster its brethren."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2085_MESSAGES": {
+    "en": "Snuffing out an ember should render it back to ash and soil.",
+    "es": "Snuffing out an ember should render it back to ash and soil.",
+    "id": "Snuffing out an ember should render it back to ash and soil.",
+    "pt": "Snuffing out an ember should render it back to ash and soil.",
+    "th": "Snuffing out an ember should render it back to ash and soil.",
+    "vi": "Snuffing out an ember should render it back to ash and soil."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2086_MESSAGES": {
+    "en": "All right. Time to clean up.",
+    "es": "All right. Time to clean up.",
+    "id": "All right. Time to clean up.",
+    "pt": "All right. Time to clean up.",
+    "th": "All right. Time to clean up.",
+    "vi": "All right. Time to clean up."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2087_MESSAGES": {
+    "en": "...Hmph. They just won't leave me be, even when I'm like this now.",
+    "es": "...Hmph. They just won't leave me be, even when I'm like this now.",
+    "id": "...Hmph. They just won't leave me be, even when I'm like this now.",
+    "pt": "...Hmph. They just won't leave me be, even when I'm like this now.",
+    "th": "...Hmph. They just won't leave me be, even when I'm like this now.",
+    "vi": "...Hmph. They just won't leave me be, even when I'm like this now."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2088_MESSAGES": {
+    "en": "These sparks seem to paralyze the body...",
+    "es": "These sparks seem to paralyze the body...",
+    "id": "These sparks seem to paralyze the body...",
+    "pt": "These sparks seem to paralyze the body...",
+    "th": "These sparks seem to paralyze the body...",
+    "vi": "These sparks seem to paralyze the body..."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2089_MESSAGES": {
+    "en": "...And these droplets reflect everything we do.",
+    "es": "...And these droplets reflect everything we do.",
+    "id": "...And these droplets reflect everything we do.",
+    "pt": "...And these droplets reflect everything we do.",
+    "th": "...And these droplets reflect everything we do.",
+    "vi": "...And these droplets reflect everything we do."
+  },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_208_MESSAGES": {
     "en": "Think you have surpassed me?!<br>No, I will not have it!!<br>The world is mine, only mine!!",
     "es": "¡¿Crees que me has superado?!<br>¡No, esto no puede ser cierto!<br>¡El mundo es mío! ¡Solo mío!",
@@ -23374,6 +23470,38 @@
     "pt": "Acha que me superou??<br>Não, não mesmo!<br>O mundo é meu, só meu!!",
     "th": "คิดว่าเจ้าจะเอาชนะข้าได้จริงๆ รึ?!<br>ไม่มีทาง!!<br>โลกนี้เป็นของข้า เป็นของข้าเพียงผู้เดียว!!",
     "vi": "Think you have surpassed me?!<br>No, I will not have it!!<br>The world is mine, only mine!!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2090_MESSAGES": {
+    "en": "Nothing to it, I suppose. For old time's sake.",
+    "es": "Nothing to it, I suppose. For old time's sake.",
+    "id": "Nothing to it, I suppose. For old time's sake.",
+    "pt": "Nothing to it, I suppose. For old time's sake.",
+    "th": "Nothing to it, I suppose. For old time's sake.",
+    "vi": "Nothing to it, I suppose. For old time's sake."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2091_MESSAGES": {
+    "en": "Heh, you think stirring up the impurities is enough to delay the inevitable?",
+    "es": "Heh, you think stirring up the impurities is enough to delay the inevitable?",
+    "id": "Heh, you think stirring up the impurities is enough to delay the inevitable?",
+    "pt": "Heh, you think stirring up the impurities is enough to delay the inevitable?",
+    "th": "Heh, you think stirring up the impurities is enough to delay the inevitable?",
+    "vi": "Heh, you think stirring up the impurities is enough to delay the inevitable?"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2092_MESSAGES": {
+    "en": "Come, humans, receive your judgement from the spirits!",
+    "es": "Come, humans, receive your judgement from the spirits!",
+    "id": "Come, humans, receive your judgement from the spirits!",
+    "pt": "Come, humans, receive your judgement from the spirits!",
+    "th": "Come, humans, receive your judgement from the spirits!",
+    "vi": "Come, humans, receive your judgement from the spirits!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2093_MESSAGES": {
+    "en": "You've crossed the point of no return!",
+    "es": "You've crossed the point of no return!",
+    "id": "You've crossed the point of no return!",
+    "pt": "You've crossed the point of no return!",
+    "th": "You've crossed the point of no return!",
+    "vi": "You've crossed the point of no return!"
   },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_209_MESSAGES": {
     "en": "Lord Afla Dilith, my master!<br>I shall complete my mission now.<br>I was defeated before I could<br>last time, but...",
@@ -92680,102 +92808,6 @@
     "vi": "Hiền triết Mimir"
   },
   "MST_MONSTERS_50456_NAME": {
-    "en": "Sage Mimir",
-    "es": "Sabia Mimi",
-    "id": "Si Bijak Mimir",
-    "pt": "Sábia Mimir",
-    "th": "เซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_50457_NAME": {
-    "en": "Sage Mimir",
-    "es": "Sabia Mimi",
-    "id": "Si Bijak Mimir",
-    "pt": "Sábia Mimir",
-    "th": "เซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_50458_NAME": {
-    "en": "Sage Mimir",
-    "es": "Sabia Mimi",
-    "id": "Si Bijak Mimir",
-    "pt": "Sábia Mimir",
-    "th": "เซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_50459_NAME": {
-    "en": "Sage Mimir",
-    "es": "Sabia Mimi",
-    "id": "Si Bijak Mimir",
-    "pt": "Sábia Mimir",
-    "th": "เซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_504600_NAME": {
-    "en": "Ice Angel Sergio",
-    "es": "Ángel gélido Sergio",
-    "id": "Malaikat Es Sergio",
-    "pt": "Sergio Anjo do Gelo",
-    "th": "ไอซ์แองเจลเซอร์จิโอ้",
-    "vi": "Ice Angel Sergio"
-  },
-  "MST_MONSTERS_504601_NAME": {
-    "en": "Tidal Dragoon Zephu",
-    "es": "Dragón marino Zephu",
-    "id": "Pasukan Pasang Zephu",
-    "pt": "Zephu Dragão da Maré",
-    "th": "ไทดัลดรากูนเซฟู",
-    "vi": "Tidal Dragoon Zephu"
-  },
-  "MST_MONSTERS_504602_NAME": {
-    "en": "Felneus",
-    "es": "Felneus",
-    "id": "Felneus",
-    "pt": "Felneus",
-    "th": "เฟลเนียส",
-    "vi": "Felneus"
-  },
-  "MST_MONSTERS_504603_NAME": {
-    "en": "Bishop Merith",
-    "es": "Obispa Merith",
-    "id": "Uskup Merith",
-    "pt": "Madre Merith",
-    "th": "บิช็อพเมอริธ",
-    "vi": "Bishop Merith"
-  },
-  "MST_MONSTERS_50460_NAME": {
-    "en": "Sage Mimir",
-    "es": "Sabia Mimi",
-    "id": "Si Bijak Mimir",
-    "pt": "Sábia Mimir",
-    "th": "เซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_50461_NAME": {
-    "en": "Sage Mimir",
-    "es": "Sabia Mimi",
-    "id": "Si Bijak Mimir",
-    "pt": "Sábia Mimir",
-    "th": "เซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_50462_NAME": {
-    "en": "Sage Mimir",
-    "es": "Sabia Mimi",
-    "id": "Si Bijak Mimir",
-    "pt": "Sábia Mimir",
-    "th": "เซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_50463_NAME": {
-    "en": "Sage Mimir",
-    "es": "Sabia Mimi",
-    "id": "Si Bijak Mimir",
-    "pt": "Sábia Mimir",
-    "th": "เซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_50464_NAME": {
     "en": "Sage Mimir",
     "es": "Sabia Mimi",
     "id": "Si Bijak Mimir",
