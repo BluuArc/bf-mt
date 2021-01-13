@@ -1,4 +1,84 @@
 {
+  "MST_SKILLS_2000184_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000184_NAME": {
+    "en": "Nngh...So this is Drevas' power.",
+    "es": "Nngh... Así que este es el poder de Drevas.",
+    "id": "Nngh…Jadi ini kekuatan Drevas.",
+    "pt": "Nngh... então esse é o poder do Drevas.",
+    "th": "โอย...นี่คือพลังของเดรวาสสินะ",
+    "vi": "Nngh...Vậy đây là sức mạnh của Drevas."
+  },
+  "MST_SKILLS_2000185_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000185_NAME": {
+    "en": "I guess I haven't matured enough.",
+    "es": "Creo que todavía no he madurado lo suficiente.",
+    "id": "Kurasa aku belum cukup matang.",
+    "pt": "Acho que não estou maduro o suficiente.",
+    "th": "ข้าเดาว่าข้ายังไม่โตพร้อมเท่าที่ควร",
+    "vi": "Ta nghĩ mình chưa đủ lớn."
+  },
+  "MST_SKILLS_2000190_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000190_NAME": {
+    "en": "Chariot Magnum",
+    "es": "Revólver de cuadriga",
+    "id": "Magnum Kereta",
+    "pt": "Magna-trovão",
+    "th": "ชาเรียทแม็กนั่ม",
+    "vi": "Thùng xe ngựa"
+  },
+  "MST_SKILLS_2000191_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000191_NAME": {
+    "en": "I haven't seen you around here before.",
+    "es": "No te he visto antes por aquí.",
+    "id": "Aku belum pernah melihatmu di sekitar sini sebelumnya.",
+    "pt": "Nunca tinha visto você por aqui antes.",
+    "th": "ข้าไม่เคยพบเจ้าที่แถวนี้มาก่อนเลย",
+    "vi": "Ta chưa từng thấy người quanh đây trước kia."
+  },
+  "MST_SKILLS_2000192_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000192_NAME": {
+    "en": "I won't forgive you for what you did to Falma!",
+    "es": "¡No olvidaré lo que le hiciste a Falma!",
+    "id": "Takkan kumaafkan apa yang kaulakukan pada Falma!",
+    "pt": "Não vou perdoá-lo pelo que fez com Falma!",
+    "th": "ข้าจะไม่ยกโทษให้กับเจ้าสำหรับสิ่งที่เจ้าทำกับฟัลม่า!",
+    "vi": "Ta sẽ không tha thứ cho ngươi vì những gì đã làm với Falma!"
+  },
   "MST_SKILLS_2000193_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -92790,29 +92870,5 @@
     "pt": "A mana foi pra casa...",
     "th": "พี่สาวกลับไปที่บ้าน",
     "vi": "Sis went home..."
-  },
-  "MST_SKILLS_2122416_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122416_NAME": {
-    "en": "I wonder if it's safe now...",
-    "es": "Me pregunta si será segura...",
-    "id": "Aku ingin tahu apa sudah aman sekarang...",
-    "pt": "Será que agora é seguro...",
-    "th": "ข้าสงสัยว่าตอนนี้ปลอดภัยรึยัง...",
-    "vi": "I wonder if it's safe now..."
-  },
-  "MST_SKILLS_2122417_DESCRIPTION": {
-    "en": "13 combo powerful Dark attack on all enemies, recovers HP for all allies & removes all status ailments",
-    "es": "Combo grupal de 13 poderosos ataques oscuros. Recupera los PS de tus aliados y elimina las aflicciones de los estados",
-    "id": "13 kombo serangan Gelap kuat ke semua musuh, memulihkan HP semua sekutu & membuang semua status penyakit",
-    "pt": "Combo poderoso de 13 golpes de Sombra em todos os inimigos e recuperação de HP em todos os aliados e remove todos os efeitos negativos",
-    "th": "13 คอมโบ โจมตีศัตรูทั้งหมดด้วยธาตุความมืด ฟื้น HP ให้ทีมและลบทุกสถานะผิดปกติ",
-    "vi": "13 combo powerful Dark attack on all enemies, recovers HP for all allies & removes all status ailments"
   }
 }
