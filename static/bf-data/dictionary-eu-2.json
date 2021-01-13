@@ -1,4 +1,52 @@
 {
+  "MST_LEADERSKILLS_2121_DESCRIPTION": {
+    "en": "Negates all status ailments & recovers HP and BB each turn",
+    "es": "Negates all status ailments & recovers HP and BB each turn",
+    "id": "Menegasi semua status penyakit & memulihkan HP dan BB tiap giliran",
+    "pt": "Negates all status ailments & recovers HP and BB each turn",
+    "th": "กันทุกสถานะผิดปกติ, ฟื้น HP และ BBในแต่ละเทิร์น",
+    "vi": "Negates all status ailments & recovers HP and BB each turn"
+  },
+  "MST_LEADERSKILLS_2121_NAME": {
+    "en": "Eternal Breath",
+    "es": "Eternal Breath",
+    "id": "Napas Abadi",
+    "pt": "Eternal Breath",
+    "th": "เอเทอนัล บรีธ",
+    "vi": "Eternal Breath"
+  },
+  "MST_LEADERSKILLS_2122_DESCRIPTION": {
+    "en": "Negates all status ailments & hugely recovers HP and BB each turn",
+    "es": "Negates all status ailments & hugely recovers HP and BB each turn",
+    "id": "Menegasi semua status penyakit & amat memulihkan HP dan BB tiap giliran",
+    "pt": "Negates all status ailments & hugely recovers HP and BB each turn",
+    "th": "กันทุกสถานะผิดปกติ, ฟื้น HP และ BB อย่างมากในแต่ละเทิร์น",
+    "vi": "Negates all status ailments & hugely recovers HP and BB each turn"
+  },
+  "MST_LEADERSKILLS_2122_NAME": {
+    "en": "Eternal Vitality",
+    "es": "Eternal Vitality",
+    "id": "Vitalitas Abadi",
+    "pt": "Eternal Vitality",
+    "th": "เอเทอนัล วิทาลิตี้",
+    "vi": "Eternal Vitality"
+  },
+  "MST_LEADERSKILLS_2123_DESCRIPTION": {
+    "en": "Negates all status ailments, 30% boost to max HP & boosts BC and HC drop rate",
+    "es": "Negates all status ailments, 30% boost to max HP & boosts BC and HC drop rate",
+    "id": "Menegasi semua status penyakit, 30% ekstra HP mks & menambah perolehan BC dan HC",
+    "pt": "Negates all status ailments, 30% boost to max HP & boosts BC and HC drop rate",
+    "th": "กันทุกสถานะผิดปกติ, 30% เพิ่ม HP สูงสุด, เพิ่มอัตราการดรอป BC และ HC",
+    "vi": "Negates all status ailments, 30% boost to max HP & boosts BC and HC drop rate"
+  },
+  "MST_LEADERSKILLS_2123_NAME": {
+    "en": "Eternal Divine Life",
+    "es": "Eternal Divine Life",
+    "id": "Kehidupan Ilahi Abadi",
+    "pt": "Eternal Divine Life",
+    "th": "เอเทอนัล ดีไวน์ ไลฟ์",
+    "vi": "Eternal Divine Life"
+  },
   "MST_LEADERSKILLS_2124_DESCRIPTION": {
     "en": "Negates all status ailments, recovers HP each turn & probable slight recovery of HP when attacked",
     "es": "Anula las aflicciones de los estados, recupera PS cada turno y puede recuperar una cantidad leve de PS al atacar",
@@ -16727,6 +16775,22 @@
     "th": "Patient Control",
     "vi": "Patient Control"
   },
+  "MST_LEADERSKILLS_840998_DESCRIPTION": {
+    "en": "150% Atk, Def, 100% Rec, 150% max HP, 250% Thunder elemental damage, 15% damage reduction, probable spark critical & 30% OD gauge fill rate",
+    "es": "150% Atk, Def, 100% Rec, 150% max HP, 250% Thunder elemental damage, 15% damage reduction, probable spark critical & 30% OD gauge fill rate",
+    "id": "150% Atk, Def, 100% Rec, 150% max HP, 250% Thunder elemental damage, 15% damage reduction, probable spark critical & 30% OD gauge fill rate",
+    "pt": "150% Atk, Def, 100% Rec, 150% max HP, 250% Thunder elemental damage, 15% damage reduction, probable spark critical & 30% OD gauge fill rate",
+    "th": "150% Atk, Def, 100% Rec, 150% max HP, 250% Thunder elemental damage, 15% damage reduction, probable spark critical & 30% OD gauge fill rate",
+    "vi": "150% Atk, Def, 100% Rec, 150% max HP, 250% Thunder elemental damage, 15% damage reduction, probable spark critical & 30% OD gauge fill rate"
+  },
+  "MST_LEADERSKILLS_840998_NAME": {
+    "en": "Paraselene",
+    "es": "Paraselene",
+    "id": "Paraselene",
+    "pt": "Paraselene",
+    "th": "Paraselene",
+    "vi": "Paraselene"
+  },
   "MST_LEADERSKILLS_850017_DESCRIPTION": {
     "en": "80% boost to Def, Rec, max HP, boosts Def, Rec relative to remaining HP, 10% damage reduction & restores HP each turn",
     "es": "80% boost to Def, Rec, max HP, boosts Def, Rec relative to remaining HP, 10% damage reduction & restores HP each turn",
@@ -17750,6 +17814,22 @@
     "pt": "Paradoxical Light",
     "th": "Paradoxical Light",
     "vi": "Paradoxical Light"
+  },
+  "MST_LEADERSKILLS_850998_DESCRIPTION": {
+    "en": "120% Atk, 100% Def, Rec, 120% max HP, 20% damage reduction for 1 turn when damage taken is over 5k, 50% damage reduction from all element types for first 2 turns, 25% BB/SBB activation rates & 100% ABP, 50% CBP gain",
+    "es": "120% Atk, 100% Def, Rec, 120% max HP, 20% damage reduction for 1 turn when damage taken is over 5k, 50% damage reduction from all element types for first 2 turns, 25% BB/SBB activation rates & 100% ABP, 50% CBP gain",
+    "id": "120% Atk, 100% Def, Rec, 120% max HP, 20% damage reduction for 1 turn when damage taken is over 5k, 50% damage reduction from all element types for first 2 turns, 25% BB/SBB activation rates & 100% ABP, 50% CBP gain",
+    "pt": "120% Atk, 100% Def, Rec, 120% max HP, 20% damage reduction for 1 turn when damage taken is over 5k, 50% damage reduction from all element types for first 2 turns, 25% BB/SBB activation rates & 100% ABP, 50% CBP gain",
+    "th": "120% Atk, 100% Def, Rec, 120% max HP, 20% damage reduction for 1 turn when damage taken is over 5k, 50% damage reduction from all element types for first 2 turns, 25% BB/SBB activation rates & 100% ABP, 50% CBP gain",
+    "vi": "120% Atk, 100% Def, Rec, 120% max HP, 20% damage reduction for 1 turn when damage taken is over 5k, 50% damage reduction from all element types for first 2 turns, 25% BB/SBB activation rates & 100% ABP, 50% CBP gain"
+  },
+  "MST_LEADERSKILLS_850998_NAME": {
+    "en": "Raucous",
+    "es": "Raucous",
+    "id": "Raucous",
+    "pt": "Raucous",
+    "th": "Raucous",
+    "vi": "Raucous"
   },
   "MST_LEADERSKILLS_860017_DESCRIPTION": {
     "en": "100% boost to Atk, Def, 80% boost to max HP of Light, Dark types, greatly boosts BB Atk, damage taken hugely boosts BB gauge & 10% damage reduction from Light, Dark types",
@@ -23503,6 +23583,54 @@
     "th": "You've crossed the point of no return!",
     "vi": "You've crossed the point of no return!"
   },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2094_MESSAGES": {
+    "en": "These spirits sure are a violent sort!",
+    "es": "These spirits sure are a violent sort!",
+    "id": "These spirits sure are a violent sort!",
+    "pt": "These spirits sure are a violent sort!",
+    "th": "These spirits sure are a violent sort!",
+    "vi": "These spirits sure are a violent sort!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2095_MESSAGES": {
+    "en": "The light ones seem to be supernaturally vigorous...",
+    "es": "The light ones seem to be supernaturally vigorous...",
+    "id": "The light ones seem to be supernaturally vigorous...",
+    "pt": "The light ones seem to be supernaturally vigorous...",
+    "th": "The light ones seem to be supernaturally vigorous...",
+    "vi": "The light ones seem to be supernaturally vigorous..."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2096_MESSAGES": {
+    "en": "...While the dark ones are extra vicious!",
+    "es": "...While the dark ones are extra vicious!",
+    "id": "...While the dark ones are extra vicious!",
+    "pt": "...While the dark ones are extra vicious!",
+    "th": "...While the dark ones are extra vicious!",
+    "vi": "...While the dark ones are extra vicious!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2097_MESSAGES": {
+    "en": "Well, nothing I can't handle! Haaah!",
+    "es": "Well, nothing I can't handle! Haaah!",
+    "id": "Well, nothing I can't handle! Haaah!",
+    "pt": "Well, nothing I can't handle! Haaah!",
+    "th": "Well, nothing I can't handle! Haaah!",
+    "vi": "Well, nothing I can't handle! Haaah!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2098_MESSAGES": {
+    "en": "Whuh! The spirits! They're swarming!",
+    "es": "Whuh! The spirits! They're swarming!",
+    "id": "Whuh! The spirits! They're swarming!",
+    "pt": "Whuh! The spirits! They're swarming!",
+    "th": "Whuh! The spirits! They're swarming!",
+    "vi": "Whuh! The spirits! They're swarming!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2099_MESSAGES": {
+    "en": "I've never seen anything like this...",
+    "es": "I've never seen anything like this...",
+    "id": "I've never seen anything like this...",
+    "pt": "I've never seen anything like this...",
+    "th": "I've never seen anything like this...",
+    "vi": "I've never seen anything like this..."
+  },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_209_MESSAGES": {
     "en": "Lord Afla Dilith, my master!<br>I shall complete my mission now.<br>I was defeated before I could<br>last time, but...",
     "es": "¡Lord Afla Dilith, amo!<br>Ahora completaré mi misión.<br>La última vez me derrotaron<br>antes de que pudiera hacerlo, pero...",
@@ -23518,6 +23646,38 @@
     "pt": "“Nos encontramos de novo. Eu vou te derrotar mil e uma vezes se é o que precisa para expulsá-lo daqui!”",
     "th": "และเราก็ได้เจอกันอีกครั้ง ข้าจะเอาชนะเจ้าร้อยแปดพันครั้งก็ได้ ถ้ามันจะทำให้เจ้ายอมออกไป!",
     "vi": "\"Rồi chúng ta sẽ gặp lại. \"Ta sẽ đánh bại ngươi một ngàn lẻ một lần nếu cần để ngươi rời khỏi đây!\""
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2100_MESSAGES": {
+    "en": "Be on your guard, birdy! It's gonna get messy...",
+    "es": "Be on your guard, birdy! It's gonna get messy...",
+    "id": "Be on your guard, birdy! It's gonna get messy...",
+    "pt": "Be on your guard, birdy! It's gonna get messy...",
+    "th": "Be on your guard, birdy! It's gonna get messy...",
+    "vi": "Be on your guard, birdy! It's gonna get messy..."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2101_MESSAGES": {
+    "en": "On your guard! I fear the impure spirits will not let him go so easily...",
+    "es": "On your guard! I fear the impure spirits will not let him go so easily...",
+    "id": "On your guard! I fear the impure spirits will not let him go so easily...",
+    "pt": "On your guard! I fear the impure spirits will not let him go so easily...",
+    "th": "On your guard! I fear the impure spirits will not let him go so easily...",
+    "vi": "On your guard! I fear the impure spirits will not let him go so easily..."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2102_MESSAGES": {
+    "en": "They seem to channel their energies in different ways...",
+    "es": "They seem to channel their energies in different ways...",
+    "id": "They seem to channel their energies in different ways...",
+    "pt": "They seem to channel their energies in different ways...",
+    "th": "They seem to channel their energies in different ways...",
+    "vi": "They seem to channel their energies in different ways..."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2103_MESSAGES": {
+    "en": "Grrrraaagghh!",
+    "es": "Grrrraaagghh!",
+    "id": "Grrrraaagghh!",
+    "pt": "Grrrraaagghh!",
+    "th": "Grrrraaagghh!",
+    "vi": "Grrrraaagghh!"
   },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_210_MESSAGES": {
     "en": "Worry not. If you fall in<br>battle, I will simply replace<br>you with someone else.<br>Ha ha ha...",
@@ -92710,109 +92870,5 @@
     "pt": "Nebuloso",
     "th": "เนบิวลัส",
     "vi": "Nebulous"
-  },
-  "MST_MONSTERS_504301_NAME": {
-    "en": "Nebulous",
-    "es": "Nébulo",
-    "id": "Nebulous",
-    "pt": "Nebuloso",
-    "th": "เนบิวลัส",
-    "vi": "Nebulous"
-  },
-  "MST_MONSTERS_504400_NAME": {
-    "en": "Blizzard God Karl",
-    "es": "Dios glacial Karl",
-    "id": "Dewa Badai Salju Karl",
-    "pt": "Deus da Nevasca Karl",
-    "th": "บลิซซาร์ดก็อดคาร์ล",
-    "vi": "Blizzard God Karl"
-  },
-  "MST_MONSTERS_504401_NAME": {
-    "en": "Fake Karl",
-    "es": "Karl falso",
-    "id": "Karl Palsu",
-    "pt": "Karl Falso",
-    "th": "เฟคคาร์ล",
-    "vi": "Fake Karl"
-  },
-  "MST_MONSTERS_504402_NAME": {
-    "en": "Blizzard God Karl",
-    "es": "Dios glacial Karl",
-    "id": "Dewa Badai Salju Karl",
-    "pt": "Deus da Nevasca Karl",
-    "th": "บลิซซาร์ดก็อดคาร์ล",
-    "vi": "Blizzard God Karl"
-  },
-  "MST_MONSTERS_504500_NAME": {
-    "en": "Fake Lugina",
-    "es": "Lugina falso",
-    "id": "Lugina Palsu",
-    "pt": "Lugina Falso",
-    "th": "เฟคลูจิน่า",
-    "vi": "Fake Lugina"
-  },
-  "MST_MONSTERS_504501_NAME": {
-    "en": "Fake Lugina",
-    "es": "Lugina falso",
-    "id": "Lugina Palsu",
-    "pt": "Lugina Falso",
-    "th": "เฟคลูจิน่า",
-    "vi": "Fake Lugina"
-  },
-  "MST_MONSTERS_50450_NAME": {
-    "en": "Sage Mimir",
-    "es": "Sabia Mimi",
-    "id": "Si Bijak Mimir",
-    "pt": "Sábia Mimir",
-    "th": "เซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_50451_NAME": {
-    "en": "Sage Mimir",
-    "es": "Sabia Mimi",
-    "id": "Si Bijak Mimir",
-    "pt": "Sábia Mimir",
-    "th": "เซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_50452_NAME": {
-    "en": "Sage Mimir",
-    "es": "Sabia Mimi",
-    "id": "Si Bijak Mimir",
-    "pt": "Sábia Mimir",
-    "th": "เซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_50453_NAME": {
-    "en": "Sage Mimir",
-    "es": "Sabia Mimi",
-    "id": "Si Bijak Mimir",
-    "pt": "Sábia Mimir",
-    "th": "เซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_50454_NAME": {
-    "en": "Sage Mimir",
-    "es": "Sabia Mimi",
-    "id": "Si Bijak Mimir",
-    "pt": "Sábia Mimir",
-    "th": "เซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_50455_NAME": {
-    "en": "Sage Mimir",
-    "es": "Sabia Mimi",
-    "id": "Si Bijak Mimir",
-    "pt": "Sábia Mimir",
-    "th": "เซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
-  },
-  "MST_MONSTERS_50456_NAME": {
-    "en": "Sage Mimir",
-    "es": "Sabia Mimi",
-    "id": "Si Bijak Mimir",
-    "pt": "Sábia Mimir",
-    "th": "เซจมิเมียร์",
-    "vi": "Hiền triết Mimir"
   }
 }
