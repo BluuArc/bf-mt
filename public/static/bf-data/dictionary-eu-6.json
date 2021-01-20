@@ -1,4 +1,20 @@
 {
+  "MST_SKILLS_2840878_DESCRIPTION": {
+    "en": "34 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 6 combo Thunder attack on single foe (boosts own critical rate), evasion for 3 turns, boosts Thunder elemental damage for 3 turns, damage taken fills BB gauge for 3 turns & 3 turns Atk, Def reduction infliction",
+    "es": "34 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 6 combo Thunder attack on single foe (boosts own critical rate), evasion for 3 turns, boosts Thunder elemental damage for 3 turns, damage taken fills BB gauge for 3 turns & 3 turns Atk, Def reduction infliction",
+    "id": "34 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 6 combo Thunder attack on single foe (boosts own critical rate), evasion for 3 turns, boosts Thunder elemental damage for 3 turns, damage taken fills BB gauge for 3 turns & 3 turns Atk, Def reduction infliction",
+    "pt": "34 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 6 combo Thunder attack on single foe (boosts own critical rate), evasion for 3 turns, boosts Thunder elemental damage for 3 turns, damage taken fills BB gauge for 3 turns & 3 turns Atk, Def reduction infliction",
+    "th": "34 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 6 combo Thunder attack on single foe (boosts own critical rate), evasion for 3 turns, boosts Thunder elemental damage for 3 turns, damage taken fills BB gauge for 3 turns & 3 turns Atk, Def reduction infliction",
+    "vi": "34 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 6 combo Thunder attack on single foe (boosts own critical rate), evasion for 3 turns, boosts Thunder elemental damage for 3 turns, damage taken fills BB gauge for 3 turns & 3 turns Atk, Def reduction infliction"
+  },
+  "MST_SKILLS_2840878_NAME": {
+    "en": "Ahahahaha!",
+    "es": "Ahahahaha!",
+    "id": "Ahahahaha!",
+    "pt": "Ahahahaha!",
+    "th": "Ahahahaha!",
+    "vi": "Ahahahaha!"
+  },
   "MST_SKILLS_2840888_DESCRIPTION": {
     "en": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
     "es": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
@@ -368,12 +384,12 @@
     "vi": "Headshot"
   },
   "MST_SKILLS_2850288_DESCRIPTION": {
-    "en": "25 combo massive Light attack on all foes, enormously boosts critical damage for 3 turns, enormously boosts Light types' Atk for 3 turns, considerably raises normal hit amount for 3 turns & high probability of raising allies from KO",
-    "es": "25 combo massive Light attack on all foes, enormously boosts critical damage for 3 turns, enormously boosts Light types' Atk for 3 turns, considerably raises normal hit amount for 3 turns & high probability of raising allies from KO",
-    "id": "25 kombo serangan Terang masif ke semua musuh, 3 giliran: ekstra jumbo kerusakan ampuh dan Serang tipe Terang, lumayan menambah pukulan ampuh & kans tinggi membangkitkan sekutu dari KO",
-    "pt": "25 combo massive Light attack on all foes, enormously boosts critical damage for 3 turns, enormously boosts Light types' Atk for 3 turns, considerably raises normal hit amount for 3 turns & high probability of raising allies from KO",
-    "th": "25 คอมโบ โจมตีธาตุแสงรุนแรงมหาศาล ใส่ศัตรูทั้งหมด, เพิ่มค่ามหาศาลให้ ความเสียหายคริติคอล นาน 3 เทิร์น, เพิ่มค่ามหาศาลให้ โจมตี ของชนิด แสง นาน 3 เทิร์น, เพิ่มปริมาณการโจมตีธรรมดาอย่างมาก นาน 3 เทิร์น และ โอกาสสูงที่จะทำให้เกิดผล ชุบชีวิตเพื่อนจากการ KO",
-    "vi": "25 combo massive Light attack on all foes, enormously boosts critical damage for 3 turns, enormously boosts Light types' Atk for 3 turns, considerably raises normal hit amount for 3 turns & high probability of raising allies from KO"
+    "en": "25 combo Light attack on all foes (damage relative to remaining HP), boosts critical damage for 3 turns, boosts Atk, Def, Rec and critical rate for 3 turns, raises normal hit amount for 3 turns, may raise allies from KO & boosts max HP",
+    "es": "25 combo Light attack on all foes (damage relative to remaining HP), boosts critical damage for 3 turns, boosts Atk, Def, Rec and critical rate for 3 turns, raises normal hit amount for 3 turns, may raise allies from KO & boosts max HP",
+    "id": "25 combo Light attack on all foes (damage relative to remaining HP), boosts critical damage for 3 turns, boosts Atk, Def, Rec and critical rate for 3 turns, raises normal hit amount for 3 turns, may raise allies from KO & boosts max HP",
+    "pt": "25 combo Light attack on all foes (damage relative to remaining HP), boosts critical damage for 3 turns, boosts Atk, Def, Rec and critical rate for 3 turns, raises normal hit amount for 3 turns, may raise allies from KO & boosts max HP",
+    "th": "25 combo Light attack on all foes (damage relative to remaining HP), boosts critical damage for 3 turns, boosts Atk, Def, Rec and critical rate for 3 turns, raises normal hit amount for 3 turns, may raise allies from KO & boosts max HP",
+    "vi": "25 combo Light attack on all foes (damage relative to remaining HP), boosts critical damage for 3 turns, boosts Atk, Def, Rec and critical rate for 3 turns, raises normal hit amount for 3 turns, may raise allies from KO & boosts max HP"
   },
   "MST_SKILLS_2850288_NAME": {
     "en": "Headshot: Certain Death",
@@ -1744,12 +1760,12 @@
     "vi": "Black Hole Helix"
   },
   "MST_SKILLS_2860288_DESCRIPTION": {
-    "en": "23 combo massive Dark attack on all foes, 3 combo massive Dark attack on single foe (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Dark elemental damage for 3 turns, damage taken enormously restores HP for 3 turns & enormously boosts BB gauge for 3 turns",
-    "es": "23 combo massive Dark attack on all foes, 3 combo massive Dark attack on single foe (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Dark elemental damage for 3 turns, damage taken enormously restores HP for 3 turns & enormously boosts BB gauge for 3 turns",
-    "id": "23 combo massive Dark attack on all foes, 3 combo massive Dark attack on single foe (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Dark elemental damage for 3 turns, damage taken enormously restores HP for 3 turns & enormously boosts BB gauge for 3 turns",
-    "pt": "23 combo massive Dark attack on all foes, 3 combo massive Dark attack on single foe (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Dark elemental damage for 3 turns, damage taken enormously restores HP for 3 turns & enormously boosts BB gauge for 3 turns",
-    "th": "23 combo massive Dark attack on all foes, 3 combo massive Dark attack on single foe (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Dark elemental damage for 3 turns, damage taken enormously restores HP for 3 turns & enormously boosts BB gauge for 3 turns",
-    "vi": "23 combo massive Dark attack on all foes, 3 combo massive Dark attack on single foe (damage relative to remaining HP), enormously boosts Spark damage for 3 turns, enormously boosts Dark elemental damage for 3 turns, damage taken enormously restores HP for 3 turns & enormously boosts BB gauge for 3 turns"
+    "en": "23 combo Dark attack on all foes, 3 combo Dark attack on single foe (damage relative to remaining HP), boosts spark damage for 3 turns, boosts Dark elemental damage for 3 turns, damage taken restores HP for 3 turns & fills BB gauge for 3 turns",
+    "es": "23 combo Dark attack on all foes, 3 combo Dark attack on single foe (damage relative to remaining HP), boosts spark damage for 3 turns, boosts Dark elemental damage for 3 turns, damage taken restores HP for 3 turns & fills BB gauge for 3 turns",
+    "id": "23 combo Dark attack on all foes, 3 combo Dark attack on single foe (damage relative to remaining HP), boosts spark damage for 3 turns, boosts Dark elemental damage for 3 turns, damage taken restores HP for 3 turns & fills BB gauge for 3 turns",
+    "pt": "23 combo Dark attack on all foes, 3 combo Dark attack on single foe (damage relative to remaining HP), boosts spark damage for 3 turns, boosts Dark elemental damage for 3 turns, damage taken restores HP for 3 turns & fills BB gauge for 3 turns",
+    "th": "23 combo Dark attack on all foes, 3 combo Dark attack on single foe (damage relative to remaining HP), boosts spark damage for 3 turns, boosts Dark elemental damage for 3 turns, damage taken restores HP for 3 turns & fills BB gauge for 3 turns",
+    "vi": "23 combo Dark attack on all foes, 3 combo Dark attack on single foe (damage relative to remaining HP), boosts spark damage for 3 turns, boosts Dark elemental damage for 3 turns, damage taken restores HP for 3 turns & fills BB gauge for 3 turns"
   },
   "MST_SKILLS_2860288_NAME": {
     "en": "Black Hole Wyrm",
@@ -92870,5 +92886,13 @@
     "pt": "Through the Hourglass",
     "th": "Through the Hourglass",
     "vi": "Through the Hourglass"
+  },
+  "MST_SKILLS_830537_DESCRIPTION": {
+    "en": "13 combo powerful Earth attack on all foes, considerably boosts BC efficacy for 3 turns, damage taken may slightly restore HP for 3 turns, negates all status ailments, critical, elemental and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
+    "es": "13 combo powerful Earth attack on all foes, considerably boosts BC efficacy for 3 turns, damage taken may slightly restore HP for 3 turns, negates all status ailments, critical, elemental and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
+    "id": "13 combo powerful Earth attack on all foes, considerably boosts BC efficacy for 3 turns, damage taken may slightly restore HP for 3 turns, negates all status ailments, critical, elemental and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
+    "pt": "13 combo powerful Earth attack on all foes, considerably boosts BC efficacy for 3 turns, damage taken may slightly restore HP for 3 turns, negates all status ailments, critical, elemental and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
+    "th": "13 combo powerful Earth attack on all foes, considerably boosts BC efficacy for 3 turns, damage taken may slightly restore HP for 3 turns, negates all status ailments, critical, elemental and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
+    "vi": "13 combo powerful Earth attack on all foes, considerably boosts BC efficacy for 3 turns, damage taken may slightly restore HP for 3 turns, negates all status ailments, critical, elemental and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack"
   }
 }
