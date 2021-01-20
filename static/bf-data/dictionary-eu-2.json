@@ -1,4 +1,116 @@
 {
+  "MST_LEADERSKILLS_2109_DESCRIPTION": {
+    "en": "Nullifies all status ailments & slightly reduces BB gauge amount consumed during BB",
+    "es": "Anula las aflicciones de los estados y reduce levemente la cantidad de indicador BB usado durante BB",
+    "id": "Menetralkan semua status & agak mengurangi jumlah meteran BB yang terpakai selama BB",
+    "pt": "Anula qualquer status negativo e reduz o uso da barra de BB durante BB",
+    "th": "กันทุกสถานะผิดปกติ และลดบีบีเกจที่ต้องใช้ลงเล็กน้อย",
+    "vi": "Vô hiệu hóa mọi loại trạng thái & giảm nhẹ lượng vạch BB dùng trong Tăng cường can đảm"
+  },
+  "MST_LEADERSKILLS_2109_NAME": {
+    "en": "Eternal Ambition",
+    "es": "Ambición eterna",
+    "id": "Ambisi Abadi",
+    "pt": "Ambição Eterna",
+    "th": "อีเธอนอลแอมบิทชั่น",
+    "vi": "Tham vọng bất diệt"
+  },
+  "MST_LEADERSKILLS_210_DESCRIPTION": {
+    "en": "25% boost to Def Power of Dark Types",
+    "es": "Aumenta un 25 % la defensa de las unidades del mal.",
+    "id": "25% boost untuk Kekuatan Pertahanan Tipe Gelap",
+    "pt": "Reforço de 25% na DEF do tipo Sombras",
+    "th": "25% เพิ่มพลังป้องกันของประเภทความมืด",
+    "vi": "25% làm tăng quyền Def của các loại bóng tối "
+  },
+  "MST_LEADERSKILLS_210_NAME": {
+    "en": "Dark Spirit's Protection",
+    "es": "Defensa oscura espiritual",
+    "id": "Proteksi Roh Gelap",
+    "pt": "Proteção do Espírito das Sombras",
+    "th": "ดาร์กสปิริตโพรเทคชั่น",
+    "vi": "Sự bảo vệ tinh thần của bóng tối "
+  },
+  "MST_LEADERSKILLS_2110_DESCRIPTION": {
+    "en": "Nullifies all status ailments & recovers HP each turn",
+    "es": "Anula las aflicciones de los estados y recupera PS cada turno",
+    "id": "Menetralkan semua status & memulihkan HP tiap giliran",
+    "pt": "Anula qualquer status negativo e recupera HP a cada rodada",
+    "th": "ต้านทานสถานผิดปกติทั้งหมด และ ฟื้นฟู HP ในแต่ละเทิร์น",
+    "vi": "Vô hiệu hóa mọi loại trạng thái & phục hồi Thể lực mỗi lượt"
+  },
+  "MST_LEADERSKILLS_2110_NAME": {
+    "en": "Eternal Revelation",
+    "es": "Revelación eterna",
+    "id": "Wahyu Abadi",
+    "pt": "Revelação Eterna",
+    "th": "อิเทอนอล เรฟเวเลชั่น",
+    "vi": "Sách khải huyền vĩnh cửu"
+  },
+  "MST_LEADERSKILLS_2111_DESCRIPTION": {
+    "en": "Nullifies all status ailments & 15% boost to max HP and Def for all Units",
+    "es": "Niega todas las aflicciones de estado y aumenta un 15% los PS máximos y la defensa de todas las unidades",
+    "id": "Meniadakan semua penyakit & menambah 15% maksimum HP dan Pertahanan untuk semua Unit",
+    "pt": "Anula status negativo e aumentoa 15% no HP máximo e DEF de todas as unidades",
+    "th": "ลบล้างสถานะผิดปกติทั้งหมด และ 15% เพิ่มค่า HP สูงสุด กับ ป้องกัน สำหรับยูนิตทุกตัว",
+    "vi": "Vô hiệu hóa mọi loại trạng thái & tăng 15% Thể lực tối đa và Phòng thủ cho tất cả các Quái"
+  },
+  "MST_LEADERSKILLS_2111_NAME": {
+    "en": "Eternal Blossom",
+    "es": "Florecimiento eterno",
+    "id": "Mekar Abadi",
+    "pt": "Florescer Eterno",
+    "th": "อิเทอนอล บลอสซั่ม",
+    "vi": "Hoa bất tử"
+  },
+  "MST_LEADERSKILLS_2112_DESCRIPTION": {
+    "en": "Nullifies all status ailments & 30% boost to max HP and Def for all Units",
+    "es": "Niega todos las aflicciones de estado y aumenta un 30% los PS máximos y la defensa de todas las unidades",
+    "id": "Meniadakan semua pneyakit & menambah 30% maksimum HP dan Pertahanan untuk semua Unit",
+    "pt": "Anula qualquer status negativo e aumento de 30% no HP máximo e DEF de todas unidades",
+    "th": "ลบล้างสถานะผิดปกติทั้งหมด และ 30% เพิ่มค่า HP สูงสุด กับ ป้องกัน สำหรับยูนิตทุกตัว",
+    "vi": "Vô hiệu hóa mọi loại trạng thái & tăng 30% Thể lực tối đa và Phòng thủ cho tất cả các Quái"
+  },
+  "MST_LEADERSKILLS_2112_NAME": {
+    "en": "Eternal Flora",
+    "es": "Flora eterna",
+    "id": "Flora Abadi",
+    "pt": "Flora Eterna",
+    "th": "อิเทอนอล ฟลอร่า",
+    "vi": "Thực vật bất tử"
+  },
+  "MST_LEADERSKILLS_211_DESCRIPTION": {
+    "en": "50% boost to Def Power of Dark Types",
+    "es": "Aumenta un 50 % la defensa de las unidades del mal.",
+    "id": "50% boost untuk Kekuatan Pertahanan Tipe Gelap",
+    "pt": "Reforço de 50% na DEF do tipo Sombras",
+    "th": "50% เพิ่มพลังป้องกันของประเภทความมืด",
+    "vi": "50% làm tăng quyền Def của các loại bóng tối "
+  },
+  "MST_LEADERSKILLS_211_NAME": {
+    "en": "Dark God's Protection",
+    "es": "Defensa oscura divina",
+    "id": "Proteksi Dewa Gelap",
+    "pt": "Proteção do Deus das Sombras",
+    "th": "ดาร์กก๊อดโพรเทคชั่น",
+    "vi": "sự bảo vệ của thần bóng tối "
+  },
+  "MST_LEADERSKILLS_2120_DESCRIPTION": {
+    "en": "Negates all status ailments and critical hits from enemies & adds very small chance of reducing damage taken to 1",
+    "es": "Negates all status ailments and critical hits from enemies & adds very small chance of reducing damage taken to 1",
+    "id": "Menegasi semua status penyakit dan pukulan ampuh dari musuh & menamah kans kecil sekali mengurangi kerusakan diderita menjadi 1",
+    "pt": "Negates all status ailments and critical hits from enemies & adds very small chance of reducing damage taken to 1",
+    "th": "กันทุกสถานะผิดปกติและคริติคอลฮิตจากศัตรู, มีโอกาสเล็กน้อยที่จะลดดาเมจที่ได้รับเหลือ 1",
+    "vi": "Negates all status ailments and critical hits from enemies & adds very small chance of reducing damage taken to 1"
+  },
+  "MST_LEADERSKILLS_2120_NAME": {
+    "en": "Eternal Hymn",
+    "es": "Eternal Hymn",
+    "id": "Himne Abadi",
+    "pt": "Eternal Hymn",
+    "th": "เอเทอนัล ฮิมน์",
+    "vi": "Eternal Hymn"
+  },
   "MST_LEADERSKILLS_2121_DESCRIPTION": {
     "en": "Negates all status ailments & recovers HP and BB each turn",
     "es": "Negates all status ailments & recovers HP and BB each turn",
@@ -16968,12 +17080,12 @@
     "vi": "Engagement Analysis"
   },
   "MST_LEADERSKILLS_850288_DESCRIPTION": {
-    "en": "60% boost to Atk, max HP, hugely boosts critical damage, hugely boosts BC efficacy & 80% boost to Atk, Def when HP is over 50%",
-    "es": "60% boost to Atk, max HP, hugely boosts critical damage, hugely boosts BC efficacy & 80% boost to Atk, Def when HP is over 50%",
-    "id": "60% ekstra Serang, HP maks, amat menambah kerusakan ampuh dan keampuhan BC, 80% ekstra Serang, Tahan saat HP di atas 50%",
-    "pt": "60% boost to Atk, max HP, hugely boosts critical damage, hugely boosts BC efficacy & 80% boost to Atk, Def when HP is over 50%",
-    "th": "60% เพิ่มค่าให้ โจมตี, HP สูงสุด, เพิ่มค่าอย่างสูงให้ ความเสียหายคริติคอล, เพิ่มค่าอย่างสูงให้ ประสิทธิภาพ BC และ 80% เพิ่มค่าให้ โจมตี, ป้องกัน เมื่อ HP นั้นมากกว่า 50%",
-    "vi": "60% boost to Atk, max HP, hugely boosts critical damage, hugely boosts BC efficacy & 80% boost to Atk, Def when HP is over 50%"
+    "en": "150% Atk, max HP, 30% critical rate, 100% Atk, Def when HP is above 50%, 250% critical damage, fills BB gauge each turn & raises normal hit amount",
+    "es": "150% Atk, max HP, 30% critical rate, 100% Atk, Def when HP is above 50%, 250% critical damage, fills BB gauge each turn & raises normal hit amount",
+    "id": "150% Atk, max HP, 30% critical rate, 100% Atk, Def when HP is above 50%, 250% critical damage, fills BB gauge each turn & raises normal hit amount",
+    "pt": "150% Atk, max HP, 30% critical rate, 100% Atk, Def when HP is above 50%, 250% critical damage, fills BB gauge each turn & raises normal hit amount",
+    "th": "150% Atk, max HP, 30% critical rate, 100% Atk, Def when HP is above 50%, 250% critical damage, fills BB gauge each turn & raises normal hit amount",
+    "vi": "150% Atk, max HP, 30% critical rate, 100% Atk, Def when HP is above 50%, 250% critical damage, fills BB gauge each turn & raises normal hit amount"
   },
   "MST_LEADERSKILLS_850288_NAME": {
     "en": "Full Combat Perception",
@@ -18024,12 +18136,12 @@
     "vi": "Exotic Particle Core"
   },
   "MST_LEADERSKILLS_860288_DESCRIPTION": {
-    "en": "60% boost to Atk, max HP, 130% boost to Spark damage, damage taken may restore HP & 25% Spark damage reduction",
-    "es": "60% boost to Atk, max HP, 130% boost to Spark damage, damage taken may restore HP & 25% Spark damage reduction",
-    "id": "60% boost to Atk, max HP, 130% boost to Spark damage, damage taken may restore HP & 25% Spark damage reduction",
-    "pt": "60% boost to Atk, max HP, 130% boost to Spark damage, damage taken may restore HP & 25% Spark damage reduction",
-    "th": "60% boost to Atk, max HP, 130% boost to Spark damage, damage taken may restore HP & 25% Spark damage reduction",
-    "vi": "60% boost to Atk, max HP, 130% boost to Spark damage, damage taken may restore HP & 25% Spark damage reduction"
+    "en": "150% Atk, max HP, 30% critical rate, 250% spark damage, 50% spark damage reduction, damage taken may restore HP & 15% damage reduction from Light, Dark types",
+    "es": "150% Atk, max HP, 30% critical rate, 250% spark damage, 50% spark damage reduction, damage taken may restore HP & 15% damage reduction from Light, Dark types",
+    "id": "150% Atk, max HP, 30% critical rate, 250% spark damage, 50% spark damage reduction, damage taken may restore HP & 15% damage reduction from Light, Dark types",
+    "pt": "150% Atk, max HP, 30% critical rate, 250% spark damage, 50% spark damage reduction, damage taken may restore HP & 15% damage reduction from Light, Dark types",
+    "th": "150% Atk, max HP, 30% critical rate, 250% spark damage, 50% spark damage reduction, damage taken may restore HP & 15% damage reduction from Light, Dark types",
+    "vi": "150% Atk, max HP, 30% critical rate, 250% spark damage, 50% spark damage reduction, damage taken may restore HP & 15% damage reduction from Light, Dark types"
   },
   "MST_LEADERSKILLS_860288_NAME": {
     "en": "Imaginary Number Fusion",
@@ -92782,93 +92894,5 @@
     "pt": "Rei Glowey",
     "th": "คิงโกลวี่",
     "vi": "King Glowy"
-  },
-  "MST_MONSTERS_50409_NAME": {
-    "en": "King Glowy",
-    "es": "Rey Lucerito",
-    "id": "Raja Glowy",
-    "pt": "Rei Glowey",
-    "th": "คิงโกลวี่",
-    "vi": "King Glowy"
-  },
-  "MST_MONSTERS_504100_NAME": {
-    "en": "Fake Lugina",
-    "es": "Lugina falso",
-    "id": "Lugina Palsu",
-    "pt": "Lugina Falso",
-    "th": "เฟคลูจิน่า",
-    "vi": "Fake Lugina"
-  },
-  "MST_MONSTERS_504101_NAME": {
-    "en": "Fake Lugina",
-    "es": "Lugina falso",
-    "id": "Lugina Palsu",
-    "pt": "Lugina Falso",
-    "th": "เฟคลูจิน่า",
-    "vi": "Fake Lugina"
-  },
-  "MST_MONSTERS_50410_NAME": {
-    "en": "King Glowy",
-    "es": "Rey Lucerito",
-    "id": "Raja Glowy",
-    "pt": "Rei Glowey",
-    "th": "คิงโกลวี่",
-    "vi": "King Glowy"
-  },
-  "MST_MONSTERS_50411_NAME": {
-    "en": "King Glowy",
-    "es": "Rey Lucerito",
-    "id": "Raja Glowy",
-    "pt": "Rei Glowey",
-    "th": "คิงโกลวี่",
-    "vi": "King Glowy"
-  },
-  "MST_MONSTERS_50412_NAME": {
-    "en": "King Glowy",
-    "es": "King Glowy",
-    "id": "King Glowy",
-    "pt": "King Glowy",
-    "th": "คิง โกลวี่",
-    "vi": "King Glowy"
-  },
-  "MST_MONSTERS_50413_NAME": {
-    "en": "King Glowy",
-    "es": "King Glowy",
-    "id": "King Glowy",
-    "pt": "King Glowy",
-    "th": "คิง โกลวี่",
-    "vi": "King Glowy"
-  },
-  "MST_MONSTERS_50414_NAME": {
-    "en": "King Glowy",
-    "es": "King Glowy",
-    "id": "King Glowy",
-    "pt": "King Glowy",
-    "th": "คิง โกลวี่",
-    "vi": "King Glowy"
-  },
-  "MST_MONSTERS_504200_NAME": {
-    "en": "Nebulous",
-    "es": "Nébulo",
-    "id": "Nebulous",
-    "pt": "Nebuloso",
-    "th": "เนบิวลัส",
-    "vi": "Nebulous"
-  },
-  "MST_MONSTERS_504201_NAME": {
-    "en": "Nebulous",
-    "es": "Nébulo",
-    "id": "Nebulous",
-    "pt": "Nebuloso",
-    "th": "เนบิวลัส",
-    "vi": "Nebulous"
-  },
-  "MST_MONSTERS_504300_NAME": {
-    "en": "Nebulous",
-    "es": "Nébulo",
-    "id": "Nebulous",
-    "pt": "Nebuloso",
-    "th": "เนบิวลัส",
-    "vi": "Nebulous"
   }
 }
