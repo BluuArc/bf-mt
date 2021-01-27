@@ -1,4 +1,20 @@
 {
+  "MST_LEADERSKILLS_2108_DESCRIPTION": {
+    "en": "Nullifies all status ailments & probable HP recovery when attacked",
+    "es": "Niega todas las aflicciones de estados y puede recuperar PS al recibir un ataque",
+    "id": "Menetralkan semua status & kemungkinan pemulihan HP saat diserang",
+    "pt": "Anula qualquer status negativo e pode recuperar HP quando atacado(a)",
+    "th": "ต้านทานสถานะผิดปกติทั้งหมด และ อาจจะฟื้นฟู HP เมื่อถูกโจมตี",
+    "vi": "Vô hiệu hóa mọi loại trạng thái & có thể phục hồi Thể lực khi bị tấn công"
+  },
+  "MST_LEADERSKILLS_2108_NAME": {
+    "en": "Eternal Awakening",
+    "es": "Despertar eterno",
+    "id": "Kebangkitan Abadi",
+    "pt": "Despertar Eterno",
+    "th": "อีเทอนอล อเวคเคนนิ่ง",
+    "vi": "Đánh thức vĩnh cửu"
+  },
   "MST_LEADERSKILLS_2109_DESCRIPTION": {
     "en": "Nullifies all status ailments & slightly reduces BB gauge amount consumed during BB",
     "es": "Anula las aflicciones de los estados y reduce levemente la cantidad de indicador BB usado durante BB",
@@ -92880,14 +92896,6 @@
     "vi": "Vua Bùn Lấp Lánh"
   },
   "MST_MONSTERS_50407_NAME": {
-    "en": "King Glowy",
-    "es": "Rey Lucerito",
-    "id": "Raja Glowy",
-    "pt": "Rei Glowey",
-    "th": "คิงโกลวี่",
-    "vi": "King Glowy"
-  },
-  "MST_MONSTERS_50408_NAME": {
     "en": "King Glowy",
     "es": "Rey Lucerito",
     "id": "Raja Glowy",
