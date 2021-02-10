@@ -1,4 +1,12 @@
 {
+  "MST_LEADERSKILLS_2107_NAME": {
+    "en": "Eternal Blessing",
+    "es": "Bendición eterna",
+    "id": "Berkat Abadi",
+    "pt": "Bênção Eterna",
+    "th": "อีเทอนอลเบรสซิ่ง",
+    "vi": "Hạnh phúc vĩnh cửu"
+  },
   "MST_LEADERSKILLS_2108_DESCRIPTION": {
     "en": "Nullifies all status ailments & probable HP recovery when attacked",
     "es": "Niega todas las aflicciones de estados y puede recuperar PS al recibir un ataque",
@@ -13895,6 +13903,22 @@
     "th": "Blooming Combust",
     "vi": "Blooming Combust"
   },
+  "MST_LEADERSKILLS_811008_DESCRIPTION": {
+    "en": "150% Atk, Def, 100% Rec, 150% max HP, spark damage restores HP, probable spark critical, raises normal hit amount & normal attacks may hit all foes",
+    "es": "150% Atk, Def, 100% Rec, 150% max HP, spark damage restores HP, probable spark critical, raises normal hit amount & normal attacks may hit all foes",
+    "id": "150% Atk, Def, 100% Rec, 150% max HP, spark damage restores HP, probable spark critical, raises normal hit amount & normal attacks may hit all foes",
+    "pt": "150% Atk, Def, 100% Rec, 150% max HP, spark damage restores HP, probable spark critical, raises normal hit amount & normal attacks may hit all foes",
+    "th": "150% Atk, Def, 100% Rec, 150% max HP, spark damage restores HP, probable spark critical, raises normal hit amount & normal attacks may hit all foes",
+    "vi": "150% Atk, Def, 100% Rec, 150% max HP, spark damage restores HP, probable spark critical, raises normal hit amount & normal attacks may hit all foes"
+  },
+  "MST_LEADERSKILLS_811008_NAME": {
+    "en": "Fiery Virtuoso",
+    "es": "Fiery Virtuoso",
+    "id": "Fiery Virtuoso",
+    "pt": "Fiery Virtuoso",
+    "th": "Fiery Virtuoso",
+    "vi": "Fiery Virtuoso"
+  },
   "MST_LEADERSKILLS_811118_DESCRIPTION": {
     "en": "60% boost to Atk, max HP, 100% boost to Spark damage, boosts Spark damage for 2 turns when Sparks have exceeded certain amount & hugely boosts Fire and Water elemental damage ",
     "es": "60% boost to Atk, max HP, 100% boost to Spark damage, boosts Spark damage for 2 turns when Sparks have exceeded certain amount & hugely boosts Fire and Water elemental damage ",
@@ -23807,6 +23831,54 @@
     "th": "Grrrraaagghh!",
     "vi": "Grrrraaagghh!"
   },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2104_MESSAGES": {
+    "en": "Ugh, I guess I'll have to deactivate them the old fashioned way!",
+    "es": "Ugh, I guess I'll have to deactivate them the old fashioned way!",
+    "id": "Ugh, I guess I'll have to deactivate them the old fashioned way!",
+    "pt": "Ugh, I guess I'll have to deactivate them the old fashioned way!",
+    "th": "Ugh, I guess I'll have to deactivate them the old fashioned way!",
+    "vi": "Ugh, I guess I'll have to deactivate them the old fashioned way!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2105_MESSAGES": {
+    "en": "I'll also need to subdue a Heroic Doll for backup...",
+    "es": "I'll also need to subdue a Heroic Doll for backup...",
+    "id": "I'll also need to subdue a Heroic Doll for backup...",
+    "pt": "I'll also need to subdue a Heroic Doll for backup...",
+    "th": "I'll also need to subdue a Heroic Doll for backup...",
+    "vi": "I'll also need to subdue a Heroic Doll for backup..."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2106_MESSAGES": {
+    "en": "Flametether will short out its essence well enough.",
+    "es": "Flametether will short out its essence well enough.",
+    "id": "Flametether will short out its essence well enough.",
+    "pt": "Flametether will short out its essence well enough.",
+    "th": "Flametether will short out its essence well enough.",
+    "vi": "Flametether will short out its essence well enough."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2107_MESSAGES": {
+    "en": "Careful not to knock it unconscious or let it get away!",
+    "es": "Careful not to knock it unconscious or let it get away!",
+    "id": "Careful not to knock it unconscious or let it get away!",
+    "pt": "Careful not to knock it unconscious or let it get away!",
+    "th": "Careful not to knock it unconscious or let it get away!",
+    "vi": "Careful not to knock it unconscious or let it get away!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2108_MESSAGES": {
+    "en": "Sigh... Just how many did Nabris let loose?",
+    "es": "Sigh... Just how many did Nabris let loose?",
+    "id": "Sigh... Just how many did Nabris let loose?",
+    "pt": "Sigh... Just how many did Nabris let loose?",
+    "th": "Sigh... Just how many did Nabris let loose?",
+    "vi": "Sigh... Just how many did Nabris let loose?"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2109_MESSAGES": {
+    "en": "We'll need more on our side!",
+    "es": "We'll need more on our side!",
+    "id": "We'll need more on our side!",
+    "pt": "We'll need more on our side!",
+    "th": "We'll need more on our side!",
+    "vi": "We'll need more on our side!"
+  },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_210_MESSAGES": {
     "en": "Worry not. If you fall in<br>battle, I will simply replace<br>you with someone else.<br>Ha ha ha...",
     "es": "No te preocupes. Si caes en<br>batalla, simplemente te reemplazaré<br>con alguien más.<br>Ja, ja, ja...",
@@ -23815,6 +23887,86 @@
     "th": "อย่ากังวลเลย หากเจ้าอยู่ใน<br>การต่อสู้ ข้าก็จะแทนที่เจ้า<br>ด้วยคนอื่นอยู่ดี<br>ฮ่า ฮ่า ฮ่า...",
     "vi": "Worry not. If you fall in<br>battle, I will simply replace<br>you with someone else.<br>Ha ha ha..."
   },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2110_MESSAGES": {
+    "en": "Let's take the Courageous Moppet and the Brave Lutin.",
+    "es": "Let's take the Courageous Moppet and the Brave Lutin.",
+    "id": "Let's take the Courageous Moppet and the Brave Lutin.",
+    "pt": "Let's take the Courageous Moppet and the Brave Lutin.",
+    "th": "Let's take the Courageous Moppet and the Brave Lutin.",
+    "vi": "Let's take the Courageous Moppet and the Brave Lutin."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2111_MESSAGES": {
+    "en": "We also need to keep an eye on the weavedoll's power stores...",
+    "es": "We also need to keep an eye on the weavedoll's power stores...",
+    "id": "We also need to keep an eye on the weavedoll's power stores...",
+    "pt": "We also need to keep an eye on the weavedoll's power stores...",
+    "th": "We also need to keep an eye on the weavedoll's power stores...",
+    "vi": "We also need to keep an eye on the weavedoll's power stores..."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2112_MESSAGES": {
+    "en": "Using its attacks too many times will overload it!",
+    "es": "Using its attacks too many times will overload it!",
+    "id": "Using its attacks too many times will overload it!",
+    "pt": "Using its attacks too many times will overload it!",
+    "th": "Using its attacks too many times will overload it!",
+    "vi": "Using its attacks too many times will overload it!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2113_MESSAGES": {
+    "en": "All right, here we go!",
+    "es": "All right, here we go!",
+    "id": "All right, here we go!",
+    "pt": "All right, here we go!",
+    "th": "All right, here we go!",
+    "vi": "All right, here we go!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2114_MESSAGES": {
+    "en": "Weavedolls assembled!",
+    "es": "Weavedolls assembled!",
+    "id": "Weavedolls assembled!",
+    "pt": "Weavedolls assembled!",
+    "th": "Weavedolls assembled!",
+    "vi": "Weavedolls assembled!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2115_MESSAGES": {
+    "en": "Their individual powers will be a boon against this rowdy lot!",
+    "es": "Their individual powers will be a boon against this rowdy lot!",
+    "id": "Their individual powers will be a boon against this rowdy lot!",
+    "pt": "Their individual powers will be a boon against this rowdy lot!",
+    "th": "Their individual powers will be a boon against this rowdy lot!",
+    "vi": "Their individual powers will be a boon against this rowdy lot!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2116_MESSAGES": {
+    "en": "I can only command one weavedoll to attack at a time, though.",
+    "es": "I can only command one weavedoll to attack at a time, though.",
+    "id": "I can only command one weavedoll to attack at a time, though.",
+    "pt": "I can only command one weavedoll to attack at a time, though.",
+    "th": "I can only command one weavedoll to attack at a time, though.",
+    "vi": "I can only command one weavedoll to attack at a time, though."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2117_MESSAGES": {
+    "en": "Hope I don't end up trashing ALL of them irreversibly...",
+    "es": "Hope I don't end up trashing ALL of them irreversibly...",
+    "id": "Hope I don't end up trashing ALL of them irreversibly...",
+    "pt": "Hope I don't end up trashing ALL of them irreversibly...",
+    "th": "Hope I don't end up trashing ALL of them irreversibly...",
+    "vi": "Hope I don't end up trashing ALL of them irreversibly..."
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2118_MESSAGES": {
+    "en": "That's enough, Nabris. You're going to face your punishment!",
+    "es": "That's enough, Nabris. You're going to face your punishment!",
+    "id": "That's enough, Nabris. You're going to face your punishment!",
+    "pt": "That's enough, Nabris. You're going to face your punishment!",
+    "th": "That's enough, Nabris. You're going to face your punishment!",
+    "vi": "That's enough, Nabris. You're going to face your punishment!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2119_MESSAGES": {
+    "en": "I'd like to see you try, little mage.",
+    "es": "I'd like to see you try, little mage.",
+    "id": "I'd like to see you try, little mage.",
+    "pt": "I'd like to see you try, little mage.",
+    "th": "I'd like to see you try, little mage.",
+    "vi": "I'd like to see you try, little mage."
+  },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_211_MESSAGES": {
     "en": "Do you...defy me?<br>Very well then...<br>I'll destroy you...with your own powers!!!",
     "es": "¿Me... desafías?<br>Muy bien...<br>Te destruiré... ¡con tus propios poderes!",
@@ -23822,6 +23974,38 @@
     "pt": "Você... me desafia?<br>Muito bem... <br>Vou destruir você... com seus próprios poderes!!!",
     "th": "นี่เจ้า...ท้าทายข้ารึ?<br>ก็ได้...<br>งั้นข้าจะทำลายเจ้า...ด้วยพลังของเจ้าเอง!!!",
     "vi": "Do you...defy me?<br>Very well then...<br>I'll destroy you...with your own powers!!!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2120_MESSAGES": {
+    "en": "I've waited long enough to bleed you dry!",
+    "es": "I've waited long enough to bleed you dry!",
+    "id": "I've waited long enough to bleed you dry!",
+    "pt": "I've waited long enough to bleed you dry!",
+    "th": "I've waited long enough to bleed you dry!",
+    "vi": "I've waited long enough to bleed you dry!"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2121_MESSAGES": {
+    "en": "(For this to work, we'll need to weaken Nabris enough to trick him...)",
+    "es": "(For this to work, we'll need to weaken Nabris enough to trick him...)",
+    "id": "(For this to work, we'll need to weaken Nabris enough to trick him...)",
+    "pt": "(For this to work, we'll need to weaken Nabris enough to trick him...)",
+    "th": "(For this to work, we'll need to weaken Nabris enough to trick him...)",
+    "vi": "(For this to work, we'll need to weaken Nabris enough to trick him...)"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2122_MESSAGES": {
+    "en": "(He can't go unconscious or it'll fail!)",
+    "es": "(He can't go unconscious or it'll fail!)",
+    "id": "(He can't go unconscious or it'll fail!)",
+    "pt": "(He can't go unconscious or it'll fail!)",
+    "th": "(He can't go unconscious or it'll fail!)",
+    "vi": "(He can't go unconscious or it'll fail!)"
+  },
+  "MST_MISSIONSCRIPT_COMMANDPARAMETER_2123_MESSAGES": {
+    "en": "(Once we've worn him out enough, we can subdue him with Guard!)",
+    "es": "(Once we've worn him out enough, we can subdue him with Guard!)",
+    "id": "(Once we've worn him out enough, we can subdue him with Guard!)",
+    "pt": "(Once we've worn him out enough, we can subdue him with Guard!)",
+    "th": "(Once we've worn him out enough, we can subdue him with Guard!)",
+    "vi": "(Once we've worn him out enough, we can subdue him with Guard!)"
   },
   "MST_MISSIONSCRIPT_COMMANDPARAMETER_212_MESSAGES": {
     "en": "You're here! But, I'm not up<br>first. I'll let some of my<br>trusty friends test how much<br>your power has grown.",
@@ -92766,141 +92950,5 @@
     "pt": "Zoldia",
     "th": "โซลเดีย",
     "vi": "Zoldia"
-  },
-  "MST_MONSTERS_503601_NAME": {
-    "en": "Zoldia",
-    "es": "Zoldia",
-    "id": "Zoldia",
-    "pt": "Zoldia",
-    "th": "โซลเดีย",
-    "vi": "Zoldia"
-  },
-  "MST_MONSTERS_503700_NAME": {
-    "en": "Heretic Zoldia",
-    "es": "Zoldia hereje",
-    "id": "Zoldia Bidah",
-    "pt": "Zoldia Herege",
-    "th": "เฮียติคโซลเดีย",
-    "vi": "Heretic Zoldia"
-  },
-  "MST_MONSTERS_503701_NAME": {
-    "en": "Heretic Zoldia",
-    "es": "Zoldia hereje",
-    "id": "Zoldia Bidah",
-    "pt": "Zoldia Herege",
-    "th": "เฮียติคโซลเดีย",
-    "vi": "Heretic Zoldia"
-  },
-  "MST_MONSTERS_503800_NAME": {
-    "en": "WST - 1096s",
-    "es": "WST - 1096s",
-    "id": "WST - 1096s",
-    "pt": "WST - 1096s",
-    "th": "ดับบลิวเอสที - หนึ่งศูนย์เก้าหกเอส",
-    "vi": "WST - 1096s"
-  },
-  "MST_MONSTERS_503801_NAME": {
-    "en": "WST - 1096s",
-    "es": "WST - 1096s",
-    "id": "WST - 1096s",
-    "pt": "WST - 1096s",
-    "th": "ดับบลิวเอสที - หนึ่งศูนย์เก้าหกเอส",
-    "vi": "WST - 1096s"
-  },
-  "MST_MONSTERS_503900_NAME": {
-    "en": "Multifarious Lucius",
-    "es": "Lucius multifacético",
-    "id": "Aneka Lucius",
-    "pt": "Lucius Múltiplo",
-    "th": "มัลติแฟเรียสลูเซียส",
-    "vi": "Multifarious Lucius"
-  },
-  "MST_MONSTERS_503901_NAME": {
-    "en": "Multifarious Lucius",
-    "es": "Lucius multifacético",
-    "id": "Aneka Lucius",
-    "pt": "Lucius Múltiplo",
-    "th": "มัลติแฟเรียสลูเซียส",
-    "vi": "Multifarious Lucius"
-  },
-  "MST_MONSTERS_504000_NAME": {
-    "en": "Fake Lugina",
-    "es": "Lugina falso",
-    "id": "Lugina Palsu",
-    "pt": "Lugina Falso",
-    "th": "เฟคลูจิน่า",
-    "vi": "Fake Lugina"
-  },
-  "MST_MONSTERS_504001_NAME": {
-    "en": "Fake Lugina",
-    "es": "Lugina falso",
-    "id": "Lugina Palsu",
-    "pt": "Lugina Falso",
-    "th": "เฟคลูจิน่า",
-    "vi": "Fake Lugina"
-  },
-  "MST_MONSTERS_50400_NAME": {
-    "en": "King Glowy",
-    "es": "Rey Brillito",
-    "id": "Raja Glowy",
-    "pt": "Rei Glowey",
-    "th": "คิงโกลวี่",
-    "vi": "Vua Glowy"
-  },
-  "MST_MONSTERS_50401_NAME": {
-    "en": "King Glowy",
-    "es": "Rey Brillito",
-    "id": "Raja Glowy",
-    "pt": "Rei Glowey",
-    "th": "คิงโกลวี่",
-    "vi": "Vua Glowy"
-  },
-  "MST_MONSTERS_50402_NAME": {
-    "en": "King Glowy",
-    "es": "Rey Brillito",
-    "id": "Raja Glowy",
-    "pt": "Rei Glowey",
-    "th": "คิงโกลวี่",
-    "vi": "Vua Glowy"
-  },
-  "MST_MONSTERS_50403_NAME": {
-    "en": "King Glowy",
-    "es": "Rey Brillito",
-    "id": "Raja Glowy",
-    "pt": "Rei Glowey",
-    "th": "คิงโกลวี่",
-    "vi": "Vua Glowy"
-  },
-  "MST_MONSTERS_50404_NAME": {
-    "en": "Glowy Slime King",
-    "es": "Rey Lucerito",
-    "id": "Raja Lendir Bersinar",
-    "pt": "Visco Rei Glowy",
-    "th": "โกลววี่ สไลม์ คิง",
-    "vi": "Vua Bùn Lấp Lánh"
-  },
-  "MST_MONSTERS_50405_NAME": {
-    "en": "Glowy Slime King",
-    "es": "Rey Lucerito",
-    "id": "Raja Lendir Bersinar",
-    "pt": "Visco Rei Glowy",
-    "th": "โกลววี่ สไลม์ คิง",
-    "vi": "Vua Bùn Lấp Lánh"
-  },
-  "MST_MONSTERS_50406_NAME": {
-    "en": "Glowy Slime King",
-    "es": "Rey Lucerito",
-    "id": "Raja Lendir Bersinar",
-    "pt": "Visco Rei Glowy",
-    "th": "โกลววี่ สไลม์ คิง",
-    "vi": "Vua Bùn Lấp Lánh"
-  },
-  "MST_MONSTERS_50407_NAME": {
-    "en": "King Glowy",
-    "es": "Rey Lucerito",
-    "id": "Raja Glowy",
-    "pt": "Rei Glowey",
-    "th": "คิงโกลวี่",
-    "vi": "King Glowy"
   }
 }

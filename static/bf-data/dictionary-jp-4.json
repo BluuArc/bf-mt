@@ -1,4 +1,108 @@
 {
+  "MST_SKILLS_2000146_NAME": {
+    "en": "Fire Wings",
+    "es": "Alas ígneas",
+    "id": "Sayap Api",
+    "pt": "Asas de Fogo",
+    "th": "ไฟเออร์วิง",
+    "vi": "Đôi cánh lửa"
+  },
+  "MST_SKILLS_2000147_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000147_NAME": {
+    "en": "Burn brighter, my flames!",
+    "es": "¡Ardan con más fuerza, llamas mías!",
+    "id": "Bakar lebih terang, apiku!",
+    "pt": "Queimem intensamente, minhas chamas!",
+    "th": "จงลุกโชติช่วง เปลวไฟของข้า!",
+    "vi": "Cháy sáng hơn, ngọn lửa của ta!"
+  },
+  "MST_SKILLS_2000148_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000148_NAME": {
+    "en": "This is the power of his wings!",
+    "es": "¡Este es el poder de las alas!",
+    "id": "Inilah kekuatan sayapnya!",
+    "pt": "Este é o poder das minhas asas!",
+    "th": "นี่คือพลังจากปิกของเขา!",
+    "vi": "Đây là sức mạnh đôi cánh của anh!"
+  },
+  "MST_SKILLS_2000149_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000149_NAME": {
+    "en": "Bring it on! I've still got a lot left!",
+    "es": "¡Vamos! ¡Ven! ¡Todavía me queda muchísima fuerza!",
+    "id": "Ayo saja! Aku masih punya banyak!",
+    "pt": "Vamos! Ainda tenho muito a dar!",
+    "th": "เข้ามาเลย! ข้ายังมีทีเด้ดอีกเยอะ!",
+    "vi": "Xuất chiêu đi! Ta vẫn còn bỏ quên nhiều thứ!"
+  },
+  "MST_SKILLS_2000150_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000150_NAME": {
+    "en": "Mega Breath",
+    "es": "Aliento abrasador",
+    "id": "Napas Mega",
+    "pt": "Mega Baforada",
+    "th": "เมก้าเบรธ",
+    "vi": "Hơi thở của Mega"
+  },
+  "MST_SKILLS_2000160_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000160_NAME": {
+    "en": "Maelstrom",
+    "es": "Vorágine",
+    "id": "Badai Laut",
+    "pt": "Maelstrom",
+    "th": "เมลสตอร์ม",
+    "vi": "Xoáy nước"
+  },
+  "MST_SKILLS_2000170_DESCRIPTION": {
+    "en": "None",
+    "es": "None",
+    "id": "None",
+    "pt": "None",
+    "th": "None",
+    "vi": "None"
+  },
+  "MST_SKILLS_2000170_NAME": {
+    "en": "Genocide Blaster",
+    "es": "Onda genocida",
+    "id": "Peledak Genosida",
+    "pt": "Final Destruidor",
+    "th": "จีโนไซด์บลาสเตอร์",
+    "vi": "Bom diệt chủng"
+  },
   "MST_SKILLS_2000180_DESCRIPTION": {
     "en": "None",
     "es": "None",
@@ -92846,61 +92950,5 @@
     "pt": "None",
     "th": "None",
     "vi": "None"
-  },
-  "MST_SKILLS_2122410_NAME": {
-    "en": "Okay, sure thing sis!",
-    "es": "¡Bien, como digas, hermana!",
-    "id": "Oke, pastinya!",
-    "pt": "Ok, pode deixar mana!",
-    "th": "ได้เลย แน่นอนพี่สาว!",
-    "vi": "Okay, sure thing sis!"
-  },
-  "MST_SKILLS_2122411_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122411_NAME": {
-    "en": "Like this? Here ya go!",
-    "es": "¿Te gusta esto? ¡Aquí tienes!",
-    "id": "Seperti ini? Ini rasakan!",
-    "pt": "Assim? Lá vai!",
-    "th": "แบบนี้เหรอ? ไปกันเลย!",
-    "vi": "Like this? Here ya go!"
-  },
-  "MST_SKILLS_2122412_DESCRIPTION": {
-    "en": "13 combo powerful Dark attack on all enemies, recovers HP for all allies & removes all status ailments",
-    "es": "Combo grupal de 13 poderosos ataques oscuros. Recupera los PS de tus aliados y elimina las aflicciones de los estados",
-    "id": "13 kombo serangan Gelap kuat ke semua musuh, memulihkan HP semua sekutu & membuang semua status penyakit",
-    "pt": "Combo poderoso de 13 golpes de Sombra em todos os inimigos e recuperação de HP em todos os aliados e remove todos os efeitos negativos",
-    "th": "13 คอมโบ โจมตีศัตรูทั้งหมดด้วยธาตุความมืด ฟื้น HP ให้ทีมและลบทุกสถานะผิดปกติ",
-    "vi": "13 combo powerful Dark attack on all enemies, recovers HP for all allies & removes all status ailments"
-  },
-  "MST_SKILLS_2122412_NAME": {
-    "en": "Take this!",
-    "es": "¡Toma esto!",
-    "id": "Rasakan ini!",
-    "pt": "Aí!",
-    "th": "รับนี่ไปซะ!",
-    "vi": "Take this!"
-  },
-  "MST_SKILLS_2122413_DESCRIPTION": {
-    "en": "None",
-    "es": "None",
-    "id": "None",
-    "pt": "None",
-    "th": "None",
-    "vi": "None"
-  },
-  "MST_SKILLS_2122413_NAME": {
-    "en": "I-I don't know! I got lucky!",
-    "es": "No... ¡no sé! ¡Tuve suerte!",
-    "id": "A-Aku tidak tahu! Aku hoki!",
-    "pt": "E-eu não sei! Eu tive sorte!",
-    "th": "ข-ข้าไม่รู้! ข้าโชคดีมากเลย!",
-    "vi": "I-I don't know! I got lucky!"
   }
 }
