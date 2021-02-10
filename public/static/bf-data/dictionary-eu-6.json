@@ -1,4 +1,92 @@
 {
+  "MST_SKILLS_2840827_NAME": {
+    "en": "Celestial Vanquisher",
+    "es": "Celestial Vanquisher",
+    "id": "Celestial Vanquisher",
+    "pt": "Celestial Vanquisher",
+    "th": "Celestial Vanquisher",
+    "vi": "Celestial Vanquisher"
+  },
+  "MST_SKILLS_2840828_DESCRIPTION": {
+    "en": "22 combo Thunder attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 4 turns, fills BB gauge for 4 turns, boosts critical damage for 4 turns, 1 extra action for 1 turn & raises normal hit amount for 4 turns",
+    "es": "22 combo Thunder attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 4 turns, fills BB gauge for 4 turns, boosts critical damage for 4 turns, 1 extra action for 1 turn & raises normal hit amount for 4 turns",
+    "id": "22 combo Thunder attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 4 turns, fills BB gauge for 4 turns, boosts critical damage for 4 turns, 1 extra action for 1 turn & raises normal hit amount for 4 turns",
+    "pt": "22 combo Thunder attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 4 turns, fills BB gauge for 4 turns, boosts critical damage for 4 turns, 1 extra action for 1 turn & raises normal hit amount for 4 turns",
+    "th": "22 combo Thunder attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 4 turns, fills BB gauge for 4 turns, boosts critical damage for 4 turns, 1 extra action for 1 turn & raises normal hit amount for 4 turns",
+    "vi": "22 combo Thunder attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec and critical rate for 4 turns, fills BB gauge for 4 turns, boosts critical damage for 4 turns, 1 extra action for 1 turn & raises normal hit amount for 4 turns"
+  },
+  "MST_SKILLS_2840828_NAME": {
+    "en": "Victorious Over Evil",
+    "es": "Victorious Over Evil",
+    "id": "Victorious Over Evil",
+    "pt": "Victorious Over Evil",
+    "th": "Victorious Over Evil",
+    "vi": "Victorious Over Evil"
+  },
+  "MST_SKILLS_2840848_DESCRIPTION": {
+    "en": "24 combo Thunder attack on all foes (damage relative to remaining HP), may raise allies from KO, fills BB gauge for 4 turns, activates BB/SBB/UBB twice for 3 turns, boosts Atk, Rec relative to Def for 4 turns & fully restores HP for 4 turns",
+    "es": "24 combo Thunder attack on all foes (damage relative to remaining HP), may raise allies from KO, fills BB gauge for 4 turns, activates BB/SBB/UBB twice for 3 turns, boosts Atk, Rec relative to Def for 4 turns & fully restores HP for 4 turns",
+    "id": "24 combo Thunder attack on all foes (damage relative to remaining HP), may raise allies from KO, fills BB gauge for 4 turns, activates BB/SBB/UBB twice for 3 turns, boosts Atk, Rec relative to Def for 4 turns & fully restores HP for 4 turns",
+    "pt": "24 combo Thunder attack on all foes (damage relative to remaining HP), may raise allies from KO, fills BB gauge for 4 turns, activates BB/SBB/UBB twice for 3 turns, boosts Atk, Rec relative to Def for 4 turns & fully restores HP for 4 turns",
+    "th": "24 combo Thunder attack on all foes (damage relative to remaining HP), may raise allies from KO, fills BB gauge for 4 turns, activates BB/SBB/UBB twice for 3 turns, boosts Atk, Rec relative to Def for 4 turns & fully restores HP for 4 turns",
+    "vi": "24 combo Thunder attack on all foes (damage relative to remaining HP), may raise allies from KO, fills BB gauge for 4 turns, activates BB/SBB/UBB twice for 3 turns, boosts Atk, Rec relative to Def for 4 turns & fully restores HP for 4 turns"
+  },
+  "MST_SKILLS_2840848_NAME": {
+    "en": "Mimicked Judgement",
+    "es": "Mimicked Judgement",
+    "id": "Mimicked Judgement",
+    "pt": "Mimicked Judgement",
+    "th": "Mimicked Judgement",
+    "vi": "Mimicked Judgement"
+  },
+  "MST_SKILLS_2840867_DESCRIPTION": {
+    "en": "26 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), probable evasion for 3 turns, boosts Thunder elemental damage for 3 turns, boosts own spark damage for 3 turns & boosts max HP",
+    "es": "26 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), probable evasion for 3 turns, boosts Thunder elemental damage for 3 turns, boosts own spark damage for 3 turns & boosts max HP",
+    "id": "26 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), probable evasion for 3 turns, boosts Thunder elemental damage for 3 turns, boosts own spark damage for 3 turns & boosts max HP",
+    "pt": "26 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), probable evasion for 3 turns, boosts Thunder elemental damage for 3 turns, boosts own spark damage for 3 turns & boosts max HP",
+    "th": "26 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), probable evasion for 3 turns, boosts Thunder elemental damage for 3 turns, boosts own spark damage for 3 turns & boosts max HP",
+    "vi": "26 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), probable evasion for 3 turns, boosts Thunder elemental damage for 3 turns, boosts own spark damage for 3 turns & boosts max HP"
+  },
+  "MST_SKILLS_2840867_NAME": {
+    "en": "The fight's over.",
+    "es": "The fight's over.",
+    "id": "The fight's over.",
+    "pt": "The fight's over.",
+    "th": "The fight's over.",
+    "vi": "The fight's over."
+  },
+  "MST_SKILLS_2840868_DESCRIPTION": {
+    "en": "32 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 7 combo Thunder attack on single foe (25% active Pierce on Water, Thunder foes), evasion for 3 turns, boosts Thunder elemental damage for 4 turns, boosts own spark damage for 4 turns & boosts max HP",
+    "es": "32 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 7 combo Thunder attack on single foe (25% active Pierce on Water, Thunder foes), evasion for 3 turns, boosts Thunder elemental damage for 4 turns, boosts own spark damage for 4 turns & boosts max HP",
+    "id": "32 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 7 combo Thunder attack on single foe (25% active Pierce on Water, Thunder foes), evasion for 3 turns, boosts Thunder elemental damage for 4 turns, boosts own spark damage for 4 turns & boosts max HP",
+    "pt": "32 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 7 combo Thunder attack on single foe (25% active Pierce on Water, Thunder foes), evasion for 3 turns, boosts Thunder elemental damage for 4 turns, boosts own spark damage for 4 turns & boosts max HP",
+    "th": "32 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 7 combo Thunder attack on single foe (25% active Pierce on Water, Thunder foes), evasion for 3 turns, boosts Thunder elemental damage for 4 turns, boosts own spark damage for 4 turns & boosts max HP",
+    "vi": "32 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 7 combo Thunder attack on single foe (25% active Pierce on Water, Thunder foes), evasion for 3 turns, boosts Thunder elemental damage for 4 turns, boosts own spark damage for 4 turns & boosts max HP"
+  },
+  "MST_SKILLS_2840868_NAME": {
+    "en": "Come on.",
+    "es": "Come on.",
+    "id": "Come on.",
+    "pt": "Come on.",
+    "th": "Come on.",
+    "vi": "Come on."
+  },
+  "MST_SKILLS_2840878_DESCRIPTION": {
+    "en": "34 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 6 combo Thunder attack on single foe (boosts own critical rate), evasion for 3 turns, boosts Thunder elemental damage for 3 turns, damage taken fills BB gauge for 3 turns & 3 turns Atk, Def reduction infliction",
+    "es": "34 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 6 combo Thunder attack on single foe (boosts own critical rate), evasion for 3 turns, boosts Thunder elemental damage for 3 turns, damage taken fills BB gauge for 3 turns & 3 turns Atk, Def reduction infliction",
+    "id": "34 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 6 combo Thunder attack on single foe (boosts own critical rate), evasion for 3 turns, boosts Thunder elemental damage for 3 turns, damage taken fills BB gauge for 3 turns & 3 turns Atk, Def reduction infliction",
+    "pt": "34 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 6 combo Thunder attack on single foe (boosts own critical rate), evasion for 3 turns, boosts Thunder elemental damage for 3 turns, damage taken fills BB gauge for 3 turns & 3 turns Atk, Def reduction infliction",
+    "th": "34 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 6 combo Thunder attack on single foe (boosts own critical rate), evasion for 3 turns, boosts Thunder elemental damage for 3 turns, damage taken fills BB gauge for 3 turns & 3 turns Atk, Def reduction infliction",
+    "vi": "34 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 6 combo Thunder attack on single foe (boosts own critical rate), evasion for 3 turns, boosts Thunder elemental damage for 3 turns, damage taken fills BB gauge for 3 turns & 3 turns Atk, Def reduction infliction"
+  },
+  "MST_SKILLS_2840878_NAME": {
+    "en": "Ahahahaha!",
+    "es": "Ahahahaha!",
+    "id": "Ahahahaha!",
+    "pt": "Ahahahaha!",
+    "th": "Ahahahaha!",
+    "vi": "Ahahahaha!"
+  },
   "MST_SKILLS_2840888_DESCRIPTION": {
     "en": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
     "es": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
@@ -90775,6 +90863,22 @@
     "th": "Fireflower",
     "vi": "Fireflower"
   },
+  "MST_SKILLS_811008_DESCRIPTION": {
+    "en": "22 combo Fire attack on all foes (damage relative to remaining HP), raises normal hit amount for 3 turns, normal attacks hits all foes for 3 turns, probable evasion for self for 2 turns, fills own BB gauge to max & 1 extra action for self for 1 turn",
+    "es": "22 combo Fire attack on all foes (damage relative to remaining HP), raises normal hit amount for 3 turns, normal attacks hits all foes for 3 turns, probable evasion for self for 2 turns, fills own BB gauge to max & 1 extra action for self for 1 turn",
+    "id": "22 combo Fire attack on all foes (damage relative to remaining HP), raises normal hit amount for 3 turns, normal attacks hits all foes for 3 turns, probable evasion for self for 2 turns, fills own BB gauge to max & 1 extra action for self for 1 turn",
+    "pt": "22 combo Fire attack on all foes (damage relative to remaining HP), raises normal hit amount for 3 turns, normal attacks hits all foes for 3 turns, probable evasion for self for 2 turns, fills own BB gauge to max & 1 extra action for self for 1 turn",
+    "th": "22 combo Fire attack on all foes (damage relative to remaining HP), raises normal hit amount for 3 turns, normal attacks hits all foes for 3 turns, probable evasion for self for 2 turns, fills own BB gauge to max & 1 extra action for self for 1 turn",
+    "vi": "22 combo Fire attack on all foes (damage relative to remaining HP), raises normal hit amount for 3 turns, normal attacks hits all foes for 3 turns, probable evasion for self for 2 turns, fills own BB gauge to max & 1 extra action for self for 1 turn"
+  },
+  "MST_SKILLS_811008_NAME": {
+    "en": "Nevron Sever",
+    "es": "Nevron Sever",
+    "id": "Nevron Sever",
+    "pt": "Nevron Sever",
+    "th": "Nevron Sever",
+    "vi": "Nevron Sever"
+  },
   "MST_SKILLS_811016_DESCRIPTION": {
     "en": "15 combo powerful Fire attack on all foes & boosts critical hit rate for 3 turns",
     "es": "Combo grupal de 15 poderosos ataques ígneos. Aumenta la posibilidad de asestar golpes críticos durante 3 turnos",
@@ -92846,61 +92950,5 @@
     "pt": "None",
     "th": "ล้างทุกสถานะผิดปกติ ฟื้นฟู HP และบีบีเกจอย่างมากแก่ทีม 3 เทิร์น",
     "vi": "Removes all negative status ailments, gradually recovers a great amount of HP for all allies & gradually recovers BB gauge for all allies for 3 turns  "
-  },
-  "MST_SKILLS_830527_NAME": {
-    "en": "Chronosphere",
-    "es": "Cronoesfera",
-    "id": "Bola Kronos",
-    "pt": "Cronosfera",
-    "th": "โครโนสเฟียร์",
-    "vi": "Chronosphere"
-  },
-  "MST_SKILLS_830528_DESCRIPTION": {
-    "en": "15 combo powerful Earth attack on all foes, negates all status ailments for 3 turns, negates Atk, Def, Rec reductions for 3 turns, removes all status ailments, greatly restores HP for 3 turns & enormously boosts BB gauge for 3 turns",
-    "es": "15 combo powerful Earth attack on all foes, negates all status ailments for 3 turns, negates Atk, Def, Rec reductions for 3 turns, removes all status ailments, greatly restores HP for 3 turns & enormously boosts BB gauge for 3 turns",
-    "id": "15 combo powerful Earth attack on all foes, negates all status ailments for 3 turns, negates Atk, Def, Rec reductions for 3 turns, removes all status ailments, greatly restores HP for 3 turns & enormously boosts BB gauge for 3 turns",
-    "pt": "15 combo powerful Earth attack on all foes, negates all status ailments for 3 turns, negates Atk, Def, Rec reductions for 3 turns, removes all status ailments, greatly restores HP for 3 turns & enormously boosts BB gauge for 3 turns",
-    "th": "15 combo powerful Earth attack on all foes, negates all status ailments for 3 turns, negates Atk, Def, Rec reductions for 3 turns, removes all status ailments, greatly restores HP for 3 turns & enormously boosts BB gauge for 3 turns",
-    "vi": "15 combo powerful Earth attack on all foes, negates all status ailments for 3 turns, negates Atk, Def, Rec reductions for 3 turns, removes all status ailments, greatly restores HP for 3 turns & enormously boosts BB gauge for 3 turns"
-  },
-  "MST_SKILLS_830528_NAME": {
-    "en": "Through the Hourglass",
-    "es": "Through the Hourglass",
-    "id": "Through the Hourglass",
-    "pt": "Through the Hourglass",
-    "th": "Through the Hourglass",
-    "vi": "Through the Hourglass"
-  },
-  "MST_SKILLS_830537_DESCRIPTION": {
-    "en": "13 combo powerful Earth attack on all foes, considerably boosts BC efficacy for 3 turns, damage taken may slightly restore HP for 3 turns, negates all status ailments, critical, elemental and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
-    "es": "13 combo powerful Earth attack on all foes, considerably boosts BC efficacy for 3 turns, damage taken may slightly restore HP for 3 turns, negates all status ailments, critical, elemental and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
-    "id": "13 combo powerful Earth attack on all foes, considerably boosts BC efficacy for 3 turns, damage taken may slightly restore HP for 3 turns, negates all status ailments, critical, elemental and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
-    "pt": "13 combo powerful Earth attack on all foes, considerably boosts BC efficacy for 3 turns, damage taken may slightly restore HP for 3 turns, negates all status ailments, critical, elemental and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
-    "th": "13 combo powerful Earth attack on all foes, considerably boosts BC efficacy for 3 turns, damage taken may slightly restore HP for 3 turns, negates all status ailments, critical, elemental and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
-    "vi": "13 combo powerful Earth attack on all foes, considerably boosts BC efficacy for 3 turns, damage taken may slightly restore HP for 3 turns, negates all status ailments, critical, elemental and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack"
-  },
-  "MST_SKILLS_830537_NAME": {
-    "en": "Oh oh oh! That hurts!",
-    "es": "Oh oh oh! That hurts!",
-    "id": "Oh oh oh! That hurts!",
-    "pt": "Oh oh oh! That hurts!",
-    "th": "Oh oh oh! That hurts!",
-    "vi": "Oh oh oh! That hurts!"
-  },
-  "MST_SKILLS_830538_DESCRIPTION": {
-    "en": "17 combo powerful Earth attack on all foes, hugely boosts BC efficacy for 3 turns, damage taken may restore HP for 3 turns, negates all status ailments, critical, elemental damage and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
-    "es": "17 combo powerful Earth attack on all foes, hugely boosts BC efficacy for 3 turns, damage taken may restore HP for 3 turns, negates all status ailments, critical, elemental damage and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
-    "id": "17 combo powerful Earth attack on all foes, hugely boosts BC efficacy for 3 turns, damage taken may restore HP for 3 turns, negates all status ailments, critical, elemental damage and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
-    "pt": "17 combo powerful Earth attack on all foes, hugely boosts BC efficacy for 3 turns, damage taken may restore HP for 3 turns, negates all status ailments, critical, elemental damage and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
-    "th": "17 combo powerful Earth attack on all foes, hugely boosts BC efficacy for 3 turns, damage taken may restore HP for 3 turns, negates all status ailments, critical, elemental damage and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
-    "vi": "17 combo powerful Earth attack on all foes, hugely boosts BC efficacy for 3 turns, damage taken may restore HP for 3 turns, negates all status ailments, critical, elemental damage and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack"
-  },
-  "MST_SKILLS_830538_NAME": {
-    "en": "Ooh! Right on the head!",
-    "es": "Ooh! Right on the head!",
-    "id": "Ooh! Right on the head!",
-    "pt": "Ooh! Right on the head!",
-    "th": "Ooh! Right on the head!",
-    "vi": "Ooh! Right on the head!"
   }
 }
