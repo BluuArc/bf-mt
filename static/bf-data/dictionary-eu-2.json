@@ -1,4 +1,68 @@
 {
+  "MST_LEADERSKILLS_2103_NAME": {
+    "en": "Eternal Protection",
+    "es": "Protección eterna",
+    "id": "Proteksi Abadi",
+    "pt": "Proteção Eterna",
+    "th": "อีเทอนอลโพรเทคชั่น",
+    "vi": "Bảo vệ vĩnh cửu"
+  },
+  "MST_LEADERSKILLS_2104_DESCRIPTION": {
+    "en": "10% increase in HP and nullifies all status ailments",
+    "es": "10% aumento a los PS. Anula todos los estados negativos.",
+    "id": "10% kenaikan HP dan menetralkan semua status",
+    "pt": "Aumento de 10% no HP e nulifica status negativos",
+    "th": "10% เพิ่ม HP และ ลบล้างสถานะผิดปกติทุกชนิด",
+    "vi": "Tăng 10% HP và vô hiệu hóa mọi loại trạng thái"
+  },
+  "MST_LEADERSKILLS_2104_NAME": {
+    "en": "Eternal Life",
+    "es": "Vida eterna",
+    "id": "Hidup Abadi",
+    "pt": "Vida Eterna",
+    "th": "อีเทอนอลไลฟ์",
+    "vi": "Sinh mạng vĩnh cửu"
+  },
+  "MST_LEADERSKILLS_2105_DESCRIPTION": {
+    "en": "Negates all status ailments & BB gauge fills when attacked",
+    "es": "Anula todos los estados negativos y llena el indicador BB al recibir un ataque",
+    "id": "Menetralkan semua status & mengisi meteran BB saat diserang",
+    "pt": "Anula todos os status negativos e enche a barra de BB ao ser atacado",
+    "th": "ยกเลิกสถานะผิดปกติทุกชนิด และ เติมเกจ BB เมื่อโจมตี",
+    "vi": "Vô hiệu mọi hiệu ứng trạng thái & nạp vạch Tăng cường can đảm khi bị tấn công"
+  },
+  "MST_LEADERSKILLS_2105_NAME": {
+    "en": "Eternal Reverberation",
+    "es": "Reverberación eterna",
+    "id": "Gema Abadi",
+    "pt": "Reverberação Eterna",
+    "th": "อีเทอนอลรีเวอเบอเรชั่น",
+    "vi": "Âm vang vĩnh cửu"
+  },
+  "MST_LEADERSKILLS_2106_DESCRIPTION": {
+    "en": "Nullifies all status ailments & probable slight reduction in damage taken",
+    "es": "Niega todos las aflicciones de estados y puede reducir levemente el daño recibido.",
+    "id": "Menetralkan semua status penyakit & mungkin agak mengurangi kerusakan yang diderita",
+    "pt": "Anula qualquer status negativo e pode reduzir um pouco do dano sofrido",
+    "th": "ต้านทานสถานะผิดปกติทั้งหมด และ อาจจะลดความเสียหายที่ได้รับลงเล็กน้อย",
+    "vi": "Vô hiệu hóa mọi loại trạng thái và có thể giảm nhẹ thiệt hại phải chịu"
+  },
+  "MST_LEADERSKILLS_2106_NAME": {
+    "en": "Eternal Sanctuary",
+    "es": "Santuario eterno",
+    "id": "Suaka Abadi",
+    "pt": "Santuário Eterno",
+    "th": "อีเทอนอลแซงชัวรี่",
+    "vi": "Điện thờ vĩnh cửu"
+  },
+  "MST_LEADERSKILLS_2107_DESCRIPTION": {
+    "en": "Nullifies all status ailments and critical hits from enemies",
+    "es": "Niega todos las aflicciones de estados y los golpes críticos de los enemigos.",
+    "id": "Menetralkan semua status penyakit & pukulan ampuh dari musuh",
+    "pt": "Anula qualquer status negativo e ataque crítico de inimigos",
+    "th": "ต้านทานสถานะผิดปกติทั้งหมด กับ การโจมตีคริติคอลจากศัตรู",
+    "vi": "Vô hiệu hóa mọi loại trạng thái và đòn trí mạng bởi kẻ thù"
+  },
   "MST_LEADERSKILLS_2107_NAME": {
     "en": "Eternal Blessing",
     "es": "Bendición eterna",
@@ -15136,12 +15200,12 @@
     "vi": "Supernal Observation"
   },
   "MST_LEADERSKILLS_830288_DESCRIPTION": {
-    "en": "60% boost to Atk, max HP, hugely boosts critical damage, enormously boosts BC, HC drop rate & boosts Atk, Def relative to remaining HP",
-    "es": "60% boost to Atk, max HP, hugely boosts critical damage, enormously boosts BC, HC drop rate & boosts Atk, Def relative to remaining HP",
-    "id": "60% ekstra Serang, HP maks, amat menambah kerusakan ampuh, ekstra jumbo perolehan BC, HC, menambah Serang, Tahan sesuai sisa HP",
-    "pt": "60% boost to Atk, max HP, hugely boosts critical damage, enormously boosts BC, HC drop rate & boosts Atk, Def relative to remaining HP",
-    "th": "60% เพิ่มค่าให้ โจมตี, HP สูงสุด, เพิ่มค่าอย่างสูงให้ ความเสียหายคริติคอล, เพิ่มค่ามหาศาลให้ อัตราดรอป BC, HC และ เพิ่มค่า โจมตี, ป้องกัน สัมพันธ์กับ HP ที่เหลืออยู่",
-    "vi": "60% boost to Atk, max HP, hugely boosts critical damage, enormously boosts BC, HC drop rate & boosts Atk, Def relative to remaining HP"
+    "en": "150% Atk, max HP, 30% critical rate, 250% critical damage, 0-80% Atk, Def relative to remaining HP, 50% BC, HC, 9% Item, 50% Zel, Karma drop rates & 30% OD gauge fill rate",
+    "es": "150% Atk, max HP, 30% critical rate, 250% critical damage, 0-80% Atk, Def relative to remaining HP, 50% BC, HC, 9% Item, 50% Zel, Karma drop rates & 30% OD gauge fill rate",
+    "id": "150% Atk, max HP, 30% critical rate, 250% critical damage, 0-80% Atk, Def relative to remaining HP, 50% BC, HC, 9% Item, 50% Zel, Karma drop rates & 30% OD gauge fill rate",
+    "pt": "150% Atk, max HP, 30% critical rate, 250% critical damage, 0-80% Atk, Def relative to remaining HP, 50% BC, HC, 9% Item, 50% Zel, Karma drop rates & 30% OD gauge fill rate",
+    "th": "150% Atk, max HP, 30% critical rate, 250% critical damage, 0-80% Atk, Def relative to remaining HP, 50% BC, HC, 9% Item, 50% Zel, Karma drop rates & 30% OD gauge fill rate",
+    "vi": "150% Atk, max HP, 30% critical rate, 250% critical damage, 0-80% Atk, Def relative to remaining HP, 50% BC, HC, 9% Item, 50% Zel, Karma drop rates & 30% OD gauge fill rate"
   },
   "MST_LEADERSKILLS_830288_NAME": {
     "en": "Omniscient Perception",
@@ -19070,6 +19134,22 @@
     "pt": "Blind Sight",
     "th": "Blind Sight",
     "vi": "Blind Sight"
+  },
+  "MST_LEADERSKILLS_861008_DESCRIPTION": {
+    "en": "140% all parameters, 200% all elemental damage, 175% damage against status afflicted foes, damage taken may restore HP & 30% OD gauge fill rate",
+    "es": "140% all parameters, 200% all elemental damage, 175% damage against status afflicted foes, damage taken may restore HP & 30% OD gauge fill rate",
+    "id": "140% all parameters, 200% all elemental damage, 175% damage against status afflicted foes, damage taken may restore HP & 30% OD gauge fill rate",
+    "pt": "140% all parameters, 200% all elemental damage, 175% damage against status afflicted foes, damage taken may restore HP & 30% OD gauge fill rate",
+    "th": "140% all parameters, 200% all elemental damage, 175% damage against status afflicted foes, damage taken may restore HP & 30% OD gauge fill rate",
+    "vi": "140% all parameters, 200% all elemental damage, 175% damage against status afflicted foes, damage taken may restore HP & 30% OD gauge fill rate"
+  },
+  "MST_LEADERSKILLS_861008_NAME": {
+    "en": "Deft Devil",
+    "es": "Deft Devil",
+    "id": "Deft Devil",
+    "pt": "Deft Devil",
+    "th": "Deft Devil",
+    "vi": "Deft Devil"
   },
   "MST_LEADERSKILLS_8700_DESCRIPTION": {
     "en": "15% reduction of damage taken from Water and Fire types",
@@ -92910,45 +92990,5 @@
     "pt": "Glowy",
     "th": "โกลวี่",
     "vi": "Glowy"
-  },
-  "MST_MONSTERS_50354_NAME": {
-    "en": "Glowy",
-    "es": "Brillito",
-    "id": "Glowy",
-    "pt": "Glowy",
-    "th": "โกลวี่",
-    "vi": "Glowy"
-  },
-  "MST_MONSTERS_50355_NAME": {
-    "en": "Glowy",
-    "es": "Brillito",
-    "id": "Glowy",
-    "pt": "Glowy",
-    "th": "โกลวี่",
-    "vi": "Glowy"
-  },
-  "MST_MONSTERS_50356_NAME": {
-    "en": "Glowy",
-    "es": "Lucerito",
-    "id": "Glowy",
-    "pt": "Glowy",
-    "th": "โกลวี่",
-    "vi": "Glowy"
-  },
-  "MST_MONSTERS_50357_NAME": {
-    "en": "Glowy",
-    "es": "Lucerito",
-    "id": "Glowy",
-    "pt": "Glowy",
-    "th": "โกลวี่",
-    "vi": "Glowy"
-  },
-  "MST_MONSTERS_503600_NAME": {
-    "en": "Zoldia",
-    "es": "Zoldia",
-    "id": "Zoldia",
-    "pt": "Zoldia",
-    "th": "โซลเดีย",
-    "vi": "Zoldia"
   }
 }
