@@ -1,36 +1,4 @@
 {
-  "MST_SKILLS_2840868_NAME": {
-    "en": "Come on.",
-    "es": "Come on.",
-    "id": "Come on.",
-    "pt": "Come on.",
-    "th": "Come on.",
-    "vi": "Come on."
-  },
-  "MST_SKILLS_2840878_DESCRIPTION": {
-    "en": "34 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 6 combo Thunder attack on single foe (boosts own critical rate), evasion for 3 turns, boosts Thunder elemental damage for 3 turns, damage taken fills BB gauge for 3 turns & 3 turns Atk, Def reduction infliction",
-    "es": "34 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 6 combo Thunder attack on single foe (boosts own critical rate), evasion for 3 turns, boosts Thunder elemental damage for 3 turns, damage taken fills BB gauge for 3 turns & 3 turns Atk, Def reduction infliction",
-    "id": "34 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 6 combo Thunder attack on single foe (boosts own critical rate), evasion for 3 turns, boosts Thunder elemental damage for 3 turns, damage taken fills BB gauge for 3 turns & 3 turns Atk, Def reduction infliction",
-    "pt": "34 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 6 combo Thunder attack on single foe (boosts own critical rate), evasion for 3 turns, boosts Thunder elemental damage for 3 turns, damage taken fills BB gauge for 3 turns & 3 turns Atk, Def reduction infliction",
-    "th": "34 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 6 combo Thunder attack on single foe (boosts own critical rate), evasion for 3 turns, boosts Thunder elemental damage for 3 turns, damage taken fills BB gauge for 3 turns & 3 turns Atk, Def reduction infliction",
-    "vi": "34 combo Thunder attack on all foes (damage relative to remaining HP, boosts own critical rate), 6 combo Thunder attack on single foe (boosts own critical rate), evasion for 3 turns, boosts Thunder elemental damage for 3 turns, damage taken fills BB gauge for 3 turns & 3 turns Atk, Def reduction infliction"
-  },
-  "MST_SKILLS_2840878_NAME": {
-    "en": "Ahahahaha!",
-    "es": "Ahahahaha!",
-    "id": "Ahahahaha!",
-    "pt": "Ahahahaha!",
-    "th": "Ahahahaha!",
-    "vi": "Ahahahaha!"
-  },
-  "MST_SKILLS_2840888_DESCRIPTION": {
-    "en": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
-    "es": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
-    "id": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
-    "pt": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
-    "th": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance",
-    "vi": "34 combo Thunder attack on all foes (damage relative to remaining HP), boosts max HP, boosts spark damage for 4 turns, spark damage fills BB gauge for 4 turns, spark damage restores HP for 4 turns & probable KO resistance"
-  },
   "MST_SKILLS_2840888_NAME": {
     "en": "Three Steps to Śūnyatā",
     "es": "Three Steps to Śūnyatā",
@@ -92990,5 +92958,45 @@
     "pt": "Through the Hourglass",
     "th": "Through the Hourglass",
     "vi": "Through the Hourglass"
+  },
+  "MST_SKILLS_830537_DESCRIPTION": {
+    "en": "13 combo powerful Earth attack on all foes, considerably boosts BC efficacy for 3 turns, damage taken may slightly restore HP for 3 turns, negates all status ailments, critical, elemental and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
+    "es": "13 combo powerful Earth attack on all foes, considerably boosts BC efficacy for 3 turns, damage taken may slightly restore HP for 3 turns, negates all status ailments, critical, elemental and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
+    "id": "13 combo powerful Earth attack on all foes, considerably boosts BC efficacy for 3 turns, damage taken may slightly restore HP for 3 turns, negates all status ailments, critical, elemental and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
+    "pt": "13 combo powerful Earth attack on all foes, considerably boosts BC efficacy for 3 turns, damage taken may slightly restore HP for 3 turns, negates all status ailments, critical, elemental and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
+    "th": "13 combo powerful Earth attack on all foes, considerably boosts BC efficacy for 3 turns, damage taken may slightly restore HP for 3 turns, negates all status ailments, critical, elemental and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
+    "vi": "13 combo powerful Earth attack on all foes, considerably boosts BC efficacy for 3 turns, damage taken may slightly restore HP for 3 turns, negates all status ailments, critical, elemental and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack"
+  },
+  "MST_SKILLS_830537_NAME": {
+    "en": "Oh oh oh! That hurts!",
+    "es": "Oh oh oh! That hurts!",
+    "id": "Oh oh oh! That hurts!",
+    "pt": "Oh oh oh! That hurts!",
+    "th": "Oh oh oh! That hurts!",
+    "vi": "Oh oh oh! That hurts!"
+  },
+  "MST_SKILLS_830538_DESCRIPTION": {
+    "en": "17 combo powerful Earth attack on all foes, hugely boosts BC efficacy for 3 turns, damage taken may restore HP for 3 turns, negates all status ailments, critical, elemental damage and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
+    "es": "17 combo powerful Earth attack on all foes, hugely boosts BC efficacy for 3 turns, damage taken may restore HP for 3 turns, negates all status ailments, critical, elemental damage and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
+    "id": "17 combo powerful Earth attack on all foes, hugely boosts BC efficacy for 3 turns, damage taken may restore HP for 3 turns, negates all status ailments, critical, elemental damage and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
+    "pt": "17 combo powerful Earth attack on all foes, hugely boosts BC efficacy for 3 turns, damage taken may restore HP for 3 turns, negates all status ailments, critical, elemental damage and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
+    "th": "17 combo powerful Earth attack on all foes, hugely boosts BC efficacy for 3 turns, damage taken may restore HP for 3 turns, negates all status ailments, critical, elemental damage and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack",
+    "vi": "17 combo powerful Earth attack on all foes, hugely boosts BC efficacy for 3 turns, damage taken may restore HP for 3 turns, negates all status ailments, critical, elemental damage and Spark damage for 3 turns & adds low probability of resistance against 1 KO attack"
+  },
+  "MST_SKILLS_830538_NAME": {
+    "en": "Ooh! Right on the head!",
+    "es": "Ooh! Right on the head!",
+    "id": "Ooh! Right on the head!",
+    "pt": "Ooh! Right on the head!",
+    "th": "Ooh! Right on the head!",
+    "vi": "Ooh! Right on the head!"
+  },
+  "MST_SKILLS_830557_DESCRIPTION": {
+    "en": "17 combo powerful Earth attack on all foes, reduces foe's BB gauge fill rate for 3 turns, probability of raising allies from KO, considerably boosts Atk, Def, Rec and enormously boosts critical hit rate of Earth types for 3 turns & hugely restores HP for 3 turns",
+    "es": "17 combo powerful Earth attack on all foes, reduces foe's BB gauge fill rate for 3 turns, probability of raising allies from KO, considerably boosts Atk, Def, Rec and enormously boosts critical hit rate of Earth types for 3 turns & hugely restores HP for 3 turns",
+    "id": "17 combo powerful Earth attack on all foes, reduces foe's BB gauge fill rate for 3 turns, probability of raising allies from KO, considerably boosts Atk, Def, Rec and enormously boosts critical hit rate of Earth types for 3 turns & hugely restores HP for 3 turns",
+    "pt": "17 combo powerful Earth attack on all foes, reduces foe's BB gauge fill rate for 3 turns, probability of raising allies from KO, considerably boosts Atk, Def, Rec and enormously boosts critical hit rate of Earth types for 3 turns & hugely restores HP for 3 turns",
+    "th": "17 combo powerful Earth attack on all foes, reduces foe's BB gauge fill rate for 3 turns, probability of raising allies from KO, considerably boosts Atk, Def, Rec and enormously boosts critical hit rate of Earth types for 3 turns & hugely restores HP for 3 turns",
+    "vi": "17 combo powerful Earth attack on all foes, reduces foe's BB gauge fill rate for 3 turns, probability of raising allies from KO, considerably boosts Atk, Def, Rec and enormously boosts critical hit rate of Earth types for 3 turns & hugely restores HP for 3 turns"
   }
 }
