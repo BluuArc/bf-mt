@@ -110,10 +110,8 @@ export function getFramesForSparkUnitEntry ({
 
   let resultAttackFrames = burstFrames.map((frameInfo, index) => {
     const isAoe = burstEffects[index]['target area'] === 'aoe';
-    const effectDelay = moveTypeId === moveTypeIdByName.Teleporting
-      ? 0
-      : +frameInfo['effect delay time(ms)/frame'].split('/')[1];
-    const totalOffset = (moveTypeId === moveTypeIdByName.Teleporting ? 0 : effectDelay) + baseOffset;
+    const effectDelay = +frameInfo['effect delay time(ms)/frame'].split('/')[1];
+    const totalOffset = effectDelay + baseOffset;
     return processFrameTimes(frameInfo['frame times'], totalOffset, isAoe);
   });
 
@@ -123,7 +121,7 @@ export function getFramesForSparkUnitEntry ({
       .map(effect => {
         const isAoe = effect['target area'] === 'aoe';
         const effectDelay = +effect['effect delay time(ms)/frame'].split('/')[1];
-        const totalOffset = (moveTypeId === moveTypeIdByName.Teleporting ? 0 : effectDelay) + baseOffset;
+        const totalOffset = effectDelay + baseOffset;
         return processFrameTimes(extraAttackFrames['frame times'], totalOffset, isAoe);
       });
       resultAttackFrames = resultAttackFrames.concat(resultExtraAttackFrames);
