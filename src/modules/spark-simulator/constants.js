@@ -48,6 +48,12 @@ export const MOVESPEED_OFFSETS = Object.freeze({
   },
 });
 
+/**
+ * @desc Custom known offsets for teleporting units.
+ * For those with subtractions, they in the format of:
+ * [original calculated value] - [effect delay of skill used to find caluclated value]
+ * In most cases the skill used is SBB
+ */
 export const TELEPORTER_OFFSETS = Object.freeze({
   // from Hamza Khan
   '850328': 19, // ezra
@@ -64,12 +70,14 @@ export const TELEPORTER_OFFSETS = Object.freeze({
   '51107': 21, // diastima
   '40857': 15, // licht
   '860518': 23, // beatrix
-  '860548': 20, // mard
+  // '860548': 20, // mard
   // from BluuArc
-  '51317': 105, // karna masta
-  '830048': 18, // dranoel
-  '61207': 29, // alza masta
-  '850568': 29, // qiutong
+  '860548': 17 - 1, // mard, sbb
+  '51317': 72 - 1, // karna masta, bb
+  '830048': 18 - 1, // dranoel, sbb
+  '61207': 29 - 1, // alza masta, bb
+  '850568': 29 - 1, // qiutong, sbb
+  '850928': 22 - 1, // sidonie, sbb
 });
 
 export const UNIT_SKILL_TYPES = {
