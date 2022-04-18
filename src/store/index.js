@@ -4,7 +4,6 @@ import debounce from 'lodash/debounce';
 import { delay } from '@/modules/utils';
 import getUpdateTimes from './instances/update-data-singleton';
 import settings from './settings';
-import github from './github';
 import multidexModules, { moduleInfo as multidexModuleInfo } from './multidex';
 import squads from './tools/squads';
 import tierList from './tools/tier-list';
@@ -19,18 +18,12 @@ export const moduleInfo = Object.freeze([
     fullName: 'Settings',
     link: '/settings',
   },
-  {
-    name: 'github',
-    fullName: 'GitHub Commits',
-    link: '/',
-  },
   ...multidexModuleInfo,
 ]);
 
 export default new Vuex.Store({
   modules: {
     settings,
-    github,
     ...multidexModules,
     squads,
     tierList,
@@ -93,7 +86,7 @@ export default new Vuex.Store({
         for (const m of modules) {
           logger.debug('initializing', m);
           await dispatch(`${m}/init`);
-          if (m !== 'settings' && m !== 'github') {
+          if (m !== 'settings') {
             commit(`${m}/setLoadState`, true);
           }
         }
@@ -117,7 +110,7 @@ export default new Vuex.Store({
       commit('setLoadingState', true);
       commit('setLoadingMessage', `Switching active server to ${server}`);
       await delay(0);
-      for (const m of modules.filter(m => m !== 'github')) {
+      for (const m of modules) {
         try {
           await dispatch(`${m}/setActiveServer`, server);
         } catch (err) {

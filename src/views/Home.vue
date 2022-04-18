@@ -20,11 +20,6 @@
     </v-layout>
     <v-layout row>
       <v-flex>
-        <GitHubCard/>
-      </v-flex>
-    </v-layout>
-    <v-layout row>
-      <v-flex>
         <v-card raised>
           <v-card-title>
             <h1 class="title">Rights/Credits</h1>
@@ -74,12 +69,7 @@
 </template>
 
 <script>
-import GitHubCard from '@/components/Home/GitHubCard';
-
 export default {
   name: 'home',
-  components: {
-    GitHubCard,
-  },
 };
 </script>

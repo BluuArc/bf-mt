@@ -104,7 +104,7 @@
 import logger from '@/modules/Logger';
 import { servers } from '@/modules/constants';
 import { ensureContentPadding } from '@/modules/utils';
-import { mapActions, mapState, mapGetters } from 'vuex';
+import { mapActions, mapState } from 'vuex';
 import MultidexDataWrapper from '@/components/MultidexDataWrapper';
 
 import { moduleInfo } from '@/store';
@@ -201,7 +201,6 @@ export default {
   computed: {
     ...mapState('settings', ['lightMode', 'activeServer']),
     ...mapState(['disableHtmlOverflow', 'updateTimes']),
-    ...mapGetters('github', ['getNumberOfNewCommits']),
     currentPage () {
       logger.debug('route info', this.$route);
       return this.$route.path;
@@ -229,7 +228,6 @@ export default {
   },
   methods: {
     ...mapActions(['init', 'setActiveServer', 'fetchUpdateTimes']),
-    ...mapActions('github', ['updateCommits', 'setLastSeenTime']),
     htmlOverflowChangeHandler () {
       const page = document.getElementsByTagName('html')[0];
       page.style.overflowY = (this.disableHtmlOverflow) ? 'hidden' : 'auto';
@@ -250,7 +248,6 @@ export default {
         this.menuItems = getMenuItems.call(this, linkInfo);
         this.lastTierListCode = linkInfo.tierList;
       }
-      this.numNewCommits = this.getNumberOfNewCommits();
     },
   },
   watch: {
@@ -277,19 +274,9 @@ export default {
     },
     async dataIsLoading (newValue) {
       logger.debug('dataIsLoading changed to', newValue);
-      if (!newValue) {
-        await this.updateCommits();
-      }
     },
-    async currentPageName (newValue) {
+    async currentPageName () {
       await this.fetchUpdateTimes();
-      if (!this.dataIsLoading) {
-        await this.updateCommits();
-      }
-
-      if (newValue === 'Home') {
-        setTimeout(() => this.setLastSeenTime(new Date()), 10 * 1000);
-      }
 
       ensureContentPadding();
     },
