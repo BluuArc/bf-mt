@@ -14,7 +14,7 @@
           <v-icon right>chevron_left</v-icon>
         </v-btn>
         <h3 class="headline pl-3 pt-3" v-text="title"/>
-        <h3 class="subheading pl-3">(UNOFFICIAL)</h3>
+        <h3 class="subheading pl-3">Archivum Version</h3>
         <v-list v-for="(group, i) in menuItems" :key="i" subheader>
           <v-subheader v-text="group.subheader"/>
           <v-list-tile
