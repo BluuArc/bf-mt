@@ -20,26 +20,6 @@
     </v-layout>
     <v-layout row>
       <v-flex>
-        <v-card raised>
-          <v-card-title>
-            <h1 class="title">Data Disclaimer</h1>
-          </v-card-title>
-          <v-card-text>
-            <span>This tool uses StatCounter and Google Analytics for traffic analytics. You can find out more about them below.</span>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn flat rel="noopener" href="https://statcounter.com/" target="_blank">
-              StatCounter
-            </v-btn>
-            <v-btn flat rel="noopener" href="https://marketingplatform.google.com/about/analytics/" target="_blank">
-              Google Analytics
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-flex>
-    </v-layout>
-    <v-layout row>
-      <v-flex>
         <GitHubCard/>
       </v-flex>
     </v-layout>
@@ -75,7 +55,7 @@
           <v-card-text>
             <p class="mb-0">
               Interested in seeing what the previous iterations of this tool looked like? If so, follow the links below.
-              The Semantic UI version of this tool was deprecated June 16, 2018, which is the day this version (using Vuetify UI) was first publicly released.
+              The Semantic UI version of this tool was deprecated June 16, 2018, which is the day the live game version (using Vuetify UI) was first publicly released.
               The live game version is the most recent iteration of this tool prior to the Archivum version; it had the most updates and was frequently tied to the latest version of the datamine available at the time.
             </p>
           </v-card-text>
