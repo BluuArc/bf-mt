@@ -33,6 +33,49 @@
 import BorderedTitledCard from '@/components/BorderedTitledCard';
 import { unitStatFields } from '@/modules/constants';
 
+const RARITY_TO_MAX_LEVEL_MAPPING = {
+  1: 10,
+  2: 20,
+  3: 40,
+  4: 60,
+  5: 80,
+  6: 100,
+  7: 120,
+  8: 150,
+};
+
+/**
+ * @type {{ [typeToStatKey: string]: [growthLow: number, growthHigh: number] }}
+ */
+const TYPE_TO_SKILL_GROWTH_MAPPING = {
+  'anima-hp': [5, 10],
+  'anima-rec': [-3, -1],
+  'breaker-atk': [1, 3],
+  'breaker-def': [-3, -1],
+  'guardian-def': [1, 3],
+  'guardian-rec': [-2, 0],
+  'oracle-def': [-2, 0],
+  'oracle-rec': [2, 4],
+  'rex-hp': [10, 15],
+  'rex-atk': [1, 2],
+  'rex-def': [1, 2],
+  'rex-rec': [1, 2],
+};
+
+const NON_LORD_UNIT_TYPES = ['Anima', 'Breaker', 'Guardian', 'Oracle', 'Rex'];
+
+function getMinMaxStatValue(maxLevel = 0, baseStatValueAtMaxLevel = 0, unitType = '', statName = '') {
+  const result = TYPE_TO_SKILL_GROWTH_MAPPING[`${unitType}-${statName}`];
+  let growthLow = 0, growthHigh = 0;
+  if (result) {
+    [growthLow, growthHigh] = result;
+  }
+  return [
+    baseStatValueAtMaxLevel + ((maxLevel - 1) * growthLow),
+    baseStatValueAtMaxLevel + ((maxLevel - 1) * growthHigh),
+  ];
+}
+
 export default {
   props: {
     unit: {
@@ -51,7 +94,6 @@ export default {
         return {};
       }
 
-      const types = ['Anima', 'Breaker', 'Guardian', 'Oracle'];
       return {
         headers: [
           { text: 'Type', sortable: false, value: 'name', align: 'center' },
@@ -60,8 +102,8 @@ export default {
         items: [
           { name: 'Base', ...(this.getStats(this.unit.stats._base)) },
           { name: 'Lord', ...(this.getStats(this.unit.stats._lord)) },
-          ...types.map(type => ({ name: type, ...(this.getStats(this.unit.stats[type.toLowerCase()])) })),
-          { name: `Imps (${this.impCounts.total})`, ...(this.getStats(this.unit.imp, true)) },
+          ...NON_LORD_UNIT_TYPES.map(type => ({ name: type, ...(this.getStats(this.unit.stats._lord, type)) })),
+          { name: `Imps (${this.impCounts.total})`, ...(this.getStats(this.unit.imp, 'imps')) },
         ],
       };
     },
@@ -82,17 +124,33 @@ export default {
     },
   },
   methods: {
-    getStats (item, isImps = false) {
+    getStats (item, unitType) {
       const result = {};
-      unitStatFields.forEach(stat => {
-        if (item[`${stat} max`] || item[`${stat} min`]) {
-          result[stat] = `${item[`${stat} min`]}-${item[`${stat} max`]}`;
-        } else if (isImps) {
-          result[stat] = `${item[`max ${stat}`]} (${this.impCounts[stat]})`;
-        } else {
-          result[stat] = item[stat];
-        }
-      });
+      const isNonLordUnitType = NON_LORD_UNIT_TYPES.includes(unitType);
+      if (isNonLordUnitType) {
+        // item is lord stats
+        const maxLevel = RARITY_TO_MAX_LEVEL_MAPPING[this.unit.rarity];
+        const lowerCaseType = unitType.toLowerCase();
+        unitStatFields.forEach((stat) => {
+          const [min, max] = getMinMaxStatValue(maxLevel, item[stat], lowerCaseType, stat);
+          if (min === max) {
+            result[stat] = min;
+          } else {
+            result[stat] = `${min}-${max}`;
+          }
+        });
+      } else {
+        const isImps = unitType === 'imps';
+        unitStatFields.forEach(stat => {
+          if (isNonLordUnitType) {
+            result[stat] = `${item[`${stat} min`]}-${item[`${stat} max`]}`;
+          } else if (isImps) {
+            result[stat] = `${item[`max ${stat}`]} (${this.impCounts[stat]})`;
+          } else {
+            result[stat] = item[stat];
+          }
+        });
+      }
       return result;
     },
     isPositive (name, col) {
