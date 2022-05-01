@@ -3,7 +3,7 @@
     :entry="item"
     materialColor="indigo"
     :titleHtmlGenerator="() => 'Usage'"
-    :tabNames="['Items', 'Units']">
+    :tabNames="['Items', 'Units', 'Elgifs']">
     <v-container fluid class="pa-0" slot="items">
       <v-layout row>
         <v-flex>
@@ -99,6 +99,35 @@
         </v-flex>
       </v-layout>
     </v-container>
+    <v-container fluid class="pa-0" slot="elgifs">
+      <span v-if="associatedElgifs.length === 0">
+        This item isn't associated with any Elgifs.
+      </span>
+      <v-layout row v-else>
+        <v-flex>
+          <span v-if="associatedElgifs.length === 0">
+            This item isn't associated with any Elgifs.
+          </span>
+          <template v-else>
+            <v-container fluid>
+              <v-layout row>
+                <v-flex>
+                  This item can be used with the following Elgifs:
+                </v-flex>
+              </v-layout>
+              <v-layout row wrap>
+                <v-flex xs12 sm6 md4 v-for="(id, j) in associatedElgifs" :key="j">
+                  <elgif-entry-card
+                    :to="elgifMultidexPathTo(id)"
+                    :entry="elgifDb[id]"
+                    style="height: 100%;"/>
+                </v-flex>
+              </v-layout>
+            </v-container>
+          </template>
+        </v-flex>
+      </v-layout>
+    </v-container>
   </description-card-base>
 </template>
 
@@ -107,6 +136,7 @@ import { mapState, mapGetters } from 'vuex';
 import DescriptionCardBase from '@/components/Multidex/DescriptionCardBase';
 import ItemEntryCard from '@/components/Multidex/Items/EntryCard';
 import UnitEntryCard from '@/components/Multidex/Units/EntryCard';
+import ElgifEntryCard from '@/components/Multidex/ExtraSkills/EntryCard';
 import { getFullUsageList } from '@/modules/core/items';
 
 export default {
@@ -122,12 +152,15 @@ export default {
     DescriptionCardBase,
     ItemEntryCard,
     UnitEntryCard,
+    ElgifEntryCard,
   },
   computed: {
     ...mapState('items', ['pageDb']),
     ...mapGetters('items', ['getMultidexPathTo']),
     ...mapState('units', { unitDb: 'pageDb' }),
     ...mapGetters('units', { unitMultidexPathTo: 'getMultidexPathTo' }),
+    ...mapState('extraSkills', { elgifDb: 'pageDb' }),
+    ...mapGetters('extraSkills', { elgifMultidexPathTo: 'getMultidexPathTo' }),
     associatedUnits () {
       if (!this.item || !this.item.associated_units || this.item.type === 'ls_sphere') {
         return [];
@@ -140,6 +173,12 @@ export default {
       }
 
       return this.item.usage.map(({ id }) => id.toString());
+    },
+    associatedElgifs () {
+      if (!this.item || !Array.isArray(this.item.associated_elgifs)) {
+        return [];
+      }
+      return this.item.associated_elgifs;
     },
     filteredUsageList () {
       return this.deepUsageList.filter(id => !this.itemUsage.includes(id));

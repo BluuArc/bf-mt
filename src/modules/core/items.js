@@ -143,23 +143,31 @@ export async function getItemShoppingList (item, pageDb, currentlyHave = {}) {
 
 export async function getBaseMaterialsOfItem (item = {}, pageDb = {}) {
   return SWorker.run((item, pageDb) => {
+    // Assume that there's only one recipe when using data from bfmt-data.
+    // Data from Deathmax defines the recipe as a flat object (i.e asssume only one recipe)
+    // TODO: refactor to allow multiple definitions of recipes
+    const getRecipeFromItem = (item) => Array.isArray(item.recipe)
+      ? item.recipe[0]
+      : item.recipe;
     const getBaseMaterialsOf = (item) => {
       const result = {
         // key = item id, value = count needed
         materials: {},
         karma: 0,
       };
+      const currentRecipe = getRecipeFromItem(item);
 
-      if (!item.recipe) {
+      if (!currentRecipe) {
         return result;
       }
 
-      result.karma += +item.recipe.karma;
-      item.recipe.materials.forEach(material => {
+      result.karma += +currentRecipe.karma;
+      currentRecipe.materials.forEach(material => {
         const currentItem = pageDb[material.id.toString()];
         const currentItemId = currentItem.id.toString();
         const count = +material.count;
-        if (currentItem.recipe) {
+        const currentSubRecipe = getRecipeFromItem(currentItem);
+        if (currentSubRecipe) {
           // get base materials of current material
           const materialRecipe = getBaseMaterialsOf(currentItem);
           Object.keys(materialRecipe.materials).forEach(baseMaterialId => {
@@ -168,7 +176,7 @@ export async function getBaseMaterialsOfItem (item = {}, pageDb = {}) {
             }
 
             // add count based on amount needed
-            result.karma += (count * +currentItem.recipe.karma);
+            result.karma += (count * +currentSubRecipe.karma);
             result.materials[baseMaterialId] += (count * materialRecipe.materials[baseMaterialId]);
           });
         } else { // found a base material
@@ -186,13 +194,20 @@ export async function getBaseMaterialsOfItem (item = {}, pageDb = {}) {
 
 export async function getCraftablesInRecipeOfItem (item = {}, pageDb = {}) {
   return SWorker.run((item, pageDb) => {
+    // Assume that there's only one recipe when using data from bfmt-data.
+    // Data from Deathmax defines the recipe as a flat object (i.e asssume only one recipe)
+    // TODO: refactor to allow multiple definitions of recipes
+    const getRecipeFromItem = (item) => Array.isArray(item.recipe)
+      ? item.recipe[0]
+      : item.recipe;
     const currentCraftables = {};
     const getCraftablesInRecipeOf = (item) => {
-      if (item.recipe) {
-        item.recipe.materials.forEach(material => {
+      const recipe = getRecipeFromItem(item);
+      if (recipe) {
+        recipe.materials.forEach(material => {
           const currentItem = pageDb[material.id.toString()];
           const currentItemId = currentItem.id.toString();
-          if (currentItem.recipe) {
+          if (getRecipeFromItem(currentItem)) {
             if (!currentCraftables[currentItemId]) {
               currentCraftables[currentItemId] = 0;
             }

@@ -55,15 +55,28 @@
         <v-flex v-show="showRecipe">
           <slot name="expanded-area">
             <v-container fluid class="pa-1 sub-recipe-container">
-              <template v-if="item.recipe && item.recipe.materials">
+              <template v-if ="!Array.isArray(item.recipe)">
+                <template v-if="item.recipe && item.recipe.materials">
+                  <material-row
+                      v-for="(mat, i) in item.recipe.materials"
+                      :key="i"
+                      :material="mat"/>
+                </template>
                 <material-row
-                    v-for="(mat, i) in item.recipe.materials"
-                    :key="i"
-                    :material="mat"/>
+                  v-if="item.recipe && item.recipe.karma && item.recipe.karma > 0"
+                  :karma="+item.recipe.karma"/>
               </template>
-              <material-row
-                v-if="item.recipe && item.recipe.karma && item.recipe.karma > 0"
-                :karma="+item.recipe.karma"/>
+              <template v-else-if="item.recipe.length > 0">
+                <template v-if="item.recipe[0].materials">
+                  <material-row
+                      v-for="(mat, i) in item.recipe[0].materials"
+                      :key="i"
+                      :material="mat"/>
+                </template>
+                <material-row
+                  v-if="item.recipe[0].karma && item.recipe[0].karma > 0"
+                  :karma="+item.recipe[0].karma"/>
+              </template>
             </v-container>
           </slot>
         </v-flex>

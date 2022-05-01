@@ -7,9 +7,15 @@ import {
   sphereTypeMapping,
   CONTENT_URLS,
 } from '@/modules/constants';
+import { getJson } from '@/modules/download-helper';
 
 const logger = new Logger({ prefix: '[STORE/ITEMS]' });
 const dbWorker = makeMultidexWorker('items');
+
+async function getDatabaseForGlobal() {
+  return getJson(`https://joshuacastor.me/bfmt-data/gl/item/bfmt_all-entries.json?${getCacheBustingUrlParam()}`);
+}
+
 export default {
   namespaced: true,
   state: createState(),
@@ -31,7 +37,7 @@ export default {
     },
     sortTypes: () => ['Item ID', 'Alphabetical', 'Rarity', 'Type', 'Sell Price'],
     filterTypes: () => ['rarity', 'itemTypes', 'sphereTypes', 'associatedUnits', 'craftables', 'usage', 'exclusives', 'procs', 'passives'],
-    requiredModules: () => ['items', 'units', 'missions'],
+    requiredModules: () => ['items', 'units', 'missions', 'extraSkills'],
     miniDbFields: () => ['desc', 'id', 'name', 'rarity', 'thumbnail', 'type', 'raid', 'max_stack', 'sell_price', 'recipe', 'usage', 'associated_units', 'sphere type'],
   },
   actions: {
@@ -45,30 +51,33 @@ export default {
         commit('setLoadingMessage', logPrefix);
         const tempLogger = new Logger({ prefix: `[STORE/ITEMS-${server.toUpperCase()}]` });
         try {
-          const pageDb = {};
-          const loadPromises = [];
-          let countFinished = 0;
-          for (let i = 1; i <= 9; ++i) {
-            const url = `${baseUrl}/items-${server}-${i}.json?${cacheBustingParam}`;
-            loadPromises.push(downloadWorker
-              .postMessage('getJson', [url])
-              .then(tempData => {
-                Object.keys(tempData)
-                  .forEach(id => {
-                    pageDb[id] = tempData[id];
-                  });
-                tempLogger.debug('finished getting', url, 10 - (++countFinished), 'files remaining');
-                commit('setLoadingMessage', `${logPrefix} (${10 - countFinished} files remaining)`);
-              }));
-          }
-
-          await Promise.all(loadPromises);
-          const dictionaryData = await downloadWorker.postMessage('getJson', [`${baseUrl}/item-dictionary-${server}.json?${cacheBustingParam}`]);
-          Object.keys(dictionaryData).forEach(id => {
-            if (pageDb[id]) {
-              pageDb[id].dictionary = dictionaryData[id];
+          let pageDb = {};
+          if (server === 'gl' ) {
+            pageDb = await getDatabaseForGlobal();
+          } else {
+            const loadPromises = [];
+            let countFinished = 0;
+            for (let i = 1; i <= 9; ++i) {
+              const url = `${baseUrl}/items-${server}-${i}.json?${cacheBustingParam}`;
+              loadPromises.push(getJson(url)
+                .then(tempData => {
+                  Object.keys(tempData)
+                    .forEach(id => {
+                      pageDb[id] = tempData[id];
+                    });
+                  tempLogger.debug('finished getting', url, 10 - (++countFinished), 'files remaining');
+                  commit('setLoadingMessage', `${logPrefix} (${10 - countFinished} files remaining)`);
+                }));
             }
-          });
+
+            await Promise.all(loadPromises);
+            const dictionaryData = await getJson(`${baseUrl}/item-dictionary-${server}.json?${cacheBustingParam}`);
+            Object.keys(dictionaryData).forEach(id => {
+              if (pageDb[id]) {
+                pageDb[id].dictionary = dictionaryData[id];
+              }
+            });
+          }
           commit('setLoadingMessage', `Storing data for ${server.toUpperCase()} server`);
           await dispatch('saveData', { data: pageDb, server });
           tempLogger.debug('finished updating data');

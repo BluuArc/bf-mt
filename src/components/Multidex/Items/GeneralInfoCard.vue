@@ -37,7 +37,7 @@ export default {
       return this.item && getItemEffects(this.item);
     },
     lore () {
-      return this.item && this.item.dictionary && this.item.dictionary.lore;
+      return this.item && (this.item.lore || (this.item.dictionary && this.item.dictionary.lore));
     },
   },
 };

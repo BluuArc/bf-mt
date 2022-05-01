@@ -5,22 +5,37 @@
     :titleHtmlGenerator="() => 'Crafting Recipe'"
     :tabNames="['Full', item.recipe && 'Base Materials Only'].filter(val => val)">
     <v-container fluid class="pa-0" slot="full">
-      <v-layout row v-if="!item.recipe">
+      <v-layout row v-if="!item.recipe || (Array.isArray(item.recipe) && item.recipe.length === 0)">
         <v-flex>
           This item cannot be crafted.
         </v-flex>
       </v-layout>
       <template v-else>
-        <v-layout row v-for="(mat, i) in item.recipe.materials" :key="i">
-          <v-flex>
-            <material-row :material="mat"/>
-          </v-flex>
-        </v-layout>
-        <v-layout row>
-          <v-flex>
-            <material-row :karma="+item.recipe.karma"/>
-          </v-flex>
-        </v-layout>
+        <template v-if="!Array.isArray(item.recipe)">
+          <v-layout row v-for="(mat, i) in item.recipe.materials" :key="i">
+            <v-flex>
+              <material-row :material="mat"/>
+            </v-flex>
+          </v-layout>
+          <v-layout row>
+            <v-flex>
+              <material-row :karma="+item.recipe.karma"/>
+            </v-flex>
+          </v-layout>
+        </template>
+        <template v-else>
+          <!-- TODO: support multiple recipes -->
+          <v-layout row v-for="(mat, i) in item.recipe[0].materials" :key="i">
+            <v-flex>
+              <material-row :material="mat"/>
+            </v-flex>
+          </v-layout>
+          <v-layout row>
+            <v-flex>
+              <material-row :karma="+item.recipe[0].karma"/>
+            </v-flex>
+          </v-layout>
+        </template>
       </template>
     </v-container>
     <v-container fluid class="pa-0" slot="base-materials-only">
@@ -91,6 +106,11 @@
                   </v-flex>
                 </v-layout>
                 <v-layout row v-if="item.recipe.karma">
+                  <v-flex>
+                    <material-row :karma="totalKarmaNeeded"/>
+                  </v-flex>
+                </v-layout>
+                <v-layout row v-else-if="item.recipe[0] && item.recipe[0].karma">
                   <v-flex>
                     <material-row :karma="totalKarmaNeeded"/>
                   </v-flex>
