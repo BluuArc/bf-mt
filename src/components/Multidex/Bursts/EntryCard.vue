@@ -16,13 +16,13 @@
           <span v-else>No description.</span>
         </v-flex>
       </v-layout>
-      <v-layout row wrap v-if="entry.associated_units" class="d-align-items-center">
+      <v-layout row wrap v-if="associatedUnits.length > 0" class="d-align-items-center">
         <v-flex xs5 sm4 class="text-xs-center">
           Associated Units:
         </v-flex>
         <v-flex xs7 class="text-xs-left">
           <unit-thumbnail
-            v-for="(unit, i) in entry.associated_units"
+            v-for="(unit, i) in associatedUnits"
             :key="i"
             :src="getImageUrls(unit).ills_thum"
             :rarity="getUnit(unit).rarity"
@@ -65,6 +65,11 @@ export default {
       } else {
         return 48;
       }
+    },
+    associatedUnits () {
+      return Array.isArray(this.entry.associated_units)
+        ? this.entry.associated_units.map((id) => `${id}`.includes(':') ? `${id}`.split(':')[0] : id)
+        : [];
     },
   },
   methods: {

@@ -67,7 +67,8 @@ export default {
         return [];
       }
 
-      return this.burst.associated_units.map(id => this.pageDb[id]).filter(v => v);
+      const getDbId = (associatedUnitId) => `${associatedUnitId}`.includes(':') ? `${associatedUnitId}`.split(':')[0] : associatedUnitId;
+      return this.burst.associated_units.map(id => this.pageDb[getDbId(id)]).filter(v => v);
     },
   },
   data: () => ({
@@ -87,11 +88,11 @@ export default {
     }),
     async setBurstType () {
       this.burstType = 'bb';
-      if (!this.burst || !this.burst.associated_units) {
+      if (!this.burst || this.associatedUnits.length === 0) {
         return;
       }
 
-      const unit = await this.getUnit(this.burst.associated_units[0]);
+      const unit = await this.getUnit(this.associatedUnits[0].id);
       const burstId = this.burst.id.toString();
       const { sbb = {}, ubb = {} } = unit;
       if (sbb.id && sbb.id.toString() === burstId) {
