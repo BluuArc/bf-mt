@@ -76,7 +76,8 @@ export default {
         return [];
       }
 
-      return this.skill.associated_units.map(id => this.pageDb[id]).filter(v => v);
+      const getDbId = (associatedUnitId) => `${associatedUnitId}`.includes(':') ? `${associatedUnitId}`.split(':')[0] : associatedUnitId;
+      return this.skill.associated_units.map(id => this.pageDb[getDbId(id)]).filter(v => v);
     },
     rarity () {
       return +this.skill.rarity;

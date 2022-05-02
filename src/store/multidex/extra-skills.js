@@ -3,6 +3,49 @@ import { makeMultidexWorker } from '../instances/dexie-client';
 import downloadWorker from '../instances/download-worker';
 import { createState, createMutations, createActions, createGetters } from './helper';
 import { getCacheBustingUrlParam } from '@/modules/utils';
+import { getJson } from '@/modules/download-helper';
+
+/**
+ * @param {Object} arg0
+ * @param {Logger} arg0.logger
+ * @param {Function} arg0.commit
+ * @param {string} arg0.logPrefix
+ */
+ async function getDatabaseForGlobal({ logger, commit, logPrefix }) {
+  const pageDb = {};
+  const loadPromises = [];
+  const cacheBustingParam = getCacheBustingUrlParam();
+
+  const fullList = await getJson(`https://joshuacastor.me/bfmt-data/gl/extra-skill/bfmt_update-stats.json?${cacheBustingParam}`);
+  const remainingKeys = Object.keys(fullList);
+  const totalKeyCount = remainingKeys.length;
+  let countFinished = 0;
+  logger.debug(`Need to fetch ${totalKeyCount} files`);
+  commit('setLoadingMessage', `${logPrefix} (${remainingKeys.length} files remaining)`);
+  const generateUrlForId = (id) => `https://joshuacastor.me/bfmt-data/gl/extra-skill/${id}.json?${cacheBustingParam}`;
+  const fetchJsonWhileDataRemains = async () => {
+    const currentId = remainingKeys.shift();
+    if (currentId !== void 0) {
+      const data = await getJson(generateUrlForId(currentId));
+      pageDb[currentId] = data;
+
+      if ((++countFinished % 100) === 0) {
+        logger.debug('finished getting', currentId, remainingKeys.length, 'files remaining');
+        commit('setLoadingMessage', `${logPrefix} (${(countFinished / totalKeyCount * 100).toFixed(2)}% complete)`);
+      }
+      await fetchJsonWhileDataRemains();
+    }
+  };
+
+  // have no more than 10 concurrent fetches occurring simultaneously
+  for (let i = 0; i < 10; ++i) {
+    loadPromises.push(fetchJsonWhileDataRemains());
+  }
+
+  await Promise.all(loadPromises);
+  logger.debug(`finished getting ${Object.keys(pageDb).length} entries`);
+  return pageDb;
+}
 
 const logger = new Logger({ prefix: '[STORE/EXTRA-SKILLS]' });
 const dbWorker = makeMultidexWorker('extraSkills');
@@ -28,7 +71,12 @@ export default {
         commit('setLoadingMessage', logPrefix);
         const tempLogger = new Logger({ prefix: `[STORE/EXTRA-SKILLS-${server.toUpperCase()}]` });
         try {
-          const pageDb = await downloadWorker.postMessage('getJson', [`${baseUrl}/es-${server}.json?${cacheBustingParam}`]);
+          let pageDb;
+          if (server === 'gl') {
+            pageDb = await getDatabaseForGlobal({ logger: tempLogger, commit, logPrefix });
+          } else {
+            pageDb = await getJson(`${baseUrl}/es-${server}.json?${cacheBustingParam}`);
+          }
           commit('setLoadingMessage', `Storing data for ${server.toUpperCase()} server`);
           await dispatch('saveData', { data: pageDb, server });
           tempLogger.debug('finished updating data');
