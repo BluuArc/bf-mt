@@ -6,6 +6,11 @@
           <description-card :mission="entry" :logger="logger"/>
         </v-flex>
       </v-layout>
+      <v-layout row v-if="entry && entry.assets">
+        <v-flex>
+          <assets-card :mission="entry" :logger="logger"/>
+        </v-flex>
+      </v-layout>
       <v-layout row>
         <v-flex>
           <miscellaneous-card :mission="entry" :logger="logger"/>
@@ -36,6 +41,7 @@
 <script>
 import DialogContentMixin from '@/components/Multidex/DialogContentMixin';
 import DescriptionCard from '@/components/Multidex/Missions/DescriptionCard';
+import AssetsCard from '@/components/Multidex/Missions/AssetsCard';
 import MiscellaneousCard from '@/components/Multidex/Missions/MiscellaneousCard';
 import RewardsCard from '@/components/Multidex/Missions/RewardsCard';
 import RequirementsCard from '@/components/Multidex/Missions/RequirementsCard';
@@ -46,6 +52,7 @@ export default {
   mixins: [DialogContentMixin],
   components: {
     DescriptionCard,
+    AssetsCard,
     MiscellaneousCard,
     RewardsCard,
     RequirementsCard,

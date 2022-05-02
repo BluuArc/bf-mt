@@ -4,10 +4,54 @@ import downloadWorker from '../instances/download-worker';
 import { createState, createMutations, createActions, createGetters } from './helper';
 import { getCacheBustingUrlParam } from '@/modules/utils';
 import {
+  CONTENT_URLS,
   exclusiveFilterOptions,
   missionLocationTypes,
 } from '@/modules/constants';
 import SWorker from '@/assets/sww.min';
+import { getJson } from '@/modules/download-helper';
+
+/**
+ * @param {Object} arg0
+ * @param {Logger} arg0.logger
+ * @param {Function} arg0.commit
+ * @param {string} arg0.logPrefix
+ */
+ async function getDatabaseForGlobal({ logger, commit, logPrefix }) {
+  const pageDb = {};
+  const loadPromises = [];
+  const cacheBustingParam = getCacheBustingUrlParam();
+
+  const fullList = await getJson(`https://joshuacastor.me/bfmt-data/gl/mission/bfmt_update-stats.json?${cacheBustingParam}`);
+  const remainingKeys = Object.keys(fullList);
+  const totalKeyCount = remainingKeys.length;
+  let countFinished = 0;
+  logger.debug(`Need to fetch ${totalKeyCount} files`);
+  commit('setLoadingMessage', `${logPrefix} (${remainingKeys.length} files remaining)`);
+  const generateUrlForId = (id) => `https://joshuacastor.me/bfmt-data/gl/mission/${id}.json?${cacheBustingParam}`;
+  const fetchJsonWhileDataRemains = async () => {
+    const currentId = remainingKeys.shift();
+    if (currentId !== void 0) {
+      const data = await getJson(generateUrlForId(currentId));
+      pageDb[currentId] = data;
+
+      if ((++countFinished % 100) === 0) {
+        logger.debug('finished getting', currentId, remainingKeys.length, 'files remaining');
+        commit('setLoadingMessage', `${logPrefix} (${(countFinished / totalKeyCount * 100).toFixed(2)}% complete)`);
+      }
+      await fetchJsonWhileDataRemains();
+    }
+  };
+
+  // have no more than 10 concurrent fetches occurring simultaneously
+  for (let i = 0; i < 10; ++i) {
+    loadPromises.push(fetchJsonWhileDataRemains());
+  }
+
+  await Promise.all(loadPromises);
+  logger.debug(`finished getting ${Object.keys(pageDb).length} entries`);
+  return pageDb;
+}
 
 const logger = new Logger({ prefix: '[STORE/MISSIONS]' });
 const dbWorker = makeMultidexWorker('missions');
@@ -29,6 +73,9 @@ export default {
   },
   getters: {
     ...createGetters('missions'),
+    getBackgroundUrl: state => (fileName) => `${CONTENT_URLS[state.activeServer]}/dungeon/${fileName}`,
+    getAudioUrl: state => (fileName) => `${CONTENT_URLS[state.activeServer]}/sound/${fileName}`,
+    getCommonCutsceneUrl: state => (fileName) => `${CONTENT_URLS[state.activeServer]}/event/${fileName}`,
     sortTypes: () => ['Mission ID', 'Alphabetical', 'Energy', 'Battle Count', 'Map', 'XP', 'XP/EN'],
     filterTypes: () => ['associatedUnits', 'associatedItems', 'gems', 'exclusives', 'continues', 'land', 'area', 'dungeon'],
     requiredModules: () => ['missions', 'units', 'items'],
@@ -75,7 +122,12 @@ export default {
         commit('setLoadingMessage', logPrefix);
         const tempLogger = new Logger({ prefix: `[STORE/MISSIONS-${server.toUpperCase()}]` });
         try {
-          const pageDb = await downloadWorker.postMessage('getJson', [`${baseUrl}/missions-${server}.json?${cacheBustingParam}`]);
+          let pageDb;
+          if (server === 'gl') {
+            pageDb = await getDatabaseForGlobal({ logger: tempLogger, commit, logPrefix });
+          } else {
+            pageDb = await getJson(`${baseUrl}/missions-${server}.json?${cacheBustingParam}`);
+          }
           commit('setLoadingMessage', `Storing data for ${server.toUpperCase()} server`);
           await dispatch('saveData', { data: pageDb, server });
           tempLogger.debug('finished updating data');
