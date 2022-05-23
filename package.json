@@ -10,7 +10,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "dayjs": "^1.10.4",
-    "dexie": "^2.0.4",
+    "dexie": "^3.2.2",
     "log-update": "^2.3.0",
     "numbro": "^2.3.2",
     "puppeteer": "^1.20.0",
